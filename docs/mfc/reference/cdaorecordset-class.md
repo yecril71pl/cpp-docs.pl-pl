@@ -1,5 +1,5 @@
 ---
-title: CDaoRecordset Class
+title: Klasa CDaoRecordset
 ms.date: 08/27/2018
 f1_keywords:
 - CDaoRecordset
@@ -167,13 +167,13 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206362"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867304"
 ---
-# <a name="cdaorecordset-class"></a>CDaoRecordset Class
+# <a name="cdaorecordset-class"></a>Klasa CDaoRecordset
 
 Reprezentuje zestaw rekordów wybranych ze źródła danych.
 
@@ -187,137 +187,137 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Konstruuje `CDaoRecordset` obiektu.|
+|[CDaoRecordset:: CDaoRecordset](#cdaorecordset)|Konstruuje obiekt `CDaoRecordset`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CDaoRecordset::AddNew](#addnew)|Przygotowuje do dodawania nowego rekordu. Wywołaj [aktualizacji](#update) aby zakończyć operację dodawania.|
-|[CDaoRecordset::CanAppend](#canappend)|Zwraca wartość różną od zera, jeśli nowe rekordy można dodać do zestawu rekordów za pomocą [działają funkcje AddNew](#addnew) funkcja elementu członkowskiego.|
-|[CDaoRecordset::CanBookmark](#canbookmark)|Zwraca wartość różną od zera, jeśli zestaw rekordów obsługuje zakładek.|
-|[CDaoRecordset::CancelUpdate](#cancelupdate)|Anuluje wszystkie oczekujące aktualizacje ze względu na [Edytuj](#edit) lub [działają funkcje AddNew](#addnew) operacji.|
-|[CDaoRecordset::CanRestart](#canrestart)|Zwraca wartość różną od zera, jeśli [Requery](#requery) można wywołać w celu ponownie uruchomić zapytanie w zestawie rekordów.|
-|[CDaoRecordset::CanScroll](#canscroll)|Zwraca wartość różną od zera, jeśli można przewijać rekordów.|
-|[CDaoRecordset::CanTransact](#cantransact)|Zwraca wartość różną od zera, jeśli źródło danych obsługuje transakcji.|
-|[CDaoRecordset::CanUpdate](#canupdate)|Zwraca wartość różną od zera, jeśli zestaw rekordów, które mogą być aktualizowane (można dodać, zaktualizować lub usunąć rekordy).|
-|[CDaoRecordset::Close](#close)|Zamyka zestawu rekordów.|
-|[CDaoRecordset::Delete](#delete)|Usunięcie bieżącego rekordu w zestawie. Należy jawnie przewiń do innego rekordu, po usunięciu.|
-|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Wywoływane w celu wymiany danych (w obu kierunkach) między elementy członkowskie danych pola zestawu rekordów i odpowiedni rekord w źródle danych. Implementuje DAO rekord pola wymiany (DXF).|
-|[CDaoRecordset::Edit](#edit)|Przygotowuje się do zmian w bieżącym rekordzie. Wywołaj `Update` można ukończyć edycję.|
-|[CDaoRecordset::FillCache](#fillcache)|Wypełnienie wszystkich lub częścią lokalnej pamięci podręcznej dla obiektu zestawu rekordów, która zawiera dane ze źródła danych ODBC.|
-|[CDaoRecordset::Find](#find)|Lokalizuje pierwszy, następnie poprzedniego lub ostatnia lokalizacja określonego ciągu w zestawie rekordów dynamicznego, który spełni określone kryteria i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::FindFirst](#findfirst)|Lokalizuje pierwszy rekord w dynamicznego lub zestawu rekordów typu migawka, który spełni określone kryteria i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::FindLast](#findlast)|Znajduje ostatni rekord w dynamicznego lub zestawu rekordów typu migawka, który spełni określone kryteria i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::FindNext](#findnext)|Lokalizuje następnego rekordu w dynamicznego lub zestawu rekordów typu migawka, który spełni określone kryteria i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::FindPrev](#findprev)|Lokalizuje poprzedniego rekordu w dynamicznego lub zestawu rekordów typu migawka, który spełni określone kryteria i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Zwraca liczbę rekordów obiektem rekordem bieżącego rekordu.|
-|[CDaoRecordset::GetBookmark](#getbookmark)|Zwraca wartość, która reprezentuje zakładki do rekordu.|
-|[CDaoRecordset::GetCacheSize](#getcachesize)|Zwraca wartość, która określa liczbę rekordów w zestawie rekordów dynamicznego zawierające dane lokalne przechowywanie w pamięci podręcznej ze źródła danych ODBC.|
-|[CDaoRecordset::GetCacheStart](#getcachestart)|Zwraca wartość, która określa zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.|
-|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Zwraca `CString` zawierający nazwę indeksu najbardziej ostatnio używane na indeksowane, typ tabeli `CDaoRecordset`.|
-|[CDaoRecordset::GetDateCreated](#getdatecreated)|Zwraca datę i godzinę, w tabeli podstawowej bazowego `CDaoRecordset` został utworzony obiekt|
-|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|Zwraca datę i godzinę ostatniej zmiany wprowadzone do projektów podstawowy w tabeli podstawowej `CDaoRecordset` obiektu.|
-|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|Zwraca nazwę domyślnego źródła danych.|
-|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|Wywołuje się, by pobrać domyślny ciąg SQL do wykonania.|
-|[CDaoRecordset::GetEditMode](#geteditmode)|Zwraca wartość, która wskazuje stan edycji dla bieżącego rekordu.|
-|[CDaoRecordset::GetFieldCount](#getfieldcount)|Zwraca wartość, która reprezentuje liczbę pól w zestawie rekordów.|
-|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Zwraca określonych rodzajów informacji o polach w zestawie rekordów.|
-|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Zwraca wartość pola w zestawie rekordów.|
-|[CDaoRecordset::GetIndexCount](#getindexcount)|Pobiera liczbę indeksów w tabeli podstawowy zestaw rekordów.|
-|[CDaoRecordset::GetIndexInfo](#getindexinfo)|Zwraca różne rodzaje informacji na temat indeksu.|
-|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Używany do określenia najbardziej ostatnio dodane lub zaktualizowane rekordu.|
-|[CDaoRecordset::GetLockingMode](#getlockingmode)|Zwraca wartość wskazującą typ blokady jest włączona, podczas edycji.|
-|[CDaoRecordset::GetName](#getname)|Zwraca `CString` zawierający nazwę zestawu rekordów.|
-|[CDaoRecordset::GetParamValue](#getparamvalue)|Pobiera bieżącą wartość określonego parametru przechowywana w obiekcie DAOParameter bazowego.|
-|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Zwraca pozycję bieżącego rekordu w postaci procentu całkowitej liczbie rekordów.|
-|[CDaoRecordset::GetRecordCount](#getrecordcount)|Zwraca liczbę rekordów, dostępne w obiekcie zestawu rekordów.|
-|[CDaoRecordset::GetSQL](#getsql)|Pobiera ciąg SQL używany do wybierania rekordów dla zestawu rekordów.|
-|[CDaoRecordset::GetType](#gettype)|Wywoływane w celu określenia rodzaju zestaw rekordów: typ tabeli, dynamicznego lub typu migawka.|
-|[CDaoRecordset::GetValidationRule](#getvalidationrule)|Zwraca `CString` zawierające wartość, która sprawdza poprawność danych wprowadzoną w polu.|
-|[CDaoRecordset::GetValidationText](#getvalidationtext)|Pobiera tekst, który jest wyświetlany, gdy reguła sprawdzania poprawności nie jest spełniony.|
-|[CDaoRecordset::IsBOF](#isbof)|Zwraca wartość różną od zera, jeśli zestaw rekordów ma został umieszczony przed pierwszym rekordzie. Nie ma bieżącego rekordu.|
-|[CDaoRecordset::IsDeleted](#isdeleted)|Zwraca wartość różną od zera, jeśli zestaw rekordów jest ustawiony na rekordzie usunięte.|
-|[CDaoRecordset::IsEOF](#iseof)|Zwraca wartość różną od zera, jeśli zestaw rekordów zawiera został umieszczony po ostatnim rekordzie. Nie ma bieżącego rekordu.|
-|[CDaoRecordset::IsFieldDirty](#isfielddirty)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie została zmieniona.|
-|[CDaoRecordset::IsFieldNull](#isfieldnull)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie ma wartość Null, (o żadnej wartości).|
-|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie można ustawić wartości null (o żadnej wartości).|
-|[CDaoRecordset::IsOpen](#isopen)|Zwraca wartość różną od zera, jeśli [Otwórz](#open) został wcześniej wywołany.|
-|[CDaoRecordset::Move](#move)|Ustawia zestaw rekordów do określonej liczby rekordów z bieżącego rekordu w dowolnym kierunku.|
-|[CDaoRecordset::MoveFirst](#movefirst)|Umieszcza bieżącego rekordu na pierwszy rekord w zestawie rekordów.|
-|[CDaoRecordset::MoveLast](#movelast)|Umieszcza bieżącego rekordu na ostatni rekord w zestawie rekordów.|
-|[CDaoRecordset::MoveNext](#movenext)|Umieszcza bieżącego rekordu na następnego rekordu w zestawie rekordów.|
-|[CDaoRecordset::MovePrev](#moveprev)|Umieszcza bieżącego rekordu na poprzedniej rekordu w zestawie rekordów.|
-|[CDaoRecordset::Open](#open)|Tworzy nowy zestaw rekordów z tabeli, zestaw dynamiczny lub migawki.|
-|[CDaoRecordset::Requery](#requery)|Uruchamia zapytanie w zestawie rekordów ponownie, aby odświeżyć wybrane rekordy.|
-|[CDaoRecordset::Seek](#seek)|Lokalizuje rekordu w obiekcie zestawu rekordów indeksowany typ tabeli, który spełni określone kryteria dla bieżącego indeksu i sprawia, że służące do rejestrowania bieżącego rekordu.|
-|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Ustawia numer obiektem rekordem bieżącego rekordu.|
-|[CDaoRecordset::SetBookmark](#setbookmark)|Ustawia zestaw rekordów na rekord zawierający zakładką.|
-|[CDaoRecordset::SetCacheSize](#setcachesize)|Ustawia wartość, która określa liczbę rekordów w zestawie rekordów dynamicznego zawierające dane lokalne przechowywanie w pamięci podręcznej ze źródła danych ODBC.|
-|[CDaoRecordset::SetCacheStart](#setcachestart)|Ustawia wartość określającą zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.|
-|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Wywołuje się, by ustawić indeks w zestawie rekordów typ tabeli.|
-|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Oznacza określonego pola w bieżącym rekordzie, wraz ze zmianą.|
-|[CDaoRecordset::SetFieldNull](#setfieldnull)|Ustawia wartość określonego pola w bieżącym rekordzie, wartości null (o żadnej wartości).|
-|[CDaoRecordset::SetFieldValue](#setfieldvalue)|Ustawia wartość pola w zestawie rekordów.|
-|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Ustawia wartość pola w zestawie rekordów na wartość Null. (o: Brak wartości).|
-|[CDaoRecordset::SetLockingMode](#setlockingmode)|Ustawia wartość wskazującą typ blokady do umieszczenia w życie podczas edycji.|
-|[CDaoRecordset::SetParamValue](#setparamvalue)|Ustawia bieżącą wartość określonego parametru przechowywana w obiekcie DAOParameter podstawowej|
-|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Ustawia bieżącą wartość określonego parametru o wartości Null (o żadnej wartości).|
-|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Ustawia położenie bieżącego rekordu do lokalizacji, odpowiadające na wartość procentową całkowitej liczby rekordów w zestawie rekordów.|
-|[CDaoRecordset::Update](#update)|Kończy `AddNew` lub `Edit` operacji, zapisując dane nowe lub zmodyfikowane w źródle danych.|
+|[CDaoRecordset:: AddNew](#addnew)|Przygotowuje się do dodania nowego rekordu. Wywołaj [aktualizację](#update) , aby ukończyć Dodawanie.|
+|[CDaoRecordset:: dołączanie](#canappend)|Zwraca wartość różną od zera, jeśli nowe rekordy można dodać do zestawu rekordów za pośrednictwem funkcji elementu członkowskiego [AddNew](#addnew) .|
+|[CDaoRecordset:: wypisano](#canbookmark)|Zwraca wartość różną od zera, jeśli zestaw rekordów obsługuje zakładki.|
+|[CDaoRecordset:: CancelUpdate](#cancelupdate)|Anuluje wszystkie oczekujące aktualizacje z powodu operacji [edycji](#edit) lub [parametru AddNew](#addnew) .|
+|[CDaoRecordset:: restart](#canrestart)|Zwraca wartość różną od zera [, jeśli można wywołać kwerendę,](#requery) aby ponownie uruchomić zapytanie zestawu rekordów.|
+|[CDaoRecordset:: Scroll](#canscroll)|Zwraca wartość różną od zera, jeśli można przewijać rekordy.|
+|[CDaoRecordset:: gettransact](#cantransact)|Zwraca wartość różną od zera, jeśli źródło danych obsługuje transakcje.|
+|[CDaoRecordset:: Update](#canupdate)|Zwraca wartość różną od zera, jeśli zestaw rekordów można zaktualizować (można dodawać, aktualizować lub usuwać rekordy).|
+|[CDaoRecordset:: Close](#close)|Zamyka zestaw rekordów.|
+|[CDaoRecordset::D Usuń](#delete)|Usuwa bieżący rekord z zestawu rekordów. Po usunięciu należy jawnie przewinąć do innego rekordu.|
+|[CDaoRecordset::D oFieldExchange](#dofieldexchange)|Wywołuje się, by wymienić dane (w obu kierunkach) między elementami członkowskimi danych pola zestawu rekordów i odpowiednim rekordem w źródle danych. Implementuje wymianę pól rekordów DAO (DFX).|
+|[CDaoRecordset:: Edit](#edit)|Przygotowuje się do zmian w bieżącym rekordzie. Wywołaj `Update`, aby zakończyć edycję.|
+|[CDaoRecordset:: FillCache](#fillcache)|Wypełnia wszystkie lub część lokalnej pamięci podręcznej dla obiektu zestawu rekordów, który zawiera dane ze źródła danych ODBC.|
+|[CDaoRecordset:: find](#find)|Lokalizuje pierwszą, następną, poprzednią lub ostatnią lokalizację określonego ciągu w zestawie rekordów typu zestaw dynamiczny, który spełnia określone kryteria i powoduje, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: FindFirst](#findfirst)|Lokalizuje pierwszy rekord w zestawie dynamicznym typu lub typie migawki, który spełnia określone kryteria i powoduje, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: FindLast](#findlast)|Lokalizuje ostatni rekord w zestawie dynamicznym typu lub typie migawki, który spełnia określone kryteria i powoduje, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: ZnajdźNastępny](#findnext)|Lokalizuje następny rekord w zestawie dynamicznym typu lub typie migawki, który spełnia określone kryteria i powoduje, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: FindPrev](#findprev)|Lokalizuje poprzedni rekord w zestawie dynamicznym typu lub typie migawki, który spełnia określone kryteria i powoduje, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: GetAbsolutePosition](#getabsoluteposition)|Zwraca numer rekordu bieżącego rekordu obiektu zestawu rekordów.|
+|[CDaoRecordset:: GetBookmark](#getbookmark)|Zwraca wartość, która reprezentuje zakładkę dla rekordu.|
+|[CDaoRecordset:: GetCacheSize](#getcachesize)|Zwraca wartość określającą liczbę rekordów w zestawie rekordów typu zestaw dynamiczny zawierający dane, które mają być buforowane lokalnie ze źródła danych ODBC.|
+|[CDaoRecordset:: GetCacheStart](#getcachestart)|Zwraca wartość określającą zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.|
+|[CDaoRecordset:: GetCurrentIndex](#getcurrentindex)|Zwraca `CString` zawierający nazwę indeksu, który ostatnio był używany na indeksowanym `CDaoRecordset`typu tabeli.|
+|[CDaoRecordset:: GetDateCreated](#getdatecreated)|Zwraca datę i godzinę utworzenia tabeli bazowej bazowej obiektu `CDaoRecordset`.|
+|[CDaoRecordset:: GetDateLastUpdated](#getdatelastupdated)|Zwraca datę i godzinę ostatniej zmiany wprowadzonej w projekcie tabeli bazowej bazowej obiektu `CDaoRecordset`.|
+|[CDaoRecordset:: GetDefaultDBName](#getdefaultdbname)|Zwraca nazwę domyślnego źródła danych.|
+|[CDaoRecordset:: GetDefaultSQL](#getdefaultsql)|Wywołuje się, by uzyskać domyślny ciąg SQL do wykonania.|
+|[CDaoRecordset:: geteditmode](#geteditmode)|Zwraca wartość wskazującą stan edycji bieżącego rekordu.|
+|[CDaoRecordset:: GetFieldCount](#getfieldcount)|Zwraca wartość reprezentującą liczbę pól w zestawie rekordów.|
+|[CDaoRecordset:: GetFieldInfo](#getfieldinfo)|Zwraca określone rodzaje informacji o polach w zestawie rekordów.|
+|[CDaoRecordset:: GetFieldValue —](#getfieldvalue)|Zwraca wartość pola w zestawie rekordów.|
+|[CDaoRecordset:: GetIndexCount](#getindexcount)|Pobiera liczbę indeksów w tabeli bazowej zestawu rekordów.|
+|[CDaoRecordset:: GetIndexInfo](#getindexinfo)|Zwraca różne rodzaje informacji o indeksie.|
+|[CDaoRecordset:: GetLastModifiedBookmark](#getlastmodifiedbookmark)|Służy do określenia ostatnio dodanego lub zaktualizowanego rekordu.|
+|[CDaoRecordset:: getlockmode](#getlockingmode)|Zwraca wartość wskazującą typ blokowania, który jest stosowany podczas edycji.|
+|[CDaoRecordset:: GetName](#getname)|Zwraca `CString` zawierający nazwę zestawu rekordów.|
+|[CDaoRecordset:: GetParamValue](#getparamvalue)|Pobiera bieżącą wartość określonego parametru przechowywanego w źródłowym obiekcie DAOParameter.|
+|[CDaoRecordset:: GetPercentPosition](#getpercentposition)|Zwraca pozycję bieżącego rekordu jako procentową łączną liczbę rekordów.|
+|[CDaoRecordset:: GetRecordCount](#getrecordcount)|Zwraca liczbę rekordów, do których można uzyskać dostęp w obiekcie zestawu rekordów.|
+|[CDaoRecordset:: GetSQL](#getsql)|Pobiera ciąg SQL używany do wybierania rekordów dla zestawu rekordów.|
+|[CDaoRecordset:: GetType](#gettype)|Wywołuje się, by określić typ zestawu rekordów: typu tabeli, typu dynamicznego lub typu migawki.|
+|[CDaoRecordset:: GetValidationRule](#getvalidationrule)|Zwraca `CString` zawierający wartość, która sprawdza poprawność danych w miarę ich wprowadzania do pola.|
+|[CDaoRecordset:: GetValidationText](#getvalidationtext)|Pobiera tekst wyświetlany, gdy reguła walidacji nie jest spełniony.|
+|[CDaoRecordset:: IsBOF](#isbof)|Zwraca wartość różną od zera, jeśli zestaw rekordów został umieszczony przed pierwszym rekordem. Brak bieżącego rekordu.|
+|[CDaoRecordset:: IsDeleted](#isdeleted)|Zwraca wartość różną od zera, jeśli zestaw rekordów został umieszczony w usuniętym rekordzie.|
+|[CDaoRecordset:: IsEOF](#iseof)|Zwraca wartość różną od zera, jeśli zestaw rekordów został umieszczony po ostatnim rekordzie. Brak bieżącego rekordu.|
+|[CDaoRecordset:: IsFieldDirty](#isfielddirty)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie zostało zmienione.|
+|[CDaoRecordset:: IsFieldNull](#isfieldnull)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie ma wartość null (bez wartości).|
+|[CDaoRecordset:: IsFieldNullable](#isfieldnullable)|Zwraca wartość różną od zera, jeśli określone pole w bieżącym rekordzie można ustawić na wartość null (bez wartości).|
+|[CDaoRecordset:: IsOpen](#isopen)|Zwraca wartość różną od zera, jeśli funkcja [Open](#open) została wcześniej wywołana.|
+|[CDaoRecordset:: Move](#move)|Ustawia zestaw rekordów na określoną liczbę rekordów z bieżącego rekordu w dowolnym kierunku.|
+|[CDaoRecordset:: MoveFirst](#movefirst)|Ustawia bieżący rekord pierwszego rekordu w zestawie rekordów.|
+|[CDaoRecordset:: MoveLast](#movelast)|Określa położenie bieżącego rekordu w ostatnim rekordzie w zestawie rekordów.|
+|[CDaoRecordset:: MoveNext](#movenext)|Określa położenie bieżącego rekordu w następnym rekordzie w zestawie rekordów.|
+|[CDaoRecordset:: MovePrev](#moveprev)|Określa położenie bieżącego rekordu w poprzednim rekordzie w zestawie rekordów.|
+|[CDaoRecordset:: Open](#open)|Tworzy nowy zestaw rekordów z tabeli, zestawu dynamicznego lub migawki.|
+|[CDaoRecordset:: Requery](#requery)|Uruchamia ponownie zapytanie zestawu rekordów w celu odświeżenia wybranych rekordów.|
+|[CDaoRecordset:: Seek](#seek)|Lokalizuje rekord w indeksowanym typie tabeli obiekt zestawu rekordów, który spełnia określone kryteria dla bieżącego indeksu i sprawia, że rejestruje bieżący rekord.|
+|[CDaoRecordset:: SetAbsolutePosition](#setabsoluteposition)|Ustawia numer rekordu bieżącego rekordu obiektu zestawu rekordów.|
+|[CDaoRecordset:: SetBookmark](#setbookmark)|Ustawia zestaw rekordów dla rekordu zawierającego określoną zakładkę.|
+|[CDaoRecordset:: SetCacheSize](#setcachesize)|Ustawia wartość określającą liczbę rekordów w zestawie rekordów typu zestaw dynamiczny zawierający dane, które mają być buforowane lokalnie ze źródła danych ODBC.|
+|[CDaoRecordset:: SetCacheStart](#setcachestart)|Ustawia wartość określającą zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.|
+|[CDaoRecordset:: SetCurrentIndex](#setcurrentindex)|Wywołuje się, by ustawić indeks w zestawie rekordów typu tabeli.|
+|[CDaoRecordset:: SetFieldDirty](#setfielddirty)|Oznacza określone pole w bieżącym rekordzie jako zmienione.|
+|[CDaoRecordset:: SetFieldNull](#setfieldnull)|Ustawia wartość określonego pola w bieżącym rekordzie na null (bez wartości).|
+|[CDaoRecordset:: SetFieldValue](#setfieldvalue)|Ustawia wartość pola w zestawie rekordów.|
+|[CDaoRecordset:: SetFieldValueNull](#setfieldvaluenull)|Ustawia wartość pola w zestawie rekordów na wartość null. (bez wartości).|
+|[CDaoRecordset:: setlockmode](#setlockingmode)|Ustawia wartość wskazującą typ blokowania, które mają zostać zastosowane podczas edycji.|
+|[CDaoRecordset:: SetParamValue](#setparamvalue)|Ustawia bieżącą wartość określonego parametru przechowywanego w źródłowym obiekcie DAOParameter|
+|[CDaoRecordset:: SetParamValueNull](#setparamvaluenull)|Ustawia bieżącą wartość określonego parametru na null (bez wartości).|
+|[CDaoRecordset:: SetPercentPosition](#setpercentposition)|Ustawia pozycję bieżącego rekordu na lokalizację odpowiadającą wartości procentowej całkowitej liczby rekordów w zestawie rekordów.|
+|[CDaoRecordset:: Update](#update)|Kończy `AddNew` lub `Edit` operacji, zapisując nowe lub edytowane dane w źródle danych.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Zawiera flagę wskazującą, czy pola są automatycznie oznaczane jako zmienione.|
-|[CDaoRecordset::m_nFields](#m_nfields)|Zawiera liczbę elementy członkowskie danych pola w klasie zestawu rekordów i liczba kolumn wybranych przez zestaw rekordów ze źródła danych.|
-|[CDaoRecordset::m_nParams](#m_nparams)|Zawiera liczbę elementy członkowskie danych parametru w klasie rekordów — liczba parametrów przekazana z zapytaniem zestawu rekordów|
-|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|Wskaźnik do interfejsu DAO bazowy obiekt zestawu rekordów.|
-|[CDaoRecordset::m_pDatabase](#m_pdatabase)|Ustaw źródłowej bazy danych dla tego wyniku. Zawiera wskaźnik do [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.|
-|[CDaoRecordset::m_strFilter](#m_strfilter)|Zawiera ciąg używany do budowy SQL **gdzie** instrukcji.|
-|[CDaoRecordset::m_strSort](#m_strsort)|Zawiera ciąg używany do budowy SQL **ORDER BY** instrukcji.|
+|[CDaoRecordset:: m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Zawiera flagę wskazującą, czy pola są automatycznie oznaczane jako zmienione.|
+|[CDaoRecordset:: m_nFields](#m_nfields)|Zawiera liczbę elementów członkowskich danych pola w klasie zestawu rekordów oraz liczbę kolumn wybranych przez zestaw rekordów ze źródła danych.|
+|[CDaoRecordset:: m_nParams](#m_nparams)|Zawiera liczbę elementów członkowskich danych parametrów w klasie zestawu rekordów — liczbę parametrów przesłanych z zapytaniem zestawu rekordów|
+|[CDaoRecordset:: m_pDAORecordset](#m_pdaorecordset)|Wskaźnik do interfejsu DAO bazowego obiektu zestawu rekordów.|
+|[CDaoRecordset:: m_pDatabase](#m_pdatabase)|Źródłowa baza danych dla tego zestawu wyników. Zawiera wskaźnik do obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .|
+|[CDaoRecordset:: m_strFilter](#m_strfilter)|Zawiera ciąg używany do konstruowania instrukcji SQL **WHERE** .|
+|[CDaoRecordset:: m_strSort](#m_strsort)|Zawiera ciąg służący do konstruowania instrukcji SQL **order by** .|
 
 ## <a name="remarks"></a>Uwagi
 
-Znana jako "zestawy rekordów," `CDaoRecordset` obiekty są dostępne w następujących trzech formach:
+Znane jako "zestawy rekordów" `CDaoRecordset` obiekty są dostępne w następujących trzech formach:
 
-- Zestawy rekordów typ tabeli reprezentują tabeli podstawowej, która umożliwia zbadać, dodawania, zmieniania i usuwania rekordów z tabeli pojedynczej bazy danych.
+- Zestawy rekordów typu tabela reprezentują tabelę bazową, która służy do badania, dodawania, zmieniania lub usuwania rekordów z pojedynczej tabeli bazy danych.
 
-- Zestawy rekordów dynamicznego są wynikiem zapytania, które mogą mieć aktualizowalnych rekordy. Te zestawy rekordów są zestawu rekordów, których można użyć, aby sprawdzić, dodać, zmienić lub usuwania rekordów z tabeli źródłowej bazy danych lub tabel. Zestawy rekordów dynamicznego mogą zawierać pola z co najmniej jedną tabelę w bazie danych.
+- Zestawy rekordów typu zestaw dynamiczny są wynikiem zapytania, które może mieć aktualizowalne rekordy. Te zestawy rekordów to zestaw rekordów, których można użyć do badania, dodawania, zmieniania lub usuwania rekordów źródłowej tabeli lub tabel bazy danych. Zestawy rekordów typu dynamicznego mogą zawierać pola z co najmniej jednej tabeli w bazie danych.
 
-- Typ migawki zestawów rekordów są statyczne kopię zestawu rekordów, które służy do wyszukiwania danych lub generowania raportów. Te zestawy rekordów mogą zawierać pola z co najmniej jedną tabelę w bazie danych, ale nie można zaktualizować.
+- Zestawy rekordów typu Snapshot to statyczna kopia zestawu rekordów, za pomocą której można znaleźć dane lub wygenerować raporty. Te zestawy rekordów mogą zawierać pola z co najmniej jednej tabeli w bazie danych, ale nie można ich zaktualizować.
 
-Każdy formularz rekordów reprezentuje zestaw rekordów ustalony w czasie, który zostanie otwarty zestaw rekordów. Podczas przewijania do rekordu w zestawie rekordów typ tabeli lub dynamicznego zestawu rekordów odzwierciedla zmian wprowadzonych do rekordu, po otwarciu zestawu rekordów przez innych użytkowników lub innych zestawów rekordów w aplikacji. (Nie można zaktualizować zestawu rekordów typu migawka.) Możesz użyć `CDaoRecordset` bezpośrednio lub pochodzić z klasy specyficzne dla aplikacji w zestawie rekordów z `CDaoRecordset`. Następnie możesz:
+Każdy formularz zestawu rekordów reprezentuje zestaw rekordów ustalonych w momencie otwarcia zestawu rekordów. Podczas przewijania do rekordu w zestawie rekordów typu tabela lub zestawu rekordów typu zestaw dynamiczny odzwierciedla zmiany wprowadzone do rekordu po otwarciu zestawu rekordów przez innych użytkowników lub inne zestawy rekordów w aplikacji. (Nie można zaktualizować zestawu rekordów typu snapshot). `CDaoRecordset` można użyć bezpośrednio lub utworzyć klasę zestawu rekordów specyficznych dla aplikacji z `CDaoRecordset`. Następnie można:
 
-- Przewijania rekordów.
+- Przewijaj rekordy.
 
-- Ustaw indeks i szybko wyszukać rekordy przy użyciu [Seek](#seek) (tylko zestawy rekordów typ tabeli).
+- Ustawianie indeksu i szybkie wyszukiwanie rekordów przy użyciu funkcji [wyszukiwania](#seek) (tylko zestawy rekordów typu "Tabela").
 
-- Znajdowanie rekordów na podstawie porównania ciągów: "<","\<=", "=", "> =", lub ">" (dynamicznego i zestawów rekordów typu Migawka).
+- Znajdowanie rekordów na podstawie porównania ciągów: "<", "\<=", "=", "> =" lub ">" (zestawy rekordów typu dynamicznego i typu migawek).
 
-- Aktualizowanie rekordów i określić tryb blokowania (oprócz zestawów rekordów typu Migawka).
+- Aktualizowanie rekordów i Określanie trybu blokowania (z wyjątkiem zestawów rekordów typu snapshot).
 
-- Filtruj zestaw rekordów, aby ograniczyć rekordy, które wybierze od tych, które są dostępne w źródle danych.
+- Filtruj zestaw rekordów, aby ograniczyć, które rekordy wybierają z tych, które są dostępne w źródle danych.
 
-- Sortuj zestawu rekordów.
+- Posortuj zestaw rekordów.
 
-- Parametryzacja zestawu rekordów, aby dostosować jego zaznaczenie z informacjami o nieznany do czasu wykonywania.
+- Sparametryzuj zestaw rekordów, aby dostosować jego wybór o informacje nieznane do czasu wykonywania.
 
-Klasa `CDaoRecordset` dostarcza interfejs podobny do klasy `CRecordset`. Główna różnica polega na tej klasy `CDaoRecordset` uzyskuje dostęp do danych za pośrednictwem dostępu do obiektu DAO (Data) oparte na OLE. Klasa `CRecordset` uzyskuje dostęp do systemu DBMS za pośrednictwem interfejsu Open Database Connectivity (ODBC) i sterownik ODBC dla tego systemu DBMS.
+Klasa `CDaoRecordset` dostarcza interfejs podobny do klasy `CRecordset`. Główną różnicą jest to, że Klasa `CDaoRecordset` uzyskuje dostęp do danych za pośrednictwem obiektu dostępu do danych (DAO) opartego na technologii OLE. Klasa `CRecordset` uzyskuje dostęp do systemu DBMS za pośrednictwem Open Database Connectivity (ODBC) i sterownika ODBC dla tego systemu DBMS.
 
 > [!NOTE]
-> Klasy bazy danych DAO różnią się od klas baz danych MFC, które są oparte na Open Database Connectivity (ODBC). Wszystkie nazwy klasy bazy danych DAO mają prefiks "CDao". Możesz nadal dostęp do źródła danych ODBC przy użyciu klas DAO; klasy DAO ogólnie oferują możliwości wyższego poziomu, ponieważ są one specyficzne dla aparatu bazy danych Microsoft Jet.
+> Klasy bazy danych DAO różnią się od klas baz danych MFC opartych na Open Database Connectivity (ODBC). Wszystkie nazwy klas baz danych DAO mają prefiks "CDao". Nadal można uzyskać dostęp do źródeł danych ODBC przy użyciu klas DAO; klasy DAO zazwyczaj oferują znakomite możliwości, ponieważ są specyficzne dla aparatu bazy danych Microsoft Jet.
 
-Można użyć `CDaoRecordset` bezpośrednio lub wyprowadzić klasę z `CDaoRecordset`. Aby użyć klasy zestawu rekordów w obu przypadkach, otworzyć bazę danych i skonstruować obiekt zestawu rekordów, przekazując konstruktora wskaźnik do Twojej `CDaoDatabase` obiektu. Można także skonstruować `CDaoRecordset` obiektu i umożliwiają utworzenie tymczasowego MFC `CDaoDatabase` obiekt dla Ciebie. Następnie wywołaj zestawu rekordów [Otwórz](#open) funkcji członkowskiej, określając, czy obiekt jest zestaw rekordów typ tabeli, dynamicznego zestawu rekordów lub zestawu rekordów typu migawka. Wywoływanie `Open` wybiera dane z bazy danych i pobiera pierwszy rekord.
+Możesz użyć `CDaoRecordset` bezpośrednio lub utworzyć klasę z `CDaoRecordset`. Aby użyć klasy zestawu rekordów w obu przypadkach, Otwórz bazę danych i Skonstruuj obiekt zestawu rekordów, przekazując konstruktora wskaźnik do obiektu `CDaoDatabase`. Możesz również skonstruować obiekt `CDaoRecordset` i pozwolić MFC utworzyć tymczasowy obiekt `CDaoDatabase`. Następnie wywołaj funkcję [otwierającego](#open) elementu członkowskiego zestawu rekordów, określając, czy obiekt jest zestawem rekordów typu tabeli, zestawem rekordów typu dynamicznego lub zestawem rekordów typu migawka. Wywołanie `Open` powoduje wybranie danych z bazy danych i pobranie pierwszego rekordu.
 
-Użyj obiektu elementu członkowskiego funkcji i danych elementów członkowskich do przewijania rekordów i działają na nich. Operacje dostępne są zależne od tego, czy obiekt jest zestaw rekordów typ tabeli, dynamicznego zestawu rekordów lub zestawu rekordów typu migawka i czy jest można aktualizować tylko do odczytu — zależy to od możliwości bazy danych lub Open Database Connectivity (ODBC) źródło danych. Aby odświeżyć rekordy, które mogą zostały zmienione lub dodane od `Open` wywołań, wywołań obiektu [Requery](#requery) funkcja elementu członkowskiego. Wywołanie obiektu `Close` element członkowski funkcji i zniszcz obiekt, po zapoznaniu się z nim.
+Użyj funkcji składowych i składowych danych obiektu, aby przewijać rekordy i pracować nad nimi. Dostępne operacje zależą od tego, czy obiekt jest zestawem rekordów typu tabeli, zestawem rekordów typu dynamicznego, czy zestawem rekordów typu migawki oraz czy jest możliwe do aktualizacji lub tylko do odczytu — jest to zależne od możliwości bazy danych lub Open Database Connectivity (ODBC) Źródło danych. Aby odświeżyć rekordy, które mogły zostać zmienione lub dodane od czasu wywołania `Open`, wywołaj funkcję elementu członkowskiego [PonówKwerendę](#requery) obiektu. Wywołaj funkcję członkowską `Close` obiektu i zniszcz obiekt po zakończeniu pracy z nim.
 
-`CDaoRecordset` używa wymiany pól rekordów DAO (DXF) w celu obsługują odczytywanie i aktualizowanie pola rekordu za pośrednictwem bezpiecznego typu C++ członkowie Twojego `CDaoRecordset` lub `CDaoRecordset`-klasy pochodnej. Możesz również wdrożyć dynamiczne powiązanie kolumn w bazie danych, bez użycia za pomocą mechanizmu DFX [getfieldvalue —](#getfieldvalue) i [SetFieldValue](#setfieldvalue).
+`CDaoRecordset` używa wymiany pól rekordów DAO (DFX) do obsługi odczytywania i aktualizowania pól rekordów przy użyciu bezpiecznych C++ dla typu elementów członkowskich `CDaoRecordset` lub klasy pochodnej `CDaoRecordset`. Możesz również zaimplementować dynamiczne powiązanie kolumn w bazie danych bez używania mechanizmu DFX przy użyciu [GetFieldValue —](#getfieldvalue) i [SetFieldValue](#setfieldvalue).
 
-Aby uzyskać powiązane informacje zobacz temat "Obiekt zestawu rekordów" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "obiekt Recordset" w pomocy DAO.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -327,11 +327,11 @@ Aby uzyskać powiązane informacje zobacz temat "Obiekt zestawu rekordów" w Pom
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdao.h
+**Nagłówek:** afxdao. h
 
-##  <a name="addnew"></a>  CDaoRecordset::AddNew
+##  <a name="addnew"></a>CDaoRecordset:: AddNew
 
-Wywołaj tę funkcję elementu członkowskiego, aby dodać nowy rekord do zestawu rekordów typu tabeli lub dynamicznego.
+Wywołaj tę funkcję elementu członkowskiego, aby dodać nowy rekord do typu tabeli lub zestawu rekordów typu dynamicznego.
 
 ```
 virtual void AddNew();
@@ -339,39 +339,39 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>Uwagi
 
-Pola rekordu są początkowo o wartości Null. (W terminologii bazy danych o wartości Null oznacza, że "po żadnej wartości" i nie jest taka sama jak wartość NULL w języku C++) Aby zakończyć operację, należy wywołać [aktualizacji](#update) funkcja elementu członkowskiego. `Update` Zapisuje zmiany w źródle danych.
+Pola rekordu są początkowo puste. (W terminologii bazy danych wartość null oznacza brak wartości i nie jest taka sama jak wartość NULL w C++.) Aby ukończyć operację, należy wywołać funkcję elementu członkowskiego [aktualizacji](#update) . `Update` zapisuje zmiany w źródle danych.
 
 > [!CAUTION]
->  Jeśli edytować rekord, a następnie przewiń listę do innego rekordu bez wywoływania `Update`, wszystkie zmiany zostaną utracone bez ostrzeżenia.
+>  Jeśli edytujesz rekord, a następnie przewiniesz do innego rekordu bez wywoływania `Update`, zmiany zostaną utracone bez ostrzeżenia.
 
-Jeśli dodasz rekord do dynamicznego zestawu rekordów, wywołując [działają funkcje AddNew](#addnew), rekord jest widoczny w zestawie rekordów i zawarty w tabeli podstawowej, gdzie staje się niewidoczna dla każdego nowego `CDaoRecordset` obiektów.
+W przypadku dodania rekordu do zestawu typu zestaw dynamiczny przez wywołanie metody [AddNew](#addnew), rekord jest widoczny w zestawie rekordów i uwzględniony w tabeli źródłowej, w której staną się widoczne dla nowych obiektów `CDaoRecordset`.
 
-Pozycja nowy rekord, zależy od typu zestawu rekordów:
+Pozycja nowego rekordu zależy od typu zestawu rekordów:
 
-- Zestaw rekordów, polegający na wstawieniu nowy rekord w typie dynamiczny nie jest gwarantowana. To zachowanie, zmienić za pomocą programu Microsoft Jet 3.0 ze względów wydajności i współbieżności. Jeśli celem jest zapewnienie nowo dodanego rekordu w bieżącym rekordzie, Pobierz zakładki ostatniej modyfikacji rekordu i przejście do zakładki tego:
+- W zestawie danych typu zestaw dynamiczny, gdzie wstawiony nowy rekord nie jest gwarantowany. To zachowanie zostało zmienione w programie Microsoft Jet 3,0 z powodu wydajności i współbieżności. Jeśli chcesz, aby nowo dodany rekord był nowym rekordem, zapoznaj się z zakładką ostatnio zmodyfikowanego rekordu i przejdź do tej zakładki:
 
 [!code-cpp[NVC_MFCDatabase#1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]
 
-- W zestawie rekordów typ tabeli, dla którego określono indeksu zwracane są rekordy w ich właściwe miejsce, w kolejności sortowania. Jeśli został określony bez indeksu, nowe rekordy są zwracane na końcu zestawu rekordów.
+- W zestawie rekordów typu tabela, dla którego został określony indeks, rekordy są zwracane w odpowiednim miejscu w kolejności sortowania. Jeśli indeks nie został określony, nowe rekordy są zwracane na końcu zestawu rekordów.
 
-Rekord, który były aktualne, zanim została użyta `AddNew` pozostaje bieżącego. Jeśli chcesz utworzyć nowy rekord bieżący, a zestaw rekordów obsługuje zakładek, wywołanie [setbookmark —](#setbookmark) do zakładki identyfikowane przez ustawienie właściwości LastModified obiektu bazowego zestawu rekordów DAO. To jest przydatne w przypadku określenia wartości dla licznika (automatycznego przyrostu) pola rekordów dodanych. Aby uzyskać więcej informacji, zobacz [GetLastModifiedBookmark](#getlastmodifiedbookmark).
+Rekord, który był aktualny przed użyciem `AddNew` pozostaje aktualny. Jeśli chcesz, aby nowy rekord był bieżący, a zestaw rekordów obsługuje zakładki, wywołaj metodę [SetBookmark](#setbookmark) do zakładki identyfikowanej przez ustawienie właściwości LastModified bazowego obiektu zestawu rekordów DAO. Takie działanie jest przydatne w przypadku określania wartości pól licznika (Autouzupełnianie) w dodanym rekordzie. Aby uzyskać więcej informacji, zobacz [GetLastModifiedBookmark](#getlastmodifiedbookmark).
 
-Jeśli baza danych obsługuje transakcje, możesz wprowadzać swoje `AddNew` wywołać częścią transakcji. Aby uzyskać więcej informacji na temat transakcji Zobacz klasy [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). Należy zauważyć, że należy wywołać [CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) przed wywołaniem `AddNew`.
+Jeśli baza danych obsługuje transakcje, można `AddNew` wywoływać część transakcji. Aby uzyskać więcej informacji na temat transakcji, zobacz Klasa [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). Należy pamiętać, że przed wywołaniem `AddNew`należy wywołać metodę [CDaoWorkspace:: BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) .
 
-Jest niedozwolone wywołanie `AddNew` dla zestawu rekordów którego [Otwórz](#open) nie została wywołana funkcja elementu członkowskiego. A `CDaoException` jest generowany, jeśli wywołujesz `AddNew` dla zestawu rekordów, które nie można dołączyć. Można określić, czy zestaw rekordów jest można aktualizować, wywołując [CanAppend](#canappend).
+Nie można wywoływać `AddNew` dla zestawu rekordów, którego funkcja [Open](#open) member nie została wywołana. `CDaoException` jest generowany w przypadku wywołania `AddNew` dla zestawu rekordów, którego nie można dołączyć. Można określić, czy zestaw rekordów ma być aktualizowalny przez wywołanie funkcji [dołączania](#canappend).
 
-Znaczniki framework zmienione elementy członkowskie danych pola, aby upewnić się, że będą one zapisywane do rekordu w źródle danych przez mechanizm wymiany (DXF) pola rekordów DAO. Zazwyczaj zmianę wartości pola ustawia pole zanieczyszczone automatycznie, dzięki czemu będą rzadko należy wywołać [SetFieldDirty](#setfielddirty) samodzielnie, ale czasami chcieć upewnij się, że kolumny zostaną jawnie zaktualizowane lub wstawione niezależnie od tego jakie korzyści jest w pole składowej danych. Mechanizm DFX stosuje również użycie **PSEUDO NULL**. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
+Struktura oznacza zmienione elementy członkowskie danych pola, aby upewnić się, że zostaną one zamienione na rekord źródła danych przez mechanizm wymiany pól rekordów DAO (DFX). Zmiana wartości pola na ogół ustawia pole jako zanieczyszczone automatycznie, więc rzadko trzeba wywołać [SetFieldDirty](#setfielddirty) , ale czasami warto upewnić się, że kolumny będą jawnie aktualizowane lub wstawiane niezależnie od tego, jaka wartość znajduje się w polu elementu członkowskiego danych. Mechanizm DFX wykorzystuje również użycie **pseudo wartości null**. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
 
-Jeśli nie jest używany mechanizm podwójnego buforowania, następnie zmieniając wartość pola automatycznie nie ustawiono pola oznaczonych jako zakłócone. W tym przypadku będzie trzeba jawnie ustawić pole zanieczyszczeniu. Flaga zawarte w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontrolki, to automatyczne sprawdzanie.
+Jeśli mechanizm podwójnego buforowania nie jest używany, zmiana wartości pola nie powoduje automatycznego ustawienia pola jako zanieczyszczonego. W takim przypadku konieczne będzie jawne ustawienie wartości pola zanieczyszczony. Flaga znajdująca się w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontroluje to automatyczne sprawdzanie pól.
 
 > [!NOTE]
-> Jeśli rekordy, które są podwójnie buforowana (oznacza to, że pole Automatyczne sprawdzanie jest włączone), podczas wywoływania `CancelUpdate` spowoduje przywrócenie zmienne Członkowskie wartości mieli oni przed `AddNew` lub `Edit` została wywołana.
+> Jeśli rekordy są poddane podwójnej precyzji (oznacza to, że automatyczne sprawdzanie pola jest włączone), wywołanie `CancelUpdate` przywraca zmienne składowe do wartości, które miały przed `AddNew` lub `Edit` została wywołana.
 
-Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "CancelUpdate metody", "Ostatnia modyfikacja właściwości" i "Trybu edycji właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Metoda CancelUpdate", "Właściwość LastModified" i "EditMode Property" w pomocy DAO.
 
-##  <a name="canappend"></a>  CDaoRecordset::CanAppend
+##  <a name="canappend"></a>CDaoRecordset:: dołączanie
 
-Wywołanie tej funkcji elementu członkowskiego, aby ustalić, czy wcześniej otwarty zestaw rekordów można dodawać nowe rekordy, wywołując [działają funkcje AddNew](#addnew) funkcja elementu członkowskiego.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy poprzednio otwarty zestaw rekordów pozwala dodawać nowe rekordy, wywołując funkcję elementu członkowskiego [AddNew](#addnew) .
 
 ```
 BOOL CanAppend() const;
@@ -379,15 +379,15 @@ BOOL CanAppend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` Zwraca wartość 0 Jeśli otwarty zestaw rekordów jako tylko do odczytu.
+Niezerowe, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` zwróci wartość 0, jeśli zestaw rekordów został otwarty jako tylko do odczytu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać powiązane informacje zobacz temat "Dołącz metody" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda dołączania" w pomocy DAO.
 
-##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark
+##  <a name="canbookmark"></a>CDaoRecordset:: wypisano
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy wcześniej otwarty zestaw rekordów można oznaczyć pojedynczo rekordów, korzystanie z zakładek.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy poprzednio otwarty zestaw rekordów umożliwia pojedyncze oznaczenie rekordów przy użyciu zakładek.
 
 ```
 BOOL CanBookmark();
@@ -395,17 +395,17 @@ BOOL CanBookmark();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zestaw rekordów obsługuje zakładek, w przeciwnym razie 0.
+Różne od zera, jeśli zestaw rekordów obsługuje zakładki, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli używasz zestawów rekordów na podstawie całkowicie w tabelach aparatu bazy danych Microsoft Jet zakładek może służyć z wyjątkiem na zestawów rekordów typu migawka oznaczone jako tylko do przodu przewijania zestawów rekordów. Inne produkty bazy danych (zewnętrznego źródła danych ODBC) mogą nie obsługiwać zakładek.
+Jeśli używasz zestawów rekordów opartych wyłącznie na tabelach aparatu bazy danych Microsoft Jet, można używać zakładek z wyjątkiem zestawów rekordów typu migawka oflagowanych jako przewijane zestawy rekordów. Inne produkty bazy danych (zewnętrzne źródła danych ODBC) mogą nie obsługiwać zakładek.
 
-Aby uzyskać powiązane informacje zobacz temat "Bookmarkable Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość z zakładkami" w pomocy DAO.
 
-##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate
+##  <a name="cancelupdate"></a>CDaoRecordset:: CancelUpdate
 
-`CancelUpdate` Funkcja elementu członkowskiego anuluje wszystkie oczekujące aktualizacje ze względu na [Edytuj](#edit) lub [działają funkcje AddNew](#addnew) operacji.
+Funkcja członkowska `CancelUpdate` anuluje wszystkie oczekujące aktualizacje spowodowane operacją [edycji](#edit) lub operacji [AddNew](#addnew) .
 
 ```
 virtual void CancelUpdate();
@@ -413,18 +413,18 @@ virtual void CancelUpdate();
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład, jeśli aplikacja wywołuje `Edit` lub `AddNew` funkcja elementu członkowskiego i nie została wywołana [aktualizacji](#update), `CancelUpdate` spowoduje anulowanie wszelkich zmian wprowadzonych po `Edit` lub `AddNew` została wywołana.
+Na przykład, jeśli aplikacja wywołuje funkcję członkowską `Edit` lub `AddNew` i nie ma metody [Update](#update), `CancelUpdate` anuluje wszelkie zmiany wprowadzone po wywołaniu `Edit` lub `AddNew`.
 
 > [!NOTE]
->  Jeśli rekordy, które są podwójnie buforowana (oznacza to, że pole Automatyczne sprawdzanie jest włączone), podczas wywoływania `CancelUpdate` spowoduje przywrócenie zmienne Członkowskie wartości mieli oni przed `AddNew` lub `Edit` została wywołana.
+>  Jeśli rekordy są poddane podwójnej precyzji (oznacza to, że automatyczne sprawdzanie pola jest włączone), wywołanie `CancelUpdate` przywraca zmienne składowe do wartości, które miały przed `AddNew` lub `Edit` została wywołana.
 
-Jeśli ma nie `Edit` lub `AddNew` operacji do czasu, `CancelUpdate` powoduje, że MFC, aby zgłosić wyjątek. Wywołaj [GetEditMode](#geteditmode) funkcja elementu członkowskiego, aby ustalić, czy istnieje oczekująca operacja, która może być anulowany.
+Jeśli nie ma oczekującej operacji `Edit` lub `AddNew`, `CancelUpdate` powoduje zgłoszenie wyjątku przez MFC. Wywołaj funkcję elementu członkowskiego [Geteditmode](#geteditmode) , aby określić, czy istnieje oczekująca operacja, która może zostać anulowana.
 
-Aby uzyskać powiązane informacje zobacz temat "CancelUpdate metody" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda CancelUpdate" w pomocy DAO.
 
-##  <a name="canrestart"></a>  CDaoRecordset::CanRestart
+##  <a name="canrestart"></a>CDaoRecordset:: restart
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy zestaw rekordów zezwala na ponowne uruchomienie jej zapytanie (na przykład aby odświeżyć swoje rekordy) przez wywołanie metody `Requery` funkcja elementu członkowskiego.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów umożliwia ponowne uruchomienie zapytania (w celu odświeżenia jego rekordów) przez wywołanie funkcji składowej `Requery`.
 
 ```
 BOOL CanRestart();
@@ -432,19 +432,19 @@ BOOL CanRestart();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera `Requery` można wywołać w celu uruchomienia zestawu rekordów zapytanie ponownie, w przeciwnym razie 0.
+Różna od zera, jeśli `Requery` można wywołać, aby ponownie uruchomić zapytanie zestawu rekordów, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zestawy rekordów typ tabeli nie obsługują `Requery`.
+Zestawy rekordów typu tabela nie obsługują `Requery`.
 
-Jeśli `Requery` jest nieobsługiwana, wywołaj [Zamknij](#close) następnie [Otwórz](#open) odświeżania danych. Możesz wywołać `Requery` można zaktualizować obiektu zestawu rekordów podstawowej parametr zapytania po zmianie wartości parametrów.
+Jeśli `Requery` nie jest obsługiwana, wywołaj polecenie [Zamknij](#close) , a następnie pozycję [Otwórz](#open) , aby odświeżyć dane. Można wywołać `Requery`, aby zaktualizować zapytanie parametryczne obiektu zestawu rekordów po zmianie wartości parametrów.
 
-Aby uzyskać powiązane informacje zobacz temat "Property ponownego uruchamiania" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość ponownego uruchomienia" w pomocy DAO.
 
-##  <a name="canscroll"></a>  CDaoRecordset::CanScroll
+##  <a name="canscroll"></a>CDaoRecordset:: Scroll
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy zestaw rekordów umożliwia przewijanie.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów umożliwia przewijanie.
 
 ```
 BOOL CanScroll() const;
@@ -452,17 +452,17 @@ BOOL CanScroll() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli można przewijać rekordy, w przeciwnym razie 0.
+Różne od zera, jeśli można przewijać rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wywołasz [Otwórz](#open) z `dbForwardOnly`, zestaw rekordów można tylko przewiń do przodu.
+Jeśli wywołasz polecenie [Otwórz](#open) za pomocą `dbForwardOnly`, zestaw rekordów będzie można przewijać do przodu.
 
-Aby uzyskać powiązane informacje zobacz temat "Pozycjonowanie bieżącego rekordu wskaźnika za pomocą DAO" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "pozycjonowanie bieżącego rekordu ze wskaźnikiem DAO" w pomocy DAO.
 
-##  <a name="cantransact"></a>  CDaoRecordset::CanTransact
+##  <a name="cantransact"></a>CDaoRecordset:: gettransact
 
-Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów zezwala na transakcji.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów zezwala na transakcje.
 
 ```
 BOOL CanTransact();
@@ -470,15 +470,15 @@ BOOL CanTransact();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli bazowe źródło danych obsługuje transakcji, w przeciwnym razie 0.
+Różne od zera, jeśli bazowe źródło danych obsługuje transakcje, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać powiązane informacje zobacz temat "Property transakcji" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość Transactions" w pomocy DAO.
 
-##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate
+##  <a name="canupdate"></a>CDaoRecordset:: Update
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy zestaw rekordów może być aktualizowana.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów może zostać zaktualizowany.
 
 ```
 BOOL CanUpdate() const;
@@ -486,17 +486,17 @@ BOOL CanUpdate() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli zestaw rekordów, które mogą być aktualizowane (dodawania, aktualizowania i usuwania rekordów), w przeciwnym razie 0.
+Niezerowe, jeśli zestaw rekordów może być aktualizowany (Dodawanie, aktualizowanie i usuwanie rekordów), w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zestaw rekordów może być tylko do odczytu, jeśli bazowe źródło danych jest tylko do odczytu, lub jeśli określono `dbReadOnly` dla *nOptions* gdy wywoływana [Otwórz](#open) zestawu rekordów.
+Zestaw rekordów może być tylko do odczytu, jeśli bazowe źródło danych jest tylko do odczytu lub jeśli określono `dbReadOnly` dla *nOptions* po wywołaniu metody [Open](#open) dla zestawu rekordów.
 
-Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "Edytuj metodę", "Usuń metodę", "Metoda aktualizacji" i "Można zaktualizować właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Edytuj metodę", "Delete Method", "Metoda aktualizacji" i "aktualizowalne właściwości" w pomocy DAO.
 
-##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset
+##  <a name="cdaorecordset"></a>CDaoRecordset:: CDaoRecordset
 
-Konstruuje `CDaoRecordset` obiektu.
+Konstruuje obiekt `CDaoRecordset`.
 
 ```
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
@@ -505,20 +505,20 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ### <a name="parameters"></a>Parametry
 
 *pDatabase*<br/>
-Zawiera wskaźnik do [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiekt lub wartość NULL. Jeśli nie ma wartości NULL i `CDaoDatabase` obiektu `Open` połączyć się ze źródłem danych nie została wywołana funkcja elementu członkowskiego, próbuje otworzyć go dla Ciebie podczas swój własny zestaw rekordów [Otwórz](#open) wywołania. W przypadku przekazania wartości NULL, `CDaoDatabase` obiekt jest konstruowany i połączone przy użyciu informacje o źródle danych, które zostały określone, jeśli pochodzi z klasy zestawu rekordów `CDaoRecordset`.
+Zawiera wskaźnik do obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) lub wartość null. Jeśli nie ma wartości NULL i `Open` funkcji składowej obiektu `CDaoDatabase` nie została wywołana, aby połączyć ją ze źródłem danych, zestaw rekordów podejmie próbę otwarcia go dla Ciebie w ramach własnego [otwartego](#open) wywołania. W przypadku przekazania wartości NULL obiekt `CDaoDatabase` jest konstruowany i połączony z użyciem informacji o źródle danych, które zostały określone, jeśli Klasa zestawu rekordów pochodzi z `CDaoRecordset`.
 
 ### <a name="remarks"></a>Uwagi
 
-Można użyć `CDaoRecordset` bezpośrednio lub pochodzić z klasy specyficzne dla aplikacji z `CDaoRecordset`. ClassWizard umożliwia pochodzi z klasy zestawu rekordów.
+Można użyć `CDaoRecordset` bezpośrednio lub utworzyć klasę specyficzną dla aplikacji z `CDaoRecordset`. Możesz użyć ClassWizard, aby utworzyć klasy zestawu rekordów.
 
 > [!NOTE]
->  Przypadku klasy wyprowadzonej `CDaoRecordset` klasy usługi pochodnej klasy należy podać swój własny konstruktora. W konstruktorze klasy pochodnej, wywołanie konstruktora `CDaoRecordset::CDaoRecordset`, przekazując odpowiednie parametry wzdłuż do niego.
+>  W przypadku wygenerowania klasy `CDaoRecordset` Klasa pochodna musi dostarczyć własnego konstruktora. W konstruktorze klasy pochodnej Wywołaj konstruktora `CDaoRecordset::CDaoRecordset`, przekazując odpowiednie parametry do niego.
 
-Przekazać wartości NULL do Konstruktora zestawu rekordów mieć `CDaoDatabase` obiekt skonstruowany i połączone dla Ciebie automatycznie. Jest to przydatny skrót, który nie wymaga to utworzyć i połączyć `CDaoDatabase` obiektu przed konstruowanie rekordów. Jeśli `CDaoDatabase` obiektu nie jest otwarty, [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) zostanie również utworzony obiekt dla Ciebie, która używa domyślnego obszaru roboczego. Aby uzyskać więcej informacji, zobacz [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).
+Przekaż wartość NULL do konstruktora zestawu rekordów, aby obiekt `CDaoDatabase` skonstruowany i połączony automatycznie. Jest to przydatny skrót, który nie wymaga konstruowania i łączenia obiektu `CDaoDatabase` przed rozpoczęciem tworzenia zestawu rekordów. Jeśli obiekt `CDaoDatabase` nie jest otwarty, zostanie również utworzony obiekt [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , który używa domyślnego obszaru roboczego. Aby uzyskać więcej informacji, zobacz [CDaoDatabase:: CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).
 
-##  <a name="close"></a>  CDaoRecordset::Close
+##  <a name="close"></a>CDaoRecordset:: Close
 
-Zamykanie `CDaoRecordset` obiektu spowoduje usunięcie go z kolekcji otwarty zestaw rekordów w skojarzonej bazy danych.
+Zamknięcie obiektu `CDaoRecordset` spowoduje usunięcie go z kolekcji otwartych zestawów rekordów w skojarzonej bazie danych.
 
 ```
 virtual void Close();
@@ -526,17 +526,17 @@ virtual void Close();
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ `Close` nie niszczy `CDaoRecordset` obiektu, można ponownie użyć obiektu przez wywołanie metody `Open` tego samego źródła danych lub innego źródła danych.
+Ponieważ `Close` nie niszczy obiektu `CDaoRecordset`, można ponownie użyć obiektu, wywołując `Open` w tym samym źródle danych lub innym źródle danych.
 
-Wszystkie oczekujące [działają funkcje AddNew](#addnew) lub [Edytuj](#edit) instrukcje zostały anulowane, a wszystkie oczekujące transakcje są wycofywane. Jeśli chcesz zachować oczekujące dodatki lub zmiany, należy wywołać [aktualizacji](#update) przed wywołaniem `Close` dla każdego zestawu rekordów.
+Wszystkie oczekujące instrukcje [AddNew](#addnew) lub [Edit](#edit) są anulowane i wszystkie oczekujące transakcje są wycofywane. Jeśli chcesz zachować oczekujące operacje dodawania lub edycji, wywołaj [aktualizację](#update) przed wywołaniem `Close` dla każdego zestawu rekordów.
 
-Możesz wywołać `Open` ponownie po wywołaniu `Close`. Dzięki temu można ponownie użyć obiekt zestawu rekordów. Lepszą alternatywą jest wywołanie [Requery](#requery), jeśli to możliwe.
+Możesz wywołać `Open` ponownie po wywołaniu `Close`. Pozwala to ponownie wykorzystać obiekt zestawu rekordów. Lepszym rozwiązaniem jest wywołanie [kwerendy](#requery), jeśli to możliwe.
 
-Aby uzyskać powiązane informacje zobacz temat "Metody Close" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "metoda Close" w pomocy DAO.
 
-##  <a name="delete"></a>  CDaoRecordset::Delete
+##  <a name="delete"></a>CDaoRecordset::D Usuń
 
-Wywołaj tę funkcję elementu członkowskiego, aby usunąć bieżący rekord w obiekcie otwarty zestaw rekordów dynamicznego lub typ tabeli.
+Wywołaj tę funkcję elementu członkowskiego, aby usunąć bieżący rekord w otwartym obiekcie zestawu rekordów typu dynamiczny lub typu tabela.
 
 ```
 virtual void Delete();
@@ -544,22 +544,22 @@ virtual void Delete();
 
 ### <a name="remarks"></a>Uwagi
 
-Po pomyślnym usunięciu, elementy członkowskie danych pola w zestawie rekordów są ustawione na wartość Null i musi jawnie wywołać jedną z funkcji elementów członkowskich nawigacji zestawu rekordów ( [przenieść](#move), [Seek](#seek), [ Setbookmark —](#setbookmark)i tak dalej), aby opuścić usunięty rekord. Podczas usuwania rekordów z zestawu rekordów, musi istnieć rekord bieżący w zestawie rekordów przed wywołaniem `Delete`; w przeciwnym razie MFC zgłasza wyjątek.
+Po pomyślnym usunięciu elementy członkowskie danych pola zestawu rekordów są ustawiane na wartość null i należy jawnie wywołać jedną z funkcji elementów członkowskich nawigacji zestawu rekordów ( [Przenieś](#move), [Szukaj](#seek), [SetBookmark](#setbookmark)itd.) w celu przeniesienia usuniętego rekordu. Po usunięciu rekordów z zestawu rekordów, przed wywołaniem `Delete`, musi istnieć bieżący rekord w zestawie rekordów. w przeciwnym razie MFC zgłasza wyjątek.
 
-`Delete` Usuwa bieżący rekord i sprawia, że niedostępny. Mimo że nie można edytować ani usuniętego rekordu, pozostaje w bieżącym. Po przejściu do innego rekordu, jednak nie możesz wprowadzać usunięty rekord bieżący ponownie.
+`Delete` usuwa bieżący rekord i sprawia, że jest niedostępny. Chociaż nie można edytować ani używać usuniętego rekordu, pozostaje on aktualny. Jednak po przejściu do innego rekordu nie można zmienić rekordu, który został usunięty ponownie.
 
 > [!CAUTION]
->  Zestaw rekordów musi być nadaje się do aktualizacji i musi być prawidłowy rekord bieżący w zestawie rekordów po wywołaniu `Delete`. Na przykład, jeśli możesz usunąć rekord, ale nie przewiń do nowego rekordu przed wywołaniem `Delete` ponownie `Delete` zgłasza [CDaoException](../../mfc/reference/cdaoexception-class.md).
+>  Zestaw rekordów musi być aktualizowalny, a podczas wywoływania `Delete`musi istnieć prawidłowy rekord w zestawie rekordów. Na przykład, jeśli usuniesz rekord, ale nie przewiniesz do nowego rekordu przed ponownym wywołaniem `Delete`, `Delete` zgłasza [CDaoException](../../mfc/reference/cdaoexception-class.md).
 
-Jeśli używasz transakcji i wywołania można cofnąć usunięcie rekordu [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) funkcja elementu członkowskiego. Jeśli tabela podstawowa jest tabela podstawowa w cascade usunąć relację, usunięcie bieżącego rekordu może również usunięcie co najmniej jednego rekordu w tabeli obcego. Aby uzyskać więcej informacji zobacz definicję "Kaskadowo usuń" w Pomocy programu DAO.
+Możesz cofnąć usunięcie rekordu, jeśli używasz transakcji i wywołujesz funkcję elementu członkowskiego [CDaoWorkspace:: Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) . Jeśli tabela podstawowa jest tabelą podstawową w relacji usuwania kaskadowego, usunięcie bieżącego rekordu może również spowodować usunięcie jednego lub większej liczby rekordów w tabeli obcej. Aby uzyskać więcej informacji, zobacz Definicja "Kaskada Delete" w pomocy DAO.
 
-W odróżnieniu od `AddNew` i `Edit`, wywołanie `Delete` nie następuje po wywołaniu `Update`.
+W przeciwieństwie do `AddNew` i `Edit`, wywołanie `Delete` nie następuje po wywołaniu `Update`.
 
-Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "Edytuj metodę", "Usuń metodę", "Metoda aktualizacji" i "Można zaktualizować właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Edytuj metodę", "Delete Method", "Metoda aktualizacji" i "aktualizowalne właściwości" w pomocy DAO.
 
-##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange
+##  <a name="dofieldexchange"></a>CDaoRecordset::D oFieldExchange
 
-Struktura wywołuje tę funkcję elementu członkowskiego, aby automatycznie wymianę danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie kolumny bieżącego rekordu w źródle danych.
+Struktura wywołuje tę funkcję elementu członkowskiego, aby automatycznie wymieniać dane między elementami członkowskimi obiektu zestawu rekordów i odpowiednimi kolumnami bieżącego rekordu w źródle danych.
 
 ```
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
@@ -568,21 +568,21 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Zawiera wskaźnik do `CDaoFieldExchange` obiektu. Struktura będzie już skonfigurowano ten obiekt do określenia kontekstu dla operacji wymiany pól.
+Zawiera wskaźnik do obiektu `CDaoFieldExchange`. Platforma ma już skonfigurowany ten obiekt, aby określić kontekst dla operacji wymiany pól.
 
 ### <a name="remarks"></a>Uwagi
 
-Wiąże również swoje elementy członkowskie danych parametru, jeśli parametr symbole zastępcze w ciągu instrukcji SQL dla zaznaczenia w zestawie rekordów. Wymiana pola danych, nazywane wymiana pól rekordów DAO (DXF) działa w obu kierunkach: z obiekty zestawów rekordów elementy członkowskie danych pola do pól rekordu w źródle danych, a także z rekordu w źródle danych do obiektu zestawu rekordów. Jeśli dynamicznie powiązanie kolumn nie należy implementować `DoFieldExchange`.
+Wiąże się on również z elementami członkowskimi danych parametru, jeśli istnieją, do zastępczych parametrów w ciągu instrukcji SQL dla wyboru zestawu rekordów. Wymiana danych pól, nazywana wymianą pól rekordów DAO (DFX), działa w obu kierunkach: od elementów członkowskich danych pola obiektu recordset do pól rekordu w źródle danych i z rekordu źródła danych do obiektu zestawu rekordów. Jeśli kolumny są powiązane dynamicznie, nie trzeba implementować `DoFieldExchange`.
 
-Jedyną akcją, zazwyczaj należy wykonać w celu zaimplementowania `DoFieldExchange` dla rekordów pochodnej klasy ma utworzyć klasę z ClassWizard i określić nazwy i typy danych elementów członkowskich danych pola. Można również dodawać kod do ClassWizard zapisuje określone elementy członkowskie danych parametru. Jeśli wszystkie pola mają być dynamicznie powiązane, ta funkcja będzie nieaktywne, chyba że określisz elementy członkowskie danych parametru.
+Jedyną akcją, którą należy zwykle wykonać w celu zaimplementowania `DoFieldExchange` dla pochodnej klasy zestawu rekordów, jest utworzenie klasy z ClassWizard i określenie nazw i typów danych elementów członkowskich danych pola. Możesz również dodać kod do ClassWizard zapisów, aby określić elementy członkowskie danych parametru. Jeśli wszystkie pola mają być powiązane dynamicznie, ta funkcja będzie nieaktywna, chyba że określisz elementy członkowskie danych parametru.
 
-Kiedy Deklarujesz klasy pochodnej rekordów z ClassWizard, kreator zapisuje zastąpieniu obiektu `DoFieldExchange` , który przypomina poniższy przykład:
+W przypadku deklarowania pochodnej klasy zestawu rekordów przy użyciu ClassWizard kreator zapisuje przesłonięcie `DoFieldExchange` dla Ciebie, co przypomina następujący przykład:
 
 [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]
 
-##  <a name="edit"></a>  CDaoRecordset::Edit
+##  <a name="edit"></a>CDaoRecordset:: Edit
 
-Wywołaj tę funkcję elementu członkowskiego do umożliwienia wprowadzania zmian w bieżącym rekordzie.
+Wywołaj tę funkcję elementu członkowskiego, aby zezwolić na zmiany w bieżącym rekordzie.
 
 ```
 virtual void Edit();
@@ -590,41 +590,41 @@ virtual void Edit();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy wywołujesz `Edit` funkcji członkowskiej, zmiany wprowadzone do pól bieżącego rekordu są kopiowane do buforu kopiowania. Po wprowadzeniu odpowiednich zmian w rekordzie wywołać `Update` Aby zapisać zmiany. `Edit` zapisuje wartości elementów członkowskich danych w zestawie rekordów. Jeśli wywołasz `Edit`, wprowadzić zmiany, następnie wywołać `Edit` ponownie rekordu wartości zostaną przywrócone do były przed pierwszym `Edit` wywołania.
+Po wywołaniu funkcji składowej `Edit` zmiany wprowadzone do pól bieżącego rekordu zostaną skopiowane do buforu kopiowania. Po wprowadzeniu żądanych zmian do rekordu Wywołaj `Update`, aby zapisać zmiany. `Edit` zapisuje wartości elementów członkowskich danych zestawu rekordów. Jeśli wywołasz `Edit`, wprowadź zmiany, a następnie Wywołaj `Edit` ponownie, wartości rekordu są przywracane do tych, które były przed pierwszym wywołaniem `Edit`.
 
 > [!CAUTION]
->  Jeśli edytować rekord, a następnie wykonać żadnych operacji, która przechodzi do innego rekordu bez wywoływania pierwszy `Update`, wszystkie zmiany zostaną utracone bez ostrzeżenia. Ponadto jeśli zamkniesz zestawu rekordów lub nadrzędną bazę danych, edytowany rekord jest odrzucany bez ostrzeżenia.
+>  Jeśli edytujesz rekord, a następnie wykonasz dowolną operację przenoszona do innego rekordu bez uprzedniego wywołania `Update`, zmiany zostaną utracone bez ostrzeżenia. Ponadto, jeśli zamkniesz zestaw rekordów lub nadrzędną bazę danych, edytowany rekord zostanie odrzucony bez ostrzeżenia.
 
-W niektórych przypadkach można zaktualizować kolumny czyniąc ją o wartości Null (zawierający żadnych danych). Aby to zrobić, należy wywołać `SetFieldNull` z parametrem wartość PRAWDA, aby znak pola o wartości Null; to również powoduje, że kolumny do zaktualizowania. Jeśli chcesz, aby pole zapisywane do źródła danych, nawet jeśli jego wartość nie została zmieniona, wywołaj `SetFieldDirty` z parametrem wartość TRUE. Dzieje się tak nawet wtedy, gdy pole ma wartość Null.
+W niektórych przypadkach możesz chcieć zaktualizować kolumnę, wprowadzając wartość null (bez danych). W tym celu należy wywoływać `SetFieldNull` z parametrem TRUE, aby oznaczyć pole null. powoduje to również zaktualizowanie kolumny. Jeśli chcesz, aby pole było zapisywane w źródle danych, mimo że jego wartość nie uległa zmianie, wywołaj `SetFieldDirty` z parametrem TRUE. Działa to nawet wtedy, gdy pole ma wartość null.
 
-Znaczniki framework zmienione elementy członkowskie danych pola, aby upewnić się, że będą one zapisywane do rekordu w źródle danych przez mechanizm wymiany (DXF) pola rekordów DAO. Zazwyczaj zmianę wartości pola ustawia pole zanieczyszczone automatycznie, dzięki czemu będą rzadko należy wywołać [SetFieldDirty](#setfielddirty) samodzielnie, ale czasami chcieć upewnij się, że kolumny zostaną jawnie zaktualizowane lub wstawione niezależnie od tego jakie korzyści jest w pole składowej danych. Mechanizm DFX stosuje również użycie **PSEUDO NULL**. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
+Struktura oznacza zmienione elementy członkowskie danych pola, aby upewnić się, że zostaną one zamienione na rekord źródła danych przez mechanizm wymiany pól rekordów DAO (DFX). Zmiana wartości pola na ogół ustawia pole jako zanieczyszczone automatycznie, więc rzadko trzeba wywołać [SetFieldDirty](#setfielddirty) , ale czasami warto upewnić się, że kolumny będą jawnie aktualizowane lub wstawiane niezależnie od tego, jaka wartość znajduje się w polu elementu członkowskiego danych. Mechanizm DFX wykorzystuje również użycie **pseudo wartości null**. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
 
-Jeśli nie jest używany mechanizm podwójnego buforowania, następnie zmieniając wartość pola automatycznie nie ustawiono pola oznaczonych jako zakłócone. W tym przypadku będzie trzeba jawnie ustawić pole zanieczyszczeniu. Flaga zawarte w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontrolki, to automatyczne sprawdzanie.
+Jeśli mechanizm podwójnego buforowania nie jest używany, zmiana wartości pola nie powoduje automatycznego ustawienia pola jako zanieczyszczonego. W takim przypadku konieczne będzie jawne ustawienie wartości pola zanieczyszczony. Flaga znajdująca się w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontroluje to automatyczne sprawdzanie pól.
 
-Gdy obiekt zestawu rekordów pessimistically jest zablokowana w środowisku wielodostępnym, rekord jest zablokowany, od momentu `Edit` jest używana przed zakończeniem aktualizację. Jeśli zestaw rekordów optymistycznie jest zablokowany, rekord jest zablokowana i tylko w przypadku, zanim zostaną one zaktualizowane w bazie danych w porównaniu z wstępnie edytowany rekord. Jeśli rekord został zmieniony, ponieważ wywołana `Edit`, `Update` zgłasza wyjątek, operacja zakończy się niepowodzeniem i MFC. Możesz zmienić tryb blokowania z `SetLockingMode`.
+Gdy obiekt zestawu rekordów jest pessimistically zablokowany w środowisku wielodostępnym, rekord pozostaje zablokowany od czasu `Edit` jest używany do momentu ukończenia aktualizacji. Jeśli zestaw rekordów jest optymistycznie zablokowany, rekord jest zablokowany i porównywany z wstępnie edytowanym rekordem tuż przed zaktualizowaniem w bazie danych. Jeśli rekord został zmieniony od momentu wywołania `Edit`, operacja `Update` kończy się niepowodzeniem, a MFC zgłasza wyjątek. Tryb blokowania można zmienić za pomocą `SetLockingMode`.
 
 > [!NOTE]
->  Zawsze formatów zewnętrznej bazy danych, takich jak ODBC i możliwe do zainstalowania ISAM używane optymistyczne blokowanie.
+>  Optymistyczne blokowanie jest zawsze używane w formatach zewnętrznych baz danych, takich jak ODBC i Instalowalna ISAM.
 
-Bieżący rekord pozostaje bieżącego po wywołaniu metody `Edit`. Aby wywołać `Edit`, musi istnieć bieżącego rekordu. Jeśli nie ma bieżącego rekordu lub zestaw rekordów nie odwołuje się do Otwórz typ tabeli lub obiektu zestawu rekordów dynamicznego, wystąpi wyjątek. Wywoływanie `Edit` powoduje, że `CDaoException` zostanie wygenerowany w następujących warunkach:
+Bieżący rekord pozostaje aktualny po wywołaniu `Edit`. Aby wywołać `Edit`, musi istnieć bieżący rekord. Jeśli nie ma bieżącego rekordu lub zestaw rekordów nie odwołuje się do otwartego obiektu typu tabela lub zestaw typu dynamiczny, wystąpi wyjątek. Wywołanie `Edit` powoduje, że `CDaoException` być zgłaszane w następujących warunkach:
 
-- Nie ma bieżącego rekordu.
+- Brak bieżącego rekordu.
 
-- Baza danych lub zestawu rekordów jest tylko do odczytu.
+- Baza danych lub zestaw rekordów jest tylko do odczytu.
 
-- Brak pól w rekordzie są aktualizowalne.
+- Żadne pola w rekordzie nie są aktualizowalne.
 
 - Baza danych lub zestaw rekordów został otwarty do wyłącznego użytku przez innego użytkownika.
 
-- Inny użytkownik zablokował strony zawierającej rekord.
+- Inny użytkownik zablokował stronę zawierającą Twój rekord.
 
-Jeśli źródło danych obsługuje transakcje, można wprowadzić `Edit` wywołać częścią transakcji. Należy zauważyć, że należy wywołać `CDaoWorkspace::BeginTrans` przed wywołaniem `Edit` i po otwarciu zestawu rekordów. Należy również zauważyć, że wywołanie `CDaoWorkspace::CommitTrans` nie jest alternatywą do wywoływania `Update` do ukończenia `Edit` operacji. Aby uzyskać więcej informacji na temat transakcji Zobacz klasy `CDaoWorkspace`.
+Jeśli źródło danych obsługuje transakcje, można `Edit` wywołać część transakcji. Należy pamiętać, że należy wywołać `CDaoWorkspace::BeginTrans` przed wywołaniem `Edit` i po otwarciu zestawu rekordów. Należy również zauważyć, że wywoływanie `CDaoWorkspace::CommitTrans` nie zastępuje `Update` wywołania, aby ukończyć operację `Edit`. Aby uzyskać więcej informacji na temat transakcji, zobacz Klasa `CDaoWorkspace`.
 
-Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "Edytuj metodę", "Usuń metodę", "Metoda aktualizacji" i "Można zaktualizować właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Edytuj metodę", "Delete Method", "Metoda aktualizacji" i "aktualizowalne właściwości" w pomocy DAO.
 
-##  <a name="fillcache"></a>  CDaoRecordset::FillCache
+##  <a name="fillcache"></a>CDaoRecordset:: FillCache
 
-Wywołaj tę funkcję elementu członkowskiego w pamięci podręcznej określoną liczbę rekordów w zestawie.
+Wywołaj tę funkcję elementu członkowskiego, aby buforować określoną liczbę rekordów z zestawu rekordów.
 
 ```
 void FillCache(
@@ -635,28 +635,28 @@ void FillCache(
 ### <a name="parameters"></a>Parametry
 
 *pSize*<br/>
-Określa liczbę wierszy, aby wypełnić z pamięci podręcznej. Jeżeli pominięto ten parametr, wartość jest określana przez ustawienie właściwości CacheSize obiekt DAO.
+Określa liczbę wierszy do wypełnienia w pamięci podręcznej. Jeśli pominięto ten parametr, wartość jest określana przez ustawienie właściwości CacheSize bazowego obiektu DAO.
 
 *pBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md) określenie zakładki. Pamięć podręczna jest wypełniony, zaczynając od rekordu wskazywanym przez tę zakładkę. Jeżeli pominięto ten parametr pamięci podręcznej jest wypełniony, począwszy od rekordu, wskazane przez właściwość CacheStart obiekt DAO.
+[COleVariant](../../mfc/reference/colevariant-class.md) określający zakładkę. Pamięć podręczna jest wypełniana począwszy od rekordu wskazanego przez tę zakładkę. Jeśli pominięto ten parametr, pamięć podręczna zostanie wypełniona z rekordu wskazanego przez właściwość CacheStart bazowego obiektu DAO.
 
 ### <a name="remarks"></a>Uwagi
 
-Pamięć podręczna zwiększa wydajność aplikacji, która umożliwia pobranie lub pobiera dane z serwera zdalnego. Pamięć podręczna jest miejsca w pamięci lokalnej, która przechowuje dane ostatnio pobrane z serwera na założeniu, że dane będą prawdopodobnie można żądać jej ponownie po uruchomieniu aplikacji. Jeśli wymagane są dane, aparat bazy danych Microsoft Jet pamięci podręcznej danych najpierw sprawdza zamiast pobierając je z serwera, który jest bardziej czasochłonne. Korzystanie z danych buforowanie na inne niż ODBC — źródła danych nie ma wpływu, ponieważ dane nie są zapisywane w pamięci podręcznej.
+Buforowanie zwiększa wydajność aplikacji pobierającej lub pobierającej dane z serwera zdalnego. Pamięć podręczna jest spacją w pamięci lokalnej, która przechowuje dane ostatnio pobrane z serwera w założeniu, że dane będą prawdopodobnie ponownie żądane, gdy aplikacja jest uruchomiona. Gdy dane są żądane, aparat bazy danych Microsoft Jet najpierw sprawdza pamięć podręczną dla danych zamiast pobierać ją z serwera, co zajmuje więcej czasu. Używanie buforowania danych w źródłach danych innych niż ODBC nie ma żadnego efektu, ponieważ dane nie są zapisywane w pamięci podręcznej.
 
-Bez czekania pamięci podręcznej w celu wypełnienia z rekordami, ponieważ są one dołączone, możesz jawnie wpisać pamięci podręcznej w dowolnym momencie przez wywołanie metody `FillCache` funkcja elementu członkowskiego. Jest to sposób wypełnienia pamięci podręcznej, ponieważ `FillCache` dostarcza kilka rekordów jednocześnie zamiast pojedynczo. Na przykład podczas każdego screenful rekordy są wyświetlane, możesz mieć wywołania aplikacji `FillCache` do pobrania następnej screenful rekordów.
+Zamiast czekać na wypełnienie pamięci podręcznej, gdy są one pobierane, można jawnie wypełnić pamięć podręczną w dowolnym momencie, wywołując funkcję elementu członkowskiego `FillCache`. Jest to szybszy sposób wypełnienia pamięci podręcznej, ponieważ program `FillCache` pobiera kilka rekordów jednocześnie zamiast jednego. Na przykład podczas wyświetlania każdego ekranu z rekordami może być wywoływana aplikacja `FillCache`, aby pobrać następny ekran z rekordami.
 
-Wszystkie dostępne z obiektami rekordów bazy danych ODBC może mieć lokalnej pamięci podręcznej. Aby utworzyć pamięć podręczną, otwórz obiekt zestawu rekordów ze źródła danych zdalnych, a następnie wywołaj `SetCacheSize` i `SetCacheStart` funkcji elementów członkowskich zestawu rekordów. Jeśli *lSize* i *lBookmark* utworzyć zakres, który jest całkowicie lub częściowo poza zakres określony przez `SetCacheSize` i `SetCacheStart`, część zestawu rekordów poza tym zakresem są ignorowane i nie jest ładowane do pamięci podręcznej. Jeśli `FillCache` żądań więcej rekordów niż pozostają w zdalne źródło danych, są pobierane tylko te rekordy, pozostałe i jest zgłaszany żaden wyjątek.
+Dowolna baza danych ODBC, do której uzyskuje dostęp z obiektami zestawu rekordów, może mieć lokalną pamięć podręczną Aby utworzyć pamięć podręczną, Otwórz obiekt zestawu rekordów ze zdalnego źródła danych, a następnie Wywołaj `SetCacheSize` i `SetCacheStart` funkcje składowe zestawu rekordów. Jeśli *lSize* i *lBookmark* tworzą zakres, który jest częściowo lub całkowicie spoza zakresu określonego przez `SetCacheSize` i `SetCacheStart`, część zestawu rekordów spoza tego zakresu jest ignorowana i nie jest załadowana do pamięci podręcznej. Jeśli `FillCache` żąda więcej rekordów niż pozostaje w zdalnym źródle danych, pobierane są tylko pozostałe rekordy i nie zostanie zgłoszony żaden wyjątek.
 
-Rekordy pobrane z pamięci podręcznej nie odzwierciedlają zmiany wprowadzone współbieżnie źródła danych przez innych użytkowników.
+Rekordy pobrane z pamięci podręcznej nie odzwierciedlają zmian wprowadzonych jednocześnie do danych źródłowych przez innych użytkowników.
 
-`FillCache` pobiera tylko te rekordy, które nie jest jeszcze w pamięci podręcznej. Aby wymusić aktualizację wszystkich danych w pamięci podręcznej, należy wywołać `SetCacheSize` funkcji składowej z *lSize* parametru równa 0, wywołanie `SetCacheSize` ponownie, używając *lSize* parametr równy rozmiarowi pamięci podręcznej pierwotnie żądaną, a następnie wywołaj `FillCache`.
+`FillCache` pobiera tylko te rekordy, które nie są już buforowane. Aby wymusić aktualizację wszystkich danych w pamięci podręcznej, wywołaj `SetCacheSize` funkcję członkowską z parametrem *lSize* równym 0, wywołaj `SetCacheSize` ponownie z parametrem *lSize* równym rozmiarowi pierwotnie zażądanej pamięci podręcznej, a następnie Wywołaj `FillCache`.
 
-Aby uzyskać powiązane informacje zobacz temat "FillCache metody" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda FillCache" w pomocy DAO.
 
-##  <a name="find"></a>  CDaoRecordset::Find
+##  <a name="find"></a>CDaoRecordset:: find
 
-Wywołaj tę funkcję elementu członkowskiego, aby zlokalizować określonego ciągu w zestawie rekordów dynamiczny lub typ migawki za pomocą operatora porównania.
+Wywołaj tę funkcję elementu członkowskiego, aby zlokalizować określony ciąg w zestawie rekordów typu "dynamiczny" lub "snapshot-Type" przy użyciu operatora porównania.
 
 ```
 virtual BOOL Find(
@@ -667,39 +667,39 @@ virtual BOOL Find(
 ### <a name="parameters"></a>Parametry
 
 *lFindType*<br/>
-Wartość wskazująca typ operacji Znajdź żądane. Możliwe wartości to:
+Wartość wskazująca żądany typ operacji wyszukiwania. Możliwe wartości to:
 
-- AFX_DAO_NEXT Znajdź następnej lokalizacji pasującego ciągu.
+- AFX_DAO_NEXT znaleźć kolejnej lokalizacji pasującego ciągu.
 
-- AFX_DAO_PREV Znajdź poprzedniej lokalizacji pasującego ciągu.
+- AFX_DAO_PREV znaleźć poprzedniej lokalizacji pasującego ciągu.
 
-- AFX_DAO_FIRST Znajdź pierwszej lokalizacji pasującego ciągu.
+- AFX_DAO_FIRST znaleźć pierwszej lokalizacji pasującego ciągu.
 
-- AFX_DAO_LAST znaleźć ostatnich lokalizacji pasującego ciągu.
+- AFX_DAO_LAST znaleźć ostatniej lokalizacji pasującego ciągu.
 
 *lpszFilter*<br/>
-Wyrażenie ciągu (takich jak **gdzie** klauzuli w instrukcji SQL bez słowa **gdzie**) używana do lokalizowania rekordu. Na przykład:
+Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu. Na przykład:
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Po pierwsze, następnie można znaleźć poprzednią lub ostatnie wystąpienie ciągu. `Find` jest funkcją wirtualną, aby można było go zastąpić i Dodaj własną implementację. `FindFirst`, `FindLast`, `FindNext`, I `FindPrev` wywołanie funkcje Członkowskie `Find` funkcja elementu członkowskiego, aby można było używać `Find` do sterowania zachowaniem wszystkich operacji wyszukiwania.
+Można znaleźć pierwsze, następne, poprzednie lub ostatnie wystąpienie ciągu. `Find` jest funkcją wirtualną, dlatego można ją zastąpić i dodać własną implementację. Funkcje członkowskie `FindFirst`, `FindLast`, `FindNext`i `FindPrev` wywołują funkcję członkowską `Find`, dlatego można użyć `Find` do kontrolowania zachowania wszystkich operacji znajdowania.
 
-Aby zlokalizować rekordu w zestawie rekordów typ tabeli, należy wywołać [Seek](#seek) funkcja elementu członkowskiego.
+Aby zlokalizować rekord w zestawie rekordów typu tabeli, wywołaj funkcję [wyszukiwania](#seek) elementu członkowskiego.
 
 > [!TIP]
->  Mniejszy zestaw rekordów, możesz mieć bardziej skuteczna `Find` będzie. Ogólnie rzecz biorąc, a szczególnie w przypadku danych ODBC lepiej jest utworzyć nowe zapytanie, które pobiera tylko rekordy, które chcesz.
+>  Im mniejszy zestaw rekordów, tym bardziej efektywne `Find`. Ogólnie rzecz biorąc, szczególnie w przypadku danych ODBC, lepiej jest utworzyć nowe zapytanie, które pobiera tylko potrzebne rekordy.
 
-Aby uzyskać powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "FindFirst, FindLast, ZnajdźNastępny, FindPrevious Methods" w pomocy DAO.
 
-##  <a name="findfirst"></a>  CDaoRecordset::FindFirst
+##  <a name="findfirst"></a>CDaoRecordset:: FindFirst
 
-Wywołaj tę funkcję elementu członkowskiego, aby znaleźć pierwszy rekord, który spełnia określony warunek.
+Wywołaj tę funkcję elementu członkowskiego, aby znaleźć pierwszy rekord zgodny z określonym warunkiem.
 
 ```
 BOOL FindFirst(LPCTSTR lpszFilter);
@@ -708,52 +708,52 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>Parametry
 
 *lpszFilter*<br/>
-Wyrażenie ciągu (takich jak **gdzie** klauzuli w instrukcji SQL bez słowa **gdzie**) używana do lokalizowania rekordu.
+Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`FindFirst` Funkcja elementu członkowskiego, rozpocznie się wyszukiwanie od początku zestawu rekordów i wyszukiwania na końcu zestawu rekordów.
+Funkcja członkowska `FindFirst` rozpoczyna wyszukiwanie od początku zestawu rekordów i wyszukuje na końcu zestawu rekordów.
 
-Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek) użyj jednej z operacji przenoszenia przenoszenia między rekordami. Aby zlokalizować rekordu w zestawie rekordów typ tabeli, należy wywołać `Seek` funkcja elementu członkowskiego.
+Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek), użyj jednej z operacji przenoszenia, aby przejść z rekordu do rekordu. Aby zlokalizować rekord w zestawie rekordów typu tabeli, wywołaj funkcję członkowską `Seek`.
 
-Jeśli rekord spełniające kryteria nie znajduje się, bieżący wskaźnik rekordu jest nieokreślony, i `FindFirst` zwraca wartość zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord, który spełnia kryteria, `FindFirst` lokalizuje pierwsze wystąpienie `FindNext` znajduje następne wystąpienie i tak dalej.
+Jeśli rekord pasujący do kryteriów nie znajduje się w lokalizacji, bieżący wskaźnik rekordu jest nieokreślony, a `FindFirst` zwraca zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord spełniający kryteria, `FindFirst` lokalizuje pierwsze wystąpienie, `FindNext` lokalizuje następne wystąpienie i tak dalej.
 
 > [!CAUTION]
->  Jeśli edytujesz bieżącego rekordu, pamiętaj zapisać zmiany przez wywołanie metody `Update` funkcji składowej przed przejściem do innego rekordu. Jeśli zostanie przeniesiony do innego rekordu bez aktualizowania, zmiany zostaną utracone bez ostrzeżenia.
+>  Jeśli edytujesz bieżący rekord, pamiętaj o zapisaniu zmian, wywołując funkcję elementu członkowskiego `Update` przed przejściem do innego rekordu. Jeśli przejdziesz do innego rekordu bez aktualizacji, zmiany zostaną utracone bez ostrzeżenia.
 
-`Find` Funkcji elementów członkowskich przeszukiwać z lokalizacji i kierunek określony w tabeli poniżej:
+`Find` funkcje członkowskie przeszukują lokalizację i w kierunku określonym w poniższej tabeli:
 
-|Operacje Znajdź|Rozpocznij|Kierunek wyszukiwania|
+|Operacje znajdowania|Rozpocznij|Kierunek wyszukiwania|
 |---------------------|-----------|----------------------|
-|`FindFirst`|Począwszy od zestawu rekordów|Koniec zestawu rekordów|
-|`FindLast`|Koniec zestawu rekordów|Począwszy od zestawu rekordów|
+|`FindFirst`|Początek zestawu rekordów|Koniec zestawu rekordów|
+|`FindLast`|Koniec zestawu rekordów|Początek zestawu rekordów|
 |`FindNext`|Bieżący rekord|Koniec zestawu rekordów|
-|`FindPrevious`|Bieżący rekord|Począwszy od zestawu rekordów|
+|`FindPrevious`|Bieżący rekord|Początek zestawu rekordów|
 
 > [!NOTE]
->  Gdy wywołujesz `FindLast`, aparat bazy danych Microsoft Jet wypełnia całkowicie rekordów przed rozpoczęciem wyszukiwania, jeśli to nie ma już zrobione. Pierwszy wyszukiwania może trwać dłużej niż późniejszych wyszukiwań.
+>  Gdy wywołasz `FindLast`, aparat bazy danych Microsoft Jet całkowicie wypełnia zestaw rekordów przed rozpoczęciem wyszukiwania, jeśli nie zostało to jeszcze zrobione. Pierwsze wyszukiwanie może trwać dłużej niż kolejne wyszukiwania.
 
-Przy użyciu jednej z operacji wyszukiwania nie jest taka sama jak wywołanie `MoveFirst` lub `MoveNext`, jednak co po prostu sprawia, że pierwszy lub następny rekord bieżący bez określania warunku. Można wykonać operacji wyszukiwania za pomocą operacji przenoszenia.
+Korzystanie z jednej z operacji znajdowania nie jest takie samo jak wywołanie `MoveFirst` lub `MoveNext`, co po prostu powoduje, że pierwszy lub następny rekord jest obecny bez określenia warunku. Możesz wykonać operację wyszukiwania z operacją przenoszenia.
 
-Korzystając z operacji wyszukiwania, należy pamiętać o następujących czynności:
+Przy użyciu operacji znajdowania należy pamiętać o następujących kwestiach:
 
-- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W tym przypadku należy umieść bieżący wskaźnik rekordu ponownie z prawidłowym rekordem.
+- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W takim przypadku musisz pomieścić bieżący wskaźnik rekordu z powrotem do prawidłowego rekordu.
 
-- Nie można użyć operacji wyszukiwania z przewijaniem typ migawki rekordów.
+- Nie można użyć operacji Find z przewijanym typem migawek tylko do przodu.
 
-- Należy używać amerykański format daty (dzień miesiąc rok) podczas wyszukiwania dla pól zawierających daty, nawet jeśli nie używasz wersji US aparatu bazy danych Microsoft Jet; w przeciwnym razie dopasowanie rekordy mogą nie być odnajdowane.
+- Należy użyć formatu daty w Stanach Zjednoczonych (miesiąc-dzień-rok) podczas wyszukiwania pól zawierających daty, nawet jeśli nie jest używana amerykańska wersja aparatu bazy danych Microsoft Jet. w przeciwnym razie nie można znaleźć pasujących rekordów.
 
-- Podczas pracy z bazami danych ODBC i dużych zestawów dynamicznych, użytkownik może stwierdzić, że za pomocą operacji wyszukiwania jest powolne, szczególnie w przypadku pracy z dużych zestawów rekordów. Może poprawić wydajność, korzystając z zapytań SQL za pomocą dostosowanego **ORDERBY** lub **gdzie** klauzul, parametr zapytania, lub `CDaoQuerydef` obiekty, które pobierają określonych rekordów indeksowanych.
+- Podczas pracy z bazami danych ODBC i dużymi dynamicznymi zestawami można stwierdzić, że użycie operacji znajdowania jest wolne, szczególnie podczas pracy z dużymi zestawami rekordów. Można zwiększyć wydajność przy użyciu zapytań SQL z dostosowanymi klauzulami **ORDERBY** lub **WHERE** , kwerendami parametrycznymi lub `CDaoQuerydef` obiektów, które pobierają określone indeksowane rekordy.
 
-Aby uzyskać powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "FindFirst, FindLast, ZnajdźNastępny, FindPrevious Methods" w pomocy DAO.
 
-##  <a name="findlast"></a>  CDaoRecordset::FindLast
+##  <a name="findlast"></a>CDaoRecordset:: FindLast
 
-Wywołaj tę funkcję elementu członkowskiego, aby znaleźć ostatni rekord, który spełnia określony warunek.
+Wywołaj tę funkcję elementu członkowskiego, aby znaleźć ostatni rekord zgodny z określonym warunkiem.
 
 ```
 BOOL FindLast(LPCTSTR lpszFilter);
@@ -762,40 +762,40 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>Parametry
 
 *lpszFilter*<br/>
-Wyrażenie ciągu (takich jak **gdzie** klauzuli w instrukcji SQL bez słowa **gdzie**) używana do lokalizowania rekordu.
+Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`FindLast` Funkcja elementu członkowskiego zaczyna wyszukiwanie na końcu zestawu rekordów i wyszukiwania do tyłu w kierunku początku zestawu rekordów.
+Funkcja członkowska `FindLast` rozpoczyna wyszukiwanie na końcu zestawu rekordów i przeszukuje do początku zestawu rekordów.
 
-Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek) użyj jednej z operacji przenoszenia przenoszenia między rekordami. Aby zlokalizować rekordu w zestawie rekordów typ tabeli, należy wywołać `Seek` funkcja elementu członkowskiego.
+Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek), użyj jednej z operacji przenoszenia, aby przejść z rekordu do rekordu. Aby zlokalizować rekord w zestawie rekordów typu tabeli, wywołaj funkcję członkowską `Seek`.
 
-Jeśli rekord spełniające kryteria nie znajduje się, bieżący wskaźnik rekordu jest nieokreślony, i `FindLast` zwraca wartość zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord, który spełnia kryteria, `FindFirst` lokalizuje pierwsze wystąpienie `FindNext` znajduje następne wystąpienie po pierwszym wystąpieniu i tak dalej.
+Jeśli rekord pasujący do kryteriów nie znajduje się w lokalizacji, bieżący wskaźnik rekordu jest nieokreślony, a `FindLast` zwraca zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord spełniający kryteria, `FindFirst` lokalizuje pierwsze wystąpienie, `FindNext` lokalizuje następne wystąpienie po pierwszym wystąpieniu itd.
 
 > [!CAUTION]
->  Jeśli edytujesz bieżącego rekordu, należy zapisać zmiany przez wywołanie metody `Update` funkcji składowej przed przejściem do innego rekordu. Jeśli zostanie przeniesiony do innego rekordu bez aktualizowania, zmiany zostaną utracone bez ostrzeżenia.
+>  Jeśli edytujesz bieżący rekord, pamiętaj, aby zapisać zmiany przez wywołanie funkcji składowej `Update` przed przejściem do innego rekordu. Jeśli przejdziesz do innego rekordu bez aktualizacji, zmiany zostaną utracone bez ostrzeżenia.
 
-Przy użyciu jednej z operacji wyszukiwania nie jest taka sama jak wywołanie `MoveFirst` lub `MoveNext`, jednak co po prostu sprawia, że pierwszy lub następny rekord bieżący bez określania warunku. Można wykonać operacji wyszukiwania za pomocą operacji przenoszenia.
+Korzystanie z jednej z operacji znajdowania nie jest takie samo jak wywołanie `MoveFirst` lub `MoveNext`, co po prostu powoduje, że pierwszy lub następny rekord jest obecny bez określenia warunku. Możesz wykonać operację wyszukiwania z operacją przenoszenia.
 
-Korzystając z operacji wyszukiwania, należy pamiętać o następujących czynności:
+Przy użyciu operacji znajdowania należy pamiętać o następujących kwestiach:
 
-- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W tym przypadku należy umieść bieżący wskaźnik rekordu ponownie z prawidłowym rekordem.
+- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W takim przypadku musisz pomieścić bieżący wskaźnik rekordu z powrotem do prawidłowego rekordu.
 
-- Nie można użyć operacji wyszukiwania z przewijaniem typ migawki rekordów.
+- Nie można użyć operacji Find z przewijanym typem migawek tylko do przodu.
 
-- Należy używać amerykański format daty (dzień miesiąc rok) podczas wyszukiwania dla pól zawierających daty, nawet jeśli nie używasz wersji US aparatu bazy danych Microsoft Jet; w przeciwnym razie dopasowanie rekordy mogą nie być odnajdowane.
+- Należy użyć formatu daty w Stanach Zjednoczonych (miesiąc-dzień-rok) podczas wyszukiwania pól zawierających daty, nawet jeśli nie jest używana amerykańska wersja aparatu bazy danych Microsoft Jet. w przeciwnym razie nie można znaleźć pasujących rekordów.
 
-- Podczas pracy z bazami danych ODBC i dużych zestawów dynamicznych, użytkownik może stwierdzić, że za pomocą operacji wyszukiwania jest powolne, szczególnie w przypadku pracy z dużych zestawów rekordów. Może poprawić wydajność, korzystając z zapytań SQL za pomocą dostosowanego **ORDERBY** lub **gdzie** klauzul, parametr zapytania, lub `CDaoQuerydef` obiekty, które pobierają określonych rekordów indeksowanych.
+- Podczas pracy z bazami danych ODBC i dużymi dynamicznymi zestawami można stwierdzić, że użycie operacji znajdowania jest wolne, szczególnie podczas pracy z dużymi zestawami rekordów. Można zwiększyć wydajność przy użyciu zapytań SQL z dostosowanymi klauzulami **ORDERBY** lub **WHERE** , kwerendami parametrycznymi lub `CDaoQuerydef` obiektów, które pobierają określone indeksowane rekordy.
 
-Aby uzyskać powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "FindFirst, FindLast, ZnajdźNastępny, FindPrevious Methods" w pomocy DAO.
 
-##  <a name="findnext"></a>  CDaoRecordset::FindNext
+##  <a name="findnext"></a>CDaoRecordset:: ZnajdźNastępny
 
-Wywołaj tę funkcję elementu członkowskiego, aby znaleźć następny rekord, który spełnia określony warunek.
+Wywołaj tę funkcję elementu członkowskiego, aby znaleźć następny rekord zgodny z określonym warunkiem.
 
 ```
 BOOL FindNext(LPCTSTR lpszFilter);
@@ -804,40 +804,40 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>Parametry
 
 *lpszFilter*<br/>
-Wyrażenie ciągu (takich jak **gdzie** klauzuli w instrukcji SQL bez słowa **gdzie**) używana do lokalizowania rekordu.
+Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`FindNext` Funkcja elementu członkowskiego rozpocznie się wyszukiwanie od bieżącego rekordu a na koniec przeszukuje-to-end zestawu rekordów.
+Funkcja członkowska `FindNext` rozpoczyna wyszukiwanie w bieżącym rekordzie i wyszukuje na końcu zestawu rekordów.
 
-Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek) użyj jednej z operacji przenoszenia przenoszenia między rekordami. Aby zlokalizować rekordu w zestawie rekordów typ tabeli, należy wywołać `Seek` funkcja elementu członkowskiego.
+Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek), użyj jednej z operacji przenoszenia, aby przejść z rekordu do rekordu. Aby zlokalizować rekord w zestawie rekordów typu tabeli, wywołaj funkcję członkowską `Seek`.
 
-Jeśli rekord spełniające kryteria nie znajduje się, bieżący wskaźnik rekordu jest nieokreślony, i `FindNext` zwraca wartość zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord, który spełnia kryteria, `FindFirst` lokalizuje pierwsze wystąpienie `FindNext` znajduje następne wystąpienie i tak dalej.
+Jeśli rekord pasujący do kryteriów nie znajduje się w lokalizacji, bieżący wskaźnik rekordu jest nieokreślony, a `FindNext` zwraca zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord spełniający kryteria, `FindFirst` lokalizuje pierwsze wystąpienie, `FindNext` lokalizuje następne wystąpienie i tak dalej.
 
 > [!CAUTION]
->  Jeśli edytujesz bieżącego rekordu, należy zapisać zmiany przez wywołanie metody `Update` funkcji składowej przed przejściem do innego rekordu. Jeśli zostanie przeniesiony do innego rekordu bez aktualizowania, zmiany zostaną utracone bez ostrzeżenia.
+>  Jeśli edytujesz bieżący rekord, pamiętaj, aby zapisać zmiany przez wywołanie funkcji składowej `Update` przed przejściem do innego rekordu. Jeśli przejdziesz do innego rekordu bez aktualizacji, zmiany zostaną utracone bez ostrzeżenia.
 
-Przy użyciu jednej z operacji wyszukiwania nie jest taka sama jak wywołanie `MoveFirst` lub `MoveNext`, jednak co po prostu sprawia, że pierwszy lub następny rekord bieżący bez określania warunku. Można wykonać operacji wyszukiwania za pomocą operacji przenoszenia.
+Korzystanie z jednej z operacji znajdowania nie jest takie samo jak wywołanie `MoveFirst` lub `MoveNext`, co po prostu powoduje, że pierwszy lub następny rekord jest obecny bez określenia warunku. Możesz wykonać operację wyszukiwania z operacją przenoszenia.
 
-Korzystając z operacji wyszukiwania, należy pamiętać o następujących czynności:
+Przy użyciu operacji znajdowania należy pamiętać o następujących kwestiach:
 
-- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W tym przypadku należy umieść bieżący wskaźnik rekordu ponownie z prawidłowym rekordem.
+- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W takim przypadku musisz pomieścić bieżący wskaźnik rekordu z powrotem do prawidłowego rekordu.
 
-- Nie można użyć operacji wyszukiwania z przewijaniem typ migawki rekordów.
+- Nie można użyć operacji Find z przewijanym typem migawek tylko do przodu.
 
-- Należy używać amerykański format daty (dzień miesiąc rok) podczas wyszukiwania dla pól zawierających daty, nawet jeśli nie używasz wersji US aparatu bazy danych Microsoft Jet; w przeciwnym razie dopasowanie rekordy mogą nie być odnajdowane.
+- Należy użyć formatu daty w Stanach Zjednoczonych (miesiąc-dzień-rok) podczas wyszukiwania pól zawierających daty, nawet jeśli nie jest używana amerykańska wersja aparatu bazy danych Microsoft Jet. w przeciwnym razie nie można znaleźć pasujących rekordów.
 
-- Podczas pracy z bazami danych ODBC i dużych zestawów dynamicznych, użytkownik może stwierdzić, że za pomocą operacji wyszukiwania jest powolne, szczególnie w przypadku pracy z dużych zestawów rekordów. Może poprawić wydajność, korzystając z zapytań SQL za pomocą dostosowanego **ORDERBY** lub **gdzie** klauzul, parametr zapytania, lub `CDaoQuerydef` obiekty, które pobierają określonych rekordów indeksowanych.
+- Podczas pracy z bazami danych ODBC i dużymi dynamicznymi zestawami można stwierdzić, że użycie operacji znajdowania jest wolne, szczególnie podczas pracy z dużymi zestawami rekordów. Można zwiększyć wydajność przy użyciu zapytań SQL z dostosowanymi klauzulami **ORDERBY** lub **WHERE** , kwerendami parametrycznymi lub `CDaoQuerydef` obiektów, które pobierają określone indeksowane rekordy.
 
-Aby uzyskać powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "FindFirst, FindLast, ZnajdźNastępny, FindPrevious Methods" w pomocy DAO.
 
-##  <a name="findprev"></a>  CDaoRecordset::FindPrev
+##  <a name="findprev"></a>CDaoRecordset:: FindPrev
 
-Wywołaj tę funkcję elementu członkowskiego, aby znaleźć poprzedni rekord, który odpowiada określony warunek.
+Wywołaj tę funkcję elementu członkowskiego, aby znaleźć poprzedni rekord zgodny z określonym warunkiem.
 
 ```
 BOOL FindPrev(LPCTSTR lpszFilter);
@@ -846,40 +846,40 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>Parametry
 
 *lpszFilter*<br/>
-Wyrażenie ciągu (takich jak **gdzie** klauzuli w instrukcji SQL bez słowa **gdzie**) używana do lokalizowania rekordu.
+Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`FindPrev` Funkcja elementu członkowskiego rozpocznie się wyszukiwanie od bieżącego rekordu a na koniec przeszukuje Wstecz w kierunku początku zestawu rekordów.
+Funkcja członkowska `FindPrev` rozpoczyna wyszukiwanie w bieżącym rekordzie i przeszukuje wstecz w kierunku początku zestawu rekordów.
 
-Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek) użyj jednej z operacji przenoszenia przenoszenia między rekordami. Aby zlokalizować rekordu w zestawie rekordów typ tabeli, należy wywołać `Seek` funkcja elementu członkowskiego.
+Jeśli chcesz uwzględnić wszystkie rekordy w wyszukiwaniu (nie tylko te, które spełniają określony warunek), użyj jednej z operacji przenoszenia, aby przejść z rekordu do rekordu. Aby zlokalizować rekord w zestawie rekordów typu tabeli, wywołaj funkcję członkowską `Seek`.
 
-Jeśli rekord spełniające kryteria nie znajduje się, bieżący wskaźnik rekordu jest nieokreślony, i `FindPrev` zwraca wartość zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord, który spełnia kryteria, `FindFirst` lokalizuje pierwsze wystąpienie `FindNext` znajduje następne wystąpienie i tak dalej.
+Jeśli rekord pasujący do kryteriów nie znajduje się w lokalizacji, bieżący wskaźnik rekordu jest nieokreślony, a `FindPrev` zwraca zero. Jeśli zestaw rekordów zawiera więcej niż jeden rekord spełniający kryteria, `FindFirst` lokalizuje pierwsze wystąpienie, `FindNext` lokalizuje następne wystąpienie i tak dalej.
 
 > [!CAUTION]
->  Jeśli edytujesz bieżącego rekordu, należy zapisać zmiany przez wywołanie metody `Update` funkcji składowej przed przejściem do innego rekordu. Jeśli zostanie przeniesiony do innego rekordu bez aktualizowania, zmiany zostaną utracone bez ostrzeżenia.
+>  Jeśli edytujesz bieżący rekord, pamiętaj, aby zapisać zmiany przez wywołanie funkcji składowej `Update` przed przejściem do innego rekordu. Jeśli przejdziesz do innego rekordu bez aktualizacji, zmiany zostaną utracone bez ostrzeżenia.
 
-Przy użyciu jednej z operacji wyszukiwania nie jest taka sama jak wywołanie `MoveFirst` lub `MoveNext`, jednak co po prostu sprawia, że pierwszy lub następny rekord bieżący bez określania warunku. Można wykonać operacji wyszukiwania za pomocą operacji przenoszenia.
+Korzystanie z jednej z operacji znajdowania nie jest takie samo jak wywołanie `MoveFirst` lub `MoveNext`, co po prostu powoduje, że pierwszy lub następny rekord jest obecny bez określenia warunku. Możesz wykonać operację wyszukiwania z operacją przenoszenia.
 
-Korzystając z operacji wyszukiwania, należy pamiętać o następujących czynności:
+Przy użyciu operacji znajdowania należy pamiętać o następujących kwestiach:
 
-- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W tym przypadku należy umieść bieżący wskaźnik rekordu ponownie z prawidłowym rekordem.
+- Jeśli `Find` zwraca wartość różną od zera, bieżący rekord nie jest zdefiniowany. W takim przypadku musisz pomieścić bieżący wskaźnik rekordu z powrotem do prawidłowego rekordu.
 
-- Nie można użyć operacji wyszukiwania z przewijaniem typ migawki rekordów.
+- Nie można użyć operacji Find z przewijanym typem migawek tylko do przodu.
 
-- Należy używać amerykański format daty (dzień miesiąc rok) podczas wyszukiwania dla pól zawierających daty, nawet jeśli nie używasz wersji US aparatu bazy danych Microsoft Jet; w przeciwnym razie dopasowanie rekordy mogą nie być odnajdowane.
+- Należy użyć formatu daty w Stanach Zjednoczonych (miesiąc-dzień-rok) podczas wyszukiwania pól zawierających daty, nawet jeśli nie jest używana amerykańska wersja aparatu bazy danych Microsoft Jet. w przeciwnym razie nie można znaleźć pasujących rekordów.
 
-- Podczas pracy z bazami danych ODBC i dużych zestawów dynamicznych, użytkownik może stwierdzić, że za pomocą operacji wyszukiwania jest powolne, szczególnie w przypadku pracy z dużych zestawów rekordów. Może poprawić wydajność, korzystając z zapytań SQL za pomocą dostosowanego **ORDERBY** lub **gdzie** klauzul, parametr zapytania, lub `CDaoQuerydef` obiekty, które pobierają określonych rekordów indeksowanych.
+- Podczas pracy z bazami danych ODBC i dużymi dynamicznymi zestawami można stwierdzić, że użycie operacji znajdowania jest wolne, szczególnie podczas pracy z dużymi zestawami rekordów. Można zwiększyć wydajność przy użyciu zapytań SQL z dostosowanymi klauzulami **ORDERBY** lub **WHERE** , kwerendami parametrycznymi lub `CDaoQuerydef` obiektów, które pobierają określone indeksowane rekordy.
 
-Aby uzyskać powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "FindFirst, FindLast, ZnajdźNastępny, FindPrevious Methods" w pomocy DAO.
 
-##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition
+##  <a name="getabsoluteposition"></a>CDaoRecordset:: GetAbsolutePosition
 
-Zwraca liczbę rekordów obiektem rekordem bieżącego rekordu.
+Zwraca numer rekordu bieżącego rekordu obiektu zestawu rekordów.
 
 ```
 long GetAbsolutePosition();
@@ -887,25 +887,25 @@ long GetAbsolutePosition();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita z zakresu od 0 do liczby rekordów w zestawie rekordów. Odnosi się do porządkowym bieżącego rekordu w zestawie rekordów.
+Liczba całkowita z zakresu od 0 do liczby rekordów w zestawie rekordów. Odnosi się do pozycji porządkowej bieżącego rekordu w zestawie rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość właściwości AbsolutePosition obiektu bazowego DAO jest liczony od zera; Ustawienie wartości 0 odwołuje się do pierwszego rekordu w zestawie rekordów. Można określić liczbę rekordów wypełnione w zestawie rekordów, wywołując [getrecordcount —](#getrecordcount). Wywoływanie `GetRecordCount` może zająć trochę czasu, ponieważ musi uzyskać dostęp do wszystkich rekordów w celu określenia liczby.
+Wartość właściwości AbsolutePosition bazowego obiektu DAO jest zależna od zera. ustawienie wartości 0 oznacza pierwszy rekord w zestawie rekordów. Możesz określić liczbę wypełnionych rekordów w zestawie rekordów, wywołując [GetRecordCount](#getrecordcount). Wywoływanie `GetRecordCount` może zająć trochę czasu, ponieważ musi on mieć dostęp do wszystkich rekordów, aby określić liczbę.
 
-Jeśli nie ma bieżącego rekordu, jako gdy nie ma żadnych rekordów w zestawie rekordów, - 1 jest zwracana. Jeśli bieżący rekord zostanie usunięty, wartość właściwości AbsolutePosition nie jest zdefiniowana, a MFC zgłasza wyjątek, jeśli odwołuje się do. Dla zestawów rekordów dynamicznego nowe rekordy są dodawane do końca sekwencji.
-
-> [!NOTE]
->  Ta właściwość nie jest przeznaczona do służyć jako numer rekordu zastępczy. Zakładki są nadal zalecany sposób przechowywania i powrocie do podanego położenia i jedynym sposobem na pozycji bieżącego rekordu dla wszystkich typów obiektów zestawu rekordów. W szczególności pozycji danego rekordu zmienia usunięcie rekordów przed nim. Istnieje również ma gwarancji, że rekord będzie miał tym samym położeniu bezwzględnym, jeśli zestaw rekordów jest utworzony ponownie, ponieważ kolejność poszczególnych rekordów w zestawie rekordów nie jest gwarantowane, chyba że zostanie utworzona przy użyciu instrukcji SQL przy użyciu  **ORDERBY** klauzuli.
+Jeśli nie ma bieżącego rekordu, ponieważ nie ma żadnych rekordów w zestawie rekordów, zwracany jest 1. Jeśli bieżący rekord zostanie usunięty, wartość właściwości AbsolutePosition nie jest zdefiniowana, a MFC zgłasza wyjątek, jeśli istnieje odwołanie. W przypadku zestawów rekordów typu dynamicznego do końca sekwencji dodawane są nowe rekordy.
 
 > [!NOTE]
->  Ta funkcja członkowska jest prawidłowy tylko w przypadku dynamicznego i zestawów rekordów typu migawka.
+>  Ta właściwość nie jest przeznaczona do użycia jako numer rekordu zastępczego. Zakładki są nadal zalecanym sposobem zachowywania i powrotu do danego położenia i są jedynym sposobem pozycjonowania bieżącego rekordu we wszystkich typach obiektów zestawu rekordów. W szczególności pozycja danego rekordu zmienia się, gdy rekordy, które poprzedzają, są usuwane. Nie ma również gwarancji, że dany rekord będzie miał tę samą bezwzględną pozycję, jeśli zestaw rekordów zostanie ponownie utworzony, ponieważ kolejność poszczególnych rekordów w zestawie rekordów nie jest gwarantowana, chyba że zostanie utworzona za pomocą instrukcji SQL przy użyciu klauzuli **ORDERBY** .
 
-Aby uzyskać powiązane informacje zobacz temat "AbsolutePosition Property" w Pomocy programu DAO.
+> [!NOTE]
+>  Ta funkcja członkowska jest prawidłowa tylko dla zestawów rekordów typu dynamiczny i typu migawka.
 
-##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość AbsolutePosition" w pomocy DAO.
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki do określonego rekordu.
+##  <a name="getbookmark"></a>CDaoRecordset:: GetBookmark
+
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki w określonym rekordzie.
 
 ```
 COleVariant GetBookmark();
@@ -913,22 +913,22 @@ COleVariant GetBookmark();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość reprezentującą zakładkę w bieżącym rekordzie.
+Zwraca wartość reprezentującą zakładkę dla bieżącego rekordu.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu zestawu rekordów lub otwarte, każdego z jego rekordów już unikatowe zakładki, gdy je obsługuje. Wywołaj `CanBookmark` do ustalenia, czy zestaw rekordów obsługuje zakładek.
+Gdy obiekt zestawu rekordów zostanie utworzony lub otwarty, każdy z jego rekordów ma już unikatową zakładkę, jeśli je obsługuje. Wywołaj `CanBookmark`, aby określić, czy zestaw rekordów obsługuje zakładki.
 
-Można zapisać zakładki w bieżącym rekordzie, przypisując wartości zakładki do `COleVariant` obiektu. Aby szybko powrócić do tego rekordu w dowolnym momencie po przejściu do innego rekordu, należy wywołać `SetBookmark` przy użyciu odpowiadający wartości tego parametru `COleVariant` obiektu.
+Możesz zapisać zakładkę dla bieżącego rekordu, przypisując wartość zakładki do obiektu `COleVariant`. Aby szybko wrócić do tego rekordu w dowolnym momencie po przejściu do innego rekordu, wywołaj `SetBookmark` z parametrem odpowiadającym wartości tego obiektu `COleVariant`.
 
 > [!NOTE]
->  Wywoływanie [Requery](#requery) zmienia DAO zakładek.
+>  Wywołanie zmian [kwerendy](#requery) dla zakładki DAO.
 
-Aby uzyskać powiązane informacje zobacz temat "Property zakładki" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "właściwość zakładki" w pomocy DAO.
 
-##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize
+##  <a name="getcachesize"></a>CDaoRecordset:: GetCacheSize
 
-Wywołanie tej funkcji elementu członkowskiego w celu uzyskania liczby rekordów w pamięci podręcznej.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać liczbę buforowanych rekordów.
 
 ```
 long GetCacheSize();
@@ -936,19 +936,19 @@ long GetCacheSize();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która określa liczbę rekordów w zestawie rekordów dynamicznego zawierające dane lokalne przechowywanie w pamięci podręcznej ze źródła danych ODBC.
+Wartość określająca liczbę rekordów w zestawie rekordów typu zestaw dynamiczny zawierający dane, które mają być lokalnie buforowane ze źródła danych ODBC.
 
 ### <a name="remarks"></a>Uwagi
 
-Buforowanie danych zwiększa wydajność aplikacji, która pobiera dane z serwera zdalnego za pośrednictwem obiektów rekordów dynamicznego. Pamięć podręczna to miejsce w pamięci lokalnej, która przechowuje dane ostatnio pobrana z serwera w przypadku, gdy dane będzie wymagane ponownie, gdy aplikacja jest uruchomiona. Jeśli wymagane są dane, aparat bazy danych Microsoft Jet pamięci podręcznej dla żądanych danych najpierw sprawdza zamiast pobierania jej z serwera, który jest bardziej czasochłonne. Dane, które nie pochodzą ze źródła danych ODBC nie jest zapisana w pamięci podręcznej.
+Buforowanie danych zwiększa wydajność aplikacji, która pobiera dane z serwera zdalnego za pośrednictwem obiektów zestawu rekordów typu dynamicznego. Pamięć podręczna to miejsce w pamięci lokalnej, w którym znajdują się dane ostatnio pobierane z serwera w przypadku, gdy aplikacja będzie ponownie żądała danych. Gdy dane są żądane, aparat bazy danych Microsoft Jet najpierw sprawdza pamięć podręczną pod kątem żądanych danych zamiast pobierać je z serwera, co zajmuje więcej czasu. Dane, które nie pochodzą ze źródła danych ODBC, nie są zapisywane w pamięci podręcznej.
 
-Wszystkie źródła danych ODBC, takich jak dołączonej tabeli mogą mieć lokalnej pamięci podręcznej.
+Każde źródło danych ODBC, takie jak dołączona tabela, może mieć lokalną pamięć podręczną.
 
-Aby uzyskać powiązane informacje zobacz temat "CacheSize CacheStart właściwości", w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "CacheSize, CacheStart Properties" w pomocy DAO.
 
-##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart
+##  <a name="getcachestart"></a>CDaoRecordset:: GetCacheStart
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.
 
 ```
 COleVariant GetCacheStart();
@@ -956,20 +956,20 @@ COleVariant GetCacheStart();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `COleVariant` określający zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.
+`COleVariant`, który określa zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Aparat bazy danych Microsoft Jet żądań rekordy w zakresie pamięci podręcznej z pamięci podręcznej i żąda ona rekordy poza obszarem pamięci podręcznej z serwera.
+Aparat bazy danych Microsoft Jet żąda rekordów w zakresie pamięci podręcznej z pamięci podręcznej i żąda rekordów poza zakresem pamięci podręcznej z serwera.
 
 > [!NOTE]
->  Rekordów pobieranych z pamięci podręcznej nie odzwierciedlają zmiany wprowadzone współbieżnie źródła danych przez innych użytkowników.
+>  Rekordy pobrane z pamięci podręcznej nie odzwierciedlają zmian wprowadzonych jednocześnie do danych źródłowych przez innych użytkowników.
 
-Aby uzyskać powiązane informacje zobacz temat "CacheSize CacheStart właściwości", w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "CacheSize, CacheStart Properties" w pomocy DAO.
 
-##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex
+##  <a name="getcurrentindex"></a>CDaoRecordset:: GetCurrentIndex
 
-Wywołaj tę funkcję elementu członkowskiego, aby określić indeks aktualnie w użyciu indeksowanej tabeli `CDaoRecordset` obiektu.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, że indeks jest aktualnie używany w indeksowanym typie tabeli `CDaoRecordset` obiektu.
 
 ```
 CString GetCurrentIndex();
@@ -977,19 +977,19 @@ CString GetCurrentIndex();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawierający nazwę indeksu, obecnie w użyciu przy użyciu zestawu rekordów typu tabeli. Zwraca pusty ciąg, jeśli został ustawiony Brak indeksu.
+`CString` zawierający nazwę indeksu, który jest aktualnie używany z zestawem rekordów typu tabela. Zwraca pusty ciąg, jeśli nie ustawiono indeksu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten indeks jest podstawą kolejność rekordów w zestawie rekordów typ tabeli i jest używany przez [Seek](#seek) funkcję elementu członkowskiego, aby zlokalizować rekordów.
+Ten indeks jest podstawą do porządkowania rekordów w zestawie rekordów typu tabela i jest używany przez funkcję elementu członkowskiego [wyszukiwania](#seek) do lokalizowania rekordów.
 
-A `CDaoRecordset` obiekt może mieć więcej niż jednego indeksu, ale można użyć tylko jednego indeksu w czasie (mimo że [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) obiekt może mieć wiele indeksów zdefiniowanej).
+Obiekt `CDaoRecordset` może mieć więcej niż jeden indeks, ale może korzystać tylko z jednego indeksu jednocześnie (mimo że obiekt [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) może mieć zdefiniowaną kilka indeksów).
 
-Aby uzyskać powiązane informacje zobacz temat "Indeksu obiektu", jak i definicja "bieżący indeks" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "indeks obiektu" i definicja "bieżący indeks" w pomocy DAO.
 
-##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated
+##  <a name="getdatecreated"></a>CDaoRecordset:: GetDateCreated
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę utworzenia tabeli podstawowej.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę utworzenia tabeli bazowej.
 
 ```
 COleDateTime GetDateCreated();
@@ -997,17 +997,17 @@ COleDateTime GetDateCreated();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt zawierający datę i godzinę utworzenia tabeli podstawowej.
+Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę utworzenia tabeli podstawowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawienia daty i godziny są uzyskiwane z komputera, na którym została utworzona tabela podstawowa.
+Ustawienia daty i godziny są wyprowadzane z komputera, na którym utworzono tabelę bazową.
 
-Aby uzyskać powiązane informacje zobacz temat "DateCreated LastUpdated właściwości", w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "DateCreated, LastUpdated Properties" w pomocy DAO.
 
-##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated
+##  <a name="getdatelastupdated"></a>CDaoRecordset:: GetDateLastUpdated
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać Data i godzina ostatniej aktualizacji schematu.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę ostatniej aktualizacji schematu.
 
 ```
 COleDateTime GetDateLastUpdated();
@@ -1015,15 +1015,15 @@ COleDateTime GetDateLastUpdated();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt zawierający datę i godzinę ostatniej aktualizacji tabeli podstawowej strukturę (schemat).
+Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę ostatniej aktualizacji struktury tabeli bazowej (schematu).
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawienia daty i godziny są uzyskiwane z komputera ostatniej aktualizacji tabeli podstawowej strukturę (schemat).
+Ustawienia daty i godziny są wyprowadzane z komputera, na którym została ostatnio zaktualizowana struktura tabeli bazowej (schemat).
 
-Aby uzyskać powiązane informacje zobacz temat "DateCreated LastUpdated właściwości", w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "DateCreated, LastUpdated Properties" w pomocy DAO.
 
-##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName
+##  <a name="getdefaultdbname"></a>CDaoRecordset:: GetDefaultDBName
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić nazwę bazy danych dla tego zestawu rekordów.
 
@@ -1033,19 +1033,19 @@ virtual CString GetDefaultDBName();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawierający ścieżkę i nazwę bazy danych, z którego pochodzi ten zestaw rekordów.
+`CString`, który zawiera ścieżkę i nazwę bazy danych, z której pochodzi ten zestaw rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zestaw rekordów został utworzony bez wskaźnik do [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md), a następnie ta ścieżka jest używana przez zestaw rekordów można otworzyć domyślnej bazy danych. Domyślnie ta funkcja zwraca pusty ciąg. Gdy ClassWizard pochodzi nowy zestaw rekordów z `CDaoRecordset`, ta funkcja zostanie utworzony automatycznie.
+Jeśli zestaw rekordów jest tworzony bez wskaźnika do elementu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md), ta ścieżka jest używana przez zestaw rekordów, aby otworzyć domyślną bazę danych. Domyślnie ta funkcja zwraca pusty ciąg. Gdy ClassWizard dziedziczy nowy zestaw rekordów z `CDaoRecordset`, utworzy tę funkcję.
 
-Poniższy przykład ilustruje użycie podwójny ukośnik odwrotny (\\\\) w ciągu, w jakim są wymagane dla ciągu były prawidłowo interpretowane.
+Poniższy przykład ilustruje użycie podwójnego ukośnika odwrotnego (\\\\) w ciągu, jak jest to wymagane dla poprawnego interpretowania ciągu.
 
 [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]
 
-##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL
+##  <a name="getdefaultsql"></a>CDaoRecordset:: GetDefaultSQL
 
-Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać domyślną instrukcję SQL, na którym bazuje zestaw rekordów.
+Struktura wywołuje tę funkcję elementu członkowskiego, aby uzyskać domyślną instrukcję SQL, na której bazuje zestaw rekordów.
 
 ```
 virtual CString GetDefaultSQL();
@@ -1053,19 +1053,19 @@ virtual CString GetDefaultSQL();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawiera domyślną instrukcję SQL.
+`CString`, która zawiera domyślną instrukcję SQL.
 
 ### <a name="remarks"></a>Uwagi
 
-Może to być nazwa tabeli lub SQL **wybierz** instrukcji.
+Może to być nazwa tabeli lub instrukcja **SELECT** języka SQL.
 
-Możesz pośrednio należy zdefiniować domyślną instrukcję SQL od zadeklarowania klasy zestawu rekordów z ClassWizard i ClassWizard wykonuje to zadanie.
+Można pośrednio zdefiniować domyślną instrukcję SQL, deklarując klasę zestawu rekordów z ClassWizard i ClassWizard wykonuje to zadanie.
 
-W przypadku przekazania pusty ciąg SQL do [Otwórz](#open), a następnie ta funkcja jest wywoływana w celu określenia nazwy tabeli lub SQL dla rekordów.
+Jeśli przekażesz pusty ciąg SQL do [otwarcia](#open), ta funkcja jest wywoływana, aby określić nazwę tabeli lub kod SQL dla zestawu rekordów.
 
-##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode
+##  <a name="geteditmode"></a>CDaoRecordset:: geteditmode
 
-Wywołaj tę funkcję elementu członkowskiego do ustalenia stanu edytowania, który będzie miał jedną z następujących wartości:
+Wywołaj tę funkcję elementu członkowskiego, aby określić stan edycji, która jest jedną z następujących wartości:
 
 ```
 short GetEditMode();
@@ -1073,19 +1073,19 @@ short GetEditMode();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość, która wskazuje stan edycji dla bieżącego rekordu.
+Zwraca wartość wskazującą stan edycji bieżącego rekordu.
 
 ### <a name="remarks"></a>Uwagi
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`dbEditNone`|Nie operacji edycji jest w toku.|
-|`dbEditInProgress`|`Edit` została wywołana.|
-|`dbEditAdd`|`AddNew` została wywołana.|
+|`dbEditNone`|Operacja edytowania nie jest w toku.|
+|`dbEditInProgress`|`Edit` został wywołany.|
+|`dbEditAdd`|`AddNew` został wywołany.|
 
-Aby uzyskać powiązane informacje zobacz temat "Trybu edycji właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "EditMode Property" w pomocy DAO.
 
-##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount
+##  <a name="getfieldcount"></a>CDaoRecordset:: GetFieldCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól (kolumn) zdefiniowanych w zestawie rekordów.
 
@@ -1099,11 +1099,11 @@ Liczba pól w zestawie rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwości liczba" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Count Property" w pomocy DAO.
 
-##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo
+##  <a name="getfieldinfo"></a>CDaoRecordset:: GetFieldInfo
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać informacje dotyczące pól w zestawie rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać informacje o polach w zestawie rekordów.
 
 ```
 void GetFieldInfo(
@@ -1120,32 +1120,32 @@ void GetFieldInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Liczony od zera indeks wstępnie zdefiniowane pole w zestawie rekordów kolekcji pól, do wyszukiwania według indeksu.
+Indeks (liczony od zera) wstępnie zdefiniowanego pola w kolekcji pól zestawu rekordów dla wyszukiwania według indeksu.
 
-*fieldinfo*<br/>
-Odwołanie do [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
+*FieldInfo*<br/>
+Odwołanie do struktury [CDaoFieldInfo —](../../mfc/reference/cdaofieldinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Opcje, które określają, które informacje o zestawie rekordów do pobrania. Dostępne opcje są wymienione w tym miejscu oraz co mogą spowodować, że funkcja zwróci. Aby uzyskać najlepszą wydajność należy pobrać tylko poziom potrzebnych informacji:
+Opcje określające, które informacje o zestawie rekordów mają być pobierane. Dostępne opcje są wymienione w tym miejscu wraz z tym, co spowoduje zwrócenie funkcji. Aby uzyskać najlepszą wydajność, Pobierz tylko wymagany poziom informacji:
 
-- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty
+- `AFX_DAO_PRIMARY_INFO` (domyślnie) nazwa, typ, rozmiar, atrybuty
 
-- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Zezwalaj na porządkowym wymagane, zerową długość, sortowania, kolejność, nazwa obcego, pole źródła, tabela źródłowa
+- `AFX_DAO_SECONDARY_INFO` informacje podstawowe, plus: pozycja porządkowa, wymagane, Zezwalaj na zerową długość, kolejność sortowania, Nazwa obca, pole źródłowe, tabela źródłowa
 
-- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Domyślna wartość, reguła sprawdzania poprawności, tekst sprawdzania poprawności
+- `AFX_DAO_ALL_INFO` informacje podstawowe i pomocnicze oraz: wartość domyślna, reguła walidacji, tekst walidacji
 
 *lpszName*<br/>
 Nazwa pola.
 
 ### <a name="remarks"></a>Uwagi
 
-Jednej wersji funkcji umożliwia wyszukiwanie pola przez indeks. Druga wersja służy do wyszukiwania według nazwy pola.
+Jedna wersja funkcji pozwala wyszukiwać pola według indeksu. Inna wersja pozwala wyszukiwać pola według nazwy.
 
-Aby uzyskać opis zwrócone informacje, zobacz [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Ta struktura zawiera elementy członkowskie, które odnoszą się do elementów wymienionych powyżej w opisie informacji *dwInfoOptions*. W przypadku żądania informacji o jeden poziom, otrzymasz informacje dotyczące wszelkich poprzednich poziomach.
+Aby uzyskać opis zwracanych informacji, zobacz strukturę [CDaoFieldInfo —](../../mfc/reference/cdaofieldinfo-structure.md) . Ta struktura zawiera elementy członkowskie, które odpowiadają elementom informacji wymienionych powyżej w opisie *dwInfoOptions*. Jeśli zażądasz informacji na jednym poziomie, uzyskasz również informacje na temat wszystkich wcześniejszych poziomów.
 
-Aby uzyskać powiązane informacje zobacz temat "Atrybuty właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue
+##  <a name="getfieldvalue"></a>CDaoRecordset:: GetFieldValue —
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać dane w zestawie rekordów.
 
@@ -1168,31 +1168,31 @@ virtual COleVariant GetFieldValue(int nIndex);
 Wskaźnik do ciągu, który zawiera nazwę pola.
 
 *varValue*<br/>
-Odwołanie do `COleVariant` obiekt, który będzie przechowywana wartość pola.
+Odwołanie do obiektu `COleVariant`, w którym będzie przechowywana wartość pola.
 
 *nIndex*<br/>
-Liczony od zera indeks pole w zestawie rekordów kolekcji pól, do wyszukiwania według indeksu.
+Indeks (liczony od zera) pola w kolekcji pól zestawu rekordów dla wyszukiwania według indeksu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dwie wersje `GetFieldValue` , zwrócona wartość zwracaną [COleVariant](../../mfc/reference/colevariant-class.md) obiekt, który zawiera wartość pola.
+Dwie wersje `GetFieldValue` zwracające wartość zwracają obiekt [COleVariant](../../mfc/reference/colevariant-class.md) , który zawiera wartość pola.
 
 ### <a name="remarks"></a>Uwagi
 
-Pola można wyszukiwać według nazwy lub porządkowym.
+Można wyszukać pole według nazwy lub pozycji porządkowej.
 
 > [!NOTE]
->  Jest bardziej wydajne wywołania jednej z wersji ta funkcja elementu członkowskiego, która przyjmuje `COleVariant` odwołanie do obiektu jako parametr zamiast wywoływania wersji, która zwraca `COleVariant` obiektu. Ostatnie wersje tej funkcji są utrzymywane na potrzeby utrzymywania zgodności z poprzednimi wersjami.
+>  Bardziej wydajne jest wywołanie jednej z wersji tej funkcji członkowskiej, która przyjmuje `COleVariant` odwołanie do obiektu jako parametr zamiast wywoływania wersji, która zwraca obiekt `COleVariant`. Te ostatnie wersje tej funkcji są utrzymywane w celu zapewnienia zgodności z poprzednimi wersjami.
 
-Użyj `GetFieldValue` i [SetFieldValue](#setfieldvalue) dynamicznie powiązać pola w czasie wykonywania, a nie statycznie powiązanie kolumn przy użyciu [dofieldexchange —](#dofieldexchange) mechanizm.
+Używaj `GetFieldValue` i [SetFieldValue](#setfieldvalue) do dynamicznego wiązania pól w czasie wykonywania zamiast statycznego powiązania kolumn za pomocą mechanizmu [DoFieldExchange](#dofieldexchange) .
 
-`GetFieldValue` i `DoFieldExchange` mechanizm mogą być połączone do zwiększenia wydajności. Na przykład użyć `GetFieldValue` do pobrania wartości, które są potrzebne tylko na żądanie, a następnie przypisz tego wywołania do przycisku "Więcej informacji" w interfejsie.
+`GetFieldValue` i mechanizm `DoFieldExchange` można łączyć w celu zwiększenia wydajności. Na przykład użyj `GetFieldValue`, aby pobrać wartość, która jest potrzebna tylko na żądanie, i przypisz to wywołanie do przycisku "więcej informacji" w interfejsie.
 
-Aby uzyskać powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "obiekt pola" i "wartość właściwości" w pomocy DAO.
 
-##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount
+##  <a name="getindexcount"></a>CDaoRecordset:: GetIndexCount
 
-Wywołaj tę funkcję elementu członkowskiego, aby określić liczbę dostępnych w zestawie rekordów typ tabeli indeksów.
+Wywołaj tę funkcję elementu członkowskiego, aby określić liczbę indeksów dostępnych w zestawie rekordów typu tabela.
 
 ```
 short GetIndexCount();
@@ -1200,17 +1200,17 @@ short GetIndexCount();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba indeksów w zestawie rekordów typ tabeli.
+Liczba indeksów w zestawie rekordów typu tabela.
 
 ### <a name="remarks"></a>Uwagi
 
-`GetIndexCount` jest przydatne w pętli wszystkich indeksów w zestawie rekordów. W tym celu należy użyć `GetIndexCount` w połączeniu z [GetIndexInfo](#getindexinfo). Jeśli wywołasz tej funkcji elementu członkowskiego na dynamicznego lub typ migawki zestawów rekordów MFC zgłasza wyjątek.
+`GetIndexCount` jest przydatne do zapętlania przez wszystkie indeksy w zestawie rekordów. W tym celu należy użyć `GetIndexCount` w połączeniu z [GetIndexInfo](#getindexinfo). Jeśli wywołujesz tę funkcję elementu członkowskiego w zestawach rekordów typu dynamiczny lub typu migawek, MFC zgłosi wyjątek.
 
-Aby uzyskać powiązane informacje zobacz temat "Atrybuty właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo
+##  <a name="getindexinfo"></a>CDaoRecordset:: GetIndexInfo
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać różne rodzaje informacji na temat indeksu zdefiniowany w tabeli podstawowej, podstawowy zestaw rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać różne rodzaje informacji o indeksie zdefiniowanym w podstawowej tabeli bazowej zestawu rekordów.
 
 ```
 void GetIndexInfo(
@@ -1227,34 +1227,34 @@ void GetIndexInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Liczony od zera indeks w tabeli indeksów kolekcji, wyszukiwanie według pozycji liczbowych.
+Indeks (liczony od zera) w kolekcji indeksów tabeli dla wyszukiwania według pozycji liczbowej.
 
 *indexinfo*<br/>
-Odwołanie do [cdaoindexinfo —](../../mfc/reference/cdaoindexinfo-structure.md) struktury.
+Odwołanie do struktury [CDaoIndexInfo —](../../mfc/reference/cdaoindexinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Opcje, które określają, które informacje o indeksie do pobrania. Dostępne opcje są wymienione w tym miejscu oraz co mogą spowodować, że funkcja zwróci. Aby uzyskać najlepszą wydajność należy pobrać tylko poziom potrzebnych informacji:
+Opcje określające, które informacje o indeksie mają zostać pobrane. Dostępne opcje są wymienione w tym miejscu wraz z tym, co spowoduje zwrócenie funkcji. Aby uzyskać najlepszą wydajność, Pobierz tylko wymagany poziom informacji:
 
-- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa pola Info, pola
+- `AFX_DAO_PRIMARY_INFO` (wartość domyślna) nazwa, informacje o polu, pola
 
-- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym, a także: Podstawowy, unikatowe, klastra, IgnoreNulls, wymagane, obcego
+- `AFX_DAO_SECONDARY_INFO` informacje podstawowe oraz: podstawowe, unikatowe, klastrowane, IgnoreNulls, wymagane, obce
 
-- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych oraz: Liczność unikatowych wartości
+- `AFX_DAO_ALL_INFO` informacje podstawowe i pomocnicze oraz: liczność unikatowych
 
 *lpszName*<br/>
-Wskaźnik na nazwę obiektu indeksu wyszukiwania według nazwy.
+Wskaźnik do nazwy obiektu indeksu dla wyszukiwania według nazwy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jednej wersji funkcji pozwala wyszukiwać indeksu za pomocą jego pozycji w kolekcji. Druga wersja pozwala indeksu wyszukiwania według nazwy.
+Jedna wersja funkcji pozwala wyszukiwać indeks według pozycji w kolekcji. Inna wersja pozwala wyszukiwać indeks według nazwy.
 
-Aby uzyskać opis zwrócone informacje, zobacz [cdaoindexinfo —](../../mfc/reference/cdaoindexinfo-structure.md) struktury. Ta struktura zawiera elementy członkowskie, które odnoszą się do elementów wymienionych powyżej w opisie informacji *dwInfoOptions*. W przypadku żądania informacji o jeden poziom, otrzymasz informacje dotyczące wszelkich poprzednich poziomach.
+Aby uzyskać opis zwracanych informacji, zobacz strukturę [CDaoIndexInfo —](../../mfc/reference/cdaoindexinfo-structure.md) . Ta struktura zawiera elementy członkowskie, które odpowiadają elementom informacji wymienionych powyżej w opisie *dwInfoOptions*. Jeśli zażądasz informacji na jednym poziomie, uzyskasz również informacje na temat wszystkich wcześniejszych poziomów.
 
-Aby uzyskać powiązane informacje zobacz temat "Atrybuty właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark
+##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset:: GetLastModifiedBookmark
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać zakładki rekordu najbardziej ostatnio dodane lub zaktualizowane.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać zakładkę ostatnio dodanego lub zaktualizowanego rekordu.
 
 ```
 COleVariant GetLastModifiedBookmark();
@@ -1262,19 +1262,19 @@ COleVariant GetLastModifiedBookmark();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `COleVariant` zawierający zakładki, która wskazuje ostatnio dodane lub zmienione rekordu.
+`COleVariant` zawierający zakładkę, która wskazuje ostatnio dodany lub zmieniony rekord.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu zestawu rekordów lub otwarte, każdego z jego rekordów już unikatowe zakładki, gdy je obsługuje. Wywołaj [getbookmark —](#getbookmark) do określenia, czy zestaw rekordów obsługuje zakładek. Jeśli zestaw rekordów nie obsługuje zakładek, `CDaoException` zgłaszany.
+Gdy obiekt zestawu rekordów zostanie utworzony lub otwarty, każdy z jego rekordów ma już unikatową zakładkę, jeśli je obsługuje. Wywołaj metodę [GetBookmark](#getbookmark) , aby określić, czy zestaw rekordów obsługuje zakładki. Jeśli zestaw rekordów nie obsługuje zakładek, zostanie zgłoszony `CDaoException`.
 
-Po dodaniu rekordu, pojawia się na końcu zestawu rekordów, a nie jest bieżącym rekordem. Aby wprowadzić nowy rekord bieżący, należy wywołać `GetLastModifiedBookmark` , a następnie wywołać `SetBookmark` aby powrócić do nowo dodanego rekordu.
+Po dodaniu rekordu pojawia się na końcu zestawu rekordów i nie jest bieżącym rekordem. Aby nowy rekord był bieżący, wywołaj `GetLastModifiedBookmark` a następnie Wywołaj `SetBookmark`, aby powrócić do nowo dodanego rekordu.
 
-Aby uzyskać powiązane informacje zobacz temat "LastModified Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "LastModified Property" w pomocy DAO.
 
-##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode
+##  <a name="getlockingmode"></a>CDaoRecordset:: getlockmode
 
-Wywołaj tę funkcję elementu członkowskiego, można określić typu w celu blokowania dla zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby określić typ blokowania w celu zastosowania zestawu rekordów.
 
 ```
 BOOL GetLockingMode();
@@ -1282,21 +1282,21 @@ BOOL GetLockingMode();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli typ blokady jest pesymistycznego, w przeciwnym razie 0 dla rekordu optymistyczne blokowanie.
+Różne od zera, jeśli typ blokowania jest pesymistyczny, w przeciwnym razie, w przypadku blokowania rekordów optymistycznych.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy pesymistycznego blokowania jest aktywna, strony danych zawierające rekord, edytowany jest zablokowane, tak szybko, jak należy wywołać [Edytuj](#edit) funkcja elementu członkowskiego. Strona jest odblokowany, gdy wywołujesz [aktualizacji](#update) lub [Zamknij](#close) funkcji członkowskiej lub dowolnych operacji przenoszenia lub wyszukiwania.
+Gdy trwa pesymistyczne blokowanie, strona danych zawierająca edytowany rekord jest zablokowana zaraz po wywołaniu funkcji [Edytuj](#edit) członka. Strona jest odblokowana po wywołaniu funkcji [aktualizacji](#update) lub [zamknięcia](#close) elementu członkowskiego albo dowolnej operacji przenoszenia lub wyszukiwania.
 
-Gdy optymistyczne blokowanie obowiązuje strony danych zawierające rekord jest zablokowany, tylko wtedy, gdy rekord jest aktualizowana przy użyciu `Update` funkcja elementu członkowskiego.
+Gdy optymistyczne blokowanie jest w efekcie, strona danych zawierająca rekord jest zablokowana tylko podczas aktualizowania rekordu przy użyciu funkcji składowej `Update`.
 
-Podczas pracy ze źródłami danych ODBC, tryb blokowania jest zawsze optymistyczne.
+Podczas pracy ze źródłami danych ODBC tryb blokowania jest zawsze optymistyczny.
 
-Aby uzyskać powiązane informacje zobacz tematy "LockEdits Property" i "Blokowanie zachowanie wielodostępnego aplikacjami" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Właściwość LockEdits" i "Blokowanie zachowania w aplikacjach wielodostępnych" w pomocy DAO.
 
-##  <a name="getname"></a>  CDaoRecordset::GetName
+##  <a name="getname"></a>CDaoRecordset:: GetName
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwy zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę zestawu rekordów.
 
 ```
 CString GetName();
@@ -1304,17 +1304,17 @@ CString GetName();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawierający nazwę zestawu rekordów.
+`CString` zawierający nazwę zestawu rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Nazwa zestawu rekordów musi rozpoczynać się od litery i może zawierać maksymalnie 40 znaków. Może zawierać cyfry i znaki podkreślenia, ale nie może zawierać znaków interpunkcyjnych lub miejsca do magazynowania.
+Nazwa zestawu rekordów musi rozpoczynać się od litery i może zawierać maksymalnie 40 znaków. Może zawierać cyfry i znaki podkreślenia, ale nie może zawierać znaków interpunkcyjnych ani spacji.
 
-Aby uzyskać powiązane informacje zobacz temat "Nazwa właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Nazwa właściwości" w pomocy DAO.
 
-##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue
+##  <a name="getparamvalue"></a>CDaoRecordset:: GetParamValue
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać bieżącą wartość określonego parametru przechowywana w obiekcie DAOParameter bazowego.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać bieżącą wartość określonego parametru przechowywanego w źródłowym obiekcie DAOParameter.
 
 ```
 virtual COleVariant GetParamValue(int nIndex);
@@ -1324,24 +1324,24 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Wartości liczbowych pozycja parametru w obiekt źródłowy DAOParameter.
+Pozycja liczbowa parametru w źródłowym obiekcie DAOParameter.
 
 *lpszName*<br/>
-Nazwa parametru żądanymi wartościami.
+Nazwa parametru, którego wartość ma zostać wybrana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt klasy [COleVariant](../../mfc/reference/colevariant-class.md) zawierającą wartość parametru.
+Obiekt klasy [COleVariant](../../mfc/reference/colevariant-class.md) , który zawiera wartość parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-Według nazwy lub jego wartości liczbowych pozycji w kolekcji, można uzyskać dostęp do parametru.
+Możesz uzyskać dostęp do parametru według nazwy lub jego pozycji liczbowej w kolekcji.
 
-Aby uzyskać powiązane informacje zobacz temat "Parametr obiektu" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "obiekt parametru" w pomocy DAO.
 
-##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition
+##  <a name="getpercentposition"></a>CDaoRecordset:: GetPercentPosition
 
-Podczas pracy z dynamicznego lub zestawu rekordów typu migawka, jeśli wywołasz `GetPercentPosition` przed pełni wypełnianie zestawu rekordów, przemieszczenie jest określana względem liczby rekordów dostępne wskazane przez wywołanie metody [getrecordcount —](#getrecordcount).
+Podczas pracy z zestawem rekordów typu dynamicznego lub typu migawek, jeśli wywołasz `GetPercentPosition` przed pełnym zapełnieniem zestawu rekordów, ilość ruchu jest określana względem liczby rekordów, do których dostęp jest wskazywany przez wywołanie [GetRecordCount](#getrecordcount).
 
 ```
 float GetPercentPosition();
@@ -1349,19 +1349,19 @@ float GetPercentPosition();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba od 0 do 100, która określa przybliżona lokalizacja bieżącego rekordu w obiekcie rekordów na podstawie procentu rekordów w zestawie rekordów.
+Liczba z zakresu od 0 do 100, która wskazuje przybliżoną lokalizację bieżącego rekordu w obiekcie zestawu rekordów na podstawie procentu rekordów w zestawie rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Można przenieść do ostatniego rekordu, wywołując [MoveLast](#movelast) na pełne populacji wszystkich zestawów rekordów, ale to może zająć znaczną ilość czasu.
+Możesz przenieść do ostatniego rekordu, wywołując [MoveLast](#movelast) , aby zakończyć populację wszystkich zestawów rekordów, ale może to potrwać znaczną ilość czasu.
 
-Możesz wywołać `GetPercentPosition` na wszystkich trzech typów obiektów zestawu rekordów, w tym tabel bez indeksów. Jednak nie można wywołać `GetPercentPosition` tylko do przodu migawek przewijania lub zestaw rekordów otwierane z zapytania przekazującego względem zewnętrznej bazy danych. Jeśli nie ma bieżącego rekordu lub he bieżący rekord został usunięty, `CDaoException` zgłaszany.
+Możesz wywoływać `GetPercentPosition` na wszystkich trzech typach obiektów zestawu rekordów, w tym tabel bez indeksów. Nie można jednak wywoływać `GetPercentPosition` na migawek przewijanych tylko do przodu lub w zestawie rekordów otwartym z zapytania przekazującego względem zewnętrznej bazy danych. Jeśli nie ma bieżącego rekordu lub został usunięty bieżący rekord, zostanie zgłoszony `CDaoException`.
 
-Aby uzyskać powiązane informacje zobacz temat "PercentPosition Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość PercentPosition" w pomocy DAO.
 
-##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount
+##  <a name="getrecordcount"></a>CDaoRecordset:: GetRecordCount
 
-Wywołaj tę funkcję elementu członkowskiego, aby dowiedzieć się, jak wiele rekordów w zestawie rekordów były używane.
+Wywołaj tę funkcję elementu członkowskiego, aby dowiedzieć się, ile rekordów w zestawie rekordów jest dostępnych.
 
 ```
 long GetRecordCount();
@@ -1369,27 +1369,27 @@ long GetRecordCount();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę rekordów, dostępne w obiekcie zestawu rekordów.
+Zwraca liczbę rekordów, do których można uzyskać dostęp w obiekcie zestawu rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-`GetRecordCount` wskazuje liczbę rekordów są zawarte w dynamicznego lub zestawu rekordów typu migawka, dopóki wszystkie rekordy były używane. Wywołanie tej funkcji elementu członkowskiego może zająć znaczną ilość czasu, aby zakończyć.
+`GetRecordCount` nie wskazuje, ile rekordów znajduje się w zestawie rekordów typu dynamicznego lub typu migawki do momentu uzyskania dostępu do wszystkich rekordów. Wykonanie tego wywołania funkcji elementu członkowskiego może zająć dużo czasu.
 
-Po ostatnim rekordzie były używane, zwracana wartość wskazuje sumę Cofnięto usunięcie rekordów w zestawie rekordów. Aby wymusić ostatniego rekordu można uzyskać dostęp, należy wywołać `MoveLast` lub `FindLast` funkcja elementu członkowskiego zestawu rekordów. Liczba SQL umożliwia również określić przybliżoną liczbę rekordów, które zwróci zapytania.
+Po uzyskaniu dostępu do ostatniego rekordu wartość zwracana wskazuje całkowitą liczbę nieusuniętych rekordów w zestawie rekordów. Aby wymusić uzyskanie dostępu do ostatniego rekordu, wywołaj `MoveLast` lub `FindLast` funkcji składowej zestawu rekordów. Można również użyć liczby SQL, aby określić przybliżoną liczbę rekordów zwracanych przez zapytanie.
 
-Jak aplikacja służy do usuwania rekordów w zestawie rekordów dynamicznego, wartość zwracana przez `GetRecordCount` zmniejsza. Jednak rekordy zostały usunięte przez innych użytkowników nie są uwzględniane przy `GetRecordCount` aż bieżącego rekordu jest w stanie usunięty rekord. Jeśli wykonywania transakcji, która wpływa na liczbę rekordów, a następnie Wycofaj tę transakcję `GetRecordCount` nie będzie odzwierciedlał rzeczywista liczba pozostałych rekordów.
+Ponieważ aplikacja usuwa rekordy w zestawie rekordów typu dynamicznego, wartość zwracana `GetRecordCount` maleje. Rekordy usunięte przez innych użytkowników nie są jednak uwzględniane przez `GetRecordCount`, dopóki bieżący rekord nie zostanie umieszczony w usuniętym rekordzie. Jeśli wykonasz transakcję, która wpływa na liczbę rekordów, a następnie Wycofaj transakcję, `GetRecordCount` nie będzie odzwierciedlać rzeczywistej liczby pozostałych rekordów.
 
-Wartość `GetRecordCount` z zestawu rekordów typu migawka nie ma wpływu zmian w tabelach źródłowych.
+Zmiany w tabelach źródłowych nie wpływają na wartość `GetRecordCount` z zestawu rekordów typu migawka.
 
-Wartość `GetRecordCount` z typem tabeli zestaw rekordów odzwierciedla przybliżoną liczbę rekordów w tabeli i jest zależna od razu zgodnie z tabeli rekordy są dodawane i usuwane.
+Wartość `GetRecordCount` z zestawu rekordów typu tabela odzwierciedla przybliżoną liczbę rekordów w tabeli i jest modyfikowana natychmiast po dodaniu i usunięciu rekordów tabeli.
 
-Zestaw rekordów z żadne rekordy nie zwraca wartość 0. Podczas pracy z tabelami dołączonych lub baz danych ODBC, `GetRecordCount` zawsze zwraca wartość - 1. Wywoływanie `Requery` funkcja elementu członkowskiego na zestawie rekordów resetuje wartość `GetRecordCount` tak, jakby zapytania były wykonany ponownie.
+Zestaw rekordów bez rekordów zwraca wartość 0. Podczas pracy z dołączonymi tabelami lub bazami danych ODBC, `GetRecordCount` zawsze zwraca wartość-1. Wywołanie funkcji elementu członkowskiego `Requery` na zestawie rekordów resetuje wartość `GetRecordCount`, tak jakby zapytanie zostało wykonane ponownie.
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwości RecordCount" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość RecordCount" w pomocy DAO.
 
-##  <a name="getsql"></a>  CDaoRecordset::GetSQL
+##  <a name="getsql"></a>CDaoRecordset:: GetSQL
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać instrukcji SQL, który został użyty do wybierania rekordów w zestawie rekordów, gdy został on otwarty.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać instrukcję SQL, która została użyta do wybrania rekordów zestawu rekordów, gdy została otwarta.
 
 ```
 CString GetSQL() const;
@@ -1397,22 +1397,22 @@ CString GetSQL() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawiera instrukcję SQL.
+`CString`, który zawiera instrukcję języka SQL.
 
 ### <a name="remarks"></a>Uwagi
 
-Są to zazwyczaj SQL **wybierz** instrukcji.
+Zwykle będzie to instrukcja **SELECT** języka SQL.
 
-Ciąg zwracany przez `GetSQL` zwykle różni się od dowolny ciąg może być przekazana do zestawu rekordów w *lpszSQL* parametr [Otwórz](#open) funkcja elementu członkowskiego. Jest to spowodowane zestawu rekordów tworzy pełną instrukcję SQL, oparte na przekazany do `Open`określony za pomocą ClassWizard i co określono w [m_strFilter](#m_strfilter) i [m_strSort](#m_strsort) składowych danych.
+Ciąg zwracany przez `GetSQL` jest zwykle różny od dowolnego ciągu, który mógł zostać przekazana do zestawu rekordów w parametrze *lpszSQL* do funkcji [Open](#open) member. Wynika to z faktu, że zestaw rekordów tworzy pełną instrukcję SQL na podstawie tego, co zostało przesłane do `Open`, co zostało określone za pomocą ClassWizard i jakie mogą być określone w elementach członkowskich danych [m_strFilter](#m_strfilter) i [m_strSort](#m_strsort) .
 
 > [!NOTE]
 >  Wywołaj tę funkcję elementu członkowskiego tylko po wywołaniu `Open`.
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwości SQL" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość SQL" w pomocy DAO.
 
-##  <a name="gettype"></a>  CDaoRecordset::GetType
+##  <a name="gettype"></a>CDaoRecordset:: GetType
 
-Wywołaj tę funkcję elementu członkowskiego, po otwarciu zestawu rekordów można ustalić typu obiektu zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego po otwarciu zestawu rekordów, aby określić typ obiektu zestawu rekordów.
 
 ```
 short GetType();
@@ -1420,21 +1420,21 @@ short GetType();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeden z następujących wartości, które wskazuje typ zestaw rekordów:
+Jedną z następujących wartości, która wskazuje typ zestawu rekordów:
 
-- `dbOpenTable` Typ tabeli rekordów
+- `dbOpenTable` zestaw rekordów typu tabela
 
-- `dbOpenDynaset` Dynaset-type recordset
+- `dbOpenDynaset` zestaw rekordów typu zestaw dynamiczny
 
-- `dbOpenSnapshot` Zestaw rekordów typu migawka
+- `dbOpenSnapshot` Typ zestawu rekordów
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwość Type" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Type Property" w pomocy DAO.
 
-##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule
+##  <a name="getvalidationrule"></a>CDaoRecordset:: GetValidationRule
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić reguły używane do sprawdzania poprawności danych.
+Wywołaj tę funkcję elementu członkowskiego, aby określić regułę używaną do sprawdzania poprawności danych.
 
 ```
 CString GetValidationRule();
@@ -1442,19 +1442,19 @@ CString GetValidationRule();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `CString` obiekt, który zawiera wartość, która sprawdza poprawność danych w rekordzie, ponieważ ona jest zmieniane ani dodawane do tabeli.
+Obiekt `CString` zawierający wartość, która weryfikuje dane w rekordzie w miarę ich zmiany lub dodania do tabeli.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta reguła jest oparte na tekście i jest stosowany na każdym razem, gdy zostanie zmieniony w tabeli podstawowej. MFC zgłasza wyjątek, jeśli danych jest niedozwolona. Komunikat o błędzie zwracany jest tekst właściwości komunikat obiektu bazowego pola, jeśli zostanie określony, lub wyrażenia, określony przez właściwość ValidationRule obiektu bazowego pola. Możesz wywołać [GetValidationText](#getvalidationtext) uzyskać tekst komunikatu o błędzie.
+Ta reguła jest oparta na tekście i jest stosowana przy każdej zmianie źródłowej tabeli. Jeśli dane nie są dozwolone, MFC zgłasza wyjątek. Zwrócony komunikat o błędzie jest tekstem właściwości ValidationText obiektu pola bazowego, jeśli jest określony, lub tekst wyrażenia określonego przez Właściwość ValidationRule obiektu bazowego pola. Możesz wywołać [GetValidationText](#getvalidationtext) , aby uzyskać tekst komunikatu o błędzie.
 
-Na przykład pola w rekordzie, który wymaga dzień miesiąca może mieć reguły sprawdzania poprawności takich jak "BETWEEN dzień 1 do 31."
+Na przykład pole w rekordzie, które wymaga dnia miesiąca, może mieć regułę walidacji, taką jak "dzień z zakresu od 1 do 31".
 
-Aby uzyskać powiązane informacje zobacz temat "ValidationRule Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationRule" w pomocy DAO.
 
-##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText
+##  <a name="getvalidationtext"></a>CDaoRecordset:: GetValidationText
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać tekstu komunikat własności obiektu pola źródłowego.
+Wywołaj tę funkcję elementu członkowskiego, aby pobrać tekst właściwości ValidationText obiektu pola źródłowego.
 
 ```
 CString GetValidationText();
@@ -1462,15 +1462,15 @@ CString GetValidationText();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `CString` obiekt zawierający tekst komunikatu, który jest wyświetlany, gdy wartość pola nie spełnia warunków reguły sprawdzania poprawności obiektu bazowego pola.
+Obiekt `CString` zawierający tekst komunikatu, który jest wyświetlany, jeśli wartość pola nie spełnia reguły walidacji powiązanego obiektu pola.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać powiązane informacje zobacz temat "Property komunikat" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationText" w pomocy DAO.
 
-##  <a name="isbof"></a>  CDaoRecordset::IsBOF
+##  <a name="isbof"></a>CDaoRecordset:: IsBOF
 
-Wywołaj tę funkcję elementu członkowskiego, zanim przewiń z rekordu do rekordu, aby dowiedzieć się, czy wykonano przed pierwszym rekordzie zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego przed przewinięciem rekordu do rekordu, aby dowiedzieć się, czy przed pierwszym rekordem zestawu rekordów został usunięty.
 
 ```
 BOOL IsBOF() const;
@@ -1478,49 +1478,49 @@ BOOL IsBOF() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli zestaw rekordów nie zawiera żadnych rekordów lub mieć przewiniesz wstecz przed pierwszym rekordzie; w przeciwnym razie 0.
+Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie wstecz przed pierwszym rekordem; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Można również wywołać `IsBOF` wraz z `IsEOF` ustalenie, czy zestaw rekordów zawiera jakiekolwiek rekordy lub jest pusty. Natychmiast, po wywołaniu metody `Open`, jeśli zestaw rekordów nie zawiera żadnych rekordów `IsBOF` zwraca wartość różną od zera. Po otwarciu zestawu rekordów, który ma co najmniej jeden rekord, pierwszy rekord jest bieżący rekord oraz `IsBOF` zwraca wartość 0.
+Możesz również wywołać `IsBOF` i `IsEOF`, aby określić, czy zestaw rekordów zawiera wszystkie rekordy, czy jest pusty. Natychmiast po wywołaniu `Open`, jeśli zestaw rekordów nie zawiera żadnych rekordów, `IsBOF` zwraca wartość różną od zera. Po otwarciu zestawu rekordów, który ma co najmniej jeden rekord, pierwszy rekord jest bieżącym rekordem, a `IsBOF` zwraca 0.
 
-Jeśli pierwszy rekord jest bieżący rekord i wywołania `MovePrev`, `IsBOF` następnie zwraca wartość różną od zera. Jeśli `IsBOF` zwraca wartość różną od zera i wywołać `MovePrev`, zgłaszany jest wyjątek. Jeśli `IsBOF` zwraca wartość różną od zera, bieżący rekord jest niezdefiniowane i dowolną akcję, która wymaga bieżącego rekordu spowoduje wyjątek.
+Jeśli pierwszy rekord jest bieżącym rekordem i wywołujesz `MovePrev`, `IsBOF` zwróci wartość różną od zera. Jeśli `IsBOF` zwraca wartość różną od zera i wywoła `MovePrev`, zostanie zgłoszony wyjątek. Jeśli `IsBOF` zwraca wartość różną od zera, bieżący rekord jest niezdefiniowany i wszystkie akcje, które wymagają bieżącego rekordu, spowodują wyjątek.
 
-Efekt określonych metod `IsBOF` i `IsEOF` ustawienia:
+Wpływ określonych metod na ustawienia `IsBOF` i `IsEOF`:
 
-- Wywoływanie `Open*` wewnętrznie sprawia, że pierwszy rekord w zestawie rekordów bieżącego rekordu przez wywołanie metody `MoveFirst`. Dlatego wywołanie `Open` na pusty zestaw rekordów przyczyny `IsBOF` i `IsEOF` zwracać wartość różną od zera. (Zobacz poniższą tabelę zachowanie niepowodzenia `MoveFirst` lub `MoveLast` wywołania.)
+- Wywołanie `Open*` wewnętrznie powoduje, że pierwszy rekord w zestawie rekordów bieżącego rekordu przez wywoływanie `MoveFirst`. W związku z tym, wywołanie `Open` w pustym zestawie rekordów powoduje, że `IsBOF` i `IsEOF` zwrócić wartość różną od zera. (Zapoznaj się z poniższą tabelą zachowania niepowodzenia `MoveFirst` lub wywołania `MoveLast`.)
 
-- Wszystkie operacje przenoszenia, które pomyślnie Zlokalizuj rekord spowodować, że oba `IsBOF` i `IsEOF` do zwracają 0.
+- Wszystkie operacje przenoszenia, które pomyślnie lokalizują rekord, powodują, że zarówno `IsBOF`, jak i `IsEOF` do zwrócenia 0.
 
-- `AddNew` Następuje wywołanie `Update` spowoduje wywołanie, które pomyślnie Wstawia nowy rekord `IsBOF` do zwrócenia 0, ale tylko wtedy, gdy `IsEOF` już jest różna od zera. Stan `IsEOF` zawsze pozostają bez zmian. Określone przez aparat bazy danych Microsoft Jet bieżący wskaźnik rekordu pusty zestaw rekordów jest na końcu pliku, więc każdy nowy rekord dodaje się po bieżącego rekordu.
+- Wywołanie `AddNew`, po którym następuje wywołanie `Update`, które pomyślnie wstawia nowy rekord, spowoduje, `IsBOF` zwrócić 0, ale tylko wtedy, gdy `IsEOF` jest już różna od zera. Stan `IsEOF` zawsze pozostanie niezmieniony. Zgodnie z definicją w aparacie bazy danych Microsoft Jet bieżący wskaźnik rekordu pustego zestawu rekordów znajduje się na końcu pliku, więc każdy nowy rekord zostanie wstawiony po bieżącym rekordzie.
 
-- Wszelkie `Delete` wywołania, nawet wtedy, gdy spowoduje usunięcie tylko pozostałych rekordów z zestawu rekordów nie zmieni się wartość `IsBOF` lub `IsEOF`.
+- Każde wywołanie `Delete`, nawet jeśli usuwa tylko pozostałe rekordy z zestawu rekordów, nie spowoduje zmiany wartości `IsBOF` lub `IsEOF`.
 
-W poniższej tabeli przedstawiono operacje przenoszenia dozwolone z różnymi kombinacjami `IsBOF` /  `IsEOF`.
+W tej tabeli przedstawiono, które operacje przenoszenia są dozwolone z różnymi kombinacjami `IsBOF`/ `IsEOF`.
 
-||MoveFirst, MoveLast|Moveprev —,<br /><br /> Przenieś < 0|Przenieść 0|MoveNext,<br /><br /> Przenieś > 0|
+||MoveFirst, MoveLast|MovePrev<br /><br /> Przenieś < 0|Przenieś 0|Element<br /><br /> Przenieś > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= wartość różną od zera,<br /><br /> `IsEOF`=0|Dozwolone|Wyjątek|Wyjątek|Dozwolone|
-|`IsBOF`=0,<br /><br /> `IsEOF`= wartość różną od zera|Dozwolone|Dozwolone|Wyjątek|Wyjątek|
-|Zarówno wartość różną od zera|Wyjątek|Wyjątek|Wyjątek|Wyjątek|
-|Zarówno 0|Dozwolone|Dozwolone|Dozwolone|Dozwolone|
+|`IsBOF`= Niezerowa,<br /><br /> `IsEOF`= 0|Występować|Wyjątek|Wyjątek|Występować|
+|`IsBOF`= 0,<br /><br /> `IsEOF`= niezerowe|Występować|Występować|Wyjątek|Wyjątek|
+|Oba niezerowe|Wyjątek|Wyjątek|Wyjątek|Wyjątek|
+|Oba 0|Występować|Występować|Występować|Występować|
 
-Zezwalanie operacji przenoszenia nie oznacza to operacja pomyślnie zlokalizuje rekordu. Wskazuje jedynie, próba wykonania określonej operacji przenoszenia jest dozwolone, a nie wygeneruje wyjątku. Wartość `IsBOF` i `IsEOF` funkcje składowe mogą ulec zmianie w wyniku próby przenoszenia.
+Zezwolenie na operację przenoszenia nie oznacza, że operacja spowoduje pomyślne zlokalizowanie rekordu. Wskazuje jedynie, że próba wykonania określonej operacji przenoszenia jest dozwolona i nie wygeneruje wyjątku. Wartość `IsBOF` i `IsEOF` funkcje Członkowskie mogą ulec zmianie w wyniku próby przeniesienia.
 
-Wpływ operacji przenoszenia, których nie można odnaleźć rekordu na wartość `IsBOF` i `IsEOF` ustawienia zostały przedstawione w poniższej tabeli.
+W poniższej tabeli przedstawiono skutki operacji przenoszenia, które nie lokalizują rekordu na wartości `IsBOF` i `IsEOF`.
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Wartość różną od zera|Wartość różną od zera|
+|`MoveFirst`, `MoveLast`|Różną od zera|Różną od zera|
 |`Move` 0|Nie wprowadzono zmian|Nie wprowadzono zmian|
-|`MovePrev`, `Move` < 0|Wartość różną od zera|Nie wprowadzono zmian|
-|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Wartość różną od zera|
+|`MovePrev`, `Move` < 0|Różną od zera|Nie wprowadzono zmian|
+|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Różną od zera|
 
-Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF Properties" w pomocy DAO.
 
-##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted
+##  <a name="isdeleted"></a>CDaoRecordset:: IsDeleted
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy bieżący rekord został usunięty.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy bieżący rekord został usunięty.
 
 ```
 BOOL IsDeleted() const;
@@ -1528,22 +1528,22 @@ BOOL IsDeleted() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli zestaw rekordów jest ustawiony na rekordzie usunięte; w przeciwnym razie 0.
+Różne od zera, jeśli zestaw rekordów jest umieszczony na usuniętym rekordzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Po przewinięciu rekord a `IsDeleted` zwraca wartość TRUE (niezerową), a następnie musi przewiń do innego rekordu, zanim będzie można wykonywać inne operacje zestawu rekordów.
+Jeśli przewiniesz do rekordu, a `IsDeleted` zwraca wartość TRUE (niezerowa), należy przewinąć do innego rekordu przed wykonaniem innych operacji zestawu rekordów.
 
 > [!NOTE]
->  Nie potrzebujesz sprawdzić stan usuniętych rekordów w zestawie rekordów migawki lub typ tabeli. Ponieważ nie można usunąć rekordów z migawki, nie ma potrzeby wywołać `IsDeleted`. Dla zestawów rekordów typ tabeli usunięte rekordy są faktycznie usuwane z zestawu rekordów. Gdy rekord został usunięty, przez Ciebie innego użytkownika lub w innym zestawie rekordów, nie przewiń do tego rekordu. W związku z tym, nie ma potrzeby wywołać `IsDeleted`.
+>  Nie musisz sprawdzać stanu usuniętych rekordów w migawce lub typu tabeli zestawu rekordów. Ponieważ nie można usunąć rekordów z migawki, nie ma potrzeby wywoływania `IsDeleted`. W przypadku zestawów rekordów typu "usunięte rekordy" są w rzeczywistości usuwane z zestawu rekordów. Po usunięciu rekordu, innym użytkownikowi lub w innym zestawie rekordów, nie można przewijać z powrotem do tego rekordu. W związku z tym nie ma potrzeby wywoływania `IsDeleted`.
 
-Jeśli usuniesz rekord z zestawu dynamicznego, zostanie on usunięty z zestawu rekordów i nie przewiń do tego rekordu. Jednak w przypadku rekordu w dynamiczny zostaną usunięte przez innego użytkownika lub w innym zestawie rekordów na podstawie tej samej tabeli `IsDeleted` zwraca wartość TRUE, gdy później przewiń do tego rekordu.
+Po usunięciu rekordu z zestawu dynamicznego zostanie on usunięty i nie można go ponownie przewijać do tego rekordu. Jeśli jednak rekord w zestawie dynamicznym zostanie usunięty przez innego użytkownika lub z innego zestawu rekordów na podstawie tej samej tabeli, `IsDeleted` zwróci wartość TRUE w przypadku późniejszego przewinięcia tego rekordu.
 
-Aby uzyskać powiązane informacje zobacz tematy "Usuń metodę", "Ostatnia modyfikacja właściwości" i "Trybu edycji właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Delete Method", "Właściwość LastModified" i "EditMode Property" w pomocy DAO.
 
-##  <a name="iseof"></a>  CDaoRecordset::IsEOF
+##  <a name="iseof"></a>CDaoRecordset:: IsEOF
 
-Wywołaj tę funkcję elementu członkowskiego, przewijania z rekordu, rekord, aby dowiedzieć się, czy wykonano poza ostatnim rekordzie zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego podczas przewijania z rekordu do rekordu, aby dowiedzieć się, czy zostały utracone poza ostatnim rekordem zestawu rekordów.
 
 ```
 BOOL IsEOF() const;
@@ -1551,49 +1551,49 @@ BOOL IsEOF() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli zestaw rekordów nie zawiera żadnych rekordów lub jeśli przewiniesz poza ostatnim rekordzie; w przeciwnym razie 0.
+Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie się poza ostatnim rekordem; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Można również wywołać `IsEOF` ustalenie, czy zestaw rekordów zawiera jakiekolwiek rekordy lub jest pusty. Natychmiast, po wywołaniu metody `Open`, jeśli zestaw rekordów nie zawiera żadnych rekordów `IsEOF` zwraca wartość różną od zera. Po otwarciu zestawu rekordów, który ma co najmniej jeden rekord, pierwszy rekord jest bieżący rekord oraz `IsEOF` zwraca wartość 0.
+Możesz również wywołać `IsEOF`, aby określić, czy zestaw rekordów zawiera wszystkie rekordy, czy jest pusty. Natychmiast po wywołaniu `Open`, jeśli zestaw rekordów nie zawiera żadnych rekordów, `IsEOF` zwraca wartość różną od zera. Po otwarciu zestawu rekordów, który ma co najmniej jeden rekord, pierwszy rekord jest bieżącym rekordem, a `IsEOF` zwraca 0.
 
-Jeśli ostatni rekord jest bieżący rekord po wywołaniu `MoveNext`, `IsEOF` następnie zwraca wartość różną od zera. Jeśli `IsEOF` zwraca wartość różną od zera i wywołać `MoveNext`, zgłaszany jest wyjątek. Jeśli `IsEOF` zwraca wartość różną od zera, bieżący rekord jest niezdefiniowane i dowolną akcję, która wymaga bieżącego rekordu spowoduje wyjątek.
+Jeśli ostatni rekord jest bieżącym rekordem podczas wywoływania `MoveNext`, `IsEOF` zwróci wartość różną od zera. Jeśli `IsEOF` zwraca wartość różną od zera i wywoła `MoveNext`, zostanie zgłoszony wyjątek. Jeśli `IsEOF` zwraca wartość różną od zera, bieżący rekord jest niezdefiniowany i wszystkie akcje, które wymagają bieżącego rekordu, spowodują wyjątek.
 
-Efekt określonych metod `IsBOF` i `IsEOF` ustawienia:
+Wpływ określonych metod na ustawienia `IsBOF` i `IsEOF`:
 
-- Wywoływanie `Open` wewnętrznie sprawia, że pierwszy rekord w zestawie rekordów bieżącego rekordu przez wywołanie metody `MoveFirst`. Dlatego wywołanie `Open` na pusty zestaw rekordów przyczyny `IsBOF` i `IsEOF` zwracać wartość różną od zera. (Zobacz poniższą tabelę zachowanie niepowodzenia `MoveFirst` wywołania.)
+- Wywołanie `Open` wewnętrznie powoduje, że pierwszy rekord w zestawie rekordów bieżącego rekordu przez wywoływanie `MoveFirst`. W związku z tym, wywołanie `Open` w pustym zestawie rekordów powoduje, że `IsBOF` i `IsEOF` zwrócić wartość różną od zera. (Zapoznaj się z poniższą tabelą zachowania nieudanego wywołania `MoveFirst`).
 
-- Wszystkie operacje przenoszenia, które pomyślnie Zlokalizuj rekord spowodować, że oba `IsBOF` i `IsEOF` do zwracają 0.
+- Wszystkie operacje przenoszenia, które pomyślnie lokalizują rekord, powodują, że zarówno `IsBOF`, jak i `IsEOF` do zwrócenia 0.
 
-- `AddNew` Następuje wywołanie `Update` spowoduje wywołanie, które pomyślnie Wstawia nowy rekord `IsBOF` do zwrócenia 0, ale tylko wtedy, gdy `IsEOF` już jest różna od zera. Stan `IsEOF` zawsze pozostają bez zmian. Określone przez aparat bazy danych Microsoft Jet bieżący wskaźnik rekordu pusty zestaw rekordów jest na końcu pliku, więc każdy nowy rekord dodaje się po bieżącego rekordu.
+- Wywołanie `AddNew`, po którym następuje wywołanie `Update`, które pomyślnie wstawia nowy rekord, spowoduje, `IsBOF` zwrócić 0, ale tylko wtedy, gdy `IsEOF` jest już różna od zera. Stan `IsEOF` zawsze pozostanie niezmieniony. Zgodnie z definicją w aparacie bazy danych Microsoft Jet bieżący wskaźnik rekordu pustego zestawu rekordów znajduje się na końcu pliku, więc każdy nowy rekord zostanie wstawiony po bieżącym rekordzie.
 
-- Wszelkie `Delete` wywołania, nawet wtedy, gdy spowoduje usunięcie tylko pozostałych rekordów z zestawu rekordów nie zmieni się wartość `IsBOF` lub `IsEOF`.
+- Każde wywołanie `Delete`, nawet jeśli usuwa tylko pozostałe rekordy z zestawu rekordów, nie spowoduje zmiany wartości `IsBOF` lub `IsEOF`.
 
-W poniższej tabeli przedstawiono operacje przenoszenia dozwolone z różnymi kombinacjami `IsBOF` /  `IsEOF`.
+W tej tabeli przedstawiono, które operacje przenoszenia są dozwolone z różnymi kombinacjami `IsBOF`/ `IsEOF`.
 
-||MoveFirst, MoveLast|Moveprev —,<br /><br /> Przenieś < 0|Przenieść 0|MoveNext,<br /><br /> Przenieś > 0|
+||MoveFirst, MoveLast|MovePrev<br /><br /> Przenieś < 0|Przenieś 0|Element<br /><br /> Przenieś > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= wartość różną od zera,<br /><br /> `IsEOF`=0|Dozwolone|Wyjątek|Wyjątek|Dozwolone|
-|`IsBOF`=0,<br /><br /> `IsEOF`= wartość różną od zera|Dozwolone|Dozwolone|Wyjątek|Wyjątek|
-|Zarówno wartość różną od zera|Wyjątek|Wyjątek|Wyjątek|Wyjątek|
-|Zarówno 0|Dozwolone|Dozwolone|Dozwolone|Dozwolone|
+|`IsBOF`= Niezerowa,<br /><br /> `IsEOF`= 0|Występować|Wyjątek|Wyjątek|Występować|
+|`IsBOF`= 0,<br /><br /> `IsEOF`= niezerowe|Występować|Występować|Wyjątek|Wyjątek|
+|Oba niezerowe|Wyjątek|Wyjątek|Wyjątek|Wyjątek|
+|Oba 0|Występować|Występować|Występować|Występować|
 
-Zezwalanie operacji przenoszenia nie oznacza to operacja pomyślnie zlokalizuje rekordu. Wskazuje jedynie, próba wykonania określonej operacji przenoszenia jest dozwolone, a nie wygeneruje wyjątku. Wartość `IsBOF` i `IsEOF` funkcje składowe mogą ulec zmianie w wyniku próby przenoszenia.
+Zezwolenie na operację przenoszenia nie oznacza, że operacja spowoduje pomyślne zlokalizowanie rekordu. Wskazuje jedynie, że próba wykonania określonej operacji przenoszenia jest dozwolona i nie wygeneruje wyjątku. Wartość `IsBOF` i `IsEOF` funkcje Członkowskie mogą ulec zmianie w wyniku próby przeniesienia.
 
-Wpływ operacji przenoszenia, których nie można odnaleźć rekordu na wartość `IsBOF` i `IsEOF` ustawienia zostały przedstawione w poniższej tabeli.
+W poniższej tabeli przedstawiono skutki operacji przenoszenia, które nie lokalizują rekordu na wartości `IsBOF` i `IsEOF`.
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Wartość różną od zera|Wartość różną od zera|
+|`MoveFirst`, `MoveLast`|Różną od zera|Różną od zera|
 |`Move` 0|Nie wprowadzono zmian|Nie wprowadzono zmian|
-|`MovePrev`, `Move` < 0|Wartość różną od zera|Nie wprowadzono zmian|
-|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Wartość różną od zera|
+|`MovePrev`, `Move` < 0|Różną od zera|Nie wprowadzono zmian|
+|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Różną od zera|
 
-Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF Properties" w pomocy DAO.
 
-##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty
+##  <a name="isfielddirty"></a>CDaoRecordset:: IsFieldDirty
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy określone pole składowej danych z zestawu dynamicznego został oflagowany jako "zakłóconych" (zmienić).
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy określony element członkowski danych pola typu dynamicznego został oflagowany jako "zanieczyszczony" (zmieniony).
 
 ```
 BOOL IsFieldDirty(void* pv);
@@ -1601,22 +1601,22 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-Wskaźnik do składowej danych pola, którego stan chcesz sprawdzić lub wartość NULL, aby ustalić, czy dowolna z pól jest zanieczyszczony.
+*wa*<br/>
+Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy dowolne z pól są zanieczyszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli określone pole składowej danych jest oznaczony jako zanieczyszczony; w przeciwnym razie 0.
+Różne od zera, jeśli określony element członkowski danych pola jest oflagowany jako zanieczyszczony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Dane we wszystkich elementach danych zanieczyszczone pola zostanie przeniesiona do rekordu w źródle danych podczas aktualizacji bieżący rekord przez wywołanie `Update` funkcji składowej typu `CDaoRecordset` (po wywołaniu `Edit` lub `AddNew`). Za pomocą tej wiedzy, należy wykonać dalsze czynności, takie jak unflagging pole składowej danych, które można oznaczyć kolumny, więc nie można zapisać do źródła danych.
+Dane we wszystkich danych zanieczyszczonych pól są transferowane do rekordu w źródle danych, gdy bieżący rekord zostanie zaktualizowany przez wywołanie do `Update` funkcji składowej `CDaoRecordset` (po wywołaniu `Edit` lub `AddNew`). Korzystając z tej wiedzy, można wykonać dalsze czynności, takie jak nieoflagowanie elementu członkowskiego danych pola w celu oznaczenia kolumny, tak aby nie była ona zapisywana w źródle danych.
 
-`IsFieldDirty` jest implementowane za pomocą `DoFieldExchange`.
+`IsFieldDirty` jest implementowana przez `DoFieldExchange`.
 
-##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull
+##  <a name="isfieldnull"></a>CDaoRecordset:: IsFieldNull
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy określone pole składowej danych, które zestawu rekordów został oflagowany jako wartości Null.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy określony element członkowski danych pola zestawu rekordów został oflagowany jako wartość null.
 
 ```
 BOOL IsFieldNull(void* pv);
@@ -1624,28 +1624,28 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-Wskaźnik do składowej danych pola, którego stan chcesz sprawdzić lub wartość NULL, aby sprawdzić, czy są dowolne z pól o wartości Null.
+*wa*<br/>
+Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy którekolwiek z pól mają wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli element członkowski danych określone pole jest oznaczone jako Null; w przeciwnym razie 0.
+Różne od zera, jeśli określony element członkowski danych pola jest oflagowany jako null; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-(W terminologii bazy danych o wartości Null oznacza, że "po żadnej wartości" i nie jest taka sama jak wartość NULL w języku C++) Element członkowski danych pola jest oznaczony jako wartość Null, jest interpretowany jako kolumnę bieżącego rekordu, dla których nie ma żadnej wartości.
+(W terminologii bazy danych wartość null oznacza brak wartości i nie jest taka sama jak wartość NULL w C++.) Jeśli element członkowski danych pola jest oflagowany jako null, jest interpretowany jako kolumna bieżącego rekordu, dla którego nie ma wartości.
 
 > [!NOTE]
->  W niektórych sytuacjach przy użyciu `IsFieldNull` może być mało wydajne, tak jak pokazano w poniższym przykładzie kodu:
+>  W niektórych sytuacjach używanie `IsFieldNull` może być niewydajne, ponieważ ilustruje poniższy przykład kodu:
 
 [!code-cpp[NVC_MFCDatabase#5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]
 
 > [!NOTE]
->  Jeśli używasz wiązanie dynamiczne rekordów, bez pochodząca od `CDaoRecordset`, należy użyć VT_NULL, jak pokazano w przykładzie.
+>  Jeśli używasz dynamicznego wiązania rekordów, ale nie pochodzą z `CDaoRecordset`, upewnij się, że używasz VT_NULL, jak pokazano w przykładzie.
 
-##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable
+##  <a name="isfieldnullable"></a>CDaoRecordset:: IsFieldNullable
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy określone pole składowej danych "nullable" (może być ustawiona na wartość Null; C++ o wartości NULL nie jest taka sama jak wartość Null, oznacza to, w terminologii bazy danych "posiadanie żadnej wartości").
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy określony element członkowski danych pola jest typu "nullable" (można ustawić wartość null; C++ Wartość null nie jest taka sama jak wartość null, co w terminologii bazy danych oznacza "brak wartości").
 
 ```
 BOOL IsFieldNullable(void* pv);
@@ -1653,20 +1653,20 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-Wskaźnik do składowej danych pola, którego stan chcesz sprawdzić lub wartość NULL, aby sprawdzić, czy są dowolne z pól o wartości Null.
+*wa*<br/>
+Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy którekolwiek z pól mają wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli określone pole składowej danych można wprowadzić wartość Null; w przeciwnym razie 0.
+Różne od zera, jeśli określony element członkowski danych pola może być wartością null; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pola, które nie może mieć wartości Null, musi mieć wartość. Jeśli spróbujesz ustawia pole na wartość Null, podczas dodawania lub aktualizowania rekordu źródła danych odrzuci dodanie lub aktualizacja, i `Update` spowoduje zgłoszenie wyjątku. Wyjątek występuje po wywołaniu `Update`, nie wtedy, gdy wywołujesz `SetFieldNull`.
+Pole, które nie może mieć wartości null, musi mieć wartość. Jeśli podczas dodawania lub aktualizowania rekordu zostanie podjęta próba ustawienia takiego pola na wartość null, źródło danych odrzuci dodanie lub aktualizację, a `Update` zgłosi wyjątek. Wyjątek występuje w przypadku wywołania `Update`, a nie podczas wywoływania `SetFieldNull`.
 
-##  <a name="isopen"></a>  CDaoRecordset::IsOpen
+##  <a name="isopen"></a>CDaoRecordset:: IsOpen
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy zestaw rekordów jest otwarty.
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekordów jest otwarty.
 
 ```
 BOOL IsOpen() const;
@@ -1674,101 +1674,101 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli obiekty zestawów rekordów `Open` lub `Requery` wcześniej została wywołana funkcja elementu członkowskiego i nie została zamknięta zestawu rekordów; w przeciwnym razie 0.
+Niezerowe, jeśli wcześniej wywołano `Open` obiektu zestawu rekordów lub `Requery` funkcję członkowską, a zestaw rekordów nie został zamknięty; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
+##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset:: m_bCheckCacheForDirtyFields
 
-Zawiera flagę wskazującą, czy pola pamięci podręcznej są automatycznie oznaczony jako zakłóconych (zmienione) i Null.
-
-### <a name="remarks"></a>Uwagi
-
-Flaga wartość domyślna to TRUE. Ustawienie to element członkowski danych steruje całego mechanizmu podwójnego buforowania. Jeśli flaga jest ustawiona na wartość TRUE, można wyłączyć buforowanie na podstawie pól pola, przy użyciu mechanizmu DFX. Jeśli flaga jest ustawiona na wartość FALSE, należy wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
-
-Ustaw ten element członkowski danych przed wywołaniem `Open`. Ten mechanizm jest przede wszystkim do łatwe w użyciu. Wydajność może być wolniejsze z powodu podwójnego buforowania pól, zostaną wprowadzone zmiany.
-
-##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields
-
-Zawiera liczbę elementy członkowskie danych pola w klasie zestawu rekordów i liczba kolumn wybranych przez zestaw rekordów ze źródła danych.
+Zawiera flagę wskazującą, czy buforowane pola są automatycznie oznaczane jako zanieczyszczone (zmienione) i zerowe.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor dla klasy zestaw rekordów musi inicjować `m_nFields` z poprawną liczbę statycznie powiązanych pól. ClassWizard zapisuje ten proces inicjowania dla Ciebie, gdy używasz Aby zadeklarować klasy zestawu rekordów. Można go także zapisać ręcznie.
+Domyślna flaga to TRUE. Ustawienie w tym elemencie członkowskim danych kontroluje cały mechanizm podwójnego buforowania. Jeśli ustawisz flagę na wartość TRUE, możesz wyłączyć buforowanie w zależności od pola, korzystając z mechanizmu DFX. Jeśli flaga jest ustawiona na wartość FALSE, należy wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
 
-Środowisko wykorzystuje tę liczbę do zarządzania interakcją między elementy członkowskie danych pola i odpowiednie kolumny bieżącego rekordu w źródle danych.
+Ustaw tego elementu członkowskiego danych przed wywołaniem `Open`. Mechanizm ten jest przeznaczony głównie do łatwego użycia. Wydajność może być wolniejsza ze względu na podwójne buforowanie pól w miarę wprowadzania zmian.
+
+##  <a name="m_nfields"></a>CDaoRecordset:: m_nFields
+
+Zawiera liczbę elementów członkowskich danych pola w klasie zestawu rekordów oraz liczbę kolumn wybranych przez zestaw rekordów ze źródła danych.
+
+### <a name="remarks"></a>Uwagi
+
+Konstruktor dla klasy zestawu rekordów musi inicjować `m_nFields` z poprawną liczbą pól, które są powiązane statycznie. ClassWizard zapisuje tę inicjalizację w przypadku użycia jej do deklarowania klasy zestawu rekordów. Możesz również napisać je ręcznie.
+
+Struktura używa tej liczby do zarządzania interakcją między elementami członkowskimi danych pola i odpowiednimi kolumnami bieżącego rekordu w źródle danych.
 
 > [!NOTE]
->  Ta liczba musi odpowiadać liczba kolumn wyjściowych zarejestrowane w `DoFieldExchange` po wywołaniu `SetFieldType` z parametrem `CDaoFieldExchange::outputColumn`.
+>  Ta liczba musi odpowiadać liczbie kolumn wyjściowych zarejestrowanych w `DoFieldExchange` po wywołaniu `SetFieldType` z parametrem `CDaoFieldExchange::outputColumn`.
 
-Można powiązać kolumny dynamicznie przez zasadzie `CDaoRecordset::GetFieldValue` i `CDaoRecordset::SetFieldValue`. Jeśli tak zrobisz, nie trzeba zwiększyć liczby w `m_nFields` aby odzwierciedlić liczba funkcji DFX wywołań swojej `DoFieldExchange` funkcja elementu członkowskiego.
+Można powiązać kolumny dynamicznie przy użyciu `CDaoRecordset::GetFieldValue` i `CDaoRecordset::SetFieldValue`. Jeśli to zrobisz, nie musisz zwiększać liczby w `m_nFields`, aby odzwierciedlała liczbę wywołań funkcji DFX w `DoFieldExchange` funkcji składowej.
 
-##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams
+##  <a name="m_nparams"></a>CDaoRecordset:: m_nParams
 
-Zawiera liczbę elementy członkowskie danych parametru w klasie rekordów — liczba parametrów przekazaną za pomocą zapytań w zestawie rekordów.
+Zawiera liczbę elementów członkowskich danych parametrów w klasie zestawu rekordów — liczbę parametrów przesłanych z zapytaniem zestawu rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli klasa zestaw rekordów zawiera wszystkie elementy członkowskie danych parametru, Konstruktor dla klasy należy zainicjować *m_nparams —* z prawidłową liczbą. Wartość *m_nparams —* wartość domyślna to 0. Jeśli dodasz elementy członkowskie danych parametru — co musisz zrobić ręcznie — musisz również ręcznie dodać inicjalizacji w konstruktorze klasy, aby odzwierciedlić liczba parametrów (musi być przynajmniej tak duże jak liczba '' symbole zastępcze w wywołaniach usługi *m_strFilter*  lub *m_strSort* ciągu).
+Jeśli Klasa zestawu rekordów ma wszystkie elementy członkowskie danych parametrów, Konstruktor dla klasy musi inicjować *m_nParams* o poprawnej liczbie. Wartość *m_nParams* domyślnie równa 0. W przypadku dodawania elementów członkowskich danych parametrów — które należy wykonać ręcznie — należy również ręcznie dodać inicjalizację w konstruktorze klasy, aby odzwierciedlała liczbę parametrów (co musi być co najmniej tak duże jak liczba symboli zastępczych "" w ciągu *m_strFilter* lub *m_strSort* ).
 
-Struktura używa tego numeru, gdy go parametryzuje dane zapytania w zestawie rekordów.
+Struktura używa tej liczby podczas parameterizes zapytania zestawu rekordów.
 
 > [!NOTE]
->  Ta liczba musi odpowiadać liczbę "params" zarejestrowanego w `DoFieldExchange` po wywołaniu `SetFieldType` z parametrem `CFieldExchange::param`.
+>  Ta liczba musi odpowiadać liczbie parametrów "params" zarejestrowanej w `DoFieldExchange` po wywołaniu `SetFieldType` z parametrem `CFieldExchange::param`.
 
-Aby uzyskać powiązane informacje zobacz temat "Parametr obiektu" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "obiekt parametru" w pomocy DAO.
 
-##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset
+##  <a name="m_pdaorecordset"></a>CDaoRecordset:: m_pDAORecordset
 
-Zawiera wskaźnik do interfejsu OLE do bazowego obiektu zestawu rekordów DAO `CDaoRecordset` obiektu.
-
-### <a name="remarks"></a>Uwagi
-
-Jeśli potrzebujesz dostępu do interfejsu DAO bezpośrednio za pomocą tego wskaźnika.
-
-Aby uzyskać powiązane informacje zobacz temat "Obiekt zestawu rekordów" w Pomocy programu DAO.
-
-##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase
-
-Zawiera wskaźnik do `CDaoDatabase` obiektu za pomocą których zestaw rekordów jest połączony ze źródłem danych.
+Zawiera wskaźnik do interfejsu OLE dla obiektu zestawu rekordów DAO bazowego obiektu `CDaoRecordset`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta zmienna jest ustawiona na dwa sposoby. Zazwyczaj należy przekazać wskaźnik do już otwartych `CDaoDatabase` obiektu podczas konstruowania obiektu zestawu rekordów. Jeśli zamiast tego należy przekazać NULL `CDaoRecordset` tworzy `CDaoDatabase` obiekt dla Ciebie i otwiera go. W obu przypadkach `CDaoRecordset` przechowuje wskaźnik w tej zmiennej.
+Użyj tego wskaźnika, jeśli musisz bezpośrednio uzyskać dostęp do interfejsu DAO.
 
-Zwykle nie bezpośrednio należy użyć wskaźnika przechowywania w `m_pDatabase`. Jeśli piszesz własne rozszerzenia `CDaoRecordset`, jednak czasami trzeba za pomocą wskaźnika. Na przykład może być potrzebny wskaźnika można zgłaszać własne `CDaoException`(s).
+Aby uzyskać powiązane informacje, zobacz temat "obiekt Recordset" w pomocy DAO.
 
-Aby uzyskać powiązane informacje zobacz temat "Obiektu bazy danych" w Pomocy programu DAO.
+##  <a name="m_pdatabase"></a>CDaoRecordset:: m_pDatabase
 
-##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter
-
-Zawiera ciąg, który służy do konstruowania **gdzie** klauzula instrukcji języka SQL.
+Zawiera wskaźnik do obiektu `CDaoDatabase`, za pomocą którego zestaw rekordów jest połączony ze źródłem danych.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie zawiera słowo zastrzeżone **gdzie** do filtrowania zestawu rekordów. Użyj tego elementu członkowskiego danych nie ma zastosowania do zestawów rekordów typu tabeli. Korzystanie z `m_strFilter` nie obowiązuje podczas otwierania zestawu rekordów przy użyciu `CDaoQueryDef` wskaźnika.
+Ta zmienna jest ustawiana na dwa sposoby. Zwykle przekazuje się wskaźnik do już otwartego obiektu `CDaoDatabase` podczas konstruowania obiektu zestawu rekordów. Jeśli zamiast tego przejdziesz wartość NULL, `CDaoRecordset` utworzy obiekt `CDaoDatabase` i otworzy go. W obu przypadkach `CDaoRecordset` zapisuje wskaźnik w tej zmiennej.
 
-Użyj formatu daty Stanów Zjednoczonych (dzień miesiąc rok) podczas filtrowania pola zawierające dat, nawet jeśli nie używasz wersji US aparatu bazy danych Microsoft Jet; w przeciwnym razie dane nie mogą być filtrowane, zgodnie z oczekiwaniami.
+Zwykle nie trzeba bezpośrednio używać wskaźnika przechowywanego w `m_pDatabase`. W przypadku pisania własnych rozszerzeń do `CDaoRecordset`, może być konieczne użycie wskaźnika. Na przykład może być potrzebny wskaźnik, jeśli wygenerujesz własne `CDaoException`.
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwość filtra" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "obiekt bazy danych" w pomocy DAO.
 
-##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort
+##  <a name="m_strfilter"></a>CDaoRecordset:: m_strFilter
 
-Zawiera ciąg zawierający **ORDERBY** klauzuli instrukcji SQL bez słowa zastrzeżone **ORDERBY**.
+Zawiera ciąg, który jest używany do konstruowania klauzuli **WHERE** instrukcji języka SQL.
 
 ### <a name="remarks"></a>Uwagi
 
-Można sortować na obiektach zestawu rekordów i migawki — dynamicznego.
+Nie zawiera słowa zastrzeżonego, w **którym** ma zostać przefiltrowany zestaw rekordów. Użycie tego elementu członkowskiego danych nie ma zastosowania do zestawów rekordów typu "Table". Użycie `m_strFilter` nie ma wpływu na otwieranie zestawu rekordów przy użyciu wskaźnika `CDaoQueryDef`.
 
-Nie można posortować obiekty zestawu rekordów typu tabeli. Aby określić kolejność sortowania rekordów typ tabeli, należy wywołać [SetCurrentIndex](#setcurrentindex).
+Użyj formatu daty w Stanach Zjednoczonych (miesiąc-dzień-rok) w przypadku filtrowania pól zawierających daty, nawet jeśli nie używasz amerykańskiej wersji aparatu bazy danych Microsoft Jet; w przeciwnym razie dane mogą nie być filtrowane zgodnie z oczekiwaniami.
 
-Korzystanie z *m_strSort* nie obowiązuje podczas otwierania zestawu rekordów przy użyciu `CDaoQueryDef` wskaźnika.
+Aby uzyskać powiązane informacje, zobacz temat "właściwości filtru" w pomocy DAO.
 
-Aby uzyskać powiązane informacje zobacz temat "Właściwość sortowania" w Pomocy programu DAO.
+##  <a name="m_strsort"></a>CDaoRecordset:: m_strSort
 
-##  <a name="move"></a>  CDaoRecordset::Move
+Zawiera ciąg zawierający klauzulę **ORDERBY** instrukcji SQL bez zarezerwowanych wyrazów **OrderBy**.
 
-Wywołaj tę funkcję elementu członkowskiego, aby umieścić zestaw rekordów *lRows* rekordów z bieżącego rekordu.
+### <a name="remarks"></a>Uwagi
+
+Można sortować według obiektów zestawu rekordów typu "dynamiczny" i "snapshot".
+
+Nie można sortować obiektów zestawu rekordów typu tabela. Aby określić kolejność sortowania zestawu rekordów typu tabela, wywołaj [SetCurrentIndex](#setcurrentindex).
+
+Użycie *m_strSort* nie ma wpływu na otwieranie zestawu rekordów przy użyciu wskaźnika `CDaoQueryDef`.
+
+Aby uzyskać powiązane informacje, zobacz temat "Sortuj Właściwość" w pomocy DAO.
+
+##  <a name="move"></a>CDaoRecordset:: Move
+
+Wywołaj tę funkcję elementu członkowskiego, aby umieścić rekordy *lRows* rekordów z bieżącego rekordu.
 
 ```
 virtual void Move(long lRows);
@@ -1777,30 +1777,30 @@ virtual void Move(long lRows);
 ### <a name="parameters"></a>Parametry
 
 *lRows*<br/>
-Liczba rekordów do przechodzenia do przodu lub Wstecz. Wartości dodatnich Przesuń do przodu, pod koniec zestawu rekordów. Wartości ujemne do tyłu, kierunku początku.
+Liczba rekordów do przeniesienia do przodu lub do tyłu. Wartości dodatnie przesuwają się w przód, w kierunku końca zestawu rekordów. Wartości ujemne przesuwają się do tyłu, w kierunku początku.
 
 ### <a name="remarks"></a>Uwagi
 
-Można przenieść do przodu lub Wstecz. `Move( 1 )` jest odpowiednikiem `MoveNext`, i `Move( -1 )` jest odpowiednikiem `MovePrev`.
+Możesz przejść do przodu lub do tyłu. `Move( 1 )` jest równoważne `MoveNext`, a `Move( -1 )` jest równoważne `MovePrev`.
 
 > [!CAUTION]
->  Wywołanie dowolnego z `Move` funkcje zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołaj obydwa `IsBOF` i `IsEOF` przed wykonaniem operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera wszystkie rekordy. Po wywołaniu metody `Open` lub `Requery`, albo wywołaj `IsBOF` lub `IsEOF`.
+>  Wywołanie którejkolwiek z funkcji `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc przed operacją przenoszenia Wywołaj zarówno `IsBOF`, jak i `IsEOF`, aby określić, czy zestaw rekordów zawiera jakieś rekordy. Po wywołaniu `Open` lub `Requery`, wywołaj `IsBOF` lub `IsEOF`.
 
 > [!NOTE]
->  Jeśli przewiniesz w przeszłości na początku lub na końcu zestawu rekordów ( `IsBOF` lub `IsEOF` zwraca wartość różną od zera), po wywołaniu `Move` zgłasza `CDaoException`.
+>  Jeśli przewiniesz poza początkową lub końcem zestawu rekordów (`IsBOF` lub `IsEOF` zwraca wartość różną od zera), wywołanie do `Move` zgłasza `CDaoException`.
 
 > [!NOTE]
->  Jeśli należy wywołać dowolną z `Move` funkcji podczas bieżącego rekordu zaktualizowano lub dodano i aktualizacje zostaną utracone bez ostrzeżenia.
+>  Jeśli wywołasz jakąkolwiek `Move` funkcje podczas aktualizowania lub dodawania bieżącego rekordu, aktualizacje zostaną utracone bez ostrzeżenia.
 
-Gdy wywołujesz `Move` tylko do przodu migawkę przewijania, *lRows* parametr musi być dodatnią liczbą całkowitą i zakładki nie są dozwolone, dzięki czemu można przenosić do przodu tylko.
+Gdy wywołasz `Move` na migawce przewijanym tylko do przodu, parametr *lRows* musi być dodatnią liczbą całkowitą, a zakładki są niedozwolone, więc można przenieść tylko do przodu.
 
-Aby imię, nazwisko, następnej lub poprzedniej rejestrowanie w zestawie rekordów bieżącego rekordu, wywołania `MoveFirst`, `MoveLast`, `MoveNext`, lub `MovePrev` funkcja elementu członkowskiego.
+Aby utworzyć pierwszy, ostatni, następny lub poprzedni rekord w zestawie rekordów w bieżącym rekordzie, wywołaj funkcję członkowską `MoveFirst`, `MoveLast`, `MoveNext`lub `MovePrev`.
 
-Aby uzyskać powiązane informacje, zobacz tematy "Przenieś metody" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda Move" i "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" w pomocy DAO.
 
-##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst
+##  <a name="movefirst"></a>CDaoRecordset:: MoveFirst
 
-Wywołaj tę funkcję elementu członkowskiego, aby pierwszy rekord w zestawie rekordów (jeśli istnieje) bieżącego rekordu.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć pierwszy rekord w zestawie rekordów (jeśli istnieje) bieżącego rekordu.
 
 ```
 void MoveFirst();
@@ -1808,29 +1808,29 @@ void MoveFirst();
 
 ### <a name="remarks"></a>Uwagi
 
-Nie trzeba wywoływać `MoveFirst` bezpośrednio po otwarciu zestawu rekordów. W tym czasie pierwszego rekordu (jeśli istnieje) jest automatycznie bieżącego rekordu.
+Nie musisz wywoływać `MoveFirst` natychmiast po otwarciu zestawu rekordów. W tym momencie pierwszy rekord (jeśli istnieje) jest automatycznie bieżącym rekordem.
 
 > [!CAUTION]
->  Wywołanie dowolnego z `Move` funkcje zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołaj obydwa `IsBOF` i `IsEOF` przed wykonaniem operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera wszystkie rekordy. Po wywołaniu metody `Open` lub `Requery`, albo wywołaj `IsBOF` lub `IsEOF`.
+>  Wywołanie którejkolwiek z funkcji `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc przed operacją przenoszenia Wywołaj zarówno `IsBOF`, jak i `IsEOF`, aby określić, czy zestaw rekordów zawiera jakieś rekordy. Po wywołaniu `Open` lub `Requery`, wywołaj `IsBOF` lub `IsEOF`.
 
 > [!NOTE]
->  Jeśli należy wywołać dowolną z `Move` funkcji podczas bieżącego rekordu zaktualizowano lub dodano i aktualizacje zostaną utracone bez ostrzeżenia.
+>  Jeśli wywołasz jakąkolwiek `Move` funkcje podczas aktualizowania lub dodawania bieżącego rekordu, aktualizacje zostaną utracone bez ostrzeżenia.
 
-Użyj `Move` funkcji przenoszenia między rekordami bez stosowania warunku. Użyj operacji Znajdź można zlokalizować rekordów w dynamicznego lub obiekty zestawów rekordów typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typ tabeli, należy wywołać `Seek`.
+Użyj funkcji `Move`, aby przejść z rekordu do rekordu bez zastosowania warunku. Użyj operacji znajdowania w celu zlokalizowania rekordów w obiekcie zestawu rekordów typu dynamiczny lub typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typu tabela, wywołaj `Seek`.
 
-Jeśli zestaw rekordów odwołuje się do zestawu rekordów typ tabeli, przenoszenia następuje bieżący indeks tabeli. Można ustawić bieżącego indeksu za pomocą właściwości indeksu obiektu bazowego DAO. Jeśli bieżący indeks nie jest ustawiona, kolejność rekordów zwracany jest niezdefiniowane.
+Jeśli zestaw rekordów odwołuje się do zestawu rekordów typu tabeli, przemieszczenie następuje po bieżącym indeksie tabeli. Bieżący indeks można ustawić przy użyciu właściwości index bazowego obiektu DAO. Jeśli bieżący indeks nie zostanie ustawiony, kolejność zwróconych rekordów jest niezdefiniowana.
 
-Jeśli wywołasz `MoveLast` na obiekt zestawu rekordów na podstawie zapytania SQL lub querydef, zapytanie jest zmuszony do ukończenia i w pełni zawiera obiekt zestawu rekordów.
+Jeśli wywołasz `MoveLast` w obiekcie zestawu rekordów na podstawie zapytania SQL lub querydef, zapytanie jest wymuszane do ukończenia, a obiekt zestawu rekordów jest w pełni wypełniony.
 
-Nie można wywołać `MoveFirst` lub `MovePrev` funkcji składowej z przewijaniem migawki tylko do przodu.
+Nie można wywołać funkcji składowej `MoveFirst` ani `MovePrev` z migawką przewijaną tylko do przodu.
 
-Aby przenieść pozycja bieżący rekord w obiekty zestawów rekordów konkretną liczbę rekordów do przodu lub do tyłu, należy wywołać `Move`.
+Aby przenieść pozycję bieżącego rekordu w obiekcie zestawu rekordów określoną liczbę rekordów do przodu lub do tyłu, wywołaj `Move`.
 
-Aby uzyskać powiązane informacje, zobacz tematy "Przenieś metody" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda Move" i "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" w pomocy DAO.
 
-##  <a name="movelast"></a>  CDaoRecordset::MoveLast
+##  <a name="movelast"></a>CDaoRecordset:: MoveLast
 
-Wywołaj tę funkcję elementu członkowskiego, aby ostatni rekord (jeśli istnieją) w zestawie rekordów bieżącego rekordu.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć ostatni rekord (jeśli istnieje) w zestawie rekordów dla bieżącego rekordu.
 
 ```
 void MoveLast();
@@ -1839,24 +1839,24 @@ void MoveLast();
 ### <a name="remarks"></a>Uwagi
 
 > [!CAUTION]
->  Wywołanie dowolnego z `Move` funkcje zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołaj obydwa `IsBOF` i `IsEOF` przed wykonaniem operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera wszystkie rekordy. Po wywołaniu metody `Open` lub `Requery`, albo wywołaj `IsBOF` lub `IsEOF`.
+>  Wywołanie którejkolwiek z funkcji `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc przed operacją przenoszenia Wywołaj zarówno `IsBOF`, jak i `IsEOF`, aby określić, czy zestaw rekordów zawiera jakieś rekordy. Po wywołaniu `Open` lub `Requery`, wywołaj `IsBOF` lub `IsEOF`.
 
 > [!NOTE]
->  Jeśli należy wywołać dowolną z `Move` funkcji podczas bieżącego rekordu zaktualizowano lub dodano i aktualizacje zostaną utracone bez ostrzeżenia.
+>  Jeśli wywołasz jakąkolwiek `Move` funkcje podczas aktualizowania lub dodawania bieżącego rekordu, aktualizacje zostaną utracone bez ostrzeżenia.
 
-Użyj `Move` funkcji przenoszenia między rekordami bez stosowania warunku. Użyj operacji Znajdź można zlokalizować rekordów w dynamicznego lub obiekty zestawów rekordów typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typ tabeli, należy wywołać `Seek`.
+Użyj funkcji `Move`, aby przejść z rekordu do rekordu bez zastosowania warunku. Użyj operacji znajdowania w celu zlokalizowania rekordów w obiekcie zestawu rekordów typu dynamiczny lub typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typu tabela, wywołaj `Seek`.
 
-Jeśli zestaw rekordów odwołuje się do zestawu rekordów typ tabeli, przenoszenia następuje bieżący indeks tabeli. Można ustawić bieżącego indeksu za pomocą właściwości indeksu obiektu bazowego DAO. Jeśli bieżący indeks nie jest ustawiona, kolejność rekordów zwracany jest niezdefiniowane.
+Jeśli zestaw rekordów odwołuje się do zestawu rekordów typu tabeli, przemieszczenie następuje po bieżącym indeksie tabeli. Bieżący indeks można ustawić przy użyciu właściwości index bazowego obiektu DAO. Jeśli bieżący indeks nie zostanie ustawiony, kolejność zwróconych rekordów jest niezdefiniowana.
 
-Jeśli wywołasz `MoveLast` na obiekt zestawu rekordów na podstawie zapytania SQL lub querydef, zapytanie jest zmuszony do ukończenia i w pełni zawiera obiekt zestawu rekordów.
+Jeśli wywołasz `MoveLast` w obiekcie zestawu rekordów na podstawie zapytania SQL lub querydef, zapytanie jest wymuszane do ukończenia, a obiekt zestawu rekordów jest w pełni wypełniony.
 
-Aby przenieść pozycja bieżący rekord w obiekty zestawów rekordów konkretną liczbę rekordów do przodu lub do tyłu, należy wywołać `Move`.
+Aby przenieść pozycję bieżącego rekordu w obiekcie zestawu rekordów określoną liczbę rekordów do przodu lub do tyłu, wywołaj `Move`.
 
-Aby uzyskać powiązane informacje, zobacz tematy "Przenieś metody" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda Move" i "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" w pomocy DAO.
 
-##  <a name="movenext"></a>  CDaoRecordset::MoveNext
+##  <a name="movenext"></a>CDaoRecordset:: MoveNext
 
-Wywołaj tę funkcję elementu członkowskiego, aby następnego rekordu w zestawie rekordów bieżącego rekordu.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć następny rekord w zestawie rekordów w bieżącym rekordzie.
 
 ```
 void MoveNext();
@@ -1864,25 +1864,25 @@ void MoveNext();
 
 ### <a name="remarks"></a>Uwagi
 
-Zalecane jest, należy wywołać `IsBOF` przed podjęciem próby Przenieś do poprzedniego rekordu. Wywołanie `MovePrev` zgłosi `CDaoException` Jeśli `IsBOF` zwraca wartość różną od zera, wskazując, które były już przewijane przed pierwszy rekord lub że nie wybrano żadnych rekordów przez zestaw rekordów.
+Zaleca się wywołanie `IsBOF` przed podjęciem próby przejścia do poprzedniego rekordu. Wywołanie `MovePrev` spowoduje zgłoszenie `CDaoException`, jeśli `IsBOF` zwróci wartość różną od zera, co oznacza, że został już przewinięty przed pierwszym rekordem lub że żaden rekord nie został wybrany przez zestaw rekordów.
 
 > [!CAUTION]
->  Wywołanie dowolnego z `Move` funkcje zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołaj obydwa `IsBOF` i `IsEOF` przed wykonaniem operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera wszystkie rekordy. Po wywołaniu metody `Open` lub `Requery`, albo wywołaj `IsBOF` lub `IsEOF`.
+>  Wywołanie którejkolwiek z funkcji `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc przed operacją przenoszenia Wywołaj zarówno `IsBOF`, jak i `IsEOF`, aby określić, czy zestaw rekordów zawiera jakieś rekordy. Po wywołaniu `Open` lub `Requery`, wywołaj `IsBOF` lub `IsEOF`.
 
 > [!NOTE]
->  Jeśli należy wywołać dowolną z `Move` funkcji podczas bieżącego rekordu zaktualizowano lub dodano i aktualizacje zostaną utracone bez ostrzeżenia.
+>  Jeśli wywołasz jakąkolwiek `Move` funkcje podczas aktualizowania lub dodawania bieżącego rekordu, aktualizacje zostaną utracone bez ostrzeżenia.
 
-Użyj `Move` funkcji przenoszenia między rekordami bez stosowania warunku. Użyj operacji Znajdź można zlokalizować rekordów w dynamicznego lub obiekty zestawów rekordów typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typ tabeli, należy wywołać `Seek`.
+Użyj funkcji `Move`, aby przejść z rekordu do rekordu bez zastosowania warunku. Użyj operacji znajdowania w celu zlokalizowania rekordów w obiekcie zestawu rekordów typu dynamiczny lub typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typu tabela, wywołaj `Seek`.
 
-Jeśli zestaw rekordów odwołuje się do zestawu rekordów typ tabeli, przenoszenia następuje bieżący indeks tabeli. Można ustawić bieżącego indeksu za pomocą właściwości indeksu obiektu bazowego DAO. Jeśli bieżący indeks nie jest ustawiona, kolejność rekordów zwracany jest niezdefiniowane.
+Jeśli zestaw rekordów odwołuje się do zestawu rekordów typu tabeli, przemieszczenie następuje po bieżącym indeksie tabeli. Bieżący indeks można ustawić przy użyciu właściwości index bazowego obiektu DAO. Jeśli bieżący indeks nie zostanie ustawiony, kolejność zwróconych rekordów jest niezdefiniowana.
 
-Aby przenieść pozycja bieżący rekord w obiekty zestawów rekordów konkretną liczbę rekordów do przodu lub do tyłu, należy wywołać `Move`.
+Aby przenieść pozycję bieżącego rekordu w obiekcie zestawu rekordów określoną liczbę rekordów do przodu lub do tyłu, wywołaj `Move`.
 
-Aby uzyskać powiązane informacje, zobacz tematy "Przenieś metody" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda Move" i "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" w pomocy DAO.
 
-##  <a name="moveprev"></a>  CDaoRecordset::MovePrev
+##  <a name="moveprev"></a>CDaoRecordset:: MovePrev
 
-Wywołaj tę funkcję elementu członkowskiego, aby poprzedniego rekordu w zestawie rekordów bieżącego rekordu.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć poprzedni rekord w zestawie rekordów w bieżącym rekordzie.
 
 ```
 void MovePrev();
@@ -1890,27 +1890,27 @@ void MovePrev();
 
 ### <a name="remarks"></a>Uwagi
 
-Zalecane jest, należy wywołać `IsBOF` przed podjęciem próby Przenieś do poprzedniego rekordu. Wywołanie `MovePrev` zgłosi `CDaoException` Jeśli `IsBOF` zwraca wartość różną od zera, wskazując, które były już przewijane przed pierwszy rekord lub że nie wybrano żadnych rekordów przez zestaw rekordów.
+Zaleca się wywołanie `IsBOF` przed podjęciem próby przejścia do poprzedniego rekordu. Wywołanie `MovePrev` spowoduje zgłoszenie `CDaoException`, jeśli `IsBOF` zwróci wartość różną od zera, co oznacza, że został już przewinięty przed pierwszym rekordem lub że żaden rekord nie został wybrany przez zestaw rekordów.
 
 > [!CAUTION]
->  Wywołanie dowolnego z `Move` funkcje zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołaj obydwa `IsBOF` i `IsEOF` przed wykonaniem operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera wszystkie rekordy. Po wywołaniu metody `Open` lub `Requery`, albo wywołaj `IsBOF` lub `IsEOF`.
+>  Wywołanie którejkolwiek z funkcji `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Ogólnie rzecz biorąc przed operacją przenoszenia Wywołaj zarówno `IsBOF`, jak i `IsEOF`, aby określić, czy zestaw rekordów zawiera jakieś rekordy. Po wywołaniu `Open` lub `Requery`, wywołaj `IsBOF` lub `IsEOF`.
 
 > [!NOTE]
->  Jeśli należy wywołać dowolną z `Move` funkcji podczas bieżącego rekordu zaktualizowano lub dodano i aktualizacje zostaną utracone bez ostrzeżenia.
+>  Jeśli wywołasz jakąkolwiek `Move` funkcje podczas aktualizowania lub dodawania bieżącego rekordu, aktualizacje zostaną utracone bez ostrzeżenia.
 
-Użyj `Move` funkcji przenoszenia między rekordami bez stosowania warunku. Użyj operacji Znajdź można zlokalizować rekordów w dynamicznego lub obiekty zestawów rekordów typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typ tabeli, należy wywołać `Seek`.
+Użyj funkcji `Move`, aby przejść z rekordu do rekordu bez zastosowania warunku. Użyj operacji znajdowania w celu zlokalizowania rekordów w obiekcie zestawu rekordów typu dynamiczny lub typu migawka, który spełnia określony warunek. Aby zlokalizować rekord w obiekcie zestawu rekordów typu tabela, wywołaj `Seek`.
 
-Jeśli zestaw rekordów odwołuje się do zestawu rekordów typ tabeli, przenoszenia następuje bieżący indeks tabeli. Można ustawić bieżącego indeksu za pomocą właściwości indeksu obiektu bazowego DAO. Jeśli bieżący indeks nie jest ustawiona, kolejność rekordów zwracany jest niezdefiniowane.
+Jeśli zestaw rekordów odwołuje się do zestawu rekordów typu tabeli, przemieszczenie następuje po bieżącym indeksie tabeli. Bieżący indeks można ustawić przy użyciu właściwości index bazowego obiektu DAO. Jeśli bieżący indeks nie zostanie ustawiony, kolejność zwróconych rekordów jest niezdefiniowana.
 
-Nie można wywołać `MoveFirst` lub `MovePrev` funkcji składowej z przewijaniem migawki tylko do przodu.
+Nie można wywołać funkcji składowej `MoveFirst` ani `MovePrev` z migawką przewijaną tylko do przodu.
 
-Aby przenieść pozycja bieżący rekord w obiekty zestawów rekordów konkretną liczbę rekordów do przodu lub do tyłu, należy wywołać `Move`.
+Aby przenieść pozycję bieżącego rekordu w obiekcie zestawu rekordów określoną liczbę rekordów do przodu lub do tyłu, wywołaj `Move`.
 
-Aby uzyskać powiązane informacje, zobacz tematy "Przenieś metody" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda Move" i "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" w pomocy DAO.
 
-##  <a name="open"></a>  CDaoRecordset::Open
+##  <a name="open"></a>CDaoRecordset:: Open
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać te rekordy, dla zestawu rekordów.
+Musisz wywołać tę funkcję elementu członkowskiego, aby pobrać rekordy dla zestawu rekordów.
 
 ```
 virtual void Open(
@@ -1932,108 +1932,108 @@ virtual void Open(
 ### <a name="parameters"></a>Parametry
 
 *nOpenType*<br/>
-Jeden z następujących wartości:
+Jedna z następujących wartości:
 
-- `dbOpenDynaset` Zestaw rekordów dynamicznego za pomocą dwukierunkowych przewijania. Domyślnie włączone.
+- `dbOpenDynaset` zestaw rekordów typu zestaw dynamiczny z dwukierunkowym przewijaniem. Domyślnie włączone.
 
-- `dbOpenTable` Zestaw rekordów typ tabeli za pomocą dwukierunkowych przewijania.
+- `dbOpenTable` zestaw rekordów typu tabela z dwukierunkowym przewijaniem.
 
-- `dbOpenSnapshot` Zestaw rekordów typ migawki za pomocą dwukierunkowych przewijania.
+- `dbOpenSnapshot` zestaw rekordów typu migawka z dwukierunkowym przewijaniem.
 
 *lpszSQL*<br/>
-Wskaźnik ciągu, zawierające jedną z następujących czynności:
+Wskaźnik ciągu zawierający jedną z następujących wartości:
 
 - Wskaźnik o wartości NULL.
 
-- Nazwa tabledefs — lub querydefs — (rozdzielonych przecinkami).
+- Nazwa co najmniej jednego elementu tabledefs i/lub querydef (rozdzielonych przecinkami).
 
-- SQL **wybierz** — instrukcja (opcjonalnie wraz z SQL **gdzie** lub **ORDERBY** klauzuli).
+- Instrukcja **SELECT** języka SQL (opcjonalnie z klauzulą **WHERE** lub **ORDERBY** ).
 
-- Zapytania przekazującego.
+- Kwerenda przekazująca.
 
 *nOptions*<br/>
-Co najmniej jedną z czynności wymienionych poniżej. Wartość domyślna to 0. Dopuszczalne są następujące wartości:
+Co najmniej jedna z opcji wymienionych poniżej. Wartość domyślna to 0. Dopuszczalne są następujące wartości:
 
-- `dbAppendOnly` Można jedynie dołączyć nowych rekordów (tylko w przypadku rekordów dynamicznego). Ta opcja oznacza dosłownie, że rekordy mogą być tylko dołączane. Klasy bazy danych MFC ODBC mają tylko do dołączania opcja umożliwiająca rekordów do pobrania i dołączane.
+- `dbAppendOnly` można dołączać tylko nowe rekordy (tylko zestaw rekordów typu dynamicznego). Ta opcja oznacza, że można dołączać tylko rekordy. Klasy baz danych MFC ODBC mają opcję tylko do dołączania, która umożliwia pobieranie i dołączanie rekordów.
 
-- `dbForwardOnly` Zestaw rekordów jest tylko do przodu migawki przewijania.
+- `dbForwardOnly` zestaw rekordów jest migawką przewijaną tylko do przodu.
 
-- `dbSeeChanges` Generuje wyjątek, jeśli inny użytkownik jest zmieniającymi się danymi, które edytujesz.
+- `dbSeeChanges` wygenerować wyjątek, jeśli inny użytkownik zmienia edytowane dane.
 
-- `dbDenyWrite` Inni użytkownicy nie mogą zmodyfikować lub dodać rekordy.
+- `dbDenyWrite` inni użytkownicy nie mogą modyfikować ani dodawać rekordów.
 
-- `dbDenyRead` Inni użytkownicy nie mogą wyświetlać rekordy (tylko typ tabeli rekordów).
+- `dbDenyRead` inni użytkownicy nie mogą wyświetlać rekordów (tylko zestaw rekordów typu "Tabela").
 
-- `dbReadOnly` Może wyświetlać tylko rekordy; inni użytkownicy można modyfikować.
+- `dbReadOnly` można wyświetlić tylko rekordy; inni użytkownicy mogą je modyfikować.
 
-- `dbInconsistent` Niespójne aktualizacje są dozwolone (tylko w przypadku rekordów dynamicznego).
+- niespójne aktualizacje `dbInconsistent` są dozwolone (tylko zestaw rekordów typu dynamicznego).
 
-- `dbConsistent` Tylko uaktualnienia zgodne są dozwolone (tylko w przypadku rekordów dynamicznego).
+- dozwolone są tylko `dbConsistent` spójne aktualizacje (tylko zestaw rekordów typu dynamicznego).
 
 > [!NOTE]
->  Stałe `dbConsistent` i `dbInconsistent` wzajemnie się wykluczają. Możesz użyć jednej lub drugiej, ale nie oba w podanym wystąpieniu `Open`.
+>  Stałe `dbConsistent` i `dbInconsistent` wykluczają się wzajemnie. Można użyć jednego lub drugiego, ale nie obu w danym wystąpieniu `Open`.
 
 *pTableDef*<br/>
-Wskaźnik do [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) obiektu. Ta wersja jest prawidłowy tylko w przypadku zestawów rekordów typu tabeli. Przy użyciu tej opcji `CDaoDatabase` wskaźnik użytego do stworzenia `CDaoRecordset` nie jest używany; zamiast bazy danych, w której znajduje się tabledef jest używany.
+Wskaźnik do obiektu [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) . Ta wersja jest prawidłowa tylko dla zestawów rekordów typu "Table". W przypadku korzystania z tej opcji, `CDaoDatabase` wskaźnik używany do konstruowania `CDaoRecordset` nie jest używany; Zamiast tego baza danych, w której znajduje się tabledef, jest używana.
 
 *pQueryDef*<br/>
-Wskaźnik do [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) obiektu. Ta wersja jest prawidłowy tylko w przypadku dynamicznego i zestawów rekordów typu migawka. Przy użyciu tej opcji `CDaoDatabase` wskaźnik użytego do stworzenia `CDaoRecordset` nie jest używany; zamiast bazy danych, w której znajduje się querydef jest używany.
+Wskaźnik do obiektu [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) . Ta wersja jest prawidłowa tylko dla zestawów rekordów typu "dynamiczny" i "snapshot-Type". W przypadku korzystania z tej opcji, `CDaoDatabase` wskaźnik używany do konstruowania `CDaoRecordset` nie jest używany; Zamiast tego baza danych, w której znajduje się program querydef, jest używana.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem `Open`, należy utworzyć obiekt zestawu rekordów. Istnieje kilka sposobów, aby to zrobić:
+Przed wywołaniem `Open`należy skonstruować obiekt zestawu rekordów. Można to zrobić na kilka sposobów:
 
-- Podczas tworzenia obiektu recordset przekazać wskaźnik do `CDaoDatabase` obiekt, który jest już otwarty.
+- Podczas konstruowania obiektu zestawu rekordów należy przekazać wskaźnik do obiektu `CDaoDatabase`, który jest już otwarty.
 
-- Podczas tworzenia obiektu recordset przekazać wskaźnik do `CDaoDatabase` obiektu, który nie jest otwarty. Zostanie otwarty zestaw rekordów `CDaoDatabase` obiektu, ale nie zostanie on zamknięty, po zamknięciu obiekty zestawów rekordów.
+- Podczas konstruowania obiektu zestawu rekordów należy przekazać wskaźnik do obiektu `CDaoDatabase`, który nie jest otwarty. Zestaw rekordów otwiera `CDaoDatabase` obiekt, ale nie zamknie go, gdy obiekt Recordset zostanie zamknięty.
 
-- Podczas tworzenia obiektu recordset przekazać wskaźnik o wartości NULL. Wywołuje obiekt zestawu rekordów `GetDefaultDBName` można pobrać nazwy programu Microsoft Access. Plik MDB, aby otworzyć. Następnie zostanie otwarty zestaw rekordów `CDaoDatabase` obiektu i przechowuje ją otworzyć, tak długo, jak zestaw rekordów jest otwarty. Gdy wywołujesz `Close` w zestawie rekordów `CDaoDatabase` obiektu również jest zamknięty.
+- Podczas konstruowania obiektu zestawu rekordów należy przekazać wskaźnik o wartości NULL. Obiekt recordset wywołuje `GetDefaultDBName`, aby uzyskać nazwę dostępu do firmy Microsoft. Plik MDB do otwarcia. Zestaw rekordów otwiera następnie obiekt `CDaoDatabase` i pozostaje otwarty, dopóki zestaw rekordów jest otwarty. Gdy wywołasz `Close` w zestawie rekordów, obiekt `CDaoDatabase` również jest zamknięty.
 
     > [!NOTE]
-    >  Po otwarciu zestawu rekordów `CDaoDatabase` obiektu źródła danych zostanie otwarty z wyłącznego dostępu.
+    >  Gdy zestaw rekordów otwiera obiekt `CDaoDatabase`, otwiera źródło danych z niewyłącznym dostępem.
 
-Dla wersji `Open` , który używa *lpszSQL* parametr, po otwarciu zestawu rekordów można pobrać rekordów w jednym z kilku sposobów. Pierwszym z nich jest zapewnienie funkcje DFX swojej `DoFieldExchange`. Drugą opcją jest użycie wiązanie dynamiczne, wywołując `GetFieldValue` funkcja elementu członkowskiego. Te opcje można zaimplementować osobno lub razem. Jeśli są połączone, trzeba będzie przekazać w instrukcji SQL samodzielnie wywołanie `Open`.
+W przypadku wersji `Open`, która używa parametru *lpszSQL* , po otwarciu zestawu rekordów można pobrać rekordy na jeden z kilku sposobów. Pierwsza opcja ma mieć funkcje DFX w `DoFieldExchange`. Drugą opcją jest użycie powiązania dynamicznego przez wywołanie funkcji składowej `GetFieldValue`. Te opcje można zaimplementować osobno lub w połączeniu z nimi. Jeśli są połączone, należy przekazać instrukcję SQL samodzielnie do wywołania `Open`.
 
-Kiedy używasz drugą wersję `Open` gdzie są przekazywane w `CDaoTableDef` obiektu uzyskane kolumny będą dostępne dla możesz powiązać za pośrednictwem `DoFieldExchange` i mechanizm DFX i/lub powiązania dynamicznie za pośrednictwem `GetFieldValue`.
-
-> [!NOTE]
->  Można wywołać tylko `Open` przy użyciu `CDaoTableDef` obiektu dla zestawów rekordów typu tabeli.
-
-Kiedy używasz trzecia wersja `Open` gdzie są przekazywane w `CDaoQueryDef` obiektu, że będzie można wykonać zapytania, a uzyskane kolumny będą dostępne dla możesz powiązać za pośrednictwem `DoFieldExchange` i mechanizm DFX i/lub powiązania dynamicznie za pośrednictwem `GetFieldValue`.
+W przypadku korzystania z drugiej wersji `Open`, w którym przekazujesz obiekt `CDaoTableDef`, wyniki tych kolumn będą dostępne do powiązania przez `DoFieldExchange` i mechanizm DFX oraz/lub powiązać dynamicznie za pośrednictwem `GetFieldValue`.
 
 > [!NOTE]
->  Można wywołać tylko `Open` przy użyciu `CDaoQueryDef` obiektu dynamicznego i zestawów rekordów typu migawka.
+>  `Open` można wywołać tylko przy użyciu obiektu `CDaoTableDef` dla zestawów rekordów typu "Table".
 
-W pierwszej wersji programu `Open` , który używa `lpszSQL` parametru rekordy, które są wybrane na podstawie kryteria, pokazano w poniższej tabeli.
+W przypadku korzystania z trzeciej wersji `Open`, w której przekazujesz obiekt `CDaoQueryDef`, zapytanie zostanie wykonane, a uzyskane kolumny będą dostępne do powiązania przez `DoFieldExchange` i mechanizm DFX oraz/lub powiązać dynamicznie za pośrednictwem `GetFieldValue`.
 
-|Wartość atrybutu `lpszSQL` parametru|Wybrane rekordy są określane przez|Przykład|
+> [!NOTE]
+>  `Open` można wywołać tylko przy użyciu obiektu `CDaoQueryDef` dla zestawów rekordów typu dynamiczny i typu Snapshot.
+
+W przypadku pierwszej wersji `Open`, która korzysta z parametru `lpszSQL`, rekordy są wybierane na podstawie kryteriów przedstawionych w poniższej tabeli.
+
+|Wartość parametru `lpszSQL`|Wybrane rekordy są określane przez|Przykład|
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|Ciąg zwracany przez `GetDefaultSQL`.||
-|Rozdzielana przecinkami lista jednego lub więcej tabledefs — i/lub nazwy querydef.|Wszystkie kolumny są reprezentowane w `DoFieldExchange`.|`"Customer"`|
-|**Wybierz** listy kolumn **FROM** listy tabel|Określone kolumny z określonej tabledef(s) i/lub querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
+|Rozdzielana przecinkami lista nazw tabledefs i/lub querydef.|Wszystkie kolumny reprezentowane w `DoFieldExchange`.|`"Customer"`|
+|**Wybierz** kolumnę-list **z** listy tabel|Określone kolumny z określonych tabledef i/lub querydef (s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
-Procedura zwykle służy do przekazywania wartości NULL, aby `Open`; w takim przypadku `Open` wywołania `GetDefaultSQL`, możliwym do zastąpienia składowa, która generuje ClassWizard, podczas tworzenia `CDaoRecordset`-klasy pochodnej. Ta wartość zapewnia tabledef(s) i/lub querydef nazwy, które określiłeś w ClassWizard. Zamiast tego możesz określić inne informacje w *lpszSQL* parametru.
+Normalną procedurą jest przekazanie wartości NULL do `Open`; w takim przypadku `Open` wywołuje `GetDefaultSQL`, ClassWizard funkcję członkowską, która generuje podczas tworzenia klasy pochodnej `CDaoRecordset`. Ta wartość daje nazwy tabledef i/lub querydef określone w ClassWizard. Zamiast tego można określić inne informacje w parametrze *lpszSQL* .
 
-Niezależnie od przekazania, `Open` tworzy ostatni ciąg SQL dla zapytania (ciąg może zawierać SQL **gdzie** i **ORDERBY** klauzule dołączany do *lpszSQL* ciągu zostanie przekazane), a następnie wykonuje zapytanie. Zbudowany ciągu można sprawdzić przez wywołanie metody `GetSQL` po wywołaniu `Open`.
+Niezależnie od tego, co zostało wykonane, `Open` konstruuje końcowy ciąg SQL dla zapytania (ciąg może zawierać klauzule **WHERE** i **ORDERBY** instrukcji SQL dołączony do przekazanego ciągu *lpszSQL* ), a następnie wykonuje zapytanie. Można przeanalizować skonstruowany ciąg, wywołując `GetSQL` po wywołaniu `Open`.
 
-Elementy członkowskie danych pola klasy zestawu rekordów, które są powiązane kolumny wybranych danych. Jeśli zwracane są wszystkie rekordy, pierwszy rekord staje się bieżącym rekordem.
+Elementy członkowskie danych pól klasy zestaw rekordów są powiązane z kolumnami wybranych danych. Jeśli wszystkie rekordy są zwracane, pierwszy rekord zostanie bieżącym rekordem.
 
-Jeśli chcesz ustawić opcje dla zestawu rekordów, takich jak filtrowanie lub sortowanie, ustaw `m_strSort` lub `m_strFilter` po konstruujesz obiekty zestawów rekordów, ale przed wywołaniem `Open`. Jeśli chcesz odświeżyć rekordy w zestawie rekordów po zestawu rekordów jest już otwarty, wywołaj `Requery`.
+Jeśli chcesz ustawić opcje dla zestawu rekordów, takie jak filtr lub sortowanie, ustaw `m_strSort` lub `m_strFilter` po utworzeniu obiektu zestawu rekordów, ale przed wywołaniem `Open`. Aby odświeżyć rekordy w zestawie rekordów po tym, jak zestaw rekordów jest już otwarty, wywołaj `Requery`.
 
-Jeśli wywołasz `Open` dynamicznego lub zestawu rekordów typu migawka, lub jeśli źródło danych odnosi się do instrukcji SQL lub tabledef, który reprezentuje dołączonej tabeli, nie możesz użyć `dbOpenTable` argumentu typu; Jeśli to zrobisz, MFC zgłasza wyjątek. Aby ustalić, czy obiekt tabledef reprezentuje dołączonej tabeli, należy utworzyć [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) obiektu, a następnie wywołać jej [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) funkcja elementu członkowskiego.
+Jeśli wywołasz `Open` w zestawie rekordów typu dynamiczny lub typu migawki lub jeśli źródło danych odwołuje się do instrukcji SQL lub tabledef, która reprezentuje załączoną tabelę, nie można użyć `dbOpenTable` dla argumentu typu; Jeśli to zrobisz, MFC zgłosi wyjątek. Aby określić, czy obiekt tabledef reprezentuje dołączoną tabelę, Utwórz obiekt [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) i Wywołaj jego funkcję członkowską [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) .
 
-Użyj `dbSeeChanges` flagę, jeśli chcesz pułapki zmiany wprowadzone przez innego użytkownika lub innego programu na komputerze podczas edytowania lub usuwania tego samego rekordu. Na przykład gdy dwóch użytkowników edytowana w jednym rekordzie pierwszego użytkownika, aby wywołać `Update` funkcja elementu członkowskiego zakończy się pomyślnie. Gdy `Update` jest wywoływana przez drugi użytkownik `CDaoException` zgłaszany. Podobnie jeśli drugi użytkownik próbuje wywołać `Delete` można usunąć rekord który już został zmieniony przez pierwszego użytkownika `CDaoException` występuje.
+Użyj flagi `dbSeeChanges`, jeśli chcesz zapułapać zmiany wprowadzone przez innego użytkownika lub inny program na komputerze podczas edytowania lub usuwania tego samego rekordu. Na przykład jeśli dwóch użytkowników rozpocznie edytowanie tego samego rekordu, pierwszy użytkownik, który wywoła `Update` funkcji członkowskiej, powiedzie się. Gdy `Update` jest wywoływana przez drugiego użytkownika, generowany jest `CDaoException`. Podobnie, jeśli drugi użytkownik próbuje wywołać `Delete`, aby usunąć rekord, i został już zmieniony przez pierwszego użytkownika, występuje `CDaoException`.
 
-Zazwyczaj gdy użytkownik uzyskuje na to `CDaoException` podczas aktualizowania, kod powinien odświeżyć zawartość pól i pobierać wartości zmodyfikowane. Jeśli wystąpi wyjątek w trakcie usuwania, kodu można wyświetlić nowy rekord danych użytkownika i komunikat informujący, że dane zostały niedawno zmienione. W tym momencie kodu mogą poprosić o potwierdzenie, że użytkownik nadal chce usunąć rekord.
+Zazwyczaj Jeśli użytkownik pobiera ten `CDaoException` podczas aktualizowania, kod powinien odświeżyć zawartość pól i pobrać nowo zmodyfikowane wartości. Jeśli wystąpi wyjątek w procesie usuwania, kod może wyświetlić nowego rekordu danych dla użytkownika i komunikat informujący o tym, że dane zostały ostatnio zmienione. W tym momencie kod może zażądać potwierdzenia, że użytkownik nadal chce usunąć rekord.
 
 > [!TIP]
->  Użyj opcji przewijania tylko do przodu (`dbForwardOnly`) aby zwiększyć wydajność, gdy aplikacja wykonuje pojedynczego przekazywania zestawu rekordów otwarty ze źródła danych ODBC.
+>  Użyj opcji przewijania tylko do przodu (`dbForwardOnly`), aby zwiększyć wydajność, gdy aplikacja wykonuje pojedynczy przebieg przez zestaw rekordów otwarty ze źródła danych ODBC.
 
-Aby uzyskać powiązane informacje zobacz temat "OpenRecordset metody" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda OpenRecordset" w pomocy DAO.
 
-##  <a name="requery"></a>  CDaoRecordset::Requery
+##  <a name="requery"></a>CDaoRecordset:: Requery
 
-Wywołaj tę funkcję elementu członkowskiego, aby odbudować (odświeżanie) zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby skompilować ponownie (Odśwież) zestaw rekordów.
 
 ```
 virtual void Requery();
@@ -2041,29 +2041,29 @@ virtual void Requery();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zwracane są wszystkie rekordy, pierwszy rekord staje się bieżącym rekordem.
+Jeśli wszystkie rekordy są zwracane, pierwszy rekord zostanie bieżącym rekordem.
 
-Aby zestaw rekordów odzwierciedlić dodawania i usuwania, które wykorzystują źródła danych, należy przebudować zestaw rekordów, wywołując `Requery`. Jeśli zestaw rekordów jest dynamiczny, automatycznie odzwierciedla aktualizacji, które użytkownicy dokonać jego istniejące rekordy (ale nie dodatków). Jeśli zestaw rekordów jest migawką, należy wywołać `Requery` uwzględnienie zmian przez innych użytkowników, a także dodanych i usuniętych.
+Aby zestaw rekordów odzwierciedlał operacje dodawania i usuwania, które są używane przez użytkownika lub innych użytkowników do źródła danych, należy ponownie skompilować zestaw rekordów, wywołując `Requery`. Jeśli zestaw rekordów jest dynamiczny, automatycznie odzwierciedla aktualizacje, które zostały wprowadzone przez użytkownika lub innych użytkowników do istniejących rekordów (ale nie do dodania). Jeśli zestaw rekordów jest migawką, należy wywołać `Requery`, aby odzwierciedlić zmiany wprowadzone przez innych użytkowników, a także Dodatki i usunięcia.
 
-Dynamiczny lub migawki, należy wywołać `Requery` ilekroć chcesz ponownie skompilować rekordów przy użyciu wartości parametrów. Ustaw nowe filtrowania lub sortowania, ustawiając [m_strFilter](#m_strfilter) i [m_strSort](#m_strsort) przed wywołaniem `Requery`. Ustaw nowe parametry, przypisujące nowe wartości do elementów członkowskich danych parametru przed wywołaniem `Requery`.
+W przypadku zestawu dynamicznego lub migawki należy wywołać `Requery` w dowolnym momencie, w którym chcesz skompilować zestaw rekordów przy użyciu wartości parametrów. Ustaw nowy filtr lub Sortuj według ustawienia [m_strFilter](#m_strfilter) i [m_strSort](#m_strsort) przed wywołaniem `Requery`. Przed wywołaniem `Requery`Ustaw nowe parametry, przypisując nowe wartości do elementów członkowskich danych.
 
-Jeśli nie można ponownie utworzyć zestaw rekordów, zestaw rekordów jest zamknięty. Przed wywołaniem `Requery`, można określić, czy zestaw rekordów można ponowieniu przez wywołanie metody [CanRestart](#canrestart) funkcja elementu członkowskiego. `CanRestart` nie gwarantuje, że `Requery` zakończy się powodzeniem.
+Jeśli próba odbudowy zestawu rekordów nie powiedzie się, zestaw rekordów zostanie zamknięty. Przed wywołaniem `Requery`można określić, czy można ponownie zbadać zestaw rekordów, wywołując funkcję członkowską [restart](#canrestart) . `CanRestart` nie gwarantuje, że `Requery` powiedzie się.
 
 > [!CAUTION]
->  Wywołaj `Requery` tylko wtedy, gdy wywołujesz `Open`.
+>  Wywołaj `Requery` tylko po wywołaniu `Open`.
 
 > [!NOTE]
->  Wywoływanie [Requery](#requery) zmienia DAO zakładek.
+>  Wywołanie zmian [kwerendy](#requery) dla zakładki DAO.
 
-Nie można wywołać `Requery` dynamicznego lub zestawu rekordów typu migawka, jeśli wywołanie `CanRestart` zwraca wartość 0, nie można użyć go w zestawie rekordów typ tabeli.
+Nie można wywołać `Requery` w zestawie rekordów typu dynamicznego lub typu migawek, jeśli wywołanie `CanRestart` zwraca wartość 0, ani nie można używać go w zestawie rekordów typu tabela.
 
-Jeśli oba `IsBOF` i `IsEOF` zwracają wartość różną od zera, po wywołaniu metody `Requery`, kwerenda nie zwróciła żadnych rekordów i rekordów będzie zawierać żadnych danych.
+Jeśli obie `IsBOF` i `IsEOF` zwracają wartość różną od zera po wywołaniu `Requery`, zapytanie nie zwróciło żadnych rekordów i zestaw rekordów nie będzie zawierał żadnych danych.
 
-Aby uzyskać powiązane informacje zobacz temat "Metoda Requery" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda PonówKwerendę" w pomocy DAO.
 
-##  <a name="seek"></a>  CDaoRecordset::Seek
+##  <a name="seek"></a>CDaoRecordset:: Seek
 
-Wywołaj tę funkcję elementu członkowskiego do zlokalizowania rekordu w obiekcie zestawu rekordów indeksowany typ tabeli, który spełni określone kryteria dla bieżącego indeksu i upewnij, że rejestrowanie bieżącego rekordu.
+Wywołaj tę funkcję elementu członkowskiego, aby zlokalizować rekord w indeksowanym obiekcie zestawu rekordów typu tabela, który spełnia określone kryteria dla bieżącego indeksu, i ustaw ten rekord w bieżącym rekordzie.
 
 ```
 BOOL Seek(
@@ -2081,53 +2081,53 @@ BOOL Seek(
 ### <a name="parameters"></a>Parametry
 
 *lpszComparison*<br/>
-Jedną z następujących wyrażeń ciągu: "<","\<=", "=", "> =", lub ">".
+Jedno z następujących wyrażeń ciągów: "<", "\<=", "=", "> =" lub ">".
 
 *pKey1*<br/>
-Wskaźnik do [COleVariant](../../mfc/reference/colevariant-class.md) którego wartość odnosi się do pierwszego pola w indeksie. Wymagana.
+Wskaźnik do elementu [COleVariant](../../mfc/reference/colevariant-class.md) , którego wartość odnosi się do pierwszego pola w indeksie. Wymagany.
 
 *pKey2*<br/>
-Wskaźnik do `COleVariant` którego wartość odpowiada drugiego pola w indeksie, jeśli istnieje. Wartość domyślna to NULL.
+Wskaźnik do `COleVariant`, którego wartość odnosi się do drugiego pola w indeksie (jeśli istnieje). Wartością domyślną jest NULL.
 
 *pKey3*<br/>
-Wskaźnik do `COleVariant` którego wartość odpowiada trzecie pole w indeksie, jeśli istnieje. Wartość domyślna to NULL.
+Wskaźnik do `COleVariant`, którego wartość odnosi się do trzeciego pola w indeksie (jeśli istnieje). Wartością domyślną jest NULL.
 
 *pKeyArray*<br/>
-Wskaźnik do tablicy wariantów. Rozmiar tablicy odpowiada liczbę pól w indeksie.
+Wskaźnik do tablicy wariantów. Rozmiar tablicy odpowiada liczbie pól w indeksie.
 
 *nKeys*<br/>
-Liczba całkowita odpowiadający rozmiar tablicy, czyli liczbę pól w indeksie.
+Liczba całkowita odpowiadająca rozmiarowi tablicy, czyli liczbie pól w indeksie.
 
 > [!NOTE]
->  W kluczach nie należy określać symboli wieloznacznych. Symbole wieloznaczne spowoduje, że `Seek` do zwrócenia żadnych zgodnych rekordów.
+>  W kluczach nie należy określać symboli wieloznacznych. Symbole wieloznaczne spowodują, że `Seek` nie zwróci pasujących rekordów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli zostaną znalezione pasujące rekordy, w przeciwnym razie 0.
+Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przy użyciu drugiej wersji (array) `Seek` indeksy cztery pola lub więcej.
+Użyj drugiej (tablicy) wersji `Seek` do obsługi indeksów czterech pól lub innych.
 
-`Seek` Włącza indeks o wysokiej wydajności, wyszukiwanie w zestawach rekordów typ tabeli. Należy ustawić bieżący indeks przez wywołanie metody `SetCurrentIndex` przed wywołaniem `Seek`. Jeśli indeks identyfikuje nieunikatowego pola klucza lub pola, `Seek` lokalizuje pierwszy rekord, który nie spełnia kryteriów. Jeśli indeks nie jest ustawiona, jest zgłaszany wyjątek.
+`Seek` umożliwia wyszukiwanie indeksów o wysokiej wydajności w zestawach rekordów typu "Table". Należy ustawić bieżący indeks, wywołując `SetCurrentIndex` przed wywołaniem `Seek`. Jeśli indeks identyfikuje pole lub pola klucza nieunikatowego, `Seek` lokalizuje pierwszy rekord, który spełnia kryteria. Jeśli indeks nie zostanie ustawiony, zostanie zgłoszony wyjątek.
 
-Należy pamiętać, że jeśli zestaw rekordów UNICODE są nietworzenie, `COleVariant` obiektów musi być zadeklarowany w sposób jawny ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **,** *vtSrc* **)**  formularza konstruktora z *vtSrc* równa `VT_BSTRT` (ANSI) lub za pomocą `COleVariant` funkcja [setstring —](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* równa `VT_BSTRT`.
+Należy pamiętać, że jeśli nie tworzysz zestawu rekordów UNICODE, obiekty `COleVariant` muszą być jawnie zadeklarowane jako ANSI. Można to zrobić za pomocą formy [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* ustawionym na `VT_BSTRT` (ANSI) lub przy użyciu funkcji `COleVariant` [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* ustawionym na `VT_BSTRT`.
 
-Gdy wywołujesz `Seek`, należy przekazać co najmniej jedna wartość klucza i operator porównania ("<","\<=", "=", "> =", lub ">"). `Seek` przeszukuje określone pola klucza i lokalizuje pierwszy rekord, który spełnia kryteria określone przez *lpszComparison* i *pKey1*. Gdy zostanie znaleziony, `Seek` zwraca wartość różną od zera i sprawia, że rekord bieżący. Jeśli `Seek` nie znajdzie dopasowania `Seek` zwraca zero, a bieżący rekord jest niezdefiniowane. Korzystając z obiektów DAO bezpośrednio, możesz jawnie sprawdzić właściwość NoMatch.
+Podczas wywoływania `Seek`można przekazać co najmniej jedną wartość klucza i operator porównania ("<", "\<=", "=", "> =" lub ">"). `Seek` przeszukuje określone pola klucza i lokalizuje pierwszy rekord, który spełnia kryteria określone przez *lpszComparison* i *pKey1*. Po znalezieniu `Seek` zwraca wartość różną od zera i ustawia ten rekord jako bieżący. Jeśli `Seek` nie można zlokalizować dopasowania, `Seek` zwróci zero, a bieżący rekord jest niezdefiniowany. W przypadku bezpośredniego używania DAO należy jawnie sprawdzić Właściwość nomatch.
 
-Jeśli `lpszComparison` jest "=", "> =", lub ">", `Seek` rozpoczyna się od początku indeksu. Jeśli *lpszComparison* to "<" lub "< =", `Seek` rozpoczyna się na końcu indeksu i wyszukuje Wstecz, o ile nie ma indeksu zduplikowane wpisy na końcu. W tym przypadku `Seek` rozpoczyna się od dowolnego wpis między wpisy zduplikowany indeks, pod koniec indeksu.
+Jeśli `lpszComparison` ma wartość "=", "> =" lub ">", `Seek` rozpoczyna się na początku indeksu. Jeśli *lpszComparison* ma wartość "<" lub "< =", `Seek` rozpocznie się na końcu indeksu i przeszukuje wstecz, chyba że na końcu znajdują się zduplikowane wpisy indeksu. W takim przypadku `Seek` zaczyna się od dowolnego wpisu między zduplikowanymi pozycjami indeksu na końcu indeksu.
 
-Istnieje nie musi być bieżącego rekordu, gdy używasz `Seek`.
+W przypadku korzystania z `Seek`nie trzeba być bieżącym rekordem.
 
-Aby zlokalizować rekord w dynamicznego lub zestawu rekordów typu migawka, który spełnia określony warunek, należy użyć operacji wyszukiwania. Aby uwzględnić wszystkie rekordy, nie tylko te, które spełniają określony warunek, użyj operacji przenoszenia do przechodzenia między rekordami.
+Aby zlokalizować rekord w zestawie typu dynamicznego lub typu migawek, który spełnia określony warunek, użyj operacji wyszukiwania. Aby uwzględnić wszystkie rekordy, a nie tylko te, które spełniają określony warunek, użyj operacji przenoszenia do przenoszenia z rekordu do rekordu.
 
-Nie można wywołać `Seek` w dołączonej tabeli dowolnego typu, ponieważ tabele dołączonych, muszą być otwarte jako dynamicznego lub zestawów rekordów typu migawka. Jednak jeśli wywołasz `CDaoDatabase::Open` otworzyć bezpośrednio do zainstalowania bazy danych ISAM, można wywołać `Seek` w tabelach w tej bazie danych, mimo że wydajność może być wolne.
+Nie można wywołać `Seek` na dołączonej tabeli dowolnego typu, ponieważ dołączone tabele muszą być otwarte jako zestawy typu dynamicznego lub typu migawek. Jednak w przypadku wywołania `CDaoDatabase::Open`, aby bezpośrednio otworzyć instalowalną bazę danych ISAM, można wywołać `Seek` w tabelach w tej bazie danych, chociaż wydajność może być niska.
 
-Aby uzyskać powiązane informacje zobacz temat "Szukaj metody" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Metoda wyszukiwania" w pomocy DAO.
 
-##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition
+##  <a name="setabsoluteposition"></a>CDaoRecordset:: SetAbsolutePosition
 
-Ustawia liczbę rekordów względnych obiektem rekordem bieżącego rekordu.
+Ustawia względny numer rekordu dla bieżącego rekordu obiektu zestawu rekordów.
 
 ```
 void SetAbsolutePosition(long lPosition);
@@ -2136,27 +2136,27 @@ void SetAbsolutePosition(long lPosition);
 ### <a name="parameters"></a>Parametry
 
 *lPosition*<br/>
-Odnosi się do porządkowym bieżącego rekordu w zestawie rekordów.
+Odnosi się do pozycji porządkowej bieżącego rekordu w zestawie rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywoływanie `SetAbsolutePosition` umożliwia kursora bieżącego rekordu z określonym rekordem, w oparciu o jego porządkowym w dynamicznego lub zestawu rekordów typu migawka. Należy także określić numer bieżącego rekordu, wywołując [GetAbsolutePosition](#getabsoluteposition).
+Wywołanie `SetAbsolutePosition` umożliwia rozmieszczenie bieżącego wskaźnika rekordu do określonego rekordu w oparciu o jego pozycję porządkową w zestawie rekordów typu dynamicznego lub typu migawki. Możesz również określić bieżący numer rekordu, wywołując [GetAbsolutePosition](#getabsoluteposition).
 
 > [!NOTE]
->  Ta funkcja członkowska jest prawidłowy tylko w przypadku dynamicznego i zestawów rekordów typu migawka.
+>  Ta funkcja członkowska jest prawidłowa tylko dla zestawów rekordów typu dynamiczny i typu migawka.
 
-Wartość właściwości AbsolutePosition obiektu bazowego DAO jest liczony od zera; Ustawienie wartości 0 odwołuje się do pierwszego rekordu w zestawie rekordów. Ustawienie wartości jest większa niż liczba powoduje, że rekordy wypełnione MFC, aby zgłosić wyjątek. Można określić liczbę rekordów wypełnione w zestawie rekordów, wywołując `GetRecordCount` funkcja elementu członkowskiego.
+Wartość właściwości AbsolutePosition bazowego obiektu DAO jest zależna od zera. ustawienie wartości 0 oznacza pierwszy rekord w zestawie rekordów. Ustawienie wartości większej niż liczba wypełnionych rekordów powoduje zgłoszenie wyjątku przez MFC. Możesz określić liczbę wypełnionych rekordów w zestawie rekordów, wywołując funkcję elementu członkowskiego `GetRecordCount`.
 
-Jeśli bieżący rekord zostanie usunięty, wartość właściwości AbsolutePosition nie jest zdefiniowana, a MFC zgłasza wyjątek, jeśli odwołuje się do. Nowe rekordy są dodawane do końca sekwencji.
+Jeśli bieżący rekord zostanie usunięty, wartość właściwości AbsolutePosition nie jest zdefiniowana, a MFC zgłasza wyjątek, jeśli istnieje odwołanie. Nowe rekordy są dodawane na końcu sekwencji.
 
 > [!NOTE]
->  Ta właściwość nie jest przeznaczona do służyć jako numer rekordu zastępczy. Zakładki są nadal zalecany sposób przechowywania i powrocie do podanego położenia i jedynym sposobem na pozycji bieżącego rekordu dla wszystkich typów obiektów zestawu rekordów, które obsługują zakładki. W szczególności pozycji danego rekordu zmienia usunięcie rekordów przed nim. Istnieje również ma gwarancji, że rekord będzie miał tym samym położeniu bezwzględnym, jeśli zestaw rekordów jest utworzony ponownie, ponieważ kolejność poszczególnych rekordów w zestawie rekordów nie jest gwarantowane, chyba że zostanie utworzona przy użyciu instrukcji SQL przy użyciu  **ORDERBY** klauzuli.
+>  Ta właściwość nie jest przeznaczona do użycia jako numer rekordu zastępczego. Zakładki są nadal zalecanym sposobem zachowywania i powrotu do danego położenia i są jedynym sposobem pozycjonowania bieżącego rekordu dla wszystkich typów obiektów zestawu rekordów, które obsługują zakładki. W szczególności pozycja danego rekordu zmienia się, gdy rekordy, które poprzedzają, są usuwane. Nie ma również gwarancji, że dany rekord będzie miał tę samą bezwzględną pozycję, jeśli zestaw rekordów zostanie ponownie utworzony, ponieważ kolejność poszczególnych rekordów w zestawie rekordów nie jest gwarantowana, chyba że zostanie utworzona za pomocą instrukcji SQL przy użyciu klauzuli **ORDERBY** .
 
-Aby uzyskać powiązane informacje zobacz temat "AbsolutePosition Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość AbsolutePosition" w pomocy DAO.
 
-##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark
+##  <a name="setbookmark"></a>CDaoRecordset:: SetBookmark
 
-Wywołaj tę funkcję elementu członkowskiego, aby umieścić zestaw rekordów na rekord zawierający zakładką.
+Wywołaj tę funkcję elementu członkowskiego, aby umieścić zestaw rekordów w rekordzie zawierającym określoną zakładkę.
 
 ```
 void SetBookmark(COleVariant varBookmark);
@@ -2165,22 +2165,22 @@ void SetBookmark(COleVariant varBookmark);
 ### <a name="parameters"></a>Parametry
 
 *varBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md) obiekt zawierający wartość zakładki dla określonego rekordu.
+Obiekt [COleVariant](../../mfc/reference/colevariant-class.md) zawierający wartość zakładki dla określonego rekordu.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu zestawu rekordów lub otwarte, każdego z jego rekordów już unikatowe zakładki. Możesz pobrać zakładki w bieżącym rekordzie, wywołując `GetBookmark` i zapisując wartość `COleVariant` obiektu. Można było później wrócić do tego rekordu, wywołując `SetBookmark` przy użyciu wartości zapisanej zakładki.
+Gdy obiekt zestawu rekordów zostanie utworzony lub otwarty, każdy z jego rekordów ma już unikatową zakładkę. Możesz pobrać zakładkę dla bieżącego rekordu, wywołując `GetBookmark` i zapisując wartość w obiekcie `COleVariant`. Później możesz powrócić do tego rekordu, wywołując `SetBookmark` przy użyciu wartości zapisanej zakładki.
 
 > [!NOTE]
->  Wywoływanie [Requery](#requery) zmienia DAO zakładek.
+>  Wywołanie zmian [kwerendy](#requery) dla zakładki DAO.
 
-Należy pamiętać, że jeśli zestaw rekordów UNICODE są nietworzenie, `COleVariant` obiektu musi być zadeklarowany w sposób jawny ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **,** *vtSrc* **)**  formularza konstruktora z *vtSrc* równa `VT_BSTRT` (ANSI) lub za pomocą `COleVariant` funkcja [setstring —](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* równa `VT_BSTRT`.
+Należy pamiętać, że jeśli nie tworzysz zestawu rekordów UNICODE, obiekt `COleVariant` musi być jawnie zadeklarowany jako ANSI. Można to zrobić za pomocą formy [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* ustawionym na `VT_BSTRT` (ANSI) lub przy użyciu funkcji `COleVariant` [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* ustawionym na `VT_BSTRT`.
 
-Aby uzyskać powiązane informacje zobacz tematy "Właściwość zakładki" i właściwość Bookmarkable"w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "właściwość zakładki" i właściwość z zakładkami "w pomocy DAO.
 
-##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize
+##  <a name="setcachesize"></a>CDaoRecordset:: SetCacheSize
 
-Wywołanie tej funkcji elementu członkowskiego, aby ustawić liczbę rekordów w pamięci podręcznej.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić liczbę rekordów, które mają być buforowane.
 
 ```
 void SetCacheSize(long lSize);
@@ -2189,19 +2189,19 @@ void SetCacheSize(long lSize);
 ### <a name="parameters"></a>Parametry
 
 *lSize*<br/>
-Określa liczbę rekordów. Typowa wartość wynosi 100. Ustawienie wartości 0 powoduje wyłączenie buforowania. Ustawienie musi być między rekordami 5 i 1200. Pamięć podręczna może używać znaczną ilość pamięci.
+Określa liczbę rekordów. Typową wartością jest 100. Ustawienie wartości 0 powoduje wyłączenie buforowania. Ustawienie musi zawierać się w przedziale od 5 do 1200 rekordów. Pamięć podręczna może wykorzystywać znaczną ilość pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Pamięć podręczna to miejsce w pamięci lokalnej, która przechowuje dane ostatnio pobrana z serwera w przypadku, gdy dane będzie wymagane ponownie, gdy aplikacja jest uruchomiona. Buforowanie danych zwiększa wydajność aplikacji, która pobiera dane z serwera zdalnego za pośrednictwem obiektów rekordów dynamicznego. Jeśli wymagane są dane, aparat bazy danych Microsoft Jet pamięci podręcznej dla żądanych danych najpierw sprawdza zamiast pobierania jej z serwera, który jest bardziej czasochłonne. Dane, które nie pochodzą ze źródła danych ODBC nie jest zapisana w pamięci podręcznej.
+Pamięć podręczna to miejsce w pamięci lokalnej, w którym znajdują się dane ostatnio pobierane z serwera w przypadku, gdy aplikacja będzie ponownie żądała danych. Buforowanie danych zwiększa wydajność aplikacji, która pobiera dane z serwera zdalnego za pośrednictwem obiektów zestawu rekordów typu dynamicznego. Gdy dane są żądane, aparat bazy danych Microsoft Jet najpierw sprawdza pamięć podręczną pod kątem żądanych danych zamiast pobierać je z serwera, co zajmuje więcej czasu. Dane, które nie pochodzą ze źródła danych ODBC, nie są zapisywane w pamięci podręcznej.
 
-Wszystkie źródła danych ODBC, takich jak dołączonej tabeli mogą mieć lokalnej pamięci podręcznej. Aby utworzyć pamięć podręczną, otwórz obiekt zestawu rekordów ze źródła danych zdalnych wywołań `SetCacheSize` i `SetCacheStart` elementów członkowskich, a następnie wywołania `FillCache` funkcji członkowskiej lub krok rekordy przy użyciu jednej z operacji przenoszenia. *LSize* parametru `SetCacheSize` funkcji składowej może bazować na liczbę rekordów, aplikacja może pracować w tym samym czasie. Na przykład, jeśli używasz zestawu rekordów jako źródła danych mają być wyświetlane na ekranie, można przekazać `SetCacheSize` *lSize* parametru jako 20 do wyświetlenia w tym samym czasie 20 rekordów.
+Każde źródło danych ODBC, takie jak dołączona tabela, może mieć lokalną pamięć podręczną. Aby utworzyć pamięć podręczną, Otwórz obiekt zestawu rekordów ze zdalnego źródła danych, wywołaj `SetCacheSize` i `SetCacheStart` funkcje członkowskie, a następnie Wywołaj `FillCache` funkcję członkowską lub przechodzenie przez rekordy przy użyciu jednej z operacji przenoszenia. Parametr *lSize* funkcji składowej `SetCacheSize` może opierać się na liczbie rekordów, z którymi aplikacja może jednocześnie współdziałać. Na przykład jeśli używasz zestawu rekordów jako źródła danych, które mają być wyświetlane na ekranie, możesz przekazać `SetCacheSize` parametr *lSize* jako 20, aby wyświetlić 20 rekordów jednocześnie.
 
-Aby uzyskać powiązane informacje zobacz temat "CacheSize CacheStart właściwości", w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "CacheSize, CacheStart Properties" w pomocy DAO.
 
-##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart
+##  <a name="setcachestart"></a>CDaoRecordset:: SetCacheStart
 
-Wywołaj tę funkcję elementu członkowskiego, aby określić zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.
+Wywołaj tę funkcję elementu członkowskiego, aby określić zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.
 
 ```
 void SetCacheStart(COleVariant varBookmark);
@@ -2210,25 +2210,25 @@ void SetCacheStart(COleVariant varBookmark);
 ### <a name="parameters"></a>Parametry
 
 *varBookmark*<br/>
-A [COleVariant](../../mfc/reference/colevariant-class.md) określający zakładki pierwszego rekordu w zestawie rekordów przechowywanie w pamięci podręcznej.
+Element [COleVariant](../../mfc/reference/colevariant-class.md) , który określa zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz użyć wartości zakładki dla dowolnego rekordu dla *varBookmark* parametru `SetCacheStart` funkcja elementu członkowskiego. Rekord, aby uruchomić pamięć podręczną z bieżącym rekordem, ustanawiania zakładki dla tego rekordu za pomocą [setbookmark —](#setbookmark)i przekaż wartość zakładki jako parametr `SetCacheStart` funkcja elementu członkowskiego.
+Można użyć wartości zakładki dowolnego rekordu dla parametru *varBookmark* funkcji członkowskiej `SetCacheStart`. Utwórz rekord, dla którego chcesz uruchomić pamięć podręczną z bieżącym rekordem, Ustanów zakładkę dla tego rekordu przy użyciu elementu [SetBookmark](#setbookmark)i przekaż wartość zakładki jako parametr dla `SetCacheStart` funkcji członkowskiej.
 
-Aparat bazy danych Microsoft Jet żądań rekordy w zakresie pamięci podręcznej z pamięci podręcznej i żąda ona rekordy poza obszarem pamięci podręcznej z serwera.
+Aparat bazy danych Microsoft Jet żąda rekordów w zakresie pamięci podręcznej z pamięci podręcznej i żąda rekordów poza zakresem pamięci podręcznej z serwera.
 
-Rekordów pobieranych z pamięci podręcznej nie odzwierciedlają zmiany wprowadzone współbieżnie źródła danych przez innych użytkowników.
+Rekordy pobrane z pamięci podręcznej nie odzwierciedlają zmian wprowadzonych jednocześnie do danych źródłowych przez innych użytkowników.
 
-Aby wymusić aktualizację wszystkich danych w pamięci podręcznej, należy przekazać *lSize* parametru `SetCacheSize` jako 0, należy wywołać `SetCacheSize` ponownie z rozmiarem pamięci podręcznej możesz pierwotnie żądaną, a następnie wywołaj `FillCache` funkcja elementu członkowskiego.
+Aby wymusić aktualizację wszystkich danych w pamięci podręcznej, należy przekazać parametr *lSize* o `SetCacheSize` wartości 0, wywołać `SetCacheSize` ponownie z rozmiarem pierwotnie zażądanej pamięci podręcznej, a następnie wywołać funkcję elementu członkowskiego `FillCache`.
 
-Należy pamiętać, że jeśli zestaw rekordów UNICODE są nietworzenie, `COleVariant` obiektu musi być zadeklarowany w sposób jawny ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **,** *vtSrc* **)**  formularza konstruktora z *vtSrc* równa `VT_BSTRT` (ANSI) lub za pomocą `COleVariant` funkcja [setstring —](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* równa `VT_BSTRT`.
+Należy pamiętać, że jeśli nie tworzysz zestawu rekordów UNICODE, obiekt `COleVariant` musi być jawnie zadeklarowany jako ANSI. Można to zrobić za pomocą formy [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* ustawionym na `VT_BSTRT` (ANSI) lub przy użyciu funkcji `COleVariant` [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* ustawionym na `VT_BSTRT`.
 
-Aby uzyskać powiązane informacje zobacz temat CacheSize, CacheStart właściwości"w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat CacheSize CacheStart Properties (właściwości) w pomocy DAO.
 
-##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex
+##  <a name="setcurrentindex"></a>CDaoRecordset:: SetCurrentIndex
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić indeks w zestawie rekordów typ tabeli.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić indeks w zestawie rekordów typu "Table".
 
 ```
 void SetCurrentIndex(LPCTSTR lpszIndex);
@@ -2237,21 +2237,21 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ### <a name="parameters"></a>Parametry
 
 *lpszIndex*<br/>
-Wskaźnik, zawierające nazwę indeksu, należy ustawić.
+Wskaźnik zawierający nazwę indeksu, który ma zostać ustawiony.
 
 ### <a name="remarks"></a>Uwagi
 
-Rekordy w tabeli bazowej nie są przechowywane w określonej kolejności. Indeks ustawień zmienia kolejność rekordów zwróconych z bazy danych, ale nie ma wpływu na kolejność, w której są przechowywane rekordy. Określony indeks musi być już zdefiniowana. Jeśli spróbujesz użyć obiektu indeksu, który nie istnieje lub nie ustawiono indeks, gdy wywołujesz [Seek](#seek), MFC zgłasza wyjątek.
+Rekordy w tabelach podstawowych nie są przechowywane w żadnej określonej kolejności. Ustawienie indeksu zmienia kolejność rekordów zwracanych z bazy danych, ale nie ma wpływu na kolejność, w jakiej są przechowywane rekordy. Określony indeks musi już być zdefiniowany. Jeśli spróbujesz użyć obiektu indeksu, który nie istnieje, lub jeśli indeks nie zostanie ustawiony po wywołaniu metody [Seek](#seek), MFC zgłasza wyjątek.
 
-Można utworzyć nowego indeksu dla tabeli przez wywołanie metody [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) i dołączanie nowego indeksu do kolekcji indeksów tabledef podstawowej przez wywołanie metody [CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append), i następnie ponownie otworzyć zestawu rekordów.
+Można utworzyć nowy indeks dla tabeli, wywołując metodę [CDaoTableDef:: Create index](../../mfc/reference/cdaotabledef-class.md#createindex) i dołączając nowy indeks do kolekcji Indexs bazowego tabledef przez wywołanie [CDaoTableDef:: Append](../../mfc/reference/cdaotabledef-class.md#append), a następnie ponowne otwarcie zestawu rekordów.
 
-Rekordy, które zwróciło typ tabeli zestawu rekordów może zostać określona tylko przez indeksy zdefiniowane dla podstawowej tabledef. Aby sortować rekordy w niektórych innych kolejności, można otworzyć dynamicznego lub zestawu rekordów typu migawka przy użyciu języka SQL **ORDERBY** klauzuli przechowywane w [CDaoRecordset::m_strSort](#m_strsort).
+Rekordy zwracane z zestawu rekordów typu "Tabela" można porządkować tylko według indeksów zdefiniowanych dla bazowego tabledef. Aby sortować rekordy w innej kolejności, można otworzyć zestaw rekordów typu dynamiczny lub typ migawki przy użyciu klauzuli **ORDERBY** SQL przechowywanej w [CDaoRecordset:: m_strSort](#m_strsort).
 
-Aby uzyskać powiązane informacje zobacz temat "Indeksu obiektu", jak i definicja "bieżący indeks" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "indeks obiektu" i definicja "bieżący indeks" w pomocy DAO.
 
-##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty
+##  <a name="setfielddirty"></a>CDaoRecordset:: SetFieldDirty
 
-Wywołaj tę funkcję elementu członkowskiego, aby flaga element członkowski danych pól rekordów jako zmienione lub jako niezmieniony.
+Wywołaj tę funkcję elementu członkowskiego, aby oflagować element członkowski danych pola zestawu rekordów jako zmieniony lub niezmieniony.
 
 ```
 void SetFieldDirty(
@@ -2261,40 +2261,40 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-Zawiera adres element członkowski danych pole w zestawie rekordów lub wartość NULL. Jeśli ma wartość NULL, są oznaczane wszystkie elementy członkowskie danych pola w zestawie rekordów. (C++ o wartości NULL nie jest taka sama jak wartość Null w terminologii bazy danych, co oznacza, że "po żadnej wartości.")
+*wa*<br/>
+Zawiera adres elementu członkowskiego danych pola w zestawie rekordów lub wartości NULL. Jeśli wartość jest równa NULL, wszystkie elementy członkowskie danych pól w zestawie rekordów są oflagowane. (C++ Wartość null nie jest taka sama jak wartość null w terminologii bazy danych, co oznacza, że nie ma wartości ")".
 
 *bDirty*<br/>
-Wartość TRUE, jeśli element członkowski danych pola zostanie oznaczony jako "zakłóconych" (zmieniono). W przeciwnym razie wartość FALSE, jeśli element członkowski danych pola zostanie oznaczony jako "Wyczyść" (bez zmian).
+Ma wartość TRUE, jeśli element członkowski danych Field ma być oflagowany jako "zanieczyszczony" (zmieniony). W przeciwnym razie zwraca wartość FALSE, jeśli element członkowski danych pola ma być oflagowany jako "czysty" (niezmieniony).
 
 ### <a name="remarks"></a>Uwagi
 
-Oznaczanie pól jako niezmieniony gwarantuje, że pole nie jest aktualizowana.
+Oznaczanie pól jako niezmienionych gwarantuje, że pole nie zostanie zaktualizowane.
 
-Znaczniki framework zmienione elementy członkowskie danych pola, aby upewnić się, że będą one zapisywane do rekordu w źródle danych przez mechanizm wymiany (DXF) pola rekordów DAO. Zazwyczaj zmianę wartości pola ustawia pole zanieczyszczone automatycznie, dzięki czemu będą rzadko należy wywołać `SetFieldDirty` samodzielnie, ale czasami chcieć upewnij się, że kolumny będą jawnie zaktualizowane lub wstawione niezależnie od tego, jaka wartość w polu danych element członkowski. Mechanizm DFX stosuje również użycie PSEUDONULL. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
+Struktura oznacza zmienione elementy członkowskie danych pola, aby upewnić się, że zostaną one zamienione na rekord źródła danych przez mechanizm wymiany pól rekordów DAO (DFX). Zmiana wartości pola na ogół ustawia pole jako zanieczyszczone automatycznie, więc rzadko trzeba będzie wywołać `SetFieldDirty` siebie, ale czasami warto upewnić się, że kolumny będą jawnie aktualizowane lub wstawiane niezależnie od tego, jaka wartość znajduje się w polu elementu członkowskiego danych. Mechanizm DFX korzysta również z PSEUDONULL. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
 
-Jeśli nie jest używany mechanizm podwójnego buforowania, następnie zmieniając wartość pola automatycznie nie ustawiono pola oznaczonych jako zakłócone. W tym przypadku będzie trzeba jawnie ustawić pole oznaczonych jako zakłócone. Flaga zawarte w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontrolki, to automatyczne sprawdzanie.
+Jeśli mechanizm podwójnego buforowania nie jest używany, zmiana wartości pola nie powoduje automatycznego ustawienia pola jako zanieczyszczonego. W takim przypadku konieczne będzie jawne ustawienie pola jako zanieczyszczone. Flaga znajdująca się w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontroluje to automatyczne sprawdzanie pól.
 
 > [!NOTE]
->  Wywołaj tę funkcję elementu członkowskiego, tylko wtedy, gdy wywołujesz [Edytuj](#edit) lub [działają funkcje AddNew](#addnew).
+>  Wywołaj tę funkcję elementu członkowskiego tylko po wywołaniu metody [Edit](#edit) lub [AddNew](#addnew).
 
-Użycie wartości NULL dla pierwszego argumentu funkcji dotyczą funkcji wszystkich `outputColumn` pól nie **param** pola w `CDaoFieldExchange`. Na przykład wywołanie
+Użycie wartości NULL dla pierwszego argumentu funkcji spowoduje zastosowanie funkcji do wszystkich pól `outputColumn`, a nie pól **param** w `CDaoFieldExchange`. Na przykład wywołanie
 
 [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]
 
-ustawi tylko `outputColumn` pola na wartość NULL; **param** pola będzie to miało wpływu.
+ustawi tylko `outputColumn` pól na NULL; nie wpłynie to na pola **parametrów** .
 
-Do pracy nad **param**, należy podać rzeczywistego adresu poszczególnych **param** chcesz pracować, takich jak:
+Aby można było korzystać z **parametru**, należy podać rzeczywisty adres poszczególnych **parametrów** , na przykład:
 
 [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]
 
-Oznacza to, nie można ustawić wszystkie **param** pola na wartość NULL, jak w przypadku `outputColumn` pola.
+Oznacza to, że nie można ustawić wszystkich pól **param** na null, jak można to zrobić za pomocą pól `outputColumn`.
 
-`SetFieldDirty` jest implementowane za pomocą `DoFieldExchange`.
+`SetFieldDirty` jest implementowana przez `DoFieldExchange`.
 
-##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull
+##  <a name="setfieldnull"></a>CDaoRecordset:: SetFieldNull
 
-Wywołaj tę funkcję elementu członkowskiego, aby flaga element członkowski danych pól rekordów jako wartości Null (konkretnie o żadna wartość) lub inną niż Null.
+Wywołaj tę funkcję elementu członkowskiego, aby oflagować element członkowski danych pola zestawu rekordów jako null (w przypadku braku wartości) lub jako niebędący wartością null.
 
 ```
 void SetFieldNull(
@@ -2304,36 +2304,36 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-Zawiera adres element członkowski danych pole w zestawie rekordów lub wartość NULL. Jeśli ma wartość NULL, są oznaczane wszystkie elementy członkowskie danych pola w zestawie rekordów. (C++ o wartości NULL nie jest taka sama jak wartość Null w terminologii bazy danych, co oznacza, że "po żadnej wartości.")
+*wa*<br/>
+Zawiera adres elementu członkowskiego danych pola w zestawie rekordów lub wartości NULL. Jeśli wartość jest równa NULL, wszystkie elementy członkowskie danych pól w zestawie rekordów są oflagowane. (C++ Wartość null nie jest taka sama jak wartość null w terminologii bazy danych, co oznacza, że nie ma wartości ")".
 
 *bNull*<br/>
-Różna od zera, jeśli element członkowski danych pola oflagowane jako mające żadnej wartości (Null). W przeciwnym razie 0, jeśli element członkowski danych pola jest być oznaczony jako inna niż Null.
+Różne od zera, jeśli element członkowski danych Field ma być oflagowany jako nieposiadający wartości (null). W przeciwnym razie wartość 0, jeśli element członkowski danych pola ma być oflagowany jako inny niż null.
 
 ### <a name="remarks"></a>Uwagi
 
-`SetFieldNull` jest używana w przypadku pól z powiązanych w `DoFieldExchange` mechanizm.
+`SetFieldNull` jest używany w przypadku pól powiązanych z mechanizmem `DoFieldExchange`.
 
-Po dodaniu nowego rekordu do zestawu rekordów, wszystkie elementy członkowskie danych pola są początkowo ustawiona na wartość Null i oznaczone jako "zakłóconych" (zmieniono). Po pobraniu rekord ze źródła danych jego kolumn już mają wartości lub mają wartość Null. Jeśli nie jest odpowiednie w polu wartość Null, [CDaoException](../../mfc/reference/cdaoexception-class.md) zgłaszany.
+Po dodaniu nowego rekordu do zestawu rekordów wszystkie elementy członkowskie danych pola są początkowo ustawiane na wartość null i oflagowane jako "zanieczyszczone" (zmienione). Gdy pobierasz rekord ze źródła danych, jego kolumny mają już wartości lub mają wartość null. Jeśli nie jest to konieczne, aby pole było puste, zostanie zgłoszone [CDaoException](../../mfc/reference/cdaoexception-class.md) .
 
-Jeśli używasz mechanizmu podwójnego buforowania, na przykład, jeśli chcesz wyznaczyć pole bieżącego rekordu nie ma wartości, wywołaj specjalnie `SetFieldNull` z *bNull* ustawieniu wartości PRAWDA Oznacz ją jako wartość Null. Jeśli chcesz nadać mu wartość pola został wcześniej oznaczony o wartości Null, wystarczy ustawić dla jej nową wartość. Nie masz do usuwania flagi o wartości Null za pomocą `SetFieldNull`. Aby ustalić, czy pole może mieć wartości Null, należy wywołać [IsFieldNullable](#isfieldnullable).
+Jeśli używasz mechanizmu podwójnego buforowania, na przykład jeśli chcesz wyznaczyć pole bieżącego rekordu jako niemające wartości, wywołaj `SetFieldNull` z *bNullą* ustawioną na true, aby oflagować ją jako wartość null. Jeśli pole zostało wcześniej oznaczone jako puste i teraz chcesz nadać mu wartość, po prostu ustaw jej nową wartość. Nie trzeba usuwać flagi o wartości null z `SetFieldNull`. Aby określić, czy pole może mieć wartość null, wywołaj [IsFieldNullable](#isfieldnullable).
 
-Jeśli nie jest używany mechanizm podwójnego buforowania, następnie zmieniając wartość pola automatycznie nie ustawiono pola jako zanieczyszczony i innych niż Null. W szczególności należy ustawić pola zanieczyszczone i innych niż Null. Flaga zawarte w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontrolki, to automatyczne sprawdzanie.
+Jeśli nie używasz mechanizmu podwójnego buforowania, zmiana wartości pola nie powoduje automatycznego ustawienia pola jako zanieczyszczonego i wartości innej niż null. Należy jawnie ustawić pola zanieczyszczone i inne niż null. Flaga znajdująca się w [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) kontroluje to automatyczne sprawdzanie pól.
 
-Mechanizm DFX zatrudnia użytkowania PSEUDONULL. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
+Mechanizm DFX korzysta z PSEUDONULL. Aby uzyskać więcej informacji, zobacz [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).
 
 > [!NOTE]
->  Wywołaj tę funkcję elementu członkowskiego, tylko wtedy, gdy wywołujesz [Edytuj](#edit) lub [działają funkcje AddNew](#addnew).
+>  Wywołaj tę funkcję elementu członkowskiego tylko po wywołaniu metody [Edit](#edit) lub [AddNew](#addnew).
 
-Użycie wartości NULL dla pierwszego argumentu funkcji zostaną zastosowane tylko do funkcji `outputColumn` pól nie **param** pola w `CDaoFieldExchange`. Na przykład wywołanie
+Użycie wartości NULL dla pierwszego argumentu funkcji spowoduje zastosowanie funkcji tylko do `outputColumn` pól, a nie pól **param** w `CDaoFieldExchange`. Na przykład wywołanie
 
 [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]
 
-ustawi tylko `outputColumn` pola na wartość NULL; **param** pola będzie to miało wpływu.
+ustawi tylko `outputColumn` pól na NULL; nie wpłynie to na pola **parametrów** .
 
-##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue
+##  <a name="setfieldvalue"></a>CDaoRecordset:: SetFieldValue
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartości pola, porządkowym lub zmieniając wartość ciągu.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartość pola, w pozycji porządkowej lub zmieniając wartość ciągu.
 
 ```
 virtual void SetFieldValue(
@@ -2359,25 +2359,25 @@ void SetFieldValue(
 Wskaźnik do ciągu zawierającego nazwę pola.
 
 *varValue*<br/>
-Odwołanie do [COleVariant](../../mfc/reference/colevariant-class.md) obiekt, który zawiera wartość pola zawartość.
+Odwołanie do obiektu [COleVariant](../../mfc/reference/colevariant-class.md) zawierającego wartość zawartości pola.
 
 *nIndex*<br/>
-Liczba całkowita, która reprezentuje porządkowym pole w zestawie rekordów kolekcji Fields (liczony od zera).
+Liczba całkowita reprezentująca pozycję porządkową pola w kolekcji pól zestawu rekordów (liczony od zera).
 
 *lpszValue*<br/>
-Wskaźnik do ciągu zawierającego wartość pola zawartość.
+Wskaźnik do ciągu zawierającego wartość zawartości pola.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `SetFieldValue` i [getfieldvalue —](#getfieldvalue) dynamicznie powiązać pola w czasie wykonywania, a nie statycznie powiązanie kolumn przy użyciu [dofieldexchange —](#dofieldexchange) mechanizm.
+Używaj `SetFieldValue` i [GetFieldValue —](#getfieldvalue) do dynamicznego wiązania pól w czasie wykonywania zamiast statycznego powiązania kolumn za pomocą mechanizmu [DoFieldExchange](#dofieldexchange) .
 
-Należy zwrócić uwagę, jeśli są nietworzenie zestawu rekordów UNICODE, należy użyć formy `SetFieldValue` niezawierające `COleVariant` parametru lub `COleVariant` obiektu musi być zadeklarowany w sposób jawny ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **,** *vtSrc* **)**  formularza konstruktora z *vtSrc* równa `VT_BSTRT` (ANSI) lub za pomocą `COleVariant` funkcja [setstring —](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* równa `VT_BSTRT`.
+Należy pamiętać, że jeśli nie tworzysz zestawu rekordów UNICODE, należy użyć formy `SetFieldValue`, która nie zawiera parametru `COleVariant` lub obiekt `COleVariant` musi być jawnie zadeklarowany w formacie ANSI. Można to zrobić za pomocą formy [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* ustawionym na `VT_BSTRT` (ANSI) lub przy użyciu funkcji `COleVariant` [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* ustawionym na `VT_BSTRT`.
 
-Aby uzyskać powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "obiekt pola" i "wartość właściwości" w pomocy DAO.
 
-##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull
+##  <a name="setfieldvaluenull"></a>CDaoRecordset:: SetFieldValueNull
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić pole na wartość Null.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić pole na wartość null.
 
 ```
 void SetFieldValueNull(int nIndex);
@@ -2387,20 +2387,20 @@ void SetFieldValueNull(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Indeks pól w zestawie danych do wyszukiwania według indeksu zaczynającego się od zera.
+Indeks pola w zestawie rekordów dla wyszukiwania według indeksu od zera.
 
 *lpszName*<br/>
-Nazwa pola w zestawie rekordów do wyszukiwania według nazwy.
+Nazwa pola w zestawie rekordów dla wyszukiwania według nazwy.
 
 ### <a name="remarks"></a>Uwagi
 
-C++ o wartości NULL nie jest taka sama jak wartość Null, oznacza to, w terminologii bazy danych "o wartości nie".
+C++Wartość NULL nie jest taka sama jak wartość null, co w terminologii bazy danych oznacza, że nie ma żadnej wartości.
 
-Aby uzyskać powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "obiekt pola" i "wartość właściwości" w pomocy DAO.
 
-##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode
+##  <a name="setlockingmode"></a>CDaoRecordset:: setlockmode
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić automatyczny typ blokady dla zestawu rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić typ blokowania dla zestawu rekordów.
 
 ```
 void SetLockingMode(BOOL bPessimistic);
@@ -2409,23 +2409,23 @@ void SetLockingMode(BOOL bPessimistic);
 ### <a name="parameters"></a>Parametry
 
 *bPessimistic*<br/>
-Flaga wskazująca typ blokady.
+Flaga wskazująca typ blokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy pesymistycznego blokowania jest aktywna, strona 2K zawierające rekord, edytowany jest zablokowane, tak szybko, jak należy wywołać `Edit` funkcja elementu członkowskiego. Strona jest odblokowany, gdy wywołujesz `Update` lub `Close` funkcji członkowskiej lub dowolnych operacji przenoszenia lub wyszukiwania.
+Gdy trwa pesymistyczne blokowanie, Strona 2K zawierająca edytowany rekord jest zablokowany zaraz po wywołaniu funkcji składowej `Edit`. Strona jest odblokowana po wywołaniu `Update` lub `Close` funkcji członkowskiej lub dowolnej operacji przenoszenia lub wyszukiwania.
 
-Gdy optymistyczne blokowanie jest aktywna, strona 2K, zawierająca rekord jest zablokowany, tylko wtedy, gdy rekord jest aktualizowana przy użyciu `Update` funkcja elementu członkowskiego.
+Gdy optymistyczne blokowanie jest obowiązujące, Strona 2K zawierająca rekord jest zablokowana tylko w czasie, gdy rekord jest aktualizowany za pomocą funkcji składowej `Update`.
 
-Jeśli strona jest zablokowany, żaden inny użytkownik może edytować rekordy na tej samej stronie. Jeśli wywołasz `SetLockingMode` i przekazać wartość różną od zera i inny użytkownik ma już strony zablokowane, zgłaszany jest wyjątek podczas wywoływania `Edit`. Inni użytkownicy mogą odczytywać dane z zablokowanych stron.
+Jeśli strona jest zablokowana, żaden inny użytkownik nie może edytować rekordów na tej samej stronie. Jeśli wywołasz `SetLockingMode` i przekażesz wartość różną od zera, a inny użytkownik ma już zablokowaną stronę, wyjątek jest zgłaszany podczas wywoływania `Edit`. Inni użytkownicy mogą odczytywać dane z zablokowanych stron.
 
-Jeśli wywołasz `SetLockingMode` z wartością zero i nowszych wywołanie `Update` gdy strona jest zablokowane przez innego użytkownika, wystąpi wyjątek. Aby zobaczyć zmiany wprowadzone do rekordu użytkownika przez innego użytkownika i utracić wprowadzone zmiany, należy wywołać `SetBookmark` funkcji członka z wartość zakładki bieżącego rekordu.
+W przypadku wywołania `SetLockingMode` z wartością zerową i późniejszą `Update` wywołania, gdy strona jest zablokowana przez innego użytkownika, wystąpi wyjątek. Aby zobaczyć zmiany wprowadzone do rekordu przez innego użytkownika (i utracić zmiany), wywołaj funkcję elementu członkowskiego `SetBookmark` z wartością zakładki bieżącego rekordu.
 
-Podczas pracy ze źródłami danych ODBC, tryb blokowania jest zawsze optymistyczne.
+Podczas pracy ze źródłami danych ODBC tryb blokowania jest zawsze optymistyczny.
 
-##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue
+##  <a name="setparamvalue"></a>CDaoRecordset:: SetParamValue
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartości parametru w zestawie danych w czasie wykonywania.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartość parametru w zestawie rekordów w czasie wykonywania.
 
 ```
 virtual void SetParamValue(
@@ -2440,23 +2440,23 @@ virtual void SetParamValue(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Wartości liczbowych pozycja parametru w kolekcji Parameters querydef.
+Pozycja liczbowa parametru w kolekcji parametrów querydef.
 
 *var*<br/>
 Wartość do ustawienia; Zobacz uwagi.
 
 *lpszName*<br/>
-Nazwa parametru, której wartość chcesz ustawić.
+Nazwa parametru, którego wartość ma zostać ustawiona.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr musi już zostały określone jako część ciągu SQL zestawu rekordów. Według nazwy lub jej indeks w kolekcji, można uzyskać dostęp do parametru.
+Parametr musi już zostać ustanowiony jako część ciągu SQL zestawu rekordów. Możesz uzyskać dostęp do parametru według nazwy lub jego pozycji indeksu w kolekcji.
 
-Określ wartość do ustawienia jako `COleVariant` obiektu. Informacje o ustawianiu na żądaną wartość i wpisz swoje `COleVariant` obiektów, zobacz klasę [COleVariant](../../mfc/reference/colevariant-class.md). Należy pamiętać, że jeśli zestaw rekordów UNICODE są nietworzenie, `COleVariant` obiektu musi być zadeklarowany w sposób jawny ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **,** *vtSrc* **)**  formularza konstruktora z *vtSrc* równa `VT_BSTRT` (ANSI) lub za pomocą `COleVariant` funkcja [setstring —](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* równa `VT_BSTRT`.
+Określ wartość, która ma zostać ustawiona jako obiekt `COleVariant`. Aby uzyskać informacje na temat ustawiania żądanej wartości i typu w obiekcie `COleVariant`, zobacz Klasa [COleVariant](../../mfc/reference/colevariant-class.md). Należy pamiętać, że jeśli nie tworzysz zestawu rekordów UNICODE, obiekt `COleVariant` musi być jawnie zadeklarowany jako ANSI. Można to zrobić za pomocą formy [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* ustawionym na `VT_BSTRT` (ANSI) lub przy użyciu funkcji `COleVariant` [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **,** *vtSrc* **)** z *vtSrc* ustawionym na `VT_BSTRT`.
 
-##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull
+##  <a name="setparamvaluenull"></a>CDaoRecordset:: SetParamValueNull
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić parametr na wartość Null.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić parametr na wartość null.
 
 ```
 void SetParamValueNull(int nIndex);
@@ -2466,18 +2466,18 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Indeks pól w zestawie danych do wyszukiwania według indeksu zaczynającego się od zera.
+Indeks pola w zestawie rekordów dla wyszukiwania według indeksu od zera.
 
 *lpszName*<br/>
-Nazwa pola w zestawie rekordów do wyszukiwania według nazwy.
+Nazwa pola w zestawie rekordów dla wyszukiwania według nazwy.
 
 ### <a name="remarks"></a>Uwagi
 
-C++ o wartości NULL nie jest taka sama jak wartość Null, oznacza to, w terminologii bazy danych "o wartości nie".
+C++Wartość NULL nie jest taka sama jak wartość null, co w terminologii bazy danych oznacza, że nie ma żadnej wartości.
 
-##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
+##  <a name="setpercentposition"></a>CDaoRecordset:: SetPercentPosition
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartość, która zmienia przybliżona lokalizacja bieżącego rekordu w obiekcie rekordów na podstawie procentu rekordów w zestawie rekordów.
+Wywołaj tę funkcję elementu członkowskiego, aby ustawić wartość, która zmienia przybliżoną lokalizację bieżącego rekordu w obiekcie zestawu rekordów na podstawie procentu rekordów w zestawie rekordów.
 
 ```
 void SetPercentPosition(float fPosition);
@@ -2486,22 +2486,22 @@ void SetPercentPosition(float fPosition);
 ### <a name="parameters"></a>Parametry
 
 *fPosition*<br/>
-Liczba od 0 do 100.
+Liczba z zakresu od 0 do 100.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas pracy z dynamicznego lub zestawu rekordów typu migawka, przenosząc do ostatniego rekordu przed wywołaniem najpierw wypełnienia zestawu rekordów `SetPercentPosition`. Jeśli wywołasz `SetPercentPosition` przed pełni wypełnianie zestawu rekordów, przemieszczenie jest określana względem liczby rekordów dostępne jako wskazanych przez wartość [getrecordcount —](#getrecordcount). Można przenieść do ostatniego rekordu, wywołując `MoveLast`.
+Podczas pracy z zestawem rekordów typu dynamicznego lub typu migawek, najpierw Wypełnij zestaw rekordów, przechodząc do ostatniego rekordu przed wywołaniem `SetPercentPosition`. Jeśli wywołasz `SetPercentPosition` przed pełnym zapełnieniem zestawu rekordów, ilość ruchu jest określana względem liczby rekordów, do których dostęp jest wskazywany przez wartość [GetRecordCount](#getrecordcount). Możesz przenieść do ostatniego rekordu, wywołując `MoveLast`.
 
-Gdy wywołujesz `SetPercentPosition`, rekord w położeniu przybliżony odpowiadający tej wartości staje się bieżącym.
+Po wywołaniu `SetPercentPosition`rekord w przybliżonej pozycji odpowiadającej tej wartości stanie się bieżącym.
 
 > [!NOTE]
->  Wywoływanie `SetPercentPosition` przenieść bieżący rekord do określonego rekordu w zestawie rekordów nie jest zalecane. Wywołaj [setbookmark —](#setbookmark) zamiast tego funkcję członkowską.
+>  Nie zaleca się wywoływania `SetPercentPosition` w celu przeniesienia bieżącego rekordu do określonego rekordu w zestawie rekordów. Zamiast tego wywołaj funkcję członkowską [setzakładka](#setbookmark) .
 
-Aby uzyskać powiązane informacje zobacz temat "PercentPosition Property" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz temat "Właściwość PercentPosition" w pomocy DAO.
 
-##  <a name="update"></a>  CDaoRecordset::Update
+##  <a name="update"></a>CDaoRecordset:: Update
 
-Wywołaj tę funkcję elementu członkowskiego po wywołaniu `AddNew` lub `Edit` funkcja elementu członkowskiego.
+Wywołaj tę funkcję elementu członkowskiego po wywołaniu funkcji członkowskiej `AddNew` lub `Edit`.
 
 ```
 virtual void Update();
@@ -2509,23 +2509,23 @@ virtual void Update();
 
 ### <a name="remarks"></a>Uwagi
 
-To wywołanie jest wymagane do ukończenia `AddNew` lub `Edit` operacji.
+To wywołanie jest wymagane do ukończenia operacji `AddNew` lub `Edit`.
 
-Zarówno `AddNew` i `Edit` przygotowanie buforu edycji, w której umieszczony jest dodane lub zmodyfikowane dane do zapisania na źródle danych. `Update` zapisuje dane. Tylko w tych polach wykrycia zgodnie zmieniona lub oznaczona są aktualizowane.
+Zarówno `AddNew`, jak i `Edit` Przygotuj bufor edycji, w którym dodane lub edytowane dane są umieszczane w celu zapisywania do źródła danych. `Update` zapisuje dane. Aktualizowane są tylko pola oznaczone lub wykryte jako zmienione.
 
-Jeśli źródło danych obsługuje transakcje, można wprowadzić `Update` wywołania (i odpowiadającymi mu dostawcami `AddNew` lub `Edit` wywołania) wchodzi w skład transakcji.
+Jeśli źródło danych obsługuje transakcje, można wykonać wywołanie `Update` (i odpowiadające mu `AddNew` lub `Edit` wywołanie) transakcji.
 
 > [!CAUTION]
-> Jeśli wywołasz `Update` bez uprzedniego wywołania `AddNew` lub `Edit`, `Update` zgłasza `CDaoException`. Jeśli wywołasz `AddNew` lub `Edit`, należy wywołać `Update` przed wywołaniem [MoveNext](#movenext) lub zamknąć połączenia ze źródłem danych lub zestaw rekordów. W przeciwnym razie zmiany zostaną utracone bez powiadomienia.
+> W przypadku wywołania `Update` bez uprzedniego wywołania `AddNew` lub `Edit``Update` zgłasza `CDaoException`. Jeśli wywołasz `AddNew` lub `Edit`, musisz wywołać `Update` przed wywołaniem [MoveNext](#movenext) lub zamknięciem zestawu rekordów lub połączenia ze źródłem danych. W przeciwnym razie zmiany zostaną utracone bez powiadomienia.
 
-Gdy obiekt zestawu rekordów pessimistically jest zablokowana w środowisku wielodostępnym, rekord jest zablokowany, od momentu `Edit` jest używana przed zakończeniem aktualizację. Jeśli zestaw rekordów optymistycznie jest zablokowany, rekord jest zablokowana i tylko w przypadku, zanim zostaną one zaktualizowane w bazie danych w porównaniu z wstępnie edytowany rekord. Jeśli rekord został zmieniony, ponieważ wywołana `Edit`, `Update` zgłasza wyjątek, operacja zakończy się niepowodzeniem i MFC. Możesz zmienić tryb blokowania z `SetLockingMode`.
+Gdy obiekt zestawu rekordów jest pessimistically zablokowany w środowisku wielodostępnym, rekord pozostaje zablokowany od czasu `Edit` jest używany do momentu ukończenia aktualizacji. Jeśli zestaw rekordów jest optymistycznie zablokowany, rekord jest zablokowany i porównywany z wstępnie edytowanym rekordem tuż przed zaktualizowaniem w bazie danych. Jeśli rekord został zmieniony od momentu wywołania `Edit`, operacja `Update` kończy się niepowodzeniem, a MFC zgłasza wyjątek. Tryb blokowania można zmienić za pomocą `SetLockingMode`.
 
 > [!NOTE]
-> Zawsze formatów zewnętrznej bazy danych, takich jak ODBC i możliwe do zainstalowania ISAM używane optymistyczne blokowanie.
+> Optymistyczne blokowanie jest zawsze używane w formatach zewnętrznych baz danych, takich jak ODBC i Instalowalna ISAM.
 
-Aby uzyskać powiązane informacje zobacz tematy "Działają funkcje AddNew metody", "CancelUpdate metody", "Usuń metodę", "LastModified Property", "Metoda aktualizacji" i "Trybu edycji właściwości" w Pomocy programu DAO.
+Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Metoda CancelUpdate", "Delete Method", "Właściwość LastModified", "Metoda aktualizacji" i "EditMode Property" w pomocy DAO.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

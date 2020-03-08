@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391312"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855368"
 ---
 # <a name="carchiveexception-class"></a>Klasa CArchiveException
 
-Przedstawia warunek wyjątku serializacji
+Reprezentuje warunek wyjątku serializacji
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,22 +33,22 @@ class CArchiveException : public CException
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CArchiveException::CArchiveException](#carchiveexception)|Konstruuje `CArchiveException` obiektu.|
+|[CArchiveException::CArchiveException](#carchiveexception)|Konstruuje obiekt `CArchiveException`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CArchiveException::m_cause](#m_cause)|Wskazuje przyczynę wyjątku.|
-|[CArchiveException::m_strFileName](#m_strfilename)|Określa nazwę pliku dla tego warunku wyjątku.|
+|[CArchiveException:: m_cause](#m_cause)|Wskazuje przyczynę wyjątku.|
+|[CArchiveException:: m_strFileName](#m_strfilename)|Określa nazwę pliku dla tego warunku wyjątku.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CArchiveException` Klasa zawiera element członkowski danych publicznych, które wskazują przyczynę wyjątku.
+Klasa `CArchiveException` zawiera publiczny element członkowski danych, który wskazuje przyczynę wyjątku.
 
-`CArchiveException` obiekty są zbudowane i zgłaszane w [CArchive](../../mfc/reference/carchive-class.md) funkcji elementów członkowskich. Możesz uzyskać dostęp tych obiektów w zakresie **CATCH** wyrażenia. Kod przyczyny nie zależy od systemu operacyjnego. Aby uzyskać więcej informacji na temat wyjątek podczas przetwarzania zobacz [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
+obiekty `CArchiveException` są konstruowane i zgłaszane w funkcjach składowych [CArchive](../../mfc/reference/carchive-class.md) . Możesz uzyskać dostęp do tych obiektów w zakresie wyrażenia **catch** . Kod przyczyny jest niezależny od systemu operacyjnego. Aby uzyskać więcej informacji na temat przetwarzania wyjątków, zobacz [Obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,11 +60,11 @@ class CArchiveException : public CException
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afx.h
+**Nagłówek:** AFX. h
 
-##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException
+##  <a name="carchiveexception"></a>CArchiveException::CArchiveException
 
-Konstruuje `CArchiveException` obiekt przechowywania wartości *spowodować* w obiekcie.
+Konstruuje obiekt `CArchiveException`, przechowując wartość *przyczyny* w obiekcie.
 
 ```
 CArchiveException(
@@ -74,21 +74,21 @@ CArchiveException(
 
 ### <a name="parameters"></a>Parametry
 
-*cause*<br/>
-Zmienna typu wyliczeniowego, która wskazuje przyczynę, dla wyjątku. Aby uzyskać listę modułów wyliczających, zobacz [m_cause](#m_cause) element członkowski danych.
+*może*<br/>
+Zmienna typu wyliczeniowego, która wskazuje przyczynę wyjątku. Aby zapoznać się z listą modułów wyliczających, zobacz element członkowski danych [m_cause](#m_cause) .
 
 *lpszArchiveName*<br/>
-Wskazuje ciąg zawierający nazwę `CArchive` obiektu, co powoduje wyjątek.
+Wskazuje ciąg zawierający nazwę obiektu `CArchive` powodującego wyjątek.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz utworzyć `CArchiveException` obiektów na stosie i zgłosić samodzielnie lub pozwolić funkcja globalna [afxthrowarchiveexception —](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) go obsłużyć za Ciebie.
+Można utworzyć obiekt `CArchiveException` na stercie i zgłosić go samodzielnie lub pozwolić, aby funkcja globalna [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) go.
 
-Nie należy używać tego konstruktora bezpośrednio; Zamiast tego należy wywołać funkcję globalnego `AfxThrowArchiveException`.
+Nie używaj tego konstruktora bezpośrednio; Zamiast tego należy wywołać funkcję globalną `AfxThrowArchiveException`.
 
-##  <a name="m_cause"></a>  CArchiveException::m_cause
+##  <a name="m_cause"></a>CArchiveException:: m_cause
 
-Określa przyczyną wyjątku.
+Określa przyczynę wyjątku.
 
 ```
 int m_cause;
@@ -96,31 +96,31 @@ int m_cause;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski danych jest publiczną zmienną typu **int**. Wartości są definiowane przez `CArchiveException` Typ wyliczany. Moduły wyliczające i ich znaczenie są następujące:
+Ten element członkowski danych jest zmienną publiczną typu **int**. Jego wartości są definiowane przez `CArchiveException` typu wyliczeniowego. Moduły wyliczające i ich znaczenie są następujące:
 
-- `CArchiveException::none` Nie wystąpił błąd.
+- `CArchiveException::none` nie wystąpił błąd.
 
-- `CArchiveException::genericException` Nieokreślony błąd.
+- nieokreślony błąd `CArchiveException::genericException`.
 
-- `CArchiveException::readOnly` Podjęto próbę zapisu w archiwum otwartym do załadowania.
+- `CArchiveException::readOnly` nastąpiła próba zapisu w archiwum otwartym do ładowania.
 
-- `CArchiveException::endOfFile` Osiągnięto koniec pliku podczas odczytywania obiektu.
+- `CArchiveException::endOfFile` osiągnięto koniec pliku podczas odczytywania obiektu.
 
-- `CArchiveException::writeOnly` Podjęto próbę odczytu z archiwum otwartym do przechowywania.
+- `CArchiveException::writeOnly` próbował odczytać z archiwum otwartego do przechowywania.
 
-- `CArchiveException::badIndex` Nieprawidłowy format pliku.
+- `CArchiveException::badIndex` nieprawidłowy format pliku.
 
-- `CArchiveException::badClass` Podjęto próbę odczytania obiektu do obiektu niewłaściwego typu.
+- `CArchiveException::badClass` próbował odczytać obiekt w obiekcie nieprawidłowego typu.
 
-- `CArchiveException::badSchema` Podjęto próbę odczytania obiektu z nieco innej klasy.
-
-    > [!NOTE]
-    >  Te `CArchiveException` moduły wyliczające Przyczyna różnią się od `CFileException` spowodować modułów wyliczających.
+- `CArchiveException::badSchema` próbował odczytać obiekt z inną wersją klasy.
 
     > [!NOTE]
-    > `CArchiveException::generic` jest przestarzały. Zamiast nich należy używać słów kluczowych `genericException`. Jeśli **ogólny** jest używane w aplikacji i zbudowany z/CLR, wystąpią błędy składniowe, które nie są łatwe do odszyfrowania.
+    >  Te `CArchiveException` powodują, że moduły wyliczające są różne od `CFileException` przyczyn.
 
-##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName
+    > [!NOTE]
+    > `CArchiveException::generic` jest przestarzały. Zamiast tego użyj polecenia cmdlet `genericException`. Jeśli **jest** używana w aplikacji i skompilowana przy użyciu opcji/CLR, wystąpią błędy składniowe, które nie są łatwe do odszyfrowania.
+
+##  <a name="m_strfilename"></a>CArchiveException:: m_strFileName
 
 Określa nazwę pliku dla tego warunku wyjątku.
 
@@ -128,7 +128,7 @@ Określa nazwę pliku dla tego warunku wyjątku.
 CString m_strFileName;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

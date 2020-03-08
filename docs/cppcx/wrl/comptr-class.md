@@ -52,15 +52,15 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498410"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865717"
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 
-Tworzy *inteligentny wskaźnik* typu, który reprezentuje interfejs określony przez parametr szablonu. `ComPtr`automatycznie utrzymuje liczbę odwołań dla wskaźnika źródłowego i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
+Tworzy *inteligentny wskaźnik* typu, który reprezentuje interfejs określony przez parametr szablonu. `ComPtr` automatycznie utrzymuje liczbę odwołań dla podstawowego wskaźnika interfejsu i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,15 +74,15 @@ friend class ComPtr;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Interfejs, który `ComPtr` reprezentuje.
+*&*<br/>
+Interfejs, który reprezentuje `ComPtr`.
 
-*U*<br/>
-Klasa, do której jest obecny `ComPtr` obiekt zaprzyjaźniony. (Szablon, który używa tego parametru jest chroniony).
+*'T*<br/>
+Klasa, do której bieżący `ComPtr` jest znajomym. (Szablon, który używa tego parametru jest chroniony).
 
 ## <a name="remarks"></a>Uwagi
 
-`ComPtr<>`deklaruje typ, który reprezentuje wskaźnik podstawowego interfejsu. Użyj `ComPtr<>` , aby zadeklarować zmienną, a następnie użyć operatora dostępu do elementu członkowskiego (`->`) ze strzałką, aby uzyskać dostęp do funkcji składowej interfejsu.
+`ComPtr<>` deklaruje typ, który reprezentuje wskaźnik podstawowego interfejsu. Użyj `ComPtr<>`, aby zadeklarować zmienną, a następnie użyć operatora dostępu do elementu członkowskiego (`->`) ze strzałką, aby uzyskać dostęp do funkcji składowej interfejsu.
 
 Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję "inteligentne wskaźniki COM" w temacie [wskazówki dotyczące kodowania com](/windows/win32/LearnWin32/com-coding-practices) w bibliotece MSDN.
 
@@ -90,56 +90,56 @@ Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-Nazwa            | Opis
+Name (Nazwa)            | Opis
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Synonim dla typu określonego przez parametr *T* Template.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-Nazwa                             | Opis
+Name (Nazwa)                             | Opis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr::ComPtr](#comptr)        | Aktywuje nowe wystąpienie `ComPtr` klasy. Przeciążenia zapewniają konstruktory domyślne, kopiowanie, przenoszenie i konwersja.
-[ComPtr::~ComPtr](#tilde-comptr) | Deinicjalizuje wystąpienie `ComPtr`.
+[ComPtr:: ComPtr](#comptr)        | Aktywuje nowe wystąpienie klasy `ComPtr`. Przeciążenia zapewniają konstruktory domyślne, kopiowanie, przenoszenie i konwersja.
+[ComPtr:: ~ ComPtr](#tilde-comptr) | Deinicjalizuje wystąpienie `ComPtr`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Nazwa                                                      | Opis
+Name (Nazwa)                                                      | Opis
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr:: as](#as)                                         | `ComPtr` Zwraca obiekt, który reprezentuje interfejs identyfikowany przez określony parametr szablonu.
-[ComPtr:: AsIID —](#asiid)                                   | `ComPtr` Zwraca obiekt, który reprezentuje interfejs identyfikowany przez określony identyfikator interfejsu.
+[ComPtr:: as](#as)                                         | Zwraca obiekt `ComPtr`, który reprezentuje interfejs identyfikowany przez określony parametr szablonu.
+[ComPtr:: AsIID —](#asiid)                                   | Zwraca obiekt `ComPtr`, który reprezentuje interfejs identyfikowany przez określony identyfikator interfejsu.
 [ComPtr:: AsWeak —](#asweak)                                 | Pobiera słabe odwołanie do bieżącego obiektu.
-[ComPtr:: Attach](#attach)                                 | Kojarzy `ComPtr` to z typem interfejsu określonym przez bieżący parametr typu szablonu.
-[ComPtr::CopyTo](#copyto)                                 | Kopiuje bieżący lub określony interfejs skojarzony z tym `ComPtr` do określonego wskaźnika danych wyjściowych.
-[ComPtr::D etach](#detach)                                 | Usuwa skojarzenie `ComPtr` z interfejsem, który reprezentuje.
+[ComPtr:: Attach](#attach)                                 | Kojarzy ten `ComPtr` z typem interfejsu określonym przez bieżący parametr typu szablonu.
+[ComPtr:: CopyTo](#copyto)                                 | Kopiuje bieżący lub określony interfejs skojarzony z tym `ComPtr` do określonego wskaźnika danych wyjściowych.
+[ComPtr::D etach](#detach)                                 | Usuwa skojarzenie tego `ComPtr` z interfejsu, który reprezentuje.
 [ComPtr:: Get](#get)                                       | Pobiera wskaźnik do interfejsu, który jest skojarzony z tym `ComPtr`.
-[ComPtr:: GetAddressOf](#getaddressof)                     | Pobiera adres elementu członkowskiego danych [ptr_](#ptr) , który zawiera wskaźnik do interfejsu reprezentowanego przez ten `ComPtr`element.
-[ComPtr:: ReleaseAndGetAddressOf —](#releaseandgetaddressof) | Zwalnia interfejs skojarzony z tym `ComPtr` , a następnie pobiera adres elementu członkowskiego danych [ptr_](#ptr) , który zawiera wskaźnik do wydanego interfejsu.
+[ComPtr:: GetAddressOf](#getaddressof)                     | Pobiera adres [ptr_](#ptr) elementu członkowskiego danych, który zawiera wskaźnik do interfejsu reprezentowanego przez tę `ComPtr`.
+[ComPtr:: ReleaseAndGetAddressOf —](#releaseandgetaddressof) | Zwalnia interfejs skojarzony z tym `ComPtr`, a następnie pobiera adres [ptr_](#ptr) elementu członkowskiego danych, który zawiera wskaźnik do wydanego interfejsu.
 [ComPtr::Reset](#reset)                                   | Zwalnia wszystkie odwołania dla wskaźnika do interfejsu, który jest skojarzony z tym `ComPtr`.
-[ComPtr::Swap](#swap)                                     | Wymienia interfejs zarządzany przez bieżącą `ComPtr` z interfejsem zarządzanym przez określony. `ComPtr`
+[ComPtr:: swap](#swap)                                     | Wymienia interfejs zarządzany przez bieżące `ComPtr` z interfejsem zarządzanym przez określony `ComPtr`.
 
 ### <a name="protected-methods"></a>Metody chronione
 
-Nazwa                                        | Opis
+Name (Nazwa)                                        | Opis
 ------------------------------------------- | --------------------------------------------------------------------------------
-[ComPtr:: InternalAddRef —](#internaladdref)   | Zwiększa liczbę odwołań do interfejsu skojarzonego z tym `ComPtr`.
-[ComPtr:: InternalRelease —](#internalrelease) | Wykonuje operację wydania modelu COM na interfejsie skojarzonym z `ComPtr`tym elementem.
+[ComPtr:: InternalAddRef —](#internaladdref)   | Zwiększa liczbę odwołań interfejsu skojarzonego z tym `ComPtr`.
+[ComPtr:: InternalRelease —](#internalrelease) | Wykonuje operację wydania modelu COM na interfejsie skojarzonym z tym `ComPtr`.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-Nazwa                                                                                           | Opis
+Name (Nazwa)                                                                                           | Opis
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr:: operator &](#operator-ampersand)                                                       | Pobiera adres bieżącego `ComPtr`.
 [ComPtr:: operator->](#operator-arrow)                                                          | Pobiera wskaźnik do typu określonego przez bieżący parametr szablonu.
-[ComPtr:: operator =](#operator-assign)                                                          | Przypisuje wartość do bieżącej `ComPtr`.
-[ComPtr:: operator = =](#operator-equality)                                                       | Wskazuje, czy `ComPtr` dwa obiekty są równe.
-[ComPtr:: operator! =](#operator-inequality)                                                     | Wskazuje, czy `ComPtr` dwa obiekty nie są równe.
-[ComPtr:: operator Microsoft:: WRL::D etails:: BoolType](#operator-microsoft-wrl-details-booltype) | Wskazuje, `ComPtr` czy zarządza okresem istnienia obiektu w interfejsie.
+[ComPtr:: operator =](#operator-assign)                                                          | Przypisuje wartość do bieżącego `ComPtr`.
+[ComPtr:: operator = =](#operator-equality)                                                       | Wskazuje, czy dwa obiekty `ComPtr` są równe.
+[ComPtr:: operator! =](#operator-inequality)                                                     | Wskazuje, czy dwa `ComPtr` obiekty nie są równe.
+[ComPtr:: operator Microsoft:: WRL::D etails:: BoolType](#operator-microsoft-wrl-details-booltype) | Wskazuje, czy `ComPtr` zarządza okresem istnienia obiektu w interfejsie.
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-Nazwa                 | Opis
+Name (Nazwa)                 | Opis
 -------------------- | ------------------------------------------------------------------------------------------
-[ComPtr::ptr_](#ptr) | Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten `ComPtr`obiekt.
+[ComPtr::p tr_](#ptr) | Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten `ComPtr`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -149,9 +149,9 @@ Nazwa                 | Opis
 
 **Nagłówek:** Client. h
 
-**Obszaru** Microsoft:: WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="tilde-comptr"></a>ComPtr::~ComPtr
+## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
 
 Deinicjalizuje wystąpienie `ComPtr`.
 
@@ -161,7 +161,7 @@ WRL_NOTHROW ~ComPtr();
 
 ## <a name="as"></a>ComPtr:: as
 
-`ComPtr` Zwraca obiekt, który reprezentuje interfejs identyfikowany przez określony parametr szablonu.
+Zwraca obiekt `ComPtr`, który reprezentuje interfejs identyfikowany przez określony parametr szablonu.
 
 ```cpp
 template<typename U>
@@ -177,15 +177,15 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*'T*<br/>
 Interfejs, który ma być reprezentowany przez parametr *p*.
 
-*p*<br/>
-Obiekt, który reprezentuje interfejs określony przez parametr *U.* `ComPtr` Parametr *p* nie może odwoływać się do `ComPtr` bieżącego obiektu.
+*St*<br/>
+Obiekt `ComPtr`, który reprezentuje interfejs określony przez parametr *U*. Parametr *p* nie może odwoływać się do bieżącego obiektu `ComPtr`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon jest wewnętrzną specjalizacją pomocnika, która obsługuje C++ funkcje językowe, takie jak [](../../cpp/auto-cpp.md) słowo kluczowe potrącenie typu autoodejmowanie.
+Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon jest wewnętrzną specjalizacją pomocnika, która obsługuje C++ funkcje [językowe, takie](../../cpp/auto-cpp.md) jak słowo kluczowe potrącenie typu autoodejmowanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -193,7 +193,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na bł
 
 ## <a name="asiid"></a>ComPtr:: AsIID —
 
-`ComPtr` Zwraca obiekt, który reprezentuje interfejs identyfikowany przez określony identyfikator interfejsu.
+Zwraca obiekt `ComPtr`, który reprezentuje interfejs identyfikowany przez określony identyfikator interfejsu.
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -207,7 +207,7 @@ WRL_NOTHROW HRESULT AsIID(
 *riid*<br/>
 Identyfikator interfejsu.
 
-*p*<br/>
+*St*<br/>
 Jeśli obiekt ma interfejs, którego identyfikator jest równa *riid*, pośredniego wskaźnik do interfejsu określonego przez parametr *riid* ; w przeciwnym razie wskaźnik do `IUnknown`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -235,7 +235,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na bł
 
 ## <a name="attach"></a>ComPtr:: Attach
 
-Kojarzy `ComPtr` to z typem interfejsu określonym przez bieżący parametr typu szablonu.
+Kojarzy ten `ComPtr` z typem interfejsu określonym przez bieżący parametr typu szablonu.
 
 ```cpp
 void Attach(
@@ -245,12 +245,12 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
+*różnych*<br/>
 Typ interfejsu.
 
-## <a name="comptr"></a>ComPtr::ComPtr
+## <a name="comptr"></a>ComPtr:: ComPtr
 
-Aktywuje nowe wystąpienie `ComPtr` klasy. Przeciążenia zapewniają konstruktory domyślne, kopiowanie, przenoszenie i konwersja.
+Aktywuje nowe wystąpienie klasy `ComPtr`. Przeciążenia zapewniają konstruktory domyślne, kopiowanie, przenoszenie i konwersja.
 
 ```cpp
 WRL_NOTHROW ComPtr();
@@ -286,10 +286,10 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*'T*<br/>
 Typ *drugiego* parametru.
 
-*other*<br/>
+*różnych*<br/>
 Obiekt typu *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -326,7 +326,7 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*'T*<br/>
 Nazwa typu.
 
 *ptr*<br/>
@@ -337,19 +337,19 @@ Identyfikator interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje dlaczego niejawna `QueryInterface` operacja nie powiodła się.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazujący dlaczego niejawna operacja `QueryInterface` nie powiodła się.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja zwraca kopię wskaźnika do interfejsu skojarzonego z tym `ComPtr`obiektem. Ta funkcja zawsze zwraca S_OK.
+Pierwsza funkcja zwraca kopię wskaźnika do interfejsu skojarzonego z tym `ComPtr`. Ta funkcja zawsze zwraca S_OK.
 
-Druga funkcja wykonuje `QueryInterface` operację na interfejsie skojarzonym z tym `ComPtr` dla interfejsu określonego przez parametr *riid* .
+Druga funkcja wykonuje `QueryInterface` operacji na interfejsie skojarzonym z tym `ComPtr` dla interfejsu określonego przez parametr *riid* .
 
-Trzecia funkcja wykonuje `QueryInterface` operację na interfejsie skojarzonym z tym `ComPtr` dla podstawowego interfejsu *U* .
+Trzecia funkcja wykonuje `QueryInterface` operacji na interfejsie skojarzonym z tym `ComPtr` dla interfejsu bazowego *U* .
 
 ## <a name="detach"></a>ComPtr::D etach
 
-`ComPtr` Usuwa obiekt z interfejsu, który reprezentuje.
+Usuwa skojarzenie tego obiektu `ComPtr` z interfejsu, który reprezentuje.
 
 ```cpp
 T* Detach();
@@ -357,7 +357,7 @@ T* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu, który został reprezentowany przez ten `ComPtr` obiekt.
+Wskaźnik do interfejsu, który został reprezentowany przez ten obiekt `ComPtr`.
 
 ## <a name="get"></a>ComPtr:: Get
 
@@ -369,11 +369,11 @@ T* Get() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu, który jest skojarzony z tym `ComPtr`elementem.
+Wskaźnik do interfejsu, który jest skojarzony z tym `ComPtr`.
 
 ## <a name="getaddressof"></a>ComPtr:: GetAddressOf
 
-Pobiera adres elementu członkowskiego danych [ptr_](#ptr) , który zawiera wskaźnik do interfejsu reprezentowanego przez ten `ComPtr`element.
+Pobiera adres [ptr_](#ptr) elementu członkowskiego danych, który zawiera wskaźnik do interfejsu reprezentowanego przez tę `ComPtr`.
 
 ```cpp
 T* const* GetAddressOf() const;
@@ -386,7 +386,7 @@ Adres zmiennej.
 
 ## <a name="internaladdref"></a>ComPtr:: InternalAddRef —
 
-Zwiększa liczbę odwołań do interfejsu skojarzonego z tym `ComPtr`.
+Zwiększa liczbę odwołań interfejsu skojarzonego z tym `ComPtr`.
 
 ```cpp
 void InternalAddRef() const;
@@ -398,7 +398,7 @@ Ta metoda jest chroniona.
 
 ## <a name="internalrelease"></a>ComPtr:: InternalRelease —
 
-Wykonuje operację wydania modelu COM na interfejsie skojarzonym z `ComPtr`tym elementem.
+Wykonuje operację wydania modelu COM na interfejsie skojarzonym z tym `ComPtr`.
 
 ```cpp
 void InternalRelease();
@@ -410,7 +410,7 @@ Ta metoda jest chroniona.
 
 ## <a name="operator-ampersand"></a>ComPtr:: operator&amp;
 
-Zwalnia interfejs skojarzony z tym `ComPtr` obiektem, a następnie pobiera adres `ComPtr` obiektu.
+Zwalnia interfejs skojarzony z tym obiektem `ComPtr`, a następnie pobiera adres `ComPtr` obiektu.
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -420,11 +420,11 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Słabe odwołanie do bieżącego `ComPtr`elementu.
+Słabe odwołanie do bieżącego `ComPtr`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda różni się od [ComPtr:: GetAddressOf](#getaddressof) w tym metodzie, która zwalnia odwołanie do wskaźnika interfejsu. Użyj `ComPtr::GetAddressOf` , gdy wymagany jest adres wskaźnika interfejsu, ale nie chcesz go zwolnić.
+Ta metoda różni się od [ComPtr:: GetAddressOf](#getaddressof) w tym metodzie, która zwalnia odwołanie do wskaźnika interfejsu. Użyj `ComPtr::GetAddressOf`, gdy wymagany jest adres wskaźnika interfejsu, ale nie chcesz wydać tego interfejsu.
 
 ## <a name="operator-arrow"></a>ComPtr:: operator-&gt;
 
@@ -440,11 +440,11 @@ Wskaźnik do typu określonego przez nazwę bieżącego typu szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika usuwa niepotrzebne obciążenie spowodowane przez użycie makra STDMETHOD. Ta funkcja tworzy `IUnknown` typy `private` zamiast `virtual`.
+Ta funkcja pomocnika usuwa niepotrzebne obciążenie spowodowane przez użycie makra STDMETHOD. Ta funkcja sprawia, że typy `IUnknown` `private` zamiast `virtual`.
 
 ## <a name="operator-assign"></a>ComPtr:: operator =
 
-Przypisuje wartość do bieżącej `ComPtr`.
+Przypisuje wartość do bieżącego `ComPtr`.
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -475,35 +475,35 @@ WRL_NOTHROW ComPtr& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*'T*<br/>
 Klasa.
 
-*other*<br/>
+*różnych*<br/>
 Wskaźnikiem, odwołaniem lub rvalue odwołaniem do typu lub innego `ComPtr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bieżącego `ComPtr`elementu.
+Odwołanie do bieżącego `ComPtr`.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwsza wersja tego operatora przypisuje pustą wartość do bieżącej `ComPtr`.
 
-W drugiej wersji, jeśli wskaźnik przypisywania interfejsu nie jest taki sam jak bieżący `ComPtr` wskaźnik interfejsu, drugi wskaźnik interfejsu jest przypisany do bieżącego. `ComPtr`
+W drugiej wersji, jeśli wskaźnik przypisywania interfejsu nie jest taki sam jak bieżący wskaźnik interfejsu `ComPtr`, drugi wskaźnik interfejsu jest przypisany do bieżącego `ComPtr`.
 
 W trzeciej wersji wskaźnik przypisywania interfejsu jest przypisany do bieżącego `ComPtr`.
 
-W czwartej wersji, jeśli wskaźnik interfejsu przypisanej wartości nie jest taki sam jak bieżący `ComPtr` wskaźnik interfejsu, drugi wskaźnik interfejsu jest przypisany do bieżącego. `ComPtr`
+W czwartej wersji, jeśli wskaźnik interfejsu przypisanej wartości nie jest taki sam jak bieżący wskaźnik interfejsu `ComPtr`, drugi wskaźnik interfejsu jest przypisany do bieżącego `ComPtr`.
 
-Piąta wersja jest operatorem kopiowania; odwołanie do elementu `ComPtr` jest przypisane do bieżącego `ComPtr`.
+Piąta wersja jest operatorem kopiowania; odwołanie do `ComPtr` jest przypisane do bieżącego `ComPtr`.
 
-Szósta wersja jest operatorem kopiowania, który używa semantyki przenoszenia; odwołanie rvalue do elementu `ComPtr` if dowolnego typu jest rzutowane statyczne, a następnie przypisane do bieżącego. `ComPtr`
+Szósta wersja jest operatorem kopiowania, który używa semantyki przenoszenia; odwołanie rvalue do `ComPtr`, jeśli dowolny typ jest rzutowania statycznego, a następnie przypisany do bieżącego `ComPtr`.
 
-Siódma wersja jest operatorem kopiowania, który używa semantyki przenoszenia; odwołanie rvalue do typu *U* jest statyczne rzutowanie, a następnie przypisane do bieżącego `ComPtr`elementu. `ComPtr`
+Siódma wersja jest operatorem kopiowania, który używa semantyki przenoszenia; odwołanie rvalue do `ComPtr` typu *U* jest statyczne rzutowanie, a następnie przypisane do bieżącego `ComPtr`.
 
 ## <a name="operator-equality"></a>ComPtr:: operator = =
 
-Wskazuje, czy `ComPtr` dwa obiekty są równe.
+Wskazuje, czy dwa obiekty `ComPtr` są równe.
 
 ```cpp
 bool operator==(
@@ -524,21 +524,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odwołanie do `ComPtr` obiektu.
+*z*<br/>
+Odwołanie do obiektu `ComPtr`.
 
 *b*<br/>
-Odwołanie do innego `ComPtr` obiektu.
+Odwołanie do innego obiektu `ComPtr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false`.
+Pierwszy operator daje `true`, jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false`.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* jest równa `nullptr`; w przeciwnym razie `false`.
+Drugi i trzeci operator dają `true`, jeśli obiekt *a* jest równy `nullptr`; w przeciwnym razie `false`.
 
 ## <a name="operator-inequality"></a>ComPtr:: operator! =
 
-Wskazuje, czy `ComPtr` dwa obiekty nie są równe.
+Wskazuje, czy dwa `ComPtr` obiekty nie są równe.
 
 ```cpp
 bool operator!=(
@@ -559,21 +559,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odwołanie do `ComPtr` obiektu.
+*z*<br/>
+Odwołanie do obiektu `ComPtr`.
 
 *b*<br/>
-Odwołanie do innego `ComPtr` obiektu.
+Odwołanie do innego obiektu `ComPtr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy plony operator `true` Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie `false`.
+Pierwszy operator daje `true`, jeśli obiekt *a* nie jest równy obiektowi *b*; w przeciwnym razie `false`.
 
-Operatory drugi i trzeci uzyskanie `true` Jeśli obiekt *a* nie jest równa `nullptr`; w przeciwnym razie `false`.
+Drugi i trzeci operator dają `true`, jeśli obiekt *a* nie jest równy `nullptr`; w przeciwnym razie `false`.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: BoolType
 
-Wskazuje, `ComPtr` czy zarządza okresem istnienia obiektu w interfejsie.
+Wskazuje, czy `ComPtr` zarządza okresem istnienia obiektu w interfejsie.
 
 ```cpp
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
@@ -581,11 +581,11 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli interfejs jest skojarzony z tym `ComPtr`, adresem elementu członkowskiego danych [BoolStruct:: member](boolstruct-structure.md#member) ; w przeciwnym razie, `nullptr`.
+Jeśli interfejs jest skojarzony z tą `ComPtr`, adres elementu członkowskiego danych [BoolStruct:: member](boolstruct-structure.md#member) ; w przeciwnym razie `nullptr`.
 
-## <a name="ptr"></a>ComPtr::ptr_
+## <a name="ptr"></a>ComPtr::p tr_
 
-Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten `ComPtr`obiekt.
+Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten `ComPtr`.
 
 ```cpp
 InterfaceType *ptr_;
@@ -593,11 +593,11 @@ InterfaceType *ptr_;
 
 ### <a name="remarks"></a>Uwagi
 
-`ptr_`to wewnętrzny, chroniony element członkowski danych.
+`ptr_` to wewnętrzny, chroniony element członkowski danych.
 
 ## <a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf —
 
-Zwalnia interfejs skojarzony z tym `ComPtr` , a następnie pobiera adres elementu członkowskiego danych [ptr_](#ptr) , który zawiera wskaźnik do wydanego interfejsu.
+Zwalnia interfejs skojarzony z tym `ComPtr`, a następnie pobiera adres [ptr_](#ptr) elementu członkowskiego danych, który zawiera wskaźnik do wydanego interfejsu.
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -605,7 +605,7 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres elementu członkowskiego [](#ptr) `ComPtr`danych ptr_.
+Adres elementu członkowskiego danych [ptr_](#ptr) tego `ComPtr`.
 
 ## <a name="reset"></a>ComPtr:: Reset
 
@@ -621,7 +621,7 @@ Liczba wydanych odwołań (jeśli istnieją).
 
 ## <a name="swap"></a>ComPtr:: swap
 
-Wymienia interfejs zarządzany przez bieżącą `ComPtr` z interfejsem zarządzanym przez określony. `ComPtr`
+Wymienia interfejs zarządzany przez bieżące `ComPtr` z interfejsem zarządzanym przez określony `ComPtr`.
 
 ```cpp
 void Swap(
@@ -635,6 +635,6 @@ void Swap(
 
 ### <a name="parameters"></a>Parametry
 
-*r*<br/>
-A `ComPtr`.
+*®*<br/>
+Klasa `ComPtr`.
 

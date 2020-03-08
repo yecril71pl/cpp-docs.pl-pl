@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127049"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866314"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d, funkcje przestrzeni nazw (AMP)
 
@@ -59,7 +59,7 @@ inline int abs(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość bezwzględną argumentu.
 
@@ -90,7 +90,7 @@ Dolna granica zakresu ograniczania.
 *_Max*<br/>
 Górna granica zakresu ograniczania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zamocowana wartość `_X`.
 
@@ -107,7 +107,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 *_X*<br/>
 Wartość liczby całkowitej bez znaku
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca liczbę bitów zestawu w _X
 
@@ -142,7 +142,7 @@ Parametr logiczny określający, czy należy wyłączyć limit czasu dla nowo ut
 *_Qmode*<br/>
 [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) , który ma zostać użyty dla nowo utworzonego accelerator_view. Ten parametr ma wartość domyślną `queuing_mode_automatic`.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Obiekt `accelerator_view` utworzony na podstawie porzuconego interfejsu urządzenia Direct3D.
 
@@ -180,7 +180,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 *_Av*<br/>
 Accelerator_view do zablokowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ma wartość true, jeśli Blokada została pobrana lub ma wartość FAŁSZ, jeśli jest aktualnie utrzymywana przez inny wątek.
 
@@ -210,7 +210,7 @@ inline int firstbithigh(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Lokalizacja pierwszego zestawu
 
@@ -227,7 +227,7 @@ inline int firstbitlow(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca lokalizację pierwszego zestawu.
 
@@ -255,7 +255,7 @@ Ranga tablicy.
 *_Array*<br/>
 Tablica na accelerator_view Direct3D, dla którego zwracany jest interfejs podstawowego buforu Direct3D.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik interfejsu IUnknown odpowiadający buforowi Direct3D źródłowej tablicy.
 
@@ -294,7 +294,7 @@ Wartość całkowita
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
@@ -316,7 +316,7 @@ Wartość całkowita
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwróć minimalną wartość liczbową argumentów
 
@@ -333,7 +333,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 *_Accelerator_view*<br/>
 Accelerator_view, dla którego ustawienie limitu czasu wyłączone ma być zapytania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Flaga logiczna wskazująca, czy limit czasu jest wyłączony dla określonego accelerator_view.
 
@@ -374,7 +374,7 @@ Drugi określony argument.
 *_Z*<br/>
 Trzeci określony argument.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik `_X` \* `_Y` + `_Z`.
 
@@ -410,7 +410,7 @@ Widok akceleratora D3D, na którym ma zostać utworzona tablica.
 *_D3D_buffer*<br/>
 Wskaźnik interfejsu IUnknown buforu D3D, z którego ma zostać utworzona tablica.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Tablica utworzona przy użyciu dostarczonego buforu Direct3D.
 
@@ -427,7 +427,7 @@ inline float noise(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa, z której ma zostać wygenerowany szum w języku Perl
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość szumu w języku perl z zakresu od-1 do 1.
 
@@ -444,7 +444,7 @@ inline float radians(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X przekonwertowany z stopni na radiany
 
@@ -463,7 +463,7 @@ inline double rcp(double _X) restrict(amp);
 *_X*<br/>
 Wartość, dla której ma zostać obliczona odwrotność.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwrotność określonego argumentu.
 
@@ -480,7 +480,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 *_X*<br/>
 Wartość liczby całkowitej bez znaku
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość z kolejnością bitową odwróconą w _X
 
@@ -497,7 +497,7 @@ inline float saturate(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X zamocowany w zakresie od 0 do 1
 
@@ -514,7 +514,7 @@ inline int sign(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Znak argumentu.
 
@@ -540,7 +540,7 @@ Wartość zmiennoprzecinkowa
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość 0, jeśli _X jest mniejsza niż _Min; 1 Jeśli _X jest większa niż _Max; w przeciwnym razie wartość z zakresu od 0 do 1, jeśli _X należy do zakresu [_Min, _Max]
 
@@ -562,7 +562,7 @@ Wartość zmiennoprzecinkowa
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość 1, jeśli _X jest większa lub równa _Y; w przeciwnym razie 0
 
@@ -584,7 +584,7 @@ Wartość całkowita
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
@@ -606,7 +606,7 @@ Wartość całkowita
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwróć minimalną wartość liczbową argumentów
 
