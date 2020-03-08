@@ -11,18 +11,18 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398943"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884166"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
 
-Wyliczenie to typ zdefiniowany przez użytkownika, który składa się z szeregu nazwanych stałych liczbach całkowitych, które są znane jako moduły wyliczające.
+Wyliczenie jest typem zdefiniowanym przez użytkownika, który składa się z zestawu nazwanych stałych, które są znane jako Numeratory.
 
 > [!NOTE]
->  Ten artykuł omawia język ISO Standard C++ **wyliczenia** typu i o określonym zakresie (lub silnie typizowane) **klasa wyliczeniowa** typu, który został wprowadzony w C ++ 11. Aby uzyskać informacje o **klasy publicznym typie wyliczeniowym** lub **klasa wyliczeniowa prywatnej** typy w C++sposób niezamierzony i C++/CX, zobacz [klasa wyliczeniowa](../extensions/enum-class-cpp-component-extensions.md).
+>  W tym artykule omówiono typ C++ **WYLICZENIA** języka standardowego ISO oraz typ **klasy wyliczeniowej** z określonym zakresem (lub z jednoznacznie określonymi typami) wprowadzony w języku c++ 11. Aby uzyskać informacje o **publicznej klasie wyliczenia** lub **prywatnych typach klas wyliczeniowych** C++w C++/CLI i/CX, zobacz [enum Class](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,21 +46,21 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Parametry
 
-*Identyfikator*<br/>
-Nazwa typu nadana enumeracji.
+*identyfikatora*<br/>
+Nazwa typu nadana wyliczeniem.
 
 *type*<br/>
-Podstawowy typ enumeratorów; wszystkie moduły wyliczające mają ten sam typ podstawowy. Może być dowolnego typu całkowitoliczbowego.
+Typ podstawowy modułów wyliczających; wszystkie Numeratory mają ten sam typ podstawowy. Może być dowolnym typem całkowitym.
 
-*Lista wyliczenia*<br/>
-Rozdzielana przecinkami lista modułów wyliczających w wyliczeniu. Każdy moduł wyliczający lub nazwa zmiennej w zakresie musi być unikatowa. Jednakże wartości mogą być zduplikowane. W przypadku wyliczenia niewystępującego w zakresie zakresem jest otaczający zakres; w wyliczeniowym w zakresie zakresem jest *listy wyliczenia* sam.  W wyliczeniowym w zakresie listy może być puste w praktyce definiujący nowy typ całkowity.
+*Lista wyliczeniowa*<br/>
+Rozdzielana przecinkami lista modułów wyliczających w wyliczeniu. Każdy moduł wyliczający lub nazwa zmiennej w zakresie musi być unikatowy. Jednak wartości mogą być zduplikowane. W wyliczeniu nieobjętym zakresem zakres jest otaczającym zakresem; w wyliczeniu z zakresem zakres jest sam *listy wyliczeniowej* .  W wyliczeniu z zakresem lista może być pusta, która w efekcie definiuje nowy typ całkowity.
 
 *class*<br/>
-Za pomocą słowa kluczowego w zgłoszeniu, należy określić, ma zakres wyliczenia, a *identyfikator* musi zostać podana. Można również użyć **struktury** słowa kluczowego zamiast **klasy**, jak są semantycznie równoważne w tym kontekście.
+Za pomocą tego słowa kluczowego w deklaracji należy określić zakres wyliczenia i należy podać *Identyfikator* . Można również użyć słowa kluczowego **struct** zamiast **klasy**, ponieważ są one semantycznie równoważne w tym kontekście.
 
 ## <a name="enumerator-scope"></a>Zakres modułu wyliczającego
 
-Wyliczenie tworzy kontekst do opisania zakresu wartości, które są reprezentowane jako nazwane stałe i są również nazywane modułami wyliczającymi. W oryginalnym C i C++ typów wyliczenia niekwalifikowane moduły wyliczające są widoczne w całym zakresie, w którym deklarowane jest wyliczenie. W typach wyliczeniowych Nazwa modułu wyliczającego musi być kwalifikowana przez nazwę typu wyliczenia. Poniższy przykład pokazuje tę podstawową różnicę między dwoma rodzajami wyliczeń:
+Wyliczenie zawiera kontekst do opisania zakresu wartości, które są reprezentowane jako nazwane stałe i są również nazywane modułami wyliczającymi. W oryginalnych typach C i C++ enum, niekwalifikowane moduły wyliczające są widoczne w całym zakresie, w którym jest zadeklarowane Wyliczenie. W przypadku typów wyliczeniowych Nazwa modułu wyliczającego musi być kwalifikowana przez nazwę typu wyliczenia. Poniższy przykład ilustruje tę podstawową różnicę między dwoma rodzajami wyliczeń:
 
 ```cpp
 namespace CardGame_Scoped
@@ -87,25 +87,25 @@ namespace CardGame_NonScoped
 }
 ```
 
-Każda nazwa wyliczenia przydzielono wartość całkowita, która odpowiada jej miejscu w kolejności wartości w wyliczeniu. Domyślnie pierwszej wartości jest przypisane 0, następnej jest przypisany 1 i tak dalej, ale można jawnie ustawić wartość modułu wyliczającego, jak pokazano poniżej:
+Każda nazwa w wyliczeniu ma przypisaną całkowitą wartość, która odpowiada jej miejscu w kolejności wartości w wyliczeniu. Domyślnie pierwsza wartość jest przypisywana 0, następna z nich jest przypisana 1 itd., ale można jawnie ustawić wartość modułu wyliczającego, jak pokazano poniżej:
 
 ```cpp
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 ```
 
-Moduł wyliczający `Diamonds` jest przypisywana wartość `1`. Kolejne enumeratory, jeśli nie posiadają wartości jawnej, otrzymują wartość poprzedniego enumeratora plus jeden. W poprzednim przykładzie `Hearts` miałby wartość 2, `Clubs` mogłoby być 3 i tak dalej.
+`Diamonds` modułu wyliczającego jest przypisana `1`wartość. Kolejne Numeratory, jeśli nie otrzymają jawnej wartości, otrzymają wartość poprzedniego modułu wyliczającego plus jeden. W poprzednim przykładzie `Hearts` będzie mieć wartość 2, `Clubs` byłoby 3 i tak dalej.
 
-Każdy moduł wyliczający jest traktowany jako stała i musi mieć unikatową nazwę w zakresie gdzie **wyliczenia** zdefiniowano (dla wyliczeń poza zakresem) lub w ramach **wyliczenia** sam (dla wyliczeń objętych zakresem). Wartości nadane nazwom nie muszą być unikatowe. Na przykład jeśli deklaracja wyliczenia niewystępującego w zakresie `Suit` to:
+Każdy moduł wyliczający jest traktowany jako stała i musi mieć unikatową nazwę w zakresie, w którym zdefiniowano **Wyliczenie** (dla typów wyliczeniowych nieobjętych zakresem) lub w obrębie samego **wyliczenia** (dla typów wyliczeniowych w zakresie). Wartości nadane nazw nie muszą być unikatowe. Na przykład jeśli deklaracja wyliczenia nieobjętego zakresem `Suit` jest taka:
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 ```
 
-Następnie wartości `Diamonds`, `Hearts`, `Clubs`, i `Spades` to 5, 6, 4 i 5, odpowiednio. Należy zauważyć, że 5 zastosowano więcej niż raz; jest to dozwolone, mimo że nie może być korzystne. Te zasady są takie same dla wyliczeń objętych zakresem.
+Następnie wartości `Diamonds`, `Hearts`, `Clubs`i `Spades` są odpowiednio 5, 6, 4 i 5. Zauważ, że 5 jest używany więcej niż jeden raz; jest to dozwolone, chociaż może nie być zamierzone. Te reguły są takie same dla typów wyliczeniowych w zakresie.
 
 ## <a name="casting-rules"></a>Reguły rzutowania
 
-Stałe wyliczeń nieobjętych zakresem można niejawnie przekonwertować **int**, ale **int** nigdy nie jest niejawnie konwertowany na wartość wyliczenia. W poniższym przykładzie pokazano, co się stanie, jeśli użytkownik próbuje przypisać `hand` wartość, która nie jest `Suit`:
+Stałe wyliczeniowe nieobjęte zakresem mogą być niejawnie konwertowane na **typ int**, ale **int** nigdy nie jest możliwa do niejawnego konwersji na wartość enum. W poniższym przykładzie pokazano, co się dzieje w przypadku próby przypisania `hand` wartości, która nie jest `Suit`:
 
 ```cpp
 int account_num = 135692;
@@ -113,13 +113,13 @@ Suit hand;
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
 ```
 
-Obsada jest wymagana do konwertowania **int** do zakresem lub bez zakresu modułu wyliczającego. Możesz jednak podwyższyć poziom modułu wyliczającego nieobjętego zakresem do wartości będącej liczbą całkowitą bez rzutowania.
+Rzutowanie jest wymagane do przekonwertowania **int** na moduł wyliczający w zakresie lub w zakresie nienależącym do zakresu. Można jednak podwyższyć poziom modułu wyliczającego nieobjętego zakresem do wartości całkowitej bez rzutowania.
 
 ```cpp
 int account_num = Hearts; //OK if Hearts is in a unscoped enum
 ```
 
-Korzystanie z niejawnych konwersji w ten sposób może prowadzić do niezamierzonych skutków ubocznych. Aby wyeliminować błędy programowania związane z wyliczeniami nieobjętymi zakresem, wartości wyliczeń w zakresie są silnie typizowane. Moduły wyliczające w zakresie musi być kwalifikowana przez nazwę typu wyliczenia (identyfikator) i nie można niejawnie przekonwertować, jak pokazano w poniższym przykładzie:
+Użycie niejawnych konwersji w ten sposób może prowadzić do niezamierzonych efektów ubocznych. Aby pomóc wyeliminować błędy programistyczne związane z wyliczeniem nienależącym do zakresu, wartości wyliczeniowe w zakresie są jednoznacznie wpisywane. Moduł wyliczający w zakresie musi być kwalifikowana przez nazwę typu wyliczenia (identyfikator) i nie może być niejawnie konwertowany, jak pokazano w następującym przykładzie:
 
 ```cpp
 namespace ScopedEnumConversions
@@ -141,17 +141,17 @@ namespace ScopedEnumConversions
 }
 ```
 
-Należy zauważyć, że wiersz `hand = account_num;` nadal powoduje błąd występujący z wyliczeniami nieobjętymi zakresem, jak pokazano wcześniej. Jest ona dozwolona z jawnym rzutowaniem. Jednakże przy typach wyliczeniowych w zakresie próba konwersji w następnej instrukcji `account_num = Suit::Hearts;`, nie jest już dozwolona bez jawnego rzutowania.
+Zauważ, że wiersz `hand = account_num;` nadal powoduje błąd występujący z wyliczeniem nieobjętym zakresem, jak pokazano wcześniej. Jest to dozwolone w przypadku jawnego rzutowania. Jednak w przypadku typów wyliczeniowych w zakresie próba konwersji w następnej instrukcji `account_num = Suit::Hearts;`nie jest już dozwolona bez jawnego rzutowania.
 
-## <a name="no_enumerators"></a> Typy wyliczeniowe atrybutem nie modułów wyliczających
+## <a name="no_enumerators"></a>Wyliczenia bez modułów wyliczających
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Definiując wyliczenia (regularnych lub zakresie) za pomocą jawnego typu podstawowego i nie wyliczenia, obowiązuje można wprowadzać nowe integralny typ, który nie ma niejawnej konwersji do żadnego innego typu. Przy użyciu tego typu, a nie jej wbudowany typ podstawowy, można wyeliminować ryzyko drobne błędy spowodowane przypadkowego niejawne konwersje.
+**Visual Studio 2017 w wersji 15,3 i nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): przez zdefiniowanie wyliczenia (regularnego lub w zakresie) z jawnym typem podstawowym i brak modułów wyliczających, można wprowadzić nowy typ całkowity, który nie ma jawnej konwersji na inny typ. Przy użyciu tego typu, a nie wbudowanego typu podstawowego, można wyeliminować potencjalne błędy powodowane przez przypadkowe konwersje niejawne.
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Nowy typ jest dokładna kopia typu podstawowego i dlatego ma tą samą konwencję wywołania, co oznacza, że może służyć przez interfejsy ABI bez żadnych spadek wydajności. Brak rzutowania jest wymagany, gdy zmienne typu są inicjowane za pomocą bezpośrednich listy inicjowania. Poniższy przykład pokazuje, jak zainicjować Typy wyliczeniowe atrybutem nie modułów wyliczających w różnych kontekstach:
+Nowy typ jest dokładną kopią typu bazowego i dlatego ma tę samą konwencję wywołania, co oznacza, że może być używany przez interfejsy ABI bez żadnej kary wydajności. Nie jest wymagane rzutowanie, gdy zmienne typu są inicjowane przy użyciu inicjalizacji listy bezpośredniej. Poniższy przykład pokazuje, jak zainicjować wyliczenia bez modułów wyliczających w różnych kontekstach:
 
 ```cpp
 enum class byte : unsigned char { };
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje modułów wyliczających języka C](../c-language/c-enumeration-declarations.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

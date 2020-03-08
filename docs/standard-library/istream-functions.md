@@ -6,17 +6,17 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458766"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874836"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;funkcje&gt; IStream
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[wymiany](#istream_swap)|[WS](#ws)|
 
 ## <a name="istream_swap"></a>wymiany
 
@@ -36,10 +36,10 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Strumień.
 
-*Kliknij*\
+*prawa*\
 Strumień.
 
 ## <a name="ws"></a>WS
@@ -61,14 +61,14 @@ Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator wyodrębnia i `ch` odrzuca wszystkie elementy, dla których [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType** \< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **jest** ( **CType** \< **elem**>:: **Space**, **ch**) ma wartość true.
+Manipulator wyodrębnia i odrzuca wszystkie elementy `ch`, dla których [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **elem**>:: **Space**, **ch**) ma wartość true.
 
 Funkcja wywołuje metodę [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), jeśli napotka koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [> operatora >](../standard-library/istream-operators.md#op_gt_gt) , aby zapoznać się z `ws`przykładem użycia.
+Zobacz [> operatora >](../standard-library/istream-operators.md#op_gt_gt) , aby zapoznać się z przykładem użycia `ws`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<istream>](../standard-library/istream.md)
+[\<IStream >](../standard-library/istream.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;valarray —&gt; funkcji'
+title: '&lt;funkcje&gt; valarray'
 ms.date: 11/04/2016
 f1_keywords:
 - valarray/std::abs
@@ -41,17 +41,17 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246685"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875618"
 ---
-# <a name="ltvalarraygt-functions"></a>&lt;valarray —&gt; funkcji
+# <a name="ltvalarraygt-functions"></a>&lt;funkcje&gt; valarray
 
-## <a name="abs"></a> ABS
+## <a name="abs"></a>ABS
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe wartość bezwzględną liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe wartości bezwzględnej elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -60,12 +60,12 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe wartość bezwzględną liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe wartości bezwzględnej elementów valarray wejściowej.
 
 ### <a name="example"></a>Przykład
 
@@ -104,9 +104,9 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```
 
-## <a name="acos"></a> ACOS
+## <a name="acos"></a>Acos
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe arcus cosinus liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe cosinusowi elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -115,18 +115,18 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe arcus cosinus liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe cosinusowi elementów wejściowego valarrayu.
 
 ### <a name="remarks"></a>Uwagi
 
 Jednostki zwracanych elementów są w radianach.
 
-Wartość zwracana jest wartość jednostki z zakresu od 0 i + pi, który jest zgodny z wartość funkcji cosinus, danych wejściowych.
+Wartość zwracana jest wartością główną z przedziału od 0 do + Pi, która jest spójna z danymi wejściowymi wartości cosinus.
 
 ### <a name="example"></a>Przykład
 
@@ -177,9 +177,9 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees
 ```
 
-## <a name="asin"></a> ASIN
+## <a name="asin"></a>Asin
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe arcus sinus liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe sinusowi elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -188,18 +188,18 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe arcus sinus liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe sinusowi elementów wejściowego valarrayu.
 
 ### <a name="remarks"></a>Uwagi
 
 Jednostki zwracanych elementów są w radianach.
 
-Wartość zwracana jest podmiotem wartość między + pi/2-pi/2, który jest zgodny z sinus wartości danych wejściowych.
+Wartość zwracana jest wartością główną z przedziału od + Pi/2 i-pi/2, która jest zgodna z danymi wejściowymi o wartości sinus.
 
 ### <a name="example"></a>Przykład
 
@@ -250,9 +250,9 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees
 ```
 
-## <a name="atan"></a> ATAN
+## <a name="atan"></a>atan
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe wartość główną wartości arcus tangens elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe wartości głównej arcus tangens elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -261,18 +261,18 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe arcus tangens elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe arcus tangens elementów wejściowego valarrayu.
 
 ### <a name="remarks"></a>Uwagi
 
 Jednostki zwracanych elementów są w radianach.
 
-Wartość zwracana jest podmiotem wartość między + pi/2-pi/2, który jest zgodny z tangens wartości danych wejściowych.
+Wartość zwracana jest wartością główną z przedziału od + Pi/2 i-pi/2, która jest spójna z danymi wejściowymi wartości stycznej.
 
 ### <a name="example"></a>Przykład
 
@@ -326,9 +326,9 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees
 ```
 
-## <a name="atan2"></a> funkcja ATAN2
+## <a name="atan2"></a>atan2
 
-Zwraca tablicę valarray, której elementy są równe arcus tangens Kartezjańskiego określone przez kombinację stałych i elementy valarrays składników.
+Zwraca valarray, którego elementy są równe arcus tangens składników kartezjańskiego określonych przez kombinację stałych i elementów valarrays.
 
 ```cpp
 template <class Type>
@@ -343,29 +343,29 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną y arcus tangens argumentu.
+\ *lewo*
+Stały typ danych liczbowych lub dane wejściowe valarray, których elementy zapewniają wartości współrzędnych y argumentu arcus tangens.
 
-*po prawej stronie*\
-Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną x arcus tangens argumentu.
+*prawa*\
+Stały typ danych liczbowych lub dane wejściowe valarray, których elementy dostarczają wartości dla współrzędnych x argumentu arcus tangens.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — której elementy `I` są równe arcus tangens:
+Element valarray, którego elementy `I` są równe arcus tangens:
 
-- `left` [ *I* ] / *_Righ*t [ *I* ] dla pierwszej funkcji szablonu.
+- `left` [ *i* ]/ *_Righ*t [ *i* ] dla pierwszej funkcji szablonu.
 
-- `left` [ *I* ] / `right` drugiej funkcji szablonu.
+- `left` [ *I* ]/`right` dla drugiej funkcji szablonu.
 
-- `left` / `right` [ *I* ] dla trzecia funkcja szablonu.
+- `left` / `right` [ *I* ] dla funkcji trzeciego szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
 Jednostki zwracanych elementów są w radianach.
 
-Tę funkcję, zachowuje informacje o oznaki składników w argumencie, który jest utracone podczas standardowej funkcji tangens, a ta wiedza quadrant umożliwia zwracanej wartości można przypisać unikatowy kąta między + pi i - pi.
+Ta funkcja zachowuje informacje o znakach komponentów w argumencie, który jest tracony przez funkcję tangens standardowy, a ta znajomość ćwiartki umożliwia przypisanie unikatowego kąta między + pi i-pi.
 
-Jeśli *po lewej stronie* i *prawo* mają różną liczbę elementów, wynik jest niezdefiniowany.
+Jeśli *Left* i *Right* mają inną liczbę elementów, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -420,16 +420,16 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees
 ```
 
-## <a name="begin"></a> Rozpocznij
+## <a name="begin"></a>zaczną
 
 ```cpp
 template <class T> unspecified 1 begin(valarray<T>& v);
 template <class T> unspecified 2 begin(const valarray<T>& v);
 ```
 
-## <a name="cos"></a> COS
+## <a name="cos"></a>cosinus
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe cosinus liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe cosinusowi elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -438,12 +438,12 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe wartość bezwzględną liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe wartości bezwzględnej elementów valarray wejściowej.
 
 ### <a name="example"></a>Przykład
 
@@ -504,9 +504,9 @@ The cosine of the initial valarray is:
 -1
 ```
 
-## <a name="cosh"></a> COSH
+## <a name="cosh"></a>cosh —
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe cosinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe cosinus hiperboliczny elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -515,18 +515,18 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe cosinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Valarray, których elementy są równe cosinus hiperboliczny elementów wejściowych valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie cosinus hiperboliczny pod względem funkcji wykładniczej tożsamości:
+Tożsamości definiujące cosinus hiperboliczny w zakresie funkcji wykładniczej:
 
-COSH ( *z* ) = (exp ( *z* ) + exp (- *z* )) / 2
+COSH — ( *z* ) = (EXP ( *z* ) + EXP (- *z* ))/2
 
 ### <a name="example"></a>Przykład
 
@@ -587,16 +587,16 @@ The hyperbolic cosine of the initial valarray is:
 11.592
 ```
 
-## <a name="end"></a> koniec
+## <a name="end"></a>punktów
 
 ```cpp
 template <class T> unspecified 1 end(valarray<T>& v);
 template <class T> unspecified 2 end(const valarray<T>& v);
 ```
 
-## <a name="exp"></a> EXP
+## <a name="exp"></a>EXP
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe do naturalnym wykładniczą elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe naturalnej wykładniczej elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -605,12 +605,12 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe do naturalnym wykładniczą elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe naturalnej wykładniczej elementów wejściowych valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -657,9 +657,9 @@ The natural exponential of the initial valarray is:
 22026.5
 ```
 
-## <a name="log"></a> Dziennik
+## <a name="log"></a>rejestrowane
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe logarytm naturalny elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe logarytmu naturalnego elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -668,12 +668,12 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe wartość bezwzględną liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe wartości bezwzględnej elementów valarray wejściowej.
 
 ### <a name="example"></a>Przykład
 
@@ -720,9 +720,9 @@ The natural logarithm of the initial valarray is:
 4.38203
 ```
 
-## <a name="log10"></a> LOG10
+## <a name="log10"></a>log10 —
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe, na podstawie 10 lub logarytmu elementów wejściowych tablicy valarray.
+Działa na elementach wejściowej valarray, zwracając element valarray, którego elementy są równe 10 lub logarytmu wartości wejściowej elementów valarray.
 
 ```cpp
 template <class Type>
@@ -731,12 +731,12 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe logarytmu elementów wejściowych tablicy valarray.
+Element valarray, którego elementy są równe typowi logarytmu elementów wejściowych valarray.
 
 ### <a name="example"></a>Przykład
 
@@ -785,9 +785,9 @@ The common logarithm of the initial valarray is:
 2
 ```
 
-## <a name="pow"></a> Pow
+## <a name="pow"></a>pow
 
-Działa w przypadku elementów wejściowych valarrays i stałe, zwracając valarray, której elementy są równe podstawowy określonej przez elementy wejściowe tablicy valarray lub stałą podniesioną do potęgi określonej przez elementy wejściowe tablicy valarray lub stała.
+Działa na elementach wejściowych valarrays i stałych, zwracając valarray, których elementy są równe podstawie określonej przez elementy elementu wejściowego valarray lub stałej podniesionej do wykładnika określonego przez elementy valarray danych wejściowych lub stałego.
 
 ```cpp
 template <class Type>
@@ -811,25 +811,25 @@ pow(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Wejściowy tablicy valarray, której elementy podać base, aby każdy element ma być exponentiated.
+\ *lewo*
+Dane wejściowe valarray, których elementy dostarczają podstawę dla każdego elementu, który ma być exponentiated.
 
-*po prawej stronie*\
-Wejściowy tablicy valarray, której elementy dostaw energii do każdy element ma być exponentiated.
+*prawa*\
+Dane wejściowe valarray, których elementy dostarczają moc dla każdego elementu, który ma być exponentiated.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — której elementy `I` są równe:
+Element valarray, którego elementy `I` są równe:
 
-- `left` [ *I* ] podniesioną do potęgi `right` [ *I* ] dla pierwszej funkcji szablonu.
+- `left` [ *i* ] podniesione do `right` mocy [ *i* ] dla pierwszej funkcji szablonu.
 
-- `left` [ *I* ] podniesioną do potęgi `right` drugiej funkcji szablonu.
+- `left` [ *I* ] podniesione do `right` mocy dla drugiej funkcji szablonu.
 
-- `left` podniesioną do potęgi `right` [ *I* ] dla trzecia funkcja szablonu.
+- `left` podniesiono do `right` mocy [ *I* ] dla trzeciej funkcji szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *po lewej stronie* i *prawo* mają różną liczbę elementów, wynik jest niezdefiniowany.
+Jeśli *Left* i *Right* mają inną liczbę elementów, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -882,9 +882,9 @@ n = 4   gives 256
 n = 5   gives 1024
 ```
 
-## <a name="sin"></a> SIN
+## <a name="sin"></a>sinus
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe sinus elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe sinusowi elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -893,12 +893,12 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe sinus elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe sinusowi elementów wejściowego valarrayu.
 
 ### <a name="example"></a>Przykład
 
@@ -959,9 +959,9 @@ The sine of the initial valarray is:
 -2.06823e-013
 ```
 
-## <a name="sinh"></a> SINH
+## <a name="sinh"></a>SINH
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe sinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe sinus hiperboliczny elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -970,18 +970,18 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe sinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Valarray, których elementy są równe sinus hiperboliczny elementów wejściowych valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie sinus hiperboliczny pod względem funkcji wykładniczej tożsamości:
+Tożsamości definiujące sinus hiperboliczny w zakresie funkcji wykładniczej:
 
-SINH ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2
+sinh ( *z* ) = (EXP ( *z* )-EXP (- *z* ))/2
 
 ### <a name="example"></a>Przykład
 
@@ -1042,9 +1042,9 @@ The hyperbolic sine of the initial valarray is:
 11.5487
 ```
 
-## <a name="sqrt"></a> SQRT
+## <a name="sqrt"></a>sqrt
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe pierwiastek kwadratowy liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe pierwiastek kwadratowy elementów valarray danych wejściowych.
 
 ```cpp
 template <class Type>
@@ -1053,12 +1053,12 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe pierwiastek kwadratowy liczby elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe pierwiastek kwadratowy elementów wejściowego valarrayu.
 
 ### <a name="example"></a>Przykład
 
@@ -1096,9 +1096,9 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
-Zamienia elementy z dwóch valarrays.
+Wymienia elementy dwóch valarrays.
 
 ```cpp
 template <class Type>
@@ -1109,19 +1109,19 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `valarray`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `valarray`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.swap(right)`.
+Funkcja Template wykonuje `left.swap(right)`.
 
-## <a name="tan"></a> tan
+## <a name="tan"></a>Tan
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe tangens elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe tangensowi elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -1130,12 +1130,12 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe tangens elementów tworzonej tablicy valarray danych wejściowych.
+Element valarray, którego elementy są równe tangensowi elementów wejściowego valarrayu.
 
 ### <a name="example"></a>Przykład
 
@@ -1196,9 +1196,9 @@ The tangent of the initial valarray is:
 -9.6701e+012
 ```
 
-## <a name="tanh"></a> TANH
+## <a name="tanh"></a>TANH —
 
-Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe tangens hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Działa na elementach wejściowych valarray, zwracając valarray, których elementy są równe tangens hiperboliczny elementów danych wejściowych valarray.
 
 ```cpp
 template <class Type>
@@ -1207,18 +1207,18 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+\ *lewo*
+Dane wejściowe valarray, których elementy mają być obsługiwane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray, której elementy są równe cosinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.
+Valarray, których elementy są równe cosinus hiperboliczny elementów wejściowych valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie tangens hiperboliczny pod względem funkcji wykładniczej tożsamości:
+Tożsamości definiujące tangens hiperboliczny w zakresie funkcji wykładniczej:
 
-TANH ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* )-exp (- *z* )) / (exp ( *z* ) + exp (- *z* ))
+TANH ( *z* ) = sinh ( *z* )/COSH — ( *z* ) = (EXP ( *z* ) do EXP (- *z* ))/(EXP ( *z* ) + EXP (- *z* ))
 
 ### <a name="example"></a>Przykład
 

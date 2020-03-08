@@ -8,26 +8,26 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502024"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855696"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 
-Aby aplikacja mogła korzystać z usług systemu OLE, musi zainicjować biblioteki DLL systemu OLE i sprawdzić, czy biblioteki DLL są poprawne. `AfxOleInit` Funkcja inicjuje biblioteki DLL systemu OLE.
+Aby aplikacja mogła korzystać z usług systemu OLE, musi zainicjować biblioteki DLL systemu OLE i sprawdzić, czy biblioteki DLL są poprawne. Funkcja `AfxOleInit` inicjuje biblioteki DLL systemu OLE.
 
 ### <a name="ole-initialization"></a>Inicjalizacja OLE
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|Inicjuje biblioteki OLE.|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Wywołaj tę funkcję w `InitInstance` funkcji obiektu aplikacji, aby włączyć obsługę funkcji zawierania formantów OLE.|
+|[AfxEnableControlContainer —](#afxenablecontrolcontainer)|Wywołaj tę funkcję w funkcji `InitInstance` obiektu aplikacji, aby włączyć obsługę funkcji zawierania formantów OLE.|
 
 ## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer —
 
-Wywołaj tę funkcję w `InitInstance` funkcji obiektu aplikacji, aby włączyć obsługę funkcji zawierania formantów OLE.
+Wywołaj tę funkcję w funkcji `InitInstance` obiektu aplikacji, aby włączyć obsługę funkcji zawierania formantów OLE.
 
 ### <a name="syntax"></a>Składnia
 
@@ -67,12 +67,12 @@ Wywołaj tę funkcję, aby zainicjować obsługę OLE dla aplikacji MFC. Gdy ta 
 >  Jeśli **AfxOleInit** jest wywoływana z biblioteki MFC DLL, wywołanie zakończy się niepowodzeniem. Błąd występuje, ponieważ funkcja zakłada, że jeśli jest wywoływana z biblioteki DLL, system OLE został wcześniej zainicjowany przez aplikację wywołującą.
 
 > [!NOTE]
->  Aplikacje MFC muszą być zainicjowane jako Apartament jednowątkowy (STA). Jeśli wywołasz [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) w `InitInstance` przesłonięciu, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
+>  Aplikacje MFC muszą być zainicjowane jako Apartament jednowątkowy (STA). Jeśli wywołasz [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) w przesłonięciu `InitInstance`, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

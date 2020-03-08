@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323599"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883996"
 ---
 # <a name="ctreeview-class"></a>Klasa CTreeView
 
-Upraszcza korzystania z formantu drzewa z [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), klasa, która łączy funkcjonalność formantu drzewa z architekturą widoku dokumentu MFC.
+Upraszcza korzystanie z formantu drzewa i [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), klasy, która hermetyzuje funkcjonalność kontrolki drzewa, z architekturą widoku dokumentu MFC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,17 +33,17 @@ class CTreeView : public CCtrlView
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|Konstruuje `CTreeView` obiektu.|
+|[CTreeView:: CTreeView](#ctreeview)|Konstruuje obiekt `CTreeView`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|Zwraca kontrolkę drzewa skojarzone z tym widokiem.|
+|[CTreeView:: funkcji GetTreeCtrl](#gettreectrl)|Zwraca kontrolkę drzewa skojarzoną z widokiem.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat tej architektury, zobacz Omówienie dla [CView](../../mfc/reference/cview-class.md) klasy i odsyłacze cytowane istnieje.
+Aby uzyskać więcej informacji na temat tej architektury, zobacz Omówienie klasy [CView](../../mfc/reference/cview-class.md) i odsyłaczy w tym miejscu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,19 +61,19 @@ Aby uzyskać więcej informacji na temat tej architektury, zobacz Omówienie dla
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcview.h
+**Nagłówek:** afxcview. h
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView:: CTreeView
 
-Konstruuje `CTreeView` obiektu.
+Konstruuje obiekt `CTreeView`.
 
 ```
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView:: funkcji GetTreeCtrl
 
-Zwraca odwołanie do formantu drzewa skojarzone z tym widokiem.
+Zwraca odwołanie do kontrolki drzewa skojarzonej z widokiem.
 
 ```
 CTreeCtrl& GetTreeCtrl() const;

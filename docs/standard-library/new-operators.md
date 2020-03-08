@@ -1,28 +1,28 @@
 ---
-title: '&lt;nowe&gt; operatory i wyliczenia'
+title: '&lt;nowe operatory&gt; i wyliczenia'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243678"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854949"
 ---
-# <a name="ltnewgt-operators-and-enums"></a>&lt;nowe&gt; operatory i wyliczenia
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nowe operatory&gt; i wyliczenia
 
-## <a name="op_align_val_t"></a> align_val_t wyliczenia
+## <a name="op_align_val_t"></a>align_val_t enum
 
 ```cpp
 enum class align_val_t : size_t {};
 ```
 
-## <a name="op_delete"></a> Usuwanie operatora
+## <a name="op_delete"></a>Usuwanie operatora
 
-Funkcja wywoływana przez wyrażenie delete, aby usunąć przydział pamięci masowej dla poszczególnych obiektów.
+Funkcja wywołana przez wyrażenie delete do cofnięcia przydziału magazynu dla poszczególnych obiektów.
 
 ```cpp
 void operator delete(void* ptr) throw();
@@ -32,26 +32,26 @@ void operator delete(void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
-Wskaźnik, którego wartość ma być renderowany przez usunięcie nieprawidłowy.
+\ *PTR*
+Wskaźnik, którego wartość ma być renderowana nieprawidłowa przez operację usuwania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja jest wywoływana przez wyrażenie delete do renderowania wartości *ptr* nieprawidłowy. Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**).
+Pierwsza funkcja jest wywoływana przez wyrażenie delete w celu renderowania wartości *PTR* jest nieprawidłowy. Program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Wymaganym zachowaniem jest zaakceptowanie wartości *PTR* o wartości null lub zwróconej przez wcześniejsze wywołanie [operatora new](../standard-library/new-operators.md#op_new)(**size_t**).
 
-Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla wartości innej niż null wartości elementu *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie `operator new`(**size_t**), lub dowolnych `calloc`( **size_t**), `malloc`( **size_t**), lub `realloc`( **void**<strong>\*</strong>, **size_t**).
+Domyślnym zachowaniem dla wartości null *PTR* jest brak. Każda inna wartość *PTR* musi być wartością zwracaną wcześniej przez wywołanie opisane wcześniej. Domyślnym zachowaniem dla takiej wartości niezerowej *PTR* jest odproszenie magazynu przydzielonego przez poprzednie wywołanie. Nie jest on określony w sekcji jakie warunki lub wszystkie odzyskiwane magazyny są przydzielone przez kolejne wywołanie do `operator new`(**size_t**) lub do dowolnej `calloc`( **size_t**), `malloc`( **size_t**) lub `realloc`( **void** <strong>\*</strong>, **size_t**).
 
-Druga funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**). Nic nie robi.
+Druga funkcja jest wywoływana przez wyrażenie usuwania umieszczania odpowiadające nowemu wyrażeniu formularza **New**( **std:: size_t**). Nic nie robi.
 
-Trzecia funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**, **conststd::nothrow_t &** ). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości `ptr` oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie `operator new`( **size_t**). Domyślne zachowanie to można obliczyć **Usuń**(`ptr`).
+Trzecia funkcja jest wywoływana przez wyrażenie usuwania umieszczania odpowiadające nowemu wyrażeniu formularza **New**( **std:: size_t**, **conststd:: nothrow_t &** ). Program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Wymagane zachowanie polega na zaakceptowaniu wartości `ptr`, która ma wartość null lub która została zwrócona przez wcześniejsze wywołanie do `operator new`( **size_t**). Domyślnym zachowaniem jest oszacowanie **usuwania**(`ptr`).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [nowy operator](../standard-library/new-operators.md#op_new) przykład używanego przez **operatora delete**.
+Zobacz [operator new](../standard-library/new-operators.md#op_new) dla przykładu, który używa **operatora delete**.
 
-## <a name="op_delete_arr"></a> Usuwanie operatora]
+## <a name="op_delete_arr"></a>Usuwanie operatora []
 
-Funkcja wywoływana przez wyrażenie usunięcia można cofnąć alokacji pamięci masowej na tablicę obiektów.
+Funkcja wywołana przez wyrażenie delete do dealokacji magazynu dla tablicy obiektów.
 
 ```cpp
 void operator delete[](void* ptr) throw();
@@ -61,24 +61,24 @@ void operator delete[](void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
-Wskaźnik, którego wartość ma być renderowany przez usunięcie nieprawidłowy.
+\ *PTR*
+Wskaźnik, którego wartość ma być renderowana nieprawidłowa przez operację usuwania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wartości *ptr* nieprawidłowy. Funkcja jest wymienny, ponieważ program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie [nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla tych innych niż null wartość *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**), lub dowolnych `calloc`(**size_t**), `malloc`(**size_t**), lub `realloc`( **void**<strong>\*</strong>, **size_t**) .
+Pierwsza funkcja jest wywoływana przez wyrażenie `delete[]`, aby renderować wartość *PTR* jest nieprawidłowa. Funkcja jest przemieszczenia, ponieważ program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Wymaganym zachowaniem jest zaakceptowanie wartości *PTR* o wartości null lub zwróconej przez wcześniejsze wywołanie [operatora new&#91;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Domyślnym zachowaniem dla wartości null *PTR* jest brak. Każda inna wartość *PTR* musi być wartością zwracaną wcześniej przez wywołanie opisane wcześniej. Zachowanie domyślne dla takiej wartości, która *nie jest wartością null, ma* na celu odproszenie magazynu przydzielonego przez poprzednie wywołanie. Nie jest on określony w sekcji jakie warunki lub wszystkie odzyskiwane magazyny są przypisywane przez kolejne wywołanie [operatora new](../standard-library/new-operators.md#op_new)(**size_t**) lub do dowolnego `calloc`(**size_t**), `malloc`(**size_t**) lub `realloc`( **void** <strong>\*</strong>, **size_t**).
 
-Druga funkcja jest wywoływana przez umieszczania `delete[]` wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`(**std::size_t**). Nic nie robi.
+Druga funkcja jest wywoływana przez wyrażenie `delete[]` umieszczania odpowiadające wyrażeniu `new[]` formularza `new[]`(**std:: size_t**). Nic nie robi.
 
-Trzecia funkcja jest wywoływana przez umieszczania Usuń wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`( **std::size_t**, **const std::nothrow_t &** ). Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który zwrócił podczas wcześniejszego wywołania do operatora `new[]`(**size_t**). Domyślne zachowanie to można obliczyć `delete[]`( `ptr`).
+Trzecia funkcja jest wywoływana przez wyrażenie usuwania umieszczania odpowiadające wyrażeniem `new[]` formularza `new[]`( **std:: size_t**, **const std:: nothrow_t &** ). Program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Wymaganym zachowaniem jest zaakceptowanie wartości *PTR* o wartości null lub zwróconej przez wcześniejsze wywołanie operatora `new[]`(**size_t**). Domyślnym zachowaniem jest oszacowanie `delete[]`(`ptr`).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykłady stosowania `operator delete[]`.
+Zobacz [operator new&#91; ](../standard-library/new-operators.md#op_new_arr) for przykłady użycia `operator delete[]`.
 
-## <a name="op_new"></a> nowy operator
+## <a name="op_new"></a>Nowy operator
 
-Funkcja wywoływana przez nowe wyrażenie do przydzielania pamięci dla poszczególnych obiektów.
+Funkcja wywołana przez nowe wyrażenie do przydzielania pamięci dla pojedynczych obiektów.
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
@@ -88,45 +88,45 @@ void* operator new(std::size_t count, void* ptr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*\
+*liczba*\
 Liczba bajtów magazynu do przydzielenia.
 
-*PTR*\
-Wskaźnik, który ma zostać zwrócona.
+\ *PTR*
+Wskaźnik, który ma zostać zwrócony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do najniższym adresem bajtów magazynu nowo przydzielone. Lub *ptr*.
+Wskaźnik do najmniejszego bajtu nowo przydzielonych magazynów. Lub *PTR*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja jest wywoływana przez nowe wyrażenie można przydzielić `count` bajtów magazynu odpowiednio wyrównaną do do reprezentowania dowolnego obiektu tego rozmiaru. Program można zdefiniować funkcję alternatywne podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki C++, a więc jest wymienny.
+Pierwsza funkcja jest wywoływana przez nowe wyrażenie, aby przydzielić `count` bajty magazynu odpowiednio wyrównane do reprezentowania dowolnego obiektu tego rozmiaru. Program może zdefiniować alternatywną funkcję za pomocą tej sygnatury funkcji, która zastępuje domyślną wersję zdefiniowaną C++ przez bibliotekę standardową, więc można ją przemieścić.
 
-Wymagane zachowanie ma zwrócić wskaźnik o wartości innej niż NULL tylko wtedy, gdy można przydzielić magazynu zgodnie z żądaniem. Każdy taki przydział daje wskaźnik do magazynu odłączonego od innych magazynów przydzielone. Kolejność i contiguity pamięci przydzielonej przez kolejnych wywołań jest nieokreślona. Początkowa wartość przechowywana jest nieokreślony. Zwrócony wskaźnik wskazuje początek (najniższy adres bajtów) przydzielenia pamięci. Jeśli liczba jest równa zero, wartość zwracana nie są sobie równe jakąkolwiek wartość zwrócona przez funkcję.
+Wymagane zachowanie ma zwrócić wskaźnik o wartości niezerowej tylko wtedy, gdy magazyn może być przydzielony zgodnie z żądaniem. Każda taka alokacja daje wskaźnik do odłączenia magazynu z dowolnego innego przydzielonego magazynu. Kolejność i contiguity magazynu przydzielonego przez kolejne wywołania nie są określone. Początkowa przechowywana wartość jest nieokreślona. Zwrócony wskaźnik wskazuje początkową (najmniejszą liczbę bajtów) przydzieloną pamięć masową. Jeśli liczba jest równa zero, zwracana wartość nie jest porównywana z żadną inną wartością zwracaną przez funkcję.
 
-Domyślnym zachowaniem jest wykonywanie pętli. W pętli funkcja najpierw próbuje przydzielić żądanego magazynu. Czy próba polega na wywołaniu `malloc`( **size_t**) jest nieokreślona. Jeśli próba zakończy się pomyślnie, funkcja zwraca wskaźnik do przydzielenia pamięci. W przeciwnym razie funkcja wywołuje wyznaczonej [nowy program obsługi](../standard-library/new-typedefs.md#new_handler). Jeśli wywołana funkcja zwróci wartość, powtórzeniu pętli. Pętla kończy, gdy próba przydzielanie magazynu do żądanej zakończy się pomyślnie lub wywołana funkcja nie zwraca.
+Zachowaniem domyślnym jest wykonanie pętli. W obrębie pętli funkcja najpierw próbuje przydzielić żądany magazyn. Czy próba dotyczy wywołania `malloc`( **size_t**) nie została określona. Jeśli próba zakończy się pomyślnie, funkcja zwraca wskaźnik do przydzielonych magazynów. W przeciwnym razie funkcja wywołuje wydaną [nową procedurę obsługi](../standard-library/new-typedefs.md#new_handler). Jeśli wywołana funkcja zwraca, pętla powtarza się. Pętla kończy się, gdy próba przydzielenia żądanego magazynu zakończy się pomyślnie lub gdy wywołana funkcja nie zwraca.
 
-Wymagane działanie nowy program obsługi jest wykonaj jedną z następujących czynności:
+Wymaganym zachowaniem nowego programu obsługi jest wykonanie jednej z następujących operacji:
 
-- Udostępnij więcej pamięci masowej do alokacji, a następnie powrócić.
+- Udostępnienie większej ilości miejsca do magazynowania w celu przydzielenia, a następnie zwrócenia.
 
-- Wywołaj opcję **przerwać** lub **wyjść**(`int`).
+- Wywołaj metodę **Abort** lub **Exit**(`int`).
 
-- Obiekt typu throw **bad_alloc —.**
+- Zgłoś obiekt typu **bad_alloc.**
 
-Domyślne zachowanie [nowy program obsługi](../standard-library/new-typedefs.md#new_handler) to zgłosić obiektu typu `bad_alloc`. Wskaźnik zerowy wyznacza nowy domyślny program obsługi.
+Domyślnym zachowaniem [nowego programu obsługi](../standard-library/new-typedefs.md#new_handler) jest wygenerowanie obiektu typu `bad_alloc`. Wskaźnik o wartości null oznacza domyślny nowy program obsługi.
 
-Kolejność i contiguity pamięci przydzielonej przez kolejne wywołania `operator new`(**size_t**) jest nieokreślony, ponieważ są tam przechowywane wartości początkowe.
+Kolejność i contiguity magazynu przydzielonego przez kolejne wywołania do `operator new`(**size_t**) nie są określone, ponieważ są to wartości początkowe przechowywane w tym miejscu.
 
-Druga funkcja jest wywoływana przez nowe wyrażenie umieszczania można przydzielić `count` bajtów magazynu odpowiednio wyrównaną do do reprezentowania dowolnego obiektu tego rozmiaru. Program można zdefiniować funkcję alternatywne podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki C++, a więc jest wymienny.
+Druga funkcja jest wywoływana przez nowe wyrażenie umieszczania, aby przydzielić `count` bajty magazynu odpowiednio wyrównane do reprezentowania dowolnego obiektu tego rozmiaru. Program może zdefiniować alternatywną funkcję za pomocą tej sygnatury funkcji, która zastępuje domyślną wersję zdefiniowaną C++ przez bibliotekę standardową, więc można ją przemieścić.
 
-Zachowanie domyślne ma zwracać `operator new`(`count`) Jeśli ta funkcja zakończy się powodzeniem. W przeciwnym razie zwraca pusty wskaźnik.
+Domyślnym zachowaniem jest zwrócenie `operator new`(`count`), jeśli ta funkcja się powiedzie. W przeciwnym razie zwraca wskaźnik o wartości null.
 
-Trzecia funkcja jest wywoływana przez umieszczania **nowe** wyrażenie w formie **nowe** ( *args*) T. W tym miejscu *args* składa się z wskaźnika pojedynczego obiektu. Może to być przydatne przy konstruowaniu obiektu pod znanymi adresami. Funkcja zwraca *ptr*.
+Trzecia funkcja jest wywoływana przez **nowe** wyrażenie umieszczania w formularzu **New** ( *args*) T. W tym miejscu *argumenty* składają się z pojedynczego wskaźnika obiektu. Może to być przydatne w przypadku konstruowania obiektu pod znanym adresem. Funkcja zwraca wartość *PTR*.
 
-Aby zwolnić Magazyn przydzielony przez **nowy operator**, wywołaj [operatora delete](../standard-library/new-operators.md#op_delete).
+Aby zwolnić magazyn przydzielony przez **operator new**, [operator wywołania Delete](../standard-library/new-operators.md#op_delete).
 
-Aby uzyskać informacje o zgłaszaniu lub niezgłaszające zachowaniem nowe, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).
+Aby uzyskać informacje o zgłaszaniu lub nierzucaniu zachowań nowych, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Przykład
 
@@ -171,9 +171,9 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a> nowy operator]
+## <a name="op_new_arr"></a>operator new []
 
-Funkcja alokacji, wywoływana przez nowe wyrażenie do przydzielania pamięci dla tablicy obiektów.
+Funkcja alokacji wywołana przez nowe wyrażenie do przydzielenia magazynu dla tablicy obiektów.
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
@@ -183,27 +183,27 @@ void* operator new[](std::size_t count, void* ptr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*\
-Liczba bajtów magazynu do przydzielenia dla obiektu array.
+*liczba*\
+Liczba bajtów magazynu do przydzielenia dla obiektu Array.
 
-*PTR*\
-Wskaźnik, który ma zostać zwrócona.
+\ *PTR*
+Wskaźnik, który ma zostać zwrócony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do najniższym adresem bajtów magazynu nowo przydzielone. Lub *ptr*.
+Wskaźnik do najmniejszego bajtu nowo przydzielonych magazynów. Lub *PTR*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja jest wywoływana przez `new[]` wyrażenie, aby przydzielić `count` bajtów magazynu odpowiednio wyrównany do reprezentowania dowolnego obiektu array tego rozmiaru lub mniejszy. Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie jest taka sama, jak w przypadku [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**). Zachowanie domyślne ma zwracać `operator new`( `count`).
+Pierwsza funkcja jest wywoływana przez wyrażenie `new[]`, aby przydzielić `count` bajty magazynu odpowiednio wyrównane do reprezentowania dowolnego obiektu tablicy o tym rozmiarze lub mniejszej. Program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Wymagane zachowanie jest takie samo jak dla [operatora new](../standard-library/new-operators.md#op_new)(**size_t**). Domyślnym zachowaniem jest zwrócenie `operator new`(`count`).
 
-Druga funkcja jest wywoływana przez umieszczania `new[]` wyrażenie, aby przydzielić `count` bajtów magazynu odpowiednio wyrównaną do do reprezentowania dowolnego obiektu array tego rozmiaru. Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Zachowanie domyślne ma zwracać **operatornew**(`count`) Jeśli ta funkcja zakończy się powodzeniem. W przeciwnym razie zwraca pusty wskaźnik.
+Druga funkcja jest wywoływana przez wyrażenie `new[]` umieszczania, aby alokować `count` bajty magazynu odpowiednio wyrównane do reprezentowania dowolnego obiektu tablicy tego rozmiaru. Program może zdefiniować funkcję z tą sygnaturą funkcji, która zastępuje domyślną wersję zdefiniowaną przez bibliotekę C++ standardową. Domyślnym zachowaniem jest zwrócenie **operatornew**(`count`), jeśli ta funkcja się powiedzie. W przeciwnym razie zwraca wskaźnik o wartości null.
 
-Trzecia funkcja jest wywoływana przez umieszczania `new[]` wyrażenie w formie **nowe** ( *args*) **T**[ **N**]. W tym miejscu *args* składa się z wskaźnika pojedynczego obiektu. Funkcja zwraca `ptr`.
+Trzecia funkcja jest wywoływana przez wyrażenie `new[]` umieszczania w postaci **New** ( *args*) **t**[ **N**]. W tym miejscu *argumenty* składają się z pojedynczego wskaźnika obiektu. Funkcja zwraca `ptr`.
 
-Aby zwolnić Magazyn przydzielony przez `operator new[]`, wywołaj [operatora delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).
+Aby zwolnić magazyn przydzielony przez `operator new[]`, należy [usunąć&#91;operatora](../standard-library/new-operators.md#op_delete_arr)wywołań.
 
-Aby uzyskać informacje o zgłaszaniu lub nonthrowing zachowaniem nowe, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).
+Aby uzyskać informacje o wyrzucaniu lub niezgłaszaniu zachowania nowych, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Przykład
 
