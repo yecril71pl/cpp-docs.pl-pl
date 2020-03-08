@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688170"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876312"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -56,7 +56,7 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
@@ -65,11 +65,11 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 C++ Standardowa biblioteka definiuje dwie jawne specjalizacje tego szablonu klasy:
 
-- `ctype<char>`, jawnej specjalizacji, której różnice są opisane osobno. Aby uzyskać więcej informacji, zobacz [ctype &lt;char &gt; Class](../standard-library/ctype-char-class.md).
+- `ctype<char>`, jawnej specjalizacji, której różnice są opisane osobno. Aby uzyskać więcej informacji, zobacz [ctype&lt;char&gt; Class](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, która traktuje elementy jako znaki dwubajtowe.
 
-Inne specjalizacje `ctype<CharType>` szablonu klasy:
+Inne specjalizacje `ctype<CharType>`szablonu klasy:
 
 - Konwertuj wartość *ch* typu *CharType* na wartość typu **char** z wyrażeniem `(char)ch`.
 
@@ -140,7 +140,7 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -174,16 +174,16 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski, dla której ma zostać przetestowany znak.
 
-*ch* \
+*ch*\
 Znak, którego atrybuty mają zostać przetestowane.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
 \ miejsca *docelowego*
@@ -197,7 +197,7 @@ Druga funkcja członkowska zwraca tablicę zawierającą wartości maski charakt
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości masek klasyfikacji atrybutów znaków są dostarczane przez klasę [ctype_base](../standard-library/ctype-base-class.md), z których CType dziedziczy. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
+Wartości masek klasyfikacji atrybutów znaków są udostępniane przez klasę [ctype_base](../standard-library/ctype-base-class.md), z których CType dziedziczy. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
 
 ### <a name="example"></a>Przykład
 
@@ -221,16 +221,16 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak typu `Chartype` używany przez ustawienia regionalne do przekonwertowania.
 
 \ *domyślne*
 Wartość domyślna, która ma zostać przypisana przez funkcję członkowską do znaków typu `CharType`, które nie mają odpowiedników znaków typu **char**.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
 \ miejsca *docelowego*
@@ -244,7 +244,7 @@ Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do zakresu d
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chronionego elementu członkowskiego przechowuje w `dest` [`I`] wartość `do_narrow` (`first` [`I`], `default`), dla `I` w interwale [0, `last`  -  `first`).
+Druga funkcja szablonu chronionego elementu członkowskiego przechowuje w `dest`[`I`] wartość `do_narrow`(`first` [`I`], `default`), dla `I` w interwale [0, `last` - `first`).
 
 ### <a name="example"></a>Przykład
 
@@ -263,13 +263,13 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski do dopasowania przez znak.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -297,13 +297,13 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski nie powinna być dopasowana przez znak.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -332,13 +332,13 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak do przekonwertowania na małe litery.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -347,7 +347,7 @@ Pierwsza chroniona funkcja członkowska zwraca małą formę parametru *ch*. Je�
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy element `first` [`I`], dla `I` w interwale [0, `last`  -  `first`), z `do_tolower` (`first` [`I`]).
+Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy element `first` [`I`], dla `I` w interwale [0, `last` - `first`), z `do_tolower`(`first` [`I`]).
 
 ### <a name="example"></a>Przykład
 
@@ -367,13 +367,13 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak do przekonwertowania na wielkie litery.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -382,7 +382,7 @@ Pierwsza chroniona funkcja członkowska zwraca wielką formę parametru *ch*. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy element `first` [`I`], dla `I` w interwale [0, `last`  -  `first`), z `do_toupper` (`first` [`I`]).
+Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy element `first` [`I`], dla `I` w interwale [0, `last` - `first`), z `do_toupper`(`first` [`I`]).
 
 ### <a name="example"></a>Przykład
 
@@ -406,10 +406,10 @@ virtual const char *do_widen(
 \ *bajtów*
 Znak typu **char** w macierzystym zestawie znaków do przekonwertowania.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
 \ miejsca *docelowego*
@@ -423,7 +423,7 @@ Druga funkcja chronionego elementu członkowskiego zwraca wskaźnik do doceloweg
 
 ### <a name="remarks"></a>Uwagi
 
-Druga funkcja szablonu chronionego elementu członkowskiego przechowuje w `dest` [`I`] wartość `do_widen` (`first` [`I`]) dla `I` w interwale [0, `last`  -  `first`).
+Druga funkcja szablonu chronionego elementu członkowskiego przechowuje w `dest`[`I`] wartość `do_widen`(`first`[`I`]) dla `I` w interwale [0, `last` - `first`).
 
 ### <a name="example"></a>Przykład
 
@@ -444,16 +444,16 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski, dla której ma zostać przetestowany znak.
 
-*ch* \
+*ch*\
 Znak, którego atrybuty mają zostać przetestowane.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty mają być klasyfikowane.
 
 \ miejsca *docelowego*
@@ -467,7 +467,7 @@ Druga funkcja członkowska zwraca wskaźnik do ostatniego znaku w zakresie, któ
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości masek klasyfikacji atrybutów znaków są dostarczane przez [klasę ctype_base](../standard-library/ctype-base-class.md)klasy, z której pochodzi CType. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
+Wartości masek klasyfikacji atrybutów znaków są dostarczane przez klasę [Ctype_base klasy](../standard-library/ctype-base-class.md), z których dziedziczy CType. Pierwsza funkcja członkowska może przyjmować wyrażenia dla pierwszego parametru, zwane jako masek bitowych i utworzone z kombinacji wartości maski przez logiczne operatory bitowe (&#124; , &, ^, ~).
 
 ### <a name="example"></a>Przykład
 
@@ -524,16 +524,16 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak typu `Chartype` używany przez ustawienia regionalne do przekonwertowania.
 
 \ *domyślne*
 Wartość domyślna, która ma zostać przypisana przez funkcję członkowską do znaków typu `CharType`, które nie mają odpowiedników znaków typu **char**.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
 \ miejsca *docelowego*
@@ -588,13 +588,13 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski do dopasowania przez znak.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -644,13 +644,13 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal* \
+*maskVal*\
 Wartość maski nie powinna być dopasowana przez znak.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -699,13 +699,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak do przekonwertowania na małe litery.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -754,13 +754,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
+*ch*\
 Znak do przekonwertowania na wielkie litery.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -812,10 +812,10 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 \ *bajtów*
 Znak typu char w macierzystym zestawie znaków do przekonwertowania.
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w zakresie znaków do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekonwertowania.
 
 \ miejsca *docelowego*
@@ -861,7 +861,7 @@ Hello everyone!
 Hello everyone!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<locale >](../standard-library/locale.md) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

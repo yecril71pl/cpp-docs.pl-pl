@@ -1,5 +1,5 @@
 ---
-title: Operatory &gt; &lt;forward_list
+title: '&lt;forward_list operatory&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - forward_list/std::operator!=
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689686"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874759"
 ---
-# <a name="ltforward_listgt-operators"></a>Operatory &gt; &lt;forward_list
+# <a name="ltforward_listgt-operators"></a>&lt;forward_list operatory&gt;
 
 ## <a name="op_eq_eq"></a>operator = =
 
@@ -40,12 +40,12 @@ bool operator==(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu przeciąża `operator==`, aby porównać dwa obiekty `forward_list` szablonu klasy. Funkcja zwraca `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Ta funkcja szablonu przeciąża `operator==`, aby porównać dwa obiekty `forward_list`szablonu klasy. Funkcja zwraca `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
 ## <a name="op_neq"></a>operator! =
 
@@ -62,7 +62,7 @@ bool operator!=(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -88,7 +88,7 @@ bool operator<(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -97,9 +97,9 @@ Obiekt typu `forward_list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu przeciąża `operator<`, aby porównać dwa obiekty `forward_list` szablonu klasy. Funkcja zwraca `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Ta funkcja szablonu przeciąża `operator<`, aby porównać dwa obiekty `forward_list`szablonu klasy. Funkcja zwraca `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>&lt; operatora =
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest mniejszy niż lub równy obiektowi listy do przodu po prawej stronie.
 
@@ -114,7 +114,7 @@ bool operator<=(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -140,7 +140,7 @@ bool operator>(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -151,7 +151,7 @@ Obiekt typu `forward_list`.
 
 Ta funkcja szablonu zwraca `right < left`.
 
-## <a name="op_gt_eq"></a>&gt; operatora =
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest większy niż lub równy obiektowi listy do przodu po prawej stronie.
 
@@ -166,7 +166,7 @@ bool operator>=(
 \ *lewo*
 Obiekt typu `forward_list`.
 
-*prawa* \
+*prawa*\
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684094"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866258"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -93,13 +93,13 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 |[& operatora =](#op_and_eq)|Uzyskuje `AND` bitowe elementów w tablicy albo z odpowiednimi elementami w określonym `valarray` lub z wartością typu elementu.|
 |[> operatora > =](#op_gt_gt_eq)|Prawy przesuwa bity dla każdego elementu operandu `valarray` określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi `valarray`.|
 |[< operatora < =](#op_lt_lt_eq)|Lewy przesuwa bity dla każdego elementu operandu `valarray` określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi `valarray`.|
-|[operator * =](#op_star_eq)|Mnoży elementy określonego `valarray` lub wartości typu elementu z elementem, do `valarray` operandu.|
+|[operator * =](#op_star_eq)|Mnoży elementy określonego `valarray` lub wartości typu elementu z elementem, do `valarray`operandu.|
 |[operator +](#op_add)|Jednoargumentowy operator, który stosuje znak plus do każdego elementu w `valarray`.|
 |[operator + =](#op_add_eq)|Dodaje elementy określonego `valarray` lub wartości typu elementu z elementem do operandu `valarray`.|
 |[zakład](#operator-)|Jednoargumentowy operator, który stosuje znak minus do każdego elementu w `valarray`.|
 |[operator-=](#operator-_eq)|Odejmuje elementy określonego `valarray` lub wartości typu elementu z elementu operandu z `valarray`.|
 |[operator/=](#op_div_eq)|Dzieli operand `valarray` elementowo przez elementy określonego `valarray` lub wartość typu elementu.|
-|[operator =](#op_eq)|Przypisuje elementy do `valarray`, których wartości są określone bezpośrednio lub jako część innych `valarray` lub `slice_array`, `gslice_array`, `mask_array` lub `indirect_array`.|
+|[operator =](#op_eq)|Przypisuje elementy do `valarray`, których wartości są określone bezpośrednio lub jako część innych `valarray` lub `slice_array`, `gslice_array`, `mask_array`lub `indirect_array`.|
 |[zakład&#91;&#93;](#op_at)|Zwraca odwołanie do elementu lub jego wartości w określonym indeksie lub określonym podzbiorze.|
 |[operator ^ =](#op_xor_eq)|Uzyskuje wyłączny operator logiczny or (`XOR`) tablicy z określonym valarray lub wartością typu elementu.|
 |[operator&#124;=](#op_or_eq)|Uzyskuje `OR` bitowe elementów w tablicy albo z odpowiednimi elementami w określonym `valarray` lub z wartością typu elementu.|
@@ -120,7 +120,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 *_Func (typ)* \
 Obiekt funkcyjny do zastosowania do każdego elementu operandu valarray.
 
-*_Func (typ const &)* \
+*_Func (typ stałej &)* \
 Obiekt funkcyjny dla elementu const, który ma być stosowany do poszczególnych elementów operandu valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -129,7 +129,7 @@ Element valarray, którego elementy miały `_Func` zastosowane elementy do eleme
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca obiekt klasy [valarray](../standard-library/valarray-class.md)  **\<Type >** o [rozmiarze](#size)długości, z których *każdy jest `_Func((*this)[I])`* elementów.
+Funkcja członkowska zwraca obiekt klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , o [rozmiarze](#size)długości, z których *każdy jest `_Func((*this)[I])`* elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -191,7 +191,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*liczba* \
+*liczba*\
 Liczba miejsc, w których elementy mają zostać przesunięte do przodu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -292,7 +292,7 @@ Maksymalna wartość elementów w operandzie valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska porównuje wartości przez zastosowanie **\< operatora** lub **operatora >** między parami elementów klasy `Type`, dla których operatory muszą być dostarczone dla elementu `Type`.
+Funkcja członkowska porównuje wartości przez zastosowanie **\<operatora** lub **operatora >** między parami elementów klasy `Type`, dla których operatory muszą być dostarczone dla elementu `Type`.
 
 ### <a name="example"></a>Przykład
 
@@ -345,7 +345,7 @@ Minimalna wartość elementów w operandzie valarray.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska porównuje wartości przez zastosowanie **\< operatora** lub **operatora >** między parami elementów klasy `Type`, dla których operatory muszą być dostarczone dla elementu `Type`.
+Funkcja członkowska porównuje wartości przez zastosowanie **\<operatora** lub **operatora >** między parami elementów klasy `Type`, dla których operatory muszą być dostarczone dla elementu `Type`.
 
 ### <a name="example"></a>Przykład
 
@@ -454,7 +454,7 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który jest podzielona, element, argument operacji valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>&amp; operatora =
+## <a name="op_and_eq"></a>&amp;operatora =
 
 Uzyskuje bitowe **i** elementy w tablicy z odpowiednimi elementami w określonym valarray lub z wartością typu elementu.
 
@@ -521,7 +521,7 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identyczna z typem operandu valarray, który ma być połączony, element, przez `AND` logiczny z operandem valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>&gt; &gt; operatora =
+## <a name="op_gt_gt_eq"></a>&gt;&gt;operatora =
 
 Prawy przesuwa bity dla każdego elementu operandu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.
 
@@ -594,7 +594,7 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Wartość wskazująca ilość prawego przesunięcia lub valarray, której elementy wskazują ilość elementów po prawej stronie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>&lt; &lt; operatora =
+## <a name="op_lt_lt_eq"></a>&lt;&lt;operatora =
 
 Lewy przesuwa bity dla każdego elementu operandu valarray określoną liczbę pozycji lub przez liczbę elementów określoną przez drugi valarray.
 
@@ -665,7 +665,7 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Wartość wskazująca ilość przesunięcia w lewo lub valarray, której elementy wskazują liczbę elementów przesunięcia w lewo.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -738,7 +738,7 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być mnożony element, argument operacji valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -857,7 +857,7 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma zostać dodany do operandu valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -977,7 +977,7 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z typem operandu valarray, który ma zostać odjęty, z elementem operandu valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1044,7 +1044,7 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identyczna z typem operandu valarray, który ma być podzielony, elementowy, do operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1121,23 +1121,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray do skopiowania do operandu valarray.
 
-*val* \
+*val*\
 Wartość, która ma zostać przypisana do elementów operandu valarray.
 
-*_Slicearray* \
-Slice_array do skopiowania do operandu valarray.
+*_Slicearray*\
+Slice_array, które mają zostać skopiowane do operandu valarray.
 
-*_Gslicearray* \
-Gslice_array do skopiowania do operandu valarray.
+*_Gslicearray*\
+Gslice_array, które mają zostać skopiowane do operandu valarray.
 
-*_Maskarray* \
-Mask_array do skopiowania do operandu valarray.
+*_Maskarray*\
+Mask_array, które mają zostać skopiowane do operandu valarray.
 
-*_Indarray* \
-Indirect_array do skopiowania do operandu valarray.
+*_Indarray*\
+Indirect_array, które mają zostać skopiowane do operandu valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1237,20 +1237,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* \
+*_Off*\
 Indeks elementu, do którego ma zostać przypisana wartość.
 
-*_Slicearray* \
-Slice_array valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
+*_Slicearray*\
+Slice_array elementu valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
 
-*_Gslicearray* \
-Gslice_array valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
+*_Gslicearray*\
+Gslice_array elementu valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
 
-*_Boolarray* \
-Bool_array valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
+*_Boolarray*\
+Bool_array elementu valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
 
-*_Indarray* \
-Indirect_array valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
+*_Indarray*\
+Indirect_array elementu valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1258,7 +1258,7 @@ Odwołanie do elementu lub jego wartości w określonym indeksie lub określonym
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego jest przeciążony, aby zapewnić kilka sposobów wybierania sekwencji elementów spośród tych, które są kontrolowane przez <strong>\*this</strong>. Pierwsza grupa pięciu operatorów członkowskich działa w połączeniu z różnymi przeciążeniami [operatora =](#op_eq) (i innych przypisywania operatorów), aby umożliwić selektywne zastępowanie (cięcie) kontrolowanej sekwencji. Wybrane elementy muszą istnieć.
+Operator elementu członkowskiego jest przeciążony, aby zapewnić kilka sposobów wybierania sekwencji elementów spośród tych, które są kontrolowane przez <strong>\*to</strong>. Pierwsza grupa pięciu operatorów członkowskich działa w połączeniu z różnymi przeciążeniami [operatora =](#op_eq) (i innych przypisywania operatorów), aby umożliwić selektywne zastępowanie (cięcie) kontrolowanej sekwencji. Wybrane elementy muszą istnieć.
 
 Podczas kompilowania przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli próbujesz uzyskać dostęp do elementu poza granicami valarray.  Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md) .
 
@@ -1278,7 +1278,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być połączony, element, przez wyłączną logiczną **XOR** z argumentem valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1353,7 +1353,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być połączony, element, przez `OR` bitowego z operandem valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1364,7 +1364,7 @@ Element valarray, którego elementy stanowią `OR` bitowe elementu operand valar
 
 Operacji bitowej można używać tylko do manipulowania bitami w typach danych **char** i **int** , a nie w obiektach typu **float**, **Double**, **longdouble**, **void**, **bool**lub innych, bardziej złożonych typów danych.
 
-@No__t_0 bitowe ma tę samą tabelę prawdy co logiczne `OR`, ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Określone bity *b*1 i *b*2, *b*1 `OR` *b*2 są **prawdziwe** , jeśli co najmniej jeden z bitów ma wartość true; **Fałsz** , jeśli obie bity mają wartość false.
+`OR` bitowe ma tę samą tabelę prawdy co logiczne `OR`, ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Określone bity *b*1 i *b*2, *b*1 `OR` *b*2 są **prawdziwe** , jeśli co najmniej jeden z bitów ma wartość true; **Fałsz** , jeśli obie bity mają wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -1440,7 +1440,7 @@ Valarray wartości logicznych, które są bitowym `NOT` wartości elementu opera
 
 Operacji bitowej można używać tylko w celu manipulowania bitami w typach danych **char** i **int** oraz w odmianach, a nie w przypadku elementów **zmiennoprzecinkowych**, **Double**, **longdouble**, **void**, **bool** i innych, bardziej złożonych typów danych.
 
-@No__t_0 bitowe ma tę samą tabelę prawdy co logiczne `NOT`, ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Podano bit *b*, ~ *b* ma wartość true, jeśli *b* ma wartość false, i wartość false, jeśli *b* ma wartość true. Operator logiczny **not**[!](#op_not) dotyczy na poziomie elementu, licząc wszystkie wartości niezerowe jako **prawdziwe**, a wynik jest valarray wartości logicznych. @No__t_0 bitowe, z kolei, może spowodować valarray wartości innych niż 0 lub 1, w zależności od wyniku operacji bitowej.
+`NOT` bitowe ma tę samą tabelę prawdy co logiczne `NOT`, ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Podano bit *b*, ~ *b* ma wartość true, jeśli *b* ma wartość false, i wartość false, jeśli *b* ma wartość true. Operator logiczny **not**[!](#op_not) dotyczy na poziomie elementu, licząc wszystkie wartości niezerowe jako **prawdziwe**, a wynik jest valarray wartości logicznych. `NOToperator~`bitowe, z kolei, może spowodować valarray wartości innych niż 0 lub 1, w zależności od wyniku operacji bitowej.
 
 ### <a name="example"></a>Przykład
 
@@ -1538,10 +1538,10 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* \
+*_Newsize*\
 Liczba elementów w valarray o zmienionym rozmiarze.
 
-*val* \
+*val*\
 Wartość, która ma zostać nadana elementom valarray o zmienionym rozmiarze.
 
 ### <a name="remarks"></a>Uwagi
@@ -1609,7 +1609,7 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*liczba* \
+*liczba*\
 Liczba miejsc, w których elementy mają zostać przesunięte do przodu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1811,8 +1811,8 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
-@No__t_0 udostępniający elementy, które mają zostać zamienione.
+*prawa*\
+`valarray` udostępniający elementy, które mają zostać zamienione.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1860,31 +1860,31 @@ valarray(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* \
+*Liczba*\
 Liczba elementów, które mają się znaleźć w tablicy valarray.
 
-*Val* \
+*Val*\
 Wartość, która ma być użyta do inicjowania elementów w tablicy valarray.
 
-@No__t_1 *PTR*
+\ *PTR*
 Wskaźnik do wartości, które mają użyte do inicjowania elementów w tablicy valarray.
 
-*Prawa* \
+*Prawa*\
 Istniejąca tablica valarray do zainicjowania nowej tablicy valarray.
 
-*SliceArray* \
+*SliceArray*\
 Tablica typu slice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*GsliceArray* \
+*GsliceArray*\
 Tablica typu gslice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*MaskArray* \
+*MaskArray*\
 Tablica typu mask_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*IndArray* \
+*IndArray*\
 Tablica typu indirect_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-@No__t_1 *IList*
+\ *IList*
 Lista initializer_list zawierająca elementy do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1893,11 +1893,11 @@ Pierwszy (domyślny) konstruktor inicjuje obiekt jako pustą tablicę. Następne
 
 - Dla jawnego `valarray(size_t Count)`, każdy element jest inicjowany przy użyciu konstruktora domyślnego.
 
-- W przypadku `valarray(const Type& Val, Count)` każdy element jest inicjowany z *Val*.
+- W przypadku `valarray(const Type& Val, Count)`każdy element jest inicjowany z *Val*.
 
-- W przypadku `valarray(const Type* Ptr, Count)` element w pozycji `I` jest inicjowany z `Ptr` [`I`].
+- W przypadku `valarray(const Type* Ptr, Count)`element w pozycji `I` jest inicjowany z `Ptr`[`I`].
 
-Każdy pozostały Konstruktor inicjuje obiekt do valarray \<Type > obiekt określony przez podzestaw określony w argumencie.
+Każdy pozostały Konstruktor inicjuje obiekt do valarray typu\<> obiektu określonego przez podzestaw określony w argumencie.
 
 Ostatni Konstruktor jest taki sam jak następny do ostatniego, ale z [rvalue odwołanie deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

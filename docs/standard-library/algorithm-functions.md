@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821886"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854102"
 ---
 # <a name="ltalgorithmgt-functions"></a>funkcje&gt; algorytm &lt;
 

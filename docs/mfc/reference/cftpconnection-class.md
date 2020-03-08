@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
 ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177279"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890798"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -51,22 +51,22 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CFtpConnection::CFtpConnection](#cftpconnection)|Konstruuje `CFtpConnection` obiekt.|
+|[CFtpConnection::CFtpConnection](#cftpconnection)|Konstruuje obiekt `CFtpConnection`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFtpConnection:: polecenie](#command)|Wysyła polecenie bezpośrednio do serwera FTP.|
-|[CFtpConnection::CreateDirectory](#createdirectory)|Tworzy katalog na serwerze.|
+|[CFtpConnection:: \ katalog](#createdirectory)|Tworzy katalog na serwerze.|
 |[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|Pobiera bieżący katalog dla tego połączenia.|
 |[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|Pobiera bieżący katalog dla tego połączenia jako adres URL.|
-|[CFtpConnection::GetFile](#getfile)|Pobiera plik z podłączonego serwera|
+|[CFtpConnection:: GetFile](#getfile)|Pobiera plik z podłączonego serwera|
 |[CFtpConnection:: OpenFile](#openfile)|Otwiera plik na połączonym serwerze.|
 |[CFtpConnection::P utFile](#putfile)|Umieszcza plik na serwerze.|
-|[CFtpConnection::Remove](#remove)|Usuwa plik z serwera.|
+|[CFtpConnection:: Remove](#remove)|Usuwa plik z serwera.|
 |[CFtpConnection::RemoveDirectory](#removedirectory)|Usuwa określony katalog z serwera.|
 |[CFtpConnection:: Rename](#rename)|Zmienia nazwę pliku na serwerze.|
 |[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Ustawia bieżący katalog FTP.|
@@ -75,9 +75,9 @@ class CFtpConnection : public CInternetConnection
 
 FTP jest jedną z trzech usług internetowych uznawanych przez klasy MFC WinInet.
 
-Aby komunikować się z serwerem internetowym FTP, należy najpierw utworzyć wystąpienie elementu [CInternetSession](../../mfc/reference/cinternetsession-class.md), a następnie utworzyć `CFtpConnection` obiekt. Nie utworzysz `CFtpConnection` bezpośrednio obiektu. zamiast tego wywołaj [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection) `CFtpConnection` , który tworzy obiekt i zwraca do niego wskaźnik.
+Aby komunikować się z serwerem internetowym FTP, należy najpierw utworzyć wystąpienie elementu [CInternetSession](../../mfc/reference/cinternetsession-class.md), a następnie utworzyć obiekt `CFtpConnection`. Nie utworzysz bezpośrednio obiektu `CFtpConnection`. Zamiast tego należy wywołać [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), który tworzy obiekt `CFtpConnection` i zwraca do niego wskaźnik.
 
-Aby dowiedzieć się więcej `CFtpConnection` o tym, jak działa z innymi klasami internetowymi MFC, zobacz artykuł [programowanie internetowe za pomocą usługi WinInet](../../mfc/win32-internet-extensions-wininet.md). Aby uzyskać więcej informacji na temat komunikacji z innymi dwiema obsługiwanymi usługami, HTTP i gopher, zobacz klasy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) i [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).
+Aby dowiedzieć się więcej o tym, jak `CFtpConnection` współpracuje z innymi klasami internetowymi MFC, zobacz artykuł [programowanie internetowe za pomocą usługi WinInet](../../mfc/win32-internet-extensions-wininet.md). Aby uzyskać więcej informacji na temat komunikacji z innymi dwiema obsługiwanymi usługami, HTTP i gopher, zobacz klasy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) i [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).
 
 ## <a name="example"></a>Przykład
 
@@ -97,7 +97,7 @@ Aby dowiedzieć się więcej `CFtpConnection` o tym, jak działa z innymi klasam
 
 ##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection
 
-Ta funkcja członkowska jest wywoływana w celu `CFtpConnection` skonstruowania obiektu.
+Ta funkcja członkowska jest wywoływana w celu skonstruowania obiektu `CFtpConnection`.
 
 ```
 CFtpConnection(
@@ -147,11 +147,11 @@ Wskaźnik do ciągu zakończonego wartością null, który określa hasło, któ
 Numer identyfikujący port TCP/IP, który ma być używany na serwerze.
 
 *bPassive*<br/>
-Określa tryb pasywny lub aktywny dla tej sesji FTP. Jeśli ustawiono wartość TRUE, ustawia Win32 API *dwFlag* na INTERNET_FLAG_PASSIVE.
+Określa tryb pasywny lub aktywny dla tej sesji FTP. W przypadku ustawienia wartości TRUE ustawia Win32 API *dwFlag* na INTERNET_FLAG_PASSIVE.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie utworzysz `CFtpConnection` bezpośrednio obiektu. Zamiast tego należy wywołać metodę [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), która `CFptConnection` tworzy obiekt.
+Nie utworzysz bezpośrednio obiektu `CFtpConnection`. Zamiast tego należy wywołać metodę [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), która tworzy obiekt `CFptConnection`.
 
 ##  <a name="command"></a>CFtpConnection:: polecenie
 
@@ -173,9 +173,9 @@ Wskaźnik do ciągu zawierającego polecenie do wysłania.
 *eResponse*<br/>
 Określa, czy oczekiwano odpowiedzi z serwera FTP. Może być jedną z następujących wartości:
 
-- `CmdRespNone`Nie oczekiwano odpowiedzi.
-- `CmdRespRead`Oczekiwana jest odpowiedź.
-- `CmdRespWrite`Nieużywane.
+- `CmdRespNone` nie jest oczekiwana odpowiedź.
+- `CmdRespRead` oczekiwano odpowiedzi.
+- Nie `CmdRespWrite` używany.
 
 CmdResponseType jest elementem członkowskim CFtpConnection, zdefiniowanym w *afxinet. h*.
 
@@ -214,9 +214,9 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `GetCurrentDirectory` , aby określić bieżący katalog roboczy dla tego połączenia z serwerem. Nie należy zakładać, że system zdalny nawiązał połączenie z katalogiem głównym.
+Użyj `GetCurrentDirectory`, aby określić bieżący katalog roboczy dla tego połączenia z serwerem. Nie należy zakładać, że system zdalny nawiązał połączenie z katalogiem głównym.
 
-`pstrDirName` Parametr może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `CreateDirectory`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametr `pstrDirName` może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `CreateDirectory` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory
 
@@ -244,7 +244,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 |||
 |-|-|
 |Przy wpisie|Rozmiar buforu, do którego odwołuje się *pstrDirName*.|
-|Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona wartość ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które aplikacja musi przydzielić, aby otrzymać ciąg.|
+|Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które musi przydzielić aplikacja, aby otrzymać ciąg.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -254,7 +254,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 Aby zamiast tego uzyskać nazwę katalogu jako adres URL, wywołaj [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).
 
-Parametry *pstrDirName* lub *strdirname* mogą być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowanych. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetCurrentDirectory`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametry *pstrDirName* lub *strdirname* mogą być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowanych. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetCurrentDirectory` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL
 
@@ -282,7 +282,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 |||
 |-|-|
 |Przy wpisie|Rozmiar buforu, do którego odwołuje się *pstrDirName*.|
-|Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona wartość ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które aplikacja musi przydzielić, aby otrzymać ciąg.|
+|Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które musi przydzielić aplikacja, aby otrzymać ciąg.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -290,9 +290,9 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-`GetCurrentDirectoryAsURL`zachowuje się tak samo jak [GetCurrentDirectory](#getcurrentdirectory)
+`GetCurrentDirectoryAsURL` zachowuje się tak samo jak [GetCurrentDirectory](#getcurrentdirectory)
 
-Parametr *strdirname* może być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowany. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetCurrentDirectoryAsURL`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametr *strdirname* może być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowany. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetCurrentDirectoryAsURL` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="getfile"></a>CFtpConnection:: GetFile
 
@@ -317,10 +317,10 @@ Wskaźnik do ciągu zakończonego wartością null zawierający nazwę pliku, kt
 Wskaźnik do ciągu zakończonego wartością null zawierający nazwę pliku do utworzenia w systemie lokalnym.
 
 *bFailIfExists*<br/>
-Wskazuje, czy nazwa pliku może być już używana przez istniejący plik. Jeśli lokalna nazwa pliku już istnieje, a ten parametr ma wartość true, `GetFile` kończy się niepowodzeniem. W przeciwnym razie zostanie wymazana istniejąca kopia pliku. `GetFile`
+Wskazuje, czy nazwa pliku może być już używana przez istniejący plik. Jeśli lokalna nazwa pliku już istnieje, a ten parametr ma wartość TRUE, `GetFile` kończy się niepowodzeniem. W przeciwnym razie `GetFile` wymazuje istniejącą kopię pliku.
 
 *dwAttributes*<br/>
-Wskazuje atrybuty pliku. Może to być dowolna kombinacja następujących flag FILE_ATTRIBUTE_ *.
+Wskazuje atrybuty pliku. Może to być dowolna kombinacja następujących FILE_ATTRIBUTE_ * flag.
 
 - FILE_ATTRIBUTE_ARCHIVE plik jest plikiem archiwum. Aplikacje używają tego atrybutu do oznaczania plików do utworzenia kopii zapasowej lub usunięcia.
 
@@ -328,7 +328,7 @@ Wskazuje atrybuty pliku. Może to być dowolna kombinacja następujących flag F
 
 - FILE_ATTRIBUTE_DIRECTORY plik jest katalogiem.
 
-- FILE_ATTRIBUTE_NORMAL plik nie ma żadnych innych atrybutów. Ten atrybut jest prawidłowy tylko wtedy, gdy jest używany samodzielnie. Wszystkie inne atrybuty pliku przesłaniają FILE_ATTRIBUTE_NORMAL:
+- FILE_ATTRIBUTE_NORMAL plik nie ma ustawionych atrybutów. Ten atrybut jest prawidłowy tylko wtedy, gdy jest używany samodzielnie. Wszystkie inne atrybuty pliku zastępują FILE_ATTRIBUTE_NORMAL:
 
 - FILE_ATTRIBUTE_HIDDEN plik jest ukryty. Nie jest on uwzględniony w zwykłej liście katalogów.
 
@@ -350,13 +350,13 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-`GetFile`to procedura wysokiego poziomu, która obsługuje wszystkie obciążenia związane z odczytem pliku z serwera FTP i przechowywanie go lokalnie. Aplikacje, które pobierają tylko dane plików, lub które wymagają ścisłej kontroli nad transferem plików `OpenFile` , powinny używać i [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) .
+`GetFile` to procedura wysokiego poziomu, która obsługuje wszystkie obciążenia związane z odczytem pliku z serwera FTP i przechowywanie go lokalnie. Aplikacje, które pobierają tylko dane plików, lub które wymagają ścisłej kontroli nad transferem plików, powinny używać `OpenFile` i [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) .
 
-Jeśli *flagiDW* jest FILE_TRANSFER_TYPE_ASCII, tłumaczenie danych plików również konwertuje znaki kontrolne i formatowania na odpowiedniki systemu Windows. Domyślny transfer jest trybem binarnym, w którym plik jest pobierany w tym samym formacie, w jakim jest przechowywany na serwerze.
+Jeśli *flagiDW* jest FILE_TRANSFER_TYPE_ASCII, tłumaczenie danych plików również konwertuje znaki kontrolne i formatowanie na odpowiedniki systemu Windows. Domyślny transfer jest trybem binarnym, w którym plik jest pobierany w tym samym formacie, w jakim jest przechowywany na serwerze.
 
-Zarówno *pstrRemoteFile* , jak i *pstrLocalFile* mogą być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowanych. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetFile`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Zarówno *pstrRemoteFile* , jak i *pstrLocalFile* mogą być częściowo kwalifikowanymi nazwami plików względem bieżącego katalogu lub w pełni kwalifikowanych. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `GetFile` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
-Zastąp wartości domyślne *dwContext* , aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją `CFtpConnection` obiektu utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się [z artykułem internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
+Zastąp wartości domyślne *dwContext* , aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją obiektu `CFtpConnection` utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się z artykułem [internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
 
 ##  <a name="openfile"></a>CFtpConnection:: OpenFile
 
@@ -379,11 +379,11 @@ Wskaźnik do ciągu zawierającego nazwę pliku, który ma zostać otwarty.
 Określa, w jaki sposób będzie uzyskiwany dostęp do pliku. Może to być GENERIC_READ lub GENERIC_WRITE, ale nie oba jednocześnie.
 
 *flagiDW*<br/>
-Określa warunki, w których odbywa się kolejne transfery. Może to być dowolny z następujących stałych FTP_TRANSFER_ *:
+Określa warunki, w których odbywa się kolejne transfery. Może to być dowolny z następujących FTP_TRANSFER_ * stałych:
 
-- FTP_TRANSFER_TYPE_ASCII transfery plików przy użyciu metody transferu protokołu FTP ASCII (Type A). Konwertuje informacje o kontrolkach i formatowaniu na lokalne odpowiedniki.
+- FTP_TRANSFER_TYPE_ASCII transferu plików przy użyciu metody transferu protokołu FTP ASCII (Type A). Konwertuje informacje o kontrolkach i formatowaniu na lokalne odpowiedniki.
 
-- FTP_TRANSFER_TYPE_BINARY przesyła dane przy użyciu metody transferu obrazu (typu I) FTP. Plik przesyła dane dokładnie tak, jak istnieje, bez zmian. Jest to domyślna metoda transferu.
+- FTP_TRANSFER_TYPE_BINARY transferu plików przy użyciu metody transferu obrazu (typu I) FTP. Plik przesyła dane dokładnie tak, jak istnieje, bez zmian. Jest to domyślna metoda transferu.
 
 *dwContext*<br/>
 Identyfikator kontekstu służący do otwierania pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
@@ -394,19 +394,19 @@ Wskaźnik do obiektu [CInternetFile](../../mfc/reference/cinternetfile-class.md)
 
 ### <a name="remarks"></a>Uwagi
 
-`OpenFile`powinny być używane w następujących sytuacjach:
+`OpenFile` należy używać w następujących sytuacjach:
 
-- Aplikacja ma dane, które należy wysłać i utworzyć jako plik na serwerze FTP, ale dane te nie znajdują się w pliku lokalnym. Po `OpenFile` otwarciu pliku aplikacja używa [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write) w celu wysyłania danych z pliku FTP na serwer.
+- Aplikacja ma dane, które należy wysłać i utworzyć jako plik na serwerze FTP, ale dane te nie znajdują się w pliku lokalnym. Gdy `OpenFile` otworzy plik, aplikacja używa [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write) w celu wysyłania danych z pliku FTP na serwer.
 
-- Aplikacja musi pobrać plik z serwera i umieścić go w pamięci kontrolowanej przez aplikację, zamiast zapisywać go na dysku. Aplikacja używa [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) po użyciu `OpenFile` , aby otworzyć plik.
+- Aplikacja musi pobrać plik z serwera i umieścić go w pamięci kontrolowanej przez aplikację, zamiast zapisywać go na dysku. Aplikacja używa [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) po użyciu `OpenFile`, aby otworzyć plik.
 
 - Aplikacja wymaga poziomu kontroli nad transferem plików. Na przykład aplikacja może chcieć wyświetlić formant postępu wskazuje postęp transferu plików podczas pobierania pliku.
 
 Po wywołaniu `OpenFile` i do momentu wywołania `CInternetConnection::Close`aplikacja może wywołać tylko [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`lub [CFtpFileFind:: FindFile —](../../mfc/reference/cftpfilefind-class.md#findfile). Wywołania innych funkcji FTP dla tej samej sesji FTP zakończą się niepowodzeniem i ustawimy kod błędu na FTP_ETRANSFER_IN_PROGRESS.
 
-Parametr *pstrFileName* może być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `OpenFile`tłumaczy separatory nazw katalogów na odpowiednie znaki przed użyciem.
+Parametr *pstrFileName* może być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `OpenFile` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed użyciem.
 
-Zastąp wartości domyślne *dwContext* , aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją `CFtpConnection` obiektu utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się [z artykułem internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
+Zastąp wartości domyślne *dwContext* , aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją obiektu `CFtpConnection` utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się z artykułem [internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
 
 ##  <a name="putfile"></a>CFtpConnection::P utFile
 
@@ -429,7 +429,7 @@ Wskaźnik do ciągu zawierającego nazwę pliku, który ma zostać wysłany z sy
 Wskaźnik do ciągu zawierającego nazwę pliku do utworzenia na serwerze FTP.
 
 *flagiDW*<br/>
-Określa warunki, w których występuje transfer pliku. Może być dowolną ze stałych FTP_TRANSFER_ * opisanych w [OpenFile](#openfile).
+Określa warunki, w których występuje transfer pliku. Może być dowolną z FTP_TRANSFER_ * stałych opisanych w [OpenFile](#openfile).
 
 *dwContext*<br/>
 Identyfikator kontekstu służący do umieszczania pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
@@ -440,9 +440,9 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-`PutFile`to procedura wysokiego poziomu, która obsługuje wszystkie operacje związane z przechowywaniem pliku na serwerze FTP. Aplikacje, które wysyłają tylko dane lub wymagają ściślejszej kontroli nad transferem plików, powinny używać [OpenFile](#openfile) i [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write).
+`PutFile` to procedura wysokiego poziomu, która obsługuje wszystkie operacje związane z przechowywaniem pliku na serwerze FTP. Aplikacje, które wysyłają tylko dane lub wymagają ściślejszej kontroli nad transferem plików, powinny używać [OpenFile](#openfile) i [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write).
 
-Zastąp `dwContext` wartości domyślne, aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją `CFtpConnection` obiektu utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się [z artykułem internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
+Zastąp domyślne `dwContext`, aby ustawić identyfikator kontekstu na wybraną wartość. Identyfikator kontekstu jest skojarzony z tą konkretną operacją obiektu `CFtpConnection` utworzonego przez obiekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Wartość jest zwracana do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) w celu udostępnienia stanu operacji, z którą jest identyfikowany. Zapoznaj się z artykułem [internetowym pierwsze kroki: WinInet](../../mfc/wininet-basics.md) , aby uzyskać więcej informacji na temat identyfikatora kontekstu.
 
 ##  <a name="remove"></a>CFtpConnection:: Remove
 
@@ -463,7 +463,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *pstrFileName* może być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `Remove` Funkcja tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametr *pstrFileName* może być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowana. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. Funkcja `Remove` tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory
 
@@ -486,7 +486,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 Użyj [GetCurrentDirectory](#getcurrentdirectory) , aby określić bieżący katalog roboczy serwera. Nie należy zakładać, że system zdalny nawiązał połączenie z katalogiem głównym.
 
-Parametr *pstrDirName* może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `RemoveDirectory`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametr *pstrDirName* może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `RemoveDirectory` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="rename"></a>CFtpConnection:: Rename
 
@@ -512,7 +512,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry *pstrExisting* i *pstrNew* mogą być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowany. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `Rename`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametry *pstrExisting* i *pstrNew* mogą być częściowo kwalifikowaną nazwą pliku względem bieżącego katalogu lub w pełni kwalifikowany. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `Rename` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 ##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory
 
@@ -533,11 +533,11 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedz
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *pstrDirName* może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego\\() lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `SetCurrentDirectory`tłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
+Parametr *pstrDirName* może być częściowo lub w pełni kwalifikowana nazwa pliku względem bieżącego katalogu. Ukośnika odwrotnego (\\) lub ukośnika (/) można użyć jako separatora katalogu dla każdej nazwy. `SetCurrentDirectory` przetłumaczy separatory nazw katalogów na odpowiednie znaki przed ich użyciem.
 
 Użyj [GetCurrentDirectory](#getcurrentdirectory) , aby określić bieżący katalog roboczy serwera FTP. Nie należy zakładać, że system zdalny nawiązał połączenie z katalogiem głównym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

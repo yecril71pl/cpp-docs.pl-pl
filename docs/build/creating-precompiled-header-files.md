@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920107"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884095"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
@@ -116,9 +116,9 @@ Jeśli używasz prekompilowanego nagłówka utworzonego za pomocą/YC lub/Yu, ko
 
 Ta tabela zawiera listę opcji kompilatora, które mogą wyzwolić ostrzeżenie niespójności przy użyciu prekompilowanego nagłówka:
 
-|Opcja|Nazwa|Reguła|
+|Opcja|Name (Nazwa)|Reguła|
 |------------|----------|----------|
-|Parametr|Definiowanie stałych i makr|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale mogą wystąpić nieprzewidywalne wyniki, jeśli pliki są zależne od wartości zmienionych stałych.|
+|/D|Definiowanie stałych i makr|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale mogą wystąpić nieprzewidywalne wyniki, jeśli pliki są zależne od wartości zmienionych stałych.|
 |/E lub/EP|Kopiuj dane wyjściowe preprocesora do wyjścia standardowego|Prekompilowane nagłówki nie działają z opcją/E lub/EP.|
 |/Fr lub/FR|Generuj informacje o przeglądarce Microsoft Source|Aby opcje/fr i/FR były prawidłowe dla opcji/Yu, muszą one być stosowane podczas tworzenia prekompilowanego nagłówka. Kolejne kompilacje, które używają prekompilowanego nagłówka, również generują informacje o przeglądarce źródłowej. Informacje o przeglądarce są umieszczane w jednym pliku. sbr i są odwołujące się do innych plików w taki sam sposób, jak informacje CodeView. Nie można zastąpić umieszczania informacji w przeglądarce źródłowej.|
 |/GA,/GD,/GE,/GW lub/GW|Opcje protokołu systemu Windows|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Jeśli te opcje różnią się, zostanie wyświetlony komunikat ostrzegawczy.|
@@ -306,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja kompilacji w języku C/C++](reference/c-cpp-building-reference.md)<br/>
 [Opcje kompilatora MSVC](reference/compiler-options.md)

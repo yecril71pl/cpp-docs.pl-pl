@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303475"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883876"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 
@@ -79,17 +79,17 @@ Zarządza nazwaną, chronioną hasłem sesją bazy danych z logowania do wylogow
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Konstruuje obiekt obszaru roboczego. Następnie Wywołaj `Create` lub `Open`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|Dołącza nowo utworzony obszar roboczy do kolekcji obszarów roboczych aparatu bazy danych.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Rozpoczyna nową transakcję, która ma zastosowanie do wszystkich baz danych otwartych w obszarze roboczym.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Wskazuje podstawowy obiekt obszaru roboczego DAO.|
 
@@ -319,7 +319,7 @@ Pełna ścieżka kompaktowej bazy danych, która jest tworzona. Możesz równie�
 Hasło używane, gdy chcesz skompaktować chronioną hasłem bazę danych. Należy pamiętać, że w przypadku korzystania z wersji `CompactDatabase`, która pobiera hasło, należy podać wszystkie parametry. Ponadto, ponieważ jest to parametr Connect, wymaga specjalnego formatowania w następujący sposób:; PWD = *lpszPassword*. Na przykład:; PWD = "szczęśliwa". (Wiodący średnik jest wymagany).
 
 *lpszLocale*<br/>
-Wyrażenie ciągu używane do określenia kolejności sortowania na potrzeby tworzenia *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości domyślnej `dbLangGeneral` (patrz poniżej), ustawienia regionalne nowej bazy danych są takie same jak w przypadku starej bazy danych. Możliwe wartości to:
+Wyrażenie ciągu używane do określenia kolejności sortowania na potrzeby tworzenia *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości domyślnej `dbLangGeneral` (patrz poniżej), ustawienia regionalne nowej bazy danych są takie same jak w przypadku starej bazy danych. Możliwe wartości:
 
 - `dbLangGeneral` angielski, niemiecki, francuski, portugalski, włoski i nowoczesny hiszpański
 
@@ -722,7 +722,7 @@ Chociaż wiele `CDaoWorkspace` funkcji Członkowskich można wywołać tylko po 
 
 ||||
 |-|-|-|
-|[Create](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Tworzenie](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Okresie](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
@@ -888,7 +888,7 @@ Podczas próby zalogowania się do bazy danych ODBC, takiej jak Microsoft SQL Se
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość LoginTimeout" w pomocy DAO.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

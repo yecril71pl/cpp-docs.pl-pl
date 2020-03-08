@@ -1,18 +1,18 @@
 ---
-title: '&lt;ostream &gt; Typedefs'
+title: '&lt;ostream&gt; Typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687234"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856612"
 ---
-# <a name="ltostreamgt-typedefs"></a>&lt;ostream &gt; Typedefs
+# <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; Typedefs
 
 |||
 |-|-|
@@ -28,11 +28,11 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla [basic_ostream](../standard-library/basic-ostream-class.md)szablonu klasy, wyspecjalizowany dla elementów typu **char** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md), wyspecjalizowany dla elementów typu **char** z domyślnymi cechami znaków.
 
 ## <a name="wostream"></a>wostream —
 
-Tworzy typ z basic_ostream, który jest wyspecjalizowany w **wchar_t** i `char_traits` wyspecjalizowany dla **wchar_t**.
+Tworzy typ z basic_ostream, który jest wyspecjalizowany dla **wchar_t** i `char_traits` wyspecjalizowany na **wchar_t**.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
@@ -42,6 +42,6 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 
 Typ jest synonimem dla szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md), wyspecjalizowany dla elementów typu **wchar_t** z cechami domyślnymi znaków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ostream >](../standard-library/ostream.md)

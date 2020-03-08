@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927856"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864754"
 ---
 # <a name="caxwindow-class"></a>Klasa CAxWindow
 
@@ -42,27 +42,27 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|Dołącza istniejący formant ActiveX do `CAxWindow` obiektu.|
-|[CAxWindow](#caxwindow)|Konstruuje `CAxWindow` obiekt.|
-|[CreateControl](#createcontrol)|Tworzy formant ActiveX, inicjuje go i hostuje w `CAxWindow` oknie.|
+|[AttachControl](#attachcontrol)|Dołącza istniejący formant ActiveX do obiektu `CAxWindow`.|
+|[CAxWindow](#caxwindow)|Konstruuje obiekt `CAxWindow`.|
+|[Formant kontrolny](#createcontrol)|Tworzy formant ActiveX, inicjuje go i hostuje w oknie `CAxWindow`.|
 |[CreateControlEx](#createcontrolex)|Tworzy kontrolkę ActiveX i Pobiera wskaźnik interfejsu (lub wskaźniki) z formantu.|
-|[GetWndClassName](#getwndclassname)|Ruchom Pobiera wstępnie zdefiniowaną nazwę `CAxWindow` klasy obiektu.|
-|[QueryControl](#querycontrol)|`IUnknown` Pobiera obsługiwaną kontrolkę ActiveX.|
-|[QueryHost](#queryhost)|`IUnknown` Pobiera wskaźnik`CAxWindow` obiektu.|
-|[SetExternalDispatch](#setexternaldispatch)|Ustawia zewnętrzny interfejs wysyłania używany przez `CAxWindow` obiekt.|
-|[SetExternalUIHandler](#setexternaluihandler)|Ustawia zewnętrzny `IDocHostUIHandler` interfejs używany `CAxWindow` przez obiekt.|
+|[GetWndClassName](#getwndclassname)|Ruchom Pobiera wstępnie zdefiniowaną nazwę klasy obiektu `CAxWindow`.|
+|[QueryControl](#querycontrol)|Pobiera `IUnknown` hostowanej kontrolki ActiveX.|
+|[QueryHost](#queryhost)|Pobiera `IUnknown` wskaźnik `CAxWindow` obiektu.|
+|[SetExternalDispatch](#setexternaldispatch)|Ustawia zewnętrzny interfejs wysyłania używany przez obiekt `CAxWindow`.|
+|[SetExternalUIHandler](#setexternaluihandler)|Ustawia zewnętrzny interfejs `IDocHostUIHandler` używany przez obiekt `CAxWindow`.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Przypisuje Właściwość HWND do istniejącego `CAxWindow` obiektu.|
+|[operator =](#operator_eq)|Przypisuje Właściwość HWND do istniejącego obiektu `CAxWindow`.|
 
 ## <a name="remarks"></a>Uwagi
 
 Ta klasa udostępnia metody manipulowania oknem, które obsługuje kontrolkę ActiveX. Hosting jest dostarczany przez " **AtlAxWin80"** , który jest opakowany przez `CAxWindow`.
 
-Klasa `CAxWindow` jest zaimplementowana jako specjalizacja `CAxWindowT` klasy. Ta specjalizacja jest zadeklarowana jako:
+Klasa `CAxWindow` jest implementowana jako specjalizacja klasy `CAxWindowT`. Ta specjalizacja jest zadeklarowana jako:
 
 `typedef CAxWindowT<CWindow> CAxWindow;`
 
@@ -85,10 +85,10 @@ HRESULT AttachControl(
 ### <a name="parameters"></a>Parametry
 
 *pControl*<br/>
-podczas Wskaźnik do `IUnknown` kontrolki.
+podczas Wskaźnik do `IUnknown` formantu.
 
 *ppUnkContainer*<br/>
-określoną Wskaźnik do `IUnknown` hosta `AxWin` (obiektu).
+określoną Wskaźnik do `IUnknown` hosta (obiekt `AxWin`).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -96,11 +96,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Dołączenie obiektu sterującego musi być poprawnie zainicjowane przed `AttachControl`wywołaniem metody.
+Dołączany obiekt sterowania musi być poprawnie zainicjowany przed wywołaniem `AttachControl`.
 
 ##  <a name="caxwindow"></a>CAxWindow::CAxWindow
 
-Konstruuje `CAxWindow` Obiekt przy użyciu istniejącego uchwytu obiektu okna.
+Konstruuje obiekt `CAxWindow` przy użyciu istniejącego uchwytu obiektu okna.
 
 ```
 CAxWindow(HWND hWnd = NULL);
@@ -132,24 +132,24 @@ HRESULT CreateControl(
 *lpszName*<br/>
 Wskaźnik do ciągu, aby utworzyć kontrolkę. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
+- Identyfikator ProgID, taki jak `"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- Identyfikator CLSID, taki jak `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak`"<https://www.microsoft.com>"`
+- Adres URL, taki jak `"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
+- Odwołanie do aktywnego dokumentu, takiego jak `"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Fragment kodu HTML, taki jak `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML. Tylko identyfikatory ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE Platform osadzonych, innych niż Windows Mobile z obsługą usługi CE IE, obsługują wszystkie typy, w tym identyfikator ProgID, identyfikator CLSID, adres URL, odwołanie do aktywnego dokumentu oraz fragment kodu HTML.
+   > `"MSHTML:"` musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML. Tylko identyfikatory ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE Platform osadzonych, innych niż Windows Mobile z obsługą usługi CE IE, obsługują wszystkie typy, w tym identyfikator ProgID, identyfikator CLSID, adres URL, odwołanie do aktywnego dokumentu oraz fragment kodu HTML.
 
 *pStream*<br/>
 podczas Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartość NULL.
 
 *dwResID*<br/>
 Identyfikator zasobu zasobu HTML. Formant WebBrowser zostanie utworzony i załadowany z określonym zasobem.
@@ -170,7 +170,7 @@ Aby utworzyć, zainicjować i hostować licencjonowany formant ActiveX, zobacz [
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego `CreateControl`z programu.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `CreateControl`.
 
 ##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx
 
@@ -199,33 +199,33 @@ HRESULT CreateControlEx(
 *lpszName*<br/>
 Wskaźnik do ciągu, aby utworzyć kontrolkę. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
+- Identyfikator ProgID, taki jak `"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- Identyfikator CLSID, taki jak `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak`"<https://www.microsoft.com>"`
+- Adres URL, taki jak `"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
+- Odwołanie do aktywnego dokumentu, takiego jak `"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Fragment kodu HTML, taki jak `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML. Tylko identyfikatory ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE Platform osadzonych, innych niż Windows Mobile z obsługą usługi CE IE, obsługują wszystkie typy, w tym identyfikator ProgID, identyfikator CLSID, adres URL, odwołanie do aktywnego dokumentu oraz fragment kodu HTML.
+   > `"MSHTML:"` musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML. Tylko identyfikatory ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE Platform osadzonych, innych niż Windows Mobile z obsługą usługi CE IE, obsługują wszystkie typy, w tym identyfikator ProgID, identyfikator CLSID, adres URL, odwołanie do aktywnego dokumentu oraz fragment kodu HTML.
 
 *pStream*<br/>
 podczas Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartość NULL.
 
 *ppUnkControl*<br/>
-określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` formant. Może mieć wartość NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` formantu. Może mieć wartość NULL.
 
 *iidSink*<br/>
 podczas Identyfikator interfejsu interfejsu wychodzącego na zawartym obiekcie. Może być IID_NULL.
 
 *punkSink*<br/>
-podczas Wskaźnik do `IUnknown` interfejsu obiektu ujścia, który ma być połączony z punktem połączenia w zawartym obiekcie określonym przez *iidSink*.
+podczas Wskaźnik do interfejsu `IUnknown` obiektu ujścia, który ma być połączony z punktem połączenia w zawartym obiekcie określonym przez *iidSink*.
 
 *dwResID*<br/>
 podczas Identyfikator zasobu zasobu HTML. Formant WebBrowser zostanie utworzony i załadowany z określonym zasobem.
@@ -236,13 +236,13 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest podobna do [CAxWindow:: IsControl](#createcontrol), ale w przeciwieństwie do tej `CreateControlEx` metody, umożliwia również otrzymywanie wskaźnika interfejsu do nowo utworzonej kontrolki i Konfigurowanie ujścia zdarzeń do odbierania zdarzeń wyzwalanych przez formant.
+Ta metoda jest podobna do [CAxWindow:: IsControl](#createcontrol), ale w przeciwieństwie do tej metody, `CreateControlEx` również umożliwia uzyskanie wskaźnika interfejsu do nowo utworzonej kontrolki i skonfigurowanie ujścia zdarzeń do odbierania zdarzeń wyzwalanych przez formant.
 
 Zobacz [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) , aby utworzyć, zainicjować i hostować licencjonowany formant ActiveX.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego `CreateControlEx`z programu.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `CreateControlEx`.
 
 ##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName
 
@@ -258,7 +258,7 @@ Wskaźnik do ciągu zawierającego nazwę klasy okna, która może hostować nie
 
 ##  <a name="operator_eq"></a>CAxWindow:: operator =
 
-Przypisuje Właściwość HWND do istniejącego `CAxWindow` obiektu.
+Przypisuje Właściwość HWND do istniejącego obiektu `CAxWindow`.
 
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -271,7 +271,7 @@ Uchwyt do istniejącego okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do bieżącego `CAxWindow` obiektu.
+Zwraca odwołanie do bieżącego obiektu `CAxWindow`.
 
 ##  <a name="querycontrol"></a>CAxWindow::QueryControl
 
@@ -291,7 +291,7 @@ podczas Określa identyfikator IID interfejsu formantu.
 *ppUnk*<br/>
 określoną Wskaźnik do interfejsu formantu. W wersji szablonu tej metody nie ma potrzeby o IDENTYFIKATORze odwołania, o ile jest przesyłany interfejs o określonym typie ze skojarzonym identyfikatorem UUID.
 
-*PYTANIA*<br/>
+*Pytania*<br/>
 podczas Interfejs, dla którego jest przeprowadzana kwerenda.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -316,7 +316,7 @@ podczas Określa identyfikator IID interfejsu formantu.
 *ppUnk*<br/>
 określoną Wskaźnik do interfejsu na hoście. W wersji szablonu tej metody nie ma potrzeby o IDENTYFIKATORze odwołania, o ile jest przesyłany interfejs o określonym typie ze skojarzonym identyfikatorem UUID.
 
-*PYTANIA*<br/>
+*Pytania*<br/>
 podczas Interfejs, dla którego jest przeprowadzana kwerenda.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -325,11 +325,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Interfejs hosta umożliwia dostęp do podstawowych funkcji kodu hostingu okna wdrożonych przez `AxWin`program.
+Interfejs hosta umożliwia dostęp do podstawowych funkcji kodu hostingu okna wdrożonych przez `AxWin`.
 
 ##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch
 
-Ustawia zewnętrzny interfejs wysyłania dla `CAxWindow` obiektu.
+Ustawia zewnętrzny interfejs wysyłania dla obiektu `CAxWindow`.
 
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -338,7 +338,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-podczas Wskaźnik do `IDispatch` interfejsu.
+podczas Wskaźnik do interfejsu `IDispatch`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -346,7 +346,7 @@ Standardowa wartość HRESULT.
 
 ##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler
 
-Ustawia zewnętrzny interfejs [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) dla `CAxWindow` obiektu.
+Ustawia zewnętrzny interfejs [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) dla obiektu `CAxWindow`.
 
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -355,7 +355,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="parameters"></a>Parametry
 
 *pUIHandler*<br/>
-podczas Wskaźnik do `IDocHostUIHandlerDispatch` interfejsu.
+podczas Wskaźnik do interfejsu `IDocHostUIHandlerDispatch`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -363,9 +363,9 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Interfejs zewnętrzny `IDocHostUIHandlerDispatch` jest używany przez kontrolki, które wysyłają zapytania do lokacji hosta `IDocHostUIHandlerDispatch` dla interfejsu. Formant WebBrowser to jeden formant, który to robi.
+Zewnętrzny interfejs `IDocHostUIHandlerDispatch` jest używany przez kontrolki, które wysyłają zapytania do lokacji hosta dla interfejsu `IDocHostUIHandlerDispatch`. Formant WebBrowser to jeden formant, który to robi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład ATLCON](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWindow](../../atl/reference/cwindow-class.md)<br/>

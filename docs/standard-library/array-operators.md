@@ -1,5 +1,5 @@
 ---
-title: Operatory &gt; &lt;array
+title: Operatory&gt; tablicy &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::operator!=
@@ -10,20 +10,20 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688467"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875897"
 ---
-# <a name="ltarraygt-operators"></a>Operatory &gt; &lt;array
+# <a name="ltarraygt-operators"></a>Operatory&gt; tablicy &lt;
 
-Nagłówek \<array > **zawiera te funkcje** szablonu porównania, które nie są elementami członkowskimi.
+Nagłówek **\<array > zawiera te funkcje** szablonu porównania, które nie są elementami członkowskimi.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt; operatora =](#op_gt_eq)|
-|[&lt; operatora](#op_lt)|[&lt; operatora =](#op_lt_eq)|[operator = =](#op_eq_eq)|
+|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt;operatora =](#op_gt_eq)|
+|[&lt; operatora](#op_lt)|[&lt;operatora =](#op_lt_eq)|[operator = =](#op_eq_eq)|
 
 ## <a name="op_neq"></a>operator! =
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>&lt; operatora =
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Porównanie tablicowe, mniejsze niż lub równe.
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>&gt; operatora =
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Porównanie tablicowe, większe niż lub równe.
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ elementu.
 
-*N* \
+*N*\
 Rozmiar tablicy.
 
 \ *lewo*
 Lewy kontener do porównania.
 
-*prawa* \
+*prawa*\
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<array >](../standard-library/array.md)
+[\<> tablicy](../standard-library/array.md)

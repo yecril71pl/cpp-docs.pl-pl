@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873998"
 ---
 # <a name="unordered_map-class"></a>unordered_map — Klasa
 
@@ -164,7 +164,7 @@ class unordered_map;
 
 |Parametr|Opis|
 |-|-|
-|*Key*|Typ klucza.|
+|*Klucz*|Typ klucza.|
 |*Br*|Typ mapowany.|
 |*Skrótu*|Typ obiektu funkcji mieszania.|
 |*Pred*|Typ obiektu funkcji porównywania równości.|
@@ -201,14 +201,14 @@ class unordered_map;
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy.|
-|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[count](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[ciągiem](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
 |[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[find](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
 |[wstawienia](#insert)|Dodaje elementy.|
@@ -229,9 +229,9 @@ class unordered_map;
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_map:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_map:: Hasher](#hasher). Użytkownik uzyskuje dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_map:: key_eq](#key_eq) `()`; a dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_map:: hash_function](#hash) `()`. W odniesieniu do wszystkich wartości `X` i `Y` typu `Key` wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów mają równoważne porządkowanie; Wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W przeciwieństwie do [klasy unordered_multimap](../standard-library/unordered-multimap-class.md)szablonu klasy, obiekt typu `unordered_map` zapewnia, że `key_eq()(X, Y)` zawsze ma wartość false dla każdego z dwóch elementów kontrolowanej sekwencji. (Klucze są unikatowe).
+Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_map:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_map:: Hasher](#hasher). Dostęp do pierwszego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [unordered_map:: key_eq](#key_eq)`()`; a następnie uzyskujesz dostęp do drugiego przechowywanego obiektu, wywołując funkcję członkowską [unordered_map:: hash_function](#hash)`()`. W odniesieniu do wszystkich wartości `X` i `Y` typu `Key`wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów mają równoważne porządkowanie; Wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W odróżnieniu od szablonu klasy [Unordered_multimap Klasa](../standard-library/unordered-multimap-class.md), obiekt typu `unordered_map` zapewnia, że dla każdego dwa elementy kontrolowanej sekwencji `key_eq()(X, Y)` zawsze ma wartość false. (Klucze są unikatowe).
 
-Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_map:: load_factor](#load_factor) `()` przekroczenie maksymalnego współczynnika obciążenia, kontener zwiększa liczbę zasobników i ponownie kompiluje tablicę skrótów zgodnie z wymaganiami.
+Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_map:: load_factor](#load_factor)`()` przekroczenie maksymalnego współczynnika obciążenia, kontener zwiększy liczbę przedziałów i ponownie skompiluje tabelę skrótów zgodnie z wymaganiami.
 
 Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Na ogół nie można przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
 
@@ -243,7 +243,7 @@ Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przec
 
 **Przestrzeń nazw:** std
 
-## <a name="allocator_type"></a>unordered_map::allocator_type
+## <a name="allocator_type"></a>unordered_map:: allocator_type
 
 Typ alokatora do zarządzania pamięcią.
 
@@ -294,7 +294,7 @@ const Ty& at(const Key& key) const;
 
 |Parametr|Opis|
 |-|-|
-|*głównych*|Wartość klucza do wyszukania.|
+|*Klucz*|Wartość klucza do wyszukania.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do zamapowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -452,7 +452,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>unordered_map::bucket_count
+## <a name="bucket_count"></a>unordered_map:: bucket_count
 
 Pobiera liczbę przedziałów.
 
@@ -538,7 +538,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>unordered_map::bucket_size
+## <a name="bucket_size"></a>unordered_map:: bucket_size
 
 Pobiera rozmiar zasobnika
 
@@ -548,7 +548,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -608,7 +608,7 @@ Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakres
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
 
 Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
@@ -657,7 +657,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska wywołuje [unordered_map:: erase](#erase) `(` [unordered_map:: BEGIN](#begin) `(),` [unordered_map:: end](#end) `())`.
+Funkcja członkowska wywołuje [unordered_map:: erase](#erase)`(` [unordered_map:: BEGIN](#begin)`(),` [unordered_map:: end](#end)`())`.
 
 ### <a name="example"></a>Przykład
 
@@ -714,7 +714,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>unordered_map::const_iterator
+## <a name="const_iterator"></a>unordered_map:: const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -757,7 +757,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_local_iterator"></a>unordered_map::const_local_iterator
+## <a name="const_local_iterator"></a>unordered_map:: const_local_iterator
 
 Typ iteratora stałego przedziału dla kontrolowanej sekwencji.
 
@@ -805,7 +805,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="const_pointer"></a>unordered_map::const_pointer
+## <a name="const_pointer"></a>unordered_map:: const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -851,7 +851,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_reference"></a>unordered_map::const_reference
+## <a name="const_reference"></a>unordered_map:: const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -907,12 +907,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca liczbę elementów w zakresie ograniczonym przez [unordered_map:: equal_range](#equal_range) `(keyval)`.
+Funkcja członkowska zwraca liczbę elementów w zakresie rozdzielonym przez [unordered_map:: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Przykład
 
@@ -1013,7 +1013,7 @@ begin()-end() == -3
 
 ## <a name="emplace"></a>unordered_map:: emplace
 
-Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) do elementu unordered_map.
+Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) do unordered_map.
 
 ```cpp
 template <class... Args>
@@ -1028,9 +1028,9 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-@No__t_0, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_map` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod który został wstawiony nowy element lub gdzie znajduje się już element.
+`pair`, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_map` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod którym wstawiono nowy element lub w którym znajduje się już element.
 
-Aby uzyskać dostęp do składnika iteratora pary `pr` zwrócone przez tę funkcję elementu członkowskiego, użyj `pr.first` i aby usunąć odwołanie do niego, użyj `*(pr.first)`. Aby uzyskać dostęp do składnika **bool** pary `pr` zwrócone przez tę funkcję elementu członkowskiego, należy użyć `pr.second`.
+Aby uzyskać dostęp do składnika iteratora pary `pr` zwrócone przez tę funkcję elementu członkowskiego, użyj `pr.first`i aby usunąć odwołanie do niego, użyj `*(pr.first)`. Aby uzyskać dostęp do składnika **bool** pary `pr` zwrócone przez tę funkcję elementu członkowskiego, należy użyć `pr.second`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1040,7 +1040,7 @@ Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcj
 
 Aby uzyskać przykład kodu, zobacz [map:: emplace](../standard-library/map-class.md#emplace).
 
-## <a name="emplace_hint"></a>unordered_map::emplace_hint
+## <a name="emplace_hint"></a>unordered_map:: emplace_hint
 
 Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) z wskazówką dotyczącą położenia.
 
@@ -1068,7 +1068,7 @@ Ta funkcja nie unieważnia żadnych odwołań.
 
 Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, kontener nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany.
 
-[Value_type](../standard-library/map-class.md#value_type) elementu to para, dzięki czemu wartość elementu będzie to uporządkowana para z pierwszym składnikiem równym wartości klucza i drugi składnik równy wartości danych elementu.
+[Value_type](../standard-library/map-class.md#value_type) elementu to para, dzięki czemu wartość elementu będzie przymówionej pary z pierwszym składnikiem równym wartości klucza i drugi składnik równy wartości danych elementu.
 
 Aby uzyskać przykład kodu, zobacz [map:: emplace_hint](../standard-library/map-class.md#emplace_hint).
 
@@ -1160,7 +1160,7 @@ const_local_iterator end(size_type nbucket) const;
 
 Pierwsze dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem sekwencji. Ostatnie dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem zasobnika *nbucket*.
 
-## <a name="equal_range"></a>unordered_map::equal_range
+## <a name="equal_range"></a>unordered_map:: equal_range
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -1171,7 +1171,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1240,23 +1240,23 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* \
+*Pierwszy*\
 Pozycja pierwszego elementu, który ma zostać usunięty.
 
-*Ostatni* \
+*Ostatni*\
 Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 
-*Klucz* \
+*Klucz*\
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem mapy, jeśli taki element nie istnieje.
 
-Dla trzeciej funkcji składowej zwraca liczbę elementów, które zostały usunięte z unordered_map.
+Dla trzeciej funkcji składowej zwraca liczbę elementów usuniętych z unordered_map.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1272,12 +1272,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [unordered_map:: equal_range](#equal_range) `(keyval).first`.
+Funkcja członkowska zwraca [unordered_map:: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Przykład
 
@@ -1322,7 +1322,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="get_allocator"></a>unordered_map::get_allocator
+## <a name="get_allocator"></a>unordered_map:: get_allocator
 
 Pobiera przechowywany obiekt alokatora.
 
@@ -1360,7 +1360,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>unordered_map::hash_function
+## <a name="hash"></a>unordered_map:: hash_function
 
 Pobiera przechowywany obiekt funkcji mieszania.
 
@@ -1474,7 +1474,7 @@ IList);
 |-|-|
 |*Użyte*|Wartość elementu, który ma zostać wstawiony do unordered_map, chyba że zawiera już element, którego klucz jest uporządkowany równorzędnie.|
 |*Miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania.|
-|*ValTy*|Parametr szablonu, który określa typ argumentu, który unordered_map może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type), i idealny do przesyłania *dalej jako argumentu* .|
+|*ValTy*|Parametr szablonu, który określa typ argumentu, który unordered_map może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type)i idealny do przesyłania *dalej jako argumentu* .|
 |*Pierwszego*|Pozycja pierwszego elementu, który ma zostać skopiowany.|
 |*Ostatniego*|Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany.|
 |*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
@@ -1484,7 +1484,7 @@ IList);
 
 Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli unordered_map już zawiera element, którego klucz ma odpowiednik wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
-Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na pozycję, w której nowy element został wstawiony do unordered_map lub, jeśli element z równoważnym kluczem już istnieje, do istniejącego elementu.
+Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na miejsce, w którym nowy element został wstawiony do unordered_map lub, jeśli element z równoważnym kluczem już istnieje, do istniejącego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1494,7 +1494,7 @@ Podczas wstawiania tylko jednego elementu, jeśli wyjątek jest zgłaszany, ale 
 
 Aby uzyskać dostęp do składnika iteratora `pr` `pair`, który jest zwracany przez jednoelementowe funkcje członkowskie, użyj `pr.first`; Aby usunąć odwołanie do iteratora w zwróconej parze, użyj `*pr.first`, dając Ci element. Aby uzyskać dostęp do składnika **bool** , użyj `pr.second`. Aby zapoznać się z przykładem, zobacz przykładowy kod w dalszej części tego artykułu.
 
-[Value_type](../standard-library/map-class.md#value_type) kontenera jest elementem TypeDef, który należy do kontenera, a dla mapy, `map<K, V>::value_type` jest `pair<const K, V>`. Wartość elementu to uporządkowana para, w której pierwszy składnik jest równy wartości klucza, a drugi składnik jest równy wartości danych elementu.
+[Value_type](../standard-library/map-class.md#value_type) kontenera jest elementem TypeDef, który należy do kontenera, a dla mapy `map<K, V>::value_type` jest `pair<const K, V>`. Wartość elementu to uporządkowana para, w której pierwszy składnik jest równy wartości klucza, a drugi składnik jest równy wartości danych elementu.
 
 Funkcja elementu członkowskiego zakresu (5) wstawia sekwencję wartości elementów do unordered_map, która odnosi się do każdego elementu, który jest kierowany przez iterator w zakresie `[First, Last)`; w związku z tym `Last` nie zostanie wstawiony. Funkcja elementu członkowskiego kontenera `end()` odnosi się do pozycji tuż po ostatnim elemencie w kontenerze — na przykład, instrukcja `m.insert(v.begin(), v.end());` próbuje wstawić wszystkie elementy `v` do `m`. Wstawiane są tylko elementy, które mają unikatowe wartości z zakresu; duplikaty zostały zignorowane. Aby sprawdzić, które elementy są odrzucane, użyj jednoelementowych wersji `insert`.
 
@@ -1547,7 +1547,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="key_eq"></a>unordered_map::key_eq
+## <a name="key_eq"></a>unordered_map:: key_eq
 
 Pobiera przechowywany obiekt funkcji porównywania.
 
@@ -1587,7 +1587,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>unordered_map::key_equal
+## <a name="key_equal"></a>unordered_map:: key_equal
 
 Typ funkcji porównywania.
 
@@ -1627,7 +1627,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>unordered_map::key_type
+## <a name="key_type"></a>unordered_map:: key_type
 
 Typ klucza sortowania.
 
@@ -1682,7 +1682,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="load_factor"></a>unordered_map::load_factor
+## <a name="load_factor"></a>unordered_map:: load_factor
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1692,7 +1692,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `(float)`[unordered_map:: size](#size) `() / (float)`[unordered_map:: bucket_count](#bucket_count) `()`, średnią liczbę elementów na przedział.
+Funkcja członkowska zwraca `(float)`[unordered_map:: size](#size)`() / (float)`[unordered_map:: bucket_count](#bucket_count)`()`, średnią liczbę elementów na przedział.
 
 ### <a name="example"></a>Przykład
 
@@ -1768,7 +1768,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>unordered_map::local_iterator
+## <a name="local_iterator"></a>unordered_map:: local_iterator
 
 Typ iteratora zasobnika.
 
@@ -1816,7 +1816,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="mapped_type"></a>unordered_map::mapped_type
+## <a name="mapped_type"></a>unordered_map:: mapped_type
 
 Typ mapowanej wartości skojarzonej z poszczególnymi kluczami.
 
@@ -1871,7 +1871,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="max_bucket_count"></a>unordered_map::max_bucket_count
+## <a name="max_bucket_count"></a>unordered_map:: max_bucket_count
 
 Pobiera maksymalną liczbę przedziałów.
 
@@ -1957,7 +1957,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>unordered_map::max_load_factor
+## <a name="max_load_factor"></a>unordered_map:: max_load_factor
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -2050,7 +2050,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>unordered_map::max_size
+## <a name="max_size"></a>unordered_map:: max_size
 
 Pobiera maksymalny rozmiar kontrolowanej sekwencji.
 
@@ -2170,11 +2170,11 @@ c2["abc"] == 1
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa `where` iterator jako wartość zwracaną [unordered_map:: insert](#insert) `(` [unordered_map:: value_type](#value_type) `(keyval, Ty())`. (Wstawia element z określonym kluczem, jeśli taki element nie istnieje). Następnie zwraca odwołanie do `(*where).second`.
+Funkcja członkowska określa `where` iterator jako wartość zwracaną [unordered_map:: insert](#insert)`(` [unordered_map:: value_type](#value_type)`(keyval, Ty())`. (Wstawia element z określonym kluczem, jeśli taki element nie istnieje). Następnie zwraca odwołanie do `(*where).second`.
 
 ## <a name="op_eq"></a>unordered_map:: operator =
 
-Zastępuje elementy tego unordered_map za pomocą elementów z innej unordered_map.
+Zastępuje elementy tego unordered_map przy użyciu elementów z innego unordered_map.
 
 ```cpp
 unordered_map& operator=(const unordered_map& right);
@@ -2186,15 +2186,15 @@ unordered_map& operator=(unordered_map&& right);
 
 |Parametr|Opis|
 |-|-|
-|*Kliknij*|Unordered_map, z którego funkcja operator przypisuje zawartość.|
+|*Kliknij*|Unordered_map, z której funkcja operatora przypisuje zawartość.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza wersja kopiuje wszystkie elementy z *prawej* do unordered_map.
+Pierwsza wersja kopiuje wszystkie elementy z *prawej strony* do tej unordered_map.
 
-Druga wersja przenosi wszystkie elementy z *prawej* do unordered_map.
+Druga wersja przenosi wszystkie elementy z *prawej strony* do tej unordered_map.
 
-Wszystkie elementy znajdujące się w tym unordered_map przed wykonaniem `operator` = są odrzucane.
+Wszystkie elementy znajdujące się w tym unordered_map przed wykonaniem `operator`= są odrzucane.
 
 ### <a name="example"></a>Przykład
 
@@ -2335,7 +2335,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets* \
+*nbuckets*\
 Żądana liczba zasobników.
 
 ### <a name="remarks"></a>Uwagi
@@ -2470,7 +2470,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>unordered_map::size_type
+## <a name="size_type"></a>unordered_map:: size_type
 
 Typ odległości bez znaku między dwoma elementami.
 
@@ -2516,12 +2516,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Kontener, w którym ma zostać zamieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_map:: get_allocator](#get_allocator) `() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku skopiowania obiektu składowanych cech typu `Tr` i unieważnia brak odwołań, wskaźników lub iteratorów, które wyznaczają elementy w dwie kontrolowane sekwencje. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
+Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_map:: get_allocator](#get_allocator)`() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku kopiowania obiektu posiadanych cech typu `Tr`i unieważnia odwołania, wskaźniki lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2578,7 +2578,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_map"></a>unordered_map::unordered_map
+## <a name="unordered_map"></a>unordered_map:: unordered_map
 
 Konstruuje obiekt kontenera.
 
@@ -2642,7 +2642,7 @@ Pierwszy Konstruktor określa kopię sekwencji kontrolowanej przez `right`. Drug
 
 Wszystkie konstruktory również inicjują kilka przechowywanych wartości. W przypadku konstruktora kopiującego wartości są uzyskiwane z *prawej strony*. W przeciwnym razie:
 
-Minimalna liczba przedziałów jest argumentem *Bucket_count*, jeśli jest obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana przez implementację `N0`.
+Minimalna liczba przedziałów jest argumentem *Bucket_count*, jeśli istnieje; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana przez implementację `N0`.
 
 Obiekt funkcji mieszania jest *wartością skrótu*argumentu (jeśli istnieje); w przeciwnym razie jest `Hash()`.
 
@@ -2784,7 +2784,7 @@ int main()
 [a, 1] [b, 2] [c, 3]
 ```
 
-## <a name="value_type"></a>unordered_map::value_type
+## <a name="value_type"></a>unordered_map:: value_type
 
 Typ elementu.
 
@@ -2839,9 +2839,9 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< unordered_map >](../standard-library/unordered-map.md) \
-[Kontenery](../cpp/containers-modern-cpp.md) \
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[< unordered_map >](../standard-library/unordered-map.md)\
+[Containers](../cpp/containers-modern-cpp.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882941"
 ---
 # <a name="agent-class"></a>agent — Klasa
 
@@ -34,7 +34,7 @@ Klasa przeznaczona do użycia jako klasa bazowa dla wszystkich niezależnych age
 class agent;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -120,7 +120,7 @@ Przenosi agenta ze Stanów `agent_created` lub `agent_runnable` do stanu `agent_
 bool cancel();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **prawda** , jeśli Agent został anulowany, w przeciwnym razie **zwraca wartość false** . Nie można anulować agenta, jeśli został już uruchomiony lub został już ukończony.
 
@@ -132,7 +132,7 @@ Przenosi agenta do stanu `agent_done`, wskazując, że Agent został ukończony.
 bool done();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli Agent jest przenoszony do stanu `agent_done`, w przeciwnym razie **false** . Agent, który został anulowany, nie może zostać przeniesiony do stanu `agent_done`.
 
@@ -160,7 +160,7 @@ Przenosi agenta ze stanu `agent_created` do stanu `agent_runnable` i planuje jeg
 bool start();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **prawda** , jeśli Agent został uruchomiony prawidłowo, w przeciwnym razie **false** . Nie można uruchomić agenta, który został anulowany.
 
@@ -172,7 +172,7 @@ Synchroniczne źródło informacji o stanie od agenta.
 agent_status status();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca bieżący stan agenta. Zwróć uwagę, że ten zwrócony stan może ulec zmianie natychmiast po zwróceniu.
 
@@ -184,7 +184,7 @@ Asynchroniczne źródło informacji o stanie od agenta.
 ISource<agent_status>* status_port();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca źródło komunikatu, które może wysyłać komunikaty o bieżącym stanie agenta.
 
@@ -206,7 +206,7 @@ Wskaźnik do agenta, dla którego ma zostać odczekanie.
 *_Timeout*<br/>
 Maksymalny czas oczekiwania (w milisekundach).
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 `agent_status` agenta po zakończeniu oczekiwania. Może to być `agent_canceled` lub `agent_done`.
 

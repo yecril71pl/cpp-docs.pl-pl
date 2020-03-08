@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687619"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876035"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits — Klasa
 
@@ -90,12 +90,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* \
+*Typ*\
 Typ danych elementu podstawowego, którego właściwości są testowane lub są badane lub ustawiane. *Typ* może być również zadeklarowany jako **const**, **volatile**lub **const volatile**.
 
 ## <a name="remarks"></a>Uwagi
 
-Nagłówek definiuje jawne specjalizacje dla typów **wchar_t**, **bool**, **char**, signed **char**, **char bez**znaku, **Short**, unsigned **Short**, **int**, unsigned **int**, **Long**, **unsigned long**, **float**, **Double**, **Long Double**, **Long Long**, **unsigned long long**, **char16_t**i **char32_t**. Dla tych jawnych specjalizacji element członkowski [numeric_limits:: is_specialized](#is_specialized) ma **wartość true**, a wszystkie odpowiednie elementy członkowskie mają znaczące wartości. Program może podawać dodatkowe jawne specjalizacje. Większość funkcji członkowskich klasy opisuje lub testuje możliwe implementacje **zmiennoprzecinkowe**.
+Nagłówek definiuje jawne specjalizacje dla typów, **wchar_t**, **bool**, **char**, signed **char**, **unsigned char**, **Short**, unsigned **Short**, **int** **, Long** **int** **,** **Long** **char32_t** **char16_t** **, unsigned**Long Dla tych jawnych specjalizacji element członkowski [numeric_limits:: is_specialized](#is_specialized) ma **wartość true**, a wszystkie odpowiednie elementy członkowskie mają znaczące wartości. Program może podawać dodatkowe jawne specjalizacje. Większość funkcji członkowskich klasy opisuje lub testuje możliwe implementacje **zmiennoprzecinkowe**.
 
 W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczących wartości. Obiekt elementu członkowskiego, który nie ma zrozumiałej wartości, przechowuje zero (lub **Fałsz**) i funkcję członkowską, która nie zwraca znaczącej wartości zwraca `Type(0)`.
 
@@ -152,7 +152,7 @@ Najmniejsza nieznormalizowana wartość niezerową.
 
 wartość **Long Double** jest taka sama jak wartość Double C++ dla kompilatora.
 
-Funkcja zwraca wartość minimalną dla typu, która jest taka sama jak [min](#min) , jeśli [has_denorm](#has_denorm) nie jest równa `denorm_present`.
+Funkcja zwraca wartość minimalną dla typu, która jest taka sama jak [minimalna](#min) , jeśli [has_denorm](#has_denorm) nie jest równa `denorm_present`.
 
 #### <a name="example"></a>Przykład
 
@@ -297,7 +297,7 @@ Różnica między 1 a najmniejszą wartością większą niż 1, która jest zap
 
 #### <a name="remarks"></a>Uwagi
 
-Wartość jest FLT_EPSILON dla typu **float**. `epsilon` dla typu jest najmniejszą dodatnią liczbą zmiennoprzecinkową *n* wskazującą, że *n*  +  `epsilon`  + *n* jest możliwe do zaprezentowania.
+Wartość jest FLT_EPSILON dla typu **float**. `epsilon` dla typu jest najmniejszą dodatnią liczbą zmiennoprzecinkową *n* wskazującą, że *n* + `epsilon` + *n* jest możliwe do zaprezentowania.
 
 #### <a name="example"></a>Przykład
 
@@ -345,7 +345,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Wartość wyliczenia typu **const** `float_denorm_style`, wskazująca, czy typ zezwala na nieznormalizowane wartości.
+Wartość wyliczenia typu **const**`float_denorm_style`, wskazująca, czy typ zezwala na nieznormalizowane wartości.
 
 #### <a name="remarks"></a>Uwagi
 
@@ -1011,7 +1011,7 @@ Maksymalna wartość skończoną dla typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Maksymalna wartość skończoną to INT_MAX dla typu **int** i FLT_MAX dla typu **float**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true**.
+Maksymalna wartość skończoną jest INT_MAX dla typu **int** i FLT_MAX dla typu **zmiennoprzecinkowego**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -1069,7 +1069,7 @@ Maksymalny szacowany całkowity podstawy wykładnika oparta na typie.
 
 #### <a name="remarks"></a>Uwagi
 
-Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MAX_EXP dla typu **float**.
+Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. `max_exponent` jest wartością FLT_MAX_EXP dla typu **zmiennoprzecinkowego**.
 
 #### <a name="example"></a>Przykład
 
@@ -1115,7 +1115,7 @@ Maksymalny całkowity 10-podstawowy wykładnik, który jest zaprezentowany przez
 
 #### <a name="remarks"></a>Uwagi
 
-Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MAX_10 dla typu **float**.
+Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. `max_exponent` jest wartością FLT_MAX_10 dla typu **zmiennoprzecinkowego**.
 
 #### <a name="example"></a>Przykład
 
@@ -1161,7 +1161,7 @@ Minimalna znormalizowana wartość dla typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Minimalna znormalizowana wartość to INT_MIN dla typu **int** i FLT_MIN dla typu **zmiennoprzecinkowego**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true** lub [is_signed](#is_signed) ma **wartość false**.
+Minimalna znormalizowana wartość jest INT_MIN dla typu **int** i FLT_MIN dla typu **zmiennoprzecinkowego**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true** lub jeśli [is_signed](#is_signed) ma **wartość false**.
 
 #### <a name="example"></a>Przykład
 
@@ -1211,7 +1211,7 @@ Minimalny całkowity podstawy wykładnika oparta na typie.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MIN_EXP dla typu **float**.
+Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. `min_exponent` jest wartością FLT_MIN_EXP dla typu **zmiennoprzecinkowego**.
 
 #### <a name="example"></a>Przykład
 
@@ -1257,7 +1257,7 @@ Minimalny całkowity, 10-podstawowy wykładnik do zaprezentowania przez typ.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MIN_10_EXP dla typu **float**.
+Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. `min_exponent10` jest wartością FLT_MIN_10_EXP dla typu **zmiennoprzecinkowego**.
 
 #### <a name="example"></a>Przykład
 
@@ -1349,7 +1349,7 @@ Część podstawowa dla reprezentacji typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Podstawą jest 2 dla wstępnie zdefiniowanych typów całkowitych i podstawa, do której jest podnoszona lub FLT_RADIX wykładnika dla wstępnie zdefiniowanych typów zmiennoprzecinkowych.
+Podstawą jest 2 dla wstępnie zdefiniowanych typów całkowitych i podstawa, do której jest podnoszona wartość wykładnika lub FLT_RADIX, dla wstępnie zdefiniowanych typów zmiennoprzecinkowych.
 
 #### <a name="example"></a>Przykład
 

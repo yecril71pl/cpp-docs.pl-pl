@@ -345,17 +345,17 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504702"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866713"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 
-Zapewnia obsługę zmiany wyglądu aplikacji na poziomie globalnym. `CMFCVisualManager` Klasa działa razem z klasą, która zawiera instrukcje do rysowania kontrolek graficznego interfejsu użytkownika aplikacji przy użyciu spójnego stylu. Te inne klasy są określane jako menedżerowie wizualizacji i dziedziczą `CMFCBaseVisualManager`z.
+Zapewnia obsługę zmiany wyglądu aplikacji na poziomie globalnym. Klasa `CMFCVisualManager` działa razem z klasą, która zawiera instrukcje do rysowania kontrolek graficznego interfejsu użytkownika aplikacji przy użyciu spójnego stylu. Te inne klasy są określane jako menedżerowie wizualizacji i dziedziczą z `CMFCBaseVisualManager`.
 
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** w instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -367,32 +367,32 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Konstruktor domyślny.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
 |[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Wywoływane przez platformę, aby określić, czy karty 3W powinny być zawsze rysowane przy użyciu koloru wyróżnienia.|
-|[CMFCVisualManager::DestroyInstance](#destroyinstance)||
+|[CMFCVisualManager::D estroyInstance](#destroyinstance)||
 |[CMFCVisualManager::D oDrawHeaderSortArrow](#dodrawheadersortarrow)||
-|[CMFCVisualManager::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
-|[CMFCVisualManager::DrawPushButtonWinXP](#drawpushbuttonwinxp)||
+|[CMFCVisualManager::D rawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
+|[CMFCVisualManager::D rawPushButtonWinXP](#drawpushbuttonwinxp)||
 |[CMFCVisualManager::D rawTextOnGlass](#drawtextonglass)||
 |[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|Wywoływane przez platformę, by pobrać kolor tekstu dla przycisku autoukrywania.|
 |[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|Wywoływane przez platformę, aby pobrać zwiększony rozmiar przycisku, którego potrzebuje bieżący program Visual Manager do narysowania przycisku.|
 |[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|Wywoływane przez platformę, by pobrać kolor tekstu paska podpisu.|
 |[CMFCVisualManager::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Wywoływane przez platformę, by pobrać rozmiar obramowania zadokowanego paska z kartami.|
 |[CMFCVisualManager::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManager:: GetInstance](#getinstance)|Zwraca wskaźnik do `CMFCVisualManager` obiektu.|
+|[CMFCVisualManager:: GetInstance](#getinstance)|Zwraca wskaźnik do obiektu `CMFCVisualManager`.|
 |[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|Wywoływane przez platformę, by pobrać rozmiar obramowania okna MDITabs.|
 |[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||
 |[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|Zwraca wartość określającą szerokość i wysokość cienia menu.|
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Wywoływane przez platformę w celu określenia rozmiaru przycisków systemowych opartych na bieżącym programie Visual Manager. Przyciski systemowe są przyciskami w podpisie ramki głównej, które są mapowane na polecenia **zamknięcia**, minimalizowania, **maksymalizowania**i **przywracania**.|
+|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Wywoływane przez platformę w celu określenia rozmiaru przycisków systemowych opartych na bieżącym programie Visual Manager. Przyciski systemowe są przyciskami w podpisie ramki głównej, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania**i **przywracania**.|
 |[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|Wywoływane przez platformę, by pobrać rozmiar obramowania menu podręcznego.|
 |[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Wywoływane przez platformę, by pobrać kolor tła listy właściwości.|
 |[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Wywoływane przez platformę, by pobrać kolor tekstu listy właściwości.|
@@ -452,7 +452,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Wywoływane przez platformę, gdy rysuje rozdzielacz dla paska programu Outlook. Rozdzielacz jest poziomy pasek służący do grupowania kontrolek.|
 |[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływane przez platformę, gdy rysuje obramowanie przycisku strony programu Outlook. Przyciski strony programu Outlook są wyświetlane, jeśli okienko pasek programu Outlook zawiera więcej przycisków niż można wyświetlić.|
 |[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|Wywoływane przez platformę, gdy rysuje obramowanie [klasy CPane](../../mfc/reference/cpane-class.md).|
-|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|Wywoływane przez platformę, gdy rysuje podpis dla elementu `CPane`.|
+|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|Wywoływane przez platformę, gdy rysuje podpis dla `CPane`.|
 |[CMFCVisualManager::OnDrawPaneDivider](#ondrawpanedivider)||
 |[CMFCVisualManager::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
 |[CMFCVisualManager::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
@@ -484,8 +484,8 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Wywoływane przez platformę, gdy rysuje separator na **pasku narzędzi Szybki dostęp**do wstążki.|
 |[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|Wywoływane przez platformę, gdy Rysuje ramkę wokół listy ostatnio używanych plików.|
 |[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Wywoływane przez platformę, gdy rysuje kanał obiektu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .|
-|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Wywoływane przez platformę, gdy rysuje kciuk `CMFCRibbonSlider` obiektu.|
-|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Wywoływane przez platformę, gdy rysuje przyciski `CMFCRibbonSlider` powiększenia obiektu.|
+|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Wywoływane przez platformę, gdy rysuje kciuk obiektu `CMFCRibbonSlider`.|
+|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Wywoływane przez platformę, gdy rysuje Przyciski powiększenia obiektu `CMFCRibbonSlider`.|
 |[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Wywoływane przez platformę, gdy rysuje okienko pasek stanu wstążki.|
 |[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|Wywoływane przez platformę, gdy Rysuje ramkę wokół zestawu kart wstążki.|
 |[CMFCVisualManager::OnDrawScrollButtons](#ondrawscrollbuttons)||
@@ -530,7 +530,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|Wywoływane przez platformę, gdy wypełnia tło okna podzielonego.|
 |[CMFCVisualManager::OnFillTab](#onfilltab)|Wywoływane przez platformę, gdy wypełnia tło karty.|
 |[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Wywoływane przez platformę, gdy wypełnia wnętrze obiektu [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) na [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md).|
-|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Wywoływane przez platformę, gdy wypełnia tło `CMFCTasksPane` formantu.|
+|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Wywoływane przez platformę, gdy wypełnia tło kontrolki `CMFCTasksPane`.|
 |[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|Wywoływane przez platformę, gdy rysuje wyróżniony element menu.|
 |[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Wywoływane przez platformę, gdy rysuje podświetlony i rzadko używany element menu.|
 |[CMFCVisualManager::OnNcPaint](#onncpaint)|Wywoływane przez platformę, gdy rysuje obszar niebędący klientem.|
@@ -538,7 +538,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|Wywoływane przez platformę, gdy zmienia ustawienie koloru systemu.|
 |[CMFCVisualManager::RedrawAll](#redrawall)|Ponownie rysuje wszystkie paski kontroli w aplikacji.|
 |[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|Ustawia domyślny program Visual Manager.|
+|[CMFCVisualManager:: SetDefaultManager](#setdefaultmanager)|Ustawia domyślny program Visual Manager.|
 |[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|Włącza lub wyłącza tryb uwypuklenia dla wyłączonych obrazów pasków narzędzi.|
 |[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|Włącza lub wyłącza efekt oświetlenia dla nieaktywnych obrazów w menu lub na pasku narzędzi.|
 |[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|Ustawia flagę wskazującą, czy przyciski menu aplikacji mają spłaszczony wygląd.|
@@ -547,15 +547,15 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ Klasa steruje graficznym interfejsem użytkownika, każda aplikacja może mieć jedno wystąpienie `CMFCVisualManager`lub jedno wystąpienie klasy pochodzącej od `CMFCVisualManager`. `CMFCVisualManager` Aplikacja może również działać bez `CMFCVisualManager`. Użyj statycznej metody `GetInstance` , aby uzyskać wskaźnik do bieżącego `CMFCVisualManager`obiektu pochodnego.
+Ponieważ Klasa `CMFCVisualManager` kontroluje graficzny interfejs użytkownika aplikacji, każda aplikacja może mieć jedno wystąpienie `CMFCVisualManager`lub jedno wystąpienie klasy pochodzącej z `CMFCVisualManager`. Aplikacja może również działać bez `CMFCVisualManager`. Użyj metody statycznej `GetInstance`, aby uzyskać wskaźnik do bieżącego obiektu pochodnego `CMFCVisualManager`.
 
-Aby zmienić wygląd aplikacji, należy użyć innych klas, które zapewniają metody rysowania wszystkich elementów wizualnych aplikacji. Przykładami takich klas są [klasy CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), Klasa [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)i [Klasa CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Aby zmienić wygląd aplikacji, Przekaż jednego z tych menedżerów wizualizacji do metody `SetDefaultManager`. Przykład demonstrujący, jak aplikacja może naśladować wygląd Microsoft Office 2003, zobacz [Klasa CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
+Aby zmienić wygląd aplikacji, należy użyć innych klas, które zapewniają metody rysowania wszystkich elementów wizualnych aplikacji. Przykładami takich klas są [klasy CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), Klasa [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)i [Klasa CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Aby zmienić wygląd aplikacji, należy przekazać jednego z tych menedżerów wizualizacji do metody `SetDefaultManager`. Przykład demonstrujący, jak aplikacja może naśladować wygląd Microsoft Office 2003, zobacz [Klasa CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
 
 Wszystkie metody rysowania są wirtualne. Dzięki temu można utworzyć niestandardowy styl wizualizacji dla graficznego interfejsu użytkownika aplikacji. Jeśli chcesz utworzyć własny styl wizualizacji, Utwórz klasę z jednej z klas programu Visual Manager i Zastąp metody rysowania, które chcesz zmienić.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak utworzyć wystąpienie obiektów standardowych i `CMFCVisualManager` niestandardowych.
+Ten przykład pokazuje, jak utworzyć wystąpienie standardowych i niestandardowych obiektów `CMFCVisualManager`.
 
 ```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób pobierania wartości `CMFCVisualManager` domyślnych obiektu. Ten fragment kodu jest częścią [okienka zadania](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób pobierania wartości domyślnych obiektu `CMFCVisualManager`. Ten fragment kodu jest częścią [okienka zadania](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -629,7 +629,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`TRUE`Jeśli karty 3W mają być wyróżnione.
+`TRUE`, jeśli mają być wyróżnione karty 3W.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -895,11 +895,11 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CMFCVisualManager` obiektu.
+Wskaźnik do obiektu `CMFCVisualManager`.
 
 ### <a name="remarks"></a>Uwagi
 
-Z aplikacją może być skojarzony tylko `CMFCVisualManager` jeden obiekt. Obejmuje wszystkie obiekty pochodne od `CMFCVisualManager` klasy. Ta metoda zwraca wskaźnik do skojarzonego `CMFCVisualManager` obiektu. Jeśli aplikacja nie ma skojarzonego `CMFCVisualManager` obiektu, ta metoda zostanie utworzona i zostanie skojarzona z aplikacją.
+Z aplikacją może być skojarzony tylko jeden obiekt `CMFCVisualManager`. Obejmuje każdy obiekt pochodny klasy `CMFCVisualManager`. Ta metoda zwraca wskaźnik do skojarzonego obiektu `CMFCVisualManager`. Jeśli aplikacja nie ma skojarzonego obiektu `CMFCVisualManager`, ta metoda zostanie utworzona i zostanie skojarzona z aplikacją.
 
 ##  <a name="getmditabsborderssize"></a>CMFCVisualManager::GetMDITabsBordersSize
 
@@ -973,7 +973,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ### <a name="parameters"></a>Parametry
 
 *bSmall*<br/>
-podczas Parametr logiczny, który wskazuje, `GetNcBtnSize` czy powinien zostać pobrany mały lub duży przycisk systemowy. Jeśli *bSmall* ma wartość true `GetNcBtnSize` , zwraca rozmiar małego przycisku systemowego. W przeciwnym razie zwraca rozmiar dużego przycisku systemowego.
+podczas Parametr logiczny, który wskazuje, czy `GetNcBtnSize` powinien pobrać rozmiar małego lub dużego przycisku systemowego. Jeśli *bSmall* ma wartość TRUE, `GetNcBtnSize` zwraca rozmiar małego przycisku systemowego. W przeciwnym razie zwraca rozmiar dużego przycisku systemowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -981,7 +981,7 @@ Parametr [CSize](../../atl-mfc-shared/reference/csize-class.md) wskazujący rozm
 
 ### <a name="remarks"></a>Uwagi
 
-Przyciski systemowe są przyciskami w podpisie okna ramki, które są mapowane na polecenia **zamknięcia**, minimalizowania, **maksymalizowania**i **przywracania**. Rozmiar tych przycisków zależy od bieżącego programu Visual Manager. Zastąp tę metodę, jeśli chcesz dostosować rozmiar przycisków systemu w aplikacji.
+Przyciski systemowe są przyciskami w podpisie okna ramki, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania**i **przywracania**. Rozmiar tych przycisków zależy od bieżącego programu Visual Manager. Zastąp tę metodę, jeśli chcesz dostosować rozmiar przycisków systemu w aplikacji.
 
 ##  <a name="getpopupmenubordersize"></a>CMFCVisualManager::GetPopupMenuBorderSize
 
@@ -1411,7 +1411,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *pButton*<br/>
 podczas Wskaźnik do przycisku paska narzędzi.
 
-*state*<br/>
+*Państwu*<br/>
 podczas Stan przycisku paska narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1420,7 +1420,7 @@ Kolor tekstu elementu *pButton* , gdy ma stan wskazywany przez *stan*.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor tekstu obiektu [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) zależy od stanu przycisku. Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`, lub `ButtonsIsHighlighted`.
+Kolor tekstu obiektu [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) zależy od stanu przycisku. Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`lub `ButtonsIsHighlighted`.
 
 Zastąp tę funkcję, aby dostosować kolor tekstu przycisku paska narzędzi w aplikacji.
 
@@ -1750,7 +1750,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectBounds*<br/>
@@ -1766,7 +1766,7 @@ podczas Wskaźnik do przycisku Autoukrywanie. Struktura rysuje obramowanie dla t
 
 Zastąp tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd obramowania przycisku autoukrywania. Domyślnie ta metoda wypełnia płaskie obramowanie domyślnym kolorem cienia dla aplikacji.
 
-Parametr *rectBorderSize* nie zawiera współrzędnych obramowania. Zawiera rozmiar obramowania `top`w elementach członkowskich danych `left`, `bottom`, i `right` . Wartość mniejsza lub równa 0 oznacza brak obramowania po stronie przycisku Autoukrywanie.
+Parametr *rectBorderSize* nie zawiera współrzędnych obramowania. Zawiera rozmiar obramowania w elementach członkowskich danych `top`, `bottom`, `left`i `right`. Wartość mniejsza lub równa 0 oznacza brak obramowania po stronie przycisku Autoukrywanie.
 
 ##  <a name="ondrawbargripper"></a>CMFCVisualManager::OnDrawBarGripper
 
@@ -1782,7 +1782,7 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na pasku sterowania.
 
 *rectGripper*<br/>
@@ -1796,7 +1796,7 @@ podczas Wskaźnik do paska sterowania. Program Visual Manager rysuje uchwytu teg
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej metody wyświetla uchwyt standardowy. Aby dostosować wygląd uchwytu, Zastąp tę metodę klasą niestandardową pochodną `CMFCVisualManager` klasy.
+Domyślna implementacja tej metody wyświetla uchwyt standardowy. Aby dostosować wygląd uchwytu, Zastąp tę metodę klasą niestandardową pochodną klasy `CMFCVisualManager`.
 
 ##  <a name="ondrawbrowsebutton"></a>CMFCVisualManager::OnDrawBrowseButton
 
@@ -1813,7 +1813,7 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -1822,7 +1822,7 @@ podczas Prostokąt, który określa granicę przycisku przeglądania.
 *pEdit*<br/>
 podczas Wskaźnik do kontrolki edycji. Program Visual Manager rysuje przycisk Przeglądaj dla tej kontrolki edycji.
 
-*state*<br/>
+*Państwu*<br/>
 podczas Wartość wyliczana, która określa stan przycisku.
 
 *clrText*<br/>
@@ -1834,7 +1834,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję w klasie pochodnej, jeśli chcesz dostosować wygląd przycisków przeglądania w wystąpieniach [klasy CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md). Możliwe wartości stanu przycisku to `ButtonsIsRegular`, `ButtonsIsPressed`, i `ButtonsIsHighlighted`.
+Zastąp tę funkcję w klasie pochodnej, jeśli chcesz dostosować wygląd przycisków przeglądania w wystąpieniach [klasy CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md). Możliwe wartości stanu przycisku to `ButtonsIsRegular`, `ButtonsIsPressed`i `ButtonsIsHighlighted`.
 
 ##  <a name="ondrawbuttonborder"></a>CMFCVisualManager::OnDrawButtonBorder
 
@@ -1850,7 +1850,7 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na przycisku paska narzędzi.
 
 *pButton*<br/>
@@ -1859,14 +1859,14 @@ podczas Wskaźnik do przycisku paska narzędzi. Struktura rysuje obramowanie teg
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisku paska narzędzi.
 
-*state*<br/>
+*Państwu*<br/>
 podczas Typ danych wyliczanych, który określa bieżący stan przycisku paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślna implementacja tej metody wyświetla obramowanie standardowe. Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd obramowania przycisku paska narzędzi.
 
-Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`, lub `ButtonsIsHighlighted`.
+Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`lub `ButtonsIsHighlighted`.
 
 ##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator
 
@@ -1904,11 +1904,11 @@ virtual void OnDrawCaptionBarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
-podczas Wskaźnik do `CMFCCaptionBar` obiektu. Struktura rysuje ten pasek napisów.
+podczas Wskaźnik do obiektu `CMFCCaptionBar`. Struktura rysuje ten pasek napisów.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice paska podpisu.
@@ -1984,11 +1984,11 @@ virtual void OnDrawCaptionButton (
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
-podczas Wskaźnik do `CMFCCaptionButton` obiektu. Struktura rysuje ten przycisk napis.
+podczas Wskaźnik do obiektu `CMFCCaptionButton`. Struktura rysuje ten przycisk napis.
 
 *bActive*<br/>
 podczas Parametr logiczny, który określa, czy przycisk jest aktywny.
@@ -2007,7 +2007,7 @@ podczas Indeks obrazu dla ikony, która ma być używana dla przycisku. Jeśli *
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej metody wyświetla niewielki przycisk z globalnego wystąpienia `CMenuImages` klasy. Przyciski są wymienione w pliku `CMenuImages`nagłówka. Przykłady `CMenuImages::IdClose`obejmują, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight` ,,`CMenuImages::IdPinHorz`, i. `CMenuImages::IdArowDown` `CMenuImages::IdArowUp`
+Domyślna implementacja tej metody wyświetla niewielki przycisk z wystąpienia globalnego klasy `CMenuImages`. Przyciski są wymienione w pliku nagłówka dla `CMenuImages`. Przykładami mogą być `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`i `CMenuImages::IdPinHorz`.
 
 Zastąp tę metodę w klasie pochodnej, aby dostosować wygląd przycisków napisów.
 
@@ -2071,7 +2071,7 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia w polu kombi.
 
 *cinania*<br/>
@@ -2087,7 +2087,7 @@ podczas Parametr logiczny, który wskazuje, czy pole kombi zostało usunięte.
 podczas Parametr logiczny, który wskazuje, czy przycisk pola kombi jest wyróżniony.
 
 *pButton*<br/>
-podczas Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje to pole kombi.
+podczas Wskaźnik do obiektu `CMFCToolBarComboBoxButton`. Struktura rysuje to pole kombi.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2109,7 +2109,7 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -2125,7 +2125,7 @@ podczas Parametr logiczny, który wskazuje, czy pole kombi zostało usunięte.
 podczas Parametr logiczny, który wskazuje, czy przycisk Drop jest wyróżniony.
 
 *pButton*<br/>
-podczas Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje przycisk upuść dla tego przycisku pola kombi.
+podczas Wskaźnik do obiektu `CMFCToolBarComboBoxButton`. Struktura rysuje przycisk upuść dla tego przycisku pola kombi.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2158,7 +2158,7 @@ virtual void OnDrawDefaultRibbonImage(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectImage*<br/>
@@ -2192,11 +2192,11 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
-podczas Prostokąt, który określa granice `CMFCToolBarEditBoxButton` obiektu.
+podczas Prostokąt, który określa granice obiektu `CMFCToolBarEditBoxButton`.
 
 *Poddany*<br/>
 podczas Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.
@@ -2205,11 +2205,11 @@ podczas Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.
 podczas Parametr logiczny, który wskazuje, czy przycisk jest wyróżniony.
 
 *pButton*<br/>
-podczas Wskaźnik do `CMFCToolBarEditBoxButton` obiektu. Struktura rysuje obramowanie tego przycisku edycji pola.
+podczas Wskaźnik do obiektu `CMFCToolBarEditBoxButton`. Struktura rysuje obramowanie tego przycisku edycji pola.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować obramowanie `CMFCToolBarEditBoxButton` obiektu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować obramowanie obiektu `CMFCToolBarEditBoxButton`.
 
 ##  <a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox
 
@@ -2244,7 +2244,7 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pToolBar*<br/>
@@ -2280,9 +2280,9 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-podczas Wskaźnik do `CMFCHeaderCtrl` obiektu. Struktura rysuje obramowanie tego formantu nagłówka.
+podczas Wskaźnik do obiektu `CMFCHeaderCtrl`. Struktura rysuje obramowanie tego formantu nagłówka.
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -2315,7 +2315,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pCtrl*<br/>
 podczas Wskaźnik do kontrolki nagłówka. Program Visual Manager rysuje strzałkę sortowania tego obiektu [klasy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) .
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -2358,11 +2358,11 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia dla `CMFCPopupMenu` obiektu.
 
 *pMenu*<br/>
-podczas Wskaźnik do `CMFCPopupMenu` obiektu. Struktura rysuje obramowanie wokół tego menu podręcznego.
+podczas Wskaźnik do obiektu `CMFCPopupMenu`. Struktura rysuje obramowanie wokół tego menu podręcznego.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice menu podręcznego.
@@ -2463,7 +2463,7 @@ virtual void OnDrawMenuScrollButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -2529,7 +2529,7 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -2581,7 +2581,7 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectSplitter*<br/>
@@ -2605,7 +2605,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectBtn*<br/>
@@ -2634,7 +2634,7 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na pasku sterowania.
 
 *pBar*<br/>
@@ -2662,11 +2662,11 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
-podczas Wskaźnik do `CDockablePane` obiektu. Struktura rysuje podpis dla tego okienka.
+podczas Wskaźnik do obiektu `CDockablePane`. Struktura rysuje podpis dla tego okienka.
 
 *bActive*<br/>
 podczas Parametr logiczny, który wskazuje, czy pasek sterowania jest aktywny.
@@ -2767,7 +2767,7 @@ virtual void OnDrawRibbonApplicationButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -2789,7 +2789,7 @@ virtual void OnDrawRibbonButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -2797,7 +2797,7 @@ podczas Wskaźnik do obiektu [CMFCRibbonButton](../../mfc/reference/cmfcribbonbu
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCRibbonButton`elementu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCRibbonButton`.
 
 ##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager::OnDrawRibbonButtonsGroup
 
@@ -2812,7 +2812,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pGroup*<br/>
@@ -2843,7 +2843,7 @@ virtual void OnDrawRibbonCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -2871,11 +2871,11 @@ virtual void OnDrawRibbonCaptionButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
-Wskaźnik do `CMFCRibbonCaptionButton` klasy. Struktura rysuje ten przycisk napis.
+Wskaźnik do klasy `CMFCRibbonCaptionButton`. Struktura rysuje ten przycisk napis.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2894,11 +2894,11 @@ virtual void OnDrawRibbonCategory(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pCategory*<br/>
-podczas Wskaźnik do `CMFCRibbonCategory` obiektu. Struktura rysuje tę kategorię wstążki.
+podczas Wskaźnik do obiektu `CMFCRibbonCategory`. Struktura rysuje tę kategorię wstążki.
 
 *rectCategory*<br/>
 podczas Prostokąt, który określa granicę wszystkich paneli kategorii na Wstążce.
@@ -2921,7 +2921,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Kontekst rysowania.
 
 *pContextCaption*<br/>
@@ -2963,11 +2963,11 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pTab*<br/>
-podczas Wskaźnik do wystąpienia `CMFCRibbonTab` klasy. Struktura rysuje tę kartę.
+podczas Wskaźnik do wystąpienia klasy `CMFCRibbonTab`. Struktura rysuje tę kartę.
 
 *bIsActive*<br/>
 podczas Parametr logiczny, który wskazuje, czy karta jest aktywna.
@@ -3044,7 +3044,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -3156,7 +3156,7 @@ virtual void OnDrawRibbonLabel(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pLabel*<br/>
@@ -3181,11 +3181,11 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
-podczas Wskaźnik do elementu `CMFCRibbonButton` znajdującego się na głównym panelu wstążki. Struktura rysuje obramowanie dla tego przycisku.
+podczas Wskaźnik do `CMFCRibbonButton` znajdujący się w głównym panelu wstążki. Struktura rysuje obramowanie dla tego przycisku.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3204,11 +3204,11 @@ virtual void OnDrawRibbonMainPanelFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pPanel*<br/>
-podczas Wskaźnik do `CMFCRibbonMainPanel`elementu.
+podczas Wskaźnik do `CMFCRibbonMainPanel`.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice `CMFCRibbonMainPanel`.
@@ -3248,11 +3248,11 @@ virtual COLORREF OnDrawRibbonPanel(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pPanel*<br/>
-podczas Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje ten panel wstążki.
+podczas Wskaźnik do obiektu `CMFCRibbonPanel`. Struktura rysuje ten panel wstążki.
 
 *rectPanel*<br/>
 podczas Prostokąt, który określa granice panelu.
@@ -3281,11 +3281,11 @@ virtual void OnDrawRibbonPanelCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pPanel*<br/>
-podczas Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje podpis dla tego panelu wstążki.
+podczas Wskaźnik do obiektu `CMFCRibbonPanel`. Struktura rysuje podpis dla tego panelu wstążki.
 
 *rectCaption*<br/>
 podczas Prostokąt, który określa granice podpisu dla panelu wstążki.
@@ -3309,11 +3309,11 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pProgress*<br/>
-podczas Wskaźnik do `CMFCRibbonProgressBar` obiektu. Struktura rysuje ten pasek postępu.
+podczas Wskaźnik do obiektu `CMFCRibbonProgressBar`. Struktura rysuje ten pasek postępu.
 
 *rectProgress*<br/>
 podczas Prostokąt, który określa granice paska postępu.
@@ -3341,7 +3341,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSeparator*<br/>
@@ -3367,7 +3367,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pPanel*<br/>
@@ -3393,7 +3393,7 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
@@ -3422,7 +3422,7 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
@@ -3442,7 +3442,7 @@ podczas Parametr logiczny, który wskazuje, czy element kciuk jest niedostępny.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd przycisku przewijania dla `CMFCRibbonSlider`elementu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd przycisku przewijania `CMFCRibbonSlider`.
 
 ##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager::OnDrawRibbonSliderZoomButton
 
@@ -3461,11 +3461,11 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSlider*<br/>
-podczas Wskaźnik do `CMFCRibbonSlider` obiektu. Struktura rysuje ten suwak wstążki.
+podczas Wskaźnik do obiektu `CMFCRibbonSlider`. Struktura rysuje ten suwak wstążki.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisków powiększenia na suwaku wstążki.
@@ -3499,7 +3499,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
@@ -3529,7 +3529,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 Wskaźnik do kontekstu urządzenia.
 
 *pWndRibbonBar*<br/>
@@ -3581,7 +3581,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na pasku sterowania.
 
 *pBar*<br/>
@@ -3629,7 +3629,7 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectSpin*<br/>
@@ -3673,7 +3673,7 @@ virtual void OnDrawSplitterBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSplitterWnd*<br/>
@@ -3699,7 +3699,7 @@ virtual void OnDrawSplitterBox(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSplitterWnd*<br/>
@@ -3727,11 +3727,11 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
-podczas Wskaźnik do `CMFCStatusBar` obiektu. Struktura rysuje ten obiekt paska stanu.
+podczas Wskaźnik do obiektu `CMFCStatusBar`. Struktura rysuje ten obiekt paska stanu.
 
 *rectPane*<br/>
 podczas Prostokąt, który określa granice paska stanu.
@@ -3744,7 +3744,7 @@ podczas Styl paska stanu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd obramowania dla `CMFCStatusBar` obiektu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd obramowania dla obiektu `CMFCStatusBar`.
 
 ##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManager::OnDrawStatusBarProgress
 
@@ -3765,11 +3765,11 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia dla paska stanu.
 
 *pStatusBar*<br/>
-podczas `CMFCStatusBar` Obiekt, który zawiera pasek postępu.
+podczas Obiekt `CMFCStatusBar`, który zawiera pasek postępu.
 
 *rectProgress*<br/>
 podczas Prostokąt, który określa granice paska postępu.
@@ -3794,7 +3794,7 @@ podczas Parametr logiczny, który wskazuje, czy ma być wyświetlana tekstowa re
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCStatusBar` obiektu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd obiektu `CMFCStatusBar`.
 
 ##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManager::OnDrawStatusBarSizeBox
 
@@ -3809,7 +3809,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pStatBar*<br/>
@@ -3837,7 +3837,7 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectTab*<br/>
@@ -3850,11 +3850,11 @@ podczas Indeks karty, który rysuje struktura.
 podczas Wartość logiczna określająca, czy karta jest aktywna.
 
 *pTabWnd*<br/>
-podczas Wskaźnik do `CMFCBaseTabCtrl` obiektu. Struktura rysuje tę kontrolkę tabulacji.
+podczas Wskaźnik do obiektu `CMFCBaseTabCtrl`. Struktura rysuje tę kontrolkę tabulacji.
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCBaseTabCtrl` Obiekt wywołuje tę metodę podczas przetwarzania komunikatu WM_PAINT.
+Obiekt `CMFCBaseTabCtrl` wywołuje tę metodę, gdy przetwarza komunikat WM_PAINT.
 
 Zastąp tę metodę w klasie pochodnej, aby dostosować wygląd kart.
 
@@ -3874,7 +3874,7 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -3912,7 +3912,7 @@ virtual void OnDrawTabContent(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectTab*<br/>
@@ -3932,7 +3932,7 @@ podczas Kolor tekstu w wewnętrznej części karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Wewnętrzna karta zawiera tekst i ikony karty. Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd kart.
+Wewnętrzna karta zawiera tekst i ikony karty. Przesłoń tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd kart.
 
 ##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManager::OnDrawTabsButtonBorder
 
@@ -3949,14 +3949,14 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisku tabulacji.
 
 *pButton*<br/>
-podczas Wskaźnik do obiektu [CMFCButton](../../mfc/reference/cmfcbutton-class.md) . Struktura rysuje obramowanie dla tego `CMFCButton` wystąpienia.
+podczas Wskaźnik do obiektu [CMFCButton](../../mfc/reference/cmfcbutton-class.md) . Struktura rysuje obramowanie dla tego wystąpienia `CMFCButton`.
 
 *uiState*<br/>
 podczas Liczba całkowita bez znaku, która określa stan przycisku.
@@ -3983,7 +3983,7 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pTask*<br/>
@@ -4018,7 +4018,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4049,11 +4049,11 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pGroup*<br/>
-podczas Wskaźnik do `CMFCTasksPaneTaskGroup` obiektu. Struktura rysuje podpis dla tej grupy.
+podczas Wskaźnik do obiektu `CMFCTasksPaneTaskGroup`. Struktura rysuje podpis dla tej grupy.
 
 *bIsHighlighted*<br/>
 podczas Parametr logiczny, który wskazuje, czy grupa jest wyróżniona.
@@ -4068,7 +4068,7 @@ podczas Parametr logiczny, który wskazuje, czy można zwinąć grupę.
 
 Grupy zadań są wyświetlane w obiekcie [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
-Zastąp tę metodę w klasie pochodnej, aby dostosować podpis dla elementu `CMFCTasksPaneTaskGroup`.
+Zastąp tę metodę w klasie pochodnej, aby dostosować podpis dla `CMFCTasksPaneTaskGroup`.
 
 ##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager::OnDrawTasksGroupIcon
 
@@ -4106,7 +4106,7 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4117,7 +4117,7 @@ podczas Ma wartość TRUE, jeśli podpis jest aktywny. W przeciwnym razie zwraca
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana przez platformę, gdy `CMFCPopupMenu` obiekt przetwarza komunikat WM_PAINT i musi narysować odrywany podpis.
+Ta funkcja jest wywoływana przez platformę, gdy obiekt `CMFCPopupMenu` przetwarza komunikat WM_PAINT i musi narysować odrywany podpis.
 
 Zastąp tę metodę w klasie pochodnej, aby dostosować wygląd napisów dla pasków odnoszących się do odrywania.
 
@@ -4148,7 +4148,7 @@ virtual BOOL OnEraseMDIClientArea(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
@@ -4192,7 +4192,7 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4203,7 +4203,7 @@ podczas Wskaźnik do okna karty. Struktura wymazuje obszar karty dla określoneg
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana przez platformę, gdy obiekt [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) PRZETWARZA komunikat WM_PAINT i wymazuje obszar karty.
+Ta funkcja jest wywoływana przez platformę, gdy obiekt [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) przetwarza komunikat WM_PAINT i wymazuje obszar karty.
 
 Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd kart.
 
@@ -4221,7 +4221,7 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4235,7 +4235,7 @@ podczas Wskaźnik do kontrolki karta, która zawiera przycisk tabulacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wymazuje tekst i ikonę przycisku, gdy obiekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) PRZETWARZA komunikat WM_ERASEBKGND.
+Struktura wymazuje tekst i ikonę przycisku, gdy obiekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) przetwarza komunikat WM_ERASEBKGND.
 
 Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd przycisków tabulacji.
 
@@ -4252,14 +4252,14 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice okna karty.
 
 *pTabWnd*<br/>
-podczas Wskaźnik do okna karty. Struktura wymazuje ramkę dla tego `CMFCBaseTabCtrl`elementu.
+podczas Wskaźnik do okna karty. Struktura usuwa ramkę dla tego `CMFCBaseTabCtrl`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4267,7 +4267,7 @@ Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. W przeciwnym razie z
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wypełnia obszar wskazywany przez *prostokąt* przy użyciu koloru tła aktywnej karty. Jest wywoływana, gdy `CMFCBaseTabCtrl` obiekt przetwarza komunikat WM_PAINT i wymazuje ramkę tabulacji.
+Ta metoda wypełnia obszar wskazywany przez *prostokąt* przy użyciu koloru tła aktywnej karty. Jest wywoływana, gdy obiekt `CMFCBaseTabCtrl` przetwarza komunikat WM_PAINT i wymazuje ramkę tabulacji.
 
 ##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManager::OnFillAutoHideButtonBackground
 
@@ -4282,7 +4282,7 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4310,11 +4310,11 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na pasku sterowania.
 
 *pBar*<br/>
-podczas Wskaźnik do `CBasePane` obiektu. Struktura wypełnia tło tego okienka.
+podczas Wskaźnik do obiektu `CBasePane`. Struktura wypełnia tło tego okienka.
 
 *rectClient*<br/>
 podczas Prostokąt, który określa granice okienka.
@@ -4327,11 +4327,11 @@ podczas Wartość zastrzeżona.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej metody powoduje wypełnienie tła paska kolorem tła 3W ze zmiennej `afxGlobalData`globalnej. Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować tło okienka.
+Domyślna implementacja tej metody powoduje wypełnienie tła paska kolorem tła 3W ze zmiennej globalnej `afxGlobalData`. Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować tło okienka.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, `OnFillBarBackground` jak użyć klasy.`CMFCVisualManager` Ten fragment kodu jest częścią przykładu demonstracyjnego dla [programu Outlook](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `OnFillBarBackground` w klasie `CMFCVisualManager`. Ten fragment kodu jest częścią [przykładu demonstracyjnego dla programu Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 
@@ -4349,7 +4349,7 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia na przycisku paska narzędzi.
 
 *pButton*<br/>
@@ -4358,14 +4358,14 @@ podczas Wskaźnik do elementu [CMFCToolBarButton](../../mfc/reference/cmfctoolba
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisku paska narzędzi.
 
-*state*<br/>
+*Państwu*<br/>
 podczas Stan przycisku paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślna implementacja tej metody używa koloru domyślnego do wypełnienia tła. Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować tło przycisku paska narzędzi.
 
-Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`, lub `ButtonsIsHighlighted`.
+Możliwe stany przycisku paska narzędzi to `ButtonsIsRegular`, `ButtonsIsPressed`lub `ButtonsIsHighlighted`.
 
 ##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton
 
@@ -4409,7 +4409,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4442,7 +4442,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pCtrl*<br/>
 podczas Wskaźnik do obiektu [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) . Struktura wypełnia tło dla tego formantu nagłówka.
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4466,7 +4466,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectCaption*<br/>
@@ -4499,7 +4499,7 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectCaption*<br/>
@@ -4527,7 +4527,7 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4558,7 +4558,7 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4580,7 +4580,7 @@ virtual COLORREF OnFillRibbonButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -4596,7 +4596,7 @@ Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wyglą
 
 ##  <a name="onfillribbonedit"></a>CMFCVisualManager::OnFillRibbonEdit
 
-Struktura wywołuje tę metodę, gdy wypełnia wnętrze wystąpienia `CMFCRibbonRichEditCtrl` klasy.
+Struktura wywołuje tę metodę podczas wypełniania wnętrza instancji klasy `CMFCRibbonRichEditCtrl`.
 
 ```
 virtual void OnFillRibbonEdit(
@@ -4613,11 +4613,11 @@ virtual void OnFillRibbonEdit(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pEdit*<br/>
-podczas Wskaźnik do `CMFCRibbonRichEditCtrl` obiektu. Struktura wypełnia wnętrze tej kontrolki edycji.
+podczas Wskaźnik do obiektu `CMFCRibbonRichEditCtrl`. Struktura wypełnia wnętrze tej kontrolki edycji.
 
 *cinania*<br/>
 podczas Prostokąt, który określa granice kontrolki edycji.
@@ -4642,9 +4642,9 @@ podczas Odwołanie do koloru zaznaczonego tekstu w kontrolce edycji.
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazany przez pEdit może być częścią przycisku pola kombi na Wstążce. `CMFCRibbonRichEditCtrl`
+`CMFCRibbonRichEditCtrl` wskazywany przez *pEdit* może być częścią przycisku pola kombi na Wstążce.
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCRibbonRichEditCtrl`elementu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCRibbonRichEditCtrl`.
 
 ##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager::OnFillRibbonMainPanelButton
 
@@ -4658,7 +4658,7 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pButton*<br/>
@@ -4685,7 +4685,7 @@ virtual void OnFillRibbonMenuFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pPanel*<br/>
@@ -4696,7 +4696,7 @@ podczas Prostokąt, który określa granice ramki menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd paska `CMFCRibbonMainPanel`menu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd paska menu dla `CMFCRibbonMainPanel`.
 
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
 
@@ -4728,7 +4728,7 @@ virtual void OnFillSplitterBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *pSplitterWnd*<br/>
@@ -4757,7 +4757,7 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectFill*<br/>
@@ -4792,7 +4792,7 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *cinania*<br/>
@@ -4817,7 +4817,7 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectWorkArea*<br/>
@@ -4825,7 +4825,7 @@ podczas Prostokąt, który określa granice okienka zadań.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd `CMFCTasksPane` obiektu.
+Zastąp tę metodę w pochodnym Menedżerze wizualizacji, aby dostosować wygląd obiektu `CMFCTasksPane`.
 
 ##  <a name="onhighlightmenuitem"></a>CMFCVisualManager::OnHighlightMenuItem
 
@@ -4841,7 +4841,7 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia dla menu.
 
 *pButton*<br/>
@@ -4871,7 +4871,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Wskaźnik do kontekstu urządzenia.
 
 *rectRarelyUsed*<br/>
@@ -5003,7 +5003,7 @@ podczas Wskaźnik do informacji o środowisku uruchomieniowym dla programu Visua
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCVisualManager` Użyj klasy i wszystkich pochodnych menedżerów wizualizacji, aby dostosować wygląd aplikacji. Po ustawieniu domyślnego programu Visual Manager ta metoda spowoduje odświeżenie aplikacji przy użyciu nowego programu Visual Manager. Aby uzyskać więcej informacji o sposobach korzystania z menedżerów wizualnych, zobacz [Menedżer wizualizacji](../../mfc/visualization-manager.md).
+Użyj klasy `CMFCVisualManager` i wszystkich pochodnych menedżerów wizualizacji, aby dostosować wygląd aplikacji. Po ustawieniu domyślnego programu Visual Manager ta metoda spowoduje odświeżenie aplikacji przy użyciu nowego programu Visual Manager. Aby uzyskać więcej informacji o sposobach korzystania z menedżerów wizualnych, zobacz [Menedżer wizualizacji](../../mfc/visualization-manager.md).
 
 Użyj tej metody, aby zmienić Menedżera wizualizacji używanej przez aplikację.
 
@@ -5092,7 +5092,7 @@ podczas Parametr logiczny, który wskazuje, czy program Visual Manager wyświetl
 
 Domyślnie ta funkcja jest wyłączona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

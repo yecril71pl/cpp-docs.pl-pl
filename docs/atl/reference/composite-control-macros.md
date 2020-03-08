@@ -1,5 +1,5 @@
 ---
-title: Makra kontrolek złożonych
+title: Makra kontroli złożonej
 ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221102"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857122"
 ---
-# <a name="composite-control-macros"></a>Makra kontrolek złożonych
+# <a name="composite-control-macros"></a>Makra kontroli złożonej
 
-Te makra definiują mapy wychwytywania zdarzeń i zapisy.
+Te makra definiują mapy i wpisy ujścia zdarzeń.
 
 |||
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|Oznacza początek Mapa ujścia zdarzeń dla kontrolek złożonych.|
-|[END_SINK_MAP](#end_sink_map)|Oznacza koniec Mapa ujścia zdarzeń dla kontrolek złożonych.|
-|[SINK_ENTRY](#sink_entry)|Wpis do mapy obiektu sink zdarzenia.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Wpis do mapy obiektu sink zdarzenia o dodatkowy parametr.|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_EX z tą różnicą, że wykorzystuje wskaźnik iid.|
-|[SINK_ENTRY_INFO](#sink_entry_info)|Wpis mapy ujścia zdarzeń za pomocą informacji o typie ręcznie dostarczony do użytku z programem [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_INFO z tą różnicą, że wykorzystuje wskaźnik iid.|
+|[BEGIN_SINK_MAP](#begin_sink_map)|Oznacza początek mapy ujścia zdarzeń dla formantu złożonego.|
+|[END_SINK_MAP](#end_sink_map)|Oznacza koniec mapy ujścia zdarzeń dla kontrolki złożonej.|
+|[SINK_ENTRY](#sink_entry)|Wpis do mapy ujścia zdarzeń.|
+|[SINK_ENTRY_EX](#sink_entry_ex)|Wpis do mapy ujścia zdarzeń z dodatkowym parametrem.|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_EX, z tą różnicą, że Pobiera wskaźnik do IID.|
+|[SINK_ENTRY_INFO](#sink_entry_info)|Wpis do mapy ujścia zdarzeń z ręcznie dostarczonymi informacjami o typie do użycia z [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_INFO, z tą różnicą, że Pobiera wskaźnik do IID.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP
 
-Deklaruje początku Mapa ujścia zdarzeń dla kontrolek złożonych.
+Deklaruje początek mapy ujścia zdarzeń dla formantu złożonego.
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,7 +44,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>Parametry
 
 *_class*<br/>
-[in] Określa kontrolkę.
+podczas Określa kontrolkę.
 
 ### <a name="example"></a>Przykład
 
@@ -52,11 +52,11 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
+Implementacja elementu "xmlatl" obiektów przepustek zdarzeń ActiveX obsługuje tylko wartości zwracane typu HRESULT lub void z metod obsługi zdarzeń; jakakolwiek inna wartość zwracana jest nieobsługiwana i jego zachowanie jest niezdefiniowane.
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+##  <a name="end_sink_map"></a>END_SINK_MAP
 
-Deklaruje koniec Mapa ujścia zdarzeń dla kontrolek złożonych.
+Deklaruje koniec mapy ujścia zdarzeń dla formantu złożonego.
 
 ```
 END_SINK_MAP()
@@ -68,11 +68,11 @@ END_SINK_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
+Implementacja elementu "xmlatl" obiektów przepustek zdarzeń ActiveX obsługuje tylko wartości zwracane typu HRESULT lub void z metod obsługi zdarzeń; jakakolwiek inna wartość zwracana jest nieobsługiwana i jego zachowanie jest niezdefiniowane.
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+##  <a name="sink_entry"></a>SINK_ENTRY
 
-Deklaruje funkcji obsługi (*fn*) dla określonego zdarzenia (*dispid*), kontrolki identyfikowane przez *identyfikator*.
+Deklaruje funkcję procedury obsługi (*Fn*) dla określonego zdarzenia (*DISPID*) dla kontrolki identyfikowanej przez *Identyfikator*.
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -81,13 +81,13 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Identyfikuje formant.
+podczas Identyfikuje formant.
 
-*dispid*<br/>
-[in] Identyfikuje określone zdarzenie.
+*DISPID*<br/>
+podczas Identyfikuje określone zdarzenie.
 
-*FN*<br/>
-[in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
+*Fn*<br/>
+podczas Nazwa funkcji obsługi zdarzeń. Ta funkcja musi używać konwencji wywoływania `_stdcall` i mieć odpowiedni podpis w stylu dispinterface.
 
 ### <a name="example"></a>Przykład
 
@@ -95,11 +95,11 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
+Implementacja elementu "xmlatl" obiektów przepustek zdarzeń ActiveX obsługuje tylko wartości zwracane typu HRESULT lub void z metod obsługi zdarzeń; jakakolwiek inna wartość zwracana jest nieobsługiwana i jego zachowanie jest niezdefiniowane.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX i SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX i SINK_ENTRY_EX_P
 
-Deklaruje funkcji obsługi (*fn*) dla określonego zdarzenia (*dispid*), z interfejs ekspedycji (*iid*), dla formantu identyfikowane przez *identyfikator*.
+Deklaruje funkcję procedury obsługi (*Fn*) dla określonego zdarzenia (*DISPID*) w interfejsie wysyłania (*IID*) dla kontrolki identyfikowanej przez *Identyfikator*.
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -109,19 +109,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Identyfikuje formant.
+podczas Identyfikuje formant.
 
 *IID*<br/>
-[in] Identyfikuje interfejs ekspedycji.
+podczas Identyfikuje interfejs wysyłania.
 
 *piid*<br/>
-[in] Wskaźnik do interfejsu wysyłania.
+podczas Wskaźnik do interfejsu wysyłania.
 
-*dispid*<br/>
-[in] Identyfikuje określone zdarzenie.
+*DISPID*<br/>
+podczas Identyfikuje określone zdarzenie.
 
-*FN*<br/>
-[in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
+*Fn*<br/>
+podczas Nazwa funkcji obsługi zdarzeń. Ta funkcja musi używać konwencji wywoływania `_stdcall` i mieć odpowiedni podpis w stylu dispinterface.
 
 ### <a name="example"></a>Przykład
 
@@ -129,11 +129,11 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
+Implementacja elementu "xmlatl" obiektów przepustek zdarzeń ActiveX obsługuje tylko wartości zwracane typu HRESULT lub void z metod obsługi zdarzeń; jakakolwiek inna wartość zwracana jest nieobsługiwana i jego zachowanie jest niezdefiniowane.
 
-##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO i SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO i SINK_ENTRY_INFO_P
 
-Użyj makra SINK_ENTRY_INFO w mapie obiektu sink zdarzenia, aby Podaj informacje wymagane przez [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) do kierowanie zdarzeń do funkcji odpowiedni program obsługi.
+Użyj makra SINK_ENTRY_INFO w ramach mapy ujścia zdarzeń, aby podać informacje wymagane przez [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) do kierowania zdarzeń do odpowiedniej funkcji procedury obsługi.
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -143,28 +143,28 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Liczba całkowita bez znaku identyfikacji źródła zdarzenia. Ta wartość musi odpowiadać *nID* parametru szablonu używany w pokrewnym [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy bazowej.
+podczas Liczba całkowita bez znaku identyfikująca Źródło zdarzenia. Ta wartość musi być zgodna z parametrem szablonu *NID* używanym w powiązanej klasie podstawowej [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) .
 
 *IID*<br/>
-[in] W przypadku identyfikatora IID, który identyfikuje interfejs ekspedycji.
+podczas Identyfikator IID identyfikujący interfejs wysyłania.
 
 *piid*<br/>
-[in] Wskaźnik do identyfikatora IID, który identyfikuje interfejs ekspedycji.
+podczas Wskaźnik do IID identyfikujący interfejs wysyłania.
 
-*dispid*<br/>
-[in] Identyfikator DISPID identyfikujący określonego zdarzenia.
+*DISPID*<br/>
+podczas Identyfikator DISPID identyfikujący określone zdarzenie.
 
-*FN*<br/>
-[in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
+*Fn*<br/>
+podczas Nazwa funkcji obsługi zdarzeń. Ta funkcja musi używać konwencji wywoływania `_stdcall` i mieć odpowiedni podpis w stylu dispinterface.
 
-*info*<br/>
-[in] Wpisz informacje o funkcji procedury obsługi zdarzeń. Informacje o tym typie znajduje się w formularzu wskaźnik do `_ATL_FUNC_INFO` struktury. CC_CDECL jest jedyną opcją, które są obsługiwane w Windows CE dla pola Konwencja WYWOŁANIA `_ATL_FUNC_INFO` struktury. Dowolna inna wartość nie jest obsługiwany związku z tym jego zachowanie jest niezdefiniowane.
+*informacje*<br/>
+podczas Informacje o typie funkcji obsługi zdarzeń. Te informacje o typie są dostępne w formie wskaźnika do struktury `_ATL_FUNC_INFO`. CC_CDECL jest jedyną opcją obsługiwaną w Windows CE dla pola CALLCONV struktury `_ATL_FUNC_INFO`. Wszystkie inne wartości są nieobsługiwane w tym przypadku, gdy zachowanie nie jest zdefiniowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry makr pierwsze cztery są takie same jak w przypadku [SINK_ENTRY_EX](#sink_entry_ex) makra. Ostatni parametr zawiera informacje o typie dla zdarzenia. Implementacja CE ATL ActiveX zdarzenia sink tylko obsługuje zwracanej wartości typu HRESULT lub void ze swojej metody obsługi zdarzeń; Dowolna inna wartość zwracana nie jest obsługiwany, a jego zachowanie jest niezdefiniowane.
+Pierwsze cztery parametry makr są takie same jak dla makra [SINK_ENTRY_EX](#sink_entry_ex) . Końcowy parametr zawiera informacje o typie dla zdarzenia. Implementacja elementu "xmlatl" obiektów przepustek zdarzeń ActiveX obsługuje tylko wartości zwracane typu HRESULT lub void z metod obsługi zdarzeń; jakakolwiek inna wartość zwracana jest nieobsługiwana i jego zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Makra](../../atl/reference/atl-macros.md)<br/>
+[Utworze](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)

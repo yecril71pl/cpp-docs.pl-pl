@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689218"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856633"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -160,7 +160,7 @@ Element specyficzny dla ustawień regionalnych, który ma być używany jako pun
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point`.
+Zapoznaj się z przykładem [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point`.
 
 ## <a name="do_falsename"></a>numpunct::d o_falsename
 
@@ -220,7 +220,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca element specyficzny 
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep`.
+Zapoznaj się z przykładem [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep`.
 
 ## <a name="do_truename"></a>numpunct::d o_truename
 
@@ -345,7 +345,7 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
 ## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
@@ -466,8 +466,8 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<locale >](../standard-library/locale.md) \
-[Klasa aspektów](../standard-library/locale-class.md#facet_class) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
+[Klasa aspektów](../standard-library/locale-class.md#facet_class)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

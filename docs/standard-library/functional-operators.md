@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcjonalności&gt; operatorów'
+title: '&lt;funkcjonalne operatory&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::operator!=
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243773"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876351"
 ---
-# <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalności&gt; operatorów
+# <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalne operatory&gt;
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt jest pusty.
+Testuje, czy możliwy do przeprowadzenia obiekt jest pusty.
 
 ```cpp
 template <class Fty>
@@ -31,17 +31,17 @@ template <class Fty>
 ### <a name="parameters"></a>Parametry
 
 *Fty*\
-Typ funkcji do opakowania.
+Typ funkcji do oblewania.
 
-*F*\
-Obiekt funkcji
+\ *f*
+Obiekt Function
 
 *npc*\
-Wskaźnik zerowy.
+Wskaźnik o wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory zarówno przyjmują argument, który jest odwołaniem do `function` obiektu i argument, który jest stałą pustego wskaźnika. Oba zwracają wartość true tylko wtedy, gdy `function` obiekt jest pusty.
+Operatory przyjmują argument, który jest odwołaniem do obiektu `function` i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy obiekt `function` jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -75,9 +75,9 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt nie jest pusty.
+Testuje, czy możliwy do przeprowadzenia obiekt nie jest pusty.
 
 ```cpp
 template <class Fty>
@@ -90,17 +90,17 @@ template <class Fty>
 ### <a name="parameters"></a>Parametry
 
 *Fty*\
-Typ funkcji do opakowania.
+Typ funkcji do oblewania.
 
-*F*\
-Obiekt funkcji
+\ *f*
+Obiekt Function
 
 *npc*\
-Wskaźnik zerowy.
+Wskaźnik o wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory zarówno przyjmują argument, który jest odwołaniem do `function` obiektu i argument, który jest stałą pustego wskaźnika. Oba zwracają wartość true tylko wtedy, gdy `function` obiektu nie jest pusty.
+Operatory przyjmują argument, który jest odwołaniem do obiektu `function` i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy obiekt `function` nie jest pusty.
 
 ### <a name="example"></a>Przykład
 

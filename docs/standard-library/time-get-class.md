@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685504"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876194"
 ---
 # <a name="time_get-class"></a>time_get — Klasa
 
@@ -59,10 +59,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków.
 
-*InputIterator* \
+*InputIterator*\
 Iterator, z którego są odczytywane wartości czasu.
 
 ## <a name="remarks"></a>Uwagi
@@ -107,7 +107,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="char_type"></a>time_get::char_type
+## <a name="char_type"></a>time_get:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -217,25 +217,25 @@ iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych, który wskazuje początek sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych, który wskazuje koniec sekwencji.
 
-*iosbase* \
+*iosbase*\
 Obiekt strumienia.
 
 \ *stanu*
 Pole w iosbase, gdzie odpowiednie elementy maski bitowej są ustawione tak, aby wskazywały błędy.
 
-*ptm* \
+*ptm*\
 Wskaźnik do struktury czasu, w którym ma być przechowywany czas.
 
-*fmt* \
+*fmt*\
 Znak specyfikatora konwersji.
 
-*mod* \
+*mod*\
 Opcjonalny znak modyfikatora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -250,7 +250,7 @@ Specyfikatory konwersji są następujące:
 
 `'a'` lub `'A'`--zachowuje się tak samo jak [time_get:: get_weekday](#get_weekday).
 
-`'b'`, `'B'` lub `'h'` — zachowuje się tak samo jak [time_get:: get_monthname](#get_monthname).
+`'b'`, `'B'`lub `'h'` — zachowuje się tak samo jak [time_get:: get_monthname](#get_monthname).
 
 `'c'`--zachowuje się tak samo jak `"%b %d %H : %M : %S %Y"`.
 
@@ -310,19 +310,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -331,11 +331,11 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem w
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), aż do rozpoznania kompletnego, niepustego pola wejściowego daty. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składniki **TM:: tm \_mon**, **TM:: TM \_day**, **TM:: TM \_year**i przechowuje wyniki odpowiednio do `ptm->tm_mon`, `ptm->tm_day` i `ptm->tm_year`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych daty. W przeciwnym razie funkcja ustawia `iosbase::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego daty. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
+Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), aż do rozpoznania kompletnego, niepustego pola wejściowego daty. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składniki **TM:: tm\_PN**, **TM:: TM\_Day**, **TM:: TM\_Year**, a następnie przechowuje wyniki odpowiednio do `ptm->tm_mon`, `ptm->tm_day`i `ptm->tm_year`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych daty. W przeciwnym razie funkcja ustawia `iosbase::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego daty. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 Format pola danych wejściowych daty jest zależny od ustawień regionalnych. W przypadku domyślnych ustawień regionalnych pole daty wejścia ma postać MMM DD, rrrr, gdzie:
 
-- MMM jest dopasowany przez wywołanie [get_monthname](#get_monthname), co miesiąc.
+- MMM jest dopasowywany przez wywoływanie [get_monthname](#get_monthname), co oznacza miesiąc.
 
 - DD jest sekwencją cyfr dziesiętnych, których odpowiadająca wartość liczbowa musi należeć do zakresu [1, 31], co oznacza dzień miesiąca.
 
@@ -361,19 +361,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
-Przestrzeń.
+*iosbase*\
+Nieużywany.
 
 \ *stanu*
 Parametr wyjściowy, który ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacja zakończyła się pomyślnie.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o miesiącach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -382,7 +382,7 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem w
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`) do momentu rozpoznania kompletnego, niepustego miesiąca pola wejściowego. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm \_mon**i zapisuje wynik w `ptm->tm_mon`. Zwraca iterator wyznaczający pierwszy element wykraczający poza pole danych wejściowych miesiąca. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego miesiąca. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
+Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`) do momentu rozpoznania kompletnego, niepustego miesiąca pola wejściowego. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm\_Mon**i zapisuje wynik w `ptm->tm_mon`. Zwraca iterator wyznaczający pierwszy element wykraczający poza pole danych wejściowych miesiąca. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego miesiąca. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 Pole danych wejściowych miesiąca jest sekwencją, która jest zgodna z najdłuższym zestawem sekwencji specyficznych dla ustawień regionalnych, takich jak Jan, styczeń, luty, luty itd. Przekonwertowana wartość to liczba miesięcy od stycznia.
 
@@ -404,19 +404,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
-Przestrzeń.
+*iosbase*\
+Nieużywany.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -425,7 +425,7 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem w
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego czasu. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składniki `tm::tm_hour`, `tm::tm_min` i `tm::tm_sec` oraz zapisuje wyniki odpowiednio w `ptm->tm_hour`, `ptm->tm_min` i `ptm->tm_sec`. Zwraca iterator wyznaczający pierwszy element poza pole wejściowy czas. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego czasu. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
+Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego czasu. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składniki `tm::tm_hour`, `tm::tm_min`i `tm::tm_sec`oraz zapisuje wyniki odpowiednio w `ptm->tm_hour`, `ptm->tm_min`i `ptm->tm_sec`. Zwraca iterator wyznaczający pierwszy element poza pole wejściowy czas. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego czasu. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 W tej implementacji pole Input Time ma postać HH: MM: SS, gdzie:
 
@@ -455,19 +455,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, do której mają być przechowywane informacje o dniu tygodnia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -476,7 +476,7 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem w
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od *pierwszej* w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego dnia tygodnia. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm \_wday**i zapisuje wynik w `ptm->tm_wday`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych dnia tygodnia. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego dnia tygodnia. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
+Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od *pierwszej* w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego dnia tygodnia. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm\_wDay**i zapisuje wynik w `ptm->tm_wday`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych dnia tygodnia. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego dnia tygodnia. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 Pole danych wejściowych dnia tygodnia jest sekwencją, która jest zgodna z najdłuższym zestawem sekwencji specyficznych dla ustawień regionalnych, takich jak Sun, niedziela, PN, poniedziałek itd. Przekonwertowana wartość to liczba dni od niedzieli.
 
@@ -498,19 +498,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o roku.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -519,7 +519,7 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem w
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od *pierwszej* w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego roku. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm \_year**i zapisuje wynik w `ptm->tm_year`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych roku. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem pola wejściowego w prawidłowym roku. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
+Wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od *pierwszej* w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego roku. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako składnik **TM:: tm\_Year**i zapisuje wynik w `ptm->tm_year`. Zwraca iterator wyznaczający pierwszy element poza pole danych wejściowych roku. W przeciwnym razie funkcja ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem pola wejściowego w prawidłowym roku. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 Pole wejściowe Year jest sekwencją cyfr dziesiętnych, których odpowiadająca wartość liczbowa musi należeć do zakresu [1900, 2036). Wartość przechowywana jest wartością minus 1900. W tej implementacji wartości z zakresu [69, 136) reprezentują zakres lat [1969, 2036). Dozwolone są również wartości z zakresu [0, 69), ale mogą one reprezentować albo zakres lat [1900, 1969), albo [2000, 2069), w zależności od konkretnego środowiska tłumaczenia.
 
@@ -553,31 +553,31 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych, który wskazuje, gdzie zaczyna się sekwencja konwersji.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych, który wskazuje koniec sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Strumień.
 
 \ *stanu*
 Odpowiednie elementy masek bitowych są ustawiane dla stanu strumienia, aby wskazywały błędy.
 
-*ptm* \
+*ptm*\
 Wskaźnik na strukturę czasu, w której ma być przechowywany czas.
 
-*fmt* \
+*fmt*\
 Znak specyfikatora konwersji.
 
-*mod* \
+*mod*\
 Opcjonalny znak modyfikatora.
 
-*fmt_first* \
+*fmt_first*\
 Wskazuje, gdzie rozpoczyna się dyrektywa format.
 
-*fmt_last* \
+*fmt_last*\
 Wskazuje koniec dyrektyw formatu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -596,7 +596,7 @@ Element odstępu w formacie powoduje pominięcie ostatnich zero lub więcej elem
 
 Każdy inny element w formacie musi pasować do następnego elementu wejściowego, który jest pomijany. Niepowodzenie dopasowania ustawia `ios_base::failbit` w *stanie* i zwraca.
 
-## <a name="get_date"></a>time_get::get_date
+## <a name="get_date"></a>time_get:: get_date
 
 Analizuje ciąg jako datę wygenerowaną przez specyfikator *x* dla `strftime`.
 
@@ -610,19 +610,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -690,7 +690,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_monthname"></a>time_get::get_monthname
+## <a name="get_monthname"></a>time_get:: get_monthname
 
 Analizuje ciąg jako nazwę miesiąca.
 
@@ -704,19 +704,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
-Przestrzeń.
+*iosbase*\
+Nieużywany.
 
 \ *stanu*
 Parametr wyjściowy, który ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacja zakończyła się pomyślnie.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o miesiącach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -782,7 +782,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_time"></a>time_get::get_time
+## <a name="get_time"></a>time_get:: get_time
 
 Analizuje ciąg jako datę wygenerowaną przez specyfikator *X* dla `strftime`.
 
@@ -796,19 +796,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
-Przestrzeń.
+*iosbase*\
+Nieużywany.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -863,7 +863,7 @@ tm_min: 13
 tm_hour: 11
 ```
 
-## <a name="get_weekday"></a>time_get::get_weekday
+## <a name="get_weekday"></a>time_get:: get_weekday
 
 Analizuje ciąg jako nazwę dnia tygodnia.
 
@@ -877,19 +877,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, do której mają być przechowywane informacje o dniu tygodnia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -940,7 +940,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3
 ```
 
-## <a name="get_year"></a>time_get::get_year
+## <a name="get_year"></a>time_get:: get_year
 
 Analizuje ciąg jako nazwę roku.
 
@@ -954,19 +954,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do początku sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do końca sekwencji do przekonwertowania.
 
-*iosbase* \
+*iosbase*\
 Flaga formatu, która po ustawieniu wskazuje, że symbol waluty jest opcjonalny. w przeciwnym razie jest to wymagane.
 
 \ *stanu*
 Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności od tego, czy operacje zakończyły się powodzeniem.
 
-*ptm* \
+*ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o roku.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1018,7 +1018,7 @@ time_get::get_year(1928) =
 tm_year: 28
 ```
 
-## <a name="iter_type"></a>time_get::iter_type
+## <a name="iter_type"></a>time_get:: iter_type
 
 Typ, który opisuje iterator danych wejściowych.
 
@@ -1030,7 +1030,7 @@ typedef InputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu **InputIterator**.
 
-## <a name="time_get"></a>time_get::time_get
+## <a name="time_get"></a>time_get:: time_get
 
 Konstruktor dla obiektów typu `time_get`.
 
@@ -1057,8 +1057,8 @@ Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chro
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(`refs`).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<locale >](../standard-library/locale.md) \
-[Klasa time_base](../standard-library/time-base-class.md) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
+\ [klasy time_base](../standard-library/time-base-class.md)
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

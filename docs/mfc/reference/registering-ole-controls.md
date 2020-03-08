@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501993"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856381"
 ---
 # <a name="registering-ole-controls"></a>Rejestrowanie formantów OLE
 
@@ -28,7 +28,7 @@ Poniższe funkcje umożliwiają dodawanie i usuwanie klasy kontrolki, stron wła
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|Usuwa klasę formantów lub klasę strony właściwości z bazy danych rejestracji.|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Usuwa bibliotekę typów formantu z bazy danych rejestracji.|
 
-`AfxOleRegisterTypeLib`jest zazwyczaj wywoływana w implementacji `DllRegisterServer`biblioteki DLL kontrolek. Analogicznie `AfxOleUnregisterTypeLib` , jest wywoływana `DllUnregisterServer`przez. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, i `AfxOleUnregisterClass` sązwyklewywoływaneprzezfunkcjęczłonkowskąfabrykiklasylubstronywłaściwościformantu.`UpdateRegistry`
+`AfxOleRegisterTypeLib` jest zazwyczaj wywoływana w implementacji `DllRegisterServer`biblioteki DLL. Podobnie `AfxOleUnregisterTypeLib` jest wywoływana przez `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`i `AfxOleUnregisterClass` są zwykle wywoływane przez `UpdateRegistry` funkcję członkowską w fabryce klasy lub stronie właściwości formantu.
 
 ##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
 
@@ -68,13 +68,13 @@ Identyfikator zasobu mapy bitowej używany do reprezentowania kontrolki OLE na p
 *nRegFlags*<br/>
 Zawiera co najmniej jedną z następujących flag:
 
-- `afxRegInsertable`Umożliwia wyświetlenie formantu w oknie dialogowym Wstaw obiekt dla obiektów OLE.
+- `afxRegInsertable` umożliwia wyświetlenie formantu w oknie dialogowym Wstaw obiekt dla obiektów OLE.
 
-- `afxRegApartmentThreading`Ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
+- `afxRegApartmentThreading` ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Ustawia model wątkowości w rejestrze w taki sposób, aby ThreadingModel = Free.
+- `afxRegFreeThreading` ustawia model wątkowości w rejestrze, aby ThreadingModel = Free.
 
-   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
+   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading`, aby ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
 
 > [!NOTE]
 >  W wersjach MFC przed MFC 4,2 parametr **int** *nRegFlags* był parametrem bool, *bInsertable*, który jest dozwolony lub niedozwolony do wstawienia kontrolki z okna dialogowego Wstawianie obiektu.
@@ -135,13 +135,13 @@ Niezerowe, Jeśli zarejestrowano klasę kontrolki; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pozwala to na użycie formantu przez kontenery, które są oparte na formancie OLE. `AfxOleRegisterControlClass`aktualizuje rejestr z nazwą i lokalizacją kontrolki w systemie, a także ustawia model wątkowości obsługiwany przez formant w rejestrze. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading in OLE Controls" i [Informacje o procesach i wątkach](/windows/win32/ProcThread/about-processes-and-threads) w Windows SDK.
+Pozwala to na użycie formantu przez kontenery, które są oparte na formancie OLE. `AfxOleRegisterControlClass` aktualizuje rejestr przy użyciu nazwy i lokalizacji kontrolki w systemie, a także ustawia model wątkowości obsługiwany przez formant w rejestrze. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading in OLE Controls" i [Informacje o procesach i wątkach](/windows/win32/ProcThread/about-processes-and-threads) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-Powyższy przykład ilustruje, `AfxOleRegisterControlClass` jak jest wywoływana z flagą do wstawienia i flaga dla Apartament model logicznie razem, aby utworzyć szósty parametr:
+Powyższy przykład ilustruje sposób, w jaki `AfxOleRegisterControlClass` jest wywoływana z flagą do wstawienia, i flagą dla modelu Apartment logicznie razem, aby utworzyć szósty parametr:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
@@ -177,10 +177,10 @@ Identyfikator zasobu ciągu zawierającego czytelną dla użytkownika nazwę str
 *nRegFlags*<br/>
 Może zawierać flagę:
 
-- `afxRegApartmentThreading`Ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
+- `afxRegApartmentThreading` ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
 
 > [!NOTE]
->  W wersjach MFC wcześniejszych niż MFC 4,2 parametr **int** *nRegFlags* był niedostępny. Zwróć uwagę, że `afxRegInsertable` flaga nie jest prawidłową opcją dla stron właściwości i spowoduje, że zostanie potwierdzone w MFC, jeśli jest ustawiona
+>  W wersjach MFC wcześniejszych niż MFC 4,2 parametr **int** *nRegFlags* był niedostępny. Należy zauważyć, że flaga `afxRegInsertable` nie jest prawidłową opcją dla stron właściwości i spowoduje, że zostanie potwierdzone w MFC, jeśli jest ustawiona
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -188,7 +188,7 @@ Niezerowe, Jeśli zarejestrowano klasę kontrolki; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pozwala to na użycie strony właściwości przez kontenery, które są oparte na formancie OLE. `AfxOleRegisterPropertyPageClass`aktualizuje rejestr przy użyciu nazwy strony właściwości i jej lokalizacji w systemie, a także ustawia model wątkowości obsługiwany przez formant w rejestrze. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading in OLE Controls" i [Informacje o procesach i wątkach](/windows/win32/ProcThread/about-processes-and-threads) w Windows SDK.
+Pozwala to na użycie strony właściwości przez kontenery, które są oparte na formancie OLE. `AfxOleRegisterPropertyPageClass` aktualizuje rejestr przy użyciu nazwy strony właściwości i jej lokalizacji w systemie, a także ustawia model wątkowości obsługiwany przez formant w rejestrze. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading in OLE Controls" i [Informacje o procesach i wątkach](/windows/win32/ProcThread/about-processes-and-threads) w Windows SDK.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -248,7 +248,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="parameters"></a>Parametry
 
-*clsID*<br/>
+*Identyfikator*<br/>
 Unikatowy identyfikator klasy kontrolki lub strony właściwości.
 
 *pszProgID*<br/>
@@ -287,6 +287,6 @@ Niezerowe, jeśli biblioteka typów została pomyślnie wyrejestrowana; w przeci
 
   **Nagłówek** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

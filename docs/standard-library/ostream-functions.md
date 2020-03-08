@@ -13,20 +13,20 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447196"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874834"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;funkcje&gt; ostream
 
-Są to funkcje szablonu globalnego zdefiniowane w &lt;ostream.&gt; W przypadku funkcji Członkowskich zapoznaj się z dokumentacją [klasy basic_ostream](basic-ostream-class.md) .
+Są to funkcje szablonu globalnego zdefiniowane w &lt;ostream&gt;. W przypadku funkcji Członkowskich zapoznaj się z dokumentacją [klasy basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
-|[endl](#endl)|[celów](#ends)|[flush](#flush)|
-|[swap](#swap)|
+|[endl](#endl)|[celów](#ends)|[płukan](#flush)|
+|[wymiany](#swap)|
 
 ## <a name="endl"></a>endl
 
@@ -46,7 +46,7 @@ Typ elementu.
 *Ostr*\
 Obiekt typu **basic_ostream**.
 
-*Zdawczy*\
+\ *TR*
 Cechy znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -55,7 +55,7 @@ Obiekt typu **basic_ostream**.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator wywołuje *ostr*. [Umieść](../standard-library/basic-ostream-class.md#put) (*Ostr*. [Rozszerz](../standard-library/basic-ios-class.md#widen) ("\n")), a następnie wywołuje *ostr*. [opróżnianie](../standard-library/basic-ostream-class.md#flush). Zwraca *ostr*.
+Manipulator wywołuje *ostr*. [Put](../standard-library/basic-ostream-class.md#put)(*ostr*.[ Rozszerz](../standard-library/basic-ios-class.md#widen)("\n")), a następnie wywoła *ostr*. [opróżnianie](../standard-library/basic-ostream-class.md#flush). Zwraca *ostr*.
 
 ### <a name="example"></a>Przykład
 
@@ -93,7 +93,7 @@ Typ elementu.
 *Ostr*\
 Obiekt typu `basic_ostream`.
 
-*Zdawczy*\
+\ *TR*
 Cechy znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -102,7 +102,7 @@ Obiekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator wywołuje *ostr*. [Umieść](../standard-library/basic-ostream-class.md#put) (*Elem*(' \ 0 ')). Zwraca *ostr*.
+Manipulator wywołuje *ostr*. [Put](../standard-library/basic-ostream-class.md#put)(*elem*(' \ 0 ')). Zwraca *ostr*.
 
 ### <a name="example"></a>Przykład
 
@@ -142,7 +142,7 @@ Typ elementu.
 *Ostr*\
 Obiekt typu `basic_ostream`.
 
-*Zdawczy*\
+\ *TR*
 Cechy znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -187,19 +187,19 @@ void swap(
 *Elem*\
 Typ elementu.
 
-*Zdawczy*\
+\ *TR*
 Cechy znaków.
 
-*lewym*\
-Odwołanie lvalue do `basic_ostream` obiektu.
+\ *lewo*
+Odwołanie lvalue do obiektu `basic_ostream`.
 
-*Kliknij*\
-Odwołanie lvalue do `basic_ostream` obiektu.
+*prawa*\
+Odwołanie lvalue do obiektu `basic_ostream`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `swap` szablonu jest wykonywana `left.swap(right)`.
+Funkcja szablonu `swap` wykonuje `left.swap(right)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<ostream>](../standard-library/ostream.md)
+[\<ostream >](../standard-library/ostream.md)

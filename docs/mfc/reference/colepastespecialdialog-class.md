@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503764"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855608"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 
@@ -49,13 +49,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Konstruuje `COlePasteSpecialDialog` obiekt.|
+|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Konstruuje obiekt `COlePasteSpecialDialog`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: AddFormat](#addformat)|Dodaje niestandardowe formaty do listy formatów, które aplikacja może wkleić.|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Dodaje nowy wpis do listy obsługiwanych formatów Schowka.|
@@ -69,13 +69,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[COlePasteSpecialDialog::m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL, która kontroluje funkcję okna dialogowego.|
+|[COlePasteSpecialDialog:: m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL, która kontroluje funkcję okna dialogowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Utwórz obiekt klasy `COlePasteSpecialDialog` , gdy chcesz wywołać to okno dialogowe. Po skonstruowaniu [](#addformat) [](#addstandardformats) obiektu można użyć funkcji AddFormat i AddStandardFormats, aby dodać formaty schowka do okna dialogowego. `COlePasteSpecialDialog` Można również użyć struktury [m_ps](#m_ps) , aby zainicjować wartości lub Stany kontrolek w oknie dialogowym. `m_ps` Struktura jest typu OLEUIPASTESPECIAL.
+Utwórz obiekt klasy `COlePasteSpecialDialog`, gdy chcesz wywołać to okno dialogowe. Po skonstruowaniu obiektu `COlePasteSpecialDialog` można użyć funkcji [AddFormat](#addformat) i [AddStandardFormats](#addstandardformats) , aby dodać formaty schowka do okna dialogowego. Można również użyć struktury [m_ps](#m_ps) , aby zainicjować wartości lub Stany kontrolek w oknie dialogowym. Struktura `m_ps` jest typu OLEUIPASTESPECIAL.
 
 Aby uzyskać więcej informacji, zapoznaj się ze strukturą [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) w Windows SDK.
 
@@ -134,7 +134,7 @@ Ciąg opisujący wynik w przypadku wybrania tego formatu w oknie dialogowym.
 *znaczników*<br/>
 Dostępne są różne opcje łączenia i osadzania dla tego formatu. Ta flaga jest bitową kombinacją co najmniej jednej z różnych wartości w typie wyliczeniowym OLEUIPASTEFLAG.
 
-*cf*<br/>
+*Porównaj*<br/>
 Format schowka do dodania.
 
 *tymed*<br/>
@@ -146,12 +146,12 @@ Identyfikator ciągu, który identyfikuje ten format. Formatem tego ciągu są d
 *bEnableIcon*<br/>
 Flaga określająca, czy pole wyboru Wyświetlaj jako ikonę jest włączone, gdy ten format jest wybierany w polu listy.
 
-*bLink*<br/>
+*Wskaźnika*<br/>
 Flaga określająca, czy przycisk radiowy Wklej łącze jest włączony w przypadku wybrania tego formatu w polu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja może zostać wywołana w celu dodania do formatów standardowych, takich jak CF_TEXT lub CF_TIFF, lub formatów niestandardowych, które aplikacja zarejestrowała w systemie. Aby uzyskać więcej informacji na temat wklejania obiektów danych do aplikacji, zobacz temat obiekty [danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Ta funkcja może zostać wywołana w celu dodania do formatów standardowych, takich jak CF_TEXT lub CF_TIFF lub formatów niestandardowych, które aplikacja zarejestrowała w systemie. Aby uzyskać więcej informacji na temat wklejania obiektów danych do aplikacji, zobacz temat [obiekty danych artykułu i źródła danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Aby uzyskać więcej informacji, zobacz [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) i strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*cf*<br/>
+*Porównaj*<br/>
 Format schowka do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -203,7 +203,7 @@ Te formaty służą do obsługi osadzania i łączenia.
 
 ##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog
 
-Konstruuje `COlePasteSpecialDialog` obiekt.
+Konstruuje obiekt `COlePasteSpecialDialog`.
 
 ```
 COlePasteSpecialDialog(
@@ -217,7 +217,7 @@ COlePasteSpecialDialog(
 *flagiDW*<br/>
 Flaga tworzenia zawiera dowolną liczbę następujących flag połączonych przy użyciu operatora bitowego lub:
 
-- PSF_SELECTPASTE określa, że po wywołaniu okna dialogowego zostanie zaznaczone przycisk radiowy Wklej. Nie można używać w połączeniu z PSF_SELECTPASTELINK. Domyślnie włączone.
+- PSF_SELECTPASTE określa, że po wywołaniu okna dialogowego zostanie zaewidencjonować przycisk radiowy Wklej. Nie można używać w połączeniu z PSF_SELECTPASTELINK. Domyślnie włączone.
 
 - PSF_SELECTPASTELINK określa, że przycisk radiowy Wklej łącze jest sprawdzany początkowo po wywołaniu okna dialogowego. Nie można używać w połączeniu z PSF_SELECTPASTE.
 
@@ -226,14 +226,14 @@ Flaga tworzenia zawiera dowolną liczbę następujących flag połączonych przy
 - PSF_SHOWHELP określa, że przycisk Pomoc będzie wyświetlany po wywołaniu okna dialogowego.
 
 *pDataObject*<br/>
-Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) do wklejenia. Jeśli ta wartość jest równa null, pobiera `COleDataObject` ze schowka.
+Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) do wklejenia. Jeśli ta wartość jest RÓWNa NULL, pobiera `COleDataObject` ze schowka.
 
 *pParentWnd*<br/>
-Wskazuje obiekt nadrzędny lub właściciel (typu `CWnd`), do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno dialogowe nadrzędne okna dialogowego jest ustawione na główne okno aplikacji.
+Wskazuje obiekt obiektu nadrzędnego lub właściciela (typu `CWnd`), do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno dialogowe nadrzędne okna dialogowego jest ustawione na główne okno aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja konstruuje `COlePasteSpecialDialog` tylko obiekt. Aby wyświetlić okno dialogowe, wywołaj funkcję [DoModal](#domodal) .
+Ta funkcja konstruuje tylko obiekt `COlePasteSpecialDialog`. Aby wyświetlić okno dialogowe, wywołaj funkcję [DoModal](#domodal) .
 
 Aby uzyskać więcej informacji, zobacz [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) typ wyliczeniowy w Windows SDK.
 
@@ -248,7 +248,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>Parametry
 
 *pNewItem*<br/>
-Wskazuje na `COleClientItem` wystąpienie. Nie może mieć wartości NULL.
+Wskazuje na wystąpienie `COleClientItem`. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -274,7 +274,7 @@ Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:
 
 - IDCANCEL, jeśli użytkownik anulował okno dialogowe.
 
-- IDABORT, jeśli wystąpił błąd. Jeśli IDABORT jest zwracany, wywołaj `COleDialog::GetLastError` funkcję członkowską, aby uzyskać więcej informacji na temat typu błędu, który wystąpił. Listę możliwych błędów można znaleźć w funkcji [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) w Windows SDK.
+- IDABORT, jeśli wystąpił błąd. Jeśli IDABORT jest zwracany, wywołaj funkcję członkowską `COleDialog::GetLastError`, aby uzyskać więcej informacji na temat typu błędu, który wystąpił. Listę możliwych błędów można znaleźć w funkcji [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -294,7 +294,7 @@ DVASPECT GetDrawAspect() const;
 
 Metoda wymagana do renderowania obiektu.
 
-- DVASPECT_CONTENT zwracany, jeśli pole wyboru Wyświetlaj jako ikonę nie zostało zaznaczone, gdy okno dialogowe zostało odrzucone.
+- DVASPECT_CONTENT zwracana, jeśli pole wyboru Wyświetlaj jako ikonę nie zostało zaznaczone, gdy okno dialogowe zostało odrzucone.
 
 - DVASPECT_ICON zwracana, jeśli pole wyboru Wyświetlaj jako ikonę zostało zaznaczone, gdy okno dialogowe zostało odrzucone.
 
@@ -326,7 +326,7 @@ int GetPasteIndex() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks do tablicy `OLEUIPASTEENTRY` struktur, które zostały wybrane przez użytkownika. Format, który odpowiada wybranemu indeksowi, powinien być używany podczas wykonywania operacji wklejania.
+Indeks do tablicy struktur `OLEUIPASTEENTRY`, które zostały wybrane przez użytkownika. Format, który odpowiada wybranemu indeksowi, powinien być używany podczas wykonywania operacji wklejania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -346,7 +346,7 @@ Zwraca typ dokonanego wyboru.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości typu zwracanego są określane przez `Selection` typ wyliczeniowy zadeklarowany `COlePasteSpecialDialog` w klasie.
+Wartości typu zwracanego są określane przez `Selection` typ wyliczeniowy zadeklarowany w klasie `COlePasteSpecialDialog`.
 
 ```
 enum Selection {
@@ -359,15 +359,15 @@ enum Selection {
 
 Poniżej przedstawiono krótkie desccriptions następujących wartości:
 
-- `COlePasteSpecialDialog::pasteLink`Przycisk radiowy wklejania linku został sprawdzony i wybrany format był standardowym formatem OLE.
+- `COlePasteSpecialDialog::pasteLink` sprawdzono przycisk radiowy wklejania linku, a wybrany format był standardowym formatem OLE.
 
-- `COlePasteSpecialDialog::pasteNormal`Zaznaczono przycisk radiowy Wklej, a wybrany format to standardowy format OLE.
+- `COlePasteSpecialDialog::pasteNormal` sprawdzono przycisk radiowy wklejania, a wybrany format był standardowym formatem OLE.
 
-- `COlePasteSpecialDialog::pasteOther`Wybrany format nie jest standardowym formatem OLE.
+- `COlePasteSpecialDialog::pasteOther` wybrany format nie jest standardowym formatem OLE.
 
-- `COlePasteSpecialDialog::pasteStatic`Wybrany format to metaplik.
+- `COlePasteSpecialDialog::pasteStatic` wybrany format to metaplik.
 
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps
+##  <a name="m_ps"></a>COlePasteSpecialDialog:: m_ps
 
 Struktura typu OLEUIPASTESPECIAL używana do kontrolowania zachowania okna dialogowego wklejanie specjalne.
 
@@ -381,7 +381,7 @@ Elementy członkowskie tej struktury mogą być modyfikowane bezpośrednio lub z
 
 Aby uzyskać więcej informacji, zapoznaj się ze strukturą [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>

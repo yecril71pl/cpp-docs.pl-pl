@@ -14,11 +14,11 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142257"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876077"
 ---
 # <a name="cancellation_token-class"></a>cancellation_token — Klasa
 
@@ -30,7 +30,7 @@ Klasa `cancellation_token` reprezentuje możliwość ustalenia, czy żądana ope
 class cancellation_token;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -107,7 +107,7 @@ Zwraca wskazanie, czy ten token może być anulowany, czy nie.
 bool is_cancelable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskazanie, czy ten token może być anulowany, czy nie.
 
@@ -119,7 +119,7 @@ Zwraca **wartość PRAWDA** , jeśli token został anulowany.
 bool is_canceled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość **true** , jeśli token został anulowany; w przeciwnym razie wartość **false**.
 
@@ -131,7 +131,7 @@ Zwraca token anulowania, który nigdy nie może podlegać anulowaniu.
 static cancellation_token none();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Token anulowania, którego nie można anulować.
 
@@ -146,7 +146,7 @@ bool operator!= (const cancellation_token& _Src) const;
 *_Src*<br/>
 `cancellation_token` do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ## <a name="operator_eq"></a>operator =
 
@@ -161,7 +161,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
 *_Src*<br/>
 `cancellation_token` do przypisania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ## <a name="operator_eq_eq"></a>operator = =
 
@@ -174,7 +174,7 @@ bool operator== (const cancellation_token& _Src) const;
 *_Src*<br/>
 `cancellation_token` do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ## <a name="register_callback"></a>register_callback
 
@@ -193,7 +193,7 @@ Typ obiektu funkcji, który zostanie wywołany ponownie po anulowaniu tego `canc
 *_Func*<br/>
 Obiekt funkcji, który zostanie wywołany ponownie po anulowaniu tego `cancellation_token`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt `cancellation_token_registration`, którego można użyć w metodzie `deregister` do wyrejestrowania wcześniej zarejestrowanego wywołania zwrotnego i uniemożliwić jego napisanie. Metoda zgłosi wyjątek [invalid_operation](invalid-operation-class.md) , jeśli jest wywoływana na obiekcie `cancellation_token`, który został utworzony za pomocą metody [cancellation_token:: none](#none) .
 

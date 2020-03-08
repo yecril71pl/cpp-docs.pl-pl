@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497845"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863219"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
@@ -42,21 +42,21 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Klasa pochodna `CAtlExeModuleT`.
+*&*<br/>
+Klasa pochodna od `CAtlExeModuleT`.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Inicjuje model COM.|
 |[CAtlExeModuleT::P arseCommandLine](#parsecommandline)|Analizuje wiersz polecenia i przeprowadza rejestrację w razie potrzeby.|
@@ -72,15 +72,15 @@ Klasa pochodna `CAtlExeModuleT`.
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Flaga wskazująca, że należy zamknąć moduł.|
-|[CAtlExeModuleT::m_dwPause](#m_dwpause)|Wartość wstrzymania używana do upewnienia się, że wszystkie obiekty zostały wydane przed zamknięciem.|
-|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Wartość limitu czasu używana do opóźniania zwalniania modułu.|
+|[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|Flaga wskazująca, że należy zamknąć moduł.|
+|[CAtlExeModuleT:: m_dwPause](#m_dwpause)|Wartość wstrzymania używana do upewnienia się, że wszystkie obiekty zostały wydane przed zamknięciem.|
+|[CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout)|Wartość limitu czasu używana do opóźniania zwalniania modułu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlExeModuleT`reprezentuje moduł dla aplikacji (EXE) i zawiera kod, który obsługuje tworzenie pliku EXE, przetwarzanie wiersza polecenia, rejestrowanie obiektów klasy, uruchamianie pętli komunikatów i czyszczenie przy zamykaniu.
+`CAtlExeModuleT` reprezentuje moduł aplikacji (EXE) i zawiera kod, który obsługuje tworzenie pliku EXE, przetwarzanie wiersza polecenia, rejestrowanie obiektów klasy, uruchamianie pętli komunikatów i czyszczenie przy zamykaniu.
 
 Ta klasa została zaprojektowana w celu zwiększenia wydajności, gdy obiekty COM na serwerze EXE są ciągle tworzone i niszczone. Po wydaniu ostatniego obiektu COM, plik EXE czeka przez czas określony przez element członkowski danych [CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout) . Jeśli w tym okresie nie ma żadnych działań (oznacza to, że żadne obiekty COM nie są tworzone), proces zamykania zostanie zainicjowany.
 
@@ -140,11 +140,11 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana z konstruktora i można ją zastąpić, aby zainicjować COM w sposób inny niż domyślna. Domyślna implementacja albo `CoInitializeEx(NULL, COINIT_MULTITHREADED)` `CoInitialize(NULL)` w zależności od konfiguracji projektu.
+Ta metoda jest wywoływana z konstruktora i można ją zastąpić, aby zainicjować COM w sposób inny niż domyślna. Domyślna implementacja to wywołania `CoInitializeEx(NULL, COINIT_MULTITHREADED)` lub `CoInitialize(NULL)` w zależności od konfiguracji projektu.
 
 Zastąpienie tej metody zwykle wymaga przesłaniania [CAtlExeModuleT:: UninitializeCom](#uninitializecom).
 
-##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown
+##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
 
 Flaga wskazująca, że należy zamknąć moduł.
 
@@ -156,7 +156,7 @@ bool m_bDelayShutdown;
 
 Aby uzyskać szczegółowe informacje, zobacz [Omówienie usługi CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) .
 
-##  <a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause
+##  <a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
 
 Wartość wstrzymania używana do upewnienia się, że wszystkie obiekty zostały utracone przed zamknięciem.
 
@@ -168,7 +168,7 @@ DWORD m_dwPause;
 
 Zmień tę wartość po wywołaniu [CAtlExeModuleT:: InitializeCom](#initializecom) , aby ustawić liczbę milisekund użytą jako wartość wstrzymania na potrzeby zamykania serwera. Wartość domyślna to 1000 milisekund.
 
-##  <a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut
+##  <a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
 
 Wartość limitu czasu używana do opóźniania zwalniania modułu.
 
@@ -259,7 +259,7 @@ Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEU
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
 ##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects
 
@@ -271,7 +271,7 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
 ##  <a name="run"></a>CAtlExeModuleT:: Run
 
@@ -349,9 +349,9 @@ Zwraca wartość zwracaną przez plik wykonywalny.
 
 ### <a name="remarks"></a>Uwagi
 
-Tę metodę można zastąpić. Jeśli przesłaniasz [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)lub [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) nie zapewnia wystarczającej elastyczności, można przesłonić `WinMain` funkcję przy użyciu tego Method.
+Tę metodę można zastąpić. Jeśli przesłaniasz [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)lub [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) nie zapewnia wystarczającej elastyczności, można przesłonić funkcję `WinMain` przy użyciu tej metody.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
