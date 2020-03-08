@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916514"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856653"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 
@@ -31,7 +31,7 @@ Automatyzacja OLE zapewnia sposoby wywoływania metod i dostępu do właściwoś
 
 ## <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-`CCmdTarget`Jeśli klasa pochodna w programie obsługuje automatyzację OLE, ta klasa musi udostępnić mapę wysyłania, aby uwidocznić jej metody i właściwości.
+Jeśli klasa pochodna `CCmdTarget`w programie obsługuje automatyzację OLE, ta klasa musi udostępnić mapę wysyłania, aby uwidocznić jej metody i właściwości.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -72,7 +72,7 @@ Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (. cpp), który definiuje funkcje elementu członkowskiego dla klasy, uruchom mapę wysyłania za pomocą makra BEGIN_DISPATCH_MAP, Dodaj wpisy makr dla każdej funkcji i właściwości wysyłania, a następnie ukończ mapę wysyłania za pomocą END_DISPATCH_ MAPUJ makro.
+W pliku implementacji (. cpp), który definiuje funkcje elementów członkowskich klasy, uruchom mapę wysyłania za pomocą makra BEGIN_DISPATCH_MAP, Dodaj wpisy makr dla każdej funkcji i właściwości wysyłania, a następnie ukończ mapę wysyłania z END_DISPATCH_ MAPUJ makro.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -126,9 +126,9 @@ Rozdzielana spacjami lista jednej lub kilku stałych określających listę para
 
 ### <a name="remarks"></a>Uwagi
 
-Argument *vtRetVal* jest typu VARTYPE. Następujące możliwe wartości tego argumentu są pobierane z `VARENUM` wyliczenia:
+Argument *vtRetVal* jest typu VARTYPE. Następujące możliwe wartości tego argumentu są pobierane z wyliczenia `VARENUM`:
 
-|Symbol|Typ zwracany|
+|Symbol|Zwracany typ|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -140,17 +140,17 @@ Argument *vtRetVal* jest typu VARTYPE. Następujące możliwe wartości tego arg
 |VT_BSTR|ANI|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|LOGICZNA|
+|VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Argument *vtsParams* jest rozdzielaną spacją listą wartości ze `VTS_*` stałych. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład
+Argument *vtsParams* jest rozdzieloną spacjami listą wartości ze stałych `VTS_*`. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład:
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
 Określa listę zawierającą krótką liczbę całkowitą, a następnie wskaźnik do krótkiej liczby całkowitej.
 
-`VTS_` Stałe i ich znaczenie są następujące:
+Stałe `VTS_` i ich znaczenie są następujące:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -163,13 +163,13 @@ Określa listę zawierającą krótką liczbę całkowitą, a następnie wskaźn
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
-|VTS_BOOL|LOGICZNA|
+|VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` lub `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__wybierak\*__|
-|VTS_PI4|__długo\*__|
-|VTS_PR4|__float\*__|
-|VTS_PR8|__Double\*__|
+|VTS_PI2|__krótkie\*__|
+|VTS_PI4|__długi\*__|
+|VTS_PR4|__\* zmiennoprzecinkowe__|
+|VTS_PR8|__Podwójna\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -225,7 +225,7 @@ Argument *vtPropType* jest typu **VARTYPE**. Możliwe wartości tego argumentu s
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|LOGICZNA|
+|VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
@@ -269,7 +269,7 @@ Wartość określająca typ właściwości.
 
 Funkcje *memberGet* i *memberSet* mają sygnatury określone przez argument *vtPropType* . Funkcja *memberGet* nie przyjmuje argumentów i zwraca wartość typu określonego przez *vtPropType*. Funkcja *memberSet* przyjmuje argument typu określonego przez *vtPropType* i zwraca wartość Nothing.
 
-Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM. Aby uzyskać listę tych wartości, zobacz uwagi dotyczące parametru *vtRetVal* w [DISP_FUNCTION](#disp_function). Należy zauważyć, że VT_EMPTY, wymienione w DISP_FUNCTION uwagi, nie jest dozwolone jako typ danych właściwości.
+Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM. Aby uzyskać listę tych wartości, zobacz uwagi dotyczące parametru *vtRetVal* w [DISP_FUNCTION](#disp_function). Należy zauważyć, że VT_EMPTY wymienione w DISP_FUNCTION uwagi nie są dozwolone jako typ danych właściwości.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -307,7 +307,7 @@ Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do właściwości zdefiniowanych za pomocą DISP_PROPERTY, właściwość zdefiniowana z DISP_PROPERTY_NOTIFY automatycznie wywoła funkcję określoną przez *pfnAfterSet* , gdy właściwość zostanie zmieniona.
+W przeciwieństwie do właściwości zdefiniowanych za pomocą DISP_PROPERTY, właściwość zdefiniowana za pomocą DISP_PROPERTY_NOTIFY automatycznie wywoła funkcję określoną przez *pfnAfterSet* , gdy właściwość zostanie zmieniona.
 
 Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM:
 
@@ -322,7 +322,7 @@ Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są p
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|LOGICZNA|
+|VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
@@ -332,7 +332,7 @@ Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są p
 
 ## <a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Definiuje właściwość, do której można `Get` uzyskać `Set` dostęp za pomocą oddzielnych funkcji i elementów członkowskich.
+Definiuje Właściwość dostępną za pomocą oddzielnych `Get` i `Set` funkcji Członkowskich.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -362,7 +362,7 @@ Nazwa funkcji składowej używanej do ustawiania właściwości.
 Wartość określająca typ właściwości.
 
 *vtsParams*<br/>
-Ciąg typów parametrów Variant rozdzielonych `VTS_*` spacjami, jeden dla każdego parametru.
+Ciąg `VTS_*` typów parametrów wariantów rozdzielonych spacją, po jednym dla każdego parametru.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -374,7 +374,7 @@ Rozważmy następującą deklarację funkcji get i Set member, która umożliwia
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Odpowiadają one następującemu makro DISP_PROPERTY_PARAM na mapie wysyłania kontrolek:
+Są one odnoszące się do następującego DISP_PROPERTY_PARAM makra na mapie wysyłania formantu:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -382,7 +382,7 @@ Innym przykładem jest rozważenie następujących funkcji elementów członkows
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Odpowiadają one następującemu makro DISP_PROPERTY_PARAM na mapie wysyłania kontrolek:
+Są one odnoszące się do następującego DISP_PROPERTY_PARAM makra na mapie wysyłania formantu:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -416,6 +416,6 @@ Użycie wartości domyślnej może sprawiać, że programowanie obiektu automaty
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

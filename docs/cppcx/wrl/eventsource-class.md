@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821834"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865733"
 ---
 # <a name="eventsource-class"></a>EventSource — Klasa
 
@@ -50,13 +50,13 @@ Interfejs do delegata, który reprezentuje procedurę obsługi zdarzeń.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-| Nazwa                                     | Opis                                            |
+| Name (Nazwa)                                     | Opis                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource:: EventSource](#eventsource) | Inicjuje nowe wystąpienie klasy `EventSource` klasy. |
+| [EventSource:: EventSource](#eventsource) | Inicjuje nowe wystąpienie klasy `EventSource`. |
 
 ### <a name="public-methods"></a>Metody publiczne
 
-| Nazwa                                 | Opis                                                                                                                                                      |
+| Name (Nazwa)                                 | Opis                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: Add](#add)             | Dołącza obsługę zdarzeń reprezentowane przez określony interfejs delegata do zestawu obsługi zdarzeń dla bieżącego obiektu `EventSource`.                     |
 | [EventSource:: GetSize](#getsize)     | Pobiera liczbę programów obsługi zdarzeń skojarzonych z bieżącym obiektem `EventSource`.                                                                         |
@@ -65,9 +65,9 @@ Interfejs do delegata, który reprezentuje procedurę obsługi zdarzeń.
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-| Nazwa                                                    | Opis                                                                                                                       |
+| Name (Nazwa)                                                    | Opis                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | Synchronizuje dostęp do tablicy [targets_](#targets) podczas dodawania, usuwania lub wywoływania programów obsługi zdarzeń.                          |
+| [EventSource:: addRemoveLock_](#addremovelock)           | Synchronizuje dostęp do tablicy [targets_](#targets) podczas dodawania, usuwania lub wywoływania programów obsługi zdarzeń.                          |
 | [EventSource:: targets_](#targets)                       | Tablica co najmniej jednego programu obsługi zdarzeń.                                                                                           |
 | [EventSource:: targetsPointerLock_](#targetspointerlock) | Synchronizuje dostęp do wewnętrznych elementów członkowskich danych, nawet gdy programy obsługi zdarzeń dla tego elementu EventSource są dodawane, usuwane lub wywoływane. |
 
@@ -100,11 +100,11 @@ Interfejs do obiektu delegata, który reprezentuje procedurę obsługi zdarzeń.
 *klucza*<br/>
 Po zakończeniu tej operacji, dojście, które reprezentuje zdarzenie. Użyj tego tokenu jako parametru do metody [Remove ()](#remove) , aby odrzucić procedurę obsługi zdarzeń.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
 Synchronizuje dostęp do tablicy [targets_](#targets) podczas dodawania, usuwania lub wywoływania programów obsługi zdarzeń.
 
@@ -114,7 +114,7 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource:: EventSource
 
-Inicjuje nowe wystąpienie klasy `EventSource` klasy.
+Inicjuje nowe wystąpienie klasy `EventSource`.
 
 ```cpp
 EventSource();
@@ -128,7 +128,7 @@ Pobiera liczbę programów obsługi zdarzeń skojarzonych z bieżącym obiektem 
 size_t GetSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba programów obsługi zdarzeń w [targets_](#targets).
 
@@ -295,7 +295,7 @@ void InvokeAll(
 *T0*<br/>
 Typ argumentu obsługi zdarzeń zerowego.
 
-*T1*<br/>
+*Połączeń*<br/>
 Typ pierwszego argumentu procedury obsługi zdarzeń.
 
 *T2*<br/>
@@ -304,10 +304,10 @@ Typ drugiego argumentu procedury obsługi zdarzeń.
 *T3*<br/>
 Typ trzeciego argumentu procedury obsługi zdarzeń.
 
-*T4*<br/>
+*Twórz*<br/>
 Typ czwartego argumentu procedury obsługi zdarzeń.
 
-*T5*<br/>
+*Otrzymując*<br/>
 Typ piątego argumentu procedury obsługi zdarzeń.
 
 *T6*<br/>
@@ -367,7 +367,7 @@ HRESULT Remove(
 *klucza*<br/>
 Dojście, które reprezentuje procedurę obsługi zdarzeń. Ten token został zwrócony, gdy program obsługi zdarzeń został zarejestrowany przez metodę [Add ()](#add) .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 

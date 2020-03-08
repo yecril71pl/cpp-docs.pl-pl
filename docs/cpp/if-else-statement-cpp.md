@@ -10,17 +10,17 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661638"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884165"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 
 Kontroluje rozgałęzienie warunkowe. Instrukcje w *bloku if-Block* są wykonywane tylko wtedy, gdy *wyrażenie IF* zwraca wartość różną od zera (lub true). Jeśli wartość *wyrażenia* jest różna od zera, *instrukcja1* i wszystkie inne instrukcje w bloku są wykonywane i blok else, jeśli jest obecny, jest pomijany. Jeśli wartość *wyrażenia* jest równa zero, wówczas blok IF jest pomijany i jest wykonywany blok else, jeśli jest obecny. Wyrażenia, które mają wartość różną od zera, są
 
-- OZNACZA
+- TRUE
 - wskaźnik o wartości innej niż null,
 - dowolna wartość arytmetyczna niezerowa lub
 - Typ klasy, który definiuje niejednoznaczną konwersję na typ arytmetyczny, Boolean lub typu wskaźnika. (Aby uzyskać informacje na temat konwersji, zobacz [Konwersje standardowe](../cpp/standard-conversions.md)).
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>Instrukcja if z inicjatorem
 
-**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Instrukcja **if** może również zawierać wyrażenie, które deklaruje i inicjuje nazwaną zmienną. Użyj tej postaci instrukcji if-Statement, gdy zmienna jest wymagana tylko w zakresie bloku if.
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): instrukcja **if** może również zawierać wyrażenie, które deklaruje i inicjuje nazwaną zmienną. Użyj tej postaci instrukcji if-Statement, gdy zmienna jest wymagana tylko w zakresie bloku if.
 
 ## <a name="example"></a>Przykład
 
@@ -161,11 +161,11 @@ int main()
 
 We wszystkich formach instrukcji **if** , *wyrażenie*, które może mieć dowolną wartość z wyjątkiem struktury, jest oceniane, łącznie ze wszystkimi efektami ubocznymi. Kontrolka jest przekazywana z instrukcji **if** do następnej instrukcji w programie, chyba że jedna z *instrukcji*s zawiera [Break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md).
 
-Klauzula `if...else` else instrukcji jest skojarzona z najbliższą poprzednią instrukcją If w tym samym zakresie, który nie ma odpowiedniej instrukcji **else** .
+Klauzula **else** instrukcji `if...else` jest skojarzona z najbliższą poprzednią instrukcją **if** w tym samym zakresie, który nie ma odpowiedniej instrukcji **else** .
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">If constexpr — instrukcje
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> jeśli instrukcje constexpr
 
-**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): W szablonach funkcji można użyć instrukcji **if constexpr** do podejmowania decyzji dotyczących rozgałęziania czasu kompilacji bez konieczności przeciążania wielu funkcji. Można na przykład napisać pojedynczą funkcję, która obsługuje rozpakowywanie parametrów (nie jest potrzebne Przeciążenie o wartości zero parametrów):
+**Visual Studio 2017 w wersji 15,3 i nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): w szablonach funkcji można użyć instrukcji **if constexpr** , aby podejmować decyzje dotyczące rozgałęziania czasu kompilowania bez konieczności stosowania wielu przeciążeń funkcji. Można na przykład napisać pojedynczą funkcję, która obsługuje rozpakowywanie parametrów (nie jest potrzebne Przeciążenie o wartości zero parametrów):
 
 ```cpp
 template <class T, class... Rest>
@@ -186,7 +186,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

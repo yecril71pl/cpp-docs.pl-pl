@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303503"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875832"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;Wyliczenie&gt; systemu plików
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Wartości
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`none`|Zachowanie domyślne: Ignoruj linki symboliczne do katalogów. Odmowa uprawnień jest błędem.|
 |`follow_directory_symlink`|Traktuj symboliczne linki do katalogów jako katalogi rzeczywiste.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Wartości
 
-|Nazwa|Wartość|Opis|
+|Name (Nazwa)|Wartość|Opis|
 |----------|-----------|-----------------|
 |`not_found`|-1|Reprezentuje plik, który nie istnieje.|
 |`none`|0|Reprezentuje plik, który nie ma atrybutu Type. (Nieobsługiwane).|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<> systemu plików](../standard-library/filesystem.md)

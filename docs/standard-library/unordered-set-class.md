@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684104"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890751"
 ---
 # <a name="unordered_set-class"></a>unordered_set — Klasa
 
@@ -158,16 +158,16 @@ class unordered_set;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* \
+*Klucz*\
 Typ klucza.
 
-@No__t_1 *skrótu*
+\ *skrótu*
 Typ obiektu funkcji mieszania.
 
-*Pred* \
+*Pred*\
 Typ obiektu funkcji porównywania równości.
 
-@No__t_1 *alokacji*
+\ *alokacji*
 Klasa alokatora.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -203,14 +203,14 @@ Klasa alokatora.
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy.|
-|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[count](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
 |[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
 |[ciągiem](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
 |[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[find](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
 |[wstawienia](#insert)|Dodaje elementy.|
@@ -232,15 +232,15 @@ Klasa alokatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_set:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_set:: Hasher](#hasher). Użytkownik uzyskuje dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_set:: key_eq](#key_eq) `()`; a dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_set:: hash_function](#hash) `()`. W odniesieniu do wszystkich wartości `X` i `Y` typu `Key` wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów mają równoważne porządkowanie; Wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W przeciwieństwie do [klasy unordered_multiset](../standard-library/unordered-multiset-class.md)szablonu klasy, obiekt typu `unordered_set` zapewnia, że `key_eq()(X, Y)` zawsze ma wartość false dla każdego z dwóch elementów kontrolowanej sekwencji. (Klucze są unikatowe).
+Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_set:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_set:: Hasher](#hasher). Dostęp do pierwszego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [unordered_set:: key_eq](#key_eq)`()`; a następnie uzyskujesz dostęp do drugiego przechowywanego obiektu, wywołując funkcję członkowską [unordered_set:: hash_function](#hash)`()`. W odniesieniu do wszystkich wartości `X` i `Y` typu `Key`wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów mają równoważne porządkowanie; Wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W odróżnieniu od szablonu klasy [Unordered_multiset Klasa](../standard-library/unordered-multiset-class.md), obiekt typu `unordered_set` zapewnia, że dla każdego dwa elementy kontrolowanej sekwencji `key_eq()(X, Y)` zawsze ma wartość false. (Klucze są unikatowe).
 
-Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_set:: load_factor](#load_factor) `()` przekroczenie maksymalnego współczynnika obciążenia, kontener zwiększa liczbę zasobników i ponownie kompiluje tablicę skrótów zgodnie z wymaganiami.
+Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_set:: load_factor](#load_factor)`()` przekroczenie maksymalnego współczynnika obciążenia, kontener zwiększy liczbę przedziałów i ponownie skompiluje tabelę skrótów zgodnie z wymaganiami.
 
 Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Na ogół nie można przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_set:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt typu `allocator`. Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
 
-## <a name="allocator_type"></a>unordered_set::allocator_type
+## <a name="allocator_type"></a>unordered_set:: allocator_type
 
 Typ alokatora do zarządzania pamięcią.
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -367,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do zamapowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -507,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -566,7 +566,7 @@ Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakres
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
 
 Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska wywołuje [unordered_set:: erase](#erase) `(` [unordered_set:: BEGIN](#begin) `(),` [unordered_set:: end](#end) `())`.
+Funkcja członkowska wywołuje [unordered_set:: erase](#erase)`(` [unordered_set:: BEGIN](#begin)`(),` [unordered_set:: end](#end)`())`.
 
 ### <a name="example"></a>Przykład
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca liczbę elementów w zakresie ograniczonym przez [unordered_set:: equal_range](#equal_range) `(keyval)`.
+Funkcja członkowska zwraca liczbę elementów w zakresie rozdzielonym przez [unordered_set:: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Przykład
 
@@ -972,14 +972,14 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*argumenty* \
+*argumenty*\
 Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_set, chyba że zawiera już element, którego wartość jest uporządkowana równorzędnie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-@No__t_0, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_set` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod który został wstawiony nowy element lub gdzie znajduje się już element.
+`pair`, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_set` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod którym wstawiono nowy element lub w którym znajduje się już element.
 
-Aby uzyskać dostęp do składnika iteratora pary `pr` zwrócone przez tę funkcję elementu członkowskiego, użyj `pr.first` i aby usunąć odwołanie do niego, użyj `*(pr.first)`. Aby uzyskać dostęp do składnika **bool** pary `pr` zwrócone przez tę funkcję elementu członkowskiego, należy użyć `pr.second`.
+Aby uzyskać dostęp do składnika iteratora pary `pr` zwrócone przez tę funkcję elementu członkowskiego, użyj `pr.first`i aby usunąć odwołanie do niego, użyj `*(pr.first)`. Aby uzyskać dostęp do składnika **bool** pary `pr` zwrócone przez tę funkcję elementu członkowskiego, należy użyć `pr.second`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1002,10 +1002,10 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*argumenty* \
+*argumenty*\
 Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_set, chyba że unordered_set już zawiera ten element lub, bardziej ogólnie, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.
 
-*gdzie* \
+*gdzie*\
 Wskazówka dotycząca miejsca, w którym rozpoczyna się wyszukiwanie poprawnego punktu wstawiania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1102,7 +1102,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca parę iteratorów `X` takich, które `[X.first, X.second)` ograniczają tylko te elementy kontrolowanej sekwencji o równoważnej kolejności z *keyval*. Jeśli takie elementy nie istnieją, oba Iteratory są `end()`.
+Funkcja członkowska zwraca parę iteratorów `X` takich, które`[X.first, X.second)` ograniczają tylko te elementy kontrolowanej sekwencji o równoważnej kolejności z *keyval*. Jeśli takie elementy nie istnieją, oba Iteratory są `end()`.
 
 ### <a name="example"></a>Przykład
 
@@ -1236,23 +1236,23 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* \
+*Pierwszy*\
 Pozycja pierwszego elementu, który ma zostać usunięty.
 
-*Ostatni* \
+*Ostatni*\
 Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 
-*Klucz* \
+*Klucz*\
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem unordered_set, jeśli taki element nie istnieje.
 
-Dla trzeciej funkcji składowej zwraca liczbę elementów, które zostały usunięte z unordered_set.
+Dla trzeciej funkcji składowej zwraca liczbę elementów usuniętych z unordered_set.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [unordered_set:: equal_range](#equal_range) `(keyval).first`.
+Funkcja członkowska zwraca [unordered_set:: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Przykład
 
@@ -1460,32 +1460,32 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* \
+*Val*\
 Wartość elementu, który ma zostać wstawiony do unordered_set, chyba że zawiera już element, którego klucz jest uporządkowany równorzędnie.
 
-*Gdzie* \
+*Gdzie*\
 Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania.
 
-*ValTy* \
-Parametr szablonu, który określa typ argumentu, który unordered_set może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type), i idealny do przesyłania *dalej jako argumentu* .
+*ValTy*\
+Parametr szablonu, który określa typ argumentu, który unordered_set może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type)i idealny do przesyłania *dalej jako argumentu* .
 
-*Pierwszy* \
+*Pierwszy*\
 Pozycja pierwszego elementu, który ma zostać skopiowany.
 
-*Ostatni* \
+*Ostatni*\
 Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany.
 
-*InputIterator* \
+*InputIterator*\
 Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .
 
-@No__t_1 *IList*
+\ *IList*
 [Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli unordered_set już zawiera element, którego klucz ma odpowiednik wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
-Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na pozycję, w której nowy element został wstawiony do unordered_set lub, jeśli element z równoważnym kluczem już istnieje, do istniejącego elementu.
+Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na miejsce, w którym nowy element został wstawiony do unordered_set lub, jeśli element z równoważnym kluczem już istnieje, do istniejącego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1493,9 +1493,9 @@ Ta funkcja nie unieważnia iteratorów, wskaźników ani odwołań.
 
 Podczas wstawiania tylko jednego elementu, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, stan kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany. Podczas wstawiania wielu elementów, jeśli wyjątek jest zgłaszany, kontener pozostaje w nieokreślonym, ale prawidłowym stanie.
 
-Aby uzyskać dostęp do składnika iteratora `pr` `pair`, który jest zwracany przez jednoelementowe funkcje członkowskie, użyj `pr.first`; Aby usunąć odwołanie do iteratora w zwróconej parze, użyj `*pr.first`, dając Ci element. Aby uzyskać dostęp do składnika **bool** , użyj `pr.second`. Aby zapoznać się z przykładem, zobacz przykładowy kod w dalszej części tego artykułu.
+Aby uzyskać dostęp do składnika iteratora `pr` `pair`, który jest zwracany przez jednoelementowe funkcje członkowskie, użyj `pr.first`; Aby usunąć odwołanie do iteratora w zwróconej parze, użyj`*pr.first`, dając Ci element. Aby uzyskać dostęp do składnika **bool** , użyj `pr.second`. Aby zapoznać się z przykładem, zobacz przykładowy kod w dalszej części tego artykułu.
 
-[Value_type](../standard-library/map-class.md#value_type) kontenera to element typedef, który należy do kontenera, a dla opcji set, `unordered_set<V>::value_type` jest typu `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontenera jest elementem TypeDef, który należy do kontenera, a w przypadku zestawu, `unordered_set<V>::value_type` jest typem `const V`.
 
 Funkcja elementu członkowskiego zakresu (5) wstawia sekwencję wartości elementów do unordered_set, która odnosi się do każdego elementu, który jest kierowany przez iterator w zakresie `[First, Last)`; w związku z tym *ostatni* nie zostanie wstawiony. Funkcja elementu członkowskiego kontenera `end()` odnosi się do pozycji tuż po ostatnim elemencie w kontenerze — na przykład, instrukcja `s.insert(v.begin(), v.end());` próbuje wstawić wszystkie elementy `v` do `s`. Wstawiane są tylko elementy, które mają unikatowe wartości z zakresu; duplikaty zostały zignorowane. Aby sprawdzić, które elementy są odrzucane, użyj jednoelementowych wersji `insert`.
 
@@ -1659,7 +1659,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `(float)`[unordered_set:: size](#size) `() / (float)`[unordered_set:: bucket_count](#bucket_count) `()`, średnią liczbę elementów na przedział.
+Funkcja członkowska zwraca`(float)`[unordered_set:: size](#size)`() / (float)`[unordered_set:: bucket_count](#bucket_count)`()`, średnią liczbę elementów na przedział.
 
 ### <a name="example"></a>Przykład
 
@@ -2005,8 +2005,8 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
-[Unordered_set](../standard-library/unordered-set-class.md) jest kopiowana do `unordered_set`.
+*prawa*\
+[Unordered_set](../standard-library/unordered-set-class.md) kopiowana do `unordered_set`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2151,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets* \
+*nbuckets*\
 Żądana liczba zasobników.
 
 ### <a name="remarks"></a>Uwagi
@@ -2329,12 +2329,12 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Kontener, w którym ma zostać zamieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku skopiowania obiektu składowanych cech typu `Tr` i unieważnia brak odwołań, wskaźników lub iteratorów, które wyznaczają elementy w dwie kontrolowane sekwencje. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
+Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_set:: get_allocator](#get_allocator)`() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku kopiowania obiektu posiadanych cech typu `Tr`i unieważnia odwołania, wskaźniki lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2437,34 +2437,34 @@ unordered_set(
 
 ### <a name="parameters"></a>Parametry
 
-*InputIterator* \
+*InputIterator*\
 Typ iteratora.
 
-*Al* \
+*Al*\
 Obiekt alokatora, który ma być przechowywany.
 
-@No__t_1 *zgodności*
+\ *zgodności*
 Obiekt funkcji porównywania, który ma być przechowywany.
 
-@No__t_1 *skrótu*
+\ *skrótu*
 Obiekt funkcji mieszania, który ma być przechowywany.
 
-*bucket_count* \
+*bucket_count*\
 Minimalna liczba przedziałów.
 
-*Prawa* \
+*Prawa*\
 Kontener, który ma być skopiowany.
 
-@No__t_1 *IList*
+\ *IList*
 Lista initializer_list zawierająca elementy do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor określa kopię sekwencji kontrolowanej przez *prawo*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci konstruktor określa kopię sekwencji, przenosząc *ją w prawo* czwarty za pomocą ósmego konstruktorów, użyj initializer_list, aby określić elementy do skopiowania. Dziewiąty Konstruktor wstawia sekwencję wartości elementu `[first, last)`.
+Pierwszy Konstruktor określa kopię sekwencji kontrolowanej przez *prawo*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci konstruktor określa kopię sekwencji, przenosząc *ją w prawo* czwarty za pomocą ósmego konstruktorów, użyj initializer_list, aby określić elementy do skopiowania. Dziewiąty Konstruktor wstawia sekwencję wartości elementu`[first, last)`.
 
 Wszystkie konstruktory również inicjują kilka przechowywanych wartości. W przypadku konstruktora kopiującego wartości są uzyskiwane z *prawej strony*. W przeciwnym razie:
 
-Minimalna liczba przedziałów jest argumentem *bucket_count*, jeśli jest obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana przez implementację `N0`.
+Minimalna liczba przedziałów jest argumentem *bucket_count*, jeśli istnieje; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana przez implementację `N0`.
 
 Obiekt funkcji mieszania jest *wartością skrótu*argumentu (jeśli istnieje); w przeciwnym razie jest `Hash()`.
 

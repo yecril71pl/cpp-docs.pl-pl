@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189407"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883818"
 ---
 # <a name="array-class-c-standard-library"></a>Array — KlasaC++ (standardowa biblioteka)
 
@@ -121,7 +121,7 @@ class array;
 |`Ty`|Typ elementu.|
 |`N`|Liczba elementów.|
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 |Definicja typu|Opis|
 |-|-|
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>Uwagi
 
-Typ ma konstruktora domyślnego `array()` i domyślnego operatora przypisania `operator=`i spełnia wymagania `aggregate`. W związku z tym obiekty typu `array<Ty, N>` mogą być inicjowane za pomocą inicjatora agregacji. Na przykład
+Typ ma konstruktora domyślnego `array()` i domyślnego operatora przypisania `operator=`i spełnia wymagania `aggregate`. W związku z tym obiekty typu `array<Ty, N>` mogą być inicjowane za pomocą inicjatora agregacji. Na przykład:
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<> tablicy](../standard-library/array.md)

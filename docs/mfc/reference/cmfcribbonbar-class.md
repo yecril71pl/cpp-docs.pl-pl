@@ -189,17 +189,17 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351985"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883697"
 ---
 # <a name="cmfcribbonbar-class"></a>Klasa CMFCRibbonBar
 
-`CMFCRibbonBar` Klasa implementuje paska wstążki, podobnie jak w pakiecie Office 2007.
+Klasa `CMFCRibbonBar` implementuje pasek wstążki podobny do używanego w pakiecie Office 2007.
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** w instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -211,53 +211,53 @@ class CMFCRibbonBar : public CPane
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`CMFCRibbonBar::CMFCRibbonBar`|Domyślny konstruktor.|
+|`CMFCRibbonBar::CMFCRibbonBar`|Konstruktor domyślny.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Aktywuje kategoria kontekstu, która jest już widoczna.|
-|[CMFCRibbonBar::AddCategory](#addcategory)|Dodaje nową kategorię wstążki do wstążki.|
-|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Dodaje kategoria kontekstu.|
-|[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Dodaje nową kategorię główne wstążki.|
+|[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Aktywuje już widoczną kategorię kontekstową.|
+|[CMFCRibbonBar:: AddCategory](#addcategory)|Dodaje nową kategorię wstążki do wstążki.|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Dodaje kategorię kontekstową.|
+|[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Dodaje nową kategorię głównej wstążki.|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
-|[CMFCRibbonBar::AddToTabs](#addtotabs)|Dodawanie elementu wstążki do po prawej stronie paska wstążki.|
-|[CMFCRibbonBar::CreateEx](#createex)|Tworzy pasek sterowania i dołącza je do [CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|
-|[CMFCRibbonBar::Create](#create)|Tworzy kontrolkę paska Wstążki i dołącza je do paska wstążki.|
-|[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||
-|[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||
-|[CMFCRibbonBar::DWMCompositionChanged](#dwmcompositionchanged)||
-|[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|Włącz lub wyłącz klawiszy skrótu dla formantu wstążki.|
-|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|Włącz **Podgląd wydruku** kartę.|
-|[CMFCRibbonBar::EnableToolTips](#enabletooltips)|Włącza lub wyłącza opisy podpowiedzi i etykietek narzędzi w pasku wstążki.|
-|[CMFCRibbonBar::FindByData](#findbydata)|Znajdź element wstążki przy użyciu danych, który określa użytkownika.|
-|[CMFCRibbonBar::FindByID](#findbyid)|Wyszukuje element wstążki, który zawiera polecenie o określonym identyfikatorze.|
-|[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|Znajduje indeks kategorii wstążki, która zawiera dane użytkownika.|
+|[CMFCRibbonBar::AddToTabs](#addtotabs)|Dodaj element wstążki do prawej strony paska wstążki.|
+|[CMFCRibbonBar::CreateEx](#createex)|Tworzy pasek sterowania i dołącza go do obiektu [CPane](../../mfc/reference/cpane-class.md) . (Przesłania [CPane:: CreateEx](../../mfc/reference/cpane-class.md#createex).)|
+|[CMFCRibbonBar:: Create](#create)|Tworzy kontrolkę pasek wstążki i dołącza ją do paska wstążki.|
+|[CMFCRibbonBar::D eactivateKeyboardFocus](#deactivatekeyboardfocus)||
+|[CMFCRibbonBar::D rawMenuImage](#drawmenuimage)||
+|[CMFCRibbonBar::D WMCompositionChanged](#dwmcompositionchanged)||
+|[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|Włącz lub Wyłącz porady dotyczące klawiszy dla kontrolki wstążki.|
+|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|Włącz kartę **Podgląd wydruku** .|
+|[CMFCRibbonBar::EnableToolTips](#enabletooltips)|Włącza lub wyłącza etykietki narzędzi oraz opisy etykietek narzędzi na pasku wstążki.|
+|[CMFCRibbonBar::FindByData](#findbydata)|Znajdź element wstążki przy użyciu danych określanych przez użytkownika.|
+|[CMFCRibbonBar::FindByID](#findbyid)|Znajduje element wstążki, który ma określony identyfikator polecenia.|
+|[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|Znajduje indeks kategorii wstążki zawierającej dane zdefiniowane przez użytkownika.|
 |[CMFCRibbonBar::ForceRecalcLayout](#forcerecalclayout)||
 |[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|Pobiera wskaźnik do aktywnej kategorii.|
-|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|Zwraca wysokość podpis. (Przesłania [CBasePane::GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
-|[CMFCRibbonBar::GetCategory](#getcategory)|Pobiera wskaźnik do kategorii znajdujący się w określonym indeksie.|
-|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Pobiera liczbę kategorii wstążki w pasku wstążki.|
+|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|Zwraca wysokość napisu. (Przesłania [CBasePane:: GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
+|[CMFCRibbonBar:: GetCategory](#getcategory)|Pobiera wskaźnik do kategorii znajdującej się w określonym indeksie.|
+|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Pobiera liczbę kategorii wstążki na pasku wstążki.|
 |[CMFCRibbonBar::GetCategoryHeight](#getcategoryheight)||
 |[CMFCRibbonBar::GetCategoryIndex](#getcategoryindex)|Zwraca indeks kategorii wstążki.|
-|[CMFCRibbonBar::GetContextName](#getcontextname)|Pobiera nazwę podpis kategoria kontekstu, który należy określić za pomocą tego identyfikatora.|
+|[CMFCRibbonBar:: getcontextname](#getcontextname)|Pobiera nazwę podpisu kategorii kontekstowej określonego przy użyciu identyfikatora.|
 |[CMFCRibbonBar::GetDroppedDown](#getdroppeddown)||
-|[CMFCRibbonBar::GetElementsByID](#getelementsbyid)|Pobiera tablicę, która zawiera wskaźniki do wszystkich elementów wstążki, które mają określonego identyfikatora.|
-|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Pobiera wskaźnik do przycisk na Wstążce.|
-|[CMFCRibbonBar::GetFocused](#getfocused)|Zwraca element z fokusem.|
+|[CMFCRibbonBar::GetElementsByID](#getelementsbyid)|Pobiera tablicę zawierającą wskaźniki do wszystkich elementów wstążki o określonym IDENTYFIKATORze.|
+|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Pobiera wskaźnik do przycisku wstążki.|
+|[CMFCRibbonBar:: GetFocus](#getfocused)|Zwraca element z fokusem.|
 |[CMFCRibbonBar::GetHideFlags](#gethideflags)||
 |[CMFCRibbonBar::GetItemIDsList](#getitemidslist)||
 |[CMFCRibbonBar::GetKeyboardNavigationLevel](#getkeyboardnavigationlevel)||
 |[CMFCRibbonBar::GetKeyboardNavLevelCurrent](#getkeyboardnavlevelcurrent)||
 |[CMFCRibbonBar::GetKeyboardNavLevelParent](#getkeyboardnavlevelparent)||
-|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Zwraca wskaźnik do kategorii wstążki, który jest aktualnie wybrany.|
+|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Zwraca wskaźnik do kategorii wstążki, która jest aktualnie wybrana.|
 |[CMFCRibbonBar::GetQATCommandsLocation](#getqatcommandslocation)||
 |[CMFCRibbonBar::GetQATDroppedDown](#getqatdroppeddown)||
-|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Wypełnia listę, która zawiera identyfikatory poleceń wszystkich elementów, które są wyświetlane na pasku narzędzi Szybki dostęp.|
+|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Wypełnia listę zawierającą identyfikatory poleceń wszystkich elementów, które pojawiają się na pasku narzędzi Szybki dostęp.|
 |[CMFCRibbonBar::GetQuickAccessToolbarLocation](#getquickaccesstoolbarlocation)||
 |[CMFCRibbonBar::GetTabTrancateRatio](#gettabtrancateratio)||
 |[CMFCRibbonBar::GetTooltipFixedWidthLargeImage](#gettooltipfixedwidthlargeimage)||
@@ -265,61 +265,61 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::GetVisibleCategoryCount](#getvisiblecategorycount)||
 |[CMFCRibbonBar::HideAllContextCategories](#hideallcontextcategories)|Ukrywa wszystkie kategorie, które są aktywne i widoczne.|
 |[CMFCRibbonBar::HideKeyTips](#hidekeytips)||
-|[CMFCRibbonBar::HitTest](#hittest)|Umożliwia znalezienie wskaźnik do elementu wstążki, który znajduje się w określonym punkcie w współrzędne klienta paska wstążki.|
-|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Określa, czy wskazówki dotyczące klawiszy są włączone.|
+|[CMFCRibbonBar::HitTest](#hittest)|Znajduje wskaźnik do elementu wstążki, który znajduje się w określonym punkcie we współrzędnych klienta na pasku wstążki.|
+|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Określa, czy są włączone podpowiedzi.|
 |[CMFCRibbonBar::IsMainRibbonBar](#ismainribbonbar)||
-|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|Określa, czy **Podgląd wydruku** karta jest włączona.|
+|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|Określa, czy karta **Podgląd wydruku** jest włączona.|
 |[CMFCRibbonBar::IsQATEmpty](#isqatempty)||
-|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Określa, czy pasek narzędzi Szybki dostęp znajduje się nad paskiem wstążki.|
-|[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|Określa pasek wstążki zastępuje podpis głównej ramki, czy jest dodawana poniżej podpis ramki.|
+|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Określa, czy pasek narzędzi Szybki dostęp znajduje się powyżej paska wstążki.|
+|[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|Określa, czy pasek wstążki zastępuje główny podpis ramki lub jest dodawany poniżej podpisu ramki.|
 |[CMFCRibbonBar::IsShowGroupBorder](#isshowgroupborder)||
 |[CMFCRibbonBar::IsToolTipDescrEnabled](#istooltipdescrenabled)|Określa, czy opisy etykietki narzędzi są włączone.|
-|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Określa, czy włączono wybór etykietki narzędzi paska wstążki.|
+|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Określa, czy etykietki narzędzi dla paska wstążki są włączone.|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
-|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Wskazuje, czy wstążki ma wygląd stylu 7 Windows (mała aplikacja prostokątny przycisk).|
+|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Wskazuje, czy wstążka ma wygląd stylu systemu Windows 7 (przycisk małej aplikacji prostokątnej).|
 |[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Przeciążone. Ładuje pasek wstążki z zasobów aplikacji.|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(Przesłania `CPane::OnRTLChanged`).|
-|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Przesłania [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
+|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Przesłania [CBasePane:: OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
-|[CMFCRibbonBar::PopTooltip](#poptooltip)||
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(Przesłania `CBasePane::PreTranslateMessage`).|
-|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Przesłania [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
-|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Usuwa wszystkie kategorie wstążki na Wstążce.|
-|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Usuwa wszystkie elementy wstążki z wartości obszar karty.|
-|[CMFCRibbonBar::RemoveCategory](#removecategory)|Usuwa kategorii wstążki, który jest umieszczony pod określonym indeksem.|
-|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Zapisuje paska wstążki do buforu.|
-|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Zapisuje paska wstążki do pliku XML.|
-|[CMFCRibbonBar::SetActiveCategory](#setactivecategory)|Ustawia określoną kategorią na aktywny.|
+|[CMFCRibbonBar::P opTooltip](#poptooltip)||
+|[CMFCRibbonBar::P reTranslateMessage](#pretranslatemessage)|(Przesłania `CBasePane::PreTranslateMessage`).|
+|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Przesłania [CPane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Usuwa wszystkie kategorie wstążki z paska wstążki.|
+|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Usuwa wszystkie elementy wstążki z obszaru kart.|
+|[CMFCRibbonBar::RemoveCategory](#removecategory)|Usuwa kategorię wstążki, która znajduje się w określonym indeksie.|
+|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Zapisuje pasek wstążki do buforu.|
+|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Zapisuje pasek wstążki do pliku XML.|
+|[CMFCRibbonBar::SetActiveCategory](#setactivecategory)|Ustawia określoną kategorię wstążki na aktywną.|
 |[CMFCRibbonBar::SetActiveMDIChild](#setactivemdichild)||
-|[CMFCRibbonBar::SetElementKeys](#setelementkeys)|Ustawia określoną wskazówki dla wszystkich elementów wstążki, które mają identyfikator określonego polecenia.|
-|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Przycisk na Wstążce aplikacji są przypisywane do paska wstążki.|
+|[CMFCRibbonBar::SetElementKeys](#setelementkeys)|Ustawia określone porady dla wszystkich elementów wstążki, które mają określony identyfikator polecenia.|
+|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Przypisuje przycisk wstążki aplikacji do paska wstążki.|
 |[CMFCRibbonBar::SetKeyboardNavigationLevel](#setkeyboardnavigationlevel)||
-|[CMFCRibbonBar::SetMaximizeMode](#setmaximizemode)||
+|[CMFCRibbonBar:: setmaksymalizujmode](#setmaximizemode)||
 |[CMFCRibbonBar::SetQuickAccessCommands](#setquickaccesscommands)|Dodaje jeden lub więcej elementów wstążki do paska narzędzi Szybki dostęp.|
 |[CMFCRibbonBar::SetQuickAccessDefaultState](#setquickaccessdefaultstate)|Określa domyślny stan paska narzędzi Szybki dostęp.|
-|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Umieszcza szybki dostęp do paska narzędzi (QAT) powyżej lub poniżej paska wstążki.|
+|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Umieszcza pasek narzędzi Szybki dostęp (QAT) powyżej lub poniżej paska wstążki.|
 |[CMFCRibbonBar::SetTooltipFixedWidth](#settooltipfixedwidth)||
-|[CMFCRibbonBar::SetWindows7Look](#setwindows7look)|Włącz/Wyłącz wstążki Windows 7 styl wyglądu (mała aplikacja prostokątny przycisk)|
-|[CMFCRibbonBar::ShowCategory](#showcategory)|Pokazuje lub ukrywa określoną kategorię.|
-|[CMFCRibbonBar::ShowContextCategories](#showcontextcategories)|Pokazuje lub ukrywa kategorie kontekstu, które mają określonego identyfikatora.|
+|[CMFCRibbonBar::SetWindows7Look](#setwindows7look)|Włącz/Wyłącz Wstążkę Windows 7 — wygląd stylu (przycisk małej aplikacji prostokątnej)|
+|[CMFCRibbonBar::ShowCategory](#showcategory)|Pokazuje lub ukrywa określoną kategorię wstążki.|
+|[CMFCRibbonBar::ShowContextCategories](#showcontextcategories)|Pokazuje lub ukrywa kategorie kontekstowe o określonym IDENTYFIKATORze.|
 |[CMFCRibbonBar::ShowKeyTips](#showkeytips)||
-|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Włącza/wyłącza pasek wstążki między Stanami zminimalizowanymi i zmaksymalizowanymi...|
+|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Przełącza pasek wstążki między Stanami zminimalizowanymi i zmaksymalizowanymi..|
 |[CMFCRibbonBar::TranslateChar](#translatechar)||
 
 ## <a name="remarks"></a>Uwagi
 
-Firma Microsoft wprowadziła wstążki pakietu Office Fluent, jednocześnie wydaniu pakietu Microsoft Office 2007. Ten pasek wstążki jest nowego formantu. Reprezentuje paradygmatu nowy interfejs użytkownika. Wstążka jest okienko, który zawiera zestaw o nazwie Kategorie kart. Każda kategoria logicznie podzielić się paneli wstążki, a każdy panel może zawierać różne formanty i przyciski poleceń.
+Firma Microsoft wprowadziła wstążkę pakietu Office Fluent, gdy wydano ją jednocześnie Microsoft Office 2007. Ten pasek wstążki nie jest tylko nową kontrolką. Reprezentuje nowy model interfejsu użytkownika. Wstążka jest okienkiem zawierającym zestaw kart o nazwie kategorie. Każda kategoria jest logicznie dzielona na panele wstążki, a każdy panel może zawierać różne kontrolki i przyciski poleceń.
 
-Elementy, które pojawiają się na rozwijanie paska Wstążki i umowę najlepszego wykorzystania dostępnego miejsca. Na przykład, jeśli panelu wstążki ma za mało miejsca, aby wyświetlić jego elementy, staje się przycisk menu, który wyświetla elementy podrzędne w menu podręcznym. Na Wstążce zachowuje się jak statycznych pasek sterowania (niezmienny) i może być zadokowane w górnej ramce.
+Elementy, które pojawiają się na pasku wstążki rozwiń i kontraktu, aby najlepiej wykorzystać dostępne miejsce. Na przykład, jeśli panel wstążki ma za mało miejsca, aby wyświetlić jego elementy, to zostanie przycisk menu, który wyświetla podelementy w menu podręcznym. Pasek wstążki zachowuje się jako statyczny (nieswobodny) pasek sterowania i może być zadokowany w górnej części ramki.
 
-Możesz użyć `CMFCRibbonStatusBar` klasy do zaimplementowania pasek stanu podobny używaną w pakiecie Office 2007. Kategoria wstążki zawiera (i wyświetla) grupy [paneli wstążki](../../mfc/reference/cmfcribbonpanel-class.md). Każdy panel wstążki zawiera jeden lub więcej elementów wstążki, które są uzyskiwane z [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
+Za pomocą klasy `CMFCRibbonStatusBar` można zaimplementować pasek stanu podobny do używanego w pakiecie Office 2007. Kategoria wstążki zawiera (i wyświetla) grupę [paneli wstążki](../../mfc/reference/cmfcribbonpanel-class.md). Każdy panel wstążki zawiera jeden lub więcej elementów wstążki, które są wyprowadzane z [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Aby uzyskać informacje o tym, jak dodać pasek wstążki do istniejącej aplikacji MFC, zobacz [instruktażu: Aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Aby uzyskać informacje na temat dodawania paska wstążki do istniejącej aplikacji MFC, zobacz [Przewodnik: aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -337,11 +337,11 @@ Aby uzyskać informacje o tym, jak dodać pasek wstążki do istniejącej aplika
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxribbonbar.h
+**Nagłówek:** afxribbonbar. h
 
-##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory
+##  <a name="activatecontextcategory"></a>CMFCRibbonBar::ActivateContextCategory
 
-Aktywuje kategoria kontekstu, która jest już widoczna.
+Aktywuje już widoczną kategorię kontekstową.
 
 ```
 BOOL ActivateContextCategory(UINT uiContextID);
@@ -350,15 +350,15 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ### <a name="parameters"></a>Parametry
 
 *uiContextID*<br/>
-[in] Identyfikator kontekstu kategorii.
+podczas Identyfikator kategorii kontekstu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kategoria kontekstu o *uiContextID* zostanie znaleziony i aktywowane; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli Kategoria kontekstowa z *uiContextIDem* zostanie znaleziona i aktywowana; w przeciwnym razie FALSE.
 
-##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory
+##  <a name="addcategory"></a>CMFCRibbonBar:: AddCategory
 
-Tworzy i inicjuje nową kategorię do wstążki, paska wstążki.
+Tworzy i inicjuje nową kategorię wstążki dla paska wstążki.
 
 ```
 CMFCRibbonCategory* AddCategory(
@@ -376,41 +376,41 @@ CMFCRibbonCategory* AddCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-[in] Nazwa kategorii wstążki.
+podczas Nazwa kategorii wstążki.
 
 *uiSmallImagesResID*<br/>
-[in] Identyfikator zasobu listy małych obrazów dla kategorii wstążki.
+podczas Identyfikator zasobu listy małych obrazów dla kategorii wstążki.
 
 *uiLargeImagesResID*<br/>
-[in] Identyfikator zasobu listy dużych obrazów dla kategorii wstążki.
+podczas Identyfikator zasobu listy dużych obrazów dla kategorii wstążki.
 
 *sizeSmallImage*<br/>
-[in] Określa rozmiar małe obrazy dla kategorii wstążki.
+podczas Określa rozmiar małych obrazów dla kategorii wstążki.
 
 *sizeLargeImage*<br/>
-[in] Określa rozmiar duże obrazy dla kategorii wstążki.
+podczas Określa rozmiar dużych obrazów dla kategorii wstążki.
 
 *nInsertAt*<br/>
-[in] Zero na podstawie indeks lokalizacji kategorii.
+podczas Indeks lokalizacji kategorii liczony od zera.
 
 *pRTI*<br/>
-[in] Wskaźnik do [klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) klasy środowiska wykonawczego umożliwia dynamiczne tworzenie kategorii wstążki w czasie wykonywania.
+podczas Wskaźnik do klasy czasu wykonywania [klasy CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) w celu dynamicznego tworzenia kategorii wstążki w czasie wykonywania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
+Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pRTI* parametr nie ma wartość NULL, Nowa kategoria wstążki jest tworzony dynamicznie przy użyciu klasy środowiska wykonawczego.
+Jeśli parametr *pRTI* nie ma wartości null, Nowa kategoria wstążki zostanie utworzona dynamicznie przy użyciu klasy Run-Time.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `AddCategory` method in Class metoda `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób używania metody `AddCategory` w klasie `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
+##  <a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory
 
 Tworzy i inicjuje nową kategorię kontekstu dla paska wstążki.
 
@@ -432,41 +432,41 @@ CMFCRibbonCategory* AddContextCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-[in] Nazwa kategorii.
+podczas Nazwa kategorii.
 
 *lpszContextName*<br/>
-[in] Nazwa kontekstu podpis kategorii.
+podczas Nazwa etykiety kategorii kontekstowej.
 
 *uiContextID*<br/>
-[in] Identyfikator kontekstu.
+podczas Identyfikator kontekstu.
 
 *clrContext*<br/>
-[in] Kolor kontekstu podpis kategorii.
+podczas Kolor podpisu kategorii kontekstowej.
 
 *uiSmallImagesResID*<br/>
-[in] Identyfikator zasobu mały obraz kategoria kontekstu.
+podczas Identyfikator zasobu małego obrazu kategorii kontekstowej.
 
 *uiLargeImagesResID*<br/>
-[in] Identyfikator zasobu duży obraz kategoria kontekstu.
+podczas Identyfikator zasobu dużego obrazu kategorii kontekstowej.
 
 *sizeSmallImage*<br/>
-[in] Rozmiar mały obraz.
+podczas Rozmiar małego obrazu.
 
 *sizeLargeImage*<br/>
-[in] Rozmiar duży obraz.
+podczas Rozmiar dużego obrazu.
 
 *pRTI*<br/>
-[in] Wskaźnik do klasy środowiska uruchomieniowego.
+podczas Wskaźnik do klasy środowiska uruchomieniowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowo utworzonego kategorii, lub wartość NULL, jeśli `CreateObject` metody *pRTI* nie można utworzyć określonej kategorii.
+Wskaźnik do nowo utworzonej kategorii lub wartość NULL, jeśli metoda `CreateObject` elementu *pRTI* nie może utworzyć określonej kategorii.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby dodać kategorię kontekście, użyć tej funkcji. Kategorie kontekstu to specjalny rodzaj kategorii, które mogą być wyświetlane lub ukryte w czasie wykonywania, w zależności od bieżącego kontekstu aplikacji. Na przykład gdy użytkownik wybierze obiekt, możesz wyświetlić specjalnych kart za pomocą kategorii kontekstu, które umożliwia zmiany określonych wybranego obiektu.
+Użyj tej funkcji, aby dodać kategorię kontekstową. Kategorie kontekstowe są specjalnym typem kategorii, które mogą być wyświetlane lub ukrywane w czasie wykonywania, w zależności od bieżącego kontekstu aplikacji. Na przykład, gdy użytkownik wybierze obiekt, można wyświetlić specjalne karty z kategoriami kontekstowymi, które służą do zmiany określonego zaznaczonego obiektu.
 
-Kolor kontekstu może być jednym z następujących wartości:
+Kolor kategorii kontekstowej może być jedną z następujących wartości:
 
 - AFX_CategoryColor_None
 
@@ -484,9 +484,9 @@ Kolor kontekstu może być jednym z następujących wartości:
 
 - AFX_CategoryColor_Violet
 
-##  <a name="addmaincategory"></a>  CMFCRibbonBar::AddMainCategory
+##  <a name="addmaincategory"></a>CMFCRibbonBar::AddMainCategory
 
-Tworzy nową kategorię główne wstążki, paska wstążki.
+Tworzy nową główną kategorię wstążki dla paska wstążki.
 
 ```
 CMFCRibbonMainPanel* AddMainCategory(
@@ -502,37 +502,37 @@ CMFCRibbonMainPanel* AddMainCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-[in] Nazwa kategorii główne wstążki.
+podczas Nazwa głównej kategorii wstążki.
 
 *uiSmallImagesResID*<br/>
-[in] Identyfikator zasobu małe obrazy.
+podczas Identyfikator zasobu małych obrazów.
 
 *uiLargeImagesResID*<br/>
-[in] Identyfikator zasobu dużych obrazów.
+podczas Identyfikator zasobu dużych obrazów.
 
 *sizeSmallImage*<br/>
-[in] Rozmiar małych obrazów.
+podczas Rozmiar małych obrazów.
 
 *sizeLargeImage*<br/>
-[in] Rozmiar dużych obrazów.
+podczas Rozmiar dużych obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowej kategorii główne wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
+Wskaźnik do nowej głównej kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli istnieje już kategoria główne wstążki, został usunięty.
+Jeśli główna Kategoria wstążki już istnieje, zostanie usunięta.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `AddMainCategory` method in Class metoda `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób używania metody `AddMainCategory` w klasie `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]
 
-##  <a name="addprintpreviewcategory"></a>  CMFCRibbonBar::AddPrintPreviewCategory
+##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddPrintPreviewCategory
 
-Tworzy kategorię podglądu wydruku w pasku wstążki.
+Tworzy kategorię Podgląd wydruku na pasku wstążki.
 
 ```
 CMFCRibbonCategory* AddPrintPreviewCategory();
@@ -540,15 +540,15 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
+Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy kategorii Wstążki i kontrolek, których potrzebuje, aby zapewnić podglądu wydruku.
+Ta metoda tworzy kategorię wstążki i kontrolki, których potrzebuje, aby udostępnić Podgląd wydruku.
 
-##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory
+##  <a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory
 
-Tworzy kategorię wstążce paska narzędzi Szybki dostęp.
+Tworzy kategorię wstążki paska narzędzi Szybki dostęp.
 
 ```
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -561,25 +561,25 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-[in] Nazwa kategorii.
+podczas Nazwa kategorii.
 
 *uiSmallImagesResID*<br/>
-[in] Identyfikator zasobu lista obrazów dla kategorii.
+podczas Identyfikator zasobu listy obrazów dla kategorii.
 
 *sizeSmallImage*<br/>
-[in] Rozmiar obrazów dla elementów wstążki w kategorii.
+podczas Rozmiar obrazów dla elementów wstążki w kategorii.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowej kategorii, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
+Wskaźnik do nowej kategorii, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria wstążki narzędzi szybkiego dostępu jest używana tylko w oknie dialogowym dostosowywania paska narzędzi Szybki dostęp.
+Kategoria wstążki paska narzędzi Szybki dostęp jest używana tylko w oknie dialogowym Dostosowywanie paska narzędzi Szybki dostęp.
 
-##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs
+##  <a name="addtotabs"></a>CMFCRibbonBar::AddToTabs
 
-Dodaje element określony wstążki do wiersza karty na Wstążce.
+Dodaje określony element wstążki do wiersza karty na pasku wstążki.
 
 ```
 void AddToTabs(CMFCRibbonBaseElement* pElement);
@@ -588,15 +588,15 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ### <a name="parameters"></a>Parametry
 
 *pElement*<br/>
-[in] Wskaźnik do elementu wstążki.
+podczas Wskaźnik do elementu wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Element wstążki jest umieszczony przed żadnych przycisków systemowych.
+Element wstążki jest umieszczony przed przyciskami systemowymi.
 
-##  <a name="cmfcribbonbar"></a>  CMFCRibbonBar::CMFCRibbonBar
+##  <a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar
 
-Tworzy i inicjuje [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) obiektu.
+Tworzy i inicjuje obiekt [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) .
 
 ```
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
@@ -605,13 +605,13 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bReplaceFrameCaption*<br/>
-[in] Wartość TRUE dla paska wstążki zastąpić podpis ramką głównego okna; Wartość FALSE, aby zlokalizować na Wstążce w obszarze podpis ramką głównego okna.
+podczas Wartość TRUE dla paska wstążki, aby zastąpić podpis głównego okna ramki; Wartość FALSE, aby zlokalizować pasek wstążki pod podpisem głównego okna ramki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="create"></a>  CMFCRibbonBar::Create
+##  <a name="create"></a>CMFCRibbonBar:: Create
 
-Tworzy okno do paska wstążki.
+Tworzy okno dla paska wstążki.
 
 ```
 BOOL Create(
@@ -623,29 +623,29 @@ BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-[in] Wskaźnik do okna nadrzędnego na Wstążce.
+podczas Wskaźnik do okna nadrzędnego dla paska wstążki.
 
 *dwStyle*<br/>
-[in] Połączenie logiczne style dla nowego okna.
+podczas Logiczna kombinacja stylów dla nowego okna.
 
 *nID*<br/>
-[in] Identyfikator nowego okna.
+podczas Identyfikator nowego okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli utworzono okna; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okno zostało utworzone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób użycia metody `Create` klasy `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]
 
-##  <a name="createex"></a>  CMFCRibbonBar::CreateEx
+##  <a name="createex"></a>CMFCRibbonBar::CreateEx
 
-Tworzy okno do paska wstążki.
+Tworzy okno dla paska wstążki.
 
 ```
 BOOL CreateEx(
@@ -658,26 +658,26 @@ BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-[in] Wskaźnik do okna nadrzędnego na Wstążce.
+podczas Wskaźnik do okna nadrzędnego dla paska wstążki.
 
 *dwCtrlStyle*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
 *dwStyle*<br/>
-[in] Połączenie logiczne style dla nowego okna.
+podczas Logiczna kombinacja stylów dla nowego okna.
 
 *nID*<br/>
-[in] Identyfikator nowego okna.
+podczas Identyfikator nowego okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli utworzono okna; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okno zostało utworzone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="deactivatekeyboardfocus"></a>  CMFCRibbonBar::DeactivateKeyboardFocus
+##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::D eactivateKeyboardFocus
 
-Powoduje zamknięcie wszystkich kontrolek na Wstążce poradę dotyczącą klawiszy.
+Zamyka wszystkie kontrolki poradę dotyczącą klawiszy na pasku wstążki.
 
 ```
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
@@ -686,13 +686,13 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSetFocus*<br/>
-[in] Wartość TRUE, aby ustawić fokus na okno nadrzędne paska wstążki.
+podczas Wartość TRUE powoduje ustawienie fokusu w oknie nadrzędnym na pasku wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawmenuimage"></a>  CMFCRibbonBar::DrawMenuImage
+##  <a name="drawmenuimage"></a>CMFCRibbonBar::D rawMenuImage
 
-Rysuje obraz dla przycisku menu.
+Rysuje obraz przycisku menu.
 
 ```
 BOOL DrawMenuImage(
@@ -703,24 +703,24 @@ BOOL DrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia dla przycisku menu.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia dla przycisku menu.
 
 *pMenuItem*<br/>
-[in] Wskaźnik na przycisku paska narzędzi.
+podczas Wskaźnik na przycisk menu paska narzędzi.
 
 *rectImage*<br/>
-[in] Wyświetlanie prostokąta przycisku menu.
+podczas Prostokąt wyświetlania przycisku menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli obraz, który został wystawiony; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli obraz został narysowany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged
+##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::D WMCompositionChanged
 
-Umożliwia dostosowanie wyświetlanego paska wstążki, gdy kompozycję Menedżera okien pulpitu (DWM) jest włączone lub wyłączone.
+Dostosowuje wyświetlanie paska wstążki, gdy kompozycja Menedżer okien pulpitu (DWM) jest włączona lub wyłączona.
 
 ```
 virtual void DWMCompositionChanged();
@@ -728,9 +728,9 @@ virtual void DWMCompositionChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablekeytips"></a>  CMFCRibbonBar::EnableKeyTips
+##  <a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips
 
-Włącza lub wyłącza funkcję poradę dotyczącą klawiszy dla paska wstążki.
+Włącza lub wyłącza funkcję poradę dotyczącą klawiszy na pasku wstążki.
 
 ```
 void EnableKeyTips(BOOL bEnable = TRUE);
@@ -738,16 +738,16 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE, aby włączyć funkcję wskazówki; Wartość FALSE, aby wyłączyć funkcję wskazówki.
+*bEnable*<br/>
+podczas PRAWDA, aby włączyć funkcję etykietek: Wartość FALSE powoduje wyłączenie funkcji etykietki.
 
 ### <a name="remarks"></a>Uwagi
 
-Po włączeniu tej funkcji, klawisze skrótu są wyświetlane, gdy użytkownik naciśnie przycisk ALT lub F10. Gdy użytkownik naciśnie klawisz ALT, klawisze skrótu są wyświetlane z opóźnieniem 200 milisekund. Umożliwia to opóźnienie skróty do wykonania, tak aby po naciśnięciu klawisza ALT nie zakłóca inne kombinacje, które obejmują klawisz ALT.
+Po włączeniu tej funkcji porady klawiszy są wyświetlane, gdy użytkownik naciśnie przycisk ALT lub F10. Gdy użytkownik naciśnie klawisz ALT, porady klawiszy są wyświetlane z opóźnieniem 200 milisekund. To opóźnienie umożliwia wykonywanie skrótów, tak aby naciśnięty klawisz ALT nie zakłócał innych kombinacji, które zawierają klawisz ALT.
 
-##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview
+##  <a name="enableprintpreview"></a>CMFCRibbonBar::EnablePrintPreview
 
-Włącza lub wyłącza **Podgląd wydruku** funkcji.
+Włącza lub wyłącza funkcję **Podgląd wydruku** .
 
 ```
 void EnablePrintPreview(BOOL bEnable = TRUE);
@@ -755,18 +755,18 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE powoduje włączenie **Podgląd wydruku** funkcji; Wartość FALSE, aby wyłączyć **Podgląd wydruku** funkcji.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć funkcję **Podgląd wydruku** ; Wartość FALSE powoduje wyłączenie funkcji **Podgląd wydruku** .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bWłączenie* jest wartość FAŁSZ i drukowania kategorii (wersja zapoznawcza) istnieje, zostanie usunięta.
+Jeśli *bEnable* ma wartość false i istnieje kategoria podglądu wydruku, zostanie usunięta.
 
-Domyślnie **Podgląd wydruku** funkcja jest włączona.
+Domyślnie funkcja **Podgląd wydruku** jest włączona.
 
-##  <a name="enabletooltips"></a>  CMFCRibbonBar::EnableToolTips
+##  <a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips
 
-Włącza lub wyłącza etykietki narzędzi i opisy opcjonalna etykietka narzędzia w pasku wstążki.
+Włącza lub wyłącza etykietki narzędzi i opcjonalne opisy etykietek narzędzi na pasku wstążki.
 
 ```
 void EnableToolTips(
@@ -776,19 +776,19 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE, aby włączyć etykietki narzędzi na pasku wstążki; Wartość FALSE umożliwia wyłączenie etykietki narzędzi w pasku wstążki.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć etykietki narzędzi na pasku wstążki; Wartość FALSE powoduje wyłączenie etykietek narzędzi na pasku wstążki.
 
 *bEnableDescr*<br/>
-[in] Wartość TRUE, aby włączyć opisów etykietka narzędzia na etykietkę narzędzia; Wartość FALSE, aby wyłączyć opis etykietki narzędzia w etykietce narzędzia.
+podczas Wartość TRUE, aby włączyć opisy etykietek narzędzi na etykietce narzędzia; Wartość FALSE powoduje wyłączenie opisów etykietek narzędzi w etykietce narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-*BWłączenie* parametr określa, czy etykietki narzędzi są wyświetlane, gdy wskaźnik myszy znajdzie się nad elementem wstążki. *BEnableDescr* parametr określa, czy dodatkowy tekst opisowy pojawia się tekst etykietki narzędzia.
+Parametr *bEnable* określa, czy etykietki narzędzi są wyświetlane, gdy wskaźnik myszy znajduje się nad elementem wstążki. Parametr *bEnableDescr* określa, czy dodatkowy tekst opisu pojawia się z tekstem etykietki narzędzia.
 
-##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData
+##  <a name="findbydata"></a>CMFCRibbonBar::FindByData
 
-Pobiera wskaźnik do elementu wstążki, jeśli ma on określonych danych i widoczności.
+Pobiera wskaźnik do elementu wstążki, jeśli ma określone dane i widoczność.
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -799,22 +799,22 @@ CMFCRibbonBaseElement* FindByData(
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-[in] Dane skojarzone z elementem wstążki.
+podczas Dane skojarzone z elementem wstążki.
 
 *bVisibleOnly*<br/>
-[in] Wartość TRUE, aby wyszukać tylko elementy widoczne dla wstążki Wartość FALSE, aby wyszukać wszystkie elementy wstążki.
+podczas TRUE, aby przeszukać tylko widoczne elementy wstążki; Wartość FALSE, aby przeszukać wszystkie elementy wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu wstążki, jeśli ma on określonych danych i widoczność; w przeciwnym razie wartość NULL.
+Wskaźnik do elementu wstążki, jeśli ma określone dane i widoczność; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Element wstążki jest żadnego formantu, który można dodać do wstążki, takich jak przycisk na Wstążce lub kategorii Wstążki lub suwaka wstążki.
+Element wstążki to każda kontrolka, którą można dodać do wstążki, na przykład przycisk wstążki lub kategoria wstążki lub suwak wstążki.
 
-##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID
+##  <a name="findbyid"></a>CMFCRibbonBar::FindByID
 
-Pobiera wskaźnik do elementu wstążki, który zawiera wartości Identyfikatora i wyszukiwanie określonego polecenia.
+Pobiera wskaźnik do elementu wstążki, który ma określony identyfikator polecenia i wartości wyszukiwania.
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -826,27 +826,27 @@ CMFCRibbonBaseElement* FindByID(
 ### <a name="parameters"></a>Parametry
 
 *uiCmdID*<br/>
-[in] Identyfikator polecenia dla elementu wstążki.
+podczas Identyfikator polecenia dla elementu wstążki.
 
 *bVisibleOnly*<br/>
-[in] Wartość TRUE, aby wyszukać tylko elementy widoczne dla wstążki Wartość FALSE, aby wyszukać wszystkie elementy wstążki.
+podczas TRUE, aby przeszukać tylko widoczne elementy wstążki; Wartość FALSE, aby przeszukać wszystkie elementy wstążki.
 
 *bExcludeQAT*<br/>
-[in] Wartość TRUE, aby wykluczyć elementy paska narzędzi Szybki dostęp z wyszukiwania; w przeciwnym razie wartość FALSE.
+podczas PRAWDA, aby wykluczyć elementy paska narzędzi Szybki dostęp z poziomu wyszukiwania; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu wstążki, jeśli ma on wartości Identyfikatora i wyszukiwanie określonego polecenia; w przeciwnym razie wartość NULL.
+Wskaźnik do elementu wstążki, jeśli ma określony identyfikator polecenia i wartości wyszukiwania. w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Element wstążki jest żadnego formantu wstążki, który można dodać do wstążki, takich jak przycisk na Wstążce lub kategorii Wstążki lub suwaka wstążki.
+Element wstążki jest dowolną kontrolką wstążki, którą można dodać do wstążki, na przykład przycisku wstążki lub kategorii wstążki lub suwaka wstążki.
 
-Ogólnie rzecz biorąc może istnieć więcej niż jeden element wstążki, który ma ten sam identyfikator polecenia. Jeśli chcesz uzyskać wskaźniki do wszystkich elementów wstążki, które polecenie o określonym identyfikatorze, należy użyć [CMFCRibbonBar::GetElementsByID](#getelementsbyid) metody.
+Ogólnie rzecz biorąc może istnieć więcej niż jeden element wstążki, który ma ten sam identyfikator polecenia. Jeśli chcesz uzyskać wskaźniki do wszystkich elementów wstążki, które używają określonego identyfikatora polecenia, użyj metody [CMFCRibbonBar:: GetElementsByID](#getelementsbyid) .
 
-##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData
+##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindCategoryIndexByData
 
-Pobiera indeks kategorii wstążki, która zawiera określone dane.
+Pobiera indeks kategorii wstążki zawierającej określone dane.
 
 ```
 int FindCategoryIndexByData(DWORD dwData) const;
@@ -855,15 +855,15 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-[in] Dane skojarzone z kategorii wstążki.
+podczas Dane skojarzone z kategorią wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks kategoria wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość-1.
+Indeks (liczony od zera) kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie-1.
 
-##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout
+##  <a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout
 
-Dostosowuje układ wszystkie elementy na Wstążce i okno nadrzędne i ponownie rysuje całe okno.
+Dostosowuje układ wszystkich elementów na pasku wstążki i w oknie nadrzędnym i ponownie rysuje całe okno.
 
 ```
 void ForceRecalcLayout();
@@ -871,9 +871,9 @@ void ForceRecalcLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory
+##  <a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory
 
-Pobiera wskaźnik do kategorii active wstążki.
+Pobiera wskaźnik do aktywnej kategorii wstążki.
 
 ```
 CMFCRibbonCategory* GetActiveCategory() const;
@@ -881,15 +881,15 @@ CMFCRibbonCategory* GetActiveCategory() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kategorii wstążki active; lub wartość NULL, jeśli brak kategorii jest aktywny.
+Wskaźnik do aktywnej kategorii wstążki; lub wartość NULL, jeśli żadna Kategoria nie jest aktywna.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria jest aktywny, jeśli ma ona fokus. Domyślnie aktywnej kategorii jest pierwszej kategorii po lewej stronie paska wstążki.
+Kategoria jest aktywna, jeśli ma fokus. Domyślnie aktywna kategoria jest pierwszą kategorią znajdującą się po lewej stronie paska wstążki.
 
-Kategoria głównego jest wyświetlane, gdy użytkownik naciśnie przycisk aplikacji i nie może być aktywne kategorii.
+Kategoria główna jest wyświetlana, gdy użytkownik naciśnie przycisk aplikacji i nie może być aktywną kategorią.
 
-##  <a name="getapplicationbutton"></a>  CMFCRibbonBar::GetApplicationButton
+##  <a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton
 
 Pobiera wskaźnik do przycisku aplikacji.
 
@@ -899,11 +899,11 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do przycisku aplikacji; lub wartość NULL, jeśli nie ustawiono przycisku.
+Wskaźnik do przycisku aplikacji; lub wartość NULL, jeśli przycisk nie został ustawiony.
 
-##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight
 
-Pobiera wysokość obszaru podpis dla paska wstążki.
+Pobiera wysokość obszaru podpisu dla paska wstążki.
 
 ```
 int GetCaptionHeight() const;
@@ -911,11 +911,11 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość w pikselach, podpis obszar paska wstążki.
+Wysokość (w pikselach) obszaru podpisu dla paska wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory
+##  <a name="getcategory"></a>CMFCRibbonBar:: GetCategory
 
 Pobiera wskaźnik do kategorii wstążki pod określonym indeksem.
 
@@ -926,15 +926,15 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Liczony od zera indeks kategorii wstążki liście kategorii wstążki, która znajduje się w pasku wstążki.
+podczas Indeks (liczony od zera) kategorii wstążki na liście kategorii wstążki, które znajdują się na pasku wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kategorii wstążki pod określonym indeksem; w przeciwnym razie wartość NULL, jeśli *nIndex* jest poza zakresem.
+Wskaźnik do kategorii wstążki o określonym indeksie; w przeciwnym razie wartość NULL, jeśli *nIndex* jest poza zakresem.
 
-##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount
+##  <a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount
 
-Pobiera liczbę kategorii wstążki w pasku wstążki.
+Pobiera liczbę kategorii wstążki na pasku wstążki.
 
 ```
 int GetCategoryCount() const;
@@ -942,11 +942,11 @@ int GetCategoryCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba kategorii wstążki w pasku wstążki.
+Liczba kategorii wstążki na pasku wstążki.
 
-##  <a name="getcategoryheight"></a>  CMFCRibbonBar::GetCategoryHeight
+##  <a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight
 
-Pobiera wysokość tej kategorii.
+Pobiera wysokość kategorii.
 
 ```
 int GetCategoryHeight() const;
@@ -954,15 +954,15 @@ int GetCategoryHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość tej kategorii.
+Wysokość kategorii.
 
 ### <a name="remarks"></a>Uwagi
 
-Wysokość kategoria obejmuje wysokość na karcie kategorii.
+Wysokość kategorii obejmuje wysokość karty Kategoria.
 
-##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex
+##  <a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex
 
-Pobiera indeks określoną kategorię.
+Pobiera indeks określonej kategorii wstążki.
 
 ```
 int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
@@ -971,15 +971,15 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ### <a name="parameters"></a>Parametry
 
 *pCategory*<br/>
-[in] Wskaźnik do kategorii wstążki.
+podczas Wskaźnik do kategorii wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks określony przez kategorii wstążki *pCategory*; lub wartość -1, jeśli nie zostanie znaleziony kategoria wstążki.
+Indeks (liczony od zera) kategorii wstążki określony przez *pCategory*; lub-1, jeśli nie można odnaleźć kategorii wstążki.
 
-##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName
+##  <a name="getcontextname"></a>CMFCRibbonBar:: getcontextname
 
-Pobiera nazwę podpisu kategoria kontekstu określonego przez identyfikator kontekstu.
+Pobiera nazwę podpisu kategorii kontekstu określonego przez identyfikator kontekstu.
 
 ```
 BOOL GetContextName(
@@ -990,18 +990,18 @@ BOOL GetContextName(
 ### <a name="parameters"></a>Parametry
 
 *uiContextID*<br/>
-[in] Identyfikator kontekstu kategorii wstążki
+podczas Identyfikator kontekstu kategorii wstążki.
 
 *strName*<br/>
-[out] Nazwa kontekstu podpis kategorii.
+określoną Nazwa etykiety kategorii kontekstowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE, jeśli *uiContextID* został zero lub nie można odnaleźć podpisu kategoria kontekstu.
+Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość FALSE, jeśli *uiContextID* była zerowa lub nie znaleziono podpisu kategorii kontekstowej.
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown
+##  <a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown
 
-Pobiera element wstążki, który jest aktualnie rozwijana.
+Pobiera element wstążki, który jest obecnie usunięty.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -1009,13 +1009,13 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element wstążki, który jest aktualnie rozwinął; lub wartość NULL, jeśli żaden element wstążki jest obecnie rozwijana.
+Element wstążki, który jest obecnie usunięty. lub wartość NULL, jeśli żaden element wstążki nie jest obecnie upuszczony.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getelementsbyid"></a>  CMFCRibbonBar::GetElementsByID
+##  <a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsByID
 
-Pobiera tablicę wskaźników do wszystkich elementów wstążki, które mają identyfikator określonego polecenia.
+Pobiera tablicę wskaźników do wszystkich elementów wstążki z określonym IDENTYFIKATORem polecenia.
 
 ```
 void GetElementsByID(
@@ -1026,18 +1026,18 @@ void GetElementsByID(
 ### <a name="parameters"></a>Parametry
 
 *uiCmdID*<br/>
-[in] Identyfikator polecenia elementu wstążki.
+podczas Identyfikator polecenia elementu wstążki.
 
 *arButtons*<br/>
-[out] Tablica wskaźników do elementów wstążki.
+określoną Tablica wskaźników do elementów wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Wiele elementów wstążki może mieć tego samego Identyfikatora polecenia, ponieważ niektóre elementy Wstążki można skopiować do paska narzędzi Szybki dostęp.
+Wiele elementów wstążki może mieć ten sam identyfikator polecenia, ponieważ niektóre elementy wstążki można skopiować do paska narzędzi Szybki dostęp.
 
-##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags
+##  <a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags
 
-Pobranie flagi, które wskazują, jaka część paska wstążki jest widoczna.
+Pobiera flagi wskazujące, jaka część paska wstążki jest widoczna.
 
 ```
 DWORD GetHideFlags() const;
@@ -1045,20 +1045,20 @@ DWORD GetHideFlags() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Flagi, które wskazują, jaka część paska wstążki jest widoczna.
+Flagi wskazujące, jaka część paska wstążki jest widoczna.
 
 ### <a name="remarks"></a>Uwagi
 
-Poniższa tabela zawiera listę możliwych kombinacji flag dla zwróconej wartości:
+Poniższa tabela zawiera listę możliwych kombinacji flag dla zwracanej wartości:
 
 |||
 |-|-|
-|AFX_RIBBONBAR_HIDE_ELEMENTS|Na wstążce jest zminimalizowany w pionie i widoczne są tylko karty kategorii, głównego przycisku i paska narzędzi Szybki dostęp.  |
-|AFX_RIBBONBAR_HIDE_ALL|Szerokość paska wstążki jest mniejsza niż minimalna szerokość i jest całkowicie ukryte.  |
+|AFX_RIBBONBAR_HIDE_ELEMENTS|Pasek wstążki jest zminimalizowany w pionie i widoczne są tylko karty kategorii, przycisk główny i pasek narzędzi Szybki dostęp.  |
+|AFX_RIBBONBAR_HIDE_ALL|Szerokość paska wstążki jest mniejsza niż minimalna szerokość i jest całkowicie ukryta.  |
 
-##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList
+##  <a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList
 
-Pobiera identyfikatory poleceń dla określonej kolekcji elementów wstążki w pasku wstążki.
+Pobiera identyfikatory poleceń dla określonej kolekcji elementów wstążki na pasku wstążki.
 
 ```
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
@@ -1068,16 +1068,16 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ### <a name="parameters"></a>Parametry
 
 *lstItems*<br/>
-[out] Lista identyfikatorów poleceń dla elementów wstążki, które są zawarte w pasku wstążki.
+określoną Lista identyfikatorów poleceń dla elementów wstążki, które znajdują się na pasku wstążki.
 
 *bHiddenOnly*<br/>
-[in] Wartość TRUE, aby wykluczyć elementy wstążki, które są wyświetlane; Wartość FALSE, aby uwzględnić wszystkie elementy wstążki w pasku wstążki.
+podczas Wartość TRUE powoduje wykluczenie elementów wstążki, które są wyświetlane; Wartość FALSE, aby uwzględnić wszystkie elementy wstążki na pasku wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getkeyboardnavigationlevel"></a>  CMFCRibbonBar::GetKeyboardNavigationLevel
+##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel
 
-Pobiera bieżący poziom nawigacji, gdy użytkownik naciśnie wskazówki, które znajdują się w pasku wstążki.
+Pobiera bieżący poziom nawigacji, gdy użytkownik naciśnie wskazówki klawiszy, które są zawarte na pasku wstążki.
 
 ```
 int GetKeyboardNavigationLevel() const;
@@ -1085,19 +1085,19 @@ int GetKeyboardNavigationLevel() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżący poziom nawigacji jako użytkownik naciska wskazówki, które znajdują się w pasku wstążki. Poniższa tabela zawiera listę możliwych wartości zwracanych:
+Bieżący poziom nawigacji, gdy użytkownik naciska porady klawiszy, które są zawarte na pasku wstążki. Poniższa tabela zawiera listę możliwych wartości zwracanych:
 
 |||
 |-|-|
-|-1|Porady dotyczące klawiszy nie są wyświetlane.|
-|0|Porady dotyczące klawiszy są wyświetlane.|
-|1|Użytkownik nacisnął wyświetlanych poradę dotyczącą klawiszy.|
+|-1|Podpowiedzi nie są wyświetlane.|
+|0|Wyświetlane są porady dotyczące wyświetlania.|
+|1|Użytkownik nacisnął wyświetlone poradę dotyczącą klawiszy.|
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getkeyboardnavlevelcurrent"></a>  CMFCRibbonBar::GetKeyboardNavLevelCurrent
+##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent
 
-Pobiera bieżący obiekt nawigacji klawiatury na pasku wstążki.
+Pobiera bieżący obiekt nawigacyjny klawiatury na pasku wstążki.
 
 ```
 CObject* GetKeyboardNavLevelCurrent() const;
@@ -1105,15 +1105,15 @@ CObject* GetKeyboardNavLevelCurrent() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżący obiekt nawigacji klawiatury na pasku wstążki; w przeciwnym razie wartość NULL, jeśli żaden obiekt nie jest aktualnie wyświetlany wskazówki.
+Bieżący obiekt nawigacyjny klawiatury na pasku wstążki; w przeciwnym razie wartość NULL, jeśli żaden obiekt aktualnie nie wyświetla etykietek.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt, który jest aktualnie wyświetlany wskazówki jest bieżący obiekt nawigacji klawiatury.
+Obiekt, który aktualnie wyświetla wskazówki klawiaturowe jest bieżącym obiektem nawigacyjnym klawiatury.
 
-##  <a name="getkeyboardnavlevelparent"></a>  CMFCRibbonBar::GetKeyboardNavLevelParent
+##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent
 
-Pobiera obiekt nadrzędny klawiatury nawigacji w pasku wstążki.
+Pobiera nadrzędny obiekt nawigacyjny klawiatury na pasku wstążki.
 
 ```
 CObject* GetKeyboardNavLevelParent() const;
@@ -1121,15 +1121,15 @@ CObject* GetKeyboardNavLevelParent() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt nadrzędny klawiatury nawigacji w pasku wstążki; w przeciwnym razie wartość NULL.
+Nadrzędny obiekt nawigacyjny klawiatury na pasku wstążki; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik naciśnie poradę dotyczącą klawiszy w pasku wstążki, bieżący obiekt nawigacji klawiatury staje się obiektem nadrzędnym klawiatury nawigacji.
+Gdy użytkownik naciśnie poradę dotyczącą klawiszy na pasku wstążki, bieżący obiekt nawigacji klawiaturą zostanie obiektem nawigacyjnym klawiatury nadrzędnej.
 
-##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory
+##  <a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory
 
-Pobiera wskaźnik do kategorii główne wstążki.
+Pobiera wskaźnik do głównej kategorii wstążki.
 
 ```
 CMFCRibbonCategory* GetMainCategory() const;
@@ -1137,15 +1137,15 @@ CMFCRibbonCategory* GetMainCategory() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kategorii główne wstążki.
+Wskaźnik do głównej kategorii wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria główne wstążki zawiera panelu głównego wstążki.
+Główna Kategoria wstążki zawiera główny panel wstążki.
 
-##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation
+##  <a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocation
 
-Pobiera prostokąta wyświetlania poleceń części paska narzędzi Szybki dostęp.
+Pobiera prostokąt wyświetlania dla sekcji Commands paska narzędzi Szybki dostęp.
 
 ```
 CRect GetQATCommandsLocation() const;
@@ -1153,15 +1153,15 @@ CRect GetQATCommandsLocation() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Prostokąt wyświetlania dla polecenia części paska narzędzi Szybki dostęp.
+Prostokąt wyświetlania dla sekcji Commands paska narzędzi Szybki dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
-Polecenia części prostokątny obszar wyświetlania nie ma przycisku dostosowywania.
+Sekcja Commands prostokąta wyświetlania nie zawiera przycisku dostosowywania.
 
-##  <a name="getqatdroppeddown"></a>  CMFCRibbonBar::GetQATDroppedDown
+##  <a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATDroppedDown
 
-Pobiera wskaźnik do elementu wstążki, na pasku narzędzi Szybki dostęp, z jego menu podręcznym rozwinął.
+Pobiera wskaźnik do elementu wstążki na pasku narzędzi Szybki dostęp, który został usunięty z menu podręcznego.
 
 ```
 CMFCRibbonBaseElement* GetQATDroppedDown();
@@ -1169,13 +1169,13 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu wstążki na pasek narzędzi Szybki dostęp, który ma menu podręczne rozwinął.
+Wskaźnik do elementu wstążki na pasku narzędzi Szybki dostęp, który został usunięty z menu podręcznego.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getquickaccesscommands"></a>  CMFCRibbonBar::GetQuickAccessCommands
+##  <a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands
 
-Pobiera listę identyfikatorów poleceń elementów wstążki, na pasku narzędzi Szybki dostęp.
+Pobiera listę identyfikatorów poleceń dla elementów wstążki na pasku narzędzi Szybki dostęp.
 
 ```
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
@@ -1184,15 +1184,15 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="parameters"></a>Parametry
 
 *lstCommands*<br/>
-[out] Lista identyfikatorów poleceń elementów wstążki, na pasku narzędzi Szybki dostęp.
+określoną Lista identyfikatorów poleceń dla elementów wstążki na pasku narzędzi Szybki dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
-Lista nie zawiera elementów wstążki, które są separatory kontroli.
+Lista nie zawiera elementów wstążki, które są separatorami formantów.
 
-##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation
+##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocation
 
-Pobiera prostokątny obszar wyświetlania paska narzędzi Szybki dostęp.
+Pobiera prostokąt wyświetlania dla paska narzędzi Szybki dostęp.
 
 ```
 CRect GetQuickAccessToolbarLocation() const;
@@ -1200,13 +1200,13 @@ CRect GetQuickAccessToolbarLocation() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyświetlanie prostokąta paska narzędzi Szybki dostęp.
+Prostokąt wyświetlania paska narzędzi Szybki dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio
+##  <a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio
 
-Pobiera procentowy rozmiar zmniejszenie szerokość ekranu karty kategorii.
+Pobiera wartość procentową zmniejszenia rozmiaru w polu Szerokość ekranu kart kategorii.
 
 ```
 int GetTabTrancateRatio() const;
@@ -1214,15 +1214,15 @@ int GetTabTrancateRatio() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Procent rozmiaru zmniejszenie szerokość ekranu kart kategorii.
+Zmniejszenie rozmiaru procentu w polu Szerokość ekranu kart kategorii.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria karty zostały zredukowane szerokości, gdy nie jest wystarczająco dużo szerokość paska wstążki.
+Karty kategorii mają obniżoną szerokość, gdy na pasku wstążki nie ma wystarczającej szerokości.
 
-##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage
+##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage
 
-Pobiera rozmiar szerokość etykietka narzędzia paska wstążki.
+Pobiera duży rozmiar szerokości etykietki narzędzia na pasku wstążki.
 
 ```
 int GetTooltipFixedWidthLargeImage() const;
@@ -1230,15 +1230,15 @@ int GetTooltipFixedWidthLargeImage() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Duży rozmiar etykietki narzędzia szerokość w pikselach.
+Duży rozmiar szerokości etykietki narzędzia (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar szerokość etykietki narzędzia ma wartość 0, różni się szerokość.
+W przypadku dużego rozmiaru etykietki narzędzia Szerokość jest równa 0.
 
-##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular
+##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedWidthRegular
 
-Pobiera informacje o regularnych rozmiarze szerokość etykietka narzędzia paska wstążki.
+Pobiera regularny rozmiar szerokości etykietki narzędzia na pasku wstążki.
 
 ```
 int GetTooltipFixedWidthRegular() const;
@@ -1246,15 +1246,15 @@ int GetTooltipFixedWidthRegular() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Regularne rozmiar etykietki narzędzia szerokość w pikselach.
+Regularny rozmiar szerokości etykietki narzędzia (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zwykłego rozmiaru szerokości etykietki narzędzia ma wartość 0, różni się szerokość.
+W przypadku normalnego rozmiaru etykietki narzędzia Szerokość jest równa 0.
 
-##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount
+##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount
 
-Pobiera liczbę widocznych kategorii w pasku wstążki.
+Pobiera liczbę widocznych kategorii na pasku wstążki.
 
 ```
 int GetVisibleCategoryCount() const;
@@ -1262,13 +1262,13 @@ int GetVisibleCategoryCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba widocznych kategorie w pasku wstążki.
+Liczba widocznych kategorii na pasku wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hideallcontextcategories"></a>  CMFCRibbonBar::HideAllContextCategories
+##  <a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories
 
-Ukrywa wszystkie kategorie kontekstu w pasku wstążki.
+Ukrywa wszystkie kategorie kontekstowe na pasku wstążki.
 
 ```
 BOOL HideAllContextCategories();
@@ -1276,15 +1276,15 @@ BOOL HideAllContextCategories();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli co najmniej jednym kontekście kategorii został ukryty; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli co najmniej jedna kategoria kontekstu była ukryta; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kategoria kontekstu jest aktywna, aktywnej kategorii jest resetowany do pierwszej kategorii widoczne na liście kategorii.
+Jeśli kategoria kontekstowa jest aktywna, aktywna kategoria jest resetowana do pierwszej widocznej kategorii na liście kategorii.
 
-##  <a name="hidekeytips"></a>  CMFCRibbonBar::HideKeyTips
+##  <a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips
 
-Ukrywa wszystkie wskazówki w pasku wstążki.
+Ukrywa wszystkie podpowiedzi na pasku wstążki.
 
 ```
 void HideKeyTips();
@@ -1292,9 +1292,9 @@ void HideKeyTips();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hittest"></a>  CMFCRibbonBar::HitTest
+##  <a name="hittest"></a>CMFCRibbonBar::HitTest
 
-Pobiera wskaźnik do elementu wstążki, określone przez lokalizację punktu.
+Pobiera wskaźnik do elementu wstążki określonego przez lokalizację punktu.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1305,26 +1305,26 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Lokalizacja punktu we współrzędnych paska wstążki.
+*moment*<br/>
+podczas Położenie punktu na pasku wstążki współrzędne.
 
 *bCheckActiveCategory*<br/>
-[in] Wartość TRUE, aby wyszukać aktywnej kategorii; FALSE nie nastąpiło wyszukiwanie aktywnej kategorii.
+podczas Wartość TRUE, aby przeszukać aktywną kategorię; Wartość FALSE, aby przeszukać aktywną kategorię.
 
 *bCheckPanelCaption*<br/>
-[in] Wartość TRUE, aby przetestować podpis panelu wstążki z punktem znajduje się w nim; FALSE, aby nie na potrzeby testów punkt znajduje się w nim podpis panelu wstążki. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+podczas Wartość TRUE umożliwia przetestowanie podpisu panelu wstążki przy użyciu punktu znajdującego się w nim. Wartość FALSE nie umożliwia przetestowania podpisu panelu wstążki z punktem znajdującym się w nim. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu ribbon znajdujące się w określonym punkcie; w przeciwnym razie wartość NULL, jeśli nie znajduje się punkt w elemencie wstążki.
+Wskaźnik do elementu wstążki znajdującego się w określonym punkcie; w przeciwnym razie wartość NULL, jeśli punkt nie znajduje się w elemencie wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Podpis panelu wstążki, gdy punkt znajduje się w nim nie jest testowany, chyba że *bCheckActiveCategory* parametr ma wartość TRUE.
+Podpis panelu wstążki z punktem znajdującym się w nim nie jest testowany, chyba że parametr *bCheckActiveCategory* ma wartość true.
 
-##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled
+##  <a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled
 
-Wskazuje, czy jest włączona funkcja wskazówki.
+Wskazuje, czy funkcja etykietek jest włączona.
 
 ```
 BOOL IsKeyTipEnabled() const;
@@ -1332,11 +1332,11 @@ BOOL IsKeyTipEnabled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli jest włączona funkcja wskazówki; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli funkcja etykietki jest włączona; w przeciwnym razie FALSE.
 
-##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar
+##  <a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar
 
-Wskazuje, czy na wstążce paska wstążki podstawowego.
+Wskazuje, czy pasek wstążki jest podstawowym paskiem wstążki.
 
 ```
 virtual BOOL IsMainRibbonBar() const;
@@ -1344,15 +1344,15 @@ virtual BOOL IsMainRibbonBar() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość PRAWDA.
+Zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda zawsze zwraca wartość TRUE. Zastępuje tę metodę, aby wskazać, czy pasek wstążki paska wstążki podstawowego.
+Domyślnie ta metoda zawsze zwraca wartość TRUE. Zastąp tę metodę, aby wskazać, czy pasek wstążki jest podstawowym paskiem wstążki.
 
-##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled
+##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewEnabled
 
-Wskazuje, czy **Podgląd wydruku** funkcja jest włączona.
+Wskazuje, czy funkcja **Podgląd wydruku** jest włączona.
 
 ```
 BOOL IsPrintPreviewEnabled() const;
@@ -1360,9 +1360,9 @@ BOOL IsPrintPreviewEnabled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli **Podgląd wydruku** funkcja jest włączone; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli funkcja **Podgląd wydruku** jest włączona. w przeciwnym razie FALSE.
 
-##  <a name="isqatempty"></a>  CMFCRibbonBar::IsQATEmpty
+##  <a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty
 
 Wskazuje, czy pasek narzędzi Szybki dostęp zawiera przyciski poleceń.
 
@@ -1372,13 +1372,13 @@ BOOL IsQATEmpty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pasek narzędzi Szybki dostęp zawiera przyciski poleceń; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli pasek narzędzi Szybki dostęp zawiera przyciski poleceń; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop
+##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop
 
-Wskazuje, czy pasek narzędzi Szybki dostęp znajduje się powyżej lub poniżej paska wstążki.
+Wskazuje, czy pasek narzędzi Szybki dostęp znajduje się w przedziale lub na pasku wstążki.
 
 ```
 BOOL IsQuickAccessToolbarOnTop() const;
@@ -1386,11 +1386,11 @@ BOOL IsQuickAccessToolbarOnTop() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli za pośrednictwem paska wstążki; znajduje się pasek narzędzi Szybki dostęp Wartość FALSE, jeśli pasek narzędzi Szybki dostęp znajduje się w obszarze paska wstążki.
+PRAWDA, jeśli pasek narzędzi Szybki dostęp znajduje się na pasku wstążki; FAŁSZ, jeśli pasek narzędzi Szybki dostęp znajduje się na pasku wstążki.
 
-##  <a name="isreplaceframecaption"></a>  CMFCRibbonBar::IsReplaceFrameCaption
+##  <a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption
 
-Wskazuje, czy pasek wstążki zastępuje lub podlega podpis ramką głównego okna.
+Wskazuje, czy pasek wstążki został zamieniony na podpis okna głównego ramki.
 
 ```
 BOOL IsReplaceFrameCaption() const;
@@ -1398,11 +1398,11 @@ BOOL IsReplaceFrameCaption() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pasek wstążki zastępuje podpis ramką głównego okna; Wartość FALSE, jeśli pasek wstążki podlega podpis ramką głównego okna.
+Ma wartość TRUE, jeśli pasek wstążki zastępuje podpis głównego okna ramki; FAŁSZ, jeśli pasek wstążki znajduje się w podpisie głównego okna ramki.
 
-##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder
+##  <a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder
 
-Wskazuje, czy grupy przycisk znajdujący się w pasku wstążki wyświetlane obramowania grupy.
+Wskazuje, czy grupy przycisków znajdujące się na pasku wstążki wyświetlają obramowanie grupy.
 
 ```
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
@@ -1411,7 +1411,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ### <a name="parameters"></a>Parametry
 
 *pGroup*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1419,9 +1419,9 @@ Zawsze zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda zawsze zwraca wartość FALSE. Zastępuje tę metodę, aby wskazać, czy grupy przycisk znajdujący się w pasku wstążki są wyświetlane obramowania grupy.
+Domyślnie ta metoda zawsze zwraca wartość FALSE. Zastąp tę metodę, aby wskazać, czy grupy przycisków znajdujące się na pasku wstążki mają wyświetlać obramowanie grupy.
 
-##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled
+##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrEnabled
 
 Wskazuje, czy opisy etykietki narzędzi są włączone.
 
@@ -1431,15 +1431,15 @@ BOOL IsToolTipDescrEnabled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli opisy etykietki narzędzi są włączone; Wartość FALSE, jeśli opisy etykietki narzędzi są wyłączone.
+PRAWDA, jeśli są włączone opisy etykietki narzędzia; FAŁSZ, jeśli opisy etykietki narzędzi są wyłączone.
 
 ### <a name="remarks"></a>Uwagi
 
-Opisy etykietki narzędzi są dodatkowe tekst opisu wyświetlane z tekstem etykietki narzędzia.
+Opisy etykietek narzędzi to dodatkowy tekst opisowy wyświetlany wraz z tekstem etykietki narzędzia.
 
-##  <a name="istooltipenabled"></a>  CMFCRibbonBar::IsToolTipEnabled
+##  <a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled
 
-Wskazuje, czy etykietki narzędzi jest włączony / wyłączony dla paska wstążki.
+Wskazuje, czy na pasku wstążki są włączone lub wyłączone etykietki narzędzi.
 
 ```
 BOOL IsToolTipEnabled() const;
@@ -1447,11 +1447,11 @@ BOOL IsToolTipEnabled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli etykietki narzędzi są włączone; Wartość FALSE, jeśli etykietki narzędzi są wyłączone.
+PRAWDA, jeśli są włączone etykietki narzędzi; FAŁSZ, jeśli etykietki narzędzi są wyłączone.
 
-##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption
+##  <a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption
 
-Wskazuje, czy wyświetlana jest ustawiona dla interfejsu Windows Aero schemat kolorów.
+Wskazuje, czy ekran jest ustawiony na schemat kolorów systemu Windows Aero.
 
 ```
 BOOL IsTransparentCaption() const;
@@ -1459,13 +1459,13 @@ BOOL IsTransparentCaption() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli schemat kolorów jest Windows Aero; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli schemat kolorów to Windows Aero; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onclickbutton"></a>  CMFCRibbonBar::OnClickButton
+##  <a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton
 
-Ta metoda została zachowana na potrzeby zgodności z poprzednimi wersjami z istniejącymi aplikacjami i nie powinny być używane w przypadku nowych wdrożeń.
+Ta metoda jest zachowywana w celu zapewnienia zgodności z poprzednimi wersjami z istniejącymi aplikacjami i nie powinna być używana do tworzenia nowych rozwiązań.
 
 ```
 virtual void OnClickButton(
@@ -1476,14 +1476,14 @@ virtual void OnClickButton(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Wskaźnik na przycisku, który został kliknięty.
+podczas Wskaźnik na kliknięty przycisk.
 
-*Punkt*<br/>
-[in] Ten parametr nie jest używany.
+*moment*<br/>
+podczas Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
+##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu
 
 ```
 virtual void OnEditContextMenu(
@@ -1493,14 +1493,14 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pEdit*<br/>
-[in] *punktu*<br/>
+podczas *pEdit*<br/>
+podczas *punkt*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonBar::OnRTLChanged
+##  <a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLChanged
 
-Wywoływane przez platformę, gdy zmienia się układ kierunku.
+Wywoływane przez platformę, gdy układ zmieni kierunek.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1509,15 +1509,15 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="parameters"></a>Parametry
 
 *bIsRTL*<br/>
-[in] Wartość TRUE, jeśli układ od prawej do lewej; Wartość FALSE, jeśli układ od lewej do prawej.
+podczas PRAWDA, jeśli układ jest od prawej do lewej; FAŁSZ, jeśli układ jest od lewej do prawej.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda dostosowuje układu wszystkich kontrolek na Wstążce dla nowego kierunku układu.
+Ta metoda dostosowuje układ wszystkich kontrolek na pasku wstążki dla nowego kierunku układu.
 
-##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData
+##  <a name="onsetaccdata"></a>CMFCRibbonBar::OnSetAccData
 
-Ta metoda jest wewnętrzna struktura i nie jest przeznaczona do wywoływania z kodu użytkownika.
+Ta metoda jest wewnętrzna dla struktury i nie jest przeznaczona do wywoływania z kodu użytkownika.
 
 ```
 BOOL OnSetAccData(long lVal);
@@ -1525,15 +1525,15 @@ BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Parametry
 
-długi *lVal* indeks dostępnego obiektu.
+Long *lVal* indeks dostępnego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość FALSE lub S_FALSE.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wartość FALSE lub S_FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
+##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu
 
 ```
 virtual BOOL OnShowRibbonContextMenu(
@@ -1545,16 +1545,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
-[in] *x*<br/>
-[in] *y*<br/>
-[in] *pHit*<br/>
+podczas *pWnd*<br/>
+podczas *x*<br/>
+podczas *t*<br/>
+podczas *pHit*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
+##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1566,18 +1566,18 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
-[in] *x*<br/>
-[in] *y*<br/>
-[in] *pHit*<br/>
+podczas *pWnd*<br/>
+podczas *x*<br/>
+podczas *t*<br/>
+podczas *pHit*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown
+##  <a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown
 
-Wywoływane przez platformę, gdy użytkownik naciśnie klawisz F10 lub przechowuje naciśnięty klawisz ALT, a następnie naciska klawisz inny klucz.
+Wywoływane przez platformę, gdy użytkownik naciśnie klawisz F10 lub przytrzyma klawisz ALT, a następnie naciśnie inny klawisz.
 
 ```
 BOOL OnSysKeyDown(
@@ -1589,23 +1589,23 @@ BOOL OnSysKeyDown(
 ### <a name="parameters"></a>Parametry
 
 *pFrameWnd*<br/>
-[in] Wskaźnik do nadrzędnego okna głównej ramki paska wstążki.
+podczas Wskaźnik do okna nadrzędnego ramki głównej na pasku wstążki.
 
 *wParam*<br/>
-[in] Kod klawisza wirtualnego trwa naciśniętego klawisza.
+podczas Kod klucza wirtualnego naciśniętego klawisza.
 
 *lParam*<br/>
-[in] Flagi stanu klawiatury został naciśnięty klawisz.
+podczas Flagi stanu klawiatury po naciśnięciu klawisza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zdarzenie naciśnięcia klawisza zostało przetworzone; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli zostało przetworzone zdarzenie naciśnięcia klawisza; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp
+##  <a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp
 
-Wywoływane przez platformę, gdy użytkownik zwolni klawisz F10 klawisz ALT i klucz, który został naciśnięty gdy został wciśnięty klawisz ALT.
+Wywoływane przez platformę, gdy użytkownik zwolni klawisz F10, klawisz ALT lub klawisz, który został naciśnięty podczas ostatniego przetrzymywania klawisza ALT.
 
 ```
 BOOL OnSysKeyUp(
@@ -1617,23 +1617,23 @@ BOOL OnSysKeyUp(
 ### <a name="parameters"></a>Parametry
 
 *pFrameWnd*<br/>
-[in] Wskaźnik do nadrzędnego okna głównej ramki paska wstążki.
+podczas Wskaźnik do okna nadrzędnego ramki głównej na pasku wstążki.
 
 *wParam*<br/>
-[in] Wirtualne kod klawisza klawisz, który został wydany.
+podczas Kod klucza wirtualnego do zwolnienia.
 
 *lParam*<br/>
-[in] Ten parametr nie jest używany.
+podczas Ten parametr nie jest używany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zdarzenie naciśnięcia klawisza zostało przetworzone; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli zostało przetworzone zdarzenie naciśnięcia klawisza; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="poptooltip"></a>  CMFCRibbonBar::PopTooltip
+##  <a name="poptooltip"></a>CMFCRibbonBar::P opTooltip
 
-Usuwa etykietka narzędzia z widoku.
+Usuwa etykietkę narzędzia z widoku.
 
 ```
 void PopTooltip();
@@ -1641,9 +1641,9 @@ void PopTooltip();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="pretranslatemessage"></a>  CMFCRibbonBar::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCRibbonBar::P reTranslateMessage
 
-Określa, jeśli określony komunikat jest przetwarzany przez paska wstążki.
+Określa, czy określony komunikat jest przetwarzany przez pasek wstążki.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1652,17 +1652,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-[in] Wskaźnik do wiadomości.
+podczas Wskaźnik na komunikat.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli komunikat został przetworzony podczas paska wstążki; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli wiadomość została przetworzona przez pasek wstążki; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="recalclayout"></a>  CMFCRibbonBar::RecalcLayout
+##  <a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout
 
-Dostosowuje układ wszystkich kontrolek na Wstążce.
+Dostosowuje układ wszystkich kontrolek na pasku wstążki.
 
 ```
 virtual void RecalcLayout();
@@ -1670,11 +1670,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-Po dostosowaniu układ wyświetlanie paska wstążki jest aktualizowana.
+Po dostosowaniu układu wyświetlane jest wyświetlanie paska wstążki.
 
-##  <a name="removeallcategories"></a>  CMFCRibbonBar::RemoveAllCategories
+##  <a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories
 
-Usuwa wszystkie kategorie wstążki na Wstążce.
+Usuwa wszystkie kategorie wstążki z paska wstążki.
 
 ```
 void RemoveAllCategories();
@@ -1682,11 +1682,11 @@ void RemoveAllCategories();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa wszystkie kategorie wstążki z pamięci i na liście kategorii.
+Ta metoda usuwa wszystkie kategorie wstążki z pamięci i z listy kategorii.
 
-##  <a name="removeallfromtabs"></a>  CMFCRibbonBar::RemoveAllFromTabs
+##  <a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs
 
-Usuwa wszystkie elementy wstążki z wartości obszar karty.
+Usuwa wszystkie elementy wstążki z obszaru kart.
 
 ```
 void RemoveAllFromTabs();
@@ -1694,11 +1694,11 @@ void RemoveAllFromTabs();
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji, jeśli chcesz usunąć wszystkie elementy, które zostały dodane do obszaru karty przy użyciu [CMFCRibbonBar::AddToTabs](#addtotabs) metody.
+Użyj tej funkcji, jeśli chcesz usunąć wszystkie elementy dodane do obszaru kart za pomocą metody [CMFCRibbonBar:: AddToTabs](#addtotabs) .
 
-##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory
+##  <a name="removecategory"></a>CMFCRibbonBar::RemoveCategory
 
-Usuwa określoną kategorię na Wstążce.
+Usuwa określoną kategorię wstążki z paska wstążki.
 
 ```
 BOOL RemoveCategory(int nIndex);
@@ -1707,19 +1707,19 @@ BOOL RemoveCategory(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Liczony od zera indeks kategorii na liście kategorii wstążki znajduje się w pasku wstążki.
+podczas Indeks (liczony od zera) kategorii na liście kategorii wstążki, które znajdują się na pasku wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kategoria wstążki określona została usunięta; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli określona Kategoria wstążki została usunięta; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria określona wstążki jest usuwany z pamięci i na liście kategorii.
+Określona Kategoria wstążki jest usuwana z pamięci i z listy kategorii.
 
-##  <a name="setactivecategory"></a>  CMFCRibbonBar::SetActiveCategory
+##  <a name="setactivecategory"></a>CMFCRibbonBar::SetActiveCategory
 
-Ustawia określoną kategorię jako aktywnej kategorii.
+Ustawia określoną kategorię wstążki jako aktywną kategorię.
 
 ```
 BOOL SetActiveCategory(
@@ -1730,24 +1730,24 @@ BOOL SetActiveCategory(
 ### <a name="parameters"></a>Parametry
 
 *pCategory*<br/>
-[in] Kategoria wstążki, znajdujące się w pasku wstążki.
+podczas Kategoria wstążki, która znajduje się na pasku wstążki.
 
 *bForceRestore*<br/>
-[in] Wartość TRUE, aby zmaksymalizować paska wstążki, jeśli jest on zminimalizowany; Wartość FAŁSZ, aby wyświetlić aktywne kategorii w oknie podręcznym Jeśli pasek wstążki jest zminimalizowany.
+podczas PRAWDA, aby zmaksymalizować pasek wstążki, jeśli jest zminimalizowany; Wartość FALSE powoduje wyświetlenie aktywnej kategorii w oknie podręcznym, jeśli pasek wstążki jest zminimalizowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli określona kategoria została ustawiona jako aktywna kategorii; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli określona Kategoria została ustawiona jako aktywna Kategoria; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Kategoria wstążki głównego nie może być aktywne kategorii.
+Główna Kategoria wstążki nie może być aktywną kategorią.
 
-Jeśli kategoria określona przez *pCategory* jest niewidoczny, nie można ustawić jako aktywnej kategorii.
+Jeśli kategoria określona przez *pCategory* nie zostanie wyświetlona, nie można jej ustawić jako aktywnej kategorii.
 
-##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild
+##  <a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild
 
-Kojarzy przyciski system w pasku wstążki, które należą do okna podrzędnego interfejsu wielu dokumentów (MDI) na określone okno podrzędne MDI.
+Kojarzy przyciski systemowe na pasku wstążki należącym do okna podrzędnego interfejsu wielu dokumentów (MDI) do określonego okna podrzędnego MDI.
 
 ```
 void SetActiveMDIChild(CWnd* pWnd);
@@ -1756,13 +1756,13 @@ void SetActiveMDIChild(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Wskaźnik do okna podrzędnego MDI.
+podczas Wskaźnik do podrzędnego okna MDI.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setapplicationbutton"></a>  CMFCRibbonBar::SetApplicationButton
+##  <a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton
 
-Przycisk na Wstążce aplikacji są przypisywane do paska wstążki.
+Przypisuje przycisk wstążki aplikacji do paska wstążki.
 
 ```
 void SetApplicationButton(
@@ -1773,24 +1773,24 @@ void SetApplicationButton(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Wskaźnik do przycisk na Wstążce aplikacji.
+podczas Wskaźnik do przycisku wstążki aplikacji.
 
 *sizeButton*<br/>
-[in] Rozmiar przycisk na Wstążce aplikacji.
+podczas Rozmiar przycisku wstążki aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Przycisk na Wstążce aplikacji jest duży przycisk zaokrąglone znajduje się w lewym górnym rogu formantu wstążki.
+Przycisk wstążki aplikacji to duży zaokrąglony przycisk znajdujący się w lewym górnym rogu kontrolki wstążki.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetApplicationButton` method in Class metoda `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób używania metody `SetApplicationButton` w klasie `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]
 
-##  <a name="setelementkeys"></a>  CMFCRibbonBar::SetElementKeys
+##  <a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys
 
-Ustawia wskazówki dla wszystkich elementów wstążki, które mają identyfikator określonego polecenia.
+Ustawia porady dla wszystkich elementów wstążki, które mają określony identyfikator polecenia.
 
 ```
 BOOL SetElementKeys(
@@ -1802,25 +1802,25 @@ BOOL SetElementKeys(
 ### <a name="parameters"></a>Parametry
 
 *uiCmdID*<br/>
-[in] Identyfikator polecenia elementu wstążki.
+podczas Identyfikator polecenia elementu wstążki.
 
 *lpszKeys*<br/>
-[in] Poradę dotyczącą klawiszy.
+podczas Poradę dotyczącą klawiszy.
 
 *lpszMenuKeys*<br/>
-[in] Menu poradę dotyczącą klawiszy.
+podczas Menu poradę dotyczącą klawiszy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ustawiono wskazówki wstążki co najmniej jeden element; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli ustawiono etykietki dla co najmniej jednego elementu wstążki; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Opcjonalne menu poradę dotyczącą klawiszy dotyczy elementów wstążki przy użyciu przycisku podziału, w wyświetlonym menu podręcznym.
+Opcjonalne menu poradę dotyczącą klawiszy jest przeznaczone dla elementów wstążki z przyciskiem podziału otwierającym menu podręczne.
 
-##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel
+##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel
 
-Ustawia poziom nawigacji klawiatury, jako użytkownik naciska wskazówki, które znajdują się w pasku wstążki.
+Ustawia poziom nawigacji klawiatury, gdy użytkownik naciśnie wskazówki klawiszy, które są zawarte na pasku wstążki.
 
 ```
 void SetKeyboardNavigationLevel(
@@ -1831,18 +1831,18 @@ void SetKeyboardNavigationLevel(
 ### <a name="parameters"></a>Parametry
 
 *pLevel*<br/>
-[in] Wskaźnik do bieżącego obiektu nawigacji klawiatury.
+podczas Wskaźnik do bieżącego obiektu nawigacji klawiaturowej.
 
 *bSetFocus*<br/>
-[in] Wartość TRUE, aby ustawić fokus klawiatury do paska wstążki.
+podczas TRUE, aby ustawić fokus klawiatury na pasku wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Nawigowanie przy użyciu klawiatury paska wstążki, rozpoczyna się, gdy użytkownik naciśnie klawisz ALT lub F10. Użytkownik wybiera następny poziom nawigacji, naciskając klawisz poradę dotyczącą klawiszy w pasku wstążki. Użytkownik może zwrócić do poprzedniego poziomu nawigacji, naciskając klawisz ESC.
+Nawigacja po naciśnięciu klawisza ALT lub F10 na klawiaturze jest uruchamiana na pasku wstążki. Użytkownik wybiera następny poziom nawigacji, naciskając poradę dotyczącą klawiszy na pasku wstążki. Użytkownik może powrócić do poprzedniego poziomu nawigacji, naciskając klawisz Escape.
 
-##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode
+##  <a name="setmaximizemode"></a>CMFCRibbonBar:: setmaksymalizujmode
 
-Dopasowuje wstążce paska po rozmiar okna okna podrzędnego interfejsu wielu dokumentów (MDI) wprowadza lub pozostawia stan w trybie zmaksymalizowanym.
+Dostosowuje pasek wstążki, gdy rozmiar okna podrzędnego interfejsu wielu dokumentów (MDI) zostanie wprowadzony lub pozostawiony jako zmaksymalizowany.
 
 ```
 void SetMaximizeMode(
@@ -1853,16 +1853,16 @@ void SetMaximizeMode(
 ### <a name="parameters"></a>Parametry
 
 *bMax*<br/>
-[in] Wartość TRUE, aby wyświetlić przycisków systemowych dla okna podrzędnego MDI na Wstążce; Wartość FALSE, aby usunąć przycisków systemowych dla okna podrzędnego MDI na Wstążce.
+podczas TRUE, aby wyświetlić przyciski systemowe dla podrzędnego okna MDI na pasku wstążki; FALSE, aby usunąć przyciski systemowe dla okna podrzędnego MDI z paska wstążki.
 
 *pWnd*<br/>
-[in] Wskaźnik do ramki głównego okna do paska wstążki.
+podczas Wskaźnik do okna głównego ramki na pasku wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-Na Wstążce Wyświetla przycisków systemowych dla okna podrzędnego MDI w wierszu kart, gdy jest zmaksymalizowane okno podrzędne MDI.
+Pasek wstążki Wyświetla przyciski systemowe dla podrzędnego okna MDI w wierszu karty, gdy okno podrzędne MDI jest zmaksymalizowane.
 
-##  <a name="setquickaccesscommands"></a>  CMFCRibbonBar::SetQuickAccessCommands
+##  <a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands
 
 Dodaje jeden lub więcej elementów wstążki do paska narzędzi Szybki dostęp.
 
@@ -1875,20 +1875,20 @@ void SetQuickAccessCommands(
 ### <a name="parameters"></a>Parametry
 
 *lstCommands*<br/>
-[in] Listę poleceń, które mają być umieszczane w paska narzędzi Szybki dostęp.
+podczas Lista poleceń, które mają być umieszczone na pasku narzędzi Szybki dostęp.
 
 *bRecalcLayout*<br/>
-[in] Wartość TRUE, jeśli chcesz odświeżyć wstążki, po dodaniu elementów wstążki; Wartość FALSE w przeciwnym razie.
+podczas PRAWDA, jeśli chcesz ponownie narysować Wstążkę po dodaniu elementów wstążki; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetQuickAccessCommands` method in Class metoda `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób używania metody `SetQuickAccessCommands` w klasie `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]
 
-##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState
+##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::SetQuickAccessDefaultState
 
-Ustawia paska narzędzi Szybki dostęp do stanu domyślnego.
+Ustawia pasek narzędzi Szybki dostęp do stanu domyślnego.
 
 ```
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
@@ -1896,22 +1896,22 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 ### <a name="parameters"></a>Parametry
 
-*state*<br/>
-[in] Domyślny stan paska narzędzi Szybki dostęp.
+*Państwu*<br/>
+podczas Domyślny stan paska narzędzi Szybki dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
-Stan paska narzędzi szybkiego dostępu zawiera listę poleceń i ich widoczności.
+Stan paska narzędzi Szybki dostęp obejmuje listę poleceń i ich widoczność.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetQuickAccessDefaultState` method in Class metoda `CMFCRibbonBar` klasy.
+Poniższy przykład ilustruje sposób używania metody `SetQuickAccessDefaultState` w klasie `CMFCRibbonBar`.
 
 [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]
 
-##  <a name="setquickaccesstoolbarontop"></a>  CMFCRibbonBar::SetQuickAccessToolbarOnTop
+##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop
 
-Określa położenie paska narzędzi Szybki dostęp powyżej lub poniżej paska wstążki.
+Umieszcza pasek narzędzi Szybki dostęp powyżej lub poniżej paska wstążki.
 
 ```
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
@@ -1920,11 +1920,11 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ### <a name="parameters"></a>Parametry
 
 *bOnTop*<br/>
-[in] Wartość true, położenie paska narzędzi Szybki dostęp nad paskiem wstążki. Wartość FALSE, aby ustalić położenie paska narzędzi Szybki dostęp, poniżej paska wstążki.
+podczas PRAWDA, aby umieścić pasek narzędzi Szybki dostęp powyżej paska wstążki; Wartość FALSE, aby umieścić pasek narzędzi Szybki dostęp poniżej paska wstążki.
 
-##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth
+##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth
 
-Ustawia regularnych, jak i dużych rozmiarach etykietki narzędzia stałej szerokości paska wstążki.
+Ustawia stałe i duże rozmiary etykietki narzędzia dla paska wstążki.
 
 ```
 void SetTooltipFixedWidth(
@@ -1935,18 +1935,18 @@ void SetTooltipFixedWidth(
 ### <a name="parameters"></a>Parametry
 
 *nWidthRegular*<br/>
-[in] Szerokość w pikselach, regularne ustalonej etykietki narzędzia wielkości.
+podczas Szerokość (w pikselach) zwykłej etykietki narzędzia o stałym rozmiarze.
 
 *nWidthLargeImage*<br/>
-[in] Szerokość w pikselach, duża stała o rozmiarze etykietki narzędzia.
+podczas Szerokość (w pikselach) o dużej etykietce narzędzia o stałym rozmiarze.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawienie parametru na wartość 0 powoduje, że odpowiednie szerokość będzie się różnić.
+Ustawienie parametru na 0 powoduje, że odpowiadająca szerokość jest różna.
 
-##  <a name="showcategory"></a>  CMFCRibbonBar::ShowCategory
+##  <a name="showcategory"></a>CMFCRibbonBar::ShowCategory
 
-Pokazuje lub ukrywa określoną kategorię.
+Pokazuje lub ukrywa określoną kategorię wstążki.
 
 ```
 void ShowCategory(
@@ -1957,14 +1957,14 @@ void ShowCategory(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Indeks kategorii wstążki.
+podczas Indeks kategorii wstążki.
 
 *bShow*<br/>
-[in] W przypadku opcji TRUE Pokaż kategorii wstążki; w przeciwnym razie ukryć kategoria wstążki.
+podczas W przypadku wartości TRUE Pokaż kategorię wstążki; w przeciwnym razie Ukryj kategorię wstążki.
 
-##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories
+##  <a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategories
 
-Pokazuje lub ukrywa kategorie kontekstu, które mają określonego identyfikatora.
+Pokazuje lub ukrywa kategorie kontekstowe o określonym IDENTYFIKATORze.
 
 ```
 void ShowContextCategories(
@@ -1975,14 +1975,14 @@ void ShowContextCategories(
 ### <a name="parameters"></a>Parametry
 
 *uiContextID*<br/>
-[in] Identyfikator kontekstu kategorii.
+podczas Identyfikator kategorii kontekstu.
 
 *bShow*<br/>
-[in] W przypadku opcji TRUE pokazać kategorie, które mają określony identyfikator; w przeciwnym razie ukryć kategorie, które mają określonego identyfikatora.
+podczas W przypadku wartości TRUE Pokaż kategorie o określonym IDENTYFIKATORze; w przeciwnym razie Ukryj kategorie o określonym IDENTYFIKATORze.
 
-##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips
+##  <a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips
 
-Zawiera wskazówki dla każdego elementu na wstążce paska wstążki.
+Pokazuje porady dla każdego elementu wstążki na pasku wstążki.
 
 ```
 void ShowKeyTips();
@@ -1990,9 +1990,9 @@ void ShowKeyTips();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="togglemimimizestate"></a>  CMFCRibbonBar::ToggleMimimizeState
+##  <a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState
 
-Włącza/wyłącza pasek wstążki między Stanami zminimalizowanymi i zmaksymalizowanymi.
+Przełącza pasek wstążki między Stanami zminimalizowanymi i zmaksymalizowanymi.
 
 ```
 void ToggleMimimizeState();
@@ -2000,13 +2000,13 @@ void ToggleMimimizeState();
 
 ### <a name="remarks"></a>Uwagi
 
-Podana przez Ciebie nazwa metody jest to znany problem.
+Błędna pisownia w nazwie metody jest znanym problemem.
 
-W stanie zminimalizowanym Wstążka formantu jest ukryta i tylko karty są wyświetlane. Gdy użytkownik kliknie kartę, formant Wstążka jest wyświetlany jako okno podręczne. Okno jest zamykane, gdy użytkownik kliknie przycisk lub wykonuje polecenie.
+W stanie zminimalizowanym kontrolka wstążki jest ukryta i wyświetlane są tylko karty. Gdy użytkownik kliknie kartę, kontrolka wstążki zostanie wyświetlona jako okno podręczne. Okno jest zamykane, gdy użytkownik kliknie się z dala lub wykonuje polecenie.
 
-##  <a name="translatechar"></a>  CMFCRibbonBar::TranslateChar
+##  <a name="translatechar"></a>CMFCRibbonBar::TranslateChar
 
-Określa, czy kod znaku określonej naciśnięcia klawisza jest przetwarzany przez paska wstążki.
+Określa, czy określony kod znaku naciśnięć klawiszy jest przetwarzany na pasku wstążki.
 
 ```
 virtual BOOL TranslateChar(UINT nChar);
@@ -2015,17 +2015,17 @@ virtual BOOL TranslateChar(UINT nChar);
 ### <a name="parameters"></a>Parametry
 
 *nChar*<br/>
-[in] Kod znaku klawisza użytkownika.
+podczas Kod znaku naciśnięcia klawisza użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kod znaku przetworzonego przez paska wstążki; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli kod znaku został przetworzony przez pasek wstążki; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wskazówki pozwala użytkownikom na przechodzenie na Wstążce za pomocą klawiatury.
+Funkcja porady klawiaturowe umożliwia użytkownikom nawigowanie po pasku wstążki przy użyciu klawiatury.
 
-##  <a name="getfocused"></a>  CMFCRibbonBar::GetFocused
+##  <a name="getfocused"></a>CMFCRibbonBar:: GetFocus
 
 Zwraca element z fokusem.
 
@@ -2035,13 +2035,13 @@ virtual CMFCRibbonBaseElement* GetFocused();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wąsko zdefiniowany element lub wartość NULL.
+Wskaźnik do elementu z fokusem lub wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look
+##  <a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look
 
-Wskazuje, czy wstążki zawiera Windows 7, Szukaj (mała aplikacja prostokątny przycisk).
+Wskazuje, czy wstążka ma wygląd systemu Windows 7 (mały prostokątny aplikacja).
 
 ```
 BOOL IsWindows7Look() const;
@@ -2049,11 +2049,11 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli Wstążka Windows 7, Szukaj; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli wstążka ma wygląd systemu Windows 7; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
+##  <a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource
 
 Przeciążone. Ładuje pasek wstążki z zasobów aplikacji.
 
@@ -2072,26 +2072,26 @@ virtual BOOL LoadFromResource(
 ### <a name="parameters"></a>Parametry
 
 *uiXMLResID*<br/>
-Określa zasób ciągu Identyfikatora XML z informacjami o paska wstążki.
+Określa identyfikator zasobu ciągu XML z informacjami o pasku wstążki.
 
 *lpszResType*<br/>
-Określa typ zasobu znajdującego się na *uiXMLResID*.
+Określa typ zasobu znajdującego się w *uiXMLResID*.
 
 *hInstance*<br/>
-Dojście do modułu, którego pliku wykonywalnego zawiera zasób. Jeśli *hInstance* ma wartość NULL, system ładuje zasobu z modułu, który został użyty do utworzenia bieżącego procesu.
+Dojście do modułu, którego plik wykonywalny zawiera zasób. Jeśli *HINSTANCE* ma wartość null, system ładuje zasób z modułu, który został użyty do utworzenia bieżącego procesu.
 
 *lpszXMLResID*<br/>
-Określa identyfikator zasobów (w postaci ciągu), z informacjami o paska wstążki.
+Określa identyfikator zasobu (w postaci ciągu) z informacjami o pasku wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pomyślnie obciążenia; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli ładowanie zakończyło się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="savetoxmlbuffer"></a>  CMFCRibbonBar::SaveToXMLBuffer
+##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer
 
-Zapisuje paska wstążki do buforu.
+Zapisuje pasek wstążki do buforu.
 
 ```
 UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
@@ -2100,17 +2100,17 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ### <a name="parameters"></a>Parametry
 
 *ppBuffer*<br/>
-Po powrocie z tej funkcji *ppBuffer* wskazuje bufor przydzielony przez tę metodę i zawiera informacje na Wstążce w formacie XML.
+Gdy ta funkcja zwraca, *ppBuffer* wskazuje bufor przydzielony przez tę metodę i zawiera informacje o pasku wstążki w formacie XML.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="savetoxmlfile"></a>  CMFCRibbonBar::SaveToXMLFile
+##  <a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile
 
-Zapisuje paska wstążki do pliku XML.
+Zapisuje pasek wstążki do pliku XML.
 
 ```
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
@@ -2123,13 +2123,13 @@ Określa plik wyjściowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look
+##  <a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look
 
-Włącza lub wyłącza wygląd Windows 7 (przycisk mała aplikacja prostokątna) dla wstążki.
+Włącza lub wyłącza funkcję wyszukiwania systemu Windows 7 (małe prostokątne aplikacje) dla wstążki.
 
 ```
 void SetWindows7Look(
@@ -2140,14 +2140,14 @@ void SetWindows7Look(
 ### <a name="parameters"></a>Parametry
 
 *bWindows7Look*<br/>
-Ustawia wartość TRUE, Windows 7 wyszukiwania; Wartość FALSE w przeciwnym razie.
+PRAWDA ustawia wygląd systemu Windows 7; W przeciwnym razie zwraca wartość FALSE.
 
 *bRecalc*<br/>
-Wartość TRUE, ponownie oblicza układ wstążki; Wartość FALSE w przeciwnym razie.
+TRUE ponownie oblicza układ wstążki; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
@@ -2155,4 +2155,4 @@ Wartość TRUE, ponownie oblicza układ wstążki; Wartość FALSE w przeciwnym 
 [Klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Klasa CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Klasa CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Przewodnik: Aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Przewodnik: aktualizowanie aplikacji bazgrołów MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

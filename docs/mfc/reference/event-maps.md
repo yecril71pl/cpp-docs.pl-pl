@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855624"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -19,7 +19,7 @@ Biblioteka MFC oferuje model programowania zoptymalizowany pod kątem wyzwalania
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK` Makro wskazuje, że po wykryciu kliknięcia myszą przez formant będzie wyzwalane zdarzenie kliknięcia. Aby zapoznać się z bardziej szczegółową listą innych zdarzeń giełdowych [, zobacz artykuł formanty ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md). Dostępne są również makra wskazujące na zdarzenia niestandardowe.
+Makro `EVENT_STOCK_CLICK` wskazuje, że w momencie wykrycia kliknięcia myszą przez formant zostanie wyzwolone zdarzenie kliknięcia. Aby zapoznać się z bardziej szczegółową listą innych zdarzeń giełdowych, zobacz artykuł [formanty ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md). Dostępne są również makra wskazujące na zdarzenia niestandardowe.
 
 Mimo że makra mapy zdarzeń są ważne, zazwyczaj nie należy wstawiać ich bezpośrednio. Jest to spowodowane tym, że okno **Właściwości** (w **Widok klasy**) automatycznie tworzy wpisy mapowania zdarzeń w plikach źródłowych, gdy jest on używany do kojarzenia funkcji wyzwalania zdarzeń ze zdarzeniami. Za każdym razem, gdy chcesz edytować lub dodać wpis mapy zdarzeń, możesz użyć okna **Właściwości** .
 
@@ -51,7 +51,7 @@ Aby można było obsługiwać mapy zdarzeń, MFC udostępnia następujące makra
 
 ##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-Każda `COleControl`Klasa pochodna w programie może zapewnić mapę zdarzeń, aby określić zdarzenia, które będą uruchamiane przez formant.
+Każda klasa pochodna `COleControl`w programie może udostępnić mapę zdarzeń, aby określić zdarzenia, które będą uruchamiane przez formant.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -61,7 +61,7 @@ DECLARE_EVENT_MAP()
 
 Użyj makra DECLARE_EVENT_MAP na końcu deklaracji klasy. Następnie w pliku. cpp, który definiuje funkcje elementu członkowskiego dla klasy, użyj makra BEGIN_EVENT_MAP, wpisów makr dla każdego zdarzenia kontrolki i makra END_EVENT_MAP, aby zadeklarować koniec listy zdarzeń.
 
-Aby uzyskać więcej informacji na temat map zdarzeń, zobacz [artykuł formanty ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md).
+Aby uzyskać więcej informacji na temat map zdarzeń, zobacz artykuł [formanty ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -85,17 +85,17 @@ Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (. cpp), który definiuje funkcje elementu członkowskiego dla klasy, uruchom mapę zdarzeń za pomocą makra BEGIN_EVENT_MAP, a następnie Dodaj wpisy makr dla każdego zdarzenia i Ukończ mapowanie zdarzeń za pomocą makra END_EVENT_MAP.
+W pliku implementacji (. cpp), który definiuje funkcje elementów członkowskich klasy, uruchom mapę zdarzeń za pomocą makra BEGIN_EVENT_MAP, a następnie Dodaj wpisy makr dla każdego zdarzenia i Ukończ mapowanie zdarzeń za pomocą makra END_EVENT_MAP.
 
-Aby uzyskać więcej informacji na temat map zdarzeń i makra BEGIN_EVENT_MAP, zobacz artykuł [formanty ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md).
+Aby uzyskać więcej informacji na temat map zdarzeń i makra BEGIN_EVENT_MAP, zobacz artykuł [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek** 'afxctl. h
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+##  <a name="end_event_map"></a>END_EVENT_MAP
 
-Aby zakończyć definiowanie mapy zdarzeń, użyj makra END_EVENT_MAP.
+Użyj makra END_EVENT_MAP, aby zakończyć definicję mapy zdarzeń.
 
 ```cpp
 END_EVENT_MAP()
@@ -126,13 +126,13 @@ Rozdzielana spacjami lista jednej lub kilku stałych określających listę para
 
 ### <a name="remarks"></a>Uwagi
 
-*VtsParams* parametr to rozdzielana spacjami lista wartości ze `VTS_` stałych. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład:
+*VtsParams* parametr to rozdzielana spacjami lista wartości ze stałych `VTS_`. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do `IFontDisp` interfejsu obiektu czcionki OLE.
+Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do interfejsu `IFontDisp` obiektu czcionki OLE.
 
-`VTS_` Stałe i ich znaczenie są następujące:
+Stałe `VTS_` i ich znaczenie są następujące:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -141,9 +141,9 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wa
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
-|VTS_CY|WALUTOWY|
+|VTS_CY|Walutowy|
 |VTS_DATE|DATE|
-|VTS_BSTR|**stała** __znak\*__|
+|VTS_BSTR|**stała** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|UCHWYTY|
@@ -165,7 +165,7 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wa
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu `VTS_Pconstantname` Konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
+> Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu konwencji `VTS_Pconstantname`. Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -199,13 +199,13 @@ Zmienna lista parametrów przenoszona do kontenera kontroli, gdy zdarzenie jest 
 
 ### <a name="remarks"></a>Uwagi
 
-Argument *vtsParams* jest rozdzielaną spacją listą wartości ze `VTS_` stałych. Co najmniej jedna z tych wartości oddzielona spacjami, a nie przecinkiem, określa listę parametrów funkcji. Przykład:
+Argument *vtsParams* jest rozdzieloną spacjami listą wartości ze stałych `VTS_`. Co najmniej jedna z tych wartości oddzielona spacjami, a nie przecinkiem, określa listę parametrów funkcji. Na przykład:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do `IFontDisp` interfejsu obiektu czcionki OLE.
+Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do interfejsu `IFontDisp` obiektu czcionki OLE.
 
-Aby zapoznać się z listą `VTS_` stałych, zobacz [EVENT_CUSTOM](#event_custom).
+Aby uzyskać listę stałych `VTS_`, zobacz [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -240,7 +240,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Wartości parametrów *lpMsg*, *hWndParent*i *lpRect* są pobierane z odpowiednich parametrów `IOleObject::DoVerb` funkcji składowej.
+Wartości parametrów *lpMsg*, *hWndParent*i *lpRect* są pobierane z odpowiednich parametrów funkcji składowej `IOleObject::DoVerb`.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -264,7 +264,7 @@ Funkcja wywoływana przez platformę, gdy zlecenie jest wywoływane.
 
 ### <a name="remarks"></a>Uwagi
 
-Standardowy indeks czasowników ma postać `OLEIVERB_`, a po niej akcja. OLEIVERB_SHOW, OLEIVERB_HIDE i OLEIVERB_UIACTIVATE to kilka przykładów czasowników standardowych.
+Standardowy indeks czasowników ma postać `OLEIVERB_`, po którym następuje akcja. Przykłady standardowych czasowników OLEIVERB_SHOW, OLEIVERB_HIDE i OLEIVERB_UIACTIVATE.
 
 Zobacz [ON_OLEVERB](#on_oleverb) , aby uzyskać opis prototypu funkcji, który ma być używany jako parametr *memberFxn* .
 
@@ -272,6 +272,6 @@ Zobacz [ON_OLEVERB](#on_oleverb) , aby uzyskać opis prototypu funkcji, który m
 
 **Nagłówek** Afxole. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

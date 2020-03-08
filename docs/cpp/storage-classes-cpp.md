@@ -11,11 +11,11 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301317"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856907"
 ---
 # <a name="storage-classes"></a>Klasy magazynu
 
@@ -286,6 +286,6 @@ Istnieje kilka punktów, dla których należy pamiętać o programie:
 
 - Na koniec statyczne zmienne lokalne, takie jak `I3`, zachowują swoje wartości na czas trwania programu, ale są niszczone podczas kończenia działania programu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)

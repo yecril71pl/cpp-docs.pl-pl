@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062057"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875737"
 ---
 # <a name="unions"></a>Unie
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Nazwij*<br/>
 Nazwa typu nadana unii.
 
 *Lista elementów członkowskich*<br/>
@@ -151,7 +151,7 @@ W poprzednim przykładzie należy zauważyć, że Unia w strukturze wejściowej 
 
 Oczywiście w poprzednim przykładzie przedstawiono problem, który można również rozwiązać przy użyciu klas, które pochodzą ze wspólnej klasy bazowej, i rozgałęziać kod na podstawie typu środowiska uruchomieniowego każdego obiektu w kontenerze. Może to spowodować, że kod jest łatwiejszy do utrzymania i zrozumienia, ale może być również wolniejszy niż używanie Unii. Ponadto za pomocą Unii można przechowywać całkowicie niepowiązane typy i dynamicznie zmieniać typ wartości przechowywanej bez zmiany typu samej zmiennej Union. W związku z tym można utworzyć niejednorodną tablicę elementu webuniontype, której elementy przechowują różne wartości różnych typów.
 
-Należy zauważyć, `Input` że struktura w powyższym przykładzie może być łatwo użyta. Aby uzyskać dostęp do elementu członkowskiego, który zawiera dane, należy prawidłowo użyć rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, przekazując pozycję Union jako prywatną i udostępniając specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
+Należy zauważyć, że struktura `Input` w powyższym przykładzie może być łatwo Nieużyta. Aby uzyskać dostęp do elementu członkowskiego, który zawiera dane, należy prawidłowo użyć rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, przekazując pozycję Union jako prywatną i udostępniając specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
 
 ## <a name="unrestricted-unions-c11"></a>Nieograniczone związki (C++ 11)
 
@@ -654,7 +654,7 @@ Oprócz ograniczeń dla nazwanych Unii, anonimowe Unii podlegają dodatkowym ogr
 
 - Nie mogą mieć funkcji Członkowskich.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
 ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864966"
 ---
 # <a name="iolecontrolimpl-class"></a>Klasa IOleControlImpl
 
-Ta klasa zapewnia domyślną implementację `IOleControl` interfejsu i implementuje. `IUnknown`
+Ta klasa udostępnia domyślną implementację interfejsu `IOleControl` i implementuje `IUnknown`.
 
 > [!IMPORTANT]
 >  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
@@ -34,14 +34,14 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa, która pochodzi od `IOleControlImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IOleControlImpl:: FreezeEvents](#freezeevents)|Wskazuje, czy kontener ignoruje lub akceptuje zdarzenia z formantu.|
 |[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Wypełnia informacje o zachowaniu klawiatury formantu. Implementacja ATL zwraca E_NOTIMPL.|
@@ -50,9 +50,9 @@ Klasa, która pochodzi od `IOleControlImpl`.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `IOleControlImpl` udostępnia domyślną implementację interfejsu [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) i implementuje `IUnknown` ją przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Klasa `IOleControlImpl` zapewnia domyślną implementację interfejsu [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+[Samouczki dotyczące biblioteki](../../atl/active-template-library-atl-tutorial.md)ATL, [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,7 +66,7 @@ Klasa `IOleControlImpl` udostępnia domyślną implementację interfejsu [IOleCo
 
 ##  <a name="freezeevents"></a>IOleControlImpl:: FreezeEvents
 
-W implementacji `FreezeEvents` ATL, zwiększa element członkowski `m_nFreezeEvents` danych klasy kontrolki, jeśli `bFreeze` ma wartość true, i zmniejsza `m_nFreezeEvents` , jeśli `bFreeze` ma wartość false.
+W implementacji ATL, `FreezeEvents` zwiększa `m_nFreezeEvents` składową danych klasy kontroli, jeśli `bFreeze` ma wartość TRUE, i zmniejsza `m_nFreezeEvents`, jeśli `bFreeze` ma wartość FALSE.
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,7 +74,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>Uwagi
 
-`FreezeEvents`następnie zwraca S_OK.
+`FreezeEvents` następnie zwraca S_OK.
 
 Zobacz [IOleControl:: FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) w Windows SDK.
 
@@ -126,7 +126,7 @@ Zwraca E_NOTIMPL.
 
 Zobacz [IOleControl::](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
 [Interfejsy formantów ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
