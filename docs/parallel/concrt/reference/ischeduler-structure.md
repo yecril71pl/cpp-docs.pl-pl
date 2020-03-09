@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142322"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854197"
 ---
 # <a name="ischeduler-structure"></a>Struktura IScheduler
 
@@ -89,7 +89,7 @@ Zwraca unikatowy identyfikator dla harmonogramu.
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Unikatowy identyfikator liczby całkowitej.
 
@@ -107,7 +107,7 @@ Zwraca kopię zasad harmonogramu. Aby uzyskać więcej informacji na temat zasad
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Kopia zasad usługi Scheduler.
 
@@ -221,7 +221,7 @@ Ta metoda powinna zostać zaimplementowana, jeśli chcesz, aby Menedżer zasobó
 
 W przypadku braku informacji statystycznych, Menedżer zasobów będzie używać poziomów subskrypcji wątków sprzętowych do podejmowania decyzji dotyczących alokacji zasobów i migracji. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [PolicyElementKey —](concurrency-namespace-enums.md)<br/>

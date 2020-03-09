@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303882"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867303"
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 
@@ -37,14 +37,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Zwraca wartość różną od zera, jeśli bieżąca operacja jest odpowiednia dla typu aktualizowanego pola.|
 |[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Określa typ składowej danych zestawu rekordów — kolumny lub parametru — reprezentowane przez wszystkie kolejne wywołania funkcji DFX do momentu następnego wywołania `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|Operacja DFX wykonywana przez bieżące wywołanie do funkcji składowej `DoFieldExchange` zestawu rekordów.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|Wskaźnik do zestawu rekordów, na którym są wykonywane operacje DFX.|

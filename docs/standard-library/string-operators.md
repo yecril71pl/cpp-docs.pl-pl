@@ -1,5 +1,5 @@
 ---
-title: Operatory &gt; &lt;string
+title: '&lt;operatory&gt; String'
 ms.date: 11/04/2016
 f1_keywords:
 - string/std::operator!=
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685997"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890905"
 ---
-# <a name="ltstringgt-operators"></a>Operatory &gt; &lt;string
+# <a name="ltstringgt-operators"></a>&lt;operatory&gt; String
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt; operatora &gt;](#op_gt_gt)|
-|[&gt; operatora =](#op_gt_eq)|[&lt; operatora](#op_lt)|[&lt; operatora &lt;](#op_lt_lt)|
-|[&lt; operatora =](#op_lt_eq)|[operator +](#op_add)|[operator = =](#op_eq_eq)|
+|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt;operatora &gt;](#op_gt_gt)|
+|[&gt;operatora =](#op_gt_eq)|[&lt; operatora](#op_lt)|[&lt;operatora &lt;](#op_lt_lt)|
+|[&lt;operatora =](#op_lt_eq)|[operator +](#op_add)|[operator = =](#op_eq_eq)|
 
 ## <a name="op_add"></a>operator +
 
@@ -106,7 +106,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do łączenia.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do łączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -115,7 +115,7 @@ Ciąg, który jest połączeniem ciągów wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja każdego przeciążenia `operator+` do łączenia dwóch obiektów [klasy basic_string](../standard-library/basic-string-class.md)szablonu klasy. Wszystkie skutecznie zwracają `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Aby uzyskać więcej informacji, zobacz [dołączanie](../standard-library/basic-string-class.md#append).
+Funkcja każdego przeciążenia `operator+` do łączenia dwóch obiektów klasy szablonu klasy [basic_string](../standard-library/basic-string-class.md). Wszystkie skutecznie zwracają `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Aby uzyskać więcej informacji, zobacz [dołączanie](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Przykład
 
@@ -195,7 +195,7 @@ bool operator!=(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -286,7 +286,7 @@ bool operator==(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -377,7 +377,7 @@ bool operator<(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>&lt; operatora =
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt String po lewej stronie operatora jest mniejszy niż lub równy obiektowi ciągu po prawej stronie.
 
@@ -473,7 +473,7 @@ bool operator<=(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>&lt; operatora &lt;
+## <a name="op_lt_lt"></a>&lt;operatora &lt;
 
 Funkcja szablonu, która zapisuje ciąg w strumieniu wyjściowym.
 
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ostr* \
+*_Ostr*\
 Docelowy strumień danych wyjściowych.
 
-*str* \
+*str*\
 Ciąg, który ma zostać wprowadzony do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -575,7 +575,7 @@ Zapisuje wartość określonego ciągu do strumienia wyjściowego *_Ostr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przeciążania funkcji szablonu **< <** do *wstawienia elementu* [basic_string](../standard-library/basic-string-class.md) szablonu klasy do *\_Ostr*strumienia. Funkcja efektywnie zwraca `_Ostr.write( str.c_str, str.size )`.
+Operator przeciążania funkcji szablonu **< <** , aby wstawić obiekt *str* o szablonie klasy [basic_string](../standard-library/basic-string-class.md) do strumienia *\_ostr*. Funkcja efektywnie zwraca `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>&gt; operatora
 
@@ -603,7 +603,7 @@ bool operator>(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>&gt; operatora =
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt String po lewej stronie operatora jest większy niż lub równy obiektowi ciągu po prawej stronie.
 
@@ -706,7 +706,7 @@ bool operator>=(
 \ *lewo*
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-*prawa* \
+*prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>&gt; operatora &gt;
+## <a name="op_gt_gt"></a>&gt;operatora &gt;
 
 Funkcja szablonu, która odczytuje ciąg ze strumienia wejściowego.
 
@@ -796,10 +796,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* \
+*_Istr*\
 Strumień wejściowy używany do wyodrębniania sekwencji
 
-*prawa* \
+*prawa*\
 Ciąg, który jest wyodrębniany ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -818,7 +818,7 @@ Operator przeciążania funkcji szablonu **> >** do zastępowania sekwencji kont
 
 Po wyodrębnieniu przez funkcję `_Istr`. elementy [max_size](../standard-library/basic-string-class.md#max_size) .
 
-- Po wyodrębnieniu przez funkcję elementu *ch* , dla którego [use_facet](../standard-library/basic-filebuf-class.md#open) < **ctype** \< **CharType**> > (`getloc`). **is**( **CType** \< **CharType**>:: **Space**, *ch*) ma wartość true, w takim przypadku znak jest umieszczany ponownie.
+- Po wyodrębnieniu przez funkcję elementu *ch* , dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> > (`getloc`). **is**( **CType**\< **CharType**>:: **Space**, *ch*) ma wartość true, w takim przypadku znak jest umieszczany ponownie.
 
 Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje metodę [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). W każdym przypadku wywołuje **ISTR**. **Szerokość**(0) i zwraca \* **to**.
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<string >](../standard-library/string.md)
+[\<ciąg >](../standard-library/string.md)
