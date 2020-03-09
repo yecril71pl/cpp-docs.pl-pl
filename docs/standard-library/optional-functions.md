@@ -1,21 +1,21 @@
 ---
-title: '&lt;Opcjonalnie&gt; funkcji'
+title: '&lt;opcjonalne funkcje&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::swap
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
 ms.openlocfilehash: ebb7ccfb8a39bf1f45c7003d7c38e503ab20c89b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268034"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854076"
 ---
-# <a name="ltoptionalgt-functions"></a>&lt;Opcjonalnie&gt; funkcji
+# <a name="ltoptionalgt-functions"></a>&lt;opcjonalne funkcje&gt;
 
-## <a name="make_optional"></a> make_optional
+## <a name="make_optional"></a>make_optional
 
-Sprawia, że obiekt opcjonalne.
+Sprawia, że obiekt jest opcjonalny.
 
 ```cpp
 template <class T>
@@ -26,13 +26,13 @@ template <class T, class U, class... Args>
     constexpr optional<T> make_optional(initializer_list<U> il, Args&&... args);
 ```
 
-## <a name="nullopt"></a> nullopt
+## <a name="nullopt"></a>nullopt
 
 ```cpp
 inline constexpr nullopt_t nullopt(unspecified );
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
 ```cpp
 template <class T>

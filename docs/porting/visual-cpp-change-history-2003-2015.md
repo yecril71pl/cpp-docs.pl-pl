@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415697"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865506"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — historia zmian w latach 2003–2015
 
@@ -3302,7 +3302,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 - Zmienna środowiskowa __MSVCRT_HEAP_SELECT nie jest już obsługiwana. Ta zmienna środowiskowa jest usuwana i nie ma żadnych zastąpień.
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler Reference
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie
 
 - Kilka dyrektyw zostało usuniętych z kompilatora odwołania asemblera makr firmy Microsoft. Usunięte dyrektywy to `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`i `.NO87`.
 
