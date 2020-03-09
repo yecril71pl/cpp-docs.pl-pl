@@ -1,5 +1,5 @@
 ---
-title: '&lt;string &gt; Typedefs'
+title: ciąg &lt;&gt; Typedefs
 ms.date: 11/04/2016
 f1_keywords:
 - string/std::string
@@ -8,13 +8,13 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688916"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856605"
 ---
-# <a name="ltstringgt-typedefs"></a>&lt;string &gt; Typedefs
+# <a name="ltstringgt-typedefs"></a>ciąg &lt;&gt; Typedefs
 
 ||||
 |-|-|-|
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Rozmiar **wchar_t** jest zdefiniowany przez implementację. Jeśli kod zależy od **wchar_t** o określonym rozmiarze, sprawdź implementację platformy (na przykład w `sizeof(wchar_t)`). Jeśli potrzebujesz typu ciągu o szerokości, która gwarantuje, że pozostaje taka sama na wszystkich platformach, użyj [String](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)lub [u32string](../standard-library/string-typedefs.md#u32string).
+> Rozmiar **wchar_t** jest zdefiniowany przez implementację. Jeśli kod zależy od **wchar_t** ma określony rozmiar, sprawdź implementację platformy (na przykład z `sizeof(wchar_t)`). Jeśli potrzebujesz typu ciągu o szerokości, która gwarantuje, że pozostaje taka sama na wszystkich platformach, użyj [String](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)lub [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<string >](../standard-library/string.md)
+[\<ciąg >](../standard-library/string.md)

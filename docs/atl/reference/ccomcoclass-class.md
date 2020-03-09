@@ -13,11 +13,11 @@ helpviewer_keywords:
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
 ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497395"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863220"
 ---
 # <a name="ccomcoclass-class"></a>Klasa CComCoClass
 
@@ -32,7 +32,7 @@ class CComCoClass
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa, która pochodzi od `CComCoClass`.
 
 *pclsid*<br/>
@@ -45,21 +45,21 @@ Wskaźnik do identyfikatora CLSID obiektu.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComCoClass:: CreateInstance](#createinstance)|Ruchom Tworzy wystąpienie klasy i zapytania dla interfejsu.|
-|[CComCoClass::Error](#error)|Ruchom Zwraca informacje o rozbudowanym błędzie dla klienta.|
-|[CComCoClass::GetObjectCLSID](#getobjectclsid)|Ruchom Zwraca identyfikator klasy obiektu.|
-|[CComCoClass::GetObjectDescription](#getobjectdescription)|Ruchom Zastąpienie w celu zwrócenia opisu obiektu.|
+|[CComCoClass:: Error](#error)|Ruchom Zwraca informacje o rozbudowanym błędzie dla klienta.|
+|[CComCoClass:: GetObjectCLSID](#getobjectclsid)|Ruchom Zwraca identyfikator klasy obiektu.|
+|[CComCoClass:: GetObjectDescription](#getobjectdescription)|Ruchom Zastąpienie w celu zwrócenia opisu obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComCoClass`zapewnia metody pobierania identyfikatora CLSID obiektu, ustawiania informacji o błędach i tworzenia wystąpień klasy. Każda Klasa zarejestrowana w mapie obiektów powinna pochodzić od `CComCoClass`.
+`CComCoClass` zapewnia metody pobierania identyfikatora CLSID obiektu, ustawiania informacji o błędach i tworzenia wystąpień klasy. Każda Klasa zarejestrowana w mapie obiektów powinna być pochodną `CComCoClass`.
 
-`CComCoClass`definiuje także domyślną fabrykę klas i model agregacji dla obiektu. `CComCoClass`program używa następujących dwóch makr:
+`CComCoClass` definiuje także domyślną fabrykę klas i model agregacji dla obiektu. `CComCoClass` używa następujących dwóch makr:
 
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Deklaruje fabrykę klas do [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).
 
 - [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Deklaruje, że obiekt może być zagregowany.
 
-Można zastąpić jedno z tych ustawień domyślnych, określając inne makro w definicji klasy. Na przykład, aby użyć [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) zamiast `CComClassFactory`, określ makro [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) :
+Można zastąpić jedno z tych ustawień domyślnych, określając inne makro w definicji klasy. Na przykład, aby użyć [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) zamiast `CComClassFactory`, określ [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makro:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
@@ -69,7 +69,7 @@ Można zastąpić jedno z tych ustawień domyślnych, określając inne makro w 
 
 ##  <a name="createinstance"></a>CComCoClass:: CreateInstance
 
-Za pomocą `CreateInstance` tych funkcji można utworzyć wystąpienie obiektu com i pobrać wskaźnik interfejsu bez użycia interfejsu API modelu com.
+Korzystając z tych funkcji `CreateInstance`, można utworzyć wystąpienie obiektu COM i pobrać wskaźnik interfejsu bez użycia interfejsu API modelu COM.
 
 ```
 template <class  Q>
@@ -81,7 +81,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA*<br/>
+*Pytania*<br/>
 Interfejs COM, który powinien zostać zwrócony przez *PP*.
 
 *punkOuter*<br/>
@@ -106,13 +106,13 @@ Należy pamiętać, że interfejs *Q* musi mieć skojarzony identyfikator IID, k
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie `CDocument` jest wygenerowaną przez kreatora klasą ATL utworzoną z `CComCoClass` implementującą `IDocument` interfejs. Klasa jest zarejestrowana w mapie obiektu za pomocą makra OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, więc klienci nie mogą tworzyć wystąpień dokumentu przy użyciu funkcji [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication`jest klasą coclass, która udostępnia metodę na jednym z własnych interfejsów COM do tworzenia wystąpień klasy dokumentu. Poniższy kod pokazuje, `CreateInstance` jak łatwo utworzyć wystąpienia klasy dokumentu przy użyciu składowej dziedziczonej `CComCoClass` z klasy bazowej.
+W poniższym przykładzie `CDocument` jest wygenerowaną przez kreatora klasą ATL uzyskaną z `CComCoClass` implementującej interfejs `IDocument`. Klasa jest zarejestrowana na mapie obiektu za pomocą makra OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, więc klienci nie mogą tworzyć wystąpień dokumentu przy użyciu funkcji [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` jest klasą coclass, która udostępnia metodę jednego z własnych interfejsów COM do tworzenia wystąpień klasy dokumentu. Poniższy kod pokazuje, jak łatwo utworzyć wystąpienia klasy dokumentu przy użyciu składowej `CreateInstance` dziedziczonej z `CComCoClass` klasie bazowej.
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
 ##  <a name="error"></a>CComCoClass:: Error
 
-Ta funkcja statyczna konfiguruje `IErrorInfo` interfejs, aby zapewnić klientowi informacje o błędzie.
+Ta funkcja statyczna konfiguruje interfejs `IErrorInfo`, aby zapewnić klientowi informacje o błędzie.
 
 ```
 static HRESULT WINAPI Error(
@@ -157,7 +157,7 @@ static HRESULT Error(
 ### <a name="parameters"></a>Parametry
 
 *lpszDesc*<br/>
-podczas Ciąg opisujący błąd. Wersja Unicode programu `Error` określa, że *lpszDesc* jest typu LPCOLESTR; wersja ANSI określa typ LPCSTR.
+podczas Ciąg opisujący błąd. Wersja Unicode `Error` określa, że *lpszDesc* jest typu LPCOLESTR; Wersja ANSI określa typ LPCSTR.
 
 *IID*<br/>
 podczas Identyfikator IID interfejsu definiujący błąd lub GUID_NULL (wartość domyślna), jeśli błąd jest zdefiniowany przez system operacyjny.
@@ -166,7 +166,7 @@ podczas Identyfikator IID interfejsu definiujący błąd lub GUID_NULL (wartoś�
 podczas Wartość HRESULT, która ma zostać zwrócona do obiektu wywołującego. Wartość domyślna to 0. Aby uzyskać więcej informacji na temat *hRes*, zobacz uwagi.
 
 *nID*<br/>
-podczas Identyfikator zasobu, w którym jest przechowywany ciąg opisu błędu. Ta wartość powinna należeć do przedziału od 0x0200 do 0xFFFF włącznie. W kompilacjach debugowania wynikiem będzie wynik, jeśli *NID* nie indeksuje poprawnego ciągu. W kompilacjach wydania ciąg opisu błędu zostanie ustawiony na "nieznany błąd".
+podczas Identyfikator zasobu, w którym jest przechowywany ciąg opisu błędu. Ta wartość powinna należeć do przedziału od 0x0200 do 0xFFFF włącznie. W kompilacjach debugowania wynikiem **będzie wynik** , jeśli *NID* nie indeksuje poprawnego ciągu. W kompilacjach wydania ciąg opisu błędu zostanie ustawiony na "nieznany błąd".
 
 *dwHelpID*<br/>
 podczas Identyfikator kontekstu pomocy dla błędu.
@@ -175,7 +175,7 @@ podczas Identyfikator kontekstu pomocy dla błędu.
 podczas Ścieżka i nazwa pliku pomocy opisującego błąd.
 
 *hInst*<br/>
-podczas Dojście do zasobu. Domyślnie ten parametr `_AtlModule::GetResourceInstance`to, gdzie `_AtlModule` jest globalnym wystąpieniem [CAtlModule](../../atl/reference/catlmodule-class.md).
+podczas Dojście do zasobu. Domyślnie ten parametr jest `_AtlModule::GetResourceInstance`, gdzie `_AtlModule` jest globalnym wystąpieniem [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -183,9 +183,9 @@ Standardowa wartość HRESULT. Aby uzyskać szczegółowe informacje, zobacz uwa
 
 ### <a name="remarks"></a>Uwagi
 
-Do wywołania `Error`obiekt musi `ISupportErrorInfo Interface` implementować interfejs.
+Aby wywołać `Error`, obiekt musi implementować interfejs `ISupportErrorInfo Interface`.
 
-Jeśli parametr *hRes* jest różny od zera, `Error` zwraca wartość *hRes*. Jeśli *hRes* ma wartość zero, wówczas pierwsze cztery wersje `Error` zwracanych DISP_E_EXCEPTION. Ostatnie dwie wersje zwracają wynik MAKE_HRESULTi makr **(1, FACILITY_ITF,** *NID* **)** .
+Jeśli parametr *hRes* jest różny od zera, `Error` zwraca wartość *hRes*. Jeśli *hRes* ma wartość zero, wówczas pierwsze cztery wersje `Error` zwracają DISP_E_EXCEPTION. Ostatnie dwie wersje zwracają wynik **MAKE_HRESULT makro (1, FACILITY_ITF,** *NID* **)** .
 
 ##  <a name="getobjectclsid"></a>CComCoClass:: GetObjectCLSID
 
@@ -217,7 +217,7 @@ Domyślna implementacja zwraca wartość NULL. Tę metodę można zastąpić za 
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription`jest wywoływana przez `IComponentRegistrar::GetComponents`. `IComponentRegistrar`jest interfejsem automatyzacji, który umożliwia rejestrowanie i Wyrejestrowywanie poszczególnych składników w bibliotece DLL. Podczas tworzenia obiektu rejestratora składników przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje `IComponentRegistrar` interfejs. `IComponentRegistrar`jest zwykle używany przez program Microsoft Transaction Server.
+`GetObjectDescription` jest wywoływana przez `IComponentRegistrar::GetComponents`. `IComponentRegistrar` to interfejs automatyzacji, który umożliwia rejestrowanie i Wyrejestrowywanie poszczególnych składników w bibliotece DLL. Podczas tworzenia obiektu rejestratora składników przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje interfejs `IComponentRegistrar`. `IComponentRegistrar` jest zwykle używany przez program Microsoft Transaction Server.
 
 Aby uzyskać więcej informacji na temat Kreatora projektu ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).
 

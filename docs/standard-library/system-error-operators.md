@@ -1,22 +1,22 @@
 ---
-title: '&lt;system_error —&gt; operatorów'
+title: '&lt;system_error operatory&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246208"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876281"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error —&gt; operatorów
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error operatory&gt;
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator==(const error_code& left,
@@ -31,23 +31,23 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem równości.
+\ *lewo*
+Obiekt, który ma być testowany pod kątem równości.
 
-*po prawej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem równości.
+*prawa*\
+Obiekt, który ma być testowany pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty są równe; **false** obiekty nie są równe.
+**prawda** , jeśli obiekty są równe; **Fałsz** , jeśli obiekty nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja zwraca `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
+Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator!=(const error_code& left, const error_condition& right);
@@ -58,21 +58,21 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem nierówności.
+\ *lewo*
+Obiekt, który ma być testowany pod kątem nierówności.
 
-*po prawej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem nierówności.
+*prawa*\
+Obiekt, który ma być testowany pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt przekazany w *po lewej stronie* nie jest równa przekazany obiekt *prawo*; w przeciwnym razie **false**.
+**ma wartość true** , jeśli obiekt przeszedł *po lewej stronie* nie jest równy obiektowi przekazannym w *prawej*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja zwraca `!(left == right)`.
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
 Sprawdza, czy obiekt jest mniejszy niż obiekt przekazany do porównania.
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt do porównania.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt przekazany w *po lewej stronie* jest mniejszy niż obiekt przekazany w *prawo*; W przeciwnym razie **false**.
+**true** , jeśli obiekt przeszedł *po lewej stronie* jest mniejszy niż obiekt przeszedł w *prawo*; W przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja sprawdza kolejność błędów.
 
-## <a name="op_ostream"></a> Operator&lt;&lt;
+## <a name="op_ostream"></a>&lt;operatora &lt;
 
 ```cpp
 template <class charT, class traits> 

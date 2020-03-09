@@ -1,26 +1,26 @@
 ---
-title: '&lt;allocators —&gt; operatorów'
+title: '&lt;przydzielania&gt; operatory'
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377899"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875961"
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;allocators —&gt; operatorów
+# <a name="ltallocatorsgt-operators"></a>&lt;przydzielania&gt; operatory
 
-Są to funkcje operatora szablon globalny, które są zdefiniowane w &lt;buforów&gt;. Funkcje operatorów składowych klasy znajduje się w dokumentacji klasy.
+Są to funkcje operatora szablonu globalnego zdefiniowane w &lt;przydzielania&gt;. Aby uzyskać funkcje operatora składowej klasy, zobacz dokumentację klasy.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[operator = =](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator! =
+## <a name="op_neq"></a>operator! =
 
 Testuje pod kątem nierówności pomiędzy obiektami alokatora określonej klasy.
 
@@ -35,18 +35,18 @@ bool operator!=(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*left*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem nierówności.|
-|*right*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem nierówności.|
+|*lewym*|Jeden z obiektów alokatora, który ma być testowany pod kątem nierówności.|
+|*Kliknij*|Jeden z obiektów alokatora, który ma być testowany pod kątem nierówności.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** obiektami alokatora nie są równe; **false** alokatora obiekty są równe.
+**prawda** , jeśli obiekty alokatora nie są równe; **Fałsz** , jeśli obiekty alokatora są równe.
 
 ### <a name="remarks"></a>Uwagi
 
 Operator szablonu zwraca `!(left == right)`.
 
-## <a name="op_eq_eq"></a>  operator ==
+## <a name="op_eq_eq"></a>operator = =
 
 Testuje pod kątem równości pomiędzy obiektami alokatora określonej klasy.
 
@@ -61,17 +61,17 @@ bool operator==(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*left*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem równości.|
-|*right*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem równości.|
+|*lewym*|Jeden z obiektów alokatora, który ma być testowany pod kątem równości.|
+|*Kliknij*|Jeden z obiektów alokatora, który ma być testowany pod kątem równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** obiektami alokatora są równe; **false** obiektami alokatora nie są równe.
+**ma wartość true** , jeśli obiekty alokatora są równe; **Fałsz** , jeśli obiekty alokatora nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten szablon operator zwraca `left.equals(right)`.
+Ten operator szablonu zwraca `left.equals(right)`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<przydzielania >](../standard-library/allocators-header.md)

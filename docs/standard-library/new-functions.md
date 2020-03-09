@@ -1,5 +1,5 @@
 ---
-title: '&lt;nowe&gt; funkcji'
+title: '&lt;nowe funkcje&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::get_new_handler
@@ -7,15 +7,15 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854948"
 ---
-# <a name="ltnewgt-functions"></a>&lt;nowe&gt; funkcji
+# <a name="ltnewgt-functions"></a>&lt;nowe funkcje&gt;
 
-## <a name="get_new_handler"></a> get_new_handler
+## <a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca bieżącą `new_handler`.
+Zwraca bieżący `new_handler`.
 
-## <a name="launder"></a> prania
+## <a name="launder"></a>brudn
 
 ```cpp
 template <class T>
@@ -34,18 +34,18 @@ template <class T>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
-Adres bajtów w pamięci, która zawiera obiekt, którego typ jest podobny do *T*.
+\ *PTR*
+Adres bajtu w pamięci, który zawiera obiekt, którego typ jest podobny do *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartości typu *T\**  wskazującej X.
+Wartość typu *T\** , która wskazuje na X.
 
 ### <a name="remarks"></a>Uwagi
 
-Również określany jako czynnik blokujący optymalizacji wskaźnika.
+Nazywana również barierą optymalizacji wskaźnika.
 
-Używane jako wyrażenie stałe, wartość argumentu może być używana w wyrażeniu stałym. Bajtów magazynu jest dostępny za pośrednictwem wartość wskaźnika, który wskazuje na obiekt, jeśli w ramach magazynu zajmowane przez inny obiekt, obiekt o wskaźnik podobne.
+Używane jako wyrażenie stałe, gdy wartość jego argumentu może być używana w wyrażeniu stałym. Bajty magazynu są dostępne za pomocą wartości wskaźnika, która wskazuje na obiekt, jeśli w ramach magazynu zajętego przez inny obiekt, obiekt o podobnym wskaźniku.
 
 ### <a name="example"></a>Przykład
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a> nothrow
+## <a name="nothrow"></a>nothrow
 
-Zapewnia obiekt ma być używany jako argument dla **nothrow** wersje **nowe** i **Usuń**.
+Zawiera obiekt, który ma być używany jako argument dla wersji " **nothrow** " **nowych** i **usuniętych**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -69,15 +69,15 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt jest używany jako argumentu funkcji będzie pasował do typu parametru [std::nothrow_t](../standard-library/nothrow-t-structure.md).
+Obiekt jest używany jako argument funkcji do dopasowania do typu parametru [std:: nothrow_t](../standard-library/nothrow-t-structure.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [nowy operator](../standard-library/new-operators.md#op_new) i [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykładów dotyczących sposobów `std::nothrow_t` jest używany jako parametr funkcji.
+Zobacz [operator new](../standard-library/new-operators.md#op_new) i [operator new&#91; ](../standard-library/new-operators.md#op_new_arr) , aby zobaczyć przykłady użycia `std::nothrow_t` jako parametru funkcji.
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-Instaluje funkcję użytkownika, który ma być wywoływana, gdy **nowy operator** zakończy się niepowodzeniem w próba przydzielić pamięci.
+Instaluje funkcję użytkownika, która ma być wywoływana, gdy **operator new** nie powiedzie się w trakcie próby przydzielenia pamięci.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -86,15 +86,15 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>Parametry
 
 *Pnew*\
-`new_handler` Do zainstalowania.
+`new_handler`, które mają zostać zainstalowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-0 w pierwszym wywołaniu i poprzedniej `new_handler` w kolejnych wywołaniach.
+0 pierwszego wywołania i poprzedni `new_handler` przy kolejnych wywołaniach.
 
 ### <a name="remarks"></a>Uwagi
 
-Magazyny funkcja *Pnew* w statycznych [nowy program obsługi](../standard-library/new-typedefs.md#new_handler) wskaźnika, który przechowuje, zwracana wartość wcześniej przechowywany we wskaźniku. Nowy program obsługi jest używany przez [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**).
+Funkcja przechowuje *Pnew* w statycznym nowym wskaźniku [procedury obsługi](../standard-library/new-typedefs.md#new_handler) , który utrzymuje, a następnie zwraca wartość wcześniej przechowywaną we wskaźniku. Nowy program obsługi jest używany przez [operator new](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Przykład
 

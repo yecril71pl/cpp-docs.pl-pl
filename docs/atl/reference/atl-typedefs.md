@@ -24,38 +24,38 @@ helpviewer_keywords:
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
 ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260860"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857109"
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 
-Biblioteki Active Template Library zawiera poniższe definicje typów.
+Active Template Library obejmuje następujące definicje typów.
 
 |||
 |-|-|
-|[_ATL_BASE_MODULE](#_atl_base_module)|Zdefiniowane jako element typedef, w oparciu o [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).|
-|[_ATL_COM_MODULE](#_atl_com_module)|Zdefiniowane jako element typedef, w oparciu o [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).|
-|[_ATL_MODULE](#_atl_module)|Zdefiniowane jako element typedef, w oparciu o [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).|
-|[_ATL_WIN_MODULE](#_atl_win_module)|Zdefiniowane jako element typedef, w oparciu o [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|
-|[ATL_URL_PORT](#atl_url_port)|Typ używany przez [CUrl](../../atl/reference/curl-class.md) do określania numeru portu.|
-|[CComDispatchDriver](#ccomdispatchdriver)|Ta klasa zarządza wskaźniki interfejsu COM.|
-|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Wywołuje odpowiedniego wątku metody modelu, niezależnie od tego modelu wątkowości używane.|
-|[CComObjectThreadModel](#ccomobjectthreadmodel)|Wywołuje odpowiedniego wątku metody modelu, niezależnie od tego modelu wątkowości używane.|
+|[_ATL_BASE_MODULE](#_atl_base_module)|Zdefiniowane jako element typedef na podstawie [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).|
+|[_ATL_COM_MODULE](#_atl_com_module)|Zdefiniowane jako element typedef na podstawie [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).|
+|[_ATL_MODULE](#_atl_module)|Zdefiniowane jako element typedef na podstawie [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).|
+|[_ATL_WIN_MODULE](#_atl_win_module)|Zdefiniowane jako element typedef na podstawie [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|
+|[ATL_URL_PORT](#atl_url_port)|Typ używany przez [zwinięcie](../../atl/reference/curl-class.md) do określenia numeru portu.|
+|[CComDispatchDriver](#ccomdispatchdriver)|Ta klasa zarządza wskaźnikami interfejsu COM.|
+|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.|
+|[CComObjectThreadModel](#ccomobjectthreadmodel)|Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.|
 |[CContainedWindow](#ccontainedwindow)|Ta klasa jest specjalizacją `CContainedWindowT`.|
 |[CPath](#cpath)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString`.|
 |[CPathA](#cpatha)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA`.|
 |[CPathW](#cpathw)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW`.|
 |[CSimpleValArray](#csimplevalarray)|Reprezentuje tablicę do przechowywania typów prostych.|
 |[DefaultThreadTraits](#defaultthreadtraits)|Domyślna klasa cech wątku.|
-|[LPCURL](#lpcurl)|Wskaźnik na stałą [CUrl](../../atl/reference/curl-class.md) obiektu.|
-|[LPURL](#lpurl)|Wskaźnik do [CUrl](../../atl/reference/curl-class.md) obiektu.|
+|[LPCURL](#lpcurl)|Wskaźnik do obiektu z stałym [zwinięciem](../../atl/reference/curl-class.md) .|
+|[LPURL](#lpurl)|Wskaźnik do obiektu [zwinięcie](../../atl/reference/curl-class.md) .|
 
-##  <a name="_atl_base_module"></a>  _ATL_BASE_MODULE
+##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE
 
-Zdefiniowany jako element typedef, w oparciu o _ATL_BASE_MODULE70.
+Zdefiniowane jako element typedef na podstawie _ATL_BASE_MODULE70.
 
 ```
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
@@ -65,15 +65,15 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 
 Używany w każdym projekcie ATL. Na podstawie [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).
 
-Klasy, które są częścią klasy modułów ATL 7.0 pochodzi od struktury _ATL_BASE_MODULE.  Aby uzyskać więcej informacji na temat klasy modułów ATL, zobacz [klasy modułów COM](../../atl/com-modules-classes.md).
+Klasy, które są częścią klas modułów ATL 7,0, pochodzą od struktury _ATL_BASE_MODULE.  Aby uzyskać więcej informacji o klasach modułów ATL, zobacz [klasy modułów com](../../atl/com-modules-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcore.h
+**Nagłówek:** atlcore. h
 
-##  <a name="_atl_com_module"></a>  _ATL_COM_MODULE
+##  <a name="_atl_com_module"></a>_ATL_COM_MODULE
 
-Zdefiniowany jako element typedef, w oparciu o _ATL_COM_MODULE70.
+Zdefiniowane jako element typedef na podstawie _ATL_COM_MODULE70.
 
 ```
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
@@ -81,15 +81,15 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 ### <a name="remarks"></a>Uwagi
 
-Używane w projektach ATL, korzystające z funkcji COM. Na podstawie [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
+Używany przez projekty ATL korzystające z funkcji COM. Na podstawie [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="_atl_module"></a>  _ATL_MODULE
+##  <a name="_atl_module"></a>_ATL_MODULE
 
-Zdefiniowany jako element typedef, w oparciu o _ATL_MODULE70.
+Zdefiniowane jako element typedef na podstawie _ATL_MODULE70.
 
 ```
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
@@ -97,15 +97,15 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:**
+**Nagłówki**
 
 ### <a name="remarks"></a>Uwagi
 
 Na podstawie [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).
 
-##  <a name="_atl_win_module"></a>  _ATL_WIN_MODULE
+##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE
 
-Zdefiniowany jako element typedef, w oparciu o _ATL_WIN_MODULE70.
+Zdefiniowane jako element typedef na podstawie _ATL_WIN_MODULE70.
 
 ```
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
@@ -113,15 +113,15 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 ### <a name="remarks"></a>Uwagi
 
-Używany przez wszystkie projekty biblioteki ATL, korzystające z funkcji obsługi okien. Na podstawie [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
+Używane przez dowolne projekty ATL korzystające z funkcji okna. Na podstawie [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="atl_url_port"></a>  ATL_URL_PORT
+##  <a name="atl_url_port"></a>ATL_URL_PORT
 
-Typ używany przez [CUrl](curl-class.md) do określania numeru portu.
+Typ używany przez [zwinięcie](curl-class.md) do określenia numeru portu.
 
 ```
 typedef WORD ATL_URL_PORT;
@@ -129,11 +129,11 @@ typedef WORD ATL_URL_PORT;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
-##  <a name="ccomdispatchdriver"></a>  CComDispatchDriver
+##  <a name="ccomdispatchdriver"></a>CComDispatchDriver
 
-Ta klasa zarządza wskaźniki interfejsu COM.
+Ta klasa zarządza wskaźnikami interfejsu COM.
 
 ```
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
@@ -141,11 +141,11 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="ccomglobalsthreadmodel"></a>  CComGlobalsThreadModel
+##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel
 
-Wywołuje odpowiedniego wątku metody modelu, niezależnie od tego modelu wątkowości używane.
+Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.
 
 ```
 #if defined(_ATL_SINGLE_THREADED)
@@ -161,31 +161,31 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od modelu wątkowości używanych przez aplikację **typedef** nazwa `CComGlobalsThreadModel` odwołuje się do albo [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Te klasy oferują dodatkowe `typedef` nazwy, aby odwoływać się do klasy sekcji krytycznych.
+W zależności od modelu wątkowości używanego przez aplikację nazwa **typedef** `CComGlobalsThreadModel` odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Te klasy zapewniają dodatkowe nazwy `typedef`, aby odwoływać się do klasy sekcji krytycznej.
 
 > [!NOTE]
 > `CComGlobalsThreadModel` nie odwołuje się do klasy [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
-Za pomocą `CComGlobalsThreadModel` uwalnia użytkownika od określenia konkretnej klasy modelu wątkowości. Niezależnie od tego modelu wątkowości używany zostanie wywołana właściwe metody.
+Używanie `CComGlobalsThreadModel` zwalnia użytkownika z określania określonej klasy modelu wątkowego. Bez względu na używany model wątkowości odpowiednie metody będą wywoływane.
 
-Oprócz `CComGlobalsThreadModel`, ATL dostarcza **typedef** nazwa [CComObjectThreadModel](#ccomobjectthreadmodel). Klasa przywoływana przez każdą `typedef` zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
+Oprócz `CComGlobalsThreadModel`, ATL udostępnia nazwę **typedef** [CComObjectThreadModel](#ccomobjectthreadmodel). Klasa, do której odwołuje się każda `typedef`, zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+|— klasa typedef|Pojedyncze wątki|Wątkowość apartamentu|Bezpłatna wątkowość|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
+S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Użyj `CComObjectThreadModel` w ramach pojedynczego obiektu klasy. Użyj `CComGlobalsThreadModel` w obiekcie dostępnej globalnie do programu, lub gdy zachodzi potrzeba ochrony zasobów modułu w wielu wątkach.
+Użyj `CComObjectThreadModel` w obrębie klasy jednego obiektu. Użyj `CComGlobalsThreadModel` w obiekcie, który jest globalnie dostępny dla programu, lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="ccomobjectthreadmodel"></a>  CComObjectThreadModel
+##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel
 
-Wywołuje odpowiedniego wątku metody modelu, niezależnie od tego modelu wątkowości używane.
+Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.
 
 ```
 #if defined(_ATL_SINGLE_THREADED)
@@ -201,29 +201,29 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od modelu wątkowości używanych przez aplikację `typedef` nazwa `CComObjectThreadModel` odwołuje się do albo [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Te klasy oferują dodatkowe `typedef` nazwy, aby odwoływać się do klasy sekcji krytycznych.
+W zależności od modelu wątkowego używanego przez aplikację nazwa `typedef` `CComObjectThreadModel` odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Te klasy zapewniają dodatkowe nazwy `typedef`, aby odwoływać się do klasy sekcji krytycznej.
 
 > [!NOTE]
 > `CComObjectThreadModel` nie odwołuje się do klasy [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
-Za pomocą `CComObjectThreadModel` uwalnia użytkownika od określenia konkretnej klasy modelu wątkowości. Niezależnie od tego modelu wątkowości używany zostanie wywołana właściwe metody.
+Używanie `CComObjectThreadModel` zwalnia użytkownika z określania określonej klasy modelu wątkowego. Bez względu na używany model wątkowości odpowiednie metody będą wywoływane.
 
-Oprócz `CComObjectThreadModel`, ATL dostarcza **typedef** nazwa [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Klasa przywoływana przez każdą **typedef** zależy od modelu wątkowości używane, jak pokazano w poniższej tabeli:
+Oprócz `CComObjectThreadModel`, ATL udostępnia nazwę **typedef** [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Klasa, do której odwołuje się każdy **element typedef** , zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
 
-|— klasa typedef|Pojedynczy wątkowości|Wątkowość|Bezpłatne wątkowości|
+|— klasa typedef|Pojedyncze wątki|Wątkowość apartamentu|Bezpłatna wątkowość|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
+S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Użyj `CComObjectThreadModel` w ramach pojedynczego obiektu klasy. Użyj `CComGlobalsThreadModel` w obiekcie, który jest ogólnie dostępna, do programu lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
+Użyj `CComObjectThreadModel` w obrębie klasy jednego obiektu. Użyj `CComGlobalsThreadModel` w obiekcie, który jest globalnie dostępny dla programu, lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="ccontainedwindow"></a>  CContainedWindow
+##  <a name="ccontainedwindow"></a>CContainedWindow
 
 Ta klasa jest specjalizacją `CContainedWindowT`.
 
@@ -233,13 +233,13 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin.h
+**Nagłówek:** atlwin. h
 
 ### <a name="remarks"></a>Uwagi
 
-`CContainedWindow` jest specjalizacją [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Jeśli chcesz zmienić cechy lub klasy bazowej, użyj `CContainedWindowT` bezpośrednio.
+`CContainedWindow` jest specjalizacją [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Jeśli chcesz zmienić klasę bazową lub cechy, użyj `CContainedWindowT` bezpośrednio.
 
-##  <a name="cpath"></a>  CPath
+##  <a name="cpath"></a>CPath
 
 Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString`.
 
@@ -249,9 +249,9 @@ typedef CPathT<CString> CPath;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlpath.h
+**Nagłówek:** atlpath. h
 
-##  <a name="cpatha"></a>  CPathA
+##  <a name="cpatha"></a>CPathA
 
 Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA`.
 
@@ -261,9 +261,9 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlpath.h
+**Nagłówek:** atlpath. h
 
-##  <a name="cpathw"></a>  CPathW
+##  <a name="cpathw"></a>CPathW
 
 Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW`.
 
@@ -273,9 +273,9 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlpath.h
+**Nagłówek:** atlpath. h
 
-##  <a name="csimplevalarray"></a>  CSimpleValArray
+##  <a name="csimplevalarray"></a>CSimpleValArray
 
 Reprezentuje tablicę do przechowywania typów prostych.
 
@@ -285,15 +285,15 @@ Reprezentuje tablicę do przechowywania typów prostych.
 
 ### <a name="remarks"></a>Uwagi
 
-`CSimpleValArray` jest dostępna do tworzenia i zarządzania nimi w tablicach zawierających typy proste dane. Jest to prosty #define z [CSimpleArray](../../atl/reference/csimplearray-class.md).
+`CSimpleValArray` podano do tworzenia tablic zawierających proste typy danych i zarządzania nimi. Jest to prosta #define [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsimpcoll.h
+**Nagłówek:** atlsimpcoll. h
 
-##  <a name="lpcurl"></a>  LPCURL
+##  <a name="lpcurl"></a>LPCURL
 
-Wskaźnik na stałą [CUrl](../../atl/reference/curl-class.md) obiektu.
+Wskaźnik do obiektu z stałym [zwinięciem](../../atl/reference/curl-class.md) .
 
 ```
 typedef const CUrl* LPCURL;
@@ -301,9 +301,9 @@ typedef const CUrl* LPCURL;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
-##  <a name="defaultthreadtraits"></a>  DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
 
 Domyślna klasa cech wątku.
 
@@ -319,15 +319,15 @@ Domyślna klasa cech wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli bieżący projekt używa wielowątkowe CRT, DefaultThreadTraits jest zdefiniowany jako CRTThreadTraits. W przeciwnym razie Win32ThreadTraits jest używany.
+Jeśli bieżący projekt używa wielowątkowej CRT, DefaultThreadTraits jest zdefiniowany jako CRTThreadTraits. W przeciwnym razie jest używany Win32ThreadTraits.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="lpurl"></a>  LPURL
+##  <a name="lpurl"></a>LPURL
 
-Wskaźnik do [CUrl](../../atl/reference/curl-class.md) obiektu.
+Wskaźnik do obiektu [zwinięcie](../../atl/reference/curl-class.md) .
 
 ```
 typedef CUrl* LPURL;
@@ -335,7 +335,7 @@ typedef CUrl* LPURL;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -343,4 +343,4 @@ typedef CUrl* LPURL;
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
 [Klasy i struktury](../../atl/reference/atl-classes.md)<br/>
-[Makra](../../atl/reference/atl-macros.md)
+[Utworze](../../atl/reference/atl-macros.md)

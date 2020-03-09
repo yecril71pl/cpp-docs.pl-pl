@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630631"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857154"
 ---
 # <a name="registry-macros"></a>Makra rejestru
 
@@ -66,13 +66,13 @@ Identyfikator GUID biblioteki typów.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj DECLARE_LIBID w `CAtlModuleT`klasie pochodnej.
+Użyj DECLARE_LIBID w klasie pochodnej `CAtlModuleT`.
 
 ### <a name="example"></a>Przykład
 
 Nieprzypisane przez kreatora projekty ATL nie będą miały przykładu użycia tego makra.
 
-##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
 
 Użyj DECLARE_NO_REGISTRY, jeśli chcesz uniknąć żadnej domyślnej rejestracji ATL dla klasy, w której pojawia się to makro.
 
@@ -136,7 +136,7 @@ IDENTYFIKATOR GUID.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj DECLARE_REGISTRY_APPID_RESOURCEID w `CAtlModuleT`klasie pochodnej.
+Użyj DECLARE_REGISTRY_APPID_RESOURCEID w klasie pochodnej `CAtlModuleT`.
 
 ### <a name="example"></a>Przykład
 
@@ -152,24 +152,24 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 podczas Identyfikator ciągu zasobu.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas tworzenia obiektu lub kontrolki przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje obsługę rejestru na podstawie skryptów i doda makro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) , które jest podobne do DECLARE_REGISTRY_RESOURCE, do plików.
+Podczas tworzenia obiektu lub kontrolki przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje obsługę rejestru na podstawie skryptów i dodaje [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) makro, które jest podobne do DECLARE_REGISTRY_RESOURCE, do plików.
 
 Aby zoptymalizować dostęp do rejestru, można statycznie łączyć się ze składnikiem rejestru ATL (rejestratorem). Aby statycznie łączyć się z kodem rejestratora, Dodaj następujący wiersz do pliku *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i jego starszych):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Jeśli chcesz, aby ATL zamieniał wartości zastępcze w czasie wykonywania, nie określaj makra DECLARE_REGISTRY_RESOURCE ani DECLARE_REGISTRY_RESOURCEID. Zamiast tego należy utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, gdzie każdy wpis zawiera zmienną symbol zastępczy sparowany z wartością, aby zastąpić symbol zastępczy w czasie wykonywania. Następnie Wywołaj [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości `_ATL_REGMAP_ENTRIES` zamiennych ze struktur do mapy wymiany rejestratora.
+Jeśli chcesz, aby ATL zamieniał wartości zastępcze w czasie wykonywania, nie określaj DECLARE_REGISTRY_RESOURCE ani DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego Utwórz tablicę struktur `_ATL_REGMAP_ENTRIES`, gdzie każdy wpis zawiera zmienną symbol zastępczy sparowany z wartością, aby zastąpić symbol zastępczy w czasie wykonywania. Następnie Wywołaj [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zamiennych ze struktur `_ATL_REGMAP_ENTRIES` do mapy wymiany rejestratora.
 
 Aby uzyskać więcej informacji na temat wymiennych parametrów i skryptów, zobacz artykuł dotyczący [składnika rejestru ATL (rejestratora)](../../atl/atl-registry-component-registrar.md).
 
 ##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-Analogicznie jak [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) , z tą różnicą, że używa za pomocą Kreatora elementu uint do identyfikowania zasobu, a nie nazwy ciągu.
+Analogicznie jak [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) , z tą różnicą, że do identyfikowania zasobu jest używane użycie przez kreatora uint, a nie nazwy ciągu.
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -177,18 +177,18 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 podczas Identyfikator zasobu wygenerowany przez kreatora.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas tworzenia obiektu lub kontrolki przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje obsługę rejestru na podstawie skryptów i doda makro DECLARE_REGISTRY_RESOURCEID do plików.
+Podczas tworzenia obiektu lub kontrolki przy użyciu Kreatora projektu ATL Kreator automatycznie implementuje obsługę rejestru na podstawie skryptów i dodaje do plików makro DECLARE_REGISTRY_RESOURCEID.
 
 Aby zoptymalizować dostęp do rejestru, można statycznie łączyć się ze składnikiem rejestru ATL (rejestratorem). Aby statycznie łączyć się z kodem rejestratora, Dodaj następujący wiersz do pliku *stdafx. h* (*PCH. h* w Visual Studio 2019 i nowszych):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Jeśli chcesz, aby ATL zamieniał wartości zastępcze w czasie wykonywania, nie określaj makra DECLARE_REGISTRY_RESOURCE ani DECLARE_REGISTRY_RESOURCEID. Zamiast tego należy utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, gdzie każdy wpis zawiera zmienną symbol zastępczy sparowany z wartością, aby zastąpić symbol zastępczy w czasie wykonywania. Następnie Wywołaj [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości `_ATL_REGMAP_ENTRIES` zamiennych ze struktur do mapy wymiany rejestratora.
+Jeśli chcesz, aby ATL zamieniał wartości zastępcze w czasie wykonywania, nie określaj DECLARE_REGISTRY_RESOURCE ani DECLARE_REGISTRY_RESOURCEID makra. Zamiast tego Utwórz tablicę struktur `_ATL_REGMAP_ENTRIES`, gdzie każdy wpis zawiera zmienną symbol zastępczy sparowany z wartością, aby zastąpić symbol zastępczy w czasie wykonywania. Następnie Wywołaj [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), przekazując tablicę. Spowoduje to dodanie wszystkich wartości zamiennych ze struktur `_ATL_REGMAP_ENTRIES` do mapy wymiany rejestratora.
 
 Aby uzyskać więcej informacji na temat wymiennych parametrów i skryptów, zobacz artykuł dotyczący [składnika rejestru ATL (rejestratora)](../../atl/atl-registry-component-registrar.md).
 

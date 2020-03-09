@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497851"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864449"
 ---
 # <a name="category-macros"></a>Makra kategorii
 
@@ -29,7 +29,7 @@ Te makra definiują mapy kategorii.
 
 **Nagłówek:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Oznacza początek mapy kategorii.
 
@@ -59,7 +59,7 @@ Aby uzyskać więcej informacji o kategoriach składników, zobacz [co to są ka
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
 Oznacza koniec mapy kategorii.
 
@@ -69,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [BEGIN_CATEGORY_MAP](#begin_category_map).
+Zapoznaj się z przykładem [BEGIN_CATEGORY_MAP](#begin_category_map).
 
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Dodaj makro IMPLEMENTED_CATEGORY do [mapy kategorii](#begin_category_map) składnika, aby określić, że powinna być zarejestrowana jako implementacja kategorii identyfikowanej przez parametr *catID* .
+Dodaj makro IMPLEMENTED_CATEGORY do [mapy kategorii](#begin_category_map) składnika, aby określić, że powinna być zarejestrowana w ramach implementacji kategorii identyfikowanej przez parametr *catID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -86,7 +86,7 @@ podczas Stała CATID lub zmienna przechowująca unikatowy identyfikator globalny
 
 ### <a name="remarks"></a>Uwagi
 
-Kategorie składników wymienione na mapie zostaną zarejestrowane automatycznie podczas rejestrowania modułu, jeśli klasa ma skojarzone makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) lub [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Kategorie składników wymienione na mapie zostaną zarejestrowane automatycznie podczas rejestrowania modułu, jeśli klasa ma skojarzone [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) lub [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro.
 
 Klienci mogą używać informacji o kategorii zarejestrowanych dla klasy, aby określić jej możliwości i wymagania bez konieczności tworzenia wystąpienia.
 
@@ -123,7 +123,7 @@ podczas Stała CATID lub zmienna przechowująca unikatowy identyfikator globalny
 
 ### <a name="remarks"></a>Uwagi
 
-Kategorie składników wymienione na mapie zostaną zarejestrowane automatycznie podczas rejestrowania modułu, jeśli klasa ma skojarzone makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) lub [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Kategorie składników wymienione na mapie zostaną zarejestrowane automatycznie podczas rejestrowania modułu, jeśli klasa ma skojarzone [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) lub [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro.
 
 Klienci mogą używać informacji o kategorii zarejestrowanych dla klasy, aby określić jej możliwości i wymagania bez konieczności tworzenia wystąpienia. Na przykład kontrolka może wymagać powiązania danych z obsługą kontenera. Kontener może sprawdzić, czy ma możliwości niezbędne do hostowania kontroli, badając Menedżera kategorii dla kategorii wymaganych przez tę kontrolkę. Jeśli kontener nie obsługuje wymaganej funkcji, może odmówić hostowania obiektu COM.
 
