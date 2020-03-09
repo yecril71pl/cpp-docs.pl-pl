@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; wyrażenia regularnego'
+title: '&lt;funkcje&gt; wyrażeń regularnych'
 ms.date: 09/10/2018
 f1_keywords:
 - regex/std::regex_match
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451587"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876149"
 ---
-# <a name="ltregexgt-functions"></a>&lt;funkcje&gt; wyrażenia regularnego
+# <a name="ltregexgt-functions"></a>&lt;funkcje&gt; wyrażeń regularnych
 
 |||
 |-|-|
 |[regex_match](#regex_match)|Testuje, czy wyrażenie regularne dopasowuje cały ciąg docelowy.|
 |[regex_replace](#regex_replace)|Zastępuje dopasowane wyrażenia regularne.|
 |[regex_search](#regex_search)|Wyszukuje dopasowanie wyrażenia regularnego.|
-|[swap](#swap)|Zamienia dwa `basic_regex` lub `match_results` obiekty.|
+|[wymiany](#swap)|Zamienia dwa obiekty `basic_regex` lub `match_results`.|
 
 ## <a name="regex_match"></a>regex_match
 
@@ -85,13 +85,13 @@ bool regex_match(
 ### <a name="parameters"></a>Parametry
 
 *BidIt*\
-Typ iteratora dla podpasowań. W przypadku typowych przypadków ten jeden `string::const_iterator`z `wstring::const_iterator` `const char*` , lub `const wchar_t*`.
+Typ iteratora dla podpasowań. W przypadku typowych przypadków ten `string::const_iterator`, `wstring::const_iterator`, `const char*` lub `const wchar_t*`.
 
-*Alokacj*\
+\ *alokacji*
 Klasa alokatora wyników dopasowania.
 
 *Elem*\
-Typ elementów, do których ma pasować. W przypadku typowych przypadków jest `string` `wstring` `char*` to, lub `wchar_t*`.
+Typ elementów, do których ma pasować. W typowych przypadkach jest to `string`, `wstring`, `char*` lub `wchar_t*`.
 
 *RXtraits*\
 Klasa cech dla elementów.
@@ -105,32 +105,32 @@ Klasa cech ciągu.
 *IOalloc*\
 Klasa alokatora ciągów.
 
-*znaczników*\
+*flagi*\
 Flagi dla dopasowania.
 
-*pierwszego*\
+*pierwszy*\
 Początek sekwencji do dopasowania.
 
-*ostatniego*\
+*ostatni*\
 Koniec sekwencji do dopasowania.
 
-*spełnić*\
-Wyniki dopasowania. Odnosi się do typu Elem [](../standard-library/regex-typedefs.md#smatch) : Smatch — `string`for [](../standard-library/regex-typedefs.md#wsmatch) , `char*` wsmatch — `wstring`dla, [cmatch —](../standard-library/regex-typedefs.md#cmatch) lub [wcmatch —](../standard-library/regex-typedefs.md#wcmatch) dla `wchar_t*`.
+*dopasuj*\
+Wyniki dopasowania. Odnosi się do typu Elem: [Smatch —](../standard-library/regex-typedefs.md#smatch) dla `string`, [wsmatch —](../standard-library/regex-typedefs.md#wsmatch) dla `wstring`, [cmatch —](../standard-library/regex-typedefs.md#cmatch) dla `char*` lub [wcmatch —](../standard-library/regex-typedefs.md#wcmatch) dla `wchar_t*`.
 
-*PTR*\
-Wskaźnik na początek sekwencji do dopasowania. Jeśli *PTR* to `char*`, użyj `cmatch` i `regex`. Jeśli *PTR* jest `wchar_t*` następnie używany `wcmatch` i `wregex`.
+\ *PTR*
+Wskaźnik na początek sekwencji do dopasowania. Jeśli *PTR* jest `char*`, użyj `cmatch` i `regex`. Jeśli *ptr* `wchar_t*`, użyj `wcmatch` i `wregex`.
 
-*Eksport*\
-Wyrażenie regularne do dopasowania. Wpisz `regex` dla `string` i ,lub`wregex` dla`wchar_t*`i. `char*` `wstring`
+*\*
+Wyrażenie regularne do dopasowania. Wpisz `regex` dla `string` i `char*`lub `wregex` dla `wstring` i `wchar_t*`.
 
 *str*\
 Ciąg do dopasowania. Odnosi się do typu *elem*.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy cały *operand sekwencji jest* dokładnie zgodny *z argumentem*wyrażenia regularnego. Użyj [regex_search](../standard-library/regex-functions.md#regex_search) , aby dopasować podciąg w sekwencji docelowej i `regex_iterator` znaleźć wiele dopasowań. Funkcje, które przyjmują `match_results` obiekt ustawia jego elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
+Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy cały *operand sekwencji jest* dokładnie zgodny *z argumentem*wyrażenia regularnego. Użyj [regex_search](../standard-library/regex-functions.md#regex_search) , aby dopasować podciąg w sekwencji docelowej i `regex_iterator`, aby znaleźć wiele dopasowań. Funkcje, które przyjmują obiekt `match_results`, ustawiają elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
 
-Funkcje, które przyjmują `match_results` obiekt ustawia jego elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
+Funkcje, które przyjmują obiekt `match_results`, ustawiają elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
 
 ### <a name="example"></a>Przykład
 
@@ -229,28 +229,28 @@ Typ iteratora dla podpasowań.
 *RXtraits*\
 Klasa cech dla elementów.
 
-*Alokacj*\
+\ *alokacji*
 Klasa alokatora wyrażeń regularnych.
 
 *Elem*\
 Typ elementów, do których ma pasować.
 
-*znaczników*\
+*flagi*\
 Flagi dla dopasowania.
 
-*pierwszego*\
+*pierwszy*\
 Początek sekwencji do dopasowania.
 
-*FMT*\
+*fmt*\
 Format zamian.
 
-*ostatniego*\
+*ostatni*\
 Koniec sekwencji do dopasowania.
 
-*określoną*\
+\ *out*
 Iterator danych wyjściowych.
 
-*Eksport*\
+*\*
 Wyrażenie regularne do dopasowania.
 
 *str*\
@@ -258,9 +258,9 @@ Ciąg do dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja konstruuje obiekt `iter(first, last, re, flags)` [klasy regex_iterator](../standard-library/regex-iterator-class.md) i używa go do podzielenia zakresu `[first, last)` wejściowego na serię podsekwencji `T0 M0 T1 M1...TN-1 MN-1 TN`, gdzie `Mn` to n-ty dopasowanie wykryte przez iterator. Jeśli nie znaleziono żadnych dopasowań `T0` , to cały zakres wejściowy `N` i wynosi zero. Jeśli `(flags & format_first_only) != 0` używane jest tylko pierwsze dopasowanie, `T1` to cały tekst wejściowy, który następuje po dopasowaniu i `N` ma wartość 1. Dla każdego `i` `[0, N)`z zakresu, jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `Ti` *do iteratora*. `m.format(out, fmt, flags)`Następnie wywołuje `Mi`, gdzie `m` jest `match_results` obiektem zwracanym przez obiekt `iter` iteratora dla sekwencji. Na koniec, `(flags & format_no_copy) == 0` jeśli kopiuje tekst z zakresu `TN` *do iteratora*. Funkcja zwraca wartość *out*.
+Pierwsza funkcja konstruuje obiekt [klasy regex_iterator](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` i używa go do podzielenia `[first, last)` zakresu wejściowego na serię podsekwencji `T0 M0 T1 M1...TN-1 MN-1 TN`, gdzie `Mn` to n-ty dopasowanie wykryte przez iterator. Jeśli nie znaleziono żadnych dopasowań, `T0` jest całym zakresem wejściowym, a `N` wynosi zero. Jeśli `(flags & format_first_only) != 0` używane jest tylko pierwsze dopasowanie, `T1` to wszystkie tekst wejściowy, który następuje po dopasowaniu, a `N` to 1. Dla każdego `i` zakresu `[0, N)`, jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `Ti` *do iteratora*. Następnie wywołuje `m.format(out, fmt, flags)`, gdzie `m` jest obiektem `match_results` zwróconym przez obiekt iterator `iter` dla sekwencji `Mi`. Na koniec, jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `TN` *do iteratora*. Funkcja zwraca wartość *out*.
 
-Druga funkcja konstruuje lokalną zmienną `result` typu `basic_string<charT>` i wywołań `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Zwraca wartość `result`.
+Druga funkcja konstruuje zmienną lokalną `result` typu `basic_string<charT>` i wywołuje `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Zwraca `result`.
 
 ### <a name="example"></a>Przykład
 
@@ -356,7 +356,7 @@ bool regex_search(
 *BidIt*\
 Typ iteratora dla podpasowań.
 
-*Alokacj*\
+\ *alokacji*
 Klasa alokatora wyników dopasowania.
 
 *Elem*\
@@ -374,22 +374,22 @@ Klasa cech ciągu.
 *IOalloc*\
 Klasa alokatora ciągów.
 
-*znaczników*\
+*flagi*\
 Flagi dla dopasowania.
 
-*pierwszego*\
+*pierwszy*\
 Początek sekwencji do dopasowania.
 
-*ostatniego*\
+*ostatni*\
 Koniec sekwencji do dopasowania.
 
-*spełnić*\
+*dopasuj*\
 Wyniki dopasowania.
 
-*PTR*\
+\ *PTR*
 Wskaźnik na początek sekwencji do dopasowania.
 
-*Eksport*\
+*\*
 Wyrażenie regularne do dopasowania.
 
 *str*\
@@ -397,7 +397,7 @@ Ciąg do dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy wyszukiwanie *jego argumentu* regularnego zostanie wykonane pomyślnie. Funkcje, które przyjmują `match_results` obiekt, w celu określenia, czy wyszukiwanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
+Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy wyszukiwanie *jego argumentu* regularnego zostanie wykonane pomyślnie. Funkcje, które przyjmują obiekt `match_results`, ustawiają elementy członkowskie, aby odzwierciedlały, czy wyszukiwanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
 
 ### <a name="example"></a>Przykład
 
@@ -457,7 +457,7 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>wymiany
 
-Zamienia dwa `basic_regex` lub `match_results` obiekty.
+Zamienia dwa obiekty `basic_regex` lub `match_results`.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -518,13 +518,13 @@ length == 3
 string == aaa
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<regex>](../standard-library/regex.md)\
-[Klasa regex_constants](../standard-library/regex-constants-class.md)\
-[Klasa regex_error](../standard-library/regex-error-class.md)\
-[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<Operatory > wyrażenia regularnego](../standard-library/regex-operators.md)\
-[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Klasa regex_traits](../standard-library/regex-traits-class.md)\
+[\<> wyrażeń regularnych](../standard-library/regex.md)\
+\ [klasy regex_constants](../standard-library/regex-constants-class.md)
+\ [klasy regex_error](../standard-library/regex-error-class.md)
+\ [klasy regex_iterator](../standard-library/regex-iterator-class.md)
+[\<operatory wyrażeń regularnych >](../standard-library/regex-operators.md)\
+\ [klasy regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ [klasy regex_traits](../standard-library/regex-traits-class.md)
 [\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)

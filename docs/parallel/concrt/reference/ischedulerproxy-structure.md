@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
 ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140334"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854213"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy — Struktura
 
@@ -30,7 +30,7 @@ Interfejs, za pomocą którego program Schedules komunikuje się z Menedżer zas
 struct ISchedulerProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -89,7 +89,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
 *pExecutionResource*<br/>
 Interfejs `IExecutionResource` reprezentujący wątek sprzętowy, który chcesz zasubskrybować.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Interfejs `IVirtualProcessorRoot`.
 
@@ -112,7 +112,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 *doSubscribeCurrentThread*<br/>
 Czy zasubskrybować bieżący wątek i konto podczas alokacji zasobów.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Interfejs `IExecutionResource` bieżącego wątku, jeśli parametr `doSubscribeCurrentThread` ma wartość **true**. Jeśli wartość to **false**, metoda zwraca wartość null.
 
@@ -152,7 +152,7 @@ Rejestruje bieżący wątek w Menedżer zasobów, kojarząc go z tym harmonogram
 virtual IExecutionResource* SubscribeCurrentThread() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 `IExecutionResource`, który reprezentuje bieżący wątek w środowisku uruchomieniowym.
 

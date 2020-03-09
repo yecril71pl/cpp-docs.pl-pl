@@ -3,38 +3,38 @@ title: 2. Dyrektyw
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363716"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882868"
 ---
-# <a name="2-directives"></a>2. Dyrektyw
+# <a name="2-directives"></a>2. Dyrektywy
 
-Dyrektywy opierają się na `#pragma` dyrektywy zdefiniowana w standardach C i C++.  Kompilatory, które obsługują OpenMP C i C++ interfejsu API będzie zawierać opcji wiersza polecenia, który aktywuje i umożliwia interpretacji wszystkich OpenMP, dyrektywy kompilatora.
+Dyrektywy są oparte na `#pragma` dyrektywach zdefiniowanych w języku C C++ i standardach.  Kompilatory obsługujące język OpenMP i C++ interfejs API będą zawierać opcję wiersza polecenia, która aktywuje i umożliwia interpretację wszystkich dyrektyw kompilatora OpenMP.
 
-## <a name="21-directive-format"></a>2.1 format dyrektywy
+## <a name="21-directive-format"></a>2,1 — format dyrektywy
 
-Składnia OpenMP — dyrektywa formalnie jest określona przez gramatyki w [dodatek C](c-openmp-c-and-cpp-grammar.md)i nieformalnie w następujący sposób:
+Składnia dyrektywy OpenMP jest formalnie określona przez gramatykę w [dodatku C](c-openmp-c-and-cpp-grammar.md)i nieformalnie w następujący sposób:
 
 ```cpp
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Każda dyrektywa zaczyna się od `#pragma omp`, aby zmniejszyć ryzyko będących w konflikcie z innymi dyrektywy pragma (-OpenMP lub dostawcy rozszerzeń OpenMP) przy użyciu takich samych nazwach. Pozostała część dyrektywy jest zgodna z konwencjami standardów C i C++ dla dyrektywy kompilatora. W szczególności biały znak może służyć przed i po nim `#`, i czasami biały mogą być używane do oddzielania słów w dyrektywie. Przetworzone wstępnie tokeny po `#pragma omp` podlegają wymiana makra.
+Każda dyrektywa rozpoczyna się od `#pragma omp`, aby zmniejszyć prawdopodobieństwo konfliktu z innymi (rozszerzeniami non-OpenMP lub Vendor do OpenMP) dyrektywy pragma o tych samych nazwach. Pozostała część dyrektywy jest zgodna z konwencjami C i C++ standardami dla dyrektyw kompilatora. W szczególności można użyć białych znaków przed i po `#`i czasami do oddzielenia wyrazów w dyrektywie należy użyć białych znaków. Wstępne przetwarzanie tokenów po `#pragma omp` podlega wymianie makr.
 
-Dyrektywy jest rozróżniana wielkość liter. Kolejność wyświetlania klauzule w dyrektywach nie jest istotne. Klauzule na dyrektywy może się powtarzać, zgodnie z potrzebami, zgodnie z ograniczeniami wymienionych w opisie każdej klauzuli. Jeśli *liście zmiennych* pojawia się w klauzuli on muszą określać tylko zmienne. Tylko jeden *nazwa dyrektywy* może być określona dla dyrektywy.  Na przykład następująca dyrektywa nie jest dozwolone:
+W dyrektywach jest rozróżniana wielkość liter. Kolejność, w której klauzule pojawiają się w dyrektywach, nie jest istotna. Klauzule dotyczące dyrektyw mogą być powtarzane w razie potrzeby, zgodnie z ograniczeniami wymienionymi w opisie każdej klauzuli. Jeśli w klauzuli występuje *zmienna list* , musi ona określać tylko zmienne. Dla każdej dyrektywy można określić tylko jedną *nazwę dyrektywy* .  Na przykład następująca dyrektywa nie jest dozwolona:
 
 ```cpp
 /* ERROR - multiple directive names not allowed */
 #pragma omp parallel barrier
 ```
 
-OpenMP — dyrektywa ma zastosowanie do co najwyżej jeden poniższymi instrukcję, która musi być strukturalnego bloku.
+Dyrektywa OpenMP stosuje się do co najwyżej jednej instrukcji, która się powiedzie, która musi być blokiem strukturalnym.
 
-## <a name="22-conditional-compilation"></a>2.2 kompilacja warunkowa
+## <a name="22-conditional-compilation"></a>Kompilacja warunkowa 2,2
 
-`_OPENMP` Nazwa makra jest zdefiniowany przez implementacje CLS OpenMP jako stałej dziesiętnej *yyyymm*, który będzie stanowić rok i miesiąc specyfikacji zatwierdzone. To makro nie może być przedmiotem `#define` lub `#undef` dyrektywy preprocesora.
+Nazwa makra `_OPENMP` jest definiowana przez implementacje zgodne ze standardem OpenMP jako stała dziesiętna *yyyymm*, która będzie rok i miesiąc zatwierdzonej specyfikacji. To makro nie może być podmiotem `#define` ani dyrektywy przetwarzania wstępnego `#undef`.
 
 ```cpp
 #ifdef _OPENMP
@@ -42,129 +42,129 @@ iam = omp_get_thread_num() + index;
 #endif
 ```
 
-Jeśli dostawców zdefiniować rozszerzenia OpenMP, ich mogą określać dodatkowe wstępnie zdefiniowanych makr.
+Jeśli dostawcy definiują rozszerzenia OpenMP, mogą określić dodatkowe wstępnie zdefiniowane makra.
 
-## <a name="23-parallel-construct"></a>2.3 konstrukcja równoległa
+## <a name="23-parallel-construct"></a>2,3 konstrukcja równoległa
 
-Następująca dyrektywa definiuje równoległego regionu, czyli obszarem program, który ma być wykonane przez wiele wątków jednocześnie. Ta dyrektywa jest podstawowe konstrukcji, która rozpoczyna wykonywanie równoległe.
+Poniższa dyrektywa definiuje region równoległy, który jest regionem programu, który ma być wykonywany przez wiele wątków równolegle. Ta dyrektywa to podstawowa konstrukcja, która uruchamia wykonywanie równoległe.
 
 ```cpp
 #pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block
 ```
 
-*Klauzuli* jest jednym z następujących czynności:
+*Klauzula* ma jedną z następujących wartości:
 
-- `if(` *scalar-expression* `)`
-- `private(` *Lista zmiennych* `)`
-- `firstprivate(` *Lista zmiennych* `)`
+- `if(` *wyrażenia skalarnego* `)`
+- `private(` `)` *listy zmiennych*
+- `firstprivate(` `)` *listy zmiennych*
 - `default(shared | none)`
-- `shared(` *Lista zmiennych* `)`
-- `copyin(` *Lista zmiennych* `)`
-- `reduction(` *operator* `:` *liście zmiennych* `)`
-- `num_threads(` *wyrażenie całkowite* `)`
+- `shared(` `)` *listy zmiennych*
+- `copyin(` `)` *listy zmiennych*
+- *operator* `reduction(` `:`*liście zmiennych* `)`
+- `num_threads(` *wyrażenie typu integer* `)`
 
-Kiedy wątek uzyskuje się konstrukcja równoległa, zespół wątków jest tworzone, jeśli jest spełniony jeden z następujących przypadkach:
+Gdy wątek jest przyjdzie do konstrukcji równoległej, zespół wątków jest tworzony, jeśli jest spełniony jeden z następujących przypadków:
 
-- Nie `if` klauzula jest obecny.
-- `if` Wyrażenie ma wartość różną od zera.
+- Brak klauzuli `if`.
+- Wyrażenie `if` ma wartość różną od zera.
 
-Ten wątek staje się główny wątek zespołu, wprowadzając szereg wątek 0, i regionu równolegle uruchomić wszystkie wątki w zespole, łącznie z wątku głównego. Jeśli wartość `if` wyrażenie jest równe zeru, region jest serializowana.
+Ten wątek stał się głównym wątkiem zespołu, z numerem wątku równym 0, a wszystkie wątki w zespole, łącznie z wątkiem głównym, wykonują równolegle region. Jeśli wartość wyrażenia `if` jest równa zero, region jest serializowany.
 
-Aby określić liczbę wątków, które są wymagane, następujące reguły zostanie uwzględniony w kolejności. Pierwsza reguła, której warunek jest spełniony, zostaną zastosowane:
+Aby określić liczbę żądanych wątków, zostaną uznane następujące reguły. Pierwsza reguła, której warunek jest spełniony, zostanie zastosowana:
 
-1. Jeśli `num_threads` klauzula jest obecna, a następnie wartość wyrażenia typu całkowitego jest liczba wątków zażądano.
+1. Jeśli jest obecna klauzula `num_threads`, wartość wyrażenia Integer to liczba żądanych wątków.
 
-1. Jeśli `omp_set_num_threads` została wywołana funkcja biblioteki, a następnie wartość argumentu w wywołaniu ostatnio wykonywanych jest liczba wątków żądanie.
+1. Jeśli funkcja biblioteki `omp_set_num_threads` została wywołana, wartość argumentu w ostatnio wykonywanym wywołaniu jest liczbą żądanych wątków.
 
-1. Jeśli zmienna środowiskowa `OMP_NUM_THREADS` jest zdefiniowana, a następnie wartość tej zmiennej środowiskowej liczbę wątków, żądanie.
+1. Jeśli zmienna środowiskowa `OMP_NUM_THREADS` jest zdefiniowana, wartość tej zmiennej środowiskowej to liczba żądanych wątków.
 
-1. Jeśli żaden z powyższych metod jest używany, liczbę wątków, wymagane jest zdefiniowane w implementacji.
+1. Jeśli żadna z powyższych metod nie zostanie użyta, Liczba żądanych wątków jest definiowana przez implementację.
 
-Jeśli `num_threads` klauzula jest obecna, a następnie zastępuje ona liczbę wątków, żądane przez `omp_set_num_threads` funkcja biblioteki lub `OMP_NUM_THREADS` zmiennej środowiskowej tylko w przypadku równoległego regionu jest stosowany do. Później regionów równoległych nie ma wpływu na jej.
+Jeśli klauzula `num_threads` jest obecna, zastępuje liczbę wątków żądanych przez funkcję biblioteki `omp_set_num_threads` lub zmienną środowiskową `OMP_NUM_THREADS` tylko dla regionu równoległego, do którego jest stosowana. Nie ma to wpływu na więcej regionów równoległych.
 
-Liczba wątków, które są wykonywane równoległego regionu również zależy od tego, czy włączono dynamiczne Dostosowywanie liczby wątków. Wyłączenie dynamiczne Dostosowywanie żądana liczba wątków będzie wykonywał równoległego regionu. Po włączeniu dynamicznego dostosowania żądana liczba wątków jest maksymalna liczba wątków, które może zostać wykonany równoległego regionu.
+Liczba wątków, które wykonują równoległy region, zależy również od tego, czy włączono dynamiczne dopasowanie liczby wątków. Jeśli korekta dynamiczna jest wyłączona, żądana liczba wątków będzie wykonywać równoległy region. Jeśli dopasowanie dynamiczne jest włączone, żądana liczba wątków to maksymalna liczba wątków, które mogą wykonywać równoległy region.
 
-Jeśli równoległego regionu podczas dynamicznego dostosowania liczby wątków jest wyłączona, a liczba wątków żądany dla równoległego regionu jest większa niż liczba, która może dostarczyć systemu środowiska wykonawczego, jest zachowanie programu zdefiniowane w implementacji. Implementacja może na przykład przerywa wykonywanie programu, lub może serializować, równoległego regionu.
+Jeśli zostanie wykryty region równoległy, gdy dynamiczne dopasowanie liczby wątków jest wyłączone, a liczba wątków żądana dla regionu równoległego jest większa niż liczba, którą system może dostarczyć, zachowanie programu jest zdefiniowana w implementacji. Implementacja może na przykład przerwać wykonywanie programu lub serializować region równoległy.
 
-`omp_set_dynamic` Funkcja biblioteki i `OMP_DYNAMIC` zmiennej środowiskowej można włączać i wyłączać dynamiczne Dostosowywanie liczby wątków.
+Funkcja `omp_set_dynamic` Library i `OMP_DYNAMIC` zmienna środowiskowa mogą służyć do włączania i wyłączania dynamicznego dostosowywania liczby wątków.
 
-Liczba procesorów fizycznych, w rzeczywistości hostingu wątki w danym momencie jest zdefiniowane w implementacji. Po utworzeniu liczbę wątków w zespole pozostają stałe na czas trwania tego równoległego regionu. Można zmienić, jawnie przez użytkownika lub automatycznie przez system środowiska wykonawczego z jednego regionu równoległego do innego.
+Liczba procesorów fizycznych w rzeczywistości hostowania wątków w danym momencie jest definiowana przez implementację. Po utworzeniu liczba wątków w zespole pozostaje stała na czas trwania tego regionu równoległego. Można go zmienić jawnie przez użytkownika lub automatycznie przez system czasu wykonywania z jednego regionu równoległego na inny.
 
-Instrukcje zawarte w obrębie zakresu dynamicznego równoległego regionu są wykonywane przez poszczególne wątki, a każdy wątek może wykonać ścieżkę instrukcji, która różni się od innych wątków. Dyrektywy napotkano poza zakres leksykalne równoległego regionu są określane jako oddzielony dyrektywy.
+Instrukcje zawarte w dynamicznym zakresie regionu równoległego są wykonywane przez każdy wątek, a każdy wątek może wykonać ścieżkę do instrukcji, które różnią się od innych wątków. Dyrektywy napotkane poza leksykalnym zakresem regionu równoległego są określane jako dyrektywy oddzielone.
 
-Brak dorozumianych barierę na końcu równoległego regionu. Główny wątek zespół kontynuuje wykonywanie na końcu równoległego regionu.
+Istnieje implikowana bariera na końcu równoległego regionu. Tylko wątek główny zespołu kontynuuje wykonywanie na końcu równoległego regionu.
 
-Jeśli wątek w zespole wykonywania równoległego regionu napotka inna konstrukcja równoległa, powoduje to utworzenie nowego zespołu i staje się główną tego nowego zespołu. Zagnieżdżone regionów równoległych są serializowane domyślnie. Co w efekcie domyślnie zagnieżdżonych równoległego regionu jest wykonywana przez zespół składa się z jednego wątku. Domyślne zachowanie może zostać zmieniona przez przy użyciu albo funkcja biblioteki uruchomieniowej `omp_set_nested` lub zmiennej środowiskowej `OMP_NESTED`. Jednak liczbę wątków w zespołach, które są wykonywane zagnieżdżonych równoległego regionu jest zdefiniowane w implementacji.
+Jeśli wątek w zespole wykonujący równoległy region napotka kolejną konstrukcję równoległą, tworzy nowy zespół i stał się jego wzorcem. Zagnieżdżone regiony równoległe są domyślnie serializowane. W związku z tym domyślnie zagnieżdżony region równoległy jest wykonywany przez zespół składający się z jednego wątku. Zachowanie domyślne można zmienić przy użyciu funkcji biblioteki środowiska uruchomieniowego `omp_set_nested` lub zmiennej środowiskowej `OMP_NESTED`. Jednak liczba wątków w zespole, które wykonują zagnieżdżony region równoległy, jest definiowana przez implementację.
 
-Ograniczenia `parallel` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `parallel` są następujące:
 
-- Co najwyżej jeden `if` klauzula może występować w dyrektywie.
+- Co najwyżej jedna klauzula `if` może pojawić się w dyrektywie.
 
-- Jest nieokreślony, czy po dowolnej stronie efekty w przypadku wyrażenia lub `num_threads` występować wyrażenie.
+- Nie określono, czy występują efekty uboczne wewnątrz wyrażenia IF lub `num_threads`.
 
-- A `throw` wykonywana wewnątrz równoległego regionu musi spowodować wykonanie można wznowić w ramach dynamicznej stopnia tego samego bloku ze strukturą, a musi być przechwycony przez tego samego wątku, który wygenerował wyjątek.
+- `throw` wykonywane w ramach równoległego regionu musi spowodować wznowienie wykonywania w dynamicznym zakresie tego samego bloku strukturalnego i musi ono zostać przechwycone przez ten sam wątek, który wywołał wyjątek.
 
-- Tylko jeden `num_threads` klauzula może występować w dyrektywie. `num_threads` Wyrażenie jest szacowana poza kontekstem równoległego regionu, a musi być dodatnią liczbą całkowitą.
+- W dyrektywie mogą występować tylko pojedyncze klauzule `num_threads`. Wyrażenie `num_threads` jest oceniane poza kontekstem równoległego regionu i musi być szacowane do dodatniej wartości całkowitej.
 
-- Kolejność obliczania `if` i `num_threads` klauzule jest nieokreślona.
+- Nie określono kolejności obliczania klauzul `if` i `num_threads`.
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- `private`, `firstprivate`, `default`, `shared`, `copyin`, i `reduction` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) zmiennej środowiskowej
-- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkcja biblioteki
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) zmiennej środowiskowej
-- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) — funkcja
-- [OMP_NESTED](4-environment-variables.md#44-omp_nested) zmiennej środowiskowej
-- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) funkcja biblioteki
+- `private`, `firstprivate`, `default`, `shared`, `copyin`i `reduction` klauzule ([sekcja 2.7.2](#272-data-sharing-attribute-clauses))
+- Zmienna środowiskowa [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
+- Funkcja biblioteki [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- Zmienna środowiskowa [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
+- Funkcja [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)
+- Zmienna środowiskowa [OMP_NESTED](4-environment-variables.md#44-omp_nested)
+- Funkcja biblioteki [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)
 
-## <a name="24-work-sharing-constructs"></a>2.4 konstrukcje podziału pracy
+## <a name="24-work-sharing-constructs"></a>2,4 konstrukcje udostępniania pracy
 
-Konstrukcji podziału pracy dystrybuuje wykonywania skojarzoną instrukcję wśród członków zespołu, napotykane go. Dyrektyw podziału pracy nie uruchamiaj nowe wątki, i nie bez problemu dorozumianych przy uruchamianiu konstrukcji podziału pracy.
+Konstrukcja udostępniania pracy dystrybuuje wykonywanie skojarzonej instrukcji wśród członków zespołu, który go wystąpi. Dyrektywy udostępniania pracy nie uruchamiają nowych wątków i nie ma implikowanej bariery dla wpisu do konstrukcji udostępniania pracy.
 
-Tworzy sekwencję podziału pracy i `barrier` dyrektywy napotkano musi być taka sama dla każdego wątku w zespole.
+Kolejność elementów konstrukcji udostępniania pracy i `barrier`ych dyrektyw musi być taka sama dla każdego wątku w zespole.
 
-OpenMP definiuje następujące konstrukcje podziału pracy i te konstrukcje są opisane w kolejnych sekcjach:
+OpenMP definiuje następujące konstrukcje podziału pracy, a konstrukcje te są opisane w poniższych sekcjach:
 
-- [Aby uzyskać](#241-for-construct) — dyrektywa
-- [sekcje](#242-sections-construct) — dyrektywa
-- [pojedynczy](#243-single-construct) — dyrektywa
+- [dla](#241-for-construct) dyrektywy
+- sections [— dyrektywa](#242-sections-construct)
+- [Single](#243-single-construct) — dyrektywa
 
-### <a name="241-for-construct"></a>2.4.1 konstrukcja for
+### <a name="241-for-construct"></a>2.4.1 dla konstrukcji
 
-`for` Dyrektywy identyfikuje iteracyjne konstrukcji podziału pracy określający, że iteracje pętli skojarzone będą wykonywane równolegle. Iteracje `for` pętli są rozmieszczone na wątki, które już istnieją w zespołach, wykonywanie równoległe konstrukcji, która wiąże. Składnia `for` konstrukcja jest w następujący sposób:
+Dyrektywa `for` identyfikuje iteracyjną konstrukcję udostępniania pracy, która określa, że iteracje skojarzonej pętli będą wykonywane równolegle. Iteracje pętli `for` są dystrybuowane między wątkami, które już istnieją w zespole wykonujących równoległą konstrukcję, z którą jest powiązany. Składnia konstrukcji `for` jest następująca:
 
 ```cpp
 #pragma omp for [clause[[,] clause] ... ] new-line for-loop
 ```
 
-Klauzula jest jedną z następujących czynności:
+Klauzula ma jedną z następujących wartości:
 
-- `private(` *Lista zmiennych* `)`
-- `firstprivate(` *Lista zmiennych* `)`
-- `lastprivate(` *Lista zmiennych* `)`
-- `reduction(` *operator* `:` *liście zmiennych* `)`
+- `private(` `)` *listy zmiennych*
+- `firstprivate(` `)` *listy zmiennych*
+- `lastprivate(` `)` *listy zmiennych*
+- *operator* `reduction(` `:` *liście zmiennych* `)`
 - `ordered`
 - `schedule(` *rodzaj* [`,` *chunk_size*] `)`
 - `nowait`
 
-`for` Dyrektywy stosuje ograniczenia dla struktury odpowiadającego `for` pętli. W szczególności odpowiednich `for` pętli musi mieć kształtu kanoniczny:
+Dyrektywa `for` umieszcza ograniczenia dotyczące struktury odpowiedniej pętli `for`. W tym celu odpowiednia pętla `for` musi mieć kształt kanoniczny:
 
-`for (` *wyrażenie inicjowania* `;` *b logiczne op var* `;` *incr — wyrażenie* `)`
+`for (` *init-expr* `;` *var Logical-op b* `;` *incr-Expr* `)`
 
-*init-expr*<br/>
-Jeden z poniższych:
+*init — wyrażenie*<br/>
+Jeden z poniższych programów:
 
 - *var* = *lb*
-- *Typ liczby całkowitej var* = *modułu równoważenia obciążenia*
+- *var typu integer* = *lb*
 
-*incr-expr*<br/>
-Jeden z poniższych:
+*Incr — wyrażenie*<br/>
+Jeden z poniższych programów:
 
 - `++` *var*
-- *var* `++`
+- *wariancja* `++`
 - `--` *var*
-- *var* `--`
+- *wariancja* `--`
 - *var* `+=` *incr*
 - *var* `-=` *incr*
 - *var* `=` *var* `+` *incr*
@@ -172,68 +172,68 @@ Jeden z poniższych:
 - *var* `=` *var* `-` *incr*
 
 *var*<br/>
-Zmienna liczba całkowita ze znakiem. Jeśli ta zmienna, w przeciwnym razie mogłyby być udostępniane, niejawnie staje się prywatnych na czas trwania `for`. Nie należy modyfikować tej zmiennej w treści `for` instrukcji. Jeśli nie określono zmiennej `lastprivate`, jego wartość po pętli jest nieokreślony.
+Zmienna ze znakiem liczby całkowitej. Jeśli ta zmienna będzie w inny sposób udostępniona, zostanie ona niejawnie przeprowadzona jako prywatna na czas trwania `for`. Nie należy modyfikować tej zmiennej w treści instrukcji `for`. O ile zmienna nie jest określona `lastprivate`, jej wartość po pętli jest nieokreślona.
 
-*logical-op*<br/>
-Jeden z poniższych:
+*koniunkcja logiczna*<br/>
+Jeden z poniższych programów:
 
 - `<`
 - `<=`
 - `>`
 - `>=`
 
-*lb*, *b*, i *incr*<br>
-Pętla wyrażeń niezmiennej liczby całkowitej. Jest brak synchronizacji podczas obliczania wartości tych wyrażeń, dlatego wszelkie ocenianą efekty uboczne generują nieokreślone wyniki.
+*lb*, *b*i *incr*<br>
+Wyrażenia niezmiennej liczby całkowitej w pętli. Nie ma synchronizacji podczas obliczania tych wyrażeń, dlatego wszelkie ocenione efekty uboczne powodują wygenerowanie nieokreślonych wyników.
 
-Forma kanoniczna umożliwia liczby iteracji pętli, które ma zostać obliczony przy uruchamianiu pętli. To obliczenie jest wykonywane przy użyciu wartości w typie *var*, po promocji typu całkowitego. W szczególności jeśli wartość *b* `-` *lb* `+` *incr* nie może być przedstawiony w tym typu, wynik jest nieokreślony. Dodatkowo Jeśli *logiczne op* jest `<` lub `<=`, następnie *incr expr* mogą powodować *var* zwiększyć w każdej iteracji pętli.   Jeśli *logiczne op* jest `>` lub `>=`, następnie *incr expr* mogą powodować *var* można pobrać mniejsze w każdej iteracji pętli.
+Forma kanoniczna umożliwia obliczenia liczby iteracji pętli we wpisie do pętli. To obliczenie jest wykonywane z wartościami w typie *var*po promocjach całkowitych. W szczególności jeśli wartość *b* `-` *lb* `+` *incr* nie może być reprezentowana w tym typie, wynik jest nieokreślony. Dodatkowo, jeśli wartość *logiczna-op* jest `<` lub `<=`, *incr-Expr* musi spowodować, że w każdej iteracji pętli należy zwiększyć *wariancję* .   Jeśli wartość *logiczna-op* jest `>` lub `>=`, *incr-Expr* musi spowodować, że *WARIANCJA* będzie mniejsza dla każdej iteracji pętli.
 
-`schedule` Klauzula określa sposób iteracje `for` pętli są podzielone między wątki zespołu. Poprawność programu nie może zależeć od których wątek wykonuje konkretnej iteracji. Wartość *chunk_size*, jeśli określony, musi być wyrażeniem niezmiennej całkowitą pętli z wartością dodatnią. Jest brak synchronizacji podczas obliczania wyrażenia, dlatego wszelkie ocenianą efekty uboczne generują nieokreślone wyniki. Harmonogram *rodzaj* może być jedną z następujących wartości:
+Klauzula `schedule` określa, jak iteracje pętli `for` są podzielone między wątki zespołu. Poprawność programu nie może zależeć od tego, który wątek wykonuje określoną iterację. Wartość *chunk_size*, jeśli określona, musi być wyrażeniem liczby całkowitej w pętli o wartości dodatniej. Nie ma synchronizacji podczas obliczania tego wyrażenia, dlatego wszystkie ocenione efekty uboczne powodują powstanie nieokreślonych wyników. *Typ* harmonogramu może być jedną z następujących wartości:
 
-Tabela 2-1: `schedule` klauzuli *rodzaj* wartości
+Tabela 2-1: wartości *typu* klauzuli `schedule`
 
 |||
 |-|-|
-|static|Gdy `schedule(static,` *chunk_size* `)` określono iteracji są podzielone na fragmenty o rozmiarze określonym przez *chunk_size*. Fragmenty są statycznie przypisane do wątków w zespole w okrężne zgodnie z kolejnością liczba wątków. Gdy nie *chunk_size* określono miejsca iteracji jest podzielony na fragmenty, które są w przybliżeniu taki sam rozmiar, z jednym fragmencie przypisane do każdego wątku.|
-|dynamic|Gdy `schedule(dynamic,` *chunk_size* `)` określono iteracje są podzielone na szereg fragmenty, zawierających *chunk_size* iteracji. Każdy fragment jest przypisany do wątku, który oczekuje na przydzielenie. Wątek wykonuje fragmentów iteracji, a następnie czeka na przypisania dalej, dopóki nie pozostaną bez fragmentów do przypisania. Ostatni fragment do przypisania, może mieć mniejszej liczby iteracji. Gdy nie *chunk_size* jest określony, jego wartość domyślna to 1.|
-|krok po kroku|Gdy `schedule(guided,` *chunk_size* `)` określono iteracje są przypisane do wątków we fragmentach, z malejącymi rozmiarów. Po zakończeniu jego przypisane fragmentów iteracji wątku go jest dynamicznie przypisywany innym fragmencie, dopóki nie pozostanie. Aby uzyskać *chunk_size* 1, rozmiar każdego fragmentu jest około liczby iteracji nieprzypisane dzielona przez liczbę wątków. Te rozmiary prawie wykładniczo zmniejszyć do 1. Dla *chunk_size* wartością *k* większy niż 1, rozmiary zmniejszyć prawie wykładniczo do *k*, z tą różnicą, że ostatni fragment może być mniejsza niż *k* iteracji. Gdy nie *chunk_size* jest określony, jego wartość domyślna to 1.|
-|środowisko uruchomieniowe|Gdy `schedule(runtime)` jest określony, decyzji dotyczących planowania jest odroczone do czasu środowiska uruchomieniowego. Harmonogram *rodzaj* i rozmiar fragmentów można wybrać w czasie wykonywania przez ustawienie zmiennej środowiskowej `OMP_SCHEDULE`. Jeśli ta zmienna środowiskowa nie jest ustawiona, wynikowy harmonogram jest zdefiniowane w implementacji. Gdy `schedule(runtime)` jest określony, *chunk_size* nie może być określony.|
+|static|Gdy `)` jest określony `schedule(static,` *chunk_size* , iteracje są dzielone na fragmenty rozmiaru określonego przez *chunk_size*. Fragmenty są statycznie przypisywane do wątków w zespole w sposób okrężny w kolejności numer wątku. Gdy nie określono *chunk_size* , przestrzeń iteracji jest dzielona na fragmenty, które są w przybliżeniu równym rozmiarze, z jednym fragmentem przypisanym do każdego wątku.|
+|dynamic|Gdy `)` jest określony `schedule(dynamic,` *chunk_size* , iteracje są dzielone na serię fragmentów, z których każda zawiera *chunk_size* iteracje. Każdy fragment jest przypisywany do wątku, który oczekuje na przypisanie. Wątek wykonuje fragment iteracji, a następnie czeka na następne przypisanie, dopóki nie zostaną przypisane żadne fragmenty. Ostatni fragment, który ma zostać przypisany, może mieć mniejszą liczbę iteracji. Gdy nie jest określony żaden *chunk_size* , wartość domyślna to 1.|
+|z przewodnikiem|Gdy `)` jest określony `schedule(guided,` *chunk_size* , iteracje są przypisywane do wątków w fragmentach o zmniejszeniu rozmiarów. Gdy wątek kończy przypisane fragmenty iteracji, zostaje dynamicznie przypisany kolejny fragment, dopóki nie pozostanie pozostawiony. W przypadku *chunk_size* 1 rozmiar każdego fragmentu jest w przybliżeniu liczbą nieprzypisanych iteracji podzieloną przez liczbę wątków. Rozmiary te zmniejszają się niemal wykładniczo do 1. Dla *chunk_size* o wartości *k* większej niż 1, rozmiary zmniejszają się niemal wykładniczo do *k*, z tą różnicą, że ostatni fragment może mieć mniej niż *k* iteracji. Gdy nie jest określony żaden *chunk_size* , wartość domyślna to 1.|
+|środowisko uruchomieniowe|W przypadku określenia `schedule(runtime)` decyzja dotycząca planowania jest odroczona do czasu wykonania. *Typ* harmonogramu i rozmiar fragmentów mogą być wybierane w czasie wykonywania przez ustawienie zmiennej środowiskowej `OMP_SCHEDULE`. Jeśli ta zmienna środowiskowa nie jest ustawiona, wynikający z nich harmonogram jest zdefiniowany przez implementację. Jeśli określono `schedule(runtime)`, *chunk_size* nie może być określony.|
 
-W przypadku braku jawnie zdefiniowanych `schedule` klauzuli, domyślnym `schedule` jest zdefiniowane w implementacji.
+W przypadku braku jawnie zdefiniowanej klauzuli `schedule` domyślny `schedule` jest zdefiniowany przez implementację.
 
-Program zgodny z OpenMP nie należy polegać na konkretny harmonogram wykonywania poprawne. Program nie należy traktować zgodnie z harmonogramem *rodzaj* odpowiadających dokładnie opis podanej powyżej, ponieważ istnieje możliwość zmiany w implementacji tego samego harmonogramu *rodzaj* między różne kompilatory. Opisy może służyć do wybierz harmonogram, który jest odpowiedni dla danej sytuacji.
+Program zgodny ze standardem OpenMP nie powinien opierać się na określonym harmonogramie do prawidłowego wykonania. Program nie powinien opierać się na *rodzaju* harmonogramu, który jest dokładnie zgodny z opisem podanym powyżej, ponieważ istnieje możliwość, że istnieją różnice w implementacjach tego samego *rodzaju* harmonogramu w różnych kompilatorach. Opisy mogą służyć do wybierania harmonogramu właściwego dla konkretnej sytuacji.
 
-`ordered` Klauzuli musi być obecny, kiedy `ordered` dyrektywy powiązać `for` konstruowania.
+Klauzula `ordered` musi być obecna, gdy dyrektywy `ordered` powiążą się z konstrukcją `for`.
 
-Na końcu ma niejawne barierę `for` konstruowania, chyba że `nowait` jest określona klauzula.
+Istnieje niejawna bariera na końcu konstrukcji `for`, chyba że określono klauzulę `nowait`.
 
-Ograniczenia `for` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `for` są następujące:
 
-- `for` Pętli musi być strukturalnego bloku, a ponadto, jego wykonanie nie musi się kończyć znakiem `break` instrukcji.
+- Pętla `for` musi być blokiem strukturalnym, a ponadto jej wykonanie nie może zostać zakończone przez instrukcję `break`.
 
-- Wartości pętli kontrolować wyrażeń `for` pętli skojarzony `for` dyrektywa musi być taka sama dla wszystkich wątków w zespole.
+- Wartości wyrażeń sterujących pętlą `for` pętla skojarzona z dyrektywą `for` musi być taka sama dla wszystkich wątków w zespole.
 
-- `for` Zmienna iteracji pętli musi mieć typ liczby całkowitej ze znakiem.
+- Zmienna iteracji pętli `for` musi mieć typ liczba całkowita ze znakiem.
 
-- Tylko jeden `schedule` klauzula może występować na `for` dyrektywy.
+- W dyrektywie `for` mogą występować tylko pojedyncze klauzule `schedule`.
 
-- Tylko jeden `ordered` klauzula może występować na `for` dyrektywy.
+- W dyrektywie `for` mogą występować tylko pojedyncze klauzule `ordered`.
 
-- Tylko jeden `nowait` klauzula może występować na `for` dyrektywy.
+- W dyrektywie `for` mogą występować tylko pojedyncze klauzule `nowait`.
 
-- Jest nieokreślony, jeśli lub jak często wpływ dowolnej stronie w obrębie *chunk_size*, *lb*, *b*, lub *incr* wyrażenia wystąpić.
+- Nie określono, jeśli lub jak często występują efekty uboczne w wyrażeniach *chunk_size*, *lb*, *b*lub *incr* .
 
-- Wartość *chunk_size* wyrażenie musi być taka sama dla wszystkich wątków w zespole.
+- Wartość wyrażenia *chunk_size* musi być taka sama dla wszystkich wątków w zespole.
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- `private`, `firstprivate`, `lastprivate`, i `reduction` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) zmiennej środowiskowej
-- [uporządkowane](#266-ordered-construct) konstruowania
-- [Harmonogram](d-using-the-schedule-clause.md) — klauzula
+- klauzule `private`, `firstprivate`, `lastprivate`i `reduction` ([sekcja 2.7.2](#272-data-sharing-attribute-clauses))
+- Zmienna środowiskowa [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)
+- Konstrukcja [uporządkowana](#266-ordered-construct)
+- klauzula [Schedule](d-using-the-schedule-clause.md)
 
-### <a name="242-sections-construct"></a>2.4.2 sekcje konstrukcja
+### <a name="242-sections-construct"></a>2.4.2 — Konstrukcja sekcji
 
-`sections` Dyrektywy identyfikuje noniterative konstrukcji podziału pracy, który określa zestaw konstrukcji, które są podzielone między wątkami w zespole. Każda sekcja jest wykonywane raz przez wątek w zespole. Składnia `sections` dyrektywy jest następująca:
+Dyrektywa `sections` identyfikuje nieiteracyjną konstrukcję udostępniania pracy, która określa zestaw konstrukcji, które mają być podzielone między wątki w zespole. Każda sekcja jest wykonywana raz przez wątek w zespole. Składnia dyrektywy `sections` jest następująca:
 
 ```cpp
 #pragma omp sections [clause[[,] clause] ...] new-line
@@ -245,80 +245,80 @@ Ograniczenia `for` dyrektywy jest następująca:
 }
 ```
 
-Klauzula jest jedną z następujących czynności:
+Klauzula ma jedną z następujących wartości:
 
-- `private(` *Lista zmiennych* `)`
-- `firstprivate(` *Lista zmiennych* `)`
-- `lastprivate(` *Lista zmiennych* `)`
-- `reduction(` *operator* `:` *liście zmiennych* `)`
+- `private(` `)` *listy zmiennych*
+- `firstprivate(` `)` *listy zmiennych*
+- `lastprivate(` `)` *listy zmiennych*
+- *operator* `reduction(` `:`*liście zmiennych* `)`
 - `nowait`
 
-Każda sekcja jest poprzedzony `section` dyrektywy, mimo że `section` dyrektywa jest opcjonalna w pierwszej sekcji. `section` Dyrektywy musi znajdować się w obrębie zakresu leksykalne `sections` dyrektywy. Na końcu ma niejawne barierę `sections` konstruowania, chyba że `nowait` jest określony.
+Każda sekcja jest poprzedzona dyrektywą `section`, chociaż dyrektywa `section` jest opcjonalna dla pierwszej sekcji. Dyrektywy `section` muszą znajdować się w zakresie leksykalnym dyrektywy `sections`. Na końcu konstrukcji `sections` istnieje niejawna bariera, chyba że określono `nowait`.
 
-Ograniczenia `sections` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `sections` są następujące:
 
-- A `section` dyrektywy nie musi znajdować się poza zakres leksykalne `sections` dyrektywy.
+- Dyrektywa `section` nie może występować poza leksykalnym zakresem dyrektywy `sections`.
 
-- Tylko jeden `nowait` klauzula może występować na `sections` dyrektywy.
+- W dyrektywie `sections` mogą występować tylko pojedyncze klauzule `nowait`.
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- `private`, `firstprivate`, `lastprivate`, i `reduction` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
+- klauzule `private`, `firstprivate`, `lastprivate`i `reduction` ([sekcja 2.7.2](#272-data-sharing-attribute-clauses))
 
-### <a name="243-single-construct"></a>2.4.3 konstrukcja single
+### <a name="243-single-construct"></a>2.4.3 pojedyncza konstrukcja
 
-`single` Dyrektywy identyfikuje konstrukcja, która określa, czy skojarzony ze strukturalnego bloku jest wykonywana przez tylko jeden wątek w zespole (niekoniecznie głównego wątku). Składnia `single` dyrektywy jest następująca:
+Dyrektywa `single` identyfikuje konstrukcję, która określa, że skojarzony blok strukturalny jest wykonywany przez tylko jeden wątek w zespole (niekoniecznie wątek główny). Składnia dyrektywy `single` jest następująca:
 
 ```cpp
 #pragma omp single [clause[[,] clause] ...] new-linestructured-block
 ```
 
-Klauzula jest jedną z następujących czynności:
+Klauzula ma jedną z następujących wartości:
 
-- `private(` *Lista zmiennych* `)`
-- `firstprivate(` *Lista zmiennych* `)`
-- `copyprivate(` *Lista zmiennych* `)`
+- `private(` `)` *listy zmiennych*
+- `firstprivate(` `)` *listy zmiennych*
+- `copyprivate(` `)` *listy zmiennych*
 - `nowait`
 
-Niejawne problemu po `single` konstruowania, chyba że `nowait` jest określona klauzula.
+Istnieje niejawna bariera po konstrukcji `single`, chyba że określono klauzulę `nowait`.
 
-Ograniczenia `single` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `single` są następujące:
 
-- Tylko jeden `nowait` klauzula może występować na `single` dyrektywy.
-- `copyprivate` Nie można używać klauzuli z `nowait` klauzuli.
+- W dyrektywie `single` mogą występować tylko pojedyncze klauzule `nowait`.
+- Klauzula `copyprivate` nie może być używana z klauzulą `nowait`.
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- `private`, `firstprivate`, i `copyprivate` klauzule ([sekcji 2.7.2](#272-data-sharing-attribute-clauses))
+- `private`, `firstprivate`i `copyprivate` klauzule ([sekcja 2.7.2](#272-data-sharing-attribute-clauses))
 
-## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 połączone równoległe konstrukcje podziału pracy
+## <a name="25-combined-parallel-work-sharing-constructs"></a>2,5 połączone równoległe konstrukcje podziału pracy
 
-Połączone równoległe konstrukcje podziału pracy to skróty do określania równoległego regionu, który ma tylko jedną konstrukcji podziału pracy. Semantyka te dyrektywy są takie same, jak jawne określenie `parallel` dyrektywy następuje pojedynczy konstrukcji podziału pracy.
+Połączone równoległe konstrukcje podziału pracy to skróty umożliwiające określenie regionu równoległego, który ma tylko jedną konstrukcję do udostępniania. Semantyka tych dyrektyw jest taka sama jak jawne określenie dyrektywy `parallel`, po której następuje jedna konstrukcja udostępniania pracy.
 
 W poniższych sekcjach opisano połączone równoległe konstrukcje podziału pracy:
 
-- [równoległe w](#251-parallel-for-construct) — dyrektywa
-- [sekcji równoległych](#252-parallel-sections-construct) — dyrektywa
+- [Parallel dla](#251-parallel-for-construct) dyrektywy
+- dyrektywy [Parallel](#252-parallel-sections-construct) sections
 
-### <a name="251-parallel-for-construct"></a>2.5.1 konstrukcja równoległa
+### <a name="251-parallel-for-construct"></a>2.5.1 Parallel dla konstrukcji
 
-`parallel for` Dyrektywa jest skrót `parallel` region, który zawiera tylko jeden `for` dyrektywy. Składnia `parallel for` dyrektywy jest następująca:
+Dyrektywa `parallel for` to skrót do regionu `parallel`, który zawiera tylko jedną dyrektywę `for`. Składnia dyrektywy `parallel for` jest następująca:
 
 ```cpp
 #pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
 ```
 
-Ta dyrektywa zezwala na wszystkie klauzule `parallel` dyrektywy i `for` dyrektywy, z wyjątkiem `nowait` klauzuli przy użyciu identycznych znaczenie i ograniczeń. Semantyka jest taka sama jak jawne określenie `parallel` dyrektywy bezpośrednio następuje `for` dyrektywy.
+Niniejsza dyrektywa zezwala na wszystkie klauzule `parallel` dyrektywy i dyrektywy `for`, z wyjątkiem klauzuli `nowait`, z identycznymi znaczeniami i ograniczeniami. Semantyka jest taka sama jak jawnie Określanie dyrektywy `parallel` bezpośrednio po niej po dyrektywie `for`.
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- [równoległe](#23-parallel-construct) — dyrektywa
-- [Aby uzyskać](#241-for-construct) — dyrektywa
+- [Parallel](#23-parallel-construct) — dyrektywa
+- [dla](#241-for-construct) dyrektywy
 - [Klauzule atrybutu danych](#272-data-sharing-attribute-clauses)
 
-### <a name="252-parallel-sections-construct"></a>2.5.2 konstrukcja sekcji równoległych
+### <a name="252-parallel-sections-construct"></a>Konstrukcja równoległych sekcji 2.5.2
 
-`parallel sections` Postaci skrótów zapewnia dyrektywa określająca `parallel` regionem, który ma tylko jeden `sections` dyrektywy. Semantyka jest taka sama jak jawne określenie `parallel` dyrektywy bezpośrednio następuje `sections` dyrektywy. Składnia `parallel sections` dyrektywy jest następująca:
+Dyrektywa `parallel sections` zawiera skrót do określenia regionu `parallel`, który ma tylko jedną `sections`ą dyrektywę. Semantyka jest taka sama jak jawnie Określanie dyrektywy `parallel` bezpośrednio po niej po dyrektywie `sections`. Składnia dyrektywy `parallel sections` jest następująca:
 
 ```cpp
 #pragma omp parallel sections  [clause[[,] clause] ...] new-line
@@ -330,55 +330,55 @@ Ta dyrektywa zezwala na wszystkie klauzule `parallel` dyrektywy i `for` dyrektyw
 }
 ```
 
-*Klauzuli* może być jedną z klauzul zaakceptowane przez `parallel` i `sections` dyrektyw, z wyjątkiem `nowait` klauzuli.
+*Klauzula* może być jedną z klauzul przyjętych przez `parallel` i `sections` dyrektywy, z wyjątkiem klauzuli `nowait`.
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- [równoległe](#23-parallel-construct) — dyrektywa
-- [sekcje](#242-sections-construct) — dyrektywa
+- [Parallel](#23-parallel-construct) — dyrektywa
+- sections [— dyrektywa](#242-sections-construct)
 
-## <a name="26-master-and-synchronization-directives"></a>2.6 dyrektywy głównego i synchronizacji
+## <a name="26-master-and-synchronization-directives"></a>2,6 dyrektywy dotyczące wzorca i synchronizacji
 
 W poniższych sekcjach opisano:
 
-- [główny](#261-master-construct) konstruowania
-- [krytyczne](#262-critical-construct) konstruowania
+- Konstrukcja [główna](#261-master-construct)
+- Konstrukcja [krytyczna](#262-critical-construct)
 - [bariera](#263-barrier-directive) — dyrektywa
-- [Atomic](#264-atomic-construct) konstruowania
+- Konstrukcja [niepodzielna](#264-atomic-construct)
 - [Flush](#265-flush-directive) — dyrektywa
-- [uporządkowane](#266-ordered-construct) konstruowania
+- Konstrukcja [uporządkowana](#266-ordered-construct)
 
-### <a name="261-master-construct"></a>2.6.1, konstrukcja master
+### <a name="261-master-construct"></a>Tworzenie głównej konstrukcji
 
-`master` Dyrektywy identyfikuje konstrukcja, która określa ze strukturą blok, który jest wykonywany przez główny wątek zespołu. Składnia `master` dyrektywy jest następująca:
+Dyrektywa `master` identyfikuje konstrukcję, która określa blok strukturalny, który jest wykonywany przez wątek główny zespołu. Składnia dyrektywy `master` jest następująca:
 
 ```cpp
 #pragma omp master new-linestructured-block
 ```
 
-Inne wątki w zespole nie wykonać skojarzone ze strukturalnego bloku. Bez problemu dorozumianych na wpis do lub wyjście z konstrukcja master nie istnieje.
+Inne wątki w zespole nie wykonują skojarzonego bloku strukturalnego. Brak implikowanej bariery w przypadku wejścia lub wyjścia z konstrukcji głównej.
 
-### <a name="262-critical-construct"></a>2.6.2, konstrukcja critical
+### <a name="262-critical-construct"></a>Konstrukcja krytyczna 2.6.2
 
-`critical` Dyrektywy identyfikuje konstrukcja, która ogranicza wykonywania skojarzone ze strukturalnego bloku do pojedynczego wątku w danym momencie. Składnia `critical` dyrektywy jest następująca:
+Dyrektywa `critical` identyfikuje konstrukcję ograniczającą wykonywanie skojarzonego bloku strukturalnego do pojedynczego wątku w danym momencie. Składnia dyrektywy `critical` jest następująca:
 
 ```cpp
 #pragma omp critical [(name)]  new-linestructured-block
 ```
 
-Opcjonalny *nazwa* może służyć do identyfikowania krytyczne regionu. Identyfikatory używane do identyfikowania krytyczne region mają powiązania zewnętrzne i znajdują się w przestrzeni nazw, który jest oddzielony od przestrzeni nazw używanych przez etykiety, tagi, członków i zwykłymi identyfikatorami.
+Opcjonalna *Nazwa* może służyć do identyfikowania regionu krytycznego. Identyfikatory używane do identyfikowania regionu krytycznego mają połączenie zewnętrzne i znajdują się w przestrzeni nazw, która jest oddzielona od przestrzeni nazw używanych przez etykiety, znaczniki, elementy członkowskie i zwykłe identyfikatory.
 
-Wątek oczekuje się na początku krytyczne region, aż żadnego innymi wątku jest wykonywany krytyczne region (w dowolnym miejscu program) o takiej samej nazwie. Wszystkie nienazwane `critical` dyrektywy mapowania tej samej nazwie nieokreślony.
+Wątek czeka na początku regionu krytycznego, dopóki żaden inny wątek nie wykonuje krytycznego regionu (gdziekolwiek w programie) o tej samej nazwie. Wszystkie nienazwane dyrektywy `critical` są mapowane na tę samą nieokreśloną nazwę.
 
-### <a name="263-barrier-directive"></a>2.6.3 bariera, dyrektywa
+### <a name="263-barrier-directive"></a>2.6.3 — dyrektywa zapory
 
-`barrier` Dyrektywy synchronizuje wszystkie wątki w zespole. W przypadku każdego wątku w zespole czeka, aż wszystkie pozostałe on osiągnąć tego punktu. Składnia `barrier` dyrektywy jest następująca:
+Dyrektywa `barrier` synchronizuje wszystkie wątki w zespole. Gdy napotkasz, każdy wątek w zespole czeka, aż wszystkie inne osoby osiągnąli ten punkt. Składnia dyrektywy `barrier` jest następująca:
 
 ```cpp
 #pragma omp barrier new-line
 ```
 
-Po wszystkie wątki w zespole wystąpił barierę, rozpoczyna się każdy wątek w zespole, wykonywania instrukcji po dyrektywie barierę równolegle. Ponieważ `barrier` dyrektywy nie zawiera instrukcję języka C w ramach jego składni, istnieją pewne ograniczenia dotyczące jego położenie w obrębie programu. Aby uzyskać więcej informacji dotyczących gramatyki formalny, zobacz [dodatek C](c-openmp-c-and-cpp-grammar.md). W poniższym przykładzie przedstawiono te ograniczenia.
+Gdy wszystkie wątki w zespole napotkały barierę, każdy wątek w zespole rozpoczyna wykonywanie instrukcji po równolegle dyrektywie barier. Ponieważ dyrektywa `barrier` nie zawiera instrukcji języka C w ramach swojej składni, istnieją pewne ograniczenia dotyczące umieszczania w programie. Aby uzyskać więcej informacji na temat formalnej gramatyki, zobacz [dodatek C](c-openmp-c-and-cpp-grammar.md). Poniższy przykład ilustruje te ograniczenia.
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -396,37 +396,37 @@ if (x!=0) {
 }
 ```
 
-### <a name="264-atomic-construct"></a>2.6.4, konstrukcja atomic
+### <a name="264-atomic-construct"></a>konstrukcja niepodzielna 2.6.4
 
-`atomic` Dyrektywy oznacza, że lokalizacja pamięci niepodzielne, aktualizowane zamiast uwidaczniania go do możliwości wielu jednoczesnych, zapisywanie wątków. Składnia `atomic` dyrektywy jest następująca:
+Dyrektywa `atomic` zapewnia niepodzielną aktualizację określonej lokalizacji pamięci, zamiast ujawniać ją na potrzeby wielu równoczesnych wątków pisania. Składnia dyrektywy `atomic` jest następująca:
 
 ```cpp
 #pragma omp atomic new-lineexpression-stmt
 ```
 
-Instrukcja wyrażeń musi mieć jedną z następujących form:
+Instrukcja expression musi mieć jedną z następujących form:
 
-- *x binop* `=` *expr*
-- *x* `++`
+- *wyrażenie* `=` *x binop*
 - `++` *x*
-- *x* `--`
+- `++` *x*
+- `--` *x*
 - `--` *x*
 
-W poprzednim wyrażenia:
+W poprzednich wyrażeniach:
 
-- *x* jest wyrażeniem l-wartości o typie skalarnym.
+- *x* jest wyrażeniem lvalue z typem skalarnym.
 
-- *wyrażenie* to wyrażenie skalarne typu, a nie odwołuje się obiekcie wyznaczonym przez *x*.
+- *wyrażenie jest* wyrażeniem z typem skalarnym i nie odwołuje się do obiektu wyoznaczonego przez *x*.
 
-- *binop* nie jest przeciążony operator i jest jednym z `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`, lub `>>`.
+- *binop* nie jest przeciążonym operatorem i jest jednym z `+`, `*`, `-`, `/`, `&`, `^`, `|`, `<<`lub `>>`.
 
-Mimo że jest zdefiniowane w implementacji tego, czy implementacja zastępuje wszystkie `atomic` dyrektyw z `critical` dyrektyw, które mają taki sam unikatowy *nazwa*, `atomic` zezwala lepsza Optymalizacja — dyrektywa . Często sprzętu instrukcje są dostępne, można wykonać aktualizację atomic o najmniejszej obciążenie.
+Chociaż jest definiowana przez implementację, czy implementacja zastępuje wszystkie dyrektywy `atomic` dyrektywą `critical`, które mają taką samą unikatową *nazwę*, dyrektywa `atomic` umożliwia lepszą optymalizację. Często dostępne są instrukcje sprzętu, które mogą wykonywać aktualizację niepodzielną o najniższym obciążeniu.
 
-Tylko obciążenia i magazynu obiekcie wyznaczonym przez *x* są niepodzielne; oceny *expr* nie są niepodzielne. Aby uniknąć Sytuacje wyścigu, wszystkie aktualizacje lokalizacji, w sposób równoległy powinny być chronione przy użyciu `atomic` dyrektywy, z wyjątkiem tych, które są znane jako bez wyścigu.
+Tylko obciążenie i magazyn obiektu wyoznaczonego przez *x* są niepodzielne; Ocena *wyrażenia* nie jest niepodzielna. Aby uniknąć sytuacji wyścigu, wszystkie aktualizacje lokalizacji równolegle należy chronić za pomocą dyrektywy `atomic`, z wyjątkiem tych, które są znane jako wolne od warunków wyścigu.
 
-Ograniczenia `atomic` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `atomic` są następujące:
 
-- Wszystkie odwołania niepodzielną do lokalizacji magazynu x w całym programie muszą mieć zgodne z typem.
+- Wszystkie odwołania niepodzielne do lokalizacji magazynu x w ramach programu muszą mieć typ zgodny.
 
 #### <a name="examples"></a>Przykłady
 
@@ -447,40 +447,40 @@ u.n++;
 u.x -= 1.0f;
 ```
 
-### <a name="265-flush-directive"></a>2.6.5 dyrektywa opróżniania
+### <a name="265-flush-directive"></a>2.6.5 — Dyrektywa opróżniania
 
-`flush` Dyrektywy, czy jawnych ani dorozumianych, określa punktu sekwencji "międzywątkowe" jaką wdrożenia jest wymagany do upewnij się, że wszystkie wątki w zespole spójny widok niektórych obiektów (wymienionymi poniżej) w pamięci. Oznacza to, że spełniono poprzednie wersje ewaluacyjne wyrażeń, które odwołują się do tych obiektów, a kolejne oceny nie zostało jeszcze rozpoczęte. Na przykład kompilatory należy przywrócić wartości obiektów z rejestrów w pamięci i sprzętu może być konieczne opróżnienia buforów zapisu w pamięci i ponownie załaduj wartości obiektów z pamięci.
+Dyrektywa `flush`, bez względu na to, czy jest to jawne czy implikowane, określa "punkt sekwencji" między wątkami, w którym wymagana jest implementacja, aby upewnić się, że wszystkie wątki w zespole mają spójny widok określonych obiektów (określonych poniżej) w pamięci. Oznacza to, że poprzednie oceny wyrażeń, które odwołują się do tych obiektów, są kompletne i kolejne oceny nie zostały jeszcze rozpoczęte. Na przykład kompilatory muszą przywrócić wartości obiektów z rejestrów do pamięci, a sprzęt może wymagać opróżniania buforów zapisu do pamięci i ponownego załadowania wartości obiektów z pamięci.
 
-Składnia `flush` dyrektywy jest następująca:
+Składnia dyrektywy `flush` jest następująca:
 
 ```cpp
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-Jeśli obiekty, które wymagają synchronizacji mogą wszystkie zostać wyznaczony przez zmienne, a następnie tych zmiennych można określić opcjonalny *liście zmiennych*. Jeśli wskaźnik jest obecny w *liście zmiennych*, wskaźnika, sama jest opróżniany, nie obiekt wskaźnika odwołuje się do.
+Jeśli wszystkie obiekty, które wymagają synchronizacji, można wyznaczyć przez zmienne, wówczas te zmienne można określić na opcjonalnej *liście zmiennych*. Jeśli wskaźnik znajduje się na *liście zmiennych*, wskaźnik jest opróżniany, a nie obiekt, do którego odwołuje się wskaźnik.
 
-A `flush` dyrektywy bez *liście zmiennych* synchronizuje wszystkich udostępnionych obiektów, z wyjątkiem niedostępnych obiektów z automatycznym okresem magazynu. (Jest to prawdopodobnie mają większe obciążenie niż `flush` z *liście zmiennych*.) A `flush` dyrektywy bez *liście zmiennych* jest implikowane dla następujących dyrektywach:
+Dyrektywa `flush` bez *listy zmiennych* synchronizuje wszystkie obiekty udostępnione z wyjątkiem niedostępnych obiektów z automatycznym okresem przechowywania. (Prawdopodobnie ma to większy koszt niż `flush` z *listą zmiennych*). Dyrektywa `flush` bez *listy zmiennych* jest implikowana dla następujących dyrektyw:
 
 - `barrier`
-- Wpis i wyjścia z `critical`
-- Wpis i wyjścia z `ordered`
-- Wpis i wyjścia z `parallel`
+- Przy wejściu do i wyjścia z `critical`
+- Przy wejściu do i wyjścia z `ordered`
+- Przy wejściu do i wyjścia z `parallel`
 - Przy wyjściu z `for`
 - Przy wyjściu z `sections`
 - Przy wyjściu z `single`
-- Wpis i wyjścia z `parallel for`
-- Wpis i wyjścia z `parallel sections`
+- Przy wejściu do i wyjścia z `parallel for`
+- Przy wejściu do i wyjścia z `parallel sections`
 
-Dyrektywa nie jest implikowane, jeśli `nowait` klauzula jest obecny. Należy zauważyć, że `flush` dyrektywy nie jest implikowana dla żadnego z następujących czynności:
+Dyrektywa nie jest implikowana, jeśli jest obecna klauzula `nowait`. Należy zauważyć, że dyrektywa `flush` nie jest implikowana dla żadnego z następujących elementów:
 
-- Na wpis `for`
-- Wpis do lub wyjście z `master`
-- Na wpis `sections`
-- Na wpis `single`
+- W pozycji `for`
+- W momencie wejścia lub wyjścia z `master`
+- W pozycji `sections`
+- W pozycji `single`
 
-Odwołania, który uzyskuje dostęp do wartości obiektu z typem kwalifikowana volatile zachowuje się jak w przypadku `flush` dyrektywy określenie tego obiektu w poprzednim punkcie sekwencji. Odwołania, która modyfikuje wartość obiektu o typie kwalifikowana volatile zachowuje się jak w przypadku `flush` dyrektywy określenie tego obiektu w momencie kolejnych sekwencji.
+Odwołanie, które uzyskuje dostęp do wartości obiektu z typem kwalifikowanym nietrwałym, zachowuje się tak, jakby istniała dyrektywa `flush` określająca ten obiekt w poprzednim punkcie sekwencji. Odwołanie, które modyfikuje wartość obiektu z typem kwalifikowanym nietrwałym, zachowuje się tak, jakby istniała dyrektywa `flush` określająca ten obiekt w kolejnym punkcie sekwencji.
 
-Ponieważ `flush` dyrektywy nie zawiera instrukcję języka C w ramach jego składni, istnieją pewne ograniczenia dotyczące jego położenie w obrębie programu. Aby uzyskać więcej informacji dotyczących gramatyki formalny, zobacz [dodatek C](c-openmp-c-and-cpp-grammar.md). W poniższym przykładzie przedstawiono te ograniczenia.
+Ponieważ dyrektywa `flush` nie zawiera instrukcji języka C w ramach swojej składni, istnieją pewne ograniczenia dotyczące umieszczania w programie. Aby uzyskać więcej informacji na temat formalnej gramatyki, zobacz [dodatek C](c-openmp-c-and-cpp-grammar.md). Poniższy przykład ilustruje te ograniczenia.
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate
@@ -498,67 +498,67 @@ if (x!=0) {
 }
 ```
 
-Ograniczenia `flush` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `flush` są następujące:
 
-- Określone w zmiennej `flush` dyrektywy nie może mieć typu referencyjnego.
+- Zmienna określona w dyrektywie `flush` nie może mieć typu referencyjnego.
 
-### <a name="266-ordered-construct"></a>2.6.6 uporządkowany konstrukcja
+### <a name="266-ordered-construct"></a>2.6.6 uporządkowana konstrukcja
 
-Następujący blok strukturalny `ordered` dyrektywa jest wykonywany w kolejności, w którym będzie można wykonywać iteracje, w pętli sekwencyjnej. Składnia `ordered` dyrektywy jest następująca:
+Blok strukturalny po dyrektywie `ordered` jest wykonywany w kolejności, w której iteracje byłyby wykonywane w pętli sekwencyjnej. Składnia dyrektywy `ordered` jest następująca:
 
 ```cpp
 #pragma omp ordered new-linestructured-block
 ```
 
-`ordered` Dyrektywy musi należeć do zakresu dynamicznego `for` lub `parallel for` konstruowania. `for` Lub `parallel for` dyrektywy, do którego `ordered` powiązań konstrukcja musi mieć `ordered` klauzulę zgodnie z opisem w [sekcji 2.4.1](#241-for-construct). W trakcie wykonania `for` lub `parallel for` skonstruować przy użyciu `ordered` klauzuli `ordered` konstrukcji są wykonywane wyłącznie w kolejności, w którym będzie można wykonywać w wykonanie sekwencyjne pętli.
+Dyrektywa `ordered` musi znajdować się w dynamicznym zakresie konstrukcji `for` lub `parallel for`. Dyrektywa `for` lub `parallel for`, do której powiązane są `ordered` konstrukcja, musi mieć klauzulę `ordered` określoną zgodnie z opisem w [sekcji 2.4.1](#241-for-construct). W trakcie wykonywania `for` lub konstrukcji `parallel for` z klauzulą `ordered`, konstrukcje `ordered` są wykonywane wyłącznie w kolejności, w jakiej byłyby wykonywane w sekwencyjnym wykonywaniu pętli.
 
-Ograniczenia `ordered` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `ordered` są następujące:
 
-- Iteracji pętli za pomocą `for` konstrukcja nie musi wykonać uporządkowane dyrektywa więcej niż jeden raz i nie musisz wykonać więcej niż jedną `ordered` dyrektywy.
+- Iteracja pętli z konstrukcją `for` nie może wykonać tej samej uporządkowanej dyrektywy więcej niż raz i nie może wykonać więcej niż jednej dyrektywy `ordered`.
 
-## <a name="27-data-environment"></a>2.7 środowisko danych
+## <a name="27-data-environment"></a>środowisko danych 2,7
 
-W tej sekcji przedstawiono dyrektywy i kilka klauzul do kontrolowania środowiska danych podczas wykonywania równoległego regionów, w następujący sposób:
+W tej części przedstawiono dyrektywę i kilka klauzul służących do kontrolowania środowiska danych podczas wykonywania równoległych regionów w następujący sposób:
 
-- A [threadprivate](#271-threadprivate-directive) dyrektywy znajduje się zakres pliku, zakresie przestrzeni nazw lub zakresie bloku statyczne zmienne lokalne do wątku.
+- Dyrektywa [threadprivate](#271-threadprivate-directive) jest udostępniana w celu udostępnienia w wątku zakresu plików, przestrzeni nazw lub statycznych zmiennych zakresu bloku.
 
-- Klauzule, które mogą być określone dla dyrektywy do kontrolowania udostępniania atrybutów zmienne w czasie trwania konstrukcje równoległego lub podziału pracy zostały opisane w [sekcji 2.7.2](#272-data-sharing-attribute-clauses).
+- Klauzule, które mogą być określone w dyrektywach w celu kontrolowania atrybutów udostępniania zmiennych w czasie trwania konstrukcji równoległych lub współdzielących pracy, są opisane w [sekcji 2.7.2](#272-data-sharing-attribute-clauses).
 
-### <a name="271-threadprivate-directive"></a>2.7.1 dyrektywa threadprivate
+### <a name="271-threadprivate-directive"></a>2.7.1 threadprivate — dyrektywa
 
-`threadprivate` Dyrektywy sprawia, że nazwany zakres pliku, zakresie przestrzeni nazw lub zmiennych statycznych zasięgiem bloku określone w *liście zmiennych* prywatnego wątku. *Lista zmiennej* znajduje się lista rozdzielonych przecinkami zmiennych, które nie mają niekompletnego typu. Składnia `threadprivate` dyrektywy jest następująca:
+Dyrektywa `threadprivate` sprawia, że nazwany zakres plików, przestrzeń nazw lub statyczne zmienne zakresu bloku określone na *liście zmiennych* jako prywatne dla wątku. *zmienna-list* to rozdzielona przecinkami lista zmiennych, które nie mają niekompletnego typu. Składnia dyrektywy `threadprivate` jest następująca:
 
 ```cpp
 #pragma omp threadprivate(variable-list) new-line
 ```
 
-Każda kopia `threadprivate` zmienna jest inicjowana raz, w momencie nieokreślony w programie przed pierwszym odwołaniu do tej kopii, jak i w zwykły sposób (czyli jako kopia główna może być inicjowane w wykonanie szeregowe programu). Należy pamiętać, że jeśli obiekt jest wywoływane w inicjatorze jawne z `threadprivate` zmienną i wartość obiektu zostanie zmodyfikowany przed pierwszym odwołaniu kopię zmiennej, a następnie zachowanie jest nieokreślone.
+Każda kopia zmiennej `threadprivate` jest inicjowana raz, w nieokreślonym punkcie programu przed pierwszym odwołaniem do tej kopii, i w zwykły sposób (tj., jako że kopia główna zostanie zainicjowana w ramach wykonywania programu na szeregu). Należy pamiętać, że jeśli obiekt jest przywoływany w jawnym inicjatorze zmiennej `threadprivate` i wartość obiektu jest modyfikowana przed pierwszym odwołaniem do kopii zmiennej, zachowanie nie zostanie określone.
 
-Jak za pomocą dowolnej zmiennej prywatnej wątek nie może odwoływać się inny wątek kopię `threadprivate` obiektu. W regionach szeregowych i regiony głównego programu odwołania zostaną kopii obiektu głównego wątku.
+Podobnie jak w przypadku dowolnej zmiennej prywatnej, wątek nie może odwoływać się do kopii obiektu `threadprivate` innego wątku. W przypadku regionów szeregowych i regionów głównych programu odwołania będą należeć do kopii obiektu głównego wątku.
 
-Po wykonaniu pierwszej równoległego regionu, dane w `threadprivate` obiektów jest gwarantowane do utrwalenia, tylko jeśli dynamicznej wątki mechanizm został wyłączony, a jeśli liczba wątków pozostaje niezmieniona dla wszystkich regionów równoległych.
+Po wykonaniu pierwszego równoległego regionu dane w `threadprivate` obiektów są gwarantowane, tylko wtedy, gdy mechanizm dynamicznego wątków został wyłączony i jeśli liczba wątków pozostanie niezmieniona dla wszystkich regionów równoległych.
 
-Ograniczenia do `threadprivate` dyrektywy jest następująca:
+Ograniczenia dotyczące dyrektywy `threadprivate` są następujące:
 
-- A `threadprivate` dyrektywy dla zmiennych w zakresie pliku lub zakresie przestrzeni nazw musi znajdować się poza deklaracji lub definicji i leksykalnie musi poprzedzać wszystkie odwołania do tych zmiennych na liście.
+- Dyrektywa `threadprivate` dla zmiennych zakresu plików lub przestrzeni nazw musi znajdować się poza definicją lub deklaracją i musi być w sposób leksykalny poprzedzające wszystkie odwołania do dowolnych zmiennych na liście.
 
-- Każdej zmiennej w *liście zmiennych* z `threadprivate` dyrektywy w zakresie pliku lub przestrzeni nazw musi odwoływać się do deklaracji zmiennej w zakresie pliku lub przestrzeni nazw, leksykalnie poprzedzającym dyrektywy.
+- Każda zmienna na *liście zmiennych* dyrektywy `threadprivate` w zakresie plików lub przestrzeni nazw musi odwoływać się do deklaracji zmiennej w zakresie plików lub przestrzeni nazw, która jest w sposób określony w sposób nieokreślony w dyrektywie.
 
-- A `threadprivate` dyrektywy zmiennych statycznych zakresie bloku musi znajdować się w zakresie zmiennej i nie znajduje się w zakresie zagnieżdżonych. Dyrektywa leksykalnie musi poprzedzać wszystkie odwołania do tych zmiennych na liście.
+- Dyrektywa `threadprivate` dla zmiennych zakresu statycznych bloków musi znajdować się w zakresie zmiennej, a nie w zakresie zagnieżdżonym. Dyrektywa musi być w sposób leksykalny poprzedzające wszystkie odwołania do dowolnych zmiennych na liście.
 
-- Każdej zmiennej w *liście zmiennych* z `threadprivate` dyrektywy w zakresie bloku musi odwoływać się do deklaracji zmiennej w tym samym zakresie, leksykalnie poprzedzającym dyrektywy. Deklaracja zmiennej, należy użyć specyfikator statycznej klasy magazynowania.
+- Każda zmienna znajdująca się na *liście zmiennych* w dyrektywie `threadprivate` w zakresie bloku musi odwoływać się do deklaracji zmiennej w tym samym zakresie, który jest w sposób leksykalny poprzedzający dyrektywę. Deklaracja zmiennej musi używać specyfikatora klasy magazynu static.
 
-- Jeśli zmienna jest określona w `threadprivate` dyrektywy w jednostce translacji jeden, musi być określona w `threadprivate` dyrektywy w każdej jednostce translacji, w którym jest zdeklarowana.
+- Jeśli zmienna jest określona w `threadprivate` dyrektywie w jednej jednostce translacji, musi być określona w dyrektywie `threadprivate` w każdej jednostce translacji, w której jest zadeklarowana.
 
-- A `threadprivate` zmiennej nie musi znajdować się w żadnej klauzuli, z wyjątkiem `copyin`, `copyprivate`, `schedule`, `num_threads`, lub `if` klauzuli.
+- Zmienna `threadprivate` nie może występować w żadnej klauzuli, z wyjątkiem `copyin`, `copyprivate`, `schedule`, `num_threads`ani klauzuli `if`.
 
-- Adres `threadprivate` zmienna nie jest stałą adresu.
+- Adres zmiennej `threadprivate` nie jest stałą adresu.
 
-- A `threadprivate` zmiennej nie może mieć typu niekompletnego lub typu odwołania.
+- Zmienna `threadprivate` nie może mieć typu niekompletnego lub typu referencyjnego.
 
-- A `threadprivate` zmienna typu non-POD klasy musi mieć konstruktora kopiującego dostępny, jednoznaczną, jeśli jest zadeklarowana za pomocą jawnego inicjatora.
+- Zmienna `threadprivate`a z typem klasy innym niż POD musi mieć dostępny, jednoznaczny Konstruktor kopiujący, jeśli jest zadeklarowana z jawnym inicjatorem.
 
-Poniższy przykład ilustruje sposób modyfikowania zmienną, która pojawia się w inicjatorze może spowodować nieokreślone zachowanie oraz sposób uniknąć tego problemu za pomocą konstruktora kopiującego i pomocnicze w ramach obiektu.
+Poniższy przykład ilustruje, jak modyfikowanie zmiennej, która pojawia się w inicjatorze może spowodować nieokreślone zachowanie, a także jak uniknąć tego problemu przy użyciu obiektu pomocniczego i konstruktora kopiującego.
 
 ```cpp
 int x = 1;
@@ -582,25 +582,25 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Odsyłacze
 
-- [dynamiczne wątków](3-run-time-library-functions.md#317-omp_set_dynamic-function)
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) zmiennej środowiskowej
+- [wątki dynamiczne](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- Zmienna środowiskowa [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 klauzule atrybutu udostępniania danych
 
-Kilka dyrektyw zaakceptować klauzul, które umożliwiają użytkownikowi na kontrolowanie udostępniania atrybutów zmienne w czasie trwania regionu. Klauzule atrybutu udostępniania dotyczą tylko zmienne w zakresie leksykalnym dyrektywy, na której znajduje się klauzuli. Nie wszystkie z następujących klauzul są dozwolone dla wszystkich dyrektyw. Lista klauzul, które są ważne w szczególności dyrektywy są opisane za pomocą dyrektywy.
+Kilka dyrektyw akceptuje klauzule umożliwiające użytkownikowi kontrolowanie atrybutów udostępniania zmiennych na czas trwania regionu. Współużytkowanie klauzul atrybutów ma zastosowanie tylko do zmiennych w zakresie leksykalnym dyrektywy, w której znajduje się klauzula. Nie wszystkie z poniższych klauzul są dozwolone we wszystkich dyrektywach. Lista klauzul, które są prawidłowe w danej dyrektywie, jest opisana w dyrektywie.
 
-Jeśli zmienna jest widoczna, gdy równoległego lub konstrukcji podziału pracy zostanie osiągnięty, a zmienna nie jest określona w klauzuli udostępniania atrybutu lub `threadprivate` dyrektywy, następnie zmienna jest udostępniony. Statyczne zmienne zadeklarowane wewnątrz zakresu dynamicznego równoległego regionu są udostępnione. Sterty przydzielonej pamięci (na przykład za pomocą `malloc()` w języku C lub C++ lub `new` operatora w języku C++) jest udostępniony. (Wskaźnik pamięci, jednak może być prywatne lub udostępniony.) Zmienne z automatycznym okresem magazynu zadeklarowaną w ramach zakresu dynamicznego równoległego regionu są prywatne.
+Jeśli zmienna jest widoczna w przypadku napotkania konstrukcji równoległej lub w ramach udostępniania pracy, a zmienna nie jest określona w klauzuli atrybutu udostępniania lub `threadprivate` dyrektywie, zmienna jest udostępniona. Zmienne statyczne zadeklarowane w zakresie dynamicznym regionu równoległego są udostępnione. Pamięć przydzielona sterty (na przykład przy użyciu `malloc()` w C++ C lub lub operator `new` C++w) jest udostępniona. (Wskaźnik do tej pamięci, jednak może być prywatny lub udostępniony). Zmienne z automatycznym okresem magazynu zadeklarowane w dynamicznym zakresie regionu równoległego są prywatne.
 
-Zaakceptuj większość klauzul *liście zmiennych* argumentu, który znajduje się lista rozdzielonych przecinkami zmiennych, które są widoczne. Jeśli zmienna do której odwołuje się klauzulą atrybutu udostępniania danych ma typ pochodzący od szablonu i istnieją nie inne odwołania do tej zmiennej w programie, zachowanie jest niezdefiniowane.
+Większość klauzul akceptuje argument *listy zmiennych* , który jest rozdzielaną przecinkami listą zmiennych, które są widoczne. Jeśli zmienna, do której istnieje odwołanie w klauzuli atrybutu udostępniania danych, ma typ pochodzący z szablonu i nie ma żadnych innych odwołań do tej zmiennej w programie, zachowanie jest niezdefiniowane.
 
-Wszystkie zmienne, które są wyświetlane w klauzulach dyrektywy muszą być widoczne. Klauzule może być powtarzany zgodnie z potrzebami, ale zmiennej nie może być określone w więcej niż jedną klauzulę, z tą różnicą, że zmienna może być określony w obu `firstprivate` i `lastprivate` klauzuli.
+Wszystkie zmienne, które pojawiają się w klauzulach dyrektywy, muszą być widoczne. Klauzule mogą być powtarzane w razie konieczności, ale żadna zmienna nie może być określona w więcej niż jednej klauzuli, z tą różnicą, że zmienna może być określona w klauzuli `firstprivate` i `lastprivate`.
 
 W poniższych sekcjach opisano klauzule atrybutu udostępniania danych:
 
 - [private](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
-- [Udostępnione](#2724-shared)
+- [udostępniać](#2724-shared)
 - [default](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
@@ -608,67 +608,67 @@ W poniższych sekcjach opisano klauzule atrybutu udostępniania danych:
 
 #### <a name="2721-private"></a>2.7.2.1 — prywatny
 
-`private` Klauzuli deklarujemy zmienne na liście zmiennych można używać prywatnego każdy wątek w zespole. Składnia `private` klauzula jest w następujący sposób:
+Klauzula `private` deklaruje zmienne na liście zmiennych jako prywatne dla każdego wątku w zespole. Składnia klauzuli `private` jest następująca:
 
 ```cpp
 private(variable-list)
 ```
 
-Zachowanie określone w zmiennej `private` klauzula jest w następujący sposób. Nowy obiekt z automatycznym okresem magazynu jest przydzielany dla konstrukcji. Rozmiar i wyrównanie nowego obiektu są określane przez typ zmiennej. Ten przydział wykonywana jeden raz dla każdego wątku w zespole, a domyślny konstruktor jest wywoływana dla obiektu klasy, w razie potrzeby; w przeciwnym razie wartość początkowa jest nieokreślony.  Oryginalny obiekt odwołuje się zmienna ma nieokreśloną wartość po wejściu do konstrukcja nie mogą zostać zmodyfikowane w ramach zakresu dynamiczna konstrukcja i ma nieokreśloną wartość przy zamykaniu z konstrukcja.
+Zachowanie zmiennej określonej w klauzuli `private` jest następujące. Nowy obiekt z automatycznym okresem magazynu jest przypisywany dla konstrukcji. Rozmiar i wyrównanie nowego obiektu są określane przez typ zmiennej. Ta alokacja występuje raz dla każdego wątku w zespole, a Konstruktor domyślny jest wywoływany dla obiektu klasy w razie potrzeby; w przeciwnym razie wartość początkowa jest nieokreślona.  Oryginalny obiekt, do którego odwołuje się zmienna, ma nieokreśloną wartość przy wpisie do konstrukcji, nie może być modyfikowany w zakresie dynamicznym konstrukcji i ma nieokreśloną wartość przy wyjściu z konstrukcji.
 
-W zakresie leksykalnym dyrektywy konstrukcji zmienna odwołuje się do nowego obiektu prywatnej przydzielonej przez wątek.
+W zakresie leksykalnym konstrukcji dyrektywy zmienna odwołuje się do nowego obiektu prywatnego przydzielonego przez wątek.
 
-Ograniczenia do `private` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `private` są następujące:
 
-- Zmiennej z typu klasy, która została określona w `private` klauzuli musi mieć dostęp, jednoznaczną domyślnego konstruktora.
+- Zmienna o typie klasy, która jest określona w klauzuli `private` musi mieć dostępny, jednoznaczny Konstruktor domyślny.
 
-- Określone w zmiennej `private` nie mogą zawierać klauzuli `const`-wykwalifikowany typ, chyba że jego klasa to typ `mutable` elementu członkowskiego.
+- Zmienna określona w klauzuli `private` nie może mieć typu kwalifikowanego `const`, chyba że ma typ klasy z elementem członkowskim `mutable`.
 
-- Określone w zmiennej `private` klauzuli nie może mieć typu niekompletnego lub typu odwołania.
+- Zmienna określona w klauzuli `private` nie może mieć typu niekompletnego lub typu referencyjnego.
 
-- Zmienne, które pojawiają się w `reduction` klauzuli `parallel` dyrektywy nie można określić w `private` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
+- Zmienne, które pojawiają się w klauzuli `reduction` dyrektywy `parallel`, nie mogą być określone w klauzuli `private` w dyrektywie dotyczącej udostępniania pracy, która jest powiązana z równoległą konstrukcją.
 
 #### <a name="2722-firstprivate"></a>2.7.2.2 — firstprivate
 
-`firstprivate` Klauzuli stanowi nadzbiór funkcje udostępniane przez `private` klauzuli. Składnia `firstprivate` klauzula jest w następujący sposób:
+Klauzula `firstprivate` zawiera nadzbiór funkcji zapewnianych przez klauzulę `private`. Składnia klauzuli `firstprivate` jest następująca:
 
 ```cpp
 firstprivate(variable-list)
 ```
 
-Zmienne określone w *liście zmiennych* mają `private` klauzuli semantykę, zgodnie z opisem w [sekcji 2.7.2.1](#2721-private). Inicjowanie lub konstrukcji odbywa się tak, jakby były wykonywane raz na wątek przed wykonanie wątku konstrukcja. Aby uzyskać `firstprivate` klauzuli na konstrukcję równoległych, początkowa wartość nowego obiektu prywatnego jest wartością oryginalny obiekt, który występuje bezpośrednio przed równoległe konstrukcji dla wątku, który je napotka. Aby uzyskać `firstprivate` klauzuli w konstrukcji podziału pracy, początkowa wartość nowy obiekt prywatny dla każdego wątku, który jest wykonywany konstrukcji podziału pracy jest wartością oryginalny obiekt, który istnieje przed punktu w czasie, że takie same wątek napotka konstrukcji podziału pracy. Ponadto dla obiektów C++, nowy obiekt prywatny dla każdego wątku jest kopia skonstruowany na podstawie oryginalnego obiektu.
+Zmienne określone na *liście zmiennych* mają semantykę klauzul `private`, zgodnie z opisem w [sekcji 2.7.2.1](#2721-private). Inicjalizacja lub konstrukcja odbywa się tak, jakby była wykonywana raz na wątek przed wykonaniem tej konstrukcji przez wątek. Dla klauzuli `firstprivate` w konstrukcji równoległej wartość początkowa nowego obiektu prywatnego jest wartością oryginalnego obiektu, który istnieje bezpośrednio przed równoległą konstrukcją dla wątku, który go napotka. Dla klauzuli `firstprivate` w konstrukcji udostępniania pracy, początkowa wartość nowego obiektu prywatnego dla każdego wątku wykonującego konstrukcję współdzielenia pracy jest wartością oryginalnego obiektu, który istnieje przed punktem w czasie, gdy ten sam wątek napotka konstrukcję udostępniania pracy. Ponadto dla C++ obiektów nowy obiekt prywatny dla każdego wątku jest kopiowany z oryginalnego obiektu.
 
-Ograniczenia do `firstprivate` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `firstprivate` są następujące:
 
-- Określone w zmiennej `firstprivate` klauzuli nie może mieć typu niekompletnego lub typu odwołania.
+- Zmienna określona w klauzuli `firstprivate` nie może mieć typu niekompletnego lub typu referencyjnego.
 
-- Zmiennej z typu klasy, która jest określona jako `firstprivate` musi mieć konstruktora kopiującego dostępny, jednoznaczną.
+- Zmienna o typie klasy, która jest określona jako `firstprivate` musi mieć dostępny, jednoznaczny Konstruktor kopiujący.
 
-- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli `parallel` dyrektywy nie można określić w `firstprivate` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
+- Zmienne, które są prywatne w ramach równoległego regionu lub, które pojawiają się w klauzuli `reduction` dyrektywy `parallel`, nie mogą być określone w klauzuli `firstprivate` dla dyrektywy udostępniania pracy, która jest powiązana z konstrukcją równoległą.
 
 #### <a name="2723-lastprivate"></a>2.7.2.3 ostatnia prywatna
 
-`lastprivate` Klauzuli stanowi nadzbiór funkcje udostępniane przez `private` klauzuli. Składnia `lastprivate` klauzula jest w następujący sposób:
+Klauzula `lastprivate` zawiera nadzbiór funkcji zapewnianych przez klauzulę `private`. Składnia klauzuli `lastprivate` jest następująca:
 
 ```cpp
 lastprivate(variable-list)
 ```
 
-Zmienne określone w *liście zmiennych* mają `private` semantyki klauzuli. Gdy `lastprivate` klauzuli pojawia się na dyrektywę, który identyfikuje konstrukcji podziału pracy, wartość każdego `lastprivate` zmiennej z sekwencyjnie ostatniej iteracji pętli skojarzone lub leksykalnie ostatnią dyrektywą sekcji, jest przypisany do oryginalny obiekt w zmiennej. Zmienne, które nie są przypisane wartości w ostatniej iteracji `for` lub `parallel for`, lub przez leksykalnie ostatnią sekcję `sections` lub `parallel sections` dyrektywy, mają wartości nieokreślone po konstrukcji. Nieprzypisane podobiektów również mieć nieokreślona wartość po konstrukcji.
+Zmienne określone na *liście zmiennych* mają semantykę klauzul `private`. Gdy klauzula `lastprivate` jest wyświetlana w dyrektywie, która identyfikuje konstrukcję do współdzielenia pracy, wartość każdej zmiennej `lastprivate` od sekwencyjnej ostatniej iteracji skojarzonej pętli lub dyrektywy w ostatniej sekcji, która jest przypisana do oryginalnego obiektu zmiennej. Zmienne, które nie mają przypisanej wartości przez ostatnią iterację `for` lub `parallel for`lub przez bardziej leksykalną sekcję dyrektywy `sections` lub `parallel sections`, mają nieokreślone wartości po konstrukcji. Nieprzypisane podobiekty również mają nieokreśloną wartość po konstrukcji.
 
-Ograniczenia do `lastprivate` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `lastprivate` są następujące:
 
-- Wszystkie ograniczenia dla `private` zastosowania.
+- Wszystkie ograniczenia dotyczące `private` mają zastosowanie.
 
-- Zmiennej z typu klasy, która jest określona jako `lastprivate` musi być dostępny, jednoznaczną kopia operatora przypisania.
+- Zmienna o typie klasy, która jest określona jako `lastprivate` musi mieć dostępny, niejednoznaczny operator przypisania kopiowania.
 
-- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli `parallel` dyrektywy nie można określić w `lastprivate` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
+- Zmienne, które są prywatne w ramach równoległego regionu lub, które pojawiają się w klauzuli `reduction` dyrektywy `parallel`, nie mogą być określone w klauzuli `lastprivate` dla dyrektywy udostępniania pracy, która jest powiązana z konstrukcją równoległą.
 
 #### <a name="2724-shared"></a>2.7.2.4 — udostępnione
 
-Ta klauzula udostępnia zmiennych, które pojawiają się w *liście zmiennych* przez wszystkie wątki w zespole. Wszystkie wątki w zespole dostęp do tego samego obszaru pamięci masowej `shared` zmiennych.
+Ta klauzula udostępnia zmienne, które pojawiają się na *liście zmiennych* wśród wszystkich wątków w zespole. Wszystkie wątki w zespole uzyskują dostęp do tego samego obszaru magazynowania dla zmiennych `shared`.
 
-Składnia `shared` klauzula jest w następujący sposób:
+Składnia klauzuli `shared` jest następująca:
 
 ```cpp
 shared(variable-list)
@@ -676,31 +676,31 @@ shared(variable-list)
 
 #### <a name="2725-default"></a>2.7.2.5 — domyślne
 
-`default` Klauzuli umożliwia użytkownikowi mają wpływ na atrybuty udostępnianie danych zmiennych. Składnia `default` klauzula jest w następujący sposób:
+Klauzula `default` zezwala użytkownikowi na wpływ atrybutów udostępniania danych zmiennych. Składnia klauzuli `default` jest następująca:
 
 ```cpp
 default(shared | none)
 ```
 
-Określanie `default(shared)` jest odpowiednikiem jawnego określania każdej zmiennej aktualnie widoczne w `shared` klauzuli, chyba że jest to `threadprivate` lub `const`-kwalifikowaną. W przypadku braku jawnego `default` klauzuli, zachowanie domyślne jest taka sama jak if `default(shared)` zostały określone.
+Określanie `default(shared)` jest równoznaczne z jawną listą każdej obecnie widocznej zmiennej w klauzuli `shared`, chyba że jest `threadprivate` lub `const`kwalifikowana. W przypadku braku jawnej klauzuli `default` zachowanie domyślne jest takie samo jak w przypadku, gdy `default(shared)` zostały określone.
 
-Określanie `default(none)` wymaga, że co najmniej jedną z następujących muszą być spełnione dla każdego odwołania do zmiennej w zakresie leksykalnym konstrukcja równoległa:
+Określenie `default(none)` wymaga, aby co najmniej jeden z następujących elementów musi mieć wartość true dla każdego odwołania do zmiennej w zakresie leksykalnym konstrukcji równoległej:
 
-- Zmienna jawnie znajduje się w konstrukcji, która zawiera odwołanie do klauzuli atrybutu udostępniania danych.
+- Zmienna jest jawnie wymieniona w klauzuli atrybutu udostępniania danych konstrukcji, która zawiera odwołanie.
 
-- Ta zmienna została zgłoszona w ramach równoległego konstrukcji.
+- Zmienna jest zadeklarowana w konstrukcji równoległej.
 
 - Zmienna jest `threadprivate`.
 
-- Zmienna posiada `const`-kwalifikowaną typu.
+- Zmienna ma typ kwalifikowany `const`.
 
-- Zmienna jest zmienna sterująca pętli for `for` pętli, który poprzedza `for` lub `parallel for` dyrektywy i odwołanie do zmiennej pojawia się wewnątrz pętli.
+- Zmienna to Zmienna sterująca pętli dla pętli `for`, która bezpośrednio następuje po `for` lub `parallel for` dyrektywie, a odwołanie do zmiennej występuje wewnątrz pętli.
 
-Określenie zmiennej na `firstprivate`, `lastprivate`, lub `reduction` klauzuli ujęty dyrektywy powoduje niejawne odwołanie do zmiennej w otaczającym kontekście. Takie odwołań niejawnych są również w zależności od wymagań wymienionych powyżej.
+Określenie zmiennej w klauzuli `firstprivate`, `lastprivate`lub `reduction` zawartej dyrektywy powoduje wystąpienie niejawnego odwołania do zmiennej w otaczającym kontekście. Takie niejawne odwołania są również uzależnione od wymagań wymienionych powyżej.
 
-Tylko jeden `default` klauzuli mogą być określone dla `parallel` dyrektywy.
+W dyrektywie `parallel` można określić tylko jedną klauzulę `default`.
 
-Zmienna domyślnego atrybutu udostępniania danych, można zastąpić przy użyciu `private`, `firstprivate`, `lastprivate`, `reduction`, i `shared` zdań, jak pokazano na poniższym przykładzie:
+Domyślny atrybut udostępniania danych zmiennej można zastąpić za pomocą klauzul `private`, `firstprivate`, `lastprivate`, `reduction`i `shared`, jak pokazano w następującym przykładzie:
 
 ```cpp
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\
@@ -709,38 +709,38 @@ Zmienna domyślnego atrybutu udostępniania danych, można zastąpić przy użyc
 
 #### <a name="2726-reduction"></a>2.7.2.6 — redukcja
 
-Ta klauzula wykonuje zmniejszenie na zmienne skalarne, które pojawiają się w *liście zmiennych*, za pomocą operatora *op*. Składnia `reduction` klauzula jest w następujący sposób:
+Ta klauzula wykonuje redukcję zmiennych skalarnych, które pojawiają się na *liście zmiennych*przy użyciu operatora *op*. Składnia klauzuli `reduction` jest następująca:
 
-`reduction(` *Op* `:` *liście zmiennych* `)`
+`reduction(` *op* `:` *liście zmiennych* `)`
 
-Ograniczenie jest zazwyczaj określana dla instrukcji przy użyciu jednego z następujących form:
+Obniżka jest zwykle określona dla instrukcji z jedną z następujących form:
 
-- *x* `=` *x* *op* *expr*
-- *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (z wyjątkiem odejmowania)
-- *x* `++`
+- *wyrażenie* " *x* `=` *x* "
+- *wyrażenie* `=` *x* *binop*
+- *x* `=` *wyrażenie* *op* *(z* wyjątkiem odejmowania)
 - `++` *x*
-- *x* `--`
+- `++` *x*
+- `--` *x*
 - `--` *x*
 
 gdzie:
 
-*x*<br/>
+*y*<br/>
 Jedna ze zmiennych redukcji określonych na liście.
 
-*variable-list*<br/>
-Rozdzielana przecinkami lista zmiennych redukcja skalaru.
+*Lista zmiennych*<br/>
+Rozdzielana przecinkami lista zmiennych redukcji skalarnej.
 
-*expr*<br/>
-Wyrażenie skalarne typu, który nie odwołuje się do *x*.
+*wyrażenie*<br/>
+Wyrażenie z typem skalarnym, który nie odwołuje się do wartości *x*.
 
-*OP*<br/>
-Nie przeciążonego operatora, ale jeden z `+`, `*`, `-`, `&`, `^`, `|`, `&&`, lub `||`.
+*op*<br/>
+Nie jest to przeciążony operator, ale jeden z `+`, `*`, `-`, `&`, `^`, `|`, `&&`lub `||`.
 
 *binop*<br/>
-Nie przeciążonego operatora, ale jeden z `+`, `*`, `-`, `&`, `^`, lub `|`.
+Nie jest to przeciążony operator, ale jeden z `+`, `*`, `-`, `&`, `^`lub `|`.
 
-Oto przykład `reduction` klauzuli:
+Poniżej znajduje się przykładowa klauzula `reduction`:
 
 ```cpp
 #pragma omp parallel for reduction(+: a, y) reduction(||: am)
@@ -751,21 +751,21 @@ for (i=0; i<n; i++) {
 }
 ```
 
-Jak pokazano w przykładzie, operator może być ukryta wewnątrz wywołania funkcji. Użytkownik należy zachować ostrożność, że operator określona w `reduction` klauzuli odpowiada operację redukcji.
+Jak pokazano w przykładzie, operator może być ukryty wewnątrz wywołania funkcji. Użytkownik powinien zachować ostrożność, aby operator określony w klauzuli `reduction` odpowiadał operacji zmniejszania.
 
-Mimo że prawy operand `||` operator ma żadnych efektów ubocznych, w tym przykładzie, jest dozwolone, ale powinna być stosowana z rozwagą. W tym kontekście efekt uboczny, który ma gwarancję występują podczas wykonywania sekwencyjnego pętli mogą wystąpić podczas wykonywania równoległego. Różnica ta może być fakt, że kolejność wykonywania iteracji jest nieokreślony.
+Mimo że prawy operand operatora `||` nie ma efektów ubocznych w tym przykładzie, są one dozwolone, ale powinny być używane z opieką. W tym kontekście efekt uboczny, który nie występuje podczas sekwencyjnego wykonywania pętli, może wystąpić podczas wykonywania równoległego. Różnica taka może wystąpić, ponieważ kolejność wykonywania iteracji jest nieokreślona.
 
-Operator jest używany do określenia początkowej wartości żadnych zmiennych prywatnego używany przez kompilator do zmniejszenia oraz określeniem operator finalizacji jest zakończona. Jawne określenie operator umożliwia instrukcji redukcji przekraczających zakres leksykalne konstrukcja. Dowolną liczbę `reduction` klauzule mogą być określone dla dyrektywy, ale zmiennej może występować w co najwyżej jeden `reduction` klauzula dla tej dyrektywy.
+Operator służy do określenia początkowej wartości wszelkich zmiennych prywatnych używanych przez kompilator w celu zmniejszenia i określenia operatora finalizacji. Określenie operatora jawnie zezwala na to, aby instrukcja redukcji była poza leksykalnym zakresem konstrukcji. W dyrektywie można określić dowolną liczbę klauzul `reduction`, ale zmienna może wystąpić w co najwyżej jednej klauzuli `reduction` dla tej dyrektywy.
 
-Prywatną kopię każdej zmiennej w *liście zmiennych* zostanie utworzony, jeden dla każdego wątku, tak jakby `private` została użyta klauzula. Zainicjowano prywatnej kopii zgodnie z operatora (patrz poniższa tabela).
+Prywatna kopia każdej zmiennej w *liście zmiennych* jest tworzona, po jednej dla każdego wątku, tak jakby była używana klauzula `private`. Prywatna kopia jest inicjowana zgodnie z operatorem (patrz Poniższa tabela).
 
-Na koniec region, dla którego `reduction` określono klauzulę, oryginalny obiekt jest aktualizowany w celu odzwierciedlenia wynikiem połączenia oryginalnej wartości z końcowa wartość każdego prywatne kopie za pomocą operatora określono. Operatory redukcji są wszystkie asocjacyjnych (z wyjątkiem odejmowania), a kompilator swobodnie ponownie skojarzyć obliczenie wartości końcowej. (Wyniki częściowe redukcji odejmowania są dodawane do utworzenia końcowej).
+Na końcu regionu, dla którego została określona klauzula `reduction`, oryginalny obiekt zostanie zaktualizowany w celu odzwierciedlenia wyniku połączenia jego pierwotnej wartości z wartością końcową każdej z kopii prywatnych przy użyciu określonego operatora. Operatory redukcji są wszystkie skojarzeniami (z wyjątkiem odejmowania), a kompilator może swobodnie ponownie kojarzyć obliczenia wartości końcowej. (Częściowe wyniki zmniejszenia odejmowania są dodawane do postaci końcowej wartości).
 
-Wartość obiektu oryginalnego staje się nieokreślony, gdy pierwszy wątek osiągnie zawierających klauzulę i pozostaje, więc przed zakończeniem obliczania redukcji.  Zwykle obliczeń zostanie wykonana na końcu konstrukcji; Jednak jeśli `reduction` na konstrukcję, do której jest używana klauzula `nowait` jest również stosowane wartości oryginalnego obiektu pozostanie nieokreślone do czasu, aby upewnić się, że wszystkie wątki zostały ukończone zostaławykonanasynchronizacjabarierę`reduction`klauzuli.
+Wartość oryginalnego obiektu zostanie nieokreślona, gdy pierwszy wątek osiągnie klauzulę zawierającą i pozostaje tak do momentu zakończenia obliczania obniżki.  Zwykle obliczenia zostaną wykonane na końcu konstrukcji; Jednakże jeśli klauzula `reduction` jest używana w konstrukcji, do której zastosowano również `nowait`, wartość oryginalnego obiektu pozostaje nieokreślona do momentu wykonania synchronizacji bariery, aby upewnić się, że wszystkie wątki ukończyły klauzulę `reduction`.
 
-W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości canonical inicjowania. Wartość rzeczywista inicjalizacji będzie zgodny z typem danych zmiennej redukcji.
+W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości inicjujące kanoniczne. Rzeczywista wartość inicjowania będzie spójna z typem danych zmiennej redukcyjnej.
 
-|Operator|Inicjalizacja|
+|Operator|Inicjowanie|
 |--------------|--------------------|
 |`+`|0|
 |`*`|1|
@@ -776,13 +776,13 @@ W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości
 |`&&`|1|
 |`||`|0|
 
-Ograniczenia do `reduction` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `reduction` są następujące:
 
-- Typ zmiennych w `reduction` klauzula musi mieć prawidłowy dla operatorem redukcji, z tą różnicą, że nigdy nie są dozwolone typy wskaźników i odwołań.
+- Typ zmiennych w klauzuli `reduction` musi być prawidłowy dla operatora redukcji, z wyjątkiem tego, że typy wskaźnika i typy odwołań nigdy nie są dozwolone.
 
-- Zmienna, która została określona w `reduction` klauzuli nie może być `const`-kwalifikowaną.
+- Zmienna określona w klauzuli `reduction` nie może być kwalifikowana `const`.
 
-- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli `parallel` dyrektywy nie można określić w `reduction` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
+- Zmienne, które są prywatne w ramach równoległego regionu lub, które pojawiają się w klauzuli `reduction` dyrektywy `parallel`, nie mogą być określone w klauzuli `reduction` dla dyrektywy udostępniania pracy, która jest powiązana z konstrukcją równoległą.
 
    ```cpp
    #pragma omp parallel private(y)
@@ -800,7 +800,7 @@ Ograniczenia do `reduction` klauzuli są następujące:
 
 #### <a name="2727-copyin"></a>2.7.2.7 kopiowanie
 
-`copyin` Klauzuli zapewnia mechanizm, aby przypisać tę samą wartość, aby `threadprivate` zmienne dla każdego wątku w zespole wykonywania równoległego regionu. Dla każdej zmiennej, określone w `copyin` klauzuli, wartość zmiennej w głównym wątku zespołu, jest kopiowany, tak, jakby przez przypisanie do kopii prywatnego wątku na początku równoległego regionu. Składnia `copyin` klauzula jest w następujący sposób:
+Klauzula `copyin` zapewnia mechanizm do przypisywania tej samej wartości do `threadprivate` zmiennych dla każdego wątku w zespole wykonującego region równoległy. Dla każdej zmiennej określonej w klauzuli `copyin`, wartość zmiennej w wątku głównym zespołu jest kopiowana, tak jak przez przypisanie do kopii prywatnych wątku na początku regionu równoległego. Składnia klauzuli `copyin` jest następująca:
 
 ```cpp
 
@@ -809,17 +809,17 @@ variable-list
 )
 ```
 
-Ograniczenia do `copyin` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `copyin` są następujące:
 
-- Zmienna, która została określona w `copyin` klauzula musi mieć operatora przypisania kopiowania dostępny, jednoznaczną.
+- Zmienna określona w klauzuli `copyin` musi mieć dostępny, niejednoznaczny operator przypisania kopiowania.
 
-- Zmienna, która została określona w `copyin` musi mieć klauzulę `threadprivate` zmiennej.
+- Zmienna określona w klauzuli `copyin` musi być zmienną `threadprivate`.
 
 #### <a name="2728-copyprivate"></a>2.7.2.8 — prywatna kopia
 
-`copyprivate` Klauzuli udostępnia mechanizm do zmiennej prywatnej umożliwia emitowanie wartości z jednego członka zespołu do innych członków. Jest to alternatywa dla użycia w udostępnionej zmiennej wartości, gdy dostarczanie w udostępnionej zmiennej może sprawiać trudności (na przykład w rekursji, wymagających inną zmienną na każdym poziomie). `copyprivate` Klauzuli może się pojawić tylko `single` dyrektywy.
+Klauzula `copyprivate` udostępnia mechanizm do użycia zmiennej prywatnej do emisji wartości z jednego członka zespołu do innych członków. Alternatywnym rozwiązaniem jest użycie zmiennej udostępnionej dla wartości, gdy udostępnienie takiej zmiennej udostępnionej byłaby trudne (na przykład w rekursji wymagającej innej zmiennej na każdym poziomie). Klauzula `copyprivate` może występować tylko w dyrektywie `single`.
 
-Składnia `copyprivate` klauzula jest w następujący sposób:
+Składnia klauzuli `copyprivate` jest następująca:
 
 ```cpp
 
@@ -828,46 +828,46 @@ variable-list
 )
 ```
 
-Efekt `copyprivate` klauzuli zmiennych na swojej liście zmiennych występuje po wykonaniu strukturalnego bloku skojarzone z `single` konstruowania, i przed wszystkich wątków w zespole pozostało barierę na końcu konstrukcja. Następnie w innych wątków w zespole, dla każdej zmiennej w *liście zmiennych*, zmienna staje się definicją (tak, jakby przypisanie) z wartością odpowiadającego zmiennej w wątku, który jest wykonywany konstrukcja użytkownika ze strukturą blok.
+Wpływ klauzuli `copyprivate` na zmienne na liście zmiennych występuje po wykonaniu bloku strukturalnego powiązanego z konstrukcją `single`, a przed jakimkolwiek wątkiem w zespole nie opuścił bariery na końcu konstrukcji. Następnie, we wszystkich innych wątkach w zespole, dla każdej zmiennej na *liście zmiennych*, ta zmienna zostaje zdefiniowana (tak jak przez przypisanie) z wartością odpowiedniej zmiennej w wątku, który wykonał blok strukturalny konstrukcji.
 
-Ograniczenia `copyprivate` klauzuli są następujące:
+Ograniczenia dotyczące klauzuli `copyprivate` są następujące:
 
-- Zmienna, która została określona w `copyprivate` klauzuli nie musi znajdować się w `private` lub `firstprivate` klauzulę dla tego samego `single` dyrektywy.
+- Zmienna określona w klauzuli `copyprivate` nie może występować w klauzuli `private` lub `firstprivate` dla tej samej dyrektywy `single`.
 
-- Jeśli `single` dyrektywy z `copyprivate` klauzuli napotkaniu dynamicznego zakresu równoległego regionu, wszystkie zmienne określone w `copyprivate` klauzuli musi być prywatna w otaczającym kontekście.
+- Jeśli `single` dyrektywie z klauzulą `copyprivate` zostanie napotkany w dynamicznym zakresie regionu równoległego, wszystkie zmienne określone w klauzuli `copyprivate` muszą być prywatne w otaczającym kontekście.
 
-- Zmienna, która została określona w `copyprivate` klauzula musi mieć operatora przypisania kopiowania jednoznaczną dostępne.
+- Zmienna określona w klauzuli `copyprivate` musi mieć dostępny niejednoznaczny operator przypisania kopii.
 
-## <a name="28-directive-binding"></a>2.8 powiązania dyrektywy
+## <a name="28-directive-binding"></a>2,8 powiązanie dyrektywy
 
-Dynamiczne powiązanie dyrektyw określających muszą być zgodne z następującymi zasadami:
+Dynamiczne powiązanie dyrektyw musi przestrzegać następujących zasad:
 
-- `for`, `sections`, `single`, `master`, I `barrier` dyrektywy powiązać dynamicznie otaczający `parallel`, jeśli taki istnieje, niezależnie od wartości dowolnych `if` klauzula, która może być obecny na tym dyrektywa. Jeśli obecnie jest wykonywana nie równoległego regionu, dyrektywy są wykonywane przez zespół składa się z głównego wątku.
+- Dyrektywy `for`, `sections`, `single`, `master`i `barrier` są powiązane z dynamicznie otaczającym `parallel`, jeśli taki istnieje, niezależnie od wartości dowolnej klauzuli `if`, która może być obecna w tej dyrektywie. Jeśli żaden region równoległy nie jest aktualnie wykonywany, dyrektywy są wykonywane przez zespół składający się z tylko z wątku głównego.
 
-- `ordered` Dyrektywy wiąże dynamicznie otaczający `for`.
+- Dyrektywa `ordered` wiąże się z dynamicznie otaczającym `for`.
 
-- `atomic` Dyrektywy wymusza wyłącznego dostępu w odniesieniu do `atomic` dyrektywy w wszystkie wątki, nie tylko zespół.
+- Dyrektywa `atomic` wymusza wyłączny dostęp w odniesieniu do dyrektyw `atomic` we wszystkich wątkach, a nie tylko dla bieżącego zespołu.
 
-- `critical` Dyrektywy wymusza wyłącznego dostępu w odniesieniu do `critical` dyrektywy w wszystkie wątki, nie tylko zespół.
+- Dyrektywa `critical` wymusza wyłączny dostęp w odniesieniu do dyrektyw `critical` we wszystkich wątkach, a nie tylko dla bieżącego zespołu.
 
-- Dyrektywy może nigdy nie mają powiązań każdej dyrektywy poza najbardziej dynamicznie otaczający `parallel`.
+- Dyrektywa może nigdy nie powiązać żadnej dyrektywy poza najbliższym dynamicznie dołączanym `parallel`.
 
-## <a name="29-directive-nesting"></a>2.9 zagnieżdżanie dyrektywy
+## <a name="29-directive-nesting"></a>2,9 zagnieżdżenia dyrektywy
 
-Dynamiczne zagnieżdżanie dyrektyw muszą być zgodne z następującymi zasadami:
+Dynamiczne zagnieżdżanie dyrektyw musi przestrzegać następujących zasad:
 
-- A `parallel` dyrektywy dynamicznie wewnątrz innego `parallel` logicznie ustanawia nowy zespół, który składa się z bieżącym wątkiem, chyba że zagnieżdżone równoległości jest włączona.
+- Dyrektywa `parallel` dynamicznie wewnątrz innego `parallel` logicznie ustanawia nowy zespół, który składa się tylko z bieżącego wątku, chyba że jest włączona zagnieżdżona równoległość.
 
-- `for`, `sections`, i `single` dyrektyw, które powiązania do tej samej `parallel` nie mogą być zagnieżdżone wewnątrz siebie nawzajem.
+- dyrektywy `for`, `sections`i `single`, które wiążą się z tymi samymi `parallel`, nie mogą być zagnieżdżone wewnątrz siebie.
 
-- `critical` dyrektywy o takiej samej nazwie, nie mogą być zagnieżdżone wewnątrz siebie nawzajem. Należy pamiętać, że to ograniczenie nie jest wystarczające do uniknięcia zakleszczenia.
+- dyrektywy `critical` o tej samej nazwie nie mogą być zagnieżdżone wewnątrz siebie. Należy zauważyć, że to ograniczenie nie jest wystarczające, aby zapobiec zakleszczeniu.
 
-- `for`, `sections`, i `single` dyrektywy nie są dozwolone w zakresie dynamiczne `critical`, `ordered`, i `master` regionów, jeśli dyrektywy powiązania do tej samej `parallel` jako regionów.
+- dyrektywy `for`, `sections`i `single` nie są dozwolone w dynamicznym zakresie `critical`, `ordered`i `master` regionach, jeśli dyrektywy powiążą się z tymi samymi `parallel` co regiony.
 
-- `barrier` dyrektywy nie są dozwolone w zakresie dynamiczne `for`, `ordered`, `sections`, `single`, `master`, i `critical` regionów, jeśli dyrektywy powiązania do tej samej `parallel` jako regionów.
+- dyrektywy `barrier` nie są dozwolone w dynamicznym zakresie `for`, `ordered`, `sections`, `single`, `master`i `critical` regionach, jeśli dyrektywy powiążą się z tymi samymi `parallel` co regiony.
 
-- `master` dyrektywy nie są dozwolone w zakresie dynamiczne `for`, `sections`, i `single` dyrektywy Jeśli `master` dyrektywy powiązania do tej samej `parallel` jako dyrektyw podziału pracy.
+- dyrektywy `master` nie są dozwolone w dynamicznym zakresie `for`, `sections`i dyrektywy `single`, jeśli dyrektywy `master` są powiązane z tymi samymi `parallel` co dyrektywy udostępniania pracy.
 
-- `ordered` dyrektywy nie są dozwolone w zakres dynamiczny `critical` regionów, jeśli dyrektywy powiązania do tej samej `parallel` jako regionów.
+- dyrektywy `ordered` są niedozwolone w dynamicznym zakresie `critical` regionów, jeśli dyrektywy powiążą się z tymi samymi `parallel` co regiony.
 
-- Wszystkie dyrektywy, które są dozwolone podczas wykonywania dynamicznie w ramach równoległego regionu również jest dozwolone, gdy wykonywane poza równoległego regionu. Po wykonaniu dynamicznie, poza regionem równolegle z określonych przez użytkownika, dyrektywa jest wykonywana przez zespół składa się z głównego wątku.
+- Każda dyrektywa, która jest dozwolona, gdy jest wykonywana dynamicznie w regionie równoległym, jest również dozwolona, gdy jest wykonywana poza równoległym regionem. W przypadku wykonywania dynamicznego na zewnątrz regionu równoległego określonego przez użytkownika, dyrektywa jest wykonywana przez zespół składający się z tylko wątku głównego.
