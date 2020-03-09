@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298617"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864967"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 
@@ -37,34 +37,34 @@ class CComPtrBase
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ obiektu, do którego odwołuje się inteligentny wskaźnik.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CComPtrBase::~CComPtrBase](#dtor)|Destruktor.|
+|[CComPtrBase:: ~ CComPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|Wywołaj tę metodę, aby utworzyć połączenie między punktem połączenia `CComPtrBase`i ujściam klienta.|
-|[CComPtrBase::Attach](#attach)|Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.|
+|[CComPtrBase:: Attach](#attach)|Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.|
 |[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Wywołaj tę metodę, aby utworzyć obiekt klasy skojarzonej z określonym IDENTYFIKATORem klasy lub IDENTYFIKATORem programu.|
-|[CComPtrBase::CopyTo](#copyto)|Wywołaj tę metodę, aby skopiować wskaźnik `CComPtrBase` do innej zmiennej wskaźnika.|
-|[CComPtrBase::Detach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
+|[CComPtrBase:: CopyTo](#copyto)|Wywołaj tę metodę, aby skopiować wskaźnik `CComPtrBase` do innej zmiennej wskaźnika.|
+|[CComPtrBase::D etach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
 |[CComPtrBase:: isequalobject](#isequalobject)|Wywołaj tę metodę, aby sprawdzić, czy określony `IUnknown` wskazuje na ten sam obiekt skojarzony z obiektem `CComPtrBase`.|
 |[CComPtrBase:: QueryInterface](#queryinterface)|Wywołaj tę metodę, aby zwrócić wskaźnik do określonego interfejsu.|
-|[CComPtrBase::Release](#release)|Wywołaj tę metodę, aby zwolnić interfejs.|
+|[CComPtrBase:: Release](#release)|Wywołaj tę metodę, aby zwolnić interfejs.|
 |[CComPtrBase:: SetSite](#setsite)|Wywołaj tę metodę, aby ustawić lokację obiektu `CComPtrBase` na `IUnknown` obiektu nadrzędnego.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComPtrBase:: operator T *](#operator_t_star)|Operator rzutowania.|
 |[CComPtrBase:: operator!](#operator_not)|Operator NOT.|
@@ -76,7 +76,7 @@ Typ obiektu, do którego odwołuje się inteligentny wskaźnik.
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Zmienna elementu członkowskiego danych wskaźnika.|
 
@@ -101,7 +101,7 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*<br/>
+*Punkt*<br/>
 Wskaźnik do `IUnknown`klienta.
 
 *IID*<br/>
@@ -197,7 +197,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppT*<br/>
+*Formacie*<br/>
 Adres zmiennej, która będzie odbierać wskaźnik `CComPtrBase`.
 
 ### <a name="return-value"></a>Wartość zwrócona
@@ -415,6 +415,6 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta metoda wywołuje [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

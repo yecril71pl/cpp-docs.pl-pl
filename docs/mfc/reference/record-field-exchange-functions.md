@@ -46,27 +46,27 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
 ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095828"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871658"
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 
 W tym temacie wymieniono funkcje wymiany pól rekordów (RFX, bulk RFX i DFX) używane do automatyzowania transferu danych między obiektem zestawu rekordów i jego źródłem danych oraz do wykonywania innych operacji na danych.
 
-Jeśli używasz klas opartych na ODBC i zaimplementowano pobieranie wierszy zbiorczych, musisz ręcznie przesłonić `DoBulkFieldExchange` `CRecordset` funkcję członkowską przez wywołanie funkcji RFX zbiorczych dla każdego elementu członkowskiego danych odpowiadającego kolumnie źródła danych.
+Jeśli używasz klas opartych na ODBC i wdrożono pobieranie wierszy zbiorczych, musisz ręcznie przesłonić `DoBulkFieldExchange` funkcję członkowską `CRecordset`, wywołując funkcje Bulk RFX dla każdego elementu członkowskiego danych odpowiadającego kolumnie źródła danych.
 
-Jeśli nie zaimplementowano pobierania wierszy zbiorczych w klasach opartych na ODBC lub jeśli używasz klas opartych na DAO (przestarzałe), ClassWizard przesłoni `DoFieldExchange` `CRecordset` funkcję członkowską lub `CDaoRecordset` przez wywołanie funkcji RFX (dla Klasy ODBC) lub funkcje DFX (dla klas DAO) dla każdego elementu członkowskiego danych pola w zestawie rekordów.
+Jeśli nie zaimplementowano pobierania wierszy zbiorczych w klasach opartych na ODBC lub jeśli używasz klas opartych na obiektach DAO (przestarzałe), ClassWizard przesłoni `DoFieldExchange` funkcję członkowską `CRecordset` lub `CDaoRecordset` przez wywołanie funkcji RFX (dla klas ODBC) lub funkcji DFX (dla klas DAO) dla każdego elementu członkowskiego danych pola w zestawie rekordów.
 
-Funkcja wymiany pól rekordu przenosi dane za każdym razem, gdy struktura `DoFieldExchange` wywołuje `DoBulkFieldExchange`lub. Każda funkcja przenosi określony typ danych.
+Funkcja wymiany pola rekordu przenosi dane za każdym razem, gdy struktura wywołuje `DoFieldExchange` lub `DoBulkFieldExchange`. Każda funkcja przenosi określony typ danych.
 
-Aby uzyskać więcej informacji na temat sposobu używania tych funkcji, zobacz artykuł [rejestrowanie pól rekordów: Jak działa RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów artykułów: Pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Aby uzyskać więcej informacji na temat sposobu korzystania z tych funkcji, zobacz artykuł [Rejestrowanie pól rekordów: jak działa RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów artykułów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-W przypadku kolumn danych, które są powiązane dynamicznie, można również wywołać funkcje RFX lub DFX samodzielnie, jak wyjaśniono w zestawie rekordów [artykułów: Dynamiczne wiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Ponadto można napisać własne niestandardowe procedury RFX lub DFX, zgodnie z opisem w uwagach technicznych [43](../../mfc/tn043-rfx-routines.md) (dla ODBC) i uwagach technicznych [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (dla DAO).
+W przypadku kolumn danych, które są powiązane dynamicznie, można również wywołać funkcje RFX lub DFX samodzielnie, jak wyjaśniono w [zestawie rekordów artykułów: dynamiczne łączenie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Ponadto można napisać własne niestandardowe procedury RFX lub DFX, zgodnie z opisem w uwagach technicznych [43](../../mfc/tn043-rfx-routines.md) (dla ODBC) i uwagach technicznych [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (dla DAO).
 
-Aby zapoznać się z przykładem funkcji RFX i bulk RFX, jak pojawiają się one w `DoFieldExchange` funkcjach i `DoBulkFieldExchange` , zobacz [RFX_Text](#rfx_text) i [RFX_Text_Bulk] #rfx_text_bulk). Funkcje DFX są bardzo podobne do funkcji RFX.
+Aby zapoznać się z przykładem funkcji RFX i bulk RFX, jak pojawiają się one w funkcjach `DoFieldExchange` i `DoBulkFieldExchange`, zobacz [RFX_Text](#rfx_text) i [RFX_Text_Bulk] #rfx_text_bulk). Funkcje DFX są bardzo podobne do funkcji RFX.
 
 ### <a name="rfx-functions-odbc"></a>Funkcje RFX (ODBC)
 
@@ -108,7 +108,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, jak pojawiają się one
 |[DFX_DateTime](#dfx_datetime)|Przesyła dane dotyczące daty i godziny, typu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|
 |[DFX_Double](#dfx_double)|Przesyła dane zmiennoprzecinkowe o podwójnej precyzji.|
 |[DFX_Long](#dfx_long)|Przesyła dane Long Integer.|
-|[DFX_LongBinary](#dfx_longbinary)|Przesyła dane binarne dużego obiektu (BLOB) do obiektu `CLongBinary` klasy. W przypadku obiektów DAO zaleca się użycie [DFX_Binary](#dfx_binary) zamiast tego.|
+|[DFX_LongBinary](#dfx_longbinary)|Przesyła dane binarne obiektów binarnych (BLOB) z obiektem klasy `CLongBinary`. W przypadku obiektów DAO zaleca się używanie [DFX_Binary](#dfx_binary) zamiast tego.|
 |[DFX_Short](#dfx_short)|Przesyła dane z krótkich liczb całkowitych.|
 |[DFX_Single](#dfx_single)|Przesyła dane zmiennoprzecinkowe.|
 |[DFX_Text](#dfx_text)|Przesyła dane ciągów.|
@@ -117,7 +117,7 @@ Aby zapoznać się z przykładem funkcji RFX i bulk RFX, jak pojawiają się one
 
 ## <a name="rfx_binary"></a>RFX_Binary
 
-Przenosi tablice bajtów między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych typu ODBC SQL_BINARY, SQL_VARBINARY lub SQL_LONGVARBINARY.
+Przenosi tablice bajtów między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_BINARY, SQL_VARBINARY lub SQL_LONGVARBINARY.
 
 ### <a name="syntax"></a>Składnia
 
@@ -132,7 +132,7 @@ void RFX_Binary(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -157,7 +157,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_bool"></a>RFX_Bool
 
-Przesyła dane logiczne między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych typu ODBC SQL_BIT.
+Przesyła dane logiczne między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_BIT.
 
 ### <a name="syntax"></a>Składnia
 
@@ -171,7 +171,7 @@ void RFX_Bool(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -189,7 +189,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_byte"></a>RFX_Byte
 
-Przenosi pojedyncze bajty między elementami członkowskimi `CRecordset` danych pola obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_TINYINT.
+Przenosi pojedyncze bajty między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_TINYINT.
 
 ### <a name="syntax"></a>Składnia
 
@@ -203,7 +203,7 @@ void RFX_Byte(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -221,7 +221,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_date"></a>RFX_Date
 
-Przenosi `CTime` lub TIMESTAMP_STRUCT dane między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych typu ODBC SQL_DATE, SQL_TIME lub SQL_TIMESTAMP.
+Przenosi `CTime` lub TIMESTAMP_STRUCT dane między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_DATE, SQL_TIME lub SQL_TIMESTAMP.
 
 ### <a name="syntax"></a>Składnia
 
@@ -245,7 +245,7 @@ void RFX_Date(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -255,11 +255,11 @@ Wartość przechowywana we wskazanej składowej danych; wartość, która ma zos
 
 Pierwsza wersja funkcji przyjmuje odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) . W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
-Druga wersja funkcji przyjmuje odwołanie do `TIMESTAMP_STRUCT` struktury. Tę strukturę należy skonfigurować samodzielnie przed wywołaniem. Dla tej wersji nie jest dostępna żadna obsługa wymiany danych (DDX) ani Obsługa kreatora kodu. Trzecia wersja funkcji działa podobnie jak w przypadku pierwszej wersji, z tą różnicą, że pobiera odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
+Druga wersja funkcji przyjmuje odwołanie do struktury `TIMESTAMP_STRUCT`. Tę strukturę należy skonfigurować samodzielnie przed wywołaniem. Dla tej wersji nie jest dostępna żadna obsługa wymiany danych (DDX) ani Obsługa kreatora kodu. Trzecia wersja funkcji działa podobnie jak w przypadku pierwszej wersji, z tą różnicą, że pobiera odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
 
 ### <a name="remarks"></a>Uwagi
 
-`CTime` Wersja funkcji nakłada obciążenie pewnego przetwarzania pośredniego i ma nieco ograniczony zakres. Jeśli okaże się, że oba te czynniki są zbyt ograniczone, użyj drugiej wersji funkcji. Zwróć uwagę na to, że nie ma kreatora kodu i pomocy technicznej DDX oraz wymaganie, aby samodzielnie skonfigurować strukturę.
+Wersja `CTime` funkcji nakłada obciążenie pewnego przetwarzania pośredniego i ma nieco ograniczony zakres. Jeśli okaże się, że oba te czynniki są zbyt ograniczone, użyj drugiej wersji funkcji. Zwróć uwagę na to, że nie ma kreatora kodu i pomocy technicznej DDX oraz wymaganie, aby samodzielnie skonfigurować strukturę.
 
 ### <a name="example"></a>Przykład
 
@@ -271,7 +271,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_double"></a>RFX_Double
 
-Przenosi **podwójne dane zmiennoprzecinkowe** między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych typu ODBC SQL_DOUBLE.
+Przenosi **podwójne dane zmiennoprzecinkowe** między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_DOUBLE.
 
 ### <a name="syntax"></a>Składnia
 
@@ -285,7 +285,7 @@ void RFX_Double(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -303,7 +303,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_int"></a>RFX_Int
 
-Przenosi dane całkowite między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordów w źródle danych typu ODBC SQL_SMALLINT.
+Przenosi dane całkowite między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Składnia
 
@@ -317,7 +317,7 @@ void RFX_Int(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -335,7 +335,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_long"></a>RFX_Long
 
-Przesyła dane typu Long-Integer między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych SQL_INTEGER.
+Przesyła dane typu Long-Integer między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych o typie ODBC SQL_INTEGER.
 
 ### <a name="syntax"></a>Składnia
 
@@ -350,7 +350,7 @@ value );
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -368,7 +368,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_longbinary"></a>RFX_LongBinary
 
-Przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy [CLongBinary](clongbinary-class.md) między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARBINARY lub SQL_LONGVARCHAR.
+Przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy [CLongBinary](clongbinary-class.md) między elementami członkowskimi obiektu `CRecordset` i kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARBINARY lub SQL_LONGVARCHAR.
 
 ### <a name="syntax"></a>Składnia
 
@@ -382,7 +382,7 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -400,7 +400,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_single"></a>RFX_Single
 
-Przesyła dane zmiennoprzecinkowe między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordów w źródle danych typu ODBC SQL_REAL.
+Przesyła dane zmiennoprzecinkowe między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_REAL.
 
 ### <a name="syntax"></a>Składnia
 
@@ -414,7 +414,7 @@ void RFX_Single(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -432,7 +432,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_text"></a>RFX_Text
 
-Przenosi `CString` dane między elementami członkowskimi `CRecordset` danych pola obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL lub Sql_Numeric.
+Przenosi `CString` dane między elementami członkowskimi danych pól `CRecordset` obiektu i kolumnami rekordu w źródle danych typu ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL lub SQL_NUMERIC.
 
 ### <a name="syntax"></a>Składnia
 
@@ -449,7 +449,7 @@ void RFX_Text(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy `CFieldExchange`. Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy `CFieldExchange`. Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -472,7 +472,7 @@ Dane w źródle danych wszystkich typów są mapowane do i z `CString` w zestawi
 
 ### <a name="example"></a>Przykład
 
-Ten przykład pokazuje kilka wywołań `RFX_Text`. Zwróć również uwagę na dwa wywołania `CFieldExchange::SetFieldType`. Dla parametrów należy napisać wywołanie do `SetFieldType` i jego wywołanie RFX. Wywołanie kolumny wyjściowej i skojarzone z nią wywołania RFX są zwykle zapisywane przez kreatora kodu.
+Ten przykład pokazuje kilka wywołań do `RFX_Text`. Zwróć również uwagę na te dwa wywołania do `CFieldExchange::SetFieldType`. Dla parametrów należy napisać wywołanie do `SetFieldType` i jego wywołania RFX. Wywołanie kolumny wyjściowej i skojarzone z nią wywołania RFX są zwykle zapisywane przez kreatora kodu.
 
 ```cpp
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -498,7 +498,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 ## <a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
 
-Przesyła wiele wierszy danych typu Byte z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych typu Byte z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -523,7 +523,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości bajtów. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgByteVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgByteVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 *nMaxLength*<br/>
 Maksymalna dozwolona długość wartości przechowywanych w tablicy wskazywanej przez *prgByteVals*. Aby upewnić się, że dane nie będą obcinane, należy przekazać wartość wystarczająco duża, aby pomieścić największe oczekiwane elementy danych.
@@ -535,9 +535,9 @@ Kolumna źródła danych może mieć typ ODBC SQL_BINARY, SQL_VARBINARY lub SQL_
 Jeśli zainicjujesz *prgByteVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby można było zaktualizować zestaw rekordów, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby można było zaktualizować zestaw rekordów, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -549,7 +549,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
 
-Przenosi wiele wierszy danych logicznych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych logicznych z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -573,7 +573,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości BOOL. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgBoolVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgBoolVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -582,9 +582,9 @@ Kolumna źródła danych musi mieć typ ODBC SQL_BIT. Zestaw rekordów musi defi
 Jeśli zainicjujesz *prgBoolVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -596,7 +596,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
 
-Transferuje wiele wierszy z pojedynczej liczby bajtów z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy pojedynczych bajtów z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -620,7 +620,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości bajtów. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgByteVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgByteVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -629,9 +629,9 @@ Kolumna źródła danych musi mieć typ ODBC SQL_TINYINT. Zestaw rekordów musi 
 Jeśli zainicjujesz *prgByteVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -643,7 +643,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_date_bulk"></a>RFX_Date_Bulk
 
-Przesyła wiele wierszy danych TIMESTAMP_STRUCT z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych TIMESTAMP_STRUCT z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -667,18 +667,18 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości TIMESTAMP_STRUCT. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów. Aby uzyskać więcej informacji na temat typu danych TIMESTAMP_STRUCT, zobacz temat "typy danych C" w dodatku D odwołania do *zestawu ODBC SDK*.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgTSVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgTSVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolumna źródła danych może mieć typ ODBC SQL_DATE, SQL_TIME lub SQL_TIMESTAMP. Zestaw rekordów musi definiować element członkowski danych pola typu wskaźnika do TIMESTAMP_STRUCT.
+Kolumna źródła danych może mieć typ ODBC SQL_DATE, SQL_TIME lub SQL_TIMESTAMP. Zestaw rekordów musi definiować element członkowski danych pola typu wskaźnik do TIMESTAMP_STRUCT.
 
 Jeśli zainicjujesz *prgTSVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -690,7 +690,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_double_bulk"></a>RFX_Double_Bulk
 
-Transferuje wiele wierszy danych o podwójnej precyzji z kolumny ze źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych o podwójnej precyzji z kolumny ze źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -714,7 +714,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości **podwójnej precyzji** . Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgDblVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgDblVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -723,9 +723,9 @@ Kolumna źródła danych musi mieć typ ODBC SQL_DOUBLE. Zestaw rekordów musi d
 Jeśli zainicjujesz *prgDblVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -737,7 +737,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_int_bulk"></a>RFX_Int_Bulk
 
-Przenosi dane całkowite między elementami członkowskimi `CRecordset` danych pola a kolumnami rekordów w źródle danych typu ODBC SQL_SMALLINT.
+Przenosi dane całkowite między elementami członkowskimi danych pola `CRecordset` obiektu a kolumnami rekordu w źródle danych typu ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Składnia
 
@@ -751,7 +751,7 @@ void RFX_Int(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji o operacjach `CFieldExchange` , które można określić w obiekcie, [Zobacz temat rejestrowanie pól rekordu artykułu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji na temat operacji, które może określić obiekt `CFieldExchange`, zobacz temat [wymiana pól rekordów artykułu: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -769,7 +769,7 @@ Zobacz [RFX_Text](#rfx_text).
 
 ## <a name="rfx_long_bulk"></a>RFX_Long_Bulk
 
-Przesyła wiele wierszy danych long Integer z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych long Integer z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -793,7 +793,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgLongVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgLongVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -802,9 +802,9 @@ Kolumna źródła danych musi mieć typ ODBC SQL_INTEGER. Zestaw rekordów musi 
 Jeśli zainicjujesz *prgLongVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -816,7 +816,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_single_bulk"></a>RFX_Single_Bulk
 
-Przesyła wiele wierszy danych zmiennoprzecinkowych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych zmiennoprzecinkowych z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -840,7 +840,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości **zmiennoprzecinkowych** . Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgFltVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgFltVals*. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -849,9 +849,9 @@ Kolumna źródła danych musi mieć typ ODBC SQL_REAL. Zestaw rekordów musi def
 Jeśli zainicjujesz *prgFltVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
@@ -863,7 +863,7 @@ Zobacz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ## <a name="rfx_text_bulk"></a>RFX_Text_Bulk
 
-Przesyła wiele wierszy danych znakowych z kolumny źródła danych ODBC do odpowiedniej tablicy w `CRecordset`obiekcie pochodnym.
+Przesyła wiele wierszy danych znakowych z kolumny źródła danych ODBC do odpowiedniej tablicy w obiekcie pochodnym `CRecordset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>Parametry
 
 *pFX*<br/>
-Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [dotyczący wymiany pól rekordu: Jak działa](../../data/odbc/record-field-exchange-how-rfx-works.md)RFX.
+Wskaźnik do obiektu [CFieldExchange](cfieldexchange-class.md) . Ten obiekt zawiera informacje służące do definiowania kontekstu dla każdego wywołania funkcji. Aby uzyskać więcej informacji, zobacz artykuł [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nazwa kolumny danych.
@@ -888,7 +888,7 @@ Nazwa kolumny danych.
 Wskaźnik do tablicy wartości LPSTR. Ta tablica będzie przechowywać dane, które mają zostać przesłane ze źródła danych do zestawu rekordów. Należy pamiętać, że z bieżącą wersją ODBC, te wartości nie mogą być w formacie Unicode.
 
 *prgLengths*<br/>
-Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgStrVals*. Ta długość wyklucza znak zakończenia o wartości null. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz Funkcja `SQLBindCol` ODBC API w *dokumentacji programisty zestawu ODBC SDK*.
+Wskaźnik do tablicy długich liczb całkowitych. Ta tablica będzie przechowywać długość w bajtach każdej wartości w tablicy wskazywanej przez *prgStrVals*. Ta długość wyklucza znak zakończenia o wartości null. Należy zauważyć, że wartość SQL_NULL_DATA będzie przechowywana, jeśli odpowiedni element danych zawiera wartość null. Aby uzyskać więcej informacji, zobacz funkcja interfejsu API ODBC `SQLBindCol` w *dokumentacji programisty zestawu ODBC SDK*.
 
 *nMaxLength*<br/>
 Maksymalna dozwolona długość wartości przechowywanych w tablicy wskazywanych przez *prgStrVals*, w tym znak zakończenia o wartości null. Aby upewnić się, że dane nie będą obcinane, należy przekazać wartość wystarczająco duża, aby pomieścić największe oczekiwane elementy danych.
@@ -900,13 +900,13 @@ Kolumna źródła danych może mieć typ ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VAR
 Jeśli zainicjujesz *prgStrVals* i *prgLengths* do wartości null, tablice, do których wskazują, zostaną przyliczone automatycznie, o rozmiarach równych rozmiarowi zestawu wierszy.
 
 > [!NOTE]
->  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji `SQLSetPos`ODBC API.
+>  Wymiana pól rekordów zbiorczych transferuje tylko dane ze źródła danych do obiektu zestawu rekordów. Aby zestaw rekordów był aktualizowalny, należy użyć funkcji ODBC API `SQLSetPos`.
 
-Aby uzyskać więcej informacji, zobacz zestaw [rekordów artykułów: Pobieranie rekordów w postaci zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: pobieranie rekordów w zbiorczej (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) i [wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Przykład
 
-Należy ręcznie pisać wywołania w `DoBulkFieldExchange` przesłonięciu. W tym przykładzie pokazano wywołanie `RFX_Text_Bulk`, a także wywołanie do `RFX_Long_Bulk`, w celu transferu danych. Te wywołania są poprzedzone wywołaniem metody [CFieldExchange:: SetFieldType](CFieldExchange::SetFieldType.md). Należy pamiętać, że w przypadku parametrów należy wywołać funkcje RFX zamiast funkcji RFX BULK.
+Należy ręcznie pisać wywołania w przesłonięciu `DoBulkFieldExchange`. W tym przykładzie pokazano wywołanie do `RFX_Text_Bulk`, a także wywołanie `RFX_Long_Bulk`do transferu danych. Te wywołania są poprzedzone wywołaniem metody [CFieldExchange:: SetFieldType](CFieldExchange::SetFieldType.md). Należy pamiętać, że w przypadku parametrów należy wywołać funkcje RFX zamiast funkcji RFX BULK.
 
 ```cpp
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -960,7 +960,7 @@ Platforma wstępnie przydzieli tę ilość pamięci. Jeśli dane są większe, s
 Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna, AFX_DAO_DISABLE_FIELD_CACHE, nie używa podwójnego buforowania i należy wywołać [SetFieldDirty](cdaorecordset-class.md#setfielddirty) i [SetFieldNull](cdaorecordset-class.md#setfieldnull) . Druga możliwa wartość, AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania i nie trzeba wykonywać dodatkowej pracy, aby oznaczyć pola jako zanieczyszczone lub puste. Ze względu na wydajność i pamięć należy unikać tej wartości, chyba że dane binarne są stosunkowo małe.
 
 > [!NOTE]
->  Można kontrolować, czy dane są domyślnie buforowane dla wszystkich pól przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+>  Możesz kontrolować, czy dane są domyślnie buforowane dla wszystkich pól, ustawiając [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1000,14 +1000,14 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BOOL jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_BOOL w DAO i Type BOOL w zestawie rekordów.
+Dane są mapowane między DAO_BOOL typu w DAO i Type BOOL w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1043,7 +1043,7 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BYTE jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
@@ -1086,7 +1086,7 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych typu [COleCurrency](colecurrency-class.md). W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
@@ -1129,7 +1129,7 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. Funkcja przyjmuje odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) . W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
@@ -1139,7 +1139,7 @@ Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w cel
 Dane są mapowane między typu DAO_DATE w DAO i Type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w zestawie rekordów.
 
 > [!NOTE]
->  `COleDateTime`zastępuje [CTime](../../atl-mfc-shared/reference/ctime-class.md) i TIMESTAMP_STRUCT w tym celu w klasach DAO. `CTime`i TIMESTAMP_STRUCT są nadal używane dla klas dostępu do danych opartych na ODBC.
+>  `COleDateTime` zastępuje [CTime](../../atl-mfc-shared/reference/ctime-class.md) i TIMESTAMP_STRUCT do tego celu w klasach DAO. `CTime` i TIMESTAMP_STRUCT są nadal używane dla klas dostępu do danych opartych na ODBC.
 
 ### <a name="example"></a>Przykład
 
@@ -1175,14 +1175,14 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **Double**jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_R8 w DAO i typu **Double zmiennoprzecinkową** w zestawie rekordów.
+Dane są mapowane między DAO_R8 typu w DAO i typu **Double zmiennoprzecinkowe** w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1218,14 +1218,14 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **Long**jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_I4 w DAO i Type **Long** w zestawie rekordów.
+Dane są mapowane między DAO_I4 typu w DAO i typu **Long** w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1237,7 +1237,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 ## <a name="dfx_longbinary"></a>DFX_LongBinary
 
-**Ważne** Zaleca się użycie [DFX_Binary](#dfx_binary) zamiast tej funkcji.
+**Ważne** Zaleca się używanie [DFX_Binary](#dfx_binary) zamiast tej funkcji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1272,7 +1272,7 @@ Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w cel
 
 ### <a name="remarks"></a>Uwagi
 
-`DFX_LongBinary`zapewnia zgodność z klasami MFC ODBC. Funkcja przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy `CLongBinary` między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordów rekordu w źródle danych. `DFX_LongBinary` Dane są mapowane między typu DAO_BYTES w DAO i Type [CLongBinary](clongbinary-class.md) w zestawie rekordów.
+`DFX_LongBinary` zapewnia zgodność z klasami MFC ODBC. Funkcja `DFX_LongBinary` przesyła dane binarne obiektów binarnych (BLOB) przy użyciu klasy `CLongBinary` między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) a kolumnami rekordów rekordu w źródle danych. Dane są mapowane między typu DAO_BYTES w DAO i Type [CLongBinary](clongbinary-class.md) w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1308,17 +1308,17 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **Short**jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_I2 w DAO i typu **Short** w zestawie rekordów.
+Dane są mapowane między DAO_I2 typu w DAO i typu **Short** w zestawie rekordów.
 
 > [!NOTE]
->  `DFX_Short`jest równoważne [RFX_Int](#rfx_int) dla klas opartych na ODBC.
+>  `DFX_Short` jest równoważne [RFX_Int](#rfx_int) dla klas opartych na ODBC.
 
 ### <a name="example"></a>Przykład
 
@@ -1354,14 +1354,14 @@ Nazwa kolumny danych.
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **zmiennoprzecinkowego**jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz wywołać `SetFieldDirty` i `SetFieldNull` samodzielnie.
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać `SetFieldDirty` i `SetFieldNull`.
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_R4 w obiektach DAO i typu **float** w zestawie rekordów.
+Dane są mapowane między DAO_R4 typu w DAO i typu **float** w zestawie rekordów.
 
 ### <a name="example"></a>Przykład
 
@@ -1373,7 +1373,7 @@ Zobacz [DFX_Text](#dfx_text).
 
 ## <a name="dfx_text"></a>DFX_Text
 
-Przesyła `CString` dane między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
+Przenosi `CString` dane między elementami członkowskimi danych pola obiektu [CDaoRecordset](cdaorecordset-class.md) i kolumnami rekordu w źródle danych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1401,18 +1401,18 @@ Wartość przechowywana we wskazanym elemencie członkowskim danych — wartoś�
 Platforma wstępnie przydzieli tę ilość pamięci. Jeśli dane są większe, struktura przydzieli więcej miejsca w miarę potrzeb. Aby zapewnić lepszą wydajność, ustaw ten rozmiar na wystarczająco dużą wartość, aby zapobiec ponownym alokacjom.
 
 *dwBindOptions*<br/>
-Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna to AFX_DAO_ENABLE_FIELD_CACHE, która używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać [SetFieldDirty](cdaorecordset-class.md#setfielddirty) i [SetFieldNull](cdaorecordset-class.md#setfieldnull) .
+Opcja umożliwiająca korzystanie z mechanizmu podwójnego buforowania MFC w celu wykrywania pól zestawu rekordów, które uległy zmianie. Wartość domyślna AFX_DAO_ENABLE_FIELD_CACHE, używa podwójnego buforowania. Druga możliwa wartość to AFX_DAO_DISABLE_FIELD_CACHE. Jeśli określisz tę wartość, MFC nie sprawdza tego pola. Musisz samodzielnie wywołać [SetFieldDirty](cdaorecordset-class.md#setfielddirty) i [SetFieldNull](cdaorecordset-class.md#setfieldnull) .
 
 > [!NOTE]
 >  Można kontrolować, czy dane są domyślnie buforowane, przez ustawienie [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane są mapowane między typu DAO_CHAR w elemencie DAO (lub, jeśli symbol _UNICODE jest zdefiniowany, DAO_WCHAR) i Type [CString](../../atl-mfc-shared/reference/cstringt-class.md) w zestawie rekordów.  n
+Dane są mapowane między DAO_CHAR typu w elemencie DAO (lub, jeśli symbol _UNICODE jest zdefiniowany, DAO_WCHAR) i wpisz [CString](../../atl-mfc-shared/reference/cstringt-class.md) w zestawie rekordów.  n
 
 ### <a name="example"></a>Przykład
 
-Ten przykład pokazuje kilka wywołań `DFX_Text`. Zwróć również uwagę na dwa wywołania [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Należy napisać pierwsze wywołanie do `SetFieldType` i jego wywołanie **DFX** . Drugie wywołanie i powiązane z nim wywołania **DFX** są zwykle zapisywane przez kreatora kodu, który wygenerował klasę.
+Ten przykład pokazuje kilka wywołań do `DFX_Text`. Zwróć również uwagę na dwa wywołania [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Należy napisać pierwsze wywołanie do `SetFieldType` i jego wywołania **DFX** . Drugie wywołanie i powiązane z nim wywołania **DFX** są zwykle zapisywane przez kreatora kodu, który wygenerował klasę.
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1434,9 +1434,9 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 **Nagłówek:** afxdao. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
-[CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
-[CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
-[CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
+[CRecordset::D oFieldExchange](crecordset-class.md#dofieldexchange)<br/>
+[CRecordset::D oBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
+[CDaoRecordset::D oFieldExchange](cdaorecordset-class.md#dofieldexchange)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496940"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864921"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Klasa CFirePropNotifyEvent
 
@@ -35,16 +35,16 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Ruchom Powiadamia ujścia kontenera o zmianie właściwości kontrolki.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Ruchom Powiadamia ujścia kontenera, że właściwość kontrolki ma zostać zmieniona.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CFirePropNotifyEvent`ma dwie metody, które powiadamiają ujścia kontenera o zmianie właściwości kontrolki lub zmianie.
+`CFirePropNotifyEvent` ma dwie metody, które powiadamiają ujścia kontenera o zmianie właściwości kontrolki lub zmianie.
 
-Jeśli klasa implementująca `IPropertyNotifySink`formant pochodzi od `CFirePropNotifyEvent` , metody są wywoływane po wywołaniu `FireOnRequestEdit` lub `FireOnChanged`. Jeśli Klasa formantu nie pochodzi od `IPropertyNotifySink`, wywołania tych funkcji zwracają S_OK.
+Jeśli klasa implementująca formant pochodzi od `IPropertyNotifySink`, metody `CFirePropNotifyEvent` są wywoływane po wywołaniu `FireOnRequestEdit` lub `FireOnChanged`. Jeśli Klasa formantu nie pochodzi od `IPropertyNotifySink`, wywołania tych funkcji zwracają S_OK.
 
 Aby uzyskać więcej informacji na temat tworzenia formantów, zobacz [samouczek ATL](../../atl/active-template-library-atl-tutorial.md).
 
@@ -62,13 +62,13 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*<br/>
+*Punkt*<br/>
 podczas Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
 
 *dispID*<br/>
 podczas Identyfikator właściwości, która została zmieniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -86,13 +86,13 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*<br/>
+*Punkt*<br/>
 podczas Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
 
 *dispID*<br/>
 podczas Identyfikator właściwości, która ma zostać zmieniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -100,6 +100,6 @@ Jedna ze standardowych wartości HRESULT.
 
 Ta funkcja jest bezpieczna do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)
