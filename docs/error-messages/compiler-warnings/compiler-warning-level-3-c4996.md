@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898777"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865228"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Ostrzeżenie kompilatora (poziom 3) C4996
 
@@ -39,7 +39,7 @@ Aby wyłączyć Ostrzeżenie dla całego projektu w środowisku IDE programu Vis
 
 1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać informacje na temat korzystania z okna dialogowego strony właściwości, zobacz [strony właściwości](../../build/reference/property-pages-visual-cpp.md).
 
-1. Wybierz **Właściwości konfiguracji** > stronie **Zaawansowane** **CC++ /**  > .
+1. Wybierz **Właściwości konfiguracji** > stronie **Zaawansowane** **CC++ /** > .
 
 1. Edytuj Właściwość **Wyłącz określone ostrzeżenia** , aby dodać `4996`. Wybierz **przycisk OK** , aby zastosować zmiany.
 
@@ -49,7 +49,7 @@ Aby zdefiniować makro preprocesora w programie Visual Studio:
 
 1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać informacje na temat korzystania z okna dialogowego strony właściwości, zobacz [strony właściwości](../../build/reference/property-pages-visual-cpp.md).
 
-1. Rozwiń węzeł **Właściwości konfiguracji > preprocesorze C/C++ >** .
+1. Rozwiń węzeł **Właściwości konfiguracji > preprocesorze C/C++ >**.
 
 1. We właściwości **Definicje preprocesora** Dodaj nazwę makra. Wybierz **przycisk OK** , aby zapisać, a następnie Skompiluj ponownie projekt.
 
@@ -83,7 +83,7 @@ Aby uzyskać więcej informacji na temat tych przestarzałych funkcji i Globals,
 
 ## <a name="unsafe-standard-library-functions"></a>Niebezpieczne funkcje biblioteki standardowej
 
-__"std::__ *function_name* __::\_unchecked\_Iteratory::\_przestarzałe wywołanie metody std::__ *function_name* **z parametrami, które mogą być niebezpieczne — to wywołanie opiera się na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj-D\_SCL\_SECURE\_nie\_ostrzeżeń. Zapoznaj się z dokumentacją dotyczącą C++ korzystania z Visual "sprawdzonych iteratorów"**
+__"std::__*function_name*__::\_unchecked\_Iteratory::\_przestarzałe wywołanie metody std::__*function_name* **z parametrami, które mogą być niebezpieczne — to wywołanie opiera się na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj-D\_SCL\_SECURE\_nie\_ostrzeżeń. Zapoznaj się z dokumentacją dotyczącą C++ korzystania z Visual "sprawdzonych iteratorów"**
 
 To ostrzeżenie jest wyświetlane w kompilacjach debugowania C++ , ponieważ niektóre funkcje szablonu biblioteki standardowej nie sprawdzają poprawności parametrów. Często jest to spowodowane brakiem wystarczającej ilości informacji do sprawdzenia granic kontenera. Lub, ponieważ Iteratory mogą być używane nieprawidłowo z funkcją. To ostrzeżenie pomaga zidentyfikować te funkcje, ponieważ mogą one być źródłem poważnych luk w zabezpieczeniach w programie. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../../standard-library/checked-iterators.md).
 

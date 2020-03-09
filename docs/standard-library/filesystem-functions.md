@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898709"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875831"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;funkcje&gt; systemu plików
 
@@ -150,11 +150,11 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 Wszystkie funkcje, które potencjalnie mogą kopiować lub łączyć jeden lub więcej plików w *od* *do, pod* *kontrolą opcji,* które są wykonywane jako `copy_options::none` dla przeciążenia bez dołączania *parametru.* takie *działania powinny zawierać* co najwyżej jeden z:
 
-- `skip_existing`, `overwrite_existing` lub `update_existing`
+- `skip_existing`, `overwrite_existing`lub `update_existing`
 
 - `copy_symlinks` lub `skip_symlinks`
 
-- `directories_only`, `create_symlinks` lub `create_hard_links`
+- `directories_only`, `create_symlinks`lub `create_hard_links`
 
 Funkcje najpierw określają wartości file_status `f` *dla i `t` dla:*
 
