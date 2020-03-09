@@ -1,5 +1,5 @@
 ---
-title: '&lt;stos&gt; operatorów'
+title: Operatory&gt; stosu &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - stack/std::operator!=
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243654"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865902"
 ---
-# <a name="ltstackgt-operators"></a>&lt;stos&gt; operatorów
+# <a name="ltstackgt-operators"></a>Operatory&gt; stosu &lt;
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt stack po lewej stronie operatora nie jest równa stosu obiekt po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora nie jest równy obiektowi stosu po prawej stronie.
 
 ```cpp
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
@@ -35,19 +35,19 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** stosów lub stosy nie są równe; **false** stosów lub stosy są równe.
+**prawda** , jeśli stosy lub stosy nie są równe; **Fałsz** , jeśli stosy lub stosy są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów stosów opiera się na parowania porównania ich elementów. Dwóch stosów są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
+Porównanie między obiektami Stacks opiera się na porównaniu z przełączaniem ich elementów. Dwa stosy są równe, jeśli mają taką samą liczbę elementów, a ich odpowiednie elementy mają takie same wartości. W przeciwnym razie są one nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -90,9 +90,9 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
-Sprawdza, czy obiekt stack po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.
 
 ```cpp
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -100,19 +100,19 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli stosu po lewej stronie operatora jest mniejszy niż i nie równa stosu po prawej stronie operatora; w przeciwnym razie **false**.
+**ma wartość true** , jeśli stos po lewej stronie operatora jest mniejszy od i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów na stosie opiera się na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami stosu opiera się na porównanie pierwszy pary nierówne elementów.
+Porównanie obiektów stosu jest oparte na porównaniu z przełączaniem ich elementów. Relacja mniejsza niż między dwoma obiektami stosu opiera się na porównaniu pierwszej pary nierównych elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -174,9 +174,9 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
-Sprawdza, czy stosu obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.
 
 ```cpp
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -184,19 +184,19 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli stosu po lewej stronie operatora jest mniejszy niż lub równe stosu po prawej stronie operatora; w przeciwnym **false**.
+**ma wartość true** , jeśli stos po lewej stronie operatora jest mniejszy lub równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów na stosie opiera się na parowania porównania ich elementów. Mniej niż lub równe relacji między dwoma obiektami stosu jest oparty na porównanie pierwszy pary nierówne elementów.
+Porównanie obiektów stosu jest oparte na porównaniu z przełączaniem ich elementów. Mniejsza lub równa relacji między dwoma obiektami stosu bazuje na porównaniu pierwszej pary nierównych elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -241,9 +241,9 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt stack po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.
 
 ```cpp
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -251,19 +251,19 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** stosów lub stosy są równe; **false** stosów lub stosy nie są równe.
+**prawda** , jeśli stosy lub stosy są równe; **Fałsz** , jeśli stosy lub stosy nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów na stosie opiera się na parowania porównania ich elementów. Dwóch stosów są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
+Porównanie obiektów stosu jest oparte na porównaniu z przełączaniem ich elementów. Dwa stosy są równe, jeśli mają taką samą liczbę elementów, a ich odpowiednie elementy mają takie same wartości. W przeciwnym razie są one nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -306,9 +306,9 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>&gt; operatora
 
-Sprawdza, czy obiekt stack po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.
 
 ```cpp
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -316,19 +316,19 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli stosu po lewej stronie operatora jest większy niż i nie równe stosu po prawej stronie operatora; w przeciwnym **false**.
+**ma wartość true** , jeśli stos po lewej stronie operatora jest większy niż i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów na stosie opiera się na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami stosu opiera się na porównanie pierwszy pary nierówne elementów.
+Porównanie obiektów stosu jest oparte na porównaniu z przełączaniem ich elementów. Relacja większa niż między dwoma obiektami stosu bazuje na porównaniu pierwszej pary nierównych elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -375,9 +375,9 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
-Sprawdza, czy obiekt stack po lewej stronie operatora jest większy lub równy obiektowi stosu po prawej stronie.
+Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż lub równy obiektowi stosu po prawej stronie.
 
 ```cpp
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -385,19 +385,19 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `stack`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli stosu po lewej stronie operatora jest mniejsza niż stosu po prawej stronie operatora; w przeciwnym razie **false**.
+**ma wartość true** , jeśli stos po lewej stronie operatora jest ściśle mniejszy niż stos po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów na stosie opiera się na parowania porównania ich elementów. Większa lub równa relacji między obiektami dwóch stosu opiera się na porównanie pierwszy pary nierówne elementów.
+Porównanie obiektów stosu jest oparte na porównaniu z przełączaniem ich elementów. Relacja większa niż lub równa relacji między dwoma obiektami stosu bazuje na porównaniu pierwszej pary nierównych elementów.
 
 ### <a name="example"></a>Przykład
 

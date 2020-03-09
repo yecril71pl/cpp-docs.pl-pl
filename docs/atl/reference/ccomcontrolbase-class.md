@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 36afd716009848ccd2e2f0ab966f66f573acdfd8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497387"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862937"
 ---
 # <a name="ccomcontrolbase-class"></a>Klasa CComControlBase
 
@@ -104,25 +104,25 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CComControlBase:: Wyglądutype](#appearancetype)|Zastąp, `m_nAppearance` Jeśli właściwość giełdowa nie jest typu **Short**.|
+|[CComControlBase:: Wyglądutype](#appearancetype)|Zastąp, jeśli właściwość `m_nAppearance` Stock nie jest typu **Short**.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Konstruktor.|
-|[CComControlBase::~CComControlBase](#dtor)|Destruktor.|
+|[CComControlBase:: ~ CComControlBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Pobiera wskaźnik do żądanego interfejsu.|
-|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` uaktywnia interfejs użytkownika kontrolki (*iVerb* Equals OLEIVERB_UIACTIVATE), definiuje akcję wykonywaną, gdy użytkownik kliknie dwukrotnie formant (*iVerb* jest równa OLEIVERB_ PODSTAWOWA), wyświetla formant (*iVerb* = OLEIVERB_SHOW) lub aktywuje formant (*iVerb* Equals OLEIVERB_INPLACEACTIVATE).|
-|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` powoduje, że interfejs użytkownika kontrolki do aktywacji i zwraca wartość true.|
-|[CComControlBase::DoVerbProperties](#doverbproperties)|Wyświetla strony właściwości kontrolki.|
+|[CComControlBase::D oesVerbActivate](#doesverbactivate)|Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` uaktywnia interfejs użytkownika formantu (*iVerb* Equals OLEIVERB_UIACTIVATE), definiuje akcję wykonywaną, gdy użytkownik kliknie dwukrotnie formant (*iVerb* Equals OLEIVERB_PRIMARY), wyświetla formant (*iVerb* Equals OLEIVERB_SHOW) lub aktywuje formant (*iVerb* równa się OLEIVERB_INPLACEACTIVATE).|
+|[CComControlBase::D oesVerbUIActivate](#doesverbuiactivate)|Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` powoduje, że interfejs użytkownika formantu jest aktywowany i zwraca wartość true.|
+|[CComControlBase::D oVerbProperties](#doverbproperties)|Wyświetla strony właściwości kontrolki.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Wywołaj tę metodę, aby poinformować kontener o konieczności ponownego narysowania kontrolki lub powiadomić zarejestrowane ujścia doradców, że widok kontrolki został zmieniony.|
 |[CComControlBase::GetAmbientAppearance](#getambientappearance)|Pobiera DISPID_AMBIENT_APPEARANCE, bieżące ustawienie wyglądu dla kontrolki: 0 dla płaskich i 1 dla 3W.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Pobiera DISPID_AMBIENT_AUTOCLIP, flagę wskazującą, czy kontener obsługuje automatyczne przycinanie obszaru wyświetlania formantu.|
@@ -130,75 +130,75 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Pobiera DISPID_AMBIENT_CHARSET, otaczający zestaw znaków dla wszystkich kontrolek, zdefiniowany przez kontener.|
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Pobiera DISPID_AMBIENT_CODEPAGE, otaczający zestaw znaków dla wszystkich kontrolek, zdefiniowany przez kontener.|
 |[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Pobiera DISPID_AMBIENT_DISPLAYASDEFAULT, flagę, która ma wartość TRUE, jeśli kontener oznaczył formant w tej witrynie jako przycisk domyślny i w związku z tym formant przycisku powinien być rysowany z grubszą ramką.|
-|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Pobiera DISPID_AMBIENT_DISPLAYNAME, nazwę kontenera dostarczono do kontrolki.|
-|[CComControlBase::GetAmbientFont](#getambientfont)|Pobiera wskaźnik do otaczającego `IFont` interfejsu kontenera.|
-|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Pobiera wskaźnik do otaczającego `IFontDisp` interfejsu do dystrybucji kontenera.|
+|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Pobiera DISPID_AMBIENT_DISPLAYNAME, nazwę kontenera dostarczoną do kontrolki.|
+|[CComControlBase::GetAmbientFont](#getambientfont)|Pobiera wskaźnik do interfejsu `IFont` otoczenia kontenera.|
+|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Pobiera wskaźnik do interfejsu wysyłania `IFontDisp` otoczenia kontenera.|
 |[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Pobiera DISPID_AMBIENT_FORECOLOR, kolor pierwszego planu dla wszystkich kontrolek, zdefiniowany przez kontener.|
 |[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Pobiera DISPID_AMBIENT_LOCALEID, identyfikator języka używanego przez kontener.|
 |[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Pobiera DISPID_AMBIENT_MESSAGEREFLECT, flagę wskazującą, czy kontener chce otrzymywać komunikaty okna (takie jak WM_DRAWITEM) jako zdarzenia.|
-|[CComControlBase::GetAmbientPalette](#getambientpalette)|Pobiera DISPID_AMBIENT_PALETTE, używany do uzyskania dostępu do HPALETTE kontenera.|
+|[CComControlBase::GetAmbientPalette](#getambientpalette)|Pobiera DISPID_AMBIENT_PALETTE, służący do uzyskania dostępu do HPALETTE kontenera.|
 |[CComControlBase::GetAmbientProperty](#getambientproperty)|Pobiera właściwość kontenera określoną przez *Identyfikator*.|
 |[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Pobiera DISPID_AMBIENT_RIGHTTOLEFT, kierunek, w którym zawartość jest wyświetlana przez kontener.|
-|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Pobiera DISPID_AMBIENT_SCALEUNITS, jednostki otoczenia kontenera (na przykład cale lub centymetry) do wyświetlania etykiet.|
+|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Pobiera DISPID_AMBIENT_SCALEUNITS, jednostek otoczenia kontenera (na przykład centymetrów lub centymetrów) do wyświetlania etykiet.|
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Pobiera DISPID_AMBIENT_SHOWGRABHANDLES, flagę wskazującą, czy kontener umożliwia kontrolce wyświetlanie uchwytów dla siebie, gdy jest aktywny.|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Pobiera DISPID_AMBIENT_SHOWHATCHING, flagę wskazującą, czy kontener pozwala formantowi wyświetlać się z kreskowanym wzorcem, gdy interfejs użytkownika jest aktywny.|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Pobiera DISPID_AMBIENT_SUPPORTSMNEMONICS, flagę wskazującą, czy kontener obsługuje skróty klawiaturowe.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 w przypadku ogólnego wyrównania (liczby w prawo, tekst z lewej), 1 dla wyrównania po lewej, 2 dla wyrównania Center i 3 do prawej wyrównania.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 dla ogólnego wyrównania (liczby z prawej strony, lewy tekst), 1 dla lewej wyrównania, 2 dla wyrównania Center i 3 w celu wyrównania w prawo.|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Pobiera DISPID_AMBIENT_TOPTOBOTTOM, kierunek, w którym zawartość jest wyświetlana przez kontener.|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|Pobiera DISPID_AMBIENT_UIDEAD, flagę wskazującą, czy kontener chce, aby formant odpowiadał na akcje interfejsu użytkownika.|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|Pobiera DISPID_AMBIENT_USERMODE, flagę wskazującą, czy kontener jest w trybie uruchomieniowym (TRUE), czy w trybie projektowania (FALSE).|
-|[CComControlBase:: getdirty](#getdirty)|Zwraca wartość elementu członkowskiego `m_bRequiresSave`danych.|
+|[CComControlBase:: getdirty](#getdirty)|Zwraca wartość `m_bRequiresSave`elementu członkowskiego danych.|
 |[CComControlBase::GetZoomInfo](#getzoominfo)|Pobiera wartości x i y licznika i mianownik współczynnika powiększenia dla kontrolki aktywowanej do edycji w miejscu.|
 |[CComControlBase::InPlaceActivate](#inplaceactivate)|Powoduje, że kontrolka przechodzi ze stanu nieaktywności do dowolnego stanu, w którym wskazuje zlecenie w *iVerb* .|
 |[CComControlBase::InternalGetSite](#internalgetsite)|Wywołaj tę metodę, aby wykonać zapytanie o lokację kontroli dla wskaźnika do zidentyfikowanego interfejsu.|
 |[CComControlBase:: OnDraw](#ondraw)|Zastąp tę metodę, aby narysować kontrolkę.|
-|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Domyślnie `OnDrawAdvanced` przygotowuje znormalizowany kontekst urządzenia do rysowania, a następnie wywołuje `OnDraw` metodę klasy formantu.|
+|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Domyślne `OnDrawAdvanced` przygotowuje znormalizowany kontekst urządzenia do rysowania, a następnie wywołuje metodę `OnDraw` klasy formantu.|
 |[CComControlBase::OnKillFocus](#onkillfocus)|Sprawdza, czy formant jest aktywny i ma prawidłową lokację kontroli, a następnie informuje o tym, że formant utracił fokus.|
 |[CComControlBase::OnMouseActivate](#onmouseactivate)|Sprawdza, czy interfejs użytkownika znajduje się w trybie użytkownik, a następnie uaktywnia formant.|
-|[CComControlBase::OnPaint](#onpaint)|Przygotowuje kontener do malowania, Pobiera obszar klienta kontrolki, a następnie wywołuje `OnDraw` metodę klasy formantu.|
-|[CComControlBase::OnSetFocus](#onsetfocus)|Sprawdza, czy formant jest aktywny i ma prawidłową lokację kontroli, a następnie informuje o tym, że formant uzyskał fokus.|
-|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Zastąp tę metodę, aby zapewnić własne programy obsługi akceleratora klawiaturowego.|
+|[CComControlBase:: OnPaint](#onpaint)|Przygotowuje kontener do malowania, Pobiera obszar klienta kontrolki, a następnie wywołuje metodę `OnDraw` klasy formantu.|
+|[CComControlBase:: funkcji OnSetFocus](#onsetfocus)|Sprawdza, czy formant jest aktywny i ma prawidłową lokację kontroli, a następnie informuje o tym, że formant uzyskał fokus.|
+|[CComControlBase::P reTranslateAccelerator](#pretranslateaccelerator)|Zastąp tę metodę, aby zapewnić własne programy obsługi akceleratora klawiaturowego.|
 |[CComControlBase::SendOnClose](#sendonclose)|Powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza doradcy, że formant został zamknięty.|
 |[CComControlBase::SendOnDataChange](#sendondatachange)|Powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza doradcy, że dane kontroli uległy zmianie.|
 |[CComControlBase::SendOnRename](#sendonrename)|Powiadamia wszystkie ujścia doradcze zarejestrowane przez posiadacza doradcy, że kontrolka ma nowy moniker.|
 |[CComControlBase::SendOnSave](#sendonsave)|Powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza powiadomienia, że formant został zapisany.|
 |[CComControlBase::SendOnViewChange](#sendonviewchange)|Powiadamia wszystkie zarejestrowane ujścia doradców, że widok kontrolki został zmieniony.|
 |[CComControlBase::SetControlFocus](#setcontrolfocus)|Ustawia lub usuwa fokus klawiatury do lub z formantu.|
-|[CComControlBase::SetDirty](#setdirty)|Ustawia element członkowski `m_bRequiresSave` danych na wartość w *bDirty*.|
+|[CComControlBase:: SetDirty](#setdirty)|Ustawia `m_bRequiresSave` elementu członkowskiego danych na wartość w *bDirty*.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CComControlBase::m_bAutoSize](#m_bautosize)|Flaga wskazująca, że formant nie może być żadnym innym rozmiarem.|
-|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Flaga oznaczająca `IDataObjectImpl::GetData` , `CComControlBase::GetZoomInfo` że należy ustawić rozmiar formantu od `m_sizeNatural` , a nie `m_sizeExtent`z.|
-|[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Flaga oznaczająca `IDataObjectImpl::GetData` , że należy używać jednostek HIMETRIC, a nie pikseli przy rysowaniu.|
-|[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|Flaga wskazująca, że formant jest aktywny w miejscu.|
-|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Flaga wskazująca, że kontener `IOleInPlaceSiteEx` obsługuje funkcje sterowania interfejsem i OCX96, takie jak kontrolki bez okna i niezawierające migotania.|
-|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Flaga oznaczająca, czy kontrolka została wynegocjowana z kontenerem o obsłudze funkcji kontroli OCX96 (takich jak kontrolki bez okna i nieokienkowe), oraz czy kontrolka jest okienkowa, czy bez okien.|
-|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Flaga wskazująca, że kontrolka chce ponownie złożyć swoją prezentację, gdy kontener zmieni rozmiar wyświetlania formantu.|
-|[CComControlBase::m_bRequiresSave](#m_brequiressave)|Flaga wskazująca, że formant został zmieniony od ostatniego zapisu.|
-|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Flaga wskazująca, że formant chce zmienić rozmiar swojego naturalnego zakresu (nieskalowanego rozmiaru fizycznego), gdy kontener zmienia rozmiar wyświetlania formantu.|
-|[CComControlBase::m_bUIActive](#m_buiactive)|Flaga wskazująca, że interfejs użytkownika kontrolki, taki jak menu i paski narzędzi, jest aktywny.|
-|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Flaga wskazująca, że formant korzysta z regionu okna dostarczonego z kontenerem.|
-|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Flaga wskazująca, że kontrolka została bez okien, ale może nie być teraz bez okien.|
-|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Flaga wskazująca, że formant powinien być okienkowy, nawet jeśli kontener obsługuje kontrolki bez okien.|
-|[CComControlBase::m_bWndLess](#m_bwndless)|Flaga wskazująca, że formant jest bez okien.|
-|[CComControlBase::m_hWndCD](#m_hwndcd)|Zawiera odwołanie do uchwytu okna skojarzonego z kontrolką.|
-|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Liczba zdarzeń zamrożonych w kontenerze (odrzuconych do zaakceptowania zdarzeń) bez interwencji z rozmrożeniem zdarzeń (akceptowanie zdarzeń).|
-|[CComControlBase::m_rcPos](#m_rcpos)|Pozycja w pikselach kontrolki wyrażona we współrzędnych kontenera.|
-|[CComControlBase::m_sizeExtent](#m_sizeextent)|Zakres formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów) dla określonego ekranu.|
-|[CComControlBase::m_sizeNatural](#m_sizenatural)|Rozmiar fizyczny formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów).|
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Bezpośredni wskaźnik do połączenia Doradczego na kontenerze ( [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)kontenera).|
-|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Obiekt, który umożliwia pobieranie i Ustawianie właściwości kontenera `IDispatch` za pomocą wskaźnika. `CComDispatchDriver`|
-|[CComControlBase::m_spClientSite](#m_spclientsite)|Wskaźnik do lokacji klienta kontrolki w kontenerze.|
-|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Zapewnia standardową metodę utrzymywania połączeń doradczych między obiektami danych i doradzania ujściam.|
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Wskaźnik do wskaźnika interfejsu [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub IOleInPlaceSiteWindowlessu kontenera [](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) .|
-|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Zapewnia standardową implementację sposobu utrzymywania połączeń doradczych.|
+|[CComControlBase:: m_bAutoSize](#m_bautosize)|Flaga wskazująca, że formant nie może być żadnym innym rozmiarem.|
+|[CComControlBase:: m_bDrawFromNatural](#m_bdrawfromnatural)|Flaga oznaczająca, że `IDataObjectImpl::GetData` i `CComControlBase::GetZoomInfo` powinny ustawić rozmiar formantu z `m_sizeNatural`, a nie z `m_sizeExtent`.|
+|[CComControlBase:: m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Flaga oznaczająca, że `IDataObjectImpl::GetData` powinny używać jednostek HIMETRIC, a nie pikseli podczas rysowania.|
+|[CComControlBase:: m_bInPlaceActive](#m_binplaceactive)|Flaga wskazująca, że formant jest aktywny w miejscu.|
+|[CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex)|Flaga wskazująca, że kontener `IOleInPlaceSiteEx` obsługuje funkcje OCX96 interfejsu i sterowania, takie jak kontrolki bez okna i niezawierające migotania.|
+|[CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd)|Flaga oznaczająca, czy kontrolka została wynegocjowana z kontenerem o obsłudze funkcji kontroli OCX96 (takich jak kontrolki bez okna i nieokienkowe), oraz czy kontrolka jest okienkowa, czy bez okien.|
+|[CComControlBase:: m_bRecomposeOnResize](#m_brecomposeonresize)|Flaga wskazująca, że kontrolka chce ponownie złożyć swoją prezentację, gdy kontener zmieni rozmiar wyświetlania formantu.|
+|[CComControlBase:: m_bRequiresSave](#m_brequiressave)|Flaga wskazująca, że formant został zmieniony od ostatniego zapisu.|
+|[CComControlBase:: m_bResizeNatural](#m_bresizenatural)|Flaga wskazująca, że formant chce zmienić rozmiar swojego naturalnego zakresu (nieskalowanego rozmiaru fizycznego), gdy kontener zmienia rozmiar wyświetlania formantu.|
+|[CComControlBase:: m_bUIActive](#m_buiactive)|Flaga wskazująca, że interfejs użytkownika kontrolki, taki jak menu i paski narzędzi, jest aktywny.|
+|[CComControlBase:: m_bUsingWindowRgn](#m_busingwindowrgn)|Flaga wskazująca, że formant korzysta z regionu okna dostarczonego z kontenerem.|
+|[CComControlBase:: m_bWasOnceWindowless](#m_bwasoncewindowless)|Flaga wskazująca, że kontrolka została bez okien, ale może nie być teraz bez okien.|
+|[CComControlBase:: m_bWindowOnly](#m_bwindowonly)|Flaga wskazująca, że formant powinien być okienkowy, nawet jeśli kontener obsługuje kontrolki bez okien.|
+|[CComControlBase:: m_bWndLess](#m_bwndless)|Flaga wskazująca, że formant jest bez okien.|
+|[CComControlBase:: m_hWndCD](#m_hwndcd)|Zawiera odwołanie do uchwytu okna skojarzonego z kontrolką.|
+|[CComControlBase:: m_nFreezeEvents](#m_nfreezeevents)|Liczba zdarzeń zamrożonych w kontenerze (odrzuconych do zaakceptowania zdarzeń) bez interwencji z rozmrożeniem zdarzeń (akceptowanie zdarzeń).|
+|[CComControlBase:: m_rcPos](#m_rcpos)|Pozycja w pikselach kontrolki wyrażona we współrzędnych kontenera.|
+|[CComControlBase:: m_sizeExtent](#m_sizeextent)|Zakres formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów) dla określonego ekranu.|
+|[CComControlBase:: m_sizeNatural](#m_sizenatural)|Rozmiar fizyczny formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów).|
+|[CComControlBase:: m_spAdviseSink](#m_spadvisesink)|Bezpośredni wskaźnik do połączenia Doradczego na kontenerze ( [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)kontenera).|
+|[CComControlBase:: m_spAmbientDispatch](#m_spambientdispatch)|Obiekt `CComDispatchDriver`, który umożliwia pobieranie i Ustawianie właściwości kontenera za pomocą wskaźnika `IDispatch`.|
+|[CComControlBase:: m_spClientSite](#m_spclientsite)|Wskaźnik do lokacji klienta kontrolki w kontenerze.|
+|[CComControlBase:: m_spDataAdviseHolder](#m_spdataadviseholder)|Zapewnia standardową metodę utrzymywania połączeń doradczych między obiektami danych i doradzania ujściam.|
+|[CComControlBase:: m_spInPlaceSite](#m_spinplacesite)|Wskaźnik do wskaźnika interfejsu [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowlessu](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) kontenera.|
+|[CComControlBase:: m_spOleAdviseHolder](#m_spoleadviseholder)|Zapewnia standardową implementację sposobu utrzymywania połączeń doradczych.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa udostępnia metody tworzenia formantów ATL i zarządzania nimi. [Klasa CComControl](../../atl/reference/ccomcontrol-class.md) pochodzi od `CComControlBase`. Podczas tworzenia formantu standardowego lub kontrolki DHTML przy użyciu kreatora kontrolki ATL, Kreator automatycznie utworzy klasę z `CComControlBase`.
+Ta klasa udostępnia metody tworzenia formantów ATL i zarządzania nimi. [Klasa CComControl](../../atl/reference/ccomcontrol-class.md) pochodzi od `CComControlBase`. Podczas tworzenia formantu standardowego lub kontrolki DHTML przy użyciu kreatora kontrolki ATL, Kreator automatycznie wykryje klasę z `CComControlBase`.
 
 Aby uzyskać więcej informacji na temat tworzenia kontrolki, zobacz [samouczek ATL](../../atl/active-template-library-atl-tutorial.md). Aby uzyskać więcej informacji na temat Kreatora projektu ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
@@ -208,7 +208,7 @@ Aby uzyskać więcej informacji na temat tworzenia kontrolki, zobacz [samouczek 
 
 ##  <a name="appearancetype"></a>CComControlBase:: Wyglądutype
 
-Zastąp, `m_nAppearance` Jeśli właściwość giełdowa nie jest typu **Short**.
+Zastąp, jeśli właściwość `m_nAppearance` Stock nie jest typu **Short**.
 
 ```
 typedef short AppearanceType;
@@ -216,7 +216,7 @@ typedef short AppearanceType;
 
 ### <a name="remarks"></a>Uwagi
 
-Kreator kontrolki ATL dodaje `m_nAppearance` Właściwość Stock typu short. Zastąp `AppearanceType` , jeśli używasz innego typu danych.
+Kreator kontrolki ATL dodaje `m_nAppearance` właściwości giełdowej typu short. Przesłoń `AppearanceType`, jeśli używasz innego typu danych.
 
 ##  <a name="ccomcontrolbase"></a>CComControlBase::CComControlBase
 
@@ -228,12 +228,12 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
+*c*<br/>
 Uchwyt do okna skojarzonego z kontrolką.
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje rozmiar formantu do 5080X5080 jednostek HIMETRIC (2 "X2") i inicjuje `CComControlBase` wartości elementu członkowskiego danych wartością null lub false.
+Inicjuje rozmiar formantu do 5080X5080 jednostek HIMETRIC (2 "X2") i inicjuje `CComControlBase` wartości elementu członkowskiego danych na wartość NULL lub FALSE.
 
 ##  <a name="dtor"></a>CComControlBase:: ~ CComControlBase
 
@@ -274,7 +274,7 @@ Obsługuje tylko interfejsy w tabeli mapy COM.
 
 ##  <a name="doesverbactivate"></a>CComControlBase::D oesVerbActivate
 
-Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` uaktywnia interfejs użytkownika kontrolki (*iVerb* Equals OLEIVERB_UIACTIVATE), definiuje akcję wykonywaną, gdy użytkownik kliknie dwukrotnie formant (*iVerb* jest równa OLEIVERB_ PODSTAWOWA), wyświetla formant (*iVerb* = OLEIVERB_SHOW) lub aktywuje formant (*iVerb* Equals OLEIVERB_INPLACEACTIVATE).
+Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` uaktywnia interfejs użytkownika formantu (*iVerb* Equals OLEIVERB_UIACTIVATE), definiuje akcję wykonywaną, gdy użytkownik kliknie dwukrotnie formant (*iVerb* Equals OLEIVERB_PRIMARY), wyświetla formant (*iVerb* Equals OLEIVERB_SHOW) lub aktywuje formant (*iVerb* równa się OLEIVERB_INPLACEACTIVATE).
 
 ```
 BOOL DoesVerbActivate(LONG iVerb);
@@ -283,7 +283,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Wartość wskazująca akcję, która ma zostać `DoVerb`wykonana przez.
+Wartość wskazująca akcję, która ma zostać wykonana przez `DoVerb`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -295,7 +295,7 @@ Można zastąpić tę metodę, aby zdefiniować własne zlecenie aktywacji.
 
 ##  <a name="doesverbuiactivate"></a>CComControlBase::D oesVerbUIActivate
 
-Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` powoduje, że interfejs użytkownika kontrolki do aktywacji i zwraca wartość true.
+Sprawdza, czy parametr *iVerb* używany przez `IOleObjectImpl::DoVerb` powoduje, że interfejs użytkownika formantu jest aktywowany i zwraca wartość true.
 
 ```
 BOOL DoesVerbUIActivate(LONG iVerb);
@@ -304,7 +304,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Wartość wskazująca akcję, która ma zostać `DoVerb`wykonana przez.
+Wartość wskazująca akcję, która ma zostać wykonana przez `DoVerb`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -350,7 +350,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli formant jest aktywny (element członkowski danych klasy kontrolki [CComControlBase:: m_bInPlaceActive](#m_binplaceactive) ma wartość true), powiadamia kontener, który ma zostać ponownie narysowany cały formant. Jeśli formant jest nieaktywny, powiadamia o zarejestrowanych ujściach doradców kontrolki (za pomocą elementu członkowskiego danych klasy sterowania [CComControlBase:: m_spAdviseSink](#m_spadvisesink)), że widok kontrolki został zmieniony.
+Jeśli formant jest aktywny (element członkowski danych klasy kontrolki [CComControlBase:: m_bInPlaceActive](#m_binplaceactive) ma wartość true), powiadamia kontener, który ma zostać ponownie narysowany cały formant. Jeśli formant jest nieaktywny, powiadamia o zarejestrowanych ujściach doradców kontrolki (za pomocą elementu członkowskiego danych klasy kontrolki [CComControlBase:: m_spAdviseSink](#m_spadvisesink)), że widok kontrolki został zmieniony.
 
 ### <a name="example"></a>Przykład
 
@@ -377,7 +377,7 @@ Jedna ze standardowych wartości HRESULT.
 
 [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]
 
-##  <a name="getambientautoclip"></a>  CComControlBase::GetAmbientAutoClip
+##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip
 
 Pobiera DISPID_AMBIENT_AUTOCLIP, flagę wskazującą, czy kontener obsługuje automatyczne przycinanie obszaru wyświetlania formantu.
 
@@ -430,7 +430,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ##  <a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage
 
-Pobiera DISPID_AMBIENT_CODEPAGE, stronę kodową otoczenia dla wszystkich kontrolek, zdefiniowanych przez kontener.
+Pobiera DISPID_AMBIENT_CODEPAGE, otaczającą stronę kodową dla wszystkich kontrolek zdefiniowanych przez kontener.
 
 ```
 HRESULT GetAmbientCodePage(ULONG& ulCodePage);
@@ -464,7 +464,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName
 
-Pobiera DISPID_AMBIENT_DISPLAYNAME, nazwę kontenera dostarczono do kontrolki.
+Pobiera DISPID_AMBIENT_DISPLAYNAME, nazwę kontenera dostarczoną do kontrolki.
 
 ```
 HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
@@ -481,7 +481,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="getambientfont"></a>CComControlBase::GetAmbientFont
 
-Pobiera wskaźnik do otaczającego `IFont` interfejsu kontenera.
+Pobiera wskaźnik do interfejsu `IFont` otoczenia kontenera.
 
 ```
 HRESULT GetAmbientFont(IFont** ppFont);
@@ -502,7 +502,7 @@ Jeśli właściwość ma wartość NULL, wskaźnik ma wartość NULL. Jeśli wsk
 
 ##  <a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp
 
-Pobiera wskaźnik do otaczającego `IFontDisp` interfejsu do dystrybucji kontenera.
+Pobiera wskaźnik do interfejsu wysyłania `IFontDisp` otoczenia kontenera.
 
 ```
 HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
@@ -578,7 +578,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="getambientpalette"></a>CComControlBase::GetAmbientPalette
 
-Pobiera DISPID_AMBIENT_PALETTE, używany do uzyskania dostępu do HPALETTE kontenera.
+Pobiera DISPID_AMBIENT_PALETTE, służący do uzyskania dostępu do HPALETTE kontenera.
 
 ```
 HRESULT GetAmbientPalette(HPALETTE& hPalette);
@@ -636,7 +636,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ##  <a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits
 
-Pobiera DISPID_AMBIENT_SCALEUNITS, jednostki otoczenia kontenera (na przykład cale lub centymetry) do wyświetlania etykiet.
+Pobiera DISPID_AMBIENT_SCALEUNITS, jednostek otoczenia kontenera (na przykład centymetrów lub centymetrów) do wyświetlania etykiet.
 
 ```
 HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
@@ -704,7 +704,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign
 
-Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 w przypadku ogólnego wyrównania (liczby w prawo, tekst z lewej), 1 dla wyrównania po lewej, 2 dla wyrównania Center i 3 do prawej wyrównania.
+Pobiera DISPID_AMBIENT_TEXTALIGN, wyrównanie tekstu preferowane przez kontener: 0 dla ogólnego wyrównania (liczby z prawej strony, lewy tekst), 1 dla lewej wyrównania, 2 dla wyrównania Center i 3 w celu wyrównania w prawo.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -776,7 +776,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="getdirty"></a>CComControlBase:: getdirty
 
-Zwraca wartość elementu członkowskiego `m_bRequiresSave`danych.
+Zwraca wartość `m_bRequiresSave`elementu członkowskiego danych.
 
 ```
 BOOL GetDirty();
@@ -784,11 +784,11 @@ BOOL GetDirty();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość elementu członkowskiego danych [m_bRequiresSave](#m_brequiressave).
+Zwraca wartość [m_bRequiresSave](#m_brequiressave)elementu członkowskiego danych.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta wartość jest ustawiana za pomocą [CComControlBase::](#setdirty)SetDirty.
+Ta wartość jest ustawiana za pomocą [CComControlBase:: SetDirty](#setdirty).
 
 ##  <a name="getzoominfo"></a>CComControlBase::GetZoomInfo
 
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*<br/>
+*fosforan*<br/>
 Struktura, w której będzie przechowywana wartość licznika i mianownik współczynnika powiększenia. Aby uzyskać więcej informacji, zobacz [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -831,9 +831,9 @@ Jedna ze standardowych wartości HRESULT.
 
 Przed aktywacją ta metoda sprawdza, czy formant ma lokację klienta, sprawdza, jaka część kontrolki jest widoczna i pobiera lokalizację kontrolki w oknie nadrzędnym. Po aktywowaniu kontrolki ta metoda aktywuje interfejs użytkownika kontrolki i instruuje kontener, aby formant był widoczny.
 
-Ta metoda pobiera `IOleInPlaceSite`również wskaźnik, `IOleInPlaceSiteEx`lub `IOleInPlaceSiteWindowless` interfejsu dla kontrolki i zapisuje ją w składowej danych klasy kontrolki [CComControlBase:: m_spInPlaceSite](#m_spinplacesite). Elementy członkowskie danych klasy kontrolki [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase:: m_bWndLess](#m_bwndless), [CComControlBase:: M_bWasOnceWindowless](#m_bwasoncewindowless)i [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) są ustawione na wartość true, zgodnie z potrzebami.
+Ta metoda pobiera również wskaźnik interfejsu `IOleInPlaceSite`, `IOleInPlaceSiteEx`lub `IOleInPlaceSiteWindowless` dla kontrolki i zapisuje go w elemencie członkowskim danych klasy kontrolki [CComControlBase:: m_spInPlaceSite](#m_spinplacesite). Elementy członkowskie danych klasy kontrolki [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase:: m_bWndLess](#m_bwndless), [CComControlBase:: m_bWasOnceWindowless](#m_bwasoncewindowless)i [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) są ustawione na wartość true, zgodnie z potrzebami.
 
-##  <a name="internalgetsite"></a>  CComControlBase::InternalGetSite
+##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite
 
 Wywołaj tę metodę, aby wykonać zapytanie o lokację kontroli dla wskaźnika do zidentyfikowanego interfejsu.
 
@@ -857,7 +857,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Jeśli lokacja obsługuje interfejs żądany w *riid*, wskaźnik jest zwracany przy użyciu *ppUnkSite*. W przeciwnym razie *ppUnkSite* ma wartość null.
 
-##  <a name="m_bautosize"></a>  CComControlBase::m_bAutoSize
+##  <a name="m_bautosize"></a>CComControlBase:: m_bAutoSize
 
 Flaga wskazująca, że formant nie może być żadnym innym rozmiarem.
 
@@ -867,16 +867,16 @@ unsigned m_bAutoSize:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta flaga jest sprawdzana `IOleObjectImpl::SetExtent` przez i, jeśli ma wartość true, powoduje, że funkcja zwraca wartość E_FAIL.
+Ta flaga jest sprawdzana przez `IOleObjectImpl::SetExtent` i, jeśli prawda, powoduje, że funkcja zwraca E_FAIL.
 
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Jeśli dodasz opcję **automatycznego rozmiaru** na karcie [Właściwości](../../atl/reference/stock-properties-atl-control-wizard.md) podstawowe kreatora kontrolki ATL, Kreator automatycznie utworzy ten element członkowski danych w klasie kontrolki, utworzy metody PUT i Get dla właściwości i obsługuje [IPropertyNotifySink ](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)w celu automatycznego powiadamiania kontenera o zmianie właściwości.
+Jeśli dodasz opcję **automatycznego rozmiaru** na karcie [Właściwości](../../atl/reference/stock-properties-atl-control-wizard.md) podstawowe kreatora kontrolki ATL, Kreator automatycznie utworzy ten element członkowski danych w klasie kontrolki, utworzy metody PUT i Get dla właściwości i obsługuje [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) do automatycznego powiadamiania kontenera o zmianie właściwości.
 
-##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural
+##  <a name="m_bdrawfromnatural"></a>CComControlBase:: m_bDrawFromNatural
 
-Flaga oznaczająca `IDataObjectImpl::GetData` , `CComControlBase::GetZoomInfo` że należy ustawić rozmiar formantu od `m_sizeNatural` , a nie `m_sizeExtent`z.
+Flaga oznaczająca, że `IDataObjectImpl::GetData` i `CComControlBase::GetZoomInfo` powinny ustawić rozmiar formantu z `m_sizeNatural`, a nie z `m_sizeExtent`.
 
 ```
 unsigned m_bDrawFromNatural:1;
@@ -887,9 +887,9 @@ unsigned m_bDrawFromNatural:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric
+##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase:: m_bDrawGetDataInHimetric
 
-Flaga oznaczająca `IDataObjectImpl::GetData` , że należy używać jednostek HIMETRIC, a nie pikseli przy rysowaniu.
+Flaga oznaczająca, że `IDataObjectImpl::GetData` powinny używać jednostek HIMETRIC, a nie pikseli podczas rysowania.
 
 ```
 unsigned m_bDrawGetDataInHimetric:1;
@@ -902,7 +902,7 @@ Każda logiczna jednostka HIMETRIC ma 0,01 milimetrów.
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_binplaceactive"></a>  CComControlBase::m_bInPlaceActive
+##  <a name="m_binplaceactive"></a>CComControlBase:: m_bInPlaceActive
 
 Flaga wskazująca, że formant jest aktywny w miejscu.
 
@@ -912,14 +912,14 @@ unsigned m_bInPlaceActive:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Oznacza to, że formant jest widoczny, a jego okno (jeśli istnieje) jest widoczne, ale jego menu i paski narzędzi mogą nie być aktywne. `m_bUIActive` Flaga wskazuje, że interfejs użytkownika kontrolki, taki jak menu, jest również aktywny.
+Oznacza to, że formant jest widoczny, a jego okno (jeśli istnieje) jest widoczne, ale jego menu i paski narzędzi mogą nie być aktywne. Flaga `m_bUIActive` wskazuje, że interfejs użytkownika kontrolki, taki jak menu, jest również aktywny.
 
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_binplacesiteex"></a>  CComControlBase::m_bInPlaceSiteEx
+##  <a name="m_binplacesiteex"></a>CComControlBase:: m_bInPlaceSiteEx
 
-Flaga wskazująca, że kontener `IOleInPlaceSiteEx` obsługuje funkcje sterowania interfejsem i OCX96, takie jak kontrolki bez okna i niezawierające migotania.
+Flaga wskazująca, że kontener `IOleInPlaceSiteEx` obsługuje funkcje OCX96 interfejsu i sterowania, takie jak kontrolki bez okna i niezawierające migotania.
 
 ```
 unsigned m_bInPlaceSiteEx:1;
@@ -930,11 +930,11 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Element członkowski `m_spInPlaceSite` danych wskazuje interfejs [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) `m_bWndLess` , w zależności od wartości flag i `m_bInPlaceSiteEx` . (Element członkowski `m_bNegotiatedWnd` danych musi mieć wartość true, `m_spInPlaceSite` aby wskaźnik był prawidłowy).
+Element członkowski danych `m_spInPlaceSite` wskazuje interfejs [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) , w zależności od wartości `m_bWndLess` i flag `m_bInPlaceSiteEx`. (Element członkowski danych `m_bNegotiatedWnd` musi mieć wartość TRUE, aby wskaźnik `m_spInPlaceSite` był prawidłowy.)
 
-Jeśli `m_bWndLess` ma wartość false `m_bInPlaceSiteEx` `m_spInPlaceSite` i`IOleInPlaceSiteEx` ma wartość true, jest wskaźnikiem interfejsu. Zobacz [m_spInPlaceSite](#m_spinplacesite) , aby uzyskać tabelę przedstawiającą relację między tymi trzema elementami członkowskimi danych.
+Jeśli `m_bWndLess` ma wartość FALSE, a `m_bInPlaceSiteEx` ma wartość TRUE, `m_spInPlaceSite` jest wskaźnikiem interfejsu `IOleInPlaceSiteEx`. Zobacz [m_spInPlaceSite](#m_spinplacesite) tabeli zawierającej relacje między tymi trzema elementami członkowskimi danych.
 
-##  <a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd
+##  <a name="m_bnegotiatedwnd"></a>CComControlBase:: m_bNegotiatedWnd
 
 Flaga oznaczająca, czy kontrolka została wynegocjowana z kontenerem o obsłudze funkcji kontroli OCX96 (takich jak kontrolki bez okna i nieokienkowe), oraz czy kontrolka jest okienkowa, czy bez okien.
 
@@ -947,9 +947,9 @@ unsigned m_bNegotiatedWnd:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Aby wskaźnik był prawidłowy, `m_spInPlaceSite` Flagamusimiećwartośćtrue.`m_bNegotiatedWnd`
+Flaga `m_bNegotiatedWnd` musi mieć wartość TRUE, aby wskaźnik `m_spInPlaceSite` był prawidłowy.
 
-##  <a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize
+##  <a name="m_brecomposeonresize"></a>CComControlBase:: m_bRecomposeOnResize
 
 Flaga wskazująca, że kontrolka chce ponownie złożyć swoją prezentację, gdy kontener zmieni rozmiar wyświetlania formantu.
 
@@ -962,9 +962,9 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Ta flaga jest sprawdzana przez [IOleObjectImpl:: setzakres](../../atl/reference/ioleobjectimpl-class.md#setextent) i, Jeśli true `SetExtent` , powiadamia kontener o zmianach widoku. Jeśli ta flaga jest ustawiona, należy również ustawić bit OLEMISC_RECOMPOSEONRESIZE w wyliczeniu [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) .
+Ta flaga jest sprawdzana przez [IOleObjectImpl:: setzakres](../../atl/reference/ioleobjectimpl-class.md#setextent) i, jeśli ma wartość TRUE, `SetExtent` powiadamia kontener o zmianach widoku. Jeśli ta flaga jest ustawiona, należy również ustawić OLEMISC_RECOMPOSEONRESIZE bit w wyliczeniu [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) .
 
-##  <a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave
+##  <a name="m_brequiressave"></a>CComControlBase:: m_bRequiresSave
 
 Flaga wskazująca, że formant został zmieniony od ostatniego zapisu.
 
@@ -974,12 +974,12 @@ unsigned m_bRequiresSave:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość `m_bRequiresSave` można ustawić za pomocą [CComControlBase::](#setdirty) SetDirty i pobranej z [CComControlBase::](#getdirty)getdirty.
+Wartość `m_bRequiresSave` można ustawić za pomocą [CComControlBase:: SetDirty](#setdirty) i pobranej z [CComControlBase:: getdirty](#getdirty).
 
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural
+##  <a name="m_bresizenatural"></a>CComControlBase:: m_bResizeNatural
 
 Flaga wskazująca, że formant chce zmienić rozmiar swojego naturalnego zakresu (nieskalowanego rozmiaru fizycznego), gdy kontener zmienia rozmiar wyświetlania formantu.
 
@@ -989,14 +989,14 @@ unsigned m_bResizeNatural:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta flaga jest sprawdzana `IOleObjectImpl::SetExtent` przez i, jeśli ma wartość true, rozmiar `SetExtent` przekazane do jest `m_sizeNatural`przypisany do.
+Ta flaga jest sprawdzana przez `IOleObjectImpl::SetExtent` i, w przypadku wartości TRUE, rozmiar przesłany do `SetExtent` jest przypisany do `m_sizeNatural`.
 
-Rozmiar przekazanego `SetExtent` elementu jest zawsze przypisany do `m_sizeExtent`, niezależnie od wartości. `m_bResizeNatural`
+Rozmiar przesłany do `SetExtent` jest zawsze przypisany do `m_sizeExtent`, niezależnie od wartości `m_bResizeNatural`.
 
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_buiactive"></a>  CComControlBase::m_bUIActive
+##  <a name="m_buiactive"></a>CComControlBase:: m_bUIActive
 
 Flaga wskazująca, że interfejs użytkownika kontrolki, taki jak menu i paski narzędzi, jest aktywny.
 
@@ -1006,12 +1006,12 @@ unsigned m_bUIActive:1;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_bInPlaceActive` Flaga wskazuje, że formant jest aktywny, ale nie jest aktywny.
+Flaga `m_bInPlaceActive` wskazuje, że formant jest aktywny, ale nie jest aktywny.
 
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn
+##  <a name="m_busingwindowrgn"></a>CComControlBase:: m_bUsingWindowRgn
 
 Flaga wskazująca, że formant korzysta z regionu okna dostarczonego z kontenerem.
 
@@ -1024,7 +1024,7 @@ unsigned m_bUsingWindowRgn:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_bwasoncewindowless"></a>  CComControlBase::m_bWasOnceWindowless
+##  <a name="m_bwasoncewindowless"></a>CComControlBase:: m_bWasOnceWindowless
 
 Flaga wskazująca, że kontrolka została bez okien, ale może nie być teraz bez okien.
 
@@ -1037,7 +1037,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly
+##  <a name="m_bwindowonly"></a>CComControlBase:: m_bWindowOnly
 
 Flaga wskazująca, że formant powinien być okienkowy, nawet jeśli kontener obsługuje kontrolki bez okien.
 
@@ -1050,7 +1050,7 @@ unsigned m_bWindowOnly:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_bwndless"></a>CComControlBase::m_bWndLess
+##  <a name="m_bwndless"></a>CComControlBase:: m_bWndLess
 
 Flaga wskazująca, że formant jest bez okien.
 
@@ -1063,11 +1063,11 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Element `m_spInPlaceSite` członkowski danych wskazuje interfejs [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) `m_bWndLess` , w zależności od wartości flag i [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex) . (Element członkowski danych [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) musi mieć wartość true, aby wskaźnik [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) był prawidłowy.)
+Element członkowski danych `m_spInPlaceSite` wskazuje na interfejs [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) , w zależności od wartości `m_bWndLess` i [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex) flag. (Element członkowski danych [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) musi mieć wartość true, aby wskaźnik [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) był prawidłowy.)
 
-Jeśli `m_bWndLess` ma wartość true `m_spInPlaceSite` , jest `IOleInPlaceSiteWindowless` wskaźnikiem interfejsu. Zobacz [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) dla tabeli pokazującej pełną relację między tymi elementami członkowskimi danych.
+Jeśli `m_bWndLess` ma wartość TRUE, `m_spInPlaceSite` jest wskaźnikiem interfejsu `IOleInPlaceSiteWindowless`. Zobacz [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) tabeli pokazującej pełną relację między tymi elementami członkowskimi danych.
 
-##  <a name="m_hwndcd"></a>CComControlBase::m_hWndCD
+##  <a name="m_hwndcd"></a>CComControlBase:: m_hWndCD
 
 Zawiera odwołanie do uchwytu okna skojarzonego z kontrolką.
 
@@ -1080,7 +1080,7 @@ HWND& m_hWndCD;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents
+##  <a name="m_nfreezeevents"></a>CComControlBase:: m_nFreezeEvents
 
 Liczba zdarzeń zamrożonych w kontenerze (odrzuconych do zaakceptowania zdarzeń) bez interwencji z rozmrożeniem zdarzeń (akceptowanie zdarzeń).
 
@@ -1093,7 +1093,7 @@ short m_nFreezeEvents;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_rcpos"></a>CComControlBase::m_rcPos
+##  <a name="m_rcpos"></a>CComControlBase:: m_rcPos
 
 Pozycja w pikselach kontrolki wyrażona we współrzędnych kontenera.
 
@@ -1106,7 +1106,7 @@ RECT m_rcPos;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_sizeextent"></a>CComControlBase::m_sizeExtent
+##  <a name="m_sizeextent"></a>CComControlBase:: m_sizeExtent
 
 Zakres formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów) dla określonego ekranu.
 
@@ -1119,11 +1119,11 @@ SIZE m_sizeExtent;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Ten rozmiar jest skalowany na ekranie. Rozmiar fizyczny kontrolki jest określony w `m_sizeNatural` elemencie członkowskim danych i jest stały.
+Ten rozmiar jest skalowany na ekranie. Rozmiar fizyczny kontrolki jest określony w elemencie członkowskim danych `m_sizeNatural` i został naprawiony.
 
 Możesz skonwertować rozmiar do pikseli przy użyciu funkcji globalnej [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
 
-##  <a name="m_sizenatural"></a>CComControlBase::m_sizeNatural
+##  <a name="m_sizenatural"></a>CComControlBase:: m_sizeNatural
 
 Rozmiar fizyczny formantu w jednostkach HIMETRIC (każda jednostka to 0,01 milimetrów).
 
@@ -1136,11 +1136,11 @@ SIZE m_sizeNatural;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Ten rozmiar jest ustalony, podczas gdy rozmiar `m_sizeExtent` w programie jest skalowany na ekranie.
+Ten rozmiar jest ustalony, podczas gdy rozmiar w `m_sizeExtent` jest skalowany na ekranie.
 
 Możesz skonwertować rozmiar do pikseli przy użyciu funkcji globalnej [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
 
-##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink
+##  <a name="m_spadvisesink"></a>CComControlBase:: m_spAdviseSink
 
 Bezpośredni wskaźnik do połączenia Doradczego na kontenerze ( [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)kontenera).
 
@@ -1154,9 +1154,9 @@ CComPtr<IAdviseSink>
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_spambientdispatch"></a>  CComControlBase::m_spAmbientDispatch
+##  <a name="m_spambientdispatch"></a>CComControlBase:: m_spAmbientDispatch
 
-Obiekt, który umożliwia pobieranie i Ustawianie właściwości obiektu `IDispatch` za pomocą wskaźnika. `CComDispatchDriver`
+Obiekt `CComDispatchDriver`, który umożliwia pobieranie i Ustawianie właściwości obiektu za pomocą wskaźnika `IDispatch`.
 
 ```
 CComDispatchDriver m_spAmbientDispatch;
@@ -1167,7 +1167,7 @@ CComDispatchDriver m_spAmbientDispatch;
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_spclientsite"></a>  CComControlBase::m_spClientSite
+##  <a name="m_spclientsite"></a>CComControlBase:: m_spClientSite
 
 Wskaźnik do lokacji klienta kontrolki w kontenerze.
 
@@ -1181,7 +1181,7 @@ CComPtr<IOleClientSite>
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-##  <a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder
+##  <a name="m_spdataadviseholder"></a>CComControlBase:: m_spDataAdviseHolder
 
 Zapewnia standardową metodę utrzymywania połączeń doradczych między obiektami danych i doradzania ujściam.
 
@@ -1197,11 +1197,11 @@ CComPtr<IDataAdviseHolder>
 
 Obiekt danych jest formantem, który może przesyłać dane i implementuje [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject), których metody określają format i nośnik transferu danych.
 
-Interfejs `m_spDataAdviseHolder` implementuje metody [IDataObject::D Advise](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) i [IDataObject::D](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) nie doradzają metodami do nawiązywania i usuwania połączeń doradczych do kontenera. Kontener kontrolki musi implementować obiekt doradzający przez obsługę interfejsu [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) .
+Interfejs `m_spDataAdviseHolder` implementuje [IDataObject::D Advise](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) i [IDataObject::D nie doradzają](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) metodami do nawiązywania i usuwania połączeń doradczych do kontenera. Kontener kontrolki musi implementować obiekt doradzający przez obsługę interfejsu [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) .
 
-##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite
+##  <a name="m_spinplacesite"></a>CComControlBase:: m_spInPlaceSite
 
-Wskaźnik do wskaźnika interfejsu [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub IOleInPlaceSiteWindowlessu kontenera [](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) .
+Wskaźnik do wskaźnika interfejsu [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)lub [IOleInPlaceSiteWindowlessu](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) kontenera.
 
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1213,17 +1213,17 @@ CComPtr<IOleInPlaceSiteWindowless>
 > [!NOTE]
 >  Aby użyć tego elementu członkowskiego danych w klasie formantów, należy zadeklarować go jako element członkowski danych w klasie kontrolki. Klasa kontrolki nie będzie dziedziczyć tego elementu członkowskiego danych z klasy podstawowej, ponieważ jest ona zadeklarowana w Unii w klasie bazowej.
 
-Wskaźnik jest prawidłowy tylko wtedy, gdy flaga m_bNegotiatedWnd ma wartość true. [](#m_bnegotiatedwnd) `m_spInPlaceSite`
+Wskaźnik `m_spInPlaceSite` jest prawidłowy tylko wtedy, gdy flaga [m_bNegotiatedWnd](#m_bnegotiatedwnd) ma wartość true.
 
-W poniższej tabeli przedstawiono sposób, `m_spInPlaceSite` w jaki typ wskaźnika zależy od flag elementu członkowskiego danych [m_bWndLess](#m_bwndless) i [m_bInPlaceSiteEx](#m_binplacesiteex) :
+W poniższej tabeli przedstawiono sposób, w jaki typ wskaźnika `m_spInPlaceSite` zależy od flag elementu członkowskiego danych [m_bWndLess](#m_bwndless) i [m_bInPlaceSiteEx](#m_binplacesiteex) :
 
-|m_spInPlaceSite Type|m_bWndLess wartość|m_bInPlaceSiteEx wartość|
+|m_spInPlaceSite Type|Wartość m_bWndLess|Wartość m_bInPlaceSiteEx|
 |---------------------------|-----------------------|-----------------------------|
-|`IOleInPlaceSiteWindowless`|OZNACZA|PRAWDA lub FAŁSZ|
-|`IOleInPlaceSiteEx`|FAŁSZ|OZNACZA|
+|`IOleInPlaceSiteWindowless`|TRUE|PRAWDA lub FAŁSZ|
+|`IOleInPlaceSiteEx`|FAŁSZ|TRUE|
 |`IOleInPlaceSite`|FAŁSZ|FAŁSZ|
 
-##  <a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder
+##  <a name="m_spoleadviseholder"></a>CComControlBase:: m_spOleAdviseHolder
 
 Zapewnia standardową implementację sposobu utrzymywania połączeń doradczych.
 
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*<br/>
+*fosforan*<br/>
 Odwołanie do struktury [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , która zawiera informacje o rysunku, takie jak aspekt rysowania, granice kontrolki i czy rysunek jest zoptymalizowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1260,7 +1260,7 @@ Standardowa wartość HRESULT.
 
 Domyślnie `OnDraw` usuwa lub przywraca kontekst urządzenia albo nie robi nic, w zależności od flag ustawionych w [CComControlBase:: OnDrawAdvanced](#ondrawadvanced).
 
-`OnDraw` Metoda jest automatycznie dodawana do klasy formantów podczas tworzenia kontrolki za pomocą Kreatora kontrolki ATL. Domyślny `OnDraw` Kreator rysuje prostokąt z etykietą "ATL 8,0".
+Metoda `OnDraw` jest automatycznie dodawana do klasy formantów podczas tworzenia kontrolki za pomocą Kreatora kontrolki ATL. `OnDraw` domyślne kreatora rysuje prostokąt z etykietą "ATL 8,0".
 
 ### <a name="example"></a>Przykład
 
@@ -1268,7 +1268,7 @@ Zobacz przykład dla [CComControlBase:: GetAmbientAppearance](#getambientappeara
 
 ##  <a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced
 
-Domyślnie `OnDrawAdvanced` przygotowuje znormalizowany kontekst urządzenia do rysowania, a następnie wywołuje `OnDraw` metodę klasy formantu.
+Domyślne `OnDrawAdvanced` przygotowuje znormalizowany kontekst urządzenia do rysowania, a następnie wywołuje metodę `OnDraw` klasy formantu.
 
 ```
 virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*<br/>
+*fosforan*<br/>
 Odwołanie do struktury [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , która zawiera informacje o rysunku, takie jak aspekt rysowania, granice kontrolki i czy rysunek jest zoptymalizowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1349,7 +1349,7 @@ Zawsze zwraca 1.
 
 ##  <a name="onpaint"></a>CComControlBase:: OnPaint
 
-Przygotowuje kontener do malowania, Pobiera obszar klienta kontrolki, a następnie wywołuje `OnDrawAdvanced` metodę klasy formantu.
+Przygotowuje kontener do malowania, Pobiera obszar klienta kontrolki, a następnie wywołuje metodę `OnDrawAdvanced` klasy formantu.
 
 ```
 LRESULT OnPaint(UINT /* nMsg */,
@@ -1378,7 +1378,7 @@ Zawsze zwraca zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *wParam* nie ma wartości null `OnPaint` , zakłada, że zawiera prawidłowe używający HDC i używa go zamiast [CComControlBase:: m_hWndCD](#m_hwndcd).
+Jeśli *wParam* nie ma wartości NULL, `OnPaint` zakłada, że zawiera prawidłowe używający HDC i używa go zamiast [CComControlBase:: m_hWndCD](#m_hwndcd).
 
 ##  <a name="onsetfocus"></a>CComControlBase:: funkcji OnSetFocus
 
@@ -1413,7 +1413,7 @@ Zawsze zwraca 1.
 
 Wysyła powiadomienie do kontenera, w którym formant otrzymał fokus.
 
-##  <a name="pretranslateaccelerator"></a>  CComControlBase::PreTranslateAccelerator
+##  <a name="pretranslateaccelerator"></a>CComControlBase::P reTranslateAccelerator
 
 Zastąp tę metodę, aby zapewnić własne programy obsługi akceleratora klawiaturowego.
 
@@ -1526,7 +1526,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`SendOnViewChange`wywołuje [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange). Jedyną obsługiwaną wartością *Lindex* jest-1, co oznacza, że cały widok jest interesujący.
+wywołania `SendOnViewChange` [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange). Jedyną obsługiwaną wartością *Lindex* jest-1, co oznacza, że cały widok jest interesujący.
 
 ##  <a name="setcontrolfocus"></a>CComControlBase::SetControlFocus
 
@@ -1547,11 +1547,11 @@ Zwraca wartość TRUE, Jeśli kontrolka pomyślnie odbierze fokus; w przeciwnym 
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku kontrolki okienkowej wywoływana jest funkcja Windows [](/windows/win32/api/winuser/nf-winuser-setfocus) API SetFocus. W przypadku kontrolki bez okien jest wywoływana funkcja [IOleInPlaceSiteWindowless:: SetFocus](/windows/win32/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) . Za pomocą tego wywołania, kontrola bez okien uzyskuje fokus klawiatury i może odpowiadać na komunikaty okna.
+W przypadku kontrolki okienkowej wywoływana jest funkcja Windows API [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) . W przypadku kontrolki bez okien jest wywoływana funkcja [IOleInPlaceSiteWindowless:: SetFocus](/windows/win32/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) . Za pomocą tego wywołania, kontrola bez okien uzyskuje fokus klawiatury i może odpowiadać na komunikaty okna.
 
 ##  <a name="setdirty"></a>CComControlBase:: SetDirty
 
-Ustawia element członkowski `m_bRequiresSave` danych na wartość w *bDirty*.
+Ustawia `m_bRequiresSave` elementu członkowskiego danych na wartość w *bDirty*.
 
 ```
 void SetDirty(BOOL bDirty);
@@ -1564,9 +1564,9 @@ Wartość elementu członkowskiego danych [CComControlBase:: m_bRequiresSave](#m
 
 ### <a name="remarks"></a>Uwagi
 
-`SetDirty(TRUE)`powinien zostać wywołany, aby oflagować, że formant został zmieniony od ostatniego zapisu. Wartość `m_bRequiresSave` jest pobierana z [CComControlBase::](#getdirty)getdirty.
+`SetDirty(TRUE)` powinien zostać wywołany, aby oflagować, że formant został zmieniony od czasu ostatniego zapisywania. Wartość `m_bRequiresSave` jest pobierana z [CComControlBase:: Getdirty](#getdirty).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)
