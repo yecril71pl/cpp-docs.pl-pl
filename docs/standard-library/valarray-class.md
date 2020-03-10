@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866258"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937421"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -57,7 +57,7 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -123,7 +123,7 @@ Obiekt funkcyjny do zastosowania do każdego elementu operandu valarray.
 *_Func (typ stałej &)* \
 Obiekt funkcyjny dla elementu const, który ma być stosowany do poszczególnych elementów operandu valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy miały `_Func` zastosowane elementy do elementów operandu valarray.
 
@@ -194,7 +194,7 @@ valarray<Type> cshift(int count) const;
 *liczba*\
 Liczba miejsc, w których elementy mają zostać przesunięte do przodu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowy valarray, w którym wszystkie elementy zostały *przesunięte* cyklicznie do przodu valarray, po lewej stronie względem ich pozycji w valarray operandu.
 
@@ -286,7 +286,7 @@ Znajduje największy element w valarray.
 Type max() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna wartość elementów w operandzie valarray.
 
@@ -339,7 +339,7 @@ Znajduje najmniejszy element w valarray.
 Type min() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Minimalna wartość elementów w operandzie valarray.
 
@@ -391,7 +391,7 @@ Jednoargumentowy operator, który uzyskuje logiczne **nie** wartości każdego e
 valarray<bool> operator!() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, które są negacją wartości elementu operandu valarray.
 
@@ -457,7 +457,7 @@ valarray<Type>& operator%=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który jest podzielona, element, argument operacji valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są resztą z dzielenia elementu operandu valarray przez *prawo*
 
@@ -524,7 +524,7 @@ valarray<Type>& operator&=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identyczna z typem operandu valarray, który ma być połączony, element, przez `AND` logiczny z operandem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są logicznymi `AND` argumentu operacji valarray przez *prawo*
 
@@ -597,7 +597,7 @@ valarray<Type>& operator>>=(const Type& right);
 *prawa*\
 Wartość wskazująca ilość prawego przesunięcia lub valarray, której elementy wskazują ilość elementów po prawej stronie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy zostały przesunięte w prawo o kwotę określoną w *prawej*.
 
@@ -668,7 +668,7 @@ valarray<Type>& operator<<=(const Type& right);
 *prawa*\
 Wartość wskazująca ilość przesunięcia w lewo lub valarray, której elementy wskazują liczbę elementów przesunięcia w lewo.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy zostały przesunięte w lewo o kwotę określoną w *prawej*.
 
@@ -741,7 +741,7 @@ valarray<Type>& operator*=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być mnożony element, argument operacji valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy stanowią iloczyn elementu operandu valarray i *Right*.
 
@@ -800,7 +800,7 @@ Jednoargumentowy operator, który stosuje znak plus do każdego elementu w valar
 valarray<Type> operator+() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są powiększone do tablic operandów.
 
@@ -860,7 +860,7 @@ valarray<Type>& operator+=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma zostać dodany do operandu valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są sumą elementów operandu valarray i *Right*.
 
@@ -920,7 +920,7 @@ Jednoargumentowy operator, który stosuje znak minus do każdego elementu w vala
 valarray<Type> operator-() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są pomniejszone o tablicę operandu.
 
@@ -980,7 +980,7 @@ valarray<Type>& operator-=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z typem operandu valarray, który ma zostać odjęty, z elementem operandu valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są różnicą elementu operandu valarray i *po prawej stronie*.
 
@@ -1047,7 +1047,7 @@ valarray<Type>& operator/=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identyczna z typem operandu valarray, który ma być podzielony, elementowy, do operand valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są elementem ilorazu argumentu operacji valarray podzielone przez *prawo*.
 
@@ -1139,7 +1139,7 @@ Mask_array, które mają zostać skopiowane do operandu valarray.
 *_Indarray*\
 Indirect_array, które mają zostać skopiowane do operandu valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy operator członkowski zastępuje kontrolowaną sekwencję kopią sekwencji kontrolowanej przez *prawo*.
 
@@ -1252,7 +1252,7 @@ Bool_array elementu valarray, który określa podzestaw do wybrania lub zwrócen
 *_Indarray*\
 Indirect_array elementu valarray, który określa podzestaw do wybrania lub zwrócenia do nowego valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu lub jego wartości w określonym indeksie lub określonym podzbiorze.
 
@@ -1281,7 +1281,7 @@ valarray<Type>& operator|=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być połączony, element, przez wyłączną logiczną **XOR** z argumentem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray, którego elementy są elementami elementu, wyłączną logiczną **XOR** operacji valarray i *Right*.
 
@@ -1356,7 +1356,7 @@ valarray<Type>& operator|=(const Type& right);
 *prawa*\
 Valarray lub wartość typu elementu identycznego z argumentem operandu valarray, który ma być połączony, element, przez `OR` bitowego z operandem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy stanowią `OR` bitowe elementu operand valarray przez *prawo*.
 
@@ -1432,7 +1432,7 @@ Jednoargumentowy operator, który uzyskuje wartości bitowe `NOT` każdego eleme
 valarray<Type> operator~() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, które są bitowym `NOT` wartości elementu operandu valarray.
 
@@ -1612,7 +1612,7 @@ valarray<Type> shift(int count) const;
 *liczba*\
 Liczba miejsc, w których elementy mają zostać przesunięte do przodu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowy valarray, w którym wszystkie elementy zostały *przesunięte* do góry valarray, po lewej stronie w odniesieniu do ich pozycji w valarray operandu.
 
@@ -1682,7 +1682,7 @@ Znajduje liczbę elementów w valarray.
 size_t size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w operandzie valarray.
 
@@ -1759,7 +1759,7 @@ Określa sumę wszystkich elementów w valarray o niezerowej długości.
 Type sum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Suma elementów operandu valarray.
 

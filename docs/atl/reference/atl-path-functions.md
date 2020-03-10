@@ -42,11 +42,11 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
 ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497987"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865038"
 ---
 # <a name="atl-path-functions"></a>Funkcje ścieżki ATL
 
@@ -71,11 +71,11 @@ ATL udostępnia klasę ATLPath na potrzeby manipulowania ścieżkami w postaci [
 |||
 |-|-|
 |[ATLPath::AddBackslash](#addbackslash)|Ta funkcja to przeciążona otoka dla [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).|
-|[ATLPath::AddExtension](#addextension)|Ta funkcja to przeciążona otoka dla [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
+|[ATLPath:: AddExtension](#addextension)|Ta funkcja to przeciążona otoka dla [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
 |[ATLPath:: Append](#append)|Ta funkcja to przeciążona otoka dla [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).|
-|[ATLPath::BuildRoot](#buildroot)|Ta funkcja to przeciążona otoka dla [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).|
-|[ATLPath::Canonicalize](#canonicalize)|Ta funkcja to przeciążona otoka dla [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).|
-|[ATLPath::Combine](#combine)|Ta funkcja to przeciążona otoka dla [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).|
+|[ATLPath:: element buildroot](#buildroot)|Ta funkcja to przeciążona otoka dla [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).|
+|[ATLPath:: sprowadź](#canonicalize)|Ta funkcja to przeciążona otoka dla [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).|
+|[ATLPath:: Połącz](#combine)|Ta funkcja to przeciążona otoka dla [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).|
 |[ATLPath::CommonPrefix](#commonprefix)|Ta funkcja to przeciążona otoka dla [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).|
 |[ATLPath::CompactPath](#compactpath)|Ta funkcja to przeciążona otoka dla [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).|
 |[ATLPath::CompactPathEx](#compactpathex)|Ta funkcja to przeciążona otoka dla [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).|
@@ -83,11 +83,11 @@ ATL udostępnia klasę ATLPath na potrzeby manipulowania ścieżkami w postaci [
 |[ATLPath::FindExtension](#findextension)|Ta funkcja to przeciążona otoka dla [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).|
 |[ATLPath::FindFileName](#findfilename)|Ta funkcja to przeciążona otoka dla [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).|
 |[ATLPath::GetDriveNumber](#getdrivenumber)|Ta funkcja to przeciążona otoka dla [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).|
-|[ATLPath::IsDirectory](#isdirectory)|Ta funkcja to przeciążona otoka dla [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
+|[ATLPath:: IsDirectory](#isdirectory)|Ta funkcja to przeciążona otoka dla [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
 |[ATLPath::IsFileSpec](#isfilespec)|Ta funkcja to przeciążona otoka dla [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).|
 |[ATLPath:: IsPrefix](#isprefix)|Ta funkcja to przeciążona otoka dla [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).|
 |[ATLPath:: isrelatywn](#isrelative)|Ta funkcja to przeciążona otoka dla [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).|
-|[ATLPath::IsRoot](#isroot)|Ta funkcja to przeciążona otoka dla [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
+|[ATLPath:: IsRoot](#isroot)|Ta funkcja to przeciążona otoka dla [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
 |[ATLPath::IsSameRoot](#issameroot)|Ta funkcja to przeciążona otoka dla [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).|
 |[ATLPath::IsUNC](#isunc)|Ta funkcja to przeciążona otoka dla [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).|
 |[ATLPath::IsUNCServer](#isuncserver)|Ta funkcja to przeciążona otoka dla [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).|
@@ -156,7 +156,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 Aby uzyskać szczegółowe informacje, zobacz [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) .
 
-## <a name="buildroot"></a> ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath:: element buildroot
 
 Ta funkcja to przeciążona otoka dla [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
@@ -601,7 +601,7 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 Aby uzyskać szczegółowe informacje, zobacz [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) .
 
-## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
 
 Ta funkcja to przeciążona otoka dla [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 

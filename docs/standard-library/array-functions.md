@@ -11,19 +11,19 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456772"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875896"
 ---
 # <a name="ltarraygt-functions"></a>&lt;funkcje&gt; tablicy
 
-Nagłówek > `get` `swap`tablicy zawiera dwie funkcje, które nie są elementami członkowskimi, i, które działają na obiektach **Array.** \<
+Nagłówek \<Array > zawiera dwie funkcje, które nie są elementami członkowskimi, `get` i `swap`, które działają na obiektach **Array** .
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[wymiany](#swap)|
 
 ## <a name="get"></a>Pobierz
 
@@ -45,13 +45,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 *Indeks*\
 Przesunięcie elementu.
 
-*&* \
+*T*\
 Typ elementu.
 
-*AZOTAN*\
+*N*\
 Liczba elementów w tablicy.
 
-*Genotyp*\
+\ *ARR*
 Tablica do wyboru.
 
 ### <a name="example"></a>Przykład
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>wymiany
 
-Specjalizacja `std::swap` szablonu nieczłonkowskiego, który zamienia dwa obiekty **tablicy** .
+Specjalizacja szablonu nieczłonkowskiego `std::swap`, który zamienia dwa obiekty **tablicy** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,21 +97,21 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ elementu.
 
-*AZOTAN*\
+*N*\
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Pierwsza tablica do zamiany.
 
-*Kliknij*\
+*prawa*\
 Druga tablica do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest wykonywana `left.swap(right)`.
+Funkcja Template wykonuje `left.swap(right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<array>](../standard-library/array.md)
+[\<> tablicy](../standard-library/array.md)

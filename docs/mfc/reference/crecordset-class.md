@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626189"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854031"
 ---
 # <a name="crecordset-class"></a>Klasa CRecordset
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRecordset::CRecordset](#crecordset)|Konstruuje obiekt `CRecordset`. Klasa pochodna musi udostępniać Konstruktor, który wywołuje ten obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRecordset:: AddNew](#addnew)|Przygotowuje się do dodania nowego rekordu. Wywołaj `Update`, aby dokończyć Dodawanie.|
 |[CRecordset:: dołączanie](#canappend)|Zwraca wartość różną od zera, jeśli nowe rekordy można dodać do zestawu rekordów za pośrednictwem funkcji składowej `AddNew`.|
@@ -217,14 +217,14 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CRecordset::m_hstmt](#m_hstmt)|Zawiera dojście instrukcji ODBC dla zestawu rekordów. Wpisz `HSTMT`.|
-|[CRecordset::m_nFields](#m_nfields)|Zawiera liczbę elementów członkowskich danych pola w zestawie rekordów. Wpisz `UINT`.|
-|[CRecordset::m_nParams](#m_nparams)|Zawiera liczbę elementów członkowskich danych parametrów w zestawie rekordów. Wpisz `UINT`.|
-|[CRecordset::m_pDatabase](#m_pdatabase)|Zawiera wskaźnik do obiektu `CDatabase`, za pomocą którego zestaw rekordów jest połączony ze źródłem danych.|
-|[CRecordset::m_strFilter](#m_strfilter)|Zawiera `CString` określający klauzulę `WHERE` Structured Query Language (SQL). Służy jako filtr do wybierania tylko tych rekordów, które spełniają określone kryteria.|
-|[CRecordset::m_strSort](#m_strsort)|Zawiera `CString` określający klauzulę SQL `ORDER BY`. Służy do kontrolowania sposobu sortowania rekordów.|
+|[CRecordset:: m_hstmt](#m_hstmt)|Zawiera dojście instrukcji ODBC dla zestawu rekordów. Wpisz polecenie `HSTMT`.|
+|[CRecordset:: m_nFields](#m_nfields)|Zawiera liczbę elementów członkowskich danych pola w zestawie rekordów. Wpisz polecenie `UINT`.|
+|[CRecordset:: m_nParams](#m_nparams)|Zawiera liczbę elementów członkowskich danych parametrów w zestawie rekordów. Wpisz polecenie `UINT`.|
+|[CRecordset:: m_pDatabase](#m_pdatabase)|Zawiera wskaźnik do obiektu `CDatabase`, za pomocą którego zestaw rekordów jest połączony ze źródłem danych.|
+|[CRecordset:: m_strFilter](#m_strfilter)|Zawiera `CString` określający klauzulę `WHERE` Structured Query Language (SQL). Służy jako filtr do wybierania tylko tych rekordów, które spełniają określone kryteria.|
+|[CRecordset:: m_strSort](#m_strsort)|Zawiera `CString` określający klauzulę SQL `ORDER BY`. Służy do kontrolowania sposobu sortowania rekordów.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -302,7 +302,7 @@ Określa, czy poprzednio otwarty zestaw rekordów pozwala dodawać nowe rekordy.
 BOOL CanAppend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` zwróci wartość 0, jeśli zestaw rekordów został otwarty jako tylko do odczytu.
 
@@ -314,7 +314,7 @@ Określa, czy zestaw rekordów umożliwia oznaczanie rekordów przy użyciu zak�
 BOOL CanBookmark() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zestaw rekordów obsługuje zakładki; w przeciwnym razie 0.
 
@@ -364,7 +364,7 @@ Określa, czy zestaw rekordów umożliwia ponowne uruchomienie zapytania (w celu
 BOOL CanRestart() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli jest dozwolona ponowna kwerenda; w przeciwnym razie 0.
 
@@ -376,7 +376,7 @@ Określa, czy zestaw rekordów umożliwia przewijanie.
 BOOL CanScroll() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów umożliwia przewijanie; w przeciwnym razie 0.
 
@@ -392,7 +392,7 @@ Określa, czy zestaw rekordów zezwala na transakcje.
 BOOL CanTransact() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów zezwala na transakcje; w przeciwnym razie 0.
 
@@ -408,7 +408,7 @@ Określa, czy można aktualizować zestaw rekordów.
 BOOL CanUpdate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów można zaktualizować; w przeciwnym razie 0.
 
@@ -617,7 +617,7 @@ Pobiera następny zestaw wyników wstępnie zdefiniowanego zapytania (procedura 
 BOOL FlushResultSet();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli istnieje więcej zestawów wyników do pobrania; w przeciwnym razie 0.
 
@@ -674,7 +674,7 @@ Wywołuje się, by uzyskać domyślne parametry połączenia.
 virtual CString GetDefaultConnect();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, który zawiera domyślne parametry połączenia.
 
@@ -690,7 +690,7 @@ Wywołuje się, by uzyskać domyślny ciąg SQL do wykonania.
 virtual CString GetDefaultSQL();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, która zawiera domyślną instrukcję SQL.
 
@@ -739,7 +739,7 @@ Nazwa pola.
 *varValu*e odwołanie do obiektu [CDBVariant](../../mfc/reference/cdbvariant-class.md) , który będzie przechowywać wartość pola.
 
 *nFieldType*<br/>
-Typ danych ODBC C pola. Przy użyciu wartości domyślnej DEFAULT_FIELD_TYPE, wymusza `GetFieldValue`, aby określić typ danych C z typu danych SQL, w oparciu o poniższą tabelę. W przeciwnym razie można określić typ danych bezpośrednio lub wybrać zgodny typ danych. na przykład można przechowywać dowolny typ danych w SQL_C_CHAR.
+Typ danych ODBC C pola. Korzystając z wartości domyślnej DEFAULT_FIELD_TYPE, wymusza `GetFieldValue`, aby określić typ danych C z typu danych SQL, w oparciu o poniższą tabelę. W przeciwnym razie można określić typ danych bezpośrednio lub wybrać zgodny typ danych. na przykład można przechowywać dowolny typ danych w SQL_C_CHAR.
 
 |Typ danych języka C|Typ danych SQL|
 |-----------------|-------------------|
@@ -793,7 +793,7 @@ Pobiera łączną liczbę pól w obiekcie zestawu rekordów.
 short GetODBCFieldCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pól w zestawie rekordów.
 
@@ -842,7 +842,7 @@ Określa rozmiar zestawu rekordów.
 long GetRecordCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba rekordów w zestawie rekordów; 0, jeśli zestaw rekordów nie zawiera żadnych rekordów; lub-1, jeśli nie można określić liczby rekordów.
 
@@ -859,7 +859,7 @@ Uzyskuje bieżące ustawienie liczby wierszy, które mają zostać pobrane podcz
 DWORD GetRowsetSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wierszy do pobrania podczas danego pobierania.
 
@@ -879,7 +879,7 @@ Określa liczbę rekordów, które zostały faktycznie pobrane po zakończeniu p
 DWORD GetRowsFetched() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wierszy pobranych ze źródła danych po danym pobieraniu.
 
@@ -908,7 +908,7 @@ WORD GetRowStatus(WORD wRow) const;
 *wRow*<br/>
 Pozycja jednego wiersza w bieżącym zestawie wierszy. Ta wartość może być z zakresu od 1 do rozmiaru zestawu wierszy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość stanu wiersza. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
@@ -968,7 +968,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać instrukcję SQL, kt
 const CString& GetSQL() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** odwołanie do `CString`, które zawiera instrukcję języka SQL.
 
@@ -989,7 +989,7 @@ Pobiera nazwę tabeli SQL, na której bazuje zapytanie zestawu rekordów.
 const CString& GetTableName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** odwołanie do `CString`, który zawiera nazwę tabeli, jeśli zestaw rekordów jest oparty na tabeli. w przeciwnym razie pusty ciąg.
 
@@ -1008,7 +1008,7 @@ Zwraca wartość różną od zera, jeśli zestaw rekordów został umieszczony p
 BOOL IsBOF() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie wstecz przed pierwszym rekordem; w przeciwnym razie 0.
 
@@ -1032,7 +1032,7 @@ Określa, czy bieżący rekord został usunięty.
 BOOL IsDeleted() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zestaw rekordów jest umieszczony na usuniętym rekordzie; w przeciwnym razie 0.
 
@@ -1040,7 +1040,7 @@ Różne od zera, jeśli zestaw rekordów jest umieszczony na usuniętym rekordzi
 
 Jeśli przewiniesz do rekordu, a `IsDeleted` zwraca wartość TRUE (niezerowa), należy przewinąć do innego rekordu przed wykonaniem innych operacji zestawu rekordów.
 
-Wynik `IsDeleted` zależy od wielu czynników, takich jak typ zestawu rekordów, czy zestaw rekordów jest aktualizowalny, niezależnie od tego, czy podczas otwierania zestawu rekordów została określona opcja `CRecordset::skipDeletedRecords`, czy pakiety sterowników zostały usunięte, oraz czy istnieje wiele użytkownikowi.
+Wynik `IsDeleted` zależy od wielu czynników, takich jak typ zestawu rekordów, czy zestaw rekordów jest aktualizowalny, niezależnie od tego, czy podczas otwierania zestawu rekordów została określona opcja `CRecordset::skipDeletedRecords`, czy pakiety sterowników zostały usunięte, oraz czy istnieje wielu użytkowników.
 
 Aby uzyskać więcej informacji na temat `CRecordset::skipDeletedRecords` i pakowania sterowników, zobacz [Open](#open) member Function.
 
@@ -1055,7 +1055,7 @@ Zwraca wartość różną od zera, jeśli zestaw rekordów został umieszczony p
 BOOL IsEOF() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie się poza ostatnim rekordem; w przeciwnym razie 0.
 
@@ -1082,7 +1082,7 @@ BOOL IsFieldDirty(void* pv);
 *wa*<br/>
 Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy dowolne z pól są zanieczyszczone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony element członkowski danych pola został zmieniony od momentu wywołania `AddNew` lub `Edit`; w przeciwnym razie 0.
 
@@ -1112,7 +1112,7 @@ BOOL IsFieldNull(void* pv);
 *wa*<br/>
 Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy którekolwiek z pól mają wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony element członkowski danych pola jest oflagowany jako null; w przeciwnym razie 0.
 
@@ -1169,11 +1169,11 @@ Określa, czy zestaw rekordów jest już otwarty.
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja członkowska [Open](#open) lub [Requery](#requery) obiektu zestawu rekordów została wcześniej wywołana i zestaw rekordów nie został zamknięty. w przeciwnym razie 0.
 
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt
+##  <a name="m_hstmt"></a>CRecordset:: m_hstmt
 
 Zawiera dojście do struktury danych instrukcji ODBC, typu HSTMT, skojarzone z zestawem rekordów.
 
@@ -1186,7 +1186,7 @@ Każde zapytanie do źródła danych ODBC jest skojarzone z HSTMT.
 
 Zwykle nie ma potrzeby bezpośredniego dostępu do HSTMT, ale może być konieczne do bezpośredniego wykonania instrukcji SQL. `ExecuteSQL` funkcja członkowska klasy `CDatabase` stanowi przykład użycia `m_hstmt`.
 
-##  <a name="m_nfields"></a>CRecordset::m_nFields
+##  <a name="m_nfields"></a>CRecordset:: m_nFields
 
 Zawiera liczbę elementów członkowskich danych pola w klasie zestawu rekordów; oznacza to, że liczba kolumn wybranych przez zestaw rekordów ze źródła danych.
 
@@ -1207,13 +1207,13 @@ Aby uzyskać więcej informacji, zobacz [zestawy rekordów: dynamiczne wiązanie
 
 Zapoznaj się z artykułem [wymiana pól rekordów: używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_nparams"></a>CRecordset::m_nParams
+##  <a name="m_nparams"></a>CRecordset:: m_nParams
 
 Zawiera liczbę elementów członkowskich danych parametrów w klasie zestawu rekordów; oznacza to, że liczba parametrów przesłanych z zapytaniem zestawu rekordów.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli Klasa zestawu rekordów ma wszystkie elementy członkowskie danych parametrów, Konstruktor dla klasy musi inicjować `m_nParams` o poprawnej liczbie. Wartość `m_nParams` domyślnie równa 0. W przypadku dodawania elementów członkowskich danych parametru (które należy wykonać ręcznie) należy również ręcznie dodać inicjalizację w konstruktorze klasy, aby odzwierciedlała liczbę parametrów (co musi być co najmniej tak duże jak liczba symboli zastępczych "" w `m_strFilter` lub `m_strSort` ciąg znaków).
+Jeśli Klasa zestawu rekordów ma wszystkie elementy członkowskie danych parametrów, Konstruktor dla klasy musi inicjować `m_nParams` o poprawnej liczbie. Wartość `m_nParams` domyślnie równa 0. W przypadku dodawania elementów członkowskich danych parametru (które należy wykonać ręcznie) należy również ręcznie dodać inicjalizację w konstruktorze klasy, aby odzwierciedlała liczbę parametrów (co musi być co najmniej tak duże jak liczba symboli zastępczych "" w ciągu `m_strFilter` lub `m_strSort`).
 
 Struktura używa tej liczby podczas parameterizes zapytania zestawu rekordów.
 
@@ -1224,7 +1224,7 @@ Struktura używa tej liczby podczas parameterizes zapytania zestawu rekordów.
 
   Zobacz [zestawy rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) i [wymiana pól rekordów: przy użyciu RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase
+##  <a name="m_pdatabase"></a>CRecordset:: m_pDatabase
 
 Zawiera wskaźnik do obiektu `CDatabase`, za pomocą którego zestaw rekordów jest połączony ze źródłem danych.
 
@@ -1234,7 +1234,7 @@ Ta zmienna jest ustawiana na dwa sposoby. Zwykle przekazuje się wskaźnik do ju
 
 Zwykle nie trzeba bezpośrednio używać wskaźnika przechowywanego w `m_pDatabase`. W przypadku pisania własnych rozszerzeń do `CRecordset`, może być konieczne użycie wskaźnika. Na przykład może być potrzebny wskaźnik, jeśli wygenerujesz własne `CDBException`s. Lub może być konieczne, jeśli trzeba wykonać coś przy użyciu tego samego obiektu `CDatabase`, takiego jak uruchamianie transakcji, Ustawianie limitów czasu lub wywołanie `ExecuteSQL` funkcji składowej klasy `CDatabase` do bezpośredniego wykonywania instrukcji SQL.
 
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter
+##  <a name="m_strfilter"></a>CRecordset:: m_strFilter
 
 Po utworzeniu obiektu zestawu rekordów, ale przed wywołaniem funkcji składowej `Open`, użyj tego elementu członkowskiego danych do przechowywania `CString` zawierającego klauzulę SQL **WHERE** .
 
@@ -1254,7 +1254,7 @@ Aby uzyskać więcej informacji na temat klauzul SQL **WHERE** , zapoznaj się z
 
 [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]
 
-##  <a name="m_strsort"></a>CRecordset::m_strSort
+##  <a name="m_strsort"></a>CRecordset:: m_strSort
 
 Po utworzeniu obiektu zestawu rekordów, ale przed wywołaniem funkcji składowej `Open`, użyj tego elementu danych do przechowywania `CString` zawierającego klauzulę **order by** języka SQL.
 
@@ -1316,7 +1316,7 @@ Poniższa tabela zawiera listę możliwych wartości dla *wFetchType*, zestaw wi
 |SQL_FETCH_BOOKMARK|Zestaw wierszy zaczynający się od wiersza, którego wartość zakładki odpowiada *nrows*.|[SetBookmark](#setbookmark)|
 
 > [!NOTE]
->  W przypadku zestawów rekordów przeznaczonych tylko do przesyłania dalej `Move` jest prawidłowa tylko z wartością SQL_FETCH_NEXT dla *wFetchType*.
+>  Dla zestawów rekordów tylko do przodu, `Move` jest prawidłowa tylko z wartością SQL_FETCH_NEXT dla *wFetchType*.
 
 > [!CAUTION]
 >  Wywołanie `Move` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Aby określić, czy zestaw rekordów zawiera jakiekolwiek rekordy, wywołaj [IsBOF](#isbof) i [IsEOF](#iseof).
@@ -1572,7 +1572,7 @@ Maska bitów, która może określać kombinację wartości wymienionych poniże
 
 - `CRecordset::userAllocMultiRowBuffers` użytkownik przydzieli bufory magazynu dla danych. Użyj tej opcji w połączeniu z `CRecordset::useMultiRowFetch`, jeśli chcesz przydzielić własny magazyn; w przeciwnym razie platforma automatycznie przydzieli konieczny magazyn. Aby uzyskać więcej informacji, zobacz [zestaw rekordów artykułów: zbiorcze pobieranie rekordów (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Należy zauważyć, że określenie `CRecordset::userAllocMultiRowBuffers` bez określenia `CRecordset::useMultiRowFetch` spowoduje niepomyślne potwierdzenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CRecordset` został pomyślnie otwarty; w przeciwnym razie 0, jeśli [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) (jeśli wywoływana) zwróci wartość 0.
 
@@ -1655,7 +1655,7 @@ Ponownie kompiluje (odświeża) zestaw rekordów.
 virtual BOOL Requery();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów został pomyślnie odbudowany; w przeciwnym razie 0.
 
@@ -1703,7 +1703,7 @@ W przypadku zestawów rekordów ODBC ustawienie pozycjonowania bezwzględnego (1
 Możesz również przekazać wartości ujemne do `SetAbsolutePosition`. W takim przypadku pozycja zestawu rekordów jest oceniana na podstawie końca zestawu rekordów. Na przykład `SetAbsolutePosition( -1 )` przenosi bieżący wskaźnik rekordu do ostatniego rekordu w zestawie rekordów.
 
 > [!NOTE]
->  Pozycja absolutna nie jest przeznaczona do użycia jako numer rekordu zastępczego. Zakładki są nadal zalecanym sposobem zachowywania i powrotu do danego położenia, ponieważ pozycja rekordu zmienia się po usunięciu poprzedzających rekordów. Ponadto nie można zagwarantować, że dany rekord będzie miał tę samą absolutną pozycję, jeśli zestaw rekordów zostanie ponownie utworzony, ponieważ kolejność pojedynczych rekordów w zestawie rekordów nie jest gwarantowana, chyba że zostanie utworzona za pomocą instrukcji SQL przy użyciu **polecenia order by** klauzula.
+>  Pozycja absolutna nie jest przeznaczona do użycia jako numer rekordu zastępczego. Zakładki są nadal zalecanym sposobem zachowywania i powrotu do danego położenia, ponieważ pozycja rekordu zmienia się po usunięciu poprzedzających rekordów. Ponadto nie można zagwarantować, że dany rekord będzie miał tę samą absolutną pozycję, jeśli zestaw rekordów zostanie ponownie utworzony, ponieważ kolejność poszczególnych rekordów w zestawie rekordów nie jest gwarantowana, chyba że zostanie utworzona za pomocą instrukcji SQL przy użyciu klauzuli **order by** .
 
 Więcej informacji o nawigacji i zakładkach zestawu rekordów znajduje się w artykule [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) i [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
@@ -1757,7 +1757,7 @@ Oznaczanie pól jako niezmienionych gwarantuje, że pole nie zostanie zaktualizo
 > [!NOTE]
 >  Ta funkcja członkowska nie ma zastosowania w zestawach rekordów używających pobierania wierszy zbiorczych. Jeśli zaimplementowano pobieranie wierszy zbiorczych, `SetFieldDirty` spowoduje niepowodzenie potwierdzenia. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów artykułów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Struktura oznacza zmienione elementy członkowskie danych pola, aby upewnić się, że zostaną one zamienione na rekord w źródle danych przez mechanizm wymiany pól rekordów (RFX). Zmiana wartości pola zwykle ustawia pole jako zanieczyszczone automatycznie, więc rzadko trzeba będzie wywoływać `SetFieldDirty` siebie, ale czasami warto upewnić się, że kolumny zostaną jawnie zaktualizowane lub wstawione niezależnie od tego, jaka wartość znajduje się w danych pola. członkiem.
+Struktura oznacza zmienione elementy członkowskie danych pola, aby upewnić się, że zostaną one zamienione na rekord w źródle danych przez mechanizm wymiany pól rekordów (RFX). Zmiana wartości pola na ogół ustawia pole jako zanieczyszczone automatycznie, więc rzadko trzeba będzie wywołać `SetFieldDirty` siebie, ale czasami warto upewnić się, że kolumny będą jawnie aktualizowane lub wstawiane niezależnie od tego, jaka wartość znajduje się w polu elementu członkowskiego danych.
 
 > [!CAUTION]
 >  Wywołaj tę funkcję elementu członkowskiego tylko po wywołaniu metody [Edit](#edit) lub [AddNew](#addnew).
@@ -1919,7 +1919,7 @@ Ta wirtualna funkcja członkowska określa liczbę wierszy, które mają zostać
 Wywołaj `SetRowsetSize` przed wywołaniem `Open`, aby wstępnie ustawić rozmiar zestawu wierszy dla zestawu rekordów. Domyślny rozmiar zestawu wierszy podczas implementowania pobierania wierszy zbiorczych to 25.
 
 > [!NOTE]
->  Podczas wywoływania `SetRowsetSize`należy zachować ostrożność. Jeśli ręcznie alokujesz magazyn dla danych (określony przez `CRecordset::userAllocMultiRowBuffers` opcji parametru dwOptions w `Open`), należy sprawdzić, czy należy ponownie przydzielić te bufory po wywołaniu `SetRowsetSize`, ale przed wykonaniem dowolnego kursora Operacja nawigacji.
+>  Podczas wywoływania `SetRowsetSize`należy zachować ostrożność. Jeśli ręcznie alokujesz magazyn dla danych (określony przez `CRecordset::userAllocMultiRowBuffers` opcję parametru dwOptions w `Open`), należy sprawdzić, czy należy ponownie przydzielić te bufory magazynu po wywołaniu `SetRowsetSize`, ale przed wykonaniem jakiejkolwiek operacji nawigacji kursora.
 
 Aby uzyskać bieżące ustawienie rozmiaru zestawu wierszy, wywołaj [GetRowsetSize](#getrowsetsize).
 
@@ -1933,7 +1933,7 @@ Kończy `AddNew` lub `Edit` operacji, zapisując nowe lub edytowane dane w źró
 virtual BOOL Update();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli jeden rekord został pomyślnie zaktualizowany; w przeciwnym razie, jeśli żadna kolumna nie została zmieniona. Jeśli żadne rekordy nie zostały zaktualizowane lub Zaktualizowano więcej niż jeden rekord, zgłaszany jest wyjątek. Wyjątek jest również zgłaszany dla każdego innego błędu w źródle danych.
 
@@ -1957,7 +1957,7 @@ Aby uzyskać szczegółowe informacje na temat obsługi błędów `Update`, zoba
 
 Zobacz artykuł [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821372"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866535"
 ---
 # <a name="crect-class"></a>Klasa CRect
 
@@ -55,18 +55,18 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Konstruuje obiekt `CRect`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Zwraca prawy dolny punkt `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Zwraca Centerpoint `CRect`.|
 |[CRect::CopyRect](#copyrect)|Kopiuje wymiary prostokąta źródłowego do `CRect`.|
-|[CRect::DeflateRect](#deflaterect)|Zmniejsza szerokość i wysokość `CRect`.|
+|[CRect::D eflateRect](#deflaterect)|Zmniejsza szerokość i wysokość `CRect`.|
 |[CRect::EqualRect](#equalrect)|Określa, czy `CRect` jest równa danego prostokąta.|
 |[CRect:: Height](#height)|Oblicza wysokość `CRect`.|
 |[CRect::InflateRect](#inflaterect)|Zwiększa szerokość i wysokość `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CRect:: operator-](#operator_-)|Odejmuje przesunięcia z `CRect` lub deflate `CRect` i zwraca wynikowy `CRect`.|
 |[CRect:: operator LPCRECT](#operator_lpcrect)|Konwertuje `CRect` na `LPCRECT`.|
@@ -291,10 +291,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *l*<br/>
 Określa lewą pozycję `CRect`.
 
-*t*<br/>
+*&*<br/>
 Określa początek `CRect`.
 
-*r*<br/>
+*®*<br/>
 Określa prawą pozycję `CRect`.
 
 *b*<br/>
@@ -375,10 +375,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Określa liczbę jednostek do skorygowania lewej i prawej strony `CRect`.
 
-*y*<br/>
+*t*<br/>
 Określa liczbę jednostek do skorygowania u góry i u dołu `CRect`.
 
 *zmienia*<br/>
@@ -390,10 +390,10 @@ Wskazuje strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) lub 
 *l*<br/>
 Określa liczbę jednostek do skorygowania po lewej stronie `CRect`.
 
-*t*<br/>
+*&*<br/>
 Określa liczbę jednostek do skorygowania do góry `CRect`.
 
-*r*<br/>
+*®*<br/>
 Określa liczbę jednostek do skorygowania po prawej stronie `CRect`.
 
 *b*<br/>
@@ -501,10 +501,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Określa liczbę jednostek, które mają zostać pożądane po lewej stronie i po prawej stronie `CRect`.
 
-*y*<br/>
+*t*<br/>
 Określa liczbę jednostek do podwyższenia górnego i dolnego `CRect`.
 
 *zmienia*<br/>
@@ -516,10 +516,10 @@ Wskazuje strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) lub 
 *l*<br/>
 Określa liczbę jednostek, która ma zostać poddana lewej stronie `CRect`.
 
-*t*<br/>
+*&*<br/>
 Określa liczbę jednostek do podwyższenia poziomu `CRect`.
 
-*r*<br/>
+*®*<br/>
 Określa liczbę jednostek, które mają być podłączane po prawej stronie `CRect`.
 
 *b*<br/>
@@ -653,7 +653,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Bezwzględna Współrzędna x dla lewego górnego rogu prostokąta.
 
 ### <a name="example"></a>Przykład
@@ -677,10 +677,10 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Bezwzględna Współrzędna x dla lewego górnego rogu prostokąta.
 
-*y*<br/>
+*t*<br/>
 Bezwzględna Współrzędna y dla lewego górnego rogu prostokąta.
 
 *moment*<br/>
@@ -705,7 +705,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*t*<br/>
 Bezwzględna Współrzędna y dla lewego górnego rogu prostokąta.
 
 ### <a name="example"></a>Przykład
@@ -754,10 +754,10 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Określa ilość do przeniesienia w lewo lub w prawo. Aby przenieść z lewej, musi być ujemna.
 
-*y*<br/>
+*t*<br/>
 Określa ilość, która ma zostać przeniesiona w górę lub w dół. Wartość musi być ujemna, aby można było ją przenieść w górę.
 
 *moment*<br/>
@@ -1264,7 +1264,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 *x1*<br/>
 Określa współrzędną x lewego górnego rogu.
 
-*y1*<br/>
+*Y1*<br/>
 Określa współrzędną y lewego górnego rogu.
 
 *x2*<br/>
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CPoint, klasa](cpoint-class.md)<br/>
 [CSize, klasa](csize-class.md)<br/>
