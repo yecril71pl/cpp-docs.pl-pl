@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890203"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890879"
 ---
 # <a name="forward_list-class"></a>forward_list — Klasa
 
@@ -104,7 +104,7 @@ Typ * \
 Typ danych elementu, który ma być przechowywany w forward_list.
 
 \ *alokatora*
-Przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji forward_list i dealokacji pamięci. Ten parametr jest opcjonalny. Wartość domyślna to Alokator < `Type` >.
+Przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji forward_list i dealokacji pamięci. Ten parametr jest opcjonalny. Wartość domyślna to Alokator <`Type`>.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -115,7 +115,7 @@ Obiekt `forward_list` przydziela i zwalnia magazyn dla sekwencji, która kontrol
 
 Iteratory, wskaźniki i odwołania mogą stać się nieprawidłowe, gdy elementy ich kontrolowanej sekwencji są wymazywane za `forward_list`. Wstawienia i kombinacje wykonywane na kontrolowanej sekwencji za pomocą `forward_list` nie weryfikują iteratorów.
 
-Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania [forward_list:: insert_after](#insert_after), która jest jedyną funkcją członkowską, która wywołuje Konstruktor `Type(const  T&)`. `forward_list` może również wywołać konstruktory przenoszenia. Jeśli takie wyrażenie zgłasza wyjątek, obiekt kontenera nie wstawia żadnych nowych elementów i ponownie generuje wyjątek. W związku z tym obiekt typu `forward_list` pozostały w znanym stanie w przypadku wystąpienia takich wyjątków.
+Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward_list:: insert_after](#insert_after), która jest jedyną funkcją członkowską, która wywołuje Konstruktor `Type(const  T&)`. `forward_list` może również wywołać konstruktory przenoszenia. Jeśli takie wyrażenie zgłasza wyjątek, obiekt kontenera nie wstawia żadnych nowych elementów i ponownie generuje wyjątek. W związku z tym obiekt typu `forward_list` pozostały w znanym stanie w przypadku wystąpienia takich wyjątków.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -208,19 +208,19 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Początek zakresu zastępowania.
 
-*ostatni* \
+*ostatni*\
 Koniec zakresu zastępowania.
 
-*liczba* \
+*liczba*\
 Liczba elementów do przypisania.
 
-*val* \
+*val*\
 Wartość, aby przypisać każdy element.
 
-*Typ* \
+*Typ*\
 Typ wartości.
 
 \ *IList*
@@ -292,7 +292,7 @@ Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakres
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
 
 Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
@@ -399,10 +399,10 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja na liście docelowych przekazywania, w której jest konstruowany nowy element.
 
-*val* \
+*val*\
 Argument konstruktora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -424,7 +424,7 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*val* \
+*val*\
 Element dodany na początku listy do przodu.
 
 ### <a name="remarks"></a>Uwagi
@@ -469,13 +469,13 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja na liście docelowych przekazywania, w której element jest wymazany.
 
-*pierwszy* \
+*pierwszy*\
 Początek zakresu do wymazania.
 
-*ostatni* \
+*ostatni*\
 Koniec zakresu do wymazania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -515,22 +515,22 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* \
+*Al*\
 Klasa alokatora do wykorzystania z tym obiektem.
 
-*Liczba* \
+*Liczba*\
 Liczba elementów na liście skonstruowane.
 
-*Val* \
+*Val*\
 Wartość elementów na utworzonej liście.
 
-*Prawa* \
+*Prawa*\
 Lista, której skonstruowaną listą jest kopia.
 
-*Pierwszy* \
+*Pierwszy*\
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*Ostatni* \
+*Ostatni*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 \ *IList*
@@ -592,19 +592,19 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja na liście docelowych przekazywania, w której wstawiany jest pierwszy element.
 
-*Liczba* \
+*Liczba*\
 Liczba elementów do wstawienia.
 
-*Pierwszy* \
+*Pierwszy*\
 Początek zakresu wstawiania.
 
-*Ostatni* \
+*Ostatni*\
 Koniec zakresu wstawiania.
 
-*Val* \
+*Val*\
 Element dodany do listy do przodu.
 
 \ *IList*
@@ -670,7 +670,7 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Lista do przodu do scalenia.
 
 \ *zgodności*
@@ -680,7 +680,7 @@ Obiekt funkcji Compare, który jest używany do sortowania elementów.
 
 `forward_list::merge` usuwa elementy z `right``forward_list` i wstawia je do tego `forward_list`. Obie sekwencje muszą być uporządkowane według tego samego predykatu, co opisano poniżej. Połączona sekwencja jest również uporządkowana przez ten obiekt funkcji porównywania.
 
-W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j` Pierwsza funkcja członkowska nakłada `!(*Pj < *Pi)` zamówienia w przypadku `i < j`. (Elementy są sortowane w kolejności `ascending`). Druga funkcja członkowska nakłada kolejność `! comp(*Pj, *Pi)` za każdym razem, gdy `i < j`.
+W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j`Pierwsza funkcja członkowska nakłada `!(*Pj < *Pi)` zamówienia w przypadku `i < j`. (Elementy są sortowane w kolejności `ascending`). Druga funkcja członkowska nakłada kolejność `! comp(*Pj, *Pi)` za każdym razem, gdy `i < j`.
 
 W wyniku kontrolowanej sekwencji nie są odwrócone żadne pary elementów w oryginalnej kontrolowanej sekwencji. Jeśli para elementów w wyniku kontrolowanej sekwencji porównuje równe (`!(*Pi < *Pj) && !(*Pj < *Pi)`), element z oryginalnej kontrolowanej sekwencji pojawia się przed elementem z sekwencji kontrolowanej przez `right`.
 
@@ -698,7 +698,7 @@ forward_list& operator=(forward_list&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Lista do przodu jest kopiowana na listę do przodu.
 
 \ *IList*
@@ -745,7 +745,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*val* \
+*val*\
 Element dodany na początku listy do przodu.
 
 ### <a name="remarks"></a>Uwagi
@@ -770,12 +770,12 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*val* \
+*val*\
 Wartość, która, jeśli jest przechowywana przez element, spowoduje usunięcie tego elementu z listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P` iteratora, dla którego `*P ==  val`.
+Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P`iteratora, dla którego `*P ==  val`.
 
 Funkcja członkowska nigdy nie zgłasza wyjątku.
 
@@ -790,12 +790,12 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*pred* \
+*pred*\
 Predykat jednoargumentowy, który, jeśli jest spełniony przez element, powoduje usunięcie tego elementu z listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P` iteratora, dla których ` pred(*P)` ma wartość true.
+Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P`iteratora, dla których ` pred(*P)` ma wartość true.
 
 Wyjątek występuje tylko wtedy, gdy *pred* zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonym stanie, a wyjątek jest zgłaszany ponownie.
 
@@ -813,12 +813,12 @@ void resize(size_type _Newsize, const Type& val);
 *_Newsize*\
 Liczba elementów na liście o zmienionym rozmiarze.
 
-*val* \
+*val*\
 Wartość, która ma zostać użyta do uzupełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje składowe gwarantują, że liczba elementów na liście odtąd jest *_Newsize*. Jeśli ta sekwencja musi być większa, funkcja pierwszej składowej dołącza elementy o wartości `Type()`, podczas gdy druga funkcja członkowska dołącza elementy o wartości *Val*. W celu skrócenia kontrolowanej sekwencji obydwa funkcje elementów członkowskich skutecznie wywołują `erase_after(begin() + _Newsize - 1, end())`.
+Funkcje składowe gwarantują, że liczba elementów na liście jest odtąd *_Newsize*. Jeśli ta sekwencja musi być większa, funkcja pierwszej składowej dołącza elementy o wartości `Type()`, podczas gdy druga funkcja członkowska dołącza elementy o wartości *Val*. W celu skrócenia kontrolowanej sekwencji obydwa funkcje elementów członkowskich skutecznie wywołują `erase_after(begin() + _Newsize - 1, end())`.
 
 ## <a name="reverse"></a>cofnięci
 
@@ -852,20 +852,20 @@ void sort(Predicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*pred* \
+*pred*\
 Predykat porządkowania.
 
 ### <a name="remarks"></a>Uwagi
 
 Obie funkcje składowe porządkują elementy w kontrolowanej sekwencji według predykatu, opisanego poniżej.
 
-W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j` Pierwsza funkcja członkowska nakłada `!(*Pj < *Pi)` zamówienia w przypadku `i < j`. (Elementy są sortowane w kolejności `ascending`). Funkcja szablonu elementu członkowskiego nakłada kolejność `! pred(*Pj, *Pi)` za każdym razem, gdy `i < j`. Brak uporządkowanych par elementów w oryginalnej kontrolowanej sekwencji nie są odwrócone w wyniku kontrolowanej sekwencji. (Sortowanie jest stabilne).
+W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j`Pierwsza funkcja członkowska nakłada `!(*Pj < *Pi)` zamówienia w przypadku `i < j`. (Elementy są sortowane w kolejności `ascending`). Funkcja szablonu elementu członkowskiego nakłada kolejność `! pred(*Pj, *Pi)` za każdym razem, gdy `i < j`. Brak uporządkowanych par elementów w oryginalnej kontrolowanej sekwencji nie są odwrócone w wyniku kontrolowanej sekwencji. (Sortowanie jest stabilne).
 
 Wyjątek występuje tylko wtedy, gdy *pred* zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonej kolejności, a wyjątek jest zgłaszany ponownie.
 
 ## <a name="splice_after"></a>splice_after
 
-Usuwa elementy z forward_list źródłowego i wstawia je do docelowego forward_list.
+Usuwa elementy ze źródła forward_list i wstawia je do forward_list docelowej.
 
 ```cpp
 // insert the entire source forward_list
@@ -892,20 +892,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
-Pozycja w miejscu docelowym forward_list, która ma zostać wstawiona.
+*Gdzie*\
+Pozycja w forward_list docelowym, która ma zostać wstawiona.
 
 \ *źródłowa*
-Forward_list źródłowa, która ma zostać wstawiona do docelowego forward_list.
+Forward_list źródłowa, która ma zostać wstawiona do forward_list docelowej.
 
 \ *ITER*
-Element, który ma zostać wstawiony z forward_list źródłowego.
+Element, który ma zostać wstawiony ze źródłowego forward_list.
 
-*Pierwszy* \
-Pierwszy element z zakresu, który ma zostać wstawiony ze źródła forward_list.
+*Pierwszy*\
+Pierwszy element z zakresu, który ma zostać wstawiony ze źródłowego forward_list.
 
-*Ostatni* \
-Pierwsza pozycja poza zakresem, który ma zostać wstawiony z forward_list źródłowego.
+*Ostatni*\
+Pierwsza pozycja poza zakresem, który ma zostać wstawiony z forward_list źródłowej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -913,7 +913,7 @@ Pierwsza para funkcji Członkowskich wstawia sekwencję sterowaną przez *Źród
 
 Druga para funkcji Członkowskich usuwa element tuż po *ITER* w sekwencji kontrolowanej przez *Źródło* i wstawia go tuż po elemencie w kontrolowanej sekwencji wskazywanym przez *WHERE*. (Jeśli `Where == Iter || Where == ++Iter`, nie ma zmian).
 
-Trzecia para funkcji elementów członkowskich (Metoda łączenia z zakresem) wstawia Podzakres wyznaczone przez `(First, Last)` z sekwencji kontrolowanej przez *Źródło* tuż po elemencie w kontrolowanej sekwencji wskazywanym przez *WHERE*. Powoduje również usunięcie oryginalnego podzakresu z sekwencji kontrolowanej przez *Źródło*. (W przypadku `&Source == this` zakres `(First, Last)` nie może zawierać elementu wskazywanego przez *WHERE*.)
+Trzecia para funkcji elementów członkowskich (Metoda łączenia z zakresem) wstawia Podzakres wyznaczone przez `(First, Last)` z sekwencji kontrolowanej przez *Źródło* tuż po elemencie w kontrolowanej sekwencji wskazywanym przez *WHERE*. Powoduje również usunięcie oryginalnego podzakresu z sekwencji kontrolowanej przez *Źródło*. (W przypadku `&Source == this`zakres `(First, Last)` nie może zawierać elementu wskazywanego przez *WHERE*.)
 
 Jeśli metoda łączenia w zakresie wstawia `N` elementy, a `&Source != this`, obiekt [iteratora](#iterator) klas jest zwiększany `N` razy.
 
@@ -1002,7 +1002,7 @@ void swap(forward_list& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Lista przesyłania dalej zawierająca elementy, które mają być wymieniane.
 
 ### <a name="remarks"></a>Uwagi
@@ -1028,7 +1028,7 @@ Predykat binarny używany do porównywania kolejnych elementów.
 
 Zachowuje pierwszy z każdego unikatowego elementu i usuwa resztę. Elementy muszą być sortowane, tak aby elementy równej wartości były przyległe na liście.
 
-Pierwsza funkcja członkowska usuwa z kontrolowanej sekwencji każdy element, który jest porównywany z poprzednim elementem. W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j` Druga funkcja członkowska usuwa każdy element, dla którego `i + 1 == j &&  comp(*Pi, *Pj)`.
+Pierwsza funkcja członkowska usuwa z kontrolowanej sekwencji każdy element, który jest porównywany z poprzednim elementem. W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j`Druga funkcja członkowska usuwa każdy element, dla którego `i + 1 == j &&  comp(*Pi, *Pj)`.
 
 Dla kontrolowanej sekwencji `N` (> 0) ` comp(*Pi, *Pj)` predykatu jest oceniane `N - 1` razy.
 

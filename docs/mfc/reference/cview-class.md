@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855544"
 ---
 # <a name="cview-class"></a>Klasa CView
 
@@ -69,17 +69,17 @@ Oferuje podstawowe funkcje dla klas widoków zdefiniowanych przez użytkownika.
 class AFX_NOVTABLE CView : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView:: CView](#cview)|Konstruuje obiekt `CView`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView::D oPreparePrinting](#doprepareprinting)|Wyświetla okno dialogowe Drukowanie i tworzy kontekst urządzenia drukarki; wywołuje się, gdy zastępują funkcję elementu członkowskiego `OnPreparePrinting`.|
 |[CView:: GetDocument](#getdocument)|Zwraca dokument skojarzony z widokiem.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CView:: OnActivateFrame](#onactivateframe)|Wywoływana, gdy okno ramowe zawierające widok jest aktywowane lub dezaktywowane.|
 |[CView:: OnActivateView](#onactivateview)|Wywoływana, gdy widok jest aktywowany.|
@@ -188,7 +188,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 *pInfo*<br/>
 Wskazuje strukturę [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , która opisuje bieżące zadanie drukowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli można rozpocząć drukowanie lub Podgląd wydruku; 0, jeśli operacja została anulowana.
 
@@ -206,7 +206,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do dokumentu widoku.
 CDocument* GetDocument() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do obiektu [CDocument](../../mfc/reference/cdocument-class.md) skojarzonego z widokiem. Wartość NULL, jeśli widok nie jest dołączony do dokumentu.
 
@@ -227,7 +227,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 *pDocItem*<br/>
 Wskazuje na testowany element dokumentu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różne od zera, jeśli wybrano określony element dokumentu; w przeciwnym razie 0.
 
@@ -339,7 +339,7 @@ Zawiera stan klawiszy modyfikujących. Jest to kombinacja dowolnej liczby nastę
 *moment*<br/>
 Bieżąca pozycja myszy względem obszaru klienckiego widoku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość z typu wyliczeniowego DROPEFFECT, która wskazuje typ upuszczenia, który wystąpi, jeśli użytkownik porzucił obiekt na tej pozycji. Typ elementu Drop zazwyczaj zależy od bieżącego stanu klucza wskazywanego przez *dwKeyState*. Standardowe mapowanie wartości parametrów DROPEFFECT są następujące:
 
@@ -393,7 +393,7 @@ Zawiera stan klawiszy modyfikujących. Jest to kombinacja dowolnej liczby nastę
 *moment*<br/>
 Bieżąca pozycja myszy względem obszaru widoku klienta.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość z typu wyliczeniowego DROPEFFECT, która wskazuje typ upuszczenia, który wystąpi, jeśli użytkownik porzucił obiekt na tej pozycji. Typ upuszczenia często zależy od bieżącego stanu klucza wskazanego przez *dwKeyState*. Standardowe mapowanie wartości parametrów DROPEFFECT są następujące:
 
@@ -431,7 +431,7 @@ Zawiera stan klawiszy modyfikujących. Jest to kombinacja dowolnej liczby nastę
 *moment*<br/>
 Zawiera lokalizację kursora (w pikselach) względem ekranu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość z typu wyliczeniowego DROPEFFECT, która wskazuje typ upuszczenia, który wystąpi, jeśli użytkownik porzucił obiekt na tej pozycji. Typ elementu Drop zazwyczaj zależy od bieżącego stanu klucza wskazywanego przez *dwKeyState*. Standardowe mapowanie wartości parametrów DROPEFFECT są następujące:
 
@@ -499,7 +499,7 @@ Efekt upuszczania zażądanego przez użytkownika.
 *moment*<br/>
 Bieżąca pozycja myszy względem obszaru widoku klienta.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różne od zera, Jeśli upuszczanie zakończyło się pomyślnie; w przeciwnym razie 0.
 
@@ -538,7 +538,7 @@ Lista efektów upuszczania obsługiwanych przez źródło upuszczania. Wartości
 *moment*<br/>
 Bieżąca pozycja myszy względem obszaru widoku klienta.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Efekt upuszczania spowodowany próbą porzucenia w lokalizacji określonej przez *punkt*. Musi to być jedna z wartości wskazywanych przez *dropEffectList*. Efekty upuszczania zostały omówione w sekcji uwagi.
 
@@ -693,7 +693,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 *pInfo*<br/>
 Wskazuje strukturę [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , która opisuje bieżące zadanie drukowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Od zera do rozpoczęcia drukowania; 0, jeśli zadanie drukowania zostało anulowane.
 
@@ -799,7 +799,7 @@ Zawiera bieżące położenie pola przewijania, jeśli kod paska przewijania jes
 *bDoScroll*<br/>
 Określa, czy należy w rzeczywistości wykonać określoną akcję przewijania. Jeśli wartość jest równa TRUE, przewijanie powinno odbywać się; w przypadku wartości FALSE, przewijanie nie powinno być wykonywane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli *bDoScroll* ma wartość true, a widok został rzeczywiście przewinięty, zwróć wartość różną od zera. w przeciwnym razie 0. Jeśli *bDoScroll* ma wartość false, zwraca wartość, która zostałaby zwrócona, jeśli *bDoScroll* były prawdziwe, nawet jeśli nie będziesz w rzeczywistości przewijać.
 
@@ -825,7 +825,7 @@ Liczba pikseli przewijana w poziomie i w pionie.
 *bDoScroll*<br/>
 Określa, czy ma nastąpić przewijanie widoku. W przypadku wartości TRUE następuje przewijanie; w przypadku wartości FALSE, przewijanie nie następuje.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli widok był w stanie przewinąć; w przeciwnym razie 0.
 
@@ -869,7 +869,7 @@ Zazwyczaj nie należy wykonywać żadnego rysowania bezpośrednio z `OnUpdate`. 
 
 Jeśli *lHint* jest równa 0, a *pHint* ma wartość null, dokument przesłał ogólne powiadomienie o aktualizacji. Jeśli widok otrzyma powiadomienie o aktualizacji ogólnej lub nie można zdekodować wskazówek, powinna unieważnić cały obszar klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład MDIDOCVW MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

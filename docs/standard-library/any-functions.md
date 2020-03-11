@@ -1,22 +1,22 @@
 ---
-title: '&lt;wszelkie&gt; funkcji'
+title: '&lt;żadnych funkcji&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - any/std::any_cast
 - any/std::make_any
 - any/std::swap
 ms.openlocfilehash: bb5f8b4411477cfcd33613ee0395227dced784f6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267977"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875913"
 ---
-# <a name="ltanygt-functions"></a>&lt;wszelkie&gt; funkcji
+# <a name="ltanygt-functions"></a>&lt;żadnych funkcji&gt;
 
-## <a name="any_cast"></a> any_cast
+## <a name="any_cast"></a>any_cast
 
-Tworzy obiekt do dowolnego.
+Sprawia, że obiekt jest dowolna.
 
 ```cpp
 template<class T>
@@ -31,7 +31,7 @@ template<class T>
     T* any_cast(any* operand) noexcept;
 ```
 
-## <a name="make_any"></a> make_any
+## <a name="make_any"></a>make_any
 
 Pobiera wartości i tworzy dowolny obiekt.
 
@@ -42,9 +42,9 @@ template <class T, class U, class... Args>
     any make_any(initializer_list<U> il, Args&& ...args);
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
-Zamienia wszystkie elementy z dwóch obiektów.
+Wymienia elementy dwóch obiektów.
 
 ```cpp
 void swap(any& left, any& right) noexcept;
@@ -52,8 +52,8 @@ void swap(any& left, any& right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `any`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `any`.

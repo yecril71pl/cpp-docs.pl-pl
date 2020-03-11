@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownFrame Class
+title: Klasa CMFCDropDownFrame
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownFrame
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237376"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869067"
 ---
-# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Class
+# <a name="cmfcdropdownframe-class"></a>Klasa CMFCDropDownFrame
 
-Oferuje funkcje okna ramki listy rozwijanej paski narzędzi z listy rozwijanej i przycisków na pasku narzędzi listy rozwijanej.
+Udostępnia funkcje okna rozwijanego ramki w rozwijane paski narzędzi i rozwijane przyciski paska narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +40,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |||
 |-|-|
 |Nazwa|Opis|
-|`CMFCDropDownFrame::CMFCDropDownFrame`|Domyślny konstruktor.|
+|`CMFCDropDownFrame::CMFCDropDownFrame`|Konstruktor domyślny.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
@@ -48,23 +48,23 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCDropDownFrame::Create](#create)|Tworzy `CMFCDropDownFrame` obiektu.|
-|`CMFCDropDownFrame::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Pobiera na pasku menu nadrzędnej ramki listy rozwijanej.|
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Pobiera menu podręcznego nadrzędnej ramki listy rozwijanej.|
-|`CMFCDropDownFrame::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Powoduje przeniesienie ramkę z listy rozwijanej.|
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Określa, czy okno podrzędne rozwijany pasek narzędzi jest niszczony, automatycznie.|
+|[CMFCDropDownFrame:: Create](#create)|Tworzy obiekt `CMFCDropDownFrame`.|
+|`CMFCDropDownFrame::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Pobiera nadrzędny pasek menu ramki rozwijanej.|
+|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Pobiera nadrzędne menu wyskakujące ramki rozwijanej.|
+|`CMFCDropDownFrame::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Zmienia położenie ramki rozwijanej.|
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Określa, czy podrzędne okno listy rozwijanej jest niszczone automatycznie.|
 
 ### <a name="remarks"></a>Uwagi
 
 Ta klasa nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
-Struktura korzysta z tej klasy zapewniające ramki do `CMFCDropDownToolbar` i `CMFCDropDownToolbarButton` klasy. Aby uzyskać więcej informacji na temat tych klas, zobacz [klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) i [klasa CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
+Struktura używa tej klasy w celu zapewnienia zachowania ramki dla klas `CMFCDropDownToolbar` i `CMFCDropDownToolbarButton`. Aby uzyskać więcej informacji na temat tych klas, zobacz Klasa [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) i [Klasa CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMFCDropDownFrame` obiektu z `CFrameWnd` klasy i jak ustawić element podrzędny rozwijany pasek narzędzi okna mają zostać zniszczone automatycznie.
+W poniższym przykładzie pokazano, jak pobrać wskaźnik do obiektu `CMFCDropDownFrame` z klasy `CFrameWnd` i jak ustawić okno rozwijane podrzędnego okna podręcznego.
 
 [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]
 
@@ -76,7 +76,7 @@ Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMFCDropDownFrame` obie
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
@@ -84,11 +84,11 @@ Poniższy przykład pokazuje, jak pobrać wskaźnika do `CMFCDropDownFrame` obie
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdropdowntoolbar.h
+**Nagłówek:** afxdropdowntoolbar. h
 
-##  <a name="create"></a>  CMFCDropDownFrame::Create
+##  <a name="create"></a>CMFCDropDownFrame:: Create
 
-Tworzy `CMFCDropDownFrame` obiektu.
+Tworzy obiekt `CMFCDropDownFrame`.
 
 ```
 virtual BOOL Create(
@@ -103,24 +103,24 @@ virtual BOOL Create(
 |||
 |-|-|
 |Parametr|Opis|
-|*pWndParent*|[in] Okno nadrzędne ramki listy rozwijanej.|
-|*x*|[in] Współrzędna pozioma ekranu dla lokalizacji ramki w dół w dół.|
-|*y*|[in] Współrzędna pionowa ekranu dla lokalizacji ramki w dół w dół.|
-|*pWndOriginToolbar*|[in] Pasek narzędzi, który zawiera przyciski listy rozwijanej, korzystającą z tej metody w celu wypełnienia nowy obiekt w ramce listy rozwijanej.|
+|*pWndParent*|podczas Okno nadrzędne ramki listy rozwijanej.|
+|*y*|podczas Pozioma Współrzędna ekranu dla położenia ramki w dół.|
+|*t*|podczas Współrzędne ekranu pionowego dla lokalizacji ramki w dół.|
+|*pWndOriginToolbar*|podczas Pasek narzędzi, który zawiera przyciski rozwijane używane przez tę metodę do wypełniania nowego obiektu ramki listy rozwijanej.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ramka listy rozwijanej został pomyślnie utworzony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli ramka listy rozwijanej została pomyślnie utworzona; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje base [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metodę, aby utworzyć okno ramowe listy rozwijanej ze stylem WS_POPUP. Okno ramowe listy rozwijanej pojawia się na współrzędnych ekranu. Ta metoda kończy się niepowodzeniem, jeśli [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metoda zwraca wartość FALSE.
+Ta metoda wywołuje podstawową metodę [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) , aby utworzyć okno ramki rozwijanej z stylem WS_POPUP. Okno z ramką rozwijaną pojawia się na określonych współrzędnych ekranu. Ta metoda kończy się niepowodzeniem, jeśli metoda [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) zwróci wartość false.
 
-`CMFCDropDownFrame` Klasy jest tworzona kopia udostępnionych `CMFCDropDownToolBar` parametru. Ta metoda kopiuje obrazy przycisków i Stany przycisku z `pWndOriginToolbar` parametr `m_pWndOriginToolbar` element członkowski danych.
+Klasa `CMFCDropDownFrame` tworzy kopię podanego parametru `CMFCDropDownToolBar`. Ta metoda kopiuje obrazy przycisków i Stany przycisków z `pWndOriginToolbar` parametru do `m_pWndOriginToolbar` elementu członkowskiego danych.
 
-##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar
 
-Pobiera na pasku menu nadrzędnej ramki listy rozwijanej.
+Pobiera nadrzędny pasek menu ramki rozwijanej.
 
 ```
 CMFCMenuBar* GetParentMenuBar() const;
@@ -128,15 +128,15 @@ CMFCMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik na pasku menu nadrzędnej ramki listy rozwijanej, lub wartość NULL, jeśli ramka nie ma obiektu nadrzędnego.
+Wskaźnik do nadrzędnego paska menu rozwijanej ramki lub wartość NULL, jeśli ramka nie ma elementu nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera nadrzędny paska menu przy użyciu przycisku nadrzędnej. Ta metoda zwraca wartość NULL, jeśli ramkę z listy rozwijanej ma przycisk nie nadrzędnej lub przycisk nadrzędny ma nadrzędny paska menu.
+Ta metoda pobiera nadrzędny pasek menu z przycisku nadrzędnego. Ta metoda zwraca wartość NULL, jeśli nie ma przycisku nadrzędnego lub przycisk nadrzędny nie ma nadrzędnego paska menu.
 
-##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu
 
-Pobiera menu podręcznego nadrzędnej ramki listy rozwijanej.
+Pobiera nadrzędne menu wyskakujące ramki rozwijanej.
 
 ```
 CMFCDropDownFrame* GetParentPopupMenu() const;
@@ -144,15 +144,15 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do menu rozwijanego nadrzędnej ramki listy rozwijanej, lub wartość NULL, jeśli ramka nie ma obiektu nadrzędnego.
+Wskaźnik do nadrzędnego menu rozwijanego ramki rozwijanej lub wartość NULL, jeśli ramka nie ma elementu nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera menu nadrzędnej przy użyciu przycisku nadrzędnej. Ta metoda zwraca wartość NULL, jeśli ramkę z listy rozwijanej ma przycisk nie nadrzędnej lub przycisk nadrzędny ma menu nie nadrzędnej.
+Ta metoda pobiera menu nadrzędne z przycisku nadrzędnego. Ta metoda zwraca wartość NULL, jeśli nie ma przycisku nadrzędnego lub przycisk nadrzędny nie ma menu nadrzędnego.
 
-##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout
 
-Powoduje przeniesienie ramkę z listy rozwijanej.
+Zmienia położenie ramki rozwijanej.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -163,15 +163,15 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||
 |-|-|
 |Parametr|Opis|
-|*bNotify*|[in] Nieużywane.|
+|*bNotify*|podczas Przestrzeń.|
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, po utworzeniu ramki listy rozwijanej lub ze zmienionym rozmiarem okna nadrzędnego. Ta metoda oblicza położenie i rozmiar ramki listy rozwijanej położenie i rozmiar okna nadrzędnego.
+Struktura wywołuje tę metodę po utworzeniu ramki rozwijanej lub zmianie rozmiaru okna nadrzędnego. Ta metoda oblicza położenie i rozmiar ramki rozwijanej przy użyciu pozycji i rozmiaru okna nadrzędnego.
 
-##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy
 
-Określa, czy okno podrzędne rozwijany pasek narzędzi jest niszczony, automatycznie.
+Określa, czy podrzędne okno listy rozwijanej jest niszczone automatycznie.
 
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -180,11 +180,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bAutoDestroy*<br/>
-[in] Wartość TRUE, aby automatycznie zniszczyć skojarzone rozwijany pasek narzędzi okna; w przeciwnym razie wartość FALSE.
+podczas TRUE, aby automatycznie zniszczyć skojarzone okno rozwijane paska narzędzi. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bAutoDestroy* ma wartość PRAWDA, a następnie `CMFCDropDownFrame` destruktor niszczy okno skojarzone rozwijany pasek narzędzi. Wartość domyślna to TRUE.
+Jeśli *bAutoDestroy* ma wartość true, destruktor `CMFCDropDownFrame` niszczy skojarzone okno paska narzędzi listy rozwijanej. Wartość domyślna to TRUE.
 
 ## <a name="see-also"></a>Zobacz także
 

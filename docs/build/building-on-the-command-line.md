@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051494"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856790"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Korzystanie z zestawu C++ narzędzi firmy Microsoft z poziomu wiersza polecenia
 
@@ -135,13 +135,13 @@ Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeś
 |*Będąc*|Compiler|Architektura komputera hosta|Architektura kompilacji danych wyjściowych (target)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**wyposażone**|x86 32-bitowy natywny|x86, x64|x86|
-|**x86\_amd64** lub **x86\_x64**|x64 w przypadku procesora x86|x86, x64|X64|
+|**x86\_amd64** lub **x86\_x64**|x64 w przypadku procesora x86|x86, x64|x64|
 |**x86_arm**|ARM na procesorze x86|x86, x64|ARM|
 |**x86_arm64**|ARM64 na procesorze x86|x86, x64|ARM64|
-|**amd64** lub **x64**|x64 64-bitowe natywne|X64|X64|
-|**amd64\_x86** lub **x64\_x86**|x86 na x64 krzyżowe|X64|x86|
-|**amd64\_ARM** lub **x64\_ARM**|ARM na x64|X64|ARM|
-|**amd64\_arm64** lub **x64\_arm64**|ARM64 na x64|X64|ARM64|
+|**amd64** lub **x64**|x64 64-bitowe natywne|x64|x64|
+|**amd64\_x86** lub **x64\_x86**|x86 na x64 krzyżowe|x64|x86|
+|**amd64\_ARM** lub **x64\_ARM**|ARM na x64|x64|ARM|
+|**amd64\_arm64** lub **x64\_arm64**|ARM64 na x64|x64|ARM64|
 
 *platform_type*<br/>
 Ten opcjonalny argument umożliwia określenie **sklepu** lub **platformy UWP** jako typu platformy. Domyślnie środowisko jest ustawione na potrzeby kompilowania aplikacji klasycznych lub konsolowych.
@@ -228,7 +228,7 @@ Aby skompilować C/C++ projekt w wierszu polecenia, program Visual Studio udost�
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 Użyj kompilatora (CL. exe) do kompilowania i łączenia plików kodu źródłowego w aplikacje, biblioteki i biblioteki DLL.
 
-[Powiązań](reference/linking.md)<br/>
+[Link](reference/linking.md)<br/>
 Użyj konsolidatora (link. exe), aby połączyć skompilowane pliki i biblioteki obiektów w aplikacje i biblioteki DLL.
 
 [MSBuild](msbuild-visual-cpp.md)<br/>

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246827"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857354"
 ---
 # <a name="catlwinmodule-class"></a>Klasa CAtlWinModule
 
-Ta klasa zapewnia obsługę składników obsługi okien ATL.
+Ta klasa zapewnia obsługę składników okienek ATL.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +37,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Konstruktor.|
-|[CAtlWinModule::~CAtlWinModule](#dtor)|Destruktor.|
+|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -48,7 +48,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza obsługi dla wszystkich klas ATL, które wymagają funkcji obsługi okien.
+Ta klasa zapewnia obsługę wszystkich klas ATL, które wymagają funkcji okna.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,11 +58,11 @@ Ta klasa dostarcza obsługi dla wszystkich klas ATL, które wymagają funkcji ob
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-Ta metoda inicjuje i dodaje `_AtlCreateWndData` struktury.
+Ta metoda inicjuje i dodaje strukturę `_AtlCreateWndData`.
 
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,16 +71,16 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>Parametry
 
 *pData*<br/>
-Wskaźnik do `_AtlCreateWndData` struktury, inicjowanie i dodawane do bieżącego modułu.
+Wskaźnik do struktury `_AtlCreateWndData`, który ma zostać zainicjowany i dodany do bieżącego modułu.
 
 *pObject*<br/>
-Wskaźnik do obiektu **to** wskaźnika.
+Wskaźnik do **tego** wskaźnika obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) które inicjuje [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury. Ta struktura będzie przechowywać **to** wskaźnika, używany do uzyskania wystąpienie klasy w procedury okna.
+Ta metoda wywołuje [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) , która inicjuje strukturę [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Ta struktura będzie przechowywać **ten** wskaźnik, używany do uzyskania wystąpienia klasy w procedurach okna.
 
-##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 Konstruktor.
 
@@ -90,9 +90,9 @@ CAtlWinModule();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli inicjowanie zakończy się niepowodzeniem, **EXCEPTION_NONCONTINUABLE** zgłaszany jest wyjątek.
+Jeśli inicjalizacja nie powiedzie się, zostanie zgłoszony wyjątek **EXCEPTION_NONCONTINUABLE** .
 
-##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule
 
 Destruktor.
 
@@ -102,11 +102,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby.
+Zwalnia wszystkie przydzieloną zasoby.
 
-##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-Ta metoda zwraca wskaźnik do `_AtlCreateWndData` struktury.
+Ta metoda zwraca wskaźnik do struktury `_AtlCreateWndData`.
 
 ```
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do `_AtlCreateWndData` struktury, wcześniej dodany z [CAtlWinModule::AddCreateWndData](#addcreatewnddata), lub wartość NULL, jeśli żaden obiekt nie jest dostępna.
+Zwraca wskaźnik do struktury `_AtlCreateWndData`, która została wcześniej dodana z [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)lub null, jeśli żaden obiekt nie jest dostępny.
 
 ## <a name="see-also"></a>Zobacz także
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

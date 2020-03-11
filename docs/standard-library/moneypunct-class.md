@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689293"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884009"
 ---
 # <a name="moneypunct-class"></a>moneypunct — Klasa
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków.
 
-@No__t_1 *Intl*
+\ *Intl*
 Flaga określająca, czy międzynarodowe konwencje mają być przestrzegane.
 
 ## <a name="remarks"></a>Uwagi
@@ -229,7 +229,7 @@ Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako sy
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [curr_symbol](#curr_symbol), gdzie wirtualna funkcja członkowska jest wywoływana przez `curr_symbol`.
+Zapoznaj się z przykładem [curr_symbol](#curr_symbol), gdzie wirtualna funkcja członkowska jest wywoływana przez `curr_symbol`.
 
 ## <a name="do_decimal_point"></a>moneypunct::d o_decimal_point
 
@@ -245,7 +245,7 @@ Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako sy
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point`.
+Zapoznaj się z przykładem [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point`.
 
 ## <a name="do_frac_digits"></a>moneypunct::d o_frac_digits
 
@@ -261,7 +261,7 @@ Specyficzna dla ustawień regionalnych liczba cyfr do wyświetlenia po prawej st
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [frac_digits](#frac_digits), gdzie wirtualna funkcja członkowska jest wywoływana przez `frac_digits`.
+Zapoznaj się z przykładem [frac_digits](#frac_digits), gdzie wirtualna funkcja członkowska jest wywoływana przez `frac_digits`.
 
 ## <a name="do_grouping"></a>moneypunct::d o_grouping
 
@@ -301,13 +301,13 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzn�
 
 - `value` dopasować lub wygenerować wartości pieniężnej.
 
-Składniki pola danych wyjściowych pieniężnych są generowane, a składniki pola danych wejściowych pieniężnych są dopasowane w kolejności, w jakiej te elementy pojawiają się w `pattern::field`. Każda z wartości `sign`, `symbol`, `value` i `none` lub `space` musi być wyświetlana dokładnie jeden raz. Wartość `none` nie może być wyświetlana jako pierwsza. Przestrzeń wartości nie **może** być wyświetlana jako pierwsza ani Ostatnia. Jeśli `Intl` ma wartość true, Order jest `symbol`, `sign`, `none`, a następnie `value`.
+Składniki pola danych wyjściowych pieniężnych są generowane, a składniki pola danych wejściowych pieniężnych są dopasowane w kolejności, w jakiej te elementy pojawiają się w `pattern::field`. Każda z wartości `sign`, `symbol`, `value`i `none` lub `space` musi być wyświetlana dokładnie jeden raz. Wartość `none` nie może być wyświetlana jako pierwsza. Przestrzeń wartości nie **może** być wyświetlana jako pierwsza ani Ostatnia. Jeśli `Intl` ma wartość true, Order jest `symbol`, `sign`, `none`, a następnie `value`.
 
-Wersja szablonu `moneypunct` \< **CharType**, **Intl**> zwraca `{`**money_base:: symbol**, **money_base:: Sign**, **money_base:: value**, **money_base:: none** `}`.
+Wersja szablonu `moneypunct`\< **CharType**, **Intl**> zwraca `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: none**`}`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [neg_format](#neg_format), gdzie wirtualna funkcja członkowska jest wywoływana przez `neg_format`.
+Zapoznaj się z przykładem [neg_format](#neg_format), gdzie wirtualna funkcja członkowska jest wywoływana przez `neg_format`.
 
 ## <a name="do_negative_sign"></a>moneypunct::d o_negative_sign
 
@@ -323,7 +323,7 @@ Sekwencja elementów specyficznych dla ustawień regionalnych, która ma być u�
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [negative_sign](#negative_sign), gdzie wirtualna funkcja członkowska jest wywoływana przez `negative_sign`.
+Zapoznaj się z przykładem [negative_sign](#negative_sign), gdzie wirtualna funkcja członkowska jest wywoływana przez `negative_sign`.
 
 ## <a name="do_pos_format"></a>moneypunct::d o_pos_format
 
@@ -337,11 +337,11 @@ virtual pattern do_pos_format() const;
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych służącą do określania sposobu generowania pola danych wyjściowych pieniężnych dla liczby dodatniej. (Określa również, jak dopasować składniki pola danych wejściowych pieniężnych). Kodowanie jest takie samo jak w przypadku [do_neg_format](#do_neg_format).
 
-Wersja szablonu moneypunct \< **CharType**, **Inputlterator**> zwraca `{`**money_base:: symbol**, **money_base:: Sign**, **money_base:: value**, **money_base:: none** `}`.
+Wersja szablonu moneypunct\< **CharType**, **Inputlterator**> zwraca `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: none**`}`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [pos_format](#pos_format), gdzie wirtualna funkcja członkowska jest wywoływana przez `pos_format`.
+Zapoznaj się z przykładem [pos_format](#pos_format), gdzie wirtualna funkcja członkowska jest wywoływana przez `pos_format`.
 
 ## <a name="do_positive_sign"></a>moneypunct::d o_positive_sign
 
@@ -357,7 +357,7 @@ Sekwencja elementów specyficznych dla ustawień regionalnych, która ma być u�
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [positive_sign](#positive_sign), gdzie wirtualna funkcja członkowska jest wywoływana przez `positive_sign`.
+Zapoznaj się z przykładem [positive_sign](#positive_sign), gdzie wirtualna funkcja członkowska jest wywoływana przez `positive_sign`.
 
 ## <a name="do_thousands_sep"></a>moneypunct::d o_thousands_sep
 
@@ -373,7 +373,7 @@ Element specyficzny dla ustawień regionalnych, który ma być używany jako sep
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep`.
+Zapoznaj się z przykładem [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep`.
 
 ## <a name="frac_digits"></a>moneypunct:: frac_digits
 
@@ -523,7 +523,7 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
 ## <a name="thousands_sep"></a>moneypunct:: thousands_sep
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale >](../standard-library/locale.md) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

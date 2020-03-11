@@ -3,11 +3,11 @@ title: Operatory przestrzeni nazw współbieżności (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126925"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883733"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeni nazw współbieżności (AMP)
 
@@ -42,7 +42,7 @@ Jedna z krotek do porównania.
 *_Rhs*<br/>
 Jedna z krotek do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **prawda** , jeśli krotki są równe; w przeciwnym razie **false**.
 
@@ -71,7 +71,7 @@ Jedna z krotek do porównania.
 *_Rhs*<br/>
 Jedna z krotek do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **prawda** , jeśli krotki nie są równe; w przeciwnym razie **false**.
 
@@ -116,7 +116,7 @@ Jeden z argumentów do dodania.
 *_Rhs*<br/>
 Jeden z argumentów do dodania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Suma składnika dla określonych argumentów.
 
@@ -161,7 +161,7 @@ Argument, z którego ma zostać odjęta wartość.
 *_Rhs*<br/>
 Argument odejmowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różnica składnika między określonymi argumentami.
 
@@ -198,7 +198,7 @@ Jedna z krotek do pomnożenia.
 *_Rhs*<br/>
 Jedna z krotek do pomnożenia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iloczyn dotyczący składnika określonych argumentów.
 
@@ -235,7 +235,7 @@ Krotka, która ma zostać podzielona.
 *_Rhs*<br/>
 Krotka, według której ma zostać podzielona wartość.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iloraz składnika dla określonych argumentów.
 
@@ -272,10 +272,10 @@ Krotka, z której jest obliczane modulo.
 *_Rhs*<br/>
 Krotka do modulo przez.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik pierwszego określonego argumentu, który został określony dla drugiego określonego argumentu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace-cpp-amp.md)

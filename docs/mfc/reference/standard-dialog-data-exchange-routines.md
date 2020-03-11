@@ -5,11 +5,11 @@ helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
 ms.openlocfilehash: 47586f9cff0fcbe2cd7bad31f3d93fed08190830
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511583"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865159"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 
@@ -39,9 +39,9 @@ W tym temacie wymieniono standardowe procedury wymiany danych (DDX), które są 
 |[DDX_Slider](#ddx_slider)|Inicjuje lub pobiera bieżącą pozycję przycisku przewijania kontrolki suwaka.|
 |[DDX_Text](#ddx_text)|Inicjuje lub pobiera bieżącą wartość kontrolki edycji.|
 
-##  <a name="ddx_cbindex"></a>  DDX_CBIndex
+##  <a name="ddx_cbindex"></a>DDX_CBIndex
 
-Funkcja zarządza transferem danych **int** między kontrolką pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych int okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_CBIndex`
+Funkcja `DDX_CBIndex` zarządza transferem danych **int** między kontrolką pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_CBIndex(
@@ -53,12 +53,12 @@ void AFXAPI DDX_CBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -71,9 +71,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_cbstring"></a>  DDX_CBString
+##  <a name="ddx_cbstring"></a>DDX_CBString
 
-Funkcja zarządza przesyłaniem danych między kontrolką edycji kontrolki pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku `CString` kontrolki i elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu. `CString` `DDX_CBString`
+Funkcja `DDX_CBString` zarządza transferem danych `CString` między kontrolką edycji kontrolki pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i `CString` członkiem danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_CBString(
@@ -85,7 +85,7 @@ void AFXAPI DDX_CBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
@@ -106,9 +106,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
+##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact
 
-Funkcja zarządza przesyłaniem danych między kontrolką edycji kontrolki pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku `CString` kontrolki i elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu. `CString` `DDX_CBStringExact`
+Funkcja `DDX_CBStringExact` zarządza transferem danych `CString` między kontrolką edycji kontrolki pola kombi w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i `CString` członkiem danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_CBStringExact(
@@ -120,7 +120,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
@@ -141,9 +141,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_check"></a>  DDX_Check
+##  <a name="ddx_check"></a>DDX_Check
 
-Funkcja zarządza transferem danych **int** między kontrolką pola wyboru w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych int okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_Check`
+Funkcja `DDX_Check` zarządza transferem danych **int** między kontrolką pola wyboru w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_Check(
@@ -155,7 +155,7 @@ void AFXAPI DDX_Check(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola wyboru skojarzonej z właściwością kontrolki.
@@ -165,7 +165,7 @@ Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiekt
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_Check` jest wywoływana, *wartość* jest ustawiana na bieżący stan kontrolki pola wyboru. Aby uzyskać listę możliwych wartości stanu, zobacz [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) w Windows SDK.
+Gdy `DDX_Check` jest wywoływana, *wartość* jest ustawiana na bieżący stan kontrolki pola wyboru. Listę możliwych wartości stanu można znaleźć w [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) w Windows SDK.
 
 Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -173,9 +173,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_control"></a>  DDX_Control
+##  <a name="ddx_control"></a>DDX_Control
 
-Funkcja podklasa kontrolki, określona przez nIDC, okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_Control`
+Funkcja `DDX_Control` podklasa kontrolki, określonej przez *nIDC*, okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_Control(
@@ -197,7 +197,7 @@ Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiekt
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt *PDX* jest dostarczany przez platformę, gdy `DoDataExchange` wywoływana jest funkcja. W związku `DDX_Control` z `DoDataExchange`tym, powinny być wywoływane tylko w ramach przesłonięcia.
+Obiekt *PDX* jest dostarczany przez platformę, gdy wywoływana jest funkcja `DoDataExchange`. Dlatego `DDX_Control` powinna być wywoływana tylko w ramach przesłonięcia `DoDataExchange`.
 
 Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -205,9 +205,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
+##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl
 
-Funkcja zarządza transferem danych daty i/lub czasu między kontrolką selektora daty i godziny ( [Korzystanie CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) w oknie dialogowym lub w obiekcie widoku formularza, a element członkowski danych CTime lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w tym oknie dialogowym lub w formularzu [](../../atl-mfc-shared/reference/ctime-class.md) `DDX_DateTimeCtrl` Wyświetl obiekt.
+Funkcja `DDX_DateTimeCtrl` zarządza transferem danych daty i/lub czasu między kontrolką selektora daty i godziny ( [Korzystanie CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) w oknie dialogowym lub w obiekcie widoku formularza oraz elementem członkowskim danych [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w obiekcie okna dialogowego lub widoku formularza.
 
 ```
 void AFXAPI DDX_DateTimeCtrl(
@@ -235,13 +235,13 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 Identyfikator zasobu kontrolki selektora daty i godziny skojarzonej ze zmienną członkowską.
 
 *value*<br/>
-W pierwszych dwóch wersjach, odwołanie do `CTime` zmiennej składowej lub `COleDateTime` , okno dialogowe, widok formularza lub obiekt widoku kontrolki, z którym są wymieniane dane. W trzeciej wersji, odwołanie do `CString` obiektu widoku kontrolki elementu członkowskiego danych.
+W pierwszych dwóch wersjach odwołanie do `CTime` lub `COleDateTime` zmiennej składowej, okna dialogowego, widoku formularza lub obiektu widoku kontroli, z którym są wymieniane dane. W trzeciej wersji, odwołanie do obiektu widoku kontrolki elementu członkowskiego danych `CString`.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_DateTimeCtrl` jest wywoływana, *wartość* jest ustawiana na bieżący stan kontrolki selektora daty i godziny lub kontrolka jest ustawiona na *wartość*, w zależności od kierunku wymiany.
+Gdy `DDX_DateTimeCtrl` jest wywoływana, *wartość* jest ustawiona na bieżący stan kontrolki selektora daty i godziny lub kontrolka jest ustawiona na *wartość*, w zależności od kierunku wymiany.
 
-W trzeciej wersji powyżej program `DDX_DateTimeCtrl` zarządza `CString` transferem danych między kontrolą daty i godziny a elementem członkowskim danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu widoku sterowania. Ciąg jest formatowany przy użyciu bieżących reguł regionalnych do formatowania dat i godzin.
+W trzeciej wersji powyżej program `DDX_DateTimeCtrl` zarządza transferem `CString` danych między kontrolą daty i godziny a elementem członkowskim danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu widoku formantu. Ciąg jest formatowany przy użyciu bieżących reguł regionalnych do formatowania dat i godzin.
 
 Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -249,7 +249,7 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
 
 Tworzy kontrolkę .NET zgodną z IDENTYFIKATORem zasobu kontrolki.
 
@@ -276,17 +276,17 @@ Odwołanie do obiektu [klasy CWinFormsControl](cwinformscontrol-class.md) .
 
 ### <a name="remarks"></a>Uwagi
 
-`DDX_ManagedControl`wywołuje [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) , aby utworzyć kontrolkę ODPOWIADAJĄCą identyfikatorowi kontroli zasobów. Służy `DDX_ManagedControl` do tworzenia kontrolek z identyfikatorów zasobów w [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). W przypadku wymiany danych nie trzeba używać funkcji DDX/DDV z kontrolkami Windows Forms.
+`DDX_ManagedControl` wywołuje [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) , aby utworzyć kontrolkę ODPOWIADAJĄCą identyfikatorowi kontroli zasobów. Użyj `DDX_ManagedControl`, aby utworzyć kontrolki z identyfikatorów zasobów w [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). W przypadku wymiany danych nie trzeba używać funkcji DDX/DDV z kontrolkami Windows Forms.
 
-Aby uzyskać więcej informacji, zobacz [jak: Wykonaj powiązanie danych DDX/DDV z Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Aby uzyskać więcej informacji, zobacz [How to: DDX/DDV Binding danych with Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxwinforms. h
 
-##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
+##  <a name="ddx_ipaddress"></a>DDX_IPAddress
 
-`DDX_IPAddress` Funkcja zarządza transferem danych między kontrolą adresu IP a elementem członkowskim danych obiektu widoku kontroli.
+Funkcja `DDX_IPAddress` zarządza transferem danych między kontrolą adresu IP a elementem członkowskim danych obiektu widoku kontroli.
 
 ```
 void AFXAPI DDX_IPAddress(
@@ -298,7 +298,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontroli adresów IP skojarzony z właściwością kontrolki.
@@ -313,7 +313,7 @@ Odwołanie do wartości DWORD zawierającej wartość pola czwarty kontroli adre
 |1|16 do 23|
 |0|od 24 do 31|
 
-Użyj Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) , aby odczytać wartość, lub Użyj [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) , aby wypełnić wartość. Te komunikaty są opisane w Windows SDK.
+Użyj [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) Win32, aby odczytać wartość, lub Użyj [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) , aby wypełnić wartość. Te komunikaty są opisane w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -325,9 +325,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_lbindex"></a>  DDX_LBIndex
+##  <a name="ddx_lbindex"></a>DDX_LBIndex
 
-Funkcja zarządza transferem danych **int** między kontrolką pola listy w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych int okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_LBIndex`
+Funkcja `DDX_LBIndex` zarządza transferem danych **int** między kontrolką pola listy w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_LBIndex(
@@ -339,12 +339,12 @@ void AFXAPI DDX_LBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -357,9 +357,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_lbstring"></a>  DDX_LBString
+##  <a name="ddx_lbstring"></a>DDX_LBString
 
-Funkcja zarządza przesyłaniem danych między kontrolką pola listy w oknie dialogowym, widoku Formularz lub obiektem widoku `CString` formantu i elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu. `CString` `DDX_LBString`
+Funkcja `DDX_LBString` zarządza transferem danych `CString` między kontrolką pola listy w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i `CString` członkiem danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_LBString(
@@ -371,7 +371,7 @@ void AFXAPI DDX_LBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
@@ -381,7 +381,7 @@ Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiekt
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_LBString` jest wywoływana w celu transferu danych do kontrolki pole listy, pierwszy element w kontrolce, której *wartość* początkowa pasuje jest zaznaczone. (Aby dopasować cały element, a nie po prostu prefiks, użyj [DDX_LBStringExact](#ddx_lbstringexact) Jeśli nie ma żadnych dopasowań, żadne elementy nie są zaznaczone. W dopasowaniu nie jest rozróżniana wielkość liter.
+Gdy `DDX_LBString` jest wywoływana w celu transferu danych do kontrolki pole listy, pierwszy element w kontrolce, której *wartość* początkowa pasuje jest zaznaczone. (Aby dopasować cały element, a nie tylko prefiks, użyj [DDX_LBStringExact](#ddx_lbstringexact).) Jeśli nie ma żadnych dopasowań, żadne elementy nie są zaznaczone. W dopasowaniu nie jest rozróżniana wielkość liter.
 
 Gdy `DDX_LBString` jest wywoływana w celu transferu danych z kontrolki pole listy, *wartość* jest ustawiana na bieżące zaznaczenie pola listy. Jeśli nie wybrano żadnego elementu, *wartość* jest ustawiana na ciąg o zerowej długości.
 
@@ -394,9 +394,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
+##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact
 
-Funkcja zarządza transferem danych między kontrolką Edycja kontrolki pole listy w oknie dialogowym, widoku Formularz lub obiektem widoku `CString` kontrolki i elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu. `CString` `DDX_CBStringExact`
+Funkcja `DDX_CBStringExact` zarządza transferem danych `CString` między kontrolką Edycja kontrolki pole listy w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i `CString` członkiem danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_LBStringExact(
@@ -408,7 +408,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
@@ -418,7 +418,7 @@ Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiekt
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_LBStringExact` jest wywoływana w celu transferu danych do kontrolki pole listy, wybierany jest pierwszy element w kontrolce pasującej do *wartości* . (Aby dopasować tylko prefiks, a nie cały element, użyj [DDX_LBString](#ddx_lbstring)). Jeśli nie ma żadnych dopasowań, żadne elementy nie są zaznaczone. W dopasowaniu nie jest rozróżniana wielkość liter.
+Gdy `DDX_LBStringExact` jest wywoływana w celu transferu danych do kontrolki pole listy, wybierany jest pierwszy element w kontrolce, która jest zgodna z *wartością* . (Aby dopasować tylko prefiks, a nie cały element, użyj [DDX_LBString](#ddx_lbstring).) Jeśli nie ma żadnych dopasowań, żadne elementy nie są zaznaczone. W dopasowaniu nie jest rozróżniana wielkość liter.
 
 Gdy `DDX_CBStringExact` jest wywoływana w celu transferu danych z kontrolki pole listy, *wartość* jest ustawiana na bieżące zaznaczenie pola listy. Jeśli nie wybrano żadnego elementu, *wartość* jest ustawiana na ciąg o zerowej długości.
 
@@ -431,9 +431,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl
+##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl
 
-Funkcja zarządza transferem danych daty między kontrolką kalendarza miesięcznego ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) w oknie dialogowym, widoku formularza lub obiektem widoku kontrolki oraz elementem członkowskim danych [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub COleDateTime w oknie dialogowym, formularz [](../../atl-mfc-shared/reference/coledatetime-class.md) `DDX_MonthCalCtrl` widok lub obiekt widoku kontroli.
+Funkcja `DDX_MonthCalCtrl` zarządza transferem danych daty między kontrolką kalendarza miesięcznego ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) w oknie dialogowym, widoku formularza lub obiektem widoku kontrolki oraz elementem członkowskim danych [CTime](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w oknie dialogowym, widoku formularza lub w obiekcie widoku formantu.
 
 ```
 void AFXAPI DDX_MonthCalCtrl(
@@ -456,7 +456,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 Identyfikator zasobu kontrolki kalendarza miesięcznego skojarzonej ze zmienną elementu członkowskiego.
 
 *value*<br/>
-Odwołanie do `CTime` zmiennej składowej `COleDateTime` lub okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
+Odwołanie do `CTime` lub `COleDateTime` zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -471,9 +471,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_radio"></a>  DDX_Radio
+##  <a name="ddx_radio"></a>DDX_Radio
 
-Funkcja zarządza transferem danych **int** między grupą kontrolek radiowych w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych int okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_Radio` Wartość elementu członkowskiego danych **int** jest określana na podstawie tego, który przycisk radiowy w grupie jest zaznaczony.
+Funkcja `DDX_Radio` zarządza transferem danych **int** między grupą kontrolek radiowych w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku formantu. Wartość elementu członkowskiego danych **int** jest określana na podstawie tego, który przycisk radiowy w grupie jest zaznaczony.
 
 ```
 void AFXAPI DDX_Radio(
@@ -485,7 +485,7 @@ void AFXAPI DDX_Radio(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu pierwszej kontrolki radia w grupie.
@@ -497,7 +497,7 @@ Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiekt
 
 Gdy `DDX_Radio` jest wywoływana, *wartość* jest ustawiany na bieżący stan grupy kontrolek radiowych. Wartość jest ustawiana jako indeks (0) kontrolki radio, która jest aktualnie zaznaczona, lub-1, jeśli nie zaznaczono żadnych kontrolek radiowych.
 
-Na przykład w przypadku zaznaczenia pierwszego przycisku radiowego w grupie (przycisk z stylem WS_GROUP) wartość elementu członkowskiego **int** wynosi 0 i tak dalej.
+Na przykład w przypadku zaznaczenia pierwszego przycisku radiowego w grupie (przycisk z stylem WS_GROUP) wartością elementu członkowskiego **int** jest 0 i tak dalej.
 
 Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -505,9 +505,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_scroll"></a>  DDX_Scroll
+##  <a name="ddx_scroll"></a>DDX_Scroll
 
-Funkcja zarządza transferem danych **int** między kontrolką paska przewijania w oknie dialogowym, widoku Formularz lub obiektem widoku kontroli i elementem członkowskim danych int okna dialogowego, widoku formularza lub obiektu widoku formantu. `DDX_Scroll`
+Funkcja `DDX_Scroll` zarządza transferem danych **int** między kontrolką paska przewijania w oknie dialogowym, widoku Formularz lub obiektem widoku kontrolki i elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```
 void AFXAPI DDX_Scroll(
@@ -519,7 +519,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
+Wskaźnik do obiektu `CDataExchange`. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
 *nIDC*<br/>
 Identyfikator zasobu kontrolki paska przewijania skojarzonej z właściwością kontrolki.
@@ -537,9 +537,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_slider"></a>  DDX_Slider
+##  <a name="ddx_slider"></a>DDX_Slider
 
-Funkcja zarządza transferem danych int między kontrolką suwaka w oknie dialogowym lub widoku Formularz i elementem członkowskim danych **int** okna dialogowego lub widoku formularza. `DDX_Slider`
+Funkcja `DDX_Slider` zarządza transferem danych **int** między kontrolką suwaka w oknie dialogowym lub widoku Formularz i elementem członkowskim danych **int** okna dialogowego lub widoku formularza.
 
 ```
 void AFXAPI DDX_Slider(
@@ -569,9 +569,9 @@ Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja 
 
   **Nagłówek** afxdd_. h
 
-##  <a name="ddx_text"></a>  DDX_Text
+##  <a name="ddx_text"></a>DDX_Text
 
-`CString` [](../../atl-mfc-shared/reference/cstringt-class.md)Funkcja zarządza transferem danych int, uint, Long, DWORD,, float lub Double między kontrolki edycji w oknie dialogowym, widoku formularza lub widoku kontrolki i danych CString `DDX_Text` członek okna dialogowego, widoku formularza lub obiektu widoku formantu.
+Funkcja `DDX_Text` zarządza transferem danych **int**, **uint**, **Long**, DWORD, `CString`, **float**lub **Double** między kontrolką edycji w oknie dialogowym, widoku formularza lub w widoku kontrolnym i elementem członkowskim danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) w oknie dialogowym, widoku formularza lub w obiekcie widoku formantu.
 
 ```
 void AFXAPI DDX_Text(

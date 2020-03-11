@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497671"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865059"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa, która pochodzi od `CAxDialogImpl`.
 
 *TBase*<br/>
@@ -54,10 +54,10 @@ Klasa okna podstawowego dla `CDialogImplBaseT`.
 |----------|-----------------|
 |[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Wywołaj tę metodę, aby zalecić lub nielecić wszystkich wpisów w mapie zdarzeń mapy ujścia obiektu.|
 |[CAxDialogImpl:: Create](#create)|Wywołaj tę metodę, aby utworzyć niemodalne okno dialogowe.|
-|[CAxDialogImpl::DestroyWindow](#destroywindow)|Wywołaj tę metodę, aby zniszczyć niemodalne okno dialogowe.|
+|[CAxDialogImpl::D estroyWindow](#destroywindow)|Wywołaj tę metodę, aby zniszczyć niemodalne okno dialogowe.|
 |[CAxDialogImpl::D oModal](#domodal)|Wywołaj tę metodę, aby utworzyć modalne okno dialogowe.|
-|[CAxDialogImpl::EndDialog](#enddialog)|Wywołaj tę metodę, aby zniszczyć modalne okno dialogowe.|
-|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Wywołaj tę metodę, aby uzyskać wskaźnik do `DialogProc` funkcji wywołania zwrotnego.|
+|[CAxDialogImpl:: zdarzenie EndDialog](#enddialog)|Wywołaj tę metodę, aby zniszczyć modalne okno dialogowe.|
+|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Wywołaj tę metodę, aby uzyskać wskaźnik do funkcji wywołania zwrotnego `DialogProc`.|
 |[CAxDialogImpl::GetIDD](#getidd)|Wywołaj tę metodę, aby uzyskać identyfikator zasobu szablonu okna dialogowego|
 |[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Wywołaj tę metodę, aby określić, czy komunikat jest przeznaczony dla tego okna dialogowego, a jeśli tak, przetwórz komunikat.|
 
@@ -65,13 +65,13 @@ Klasa okna podstawowego dla `CDialogImplBaseT`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAxDialogImpl::m_bModal](#m_bmodal)|Zmienna, która istnieje tylko w kompilacjach debugowania i ma ustawioną wartość true, jeśli okno dialogowe jest modalne.|
+|[CAxDialogImpl:: m_bModal](#m_bmodal)|Zmienna, która istnieje tylko w kompilacjach debugowania i ma ustawioną wartość true, jeśli okno dialogowe jest modalne.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CAxDialogImpl`umożliwia tworzenie modalnych lub niemodalnych okien dialogowych. `CAxDialogImpl`zawiera procedurę okna dialogowego, która używa domyślnej mapy komunikatów do kierowania komunikatów do odpowiednich programów obsługi.
+`CAxDialogImpl` umożliwia tworzenie modalnych lub niemodalnych okien dialogowych. `CAxDialogImpl` zawiera procedurę okna dialogowego, która używa domyślnej mapy komunikatów do kierowania komunikatów do odpowiednich programów obsługi.
 
-`CAxDialogImpl`pochodzi od `CDialogImplBaseT`, które z kolei wynikają z *TBase* `CWindow`(domyślnie) i. `CMessageMap`
+`CAxDialogImpl` pochodzi od `CDialogImplBaseT`, co z kolei wynika z *TBase* (domyślnie `CWindow`) i `CMessageMap`.
 
 Klasa musi definiować element członkowski IDD, który określa identyfikator zasobu szablonu okna dialogowego. Na przykład dodanie obiektu okna dialogowego ATL przy użyciu okna dialogowego **Dodaj klasę** automatycznie dodaje następujący wiersz do klasy:
 
@@ -79,11 +79,11 @@ Klasa musi definiować element członkowski IDD, który określa identyfikator z
 
 gdzie `MyDialog` to **krótka nazwa** wprowadzona w Kreatorze okna dialogowego ATL.
 
-Aby uzyskać więcej informacji, zobacz Implementowanie okna [dialogowego](../../atl/implementing-a-dialog-box.md) .
+Aby uzyskać więcej informacji, zobacz [implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md) .
 
-Należy zauważyć, że Kontrolka ActiveX w modalnym oknie dialogowym `CAxDialogImpl` utworzonym za pomocą nie będzie obsługiwać klawiszy akceleratora. Aby zapewnić obsługę klawiszy skrótów w oknie dialogowym utworzonym `CAxDialogImpl`za pomocą, Utwórz niemodalne okno dialogowe i, używając własnej pętli komunikatów, użyj [CAxDialogImpl:: IsDialogMessage](#isdialogmessage) po otrzymaniu komunikatu z kolejki w celu obsługi klawisza skrótu.
+Należy zauważyć, że formant ActiveX w modalnym oknie dialogowym utworzonym przy użyciu `CAxDialogImpl` nie będzie obsługiwał klawiszy akceleratora. Aby zapewnić obsługę klawiszy skrótów w oknie dialogowym utworzonym za pomocą `CAxDialogImpl`, Utwórz niemodalne okno dialogowe i, używając własnej pętli komunikatów, użyj [CAxDialogImpl:: IsDialogMessage](#isdialogmessage) po otrzymaniu komunikatu z kolejki w celu obsługi klawisza skrótu.
 
-Aby uzyskać więcej informacji `CAxDialogImpl`na temat, zobacz sekcję [często zadawane pytania dotyczące kontroli ATL](../../atl/atl-control-containment-faq.md).
+Aby uzyskać więcej informacji na temat `CAxDialogImpl`, zobacz temat informacje o [zawieraniu formantów ATL — często zadawane pytania](../../atl/atl-control-containment-faq.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -144,7 +144,7 @@ Uchwyt do nowo utworzonego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-To okno dialogowe jest automatycznie dołączane `CAxDialogImpl` do obiektu. Aby utworzyć modalne okno dialogowe, wywołaj [DoModal](#domodal).
+To okno dialogowe jest automatycznie dołączane do obiektu `CAxDialogImpl`. Aby utworzyć modalne okno dialogowe, wywołaj [DoModal](#domodal).
 
 Drugie przesłonięcie jest dostępne tylko wtedy, gdy można używać okien dialogowych z [CComControl](../../atl/reference/ccomcontrol-class.md).
 
@@ -162,7 +162,7 @@ Ma wartość TRUE, jeśli okno zostanie zniszczone pomyślnie. w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Nie wywołuj `DestroyWindow` , aby zniszczyć modalne okno dialogowe. Zamiast tego wywołaj [zdarzenie EndDialog](#enddialog) .
+Nie wywołuj `DestroyWindow`, aby zniszczyć modalne okno dialogowe. Zamiast tego wywołaj [zdarzenie EndDialog](#enddialog) .
 
 ##  <a name="domodal"></a>CAxDialogImpl::D oModal
 
@@ -188,7 +188,7 @@ Jeśli to się powiedzie, wartość parametru *nRetCode* określona w wywołaniu
 
 ### <a name="remarks"></a>Uwagi
 
-To okno dialogowe jest automatycznie dołączane `CAxDialogImpl` do obiektu.
+To okno dialogowe jest automatycznie dołączane do obiektu `CAxDialogImpl`.
 
 Aby utworzyć niemodalne okno dialogowe, wywołaj polecenie [Utwórz](#create).
 
@@ -211,14 +211,14 @@ PRAWDA, jeśli okno dialogowe zostało zniszczone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-`EndDialog`musi być wywołana za pomocą procedury okna dialogowego. Po zniszczeniu okna dialogowego system Windows używa wartości *nRetCode* jako wartości zwracanej dla `DoModal`, która utworzyła okno dialogowe.
+`EndDialog` należy wywołać za pomocą procedury okna dialogowego. Po zniszczeniu okna dialogowego system Windows używa wartości *nRetCode* jako wartości zwracanej dla `DoModal`, która utworzyła okno dialogowe.
 
 > [!NOTE]
->  Nie wywołuj `EndDialog` , aby zniszczyć niemodalne okno dialogowe. Zamiast tego wywołaj [DestroyWindow](#destroywindow) .
+>  Nie wywołuj `EndDialog`, aby zniszczyć niemodalne okno dialogowe. Zamiast tego wywołaj [DestroyWindow](#destroywindow) .
 
 ##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc
 
-Wywołaj tę metodę, aby uzyskać wskaźnik do `DialogProc` funkcji wywołania zwrotnego.
+Wywołaj tę metodę, aby uzyskać wskaźnik do funkcji wywołania zwrotnego `DialogProc`.
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -226,11 +226,11 @@ virtual DLGPROC GetDialogProc();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do `DialogProc` funkcji wywołania zwrotnego.
+Zwraca wskaźnik do funkcji wywołania zwrotnego `DialogProc`.
 
 ### <a name="remarks"></a>Uwagi
 
-`DialogProc` Funkcja jest funkcją wywołania zwrotnego zdefiniowanego przez aplikację.
+Funkcja `DialogProc` jest funkcją wywołania zwrotnego zdefiniowanego przez aplikację.
 
 ##  <a name="getidd"></a>CAxDialogImpl::GetIDD
 
@@ -265,7 +265,7 @@ Zwraca wartość PRAWDA, jeśli komunikat został przetworzony, w przeciwnym raz
 
 Ta metoda jest przeznaczona do wywoływania z poziomu pętli komunikatów.
 
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal
+##  <a name="m_bmodal"></a>CAxDialogImpl:: m_bModal
 
 Zmienna, która istnieje tylko w kompilacjach debugowania i ma ustawioną wartość true, jeśli okno dialogowe jest modalne.
 

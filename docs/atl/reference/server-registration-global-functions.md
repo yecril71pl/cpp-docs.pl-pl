@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495460"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863218"
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne rejestracji serwera
 
@@ -62,11 +62,11 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlComModuleRegisterServer`przegląda mapę obiektu automatycznie wygenerowaną ATL i rejestruje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, rejestrowany jest tylko obiekt, do którego odwołuje się *pCLSID* ; w przeciwnym razie wszystkie obiekty są zarejestrowane.
+`AtlComModuleRegisterServer` analizuje mapę obiektu automatycznie wygenerowaną ATL i rejestruje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, rejestrowany jest tylko obiekt, do którego odwołuje się *pCLSID* ; w przeciwnym razie wszystkie obiekty są zarejestrowane.
 
 Ta funkcja jest wywoływana przez [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer
 
 Ta funkcja jest wywoływana, aby wyrejestrować każdy obiekt na mapie obiektów.
 
@@ -94,7 +94,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlComModuleUnregisterServer`przegląda mapowanie obiektu ATL i wyrejestrowuje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, tylko obiekt, do którego odwołuje się *pCLSID* , zostanie wyrejestrowany. w przeciwnym razie wszystkie obiekty są wyrejestrowani.
+`AtlComModuleUnregisterServer` przeprowadzi mapowanie obiektu ATL i wyrejestruje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, tylko obiekt, do którego odwołuje się *pCLSID* , zostanie wyrejestrowany. w przeciwnym razie wszystkie obiekty są wyrejestrowani.
 
 Ta funkcja jest wywoływana przez [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
@@ -149,7 +149,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta funkcja pomocnika jest wykorzystywana przez [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (przestarzałe w ATL 7,0) i [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 Ta funkcja jest wywoływana, aby zwrócić fabrykę klasy.
 
@@ -181,7 +181,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika jest wykorzystywana przez [CComModule::](ccommodule-class.md#getclassobject) GetClassObject (przestarzałe w ATL 7,0) i [CAtlDllModuleT::](catldllmodulet-class.md#getclassobject)GetClassObject.
+Ta funkcja pomocnika jest wykorzystywana przez [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (przestarzałe w ATL 7,0) i [CAtlDllModuleT:: GetClassObject](catldllmodulet-class.md#getclassobject).
 
 ## <a name="see-also"></a>Zobacz także
 

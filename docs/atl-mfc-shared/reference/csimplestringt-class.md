@@ -37,15 +37,15 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865085"
 ---
 # <a name="csimplestringt-class"></a>Klasa CSimpleStringT
 
-Ta klasa reprezentuje `CSimpleStringT` obiekt.
+Ta klasa reprezentuje obiekt `CSimpleStringT`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,11 +57,11 @@ class CSimpleStringT
 ### <a name="parameters"></a>Parametry
 
 *BaseType*<br/>
-Typ znaku klasy String. Może to być jeden z następujących elementów:
+Typ znaku klasy String. Może to być jeden z następujących modyfikatorów dostępu:
 
-- **znak** (w przypadku ciągów znaków ANSI).
+- **char** (dla CIĄGÓW znaków ANSI).
 
-- **wchar_t** (w przypadku ciągów znaków Unicode).
+- **wchar_t** (dla ciągów znaków Unicode).
 
 - Używanie TCHAR (dla ciągów znaków ANSI i Unicode).
 
@@ -78,34 +78,34 @@ Typ znaku klasy String. Może to być jeden z następujących elementów:
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleStringT::CSimpleStringT](#ctor)|Tworzy `CSimpleStringT` obiekty na różne sposoby.|
-|[CSimpleStringT::~CSimpleStringT](#dtor)|Destruktor.|
+|[CSimpleStringT::CSimpleStringT](#ctor)|Konstrukcje `CSimpleStringT` obiektów na różne sposoby.|
+|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleStringT:: Append](#append)|Dołącza obiekt do istniejącego `CSimpleStringT`obiektu. `CSimpleStringT`|
-|[CSimpleStringT::AppendChar](#appendchar)|Dołącza znak do istniejącego `CSimpleStringT` obiektu.|
+|[CSimpleStringT:: Append](#append)|Dołącza obiekt `CSimpleStringT` do istniejącego obiektu `CSimpleStringT`.|
+|[CSimpleStringT::AppendChar](#appendchar)|Dołącza znak do istniejącego obiektu `CSimpleStringT`.|
 |[CSimpleStringT::CopyChars](#copychars)|Kopiuje znak lub znaki do innego ciągu.|
 |[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Kopiuje znak lub znaki do innego ciągu, w którym są nakładane bufory.|
 |[CSimpleStringT:: Empty](#empty)|Wymusza, aby ciąg miał długość zero.|
 |[CSimpleStringT::FreeExtra](#freeextra)|Zwalnia wszelkie dodatkowe pamięci, które zostały wcześniej przydzielone przez obiekt ciągu.|
-|[CSimpleStringT::GetAllocLength](#getalloclength)|Pobiera przydzieloną długość `CSimpleStringT` obiektu.|
+|[CSimpleStringT::GetAllocLength](#getalloclength)|Pobiera przydzieloną długość obiektu `CSimpleStringT`.|
 |[CSimpleStringT::GetAt](#getat)|Zwraca znak w danym położeniu.|
 |[CSimpleStringT:: GetBuffer](#getbuffer)|Zwraca wskaźnik do znaków w `CSimpleStringT`.|
 |[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Zwraca wskaźnik do znaków w `CSimpleStringT`, obcinając do określonej długości.|
-|[CSimpleStringT:: GetLength](#getlength)|Zwraca liczbę znaków w `CSimpleStringT` obiekcie.|
-|[CSimpleStringT:: GetManager](#getmanager)|Pobiera Menedżera `CSimpleStringT` pamięci obiektu.|
+|[CSimpleStringT:: GetLength](#getlength)|Zwraca liczbę znaków w obiekcie `CSimpleStringT`.|
+|[CSimpleStringT:: GetManager](#getmanager)|Pobiera Menedżera pamięci `CSimpleStringT` obiektu.|
 |[CSimpleStringT:: GetString](#getstring)|Pobiera ciąg znaków|
-|[CSimpleStringT:: IsEmpty](#isempty)|Testuje, `CSimpleStringT` czy obiekt nie zawiera żadnych znaków.|
+|[CSimpleStringT:: IsEmpty](#isempty)|Testuje, czy obiekt `CSimpleStringT` nie zawiera żadnych znaków.|
 |[CSimpleStringT::LockBuffer](#lockbuffer)|Wyłącza zliczanie odwołań i chroni ciąg w buforze.|
 |[CSimpleStringT::P ponownie przydzielić](#preallocate)|Przydziela określoną ilość pamięci dla buforu znaków.|
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Umożliwia wydawanie kontroli nad buforem `GetBuffer`zwracanym przez.|
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Umożliwia wydawanie kontroli nad buforem `GetBuffer`zwracanym przez.|
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Umożliwia wydawanie kontroli nad buforem zwróconym przez `GetBuffer`.|
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Umożliwia wydawanie kontroli nad buforem zwróconym przez `GetBuffer`.|
 |[CSimpleStringT::SetAt](#setat)|Ustawia znak w danym położeniu.|
-|[CSimpleStringT:: setmanager](#setmanager)|Ustawia Menedżera pamięci dla `CSimpleStringT` obiektu.|
-|[CSimpleStringT:: SetString](#setstring)|Ustawia ciąg `CSimpleStringT` obiektu.|
+|[CSimpleStringT:: setmanager](#setmanager)|Ustawia Menedżera pamięci dla obiektu `CSimpleStringT`.|
+|[CSimpleStringT:: SetString](#setstring)|Ustawia ciąg obiektu `CSimpleStringT`.|
 |[CSimpleStringT::StringLength](#stringlength)|Zwraca liczbę znaków w określonym ciągu.|
 |[CSimpleStringT:: Truncate](#truncate)|Obcina ciąg do określonej długości.|
 |[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Włącza zliczanie odwołań i zwalnia ciąg w buforze.|
@@ -114,14 +114,14 @@ Typ znaku klasy String. Może to być jeden z następujących elementów:
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleStringT:: operator PCXSTR](#operator_pcxstr)|Bezpośrednio uzyskuje dostęp do znaków przechowywanych `CSimpleStringT` w obiekcie jako ciąg w stylu języka C.|
+|[CSimpleStringT:: operator PCXSTR](#operator_pcxstr)|Bezpośrednio uzyskuje dostęp do znaków przechowywanych w obiekcie `CSimpleStringT` jako ciąg w stylu C.|
 |[CSimpleStringT:: operator\[\]](#operator_at)|Zwraca znak w danej pozycji — podstawienie operatora dla `GetAt`.|
 |[CSimpleStringT:: operator + =](#operator_add_eq)|Łączy nowy ciąg na końcu istniejącego ciągu.|
-|[CSimpleStringT:: operator =](#operator_eq)|Przypisuje nową wartość do `CSimpleStringT` obiektu.|
+|[CSimpleStringT:: operator =](#operator_eq)|Przypisuje nową wartość do obiektu `CSimpleStringT`.|
 
 ### <a name="remarks"></a>Uwagi
 
-`CSimpleStringT`jest klasą bazową dla różnych klas ciągów obsługiwanych przez wizualizację C++. Zapewnia ona minimalną obsługę zarządzania pamięcią obiektu String i podstawowego manipulowania buforem. Aby uzyskać bardziej zaawansowane obiekty ciągów, zobacz [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md).
+`CSimpleStringT` jest klasą bazową dla różnych klas ciągów obsługiwanych przez wizualizację C++. Zapewnia ona minimalną obsługę zarządzania pamięcią obiektu String i podstawowego manipulowania buforem. Aby uzyskać bardziej zaawansowane obiekty ciągów, zobacz [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -129,7 +129,7 @@ Typ znaku klasy String. Może to być jeden z następujących elementów:
 
 ## <a name="append"></a>CSimpleStringT:: Append
 
-Dołącza obiekt do istniejącego `CSimpleStringT`obiektu. `CSimpleStringT`
+Dołącza obiekt `CSimpleStringT` do istniejącego obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -142,7 +142,7 @@ void Append(PCXSTR pszSrc);
 #### <a name="parameters"></a>Parametry
 
 *strSrc*<br/>
-Obiekt `CSimpleStringT` , który ma zostać dołączony.
+Obiekt `CSimpleStringT`, który ma zostać dołączony.
 
 *pszSrc*<br/>
 Wskaźnik do ciągu zawierającego znaki do dołączenia.
@@ -152,7 +152,7 @@ Liczba znaków do dołączenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby dołączyć `CSimpleStringT` istniejący obiekt do `CSimpleStringT` innego obiektu.
+Wywołaj tę metodę, aby dołączyć istniejący obiekt `CSimpleStringT` do innego obiektu `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -168,7 +168,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 
 ##  <a name="appendchar"></a>CSimpleStringT::AppendChar
 
-Dołącza znak do istniejącego `CSimpleStringT` obiektu.
+Dołącza znak do istniejącego obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -183,7 +183,7 @@ Znak do dołączenia
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby dołączyć określony znak do końca istniejącego `CSimpleStringT` obiektu.
+Wywołaj tę funkcję, aby dołączyć określony znak do końca istniejącego obiektu `CSimpleStringT`.
 
 ##  <a name="copychars"></a>CSimpleStringT::CopyChars
 
@@ -225,7 +225,7 @@ str.CopyChars(str.GetBuffer(), pszSrc, 12);
 _tprintf_s(_T("%s\n"), str);
 ```
 
-##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
+##  <a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
 
 Kopiuje znak lub znaki do `CSimpleStringT` obiektu.
 
@@ -251,7 +251,7 @@ Liczba znaków *pchSrc* do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby skopiować znaki z *pchSrc* do ciągu *pchDest* . W `CopyChars`przeciwieństwie `CopyCharsOverlapped` do, zapewnia bezpieczną metodę kopiowania z buforów znaków, które mogą nakładać się na siebie.
+Wywołaj tę metodę, aby skopiować znaki z *pchSrc* do ciągu *pchDest* . W przeciwieństwie do `CopyChars`, `CopyCharsOverlapped` zapewnia bezpieczną metodę kopiowania z buforów znaków, które mogą nakładać się na siebie.
 
 ### <a name="example"></a>Przykład
 
@@ -259,7 +259,7 @@ Zobacz przykład dla [CSimpleStringT:: CopyChars](#copychars)lub kodu źródłow
 
 ##  <a name="ctor"></a>CSimpleStringT::CSimpleStringT
 
-Konstruuje `CSimpleStringT` obiekt.
+Konstruuje obiekt `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -273,27 +273,27 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 #### <a name="parameters"></a>Parametry
 
 *strSrc*<br/>
-Istniejący `CSimpleStringT` obiekt do skopiowania do tego `CSimpleStringT` obiektu.
+Istniejący obiekt `CSimpleStringT`, który ma zostać skopiowany do tego obiektu `CSimpleStringT`.
 
 *pchSrc*<br/>
 Wskaźnik do tablicy znaków o długości *nLength*, nieprzekończonej null.
 
 *pszSrc*<br/>
-Ciąg zakończony znakiem null, który ma zostać skopiowany `CSimpleStringT` do tego obiektu.
+Ciąg zakończony znakiem null, który ma zostać skopiowany do tego obiektu `CSimpleStringT`.
 
 *nLength*<br/>
 Liczba znaków w `pch`.
 
 *pStringMgr*<br/>
-Wskaźnik do Menedżera `CSimpleStringT` pamięci obiektu. Aby uzyskać więcej informacji `IAtlStringMgr` o zarządzaniu pamięcią `CSimpleStringT`dla programu, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
+Wskaźnik do Menedżera pamięci obiektu `CSimpleStringT`. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięcią dla `CSimpleStringT`, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Utwórz nowy `CSimpleStringT` obiekt. Ponieważ konstruktory kopiuje dane wejściowe do nowego przydzielonego magazynu, mogą wynikać wyjątki pamięci.
+Utwórz nowy obiekt `CSimpleStringT`. Ponieważ konstruktory kopiuje dane wejściowe do nowego przydzielonego magazynu, mogą wynikać wyjątki pamięci.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje użycie programu `CSimpleStringT::CSimpleStringT` przy użyciu ATL **typedef** `CSimpleString`. `CSimpleString`jest powszechnie używaną specjalizacją szablonu `CSimpleStringT`klasy.
+Poniższy przykład ilustruje sposób użycia `CSimpleStringT::CSimpleStringT` przy użyciu ATL **typedef** `CSimpleString`. `CSimpleString` jest powszechnie używaną specjalizacją szablonu klasy `CSimpleStringT`.
 
 ```cpp
 CSimpleString s1(pMgr);
@@ -312,7 +312,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 
 ##  <a name="empty"></a>CSimpleStringT:: Empty
 
-Sprawia, `CSimpleStringT` że ten obiekt jest pustym ciągiem i zwalnia pamięć odpowiednio do potrzeb.
+Sprawia, że ten obiekt `CSimpleStringT` pusty ciąg i zwalnia pamięć odpowiednio do potrzeb.
 
 ### <a name="syntax"></a>Składnia
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, [Zobacz ciągi: ](../cstring-exception-cleanup.md)CString.
+Aby uzyskać więcej informacji, zobacz [Strings: CString — oczyszczanie wyjątków](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Przykład
 
@@ -345,7 +345,7 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Uwagi
 
-Powinno to zmniejszyć obciążenie pamięci zużywane przez obiekt ciągu. Metoda ponownie przydziela bufor do dokładnej długości zwracanej przez GetLength [](#getlength).
+Powinno to zmniejszyć obciążenie pamięci zużywane przez obiekt ciągu. Metoda ponownie przydziela bufor do dokładnej długości zwracanej przez [GetLength](#getlength).
 
 ### <a name="example"></a>Przykład
 
@@ -386,7 +386,7 @@ Alloc length is 15, String length is 15
 
 ##  <a name="getalloclength"></a>CSimpleStringT::GetAllocLength
 
-Pobiera przydzieloną długość `CSimpleStringT` obiektu.
+Pobiera przydzieloną długość obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -400,11 +400,11 @@ Liczba znaków przyznanych dla tego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby określić liczbę znaków przyznanych `CSimpleStringT` dla tego obiektu. Zobacz [FreeExtra](#freeextra) , aby zapoznać się z przykładem wywoływania tej funkcji.
+Wywołaj tę metodę, aby określić liczbę znaków przydzieloną dla tego obiektu `CSimpleStringT`. Zobacz [FreeExtra](#freeextra) , aby zapoznać się z przykładem wywoływania tej funkcji.
 
 ##  <a name="getat"></a>CSimpleStringT::GetAt
 
-Zwraca jeden znak z `CSimpleStringT` obiektu.
+Zwraca jeden znak z obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -415,19 +415,19 @@ XCHAR GetAt(int iChar) const;
 #### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Liczony od zera indeks znaku w `CSimpleStringT` obiekcie. Parametr *iChar* musi być większy lub równy 0 i mniejszy od wartości zwracanej przez GetLength. [](#getlength) `GetAt` W przeciwnym razie program wygeneruje wyjątek.
+Liczony od zera indeks znaku w obiekcie `CSimpleStringT`. Parametr *iChar* musi być większy lub równy 0 i mniejszy od wartości zwracanej przez [GetLength](#getlength). W przeciwnym razie `GetAt` wygeneruje wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`XCHAR` Zawiera znak w określonej pozycji w ciągu.
+`XCHAR`, która zawiera znak znajdujący się w określonej pozycji w ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby zwrócić jeden znak określony przez *iChar*. Przeciążony operator indeksu dolnego ( **[]** ) jest wygodnym aliasem dla `GetAt`. Terminator o wartości null ma adres bez generowania wyjątku przy użyciu `GetAt`. Nie jest to jednak zliczane przez `GetLength`, a zwracana wartość to 0.
+Wywołaj tę metodę, aby zwrócić jeden znak określony przez *iChar*. Przeciążony operator indeksu dolnego ( **[]** ) jest wygodnym aliasem dla `GetAt`. Terminator o wartości null ma adres bez generowania wyjątku przy użyciu `GetAt`. Nie jest to jednak uwzględniane przez `GetLength`, a zwrócona wartość to 0.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `CSimpleStringT::GetAt`programu.
+Poniższy przykład ilustruje sposób używania `CSimpleStringT::GetAt`.
 
 ```cpp
 CSimpleString s(_T("abcdef"), pMgr);
@@ -436,7 +436,7 @@ ASSERT(s.GetAt(2) == _T('c'));
 
 ##  <a name="getbuffer"></a>CSimpleStringT:: GetBuffer
 
-Zwraca wskaźnik do wewnętrznego buforu znaków dla `CSimpleStringT` obiektu.
+Zwraca wskaźnik do wewnętrznego buforu znaków dla obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -454,21 +454,21 @@ Jeśli wartość *nMinBufferLength* jest większa niż długość bieżącego bu
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`PXSTR` Wskaźnik do buforu znaków (zakończony wartością null) obiektu.
+`PXSTR` wskaźnik do bufora znaków (zakończona wartością null) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby zwrócić zawartość `CSimpleStringT` buforu obiektu. Zwracana `PXSTR` wartość nie jest stałą i w związku z tym umożliwia bezpośrednie `CSimpleStringT` modyfikowanie zawartości.
+Wywołaj tę metodę, aby zwrócić zawartość buforu obiektu `CSimpleStringT`. Zwrócony `PXSTR` nie jest stałą i w związku z tym umożliwia bezpośrednie modyfikowanie zawartości `CSimpleStringT`.
 
-Jeśli używasz wskaźnika zwróconego przez `GetBuffer` , aby zmienić zawartość ciągu, należy wywołać [ReleaseBuffer](#releasebuffer) przed użyciem jakichkolwiek innych `CSimpleStringT` metod elementu członkowskiego.
+Jeśli używasz wskaźnika zwróconego przez `GetBuffer`, aby zmienić zawartość ciągu, należy wywołać [ReleaseBuffer](#releasebuffer) przed użyciem innych `CSimpleStringT` metod elementu członkowskiego.
 
-Adres zwrócony przez `GetBuffer` może nie być prawidłowy po `ReleaseBuffer` wywołaniu, ponieważ `CSimpleStringT` dodatkowe `CSimpleStringT` operacje mogą spowodować ponowne przydzielenie buforu. Bufor nie jest ponownie alokowany, jeśli nie zmienisz długości `CSimpleStringT`.
+Adres zwrócony przez `GetBuffer` może być nieprawidłowy po wywołaniu `ReleaseBuffer`, ponieważ dodatkowe operacje `CSimpleStringT` mogą spowodować ponowne przydzielenie buforu `CSimpleStringT`. Bufor nie jest ponownie alokowany, jeśli nie zostanie zmieniona długość `CSimpleStringT`.
 
-Pamięć buforu jest automatycznie zwalniana, gdy `CSimpleStringT` obiekt zostanie zniszczony.
+Pamięć buforu jest automatycznie zwalniana, gdy obiekt `CSimpleStringT` zostanie zniszczony.
 
-Jeśli stale śledzisz długość ciągu, nie należy dołączać kończącego znaku null. Należy jednak określić końcową długość ciągu podczas zwalniania bufora przy użyciu `ReleaseBuffer`. Jeśli dołączysz kończący znak null, należy przekazać wartość-1 (wartość domyślna) dla długości. `ReleaseBuffer`następnie określa długość buforu.
+Jeśli stale śledzisz długość ciągu, nie należy dołączać kończącego znaku null. Należy jednak określić końcową długość ciągu podczas zwalniania buforu przy użyciu `ReleaseBuffer`. Jeśli dołączysz kończący znak null, należy przekazać wartość-1 (wartość domyślna) dla długości. `ReleaseBuffer` następnie określa długość buforu.
 
-W przypadku braku wystarczającej ilości pamięci do `GetBuffer` spełnienia żądania ta metoda zgłasza CMemoryException *.
+Jeśli jest za mało pamięci, aby spełnić żądanie `GetBuffer`, Metoda ta zgłasza CMemoryException *.
 
 ### <a name="example"></a>Przykład
 
@@ -485,7 +485,7 @@ s.ReleaseBuffer();
 
 ##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength
 
-Zwraca wskaźnik do wewnętrznego bufora znaków dla `CSimpleStringT` obiektu, obcinając lub rozwijając jego długość, jeśli jest to konieczne, aby dokładnie dopasować długość określoną w *nLength*.
+Zwraca wskaźnik do wewnętrznego buforu znaków dla obiektu `CSimpleStringT`, obcinając lub rozwijając jego długość, jeśli jest to konieczne, aby dokładnie dopasować długość określoną w *nLength*.
 
 ### <a name="syntax"></a>Składnia
 
@@ -496,23 +496,23 @@ PXSTR GetBufferSetLength(int nLength);
 #### <a name="parameters"></a>Parametry
 
 *nLength*<br/>
-Dokładny rozmiar `CSimpleStringT` buforu znaków w znakach.
+Dokładny rozmiar buforu znaków `CSimpleStringT` w znakach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`PXSTR` Wskaźnik do buforu znaków (zakończony wartością null) obiektu.
+`PXSTR` wskaźnik do bufora znaków (zakończona wartością null) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pobrać określoną długość buforu `CSimpleStringT` wewnętrznego obiektu. Zwrócony `PXSTR` wskaźnik nie jest **stałą** i w ten sposób `CSimpleStringT` umożliwia bezpośrednie modyfikowanie zawartości.
+Wywołaj tę metodę, aby pobrać określoną długość bufora wewnętrznego obiektu `CSimpleStringT`. Zwrócony wskaźnik `PXSTR` nie jest wartością **stałą** i w ten sposób umożliwia bezpośrednie modyfikowanie `CSimpleStringT` zawartości.
 
-Jeśli używasz wskaźnika zwróconego przez [GetBufferSetLength](#getbuffersetlength) do zmiany zawartości ciągu, wywołaj `ReleaseBuffer` , aby zaktualizować stan `CsimpleStringT` wewnętrzny przed użyciem innych `CSimpleStringT` metod.
+Jeśli używasz wskaźnika zwróconego przez [GetBufferSetLength](#getbuffersetlength) , aby zmienić zawartość ciągu, wywołaj `ReleaseBuffer`, aby zaktualizować stan wewnętrzny `CsimpleStringT` przed użyciem innych metod `CSimpleStringT`.
 
-Adres zwrócony przez `GetBufferSetLength` może nie być prawidłowy po `ReleaseBuffer` wywołaniu, ponieważ `CSimpleStringT` dodatkowe `CSimpleStringT` operacje mogą spowodować ponowne przydzielenie buforu. Bufor nie zostanie ponownie przypisany, jeśli nie zmienisz długości `CSimpleStringT`.
+Adres zwrócony przez `GetBufferSetLength` może być nieprawidłowy po wywołaniu `ReleaseBuffer`, ponieważ dodatkowe operacje `CSimpleStringT` mogą spowodować ponowne przydzielenie buforu `CSimpleStringT`. Bufor nie zostanie ponownie przypisany, jeśli nie zostanie zmieniona długość `CSimpleStringT`.
 
-Pamięć buforu jest automatycznie zwalniana, gdy `CSimpleStringT` obiekt zostanie zniszczony.
+Pamięć buforu jest automatycznie zwalniana, gdy obiekt `CSimpleStringT` zostanie zniszczony.
 
-Jeśli śledzisz długość ciągu samodzielnie, nie dołączaj kończącego znaku null. Po zwolnieniu bufora przy użyciu polecenia `ReleaseBuffer`należy określić końcową długość ciągu. Jeśli `ReleaseBuffer`dołączysz kończący znak null podczas wywołania, pass-1 (wartość domyślna) dla długości do `ReleaseBuffer`i `ReleaseBuffer` `strlen` wykona w buforze, aby określić jego długość.
+Jeśli śledzisz długość ciągu samodzielnie, nie dołączaj kończącego znaku null. Po zwolnieniu bufora przy użyciu `ReleaseBuffer`należy określić końcową długość ciągu. Jeśli dołączysz kończący znak null, gdy wywołasz `ReleaseBuffer`, pass-1 (wartość domyślna) dla długości do `ReleaseBuffer`, a `ReleaseBuffer` wykona `strlen` w buforze, aby określić jego długość.
 
 Aby uzyskać więcej informacji na temat zliczania odwołań, zobacz następujące artykuły:
 
@@ -542,7 +542,7 @@ ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 
 ##  <a name="getlength"></a>CSimpleStringT:: GetLength
 
-Zwraca liczbę znaków w `CSimpleStringT` obiekcie.
+Zwraca liczbę znaków w obiekcie `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -558,11 +558,11 @@ Liczba znaków w ciągu.
 
 Wywołaj tę metodę, aby zwrócić liczbę znaków w obiekcie. Liczba nie zawiera terminatora o wartości null.
 
-W przypadku zestawów znaków wielobajtowych ( `GetLength` MBCS) zlicza każdy znak 8-bitowy, czyli bajt wiodący i końcowy w jednym znaku wielobajtowym jest liczony jako dwa bajty. Zobacz [FreeExtra](#freeextra) , aby zapoznać się z przykładem wywoływania tej funkcji.
+W przypadku zestawów znaków wielobajtowych (MBCS) `GetLength` zlicza każdy znak 8-bitowy; oznacza to, że bajty wiodące i końcowe w jednym znaku wielobajtowym są zliczane jako dwa bajty. Zobacz [FreeExtra](#freeextra) , aby zapoznać się z przykładem wywoływania tej funkcji.
 
 ##  <a name="getmanager"></a>CSimpleStringT:: GetManager
 
-Pobiera Menedżera `CSimpleStringT` pamięci obiektu.
+Pobiera Menedżera pamięci `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -572,11 +572,11 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do Menedżera pamięci dla `CSimpleStringT` obiektu.
+Wskaźnik do Menedżera pamięci dla obiektu `CSimpleStringT`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pobrać Menedżera pamięci używanego przez `CSimpleStringT` obiekt. Aby uzyskać więcej informacji na temat menedżerów pamięci i obiektów ciągów, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
+Wywołaj tę metodę, aby pobrać Menedżera pamięci używanego przez obiekt `CSimpleStringT`. Aby uzyskać więcej informacji na temat menedżerów pamięci i obiektów ciągów, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
 
 ##  <a name="getstring"></a>CSimpleStringT:: GetString
 
@@ -594,10 +594,10 @@ Wskaźnik do ciągu znaków zakończonych znakiem null.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pobrać ciąg znaków skojarzony z `CSimpleStringT` obiektem.
+Wywołaj tę metodę, aby pobrać ciąg znaków skojarzony z obiektem `CSimpleStringT`.
 
 > [!NOTE]
->  Zwrócony `PCXSTR` wskaźnik jest **stałą** i nie `CSimpleStringT` dopuszcza bezpośredniej modyfikacji zawartości.
+>  Zwrócony wskaźnik `PCXSTR` jest wartością **stałą** i nie dopuszcza bezpośredniej modyfikacji zawartości `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -611,7 +611,7 @@ _tprintf_s(_T("%s"), str.GetString());
 
 ##  <a name="isempty"></a>CSimpleStringT:: IsEmpty
 
-Testuje `CSimpleStringT` obiekt dla pustego warunku.
+Testuje obiekt `CSimpleStringT` dla pustego warunku.
 
 ### <a name="syntax"></a>Składnia
 
@@ -621,7 +621,7 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, `CSimpleStringT` Jeśli obiekt ma 0 długości; w przeciwnym razie wartość false.
+Zwraca wartość TRUE, jeśli obiekt `CSimpleStringT` ma 0 długości; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -648,11 +648,11 @@ PXSTR LockBuffer();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CSimpleStringT` obiektu lub ciąg zakończony znakiem null.
+Wskaźnik do obiektu `CSimpleStringT` lub ciąg zakończony znakiem null.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby zablokować bufor `CSimpleStringT` obiektu. Przez wywołanie `LockBuffer`, należy utworzyć kopię ciągu z-1 dla liczby odwołań. Gdy wartość licznika odwołań to-1, ciąg w buforze jest uznawany za w stanie "zablokowany". W stanie zablokowanym, ciąg jest chroniony na dwa sposoby:
+Wywołaj tę metodę, aby zablokować bufor obiektu `CSimpleStringT`. Wywołując `LockBuffer`, utworzysz kopię ciągu z-1 dla liczby odwołań. Gdy wartość licznika odwołań to-1, ciąg w buforze jest uznawany za w stanie "zablokowany". W stanie zablokowanym, ciąg jest chroniony na dwa sposoby:
 
 - Żaden inny ciąg nie może uzyskać odwołania do danych w zablokowanym ciągu, nawet jeśli ten ciąg jest przypisany do zamkniętego ciągu.
 
@@ -660,10 +660,10 @@ Wywołaj tę metodę, aby zablokować bufor `CSimpleStringT` obiektu. Przez wywo
 
 Przez zablokowanie ciągu w buforze upewnij się, że wyłączne wstrzymanie ciągu w buforze pozostanie nienaruszone.
 
-Po zakończeniu pracy z programem `LockBuffer`Wywołaj [UnlockBuffer](#unlockbuffer) , aby zresetować liczbę odwołań do 1.
+Po zakończeniu pracy z `LockBuffer`Wywołaj [UnlockBuffer](#unlockbuffer) , aby zresetować liczbę odwołań do 1.
 
 > [!NOTE]
->  W przypadku wywołania [](#getbuffer) metody GetBuffer w zablokowanym buforze i ustawieniu `GetBuffer` parametru `nMinBufferLength` na wartość większą niż długość bieżącego buforu, blokada buforu zostanie utracona. Takie wywołanie `GetBuffer` niszczy bieżący bufor, zastępuje je buforem żądanego rozmiaru i resetuje liczbę odwołań do zera.
+>  W przypadku wywołania metody [GetBuffer](#getbuffer) w zablokowanym buforze i ustawieniu `GetBuffer` parametru `nMinBufferLength` na wartość większą niż długość bieżącego buforu, blokada buforu zostanie utracona. Takie wywołanie `GetBuffer` niszczy bieżący bufor, zastępuje je buforem żądanego rozmiaru i resetuje liczbę odwołań do zera.
 
 Aby uzyskać więcej informacji na temat zliczania odwołań, zobacz następujące artykuły:
 
@@ -707,7 +707,7 @@ Liczony od zera indeks znaku w ciągu.
 Przeciążony operator indeksu dolnego ( **[]** ) zwraca pojedynczy znak określony przez indeks liczony od zera w *iChar*. Ten operator jest wygodnym substytutem funkcji składowej [GetAt](#getat) .
 
 > [!NOTE]
->  Można użyć operatora indeks dolny ( **[]** ) `CSimpleStringT`, aby uzyskać wartość znaku w, ale nie można użyć go do zmiany wartości znaku w `CSimpleStringT`.
+>  Można użyć operatora indeks dolny ( **[]** ), aby uzyskać wartość znaku w `CSimpleStringT`, ale nie można użyć go do zmiany wartości znaku w `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -718,7 +718,7 @@ CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
 
-## <a name="operator_at"></a>CSimpleStringT:: operator\[\]
+## <a name="operator_at"></a>CSimpleStringT:: operator \[\]
 
 Wywołaj tę funkcję, aby uzyskać dostęp do pojedynczego znaku tablicy znaków.
 
@@ -738,7 +738,7 @@ Liczony od zera indeks znaku w ciągu.
 Przeciążony operator indeksu dolnego ( **[]** ) zwraca pojedynczy znak określony przez indeks liczony od zera w *iChar*. Ten operator jest wygodnym substytutem funkcji składowej [GetAt](#getat) .
 
 > [!NOTE]
->  Można użyć operatora indeks dolny ( **[]** ) `CSimpleStringT`, aby uzyskać wartość znaku w, ale nie można użyć go do zmiany wartości znaku w `CSimpleStringT`.
+>  Można użyć operatora indeks dolny ( **[]** ), aby uzyskać wartość znaku w `CSimpleStringT`, ale nie można użyć go do zmiany wartości znaku w `CSimpleStringT`.
 
 ##  <a name="operator_add_eq"></a>CSimpleStringT:: operator + =
 
@@ -762,14 +762,14 @@ CSimpleStringT& operator +=(wchar_t ch);
 Wskaźnik na ciąg zakończony znakiem null.
 
 *strSrc*<br/>
-Wskaźnik do istniejącego `CSimpleStringT` obiektu.
+Wskaźnik do istniejącego obiektu `CSimpleStringT`.
 
 *ch*<br/>
 Znak, który ma zostać dołączony.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator akceptuje inny `CSimpleStringT` obiekt lub znak. Należy zauważyć, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz tego operatora łączenia, ponieważ nowy magazyn może być przydzielony do znaków dodanych do tego `CSimpleStringT` obiektu.
+Operator akceptuje inny obiekt `CSimpleStringT` lub znak. Należy zauważyć, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz tego operatora łączenia, ponieważ nowy magazyn może być przydzielony do znaków dodawanych do tego obiektu `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -782,7 +782,7 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 
 ##  <a name="operator_eq"></a>CSimpleStringT:: operator =
 
-Przypisuje nową wartość do `CSimpleStringT` obiektu.
+Przypisuje nową wartość do obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -797,11 +797,11 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 Wskaźnik na ciąg zakończony znakiem null.
 
 *strSrc*<br/>
-Wskaźnik do istniejącego `CSimpleStringT` obiektu.
+Wskaźnik do istniejącego obiektu `CSimpleStringT`.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ciąg docelowy (po lewej stronie) jest wystarczająco duży, aby można było zapisać nowe dane, nie jest wykonywana nowa alokacja pamięci. Należy zauważyć, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz operatora przypisania, ponieważ nowy magazyn jest często `CSimpleStringT` przydzielony do przechowywania wyniku obiektu.
+Jeśli ciąg docelowy (po lewej stronie) jest wystarczająco duży, aby można było zapisać nowe dane, nie jest wykonywana nowa alokacja pamięci. Należy zauważyć, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz operatora przypisania, ponieważ nowy magazyn jest często przydzielony do przechowywania wychodzącego obiektu `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -829,7 +829,7 @@ ASSERT(_tcscmp(s1, _T("x")) == 0);
 
 ##  <a name="operator_pcxstr"></a>CSimpleStringT:: operator PCXSTR
 
-Bezpośrednio uzyskuje dostęp do znaków przechowywanych `CSimpleStringT` w obiekcie jako ciąg w stylu języka C.
+Bezpośrednio uzyskuje dostęp do znaków przechowywanych w obiekcie `CSimpleStringT` jako ciąg w stylu C.
 
 ### <a name="syntax"></a>Składnia
 
@@ -843,7 +843,7 @@ Wskaźnik znaku do danych ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie są kopiowane żadne znaki; zwracany jest tylko wskaźnik. Należy zachować ostrożność przy użyciu tego operatora. Jeśli zmienisz `CString` obiekt po uzyskaniu wskaźnika znaku, może dojść do ponownej alokacji pamięci, która unieważnia wskaźnik.
+Nie są kopiowane żadne znaki; zwracany jest tylko wskaźnik. Należy zachować ostrożność przy użyciu tego operatora. Jeśli zmienisz obiekt `CString` po uzyskaniu wskaźnika znakowego, może dojść do ponownej alokacji pamięci, która unieważnia wskaźnik.
 
 ### <a name="example"></a>Przykład
 
@@ -891,7 +891,7 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 
 ##  <a name="preallocate"></a>CSimpleStringT::P ponownie przydzielić
 
-Przydziela określoną ilość bajtów dla `CSimpleStringT` obiektu.
+Przydziela określoną ilość bajtów dla obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -902,13 +902,13 @@ void Preallocate( int nLength);
 #### <a name="parameters"></a>Parametry
 
 *nLength*<br/>
-Dokładny rozmiar `CSimpleStringT` buforu znaków w znakach.
+Dokładny rozmiar buforu znaków `CSimpleStringT` w znakach.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby przydzielić określony rozmiar buforu `CSimpleStringT` dla obiektu.
+Wywołaj tę metodę, aby przydzielić określony rozmiar buforu dla obiektu `CSimpleStringT`.
 
-`CSimpleStringT`generuje wyjątek STATUS_NO_MEMORY, jeśli nie może przydzielić miejsca dla buforu znaków. Domyślnie alokacja pamięci jest wykonywana przez funkcje `HeapAlloc` interfejsu API Win32 lub. `HeapReAlloc`
+`CSimpleStringT` generuje wyjątek STATUS_NO_MEMORY, jeśli nie może przydzielić miejsca dla buforu znaków. Domyślnie alokacja pamięci jest wykonywana przez funkcje interfejsu API WIN32 `HeapAlloc` lub `HeapReAlloc`.
 
 ### <a name="example"></a>Przykład
 
@@ -944,11 +944,11 @@ void ReleaseBuffer(int nNewLength = -1);
 #### <a name="parameters"></a>Parametry
 
 *nNewLength*<br/>
-Nowa długość ciągu znaków, która nie zlicza terminatora o wartości null. Jeśli ciąg jest zakończony wartością null, wartość domyślna-1 ustawia `CSimpleStringT` rozmiar na bieżącą długość ciągu.
+Nowa długość ciągu znaków, która nie zlicza terminatora o wartości null. Jeśli ciąg jest zakończony wartością null, wartość domyślna-1 ustawia rozmiar `CSimpleStringT` na bieżącą długość ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby ponownie przydzielić lub zwolnić bufor obiektu ciągu. Jeśli wiesz, że ciąg w buforze jest zakończony wartością null, możesz pominąć argument *nNewLength* . Jeśli ciąg nie jest zakończony wartością null, użyj *nNewLength* , aby określić jego długość. Adres zwrócony przez metodę [GetBuffer](#getbuffer) jest nieprawidłowy po wywołaniu `ReleaseBuffer` lub dowolnej innej `CSimpleStringT` operacji.
+Wywołaj tę metodę, aby ponownie przydzielić lub zwolnić bufor obiektu ciągu. Jeśli wiesz, że ciąg w buforze jest zakończony wartością null, możesz pominąć argument *nNewLength* . Jeśli ciąg nie jest zakończony wartością null, użyj *nNewLength* , aby określić jego długość. Adres zwrócony przez metodę [GetBuffer](#getbuffer) jest nieprawidłowy po wywołaniu `ReleaseBuffer` lub dowolnej innej operacji `CSimpleStringT`.
 
 ### <a name="example"></a>Przykład
 
@@ -993,7 +993,7 @@ Ta funkcja działa podobnie jak [ReleaseBuffer](#releasebuffer) , z tą różnic
 
 ##  <a name="setat"></a>CSimpleStringT::SetAt
 
-Ustawia pojedynczy znak z `CSimpleStringT` obiektu.
+Ustawia pojedynczy znak z obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1004,7 +1004,7 @@ void SetAt(int iChar, XCHAR ch);
 #### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Liczony od zera indeks znaku w `CSimpleStringT` obiekcie. Parametr *iChar* musi być większy lub równy 0 i mniejszy od wartości zwracanej przez GetLength. [](#getlength)
+Liczony od zera indeks znaku w obiekcie `CSimpleStringT`. Parametr *iChar* musi być większy lub równy 0 i mniejszy od wartości zwracanej przez [GetLength](#getlength).
 
 *ch*<br/>
 Nowy znak.
@@ -1025,7 +1025,7 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 
 ##  <a name="setmanager"></a>CSimpleStringT:: setmanager
 
-Określa Menedżera `CSimpleStringT` pamięci obiektu.
+Określa Menedżera pamięci obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1040,7 +1040,7 @@ Wskaźnik do nowego menedżera pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby określić nowy Menedżer pamięci używany przez `CSimpleStringT` obiekt. Aby uzyskać więcej informacji na temat menedżerów pamięci i obiektów ciągów, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
+Wywołaj tę metodę, aby określić nowy Menedżer pamięci używany przez obiekt `CSimpleStringT`. Aby uzyskać więcej informacji na temat menedżerów pamięci i obiektów ciągów, zobacz [Zarządzanie pamięcią i CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="example"></a>Przykład
 
@@ -1053,7 +1053,7 @@ s.SetManager(pCustomMgr);
 
 ##  <a name="setstring"></a>CSimpleStringT:: SetString
 
-Ustawia ciąg `CSimpleStringT` obiektu.
+Ustawia ciąg obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1072,15 +1072,15 @@ Liczba znaków w *pszSrc*.
 
 ### <a name="remarks"></a>Uwagi
 
-Kopiuj ciąg do `CSimpleStringT` obiektu. `SetString`zastępuje starsze dane ciągu w buforze.
+Kopiuj ciąg do obiektu `CSimpleStringT`. `SetString` zastępuje starsze dane ciągu w buforze.
 
-Obie wersje programu `SetString` sprawdzają, czy *pszSrc* jest wskaźnikiem typu null, a jeśli tak, zgłaszaj błąd E_INVALIDARG.
+Obie wersje `SetString` sprawdzają, czy *pszSrc* jest wskaźnikiem o wartości null, a jeśli jest, zgłoś błąd E_INVALIDARG.
 
-Wersja z `SetString` jednym parametrem oczekuje, że *pszSrc* ma wskazywać ciąg zakończony znakiem null.
+Jednoparametrowa wersja `SetString` oczekuje, że *pszSrc* ma wskazywać na ciąg zakończony znakiem null.
 
-Wersja `SetString` z dwoma parametrami oczekuje również, że *pszSrc* będzie ciągiem zakończonym wartością null. Używa *nLength* jako długości ciągu, chyba że napotka najpierw terminator o wartości null.
+Dwuparametrowa wersja `SetString` powinna również oczekiwać, że *pszSrc* będzie ciągiem zakończonym wartością null. Używa *nLength* jako długości ciągu, chyba że napotka najpierw terminator o wartości null.
 
-Wersja z `SetString` dwoma parametrami sprawdza także, czy *pszSrc* wskazuje lokalizację w bieżącym buforze w `CSimpleStringT`. W tym specjalnym przypadku `SetString` używa funkcji kopiowania pamięci, która nie zastępuje danych ciągu, ponieważ kopiuje dane ciągu z powrotem do buforu.
+Dwuparametrowa wersja `SetString` sprawdza także, czy *pszSrc* wskazuje lokalizację w bieżącym buforze w `CSimpleStringT`. W tym szczególnym przypadku `SetString` używa funkcji kopiowania pamięci, która nie zastępuje danych ciągu, ponieważ kopiuje dane ciągu z powrotem do buforu.
 
 ### <a name="example"></a>Przykład
 
@@ -1144,7 +1144,7 @@ Nowa długość ciągu.
 Wywołaj tę metodę, aby obciąć zawartość ciągu do nowej długości.
 
 > [!NOTE]
->  Nie ma to wpływu na przydzieloną długość buforu. Aby zmniejszyć lub zwiększyć bieżący bufor, zobacz [FreeExtra](#freeextra) i preallocate. [](#preallocate)
+>  Nie ma to wpływu na przydzieloną długość buforu. Aby zmniejszyć lub zwiększyć bieżący bufor, zobacz [FreeExtra](#freeextra) i [preallocate](#preallocate).
 
 ### <a name="example"></a>Przykład
 
@@ -1161,7 +1161,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 
 ##  <a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
 
-Odblokowuje bufor `CSimpleStringT` obiektu.
+Odblokowuje bufor obiektu `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1173,11 +1173,11 @@ void UnlockBuffer() throw();
 
 Wywołaj tę metodę, aby zresetować liczbę odwołań ciągu do 1.
 
-Destruktor automatycznie wywołuje `UnlockBuffer` , aby upewnić się, że bufor nie jest zablokowany w przypadku wywołania destruktora. `CSimpleStringT` Aby zapoznać się z przykładem tej metody, zobacz [LockBuffer](#lockbuffer).
+Destruktor `CSimpleStringT` automatycznie wywołuje `UnlockBuffer`, aby upewnić się, że bufor nie jest zablokowany w przypadku wywołania destruktora. Aby zapoznać się z przykładem tej metody, zobacz [LockBuffer](#lockbuffer).
 
 ##  <a name="dtor"></a>CSimpleStringT:: ~ CSimpleStringT
 
-`CSimpleStringT` Niszczy obiekt.
+Niszczy obiekt `CSimpleStringT`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1187,7 +1187,7 @@ Destruktor automatycznie wywołuje `UnlockBuffer` , aby upewnić się, że bufor
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby `CSimpleStringT` zniszczyć obiekt.
+Wywołaj tę metodę, aby zniszczyć obiekt `CSimpleStringT`.
 
 ## <a name="see-also"></a>Zobacz także
 

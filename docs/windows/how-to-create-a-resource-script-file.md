@@ -37,11 +37,11 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444968"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866124"
 ---
 # <a name="how-to-create-resources-c"></a>Instrukcje: Tworzenie zasobów (C++)
 
@@ -120,7 +120,7 @@ Możesz również kliknąć prawym przyciskiem myszy okno **Widok zasobów** , a
 | **Typ zasobu** | Określ rodzaj zasobu, który chcesz utworzyć.<br/><br/>Można rozwinąć kategorie zasobów kursora i okna dialogowego, aby odsłonić dodatkowe zasoby, które znajdują się w *. \Microsoft Visual Studio \<wersja\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Jeśli musisz dodać pliki. rct, umieść je w tym miejscu lub określ inną [ścieżkę include](../windows/how-to-specify-include-directories-for-resources.md). Zasoby wyświetlane na najwyższym poziomie w formancie drzewa są domyślnymi zasobami udostępnianymi przez program Visual Studio. Zasoby w plikach. RCT są wyświetlane na drugim poziomie w odpowiedniej kategorii. Brak wstępnie zdefiniowanego limitu liczby plików. rct, które można dodać.<br/><br/> |
 | **Nowy** | Utwórz zasób oparty na typie wybranym w polu **Typ zasobu** i Otwórz zasób w odpowiednim edytorze.<br/><br/>Na przykład w przypadku utworzenia zasobu okna dialogowego otwiera on zasób w [edytorze okien dialogowych](../windows/dialog-editor.md). |
 | **Importujuj** | Otwórz okno dialogowe **Importuj** , aby przejść do zasobu, który ma zostać zaimportowany do bieżącego projektu.<br/><br/>Możesz zaimportować mapę bitową, ikonę, kursor, kod HTML, dźwięk (. WAV) lub niestandardowy plik zasobów. |
-| **Custom** | Otwórz okno dialogowe **nowy zasób niestandardowy** , aby utworzyć zasób niestandardowy.<br/><br/>Zawiera również właściwość **typu zasobu** , która zawiera pole tekstowe służące do wprowadzania nazwy niestandardowego typu zasobu. Wizualizacja C++ jest automatycznie zamieniana na wielką nazwę po zakończeniu. Zasoby niestandardowe są edytowane tylko w [edytorze binarnym](../windows/binary-editor.md). |
+| **Niestandardowy** | Otwórz okno dialogowe **nowy zasób niestandardowy** , aby utworzyć zasób niestandardowy.<br/><br/>Zawiera również właściwość **typu zasobu** , która zawiera pole tekstowe służące do wprowadzania nazwy niestandardowego typu zasobu. Wizualizacja C++ jest automatycznie zamieniana na wielką nazwę po zakończeniu. Zasoby niestandardowe są edytowane tylko w [edytorze binarnym](../windows/binary-editor.md). |
 
 Podczas tworzenia nowego zasobu, Visual C++ przypisuje do niego unikatową nazwę, na przykład `IDD_Dialog1`. Ten identyfikator zasobu można dostosować, edytując właściwości zasobu w odpowiednim edytorze zasobów lub w [okno właściwości](/visualstudio/ide/reference/properties-window).
 

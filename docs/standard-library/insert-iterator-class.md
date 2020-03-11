@@ -11,15 +11,15 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447660"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874055"
 ---
-# <a name="insertiterator-class"></a>insert_iterator — Klasa
+# <a name="insert_iterator-class"></a>insert_iterator — Klasa
 
-Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów asocjacyjnych i sekwencji C++. `insert_iterator` Klasa jest szablonowana dla typu dostosowanego kontenera.
+Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów asocjacyjnych i sekwencji C++. Klasa `insert_iterator` jest szablonowana dla typu dostosowanego kontenera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,33 +30,33 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-*Wbudowane*\
-Typ kontenera, do którego elementy mają być wstawiane przez `insert_iterator`.
+\ *kontenera*
+Typ kontenera, w którym elementy mają być wstawiane przez `insert_iterator`.
 
 ## <a name="remarks"></a>Uwagi
 
-Kontener typu `Container` musi spełniać wymagania dotyczące kontenera o zmiennym rozmiarze i mieć dwuargumentową funkcję członkowską INSERT, gdzie parametry są typu `Container::iterator` i `Container::value_type` i zwracają typ `Container::iterator`. C++Standardowa sekwencja biblioteki i posortowane Kontenery asocjacyjne spełniają te wymagania i można je dostosować `insert_iterator`do użytku z usługą s. Dla kontenerów asocjacyjnych argument pozycji jest traktowany jako wskazówka, która ma potencjał, aby zwiększyć lub zmniejszyć wydajność w zależności od tego, jak dobra jest to wskazówka. Element `insert_iterator` musi być zawsze zainicjowany przy użyciu jego kontenera.
+Kontener typu `Container` musi spełniać wymagania dotyczące kontenera o zmiennym rozmiarze i mieć dwuargumentową funkcję członkowską INSERT, gdzie parametry typu `Container::iterator` i `Container::value_type`, które zwracają `Container::iterator`typu. C++Standardowa sekwencja biblioteki i posortowane Kontenery asocjacyjne spełniają te wymagania i można je dostosować do użycia z `insert_iterator`s. Dla kontenerów asocjacyjnych argument pozycji jest traktowany jako wskazówka, która ma potencjał, aby zwiększyć lub zmniejszyć wydajność w zależności od tego, jak dobra jest to wskazówka. Element `insert_iterator` musi być zawsze zainicjowany przy użyciu jego kontenera.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[insert_iterator](#insert_iterator)|Tworzy obiekt `insert_iterator` , który wstawia element do określonej pozycji w kontenerze.|
+|[insert_iterator](#insert_iterator)|Konstruuje `insert_iterator`, która wstawia element do określonej pozycji w kontenerze.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
 |[container_type](#container_type)|Typ, który reprezentuje kontener, w którym ma być przeprowadzone ogólne wstawienie.|
-|[Odwołanie](#reference)|Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.|
+|[odwoła](#reference)|Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[zakład](#op_star)|Operator dereferencji używany do implementowania wyrażenia `i`  =  `x` iteratora danych wyjściowych dla ogólnego wstawiania.|
-|[operator++](#op_add_add)|`insert_iterator` Zwiększa do następnej lokalizacji, w której może być przechowywana wartość.|
-|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia `i`  =  `x` iteratora danych wyjściowych dla ogólnego wstawiania.|
+|[zakład](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych * `i` = `x` do ogólnego wstawiania.|
+|[operator + +](#op_add_add)|Zwiększa `insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|
+|[operator =](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych * `i` = `x` do ogólnego wstawiania.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +64,7 @@ Kontener typu `Container` musi spełniać wymagania dotyczące kontenera o zmien
 
 **Przestrzeń nazw:** std
 
-## <a name="container_type"></a>insert_iterator::container_type
+## <a name="container_type"></a>insert_iterator:: container_type
 
 Typ, który reprezentuje kontener, w którym ma być przeprowadzone ogólne wstawienie.
 
@@ -106,9 +106,9 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>insert_iterator::insert_iterator
+## <a name="insert_iterator"></a>insert_iterator:: insert_iterator
 
-Tworzy obiekt `insert_iterator` , który wstawia element do określonej pozycji w kontenerze.
+Konstruuje `insert_iterator`, która wstawia element do określonej pozycji w kontenerze.
 
 ```cpp
 insert_iterator(Container& _Cont, typename Container::iterator _It);
@@ -117,7 +117,7 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Kontener, do którego `insert_iterator` ma zostać wstawiony element.
+Kontener, do którego `insert_iterator` ma wstawiać elementy.
 
 *_It*\
 Pozycja wstawiania.
@@ -186,7 +186,7 @@ Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementowania wyrażenia =   **\*** iteratora danych wyjściowych ITER. Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie  **\*ITER** = **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
+Służy do implementowania wyrażenia iteratora danych wyjściowych **\*Iter** = **wartość**. Jeśli `Iter` to iterator, który odnosi się do elementu w sekwencji, a następnie **\*Iter** = **wartość** zastępuje ten element wartością i nie zmieni całkowitej liczby elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -234,7 +234,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>insert_iterator:: operator + +
 
-`insert_iterator` Zwiększa do następnej lokalizacji, w której może być przechowywana wartość.
+Zwiększa `insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -244,7 +244,7 @@ insert_iterator<Container> operator++(int);
 
 ### <a name="parameters"></a>Parametry
 
-`insert_iterator` Adresowanie następnej lokalizacji, w której może być przechowywana wartość.
+`insert_iterator` odnoszący się do następnej lokalizacji, w której może być przechowywana wartość.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*użyte*\
+*val*\
 Wartość, która ma zostać przypisana do kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -325,7 +325,7 @@ Obliczany jest pierwszy operator członkowski
 
 `++Iter;`
 
-następnie zwraca `*this`wartość.
+następnie zwraca `*this`.
 
 Drugi operator elementu członkowskiego oblicza
 
@@ -333,7 +333,7 @@ Drugi operator elementu członkowskiego oblicza
 
 `++Iter;`
 
-następnie zwraca `*this`wartość.
+następnie zwraca `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<iterator>](../standard-library/iterator.md)\
+[\<iterator >](../standard-library/iterator.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686101"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856739"
 ---
 # <a name="c-standard-library-containers"></a>C++Kontenery biblioteki standardowej
 
@@ -32,17 +32,17 @@ Kontener `deque` (Kolejka zakończono) umożliwia szybkie Wstawianie i usuwanie 
 
 Kontener `list` to połączona podwójna lista, która umożliwia dostęp dwukierunkowy, szybkie wstawienia i szybkie usuwanie w dowolnym miejscu kontenera, ale nie można losowo uzyskać dostępu do elementu w kontenerze. Aby uzyskać więcej informacji, zobacz [Klasa list](../standard-library/list-class.md).
 
-Kontener `forward_list` jest pojedynczo połączoną listą — wersją `list` dostępną do przodu. Aby uzyskać więcej informacji, zobacz [Klasa forward_list](../standard-library/forward-list-class.md).
+Kontener `forward_list` jest pojedynczo połączoną listą — wersją `list`dostępną do przodu. Aby uzyskać więcej informacji, zobacz [Forward_list Class](../standard-library/forward-list-class.md).
 
 ## <a name="associative-containers"></a>Kontenery asocjacyjne
 
 W kontenerach asocjacyjnych elementy są wstawiane we wstępnie zdefiniowanej kolejności — na przykład jako sortowane rosnąco. Dostępne są również nieuporządkowane Kontenery asocjacyjne. Kontenery asocjacyjne mogą być pogrupowane w dwa podzestawy: maps i zestawy.
 
-@No__t_0, czasami określany jako słownik, składa się z pary klucz/wartość. Klucz służy do porządkowania sekwencji, a wartość jest skojarzona z tym kluczem. Na przykład `map` może zawierać klucze, które reprezentują każdy unikatowy wyraz w tekście i odpowiadające im wartości, które reprezentują liczbę razy, w których każdy wyraz pojawia się w tekście. Nieuporządkowana wersja `map` jest `unordered_map`. Aby uzyskać więcej informacji, zobacz [Mapowanie klasy](../standard-library/map-class.md) i [klasy unordered_map](../standard-library/unordered-map-class.md).
+`map`, czasami określany jako słownik, składa się z pary klucz/wartość. Klucz służy do porządkowania sekwencji, a wartość jest skojarzona z tym kluczem. Na przykład `map` może zawierać klucze, które reprezentują każdy unikatowy wyraz w tekście i odpowiadające im wartości, które reprezentują liczbę razy, w których każdy wyraz pojawia się w tekście. Nieuporządkowana wersja `map` jest `unordered_map`. Aby uzyskać więcej informacji, zobacz [Mapowanie klasy](../standard-library/map-class.md) i [klasy unordered_map](../standard-library/unordered-map-class.md).
 
-@No__t_0 to tylko rosnący kontener unikatowych elementów — wartość jest również kluczem. Nieuporządkowana wersja `set` jest `unordered_set`. Aby uzyskać więcej informacji, zobacz [Ustawianie klasy](../standard-library/set-class.md) i [klasy unordered_set](../standard-library/unordered-set-class.md).
+`set` to tylko rosnący kontener unikatowych elementów — wartość jest również kluczem. Nieuporządkowana wersja `set` jest `unordered_set`. Aby uzyskać więcej informacji, zobacz [Ustawianie](../standard-library/set-class.md) klasy i [klasy unordered_set](../standard-library/unordered-set-class.md).
 
-Zarówno `map`, jak i `set` umożliwiają wstawianie tylko jednego wystąpienia klucza lub elementu do kontenera. Jeśli jest wymaganych wiele wystąpień elementów, użyj `multimap` lub `multiset`. Wersje nieuporządkowane są `unordered_multimap` i `unordered_multiset`. Aby uzyskać więcej informacji, zobacz Klasa [multimap](../standard-library/multimap-class.md), Klasa [unordered_multimap](../standard-library/unordered-multimap-class.md), [Klasa wielokrotnego](../standard-library/multiset-class.md)użytku i [Klasa unordered_multiset](../standard-library/unordered-multiset-class.md).
+Zarówno `map`, jak i `set` umożliwiają wstawianie tylko jednego wystąpienia klucza lub elementu do kontenera. Jeśli jest wymaganych wiele wystąpień elementów, użyj `multimap` lub `multiset`. Wersje nieuporządkowane są `unordered_multimap` i `unordered_multiset`. Aby uzyskać więcej informacji, zobacz Klasa [multimap](../standard-library/multimap-class.md), Klasa [unordered_multimap](../standard-library/unordered-multimap-class.md), [klasa wielu zestawów](../standard-library/multiset-class.md)i [Klasa unordered_multiset](../standard-library/unordered-multiset-class.md).
 
 Uporządkowane mapy i zestawy obsługują Iteratory dwukierunkowe, a ich nieuporządkowane odpowiedniki obsługują Iteratory do przodu. Aby uzyskać więcej informacji, zobacz [Iteratory](../standard-library/iterators.md).
 
@@ -137,7 +137,7 @@ Karta kontenera jest odmianą sekwencji lub kontenera asocjacyjnego, który ogra
 
 Kontener `queue` następuje przy użyciu semantyki FIFO (pierwszy w pierwszej). Pierwszy element został *wysunięty*— to znaczy wstawiony do kolejki — jest pierwszy do *zdjęte*— czyli usunięty z kolejki. Aby uzyskać więcej informacji, zobacz [Kolejka klasy](../standard-library/queue-class.md).
 
-Kontener `priority_queue` jest zorganizowany w taki sposób, że element, który ma najwyższą wartość, zawsze jest w kolejce. Aby uzyskać więcej informacji, zobacz [Klasa priority_queue](../standard-library/priority-queue-class.md).
+Kontener `priority_queue` jest zorganizowany w taki sposób, że element, który ma najwyższą wartość, zawsze jest w kolejce. Aby uzyskać więcej informacji, zobacz [priority_queue Class](../standard-library/priority-queue-class.md).
 
 Kontener `stack` następuje przy użyciu semantyki LIFO (Ostatnia w, pierwsza z nich). Ostatni element wypchnięcia na stosie to pierwszy element zdjęte. Aby uzyskać więcej informacji, zobacz [Stack Class](../standard-library/stack-class.md).
 
@@ -162,15 +162,15 @@ Do elementów kontenera uzyskuje się dostęp przy użyciu iteratorów. Aby uzys
 
 ## <a name="comparing-containers"></a>Porównywanie kontenerów
 
-Wszystkie kontenery przeciążą operator = = do porównywania dwóch kontenerów tego samego typu, które mają ten sam typ elementu. Można użyć = =, aby porównać > \<string wektora z innym wektorem > \<string, ale nie można użyć go do porównania \<string wektora > z listą \<string > lub \<string wektor > \<char.  W języku C++ 98/03 można użyć [wartości std:: EQUAL](algorithm-functions.md#equal) lub [std:: niezgodność](algorithm-functions.md#mismatch) do porównywania niepodobnych typów kontenerów i/lub typów elementów. W języku C++ 11 można również użyć [std:: is_permutation](algorithm-functions.md#is_permutation). Jednak we wszystkich przypadkach funkcja przyjmuje, że kontenery są takie same. Jeśli drugi zakres jest krótszy niż pierwszy, wówczas wyniki niezdefiniowanego zachowania. Jeśli drugi zakres jest dłuższy, wyniki nadal mogą być nieprawidłowe, ponieważ porównanie nigdy nie przechodzi poza koniec pierwszego zakresu.
+Wszystkie kontenery przeciążą operator = = do porównywania dwóch kontenerów tego samego typu, które mają ten sam typ elementu. Można użyć = =, aby porównać > ciągu\<wektora z innym wektorem\<ciągu >, ale nie można użyć go do porównania\<ciągu wektora > z listą\<ciąg > lub\<wektor > char\<.  W języku C++ 98/03 można użyć [wartości std:: EQUAL](algorithm-functions.md#equal) lub [std:: niezgodność](algorithm-functions.md#mismatch) do porównywania niepodobnych typów kontenerów i/lub typów elementów. W języku C++ 11 można również użyć [std:: is_permutation](algorithm-functions.md#is_permutation). Jednak we wszystkich przypadkach funkcja przyjmuje, że kontenery są takie same. Jeśli drugi zakres jest krótszy niż pierwszy, wówczas wyniki niezdefiniowanego zachowania. Jeśli drugi zakres jest dłuższy, wyniki nadal mogą być nieprawidłowe, ponieważ porównanie nigdy nie przechodzi poza koniec pierwszego zakresu.
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Porównywanie niepodobnych kontenerów (C++ 14)
 
-W języku C++ 14 i nowszych można porównać niepodobne kontenery i/lub różne typy elementów przy użyciu jednego z przeciążeń funkcji `std::equal`, `std::mismatch` lub `std::is_permutation`, które mają dwa kompletne zakresy. Te przeciążenia umożliwiają porównywanie kontenerów z różnymi długościami. Te przeciążenia są znacznie mniej podatne na błędy użytkownika i są zoptymalizowane pod kątem zwrócenia fałszywych wartości w czasie, gdy są porównywane kontenery o niepodobnej długości. Z tego względu zalecamy korzystanie z tych przeciążeń, chyba że (1) masz bardzo oczywisty powód nie dotyczy, lub (2) używasz kontenera [std:: list](../standard-library/list-class.md) , który nie korzysta z optymalizacji podwójnego zakresu.
+W języku C++ 14 i nowszych można porównać niepodobne kontenery i/lub różne typy elementów przy użyciu jednego z przeciążeń funkcji `std::equal`, `std::mismatch`lub `std::is_permutation`, które mają dwa kompletne zakresy. Te przeciążenia umożliwiają porównywanie kontenerów z różnymi długościami. Te przeciążenia są znacznie mniej podatne na błędy użytkownika i są zoptymalizowane pod kątem zwrócenia fałszywych wartości w czasie, gdy są porównywane kontenery o niepodobnej długości. Z tego względu zalecamy korzystanie z tych przeciążeń, chyba że (1) masz bardzo oczywisty powód nie dotyczy, lub (2) używasz kontenera [std:: list](../standard-library/list-class.md) , który nie korzysta z optymalizacji podwójnego zakresu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kontenery](../cpp/containers-modern-cpp.md) \
-Dokumentacja biblioteki standardowej \ [ C++ ](../standard-library/cpp-standard-library-reference.md)
-[\<sample kontenera >](../standard-library/sample-container.md) \
+[Containers](../cpp/containers-modern-cpp.md)\
+Dokumentacja biblioteki standardowej\ [ C++ ](../standard-library/cpp-standard-library-reference.md)
+[\<przykładowego kontenera >](../standard-library/sample-container.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

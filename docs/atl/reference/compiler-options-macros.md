@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630644"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857174"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
@@ -31,10 +31,10 @@ Te makra sterują określonymi funkcjami kompilatora.
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, który umożliwia błędy w projektach przekonwertowanych z poprzednich wersji ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Zdefiniuj, czy co najmniej jeden z obiektów ma używać wątków apartamentu.|
-|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Sprawia, `CString` że niektóre konstruktory są jawne, zapobiegając niezamierzonym konwersji.|
+|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Sprawia, że pewne `CString` konstruktory jawne, zapobiegając wszelkich niezamierzonych konwersji.|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Zdefiniuj to makro, aby użyć C++ standardowej składni zgodnej, która generuje błąd kompilatora C4867, gdy składnia niestandardowa jest używana do inicjowania wskaźnika do funkcji członkowskiej.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Zdefiniuj, czy co najmniej jeden z obiektów ma korzystać z wątków bezpłatnych, czy neutralnych.|
-|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol wskazujący, że projekt będzie miał obiekty, które są oznaczone jako zarówno, bezpłatny, jak i neutralny. Zamiast tego należy użyć [_ATL_FREE_THREADED](#_atl_free_threaded) makro.|
+|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol wskazujący, że projekt będzie miał obiekty, które są oznaczone jako zarówno, bezpłatny, jak i neutralny. Należy zamiast tego użyć makra [_ATL_FREE_THREADED](#_atl_free_threaded) .|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, który uniemożliwia domyślne użycie przestrzeni nazw jako ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol uniemożliwiający kompilowanie kodu związanego z modelem COM przy użyciu projektu.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, który uniemożliwia zainicjowanie wskaźnika tabeli metod w konstruktorze i destruktorze klasy.|
@@ -51,7 +51,7 @@ Symbol, który umożliwia błędy w projektach przekonwertowanych z poprzednich 
 
 ### <a name="remarks"></a>Uwagi
 
-Przed uruchomieniem programu Visual C++ .NET 2002, ATL wyłączono wiele ostrzeżeń i pozostawiono je wyłączane, aby nigdy nie były wyświetlane w kodzie użytkownika. Opracowany
+Przed uruchomieniem programu Visual C++ .NET 2002, ATL wyłączono wiele ostrzeżeń i pozostawiono je wyłączane, aby nigdy nie były wyświetlane w kodzie użytkownika. Są to:
 
 - Wyrażenie warunkowe C4127 jest stałą
 
@@ -73,9 +73,9 @@ Po dodaniu następującego wiersza do pliku *PCH. h* (*stdafx. h* w programie Vi
 
 [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]
 
-W przypadku `#define` dodania tego elementu w nagłówkach ATL należy zachować ostrożność w celu zachowania tych ostrzeżeń, aby nie były one wyłączone globalnie (lub jeśli użytkownik jawnie wyłącza poszczególne ostrzeżenia, a nie włączy ich).
+Jeśli ten `#define` zostanie dodany, w nagłówkach ATL należy zachować ostrożność zachowywania stanu tych ostrzeżeń, aby nie były one wyłączone globalnie (lub jeśli użytkownik jawnie wyłącza poszczególne ostrzeżenia, a nie włączy ich).
 
-Nowe projekty mają ten `#define` zestaw w *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starszych) domyślnie.
+Nowe projekty mają domyślnie ustawioną `#define` w *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i wcześniejszych).
 
 ##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
 
@@ -91,7 +91,7 @@ Określa wątkowość apartamentu. Aby zapoznać się z opisem modeli wątkowoś
 
 ##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
-Sprawia, `CString` że niektóre konstruktory są jawne, zapobiegając niezamierzonym konwersji.
+Sprawia, że pewne `CString` konstruktory jawne, zapobiegając wszelkich niezamierzonych konwersji.
 
 ```
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
@@ -99,9 +99,9 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>Uwagi
 
-Po zdefiniowaniu tego konstruktora wszystkie konstruktory CString, które pobierają jeden parametr, są kompilowane za pomocą słowa kluczowego Explicit, co uniemożliwia niejawne konwersje argumentów wejściowych. Oznacza to, na przykład, że gdy _UNICODE jest zdefiniowana, jeśli spróbujesz użyć ciągu char * jako argumentu konstruktora CString, spowoduje to błąd kompilatora. Tego makra należy używać w sytuacjach, gdy trzeba zapobiec niejawnym konwersji między typami ciągów wąskich i szerokich.
+Po zdefiniowaniu tego konstruktora wszystkie konstruktory CString, które pobierają jeden parametr, są kompilowane za pomocą słowa kluczowego Explicit, co uniemożliwia niejawne konwersje argumentów wejściowych. Oznacza to, na przykład, że jeśli _UNICODE jest zdefiniowany, jeśli spróbujesz użyć ciągu char * jako argumentu konstruktora CString, spowoduje to błąd kompilatora. Tego makra należy używać w sytuacjach, gdy trzeba zapobiec niejawnym konwersji między typami ciągów wąskich i szerokich.
 
-Za pomocą makra _T dla wszystkich argumentów ciągu konstruktora można zdefiniować _ATL_CSTRING_EXPLICIT_CONSTRUCTORS i uniknąć błędów kompilacji, bez względu na to, czy _UNICODE jest zdefiniowana.
+Za pomocą makra _T dla wszystkich argumentów ciągu konstruktora można zdefiniować _ATL_CSTRING_EXPLICIT_CONSTRUCTORS i uniknąć błędów kompilacji, niezależnie od tego, czy _UNICODE jest zdefiniowany.
 
 ##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
 
@@ -115,7 +115,7 @@ Zdefiniuj to makro, aby wymusić użycie standardowej składni C++ ANSI zgodnej 
 
 Biblioteki ATL i MFC zostały zmienione tak, aby pasowały do C++ ulepszonej standardowej C++ zgodności kompilatora firmy Microsoft. Zgodnie ze standardem ANSI C++ , składnia wskaźnika do funkcji składowej klasy powinna być `&CMyClass::MyFunc`.
 
-Gdy [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) nie jest zdefiniowana (przypadek domyślny), ATL/MFC wyłącza błąd C4867 w mapach makr (szczególnie w mapach komunikatów), dzięki czemu kod, który został utworzony we wcześniejszych wersjach, może nadal być gotowy do kompilacji. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być C++ zgodny ze standardami.
+Jeśli nie zdefiniowano [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) (przypadek domyślny), ATL/MFC wyłącza błąd C4867 w mapach makr (szczególnie w mapach komunikatów), dzięki czemu kod, który został utworzony we wcześniejszych wersjach, może nadal być gotowy do kompilacji. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być C++ zgodny ze standardami.
 
 Niestandardowa forma nie jest jednak przestarzała. Należy przenieść istniejący kod do C++ składni zgodnej ze standardami. Na przykład następujący kod:
 
@@ -149,7 +149,7 @@ _ATL_MULTI_THREADED
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ten symbol jest zdefiniowany, ATL będzie ściągać kod, który będzie poprawnie synchronizować dostęp do danych globalnych. Nowy kod powinien zamiast tego użyć równoważnego [_ATL_FREE_THREADED](#_atl_free_threaded) makra.
+Jeśli ten symbol jest zdefiniowany, ATL będzie ściągać kod, który będzie poprawnie synchronizować dostęp do danych globalnych. Zamiast tego nowy kod powinien używać równoważnego makra [_ATL_FREE_THREADED](#_atl_free_threaded) .
 
 ##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE
 
@@ -171,7 +171,7 @@ Symbol uniemożliwiający kompilowanie kodu związanego z modelem COM przy użyc
 _ATL_NO_COM_SUPPORT
 ```
 
-##  <a name="atl_no_vtable"></a>  ATL_NO_VTABLE
+##  <a name="atl_no_vtable"></a>ATL_NO_VTABLE
 
 Symbol, który uniemożliwia zainicjowanie wskaźnika tabeli metod w konstruktorze i destruktorze klasy.
 
@@ -206,7 +206,7 @@ Funkcja, która nie powinna być wbudowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego symbolu, aby upewnić się, że funkcja nie jest umieszczona w wierszu przez kompilator, mimo że musi być zadeklarowana jako wbudowana, tak aby można ją było umieścić w pliku nagłówkowym. Rozwija do **__declspec (NoLine)** .
+Użyj tego symbolu, aby upewnić się, że funkcja nie jest umieszczona w wierszu przez kompilator, mimo że musi być zadeklarowana jako wbudowana, tak aby można ją było umieścić w pliku nagłówkowym. Rozwija się do **__declspec (NoLine)** .
 
 ##  <a name="_atl_single_threaded"></a>_ATL_SINGLE_THREADED
 

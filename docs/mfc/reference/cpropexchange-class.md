@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
 ms.openlocfilehash: e9ad7c363f2580200af20baeb0acd7a93c1f603b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502758"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871774"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 
@@ -51,24 +51,24 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::ExchangeProp](#exchangeprop)|Wymienia właściwości dowolnego typu wbudowanego.|
 |[CPropExchange::ExchangeVersion](#exchangeversion)|Wymienia numer wersji kontrolki OLE.|
 |[CPropExchange:: GetVersion](#getversion)|Pobiera numer wersji kontrolki OLE.|
-|[CPropExchange::IsAsynchronous](#isasynchronous)|Określa, czy wymiana właściwości odbywa się asynchronicznie.|
-|[CPropExchange::IsLoading](#isloading)|Wskazuje, czy właściwości są ładowane do kontrolki, czy z niej zapisane.|
+|[CPropExchange:: IsAsynchronous](#isasynchronous)|Określa, czy wymiana właściwości odbywa się asynchronicznie.|
+|[CPropExchange:: IsLoading](#isloading)|Wskazuje, czy właściwości są ładowane do kontrolki, czy z niej zapisane.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CPropExchange`nie ma klasy bazowej.
+`CPropExchange` nie ma klasy bazowej.
 
 Ustanawia kontekst i kierunek wymiany właściwości.
 
 Trwałość polega na wymianie informacji o stanie kontrolki, zwykle reprezentowanych przez właściwości między samym formantem i średnią.
 
-Struktura konstruuje obiekt pochodny `CPropExchange` , gdy zostanie powiadomiony o tym, że właściwości kontrolki OLE mają być ładowane z lub przechowywane do magazynu trwałego.
+Struktura konstruuje obiekt pochodzący z `CPropExchange`, gdy zostanie powiadomiony o tym, że właściwości kontrolki OLE mają być ładowane z lub przechowywane do magazynu trwałego.
 
-Struktura przekazuje wskaźnik do tego `CPropExchange` obiektu do `DoPropExchange` funkcji kontrolki. Jeśli użyto Kreatora do utworzenia plików początkowych dla formantu, `DoPropExchange` funkcja kontrolki wywołuje. `COleControl::DoPropExchange` Podstawowa wersja klasy wymienia właściwości giełdowe kontrolki; użytkownik modyfikuje wersję klasy pochodnej do właściwości Exchange, które zostały dodane do kontrolki.
+Struktura przekazuje wskaźnik do tego obiektu `CPropExchange` do funkcji `DoPropExchange` formantu. Jeśli używasz Kreatora do tworzenia plików początkowych dla formantu, funkcja `DoPropExchange` formantu wywołuje `COleControl::DoPropExchange`. Podstawowa wersja klasy wymienia właściwości giełdowe kontrolki; użytkownik modyfikuje wersję klasy pochodnej do właściwości Exchange, które zostały dodane do kontrolki.
 
-`CPropExchange`może służyć do serializacji właściwości kontrolki lub inicjowania właściwości kontrolki podczas ładowania lub tworzenia kontrolki. Funkcje `ExchangeProp` `CPropExchange` i `ExchangeFontProp` składowe programu są w stanie przechowywać właściwości i ładować je z różnych nośników.
+`CPropExchange` może służyć do serializacji właściwości kontrolki lub inicjowania właściwości kontrolki podczas ładowania lub tworzenia kontrolki. `ExchangeProp` i `ExchangeFontProp` funkcje składowe `CPropExchange` są w stanie przechowywać właściwości i ładować je z różnych nośników.
 
-Aby uzyskać więcej informacji na `CPropExchange`temat korzystania z programu [, zobacz kontrolki ActiveX MFC w artykule: Strony](../../mfc/mfc-activex-controls-property-pages.md)właściwości.
+Aby uzyskać więcej informacji na temat korzystania z `CPropExchange`, zobacz [kontrolki ActiveX MFC: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -108,7 +108,7 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 Wartość właściwości jest odczytywana lub zapisywana do, w zależności od potrzeb, zmiennej, do której odwołuje się *phBlob*. Jeśli *hBlobDefault* jest określony, będzie używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegoś powodu Serializacja formantu nie powiedzie się.
 
-Funkcje `CArchivePropExchange::ExchangeBlobProp` `CResetPropExchange::ExchangeBlobProp`i przesłonięciatejczystejfunkcjiwirtualnej.`CPropsetPropExchange::ExchangeBlobProp`
+Funkcje `CArchivePropExchange::ExchangeBlobProp`, `CResetPropExchange::ExchangeBlobProp`i `CPropsetPropExchange::ExchangeBlobProp` przesłaniają tę czystą funkcję wirtualną.
 
 ##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp
 
@@ -134,7 +134,7 @@ Odwołanie do obiektu [CFontHolder](../../mfc/reference/cfontholder-class.md) , 
 Wskaźnik do struktury [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc) zawierającej wartości do inicjowania stanu domyślnego właściwości font, gdy *pFontDispAmbient* ma wartość null.
 
 *pFontDispAmbient*<br/>
-Wskaźnik do `IFontDisp` interfejsu czcionki, który ma być używany do inicjowania stanu domyślnego właściwości czcionki.
+Wskaźnik do interfejsu `IFontDisp` czcionki, który ma być używany do inicjowania stanu domyślnego właściwości czcionki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -142,9 +142,9 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli właściwość Font jest ładowana z średniej do kontrolki, cechy czcionki są pobierane z nośnika, a obiekt, `CFontHolder` do którego odwołuje się *czcionka* , jest inicjowany z nimi. Jeśli właściwość Font jest przechowywana, cechy w obiekcie Font są zapisywane na nośniku.
+Jeśli właściwość Font jest ładowana z średniej do kontrolki, cechy czcionki są pobierane z nośnika, a obiekt `CFontHolder`, do którego odwołuje się *czcionka* , zostanie zainicjowany z nimi. Jeśli właściwość Font jest przechowywana, cechy w obiekcie Font są zapisywane na nośniku.
 
-Funkcje `CArchivePropExchange::ExchangeFontProp` `CResetPropExchange::ExchangeFontProp`i przesłonięciatejczystejfunkcjiwirtualnej.`CPropsetPropExchange::ExchangeFontProp`
+Funkcje `CArchivePropExchange::ExchangeFontProp`, `CResetPropExchange::ExchangeFontProp`i `CPropsetPropExchange::ExchangeFontProp` przesłaniają tę czystą funkcję wirtualną.
 
 ##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp
 
@@ -164,7 +164,7 @@ virtual BOOL ExchangePersistentProp(
 Nazwa wymienianej właściwości.
 
 *ppUnk*<br/>
-Wskaźnik do zmiennej zawierającej wskaźnik do `IUnknown` interfejsu właściwości (Ta zmienna jest zazwyczaj składową klasy).
+Wskaźnik do zmiennej zawierającej wskaźnik do interfejsu `IUnknown` właściwości (Ta zmienna jest zazwyczaj składową klasy).
 
 *IID*<br/>
 Identyfikator interfejsu interfejsu we właściwości, która będzie używana przez formant.
@@ -180,7 +180,7 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 Jeśli właściwość jest ładowana z pliku do kontrolki, właściwość zostanie utworzona i zainicjowana z pliku. Jeśli właściwość jest przechowywana, jej wartość jest zapisywana w pliku.
 
-Funkcje `CArchivePropExchange::ExchangePersistentProp` `CResetPropExchange::ExchangePersistentProp`i przesłonięciatejczystejfunkcjiwirtualnej.`CPropsetPropExchange::ExchangePersistentProp`
+Funkcje `CArchivePropExchange::ExchangePersistentProp`, `CResetPropExchange::ExchangePersistentProp`i `CPropsetPropExchange::ExchangePersistentProp` przesłaniają tę czystą funkcję wirtualną.
 
 ##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp
 
@@ -200,13 +200,13 @@ virtual BOOL ExchangeProp(
 Nazwa wymienianej właściwości.
 
 *vtProp*<br/>
-Symbol określający typ wymienianej właściwości. Możliwe wartości to:
+Symbol określający typ wymienianej właściwości. Możliwe wartości:
 
 |Symbol|Typ właściwości|
 |------------|-------------------|
 |VT_I2|**short**|
 |VT_I4|**long**|
-|VT_BOOL|**BOOL**|
+|VT_BOOL|**LOGICZNA**|
 |VT_BSTR|`CString`|
 |VT_CY|**CY**|
 |VT_R4|**float**|
@@ -226,7 +226,7 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 Jeśli właściwość jest ładowana z średniej do kontrolki, wartość właściwości jest pobierana z nośnika i przechowywana w obiekcie wskazywanym przez *pvProp*. Jeśli właściwość jest przechowywana na nośniku, wartość obiektu wskazywanego przez *pvProp* jest zapisywana na nośniku.
 
-Funkcje `CArchivePropExchange::ExchangeProp` `CResetPropExchange::ExchangeProp`i przesłonięciatejczystejfunkcjiwirtualnej.`CPropsetPropExchange::ExchangeProp`
+Funkcje `CArchivePropExchange::ExchangeProp`, `CResetPropExchange::ExchangeProp`i `CPropsetPropExchange::ExchangeProp` przesłaniają tę czystą funkcję wirtualną.
 
 ##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion
 
@@ -293,4 +293,4 @@ Niezerowe, jeśli są ładowane właściwości; w przeciwnym razie 0.
 ## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+[COleControl::D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: 669bdb18e378c4dc39bdc6d51ca1ebe7f93fa839
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507427"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78870615"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -97,20 +97,20 @@ class CButton : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CButton:: CButton](#cbutton)|Konstruuje `CButton` obiekt.|
+|[CButton:: CButton](#cbutton)|Konstruuje obiekt `CButton`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CButton:: Create](#create)|Tworzy formant przycisku systemu Windows i dołącza go do `CButton` obiektu.|
+|[CButton:: Create](#create)|Tworzy formant przycisku systemu Windows i dołącza go do obiektu `CButton`.|
 |[CButton::D rawItem](#drawitem)|Przesłoń, aby narysować obiekt `CButton` rysowany przez właściciela.|
 |[CButton:: getmap](#getbitmap)|Pobiera uchwyt mapy bitowej poprzednio ustawiony za pomocą [Setmap bitowych](#setbitmap).|
 |[CButton:: getbutton](#getbuttonstyle)|Pobiera informacje o stylu kontrolki przycisku.|
 |[CButton:: getcheck](#getcheck)|Pobiera stan zaznaczenia kontrolki Button.|
 |[CButton:: GetCursor](#getcursor)|Pobiera uchwyt obrazu kursora wcześniej ustawionego za pomocą elementu [SetCursor](#setcursor).|
-|[CButton::GetIcon](#geticon)|Pobiera uchwyt ikony wcześniej ustawionej za pomocą [SetIcon](#seticon).|
-|[CButton::GetIdealSize](#getidealsize)|Pobiera idealny rozmiar kontrolki przycisku.|
+|[CButton:: GetIcon](#geticon)|Pobiera uchwyt ikony wcześniej ustawionej za pomocą [SetIcon](#seticon).|
+|[CButton:: GetIdealSize](#getidealsize)|Pobiera idealny rozmiar kontrolki przycisku.|
 |[CButton:: GetImageList](#getimagelist)|Pobiera listę obrazów kontrolki przycisku.|
 |[CButton:: getnote](#getnote)|Pobiera składnik uwagi bieżącej kontrolki linku polecenia.|
 |[CButton:: GetNoteLength](#getnotelength)|Pobiera długość tekstu komentarza dla bieżącej kontrolki łącza polecenia.|
@@ -122,18 +122,18 @@ class CButton : public CWnd
 |[CButton:: GetState](#getstate)|Pobiera stan zaznaczenia, wyróżnij stan i fokus kontrolki przycisku.|
 |[CButton:: GetTextMargin](#gettextmargin)|Pobiera margines tekstu kontrolki przycisku.|
 |[CButton:: setmap](#setbitmap)|Określa mapę bitową, która będzie wyświetlana na przycisku.|
-|[CButton::SetButtonStyle](#setbuttonstyle)|Zmienia styl przycisku.|
-|[CButton::SetCheck](#setcheck)|Ustawia stan zaznaczenia kontrolki przycisku.|
+|[CButton:: SetButton](#setbuttonstyle)|Zmienia styl przycisku.|
+|[CButton:: SetCheck](#setcheck)|Ustawia stan zaznaczenia kontrolki przycisku.|
 |[CButton:: SetCursor](#setcursor)|Określa obraz kursora, który będzie wyświetlany na przycisku.|
 |[CButton:: SetDropDownState](#setdropdownstate)|Ustawia stan listy rozwijanej bieżącego formantu przycisku podziału.|
-|[CButton::SetIcon](#seticon)|Określa ikonę, która będzie wyświetlana na przycisku.|
+|[CButton:: SetIcon](#seticon)|Określa ikonę, która będzie wyświetlana na przycisku.|
 |[CButton:: SetImageList](#setimagelist)|Ustawia listę obrazów kontrolki przycisku.|
 |[CButton:: SetNote](#setnote)|Ustawia uwagę na bieżącą kontrolkę linku polecenia.|
 |[CButton:: SetSplitGlyph](#setsplitglyph)|Kojarzy określony glif z bieżącą kontrolką przycisku podziału.|
 |[CButton:: SetSplitImageList](#setsplitimagelist)|Kojarzy listę obrazów z bieżącym formantem przycisku podziału.|
-|[CButton::SetSplitInfo](#setsplitinfo)|Określa informacje definiujące bieżącą kontrolkę przycisku podziału.|
-|[CButton::SetSplitSize](#setsplitsize)|Ustawia prostokąt ograniczenia składnika listy rozwijanej bieżącego formantu przycisku podziału.|
-|[CButton::SetSplitStyle](#setsplitstyle)|Ustawia styl bieżącej kontrolki przycisku podziału.|
+|[CButton:: SetSplitInfo](#setsplitinfo)|Określa informacje definiujące bieżącą kontrolkę przycisku podziału.|
+|[CButton:: SetSplitSize](#setsplitsize)|Ustawia prostokąt ograniczenia składnika listy rozwijanej bieżącego formantu przycisku podziału.|
+|[CButton:: setsplit](#setsplitstyle)|Ustawia styl bieżącej kontrolki przycisku podziału.|
 |[CButton:: setstate](#setstate)|Ustawia stan wyróżniania kontrolki przycisku.|
 |[CButton:: SetTextMargin](#settextmargin)|Ustawia margines tekstu kontrolki przycisku.|
 
@@ -141,19 +141,19 @@ class CButton : public CWnd
 
 Formant Button jest małym prostokątnym oknem podrzędnym, które można kliknąć i wyłączyć. Przyciski mogą być używane samodzielnie lub w grupach i mogą być oznaczone etykietami lub wyświetlane bez tekstu. Przycisk zazwyczaj zmienia wygląd, gdy użytkownik go klika.
 
-Typowymi przyciskami są pola wyboru, przycisk radiowy i przyciski. Obiekt może być dowolnym z tych elementów, zgodnie z stylem [przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles) określonym podczas inicjowania przez funkcję tworzenia elementu członkowskiego. [](#create) `CButton`
+Typowymi przyciskami są pola wyboru, przycisk radiowy i przyciski. Obiekt `CButton` może stać się dowolnym z nich, zgodnie z [stylem przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles) określonym podczas inicjowania przez funkcję [tworzenia](#create) elementu członkowskiego.
 
-Ponadto Klasa [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) , która pochodzi od `CButton` , obsługuje tworzenie kontrolek przycisków oznaczonych obrazami mapy bitowej zamiast tekstu. `CBitmapButton` Może mieć oddzielne mapy bitowe dla stanów up, w dół, skoncentrowanych i wyłączonych przycisku.
+Ponadto Klasa [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) utworzona na podstawie `CButton` obsługuje tworzenie kontrolek przycisków oznaczonych obrazami mapy bitowej zamiast tekstu. `CBitmapButton` może mieć oddzielne mapy bitowe dla stanów up, Down, skoncentrowanych i wyłączonych przycisku.
 
-Kontrolkę przycisku można utworzyć z poziomu szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach najpierw `CButton` Wywołaj konstruktora w celu `CButton` skonstruowania `Create` obiektu, a następnie wywołaj funkcję członkowską, aby utworzyć kontrolkę przycisk `CButton` systemu Windows i dołączyć ją do obiektu.
+Kontrolkę przycisku można utworzyć z poziomu szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach najpierw Wywołaj konstruktora `CButton`, aby skonstruować obiekt `CButton`; następnie wywołaj funkcję członkowską `Create`, aby utworzyć kontrolkę przycisk systemu Windows i dołączyć ją do obiektu `CButton`.
 
-Konstrukcja może być procesem jednoetapowym klasy pochodzącej od `CButton`. Napisz konstruktora dla klasy pochodnej i Wywołaj `Create` z konstruktora.
+Konstrukcja może być procesem jednoetapowym klasy pochodzącej od `CButton`. Napisz konstruktora dla klasy pochodnej i Wywołaj `Create` z poziomu konstruktora.
 
 Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows wysyłane przez kontrolkę przycisku do jego elementu nadrzędnego (zwykle klasy pochodzącej od [CDialog](../../mfc/reference/cdialog-class.md)), Dodaj do klasy nadrzędnej wpis mapy komunikatów i funkcję członkowską obsługi komunikatów dla każdego komunikatu.
 
 Każdy wpis mapy komunikatów przyjmuje następującą formę:
 
-**On\_** _Notification_ **(** _ID_, _memberFxn_ **)**
+**Na\_** _powiadomienia_ **(** _ID_, _memberFxn_ **)**
 
 gdzie *ID* określa identyfikator okna podrzędnego kontrolki wysyłającej powiadomienie, a *memberFxn* jest nazwą nadrzędnej funkcji składowej, która została zapisywana w celu obsługi powiadomienia.
 
@@ -168,9 +168,9 @@ Potencjalne wpisy mapy komunikatów są następujące:
 |ON_BN_CLICKED|Użytkownik klika przycisk.|
 |ON_BN_DOUBLECLICKED|Użytkownik klika dwukrotnie przycisk.|
 
-Jeśli utworzysz `CButton` obiekt z zasobu okna dialogowego `CButton` , obiekt zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
+Jeśli utworzysz obiekt `CButton` z zasobów okna dialogowego, obiekt `CButton` zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
 
-Jeśli utworzysz `CButton` obiekt w oknie, może być konieczne jego zniszczenie. Jeśli `CButton` obiekt jest tworzony na stercie przy użyciu **nowej** funkcji, należy wywołać metodę **delete** dla obiektu, aby zniszczyć go, gdy użytkownik zamknie formant przycisku systemu Windows. Jeśli `CButton` obiekt zostanie utworzony na stosie lub osadzony w obiekcie okna dialogowego nadrzędnym, zostanie zniszczony automatycznie.
+Jeśli utworzysz obiekt `CButton` w oknie, może być konieczne jego zniszczenie. Jeśli utworzysz obiekt `CButton` na stercie przy użyciu **nowej** funkcji, musisz wywołać metodę **delete** dla obiektu, aby zniszczyć go, gdy użytkownik zamknie formant przycisku systemu Windows. Jeśli utworzysz obiekt `CButton` na stosie lub jest on osadzony w nadrzędnym obiekcie okna dialogowego, zostanie zniszczony automatycznie.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -188,7 +188,7 @@ Jeśli utworzysz `CButton` obiekt w oknie, może być konieczne jego zniszczenie
 
 ##  <a name="cbutton"></a>CButton:: CButton
 
-Konstruuje `CButton` obiekt.
+Konstruuje obiekt `CButton`.
 
 ```
 CButton();
@@ -200,7 +200,7 @@ CButton();
 
 ##  <a name="create"></a>CButton:: Create
 
-Tworzy formant przycisku systemu Windows i dołącza go do `CButton` obiektu.
+Tworzy formant przycisku systemu Windows i dołącza go do obiektu `CButton`.
 
 ```
 virtual BOOL Create(
@@ -220,10 +220,10 @@ Określa tekst kontrolki przycisku.
 Określa styl kontrolki przycisku. Zastosuj dowolną kombinację [stylów przycisków](../../mfc/reference/styles-used-by-mfc.md#button-styles) do przycisku.
 
 *cinania*<br/>
-Określa rozmiar i położenie kontrolki przycisku. Może to być `CRect` obiekt `RECT` lub struktura.
+Określa rozmiar i położenie kontrolki przycisku. Może to być obiekt `CRect` lub `RECT`.
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki przycisku, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
+Określa okno nadrzędne kontrolki przycisku, zazwyczaj `CDialog`. Nie może mieć wartości NULL.
 
 *nID*<br/>
 Określa identyfikator kontrolki przycisku.
@@ -234,19 +234,19 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`CButton` Obiekt jest konstruowany w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant przycisku systemu Windows i dołącza go `CButton` do obiektu.
+Należy skonstruować obiekt `CButton` w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant przycisku systemu Windows i dołącza go do obiektu `CButton`.
 
-Jeśli określony jest styl WS_VISIBLE, system Windows wysyła wszystkie komunikaty wymagane do aktywacji i wyświetlania przycisku.
+W przypadku podawania WS_VISIBLE stylu, system Windows wysyła wszystkie komunikaty wymagane do aktywacji i wyświetlenia przycisku.
 
 Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) do kontrolki Button:
 
 - WS_CHILD zawsze
 
-- WS_VISIBLE zazwyczaj
+- WS_VISIBLE zwykle
 
 - WS_DISABLED rzadko
 
-- WS_GROUP do grup kontrolek
+- WS_GROUP do grup formantów
 
 - WS_TABSTOP, aby uwzględnić przycisk w kolejności tabulacji
 
@@ -269,9 +269,9 @@ Długi wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-win
 
 ### <a name="remarks"></a>Uwagi
 
-Przycisk rysowany przez właściciela ma ustawiony styl BS_OWNERDRAW. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla `CButton` obiektu rysowanego przez właściciela. Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem działania elementu członkowskiego.
+Przycisk rysowany przez właściciela ma ustawiony styl BS_OWNERDRAW. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla obiektu `CButton` rysowanego przez właściciela. Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem działania elementu członkowskiego.
 
-Zobacz też wartości stylu [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) .
+Zobacz też [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) wartości stylu.
 
 ### <a name="example"></a>Przykład
 
@@ -279,7 +279,7 @@ Zobacz też wartości stylu [BS_](../../mfc/reference/styles-used-by-mfc.md#butt
 
 ##  <a name="getbitmap"></a>CButton:: getmap
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt mapy bitowej, wcześniej [](#setbitmap)ustawionej za pomocą metody setmap, która jest skojarzona z przyciskiem.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt mapy bitowej, wcześniej ustawionej za pomocą metody [setmap](#setbitmap), która jest skojarzona z przyciskiem.
 
 ```
 HBITMAP GetBitmap() const;
@@ -303,7 +303,7 @@ UINT GetButtonStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca style przycisków dla tego `CButton` obiektu. Ta funkcja zwraca tylko wartości stylu [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) , a nie inne style okna.
+Zwraca style przycisków dla tego obiektu `CButton`. Ta funkcja zwraca tylko [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) wartości stylu, a nie innych stylów okna.
 
 ### <a name="example"></a>Przykład
 
@@ -319,7 +319,7 @@ int GetCheck() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana z formantu Button utworzonego przy użyciu stylu BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON lub BS_3STATE jest jedną z następujących wartości:
+Wartość zwracana z kontrolki Button utworzonego za pomocą BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON lub BS_3STATE stylu jest jedną z następujących wartości:
 
 |Wartość|Znaczenie|
 |-----------|-------------|
@@ -327,7 +327,7 @@ Wartość zwracana z formantu Button utworzonego przy użyciu stylu BS_AUTOCHECK
 |BST_CHECKED|Stan przycisku jest zaznaczony.|
 |BST_INDETERMINATE|Stan przycisku jest nieokreślony (ma zastosowanie tylko wtedy, gdy przycisk ma styl BS_3STATE lub BS_AUTO3STATE).|
 
-Jeśli przycisk ma inny styl, wartość zwracana to BST_UNCHECKED.
+Jeśli przycisk ma inny styl, wartość zwracana jest BST_UNCHECKED.
 
 ### <a name="example"></a>Przykład
 
@@ -335,7 +335,7 @@ Jeśli przycisk ma inny styl, wartość zwracana to BST_UNCHECKED.
 
 ##  <a name="getcursor"></a>CButton:: GetCursor
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt kursora wcześniej ustawiony za [](#setcursor)pomocą elementu SetCursor, który jest skojarzony z przyciskiem.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt kursora wcześniej ustawiony za pomocą elementu [SetCursor](#setcursor), który jest skojarzony z przyciskiem.
 
 ```
 HCURSOR GetCursor();
@@ -397,7 +397,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ### <a name="parameters"></a>Parametry
 
 *pbuttonImagelist*<br/>
-Wskaźnik do listy `CButton` obrazów obiektu.
+Wskaźnik do listy obrazów obiektu `CButton`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -436,7 +436,7 @@ W drugim przeciążeniu, wartość TRUE, jeśli ta metoda zakończyła się pomy
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
 
 Ta metoda wysyła komunikat [BCM_GETNOTE](/windows/win32/Controls/bcm-getnote) , który jest opisany w Windows SDK.
 
@@ -454,7 +454,7 @@ Długość tekstu notatki (w 16-bitowych znakach Unicode) dla bieżącej kontrol
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
 
 Ta metoda wysyła komunikat [BCM_GETNOTELENGTH](/windows/win32/Controls/bcm-getnotelength) , który jest opisany w Windows SDK.
 
@@ -474,9 +474,9 @@ Znak glifu skojarzony z bieżącą kontrolką przycisku podziału.
 
 Symbol jest fizyczną reprezentacją znaku w określonej czcionce. Na przykład Kontrolka przycisku podziału może być dekoracyjna przy użyciu symbolu znacznika wyboru Unicode (U + 2713).
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
-Ta metoda inicjuje `mask` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_GLYPH, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera symbol z `himlGlyph` elementu członkowskiego struktury.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_GLYPH, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera symbol z `himlGlyph` elementu członkowskiego struktury.
 
 ##  <a name="getsplitimagelist"></a>CButton:: GetSplitImageList
 
@@ -492,9 +492,9 @@ Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-cla
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
-Ta metoda inicjuje `mask` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_IMAGE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera listę obrazów ze `himlGlyph` składowej struktury.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_IMAGE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera listę obrazów ze składowej `himlGlyph` struktury.
 
 ##  <a name="getsplitinfo"></a>CButton:: GetSplitInfo
 
@@ -516,7 +516,7 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Ta metoda wysyła komunikat [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK.
 
@@ -540,11 +540,11 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Gdy kontrolka przycisku podziału jest rozwinięta, może wyświetlić składnik listy rozwijanej, taki jak kontrolka listy lub kontrolka stronicowania. Ta metoda pobiera prostokąt ograniczający, który zawiera składnik listy rozwijanej.
 
-Ta metoda inicjuje `mask` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_SIZE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera prostokąt ograniczenia z `size` elementu członkowskiego struktury.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_SIZE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera prostokąt ograniczający ze składowej `size` struktury.
 
 ##  <a name="getsplitstyle"></a>CButton:: getsplit
 
@@ -556,15 +556,15 @@ UINT GetSplitStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
+Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Style przycisku podziału określają wyrównanie, współczynnik proporcji i format graficzny, za pomocą którego system Windows rysuje ikonę przycisku podziału.
 
-Ta metoda inicjuje `mask` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_STYLE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera style przycisku podziału z `uSplitStyle` elementu członkowskiego struktury.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_STYLE, a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który jest opisany w Windows SDK. Gdy funkcja Message zwraca, ta metoda pobiera style przycisku podziału ze składowej `uSplitStyle` struktury.
 
 ##  <a name="getstate"></a>CButton:: GetState
 
@@ -588,7 +588,7 @@ Pole bitowe, które zawiera kombinację wartości wskazujących bieżący stan k
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka przycisku ze stylem przycisku BS_3STATE lub BS_AUTO3STATE powoduje utworzenie pola wyboru, które ma trzeci stan o nazwie nieokreślony stan. Nieokreślony stan wskazuje, że pole wyboru nie jest zaznaczone ani niezaznaczone.
+Kontrolka przycisku z stylem przycisku BS_3STATE lub BS_AUTO3STATE powoduje utworzenie pola wyboru, które ma trzeci stan o nazwie nieokreślony stan. Nieokreślony stan wskazuje, że pole wyboru nie jest zaznaczone ani niezaznaczone.
 
 ### <a name="example"></a>Przykład
 
@@ -596,7 +596,7 @@ Kontrolka przycisku ze stylem przycisku BS_3STATE lub BS_AUTO3STATE powoduje utw
 
 ##  <a name="gettextmargin"></a>CButton:: GetTextMargin
 
-Wywołaj tę metodę, aby uzyskać margines `CButton` tekstu obiektu.
+Wywołaj tę metodę, aby uzyskać margines tekstu obiektu `CButton`.
 
 ```
 BOOL GetTextMargin(RECT* pmargin);
@@ -605,7 +605,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ### <a name="parameters"></a>Parametry
 
 *pmargin*<br/>
-Wskaźnik do marginesu `CButton` tekstu obiektu.
+Wskaźnik do marginesu tekstu obiektu `CButton`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -652,7 +652,7 @@ Mapa bitowa zostanie automatycznie umieszczona na stronie przycisku, domyślnie 
 
 - BS_VCENTER
 
-W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), który używa czterech map bitowych na `SetBitmap` przycisk, używa tylko jednej mapy bitowej na przycisku. Po naciśnięciu przycisku Mapa bitowa zostanie przesunięta w dół i w prawo.
+W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), który używa czterech map bitowych na przycisk, `SetBitmap` używa tylko jednej mapy bitowej na przycisku. Po naciśnięciu przycisku Mapa bitowa zostanie przesunięta w dół i w prawo.
 
 Użytkownik jest odpowiedzialny za zwolnienie mapy bitowej po jej zakończeniu.
 
@@ -680,7 +680,7 @@ Określa, czy przycisk ma być narysowany ponownie. Wartość różna od zera po
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj funkcji `GetButtonStyle` członkowskiej, aby pobrać styl przycisku. Word, który ma niski priorytet, jest stylem dla przycisku.
+Użyj funkcji składowej `GetButtonStyle`, aby pobrać styl przycisku. Word, który ma niski priorytet, jest stylem dla przycisku.
 
 ### <a name="example"></a>Przykład
 
@@ -746,7 +746,7 @@ Kursor zostanie automatycznie umieszczony na stronie przycisku, domyślnie wyoro
 
 - BS_VCENTER
 
-W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), który używa czterech map bitowych na `SetCursor` przycisk, używa tylko jednego kursora na przycisku. Gdy przycisk zostanie naciśnięty, kursor zostanie wyświetlony w dół i w prawo.
+W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), który używa czterech map bitowych na przycisk, `SetCursor` używa tylko jednego kursora na przycisku. Gdy przycisk zostanie naciśnięty, kursor zostanie wyświetlony w dół i w prawo.
 
 ### <a name="example"></a>Przykład
 
@@ -764,7 +764,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*fDropDown*|podczas Wartość TRUE powoduje ustawienie stanu BST_DROPDOWNPUSHED; w przeciwnym razie FALSE.|
+|*fDropDown*|podczas Wartość TRUE, aby ustawić stan BST_DROPDOWNPUSHED; w przeciwnym razie FALSE.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -778,7 +778,7 @@ Ta metoda wysyła komunikat [BCM_SETDROPDOWNSTATE](/windows/win32/Controls/bcm-s
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, *m_splitButton*, która jest używana do programistycznego dostępu do kontrolki przycisku podziału. Ta zmienna jest używana w poniższym przykładzie.
+Poniższy przykład kodu definiuje zmienną *m_splitButton*, która jest używana do programistycznego dostępu do kontrolki przycisku podziału. Ta zmienna jest używana w poniższym przykładzie.
 
 [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]
 
@@ -790,7 +790,7 @@ Poniższy przykład kodu ustawia stan kontrolki przycisku podziału, aby wskaza�
 
 ##  <a name="setelevationrequired"></a>CButton:: SetElevationRequired
 
-Ustawia stan bieżącej kontrolki przycisku na `elevation required`, która jest niezbędna, aby formant wyświetlał ikonę zabezpieczeń z podwyższonym poziomem uprawnień.
+Ustawia stan bieżącego formantu przycisku na `elevation required`, który jest niezbędny, aby formant wyświetlał ikonę zabezpieczeń z podwyższonym poziomem uprawnień.
 
 ```
 BOOL SetElevationRequired(BOOL fElevationRequired);
@@ -800,7 +800,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*fElevationRequired*|podczas Wartość true powoduje `elevation required` ustawienie stanu; w przeciwnym razie, FAŁSZ.|
+|*fElevationRequired*|podczas Wartość TRUE, aby ustawić stan `elevation required`; w przeciwnym razie FALSE.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -808,7 +808,7 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli przycisk lub kontrolka łącza polecenia wymaga podwyższonego poziomu uprawnień zabezpieczeń do wykonania akcji, ustaw kontrolkę `elevation required` na wartość stan. Następnie w systemie Windows zostanie wyświetlona ikona osłona kontroli konta użytkownika (UAC) na kontrolce. Aby uzyskać więcej informacji, zobacz "Kontrola konta użytkownika" w [witrynie MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
+Jeśli przycisk lub kontrolka łącza polecenia wymaga podwyższonego poziomu uprawnień zabezpieczeń do wykonania akcji, ustaw kontrolkę na `elevation required` stanu. Następnie w systemie Windows zostanie wyświetlona ikona osłona kontroli konta użytkownika (UAC) na kontrolce. Aby uzyskać więcej informacji, zobacz "Kontrola konta użytkownika" w [witrynie MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Ta metoda wysyła komunikat [BCM_SETSHIELD](/windows/win32/Controls/bcm-setshield) , który jest opisany w Windows SDK.
 
@@ -845,7 +845,7 @@ Ikona zostanie automatycznie umieszczona na stronie przycisku, domyślnie wyśro
 
 - BS_VCENTER
 
-W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), która używa czterech map bitowych na `SetIcon` przycisk, używa tylko jednej ikony na przycisku. Po naciśnięciu przycisku zostanie wyświetlona ikona przesunięcia w dół i w prawo.
+W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), który używa czterech map bitowych na przycisk, `SetIcon` używa tylko jednej ikony na przycisku. Po naciśnięciu przycisku zostanie wyświetlona ikona przesunięcia w dół i w prawo.
 
 ### <a name="example"></a>Przykład
 
@@ -853,7 +853,7 @@ W przeciwieństwie do [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md
 
 ##  <a name="setimagelist"></a>CButton:: SetImageList
 
-Wywołaj tę metodę, aby ustawić listę `CButton` obrazów obiektu.
+Wywołaj tę metodę, aby ustawić listę obrazów obiektu `CButton`.
 
 ```
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
@@ -892,13 +892,13 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_COMMANDLINK lub BS_DEFCOMMANDLINK.
 
 Ta metoda wysyła komunikat [BCM_SETNOTE](/windows/win32/Controls/bcm-setnote) , który jest opisany w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, *m_cmdLink*, która jest używana do programistycznego dostępu do formantu łącza polecenia. Ta zmienna jest używana w poniższym przykładzie.
+Poniższy przykład kodu definiuje zmienną *m_cmdLink*, która jest używana do programistycznego dostępu do formantu łącza polecenia. Ta zmienna jest używana w poniższym przykładzie.
 
 [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]
 
@@ -928,11 +928,11 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, które mają styl Button BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, które mają styl przycisku BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Symbol jest fizyczną reprezentacją znaku w określonej czcionce. Parametr *chGlyph* nie jest używany jako symbol, ale zamiast tego jest używany do wybierania symbolu z zestawu symboli zdefiniowanych przez system. Domyślny symbol strzałki listy rozwijanej jest określany przez znak "6" i przypomina czarny znak w dół w dół (U + 25BC).
 
-Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z `himlGlyph` flagą BCSIF_GLYPH i składową z parametrem *chGlyph* , a następnie wysyła tę strukturę w wiadomości [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) jest to opisane w Windows SDK.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_GLYPH i składową `himlGlyph` z parametrem *chGlyph* , a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) opisanym w Windows SDK.
 
 ##  <a name="setsplitimagelist"></a>CButton:: SetSplitImageList
 
@@ -954,9 +954,9 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
-Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z `himlGlyph` flagą BCSIF_IMAGE i składową z parametrem *pSplitImageList* , a następnie wysyła tę strukturę w [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) komunikat opisany w Windows SDK.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_IMAGE i składową `himlGlyph` z parametrem *pSplitImageList* , a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) opisanym w Windows SDK.
 
 ##  <a name="setsplitinfo"></a>CButton:: SetSplitInfo
 
@@ -978,19 +978,19 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Ta metoda wysyła komunikat [BCM_SETSPLITINFO](/windows/win32/Controls/bcm-setsplitinfo) , który jest opisany w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału.
+Poniższy przykład kodu definiuje zmienną `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału.
 
 [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu zmienia symbol, który jest używany dla przycisku podziału strzałki rozwijanej. W przykładzie zastępują glify trójkątne w górę dla domyślnego glifu trójkąta wskazującego w dół. Wyświetlany symbol zależy od znaku określonego w `himlGlyph` elemencie członkowskim `BUTTON_SPLITINFO` struktury. Glif z trójkątem wskazującym w dół jest określany przez znak "6", a glif z trójkątem wskazującym w górę jest określany przez znak "5". Aby uzyskać porównanie, zobacz wygodną metodę [CButton:: SetSplitGlyph](#setsplitglyph).
+Poniższy przykład kodu zmienia symbol, który jest używany dla przycisku podziału strzałki rozwijanej. W przykładzie zastępują glify trójkątne w górę dla domyślnego glifu trójkąta wskazującego w dół. Wyświetlany symbol zależy od znaku określonego w `himlGlyph` składowej struktury `BUTTON_SPLITINFO`. Glif z trójkątem wskazującym w dół jest określany przez znak "6", a glif z trójkątem wskazującym w górę jest określany przez znak "5". Aby uzyskać porównanie, zobacz wygodną metodę [CButton:: SetSplitGlyph](#setsplitglyph).
 
 [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]
 
@@ -1014,15 +1014,15 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
 Gdy kontrolka przycisku podziału jest rozwinięta, może wyświetlić składnik listy rozwijanej, taki jak kontrolka listy lub kontrolka stronicowania. Ta metoda określa rozmiar prostokąta granicznego, który zawiera składnik listy rozwijanej.
 
-Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z `size` flagą BCSIF_SIZE i składową z parametrem *psize* , a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) , który został opisany w Windows SDK.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_SIZE i składową `size` z parametrem *psize* , a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) opisanym w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału. Ta zmienna jest używana w poniższym przykładzie.
+Poniższy przykład kodu definiuje zmienną `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału. Ta zmienna jest używana w poniższym przykładzie.
 
 [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]
 
@@ -1044,7 +1044,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*uSplitStyle*|podczas Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .|
+|*uSplitStyle*|podczas Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1052,15 +1052,15 @@ PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko z kontrolkami, których styl Button to BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
+Tej metody należy używać tylko z kontrolkami, których styl przycisku ma BS_SPLITBUTTON lub BS_DEFSPLITBUTTON.
 
-Style przycisku podziału określają wyrównanie, współczynnik proporcji i format graficzny, za pomocą którego system Windows rysuje ikonę przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` element członkowski struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
+Style przycisku podziału określają wyrównanie, współczynnik proporcji i format graficzny, za pomocą którego system Windows rysuje ikonę przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
-Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z `uSplitStyle` flagą BCSIF_STYLE i składową z parametrem *uSplitStyle* , a następnie wysyła tę strukturę w [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) komunikat opisany w Windows SDK.
+Ta metoda inicjuje `mask` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) z flagą BCSIF_STYLE i składową `uSplitStyle` z parametrem *uSplitStyle* , a następnie wysyła tę strukturę w komunikacie [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) opisanym w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału.
+Poniższy przykład kodu definiuje zmienną `m_splitButton`, która jest używana do programistycznego dostępu do kontrolki przycisku podziału.
 
 [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]
 
@@ -1095,7 +1095,7 @@ Kontrolka przycisku jest automatycznie podświetlana, gdy użytkownik kliknie i 
 
 ##  <a name="settextmargin"></a>CButton:: SetTextMargin
 
-Wywołaj tę metodę, aby ustawić margines `CButton` tekstu obiektu.
+Wywołaj tę metodę, aby ustawić margines tekstu obiektu `CButton`.
 
 ```
 BOOL SetTextMargin(RECT* pmargin);

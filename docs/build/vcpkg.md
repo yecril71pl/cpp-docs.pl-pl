@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869709"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857029"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer C++ pakietów dla systemów Windows, Linux i MacOS
 
@@ -27,7 +27,7 @@ Można również utworzyć klon vcpkg z bibliotekami prywatnymi w kolekcji ports
 
 <sup>1</sup> *Uwaga: źródła są niedostępne dla niektórych bibliotek własnościowych. W takich przypadkach vcpkg pobiera zgodne ze wstępnie skompilowanych plików binarnych.*
 
-## <a name="installation"></a>Instalacja programu
+## <a name="installation"></a>Instalacja
 
 Sklonuj repozytorium vcpkg z witryny GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Możesz pobrać do dowolnej preferowanej lokalizacji folderów.
 
@@ -147,7 +147,7 @@ Domyślnie polecenie **upgrade** wyświetla tylko te biblioteki, które są niea
 - **--no-osuszyć-Run**  Wykonaj uaktualnienie; gdy nie zostanie określony, polecenie wyświetla tylko listę nieaktualnych pakietów.
 - **--Keeping**  Kontynuuj Instalowanie pakietów nawet wtedy, gdy jeden z nich nie powiedzie się.
 - **--tryplet \<t >**  Ustaw wartość domyślną tryplet dla niekwalifikowanych pakietów.
-- **--vcpkg-główne ścieżki \<**  Określ katalog vcpkg, który ma być używany zamiast bieżącego katalogu lub katalogu narzędzi.
+- **--vcpkg-główne ścieżki \<>**  Określ katalog vcpkg, który ma być używany zamiast bieżącego katalogu lub katalogu narzędzi.
 
 ### <a name="upgrade-example"></a>Przykład uaktualnienia
 
@@ -210,8 +210,8 @@ Zawartość wystąpienia vcpkg:
 |**vcpkg > Zainstaluj \<pkg...**|Zainstaluj pakiet|
 |**vcpkg Usuń > \<pkg...**|Odinstalowywanie pakietu|
 |**vcpkg Usuń--przestarzałe**|Odinstaluj wszystkie nieaktualne pakiety|
-|**vcpkg list**|Wyświetl listę zainstalowanych pakietów|
-|**vcpkg update**|Wyświetl listę pakietów do zaktualizowania|
+|**Lista vcpkg**|Wyświetl listę zainstalowanych pakietów|
+|**vcpkg Update**|Wyświetl listę pakietów do zaktualizowania|
 |**vcpkg uaktualnienie**|Kompiluj ponownie wszystkie nieaktualne pakiety|
 |**vcpkg skrótu pliku \<> \[alg]**|Mieszanie pliku przez określony algorytm, domyślny SHA512|
 |**Instalacja integracji vcpkg**|Udostępnienie zainstalowanych pakietów dla użytkownika. Wymaga uprawnień administratora przy pierwszym użyciu|
@@ -220,8 +220,8 @@ Zawartość wystąpienia vcpkg:
 |**Eksport vcpkg \<pkg >... \[opt]...**|Eksportowanie pakietu|
 |**vcpkg Edytuj \<pkg >**|Otwórz port do edycji (używa edytora%, domyślnego "Code")|
 |**vcpkg Utwórz \<pkg > \<URL > \[archivename]**|Utwórz nowy pakiet|
-|**vcpkg cache**|Wyświetlanie listy buforowanych pakietów|
-|**vcpkg version**|Wyświetl informacje o wersji|
+|**pamięć podręczna vcpkg**|Wyświetlanie listy buforowanych pakietów|
+|**wersja vcpkg**|Wyświetl informacje o wersji|
 |**kontakt z vcpkg — przegląd**|Wyświetlanie informacji kontaktowych w celu wysłania opinii.|
 
 ### <a name="options"></a>Opcje
@@ -229,4 +229,4 @@ Zawartość wystąpienia vcpkg:
 |Opcja|Opis|
 |---------|---------|
 |**--tryplet \<t >**|Określ tryplet architektury docelowej. (domyślnie: `%VCPKG_DEFAULT_TRIPLET%`, zobacz też **vcpkg help tryplet**)|
-|**--vcpkg-root \<path>**|Określ katalog główny vcpkg (domyślnie: `%VCPKG_ROOT%`)|
+|**--vcpkg-główne ścieżki \<>**|Określ katalog główny vcpkg (domyślnie: `%VCPKG_ROOT%`)|

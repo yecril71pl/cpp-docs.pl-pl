@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141933"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855408"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Porady: używanie parallel_invoke do napisania procedury sortowania równoległego
 
@@ -89,7 +89,7 @@ Aby skompilować kod, skopiuj go, a następnie wklej w projekcie programu Visual
 
 > **CL. exe/EHsc Parallel-bitonic-Sort. cpp**
 
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
 W tym przykładzie jest używany algorytm `parallel_invoke` zamiast klasy [concurrency:: task_group](reference/task-group-class.md) , ponieważ okres istnienia każdej grupy zadań nie wykracza poza funkcję. Zalecamy używanie `parallel_invoke`, gdy jest to możliwe, ponieważ ma mniej nakładów wykonywania niż obiekty `task group` i dlatego umożliwia pisanie lepszego wykonywania kodu.
 
@@ -99,7 +99,7 @@ Równoległe wersje niektórych algorytmów działają lepiej tylko wtedy, gdy j
 
 Podobnie jak w przypadku dowolnego algorytmu równoległego, zalecamy profilowanie i dostrajanie kodu zgodnie z potrzebami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Funkcja parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)

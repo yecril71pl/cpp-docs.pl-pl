@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627445"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854101"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;funkcje&gt; liczbowych
 
@@ -61,11 +61,11 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 *init*\
 Początkowa wartość, do której każdy element jest z kolei dodawany lub połączony przy użyciu *binary_op*.
@@ -75,11 +75,11 @@ Operacja binarna, która ma zostać zastosowana do każdego elementu w określon
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Suma wartości *init* i wszystkie elementy w określonym zakresie dla pierwszej funkcji szablonu, lub dla drugiej funkcji szablonu, wynik zastosowania operacji binarnej *binary_op* zamiast operacji sum do (* PartialResult, *IN_ ITER*), gdzie *PartialResult* jest wynikiem poprzednich aplikacji operacji, a *in_iter* jest iteratorem wskazującym następny element w zakresie.
+Suma wartości *init* i wszystkie elementy w określonym zakresie dla pierwszej funkcji szablonu lub dla drugiej funkcji szablonu, wynik zastosowania operacji binarnej *binary_op* zamiast operacji sum do (* PartialResult, *in_iter*), gdzie *PartialResult* jest wynikiem poprzednich aplikacji operacji, a *in_iter* jest iteratorem wskazującym następny element w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość początkowa gwarantuje, że istnieje dobrze zdefiniowany wynik, gdy zakres jest pusty, w którym jest zwracane polecenie *init* . Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik zostanie zainicjowany do początkowej wartości *init* , a następnie *wynik* = *binary_op*(*Result*, *in_iter*) jest obliczany iteracyjnie przez zakres, gdzie *in_iter* jest iteratorem wskazującym każdy kolejny element w zakresie. Zakres musi być prawidłowy, a złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **Typ** , aby zapewnić zamknięcie w iteracji.
+Wartość początkowa gwarantuje, że istnieje dobrze zdefiniowany wynik, gdy zakres jest pusty, w którym jest zwracane polecenie *init* . Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik zostanie zainicjowany do początkowej wartości *init* , a następnie *wynik* = *binary_op*(*wynik*, *in_iter*) jest obliczany iteracyjnie przez zakres, gdzie *in_iter* jest iteratorem wskazującym każdy kolejny element w zakresie. Zakres musi być prawidłowy, a złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **Typ** , aby zapewnić zamknięcie w iteracji.
 
 ### <a name="example"></a>Przykład
 
@@ -220,10 +220,10 @@ ForwardIterator2 adjacent_difference(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
 \ *wyniku*
@@ -242,9 +242,9 @@ Iterator danych wyjściowych odnoszący się do końca zakresu docelowego: `resu
 
 Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, pierwsza funkcja szablonu przechowuje kolejne wartości `adjacent_difference` *a*1, *a*2- *a*1, a3- *a*2, w zakresie docelowym.
 
-Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym druga funkcja szablonu przechowuje kolejne wartości `adjacent_difference` *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2, w zakres docelowy.
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym Druga funkcja szablonu przechowuje kolejne `adjacent_difference` wartości *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2, w zakresie docelowym.
 
-Operacja binarna *binary_op* nie jest wymagana do skojarzenia lub komutatywna, ponieważ określono kolejność operacji.
+Operacja binarna *binary_op* nie musi być asocjacyjna ani komutatywna, ponieważ określono kolejność operacji.
 
 ### <a name="example"></a>Przykład
 
@@ -350,11 +350,11 @@ ForwardIterator2 exclusive_scan(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.
@@ -445,11 +445,11 @@ ForwardIterator2 inclusive_scan(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.
@@ -488,13 +488,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w pierwszym zakresie, którego wewnętrzny produkt lub uogólniony produkt wewnętrzny z drugim zakresem, ma zostać obliczony.
 
-*last1* \
+*last1*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu w pierwszym zakresie, którego wewnętrzny produkt lub uogólniony produkt wewnętrzny z drugim zakresem, ma zostać obliczony.
 
-*first2* \
+*first2*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w drugim zakresie, którego wewnętrzny produkt lub uogólniony produkt wewnętrzny z pierwszym zakresem, ma zostać obliczony.
 
 *init*\
@@ -516,7 +516,7 @@ iteracyjnie zamieniając *init* z *init* *+ (i*\* *b*i).
 
 Druga funkcja członkowska zwraca:
 
-*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*1* *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
 iteracyjnie zamieniając *init* z *init* *binary_op1* (*i* *binary_op2* *b*i).
 
@@ -625,10 +625,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych, który dotyczy pierwszego elementu w zakresie, który ma zostać wypełniony.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych, który odnosi się do ostatniego elementu w zakresie, który ma zostać wypełniony.
 
 \ *wartości*
@@ -704,10 +704,10 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej.
 
-*ostatni* \
+*ostatni*\
 Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej, znajdujący się o jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
 \ *wyniku*
@@ -726,9 +726,9 @@ Iterator danych wyjściowych odnoszący się do końca zakresu docelowego: *Resu
 
 Dla sekwencji wartości *a*1, *a*2,... *x,* w zakresie wejściowym, Pierwsza funkcja szablonu przechowuje kolejne częściowe sumy w zakresie docelowym. *N*-ty element jest określony przez (*a*1 + *a*2 + *a*3 +... + *a*n).
 
-Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym Druga funkcja szablonu przechowuje kolejne wyniki częściowe w zakresie docelowym. *N*-ty element jest określony przez ((... (*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ...) *binary_op* *n)* .
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym Druga funkcja szablonu przechowuje kolejne wyniki częściowe w zakresie docelowym. *N*-ty element jest określony przez ((... (*a*1 *binary_op* *a*2) *binary_op* *3)* *binary_op* ...) *binary_op* *n)* .
 
-Operacja binarna *binary_op* nie jest wymagana do skojarzenia lub komutatywna, ponieważ określono kolejność operacji.
+Operacja binarna *binary_op* nie musi być asocjacyjna ani komutatywna, ponieważ określono kolejność operacji.
 
 ### <a name="example"></a>Przykład
 
@@ -840,11 +840,11 @@ Type reduce(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.
@@ -857,11 +857,11 @@ Operacja binarna, która ma zostać zastosowana do każdego elementu w określon
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik zastosowania *binary_op* lub `std::plus<>()` do *inicjowania* i wszystkich elementów w określonym zakresie do (* PartialResult, *in_iter*), gdzie *PartialResult* jest wynikiem wcześniejszych aplikacji operacji, a *in_iter* jest iteratorem wskazującym na część elementu w zakresie. W przeciążeniach, które nie określają *init*, użyta wartość *init* jest równoważna `typename iterator_traits<InputIterator>::value_type{}`.
+Wynik zastosowania *binary_op* lub `std::plus<>()` do *inicjowania* i wszystkich elementów w określonym zakresie do (* PartialResult, *in_iter*), gdzie *PartialResult* jest wynikiem wcześniejszych aplikacji operacji, a *in_iter* jest iteratorem wskazującym jakiś element w zakresie. W przeciążeniach, które nie określają *init*, użyta wartość *init* jest równoważna `typename iterator_traits<InputIterator>::value_type{}`.
 
 ### <a name="remarks"></a>Uwagi
 
-zachowanie `reduce` jest niedeterministyczne, chyba że *binary_op* jest asocjacyjna i komutatywna. Zachowanie jest niezdefiniowane, jeśli *binary_op* modyfikuje dowolny element lub unieważnia wszystkie Iteratory w interwale \[*pierwszy*, *ostatni*] włącznie.
+zachowanie `reduce` jest niedeterministyczne, chyba że *binary_op* jest asocjacyjne i komutatywna. Zachowanie jest niezdefiniowane, jeśli *binary_op* modyfikuje dowolny element lub unieważnia wszystkie Iteratory w interwale \[*pierwszy*, *ostatni*], włącznie.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
@@ -893,11 +893,11 @@ ForwardIterator2 transform_exclusive_scan(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.
@@ -958,11 +958,11 @@ ForwardIterator2 transform_inclusive_scan(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.
@@ -1038,17 +1038,17 @@ Type transform_reduce(
 \ *exec*
 Zasady wykonywania.
 
-*pierwszy* \
+*pierwszy*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*.
 
-*first1* \
+*first1*\
 Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op1*.
 
-*ostatni* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*ostatni*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
-*last1* \
-Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op1*, który jest jedną pozycją poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
+*last1*\
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie do sumowania lub łączenia przy użyciu *binary_op1*, to jest jedną pozycję poza końcowym elementem faktycznie zawartym w iteracji kumulacji.
 
 \ *wyniku*
 Iterator danych wyjściowych odnoszący się do pierwszego elementu w zakresie docelowym, w którym ma zostać zapisana seria sum lub wyniki określonej operacji.

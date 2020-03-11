@@ -1,5 +1,5 @@
 ---
-title: Delegat i makra mapy interfejsu (MFC)
+title: Makra delegata i mapy interfejsu (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - delegate map macros [MFC]
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322985"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856662"
 ---
-# <a name="delegate-and-interface-map-macros"></a>Makra mapy delegat, interfejs
+# <a name="delegate-and-interface-map-macros"></a>Makra delegata i mapy interfejsu
 
-MFC obsługuje te makra delegata i mapy interfejsu:
+MFC obsługuje te makra dla delegatów i map interfejsów:
 
 |||
 |-|-|
-|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Rozpoczyna się mapa delegata.|
-|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Rozpoczyna się definicji podłączony mapy.|
-|[CommandHandler Delegate](#commandhandler)|Rejestruje metody wywołania zwrotnego z źródło polecenia.  |
-|[END_DELEGATE_MAP](#end_delegate_map)|Kończy się mapa delegata.|
-|[END_INTERFACE_MAP](#end_interface_map)|Kończy się mapę interfejsu w pliku implementacji. |
-|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Tworzy wpis w mapie delegata.|
-|[INTERFACE_PART](#interface_part)|Używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla każdego interfejsu, który jaki obsługiwał będzie obiekt.|
-|[MAKE_DELEGATE](#make_delegate)|Dołącza program obsługi zdarzeń do zarządzanego formantu.|
+|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Rozpoczyna mapę delegatów.|
+|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Rozpoczyna definicję mapy interfejsu.|
+|[Delegat CommandHandler — obiekt](#commandhandler)|Rejestruje metody wywołania zwrotnego za pomocą źródła poleceń.  |
+|[END_DELEGATE_MAP](#end_delegate_map)|Zamyka mapę delegatów.|
+|[END_INTERFACE_MAP](#end_interface_map)|Zamyka mapę interfejsu w pliku implementacji. |
+|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Tworzy wpis w mapie delegatów.|
+|[INTERFACE_PART](#interface_part)|Używany między makrem BEGIN_INTERFACE_MAP a makrom END_INTERFACE_MAP dla każdego interfejsu, który będzie obsługiwany przez obiekt.|
+|[MAKE_DELEGATE](#make_delegate)|Dołącza procedurę obsługi zdarzeń do zarządzanego formantu.|
 
-## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
 
-Rozpoczyna się mapa delegata.
+Rozpoczyna mapę delegatów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -40,12 +40,12 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="parameters"></a>Parametry
 
-*KLASA*<br/>
-Klasa, w którym jest hostowana zarządzanego formantu.
+*OKREŚLONEJ*<br/>
+Klasa, w której jest hostowany zarządzany formant.
 
 ### <a name="remarks"></a>Uwagi
 
-To makro oznacza początek listy zapisów delegatów, które tworzą mapę delegata. Aby uzyskać przykład sposobu używania tego makra, zobacz [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
+To makro oznacza początek listy wpisów delegatów, które tworzą mapę delegatów. Aby zapoznać się z przykładem tego, jak to makro jest używane, zobacz [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -53,7 +53,7 @@ To makro oznacza początek listy zapisów delegatów, które tworzą mapę deleg
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
-Rozpoczyna się definicji podłączony mapy, gdy są używane w pliku implementacji.
+Rozpoczyna definicję mapy interfejsu, gdy jest używana w pliku implementacji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -64,24 +64,24 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Klasy, w którym ma zostać określona mapy interfejsu
+Klasa, w której ma zostać zdefiniowana Mapa interfejsu
 
 *baseClass*<br/>
-Klasa, z której *theClass* pochodzi od klasy.
+Klasa, z której pochodzi *theClass* .
 
 ### <a name="remarks"></a>Uwagi
 
-Dla każdego interfejsu, który jest implementowany jest jeden lub więcej wywołań makra INTERFACE_PART. Dla każdej agregacji, z której korzysta ta klasa jest jedno wywołanie makra INTERFACE_AGGREGATE.
+Dla każdego wdrożonego interfejsu istnieje co najmniej jedno INTERFACE_PART wywołanie makra. Dla każdej wartości zagregowanej używanej przez klasę istnieje jedno INTERFACE_AGGREGATE wywołanie makra.
 
-Aby uzyskać więcej informacji na temat mapy interfejsu, zobacz [techniczne 38 Uwaga](../tn038-mfc-ole-iunknown-implementation.md).
+Aby uzyskać więcej informacji na temat map interfejsów, zobacz [Uwaga techniczna 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-##  <a name="commandhandler"></a>CommandHandler Delegate
+##  <a name="commandhandler"></a>Delegat CommandHandler — obiekt
 
-Rejestruje metody wywołania zwrotnego z źródło polecenia.
+Rejestruje metody wywołania zwrotnego za pomocą źródła poleceń.
 
 ### <a name="syntax"></a>Składnia
 
@@ -96,19 +96,19 @@ Identyfikator polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten delegat rejestruje metody wywołania zwrotnego z źródło polecenia. Po dodaniu delegata do obiektu źródła polecenia, metody wywołania zwrotnego staje się procedury obsługi dla poleceń z określonego źródła.
+Ten delegat rejestruje metody wywołania zwrotnego ze źródłem poleceń. Po dodaniu delegata do obiektu źródłowego polecenia Metoda wywołania zwrotnego zmienia się w procedurę obsługi poleceń pochodzących z określonego źródła.
 
-Aby uzyskać więcej informacji, zobacz [jak: Dodaj polecenie routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Aby uzyskać więcej informacji, zobacz [jak: Dodawanie poleceń routingu do kontrolki Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
-Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [Korzystanie z kontrolki użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
+**Nagłówek:** afxwinforms. h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 
-##  <a name="commanduihandler"></a>Commanduihandler — obiekt
+##  <a name="commanduihandler"></a>Commanduihandler —
 
-Rejestruje metody wywołania zwrotnego z komunikatem polecenia aktualizacji interfejsu użytkownika.
+Rejestruje metody wywołania zwrotnego za pomocą komunikatu polecenia aktualizacji interfejsu użytkownika.
 
 ### <a name="syntax"></a>Składnia
 
@@ -122,21 +122,21 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 Identyfikator polecenia.
 
 *cmdUI*<br/>
-Identyfikator polecenia komunikatu.
+Identyfikator komunikatu polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten delegat rejestruje metody wywołania zwrotnego z komunikatem polecenia aktualizacji interfejsu użytkownika. `CommandUIHandler` jest podobny do [commandhandler — obiekt](#commandhandler) z tą różnicą, że ten delegat jest używane z polecenia aktualizacji obiektu interfejsu użytkownika. Polecenia aktualizacji interfejsu użytkownika powinny mapowane w jeden do jednego z metody obsługi wiadomości.
+Ten delegat rejestruje metody wywołania zwrotnego za pomocą komunikatu polecenia aktualizacji interfejsu użytkownika. `CommandUIHandler` jest podobna do [CommandHandler — obiekt](#commandhandler) , z tą różnicą, że ten delegat jest używany z poleceniami aktualizacji obiektu interfejsu użytkownika. Polecenia aktualizacji interfejsu użytkownika powinny być mapowane jeden do jednego z metodami obsługi komunikatów.
 
-Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [Korzystanie z kontrolki użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
+**Nagłówek:** afxwinforms. h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
-Kończy się mapa delegata.
+Zamyka mapę delegatów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -146,7 +146,7 @@ END_DELEGATE_MAP();
 
 ### <a name="remarks"></a>Uwagi
 
-To makro oznacza koniec listy wpisów delegata, które tworzą mapę delegata. Aby uzyskać przykład sposobu używania tego makra, zobacz [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
+To makro oznacza koniec listy wpisów delegatów, które tworzą mapę delegatów. Aby zapoznać się z przykładem tego, jak to makro jest używane, zobacz [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -154,7 +154,7 @@ To makro oznacza koniec listy wpisów delegata, które tworzą mapę delegata. A
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
-Kończy się mapę interfejsu w pliku implementacji.
+Zamyka mapę interfejsu w pliku implementacji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -164,15 +164,15 @@ END_INTERFACE_MAP( )
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat mapy interfejsu zobacz [techniczne 38 Uwaga](../tn038-mfc-ole-iunknown-implementation.md).
+Aby uzyskać więcej informacji na temat map interfejsów, zobacz [Uwaga techniczna 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
-Tworzy wpis w mapie delegata.
+Tworzy wpis w mapie delegatów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -182,22 +182,22 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>Parametry
 
-*ELEMENT CZŁONKOWSKI*<br/>
-Metoda obsługi zdarzeń do dołączenia do kontrolki.
+*CZŁONKIEM*<br/>
+Metoda obsługi zdarzeń, która ma zostać dołączona do kontrolki.
 
 *ARG0*<br/>
-Pierwszy argument metody obsługi zdarzeń zarządzanych, takich jak `Object^`.
+Pierwszy argument metody obsługi zdarzeń zarządzanych, taki jak `Object^`.
 
 *ARG1*<br/>
-Drugi argument metody obsługi zdarzeń zarządzanych, takich jak `EventArgs^`.
+Drugi argument metody obsługi zdarzeń zarządzanych, taki jak `EventArgs^`.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy wpis w mapie delegata odnosi się do delegata obsługi zdarzeń zarządzanych, utworzone przez [MAKE_DELEGATE](#make_delegate).
+Każdy wpis na mapie delegatów odnosi się do zarządzanego delegata obsługi zdarzeń utworzonego przez [MAKE_DELEGATE](#make_delegate).
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje jak utworzyć wpis w mapowaniu delegata dla za pomocą EVENT_DELEGATE_ENTRY `OnClick` programu obsługi zdarzeń; a także zobacz przykładowy kod z MAKE_DELEGATE. Aby uzyskać więcej informacji, zobacz [jak: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Poniższy przykład kodu pokazuje, jak za pomocą EVENT_DELEGATE_ENTRY utworzyć wpis w mapie delegatów dla programu obsługi zdarzeń `OnClick`; Zobacz również przykład kodu w MAKE_DELEGATE. Aby uzyskać więcej informacji, zobacz [How to: ujścia Windows Forms Events z C++ klas macierzystych](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -211,7 +211,7 @@ END_DELEGATE_MAP()
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
-Używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla każdego interfejsu, który jaki obsługiwał będzie obiekt.
+Używany między makrem BEGIN_INTERFACE_MAP a makrom END_INTERFACE_MAP dla każdego interfejsu, który będzie obsługiwany przez obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -224,23 +224,23 @@ INTERFACE_PART( theClass, iid, localClass)
 *theClass*<br/>
 Nazwa klasy, która zawiera mapę interfejsu.
 *IID*<br/>
-Identyfikatora IID, który ma być mapowane na klasie osadzonej.
+Identyfikator IID, który ma zostać zmapowany na osadzoną klasę.
 *localClass*<br/>
 Nazwa klasy lokalnej.
 
 ### <a name="remarks"></a>Uwagi
 
-Umożliwia mapowania identyfikatora IID do elementu członkowskiego klasy wskazanego przez *theClass* i *localClass*.
+Umożliwia mapowanie identyfikatora IID do elementu członkowskiego klasy wskazywanej przez *theClass* i *localClass*.
 
-Aby uzyskać więcej informacji na temat mapy interfejsu, zobacz [techniczne 38 Uwaga](../tn038-mfc-ole-iunknown-implementation.md).
+Aby uzyskać więcej informacji na temat map interfejsów, zobacz [Uwaga techniczna 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
-Dołącza program obsługi zdarzeń do zarządzanego formantu.
+Dołącza procedurę obsługi zdarzeń do zarządzanego formantu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -250,19 +250,19 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="parameters"></a>Parametry
 
-*DELEGAT*<br/>
-Typem obsługi zdarzeń zarządzanych delegować, takich jak [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).
+*Wierz*<br/>
+Typ delegata programu obsługi zdarzeń zarządzanych, taki jak [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).
 
-*ELEMENT CZŁONKOWSKI*<br/>
-Nazwa metody obsługi zdarzeń do dołączenia do kontrolki.
+*CZŁONKIEM*<br/>
+Nazwa metody obsługi zdarzeń, która ma zostać dołączona do kontrolki.
 
 ### <a name="remarks"></a>Uwagi
 
-To makro tworzy delegata obsługi zdarzeń zarządzanego typu *DELEGOWAĆ* i nazwy *elementu członkowskiego*. Delegata obsługi zdarzeń zarządzanych umożliwia klasy natywnej do obsługi zdarzeń zarządzanych.
+To makro tworzy delegata programu obsługi zdarzeń zarządzanych typu *delegata* i nazwanego *elementu członkowskiego*. Delegat zarządzanego programu obsługi zdarzeń pozwala natywnej klasie obsługiwać zdarzenia zarządzane.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje sposób wywoływania `MAKE_DELEGATE` można dołączyć `OnClick` procedurę obsługi zdarzeń do kontrolki MFC `MyControl`. Szerszy wyjaśnienie sposobu działania tego makra w aplikacji MFC, zobacz [jak: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Poniższy przykład kodu pokazuje, jak wywołać `MAKE_DELEGATE`, aby dołączyć procedurę obsługi zdarzeń `OnClick` do `MyControl`formantów MFC. Aby uzyskać szersze wyjaśnienie tego, jak to makro działa w aplikacji MFC, zobacz [How to: ujścia Windows Forms Events z klas macierzystych C++ ](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -282,4 +282,4 @@ void CMyView::OnInitialUpdate()
 
 [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
 [Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[Makra i funkcje globalne](mfc-macros-and-globals.md)<br/>
+[Makra i Globals](mfc-macros-and-globals.md)<br/>

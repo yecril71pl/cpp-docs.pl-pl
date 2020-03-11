@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816339"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867040"
 ---
 # <a name="ccmdtarget-class"></a>Klasa CCmdTarget
 
@@ -63,23 +63,23 @@ Klasa bazowa dla architektury mapy komunikatów biblioteka MFC.
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CCmdTarget:: CCmdTarget](#ccmdtarget)|Konstruuje obiekt `CCmdTarget`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Wyświetla kursor jako klepsydrę kursora.|
 |[CCmdTarget::D oOleVerb](#dooleverb)|Powoduje wykonanie akcji określonej przez zlecenie OLE.|
 |[CCmdTarget:: EnableAutomation](#enableautomation)|Umożliwia automatyzację OLE dla obiektu `CCmdTarget`.|
 |[CCmdTarget:: EnableConnections](#enableconnections)|Włącza Wyzwalanie zdarzeń przez punkty połączenia.|
-|[CCmdTarget::EnableTypeLib](#enabletypelib)|Włącza bibliotekę typów obiektu.|
+|[CCmdTarget:: EnableTypeLib](#enabletypelib)|Włącza bibliotekę typów obiektu.|
 |[CCmdTarget:: EndWaitCursor](#endwaitcursor)|Powraca do poprzedniego kursora.|
 |[CCmdTarget:: EnumOleVerbs](#enumoleverbs)|Wylicza zlecenia OLE obiektu.|
 |[CCmdTarget:: FromIDispatch](#fromidispatch)|Zwraca wskaźnik do obiektu `CCmdTarget` skojarzonego ze wskaźnikiem `IDispatch`.|
@@ -88,7 +88,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget:: GetTypeInfoCount](#gettypeinfocount)|Pobiera liczbę interfejsów informacji o typie, które zapewnia obiekt.|
 |[CCmdTarget:: GetTypeInfoOfGuid](#gettypeinfoofguid)|Pobiera opis typu, który odpowiada określonemu identyfikatorowi GUID.|
 |[CCmdTarget:: GetTypeLib](#gettypelib)|Pobiera wskaźnik do biblioteki typów.|
-|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Pobiera pamięć podręczną biblioteki typów.|
+|[CCmdTarget:: GetTypeLibCache](#gettypelibcache)|Pobiera pamięć podręczną biblioteki typów.|
 |[CCmdTarget:: IsInvokeAllowed](#isinvokeallowed)|Włącza wywołanie metody automatyzacji.|
 |[CCmdTarget:: IsResultExpected](#isresultexpected)|Zwraca wartość różną od zera, jeśli funkcja automatyzacji powinna zwracać wartości.|
 |[CCmdTarget:: OnCmdMsg](#oncmdmsg)|Kieruje i wysyła komunikaty poleceń.|
@@ -349,7 +349,7 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Identyfikator ustawień regionalnych (`LCID`).
 
-*guid*<br/>
+*ident*<br/>
 [Identyfikator GUID](/previous-versions/cc317743(v%3dmsdn.10)) opisu typu.
 
 *ppTypeInfo*<br/>

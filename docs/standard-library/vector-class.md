@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890880"
 ---
 # <a name="vector-class"></a>vector — Klasa
 
@@ -123,9 +123,9 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 
 [Klasa referencyjna vector\<bool >](../standard-library/vector-bool-class.md#reference_class) jest klasą zagnieżdżoną, której obiekty mogą dostarczać odwołania do elementów (pojedynczych bitów) w wektorowej\<logicznej > obiektu.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |||
 |-|-|
@@ -300,7 +300,7 @@ const_reference at(size_type position) const;
 \ *pozycji*
 Indeks dolny lub numer pozycji elementu do odwołania w wektorze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do elementu w indeksie w argumencie. Jeśli *pozycja* jest większa niż rozmiar wektora, `at` zgłasza wyjątek.
 
@@ -346,7 +346,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Ostatni element wektora. Jeśli wektor jest pusty, wartość zwracana jest niezdefiniowana.
 
@@ -390,7 +390,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator dostępu swobodnego odnoszący się do pierwszego elementu w `vector` lub do lokalizacji po pomyślnym `vector`pustej. Zawsze należy porównać wartość zwróconą z [wektorem:: end](#end) , aby upewnić się, że jest ona prawidłowa.
 
@@ -451,7 +451,7 @@ Zwraca liczbę elementów, które może zawierać wektor bez przydziału większ
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca długość magazynu przydzieloną dla wektora.
 
@@ -495,7 +495,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -521,7 +521,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator **stałej** dostępu swobodnego, który wskazuje tuż poza końcem zakresu.
 
@@ -675,7 +675,7 @@ Zwraca iterator const do pierwszego elementu w odwróconym wektorze.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator typu const odwrotnie, odnoszący się do pierwszego elementu w odwróconym [wektorze](../standard-library/vector-class.md) lub adresowania ostatniego elementu w nieodwróconej `vector`.
 
@@ -724,7 +724,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym [wektorze](../standard-library/vector-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym `vector`).
 
@@ -775,7 +775,7 @@ const_pointer data() const;
 pointer data();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do pierwszego elementu w [wektorze](../standard-library/vector-class.md) lub do lokalizacji powiodło się puste `vector`.
 
@@ -897,7 +897,7 @@ Pozycja w [wektorze](../standard-library/vector-class.md) , w której wstawiany 
 *argumenty*\
 Argumenty konstruktora. Funkcja wnioskuje, jakie przeciążenie konstruktora ma zostać wywołane na podstawie podanych argumentów.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Funkcja zwraca iterator, który wskazuje na położenie, w którym nowy element został wstawiony do `vector`.
 
@@ -985,7 +985,7 @@ Testuje, czy wektor jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli wektor jest pusty. **Fałsz** , jeśli wektor nie jest pusty.
 
@@ -1025,7 +1025,7 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Poprzedni-końcowy iterator dla wektora. Jeśli wektor jest pusty, a następnie `vector::end() == vector::begin()`.
 
@@ -1083,7 +1083,7 @@ Pozycja pierwszego elementu usuniętego z wektora.
 *ostatni*\
 Umieść tuż poza ostatnim elementem usuniętym z wektora.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator, który wyznacza pierwszy element pozostający poza elementami usuniętymi lub wskaźnik do końca wektora, jeśli taki element nie istnieje.
 
@@ -1142,7 +1142,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do pierwszego elementu w obiekcie Vector. Jeśli wektor jest pusty, zwracany jest niezdefiniowany.
 
@@ -1186,7 +1186,7 @@ Zwraca kopię obiektu alokatora użytego do skonstruowania wektora.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Alokator używany przez wektor.
 
@@ -1259,7 +1259,7 @@ Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowa
 *ostatni*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Pierwsze dwie funkcje `insert` zwracają iterator, który wskazuje na położenie, w którym nowy element został wstawiony do wektora.
 
@@ -1355,7 +1355,7 @@ Zwraca maksymalną długość wektora.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Maksymalna możliwa długość wektora.
 
@@ -1393,7 +1393,7 @@ const_reference operator[](size_type position) const;
 \ *pozycji*
 Położenie elementu wektora.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli określona pozycja jest większa niż lub równa rozmiarowi kontenera, wynik jest niezdefiniowany.
 
@@ -1602,7 +1602,7 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator odwrotnego dostępu swobodnego, odnoszący się do pierwszego elementu w odwróconym wektorze lub adresowania ostatniego elementu w nieodwróconym wektorze.
 
@@ -1664,7 +1664,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwrotny iterator dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym wektorze (lokalizacja, która poprzedza pierwszy element w wektorze nieodwróconym).
 
@@ -1939,7 +1939,7 @@ Zwraca liczbę elementów w wektorze.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca długość wektora.
 
@@ -2234,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

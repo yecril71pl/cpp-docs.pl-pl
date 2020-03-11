@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689269"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874000"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -106,15 +106,15 @@ class multiset
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* \
+*Klucz*\
 Typ danych elementu do przechowywania w zestawie wielokrotnym.
 
-*Porównaj* \
-Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. Predykat binarny **mniej** \<Key > jest wartością domyślną.
+*Porównaj*\
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. W przypadku predykatu binarnego **mniej**\<klucz > jest wartością domyślną.
 
 W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-@No__t_1 *alokatora*
+\ *alokatora*
 Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
@@ -133,13 +133,13 @@ Klasa C++ zestawu wielokrotnego biblioteki standardowej to:
 
 - Szablon klasy, ponieważ funkcjonalność, którą zapewnia, jest generyczna i dlatego niezależna od określonego typu danych zawartych jako elementy. Typ danych, który ma być użyty, jest zamiast tego określony jako parametr w klasie szablonu wraz z funkcją porównania i alokatorem.
 
-Iterator dostarczony przez klasę zestawu wielokrotnego jest iteratorem dwukierunkowym, ale funkcje składowych klasy [INSERT](#insert) i zestaw [wielokrotny](#multiset) mają wersje przyjmujące jako parametry szablonu słabszy iterator danych wejściowych, którego wymagania dotyczące funkcjonalności są inne minimum niż te gwarantowane przez klasę iteratorów dwukierunkowych. Pojęcia innych iteratorów formują rodzinę powiązaną przez udoskonalenia w ich funkcjonalnościach. Każde pojęcie iteratora ma swój własny zestaw wymagań, a algorytmy z nimi pracujące muszą ograniczać swoje założenia co do wymagań dostarczonych przez tego typu iterator. Można założyć, że z iteratora danych wejściowych można usunąć odwołanie, aby odwołać się do obiektu, a także, że może on być zwiększony do następnego iteratora w sekwencji. Jest to minimalny zestaw funkcjonalności, ale jest wystarczający, aby można było mówić istotnie o zakresie iteratorów [`First`, `Last`) w kontekście funkcji składowych klasy.
+Iterator dostarczony przez klasę zestawu wielokrotnego jest iteratorem dwukierunkowym, ale funkcje składowych klasy [INSERT](#insert) i zestaw [wielokrotny](#multiset) mają wersje przyjmujące jako parametry szablonu słabszy iterator danych wejściowych, którego wymagania dotyczące funkcjonalności są mniejsze niż te gwarantowane przez klasę iteratorów dwukierunkowych. Pojęcia innych iteratorów formują rodzinę powiązaną przez udoskonalenia w ich funkcjonalnościach. Każde pojęcie iteratora ma swój własny zestaw wymagań, a algorytmy z nimi pracujące muszą ograniczać swoje założenia co do wymagań dostarczonych przez tego typu iterator. Można założyć, że z iteratora danych wejściowych można usunąć odwołanie, aby odwołać się do obiektu, a także, że może on być zwiększony do następnego iteratora w sekwencji. Jest to minimalny zestaw funkcjonalności, ale jest wystarczający, aby można było mówić istotnie o zakresie iteratorów [`First`, `Last`) w kontekście funkcji składowych klasy.
 
 Wybór typu kontenera powinien ogólnie być oparty o typ wyszukiwania i wstawiania wymagany przez aplikację. Kontenery asocjacyjne są zoptymalizowane dla operacji wyszukiwania, wstawiania oraz usuwania. Funkcje elementów członkowskich, które jawnie obsługują te operacje, są skuteczne, wykonując je w czasie, który jest średnio proporcjonalny do logarytmu liczby elementów w kontenerze. Wstawianie elementów nie unieważnia iteratorów, a usuwanie elementów unieważnia tylko te iteratory, które w szczególności wskazywały na usunięte elementy.
 
 Zestaw wielokrotny powinien być kontenerem asocjacyjnym z wyboru, gdy warunki kojarzenia wartości z kluczami są spełnione przez aplikację. Elementów zestawu wielokrotnego może być wiele, mogą służyć jako własne klucze sortowania, więc klucze nie są unikatowe. Model dla tego typu konstrukcji jest uporządkowaną listą, np. wyrazów, w których wyrazy mogą występować więcej niż jeden raz. Gdyby nie zezwolono na wiele wystąpień wyrazów, odpowiednią strukturą kontenera byłby zestaw. Gdyby unikatowe definicje zostały dołączone jako wartości do listy unikatowych słów kluczowych, mapa byłaby odpowiednią strukturą zawierającą te dane. Gdyby natomiast definicje nie były unikatowe, mapa wielokrotna byłaby kontenerem z wyboru.
 
-Zestaw wielokrotny porządkuje sekwencję, którą kontroluje, przez wywołanie przechowywanego obiektu funkcji typu *Compare*. Ten przechowywany obiekt jest funkcją porównywania, do której można uzyskać dostęp przez wywołanie funkcji składowej [key_comp](#key_comp). Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym. Predykat binarny *f*( *x*, *y*) jest obiektem funkcji, który ma dwa obiekty argumentu *x* i *y* oraz wartość zwracaną **true** lub **false**. Kolejność nałożona na zestaw jest ścisłym słabym porządkowaniem, jeśli Predykat binarny jest niezwrotny, niesymetryczny i przechodni oraz jeśli równoważność jest przechodnia, gdzie dwa obiekty x i y są zdefiniowane jako równoważne, gdy zarówno *f*( *x, y*), jak i *f*( *y, x*) ma wartość false. Jeśli silniejszy warunek równości pomiędzy kluczami zastąpi ten równoważności, to porządkowanie będzie całkowite (w sensie, że wszystkie elementy są uporządkowane względem siebie), a dopasowane klucze będą od siebie nieodróżnialne.
+Zestaw wielokrotny porządkuje sekwencję, którą kontroluje, przez wywołanie przechowywanego obiektu funkcji typu *Compare*. Ten przechowywany obiekt jest funkcją porównywania, do której można uzyskać dostęp, wywołując funkcję członkowską [key_comp](#key_comp). Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym. Predykat binarny *f*( *x*, *y*) jest obiektem funkcji, który ma dwa obiekty argumentu *x* i *y* oraz wartość zwracaną **true** lub **false**. Kolejność nałożona na zestaw jest ścisłym słabym porządkowaniem, jeśli Predykat binarny jest niezwrotny, niesymetryczny i przechodni oraz jeśli równoważność jest przechodnia, gdzie dwa obiekty x i y są zdefiniowane jako równoważne, gdy zarówno *f*( *x, y*), jak i *f*( *y, x*) mają wartość false. Jeśli silniejszy warunek równości pomiędzy kluczami zastąpi ten równoważności, to porządkowanie będzie całkowite (w sensie, że wszystkie elementy są uporządkowane względem siebie), a dopasowane klucze będą od siebie nieodróżnialne.
 
 W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
@@ -177,16 +177,16 @@ W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `st
 |[cbegin](#cbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w `multiset`.|
 |[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w `multiset`.|
 |[Wyczyść](#clear)|Usuwa wszystkie elementy `multiset`.|
-|[liczbą](#count)|Zwraca liczbę elementów w `multiset`, których klucz pasuje do klucza określonego jako parametr.|
+|[count](#count)|Zwraca liczbę elementów w `multiset`, których klucz pasuje do klucza określonego jako parametr.|
 |[crbegin —](#crbegin)|Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie.|
 |[crend](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconym zestawie.|
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `multiset`.|
-|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `multiset` z wskazówką dotyczącą położenia.|
+|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `multiset`z wskazówką dotyczącą położenia.|
 |[ciągiem](#empty)|Testuje, czy `multiset` jest pusty.|
 |[punktów](#end)|Zwraca iterator, który wskazuje na lokalizację po ostatnim elemencie w `multiset`.|
 |[equal_range](#equal_range)|Zwraca parę iteratorów. Pierwszy iterator w parze wskazuje na pierwszy element w `multiset` z kluczem, który jest większy niż określony klucz. Drugi iterator w parze wskazuje na pierwszy element w `multiset` z kluczem, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w `multiset` z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.|
-|[wyświetlić](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w `multiset`, który ma klucz równy określonemu kluczowi.|
+|[find](#find)|Zwraca iterator, który wskazuje na pierwszą lokalizację elementu w `multiset`, który ma klucz równy określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator`, który jest używany do konstruowania `multiset`.|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `multiset`.|
 |[key_comp](#key_comp)|Udostępnia obiekt funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w `multiset`.|
@@ -207,7 +207,7 @@ W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `st
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<set >
+**Nagłówek:** \<Ustaw >
 
 **Przestrzeń nazw:** std
 
@@ -221,13 +221,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type` jest synonimem dla `Allocator` parametru szablonu.
+`allocator_type` jest synonimem dla `Allocator`parametru szablonu.
 
 Aby uzyskać więcej informacji na temat `Allocator`, zobacz sekcję Uwagi w temacie [klasy zestaw wielokrotny](../standard-library/multiset-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [get_allocator](#get_allocator) przy użyciu `allocator_type`
+Zapoznaj się z [get_allocator](#get_allocator) przykładem `allocator_type`
 
 ## <a name="begin"></a>zestaw wielokrotny:: BEGIN
 
@@ -296,7 +296,7 @@ const_iterator cbegin() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
 
 Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
@@ -471,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
+*klucz*\
 Klucz elementów, które mają być dopasowane z zestawu wielokrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -482,7 +482,7 @@ Liczba elementów w zestawie wielokrotnym, których klucz sortowania pasuje do k
 
 Funkcja członkowska zwraca liczbę elementów *x* z zakresu
 
-\[ lower_bound (*Key*), upper_bound (*klucz*))
+\[ lower_bound (*klucz*), upper_bound (*klucz*))
 
 ### <a name="example"></a>Przykład
 
@@ -630,9 +630,9 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-@No__t_0 jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. @No__t_0 jest zwykle używany do reprezentowania liczby elementów w zakresie [`first`, `last`) między iteratorami `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do , ale nie obejmuje, element wskazywany przez `last`.
+`difference_type` jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. `difference_type` jest zwykle używany do reprezentowania liczby elementów w zakresie [`first`, `last`) między iteratorami `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do, ale nie obejmuje elementu wskazywanego przez `last`.
 
-Należy zauważyć, że chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak Set, odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu swobodnego zapewniane przez kontener dostępu swobodnego, taki jak wektor.
+Należy zauważyć, że chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak Set, odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu swobodnego, które są udostępniane przez kontener dostępu swobodnego, taki jak wektor.
 
 ### <a name="example"></a>Przykład
 
@@ -865,14 +865,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
+*klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Para iteratorów, takich jak pierwszy to [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
+Para iteratorów, takich jak pierwszy jest [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
 
-Aby uzyskać dostęp do pierwszego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **najpierw**i aby usunąć odwołanie do dolnego powiązanego iteratora, użyj \* (`pr`. **pierwszy**). Aby uzyskać dostęp do drugiego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **drugi**i aby usunąć odwołanie do górnego powiązanego iteratora, użyj \* (`pr`. **sekundę**).
+Aby uzyskać dostęp do pierwszego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **najpierw**i aby usunąć odwołanie do dolnego powiązanego iteratora, użyj \*(`pr`. **pierwszy**). Aby uzyskać dostęp do drugiego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **drugi**i aby usunąć odwołanie do górnego powiązanego iteratora, użyj \*(`pr`. **sekundę**).
 
 ### <a name="example"></a>Przykład
 
@@ -950,16 +950,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* \
+*Gdzie*\
 Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* \
+*Pierwszy*\
 Pozycja pierwszego elementu, który ma zostać usunięty.
 
-*Ostatni* \
+*Ostatni*\
 Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 
-*Klucz* \
+*Klucz*\
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -984,7 +984,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
+*klucz*\
 Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1170,7 +1170,7 @@ IList);
 |-|-|
 |*Użyte*|Wartość elementu, który ma zostać wstawiony do zestawu wielokrotnego.|
 |*Miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).|
-|*ValTy*|Parametr szablonu, który określa typ argumentu, który może być używany przez zestaw wielokrotny do konstruowania elementu [value_type](../standard-library/map-class.md#value_type), oraz idealnego do przesyłania dalej wartości *Val* jako argumentu.|
+|*ValTy*|Parametr szablonu, który określa typ argumentu, który może być używany przez zestaw wielokrotny do konstruowania elementu [value_type](../standard-library/map-class.md#value_type)i idealny do przesyłania *dalej jako argument* .|
 |*Pierwszego*|Pozycja pierwszego elementu, który ma zostać skopiowany.|
 |*Ostatniego*|Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany.|
 |*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
@@ -1188,11 +1188,11 @@ Ta funkcja nie sprawdza wskaźników ani odwołań, ale może unieważnić wszys
 
 Podczas wstawiania tylko jednego elementu, jeśli wystąpi wyjątek, stan kontenera nie jest modyfikowany. Podczas wstawiania wielu elementów, jeśli wyjątek jest zgłaszany, kontener pozostaje w nieokreślonym, ale prawidłowym stanie.
 
-[Value_type](../standard-library/map-class.md#value_type) kontenera to element typedef, który należy do kontenera, a dla opcji set, `multiset<V>::value_type` jest typu `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontenera jest elementem TypeDef, który należy do kontenera, a w przypadku zestawu, `multiset<V>::value_type` jest typem `const V`.
 
 Funkcja elementu członkowskiego zakresu (5) wstawia sekwencję wartości elementów do zestawu wielokrotnego, który odnosi się do każdego elementu, który jest kierowany przez iterator w zakresie `[First, Last)`; w związku z tym `Last` nie zostanie wstawiony. Funkcja elementu członkowskiego kontenera `end()` odnosi się do pozycji tuż po ostatnim elemencie w kontenerze — na przykład, instrukcja `s.insert(v.begin(), v.end());` wstawia wszystkie elementy `v` do `s`.
 
-Funkcja członkowska listy inicjatorów (6) używa elementu [initializer_list](../standard-library/initializer-list.md) do kopiowania elementów do zestawu wielokrotnego.
+Funkcja członkowska listy inicjatorów (6) używa [initializer_list](../standard-library/initializer-list.md) do kopiowania elementów do zestawu wielokrotnego.
 
 Do wstawienia elementu skonstruowanego w miejscu — to znaczy, że nie są wykonywane żadne operacje kopiowania ani przenoszenia — zobacz zestaw [wielokrotny:: emplace](#emplace) i zestaw [wielokrotny:: emplace_hint](#emplace_hint).
 
@@ -1320,7 +1320,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 Zwraca wartość true, jeśli *x* ściśle poprzedza *y* w kolejności sortowania.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla parametru szablonu `Compare`. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami `Compare`parametru szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -1383,13 +1383,13 @@ typedef Compare key_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_compare` jest synonimem dla `Compare` parametru szablonu.
+`key_compare` jest synonimem dla `Compare`parametru szablonu.
 
 Aby uzyskać więcej informacji na temat `Compare`, zobacz sekcję Uwagi w temacie [klasy zestaw wielokrotny](../standard-library/multiset-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [key_comp](#key_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_compare`.
+Zapoznaj się z przykładem [key_comp](#key_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_compare`.
 
 ## <a name="key_type"></a>zestaw wielokrotny:: key_type
 
@@ -1401,13 +1401,13 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_type` jest synonimem dla `Key` parametru szablonu.
+`key_type` jest synonimem dla `Key`parametru szablonu.
 
 Aby uzyskać więcej informacji na temat `Key`, zobacz sekcję Uwagi w temacie [klasy zestaw wielokrotny](../standard-library/multiset-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [value_type](#value_type) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_type`.
+Zapoznaj się z przykładem [value_type](#value_type) , aby zapoznać się z przykładem sposobu deklarowania i używania `key_type`.
 
 ## <a name="lower_bound"></a>zestaw wielokrotny:: lower_bound
 
@@ -1421,12 +1421,12 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
+*klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-@No__t_0 lub `const_iterator`, który odnosi się do lokalizacji elementu w zestawie wielokrotnym z kluczem, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji, która powiodła się po ostatnim elemencie w zestawie wielokrotnym, jeśli nie zostanie znalezione dopasowanie dla klucza.
+`iterator` lub `const_iterator`, który odnosi się do lokalizacji elementu w zestawie wielokrotnym z kluczem, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji, która powiodła się po ostatnim elemencie w zestawie wielokrotnym, jeśli nie zostanie znalezione dopasowanie dla klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1579,13 +1579,13 @@ Wszystkie konstruktory inicjują zestaw wielokrotny.
 
 Wszystkie konstruktory przechowują obiekt funkcji typu Compare, który jest używany do ustanowienia zamówienia między kluczami zestawu wielokrotnego i który może być później zwracany przez wywołanie [key_comp](#key_comp).
 
-Pierwsze trzy konstruktory określają pusty początkowy zestaw wielokrotny, drugi określa typ funkcji porównywania (*COMP*), która ma być używana w celu ustalenia kolejności elementów i trzeciego jawnie określającego typ alokatora (*Al*), który ma być służyć. Słowo kluczowe **Explicit** pomija pewne rodzaje automatycznej konwersji typów.
+Pierwsze trzy konstruktory określają pusty początkowy zestaw wielokrotny, drugi określa typ funkcji porównywania (*COMP*), która ma być używana w celu ustalenia kolejności elementów i trzeciego jawnie określającego typ alokatora (*Al*), który ma być używany. Słowo kluczowe **Explicit** pomija pewne rodzaje automatycznej konwersji typów.
 
 Czwarty Konstruktor określa kopię *zestawu wielokrotnego*.
 
 Piąty Konstruktor określa kopię zestawu wielokrotnego, przenosząc *prawo*.
 
-Szósty, siódmy i ósmy konstruktory określają initializer_list, z którego mają zostać skopiowane elementy.
+Szósty, siódmy i ósmy konstruktory określają initializer_list, z których mają być kopiowane elementy.
 
 Kolejne trzy konstruktory kopiują zakres `[First, Last)` zestawu wielokrotnego, zwiększając jawność w określaniu typu funkcji porównywania i alokatora.
 
@@ -1704,7 +1704,7 @@ multiset& operator=(multiset&& right);
 
 |Parametr|Opis|
 |-|-|
-|*Kliknij*|@No__t_0, z którego elementy są kopiowane lub przenoszone.|
+|*Kliknij*|`multiset`, z którego elementy są kopiowane lub przenoszone.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2027,7 +2027,7 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Argument wielokrotny udostępniający elementy, które mają zostać zastąpione docelowym zestawem wielokrotnym.
 
 ### <a name="remarks"></a>Uwagi
@@ -2096,7 +2096,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
+*klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2174,7 +2174,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 Zwraca wartość true, jeśli `_xVal` poprzedza i nie jest równa `_yVal` w kolejności sortowania.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla parametru szablonu `Compare`. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami `Compare`parametru szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2237,15 +2237,15 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_compare` jest synonimem dla `Compare` parametru szablonu.
+`value_compare` jest synonimem dla `Compare`parametru szablonu.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i `value_compare` są synonimami dla parametru szablonu `Compare`. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i `value_compare` są synonimami `Compare`parametru szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
 
 Aby uzyskać więcej informacji na temat `Compare`, zobacz sekcję Uwagi w temacie [klasy zestaw wielokrotny](../standard-library/multiset-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [value_comp](#value_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `value_compare`.
+Zapoznaj się z przykładem [value_comp](#value_comp) , aby zapoznać się z przykładem sposobu deklarowania i używania `value_compare`.
 
 ## <a name="value_type"></a>zestaw wielokrotny:: value_type
 
@@ -2257,9 +2257,9 @@ typedef Key value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` jest synonimem dla `Key` parametru szablonu.
+`value_type` jest synonimem dla `Key`parametru szablonu.
 
-Należy zauważyć, że zarówno [key_type](#key_type) , jak i `value_type` są synonimami dla parametru szablonu `Key`. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_type](#key_type) , jak i `value_type` są synonimami `Key`parametru szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
 
 Aby uzyskać więcej informacji na temat `Key`, zobacz sekcję Uwagi w temacie.
 
@@ -2300,6 +2300,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kontenery](../cpp/containers-modern-cpp.md) \
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[Containers](../cpp/containers-modern-cpp.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

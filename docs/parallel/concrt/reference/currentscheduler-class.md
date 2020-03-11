@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143076"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867142"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 
@@ -34,11 +34,11 @@ Reprezentuje abstrakcję bieżącego harmonogramu skojarzonego z kontekstem wywo
 class CurrentScheduler;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Tworzenie](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisane przez parametr `_Policy` i dołącza go do kontekstu wywołującego. Nowo utworzony harmonogram stanie się bieżącym harmonogramem dla kontekstu wywołującego.|
 |[CreateScheduleGroup —](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu skojarzonego z kontekstem wywołującym. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w nowo utworzonej grupie harmonogramu zostaną rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.|
@@ -103,7 +103,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której będą wykonywane zadania w grupie harmonogramu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do nowo utworzonej grupy harmonogramów. Ten obiekt `ScheduleGroup` ma umieszczaną początkową liczbę odwołań.
 
@@ -139,7 +139,7 @@ Zwraca wskaźnik do harmonogramu skojarzonego z kontekstem wywołującym, nazywa
 static Scheduler* __cdecl Get();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do harmonogramu skojarzony z kontekstem wywoływania (bieżący harmonogram).
 
@@ -155,7 +155,7 @@ Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu skojarzonego 
 static unsigned int __cdecl GetNumberOfVirtualProcessors();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli harmonogram jest skojarzony z kontekstem wywołującym, bieżąca liczba procesorów wirtualnych dla tego harmonogramu; w przeciwnym razie wartość `-1`.
 
@@ -173,7 +173,7 @@ Zwraca kopię zasad, za pomocą której został utworzony bieżący harmonogram.
 static SchedulerPolicy __cdecl GetPolicy();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Kopia zasad, za pomocą których utworzono bieżący harmonogram.
 
@@ -189,7 +189,7 @@ Zwraca unikatowy identyfikator dla bieżącego harmonogramu.
 static unsigned int __cdecl Id();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli harmonogram jest skojarzony z kontekstem wywołującym, unikatowym identyfikatorem tego harmonogramu; w przeciwnym razie wartość `-1`.
 
@@ -210,7 +210,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której ma zostać wyszukiwany bieżący harmonogram.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskazanie, czy lokalizacja określona przez argument `_Placement` jest dostępna w bieżącym harmonogramie.
 
@@ -267,7 +267,7 @@ Odwołanie do lokalizacji, w której zostanie obciążone zadanie lekkiej wagi.
 
 Ta metoda spowoduje utworzenie i/lub dołączenie domyślnego harmonogramu procesu do kontekstu wywołującego, jeśli aktualnie nie istnieje żaden harmonogram skojarzony z kontekstem wywołującym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>

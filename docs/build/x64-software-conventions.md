@@ -1,116 +1,116 @@
 ---
-title: x64 konwencje kodowania
+title: Konwencje kodowania x64
 ms.date: 12/17/2018
 helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313858"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865603"
 ---
-# <a name="x64-software-conventions"></a>x64 konwencje kodowania
+# <a name="x64-software-conventions"></a>Konwencje kodowania x64
 
-W tej sekcji opisano wywoływania metodologii Konwencji x64, rozszerzenie 64-bitowych x86 C++ architektury.
+W tej sekcji opisano C++ metodologię konwencji wywoływania dla architektury x64, 64-bitowego rozszerzenia do architekturze x86.
 
-## <a name="overview-of-x64-calling-conventions"></a>Przegląd konwencji wywoływania x64
+## <a name="overview-of-x64-calling-conventions"></a>Omówienie konwencji wywoływania x64
 
-Dwie ważne różnice między x86 i x64 są możliwości adresowania 64-bitowych i prostego zestawu 16 64-bitowych rejestrów do użytku ogólnego. Biorąc pod uwagę zestaw rejestru rozwinięty, używa x64 [__fastcall](../cpp/fastcall.md) wywoływania Konwencji i model obsługi wyjątków, na podstawie RISC. `__fastcall` Konwencji używa rejestrów, pierwsze cztery argumenty i ramki stosu do przekazywania dodatkowych argumentów. Dla informacji na temat x64 Konwencja wywoływania, rejestrowanie użycia, w tym stosu parametrów, zwracać wartości i wykonywania operacji odwijania stosu, zobacz [x64 konwencji wywoływania](x64-calling-convention.md).
+Dwie istotne różnice między procesorami x86 i x64 to 64-bitowe możliwości adresowania i płaski zestaw 16 64-bitowy rejestrów do użytku ogólnego. Z uwzględnieniem rozszerzonego zestawu rejestrów, x64 używa konwencji wywoływania [__fastcall](../cpp/fastcall.md) i modelu obsługi wyjątków opartego na procesorze RISC. Konwencja `__fastcall` używa rejestrów dla pierwszych czterech argumentów i ramki stosu, aby przekazać dodatkowe argumenty. Aby uzyskać szczegółowe informacje na temat konwencji wywoływania x64, w tym rejestrowania użycia, parametrów stosu, wartości zwracanych i rozwinięcia stosu, zobacz [konwencję wywoływania x64](x64-calling-convention.md).
 
-## <a name="enable-optimization-for-x64"></a>Włącz optymalizację x64
+## <a name="enable-optimization-for-x64"></a>Włącz optymalizację dla architektury x64
 
-Następująca opcja kompilatora pomaga zoptymalizować aplikację x64:
+Poniższa opcja kompilatora pomaga zoptymalizować aplikację dla architektury x64:
 
 - [/favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
-## <a name="types-and-storage"></a>Typy i Magazyn
+## <a name="types-and-storage"></a>Typy i magazyn
 
-W tej sekcji opisano wyliczenie i magazyn danych typów x64 architektury.
+W tej sekcji opisano Wyliczenie i przechowywanie typów danych dla architektury x64.
 
-### <a name="scalar-types"></a>typy skalarne
+### <a name="scalar-types"></a>Typy skalarne
 
-Chociaż dostęp do danych z każdego wyrównania, zaleca się wyrównanie danych w jego granicę fizyczne lub niektóre wiele, aby uniknąć utraty wydajności. Typy wyliczeniowe są stałych liczb całkowitych i są traktowane jako 32-bitowych liczb całkowitych. W poniższej tabeli opisano definicji typu i zalecany magazyn danych w odniesieniu do wyrównania, używając następujących wartości wyrównania:
+Chociaż jest możliwe uzyskanie dostępu do danych z dowolnymi wyrównaniami, zaleca się, aby wyrównać dane ze swojej naturalnej granicy lub wiele wielu, aby uniknąć utraty wydajności. Wyliczenia to stałe liczby całkowite i są traktowane jako 32-bitowe liczby całkowite. W poniższej tabeli opisano definicję typu i zalecaną pamięć masową dla danych, które dotyczą wyrównania, przy użyciu następujących wartości wyrównania:
 
-- Byte — 8 bitów
+- Bajty-8 bitów
 
-- Word — 16 bitów
+- Liczba bitów programu Word-16
 
-- Bitowego — 32-bitowy
+- DoubleWord-32 bitów
 
-- Quadword - 64-bitowy
+- Quadword-64 bitów
 
-- Octaword - 128 bitów
+- Octaword-128 bitów
 
 |||||
 |-|-|-|-|
-|Typ skalarny|Typ danych C|Rozmiar magazynu (w bajtach)|Zalecane wyrównania|
+|Typ skalarny|Typ danych języka C|Rozmiar magazynu (w bajtach)|Zalecane wyrównanie|
 |**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
+|**UINT8**|**znak bez znaku**|1|Byte|
 |**INT16**|**short**|2|Word|
-|**UINT16**|**short bez znaku**|2|Word|
-|**INT32**|**int**, **długi**|4|Bitowego|
-|**UINT32**|**unsigned int, niepodpisane długa**|4|Bitowego|
+|**UINT16**|**bez znaku Short**|2|Word|
+|**ELEMENTEM**|**int**, **Long**|4|Doubleword|
+|**RÓWN**|**unsigned int, Long unsigned**|4|Doubleword|
 |**INT64**|**__int64**|8|Quadword|
 |**UINT64**|**__int64 bez znaku**|8|Quadword|
-|**FP32 (Pojedyncza precyzja)**|**float**|4|Bitowego|
+|**OPERACJI FP32 (pojedyncza precyzja)**|**float**|4|Doubleword|
 |**FP64 (Podwójna precyzja)**|**double**|8|Quadword|
-|**WSKAŹNIK**|__\*__|8|Quadword|
-|**__m64**|**__m64 — struktura**|8|Quadword|
-|**__m128**|**struct __m128**|16|Octaword|
+|**PRZYTRZYMAJ**|__\*__|8|Quadword|
+|**__m64**|**__m64 struktury**|8|Quadword|
+|**__m128**|**__m128 struktury**|16|Octaword|
 
-### <a name="aggregates-and-unions"></a>Agregacje i unie
+### <a name="aggregates-and-unions"></a>Agregaty i unie
 
-Inne typy, takie jak tablice, struktur i Unii, ma bardziej rygorystyczne wymagania wyrównania, zapewniający spójny Unii i agregacji magazynem i danymi pobierania. Definicje dla tablic, struktury i Unii są następujące:
+Inne typy, takie jak tablice, struktury i związki, mają ostrzejsze wymagania dotyczące wyrównania, które zapewniają spójny magazyn zagregowany i łączny oraz pobieranie danych. Poniżej przedstawiono definicje tablic, struktur i Unii:
 
 - Tablica
 
-   Zawiera grupę uporządkowane obiekty sąsiadujące danych. Każdy obiekt jest nazywany *elementu*. Wszystkie elementy w tablicy mają ten sam rozmiar i typ danych.
+   Zawiera uporządkowaną grupę sąsiadujących obiektów danych. Każdy obiekt jest wywoływany jako *element*. Wszystkie elementy w tablicy mają taki sam rozmiar i typ danych.
 
 - Struktura
 
-   Zawiera grupę uporządkowane obiektów danych. W odróżnieniu od elementów tablicy obiektów danych w ramach struktury może mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze jest nazywany *elementu członkowskiego*.
+   Zawiera uporządkowaną grupę obiektów danych. W przeciwieństwie do elementów tablicy, obiekty danych w strukturze mogą mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze nosi nazwę *elementu członkowskiego*.
 
 - Union
 
-   Obiekt, który zawiera jeden zestaw nazwanych elementów członkowskich. Nazwany zestaw elementów członkowskich mogą być dowolnego typu. Magazyn przydzielony dla Unii jest równy magazynu wymaganego dla największego elementu członkowskiego tej Unii, a także wszelkie dopełnienie wymaganych do wyrównania.
+   Obiekt, który zawiera jeden z zestawów nazwanych członków. Elementy członkowskie o nazwanym zestawie mogą być dowolnego typu. Magazyn przydzielony dla Unii jest równy magazynowi wymaganemu dla największego elementu członkowskiego Unii oraz wszelkich dopełnień wymaganych do wyrównania.
 
-W poniższej tabeli przedstawiono silnie sugerowane wyrównanie skalarne elementów członkowskich Unii i struktur.
+W poniższej tabeli przedstawiono silnie sugerowane wyrównanie dla skalarnych elementów członkowskich Unii i struktur.
 
 ||||
 |-|-|-|
-|Typ skalarny|Typ danych C|Wymagane wyrównania|
+|Typ skalarny|Typ danych języka C|Wymagane wyrównanie|
 |**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
+|**UINT8**|**znak bez znaku**|Byte|
 |**INT16**|**short**|Word|
-|**UINT16**|**short bez znaku**|Word|
-|**INT32**|**int**, **długi**|Bitowego|
-|**UINT32**|**unsigned int, niepodpisane długa**|Bitowego|
+|**UINT16**|**bez znaku Short**|Word|
+|**ELEMENTEM**|**int**, **Long**|Doubleword|
+|**RÓWN**|**unsigned int, Long unsigned**|Doubleword|
 |**INT64**|**__int64**|Quadword|
 |**UINT64**|**__int64 bez znaku**|Quadword|
-|**FP32 (Pojedyncza precyzja)**|**float**|Bitowego|
+|**OPERACJI FP32 (pojedyncza precyzja)**|**float**|Doubleword|
 |**FP64 (Podwójna precyzja)**|**double**|Quadword|
-|**WSKAŹNIK**|<strong>\*</strong>|Quadword|
-|**__m64**|**__m64 — struktura**|Quadword|
-|**__m128**|**struct __m128**|Octaword|
+|**PRZYTRZYMAJ**|<strong>\*</strong>|Quadword|
+|**__m64**|**__m64 struktury**|Quadword|
+|**__m128**|**__m128 struktury**|Octaword|
 
-Obowiązują następujące reguły wyrównanie agregacji:
+Stosowane są następujące reguły wyrównania agregacji:
 
-- Wyrównanie w tablicy jest taka sama jak wyrównanie elementów tablicy.
+- Wyrównanie tablicy jest takie samo jak wyrównanie jednego z elementów tablicy.
 
-- Wyrównanie początku struktury lub Unii jest maksymalna wyrównanie dowolnego członka. Każdy element członkowski w obrębie struktury lub Unii muszą być umieszczone na jego odpowiednie wyrównanie, zgodnie z definicją w poprzedniej tabeli, które mogą wymagać niejawne dopełnienie wewnętrzne, w zależności od poprzedniego elemenut Członkowskiego.
+- Wyrównanie początku struktury lub Unii to maksymalne wyrównanie poszczególnych elementów członkowskich. Każdy element członkowski w obrębie struktury lub Unii musi być umieszczony na odpowiednim wyrównaniu, zgodnie z definicją podaną w poprzedniej tabeli, co może wymagać niejawnego dopełnienia wewnętrznego, w zależności od poprzedniego elementu członkowskiego.
 
-- Rozmiar struktury musi być wielokrotnością jego wyrównania, która może wymagać dopełnienie po ostatni element członkowski. Ponieważ struktur i Unii mogą być grupowane w tablicach, każdego elementu tablicy, struktury lub Unii należy rozpocząć i końcu prawidłowego wyrównania wcześniej określona.
+- Rozmiar struktury musi być integralną wielokrotnością jego wyrównania, co może wymagać uzupełnienia po ostatnim elemencie członkowskim. Ze względu na to, że struktury i związki można grupować w tablicach, każdy element tablicy struktury lub Unii musi rozpoczynać się i kończyć na odpowiednim wyrównaniu.
 
-- Istnieje możliwość wyrównanie danych w taki sposób, aby być większa niż wymagania wyrównania, tak długo, jak poprzednich zasad są obsługiwane.
+- Istnieje możliwość wyrównania danych w taki sposób, aby były większe niż wymagania wyrównania, o ile poprzednie reguły są utrzymywane.
 
-- Poszczególne kompilator może dostosować pakowanie struktury powodów rozmiar. Na przykład [/ZP (wyrównanie członka struktury)](../build/reference/zp-struct-member-alignment.md) umożliwia dostosowanie pakowanie struktur.
+- Pojedynczy kompilator może dostosować pakowanie struktury ze względu na wielkość. Na przykład [/ZP (wyrównanie składowej struktury)](../build/reference/zp-struct-member-alignment.md) umożliwia dostosowanie pakowania struktur.
 
 ### <a name="examples-of-structure-alignment"></a>Przykłady wyrównania struktury
 
-Następujące cztery przykłady zadeklarować, że wyrównany struktury lub Unii i dane porównawcze ilustrują układ tej struktury lub Unii w pamięci. Każda kolumna na ilustracji reprezentuje bajt pamięci i liczby w kolumnie wskazuje przesunięcie tego bajtu. Nazwa w drugim wierszu każdej rysunek odnosi się do nazwy zmiennej w deklaracji. Zacieniowaniu kolumn wskazują, że dopełnienie, które są wymagane do osiągnięcia określonego wyrównania.
+Poniższe cztery przykłady deklarują wyrównane struktury lub Unię, a odpowiednie wyniki ilustrują układ tej struktury lub Unii w pamięci. Każda kolumna na rysunku reprezentuje bajt pamięci, a liczba w kolumnie wskazuje przemieszczenie tego bajtu. Nazwa w drugim wierszu każdej ilustracji odpowiada nazwie zmiennej w deklaracji. Zacieniowane kolumny wskazują dopełnienie, które jest wymagane do osiągnięcia określonego wyrównania.
 
 #### <a name="example-1"></a>Przykład 1
 
@@ -122,7 +122,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Układ struktury przykład 1 konwersji AMD](../build/media/vcamd_conv_ex_1_block.png "AMD konwersji przykład 1 struktury układu")
+![Przykładowy układ struktury przykładowej konwersji AMD](../build/media/vcamd_conv_ex_1_block.png "Przykładowy układ struktury przykładowej konwersji AMD")
 
 #### <a name="example-2"></a>Przykład 2
 
@@ -136,7 +136,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Układ struktury przykład 2 konwersji AMD](../build/media/vcamd_conv_ex_2_block.png "AMD konwersji przykład 2 struktury układu")
+![Przykładowy układ struktury 2 konwersji AMD](../build/media/vcamd_conv_ex_2_block.png "Przykładowy układ struktury 2 konwersji AMD")
 
 #### <a name="example-3"></a>Przykład 3
 
@@ -151,7 +151,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Układ struktury przykład 2 konwersji AMD](../build/media/vcamd_conv_ex_3_block.png "AMD konwersji przykład 2 struktury układu")
+![Przykładowy układ struktury 2 konwersji AMD](../build/media/vcamd_conv_ex_3_block.png "Przykładowy układ struktury 2 konwersji AMD")
 
 #### <a name="example-4"></a>Przykład 4
 
@@ -165,78 +165,78 @@ _declspec(align(8)) union {
 }
 ```
 
-![AMD konwersji przykład 4 złożenia layouit](../build/media/vcamd_conv_ex_4_block.png "AMD konwersji przykład 4 złożenia layouit")
+![Przykład konwersji AMD 4 Union layouit](../build/media/vcamd_conv_ex_4_block.png "Przykład konwersji AMD 4 Union layouit")
 
 ### <a name="bitfields"></a>Pola bitów
 
-Struktura pola bitowe są ograniczone do 64-bitowy i może być typu podpisany int, niepodpisane int, int64 lub int64 bez znaku. Pola bitowe, które przecinają granice typu pominie bitów, aby wyrównać bitfield do następnego wyrównanie typu. Na przykład pola bitów liczba całkowita, nie mogą przekroczyć graniczny 32-bitowych.
+Pola bitowe struktury są ograniczone do 64 bitów i mogą być typu z cyframi int, unsigned int, Int64 lub unsigned Int64. Pola bitowe przecinające granicę typu pomijają bity, aby wyrównać pole bitowe do wyrównania następnego typu. Na przykład liczba całkowita pola bitów nie może przekroczyć granicy 32-bitowego.
 
-### <a name="conflicts-with-the-x86-compiler"></a>Powoduje konflikt z x86 kompilatora
+### <a name="conflicts-with-the-x86-compiler"></a>Konflikty z kompilatorem x86
 
-Typy danych, które są większe niż 4 bajty nie będą automatycznie wyrównywane do stosu w przypadku użycia x86 kompilatora do skompilowania aplikacji. Ponieważ architektury x86 kompilator jest stosu wyrównany 4-bajtowych, większe niż 4 bajty, na przykład 64-bitowa liczba całkowita, nie można automatycznie wyrównywane do adresu 8-bajtowych.
+Typy danych, które są większe niż 4 bajty, nie są automatycznie wyrównane na stosie, jeśli używasz kompilatora x86 do kompilowania aplikacji. Ponieważ architektura kompilatora x86 jest stosem wyrównanym 4 bajty, co przekracza 4 bajty, na przykład 64-bitową liczbę całkowitą, nie można automatycznie wyrównać do 8-bajtowego adresu.
 
-Praca z niewyrównanych danych ma dwa skutki.
+Praca z niewyrównanymi danymi ma dwa konsekwencje.
 
-- Może potrwać dłużej dostęp do niewyrównanych lokalizacji nie jest potrzebny dostęp do lokalizacji wyrównane.
+- Dostęp do niewyrównanych lokalizacji może trwać dłużej niż w celu uzyskania dostępu do rozwyrównanych lokalizacji.
 
-- Niewyrównanych lokalizacji nie można używać w operacjach blokowane.
+- Niewyrównane lokalizacje nie mogą być używane w operacjach zablokowanych.
 
-Jeśli potrzebujesz więcej wyrównanie strict, użyj `__declspec(align(N))` na swojej deklaracji zmiennych. To powoduje, że kompilator dynamicznie wyrównać stosu odpowiadających Twoim kryteriom. Dynamiczne Dostosowywanie stosu w czasie wykonywania mogą jednak spowodować wolniejszy wykonywanie aplikacji.
+Jeśli potrzebujesz bardziej rygorystycznego wyrównania, użyj `__declspec(align(N))` w deklaracjach zmiennych. Powoduje to, że kompilator dynamicznie dopasowuje stos, aby spełniał Twoje wymagania. Jednak dynamiczne dostosowywanie stosu w czasie wykonywania może spowodować wolniejsze wykonywanie aplikacji.
 
-## <a name="register-usage"></a>Użycie metody Register
+## <a name="register-usage"></a>Rejestrowanie użycia
 
-X64 architektury stosowany do 16 rejestrów ogólnego przeznaczenia (zwany dalej rejestruje liczby całkowitej), a także 16 XMM/YMM rejestruje dostępny do użytku zmiennoprzecinkowych. Volatile rejestrów są pliki tymczasowe rejestrów domniemania przez obiekt wywołujący, które mają zostać zniszczone na wywołanie. Nieulotnej rejestrów są wymagane do zachowują swoje wartości w wywołaniu funkcji i musi zostać zapisany przez obiekt wywoływany, jeśli używany.
+Architektura x64 zapewnia 16 rejestrów ogólnego przeznaczenia (zwanych dalej rejestrami całkowitymi), a także 16 XMM/YMMych rejestrów dostępnych do użycia zmiennoprzecinkowego. Rejestry nietrwałe są rejestrami magazynującymi przypuszczalnymi przez obiekt wywołujący do zniszczenia przez wywołanie. Rejestry nietrwałe są wymagane do zachowania ich wartości w wywołaniu funkcji i muszą być zapisane przez wywoływany element, jeśli są używane.
 
-### <a name="register-volatility-and-preservation"></a>Zarejestruj zmienność i konserwacji
+### <a name="register-volatility-and-preservation"></a>Rejestrowanie lotności i zachowywania
 
-W poniższej tabeli opisano, jak każdy rejestr jest używany dla wywołań funkcji:
+W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramach wywołań funkcji:
 
 ||||
 |-|-|-|
 |Rejestruj|Stan|Zastosowanie|
-|RAX|Volatile|Zwracana wartość rejestru|
+|RAX|Volatile|Rejestr wartości zwracanej|
 |RCX|Volatile|Pierwszy argument liczby całkowitej|
 |RDX|Volatile|Drugi argument liczby całkowitej|
 |R8|Volatile|Trzeci argument liczby całkowitej|
 |R9|Volatile|Czwarty argument liczby całkowitej|
-|R10:R11|Volatile|Muszą być chronione, zgodnie z potrzebami przez obiekt wywołujący; używane w instrukcjach syscall/sysret|
-|R12:R15|Nieulotnej|Muszą być chronione przez wywoływanego|
-|RDI|Nieulotnej|Muszą być chronione przez wywoływanego|
-|RSI|Nieulotnej|Muszą być chronione przez wywoływanego|
-|RBX|Nieulotnej|Muszą być chronione przez wywoływanego|
-|RBP|Nieulotnej|Może być używana jako wskaźnik ramki; muszą być chronione przez wywoływanego|
-|RSP|Nieulotnej|Wskaźnik stosu|
-|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu wektor podczas `__vectorcall` jest używany|
-|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument Typ wektora podczas `__vectorcall` jest używany|
-|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument Typ wektora podczas `__vectorcall` jest używany|
-|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument Typ wektora podczas `__vectorcall` jest używany|
-|XMM4, YMM4|Volatile|Muszą być chronione, zgodnie z potrzebami przez obiekt wywołujący; piąty argument Typ wektora podczas `__vectorcall` jest używany|
-|XMM5, YMM5|Volatile|Muszą być chronione, zgodnie z potrzebami przez obiekt wywołujący; szósty argument Typ wektora podczas `__vectorcall` jest używany|
-|XMM6:XMM15, YMM6:YMM15|Nieulotnej (XMM) Volatile (górnej połowie YMM)|Muszą zostać zachowane przez obiekt wywoływany. Musi zostać zachowane rejestrach YMM, zgodnie z potrzebami przez obiekt wywołujący.|
+|R10:R11|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; używane w instrukcjach syscall/sysret|
+|R12:R15|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
+|RDI|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
+|RSI|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
+|RBX|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
+|RBP|Nieulotnej swobodnym|Może być używany jako wskaźnik ramki; musi być zachowana przez wywoływany|
+|RSP|Nieulotnej swobodnym|Wskaźnik stosu|
+|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu Vector, gdy `__vectorcall` jest używany|
+|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument typu Vector, gdy zostanie użyta `__vectorcall`|
+|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument typu wektorowego, gdy jest używany `__vectorcall`|
+|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument typu Vector, gdy `__vectorcall` jest używany|
+|XMM4, YMM4|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; piąty argument typu Vector w przypadku użycia `__vectorcall`|
+|XMM5, YMM5|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; Szósty argument typu Vector, gdy zostanie użyta `__vectorcall`|
+|XMM6:XMM15, YMM6:YMM15|Nietrwały (XMM), nietrwały (Wielka połowa z YMM)|Musi być zachowana przez wywoływany. Rejestry YMM muszą być zachowywane w razie konieczności przez wywołującego.|
 
-Zamykania funkcji, wejście funkcji do wywołania biblioteki wykonawczej C i wywołań systemu Windows, Flaga kierunku w Procesorze flags, rejestrze powinien zostać wyczyszczone.
+W przypadku wyjścia funkcji i wejścia funkcji do wywołań biblioteki środowiska uruchomieniowego C i wywołań systemu Windows oczekiwana jest flaga kierunku w rejestrze flag procesora.
 
-## <a name="stack-usage"></a>Wykorzystanie stosu
+## <a name="stack-usage"></a>Użycie stosu
 
-Aby uzyskać szczegółowe informacje dotyczące alokacji stosu, wyrównania i typy funkcji oraz ramki stosu w x64, zobacz [x64 stosu użycia](stack-usage.md).
+Aby uzyskać szczegółowe informacje o alokacji stosu, wyrównaniu, typach funkcji i ramkach stosu na platformie x64, zobacz [użycie stosu x64](stack-usage.md).
 
-## <a name="prolog-and-epilog"></a>Prolog i epilog
+## <a name="prolog-and-epilog"></a>Prolog i epilogu
 
-Każdej funkcji, która przydziela miejsce stosu, wywołuje inne funkcje, zapisuje nieulotnej rejestrów lub korzysta z obsługi wyjątków, musi mieć prologu, na których limity adresów są opisane w dane odwinięcia skojarzonych z odpowiedniej funkcji spisu i epilogs w Każdy przycisk Zakończ, aby funkcja. Aby uzyskać szczegółowe informacje na temat wymaganych prologu i epilogu na x64, zobacz [x64 prologu i epilogu](prolog-and-epilog.md).
+Każda funkcja, która przydziela przestrzeń stosu, wywołuje inne funkcje, zapisuje niezalotne rejestry lub używa obsługi wyjątków, musi mieć Prolog, którego limity adresów są opisane w danych unwind skojarzonych z odpowiednim wpisem tabeli funkcji, i epilogs na Każde wyjście do funkcji. Aby uzyskać szczegółowe informacje na temat wymaganego kodu prologu i epilogu w x64, zobacz [x64 Prolog i epilogu](prolog-and-epilog.md).
 
-## <a name="x64-exception-handling"></a>x64 obsługi wyjątków
+## <a name="x64-exception-handling"></a>Obsługa wyjątku x64
 
-Aby uzyskać informacje na temat Konwencji i struktur danych używaną do zaimplementowania strukturalna Obsługa wyjątków i zachowanie w x64 obsługi wyjątków C++, zobacz [x64 wyjątków](exception-handling-x64.md).
+Aby uzyskać informacje na temat konwencji i struktur danych używanych do implementowania obsługi wyjątków C++ strukturalnych i zachowania obsługi wyjątków na x64, zobacz [Obsługa wyjątków x64](exception-handling-x64.md).
 
-## <a name="intrinsics-and-inline-assembly"></a>Funkcje wewnętrzne i wbudowany zestaw
+## <a name="intrinsics-and-inline-assembly"></a>Funkcje wewnętrzne i zestaw wbudowany
 
-Jednym z ograniczeń x64 kompilatora ma nie obsługują asemblera wbudowanego. Oznacza to, że funkcji nie można zapisać w C lub C++, albo musi być zapisywane jako procedury lub funkcji wewnętrznych obsługiwanych przez kompilator. Niektóre funkcje są wrażliwe na wydajność, a inne nie. Funkcje wrażliwego na wydajność, powinny zostać wdrożone jako funkcje wewnętrzne.
+Jednym z ograniczeń dla kompilatora x64 nie jest brak obsługi asemblera wbudowanego. Oznacza to, że funkcje, które nie mogą być zapisywane C++ w języku C lub będą musiały być zapisywane jako podprocedury lub jako funkcje wewnętrzne obsługiwane przez kompilator. Niektóre funkcje są wrażliwe na wydajność, a inne nie. Funkcje z uwzględnieniem wydajności należy zaimplementować jako funkcje wewnętrzne.
 
-Funkcje wewnętrzne, obsługiwane przez kompilator są opisane w [funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md).
+Elementy wewnętrzne obsługiwane przez kompilator są opisane w funkcjach [wewnętrznych kompilatora](../intrinsics/compiler-intrinsics.md).
 
 ## <a name="image-format"></a>Format obrazu
 
-X64 format obrazu pliku wykonywalnego jest je typu PE32 +. Obrazy wykonywalne (plików dll i exe) są ograniczone do maksymalnie 2 GB, więc względne adresowanie z 32-bitowe przesunięcie może służyć do danych obraz statyczny adres. Te dane obejmują tabeli adresów importowania, stałe typu string, statycznych danych globalnych i tak dalej.
+Format obrazu pliku wykonywalnego x64 to PE32 +. Obrazy wykonywalne (zarówno biblioteki DLL, jak i exe) są ograniczone do maksymalnego rozmiaru wynoszącego 2 gigabajty, więc względne adresy z przemieszczeniem 32-bitowym mogą służyć do adresowania statycznych danych obrazu. Te dane obejmują tabelę adresów importu, stałe ciągów, statyczne dane globalne itd.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866043"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856673"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 
-Przestrzeń nazw jest regionem deklaratywnym, który dostarcza zakres do identyfikatorów (nazwy typów, funkcji, zmiennych itp.). Przestrzenie nazw służą do organizowania kodu w grupy logiczne i zapobiegania kolizjom nazw, które mogą wystąpić zwłaszcza wtedy, gdy baza kodu zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza przestrzenią nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego `std::vector<std::string> vec;`identyfikatora, na przykład lub w innej [deklaracji using](../cpp/using-declaration.md) dla jednego identyfikatora`using std::string`() lub [dyrektywy using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatory w przestrzeni nazw (`using namespace std;`). Kod w plikach nagłówkowych powinien zawsze używać w pełni kwalifikowanej nazwy przestrzeni nazw.
+Przestrzeń nazw jest regionem deklaratywnym, który dostarcza zakres do identyfikatorów (nazwy typów, funkcji, zmiennych itp.). Przestrzenie nazw służą do organizowania kodu w grupy logiczne i zapobiegania kolizjom nazw, które mogą wystąpić zwłaszcza wtedy, gdy baza kodu zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza przestrzenią nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`lub innej [deklaracji using](../cpp/using-declaration.md) dla jednego identyfikatora (`using std::string`) lub [dyrektywy using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w plikach nagłówkowych powinien zawsze używać w pełni kwalifikowanej nazwy przestrzeni nazw.
 
 W poniższym przykładzie przedstawiono deklarację przestrzeni nazw i trzy sposoby, w których kod poza obszarem nazw może uzyskać dostęp do swoich członków.
 
@@ -123,7 +123,7 @@ Jeśli identyfikator nie jest zadeklarowany w jawnej przestrzeni nazw, jest czę
 
 ## <a name="the-std-namespace"></a>Przestrzeń nazw std
 
-Wszystkie C++ standardowe typy i funkcje biblioteki są deklarowane w `std` przestrzeni nazw lub przestrzeni nazw `std`zagnieżdżonych wewnątrz.
+Wszystkie C++ standardowe typy i funkcje biblioteki są deklarowane w przestrzeni nazw `std` lub przestrzeni nazw zagnieżdżonych wewnątrz `std`.
 
 ## <a name="nested-namespaces"></a>Zagnieżdżone przestrzenie nazw
 
@@ -205,7 +205,7 @@ Aby zarządzać zmianami interfejsu publicznego biblioteki programu, można uży
 
 Wbudowane słowo kluczowe musi być stosowane do pierwszej deklaracji przestrzeni nazw w jednostce kompilacji.
 
-Poniższy przykład przedstawia dwie wersje interfejsu, każdy w zagnieżdżonej przestrzeni nazw. Przestrzeń nazw ma pewne modyfikacje `v_10` w interfejsie i jest oznaczona jako wbudowana. `v_20` Kod klienta korzystający z nowej biblioteki i wywołań `Contoso::Funcs::Add` wywoła wersję v_20. Kod, który próbuje `Contoso::Funcs::Divide` wywołać, spowoduje teraz błąd czasu kompilacji. Jeśli naprawdę potrzebują tej funkcji, nadal mogą uzyskać dostęp `v_10` do wersji przez jawne wywołanie. `Contoso::v_10::Funcs::Divide`
+Poniższy przykład przedstawia dwie wersje interfejsu, każdy w zagnieżdżonej przestrzeni nazw. Przestrzeń nazw `v_20` ma pewne modyfikacje w interfejsie `v_10` i jest oznaczona jako wbudowana. Kod klienta używający nowej biblioteki i wywołań `Contoso::Funcs::Add` wywoła wersję v_20. Kod próbujący wywołać `Contoso::Funcs::Divide` będzie teraz mógł wystąpić błąd czasu kompilacji. Jeśli naprawdę potrzebują tej funkcji, nadal mogą uzyskać dostęp do wersji `v_10`, jawnie wywołując `Contoso::v_10::Funcs::Divide`.
 
 ```cpp
 namespace Contoso

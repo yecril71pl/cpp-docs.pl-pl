@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257965"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876100"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;złożone operatory&gt;
 
@@ -53,7 +53,7 @@ Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem 
 *prawa*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli liczby nie są równe; **wartość false** , jeśli liczba jest równa.
 
@@ -192,7 +192,7 @@ Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczb
 *prawa*\
 Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać pomnożona przez operację \*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z mnożenia dwóch liczb, których wartość i typ są określone przez dane wejściowe parametru.
 
@@ -292,7 +292,7 @@ Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczb
 *prawa*\
 Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać dodana przez operację +.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z dodania dwóch liczb, których wartość i typ są określone przez dane wejściowe parametru.
 
@@ -432,7 +432,7 @@ Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczb
 *prawa*\
 Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać odjęta przez operację.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z odejmowania od *prawej* od *lewej*, dwóch liczb, których wartości są określone przez dane wejściowe parametru.
 
@@ -571,7 +571,7 @@ Liczba zespolona lub liczba, która jest typem parametru dla liczby zespolonej, 
 *prawa*\
 Liczba złożona lub liczba, która jest typem parametru dla liczby zespolonej, która jest mianownik, który ma zostać użyty do podzielenia licznika z operacją/.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z dzielenia licznika przez mianownik, wartości, które są określone przez dane wejściowe parametru.
 
@@ -681,7 +681,7 @@ Strumień wyjściowy, w którym jest wprowadzany numer złożony.
 *prawa*\
 Liczba zespolona, która ma zostać wprowadzona do strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zapisuje wartość określonej liczby zespolonej do *ostr* w formacie kartezjańskiego: ( *część rzeczywista, część urojona* ).
 
@@ -753,7 +753,7 @@ Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem 
 *prawa*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli liczby są równe; **Fałsz** , jeśli liczby nie są równe.
 
@@ -882,7 +882,7 @@ Strumień wejściowy, z którego jest wyodrębniany numer złożony.
 *prawa*\
 Liczba złożona, która jest wyodrębniana ze strumienia wejściowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odczytuje wartość określonej liczby zespolonej z *ISTR* i zwraca ją do *prawej*.
 

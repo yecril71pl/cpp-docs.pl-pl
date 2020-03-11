@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687687"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884027"
 ---
 # <a name="messages-class"></a>messages — Klasa
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Wykaz, który ma zostać zamknięty.
 
 ### <a name="remarks"></a>Uwagi
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Wykaz, który ma zostać zamknięty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chronionego elementu członkowskiego zamyka katalog komunikatów *_Catval*, który musi zostać otwarty przez wcześniejsze wywołanie do [do_open](#do_open).
+Funkcja chroniona składowa zamyka katalog komunikatów *_Catval*, który musi zostać otwarty przez wcześniejsze wywołanie do [do_open](#do_open).
 
 *_Catval* należy uzyskać z wcześniej otwartego wykazu, który nie jest zamknięty.
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Wartość identyfikacyjna określająca wykaz komunikatów do przeszukania.
 
-*_Ustaw* \
+*_Set*\
 Pierwszy zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Message* \
+*_Message*\
 Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Dfault* \
+*_Dfault*\
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -167,7 +167,7 @@ Zwraca kopię *_Dfault* w przypadku niepowodzenia. W przeciwnym razie zwraca kop
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chronionego elementu członkowskiego próbuje uzyskać sekwencję komunikatów z *_Catval*wykazu komunikatów. Może to spowodować użycie *_Ustaw*, *_Message*i *_Dfault* .
+Funkcja chronionego elementu członkowskiego próbuje uzyskać sekwencję komunikatów z katalogu komunikatów *_Catval*. W tym celu mogą korzystać z *_Set*, *_Message*i *_Dfault* .
 
 ### <a name="example"></a>Przykład
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* \
+*_Catname*\
 Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc* \
+*_Loc*\
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -197,7 +197,7 @@ Zwraca wartość, która porównuje mniej niż zero w przypadku niepowodzenia. W
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chronionego elementu członkowskiego próbuje otworzyć katalog komunikatów o nazwie *_Catname*. W takim przypadku może być używane *_Loc* ustawień regionalnych
+Funkcja chronionego elementu członkowskiego próbuje otworzyć katalog komunikatów, którego nazwa jest *_Catname*. Może ona używać ustawień regionalnych *_Loc* w tym celu
 
 Wartość zwracana powinna być używana jako argument dla późniejszego wywołania do [zamknięcia](#close).
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Wartość identyfikacyjna określająca wykaz komunikatów do przeszukania.
 
-*_Ustaw* \
+*_Set*\
 Pierwszy zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Message* \
+*_Message*\
 Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Dfault* \
+*_Dfault*\
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -254,10 +254,10 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
-*_Locname* \
+*_Locname*\
 Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* \
+*_Catname*\
 Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc* \
+*_Loc*\
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji komunikatów.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji komunikatów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale >](../standard-library/locale.md) \
-[Klasa messages_base](../standard-library/messages-base-class.md) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
+\ [klasy messages_base](../standard-library/messages-base-class.md)
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

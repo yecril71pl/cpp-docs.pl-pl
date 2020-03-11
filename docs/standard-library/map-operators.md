@@ -1,5 +1,5 @@
 ---
-title: '&lt;Operatory&gt; mapy'
+title: Operatory &lt;mapowania&gt;
 ms.date: 03/27/2019
 f1_keywords:
 - map/std::operator!=
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956956"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883967"
 ---
-# <a name="ltmapgt-operators"></a>&lt;Operatory&gt; mapy
+# <a name="ltmapgt-operators"></a>Operatory &lt;mapowania&gt;
 
 ## <a name="op_neq"></a>operator! =
 
@@ -37,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a>zakład&lt;
+## <a name="op_lt"></a>&lt; operatora
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest mniejszy niż obiekt mapy po prawej stronie.
 
@@ -102,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>zakład&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest mniejszy niż lub równy obiektowi mapy po prawej stronie.
 
@@ -167,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -235,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a>zakład&gt;
+## <a name="op_gt"></a>&gt; operatora
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest większy niż obiekt mapy po prawej stronie.
 
@@ -300,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a>zakład&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt mapy po lewej stronie operatora jest większy niż lub równy obiektowi mapy po prawej stronie.
 
@@ -364,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `map`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `map`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a>zakład&lt;
+## <a name="op_lt_multimap"></a>&lt; operatora
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest mniejszy niż obiekt multimap po prawej stronie.
 
@@ -497,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="op_lt_eq_multimap"></a>zakład&lt;=
+## <a name="op_lt_eq_multimap"></a>&lt;operatora =
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest mniejszy niż lub równy obiektowi multimap po prawej stronie.
 
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -630,10 +630,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a>zakład&gt;
+## <a name="op_gt_multimap"></a>&gt; operatora
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest większy niż obiekt multimap po prawej stronie.
 
@@ -695,10 +695,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>zakład&gt;=
+## <a name="op_gt_eq_multimap"></a>&gt;operatora =
 
 Testuje, czy obiekt multimap po lewej stronie operatora jest większy niż lub równy obiektowi multimap po prawej stronie.
 
@@ -760,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
+\ *lewo*
 Obiekt typu `multimap`.
 
-*Kliknij*\
+*prawa*\
 Obiekt typu `multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana

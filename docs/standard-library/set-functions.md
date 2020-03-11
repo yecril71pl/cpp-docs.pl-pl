@@ -1,20 +1,20 @@
 ---
-title: '&lt;Ustaw&gt; funkcji'
+title: '&lt;ustawić funkcje&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 ms.openlocfilehash: a3a63fb86caa3485b1ee14538c3eb1f1ff72923e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246411"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875772"
 ---
-# <a name="ltsetgt-functions"></a>&lt;Ustaw&gt; funkcji
+# <a name="ltsetgt-functions"></a>&lt;ustawić funkcje&gt;
 
-## <a name="swap"></a> swap (map)
+## <a name="swap"></a>Zamień (mapa)
 
 Zamienia elementy z dwóch zestawów.
 
@@ -25,27 +25,27 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Zestaw zawierająca elementy, które mają być zamienione lub zestawu, w której elementy są wymieniane z tymi zestawu *po lewej stronie*.
+*prawa*\
+Zestaw udostępniający elementy, które mają zostać zamienione lub zestaw, którego elementy mają być wymieniane z tymi z zestawu *po lewej stronie*.
 
-*po lewej stronie*\
-Zestaw, w której elementy są wymieniane z tymi zestawu *prawo*.
+\ *lewo*
+Zestaw, którego elementy mają być wymieniane z tymi zestawami *po prawej stronie*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest algorytm wyspecjalizowane klasy kontenera, ustaw na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/set-class.md#swap)(`right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu
+Funkcja szablonu jest algorytmem wyspecjalizowanym dla klasy kontenera ustawioną do wykonywania funkcji składowej `left.`[swap](../standard-library/set-class.md#swap)(`right`). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
 
-`template` \< **classT**> **void wymiany**( **T &** , **T &** )
+`template` \< **klasa**> **void swap**( **t &** , **t &** )
 
-w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
+w klasie algorytmu działa przez przypisanie i jest operacją powolnej. Wyspecjalizowana wersja w każdym kontenerze jest znacznie szybsza, ponieważ może pracować z wewnętrzną reprezentacją klasy Container.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład kodu klasy członkowskiej [set::swap](../standard-library/set-class.md#swap) przykład korzystania z wersji szablonu `swap`.
+Zobacz przykład kodu dla zestawu klasy składowej [:: swap](../standard-library/set-class.md#swap) na przykład używania wersji szablonu `swap`.
 
-## <a name="swap_multiset"></a> swap (multiset)
+## <a name="swap_multiset"></a>swap (zestaw wielokrotny)
 
-Zamienia elementy z dwóch multisets.
+Wymienia elementy dwóch zestawów wielozbiorówowych.
 
 ```cpp
 template <class Key, class Traits, class Allocator>
@@ -54,20 +54,20 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Zestaw wielokrotny, zawierająca elementy, które mają być zamienione lub multiset, której elementy są wymieniane z tymi zestaw wielokrotny *po lewej stronie*.
+*prawa*\
+Zestaw *wielokrotny*udostępniający elementy, które mają zostać zamienione, lub zestaw wielokrotny, którego elementy mają być wymieniane z tymi z zestawu wielokrotnego.
 
-*po lewej stronie*\
-Zestaw wielokrotny, której elementy są wymieniane z tymi zestaw wielokrotny *prawo*.
+\ *lewo*
+Zestaw *wielokrotny*, którego elementy mają być wymieniane z tymi samymi zestawem wielokrotnym.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest algorytm przeznaczone na multiset klasy kontenera na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/multiset-class.md#swap)(`right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu
+Funkcja szablonu jest algorytmem wyspecjalizowanym dla zestawu wielokrotnego klasy kontenera, aby wykonać funkcję członkowską `left.`[swap](../standard-library/multiset-class.md#swap)(`right`). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
 
-`template` \< **classT**> **void wymiany**( **T &** , **T &** )
+`template` \< **klasa**> **void swap**( **t &** , **t &** )
 
-w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
+w klasie algorytmu działa przez przypisanie i jest operacją powolnej. Wyspecjalizowana wersja w każdym kontenerze jest znacznie szybsza, ponieważ może pracować z wewnętrzną reprezentacją klasy Container.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład kodu klasy członkowskiej [multiset::swap](../standard-library/multiset-class.md#swap)przykład korzystania z wersji szablonu `swap`.
+Zobacz przykład kodu dla klasy składowej zestaw [wielokrotny:: swap](../standard-library/multiset-class.md#swap)na przykład używania wersji szablonu `swap`.

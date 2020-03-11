@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890126"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856577"
 ---
 # <a name="ios_base-class"></a>ios_base — Klasa
 
@@ -133,7 +133,7 @@ Obiekt klasy ios_base przechowuje informacje o formatowaniu, które składają s
 
 - Dwie rozszerzalne tablice z elementami typu **Long** i **void** .
 
-Obiekt klasy ios_base również przechowuje informacje o stanie strumienia w obiekcie typu [`iostate`](#iostate)i stosie wywołania zwrotnego.
+Obiekt klasy ios_base również przechowuje informacje o stanie strumienia, w obiekcie typu [`iostate`](#iostate)i stos wywołania zwrotnego.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -222,7 +222,7 @@ Obiekt klasy ios_base również przechowuje informacje o stanie strumienia w obi
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ios >
+**Nagłówek:** \<> iOS
 
 **Przestrzeń nazw:** std
 
@@ -239,7 +239,7 @@ enum event {
 
 ### <a name="remarks"></a>Uwagi
 
-Typ to typ wyliczeniowy, który opisuje obiekt, który może przechowywać zdarzenie wywołania zwrotnego użyte jako argument do funkcji zarejestrowanej w [register_callback](#register_callback). Unikatowe wartości zdarzeń to:
+Typ to typ wyliczeniowy, który opisuje obiekt, który może przechowywać zdarzenie wywołania zwrotnego użyte jako argument do funkcji zarejestrowanej przy [register_callback](#register_callback). Unikatowe wartości zdarzeń to:
 
 - `copyfmt_event`, aby zidentyfikować wywołanie zwrotne, które występuje blisko końca wywołania [copyfmt](../standard-library/basic-ios-class.md#copyfmt), tuż przed skopiowaniem [maski wyjątków](../standard-library/ios-base-class.md) .
 
@@ -279,7 +279,7 @@ Typ opisuje wskaźnik do funkcji, która może być zarejestrowana w [register_c
 
 ### <a name="example"></a>Przykład
 
-Zobacz [register_call](#register_callback) , aby uzyskać przykład, który używa `event_callback`.
+Zobacz [register_call](#register_callback) , aby zapoznać się z przykładem, który używa `event_callback`.
 
 ## <a name="failure"></a>spraw
 
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametry
 
-*fmtfl* \
+*fmtfl*\
 Nowe ustawienie `fmtflags`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -449,9 +449,9 @@ Ponadto kilka przydatnych wartości to:
 
 - `adjustfield`, maska bitów zdefiniowana jako `left` &#124; &#124; `internal` `right`
 
-- `basefield` zdefiniowane jako `dec` &#124; `hex` `oct` &#124;
+- `basefield`zdefiniowane jako `dec` &#124; `hex` `oct` &#124;
 
-- `floatfield` zdefiniowane jako `fixed` &#124; `scientific`
+- `floatfield`zdefiniowane jako `fixed` &#124; `scientific`
 
 Przykłady funkcji modyfikujących te flagi formatu można znaleźć w temacie [\<iomanip >](../standard-library/iomanip.md).
 
@@ -524,7 +524,7 @@ Klasa zagnieżdżona opisuje obiekt, którego konstrukcja gwarantuje, że standa
 
 ## <a name="ios_base"></a>ios_base
 
-Tworzy obiekty ios_base.
+Tworzy konstrukcje ios_base obiektów.
 
 ```cpp
 ios_base();
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor (Protected) nie robi nic. Późniejsze wywołanie `basic_ios::`[init](../standard-library/basic-ios-class.md#init) musi zainicjować obiekt, zanim będzie można go bezpiecznie zniszczyć. W tym celu jedynym bezpiecznym zastosowaniem klasy ios_base jest klasa bazowa dla szablonu klasy [basic_ios](../standard-library/basic-ios-class.md).
+Konstruktor (Protected) nie robi nic. Późniejsze wywołanie `basic_ios::`[init](../standard-library/basic-ios-class.md#init) musi zainicjować obiekt, zanim będzie można go bezpiecznie zniszczyć. W tym celu jedynym bezpiecznym zastosowaniem dla klasy ios_base jest jako klasa bazowa dla szablonu klasy [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametry
 
-*idx* \
+*idx*\
 Indeks wartości do przechowywania jako `iword`.
 
 ### <a name="remarks"></a>Uwagi
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Obiekt typu `ios_base`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -656,7 +656,7 @@ Obiekt, do którego jest przypisany.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator kopiuje przechowywane informacje o formatowaniu, tworząc nową kopię dowolnych rozszerzalnych tablic. Następnie zwraca **\*this**. Należy zauważyć, że stos wywołania zwrotnego nie jest kopiowany.
+Operator kopiuje przechowywane informacje o formatowaniu, tworząc nową kopię dowolnych rozszerzalnych tablic. Następnie zwraca **\*to**. Należy zauważyć, że stos wywołania zwrotnego nie jest kopiowany.
 
 Ten operator jest używany tylko przez klasy pochodne z `ios_base`.
 
@@ -676,7 +676,7 @@ Liczba cyfr znaczących do wyświetlenia lub liczba cyfr po przecinku dziesiętn
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja członkowska zwraca zachowaną [precyzję wyświetlania](../standard-library/ios-base-class.md). Druga funkcja członkowska przechowuje *_Prec* z dokładnością wyświetlania i zwraca swoją poprzednią przechowywaną wartość.
+Pierwsza funkcja członkowska zwraca zachowaną [precyzję wyświetlania](../standard-library/ios-base-class.md). Druga funkcja członkowska przechowuje *_Prec* z dokładnością wyświetlania i zwraca poprzednią przechowywaną wartość.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -742,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn* \
+*pfn*\
 Wskaźnik do funkcji wywołania zwrotnego.
 
-*idx* \
+*idx*\
 Liczba zdefiniowana przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
@@ -963,7 +963,7 @@ Poprzednie ustawienie tej funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Statyczna funkcja członkowska przechowuje `stdio` flagę synchronizacji, która jest początkowo **prawdziwa**. Gdy **ma wartość true**, ta flaga gwarantuje, że operacje w tym samym pliku są prawidłowo synchronizowane między funkcjami [`iostreams`](../standard-library/iostreams-conventions.md) i tymi zdefiniowanymi w bibliotece C++ standardowej. W przeciwnym razie Synchronizacja może być niegwarantowana, ale wydajność może zostać ulepszona. Funkcja przechowuje *_Sync* w flagi synchronizacji `stdio` i zwraca jej poprzednią przechowywaną wartość. Można ją niezawodnie wywołać tylko przed wykonaniem jakichkolwiek operacji na strumieniach standardowych.
+Statyczna funkcja członkowska przechowuje `stdio` flagę synchronizacji, która jest początkowo **prawdziwa**. Gdy **ma wartość true**, ta flaga gwarantuje, że operacje w tym samym pliku są prawidłowo synchronizowane między funkcjami [`iostreams`](../standard-library/iostreams-conventions.md) i tymi zdefiniowanymi w bibliotece C++ standardowej. W przeciwnym razie Synchronizacja może być niegwarantowana, ale wydajność może zostać ulepszona. Funkcja przechowuje *_Sync* w flagi synchronizacji `stdio` i zwraca poprzednią przechowywaną wartość. Można ją niezawodnie wywołać tylko przed wykonaniem jakichkolwiek operacji na strumieniach standardowych.
 
 ## <a name="unsetf"></a>unsetf
 
@@ -982,11 +982,11 @@ Flagi, które chcesz wyłączyć.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje [flagi](#flags)(`~` *_Mask* **& flags**) (wyczyść wybrane bity).
+Funkcja członkowska skutecznie wywołuje [flagi](#flags)(`~` *_Mask* **flagi &** ) (wyczyść wybrane bity).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [ios_base:: setf](#setf) , aby uzyskać przykład użycia `unsetf`.
+Aby uzyskać przykład użycia `unsetf`, zobacz [ios_base:: setf](#setf) .
 
 ## <a name="width"></a>Szerokość
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)
 [Konwencje iostream](../standard-library/iostreams-conventions.md)

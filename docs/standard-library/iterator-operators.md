@@ -1,5 +1,5 @@
 ---
-title: '&lt;Iterator&gt; operatorów'
+title: Operatory&gt; iteratora &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - xutility/std::operator!=
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244015"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884134"
 ---
-# <a name="ltiteratorgt-operators"></a>&lt;Iterator&gt; operatorów
+# <a name="ltiteratorgt-operators"></a>Operatory&gt; iteratora &lt;
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora nie jest równy obiektowi iteratora po prawej stronie.
 
@@ -43,19 +43,19 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `iterator`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `iterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** obiektów iterator nie są równe; **false** iteratora obiekty są równe.
+**ma wartość true** , jeśli obiekty iteratorów nie są równe; **Fałsz** , jeśli obiekty iteratora są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest równy innemu, jeśli odnoszą się do tych samych elementów w kontenerze. Jeśli dwa Iteratory punkt do różnych elementów w kontenerze, następnie nie są równe.
+Jeden obiekt iteratora jest równy innemu, jeśli odnoszą się do tych samych elementów w kontenerze. Jeśli dwa Iteratory wskazują różne elementy w kontenerze, nie są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -119,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest równy obiektowi iteratora po prawej stronie.
 
@@ -147,21 +147,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który typ iteratora.
+\ *lewo*
+Obiekt typu iterator.
 
-*po prawej stronie*\
-Obiekt, który typ iteratora.
+*prawa*\
+Obiekt typu iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** iteratora obiekty są równe; **false** obiektów iterator nie są równe.
+**prawda** , jeśli obiekty iteratora są równe; **Fałsz** , jeśli obiekty iteratora nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest równy innemu, jeśli odnoszą się do tych samych elementów w kontenerze. Jeśli dwa Iteratory punkt do różnych elementów w kontenerze, następnie nie są równe.
+Jeden obiekt iteratora jest równy innemu, jeśli odnoszą się do tych samych elementów w kontenerze. Jeśli dwa Iteratory wskazują różne elementy w kontenerze, nie są równe.
 
-Pierwszy operatory dwóch szablonu zwraca wartość true, tylko wtedy, gdy oba *po lewej stronie* i *prawo* przechowywane na tym samym iteratorem. Trzeci operator szablonu zwraca wartość true tylko wtedy, gdy oba *po lewej stronie* i *prawo* przechowywania ten sam wskaźnik strumienia. Czwarty szablon operator zwraca `left.equal (right)`.
+Pierwsze dwa operatory szablonu zwracają wartość true tylko wtedy, gdy oba *lewe* i *prawe* przechowują ten sam iterator. Trzeci operator szablonu zwraca wartość true tylko wtedy, gdy zarówno *lewa* , jak i *Right* przechowują ten sam wskaźnik strumienia. Czwarty operator szablonu zwraca `left.equal (right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -225,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż obiekt iteratora po prawej stronie.
 
@@ -236,19 +236,19 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `iterator`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `iterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli iteratora po lewej stronie wyrażenia jest mniejsza niż iteratora po prawej stronie wyrażenia. **false** Jeśli jest większa niż lub równa iteratora po prawej stronie.
+**true** , Jeśli iterator po lewej stronie wyrażenia jest krótszy niż iterator po prawej stronie wyrażenia; **Fałsz** , jeśli jest większy lub równy iteratora po prawej stronie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest mniejszy niż inny, jeśli spełnia elementu, która występuje wcześniej w tym kontenerze, niż elementu kierowanego przez obiekt iteratora. Jeden obiekt iteratora nie jest mniejszy niż inny, jeśli go dotyczy tego samego elementu jako obiekt iteratora lub element, który występuje w dalszej części kontenera niż elementu kierowanego przez obiekt iteratora.
+Jeden obiekt iteratora jest mniejszy niż inny, jeśli odnosi się do elementu, który występuje wcześniej w kontenerze niż element objęty przez inny obiekt iteratora. Jeden obiekt iteratora nie jest mniejszy niż inny, jeśli odnosi się do tego samego elementu co inny obiekt iteratora lub element, który występuje później w kontenerze niż element, do którego odnosi się inny obiekt iteratora.
 
 ### <a name="example"></a>Przykład
 
@@ -316,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż lub równy obiektowi iteratora po prawej stronie.
 
@@ -327,19 +327,19 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który typ iteratora.
+\ *lewo*
+Obiekt typu iterator.
 
-*po prawej stronie*\
-Obiekt, który typ iteratora.
+*prawa*\
+Obiekt typu iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli iteratora po lewej stronie wyrażenia jest mniejsza niż lub równe iteratora po prawej stronie wyrażenia. **false** Jeśli jest większa niż iteratora po prawej stronie.
+**true** , Jeśli iterator po lewej stronie wyrażenia jest mniejszy lub równy iteratora po prawej stronie wyrażenia; **wartość false** , jeśli jest większa niż iterator po prawej stronie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest mniejsza niż lub równy innemu, jeśli go dotyczy tego samego elementu lub elementu, która występuje wcześniej w kontenerze od elementu kierowanego przez obiekt iteratora. Jeden obiekt iteratora jest większy niż inny, jeśli spełnia element, który występuje w dalszej części kontenera niż elementu kierowanego przez obiekt iteratora.
+Jeden obiekt iteratora jest mniejszy lub równy innemu, jeśli dotyczy tego samego elementu lub elementu, który występuje wcześniej w kontenerze niż element objęty przez inny obiekt iteratora. Jeden obiekt iteratora jest większy niż inny, jeśli odnosi się do elementu, który występuje później w kontenerze niż element objęty przez inny obiekt iteratora.
 
 ### <a name="example"></a>Przykład
 
@@ -411,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>&gt; operatora
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż obiekt iteratora po prawej stronie.
 
@@ -422,19 +422,19 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który typ iteratora.
+\ *lewo*
+Obiekt typu iterator.
 
-*po prawej stronie*\
-Obiekt, który typ iteratora.
+*prawa*\
+Obiekt typu iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli iteratora po lewej stronie wyrażenia jest większa niż iteratora po prawej stronie wyrażenia. **false** Jeśli jest on mniejszy lub równy iteratora po prawej stronie.
+**true** , Jeśli iterator po lewej stronie wyrażenia jest większy niż iterator po prawej stronie wyrażenia; **wartość false** , jeśli jest ona mniejsza lub równa iteratora po prawej stronie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest większy niż inny, jeśli spełnia element, który występuje w dalszej części kontenera niż elementu kierowanego przez obiekt iteratora. Jeden obiekt iteratora nie jest większy niż inny, jeśli go dotyczy tego samego elementu jako obiekt iteratora lub elementu, która występuje wcześniej w tym kontenerze, niż elementu kierowanego przez obiekt iteratora.
+Jeden obiekt iteratora jest większy niż inny, jeśli odnosi się do elementu, który występuje później w kontenerze niż element objęty przez inny obiekt iteratora. Jeden obiekt iteratora nie jest większy niż inny, jeśli odnosi się do tego samego elementu co inny obiekt iteratora lub element, który występuje wcześniej w kontenerze niż element, do którego odnosi się inny obiekt iteratora.
 
 ### <a name="example"></a>Przykład
 
@@ -500,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż lub równy obiektowi iteratora po prawej stronie.
 
@@ -511,19 +511,19 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Obiekt, który typ iteratora.
+\ *lewo*
+Obiekt typu iterator.
 
-*po prawej stronie*\
-Obiekt, który typ iteratora.
+*prawa*\
+Obiekt typu iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli iteratora po lewej stronie wyrażenia jest większa lub równa iteratora po prawej stronie wyrażenia. **false** Jeśli jest on mniejszy niż iteratora po prawej stronie.
+**true** , Jeśli iterator po lewej stronie wyrażenia jest większy lub równy iteratora po prawej stronie wyrażenia; **wartość false** , jeśli jest mniejsza od iteratora po prawej stronie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeden obiekt iteratora jest większa niż lub równy innemu, jeśli go dotyczy tego samego elementu lub elementu, który później występuje w kontenerze niż elementu kierowanego przez obiekt iteratora. Jeden obiekt iteratora jest mniejszy niż inny, jeśli spełnia elementu, która występuje wcześniej w tym kontenerze, niż elementu kierowanego przez obiekt iteratora.
+Jeden obiekt iteratora jest większy lub równy innemu, jeśli dotyczy tego samego elementu lub elementu, który występuje później w kontenerze niż element, który jest objęty przez inny obiekt iteratora. Jeden obiekt iteratora jest mniejszy niż inny, jeśli odnosi się do elementu, który występuje wcześniej w kontenerze niż element objęty przez inny obiekt iteratora.
 
 ### <a name="example"></a>Przykład
 
@@ -595,9 +595,9 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a> operator +
+## <a name="op_add"></a>operator +
 
-Dodaje wartość przesunięcia do iteratora i zwraca `move_iterator` lub `reverse_iterator` odnoszący się do wstawionego elementu w nowym położeniu przesunięcia.
+Dodaje przesunięcie do iteratora i zwraca `move_iterator` lub `reverse_iterator` odnoszące się do wstawionego elementu w nowym położeniu przesunięcia.
 
 ```cpp
 template <class RandomIterator, class Diff>
@@ -616,14 +616,14 @@ operator+(
 ### <a name="parameters"></a>Parametry
 
 *_Off*\
-Liczba pozycji, const move_iterator lub const reverse_iterator polega na przesunięcia.
+Liczba pozycji, w których stała move_iterator lub stała reverse_iterator ma być przesunięta.
 
-*po prawej stronie*\
-Iterator, który ma być przesunięcia.
+*prawa*\
+Iterator, który ma zostać przesunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca sumę *prawo* +  *_Off*.
+Zwraca *sumę,* która +  *_Off*.
 
 ### <a name="example"></a>Przykład
 
@@ -674,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a> operator-
+## <a name="operator-"></a>zakład
 
 Odejmuje jeden iterator od innego i zwraca różnicę.
 
@@ -692,10 +692,10 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Iterator.
 
-*po prawej stronie*\
+*prawa*\
 Iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -704,11 +704,11 @@ Różnica między dwoma iteratorami `.`
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca pierwszy operator szablonu `left.base() - right.base()`.
+Pierwszy operator szablonu zwraca `left.base() - right.base()`.
 
 Drugi operator szablonu zwraca `right.current - left.current`.
 
-`Tdiff` zależy od typu zwracanego wyrażenia. W przeciwnym razie jest `RandomIterator1::difference_type`.
+`Tdiff` jest określany na podstawie typu zwracanego wyrażenia. W przeciwnym razie jest `RandomIterator1::difference_type`.
 
 ### <a name="example"></a>Przykład
 

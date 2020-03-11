@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: 716c2d03e6d1ff67566bd28e5931996ea2d400af
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141318"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854216"
 ---
 # <a name="concurrency-namespace-enums"></a>Wyliczenia przestrzeni nazw współbieżności
 
@@ -39,7 +39,7 @@ enum agent_status;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`agent_canceled`|`agent` zostało anulowane.|
 |`agent_created`|`agent` został utworzony, ale nie został uruchomiony.|
@@ -65,7 +65,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`AGENTS_EVENT_CREATE`|Typ zdarzenia, który reprezentuje Tworzenie obiektu|
 |`AGENTS_EVENT_DESTROY`|Typ zdarzenia, który reprezentuje usunięcie obiektu|
@@ -90,7 +90,7 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`CONCRT_EVENT_ATTACH`|Typ zdarzenia, który reprezentuje czynność dołączenia do harmonogramu.|
 |`CONCRT_EVENT_BLOCK`|Typ zdarzenia, który reprezentuje czynność blokowania kontekstu.|
@@ -116,7 +116,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -140,7 +140,7 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`InsideCriticalRegion`|Wskazuje, że kontekst znajduje się w regionie krytycznym. W ramach regionu krytycznego zawieszenia asynchroniczne są ukrywane w harmonogramie. W przypadku takiego zawieszenia Menedżer zasobów będzie oczekiwać, aż wątek stanie się możliwy do uruchomienia i po prostu wznowić go zamiast wywoływania harmonogramu. Wszelkie blokady w tym regionie muszą być podejmowane z najwyższą starannością.|
 |`InsideHyperCriticalRegion`|Wskazuje, że kontekst znajduje się w regionie krytycznym dla funkcji Hyper. W regionie krytycznym funkcji Hyper-w przypadku zawieszania synchroniczne i asynchroniczne są ukrywane w harmonogramie. W przypadku takiego zawieszenia lub zablokowania Menedżer zasobów czeka na możliwy do uruchomienia wątku, a następnie po prostu wznowić go zamiast wywoływania harmonogramu. Blokady wykonywane wewnątrz tego regionu nigdy nie mogą być współużytkowane z kodem uruchomionym poza takim regionem. Wykonanie tej czynności spowoduje nieprzewidywalne zakleszczenie.|
@@ -160,7 +160,7 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|Harmonogram nie zbiera informacji o postępie. Ponowne równoważenie jest wykonywane wyłącznie na poziomie subskrypcji bazowego wątku sprzętowego. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](IExecutionResource-structure.md).<br /><br /> Ta wartość jest zarezerwowana do użycia przez środowisko uruchomieniowe.|
 |`ProgressFeedbackEnabled`|Harmonogram zbiera informacje o postępie i przekazuje je do usługi Resource Manager. Usługa Resource Manager będzie korzystać z tych informacji statystycznych w celu ponownego zrównoważenia zasobów w imieniu harmonogramu oraz poziomu subskrypcji bazowego wątku sprzętowego. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](IExecutionResource-structure.md).|
@@ -175,7 +175,7 @@ enum join_type;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`greedy`|Zachłanne `join` bloku komunikatów natychmiast akceptują komunikat po propagacji. Jest to wydajniejsze, ale ma możliwość korzystania z blokady na żywo, w zależności od konfiguracji sieci.|
 |`non_greedy`|Bloki komunikatów, które nie są zachłanne `join`, blokują komunikaty i próbują wykorzystać je po odebraniu. Te zadania są gwarantowane, ale wolniejsze.|
@@ -194,7 +194,7 @@ enum message_status;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`accepted`|Element docelowy zaakceptował wiadomość.|
 |`declined`|Element docelowy nie zaakceptował wiadomości.|
@@ -215,7 +215,7 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`ContextPriority`|Priorytet wątku systemu operacyjnego każdego kontekstu w harmonogramie. Jeśli ten klucz jest ustawiony na wartość `INHERIT_THREAD_PRIORITY` konteksty w harmonogramie odziedziczą priorytet wątku, który utworzył harmonogram.<br /><br /> Prawidłowe wartości: dowolna z prawidłowych wartości funkcji `SetThreadPriority` systemu Windows i wartości specjalnej `INHERIT_THREAD_PRIORITY`<br /><br /> Wartość domyślna: `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|Zarezerwowany rozmiar stosu każdego kontekstu w harmonogramie w kilobajtach.<br /><br /> Prawidłowe wartości: dodatnie liczby całkowite<br /><br /> Wartość domyślna: `0`, wskazujący, że zostanie użyta wartość domyślna procesu dla rozmiaru stosu.|
@@ -243,7 +243,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`ThreadScheduler`|Wskazuje jawne żądanie zwykłych wątków Win32.|
 |`UmsThreadDefault`|Wątki harmonogramie w trybie użytkownika (UMS) nie są obsługiwane w środowisko uruchomieniowe współbieżności w Visual Studio 2013. Użycie `UmsThreadDefault` jako wartości dla zasad `SchedulerType` nie spowoduje błędu. Jednak harmonogram utworzony przy użyciu tych zasad będzie domyślnie używać wątków Win32.|
@@ -262,7 +262,7 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`EnhanceForwardProgress`|Harmonogram jest preferowany przez grupy harmonogramu po wykonaniu każdego zadania. Niezablokowane konteksty są zwykle planowane jako pierwszy w pierwszej kolejności (FIFO). Procesory wirtualne nie buforują nieblokowanych kontekstów.|
 |`EnhanceScheduleGroupLocality`|Przed przejściem do innej grupy harmonogramu usługa Scheduler zaleca kontynuowanie pracy nad zadaniami w bieżącej grupie harmonogramu. Zablokowane konteksty są buforowane na procesory wirtualne i są zwykle planowane na czas ostatniego użycia (LIFO) przez procesor wirtualny, który odblokowany.|
@@ -281,7 +281,7 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`Blocking`|Wskazuje, że wywoływany wątek jest w pełni blokowany i powinien być własnością obiektu wywołującego, dopóki nie zostanie ponownie uruchomiony i zostanie wykonana inna akcja.|
 |`Idle`|Wskazuje, że wywoływany wątek nie jest już wymagany przez harmonogram i jest zwracany do Menedżer zasobów. Nie można już użyć kontekstu, który został wysłany przez Menedżer zasobów.|
@@ -303,7 +303,7 @@ enum task_group_status;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`canceled`|Obiekt `task_group` lub `structured_task_group` został anulowany. Co najmniej jedno zadanie mogło nie zostać wykonane.|
 |`completed`|Zadania w kolejce do obiektu `task_group` lub `structured_task_group` zostały wykonane pomyślnie.|
@@ -323,7 +323,7 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>Wartości
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|Gdy aplikacja jest uruchamiana w systemach operacyjnych z wersji systemu Windows 8 lub nowszej, wątki w ramach harmonogramu nie inicjują środowisko wykonawcze systemu Windows.|
 |`InitializeWinRTAsMTA`|Gdy aplikacja jest uruchamiana w systemach operacyjnych z wersji systemu Windows 8 lub nowszej, każdy wątek w ramach harmonogramu inicjuje środowisko wykonawcze systemu Windows i deklaruje, że jest częścią apartamentu wielowątkowego.|
@@ -332,6 +332,6 @@ enum WinRTInitializationType;
 
 **Nagłówek:** ConcRT. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

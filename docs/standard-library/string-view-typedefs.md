@@ -7,13 +7,13 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459180"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865850"
 ---
-# <a name="ltstringviewgt-typedefs"></a>&lt;string_view&gt; Typedefs
+# <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; Typedefs
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ basic_string_view<wchar_t> wstr(L"Hello");
 Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Rozmiar **wchar_t** ma dwie bajty w systemie Windows, ale nie jest to konieczne w przypadku wszystkich platform. Jeśli potrzebujesz typu znaków string_view o szerokości, która gwarantuje, że pozostaje taka sama na wszystkich platformach, użyj [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) lub [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
+> Rozmiar **wchar_t** to dwie bajty w systemie Windows, ale nie jest to konieczne w przypadku wszystkich platform. Jeśli potrzebujesz string_view typu dwubajtowego o szerokości, która ma być taka sama na wszystkich platformach, użyj [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) lub [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
 ## <a name="see-also"></a>Zobacz także
 

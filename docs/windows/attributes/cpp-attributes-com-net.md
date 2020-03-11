@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491059"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856445"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty języka C++ dla modelu COM i platformy .NET
 
@@ -34,7 +34,7 @@ Atrybuty zwiększają C++ się w kierunkach, które nie są obecnie dostępne be
 
 - Zastępuje dużą ilość kodu IDL wymaganego przez składnik COM przy użyciu kilku zwięzłych atrybutów.
 
-Na przykład w celu zaimplementowania prostego ujścia zdarzeń dla generycznej klasy ATL można zastosować atrybut [event_receiver](event-receiver.md) do określonej klasy, takiej jak `CMyReceiver`. Ten `event_receiver` atrybut jest następnie kompilowany przez kompilator firmy C++ Microsoft, który wstawia odpowiedni kod do pliku obiektu.
+Na przykład w celu zaimplementowania prostego ujścia zdarzeń dla generycznej klasy ATL można zastosować atrybut [event_receiver](event-receiver.md) do określonej klasy, takiej jak `CMyReceiver`. Atrybut `event_receiver` jest następnie kompilowany przez kompilator firmy Microsoft C++ , który wstawia odpowiedni kod do pliku obiektu.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-`CMyReceiver` Następnie można skonfigurować metody `handler1` i `handler2` obsłużyć zdarzenia (przy użyciu funkcji wewnętrznej [__hook](../../cpp/hook.md)) ze źródła zdarzeń, które można utworzyć przy użyciu [event_source](event-source.md).
+Następnie można skonfigurować `CMyReceiver` metody `handler1` i `handler2` do obsługi zdarzeń (przy użyciu funkcji wewnętrznej [__hook](../../cpp/hook.md)) ze źródła zdarzeń, które można utworzyć przy użyciu [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Podstawowa mechanika atrybutów
 
@@ -80,7 +80,7 @@ Ponadto, konsolidator wizualny C++ będzie wyprowadzał wszystkie informacje o a
 
 ## <a name="contexts"></a>Konteksty atrybutu
 
-C++atrybuty można opisać przy użyciu czterech podstawowych pól: cel, do którego można zastosować (**dotyczy**), jeśli są one powtarzalne lub nie (**powtarzalne**), wymagana obecność innych atrybutów (**wymaganych atrybutów**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w tabeli towarzyszącej w temacie odwołania do poszczególnych atrybutów. Każde z tych pól zostało opisane poniżej.
+C++atrybuty można opisać przy użyciu czterech podstawowych pól: cel, do którego można zastosować (**dotyczy**), jeśli są powtarzalne lub nie (**powtarzalne**), wymagana obecność innych atrybutów (**wymaganych atrybutów**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w tabeli towarzyszącej w temacie odwołania do poszczególnych atrybutów. Każde z tych pól zostało opisane poniżej.
 
 ### <a name="applies-to"></a>Dotyczy:
 

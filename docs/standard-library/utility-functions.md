@@ -1,5 +1,5 @@
 ---
-title: '&lt;Narzędzie&gt; funkcji'
+title: funkcje&gt; &lt;narzędzi
 ms.date: 11/04/2016
 f1_keywords:
 - utility/std::exchange
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246309"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854871"
 ---
-# <a name="ltutilitygt-functions"></a>&lt;Narzędzie&gt; funkcji
+# <a name="ltutilitygt-functions"></a>funkcje&gt; &lt;narzędzi
 
-## <a name="asconst"></a> as_const
+## <a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -34,15 +34,15 @@ template <class T> void as_const(const T&&) = delete;
 
 Zwraca *T*.
 
-## <a name="declval"></a> declval —
+## <a name="declval"></a>declval —
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a> Program Exchange
+## <a name="exchange"></a>zamian
 
-**(C ++ 14)**  Przypisuje nową wartość do obiektu i zwraca starą wartość.
+**(C++ 14)** Przypisuje nową wartość do obiektu i zwraca jego starą wartość.
 
 ```cpp
 template <class T, class Other = T>
@@ -51,19 +51,19 @@ template <class T, class Other = T>
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*val*\
 Obiekt, który otrzyma wartość new_val.
 
 *new_val*\
-Obiekt, którego wartość jest kopiowany lub przenoszony do val.
+Obiekt, którego wartość jest kopiowana lub przenoszona do wartości Val.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku typów złożonych `exchange` zapobiega kopiowaniu starej wartości, gdy Konstruktor przenoszenia, jest dostępna, zapobiega kopiowaniu nowej wartości, jeśli jest obiektem tymczasowym lub są przenoszone i akceptuje dowolny typ jako nową wartość, przy użyciu wszelkich dostępnych operatorów konwersji przypisania. Funkcja exchange różni się od [std::swap](../standard-library/algorithm-functions.md#swap) , argument po lewej stronie nie jest przenoszone lub kopiowane na prawy argument.
+W przypadku typów złożonych, `exchange` zapobiega kopiowaniu starej wartości, gdy jest dostępny konstruktor przenoszenia, zapobiega kopiowaniu nowej wartości, jeśli jest obiektem tymczasowym lub jest przenoszona, i akceptuje dowolny typ jako nową wartość przy użyciu dowolnego dostępnego operatora konwersji. Funkcja wymiany różni się od [std:: swap](../standard-library/algorithm-functions.md#swap) w tym, że lewy argument nie jest przenoszony ani kopiowany do prawego argumentu.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `exchange`. W świecie rzeczywistym `exchange` jest najbardziej przydatna w przypadku dużych obiektów, które są kosztowne do skopiowania:
+Poniższy przykład pokazuje, jak używać `exchange`. W świecie rzeczywistym `exchange` jest najbardziej przydatna w przypadku dużych obiektów, które są kosztowne do kopiowania:
 
 ```cpp
 #include <utility>
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a> do przodu
+## <a name="forward"></a>prześlą
 
 Warunkowo rzutuje swój argument do odwołania rvalue, jeśli argument to rvalue lub odwołanie rvalue. Spowoduje to przywrócenie cechy rvalue argumentu do funkcji przekazywania do przodu, aby obsłużyć doskonałe przekazywanie do przodu.
 
@@ -110,24 +110,24 @@ template <class Type>    // accepts everything else
 ### <a name="parameters"></a>Parametry
 
 *Typ*\
-Typ wartości przekazanej w *Arg*, który może być inny niż typ *Arg*. Zwykle określony przez argument szablonu funkcji przekazywania do przodu.
+Typ wartości przekazaną w *ARG*, która może być różna od typu *ARG*. Zwykle określony przez argument szablonu funkcji przekazywania do przodu.
 
-*ARG*\
+\ *ARG*
 Argument do rzutowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie rvalue do *Arg* Jeśli wartość przekazywana w *Arg* była pierwotnie rvalue lub odwołaniem rvalue; w przeciwnym razie zwraca *Arg* bez zmiany jego typu.
+Zwraca odwołanie rvalue do *argumentu ARG* , jeśli wartość przeniesiona w *ARG* była pierwotnie rvalue lub odwołaniem do rvalue; w przeciwnym razie zwraca *ARG* bez modyfikowania jego typu.
 
 ### <a name="remarks"></a>Uwagi
 
-Musisz określić jawny argument szablonu do wywołania `forward`.
+Musisz określić jawny argument szablonu, aby wywołać `forward`.
 
-`forward` Nie przekazuj jej argument. Zamiast tego, przez warunkowe rzutowanie swojego argumentu na odwołanie rvalue, jeśli pierwotnie był on rvalue lub odwołaniem rvalue, `forward` umożliwia kompilatorowi wykonanie rozwiązania przeciążenia przy zachowaniu wiedzy o oryginalnym typie argumentu przekazywane. Jawny typ argumentu do funkcji przekazywania może być inny niż jego typ oryginalny — na przykład, kiedy rvalue jest używana jako argument do funkcji i jest powiązana z nazwą parametru; posiadanie nazwy sprawia, że l-wartości, z dowolną wartość faktycznie istnieje jako rvalue — `forward` przywrócenie cechy rvalue argumentu.
+`forward` nie przekazuje tego argumentu. Zamiast tego przez warunkowe rzutowanie argumentu na odwołanie rvalue, jeśli było pierwotnie rvalue lub rvalue, `forward` umożliwia kompilatorowi przeprowadzenie rozpoznawania przeciążenia przy użyciu informacji o typie oryginalnym przekazanego argumentu. Pozorny typ argumentu funkcji przekazywania może być inny niż jego oryginalny typ — na przykład gdy rvalue jest używany jako argument funkcji i jest powiązany z nazwą parametru; posiadanie nazwy sprawia, że jest to lvalue, z każdą wartością rzeczywiście istnieje jako rvalue — `forward` przywraca rvalue-stałość argumentu.
 
-Przywracanie cechy rvalue oryginalnej wartości argumentu do przeciążenia jest znane jako *doskonała przekazywania*. Doskonałe przekazywanie do przodu umożliwia funkcji szablonu zaakceptowanie argumentu któregokolwiek typu odwołania i przywrócenie jego cechy rvalue, gdy jest to niezbędne do poprawnego rozwiązania przeciążenia. Za pomocą doskonałego przekazywania do przodu można zachować semantykę przenoszenia dla rvalue i uniknąć konieczności zapewnienia przeciążeń dla funkcji, które różnią się tylko pod względem typu odwołania ich argumentów.
+Przywrócenie pierwotnej wartości argumentu rvalue-stałość w celu przeprowadzenia rozpoznawania przeciążenia jest znane jako *doskonałe przekazywanie dalej*. Doskonałe przekazywanie do przodu umożliwia funkcji szablonu zaakceptowanie argumentu któregokolwiek typu odwołania i przywrócenie jego cechy rvalue, gdy jest to niezbędne do poprawnego rozwiązania przeciążenia. Za pomocą doskonałego przekazywania do przodu można zachować semantykę przenoszenia dla rvalue i uniknąć konieczności zapewnienia przeciążeń dla funkcji, które różnią się tylko pod względem typu odwołania ich argumentów.
 
-## <a name="from_chars"></a> from_chars
+## <a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
@@ -139,9 +139,9 @@ from_chars_result from_chars(const char* first, const char* last, double& value,
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a> Pobierz
+## <a name="get"></a>Pobierz
 
-Pobiera element z `pair` obiekt w pozycji indeksu lub typu.
+Pobiera element z obiektu `pair` według pozycji indeksu lub według typu.
 
 ```cpp
 // get reference to element at Index in pair Pr
@@ -187,24 +187,24 @@ template <class T2, class T1>
 ### <a name="parameters"></a>Parametry
 
 *Indeks*\
-Indeks oparty na 0 wybranego elementu.
+Indeks (0) wybranego elementu.
 
-*T1*\
-Typ pierwszy element pary.
+\ *T1*
+Typ pierwszego pary elementu.
 
-*T2*\
+\ *T2*
 Typ drugiego elementu pary.
 
-*żądania ściągnięcia*\
-Pary, które można wybierać.
+*\ żądania* ściągnięcia
+Para do wyboru.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje szablonów zwracają odwołania do elementu jego `pair` argumentu.
+Wszystkie funkcje szablonu zwracają odwołanie do elementu `pair` argument.
 
-Dla indeksowanych przeciążeń Jeśli wartość *indeksu* wynosi 0, te funkcje zwracają `pr.first` i, jeśli wartość *indeksu* 1, te funkcje zwracają `pr.second`. Typ `RI` jest typu zwracanego elementu.
+W przypadku przeciążeń indeksowanych, jeśli wartość *indeksu* jest równa 0, funkcje zwracają `pr.first` i jeśli wartość *indeksu* wynosi 1, zwracane są `pr.second`funkcje. Typ `RI` jest typem zwracanego elementu.
 
-Dla przeciążeń, które nie mają parametr indeksu elementu do zwrócenia jest ustalane przez argument typu. Wywoływanie `get<T>(Tuple)` generuje błąd kompilatora, jeśli *żądania ściągnięcia* zawiera więcej lub mniej niż jeden element typu T.
+Dla przeciążeń, które nie mają parametru index, element do zwrócenia jest określany przez argument typu. Wywołanie `get<T>(Tuple)` spowoduje błąd kompilatora *, jeśli żądanie* ściągnięcia zawiera więcej lub mniej niż jeden element typu t.
 
 ### <a name="example"></a>Przykład
 
@@ -235,37 +235,37 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a> index_sequence
+## <a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a> index_sequence_for
+## <a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a> make_index_sequence
+## <a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a> make_integer_sequence
+## <a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a> make_pair
+## <a name="make_pair"></a>make_pair
 
-Funkcja szablonu, który służy do konstruowania obiektów typu `pair`, gdzie typy składników są wybierane automatycznie na podstawie typów danych, które są przekazywane jako parametry.
+Funkcja szablonu, której można użyć do konstruowania obiektów typu `pair`, w których typy składników są automatycznie wybierane na podstawie typów danych, które są przesyłane jako parametry.
 
 ```cpp
 template <class T, class U>
@@ -283,7 +283,7 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*val1*\
+*Val1*\
 Wartość, która inicjuje pierwszy element `pair`.
 
 *Val2*\
@@ -291,29 +291,29 @@ Wartość, która inicjuje drugi element `pair`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt pary, który jest konstruowany: `pair` < `T`,`U`> (`Val1`, `Val2`).
+Obiekt pary, który jest zbudowany: `pair`<`T`,`U`> (`Val1`, `Val2`).
 
 ### <a name="remarks"></a>Uwagi
 
-`make_pair` Konwertuje obiekt typu [reference_wrapper, klasa](../standard-library/reference-wrapper-class.md) na typy odwołań i konwertuje zanikające tablice i funkcje do wskaźników.
+`make_pair` Konwertuje obiekt typu [Reference_wrapper klasy](../standard-library/reference-wrapper-class.md) na typy referencyjne i konwertuje zanikają tablicę i funkcje na wskaźniki.
 
-W zwracanym `pair` obiektu `T` jest określany w następujący sposób:
+W zwróconym obiekcie `pair` `T` jest określony w następujący sposób:
 
-- Jeśli typ danych wejściowych `T` jest `reference_wrapper<X>`, zwrócony typ `T` jest `X&`.
+- Jeśli typ danych wejściowych `T` jest `reference_wrapper<X>`, zwracany typ `T` jest `X&`.
 
-- W przeciwnym razie zwracany typ `T` jest `decay<T>::type`. Jeśli [decay, klasa](../standard-library/decay-class.md) nie jest obsługiwany, zwrócony typ `T` jest taki sam jak typ danych wejściowych `T`.
+- W przeciwnym razie zwrócony typ `T` jest `decay<T>::type`. Jeśli [Klasa zanikania](../standard-library/decay-class.md) nie jest obsługiwana, zwracany typ `T` jest taka sama jak typ wejściowy `T`.
 
-Zwracany typ `U` jest podobnie określany z typu wejściowego `U`.
+Zwrócony typ `U` jest w podobny sposób określany na podstawie typu wejściowego `U`.
 
-Jedną z zalet `make_pair` są określane automatycznie przez kompilator i nie muszą być jawnie określone typy obiektów, które są przechowywane. Nie używaj jawnych argumentów szablonów takich jak `make_pair<int, int>(1, 2)` zastosowania `make_pair` ponieważ jest pełny i dodaje problemy z odwołaniami rvalue złożonych, które mogą spowodować błąd kompilacji. W tym przykładzie poprawna składnia to `make_pair(1, 2)`
+Jedną z zalet `make_pair` jest to, że typy obiektów, które są przechowywane, są określane automatycznie przez kompilator i nie muszą być jawnie określone. Nie używaj jawnych argumentów szablonu, takich jak `make_pair<int, int>(1, 2)`, gdy używasz `make_pair`, ponieważ jest on pełny i dodaje złożone problemy referencyjne rvalue, które mogą spowodować błąd kompilacji. W tym przykładzie poprawna składnia będzie `make_pair(1, 2)`
 
-`make_pair` Funkcji pomocnika umożliwia także przekazywanie dwóch wartości do funkcji, która wymaga pary jako parametru wejściowego.
+Funkcja pomocnika `make_pair` umożliwia również przekazywanie dwóch wartości do funkcji, która wymaga pary jako parametru wejściowego.
 
 ### <a name="example"></a>Przykład
 
-Na przykład o tym, jak korzystać z funkcji pomocnika `make_pair` do zadeklarowania i zainicjowania pary, zobacz [pair — struktura](../standard-library/pair-structure.md).
+Aby zapoznać się z przykładem dotyczącym sposobu używania funkcji pomocnika `make_pair` zadeklarować i zainicjować parę, zobacz [parowanie struktury](../standard-library/pair-structure.md).
 
-## <a name="move"></a> Przenieś
+## <a name="move"></a>Przenieś
 
 Bezwarunkowo rzutuje swój argument na odwołanie rvalue, a tym samym sygnalizuje, że może być przeniesione, jeśli jego typ umożliwia przenoszenie.
 
@@ -325,32 +325,32 @@ template <class Type>
 ### <a name="parameters"></a>Parametry
 
 *Typ*\
-Typ wywnioskowany z typu argumentu przekazanego *Arg*, wraz z regułami zwijania odwołania.
+Typ wywnioskowany z typu argumentu, który przeszedł w *ARG*, wraz z regułami zwijania odwołania.
 
-*ARG*\
-Argument do rzutowania. Chociaż typ *Arg* wydaje się być określony jako odwołanie rvalue, `move` również akceptuje argumenty lvalue, ponieważ odwołania lvalue można powiązać z odwołaniami rvalue.
+\ *ARG*
+Argument do rzutowania. Mimo że typ *argumentu* jest określony jako odwołanie rvalue, `move` również akceptuje argumenty lvalue, ponieważ odwołania lvalue mogą być powiązane z odwołaniami do rvalue.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`Arg` jako odwołanie rvalue czy jej typ jest typem referencyjnym.
+`Arg` jako odwołanie rvalue, niezależnie od tego, czy typ jest typem referencyjnym.
 
 ### <a name="remarks"></a>Uwagi
 
-Argument szablonu *typu* nie jest przeznaczone do być jawnie określone, ale wnioskowany z typu wartości przekazanej w *Arg*. Typ *typu* jest następnie korygowany według reguł zwijania odniesienia.
+*Typ* argumentu szablonu nie jest przeznaczony do określenia jawnie, ale do wywnioskowania z typu wartości przekazaną w argumencie *ARG*. Typ *typu* jest dostosowywany w oparciu o reguły zwijane odwołania.
 
-`move` nie przenosi swojego argumentu. Zamiast tego przez rzutowanie bezwarunkowo swój argument — który może być lvalue — na odwołanie rvalue, pozwala następnie kompilatorowi przenieść, zamiast kopiowania, wartość przekazywana w *Arg* jeśli jego typ umożliwia przenoszenia. Jeśli typ nie umożliwia przenoszenia, jest zamiast tego kopiowany.
+`move` nie przenosi tego argumentu. Zamiast tego przez bezwarunkowo rzutowanie argumentu, który może być lvalue — do odwołania rvalue, umożliwia kompilatorowi przeniesienie, a nie kopiowanie, wartość przekazaną w argumencie *ARG* , jeśli jej typ jest włączony. Jeśli typ nie jest włączony do przenoszenia, jest kopiowany.
 
-Jeśli wartość przekazywana w *Arg* to lvalue — czyli o nazwie lub mogą być podejmowane jego adres — zostaje unieważniony po przeniesieniu. Nie można znaleźć wartości przekazanej w *Arg* przez jego nazwę lub adres po przeniesieniu.
+Jeśli wartość przeniesiona w *ARG* to lvalue — to znaczy, że ma nazwę lub jego adres może zostać pobrany — jest on unieważniony po przeniesieniu. Nie należy odwoływać się do wartości przekazaną w *ARG* o nazwę lub adres po przeniesieniu.
 
-## <a name="moveif"></a> move_if_noexcept
+## <a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
-Zamienia elementy z dwóch typów lub [pair — struktura](../standard-library/pair-structure.md) obiektów.
+Wymienia elementy dwóch obiektów struktury typu lub [pary](../standard-library/pair-structure.md) .
 
 ```cpp
 template <class T>
@@ -363,17 +363,17 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu lub `pair`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu lub `pair`.
 
 ### <a name="remarks"></a>Uwagi
 
-Jedną z zalet `swap` są określane automatycznie przez kompilator i nie muszą być jawnie określone typy obiektów, które są przechowywane. Nie używaj jawnych argumentów szablonów takich jak `swap<int, int>(1, 2)` zastosowania `swap` ponieważ jest pełny i dodaje problemy z odwołaniami rvalue złożonych, które mogą spowodować błąd kompilacji.
+Jedną z zalet `swap` jest to, że typy obiektów, które są przechowywane, są określane automatycznie przez kompilator i nie muszą być jawnie określone. Nie używaj jawnych argumentów szablonu, takich jak `swap<int, int>(1, 2)`, gdy używasz `swap`, ponieważ jest on pełny i dodaje złożone problemy referencyjne rvalue, które mogą spowodować błąd kompilacji.
 
-## <a name="to_chars"></a> to_chars
+## <a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);

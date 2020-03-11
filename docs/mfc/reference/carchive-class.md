@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376360"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855338"
 ---
 # <a name="carchive-class"></a>Klasa CArchive
 
@@ -75,40 +75,40 @@ class CArchive
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CArchive:: CArchive](#carchive)|`CArchive` Tworzy obiekt.|
+|[CArchive:: CArchive](#carchive)|Tworzy obiekt `CArchive`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CArchive:: Abort](#abort)|Zamyka archiwum bez zgłaszania wyjątku.|
-|[CArchive:: Close](#close)|Opróżnia niezapisywane dane i rozłącza od `CFile`.|
+|[CArchive:: Close](#close)|Opróżnia niezapisywane dane i rozłącza z `CFile`.|
 |[CArchive:: Flush](#flush)|Opróżnia niezapisywane dane z buforu archiwum.|
-|[CArchive:: GetFile](#getfile)|Pobiera wskaźnik `CFile` obiektu dla tego archiwum.|
-|[CArchive:: GetObjectSchema](#getobjectschema)|Wywoływana z `Serialize` funkcji w celu określenia wersji obiektu, który jest deserializowany.|
+|[CArchive:: GetFile](#getfile)|Pobiera `CFile` wskaźnik obiektu dla tego archiwum.|
+|[CArchive:: GetObjectSchema](#getobjectschema)|Wywoływana z funkcji `Serialize`, aby określić wersję obiektu, który jest deserializowany.|
 |[CArchive:: IsBufferEmpty](#isbufferempty)|Określa, czy bufor został opróżniony podczas procesu odbierania Windows Sockets.|
 |[CArchive:: IsLoading](#isloading)|Określa, czy archiwum jest ładowane.|
 |[CArchive:: isprzechowywanie](#isstoring)|Określa, czy archiwum jest przechowywane.|
 |[CArchive:: MapObject](#mapobject)|Umieszcza obiekty w mapie, które nie są serializowane do pliku, ale są dostępne dla podobiektów do odwołania.|
 |[CArchive:: Read](#read)|Odczytuje nieprzetworzone bajty.|
-|[CArchive:: ReadClass](#readclass)|Odczytuje odwołanie do klasy poprzednio przechowywane w `WriteClass`.|
-|[CArchive:: ReadObject](#readobject)|Wywołuje `Serialize` funkcję obiektu do załadowania.|
+|[CArchive:: ReadClass](#readclass)|Odczytuje odwołanie do klasy przechowywane wcześniej w `WriteClass`.|
+|[CArchive:: ReadObject](#readobject)|Wywołuje funkcję `Serialize` obiektu do załadowania.|
 |[CArchive:: ReadString](#readstring)|Odczytuje pojedynczy wiersz tekstu.|
-|[CArchive:: SerializeClass](#serializeclass)|Odczytuje lub zapisuje odwołanie klasy do `CArchive` obiektu w zależności od kierunku. `CArchive`|
-|[CArchive:: SetLoadParams](#setloadparams)|Ustawia rozmiar, do którego zostanie powiększona tablica obciążenia. Musi być wywoływana przed załadowaniem dowolnego obiektu lub `MapObject` przed `ReadObject` wywołaniem lub.|
+|[CArchive:: SerializeClass](#serializeclass)|Odczytuje lub zapisuje odwołanie klasy do obiektu `CArchive` w zależności od kierunku `CArchive`.|
+|[CArchive:: SetLoadParams](#setloadparams)|Ustawia rozmiar, do którego zostanie powiększona tablica obciążenia. Musi być wywoływana przed załadowaniem dowolnego obiektu lub przed wywołaniem `MapObject` lub `ReadObject`.|
 |[CArchive:: SetObjectSchema](#setobjectschema)|Ustawia schemat obiektu przechowywany w obiekcie archiwum.|
 |[CArchive:: SetStoreParams](#setstoreparams)|Ustawia rozmiar tabeli skrótu i rozmiar bloku mapy używany do identyfikowania unikatowych obiektów w procesie serializacji.|
 |[CArchive:: Write](#write)|Zapisuje nieprzetworzone bajty.|
-|[CArchive:: WriteClass](#writeclass)|Zapisuje odwołanie `CRuntimeClass` `CArchive`do.|
-|[CArchive:: WriteObject](#writeobject)|Wywołuje `Serialize` funkcję obiektu do przechowywania.|
+|[CArchive:: WriteClass](#writeclass)|Zapisuje odwołanie do `CRuntimeClass` do `CArchive`.|
+|[CArchive:: WriteObject](#writeobject)|Wywołuje funkcję `Serialize` obiektu do przechowywania.|
 |[CArchive:: WriteString](#writestring)|Zapisuje pojedynczy wiersz tekstu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CArchive:: operator&lt;&lt;](#operator_lt_lt)|Przechowuje obiekty i typy pierwotne w archiwum.|
-|[CArchive:: operator&gt;&gt;](#operator_gt_gt)|Ładuje obiekty i typy pierwotne z archiwum.|
+|[CArchive:: operator &lt;&lt;](#operator_lt_lt)|Przechowuje obiekty i typy pierwotne w archiwum.|
+|[CArchive:: operator &gt;&gt;](#operator_gt_gt)|Ładuje obiekty i typy pierwotne z archiwum.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -118,21 +118,21 @@ class CArchive
 
 ## <a name="remarks"></a>Uwagi
 
-`CArchive`nie ma klasy bazowej.
+`CArchive` nie ma klasy bazowej.
 
 Później można załadować obiekty z magazynu trwałego, odtworząc je w pamięci. Ten proces tworzenia trwałych danych jest nazywany "serializacji".
 
 Obiekt archiwum można traktować jako rodzaj strumienia binarnego. Podobnie jak w przypadku strumienia danych wejściowych/wyjściowych, archiwum jest skojarzone z plikiem i pozwala na zbuforowane zapisywanie i odczytywanie danych do i z magazynu. Strumień danych wejściowych/wyjściowych przetwarza sekwencje znaków ASCII, ale archiwum przetwarza dane obiektów binarnych w wydajny, nadmiarowy format.
 
-Aby można było utworzyć [](../../mfc/reference/cfile-class.md) `CArchive` obiekt, należy utworzyć obiekt CFile. Ponadto należy upewnić się, że stan załadowania/przechowywania archiwum jest zgodny z trybem otwartym pliku. Masz ograniczone do jednego aktywnego Archiwum na plik.
+Aby można było utworzyć obiekt `CArchive`, należy utworzyć obiekt [CFile](../../mfc/reference/cfile-class.md) . Ponadto należy upewnić się, że stan załadowania/przechowywania archiwum jest zgodny z trybem otwartym pliku. Masz ograniczone do jednego aktywnego Archiwum na plik.
 
-Podczas konstruowania `CArchive` obiektu, należy dołączyć go do obiektu klasy `CFile` (lub klasy pochodnej), która reprezentuje otwarty plik. Należy również określić, czy archiwum będzie używane do ładowania, czy przechowywania. Obiekt może przetworzyć nie tylko typy pierwotne, ale również obiekty klas pochodnych CObject zaprojektowanych do serializacji. [](../../mfc/reference/cobject-class.md) `CArchive` Klasa możliwa do `Serialize` serializacji ma zwykle funkcję członkowską i zwykle używa makr [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , zgodnie z opisem w klasie. `CObject`
+Podczas konstruowania obiektu `CArchive`, należy dołączyć go do obiektu klasy `CFile` (lub klasy pochodnej), która reprezentuje otwarty plik. Należy również określić, czy archiwum będzie używane do ładowania, czy przechowywania. Obiekt `CArchive` może przetwarzać nie tylko typy pierwotne, ale również obiekty klas pochodnych [CObject](../../mfc/reference/cobject-class.md)zaprojektowanych do serializacji. Klasa możliwa do serializacji zazwyczaj ma `Serialize` funkcję członkowską i zazwyczaj używa makr [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , zgodnie z opisem w sekcji klasy `CObject`.
 
-Przeciążone operatory wyodrębniania ( **>>** ) i wstawiania ( **<<** ) to wygodne interfejsy programowania archiwum, które obsługują zarówno typy `CObject`pierwotne, jak i klasy pochodne.
+Operatory przeciążania wyodrębniania ( **>>** ) i wstawiania ( **<<** ) to wygodne interfejsy programowania archiwum, które obsługują zarówno typy pierwotne, jak i klasy pochodne `CObject`.
 
-`CArchive`obsługuje także programowanie z klasami Windows Sockets MFC [CSocket](../../mfc/reference/csocket-class.md) i [CSocketFile](../../mfc/reference/csocketfile-class.md). Funkcja członkowska [IsBufferEmpty](#isbufferempty) obsługuje to użycie.
+`CArchive` obsługuje także Programowanie przy użyciu klas MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) i [CSocketFile](../../mfc/reference/csocketfile-class.md). Funkcja członkowska [IsBufferEmpty](#isbufferempty) obsługuje to użycie.
 
-Aby uzyskać więcej informacji `CArchive`na temat, zobacz [](../../mfc/serialization-in-mfc.md) artykuł serializacji [i Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Więcej informacji o `CArchive`można znaleźć w artykułach [Serializacja](../../mfc/serialization-in-mfc.md) i [Windows Sockets: używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -152,11 +152,11 @@ void Abort ();
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor będzie zazwyczaj wywoływany `Close`, co spowoduje opróżnienie wszystkich danych, które nie zostały zapisane w skojarzonym `CFile` obiekcie. `CArchive` Może to spowodować wyjątki.
+Destruktor `CArchive` będzie zwykle wywoływał `Close`, co spowoduje opróżnienie wszystkich danych, które nie zostały zapisane w skojarzonym obiekcie `CFile`. Może to spowodować wyjątki.
 
-Podczas przechwytywania tych wyjątków dobrym pomysłem jest użycie `Abort`, aby destruktor `CArchive` obiektu nie powodował dalszych wyjątków. Podczas obsługi wyjątków `CArchive::Abort` nie zostanie zgłoszony wyjątek w przypadku błędów, ponieważ, w przeciwieństwie do [CArchive:: Close](#close), `Abort` ignoruje błędy.
+Podczas przechwytywania tych wyjątków dobrym pomysłem jest użycie `Abort`, dzięki czemu destruktor obiektu `CArchive` nie powoduje dalszych wyjątków. W przypadku obsługi wyjątków `CArchive::Abort` nie zgłosi wyjątku w przypadku błędów, ponieważ, w przeciwieństwie do [CArchive:: Close](#close), `Abort` ignoruje błędy.
 
-Jeśli użyto **nowej** do przydzielenia `CArchive` obiektu na stercie, należy usunąć go po zamknięciu pliku.
+Jeśli użyto **nowej** do przydzielenia obiektu `CArchive` na stercie, należy usunąć go po zamknięciu pliku.
 
 ### <a name="example"></a>Przykład
 
@@ -164,7 +164,7 @@ Jeśli użyto **nowej** do przydzielenia `CArchive` obiektu na stercie, należy 
 
 ##  <a name="carchive"></a>CArchive:: CArchive
 
-Konstruuje `CArchive` obiekt i określa, czy będzie on używany do ładowania lub przechowywania obiektów.
+Konstruuje obiekt `CArchive` i określa, czy będzie on używany do ładowania lub przechowywania obiektów.
 
 ```
 CArchive(
@@ -177,16 +177,16 @@ CArchive(
 ### <a name="parameters"></a>Parametry
 
 *pFile*<br/>
-Wskaźnik do `CFile` obiektu, który jest ostatecznym źródłem lub miejscem docelowym danych trwałych.
+Wskaźnik do obiektu `CFile`, który jest ostatecznym źródłem lub miejscem docelowym danych trwałych.
 
 *nMode*<br/>
 Flaga określająca, czy obiekty będą ładowane z lub przechowywane w archiwum. Parametr *nMode* musi mieć jedną z następujących wartości:
 
-- `CArchive::load`Ładuje dane z archiwum. Wymaga tylko `CFile` uprawnienia do odczytu.
+- `CArchive::load` ładuje dane z archiwum. Wymaga tylko `CFile` uprawnienia do odczytu.
 
-- `CArchive::store`Zapisuje dane w archiwum. Wymaga `CFile` uprawnień do zapisu.
+- `CArchive::store` zapisuje dane w archiwum. Wymaga `CFile` uprawnienia do zapisu.
 
-- `CArchive::bNoFlushOnDelete`Uniemożliwia automatyczne wywoływanie `Flush` archiwum po wywołaniu destruktora archiwum. Jeśli ustawisz tę flagę, użytkownik jest odpowiedzialny za `Close` jawne wywołanie przed wywołaniem destruktora. Jeśli tego nie zrobisz, Twoje dane będą uszkodzone.
+- `CArchive::bNoFlushOnDelete` uniemożliwia automatyczne wywoływanie `Flush` przez archiwum w przypadku wywołania destruktora archiwum. Jeśli ustawisz tę flagę, użytkownik jest odpowiedzialny za jawne wywoływanie `Close` przed wywołaniem destruktora. Jeśli tego nie zrobisz, Twoje dane będą uszkodzone.
 
 *nBufSize*<br/>
 Liczba całkowita określająca rozmiar wewnętrznego bufora plików (w bajtach). Należy pamiętać, że domyślny rozmiar buforu to 4 096 bajtów. W przypadku rutynowej archiwizacji dużych obiektów poprawisz wydajność, jeśli używasz większego rozmiaru buforu, który jest wielokrotnością rozmiaru buforu pliku.
@@ -198,7 +198,7 @@ Opcjonalny wskaźnik do buforu dostarczonego przez użytkownika o rozmiarze *nBu
 
 Nie można zmienić tej specyfikacji po utworzeniu archiwum.
 
-Nie można używać `CFile` operacji do zmiany stanu pliku do momentu zamknięcia archiwum. Każda taka operacja spowoduje uszkodzenie integralności archiwum. Możesz uzyskać dostęp do pozycji wskaźnika pliku w dowolnym momencie podczas serializacji, uzyskując obiekt pliku archiwum z funkcji elementu członkowskiego [GetFile](#getfile) , a następnie używając funkcji [CFile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . Należy wywołać metodę [CArchive:: Flush](#flush) przed uzyskaniem pozycji wskaźnika pliku.
+Nie można użyć operacji `CFile`, aby zmienić stan pliku do momentu zamknięcia archiwum. Każda taka operacja spowoduje uszkodzenie integralności archiwum. Możesz uzyskać dostęp do pozycji wskaźnika pliku w dowolnym momencie podczas serializacji, uzyskując obiekt pliku archiwum z funkcji elementu członkowskiego [GetFile](#getfile) , a następnie używając funkcji [CFile:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . Należy wywołać metodę [CArchive:: Flush](#flush) przed uzyskaniem pozycji wskaźnika pliku.
 
 ### <a name="example"></a>Przykład
 
@@ -216,7 +216,7 @@ void Close();
 
 Żadne dalsze operacje na archiwum nie są dozwolone. Po zamknięciu archiwum można utworzyć inne Archiwum dla tego samego pliku lub zamknąć plik.
 
-Funkcja `Close` członkowska zapewnia, że wszystkie dane są przesyłane z archiwum do pliku i uniemożliwiają dostęp do archiwum. Aby ukończyć transfer z pliku do nośnika magazynu, należy najpierw użyć [CFile:: Close](../../mfc/reference/cfile-class.md#close) , a następnie zniszczyć `CFile` obiekt.
+Funkcja członkowska `Close` zapewnia, że wszystkie dane są przesyłane z archiwum do pliku i uniemożliwiają dostęp do archiwum. Aby ukończyć transfer z pliku do nośnika magazynu, należy najpierw użyć [CFile:: Close](../../mfc/reference/cfile-class.md#close) , a następnie zniszczyć obiekt `CFile`.
 
 ### <a name="example"></a>Przykład
 
@@ -232,7 +232,7 @@ void Flush();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `Flush` członkowska gwarantuje, że wszystkie dane są przesyłane z archiwum do pliku. Musisz wywołać [CFile:: Close](../../mfc/reference/cfile-class.md#close) , aby zakończyć transfer z pliku na nośnik magazynujący.
+Funkcja członkowska `Flush` zapewnia, że wszystkie dane są przesyłane z archiwum do pliku. Musisz wywołać [CFile:: Close](../../mfc/reference/cfile-class.md#close) , aby zakończyć transfer z pliku na nośnik magazynujący.
 
 ### <a name="example"></a>Przykład
 
@@ -240,7 +240,7 @@ Funkcja `Flush` członkowska gwarantuje, że wszystkie dane są przesyłane z ar
 
 ##  <a name="getfile"></a>CArchive:: GetFile
 
-Pobiera wskaźnik `CFile` obiektu dla tego archiwum.
+Pobiera `CFile` wskaźnik obiektu dla tego archiwum.
 
 ```
 CFile* GetFile() const;
@@ -248,7 +248,7 @@ CFile* GetFile() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Stały wskaźnik do `CFile` obiektu w użyciu.
+Stały wskaźnik do obiektu `CFile` w użyciu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -260,7 +260,7 @@ Należy opróżnić archiwum przed użyciem `GetFile`.
 
 ##  <a name="getobjectschema"></a>CArchive:: GetObjectSchema
 
-Wywołaj tę funkcję z `Serialize` funkcji, aby określić wersję obiektu, który jest obecnie deserializowany.
+Wywołaj tę funkcję z funkcji `Serialize`, aby określić wersję obiektu, który jest obecnie deserializowany.
 
 ```
 UINT GetObjectSchema();
@@ -272,9 +272,9 @@ Podczas deserializacji wersja obiektu jest odczytywana.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji jest prawidłowe tylko wtedy, `CArchive` gdy obiekt jest ładowany ( [CArchive::](#isloading) IsLoading zwraca wartość różną od zera). Powinno to być pierwsze wywołanie `Serialize` funkcji i wywoływana tylko raz. Wartość zwracana przez (UINT)-1 oznacza, że numer wersji jest nieznany.
+Wywołanie tej funkcji jest prawidłowe tylko w przypadku ładowania obiektu `CArchive` ( [CArchive:: IsLoading](#isloading) zwraca wartość różną od zera). Powinno to być pierwsze wywołanie w funkcji `Serialize` i wywoływana tylko raz. Wartość zwracana przez (UINT)-1 oznacza, że numer wersji jest nieznany.
 
-Klasa pochodna może używać VERSIONABLE_SCHEMA połączonego (przy użyciu bitowej **lub**) z samą wersją schematu (w makrze IMPLEMENT_SERIAL) w celu utworzenia "obiektu w wersji", czyli obiektu, którego `Serialize` funkcja członkowska może odczytywać `CObject` wiele wersji. Domyślna funkcja platformy (bez VERSIONABLE_SCHEMA) ma zgłosić wyjątek, jeśli wersja jest niezgodna.
+Klasa pochodna `CObject`może używać VERSIONABLE_SCHEMA połączonych (przy użyciu bitowe **lub**) z samą wersją schematu (w makrze IMPLEMENT_SERIAL), aby utworzyć "obiekt z możliwością wersji", czyli obiekt, którego funkcja członkowska `Serialize` może odczytywać wiele wersji. Domyślna funkcjonalność platformy (bez VERSIONABLE_SCHEMA) to zgłoszenie wyjątku, gdy wersja jest niezgodna.
 
 ### <a name="example"></a>Przykład
 
@@ -294,11 +294,11 @@ Różne od zera, jeśli bufor archiwum jest pusty; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest dostarczana do obsługi programowania przy użyciu klasy `CSocketFile`Windows Sockets MFC. Nie trzeba używać jej do archiwizacji skojarzonej z `CFile` obiektem.
+Ta funkcja jest dostarczana do obsługi programowania przy użyciu klasy Windows Sockets MFC `CSocketFile`. Nie musisz używać go dla archiwum skojarzonego z obiektem `CFile`.
 
-Przyczyną użycia `IsBufferEmpty` z archiwum skojarzoną `CSocketFile` z obiektem jest fakt, że bufor archiwum może zawierać więcej niż jeden komunikat lub rekord. Po otrzymaniu jednego komunikatu należy użyć `IsBufferEmpty` programu, aby kontrolować pętlę, która kontynuuje pobieranie danych do momentu, gdy bufor jest pusty. Aby uzyskać więcej informacji, zobacz Funkcja [odbierania](../../mfc/reference/casyncsocket-class.md#receive) elementu członkowskiego `CAsyncSocket`klasy, która pokazuje, jak `IsBufferEmpty`używać.
+Przyczyną używania `IsBufferEmpty` z archiwum skojarzonym z obiektem `CSocketFile` jest fakt, że bufor archiwum może zawierać więcej niż jeden komunikat lub rekord. Po otrzymaniu jednego komunikatu należy użyć `IsBufferEmpty`, aby kontrolować pętlę, która kontynuuje pobieranie danych do momentu, gdy bufor jest pusty. Aby uzyskać więcej informacji, zobacz Funkcja [odbierania](../../mfc/reference/casyncsocket-class.md#receive) elementu członkowskiego klasy `CAsyncSocket`, w której pokazano, jak używać `IsBufferEmpty`.
 
-Aby uzyskać więcej informacji, [zobacz Windows Sockets: Używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Aby uzyskać więcej informacji, zobacz [Windows Sockets: używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>CArchive:: IsLoading
 
@@ -314,7 +314,7 @@ Różne od zera, jeśli archiwum jest aktualnie używane do ładowania; w przeci
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez `Serialize` funkcje archiwizowanych klas.
+Ta funkcja członkowska jest wywoływana przez funkcje `Serialize` zarchiwizowanych klas.
 
 ### <a name="example"></a>Przykład
 
@@ -334,9 +334,9 @@ Różne od zera, jeśli archiwum jest aktualnie używane do przechowywania; w pr
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez `Serialize` funkcje archiwizowanych klas.
+Ta funkcja członkowska jest wywoływana przez funkcje `Serialize` zarchiwizowanych klas.
 
-Jeśli stan archiwum jest różny od zera, jego `IsLoading` stan to 0 i odwrotnie. `IsStoring`
+Jeśli `IsStoring` stanie archiwum jest różna od zera, jego stan `IsLoading` to 0 i odwrotnie.
 
 ### <a name="example"></a>Przykład
 
@@ -357,9 +357,9 @@ Stały wskaźnik do przechowywanego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład nie można serializować dokumentu, ale można serializować elementy, które są częścią dokumentu. Wywoływanie `MapObject`, zezwalasz na te elementy lub podobiekty, aby odwołać się do dokumentu. Ponadto serializowane elementy podelementowe mogą serializować swój wskaźnik *m_pDocument* tyłu.
+Na przykład nie można serializować dokumentu, ale można serializować elementy, które są częścią dokumentu. Wywołując `MapObject`, zezwolisz na te elementy lub podobiekty, aby odwołać się do dokumentu. Ponadto serializowane elementy podelementowe mogą serializować swój *m_pDocument* wskaźnik wsteczny.
 
-Możesz wywołać `MapObject` , gdy zapisujesz i ładujesz `CArchive` obiekt. `MapObject`Dodaje określony obiekt do wewnętrznych struktur danych obsługiwanych przez `CArchive` obiekt podczas serializacji i deserializacji, ale w przeciwieństwie do [ReadObject](#readobject) i [WriteObject](#writeobject)nie wywołuje serializacji obiektu.
+Możesz wywołać `MapObject` podczas przechowywania i ładowania z obiektu `CArchive`. `MapObject` dodaje określony obiekt do wewnętrznych struktur danych obsługiwanych przez obiekt `CArchive` podczas serializacji i deserializacji, ale w przeciwieństwie do [odczytuobject](#readobject) i [WriteObject](#writeobject), nie wywołuje serializacji obiektu.
 
 ### <a name="example"></a>Przykład
 
@@ -373,7 +373,7 @@ Możesz wywołać `MapObject` , gdy zapisujesz i ładujesz `CArchive` obiekt. `M
 
 ##  <a name="m_pdocument"></a>CArchive:: m_pDocument
 
-Domyślnie ustawiona na wartość null, ten wskaźnik do elementu `CDocument` można ustawić dla wszystkich elementów użytkownika `CArchive` wystąpienia.
+Domyślnie ustawiona na wartość NULL, ten wskaźnik do `CDocument` może być ustawiony na wszystkie elementy użytkownika wystąpienia `CArchive`.
 
 ```
 CDocument* m_pDocument;
@@ -381,7 +381,7 @@ CDocument* m_pDocument;
 
 ### <a name="remarks"></a>Uwagi
 
-Typowym użyciem tego wskaźnika jest przekazywanie dodatkowych informacji o procesie serializacji do wszystkich obiektów, które są serializowane. Można to osiągnąć, inicjując wskaźnik przy użyciu dokumentu ( `CDocument`klasy pochodnej), który jest serializowany w taki sposób, że obiekty w dokumencie mają dostęp do dokumentu, w razie potrzeby. Ten wskaźnik jest również używany przez `COleClientItem` obiekty podczas serializacji.
+Typowym użyciem tego wskaźnika jest przekazywanie dodatkowych informacji o procesie serializacji do wszystkich obiektów, które są serializowane. Można to osiągnąć, inicjując wskaźnik przy użyciu dokumentu (klasy pochodnej `CDocument`), który jest serializowany w taki sposób, że obiekty w dokumencie mają dostęp do dokumentu, w razie potrzeby. Ten wskaźnik jest również używany przez `COleClientItem` obiektów podczas serializacji.
 
 Struktura ustawia *m_pDocument* do dokumentu, który jest serializowany, gdy użytkownik wystawia plik Otwórz lub Zapisz. W przypadku serializacji dokumentu kontenera łączącego i osadzania (OLE) z przyczyn innych niż otwieranie lub zapisywanie pliku należy jawnie ustawić *m_pDocument*. Na przykład, można to zrobić podczas serializacji dokumentu kontenera do Schowka.
 
@@ -389,7 +389,7 @@ Struktura ustawia *m_pDocument* do dokumentu, który jest serializowany, gdy uż
 
 [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]
 
-##  <a name="operator_lt_lt"></a>CArchive:: operator&lt;&lt;
+##  <a name="operator_lt_lt"></a>CArchive:: operator &lt;&lt;
 
 Zapisuje wskazany obiekt lub typ pierwotny do archiwum.
 
@@ -437,13 +437,13 @@ CArchive& operator<<(LONGLONG dwdw);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CArchive` Odwołanie, które umożliwia wielokrotne operatory wstawiania w pojedynczym wierszu.
+Odwołanie `CArchive`, które umożliwia wiele operatorów wstawiania w pojedynczym wierszu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ostatnie dwie wersje zostały zaprojektowane z myślą o przechowywaniu 64-bitowych liczb całkowitych.
 
-Jeśli użyto makra IMPLEMENT_SERIAL w implementacji klasy, operator wstawiania przeciążony dla `CObject` wywołań chronionych. `WriteObject` Ta funkcja z kolei wywołuje `Serialize` funkcję klasy.
+Jeśli w implementacji klasy użyto makra IMPLEMENT_SERIAL, to operator wstawiania przeciążony dla `CObject` wywołuje `WriteObject`chronionych. Ta funkcja z kolei wywołuje funkcję `Serialize` klasy.
 
 Operator wstawiania [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) (< <) obsługuje zrzucanie diagnostyczne i przechowywanie w archiwum.
 
@@ -455,11 +455,11 @@ Ten przykład ilustruje użycie `CArchive` operatora wstawiania < < z typem **in
 
 ### <a name="example"></a>Przykład
 
-Ten przykład 2 ilustruje użycie `CArchive` operatora wstawiania < < `CStringT` z typem.
+Ten przykład 2 ilustruje użycie `CArchive` operatora wstawiania < < z typem `CStringT`.
 
 [!code-cpp[NVC_MFCSerialization#32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]
 
-##  <a name="operator_gt_gt"></a>CArchive:: operator&gt;&gt;
+##  <a name="operator_gt_gt"></a>CArchive:: operator &gt;&gt;
 
 Ładuje wskazany obiekt lub typ pierwotny z archiwum.
 
@@ -517,25 +517,25 @@ CArchive& operator>>(LONGLONG& dwdw);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CArchive` Odwołanie, które umożliwia wielokrotne operatory wyodrębniania w jednym wierszu.
+Odwołanie `CArchive`, które umożliwia wiele operatorów wyodrębniania w jednym wierszu.
 
 ### <a name="remarks"></a>Uwagi
 
 Ostatnie dwie wersje zostały przeznaczone do ładowania 64-bitowych liczb całkowitych.
 
-Jeśli w implementacji klasy użyto makra IMPLEMENT_SERIAL, to operatory wyodrębniania przeciążone dla `CObject` wywołania funkcji chronionej `ReadObject` (z niezerowym wskaźnikiem klasy czasu wykonywania). Ta funkcja z kolei wywołuje `Serialize` funkcję klasy.
+Jeśli w implementacji klasy użyto makra IMPLEMENT_SERIAL, to operatory wyodrębniania przeciążone dla `CObject` wywołać funkcję chronionego `ReadObject` (z wskaźnikiem klasy czasu wykonywania o wartości zero). Ta funkcja z kolei wywołuje funkcję `Serialize` klasy.
 
 Operator wyodrębniania [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) (> >) obsługuje ładowanie z archiwum.
 
 ### <a name="example"></a>Przykład
 
-Ten przykład ilustruje użycie `CArchive` operatora ekstrakcji > > z typem **int** .
+Ten przykład ilustruje użycie operatora ekstrakcji `CArchive` > > z typem **int** .
 
 [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie pokazano użycie `CArchive` operatorów wstawiania i wyodrębniania <\< `CStringT` i > > z typem.
+W poniższym przykładzie pokazano użycie `CArchive` operatory wstawiania i wyodrębniania <\< i > > z typem `CStringT`.
 
 [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]
 
@@ -563,7 +563,7 @@ Liczba całkowita bez znaku zawierająca liczbę bajtów, które są faktycznie 
 
 Archiwum nie interpretuje bajtów.
 
-Można używać `Read` funkcji składowej `Serialize` w ramach funkcji do odczytywania zwykłych struktur, które są zawarte w obiektach.
+Można użyć funkcji składowej `Read` w ramach funkcji `Serialize` do odczytywania zwykłych struktur, które są zawarte w obiektach.
 
 ### <a name="example"></a>Przykład
 
@@ -597,13 +597,13 @@ Wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structu
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pClassRefRequested* nie ma wartości null `ReadClass` , sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `ReadClass` program zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
+Jeśli *pClassRefRequested* nie ma wartości NULL, `ReadClass` sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `ReadClass` zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie program [](../../mfc/reference/cnotsupportedexception-class.md) zgłosi`ReadClass` CNotSupportedException.
+Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie `ReadClass` zgłosi [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Jeśli *pSchema* ma wartość null, schemat przechowywanej klasy można pobrać, wywołując [CArchive:: GetObjectSchema](#getobjectschema); w przeciwnym razie pSchema będzie zawierać schemat klasy czasu wykonywania, która była wcześniej przechowywana.  <strong>\*</strong>
+Jeśli *pSchema* ma wartość null, schemat przechowywanej klasy można pobrać, wywołując [CArchive:: GetObjectSchema](#getobjectschema); w przeciwnym razie <strong>\*</strong> *pSchema* będzie zawierać schemat klasy czasu wykonywania, która była wcześniej przechowywana.
 
-Można użyć [SerializeClass](#serializeclass) zamiast `ReadClass`, który obsługuje odczytywanie i zapisywanie odwołania do klasy.
+Można użyć [SerializeClass](#serializeclass) zamiast `ReadClass`, który obsługuje odczytywanie i zapisywanie odwołań do klas.
 
 ### <a name="example"></a>Przykład
 
@@ -628,7 +628,7 @@ Wskaźnik [CObject](../../mfc/reference/cobject-class.md) , który musi być bez
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez `CArchive` operator wyodrębniania ( **>>** ) przeciążony dla wskaźnika [CObject](../../mfc/reference/cobject-class.md) . `ReadObject`z kolei program wywołuje `Serialize` funkcję klasy archiwalnej.
+Ta funkcja jest zwykle wywoływana przez operator wyodrębniania `CArchive` ( **>>** ) przeciążony dla wskaźnika [CObject](../../mfc/reference/cobject-class.md) . `ReadObject`z kolei wywołuje funkcję `Serialize` klasy archiwalnej.
 
 W przypadku podania niezerowego parametru *pClass* , który jest uzyskiwany przez makro [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) , funkcja weryfikuje klasę czasu wykonywania zarchiwizowanego obiektu. Przyjęto założenie, że w implementacji klasy użyto makra IMPLEMENT_SERIAL.
 
@@ -638,7 +638,7 @@ W przypadku podania niezerowego parametru *pClass* , który jest uzyskiwany prze
 
 ##  <a name="readstring"></a>CArchive:: ReadString
 
-Wywołaj tę funkcję elementu członkowskiego, aby odczytać dane tekstowe do buforu z pliku skojarzonego `CArchive` z obiektem.
+Wywołaj tę funkcję elementu członkowskiego, aby odczytać dane tekstowe do buforu z pliku skojarzonego z obiektem `CArchive`.
 
 ```
 BOOL ReadString(CString& rString);
@@ -687,11 +687,11 @@ Wskaźnik do obiektu klasy czasu wykonywania dla klasy bazowej.
 
 ### <a name="remarks"></a>Uwagi
 
-`SerializeClass`odczytuje lub zapisuje odwołanie do klasy do `CArchive` obiektu, w zależności od kierunku. `CArchive` Używaj `SerializeClass` zamiast [ReadClass](#readclass) i [WriteClass](#writeclass) jako wygodnego sposobu serializacji obiektów klasy podstawowej; `SerializeClass` wymaga mniej kodu i mniejszej liczby parametrów.
+`SerializeClass` odczytuje lub zapisuje odwołanie do klasy do obiektu `CArchive`, w zależności od kierunku `CArchive`. Używaj `SerializeClass` zamiast [ReadClass](#readclass) i [WriteClass](#writeclass) jako wygodnego sposobu serializacji obiektów klasy podstawowej; `SerializeClass` wymaga mniej kodu i mniejszej liczby parametrów.
 
-Na `ReadClass` przykład`SerializeClass` sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `SerializeClass` program zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
+Podobnie jak `ReadClass`, `SerializeClass` sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `SerializeClass` zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie program [](../../mfc/reference/cnotsupportedexception-class.md) zgłosi`SerializeClass` CNotSupportedException.
+Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie `SerializeClass` zgłosi [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
 Użyj makra [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) , aby pobrać wartość parametru *pRuntimeClass* . Klasa bazowa musi używać makra [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) .
 
@@ -701,7 +701,7 @@ Użyj makra [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.m
 
 ##  <a name="setloadparams"></a>CArchive:: SetLoadParams
 
-Wywołaj `SetLoadParams` , gdy zamierzasz odczytać dużą `CObject`liczbę obiektów pochodnych z archiwum.
+Wywołaj `SetLoadParams`, gdy zamierzasz odczytać dużą liczbę obiektów pochodnych `CObject`z archiwum.
 
 ```
 void SetLoadParams(UINT nGrowBy = 1024);
@@ -714,9 +714,9 @@ Minimalna liczba gniazd elementów do przydzielenia w przypadku konieczności zw
 
 ### <a name="remarks"></a>Uwagi
 
-`CArchive`używa tablicy obciążenia do rozpoznawania odwołań do obiektów przechowywanych w archiwum. `SetLoadParams`umożliwia ustawienie rozmiaru, do którego zostanie powiększona tablica obciążenia.
+`CArchive` używa tablicy obciążenia do rozpoznawania odwołań do obiektów przechowywanych w archiwum. `SetLoadParams` umożliwia ustawienie rozmiaru, do którego zostanie powiększona tablica obciążenia.
 
-Nie należy wywoływać `SetLoadParams` po załadowaniu jakiegokolwiek obiektu lub po wywołaniu metody [MapObject](#mapobject) lub [ReadObject](#readobject) .
+Nie należy wywoływać `SetLoadParams` po załadowaniu dowolnego obiektu lub po wywołaniu metody [MapObject](#mapobject) lub [ReadObject](#readobject) .
 
 ### <a name="example"></a>Przykład
 
@@ -739,7 +739,7 @@ Określa schemat obiektu.
 
 Następne wywołanie [GetObjectSchema](#getobjectschema) zwróci wartość przechowywaną w *nSchema*.
 
-Służy `SetObjectSchema` do zaawansowanej wersji, na przykład `Serialize` w przypadku, gdy chcesz wymusić odczytanie określonej wersji w funkcji klasy pochodnej.
+Użyj `SetObjectSchema`, aby uzyskać zaawansowane przechowywanie wersji; na przykład, jeśli chcesz wymusić odczytanie określonej wersji w funkcji `Serialize` klasy pochodnej.
 
 ### <a name="example"></a>Przykład
 
@@ -747,7 +747,7 @@ Służy `SetObjectSchema` do zaawansowanej wersji, na przykład `Serialize` w pr
 
 ##  <a name="setstoreparams"></a>CArchive:: SetStoreParams
 
-Używany `SetStoreParams` podczas przechowywania dużej `CObject`liczby obiektów pochodnych w archiwum.
+Użyj `SetStoreParams` podczas przechowywania dużej liczby obiektów pochodnych `CObject`w archiwum.
 
 ```
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
@@ -763,9 +763,9 @@ Określa stopień szczegółowości alokacji pamięci na potrzeby rozszerzania p
 
 ### <a name="remarks"></a>Uwagi
 
-`SetStoreParams`umożliwia ustawienie rozmiaru tabeli skrótu i rozmiaru bloku mapy używanego do identyfikowania unikatowych obiektów podczas procesu serializacji.
+`SetStoreParams` pozwala ustawić rozmiar tabeli skrótów i rozmiar bloku mapy używany do identyfikowania unikatowych obiektów w procesie serializacji.
 
-Nie należy wywoływać `SetStoreParams` po zapisaniu obiektów lub po wywołaniu metody [MapObject](#mapobject) lub [WriteObject](#writeobject) .
+Nie należy wywoływać `SetStoreParams` po zapisaniu obiektów lub wywołaniu metody [MapObject](#mapobject) lub [WriteObject](#writeobject) .
 
 ### <a name="example"></a>Przykład
 
@@ -791,7 +791,7 @@ Liczba całkowita określająca liczbę bajtów, które mają być zapisywane w 
 
 Archiwum nie formatuje bajtów.
 
-Możesz użyć `Write` funkcji elementu członkowskiego `Serialize` w funkcji, aby napisać zwykłe struktury, które są zawarte w obiektach.
+Możesz użyć funkcji składowej `Write` w funkcji `Serialize` do pisania zwykłych struktur, które są zawarte w obiektach.
 
 ### <a name="example"></a>Przykład
 
@@ -799,7 +799,7 @@ Możesz użyć `Write` funkcji elementu członkowskiego `Serialize` w funkcji, a
 
 ##  <a name="writeclass"></a>CArchive:: WriteClass
 
-Służy `WriteClass` do przechowywania informacji o wersji i klasie klasy bazowej podczas serializacji klasy pochodnej.
+Użyj `WriteClass` do przechowywania informacji o wersji i klasie klasy bazowej podczas serializacji klasy pochodnej.
 
 ```
 void WriteClass(const CRuntimeClass* pClassRef);
@@ -812,13 +812,13 @@ Wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structu
 
 ### <a name="remarks"></a>Uwagi
 
-`WriteClass`zapisuje odwołanie do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) dla klasy bazowej do `CArchive`. Użyj [CArchive:: ReadClass](#readclass) , aby pobrać odwołanie.
+`WriteClass` zapisuje odwołanie do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) dla klasy bazowej do `CArchive`. Użyj [CArchive:: ReadClass](#readclass) , aby pobrać odwołanie.
 
-`WriteClass`sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `WriteClass` program zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
+`WriteClass` sprawdza, czy zarchiwizowane informacje o klasie są zgodne z klasą środowiska uruchomieniowego. Jeśli nie jest zgodny, `WriteClass` zgłosi [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie program [](../../mfc/reference/cnotsupportedexception-class.md) zgłosi`WriteClass` CNotSupportedException.
+Klasa środowiska uruchomieniowego musi używać [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie `WriteClass` zgłosi [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Można użyć [SerializeClass](#serializeclass) zamiast `WriteClass`, który obsługuje odczytywanie i zapisywanie odwołania do klasy.
+Można użyć [SerializeClass](#serializeclass) zamiast `WriteClass`, który obsługuje odczytywanie i zapisywanie odwołań do klas.
 
 ### <a name="example"></a>Przykład
 
@@ -839,9 +839,9 @@ Stały wskaźnik do przechowywanego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez `CArchive` operator wstawiania ( **<<** ) przeciążony dla. `CObject` `WriteObject`z kolei program wywołuje `Serialize` funkcję klasy archiwalnej.
+Ta funkcja jest zwykle wywoływana przez operator wstawiania `CArchive` ( **<<** ) przeciążony dla `CObject`. `WriteObject`z kolei wywołuje funkcję `Serialize` klasy archiwalnej.
 
-Aby włączyć archiwizowanie, należy użyć makra IMPLEMENT_SERIAL. `WriteObject`zapisuje nazwę klasy ASCII w archiwum. Ta nazwa klasy jest weryfikowana w dalszej części procesu ładowania. Specjalny schemat kodowania zapobiega niepotrzebnemu duplikowaniu nazwy klasy dla wielu obiektów klasy. Ten schemat uniemożliwia również nadmiarowy magazyn obiektów, które są obiektami docelowymi więcej niż jeden wskaźnik.
+Aby włączyć archiwizowanie, należy użyć makra IMPLEMENT_SERIAL. `WriteObject` zapisuje nazwę klasy ASCII w archiwum. Ta nazwa klasy jest weryfikowana w dalszej części procesu ładowania. Specjalny schemat kodowania zapobiega niepotrzebnemu duplikowaniu nazwy klasy dla wielu obiektów klasy. Ten schemat uniemożliwia również nadmiarowy magazyn obiektów, które są obiektami docelowymi więcej niż jeden wskaźnik.
 
 Dokładne metody kodowania obiektów (łącznie z obecnością nazwy klasy ASCII) są szczegółami implementacji i mogą ulec zmianie w przyszłych wersjach biblioteki.
 
@@ -850,13 +850,13 @@ Dokładne metody kodowania obiektów (łącznie z obecnością nazwy klasy ASCII
 
 ### <a name="example"></a>Przykład
 
-Aby zapoznać się z definicją `CAge`klasy, zobacz przykład dla [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist).
+Aby zapoznać się z definicją klasy `CAge`, zobacz przykład dla [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist).
 
 [!code-cpp[NVC_MFCSerialization#29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]
 
 ##  <a name="writestring"></a>CArchive:: WriteString
 
-Użyj tej funkcji elementu członkowskiego, aby zapisać dane z buforu do pliku skojarzonego z `CArchive` obiektem.
+Użyj tej funkcji elementu członkowskiego, aby zapisać dane z buforu do pliku skojarzonego z obiektem `CArchive`.
 
 ```
 void WriteString(LPCTSTR lpsz);
@@ -871,9 +871,9 @@ Określa wskaźnik do buforu zawierającego ciąg tekstowy zakończony znakiem n
 
 Kończący znak null (' \ 0 ') nie jest zapisywana w pliku; nie jest automatycznie pisany nowy wiersz.
 
-`WriteString`zgłasza wyjątek w odpowiedzi na kilka warunków, w tym dysk — pełen warunek.
+`WriteString` zgłasza wyjątek w odpowiedzi na kilka warunków, w tym dysk — pełen warunek.
 
-`Write`jest również dostępna, ale zamiast kończąc na znaku null, zapisuje żądaną liczbę bajtów do pliku.
+`Write` jest również dostępna, ale zamiast kończąc na znaku null, zapisuje żądaną liczbę bajtów do pliku.
 
 ### <a name="example"></a>Przykład
 

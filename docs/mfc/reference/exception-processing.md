@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502559"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855376"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -44,7 +44,7 @@ Aby zapoznać się z przykładami i więcej szczegółów, zobacz [wyjątki](../
 |[AND_CATCH](#and_catch)|Określa blok kodu do przechwytywania dodatkowych typów wyjątków z poprzedniego bloku **try** .|
 |[AND_CATCH_ALL](#and_catch_all)|Określa blok kodu do przechwytywania wszystkich innych dodatkowych typów wyjątków zgłoszonych w poprzednim bloku **try** .|
 |[END_CATCH](#end_catch)|Zamyka ostatni blok kodu **catch** lub **AND_CATCH** .|
-|[END_CATCH_ALL](#end_catch_all)|Zamyka ostatni blok kodu **CATCH_ALL** .|
+|[END_CATCH_ALL](#end_catch_all)|Zamyka ostatni **CATCH_ALL** bloku kodu.|
 |[GENEROWAĆ](#throw)|Zgłasza określony wyjątek.|
 |[THROW_LAST](#throw_last)|Zgłasza aktualnie obsługiwany wyjątek do następnej zewnętrznej procedury obsługi.|
 
@@ -69,7 +69,7 @@ MFC oferuje dwie funkcje zgłaszania wyjątków dla wyjątków OLE:
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Zgłasza wyjątek w funkcji automatyzacji OLE.|
 |[AfxThrowOleException](#afxthrowoleexception)|Zgłasza wyjątek OLE.|
 
-W celu zapewnienia obsługi wyjątków bazy danych klasy baz danych udostępniają dwie `CDBException` klasy `CDaoException`wyjątków oraz funkcje globalne obsługujące typy wyjątków:
+W celu obsługi wyjątków bazy danych klasy baz danych udostępniają dwie klasy wyjątków, `CDBException` i `CDaoException`i funkcje globalne obsługujące typy wyjątków:
 
 ### <a name="dao-exception-functions"></a>Funkcje wyjątków DAO
 
@@ -126,9 +126,9 @@ Określa nazwę wskaźnika obiektu wyjątku, który zostanie utworzony przez mak
 
 ### <a name="remarks"></a>Uwagi
 
-Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj makro THROW_LAST, aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątku. Zakończ blok **try** za pomocą makra END_CATCH.
+Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj makro THROW_LAST, aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątków. Zakończ blok **try** za pomocą makra END_CATCH.
 
-Jeśli *exception_class* jest klasą `CException`, zostaną przechwycone wszystkie typy wyjątków. Można użyć funkcji składowej [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) , aby określić, który konkretny wyjątek został zgłoszony. Lepszym sposobem przechwytywania kilku rodzajów wyjątków jest użycie instrukcji sekwencyjnego **AND_CATCH** , z których każdy ma inny typ wyjątku.
+Jeśli *exception_class* jest klasą `CException`, zostaną przechwycone wszystkie typy wyjątków. Można użyć funkcji składowej [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) , aby określić, który konkretny wyjątek został zgłoszony. Lepszym sposobem przechwytywania kilku rodzajów wyjątków jest użycie instrukcji **AND_CATCH** sekwencyjnych, z których każdy ma inny typ wyjątku.
 
 Wskaźnik obiektu wyjątku jest tworzony przez makro. Nie musisz zadeklarować go samodzielnie.
 
@@ -152,11 +152,11 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="parameters"></a>Parametry
 
 *exception_object_pointer_name*<br/>
-Określa nazwę wskaźnika obiektu wyjątku, który zostanie utworzony przez makro. Możesz użyć nazwy wskaźnika, aby uzyskać dostęp do obiektu wyjątku w `CATCH_ALL` bloku. Ta zmienna jest zadeklarowana dla Ciebie.
+Określa nazwę wskaźnika obiektu wyjątku, który zostanie utworzony przez makro. Możesz użyć nazwy wskaźnika, aby uzyskać dostęp do obiektu Exception w bloku `CATCH_ALL`. Ta zmienna jest zadeklarowana dla Ciebie.
 
 ### <a name="remarks"></a>Uwagi
 
-Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj `THROW_LAST` makro, aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątków. Jeśli używasz **CATCH_ALL**, Zakończ blok **try** za pomocą makra END_CATCH_ALL.
+Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj makro `THROW_LAST`, aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątków. Jeśli używasz **CATCH_ALL**, Zakończ blok **try** za pomocą makra END_CATCH_ALL.
 
 > [!NOTE]
 >  Blok **CATCH_ALL** jest definiowany jako C++ zakres zdefiniowany przez nawiasy klamrowe. Jeśli deklarujesz zmienne w tym zakresie, są one dostępne tylko w tym zakresie.
@@ -171,7 +171,7 @@ Zobacz przykład dla [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).
 
   **Nagłówek** AFX. h
 
-##  <a name="and_catch"></a>  AND_CATCH
+##  <a name="and_catch"></a>AND_CATCH
 
 Definiuje blok kodu do przechwytywania dodatkowych typów wyjątków zgłoszonych w poprzednim bloku **try** .
 
@@ -194,7 +194,7 @@ Użyj makra CATCH do przechwytywania jednego typu wyjątku, a następnie makro A
 Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj makro THROW_LAST w bloku **AND_CATCH** , aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątków. **AND_CATCH** oznacza koniec poprzedniego bloku **catch** lub **AND_CATCH** .
 
 > [!NOTE]
->  Blok **AND_CATCH** jest zdefiniowany jako C++ zakres (nakreślony przez nawiasy klamrowe). Jeśli deklarujesz zmienne w tym zakresie, pamiętaj, że są one dostępne tylko w tym zakresie. Dotyczy to również zmiennej *exception_object_pointer_name* .
+>  Blok **AND_CATCH** jest zdefiniowany jako C++ zakres (zakreślony przez nawiasy klamrowe). Jeśli deklarujesz zmienne w tym zakresie, pamiętaj, że są one dostępne tylko w tym zakresie. Dotyczy to również zmiennej *exception_object_pointer_name* .
 
 ### <a name="example"></a>Przykład
 
@@ -223,13 +223,13 @@ Użyj makra **catch** do przechwytywania jednego typu wyjątku, a następnie mak
 Kod przetwarzania wyjątków może przejrzeć obiekt wyjątku, jeśli jest to konieczne, aby uzyskać więcej informacji na temat konkretnej przyczyny wyjątku. Wywołaj makro THROW_LAST w bloku **AND_CATCH_ALL** , aby przesunąć przetwarzanie do następnego zewnętrznego ramki wyjątków. **AND_CATCH_ALL** oznacza koniec poprzedniego bloku **catch** lub **AND_CATCH_ALL** .
 
 > [!NOTE]
->  Blok **AND_CATCH_ALL** jest definiowany jako C++ zakres (z zakreślonym nawiasem klamrowym). Jeśli deklarujesz zmienne w tym zakresie, pamiętaj, że są one dostępne tylko w tym zakresie.
+>  Blok **AND_CATCH_ALL** jest zdefiniowany jako C++ zakres (nakreślony przez nawiasy klamrowe). Jeśli deklarujesz zmienne w tym zakresie, pamiętaj, że są one dostępne tylko w tym zakresie.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** AFX. h
 
-##  <a name="end_catch"></a>  END_CATCH
+##  <a name="end_catch"></a>END_CATCH
 
 Oznacza koniec ostatniego bloku **catch** lub **AND_CATCH** .
 
@@ -268,7 +268,7 @@ THROW(exception_object_pointer)
 ### <a name="parameters"></a>Parametry
 
 *exception_object_pointer*<br/>
-Wskazuje obiekt wyjątku pochodzący od `CException`.
+Wskazuje obiekt wyjątku pochodzący z `CException`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -316,7 +316,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 Określa liczbę całkowitą, która wskazuje przyczynę wyjątku. Aby uzyskać listę możliwych wartości, zobacz [CArchiveException:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
-Wskazuje ciąg zawierający nazwę `CArchive` obiektu, który spowodował wyjątek (jeśli jest dostępny).
+Wskazuje ciąg zawierający nazwę obiektu `CArchive`, który spowodował wyjątek (jeśli jest dostępny).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -424,7 +424,7 @@ void AfxThrowUserException();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana natychmiast po `AfxMessageBox` zgłoszeniu błędu użytkownikowi.
+Ta funkcja jest zwykle wywoływana natychmiast po zgłoszeniu przez `AfxMessageBox` błędu użytkownikowi.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -483,7 +483,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parametry
 
-*sc*<br/>
+*polecenia*<br/>
 Kod stanu OLE, który wskazuje przyczynę wyjątku.
 
 *wysoki*<br/>
@@ -497,7 +497,7 @@ Wersja, która przyjmuje wynik HRESULT jako argument konwertuje ten kod wyniku n
 
   **Nagłówek** afxdao. h
 
-##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException
+##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException
 
 Wywołaj tę funkcję, aby zgłosić wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.
 
@@ -512,14 +512,14 @@ void AFXAPI AfxThrowDaoException(
 *nAfxDaoError*<br/>
 Wartość całkowita reprezentująca rozszerzony kod błędu obiektu DAO, który może być jedną z wartości wymienionych w obszarze [CDaoException:: m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
 
-*scode*<br/>
+*SCODE*<br/>
 Kod błędu OLE z obiektu DAO typu SCODE. Aby uzyskać więcej informacji, zobacz [CDaoException:: m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura również wywołuje `AfxThrowDaoException`. W wywołaniu można przekazać jeden z parametrów lub oba te parametry. Na przykład jeśli chcesz zgłosić jeden z błędów zdefiniowanych w **CDaoException:: nAfxDaoError** , ale nie chcesz zachować tego parametru *SCODE* , Przekaż prawidłowy kod w parametrze *nAfxDaoError* i Zaakceptuj wartość domyślną dla *SCODE*.
+Struktura wywołuje również `AfxThrowDaoException`. W wywołaniu można przekazać jeden z parametrów lub oba te parametry. Na przykład jeśli chcesz zgłosić jeden z błędów zdefiniowanych w **CDaoException:: nAfxDaoError** , ale nie chcesz zachować tego parametru *SCODE* , Przekaż prawidłowy kod w parametrze *nAfxDaoError* i Zaakceptuj wartość domyślną dla *SCODE*.
 
-Aby uzyskać informacje dotyczące wyjątków związanych z klasami MFC DAO, zobacz `CDaoException` Klasa w tej książce i wyjątki [artykułów: Wyjątki](../../mfc/exceptions-database-exceptions.md)bazy danych.
+Aby uzyskać informacje dotyczące wyjątków związanych z klasami MFC DAO, zobacz klasy `CDaoException` w tej książce i wyjątki w artykule [: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -541,15 +541,15 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Wartość typu RETCODE, definiująca typ błędu, który spowodował zgłoszenie wyjątku.
 
-*pdb*<br/>
-Wskaźnik do `CDatabase` obiektu, który reprezentuje połączenie ze źródłem danych, z którym jest skojarzony wyjątek.
+*PDB*<br/>
+Wskaźnik do obiektu `CDatabase`, który reprezentuje połączenie ze źródłem danych, z którym jest skojarzony wyjątek.
 
 *hstmt*<br/>
 Uchwyt HSTMT ODBC, który określa uchwyt instrukcji, z którym jest skojarzony wyjątek.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje `AfxThrowDBException` , kiedy otrzymuje ODBC RETCODE z wywołania funkcji ODBC API i interpretuje RETCODE jako wyjątkowy warunek, a nie oczekiwany błąd. Na przykład operacja dostępu do danych może zakończyć się niepowodzeniem z powodu błędu odczytu dysku.
+Struktura wywołuje `AfxThrowDBException`, gdy odbierze RETCODE ODBC od wywołania funkcji ODBC API i interpretuje RETCODE jako wyjątkowy warunek, a nie oczekiwany błąd. Na przykład operacja dostępu do danych może zakończyć się niepowodzeniem z powodu błędu odczytu dysku.
 
 Aby uzyskać informacje o wartościach RETCODE zdefiniowanych przez ODBC, zobacz rozdział 8 "Pobieranie stanu i informacji o błędach" w Windows SDK. Aby uzyskać informacje na temat rozszerzeń MFC do tych kodów, zobacz Class [CDBException](../../mfc/reference/cdbexception-class.md).
 
@@ -567,7 +567,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>Uwagi
 
-`AfxAbort`jest wywoływana wewnętrznie przez funkcje składowe MFC w przypadku wystąpienia błędu krytycznego, takiego jak nieprzechwycony wyjątek, którego nie można obsłużyć. Można wywołać `AfxAbort` w rzadkim przypadku, gdy wystąpi błąd krytyczny, z którego nie można przeprowadzić odzyskiwania.
+`AfxAbort` jest wywoływana wewnętrznie przez funkcje składowe MFC w przypadku wystąpienia błędu krytycznego, takiego jak nieprzechwycony wyjątek, którego nie można obsłużyć. Można wywołać `AfxAbort` w rzadkich przypadkach w przypadku wystąpienia błędu krytycznego, z którego nie można przeprowadzić odzyskiwania.
 
 ### <a name="example"></a>Przykład
 

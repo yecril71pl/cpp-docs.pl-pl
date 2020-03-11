@@ -1,5 +1,5 @@
 ---
-title: '&lt;wyliczenia&gt; codecvt'
+title: '&lt;typy wyliczeniowe&gt; codecvt'
 ms.date: 11/04/2016
 f1_keywords:
 - codecvt/std::codecvt_mode
@@ -7,13 +7,13 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459790"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866158"
 ---
-# <a name="ltcodecvtgt-enums"></a>&lt;wyliczenia&gt; codecvt
+# <a name="ltcodecvtgt-enums"></a>&lt;typy wyliczeniowe&gt; codecvt
 
 ## <a name="codecvt_mode"></a>codecvt_mode, Wyliczenie
 
@@ -29,13 +29,13 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>Uwagi
 
-Wyliczenie definiuje trzy stałe, które dostarczają informacje o konfiguracji do zestawów reguł ustawień regionalnych zadeklarowanych w [ \<codecvt >](../standard-library/codecvt.md). Unikatowe wartości to:
+Wyliczenie definiuje trzy stałe, które dostarczają informacje o konfiguracji do zestawów reguł ustawień regionalnych zadeklarowanych w [\<codecvt >](../standard-library/codecvt.md). Unikatowe wartości to:
 
-- `consume_header`, aby użyć początkowej sekwencji nagłówka podczas odczytywania sekwencji wielobajtowej i ustalania przyciągania dla kolejnej sekwencji wielobajtowej do odczytu
+- `consume_header`, aby użyć początkowej sekwencji nagłówka podczas odczytywania sekwencji wielobajtowej i ustalania wartości endian kolejnej sekwencji wielobajtowej do odczytu
 
-- `generate_header`, aby wygenerować początkową sekwencję nagłówka podczas pisania sekwencji wielobajtowej w celu anonsowania liczby bajtów kolejnej sekwencji wielobajtowej do zapisania
+- `generate_header`, aby wygenerować początkową sekwencję nagłówka podczas pisania sekwencji wielobajtowej w celu zaanonsowania przystąpień kolejnej sekwencji wielobajtowej do zapisania
 
-- `little_endian`, aby wygenerować sekwencję wielobajtową w kolejności little-endian, w przeciwieństwie do domyślnej kolejności big-endian
+- `little_endian`w celu wygenerowania sekwencji wielobajtowej w kolejności little-endian, w przeciwieństwie do domyślnej kolejności big-endian
 
 Te stałe mogą być logicznie razem w dowolnej kombinacji.
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448895"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866257"
 ---
 # <a name="gslice-class"></a>gslice — Klasa
 
@@ -43,15 +43,15 @@ Operacje na valarrays są gwarantowane tylko wtedy, gdy źródłowe i docelowe p
 
 |Konstruktor|Opis|
 |-|-|
-|[gslice](#gslice)|Definiuje podzestaw `valarray` , który składa się z wielu wycinków `valarray` tego, że wszystkie zaczynają się od określonego elementu.|
+|[gslice](#gslice)|Definiuje podzestaw `valarray`, który składa się z wielu wycinków `valarray`, które zaczynają się od określonego elementu.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[zmienia](#size)|Znajduje wartości tablicowe określające liczby elementów w ogólnym wycinku `valarray`.|
+|[zmienia](#size)|Znajduje wartości tablicy, określając liczbę elementów w ogólnym wycinku `valarray`.|
 |[start](#start)|Znajduje początkowy indeks ogólnego wycinka `valarray`.|
-|[stride](#stride)|Znajduje odległość między elementami w ogólnym wycinku a `valarray`.|
+|[tabela](#stride)|Znajduje odległość między elementami w ogólnym wycinku `valarray`.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,11 +85,11 @@ Tablica określająca krok w każdym wycinku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Konstruktor domyślny przechowuje zero dla indeksu początkowego i wektorów o zerowej długości dla wektorów długości i kroków. Drugi Konstruktor przechowuje *_StartIndex* dla indeksu początkowego, *_LenArray* dla tablicy długości i *_IncArray* dla tablicy kroków.
+Konstruktor domyślny przechowuje zero dla indeksu początkowego i wektorów o zerowej długości dla wektorów długości i kroków. Drugi Konstruktor przechowuje *_StartIndex* dla początkowego indeksu, *_LenArray* dla tablicy długość i *_IncArray* dla tablicy kroków.
 
 ### <a name="remarks"></a>Uwagi
 
-**gslice** definiuje podzestaw valarray, który składa się z wielu wycinków valarray, które rozpoczynają się w tym samym określonym elemencie. Możliwość używania tablic do definiowania kilku wycinków jest jedyną różnicą między elementami `gslice` i [Slice:: Slice](../standard-library/slice-class.md#slice). Pierwszy plasterek ma pierwszy element o indeksie *_StartIndex*, liczbę elementów określoną przez pierwszy element *_LenArray*i krok podany przez pierwszy element *_IncArray*. Następny zestaw ortogonalnych wycinków ma pierwsze elementy określone przez pierwszy plasterek. Drugi element *_LenArray* określa liczbę elementów. Krok jest przyznany przez drugi element *_IncArray*. Trzeci wymiar wycinków będzie przyjmować elementy dwuwymiarowej tablicy jako elementy początkowe i działać analogicznie
+**gslice** definiuje podzestaw valarray, który składa się z wielu wycinków valarray, które rozpoczynają się w tym samym określonym elemencie. Możliwość używania tablic do definiowania kilku wycinków jest jedyną różnicą między `gslice` i [Slice:: Slice](../standard-library/slice-class.md#slice). Pierwszy plasterek ma pierwszy element z indeksem *_StartIndex*, liczbę elementów określoną przez pierwszy element *_LenArray*i krok podany przez pierwszy element *_IncArray*. Następny zestaw ortogonalnych wycinków ma pierwsze elementy określone przez pierwszy plasterek. Drugi element *_LenArray* określa liczbę elementów. Krok jest określony przez drugi element *_IncArray*. Trzeci wymiar wycinków będzie przyjmować elementy dwuwymiarowej tablicy jako elementy początkowe i działać analogicznie
 
 ### <a name="example"></a>Przykład
 

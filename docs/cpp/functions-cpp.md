@@ -9,15 +9,15 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884167"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
-Funkcja jest blokiem kodu, który wykonuje pewne operacje. Funkcja może opcjonalnie definiować parametry wejściowe, które umożliwiają wywołującym przekazywanie argumentów do funkcji. Funkcja może opcjonalnie zwrócić wartość jako dane wyjściowe. Funkcje są przydatne do hermetyzacji typowych operacji w jednym bloku wielokrotnego użytku, najlepiej z nazwą, która jasno opisuje działanie funkcji. Następująca funkcja akceptuje dwóch liczb całkowitych od wywołującego i zwraca ich suma; *a* i *b* są *parametry* typu **int**.
+Funkcja jest blokiem kodu, który wykonuje pewne operacje. Funkcja może opcjonalnie definiować parametry wejściowe, które umożliwiają wywołującym przekazywanie argumentów do funkcji. Funkcja może opcjonalnie zwrócić wartość jako dane wyjściowe. Funkcje są przydatne do hermetyzacji typowych operacji w jednym bloku wielokrotnego użytku, najlepiej z nazwą, która jasno opisuje działanie funkcji. Następująca funkcja akceptuje dwie liczby całkowite od wywołującego i zwraca ich sumę; *a* i *b* są *parametrami* typu **int**.
 
 ```cpp
 int sum(int a, int b)

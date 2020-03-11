@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855768"
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 
@@ -37,11 +37,11 @@ Jedną z możliwości formantów OLE jest trwałość właściwości (lub Serial
 |[PXstring](#px_string)|Wymienia właściwość kontrolki ciągu znaków.|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|Wymienia właściwości dotyczące czcionek formantu VBX we właściwości czcionki kontrolki OLE.|
 
-Ponadto `AfxOleTypeMatchGuid` funkcja globalna jest przetestowana pod kątem dopasowania między TYPEDESC i danym identyfikatorem GUID.
+Ponadto funkcja globalna `AfxOleTypeMatchGuid` jest przetestowana pod kątem dopasowania między TYPEDESC i danym identyfikatorem GUID.
 
 ##  <a name="px_blob"></a>PX_Blob
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość, która przechowuje dane binarne obiektów binarnych (BLOB).
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość, która przechowuje dane binarne obiektów binarnych (BLOB).
 
 ```
 BOOL PX_Blob(
@@ -71,7 +71,7 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość właściwości zostanie odczytana lub zapisywana w zmiennej, do której odwołuje się *hBlob*, zgodnie z potrzebami. Ta zmienna powinna zostać zainicjowana do wartości null `PX_Blob` przed pierwszym wywołaniem po raz pierwszy (zazwyczaj można to zrobić w konstruktorze kontrolki). Jeśli *hBlobDefault* jest określony, będzie używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegoś powodu proces inicjalizacji lub serializacji kontrolki nie powiedzie się.
+Wartość właściwości zostanie odczytana lub zapisywana w zmiennej, do której odwołuje się *hBlob*, zgodnie z potrzebami. Ta zmienna powinna zostać zainicjowana do wartości NULL przed początkowym wywołaniem `PX_Blob` po raz pierwszy (zazwyczaj można to zrobić w konstruktorze kontrolki). Jeśli *hBlobDefault* jest określony, będzie używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegoś powodu proces inicjalizacji lub serializacji kontrolki nie powiedzie się.
 
 Uchwyty *hBlob* i *hBlobDefault* odnoszą się do bloku pamięci, który zawiera następujące elementy:
 
@@ -79,11 +79,11 @@ Uchwyty *hBlob* i *hBlobDefault* odnoszą się do bloku pamięci, który zawiera
 
 - Blok pamięci zawierający rzeczywiste dane binarne.
 
-Należy pamiętać `PX_Blob` , że program przydzieli pamięć przy użyciu interfejsu API [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systemu Windows podczas ładowania właściwości typu obiektu BLOB. Użytkownik jest odpowiedzialny za zwolnienie tej pamięci. W związku z tym destruktor formantu powinien wywołać [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) w dowolnych uchwytach właściwości typu obiektu BLOB, aby zwolnić pamięć przydzieloną do formantu.
+Należy pamiętać, że `PX_Blob` przydziela pamięć przy użyciu interfejsu API [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systemu Windows podczas ładowania właściwości typu obiektu BLOB. Użytkownik jest odpowiedzialny za zwolnienie tej pamięci. W związku z tym destruktor formantu powinien wywołać [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) w dowolnych uchwytach właściwości typu obiektu BLOB, aby zwolnić pamięć przydzieloną do formantu.
 
 ##  <a name="px_bool"></a>PX_Bool
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu bool.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu BOOL.
 
 ```
 BOOL PX_Bool(
@@ -122,7 +122,7 @@ Wartość właściwości zostanie odczytana lub zapisywana w zmiennej, do które
 
 ##  <a name="px_color"></a>PX_Color
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu OLE_COLOR.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu OLE_COLOR.
 
 ```
 BOOL PX_Color(
@@ -161,7 +161,7 @@ Wartość właściwości zostanie odczytana lub zapisywana w zmiennej, do które
 
 ##  <a name="px_currency"></a>PX_Currency
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **Currency**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **Currency**.
 
 ```
 BOOL PX_Currency(
@@ -200,7 +200,7 @@ Wartość właściwości zostanie odczytana lub zapisywana w zmiennej, do które
 
 ##  <a name="px_datapath"></a>PX_DataPath
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość ścieżki danych typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość ścieżki danych typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
 
 ```
 BOOL PX_DataPath(
@@ -234,7 +234,7 @@ Właściwości ścieżki danych implementują właściwości kontrolki asynchron
 
 ##  <a name="px_double"></a>PX_Double
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **Double**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **Double**.
 
 ```
 BOOL PX_Double(
@@ -273,7 +273,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_font"></a>PX_Font
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość czcionki typu Font.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość czcionki typu Font.
 
 ```
 BOOL PX_Font(
@@ -293,13 +293,13 @@ Wskaźnik do obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md)
 Nazwa wymienianej właściwości.
 
 *Font*<br/>
-Odwołanie do `CFontHolder` obiektu, który zawiera właściwość Font.
+Odwołanie do obiektu `CFontHolder`, który zawiera właściwość Font.
 
 *pFontDesc*<br/>
-Wskaźnik do `FONTDESC` struktury zawierającej wartości do użycia podczas inicjowania stanu domyślnego właściwości czcionki w przypadku, gdy *pFontDispAmbient* ma wartość null.
+Wskaźnik do struktury `FONTDESC` zawierającej wartości do użycia podczas inicjowania stanu domyślnego właściwości czcionki w przypadku, gdy *pFontDispAmbient* ma wartość null.
 
 *pFontDispAmbient*<br/>
-Wskaźnik do `IFontDisp` interfejsu czcionki, który ma być używany podczas inicjowania domyślnego stanu właściwości czcionki.
+Wskaźnik do `IFontDisp` interfejsu czcionki do użycia podczas inicjowania stanu domyślnego właściwości czcionki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -307,11 +307,11 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość właściwości jest odczytywana lub zapisywana `font` `CFontHolder` jako odwołanie, w razie potrzeby. Jeśli *pFontDesc* i *pFontDispAmbient* są określone, są one używane do inicjowania wartości domyślnej właściwości, w razie potrzeby. Te wartości są używane, jeśli z jakiegoś powodu nie powiedzie się proces serializacji formantu. Zwykle przekazanie wartości null dla *pFontDesc* oraz wartości otoczenia zwróconej przez `COleControl::AmbientFont` *pFontDispAmbient*. Należy zauważyć, że obiekt czcionki zwracany `COleControl::AmbientFont` przez musi być uwalniany przez wywołanie `IFontDisp::Release` funkcji składowej.
+Wartość właściwości jest odczytywana lub zapisywana w `font`, w razie potrzeby `CFontHolder` odwołanie. Jeśli *pFontDesc* i *pFontDispAmbient* są określone, są one używane do inicjowania wartości domyślnej właściwości, w razie potrzeby. Te wartości są używane, jeśli z jakiegoś powodu nie powiedzie się proces serializacji formantu. Zwykle przekazanie wartości NULL dla *pFontDesc* oraz wartości otoczenia zwróconej przez `COleControl::AmbientFont` dla *pFontDispAmbient*. Należy zauważyć, że obiekt czcionki zwracany przez `COleControl::AmbientFont` musi być uwalniany przez wywołanie do `IFontDisp::Release` funkcji członkowskiej.
 
 ##  <a name="px_float"></a>PX_Float
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **zmiennoprzecinkowego**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **zmiennoprzecinkowego**.
 
 ```
 BOOL PX_Float(
@@ -350,7 +350,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_iunknown"></a>PX_IUnknown
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość reprezentowaną przez obiekt `IUnknown`z interfejsem pochodnym.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość reprezentowaną przez obiekt mający interfejs pochodny `IUnknown`.
 
 ```
 BOOL PX_IUnknown(
@@ -369,7 +369,7 @@ Wskaźnik do obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md)
 *pszPropName*<br/>
 Nazwa wymienianej właściwości.
 
-*pUnk*<br/>
+*Punkt*<br/>
 Odwołanie do zmiennej zawierającej interfejs obiektu, który reprezentuje wartość właściwości.
 
 *IID*<br/>
@@ -388,7 +388,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_long"></a>PX_Long
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **Long**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **Long**.
 
 ```
 BOOL PX_Long(
@@ -427,7 +427,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_picture"></a>PX_Picture
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość obrazu formantu.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość obrazu formantu.
 
 ```
 BOOL PX_Picture(
@@ -466,7 +466,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_short"></a>PX_Short
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **Short**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **Short**.
 
 ```
 BOOL PX_Short(
@@ -505,7 +505,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_ulong"></a>PX_ULong
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu **ULONG**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **ULONG**.
 
 ```
 BOOL PX_ULong(
@@ -544,7 +544,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_ushort"></a>PX_UShort
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość typu unsigned **Short**.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość typu **unsigned Short**.
 
 ```
 BOOL PX_UShort(
@@ -583,7 +583,7 @@ Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której 
 
 ##  <a name="px_string"></a>PXstring
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby serializować lub zainicjować właściwość ciągu znaków.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby serializować lub zainicjować właściwość ciągu znaków.
 
 ```
 BOOL PXstring(
@@ -620,9 +620,9 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 Wartość właściwości jest odczytywana lub zapisywana w zmiennej, do której odwołuje się *strValue*, zgodnie z potrzebami. Jeśli *strDefault* jest określony, będzie używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegoś powodu proces serializacji kontrolki nie powiedzie się.
 
-##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert
 
-Wywołaj tę funkcję w funkcji `DoPropExchange` składowej kontrolki, aby zainicjować właściwość Font poprzez konwersję właściwości związanych z czcionką kontrolki VBX.
+Wywołaj tę funkcję w `DoPropExchange` funkcji członkowskiej kontrolki, aby zainicjować właściwość Font poprzez konwersję właściwości związanych z czcionką kontrolki VBX.
 
 ```
 BOOL PX_VBXFontConvert(
@@ -644,9 +644,9 @@ Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło 
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna być używana tylko przez kontrolkę OLE, która została zaprojektowana jako bezpośrednie zastąpienie formantu VBX. Gdy Visual Basic środowisko programistyczne konwertuje formularz zawierający formant VBX, aby użyć odpowiedniej zastępczej kontrolki OLE, wywoła `IDataObject::SetData` funkcję kontrolki, przekazując do zestawu właściwości, który zawiera dane właściwości kontrolki VBX. Ta operacja z kolei powoduje, że `DoPropExchange` funkcja kontrolki ma być wywoływana. `DoPropExchange`może wywołać `PX_VBXFontConvert` , aby skonwertować właściwości powiązane z czcionką formantu VBX (na przykład "FontName," "FontSize" itd.) do odpowiednich składników właściwości font formantu OLE.
+Ta funkcja powinna być używana tylko przez kontrolkę OLE, która została zaprojektowana jako bezpośrednie zastąpienie formantu VBX. Gdy Visual Basic środowisko programistyczne konwertuje formularz zawierający formant VBX do użycia odpowiedniej zastępczej kontrolki OLE, wywoła funkcję `IDataObject::SetData` kontrolki, przekazując do zestawu właściwości, który zawiera dane właściwości kontrolki VBX. Ta operacja z kolei powoduje wywołanie funkcji `DoPropExchange` formantu. `DoPropExchange` może wywoływać `PX_VBXFontConvert`, aby skonwertować właściwości powiązane z czcionką formantu VBX (na przykład "FontName," "FontSize" itd.) do odpowiednich składników właściwości font formantu OLE.
 
-`PX_VBXFontConvert`należy wywołać tylko wtedy, gdy kontrolka jest faktycznie konwertowana z aplikacji formularza VBX. Na przykład:
+`PX_VBXFontConvert` powinna być wywoływana tylko wtedy, gdy kontrolka jest faktycznie konwertowana z aplikacji formularza VBX. Na przykład:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

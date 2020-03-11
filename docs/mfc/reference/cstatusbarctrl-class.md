@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502322"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865538"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
@@ -67,14 +67,14 @@ class CStatusBarCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Konstruuje `CStatusBarCtrl` obiekt.|
+|[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Konstruuje obiekt `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStatusBarCtrl:: Create](#create)|Tworzy formant paska stanu i dołącza go do `CStatusBarCtrl` obiektu.|
-|[CStatusBarCtrl:: CreateEx](#createex)|Tworzy kontrolkę pasek stanu z określonymi stylami rozszerzonymi systemu Windows i dołącza je do `CStatusBarCtrl` obiektu.|
+|[CStatusBarCtrl:: Create](#create)|Tworzy kontrolkę pasek stanu i dołącza ją do obiektu `CStatusBarCtrl`.|
+|[CStatusBarCtrl:: CreateEx](#createex)|Tworzy kontrolkę pasek stanu z określonymi stylami rozszerzonymi systemu Windows i dołącza je do obiektu `CStatusBarCtrl`.|
 |[CStatusBarCtrl::D rawItem](#drawitem)|Wywołuje się, gdy wizualny aspekt kontrolki paska stanu rysowania przez właściciela jest zmieniany.|
 |[CStatusBarCtrl:: GetBorders](#getborders)|Pobiera bieżące szerokości obramowania poziomego i pionowego kontrolki paska stanu.|
 |[CStatusBarCtrl:: GetIcon](#geticon)|Pobiera ikonę części (zwanej także okienkiem) w bieżącym formancie paska stanu.|
@@ -88,7 +88,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl:: SetIcon](#seticon)|Ustawia ikonę okienka na pasku stanu.|
 |[CStatusBarCtrl:: SetMinHeight](#setminheight)|Ustawia minimalną wysokość obszaru rysowania kontrolki paska stanu.|
 |[CStatusBarCtrl:: SetParts](#setparts)|Ustawia liczbę części w kontrolce pasek stanu i współrzędne prawej krawędzi każdej części.|
-|[CStatusBarCtrl:: SetSimple](#setsimple)|Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie `SetParts`wywołanie do.|
+|[CStatusBarCtrl:: SetSimple](#setsimple)|Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie wywołanie do `SetParts`.|
 |[CStatusBarCtrl:: SetText](#settext)|Ustawia tekst w danej części kontrolki pasek stanu.|
 |[CStatusBarCtrl:: SetTipText](#settiptext)|Ustawia tekst etykietki narzędzia dla okienka na pasku stanu.|
 
@@ -96,9 +96,9 @@ class CStatusBarCtrl : public CWnd
 
 "Formant paska stanu" to okno poziome, zwykle wyświetlane w dolnej części okna nadrzędnego, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. Kontrolka pasek stanu może być podzielona na części, aby wyświetlić więcej niż jeden typ informacji.
 
-Ten formant (i w związku `CStatusBarCtrl` z tym Klasa) jest dostępny tylko dla programów uruchomionych w systemach Windows 95/98 i Windows NT w wersji 3,51 lub nowszej.
+Ten formant (i w związku z tym Klasa `CStatusBarCtrl`) jest dostępny tylko dla programów uruchomionych w systemach Windows 95/98 i Windows NT w wersji 3,51 lub nowszej.
 
-Aby uzyskać więcej informacji na `CStatusBarCtrl`temat korzystania z programu, zobacz [kontrolki](../../mfc/controls-mfc.md) i [Używanie CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).
+Aby uzyskać więcej informacji na temat używania `CStatusBarCtrl`, zobacz [Controls](../../mfc/controls-mfc.md) and [using CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -116,7 +116,7 @@ Aby uzyskać więcej informacji na `CStatusBarCtrl`temat korzystania z programu,
 
 ##  <a name="create"></a>CStatusBarCtrl:: Create
 
-Tworzy formant paska stanu i dołącza go do `CStatusBarCtrl` obiektu.
+Tworzy kontrolkę pasek stanu i dołącza ją do obiektu `CStatusBarCtrl`.
 
 ```
 virtual BOOL Create(
@@ -132,10 +132,10 @@ virtual BOOL Create(
 Określa styl kontrolki paska stanu. Zastosuj dowolną kombinację stylów kontrolki paska stanu wymienionych w obszarze [Style formantów wspólnych](/windows/win32/Controls/common-control-styles) w Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinien również zawierać styl WS_VISIBLE.
 
 *cinania*<br/>
-Określa rozmiar i położenie kontrolki paska stanu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie kontrolki paska stanu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) [lub struktura.](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki pasek stanu, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
+Określa okno nadrzędne kontrolki pasek stanu, zazwyczaj `CDialog`. Nie może mieć wartości NULL.
 
 *nID*<br/>
 Określa identyfikator kontrolki paska stanu.
@@ -146,11 +146,11 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-`CStatusBarCtrl` Tworzysz dwa kroki. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`metodę, która tworzy formant paska stanu i dołącza go `CStatusBarCtrl` do obiektu.
+Należy skonstruować `CStatusBarCtrl` w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant paska stanu i dołącza go do obiektu `CStatusBarCtrl`.
 
 Domyślna pozycja okna stanu znajduje się u dołu okna nadrzędnego, ale można określić styl CCS_TOP, aby był wyświetlany w górnej części obszaru klienckiego okna nadrzędnego. Możesz określić styl SBARS_SIZEGRIP, aby dołączyć uchwyt zmiany wielkości po prawej stronie okna stanu. Nie zaleca się łączenia stylów CCS_TOP i SBARS_SIZEGRIP, ponieważ nie jest on funkcjonalny, mimo że system rysuje go w oknie stanu.
 
-Aby utworzyć pasek stanu z rozszerzonymi stylami okien, należy wywołać [CStatusBarCtrl:: CreateEx](#createex) zamiast `Create`.
+Aby utworzyć pasek stanu z rozszerzonymi stylami okien, należy wywołać [CStatusBarCtrl:: CreateEx](#createex) , a nie `Create`.
 
 ### <a name="example"></a>Przykład
 
@@ -158,7 +158,7 @@ Aby utworzyć pasek stanu z rozszerzonymi stylami okien, należy wywołać [CSta
 
 ##  <a name="createex"></a>CStatusBarCtrl:: CreateEx
 
-Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CStatusBarCtrl` obiektem.
+Tworzy kontrolkę (okno podrzędne) i kojarzy ją z obiektem `CStatusBarCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -192,11 +192,11 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** styl rozszerzony systemu Windows.
+Użyj `CreateEx` zamiast [tworzyć](#create) , aby zastosować rozszerzone style systemu Windows, określone przez **WS_EX_** prekroju stylu systemu Windows.
 
 ##  <a name="cstatusbarctrl"></a>CStatusBarCtrl:: CStatusBarCtrl
 
-Konstruuje `CStatusBarCtrl` obiekt.
+Konstruuje obiekt `CStatusBarCtrl`.
 
 ```
 CStatusBarCtrl();
@@ -217,9 +217,9 @@ Długi wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-win
 
 ### <a name="remarks"></a>Uwagi
 
-`itemAction` Element członkowski`DRAWITEMSTRUCT` struktury definiuje akcję rysowania, która ma zostać wykonana.
+`itemAction` element członkowski struktury `DRAWITEMSTRUCT` definiuje akcję rysowania, która ma zostać wykonana.
 
-Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla `CStatusBarCtrl` obiektu rysowania przez właściciela.
+Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla obiektu `CStatusBarCtrl` rysowania przez właściciela.
 
 Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
 
@@ -288,7 +288,7 @@ Kontrolka pasek stanu składa się z wierszy okienek wyjściowych tekstowych, kt
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje zmienną, `m_statusBar`, która jest używana do uzyskiwania dostępu do bieżącej kontrolki paska stanu. Ta zmienna jest używana w następnym przykładzie.
+Poniższy przykład kodu definiuje zmienną `m_statusBar`, która jest używana do uzyskiwania dostępu do bieżącej kontrolki paska stanu. Ta zmienna jest używana w następnym przykładzie.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
@@ -386,7 +386,7 @@ Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może b
 
 - SBT_POPOUT tekst jest rysowany z obramowaniem, aby był wyświetlany powyżej płaszczyzny paska stanu.
 
-- SBT_OWNERDRAW Jeśli tekst ma typ rysunku SBT_OWNERDRAW, *pType* odbiera ten komunikat i zwraca wartość 32-bitową skojarzoną z tekstem, a nie długość i typ operacji.
+- SBT_OWNERDRAW Jeśli tekst ma SBT_OWNERDRAW typ rysunku, *pType* odbiera ten komunikat i zwraca wartość 32-bitową skojarzoną z tekstem, a nie długość i typ operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -418,7 +418,7 @@ Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może b
 
 - SBT_NOBORDERS tekst jest rysowany bez obramowania.
 
-- SBT_OWNERDRAW tekst jest rysowany w oknie nadrzędnym.
+- SBT_OWNERDRAW tekst jest rysowany przez okno nadrzędne.
 
 - SBT_POPOUT tekst jest rysowany z obramowaniem, aby był wyświetlany powyżej płaszczyzny paska stanu.
 
@@ -449,7 +449,7 @@ Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający 
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext), zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska implementuje zachowanie [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -469,7 +469,7 @@ Różne od zera, jeśli formant okna stanu jest w trybie prostym; w przeciwnym r
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_ISSIMPLE](/windows/win32/Controls/sb-issimple), zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska implementuje zachowanie [SB_ISSIMPLE](/windows/win32/Controls/sb-issimple)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ##  <a name="setbkcolor"></a>CStatusBarCtrl:: SetBkColor
 
@@ -482,7 +482,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="parameters"></a>Parametry
 
 *znaki*<br/>
-Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT, aby uniemożliwić użycie przez pasek stanu domyślnego koloru tła.
+Wartość COLORREF, która określa nowy kolor tła. Określ CLR_DEFAULT wartość, aby uniemożliwić użycie przez pasek stanu domyślnego koloru tła.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -490,7 +490,7 @@ Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje poprzedn
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor), zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska implementuje zachowanie [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -520,7 +520,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETICON](/windows/win32/Controls/sb-seticon), zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska implementuje zachowanie [SB_SETICON](/windows/win32/Controls/sb-seticon)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -575,7 +575,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ##  <a name="setsimple"></a>CStatusBarCtrl:: SetSimple
 
-Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie [](#setparts)wywołanie do setpart.
+Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie wywołanie do [setpart](#setparts).
 
 ```
 BOOL SetSimple(BOOL bSimple = TRUE);
@@ -614,7 +614,7 @@ Adres ciągu zakończenia o wartości null, określający tekst do ustawienia. J
 Indeks (liczony od zera) części do ustawienia. Jeśli wartość jest równa 255, przyjmuje się, że kontrolka pasek stanu jest prostą kontrolką tylko z jedną częścią.
 
 *Npowiadomienia*<br/>
-Typ operacji rysowania. Zobacz [komunikat SB_SETTEXT](/windows/win32/Controls/sb-settext) , aby uzyskać listę możliwych wartości.
+Typ operacji rysowania. Listę możliwych wartości można znaleźć w [komunikacie SB_SETTEXT](/windows/win32/Controls/sb-settext) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -648,7 +648,7 @@ Wskaźnik do ciągu zawierającego tekst etykietki narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext), zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska implementuje zachowanie [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext)komunikatu Win32, zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 

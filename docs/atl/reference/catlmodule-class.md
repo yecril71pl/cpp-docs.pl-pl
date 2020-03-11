@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497750"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857155"
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 
@@ -58,15 +58,15 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule:: Term](#term)|Zwalnia wszystkie elementy członkowskie danych.|
 |[CAtlModule:: Unlock](#unlock)|Zmniejsza liczbę blokad.|
 |[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Uruchamia skrypt zawarty w określonym zasobie, aby zarejestrować lub wyrejestrować obiekt.|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` program w celu przeprowadzenia aktualizacji rejestru.|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` w celu przeprowadzenia aktualizacji rejestru.|
 |[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Uruchamia skrypt zawarty w określonym zasobie, aby zarejestrować lub wyrejestrować obiekt. Ta metoda statycznie łączy się ze składnikiem rejestru ATL.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlModule::m_libid](#m_libid)|Zawiera identyfikator GUID bieżącego modułu.|
-|[CAtlModule::m_pGIT](#m_pgit)|Wskaźnik do tabeli interfejsu globalnego.|
+|[CAtlModule:: m_libid](#m_libid)|Zawiera identyfikator GUID bieżącego modułu.|
+|[CAtlModule:: m_pGIT](#m_pgit)|Wskaźnik do tabeli interfejsu globalnego.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -168,7 +168,7 @@ Wskaźnik do zmiennej, która będzie odbierać wskaźnik do tabeli interfejsu g
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na powodzeniu lub kod błędu w przypadku niepowodzenia. E_POINTER jest zwracany, jeśli *ppGIT* jest równa null.
+Zwraca S_OK dla sukcesu lub kod błędu w przypadku niepowodzenia. E_POINTER jest zwracana, jeśli wartość *ppGIT* jest równa null.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -202,7 +202,7 @@ virtual LONG Lock() throw();
 
 Zwiększa liczbę blokad i zwraca zaktualizowaną wartość. Ta wartość może być przydatna w przypadku diagnostyki i debugowania.
 
-##  <a name="m_libid"></a>CAtlModule::m_libid
+##  <a name="m_libid"></a>CAtlModule:: m_libid
 
 Zawiera identyfikator GUID bieżącego modułu.
 
@@ -210,7 +210,7 @@ Zawiera identyfikator GUID bieżącego modułu.
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
+##  <a name="m_pgit"></a>CAtlModule:: m_pGIT
 
 Wskaźnik do tabeli interfejsu globalnego.
 
@@ -286,7 +286,7 @@ Ta metoda wywołuje [CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregi
 
 ##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` program w celu przeprowadzenia aktualizacji rejestru.
+Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` w celu przeprowadzenia aktualizacji rejestru.
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -350,7 +350,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) , z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzenia statycznego łącza do składnika rejestru ATL (Rejestrator).
+Podobnie jak w przypadku [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) , z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzy statyczne łącze do składnika rejestru ATL (Rejestrator).
 
 ## <a name="see-also"></a>Zobacz także
 

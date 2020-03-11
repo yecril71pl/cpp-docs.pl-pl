@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; type_traits'
+title: '&lt;type_traits funkcji&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_assignable
@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447044"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874197"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;funkcje&gt; type_traits
+# <a name="lttype_traitsgt-functions"></a>&lt;type_traits funkcji&gt;
 
 ||||
 |-|-|-|
@@ -52,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Do*\
+*Aby*\
 Typ obiektu, który odbiera przypisanie.
 
-*Wniosek*\
+*Z*\
 Typ obiektu, który zawiera wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` nieoceniane musi być poprawnie sformułowane. Oba elementy *od* i *do* muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
+Nieoceniane wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane. Oba elementy *od* i *do* muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
 
 ## <a name="is_copy_assignable"></a>is_copy_assignable
 
@@ -73,7 +73,7 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
@@ -91,7 +91,7 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*T*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem klasy z konstruktorem domyślnym, w przeciwnym razie ma wartość false. Jest to odpowiednik predykatu `is_constructible<T>`. Typ *T* musi być kompletnym typem, **void**lub tablicą nieznanego powiązania.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem klasy z konstruktorem domyślnym, w przeciwnym razie ma wartość false. Jest to odpowiednik `is_constructible<T>`predykatu. Typ *T* musi być kompletnym typem, **void**lub tablicą nieznanego powiązania.
 
 ### <a name="example"></a>Przykład
 
@@ -195,12 +195,12 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*T*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest przesuwany do przypisania, jeśli odwołanie rvalue do typu może zostać przypisane do odwołania do typu. Predykat typu jest równoważny z `is_assignable<T&, T&&>`. Przenieś typy z możliwością przypisania zawierają typy skalarne i typy klas, które mają zdefiniowane przez użytkownika operatory przypisania przenoszenia.
+Typ jest przesuwany do przypisania, jeśli odwołanie rvalue do typu może zostać przypisane do odwołania do typu. Predykat typu jest równoważny `is_assignable<T&, T&&>`. Przenieś typy z możliwością przypisania zawierają typy skalarne i typy klas, które mają zdefiniowane przez użytkownika operatory przypisania przenoszenia.
 
 ## <a name="is_move_constructible"></a>is_move_constructible
 
@@ -213,16 +213,16 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*T*\
 Typ, który ma zostać obliczony
 
 ### <a name="remarks"></a>Uwagi
 
-Predykat typu, którego wynikiem jest wartość true, jeśli typ *T* może być skonstruowany przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>`.
+Predykat typu, którego wynikiem jest wartość true, jeśli typ *T* może być skonstruowany przy użyciu operacji przenoszenia. Ten predykat jest równoważny `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
 
-Testuje, czy typ  ma operator przypisania elementu "nothrow".
+Testuje, czy typ ma operator przypisania elementu " **nothrow** ".
 
 ```cpp
 template <class Ty>
@@ -231,7 +231,7 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*T*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
 Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest klasą, która ma operator przypisania prostego kopiowania, w przeciwnym razie zawiera wartość false.
 
-Konstruktor przypisania dla klasy *t* jest uproszczony, jeśli jest niejawnie określony, Klasa *t* nie ma żadnych funkcji wirtualnych, Klasa *t* nie ma żadnych wirtualnych podstaw, klasy wszystkich niestatycznych elementów członkowskich danych typu klasy mają proste przypisanie Operatory i klasy wszystkich niestatycznych elementów członkowskich danych typu Array klasy mają proste operatory przypisania.
+Konstruktor przypisania dla klasy *t* jest uproszczony, jeśli jest niejawnie określony, Klasa *t* nie ma żadnych funkcji wirtualnych, Klasa *t* nie ma żadnych wirtualnych podstaw, klasy wszystkich niestatycznych elementów członkowskich danych typu klasy mają proste operatory przypisania, a klasy wszystkich niestatycznych elementów członkowskich danych typu Array klasy mają proste operatory przypisania.
 
 ## <a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
 
@@ -293,7 +293,7 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
@@ -323,7 +323,7 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty*\
 Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507699"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855528"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 
@@ -46,11 +46,11 @@ int CALLBACK EXPORT ObjectFunc(
 Wskazuje strukturę danych [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) lub [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) , która zawiera informacje o atrybutach logicznych obiektu.
 
 *lpData*<br/>
-Wskazuje dane dostarczone przez aplikację przekazane do `EnumObjects` funkcji.
+Wskazuje dane dostarczone przez aplikację przekazane do funkcji `EnumObjects`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja wywołania zwrotnego zwraca wartość typu **int**. Wartość tego powrotu jest zdefiniowana przez użytkownika. Jeśli funkcja wywołania zwrotnego zwróci wartość `EnumObjects` 0, program przestaje wyliczać wcześniej.
+Funkcja wywołania zwrotnego zwraca wartość typu **int**. Wartość tego powrotu jest zdefiniowana przez użytkownika. Jeśli funkcja wywołania zwrotnego zwróci wartość 0, `EnumObjects` przerywa Wyliczenie wczesne.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -71,7 +71,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
+*Używający HDC*<br/>
 Identyfikuje kontekst urządzenia pamięci z mapą bitową o szerokości i wysokości określonej przez `nWidth` i `nHeight` do `GrayString`.
 
 *lpData*<br/>
@@ -106,7 +106,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 Identyfikuje kontekst urządzenia.
 
 *kodu*<br/>
-Określa, czy wystąpił błąd. Wartość 0 oznacza, że nie wystąpił błąd. Jest to SP_OUTOFDISK, jeśli w Menedżerze wydruku brakuje miejsca na dysku, a więcej miejsca na dysku stanie się dostępne, gdy aplikacja zostanie przeprowadzona. Jeśli *kod* jest SP_OUTOFDISK, aplikacja nie musi przerywać zadania drukowania. Jeśli tak nie jest, musi przekazać do Menedżera wydruku, wywołując `PeekMessage` funkcję lub `GetMessage` Windows.
+Określa, czy wystąpił błąd. Wartość 0 oznacza, że nie wystąpił błąd. Jest SP_OUTOFDISK, jeśli Menedżer wydruku nie ma obecnie miejsca na dysku, a więcej miejsca na dysku stanie się dostępne, gdy aplikacja zostanie zaczeka. Jeśli *kod* jest SP_OUTOFDISK, aplikacja nie musi przerywać zadania drukowania. Jeśli tak nie jest, musi przekazać do Menedżera wydruku, wywołując funkcję `PeekMessage` lub `GetMessage` systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 

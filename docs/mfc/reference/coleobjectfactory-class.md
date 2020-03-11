@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
 ms.openlocfilehash: 22805550d13ecb400b151495363e5eda2dfb3b76
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503744"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856979"
 ---
 # <a name="coleobjectfactory-class"></a>Klasa COleObjectFactory
 
@@ -59,7 +59,7 @@ class COleObjectFactory : public CCmdTarget
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleObjectFactory:: COleObjectFactory](#coleobjectfactory)|Konstruuje `COleObjectFactory` obiekt.|
+|[COleObjectFactory:: COleObjectFactory](#coleobjectfactory)|Konstruuje obiekt `COleObjectFactory`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -87,7 +87,7 @@ class COleObjectFactory : public CCmdTarget
 
 ## <a name="remarks"></a>Uwagi
 
-`COleObjectFactory` Klasa ma funkcje członkowskie do wykonywania następujących funkcji:
+Klasa `COleObjectFactory` ma funkcje członkowskie do wykonywania następujących funkcji:
 
 - Zarządzanie rejestracją obiektów.
 
@@ -97,7 +97,7 @@ class COleObjectFactory : public CCmdTarget
 
 - Rejestrowanie fabryk obiektów kontroli przy użyciu rejestru systemu OLE.
 
-Aby uzyskać więcej informacji na temat tworzenia obiektów, zobacz artykuł [obiekty danych i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md) [oraz obiekty danych i źródła danych: Tworzenie i niszczenie](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Aby uzyskać więcej informacji na temat rejestracji, zobacz [rejestracja](../../mfc/registration.md)artykułu.
+Aby uzyskać więcej informacji na temat tworzenia obiektów, zobacz artykuł [obiekty danych i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md) oraz [obiekty danych i źródła danych: Tworzenie i niszczenie](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Aby uzyskać więcej informacji na temat rejestracji, zobacz [rejestracja](../../mfc/registration.md)artykułu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -113,7 +113,7 @@ Aby uzyskać więcej informacji na temat tworzenia obiektów, zobacz artykuł [o
 
 ##  <a name="coleobjectfactory"></a>COleObjectFactory:: COleObjectFactory
 
-Konstruuje `COleObjectFactory` obiekt, inicjuje go jako niezarejestrowaną fabrykę obiektów i dodaje go do listy fabryk.
+Konstruuje obiekt `COleObjectFactory`, inicjuje go jako niezarejestrowaną fabrykę obiektów i dodaje go do listy fabryk.
 
 ```
 COleObjectFactory(
@@ -144,15 +144,15 @@ Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąp
 *nFlags*<br/>
 Zawiera co najmniej jedną z następujących flag:
 
-- `afxRegDefault`Ustawia model wątkowości na ThreadingModel = Apartment.
+- `afxRegDefault` ustawia model wątkowości na ThreadingModel = Apartment.
 
-- `afxRegInsertable`Umożliwia wyświetlenie formantu w oknie dialogowym **Wstaw obiekt** dla obiektów OLE.
+- `afxRegInsertable` umożliwia wyświetlenie formantu w oknie dialogowym **Wstaw obiekt** dla obiektów OLE.
 
-- `afxRegApartmentThreading`Ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
+- `afxRegApartmentThreading` ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Ustawia model wątkowości w rejestrze w taki sposób, aby ThreadingModel = Free.
+- `afxRegFreeThreading` ustawia model wątkowości w rejestrze, aby ThreadingModel = Free.
 
-   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
+   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading`, aby ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
 
 *lpszProgID*<br/>
 Wskaźnik do ciągu zawierającego werbalny identyfikator programu, taki jak "Microsoft Excel".
@@ -334,9 +334,9 @@ Określa, czy fabryka obiektów klasy kontrolki ma zostać zarejestrowana.
 
 Krótkie dyskusje na temat dwóch formularzy dla tej funkcji są następujące:
 
-- **Operacja UpdateRegistry (** `lpszProgID` **)** rejestruje fabrykę obiektów z rejestrem systemu OLE. Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
+- **Operacja UpdateRegistry (** `lpszProgID` **)** Rejestruje fabrykę obiektów przy użyciu rejestru systemu OLE. Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
 
-- **Operacja UpdateRegistry (** `bRegister` **)** ten formularz funkcji jest możliwy do zastąpienia. Jeśli *bRegister* ma wartość true, ta funkcja rejestruje klasę formantów z rejestrem systemowym. W przeciwnym razie wyrejestruje klasę.
+- **Operacja UpdateRegistry (** `bRegister` **)** Ta forma funkcji jest możliwy do zastąpienia. Jeśli *bRegister* ma wartość true, ta funkcja rejestruje klasę formantów z rejestrem systemowym. W przeciwnym razie wyrejestruje klasę.
 
    Jeśli do utworzenia projektu używasz programu MFC ActiveX ControlWizard, ControlWizard dostarcza przesłonięcie tej czystej funkcji wirtualnej.
 

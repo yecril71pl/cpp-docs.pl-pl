@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398644"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865824"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase — Klasa
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,12 +33,12 @@ class ComPtrRefBase;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-A [ComPtr\<T >](comptr-class.md) typu lub typu pochodnego w nie tylko interfejs, reprezentowane przez `ComPtr`.
+*&*<br/>
+Typ [ComPtr\<t >](comptr-class.md) lub typ pochodzący od niego, nie tylko interfejs reprezentowany przez `ComPtr`.
 
 ## <a name="remarks"></a>Uwagi
 
-Reprezentuje klasę bazową dla [comptrref —](comptrref-class.md) klasy.
+Reprezentuje klasę bazową dla klasy [ComPtrRef](comptrref-class.md) .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,14 +52,14 @@ Nazwa            | Opis
 
 Nazwa                                                                       | Opis
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[ComPtrRefBase::operator IInspectable **](#operator-iinspectable-star-star) | Rzutuje bieżącego [ptr_ — element](#ptr) element członkowski danych do wskaźnik do a wskaźnik do `IInspectable` interfejsu.
-[ComPtrRefBase::operator IUnknown **](#operator-iunknown-star-star)         | Rzutuje bieżącego [ptr_ — element](#ptr) element członkowski danych do wskaźnik do a wskaźnik do `IUnknown` interfejsu.
+[ComPtrRefBase:: operator IInspectable * *](#operator-iinspectable-star-star) | Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IInspectable`.
+[ComPtrRefBase:: operator IUnknown * *](#operator-iunknown-star-star)         | Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IUnknown`.
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
 Nazwa                        | Opis
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase::ptr_](#ptr) | Wskaźnik do typu określonego przez parametr bieżącego szablonu.
+[ComPtrRefBase::p tr_](#ptr) | Wskaźnik do typu określonego przez bieżący parametr szablonu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -67,13 +67,13 @@ Nazwa                        | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase::operator IInspectable\* \* — Operator
+## <a name="operator-iinspectable-star-star"></a>Operator ComPtrRefBase:: operator IInspectable\*\*
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 operator IInspectable**() const;
@@ -81,15 +81,15 @@ operator IInspectable**() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Rzutuje bieżącego [ptr_ — element](#ptr) element członkowski danych do wskaźnik do a wskaźnik do `IInspectable` interfejsu.
+Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IInspectable`.
 
-Błąd jest emitowane, jeśli bieżący `ComPtrRefBase` nie pochodzi od `IInspectable`.
+Błąd jest emitowany, jeśli bieżący `ComPtrRefBase` nie pochodzi od `IInspectable`.
 
-To rzutowanie jest dostępna tylko wtedy, gdy `__WRL_CLASSIC_COM__` jest zdefiniowana.
+To Rzutowanie jest dostępne tylko wtedy, gdy `__WRL_CLASSIC_COM__` jest zdefiniowany.
 
-## <a name="operator-iunknown-star-star"></a>Operator ComPtrRefBase::operator IUnknown **
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase:: operator IUnknown * * — operator
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 operator IUnknown**() const;
@@ -97,13 +97,13 @@ operator IUnknown**() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Rzutuje bieżącego [ptr_ — element](#ptr) element członkowski danych do wskaźnik do a wskaźnik do `IUnknown` interfejsu.
+Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IUnknown`.
 
-Błąd jest emitowane, jeśli bieżący `ComPtrRefBase` nie pochodzi od `IUnknown`.
+Błąd jest emitowany, jeśli bieżący `ComPtrRefBase` nie pochodzi od `IUnknown`.
 
-## <a name="ptr"></a>ComPtrRefBase::ptr_
+## <a name="ptr"></a>ComPtrRefBase::p tr_
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 T* ptr_;
@@ -111,4 +111,4 @@ T* ptr_;
 
 ### <a name="remarks"></a>Uwagi
 
-Wskaźnik do typu określonego przez parametr bieżącego szablonu. `ptr_` jest członkiem chronionych danych.
+Wskaźnik do typu określonego przez bieżący parametr szablonu. `ptr_` jest chronioną składową danych.

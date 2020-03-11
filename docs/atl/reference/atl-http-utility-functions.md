@@ -3,11 +3,11 @@ title: Funkcje narzędziowe HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497975"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865039"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje narzędziowe HTTP ATL
 
@@ -28,7 +28,7 @@ Te funkcje obsługują manipulowanie adresami URL.
 
 **Nagłówek:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Wywołaj tę funkcję, aby nadać postać kanoniczną adresowi URL, co obejmuje konwersję niebezpiecznych znaków i spacji na sekwencje unikowe.
 
@@ -54,7 +54,7 @@ Wskaźnik do zmiennej zawierającej długość w znakach *szCanonicalized*. Jeś
 *flagiDW*<br/>
 Flagi ATL_URL kontrolujące zachowanie tej funkcji.
 
-- ATL_URL_BROWSER_MODE nie koduje ani nie dekoduje znaków po "#" lub "?" i nie usuwa końcowej spacji po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zakodowany, a końcowy biały znak jest usuwany.
+- ATL_URL_BROWSER_MODE nie koduje ani nie dekoduje znaków po znaku "#" lub "?" i nie usuwa końcowego odstępu po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zakodowany, a końcowy biały znak jest usuwany.
 
 - ATL_URL_DECODE konwertuje wszystkie sekwencje% XX na znaki, w tym sekwencje ucieczki, przed przeanalizowanie adresu URL.
 
@@ -76,7 +76,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Zachowuje się jak w przypadku bieżącej wersji programu [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , ale nie wymaga zainstalowania interfejsu WinINet ani programu Internet Explorer.
 
-## <a name="atlcombineurl"></a> AtlCombineUrl
+## <a name="atlcombineurl"></a>AtlCombineUrl
 
 Wywołaj tę funkcję, aby połączyć podstawowy adres URL i względny adres URL w jeden kanoniczny adres URL.
 
@@ -170,7 +170,7 @@ Wartość [ATL_URL_SCHEME](atl-url-scheme-enum.md) identyfikująca schemat, dla 
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzona z określonym schematem lub ATL_URL_INVALID_PORT_NUMBER, jeśli nie został rozpoznany schemat.
+[ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzona z określonym schematem lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.
 
 ## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
@@ -233,7 +233,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Odwraca proces konwersji stosowany przez [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a> RGBToHtml
+## <a name="rgbtohtml"></a>RGBToHtml
 
 Konwertuje wartość [COLORREF](/windows/win32/gdi/colorref) na tekst HTML odpowiadający tej wartości koloru.
 
@@ -263,7 +263,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Wartość koloru HTML jest znakiem krzyżyka, po którym następuje 6-cyfrowa wartość szesnastkowa, przy użyciu 2 cyfr dla każdego czerwonego, zielonego i niebieskiego składnika koloru (na przykład #FFFFFF jest biały).
 
-## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 Czas systemowy, który ma zostać uzyskany jako ciąg formatu HTTP.
 
 *strTime*<br/>
-Odwołanie do zmiennej ciągu, aby otrzymać datę i godzinę http zgodnie z definicją w dokumencie RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () i RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
+Odwołanie do zmiennej ciągu, która ma otrzymać datę i godzinę HTTP zgodnie z definicją w dokumencie RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) i RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
 ## <a name="see-also"></a>Zobacz także
 

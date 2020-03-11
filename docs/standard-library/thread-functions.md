@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458501"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876178"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;funkcje&gt; wątku
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[wymiany](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a>get_id
 
@@ -57,7 +57,7 @@ Obiekt [czasu trwania](../standard-library/duration-class.md) , który określa 
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja blokuje wątek wywołujący przez co najmniej godzinę, która jest określona przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
+Funkcja blokuje wątek wywołujący przez co najmniej godzinę określoną przez *Rel_time*. Ta funkcja nie generuje żadnych wyjątków.
 
 ## <a name="sleep_until"></a>sleep_until
 
@@ -89,15 +89,15 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Lewym*\
+\ *lewo*
 Obiekt **wątku** Left.
 
-*Kliknij*\
+*Prawa*\
 Prawidłowy obiekt **wątku** .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania `Left.swap(Right)`funkcji.
+Funkcja wywołuje `Left.swap(Right)`.
 
 ## <a name="yield"></a>zbiór
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<> wątku](../standard-library/thread.md)
+[> wątku \<](../standard-library/thread.md)

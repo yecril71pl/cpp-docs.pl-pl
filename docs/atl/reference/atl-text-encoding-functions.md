@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375897"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865040"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parametry
 
-*pReserved*<br/>
+*naruszon*<br/>
 Zastrzeżony wskaźnik.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -191,7 +191,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Każdy bajt danych źródłowych jest zakodowany jako 2 znaki szesnastkowe.
 
-## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
@@ -349,10 +349,10 @@ Bufor przydzielony przez obiekt wywołujący, aby otrzymać przekonwertowany ci�
 Długość w znakach w buforze przydzielonym przez wywołującego.
 
 *flagiDW*<br/>
-ATL_ESC flagi opisujące, jak ma zostać wykonana konwersja.
+ATL_ESC flagi opisujące sposób wykonywania konwersji.
 
 - ATL_ESC_FLAG_NONE zachowanie domyślne. Znaki cudzysłowu i apostrofy nie są konwertowane.
-- Znaki cudzysłowu ATL_ESC_FLAG_ATTR i apostrofy są konwertowane `&quot;` na `&apos;` i odpowiednio.
+- ATL_ESC_FLAG_ATTR znaki cudzysłowu i apostrofy są konwertowane na odpowiednio `&quot;` i `&apos;`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -362,13 +362,13 @@ Długość przekonwertowanego ciągu znaków.
 
 W tabeli przedstawiono możliwe konwersje wykonywane przez tę funkcję:
 
-|Source|Miejsce docelowe|
+|Źródło|Miejsce docelowe|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
 |&|&amp;|
 |'|&apos;|
-|"|&quot;|
+|”|&quot;|
 
 ## <a name="getextendedchars"></a>GetExtendedChars
 
@@ -501,7 +501,7 @@ określoną Bufor przydzielony przez obiekt wywołujący, który odbiera zdekodo
 określoną Wskaźnik do zmiennej zawierającej długość w bajtach *szDest*. Jeśli funkcja się powiedzie, zmienna otrzymuje liczbę bajtów zapisywanych w buforze. Jeśli funkcja się nie powiedzie, zmienna otrzymuje wymaganą długość w bajtach buforu.
 
 *flagiDW*<br/>
-podczas ATLSMTP_QPENCODE flagi opisujące, jak ma zostać wykonana konwersja.
+podczas ATLSMTP_QPENCODE flagi opisujące sposób wykonywania konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -509,7 +509,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)().
+Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ Liczba bajtów wymagana dla buforu, który może zawierać zdekodowany ciąg zna
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)().
+Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a>QPEncode
 
@@ -560,9 +560,9 @@ Bufor przydzielony przez obiekt wywołujący, który ma odbierać zakodowane dan
 Wskaźnik do zmiennej zawierającej długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna otrzymuje liczbę znaków zapisywanych w buforze. Jeśli funkcja się nie powiedzie, zmienna otrzymuje wymaganą długość w znakach bufora.
 
 *flagiDW*<br/>
-ATLSMTP_QPENCODE flagi opisujące, jak ma zostać wykonana konwersja.
+ATLSMTP_QPENCODE flagi opisujące sposób wykonywania konwersji.
 
-- ATLSMTP_QPENCODE_DOT Jeśli kropka pojawia się na początku wiersza, jest dodawana do danych wyjściowych, a także kodowanych.
+- ATLSMTP_QPENCODE_DOT, jeśli kropka pojawia się na początku wiersza, zostanie dodana do danych wyjściowych, a także zakodowana.
 
 - ATLSMTP_QPENCODE_TRAILING_SOFT dołącza `=\r\n` do zakodowanego ciągu.
 
@@ -574,7 +574,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)().
+Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z
 
 ### <a name="remarks"></a>Uwagi
 
-Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)().
+Schemat kodowania do drukowania w cudzysłowach został opisany w dokumencie RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a>UUDecode
 

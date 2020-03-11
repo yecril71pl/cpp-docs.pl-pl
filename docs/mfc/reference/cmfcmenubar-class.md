@@ -107,16 +107,16 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739475"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869949"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
 Pasek menu, który implementuje dokowanie.
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** w instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -138,9 +138,9 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Oblicza maksymalną wysokość przycisków na pasku narzędzi. (Przesłania [CMFCToolBar:: CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|
 |[CMFCMenuBar::CanBeClosed](#canbeclosed)|Określa, czy użytkownik może zamknąć ten pasek narzędzi. (Przesłania [CMFCToolBar:: CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|
 |[CMFCMenuBar::CanBeRestored](#canberestored)|Określa, czy system może przywrócić oryginalny stan paska narzędzi po dostosowaniu. (Przesłania [CMFCToolBar:: CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
-|[CMFCMenuBar:: Create](#create)|Tworzy formant menu i dołącza go do `CMFCMenuBar` obiektu.|
-|[CMFCMenuBar::CreateEx](#createex)|`CMFCMenuBar` Tworzy obiekt z dodatkowymi opcjami stylu.|
-|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|`CMFCMenuBar` Inicjuje obiekt. Akceptuje parametr HMENU, który działa jako szablon dla wypełnionego `CMFCMenuBar`elementu.|
+|[CMFCMenuBar:: Create](#create)|Tworzy formant menu i dołącza go do obiektu `CMFCMenuBar`.|
+|[CMFCMenuBar::CreateEx](#createex)|Tworzy obiekt `CMFCMenuBar` z dodatkowymi opcjami stylu.|
+|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Inicjuje obiekt `CMFCMenuBar`. Akceptuje parametr HMENU, który działa jako szablon dla wypełnionej `CMFCMenuBar`.|
 |[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Włącza pole kombi **pomocy** znajdujące się po prawej stronie paska menu.|
 |[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Określa, czy mają być wyświetlane cienie dla menu podręcznych.|
 |[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Przesłania [CPane:: GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|
@@ -150,7 +150,7 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::GetFloatPopupDirection](#getfloatpopupdirection)||
 |[CMFCMenuBar::GetForceDownArrows](#getforcedownarrows)||
 |[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Zwraca wskaźnik do pola kombi **pomocy** .|
-|[CMFCMenuBar::GetHMenu](#gethmenu)|Zwraca uchwyt do menu dołączonego do `CMFCMenuBar` obiektu.|
+|[CMFCMenuBar::GetHMenu](#gethmenu)|Zwraca uchwyt do menu dołączonego do obiektu `CMFCMenuBar`.|
 |[CMFCMenuBar::GetMenuFont](#getmenufont)|Zwraca bieżącą czcionkę globalną dla obiektów menu.|
 |[CMFCMenuBar:: getmenuitem](#getmenuitem)|Zwraca przycisk paska narzędzi skojarzony z podanym indeksem elementu.|
 |[CMFCMenuBar::GetRowHeight](#getrowheight)|Zwraca wysokość przycisków paska narzędzi. (Przesłania [CMFCToolBar:: GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
@@ -164,7 +164,7 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Wskazuje, czy ostatnio używane polecenia menu są wyświetlane na pasku menu.|
 |[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Wskazuje, czy menu podręczne są wyświetlane wszystkie polecenia.|
 |[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Wskazuje, czy menu wyświetla wszystkie polecenia po krótkim opóźnieniu.|
-|[CMFCMenuBar:: LoadState](#loadstate)|Ładuje stan `CMFCMenuBar` obiektu z rejestru.|
+|[CMFCMenuBar:: LoadState](#loadstate)|Ładuje stan obiektu `CMFCMenuBar` z rejestru.|
 |[CMFCMenuBar::OnChangeHot](#onchangehot)|Wywoływane przez platformę, gdy użytkownik wybierze przycisk na pasku narzędzi. (Przesłania [CMFCToolBar:: OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|
 |[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Wywoływane przez platformę, gdy okno ramki ładuje domyślne menu z pliku zasobów.|
 |[CMFCMenuBar::OnSendCommand](#onsendcommand)|(Przesłania `CMFCToolBar::OnSendCommand`).|
@@ -172,7 +172,7 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Przesłania `CMFCToolBar::OnToolHitTest`).|
 |[CMFCMenuBar::P reTranslateMessage](#pretranslatemessage)|(Przesłania `CMFCToolBar::PreTranslateMessage`).|
 |[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Wywoływane przez platformę, gdy menu jest w trybie dostosowywania, a użytkownik wybierze opcję **Resetuj** dla paska menu.|
-|[CMFCMenuBar:: SaveState](#savestate)|Zapisuje stan `CMFCMenuBar` obiektu w rejestrze.|
+|[CMFCMenuBar:: SaveState](#savestate)|Zapisuje stan obiektu `CMFCMenuBar` w rejestrze.|
 |[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Ustawia oryginalne menu w pliku zasobów.|
 |[CMFCMenuBar::SetForceDownArrows](#setforcedownarrows)||
 |[CMFCMenuBar:: setmaksymalizujmode](#setmaximizemode)|Wywoływane przez platformę, gdy okno podrzędne MDI zmieni swój tryb wyświetlania. Jeśli okno podrzędne MDI jest nowo zmaksymalizowane lub nie jest już zmaksymalizowane, ta metoda aktualizuje pasek menu.|
@@ -183,15 +183,15 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="remarks"></a>Uwagi
 
-`CMFCMenuBar` Klasa to pasek menu, który implementuje funkcjonalność dokowania. Jest on podobny do paska narzędzi, chociaż nie może być zamknięty — jest zawsze wyświetlany.
+Klasa `CMFCMenuBar` to pasek menu, który implementuje funkcjonalność dokowania. Jest on podobny do paska narzędzi, chociaż nie może być zamknięty — jest zawsze wyświetlany.
 
-`CMFCMenuBar`obsługuje opcję wyświetlania ostatnio używanych obiektów elementu menu. Jeśli ta opcja jest włączona, `CMFCMenuBar` wyświetla tylko podzestaw dostępnych poleceń podczas pierwszego wyświetlania. Następnie ostatnio używane polecenia są wyświetlane razem z oryginalnym podzbiorem poleceń. Ponadto użytkownik może zawsze rozwinąć menu, aby wyświetlić wszystkie dostępne polecenia. W rezultacie każde dostępne polecenie jest skonfigurowane do ciągłego wyświetlania lub do wyświetlania tylko wtedy, gdy zostało ono ostatnio zaznaczone.
+`CMFCMenuBar` obsługuje opcję wyświetlania ostatnio używanych obiektów elementu menu. Jeśli ta opcja jest włączona, `CMFCMenuBar` wyświetla tylko podzbiór dostępnych poleceń podczas pierwszego wyświetlania. Następnie ostatnio używane polecenia są wyświetlane razem z oryginalnym podzbiorem poleceń. Ponadto użytkownik może zawsze rozwinąć menu, aby wyświetlić wszystkie dostępne polecenia. W rezultacie każde dostępne polecenie jest skonfigurowane do ciągłego wyświetlania lub do wyświetlania tylko wtedy, gdy zostało ono ostatnio zaznaczone.
 
-Aby użyć `CMFCMenuBar` obiektu, osadź go w głównym obiekcie ramki okna. Podczas przetwarzania `WM_CREATE` komunikatu, wywołaj `CMFCMenuBar::Create` lub `CMFCMenuBar::CreateEx`. Niezależnie od tego, która funkcja tworzenia jest używana, Przekaż wskaźnik do okna głównego ramki. Następnie Włącz Dokowanie przez wywołanie [CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dokowanie tego menu przez wywołanie [CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane).
+Aby użyć obiektu `CMFCMenuBar`, osadź go w obiekcie głównym ramki okna. Podczas przetwarzania komunikatu `WM_CREATE` Wywołaj `CMFCMenuBar::Create` lub `CMFCMenuBar::CreateEx`. Niezależnie od tego, która funkcja tworzenia jest używana, Przekaż wskaźnik do okna głównego ramki. Następnie Włącz Dokowanie przez wywołanie [CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dokowanie tego menu przez wywołanie [CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCMenuBar` klasie. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włączyć okno Pomoc, włączyć cieniowanie dla menu podręcznych i zaktualizować pasek menu. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
+Poniższy przykład ilustruje sposób użycia różnych metod w klasie `CMFCMenuBar`. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włączyć okno Pomoc, włączyć cieniowanie dla menu podręcznych i zaktualizować pasek menu. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -332,7 +332,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-podczas Wskaźnik do okna nadrzędnego dla nowego `CMFCMenuBar` obiektu.
+podczas Wskaźnik do okna nadrzędnego dla nowego obiektu `CMFCMenuBar`.
 
 *dwStyle*<br/>
 podczas Styl nowego paska menu.
@@ -346,7 +346,7 @@ Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu `CMFCMenuBar` obiektu należy wywołać metodę `Create`. Ta metoda tworzy `CMFCMenuBar` formant i dołącza go `CMFCMenuBar` do obiektu.
+Po utworzeniu obiektu `CMFCMenuBar` należy wywołać `Create`. Ta metoda tworzy formant `CMFCMenuBar` i dołącza go do obiektu `CMFCMenuBar`.
 
 Aby uzyskać więcej informacji na temat stylów paska narzędzi, zobacz [CBasePane:: setselector](../../mfc/reference/cbasepane-class.md#setpanestyle).
 
@@ -369,7 +369,7 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-podczas Wskaźnik do okna nadrzędnego nowego `CMFCMenuBar` obiektu.
+podczas Wskaźnik do okna nadrzędnego nowego obiektu `CMFCMenuBar`.
 
 *dwCtrlStyle*<br/>
 podczas Dodatkowe style dla nowego paska menu.
@@ -378,7 +378,7 @@ podczas Dodatkowe style dla nowego paska menu.
 podczas Styl główny nowego paska menu.
 
 *rcBorders*<br/>
-podczas Parametr określający rozmiary obramowania `CMFCMenuBar` obiektu. `CRect`
+podczas `CRect` parametr, który określa rozmiary obramowania obiektu `CMFCMenuBar`.
 
 *nID*<br/>
 podczas Identyfikator okna podrzędnego paska menu.
@@ -389,20 +389,20 @@ Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy używać tej funkcji zamiast [CMFCMenuBar:: Create](#create) , gdy chcesz określić style oprócz stylu paska narzędzi. Niektóre często używane dodatkowe style to TBSTYLE_TRANSPARENT i CBRS_TOP.
+Należy używać tej funkcji zamiast [CMFCMenuBar:: Create](#create) , gdy chcesz określić style oprócz stylu paska narzędzi. Niektóre często używane dodatkowe style są TBSTYLE_TRANSPARENT i CBRS_TOP.
 
 Aby uzyskać listę dodatkowych stylów, zobacz [kontrolki paska narzędzi i style przycisków](/windows/win32/Controls/toolbar-control-and-button-styles), [Style formantów wspólnych](/windows/win32/Controls/common-control-styles)i [wspólne style okien](/windows/win32/winmsg/window-styles).
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
+Poniższy przykład ilustruje sposób użycia metody `CreateEx` klasy `CMFCMenuBar`. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
 
 ##  <a name="createfrommenu"></a>CMFCMenuBar::CreateFromMenu
 
-Inicjuje obiekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) . Ta metoda modeluje `CMFCMenuBar` obiekt po parametrze HMENU.
+Inicjuje obiekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) . Ta metoda modeluje `CMFCMenuBar` obiektu po parametrze HMENU.
 
 ```
 virtual void CreateFromMenu(
@@ -414,7 +414,7 @@ virtual void CreateFromMenu(
 ### <a name="parameters"></a>Parametry
 
 *hMenu*<br/>
-podczas Uchwyt do zasobu menu. `CreateFromMenu`używa tego zasobu jako szablonu dla `CMFCMenuBar`.
+podczas Uchwyt do zasobu menu. `CreateFromMenu` używa tego zasobu jako szablonu dla `CMFCMenuBar`.
 
 *bDefaultMenu*<br/>
 podczas Wartość logiczna wskazująca, czy nowe menu jest menu domyślnym.
@@ -521,7 +521,7 @@ Identyfikator zasobu menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura ładuje domyślne menu dla `CMFCMenuBar` obiektu z pliku zasobów.
+Struktura ładuje domyślne menu dla obiektu `CMFCMenuBar` z pliku zasobów.
 
 ##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection
 
@@ -590,7 +590,7 @@ Wskaźnik do parametru [CFont](../../mfc/reference/cfont-class.md) , który zawi
 
 ### <a name="remarks"></a>Uwagi
 
-Zwracana czcionka jest parametrem globalnym dla aplikacji. Dla wszystkich `CMFCMenuBar` obiektów są utrzymywane dwie czcionki globalne. Te oddzielne czcionki są używane dla pionowych pasków menu.
+Zwracana czcionka jest parametrem globalnym dla aplikacji. Dla wszystkich obiektów `CMFCMenuBar` są utrzymywane dwie czcionki globalne. Te oddzielne czcionki są używane dla pionowych pasków menu.
 
 ##  <a name="getmenuitem"></a>CMFCMenuBar:: getmenuitem
 
@@ -607,7 +607,7 @@ podczas Indeks elementu menu, który ma zostać zwrócony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CMFCToolBarButton` obiektu, który jest zgodny z indeksem określonym przez *iItem*. Wartość NULL, jeśli indeks jest nieprawidłowy.
+Wskaźnik do obiektu `CMFCToolBarButton`, który jest zgodny z indeksem określonym przez *iItem*. Wartość NULL, jeśli indeks jest nieprawidłowy.
 
 ##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight
 
@@ -726,7 +726,7 @@ static BOOL IsRecentlyUsedMenus();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli `CMFCMenuBar` obiekt pokazuje ostatnio używane polecenia menu; w przeciwnym razie 0.
+Niezerowe, jeśli obiekt `CMFCMenuBar` pokazuje ostatnio używane polecenia menu; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -742,13 +742,13 @@ static BOOL IsShowAllCommands();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, `CMFCMenuBar` jeśli są wyświetlane wszystkie polecenia; w przeciwnym razie 0.
+Różne od zera, jeśli `CMFCMenuBar` wyświetla wszystkie polecenia; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCMenuBar` Obiekt można skonfigurować w taki sposób, aby pokazywał wszystkie polecenia lub pokazywał tylko podzestaw poleceń. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
+Obiekt `CMFCMenuBar` można skonfigurować w taki sposób, aby pokazywał wszystkie polecenia lub pokazywał tylko podzestaw poleceń. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
 
-`IsShowAllCommands`informuje o tym, jak ta funkcja jest skonfigurowana dla `CMFCMenuBar` obiektu. Aby kontrolować, które polecenia menu są wyświetlane, użyj metod [CMFCMenuBar:: SetShowAllCommands](#setshowallcommands) i [CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus).
+`IsShowAllCommands` informuje, jak ta funkcja jest skonfigurowana dla obiektu `CMFCMenuBar`. Aby kontrolować, które polecenia menu są wyświetlane, użyj metod [CMFCMenuBar:: SetShowAllCommands](#setshowallcommands) i [CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus).
 
 ##  <a name="isshowallcommandsdelay"></a>CMFCMenuBar::IsShowAllCommandsDelay
 
@@ -770,7 +770,7 @@ Po skonfigurowaniu paska menu w celu wyświetlenia ostatnio używanych elementó
 
 - Wyświetl pełne menu, gdy użytkownik kliknie strzałkę w dolnej części menu.
 
-Domyślnie wszystkie `CMFCMenuBar` obiekty używają opcji, aby wyświetlić pełne menu po krótkim opóźnieniu. Tej opcji nie można zmienić programowo w `CMFCMenuBar` klasie. Jednak użytkownik może zmienić zachowanie podczas dostosowywania paska narzędzi przy użyciu okna dialogowego **Dostosowywanie** .
+Domyślnie wszystkie obiekty `CMFCMenuBar` używają opcji, aby wyświetlić pełne menu po krótkim opóźnieniu. Nie można programowo zmienić tej opcji w klasie `CMFCMenuBar`. Jednak użytkownik może zmienić zachowanie podczas dostosowywania paska narzędzi przy użyciu okna dialogowego **Dostosowywanie** .
 
 ##  <a name="loadstate"></a>CMFCMenuBar:: LoadState
 
@@ -827,7 +827,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ### <a name="parameters"></a>Parametry
 
 *hMenu*<br/>
-podczas Uchwyt dla menu dołączonego do `CMFCMenuBar` obiektu.
+podczas Uchwyt dla menu dołączonego do obiektu `CMFCMenuBar`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1022,7 +1022,7 @@ podczas [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informac
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik dodaje nowe przyciski do paska menu, struktura tworzy przyciski dynamicznie. Domyślnie tworzy `CMFCMenuButton` obiekty. Zastąp tę metodę, aby zmienić typ obiektów Button tworzonych przez strukturę.
+Gdy użytkownik dodaje nowe przyciski do paska menu, struktura tworzy przyciski dynamicznie. Domyślnie tworzy `CMFCMenuButton` obiektów. Zastąp tę metodę, aby zmienić typ obiektów Button tworzonych przez strukturę.
 
 ##  <a name="setmenufont"></a>CMFCMenuBar::SetMenuFont
 
@@ -1048,9 +1048,9 @@ Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Dla wszystkich `CMFCMenuBar` obiektów są używane dwie czcionki. Te oddzielne czcionki są używane dla pionowych pasków menu.
+Dla wszystkich obiektów `CMFCMenuBar` są używane dwie czcionki. Te oddzielne czcionki są używane dla pionowych pasków menu.
 
-Ustawienia czcionki są zmiennymi globalnymi i mają wpływ `CMFCMenuBar` na wszystkie obiekty.
+Ustawienia czcionki są zmiennymi globalnymi i mają wpływ na wszystkie obiekty `CMFCMenuBar`.
 
 ##  <a name="setrecentlyusedmenus"></a>CMFCMenuBar::SetRecentlyUsedMenus
 

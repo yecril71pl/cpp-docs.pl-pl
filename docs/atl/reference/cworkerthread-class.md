@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496115"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862936"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
@@ -78,9 +78,9 @@ Klasa dostarczająca funkcję tworzenia wątku, na przykład [CRTThreadTraits](.
 
 1. Wywołaj [CWorkerThread:: AddHandle](#addhandle) z dojściem obiektu jądra i wskaźnikiem do implementacji elementu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-   \- lub —
+   \- lub-
 
-   Wywołaj [CWorkerThread::](#addtimer) addtimeer ze wskaźnikiem do implementacji elementu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Wywołaj [CWorkerThread:: Addtimeer](#addtimer) ze wskaźnikiem do implementacji elementu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
 1. Zaimplementuj [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) , aby wykonać jakąś akcję, gdy dojście lub czasomierz są sygnalizowane.
 
@@ -225,7 +225,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta metoda powinna być wywoływana w celu zainicjowania obiektu po utworzeniu lub po wywołaniu [CWorkerThread:: Shutdown](#shutdown).
 
-Aby dwa lub więcej `CWorkerThread` obiektów używały tego samego wątku roboczego, zainicjuj jeden z nich bez przekazywania jakichkolwiek argumentów, a następnie Przekaż wskaźnik do tego obiektu `Initialize` do metod innych. Obiekty zainicjowane przy użyciu wskaźnika powinny zostać zamknięte przed obiektem użytym do jego zainicjowania.
+Aby dwa lub więcej obiektów `CWorkerThread` używały tego samego wątku roboczego, zainicjuj jeden z nich bez przekazywania jakichkolwiek argumentów, a następnie Przekaż wskaźnik do tego obiektu do `Initialize` metod innych. Obiekty zainicjowane przy użyciu wskaźnika powinny zostać zamknięte przed obiektem użytym do jego zainicjowania.
 
 Zobacz [CWorkerThread:: Shutdown](#shutdown) , aby uzyskać informacje na temat zmiany zachowania tej metody po zainicjowaniu jej przy użyciu wskaźnika do istniejącego obiektu.
 
@@ -248,7 +248,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Po usunięciu dojścia [IWorkerThreadClient:: funkcja CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) zostanie wywołana dla skojarzonego obiektu, który został przekazano [](#addhandle)do funkcji AddHandle. Jeśli to wywołanie zakończy `CWorkerThread` się niepowodzeniem, wywoła funkcję [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) systemu Windows w dojściu.
+Po usunięciu dojścia [IWorkerThreadClient:: funkcja CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) zostanie wywołana dla skojarzonego obiektu, który został przekazano do funkcji [AddHandle](#addhandle). Jeśli to wywołanie zakończy się niepowodzeniem, `CWorkerThread` wywoła funkcję [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) systemu Windows na dojście.
 
 ##  <a name="shutdown"></a>CWorkerThread:: Shutdown
 
@@ -265,13 +265,13 @@ Czas (w milisekundach) oczekiwania na zamknięcie wątku roboczego. ATL_WORKER_T
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia, na przykład w przypadku przekroczenia limitu czasu *dwWait*.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia, na przykład w przypadku przekroczenia limitu czasu, *dwWait*.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby ponownie użyć obiektu, wywołaj [CWorkerThread:: Initialize](#initialize) po wywołaniu tej metody.
 
-Należy zauważyć, `Shutdown` że wywołanie obiektu zainicjowanego ze wskaźnikiem `CWorkerThread` do innego obiektu nie ma żadnego efektu i zawsze zwraca S_OK.
+Należy zauważyć, że wywołanie `Shutdown` na obiekcie zainicjowanym za pomocą wskaźnika do innego obiektu `CWorkerThread` nie ma żadnego efektu i zawsze zwraca S_OK.
 
 ## <a name="see-also"></a>Zobacz także
 

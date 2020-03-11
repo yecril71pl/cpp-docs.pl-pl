@@ -50,11 +50,11 @@ helpviewer_keywords:
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
 ms.openlocfilehash: ded158b0ec862de5b0d0b23dd4b9edb50ad577ef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495729"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862935"
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa, która pochodzi od `IOleObjectImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -82,24 +82,24 @@ Klasa, która pochodzi od `IOleObjectImpl`.
 |Nazwa|Opis|
 |----------|-----------------|
 |[IOleObjectImpl:: Advise](#advise)|Nawiązuje połączenie doradcze z kontrolką.|
-|[IOleObjectImpl::Close](#close)|Zmienia stan formantu z uruchamiania na załadowany.|
-|[IOleObjectImpl::DoVerb](#doverb)|Instruuje formant, aby wykonał jedną z wyliczonych akcji.|
-|[IOleObjectImpl::DoVerbDiscardUndo](#doverbdiscardundo)|Informuje formant, aby odrzucił stan wycofania, który jest konserwowany.|
-|[IOleObjectImpl::DoVerbHide](#doverbhide)|Instruuje formant, aby usunął interfejs użytkownika z widoku.|
-|[IOleObjectImpl::DoVerbInPlaceActivate](#doverbinplaceactivate)|Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika kontrolki.|
-|[IOleObjectImpl::DoVerbOpen](#doverbopen)|Powoduje, że kontrolka jest otwierana w osobnym oknie.|
+|[IOleObjectImpl:: Close](#close)|Zmienia stan formantu z uruchamiania na załadowany.|
+|[IOleObjectImpl::D oVerb](#doverb)|Instruuje formant, aby wykonał jedną z wyliczonych akcji.|
+|[IOleObjectImpl::D oVerbDiscardUndo](#doverbdiscardundo)|Informuje formant, aby odrzucił stan wycofania, który jest konserwowany.|
+|[IOleObjectImpl::D oVerbHide](#doverbhide)|Instruuje formant, aby usunął interfejs użytkownika z widoku.|
+|[IOleObjectImpl::D oVerbInPlaceActivate](#doverbinplaceactivate)|Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika kontrolki.|
+|[IOleObjectImpl::D oVerbOpen](#doverbopen)|Powoduje, że kontrolka jest otwierana w osobnym oknie.|
 |[IOleObjectImpl::D oVerbPrimary](#doverbprimary)|Wykonuje określoną akcję po dwukrotnym kliknięciu kontrolki przez użytkownika. Formant definiuje akcję, zazwyczaj w celu aktywowania kontrolki w miejscu.|
-|[IOleObjectImpl::DoVerbShow](#doverbshow)|Pokazuje nowo wstawiony formant użytkownikowi.|
-|[IOleObjectImpl::DoVerbUIActivate](#doverbuiactivate)|Uaktywnia formant w miejscu i pokazuje interfejs użytkownika kontrolki, taki jak menu i paski narzędzi.|
+|[IOleObjectImpl::D oVerbShow](#doverbshow)|Pokazuje nowo wstawiony formant użytkownikowi.|
+|[IOleObjectImpl::D oVerbUIActivate](#doverbuiactivate)|Uaktywnia formant w miejscu i pokazuje interfejs użytkownika kontrolki, taki jak menu i paski narzędzi.|
 |[IOleObjectImpl::EnumAdvise](#enumadvise)|Wylicza połączenia doradcze kontrolki.|
 |[IOleObjectImpl::EnumVerbs](#enumverbs)|Wylicza akcje dla kontrolki.|
 |[IOleObjectImpl::GetClientSite](#getclientsite)|Pobiera lokację klienta kontrolki.|
 |[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Pobiera dane ze schowka. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::GetExtent](#getextent)|Pobiera zakres obszaru wyświetlania formantu.|
+|[IOleObjectImpl:: getzakres](#getextent)|Pobiera zakres obszaru wyświetlania formantu.|
 |[IOleObjectImpl::GetMiscStatus](#getmiscstatus)|Pobiera stan formantu.|
-|[IOleObjectImpl::GetMoniker](#getmoniker)|Pobiera moniker kontrolki. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl:: GetMoniker](#getmoniker)|Pobiera moniker kontrolki. Implementacja ATL zwraca E_NOTIMPL.|
 |[IOleObjectImpl::GetUserClassID](#getuserclassid)|Pobiera identyfikator klasy kontrolki.|
-|[IOleObjectImpl::GetUserType](#getusertype)|Pobiera nazwę typu użytkownika kontrolki.|
+|[IOleObjectImpl:: GetUserType](#getusertype)|Pobiera nazwę typu użytkownika kontrolki.|
 |[IOleObjectImpl::InitFromData](#initfromdata)|Inicjuje kontrolkę z wybranych danych. Implementacja ATL zwraca E_NOTIMPL.|
 |[IOleObjectImpl::IsUpToDate](#isuptodate)|Sprawdza, czy kontrolka jest aktualna. Implementacja ATL zwraca S_OK.|
 |[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuconym stanie cofania.|
@@ -116,17 +116,17 @@ Klasa, która pochodzi od `IOleObjectImpl`.
 |[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed aktywowaniem interfejsu użytkownika kontrolki.|
 |[IOleObjectImpl::SetClientSite](#setclientsite)|Informuje formant o swojej lokacji klienta w kontenerze.|
 |[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Zaleca schemat kolorów dla aplikacji kontrolki, jeśli istnieje. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::SetExtent](#setextent)|Ustawia zakres obszaru wyświetlania formantu.|
-|[IOleObjectImpl::SetHostNames](#sethostnames)|Informuje kontrolkę o nazwie aplikacji kontenera i dokumentu kontenera.|
-|[IOleObjectImpl::SetMoniker](#setmoniker)|Informuje formant o tym, jaki jest jego moniker. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::Unadvise](#unadvise)|Usuwa połączenie doradcze z kontrolką.|
+|[IOleObjectImpl:: setzakres](#setextent)|Ustawia zakres obszaru wyświetlania formantu.|
+|[IOleObjectImpl:: SetHostNames](#sethostnames)|Informuje kontrolkę o nazwie aplikacji kontenera i dokumentu kontenera.|
+|[IOleObjectImpl:: SetMoniker](#setmoniker)|Informuje formant o tym, jaki jest jego moniker. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl:: Unadvise](#unadvise)|Usuwa połączenie doradcze z kontrolką.|
 |[IOleObjectImpl:: Update](#update)|Aktualizuje formant. Implementacja ATL zwraca S_OK.|
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejs [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) jest interfejsem głównym, za pomocą którego kontener komunikuje się z kontrolką. Klasa `IOleObjectImpl` zapewnia domyślną implementację tego interfejsu i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Interfejs [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) jest interfejsem głównym, za pomocą którego kontener komunikuje się z kontrolką. `IOleObjectImpl` klasy zapewnia domyślną implementację tego interfejsu i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+[Samouczki dotyczące biblioteki](../../atl/active-template-library-atl-tutorial.md)ATL, [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -162,9 +162,9 @@ STDMETHOD(Close)(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>Uwagi
 
-Dezaktywuje formant i niszczy okno kontroli, jeśli istnieje. Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) ma wartość true, a parametr *DWSAVEOPTION* ma wartość OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE, właściwości kontrolki są zapisywane przed zamknięciem.
+Dezaktywuje formant i niszczy okno kontroli, jeśli istnieje. Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) ma wartość true, a parametr *dwSaveOption* ma wartość OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE, właściwości kontrolki są zapisywane przed zamknięciem.
 
-Wskaźniki przechowywane w elementach członkowskich danych klasy kontroli [CComControlBase:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) i [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) zostały wydane, a elementy członkowskie danych [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase:: m_ bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)i [CComControlBase:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) są ustawione na wartość false.
+Wskaźniki przechowywane w elementach członkowskich danych klasy kontrolki [CComControlBase:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) i [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) zostały wydane, a elementy członkowskie danych [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase:: m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)i [CComControlBase:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) są ustawione na wartość false.
 
 Zobacz [IOleObject:: Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) w Windows SDK.
 
@@ -184,7 +184,7 @@ STDMETHOD(DoVerb)(
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od wartości `iVerb`, jedna z funkcji pomocnika ATL `DoVerb` jest wywoływana w następujący sposób:
+W zależności od wartości `iVerb`jedną z funkcji pomocnika ATL `DoVerb` jest wywoływana w następujący sposób:
 
 |*iVerb* Wartościami|Wywołano funkcję pomocnika DoVerb|
 |-------------------|-----------------------------------|
@@ -193,7 +193,7 @@ W zależności od wartości `iVerb`, jedna z funkcji pomocnika ATL `DoVerb` jest
 |OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceActivate](#doverbinplaceactivate)|
 |OLEIVERB_OPEN|[DoVerbOpen](#doverbopen)|
 |OLEIVERB_PRIMARY|[DoVerbPrimary](#doverbprimary)|
-|OLEIVERB_PROPERTIES|[CComControlBase::DoVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
+|OLEIVERB_PROPERTIES|[CComControlBase::D oVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|
 
@@ -261,7 +261,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Uaktywnia formant w miejscu przez wywołanie [CComControlBase:: InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Chyba że element członkowski `m_bWindowOnly` danych klasy kontroli ma wartość true, `DoVerbInPlaceActivate` najpierw próbuje uaktywnić formant jako kontrolkę bez okna (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant z rozszerzonymi funkcjami (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant bez rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). W przypadku pomyślnego aktywacji funkcja powiadamia kontener, że formant został aktywowany.
+Uaktywnia formant w miejscu przez wywołanie [CComControlBase:: InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Chyba że element członkowski danych klasy kontrolki `m_bWindowOnly` ma wartość TRUE, `DoVerbInPlaceActivate` najpierw próbuje uaktywnić formant jako kontrolkę bez okna (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant z rozszerzonymi funkcjami (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant bez rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). W przypadku pomyślnego aktywacji funkcja powiadamia kontener, że formant został aktywowany.
 
 ##  <a name="doverbopen"></a>IOleObjectImpl::D oVerbOpen
 
@@ -421,7 +421,7 @@ Zobacz [IOleObject:: getzakres](/windows/win32/api/oleidl/nf-oleidl-ioleobject-g
 
 ##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
 
-Zwraca wskaźnik do zarejestrowanych informacji o stanie dla kontrolki przez wywołanie `OleRegGetMiscStatus`.
+Zwraca wskaźnik do zarejestrowanych informacji o stanie dla kontrolki, wywołując `OleRegGetMiscStatus`.
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -480,7 +480,7 @@ STDMETHOD(GetUserType)(
 
 Nazwa typu użytkownika jest używana do wyświetlania w elementach interfejsów użytkownika, takich jak menu i okna dialogowe. W pliku. RGS projektu można zmienić nazwę typu użytkownika.
 
-Zobacz [IOleObject::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) GetUserType w Windows SDK.
+Zobacz [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) w Windows SDK.
 
 ##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData
 
@@ -709,7 +709,7 @@ Zwraca S_OK.
 
 Aby zapobiec aktywacji interfejsu użytkownika kontrolki, Zastąp tę metodę, aby zwrócić błąd HRESULT.
 
-##  <a name="setclientsite"></a>  IOleObjectImpl::SetClientSite
+##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite
 
 Informuje formant o swojej lokacji klienta w kontenerze.
 
@@ -751,11 +751,11 @@ STDMETHOD(SetExtent)(
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwnym razie `psizel` przechowujewartośćwskazywanąprzezelementczłonkowskidanychklasyformantuCComControlBase`SetExtent` [:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Ta wartość jest w jednostkach HIMETRIC (0,01 milimetr na jednostkę).
+W przeciwnym razie `SetExtent` przechowuje wartość wskazywaną przez `psizel` w elemencie członkowskim danych klasy formantu [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Ta wartość jest w jednostkach HIMETRIC (0,01 milimetr na jednostkę).
 
-Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) ma wartość `SetExtent` true, również przechowuje wartość wskazywaną `psizel` przez element członkowski danych klasy kontroli [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
+Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) ma wartość TRUE, `SetExtent` również przechowuje wartość wskazywaną przez `psizel` w elemencie członkowskim danych klasy sterowania [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
 
-Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) ma wartość `SetExtent` true `SendOnDataChange` , `SendOnViewChange` wywołuje i powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza powiadomienia o zmianie rozmiaru kontrolki.
+Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) ma wartość TRUE, `SetExtent` wywołuje `SendOnDataChange` i `SendOnViewChange`, aby powiadomić wszystkie ujścia doradców zarejestrowane przez posiadacza powiadomienia o zmianie rozmiaru kontrolki.
 
 Zobacz [IOleObject:: setstop](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) w Windows SDK.
 
@@ -773,7 +773,7 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) SetHostNames w Windows SDK.
+Zobacz [IOleObject:: SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) w Windows SDK.
 
 ##  <a name="setmoniker"></a>IOleObjectImpl:: SetMoniker
 
@@ -795,7 +795,7 @@ Zobacz [IOleObject:: SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-
 
 ##  <a name="unadvise"></a>IOleObjectImpl:: Unadvise
 
-Usuwa połączenie doradcze przechowywane w składowej `m_spOleAdviseHolder` danych klasy formantu.
+Usuwa połączenie doradcze przechowywane w `m_spOleAdviseHolder` element członkowski danych klasy formantu.
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);

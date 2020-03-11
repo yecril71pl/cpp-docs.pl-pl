@@ -29,11 +29,11 @@ helpviewer_keywords:
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 ms.openlocfilehash: b88b745e3b70cf030f77f247ab03cd69d910109f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502085"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855647"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -58,8 +58,8 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 |[ON_MESSAGE](#on_message)|Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika.|
 |[ON_OLECMD](#on_olecmd)|Wskazuje, która funkcja będzie obsługiwać polecenie menu z DocObject lub jego kontenera.|
 |[ON_REGISTERED_MESSAGE](#on_registered_message)|Wskazuje, która funkcja będzie obsługiwać zarejestrowany komunikat zdefiniowany przez użytkownika.|
-|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Wskazuje, która funkcja będzie obsługiwać zarejestrowany komunikat zdefiniowany przez użytkownika, gdy użytkownik ma `CWinThread` klasę.|
-|[ON_THREAD_MESSAGE](#on_thread_message)|Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika, gdy posiadasz `CWinThread` klasę.|
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Wskazuje, która funkcja będzie obsługiwać zarejestrowany komunikat zdefiniowany przez użytkownika, gdy istnieje Klasa `CWinThread`.|
+|[ON_THREAD_MESSAGE](#on_thread_message)|Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika, gdy istnieje Klasa `CWinThread`.|
 |[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Wskazuje, która funkcja będzie obsługiwać określony komunikat polecenia aktualizacji interfejsu użytkownika.|
 
 ### <a name="message-map-range-macros"></a>Makra zakresu mapy komunikatów
@@ -92,7 +92,7 @@ Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (. cpp), który definiuje funkcje elementów członkowskich klasy, uruchom mapę komunikatów za pomocą makra BEGIN_MESSAGE_MAP, a następnie Dodaj wpisy makr dla każdej funkcji obsługi komunikatów i Ukończ Mapowanie komunikatów za pomocą END_MESSAGE_MAP makro.
+W pliku implementacji (. cpp), który definiuje funkcje elementu członkowskiego dla klasy, uruchom mapę komunikatów za pomocą makra BEGIN_MESSAGE_MAP, a następnie Dodaj wpisy makr dla każdej funkcji obsługi komunikatów i Ukończ Mapowanie komunikatów przy użyciu END_MESSAGE_MAP makro.
 
 Aby uzyskać więcej informacji na temat map wiadomości, zobacz [mapy komunikatów](message-maps-mfc.md)
 
@@ -133,9 +133,9 @@ Określa nazwę klasy bazowej *theClass*.
 
 To makro jest podobne do makra [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) ; to makro jest jednak przeznaczone dla klas zawierających pojedynczy argument szablonu.
 
-W sekcji implementacja metody klasy Uruchom mapę komunikatów za pomocą makra BEGIN_TEMPLATE_MESSAGE_MAP; następnie Dodaj wpisy makr dla każdej metody obsługi komunikatów, tak jak w przypadku standardowej mapy komunikatów. Podobnie jak w przypadku makra BEGIN_MESSAGE_MAP, Wypełnij mapę wiadomości szablonu za pomocą makra [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) .
+W sekcji implementacja metody klasy Uruchom mapę wiadomości za pomocą makra BEGIN_TEMPLATE_MESSAGE_MAP; następnie Dodaj wpisy makr dla każdej metody obsługi komunikatów, tak jak w przypadku standardowej mapy komunikatów. Tak jak w przypadku makra BEGIN_MESSAGE_MAP, Wypełnij mapę komunikatów szablonu za pomocą makra [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) .
 
-Aby uzyskać więcej informacji na temat implementowania map komunikatów dla klas szablonów [, zobacz How to: Utwórz mapę komunikatów dla klasy](../how-to-create-a-message-map-for-a-template-class.md)szablonu.
+Aby uzyskać więcej informacji na temat implementowania map komunikatów dla klas szablonów, zobacz [jak: Tworzenie mapy komunikatów dla klasy szablonu](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -143,7 +143,7 @@ Aby uzyskać więcej informacji na temat implementowania map komunikatów dla kl
 
 ## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
 
-Deklaruje, że klasa definiuje mapę komunikatów. Każda `CCmdTarget`Klasa pochodna w programie musi udostępniać mapę komunikatów do obsługi komunikatów.
+Deklaruje, że klasa definiuje mapę komunikatów. Każda klasa pochodna `CCmdTarget`w programie musi udostępniać mapę komunikatów do obsługi komunikatów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -156,7 +156,7 @@ DECLARE_MESSAGE_MAP( )
 Użyj makra DECLARE_MESSAGE_MAP na końcu deklaracji klasy. Następnie w pliku. cpp, który definiuje funkcje elementu członkowskiego dla klasy, użyj makra BEGIN_MESSAGE_MAP, wpisów makr dla każdej funkcji obsługi komunikatów i makra END_MESSAGE_MAP.
 
 > [!NOTE]
->  W przypadku deklarowania dowolnego elementu członkowskiego po DECLARE_MESSAGE_MAP należy określić dla nich nowy typ dostępu (**publiczny**, **prywatny**lub **chroniony**).
+>  Jeśli zadeklarujesz dowolny element członkowski po DECLARE_MESSAGE_MAP, musisz określić nowy typ dostępu (**publiczny**, **prywatny**lub **chroniony**).
 
 Aby uzyskać więcej informacji na temat map komunikatów i makra DECLARE_MESSAGE_MAP, zobacz [temat Obsługa komunikatów i mapowanie](../../mfc/message-handling-and-mapping.md).
 
@@ -214,9 +214,9 @@ Nazwa funkcji obsługi komunikatów, do której zostało zamapowane polecenie.
 
 Wskazuje, która funkcja będzie obsługiwać komunikat polecenia z obiektu interfejsu użytkownika polecenia, takiego jak element menu lub przycisk paska narzędzi.
 
-Gdy obiekt docelowy polecenia odbiera komunikat WM_COMMAND systemu Windows o określonym identyfikatorze, ON_COMMAND wywoła funkcję `memberFxn` członkowską, aby obsłużyć komunikat.
+Gdy obiekt docelowy polecenia odbiera komunikat WM_COMMAND systemu Windows o określonym IDENTYFIKATORze, ON_COMMAND wywoła funkcję członkowską `memberFxn` do obsługi wiadomości.
 
-Użyj ON_COMMAND, aby zmapować pojedyncze polecenie do funkcji członkowskiej. Użyj [ON_COMMAND_RANGE](#on_command_range) do mapowania zakresu identyfikatorów poleceń na jedną funkcję członkowską. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikatów i mapowanie](../../mfc/message-handling-and-mapping.md).
+Użyj ON_COMMAND, aby zmapować pojedyncze polecenie do funkcji członkowskiej. Użyj [ON_COMMAND_RANGE](#on_command_range) , aby zmapować zakres identyfikatorów poleceń na jedną funkcję członkowską. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikatów i mapowanie](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Przykład
 
@@ -252,7 +252,7 @@ Nazwa funkcji obsługi komunikatów, do której zostało zamapowane polecenie.
 
 Rozszerzona forma obsługi komunikatów poleceń jest dostępna do użycia zaawansowanego. Makro ON_COMMAND_EX służy do obsługi komunikatów i zapewnia nadzbiór funkcji [ON_COMMAND](message-map-macros-mfc.md#on_command) . Rozszerzone funkcje składowe programu obsługi poleceń przyjmują jeden parametr, UINT zawierający identyfikator polecenia i zwracają wartość logiczną. Wartość zwracana powinna mieć wartość TRUE, aby wskazać, że polecenie zostało obsłużone; w przeciwnym razie Routing będzie kontynuował inne obiekty docelowe poleceń.
 
-Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: Mapy komunikatów] tm006-Message-maps.md).
+Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: Message Maps] tm006-Message-maps.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -270,7 +270,7 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*wNotifyCode*<br/>
+*Włącz wNotifyCode*<br/>
 Kod powiadomienia dla kontrolki.
 
 *commandId*<br/>
@@ -283,7 +283,7 @@ Nazwa funkcji obsługi komunikatów, do której zostało zamapowane polecenie.
 
 Komunikaty powiadomień sterujące są tymi, które są wysyłane z kontrolki do okna nadrzędnego.
 
-Dla każdej wiadomości z powiadomieniem o kontroli, która musi zostać zmapowana do funkcji obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja makra ON_CONTROL.
+Dla każdej wiadomości z powiadomieniem o kontroli, która musi być zamapowana na funkcję programu obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja ON_CONTROL makra.
 
 Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikatów i mapowanie](../../mfc/message-handling-and-mapping.md).
 
@@ -309,16 +309,16 @@ Identyfikator komunikatu.
 *memberFxn*<br/>
 Nazwa funkcji obsługi komunikatów, do której jest mapowany komunikat.
 
-Typem funkcji musi być `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.
+Typ funkcji musi być `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.
 
 ### <a name="remarks"></a>Uwagi
 
-Komunikaty zdefiniowane przez użytkownika to komunikaty, które nie są standardowymi komunikatami WM_MESSAGE systemu Windows. W przypadku wybrania identyfikatora wiadomości należy użyć wartości z zakresu od WM_USER (0x0400) do 0x7FFF lub WM_APP (0x8000) na 0xBFFF. Aby uzyskać więcej informacji dotyczących identyfikatorów wiadomości, zobacz [WM_APP](/windows/win32/winmsg/wm-app).
+Komunikaty zdefiniowane przez użytkownika to komunikaty, które nie są standardowymi komunikatami systemu Windows WM_MESSAGE. Podczas wybierania identyfikatora wiadomości należy użyć wartości z zakresu WM_USER (0x0400) na 0x7FFF lub WM_APP (0x8000) do 0xBFFF. Aby uzyskać więcej informacji dotyczących identyfikatorów wiadomości, zobacz [WM_APP](/windows/win32/winmsg/wm-app).
 
-Dla każdej wiadomości zdefiniowanej przez użytkownika, która musi zostać zmapowana do funkcji obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja makra ON_MESSAGE.
+Dla każdej wiadomości zdefiniowanej przez użytkownika, która musi zostać zmapowana do funkcji obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja ON_MESSAGE makra.
 
 > [!NOTE]
->  Oprócz komunikatów zdefiniowanych przez użytkownika, ON_MESSAGE obsługuje mniej typowe komunikaty systemu Windows. Aby uzyskać więcej informacji, zobacz [mapy komunikatów](../../mfc/tn006-message-maps.md).
+>  Oprócz komunikatów zdefiniowanych przez użytkownika ON_MESSAGE obsługuje mniej typowe komunikaty systemu Windows. Aby uzyskać więcej informacji, zobacz [mapy komunikatów](../../mfc/tn006-message-maps.md).
 
 Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikatów i mapowanie tematów](../../mfc/message-handling-and-mapping.md) oraz [programy obsługi zdefiniowane przez użytkownika](user-defined-handlers.md)
 
@@ -351,7 +351,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 ## <a name="on_olecmd"></a>ON_OLECMD
 
-Kieruje polecenia za pomocą interfejsu `IOleCommandTarget`wysyłania poleceń.
+Kieruje polecenia za pomocą polecenia `IOleCommandTarget`interfejsie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -372,103 +372,103 @@ Identyfikator menu, identyfikator paska narzędzi, identyfikator przycisku lub i
 
 ### <a name="remarks"></a>Uwagi
 
-`IOleCommandTarget`umożliwia kontenerowi otrzymywanie poleceń, które pochodzą z interfejsu użytkownika DocObject, i umożliwia kontenerowi wysyłanie tych samych poleceń (takich jak New, Open, SaveAs i Print w menu plik, a następnie kopiowanie, wklejanie, cofanie i tak dalej w menu Edycja) do DocObject.
+`IOleCommandTarget` umożliwia kontenerowi otrzymywanie poleceń, które pochodzą z interfejsu użytkownika DocObject, i umożliwia kontenerowi wysyłanie tych samych poleceń (takich jak New, Open, SaveAs i Print w menu plik, a następnie kopiowanie, wklejanie, cofanie i tak dalej w menu Edycja) do DocObject.
 
-`IOleCommandTarget`jest prostsze niż Automatyzacja `IDispatch`OLE. `IOleCommandTarget`opiera się wyłącznie na standardowym zestawie poleceń, które rzadko mają argumenty, i nie ma żadnych informacji o typie (bezpieczeństwo typu jest również zmniejszane dla argumentów polecenia). Jeśli konieczne jest wysłanie poleceń z argumentami, użyj [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
+`IOleCommandTarget` jest prostsze niż `IDispatch`automatyzacji OLE. `IOleCommandTarget` opiera się wyłącznie na standardowym zestawie poleceń, które rzadko mają argumenty, i nie są związane żadne informacje o typie (w przypadku argumentów polecenia są również zmniejszane zabezpieczenia typu). Jeśli konieczne jest wysłanie poleceń z argumentami, użyj [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
 
-`IOleCommandTarget` Standardowe polecenia menu zostały zaimplementowane przez MFC w następujących makrach:
+`IOleCommandTarget` polecenia menu standardowego zostały zaimplementowane przez MFC w następujących makrach:
 
-**ON_OLECMD_CLEARSELECTION( )**
+**ON_OLECMD_CLEARSELECTION ()**
 
 Wysyła polecenie Edytuj Wyczyść. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY( )**
+**ON_OLECMD_COPY ()**
 
 Wysyła polecenie Edytuj kopię. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT( )**
+**ON_OLECMD_CUT ()**
 
 Wysyła polecenie Edit Wytnij. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW( )**
+**ON_OLECMD_NEW ()**
 
 Wysyła plik nowe polecenie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN( )**
+**ON_OLECMD_OPEN ()**
 
 Wysyła polecenie otwarcia pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP( )**
+**ON_OLECMD_PAGESETUP ()**
 
 Wysyła polecenie Ustawienia strony pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE( )**
+**ON_OLECMD_PASTE ()**
 
 Wysyła polecenie Edytuj Wklej. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL( )**
+**ON_OLECMD_PASTESPECIAL ()**
 
 Wysyła polecenie Edytuj Wklej specjalnie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT( )**
+**ON_OLECMD_PRINT ()**
 
 Wysyła polecenie plik Print. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW( )**
+**ON_OLECMD_PRINTPREVIEW ()**
 
 Wysyła polecenie podglądu wydruku pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO( )**
+**ON_OLECMD_REDO ()**
 
 Wysyła polecenie Edytuj ponownie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE( )**
+**ON_OLECMD_SAVE ()**
 
 Wysyła polecenie zapisania pliku. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS( )**
+**ON_OLECMD_SAVE_AS ()**
 
 Wysyła plik Zapisz jako polecenie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS( )**
+**ON_OLECMD_SAVE_COPY_AS ()**
 
 Wysyła plik Zapisz kopię jako polecenie. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL( )**
+**ON_OLECMD_SELECTALL ()**
 
 Wysyła polecenie Edytuj Zaznacz wszystko. Zaimplementowane jako:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO( )**
+**ON_OLECMD_UNDO ()**
 
 Wysyła polecenie Edit Undo. Zaimplementowane jako:
 
@@ -480,7 +480,7 @@ Wysyła polecenie Edit Undo. Zaimplementowane jako:
 
 ## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
 
-Funkcja systemu `RegisterWindowMessage` Windows służy do definiowania nowego komunikatu okna, który ma być unikatowy w całym systemie.
+Funkcja Windows `RegisterWindowMessage` służy do definiowania nowego komunikatu w oknie, który ma być unikatowy w całym systemie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -536,7 +536,7 @@ Nazwa funkcji CWinThread-Message-Handler, do której jest mapowany komunikat.
 
 ### <a name="remarks"></a>Uwagi
 
-RegisterWindowMessage służy do definiowania nowego komunikatu okna, który ma być unikatowy w całym systemie. ON_REGISTERED_THREAD_MESSAGE musi być używana zamiast ON_REGISTERED_MESSAGE, gdy istnieje Klasa CWinThread.
+RegisterWindowMessage służy do definiowania nowego komunikatu okna, który ma być unikatowy w całym systemie. ON_REGISTERED_THREAD_MESSAGE należy użyć zamiast ON_REGISTERED_MESSAGE, gdy istnieje Klasa CWinThread.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -558,11 +558,11 @@ ON_THREAD_MESSAGE( message, memberFxn )
 Identyfikator komunikatu.
 
 *memberFxn*<br/>
-Nazwa `CWinThread`funkcji obsługi komunikatów, do której jest mapowany komunikat.
+Nazwa funkcji programu obsługi komunikatów `CWinThread`, do której jest mapowany komunikat.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku `CWinThread` klasy należy użyć ON_THREAD_MESSAGE zamiast ON_MESSAGE. Komunikaty zdefiniowane przez użytkownika to komunikaty, które nie są standardowymi komunikatami WM_MESSAGE systemu Windows. Dla każdej wiadomości zdefiniowanej przez użytkownika, która musi zostać zmapowana do funkcji obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja makra ON_THREAD_MESSAGE.
+ON_THREAD_MESSAGE należy używać zamiast ON_MESSAGE, gdy istnieje Klasa `CWinThread`. Komunikaty zdefiniowane przez użytkownika to komunikaty, które nie są standardowymi komunikatami systemu Windows WM_MESSAGE. Dla każdej wiadomości zdefiniowanej przez użytkownika, która musi zostać zmapowana do funkcji obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja ON_THREAD_MESSAGE makra.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -588,7 +588,7 @@ Nazwa funkcji obsługi komunikatów, do której jest mapowany komunikat.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla każdego polecenia aktualizacji interfejsu użytkownika, które musi zostać zamapowane na funkcję programu obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja makra ON_UPDATE_COMMAND_UI.
+Dla każdego polecenia aktualizacji interfejsu użytkownika, które musi zostać zamapowane na funkcję programu obsługi komunikatów, powinna istnieć dokładnie jedna instrukcja ON_UPDATE_COMMAND_UI makra.
 
 Aby uzyskać więcej informacji i przykładów, zobacz [temat Obsługa komunikatów i mapowanie](../../mfc/message-handling-and-mapping.md).
 
@@ -608,10 +608,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*id1*<br/>
+*ID1*<br/>
 Identyfikator polecenia na początku ciągłego zakresu identyfikatorów poleceń.
 
-*id2*<br/>
+*ID2*<br/>
 Identyfikator polecenia na końcu ciągłego zakresu identyfikatorów poleceń.
 
 *memberFxn*<br/>
@@ -621,7 +621,7 @@ Nazwa funkcji obsługi komunikatów, do której są mapowane polecenia.
 
 Zakres identyfikatorów rozpoczyna się od *ID1* i kończą się *ID2*.
 
-Użyj ON_COMMAND_RANGE do mapowania zakresu identyfikatorów poleceń na jedną funkcję członkowską. Użyj [ON_COMMAND](#on_command) , aby zmapować pojedyncze polecenie do funkcji członkowskiej. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji na temat mapowania zakresów komunikatów, zobacz [programy obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
+Użyj ON_COMMAND_RANGE, aby zmapować zakres identyfikatorów poleceń na jedną funkcję członkowską. Użyj [ON_COMMAND](#on_command) , aby zmapować pojedyncze polecenie do funkcji członkowskiej. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji na temat mapowania zakresów komunikatów, zobacz [programy obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
 
 Nie ma automatycznej obsługi dla zakresów map wiadomości, dlatego należy samodzielnie umieścić makro.
 
@@ -651,7 +651,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
 
 Mapuje ciągły zakres identyfikatorów poleceń na pojedynczą funkcję obsługi komunikatów aktualizacji.
 
@@ -663,10 +663,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*id1*<br/>
+*ID1*<br/>
 Identyfikator polecenia na początku ciągłego zakresu identyfikatorów poleceń.
 
-*id2*<br/>
+*ID2*<br/>
 Identyfikator polecenia na końcu ciągłego zakresu identyfikatorów poleceń.
 
 *memberFxn*<br/>
@@ -694,13 +694,13 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*wNotifyCode*<br/>
+*Włącz wNotifyCode*<br/>
 Kod powiadomienia, na który odpowiada program obsługi.
 
-*id1*<br/>
+*ID1*<br/>
 Identyfikator polecenia na początku ciągłego zakresu identyfikatorów sterowania.
 
-*id2*<br/>
+*ID2*<br/>
 Identyfikator polecenia na końcu ciągłego zakresu identyfikatorów kontrolek.
 
 *memberFxn*<br/>

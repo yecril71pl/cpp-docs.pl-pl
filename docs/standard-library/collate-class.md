@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689812"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866161"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
@@ -108,10 +108,10 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
-*_Locname* \
+*_Locname*\
 Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Wskaźnik do pierwszego elementu w pierwszej sekwencji, który ma zostać porównany.
 
-*last1* \
+*last1*\
 Wskaźnik do ostatniego elementu w pierwszej sekwencji, który ma zostać porównany.
 
-*first2* \
+*first2*\
 Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porównany.
 
-*last2* \
+*last2*\
 Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>COLLATE::d o_compare
+## <a name="do_compare"></a>sortowanie::d o_compare
 
 Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.
 
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Wskaźnik do pierwszego elementu w pierwszej sekwencji, który ma zostać porównany.
 
-*last1* \
+*last1*\
 Wskaźnik do ostatniego elementu w pierwszej sekwencji, który ma zostać porównany.
 
-*first2* \
+*first2*\
 Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porównany.
 
-*last2* \
+*last2*\
 Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -235,7 +235,7 @@ Chroniona funkcja wirtualna elementu członkowskiego porównuje sekwencję z [* 
 
 Zobacz przykład dla [instrukcji COLLATE:: Compare](#compare), która wywołuje `do_compare`.
 
-## <a name="do_hash"></a>COLLATE::d o_hash
+## <a name="do_hash"></a>sortowanie::d o_hash
 
 Funkcja wirtualna wywoływana w celu określenia wartości mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określona.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -263,7 +263,7 @@ Wartość skrótu może być przydatna na przykład w przypadku dystrybuowania s
 
 Zobacz przykład dla [skrótu](#hash), który wywołuje `do_hash`.
 
-## <a name="do_transform"></a>COLLATE::d o_transform
+## <a name="do_transform"></a>sortowanie::d o_transform
 
 Funkcja wirtualna wywoływana w celu konwersji sekwencji znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.
 
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -285,7 +285,7 @@ Ciąg, który jest przekształconą sekwencją znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja wirtualna elementu członkowskiego zwraca obiekt klasy [string_type](#string_type) , której kontrolowana sekwencja jest kopią sekwencji [`first`, `last`). Jeśli klasa pochodna sortowania \< **chartype**> przesłania [do_compare](#do_compare), należy również przesłonić `do_transform` w celu dopasowania. Po przekazaniu do `collate::compare` dwa przekształcone ciągi powinny zwracać ten sam wynik, który można przekazać nieprzekształcone ciągi do porównania w klasie pochodnej.
+Chroniona funkcja wirtualna elementu członkowskiego zwraca obiekt klasy [string_type](#string_type) której kontrolowana sekwencja jest kopią sekwencji [`first`, `last`). Jeśli klasa pochodna sortowania\< **chartype**> przesłania [do_compare](#do_compare), należy również przesłonić `do_transform` do dopasowania. Po przekazaniu do `collate::compare`dwa przekształcone ciągi powinny zwracać ten sam wynik, który można przekazać nieprzekształcone ciągi do porównania w klasie pochodnej.
 
 ### <a name="example"></a>Przykład
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określona.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -355,11 +355,11 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji źródłowej.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji źródłowej.
 
 ### <a name="example"></a>Przykład
 
-Przykład sposobu deklarowania i używania `string_type` można znaleźć w temacie [Transform](#transform).
+Przykład sposobu deklarowania i używania `string_type`można znaleźć w temacie [Transform](#transform).
 
 ## <a name="transform"></a>COLLATE:: Transform
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
 
-*ostatni* \
+*ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale >](../standard-library/locale.md) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

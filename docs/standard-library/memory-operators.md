@@ -1,5 +1,5 @@
 ---
-title: '&lt;Pamięć&gt; operatorów'
+title: Operatory&gt; pamięci &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::operator!=
@@ -11,17 +11,17 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243816"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884079"
 ---
-# <a name="ltmemorygt-operators"></a>&lt;Pamięć&gt; operatorów
+# <a name="ltmemorygt-operators"></a>Operatory&gt; pamięci &lt;
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Testuje pod kątem nierówności pomiędzy obiektami.
+Testuje pod kątem nierówności między obiektami.
 
 ```cpp
 template <class Type, class Other>
@@ -42,27 +42,27 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
+\ *lewo*
+Jeden z obiektów do przetestowania pod kątem nierówności.
 
-*po prawej stronie*\
-Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
+*prawa*\
+Jeden z obiektów do przetestowania pod kątem nierówności.
 
 *Ty1*\
-Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy udostępniony wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez dzielony wskaźnik prawo.
+Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** obiekty nie są równe; **false** Jeśli obiekty są sobie równe.
+**prawda** , jeśli obiekty nie są równe; **Fałsz** , jeśli obiekty są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator szablonu zwraca wartość false. (Wszystkie domyślne buforów są równe).
+Pierwszy operator szablonu zwraca wartość false. (Wszystkie domyślne przydzielenie są równe).
 
-Operatory drugi i trzeci szablonu zwraca `!(left == right)`.
+Drugi i trzeci operator szablonu zwracają `!(left == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -120,9 +120,9 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Testuje pod kątem równości pomiędzy obiektami.
+Testuje równość między obiektami.
 
 ```cpp
 template <class Type, class Other>
@@ -143,27 +143,27 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
+\ *lewo*
+Jeden z obiektów do sprawdzenia pod kątem równości.
 
-*po prawej stronie*\
-Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
+*prawa*\
+Jeden z obiektów do sprawdzenia pod kątem równości.
 
 *Ty1*\
-Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy udostępniony wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez dzielony wskaźnik prawo.
+Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty są równe, **false** obiekty nie są równe.
+**prawda** , jeśli obiekty są równe, **Fałsz** , jeśli obiekty nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator szablonu zwraca wartość true. (Wszystkie domyślne buforów są równe).
+Pierwszy operator szablonu zwraca wartość true. (Wszystkie domyślne przydzielenie są równe).
 
-Operatory drugi i trzeci szablonu zwraca `left.get() ==  right.get()`.
+Drugi i trzeci operator szablonu zwracają `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Przykład
 
@@ -232,9 +232,9 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
-Sprawdza, czy jeden obiekt jest większy lub równy drugiemu obiektowi.
+Testy dla jednego obiektu, który jest większy niż lub równy drugiemu obiektowi.
 
 ```cpp
 template <class T, class Del1, class U, class Del2>
@@ -250,25 +250,25 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które mają być porównane.
+\ *lewo*
+Jeden z obiektów, które mają być porównane.
 
-*po prawej stronie*\
-Jednym z obiektów, które mają być porównane.
+*prawa*\
+Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
-Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy udostępniony wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez dzielony wskaźnik prawo.
+Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatorzy szablonów zwracają `left.get() >= right.get()`.
+Operatory szablonu zwracają `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
-Sprawdza, czy jeden obiekt jest mniejszy niż drugi obiekt.
+Testy dla jednego obiektu, który jest mniejszy niż drugi obiekt.
 
 ```cpp
 template <class T, class Del1, class U, class Del2>
@@ -284,21 +284,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które mają być porównane.
+\ *lewo*
+Jeden z obiektów, które mają być porównane.
 
-*po prawej stronie*\
-Jednym z obiektów, które mają być porównane.
+*prawa*\
+Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
-Typ kontrolowany przez wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez wskaźnik prawo.
+Typ kontrolowany przez prawy wskaźnik.
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
-Sprawdza, czy jeden obiekt jest mniejszy niż lub równy drugiemu obiektowi.
+Testy dla jednego obiektu, który jest mniejszy niż lub równy drugiemu obiektowi.
 
 ```cpp
 template <class T, class Del1, class U, class Del2>
@@ -314,25 +314,25 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które mają być porównane.
+\ *lewo*
+Jeden z obiektów, które mają być porównane.
 
-*po prawej stronie*\
-Jednym z obiektów, które mają być porównane.
+*prawa*\
+Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
-Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy udostępniony wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez dzielony wskaźnik prawo.
+Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwróć operatory szablonu `left.get() <= right.get()`
+Operatory szablonu zwracają `left.get() <= right.get()`
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>&gt; operatora
 
-Sprawdza, czy jeden obiekt jest większy niż drugi obiekt.
+Testy dla jednego obiektu, który jest większy niż drugi obiekt.
 
 ```cpp
 template <class Ty1, class Del1, class Ty2, class Del2>
@@ -348,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
-Jednym z obiektów, które mają być porównane.
+\ *lewo*
+Jeden z obiektów, które mają być porównane.
 
-*po prawej stronie*\
-Jednym z obiektów, które mają być porównane.
+*prawa*\
+Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
-Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
+Typ kontrolowany przez lewy udostępniony wskaźnik.
 
 *Ty2*\
-Typ kontrolowany przez dzielony wskaźnik prawo.
+Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-## <a name="op_lt_lt"></a> Operator&lt;&lt;
+## <a name="op_lt_lt"></a>&lt;operatora &lt;
 
 Zapisuje wspólny wskaźnik do strumienia.
 
@@ -375,17 +375,17 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 Typ elementu strumienia.
 
-*TR*\
-Typ cechy elementu strumienia.
+\ *TR*
+Typ cech elementu strumienia.
 
 *Ty*\
-Typ kontrolowany przez dzielony wskaźnik.
+Typ kontrolowany przez wspólny wskaźnik.
 
-*limit*\
+\ *out*
 Strumień danych wyjściowych.
 
-*SP*\
-Wspólny wskaźnik.
+\ *SP*
+Udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 

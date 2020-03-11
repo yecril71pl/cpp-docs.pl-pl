@@ -38,11 +38,11 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
 ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495355"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862978"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 
@@ -74,22 +74,22 @@ Te makra definiują mapy komunikatów i wpisy.
 |[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Mapuje komunikat WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
 |[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mapuje komunikat WM_NOTIFY na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
 |[REFLECT_NOTIFICATIONS](#reflect_notifications)|Odzwierciedla komunikaty powiadomień z powrotem do okna, które je wysłało.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora elementu menu, kontrolki lub akceleratora.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora sterowania.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie identyfikatora sterowania.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia.|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora elementu menu, kontrolki lub akceleratora.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora sterowania.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie identyfikatora sterowania.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlwin. h
 
-##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
+##  <a name="alt_msg_map"></a>ALT_MSG_MAP
 
 Oznacza początek alternatywnej mapy komunikatów.
 
@@ -108,9 +108,9 @@ ATL identyfikuje każdą mapę wiadomości według liczby. Domyślna mapa komuni
 
 Mapy komunikatów są używane do przetwarzania komunikatów wysyłanych do okna. Na przykład [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) umożliwia określenie identyfikatora mapy komunikatów w zawierającym go obiekcie. [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc) następnie używa tej mapy komunikatów do kierowania komunikatów zawartego okna do odpowiedniej funkcji obsługi lub do innej mapy komunikatów. Aby zapoznać się z listą makr, które deklarują funkcje programu obsługi, zobacz [BEGIN_MSG_MAP](#begin_msg_map).
 
-Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów.
+Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów.
 
-Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -128,7 +128,7 @@ W następnym przykładzie pokazano dwa alternatywne mapy komunikatów. Domyślna
 
 **Nagłówek:** atlwin. h
 
-##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
+##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP
 
 Oznacza początek domyślnej mapy komunikatów.
 
@@ -154,11 +154,11 @@ Następujące makra mapują komunikat na funkcję programu obsługi. Ta funkcja 
 |[COMMAND_HANDLER](#command_handler)|Mapuje komunikat WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora elementu menu, kontrolki lub akceleratora.|
 |[COMMAND_ID_HANDLER](#command_id_handler)|Mapuje komunikat WM_COMMAND na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
 |[COMMAND_CODE_HANDLER](#command_handler)|Mapuje komunikat WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mapuje ciągły zakres komunikatów WM_COMMAND na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Mapuje ciągły zakres komunikatów WM_COMMAND do funkcji obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
 |[NOTIFY_HANDLER](#notify_handler)|Mapuje komunikat WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora sterowania.|
 |[NOTIFY_ID_HANDLER](#notify_id_handler)|Mapuje komunikat WM_NOTIFY na funkcję programu obsługi na podstawie identyfikatora sterowania.|
 |[NOTIFY_CODE_HANDLER](#notify_code_handler)|Mapuje komunikat WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mapuje ciągły zakres komunikatów WM_NOTIFY na funkcję programu obsługi na podstawie identyfikatora sterowania.|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Mapuje ciągły zakres komunikatów WM_NOTIFY do funkcji obsługi na podstawie identyfikatora sterowania.|
 
 Następujące makra kierują komunikaty do innej mapy komunikatów. Ten proces jest nazywany "łańcuchem".
 
@@ -174,24 +174,24 @@ Następujące makra kierują komunikaty "odbite" z okna nadrzędnego. Na przykł
 
 |Macro|Opis|
 |-----------|-----------------|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora elementu menu, kontrolki lub akceleratora.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mapuje odbicie komunikatu WM_COMMAND na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora sterowania.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie identyfikatora sterowania.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapuje odbicie komunikatu WM_NOTIFY na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora elementu menu, kontrolki lub akceleratora.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie identyfikatora elementu menu, kontrolki lub akceleratora.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Mapuje odbicie WM_COMMAND komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i identyfikatora sterowania.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie identyfikatora sterowania.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie ciągłego zakresu identyfikatorów formantu.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapuje odbicie WM_NOTIFY komunikatu na funkcję programu obsługi na podstawie kodu powiadomienia i ciągłego zakresu identyfikatorów sterowania.|
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
-Gdy obiekt odbiera komunikat WM_PAINT, komunikat jest kierowany do `CMyExtWindow::OnPaint` rzeczywistego przetwarzania. `CMyExtWindow` Jeśli `OnPaint` wskazuje, że komunikat wymaga dalszych operacji przetwarzania, komunikat zostanie następnie skierowany do domyślnej mapy komunikatów w `CMyBaseWindow`.
+Gdy obiekt `CMyExtWindow` odbiera komunikat WM_PAINT, komunikat jest kierowany do `CMyExtWindow::OnPaint` do rzeczywistego przetwarzania. Jeśli `OnPaint` wskazuje, że komunikat wymaga dalszych operacji przetwarzania, komunikat zostanie następnie skierowany do domyślnej mapy komunikatów w `CMyBaseWindow`.
 
-Oprócz domyślnej mapy komunikatów można zdefiniować alternatywną mapę wiadomości z [ALT_MSG_MAP](#alt_msg_map). Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów. Poniższy przykład pokazuje domyślną mapę komunikatów i jedną alternatywną mapę komunikatów, z których każda zawiera jedną funkcję obsługi:
+Oprócz domyślnej mapy komunikatów można zdefiniować alternatywną mapę komunikatów z [ALT_MSG_MAP](#alt_msg_map). Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów. Poniższy przykład pokazuje domyślną mapę komunikatów i jedną alternatywną mapę komunikatów, z których każda zawiera jedną funkcję obsługi:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
@@ -199,7 +199,7 @@ W następnym przykładzie pokazano dwa alternatywne mapy komunikatów. Domyślna
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -228,7 +228,7 @@ podczas Identyfikator mapy komunikatów.
 CHAIN_MSG_MAP_ALT kieruje komunikaty do alternatywnej mapy komunikatów w klasie bazowej. Należy zadeklarować tę alternatywną mapę wiadomości z [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Aby skierować komunikaty do domyślnej mapy komunikatów klasy podstawowej (zadeklarowanej za pomocą [BEGIN_MSG_MAP](#begin_msg_map)), użyj CHAIN_MSG_MAP. Aby zapoznać się z przykładem, zobacz [CHAIN_MSG_MAP](#chain_msg_map).
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -257,7 +257,7 @@ podczas Identyfikator mapy komunikatów.
 CHAIN_MSG_MAP_ALT_MEMBER kieruje komunikaty do alternatywnej mapy komunikatów w składowej danych. Należy zadeklarować tę alternatywną mapę wiadomości z [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Aby przekierować komunikaty do domyślnej mapy komunikatów elementu członkowskiego danych (zadeklarowanej za pomocą [BEGIN_MSG_MAP](#begin_msg_map)), użyj CHAIN_MSG_MAP_MEMBER. Aby zapoznać się z przykładem, zobacz [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -280,10 +280,10 @@ podczas Nazwa klasy bazowej zawierającej mapę komunikatów.
 
 ### <a name="remarks"></a>Uwagi
 
-CHAIN_MSG_MAP kieruje komunikaty do domyślnej mapy komunikatów klasy podstawowej (Deklaracja z [BEGIN_MSG_MAP](#begin_msg_map)). Aby skierować komunikaty do alternatywnej mapy komunikatów klasy podstawowej (zadeklarowanej za pomocą [ALT_MSG_MAP](#alt_msg_map)), użyj [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
+CHAIN_MSG_MAP kieruje komunikaty do domyślnej mapy komunikatów klasy podstawowej (zadeklarowane za pomocą [BEGIN_MSG_MAP](#begin_msg_map)). Aby skierować komunikaty do alternatywnej mapy komunikatów klasy podstawowej (zadeklarowanej za pomocą [ALT_MSG_MAP](#alt_msg_map)), użyj [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -293,11 +293,11 @@ Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy
 
 Ten przykład ilustruje następujące kwestie:
 
-- Jeśli procedura okna używa `CMyClass`domyślnej mapy komunikatów i `OnPaint` nie obsługuje komunikatu, komunikat jest kierowany do `CMyBaseClass`domyślnej mapy komunikatów do przetwarzania.
+- Jeśli procedura okna używa domyślnej mapy komunikatów `CMyClass`i `OnPaint` nie obsłuży komunikatu, komunikat jest kierowany do domyślnej mapy komunikatów `CMyBaseClass`do przetworzenia.
 
-- Jeśli w procedurze okna jest używana pierwsza alternatywna Mapa komunikatów w `CMyClass`programie, wszystkie komunikaty są kierowane `CMyBaseClass`do domyślnej mapy komunikatów.
+- Jeśli procedura okna używa pierwszej alternatywnej mapy komunikatów w `CMyClass`, wszystkie komunikaty są kierowane do domyślnej mapy komunikatów `CMyBaseClass`.
 
-- Jeśli procedura okna używa `CMyClass`drugiej alternatywnej mapy komunikatów i `OnChar` nie obsługuje komunikatu, komunikat jest kierowany do określonej alternatywnej mapy komunikatów w `CMyBaseClass`. `CMyBaseClass`musi być zadeklarowana dla tej mapy komunikatów z ALT_MSG_MAP (1).
+- Jeśli procedura okna używa drugiej alternatywnej mapy komunikatów `CMyClass`i `OnChar` nie obsługuje komunikatu, komunikat jest kierowany do określonej alternatywnej mapy komunikatów w `CMyBaseClass`. `CMyBaseClass` musi być zadeklarowana dla tej mapy komunikatów z ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -318,10 +318,10 @@ podczas Unikatowy identyfikator mapy komunikatów obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-CHAIN_MSG_MAP_DYNAMIC kieruje komunikaty w czasie wykonywania do domyślnej mapy komunikatów w innym obiekcie. Obiekt i jego mapa komunikatów są skojarzone z *dynaChainID*, które definiujesz za pomocą [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Należy utworzyć pochodną klasę `CDynamicChain` , aby użyć CHAIN_MSG_MAP_DYNAMIC. Aby zapoznać się z przykładem, zobacz Omówienie [CDynamicChain](../../atl/reference/cdynamicchain-class.md) .
+CHAIN_MSG_MAP_DYNAMIC kieruje komunikaty w czasie wykonywania do domyślnej mapy komunikatów w innym obiekcie. Obiekt i jego mapa komunikatów są skojarzone z *dynaChainID*, które definiujesz za pomocą [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Aby można było używać CHAIN_MSG_MAP_DYNAMIC, należy utworzyć klasę z `CDynamicChain`. Aby zapoznać się z przykładem, zobacz Omówienie [CDynamicChain](../../atl/reference/cdynamicchain-class.md) .
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -347,7 +347,7 @@ podczas Nazwa elementu członkowskiego danych zawierającego mapę komunikatów.
 CHAIN_MSG_MAP_MEMBER kieruje komunikaty do domyślnej mapy komunikatów elementu członkowskiego danych (Deklaracja z [BEGIN_MSG_MAP](#begin_msg_map)). Aby skierować komunikaty do alternatywnej mapy komunikatów elementu członkowskiego danych (zadeklarowanej za pomocą [ALT_MSG_MAP](#alt_msg_map)), użyj [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu BEGIN_MSG_MAP. Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą ALT_MSG_MAP. Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -357,11 +357,11 @@ Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy
 
 Ten przykład ilustruje następujące kwestie:
 
-- Jeśli procedura okna używa `CMyClass`domyślnej mapy komunikatów i `OnPaint` nie obsługuje komunikatu, komunikat jest kierowany do `m_obj`domyślnej mapy komunikatów do przetwarzania.
+- Jeśli procedura okna używa domyślnej mapy komunikatów `CMyClass`i `OnPaint` nie obsłuży komunikatu, komunikat jest kierowany do domyślnej mapy komunikatów `m_obj`do przetworzenia.
 
-- Jeśli w procedurze okna jest używana pierwsza alternatywna Mapa komunikatów w `CMyClass`programie, wszystkie komunikaty są kierowane `m_obj`do domyślnej mapy komunikatów.
+- Jeśli procedura okna używa pierwszej alternatywnej mapy komunikatów w `CMyClass`, wszystkie komunikaty są kierowane do domyślnej mapy komunikatów `m_obj`.
 
-- Jeśli procedura okna używa `CMyClass`drugiej alternatywnej mapy komunikatów i `OnChar` nie obsługuje komunikatu, komunikat jest kierowany do `m_obj`określonej alternatywnej mapy komunikatów. Klasa `CMyContainedClass` musi być zadeklarowana dla tej mapy komunikatów z ALT_MSG_MAP (1).
+- Jeśli procedura okna używa drugiej alternatywnej mapy komunikatów `CMyClass`i `OnChar` nie obsługuje komunikatu, komunikat jest kierowany do określonej alternatywnej mapy komunikatów `m_obj`. Klasa `CMyContainedClass` musi być zadeklarowana w tej mapie komunikatów z ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -369,7 +369,7 @@ Ten przykład ilustruje następujące kwestie:
 
 ##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER
 
-Podobny do [COMMAND_HANDLER](#command_handler), ale mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) tylko na podstawie kodu powiadomienia.
+Podobnie jak w przypadku [COMMAND_HANDLER](#command_handler), ale mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) wyłącznie na podstawie kodu powiadomienia.
 
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -408,7 +408,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ### <a name="remarks"></a>Uwagi
 
-COMMAND_HANDLER mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) do określonej funkcji obsługi na podstawie kodu powiadomienia i identyfikatora kontroli. Na przykład:
+COMMAND_HANDLER mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) na określoną funkcję procedury obsługi na podstawie kodu powiadomienia i identyfikatora kontroli. Na przykład:
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
@@ -416,12 +416,12 @@ Każda funkcja określona w makrze COMMAND_HANDLER musi być zdefiniowana w nast
 
 `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`
 
-Mapowanie komunikatów jest ustawione `bHandled` na wartość true `CommandHandler` przed wywołaniem. Jeśli `CommandHandler` komunikat nie jest w pełni obsługiwany, powinien mieć ustawioną `bHandled` wartość false, aby wskazać, że komunikat musi zostać przetworzony.
+Mapa komunikatów ustawia `bHandled` na wartość TRUE przed wywołaniem `CommandHandler`. Jeśli `CommandHandler` nie pełni obsługi komunikatu, należy ustawić dla `bHandled` wartość FALSE, aby wskazać, że komunikat będzie wymagał dalszej operacji przetwarzania.
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
-Oprócz COMMAND_HANDLER można użyć [MESSAGE_HANDLER](#message_handler) do mapowania komunikatu WM_COMMAND bez względu na identyfikator lub kod. W takim przypadku `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` program przekieruje wszystkie komunikaty WM_COMMAND `OnHandlerFunction`do.
+Oprócz COMMAND_HANDLER można użyć [MESSAGE_HANDLER](#message_handler) do mapowania wiadomości WM_COMMAND bez względu na identyfikator lub kod. W takim przypadku `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` będzie kierować wszystkie komunikaty WM_COMMAND do `OnHandlerFunction`.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -431,7 +431,7 @@ Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy
 
 ##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER
 
-Podobnie jak w przypadku [COMMAND_HANDLER](#command_handler), ale mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) w oparciu tylko o identyfikator elementu menu, kontrolki lub akceleratora.
+Podobnie jak w [COMMAND_HANDLER](#command_handler), ale mapuje komunikat [WM_COMMAND](/windows/win32/menurc/wm-command) na podstawie identyfikatora elementu menu, formantu lub akceleratora.
 
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -451,7 +451,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER
 
-Podobny do [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje komunikaty [WM_COMMAND](/windows/win32/menurc/wm-command) z określonym kodem powiadomienia z zakresu formantów do jednej funkcji obsługi.
+Podobnie jak w [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje komunikaty [WM_COMMAND](/windows/win32/menurc/wm-command) z określonym kodem powiadomienia z zakresu formantów do jednej funkcji obsługi.
 
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -481,7 +481,7 @@ Ten zakres jest oparty na identyfikatorach elementu menu, kontrolce lub akcelera
 
 ##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER
 
-Podobny do [COMMAND_HANDLER](#command_handler), ale mapuje komunikaty [WM_COMMAND](/windows/win32/menurc/wm-command) z zakresu formantów do jednej funkcji obsługi.
+Podobnie jak w [COMMAND_HANDLER](#command_handler), ale mapuje komunikaty [WM_COMMAND](/windows/win32/menurc/wm-command) z zakresu formantów do jednej funkcji obsługi.
 
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -506,7 +506,7 @@ Ten zakres jest oparty na identyfikatorach elementu menu, kontrolce lub akcelera
 
 **Nagłówek:** atlwin. h
 
-##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
+##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP
 
 Deklaruje pustą mapę komunikatów.
 
@@ -516,13 +516,13 @@ DECLARE_EMPTY_MSG_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-DECLARE_EMPTY_MSG_MAP to wygodne makro, które wywołuje makra [BEGIN_MSG_MAP](#begin_msg_map) i [END_MSG_MAP](#end_msg_map) w celu utworzenia pustej mapy komunikatów:
+DECLARE_EMPTY_MSG_MAP to wygodne makro, które wywołuje makra [BEGIN_MSG_MAP](#begin_msg_map) i [END_MSG_MAP](#end_msg_map) do utworzenia pustej mapy komunikatów:
 
 [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]
 
 ##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER
 
-Udostępnia domyślną procedurę obsługi dla okna podrzędnego (kontrolka), która będzie odbierać wiadomości odbite; program obsługi będzie prawidłowo przekazywać nieobsłużone komunikaty `DefWindowProc`do programu.
+Udostępnia domyślną procedurę obsługi dla okna podrzędnego (kontrolka), która będzie odbierać wiadomości odbite; program obsługi będzie prawidłowo przekazywać nieobsłużone komunikaty do `DefWindowProc`.
 
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -532,7 +532,7 @@ DEFAULT_REFLECTION_HANDLER()
 
 **Nagłówek:** atlwin. h
 
-##  <a name="end_msg_map"></a>  END_MSG_MAP
+##  <a name="end_msg_map"></a>END_MSG_MAP
 
 Oznacza koniec mapy komunikatów.
 
@@ -544,7 +544,7 @@ END_MSG_MAP()
 
 Zawsze używaj makra [BEGIN_MSG_MAP](#begin_msg_map) , aby oznaczyć początek mapy komunikatów. Użyj [ALT_MSG_MAP](#alt_msg_map) , aby zadeklarować kolejne alternatywne mapy komunikatów.
 
-Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+Należy zauważyć, że zawsze istnieje tylko jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -602,10 +602,10 @@ Każda funkcja określona w makrze MESSAGE_HANDLER musi być zdefiniowana w nast
 
 `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`
 
-Mapowanie komunikatów jest ustawione `bHandled` na wartość true `MessageHandler` przed wywołaniem. Jeśli `MessageHandler` komunikat nie jest w pełni obsługiwany, powinien mieć ustawioną `bHandled` wartość false, aby wskazać, że komunikat musi zostać przetworzony.
+Mapa komunikatów ustawia `bHandled` na wartość TRUE przed wywołaniem `MessageHandler`. Jeśli `MessageHandler` nie pełni obsługi komunikatu, należy ustawić dla `bHandled` wartość FALSE, aby wskazać, że komunikat będzie wymagał dalszej operacji przetwarzania.
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
 Oprócz MESSAGE_HANDLER można użyć [COMMAND_HANDLER](#command_handler) i [NOTIFY_HANDLER](#notify_handler) do mapowania komunikatów [WM_COMMAND](/windows/win32/menurc/wm-command) i [WM_NOTIFY](/windows/win32/controls/wm-notify) .
 
@@ -621,7 +621,7 @@ Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy
 
 ##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER
 
-Podobnie jak w przypadku [MESSAGE_HANDLER](#message_handler), mapuje zakres komunikatów systemu Windows do jednej funkcji obsługi.
+Podobnie jak w [MESSAGE_HANDLER](#message_handler), ale mapuje zakres komunikatów systemu Windows do jednej funkcji obsługi.
 
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -644,7 +644,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER
 
-Podobny do [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) tylko na podstawie kodu powiadomienia.
+Podobnie jak w przypadku [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) wyłącznie na podstawie kodu powiadomienia.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -652,7 +652,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parametry
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -675,7 +675,7 @@ NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 podczas Identyfikator kontrolki wysyłającej wiadomość.
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -683,18 +683,18 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ### <a name="remarks"></a>Uwagi
 
-NOTIFY_HANDLER mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) do określonej funkcji obsługi na podstawie kodu powiadomienia i identyfikatora kontroli.
+NOTIFY_HANDLER mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) na określoną funkcję procedury obsługi na podstawie kodu powiadomienia i identyfikatora kontroli.
 
 Każda funkcja określona w makrze NOTIFY_HANDLER musi być zdefiniowana w następujący sposób:
 
 `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`
 
-Mapowanie komunikatów jest ustawione `bHandled` na wartość true `NotifyHandler` przed wywołaniem. Jeśli `NotifyHandler` komunikat nie jest w pełni obsługiwany, powinien mieć ustawioną `bHandled` wartość false, aby wskazać, że komunikat musi zostać przetworzony.
+Mapa komunikatów ustawia `bHandled` na wartość TRUE przed wywołaniem `NotifyHandler`. Jeśli `NotifyHandler` nie pełni obsługi komunikatu, należy ustawić dla `bHandled` wartość FALSE, aby wskazać, że komunikat będzie wymagał dalszej operacji przetwarzania.
 
 > [!NOTE]
->  Zawsze rozpoczynaj Mapowanie komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie elementu BEGIN_MSG_MAP i END_MSG_MAP.
+>  Zawsze rozpoczynaj Mapowanie komunikatów przy użyciu [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować kolejne alternatywne mapy komunikatów za pomocą [ALT_MSG_MAP](#alt_msg_map). Makro [END_MSG_MAP](#end_msg_map) oznacza koniec mapy komunikatów. Każda mapa komunikatów musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.
 
-Oprócz NOTIFY_HANDLER można użyć [MESSAGE_HANDLER](#message_handler) do mapowania komunikatu WM_NOTIFY bez względu na identyfikator lub kod. W takim przypadku `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` program przekieruje wszystkie komunikaty WM_NOTIFY `OnHandlerFunction`do.
+Oprócz NOTIFY_HANDLER można użyć [MESSAGE_HANDLER](#message_handler) do mapowania wiadomości WM_NOTIFY bez względu na identyfikator lub kod. W takim przypadku `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` będzie kierować wszystkie komunikaty WM_NOTIFY do `OnHandlerFunction`.
 
 Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy komunikatów](../../atl/message-maps-atl.md).
 
@@ -708,7 +708,7 @@ Aby uzyskać więcej informacji o używaniu map komunikatów w ATL, zobacz [mapy
 
 ##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER
 
-Podobny do [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) tylko na podstawie identyfikatora sterowania.
+Podobnie jak w przypadku [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) wyłącznie na podstawie identyfikatora sterowania.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -728,7 +728,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER
 
-Podobny do [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje komunikaty [WM_NOTIFY](/windows/win32/controls/wm-notify) z określonym kodem powiadomienia z zakresu formantów do jednej funkcji obsługi.
+Podobnie jak w [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje komunikaty [WM_NOTIFY](/windows/win32/controls/wm-notify) z określonym kodem powiadomienia z zakresu formantów do jednej funkcji obsługi.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -742,7 +742,7 @@ podczas Oznacza początek ciągłego zakresu identyfikatorów kontrolek.
 *idLast*<br/>
 podczas Oznacza koniec ciągłego zakresu identyfikatorów kontrolek.
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -758,7 +758,7 @@ Ten zakres jest oparty na identyfikatorze kontrolki wysyłającej wiadomość.
 
 ##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER
 
-Podobny do [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikaty [WM_NOTIFY](/windows/win32/controls/wm-notify) z zakresu formantów do jednej funkcji obsługi.
+Podobnie jak w [NOTIFY_HANDLER](#notify_handler), ale mapuje komunikaty [WM_NOTIFY](/windows/win32/controls/wm-notify) z zakresu formantów do jednej funkcji obsługi.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -801,7 +801,7 @@ Określ to makro jako część mapy komunikatów okna nadrzędnego.
 
 ##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER
 
-Podobnie jak w przypadku [COMMAND_CODE_HANDLER](#command_code_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
+Podobnie jak [COMMAND_CODE_HANDLER](#command_code_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
 
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
@@ -821,7 +821,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER
 
-Podobnie jak w przypadku [COMMAND_HANDLER](#command_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
+Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
 
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
@@ -844,7 +844,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER
 
-Podobnie jak w przypadku [COMMAND_ID_HANDLER](#command_id_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
+Podobnie jak [COMMAND_ID_HANDLER](#command_id_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
 
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
@@ -864,7 +864,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
-Podobnie jak w przypadku [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
+Podobnie jak [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
 
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
@@ -890,7 +890,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER
 
-Podobnie jak w przypadku [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
+Podobnie jak [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje polecenia odzwierciedlone w oknie nadrzędnym.
 
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
@@ -913,7 +913,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER
 
-Podobnie jak [NOTIFY_CODE_HANDLER](#notify_code_handler), ale mapuje powiadomienia z okna nadrzędnego.
+Przypomina [NOTIFY_CODE_HANDLER](#notify_code_handler), ale mapuje powiadomienia z okna nadrzędnego.
 
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
@@ -921,7 +921,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -933,7 +933,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER
 
-Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje powiadomienia z okna nadrzędnego.
+Przypomina [NOTIFY_HANDLER](#notify_handler), ale mapuje powiadomienia z okna nadrzędnego.
 
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
@@ -944,7 +944,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 podczas Identyfikator elementu menu, kontrolki lub akceleratora.
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -956,7 +956,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER
 
-Podobnie jak [NOTIFY_ID_HANDLER](#notify_id_handler), ale mapuje powiadomienia z okna nadrzędnego.
+Przypomina [NOTIFY_ID_HANDLER](#notify_id_handler), ale mapuje powiadomienia z okna nadrzędnego.
 
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
@@ -976,7 +976,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
-Podobnie jak [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), ale mapuje powiadomienia z okna nadrzędnego.
+Przypomina [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), ale mapuje powiadomienia z okna nadrzędnego.
 
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -990,7 +990,7 @@ podczas Oznacza początek ciągłego zakresu identyfikatorów kontrolek.
 *idLast*<br/>
 podczas Oznacza koniec ciągłego zakresu identyfikatorów kontrolek.
 
-*cd*<br/>
+*płyt*<br/>
 podczas Kod powiadomienia.
 
 *func*<br/>
@@ -1002,7 +1002,7 @@ podczas Nazwa funkcji obsługi komunikatów.
 
 ##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER
 
-Podobnie jak [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje powiadomienia z okna nadrzędnego.
+Przypomina [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje powiadomienia z okna nadrzędnego.
 
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

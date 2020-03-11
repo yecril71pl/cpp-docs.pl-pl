@@ -91,11 +91,11 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
 ms.openlocfilehash: 53ebaf8d9cc1bca53b1fe51464668d6df8e08424
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126951"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890697"
 ---
 # <a name="concurrencyprecise_math-namespace-functions"></a>Concurrency::precise_math, funkcje przestrzeni nazw
 
@@ -162,7 +162,7 @@ inline double acos(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus cosinus argumentu
 
@@ -179,7 +179,7 @@ inline float acosf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus cosinus argumentu
 
@@ -198,7 +198,7 @@ inline double acosh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość cosinusa hiperbolicznego argumentu.
 
@@ -215,7 +215,7 @@ inline float acoshf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość cosinusa hiperbolicznego argumentu.
 
@@ -234,7 +234,7 @@ inline double asin(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus sinus argumentu
 
@@ -251,7 +251,7 @@ inline float asinf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus sinus argumentu
 
@@ -270,7 +270,7 @@ inline double asinh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość sinusa hiperbolicznego argumentu
 
@@ -287,7 +287,7 @@ inline float asinhf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość sinusa hiperbolicznego argumentu
 
@@ -306,7 +306,7 @@ inline double atan(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus tangens argumentu
 
@@ -332,7 +332,7 @@ Wartość zmiennoprzecinkowa
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus tangens _Y/_X
 
@@ -354,7 +354,7 @@ Wartość zmiennoprzecinkowa
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus tangens _Y/_X
 
@@ -371,7 +371,7 @@ inline float atanf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość arcus tangens argumentu
 
@@ -390,7 +390,7 @@ inline double atanh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość tangens hiperboliczny argumentu
 
@@ -407,7 +407,7 @@ inline float atanhf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną wartość tangens hiperboliczny argumentu
 
@@ -426,7 +426,7 @@ inline double cbrt(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca element główny modułu w rzeczywistym argumencie
 
@@ -443,7 +443,7 @@ inline float cbrtf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca element główny modułu w rzeczywistym argumencie
 
@@ -462,7 +462,7 @@ inline double ceil(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca górny limit argumentu
 
@@ -479,7 +479,7 @@ inline float ceilf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca górny limit argumentu
 
@@ -505,7 +505,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość o wielkości _X i znaku _Y
 
@@ -527,7 +527,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość o wielkości _X i znaku _Y
 
@@ -546,7 +546,7 @@ inline double cos(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinusa argumentu
 
@@ -563,7 +563,7 @@ inline float cosf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinusa argumentu
 
@@ -582,7 +582,7 @@ inline double cosh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinus hiperboliczny argumentu
 
@@ -599,7 +599,7 @@ inline float coshf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinus hiperboliczny argumentu
 
@@ -618,7 +618,7 @@ inline double cospi(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinusa liczby pi \* _X
 
@@ -635,7 +635,7 @@ inline float cospif(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość cosinusa liczby pi \* _X
 
@@ -654,7 +654,7 @@ inline double erf(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję błędu _X
 
@@ -673,7 +673,7 @@ inline double erfc(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca uzupełniającą funkcję błędu _X
 
@@ -690,7 +690,7 @@ inline float erfcf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca uzupełniającą funkcję błędu _X
 
@@ -709,7 +709,7 @@ inline double erfcinv(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną funkcję błędu komplementarnego _X
 
@@ -726,7 +726,7 @@ inline float erfcinvf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną funkcję błędu komplementarnego _X
 
@@ -743,7 +743,7 @@ inline float erff(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję błędu _X
 
@@ -762,7 +762,7 @@ inline double erfinv(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję odwrotnego błędu _X
 
@@ -779,7 +779,7 @@ inline float erfinvf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję odwrotnego błędu _X
 
@@ -798,7 +798,7 @@ inline double exp10(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość liczbową z argumentu Base-10.
 
@@ -815,7 +815,7 @@ inline float exp10f(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość liczbową z argumentu Base-10.
 
@@ -834,7 +834,7 @@ inline double expm1(double exponent) restrict(amp);
 *zapis*<br/>
 Wykładniczy termin *n* wyrażenia matematycznego `e`<sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1
 
@@ -851,7 +851,7 @@ inline float expm1f(float exponent) restrict(amp);
 *zapis*<br/>
 Wykładniczy termin *n* wyrażenia matematycznego `e`<sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1
 
@@ -870,7 +870,7 @@ inline double exp(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładniczą wartość argumentu
 
@@ -887,7 +887,7 @@ inline float expf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładniczą wartość argumentu
 
@@ -906,7 +906,7 @@ inline double exp2(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość typu wykładniczego 2 dla argumentu
 
@@ -923,7 +923,7 @@ inline float exp2f(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość typu wykładniczego 2 dla argumentu
 
@@ -942,7 +942,7 @@ inline double fabs(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość bezwzględną argumentu.
 
@@ -959,7 +959,7 @@ inline float fabsf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość bezwzględną argumentu.
 
@@ -984,7 +984,7 @@ inline double fdim(
 Wartość zmiennoprzecinkowa *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różnica między _X i _Y, jeśli _X jest większa niż _Y; w przeciwnym razie + 0.
 
@@ -1005,7 +1005,7 @@ inline float fdimf(
 Wartość zmiennoprzecinkowa *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różnica między _X i _Y, jeśli _X jest większa niż _Y; w przeciwnym razie + 0.
 
@@ -1024,7 +1024,7 @@ inline double floor(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podłogę argumentu
 
@@ -1041,7 +1041,7 @@ inline float floorf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podłogę argumentu
 
@@ -1072,7 +1072,7 @@ Drugi argument zmiennoprzecinkowy.
 *_Z*<br/>
 Trzeci argument zmiennoprzecinkowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenie jest wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane z dokładnością nieskończoną i zaokrąglany jest tylko wynik końcowy.
 
@@ -1097,7 +1097,7 @@ Drugi argument zmiennoprzecinkowy.
 *_Z*<br/>
 Trzeci argument zmiennoprzecinkowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenie jest wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane z dokładnością nieskończoną i zaokrąglany jest tylko wynik końcowy.
 
@@ -1123,7 +1123,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
@@ -1145,7 +1145,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
@@ -1171,7 +1171,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwróć minimalną wartość liczbową argumentów
 
@@ -1193,7 +1193,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwróć minimalną wartość liczbową argumentów
 
@@ -1219,7 +1219,7 @@ Pierwszy argument zmiennoprzecinkowy.
 *_Y*<br/>
 Drugi argument zmiennoprzecinkowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Pozostała część `_X` podzielona przez `_Y`; oznacza to, że wartość `_X` - `_Y`*n*, gdzie *n* jest liczbą całkowitą, tak że rozmiar `_X` - `_Y`*n* jest mniejszy niż rozmiar `_Y`.
 
@@ -1241,7 +1241,7 @@ Pierwszy argument zmiennoprzecinkowy.
 *_Y*<br/>
 Drugi argument zmiennoprzecinkowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Pozostała część `_X` podzielona przez `_Y`; oznacza to, że wartość `_X` - `_Y`*n*, gdzie *n* jest liczbą całkowitą, tak że rozmiar `_X` - `_Y`*n* jest mniejszy niż rozmiar `_Y`.
 
@@ -1260,7 +1260,7 @@ inline int fpclassify(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość makra klasyfikacji liczbowej odpowiednie dla wartości argumentu.
 
@@ -1286,7 +1286,7 @@ Wartość zmiennoprzecinkowa
 *_Exp*<br/>
 Zwraca wykładnik całkowity _X w wartości zmiennoprzecinkowej
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X mantysy
 
@@ -1308,7 +1308,7 @@ Wartość zmiennoprzecinkowa
 *_Exp*<br/>
 Zwraca wykładnik całkowity _X w wartości zmiennoprzecinkowej
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X mantysy
 
@@ -1334,7 +1334,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca pierwiastek kwadratowy sumy kwadratów _X i _Y
 
@@ -1356,7 +1356,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca pierwiastek kwadratowy sumy kwadratów _X i _Y
 
@@ -1375,7 +1375,7 @@ inline int ilogb(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładnik _X jako podpisaną wartość int
 
@@ -1392,7 +1392,7 @@ inline int ilogbf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładnik _X jako podpisaną wartość int
 
@@ -1411,7 +1411,7 @@ inline int isfinite(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma skończoną wartość
 
@@ -1430,7 +1430,7 @@ inline int isinf(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość nieskończoną.
 
@@ -1449,7 +1449,7 @@ inline int isnan(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość NaN
 
@@ -1468,7 +1468,7 @@ inline int isnormal(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość normalną.
 
@@ -1494,7 +1494,7 @@ Wartość zmiennoprzecinkowa, mantysy
 *_Exp*<br/>
 Wartość całkowita, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X \* 2 ^ _Exp
 
@@ -1516,7 +1516,7 @@ Wartość zmiennoprzecinkowa, mantysy
 *_Exp*<br/>
 Wartość całkowita, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X \* 2 ^ _Exp
 
@@ -1542,7 +1542,7 @@ Wartość zmiennoprzecinkowa
 *_Sign*<br/>
 Zwraca znak
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm naturalny wartości absolutnej argumentu
 
@@ -1564,7 +1564,7 @@ Wartość zmiennoprzecinkowa
 *_Sign*<br/>
 Zwraca znak
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm naturalny wartości absolutnej argumentu
 
@@ -1583,7 +1583,7 @@ inline double log(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1602,7 +1602,7 @@ inline double log10(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1619,7 +1619,7 @@ inline float log10f(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1638,7 +1638,7 @@ inline double log1p(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość logarytmu podstawowego-e z 1 i argumentu
 
@@ -1655,7 +1655,7 @@ inline float log1pf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość logarytmu podstawowego-e z 1 i argumentu
 
@@ -1674,7 +1674,7 @@ inline double log2(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1691,7 +1691,7 @@ inline float log2f(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1710,7 +1710,7 @@ inline double logb(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podpisany wykładnik _X
 
@@ -1727,7 +1727,7 @@ inline float logbf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podpisany wykładnik _X
 
@@ -1744,7 +1744,7 @@ inline float logf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca logarytm dziesiętny argumentu
 
@@ -1770,7 +1770,7 @@ Wartość zmiennoprzecinkowa
 *_Iptr*<br/>
 określoną Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Podpisana część ułamkowa `_X`.
 
@@ -1792,7 +1792,7 @@ Wartość zmiennoprzecinkowa
 *_Iptr*<br/>
 Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podpisaną część ułamkową `_X`.
 
@@ -1809,7 +1809,7 @@ inline double nan(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca cichy NaN, jeśli jest dostępny, z zawartością wskazywaną w _X
 
@@ -1826,7 +1826,7 @@ inline float nanf(int _X) restrict(amp);
 *_X*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca cichy NaN, jeśli jest dostępny, z zawartością wskazywaną w _X
 
@@ -1845,7 +1845,7 @@ inline double nearbyint(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaokrągloną wartość całkowitą.
 
@@ -1862,7 +1862,7 @@ inline float nearbyintf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaokrągloną wartość całkowitą.
 
@@ -1888,7 +1888,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca następną reprezentację wartości w typie funkcji po _X w kierunku _Y
 
@@ -1910,7 +1910,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca następną reprezentację wartości w typie funkcji po _X w kierunku _Y
 
@@ -1929,7 +1929,7 @@ inline double phi(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję rozkładu skumulowanego argumentu
 
@@ -1946,7 +1946,7 @@ inline float phif(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję rozkładu skumulowanego argumentu
 
@@ -1972,7 +1972,7 @@ Wartość zmiennoprzecinkowa, podstawa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ## <a name="powf"></a>powf —
 
@@ -1992,7 +1992,7 @@ Wartość zmiennoprzecinkowa, podstawa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ## <a name="probit"></a>probit
 
@@ -2009,7 +2009,7 @@ inline double probit(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
 
@@ -2026,7 +2026,7 @@ inline float probitf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
 
@@ -2045,7 +2045,7 @@ inline double rcbrt(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotność elementu głównego modułu argumentu
 
@@ -2062,7 +2062,7 @@ inline float rcbrtf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotność elementu głównego modułu argumentu
 
@@ -2088,7 +2088,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X REM _Y
 
@@ -2110,7 +2110,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X REM _Y
 
@@ -2141,7 +2141,7 @@ Drugi argument zmiennoprzecinkowy.
 *_Quo*<br/>
 określoną Adres liczby całkowitej, która jest używana do zwrócenia ilorazu ułamków częściowych `_X` podzielona przez ułamkowe bity `_Y`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca resztę `_X` podzieloną przez `_Y`.
 
@@ -2167,7 +2167,7 @@ Drugi argument zmiennoprzecinkowy.
 *_Quo*<br/>
 określoną Adres liczby całkowitej, która jest używana do zwrócenia ilorazu ułamków częściowych `_X` podzielona przez ułamkowe bity `_Y`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca resztę `_X` podzieloną przez `_Y`.
 
@@ -2186,7 +2186,7 @@ inline double round(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca najbliższą liczbę całkowitą z _X
 
@@ -2203,7 +2203,7 @@ inline float roundf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca najbliższą liczbę całkowitą z _X
 
@@ -2222,7 +2222,7 @@ inline double rsqrt(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotność korzenia kwadratowego argumentu
 
@@ -2239,7 +2239,7 @@ inline float rsqrtf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwrotność korzenia kwadratowego argumentu
 
@@ -2265,7 +2265,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca \* _X (FLT_RADIX ^ _Y)
 
@@ -2287,7 +2287,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca \* _X (FLT_RADIX ^ _Y)
 
@@ -2313,7 +2313,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca \* _X (FLT_RADIX ^ _Y)
 
@@ -2335,7 +2335,7 @@ Wartość zmiennoprzecinkowa
 *_Y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca \* _X (FLT_RADIX ^ _Y)
 
@@ -2354,7 +2354,7 @@ inline int signbit(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy znak _X jest ujemny
 
@@ -2371,7 +2371,7 @@ inline int signbitf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy znak _X jest ujemny
 
@@ -2390,7 +2390,7 @@ inline double sin(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinusa argumentu
 
@@ -2407,7 +2407,7 @@ inline float sinf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinusa argumentu
 
@@ -2475,7 +2475,7 @@ inline double sinh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinus hiperboliczny argumentu
 
@@ -2492,7 +2492,7 @@ inline float sinhf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinus hiperboliczny argumentu
 
@@ -2511,7 +2511,7 @@ inline double sinpi(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinusa liczby pi \* _X
 
@@ -2528,7 +2528,7 @@ inline float sinpif(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość sinusa liczby pi \* _X
 
@@ -2547,7 +2547,7 @@ inline double sqrt(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca korzeń Squre argumentu
 
@@ -2564,7 +2564,7 @@ inline float sqrtf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca korzeń Squre argumentu
 
@@ -2583,7 +2583,7 @@ inline double tan(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangensa argumentu
 
@@ -2600,7 +2600,7 @@ inline float tanf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangensa argumentu
 
@@ -2619,7 +2619,7 @@ inline double tanh(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangensa hiperbolicznego argumentu
 
@@ -2636,7 +2636,7 @@ inline float tanhf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangensa hiperbolicznego argumentu
 
@@ -2655,7 +2655,7 @@ inline double tanpi(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangens liczby pi \* _X
 
@@ -2672,7 +2672,7 @@ inline float tanpif(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość tangens liczby pi \* _X
 
@@ -2691,7 +2691,7 @@ inline double tgamma(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wynik funkcji gamma elementu _X
 
@@ -2708,7 +2708,7 @@ inline float tgammaf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wynik funkcji gamma elementu _X
 
@@ -2727,7 +2727,7 @@ inline double trunc(double _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca składnik całkowity argumentu
 
@@ -2744,10 +2744,10 @@ inline float truncf(float _X) restrict(amp);
 *_X*<br/>
 Wartość zmiennoprzecinkowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca składnik całkowity argumentu
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)

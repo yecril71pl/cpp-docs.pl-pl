@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143269"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867140"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup — Klasa
 
@@ -28,20 +28,20 @@ Reprezentuje streszczenie dla grupy harmonogramów. Grupy harmonogramu organizuj
 class ScheduleGroup;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[~ Destruktor](#dtor)||
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Identyfikator](#id)|Zwraca identyfikator grupy harmonogramu, która jest unikatowa w ramach harmonogramu, do którego należy Grupa.|
-|[Dokumentacja](#reference)|Zwiększa liczbę odwołań do grup harmonogramów.|
+|[Tematy pomocy](#reference)|Zwiększa liczbę odwołań do grup harmonogramów.|
 |[Wersja](#release)|Zmniejsza liczbę odwołań grup harmonogramów.|
 |[ScheduleTask —](#scheduletask)|Planuje zadanie lekkiej wagi w ramach grupy harmonogramów.|
 
@@ -63,7 +63,7 @@ Zwraca identyfikator grupy harmonogramu, która jest unikatowa w ramach harmonog
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Identyfikator grupy harmonogramu, który jest unikatowy w obrębie harmonogramu, do którego należy Grupa.
 
@@ -95,7 +95,7 @@ Zwiększa liczbę odwołań do grup harmonogramów.
 virtual unsigned int Reference() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowo zwiększona liczba odwołań.
 
@@ -111,7 +111,7 @@ Zmniejsza liczbę odwołań grup harmonogramów.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowo zmniejszona liczba odwołań.
 
@@ -149,7 +149,7 @@ Wskaźnik void do danych, które zostaną przesłane jako parametr do treści za
 
 Wywołanie metody `ScheduleTask` niejawnie umieszcza liczbę odwołań w grupie harmonogramów, która jest usuwana przez środowisko uruchomieniowe w odpowiednim czasie po wykonaniu zadania.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [CurrentScheduler, klasa](currentscheduler-class.md)<br/>

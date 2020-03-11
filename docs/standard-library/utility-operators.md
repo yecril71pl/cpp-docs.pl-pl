@@ -1,5 +1,5 @@
 ---
-title: '&lt;Narzędzie&gt; operatorów'
+title: Operatory&gt; &lt;narzędzi
 ms.date: 11/04/2016
 f1_keywords:
 - utility/std::operator!=
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246292"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854872"
 ---
-# <a name="ltutilitygt-operators"></a>&lt;Narzędzie&gt; operatorów
+# <a name="ltutilitygt-operators"></a>Operatory&gt; &lt;narzędzi
 
 > [!NOTE]
-> Przy użyciu operatorów `Type&` znajdują się w obszarze `namespace rel_ops`.
+> Operatory wykorzystujące `Type&` są uwzględniane w obszarze `namespace rel_ops`.
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt pary po lewej stronie operatora nie jest równy obiektowi pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora nie jest równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -42,19 +42,19 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** pary nie są równe; **false** pary są równe.
+**prawda** , jeśli pary nie są równe; **wartość false** , jeśli pary są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Jedna para jest równy inną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Dwie pary są nierówne, jeśli pierwszy lub drugi element jednego nie równa się odpowiedni element inne pary.
+Jedna para jest równa innej parze, jeśli każdy z jej elementów jest równy. Dwie pary nie są równe, jeśli pierwszy lub drugi element jednego z nich nie jest równy odpowiedniemu elementowi drugiej pary.
 
 ### <a name="example"></a>Przykład
 
@@ -103,9 +103,9 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt pary po lewej stronie operatora jest równy obiektowi pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora jest równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class T, class U>
@@ -114,19 +114,19 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair`.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** pary są równe; **false** Jeśli `pair`s nie są takie same.
+**prawda** , jeśli pary są równe; **Fałsz** , jeśli `pair`s nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Jedna para jest równy inną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Funkcja zwraca `left`. **pierwszy** == `right`. **pierwszy** && `left`. **drugi** == `right`. **drugi**. Dwie pary są nierówne, jeśli pierwszy lub drugi element jednego nie równa się odpowiedni element inne pary.
+Jedna para jest równa innej parze, jeśli każdy z jej elementów jest równy. Funkcja zwraca `left`. **najpierw** `right` == . **najpierw** `left` && . `right`**sekund** == . **sekunda**. Dwie pary nie są równe, jeśli pierwszy lub drugi element jednego z nich nie jest równy odpowiedniemu elementowi drugiej pary.
 
 ### <a name="example"></a>Przykład
 
@@ -166,9 +166,9 @@ int main( )
 }
 ```
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
-Sprawdza, czy pary obiektu po lewej stronie operatora jest mniejszy niż obiekt pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy od obiektu pary po prawej stronie.
 
 ```cpp
 template <class T, class U>
@@ -177,21 +177,21 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair` po lewej stronie operatora.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest ściśle mniejsza niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true** , jeśli `pair` po lewej stronie operatora jest ściśle mniejsza niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-`left` `pair` Obiekt jest nazywany ściśle mniejsza niż `right` `pair` obiektu, jeśli *po lewej stronie* jest mniejsza niż i nie jest równa *prawo*.
+Obiekt `pair` `left` jest uznawany za mniej niż obiekt `right` `pair`, jeśli wartość *Left* jest mniejsza niż lub równa *prawej*.
 
-W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
+W porównaniu par wartości pierwszego elementu dwóch par mają najwyższy priorytet. Jeśli różnią się one, wynik porównania jest traktowany jako wynik porównania pary. Jeśli wartości pierwszego elementu nie są inne, wówczas wartości drugiego elementu są porównywane, a wynik porównania jest traktowany jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -240,9 +240,9 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
-Sprawdza, czy pary obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy niż lub równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -254,19 +254,19 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair` po lewej stronie operatora.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest mniejszy niż lub równe `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**ma wartość true** , jeśli `pair` po lewej stronie operatora jest mniejszy lub równy `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
+W porównaniu par wartości pierwszego elementu dwóch par mają najwyższy priorytet. Jeśli różnią się one, wynik porównania jest traktowany jako wynik porównania pary. Jeśli wartości pierwszego elementu nie są inne, wówczas wartości drugiego elementu są porównywane, a wynik porównania jest traktowany jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -325,9 +325,9 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>&gt; operatora
 
-Sprawdza, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -339,21 +339,21 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair` po lewej stronie operatora.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest większa niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true** , jeśli `pair` po lewej stronie operatora jest ściśle większa niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-`left` `pair` Obiekt jest nazywany być ściśle większa niż `right` `pair` obiektu, jeśli *po lewej stronie* jest większa niż i nie jest równa *prawo*.
+Obiekt `pair` `left` jest określany jako ściśle większy niż obiekt `right` `pair`, jeśli wartość *Left* jest większa od lub równa *prawej*.
 
-W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
+W porównaniu par wartości pierwszego elementu dwóch par mają najwyższy priorytet. Jeśli różnią się one, wynik porównania jest traktowany jako wynik porównania pary. Jeśli wartości pierwszego elementu nie są inne, wówczas wartości drugiego elementu są porównywane, a wynik porównania jest traktowany jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -412,9 +412,9 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
-Sprawdza, czy obiekt pary po lewej stronie operatora jest większy lub równy obiektowi pary po prawej stronie.
+Testuje, czy obiekt pary po lewej stronie operatora jest większy niż lub równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -426,19 +426,19 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `pair` po lewej stronie operatora.
 
-*po prawej stronie*\
+*prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest większy niż lub równa `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**ma wartość true** , jeśli `pair` po lewej stronie operatora jest większy lub równy `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
+W porównaniu par wartości pierwszego elementu dwóch par mają najwyższy priorytet. Jeśli różnią się one, wynik porównania jest traktowany jako wynik porównania pary. Jeśli wartości pierwszego elementu nie są inne, wówczas wartości drugiego elementu są porównywane, a wynik porównania jest traktowany jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
