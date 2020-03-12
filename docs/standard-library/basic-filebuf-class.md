@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856584"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128697"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf — Klasa
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wskaźnik pliku nie jest wskaźnikiem wartości null.
+**ma wartość true** , jeśli wskaźnik pliku nie ma wartości null.
 
 ### <a name="example"></a>Przykład
 
@@ -413,7 +413,7 @@ Domyślna ochrona otwierania plików, równoważna parametrowi *Shflag* w [_fsop
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to**.
+Jeśli bufor jest już otwarty lub wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -667,7 +667,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje wyodrębnić bież
 
 - Może odczytać jeden lub więcej elementów typu **char**, tak jak w przypadku kolejnych wywołań formularza `fgetc(fp)`i przekonwertowania ich do `ch` elementu typu `Char_T` przy użyciu aspektu konwersji plików `fac` do wywołania `fac.in` zgodnie z wymaganiami. W przypadku niepowodzenia odczytu lub konwersji funkcja nie powiedzie się.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<fstream — >](../standard-library/fstream.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
