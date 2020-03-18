@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _lsearch
-- lsearch
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954073"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438143"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -65,7 +64,7 @@ Wskaźnik na podstawę tablicy do przeszukania.
 *Liczba*<br/>
 Liczba elementów.
 
-*width*<br/>
+*Szerokość*<br/>
 Szerokość każdego elementu tablicy.
 
 *porównaniu*<br/>
@@ -77,17 +76,17 @@ Jeśli klucz zostanie znaleziony, **_lsearch** zwraca wskaźnik do elementu tabl
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_lsearch** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch**, **_lsearch** nie wymaga sortowania tablicy. Jeśli nie można odnaleźć *klucza* , **_lsearch** dodaje go na końcu tablicy i zwiększa *liczbę*.
+Funkcja **_lsearch** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch**, **_lsearch** nie wymaga sortowania tablicy. Jeśli nie odnaleziono *klucza* , **_lsearch** dodaje go na końcu tablicy i zwiększa *liczbę*.
 
 Argument *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. **_lsearch** wywołuje procedurę *Compare* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania. *porównanie* musi porównać elementy i zwracać wartość różną od zera (oznacza to, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [parametrze Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *podstawa* ma **wartość null** , a *Liczba* jest różna od zera, lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lsearch**|\<Wyszukaj. h >|
+|**_lsearch**|\<Search. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -133,7 +132,7 @@ wordlist before _lsearch: hello thanks bye
 wordlist after _lsearch: hello thanks bye extra
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

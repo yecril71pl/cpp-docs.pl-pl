@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953519"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438089"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -66,7 +65,7 @@ Funkcja **_kbhit** sprawdza konsolę pod kątem ostatniego naciśnięcia klawisz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_kbhit**|\<conio.h>|
+|**_kbhit**|\<CONIO. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -106,6 +105,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>

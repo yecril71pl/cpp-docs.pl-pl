@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78868993"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420506"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
 
@@ -45,18 +45,18 @@ Obiekt `CContextMenuManager` zarządza menu skrótów, znane także jako menu ko
 class CContextMenuManager : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Konstruuje obiekt `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CContextMenuManager:: Add— menu](#addmenu)|Dodaje nowe menu skrótów.|
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Zwraca uchwyt do menu skojarzonego z podanym IDENTYFIKATORem zasobu.|
@@ -120,7 +120,7 @@ podczas Identyfikator zasobu menu.
 *lpszName*<br/>
 podczas Ciąg, który zawiera nazwę nowego menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; 0, jeśli metoda zakończy się niepowodzeniem.
 
@@ -153,7 +153,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 *nMenuResId*<br/>
 podczas Identyfikator zasobu dla menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do powiązanego menu lub `NULL`, jeśli nie można odnaleźć menu.
 
@@ -175,7 +175,7 @@ podczas Ciąg, który zawiera nazwę menu do pobrania.
 *puiOrigResID*<br/>
 określoną Wskaźnik do typu UINT. Ten parametr zawiera identyfikator zasobu określonego menu, jeśli został znaleziony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do menu, który jest zgodny z nazwą określoną przez *lpszName*. Wartość NULL, jeśli nie istnieje menu o nazwie *lpszName*.
 
@@ -209,7 +209,7 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 *lpszProfileName*<br/>
 podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
@@ -227,7 +227,7 @@ Czyści wszystkie elementy z menu skrótów skojarzonych z [klasą CContextMenuM
 virtual BOOL ResetState();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. Wartość FALSE, jeśli wystąpi błąd.
 
@@ -248,7 +248,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 *lpszProfileName*<br/>
 podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
@@ -324,7 +324,7 @@ podczas Parametr logiczny, który wskazuje, czy menu zostanie automatycznie znis
 *bRightAlign*<br/>
 podczas Parametr logiczny, który wskazuje, jak są wyrównane elementy menu. Jeśli *bRightAlign* ma wartość true, menu jest wyrównane do prawej strony dla kolejności odczytywania od prawej do lewej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze Przeciążenie metody zwraca wartość różną od zera, jeśli metoda pomyślnie wyświetli menu; w przeciwnym razie 0. Drugie Przeciążenie metody zwraca wskaźnik do [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , jeśli menu skrótów jest wyświetlane prawidłowo; w przeciwnym razie wartość NULL.
 
@@ -364,7 +364,7 @@ podczas Wskaźnik do okna nadrzędnego menu skrótów.
 *bRightAlign*<br/>
 podczas Parametr logiczny, który wskazuje, jak są wyrównane elementy menu. Jeśli *bRightAlign* ma wartość true, menu jest wyrównane do prawej strony dla kolejności odczytywania od prawej do lewej. Jeśli *bRightAlign* ma wartość false, menu jest wyrównane do lewej strony w kolejności czytania od lewej do prawej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator polecenia menu polecenia wybranego przez użytkownika; 0 Jeśli użytkownik zamknie menu skrótów bez wybierania polecenia menu.
 
@@ -372,7 +372,7 @@ Identyfikator polecenia menu polecenia wybranego przez użytkownika; 0 Jeśli u�
 
 Ta metoda działa jako wywołanie modalne do wyświetlania menu skrótów. Aplikacja nie przejdzie do następującego wiersza w kodzie, dopóki użytkownik nie zamknie menu skrótów lub wybierze polecenie. Alternatywną metodą wyświetlania menu skrótów jest [CContextMenuManager:: ShowPopupMenu](#showpopupmenu). Ta metoda nie jest wywołaniem modalnym i nie zwróci identyfikatora wybranego polecenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

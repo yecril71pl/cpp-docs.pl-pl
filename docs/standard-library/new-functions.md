@@ -7,11 +7,11 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854948"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419841"
 ---
 # <a name="ltnewgt-functions"></a>&lt;nowe funkcje&gt;
 
@@ -37,7 +37,7 @@ template <class T>
 \ *PTR*
 Adres bajtu w pamięci, który zawiera obiekt, którego typ jest podobny do *T*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość typu *T\** , która wskazuje na X.
 
@@ -88,7 +88,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 *Pnew*\
 `new_handler`, które mają zostać zainstalowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 0 pierwszego wywołania i poprzedni `new_handler` przy kolejnych wywołaniach.
 

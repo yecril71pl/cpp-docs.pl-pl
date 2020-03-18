@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890905"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419414"
 ---
 # <a name="ltstringgt-operators"></a>&lt;operatory&gt; String
 
@@ -109,7 +109,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do łączenia.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do łączenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który jest połączeniem ciągów wejściowych.
 
@@ -198,7 +198,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt String po lewej stronie operatora nie jest lexicographically równy obiektowi ciągu po prawej stronie; w przeciwnym razie **false**.
 
@@ -289,7 +289,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt String po lewej stronie operatora jest lexicographically równy obiektowi ciągu po prawej stronie; w przeciwnym razie **false**.
 
@@ -380,7 +380,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt String po lewej stronie operatora jest lexicographically mniejszy niż obiekt String po prawej stronie; w przeciwnym razie **false**.
 
@@ -476,7 +476,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt String po lewej stronie operatora jest lexicographically mniejszy lub równy obiektowi ciągu po prawej stronie; w przeciwnym razie **false**.
 
@@ -569,7 +569,7 @@ Docelowy strumień danych wyjściowych.
 *str*\
 Ciąg, który ma zostać wprowadzony do strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zapisuje wartość określonego ciągu do strumienia wyjściowego *_Ostr*.
 
@@ -606,7 +606,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt String po lewej stronie operatora jest lexicographically większy niż obiekt String po prawej stronie; w przeciwnym razie **false**.
 
@@ -709,7 +709,7 @@ Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 *prawa*\
 Ciąg w stylu C lub obiekt typu `basic_string` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt String po lewej stronie operatora jest lexicographically większy lub równy obiektowi ciągu po prawej stronie; w przeciwnym razie **false**.
 
@@ -802,7 +802,7 @@ Strumień wejściowy używany do wyodrębniania sekwencji
 *prawa*\
 Ciąg, który jest wyodrębniany ze strumienia wejściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odczytuje wartość określonego ciągu z *_Istr* i zwraca go do *prawej*.
 
@@ -841,6 +841,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ciąg >](../standard-library/string.md)

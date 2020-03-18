@@ -1,23 +1,22 @@
 ---
-title: '&lt;Lista > (komentarze dokumentacji C++)'
+title: '> listy &lt;(C++ Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305271"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439301"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-\<Listheader > Blokuj służy do definiowania wiersz nagłówka tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis termin w nagłówku.
+Blok \<listheader > służy do definiowania wiersza nagłówka tabeli lub listy definicji. Podczas definiowania tabeli należy podać tylko wpis dla terminu w nagłówku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +35,19 @@ ms.locfileid: "62305271"
 
 #### <a name="parameters"></a>Parametry
 
-*Termin*<br/>
-Termin, aby zdefiniować, które są definiowane w `description`.
+*mandat*<br/>
+Termin do zdefiniowania, który zostanie zdefiniowany w `description`.
 
-*description*<br/>
-Element w punktora lub Lista numerowana lub definicji `term`.
+*zharmonizowan*<br/>
+Element na liście punktowanej lub numerowanej lub definicji `term`.
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy element na liście jest określony za pomocą \<elementu > bloku. Podczas tworzenia listy definicji, musisz podać obydwie wartości `term` i `description`. Jednak dla tabeli, listy punktowanej lub numerowanej, wystarczy podać wpis dla `description`.
+Każdy element na liście jest określany za pomocą bloku \<elementu >. Podczas tworzenia listy definicji należy określić zarówno `term`, jak i `description`. Jednak dla tabeli, listy punktowanej lub listy numerowanej należy podać tylko wpis dla `description`.
 
-Masz tyle listy lub tabeli \<elementu > blokuje zgodnie z potrzebami.
+Lista lub tabela może zawierać tyle \<elementów > bloków, zgodnie z potrzebami.
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
@@ -69,6 +68,6 @@ Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Prz
 class MyClass {};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855924"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422270"
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 
@@ -57,7 +57,7 @@ Akcelerator jest funkcją sprzętową zoptymalizowaną pod kątem przetwarzania 
 class accelerator;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -141,7 +141,7 @@ Niszczy obiekt `accelerator`.
 ~accelerator();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ## <a name="ctor"></a>skrót
 
@@ -184,7 +184,7 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 *qmode*<br/>
 Tryb kolejkowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowy obiekt `accelerator_view` na tym akceleratorze, przy użyciu określonego trybu kolejkowania.
 
@@ -260,7 +260,7 @@ Zwraca wektor obiektów `accelerator`, które reprezentują wszystkie dostępne 
 static inline std::vector<accelerator> get_all();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wektor dostępnych akceleratorów
 
@@ -272,7 +272,7 @@ Zwraca automatyczny wybór accelerator_view, który po określeniu jako docelowy
 static accelerator_view __cdecl get_auto_selection_view();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wybór autowybierany accelerator_view.
 
@@ -284,7 +284,7 @@ Zwraca dedykowaną pamięć dla `accelerator`w kilobajtach.
 size_t get_dedicated_memory() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dedykowana pamięć dla `accelerator`w kilobajtach.
 
@@ -296,7 +296,7 @@ Pobiera domyślny access_type procesora dla buforów utworzonych w tym akcelerat
 access_type get_default_cpu_access_type() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślna access_type procesora dla buforów utworzonych w tym akceleratorze.
 
@@ -308,7 +308,7 @@ Zwraca domyślny obiekt `accelerator_view`, który jest skojarzony z `accelerato
 accelerator_view get_default_view() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślny obiekt `accelerator_view`, który jest skojarzony z `accelerator`.
 
@@ -320,7 +320,7 @@ Zwraca Krótki opis urządzenia `accelerator`.
 std::wstring get_description() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Krótki opis urządzenia `accelerator`.
 
@@ -332,7 +332,7 @@ Zwraca ścieżkę akceleratora. Ścieżka jest unikatowa w systemie.
 std::wstring get_device_path() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowa ścieżka wystąpienia urządzenia dla całego systemu.
 
@@ -344,7 +344,7 @@ Zwraca wartość logiczną wskazującą, czy `accelerator` może wynikać do wy�
 bool get_has_display() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli `accelerator` może wynikać do wyświetlania; w przeciwnym razie **false**.
 
@@ -356,7 +356,7 @@ Określa, czy `accelerator` ma włączoną warstwę debugowania dla obszernego r
 bool get_is_debug() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ma **wartość true** , jeśli `accelerator` ma WŁĄCZONĄ warstwę debugowania dla obszernego raportowania błędów. W przeciwnym razie **false**.
 
@@ -368,7 +368,7 @@ Określa, czy `accelerator` jest emulowana.
 bool get_is_emulated() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli `accelerator` jest emulowana. W przeciwnym razie **false**.
 
@@ -380,7 +380,7 @@ Zwraca wartość logiczną wskazującą, czy akcelerator obsługuje pamięć dos
 bool get_supports_cpu_shared_memory() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , Jeśli akcelerator obsługuje pamięć współużytkowaną procesora CPU; w przeciwnym razie **false**.
 
@@ -392,7 +392,7 @@ Zwraca wartość logiczną wskazującą, czy akcelerator obsługuje matematykę 
 bool get_supports_double_precision() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , Jeśli akcelerator obsługuje matematykę o podwójnej precyzji; w przeciwnym razie **false**.
 
@@ -404,7 +404,7 @@ Zwraca wartość logiczną wskazującą, czy akcelerator ma ograniczoną obsług
 bool get_supports_limited_double_precision() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , Jeśli akcelerator ma ograniczoną obsługę matematycznej podwójnej precyzji; w przeciwnym razie **false**.
 
@@ -416,7 +416,7 @@ Zwraca wersję `accelerator`.
 unsigned int get_version() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wersja `accelerator`.
 
@@ -457,7 +457,7 @@ bool operator!= (const accelerator& _Other) const;
 *_Other*<br/>
 Obiekt `accelerator`, który ma zostać porównany z tym elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Fałsz** , jeśli dwa obiekty `accelerator` są takie same; w przeciwnym razie **wartość true**.
 
@@ -474,7 +474,7 @@ accelerator& operator= (const accelerator& _Other);
 *_Other*<br/>
 Obiekt `accelerator`, z którego ma być kopiowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do tego obiektu `accelerator`.
 
@@ -491,7 +491,7 @@ bool operator== (const accelerator& _Other) const;
 *_Other*<br/>
 Obiekt `accelerator`, który ma zostać porównany z tym elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli inny obiekt `accelerator` jest taki sam jak ten obiekt `accelerator`; w przeciwnym razie **false**.
 
@@ -508,7 +508,7 @@ static inline bool set_default(std::wstring _Path);
 *_Path*<br/>
 Ścieżka do akceleratora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli wywołanie zakończy się pomyślnie w ustawieniu akceleratora domyślnego. W przeciwnym razie **false**.
 
@@ -525,7 +525,7 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 *_Default_cpu_access_type*<br/>
 Domyślny access_type procesora, który ma być używany na potrzeby alokacji pamięci Array/array_view na tym akceleratorze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość logiczna wskazująca, czy domyślny access_type procesora dla akceleratora został pomyślnie ustawiony.
 

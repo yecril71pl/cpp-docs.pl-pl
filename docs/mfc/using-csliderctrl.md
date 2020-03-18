@@ -1,28 +1,26 @@
 ---
 title: Korzystanie z CSliderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CSliderCtrl
 helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-ms.openlocfilehash: f133d25ddab76f42b4bf7b133bb988def9f0f01a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fb26bc981630b59a918acf5bb81b9f3fdb4620a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411776"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441791"
 ---
 # <a name="using-csliderctrl"></a>Korzystanie z CSliderCtrl
 
-[Z CSliderCtrl](../mfc/reference/csliderctrl-class.md) klasa reprezentuje kontrolkę suwaka, która jest również nazywany trackbar. "Kontrolki suwaka" jest oknem które zawiera suwaka i opcjonalnie znaczników znaków. Gdy użytkownik przesuwa suwaka, za pomocą myszy lub klawiszy strzałek, formant suwaka wysyła komunikaty powiadomień, aby wskazać zmianę.
+Klasa [Korzystanie CSliderCtrl](../mfc/reference/csliderctrl-class.md) reprezentuje kontrolkę suwaka, która jest również nazywana TrackBar. "Kontrolka suwaka" to okno zawierające suwak i opcjonalne znaczniki. Gdy użytkownik przesuwa suwak przy użyciu myszy lub klawiszy strzałek, kontrolka suwaka wysyła komunikaty powiadomień, aby wskazać zmianę.
 
-Formanty suwaka są przydatne, gdy użytkownik, który ma zaznacz wartość discrete lub zestaw kolejnych wartości w zakresie. Może na przykład użyć kontrolki suwaka, aby umożliwić użytkownikowi na ustawianie częstotliwości powtarzania klawiatury przez przesunięcie suwaka danego znacznika.
+Kontrolki suwaka są przydatne, gdy użytkownik chce wybrać wartość dyskretną lub zestaw kolejnych wartości z zakresu. Na przykład można użyć kontrolki suwaka, aby zezwolić użytkownikowi na ustawienie częstotliwości powtarzania klawiatury przez przesunięcie suwaka do danego znacznika.
 
-Przenosi suwaka w kontrolce suwaka w przyrostach, które można określić podczas jego tworzenia. Na przykład, jeśli określisz, że kontrolki suwaka powinny mieć zakres pięć, suwak mogą tylko zajmować sześć stanowiska: pozycji z lewej strony kontrolki suwaka i jedną pozycję dla każdego przyrostu w zakresie. Zwykle każda z tych pozycji jest identyfikowany przez znacznika.
+Suwak w kontrolce suwaka przenosi przyrosty określone podczas jego tworzenia. Na przykład, jeśli określisz, że kontrolka suwaka powinna mieć zakres pięciu, suwak może zajmować tylko sześć pozycji: położenie w lewej części kontrolki suwaka i jedną pozycję dla każdego przyrostu w zakresie. Zazwyczaj każda z tych pozycji jest identyfikowana za pomocą znacznika.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Używanie kontrolek suwaka](../mfc/using-slider-controls.md)
 
@@ -32,6 +30,6 @@ Przenosi suwaka w kontrolce suwaka w przyrostach, które można określić podcz
 
 - [Komunikaty powiadomień suwaka](../mfc/slider-notification-messages.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

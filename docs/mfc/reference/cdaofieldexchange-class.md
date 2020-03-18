@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867303"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420625"
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 
@@ -85,7 +85,7 @@ Jeśli piszesz własną funkcję DFX, wywołaj `IsValidOperation` na początku f
 BOOL IsValidOperation();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli bieżąca operacja jest odpowiednia dla typu aktualizowanego pola.
 
@@ -157,7 +157,7 @@ W przypadku Sparametryzuj klasy zestawu rekordów należy dodać wywołania DFX 
 
 Ogólnie rzecz biorąc każda grupa wywołań funkcji DFX skojarzonych z elementami członkowskimi danych pól lub składowymi danych parametrów musi być poprzedzona wywołaniem `SetFieldType`. Parametr *nFieldType* każdego wywołania `SetFieldType` identyfikuje typ elementów członkowskich danych reprezentowanych przez wywołania funkcji DFX, które są zgodne z wywołaniem `SetFieldType`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

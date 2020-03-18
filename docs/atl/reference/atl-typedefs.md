@@ -24,11 +24,11 @@ helpviewer_keywords:
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
 ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857109"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418259"
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 
@@ -337,7 +337,7 @@ typedef CUrl* LPURL;
 
 **Nagłówek:** atlutil. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Funkcje](../../atl/reference/atl-functions.md)<br/>

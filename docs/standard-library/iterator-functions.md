@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874054"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420114"
 ---
 # <a name="ltiteratorgt-functions"></a>funkcje&gt; iteratora &lt;
 
@@ -127,7 +127,7 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 *_Cont*\
 Kontener, w którym ma zostać wykonane Wstawianie wsteczne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `back_insert_iterator` skojarzony z *_Cont*obiektu kontenera.
 
@@ -209,7 +209,7 @@ Kontener.
 \ *tablicy*
 Tablica obiektów typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze dwie funkcje szablonu zwracają `cont.begin()`. Pierwsza funkcja jest niestała; druga jest stała.
 
@@ -301,7 +301,7 @@ auto cbegin(const Container& cont)
 \ *kontynuacji*
 Kontener lub lista initializer_list.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stała `cont.begin()`.
 
@@ -334,7 +334,7 @@ auto cend(const Container& cont)
 \ *kontynuacji*
 Kontener lub lista initializer_list.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stała `cont.end()`.
 
@@ -390,7 +390,7 @@ Pierwszy iterator, którego odległość od sekundy ma zostać określony.
 *ostatni*\
 Drugi iterator, którego odległość od początku ma zostać określony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba przypadków, gdy *pierwszy* musi zostać zwiększony, dopóki nie będzie równa wartości *Last*.
 
@@ -479,7 +479,7 @@ Kontener.
 \ *tablicy*
 Tablica obiektów typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze dwie funkcje szablonu zwracają `cont.end()` (pierwszy nie jest stałą, a drugi to stała).
 
@@ -503,7 +503,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 *_Cont*\
 Obiekt kontenera, którego przód ma element wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `front_insert_iterator` skojarzony z *_Cont*obiektu kontenera.
 
@@ -658,7 +658,7 @@ Rozmiar tablicy docelowej.
 *Indeks*\
 Opcjonalny indeks do tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wystąpienie elementu `checked_array_iterator`.
 
@@ -762,7 +762,7 @@ unchecked_array_iterator<Iter>
 \ *PTR*
 Wskaźnik do tablicy docelowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wystąpienie elementu `unchecked_array_iterator`.
 
@@ -842,7 +842,7 @@ Bieżąca pozycja.
 *_Off*\
 Liczba powtórzeń iteracji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca nową pozycję iteratora po iteracji *_Off* czas.
 

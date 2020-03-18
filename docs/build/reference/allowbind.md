@@ -2,22 +2,22 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273199"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440389"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
-Określa, czy biblioteka DLL może być powiązana.
+Określa, czy można powiązać bibliotekę DLL.
 
 ```
 
@@ -26,12 +26,12 @@ Określa, czy biblioteka DLL może być powiązana.
 
 ## <a name="remarks"></a>Uwagi
 
-**/ALLOWBIND** opcja ustawia bit w nagłówku biblioteki DLL, który wskazuje Bind.exe, że obraz może być powiązana. Powiązania umożliwiają obraz, aby ładować się szybciej, gdy moduł ładujący nie rebase i wykonywać naprawy adresów dla każdej biblioteki DLL, do którego istnieje odwołanie. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo — powiązanie unieważnia podpis. Powiązania nie ma wpływu Jeśli randomizacji układu przestrzeni adresowej (ASLR) jest włączony dla obrazu za pomocą **opcja/DynamicBase** w wersjach systemu Windows, która obsługuje ASLR.
+Opcja **/ALLOWBIND** ustawia bit w nagłówku dll, który wskazuje na powiązanie. exe, że obraz może być powiązany. Powiązanie może umożliwić szybsze ładowanie obrazu, gdy moduł ładujący nie musi zmienić bazy i wykonać naprawy adresu dla każdej biblioteki DLL, do której się odwołuje. Nie ma potrzeby powiązania DLL, jeśli został on podpisany cyfrowo — powiązanie unieważnia sygnaturę. Powiązanie nie ma wpływu, jeśli jest włączone generowanie losowe układu przestrzeni adresowej (ASLR) dla obrazu za pomocą **/DYNAMICBASE** w wersjach systemu Windows, które obsługują ASLR.
 
-Użyj **/ALLOWBIND:NO** aby zapobiec Bind.exe powiązanie biblioteki DLL.
+Użyj **/ALLOWBIND: nie** , aby zapobiec powiązaniu pliku DLL przez program bind. exe.
 
 Aby uzyskać więcej informacji, zobacz [/ALLOWBIND](allowbind-prevent-dll-binding.md) — opcja konsolidatora.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje EDITBIN](editbin-options.md)

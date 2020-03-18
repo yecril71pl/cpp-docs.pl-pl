@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866277"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420408"
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
 
@@ -27,7 +27,7 @@ Obsługuje procedury wymiany pól rekordów (RFX) i wymiany zbiorczych pól reko
 class CFieldExchange
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -78,7 +78,7 @@ BOOL IsFieldType(UINT* pnField);
 *pnField*<br/>
 Numer sekwencyjny elementu członkowskiego danych pola lub parametru jest zwracany w tym parametrze. Ta liczba odnosi się do kolejności elementu członkowskiego danych w funkcji [CRecordset::D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [CRecordset::D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli bieżącą operację można wykonać na bieżącym typie pola lub parametru.
 

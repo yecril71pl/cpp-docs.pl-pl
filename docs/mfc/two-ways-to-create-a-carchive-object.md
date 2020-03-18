@@ -1,8 +1,6 @@
 ---
 title: Dwa sposoby tworzenia obiektu CArchive
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - CArchive class [MFC], closing CArchive objects
 - CArchive objects [MFC], closing
@@ -13,61 +11,61 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38642906b0973730149ed0de5381519f06d69fe5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181513"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442037"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dwa sposoby tworzenia obiektu CArchive
 
-Istnieją dwa sposoby tworzenia `CArchive` obiektu:
+Istnieją dwa sposoby tworzenia obiektu `CArchive`:
 
-- [Operacje niejawnego tworzenia obiektu CArchive za pośrednictwem programu framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+- [Niejawne utworzenie obiektu CArchive za pośrednictwem struktury](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
 
 - [Jawne utworzenie obiektu CArchive](#_core_explicit_creation_of_a_carchive_object)
 
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Operacje niejawnego tworzenia obiektu CArchive za pośrednictwem programu Framework
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Niejawne utworzenie obiektu CArchive za pośrednictwem struktury
 
-Najbardziej powszechną i Najłatwiejszą, sposób jest umożliwienie framework tworzenie `CArchive` obiektu dokumentu w imieniu Zapisz, Zapisz jako i polecenia Otwórz menu Plik.
+Najbardziej typowym i najprostszym sposobem jest umożliwienie struktury tworzenia `CArchive` obiektu dla dokumentu w imieniu poleceń Zapisz, Zapisz jako i Otwórz w menu plik.
 
-To co platformę, gdy użytkownik aplikacji generuje polecenia Zapisz jako, w menu Plik:
+Oto jakie środowisko robi, gdy użytkownik aplikacji wystawia polecenie Zapisz jako z menu plik:
 
-1. Przedstawia informacje o **Zapisz jako** okno dialogowe i pobiera nazwy pliku od użytkownika.
+1. Wyświetla okno dialogowe **Zapisz jako** i pobiera nazwę pliku od użytkownika.
 
-1. Otwiera plik o nazwie określonej przez użytkownika jako `CFile` obiektu.
+1. Otwiera plik o nazwie przez użytkownika jako obiekt `CFile`.
 
-1. Tworzy `CArchive` obiektu, który wskazuje na to `CFile` obiektu. Podczas tworzenia `CArchive` obiekt, w ramach Ustawia tryb na "przechowywać" (zapis, serializować) zamiast "ładowanie" (Odczyt, deserializacji).
+1. Tworzy obiekt `CArchive`, który wskazuje na ten obiekt `CFile`. W przypadku tworzenia obiektu `CArchive` struktura ustawia tryb na "Store" (Write, serializacji), w przeciwieństwie do "Load" (odczyt, deserializacji).
 
-1. Wywołania `Serialize` funkcję zdefiniowaną w swojej `CDocument`-klasy, przekazywanie jej przez odwołanie do `CArchive` obiektu.
+1. Wywołuje funkcję `Serialize` zdefiniowaną w klasie pochodnej `CDocument`, przekazując do niej odwołanie do obiektu `CArchive`.
 
-Twój dokument `Serialize` funkcja następnie zapisuje dane do `CArchive` obiektu, zgodnie z objaśnieniem wkrótce. Po powrocie z Twojej `Serialize` niszczy platformę funkcji `CArchive` obiektu a następnie `CFile` obiektu.
+Funkcja `Serialize` dokumentu następnie zapisuje dane do obiektu `CArchive`, jak wyjaśniono wkrótce. Po powrocie z funkcji `Serialize`, struktura niszczy obiekt `CArchive`, a następnie obiekt `CFile`.
 
-W związku z tym jeśli zezwolisz framework tworzenie `CArchive` obiekt dokumentu, wystarczy zrobić to implementacja tego dokumentu `Serialize` funkcja, która zapisuje i odczytuje do i z archiwum. Również musiał zostać zaimplementowany `Serialize` dla każdego `CObject`-obiektami wywodzącymi, dokumentu `Serialize` funkcji z kolei serializuje bezpośrednio lub pośrednio.
+W takim przypadku, Jeśli zezwolisz platformie na utworzenie obiektu `CArchive` dla dokumentu, wszystkie czynności, które należy wykonać, implementują funkcję `Serialize` dokumentu, która zapisuje i odczytuje do i z archiwum. Należy również zaimplementować `Serialize` dla dowolnego obiektu pochodnego `CObject`, który funkcja `Serialize` dokumentu w przekształca bezpośrednio lub pośrednio.
 
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Jawne utworzenie obiektu CArchive
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Jawne utworzenie obiektu CArchive
 
-Oprócz serializacji dokumentu przez platformę, są inne sytuacje, kiedy może być konieczne `CArchive` obiektu. Na przykład możesz chcieć serializacja danych do i z Schowka, reprezentowane przez `CSharedFile` obiektu. Możesz też użyć interfejsu użytkownika do zapisywania pliku, który jest inny niż oferowany przez platformę. W takim przypadku można jawnie utworzyć `CArchive` obiektu. W tym taki sam sposób, który jest struktura, korzystając z następującej procedury.
+Oprócz serializowania dokumentu za pośrednictwem struktury istnieją inne przypadki, w których może być potrzebny `CArchive` obiektu. Na przykład możesz chcieć serializować dane do i ze schowka reprezentowane przez obiekt `CSharedFile`. Lub można użyć interfejsu użytkownika do zapisywania pliku, który jest inny niż ten, który jest oferowany przez platformę. W takim przypadku można jawnie utworzyć obiekt `CArchive`. Wykonuje się to tak samo jak w przypadku platformy, wykonując poniższą procedurę.
 
-#### <a name="to-explicitly-create-a-carchive-object"></a>Aby jawnie tworzenia obiektu CArchive
+#### <a name="to-explicitly-create-a-carchive-object"></a>Aby jawnie utworzyć obiekt CArchive
 
-1. Konstruowania `CFile` lub obiektu pochodną `CFile`.
+1. Utwórz obiekt `CFile` lub obiekt pochodzący z `CFile`.
 
-1. Przekaż `CFile` obiekt do konstruktora dla `CArchive`, jak pokazano w poniższym przykładzie:
+1. Przekaż obiekt `CFile` do konstruktora dla `CArchive`, jak pokazano w następującym przykładzie:
 
    [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-   Drugi argument `CArchive` Konstruktor jest wyliczany określający czy archiwum będą używane do przechowywania lub podczas ładowania danych do lub z pliku. `Serialize` Funkcja obiektu sprawdza, czy ten stan, wywołując `IsStoring` funkcji dla obiektu archiwum.
+   Drugim argumentem konstruktora `CArchive` jest wartość wyliczana określająca, czy archiwum będzie używane do przechowywania lub ładowania danych do lub z pliku. Funkcja `Serialize` obiektu sprawdza ten stan, wywołując funkcję `IsStoring` dla obiektu archiwum.
 
-Po zakończeniu, przechowywanie i ładowanie danych do lub z `CArchive` obiektów, zamknij go. Mimo że `CArchive` (i `CFile`) obiektów zostanie automatycznie zamknięte archiwum (i plik), jest dobrą praktyką, aby jawnie w tym celu, ponieważ ułatwia odzyskiwanie z błędami. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz artykuł [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Po zakończeniu przechowywania lub ładowania danych do lub z obiektu `CArchive`, zamknij go. Mimo że obiekty `CArchive` (i `CFile`) automatycznie zamkną archiwum (i plik), dobrym rozwiązaniem jest to, że jest to bardziej jawne, ponieważ sprawia, że odzyskiwanie z błędów jest łatwiejsze. Aby uzyskać więcej informacji na temat obsługi błędów, zobacz [wyjątki artykułów: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-#### <a name="to-close-the-carchive-object"></a>Aby zamknąć obiektu CArchive
+#### <a name="to-close-the-carchive-object"></a>Aby zamknąć obiekt CArchive
 
-1. Poniższy przykład ilustruje sposób zamknięcia `CArchive` obiektu:
+1. Poniższy przykład ilustruje sposób zamykania obiektu `CArchive`:
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Serializacja: Serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+[Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)

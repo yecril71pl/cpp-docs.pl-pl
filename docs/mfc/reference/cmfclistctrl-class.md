@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 ms.openlocfilehash: 599a00af28ee5b8effbabbe5b334022ceb49f91a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869971"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420317"
 ---
 # <a name="cmfclistctrl-class"></a>Klasa CMFCListCtrl
 
@@ -45,7 +45,7 @@ Klasa `CMFCListCtrl` rozszerza funkcjonalność klasy [klasy CListCtrl](../../mf
 class CMFCListCtrl : public CListCtrl
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -137,7 +137,7 @@ Zwraca odwołanie do kontrolki nagłówka.
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do bazowego obiektu [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) .
 
@@ -153,7 +153,7 @@ Sprawdza, czy formant listy obsługuje obecnie sortowanie dla wielu kolumn.
 BOOL IsMultipleSort() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, Jeśli kontrolka listy obsługuje wiele sortowania; W przeciwnym razie zwraca wartość FALSE.
 
@@ -183,7 +183,7 @@ podczas Drugi element do porównania.
 *iColumn*<br/>
 podczas Indeks kolumny, która jest sortowana przez tę metodę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita, która wskazuje względną pozycję dwóch elementów. Wartość ujemna wskazuje, że pierwszy element powinien poprzedzać sekundy, wartość dodatnia wskazuje, że pierwszy element powinien występować po drugim, a zero oznacza, że dwa elementy są równoważne.
 
@@ -209,7 +209,7 @@ podczas Wiersz w danej komórce.
 *nColumn*<br/>
 podczas Kolumna w podanej komórce.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLOREF, która określa kolor tła komórki.
 
@@ -239,7 +239,7 @@ podczas Kolumna w podanej komórce.
 *dwData*<br/>
 podczas Dane zdefiniowane przez użytkownika. Domyślna implementacja nie używa tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do czcionki używanej w bieżącej komórce.
 
@@ -265,7 +265,7 @@ podczas Wiersz w danej komórce.
 *nColumn*<br/>
 podczas Kolumna w podanej komórce.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLOREF, która określa kolor tekstu komórki.
 

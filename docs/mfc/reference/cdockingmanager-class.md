@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883938"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420471"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 
@@ -177,11 +177,11 @@ Implementuje podstawowe funkcje kontrolujące układ dokowania w oknie głównej
 class CDockingManager : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Tworzy okienko dokowania i dodaje je do listy pasków sterowania.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Dodaje dojście do okienka paska do listy ukrytych okienek z kartami słupkowymi MDI.|
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Określa, czy Menedżer dokowania ukrywa okienka w trybie kontenera OLE.|
 |[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|Określa globalny tryb dokowania.|
@@ -324,7 +324,7 @@ podczas Odwołanie do struktury informacji zawierającej wyrównanie okienka dok
 *ppDockBar*<br/>
 określoną Wskaźnik do wskaźnika do nowego okienka dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko Dock zostało utworzone pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -367,7 +367,7 @@ podczas Tylko do użytku wewnętrznego. Zawsze używaj wartości domyślnej FALS
 *bInsertForOuterEdge*<br/>
 podczas Tylko do użytku wewnętrznego. Zawsze używaj wartości domyślnej FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie zarejestrowane przy użyciu Menedżera dokowania. w przeciwnym razie FALSE.
 
@@ -403,7 +403,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 *pWnd*<br/>
 podczas Wskaźnik do ramki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ramka nie znajduje się na liście ramek mini i została dodana pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -435,7 +435,7 @@ podczas Odwołanie do obiektu `CRect`
 *dwAlignment*<br/>
 podczas Wyrównanie obiektu `CRect`
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli wyrównanie obiektu `CRect` zostało skorygowane; W przeciwnym razie zwraca wartość FALSE.
 
@@ -487,7 +487,7 @@ podczas Wskaźnik do okienka paska.
 *pCurrAutoHideToolBar*<br/>
 podczas Wskaźnik do paska narzędzi Autoukrywanie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość NULL, jeśli pasek narzędzi Autoukrywanie nie został utworzony; w przeciwnym razie wskaźnik do nowego paska narzędzi.
 
@@ -574,7 +574,7 @@ BOOL Create(CFrameWnd* pParentWnd);
 *pParentWnd*<br/>
 podczas Wskaźnik do ramki nadrzędnej Menedżera dokowania. Ta wartość nie może być RÓWNa NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze prawda.
 
@@ -612,7 +612,7 @@ podczas Okienko, które jest ignorowane przez metodę.
 *pBarToDock*<br/>
 podczas Okienko zadokowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stan dokowania.
 
@@ -684,7 +684,7 @@ podczas Wskaźnik do okienka, które ma zostać zadokowane po lewej stronie *pTa
 *pTargetBar*<br/>
 podczas Wskaźnik do okienka Target.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
@@ -701,7 +701,7 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 *dwStyle*<br/>
 podczas Wyrównanie dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko Dock zostało utworzone pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -718,7 +718,7 @@ BOOL EnableDocking(DWORD dwStyle);
 *dwStyle*<br/>
 podczas Wyrównanie dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko Dock zostało utworzone pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -793,7 +793,7 @@ podczas Wyrównanie okienka paska.
 *bOuter*<br/>
 podczas Jeśli wartość jest równa TRUE, Pobierz pasek w pozycji nagłówka na liście pasków sterowania. W przeciwnym razie Pobierz pasek w pozycji ogon na liście pasków sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Okienko dokowania o określonym wyrównaniu; W przeciwnym razie wartość NULL.
 
@@ -815,7 +815,7 @@ podczas Określa identyfikator formantu, który ma zostać znaleziony.
 *bSearchMiniFrames*<br/>
 podczas Wartość TRUE, aby uwzględnić wszystkie okienka przestawne w wyszukiwaniu. Wartość FALSE, aby uwzględnić tylko okienka zadokowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CBasePane](../../mfc/reference/cbasepane-class.md) , który ma określony identyfikator kontrolki lub wartość null, jeśli nie można znaleźć określonego okienka.
 
@@ -834,7 +834,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 *pTargetBar*<br/>
 podczas Wskaźnik do okienka paska docelowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Okienko pasek z identyfikatorem okienka paska docelowego; Wartość NULL, jeśli nie istnieje takie okienko paska.
 
@@ -872,7 +872,7 @@ podczas Wskaźnik do ramki do wykluczenia.
 *bFloatMultiOnly*<br/>
 podczas Wartość TRUE, aby wykluczyć ramki, które nie są wystąpieniami `CMultiPaneFrameWnd`; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ramka, która zawiera dany punkt; W przeciwnym razie wartość NULL.
 
@@ -891,7 +891,7 @@ void GetClientAreaBounds(CRect& rcClient);
 *rcClient*<br/>
 określoną Odwołanie do prostokąta zawierającego granice obszaru klienckiego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prostokąt, który zawiera granice obszaru klienckiego.
 
@@ -903,7 +903,7 @@ Zwraca bieżący tryb dokowania.
 static AFX_DOCK_TYPE GetDockingMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość modułu wyliczającego, która reprezentuje bieżący tryb dokowania. Może to być jedna z następujących wartości:
 
@@ -925,7 +925,7 @@ Pobiera wskaźnik do ramki okna nadrzędnego.
 CFrameWnd* GetDockSiteFrameWnd() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do ramki okna nadrzędnego.
 
@@ -937,7 +937,7 @@ Zwraca włączone wyrównanie okienek.
 DWORD GetEnabledAutoHideAlignment() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bitowa kombinacja CBRS_ALIGN_ flags lub 0, jeśli okienka Autoukrywanie nie są włączone. Aby uzyskać więcej informacji, zobacz [obiektu CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
 
@@ -953,7 +953,7 @@ Pobiera listę miniframes.
 const CObList& GetMiniFrames() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Lista miniframes, która zawiera paski kontroli należące do Menedżera dokowania.
 
@@ -965,7 +965,7 @@ Pobiera prostokąt zawierający zewnętrzne krawędzie ramki.
 CRect GetOuterEdgeBounds() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prostokąt, który zawiera zewnętrzne krawędzie ramki.
 
@@ -1009,7 +1009,7 @@ Pobiera wskaźnik do Menedżera dokowania inteligentnego.
 CSmartDockingManager* GetSmartDockingManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do Menedżera dokowania inteligentnego.
 
@@ -1021,7 +1021,7 @@ Pobiera wskaźnik do Menedżera dokowania inteligentnego.
 CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do Menedżera dokowania inteligentnego.
 
@@ -1033,7 +1033,7 @@ Zwraca parametry inteligentnego dokowania dla Menedżera dokowania.
 static CSmartDockingInfo& GetSmartDockingParams();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Klasa, która zawiera parametry inteligentnego dokowania dla bieżącego Menedżera dokowania. Aby uzyskać więcej informacji, zobacz [Klasa CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
 
@@ -1079,7 +1079,7 @@ podczas Wyrównanie okienka dokowania.
 *ppDockBar*<br/>
 określoną Wskaźnik prowadzący do wskaźnika do okienka dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko Dock zostało utworzone pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -1105,7 +1105,7 @@ podczas Wskaźnik do okienka docelowego.
 *bAfter*<br/>
 podczas Wartość TRUE powoduje wstawienie okienka po pozycji okienka docelowego; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko sterowania zostało pomyślnie dodane do listy pasków kontroli; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1121,7 +1121,7 @@ Określa, czy menu wyskakujące jest wyświetlane w podpisach wszystkich okienek
 static BOOL IsDockSiteMenu();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli menu witryny Dock jest wyświetlane w podpisach wszystkich okienek dokowania; w przeciwnym razie FALSE.
 
@@ -1137,7 +1137,7 @@ Określa, czy układy wszystkich okienek są dostosowywane.
 BOOL IsInAdjustLayout() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli układy wszystkich okienek są dostosowane; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1149,7 +1149,7 @@ Określa, czy Menedżer dokowania jest w trybie kontenera OLE.
 BOOL IsOLEContainerMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli Menedżer dokowania jest w trybie kontenera OLE; w przeciwnym razie FALSE.
 
@@ -1179,7 +1179,7 @@ określoną Określa, która krawędź punktu jest bliska. Możliwe wartości to
 *bOuterEdge*<br/>
 określoną Ma wartość TRUE, jeśli punkt znajduje się blisko zewnętrznego obramowania witryny Docker; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli punkt znajduje się blisko witryny Docker; w przeciwnym razie FALSE.
 
@@ -1191,7 +1191,7 @@ Określa, czy jest ustawiony tryb podglądu wydruku.
 BOOL IsPrintPreviewValid() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ustawiono tryb podglądu wydruku. W przeciwnym razie zwraca wartość FALSE.
 
@@ -1213,7 +1213,7 @@ podczas Nazwa profilu.
 *uiID*<br/>
 podczas Identyfikator Menedżera dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli stan Menedżera dokowania został pomyślnie załadowany; w przeciwnym razie FALSE.
 
@@ -1332,7 +1332,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 *pFrame*<br/>
 podczas Wskaźnik do okna mini-frame.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -1393,7 +1393,7 @@ określoną Jeśli okienko zostanie znalezione w określonym punkcie, ten parame
 *pBarToIgnore*<br/>
 podczas Jeśli wartość nie jest równa NULL, metoda ignoruje okienka określone przez ten parametr.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt pochodny [CBasePane](../../mfc/reference/cbasepane-class.md), który zawiera dany punkt lub wartość null, jeśli nie znaleziono żadnego okienka.
 
@@ -1427,7 +1427,7 @@ podczas Wskaźnik do elementu void, który jest rzutowany na wskaźnik do `CCmdU
 *pHandlerInfo*<br/>
 podczas Wskaźnik do struktury informacji. Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli *pEXtra* nie ma wartości null i *nCode* równa się CN_UPDATE_COMMAND_UI lub jeśli istnieje pasek sterowania z określonym *NID*.
 
@@ -1478,7 +1478,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 *pWnd*<br/>
 podczas Wskaźnik do ramki do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określona ramka jest usuwana; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1530,7 +1530,7 @@ podczas Wskaźnik do oryginalnego okienka.
 *pNewBar*<br/>
 podczas Wskaźnik do okienka, które zastępuje oryginalne okienko.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie zastąpione; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1560,7 +1560,7 @@ podczas Ścieżka do klucza rejestru.
 *uiID*<br/>
 podczas Identyfikator Menedżera dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli stan został pomyślnie zapisany; w przeciwnym razie FALSE.
 
@@ -1590,7 +1590,7 @@ podczas Dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 podczas Dodatkowe informacje zależne od komunikatów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze prawda.
 
@@ -1725,7 +1725,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 *bShow*<br/>
 podczas PRAWDA, aby wyświetlić okienka; Wartość FALSE, aby ukryć okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze FAŁSZ.
 
@@ -1758,13 +1758,13 @@ Metoda statyczna zwracająca motyw używany do wyświetlania znaczników dokowan
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca jedną z następujących wartości wyliczanych: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

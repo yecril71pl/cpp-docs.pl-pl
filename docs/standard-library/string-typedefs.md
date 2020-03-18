@@ -8,11 +8,11 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856605"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419498"
 ---
 # <a name="ltstringgt-typedefs"></a>ciąg &lt;&gt; Typedefs
 
@@ -96,6 +96,6 @@ Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basi
 > [!NOTE]
 > Rozmiar **wchar_t** jest zdefiniowany przez implementację. Jeśli kod zależy od **wchar_t** ma określony rozmiar, sprawdź implementację platformy (na przykład z `sizeof(wchar_t)`). Jeśli potrzebujesz typu ciągu o szerokości, która gwarantuje, że pozostaje taka sama na wszystkich platformach, użyj [String](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)lub [u32string](../standard-library/string-typedefs.md#u32string).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ciąg >](../standard-library/string.md)

@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854031"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421017"
 ---
 # <a name="crecordset-class"></a>Klasa CRecordset
 
@@ -147,7 +147,7 @@ Reprezentuje zestaw rekordów wybranych ze źródła danych.
 class CRecordset : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

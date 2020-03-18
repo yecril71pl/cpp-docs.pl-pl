@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856404"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422004"
 ---
 # <a name="char_traits-struct"></a>char_traits — Struktura
 
@@ -116,7 +116,7 @@ Ciąg lub tablica znaków, której początkowe elementy mają być przypisane do
 *_Num*\
 Liczba elementów, które mają być przypisane do wartości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Druga funkcja członkowska zwraca wskaźnik do ciągu, którego pierwsze *_Num* elementy przypisały wartości *_CharFrom*.
 
@@ -198,7 +198,7 @@ Drugi z dwóch ciągów, które mają być porównywane ze sobą.
 *_Num*\
 Liczba elementów w ciągach, które mają być porównane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość ujemna, jeśli pierwszy ciąg jest mniejszy niż drugi ciąg, 0, jeśli dwa ciągi są równe lub wartość dodatnia, jeśli pierwszy ciąg jest większy niż drugi ciąg.
 
@@ -264,7 +264,7 @@ Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać
 *_Num*\
 Liczba elementów, które mają zostać skopiowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy element jest kopiowany do tablicy ciągów lub znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
 
@@ -329,7 +329,7 @@ Ciąg źródłowy lub tablica znaków do skopiowania.
 *liczba*\
 Liczba elementów, które mają zostać skopiowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg lub tablica znaków przeznaczona do odbioru skopiowanej sekwencji znaków.
 
@@ -376,7 +376,7 @@ Zwraca znak końca pliku (EOF).
 static int_type eof();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Znak EOF.
 
@@ -435,7 +435,7 @@ Pierwsze dwa znaki do przetestowania pod kątem równości.
 *_Ch2*\
 Drugi z dwóch znaków do sprawdzenia pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
 
@@ -495,7 +495,7 @@ Pierwszy z dwóch znaków do sprawdzenia pod kątem równości jako `int_type`s.
 *_Ch2*\
 Drugi z dwóch znaków do przetestowania pod kątem równości jako `int_type`s.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
 
@@ -585,7 +585,7 @@ Liczba pozycji, licząc od pierwszej, w zakresie, który ma być przeszukiwany.
 *_Ch*\
 Znak, który ma być wyszukiwany w zakresie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszego wystąpienia określonego znaku w zakresie, jeśli zostanie znalezione dopasowanie; w przeciwnym razie wskaźnik o wartości null.
 
@@ -660,7 +660,7 @@ static size_t length(const char_type* str);
 *str*\
 Ciąg języka C, którego długość ma być mierzona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w sekwencji mierzonych, które nie obejmują terminatora o wartości null.
 
@@ -706,7 +706,7 @@ Pierwsze dwa znaki do przetestowania mniejsze niż.
 *_Ch2*\
 Dwa z dwóch znaków do przetestowania mniejsze niż.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli pierwszy znak jest mniejszy od drugiego znaku; w przeciwnym razie **false**.
 
@@ -772,7 +772,7 @@ Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać
 *_Num*\
 Liczba elementów, które mają zostać skopiowane z ciągu źródłowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy element *_to* kopiowany do tablicy ciągów lub tablic znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
 
@@ -852,7 +852,7 @@ Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać
 *liczba*\
 Liczba elementów, które mają zostać skopiowane z ciągu źródłowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy element *docelowy* został skopiowany do tablicy ciągów lub tablic znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
 
@@ -919,7 +919,7 @@ static int_type not_eof(const int_type& _Ch);
 *_Ch*\
 Znak reprezentowany jako `int_type` do sprawdzenia, czy jest to znak EOF, czy nie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `int_type` reprezentacja znaku przetestowanego, jeśli `int_type` znaku nie jest równa wartości znaku EOF.
 
@@ -1027,7 +1027,7 @@ static char_type to_char_type(const int_type& _Ch);
 *_Ch*\
 Znak `int_type`, który ma być reprezentowany jako `char_type`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Znak `char_type` odpowiadający znakowi `int_type`.
 
@@ -1133,7 +1133,7 @@ static int_type to_int_type(const char_type& _Ch);
 *_Ch*\
 Znak `char_type`, który ma być reprezentowany jako `int_type`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Znak `int_type` odpowiadający znakowi `char_type`.
 

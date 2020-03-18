@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnle
 - _spawnle
 - wspawnle
 - _wspawnle
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: a0225d007bfc69d88982b4c130410bc6be9abc06
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9d3c97f5fb7f98a2c045b3f5657211b3866c4b78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947966"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442730"
 ---
 # <a name="_spawnle-_wspawnle"></a>_spawnle, _wspawnle
 
@@ -87,7 +86,7 @@ Tablica wskaźników do ustawień środowiska.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana z synchronicznego **_spawnle** lub **_wspawnle** ( **_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnle** lub **_wspawnle** ( **_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany jawnie wywoła procedurę **Exit** z niezerowym argumentem. Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
+Wartość zwracana z synchronicznej **_spawnle** lub **_wspawnle** ( **_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnle** lub **_wspawnle** ( **_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany jawnie wywoła procedurę **Exit** z niezerowym argumentem. Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości.
 
 |||
 |-|-|
@@ -109,7 +108,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *ar
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnle**|\<process.h>|
+|**_spawnle**|\<Process. h >|
 |**_wspawnle**|\<stdio. h > lub \<WCHAR. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
@@ -118,7 +117,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

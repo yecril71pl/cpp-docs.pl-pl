@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876178"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420737"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;funkcje&gt; wątku
 
@@ -36,7 +36,7 @@ Jednoznacznie identyfikuje bieżący wątek wykonania.
 thread::id this_thread::get_id() noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt typu [thread:: ID](../standard-library/thread-class.md) , który jednoznacznie identyfikuje bieżący wątek wykonywania.
 
@@ -107,6 +107,6 @@ Sygnalizuje systemowi operacyjnemu Uruchamianie innych wątków, nawet jeśli bi
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [> wątku \<](../standard-library/thread.md)

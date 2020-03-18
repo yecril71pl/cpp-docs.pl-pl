@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890710"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420359"
 ---
 # <a name="cimagelist-class"></a>Klasa korzystanie CImageList
 
@@ -91,17 +91,17 @@ Oferuje funkcje formantu Common Image list systemu Windows.
 class CImageList : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Korzystanie CImageList:: Korzystanie CImageList](#cimagelist)|Konstruuje obiekt `CImageList`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Korzystanie CImageList:: Add](#add)|Dodaje obraz lub obrazy do listy obrazów.|
 |[Korzystanie CImageList:: Attach](#attach)|Dołącza listę obrazów do obiektu `CImageList`.|
@@ -138,13 +138,13 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Korzystanie CImageList:: operator HIMAGELIST](#operator_himagelist)|Zwraca HIMAGELIST dołączony do `CImageList`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Korzystanie CImageList:: m_hImageList](#m_himagelist)|Dojście zawierające listę obrazów dołączoną do tego obiektu.|
 
@@ -196,7 +196,7 @@ Kolor używany do generowania maski. Każdy piksel tego koloru w danej mapie bit
 *hIcon*<br/>
 Uchwyt ikony zawierającej mapę bitową i maskę dla nowego obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeksowanie pierwszego nowego obrazu (liczony od zera); w przeciwnym razie-1.
 
@@ -221,7 +221,7 @@ BOOL Attach(HIMAGELIST hImageList);
 *hImageList*<br/>
 Uchwyt do obiektu listy obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli załącznik zakończył się pomyślnie; w przeciwnym razie 0.
 
@@ -247,7 +247,7 @@ Indeks obrazu, który ma być przeciągany od zera.
 *ptHotSpot*<br/>
 Współrzędne początkowej pozycji przeciągania (zazwyczaj położenie kursora). Współrzędne są względne w lewym górnym rogu obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -303,7 +303,7 @@ Wartość flagi bitowej, która określa typ operacji kopiowania, która ma zost
 *pSrc*<br/>
 Wskaźnik do obiektu `CImageList`, który jest obiektem docelowym operacji kopiowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -404,7 +404,7 @@ Przesunięcie osi y drugiego obrazu w relacji do pierwszego obrazu (w pikselach)
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -424,7 +424,7 @@ Wywołaj tę funkcję, aby usunąć listę obrazów.
 BOOL DeleteImageList();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -452,7 +452,7 @@ Wywołaj tę funkcję, aby odłączyć obiekt listy obrazów od obiektu `CImageL
 HIMAGELIST Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do obiektu listy obrazów.
 
@@ -482,7 +482,7 @@ Wskaźnik do okna, które jest właścicielem obrazu przeciągania.
 *moment*<br/>
 Położenie, w którym ma być wyświetlany obraz przeciągania. Współrzędne są względem górnego lewego rogu okna (a nie obszaru klienckiego).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -511,7 +511,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 *pWndLock*<br/>
 Wskaźnik do okna, które jest właścicielem obrazu przeciągania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -532,7 +532,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 *zmiennoprzecinkow*<br/>
 Nowa pozycja przeciągania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -557,7 +557,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 *bShow*<br/>
 Określa, czy obraz przeciągnięcia ma być pokazywany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -599,7 +599,7 @@ Flaga określająca styl rysowania. Może to być co najmniej jedna z następuj�
 |ILD_NORMAL|Rysuje obraz przy użyciu koloru tła listy obrazów. Jeśli kolor tła jest wartością CLR_NONE, obraz jest rysowany w sposób przezroczysty przy użyciu maski.|
 |ILD_TRANSPARENT|Rysuje obraz w sposób przezroczysty przy użyciu maski, niezależnie od koloru tła.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -645,7 +645,7 @@ Kolor pierwszego planu obrazu. Zobacz *rgbFg* w [ImageList_DrawEx](/windows/win3
 *nStyle*<br/>
 Flaga określająca styl rysowania. Zobacz *fStyle* w [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -740,7 +740,7 @@ Gdy jest używany z ILS_APLHA, ten element członkowski przechowuje wartość ka
 *crEffect*<br/>
 Wartość [COLORREF](/windows/win32/gdi/colorref) używana dla efektów blask i cień.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obraz został pomyślnie narysowany; w przeciwnym razie FALSE.
 
@@ -783,7 +783,7 @@ HICON ExtractIcon(int nImage);
 *Nokreślono*<br/>
 Indeks obrazu liczony od zera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt ikony, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -808,7 +808,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 *hImageList*<br/>
 Określa listę obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CImageList`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -833,7 +833,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 *hImageList*<br/>
 Określa listę obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CImageList`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -853,7 +853,7 @@ Wywołaj tę funkcję, aby pobrać bieżący kolor tła dla listy obrazów.
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość koloru RGB koloru tła obiektu `CImageList`.
 
@@ -879,7 +879,7 @@ Adres struktury [punktu](/previous-versions/dd162805\(v=vs.85\)) , który odbier
 *lpPointHotSpot*<br/>
 Adres struktury `POINT`, która odbiera przesunięcie obrazu przeciągania względem pozycji przeciągania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, wskaźnik do listy obrazów tymczasowych, który jest używany do przeciągania; w przeciwnym razie wartość NULL.
 
@@ -891,7 +891,7 @@ Wywołaj tę funkcję, aby pobrać liczbę obrazów z listy obrazów.
 int GetImageCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba obrazów.
 
@@ -917,7 +917,7 @@ Indeks obrazu liczony od zera.
 *pImageInfo*<br/>
 Wskaźnik do struktury [IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo) , która otrzymuje informacje o obrazie. Informacje w tej strukturze mogą służyć do bezpośredniego manipulowania mapami bitowymi obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -933,7 +933,7 @@ Wywołaj tę funkcję, aby pobrać element członkowski danych `m_hImageList`.
 HIMAGELIST GetSafeHandle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do listy dołączonych obrazów; w przeciwnym razie wartość NULL, jeśli żaden obiekt nie jest dołączony.
 
@@ -963,7 +963,7 @@ Użyj tego operatora, aby uzyskać dołączone dojście obiektu `CImageList`.
 operator HIMAGELIST() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do listy obrazów reprezentowane przez obiekt `CImageList`; w przeciwnym razie wartość NULL.
 
@@ -988,7 +988,7 @@ BOOL Read(CArchive* pArchive);
 *pArchive*<br/>
 Wskaźnik do obiektu `CArchive`, z którego ma zostać odczytana lista obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1009,7 +1009,7 @@ BOOL Remove(int nImage);
 *Nokreślono*<br/>
 Indeks (liczony od zera) obrazu do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1050,7 +1050,7 @@ Wskaźnik do mapy bitowej zawierającej maskę. Jeśli na liście obrazów nie j
 *hIcon*<br/>
 Uchwyt do ikony zawierającej mapę bitową i maskę dla nowego obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwracanie wersji BOOL zwraca wartość różną od zera, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1077,7 +1077,7 @@ COLORREF SetBkColor(COLORREF cr);
 *znaki*<br/>
 Kolor tła do ustawienia. Może być CLR_NONE. W takim przypadku obrazy są rysowane w sposób przezroczysty przy użyciu maski.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni kolor tła w przypadku powodzenia; w przeciwnym razie CLR_NONE.
 
@@ -1103,7 +1103,7 @@ Indeks nowego obrazu, który ma być połączony z obrazem przeciągania.
 *ptHotSpot*<br/>
 Położenie punktu aktywnego w nowym obrazie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1124,7 +1124,7 @@ BOOL SetImageCount(UINT uNewCount);
 *uNewCount*<br/>
 Wartość określająca nową łączną liczbę obrazów z listy obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1156,7 +1156,7 @@ Indeks (liczony od zera) obrazu, który ma być używany jako maska nakładki.
 *nOverlay*<br/>
 Indeks pojedynczej maski nakładania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1183,7 +1183,7 @@ BOOL Write(CArchive* pArchive);
 *pArchive*<br/>
 Wskaźnik do obiektu `CArchive`, w którym ma być przechowywana lista obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1191,7 +1191,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

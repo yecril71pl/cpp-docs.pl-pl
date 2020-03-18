@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883996"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421430"
 ---
 # <a name="ctreeview-class"></a>Klasa CTreeView
 
@@ -27,17 +27,17 @@ Upraszcza korzystanie z formantu drzewa i [CTreeCtrl](../../mfc/reference/ctreec
 class CTreeView : public CCtrlView
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CTreeView:: CTreeView](#ctreeview)|Konstruuje obiekt `CTreeView`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CTreeView:: funkcji GetTreeCtrl](#gettreectrl)|Zwraca kontrolkę drzewa skojarzoną z widokiem.|
 
@@ -79,7 +79,7 @@ Zwraca odwołanie do kontrolki drzewa skojarzonej z widokiem.
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

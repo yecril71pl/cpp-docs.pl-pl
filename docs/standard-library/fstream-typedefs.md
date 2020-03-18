@@ -12,11 +12,11 @@ f1_keywords:
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876116"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421780"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream —&gt; Typedefs
 
@@ -136,6 +136,6 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 Typ jest synonimem dla szablonu klasy [basic_filebuf](../standard-library/basic-filebuf-class.md), wyspecjalizowany dla elementów typu **wchar_t** z cechami domyślnymi znaków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<fstream — >](../standard-library/fstream.md)

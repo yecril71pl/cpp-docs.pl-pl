@@ -44,8 +44,8 @@ ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
 ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79128697"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422109"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf — Klasa
 
@@ -194,7 +194,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 72 00 6c 00 64 00 00 00 00 00 00 00 00 00 00 00   r.l.d...........
 ```
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -265,7 +265,7 @@ Zamyka plik.
 basic_filebuf<Char_T, Tr> *close();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca wskaźnik o wartości null, jeśli wskaźnik pliku jest wskaźnikiem o wartości null.
 
@@ -340,7 +340,7 @@ Wskazuje, czy plik jest otwarty.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli wskaźnik pliku nie ma wartości null.
 
@@ -411,7 +411,7 @@ Jedno z wyliczeń w [`ios_base::openmode`](../standard-library/ios-base-class.md
 \ *ochrony*
 Domyślna ochrona otwierania plików, równoważna parametrowi *Shflag* w [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli bufor jest już otwarty lub wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to**.
 
@@ -454,7 +454,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 *prawa*\
 Odwołanie rvalue do obiektu [basic_filebuf](../standard-library/basic-filebuf-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca __* this__.
 
@@ -475,7 +475,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 *_Meta*\
 Znak, który ma zostać wstawiony do buforu lub `traits_type::eof`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca `traits_type::eof`. W przeciwnym razie zwraca `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
@@ -502,7 +502,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 *_Meta*\
 Znak, który ma zostać wstawiony do buforu lub `traits_type::eof`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca `traits_type::eof`. W przeciwnym razie zwraca `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
@@ -546,7 +546,7 @@ Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-libra
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca nową pozycję lub nieprawidłową pozycję strumienia.
 
@@ -576,7 +576,7 @@ Pozycja do wyszukania.
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wskaźnik pliku `fp` jest wskaźnikiem typu null, funkcja kończy się niepowodzeniem. W przeciwnym razie próbuje zmienić pozycję strumienia, wywołując `fsetpos(fp, &fposn)`, gdzie `fposn` jest obiektem `fpos_t` przechowywanym w `pos`. Jeśli ta funkcja się powiedzie, funkcja zwróci wartość `pos`. W przeciwnym razie zwraca nieprawidłową pozycję strumienia. Aby określić, czy pozycja strumienia jest nieprawidłowa, należy porównać wartość zwracaną z `pos_type(off_type(-1))`.
 
@@ -606,7 +606,7 @@ Wskaźnik do buforu.
 *liczba*\
 Rozmiar buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja chronionej składowej zwraca zero, jeśli wskaźnik pliku `fp` jest wskaźnikiem o wartości null.
 
@@ -635,7 +635,7 @@ Próbuje zsynchronizować kontrolowane strumienie ze wszystkimi skojarzonymi str
 virtual int sync();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca zero, jeśli wskaźnik pliku `fp` jest wskaźnikiem o wartości null. W przeciwnym razie zwraca zero tylko wtedy, gdy wywołania zarówno [przepełnienia](#overflow) , jak i `fflush(fp)` pomyślne w wyniku opróżniania wszystkich oczekujących danych wyjściowych do strumienia.
 
@@ -655,7 +655,7 @@ Wyodrębnia bieżący element ze strumienia wejściowego.
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof). W przeciwnym razie zwraca `ch`, przekonwertowane zgodnie z opisem w sekcji uwagi.
 
@@ -667,7 +667,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje wyodrębnić bież
 
 - Może odczytać jeden lub więcej elementów typu **char**, tak jak w przypadku kolejnych wywołań formularza `fgetc(fp)`i przekonwertowania ich do `ch` elementu typu `Char_T` przy użyciu aspektu konwersji plików `fac` do wywołania `fac.in` zgodnie z wymaganiami. W przypadku niepowodzenia odczytu lub konwersji funkcja nie powiedzie się.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<fstream — >](../standard-library/fstream.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

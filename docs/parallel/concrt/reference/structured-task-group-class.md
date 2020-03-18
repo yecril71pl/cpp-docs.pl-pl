@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884121"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422130"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group — Klasa
 
@@ -30,7 +30,7 @@ Klasa `structured_task_group` reprezentuje wysoce strukturalną kolekcję równo
 class structured_task_group;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -93,7 +93,7 @@ Informuje obiekt wywołujący niezależnie od tego, czy grupa zadań jest obecni
 bool is_canceling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazanie, czy `structured_task_group` obiektu znajduje się w pośrodku anulowania (lub jest to wkrótce zagwarantowane).
 
@@ -158,7 +158,7 @@ Dojście do zadania, które zostanie uruchomione w tekście w kontekście wywoł
 *_Func*<br/>
 Funkcja, która zostanie wywołana w celu wywołania treści pracy. Może to być obiekt lambda lub inny, który obsługuje wersję operatora wywołania funkcji z sygnaturą `void operator()()`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazanie, czy oczekiwano oczekiwania, czy grupa zadań została anulowana z powodu jawnej operacji anulowania lub zgłaszania wyjątku z jednego z jego zadań. Aby uzyskać więcej informacji, zobacz [task_group_status](concurrency-namespace-enums.md)
 
@@ -211,7 +211,7 @@ Czeka, aż cała operacja w `structured_task_group` zostanie zakończona lub zos
 task_group_status wait();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazanie, czy oczekiwano oczekiwania, czy grupa zadań została anulowana z powodu jawnej operacji anulowania lub zgłaszania wyjątku z jednego z jego zadań. Aby uzyskać więcej informacji, zobacz [task_group_status](concurrency-namespace-enums.md)
 

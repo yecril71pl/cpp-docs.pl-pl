@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876194"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420695"
 ---
 # <a name="time_get-class"></a>time_get — Klasa
 
@@ -69,7 +69,7 @@ Iterator, z którego są odczytywane wartości czasu.
 
 Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikatorze.**
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -127,7 +127,7 @@ Zwraca kolejność dat używaną przez zestaw reguł.
 dateorder date_order() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolejność dat używana przez zestaw reguł.
 
@@ -187,7 +187,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, wywoływana, aby zwrócić
 virtual dateorder do_date_order() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolejność dat używana przez zestaw reguł.
 
@@ -238,7 +238,7 @@ Znak specyfikatora konwersji.
 *mod*\
 Opcjonalny znak modyfikatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca iterator, który wyznacza pierwszy nieprzekonwertowany element. Niepowodzenie konwersji ustawia `ios_base::failbit` w `state` i zwraca *najpierw*.
 
@@ -325,7 +325,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -376,7 +376,7 @@ Parametr wyjściowy, który ustawia odpowiednie elementy maski bitowej dla stanu
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o miesiącach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -419,7 +419,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -470,7 +470,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, do której mają być przechowywane informacje o dniu tygodnia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -513,7 +513,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o roku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -580,7 +580,7 @@ Wskazuje, gdzie rozpoczyna się dyrektywa format.
 *fmt_last*\
 Wskazuje koniec dyrektyw formatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca iterator do pierwszego znaku po danych, które zostały użyte do przypisania struktury czasu `*ptm`.
 
@@ -625,7 +625,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -719,7 +719,7 @@ Parametr wyjściowy, który ustawia odpowiednie elementy maski bitowej dla stanu
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o miesiącach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -811,7 +811,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o dacie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -892,7 +892,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, do której mają być przechowywane informacje o dniu tygodnia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 
@@ -969,7 +969,7 @@ Ustawia odpowiednie elementy maski bitowej dla stanu strumienia w zależności o
 *ptm*\
 Wskaźnik do lokalizacji, w której mają być przechowywane informacje o roku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wejściowych odnoszący się do pierwszego elementu poza polem wejściowym.
 

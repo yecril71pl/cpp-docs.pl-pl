@@ -1,9 +1,6 @@
 ---
 title: Typowe makra dla poleceń i właściwości programu MSBuild
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988329"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440169"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Typowe makra dla poleceń i właściwości programu MSBuild
 
@@ -123,12 +120,12 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$ (FrameworkVersion)**|Wersja .NET Framework używana przez program Visual Studio. W połączeniu z **$ (FrameworkDir)** pełna ścieżka do wersji .NET Framework używana przez program Visual Studio.|
 |**$ (FxCopDir)**|Ścieżka do pliku FxCop. cmd. Plik FxCop. cmd nie jest instalowany ze wszystkimi wersjami programu Visual Studio.|
 |**$ (IntDir)**|Ścieżka do katalogu określonego dla plików pośrednich. Jeśli jest ścieżką względną, pliki pośrednie przechodzą do tej ścieżki dołączone do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu pośredniego** . Nie używaj **$ (OutDir)** do definiowania tej właściwości.|
-|**$(OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest ścieżką względną, pliki wyjściowe przejdą do tej ścieżki dołączenia do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu wyjściowego** . Nie używaj **$ (IntDir)** do definiowania tej właściwości.|
+|**$ (OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest ścieżką względną, pliki wyjściowe przejdą do tej ścieżki dołączenia do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu wyjściowego** . Nie używaj **$ (IntDir)** do definiowania tej właściwości.|
 |**$ (Platforma)**|Nazwa bieżącej platformy projektu, na przykład "Win32".|
 |**$ (Nazwaskróconaplatformy)**|Krótka nazwa bieżącej architektury, na przykład "x86" lub "x64".|
 |**$ (ProjectDir)**|Katalog projektu (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\".|
 |**$ (ProjectExt)**|Rozszerzenie pliku projektu. Zawiera "." przed rozszerzeniem pliku.|
-|**$(ProjectFileName)**|Nazwa pliku projektu (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
+|**$ (ProjectFileName)**|Nazwa pliku projektu (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
 |**$ (ProjectName)**|Podstawowa nazwa projektu.|
 |**$ (ProjectPath)**|Nazwa ścieżki bezwzględnej projektu (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
 |**$ (PublishDir)**|Lokalizacja wyjściowa dla elementu docelowego publikowania; zawiera końcowy ukośnik odwrotny "\\". Domyślnie jest to folder **$ (OutDir) App.\\Publish** .|
@@ -136,18 +133,18 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$ (RootNameSpace)**|Przestrzeń nazw (jeśli istnieje) zawierająca aplikację.|
 |**$ (SolutionDir)**|Katalog rozwiązania (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\". Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionExt)**|Rozszerzenie pliku rozwiązania. Zawiera "." przed rozszerzeniem pliku. Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
-|**$(SolutionFileName)**|Nazwa pliku rozwiązania (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku). Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
+|**$ (SolutionFileName)**|Nazwa pliku rozwiązania (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku). Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionName)**|Podstawowa nazwa rozwiązania. Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionPath)**|Nazwa ścieżki bezwzględnej rozwiązania (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku). Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (TargetDir)**|Katalog podstawowego pliku wyjściowego dla kompilacji (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\".|
 |**$ (TargetExt)**|Rozszerzenie pliku podstawowego pliku wyjściowego dla kompilacji. Zawiera "." przed rozszerzeniem pliku.|
-|**$(TargetFileName)**|Nazwa pliku podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
+|**$ (TargetFileName)**|Nazwa pliku podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
 |**$ (TargetName)**|Podstawowa nazwa podstawowego pliku wyjściowego dla kompilacji.|
 |**$ (TargetPath)**|Nazwa ścieżki bezwzględnej podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
 |**$ (VCInstallDir)**|Katalog zawierający C++ zawartość instalacji programu Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi firmy Microsoft C++ (MSVC), który może być inny niż host Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v140`, **$ (VCInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2015.|
 |**$ (VSInstallDir)**|Katalog, w którym zainstalowano program Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi programu Visual Studio, który może być inny niż host programu Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v110`, **$ (VSInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2012.|
-|**$(WebDeployPath)**|Ścieżka względna od elementu głównego wdrożenia sieci Web do lokalizacji, do której należą dane wyjściowe projektu.|
-|**$(WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji **\<localhost >** . Na przykład c:\inetpub\wwwroot.|
+|**$ (WebDeployPath)**|Ścieżka względna od elementu głównego wdrożenia sieci Web do lokalizacji, do której należą dane wyjściowe projektu.|
+|**$ (WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji **\<localhost >** . Na przykład c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Przestarzałe makra
 
@@ -165,7 +162,7 @@ System kompilacji dla programu C++ został znacząco zmieniony między programem
 |**$ (SafeParentName)**|Nazwa bezpośredniego elementu nadrzędnego w prawidłowym formacie nazwy. Na przykład formularz jest elementem nadrzędnym pliku resx. Ta właściwość nie ma dokładnego odpowiednika.|
 |**$ (SafeRootNamespace)**|Nazwa przestrzeni nazw, w której Kreatorzy projektu dodają kod. Ta nazwa przestrzeni nazw będzie zawierać tylko znaki, które byłyby dozwolone w C++ prawidłowym identyfikatorze. Ta właściwość nie ma dokładnego odpowiednika.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty programu Visual Studio C++ —](../creating-and-managing-visual-cpp-projects.md)\
 [Wizualne C++ przenoszenie i uaktualnianie](../../porting/visual-cpp-porting-and-upgrading-guide.md)\

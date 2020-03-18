@@ -1,8 +1,6 @@
 ---
 title: Opcje LINK kontrolowane przez kompilator
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - LINK tool [C++], compiler-controlled options
 - linker [C++], CL compiler control
@@ -10,39 +8,39 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342857"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440111"
 ---
 # <a name="compiler-controlled-link-options"></a>Opcje LINK kontrolowane przez kompilator
 
-Kompilator CL automatycznie wywołuje łącza, chyba że określono opcję/c. CL zapewnia kontrolę nad konsolidator przy użyciu opcji wiersza polecenia i argumentów. Poniższa tabela zawiera podsumowanie funkcji w CL, które wpływają niekorzystnie na konsolidację.
+Kompilator CL automatycznie wywołuje LINK, chyba że określisz opcję/c. CL zapewnia kontrolę nad konsolidatorem za pomocą opcji wiersza polecenia i argumentów. Poniższa tabela zawiera podsumowanie funkcji w CL, które mają wpływ na łączenie.
 
-|Specyfikacja CL|Akcja CL, która ma wpływ na LINK|
+|Specyfikacja CL|Działanie CL, które ma wpływ na LINK|
 |----------------------|---------------------------------|
-|Rozszerzenia nazw plików innych niż .c ",".cxx "," CPP "lub".def|Przekazuje nazwę pliku jako dane wejściowe LINK|
-|*Nazwa pliku*.def|/ DEF przekazuje:*filename*.def|
-|/F*numer*|Przebiegi /STACK:*numer*|
-|/FD*nazwy pliku*|Przekazuje/PDB:*nazwy pliku*|
-|/Fe*filename*|Przekazuje/OUT:*nazwy pliku*|
-|/Fm*filename*|Przebiegi/map:*nazwy pliku*|
-|/GY|Tworzy funkcje pakowane (COMDATs); Włącza łączenie na poziomie — funkcja|
-|/LD|Przekazuje/dll|
-|/LDd|Przekazuje/dll|
-|/link|Przekazuje pozostałą część wiersza polecenia do łącza|
-|/MD lub/MT|Umieszcza domyślną nazwę biblioteki w pliku .obj|
-|/ MDd lub/mtd|W pliku .obj, umieszcza domyślną nazwę biblioteki. Definiuje symbol **_DEBUG**|
-|/nologo|/ Nologo przekazuje|
-|/Zd|Przebiegi/Debug|
-|Zi lub/z7|Przebiegi/Debug|
-|/Zl|Pomija domyślną nazwę biblioteki z pliku .obj|
+|Każde rozszerzenie nazwy pliku inne niż. c,. cxx,. cpp lub. def|Przekazuje nazwę pliku jako dane wejściowe do LINKu|
+|*filename*. def|Przekazuje/DEF:*filename*. def|
+|*Liczba* /f|Passs/STACK:*Number*|
+|*Nazwa pliku* /FD|Przekazuje/PDB:*filename*|
+|*Nazwa pliku* /Fe|Przekazuje/OUT:*filename*|
+|*Nazwa pliku* /FM|Przekazuje/MAP:*filename*|
+|/Gy|Tworzy spakowane funkcje (COMDAT); Włącza łączenie na poziomie funkcji|
+|/LD|Passs/DLL|
+|/LDd|Passs/DLL|
+|/link|Przekazuje pozostałą część wiersza polecenia, aby połączyć|
+|/MD lub/MT|Umieszcza domyślną nazwę biblioteki w pliku. obj|
+|/MDd lub/MTd|Umieszcza domyślną nazwę biblioteki w pliku. obj. Definiuje symbol **_DEBUG**|
+|/nologo|Passs/NOLOGO|
+|/Zd|Passs/DEBUG|
+|/Zi lub/Z7|Passs/DEBUG|
+|/Zl|Pomija domyślną nazwę biblioteki z pliku. obj|
 
-Aby uzyskać więcej informacji, zobacz [opcje kompilatora MSVC](compiler-options.md).
+Aby uzyskać więcej informacji, zobacz [Opcje kompilatora MSVC](compiler-options.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

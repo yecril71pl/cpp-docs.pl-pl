@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883849"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421619"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set funkcji&gt;
 
@@ -21,7 +21,7 @@ ms.locfileid: "78883849"
 ## <a name="swap"></a>wymiany
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Wymienia elementy dwóch hash_sets.
 
@@ -54,7 +54,7 @@ Zobacz przykład kodu dla klasy składowej [hash_set:: swap](../standard-library
 ## <a name="swap_hash_multiset"></a>Zamień (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Wymienia elementy dwóch hash_multisets.
 
@@ -82,6 +82,6 @@ w klasie algorytmu działa przez przypisanie i jest operacją powolnej. Wyspecja
 
 Zobacz przykład kodu dla klasy składowej [hash_multiset:: swap](../standard-library/hash-multiset-class.md#swap) dla przykładu korzystającego z wersji szablonu `swap`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<hash_set>](../standard-library/hash-set.md)

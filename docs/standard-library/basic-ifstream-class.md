@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865872"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421969"
 ---
 # <a name="basic_ifstream-class"></a>basic_ifstream — Klasa
 
@@ -83,7 +83,7 @@ This is the contents of basic_ifstream_class.txt.
 This is the contents of basic_ifstream_class.txt.
 ```
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -199,7 +199,7 @@ Określa, czy plik jest otwarty.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli plik jest otwarty; w przeciwnym razie **zwraca wartość false** .
 
@@ -267,7 +267,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 *prawa*\
 Odwołanie rvalue do obiektu `basic_ifstream`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość `*this`.
 
@@ -283,7 +283,7 @@ Zwraca adres buforu zapisanego strumienia.
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [basic_filebuf](../standard-library/basic-filebuf-class.md) reprezentujący przechowywany bufor strumienia.
 
@@ -308,7 +308,7 @@ Odwołanie do innego buforu strumienia.
 
 Funkcja członkowska zamienia zawartość tego obiektu na zawartość z *prawej strony*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)

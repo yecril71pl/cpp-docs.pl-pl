@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866161"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421899"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
@@ -49,7 +49,7 @@ Typ używany w programie do kodowania znaków.
 
 Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w `id`. W przypadku niektórych języków znaki są grupowane i traktowane jak pojedynczy znak, a w innych, pojedyncze znaki są traktowane tak, jakby były dwoma znakami. Usługi sortowania dostarczane przez klasę collate umożliwiają sortowanie w tych przypadkach.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -151,7 +151,7 @@ Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porówna
 *last2*\
 Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca:
 
@@ -217,7 +217,7 @@ Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porówna
 *last2*\
 Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca:
 
@@ -251,7 +251,7 @@ Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określ
 *ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość skrótu typu **Long** dla sekwencji.
 
@@ -279,7 +279,7 @@ Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
 *ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który jest przekształconą sekwencją znaków.
 
@@ -307,7 +307,7 @@ Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określ
 *ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość skrótu typu **Long** dla sekwencji.
 
@@ -377,7 +377,7 @@ Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
 *ostatni*\
 Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który zawiera przekształconą sekwencję znaków.
 
@@ -427,7 +427,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ustawienia regionalne >](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

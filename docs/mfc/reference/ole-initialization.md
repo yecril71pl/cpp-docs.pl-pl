@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855696"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420779"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 
@@ -51,7 +51,7 @@ Inicjuje obsługę OLE dla aplikacji.
 BOOL AFXAPI AfxOleInit();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 Jeśli inicjalizacja nie powiedzie się, prawdopodobnie ponieważ zainstalowano niepoprawne wersje bibliotek DLL systemu OLE.
 

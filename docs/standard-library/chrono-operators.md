@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865206"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421934"
 ---
 # <a name="ltchronogt-operators"></a>Operatory &lt;Chrono&gt;
 
@@ -51,7 +51,7 @@ Obiekt `time_point`.
 Czas *trwania*\
 Obiekt `duration`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja zwraca obiekt `duration`, którego długość interwału jest różnica między przedziałami czasu dwóch argumentów.
 
@@ -83,7 +83,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Każda funkcja zwraca `!(Left == Right)`.
 
@@ -114,7 +114,7 @@ Obiekt `duration`.
 *Iloczyn*\
 Wartość całkowita.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Każda funkcja zwraca obiekt `duration`, którego długość interwału jest *iloczyn* pomnożona przez długość czasu *trwania*.
 
@@ -154,7 +154,7 @@ Obiekt `duration` po lewej stronie.
 *Prawa*\
 Właściwy `duration` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy operator zwraca obiekt czasu trwania, którego długość interwału jest długością *podzieloną* przez wartość *DIV*.
 
@@ -200,7 +200,7 @@ Obiekt `time_point`.
 Czas *trwania*\
 Obiekt `duration`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja zwraca obiekt `duration`, który ma interwał czasu, który jest równy sumie interwałów od *lewej* do *prawej*.
 
@@ -230,7 +230,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja zwraca **wartość true** , jeśli długość interwału *po lewej stronie* jest mniejsza niż długość interwału *po prawej stronie*. W przeciwnym razie funkcja zwraca **wartość false**.
 
@@ -260,7 +260,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Każda funkcja zwraca `!(Right < Left)`.
 
@@ -288,7 +288,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja zwraca **wartość true** , jeśli *Left* i *Right* reprezentuje przedziały czasu, które mają tę samą długość. W przeciwnym razie funkcja zwraca **wartość false**.
 
@@ -318,7 +318,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Każda funkcja zwraca `Right < Left`.
 
@@ -346,7 +346,7 @@ Lewy `duration` lub `time_point` obiektu.
 *Prawa*\
 Właściwy `duration` lub `time_point` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Każda funkcja zwraca `!(Left < Right)`.
 
@@ -382,7 +382,7 @@ Obiekt `duration` po lewej stronie.
 *Prawa*\
 Właściwy `duration` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja zwraca obiekt `duration`, którego długość interwału jest *równa wartość elementu* *DIV*modulo.
 

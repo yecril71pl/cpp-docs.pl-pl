@@ -2,7 +2,7 @@
 title: Stałe matematyczne
 ms.date: 11/04/2016
 f1_keywords:
-- c.constants
+- c.constants.math
 helpviewer_keywords:
 - M_PI constant
 - M_PI_2 constant
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342669"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438263"
 ---
 # <a name="math-constants"></a>Stałe matematyczne
 
@@ -43,28 +43,28 @@ ms.locfileid: "62342669"
 
 ## <a name="remarks"></a>Uwagi
 
-Następujące znaki są zdefiniowane dla wartości ich wskazanej wyrażeń:
+Następujące symbole są zdefiniowane dla wartości ich wskazanych wyrażeń:
 
 |Symbol|Wyrażenie|Wartość|
 |------------|----------------|-----------|
 |M_E|e|2.71828182845904523536|
-|M_LOG2E|log2(e)|1.44269504088896340736|
-|M_LOG10E|LOG10(e)|0.434294481903251827651|
+|M_LOG2E|log2 — (e)|1.44269504088896340736|
+|M_LOG10E|LOG10 — (e)|0.434294481903251827651|
 |M_LN2|ln(2)|0.693147180559945309417|
 |M_LN10|ln(10)|2.30258509299404568402|
-|M_PI|Pi|3.14159265358979323846|
+|M_PI|przetwarzania|3.14159265358979323846|
 |M_PI_2|Pi/2|1.57079632679489661923|
-|M_PI_4|pi/4|0.785398163397448309616|
+|M_PI_4|Pi/4|0.785398163397448309616|
 |M_1_PI|1/pi|0.318309886183790671538|
 |M_2_PI|2/pi|0.636619772367581343076|
 |M_2_SQRTPI|2/sqrt(pi)|1.12837916709551257390|
 |M_SQRT2|sqrt(2)|1.41421356237309504880|
 |M_SQRT1_2|1/sqrt(2)|0.707106781186547524401|
 
-Stałe matematyczne nie są zdefiniowane w standardowe C/C++. Aby korzystać z nich, należy najpierw zdefiniować `_USE_MATH_DEFINES` , a następnie dołącz cmath lub math.h.
+Stałe matematyczne nie są zdefiniowane w standardowymC++języku C/. Aby ich używać, należy najpierw zdefiniować `_USE_MATH_DEFINES` a następnie uwzględnić cmath lub Math. h.
 
-Plik ATLComTime.h obejmuje math.h, gdy projekt został skompilowany w trybie wydania. Użycie co najmniej jeden stałe matematyczne w projekcie, który obejmuje również ATLComTime.h, należy zdefiniować `_USE_MATH_DEFINES` przed wprowadzeniem ATLComTime.h.
+Plik ATLComTime. h zawiera zapis Math. h, gdy projekt jest skompilowany w trybie wydania. Jeśli używasz co najmniej jednej z stałych matematycznych w projekcie, który zawiera także ATLComTime. h, musisz zdefiniować `_USE_MATH_DEFINES` przed dołączeniem ATLComTime. h.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

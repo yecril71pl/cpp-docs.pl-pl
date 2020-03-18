@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883816"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419176"
 ---
 # <a name="deque-class"></a>deque — Klasa
 
@@ -132,9 +132,9 @@ Ponowne przydzielanie deque występuje, gdy funkcja członkowska musi wstawiać 
 
 W przeciwnym razie Wstawianie lub wymazywanie elementu unieważnia wszystkie Iteratory i odwołania.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -321,11 +321,11 @@ const_reference at(size_type pos) const;
 \ *pos*
 Indeks dolny (lub numer pozycji) elementu do odwołania w deque.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość *pos* jest większa niż rozmiar deque, `at` zgłasza wyjątek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość zwracana `at` jest przypisana do `const_reference`, nie można zmodyfikować obiektu deque. Jeśli wartość zwracana `at` jest przypisana do `reference`, można zmodyfikować obiekt deque.
 
@@ -366,7 +366,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ostatni element deque. Jeśli deque jest pusty, wartość zwracana jest niezdefiniowana.
 
@@ -415,7 +415,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu swobodnego odnoszący się do pierwszego elementu w deque lub do lokalizacji powiodło się puste deque.
 
@@ -466,7 +466,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -492,7 +492,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu swobodnego, który wskazuje tuż za koniec zakresu.
 
@@ -644,7 +644,7 @@ Zwraca iterator const do pierwszego elementu w odwróconej deque.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu const odwrotnie odnoszący się do pierwszego elementu w odwróconej [deque](../standard-library/deque-class.md) lub adresowania ostatniego elementu w nieodwróconym `deque`.
 
@@ -693,7 +693,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej [deque](../standard-library/deque-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym deque).
 
@@ -1084,7 +1084,7 @@ Pozycja w [deque](../standard-library/deque-class.md) , w którym wstawiany jest
 *val*\
 Wartość wstawianego elementu do `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja zwraca iterator, który wskazuje na pozycję, gdzie nowy element został wstawiony do deque.
 
@@ -1240,7 +1240,7 @@ Testuje, czy element deque jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli deque jest pusta; **wartość false** , jeśli deque nie jest pusty.
 
@@ -1279,7 +1279,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w deque. Jeśli deque jest pusty, a następnie deque:: end = = deque:: BEGIN.
 
@@ -1350,7 +1350,7 @@ Pozycja pierwszego elementu usuniętego z deque.
 *ostatni*\
 Umieść tuż poza ostatnim elementem usuniętym z deque.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu swobodnego, który wyznacza pierwszy element pozostający poza elementami usuniętymi lub wskaźnikiem do końca deque, jeśli taki element nie istnieje.
 
@@ -1412,7 +1412,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli deque jest pusty, zwracany jest niezdefiniowany.
 
@@ -1460,7 +1460,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania deque.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez deque.
 
@@ -1540,7 +1540,7 @@ Pozycja pierwszego elementu poza zakresem elementów w argumencie deque do skopi
 \ *IList*
 Initializer_list elementów do wstawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze dwie funkcje INSERT zwracają iterator, który wskazuje na pozycję, w której nowy element został wstawiony do deque.
 
@@ -1572,7 +1572,7 @@ Zwraca maksymalną długość deque.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość deque.
 
@@ -1610,7 +1610,7 @@ const_reference operator[](size_type pos) const;
 \ *pos*
 Pozycja elementu deque, do którego ma nastąpić odwołanie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu, którego pozycja jest określona w argumencie. Jeśli określona pozycja jest większa niż rozmiar deque, wynik jest niezdefiniowany.
 
@@ -1900,7 +1900,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator odwrotnego dostępu swobodnego, odnoszący się do pierwszego elementu w odwróconej deque lub adresowania ostatniego elementu w nieodwróconym deque.
 
@@ -2012,7 +2012,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej deque (lokalizacja, która poprzedza pierwszy element w odwrocie deque).
 
@@ -2220,7 +2220,7 @@ Zwraca liczbę elementów w deque.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość deque.
 

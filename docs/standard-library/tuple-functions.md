@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866198"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422655"
 ---
 # <a name="lttuplegt-functions"></a>funkcje&gt; krotki &lt;
 
@@ -39,7 +39,7 @@ template <class... TTypes>
     constexpr tuple<TTypes&&...> forward_as_tuple(TTypes&&...) noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
@@ -268,7 +268,7 @@ int main() {
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt krotki skonstruowany przez zainicjowanie każdego elementu typu.
 

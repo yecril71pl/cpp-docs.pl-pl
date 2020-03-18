@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874837"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421976"
 ---
 # <a name="basic_ostream-class"></a>basic_ostream — Klasa
 
@@ -108,7 +108,7 @@ Obiekt klasy basic_istream\< **elem**, **TR**> przechowuje tylko wirtualny publi
 
 Zapoznaj się z przykładem [klasy basic_ofstream](../standard-library/basic-ofstream-class.md) , aby dowiedzieć się więcej o strumieniach wyjściowych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -178,7 +178,7 @@ Opróżnia bufor.
 basic_ostream<Elem, Tr>& flush();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu basic_ostream.
 
@@ -246,7 +246,7 @@ Wskaźnik do obiektu `stream_buf`.
 *val*\
 Element do zapisu w strumieniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu basic_ostream.
 
@@ -378,7 +378,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 *_Ch*\
 Znak.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu basic_ostream.
 
@@ -428,7 +428,7 @@ Przesunięcie względem *_Way*.
 *_Way*\
 Jeden z [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerations.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu basic_ostream.
 
@@ -503,7 +503,7 @@ Pozycja raportu w strumieniu wyjściowym.
 pos_type tellp();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pozycja w strumieniu wyjściowym.
 
@@ -531,7 +531,7 @@ Liczba znaków, które mają zostać umieszczone w strumieniu.
 *str*\
 Znaki, które mają zostać umieszczone w strumieniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu basic_ostream.
 
@@ -543,7 +543,7 @@ Odwołanie do obiektu basic_ostream.
 
 Zobacz [dane StreamSize](../standard-library/ios-typedefs.md#streamsize) , aby zapoznać się z przykładem przy użyciu `write`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)

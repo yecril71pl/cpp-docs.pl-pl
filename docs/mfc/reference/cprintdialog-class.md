@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
 ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855567"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421143"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 
@@ -57,17 +57,17 @@ Hermetyzuje usługi zapewniane przez wspólne okno dialogowe systemu Windows do 
 class CPrintDialog : public CCommonDialog
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPrintDialog::CPrintDialog](#cprintdialog)|Konstruuje obiekt `CPrintDialog`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPrintDialog::CreatePrinterDC](#createprinterdc)|Tworzy kontekst urządzenia drukarki bez wyświetlania okna dialogowego Drukuj.|
 |[CPrintDialog::D oModal](#domodal)|Wyświetla okno dialogowe i umożliwia użytkownikowi wybranie.|
@@ -87,7 +87,7 @@ class CPrintDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPrintDialog:: m_pd](#m_pd)|Struktura używana do dostosowywania obiektu `CPrintDialog`.|
 
@@ -182,7 +182,7 @@ Tworzy kontekst urządzenia drukarki (DC) dla struktury [DEVMODE](/windows/win32
 HDC CreatePrinterDC();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do nowo utworzonego kontekstu urządzenia drukarki.
 
@@ -202,7 +202,7 @@ Wyświetla okno dialogowe typowy wydruk systemu Windows i umożliwia użytkownik
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 IDOK lub IDCANCEL. Jeśli IDCANCEL jest zwracany, wywołaj funkcję Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
 
@@ -228,7 +228,7 @@ Pobiera żądaną liczbę kopii.
 int GetCopies() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba żądanych kopii.
 
@@ -248,7 +248,7 @@ Pobiera wartości domyślne urządzenia drukarki domyślnej bez wyświetlania ok
 BOOL GetDefaults();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -274,7 +274,7 @@ Pobiera nazwę aktualnie wybranego urządzenia drukarki.
 CString GetDeviceName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa aktualnie zaznaczonej drukarki.
 
@@ -296,7 +296,7 @@ Pobiera strukturę `DEVMODE`.
 LPDEVMODE GetDevMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , która zawiera informacje o inicjalizacji i środowisku urządzenia sterownika drukarki. Należy odblokować pamięć wykonywaną przez tę strukturę przy użyciu funkcji [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) systemu Windows, która jest opisana w Windows SDK.
 
@@ -316,7 +316,7 @@ Pobiera nazwę aktualnie wybranego sterownika drukarki.
 CString GetDriverName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString` określenie nazwy sterownika zdefiniowanej przez system.
 
@@ -336,7 +336,7 @@ Pobiera stronę początkową zakresu wydruku.
 int GetFromPage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer strony początkowej z zakresu stron do wydrukowania.
 
@@ -356,7 +356,7 @@ Pobiera nazwę aktualnie wybranego portu drukarki.
 CString GetPortName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa aktualnie wybranego portu drukarki.
 
@@ -376,7 +376,7 @@ Pobiera uchwyt do kontekstu urządzenia drukarki.
 HDC GetPrinterDC() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do kontekstu urządzenia drukarki, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -396,7 +396,7 @@ Pobiera stronę końcową zakresu wydruku.
 int GetToPage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer strony końcowej z zakresu stron do wydrukowania.
 
@@ -434,7 +434,7 @@ Określa, czy wydrukować wszystkie strony dokumentu.
 BOOL PrintAll() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wszystkie strony w dokumencie mają być drukowane; w przeciwnym razie 0.
 
@@ -454,7 +454,7 @@ Określa, czy posortowane kopie są wymagane.
 BOOL PrintCollate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli użytkownik wybierze pole wyboru COLLATE w oknie dialogowym. w przeciwnym razie 0.
 
@@ -474,7 +474,7 @@ Określa, czy drukować tylko określony zakres stron.
 BOOL PrintRange() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli tylko zakres stron w dokumencie ma być drukowany; w przeciwnym razie 0.
 
@@ -494,7 +494,7 @@ Określa, czy drukować tylko aktualnie wybrane elementy.
 BOOL PrintSelection() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli tylko wybrane elementy mają być drukowane; w przeciwnym razie 0.
 
@@ -506,7 +506,7 @@ Wywołaj tę funkcję po wywołaniu `DoModal`, aby określić, czy drukować tyl
 
   Zobacz przykład dla [CPrintDialog:: m_pd](#m_pd).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład DIBLOOK MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>

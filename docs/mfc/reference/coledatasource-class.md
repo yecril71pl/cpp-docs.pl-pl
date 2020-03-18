@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855766"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421136"
 ---
 # <a name="coledatasource-class"></a>Klasa by uzyskać COleDataSource
 
@@ -53,7 +53,7 @@ Działa jako pamięć podręczna, w której aplikacja umieszcza dane, które bę
 class COleDataSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -292,7 +292,7 @@ Wskaźnik do prostokąta, który definiuje, gdzie w rzeczywistości zostanie roz
 *pDropSource*<br/>
 Wskazuje na źródło upuszczania. Jeśli wartość jest równa NULL, zostanie użyta domyślna implementacja [COleDropSource](../../mfc/reference/coledropsource-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Efekt upuszczania wygenerowany przez operację przeciągania i upuszczania; w przeciwnym razie DROPEFFECT_NONE, jeśli operacja nigdy nie zostanie rozpoczęta, ponieważ użytkownik wydał przycisk myszy przed opuszczeniem dostarczonego prostokąta.
 
@@ -346,7 +346,7 @@ Określa, czy dane ze schowka uległy zmianie od czasu ostatniego wywołania pro
 static COleDataSource* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Źródło danych znajdujące się obecnie w schowku lub ma wartość NULL, jeśli nie ma niczego w schowku lub jeśli Schowek nie należy do aplikacji wywołującej.
 
@@ -368,7 +368,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *lpStgMedium*<br/>
 Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -400,7 +400,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *pFile*<br/>
 Wskazuje obiekt [CFile](../../mfc/reference/cfile-class.md) , w którym mają być renderowane dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -430,7 +430,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *phGlobal*<br/>
 Wskazuje dojście do pamięci globalnej, w której mają zostać zwrócone dane. Jeśli jeden z nich nie został jeszcze przydzielony, ten parametr może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -466,7 +466,7 @@ Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r
 *bRelease*<br/>
 Wskazuje, kto ma własność nośnika magazynu po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za wydanie zasobów przyznanych w imieniu nośnika magazynu. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* ma wartość różną od zera, źródłem danych jest własność, zwalniając nośnik po zakończeniu jego używania. Gdy *bRelease* jest równa 0, wywołujący zachowuje własność, a źródło danych może używać nośnika magazynu tylko dla czasu trwania wywołania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

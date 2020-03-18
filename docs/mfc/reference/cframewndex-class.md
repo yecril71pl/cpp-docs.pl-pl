@@ -179,11 +179,11 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: 1565a2eef681cbf36a0e166f59cde0320843e8aa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869906"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420422"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
 
@@ -195,7 +195,7 @@ Implementuje funkcje interfejsu pojedynczego dokumentu (SDI) systemu Windows lub
 class CFrameWndEx : public CFrameWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -340,7 +340,7 @@ podczas Okienko paska kontroli do zarejestrowania.
 *bTail*<br/>
 podczas PRAWDA, jeśli chcesz dodać okienko paska kontroli do końca listy; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek sterowania został pomyślnie zarejestrowany; W przeciwnym razie zwraca wartość FALSE.
 
@@ -428,7 +428,7 @@ podczas Wskaźnik do obiektu okienka, który ma zostać zadokowany.
 *pLeftOf*<br/>
 podczas Wskaźnik do okienka po lewej stronie, w którym będzie zadokowane okienko określone przez *pBar*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli *pBar* jest pomyślnie zadokowane. W przeciwnym razie zwraca wartość FALSE.
 
@@ -449,7 +449,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 podczas Określa stronę okna głównego ramki, do której ma zostać zadokowany panel.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko pasek zostanie pomyślnie zadokowane do okna ramki, które jest określone przez *dwDockStyle*, w przeciwnym razie false.
 
@@ -478,7 +478,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 podczas Określa stronę okna głównego ramki, w której znajduje się pasek okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko paska może być pomyślnie zadokowane na określonej stronie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -583,7 +583,7 @@ Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.
 CMFCPopupMenu* GetActivePopup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktualnie wyświetlonego menu podręcznego; w przeciwnym razie wartość NULL.
 
@@ -595,7 +595,7 @@ Zwraca identyfikator zasobu określony podczas ładowania okna ramki przez struk
 UINT GetDefaultResId() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość identyfikatora zasobu określona przez użytkownika, gdy struktura załadowała okno ramki. Zero, jeśli okno ramki nie ma paska menu.
 
@@ -607,7 +607,7 @@ Pobiera obiekt [klasy CDockingManager](../../mfc/reference/cdockingmanager-class
 CDockingManager* GetDockingManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md).
 
@@ -623,7 +623,7 @@ Zwraca wskaźnik do obiektu paska menu dołączonego do okna ramki.
 const CMFCMenuBar* GetMenuBar() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu paska menu dołączonego do okna ramki.
 
@@ -640,7 +640,7 @@ CBasePane* GetPane(UINT nID);
 *nID*<br/>
 podczas Identyfikator formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okienka o określonym IDENTYFIKATORze. Wartość NULL, jeśli takie okienko nie istnieje.
 
@@ -652,7 +652,7 @@ Pobiera kontrolkę pasek wstążki dla ramki.
 CMFCRibbonBar* GetRibbonBar();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) dla ramki.
 
@@ -666,7 +666,7 @@ Zwraca listę obiektów okienka, które znajdują się w stanie odrywania.
 const CObList& GetTearOffBars() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do `CObList` obiektu, który zawiera kolekcję wskaźników do obiektów okienka, które znajdują się w stanie odrywania.
 
@@ -688,7 +688,7 @@ podczas Wskaźnik do przycisku paska narzędzi.
 *strTTText*<br/>
 podczas Tekst etykietki narzędzia, który będzie wyświetlany dla przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli etykietka narzędzia została wyświetlona. W przeciwnym razie zwraca wartość FALSE.
 
@@ -718,7 +718,7 @@ Wskaźnik do paska sterowania przed lub po tym, jak wstawić okienko.
 *bAfter*<br/>
 PRAWDA, jeśli chcesz wstawić *pControlBar* po *pTarget*, false w przeciwnym razie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek sterowania został pomyślnie wstawiony i zarejestrowany, w przeciwnym razie zwraca wartość FALSE.
 
@@ -734,7 +734,7 @@ Określa, czy okno ramki jest w trybie pełnoekranowym.
 BOOL IsFullScreen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno ramki jest w trybie pełnoekranowym; w przeciwnym razie FALSE.
 
@@ -750,7 +750,7 @@ Określa, czy wskaźnik do obiektu paska menu jest prawidłowy.
 BOOL IsMenuBarAvailable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno ramki ma pasek menu. w przeciwnym razie FALSE.
 
@@ -776,7 +776,7 @@ określoną Gdzie punkt jest wyrównany. Możliwe wartości można znaleźć w t
 *bOuterEdge*<br/>
 określoną Ma wartość TRUE, jeśli punkt znajduje się blisko obramowania ramki; Wartość FALSE, jeśli punkt znajduje się w obszarze klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli punkt znajduje się w strefie wyrównania. w przeciwnym razie FALSE.
 
@@ -799,7 +799,7 @@ Określa, czy okno ramki jest w trybie podglądu wydruku.
 BOOL IsPrintPreview();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno ramki jest w trybie podglądu wydruku; w przeciwnym razie FALSE.
 
@@ -831,7 +831,7 @@ podczas Wskaźnik do okna nadrzędnego ramki.
 *pContext*<br/>
 podczas Wskaźnik do klasy [struktury CCreateContext](../../mfc/reference/ccreatecontext-structure.md) , która jest używana przez strukturę podczas tworzenia aplikacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -855,7 +855,7 @@ podczas Polecenie negocjacji obramowania. Więcej wartości można znaleźć w s
 *lpRectBorder*<br/>
 [in. out] Wymiary obramowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli konieczne jest ponowne obliczenie układu; w przeciwnym razie FALSE.
 
@@ -942,7 +942,7 @@ podczas Ten parametr nie jest używany.
 *lParam*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -968,7 +968,7 @@ Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w oki
 virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli można zamknąć pasek dokowania. FAŁSZ w przeciwnym razie
 
@@ -984,7 +984,7 @@ Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w ruc
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ruchome okno mini frame może być zamknięte. W przeciwnym razie zwraca wartość FALSE.
 
@@ -1035,7 +1035,7 @@ podczas Kategoria komunikatu polecenia.
 *pHandlerInfo*<br/>
 [in. out] Wskaźnik do struktury procedury obsługi poleceń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli komunikat polecenia został obsłużony; w przeciwnym razie FALSE.
 
@@ -1064,7 +1064,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 podczas Wskaźnik do struktury elementu " [ISstruct](/windows/win32/api/winuser/ns-winuser-createstructw) " dla nowej ramki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 0, aby kontynuować tworzenie ramki; -1, aby zniszczyć ramkę.
 
@@ -1104,7 +1104,7 @@ podczas Wskaźnik do przycisku menu, którego obraz jest renderowany.
 *rectImage*<br/>
 podczas Wskaźnik do struktury `Rect`, która określa położenie i rozmiar ekranu obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli struktura pomyślnie renderuje obraz; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1156,7 +1156,7 @@ podczas Ten parametr nie jest używany.
 *LP*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -1180,7 +1180,7 @@ podczas Ten parametr nie jest używany.
 *LP*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -1219,7 +1219,7 @@ podczas Ten parametr nie jest używany.
 *lParam*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -1283,7 +1283,7 @@ podczas Wskaźnik do przycisku paska narzędzi.
 *pTI*<br/>
 określoną Wskaźnik do struktury informacji o narzędziu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli aplikacja wypełnia parametr *PTI* . W przeciwnym razie zwraca wartość FALSE.
 
@@ -1313,7 +1313,7 @@ podczas Zawiera flagę MF_POPUP, jeśli wyświetlane menu jest podmenu; zawiera 
 *pMenu*<br/>
 podczas Wskaźnik do menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Słowo o wysokim porządku musi być jedną z następujących wartości.
 
@@ -1356,7 +1356,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 *pFrame*<br/>
 podczas Wskaźnik do okna okienka [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno okienka nie zostało zadokowane; Wartość FALSE, jeśli okno okienka zostało zadokowane.
 
@@ -1375,7 +1375,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 *bActive*<br/>
 podczas Wartość TRUE, aby narysować ramkę jako aktywną; Wartość FALSE, aby narysować nieaktywną ramkę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, aby kontynuować przetwarzanie domyślne; 0, aby uniemożliwić dezaktywowanie obszaru nieklienckiego.
 
@@ -1414,7 +1414,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 *moment*<br/>
 podczas Położenie wskaźnika we współrzędnych ekranu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Osiągnięto wartość wyliczenia wskaźnika. Aby uzyskać listę możliwych wartości, zobacz [WM_NCHITTEST Notification](/windows/win32/inputdev/wm-nchittest).
 
@@ -1463,7 +1463,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 *nID*<br/>
 podczas Identyfikator formantu okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli polecenie zostało obsłużone; Wartość FALSE, aby kontynuować przetwarzanie polecenia.
 
@@ -1487,7 +1487,7 @@ podczas Ten parametr nie jest używany.
 *lParam*<br/>
 podczas PRAWDA, gdy ramka jest w trybie podglądu wydruku; Wartość FALSE, gdy tryb podglądu wydruku jest wyłączony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -1511,7 +1511,7 @@ podczas Zdarzenie zarządzania zużyciem. Aby uzyskać listę możliwych wartoś
 *LP*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wynik wywołania domyślnej procedury okna.
 
@@ -1540,7 +1540,7 @@ podczas Dojście do menu nowe okno.
 *HMENU*<br/>
 podczas Dojście do menu nowe okno ramek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LRESULT jest wynikiem wywołania procedury okna domyślnego.
 
@@ -1586,7 +1586,7 @@ podczas Ten parametr nie jest używany.
 *lParam*<br/>
 podczas Wskaźnik do tekstu okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość z wywołania do [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw).
 
@@ -1610,7 +1610,7 @@ podczas Wskaźnik do okienka szybkie dostosowywanie.
 *uiToolbarID*<br/>
 podczas Identyfikator kontrolki paska narzędzi, który ma zostać dostosowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zawsze zwraca wartość TRUE.
 
@@ -1631,7 +1631,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 *bShow*<br/>
 podczas PRAWDA, jeśli aplikacja wyświetla okienka; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zawsze zwraca wartość FALSE.
 
@@ -1656,7 +1656,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 *pMenu*<br/>
 podczas Wskaźnik do menu podręcznego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli menu podręczne jest widoczne; w przeciwnym razie FALSE.
 
@@ -1736,7 +1736,7 @@ podczas Wskaźnik do menu podręcznego.
 *pBar*<br/>
 podczas Wskaźnik do odrywanego paska.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli menu podręczne z paskiem odrywanym jest włączone. w przeciwnym razie FALSE.
 
@@ -1764,7 +1764,7 @@ podczas Ten parametr nie jest używany.
 *LP*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca 1.
 
@@ -1788,7 +1788,7 @@ podczas Ten parametr nie jest używany.
 *LP*<br/>
 podczas Wskaźnik na tekst paska tytułu paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowego paska narzędzi; lub wartość NULL, jeśli nie utworzono paska narzędzi.
 
@@ -1812,7 +1812,7 @@ podczas Ten parametr nie jest używany.
 *LP*<br/>
 podczas Wskaźnik na pasek narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi został usunięty; w przeciwnym razie FALSE.
 
@@ -1913,7 +1913,7 @@ podczas Jeśli wartość nie jest równa NULL, Metoda przeszukuje tylko paski ko
 *dwAlignment*<br/>
 określoną Jeśli to się powiedzie, ten parametr zawiera bok paska sterowania, który znajduje się najbliżej określonego punktu. W przeciwnym razie ten parametr nie jest zainicjowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do paska sterowania, który zawiera *punkt*; Wartość NULL, jeśli nie zostanie znaleziony żaden formant.
 
@@ -1936,7 +1936,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 podczas Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat do przetworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość niezerowa, jeśli wiadomość była obsłużona i nie powinna być wysyłana; 0, jeśli komunikat nie został obsłużony i powinien zostać wysłany.
 

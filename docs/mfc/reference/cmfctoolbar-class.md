@@ -312,11 +312,11 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: d2af7a808e07e0368dd43ed920b6d8736a90b995
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870002"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420226"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -330,7 +330,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCToolBar : public CMFCBaseToolBar
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -624,7 +624,7 @@ podczas Identyfikator zasobu mapy bitowej z wyłączonymi obrazami pasków narz�
 *uiMenuDisabledResID*<br/>
 podczas Identyfikator zasobu mapy bitowej z wyłączonymi obrazami menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli metoda się powiedzie; Wartość FALSE, jeśli *uiResID* lub *uiBmpResID* nie określają prawidłowych zasobów lub występuje inny błąd.
 
@@ -670,7 +670,7 @@ Określa, czy etykiety tekstowe mogą być wyświetlane w obszarze obrazy na prz
 virtual BOOL AllowChangeTextLabels() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli może być wyświetlana etykieta tekstowa poniżej obrazów; w przeciwnym razie FALSE.
 
@@ -690,7 +690,7 @@ Określa, czy pasek narzędzi jest wyświetlany na liście pasków narzędzi w o
 virtual BOOL AllowShowOnList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obiekt Toolbar może być wyświetlany w polu listy na stronie dostosowywania paska narzędzi. w przeciwnym razie FALSE.
 
@@ -708,7 +708,7 @@ Określa, czy etykiety tekstowe w obszarze obrazy są aktualnie wyświetlane na 
 BOOL AreTextLabels() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przyciski paska narzędzi wyświetlają etykiety tekstowe poniżej obrazów; w przeciwnym razie FALSE.
 
@@ -757,7 +757,7 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 *pButton*<br/>
 podczas Wskaźnik do obiektu przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks *pButton* na wewnętrznej liście przycisków paska narzędzi; lub-1, jeśli określony przycisk nie znajduje się na tym pasku narzędzi.
 
@@ -779,7 +779,7 @@ podczas Wartość TRUE powoduje rozciągnięcie paska narzędzi do rozmiaru ramk
 *bHorz*<br/>
 podczas PRAWDA, aby ustawić pasek narzędzi w poziomie. Wartość FALSE, aby określić orientację paska narzędzi w pionie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który określa rozmiar paska narzędzi.
 
@@ -797,7 +797,7 @@ Oblicza maksymalną wysokość przycisków na pasku narzędzi.
 virtual int CalcMaxButtonHeight();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna wysokość przycisków.
 
@@ -820,7 +820,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 *bVertDock*<br/>
 podczas PRAWDA, aby określić, że pasek narzędzi jest zadokowany pionowo; Wartość FALSE, aby określić, że pasek narzędzi jest zadokowany w poziomie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który określa całkowity rozmiar przycisków na pasku narzędzi.
 
@@ -838,7 +838,7 @@ Określa, czy użytkownik może zamknąć ten pasek narzędzi.
 virtual BOOL CanBeClosed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi może być zamknięty przez użytkownika; w przeciwnym razie FALSE.
 
@@ -856,7 +856,7 @@ Określa, czy system może przywrócić oryginalny stan paska narzędzi po dosto
 virtual BOOL CanBeRestored() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi można przywrócić z zasobów aplikacji; w przeciwnym razie FALSE.
 
@@ -878,7 +878,7 @@ Określa, czy okienko może odbierać fokus.
 virtual BOOL CanFocus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -894,7 +894,7 @@ Określa, czy pasek narzędzi i jego element równorzędny są umieszczane w tym
 BOOL CanHandleSiblings();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli pasek narzędzi ma element równorzędny, a pasek narzędzi i jego element równorzędny są umieszczone w tym samym okienku. w przeciwnym razie FALSE.
 
@@ -946,7 +946,7 @@ podczas Określa identyfikator polecenia.
 *iIndexFirst*<br/>
 podczas Określa początkowy indeks do uruchomienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) przycisku paska narzędzi, jeśli metoda zakończyła się pomyślnie. -1, jeśli nie ma przycisku o określonym IDENTYFIKATORze.
 
@@ -978,7 +978,7 @@ podczas Styl paska narzędzi. Aby wyświetlić listę stylów, zobacz [kontrolki
 *nID*<br/>
 podczas Identyfikator okna podrzędnego paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -1019,7 +1019,7 @@ podczas Obiekt `CRect`, który określa szerokości obramowania okna paska narz�
 *nID*<br/>
 podczas Identyfikator okna podrzędnego paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli ta metoda się powiedzie; w przeciwnym razie 0.
 
@@ -1097,7 +1097,7 @@ podczas Ma wartość TRUE, jeśli przycisk jest wyróżniony; w przeciwnym razie
 *bDrawDisabledImages*<br/>
 podczas PRAWDA, jeśli przyciski wyłączone są wygaszone; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przycisk został odmalowany; FAŁSZ, jeśli przycisk jest ukryty.
 
@@ -1274,7 +1274,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 *Właściwość*<br/>
 podczas Uchwyt okna do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CMFCToolBar`, który zawiera dany uchwyt okna lub wartość NULL, jeśli nie istnieje odpowiedni obiekt `CMFCToolBar`.
 
@@ -1290,7 +1290,7 @@ Zwraca listę przycisków w trybie tylko do odczytu na pasku narzędzi.
 const CObList& GetAllButtons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera kolekcję obiektów [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) .
 
@@ -1302,7 +1302,7 @@ Zwraca listę wszystkich pasków narzędzi w aplikacji w trybie tylko do odczytu
 static const CObList& GetAllToolbars();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera kolekcję obiektów `CMFCToolBar`.
 
@@ -1314,7 +1314,7 @@ Zwraca listę poleceń podstawowych zdefiniowanych w aplikacji jako tylko do odc
 static const CList<UINT,UINT>& GetBasicCommands();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwołanie do obiektu [klasy CList](../../mfc/reference/clist-class.md) , który zawiera kolekcję poleceń podstawowych.
 
@@ -1335,7 +1335,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 *iIndex*<br/>
 podczas Określa indeks przycisku, który ma zostać zwrócony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do przycisku paska narzędzi, jeśli istnieje; lub wartość NULL, jeśli nie ma takiego przycisku.
 
@@ -1379,7 +1379,7 @@ Zwraca wymiary każdego przycisku na pasku narzędzi.
 CSize GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [klasy CSize](../../atl-mfc-shared/reference/csize-class.md) , który określa wymiary każdego przycisku na pasku narzędzi.
 
@@ -1400,7 +1400,7 @@ UINT GetButtonStyle(int nIndex) const;
 *nIndex*<br/>
 podczas Określa indeks przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość określająca styl przycisku paska narzędzi. . Zobacz [Style formantów paska narzędzi](../../mfc/reference/toolbar-control-styles.md) , aby wyświetlić listę możliwych stylów.
 
@@ -1428,7 +1428,7 @@ podczas Indeks przycisku paska narzędzi.
 *rString*<br/>
 określoną Tekst etykiety przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tekst etykiety przycisku paska narzędzi.
 
@@ -1444,7 +1444,7 @@ Zwraca wskaźnik do kolekcji obrazów przycisków zimnego paska narzędzi w apli
 static CMFCToolBarImages* GetColdImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji obrazów przycisków zimnego paska narzędzi.
 
@@ -1460,7 +1460,7 @@ Zwraca szerokość przycisków paska narzędzi.
 virtual int GetColumnWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość określająca szerokość przycisków paska narzędzi.
 
@@ -1486,7 +1486,7 @@ podczas Identyfikator polecenia przycisków.
 *listButtons*<br/>
 określoną Odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który odbiera listę przycisków paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba przycisków o określonym IDENTYFIKATORze polecenia.
 
@@ -1498,7 +1498,7 @@ Zwraca liczbę przycisków i separatorów na pasku narzędzi.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba przycisków i separatorów na pasku narzędzi.
 
@@ -1510,7 +1510,7 @@ Pobiera wskaźnik do obiektu `CMFCCustomizeButton`, który jest skojarzony z pas
 CMFCCustomizeButton* GetCustomizeButton();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CMFCCustomizeButton`, który jest skojarzony z paskiem narzędzi.
 
@@ -1533,7 +1533,7 @@ static int GetDefaultImage(UINT uiID);
 *uiID*<br/>
 podczas Określa identyfikator polecenia przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks obrazu paska narzędzi na udostępnionej liście obrazów.
 
@@ -1549,7 +1549,7 @@ Zwraca wskaźnik do kolekcji obrazów, które są używane dla wyłączonych prz
 static CMFCToolBarImages* __stdcall GetDisabledImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji wyłączonych obrazów przycisków paska narzędzi.
 
@@ -1565,7 +1565,7 @@ Zwraca wskaźnik do kolekcji obrazów, które są używane dla przycisków menu 
 static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji wyłączonych obrazów menu.
 
@@ -1586,7 +1586,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 *pIndex*<br/>
 określoną Odbiera indeks przycisku w kolekcji przycisków paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu przycisku menu, który wyświetla jego podmenu lub wartość NULL, jeśli żadne menu nie wyświetla jego podmenu.
 
@@ -1602,7 +1602,7 @@ Określa, czy obrazy wyłączonych przycisków są wygaszonymi wersjami zwykłyc
 BOOL GetGrayDisabledButtons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE powoduje przygasić obrazów wyłączonych przycisków; Wartość FALSE, aby uzyskać obrazy z kolekcji wyłączonych obrazów.
 
@@ -1618,7 +1618,7 @@ Zwraca wskaźnik do przycisku paska narzędzi, który jest obecnie wyróżniony.
 CMFCToolBarButton* GetHighlightedButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu przycisku paska narzędzi; lub wartość NULL, jeśli żaden przycisk nie jest wyróżniony.
 
@@ -1634,7 +1634,7 @@ Określa, czy przyciski paska narzędzi są *śledzone na gorąco*. Jeśli przyc
 BOOL GetHotBorder() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przyciski paska narzędzi są śledzone na gorąco; w przeciwnym razie FALSE.
 
@@ -1650,7 +1650,7 @@ Zwraca kolor tekstu wyróżnionych przycisków paska narzędzi.
 static COLORREF GetHotTextColor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje bieżący wyróżniony kolor tekstu.
 
@@ -1666,7 +1666,7 @@ Zwraca dojście do okna, które miało fokus wprowadzania tuż przed paskiem nar
 HWND GetHwndLastFocus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do okna, które nie pochodzi od [klasy CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md), który wcześniej miał fokus danych wejściowych; lub wartość NULL, jeśli nie ma takiego okna.
 
@@ -1682,7 +1682,7 @@ Określa, czy wywołania dla ustawionych etykiet przycisków są ignorowane.
 BOOL GetIgnoreSetText() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wywołania etykiet przycisków ustawione są ignorowane; w przeciwnym razie FALSE.
 
@@ -1696,7 +1696,7 @@ Zwraca wskaźnik do kolekcji domyślnych obrazów przycisków w aplikacji.
 static CMFCToolBarImages* GetImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [klasy CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) , który zawiera kolekcję domyślnych obrazów dla wszystkich pasków narzędzi w aplikacji.
 
@@ -1712,7 +1712,7 @@ Zwraca bieżący rozmiar obrazów przycisków paska narzędzi.
 CSize GetImageSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [klasy CSize](../../atl-mfc-shared/reference/csize-class.md) , który reprezentuje bieżący rozmiar obrazów przycisków paska narzędzi.
 
@@ -1724,7 +1724,7 @@ Zwraca przesunięcie indeksu używane do znajdowania obrazów przycisków paska 
 int GetImagesOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przesunięcie indeksu obrazów paska narzędzi.
 
@@ -1771,7 +1771,7 @@ UINT GetItemID(int nIndex) const;
 *nIndex*<br/>
 podczas Określa indeks przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator polecenia przycisku paska narzędzi; lub zero, jeśli przycisk z określonym indeksem nie istnieje.
 
@@ -1812,7 +1812,7 @@ Zwraca wskaźnik do kolekcji dużych obrazów przycisków na zimnym pasku narzę
 static CMFCToolBarImages* GetLargeColdImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji dużych zimnych obrazów.
 
@@ -1828,7 +1828,7 @@ Zwraca wskaźnik do kolekcji dużych obrazów przycisków pasków narzędzi w ap
 static CMFCToolBarImages* GetLargeDisabledImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji dużych wyłączonych obrazów przycisków paska narzędzi.
 
@@ -1844,7 +1844,7 @@ Zwraca wskaźnik do kolekcji dużych obrazów przycisków paska narzędzi w apli
 static CMFCToolBarImages* GetLargeImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji dużych obrazów przycisków paska narzędzi.
 
@@ -1860,7 +1860,7 @@ Zwraca wskaźnik do kolekcji zablokowanych zimnych obrazów na pasku narzędzi.
 CMFCToolBarImages* GetLockedColdImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji zablokowanych zimnych obrazów lub wartość NULL, jeśli pasek narzędzi nie jest zablokowany.
 
@@ -1880,7 +1880,7 @@ Zwraca wskaźnik do kolekcji zablokowanych wyłączonych obrazów na pasku narz�
 CMFCToolBarImages* GetLockedDisabledImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji zablokowanych wyłączonych obrazów lub wartość NULL, jeśli pasek narzędzi nie jest zablokowany.
 
@@ -1900,7 +1900,7 @@ Zwraca wskaźnik do kolekcji zablokowanych obrazów przycisków na pasku narzęd
 CMFCToolBarImages* GetLockedImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji zablokowanych obrazów przycisków paska narzędzi lub wartość NULL, jeśli pasek narzędzi nie jest zablokowany.
 
@@ -1918,7 +1918,7 @@ Zwraca domyślny rozmiar zablokowanych obrazów pasków narzędzi.
 CSize GetLockedImageSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura `CSize`, która określa rozmiar zablokowanych obrazów pasków narzędzi lub pustą strukturę `CSize`, jeśli pasek narzędzi nie jest zablokowany.
 
@@ -1938,7 +1938,7 @@ Zwraca wskaźnik do kolekcji zablokowanych obrazów menu paska narzędzi na pask
 CMFCToolBarImages* GetLockedMenuImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji zablokowanych obrazów menu paska narzędzi lub wartość NULL, jeśli pasek narzędzi nie jest zablokowany.
 
@@ -1958,7 +1958,7 @@ Zwraca rozmiar przycisków menu w aplikacji.
 static CSize GetMenuButtonSize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który reprezentuje rozmiar przycisków menu w pikselach.
 
@@ -1976,7 +1976,7 @@ Zwraca wskaźnik do kolekcji obrazów przycisków menu w aplikacji.
 static CMFCToolBarImages* GetMenuImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji obrazów menu.
 
@@ -1994,7 +1994,7 @@ Zwraca rozmiar obrazów przycisków menu w aplikacji.
 static CSize GetMenuImageSize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który reprezentuje rozmiar obrazów menu.
 
@@ -2010,7 +2010,7 @@ Pobiera kolekcję niedostosowywanych przycisków paska narzędzi.
 const CObList& GetOrigButtons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do listy niedopasowanych przycisków paska narzędzi.
 
@@ -2028,7 +2028,7 @@ Pobiera kolekcję niedostosowanych przycisków resetowania paska narzędzi.
 const CObList& GetOrigResetButtons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do listy niedopasowanych przycisków resetowania paska narzędzi.
 
@@ -2046,7 +2046,7 @@ Pobiera identyfikator zasobu paska narzędzi.
 UINT GetResourceID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator zasobu paska narzędzi.
 
@@ -2062,7 +2062,7 @@ Określa obiekt, ramkę nadrzędną lub właściciela, wysyła polecenia do pask
 BOOL GetRouteCommandsViaFrame();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli ramka nadrzędna wysyła polecenia do paska narzędzi; 0, jeśli właściciel wysyła polecenia do paska narzędzi.
 
@@ -2080,7 +2080,7 @@ Zwraca wysokość przycisków paska narzędzi.
 virtual int GetRowHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość przycisków paska narzędzi (w pikselach).
 
@@ -2096,7 +2096,7 @@ Określa, czy na przyciskach paska narzędzi są wyświetlane podpowiedzi narzę
 static BOOL GetShowTooltips();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli dla przycisków paska narzędzi są wyświetlane wskazówki dotyczące narzędzi; w przeciwnym razie FALSE.
 
@@ -2112,7 +2112,7 @@ Pobiera element równorzędny paska narzędzi.
 CMFCToolBar* GetSiblingToolBar();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do paska narzędzi elementów równorzędnych.
 
@@ -2128,7 +2128,7 @@ Zwraca wskaźnik do kolekcji obrazów przycisków paska narzędzi zdefiniowanych
 static CMFCToolBarImages* GetUserImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kolekcji obrazów przycisków paska narzędzi zdefiniowanych przez użytkownika dla wszystkich pasków narzędzi w aplikacji.
 
@@ -2149,7 +2149,7 @@ virtual int HitTest(CPoint point);
 *moment*<br/>
 podczas Punkt do przetestowania, we współrzędnych klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks przycisku znajdującego się w określonej pozycji lub-1, jeśli nie ma takiego przycisku lub przycisk jest separatorem.
 
@@ -2175,7 +2175,7 @@ podczas Określa przycisk do wstawienia.
 *iInsertAt*<br/>
 podczas Określa pozycję od zera, w której ma zostać wstawiony przycisk.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pozycja, w której został wstawiony przycisk lub-1, jeśli wystąpi błąd.
 
@@ -2198,7 +2198,7 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 *iInsertAt*<br/>
 podczas Określa pozycję od zera, w której ma zostać wstawiony separator. Ten parametr musi być większy niż 0.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pozycja, w której został wstawiony separator lub-1, jeśli wystąpi błąd.
 
@@ -2223,7 +2223,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 *nIndex*<br/>
 podczas Indeks (liczony od zera) przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CMFCToolBarButton`, który istnieje w podanym indeksie lub wartości NULL, jeśli taki obiekt nie istnieje.
 
@@ -2239,7 +2239,7 @@ Określa, czy użytkownik może dodawać i usuwać przyciski paska narzędzi prz
 BOOL IsAddRemoveQuickCustomize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli użytkownik może użyć opcji **Dostosuj** , aby zmodyfikować pasek narzędzi. w przeciwnym razie FALSE.
 
@@ -2253,7 +2253,7 @@ Określa, czy *szybkie dostosowywanie* jest używane do przeciągania przycisku.
 static BOOL __stdcall IsAltCustomizeMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli szybkie dostosowywanie jest używane do przeciągania przycisku; w przeciwnym razie FALSE.
 
@@ -2267,7 +2267,7 @@ Określa, czy jest włączone automatyczne generowanie niezaznaczonych (niewyró
 static BOOL IsAutoGrayInactiveImages();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli jest włączona opcja automatycznego przyciemniania obrazów nieaktywnych. w przeciwnym razie FALSE.
 
@@ -2288,7 +2288,7 @@ static BOOL IsBasicCommand(UINT uiCmd);
 *uiCmd*<br/>
 podczas Określa polecenie do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli określone polecenie należy do listy podstawowych poleceń; w przeciwnym razie FALSE.
 
@@ -2304,7 +2304,7 @@ Określa, czy pasek narzędzi może wyświetlać przyciski, które mają rozszer
 virtual BOOL IsButtonExtraSizeAvailable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli pasek może wyświetlać przyciski o dodatkowym rozmiarze obramowania. w przeciwnym razie FALSE.
 
@@ -2327,7 +2327,7 @@ BOOL IsButtonHighlighted(int iButton) const;
 *iButton*<br/>
 podczas Określa indeks przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określony przycisk jest wyróżniony; w przeciwnym razie FALSE.
 
@@ -2346,7 +2346,7 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 *uiCmd*<br/>
 podczas Określa polecenie do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określone polecenie jest dozwolone; w przeciwnym razie FALSE.
 
@@ -2369,7 +2369,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 *uiCmd*<br/>
 podczas Określa polecenie do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określone polecenie jest rzadko używane; w przeciwnym razie FALSE.
 
@@ -2395,7 +2395,7 @@ Określa, czy struktura paska narzędzi jest w trybie dostosowywania.
 static BOOL IsCustomizeMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli struktura jest w trybie dostosowywania; w przeciwnym razie FALSE.
 
@@ -2418,7 +2418,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 *pButton*<br/>
 podczas Wskaźnik na przycisk paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli określony przycisk jest przeciągany; w przeciwnym razie FALSE.
 
@@ -2432,7 +2432,7 @@ Określa, czy pasek narzędzi zawiera przycisk **Dostosuj** .
 BOOL IsExistCustomizeButton();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi zawiera przycisk **Dostosuj** ; w przeciwnym razie FALSE.
 
@@ -2450,7 +2450,7 @@ Określa, czy pasek narzędzi jest przenoszony.
 virtual BOOL IsFloating() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi jest zmiennoprzecinkowy; w przeciwnym razie FALSE.
 
@@ -2462,7 +2462,7 @@ Określa, czy paski narzędzi w aplikacji wyświetlają obecnie duże ikony.
 static BOOL IsLargeIcons();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli aplikacja używa dużych ikon; w przeciwnym razie FALSE.
 
@@ -2485,7 +2485,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 *pButton*<br/>
 podczas Wskaźnik do przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ostatnie polecenie zostało wysłane z przycisku, który *pButton* określa; w przeciwnym razie FALSE.
 
@@ -2501,7 +2501,7 @@ Określa, czy pasek narzędzi jest zablokowany.
 BOOL IsLocked() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi jest zablokowany; w przeciwnym razie FALSE.
 
@@ -2519,7 +2519,7 @@ Określa, czy pasek narzędzi i jego równorzędny pasek narzędzi są umieszcza
 BOOL IsOneRowWithSibling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi i jego element równorzędny są rozmieszczone w tym samym wierszu; w przeciwnym razie FALSE.
 
@@ -2535,7 +2535,7 @@ Zazwyczaj nie trzeba używać tej metody. Aby włączyć **przyciski Pokaż w je
 virtual BOOL IsResourceChanged() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2545,7 +2545,7 @@ virtual BOOL IsResourceChanged() const;
 BOOL IsSibling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2557,7 +2557,7 @@ Określa, czy pasek narzędzi jest zdefiniowany przez użytkownika.
 BOOL IsUserDefined() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi został utworzony przez użytkownika; w przeciwnym razie FALSE.
 
@@ -2595,7 +2595,7 @@ podczas Identyfikator zasobu mapy bitowej odwołujący się do wyłączonych obr
 *uiMenuDisabledResID*<br/>
 podczas Identyfikator zasobu mapy bitowej, który odwołuje się do wyłączonych obrazów menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -2618,7 +2618,7 @@ virtual BOOL LoadBitmapEx(
 podczas *Parametry*<br/>
 podczas *zablokowane*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2632,7 +2632,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 podczas *lpszProfileName*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2649,7 +2649,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 *lpszProfileName*<br/>
 podczas Określa ścieżkę względną klucza rejestru systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -2681,7 +2681,7 @@ podczas Określa identyfikator kontrolki paska narzędzi.
 *uiID*<br/>
 podczas Określa identyfikator zasobu paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -2727,7 +2727,7 @@ podczas Identyfikator zasobu mapy bitowej, który odwołuje się do wyłączonyc
 *uiHotResID*<br/>
 podczas Identyfikator zasobu mapy bitowej, który odwołuje się do obrazów gorącego paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -2764,7 +2764,7 @@ podczas Odwołanie do obiektu `CMFCToolBarInfo`, który zawiera identyfikatory z
 *Blokada*<br/>
 podczas Wartość logiczna określająca, czy pasek narzędzi jest zablokowany. Jeśli ten parametr ma wartość TRUE, pasek narzędzi jest zablokowany. W przeciwnym razie pasek narzędzi nie jest zablokowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -2792,7 +2792,7 @@ Struktura używa tego elementu członkowskiego danych, jeśli nie określisz zes
 virtual BOOL NextMenu();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2812,7 +2812,7 @@ podczas Przestrzeń.
 *dropEffect*<br/>
 podczas Przestrzeń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2892,7 +2892,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 podczas *lVal*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2909,7 +2909,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 *pButton*<br/>
 podczas Wskazuje przycisk, którego tekst jest ustawiany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pomyślnie przywrócono prawdziwy tekst Ifthe; w przeciwnym razie FALSE.
 
@@ -2937,7 +2937,7 @@ podczas Wskazuje przycisk paska narzędzi, dla którego ma zostać wyświetlona 
 *strTTText*<br/>
 określoną Odwołanie do `CString` obiektu, który odbiera tekst etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli *strTTText* został wypełniony tekstem etykietki narzędzia; w przeciwnym razie FALSE.
 
@@ -2953,7 +2953,7 @@ Przesłoń `OnUserToolTip`, aby dostosować wskazówki dotyczące narzędzi przy
 virtual BOOL PrevMenu();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2970,7 +2970,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 *pButton*<br/>
 podczas Wskaźnik na przycisk na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda powinna zawsze zwracać wartość TRUE. MFC używa wewnętrznie wartości FALSE.
 
@@ -3005,7 +3005,7 @@ virtual BOOL RemoveButton(int iIndex);
 *iIndex*<br/>
 podczas Określa indeks (liczony od zera) przycisku, który ma zostać usunięty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie, lub wartość FALSE, jeśli określony indeks jest nieprawidłowy lub indeks odwołuje się do przycisku **Dostosuj** .
 
@@ -3037,7 +3037,7 @@ podczas Identyfikator kontrolki paska narzędzi.
 *uiID*<br/>
 podczas Identyfikator zasobu paska narzędzi. Jeśli ten parametr ma wartość-1, ta metoda używa metody [CWnd:: GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) w celu pobrania identyfikatora zasobu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -3069,7 +3069,7 @@ podczas Odwołanie do `CMFCToolBarButton` do wstawienia.
 *Klika*<br/>
 podczas Wartość logiczna określająca, czy należy zastąpić wszystkie przyciski, które mają identyfikator polecenia określony przez *uiCmd*. Jeśli ten parametr ma wartość TRUE, wszystkie przyciski o określonym IDENTYFIKATORze polecenia są zastępowane. W przeciwnym razie pierwszy przycisk zostanie zastąpiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba zamienionych przycisków. Ta metoda zwraca wartość 0, jeśli przycisk o określonym IDENTYFIKATORze polecenia nie istnieje na pasku narzędzi.
 
@@ -3132,7 +3132,7 @@ Przywraca oryginalny stan paska narzędzi.
 virtual BOOL RestoreOriginalState();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie, lub FALSE, jeśli metoda nie powiedzie się lub pasek narzędzi jest zdefiniowany przez użytkownika.
 
@@ -3152,7 +3152,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 podczas *lpszProfileName*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3178,7 +3178,7 @@ podczas Identyfikator kontrolki paska narzędzi.
 *uiID*<br/>
 podczas Identyfikator zasobu paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -3263,7 +3263,7 @@ podczas Liczba elementów w *lpIDArray*.
 *bRemapImages*<br/>
 podczas Wartość logiczna określająca, czy istniejące obrazy przycisków mają być skojarzone z wstawionymi przyciskami. Jeśli ten parametr ma wartość TRUE, obrazy są ponownie mapowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
@@ -3313,7 +3313,7 @@ podczas Indeks przycisku paska narzędzi.
 *lpszText*<br/>
 podczas Etykieta tekstowa przycisku paska narzędzi. Nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -3339,7 +3339,7 @@ podczas Określa, ile razy polecenia muszą zostać wykonane, zanim środowisko 
 *nMinUsagePercentage*<br/>
 podczas Procent czasu, przez który polecenie musi zostać wykonane, aby można je było traktować jako ostatnio używane polecenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 FAŁSZ, jeśli wartość *nMinUsagePercentage* jest równa lub większa niż 100; w przeciwnym razie wartość TRUE.
 
@@ -3362,7 +3362,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 *bSet*<br/>
 podczas Wartość logiczna określająca, czy włączać lub wyłączać tryb dostosowywania. Ustaw ten parametr na wartość TRUE, aby włączyć tryb dostosowywania lub FALSE, aby go wyłączyć.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wywołanie tej metody zmienia tryb dostosowywania; w przeciwnym razie FALSE.
 
@@ -3426,7 +3426,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 podczas *pMenuButton*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3773,7 +3773,7 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 *pUserImages*<br/>
 podczas Wskaźnik do kolekcji obrazów zdefiniowanych przez użytkownika.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie wartość 0, jeśli określony obiekt `CMFCToolBarImages` jest nieprawidłowy lub ma rozmiar obrazu, który różni się od domyślnego rozmiaru obrazu paska narzędzi.
 
@@ -3805,7 +3805,7 @@ podczas Kwota (w pikselach), przez którą ma zostać rozciągnięta okienko.
 *bVert*<br/>
 podczas Jeśli wartość jest równa TRUE, rozciąga okienko w pionie. W przypadku wartości FALSE rozciąga okienko w poziomie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który określa rozmiar obszaru klienta paska narzędzi.
 
@@ -3828,7 +3828,7 @@ virtual BOOL TranslateChar(UINT nChar);
 *nChar*<br/>
 podczas Określa kod klucza wirtualnego. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość FALSE, jeśli określony kod klucza jest niedrukowalny lub nie odpowiada prawidłowemu skrótowi klawiaturowym; Ma wartość TRUE, jeśli określony kod klucza odpowiada opcji menu rozwijanego; w przeciwnym razie wartość zwracana z [CMFCToolBar::P rocesscommand](#processcommand).
 
@@ -3880,7 +3880,7 @@ podczas Szerokość przycisku. Jeśli-1, używana jest bieżąca szerokość.
 
 [in] m wysokość przycisku *nRowHeight* . Jeśli-1, używana jest bieżąca wysokość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wierszy przycisków na pasku narzędzi.
 

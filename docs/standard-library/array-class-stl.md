@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883818"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422060"
 ---
 # <a name="array-class-c-standard-library"></a>Array — KlasaC++ (standardowa biblioteka)
 
@@ -121,7 +121,7 @@ class array;
 |`Ty`|Typ elementu.|
 |`N`|Liczba elementów.|
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 |Definicja typu|Opis|
 |-|-|
@@ -387,7 +387,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -413,7 +413,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu swobodnego, który wskazuje tuż za koniec zakresu.
 
@@ -621,7 +621,7 @@ Zwraca iterator const do pierwszego elementu w odwróconej tablicy.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu stała odwrotnie dostęp losowy odnoszący się do pierwszego elementu w odwróconej tablicy lub na adres, który był ostatnim elementem w nieodwróconej tablicy.
 
@@ -665,7 +665,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy (lokalizacja, która poprzedza pierwszy element w nieodwróconej tablicy).
 

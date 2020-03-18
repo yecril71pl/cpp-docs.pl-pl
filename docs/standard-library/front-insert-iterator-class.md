@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874056"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419085"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator — Klasa
 
@@ -37,7 +37,7 @@ Typ kontenera na początku elementu, który ma zostać wstawiony przez `front_in
 
 Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jest możliwe wstawianie elementów na początek sekwencji w amortyzowanym stałym czasie. Kontenery sekwencji biblioteki C++ standardowej zdefiniowane przez [klasę deque](../standard-library/deque-class.md) i [klasę listy](../standard-library/list-class.md) zapewniają potrzebną `push_front`ą funkcję członkowską i spełniają te wymagania. Z kolei Kontenery sekwencji zdefiniowane przez [klasę Vector](../standard-library/vector-class.md) nie spełniają tych wymagań i nie można ich przystosować do `front_insert_iterator`s. Element `front_insert_iterator` musi być zawsze zainicjowany przy użyciu jego kontenera.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -119,7 +119,7 @@ explicit front_insert_iterator(Container& _Cont);
 *_Cont*\
 Obiekt kontenera, do którego `front_insert_iterator` ma wstawiać elementy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `front_insert_iterator` dla obiektu kontenera parametrów.
 
@@ -177,7 +177,7 @@ Usuwa odwołanie do iteratora INSERT zwracające element, który zawiera.
 front_insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
@@ -240,7 +240,7 @@ front_insert_iterator<Container>& operator++();
 front_insert_iterator<Container> operator++(int);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `front_insert_iterator` odnoszący się do następnej lokalizacji, w której może być przechowywana wartość.
 
@@ -296,7 +296,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 *val*\
 Wartość, która ma zostać przypisana do kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do ostatniego elementu wstawionego na początku kontenera.
 

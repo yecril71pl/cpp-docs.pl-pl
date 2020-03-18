@@ -1,23 +1,22 @@
 ---
-title: '&lt;Kod > (komentarze dokumentacji C++)'
+title: '> kodu &lt;(C++ Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272428"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440154"
 ---
-# <a name="ltcodegt"></a>&lt;Kod&gt;
+# <a name="ltcodegt"></a>&gt; kodu &lt;
 
-\<Kod > tag zapewnia sposób, aby wskazać jeden lub więcej wierszy w kodzie.
+Tag \<kod > umożliwia wskazanie co najmniej jednego wiersza jako kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,19 +26,19 @@ ms.locfileid: "62272428"
 
 #### <a name="parameters"></a>Parametry
 
-*Zawartość*<br/>
-Tekst, który ma zostać oznaczona jako kod.
+*treści*<br/>
+Tekst, który ma zostać oznaczony jako kod.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj [ \<c >](c-visual-cpp.md) do wskazania część tekstu powinien być oznaczony jako kod.
+Użyj [\<c >](c-visual-cpp.md) , aby wskazać, że fragment tekstu powinien zostać oznaczony jako kod.
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [ \<przykład >](example-visual-cpp.md) tematu, aby uzyskać przykład sposobu użycia \<kodu > tag.
+Zapoznaj się z przykładem [\<> przykładu](example-visual-cpp.md) , aby użyć tagu \<> Code.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

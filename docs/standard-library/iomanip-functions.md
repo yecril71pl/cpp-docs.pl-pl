@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856591"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421640"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;funkcje&gt; iomanip
 
@@ -103,7 +103,7 @@ Kwota pieniężna do wstawienia do strumienia.
 *use_intl*\
 Ustaw **wartość true** , jeśli Manipulator powinien używać formatu międzynarodowego, **Fałsz** , jeśli nie powinien.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość `str`.
 
@@ -314,7 +314,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 \ *masek*
 Flagi do wyczyszczenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, a następnie zwraca `str`.
 
@@ -335,7 +335,7 @@ T3 setbase(int base);
 \ *podstawowe*
 Podstawa liczby.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca `str`. W tym miejscu `mask` jest określany w następujący sposób:
 
@@ -365,7 +365,7 @@ T4 setfill(Elem Ch);
 *Ch*\
 Znak, który będzie używany do wypełniania spacji w wyświetlaniu wyrównanym do prawej strony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator szablonu zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[wypełnienia](../standard-library/basic-ios-class.md#fill)`(Ch)`, a następnie zwraca `str`. Typ `Elem` musi być taki sam jak typ elementu `str`strumienia.
 
@@ -386,7 +386,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 \ *masek*
 Flagi do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`, a następnie zwraca `str`.
 
@@ -407,7 +407,7 @@ T5 setprecision(streamsize Prec);
 *Prec*\
 Precyzja wartości zmiennoprzecinkowych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[dokładności](../standard-library/ios-base-class.md#precision)`(Prec)`, a następnie zwraca `str`.
 
@@ -428,7 +428,7 @@ T6 setw(streamsize Wide);
 *Szerokie*\
 Szerokość pola wyświetlania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, a następnie zwraca `str`.
 

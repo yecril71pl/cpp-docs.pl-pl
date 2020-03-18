@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854890"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419652"
 ---
 # <a name="ltqueuegt-operators"></a>Operatory &lt;kolejki&gt;
 
@@ -41,7 +41,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli kolejki nie są równe; **Fałsz** , jeśli kolejki są równe.
 
@@ -108,7 +108,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli kolejka po lewej stronie operatora jest mniejsza niż i nie równa kolejki po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -171,7 +171,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -236,7 +236,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli kolejki nie są równe; **Fałsz** , jeśli kolejki są równe.
 
@@ -302,7 +302,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -368,7 +368,7 @@ Obiekt typu `queue`.
 *prawa*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
 

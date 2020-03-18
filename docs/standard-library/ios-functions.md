@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856551"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421612"
 ---
 # <a name="ltiosgt-functions"></a>&lt;funkcje&gt; systemu iOS
 
@@ -78,7 +78,7 @@ ios_base& boolalpha(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -130,7 +130,7 @@ ios_base& dec(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -200,7 +200,7 @@ ios_base& fixed(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -248,7 +248,7 @@ ios_base& hex(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -289,7 +289,7 @@ ios_base& internal(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -347,7 +347,7 @@ ios_base& left(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -402,7 +402,7 @@ ios_base& noboolalpha(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -431,7 +431,7 @@ ios_base& noshowbase(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -458,7 +458,7 @@ ios_base& noshowpoint(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -505,7 +505,7 @@ ios_base& noshowpos(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -532,7 +532,7 @@ ios_base& noskipws(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -574,7 +574,7 @@ ios_base& nounitbuf(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -597,7 +597,7 @@ ios_base& nouppercase(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -622,7 +622,7 @@ ios_base& oct(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -649,7 +649,7 @@ ios_base& right(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -706,7 +706,7 @@ ios_base& scientific(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -751,7 +751,7 @@ ios_base& showbase(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -805,7 +805,7 @@ ios_base& showpoint(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -832,7 +832,7 @@ ios_base& showpos(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -877,7 +877,7 @@ ios_base& skipws(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -929,7 +929,7 @@ ios_base& unitbuf(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 
@@ -954,7 +954,7 @@ ios_base& uppercase(ios_base& str);
 *str*\
 Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu, z którego pochodzi element *str* .
 

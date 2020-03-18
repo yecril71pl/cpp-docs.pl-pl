@@ -6,11 +6,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865811"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421304"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Globals i pomocnicy analizowania internetowych adresów URL
 
@@ -90,7 +90,7 @@ Obiekt, do którego odwołuje się adres URL (może być pusty).
 *nPort*<br/>
 Określana na podstawie fragmentów adresu URL serwera lub obiektu (jeśli istnieje).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli adres URL został pomyślnie przeanalizowany; w przeciwnym razie wartość 0, jeśli jest pusta lub nie zawiera znanego typu usługi internetowej.
 
@@ -197,7 +197,7 @@ Flagi kontrolujące sposób analizowania adresu URL. Może być kombinacją nast
 
 Jeśli używasz domyślnej biblioteki MFC, która nie ma flag, funkcja konwertuje wszystkie niebezpieczne znaki i meta sekwencje (takie jak \\., \... i \\...) na sekwencje ucieczki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli adres URL został pomyślnie przeanalizowany; w przeciwnym razie wartość 0, jeśli jest pusta lub nie zawiera znanego typu usługi internetowej.
 
@@ -227,7 +227,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 *hQuery*<br/>
 Dojście do zapytania internetowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wszystkie typy usług internetowych zdefiniowane przez usługę WININET. C. Zapoznaj się z sekcją uwagi, aby zapoznać się z listą tych usług internetowych. Jeśli dojście ma wartość NULL lub nie jest rozpoznawane, funkcja zwraca AFX_INET_SERVICE_UNK.
 
@@ -297,7 +297,7 @@ Użytkownik jest odpowiedzialny za określenie przyczyny na podstawie kodu błę
 
 **Nagłówek:** afxinet. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
 [Klasa CInternetException](cinternetexception-class.md)<br/>

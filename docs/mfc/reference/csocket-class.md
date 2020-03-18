@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854562"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421171"
 ---
 # <a name="csocket-class"></a>Klasa CSocket
 
@@ -37,17 +37,17 @@ Wynika z `CAsyncSocket`, dziedziczy hermetyzację interfejsu API Windows Sockets
 class CSocket : public CAsyncSocket
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSocket:: CSocket](#csocket)|Konstruuje obiekt `CSocket`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSocket:: Attach](#attach)|Dołącza uchwyt gniazda do `CSocket` obiektu.|
 |[CSocket:: CancelBlockingCall](#cancelblockingcall)|Anuluje wywołanie blokujące, które jest aktualnie w toku.|
@@ -57,7 +57,7 @@ class CSocket : public CAsyncSocket
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSocket:: OnMessagePending](#onmessagepending)|Wywołuje się, by przetworzyć oczekujące komunikaty podczas oczekiwania na ukończenie wywołania blokującego.|
 
@@ -107,7 +107,7 @@ BOOL Attach(SOCKET hSocket);
 *hSocket*<br/>
 Zawiera uchwyt do gniazda.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie.
 
@@ -165,7 +165,7 @@ SOCK_STREAM lub SOCK_DGRAM.
 *lpszSocketAddress*<br/>
 Wskaźnik do ciągu zawierającego adres sieciowy połączonego gniazda, numer kropkowany, taki jak "128.56.22.8". Przekazywanie ciągu o wartości NULL dla tego parametru wskazuje, że wystąpienie `CSocket` powinno nasłuchiwać aktywności klienta na wszystkich interfejsach sieciowych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a konkretny kod błędu można pobrać, wywołując `GetLastError`.
 
@@ -209,7 +209,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 *hSocket*<br/>
 Zawiera uchwyt do gniazda.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CSocket` lub wartość NULL, jeśli nie ma `CSocket` obiektu dołączonego do *hSocket*.
 
@@ -227,7 +227,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy wywołanie b
 BOOL IsBlocking();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli gniazdo blokuje; w przeciwnym razie 0.
 
@@ -243,7 +243,7 @@ Przesłoń tę funkcję elementu członkowskiego, aby szukać określonych komun
 virtual BOOL OnMessagePending();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat został obsłużony; w przeciwnym razie 0.
 
@@ -255,7 +255,7 @@ Struktura wywołuje `OnMessagePending`, gdy gniazdo prowadzi pompę komunikatów
 
 Aby uzyskać więcej informacji, zobacz [Windows Sockets: używanie gniazd z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAsyncSocket](../../mfc/reference/casyncsocket-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

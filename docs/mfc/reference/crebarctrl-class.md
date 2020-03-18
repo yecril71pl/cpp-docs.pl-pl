@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875750"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421521"
 ---
 # <a name="crebarctrl-class"></a>Klasa korzystanie CReBarCtrl
 
@@ -115,7 +115,7 @@ Hermetyzuje funkcjonalność formantu paska pomocniczego, który jest kontenerem
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -263,7 +263,7 @@ Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest okn
 *nID*<br/>
 Określa identyfikator formantu paska pomocniczego formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -311,7 +311,7 @@ Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 *nID*<br/>
 Identyfikator okna podrzędnego kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -344,7 +344,7 @@ BOOL DeleteBand(UINT uBand);
 *uBand*<br/>
 Liczony od zera indeks pasma do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pasek został usunięty pomyślnie; w przeciwnym razie zero.
 
@@ -399,7 +399,7 @@ Implementuje zachowanie [RB_GETBANDCOUNT](/windows/win32/Controls/rb-getbandcoun
 UINT GetBandCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pasm przypisanych do kontrolki.
 
@@ -421,7 +421,7 @@ Indeks (liczony od zera) pasma, dla którego zostaną pobrane informacje.
 *prbbi*<br/>
 Wskaźnik do struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , aby otrzymać informacje o paśmie. Należy ustawić `cbSize` składową tej struktury, aby `sizeof(REBARBANDINFO)` i ustawić element członkowski `fMask` dla elementów, które mają zostać pobrane przed wysłaniem tej wiadomości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -450,7 +450,7 @@ Pobiera wysokość paska paska pomocniczego.
 UINT GetBarHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość, która reprezentuje wysokość formantu w pikselach.
 
@@ -467,7 +467,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 *prbi*<br/>
 Wskaźnik do struktury [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , która będzie odbierać informacje kontrolne paska pomocniczego. Przed wysłaniem tej wiadomości należy ustawić element członkowski *cbSize* tej struktury na `sizeof(REBARINFO)`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -479,7 +479,7 @@ Implementuje zachowanie [RB_GETBKCOLOR](/windows/win32/Controls/rb-getbkcolor)ko
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która reprezentuje bieżący domyślny kolor tła.
 
@@ -496,7 +496,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 *lpcs*<br/>
 Wskaźnik do struktury [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , zgodnie z opisem w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -512,7 +512,7 @@ Implementuje zachowanie [RB_GETDROPTARGET](/windows/win32/Controls/rb-getdroptar
 IDropTarget* GetDropTarget() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .
 
@@ -524,7 +524,7 @@ Pobiera rozszerzone style bieżącego formantu paska pomocniczego.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kombinacja bitowa (lub) flag wskazujących style rozszerzone. Możliwe flagi to RBS_EX_SPLITTER i RBS_EX_TRANSPARENT. Aby uzyskać więcej informacji, zobacz parametr *dwMask* metody [Korzystanie CReBarCtrl:: setextended](#setextendedstyle) .
 
@@ -540,7 +540,7 @@ Pobiera obiekt `CImageList` skojarzony z kontrolką paska pomocniczego.
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) . Zwraca wartość NULL, jeśli nie ustawiono żadnej listy obrazów dla kontrolki.
 
@@ -556,7 +556,7 @@ Pobiera bieżącą paletę kontrolki paska pomocniczego.
 CPalette* GetPalette() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CPalette](../../mfc/reference/cpalette-class.md) określający bieżącą paletę kontrolki paska pomocniczego.
 
@@ -586,7 +586,7 @@ Indeks (liczony od zera) pasma w kontrolce paska pomocniczego.
 *Republika*<br/>
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która będzie odbierać granice pasma paska pomocniczego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -602,7 +602,7 @@ Implementuje zachowanie [RB_GETROWCOUNT](/windows/win32/Controls/rb-getrowcount)
 UINT GetRowCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość UINT, która reprezentuje liczbę wierszy pasma w formancie.
 
@@ -623,7 +623,7 @@ UINT GetRowHeight(UINT uRow) const;
 *uRow*<br/>
 Indeks przedziału liczony od zera, który zostanie pobrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość UINT, która reprezentuje wysokość wiersza (w pikselach).
 
@@ -639,7 +639,7 @@ Implementuje zachowanie [RB_GETTEXTCOLOR](/windows/win32/Controls/rb-gettextcolo
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która reprezentuje bieżący domyślny kolor tekstu.
 
@@ -651,7 +651,7 @@ Implementuje zachowanie [RB_GETTOOLTIPS](/windows/win32/Controls/rb-gettooltips)
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
 
@@ -672,7 +672,7 @@ int HitTest(RBHITTESTINFO* prbht);
 *prbht*<br/>
 Wskaźnik do struktury [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Przed wysłaniem komunikatu, `pt` członkiem tej struktury musi być zainicjowany do punktu, który zostanie przetestowany w celu współrzędnych klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pasma w danym punkcie lub-1, jeśli w punkcie nie ma paska pomocniczego pasma.
 
@@ -689,7 +689,7 @@ int IDToIndex(UINT uBandID) const;
 *uBandID*<br/>
 Zdefiniowany przez aplikację identyfikator określonego pasma, przekazaną w `wID`ej składowej struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) podczas wstawiania pasma.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks pasma liczony od zera, jeśli zakończyło się pomyślnie, lub-1 w przeciwnym razie. W przypadku istnienia zduplikowanych indeksów pasma zwracana jest pierwsza z nich.
 
@@ -711,7 +711,7 @@ Indeks w lokalizacji, w której zostanie wstawiony pasmo (liczony od zera). Jeś
 *prbbi*<br/>
 Wskaźnik do struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , który definiuje pasmo do wstawienia. Przed wywołaniem tej funkcji należy ustawić element członkowski *cbSize* tej struktury na `sizeof(REBARBANDINFO)`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -779,7 +779,7 @@ Liczony od zera indeks przedziału, który ma zostać przeniesiony.
 *matyczna*<br/>
 Indeks (liczony od zera) nowej pozycji pasma. Wartość tego parametru nie może być większa niż liczba przedziałów równa 1. Aby uzyskać liczbę pasm, wywołaj [GetBandCount](#getbandcount).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -840,7 +840,7 @@ Liczony od zera indeks pasma, który ma otrzymywać nowe ustawienia.
 *prbbi*<br/>
 Wskaźnik do struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , która definiuje pasmo do wstawienia. Przed wysłaniem tej wiadomości należy ustawić `cbSize` element członkowski tej struktury na `sizeof(REBARBANDINFO)`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -865,7 +865,7 @@ BOOL SetBandWidth(
 |*uBand*|podczas Indeks paska pomocniczego pasma liczony od zera.|
 |*cxWidth*|podczas Nowa szerokość pasma paska pomocniczego (w pikselach).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
@@ -898,7 +898,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 *prbi*<br/>
 Wskaźnik do struktury [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , która zawiera informacje, które mają zostać ustawione. Należy ustawić `cbSize` składową tej struktury do `sizeof(REBARINFO)` przed wysłaniem tej wiadomości
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -919,7 +919,7 @@ COLORREF SetBkColor(COLORREF clr);
 *CLR*<br/>
 Wartość COLORREF, która reprezentuje nowy domyślny kolor tła.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje poprzedni domyślny kolor tła.
 
@@ -961,7 +961,7 @@ DWORD SetExtendedStyle(
 |*dwMask*|podczas Kombinacja bitowa (lub) flag, które określają, które flagi w parametrze *dwStyleEx* mają zastosowanie. Użyj co najmniej jednej z następujących wartości:<br /><br /> RBS_EX_SPLITTER: domyślnie Pokaż rozdzielacz u dołu w trybie poziomym i w prawo w trybie pionowym.<br /><br /> RBS_EX_TRANSPARENT: Przekaż komunikat [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) do okna nadrzędnego.|
 |*dwStyleEx*|podczas Kombinacja bitowa (lub) flag, które określają style, które mają zostać zastosowane. Aby ustawić styl, należy określić tę samą flagę, która jest używana w parametrze *dwMask* . Aby zresetować styl, określ wartość binarną zero.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni rozszerzony styl.
 
@@ -982,7 +982,7 @@ BOOL SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) zawierającego listę obrazów, która ma zostać przypisana do kontrolki paska pomocniczego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -999,7 +999,7 @@ CWnd* SetOwner(CWnd* pWnd);
 *pWnd*<br/>
 Wskaźnik do obiektu `CWnd`, który ma zostać ustawiony jako właściciel formantu paska pomocniczego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest bieżącym właścicielem kontrolki paska pomocniczego.
 
@@ -1023,7 +1023,7 @@ CPalette* SetPalette(HPALETTE hPal);
 *hPal*<br/>
 Element HPALETTE, który określa nową paletę, która będzie używana przez formant paska pomocniczego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CPalette](../../mfc/reference/cpalette-class.md) , który określa poprzednią paletę kontrolki paska pomocniczego.
 
@@ -1044,7 +1044,7 @@ COLORREF SetTextColor(COLORREF clr);
 *CLR*<br/>
 Wartość COLORREF, która reprezentuje nowy kolor tekstu w obiekcie `CReBarCtrl`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) reprezentująca poprzedni kolor tekstu skojarzony z obiektem `CReBarCtrl`.
 
@@ -1082,7 +1082,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Wskaźnik do ciągu Unicode, który zawiera styl wizualizacji paska pomocniczego do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana nie jest używana.
 
@@ -1108,7 +1108,7 @@ Indeks (liczony od zera) pasma w kontrolce paska pomocniczego.
 *fShow*<br/>
 Wskazuje, czy pasmo ma być pokazywany czy ukryty. Jeśli ta wartość jest RÓWNa TRUE, zostanie wyświetlona Grupa. W przeciwnym razie pasek zostanie ukryty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1125,7 +1125,7 @@ BOOL SizeToRect(CRect& rect);
 *cinania*<br/>
 Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa prostokąt, do którego należy określić rozmiar kontrolki paska pomocniczego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 

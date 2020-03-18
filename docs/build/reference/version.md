@@ -2,18 +2,18 @@
 title: /VERSION
 ms.date: 11/04/2016
 f1_keywords:
-- /version
+- /version_editbin
 helpviewer_keywords:
 - /VERSION editbin option
 - -VERSION editbin option
 - VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-ms.openlocfilehash: 9b8d0eb291cc09e96af1a3e471ead4d00519e927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b2e769e110481c5e44c85be1c3451b2544b730d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316655"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438753"
 ---
 # <a name="version"></a>/VERSION
 
@@ -23,10 +23,10 @@ ms.locfileid: "62316655"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja umieszcza numeru wersji w nagłówku obrazu.
+Ta opcja powoduje umieszczenie numeru wersji w nagłówku obrazu.
 
-Liczba całkowita część wersji numer części z lewej strony punktu dziesiętnego, jest reprezentowane przez `left`. Część ułamkową wersji numer części z prawej strony punktu dziesiętnego, jest reprezentowane przez `right`.
+Liczba całkowita części numeru wersji, część z lewej strony punktu dziesiętnego, jest reprezentowana przez `left`. Część ułamkowa numeru wersji, część z prawej strony punktu dziesiętnego, jest reprezentowana przez `right`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje EDITBIN](editbin-options.md)

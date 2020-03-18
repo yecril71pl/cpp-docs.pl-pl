@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890876"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420079"
 ---
 # <a name="list-class"></a>list — Klasa
 
@@ -134,9 +134,9 @@ Ponowna Alokacja listy występuje, gdy funkcja członkowska musi wstawić lub wy
 
 C++ Dołącz standardowy nagłówek standardowej biblioteki \<listy >, aby zdefiniować listę szablonów klas [kontenerów](../standard-library/stl-containers.md) i kilka szablonów pomocniczych.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -323,7 +323,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ostatni element listy. Jeśli lista jest pusta, wartość zwracana jest niezdefiniowana.
 
@@ -373,7 +373,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu na liście lub do lokalizacji, która pomyślnie ma pustą listę.
 
@@ -424,7 +424,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** Iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -450,7 +450,7 @@ Zwraca iterator `const`, który odnosi się do lokalizacji jedynie poza ostatnim
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `const` Iterator dostępu dwukierunkowego, który wskazuje tuż poza końcem zakresu.
 
@@ -603,7 +603,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu na liście odwróco
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieodwrócony iterator dwukierunkowy, odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania ostatniego elementu w nieodwróconej `list`).
 
@@ -647,7 +647,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie n
 const_reverse_iterator rend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie na [liście](../standard-library/list-class.md) odwróconej (lokalizacja, która poprzedza pierwszy element w nieodwróconym `list`).
 
@@ -881,7 +881,7 @@ Testuje, czy lista jest pusta.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli lista jest pusta. **Fałsz** , jeśli lista nie jest pusta.
 
@@ -919,7 +919,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy, który odnosi się do lokalizacji na końcu ostatniego elementu na liście. Jeśli lista jest pusta, a następnie `list::end == list::begin`.
 
@@ -990,7 +990,7 @@ Pozycja pierwszego elementu usunięty z listy.
 *ostatni*\
 Umieść tuż poza ostatnim elementem usuniętym z listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub wskaźnik do końca listy, jeśli taki element nie istnieje.
 
@@ -1054,7 +1054,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli lista jest pusta, zwracana jest wartość undefined.
 
@@ -1100,7 +1100,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania listy.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez listę.
 
@@ -1164,7 +1164,7 @@ Pozycja pierwszego elementu w zakresie elementów na liście argumentów do skop
 *Ostatni*\
 Pozycja pierwszego elementu poza zakresem elementów na liście argumentów do skopiowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze dwie funkcje INSERT zwracają iterator, który wskazuje na miejsce, w którym nowy element został wstawiony do listy.
 
@@ -1420,7 +1420,7 @@ Zwraca maksymalną długość listy.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość listy.
 
@@ -1802,7 +1802,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania ostatniego elementu na liście nieodwróconej).
 
@@ -2031,7 +2031,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie na liście odwróconej (lokalizacja, która poprzedza pierwszy element na liście nieodwróconej).
 
@@ -2243,7 +2243,7 @@ Zwraca liczbę elementów na liście.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość listy.
 

@@ -1,5 +1,5 @@
 ---
-title: /FP (określenie zachowania zmiennoprzecinkowego)
+title: /fp (Określenie zachowania zmiennoprzecinkowego)
 ms.date: 11/09/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
@@ -11,83 +11,83 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402b59c4aee34a413a08235aab2327ca64e7db39
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292358"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439685"
 ---
-# <a name="fp-specify-floating-point-behavior"></a>/FP (określenie zachowania zmiennoprzecinkowego)
+# <a name="fp-specify-floating-point-behavior"></a>/fp (Określenie zachowania zmiennoprzecinkowego)
 
-Określa, jak kompilator traktuje wyrażeń zmiennoprzecinkowych, optymalizacji i wyjątki. **/FP** opcje określają, czy wygenerowanego kodu umożliwia zmiennoprzecinkowych środowiska zmiany trybu zaokrąglania, maski wyjątku i subnormal zachowanie i tego, czy sprawdzanie stanu zmiennoprzecinkowego Zwraca bieżące, dokładne wyniki. Określa, czy kompilator generuje kod, który przechowuje operacja źródła i kolejność wyrażenia i jest zgodny ze standardem Propagacja NaN, lub jeśli zamiast tego generuje kod bardziej wydajne, który może zmienić kolejność lub operacje łączenia i użycia, co upraszcza algebraicznych przekształceń, które nie są dozwolone przez standard.
+Określa sposób, w jaki kompilator traktuje wyrażenia zmiennoprzecinkowe, optymalizacje i wyjątki. Opcje **/FP** określają, czy wygenerowany kod umożliwia wprowadzanie zmian w środowisku zmiennoprzecinkowym do trybu zaokrąglania, masek wyjątków i zachowania nienormalnego oraz czy testy stanu zmiennoprzecinkowego zwracają bieżące, dokładne wyniki. Określa, czy kompilator generuje kod, który przechowuje operacje źródłowe i porządkowanie wyrażeń i jest zgodna ze standardem dla propagacji NaN, lub jeśli zamiast tego generuje bardziej wydajny kod, który może zmienić kolejność lub połączyć operacje i korzystać z uproszczenia przekształcenia algebraicznych, które nie są dozwolone przez Standard.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ FP:**[**dokładne** | **strict** | **szybkie** | **z wyjątkiem**[ **-**]]
+> **/FP:** [**precyzyjne** | **Strict** | **Fast** | **z wyjątkiem**[ **-** ]]
 
 ### <a name="arguments"></a>Argumenty
 
-#### <a name="precise"></a>dokładny
+#### <a name="precise"></a>określone
 
-Domyślnie kompilator używa `/fp:precise` zachowanie.
+Domyślnie kompilator używa zachowania `/fp:precise`.
 
-W obszarze `/fp:precise` kompilator zachowuje wyrażenie źródłowe, kolejność i zaokrąglania właściwości kodu zmiennoprzecinkowego, gdy generuje i optymalizuje kod obiektowy dla docelowej maszyny. Kompilator powoduje zaokrąglenie do źródłowego dokładność kodu w określonych punktach w czterech podczas obliczania wyrażenia: u przypisania, w rzutowaniach typu, gdy argument zmiennoprzecinkowy jest przekazywany do wywołania funkcji i w przypadku, gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Pośrednich obliczeń mogą być wykonywane na maszynie dokładności. Rzutowaniach typu może służyć do jawnie zaokrąglenia pośrednich obliczeń.
+W obszarze `/fp:precise` kompilator zachowuje właściwości sortowania i zaokrąglania wyrażenia źródłowego kodu zmiennoprzecinkowego, gdy generuje i optymalizuje kod obiektu dla maszyny docelowej. Kompilator zaokrągla do dokładności kodu źródłowego w czterech określonych punktach podczas obliczania wyrażenia: na typecasts, gdy argument zmiennoprzecinkowy jest przesyłany do wywołania funkcji i gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Obliczenia pośrednie mogą być wykonywane z dokładnością maszyny. Typecasts może służyć do jawnego zaokrąglania pośrednich obliczeń.
 
-Kompilator wykonuje przekształcenia algebraiczne zmiennoprzecinkowych wyrażeń, takie jak ponownego kojarzenia lub dystrybucji, dopiero po transformacji jest gwarantowane rezultatów bitowe identyczne.
-Wyrażeniami, które zawierają specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) są przetwarzane zgodnie z IEEE 754 specyfikacji. Na przykład `x != x` daje w wyniku **true** Jeśli x jest wartością typu NaN. Zmiennoprzecinkowe *skrótów*, oznacza to, że instrukcje maszynowe, które łączą operacji zmiennoprzecinkowych, mogą być generowane w taki sposób, w obszarze `/fp:precise`.
+Kompilator nie wykonuje transformacji algebraicznych w wyrażeniach zmiennoprzecinkowych, takich jak ponowne skojarzenie lub dystrybucja, chyba że transformacja ma na celu wygenerowanie bitowej identycznego wyniku.
+Wyrażenia, które obejmują specjalne wartości (NaN, + nieskończoność, nieskończoność,-0,0) są przetwarzane zgodnie ze specyfikacjami IEEE-754. Na przykład `x != x` ma **wartość true** , jeśli x jest NaN. Nieruchome *kontrakty*, czyli instrukcje dotyczące maszyn, które łączą operacje zmiennoprzecinkowe, mogą być generowane w obszarze `/fp:precise`.
 
-Kompilator generuje kod przeznaczony do uruchamiania [zmiennoprzecinkowych środowiska domyślnego](#the-default-floating-point-environment) i przyjęto założenie, że środowisko zmiennoprzecinkowe nie dostęp lub zmodyfikowany w czasie wykonywania. Oznacza to założono, że kod nie Anuluj maskowanie wyjątki zmiennoprzecinkowe, odczytu lub zapisu stanu zmiennoprzecinkowego rejestrów lub zmienić trybów zaokrąglania.
+Kompilator generuje kod przeznaczony do uruchamiania w [domyślnym środowisku zmiennoprzecinkowym](#the-default-floating-point-environment) i zakłada, że środowisko zmiennoprzecinkowe nie jest dostępne ani modyfikowane w czasie wykonywania. Oznacza to, że założono, że kod nie rozmaskuje wyjątków zmiennoprzecinkowych, odczytuje lub zapisuje rejestry stanu zmiennoprzecinkowego lub zmienia tryby zaokrąglania.
 
-Jeśli kod zmiennoprzecinkowy nie zależy od kolejności operacji i wyrażenia w zestawienia zmiennoprzecinkowych (na przykład, jeśli nie dba czy `a * b + a * c` jest obliczana jako `(b + c) * a` lub `2 * a` jako `a + a`), należy wziąć pod uwagę [Fast](#fast) opcja, która może tworzyć kod szybciej i bardziej wydajne. Jeśli Twój kod zarówno zależy od kolejności działań i wyrażeń i uzyskuje dostęp do lub zmienia zmiennoprzecinkowych środowisku (na przykład, aby zmienić tryb zaokrąglania lub przechwytują wyjątki zmiennoprzecinkowe), użyj [/FP: strict](#strict).
+Jeśli kod zmiennoprzecinkowy nie jest zależał od kolejności operacji i wyrażeń w instrukcjach zmiennoprzecinkowych (na przykład jeśli nie ma znaczenia, czy `a * b + a * c` jest obliczana jako `(b + c) * a` czy `2 * a` jako `a + a`), rozważ użycie opcji [/FP: Fast](#fast) , która może generować szybszy i bardziej wydajny kod. Jeśli Twój kod zależy od kolejności operacji i wyrażeń i uzyskuje dostęp do środowiska zmiennoprzecinkowego (na przykład w celu zmiany trybów zaokrąglania lub w celu przetworzenia wyjątków zmiennoprzecinkowych), użyj [/FP: Strict](#strict).
 
 #### <a name="strict"></a>ściśle
 
-`/fp:strict` ma zachowanie podobne do `/fp:precise`, oznacza to, kompilator zachowuje kolejności źródła i zaokrąglania właściwości kodu zmiennoprzecinkowego, gdy generuje i optymalizuje obiektów kodu dla docelowej maszyny i przestrzega standardowej podczas obsługi specjalnych wartości. Ponadto program może bezpiecznie dostępu lub modyfikacji zmiennoprzecinkowych środowiska w czasie wykonywania.
+`/fp:strict` ma zachowanie podobne do `/fp:precise`, to oznacza, że kompilator zachowuje właściwości określania kolejności źródłowej i zaokrąglania kodu zmiennoprzecinkowego, gdy generuje i optymalizuje kod obiektu dla maszyny docelowej, i obserwuje Standard podczas obsługi wartości specjalnych. Ponadto program może bezpiecznie uzyskać dostęp lub zmodyfikować środowisko zmiennoprzecinkowe w czasie wykonywania.
 
-W obszarze `/fp:strict`, kompilator generuje kod, który umożliwia programowi bezpiecznie maskowanie wyjątki zmiennoprzecinkowe, odczytać lub zapisać stanu zmiennoprzecinkowego rejestrów lub zmienić trybów zaokrąglania. Zaokrągla liczbę do źródłowego dokładność kodu w określonych punktach w czterech podczas obliczania wyrażenia: u przypisania, w rzutowaniach typu, gdy argument zmiennoprzecinkowy jest przekazywany do wywołania funkcji i w przypadku, gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Pośrednich obliczeń mogą być wykonywane na maszynie dokładności. Rzutowaniach typu może służyć do jawnie zaokrąglenia pośrednich obliczeń. Kompilator wykonuje przekształcenia algebraiczne zmiennoprzecinkowych wyrażeń, takie jak ponownego kojarzenia lub dystrybucji, dopiero po transformacji jest gwarantowane rezultatów bitowe identyczne. Wyrażeniami, które zawierają specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) są przetwarzane zgodnie z IEEE 754 specyfikacji. Na przykład `x != x` daje w wyniku **true** Jeśli x jest wartością typu NaN. Skrótów zmiennoprzecinkowe nie są generowane w `/fp:strict`.
+W obszarze `/fp:strict`kompilator generuje kod umożliwiający programowi bezpieczne usuwanie masek zmiennoprzecinkowych, Odczyt lub zapis rejestrów stanu zmiennoprzecinkowego lub zmienianie trybów zaokrąglania. Jest ona zaokrąglana do dokładności kodu źródłowego w czterech określonych punktach podczas obliczania wyrażenia: w przypisaniach w typecasts, gdy argument zmiennoprzecinkowy jest przesyłany do wywołania funkcji i gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Obliczenia pośrednie mogą być wykonywane z dokładnością maszyny. Typecasts może służyć do jawnego zaokrąglania pośrednich obliczeń. Kompilator nie wykonuje transformacji algebraicznych w wyrażeniach zmiennoprzecinkowych, takich jak ponowne skojarzenie lub dystrybucja, chyba że transformacja ma na celu wygenerowanie bitowej identycznego wyniku. Wyrażenia, które obejmują specjalne wartości (NaN, + nieskończoność, nieskończoność,-0,0) są przetwarzane zgodnie ze specyfikacjami IEEE-754. Na przykład `x != x` ma **wartość true** , jeśli x jest NaN. Kontrakty zmiennoprzecinkowe nie są generowane w `/fp:strict`.
 
-`/fp:strict` jest obliczeniowo bardziej kosztowne niż `/fp:precise` ponieważ kompilator należy wstawić dodatkowe instrukcje przechwytują wyjątki i Zezwalaj na dostęp lub zmodyfikować zmiennoprzecinkowych środowiska w czasie wykonywania programów. Jeśli Twój kod nie używać tej funkcji, ale wymaga porządkowanie kodu źródłowego i zaokrąglania lub zależy od specjalnych wartości, użyj `/fp:precise`. W przeciwnym razie należy wziąć pod uwagę przy użyciu `/fp:fast`, które mogą wygenerować szybszy i mniejszy kod.
+`/fp:strict` jest w sposób bardziej kosztowny niż `/fp:precise`, ponieważ kompilator musi wstawić dodatkowe instrukcje dotyczące wyjątków pułapki i zezwalać programom na dostęp lub modyfikowanie środowiska zmiennoprzecinkowego w czasie wykonywania. Jeśli kod nie korzysta z tej możliwości, ale wymaga uporządkowania i zaokrąglania kodu źródłowego lub opiera się na wartościach specjalnych, użyj `/fp:precise`. W przeciwnym razie Rozważ użycie `/fp:fast`, co może spowodować szybsze i mniejsze kod.
 
-#### <a name="fast"></a>Szybka
+#### <a name="fast"></a>Fast
 
-`/fp:fast` Opcja umożliwia kompilator, aby zmienić kolejność, połączyć lub Uprość operacji zmiennoprzecinkowych, aby zoptymalizować kod zmiennoprzecinkowy szybkość i najlepsze miejsce. Kompilator może pominąć Zaokrąglenie w instrukcjach przypisania, rzutowaniach typu lub wywołaniach funkcji. Może zmienić kolejność operacji lub wykonywać przekształcenia algebraiczne, na przykład przy użyciu łączności i rozdzielności przepisów, nawet jeśli takie przekształcenia spowodować ciemniejsza różne zachowanie zaokrąglania. Ze względu na tego rodzaju optymalizacji rozszerzone, wynik kilka obliczeń zmiennoprzecinkowych może różnić się od wyprodukowane przez inne `/fp` opcje. Specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) nie można propagować lub zachowywać się wyłącznie zgodnie ze standardem IEEE-754. Zmiennoprzecinkowe skrótów mogą być generowane w obszarze `/fp:fast`. Kompilator jest nadal powiązane przez podstawową architekturę, w obszarze `/fp:fast`, i dodatkowe optymalizacje mogą być dostępne za pośrednictwem [/arch](arch-minimum-cpu-architecture.md) opcji.
+Opcja `/fp:fast` umożliwia kompilatorowi zmianę kolejności, łączenie lub uproszczenie operacji zmiennoprzecinkowych w celu zoptymalizowania kodu zmiennoprzecinkowego pod kątem szybkości i miejsca. Kompilator może pominąć zaokrąglenie w instrukcjach przypisania, typecasts lub wywołaniach funkcji. Może zmienić kolejność operacji lub wykonywać transformacje algebraicznych, na przykład przy użyciu funkcji kojarzenia i rozdzielania, nawet jeśli takie przekształcenia spowodują zaobserwowanie innych zachowań zaokrąglania. Ze względu na rozszerzoną optymalizację wynik niektórych obliczeń zmiennoprzecinkowych może się różnić od tych utworzonych przez inne opcje `/fp`. Wartości specjalne (NaN, + nieskończoność,-Infinity,-0,0) nie mogą być propagowane lub działać ściśle zgodnie ze standardem IEEE-754. Umowy zmiennoprzecinkowe mogą być generowane w `/fp:fast`. Kompilator nadal jest powiązany z podstawową architekturą w `/fp:fast`, a dodatkowe optymalizacje mogą być dostępne za pomocą opcji [/Arch](arch-minimum-cpu-architecture.md) .
 
-W obszarze `/fp:fast`, kompilator generuje kod przeznaczony do uruchamiania w domyślnym środowisku zmiennoprzecinkowe i przyjęto założenie, że zmiennoprzecinkowych środowisko nie jest dostępne lub zmodyfikowany w czasie wykonywania. Oznacza to założono, że kod nie Anuluj maskowanie wyjątki zmiennoprzecinkowe, odczytu lub zapisu stanu zmiennoprzecinkowego rejestrów lub zmienić trybów zaokrąglania.
+W obszarze `/fp:fast`kompilator generuje kod przeznaczony do uruchomienia w domyślnym środowisku zmiennoprzecinkowym i zakłada, że środowisko zmiennoprzecinkowe nie jest dostępne ani modyfikowane w czasie wykonywania. Oznacza to, że założono, że kod nie rozmaskuje wyjątków zmiennoprzecinkowych, odczytuje lub zapisuje rejestry stanu zmiennoprzecinkowego lub zmienia tryby zaokrąglania.
 
-`/fp:fast` jest przeznaczony dla programów, które nie wymagają kodu źródłowego strict, kolejność i zaokrąglania wyrażeń liczb zmiennopozycyjnych i nie należy polegać na standardowe reguły do obsługi specjalnych wartości, takich jak NaN. Jeśli kod zmiennoprzecinkowy wymaga zachowania kodu źródłowego, kolejność i zaokrąglania lub opiera się na standardowe zachowanie specjalnych wartości, użyj [/FP: precise](#precise). Jeśli kod uzyskuje dostęp do lub modyfikuje zmiennoprzecinkowych środowiska, aby zmienić tryb zaokrąglania, anulować maskowanie wyjątków zmiennoprzecinkowych, lub Sprawdź stan zmiennoprzecinkowego, użyj [/FP: strict](#strict).
+`/fp:fast` jest przeznaczony dla programów, które nie wymagają dokładnego porządkowania kodu źródłowego i zaokrąglania wyrażeń zmiennoprzecinkowych, i nie opierają się na standardowych zasadach obsługi wartości specjalnych, takich jak NaN. Jeśli kod zmiennoprzecinkowy wymaga zachowywania kolejności i zaokrąglania kodu źródłowego, lub opiera się na standardowym zachowaniu specjalnych wartości, użyj [/FP: precyzyjne](#precise). Jeśli kod uzyskuje dostęp do środowiska zmiennoprzecinkowego lub modyfikuje je, aby zmienić tryby zaokrąglania, anulować wyjątki zmiennoprzecinkowe lub sprawdzić stan zmiennoprzecinkowy, użyj [/FP: Strict](#strict).
 
-#### <a name="except"></a>Z wyjątkiem
+#### <a name="except"></a>ale
 
-`/fp:except` Opcja generuje kod, aby zapewnia, że wszelkie zaznaczona wyjątki zmiennoprzecinkowe są wywoływane w dokładny moment, w którym występują one i, nie dodatkowe wyjątki zmiennoprzecinkowe są wywoływane. Domyślnie `/fp:strict` opcji umożliwia `/fp:except`, i `/fp:precise` nie. `/fp:except` Opcja nie jest zgodny z `/fp:fast`. Opcja można jawnie wyłączone przez nas o `/fp:except-`.
+Opcja `/fp:except` generuje kod w celu zagwarantowania, że wszystkie niemaskowane wyjątki zmiennoprzecinkowe są zgłaszane w miejscu, w którym wystąpią, i że nie są zgłaszane żadne dodatkowe wyjątki zmiennoprzecinkowe. Domyślnie opcja `/fp:strict` włącza `/fp:except`, a `/fp:precise` nie. Opcja `/fp:except` nie jest zgodna z `/fp:fast`. Opcja może być jawnie wyłączona przez nas z `/fp:except-`.
 
-Należy pamiętać, że `/fp:except` nie włącza wyjątki zmiennoprzecinkowe przez siebie, ale jest to wymagane dla programów włączyć wyjątki zmiennoprzecinkowe. Zobacz [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) informacji o sposobie włączania wyjątki zmiennoprzecinkowe.
+Należy zauważyć, że `/fp:except` nie włącza żadnych wyjątków zmiennoprzecinkowych przez siebie, ale jest to wymagane w celu włączenia wyjątków zmiennoprzecinkowych. Aby uzyskać informacje na temat włączania wyjątków zmiennoprzecinkowych, zobacz [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele `/fp` opcje można określić w tym samym wierszu polecenia kompilatora. Tylko jeden z `/fp:strict`, `/fp:fast`, i `/fp:precise` opcji może być wdrożony w naraz. Jeśli więcej niż jedną z tych opcji jest określony w wierszu polecenia, nowsze opcji ma pierwszeństwo, a kompilator generuje ostrzeżenie. `/fp:strict` i `/fp:except` opcje nie są zgodne z `/clr`.
+W tym samym wierszu polecenia kompilatora można określić wiele opcji `/fp`. Tylko jedna z opcji `/fp:strict`, `/fp:fast`i `/fp:precise` może działać jednocześnie. Jeśli w wierszu polecenia określono więcej niż jedną z tych opcji, ta opcja ma pierwszeństwo, a kompilator generuje ostrzeżenie. Opcje `/fp:strict` i `/fp:except` nie są zgodne z `/clr`.
 
-[/Za](za-ze-disable-language-extensions.md) opcji (zgodność z ANSI) nie jest zgodny z `/fp`.
+Opcja [/za](za-ze-disable-language-extensions.md) (zgodność ze standardem ANSI) nie jest zgodna z `/fp`.
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Aby kontrolować zachowanie liczb zmiennopozycyjnych za pomocą dyrektywy kompilatora
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Używanie dyrektyw kompilatora do kontrolowania zachowań zmiennoprzecinkowych
 
-Kompilator udostępnia trzy dyrektyw pragma, aby zastąpić zachowanie liczb zmiennopozycyjnych, określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), i [fp_contract](../../preprocessor/fp-contract.md). Te dyrektywy umożliwia kontrolować zachowanie liczb zmiennopozycyjnych na poziomie funkcji, nie w obrębie danej funkcji. Należy pamiętać, że te dyrektywy nie odpowiadają bezpośrednio do `/fp` opcje. W poniższej tabeli przedstawiono sposób, w jaki `/fp` opcje i dyrektyw pragma mapowanie między sobą. Aby uzyskać więcej informacji zobacz dokumentację poszczególne opcje i dyrektyw pragma.
+Kompilator oferuje trzy dyrektywy pragma, aby zastąpić zachowanie zmiennoprzecinkowe określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)i [fp_contract](../../preprocessor/fp-contract.md). Za pomocą tych dyrektyw można kontrolować zachowanie zmiennoprzecinkowe na poziomie funkcji, a nie w ramach funkcji. Należy zauważyć, że dyrektywy te nie są bezpośrednio zgodne z opcjami `/fp`. W tej tabeli przedstawiono sposób, w jaki opcje `/fp` i dyrektywy pragma są mapowane na siebie nawzajem. Aby uzyskać więcej informacji, zobacz dokumentację poszczególnych opcji i dyrektywy pragma.
 
-||float_control(Precise)|float_control(EXCEPT)|fenv_access|fp_contract|
+||float_control (precyzyjne)|float_control (z wyjątkiem)|fenv_access|fp_contract|
 |-|-|-|-|-|
 |`/fp:fast`|wyłączone|wyłączone|wyłączone|on|
 |`/fp:precise`|on|wyłączone|wyłączone|on|
 |`/fp:strict`|on|on|on|wyłączone|
 
-### <a name="the-default-floating-point-environment"></a>Domyślne środowisko punktu zmiennoprzecinkowego
+### <a name="the-default-floating-point-environment"></a>Domyślne środowisko zmiennoprzecinkowe
 
-Po zainicjowaniu procesu *domyślnego środowiska punktu zmiennoprzecinkowego* jest ustawiona. To środowisko maskuje wyjątki zmiennoprzecinkowe wszystkie, ustawia tryb zaokrąglania zaokrąglić do najbliższej (`FE_TONEAREST`), zachowuje subnormal (zdenormalizowany) wartości, domyślna precyzja mantysę (mantysy) używa **float**, **double**, i **typu long double** wartości, a jeśli są obsługiwane, ustawia formant nieskończoność, domyślny tryb przekształceniem afinicznym.
+Po zainicjowaniu procesu jest ustawiane *domyślne środowisko zmiennoprzecinkowe* . To środowisko maskuje wszystkie wyjątki zmiennoprzecinkowe, ustawia tryb zaokrąglania do najbliższego (`FE_TONEAREST`), zachowuje wartości normalne (nienormalne), używa domyślnej precyzji mantysę (mantysy) dla wartości **zmiennoprzecinkowych**, **Double**i **Long Double** , a jeśli jest obsługiwana, ustawia formant nieskończoności na domyślny tryb afinicznym.
 
-### <a name="floating-point-environment-access-and-modification"></a>Dostęp do środowiska zmiennoprzecinkowe i jego modyfikacji
+### <a name="floating-point-environment-access-and-modification"></a>Dostęp do środowiska zmiennoprzecinkowego i modyfikacje
 
-Środowisko uruchomieniowe Microsoft Visual C++ udostępnia kilka funkcji zmiennoprzecinkowej środowiska modyfikacji i dostępu do. Obejmują one [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [_clearfp —](../../c-runtime-library/reference/clear87-clearfp.md), i [_statusfp —](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) i ich odmian. Aby zapewnić zachowanie odpowiedniego programu, gdy kod uzyskuje dostęp do lub modyfikuje zmiennoprzecinkowych środowiska `fenv_access` musi być włączony, albo przez `/fp:strict` opcji lub poprzez użycie `fenv_access` pragma dla tych funkcji mieć żadnego efektu. Gdy `fenv_access` jest nie jest włączone, dostępu lub modyfikacji zmiennoprzecinkowych środowiska może spowodować nieoczekiwane program zachowanie: kod może nie uznaje zlecone zmiany dotyczące środowiska zmiennoprzecinkowych; rejestrów zmiennoprzecinkowych stanu mogą nie zgłaszać Oczekiwano lub bieżące wyniki; mogą wystąpić nieoczekiwane wyjątki zmiennoprzecinkowe i oczekiwane wyjątki zmiennoprzecinkowe mogą nie być wykrywane.
+Środowisko C++ uruchomieniowe firmy Microsoft udostępnia kilka funkcji, które umożliwiają dostęp i modyfikowanie środowiska zmiennoprzecinkowego. Obejmują one [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)i [_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) oraz ich wariantów. Aby zapewnić poprawne zachowanie programu, gdy kod uzyskuje dostęp do środowiska zmiennoprzecinkowego lub modyfikuje go, `fenv_access` musi być włączona albo za pomocą opcji `/fp:strict`, albo za pomocą metody `fenv_access` pragma, aby te funkcje miały efekt. Gdy `fenv_access` nie jest włączona, dostęp lub modyfikacja środowiska zmiennoprzecinkowego może skutkować nieoczekiwanym zachowaniem programu: kod może nie honorować żądanych zmian w środowisku zmiennoprzecinkowym; rejestry stanu zmiennoprzecinkowego mogą nie zgłaszać oczekiwanych lub bieżących wyników; mogą wystąpić nieoczekiwane wyjątki zmiennoprzecinkowe lub oczekiwane wyjątki zmiennoprzecinkowe mogą nie wystąpić.
 
-Gdy kod uzyskuje dostęp do lub modyfikuje zmiennoprzecinkowych środowiska, należy zachować ostrożność podczas łączenia kodu gdzie `fenv_access` jest włączone z kodem, który nie ma `fenv_access` włączone. W kodzie gdzie `fenv_access` nie jest włączone, kompilator zakłada, czy domyślne środowisko zmiennoprzecinkowych platformy jest aktywna i czy stanu zmiennoprzecinkowego nie jest otwierane ani modyfikowane. Zalecamy zapisywanie i przywracanie lokalnego środowiska zmiennoprzecinkowych do stanu domyślnego, zanim sterowanie jest przekazywane do funkcji, która nie ma `fenv_access` włączone. W tym przykładzie przedstawiono sposób, w jaki `float_control` pragma można ustawić i przywrócone:
+Gdy kod uzyskuje dostęp do środowiska zmiennoprzecinkowego lub modyfikuje go, należy zachować ostrożność w przypadku łączenia kodu, w którym `fenv_access` jest włączona z kodem, który nie ma `fenv_access` włączony. W kodzie, w którym `fenv_access` nie jest włączona, kompilator zakłada, że domyślne środowisko zmiennoprzecinkowe platformy jest w efekcie i że stan zmiennoprzecinkowy nie jest dostępny ani modyfikowany. Zalecamy zapisanie i przywrócenie lokalnego środowiska zmiennoprzecinkowego do stanu domyślnego przed przekazaniem kontroli do funkcji, która nie ma włączonej `fenv_access`. W tym przykładzie pokazano, jak można ustawić i przywrócić `float_control` pragma:
 
 ```cpp
 #pragma float_control(strict, on, push)
@@ -95,9 +95,9 @@ Gdy kod uzyskuje dostęp do lub modyfikuje zmiennoprzecinkowych środowiska, nal
 #pragma float_control(pop)
 ```
 
-### <a name="floating-point-rounding-modes"></a>Zmiennoprzecinkowe trybów zaokrąglania
+### <a name="floating-point-rounding-modes"></a>Tryby zaokrąglania liczb zmiennoprzecinkowych
 
-W obszarze zarówno `/fp:precise` i `/fp:fast` kompilator generuje kod przeznaczony do uruchamiania w domyślnym środowisku zmiennoprzecinkowe i przyjęto założenie, że środowisko nie jest dostępny lub zmodyfikowany w czasie wykonywania. Oznacza to założono, że kod nie Anuluj maskowanie wyjątki zmiennoprzecinkowe, odczytu lub zapisu stanu zmiennoprzecinkowego rejestrów lub zmienić trybów zaokrąglania.  Jednak niektóre programy, należy zmodyfikować środowisko zmiennoprzecinkowych. Na przykład w tym przykładzie oblicza granice błąd zmiennoprzecinkowych mnożenia przez zmianę trybów zaokrąglania zmiennoprzecinkowa:
+W obszarze `/fp:precise` i `/fp:fast` kompilator generuje kod przeznaczony do uruchomienia w domyślnym środowisku zmiennoprzecinkowym i zakłada, że środowisko nie jest dostępne ani modyfikowane w czasie wykonywania. Oznacza to, że założono, że kod nie rozmaskuje wyjątków zmiennoprzecinkowych, odczytuje lub zapisuje rejestry stanu zmiennoprzecinkowego lub zmienia tryby zaokrąglania.  Jednak niektóre programy muszą zmienić środowisko zmiennoprzecinkowe. Na przykład ten przykład służy do obliczania powiązań zmiennoprzecinkowych, zmieniając tryby zaokrąglania zmiennoprzecinkowego:
 
 ```cpp
 // fp_error_bounds.cpp
@@ -145,25 +145,25 @@ int main(void)
 }
 ```
 
-Ponieważ kompilator zakłada domyślne liczb zmiennoprzecinkowych środowiska punktu, w obszarze `/fp:fast` i `/fp:precise` to bezpłatne ignorować wywołania do `_controlfp_s`. Na przykład, gdy kompilowany przy użyciu zarówno `/O2` i `/fp:precise` dla x86 architektury, granice nie są obliczane i program przykładowe dane wyjściowe:
+Ponieważ kompilator zakłada domyślne środowisko zmiennoprzecinkowe w `/fp:fast` i `/fp:precise` można zignorować wywołania `_controlfp_s`. Na przykład podczas kompilowania przy użyciu zarówno `/O2`, jak i `/fp:precise` dla architektury x86, granice nie są obliczane, a przykładowe dane wyjściowe programu:
 
 ```Output
 cLower = -inf
 cUpper = -inf
 ```
 
-Gdy skompilowano z opcją zarówno `/O2` i `/fp:strict` dla x86 architektury, przykładowy program wyświetla:
+Po skompilowaniu z obu `/O2` i `/fp:strict` dla architektury x86, dane wyjściowe programu przykładowe:
 
 ```Output
 cLower = -inf
 cUpper = -3.40282e+38
 ```
 
-### <a name="floating-point-special-values"></a>Wartości zmiennoprzecinkowe specjalne
+### <a name="floating-point-special-values"></a>Wartości specjalne zmiennoprzecinkowe
 
-W obszarze `/fp:precise` i `/fp:strict`, wyrażeniami, które zawierają specjalnych wartości (NaN, + nieskończoność, - nieskończoność,-0.0) zachowują się zgodnie z IEEE 754 specyfikacji. W obszarze `/fp:fast`, zachowanie tych specjalnych wartości mogą być niezgodne z IEEE 754.
+W obszarze `/fp:precise` i `/fp:strict`, wyrażenia, które obejmują specjalne wartości (NaN, + nieskończoność,-nieskończoność,-0,0), zachowują się zgodnie ze specyfikacjami IEEE-754. W obszarze `/fp:fast`zachowanie tych specjalnych wartości może być niespójne z IEEE-754.
 
-W tym przykładzie pokazano odmienne zachowanie specjalnych wartości w obszarze `/fp:precise`, `/fp:strict` i `/fp:fast`:
+Ten przykład ilustruje różne zachowanie specjalnych wartości w `/fp:precise`, `/fp:strict` i `/fp:fast`:
 
 ```cpp
 // fp_special_values.cpp
@@ -194,7 +194,7 @@ int main()
 }
 ```
 
-Gdy skompilowano z opcją `/O2` `/fp:precise` lub `/O2` `/fp:strict` dla x86 architektury, dane wyjściowe są zgodne ze specyfikacją IEEE 754:
+Po skompilowaniu z `/O2` `/fp:precise` lub `/O2` `/fp:strict` dla architektury x86, dane wyjściowe są zgodne ze specyfikacją IEEE-754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -204,7 +204,7 @@ NAN - NAN            : -nan(ind)
 std::signbit(-0.0/-INFINITY): 1
 ```
 
-Gdy skompilowano z opcją `/O2` `/fp:fast` dla x86 architektury, dane wyjściowe nie są zgodne z IEEE 754:
+Po skompilowaniu z `/O2` `/fp:fast` dla architektury x86 dane wyjściowe nie są spójne z IEEE-754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -214,9 +214,9 @@ NAN - NAN            : 0.000000
 std::signbit(-0.0/-INFINITY): 0
 ```
 
-### <a name="floating-point-algebraic-transformations"></a>Przekształcenia algebraiczne zmiennoprzecinkowych
+### <a name="floating-point-algebraic-transformations"></a>Przekształceń algebraicznych zmiennoprzecinkowych
 
-W obszarze `/fp:precise` i `/fp:strict`, kompilator wykonuje matematyczne przekształcenia dopiero po transformacji jest gwarantowane rezultatów bitowe identyczne. Kompilator może wykonywać takie przekształcenia w obszarze `/fp:fast`. Na przykład, wyrażenie `a * b + a * c` w wyświetlany kod przykładowej funkcji `algebraic_transformation` mogą być skompilowane w ramach `a * (b + c)` w obszarze `/fp:fast`. Takie przekształcenia nie są wykonywane w ramach `/fp:precise` lub `/fp:strict`, a kompilator generuje `a * b + a * c`.
+W obszarze `/fp:precise` i `/fp:strict`kompilator nie wykonuje transformacji matematycznych, chyba że transformacja jest gwarantowana w celu uzyskania bitowego identycznego wyniku. Kompilator może wykonywać takie przekształcenia w `/fp:fast`. Na przykład wyrażenie `a * b + a * c` w przykładowej funkcji `algebraic_transformation` może być kompilowane do `a * (b + c)` w `/fp:fast`. Takie przekształcenia nie są wykonywane w `/fp:precise` lub `/fp:strict`, a kompilator generuje `a * b + a * c`.
 
 ```cpp
 float algebraic_transformation (float a, float b, float c)
@@ -225,9 +225,9 @@ float algebraic_transformation (float a, float b, float c)
 }
 ```
 
-### <a name="floating-point-explicit-casting-points"></a>Punkty zmiennoprzecinkowych jawnego rzutowania
+### <a name="floating-point-explicit-casting-points"></a>Jawne punkty rzutowania zmiennoprzecinkowego
 
-W obszarze `/fp:precise` i `/fp:strict`, kompilator powoduje zaokrąglenie do źródłowego dokładność kodu w określonych punktach w czterech podczas obliczania wyrażenia: u przypisania, w rzutowaniach typu, gdy argument zmiennoprzecinkowy jest przekazywany do wywołania funkcji, a w przypadku liczb zmiennoprzecinkowych wartość jest zwracana z wywołania funkcji. Rzutowaniach typu może służyć do jawnie zaokrąglenia pośrednich obliczeń. W obszarze `/fp:fast`, kompilator nie generuje ma jawnych rzutowań w tych punktach, aby zagwarantować dokładności kodu źródłowego. Niniejszy przykład pokazuje zachowanie w różnych `/fp` opcje:
+W obszarze `/fp:precise` i `/fp:strict`kompilator zaokrągla do dokładności kodu źródłowego w czterech określonych punktach podczas obliczania wyrażenia: w przypisaniach w typecasts, gdy argument zmiennoprzecinkowy jest przesyłany do wywołania funkcji i gdy wartość zmiennoprzecinkowa jest zwracana z wywołania funkcji. Typecasts może służyć do jawnego zaokrąglania pośrednich obliczeń. W obszarze `/fp:fast`kompilator nie generuje jawnych rzutowania w tych punktach w celu zagwarantowania dokładności kodu źródłowego. Ten przykład ilustruje zachowanie w różnych `/fp` opcjach:
 
 ```cpp
 float casting(float a, float b)
@@ -236,7 +236,7 @@ float casting(float a, float b)
 }
 ```
 
-Gdy kompilowany przy użyciu `/O2` `/fp:precise` lub `/O2` `/fp:strict`, możesz zobaczyć, że typu jawnego rzutowania są wstawiane w obu rzutowanie typu, jak i w punkcie zwrotu funkcji w wygenerowanym kodzie x64 architektury:
+Po skompilowaniu przy użyciu `/O2` `/fp:precise` lub `/O2` `/fp:strict`można zobaczyć, że rzutowania typu jawnego są wstawiane zarówno w rzutowanie, jak i w punkcie powrotu funkcji w wygenerowanym kodzie dla architektury x64:
 
 ```asm
         addss    xmm0, xmm1
@@ -246,7 +246,7 @@ Gdy kompilowany przy użyciu `/O2` `/fp:precise` lub `/O2` `/fp:strict`, możesz
         ret      0
 ```
 
-W obszarze `/O2` `/fp:fast` wygenerowany kod jest uproszczony, ponieważ wszystkie rzutowania typów są optymalizacji:
+W obszarze `/O2` `/fp:fast` wygenerowany kod jest uproszczony, ponieważ wszystkie rzutowania typu są zoptymalizowane:
 
 ```asm
         addss    xmm0, xmm1
@@ -256,17 +256,18 @@ W obszarze `/O2` `/fp:fast` wygenerowany kod jest uproszczony, ponieważ wszystk
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **generowania kodu** stronę właściwości.
+1. Wybierz **Właściwości konfiguracji** > stronie właściwości **generowanie kodu** **C++ C/**  > .
 
-1. Modyfikowanie **Model zmiennoprzecinkowy** właściwości.
+1. Zmodyfikuj właściwość **modelu zmiennoprzecinkowego** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+ 

@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855560"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421724"
 ---
 # <a name="coleclientitem-class"></a>Klasa COleClientItem
 
@@ -181,17 +181,17 @@ Definiuje interfejs kontenera do elementów OLE.
 class COleClientItem : public CDocItem
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleClientItem:: COleClientItem](#coleclientitem)|Konstruuje obiekt `COleClientItem`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleClientItem:: Activate](#activate)|Otwiera element OLE dla operacji, a następnie wykonuje określone zlecenie.|
 |[COleClientItem:: ActivateAs](#activateas)|Aktywuje element jako inny typ.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleClientItem:: unactivate](#canactivate)|Wywoływane przez platformę, aby określić, czy aktywacja w miejscu jest dozwolona.|
 |[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|Wywoływane przez platformę, gdy zmienia się pozycja elementu.|
@@ -368,7 +368,7 @@ Odwołanie do bieżącego identyfikatora klasy elementu. Identyfikator klasy pow
 *clsidNew*<br/>
 Odwołanie do identyfikatora klasy docelowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -397,7 +397,7 @@ Wywoływane przez platformę, gdy użytkownik zażąda aktywacji w miejscu eleme
 virtual BOOL CanActivate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli jest dozwolona aktywacja w miejscu; w przeciwnym razie 0.
 
@@ -420,7 +420,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 *pDataObject*<br/>
 Wskaźnik do obiektu [COleDataObject](../../mfc/reference/coledataobject-class.md) , z którego ma zostać utworzony element OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli kontener może utworzyć osadzony obiekt z obiektu `COleDataObject`; w przeciwnym razie 0.
 
@@ -445,7 +445,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 *pDataObject*<br/>
 Wskaźnik do obiektu [COleDataObject](../../mfc/reference/coledataobject-class.md) , z którego ma zostać utworzony element OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli kontener może utworzyć obiekt połączony z obiektu `COleDataObject`.
 
@@ -465,7 +465,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy osadzony element OLE można wkleić z
 static BOOL PASCAL CanPaste();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli osadzony element OLE można wkleić ze schowka; w przeciwnym razie 0.
 
@@ -481,7 +481,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy połączony element OLE można wklei�
 static BOOL PASCAL CanPasteLink();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli połączony element OLE można wkleić ze schowka; w przeciwnym razie 0.
 
@@ -566,7 +566,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 *clsidNew*<br/>
 Identyfikator klasy typu docelowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -606,7 +606,7 @@ BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 *pSrcItem*<br/>
 Wskaźnik na element OLE, który ma być zduplikowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -636,7 +636,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -672,7 +672,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -701,7 +701,7 @@ BOOL CreateFromFile(
 Wskaźnik na nazwę pliku, z którego ma zostać utworzony element OLE.
 
 *Identyfikator*<br/>
-Zarezerwowane do użytku w przyszłości.
+Zarezerwowany do użytku w przyszłości.
 
 *renderowania*<br/>
 Flaga określająca sposób renderowania elementu OLE przez serwer. Aby uzyskać możliwe wartości, zobacz [OLERENDER](/windows/win32/api/oleidl/ne-oleidl-olerender) w Windows SDK.
@@ -712,7 +712,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -744,7 +744,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -780,7 +780,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -816,7 +816,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -852,7 +852,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -884,7 +884,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -920,7 +920,7 @@ Określa format danych schowka, który ma zostać zbuforowany podczas tworzenia 
 *lpFormatEtc*<br/>
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) używany, jeśli *Render* jest OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. W przypadku pominięcia tego parametru wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1011,7 +1011,7 @@ Określa skutki, przez które źródło przeciągane będzie dozwolone w operacj
 *lpRectStartDrag*<br/>
 Wskaźnik do prostokąta, który definiuje, gdzie w rzeczywistości zostanie rozpoczęte przeciąganie. Aby uzyskać więcej informacji zobacz następujące sekcji uwag.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DROPEFFECT. W przypadku DROPEFFECT_MOVE należy usunąć oryginalne dane.
 
@@ -1061,7 +1061,7 @@ Wskaźnik do okna widoku; jest on używany przez serwer do aktywacji w miejscu. 
 *lpMsg*<br/>
 Wskaźnik na komunikat, który spowodował aktywowanie elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zlecenie zostało wykonane pomyślnie; w przeciwnym razie 0.
 
@@ -1093,7 +1093,7 @@ Wskaźnik do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub 
 *nDrawAspect*<br/>
 Określa aspekt elementu OLE, czyli sposób wyświetlania. Jeśli *nDrawAspect* to-1, używany jest ostatni aspekt ustawiony przy użyciu [SetDrawAspect](#setdrawaspect) . Aby uzyskać więcej informacji na temat możliwych wartości dla tej flagi, zobacz [SetDrawAspect](#setdrawaspect).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1115,7 +1115,7 @@ Zwraca widok, w którym aktywowano element w miejscu.
 CView* GetActiveView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do widoku; w przeciwnym razie wartość NULL, jeśli element nie jest aktywowany w miejscu.
 
@@ -1137,7 +1137,7 @@ Wskaźnik do struktury `SIZE` lub obiektu [CSize](../../atl-mfc-shared/reference
 *nDrawAspect*<br/>
 Określa aspekt elementu OLE, którego granice mają zostać pobrane. Aby uzyskać możliwe wartości, zobacz [SetDrawAspect](#setdrawaspect).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0, jeśli element OLE jest pusty.
 
@@ -1206,7 +1206,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do dokumentu zawierającego elemen
 COleDocument* GetDocument() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do dokumentu zawierającego element OLE. Wartość NULL, jeśli element nie jest częścią dokumentu.
 
@@ -1222,7 +1222,7 @@ Wywołaj funkcję członkowską `GetDrawAspect`, aby określić bieżący "aspek
 DVASPECT GetDrawAspect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość z wyliczenia DVASPECT, której wartości są wymienione w odwołaniu dla [SetDrawAspect](#setdrawaspect).
 
@@ -1248,7 +1248,7 @@ Wskaźnik do struktury `SIZE` lub obiektu `CSize`, który otrzyma informacje o r
 *nDrawAspect*<br/>
 Określa aspekt elementu OLE, którego granice mają zostać pobrane. Aby uzyskać możliwe wartości, zobacz [SetDrawAspect](#setdrawaspect).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0, jeśli element OLE jest pusty.
 
@@ -1276,7 +1276,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 *Identyfikator*<br/>
 Odwołanie do identyfikatora CLSID dla serwera skojarzonego ze ikoną.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nie można znaleźć prawidłowego dojścia do zasobu ikony lub wartości NULL, jeśli jest to ikona serwera lub ikona domyślna.
 
@@ -1292,7 +1292,7 @@ Pobiera metaplik używany do rysowania ikony elementu.
 HGLOBAL GetIconicMetafile();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do metapliku, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1310,7 +1310,7 @@ Wywołaj funkcję członkowską `GetInPlaceWindow`, aby uzyskać wskaźnik do ok
 CWnd* GetInPlaceWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna edycji w miejscu elementu; Wartość NULL, jeśli element nie jest aktywny lub jeśli jego serwer jest niedostępny.
 
@@ -1326,7 +1326,7 @@ Wywołaj tę funkcję, aby pobrać bieżący stan elementu OLE.
 UINT GetItemState() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `COleClientItem::ItemState` Wyliczenie wartości, która może być jedną z następujących: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Aby uzyskać informacje o tych Stanach, zobacz [kontenery artykułów: Client-Item State](../../mfc/containers-client-item-states.md).
 
@@ -1344,7 +1344,7 @@ Zwraca kod stanu ostatniej operacji OLE.
 SCODE GetLastStatus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość SCODE.
 
@@ -1362,7 +1362,7 @@ Wywołaj tę funkcję, aby uzyskać bieżącą wartość opcji link-Update dla e
 OLEUPDATE GetLinkUpdateOptions();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna z następujących wartości:
 
@@ -1386,7 +1386,7 @@ Wywołaj tę funkcję, aby określić, czy element OLE jest osadzony lub połąc
 OLE_OBJTYPE GetType() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita bez znaku z jedną z następujących wartości:
 
@@ -1436,7 +1436,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest aktywny.
 BOOL IsInPlaceActive() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element OLE jest aktywny. w przeciwnym razie 0.
 
@@ -1452,7 +1452,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest aktualny.
 BOOL IsLinkUpToDate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element OLE jest aktualny; w przeciwnym razie 0.
 
@@ -1472,7 +1472,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest zanieczyszczony (zmo
 BOOL IsModified() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element OLE jest zanieczyszczony; w przeciwnym razie 0.
 
@@ -1488,7 +1488,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest otwarty; to jest otw
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element OLE jest otwarty; w przeciwnym razie 0.
 
@@ -1504,7 +1504,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest uruchomiony; oznacza
 BOOL IsRunning() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element OLE jest uruchomiony; w przeciwnym razie 0.
 
@@ -1587,7 +1587,7 @@ virtual BOOL OnChangeItemPosition(const CRect& rectPos);
 *rectPos*<br/>
 Wskazuje położenie elementu względem obszaru klienckiego aplikacji kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pozycja elementu została pomyślnie zmieniona; w przeciwnym razie 0.
 
@@ -1682,7 +1682,7 @@ Wskaźnik na przesunięcie kursora myszy od początku obiektu w pikselach.
 *lpSize*<br/>
 Wskaźnik na rozmiar obiektu w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) zawierającego dane ze schowka.
 
@@ -1750,7 +1750,7 @@ Wskaźnik na wskaźnik do okna ramki dokumentu.
 *lpFrameInfo*<br/>
 Wskaźnik do struktury [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) , która będzie odbierać informacje o oknie ramek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1824,7 +1824,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
 *sizeExtent*<br/>
 Określa odległość (w pikselach) przewijania w kierunkach x i y.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli element został przewinięty; 0, jeśli nie można przewinąć elementu.
 
@@ -1880,7 +1880,7 @@ Wskaźnik do okna ramki aplikacji kontenera. Może to być okno główne ramki l
 *bShow*<br/>
 Określa, czy paski kontroli mają być wyświetlane czy ukryte.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli wywołanie funkcji powoduje zmianę stanu pasków sterowania; 0, jeśli wywołanie nie powoduje zmiany lub jeśli *pFrameWnd* nie wskazuje okna ramki kontenera.
 
@@ -1910,7 +1910,7 @@ Wywoływane przez platformę podczas aktywacji w miejscu, aby zaktualizować pas
 virtual BOOL OnUpdateFrameTitle();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli ta funkcja pomyślnie zaktualizowała tytuł ramki, w przeciwnym razie zero.
 
@@ -1926,7 +1926,7 @@ Wywołaj tę funkcję, aby ponownie uaktywnić element OLE i cofnąć ostatnią 
 BOOL ReactivateAndUndo();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1965,7 +1965,7 @@ Zamyka i ponownie ładuje element.
 BOOL Reload();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2075,7 +2075,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 *hMetaPict*<br/>
 Uchwyt do metapliku używanego do rysowania ikony elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2103,7 +2103,7 @@ Wskaźnik do prostokąta zawierającego granice elementu OLE względem jego okna
 *lprcClipRect*<br/>
 Wskaźnik do prostokąta zawierającego granice widocznej części elementu OLE względem jego okna nadrzędnego, we współrzędnych klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2153,7 +2153,7 @@ Wskaźnik do struktury danych [DVTARGETDEVICE](/windows/win32/api/objidl/ns-obji
 *PPD*<br/>
 Wskaźnik do struktury danych [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) , która zawiera informacje o nowym urządzeniu drukowania. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2175,7 +2175,7 @@ Wywołaj tę funkcję, aby natychmiastowo zaktualizować dane prezentacji elemen
 BOOL UpdateLink();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe po powodzeniu; w przeciwnym razie 0.
 
@@ -2185,7 +2185,7 @@ W przypadku połączonych elementów funkcja znajduje źródło linku, aby uzysk
 
 Aby uzyskać więcej informacji, zobacz [IOleLink:: Update](/windows/win32/api/oleidl/nf-oleidl-iolelink-update) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład MFCBIND MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>

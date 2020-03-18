@@ -1,8 +1,6 @@
 ---
 title: Pliki wyjściowe LINK
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,45 +12,45 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291512"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439341"
 ---
 # <a name="link-input-files"></a>Pliki wyjściowe LINK
 
-Konsolidator udostępniać pliki, które zawierają obiekty, importu i standardowych bibliotek, zasobów, definicje modułów i polecenia dane wejściowe. ŁĄCZE nie używa rozszerzeń plików umożliwiają założeń dotyczących zawartości pliku. Zamiast tego łącza sprawdza, czy każdy plik wejściowy, aby ustalić, jakiego typu pliku jest.
+Udostępniasz konsolidator zawierający pliki, które zawierają obiekty, importowane i standardowe biblioteki, zasoby, definicje modułów i dane wejściowe polecenia. LINK nie używa rozszerzeń plików do wprowadzania założeń dotyczących zawartości pliku. Zamiast tego, LINK sprawdza każdy plik wejściowy, aby określić rodzaj pliku.
 
-Pliki obiektów w wierszu polecenia są przetwarzane w kolejności, w jakiej znajdują się w wierszu polecenia. Biblioteki są przeszukiwane w kolejności wiersza polecenia, za pomocą następujące ostrzeżenie: Liczba nierozpoznanych symboli, które są po łączy w pliku obiektu z biblioteki są wyszukiwane w tej bibliotece najpierw, a następnie polecenie następujące biblioteki z poziomu wiersza polecenia i [/DEFAULTLIB (Określanie domyślnej biblioteki)](defaultlib-specify-default-library.md) dyrektywy, a następnie do żadnych bibliotek na początku wiersza polecenia.
+Pliki obiektów w wierszu polecenia są przetwarzane w kolejności, w jakiej występują w wierszu polecenia. Biblioteki są przeszukiwane w kolejności wiersza polecenia, z następującymi zastrzeżeniami: symbole, które nie są rozpoznawane podczas umieszczania w pliku obiektu z biblioteki są najpierw wyszukiwane w tej bibliotece, a następnie następujące biblioteki z wiersza polecenia i [/DEFAULTLIB (Określ bibliotekę domyślną)](defaultlib-specify-default-library.md) , a następnie do wszystkich bibliotek na początku wiersza polecenia.
 
 > [!NOTE]
->  LINK nie będzie akceptował średnikiem (lub jakikolwiek inny znak) jako początek komentarza w plikach odpowiedzi i kolejność plików. Średnikami są rozpoznawane tylko jako początek komentarze w plikach definicji modułu (.def).
+>  LINK nie akceptuje już średnika (ani żadnego innego znaku) jako początku komentarza w plikach odpowiedzi i plikach kolejności. Średniki są rozpoznawane tylko jako początku komentarzy w plikach definicji modułów (. def).
 
-ŁĄCZE używa następujących typów plików wejściowych:
+LINK używa następujących typów plików wejściowych:
 
-- [pliki .obj](dot-obj-files-as-linker-input.md)
+- [pliki. obj](dot-obj-files-as-linker-input.md)
 
-- [pliki .netmodule](netmodule-files-as-linker-input.md)
+- [pliki. module](netmodule-files-as-linker-input.md)
 
-- [pliki .lib](dot-lib-files-as-linker-input.md)
+- [pliki. lib](dot-lib-files-as-linker-input.md)
 
-- [.EXP — pliki](dot-exp-files-as-linker-input.md)
+- [pliki. EXP](dot-exp-files-as-linker-input.md)
 
-- [.def — pliki](dot-def-files-as-linker-input.md)
+- [. def — pliki](dot-def-files-as-linker-input.md)
 
-- [pliki .pdb](dot-pdb-files-as-linker-input.md)
+- [pliki. pdb](dot-pdb-files-as-linker-input.md)
 
-- [pliki .res](dot-res-files-as-linker-input.md)
+- [pliki. res](dot-res-files-as-linker-input.md)
 
-- [pliki .exe](dot-exe-files-as-linker-input.md)
+- [pliki. exe](dot-exe-files-as-linker-input.md)
 
-- [pliki txt](dot-txt-files-as-linker-input.md)
+- [. txt — pliki](dot-txt-files-as-linker-input.md)
 
-- [.ilk — pliki](dot-ilk-files-as-linker-input.md)
+- [pliki. ilk](dot-ilk-files-as-linker-input.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

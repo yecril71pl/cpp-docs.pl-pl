@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854871"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422501"
 ---
 # <a name="ltutilitygt-functions"></a>funkcje&gt; &lt;narzędzi
 
@@ -30,7 +30,7 @@ template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
 template <class T> void as_const(const T&&) = delete;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca *T*.
 
@@ -115,7 +115,7 @@ Typ wartości przekazaną w *ARG*, która może być różna od typu *ARG*. Zwyk
 \ *ARG*
 Argument do rzutowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca odwołanie rvalue do *argumentu ARG* , jeśli wartość przeniesiona w *ARG* była pierwotnie rvalue lub odwołaniem do rvalue; w przeciwnym razie zwraca *ARG* bez modyfikowania jego typu.
 
@@ -289,7 +289,7 @@ Wartość, która inicjuje pierwszy element `pair`.
 *Val2*\
 Wartość, która inicjuje drugi element `pair`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt pary, który jest zbudowany: `pair`<`T`,`U`> (`Val1`, `Val2`).
 
@@ -330,7 +330,7 @@ Typ wywnioskowany z typu argumentu, który przeszedł w *ARG*, wraz z regułami 
 \ *ARG*
 Argument do rzutowania. Mimo że typ *argumentu* jest określony jako odwołanie rvalue, `move` również akceptuje argumenty lvalue, ponieważ odwołania lvalue mogą być powiązane z odwołaniami do rvalue.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `Arg` jako odwołanie rvalue, niezależnie od tego, czy typ jest typem referencyjnym.
 

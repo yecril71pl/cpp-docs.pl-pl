@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 ms.openlocfilehash: 68a0a0f35d1a1f4519401080f9f207bf76c87079
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890796"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418553"
 ---
 # <a name="cinternetfile-class"></a>Klasa CInternetFile
 
@@ -49,17 +49,17 @@ Umożliwia dostęp do plików w systemach zdalnych, które korzystają z protoko
 class CInternetFile : public CStdioFile
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CInternetFile::CInternetFile](#cinternetfile)|Konstruuje obiekt `CInternetFile`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CInternetFile:: Abort](#abort)|Zamyka plik, ignorując wszystkie ostrzeżenia i błędy.|
 |[CInternetFile:: Close](#close)|Zamyka `CInternetFile` i zwalnia jego zasoby.|
@@ -75,13 +75,13 @@ class CInternetFile : public CStdioFile
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CInternetFile:: operator HINTERNET](#operator_hinternet)|Operator rzutowania dla dojścia internetowego.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CInternetFile:: m_hFile](#m_hfile)|Dojście do pliku.|
 
@@ -234,7 +234,7 @@ Wskaźnik do adresu pamięci, do którego odczytywane są dane plików.
 *nCount*<br/>
 Liczba bajtów do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów przesłanych do buforu. Wartość zwracana może być mniejsza niż *nCount* , jeśli osiągnięto koniec pliku.
 
@@ -267,7 +267,7 @@ Maksymalna liczba znaków, które mają zostać odczytane.
 *rString*<br/>
 Odwołanie do obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który odbiera odczytany wiersz.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do buforu zawierającego zwykłe dane pobierane z obiektu [CInternetFile](../../mfc/reference/cinternetfile-class.md) . Niezależnie od typu danych buforu przekazana do tej metody nie wykonuje żadnych operacji związanych z danymi (na przykład konwersji do formatu Unicode), więc należy zamapować zwrócone dane na oczekiwaną strukturę, tak jakby był zwracany typ **void** <strong>\*</strong> .
 
@@ -303,7 +303,7 @@ Odwołanie względne dla przesunięcia. Musi mieć jedną z następujących wart
 
 - `CFile::end` przenieść wskaźnik pliku *lOff* bajty z końca pliku. *lOff* musi być ujemna, aby przeszukać istniejący plik; wartości dodatnie będą przebiegać poza końcem pliku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość przesunięcia nowego bajtu od początku pliku, jeśli żądana pozycja ma charakter prawny; w przeciwnym razie wartość jest niezdefiniowana i zostanie zgłoszony obiekt [CInternetException](../../mfc/reference/cinternetexception-class.md) .
 
@@ -335,7 +335,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
 *nReadSize*<br/>
 Żądany rozmiar buforu w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -360,7 +360,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
 *nWriteSize*<br/>
 Rozmiar buforu w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -409,7 +409,7 @@ Wskaźnik do ciągu zawierającego zawartość do zapisania.
 
 Jeśli wystąpi błąd podczas zapisywania danych, funkcja zgłasza obiekt [CInternetException](../../mfc/reference/cinternetexception-class.md) opisujący błąd.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

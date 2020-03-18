@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855576"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420681"
 ---
 # <a name="cdc-class"></a>Klasa przechwytywania
 
@@ -419,7 +419,7 @@ Definiuje klasę obiektów kontekstu urządzenia.
 class CDC : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -688,7 +688,7 @@ Kończy bieżące zadanie drukowania i Wymazuje wszystko, co aplikacja została 
 int AbortDoc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość większa lub równa 0, jeśli została wykonana pomyślnie, lub wartość ujemna, jeśli wystąpił błąd. Na poniższej liście przedstawiono typowe wartości błędów i ich znaczenie:
 
@@ -728,7 +728,7 @@ Zamyka i odrzuca wszystkie ścieżki w kontekście urządzenia.
 BOOL AbortPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -754,7 +754,7 @@ Określa długość buforu komentarza w bajtach.
 *pCommentData*<br/>
 Wskazuje bufor zawierający komentarz.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -812,7 +812,7 @@ Określa wysokość (w jednostkach logicznych) prostokąta źródłowego.
 *mieszania*<br/>
 Określa strukturę [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -850,7 +850,7 @@ Określa kąt początkowy w stopniach względem osi x.
 *fSweepAngle*<br/>
 Określa kąt odchylenia (w stopniach) względem kąta początkowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -918,7 +918,7 @@ Określa współrzędne x i y punktu, który definiuje punkt początkowy łuku (
 *ptEnd*<br/>
 Określa współrzędne x i y punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuku. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -988,7 +988,7 @@ Określa współrzędne x i y punktu, który definiuje punkt początkowy łuku (
 *ptEnd*<br/>
 Określa współrzędne x i y punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuku. Można przekazać `POINT` strukturę danych lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1011,7 +1011,7 @@ BOOL Attach(HDC hDC);
 *Używający HDC*<br/>
 Kontekst urządzenia systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1027,7 +1027,7 @@ Otwiera nawias ścieżki w kontekście urządzenia.
 BOOL BeginPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1085,7 +1085,7 @@ Określa operację rastrową, która ma być wykonana. Kody operacji rastrowych 
 
 Aby uzyskać pełną listę kodów operacji rastrowych, zobacz [Informacje o kodach operacji rastrowych](/windows/win32/gdi/raster-operation-codes) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1171,7 +1171,7 @@ Określa współrzędne x i y punktu, który definiuje punkt początkowy skrót 
 *ptEnd*<br/>
 Określa współrzędne x i y punktu, który definiuje punkt końcowy skrót (w jednostkach logicznych). Ten punkt nie musi się dokładnie znajdować w skrót. Dla tego parametru można przekazać strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1193,7 +1193,7 @@ Zamyka otwarty rysunek w ścieżce.
 BOOL CloseFigure();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1216,7 +1216,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 *Domeny*<br/>
 Wskaźnik do kontekstu urządzenia. Jeśli *PDC* ma wartość null, funkcja tworzy kontekst urządzenia pamięci, który jest zgodny z wyświetlaczem systemowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1258,7 +1258,7 @@ Wskazuje ciąg zakończony znakiem null, który określa nazwę pliku lub urząd
 *lpInitData*<br/>
 Wskazuje strukturę `DEVMODE` zawierającą dane inicjowania specyficzne dla urządzenia dla sterownika urządzenia. Funkcja Windows `DocumentProperties` pobiera tę strukturę wypełnioną dla danego urządzenia. Parametr *lpInitData* musi mieć wartość null, jeśli sterownik urządzenia ma używać domyślnej inicjalizacji (jeśli istnieje) określonej przez użytkownika za pomocą panelu sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1294,7 +1294,7 @@ Wskazuje ciąg zakończony znakiem null, który określa nazwę pliku lub urząd
 *lpInitData*<br/>
 Wskazuje na dane inicjowania specyficzne dla urządzenia dla sterownika urządzenia. Parametr *lpInitData* musi mieć wartość null, jeśli sterownik urządzenia ma używać domyślnej inicjalizacji (jeśli istnieje) określonej przez użytkownika za pomocą panelu sterowania. Zobacz `CreateDC` formatu danych dla inicjalizacji specyficznej dla urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1312,7 +1312,7 @@ Ogólnie rzecz biorąc nie wywołuj tej funkcji; destruktor wykona tę czynnoś�
 BOOL DeleteDC();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja została ukończona pomyślnie; w przeciwnym razie 0.
 
@@ -1346,7 +1346,7 @@ Wywołaj tę funkcję, aby odłączyć `m_hDC` (kontekst urządzenia wyjścioweg
 HDC Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kontekst urządzenia systemu Windows.
 
@@ -1510,7 +1510,7 @@ Określa typ krawędzi wewnętrznej i zewnętrznej do rysowania. Ten parametr mu
 *nFlags*<br/>
 Flagi określające typ obramowania, które ma zostać narysowane. Zobacz `DrawEdge` w Windows SDK dla tabeli wartości parametru. W przypadku linii ukośnych flagi BF_RECT określają punkt końcowy wektora ograniczonego przez parametr prostokąta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1536,7 +1536,7 @@ Określa liczbę bajtów danych wskazywanych przez parametr *lpszInputData* .
 *lpszInputData*<br/>
 Wskazuje strukturę wejściową wymaganą dla określonej ucieczki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wynik funkcji. Większe niż zero, jeśli się powiedzie, z wyjątkiem QUERYESCSUPPORT rysowania ucieczki, która sprawdza tylko implementację; lub zero, jeśli Ucieczka nie jest zaimplementowana; lub mniejsze od zera w przypadku wystąpienia błędu.
 
@@ -1586,7 +1586,7 @@ Określa typ kontrolki ramki do narysowania. Aby uzyskać listę możliwych wart
 *nInformacje*<br/>
 Określa początkowy stan kontrolki ramki. Może to być co najmniej jedna wartość opisana dla parametru *uState* w `DrawFrameControl` w Windows SDK. Użyj DFCS_ADJUSTRECT wartość *nInformacje* , aby dostosować prostokąt ograniczający do wykluczenia otaczającej krawędzi przycisku push.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1677,7 +1677,7 @@ Identyfikuje uchwyt ikony do narysowania.
 *moment*<br/>
 Określa logiczne współrzędne x i y lewego górnego rogu ikony. Dla tego parametru można przekazać strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja została ukończona pomyślnie; w przeciwnym razie 0.
 
@@ -1803,7 +1803,7 @@ Wskaźnik do funkcji wywołania zwrotnego służącej do renderowania obrazu. Te
 *lData*<br/>
 Określa informacje o obrazie. Znaczenie tego parametru zależy od typu obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1844,7 +1844,7 @@ Określa metodę formatowania tekstu. Może to być dowolna kombinacja wartości
 > [!NOTE]
 >  Niektóre kombinacje flag *uFormat* mogą spowodować modyfikację przesłanego ciągu. Użycie DT_MODIFYSTRING z DT_END_ELLIPSIS lub DT_PATH_ELLIPSIS może spowodować modyfikację ciągu, powodując potwierdzenie w `CString` przesłonięciu. Wartości DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP i DT_NOPREFIX nie mogą być używane z wartością DT_TABSTOP.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość tekstu, jeśli funkcja się powiedzie.
 
@@ -1941,7 +1941,7 @@ Określa logiczną współrzędną y w prawym dolnym rogu prostokąta obwiedni.
 *lpRect*<br/>
 Określa prostokąt powiązany z elipsą. Można również przekazać obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1961,7 +1961,7 @@ Zamyka zadanie drukowania uruchomione przez wywołanie funkcji składowej [Start
 int EndDoc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Większe niż lub równe 0, jeśli funkcja jest pomyślna lub wartość ujemna, jeśli wystąpił błąd.
 
@@ -1985,7 +1985,7 @@ Informuje urządzenie, że aplikacja zakończyła zapisywanie na stronie.
 int EndPage();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Większe niż lub równe 0, jeśli funkcja jest pomyślna lub wartość ujemna, jeśli wystąpił błąd.
 
@@ -2007,7 +2007,7 @@ Zamyka nawias ścieżki i wybiera ścieżkę zdefiniowaną przez nawias w kontek
 BOOL EndPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2039,7 +2039,7 @@ Jest adresem wystąpienia procedury funkcji wywołania zwrotnego dostarczonej pr
 *lpData*<br/>
 Wskazuje dane dostarczone przez aplikację. Dane są przesyłane do funkcji wywołania zwrotnego wraz z informacjami o obiekcie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa ostatnią wartość zwracaną przez [funkcję wywołania zwrotnego](callback-functions-used-by-mfc.md#enum_objects). Jego znaczenie jest zdefiniowane przez użytkownika.
 
@@ -2110,7 +2110,7 @@ Określa liczbę bajtów danych wskazywanych przez parametr *lpszOutputData* .
 *lpszOutputData*<br/>
 Wskazuje strukturę, która otrzymuje dane wyjściowe z tego wyjścia. Ten parametr powinien mieć wartość NULL, jeśli nie zostaną zwrócone żadne dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość dodatnia jest zwracana, jeśli funkcja się powiedzie, z wyjątkiem QUERYESCSUPPORT ucieczki, która sprawdza tylko implementację. Jeśli Escape nie jest zaimplementowany, zwracana jest wartość zero. Wartość ujemna jest zwracana w przypadku wystąpienia błędu. Poniżej przedstawiono typowe wartości błędów:
 
@@ -2177,7 +2177,7 @@ Określa logiczną współrzędną y w prawym dolnym rogu prostokąta.
 *lpRect*<br/>
 Określa prostokąt. Może również być obiektem `CRect`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa typ nowego regionu wycinka. Może to być dowolna z następujących wartości:
 
@@ -2206,7 +2206,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 *pWnd*<br/>
 Wskazuje obiekt okna, którego okno jest aktualizowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ wykluczonego regionu. Może to być jedna z następujących wartości:
 
@@ -2248,7 +2248,7 @@ Określa typ wypełnienia, które ma zostać wykonane. Musi mieć jedną z nast�
 
 - FLOODFILLSURFACE obszar wypełnienia jest definiowany przez kolor określony przez *crColor*. Wypełnienie jest kontynuowane na zewnątrz we wszystkich kierunkach, o ile napotkany jest kolor. Ten styl jest przydatny do wypełniania obszarów z wielokolorowymi granicami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie wartość 0, jeśli nie można ukończyć wypełniania, jeśli dany punkt ma kolor graniczny określony przez *crColor* (jeśli zażądano FLOODFILLBORDER), jeśli dany punkt nie ma koloru określonego przez *crColor* (jeśli zażądano FLOODFILLSURFACE) lub jeśli punkt znajduje się poza regionem przycinania.
 
@@ -2315,7 +2315,7 @@ Wskazuje tablicę wartości, która wskazuje odległość między źródłami s�
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki do narysowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2333,7 +2333,7 @@ Zamyka wszystkie otwarte figury w bieżącej ścieżce i wypełnia wnętrze ści
 BOOL FillPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2387,7 +2387,7 @@ Wskaźnik do regionu, który ma zostać wypełniony. Współrzędne dla danego r
 *pBrush*<br/>
 Identyfikuje Pędzel, który będzie używany do wypełniania regionu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2450,7 +2450,7 @@ Przekształca wszystkie krzywe w ścieżce zaznaczonej w bieżącym kontekście 
 BOOL FlattenPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2476,7 +2476,7 @@ Określa logiczną współrzędną y punktu, w którym rozpoczyna się napełnia
 *crColor*<br/>
 Określa kolor granicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie zwraca wartość 0, jeśli nie można ukończyć wypełniania, dany punkt ma kolor granicy określony przez *crColor*lub punkt znajduje się poza regionem przycinania.
 
@@ -2540,7 +2540,7 @@ Określa szerokość obramowania w pionie pociągnięć pędzla w jednostkach ur
 *nHeight*<br/>
 Określa wysokość obramowania w poziomych pociągnięć pędzla w jednostkach urządzeń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2561,7 +2561,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 *Używający HDC*<br/>
 Zawiera dojście do kontekstu urządzenia z systemem Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik może być tymczasowy i nie powinien być przechowywany poza bezpośrednim użyciem.
 
@@ -2581,7 +2581,7 @@ Zwraca bieżący kierunek łuku dla kontekstu urządzenia.
 int GetArcDirection() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa bieżący kierunek łuku, jeśli to się powiedzie. Poniżej znajdują się prawidłowe wartości zwracane:
 
@@ -2603,7 +2603,7 @@ Pobiera ustawienie dla bieżącego filtru współczynnika proporcji.
 CSize GetAspectRatioFilter() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize` reprezentujący współczynnik proporcji używany przez bieżący filtr współczynnika proporcji.
 
@@ -2619,7 +2619,7 @@ Zwraca bieżący kolor tła.
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość koloru RGB.
 
@@ -2635,7 +2635,7 @@ Zwraca tryb tła.
 int GetBkMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący tryb tła, który może być nieprzezroczysty lub PRZEZROCZYSTy.
 
@@ -2663,7 +2663,7 @@ Określa, czy prostokąt ograniczający ma być wyczyszczony po zwróceniu. Ten 
 
 - DCB_RESET wymusza wyczyszczenie prostokąta powiązanego po jego zwróceniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa bieżący stan prostokąta ograniczenia, jeśli funkcja się powiedzie. Może być kombinacją następujących wartości:
 
@@ -2685,7 +2685,7 @@ Pobiera źródło (w jednostkach urządzeń) pędzla aktualnie zaznaczonego dla 
 CPoint GetBrushOrg() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżące źródło pędzla (w jednostkach urządzeń) jako obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
@@ -2732,7 +2732,7 @@ Określa sposób przetwarzania ciągu do wymaganych tablic. Ten parametr może m
 *str*<br/>
 Wskaźnik do obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) do przetworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest szerokością i wysokością ciągu w jednostkach logicznych.
 
@@ -2772,7 +2772,7 @@ Wskazuje tablicę struktur [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) , któ
 *lpABCF*<br/>
 Wskazuje bufor dostarczony przez aplikację z tablicą struktur [ABCFLOAT](/windows/win32/api/wingdi/ns-wingdi-abcfloat) , aby otrzymywać szerokości znaków, gdy funkcja zwraca wartość. Szerokość zwracana przez tę funkcję są w formacie zmiennoprzecinkowym IEEE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2816,7 +2816,7 @@ Wskaźnik do tablicy zawierającej indeksy symboli. Jeśli wartość jest RÓWNa
 *lpabc*<br/>
 Wskaźnik do tablicy struktur [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) otrzymujących szerokości znaków. Tablica musi zawierać co najmniej tyle struktur `ABC`, ponieważ istnieją indeksy symboli określone przez parametr *CGI* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2854,7 +2854,7 @@ Wskazuje bufor, który będzie otrzymywał wartości szerokości dla kolejnej gr
 *lpFloatBuffer*<br/>
 Wskazuje bufor, w którym mają zostać odebrane szerokości znaków. Zwrócone szerokości są w 32-bitowej liczbie zmiennoprzecinkowej IEEE. (Szerokość jest mierzona wzdłuż linii bazowej znaków).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2892,7 +2892,7 @@ Wskaźnik do tablicy zawierającej indeksy symboli. Jeśli wartość jest RÓWNa
 *lpBuffer*<br/>
 Wskaźnik do buforu, który odbiera szerokość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2913,7 +2913,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 *lpRect*<br/>
 Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który ma otrzymywać wymiary prostokąta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ regionu wycinka. Może to być dowolna z następujących wartości:
 
@@ -2942,7 +2942,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 *lpColorAdjust*<br/>
 Wskazuje strukturę danych [COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) , aby otrzymać wartości korekty koloru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2954,7 +2954,7 @@ Zwraca wskaźnik do aktualnie zaznaczonego obiektu `CBitmap`.
 CBitmap* GetCurrentBitmap() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CBitmap`, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -2970,7 +2970,7 @@ Zwraca wskaźnik do aktualnie zaznaczonego obiektu `CBrush`.
 CBrush* GetCurrentBrush() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CBrush`, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -2986,7 +2986,7 @@ Zwraca wskaźnik do aktualnie zaznaczonego obiektu `CFont`.
 CFont* GetCurrentFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CFont`, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -3002,7 +3002,7 @@ Zwraca wskaźnik do aktualnie zaznaczonego obiektu `CPalette`.
 CPalette* GetCurrentPalette() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CPalette`, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -3018,7 +3018,7 @@ Zwraca wskaźnik do aktualnie zaznaczonego obiektu `CPen`.
 CPen* GetCurrentPen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CPen`, jeśli powodzenie; w przeciwnym razie wartość NULL.
 
@@ -3034,7 +3034,7 @@ Pobiera bieżącą pozycję (we współrzędnych logicznych).
 CPoint GetCurrentPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca pozycja jako obiekt `CPoint`.
 
@@ -3050,7 +3050,7 @@ Pobiera bieżący kolor pędzla.
 COLORREF GetDCBrushColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest wartością [COLORREF](/windows/win32/gdi/colorref) bieżącego koloru pędzla.
 
@@ -3068,7 +3068,7 @@ Pobiera bieżący kolor pióra.
 COLORREF GetDCPenColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest wartością [COLORREF](/windows/win32/gdi/colorref) dla bieżącego koloru pióra.
 
@@ -3091,7 +3091,7 @@ int GetDeviceCaps(int nIndex) const;
 *nIndex*<br/>
 Określa typ informacji do zwrócenia. Aby uzyskać listę wartości, zobacz [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość żądanej możliwości, jeśli funkcja się powiedzie.
 
@@ -3125,7 +3125,7 @@ Wskazuje bufor, który otrzyma informacje o czcionce. Jeśli ta wartość jest R
 *cbData*<br/>
 Określa długość (w bajtach) informacji do pobrania. Jeśli ten parametr ma wartość 0, `GetFontData` zwraca rozmiar danych określonych w parametrze *dwTable* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa liczbę bajtów zwracanych w buforze wskazywanym przez *lpData* , jeśli funkcja się powiedzie; w przeciwnym razie-1.
 
@@ -3147,7 +3147,7 @@ Zwraca informacje dotyczące aktualnie wybranej czcionki dla określonego kontek
 DWORD GetFontLanguageInfo() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana identyfikuje charakterystykę aktualnie zaznaczonej czcionki. Aby uzyskać pełną listę możliwych wartości, zobacz [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo).
 
@@ -3196,7 +3196,7 @@ Wskazuje bufor, do którego funkcja kopiuje informacje o znakach konspektu. Jeś
 *lpmat2*<br/>
 Wskazuje na strukturę [MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2) , która zawiera macierz transformacji dla znaku. Ten parametr nie może mieć wartości NULL, nawet jeśli wartość GGO_NATIVE została określona dla *nFormat*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar (w bajtach) bufora wymaganego dla pobranych informacji, jeśli *cbBuffer* jest równa 0 lub *lpBuffer* ma wartość null. W przeciwnym razie jest to wartość dodatnia, jeśli funkcja się powiedzie lub-1, jeśli wystąpi błąd.
 
@@ -3214,7 +3214,7 @@ Pobiera bieżący tryb grafiki dla określonego kontekstu urządzenia.
 int GetGraphicsMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca bieżący tryb grafiki po powodzeniu. Aby zapoznać się z listą wartości, które ta metoda może zwrócić, zobacz [Getgraphicsmode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
@@ -3234,7 +3234,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać pędzel półtonowy.
 static CBrush* PASCAL GetHalftoneBrush();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CBrush`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -3262,7 +3262,7 @@ Określa liczbę struktur [KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kern
 *lpkrnpair*<br/>
 Wskazuje tablicę struktur `KERNINGPAIR`, które odbierają pary kerningu, gdy funkcja zwraca wartość. Tablica musi zawierać co najmniej tyle struktur, jak określono przez *nPairs*. Jeśli ten parametr ma wartość NULL, funkcja zwraca łączną liczbę par kerningu dla czcionki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa liczbę par kerningu lub łączną liczbę par kerningu w czcionce, jeśli funkcja się powiedzie. Jeśli funkcja nie powiedzie się lub nie ma par kerningu dla czcionki, zwracana jest wartość zero.
 
@@ -3274,7 +3274,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić układ tekstu i g
 DWORD GetLayout() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, flagi układu dla bieżącego kontekstu urządzenia. W przeciwnym razie GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Aby uzyskać listę flag układu, zobacz przechwytywanie [:: SetLayout](#setlayout).
 
@@ -3290,7 +3290,7 @@ Pobiera bieżący tryb mapowania.
 int GetMapMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tryb mapowania.
 
@@ -3309,7 +3309,7 @@ Zwraca limit ścięcia dla kontekstu urządzenia.
 float GetMiterLimit() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3330,7 +3330,7 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 *crColor*<br/>
 Określa kolor, który ma zostać dopasowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość koloru RGB (czerwony, zielony, niebieski), która definiuje pełny kolor zbliżony do wartości *crColor* , którą urządzenie może reprezentować.
 
@@ -3359,7 +3359,7 @@ Określa rozmiar bufora, do którego zwracane są informacje w bajtach.
 *lpotm*<br/>
 Wskazuje strukturę `OUTLINETEXTMETRIC`. Jeśli ten parametr ma wartość NULL, funkcja zwraca rozmiar buforu wymagany dla pobranych informacji o metryki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3389,7 +3389,7 @@ Określa ostatni znak w kolejnej grupie znaków w bieżącej czcionce.
 *lpBuffer*<br/>
 Wskazuje bufor, który będzie otrzymywał wartości szerokości dla kolejnej grupy znaków w bieżącej czcionce.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3435,7 +3435,7 @@ Wskazuje tablicę liczb całkowitych zawierających pozycje tabulatora w jednost
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki, które mają być mierzone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wymiary ciągu (w jednostkach logicznych) w obiekcie [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
@@ -3472,7 +3472,7 @@ Określa [Długość ciągu](/windows/win32/gdi/specifying-length-of-text-output
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki, które mają być mierzone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wymiary ciągu (w jednostkach logicznych) zwrócone w obiekcie [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
@@ -3495,7 +3495,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 *lpMetrics*<br/>
 Wskazuje strukturę [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , która otrzymuje metryki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3533,7 +3533,7 @@ Typy PT_BEZIERTO zawsze występują w zestawach trzech. Punkt w ścieżce bezpo�
 *nCount*<br/>
 Określa łączną liczbę struktur danych [punktu](/windows/win32/api/windef/ns-windef-point) , które mogą być umieszczone w tablicy *lpPoints* . Ta wartość musi być taka sama jak liczba bajtów, które mogą być umieszczone w tablicy *lpTypes* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli parametr *nCount* ma wartość różną od zera, liczba wyliczonych punktów. Jeśli *nCount* jest równa 0, Łączna liczba punktów w ścieżce (i `GetPath` nie zapisuje nic do buforów). Jeśli *nCount* jest różna od zera i jest mniejsza niż liczba punktów w ścieżce, zwracana wartość to-1.
 
@@ -3568,7 +3568,7 @@ Określa logiczną współrzędną y punktu, który ma zostać zbadany.
 *moment*<br/>
 Określa współrzędne x i y punktu, który ma zostać zbadany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dla każdej wersji funkcji kolor RGB jest kolorem danego punktu. Ma wartość-1, jeśli współrzędne nie określają punktu w regionie przycinania.
 
@@ -3588,7 +3588,7 @@ Pobiera bieżący tryb wypełniania wielokątów.
 int GetPolyFillMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący tryb wypełniania wielokątów, ALTERNATYWny lub UZWOJENIe, jeśli funkcja się powiedzie.
 
@@ -3604,7 +3604,7 @@ Pobiera bieżący tryb rysowania.
 int GetROP2() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tryb rysowania. Aby zapoznać się z listą wartości trybu rysowania, zobacz funkcja członkowska `SetROP2`.
 
@@ -3620,7 +3620,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać [m_hDC](#m_hdc), ko
 HDC GetSafeHdc() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście kontekstu urządzenia.
 
@@ -3636,7 +3636,7 @@ Pobiera bieżący tryb rozciągnięcia mapy bitowej.
 int GetStretchBltMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana określa bieżący tryb rozciągnięcia mapy bitowej — STRETCH_ANDSCANS, STRETCH_DELETESCANS lub STRETCH_ORSCANS — Jeśli funkcja się powiedzie.
 
@@ -3680,7 +3680,7 @@ Wskazuje tablicę liczb całkowitych zawierających pozycje tabulatora w jednost
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki do narysowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wymiary ciągu (w jednostkach logicznych) w obiekcie [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
@@ -3702,7 +3702,7 @@ Pobiera stan flag wyrównania tekstu dla kontekstu urządzenia.
 UINT GetTextAlign() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stan flag wyrównania tekstu. Wartość zwracana to co najmniej jedna z następujących wartości:
 
@@ -3746,7 +3746,7 @@ Pobiera bieżące ustawienie wielkości odstępów między znakami.
 int GetTextCharacterExtra() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wielkość odstępów między znakami.
 
@@ -3764,7 +3764,7 @@ Pobiera bieżący kolor tekstu.
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący kolor tekstu jako wartość koloru RGB.
 
@@ -3795,7 +3795,7 @@ Określa liczbę znaków w ciągu.
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wymiary ciągu (w jednostkach logicznych) w obiekcie [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
@@ -3843,7 +3843,7 @@ Wskaźnik do tablicy liczb całkowitych, który odbiera częściowe zakresy symb
 *lpSize*<br/>
 Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , który odbiera Wymiary tablicy indeksów symboli w jednostkach logicznych. Ta wartość nie może być RÓWNa NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3873,7 +3873,7 @@ Określa liczbę symboli w tablicy wskazywanych przez *pgiIn*.
 *lpSize*<br/>
 Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , który odbiera Wymiary tablicy indeksów symboli w jednostkach logicznych. Ta wartość nie może być RÓWNa NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3904,7 +3904,7 @@ Wskazuje bufor dla nazwy kroju.
 *rString*<br/>
 Odwołanie do obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów skopiowanych do buforu bez uwzględniania kończącego znaku null. Jeśli wystąpi błąd, wartość jest równa 0.
 
@@ -3925,7 +3925,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 *lpMetrics*<br/>
 Wskazuje strukturę [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , która otrzymuje metryki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -3937,7 +3937,7 @@ Pobiera zakresy x i y okienka ekranu kontekstu urządzenia.
 CSize GetViewportExt() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zakresy x i y (w jednostkach urządzeń) jako obiekt `CSize`.
 
@@ -3949,7 +3949,7 @@ Pobiera współrzędne x i y źródła okienka ekranu skojarzonego z kontekstem 
 CPoint GetViewportOrg() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Początek okienka ekranu (we współrzędnych urządzenia) jako obiekt `CPoint`.
 
@@ -3961,7 +3961,7 @@ Zwraca okno skojarzone z kontekstem wyświetlania urządzenia.
 CWnd* GetWindow() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd`, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -3977,7 +3977,7 @@ Pobiera zakresy x i y okna skojarzonego z kontekstem urządzenia.
 CSize GetWindowExt() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zakresy x i y (w jednostkach logicznych) jako obiekt `CSize`.
 
@@ -3989,7 +3989,7 @@ Pobiera współrzędne x i y źródła okna skojarzonego z kontekstem urządzeni
 CPoint GetWindowOrg() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Źródło okna (we współrzędnych logicznych) jako obiekt `CPoint`.
 
@@ -4006,7 +4006,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 *rXform*<br/>
 Odwołanie do struktury [Xform](/windows/win32/api/wingdi/ns-wingdi-xform) , która otrzymuje bieżącą przestrzeń na przekształceniu na stronę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość różną od zera.
 
@@ -4048,7 +4048,7 @@ Liczba elementów (trójkątów lub prostokątów) w *pMesh*.
 *dwMode*<br/>
 Określa tryb wypełnienia gradientu. Aby uzyskać listę możliwych wartości, zobacz [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -4101,7 +4101,7 @@ Określa szerokość (w jednostkach logicznych) prostokąta otaczającego ciąg.
 *nHeight*<br/>
 Określa wysokość (w jednostkach logicznych) prostokąta otaczającego ciąg. Jeśli *nHeight* ma wartość 0, `GrayString` oblicza wysokość obszaru, przy założeniu, że *lpData* jest wskaźnikiem do ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli ciąg jest rysowany lub 0, jeśli funkcja `TextOut` lub funkcja wyjściowa dostarczona przez aplikację zwróciła wartość 0 lub w przypadku niewystarczającej ilości pamięci do utworzenia mapy bitowej pamięci dla funkcji DIMM.
 
@@ -4186,7 +4186,7 @@ Określa logiczną współrzędną y w prawym dolnym rogu prostokąta.
 *lpRect*<br/>
 Określa prostokąt. Można przekazać obiekt `CRect` lub wskaźnik do struktury `RECT` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ nowego regionu wycinka. Może to być jedna z następujących wartości:
 
@@ -4238,7 +4238,7 @@ BOOL InvertRgn(CRgn* pRgn);
 *pRgn*<br/>
 Określa region, który ma zostać odwrócony. Współrzędne dla regionu są określone w jednostkach logicznych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4254,7 +4254,7 @@ Określa, czy kontekst urządzenia jest używany do drukowania.
 BOOL IsPrinting() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CDC` jest kontrolerem domeny. w przeciwnym razie 0.
 
@@ -4281,7 +4281,7 @@ Określa logiczną współrzędną y punktu końcowego dla wiersza.
 *moment*<br/>
 Określa punkt końcowy wiersza. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wiersz jest rysowany; w przeciwnym razie 0.
 
@@ -4423,7 +4423,7 @@ Określa przesunięcie pikseli w pionie dla mapy bitowej określonej przez param
 *dwRop*<br/>
 Określa zarówno kod operacji typu Trzyelementowy, jak i w tle, którego funkcja używa do kontrolowania kombinacji danych źródłowych i docelowych. Kod operacji rastrowej w tle jest przechowywany w wysokim bajcie wysokiego wyrazu tej wartości. kod operacji rastrowych na pierwszym planie jest przechowywany w niskim bajcie wysokiego wyrazu tej wartości. Dolny wyraz tej wartości jest ignorowany i powinien mieć wartość zero. Makro MAKEROP4 tworzy takie kombinacje kodów operacji rastrowych na pierwszym planie i w tle. Zobacz sekcję Uwagi, aby zapoznać się z omówieniem pierwszego planu i tła w kontekście tej funkcji. Aby uzyskać listę typowych kodów operacji rastrowych, zobacz funkcję składowej `BitBlt`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4453,7 +4453,7 @@ Odwołanie do struktury [Xform](/windows/win32/api/wingdi/ns-wingdi-xform) używ
 *iMode*<br/>
 Określa, jak dane transformacji modyfikują bieżącą transformację światową. Aby zapoznać się z listą wartości, które może wykonać ten parametr, zobacz [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość różną od zera.
 
@@ -4488,7 +4488,7 @@ Określa logiczną współrzędną y nowej pozycji.
 *moment*<br/>
 Określa nową pozycję. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Współrzędne x i y powyższej pozycji jako obiekt `CPoint`.
 
@@ -4519,7 +4519,7 @@ Określa liczbę jednostek logicznych, które mają zostać przesunięte w gór�
 *zmienia*<br/>
 Określa kwotę do przesunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ nowego regionu. Może to być jedna z następujących wartości:
 
@@ -4553,7 +4553,7 @@ Określa liczbę jednostek urządzeń, które mają zostać dodane do współrz�
 *nHeight*<br/>
 Określa liczbę jednostek urządzeń, które mają zostać dodane do współrzędnych y bieżącego źródła.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie miejsce początkowe okienka ekranu (we współrzędnych urządzenia) jako obiekt `CPoint`.
 
@@ -4575,7 +4575,7 @@ Określa liczbę jednostek logicznych, które mają zostać dodane do współrz�
 *nHeight*<br/>
 Określa liczbę jednostek logicznych, które mają zostać dodane do współrzędnych y bieżącego źródła.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie pochodzenie okna (we współrzędnych logicznych) jako obiekt `CPoint`.
 
@@ -4587,7 +4587,7 @@ Użyj tego operatora, aby pobrać uchwyt kontekstu urządzenia `CDC` obiektu.
 operator HDC() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, uchwyt obiektu kontekstu urządzenia; w przeciwnym razie wartość NULL.
 
@@ -4608,7 +4608,7 @@ BOOL PaintRgn(CRgn* pRgn);
 *pRgn*<br/>
 Określa region, który ma zostać wypełniony. Współrzędne dla danego regionu są określone w jednostkach logicznych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4652,7 +4652,7 @@ Określa kod operacji rastrowej. Kody operacji rastrowych (ROPs) definiują spos
 
 - WHITENESS włącza wszystkie białe dane wyjściowe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4718,7 +4718,7 @@ Określa punkt początkowy łuku. Ten punkt nie musi znajdować się dokładnie 
 *ptEnd*<br/>
 Określa punkt końcowy łuku. Ten punkt nie musi znajdować się dokładnie na łuku. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4757,7 +4757,7 @@ Identyfikuje rozszerzony metaplik.
 *lpBounds*<br/>
 Wskazuje strukturę `RECT` lub obiekt `CRect`, który zawiera współrzędne prostokąta ograniczenia używany do wyświetlania obrazu. Współrzędne są określone w jednostkach logicznych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4817,7 +4817,7 @@ Określa współrzędną x lewego górnego rogu mapy bitowej monochromatycznej.
 *yMask*<br/>
 Określa współrzędną y lewego górnego rogu mapy bitowej monochromatycznia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4855,7 +4855,7 @@ Wskazuje tablicę struktur danych [punktu](/windows/win32/api/windef/ns-windef-p
 *nCount*<br/>
 Określa liczbę punktów w tablicy *lpPoints* . Ta wartość musi być dłuższa niż trzy razy większa niż liczba krzywych składanych, ponieważ każda krzywa Bzier wymaga dwóch punktów kontrolnych i punktu końcowego, a początkowa krzywa składana wymaga dodatkowego punktu początkowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4883,7 +4883,7 @@ Wskazuje tablicę struktur danych [punktu](/windows/win32/api/windef/ns-windef-p
 *nCount*<br/>
 Określa liczbę punktów w tablicy *lpPoints* . Ta wartość musi być trzy razy większa niż liczba krzywych składanych, ponieważ każda krzywa Bzier wymaga dwóch punktów kontrolnych i punktu końcowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4931,7 +4931,7 @@ Typy PT_BEZIERTO zawsze występują w zestawach trzech. Bieżąca pozycja defini
 *nCount*<br/>
 Określa łączną liczbę punktów w tablicy *lpPoints* , tak samo jak liczba bajtów w tablicy *lpTypes* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4961,7 +4961,7 @@ Wskazuje tablicę punktów, która określa wierzchołki wielokąta. Każdy punk
 *nCount*<br/>
 Określa liczbę wierzchołków w tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -4993,7 +4993,7 @@ Wskazuje tablicę struktur `POINT` lub obiektów `CPoint`, które mają być po�
 *nCount*<br/>
 Określa liczbę punktów w tablicy. Ta wartość musi być równa co najmniej 2.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5021,7 +5021,7 @@ Wskazuje tablicę struktur danych [punktu](/windows/win32/api/windef/ns-windef-p
 *nCount*<br/>
 Określa liczbę punktów w tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5051,7 +5051,7 @@ Wskazuje tablicę liczb całkowitych, z których każdy określa liczbę punktó
 *nCount*<br/>
 Liczba wpisów w tablicy *lpPolyCounts* . Ta liczba określa liczbę wielokątów do narysowania. Ta wartość musi być równa co najmniej 2.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5087,7 +5087,7 @@ Wskazuje tablicę zmiennych określającą liczbę punktów w tablicy *lpPoints*
 *nCount*<br/>
 Określa łączną liczbę liczników w tablicy *lpPolyPoints* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5118,7 +5118,7 @@ Określa logiczną współrzędną y punktu.
 *moment*<br/>
 Określa punkt do ewidencjonowania współrzędnych logicznych. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony punkt znajduje się w obszarze przycinania; w przeciwnym razie 0.
 
@@ -5130,7 +5130,7 @@ Wywołuje funkcję Abort zainstalowaną przez funkcję członkowską [SetAbortPr
 BOOL QueryAbort() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana jest różna od zera, Jeśli drukowanie powinno być kontynuowane, lub jeśli nie ma procedury Abort. Wartość 0 oznacza, że zadanie drukowania powinno zostać zakończone. Wartość zwracana jest dostarczana przez funkcję Abort.
 
@@ -5142,7 +5142,7 @@ Mapuje wpisy z bieżącej palety logicznej na paletę systemową.
 UINT RealizePalette();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje liczbę wpisów w palecie logicznej mapowanych na różne wpisy w palecie systemowej. Przedstawia liczbę wpisów, które ta funkcja jest ponownie mapowana, aby uwzględnić zmiany w palecie systemu od momentu ostatniego zrealizowania palety logicznej.
 
@@ -5185,7 +5185,7 @@ Określa współrzędną y prawego dolnego rogu prostokąta (w jednostkach logic
 *lpRect*<br/>
 Określa prostokąt w jednostkach logicznych. Można przekazać obiekt `CRect` lub wskaźnik do struktury `RECT` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5212,7 +5212,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 *lpRect*<br/>
 Wskazuje strukturę `RECT` lub obiekt `CRect`, który zawiera współrzędne logiczne określonego prostokąta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli jakakolwiek część danego prostokąta leży w obszarze przycinania. w przeciwnym razie 0.
 
@@ -5253,7 +5253,7 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
 *lpDevMode*<br/>
 Wskaźnik do struktury `DEVMODE` systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5280,7 +5280,7 @@ virtual BOOL RestoreDC(int nSavedDC);
 *nSavedDC*<br/>
 Określa kontekst urządzenia, który ma zostać przywrócony. Może to być wartość zwrócona przez poprzednie wywołanie funkcji `SaveDC`. Jeśli *nSavedDC* ma wartość-1, ostatnio zapisany kontekst urządzenia zostanie przywrócony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony kontekst został przywrócony; w przeciwnym razie 0.
 
@@ -5334,7 +5334,7 @@ Określa prostokąt ograniczenia w jednostkach logicznych. Można przekazać obi
 *moment*<br/>
 Współrzędna x *punktu* Określa szerokość wielokropka, aby narysować Zaokrąglone rogi (w jednostkach logicznych). Współrzędna y *punktu* określa wysokość elipsy do rysowania zaokrąglonych rogów (w jednostkach logicznych). Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5356,7 +5356,7 @@ Zapisuje bieżący stan kontekstu urządzenia przez kopiowanie informacji o stan
 virtual int SaveDC();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita identyfikująca zapisany kontekst urządzenia. Jeśli wystąpi błąd, wartość jest równa 0. Ta wartość zwracana może być używana do przywracania kontekstu urządzenia przez wywołanie `RestoreDC`.
 
@@ -5392,7 +5392,7 @@ Określa liczbę, przez którą ma zostać pomnożony bieżący zakres y.
 *yDenom*<br/>
 Określa liczbę, przez którą ma zostać podzielony wynik mnożenia bieżącego zakresu y przez wartość parametru *yNum* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie zakresy okienka ekranu (w jednostkach urządzeń) jako obiekt `CSize`.
 
@@ -5432,7 +5432,7 @@ Określa liczbę, przez którą ma zostać pomnożony bieżący zakres y.
 *yDenom*<br/>
 Określa liczbę, przez którą ma zostać podzielony wynik mnożenia bieżącego zakresu y przez wartość parametru *yNum* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie zakresy okna (w jednostkach logicznych) jako obiekt `CSize`.
 
@@ -5480,7 +5480,7 @@ Identyfikuje region nieobjęty przez proces przewijania. Funkcja `ScrollDC` defi
 *lpRectUpdate*<br/>
 Wskazuje strukturę `RECT` lub obiekt `CRect`, który otrzymuje współrzędne prostokąta, który jest powiązany z regionem aktualizacji przewijania. Jest to największy prostokątny obszar, który wymaga ponownego rysowania. Wartości w strukturze lub obiekcie, gdy funkcja zwraca wartość, jest w koordynuje klienta, niezależnie od trybu mapowania dla danego kontekstu urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przewijanie jest wykonywane; w przeciwnym razie 0.
 
@@ -5513,7 +5513,7 @@ Określa sposób używania ścieżki. Dozwolone są następujące wartości:
 
 - RGN_XOR nowy region przycinania obejmuje Unię bieżącego obszaru wycinków i bieżącą ścieżkę, ale bez nakładających się obszarów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5555,7 +5555,7 @@ Określa operację, która ma zostać wykonana. Musi to być jedna z następują
 
 - RGN_XOR nowy region przycinania łączy bieżący region przycinania i region identyfikowany przez *pRgn* , ale wyklucza wszystkie nakładające się obszary.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ regionu. Może to być dowolna z następujących wartości:
 
@@ -5608,7 +5608,7 @@ Wskaźnik do obiektu [CRgn](../../mfc/reference/crgn-class.md) , który ma zosta
 *pObject*<br/>
 Wskaźnik do obiektu [CGdiObject](../../mfc/reference/cgdiobject-class.md) , który ma zostać wybrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do zastępowanego obiektu. Jest to wskaźnik do obiektu jednej z klas pochodnych `CGdiObject`, takich jak `CPen`, w zależności od używanej wersji funkcji. Wartość zwracana ma wartość NULL, jeśli wystąpi błąd. Ta funkcja może zwrócić wskaźnik do obiektu tymczasowego. Ten obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu systemu Windows. Aby uzyskać więcej informacji, zobacz `CGdiObject::FromHandle`.
 
@@ -5648,7 +5648,7 @@ Określa paletę logiczną, która ma zostać wybrana. Ta paleta musi już być 
 *bForceBackground*<br/>
 Określa, czy w przypadku palety logicznej wymuszona jest paleta w tle. Jeśli *bForceBackground* jest różna od zera, wybrana paleta jest zawsze paletą tła, bez względu na to, czy okno ma fokus wprowadzania. Jeśli *bForceBackground* ma wartość 0, a kontekst urządzenia jest dołączony do okna, paleta logiczna jest paletą pierwszego planu, gdy okno ma fokus wprowadzania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CPalette` identyfikujący paletę logiczną zamienionej przez paletę określoną przez *pPalette*. Jeśli wystąpi błąd, ma on wartość NULL.
 
@@ -5705,7 +5705,7 @@ Określa rodzaj żądanego obiektu giełdowego. Może to być jedna z następuj�
 
 - DEFAULT_PALETTE domyślna paleta kolorów. Ta paleta zawiera 20 kolorów statycznych w palecie systemowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CGdiObject`, który został zastąpiony, jeśli funkcja się powiedzie. Rzeczywisty obiekt wskazywany jest obiektem [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md)lub [CFont](../../mfc/reference/cfont-class.md) . Jeśli wywołanie zakończyło się niepowodzeniem, zwracana wartość ma wartość NULL.
 
@@ -5722,7 +5722,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 *lpfn*<br/>
 Wskaźnik do funkcji Abort, która ma zostać zainstalowana jako Procedura przerywania. Aby uzyskać więcej informacji na temat funkcji wywołania zwrotnego, zobacz [Funkcja wywołania zwrotnego dla funkcji przechwytywania:: SetAbortProc](callback-functions-used-by-mfc.md#setabortproc).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wynik funkcji `SetAbortProc`. Niektóre z poniższych wartości są bardziej prawdopodobne niż inne, ale wszystkie są możliwe.
 
@@ -5742,7 +5742,7 @@ Należy zauważyć, że funkcje programu Microsoft C++ Visual upraszczają tworz
 
 Nie trzeba również eksportować nazwy funkcji w instrukcji **exports** w pliku definicji modułu aplikacji. Zamiast tego można użyć modyfikatora funkcji **Export** , jak w
 
-**eksport wartości logicznej wywołania zwrotnego** AFunction ( **używający HDC**, `int`**);**
+**eksport wartości logicznej wywołania zwrotnego** AFunction ( **używający HDC**, `int` **);**
 
 Aby spowodować, że kompilator emituje właściwy rekord eksportu do eksportu przez nazwę bez aliasowania. Działa to w przypadku większości potrzeb. W przypadku niektórych specjalnych przypadków, takich jak Eksportowanie funkcji przez numer porządkowy lub alias eksportu, nadal trzeba użyć instrukcji **eksports** w pliku definicji modułu.
 
@@ -5767,7 +5767,7 @@ Określa nowy kierunek łuku. Ten parametr może mieć jedną z następujących 
 
 - AD_CLOCKWISE obrazki narysowane zgodnie z ruchem wskazówek zegara.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa stary kierunek łuku, jeśli to się powiedzie; w przeciwnym razie 0.
 
@@ -5811,7 +5811,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
 *crColor*<br/>
 Określa nowy kolor tła.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni kolor tła jako wartość koloru RGB. Jeśli wystąpi błąd, zwracana wartość to 0x80000000.
 
@@ -5838,7 +5838,7 @@ Określa tryb, który ma być ustawiony. Ten parametr może mieć jedną z nast�
 
 - PRZEZROCZYSTe tło nie jest zmieniane przed rysowaniem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni tryb w tle.
 
@@ -5874,7 +5874,7 @@ Określa, w jaki sposób nowy prostokąt będzie połączony z prostokątem skum
 
 - DCB_ENABLE włączyć akumulacji powiązań. (Ustawienie domyślne akumulacji powiązań jest wyłączone).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący stan prostokąta ograniczenia, jeśli funkcja się powiedzie. Podobnie jak *flagi*, wartość zwracana może być kombinacją wartości **DCB_** :
 
@@ -5911,7 +5911,7 @@ Określa współrzędną y (w jednostkach urządzeń) nowego źródła. Ta warto
 *moment*<br/>
 Określa współrzędne x i y nowego źródła. Każda wartość musi należeć do zakresu 0-7. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia pochodzenie pędzla w jednostkach urządzeń.
 
@@ -5934,7 +5934,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 *lpColorAdjust*<br/>
 Wskazuje strukturę danych [COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) zawierającą wartości korekty koloru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -5955,7 +5955,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 *crColor*<br/>
 Określa nowy kolor pędzla.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana określa poprzedni kolor pędzla kontrolera domeny jako wartość COLORREF.
 
@@ -5978,7 +5978,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 *crColor*<br/>
 Określa nowy kolor pióra.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5999,7 +5999,7 @@ int SetGraphicsMode(int iMode);
 *iMode*<br/>
 Określa tryb grafiki. Aby zapoznać się z listą wartości, które może wykonać ten parametr, zobacz [Setgraphicsmode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca stary tryb grafiki po powodzeniu.
 
@@ -6028,7 +6028,7 @@ Układ kontekstu urządzenia i flagi kontrolki mapy bitowej. Może to być kombi
 |LAYOUT_RTL|Ustawia domyślny układ poziomy na od prawej do lewej.|
 |LAYOUT_LTR|Ustawia domyślny układ na od lewej do prawej.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku powodzenia, poprzedni układ kontekstu urządzenia.
 
@@ -6073,7 +6073,7 @@ Określa nowy tryb mapowania. Może to być jedna z następujących wartości:
 
 - MM_TWIPS każda jednostka logiczna jest konwertowana na 1/20 punktu. (Ponieważ punkt jest 1/72 cala, twip ma 1/1440 cm). Dodatnia x to prawo; dodatnia wartość y jest nieaktualna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni tryb mapowania.
 
@@ -6103,7 +6103,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
 *dwFlag*<br/>
 Określa, czy Maper czcionek próbuje dopasować wysokość i Szerokość obrazu czcionki do urządzenia. Gdy ta wartość jest ASPECT_FILTERING, mapowanie wybiera tylko czcionki, których proporcje x-proporcje i y są dokładnie zgodne z tymi określonymi urządzeniami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia wartość flagi mapowania czcionek.
 
@@ -6128,7 +6128,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 *fMiterLimit*<br/>
 Określa nowy limit ścięcia dla kontekstu urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -6182,7 +6182,7 @@ Wartość RGB COLORREF, która określa kolor używany do malowania punktu. Aby 
 *moment*<br/>
 Określa logiczne współrzędne x i y punktu, który ma zostać ustawiony. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość RGB dla koloru, w którym punkt jest rzeczywiście malowany. Ta wartość może się różnić od określonego przez *crColor* , jeśli jest używane przybliżenie tego koloru. Jeśli funkcja nie powiedzie się (Jeśli punkt znajduje się poza obszarem przycinania), zwracana wartość to-1.
 
@@ -6221,7 +6221,7 @@ Określa kolor, który ma być używany do malowania punktu.
 *moment*<br/>
 Określa logiczne współrzędne x i y punktu, który ma zostać ustawiony. Dla tego parametru można przekazać strukturę danych [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -6242,7 +6242,7 @@ int SetPolyFillMode(int nPolyFillMode);
 *nPolyFillMode*<br/>
 Określa nowy tryb wypełniania. Ta wartość może być ALTERNATYWą lub ZAMKNIĘCIEm. Domyślny tryb ustawiany w systemie Windows jest ALTERNATYWą.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni tryb wypełniania, jeśli powodzenie; w przeciwnym razie 0.
 
@@ -6297,7 +6297,7 @@ Określa nowy tryb rysowania. Może to być dowolna z następujących wartości:
 
 - R2_NOTXORPEN piksel jest odwrotnością R2_XORPEN koloru (ostatni piksel = NOT).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni tryb rysowania.
 
@@ -6334,7 +6334,7 @@ Określa tryb rozciągania. Może to być dowolna z następujących wartości:
 |STRETCH_ORSCANS|**Windows 95/98**: taki sam jak WHITEONBLACK|
 |WHITEONBLACK|Wykonuje wartość logiczną lub operacji przy użyciu wartości koloru dla usuniętych i istniejących pikseli. Jeśli mapa bitowa jest mapą bitową, ten tryb zachowuje białe piksele na kosztach czarnych pikseli.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni tryb rozciągania. Może być STRETCH_ANDSCANS, STRETCH_DELETESCANS lub STRETCH_ORSCANS.
 
@@ -6381,7 +6381,7 @@ Trzecia kategoria określa, czy bieżące położenie jest aktualizowane po zapi
 
 - TA_UPDATECP aktualizuje bieżące położenie x po każdym wywołaniu funkcji Text-Output. Nowa pozycja znajduje się po prawej stronie prostokąta granicy tekstu. Gdy ta flaga jest ustawiona, współrzędne określone w wywołaniach funkcji składowej `TextOut` są ignorowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienie wyrównania tekstu, jeśli zostało wykonane pomyślnie. Niski priorytet zawiera ustawienie poziomy, a w polu High-Order bajt znajduje się ustawienie pionowe. w przeciwnym razie 0.
 
@@ -6402,7 +6402,7 @@ int SetTextCharacterExtra(int nCharExtra);
 *nCharExtra*<br/>
 Określa ilość dodatkowego miejsca (w jednostkach logicznych), która ma zostać dodana do każdego znaku. Jeśli bieżący tryb mapowania nie jest `MM_TEXT`, *nCharExtra* jest przekształcony i zaokrąglany do najbliższego piksela.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kwota poprzedniego odstępu między znakami.
 
@@ -6423,7 +6423,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 *crColor*<br/>
 Określa kolor tekstu jako wartość koloru RGB.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość RGB dla poprzedniego koloru tekstu.
 
@@ -6455,7 +6455,7 @@ Określa łączne dodatkowe miejsce, które ma zostać dodane do wiersza tekstu 
 *nBreakCount*<br/>
 Określa liczbę znaków przerwy w wierszu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeden, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -6496,7 +6496,7 @@ Określa zakres y okienka ekranu (w jednostkach urządzenia).
 *zmienia*<br/>
 Określa zakres x i y okienka ekranu (w jednostkach urządzenia).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie zakresy okienka ekranu jako obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) . Gdy wystąpi błąd, współrzędne x i y zwróconego obiektu `CSize` są ustawione na 0.
 
@@ -6540,7 +6540,7 @@ Określa współrzędną y (w jednostkach urządzeń) pochodzenia okienka ekranu
 *moment*<br/>
 Określa początek okienka ekranu. Wartości muszą mieścić się w zakresie układu współrzędnych urządzenia. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia część okienka ekranu (we współrzędnych urządzenia) jako obiekt `CPoint`.
 
@@ -6577,7 +6577,7 @@ Określa zakres y (w jednostkach logicznych) okna.
 *zmienia*<br/>
 Określa zakresy x i y (w jednostkach logicznych) okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie zakresy okna (w jednostkach logicznych) jako obiekt `CSize`. Jeśli wystąpi błąd, współrzędne x i y zwróconego obiektu `CSize` są ustawione na 0.
 
@@ -6628,7 +6628,7 @@ Określa logiczną współrzędną y nowego źródła okna.
 *moment*<br/>
 Określa współrzędne logiczne nowego źródła okna. Można przekazać strukturę `POINT` lub obiekt `CPoint` dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie Źródło okna jako obiekt `CPoint`.
 
@@ -6651,7 +6651,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 *rXform*<br/>
 Odwołanie do struktury [Xform](/windows/win32/api/wingdi/ns-wingdi-xform) zawierającej dane transformacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość różną od zera.
 
@@ -6680,7 +6680,7 @@ Wskazuje strukturę [DOCINFO](/windows/win32/api/wingdi/ns-wingdi-docinfow) zawi
 *lpszDocName*<br/>
 Wskaźnik na ciąg zawierający nazwę pliku dokumentu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest większa od zera. Ta wartość jest identyfikatorem zadania drukowania dla dokumentu.
 
@@ -6708,7 +6708,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby przygotować sterownik druka
 int StartPage();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Większe niż lub równe 0, jeśli funkcja jest pomyślna lub wartość ujemna, jeśli wystąpił błąd.
 
@@ -6804,7 +6804,7 @@ Określa operację rastrową, która ma być wykonana. Kody operacji rastrowych 
 
 - WHITENESS włącza wszystkie białe dane wyjściowe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli mapa bitowa jest rysowana; w przeciwnym razie 0.
 
@@ -6832,7 +6832,7 @@ Zamyka wszystkie otwarte figury w ścieżce, rysuje kontur ścieżki przy użyci
 BOOL StrokeAndFillPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -6848,7 +6848,7 @@ Renderuje określoną ścieżkę przy użyciu bieżącego pióra.
 BOOL StrokePath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -6905,7 +6905,7 @@ Określa współrzędną x pozycji początkowej, z której są rozwijane karty (
 *str*<br/>
 Obiekt `CString`, który zawiera określone znaki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wymiary ciągu (w jednostkach logicznych) jako obiekt `CSize`.
 
@@ -6951,7 +6951,7 @@ Określa liczbę znaków w ciągu.
 *str*<br/>
 Obiekt `CString`, który zawiera znaki do narysowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -7015,7 +7015,7 @@ Określa wysokość (w jednostkach logicznych) prostokąta źródłowego.
 *clrTransparent*<br/>
 Kolor RGB w źródłowej mapie bitowej ma być traktowany jako przezroczysty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -7049,7 +7049,7 @@ Ponownie definiuje bieżącą ścieżkę jako obszar, który będzie rysowany w 
 BOOL WidenPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 

@@ -2,18 +2,18 @@
 title: /OUT (DUMPBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /out
+- /out_dumpbin
 helpviewer_keywords:
 - /OUT dumpbin option
 - OUT dumpbin option
 - -OUT dumpbin option
 ms.assetid: 984f9ab6-685f-480b-a515-69abe9d83a65
-ms.openlocfilehash: 7f102a6bd43424f3d0e0f607bc9038d9ab351768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63f32582031e862599416278c53db5aa6ea48a0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320126"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439143"
 ---
 # <a name="out-dumpbin"></a>/OUT (DUMPBIN)
 
@@ -23,10 +23,10 @@ ms.locfileid: "62320126"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja określa *filename* dla danych wyjściowych. Domyślnie DUMPBIN Wyświetla informacje do wyjścia standardowego.
+Ta opcja określa *nazwę pliku* dla danych wyjściowych. Domyślnie polecenia DUMPBIN wyświetla informacje w standardowym wyjściu.
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje DUMPBIN](dumpbin-options.md)

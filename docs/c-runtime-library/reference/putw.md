@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949749"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443725"
 ---
 # <a name="_putw"></a>_putw
 
@@ -53,7 +52,7 @@ int _putw(
 *binint*<br/>
 Binarna liczba całkowita, która ma być wyjściowa.
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -64,13 +63,13 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_putw** zapisuje wartość binarną typu **int** do bieżącej pozycji *strumienia.* **_putw** nie wpływa na wyrównanie elementów w strumieniu ani nie przyjmuje żadnych specjalnych wyrównania. **_putw** jest przede wszystkim dla zgodności z poprzednimi bibliotekami. Problemy z przenośnością mogą wystąpić w przypadku **_putw** , ponieważ rozmiar **int** i porządkowanie bajtów w ramach **int** różnią się w różnych systemach.
+Funkcja **_putw** zapisuje wartość binarną typu **int** do bieżącej pozycji *strumienia.* **_putw** nie wpływa na wyrównanie elementów w strumieniu ani nie przyjmuje żadnych specjalnych wyrównania. **_putw** jest przede wszystkim zgodne z poprzednimi bibliotekami. Mogą wystąpić problemy z przenośnością **_putw** , ponieważ rozmiar **int** i porządkowanie bajtów w ramach **int** różnią się w różnych systemach.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putw**|\<stdio.h>|
+|**_putw**|\<stdio. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -116,7 +115,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

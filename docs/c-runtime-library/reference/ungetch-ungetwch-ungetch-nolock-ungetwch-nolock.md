@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945910"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443746"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -80,22 +79,22 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*s*<br/>
 Znak do wypchnięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie funkcje zwracają znak *c* , jeśli to się powiedzie. Jeśli wystąpi błąd, **_ungetch** zwraca wartość **EOF** , a **_ungetwch** zwraca **WEOF**.
+Obie funkcje zwracają znak *c* , jeśli to się powiedzie. Jeśli wystąpi błąd, **_ungetch** zwraca wartość **EOF** i **_ungetwch** zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje wypychają znak *c* z powrotem do konsoli, co sprawia, że *c* jest następnym znakiem odczytywanym przez **_getch** lub **_getche** (lub **_getwch** lub **_getwche**). **_ungetch** i **_ungetwch** kończą się niepowodzeniem, jeśli są wywoływane więcej niż raz przed następnym odczytem. Argument *c* nie może być znakiem **EOF** (lub **WEOF**).
+Te funkcje wypychają znak *c* z powrotem do konsoli, co powoduje, że *c* będzie następną literą odczytywaną przez **_getch** lub **_getche** (lub **_getwch** lub **_getwche**). **_ungetch** i **_ungetwch** się nie powieść, jeśli są wywoływane więcej niż raz przed następnym odczytem. Argument *c* nie może być znakiem **EOF** (lub **WEOF**).
 
 Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -104,7 +103,7 @@ Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chro
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ungetch**, **_ungetch_nolock**|\<conio.h>|
+|**_ungetch**, **_ungetch_nolock**|\<CONIO. h >|
 |**_ungetwch**, **_ungetwch_nolock**|\<CONIO. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854872"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422403"
 ---
 # <a name="ltutilitygt-operators"></a>Operatory&gt; &lt;narzędzi
 
@@ -48,7 +48,7 @@ Obiekt typu `pair`.
 *prawa*\
 Obiekt typu `pair`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli pary nie są równe; **wartość false** , jeśli pary są równe.
 
@@ -120,7 +120,7 @@ Obiekt typu `pair`.
 *prawa*\
 Obiekt typu `pair`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli pary są równe; **Fałsz** , jeśli `pair`s nie są równe.
 
@@ -183,7 +183,7 @@ Obiekt typu `pair` po lewej stronie operatora.
 *prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli `pair` po lewej stronie operatora jest ściśle mniejsza niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -260,7 +260,7 @@ Obiekt typu `pair` po lewej stronie operatora.
 *prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli `pair` po lewej stronie operatora jest mniejszy lub równy `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -345,7 +345,7 @@ Obiekt typu `pair` po lewej stronie operatora.
 *prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli `pair` po lewej stronie operatora jest ściśle większa niż `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -432,7 +432,7 @@ Obiekt typu `pair` po lewej stronie operatora.
 *prawa*\
 Obiekt typu `pair` po prawej stronie operatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli `pair` po lewej stronie operatora jest większy lub równy `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 

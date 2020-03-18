@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876177"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420723"
 ---
 # <a name="ltthreadgt-operators"></a>Operatory&gt; wątku &lt;
 
@@ -51,7 +51,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `!(Left < Right)`
 
@@ -77,7 +77,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `Right < Left`
 
@@ -103,7 +103,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `!(Right < Left)`
 
@@ -129,7 +129,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli *Left* poprzedza *prawo* w całkowitej kolejności; w przeciwnym razie **false**.
 
@@ -157,7 +157,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `!(Left == Right)`
 
@@ -183,7 +183,7 @@ Obiekt `thread::id` po lewej stronie.
 *Prawa*\
 Właściwy `thread::id` obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli dwa obiekty reprezentują ten sam wątek wykonywania lub jeśli żaden z obiektów nie reprezentuje wątku wykonywania; w przeciwnym razie **false**.
 
@@ -209,7 +209,7 @@ Obiekt [basic_ostream](../standard-library/basic-ostream-class.md) .
 *Identyfikator*\
 Obiekt `thread::id`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 *Ostr*.
 
@@ -219,6 +219,6 @@ Ta funkcja wstawia *Identyfikator* do *ostr*.
 
 Jeśli dwa `thread::id` obiekty porównują równe, wstawiona tekstowa reprezentacja tych obiektów jest taka sama.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [> wątku \<](../standard-library/thread.md)

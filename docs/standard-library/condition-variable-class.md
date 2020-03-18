@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872418"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421885"
 ---
 # <a name="condition_variable-class"></a>condition_variable — Klasa
 
@@ -37,7 +37,7 @@ Użyj klasy `condition_variable`, aby poczekać na zdarzenie, gdy masz `mutex` t
 class condition_variable;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Konstruktorzy
 

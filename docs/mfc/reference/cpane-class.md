@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883936"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421073"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 
@@ -150,7 +150,7 @@ Klasa `CPane` jest ulepszeniem [klasy CControlBar](../../mfc/reference/ccontrolb
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -299,7 +299,7 @@ podczas Liczba elementów, dla których należy przydzielić magazyn.
 *cbElement*<br/>
 podczas Rozmiar, w bajtach, elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość FALSE, jeśli alokacja pamięci nie powiedzie się; w przeciwnym razie wartość TRUE.
 
@@ -311,7 +311,7 @@ Określa, czy okienko jest wymienione na liście wygenerowanej przez środowisko
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostanie wyświetlone na liście. w przeciwnym razie FALSE. Implementacja podstawowa zawsze zwraca wartość TRUE.
 
@@ -332,7 +332,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 *rectRequired*<br/>
 podczas Wymagany prostokąt.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różnica szerokości i wysokości między *rectRequired* i bieżącym prostokątem okna.
 
@@ -383,7 +383,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 *bVertDock*<br/>
 podczas Ma wartość TRUE, jeśli okienko jest zadokowane w pionie, w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślna implementacja tej metody zwraca rozmiar (0, 0).
 
@@ -404,7 +404,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 *pDockBar*<br/>
 podczas Określa okienko, w którym ma zostać zadokowane to okienko.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli to okienko może być zadokowane w określonym okienku dokującym; w przeciwnym razie FALSE.
 
@@ -422,7 +422,7 @@ Określa, czy okienko można przekonwertować na dokument z kartami.
 virtual BOOL CanBeTabbedDocument() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko można przekonwertować na dokument z kartami. w przeciwnym razie FALSE.
 
@@ -502,7 +502,7 @@ podczas Określa styl okienka. Aby uzyskać więcej informacji, zobacz [CBasePan
 *pContext*<br/>
 [in. out] Określa kontekst tworzenia okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
@@ -525,7 +525,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 *rectInitial*<br/>
 podczas Określa początkowy rozmiar i położenie, we współrzędnych ekranu okna mini-frame do utworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowo utworzone okno mini-frame.
 
@@ -577,7 +577,7 @@ podczas Określa styl okienka. Aby uzyskać więcej informacji, zobacz [CBasePan
 *pContext*<br/>
 [in. out] Określa kontekst tworzenia dla okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
@@ -600,7 +600,7 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 *pDockBar*<br/>
 podczas Określa okienko podstawowe, do którego ma zostać zadokowane to okienko.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
@@ -635,7 +635,7 @@ podczas Określa metodę dokowania do użycia. Dostępne są następujące opcje
 |DM_RECT|Okienko jest zadokowane w regionie, który jest określony przez *lpRect*.|
 |DM_STANDARD|Gdy użyjesz tej opcji, struktura rysuje okienko jako ramkę konturową podczas przenoszenia.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
@@ -656,7 +656,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 *bWasDocked*<br/>
 podczas Wartość TRUE, jeśli okienko zostało pomyślnie zadokowane; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zawsze zwraca **ten** wskaźnik.
 
@@ -698,7 +698,7 @@ podczas Ignoruj.
 *bOuterEdge*<br/>
 podczas Jeśli wartość jest równa TRUE, a po stronie są inne okienka było dokować określone przez *dwAlignment*, okienko jest zadokowane poza innymi okienkami bliżej krawędzi ramki nadrzędnej. W przypadku wartości FALSE okienko jest zadokowane bliżej środka obszaru klienckiego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość FALSE, jeśli nie można utworzyć podziału okienka ( [Klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)); w przeciwnym razie wartość TRUE.
 
@@ -712,7 +712,7 @@ Wskazuje, czy można zadokować inne okienko w tym samym wierszu, w którym bie�
 virtual BOOL DoesAllowSiblingBars() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli to okienko może zostać zadokowane do innego okienka w tym samym wierszu, co sama; w przeciwnym razie FALSE.
 
@@ -744,7 +744,7 @@ podczas Określa metodę dokowania, która ma być używana, gdy okienko jest sw
 *bShow*<br/>
 podczas Wartość TRUE, aby wyświetlić okienko po przekroczeniu; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie przepływające lub nie można go wystawić, ponieważ [CBasePane:: onfloat](../../mfc/reference/cbasepane-class.md#canfloat) zwraca wartość false; w przeciwnym razie FALSE.
 
@@ -760,7 +760,7 @@ Zwraca wartość (w pikselach), którą okienko można rozwinąć.
 virtual int GetAvailableExpandSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli okienko jest zadokowane w poziomie, wartość zwracana jest dostępna szerokość; w przeciwnym razie wartość zwracana jest dostępna wysokość.
 
@@ -774,7 +774,7 @@ Zwraca wartość (w pikselach), którą okienko można zmniejszyć.
 virtual int GetAvailableStretchSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kwota w pikselach, którą okienko można zmniejszyć. Jeśli okienko jest zadokowane w poziomie, ta kwota jest dostępną szerokością; w przeciwnym razie jest to dostępna wysokość.
 
@@ -790,7 +790,7 @@ Zwraca szerokość obramowania okienka.
 CRect GetBorders() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który zawiera bieżącą Szerokość (w pikselach) każdej strony okienka. Na przykład wartość elementu członkowskiego `left` obiektu `CRect` to szerokość lewej krawędzi.
 
@@ -806,7 +806,7 @@ Zwraca punkt *aktywny* dla okienka.
 CPoint GetClientHotSpot() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -820,7 +820,7 @@ Zwraca wiersz dokowania ( [Klasa CDockingPanesRow](../../mfc/reference/cdockingp
 CDockingPanesRow* GetDockSiteRow() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CDockingPanesRow`* wskazuje wiersz dokowania, w którym znajduje się okienko zadokowane, lub wartość NULL, jeśli okienko nie jest zadokowane.
 
@@ -832,7 +832,7 @@ Określa, czy okienko jest w trybie wiersza wyłącznego.
 virtual BOOL GetExclusiveRowMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko jest w trybie wiersza wyłącznego; w przeciwnym razie FALSE.
 
@@ -848,7 +848,7 @@ Zwraca punkt aktywny, który jest przechowywany w źródłowym obiekcie `CMFCDra
 CPoint GetHotSpot() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -923,7 +923,7 @@ podczas Określa czułość dokowania. Na przykład okienko przenoszone w ciągu
 *ppTargetBar*<br/>
 podczas Gdy metoda zwraca, *ppTargetBar* zawiera wskaźnik do obiektu, do którego bieżące okienko powinno być zadokowane, lub wartość null, jeśli nie ma potrzeby dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna z następujących wartości AFX_CS_STATUS:
 
@@ -942,7 +942,7 @@ Określa, czy okienko jest przenoszone.
 virtual BOOL IsDragMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko jest przenoszone; w przeciwnym razie FALSE.
 
@@ -956,7 +956,7 @@ Określa, czy okienko znajduje się w wielookienkowym oknie ramek ( [Klasa CMult
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko znajduje się w wielookienkowym oknie ramek; w przeciwnym razie FALSE.
 
@@ -982,7 +982,7 @@ podczas Obiekt `CRect`, który jest używany do porównania.
 *bWindowRect*<br/>
 podczas Jeśli wartość jest równa TRUE, przyjmuje się, że *prostokąt* zawiera współrzędne ekranu; w przypadku wartości FALSE przyjmuje się, że *prostokąt* zawiera współrzędne klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -996,7 +996,7 @@ Określa, czy rozmiar okienka jest zmienny.
 virtual BOOL IsResizable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli rozmiar okienka jest zmienny; w przeciwnym razie FALSE.
 
@@ -1016,7 +1016,7 @@ Określa, czy okienko zostało wstawione do kontrolki Karta okna z kartami.
 virtual BOOL IsTabbed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okienko jest z zakładkami; w przeciwnym razie FALSE.
 
@@ -1046,7 +1046,7 @@ podczas Indeks profilu.
 *uiID*<br/>
 podczas Identyfikator okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli stan okienka został pomyślnie załadowany; w przeciwnym razie FALSE.
 
@@ -1100,7 +1100,7 @@ podczas Określa wyrównanie okienka.
 *nOffset*<br/>
 podczas Kwota (w pikselach), przez którą ma zostać przeniesione okienko i wirtualny prostokąt.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1138,7 +1138,7 @@ podczas W przypadku wartości TRUE ta metoda ignoruje Minimalny dozwolony rozmia
 *hdwp*<br/>
 podczas Nieużywane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CSize`, który zawiera różnice szerokości i wysokości między nowym i starym prostokątem (starym prostokątem- *rectNew*).
 
@@ -1243,7 +1243,7 @@ podczas Określa prostokąt dokowania.
 *dockMethod*<br/>
 podczas Określa metodę dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko może być zadokowane. Jeśli funkcja zwraca wartość FALSE, operacja dokowania zostanie przerwana.
 
@@ -1269,7 +1269,7 @@ podczas Określa położenie i rozmiar okienka, gdy jest w stanie przepływając
 *dockMethod*<br/>
 podczas Określa metodę dokowania okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okienko może być wypływane; w przeciwnym razie FALSE.
 
@@ -1302,7 +1302,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 *moment*<br/>
 podczas Określa lokalizację menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli menu może być wyświetlane; w przeciwnym razie FALSE.
 
@@ -1346,7 +1346,7 @@ podczas Indeks profilu.
 *uiID*<br/>
 podczas Identyfikator okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli stan został pomyślnie zapisany; w przeciwnym razie FALSE.
 
@@ -1541,7 +1541,7 @@ podczas Kwota, w pikselach, do rozciągnięcia okienka. Aby zmniejszyć okienko,
 *hdwp*<br/>
 podczas Nieużywane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rzeczywista ilość (w pikselach), o której okienko zostało rozciągnięte.
 

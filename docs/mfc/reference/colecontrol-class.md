@@ -335,11 +335,11 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855767"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421591"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -351,7 +351,7 @@ Zaawansowana Klasa bazowa służąca do opracowywania formantów OLE.
 class COleControl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883850"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419001"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set operatory&gt;
 
@@ -22,7 +22,7 @@ ms.locfileid: "78883850"
 ## <a name="op_neq"></a>operator! =
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Testuje, czy obiekt hash_set po lewej stronie operatora nie jest równy obiektowi hash_set po prawej stronie.
 
@@ -38,7 +38,7 @@ Obiekt typu `hash_set`.
 *prawa*\
 Obiekt typu `hash_set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli hash_sets nie są równe; **wartość false** , jeśli hash_sets są równe.
 
@@ -90,7 +90,7 @@ The hash_sets hs1 and hs3 are equal.
 ## <a name="op_eq_eq"></a>operator = =
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Testuje, czy obiekt hash_set po lewej stronie operatora jest równy obiektowi hash_set po prawej stronie.
 
@@ -106,7 +106,7 @@ Obiekt typu `hash_set`.
 *prawa*\
 Obiekt typu `hash_set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli hash_set po lewej stronie operatora jest równy hash_set po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -156,7 +156,7 @@ The hash_sets s1 and s3 are equal.
 ## <a name="op_neq_hash_multiset"></a>operator! = (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Testuje, czy obiekt hash_multiset po lewej stronie operatora nie jest równy obiektowi hash_multiset po prawej stronie.
 
@@ -172,7 +172,7 @@ Obiekt typu `hash_multiset`.
 *prawa*\
 Obiekt typu `hash_multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli hash_multisets nie są równe; **wartość false** , jeśli hash_multisets są równe.
 
@@ -222,7 +222,7 @@ The hash_multisets hs1 and hs3 are equal.
 ## <a name="op_eq_eq_hash_multiset"></a>operator = = (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_set](../standard-library/unordered-set-class.md).
 
 Testuje, czy obiekt hash_multiset po lewej stronie operatora jest równy obiektowi hash_multiset po prawej stronie.
 
@@ -238,7 +238,7 @@ Obiekt typu `hash_multiset`.
 *prawa*\
 Obiekt typu `hash_multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli hash_multiset po lewej stronie operatora jest równy hash_multiset po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<hash_set>](../standard-library/hash-set.md)

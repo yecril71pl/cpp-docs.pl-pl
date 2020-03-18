@@ -1,39 +1,37 @@
 ---
 title: Obsługa błędów (CRT)
 ms.date: 11/04/2016
-f1_keywords:
-- c.errors
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289874"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443319"
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 
-Użyj tych procedur, aby obsługiwać błędy programu.
+Użyj tych procedur, aby obsłużyć błędy programu.
 
 ## <a name="error-handling-routines"></a>Procedury obsługi błędów
 
-|Procedura|Zastosowanie|
+|Procedura|Użycie|
 |-------------|---------|
-|[asercja](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Test dla programowania błędy logiczne; dostępne w wersji wydania i debugowe wersji biblioteki wykonawczej.|
-|[_ASSERT, _asserte —](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak **asercja**, ale jest dostępna tylko w wersji debugowania bibliotek wykonawczych.|
-|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetowanie wskaźnika błędów. Wywoływanie **rewind** lub zamyka strumień również resetuje wskaźnik błędu.|
-|[_eof](../c-runtime-library/reference/eof.md)|Sprawdź, czy koniec pliku operacji We/Wy niskiego poziomu.|
-|[feof](../c-runtime-library/reference/feof.md)|Test na końcu pliku. Koniec pliku jest również wskazane, gdy **_przeczytaj** zwraca wartość 0.|
-|[ferror](../c-runtime-library/reference/ferror.md)|Sprawdź błędy We/Wy strumienia.|
-|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Generowanie raportu, podobnie jak **printf**, ale jest dostępna tylko w wersji debugowania bibliotek wykonawczych.|
-|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje **__error_mode** do określenia lokalizacji innej niż domyślna, w którym C, czas wykonywania zapisuje komunikat o błędzie Wystąpił błąd prawdopodobnie zakończy się program.|
-|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia element obsługujący dla wywołania czystą funkcję wirtualną.|
+|[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Testowanie błędów logiki programowania; dostępne zarówno w wersji wersji, jak i debugowej biblioteki wykonawczej.|
+|[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak w przypadku **potwierdzeń**, ale dostępne tylko w wersjach debugowych biblioteki wykonawczej.|
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetuj wskaźnik błędu. Wywołanie funkcji **szybkiego przewijania** lub zamknięcia strumienia powoduje także zresetowanie wskaźnika błędu.|
+|[_eof](../c-runtime-library/reference/eof.md)|Sprawdź koniec pliku w operacji we/wy niskiego poziomu.|
+|[feof](../c-runtime-library/reference/feof.md)|Testuj pod kątem końca pliku. Koniec pliku jest również wskazywany, gdy **_read** zwraca 0.|
+|[ferror](../c-runtime-library/reference/ferror.md)|Testowanie błędów we/wy strumienia.|
+|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Wygeneruj raport podobny do **printf**, ale jest dostępny tylko w wersjach debugowania biblioteki wykonawczej.|
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje **__error_mode** , aby określić lokalizację niedomyślną, w której czas wykonywania C zapisuje komunikat o błędzie, który może spowodować zakończenie tego programu.|
+|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia program obsługi dla czystego wywołania funkcji wirtualnej.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)

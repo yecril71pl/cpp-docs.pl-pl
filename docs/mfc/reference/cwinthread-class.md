@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 43154e1ec4c6b856ad203a4b9ac49e4f4bcf9576
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866568"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421416"
 ---
 # <a name="cwinthread-class"></a>Klasa CWinThread
 
@@ -67,17 +67,17 @@ Reprezentuje wątek wykonywania w aplikacji.
 class CWinThread : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWinThread:: CWinThread](#cwinthread)|Konstruuje obiekt `CWinThread`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWinThread:: onthread](#createthread)|Uruchamia wykonywanie obiektu `CWinThread`.|
 |[CWinThread:: ExitInstance](#exitinstance)|Zastąpienie do oczyszczenia po zakończeniu wątku.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWinThread:: uchwyt operatora](#operator_handle)|Pobiera uchwyt obiektu `CWinThread`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWinThread:: m_bAutoDelete](#m_bautodelete)|Określa, czy obiekt ma zostać zniszczony podczas kończenia wątku.|
 |[CWinThread:: m_hThread](#m_hthread)|Dojście do bieżącego wątku.|
@@ -166,7 +166,7 @@ Określa rozmiar w bajtach stosu dla nowego wątku. Jeśli **wartość jest rów
 *lpSecurityAttrs*<br/>
 Wskazuje strukturę [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , która określa atrybuty zabezpieczeń wątku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wątek został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -194,7 +194,7 @@ Wywoływane przez platformę z w rzadko [przesłoniętej](#run) funkcji składow
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod zakończenia wątku; wartość 0 oznacza brak błędów, a wartości większe niż 0 wskazują na błąd. Tę wartość można pobrać, wywołując [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).
 
@@ -212,7 +212,7 @@ Jeśli aplikacja jest serwerem OLE, Wywołaj tę funkcję, aby pobrać wskaźnik
 virtual CWnd* GetMainWnd();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta funkcja zwraca wskaźnik do jednego z dwóch typów okien. Jeśli wątek jest częścią serwera OLE i ma obiekt, który znajduje się w miejscu aktywnym wewnątrz aktywnego kontenera, ta funkcja zwraca element członkowski danych [CWinApp:: m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) obiektu `CWinThread`.
 
@@ -234,7 +234,7 @@ Pobiera bieżący poziom priorytetu wątku tego wątku.
 int GetThreadPriority();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący poziom priorytetu wątku w ramach jego klasy priorytetu. Zwracana wartość będzie jedną z następujących elementów: od najwyższego priorytetu do najniższego.
 
@@ -262,7 +262,7 @@ Aby uzyskać więcej informacji na temat tych priorytetów, zobacz [SetThreadPri
 virtual BOOL InitInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -285,7 +285,7 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
 *pMsg*<br/>
 Wskazuje bieżący komunikat, który jest przetwarzany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli `OnIdle` powinien zostać wywołany po przetworzeniu komunikatu; w przeciwnym razie 0.
 
@@ -385,7 +385,7 @@ virtual BOOL OnIdle(LONG lCount);
 *lCount*<br/>
 Licznik jest zwiększany za każdym razem, `OnIdle` jest wywoływana, gdy kolejka komunikatów wątku jest pusta. Ta liczba jest resetowana do wartości 0 za każdym razem, gdy nowy komunikat jest przetwarzany. Za pomocą parametru *lCount* można określić względną długość czasu bezczynności wątku bez przetwarzania komunikatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, aby uzyskać więcej czasu bezczynności przetwarzania; 0, jeśli nie jest wymagany żaden dodatkowy czas przetwarzania.
 
@@ -409,7 +409,7 @@ Pobiera uchwyt obiektu `CWinThread`.
 operator HANDLE() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, uchwyt obiektu wątku; w przeciwnym razie wartość NULL.
 
@@ -439,7 +439,7 @@ Pierwszy parametr komunikatu.
 *lParam*<br/>
 Drugi parametr komunikatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -463,7 +463,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 Wskazuje [strukturę komunikatów](/windows/win32/api/winuser/ns-winuser-msg) zawierającą komunikat do przetworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli komunikat został w pełni przetworzony w `PreTranslateMessage` i nie powinien być przetwarzany jeszcze. Zero, jeśli komunikat powinien być przetwarzany w normalny sposób.
 
@@ -489,7 +489,7 @@ Określa kod punktu zaczepienia. Ta funkcja członkowska używa kodu do określe
 *lpMsg*<br/>
 Wskaźnik do [struktury komunikatów](/windows/win32/api/winuser/ns-winuser-msg)systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat jest przetwarzany; w przeciwnym razie 0.
 
@@ -517,7 +517,7 @@ Wskazuje nieobsługiwany wyjątek.
 *pMsg*<br/>
 Wskazuje [strukturę komunikatów](/windows/win32/api/winuser/ns-winuser-msg) zawierającą informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 -1, jeśli zostanie wygenerowany wyjątek WM_CREATE; w przeciwnym razie 0.
 
@@ -558,7 +558,7 @@ Wywołuje się, by wznowić wykonywanie wątku, który został wstrzymany przez 
 DWORD ResumeThread();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF` w przeciwnym razie. Jeśli wartość zwracana wynosi zero, bieżący wątek nie został wstrzymany. Jeśli wartość zwracana jest taka, wątek został wstrzymany, ale jest teraz ponownie uruchamiany. Każda wartość zwracana większa od jednej oznacza, że wątek pozostaje zawieszony.
 
@@ -574,7 +574,7 @@ Udostępnia domyślną pętlę komunikatów dla wątków interfejsu użytkownika
 virtual int Run();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość **int** zwracana przez wątek. Tę wartość można pobrać, wywołując [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).
 
@@ -615,7 +615,7 @@ Określa nowy poziom priorytetu wątku w ramach jego klasy priorytetu. Ten param
 
 Aby uzyskać więcej informacji na temat tych priorytetów, zobacz [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -631,7 +631,7 @@ Zwiększa liczbę wstrzymań bieżącego wątku.
 DWORD SuspendThread();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF` w przeciwnym razie.
 
@@ -639,7 +639,7 @@ Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF` w prze
 
 Jeśli którykolwiek wątek ma liczbę wstrzymań powyżej zero, ten wątek nie jest wykonywany. Wątek można wznowić, wywołując funkcję elementu członkowskiego [ResumeThread](#resumethread) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

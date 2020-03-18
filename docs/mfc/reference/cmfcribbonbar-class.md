@@ -189,11 +189,11 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883697"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420261"
 ---
 # <a name="cmfcribbonbar-class"></a>Klasa CMFCRibbonBar
 
@@ -207,7 +207,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCRibbonBar : public CPane
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -352,7 +352,7 @@ BOOL ActivateContextCategory(UINT uiContextID);
 *uiContextID*<br/>
 podczas Identyfikator kategorii kontekstu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli Kategoria kontekstowa z *uiContextIDem* zostanie znaleziona i aktywowana; w przeciwnym razie FALSE.
 
@@ -396,7 +396,7 @@ podczas Indeks lokalizacji kategorii liczony od zera.
 *pRTI*<br/>
 podczas Wskaźnik do klasy czasu wykonywania [klasy CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) w celu dynamicznego tworzenia kategorii wstążki w czasie wykonywania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
@@ -458,7 +458,7 @@ podczas Rozmiar dużego obrazu.
 *pRTI*<br/>
 podczas Wskaźnik do klasy środowiska uruchomieniowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonej kategorii lub wartość NULL, jeśli metoda `CreateObject` elementu *pRTI* nie może utworzyć określonej kategorii.
 
@@ -516,7 +516,7 @@ podczas Rozmiar małych obrazów.
 *sizeLargeImage*<br/>
 podczas Rozmiar dużych obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowej głównej kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
 
@@ -538,7 +538,7 @@ Tworzy kategorię Podgląd wydruku na pasku wstążki.
 CMFCRibbonCategory* AddPrintPreviewCategory();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowej kategorii wstążki, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
@@ -569,7 +569,7 @@ podczas Identyfikator zasobu listy obrazów dla kategorii.
 *sizeSmallImage*<br/>
 podczas Rozmiar obrazów dla elementów wstążki w kategorii.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowej kategorii, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
@@ -631,7 +631,7 @@ podczas Logiczna kombinacja stylów dla nowego okna.
 *nID*<br/>
 podczas Identyfikator nowego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno zostało utworzone; w przeciwnym razie FALSE.
 
@@ -669,7 +669,7 @@ podczas Logiczna kombinacja stylów dla nowego okna.
 *nID*<br/>
 podczas Identyfikator nowego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno zostało utworzone; w przeciwnym razie FALSE.
 
@@ -712,7 +712,7 @@ podczas Wskaźnik na przycisk menu paska narzędzi.
 *rectImage*<br/>
 podczas Prostokąt wyświetlania przycisku menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obraz został narysowany; w przeciwnym razie FALSE.
 
@@ -804,7 +804,7 @@ podczas Dane skojarzone z elementem wstążki.
 *bVisibleOnly*<br/>
 podczas TRUE, aby przeszukać tylko widoczne elementy wstążki; Wartość FALSE, aby przeszukać wszystkie elementy wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, jeśli ma określone dane i widoczność; w przeciwnym razie wartość NULL.
 
@@ -834,7 +834,7 @@ podczas TRUE, aby przeszukać tylko widoczne elementy wstążki; Wartość FALSE
 *bExcludeQAT*<br/>
 podczas PRAWDA, aby wykluczyć elementy paska narzędzi Szybki dostęp z poziomu wyszukiwania; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, jeśli ma określony identyfikator polecenia i wartości wyszukiwania. w przeciwnym razie wartość NULL.
 
@@ -857,7 +857,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 *dwData*<br/>
 podczas Dane skojarzone z kategorią wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) kategorii wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie-1.
 
@@ -879,7 +879,7 @@ Pobiera wskaźnik do aktywnej kategorii wstążki.
 CMFCRibbonCategory* GetActiveCategory() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnej kategorii wstążki; lub wartość NULL, jeśli żadna Kategoria nie jest aktywna.
 
@@ -897,7 +897,7 @@ Pobiera wskaźnik do przycisku aplikacji.
 CMFCRibbonApplicationButton* GetApplicationButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do przycisku aplikacji; lub wartość NULL, jeśli przycisk nie został ustawiony.
 
@@ -909,7 +909,7 @@ Pobiera wysokość obszaru podpisu dla paska wstążki.
 int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość (w pikselach) obszaru podpisu dla paska wstążki.
 
@@ -928,7 +928,7 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 *nIndex*<br/>
 podczas Indeks (liczony od zera) kategorii wstążki na liście kategorii wstążki, które znajdują się na pasku wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kategorii wstążki o określonym indeksie; w przeciwnym razie wartość NULL, jeśli *nIndex* jest poza zakresem.
 
@@ -940,7 +940,7 @@ Pobiera liczbę kategorii wstążki na pasku wstążki.
 int GetCategoryCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba kategorii wstążki na pasku wstążki.
 
@@ -952,7 +952,7 @@ Pobiera wysokość kategorii.
 int GetCategoryHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość kategorii.
 
@@ -973,7 +973,7 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 *pCategory*<br/>
 podczas Wskaźnik do kategorii wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) kategorii wstążki określony przez *pCategory*; lub-1, jeśli nie można odnaleźć kategorii wstążki.
 
@@ -995,7 +995,7 @@ podczas Identyfikator kontekstu kategorii wstążki.
 *strName*<br/>
 określoną Nazwa etykiety kategorii kontekstowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość FALSE, jeśli *uiContextID* była zerowa lub nie znaleziono podpisu kategorii kontekstowej.
 
@@ -1007,7 +1007,7 @@ Pobiera element wstążki, który jest obecnie usunięty.
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element wstążki, który jest obecnie usunięty. lub wartość NULL, jeśli żaden element wstążki nie jest obecnie upuszczony.
 
@@ -1043,7 +1043,7 @@ Pobiera flagi wskazujące, jaka część paska wstążki jest widoczna.
 DWORD GetHideFlags() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Flagi wskazujące, jaka część paska wstążki jest widoczna.
 
@@ -1083,7 +1083,7 @@ Pobiera bieżący poziom nawigacji, gdy użytkownik naciśnie wskazówki klawisz
 int GetKeyboardNavigationLevel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący poziom nawigacji, gdy użytkownik naciska porady klawiszy, które są zawarte na pasku wstążki. Poniższa tabela zawiera listę możliwych wartości zwracanych:
 
@@ -1103,7 +1103,7 @@ Pobiera bieżący obiekt nawigacyjny klawiatury na pasku wstążki.
 CObject* GetKeyboardNavLevelCurrent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący obiekt nawigacyjny klawiatury na pasku wstążki; w przeciwnym razie wartość NULL, jeśli żaden obiekt aktualnie nie wyświetla etykietek.
 
@@ -1119,7 +1119,7 @@ Pobiera nadrzędny obiekt nawigacyjny klawiatury na pasku wstążki.
 CObject* GetKeyboardNavLevelParent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nadrzędny obiekt nawigacyjny klawiatury na pasku wstążki; w przeciwnym razie wartość NULL.
 
@@ -1135,7 +1135,7 @@ Pobiera wskaźnik do głównej kategorii wstążki.
 CMFCRibbonCategory* GetMainCategory() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do głównej kategorii wstążki.
 
@@ -1151,7 +1151,7 @@ Pobiera prostokąt wyświetlania dla sekcji Commands paska narzędzi Szybki dost
 CRect GetQATCommandsLocation() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prostokąt wyświetlania dla sekcji Commands paska narzędzi Szybki dostęp.
 
@@ -1167,7 +1167,7 @@ Pobiera wskaźnik do elementu wstążki na pasku narzędzi Szybki dostęp, któr
 CMFCRibbonBaseElement* GetQATDroppedDown();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki na pasku narzędzi Szybki dostęp, który został usunięty z menu podręcznego.
 
@@ -1198,7 +1198,7 @@ Pobiera prostokąt wyświetlania dla paska narzędzi Szybki dostęp.
 CRect GetQuickAccessToolbarLocation() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prostokąt wyświetlania paska narzędzi Szybki dostęp.
 
@@ -1212,7 +1212,7 @@ Pobiera wartość procentową zmniejszenia rozmiaru w polu Szerokość ekranu ka
 int GetTabTrancateRatio() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zmniejszenie rozmiaru procentu w polu Szerokość ekranu kart kategorii.
 
@@ -1228,7 +1228,7 @@ Pobiera duży rozmiar szerokości etykietki narzędzia na pasku wstążki.
 int GetTooltipFixedWidthLargeImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Duży rozmiar szerokości etykietki narzędzia (w pikselach).
 
@@ -1244,7 +1244,7 @@ Pobiera regularny rozmiar szerokości etykietki narzędzia na pasku wstążki.
 int GetTooltipFixedWidthRegular() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Regularny rozmiar szerokości etykietki narzędzia (w pikselach).
 
@@ -1260,7 +1260,7 @@ Pobiera liczbę widocznych kategorii na pasku wstążki.
 int GetVisibleCategoryCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba widocznych kategorii na pasku wstążki.
 
@@ -1274,7 +1274,7 @@ Ukrywa wszystkie kategorie kontekstowe na pasku wstążki.
 BOOL HideAllContextCategories();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli co najmniej jedna kategoria kontekstu była ukryta; w przeciwnym razie FALSE.
 
@@ -1314,7 +1314,7 @@ podczas Wartość TRUE, aby przeszukać aktywną kategorię; Wartość FALSE, ab
 *bCheckPanelCaption*<br/>
 podczas Wartość TRUE umożliwia przetestowanie podpisu panelu wstążki przy użyciu punktu znajdującego się w nim. Wartość FALSE nie umożliwia przetestowania podpisu panelu wstążki z punktem znajdującym się w nim. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki znajdującego się w określonym punkcie; w przeciwnym razie wartość NULL, jeśli punkt nie znajduje się w elemencie wstążki.
 
@@ -1330,7 +1330,7 @@ Wskazuje, czy funkcja etykietek jest włączona.
 BOOL IsKeyTipEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli funkcja etykietki jest włączona; w przeciwnym razie FALSE.
 
@@ -1342,7 +1342,7 @@ Wskazuje, czy pasek wstążki jest podstawowym paskiem wstążki.
 virtual BOOL IsMainRibbonBar() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość TRUE.
 
@@ -1358,7 +1358,7 @@ Wskazuje, czy funkcja **Podgląd wydruku** jest włączona.
 BOOL IsPrintPreviewEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli funkcja **Podgląd wydruku** jest włączona. w przeciwnym razie FALSE.
 
@@ -1370,7 +1370,7 @@ Wskazuje, czy pasek narzędzi Szybki dostęp zawiera przyciski poleceń.
 BOOL IsQATEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi Szybki dostęp zawiera przyciski poleceń; w przeciwnym razie FALSE.
 
@@ -1384,7 +1384,7 @@ Wskazuje, czy pasek narzędzi Szybki dostęp znajduje się w przedziale lub na p
 BOOL IsQuickAccessToolbarOnTop() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli pasek narzędzi Szybki dostęp znajduje się na pasku wstążki; FAŁSZ, jeśli pasek narzędzi Szybki dostęp znajduje się na pasku wstążki.
 
@@ -1396,7 +1396,7 @@ Wskazuje, czy pasek wstążki został zamieniony na podpis okna głównego ramki
 BOOL IsReplaceFrameCaption() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli pasek wstążki zastępuje podpis głównego okna ramki; FAŁSZ, jeśli pasek wstążki znajduje się w podpisie głównego okna ramki.
 
@@ -1413,7 +1413,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 *pGroup*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość FALSE.
 
@@ -1429,7 +1429,7 @@ Wskazuje, czy opisy etykietki narzędzi są włączone.
 BOOL IsToolTipDescrEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli są włączone opisy etykietki narzędzia; FAŁSZ, jeśli opisy etykietki narzędzi są wyłączone.
 
@@ -1445,7 +1445,7 @@ Wskazuje, czy na pasku wstążki są włączone lub wyłączone etykietki narzę
 BOOL IsToolTipEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli są włączone etykietki narzędzi; FAŁSZ, jeśli etykietki narzędzi są wyłączone.
 
@@ -1457,7 +1457,7 @@ Wskazuje, czy ekran jest ustawiony na schemat kolorów systemu Windows Aero.
 BOOL IsTransparentCaption() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli schemat kolorów to Windows Aero; w przeciwnym razie FALSE.
 
@@ -1527,7 +1527,7 @@ BOOL OnSetAccData(long lVal);
 
 Long *lVal* indeks dostępnego obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wartość FALSE lub S_FALSE.
 
@@ -1550,7 +1550,7 @@ podczas *x*<br/>
 podczas *t*<br/>
 podczas *pHit*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1571,7 +1571,7 @@ podczas *x*<br/>
 podczas *t*<br/>
 podczas *pHit*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1597,7 +1597,7 @@ podczas Kod klucza wirtualnego naciśniętego klawisza.
 *lParam*<br/>
 podczas Flagi stanu klawiatury po naciśnięciu klawisza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zostało przetworzone zdarzenie naciśnięcia klawisza; w przeciwnym razie FALSE.
 
@@ -1625,7 +1625,7 @@ podczas Kod klucza wirtualnego do zwolnienia.
 *lParam*<br/>
 podczas Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zostało przetworzone zdarzenie naciśnięcia klawisza; w przeciwnym razie FALSE.
 
@@ -1654,7 +1654,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 podczas Wskaźnik na komunikat.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli wiadomość została przetworzona przez pasek wstążki; w przeciwnym razie FALSE.
 
@@ -1709,7 +1709,7 @@ BOOL RemoveCategory(int nIndex);
 *nIndex*<br/>
 podczas Indeks (liczony od zera) kategorii na liście kategorii wstążki, które znajdują się na pasku wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określona Kategoria wstążki została usunięta; w przeciwnym razie FALSE.
 
@@ -1735,7 +1735,7 @@ podczas Kategoria wstążki, która znajduje się na pasku wstążki.
 *bForceRestore*<br/>
 podczas PRAWDA, aby zmaksymalizować pasek wstążki, jeśli jest zminimalizowany; Wartość FALSE powoduje wyświetlenie aktywnej kategorii w oknie podręcznym, jeśli pasek wstążki jest zminimalizowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określona Kategoria została ustawiona jako aktywna Kategoria; w przeciwnym razie FALSE.
 
@@ -1810,7 +1810,7 @@ podczas Poradę dotyczącą klawiszy.
 *lpszMenuKeys*<br/>
 podczas Menu poradę dotyczącą klawiszy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ustawiono etykietki dla co najmniej jednego elementu wstążki; w przeciwnym razie FALSE.
 
@@ -2017,7 +2017,7 @@ virtual BOOL TranslateChar(UINT nChar);
 *nChar*<br/>
 podczas Kod znaku naciśnięcia klawisza użytkownika.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli kod znaku został przetworzony przez pasek wstążki; w przeciwnym razie FALSE.
 
@@ -2033,7 +2033,7 @@ Zwraca element z fokusem.
 virtual CMFCRibbonBaseElement* GetFocused();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu z fokusem lub wartości NULL.
 
@@ -2047,7 +2047,7 @@ Wskazuje, czy wstążka ma wygląd systemu Windows 7 (mały prostokątny aplikac
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wstążka ma wygląd systemu Windows 7; w przeciwnym razie FALSE.
 
@@ -2083,7 +2083,7 @@ Dojście do modułu, którego plik wykonywalny zawiera zasób. Jeśli *HINSTANCE
 *lpszXMLResID*<br/>
 Określa identyfikator zasobu (w postaci ciągu) z informacjami o pasku wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli ładowanie zakończyło się pomyślnie; w przeciwnym razie FALSE.
 
@@ -2102,7 +2102,7 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 *ppBuffer*<br/>
 Gdy ta funkcja zwraca, *ppBuffer* wskazuje bufor przydzielony przez tę metodę i zawiera informacje o pasku wstążki w formacie XML.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2121,7 +2121,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 *lpszFilePath*<br/>
 Określa plik wyjściowy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 

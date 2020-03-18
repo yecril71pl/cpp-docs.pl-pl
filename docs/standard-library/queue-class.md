@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890877"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419659"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -64,9 +64,9 @@ Istnieją trzy typy adapterów kontenerów zdefiniowane przez bibliotekę C++ st
 
 - [Klasa priority_queue](../standard-library/priority-queue-class.md) porządkuje swoje elementy, aby największy element zawsze znajduje się na górze. Obsługuje wstawianie elementu i inspekcję oraz usuwanie elementu Top. Dobrym analogicznym sposobem jest pogrupowanie osób, które są ułożone według wieku, wysokości lub innego kryterium.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -101,7 +101,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ostatni element kolejki. Jeśli kolejka jest pusta, wartość zwracana jest niezdefiniowana.
 
@@ -163,7 +163,7 @@ Testuje, czy kolejka jest pusta.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli kolejka jest pusta; **wartość false** , jeśli kolejka nie jest pusta.
 
@@ -211,7 +211,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy element kolejki. Jeśli kolejka jest pusta, wartość zwracana jest niezdefiniowana.
 
@@ -433,7 +433,7 @@ Zwraca liczbę elementów w kolejce.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość kolejki.
 

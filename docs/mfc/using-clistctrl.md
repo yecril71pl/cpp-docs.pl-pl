@@ -1,17 +1,15 @@
 ---
 title: Korzystanie z CListCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512904"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441975"
 ---
 # <a name="using-clistctrl"></a>Korzystanie z CListCtrl
 
@@ -22,7 +20,7 @@ W niektórych widokach użytkownicy mogą przeciągać ikony do różnych pozycj
 Aby uzyskać powiązane informacje, zobacz [Informacje o kontrolkach widoków list](/windows/win32/Controls/list-view-controls-overview) w Windows SDK.
 
 > [!NOTE]
->  Windows SDK odwołuje się do kontrolek listy jako "kontrolki widoku listy". To użycie elementu "View" nie odwołuje się do klas widoków MFC, `CListView`w szczególności. Aby uzyskać więcej informacji, zobacz [Lista kontrolek i widok listy](../mfc/list-control-and-list-view.md).
+>  Windows SDK odwołuje się do kontrolek listy jako "kontrolki widoku listy". To użycie elementu "View" nie odwołuje się do klas widoków MFC, szczególnie `CListView`. Aby uzyskać więcej informacji, zobacz [Lista kontrolek i widok listy](../mfc/list-control-and-list-view.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
@@ -52,6 +50,6 @@ Aby uzyskać powiązane informacje, zobacz [Informacje o kontrolkach widoków li
 
 - [Likwidowanie kontrolki listy](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

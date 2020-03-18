@@ -2,9 +2,8 @@
 title: /Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 ms.date: 09/05/2018
 f1_keywords:
-- /gr
+- /Gr
 - /Gv
-- /gz
 - /Gd
 - VC.Project.VCCLCompilerTool.CallingConvention
 helpviewer_keywords:
@@ -21,95 +20,96 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: eabb4e11715e03745e27911ccd654568d70b8352
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 92fd4f6ae4193e86edb114cc366e6d40e4208ca8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400500"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439662"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)
 
-Te opcje określają kolejność, która funkcja argumenty są wypychane na stos, czy wywołujący funkcję lub wywołana funkcja usuwa argumenty ze stosu na końcu wywołania i Konwencję dekorowania nazwy, której kompilator używa do identyfikowania poszczególne funkcje.
+Te opcje określają kolejność, w jakiej argumenty funkcji są wypychane na stosie, niezależnie od tego, czy funkcja wywołująca lub wywoływana funkcja usuwa argumenty ze stosu na końcu wywołania, oraz Konwencję Name-dekorowania nazwy, której kompilator używa do identyfikowania poszczególne funkcje.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Gd**<br/>
+> **/GD**<br/>
 > **/Gr**<br/>
-> **/Gv**<br/>
-> **/Gz**
+> **/GV**<br/>
+> **/GZ**
 
 ## <a name="remarks"></a>Uwagi
 
-**/GD —** , domyślne ustawienie określa [__cdecl](../../cpp/cdecl.md) konwencja wywołania dla wszystkich funkcji z wyjątkiem C++ funkcji Członkowskich i funkcji, które są oznaczone [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), lub [__vectorcall](../../cpp/vectorcall.md).
+**/GD**, ustawienie domyślne określa konwencję wywoływania [__cdecl](../../cpp/cdecl.md) dla wszystkich C++ funkcji z wyjątkiem funkcji składowych i funkcji, które są oznaczone [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)lub [__vectorcall](../../cpp/vectorcall.md).
 
-**GR** Określa `__fastcall` Konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych języka C++, funkcji o nazwie `main`i funkcje, które są oznaczone `__cdecl`, `__stdcall`, lub `__vectorcall`. Wszystkie `__fastcall` funkcje muszą mieć prototypy. Ta konwencja wywołania jest dostępna tylko w kompilatorach, których platformą docelową x86 i jest ignorowana przez kompilatory, których celem są inne architektury.
+**/Gr** określa konwencję wywoływania `__fastcall` dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych, funkcji o nazwie `main`i funkcji, które są oznaczone jako `__cdecl`, `__stdcall`lub `__vectorcall`. Wszystkie funkcje `__fastcall` muszą mieć prototypy. Ta konwencja wywołania jest dostępna tylko w kompilatorach przeznaczonych dla procesorów x86 i jest ignorowana przez kompilatory, które obsługują inne architektury.
 
-**/GZ** Określa `__stdcall` Konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych języka C++, funkcji o nazwie `main`i funkcje, które są oznaczone `__cdecl`, `__fastcall`, lub `__vectorcall`. Wszystkie `__stdcall` funkcje muszą mieć prototypy. Ta konwencja wywołania jest dostępna tylko w kompilatorach, których platformą docelową x86 i jest ignorowana przez kompilatory, których celem są inne architektury.
+**/GZ** określa konwencję wywoływania `__stdcall` dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych, funkcji o nazwie `main`i funkcji, które są oznaczone jako `__cdecl`, `__fastcall`lub `__vectorcall`. Wszystkie funkcje `__stdcall` muszą mieć prototypy. Ta konwencja wywołania jest dostępna tylko w kompilatorach przeznaczonych dla procesorów x86 i jest ignorowana przez kompilatory, które obsługują inne architektury.
 
-**GV** Określa `__vectorcall` konwencja wywołania dla wszystkich funkcji z wyjątkiem C++ elementów członkowskich, funkcji o nazwie `main`, funkcje z `vararg` listy argumentów zmiennych lub funkcji, które są oznaczone jako sprzeczne `__cdecl`, `__stdcall`, lub `__fastcall` atrybutu. Ta konwencja wywołania jest dostępna tylko na architekturach x86 i x64, które obsługują SSE2 i wyższych i jest ignorowana przez kompilatory, przeznaczonych dla architektury ARM.
+**/GV** określa konwencję wywoływania `__vectorcall` dla wszystkich funkcji, C++ z wyjątkiem funkcji składowych, funkcji o nazwie `main`, funkcji z listą argumentów zmiennej `vararg` lub funkcji, które są oznaczone przy użyciu atrybutu `__cdecl`, `__stdcall`lub `__fastcall`. Ta konwencja wywołania jest dostępna tylko w architekturze x86 i x64, które obsługują/arch: SSE2 i nowsze, i są ignorowane przez kompilatory, które są przeznaczone dla architektury ARM.
 
-Funkcje, które przyjmują zmienną liczbę argumentów, które muszą być oznaczone `__cdecl`.
+Funkcje, które przyjmują zmienną liczbę argumentów, muszą być oznaczone `__cdecl`.
 
-**/GD —** , **GR**, **GV** i **GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub   **/CLR: pure**. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
-
-> [!NOTE]
-> Domyślnie x86 procesorów C++ funkcje Członkowskie korzystają [__thiscall](../../cpp/thiscall.md).
-
-Dla wszystkich procesorów funkcja członkowska, która jest jawnie oznaczona jako `__cdecl`, `__fastcall`, `__vectorcall`, lub `__stdcall` używa określonej konwencji wywoływania, jeśli nie jest ona ignorowana na danej architekturze. Funkcja elementu członkowskiego, która przyjmuje zmienną liczbę argumentów, zawsze używa `__cdecl` konwencji wywoływania.
-
-Te opcje kompilatora nie mają wpływu na dekorację nazwy metod języka C++ i funkcji. O ile nie jest zadeklarowany jako `extern "C"`, metody i funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](decorated-names.md).
-
-Aby uzyskać więcej informacji dotyczących konwencji wywoływania, zobacz [Konwencje wywoływania](../../cpp/calling-conventions.md).
-
-## <a name="cdecl-specifics"></a>Charakterystyka __cdecl
-
-Na x86 procesorów, wszystkie argumenty funkcji są przekazywane na stosie od prawej do lewej. Na ARM i x64 architektury, niektóre argumenty są przekazywane przez rejestr, a pozostałe są przekazywane na stosie od prawej do lewej. Wywołanie procedury pobiera argumenty ze stosu.
-
-Dla języka C `__cdecl` nazewnictwa Konwencji używa nazwy funkcji poprzedzonej podkreśleniem ( `_` ); Translacja wielkości liter nie jest wykonywane. O ile nie jest zadeklarowany jako `extern "C"`, funkcje C++ używają innego schematu dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekorowane](decorated-names.md).
-
-## <a name="fastcall-specifics"></a>Charakterystyka __fastcall
-
-Niektóre `__fastcall` argumenty funkcji są przekazywane w rejestrach (dla x86 procesorów, ECX i EDX), a pozostałe są wypychane na stosie od prawej do lewej. Wywołana procedura wyciąga te argumenty ze stosu przed jego zwracaniem. Zazwyczaj **GR** zmniejsza czas wykonania.
+**/GD**, **/gr**, **/GV** i **/GZ** nie są zgodne z [/CLR: Safe](clr-common-language-runtime-compilation.md) lub **/CLR: Pure**. **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym.
 
 > [!NOTE]
-> Należy zachować ostrożność, korzystając z `__fastcall` konwencja wywołania dla dowolnej funkcji, która jest napisana w języku zestawu. Korzystanie z rejestrów może powodować konflikt przy użyciu kompilatora.
+> Domyślnie dla procesorów x86 funkcje C++ członkowskie używają [__thiscall](../../cpp/thiscall.md).
 
-Dla języka C `__fastcall` nazewnictwa Konwencji używa nazwy funkcji poprzedzone znakiem ( **\@** ) następuje rozmiar argumentów funkcji w bajtach. Translacja wielkości liter nie jest wykonywane. Kompilator używa tego szablonu do konwencji nazewnictwa:
+Dla wszystkich procesorów funkcja członkowska, która jest jawnie oznaczona jako `__cdecl`, `__fastcall`, `__vectorcall`lub `__stdcall` używa określonej konwencji wywoływania, jeśli nie została zignorowana w tej architekturze. Funkcja członkowska, która przyjmuje zmienną liczbę argumentów, zawsze używa konwencji wywoływania `__cdecl`.
+
+Te opcje kompilatora nie mają wpływu na dekorację nazw C++ metod i funkcji. O ile nie jest zadeklarowany jako `extern "C"`, C++ metody i funkcje używają innego schematu Name-dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekoracyjne](decorated-names.md).
+
+Aby uzyskać więcej informacji na temat konwencji wywoływania, zobacz [konwencje wywoływania](../../cpp/calling-conventions.md).
+
+## <a name="__cdecl-specifics"></a>__cdecl szczegóły
+
+W przypadku procesorów x86 wszystkie argumenty funkcji są przesyłane na stosie od prawej do lewej. W przypadku architektur ARM i x64 niektóre argumenty są przesyłane przez rejestr, a pozostałe są przesyłane na stosie od prawej do lewej. Procedura wywołująca wyciąga argumenty ze stosu.
+
+Dla języka C konwencja nazewnictwa `__cdecl` używa nazwy funkcji poprzedzonej znakiem podkreślenia (`_`); nie jest wykonywane żadne tłumaczenie wielkości liter. O ile nie jest zadeklarowany jako `extern "C"`, C++ funkcje używają innego schematu Name-dekorowania nazwy. Aby uzyskać więcej informacji, zobacz [nazwy dekoracyjne](decorated-names.md).
+
+## <a name="__fastcall-specifics"></a>__fastcall szczegóły
+
+Niektóre argumenty funkcji `__fastcall` są przekazywane w rejestrach (dla procesorów x86, ECX i EDX), a pozostałe są wypychane na stosie od prawej do lewej. Wywołana procedura powoduje przeprowadzenie tych argumentów ze stosu przed zwróceniem. Zazwyczaj **/gr** zmniejsza czas wykonywania.
+
+> [!NOTE]
+> Należy zachować ostrożność w przypadku użycia konwencji wywoływania `__fastcall` dla dowolnej funkcji, która jest zapisywana w wbudowanym języku asemblera. Użycie rejestrów może powodować konflikt z użyciem kompilatora.
+
+Dla języka C konwencja nazewnictwa `__fastcall` używa nazwy funkcji poprzedzonej znakiem ( **\@** ), po której następuje rozmiar argumentów funkcji w bajtach. Nie jest wykonywane żadne tłumaczenie wielkości liter. Kompilator używa tego szablonu do konwencji nazewnictwa:
 
 `@function_name@number`
 
-Kiedy używasz `__fastcall` konwencji nazewnictwa, użyj standardowych plików dołączeń. W przeciwnym wypadku otrzymasz nierozpoznawane odwołania zewnętrzne.
+Używając konwencji nazewnictwa `__fastcall`, użyj standardowych plików dołączanych. W przeciwnym razie otrzymasz nierozwiązane odwołania zewnętrzne.
 
-## <a name="stdcall-specifics"></a>Charakterystyka __stdcall
+## <a name="__stdcall-specifics"></a>__stdcall szczegóły
 
-A `__stdcall` argumenty funkcji są wypychane na stosie od prawej do lewej i wywołana funkcja wyciąga te argumenty ze stosu przed jego zwracaniem.
+Argumenty funkcji `__stdcall` są wypychane na stosie od prawej do lewej, a wywoływana funkcja pop te argumenty ze stosu przed zwróceniem.
 
-Dla języka C `__stdcall` nazewnictwa Konwencji używa nazwy funkcji poprzedzonej podkreśleniem ( **\_** ) i następuje znak ( **\@** ) i rozmiar — funkcja argumenty w bajtach. Translacja wielkości liter nie jest wykonywane. Kompilator używa tego szablonu do konwencji nazewnictwa:
+Dla języka C konwencja nazewnictwa `__stdcall` używa nazwy funkcji poprzedzonej znakiem podkreślenia ( **\_** ), po którym następuje znak ( **\@** ) i rozmiar argumentów funkcji w bajtach. Nie jest wykonywane żadne tłumaczenie wielkości liter. Kompilator używa tego szablonu do konwencji nazewnictwa:
 
 `_functionname@number`
 
-## <a name="vectorcall-specifics"></a>Charakterystyka __vectorcall
+## <a name="__vectorcall-specifics"></a>__vectorcall szczegóły
 
-A `__vectorcall` funkcji liczby całkowitej argumenty są przekazywane przez wartość, przy użyciu maksymalnie dwóch (na x86) lub czterech (na x64) liczby całkowitej rejestrów całkowitoliczbowych i maksymalnie sześciu rejestrów XMM dla zmiennoprzecinkowych i wartości wektorowych, a pozostałe są przekazywane na stosie od prawej do lewej. Wywołana funkcja czyści stos, przed jego zwracaniem. Wektor i zmiennoprzecinkowej wartości zwracane są zwracane w XMM0.
+Argumenty całkowite funkcji `__vectorcall` są przenoszone przez wartość, przy użyciu maksymalnie dwóch (w przypadku procesorów x86) lub czterech (w przypadku procesorów x64), oraz do sześciu XMM rejestrów dla wartości zmiennoprzecinkowych i wektorowych, a pozostałe są przesyłane na stosie od prawej do lewej. Wywołana funkcja czyści stos przed zwróceniem. Wartości typu Vector i zmiennoprzecinkowego są zwracane w XMM0.
 
-Dla języka C `__vectorcall` konwencji nazewnictwa używa nazwy funkcji, a następnie dwoma znakami ( **\@\@** ) oraz rozmiar argumentów funkcji w bajtach. Translacja wielkości liter nie jest wykonywane. Kompilator używa tego szablonu do konwencji nazewnictwa:
+Dla języka C konwencja nazewnictwa `__vectorcall` używa nazwy funkcji, po której następuje dwa znaki ( **\@\@** ) i rozmiar argumentów funkcji w bajtach. Nie jest wykonywane żadne tłumaczenie wielkości liter. Kompilator używa tego szablonu do konwencji nazewnictwa:
 
 `functionname@@number`
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++**  > **zaawansowane** stronę właściwości.
+1. Wybierz stronę właściwości **Zaawansowane** **C/C++**  > .
 
-1. Modyfikowanie **konwencji wywoływania** właściwości.
+1. Zmodyfikuj właściwość **konwencji wywoływania** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Opcje kompilatora MSVC](compiler-options.md)
 - [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+ 
