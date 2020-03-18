@@ -2,7 +2,6 @@
 title: Operator __alignof
 ms.date: 12/17/2018
 f1_keywords:
-- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 - __alignof
@@ -14,20 +13,20 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3764e95846d48d293991d69d04bc71c6b3aed90
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258255"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443604"
 ---
-# <a name="alignof-operator"></a>Operator __alignof
+# <a name="__alignof-operator"></a>Operator __alignof
 
-C ++ 11 wprowadza **alignof** operator, który zwraca wyrównanie, w bajtach dla określonego typu. Dla uzyskania maksymalnej przenośności należy użyć operatora alignof zamiast operator __alignof specyficzne dla firmy Microsoft.
+W języku c++ 11 wprowadzono operator **alignof** , który zwraca wyrównanie w bajtach określonego typu. W celu uzyskania maksymalnej przenośności należy użyć operatora alignof zamiast operatora __alignof określonego przez firmę Microsoft.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zwraca wartość typu `size_t` czyli wymóg wyrównania tego typu.
+Zwraca wartość typu `size_t`, która jest wymaganiem wyrównania typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,24 +40,24 @@ Na przykład:
 
 |Wyrażenie|Wartość|
 |----------------|-----------|
-|**__alignof (char)**|1|
+|**__alignof (Char)**|1|
 |**__alignof (krótki)**|2|
 |**__alignof (int)**|4|
-|**__alignof ( \__int64)**|8|
-|**__alignof (zmiennoprzecinkowego)**|4|
-|**__alignof (podwójny)**|8|
-|**__alignof (char\* )**|4|
+|**__alignof (\__int64)**|8|
+|**__alignof (float)**|4|
+|**__alignof (Double)**|8|
+|**__alignof (\* znak)**|4|
 
-**__Alignof** wartość jest taka sama jak wartość `sizeof` dla typów podstawowych. Rozważmy jednak, w tym przykładzie:
+Wartość **__alignof** jest taka sama jak wartość `sizeof` dla typów podstawowych. Należy jednak wziąć pod uwagę następujący przykład:
 
 ```cpp
 typedef struct { int a; double b; } S;
 // __alignof(S) == 8
 ```
 
-W tym przypadku **__alignof** wartość jest wymóg wyrównania największego elementu w strukturze.
+W tym przypadku wartość **__alignof** jest wymaganiem wyrównania największego elementu w strukturze.
 
-Podobnie Aby uzyskać
+Podobnie w przypadku
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; } S;
@@ -66,7 +65,7 @@ typedef __declspec(align(32)) struct { int a; } S;
 
 `__alignof(S)` jest równa `32`.
 
-Jednym z zastosowań **__alignof** byłoby jako parametr do jednego z własnych procedur alokacji pamięci. Na przykład, biorąc pod uwagę następujące zdefiniowana struktura `S`, może wywołać procedurę alokacji pamięci o nazwie `aligned_malloc` można przydzielić pamięci na granicy określonego wyrównania.
+Jeden z wartości **__alignof** byłby jako parametr do jednej z własnych procedur alokacji pamięci. Na przykład, uwzględniając następującą zdefiniowaną strukturę `S`, można wywołać procedurę alokacji pamięci o nazwie `aligned_malloc`, aby przydzielić pamięć na określonej granicy wyrównania.
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
@@ -74,9 +73,9 @@ int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
 
-W celu zgodności z poprzednimi wersjami **_alignof** jest synonimem dla **__alignof** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
+W celu zapewnienia zgodności z poprzednimi wersjami **_alignof** jest synonimem dla **__alignof** , chyba że opcja kompilatora [/za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) .
 
-Aby uzyskać więcej informacji na temat modyfikowania wyrównania zobacz:
+Aby uzyskać więcej informacji na temat modyfikowania wyrównania, zobacz:
 
 - [pakiet](../preprocessor/pack.md)
 
@@ -86,15 +85,15 @@ Aby uzyskać więcej informacji na temat modyfikowania wyrównania zobacz:
 
 - [/Zp (Wyrównanie składowej struktury)](../build/reference/zp-struct-member-alignment.md)
 
-- [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) — x64 określonych 64
+- [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) (specyficzne dla architektury x64)
 
-Aby uzyskać więcej informacji na temat różnic w wyrównania w kodzie x86 i x64 zobacz:
+Aby uzyskać więcej informacji na temat różnic w obrównaniu kodu dla procesorów x86 i x64, zobacz:
 
 - [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,29 +1,27 @@
 ---
 title: Korzystanie z CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386411"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444000"
 ---
 # <a name="using-cheaderctrl"></a>Korzystanie z CHeaderCtrl
 
-Używanie formantu nagłówka, reprezentowane przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówków kolumn dla listy kolumnowych. Na przykład kontrolki nagłówka o będzie przydatne w przypadku implementowania kontroli kolumny w arkuszu kalkulacyjnym.
+Użyj kontrolki nagłówka reprezentowanej przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówki kolumn dla listy kolumnowej. Na przykład formant nagłówka będzie przydatny do implementowania formantów kolumn w arkuszu kalkulacyjnym.
 
-Kontrolki nagłówka zwykle jest podzielony na części o nazwie "nagłówka" items, mając tytuł skojarzonej kolumny tekstu lub liczb. W zależności od style, które można ustawić możesz podać liczbę metod bezpośrednich dla użytkowników do manipulowania elementy nagłówka.
+Formant nagłówka jest zwykle podzielony na części, nazywane "elementami nagłówka", każdy z tytułem skojarzonej kolumny tekstu lub cyfr. W zależności od ustawionych stylów można udostępnić użytkownikom wiele bezpośrednich sposobów manipulowania elementami nagłówka.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) udostępnia kontrolkę nagłówka osadzone i [CListView](../mfc/reference/clistview-class.md) hermetyzuje `CListCtrl` klasy MFC. Ogólnie rzecz biorąc, pomyśl o przy użyciu `CHeaderCtrl` do listy etykiety, które zamierzasz Rysowanie samodzielnie.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) udostępnia osadzoną kontrolkę nagłówka, a [CListView](../mfc/reference/clistview-class.md) hermetyzuje `CListCtrl` w klasie MFC. Ogólnie rzecz biorąc, należy wziąć pod uwagę używanie `CHeaderCtrl` do etykietowania list, które zamierzasz samodzielnie rysować.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Kontrolka nagłówka i kontrolka listy](../mfc/header-control-and-list-control.md)
 
@@ -49,6 +47,6 @@ Kontrolki nagłówka zwykle jest podzielony na części o nazwie "nagłówka" it
 
 - [Przetwarzanie powiadomień dotyczących kontrolki karty](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

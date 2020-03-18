@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420821"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445665"
 ---
 # <a name="iview-interface"></a>Interfejs IView
 
@@ -29,7 +29,7 @@ Implementuje kilka metod, których [CWinFormsView](../../mfc/reference/cwinforms
 interface class IView
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -54,6 +54,7 @@ Nagłówek: afxwinforms. h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 ## <a name="onactivateview"></a>Widok IView:: OnActivateView
 
 Wywoływane przez MFC, gdy widok jest aktywowany lub dezaktywowany.
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ Wskazuje, czy widok jest aktywowany, czy dezaktywowany.
 ## <a name="oninitialupdate"></a>Widok IView:: OnInitialUpdate
 
 Wywoływane przez platformę po pierwszym dołączeniu widoku do dokumentu, ale zanim widok jest początkowo wyświetlany.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>Widok IView:: OnUpdate
 
 Wywoływane przez MFC po zmodyfikowaniu dokumentu widoku.
+
 ```
 void OnUpdate();
 ```

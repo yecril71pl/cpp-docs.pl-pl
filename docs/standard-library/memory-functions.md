@@ -8,7 +8,6 @@ f1_keywords:
 - memory/std::const_pointer_cast
 - memory/std::declare_no_pointers
 - memory/std::declare_reachable
-- memory/std::default_delete
 - memory/std::dynamic_pointer_cast
 - memory/std::get_deleter
 - memory/std::get_pointer_safety
@@ -28,8 +27,6 @@ f1_keywords:
 - memory/std::uninitialized_copy_n
 - memory/std::uninitialized_fill
 - memory/std::uninitialized_fill_n
-- memory/std::get_temporary_buffer
-- memory/std::return_temporary_buffer
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 helpviewer_keywords:
 - std::addressof [C++]
@@ -77,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: fa8f0dd7e5588891aeef4fbe04a907fbbfc52b52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419939"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447400"
 ---
 # <a name="ltmemorygt-functions"></a>funkcje&gt; pamięci &lt;
 
@@ -109,7 +106,7 @@ const T* addressof(
 \ *wartości*
 Obiekt lub funkcja, dla których ma być uzyskany prawdziwy adres.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Rzeczywisty adres obiektu lub funkcji, do której odwołuje się *wartość*, nawet jeśli przeciążone `operator&()` istnieje.
 
@@ -144,7 +141,7 @@ Adres początkowy dostępnej puli ciągłej pamięci, która ma być użyta. Ten
 
 Jeśli `align()` nie powiedzie się, ten parametr nie jest modyfikowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik o wartości null, jeśli żądany rozmiar buforu nie mieści się w dostępnym miejscu; w przeciwnym razie nowa wartość *PTR*.
 
@@ -631,7 +628,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 *liczba*\
 Maksymalna liczba elementów żądanych do przydzielenia pamięci.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 `pair`, którego pierwszy składnik jest wskaźnikiem do pamięci, która została przypisana, a drugi składnik uzyskuje rozmiar buforu, wskazując największą liczbę elementów, które mogą być przechowywane.
 
@@ -1200,7 +1197,7 @@ Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie 
 \ miejsca *docelowego*
 Iterator do przodu, który dotyczy pierwszego elementu w zakresie docelowym.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, odnoszący się do pierwszej pozycji poza zakresem docelowym, chyba że zakres źródłowy był pusty.
 
@@ -1320,7 +1317,7 @@ Typ całkowitoliczbowy ze znakiem lub bez znaku, określający, ile razy obiekt 
 \ miejsca *docelowego*
 Iterator do przodu odwołujący się do lokalizacji nowych kopii.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, który odnosi się do pierwszej pozycji poza miejscem docelowym. Jeśli zakres źródłowy był pusty, *najpierw*adresy iteratora.
 
@@ -1411,7 +1408,7 @@ Iterator odnoszący się do pierwszego elementu w zakresie docelowym do konstruo
 *liczba*\
 Liczba elementów w zakresie docelowym do skonstruowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, odnoszący się do pierwszej pozycji poza zakresem docelowym, chyba że zakres źródłowy był pusty.
 

@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419029"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441627"
 ---
 # <a name="hash_map-class"></a>hash_map — Klasa
 
@@ -124,7 +124,7 @@ Typ danych elementu, który ma być przechowywany w hash_map.
 Typ, który zawiera dwa obiekty Functions, jedna z klas Compare może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentową wartością klucza mapowania predykatów elementów do niepodpisanych liczb całkowitych typu `size_t`. Ten argument jest opcjonalny, a hash_compare <`Key`< wartość domyślna to`Key`.
 
 \ *alokatora*
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji hash_map i dealokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to Alokator < para < const `Key`, `Type`> >.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji hash_map i dealokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to Alokator\<para < const `Key`, `Type`> >.
 
 ## <a name="remarks"></a>Uwagi
 

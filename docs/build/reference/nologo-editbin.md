@@ -2,18 +2,18 @@
 title: /NOLOGO (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /nologo
+- /nologo_editbin
 helpviewer_keywords:
 - -NOLOGO editbin option
 - /NOLOGO editbin option
 - NOLOGO editbin option
 ms.assetid: 909a1909-0c99-4bce-8013-bf161d645f19
-ms.openlocfilehash: 994b896172725873d69120262f045764b278f17d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b28a816876629143e8f8b4c5b33834fce649675
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320399"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439236"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
 
@@ -23,8 +23,8 @@ ms.locfileid: "62320399"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja umożliwia pominięcie widok komunikat o prawach autorskich EDITBIN i numer wersji.
+Ta opcja pomija wyświetlanie komunikatu o prawach autorskich polecenia EDITBIN i numer wersji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje EDITBIN](editbin-options.md)

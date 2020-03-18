@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514218"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443765"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
@@ -86,8 +83,8 @@ Menu **obraz** , które pojawia się tylko wtedy, gdy **Edytor obrazu** jest akt
 |**Rysuj nieprzezroczyste**|Gdy ta opcja jest zaznaczona, bieżące zaznaczenie staje się nieprzezroczyste.<br/><br/>Gdy jest wyczyszczone, sprawia, że bieżące zaznaczenie jest przezroczyste.|
 |**Edytor paska narzędzi**|Otwiera [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md).|
 |**Ustawienia siatki**|Otwiera okno dialogowe **Ustawienia siatki** , w którym można określić siatki dla obrazu.|
-|**Nowy typ obrazu**|Otwiera [okno dialogowe \<nowe urządzenie > typ obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Zasób o pojedynczej ikonie może zawierać kilka obrazów o różnych rozmiarach, a system Windows może użyć odpowiedniego rozmiaru ikony w zależności od tego, jak ma być wyświetlana. Nowy typ urządzenia nie modyfikuje rozmiaru ikony, ale zamiast tego tworzy nowy obraz w obrębie ikony. Dotyczy tylko ikon i kursorów.|
-|**Bieżąca ikona/typ obrazu kursora**|Otwiera podmenu, w którym znajduje się lista pierwszych dziewięciu dostępnych obrazów kursorów lub ikon. Ostatnie polecenie w podmenu, **więcej**, otwiera okno [dialogowe Otwórz \<urządzenie > obrazu](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nowy typ obrazu**|Otwiera okno [dialogowe nowe urządzenie \<> typ obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Zasób o pojedynczej ikonie może zawierać kilka obrazów o różnych rozmiarach, a system Windows może użyć odpowiedniego rozmiaru ikony w zależności od tego, jak ma być wyświetlana. Nowy typ urządzenia nie modyfikuje rozmiaru ikony, ale zamiast tego tworzy nowy obraz w obrębie ikony. Dotyczy tylko ikon i kursorów.|
+|**Bieżąca ikona/typ obrazu kursora**|Otwiera podmenu, w którym znajduje się lista pierwszych dziewięciu dostępnych obrazów kursorów lub ikon. Ostatnie polecenie w podmenu, **więcej**, otwiera okno [dialogowe otwórz \<Device > obraz](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Usuń typ obrazu**|Usuwa wybrany obraz urządzenia.|
 |**Narzędzia**|Uruchamia podmenu, które zawiera wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazu** .|
 
@@ -104,7 +101,7 @@ Okno dialogowe **Ustawienia siatki** umożliwia określenie ustawień siatki obr
 
 Pasek narzędzi **edytora obrazów** zawiera narzędzia do rysowania, malowania, wprowadzania tekstu, wymazywania i manipulowania widokami. Zawiera również selektor opcji, za pomocą którego można wybrać opcje używania poszczególnych narzędzi. Można na przykład wybrać różne szerokości pędzla, współczynniki powiększenia i style linii.
 
-Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w**narzędziach** **obrazu** > menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
+Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne z **obrazu** menu > **Narzędzia**. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
 
 ![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Pasek narzędzi **edytora obrazów**
@@ -114,7 +111,7 @@ Pasek narzędzi **edytora obrazów**
 
 Ponieważ wiele narzędzi do rysowania jest dostępnych na [klawiaturze](../windows/accelerator-keys-image-editor-for-icons.md), czasami warto ukryć pasek narzędzi **edytora obrazu** .
 
-- Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku** > menu**paski narzędzi** i wybierz **Edytor obrazów**.
+- Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku** menu, > **paski narzędzi** i wybierz **Edytor obrazów**.
 
 > [!NOTE]
 > Elementy z tego paska narzędzi będą wyświetlane jako niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie zostanie otwarty w **Edytorze obrazu**.
@@ -130,7 +127,7 @@ Selektor **opcji** na pasku narzędzi **edytora obrazów**
 
 Za pomocą okna dialogowego **Narzędzie tekstowe** można dodać tekst do kursora, mapy bitowej lub zasobu ikony.
 
-Aby uzyskać dostęp do tego okna dialogowego, **Otwórz Edytor obrazów** i przejdź do menu**Narzędzia** **obrazu** > , a następnie wybierz polecenie **tekst narzędzia** .
+Aby uzyskać dostęp do tego okna dialogowego, Otwórz **Edytor obrazów** i przejdź do menu **obrazu** > **Narzędzia**, a następnie wybierz polecenie **tekst narzędzia** .
 
 > [!TIP]
 > Możesz kliknąć prawym przyciskiem myszy okno dialogowe **narzędzia tekstowe** , aby uzyskać dostęp do domyślnego menu skrótów zawierającego listę standardowych poleceń systemu Windows.
@@ -141,21 +138,21 @@ Aby uzyskać dostęp do tego okna dialogowego, wybierz przycisk **czcionki** w o
 
 |Właściwość|Opis|
 |---|---|
-|**Czcionka**|Wyświetla listę dostępnych czcionek.|
+|**Font**|Wyświetla listę dostępnych czcionek.|
 |**Styl czcionki**|Wyświetla listę dostępnych stylów dla określonej czcionki.|
-|**Zmienia**|Wyświetla listę dostępnych rozmiarów punktów dla określonej czcionki.|
-|**Northwind**|Pokazuje przykład sposobu wyświetlania tekstu z określonymi ustawieniami czcionki.|
+|**Rozmiar**|Wyświetla listę dostępnych rozmiarów punktów dla określonej czcionki.|
+|**Przykład**|Pokazuje przykład sposobu wyświetlania tekstu z określonymi ustawieniami czcionki.|
 |**Skrypt**|Wyświetla listę dostępnych skryptów języka dla określonej czcionki.<br/><br/>Po wybraniu innego skryptu języka zestaw znaków dla tego języka będzie dostępny do tworzenia dokumentów wielojęzycznych.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Aby zmienić czcionkę tekstu w obrazie
 
 Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i manipulowania czcionką tekstu.
 
-1. Utwórz aplikację C++ Windows Formsową. Aby uzyskać szczegółowe informacje [, zobacz How to: Utwórz aplikacje](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))Windows Forms. Plik *. ico aplikacji* jest domyślnie dodawany do projektu.
+1. Utwórz aplikację C++ Windows Formsową. Aby uzyskać szczegółowe informacje, zobacz [How to: Create Windows Forms Applications](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Plik *. ico aplikacji* jest domyślnie dodawany do projektu.
 
 1. W **Eksplorator rozwiązań**kliknij dwukrotnie plik *App. ico*. Zostanie otwarty **Edytor obrazów** .
 
-1. Przejdź do menu**Narzędzia** **obrazu** > i wybierz **Narzędzie Tekst**.
+1. Przejdź do menu **obraz** > **Narzędzia** i wybierz **Narzędzie Tekst**.
 
 1. W oknie dialogowym **Narzędzie tekstowe** wpisz *C++* pusty obszar tekstu. Ten tekst będzie widoczny w polu o zmiennym rozmiarze znajdującym się w lewym górnym rogu *aplikacji App. ico* w **Edytorze obrazu**.
 
@@ -171,7 +168,7 @@ Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i ma
 
    - Wybierz pozycję **10** z listy dostępnych rozmiarów punktów wymienionych w polu listy **rozmiar** .
 
-   - Wybierz **OK**. Zostanie zamknięte okno dialogowe **czcionka narzędzia tekstowego** i nowe ustawienia czcionki zostaną zastosowane do tekstu.
+   - Wybierz pozycję **OK**. Zostanie zamknięte okno dialogowe **czcionka narzędzia tekstowego** i nowe ustawienia czcionki zostaną zastosowane do tekstu.
 
 1. Wybierz **Zamknij** w oknie dialogowym **Narzędzie tekstowe** . Pole o zmiennym rozmiarze wokół tekstu zniknie z **edytora obrazu**.
 
@@ -209,15 +206,15 @@ Domyślnie **Edytor obrazów** wyświetla widok w okienku po lewej stronie w rze
 
 Dla wszystkich okienek **edytora obrazu** o współczynniku powiększenia równym 4 lub większym, można wyświetlić siatkę, która ogranicza poszczególne piksele w obrazie.
 
-1. Przejdź do pozycji menu**Ustawienia siatki** **obrazu** > .
+1. Przejdź do menu **obraz** > **Ustawienia siatki**.
 
 1. Zaznacz pole wyboru **Siatka pikseli** , aby wyświetlić siatkę, lub wyczyść pole, aby ukryć siatkę.
 
 ## <a name="requirements"></a>Wymagania
 
-Brak
+None
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Ikony](/windows/win32/menurc/icons)

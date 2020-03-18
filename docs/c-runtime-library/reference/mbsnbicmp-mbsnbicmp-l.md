@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952189"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442837"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -72,10 +66,10 @@ int _mbsnbicmp(
 *ciąg1*, *ciąg2*<br/>
 Ciągi zakończone wartością null do porównania.
 
-*liczbą*<br/>
+*count*<br/>
 Liczba bajtów do porównania.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana określa relację między podciągami.
 
@@ -85,7 +79,7 @@ Wartość zwracana określa relację między podciągami.
 |0|*ciąg1* podciąg identyczny z podciągiem *ciąg2* .|
 |> 0|*ciąg1* podciąg jest większy niż *ciąg2* podciąg.|
 
-W przypadku błędu **_mbsnbicmp** zwraca **_NLSCMPERROR**, który jest zdefiniowany w String. h i mbstring. h.
+W przypadku błędu, **_mbsnbicmp** zwraca **_NLSCMPERROR**, który jest zdefiniowany w String. h i mbstring. h.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -93,11 +87,11 @@ Funkcja **_mbsnbicmp** wykonuje porównanie porządkowe *dla pierwszych bajtów*
 
 **_mbsnbicmp** jest podobna do [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczby* bajtów zamiast znaków.
 
-Dwa ciągi zawierające znaki znajdujące się między "z" i "a" w tabeli ASCII ("[",\\"", "]", "^", "_" i "\`") są porównywane inaczej, w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli jest to wielkie litery.
+Dwa ciągi zawierające znaki znajdujące się między "Z" i "a" w tabeli ASCII ("[", "\\", "]", "^", "_" i "\`") różnią się w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli jest to wielkie litery.
 
 **_mbsnbicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową](../../c-runtime-library/code-pages.md) . Bieżące ustawienie regionalne nie ma na nie wpływ.
 
-Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, **_mbsnbicmp** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
+Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, **_mbsnbicmp** wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -110,15 +104,15 @@ Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, **_mbsnbicmp** 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbicmp**|\<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
+Zapoznaj się z przykładem [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

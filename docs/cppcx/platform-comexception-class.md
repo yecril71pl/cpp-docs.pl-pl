@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500546"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444296"
 ---
 # <a name="platformcomexception-class"></a>Platform:: COMException, Klasa
 
@@ -34,7 +34,7 @@ COMException mają również następujące typy elementów członkowskich.
 
 **Konstruktory**
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
 |[COMException](#ctor)|Inicjuje nowe wystąpienie klasy COMException.|
 
@@ -46,7 +46,7 @@ Klasa COMException dziedziczy metody Equals (), Finalize (), GetHashCode (), Get
 
 Klasa COMException ma następujące właściwości.
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
 |[Wyjątek:: HResult](#hresult)|WYNIK HRESULT, który odnosi się do wyjątku.|
 |[Wyjątek:: Message](#message)|Komunikat, który opisuje wyjątek.|
@@ -55,7 +55,7 @@ Klasa COMException ma następujące właściwości.
 
 Następujące wstępnie zdefiniowane wyjątki pochodzą od COMException. Różnią się one od COMException tylko pod nazwą, nazwą jego konstruktora i podstawową wartością HRESULT.
 
-|Nazwa|Bazowy wynik HRESULT|Opis|
+|Name (Nazwa)|Bazowy wynik HRESULT|Opis|
 |----------|------------------------|-----------------|
 |COMException|*wartość HRESULT zdefiniowana przez użytkownika*|Zgłaszany, gdy Nierozpoznana wartość HRESULT jest zwracana z wywołania metody COM.|
 |AccessDeniedException|E_ACCESSDENIED|Zgłaszany w przypadku odmowy dostępu do zasobu lub funkcji.|
@@ -73,11 +73,11 @@ Następujące wstępnie zdefiniowane wyjątki pochodzą od COMException. Różni
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalny obsługiwany klient:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalny obsługiwany serwer:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Obszaru** Platforma
+**Przestrzeń nazw:** Platformach
 
 **Metadane:** obiekt platform. winmd
 
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 Opis wyjątku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

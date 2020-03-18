@@ -1,8 +1,6 @@
 ---
 title: Składnia nazwy pliku CL
 ms.date: 11/04/2016
-f1_keywords:
-- cl
 helpviewer_keywords:
 - syntax, compiler filename
 - paths, CL compiler filename syntax
@@ -11,19 +9,19 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: b20f88e69c6e0d1774f1cd81b3ee833c4f0ff696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1135e5c682b79fec5de808b61c93d370f05a3aa9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272698"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440238"
 ---
 # <a name="cl-filename-syntax"></a>Składnia nazwy pliku CL
 
-CL akceptuje plików o nazwach, które postępuj zgodnie z konwencją nazewnictwa plików FAT, HPFS lub systemu plików NTFS. Nazwy pliku może zawierać ścieżki pełnej lub częściowej. Pełna ścieżka zawiera nazwę dysku i co najmniej jedną nazwę katalogu. CL akceptuje nazw plików rozdzielonych przez ukośniki odwrotne (\\) lub kreski ułamkowe (/). Nazwy plików zawierające spacje muszą być ujęte w znaki podwójnego cudzysłowu. Ścieżka częściowa pomija nazwy dysku, która CL zakłada się na bieżącym dysku. Jeśli nie określisz ścieżki, CL przyjęto założenie, że plik znajduje się w bieżącym katalogu.
+CL akceptuje pliki o nazwach zgodnych z konwencjami nazewnictwa FAT, HPFS lub NTFS. Każda nazwa pliku może zawierać pełną lub częściową ścieżkę. Pełna ścieżka zawiera nazwę dysku i jedną lub więcej nazw katalogów. CL akceptuje nazwy plików rozdzielone ukośnikami (\\) lub ukośnikami (/). Nazwy plików zawierające spacje muszą być ujęte w znaki podwójnego cudzysłowu. Ścieżka częściowa pomija nazwę dysku, który CL przyjmuje jako bieżący dysk. Jeśli ścieżka nie zostanie określona, CL przyjmie, że plik znajduje się w bieżącym katalogu.
 
-Rozszerzenie nazwy pliku Określa, jak są przetwarzane pliki. Pliki C i C++, które mają rozszerzenie .c, .cxx lub .cpp, są kompilowane. Inne pliki, w tym pliki .obj, biblioteki (.lib) i pliki definicji modułu (.def) są przekazywane do konsolidatora bez przetwarzany.
+Rozszerzenie nazwy pliku określa sposób przetwarzania plików. Pliki c C++ i, które mają rozszerzenie. c,. cxx lub. cpp, są kompilowane. Inne pliki, w tym pliki obj, biblioteki (. lib) i pliki definicji modułów (. def), są przesyłane do konsolidatora bez przetwarzania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

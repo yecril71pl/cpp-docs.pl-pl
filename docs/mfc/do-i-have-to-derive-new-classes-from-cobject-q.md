@@ -1,25 +1,23 @@
 ---
 title: Czy muszę wyprowadzać nowe klasy z obiektu CObject?
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - derived classes [MFC], from CObject
 - CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
-ms.openlocfilehash: 30eb3ce5bbb72ab685ed891644a478a36026ebea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d38e589f371fc56f5566c56de7b19c366065a503
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352388"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446926"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Czy muszę wyprowadzać nowe klasy z obiektu CObject?
 
 Nie.
 
-Wyprowadzić klasę z [CObject](../mfc/reference/cobject-class.md) gdy będziesz potrzebować urządzeń zapewnia, takich jak serializacji lub creatability dynamicznych. Wiele klas danych muszą być serializowany do plików, więc jest często dobrym pomysłem jest pochodną od `CObject`. Na przykład klasę pochodną `CObject`, zobacz [próbki Bazgroły](../overview/visual-cpp-samples.md).
+Utwórz klasę z [CObject](../mfc/reference/cobject-class.md) , gdy potrzebujesz udostępnianych przez nią obiektów, takich jak Serializacja lub dynamiczne tworzenie. Wiele klas danych musi być serializowanych do plików, więc często dobrym pomysłem jest uzyskanie ich z `CObject`. Przykład klasy pochodzącej od `CObject`można znaleźć w [przykładowym bazgrołie](../overview/visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject: często zadawane pytania](../mfc/cobject-class-frequently-asked-questions.md)

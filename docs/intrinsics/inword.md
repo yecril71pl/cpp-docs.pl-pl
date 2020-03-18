@@ -2,24 +2,24 @@
 title: __inword
 ms.date: 09/02/2019
 f1_keywords:
-- __indword_cpp
-- __indword
+- __inword_cpp
+- __inword
 helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7daaf1abd5089716061f118e30e9534e5c5c18ee
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217529"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440977"
 ---
 # <a name="__inword"></a>__inword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Odczytuje dane z określonego portu przy użyciu `in` instrukcji.
+Odczytuje dane z określonego portu przy użyciu instrukcji `in`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ unsigned short __inword(
 
 ### <a name="parameters"></a>Parametry
 
-*Przewożąc*\
+\ *portów*
 podczas Port, z którego ma zostać odczytany.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -44,7 +44,7 @@ Odczytywanie danych.
 |---------------|------------------|
 |`__inword`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówkowy** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
@@ -52,6 +52,6 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -1,8 +1,6 @@
 ---
 title: Platformy systemu Windows (CRT)
 ms.date: 02/02/2018
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility [C++], C run-time libraries
@@ -11,20 +9,20 @@ helpviewer_keywords:
 - operating systems [C++]
 - Unicode [C++], Win32 platforms
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
-ms.openlocfilehash: 6f84922f8d477d3c45ba80d14049e81655890d53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26b927b8b1b93a23091bb25fdd5fe0496e21c8b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377468"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444470"
 ---
 # <a name="windows-platforms-crt"></a>Platformy systemu Windows (CRT)
 
-Biblioteki wykonawczej języka C dla programu Visual Studio obsługuje bieżącej wersji systemu Windows i Windows Server, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 i Windows Vista oraz opcjonalnie obsługi Windows XP Service Pack 3 (SP3) x86, Windows XP Service X64 i systemu Windows Server 2003 z dodatkiem Service Pack 2 (SP2) dla x86 i x64, dodatkiem Service Pack 2 (SP2). Wszystkie te systemy operacyjne obsługują pulpitu Windows API (Win32) i zapewniają obsługę standardu Unicode. Ponadto każda aplikacja Win32 służy zestaw znaków wielobajtowych (MBCS).
+Biblioteki uruchomieniowe C dla programu Visual Studio obsługują bieżące wersje systemów Windows i Windows Server, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 oraz Windows Vista i opcjonalnie obsługują system Windows XP z dodatkiem Service Pack 3 (SP3) dla architektury x86, Windows XP Service Pack 2 (SP2) dla procesorów x64 i Windows Server 2003 z dodatkiem Service Pack 2 (SP2) dla procesorów x86 i x64. Wszystkie te systemy operacyjne obsługują interfejs API pulpitu systemu Windows (Win32) i zapewniają obsługę standardu Unicode. Ponadto każda aplikacja Win32 może korzystać z zestawu znaków wielobajtowych (MBCS).
 
 > [!NOTE]
-> Domyślna instalacja **programowanie aplikacji klasycznych w języku C++** obciążenia w programie Visual Studio 2017 nie obejmuje pomocy technicznej dla rozwoju Windows XP i Windows Server 2003. Należy zainstalować składnik opcjonalny **podporu Windows XP Pro C++** Aby włączyć zestaw narzędzi platformy Windows XP.
+> Domyślna instalacja programu **Desktop Development przy użyciu C++**  obciążenia w programie Visual Studio 2017 nie obejmuje obsługi programowania dla systemów Windows XP i Windows Server 2003. Aby włączyć zestaw narzędzi platformy systemu Windows XP, należy zainstalować opcjonalny składnik **obsługi C++ systemu Windows XP** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zgodność](../c-runtime-library/compatibility.md)

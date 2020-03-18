@@ -1,23 +1,21 @@
 ---
 title: Klasy OLE DB
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - OLE DB consumers, support
 - COleDBRecordView class [MFC]
 ms.assetid: 65245d26-8743-4efd-9a72-90e19aef3c3a
-ms.openlocfilehash: 9bdae23707ac451f1280a999c9721dec65e09004
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdb53c0391c465c281e47ebf104f0d7b2bc8858c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185987"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447627"
 ---
 # <a name="ole-db-classes"></a>Klasy OLE DB
 
-Obsługa OLE DB w MFC obecnie składa się z klasy [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Wyświetla rekordy bazy danych w kontrolkach za pośrednictwem widoku formularza podłączone bezpośrednio do [CRowset](../data/oledb/crowset-class.md) obiektu. Aby uzyskać więcej informacji na temat szablonów konsumentów OLE DB, zobacz [listy z OLE DB szablonami konsumentów](../data/oledb/ole-db-consumer-templates-reference.md).
+Obsługa OLE DB w MFC składa się obecnie z klasy [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` wyświetla rekordy bazy danych w kontrolkach za pomocą widoku formularza połączonego bezpośrednio z obiektem [CRowset](../data/oledb/crowset-class.md) . Aby uzyskać więcej informacji na temat OLE DB szablonów konsumentów, zobacz [lista OLE DB szablonów klientów](../data/oledb/ole-db-consumer-templates-reference.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

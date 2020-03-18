@@ -1,101 +1,99 @@
 ---
 title: We/Wy strumienia
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304622"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444623"
 ---
 # <a name="stream-io"></a>We/Wy strumienia
 
-Te funkcje, przetwarzanie danych w różnych rozmiarów i formatów, pojedyncze znaki do struktur dużych ilości danych. Zapewniają także buforowania, co może zwiększyć wydajność. Domyślny rozmiar buforu strumienia jest 4K. Te procedury wpływa na tylko buforów utworzonych przez procedury biblioteki wykonawczej i nie mają wpływu na buforów utworzonych przez system operacyjny.
+Te funkcje przetwarzają dane w różnych rozmiarach i formatach, od pojedynczych znaków do dużych struktur danych. Zapewniają również buforowanie, które może poprawić wydajność. Domyślny rozmiar buforu strumienia to 4K. Procedury te mają wpływ tylko na bufory utworzone przez procedury biblioteki wykonawczej i nie mają wpływu na bufory utworzone przez system operacyjny.
 
-## <a name="stream-io-routines"></a>Procedury Stream operacji We/Wy
+## <a name="stream-io-routines"></a>Procedury we/wy strumienia
 
-|Procedura|Zastosowanie|
+|Procedura|Użycie|
 |-------------|---------|
-|[clearerr —](../c-runtime-library/reference/clearerr.md), [clearerr_s —](../c-runtime-library/reference/clearerr-s.md)|Wskaźnik wyczyść błędu dla strumienia|
-|[fclose —](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij strumień|
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij wszystkie otwarte strumieni z wyjątkiem **stdin**, **stdout**, i **strumienia wyjściowego stderr**|
-|[_fdopen —, wfdopen —](../c-runtime-library/reference/fdopen-wfdopen.md)|Kojarzenie strumienia z deskryptorem pliku otwartego pliku|
-|[feof](../c-runtime-library/reference/feof.md)|Test na koniec pliku w usłudze stream|
-|[ferror](../c-runtime-library/reference/ferror.md)|Test błędu dla strumienia|
-|[fflush](../c-runtime-library/reference/fflush.md)|Zapisywanie strumienia do buforu lub urządzenie pamięci masowej|
-|[fgetc, fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)|Odczyt znaku ze strumienia (wersje funkcji **getc —** i **getwc —**)|
-|[_fgetchar, _fgetwchar](../c-runtime-library/reference/fgetc-fgetwc.md)|Odczyt znaku z **stdin** (wersje funkcji **getchar** i **getwchar —**)|
-|[fgetpos](../c-runtime-library/reference/fgetpos.md)|Pobierz wskaźnik położenia strumienia|
-|[fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)|Ciąg Odczyt ze strumienia|
-|[_fileno](../c-runtime-library/reference/fileno.md)|Pobieranie deskryptora pliku skojarzone z usługą stream|
-|[_flushall](../c-runtime-library/reference/flushall.md)|Opróżnij wszystkie strumienie do buforu lub urządzenie pamięci masowej|
-|[fopen —, _wfopen —](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwieranie strumienia|
-|[fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Wpisz sformatowane dane do usługi stream|
-|[fputc, fputwc](../c-runtime-library/reference/fputc-fputwc.md)|Wpisz znak w strumieniu (wersje funkcji **putc** i **putwc**)|
-|[_fputchar, _fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|Znak do zapisu **stdout** (wersje funkcji **putchar** i **putwchar**)|
-|[fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)|Zapisz ciąg do strumienia|
-|[fread](../c-runtime-library/reference/fread.md)|Przeczytaj niesformatowanych danych ze strumienia|
-|[freopen —, _wfreopen —](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s —, _wfreopen_s —](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Ponowne przypisywanie **pliku** wskaźnik strumienia do nowego pliku lub urządzenia|
-|[fscanf, fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|Odczyt sformatowanych danych ze strumienia|
-|[fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|Położenie pliku przenoszenia do podanej lokalizacji|
-|[fsetpos](../c-runtime-library/reference/fsetpos.md)|Wskaźnik położenia zestaw strumienia|
-|[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwieranie strumienia z funkcją Udostępnianie plików|
-|[ftell, _ftelli64](../c-runtime-library/reference/ftell-ftelli64.md)|Pobieranie bieżącej pozycji w pliku|
-|[fwrite](../c-runtime-library/reference/fwrite.md)|Zapisuj elementy niesformatowanych danych do przesyłania strumieniowego|
-|[getc, getwc](../c-runtime-library/reference/getc-getwc.md)|Odczyt znaku ze strumienia (wersje — makro **fgetc —** i **fgetwc —**)|
-|[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Odczyt znaku z **stdin** (wersje — makro **fgetchar —** i **fgetwchar —**)|
-|[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Zwraca liczbę jednocześnie otwartych plików, w poziomie operacje We/Wy strumienia.|
-|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Odczytaj wiersz z **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Odczytaj plik binarny **int** ze strumienia|
-|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Wpisz sformatowane dane do **stdout**|
-|[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Wpisz znak w strumieniu (wersje — makro **fputc** i **fputwc —**)|
-|[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Znak do zapisu **stdout** (wersje — makro **fputchar —** i **fputwchar —**)|
-|[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Zapisać wiersza do strumienia|
-|[_putw](../c-runtime-library/reference/putw.md)|Zapisywania danych binarnych **int** do strumienia|
+|[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Wyczyść wskaźnik błędu dla usługi Stream|
+|[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij strumień|
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij wszystkie otwarte strumienie z wyjątkiem **stdin**, **stdout**i **stderr**|
+|[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Skojarz strumień z deskryptorem pliku otwartego pliku|
+|[feof](../c-runtime-library/reference/feof.md)|Testuj pod kątem końca pliku w strumieniu|
+|[ferror](../c-runtime-library/reference/ferror.md)|Testuj pod kątem błędu w strumieniu|
+|[fflush](../c-runtime-library/reference/fflush.md)|Opróżnianie strumienia do buforu lub urządzenia magazynującego|
+|[fgetc, fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)|Odczyt znaku ze strumienia (wersje funkcji **getc —** i **getwc**)|
+|[_fgetchar, _fgetwchar](../c-runtime-library/reference/fgetc-fgetwc.md)|Odczytaj znak z **stdin** (wersje funkcji **GetChar** i **getwchar**)|
+|[fgetpos](../c-runtime-library/reference/fgetpos.md)|Pobierz wskaźnik pozycji strumienia|
+|[fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)|Odczytaj ciąg ze strumienia|
+|[_fileno](../c-runtime-library/reference/fileno.md)|Pobierz deskryptor pliku skojarzony ze strumieniem|
+|[_flushall](../c-runtime-library/reference/flushall.md)|Opróżnianie wszystkich strumieni do bufora lub urządzenia magazynującego|
+|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwórz strumień|
+|[fprintf —, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Zapisz sformatowane dane do strumienia|
+|[fputc, fputwc](../c-runtime-library/reference/fputc-fputwc.md)|Napisz znak do strumienia (wersje funkcji **putc** i **putwc**)|
+|[_fputchar, _fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|Napisz znak do **stdout** (wersje funkcji **putchar** i **putwchar**)|
+|[fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)|Napisz ciąg do strumienia|
+|[fread](../c-runtime-library/reference/fread.md)|Odczytaj niesformatowane dane ze strumienia|
+|[freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Ponownie Przypisz wskaźnik strumienia **pliku** do nowego pliku lub urządzenia|
+|[fscanf, fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [fscanf_s, _fscanf_s_l, fwscanf_s _fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|Odczytaj sformatowane dane ze strumienia|
+|[fseek, _fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|Przenieś położenie pliku do danej lokalizacji|
+|[fsetpos](../c-runtime-library/reference/fsetpos.md)|Ustaw wskaźnik położenia strumienia|
+|[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwieranie strumienia przy użyciu udostępniania plików|
+|[ftell, _ftelli64](../c-runtime-library/reference/ftell-ftelli64.md)|Pobierz bieżące położenie pliku|
+|[fwrite](../c-runtime-library/reference/fwrite.md)|Zapisuj niesformatowane elementy danych do strumienia|
+|[getc, getwc](../c-runtime-library/reference/getc-getwc.md)|Odczytaj znak ze strumienia (wersje makr **fgetc** i **fgetwc**)|
+|[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Odczytaj znak z **stdin** (wersje makr **fgetchar** i **fgetwchar**)|
+|[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Zwraca liczbę jednocześnie otwartych plików dozwolonych na poziomie strumienia we/wy.|
+|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Odczytaj wiersz od **stdin**|
+|[_getw](../c-runtime-library/reference/getw.md)|Odczytaj dane binarne **int** ze strumienia|
+|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Zapisz sformatowane dane do **stdout**|
+|[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Pisanie znaku w strumieniu (wersje makr **fputc** i **fputwc**)|
+|[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Napisz znak do **stdout** (wersje makr **fputchar** i **fputwchar**)|
+|[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Zapisz wiersz do strumienia|
+|[_putw](../c-runtime-library/reference/putw.md)|Zapisz binarną liczbę **całkowitą** do strumienia|
 |[rewind](../c-runtime-library/reference/rewind.md)|Przenieś położenie pliku do początku strumienia|
-|[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Usuwanie plików tymczasowych utworzonych przez **tmpfile —**|
-|[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Odczyt sformatowanych danych z **stdin**|
+|[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Usuń pliki tymczasowe utworzone przez **tmpfile**|
+|[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Odczytywanie sformatowanych danych z **stdin**|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|Buforowanie strumienia kontroli|
-|[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Ustaw maksymalną liczbę plików jednocześnie otwarty na we/wy strumienia poziomu.|
+|[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Ustaw maksymalną liczbę jednocześnie otwartych plików na poziomie strumienia we/wy.|
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|Buforowanie strumienia kontroli i rozmiar buforu|
-|[_snprintf, _snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|Wpisz sformatowane dane o określonej długości do ciągu|
-|[_snscanf —, _snwscanf —](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s —, _snscanf_s_l —, _snwscanf_s —, _snwscanf_s_l —](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Odczyt sformatowanych danych o określonej długości ze standardowego strumienia wejściowego.|
-|[sprintf, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Wpisz sformatowane dane do ciągu|
-|[sscanf —, swscanf —](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|Odczyt sformatowanych danych z ciągu|
-|[_tempnam —, _wtempnam —](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Wygenerować tymczasowej nazwy pliku w danym katalogu|
-|[tmpfile —](../c-runtime-library/reference/tmpfile.md), [tmpfile_s —](../c-runtime-library/reference/tmpfile-s.md)|Utworzyć pliku tymczasowego|
-|[tmpnam —, _wtmpnam —](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md), [tmpnam_s —, _wtmpnam_s —](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|Wygenerować tymczasowej nazwy pliku|
-|[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|Wypchnięcia znaków z powrotem do strumienia|
-|[_vcprintf —, _vcwprintf —](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md), [_vcprintf_s —, _vcprintf_s_l —, _vcwprintf_s —, _vcwprintf_s_l —](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|Wpisz sformatowane dane do konsoli.|
-|[vfprintf —, vfwprintf —](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vfprintf_s —, _vfprintf_s_l —, vfwprintf_s —, _vfwprintf_s_l —](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|Wpisz sformatowane dane do usługi stream|
-|[vprintf —, vwprintf —](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s —, _vprintf_s_l —, vwprintf_s —, _vwprintf_s_l —](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|Wpisz sformatowane dane do **stdout**|
-|[_vsnprintf —, _vsnwprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s —, _vsnprintf_s —, _vsnprintf_s_l —, _vsnwprintf_s —, _vsnwprintf_s_l —](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Wpisz sformatowane dane o określonej długości do buforu|
-|[vsprintf —, vswprintf —](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s —, _vsprintf_s_l —, vswprintf_s —, _vswprintf_s_l —](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Wpisz sformatowane dane do usługi buffer|
+|[_snprintf, _snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [_snprintf_s, _snprintf_s_l, _snwprintf_s](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md) _snwprintf_s_l|Zapisz sformatowane dane o określonej długości do ciągu|
+|[_snscanf, _snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [_snscanf_s, _snscanf_s_l, _snwscanf_s](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md) _snwscanf_s_l|Odczytaj sformatowane dane o określonej długości ze standardowego strumienia wejściowego.|
+|[sprintf —, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf_s, _sprintf_s_l, swprintf_s _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Zapisz sformatowane dane do ciągu|
+|[sscanf, swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|Odczytaj sformatowane dane z ciągu|
+|[_tempnam, _wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Generuj tymczasową nazwę pliku w podanym katalogu|
+|[tmpfile](../c-runtime-library/reference/tmpfile.md), [tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|Utwórz plik tymczasowy|
+|[tmpnam, _wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md), [tmpnam_s, _wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|Generuj tymczasową nazwę pliku|
+|[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|Wypchnij znak z powrotem do strumienia|
+|[_vcprintf, _vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md), [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md) _vcwprintf_s_l|Zapisz sformatowane dane w konsoli programu.|
+|[vfprintf, vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vfprintf_s, _vfprintf_s_l, vfwprintf_s _vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|Zapisz sformatowane dane do strumienia|
+|[vprintf —, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s, _vprintf_s_l, vwprintf_s _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|Zapisz sformatowane dane do **stdout**|
+|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Zapisz sformatowane dane o określonej długości w buforze|
+|[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Zapisz sformatowane dane w buforze|
 
-Po rozpoczęciu wykonywania programu kod uruchamiający automatycznie otwiera kilka strumienie: standardowe dane wejściowe (wskazywany przez **stdin**), wyjścia standardowego (wskazywany przez **stdout**) i błąd standardowy (wskazywany przez **stderr**). Te strumienie nastąpi przekierowanie do konsoli (klawiatury i ekran) domyślnie. Użyj **freopen —** przekierowywanie **stdin**, **stdout**, lub **stderr** pliku na dysku lub na urządzeniu.
+Gdy program rozpoczyna wykonywanie, kod uruchamiania automatycznie otwiera kilka strumieni: standardowe dane wejściowe (wskazywane przez **stdin**), standardowe wyjście (wskazywane przez **stdout**) i błąd standardowy (wskazywany przez **stderr**). Te strumienie są domyślnie kierowane do konsoli (klawiatury i ekranu). Użyj **freopen** , aby przekierować **stdin**, **stdout**lub **stderr** do pliku dysku lub urządzenia.
 
-Pliki otwierane przy użyciu procedury strumienia są buforowane domyślnie. **Stdout** i **stderr** funkcje zostały przesłane, ilekroć są one pełne, lub jeśli piszesz z urządzeniem znaku po każdym wywołaniu biblioteki. Jeśli program zakończy się nieprawidłowo, buforów danych wyjściowych może nie można opróżnić, co spowoduje utratę danych. Użyj **fflush —** lub **_flushall —** zapewnienie buforu skojarzone z określonym plikiem lub wszystkie otwarte bufory zostały przesłane do systemu operacyjnego, który może buforować dane przed zapisem go na dysku. Funkcja commit-to-disk gwarantuje, że zawartość buforu opróżnionych nie zostaną utracone w przypadku awarii systemu.
+Pliki otwierane przy użyciu procedur przesyłania strumieniowego są domyślnie buforowane. Funkcje **stdout** i **stderr** są opróżniane za każdym razem, gdy są pełne lub, jeśli piszesz na znakowe urządzenie, po każdym wywołaniu biblioteki. Jeśli program kończy się nieprawidłowo, bufory wyjściowe nie mogą być opróżniane, co spowodowało utratę danych. Użyj **fflush** lub **_flushall** , aby upewnić się, że bufor skojarzony z określonym plikiem lub wszystkie otwarte bufory są opróżniane do systemu operacyjnego, który może buforować dane przed zapisaniem go na dysku. Funkcja Zatwierdź do dysku gwarantuje, że opróżniona zawartość buforu nie zostanie utracona w przypadku awarii systemu.
 
-Istnieją dwa sposoby, aby zatwierdzić zawartości buforu na dysku:
+Istnieją dwa sposoby zatwierdzania zawartości buforu na dysk:
 
-- Połącz się z plikiem COMMODE. OBJ, aby ustawić globalną flagę zatwierdzania. Domyślne ustawienie flagi globalne to **n**, aby uzyskać "no-commit".
+- Połącz z plikiem. OBJ, aby ustawić globalną flagę zatwierdzania. Domyślnym ustawieniem flagi globalnej jest **n**dla opcji "No-Commit".
 
-- Ustaw flagę trybu **c** z **fopen —** lub **_fdopen —**.
+- Ustaw flagę Mode na **c** z **fopen** lub **_fdopen**.
 
-Każdy plik jest otwarty specjalnie z oboma **c** lub **n** flagi zachowuje się zgodnie z flagą, bez względu na stan globalnej flagi zatwierdzania/nie-commit.
+Każdy plik otwarty z flagą **c** lub **n** zachowuje się zgodnie z flagą, niezależnie od stanu flagi globalnego zatwierdzenia/bez zatwierdzania.
 
-Jeśli program nie zamykaj jawnie strumienia, strumień zostanie zamknięty automatycznie, gdy program kończy. Jednak należy zamknąć strumień po zakończeniu program, dzięki niemu jako liczbę strumieni, które mogą być otwarte w tym samym czasie jest ograniczona. Zobacz [_setmaxstdio —](../c-runtime-library/reference/setmaxstdio.md) uzyskać informacji na temat tego limitu.
+Jeśli w programie nie zamknięto jawnie strumienia, strumień jest automatycznie zamykany po zakończeniu działania programu. Należy jednak zamknąć strumień, gdy program go zakończy, ponieważ liczba strumieni, które mogą być otwarte w tym samym czasie, jest ograniczona. Aby uzyskać informacje dotyczące tego limitu, zobacz [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
 
-Dane wejściowe można wykonać w danych wyjściowych bezpośrednio tylko interwencyjnego wywołania **fflush —** lub funkcji położenia pliku (**fseek**, **fsetpos**, lub **rewind**). Dane wyjściowe można wykonać dane wejściowe bez interwencyjnego wywołania funkcji położenia pliku, jeśli operacja wprowadzania napotka koniec pliku.
+Dane wejściowe mogą być bezpośrednio zgodne z wywołaniem wywołującym **fflush** lub funkcją pozycjonowania plików (**fseek**, **fsetpos**lub **przewijania do tyłu**). Dane wyjściowe mogą podążać za danymi wejściowymi bez wywołującego wywołania funkcji umieszczania plików, jeśli operacja wejściowa napotka koniec pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -2,22 +2,19 @@
 title: Wyrównanie
 description: Sposób wyrównania danych w nowoczesnej C++.
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301668"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443666"
 ---
 # <a name="alignment"></a>Wyrównanie
 
 Jedną z funkcji niskiego poziomu systemu C++ jest możliwość określania precyzyjnego wyrównania obiektów w pamięci w celu maksymalnego wykorzystania konkretnej architektury sprzętu. Domyślnie kompilator wyrównuje elementy członkowskie klasy i struktury według ich wartości rozmiaru: `bool` i `char` na granicach 1-bajtowych, `short` na granicach 2-bajtowych, `int`, `long`i `float` na granicach 4-bajtowych, a `long long`, `double`i `long double` przy 8-bajtowych granicach. 
 
-W większości scenariuszy nigdy nie trzeba być wyrównaniu, ponieważ domyślne wyrównanie jest już optymalne. W niektórych przypadkach można jednak uzyskać znaczące ulepszenia wydajności lub oszczędności pamięci, określając niestandardowe wyrównanie struktur danych. Przed uruchomieniem programu Visual Studio 2015 można użyć słów kluczowych określonych przez firmę Microsoft `__alignof` i `declspec(alignas)`, aby określić wyrównanie większe niż domyślne. Począwszy od programu Visual Studio 2015 należy używać standardowych słów kluczowych języka C++ 11 **alignof** i **alignas** w celu uzyskania maksymalnej przenośności kodu. Nowe słowa kluczowe działają w taki sam sposób, jak w przypadku rozszerzeń specyficznych dla firmy Microsoft. Dokumentacja tych rozszerzeń dotyczy również nowych słów kluczowych. Aby uzyskać więcej informacji, zobacz [__Alignof operatora](../cpp/alignof-operator.md) i [align](../cpp/align-cpp.md). Standard nie określa zachowania pakowania w przypadku granic mniejszych niż domyślne ustawienia kompilatora dla platformy docelowej, dlatego w takim przypadku nadal trzeba używać pakietu Microsoft #pragma Pack. [](../preprocessor/pack.md) C++
+W większości scenariuszy nigdy nie trzeba być wyrównaniu, ponieważ domyślne wyrównanie jest już optymalne. W niektórych przypadkach można jednak uzyskać znaczące ulepszenia wydajności lub oszczędności pamięci, określając niestandardowe wyrównanie struktur danych. Przed uruchomieniem programu Visual Studio 2015 można użyć słów kluczowych określonych przez firmę Microsoft `__alignof` i `declspec(alignas)`, aby określić wyrównanie większe niż domyślne. Począwszy od programu Visual Studio 2015 należy używać standardowych słów kluczowych języka C++ 11 **alignof** i **alignas** w celu uzyskania maksymalnej przenośności kodu. Nowe słowa kluczowe działają w taki sam sposób, jak w przypadku rozszerzeń specyficznych dla firmy Microsoft. Dokumentacja tych rozszerzeń dotyczy również nowych słów kluczowych. Aby uzyskać więcej informacji, zobacz [__Alignof operatora](../cpp/alignof-operator.md) i [align](../cpp/align-cpp.md). Standard nie określa zachowania pakowania w przypadku granic mniejszych niż domyślne ustawienia kompilatora dla platformy docelowej, dlatego w takim przypadku nadal trzeba używać pakietu Microsoft #pragma Pack. [pack](../preprocessor/pack.md) C++
 
 Użyj [klasy aligned_storage](../standard-library/aligned-storage-class.md) do przydzielania pamięci struktur danych z wyrównaniami niestandardowymi. [Klasa aligned_union](../standard-library/aligned-union-class.md) służy do określania wyrównania dla Unii z nieprostymi konstruktorami lub destruktorami.
 
@@ -126,6 +123,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrównanie struktury danych](https://en.wikipedia.org/wiki/Data_structure_alignment)

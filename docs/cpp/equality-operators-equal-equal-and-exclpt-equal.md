@@ -2,7 +2,6 @@
 title: 'Operatory porównania: == i !='
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392172"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444398"
 ---
 # <a name="equality-operators--and-"></a>Operatory porównania: == i !=
 
@@ -32,15 +31,15 @@ expression != expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory binarne porównania porównać ich operandami dla Ścisła równość i nierówność.
+Operatory równości danych binarnych porównują ich operandy dla ścisłej równości lub nierówności.
 
-Operatory porównania, równa się (`==`) i nie równa się (`!=`), mają niższy priorytet niż operatory relacyjne, ale także działają w podobny sposób. Typ wyniku dla tych operatorów **bool**.
+Operatory równości, równe (`==`), a nie równe (`!=`) mają niższy priorytet niż operatory relacyjne, ale zachowują się podobnie. Typem wyniku dla tych operatorów jest **bool**.
 
-Operator równości (`==`) zwraca **true** (1), jeśli oba operandy mają taką samą wartość; w przeciwnym razie zwraca **false** (0). Nie równe — operator (`!=`) zwraca **true** Jeśli operandów nie mają tej samej wartości; w przeciwnym razie zwraca **false**.
+Operator równości (`==`) zwraca **wartość true** (1), jeśli oba operandy mają tę samą wartość. w przeciwnym razie zwraca **wartość false** (0). Operator nierówności (`!=`) zwraca **wartość true** , jeśli operandy nie mają tej samej wartości; w przeciwnym razie zwraca **wartość false**.
 
-## <a name="operator-keyword-for-"></a>Słowo kluczowe operator! =
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla! =
 
-`not_eq` Operator jest odpowiednikiem tekstu `!=`. Istnieją dwa sposoby dostępu do `not_eq` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Operator `not_eq` jest odpowiednikiem tekstu `!=`. Istnieją dwa sposoby uzyskania dostępu do operatora `not_eq` w programach: Dołącz plik nagłówka `iso646.h`lub Kompiluj z opcją kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Wyłącz rozszerzenia językowe).
 
 ## <a name="example"></a>Przykład
 
@@ -60,9 +59,9 @@ int main() {
 }
 ```
 
-Operatory porównania porównanie wskaźników do elementów członkowskich tego samego typu. Takie porównania są wykonywane konwersje wskaźników do elementów członkowskich. Wskaźniki do elementów członkowskich można również porównać do stałego wyrażenia, którego wynikiem jest 0.
+Operatory równości mogą porównywać wskaźniki z elementami członkowskimi tego samego typu. W takim przypadku konwersje typu wskaźnik do elementu członkowskiego są wykonywane. Wskaźniki do elementów członkowskich można także porównać z wyrażeniem stałym, którego wynikiem jest 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

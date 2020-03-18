@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141798"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445108"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych C++ w aplikacjach platformy UWP
 
@@ -90,7 +90,7 @@ W poniższym przykładzie przedstawiono różne sposoby tworzenia obiektu `IAsyn
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a>Przykład: Tworzenie składnika C++ środowisko wykonawcze systemu Windows i używanie go zC#
+## <a name="example-component"></a>Przykład: Tworzenie składnika C++ środowisko wykonawcze systemu Windows i używanie go z poziomu języka C\#
 
 Rozważ użycie aplikacji używającej języka XAML C# i ZDEFINIOWANIE interfejsu użytkownika i C++ składnika Środowisko wykonawcze systemu Windows w celu wykonania operacji intensywnie korzystających z obliczeń. W tym przykładzie C++ składnik oblicza, które liczby z danego zakresu są podstawowe. Aby zilustrować różnice między czterema środowisko wykonawcze systemu Windows asynchronicznymi interfejsami zadań, Uruchom w programie Visual Studio, tworząc **puste rozwiązanie** i wprowadzając nazwę `Primes`. Następnie Dodaj do rozwiązania środowisko wykonawcze systemu Windows projektu **składnika** i nadawanie mu nazwy `PrimesLibrary`. Dodaj następujący kod do wygenerowanego C++ pliku nagłówkowego (ten przykład zmienia nazwę Class1. h na. h). Każda metoda `public` definiuje jeden z czterech interfejsów asynchronicznych. Metody zwracające wartość zwracają obiekt [Windows:: Foundation:: Collections:: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Metody raportujące postęp generują `double` wartości, które definiują wartość procentową ogólnej pracy, która została ukończona.
 

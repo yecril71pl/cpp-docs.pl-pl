@@ -2,7 +2,6 @@
 title: event — Klasa
 ms.date: 11/04/2016
 f1_keywords:
-- event
 - CONCRT/concurrency::event
 - CONCRT/concurrency::event::reset
 - CONCRT/concurrency::event::set
@@ -12,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 2c72b4b086e932f4fe404259c25f8d2c8be2be31
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3d645cc09c61402059e9a86679c10ee703ee8031
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138843"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443743"
 ---
 # <a name="event-class"></a>event — Klasa
 
@@ -29,7 +28,7 @@ Zdarzenie resetowania ręcznego, które jest jawnie świadome środowisko urucho
 class event;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -129,7 +128,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 *_Timeout*<br/>
 Wskazuje liczbę milisekund przed upływem limitu czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza, że nie ma limitu czasu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli oczekiwanie zakończyło się, wartość `0` jest zwracana; w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT`, aby wskazać, że upłynął limit czasu oczekiwania bez zasygnalizowania zdarzenia.
 
@@ -162,7 +161,7 @@ Jeśli ustawiono wartość **true**, parametr określa, że wszystkie zdarzenia 
 *_Timeout*<br/>
 Wskazuje liczbę milisekund przed upływem limitu czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza, że nie ma limitu czasu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli oczekiwanie zakończyło się, indeks w tablicy dostarczony w `_PPEvents` parametr, który spełnia warunek oczekiwania; w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT`, aby wskazać, że upłynął limit czasu oczekiwania bez spełnienia warunku.
 

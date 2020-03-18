@@ -3,12 +3,12 @@ title: Odwołanie pliku cppproperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417370"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442554"
 ---
 # <a name="cpppropertiesjson-reference"></a>Odwołanie pliku cppproperties. JSON
 
@@ -28,7 +28,7 @@ Konfiguracja może mieć jedną z następujących właściwości:
 |`forcedInclude`|Nagłówek, który ma być automatycznie dołączany do każdej jednostki kompilacji (Maps do/FI dla MSVC lub-include dla Clang)|
 |`undefines`|Lista makr, które mają być niezdefiniowane (mapy do/U dla MSVC)|
 |`intelliSenseMode`|Aparat IntelliSense, który ma być używany. Można określić jedną ze wstępnie zdefiniowanych wariantów specyficznych dla architektury dla MSVC, w zatoce lub Clang.|
-|`environments`|Zdefiniowane przez użytkownika zestawy zmiennych, które zachowują się jak zmienne środowiskowe w wierszu polecenia i są dostępne za pomocą $ {ENV.<VARIABLE>} makro.|
+|`environments`|Zdefiniowane przez użytkownika zestawy zmiennych, które zachowują się jak zmienne środowiskowe w wierszu polecenia i są dostępne za pomocą makra $ {ENV.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>wartości intelliSensemode
 
@@ -162,7 +162,7 @@ Jeśli projekt zawiera folder dołączania, a także zawiera *Windows. h* i inne
 
 Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia** > **Opcje** > **edytorze tekstów** > **C/C++**  > **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **wartość true**. Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
 
-![Rejestrowanie informacji diagnostycznych](media/diagnostic-logging.png)
+![Rejestrowanie diagnostyczne](media/diagnostic-logging.png)
 
 Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu opcji **Pokaż dane wyjściowe z: C++ dziennik wizualny**. Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych w pliku *pliku cppproperties. JSON*, spróbuj zamknąć folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
 

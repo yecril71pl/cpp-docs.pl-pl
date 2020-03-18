@@ -1,28 +1,26 @@
 ---
-title: Procedury czasu wykonywania języka Universal C według kategorii
+title: Procedury środowiska uruchomieniowego języka Universal C według kategorii
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390896"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444807"
 ---
-# <a name="universal-c-runtime-routines-by-category"></a>Procedury czasu wykonywania języka Universal C według kategorii
+# <a name="universal-c-runtime-routines-by-category"></a>Procedury środowiska uruchomieniowego języka Universal C według kategorii
 
-W tej sekcji wymieniono i opisano procedury biblioteki (UCRT) czasu wykonywania języka Universal C według kategorii. Dla wygody odniesienia niektóre procedury są wymienione w więcej niż jednej kategorii. Procedury znaków dwubajtowych i znaków wielobajtowych są grupowane z odpowiednikami znaków jednobajtowych, jeśli takie istnieją.
+W tej sekcji wymieniono i opisano procedury biblioteki uniwersalnego środowiska uruchomieniowego C (UCRT) według kategorii. Dla wygody odniesienia niektóre procedury są wymienione w więcej niż jednej kategorii. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są pogrupowane przy użyciu odpowiedników znaków pojedynczych, gdzie istnieją.
 
-## <a name="ucrt-library-routine-categories"></a>Kategorie rutynowych Biblioteka UCRT
+## <a name="ucrt-library-routine-categories"></a>Kategorie procedur biblioteki UCRT
 
-Główne kategorie UCRT biblioteki procedur są:
+Główne kategorie procedur biblioteki UCRT są następujące:
 
 |||
 |-|-|
@@ -39,6 +37,6 @@ Główne kategorie UCRT biblioteki procedur są:
 |[Wyszukiwanie i sortowanie](../c-runtime-library/searching-and-sorting.md)|[Manipulowanie ciągami](../c-runtime-library/string-manipulation-crt.md)|
 |[Wywołania systemowe](../c-runtime-library/system-calls.md)|[Zarządzanie czasem](../c-runtime-library/time-management.md)|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>

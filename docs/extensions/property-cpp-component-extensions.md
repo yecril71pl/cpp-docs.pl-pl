@@ -2,18 +2,15 @@
 title: Właściwość (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509714"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445162"
 ---
 # <a name="property--ccli-and-ccx"></a>Właściwość (C++/CLI i C++/CX)
 
@@ -70,9 +67,9 @@ Nazwa właściwości.
 *Modyfikator dostępu*<br/>
 Kwalifikator dostępu. Prawidłowe kwalifikatory są **statyczne** i **wirtualne**.
 
-Metody dostępu get lub set nie muszą zgadzać się z kwalifikatorem wirtualnym, ale muszą wyrazić zgodę na kwalifikator **statyczny** .
+Metody dostępu get lub set nie muszą zgadzać się z kwalifikatorem **wirtualnym** , ale muszą wyrazić zgodę na kwalifikator **statyczny** .
 
-*inheritance-modifier*<br/>
+*Dziedziczenie — modyfikator*<br/>
 Kwalifikator dziedziczenia. Prawidłowe kwalifikatory są **abstrakcyjne** i **zapieczętowane**.
 
 *index_list*<br/>
@@ -82,7 +79,7 @@ Rozdzielana przecinkami lista co najmniej jednego indeksu. Każdy indeks składa
 Wartość, która ma zostać przypisana do właściwości w operacji zestawu lub pobierana w operacji pobierania.
 
 *property_body*<br/>
-Treść metody właściwości zestawu lub get. *Property_body* może używać *index_list* do uzyskiwania dostępu do elementu członkowskiego danych właściwości bazowej lub jako parametrów w przetwarzaniu zdefiniowanym przez użytkownika.
+Treść metody właściwości zestawu lub get. *Property_body* może użyć *index_list* , aby uzyskać dostęp do elementu członkowskiego danych właściwości podstawowej lub jako parametry w przetwarzaniu zdefiniowanym przez użytkownika.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -90,7 +87,7 @@ Aby uzyskać więcej informacji, zobacz [właściwościC++(/CX)](../cppcx/proper
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -127,11 +124,11 @@ Rozdzielana przecinkami lista co najmniej jednego indeksu, określona w nawiasac
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy przykład składni pokazuje prostą *Właściwość*, która niejawnie deklaruje zarówno `set` metodę `get` , jak i. Kompilator automatycznie tworzy pole prywatne do przechowywania wartości właściwości.
+Pierwsza Przykładowa składnia przedstawia *prostą Właściwość*, która niejawnie deklaruje zarówno `set` jak i `get` metodę. Kompilator automatycznie tworzy pole prywatne do przechowywania wartości właściwości.
 
-Druga Przykładowa składnia przedstawia *blok właściwości*, który jawnie deklaruje zarówno `set` metodę, jak i. `get`
+Druga Przykładowa składnia przedstawia *blok właściwości*, który jawnie deklaruje zarówno metodę `set`, jak i `get`.
 
-Trzecia Przykładowa składnia przedstawia zdefiniowaną przez klienta *Właściwość indeksu*. Właściwość index przyjmuje parametry oprócz wartości, która ma być ustawiona lub pobrana. Należy określić nazwę właściwości. W `set` przeciwieństwie do prostej właściwości, metody i `get` /lub właściwości indeksu muszą być jawnie zdefiniowane i należy określić nazwę dla właściwości.
+Trzecia Przykładowa składnia przedstawia zdefiniowaną przez klienta *Właściwość indeksu*. Właściwość index przyjmuje parametry oprócz wartości, która ma być ustawiona lub pobrana. Należy określić nazwę właściwości. W przeciwieństwie do prostej właściwości, metody `set` i/lub `get` właściwości index muszą być jawnie zdefiniowane i należy określić nazwę właściwości.
 
 Czwarta składnia przykładu przedstawia Właściwość *domyślną* , która zapewnia podobny do tablicy dostęp do wystąpienia typu. Słowo kluczowe, **default**, służy tylko do określenia właściwości domyślnej. Nazwa właściwości domyślnej jest nazwą typu, w którym właściwość jest zdefiniowana.
 
@@ -141,19 +138,19 @@ Nazwa właściwości nie może być zgodna z nazwą klasy zarządzanej, która j
 
 Do kodu klienta właściwość ma wygląd zwykłego elementu członkowskiego danych i może być zapisywana lub odczytywana przy użyciu tej samej składni co element członkowski danych.
 
-Metody get i set nie muszą zgadzać się z modyfikatorem wirtualnym.
+Metody get i set nie muszą zgadzać się z modyfikatorem **wirtualnym** .
 
 Dostępność metody get i set może się różnić.
 
 Definicja metody właściwości może występować poza treścią klasy, podobnie jak zwykła Metoda.
 
-Metoda get i Set dla właściwości wyraża zgodę na modyfikator statyczny .
+Metoda get i Set dla właściwości wyraża zgodę na modyfikator **statyczny** .
 
 Właściwość jest skalarna, jeśli jej metody get i Set pasują do następującego opisu:
 
-- Metoda get nie ma parametrów i ma zwracany typ `T`.
+- Metoda get nie ma parametrów i ma `T`zwracanego typu.
 
-- Metoda Set ma parametr typu `T`, a zwracany typ **void**.
+- Metoda Set ma parametr typu `T`i zwracany typ **void**.
 
 Zakres o takim samym identyfikatorze powinien zawierać tylko jedną właściwość skalarną. Właściwości skalarne nie mogą być przeciążone.
 
@@ -165,7 +162,7 @@ Różne ułatwienia dostępu są dozwolone dla metod dostępu w bloku właściwo
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

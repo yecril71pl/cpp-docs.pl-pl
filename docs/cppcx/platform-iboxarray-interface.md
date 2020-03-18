@@ -1,23 +1,23 @@
 ---
-title: Platform::IBoxArray, interfejs
+title: 'Platform:: IBoxArray, interfejs'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392079"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444158"
 ---
-# <a name="platformiboxarray-interface"></a>Platform::IBoxArray, interfejs
+# <a name="platformiboxarray-interface"></a>Platform:: IBoxArray, interfejs
 
-`IBoxArray` jest otoką dla tablic typów wartości, które są przekazywane między interfejsem binarnym aplikacji (ABI) lub przechowywane w kolekcjach `Platform::Object^` elementów, takich jak te w kontrolkach XAML.
+`IBoxArray` jest otoką dla tablic typów wartości, które są przesyłane przez interfejs binarny aplikacji (ABI) lub przechowywane w kolekcjach elementów `Platform::Object^`, takich jak te w kontrolkach XAML.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,24 +28,24 @@ interface class IBoxArray
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ wartości spakowanej w każdym elemencie tablicy.
+*&*<br/>
+Typ wartości opakowanej w każdym elemencie tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-`IBoxArray` jest C++nazwę /CX `Windows::Foundation::IReferenceArray`.
+`IBoxArray` to nazwa C++/CX dla `Windows::Foundation::IReferenceArray`.
 
 ### <a name="members"></a>Elementy członkowskie
 
-`IBoxArray` Interfejs dziedziczy z `IValueType` interfejsu. `IBoxArray` ma również te elementy członkowskie:
+Interfejs `IBoxArray` dziedziczy po interfejsie `IValueType`. `IBoxArray` ma również następujące elementy członkowskie:
 
 |Metoda|Opis|
 |------------|-----------------|
-|[Wartość](#value)|Zwraca tablicę rozpakowany, które wcześniej były przechowywane w tym `IBoxArray` wystąpienia.|
+|[Wartość](#value)|Zwraca tablicę nieopakowaną, która była wcześniej przechowywana w tym wystąpieniu `IBoxArray`.|
 
-## <a name="value"></a> Właściwość IBoxArray::Value
+## <a name="value"></a>IBoxArray:: Value — właściwość
 
-Zwraca wartość, która pierwotnie została zapisana w tym obiekcie.
+Zwraca wartość oryginalnie przechowywaną w tym obiekcie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -55,17 +55,17 @@ property T Value {T get();}
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ wartości spakowanej.
+*&*<br/>
+Typ wartości opakowanej.
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-Zwraca wartość, która pierwotnie została zapisana w tym obiekcie.
+Zwraca wartość oryginalnie przechowywaną w tym obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać przykład, zobacz [pakowania](../cppcx/boxing-c-cx.md).
+Aby zapoznać się z przykładem, zobacz [opakowanie](../cppcx/boxing-c-cx.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

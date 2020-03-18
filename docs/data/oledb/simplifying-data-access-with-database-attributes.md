@@ -1,13 +1,6 @@
 ---
 title: Upraszczanie dostępu do danych za pomocą atrybutów bazy danych
 ms.date: 10/19/2018
-f1_keywords:
-- vc-attr.db_param
-- vc-attr.db_column
-- vc-attr.db_accessor
-- vc-attr.db_command
-- vc-attr.db_table
-- vc-attr.db_source
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -18,54 +11,55 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: 83519ffff7dd1f1b5f8a635f094932a1f9728193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fc30596058271523f64cc9108ee6f39eb5016fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404471"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444133"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Upraszczanie dostępu do danych za pomocą atrybutów bazy danych
 
-W tym temacie przedstawiono użycie atrybutów bazy danych, aby uprościć operacji bazy danych.
+W tym temacie pokazano, jak używać atrybutów bazy danych, aby uprościć operacje bazy danych.
 
-Podstawowy sposób uzyskiwać dostęp do informacji z bazy danych ma utworzyć klasę polecenie (lub tabeli) i klasę rekordu użytkownika dla określonej tabeli w bazie danych. Atrybuty bazy danych, Uprość niektóre deklaracje szablonu, które wcześniej trzeba było zrobić.
+Podstawowym sposobem uzyskiwania dostępu do informacji z bazy danych jest utworzenie klasy polecenia (lub tabeli) i klasy rekordu użytkownika dla określonej tabeli w bazie danych. Atrybuty bazy danych upraszczają niektóre deklaracje szablonu, które wcześniej należały wykonać.
 
-Aby zademonstrować użycie atrybutów bazy danych, w poniższych sekcjach opisano dwa równoważne tabeli i deklaracji klasy rekordów użytkowników: pierwszy używa atrybutów, a drugi używa szablony OLE DB. Taki kod deklaracji zwykle jest umieszczany w pliku nagłówka o nazwie dla obiektu tabeli lub polecenia, na przykład Authors.h.
+Aby zademonstrować użycie atrybutów bazy danych, w poniższych sekcjach przedstawiono dwie równoważne deklaracje dotyczące klas i rekordów użytkowników: pierwszy używa atrybutów, a drugi używa szablonów OLE DB. Taki kod deklaracji jest zwykle umieszczany w pliku nagłówkowym o nazwie dla obiektu tabeli lub polecenia, na przykład autors. h.
 
-Przez porównanie dwóch plików, można zobaczyć, jak łatwiej jest używać atrybutów. Wśród różnice są:
+Porównując dwa pliki, można zobaczyć, jak dużo łatwiej jest używać atrybutów. Różnice są następujące:
 
-- Przy użyciu atrybutów, należy zadeklarować jednej klasy: `CAuthors`, podczas gdy za pomocą szablonów należy zadeklarować dwa: `CAuthorsNoAttrAccessor` i `CAuthorsNoAttr`.
+- Przy użyciu atrybutów należy tylko zadeklarować jedną klasę: `CAuthors`, ale z szablonami należy zadeklarować dwa: `CAuthorsNoAttrAccessor` i `CAuthorsNoAttr`.
 
-- `db_source` Wywołania w wersji opartego na atrybutach jest odpowiednikiem `OpenDataSource()` wywołania w deklaracji szablonu.
+- Wywołanie `db_source` w wersji z atrybutami jest równoważne wywołaniu `OpenDataSource()` w deklaracji szablonu.
 
-- `db_table` Wywołania w wersji opartego na atrybutach jest równoważna następującej deklaracji szablonu:
+- Wywołanie `db_table` w wersji z atrybutami jest równoważne następującej deklaracji szablonu:
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- `db_column` Wywołań w wersji opartego na atrybutach są równoważne do mapy kolumny (zobacz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) w deklaracji szablonu.
+- Wywołania `db_column` w wersji z atrybutami są równoważne z mapą kolumn (zobacz `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) w deklaracji szablonu.
 
-Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika za Ciebie. Klasa rekord użytkownika jest równa `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli klasa tabeli `CAuthors`, nosi nazwę klasy rekordu użytkownika wprowadzony `CAuthorsAccessor`, i może wyświetlać tylko jego deklaracji w wprowadzonego kodu. Aby uzyskać więcej informacji, zobacz "Klasy rekordów użytkowników Attribute-Injected" w [rekordów użytkowników](../../data/oledb/user-records.md).
+Atrybuty wstrzyknąć deklarację klasy rekordu użytkownika. Klasa rekordu użytkownika jest równa `CAuthorsNoAttrAccessor` w deklaracji szablonu. Jeśli Klasa tabeli jest `CAuthors`, wprowadzona Klasa rekordu użytkownika ma nazwę `CAuthorsAccessor`i można ją wyświetlić tylko w wstrzykiwanym kodzie. Aby uzyskać więcej informacji, zobacz "klasy rekordów użytkowników z Wstrzykiwanymi atrybutami" w [rekordach użytkowników](../../data/oledb/user-records.md).
 
-Zarówno w atrybutami i kodu opartego na szablonie, należy ustawić właściwości zestawu wierszy za pomocą `CDBPropSet::AddProperty`.
+W obu atrybutach i kodzie z szablonem, należy ustawić właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty`.
 
-Aby uzyskać informacje na temat atrybutów omówione w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/ole-db-consumer-attributes.md).
+Aby uzyskać informacje o atrybutach omawianych w tym temacie, zobacz [OLE DB atrybuty konsumentów](../../windows/ole-db-consumer-attributes.md).
 
 > [!NOTE]
-> Następujące `include` instrukcje są wymagane do kompilowania w poniższych przykładach:
+> Następujące instrukcje `include` są wymagane do skompilowania przykładów poniżej:
+
 > ```cpp
 > #include <atlbase.h>
 > #include <atlplus.h>
 > #include <atldbcli.h>
 > ```
 
-## <a name="table-and-accessor-declaration-using-attributes"></a>Tabela i deklaracja dostępu przy użyciu atrybutów
+## <a name="table-and-accessor-declaration-using-attributes"></a>Deklaracja tabeli i metody dostępu przy użyciu atrybutów
 
-Poniższy kod wywoła `db_source` i `db_table` klasy tabeli. `db_source` Określa źródło danych i połączenia ma być używany. `db_table` wprowadza kod odpowiedni szablon, aby zadeklarować klasy tabeli. `db_column` Określ mapę kolumny i wstrzyknąć deklaracji metody dostępu. Atrybuty konsumentów OLE DB można użyć w każdym projekcie, który obsługuje ATL.
+Poniższy kod wywołuje `db_source` i `db_table` klasy Table. `db_source` określa źródło danych i połączenie, które ma być używane. `db_table` wstrzyknąć odpowiedni kod szablonu, aby zadeklarować klasę tabeli. `db_column` określić mapę kolumn i wstrzyknąć deklarację metody dostępu. W każdym projekcie, który obsługuje ATL, można użyć atrybutów klienta OLE DB.
 
-Poniżej przedstawiono deklaracji metody dostępu i tabeli przy użyciu atrybutów:
+Oto deklaracja tabeli i metody dostępu przy użyciu atrybutów:
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -100,9 +94,9 @@ public:
 };
 ```
 
-## <a name="table-and-accessor-declaration-using-templates"></a>Tabela i deklaracja dostępu za pomocą szablonów
+## <a name="table-and-accessor-declaration-using-templates"></a>Deklaracja tabeli i metody dostępu przy użyciu szablonów
 
-Poniżej przedstawiono deklaracji metody dostępu i tabeli przy użyciu szablonów.
+Oto deklaracja tabeli i metody dostępu przy użyciu szablonów.
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -206,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)

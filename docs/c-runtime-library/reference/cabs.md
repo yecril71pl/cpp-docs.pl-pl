@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943408"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443051"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -52,22 +48,22 @@ double _cabs(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_cabs** zwraca wartość bezwzględną argumentu, jeśli powodzenie. W przypadku przepełnienia funkcja **_cabs** zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**. Obsługę błędów można zmienić za pomocą [_matherr](matherr.md).
+**_cabs** zwraca wartość bezwzględną argumentu, jeśli powodzenie. W przypadku przepełnienia **_cabs** zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**. Obsługę błędów można zmienić przy użyciu [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cabs** oblicza wartość bezwzględną liczby zespolonej, która musi być strukturą typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się ze prawdziwego składnika *x* i części urojonej *y*. Wywołanie **_cabs** generuje wartość równoważną wartości wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
+Funkcja **_cabs** oblicza wartość bezwzględną liczby zespolonej, która musi być strukturą typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się ze prawdziwego składnika *x* i części urojonej *y*. Wywołanie **_cabs** generuje wartość równoważną wartości tego wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cabs**|\<math.h>|
+|**_cabs**|\<> Math. h|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -96,7 +92,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

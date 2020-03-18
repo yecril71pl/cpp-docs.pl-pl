@@ -1,39 +1,36 @@
 ---
-title: CReBar a CReBarCtrl
+title: CReBar vs. CReBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CReBar
-- CReBarCtrl
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94f889be453a17a55357a260bd2a0c07037f6ded
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241790"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445285"
 ---
-# <a name="crebar-vs-crebarctrl"></a>CReBar a CReBarCtrl
+# <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 
-Biblioteka MFC zawiera dwie klasy, aby utworzyć rebars: [CReBar](../mfc/reference/crebar-class.md) i [z CReBarCtrl](../mfc/reference/crebarctrl-class.md) (która opakowuje interfejs API sterowania wspólnej Windows). `CReBar` zapewnia wszystkie funkcje formantu typowego paska pomocniczego i obsługuje wiele wymagane typowe ustawienia kontroli i struktury dla Ciebie.
+MFC udostępnia dwie klasy do tworzenia pasków: [CReBar](../mfc/reference/crebar-class.md) i [Korzystanie CReBarCtrl](../mfc/reference/crebarctrl-class.md) (które zawijają interfejs API usługi Common Control systemu Windows). `CReBar` oferuje wszystkie funkcje paska pomocniczego wspólnego formantu i obsługuje wiele wymaganych wspólnych ustawień i struktur kontroli.
 
-`CReBarCtrl` jest to klasa otoki dla formantu paska pomocniczego Win32, który może być łatwiejsze do wdrożenia, jeśli nie zamierzasz zintegrować paska pomocniczego architektury MFC. Jeśli planujesz używać `CReBarCtrl` i zintegruj paska pomocniczego architektury MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacje kontrolki paska pomocniczego z MFC. Ta informacja nie jest trudne; jest jednak dodatkowej pracy, który jest zbędny w przypadku używania `CReBar`.
+`CReBarCtrl` jest klasą otoki dla kontrolki Win32 paska pomocniczego i dlatego może być łatwiejsza do wdrożenia, jeśli nie zamierzasz zintegrować paska pomocniczego z architekturą MFC. Jeśli zamierzasz używać `CReBarCtrl` i zintegrować paska pomocniczego z architekturą MFC, musisz zadbać o to, aby przekazywać manipulowanie formantami paska pomocniczego do MFC. Ta komunikacja nie jest trudna. Jednak w przypadku korzystania z `CReBar`nie jest to dodatkowe działanie, które jest niepotrzebne.
 
-Visual C++ zapewnia dwa sposoby, aby móc korzystać z formantu typowego paska pomocniczego.
+Wizualizacja C++ zapewnia dwa sposoby korzystania ze wspólnej kontroli paska pomocniczego.
 
-- Utworzyć przy użyciu paska pomocniczego `CReBar`, a następnie wywołaj [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) uzyskać dostęp do `CReBarCtrl` funkcji elementów członkowskich.
+- Utwórz paska pomocniczego przy użyciu `CReBar`, a następnie Wywołaj [CReBar:: GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) , aby uzyskać dostęp do `CReBarCtrl` funkcji Członkowskich.
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` jest funkcją śródwierszową elementu członkowskiego, który rzutuje **to** wskaźnika obiektu paska pomocniczego. Oznacza to, że w czasie wykonywania, wywołanie funkcji ma bez.
+    >  `CReBar::GetReBarCtrl` to wbudowana funkcja członkowska, która rzutuje wskaźnik **tego** obiektu paska pomocniczego. Oznacza to, że w czasie wykonywania wywołanie funkcji nie ma żadnych kosztów.
 
-- Tworzenie przy użyciu paska pomocniczego [z CReBarCtrl](../mfc/reference/crebarctrl-class.md)przez Konstruktor.
+- Utwórz paska pomocniczego za pomocą konstruktora [Korzystanie CReBarCtrl](../mfc/reference/crebarctrl-class.md).
 
-Każda z tych metod zapewni Ci dostęp do funkcji Członkowskich kontrolki paska pomocniczego. Gdy wywołujesz `CReBar::GetReBarCtrl`, zwraca odwołanie do `CReBarCtrl` obiektu, aby można było używać któryś zbiór elementów członkowskich. Zobacz [CReBar](../mfc/reference/crebar-class.md) informacji na temat tworzenia i utworzenie przy użyciu paska pomocniczego `CReBar`.
+Każda metoda zapewnia dostęp do funkcji Członkowskich formantu paska pomocniczego. Po wywołaniu `CReBar::GetReBarCtrl`zwraca odwołanie do obiektu `CReBarCtrl`, aby można było użyć dowolnego zestawu funkcji Członkowskich. Zobacz [CReBar](../mfc/reference/crebar-class.md) , aby uzyskać informacje dotyczące konstruowania i tworzenia paska pomocniczego przy użyciu `CReBar`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

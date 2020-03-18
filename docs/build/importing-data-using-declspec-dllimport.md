@@ -1,24 +1,22 @@
 ---
 title: Importowanie danych przy użyciu atrybutu __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- dllimport
 helpviewer_keywords:
 - importing data [C++]
 - dllimport attribute [C++], data imports
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: 74ad93e640a4e961f7670077227bb5c35a42c20f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c9dce798572a91bcb9721f022393abb669970131
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342106"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440447"
 ---
-# <a name="importing-data-using-declspecdllimport"></a>Importowanie danych przy użyciu atrybutu __declspec(dllimport)
+# <a name="importing-data-using-__declspecdllimport"></a>Importowanie danych przy użyciu atrybutu __declspec(dllimport)
 
-W przypadku danych za pomocą **__declspec(dllimport)** element wygody, który usuwa warstwę pośredniego. Podczas importowania danych z biblioteki DLL, nadal musiał przejść za pomocą tabeli adresów importowania. Przed **__declspec(dllimport)**, oznacza to pamiętać o postępowaniu dodatkowy poziom pośredni, uzyskiwanie dostępu do danych wyeksportowane z biblioteki DLL:
+W przypadku danych korzystanie z **__declspec (dllimport)** to wygodne elementy, które usuwają warstwę operatora pośredniego. W przypadku importowania danych z biblioteki DLL nadal trzeba przejść przez tabelę adresów importu. Przed **__declspec (dllimport)** , należy pamiętać o przepełnieniu dodatkowego poziomu pośredniego podczas uzyskiwania dostępu do danych wyeksportowanych z biblioteki dll:
 
 ```
 // project.h
@@ -30,7 +28,7 @@ W przypadku danych za pomocą **__declspec(dllimport)** element wygody, który u
 #endif
 ```
 
-Następnie będzie wyeksportować dane w sieci. Plik DEF:
+Następnie można wyeksportować dane z programu. Plik DEF:
 
 ```
 // project.def
@@ -39,7 +37,7 @@ EXPORTS
    ulDataInDll   CONSTANT
 ```
 
-i uzyskać do niego dostęp poza bibliotekę DLL:
+i uzyskać do niego dostęp poza biblioteką DLL:
 
 ```
 if (*ulDataInDll == 0L)
@@ -48,14 +46,14 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Po oznaczeniu danych jako **__declspec(dllimport)**, kompilator automatycznie generuje kod pośredni dla Ciebie. Nie musisz już martwić się o powyższych kroków. Jak wspomniano wcześniej, nie używaj **__declspec(dllimport)** deklaracji danych podczas tworzenia biblioteki DLL. Funkcje w ramach biblioteki DLL nie należy używać tabeli adresów importowania do dostępu do obiektu danych; w związku z tym nie masz dodatkowy poziom pośredni obecne.
+Gdy oznaczesz dane jako **__declspec (dllimport)** , kompilator automatycznie generuje kod pośredni. Nie musisz już martwić się o powyższe kroki. Jak wspomniano wcześniej, nie należy używać deklaracji **__declspec (dllimport)** dla danych podczas KOMPILOWANIA biblioteki DLL. Funkcje w bibliotece DLL nie używają tabeli adresów importu do uzyskiwania dostępu do obiektu danych. w związku z tym nie będziesz mieć dodatkowego poziomu pośredniego.
 
-Aby wyeksportować dane automatycznie z biblioteki DLL, należy użyć tej deklaracji:
+Aby wyeksportować dane automatycznie z biblioteki DLL, Użyj tej deklaracji:
 
 ```
 __declspec(dllexport) ULONG ulDataInDLL;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie do aplikacji](importing-into-an-application.md)

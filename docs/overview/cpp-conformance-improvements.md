@@ -1,14 +1,14 @@
 ---
 title: C++ulepszenia zgodności
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 description: Firma C++ Microsoft w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka c++ 20.
 ms.technology: cpp-language
-ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 31c64ca8ce6b13af89a2e19bccd1de1bfb99543a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793846"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446783"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -571,7 +571,7 @@ void f(T (&buffer)[Size], int& size_read)
 
 ### <a name="user-provided-specializations-of-type-traits"></a>Specjalizacje podane przez użytkownika dla cech typu
 
-Zgodnie z podklauzulą *meta. rqmts* w warstwie Standardowa kompilator MSVC wywołuje teraz błąd w przypadku napotkania specjalizacji zdefiniowanej przez użytkownika jednego z określonych szablonów type_traits w przestrzeni nazw `std`. O ile nie określono inaczej, takie specjalizacje powodują niezdefiniowane zachowanie. Poniższy przykład ma niezdefiniowane zachowanie, ponieważ narusza regułę, a `static_assert` nie powiodła się z powodu błędu **C2338**.
+Zgodnie z podklauzulą *meta. rqmts* w warstwie Standardowa kompilator MSVC wywołuje teraz błąd w przypadku napotkania specjalizacji zdefiniowanej przez użytkownika jednego z określonych szablonów `type_traits` w przestrzeni nazw `std`. O ile nie określono inaczej, takie specjalizacje powodują niezdefiniowane zachowanie. Poniższy przykład ma niezdefiniowane zachowanie, ponieważ narusza regułę, a `static_assert` nie powiodła się z powodu błędu **C2338**.
 
 ```cpp
 #include <type_traits>
@@ -583,7 +583,7 @@ struct std::is_fundamental<S> : std::true_type {};
 static_assert(std::is_fundamental<S>::value, "fail");
 ```
 
-Aby uniknąć tego błędu, Zdefiniuj strukturę, która dziedziczy po żądanym type_trait i specialize:
+Aby uniknąć tego błędu, Zdefiniuj strukturę, która dziedziczy z preferowanego `type_trait`i specialize:
 
 ```cpp
 #include <type_traits>
@@ -603,19 +603,19 @@ static_assert(my_is_fundamental<S>::value, "fail");
 
 Kompilator MSVC implementuje teraz następujące zmiany w operatorach porównania na [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) , gdy opcja [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md) jest włączona:
 
-Kompilator nie będzie już ponownie pisać wyrażeń z `operator==`, jeśli będą dotyczyć zwracanego typu, który nie jest typem **bool**. Poniższy kod generuje teraz *błąd C2088: '! = ': niedozwolony dla struktury*:
+Kompilator nie zapisuje już wyrażeń przy użyciu `operator==`, jeśli obejmują typ zwracany, który nie jest typem **bool**. Poniższy kod generuje teraz *błąd C2088: '! = ': niedozwolony dla struktury*:
 
 ```cpp
 struct U {
-  operator bool() const;
+    operator bool() const;
 };
 
 struct S {
-  U operator==(const S&) const;
+    U operator==(const S&) const;
 };
 
 bool neq(const S& lhs, const S& rhs) {
-  return lhs != rhs;
+    return lhs != rhs;
 }
 ```
 
@@ -636,7 +636,7 @@ bool neq(const S& lhs, const S& rhs) {
 }
 ```
 
-Kompilator nie będzie już definiować domyślnego operatora porównania, jeśli jest elementem członkowskim klasy podobnej do Union. Poniższy przykład tworzy teraz *C2120: "void" jest niedozwolony dla wszystkich typów*:
+Kompilator nie definiuje już domyślnego operatora porównania, jeśli jest elementem członkowskim klasy podobnej do Union. Poniższy przykład tworzy teraz *C2120: "void" jest niedozwolony dla wszystkich typów*:
 
 ```cpp
 #include <compare>
@@ -658,13 +658,13 @@ Aby uniknąć tego błędu, zdefiniuj treść dla operatora:
 #include <compare>
 
 union S {
-  int a;
-  char b;
-  auto operator<=>(const S&) const { ... }
-}; 
+    int a;
+    char b;
+    auto operator<=>(const S&) const { ... }
+};
 
 bool lt(const S& lhs, const S& rhs) {
-  return lhs < rhs;
+    return lhs < rhs;
 }
 ```
 
@@ -696,6 +696,195 @@ struct U {
 bool lt(const U& lhs, const U& rhs) {
     return lhs < rhs;
 }
+```
+
+## <a name="improvements_165"></a>Ulepszenia zgodności w programie Visual Studio 2019 w wersji 16,5
+
+### <a name="explicit-specialization-declaration-without-an-initializer-is-not-a-definition"></a>Jawna deklaracja specjalizacji bez inicjatora nie jest definicją
+
+W obszarze `/permissive-`MSVC teraz wymusza standardową regułę, która jawne deklaracje specjalizacji bez inicjatorów nie są definicjami. Wcześniej deklaracja powinna być traktowana jako definicja z inicjatorem domyślnym. Efekt jest zauważalny w czasie łączenia, ponieważ program w zależności od tego zachowania może teraz mieć nierozpoznane symbole. Ten przykład teraz powoduje błąd:
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// In permissive-, this declaration is not a definition and the program will not link.
+template <> int S<char>::a;
+
+int main() {
+    return S<char>::a;
+}
+```
+
+```Output
+error LNK2019: unresolved external symbol "public: static int S<char>::a" (?a@?$S@D@@2HA) referenced in function _main
+at link time.
+```
+
+Aby rozwiązać ten problem, Dodaj inicjatora:
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// Add an initializer for the declaration to be a definition.
+template <> int S<char>::a{};
+
+int main() {
+    return S<char>::a;
+}
+```
+
+### <a name="preprocessor-output-preserves-newlines"></a>Dane wyjściowe preprocesora zachowują nowy wiersz
+
+Eksperymentalny preprocesor umożliwia teraz zachowywanie nowego wiersza i odstępów przy użyciu `/P` lub `/E` z `/experimental:preprocessor`. Tę zmianę można wyłączyć za pomocą `/d1experimental:preprocessor:oldWhitespace`.
+
+Podaną przykładowe źródło,
+
+```cpp
+#define m()
+line m(
+) line
+```
+
+Poprzednie dane wyjściowe `/E`:
+
+```Output
+line line
+#line 2
+```
+
+Nowe dane wyjściowe `/E` są teraz:
+
+```Output
+line
+ line
+```
+
+### <a name="import-and-module-keywords-are-context-dependent"></a>Słowa kluczowe "Import" i "module" są zależne od kontekstu
+
+Na P1857R1 dyrektywy preprocesora importu i modułu mają dodatkowe ograniczenia dotyczące ich składni. Ten przykład nie jest już kompilowany:
+
+```cpp
+import // Invalid
+m;
+```
+
+Generuje następujący komunikat o błędzie:
+
+```Output
+error C2146: syntax error: missing ';' before identifier 'm'
+```
+
+Aby rozwiązać ten problem, należy zachować import w tym samym wierszu:
+
+```cpp
+import m; // OK
+```
+
+### <a name="removal-of-stdweak_equality-and-stdstrong_equality"></a>Usuwanie std:: weak_equality i std:: strong_equality
+
+Scalanie P1959R0 wymaga, aby kompilator usunął zachowanie i odwołania do typów `std::weak_equality` i `std::strong_equality`.
+
+Kod w tym przykładzie nie jest już kompilowany:
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_equality operator<=>(const S&) const = default;
+};
+
+void f() {
+    nullptr<=>nullptr;
+    &f <=> &f;
+    &S::operator<=> <=> &S::operator<=>;
+}
+```
+
+Przykład teraz prowadzi do następujących błędów:
+
+```Output
+error C2039: 'strong_equality': is not a member of 'std'
+error C2143: syntax error: missing ';' before '<=>'
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C7546: binary operator '<=>': unsupported operand types 'nullptr' and 'nullptr'
+error C7546: binary operator '<=>': unsupported operand types 'void (__cdecl *)(void)' and 'void (__cdecl *)(void)'
+error C7546: binary operator '<=>': unsupported operand types 'int (__thiscall S::* )(const S &) const' and 'int (__thiscall S::* )(const S &) const'
+```
+
+Aby rozwiązać ten problem, zaktualizuj, aby preferować wbudowane operatory relacyjne i zamienić usunięte typy:
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_ordering operator<=>(const S&) const = default; // prefer 'std::strong_ordering'
+};
+
+void f() {
+    nullptr != nullptr; // use pre-existing builtin operator != or ==.
+    &f != &f;
+    &S::operator<=> != &S::operator<=>;
+}
+```
+
+### <a name="tls-guard-changes"></a>Zmiany ochrony TLS
+
+Wcześniej zmienne lokalne wątku w bibliotekach DLL nie zostały prawidłowo zainicjowane przed ich pierwszym użyciem w wątkach, które istniały przed załadowaniem biblioteki DLL, innym niż wątek, który załadował bibliotekę DLL. Ta wada została teraz poprawiona.
+Zmienne lokalne wątku w takich bibliotekach DLL są inicjowane natychmiast przed ich pierwszym użyciem na takich wątkach.
+
+To nowe zachowanie testowania na potrzeby inicjowania przy użyciu zmiennych lokalnych wątku może być wyłączone za pomocą przełącznika kompilatora `/Zc:tlsGuards-`. Lub, dodając atrybut `[[msvc:no_tls_guard]]` do określonych zmiennych lokalnych wątku.
+
+### <a name="better-diagnosis-of-call-to-deleted-functions"></a>Lepsza diagnostyka wywołania usuniętych funkcji
+
+Naszym kompilatorem było korzystniejsze wywołania wcześniej usuniętych funkcji. Na przykład, jeśli wywołania wystąpią w kontekście treści szablonu, nie będziemy zdiagnozować wywołania. Ponadto, jeśli wystąpiły wiele wystąpień wywołań do usuniętych funkcji, firma Microsoft wystawia tylko jedną diagnostykę. Teraz wystawią diagnostykę dla każdego z nich.
+
+Jedna z konsekwencji nowego zachowania może generować małą istotną zmianę: kod, który wywołał usuniętą funkcję, nie zostanie zdiagnozowany, jeśli nigdy nie był konieczny do generowania kodu. Teraz możemy zdiagnozować wszystko.
+
+Ten przykład pokazuje kod, który generuje błąd:
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s{};
+};
+
+U u{ 0 };
+```
+
+```Output
+error C2280: 'S::S(void)': attempting to reference a deleted function
+note: see declaration of 'S::S'
+note: 'S::S(void)': function was explicitly deleted
+```
+
+Aby rozwiązać ten problem, Usuń wywołania funkcji usuniętych:
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s;  // Do not call the deleted ctor of 'S'.
+};
+
+U u{ 0 };
 ```
 
 ## <a name="update_160"></a>Poprawki błędów i zmiany zachowań w programie Visual Studio 2019
@@ -1183,7 +1372,7 @@ Standardowa biblioteka została zaktualizowana w odpowiedzi na zmiany kompilator
 
 ### <a name="c17-library-fundamentals-v1"></a>Biblioteka c++ 17 — podstawowe informacje o wersji 1
 
-Biblioteka [P0220R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) zawiera podstawowe specyfikacje techniczne dla języka c++ 17 w standardzie. Obejmuje aktualizacje \<eksperymentalnych/spójnych >, \<eksperymentalnych/opcjonalnych >, \<eksperymentalnych/funkcjonalnych >, \<eksperymentalnych/dowolnych >, \<eksperymentalnych/string_view >, \<eksperymentalne/> \<, memory_resource eksperymentalne
+Biblioteka [P0220R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html) zawiera podstawowe specyfikacje techniczne dla języka c++ 17 w standardzie. Obejmuje aktualizacje \<eksperymentalnych/spójnych >, \<eksperymentalnych/opcjonalnych >, \<eksperymentalnych/funkcjonalnych >, \<eksperymentalnych/dowolnych >, \<eksperymentalnych/string_view >, \<eksperymentalne/> \<, memory_resource eksperymentalne\<
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++ 17: ulepszanie odejmowania argumentów szablonu klasy dla standardowej biblioteki
 
@@ -2847,7 +3036,7 @@ int main()
 
 W trybie [/permissive-](../build/reference/permissive-standards-conformance.md) kompilator wymaga, aby słowo kluczowe **szablonu** poprzedzać nazwę szablonu, gdy jest on dostępny Po specyfikatorze zagnieżdżonej nazwy.
 
-Następujący kod w trybie [/permissive-](../build/reference/permissive-standards-conformance.md) wywołuje teraz C7510: *"example": użycie nazwy szablonu zależnego musi być poprzedzone prefiksem "template". Uwaga: Zobacz odwołanie do skompilowanej instancji szablonu klasy "X<T>"* :
+Następujący kod w trybie [/permissive-](../build/reference/permissive-standards-conformance.md) wywołuje teraz C7510: *"example": użycie nazwy szablonu zależnego musi być poprzedzone prefiksem "template". Uwaga: Zobacz odwołanie do tworzenia wystąpienia szablonu klasy "X\<t >"* :
 
 ```cpp
 template<typename T> struct Base
@@ -3077,6 +3266,6 @@ Aby zapoznać się z pełną listą ulepszeń w programie Visual Studio 2015 Upd
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tabela C++ zgodności języka firmy Microsoft](../visual-cpp-language-conformance.md)

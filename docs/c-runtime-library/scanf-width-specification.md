@@ -1,34 +1,21 @@
 ---
 title: scanf, specyfikacja szerokości
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811118"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444705"
 ---
 # <a name="scanf-width-specification"></a>scanf, specyfikacja szerokości
 
 Te informacje dotyczą interpretacji ciągów formatu w `scanf`ej części funkcji, w tym bezpiecznych wersji, takich jak `scanf_s`. Te funkcje zwykle zakładają, że strumień wejściowy jest podzielony na sekwencję tokenów. Tokeny są oddzielone odstępami (spacja, tabulatorem lub znakiem nowego wiersza) lub dla typów numerycznych przez naturalny koniec liczbowego typu danych wskazywanego przez pierwszy znak, który nie może zostać skonwertowany na tekst liczbowy. Jednakże specyfikacja szerokości może być używana w celu przeanalizowania danych wejściowych do zatrzymania przed naturalnym końcem tokenu.
 
-Specyfikacja *szerokości* składa się ze znaków między `%` i specyfikator pola typu, które mogą zawierać dodatnią liczbę całkowitą o nazwie pola *Szerokość* i jeden lub więcej znaków wskazujący rozmiar pola, który może być również traktowane jako modyfikatory typu pola, takie jak wskazanie, czy typ liczby całkowitej jest **Krótki** czy **długi**. Takie znaki są określane jako prefiks rozmiaru.
+Specyfikacja *szerokości* składa się ze znaków między `%` i specyfikator pola typu, które mogą zawierać dodatnią liczbę całkowitą o nazwie pola *Width* i jeden lub więcej znaków wskazujące rozmiar pola, który może być również traktowany jako modyfikatory typu pola, na przykład wskazuje, czy typ liczby całkowitej jest **Krótki** , czy **długi**. Takie znaki są określane jako prefiks rozmiaru.
 
 ## <a name="the-width-field"></a>Pole Szerokość
 
@@ -106,7 +93,7 @@ Funkcja `scanf` skanuje każde pole wejściowe, znak po znaku. Może przestać o
 
 Z dowolnego powodu, gdy funkcja `scanf` przestaje odczytywanie pola wejściowego, następne pole wejściowe jest uznawane za pierwsze, nieprzeczytane znaki. Znak powodujący konflikt, jeśli istnieje, jest uznawany za nieprzeczytany. Jest to pierwszy znak następnego pola wejściowego lub pierwszy znak w kolejnych operacjach odczytu strumienia wejściowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

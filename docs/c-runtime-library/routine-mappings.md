@@ -1,31 +1,29 @@
 ---
 title: Mapowanie procedur
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383376"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444857"
 ---
 # <a name="routine-mappings"></a>Mapowanie procedur
 
-Mapowania procedur zwykłego tekstu są definiowane w TCHAR. H. `_tccpy` i `_tclen` mapy do funkcji w modelu MBCS; są mapowane do makra i funkcje śródwierszowe w modelach SBCS i Unicode, aby informacje były kompletne. Instrukcje dotyczące procedury zwykłego tekstu, zobacz temat pomocy o odpowiednich `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury.
+Mapowania procedury tekstu ogólnego są zdefiniowane w używanie TCHAR. C. `_tccpy` i `_tclen` mapy do funkcji w modelu MBCS; są one mapowane na makra lub funkcje wbudowane w modelach SBCS i Unicode w celu zapewnienia kompletności. Aby uzyskać informacje na temat ogólnej procedury tekstu, zobacz temat pomocy dotyczący odpowiedniej procedury `SBCS`, `_MBCS`lub `_UNICODE`.
 
-Bardziej szczegółowe informacje dotyczące poszczególnych procedur wymienionych w lewej kolumnie w poniższej tabeli nie jest dostępne w tej dokumentacji. Jednak można łatwo wyszukiwać informacje na temat odpowiednią `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury. Użyj **wyszukiwania** polecenie **pomocy** menu, aby wyszukać dowolnej procedurze zwykłego tekstu, wymienionych poniżej.
+Bardziej szczegółowe informacje dotyczące poszczególnych procedur wymienionych w lewej kolumnie w poniższej tabeli nie są dostępne w tej dokumentacji. Można jednak łatwo wyszukiwać informacje w odpowiedniej procedurze `SBCS`, `_MBCS`lub `_UNICODE`. Użyj polecenia **Search** w menu **Pomoc** , aby wyszukać każdą procedurę tekstu ogólnego poniżej.
 
-Aby uzyskać powiązane informacje, zobacz [mapowania typ ogólny-tekst w TCHAR. H](../text/generic-text-mappings-in-tchar-h.md).
+Aby uzyskać powiązane informacje, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. H](../text/generic-text-mappings-in-tchar-h.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Nazwa procedury zwykłego tekstu|SBCS (_UNICODE & MBCS niezdefiniowana)|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Nazwa procedury tekstu ogólnego|Nie zdefiniowano SBCS (_UNICODE & MBCS)|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |--------------------------------|-------------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|
@@ -82,11 +80,11 @@ Aby uzyskać powiązane informacje, zobacz [mapowania typ ogólny-tekst w TCHAR.
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|
-|`_tccmp`|Mapy i makro lub funkcja śródwierszowa|`_mbsncmp`|Mapy i makro lub funkcja śródwierszowa|
-|`_tccpy`|Mapy i makro lub funkcja śródwierszowa|`_mbccpy`|Mapy i makro lub funkcja śródwierszowa|
+|`_tccmp`|Mapuje na makro lub funkcję wbudowaną|`_mbsncmp`|Mapuje na makro lub funkcję wbudowaną|
+|`_tccpy`|Mapuje na makro lub funkcję wbudowaną|`_mbccpy`|Mapuje na makro lub funkcję wbudowaną|
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|
-|`_tclen`|Mapy i makro lub funkcja śródwierszowa|`_mbclen`|Mapy i makro lub funkcja śródwierszowa|
+|`_tclen`|Mapuje na makro lub funkcję wbudowaną|`_mbclen`|Mapuje na makro lub funkcję wbudowaną|
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|
@@ -262,7 +260,7 @@ Aby uzyskać powiązane informacje, zobacz [mapowania typ ogólny-tekst w TCHAR.
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>

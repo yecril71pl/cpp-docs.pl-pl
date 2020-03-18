@@ -2,7 +2,6 @@
 title: Klasy zestawów wierszy schematu i klasy Typedef
 ms.date: 11/04/2016
 f1_keywords:
-- vc.templates.ole
 - CAssertionInfo
 - CAssertions
 - CCatalogInfo
@@ -100,7 +99,6 @@ f1_keywords:
 - DEFAULT_COLLATE_NAME
 - DEFAULT_COLLATE_SCHEMA
 - DELETE_RULE
-- DELETE_RULE
 - DOMAIN_CATALOG
 - DOMAIN_NAME
 - DOMAIN_SCHEMA
@@ -138,7 +136,6 @@ f1_keywords:
 - m_bFixedPrecScale
 - m_bHasDefault
 - m_bInitiallyDeferred
-- m_bInitiallyDeferred
 - m_bIsDeferrable
 - m_bIsGrantable
 - m_bIsLong
@@ -153,7 +150,6 @@ f1_keywords:
 - m_guidPKColumn
 - m_guidTable
 - m_guidType
-- m_nCardinality
 - m_nCardinality
 - m_nCollation
 - m_nColumnFlags
@@ -180,7 +176,6 @@ f1_keywords:
 - m_nRowsetNumber
 - m_nScale
 - m_nSearchable
-- m_nType
 - m_szBindingStyle
 - m_szCatalog
 - m_szCharCatalog
@@ -226,8 +221,6 @@ f1_keywords:
 - m_szLiteralPrefix
 - m_szLocalTypeName
 - m_szMatchOption
-- m_szName
-- m_szName
 - m_szObjectCatalog
 - m_szObjectName
 - m_szObjectSchema
@@ -555,29 +548,29 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 3dee9844902928e5952a299caae34e29b3a6d72b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404523"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444145"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 
-Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Katalog może zawierać co najmniej jednego schematu, ale musi zawsze zawierać schematu o nazwie INFORMATION_SCHEMA, zawierającą widoków i domen schematu informacji. Informacje o schemacie w OLE DB są pobierane za pomocą zestawów wierszy schematu wstępnie zdefiniowanych i zawiera typy, tabele, kolumny, indeksów, widoków, potwierdzenia i ograniczeń, statystyki, zestawów znaków, sortowania i domen.
+Schemat jest kolekcją obiektów bazy danych, które są własnością lub zostały utworzone przez użytkownika. Wykaz może zawierać jeden lub więcej schematów, ale musi zawsze zawierać schemat o nazwie INFORMATION_SCHEMA, który zawiera widoki i domeny schematu informacji. Informacje o schemacie w OLE DB są pobierane przy użyciu wstępnie zdefiniowanych zestawów wierszy schematu i obejmują typy, tabele, kolumny, indeksy, widoki, potwierdzenia i ograniczenia, statystyki, zestawy znaków, sortowania i domeny.
 
-Zestawy wierszy schematu są wstępnie zdefiniowane zestawy wierszy reprezentujących metadane. Zestawy wierszy schematu są zazwyczaj używane w programowanie dynamiczne, gdzie struktury bazy danych nie jest znany w czasie kompilacji. Aby uzyskać informacje dotyczące bazy danych w czasie wykonywania, można użyć tych zestawów wierszy schematu.
+Zestawy wierszy schematu są wstępnie zdefiniowanymi zestawami wierszy reprezentującymi metadane. Zestawy wierszy schematu są zwykle używane w programowaniu dynamicznym, gdzie struktura bazy danych nie jest znana w czasie kompilacji. Te zestawy wierszy schematu umożliwiają uzyskanie informacji o bazie danych w czasie wykonywania.
 
-Użyj klasy typedef do utworzenia wystąpienia zestawów wierszy schematu. Poniżej przedstawiono odpowiadający mu element typedef i klasy zestawów wierszy schematu. Należy wywołać [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po utworzeniu wystąpienia zestaw wierszy schematu. Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) informacji na temat ograniczeń kolumn skojarzonych z każdym zestaw wierszy schematu.
+Użyj klas typedef do tworzenia wystąpień zestawów wierszy schematu. Poniżej wymieniono odpowiednie klasy typedef i zestawu wierszy schematu. Należy wywołać [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) po utworzeniu wystąpienia zestawu wierszy schematu. Ta metoda zwraca zestaw wyników na podstawie określonych ograniczeń. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , aby uzyskać informacje na temat kolumn ograniczeń skojarzonych z każdym zestawem wierszy schematu.
 
-W poniższej tabeli przedstawiono każdy OLE DB zestaw wierszy schematu i odpowiednie szablony OLE DB — klasa definicji typu i informacje o klasie.
+W poniższej tabeli przedstawiono każdy zestaw wierszy schematu OLE DB i odpowiadający mu szablon OLE DB templates typedef klasy i informacji.
 
-|Zestaw wierszy schematu OLE DB|— Klasa TypeDef|Klasa informacji|
+|Zestaw wierszy schematu OLE DB|Typedef — klasa|Klasa informacji|
 |--------------------------|-------------------|----------------|
-|[POTWIERDZENIA](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[CATALOGS](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[ASERCJE](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
+|[WYKAZY](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
 |[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[USTAWIENIA SORTOWANIA](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
+|[SORTOWANIA](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
 |[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
 |[COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
 |[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
@@ -585,77 +578,77 @@ W poniższej tabeli przedstawiono każdy OLE DB zestaw wierszy schematu i odpowi
 |[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
 |[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
 |[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[INDEKSY](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
+|[ZWIĘKSZA](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
 |[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
 |[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[PROCEDURY](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
+|[POSTĘPOWANIE](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
 |[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
 |[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
 |[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
 |[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
-|[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
+|[SCHEMATU](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
 |[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATYSTYKI](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[Statystyki](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
+|[TABELĘ](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[TŁUMACZENIA](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[TRANSLACJ](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
 |[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
 |[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
-|[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
+|[Widoki](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a> CAssertions, CAssertionInfo
+## <a name="assertion"></a>CAssertions, CAssertionInfo
 
-Wywołanie klasy typedef `CAssertions` do zaimplementowania klasy jego parametr `CAssertionInfo`.
+Wywołaj klasę typedef `CAssertions`, aby zaimplementować jej klasę parametrów `CAssertionInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje potwierdzenia zdefiniowanych w katalogu, które należą do danego użytkownika.
+Ta klasa identyfikuje potwierdzenia zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-Poniższa tabela zawiera listę elementów członkowskich danych klasy dla `CAssertionInfo` i OLE DB kolumny. Zobacz [wierszy potwierdzenia](/previous-versions/windows/desktop/ms719776(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy dla `CAssertionInfo` i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy Assertions](/previous-versions/windows/desktop/ms719776(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="catalog"></a> CCatalogs, CCatalogInfo
+## <a name="catalog"></a>CCatalogs, CCatalogInfo
 
-Wywołanie klasy typedef `CCatalogs` do zaimplementowania klasy jego parametr `CCatalogInfo`.
+Wywołaj klasę typedef `CCatalogs`, aby zaimplementować jej klasę parametrów `CCatalogInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje fizyczne atrybuty skojarzone z katalogami, dostępna z systemu DBMS.
+Ta klasa identyfikuje atrybuty fizyczne skojarzone z wykazami dostępnymi z systemu DBMS.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KATALOGI](/previous-versions/windows/desktop/ms721241(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [wykazy wierszy](/previous-versions/windows/desktop/ms721241(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
+## <a name="characterset"></a>CCharacterSets, CCharacterSetInfo
 
-Wywołanie klasy typedef `CCharacterSets` do zaimplementowania klasy jego parametr `CCharacterSetInfo`.
+Wywołaj klasę typedef `CCharacterSets`, aby zaimplementować jej klasę parametrów `CCharacterSetInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie zestawów znaków zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje zestawy znaków zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [CHARACTER_SETS zestawu wierszy](/previous-versions/windows/desktop/ms722638(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CHARACTER_SET_CATALOG|
 |m_szSchema|CHARACTER_SET_SCHEMA|
@@ -666,39 +659,39 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
+## <a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
 
-Wywołanie klasy typedef `CCheckConstraints` do zaimplementowania klasy jego parametr `CCheckConstraintInfo`.
+Wywołaj klasę typedef `CCheckConstraints`, aby zaimplementować jej klasę parametrów `CCheckConstraintInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje ograniczenia check, zdefiniowanych w katalogu, które są własnością danego użytkownika. Ograniczenia check określa wartości danych lub podzielony na fragmenty, które są akceptowane w co najmniej jedną kolumnę w tabeli.
+Ta klasa identyfikuje ograniczenia kontroli zdefiniowane w wykazie, które są własnością danego użytkownika. Ograniczenie Check określa wartości danych lub formaty, które są akceptowalne w co najmniej jednej kolumnie w tabeli.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [CHECK_CONSTRAINTS zestawu wierszy](/previous-versions/windows/desktop/ms712845(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_szCheckClause|CHECK_CLAUSE|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="collation"></a> CCollations, CCollationInfo
+## <a name="collation"></a>CCollations, CCollationInfo
 
-Wywołanie klasy typedef `CCollations` do zaimplementowania klasy jego parametr `CCollationInfo`.
+Wywołaj klasę typedef `CCollations`, aby zaimplementować jej klasę parametrów `CCollationInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje sortowań znak, zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje sortowania znaków zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [sortowania wierszy](/previous-versions/windows/desktop/ms715783(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy sortowania](/previous-versions/windows/desktop/ms715783(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|COLLATION_CATALOG|
 |m_szSchema|COLLATION_SCHEMA|
@@ -708,19 +701,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
 
-Wywołanie klasy typedef `CColumnDomainUsage` do zaimplementowania klasy jego parametr `CColumnDomainUsageInfo`.
+Wywołaj klasę typedef `CColumnDomainUsage`, aby zaimplementować jej klasę parametrów `CColumnDomainUsageInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny zdefiniowane w wykazie, które są zależne od domeny zdefiniowane w wykazie i należących do danego użytkownika.
+Ta klasa identyfikuje kolumny zdefiniowane w wykazie, które są zależne od domeny zdefiniowanej w wykazie i są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [COLUMN_DOMAIN_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms711240(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|DOMAIN_CATALOG|
 |m_szSchema|DOMAIN_SCHEMA|
@@ -732,19 +725,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
 
-Wywołanie klasy typedef `CColumnPrivileges` do zaimplementowania klasy jego parametr `CColumnPrivilegeInfo`.
+Wywołaj klasę typedef `CColumnPrivileges`, aby zaimplementować jej klasę parametrów `CColumnPrivilegeInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie uprawnień dla kolumn tabel zdefiniowanych w katalogu, które są dostępne lub udzielone przez danego użytkownika.
+Ta klasa identyfikuje uprawnienia do kolumn tabel zdefiniowanych w wykazie, które są dostępne dla danego użytkownika lub przez niego przyznane.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [COLUMN_PRIVILEGES zestawu wierszy](/previous-versions/windows/desktop/ms715800(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szGrantor|CEDENT|
 |m_szGrantee|CESJONARIUSZ|
@@ -757,19 +750,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a> CColumns, CColumnsInfo
+## <a name="columns"></a>CColumns, CColumnsInfo
 
-Wywołanie klasy typedef `CColumns` do zaimplementowania klasy jego parametr `CColumnsInfo`.
+Wywołaj klasę typedef `CColumns`, aby zaimplementować jej klasę parametrów `CColumnsInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny tabel zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje kolumny tabel zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy kolumn](/previous-versions/windows/desktop/ms723052(v=vs.85)) w *Kompendium OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -798,21 +791,21 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szDomainCatalog|DOMAIN_CATALOG|
 |m_szDomainSchema|DOMAIN_SCHEMA|
 |m_szDomainName|DOMAIN_NAME|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
 
-Wywołanie klasy typedef `CConstraintColumnUsage` do zaimplementowania klasy jego parametr `CConstraintColumnUsageInfo`.
+Wywołaj klasę typedef `CConstraintColumnUsage`, aby zaimplementować jej klasę parametrów `CConstraintColumnUsageInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny używane przez ograniczenia referencyjne, ograniczeń unique, ograniczenia sprawdzania i potwierdzenia zdefiniowanych w katalogu i należących do danego użytkownika.
+Ta klasa identyfikuje kolumny używane przez więzy referencyjne, ograniczenia UNIQUE, ograniczenia CHECK i potwierdzenia zdefiniowane w wykazie oraz należące do danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [CONSTRAINT_COLUMN_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms724522(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -824,19 +817,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
 
-Wywołanie klasy typedef `CConstraintTableUsage` do zaimplementowania klasy jego parametr `CConstraintTableUsageInfo`.
+Wywołaj klasę typedef `CConstraintTableUsage`, aby zaimplementować jej klasę parametrów `CConstraintTableUsageInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje tabele używane przez ograniczenia referencyjne, ograniczeń unique, ograniczenia sprawdzania i potwierdzenia zdefiniowanych w katalogu i należących do danego użytkownika.
+Ta klasa identyfikuje tabele używane przez ograniczenia referencyjne, ograniczenia UNIQUE, ograniczenia CHECK i potwierdzenia zdefiniowane w wykazie i własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [CONSTRAINT_TABLE_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms724522(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -845,19 +838,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
+## <a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
 
-Wywołanie klasy typedef `CForeignKeys` do zaimplementowania klasy jego parametr `CForeignKeysInfo`.
+Wywołaj klasę typedef `CForeignKeys`, aby zaimplementować jej klasę parametrów `CForeignKeysInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny klucza obcego, zdefiniowane w wykazie przez danego użytkownika.
+Ta klasa identyfikuje kolumny klucza obcego zdefiniowane w wykazie przez danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [foreign_keys zestawu wierszy](/previous-versions/windows/desktop/ms711276(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szPKTableCatalog|PK_TABLE_CATALOG|
 |m_szPKTableSchema|PK_TABLE_SCHEMA|
@@ -871,23 +864,23 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szFKColumnName|FK_COLUMN_NAME|
 |m_guidFKColumn|FK_COLUMN_GUID|
 |m_nFKColumnPropID|FK_COLUMN_PROPID|
-|m_nOrdinal|ORDINAL|
+|m_nOrdinal|LICZBĄ|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a> CIndexes, CIndexInfo
+## <a name="index"></a>CIndexes, CIndexInfo
 
-Wywołanie klasy typedef `CIndexes` do zaimplementowania klasy jego parametr `CIndexInfo`.
+Wywołaj klasę typedef `CIndexes`, aby zaimplementować jej klasę parametrów `CIndexInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje indeksy zdefiniowanych w katalogu, które są własnością danego użytkownika.
+Ta klasa identyfikuje indeksy zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy INDEKSY](/previous-versions/windows/desktop/ms709712(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [Indexs Rowset](/previous-versions/windows/desktop/ms709712(v=vs.85)) w *Kompendium OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -898,7 +891,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_bPrimaryKey|PRIMARY_KEY|
 |m_bUnique|UNIQUE|
 |m_bClustered|CLUSTERED|
-|m_nType|TYP|
+|m_nType|TYPE|
 |m_nFillFactor|FILL_FACTOR|
 |m_nInitialSize|INITIAL_SIZE|
 |m_nNulls|NULL — Wartości|
@@ -910,23 +903,23 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nCollation|SORTOWANIE|
-|m_nCardinality|KARDYNALNOŚĆ|
-|m_nPages|STRONY|
+|m_nCardinality|KARDYNALNOŚCI|
+|m_nPages|Page|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
+## <a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
 
-Wywołanie klasy typedef `CKeyColumns` do zaimplementowania klasy jego parametr `CKeyColumnInfo`.
+Wywołaj klasę typedef `CKeyColumns`, aby zaimplementować jej klasę parametrów `CKeyColumnInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny zdefiniowane w katalogu, które są ograniczone jako klucze przez danego użytkownika.
+Ta klasa identyfikuje kolumny zdefiniowane w wykazie, które są ograniczone jako klucze przez danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [KEY_COLUMN_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms712990(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szConstraintCatalog|CONSTRAINT_CATALOG|
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
@@ -939,19 +932,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
+## <a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
 
-Wywołanie klasy typedef `CPrimaryKeys` do zaimplementowania klasy jego parametr `CPrimaryKeyInfo`.
+Wywołaj klasę typedef `CPrimaryKeys`, aby zaimplementować jej klasę parametrów `CPrimaryKeyInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny klucza podstawowego, zdefiniowane w wykazie przez danego użytkownika.
+Ta klasa identyfikuje kolumny klucza podstawowego zdefiniowane w wykazie przez danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [PRIMARY_KEYS zestawu wierszy](/previous-versions/windows/desktop/ms714362(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -959,21 +952,21 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szColumnName|COLUMN_NAME|
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
-|m_nOrdinal|ORDINAL|
+|m_nOrdinal|LICZBĄ|
 
-## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
+## <a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
 
-Wywołanie klasy typedef `CProcedureColumns` do zaimplementowania klasy jego parametr `CProcedureColumnInfo`.
+Wywołaj klasę typedef `CProcedureColumns`, aby zaimplementować jej klasę parametrów `CProcedureColumnInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa zwraca informacje o kolumnach zestawów wierszy zwróconych przez procedury.
+Ta klasa zwraca informacje o kolumnach zestawów wierszy zwracanych przez procedury.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [PROCEDURE_COLUMNS zestawu wierszy](/previous-versions/windows/desktop/ms723092(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
@@ -990,28 +983,28 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
+## <a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
 
-Wywołanie klasy typedef `CProcedureParameters` do zaimplementowania klasy jego parametr `CProcedureParamInfo`.
+Wywołaj klasę typedef `CProcedureParameters`, aby zaimplementować jej klasę parametrów `CProcedureParamInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa zwraca informacje dotyczące parametrów i kody powrotne procedur.
+Ta klasa zwraca informacje o parametrach i kodach powrotu procedur.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [PROCEDURE_PARAMETERS zestawu wierszy](/previous-versions/windows/desktop/ms713623(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
 |m_szName|PROCEDURE_NAME|
 |m_szParameterName|PARAMETER_NAME|
 |m_nOrdinalPosition|ORDINAL_POSITION|
-|m_nType|TYP_PARAMETRU|
+|m_nType|PARAMETER_TYPE|
 |m_bHasDefault|PARAMETER_HASDEFAULT|
 |m_szDefault|PARAMETER_DEFAULT|
 |m_bIsNullable|IS_NULLABLE|
@@ -1020,42 +1013,42 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="procedure"></a> CProcedures, CProcedureInfo
+## <a name="procedure"></a>CProcedures, CProcedureInfo
 
-Wywołanie klasy typedef `CProcedures` do zaimplementowania klasy jego parametr `CProcedureInfo`.
+Wywołaj klasę typedef `CProcedures`, aby zaimplementować jej klasę parametrów `CProcedureInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie procedury zdefiniowanych w katalogu, które należą do danego użytkownika.
+Ta klasa identyfikuje procedury zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy procedury](/previous-versions/windows/desktop/ms724021(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy procedur](/previous-versions/windows/desktop/ms724021(v=vs.85)) w *odniesieniu do OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
 |m_szName|PROCEDURE_NAME|
 |m_nType|PROCEDURE_TYPE|
 |m_szDefinition|PROCEDURE_DEFINITION|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="provider"></a> CProviderTypes, CProviderInfo
+## <a name="provider"></a>CProviderTypes, CProviderInfo
 
-Wywołanie klasy typedef `CProviderTypes` do zaimplementowania klasy jego parametr `CProviderInfo`.
+Wywołaj klasę typedef `CProviderTypes`, aby zaimplementować jej klasę parametrów `CProviderInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje (podstawowe) typy danych obsługiwane przez dostawcę danych.
+Ta klasa określa typy danych (podstawowe) obsługiwane przez dostawcę danych.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [PROVIDER_TYPES zestawu wierszy](/previous-versions/windows/desktop/ms709785(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTypeName|TYPE_NAME|
 |m_nDataType|DATA_TYPE|
@@ -1073,24 +1066,24 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_nMinScale|MINIMUM_SCALE|
 |m_nMaxScale|MAXIMUM_SCALE|
 |m_guidType|Identyfikator GUID|
-|m_szTypeLib|TYPELIB|
+|m_szTypeLib|Eksport|
 |m_szVersion|WERSJA|
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
+## <a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
 
-Wywołanie klasy typedef `CReferentialConstraints` do zaimplementowania klasy jego parametr `CReferentialConstraintInfo`.
+Wywołaj klasę typedef `CReferentialConstraints`, aby zaimplementować jej klasę parametrów `CReferentialConstraintInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje ograniczenia referencyjne, zdefiniowanych w katalogu, które są własnością danego użytkownika.
+Ta klasa identyfikuje ograniczenia referencyjne zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [REFERENTIAL_CONSTRAINTS zestawu wierszy](/previous-versions/windows/desktop/ms719737(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
@@ -1101,21 +1094,21 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szMatchOption|MATCH_OPTION|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="schemata"></a> CSchemata, CSchemataInfo
+## <a name="schemata"></a>CSchemata, CSchemataInfo
 
-Wywołanie klasy typedef `CSchemata` do zaimplementowania klasy jego parametr `CSchemataInfo`.
+Wywołaj klasę typedef `CSchemata`, aby zaimplementować jej klasę parametrów `CSchemataInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie schematów, które należą do danego użytkownika.
+Ta klasa identyfikuje schematy należące do danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestaw wierszy SCHEMATU](/previous-versions/windows/desktop/ms716887(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Zobacz [zestaw wierszy schematu](/previous-versions/windows/desktop/ms716887(v=vs.85)) w *dokumentacji programisty OLE DB* , aby uzyskać więcej informacji na temat schematu i kolumn.
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CATALOG_NAME|
 |m_szName|SCHEMA_NAME|
@@ -1124,19 +1117,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
+## <a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
 
-Wywołanie klasy typedef `CSQLLanguages` do zaimplementowania klasy jego parametr `CSQLLanguageInfo`.
+Wywołaj klasę typedef `CSQLLanguages`, aby zaimplementować jej klasę parametrów `CSQLLanguageInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje poziomy zgodności, opcji i dialekty obsługiwane przez implementację SQL przetwarzania danych, zdefiniowanych w katalogu.
+Ta klasa określa poziomy zgodności, opcje i dialekty obsługiwane przez dane przetwarzania implementacji SQL zdefiniowane w wykazie.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [SQL_LANGUAGES zestawu wierszy](/previous-versions/windows/desktop/ms714374(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szSource|SQL_LANGUAGE_SOURCE|
 |m_szYear|SQL_LANGUAGE_YEAR|
@@ -1146,38 +1139,38 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a> CStatistics, CStatisticInfo
+## <a name="statistic"></a>CStatistics, CStatisticInfo
 
-Wywołanie klasy typedef `CStatistics` do zaimplementowania klasy jego parametr `CStatisticInfo`.
+Wywołaj klasę typedef `CStatistics`, aby zaimplementować jej klasę parametrów `CStatisticInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje statystyki zdefiniowanych w katalogu, które należą do danego użytkownika.
+Ta klasa identyfikuje statystyki zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy statystyki](/previous-versions/windows/desktop/ms715957(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy statystyk](/previous-versions/windows/desktop/ms715957(v=vs.85)) w *Kompendium OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
 |m_szTableName|TABLE_NAME|
-|m_nCardinality|KARDYNALNOŚĆ|
+|m_nCardinality|KARDYNALNOŚCI|
 
-## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
+## <a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
 
-Wywołanie klasy typedef `CTableConstraints` do zaimplementowania klasy jego parametr `CTableConstraintInfo`.
+Wywołaj klasę typedef `CTableConstraints`, aby zaimplementować jej klasę parametrów `CTableConstraintInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie ograniczeń tabeli, zdefiniowanych w katalogu, które należą do danego użytkownika.
+Ta klasa identyfikuje ograniczenia tabeli zdefiniowane w wykazie, które są własnością danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [TABLE_CONSTRAINTS zestawu wierszy](/previous-versions/windows/desktop/ms715921(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
@@ -1188,21 +1181,21 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szType|CONSTRAINT_TYPE|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
+## <a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
 
-Wywołanie klasy typedef `CTablePrivileges` do zaimplementowania klasy jego parametr `CTablePrivilegeInfo`.
+Wywołaj klasę typedef `CTablePrivileges`, aby zaimplementować jej klasę parametrów `CTablePrivilegeInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje tabele zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje tabele zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [TABLE_PRIVILEGES zestawu wierszy](/previous-versions/windows/desktop/ms725428(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szGrantor|CEDENT|
 |m_szGrantee|CESJONARIUSZ|
@@ -1212,40 +1205,40 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a> CTables, CTableInfo
+## <a name="table"></a>CTables, CTableInfo
 
-Wywołanie klasy typedef `CTables` do zaimplementowania klasy jego parametr `CTableInfo`.
+Wywołaj klasę typedef `CTables`, aby zaimplementować jej klasę parametrów `CTableInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie uprawnień w tabelach zdefiniowanych w katalogu, które są dostępne dla lub przyznanych przez danego użytkownika.
+Ta klasa identyfikuje uprawnienia w tabelach zdefiniowanych w wykazie, które są dostępne dla danego użytkownika lub przez niego przyznane.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy w TABELACH](/previous-versions/windows/desktop/ms716980(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy tabel](/previous-versions/windows/desktop/ms716980(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|TABLE_CATALOG|
 |m_szSchema|TABLE_SCHEMA|
 |m_szName|TABLE_NAME|
 |m_szType|TABLE_TYPE|
 |m_guidTable|TABLE_GUID|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="translation"></a> CTranslations, CTranslationInfo
+## <a name="translation"></a>CTranslations, CTranslationInfo
 
-Wywołanie klasy typedef `CTranslations` do zaimplementowania klasy jego parametr `CTranslationInfo`.
+Wywołaj klasę typedef `CTranslations`, aby zaimplementować jej klasę parametrów `CTranslationInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje tłumaczenia znaków zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje tłumaczenia znaków zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy tłumaczenia](/previous-versions/windows/desktop/ms725365(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [zestaw wierszy tłumaczenia](/previous-versions/windows/desktop/ms725365(v=vs.85)) w *Kompendium OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|TRANSLATION_CATALOG|
 |m_szSchema|TRANSLATION_SCHEMA|
@@ -1257,19 +1250,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
 
-Wywołanie klasy typedef `CUsagePrivileges` do zaimplementowania klasy jego parametr `CUsagePrivilegeInfo`.
+Wywołaj klasę typedef `CUsagePrivileges`, aby zaimplementować jej klasę parametrów `CUsagePrivilegeInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa umożliwia określenie uprawnień użycia obiektów zdefiniowanych w katalogu, które są dostępne lub przyznanych przez danego użytkownika.
+Ta klasa identyfikuje uprawnienia użytkowania dla obiektów zdefiniowanych w wykazie, które są dostępne dla danego użytkownika lub przez niego przyznane.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [USAGE_PRIVILEGES zestawu wierszy](/previous-versions/windows/desktop/ms722743(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szGrantor|CEDENT|
 |m_szGrantee|CESJONARIUSZ|
@@ -1280,19 +1273,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
+## <a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
 
-Wywołanie klasy typedef `CViewColumnUsage` do zaimplementowania klasy jego parametr `CViewColumnInfo`.
+Wywołaj klasę typedef `CViewColumnUsage`, aby zaimplementować jej klasę parametrów `CViewColumnInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje kolumny na wyświetlać tabele, zdefiniowane w katalogu, która należących do danego użytkownika, zależą od niego.
+Ta klasa identyfikuje kolumny, w których są zależne wyświetlane tabele, zdefiniowane w wykazie i należące do danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [VIEW_COLUMN_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms714896(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|VIEW_CATALOG|
 |m_szSchema|VIEW_SCHEMA|
@@ -1304,19 +1297,19 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a> CViews, CViewInfo
+## <a name="view"></a>CViews, CViewInfo
 
-Wywołanie klasy typedef `CViews` do zaimplementowania klasy jego parametr `CViewInfo`.
+Wywołaj klasę typedef `CViews`, aby zaimplementować jej klasę parametrów `CViewInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje tabele w wyświetlać tabele, zdefiniowane w katalogu, która należących do danego użytkownika, zależą od niego.
+Ta klasa identyfikuje tabele, w których są zależne tabele wyświetlane, zdefiniowane w wykazie i należące do danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy WIDOKÓW](/previous-versions/windows/desktop/ms723122(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [widok zestawu wierszy](/previous-versions/windows/desktop/ms723122(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -1324,21 +1317,21 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 |m_szDefinition|VIEW_DEFINITION|
 |m_bCheckOption|CHECK_OPTION|
 |m_bIsUpdatable|IS_UPDATABLE|
-|m_szDescription|OPIS ELEMENTU|
+|m_szDescription|OPIS|
 
-## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
+## <a name="viewtable"></a>CViewTableUsage, CViewTableInfo
 
-Wywołanie klasy typedef `CViewTableUsage` do zaimplementowania klasy jego parametr `CViewTableInfo`.
+Wywołaj klasę typedef `CViewTableUsage`, aby zaimplementować jej klasę parametrów `CViewTableInfo`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat korzystania z klasy typedef.
+Zobacz [klasy zestawów wierszy schematu i klasy typedef,](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Aby uzyskać więcej informacji na temat używania klas typedef.
 
-Ta klasa identyfikuje wyświetlane tabele, zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.
+Ta klasa identyfikuje tabele wyświetlane zdefiniowane w wykazie, które są dostępne dla danego użytkownika.
 
-W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.
+W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadające im kolumny OLE DB. Aby uzyskać więcej informacji na temat schematu i kolumn, zobacz [VIEW_TABLE_USAGE zestawu wierszy](/previous-versions/windows/desktop/ms719727(v=vs.85)) w *dokumentacji OLE DB programisty* .
 
-|Elementy członkowskie danych|Kolumny OLE DB|
+|Elementy członkowskie danych|OLE DB kolumny|
 |------------------|--------------------|
 |m_szCatalog|VIEW_CATALOG|
 |m_szSchema|VIEW_SCHEMA|
@@ -1349,8 +1342,8 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolu
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbsch.h
+**Nagłówek:** atldbsch. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CRestrictions, klasa](../../data/oledb/crestrictions-class.md)

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - mbsnbcpy
-- _ftcsncpy
 - _mbsnbcpy
 - mbsnbcpy_l
 - _mbsnbcpy_l
@@ -36,16 +35,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952253"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442856"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Kopiuje **n** bajtów ciągu do ciągu docelowego. Bardziej bezpieczne wersje tych funkcji są dostępne [, zobacz _mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Kopiuje **n** bajtów ciągu do ciągu docelowego. Bardziej bezpieczne wersje tych funkcji są dostępne — zobacz [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -87,13 +86,13 @@ Miejsce docelowe dla ciągu znaków, który ma zostać skopiowany.
 *strSource*<br/>
 Ciąg znaków, który ma zostać skopiowany.
 
-*liczbą*<br/>
+*count*<br/>
 Liczba bajtów do skopiowania.
 
 *ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 **_mbsnbcpy** zwraca wskaźnik do docelowego ciągu znaków. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
 
@@ -103,7 +102,7 @@ Funkcja **_mbsnbcpy** kopiuje *liczbę* bajtów z *strSource* do *strDest*. Jeś
 
 Jeśli *strSource* lub *strDest* jest wskaźnikiem o wartości null, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych i wersji, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji [, zobacz setlocals, _wsetlocale](setlocale-wsetlocale.md) . Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych i wersji, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do uruchamiania dowolnego kodu osoby atakującej, co może spowodować nieuzasadnione podniesienie uprawnień i naruszyć bezpieczeństwo systemu. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -121,12 +120,12 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcpy**|\<mbstring.h>|
-|**_mbsnbcpy_l**|\<mbstring.h>|
+|**_mbsnbcpy**|\<mbstring. h >|
+|**_mbsnbcpy_l**|\<mbstring. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

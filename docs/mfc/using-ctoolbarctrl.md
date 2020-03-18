@@ -1,24 +1,22 @@
 ---
 title: Korzystanie z CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411672"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442241"
 ---
 # <a name="using-ctoolbarctrl"></a>Korzystanie z CToolBarCtrl
 
-Można użyć formantu paska narzędzi ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okna kontrolki zawierające przyciski i opcjonalne spacje. Każdy przycisk w oknie Kontrola narzędzi wysyła komunikat polecenia do nadrzędnego okna, jako użytkownik zdecyduje się je. Zazwyczaj przycisków na pasku narzędzi odnoszą się do elementów w menu aplikacji, zapewniając dodatkowe i bardziej bezpośredni sposób dla użytkownika uzyskać dostęp do poleceń aplikacji.
+Za pomocą kontrolki paska narzędzi ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okno kontrolne zawierające przyciski i spacje opcjonalne. Każdy przycisk w oknie kontrolki paska narzędzi wysyła komunikat polecenia do okna nadrzędnego, gdy użytkownik wybierze go. Zazwyczaj przyciski na pasku narzędzi odpowiadają elementom w menu aplikacji, zapewniając dodatkowy i bardziej bezpośredni sposób, aby użytkownik mógł uzyskać dostęp do poleceń aplikacji.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Metody tworzenia paska narzędzi](../mfc/methods-of-creating-a-toolbar.md)
 
@@ -32,6 +30,6 @@ Można użyć formantu paska narzędzi ([CToolBarCtrl](../mfc/reference/ctoolbar
 
 - [Dostosowywanie wyglądu kontrolki paska narzędzi](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

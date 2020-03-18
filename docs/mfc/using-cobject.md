@@ -1,8 +1,6 @@
 ---
 title: Używanie obiektu CObject
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - examples [MFC], CObject
 - root base class for MFC
@@ -10,36 +8,36 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: 6c4355f43df33f37838cfc9be4453e42271ae9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5399f02819407a529fd5ec66d4f5acbb16ca002
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411765"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441922"
 ---
 # <a name="using-cobject"></a>Używanie obiektu CObject
 
-[CObject](../mfc/reference/cobject-class.md) jest klasa bazowa dla większości Microsoft Foundation Class Library (MFC). `CObject` Klasa zawiera wiele przydatnych funkcji, które chcesz dołączyć do własnych obiektów programu, w tym obsługę serializacji, informacje o klasie czasu wykonywania i diagnostyczne dane wyjściowe obiektu. Jeśli pochodzi z klasy `CObject`, klasa może wykorzystać te `CObject` funkcji.
+[CObject](../mfc/reference/cobject-class.md) jest główną klasą bazową dla większości Biblioteka MFC (MFC). Klasa `CObject` zawiera wiele użytecznych funkcji, które można chcieć dołączyć do własnych obiektów programu, w tym obsługi serializacji, informacji o klasie czasu wykonywania i danych wyjściowych diagnostyki obiektów. Jeśli klasa pochodzi z `CObject`, Klasa może wykorzystać te `CObject` funkcje.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-- [Wyprowadzenia klasy z obiektu CObject](../mfc/deriving-a-class-from-cobject.md)
+- [Utwórz klasę z CObject](../mfc/deriving-a-class-from-cobject.md)
 
-- [Dodanie obsługi informacji o klasie czasu wykonywania, dynamiczne tworzenie i serializacji do mojego klasy pochodnej](../mfc/specifying-levels-of-functionality.md)
+- [Dodawanie obsługi informacji o klasie czasu wykonywania, tworzenia dynamicznego i serializacji do klasy pochodnej](../mfc/specifying-levels-of-functionality.md)
 
-- [Informacje o klasie czasu wykonywania dostępu](../mfc/accessing-run-time-class-information.md)
+- [Dostęp do informacji o klasie czasu wykonywania](../mfc/accessing-run-time-class-information.md)
 
 - [Dynamiczne tworzenie obiektów](../mfc/dynamic-object-creation.md)
 
-- [Zrzuć danych obiektu do celów diagnostycznych](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))
+- [Zrzuć dane obiektu do celów diagnostycznych](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))
 
-- Sprawdzanie poprawności stanu wewnętrznego obiektu (zobacz [MFC ASSERT_VALID i CObject::AssertValid](reference/diagnostic-services.md#assert_valid))
+- Sprawdź poprawność stanu wewnętrznego obiektu (zobacz [MFC ASSERT_VALID i CObject:: AssertValid](reference/diagnostic-services.md#assert_valid))
 
-- [Mieć klasę serializacji się do skorzystania z magazynu trwałego](../mfc/serialization-in-mfc.md)
+- [Zaserializacji klasy do magazynu trwałego](../mfc/serialization-in-mfc.md)
 
-- Wyświetlenie listy [CObject — często zadawane pytania](../mfc/cobject-class-frequently-asked-questions.md)
+- Zobacz listę [często zadawanych pytań CObject](../mfc/cobject-class-frequently-asked-questions.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../mfc/mfc-concepts.md)<br/>
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>

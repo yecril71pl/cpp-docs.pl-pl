@@ -23,13 +23,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- mbsnbicoll
-- mbsnbcoll
-- mbsnbicoll_l
 - _mbsnbcoll
+- _mbsnbcoll_l
 - _mbsnbicoll
-- _ftcsnicoll
-- _ftcsncoll
 - mbsnbcoll_l
 helpviewer_keywords:
 - _mbsnbcoll_l function
@@ -42,15 +38,15 @@ helpviewer_keywords:
 - _tcsncoll function
 - _mbsnbicoll function
 - _mbsnbicoll_l function
-- tcsncoll function
-- tcsnicoll function
+- _tcsncoll_l function
+- _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 72c435060a6ac62213a50ba1d9fb9ef7d83fcb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d759bda0133a95406a586011d39d69074283bf97
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952281"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438209"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -91,7 +87,7 @@ int _mbsnbicoll_l(
 *ciąg1*, *ciąg2*<br/>
 Ciągi do porównania.
 
-*liczbą*<br/>
+*count*<br/>
 Liczba bajtów do porównania.
 
 *ustawienie*<br/>
@@ -107,17 +103,17 @@ Wartość zwracana określa relację podciągów wartości *ciąg1* i *ciąg2*.
 |0|*ciąg1* podciąg identyczny z podciągiem *ciąg2* .|
 |> 0|*ciąg1* podciąg jest większy niż *ciąg2* podciąg.|
 
-Jeśli *ciąg1* lub *ciąg2* ma **wartość null** lub *Liczba* jest większa niż **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustawiają **errno** na **EINVAL**. Aby użyć **_NLSCMPERROR**, dołącz ciąg. h lub mbstring. h.
+Jeśli *ciąg1* lub *ciąg2* ma **wartość null** lub *Liczba* jest większa niż **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustawiają **errno** na **EINVAL**. Aby użyć **_NLSCMPERROR**, Uwzględnij ciąg. h lub mbstring. h.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji sortuje, najwyżej *, pierwsze* bajty w parametrach *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między wynikowymi podciągami wartości *ciąg1* i *ciąg2*. Jeśli końcowy bajt w podciągu *ciąg1* lub *ciąg2* jest bajtem wiodącym, nie jest uwzględniany w porównaniu; te funkcje porównują tylko kompletne znaki w podciągach. **_mbsnbicoll** to niezależna od wielkości liter wersja **_mbsnbcoll**. Podobnie jak [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) i [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** i **_mbsnbicoll** sortuje dwa ciągi znaków wielobajtowych zgodnie z kolejnością leksykograficznych określoną przez aktualnie używaną [stronę kodową](../../c-runtime-library/code-pages.md) wielobajtowego.
+Każda z tych funkcji sortuje, najwyżej *, pierwsze* bajty w parametrach *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między wynikowymi podciągami wartości *ciąg1* i *ciąg2*. Jeśli końcowy bajt w podciągu *ciąg1* lub *ciąg2* jest bajtem wiodącym, nie jest uwzględniany w porównaniu; te funkcje porównują tylko kompletne znaki w podciągach. **_mbsnbicoll** to wersja **_mbsnbcoll**niezależna od wielkości liter. Podobnie jak [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) i [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** i **_mbsnbicoll** sortują dwa ciągi znaków wielobajtowych zgodnie z kolejnością leksykograficznych określoną przez obecnie używaną [stronę kodową](../../c-runtime-library/code-pages.md) wielobajtowego.
 
-W przypadku niektórych stron kodowych i odpowiednich zestawów znaków kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. W ustawieniach regionalnych języka C nie jest to przypadek: kolejność znaków w zestawie znaków ASCII jest taka sama jak kolejność leksykograficznych znaków. Jednak w niektórych europejskich stronach kodowych, na przykład, znak "a" (wartość 0x61) poprzedza znak "ä" (wartość 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically. Aby wykonać leksykograficznych porównanie ciągów przez bajty w takim wystąpieniu, użyj **_mbsnbcoll** zamiast **_mbsnbcmp**; Aby sprawdzić tylko dla równości ciągów, użyj **_mbsnbcmp**.
+W przypadku niektórych stron kodowych i odpowiednich zestawów znaków kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. W ustawieniach regionalnych języka C nie jest to przypadek: kolejność znaków w zestawie znaków ASCII jest taka sama jak kolejność leksykograficznych znaków. Jednak w niektórych europejskich stronach kodowych, na przykład, znak "a" (wartość 0x61) poprzedza znak "ä" (wartość 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically. Aby wykonać leksykograficznych porównanie ciągów przez bajty w takich przypadkach, użyj **_mbsnbcoll** , a nie **_mbsnbcmp**; Aby sprawdzić tylko dla równości ciągów, użyj **_mbsnbcmp**.
 
 Ponieważ funkcje **Coll** sortują ciągi lexicographically do porównania, podczas gdy funkcje **CMP** po prostu testują równość ciągów, funkcje **Coll** są znacznie wolniejsze niż odpowiednie wersje programu **CMP** . W związku z tym, funkcje **Coll** powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy kolejnością zestawu znaków i kolejnością znaków leksykograficznych na bieżącej stronie kodowej, a różnica jest istotna dla porównania.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -132,14 +128,14 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcoll**|\<mbstring.h>|
-|**_mbsnbcoll_l**|\<mbstring.h>|
-|**_mbsnbicoll**|\<mbstring.h>|
-|**_mbsnbicoll_l**|\<mbstring.h>|
+|**_mbsnbcoll**|\<mbstring. h >|
+|**_mbsnbcoll_l**|\<mbstring. h >|
+|**_mbsnbicoll**|\<mbstring. h >|
+|**_mbsnbicoll_l**|\<mbstring. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941737"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443007"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -90,14 +89,14 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Każda z tych funkcji ładuje i uruchamia nowy proces i przekazuje tablicę wskaźników do argumentów wiersza polecenia oraz tablicę wskaźników do ustawień środowiska. Te funkcje używają zmiennej środowiskowej **Path** , aby znaleźć plik do wykonania.
 
-Funkcje **_execvpe** sprawdzają poprawność swoich parametrów. Jeśli *cmdname* jest wskaźnikiem typu null lub jeśli *argv* jest wskaźnikiem typu null, wskaźnikiem do pustej tablicy lub wskaźnikiem do tablicy zawierającej pusty ciąg jako pierwszy argument, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1. Żaden proces nie jest uruchamiany.
+Funkcje **_execvpe** sprawdzają poprawność swoich parametrów. Jeśli *cmdname* jest wskaźnikiem typu null lub jeśli *argv* jest wskaźnikiem typu null, wskaźnikiem do pustej tablicy lub wskaźnikiem do tablicy zawierającej pusty ciąg jako pierwszy argument, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1. Żaden proces nie jest uruchamiany.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_execvpe**|\<process.h>|\<errno.h>|
-|**_wexecvpe**|\<Process. h > lub \<WCHAR. h >|\<errno.h>|
+|**_execvpe**|\<Process. h >|\<errno. h >|
+|**_wexecvpe**|\<Process. h > lub \<WCHAR. h >|\<errno. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -105,7 +104,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Zobacz przykład w [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>

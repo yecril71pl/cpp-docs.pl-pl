@@ -1,17 +1,15 @@
 ---
 title: INCLUDE (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- include
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: 41d2af2c047b6c90e2971d4b8611141d9a9ef57f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 86c47ba2878158cd78b58cb128a5b2147f9dda3d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313070"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440762"
 ---
 # <a name="include"></a>INCLUDE
 
@@ -25,7 +23,7 @@ Wstawia kod źródłowy z pliku źródłowego podanego przez *filename* do bież
 
 *Nazwa pliku* musi być ujęta w nawiasy kątowe, jeśli zawiera ukośnik odwrotny, średnik, większy niż symbol, znak mniejszości, znak pojedynczego cudzysłowu lub podwójny cudzysłów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

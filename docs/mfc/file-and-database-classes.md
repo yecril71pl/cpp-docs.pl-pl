@@ -1,27 +1,25 @@
 ---
 title: Klasy plików i baz danych
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.file
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405836"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442402"
 ---
 # <a name="file-and-database-classes"></a>Klasy plików i baz danych
 
-Klasy te umożliwiają przechowywanie informacji w bazie danych lub pliku na dysku. Istnieją trzy rodzaje klas baz danych — OLE DB, ODBC i DAO, które zapewniają podobne funkcje. Grupy OLE DB jest implementowany przy użyciu OLE DB i współdziała z szablonami konsumentów OLE DB, grupy DAO jest implementowany przy użyciu obiekt dostępu do danych i grupy ODBC jest implementowane za pomocą otwartego łącza baz danych. Istnieją również zestaw klas do manipulowania standardowe pliki, aktywne strumienie i strumieni HTML.
+Te klasy umożliwiają przechowywanie informacji w bazie danych lub pliku dysku. Istnieją trzy zestawy klas baz danych — OLE DB, ODBC i DAO — które zapewniają podobną funkcjonalność. Grupa OLE DB jest implementowana przy użyciu OLE DB i współpracuje z szablonami konsumentów OLE DB, Grupa DAO jest implementowana przy użyciu obiektu dostępu do danych, a grupa ODBC jest implementowana przy użyciu Open Database Connectivity. Istnieje również zestaw klas do manipulowania standardowymi plikami, aktywnymi strumieniami i strumieniami HTML.
 
-Następujące kategorie klasy obsługuje trwałość danych.
+Następujące kategorie klas obsługują trwałość danych.
 
-- [Klasy we/wy pliku](../mfc/file-i-o-classes.md)
+- [Klasy we/wy plików](../mfc/file-i-o-classes.md)
 
 - [Klasy OLE DB](../mfc/ole-db-classes.md)
 
@@ -29,6 +27,6 @@ Następujące kategorie klasy obsługuje trwałość danych.
 
 - [Klasy ODBC](../mfc/odbc-classes.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

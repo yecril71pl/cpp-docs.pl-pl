@@ -4,7 +4,6 @@ description: Opisuje opcje wiersza polecenia, których można używać z lib. ex
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
-- Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
 helpviewer_keywords:
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 871b92809f38b4dcbf84de802b1ac9940ea6f1e9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257562"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438940"
 ---
 # <a name="running-lib"></a>Uruchamianie LIB
 
@@ -60,7 +59,7 @@ Opcja składa się ze specyfikatora opcji, który jest kreską ( **-** ) lub uko
 
 Następujące opcje mają zastosowanie do wszystkich trybów LIB:
 
-> **/Errorreport** \[**Brak** &#124; **monitu o** &#124; &#124; **wysłanie**kolejki
+> **/Errorreport** \[**Brak** &#124; **monitu o** &#124; **QUEUE** &#124; **wysłanie**kolejki
 
 Opcja/ERRORREPORT jest przestarzała. Począwszy od systemu Windows Vista, raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) .
 

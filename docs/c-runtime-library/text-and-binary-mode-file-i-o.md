@@ -1,8 +1,6 @@
 ---
 title: Operacja We/Wy pliku w trybie binarnym i tekstowym
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304543"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444625"
 ---
 # <a name="text-and-binary-mode-file-io"></a>Operacja We/Wy pliku w trybie binarnym i tekstowym
 
-Operacje We/Wy pliku została wykonana w jednym z dwóch trybów tłumaczenia *tekstu* lub *binarne*, w zależności od trybu, w którym plik jest otwarty. Pliki danych zwykle są przetwarzane w trybie tekstowym. Aby kontrolować tryb tłumaczenia pliku, jeden wykonywać następujące czynności:
+Operacje we/wy na plikach odbywają się w jednym z dwóch trybów translacji, *tekstu* lub danych *binarnych*, w zależności od trybu, w którym plik jest otwarty. Pliki danych są zwykle przetwarzane w trybie tekstowym. Aby sterować trybem tłumaczenia plików, jeden może:
 
-- Zachowaj bieżące ustawienie domyślne i określić alternatywne tryb tylko wtedy, gdy otworzysz wybrane pliki.
+- Zachowywanie bieżącego ustawienia domyślnego i Określanie trybu alternatywnego tylko wtedy, gdy otwierane są wybrane pliki.
 
-- Użyj funkcji [_set_fmode —](../c-runtime-library/reference/set-fmode.md) zmienić domyślny tryb dla nowo otwarte pliki. Użyj [_get_fmode —](../c-runtime-library/reference/get-fmode.md) można znaleźć bieżący tryb domyślny. Początkowa domyślnym ustawieniem jest tryb tekstu (**_O_TEXT**).
+- Użyj [_set_fmode](../c-runtime-library/reference/set-fmode.md) funkcji, aby zmienić domyślny tryb dla nowo otwartych plików. Użyj [_get_fmode](../c-runtime-library/reference/get-fmode.md) , aby znaleźć bieżący tryb domyślny. Początkowe ustawienie domyślne to tryb tekstowy ( **_O_TEXT**).
 
-- Zmień domyślny tryb translacji bezpośrednio przez ustawienie zmiennej globalnej [_fmode](../c-runtime-library/fmode.md) w programach. Funkcja **_set_fmode —** ustawia wartość tej zmiennej, ale również można ustawić bezpośrednio.
+- Zmień domyślny tryb tłumaczenia bezpośrednio, ustawiając zmienną globalną [_fmode](../c-runtime-library/fmode.md) w programie. Funkcja **_set_fmode** ustawia wartość tej zmiennej, ale można ją również ustawić bezpośrednio.
 
-Jeśli wywołasz funkcję otwartego pliku takich jak [_otwórz](../c-runtime-library/reference/open-wopen.md), [fopen —](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen —](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s —](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen —](../c-runtime-library/reference/fsopen-wfsopen.md) lub [_sopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md), można zastąpić bieżące domyślne ustawienie **_fmode** , określając odpowiedni argument funkcji [_set_fmode —](../c-runtime-library/reference/set-fmode.md). **Stdin**, **stdout**, i **stderr** strumieni zawsze domyślnie otwierane w trybie tekstowym; możesz również zastąpić to ustawienie domyślne podczas otwierania plików. Użyj [_setmode —](../c-runtime-library/reference/setmode.md) Aby zmienić tryb translacji przy użyciu deskryptora pliku, po otwarciu pliku.
+Po wywołaniu funkcji otwierania plików, takiej jak [_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) lub [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md), można zastąpić bieżące domyślne ustawienie **_fmode** , określając odpowiedni argument dla funkcji [_set_fmode](../c-runtime-library/reference/set-fmode.md). Strumienie **stdin**, **stdout**i **stderr** zawsze są domyślnie otwierane w trybie tekstowym; Możesz również zastąpić to ustawienie domyślne podczas otwierania dowolnego z tych plików. Użyj [_setmode](../c-runtime-library/reference/setmode.md) , aby zmienić tryb tłumaczenia przy użyciu deskryptora pliku po otwarciu pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

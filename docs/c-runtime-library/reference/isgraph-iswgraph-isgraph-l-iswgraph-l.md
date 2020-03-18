@@ -25,7 +25,6 @@ topic_type:
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
-- _ismbcgraph_l
 - Isgraph
 - _istgraph_l
 - _istgraph
@@ -40,12 +39,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954863"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442958"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -72,20 +71,20 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*s*<br/>
 Liczba całkowita do przetestowania.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku drukowalnego innego niż spacja. **isgraph** zwraca wartość różną od zera, jeśli *c* jest znakiem drukowalnym innym niż spacja. **iswgraph** zwraca wartość różną od zera, jeśli *c* jest drukowalnym znakiem dwubajtowym innym niż spacja. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiks używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Zachowanie obiektu **isgraph** i **_isgraph_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istgraph**|**isgraf**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
@@ -94,14 +93,14 @@ Zachowanie obiektu **isgraph** i **_isgraph_l** jest niezdefiniowane, jeśli *c*
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isgraf**|\<ctype.h>|
+|**isgraf**|\<CType. h >|
 |**iswgraph**|\<CType. h > lub \<WCHAR. h >|
-|**_isgraph_l**|\<ctype.h>|
+|**_isgraph_l**|\<CType. h >|
 |**_iswgraph_l**|\<CType. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>

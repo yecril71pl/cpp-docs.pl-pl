@@ -74,7 +74,6 @@ f1_keywords:
 - _WIN32
 - _WIN64
 - _WINRT_DLL
-- __func__
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -226,12 +225,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 6da1ecd178c0bbeed3b741fb611571203d79cb76
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473851"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444939"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -455,7 +454,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - `_MSC_VER` zdefiniowany jako literał typu Integer, który koduje główne i pomocnicze elementy numeru wersji kompilatora. Numer główny to pierwszy element rozdzielanego kropką numeru wersji, a numer pomocniczy to drugi element. Jeśli na przykład numer wersji pakietu Microsoft C/C++ Compiler to 17.00.51106.1, makro `_MSC_VER` ma wartość 1700. Wprowadź `cl /?` w wierszu polecenia, aby wyświetlić numer wersji kompilatora. To makro jest zawsze definiowane.
 
-   |Visual Studio w wersji|`_MSC_VER`|
+   |Wersja programu Visual Studio|`_MSC_VER`|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|

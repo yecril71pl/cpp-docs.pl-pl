@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176164"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441723"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 
-Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.
+Uzyskuje dostęp do elementów zestawu wierszy przy użyciu składni tablicy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,11 +65,11 @@ class CArrayRowset :
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Typ metody dostępu klasę zestawu wierszy do użycia.
+Typ klasy akcesora, która ma być używana przez zestaw wierszy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -79,23 +78,23 @@ Typ metody dostępu klasę zestawu wierszy do użycia.
 |||
 |-|-|
 |[CArrayRowset](#carrayrowset)|Konstruktor.|
-|[Migawka](#snapshot)|Odczytuje całego zestawu wierszy do pamięci.|
+|[Migawka](#snapshot)|Odczytuje cały zestaw wierszy do pamięci.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|Uzyskuje dostęp do elementu zestawu wierszy.|
+|[Zakład&#91;&#93;](#operator)|Uzyskuje dostęp do elementu zestawu wierszy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |||
 |-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Liczba wierszy, które znasz.|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Liczba wierszy, które zostały już odczytane.|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
-Tworzy nową `CArrayRowset` obiektu.
+Tworzy nowy obiekt `CArrayRowset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,12 +104,12 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>Parametry
 
-*nMax*<br/>
-[in] Maksymalna liczba wierszy w zestawie wierszy.
+*Nmaks.*<br/>
+podczas Maksymalna liczba wierszy w zestawie wierszy.
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="snapshot"></a>CArrayRowset:: Snapshot
 
-Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.
+Odczytuje cały zestaw wierszy do pamięci, tworząc obraz lub migawkę.
 
 ### <a name="syntax"></a>Składnia
 
@@ -118,9 +117,9 @@ Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="operator"></a>CArrayRowset:: operator
 
-Udostępnia składni tablicy do uzyskiwania dostępu do wierszy w zestawie wierszy.
+Zapewnia składnię podobną do tablicową do uzyskiwania dostępu do wiersza w zestawie wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -131,22 +130,22 @@ TAccessor & operator[](int nrow);
 #### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Oparte na szablonach parametr, który określa typ metody dostępu przechowywane w zestawie wierszy.
+Parametr z szablonem, który określa typ metody dostępu przechowywanej w zestawie wierszy.
 
 *nRow*<br/>
-[in] Numer wiersza (element tablicy), po którym chcesz uzyskać dostęp.
+podczas Numer wiersza (elementu tablicy), do którego chcesz uzyskać dostęp.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Zawartość żądanych wierszy.
+Zawartość żądanego wiersza.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *nRow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.
+Jeśli *nrow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
-Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.
+Zawiera liczbę wierszy w zestawie wierszy, które zostały już odczytane.
 
 ### <a name="syntax"></a>Składnia
 
@@ -154,8 +153,8 @@ Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset, klasa](../../data/oledb/crowset-class.md)
