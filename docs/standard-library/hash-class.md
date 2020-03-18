@@ -7,8 +7,6 @@ f1_keywords:
 - memory/std::hash
 - string/std::hash
 - system_error/std::hash
-- thread/std::hash
-- typeindex/std::hash
 - vector/std::hash
 - XSTDDEF/std::hash
 - xstring/std::hash
@@ -23,12 +21,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: aa51e56197ba79afbe2bd2597596c52b23a4f65b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688002"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446581"
 ---
 # <a name="hash-class"></a>hash — Klasa
 
@@ -45,7 +43,7 @@ struct hash {
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt Function definiuje funkcję mieszania, odpowiednią do mapowania wartości typu *ty* na rozkład wartości indeksu. Element członkowski `operator()` zwraca kod skrótu dla wartości *Val*, odpowiedni do użycia z szablonami klas `unordered_map`, `unordered_multimap`, `unordered_set` i `unordered_multiset`. Biblioteka standardowa zawiera specjalizacje dla typów podstawowych: *ty* może być dowolnym typem skalarnym, w tym typami wskaźników i typami wyliczeniowymi. Ponadto istnieją specjalizacje dla typów bibliotek `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, 0, 1, 2 , 3, 4, 5, 6 i 7.
+Obiekt Function definiuje funkcję mieszania, odpowiednią do mapowania wartości typu *ty* na rozkład wartości indeksu. Element członkowski `operator()` zwraca kod skrótu dla wartości *Val*, odpowiedni do użycia z szablonami klas `unordered_map`, `unordered_multimap`, `unordered_set`i `unordered_multiset`. Biblioteka standardowa zawiera specjalizacje dla typów podstawowych: *ty* może być dowolnym typem skalarnym, w tym typami wskaźników i typami wyliczeniowymi. Ponadto istnieją specjalizacje dla typów bibliotek, `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, `vector<bool>`i.
 
 ## <a name="example"></a>Przykład
 
@@ -72,13 +70,13 @@ int main()
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<functional >
+**Nagłówek:** \<funkcjonalne >
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< unordered_map >](../standard-library/unordered-map.md) \
-[Klasa unordered_multimap](../standard-library/unordered-multimap-class.md) \
-[Klasa unordered_multiset](../standard-library/unordered-multiset-class.md) \
+[< unordered_map >](../standard-library/unordered-map.md)\
+\ [klasy unordered_multimap](../standard-library/unordered-multimap-class.md)
+\ [klasy unordered_multiset](../standard-library/unordered-multiset-class.md)
 [<unordered_set>](../standard-library/unordered-set.md)

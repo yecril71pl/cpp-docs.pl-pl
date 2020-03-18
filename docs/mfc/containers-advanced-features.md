@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery: Funkcje zaawansowane'
+title: 'Kontenery: funkcje zaawansowane'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - links [MFC], to embedded OLE objects
@@ -12,66 +12,66 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152933"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445352"
 ---
-# <a name="containers-advanced-features"></a>Kontenery: Funkcje zaawansowane
+# <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 
-W tym artykule opisano kroki niezbędne do dołączyć opcjonalny zaawansowane funkcje do istniejących aplikacji kontenerowych. Te funkcje są:
+W tym artykule opisano kroki niezbędne do uwzględnienia opcjonalnych zaawansowanych funkcji w istniejących aplikacjach kontenera. Te funkcje są następujące:
 
-- [Aplikacja kontenera i serwera](#_core_creating_a_container_server_application)
+- [Aplikacja, która jest zarówno kontenerem, jak i serwerem](#_core_creating_a_container_server_application)
 
-- [Łącze OLE na obiekt osadzony](#_core_links_to_embedded_objects)
+- [Łącze OLE do osadzonego obiektu](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a> Tworzenie aplikacji kontenera/serwera
+##  <a name="_core_creating_a_container_server_application"></a>Tworzenie aplikacji kontenera/serwera
 
-Aplikacja kontenera/serwera jest aplikacja, która działa jako kontener i serwerem. Program Microsoft Word dla Windows jest przykładem. Dokumenty programu Word for Windows można osadzić w innych aplikacjach, a elementy można również osadzić w dokumentach programu Word for Windows. Modyfikowanie aplikację kontenera do kontenera i całego serwera (nie można utworzyć aplikację kontenera/miniserver kombinacji) proces jest podobny do procesu tworzenia całego serwera.
+Aplikacja kontenera/serwera to aplikacja, która działa zarówno jako kontener, jak i serwer. Przykładem tego programu jest program Microsoft Word dla systemu Windows. Możesz osadzić program Word for Windows Documents w innych aplikacjach, a także osadzić elementy w programie Word dla dokumentów systemu Windows. Proces modyfikowania aplikacji kontenera jako kontenera i pełnego serwera (nie można utworzyć kombinacji kontenera/aplikacji miniserver) jest podobny do procesu tworzenia pełnego serwera.
 
-Artykuł [serwerów: Implementowanie serwera](../mfc/servers-implementing-a-server.md) Wyświetla liczbę zadania wymagane do wdrożenia aplikacji serwera. Po skonwertowaniu aplikacji kontenera do aplikacji kontenera/serwera, należy wykonać niektóre z tych samych zadań, dodając kod do kontenera. Poniższa lista zawiera ważnych kwestii, które należy wziąć pod uwagę:
+Artykuł [serwery: implementacja serwera](../mfc/servers-implementing-a-server.md) zawiera kilka zadań wymaganych do zaimplementowania aplikacji serwera. W przypadku konwertowania aplikacji kontenera do aplikacji kontenera/serwera należy wykonać niektóre z tych samych zadań, dodając kod do kontenera. Poniżej wymieniono ważne zagadnienia, które należy wziąć pod uwagę:
 
-- Kod kontenera, tworzone przez Kreatora aplikacji już inicjuje podsystemu OLE. Nie musisz zmieniać lub dodawać żadnych tej obsługi.
+- Kod kontenera utworzony przez Kreatora aplikacji już inicjuje podsystem OLE. Nie trzeba zmieniać ani dodawać żadnych elementów do pomocy technicznej.
 
-- Wszędzie tam, gdzie jest klasą bazową klasy dokumentu `COleDocument`, Zmień klasę bazową do `COleServerDoc`.
+- Wszędzie tam, gdzie Klasa bazowa klasy dokumentu jest `COleDocument`, Zmień klasę bazową, aby `COleServerDoc`.
 
-- Zastąp `COleClientItem::CanActivate` w celu uniknięcia edytowanie elementów w miejscu, gdy sam serwer jest używany do edycji w miejscu.
+- Zastąp `COleClientItem::CanActivate`, aby uniknąć edytowania elementów w miejscu, gdy sam serwer jest używany do edycji w miejscu.
 
-   Na przykład MFC OLE próbki [OCLIENT](../overview/visual-cpp-samples.md) zawierający osadzone element, który został utworzony przez aplikację kontenera/serwera. Otwórz aplikację OCLIENT i w miejscu edytowania elementu tworzone przez testowaną aplikację kontenera/serwera. Podczas edytowania elementu aplikacji, zdecydujesz, którą chcesz osadzić elementu utworzonych w ramach przykładu MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Aby to zrobić, nie można użyć aktywacji w miejscu. Należy otworzyć pełni HIERSVR można aktywować tego elementu. Ponieważ biblioteki klas Microsoft Foundation nie obsługuje tej funkcji OLE, zastępowanie `COleClientItem::CanActivate` można to sprawdzić i uniknąć możliwych błędów czasu wykonywania w aplikacji.
+   Na przykład [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE przykład osadzony element utworzony przez aplikację kontener/serwer. Otwórz aplikację OCLIENT i w miejscu Edytuj element utworzony przez aplikację kontener/serwer. Podczas edytowania elementu aplikacji użytkownik decyduje o osadzeniu elementu utworzonego przez przykładową [HIERSVR](../overview/visual-cpp-samples.md)MFC OLE. W tym celu nie można użyć aktywacji w miejscu. Aby aktywować ten element, należy w pełni otworzyć HIERSVR. Ponieważ biblioteka MFC nie obsługuje tej funkcji OLE, zastępowanie `COleClientItem::CanActivate` pozwala na sprawdzenie tej sytuacji i uniemożliwienie możliwego błędu czasu wykonywania w aplikacji.
 
-Jeśli tworzysz nową aplikację i ją do działania jako aplikacji kontenera/serwera, wybierz opcję automatycznie utworzone opcji w oknie dialogowym Opcje OLE, Kreator aplikacji i wsparcie dzięki tym. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: Tworzenie kontenera kontrolek ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Aby uzyskać informacji na temat próbki MFC Zobacz próbki MFC.
+Jeśli tworzysz nową aplikację i chcesz, aby działała ona jako aplikacja kontenera/serwera, wybierz tę opcję w oknie dialogowym Opcje OLE w Kreatorze aplikacji, a ta obsługa zostanie utworzona automatycznie. Aby uzyskać więcej informacji, zobacz [Omówienie artykułu: Tworzenie kontenera kontrolki ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Aby uzyskać informacje na temat przykładów MFC, zobacz MFC Samples.
 
-Należy pamiętać, że aplikacja MDI nie można wstawić do niej samej. Aplikacja kontenera/serwera nie można wstawić do niej samej, chyba że jest aplikacją SDI.
+Należy pamiętać, że nie można wstawić aplikacji MDI do samej siebie. Aplikacji, która jest kontenerem/serwerem, nie można wstawić do samego siebie, chyba że jest to aplikacja SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a> Łącza do osadzonych obiektów
+##  <a name="_core_links_to_embedded_objects"></a>Linki do osadzonych obiektów
 
-Łącza do osadzonych obiektów funkcji pozwala użytkownikowi na tworzenie dokumentu za pomocą łączy OLE na obiekt osadzony w aplikacji kontenera. Na przykład można utworzyć dokumentu w edytorze tekstów, zawierający arkusz kalkulacyjny programu osadzonego. Jeśli aplikacja obsługuje łącza do osadzonych obiektów, można go wkleić link do arkusza kalkulacyjnego zawarte w dokumencie edytora tekstów. Ta funkcja umożliwia aplikacji na korzystanie z informacji zawartych w arkuszu kalkulacyjnym, nie wiedząc o tym, gdzie edytora tekstów pierwotnie rozumiem.
+Funkcja linków do obiektów osadzonych umożliwia użytkownikowi utworzenie dokumentu z linkiem OLE do osadzonego obiektu wewnątrz aplikacji kontenera. Na przykład Utwórz dokument w edytorze tekstów zawierający osadzony arkusz kalkulacyjny. Jeśli aplikacja obsługuje linki do osadzonych obiektów, może wkleić link do arkusza kalkulacyjnego zawartego w dokumencie edytora tekstów. Ta funkcja pozwala aplikacji na korzystanie z informacji zawartych w arkuszu kalkulacyjnym bez znajomości tego, gdzie został pierwotnie uzyskany przez procesor wyrazów.
 
-#### <a name="to-link-to-embedded-objects-in-your-application"></a>Aby utworzyć łącze do osadzonych obiektów w aplikacji
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>Aby połączyć się z osadzonymi obiektami w aplikacji
 
-1. Pochodzi z klasy dokumentu `COleLinkingDoc` zamiast `COleDocument`.
+1. Utwórz klasę dokumentu od `COleLinkingDoc`, a nie `COleDocument`.
 
-1. Tworzenie Identyfikatora klasy OLE (**CLSID**) dla swojej aplikacji, korzystając z generatorem identyfikator klasy, które są dołączone do OLE narzędzi deweloperskich programu.
+1. Utwórz identyfikator klasy OLE (**CLSID**) dla aplikacji przy użyciu generatora identyfikatora klasy dołączonego do narzędzi deweloperskich OLE.
 
-1. Zarejestrować aplikację w OLE.
+1. Zarejestruj aplikację za pomocą OLE.
 
-1. Utwórz `COleTemplateServer` obiektu jako członek klasy aplikacji.
+1. Utwórz obiekt `COleTemplateServer` jako element członkowski klasy aplikacji.
 
-1. W klasie aplikacji `InitInstance` element członkowski funkcji, wykonaj następujące czynności:
+1. W `InitInstance` funkcji członkowskiej klasy aplikacji wykonaj następujące czynności:
 
-   - Połącz swoje `COleTemplateServer` obiektu do szablonów dokumentów przez wywołanie obiektu `ConnectTemplate` funkcja elementu członkowskiego.
+   - Połącz obiekt `COleTemplateServer` z szablonami dokumentów, wywołując funkcję elementu członkowskiego `ConnectTemplate` obiektu.
 
-   - Wywołaj `COleTemplateServer::RegisterAll` funkcja elementu członkowskiego do rejestrowania wszystkich obiektów klasy przy użyciu systemu OLE.
+   - Wywołaj funkcję członkowską `COleTemplateServer::RegisterAll`, aby zarejestrować wszystkie obiekty klasy w systemie OLE.
 
-   - Wywołaj `COleTemplateServer::UpdateRegistry`. Tylko parametr `UpdateRegistry` powinien być *OAT_CONTAINER* Jeśli aplikacja nie zostanie uruchomiona z przełącznikiem "/ osadzonego". To rejestruje aplikację jako kontener, który może obsługiwać łącza do osadzonych obiektów.
+   - Wywołaj `COleTemplateServer::UpdateRegistry`. Jedyny parametr do `UpdateRegistry` powinien być *OAT_CONTAINER* , jeśli aplikacja nie jest uruchomiona z przełącznikiem "/Embedded". To rejestruje aplikację jako kontener, który może obsługiwać linki do osadzonych obiektów.
 
-         If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
+      Jeśli aplikacja jest uruchamiana z przełącznikiem "/Embedded", nie powinien zawierać okna głównego, podobnego do aplikacji serwerowej.
 
-Przykładowe MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) implementuje tę funkcję. Aby uzyskać przykład jak to zrobić, zobacz `InitInstance` działa w programach *OCLIENT. CPP* plików tej aplikacji przykładowej.
+Przykład [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE implementuje tę funkcję. Aby zapoznać się z przykładem tego, jak to zrobić, zobacz Funkcja `InitInstance` w *OCLIENT. Plik CPP* tej przykładowej aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontenery](../mfc/containers.md)<br/>
 [Serwery](../mfc/servers.md)

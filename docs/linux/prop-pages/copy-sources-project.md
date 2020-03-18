@@ -2,12 +2,12 @@
 title: Właściwości projektu kopiowania źródeł (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: bc99814e825cda091b6a0b00256ca2d8269ecdd3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 732a13520a223f1aa73733cd4098c247052f8d3b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305401"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441390"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Właściwości projektu kopiowania źródeł (Linux C++)
 
@@ -21,11 +21,11 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 Właściwości ustawione na tej stronie właściwości mają zastosowanie do wszystkich plików w projekcie, z wyjątkiem tego, których właściwości na poziomie plików są ustawione.
 
-Właściwość | Opis
---- | ---
-Źródła do skopiowania | Określa źródła do skopiowania do systemu zdalnego. Zmiana tej listy może zmienić się lub w inny sposób mieć wpływ na strukturę katalogów, w której pliki są kopiowane do systemu zdalnego.
-Kopiuj źródła | Określa, czy źródła mają być kopiowane do systemu zdalnego.
-Dodatkowe źródła do skopiowania | Określa dodatkowe źródła do skopiowania do systemu zdalnego. Opcjonalnie listę można dostarczyć jako lokalną do zdalnych par mapowania przy użyciu składni podobnej do następującej: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, gdzie plik lokalny można skopiować do określonej lokalizacji zdalnej w systemie zdalnym.
+| Właściwość | Opis |
+|--|--|
+| Źródła do skopiowania | Określa źródła do skopiowania do systemu zdalnego. Zmiana tej listy może zmienić się lub w inny sposób mieć wpływ na strukturę katalogów, w której pliki są kopiowane do systemu zdalnego. |
+| Kopiuj źródła | Określa, czy źródła mają być kopiowane do systemu zdalnego. |
+| Dodatkowe źródła do skopiowania | Określa dodatkowe źródła do skopiowania do systemu zdalnego. Opcjonalnie możesz określić pary mapowania lokalnego do zdalnego przy użyciu składni podobnej do następującej: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, gdzie plik lokalny można skopiować do określonej lokalizacji zdalnej w systemie zdalnym. |
 
 @SourcesToCopyRemotely i @DataFilesToCopyRemotely odwołują się do grup elementów w pliku projektu. Aby zmodyfikować źródła lub pliki danych, które są kopiowane zdalnie, edytuj plik *vcxproj* w następujący sposób:
 

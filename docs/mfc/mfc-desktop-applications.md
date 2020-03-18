@@ -3,22 +3,21 @@ title: Aplikacje dla Pulpitu MFC
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607538"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447711"
 ---
 # <a name="mfc-desktop-applications"></a>Aplikacje dla Pulpitu MFC
 
-Biblioteka Microsoft Foundation Class (MFC) zapewnia otokę zorientowaną obiektowo na wiele interfejsów API Win32 i COM. Chociaż może służyć do tworzenia bardzo prostych aplikacji klasycznych, jest najbardziej przydatne, gdy trzeba będzie opracowywać bardziej złożone interfejsy użytkownika z wieloma kontrolkami. Można użyć MFC do tworzenia aplikacji z interfejsami użytkownika w stylu pakietu Office. Aby uzyskać dokumentację dotyczącą platformy Windows, zobacz [dokumentację systemu Windows](/windows/index). Aby uzyskać informacje na temat tworzenia aplikacji C++ systemu Windows w programie bez MFC, zobacz Kompilowanie aplikacji [klasycznych systemu windows przy użyciu Win32 API](/windows/win32/index).
+Biblioteka Microsoft Foundation Class (MFC) zapewnia otokę zorientowaną obiektowo na wiele interfejsów API Win32 i COM. Chociaż może służyć do tworzenia bardzo prostych aplikacji klasycznych, jest najbardziej przydatne, gdy trzeba będzie opracowywać bardziej złożone interfejsy użytkownika z wieloma kontrolkami. Można użyć MFC do tworzenia aplikacji z interfejsami użytkownika w stylu pakietu Office. Aby uzyskać dokumentację dotyczącą platformy Windows, zobacz [dokumentację systemu Windows](/windows/index). Aby uzyskać informacje na temat tworzenia aplikacji C++ systemu Windows w programie bez MFC, zobacz [Kompilowanie aplikacji klasycznych systemu windows przy użyciu Win32 API](/windows/win32/index).
 
 Dokumentacja MFC obejmuje klasy, funkcje globalne, zmienne globalne i makra, które tworzą biblioteka MFC.
 
@@ -88,6 +87,6 @@ Oferuje łącza do różnych bibliotek dostarczanych z wizualizacją C++, w tym 
 [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Oferuje linki do korzystania z debugera programu Visual Studio w celu poprawienia błędów logiki w aplikacji lub procedurach składowanych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MFC i ATL](mfc-and-atl.md)

@@ -1,35 +1,33 @@
 ---
 title: Kompilator klas obsługi COM
 ms.date: 11/04/2016
-f1_keywords:
-- _com_raise_error
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
-ms.openlocfilehash: 066fe797bc500625e96e027777a70f278b88cddb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a9ff7c57965c9ba00881d5fe48501a6138b31d1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399203"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444421"
 ---
 # <a name="compiler-com-support-classes"></a>Kompilator klas obsługi COM
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Standardowych klas są używane do obsługi niektórych typów modelu COM. Klasy są zdefiniowane w \<comdef.h > i pliki nagłówkowe wygenerowane z biblioteki typów.
+Klasy standardowe są używane do obsługi niektórych typów modelu COM. Klasy są zdefiniowane w \<comdef. h > i plików nagłówkowych wygenerowanych z biblioteki typów.
 
-|Class|Cel|
+|Klasa|Przeznaczenie|
 |-----------|-------------|
-|[_bstr_t](../cpp/bstr-t-class.md)|Opakowuje `BSTR` typu przydatne operatory i metody.|
-|[_com_error](../cpp/com-error-class.md)|Definiuje obiekt błędu zgłoszony przez [_com_raise_error —](../cpp/com-raise-error.md) w większości błędów.|
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźniki interfejsu COM i automatyzuje wymaganego wywołania `AddRef`, `Release`, i `QueryInterface`.|
-|[_variant_t](../cpp/variant-t-class.md)|Opakowuje `VARIANT` typu przydatne operatory i metody.|
+|[_bstr_t](../cpp/bstr-t-class.md)|Zawija typ `BSTR`, aby zapewnić użyteczne operatory i metody.|
+|[_com_error](../cpp/com-error-class.md)|Definiuje obiekt błędu zgłoszony przez [_com_raise_error](../cpp/com-raise-error.md) w większości błędów.|
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźniki interfejsów COM i automatyzuje wymagane wywołania do `AddRef`, `Release`i `QueryInterface`.|
+|[_variant_t](../cpp/variant-t-class.md)|Zawija typ `VARIANT`, aby zapewnić użyteczne operatory i metody.|
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa kompilatora COM](../cpp/compiler-com-support.md)<br/>
 [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)<br/>

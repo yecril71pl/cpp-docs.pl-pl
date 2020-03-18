@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - CUIntArray
 - AFXCOLL/CUIntArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CUIntArray::CUIntArray
+- AFXCOLL/CUIntArray::Add
+- AFXCOLL/CUIntArray::Append
+- AFXCOLL/CUIntArray::Copy
+- AFXCOLL/CUIntArray::ElementAt
+- AFXCOLL/CUIntArray::FreeExtra
+- AFXCOLL/CUIntArray::GetAt
+- AFXCOLL/CUIntArray::GetCount
+- AFXCOLL/CUIntArray::GetData
+- AFXCOLL/CUIntArray::GetSize
+- AFXCOLL/CUIntArray::GetUpperBound
+- AFXCOLL/CUIntArray::InsertAt
+- AFXCOLL/CUIntArray::IsEmpty
+- AFXCOLL/CUIntArray::RemoveAll
+- AFXCOLL/CUIntArray::RemoveAt
+- AFXCOLL/CUIntArray::SetAt
+- AFXCOLL/CUIntArray::SetAtGrow
+- AFXCOLL/CUIntArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CUIntArray [MFC], CUIntArray
+- CUIntArray [MFC], Add
+- CUIntArray [MFC], Append
+- CUIntArray [MFC], Copy
+- CUIntArray [MFC], ElementAt
+- CUIntArray [MFC], FreeExtra
+- CUIntArray [MFC], GetAt
+- CUIntArray [MFC], GetCount
+- CUIntArray [MFC], GetData
+- CUIntArray [MFC], GetSize
+- CUIntArray [MFC], GetUpperBound
+- CUIntArray [MFC], InsertAt
+- CUIntArray [MFC], IsEmpty
+- CUIntArray [MFC], RemoveAll
+- CUIntArray [MFC], RemoveAt
+- CUIntArray [MFC], SetAt
+- CUIntArray [MFC], SetAtGrow
+- CUIntArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: 39d5fd4707f1c03de78cf9fd078655389c93ba17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 932062ec289a34cffcd929853233a0c7c81a7a72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323547"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447541"
 ---
 # <a name="cuintarray-class"></a>Klasa CUIntArray
 
@@ -61,58 +61,58 @@ class CUIntArray : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje elementów członkowskich `CUIntArray` są podobne do funkcji elementów członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa można użyć `CObArray` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako parametr funkcji lub wartości zwracanej, Zastąp Unit.
+Funkcje składowe `CUIntArray` są podobne do funkcji składowych klasy [CObArray](../../mfc/reference/cobarray-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CObArray` dla specyficznych dla funkcji składowych. W każdym przypadku, gdy widzisz wskaźnik `CObject` jako parametr funkcji lub wartość zwrotna, podstaw UINT.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
-na przykład przekłada się na
+na przykład tłumaczy na
 
 `UINT CUIntArray::GetAt( int <nIndex> ) const;`
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Tworzy pustą tablicę.|
+|[CUIntArray::CUIntArray](../../mfc/reference/cobarray-class.md#cobarray)|Konstruuje pustą tablicę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Dodaje element do końca tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Dołącza innej tablicy do tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiuje innej tablicy do tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Zwraca tymczasowe odwołanie do wskaźnika elementu w tablicy.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywanej pamięci powyżej bieżącego górną granicę.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość pod danym indeksem.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartości NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy nieprawidłowy indeks.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) z określonym indeksem.|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element pod określonym indeksem.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla podanego indeksu; Tablica nie może wzrosnąć.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla podanego indeksu; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
+|[CUIntArray:: Add](../../mfc/reference/cobarray-class.md#add)|Dodaje element na końcu tablicy; w razie potrzeby powiększa tablicę.|
+|[CUIntArray:: Append](../../mfc/reference/cobarray-class.md#append)|Dołącza kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CUIntArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiuje kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CUIntArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Zwraca tymczasowe odwołanie do wskaźnika elementu w tablicy.|
+|[CUIntArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywane pamięci powyżej bieżącej górnej granicy.|
+|[CUIntArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość w danym indeksie.|
+|[CUIntArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
+|[CUIntArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartość NULL.|
+|[CUIntArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
+|[CUIntArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy prawidłowy indeks.|
+|[CUIntArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) o określonym indeksie.|
+|[CUIntArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
+|[CUIntArray::](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
+|[CUIntArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element z określonym indeksem.|
+|[CUIntArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla danego indeksu; Tablica nie może być większa.|
+|[CUIntArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby powiększa tablicę.|
+|[CUIntArray:: setSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
+|[CUIntArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
 
 ## <a name="remarks"></a>Uwagi
 
-Liczbę całkowitą bez znaku lub UINT, różni się od słowa i wyrazy w liczbie mnogiej, w tym, że rozmiar fizycznej Unit można zmienić w zależności od docelowej środowisko operacyjne. UINT jest taki sam rozmiar jak bitowego.
+Liczba całkowita bez znaku (UINT) różni się od słów i doublewords w tym, że rozmiar fizyczny klasy UINT może ulec zmianie w zależności od docelowego środowiska operacyjnego. Element UINT ma taki sam rozmiar jak DoubleWord.
 
-`CUIntArray` dołącza [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) makra do obsługi dostępu typu run-time i zrzucanie [CDumpContext](../../mfc/reference/cdumpcontext-class.md) obiektu. Zrzut elementów poszczególnych liczb całkowitych bez znaku, należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą. Liczba całkowita bez znaku tablice nelze serializovat.
+`CUIntArray` obejmuje makro [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) w celu obsługi dostępu do typu w czasie wykonywania i zatopienia do obiektu [CDumpContext](../../mfc/reference/cdumpcontext-class.md) . Jeśli potrzebujesz zrzutu pojedynczych elementów liczby całkowitej bez znaku, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą. Niepodpisane tablice całkowite nie mogą być serializowane.
 
 > [!NOTE]
->  Przed rozpoczęciem korzystania z tablicy, należy użyć `SetSize` jej rozmiaru i przydzielanie pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje, że często ponownie przydzielane i skopiować. Częste ponowne przydzielenie kopiowania są nieefektywne i może fragmentu pamięci.
+>  Przed użyciem tablicy Użyj `SetSize`, aby ustalić jej rozmiar i przydzielić pamięć. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje częste ponowną alokację i kopiowanie. Częste ponowne przydzielanie i kopiowanie są niewydajne i mogą fragmentację pamięci.
 
-Aby uzyskać więcej informacji na temat korzystania z `CUIntArray`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).
+Aby uzyskać więcej informacji na temat korzystania z `CUIntArray`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -122,9 +122,9 @@ Aby uzyskać więcej informacji na temat korzystania z `CUIntArray`, zapoznaj si
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcoll.h
+**Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

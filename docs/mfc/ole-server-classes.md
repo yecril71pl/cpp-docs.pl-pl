@@ -1,50 +1,48 @@
 ---
 title: Klasy serwerów OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - OLE server applications [MFC], server classes
 - OLE server documents
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92dec514611dcce7d6c666fdd271843e69561637
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385326"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447587"
 ---
 # <a name="ole-server-classes"></a>Klasy serwerów OLE
 
-Te klasy są używane przez aplikacje serwera. Dokumenty serwera są uzyskiwane z `COleServerDoc` , a nie z `CDocument`. Należy pamiętać, że ponieważ `COleServerDoc` jest tworzony na podstawie `COleLinkingDoc`, dokumentów serwera może być również kontenery, które obsługują łączenie.
+Te klasy są używane przez aplikacje serwera. Dokumenty serwera pochodzą z `COleServerDoc`, a nie z `CDocument`. Należy pamiętać, że ponieważ `COleServerDoc` pochodzi od `COleLinkingDoc`, dokumenty serwera mogą być również kontenerami, które obsługują łączenie.
 
-`COleServerItem` Klasa reprezentuje dokument lub jego części dokumentu, które mogą być osadzone w innym dokumencie lub połączone.
+Klasa `COleServerItem` reprezentuje dokument lub część dokumentu, który może być osadzony w innym dokumencie lub połączony z.
 
-`COleIPFrameWnd` i `COleResizeBar` obsługuje edycję w miejscu, gdy obiekt jest w kontenerze i `COleTemplateServer` obsługuje tworzenie par dokument/widok, dzięki czemu można je edytować obiekty OLE z innych aplikacji.
+`COleIPFrameWnd` i `COleResizeBar` obsługują edytowanie w miejscu, gdy obiekt znajduje się w kontenerze, a `COleTemplateServer` obsługuje tworzenie par dokumentów/widoków, aby można było edytować obiekty OLE z innych aplikacji.
 
 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
-Używane jako klasa bazowa dla klas dokumentów aplikacji serwera. `COleServerDoc` obiekty oferują zbiorczego serwera pomocy technicznej w ramach interakcji z `COleServerItem` obiektów. Wizualne możliwości edycji są dostarczane, przy użyciu architektury dokument/widok biblioteki klas.
+Używane jako klasa bazowa dla klas dokumentu aplikacji serwera. obiekty `COleServerDoc` zapewniają zbiorczą obsługę serwera za pomocą interakcji z obiektami `COleServerItem`. Możliwość edycji wizualnej jest dostępna przy użyciu architektury dokumentu/widoku biblioteki klas.
 
 [CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-Abstrakcyjna klasa bazowa `COleClientItem` i `COleServerItem`. Obiekty klasy pochodne `CDocItem` reprezentują części dokumentów.
+Abstrakcyjna klasa bazowa `COleClientItem` i `COleServerItem`. Obiekty klas pochodzących od `CDocItem` reprezentują części dokumentów.
 
 [COleServerItem](../mfc/reference/coleserveritem-class.md)<br/>
-Używany do reprezentowania interfejsu OLE do `COleServerDoc` elementów. Ma to zwykle spowodowane jednym `COleServerDoc` obiektu, który reprezentuje części osadzonego dokumentu. Na serwerach, które obsługują linki do części dokumentów, może istnieć wiele `COleServerItem` obiektów, z których każdy reprezentuje łącze do części dokumentu.
+Używany do reprezentowania interfejsu OLE do `COleServerDoc` elementów. Istnieje zwykle jeden obiekt `COleServerDoc`, który reprezentuje osadzoną część dokumentu. W przypadku serwerów, które obsługują linki do części dokumentów, może istnieć wiele `COleServerItem` obiektów, z których każdy reprezentuje link do części dokumentu.
 
 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-Udostępnia okno ramowe w celu wyświetlenia, gdy dokument serwera jest edytowany w miejscu.
+Udostępnia okno ramek dla widoku, gdy dokument serwera jest edytowany w miejscu.
 
 [COleResizeBar](../mfc/reference/coleresizebar-class.md)<br/>
-Udostępnia standardowy interfejs użytkownika do zmiany rozmiaru w miejscu. Obiekty tej klasy są zawsze używane w połączeniu z `COleIPFrameWnd` obiektów.
+Zapewnia standardowy interfejs użytkownika dla zmiany rozmiarów w miejscu. Obiekty tej klasy są zawsze używane w połączeniu z obiektami `COleIPFrameWnd`.
 
-[COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
-Używane do tworzenia dokumentów za pomocą architektury dokument/widok struktury. A `COleTemplateServer` obiektu deleguje większość swojej pracy, aby skojarzone `CDocTemplate` obiektu.
+[Element COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
+Służy do tworzenia dokumentów przy użyciu architektury dokumentu/widoku struktury. Obiekt `COleTemplateServer` deleguje większość swoich zadań do skojarzonego obiektu `CDocTemplate`.
 
 [COleException](../mfc/reference/coleexception-class.md)<br/>
-Wyjątek, wynikające z wystąpił błąd podczas przetwarzania OLE. Ta klasa jest używana zarówno kontenery i serwery.
+Wyjątek wynikający z błędu przetwarzania OLE. Ta klasa jest używana przez kontenery i serwery.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

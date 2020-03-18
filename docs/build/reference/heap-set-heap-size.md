@@ -3,7 +3,6 @@ title: /HEAP (Ustaw rozmiar stosu)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
-- /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
 helpviewer_keywords:
 - -HEAP linker option
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f155ad56ec1a90479b402e38e7ec7f3e3d80e470
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270357"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439526"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Ustaw rozmiar stosu)
 
@@ -26,31 +25,31 @@ ms.locfileid: "62270357"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja /HEAP ustawia rozmiar stosu w bajtach. Ta opcja jest tylko do użytku podczas tworzenia pliku .exe.
+Opcja/HEAP ustawia rozmiar sterty w bajtach. Ta opcja jest używana tylko podczas kompilowania pliku. exe.
 
-*Zarezerwować* argument określa Alokacja całkowita sterty w pamięci wirtualnej. Domyślny rozmiar stosu to 1 MB. Konsolidator zaokrągla w górę określoną wartość do najbliższej 4 bajty.
+Argument *rezerwy* określa całkowitą alokację sterty w pamięci wirtualnej. Domyślny rozmiar sterty wynosi 1 MB. Konsolidator zaokrągla określoną wartość do najbliższej 4 bajtów.
 
-Opcjonalny `commit` argument określa ilość pamięci fizycznej do przydzielenia w danym momencie. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość pozwala zaoszczędzić czas, gdy aplikacja potrzebuje więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas uruchamiania.
+Opcjonalny `commit` argument określa ilość pamięci fizycznej do przydzielenia w danym momencie. Przydzielona pamięć wirtualna powoduje, że miejsce jest zarezerwowane w pliku stronicowania. Wyższa wartość `commit` umożliwia zaoszczędzenie czasu, gdy aplikacja wymaga większej ilości miejsca, ale zwiększa wymagania dotyczące pamięci i prawdopodobnie czas uruchamiania.
 
-Określ *zarezerwować* i `commit` wartości dziesiętnych lub notacji języka C.
+Określ wartości *rezerw* i `commit` w notacji dziesiętnej lub w języku C.
 
-Ta funkcja jest również dostępna za pośrednictwem pliku definicji modułu za pomocą [HEAPSIZE](heapsize.md).
+Ta funkcja jest również dostępna za pośrednictwem pliku definicji modułu z [heapsize](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **systemu** stronę właściwości.
+1. Kliknij stronę właściwości **systemu** .
 
-1. Modyfikowanie **zatwierdzenia. Generace** właściwości.
+1. Zmodyfikuj właściwość **rozmiar zatwierdzenia sterty** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

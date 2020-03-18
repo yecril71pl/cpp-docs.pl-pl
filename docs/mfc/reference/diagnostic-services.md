@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421402"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446211"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 
@@ -109,6 +109,7 @@ Ten przykładowy kod może spowodować Ostrzeżenie kompilatora, jeśli _AFX_SEC
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -512,7 +513,7 @@ Ta funkcja sprawdza poprawność puli wolnej pamięci i w razie potrzeby drukuje
 BOOL  AfxCheckMemory();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli nie występują błędy pamięci; w przeciwnym razie 0.
 
@@ -635,7 +636,8 @@ Aby użyć tej funkcji pomyślnie:
 - Plik IMAGEHLP. Biblioteka DLL musi znajdować się w ścieżce. Jeśli nie masz tej biblioteki DLL, funkcja wyświetli komunikat o błędzie. Zobacz [Biblioteka pomocy obrazów](/windows/win32/Debug/image-help-library) , aby uzyskać informacje o zestawie funkcji dostarczonym przez program Imagehlp.
 
 - Moduły z ramkami na stosie muszą zawierać informacje o debugowaniu. Jeśli nie zawierają one informacji debugowania, funkcja nadal generuje ślad stosu, ale ślad będzie mniej szczegółowy.
-  ### <a name="requirements"></a>Wymagania
+
+### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** AFX. h
 
@@ -652,7 +654,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 *bDump*<br/>
 podczas Wartość TRUE wskazuje, że zrzut przecieku pamięci jest włączony; Wartość FALSE wskazuje, że zrzut przecieku pamięci jest wyłączony.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Poprzednia wartość dla tej flagi.
 
@@ -682,7 +684,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 *bTrack*<br/>
 Ustawienie tej wartości na TRUE powoduje włączenie śledzenia pamięci; Wartość FALSE powoduje wyłączenie tej opcji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Poprzednie ustawienie flagi śledzenie — włączenie.
 
@@ -725,7 +727,7 @@ Zawiera długość bloku pamięci w bajtach.
 *plRequestNumber*<br/>
 Wskazuje **długą** liczbę całkowitą, która zostanie wypełniona z numerem sekwencji alokacji bloku pamięci lub zero, jeśli nie reprezentuje aktualnie aktywnego bloku pamięci.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Różne od zera, jeśli blok pamięci jest aktualnie przydzielony i długość jest poprawna; w przeciwnym razie 0.
 
@@ -763,7 +765,7 @@ Zawiera liczbę bajtów pamięci do przetestowania.
 *bReadWrite*<br/>
 Określa, czy pamięć jest zarówno do odczytu, jak i do zapisu (TRUE), czy tylko do odczytu (FALSE).
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 W przypadku kompilacji debugowania, jeśli określony blok pamięci jest zawarty w całości w przestrzeni pamięci programu; w przeciwnym razie 0.
 
@@ -799,7 +801,7 @@ Wskaźnik do przetestowania.
 *nLength*<br/>
 Określa długość ciągu do przetestowania, w bajtach. Wartość-1 oznacza, że ciąg będzie zakończony znakiem null.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 W kompilacjach debugowania, wartość niezerowa, jeśli określony wskaźnik wskazuje na ciąg o określonym rozmiarze; w przeciwnym razie 0.
 
@@ -826,7 +828,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 *pfnAllocHook*<br/>
 Określa nazwę funkcji do wywołania. Zapoznaj się z uwagami dotyczącymi prototypu funkcji alokacji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli chcesz zezwolić na alokację; w przeciwnym razie 0.
 

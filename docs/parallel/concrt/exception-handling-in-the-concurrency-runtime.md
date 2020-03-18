@@ -9,11 +9,11 @@ helpviewer_keywords:
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854195"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422249"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Obsługa wyjątków we współbieżności środowiska wykonawczego
 
@@ -185,7 +185,7 @@ Aby uzyskać więcej informacji na temat agentów asynchronicznych, zobacz [agen
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

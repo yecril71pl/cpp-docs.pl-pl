@@ -1,25 +1,22 @@
 ---
 title: Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
 helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fd7d42ec5a76b92aa789a3a20f38e6b2c0fd2cb1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341657"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440408"
 ---
-# <a name="import-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
+# <a name="import-into-an-application-using-__declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
 
-Program, który używa symboli publicznych, zdefiniowane przez bibliotekę DLL jest nazywany je zaimportować. Po utworzeniu pliki nagłówkowe dla aplikacji korzystających z biblioteki dll do kompilacji, użyj **__declspec(dllimport)** w deklaracjach symboli publicznych. Słowo kluczowe **__declspec(dllimport)** działa, czy w przypadku eksportowania za pomocą plików .def lub za pomocą **__declspec(dllexport)** — słowo kluczowe.
+Program, który używa symboli publicznych zdefiniowanych przez bibliotekę DLL, jest określany do zaimportowania. Podczas tworzenia plików nagłówkowych dla aplikacji, które używają bibliotek DLL do kompilowania przy użyciu programu, należy użyć **__declspec (dllimport)** dla deklaracji symboli publicznych. Słowo kluczowe **__declspec (dllimport)** działa niezależnie od tego, czy użytkownik eksportuje z plikami. def, czy za pomocą słowa kluczowego **__declspec (dllexport)** .
 
-Aby zwiększyć czytelność kodu, zdefiniuj makro dla **__declspec(dllimport)** , a następnie użyj makra do deklarowania każdy symbol zaimportowane:
+Aby kod był bardziej czytelny, zdefiniuj makro dla **__declspec (dllimport)** , a następnie użyj makra, aby zadeklarować każdy zaimportowany symbol:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -28,9 +25,9 @@ DllImport int  j;
 DllImport void func();
 ```
 
-Za pomocą **__declspec(dllimport)** jest opcjonalna w deklaracjach funkcji, ale kompilator generuje kod, bardziej wydajne, jeśli używasz tego słowa kluczowego. Jednakże, należy użyć **__declspec(dllimport)** importowania pliku wykonywalnego, dostęp do biblioteki DLL symbole publiczne dane i obiekty. Należy pamiętać, że użytkownicy biblioteki DLL muszą nadal łączyć się z biblioteki importowanej.
+Używanie **__declspec (dllimport)** jest opcjonalne w deklaracjach funkcji, ale kompilator tworzy bardziej wydajny kod, jeśli używasz tego słowa kluczowego. Należy jednak użyć **__declspec (dllimport)** do importowania pliku wykonywalnego, aby uzyskać dostęp do publicznych symboli i obiektów danych biblioteki DLL. Należy pamiętać, że użytkownicy biblioteki DLL nadal muszą łączyć się z biblioteką importu.
 
-Można użyć tego samego pliku nagłówka dla biblioteki DLL i aplikacji klienckiej. Aby to zrobić, należy użyć specjalnego symbol preprocesora, która wskazuje, czy kompilowanie biblioteki DLL lub tworzenia aplikacji klienckiej. Na przykład:
+Można użyć tego samego pliku nagłówka zarówno dla biblioteki DLL, jak i aplikacji klienckiej. W tym celu należy użyć specjalnego symbolu preprocesora, który wskazuje, czy tworzysz bibliotekę DLL, czy kompilujesz aplikację kliencką. Na przykład:
 
 ```
 #ifdef _EXPORTING
@@ -45,14 +42,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicjowanie biblioteki DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 
 - [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie do aplikacji](importing-into-an-application.md)

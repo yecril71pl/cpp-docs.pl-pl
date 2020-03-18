@@ -1,40 +1,38 @@
 ---
 title: Używanie formantu CToolTipCtrl do tworzenia obiektu CToolTipCtrl i operowania nim
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: b0f008c70eeb43455408e5b0ad302df6b923608e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dc7bc5a411ebab3737b87fd6977b26cff68178
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411646"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442222"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Używanie formantu CToolTipCtrl do tworzenia obiektu CToolTipCtrl i operowania nim
 
-Oto przykład [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) użycia:
+Oto przykład użycia [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) :
 
-### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>Do tworzenia i manipulowania CToolTipCtrl
+### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>Tworzenie i manipulowanie CToolTipCtrl
 
-1. Konstruowania `CToolTipCtrl` obiektu.
+1. Konstruowanie obiektu `CToolTipCtrl`.
 
-1. Wywołaj [Utwórz](../mfc/reference/ctooltipctrl-class.md#create) Aby utworzyć wspólne formantem etykietki narzędzia Windows i dołączyć go do `CToolTipCtrl` obiektu.
+1. Wywołanie [Create](../mfc/reference/ctooltipctrl-class.md#create) w celu utworzenia typowej kontrolki narzędzia systemu Windows i dołączenie jej do obiektu `CToolTipCtrl`.
 
-1. Wywołaj [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) zarejestrować narzędzia z formantem etykietki narzędzia, aby informacje przechowywane w etykietce narzędzia jest wyświetlana, gdy kursor znajduje się w narzędziu.
+1. Wywołaj [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) , aby zarejestrować narzędzie za pomocą kontrolki etykietki narzędzia, tak aby informacje przechowywane w etykietce narzędzia były wyświetlane po umieszczeniu kursora w narzędziu.
 
-1. Wywołaj [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) można ustawić informacji, zawierającą etykietka narzędzia.
+1. Wywołaj [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) , aby ustawić informacje, które są przechowywane w etykietce narzędzia dla narzędzia.
 
-1. Wywołaj [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) można ustawić nowy prostokąt otaczający narzędzia.
+1. Wywołaj [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) , aby ustawić nowy prostokąt ograniczający dla narzędzia.
 
-1. Wywołaj [hitTest —](../mfc/reference/ctooltipctrl-class.md#hittest) do testowania wskaż określają, czy znajduje się on w prostokąt otaczający danego narzędzia, a jeśli tak, można pobrać informacji o narzędziu.
+1. Wywołaj [HitTest](../mfc/reference/ctooltipctrl-class.md#hittest) w celu przetestowania punktu, aby określić, czy znajduje się on w obrębie obwiedni danego narzędzia, a jeśli tak, Pobierz informacje o narzędziu.
 
-1. Wywołaj [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) można pobrać liczby narzędzi zarejestrowany z formantem etykietki narzędzia.
+1. Wywołaj [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) , aby pobrać liczbę narzędzi zarejestrowanych w kontrolce etykietki narzędzia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

@@ -1,28 +1,26 @@
 ---
-title: 'Unicode: Zestaw znaków dwubajtowych'
+title: 'Unicode: zestaw znaków dwubajtowych'
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: dc9028be85870766af0274ede091d74a9b4d5130
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a0c5698544c72e19feea8f35b7f5a516d95d561
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304205"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444489"
 ---
-# <a name="unicode-the-wide-character-set"></a>Unicode: Zestaw znaków dwubajtowych
+# <a name="unicode-the-wide-character-set"></a>Unicode: zestaw znaków dwubajtowych
 
-Znak dwubajtowy jest kod znaku wielojęzyczny 2-bajtowych. Dowolny znak używany w nowoczesnych przetwarzania danych na całym świecie, w tym techniczne symboli i publikowania znaków specjalnych, może być reprezentowany zgodnie ze specyfikacją Unicode jako znak dwubajtowy. Rozwinięte i utrzymywane przez konsorcjum dużych, obejmującą firmy Microsoft, w standardzie Unicode teraz jest powszechnie akceptowane.
+Znak dwubajtowy to kod 2-bitowy. Każdy znak używany w nowoczesnej skali na całym świecie, w tym symbole techniczne i znaki specjalne publikacji, można przedstawić na podstawie specyfikacji Unicode jako znaku dwubajtowego. Opracowane i utrzymywane przez duże konsorcjum, które obejmuje firmę Microsoft, standard Unicode jest teraz szeroko zaakceptowany.
 
-Znak dwubajtowy jest typu **wchar_t**. Ciąg znaków dwubajtowych jest reprezentowany jako **[] wchar_t** macierz, a następnie jest wskazywany przez `wchar_t*` wskaźnika. Użytkownik oświadcza dowolnego znaku ASCII jako znak dwubajtowy, przez dodanie przedrostka literę **L** do znaku. Na przykład L '\0' jest kończącego znaku null całej (16-bitowe). Podobnie może reprezentować dowolny ciąg ASCII literału jako literał ciągu znaków dwubajtowych, po prostu przez dodanie przedrostka litera L na literał ASCII (L "Witaj,").
+Znak dwubajtowy jest typu **wchar_t**. Ciąg znaków dwubajtowych jest reprezentowany jako tablica **wchar_t []** i jest wskazywany przez wskaźnik `wchar_t*`. Można reprezentować dowolny znak ASCII jako znak dwubajtowy, tworząc prefiks litery **L** do znaku. Na przykład L ' \ 0 ' jest znakiem o zerowej szerokości (16-bitowym). Analogicznie, można reprezentować dowolny literał ciągu ASCII jako literał ciągu znaków dwubajtowych, tworząc prefiks litery L do literału ASCII (L "Hello").
 
-Ogólnie rzecz biorąc znaki dwubajtowe zajmują więcej miejsca w pamięci niż znaki wielobajtowe, ale są szybsze do procesu. Ponadto tylko jeden ustawienia regionalne mogą być reprezentowane w czasie wielobajtowego kodowania, natomiast zestawy wszystkich znaków na świecie są jednocześnie reprezentowane przez reprezentację Unicode.
+Zwykle duże znaki zajmują więcej miejsca w pamięci niż znaki wielobajtowe, ale szybciej są przetwarzane. Ponadto w przypadku kodowania wielobajtowego można reprezentować tylko jedne ustawienia regionalne, natomiast wszystkie zestawy znaków na świecie są reprezentowane jednocześnie przez reprezentację Unicode.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
 [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

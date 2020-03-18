@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416060"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445781"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform:: Collections:: BackInsertIterator, Klasa
 
@@ -59,8 +59,8 @@ Klasa BackInsertIterator implementuje reguły wymagane przez [klasę back_insert
 
 **Nagłówek:** Collection. h
 
-<a name="namespace-platformcollections"></a>**Przestrzeń nazw:** Platform:: Collections
----
+**Przestrzeń nazw:** Platform:: Collections
+
 ## <a name="ctor"></a>BackInsertIterator:: BackInsertIterator — Konstruktor
 
 Inicjuje nowe wystąpienie klasy `BackInsertIterator`.
@@ -68,7 +68,6 @@ Inicjuje nowe wystąpienie klasy `BackInsertIterator`.
 ## <a name="syntax"></a>Składnia
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -97,7 +96,7 @@ BackInsertIterator& operator=( const T& t);
 *&*<br/>
 Obiekt do dołączenia do bieżącej kolekcji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do bieżącego BackInsertIterator.
 
@@ -111,7 +110,7 @@ Pobiera odwołanie do bieżącego BackInsertIterator.
 BackInsertIterator& operator*();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do bieżącego BackInsertIterator.
 
@@ -126,13 +125,12 @@ Zwraca odwołanie do bieżącego BackInsertIterator. Iterator nie jest modyfikow
 ## <a name="syntax"></a>Składnia
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do bieżącego BackInsertIterator.
 

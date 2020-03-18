@@ -1,24 +1,22 @@
 ---
 title: Korzystanie z CTreeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411659"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442191"
 ---
 # <a name="using-ctreectrl"></a>Korzystanie z CTreeCtrl
 
-Kontrolka drzewa, reprezentowane przez klasę [CTreeCtrl](../mfc/reference/ctreectrl-class.md), jest oknem które wyświetla hierarchiczną listę elementów, takich jak nagłówki w dokumencie, wpisów w indeksie lub plików i katalogów na dysku. Każdy element składa się z etykiety oraz opcjonalny obraz mapy bitowej, a każdy element może mieć listy elementów podrzędnych skojarzonych z nim. Kliknięcie pozycji, użytkownik można rozwijać i zwijać skojarzonej listy elementów podrzędnych. Drzewo katalogów, w okienku po lewej stronie Eksploratora plików znajduje się przykład formantu drzewa.
+Kontrolka drzewa, reprezentowana przez klasę [CTreeCtrl](../mfc/reference/ctreectrl-class.md), to okno, które wyświetla hierarchiczną listę elementów, takich jak nagłówki w dokumencie, wpisy w indeksie lub pliki i katalogi na dysku. Każdy element składa się z etykiety i opcjonalnego obrazu mapy bitowej, a każdy element może mieć listę powiązanych elementów. Klikając element, użytkownik może rozwinąć i zwinąć skojarzoną listę podelementów. Drzewo katalogów w okienku po lewej stronie Eksploratora plików jest przykładem kontrolki drzewa.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [CTreeCtrl a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
@@ -48,6 +46,6 @@ Kontrolka drzewa, reprezentowane przez klasę [CTreeCtrl](../mfc/reference/ctree
 
 - [Komunikaty powiadomień dotyczących kontrolki drzewa](../mfc/tree-control-notification-messages.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

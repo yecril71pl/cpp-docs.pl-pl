@@ -3,24 +3,23 @@ title: przestarzała wartość dyrektywy pragma
 ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
-- deprecated_CPP
 helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5694c5175ff23952c601884243b428a842278b7d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222404"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446467"
 ---
 # <a name="deprecated-pragma"></a>przestarzała wartość dyrektywy pragma
 
 **Zaniechana** pragma umożliwia wskazanie, że funkcja, typ lub inny identyfikator nie może być już obsługiwany w przyszłej wersji lub nie powinien już być używany.
 
 > [!NOTE]
-> Aby uzyskać informacje o atrybucie c++ `[[deprecated]]` 14 i wskazówki dotyczące sytuacji, w których należy używać tego atrybutu zamiast modyfikatora Microsoft `__declspec(deprecated)` lub **przestarzałej** dyrektywy pragma, zobacz [atrybuty w C++ ](../cpp/attributes.md).
+> Aby uzyskać informacje o atrybucie `[[deprecated]]` języka C++ 14 i wskazówki dotyczące sytuacji, w których należy używać tego atrybutu zamiast modyfikatora `__declspec(deprecated)` firmy Microsoft lub **przestarzałej** dyrektywy pragma, zobacz [atrybuty w C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,13 +27,13 @@ ms.locfileid: "70222404"
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kompilator napotka identyfikator określony przez przestarzałą pragmę , wystawia ostrzeżenia kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Gdy kompilator napotka identyfikator określony przez **przestarzałą** pragmę, wystawia ostrzeżenia kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 Można przestarzałe nazwy makr. Umieść nazwę makra w cudzysłowie lub w przeciwnym razie nastąpi rozwinięcie makra.
 
 Ponieważ **zaniechana** pragma działa na wszystkich zgodnych identyfikatorach i nie uwzględnia podpisów, nie jest najlepszą opcją dla przestarzałych określonych wersji funkcji przeciążonych. Wszystkie zgodne nazwy funkcji, które są wprowadzane do zakresu wyzwalają ostrzeżenie.
 
-Zalecamy użycie atrybutu c++ 14 `[[deprecated]]` , jeśli jest to możliwe, zamiast **przestarzałej** dyrektywy pragma. Modyfikator deklaracji [__declspec (przestarzały)](../cpp/deprecated-cpp.md) firmy Microsoft jest również lepszym wyborem w wielu przypadkach niż w przypadku **przestarzałej** dyrektywy pragma. `[[deprecated]]` Atrybut i`__declspec(deprecated)` modyfikator umożliwiają określanie przestarzałego stanu dla konkretnych formularzy przeciążonych funkcji. Ostrzeżenie diagnostyczne pojawia się tylko w odniesieniu do określonej przeciążonej funkcji, której dotyczy atrybut lub modyfikator.
+Zalecamy użycie atrybutu `[[deprecated]]` C++ 14, jeśli jest to możliwe, zamiast **przestarzałej** dyrektywy pragma. Modyfikator deklaracji __declspec specyficzny dla firmy Microsoft [(przestarzały)](../cpp/deprecated-cpp.md) jest również lepszym wyborem w wielu przypadkach niż **zaniechana** pragma. Atrybut `[[deprecated]]` i modyfikator `__declspec(deprecated)` umożliwiają określenie przestarzałego stanu dla określonych form przeciążonych funkcji. Ostrzeżenie diagnostyczne pojawia się tylko w odniesieniu do określonej przeciążonej funkcji, której dotyczy atrybut lub modyfikator.
 
 ## <a name="example"></a>Przykład
 
@@ -73,6 +72,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,31 +1,29 @@
 ---
 title: Wiersz polecenia EDITBIN
 ms.date: 11/04/2016
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: 4065cf2175b69e6aa87b70f7e00c4170f5b0d924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ec18bd9fa23ed178f07749ef5becf7e06da7e36
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272563"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439956"
 ---
 # <a name="editbin-command-line"></a>Wiersz polecenia EDITBIN
 
-Aby uruchomić polecenia EDITBIN, użyj następującej składni:
+Aby uruchomić polecenia EDITBIN, należy użyć następującej składni:
 
 ```
 EDITBIN [options] files...
 ```
 
-Określ jeden lub więcej plików, obiektów lub obrazów, które mają być zmienione i co najmniej jedna opcja zmiany plików.
+Określ co najmniej jeden plik dla obiektów lub obrazów, które mają zostać zmienione, oraz co najmniej jedną opcję zmiany plików.
 
-Po wpisaniu polecenia `editbin` bez żadnych innych danych wiersza polecenia EDITBIN wyświetla instrukcji użycia, który podsumowuje opcje.
+Gdy wpiszesz polecenie `editbin` bez żadnych innych danych wejściowych wiersza polecenia, polecenia EDITBIN wyświetli instrukcję Usage, która podsumowuje jej opcje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
+[Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)<br/>
 [EDITBIN — dokumentacja](editbin-reference.md)

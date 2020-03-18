@@ -1,44 +1,44 @@
 ---
-title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux w języku C++ w programie Visual Studio
-description: Opisuje sposób kompilowania, wykonywania i debugowania kodu zdalnego docelową z wewnątrz projektu języka Linux C++ w programie Visual Studio.
+title: Wdrażanie, uruchamianie i debugowanie projektu systemu C++ Linux w programie Visual Studio
+description: Opisuje sposób kompilowania, wykonywania i debugowania kodu na zdalnym miejscu docelowym z wewnątrz projektu systemu Linux C++ w programie Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042765"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441658"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 
 ::: moniker range="vs-2015"
 
-Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-Po utworzeniu projektu języka Linux C++ w programie Visual Studio i łączysz się przy użyciu projektu [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md), można uruchamiać i debugować projektu. Skompilować, wykonywanie i możliwe jest debugowanie kodu w zdalnym elemencie docelowym.
+Po utworzeniu projektu systemu Linux C++ w programie Visual Studio i nawiązaniu połączenia z projektem za pomocą [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md)można uruchomić i debugować projekt. Kompilowanie, wykonywanie i debugowanie kodu w zdalnym miejscu docelowym.
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 wersji 16.1** można wskazać różnych systemów Linux, debugowania i tworzenia. Na przykład można cross kompilacji na x64 i wdrażać na urządzeniu usługi ARM przy przeznaczeniu scenariuszy IoT. Aby uzyskać więcej informacji, zobacz [określić różnych maszyn na potrzeby kompilowania i debugowania](#separate_build_debug) w dalszej części tego artykułu.
+**Visual Studio 2019 w wersji 16,1** W celu debugowania i kompilowania można wskazać różne systemy Linux. Na przykład można przeprowadzić kompilację krzyżową na platformie x64 i wdrożyć ją na urządzeniu ARM w przypadku scenariuszy IoT. Aby uzyskać więcej informacji, zobacz [Określanie różnych maszyn do kompilowania i debugowania](#separate_build_debug) w dalszej części tego artykułu.
 
 ::: moniker-end
 
-Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
+Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 
-- Debugowanie przy użyciu tradycyjnych funkcje programu Visual Studio, takich jak punkty przerwania, okna czujki i przenosząc kursor myszy nad zmienną. Przy użyciu tych metod, może debugować tak jak zwykle dla innych typów projektów.
+- Debuguj przy użyciu tradycyjnych funkcji programu Visual Studio, takich jak punkty przerwania, Oglądaj okna i umieszczaj wskaźnik myszy na zmiennej. Korzystając z tych metod, można debugować jak zwykle dla innych typów projektów.
 
-- Widok danych wyjściowych z komputera docelowego, w oknie konsoli systemu Linux. Umożliwia także konsolę do wysyłania danych wejściowych do komputera docelowego.
+- Wyświetl dane wyjściowe z komputera docelowego w oknie konsoli systemu Linux. Za pomocą konsoli programu można także wysyłać dane wejściowe do komputera docelowego.
 
 ## <a name="debug-your-linux-project"></a>Debugowanie projektu systemu Linux
 
-1. Wybierz tryb debugowania w **debugowanie** stronę właściwości.
+1. Wybierz opcję Tryb debugowania na stronie właściwości **debugowania** .
    
    ::: moniker range="vs-2019"
 
-   GDB jest używana do debugowania aplikacji działającej w systemie Linux. Podczas debugowania w systemie zdalnym (nie WSL) GDB można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
+   GDB jest używany do debugowania aplikacji działających w systemie Linux. Podczas debugowania w systemie zdalnym (nie WSL) GDB można uruchomić w dwóch różnych trybach, które można wybrać z opcji **tryb debugowania** na stronie właściwości **debugowania** projektu:
 
    ![Opcje GDB](media/vs2019-debugger-settings.png)
 
@@ -46,69 +46,69 @@ Istnieje kilka sposobów interakcji z i debugowanie projektu systemu Linux.
 
    ::: moniker range="vs-2017"
 
-   GDB jest używana do debugowania aplikacji działającej w systemie Linux. GDB można uruchomić w dwóch różnych trybach, które można wybierać z **tryb debugowania** opcja w projekcie **debugowanie** strona właściwości:
+   GDB jest używany do debugowania aplikacji działających w systemie Linux. GDB może działać w dwóch różnych trybach, które można wybrać z opcji **tryb debugowania** na stronie właściwości **debugowania** projektu:
 
    ![Opcje GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
 
-   - W **serwera gdbserver** trybie GDB jest uruchamiany lokalnie, która łączy się serwera gdbserver w systemie zdalnym.  Należy zauważyć, że to tylko tryb, który obsługuje okno konsoli systemu Linux.
+   - W trybie **serwera GDBSERVER** GDB jest uruchamiany lokalnie, który łączy się z serwera gdbserver w systemie zdalnym.  Należy zauważyć, że jest to jedyny tryb obsługiwany przez okno konsoli systemu Linux.
 
-   - W **gdb** trybie debugera programu Visual Studio dyski GDB w systemie zdalnym. Jest lepszym rozwiązaniem, jeśli lokalna wersja GDB nie jest zgodny z wersją zainstalowaną na komputerze docelowym. |
+   - W trybie **GDB** program Visual Studio debugger Drives GDB w systemie zdalnym. Jest to lepsza opcja, jeśli lokalna wersja programu GDB nie jest zgodna z wersją zainstalowaną na komputerze docelowym. |
 
    > [!NOTE]
-   > Jeśli nie można identyfikować punkty przerwania w trybie debugowania gdbserver następuje lokalne, spróbuj trybie gdb. Najpierw należy gdb [zainstalowane](download-install-and-setup-the-linux-development-workload.md) w zdalnym elemencie docelowym.
+   > Jeśli nie możesz trafiać punktów przerwania w trybie debugowania serwera gdbserver, wypróbuj tryb GDB. GDB musi być [zainstalowany](download-install-and-setup-the-linux-development-workload.md) na zdalnym miejscu docelowym.
 
-1. Wybierz docelową zdalnego przy użyciu standardu **debugowania** narzędzi w programie Visual Studio.
+1. Wybierz zdalny obiekt docelowy przy użyciu standardowego paska narzędzi **debugowania** w programie Visual Studio.
 
-   Jeśli zdalny element docelowy jest dostępny, zobaczysz go na liście według nazwy lub adresu IP.
+   Gdy zdalny element docelowy jest dostępny, zostanie wyświetlony na liście według nazwy lub adresu IP.
 
-   ![Docelowy zdalnego](media/remote_target.png)
+   ![Zdalne miejsce docelowe](media/remote_target.png)
 
-   Jeśli nie masz jeszcze połączenia zdalnego obiektu docelowego, pojawią się instrukcjami, aby użyć [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md) nawiązać połączenia z docelowym zdalnego.
+   Jeśli nie masz jeszcze połączenia ze zdalnym obiektem docelowym, zostanie wyświetlona instrukcja służąca do nawiązywania połączenia ze zdalnym obiektem docelowym przy użyciu [Menedżera połączeń systemu Linux](connect-to-your-remote-linux-computer.md) .
 
-   ![Architektura zdalnego](media/architecture.png)
+   ![Architektura zdalna](media/architecture.png)
 
-1. Ustaw punkt przerwania, klikając na lewym marginesie jakiś kod, który znasz będą wykonywane.
+1. Ustaw punkt przerwania, klikając na lewym marginesie jakiś kod, który będzie wykonywany.
 
-   Czerwona kropka jest wyświetlany na wiersz kodu, gdzie ustawić punkt przerwania.
+   Czerwona kropka pojawia się w wierszu kodu, w którym ustawiono punkt przerwania.
 
-1. Naciśnij klawisz **F5** (lub **Debuguj > Rozpocznij debugowanie**) można rozpocząć debugowania.
+1. Naciśnij klawisz **F5** (lub **Debuguj > Rozpocznij debugowanie**), aby rozpocząć debugowanie.
 
-   Podczas uruchamiania debugowania, kompilowania aplikacji w zdalnym elemencie docelowym przed uruchomieniem jej. Błędy kompilacji będą wyświetlane w **lista błędów** okna.
+   Po rozpoczęciu debugowania aplikacja jest kompilowana na zdalnym miejscu docelowym przed uruchomieniem. Wszystkie błędy kompilacji pojawią się w oknie **Lista błędów** .
 
-   Jeśli nie ma żadnych błędów, aplikacja zostanie uruchomiona i debuger zostanie wstrzymany w punkcie przerwania.
+   Jeśli nie ma żadnych błędów, aplikacja zostanie uruchomiona, a debuger zostanie wstrzymany w punkcie przerwania.
 
-   ![Trafiony punkt przerwania](media/hit_breakpoint.png)
+   ![Trafienie punktu przerwania](media/hit_breakpoint.png)
 
-   Teraz możesz wchodzić w interakcje z aplikacją w jego bieżącym stanie, wyświetlanie zmiennych i Przechodź przez kod, naciskając klawisze poleceń takich jak **F10** lub **F11**.
+   Teraz możesz korzystać z aplikacji w jej bieżącym stanie, wyświetlać zmienne i przechodzić przez kod, naciskając klawisze poleceń, takie jak **F10** lub **F11**.
 
-1. Jeśli chcesz korzystać z konsoli systemu Linux do interakcji z aplikacją, wybierz opcję **Debuguj > Konsola systemu Linux**.
+1. Jeśli chcesz używać konsoli systemu Linux do korzystania z aplikacji, wybierz pozycję **debuguj > konsoli systemu Linux**.
 
    ![Menu konsoli systemu Linux](media/consolemenu.png)
 
-   Ta konsola będą wyświetlane wszystkie dane wyjściowe konsoli z komputera docelowego, a także pobierać dane wejściowe i wysłać go do komputera docelowego.
+   W tej konsoli zostaną wyświetlone wszystkie dane wyjściowe konsoli z komputera docelowego, a także zostaną wprowadzone dane wejściowe i wysłane do komputera docelowego.
 
    ![Okno konsoli systemu Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Skonfiguruj inne opcje debugowania (projektów opartych na platformie MSBuild)
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Skonfiguruj inne opcje debugowania (projekty oparte na programie MSBuild)
 
-- Argumenty wiersza polecenia mogą być przekazywane do pliku wykonywalnego przy użyciu **argumenty programu** element w projekcie ma **debugowanie** stronę właściwości.
+- Argumenty wiersza polecenia mogą być przekazane do pliku wykonywalnego za pomocą elementu **argumenty programu** na stronie właściwości **debugowania** projektu.
 
    ![Argumenty programu](media/settings_programarguments.png)
 
-- Opcje debugera określonej mogą być przekazywane do GDB przy użyciu **dodatkowe polecenia debugera** wpisu.  Na przykład można zignorować SIGILL (niedozwolona instrukcja) sygnałów.  Można użyć **obsługi** polecenie, aby to osiągnąć, dodając następujące polecenie, aby **dodatkowe polecenia debugera** wpisu, jak pokazano powyżej:
+- Określone opcje debugera można przekazywać do GDB przy użyciu **dodatkowego wpisu poleceń debugera** .  Na przykład możesz chcieć zignorować sygnały SIGILL (niedozwolone instrukcje).  Aby to osiągnąć, można użyć polecenia **obsługi** , dodając następujący element do **dodatkowego polecenia debugera** , jak pokazano powyżej:
 
    `handle SIGILL nostop noprint`
 
-## <a name="configure-other-debugging-options-cmake-projects"></a>Skonfiguruj inne opcje debugowania (projekty narzędzia CMake)
+## <a name="configure-other-debugging-options-cmake-projects"></a>Skonfiguruj inne opcje debugowania (projekty CMake)
 
-Dodatkowe argumenty wiersza polecenia dla projektu narzędzia CMake można określić w pliku launch.vs.json. Aby uzyskać więcej informacji, zobacz [debugowania projektu narzędzia CMake](cmake-linux-project.md#debug_cmake_project)
+Można określić dodatkowe argumenty wiersza polecenia dla projektu CMake w pliku Launch. vs. JSON. Aby uzyskać więcej informacji, zobacz [debugowanie projektu CMAKE](cmake-linux-project.md#debug_cmake_project)
 
-## <a name="debug-with-attach-to-process"></a>Debugowanie z Dołącz do procesu
+## <a name="debug-with-attach-to-process"></a>Debuguj z dołączaniem do procesu
 
-[Debugowanie](prop-pages/debugging-linux.md) stronę właściwości dla projektów programu Visual Studio i **Launch.vs.json** ustawienia dla projektów CMake ma ustawienia, które umożliwiają dołączanie do uruchomionego procesu. Jeśli potrzebujesz dodatkowej kontroli jest informacje podane w tych ustawień, możesz umieścić plik o nazwie `Microsoft.MIEngine.Options.xml` w katalogu głównym rozwiązania lub obszaru roboczego. Poniżej przedstawiono prosty przykład:
+Strona właściwości [debugowania](prop-pages/debugging-linux.md) dla projektów programu Visual Studio oraz ustawienia **Uruchom. vs. JSON** dla projektów CMAKE mają ustawienia umożliwiające dołączenie do uruchomionego procesu. Jeśli potrzebujesz dodatkowej kontroli poza tym, co jest dostępne w tych ustawieniach, możesz umieścić plik o nazwie `Microsoft.MIEngine.Options.xml` w folderze głównym rozwiązania lub obszaru roboczego. Oto prosty przykład:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -125,29 +125,29 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 </SupplementalLaunchOptions>
 ```
 
-**AttachOptionsForConnection** ma większość atrybutów może być konieczne. W powyższym przykładzie pokazuje, jak określić lokalizację do szukania bibliotek SO dodatkowe. Element podrzędny **ServerOptions** umożliwia dołączanie do procesu zdalnego za pomocą serwera gdbserver zamiast tego. Aby to zrobić, należy określić klienta lokalnego gdb (dostarczany w programie Visual Studio 2017 jest pokazany powyżej), jak i lokalną kopię pliku binarnego z symbolami. **SetupCommands** element umożliwia przekazywanie poleceń, bezpośrednio do gdb. Możesz znaleźć wszystkie opcje dostępne w [schematu LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) w witrynie GitHub.
+**AttachOptionsForConnection** ma większość atrybutów, które mogą być potrzebne. W powyższym przykładzie pokazano, jak określić lokalizację, aby wyszukać dodatkowe biblioteki. Element podrzędny **ServerOptions** umożliwia dołączenie do procesu zdalnego z serwera gdbserver. Aby to zrobić, należy określić lokalnego klienta GDB (jest on wyświetlany w programie Visual Studio 2017 powyżej) i lokalną kopię pliku binarnego z symbolami. Element **SetupCommands** umożliwia przekazywanie poleceń bezpośrednio do GDB. Wszystkie opcje dostępne w [schemacie LaunchOptions. xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) można znaleźć w witrynie GitHub.
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Określ różnych maszyn na potrzeby kompilowania i debugowania
+## <a name="separate_build_debug"></a>Określ różne maszyny do kompilowania i debugowania
 
-W programie Visual Studio 2019 wersji 16.1 można oddzielić zdalnych kompilacji maszyny z komputera zdalnego debugowania dla projektów opartych na platformie MSBuild systemu Linux i projekty narzędzia CMake, przeznaczonych dla zdalnej maszyny z systemem Linux. Na przykład można teraz cross kompilacji na x64 i wdrażać na urządzeniu usługi ARM przy przeznaczeniu scenariuszy IoT.
+W programie Visual Studio 2019 w wersji 16,1 można rozdzielić zdalną maszynę kompilacji ze zdalnego komputera debugowania dla projektów systemu Linux opartych na programie MSBuild i projektów CMake przeznaczonych dla zdalnego komputera z systemem Linux. Można na przykład teraz przeprowadzić kompilację krzyżową na platformie x64 i wdrożyć ją na urządzeniu ARM w przypadku scenariuszy IoT.
 
-### <a name="msbuild-based-projects"></a>Projektach MSBuild
+### <a name="msbuild-based-projects"></a>Projekty oparte na programie MSBuild
 
-Domyślnie komputer do debugowania zdalnego jest taka sama jak zdalny kompilator (**właściwości konfiguracji** > **ogólne** > **maszyny zdalnej kompilacji**). Aby określić nowy komputer do debugowania zdalnego, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i przejdź do **właściwości konfiguracji** > **debugowanie**  >  **Zdalnego debugowania maszyny**.  
+Domyślnie maszyna debugowania zdalnego jest taka sama jak maszyna kompilacji zdalnej (**Właściwości konfiguracji** > **ogólnej** > **zdalnej kompilacji**). Aby określić nową maszynę debugowania zdalnego, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i przejdź do **Właściwości konfiguracji** > **debugowanie** > **zdalnej maszyny debugowania**.  
 
-![Zdalne debugowanie maszyny z systemem Linux](media/linux-remote-debug-machine.png)
+![Maszyna zdalnego debugowania systemu Linux](media/linux-remote-debug-machine.png)
 
-Menu rozwijane dla **komputera zdalnego debugowania** jest wypełniana przy użyciu wszystkich ustanowionych połączeń zdalnych. Aby dodać nowe połączenia zdalnego, przejdź do **narzędzia** > **opcje** > **Międzyplatformowe**  >   **Menedżer połączeń** lub wyszukaj "Menedżera połączeń" w **Szybkie uruchamianie**. Można również określić nowy zdalnego wdrażania katalogu na stronach właściwości projektu (**właściwości konfiguracji** > **ogólne** > **katalogu zdalnego wdrażania** ).
+Menu rozwijane dla **zdalnego komputera debugowania** jest wypełniane wszystkimi ustanowionymi połączeniami zdalnymi. Aby dodać nowe połączenie zdalne, przejdź do **menu narzędzia** > **Opcje** > **wiele platform** > **Connection Manager** lub wyszukaj "Menedżer połączeń" w obszarze **Szybki Start**. Możesz również określić nowy katalog zdalnego wdrażania na stronach właściwości projektu (**Właściwości konfiguracji** > **Ogólne** > **katalogu zdalnego wdrażania**).
 
-Domyślnie tylko te pliki, które są niezbędne do procesu debugowania będą wdrażane maszyny zdalne debugowanie. Możesz użyć **Eksploratora rozwiązań** skonfigurować źródło, które pliki zostaną wdrożone na maszyny zdalne debugowanie. Po kliknięciu w pliku źródłowym, zostanie wyświetlony podgląd właściwości pliku bezpośrednio poniżej Eksploratora rozwiązań.
+Domyślnie tylko pliki niezbędne do debugowania procesu zostaną wdrożone na maszynie zdalnego debugowania. Za pomocą **Eksplorator rozwiązań** można skonfigurować, które pliki źródłowe zostaną wdrożone na maszynie zdalnego debugowania. Po kliknięciu pliku źródłowego zobaczysz podgląd jego właściwości pliku bezpośrednio poniżej Eksplorator rozwiązań.
 
 ![Pliki do wdrożenia systemu Linux](media/linux-deployable-content.png)
 
-**Zawartości** właściwość określa, czy plik zostanie wdrożony komputer do debugowania zdalnego. Możesz wyłączyć wdrożenie całkowicie, przechodząc do **stron właściwości** > **programu Configuration Manager** i usuwając zaznaczenie pola wyboru **Wdróż** dla żądany Konfiguracja.
+Właściwość **Content** określa, czy plik zostanie wdrożony na maszynie zdalnego debugowania. Wdrożenie można całkowicie wyłączyć, przechodząc do **stron właściwości** > **Configuration Manager** i usuwając zaznaczenie **wdrożenia** w celu pożądanej konfiguracji.
 
-W niektórych przypadkach mogą wymagać większej kontroli nad wdrażania projektu. Na przykład niektóre pliki, które mają zostać wdrożone może znajdować się poza rozwiązania lub chcesz dostosować zdalnych katalog dla pliku StopFileName wdrożenia. W takich przypadkach Dołącz następujący bloków kodu do pliku .vcxproj i zastąp "example.cpp" nazwą rzeczywistego pliku:
+W niektórych przypadkach może być wymagana większa kontrola nad wdrożeniem projektu. Na przykład niektóre pliki, które mają zostać wdrożone, mogą znajdować się poza rozwiązaniem lub chcesz dostosować katalog zdalnego wdrażania dla pliku ordirectory. W takich przypadkach Dołącz następujące bloki kodu do pliku. vcxproj i Zastąp ciąg "example. cpp" rzeczywistymi nazwami plików:
 
 ```xml
 
@@ -168,13 +168,13 @@ W niektórych przypadkach mogą wymagać większej kontroli nad wdrażania proje
 
 ### <a name="cmake-projects"></a>Projekty platformy CMake
 
-W pliku launch.vs.json można określić nowy komputer do debugowania zdalnego dla projektów CMake, przeznaczonych dla zdalnej maszyny z systemem Linux. Domyślnie wartość "NazwaKomputeraZdalnego" są synchronizowane z właściwością "NazwaKomputeraZdalnego" w pliku CMakeSettings.json, który odnosi się do maszyny zdalnej kompilacji. Te właściwości nie są już potrzebne dopasować, a wartość "NazwaKomputeraZdalnego" w pliku launch.vs.json wyznaczają, które maszyny zdalnej jest używany do wdrażania i debugowania.
+W przypadku projektów CMake, które są przeznaczone dla zdalnego komputera z systemem Linux, można określić nową maszynę debugowania zdalnego w pliku Launch. vs. JSON. Domyślnie wartość "remoteMachineName" jest synchronizowana z właściwością "remoteMachineName" w pliku pliku cmakesettings. JSON, która odnosi się do zdalnej maszyny kompilacji. Te właściwości nie muszą już być zgodne, a wartość "remoteMachineName" w pliku Launch. vs. JSON wskazuje, który komputer zdalny jest używany do wdrażania i debugowania.
 
-![Komputer do debugowania zdalnego narzędzia CMake](media/cmake-remote-debug-machine.png)
+![CMake zdalnego debugowania](media/cmake-remote-debug-machine.png)
 
-Funkcja IntelliSense zasugeruje listę wszystkich ustanowionych połączeń zdalnych. Można dodać nowego połączenia zdalnego, przechodząc do **narzędzia** > **opcje** > **Międzyplatformowe**  >   **Menedżer połączeń** lub wyszukiwanie "Connection Manager" w **Szybkie uruchamianie**.
+Funkcja IntelliSense zasugeruje całą listę wszystkich ustanowionych połączeń zdalnych. Nowe połączenie zdalne można dodać, przechodząc do **opcji** **narzędzia** > opcje > **wielu platform** > **Connection Manager** lub wyszukać "Menedżer połączeń" w obszarze **szybkiego uruchamiania**.
 
-Jeśli ma pełną kontrolę nad wdrożeniem, można dołączyć następujące bloków kodu w pliku launch.vs.json. Pamiętaj, aby zastąpić symbole zastępcze wartości rzeczywistych:
+Jeśli chcesz uzyskać pełną kontrolę nad wdrożeniem, możesz dołączyć następujące bloki kodu do pliku Launch. vs. JSON. Pamiętaj, aby zastąpić wartości symboli zastępczych wartościami rzeczywistymi:
 
 ```json
 
@@ -191,12 +191,13 @@ Jeśli ma pełną kontrolę nad wdrożeniem, można dołączyć następujące bl
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Aby debugować urządzeń ARM w systemie Linux, zobacz ten wpis w blogu: [Debugowanie urządzenia osadzonego ARM w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Aby debugować urządzenia ARM w systemie Linux, zobacz ten wpis w blogu: [debugowanie osadzonego urządzenia ARM w programie Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[C++, debugowanie — właściwości (Linux C++)](prop-pages/debugging-linux.md)
+[C++Właściwości debugowania (Linux C++)](prop-pages/debugging-linux.md)

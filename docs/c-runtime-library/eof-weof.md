@@ -1,19 +1,17 @@
 ---
 title: EOF, WEOF
 ms.date: 11/04/2016
-f1_keywords:
-- EOF
 helpviewer_keywords:
 - EOF function
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccb97b55cb61bd42d0487b22bd3e01413444ad3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344074"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438428"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -25,11 +23,11 @@ ms.locfileid: "62344074"
 
 ## <a name="remarks"></a>Uwagi
 
-EOF jest zwracany przez procedury We/Wy podczas końca pliku (lub w niektórych przypadkach błąd) zostanie osiągnięty.
+Element EOF jest zwracany przez procedurę we/wy, gdy zostanie osiągnięty koniec pliku (lub w niektórych przypadkach błąd).
 
-WEOF daje wartość zwrotu typu **wint_t**, który jest używany w celu sygnalizowania, że koniec strumienia szeroki lub zgłosić błąd.
+WEOF zwraca wartość zwracaną typu **wint_t**, służącą do sygnalizowania końcem strumienia Wide lub do zgłaszania warunku błędu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [putc, putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
 [ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>

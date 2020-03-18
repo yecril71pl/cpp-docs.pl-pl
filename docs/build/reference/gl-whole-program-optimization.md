@@ -3,19 +3,18 @@ title: /GL (Optymalizacja całego programu)
 ms.date: 11/04/2016
 f1_keywords:
 - /gl
-- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 helpviewer_keywords:
 - /GL compiler option [C++]
 - whole program optimizations and C++ compiler
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292136"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439655"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optymalizacja całego programu)
 
@@ -29,41 +28,41 @@ Włącza optymalizację całego programu.
 
 ## <a name="remarks"></a>Uwagi
 
-Optymalizacja całego programu umożliwia kompilatorowi wykonanie optymalizacje z informacjami na wszystkich modułach w programie. Bez optymalizacji całego programu optymalizacje są wykonywane na podstawie modułu (compiland —).
+Optymalizacja całego programu umożliwia kompilatorowi wykonywanie optymalizacji z informacjami na wszystkich modułach w programie. Bez optymalizacji całego programu, optymalizacje są wykonywane dla każdego modułu (jednostka kompilacji).
 
-Optymalizacja całego programu jest domyślnie wyłączona i musi być jawnie włączone. Jednak użytkownik może również jawnie wyłączyć za pomocą **/GL-**.
+Optymalizacja całego programu jest domyślnie wyłączona i należy ją jawnie włączyć. Można jednak jawnie wyłączyć go za pomocą **/GL-** .
 
-Informacje dotyczące wszystkich modułów kompilator wykonywać następujące czynności:
+Wraz z informacjami na temat wszystkich modułów kompilator może:
 
-- Optymalizuj korzystanie z rejestrów w granicach funkcji.
+- Optymalizuj użycie rejestrów w granicach funkcji.
 
-- Czy lepiej sobie radzą śledzenia zmiany danych globalnych, dzięki czemu zmniejszenie liczby obciążeń i magazynów.
+- Wykonaj lepsze zadanie śledzenia modyfikacji danych globalnych, co pozwala na zmniejszenie liczby obciążeń i magazynów.
 
-- Czy lepiej sobie radzą śledzenia wyłuskania możliwe zbiór elementów zmodyfikowana przez wskaźnik, zmniejszenie liczby obciążeń i magazynów.
+- Wykonaj lepsze zadanie śledzenia możliwego zestawu elementów modyfikowanych przez odwołanie wskaźnika, zmniejszając liczbę obciążeń i magazynów.
 
-- Wbudowanej funkcji w module, nawet wtedy, gdy funkcja jest zdefiniowana w innym module.
+- Wbudowana funkcja w module, nawet gdy funkcja jest zdefiniowana w innym module.
 
-pliki .obj utworzone z **/GL** nie będą dostępne do tych narzędzi konsolidatora jako [EDITBIN](editbin-reference.md) i [DUMPBIN](dumpbin-reference.md).
+pliki. obj tworzone za pomocą **/GL** nie będą dostępne dla takich narzędzi konsolidatora, jak [polecenia EDITBIN](editbin-reference.md) i [polecenia DUMPBIN](dumpbin-reference.md).
 
-Jeśli kompilujesz program jest połączony z **/GL** i [/c](c-compile-without-linking.md), opcję/LTCG — opcja konsolidatora należy używać do tworzenia pliku wyjściowego.
+Jeśli kompilujesz program z **/GL** i [/c](c-compile-without-linking.md), należy użyć opcji konsolidatora/LTCG, aby utworzyć plik wyjściowy.
 
-[/ Zi](z7-zi-zi-debug-information-format.md) nie można używać z **/GL**
+Nie można używać [/Zi](z7-zi-zi-debug-information-format.md) z **/GL**
 
-Format plików utworzone z **/GL** w bieżącej wersji mogą nie być odczytywane w kolejnych wersjach Visual C++. Nie powinien wysłać plik .lib, składająca się z plików .obj, które zostały utworzone z **/GL** , chyba że chcesz wysłać kopii pliku .lib dla wszystkich wersji programu Visual C++ można oczekiwać od użytkowników, do użycia, teraz i w przyszłości.
+Format plików utworzonych przy użyciu **/GL** w bieżącej wersji może nie być możliwy do odczytania przez kolejne wersje wizualizacji C++. Nie należy dostarczać pliku lib składającego się z plików. obj, które zostały utworzone za pomocą **/GL** , chyba że chcemy przesłać kopie pliku lib dla wszystkich wersji wizualizacji C++ , których użytkownicy będą mogli używać, teraz i w przyszłości.
 
-pliki .obj utworzone z **/GL** i prekompilowane pliki nagłówka nie należy używać do tworzenia pliku .lib, chyba że zostanie połączony plik .lib na tym samym komputerze, który **/GL** pliku .obj. Informacje z pliku .obj prekompilowany plik nagłówkowy będzie potrzebna w czasie połączenia.
+pliki. obj tworzone za pomocą **/GL** i prekompilowanych plików nagłówkowych nie powinny być używane do kompilowania pliku. lib, chyba że plik. lib zostanie połączony na tym samym komputerze, na którym wyprodukowała plik **/GL** . obj. Informacje z prekompilowanego pliku nagłówkowego pliku. obj będą wymagały czasu połączenia.
 
-Aby uzyskać więcej informacji na ograniczenia optymalizacja całego programu i udostępniono optymalizacje, zobacz [opcję/LTCG](ltcg-link-time-code-generation.md).  **/GL** również sprawia, że Optymalizacja z przewodnikiem dostępne; zobacz opcję/LTCG.  Podczas kompilowania dla profilowana Optymalizacja i jeśli chcesz, aby funkcja porządkowania z Twojej optymalizacje profilowe z przewodnikiem, należy skompilować z [/Gy](gy-enable-function-level-linking.md) lub opcję kompilatora, która oznacza /Gy.
+Aby uzyskać więcej informacji na temat optymalizacji dostępnych wraz z ograniczeniami w zakresie optymalizacji całego programu, zobacz [/LTCG](ltcg-link-time-code-generation.md).  **/GL** także udostępnia optymalizację z przewodnikiem. zobacz/LTCG.  Podczas kompilowania dla optymalizacji profilowanej i jeśli chcesz, aby funkcja była uporządkowana z optymalizacji profilowanej, należy skompilować z [/Gy](gy-enable-function-level-linking.md) lub opcją kompilatora, która oznacza/Gy.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Zobacz [opcję/LTCG (Generowanie kodu Link-time)](ltcg-link-time-code-generation.md) instrukcje dotyczące sposobu określania **/GL** w środowisku programistycznym.
+1. Zobacz [/LTCG (generowanie kodu w czasie konsolidacji)](ltcg-link-time-code-generation.md) , aby uzyskać informacje na temat sposobu określania **/GL** w środowisku deweloperskim.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

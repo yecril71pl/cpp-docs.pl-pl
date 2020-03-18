@@ -3,18 +3,17 @@ title: 'Operator logiczny negacji: !'
 ms.date: 08/27/2018
 f1_keywords:
 - '!'
-- Not
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-ms.openlocfilehash: 7b37e5108ca01d782c13508c0cd7a96b096cd745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06142ef15fcdbafdbae4b892772a04b117c087f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216411"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446539"
 ---
 # <a name="logical-negation-operator-"></a>Operator logiczny negacji: !
 
@@ -26,13 +25,13 @@ ms.locfileid: "62216411"
 
 ## <a name="remarks"></a>Uwagi
 
-Operator logiczny negacji (**!**) odwraca znaczenie swojego operandu. Argument musi być typu arytmetycznego lub wskaźnikowego (lub na wyrażenie obliczane do typu arytmetycznego lub wskaźnikowego). Operand jest niejawnie konwertowany na typ **bool**. Wynik to TRUE, jeśli przekonwertowanego ma wartość FAŁSZ; wynik to FALSE, jeśli przekonwertowanego operand ma wartość TRUE. Wynik jest typu **bool**.
+Operator logiczny negacji ( **!** ) odwraca znaczenie jego operandu. Argument operacji musi być typu arytmetycznego lub wskaźnika (lub wyrażenia, które ma wartość arytmetyczną lub typu wskaźnika). Operand jest niejawnie konwertowany na typ **bool**. Wynik ma wartość TRUE, jeśli przekonwertowany operand ma wartość FALSE; wynik ma wartość FAŁSZ, jeśli przekonwertowany operand ma wartość TRUE. Wynik jest typu **bool**.
 
-Wyrażenie *e*, wyrażenie jednoargumentowe `!e` jest równoważne wyrażeniu `(e == 0)`, z wyjątkiem sytuacji, gdy przeciążone operatory są zaangażowani.
+W przypadku wyrażenia *e*wyrażenie jednoargumentowe `!e` jest równoważne wyrażeniu `(e == 0)`, z wyjątkiem przypadków, w których są wykorzystywane przeciążone operatory.
 
-## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla!
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla!
 
-**Nie** operator jest alternatywną pisownię **!**. Istnieją dwa sposoby dostępu do **nie** operatora w programach: uwzględnić plik nagłówka \<iso646.h >, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Operator **not** jest alternatywną pisownią **!** . Istnieją dwa sposoby uzyskania dostępu do operatora **not** w programach: Dołącz plik nagłówka \<iso646. h > lub skompiluj z opcją kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Przykład
 
@@ -49,7 +48,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

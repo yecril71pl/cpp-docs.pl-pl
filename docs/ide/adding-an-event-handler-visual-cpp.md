@@ -1,8 +1,7 @@
 ---
-title: Dodawanie obsługi zdarzeń
+title: Dodawanie procedury obsługi zdarzeń
 ms.date: 11/12/2018
 f1_keywords:
-- vc.codewiz.eventhandler.overview
 - vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
@@ -10,36 +9,36 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345250"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447509"
 ---
-# <a name="add-an-event-handler"></a>Dodawanie obsługi zdarzeń
+# <a name="add-an-event-handler"></a>Dodawanie procedury obsługi zdarzeń
 
-W edytorze zasobów, możesz dodać nowy program obsługi zdarzeń lub edycji istniejącego programu obsługi zdarzeń, dla okna dialogowego pole kontrolkę za pomocą [Kreator obsługi zdarzeń](#event-handler-wizard).
+Z edytora zasobów można dodać nowy program obsługi zdarzeń lub edytować istniejący program obsługi zdarzeń dla formantu okna dialogowego przy użyciu [Kreatora obsługi zdarzeń](#event-handler-wizard).
 
-Zdarzenie można dodać do klasy wdrożenie przy użyciu okno dialogowe [okno właściwości](/visualstudio/ide/reference/properties-window). Aby dodać zdarzenie do klasy innej niż klasa okno dialogowe, należy użyć Kreator obsługi zdarzeń.
+Można dodać zdarzenie do klasy implementującej okno dialogowe przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window). Aby dodać zdarzenie do klasy innej niż Klasa okna dialogowego, użyj Kreatora obsługi zdarzeń.
 
-**Aby dodać program obsługi zdarzeń do formantu pola w oknie dialogowym:**
+**Aby dodać program obsługi zdarzeń do kontrolki okna dialogowego:**
 
-1. Kliknij dwukrotnie zasobu okna dialogowego pole w [widok zasobów](../windows/how-to-create-a-resource-script-file.md#create-resources) można otworzyć zasobu okna dialogowego pole, który zawiera formant w [Edytor okien dialogowych](../windows/dialog-editor.md).
+1. Kliknij dwukrotnie zasób okna dialogowego w [Widok zasobów](../windows/how-to-create-a-resource-script-file.md#create-resources) , aby otworzyć zasób okna dialogowego, który zawiera kontrolkę w [edytorze okien dialogowych](../windows/dialog-editor.md).
 
-1. Kliknij prawym przyciskiem myszy formant, dla którego chcesz obsłużyć zdarzenie powiadomienia.
+1. Kliknij prawym przyciskiem myszy kontrolkę, dla której chcesz obsłużyć zdarzenie powiadamiania.
 
-1. W menu skrótów wybierz **dodać program obsługi zdarzeń** do wyświetlenia Kreator obsługi zdarzeń.
+1. W menu skrótów wybierz polecenie **Dodaj program obsługi zdarzeń** , aby wyświetlić Kreatora obsługi zdarzeń.
 
-1. Wybierz zdarzenie w **typ komunikatu** pole, aby dodać do klasy wybrane w **listy klas** pole.
+1. Wybierz zdarzenie w polu **typ komunikatu** , aby dodać do klasy wybranej w polu **listy klas** .
 
-1. Zaakceptuj nazwę domyślną w **Nazwa procedury obsługi funkcji** pole lub podaj wybraną nazwę.
+1. Zaakceptuj nazwę domyślną w polu **nazwa procedury obsługi funkcji** lub podaj wybraną nazwę.
 
-1. Wybierz **dodawania i edytowania** Dodaj program obsługi zdarzeń do projektu i Otwórz Edytor tekstu na nową funkcję, aby Dodaj kod procedury obsługi zdarzeń właściwe.
+1. Wybierz pozycję **Dodaj i edytuj** , aby dodać obsługę zdarzeń do projektu i Otwórz Edytor tekstów w nowej funkcji, aby dodać odpowiedni kod procedury obsługi zdarzeń.
 
-   Jeśli typ wybranego komunikatu ma już program obsługi zdarzeń dla wybranej klasy **dodawania i edytowania** jest niedostępny, a **edytowania kodu** jest dostępna. Wybierz **edytowania kodu** można otworzyć edytora tekstu w istniejącej funkcji.
+   Jeśli wybrany typ komunikatu ma już procedurę obsługi zdarzeń dla wybranej klasy, **Dodawanie i edytowanie** jest niedostępne, a **Edycja kodu** jest dostępna. Wybierz pozycję **Edytuj kod** , aby otworzyć Edytor tekstu w istniejącej funkcji.
 
-Alternatywnie można dodać procedury obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window). Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Można też dodać procedury obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window). Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -47,32 +46,32 @@ Alternatywnie można dodać procedury obsługi zdarzeń z [okno właściwości](
 
 ## <a name="event-handler-wizard"></a>Kreator obsługi zdarzeń
 
-Ten kreator dodaje program obsługi zdarzeń dla formantu pola okna dialogowego do klasy wybranych przez użytkownika. Po dodaniu programu obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window), można go dodać tylko do klasy, która implementuje okno dialogowe. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Ten Kreator dodaje procedurę obsługi zdarzeń dla kontrolki okna dialogowego do wybranej klasy. Jeśli dodasz procedurę obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window), możesz dodać ją tylko do klasy, która implementuje okno dialogowe. Aby uzyskać więcej informacji, zobacz [Dodawanie programów obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 - **Nazwa polecenia**
 
-  Identyfikuje zaznaczonego formantu, do którego jest dodawany program obsługi zdarzeń. To pole jest niedostępne.
+  Identyfikuje wybraną kontrolkę, dla której dodano procedurę obsługi zdarzeń. To pole jest niedostępne.
 
 - **Typ komunikatu**
 
-  Wyświetla listę bieżącej obsługi komunikatów możliwe dla zaznaczonej kontrolki.
+  Wyświetla listę bieżących możliwych programów obsługi komunikatów dla wybranej kontrolki.
 
-- **Nazwa procedury obsługi — funkcja**
+- **Nazwa procedury obsługi funkcji**
 
-  Wyświetla nazwę funkcji, który jest dodawany do obsługi zdarzeń. Nazwa domyślna jest oparta na typ komunikatu i polecenia dołączony przez `On`. Na przykład dla przycisku o nazwie `IDC_BUTTON1`, typ komunikatu `BN_CLICKED` Wyświetla nazwę procedury obsługi funkcji `OnBnClickedButton1`.
+  Wyświetla nazwę funkcji dodanej do obsłużenia zdarzenia. Nazwa jest domyślnie oparta na typie komunikatu i poleceniu, poprzedzone przez `On`. Na przykład dla przycisku o nazwie `IDC_BUTTON1`, typ komunikatu `BN_CLICKED` wyświetla nazwę procedury obsługi funkcji `OnBnClickedButton1`.
 
 - **Lista klas**
 
-  Wyświetla dostępne klasy, do których można dodać program obsługi zdarzeń. Klasa wybranego okna dialogowego jest wyświetlany w kolorze czerwonym.
+  Wyświetla dostępne klasy, do których można dodać program obsługi zdarzeń. Klasa wybranego okna dialogowego jest wyświetlana na czerwono.
 
 - **Opis procedury obsługi**
 
-  Zawiera opis elementu zaznaczonego w **typ komunikatu** pole. To pole jest niedostępne.
+  Zawiera opis elementu wybranego w polu **typ komunikatu** . To pole jest niedostępne.
 
 - **Dodawanie i edytowanie**
 
-  Dodaje program obsługi komunikatów do wybranej klasy lub obiektu. Otwiera również nową funkcję w edytorze tekstu, dzięki czemu można dodać kod procedury obsługi powiadamiania kontrolki.
+  Dodaje procedurę obsługi komunikatów do wybranej klasy lub obiektu. Otwiera również Edytor tekstu do nowej funkcji, aby można było dodać kod procedury obsługi dla powiadomienia o kontroli.
 
-- **Edytowanie kodu**
+- **Edytuj kod**
 
-  Zostanie otwarty Edytor tekstów, aby wybrane istniejącą funkcję, dzięki czemu można dodawać lub edytować kod procedury obsługi powiadamiania kontrolki.
+  Otwiera edytor tekstu do wybranej istniejącej funkcji, aby można było dodać lub edytować kod procedury obsługi powiadomień.

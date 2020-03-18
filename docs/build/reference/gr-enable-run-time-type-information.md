@@ -2,7 +2,6 @@
 title: /GR (Włącz informacje typu Run-Time)
 ms.date: 11/04/2016
 f1_keywords:
-- /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
 - VC.Project.VCCLCompilerTool.RuntimeTypeInfo
 helpviewer_keywords:
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1398b2f9ee78c62fb84aa591e77708cd0d9d83
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292123"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439586"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Włącz informacje typu Run-Time)
 
@@ -31,27 +30,27 @@ Dodaje kod do sprawdzania typów obiektów w czasie wykonywania.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **GR** jest włączone, kompilator definiuje `_CPPRTTI` makro preprocesora. Domyślnie **GR** znajduje się na. **Trakcie** wyłącza informacje typu run-time.
+Gdy **/gr** jest włączona, kompilator definiuje makro preprocesora `_CPPRTTI`. Domyślnie **/gr** jest włączone. **/Gr-** wyłącza informacje o typie czasu wykonywania.
 
-Użyj **GR** Jeśli kompilator statycznie nie może rozpoznać typu obiektu w kodzie. Zazwyczaj wymaga **GR** opcji, gdy kod używa [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) lub [typeid](../../cpp/typeid-operator.md). Jednak **GR** zwiększa rozmiar fragmentów .rdata obrazu. Jeśli Twój kod nie korzysta z **dynamic_cast** lub **typeid**, **trakcie** może generować mniejszy obraz.
+Użyj **/gr** , jeśli kompilator nie może statycznie rozpoznać typu obiektu w kodzie. Zwykle potrzebna jest opcja **/gr** , gdy kod używa [operatora dynamic_cast](../../cpp/dynamic-cast-operator.md) lub [typeid](../../cpp/typeid-operator.md). Jednak **/gr** zwiększa rozmiar sekcji obrazu. RDATA. Jeśli kod nie używa **dynamic_cast** lub **typeid**, **/gr-** może generować mniejszy obraz.
 
-Aby uzyskać więcej informacji o sprawdzaniu typu run-time, zobacz [informacje typu Run-Time](../../cpp/run-time-type-information.md) w *C++ Language Reference*.
+Aby uzyskać więcej informacji na temat sprawdzania typu w czasie wykonywania, zobacz [Informacje o typie czasu wykonywania](../../cpp/run-time-type-information.md) w  *C++ dokumentacji języka*.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++**  .
 
-1. Kliknij przycisk **języka** stronę właściwości.
+1. Kliknij stronę właściwości **języka** .
 
-1. Modyfikowanie **Włącz informacje typu Run-Time** właściwości.
+1. Zmodyfikuj właściwość **Włącz informacje typu run-time** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

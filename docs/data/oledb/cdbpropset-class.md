@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325029"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447451"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
 
-Dziedziczy `DBPROPSET` struktury i dodaje konstruktora, który inicjuje pola klucza, jak również `AddProperty` dostęp do metody.
+Dziedziczy z struktury `DBPROPSET` i dodaje konstruktora, który inicjuje pola klucza oraz metodę dostępu `AddProperty`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,7 +51,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -62,19 +61,19 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[AddProperty](#addproperty)|Dodaje właściwość do zestawu właściwości.|
 |[CDBPropSet](#cdbpropset)|Konstruktor.|
-|[Setguid —](#setguid)|Zestawy `guidPropertySet` pole `DBPROPSET` struktury.|
+|[SetGUID](#setguid)|Ustawia pole `guidPropertySet` struktury `DBPROPSET`.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator =](#op_equal)|Przypisuje zawartość jednej właściwości do innego zestawu.|
+|[operator =](#op_equal)|Przypisuje zawartość jednego zestawu właściwości do innej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użycie dostawcy i konsumentów OLE DB `DBPROPSET` struktury do przekazywania tablic `DBPROP` struktury. Każdy `DBPROP` struktury reprezentuje jedną właściwość, która może być ustawiona.
+Dostawcy OLE DB i konsumenci używają struktur `DBPROPSET` do przekazywania tablic struktur `DBPROP`. Każda struktura `DBPROP` reprezentuje pojedynczą właściwość, którą można ustawić.
 
-## <a name="addproperty"></a> CDBPropSet::AddProperty
+## <a name="addproperty"></a>CDBPropSet:: Add— Właściwość
 
 Dodaje właściwość do zestawu właściwości.
 
@@ -98,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>Parametry
 
 *dwPropertyID*<br/>
-[in] Identyfikator właściwości do dodania. Używane do zainicjowania `dwPropertyID` z `DBPROP` struktury dodane do zestawu właściwości.
+podczas Identyfikator właściwości, która ma zostać dodana. Służy do inicjowania `dwPropertyID` struktury `DBPROP` dodanej do zestawu właściwości.
 
 *var*<br/>
-[in] Wariant używane do zainicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+podczas Wariant używany do zainicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
 *szValue*<br/>
-[in] Ciąg używany do inicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+podczas Ciąg używany do inicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
-*bDane wartości*<br/>
-[in] A `BYTE` lub wartość logiczną, używane do zainicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+*bValue*<br/>
+podczas `BYTE` lub wartość logiczna służąca do zainicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
-*nWartość:*<br/>
-[in] Wartość całkowitą, używane do zainicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+*nWartość*<br/>
+podczas Wartość całkowita użyta do zainicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
 *fltValue*<br/>
-[in] Wartość zmiennoprzecinkowa, używane do zainicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+podczas Wartość zmiennoprzecinkowa używana do inicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
 *dblValue*<br/>
-[in] Wartość zmiennoprzecinkowa podwójnej precyzji, używane do zainicjowania wartości właściwości dla `DBPROP` struktury dodane do zestawu właściwości.
+podczas Wartość zmiennoprzecinkowa podwójnej precyzji używana do inicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
 *cyValue*<br/>
-[in] Używane do zainicjowania wartości właściwości dla wartości waluty CY `DBPROP` struktury dodane do zestawu właściwości.
+podczas Wartość waluty CY użyta do zainicjowania wartości właściwości dla struktury `DBPROP` dodanej do zestawu właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli właściwość została pomyślnie dodana. W przeciwnym razie **false**.
+**ma wartość true** , jeśli właściwość została pomyślnie dodana. W przeciwnym razie **false**.
 
-## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
-Konstruktor. Inicjuje `rgProperties`, `cProperties`, i `guidPropertySet` pola [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+Konstruktor. Inicjuje pola `rgProperties`, `cProperties`i `guidPropertySet` struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -141,15 +140,15 @@ CDBPropSet();
 
 #### <a name="parameters"></a>Parametry
 
-*Identyfikator GUID*<br/>
-[in] Identyfikator GUID służący do zainicjowania `guidPropertySet` pola.
+*ident*<br/>
+podczas Identyfikator GUID służący do inicjowania pola `guidPropertySet`.
 
 *propset*<br/>
-[in] Inny `CDBPropSet` obiekt do tworzenia kopii.
+podczas Inny obiekt `CDBPropSet` na potrzeby konstruowania kopii.
 
-## <a name="setguid"></a> CDBPropSet::SetGUID
+## <a name="setguid"></a>CDBPropSet:: SetGuid
 
-Zestawy `guidPropertySet` pole `DBPROPSET` struktury.
+Ustawia pole `guidPropertySet` w strukturze `DBPROPSET`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -159,16 +158,16 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*Identyfikator GUID*<br/>
-[in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+*ident*<br/>
+podczas Identyfikator GUID służący do ustawiania pola `guidPropertySet` struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="remarks"></a>Uwagi
 
-To pole można ustawić za [Konstruktor](../../data/oledb/cdbpropset-cdbpropset.md) także.
+To pole można również ustawić przez [konstruktora](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a> CDBPropSet::operator =
+## <a name="op_equal"></a>CDBPropSet:: operator =
 
-Przypisuje zawartość jedną właściwość, ustaw do innego zbioru właściwości.
+Przypisuje zawartość jednego zestawu właściwości do innego zestawu właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -176,10 +175,10 @@ Przypisuje zawartość jedną właściwość, ustaw do innego zbioru właściwo�
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet, klasa](../../data/oledb/cdbpropidset-class.md)<br/>
 [Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
-[DBPROP struktury](/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Struktura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

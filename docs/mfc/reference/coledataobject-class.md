@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883667"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421157"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 
@@ -45,17 +45,17 @@ Używany w transferach danych do pobierania danych w różnych formatach ze scho
 class COleDataObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDataObject::COleDataObject](#coledataobject)|Konstruuje obiekt `COleDataObject`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDataObject:: Attach](#attach)|Dołącza określony obiekt danych OLE do `COleDataObject`.|
 |[COleDataObject::AttachClipboard](#attachclipboard)|Dołącza obiekt danych znajdujący się w Schowku.|
@@ -118,7 +118,7 @@ Wywołaj tę funkcję, aby dołączyć obiekt danych znajdujący się obecnie w 
 BOOL AttachClipboard();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -166,7 +166,7 @@ Wywołaj tę funkcję, aby odłączyć obiekt `COleDataObject` ze skojarzonego o
 LPDATAOBJECT Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu danych OLE, który został odłączony.
 
@@ -194,7 +194,7 @@ Wskazuje na strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmediu
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -222,7 +222,7 @@ Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym z
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowego `CFile` lub obiekt pochodny `CFile`zawierający dane, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -255,7 +255,7 @@ Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym z
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście bloku pamięci globalnej zawierające dane, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -278,7 +278,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , która otrzymuje informacje o formacie, gdy wywołanie funkcji zwraca.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli jest dostępny inny format; w przeciwnym razie 0.
 
@@ -308,7 +308,7 @@ Format danych schowka, który ma być używany w strukturze wskazywanym przez *l
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą żądany format. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli dane są dostępne w określonym formacie; w przeciwnym razie 0.
 
@@ -336,7 +336,7 @@ void Release();
 
 `IDataObject` była skojarzona z `COleDataObject` przez wywołanie `Attach` lub `AttachClipboard` jawnie lub przez platformę. Jeśli parametr *bAutoRelease* `Attach` ma wartość false, obiekt `IDataObject` nie zostanie wydaną. W takim przypadku obiekt wywołujący jest odpowiedzialny za zwolnienie `IDataObject` przez wywołanie [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>

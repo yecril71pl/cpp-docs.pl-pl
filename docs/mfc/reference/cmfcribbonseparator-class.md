@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSeparator Class
+title: Klasa CMFCRibbonSeparator
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonSeparator
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65321cb80c80a5f4c6b3cf9c67e85b1bfb6f9d11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380237"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445600"
 ---
-# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator Class
+# <a name="cmfcribbonseparator-class"></a>Klasa CMFCRibbonSeparator
 
 Implementuje separator wstążki.
 
@@ -45,35 +45,35 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 |||
 |-|-|
-|Nazwa|Opis|
-|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Konstruuje `CMFCRibbonSeparator` obiektu.|
+|Name (Nazwa)|Opis|
+|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Konstruuje obiekt `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
-|Nazwa|Opis|
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Separator, który dodaje **polecenia** listy w **Dostosuj** okno dialogowe. (Przesłania [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
-|`CMFCRibbonSeparator::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|`CMFCRibbonSeparator::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
+|Name (Nazwa)|Opis|
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Dodaje separator do listy **poleceń** w oknie dialogowym **Dostosuj** . (Przesłania [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
+|`CMFCRibbonSeparator::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|`CMFCRibbonSeparator::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |||
 |-|-|
-|Nazwa|Opis|
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Metoda kopiowania, który określa zmienne Członkowskie separator z innego obiektu.|
+|Name (Nazwa)|Opis|
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Metoda kopiowania, która ustawia zmienne składowe separatora z innego obiektu.|
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Zwraca rozmiar separatora.|
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Wskazuje, czy jest separatorem.|
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Wskazuje, czy jest tabulatora.|
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|Metoda wywoływana przez system do rysowania separatora Wstążki lub paska narzędzi Szybki dostęp.|
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Wywoływane przez system, aby narysować separatora na **polecenia** listy.|
+|[CMFCRibbonSeparator:: IsSeparator](#isseparator)|Wskazuje, czy ten element jest separatorem.|
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Wskazuje, czy jest to tabulator tabulator.|
+|[CMFCRibbonSeparator:: OnDraw](#ondraw)|Wywoływane przez system, aby narysować separator na Wstążce lub pasku narzędzi Szybki dostęp.|
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Wywoływane przez system, aby narysować separator na liście **poleceń** .|
 
 ## <a name="remarks"></a>Uwagi
 
-Separator wstążki jest linii pionowych lub poziomych, logicznie dzieli elementy wstążki. Separator mogą być wystawiane na formantu wstążki, w menu aplikacji głównej, paska stanu Wstążki i paska narzędzi Szybki dostęp.
+Separator wstążki to pionowa lub pozioma linia, która logicznie oddziela elementy wstążki. Separator może być rysowany w kontrolce wstążki, menu główne aplikacja, pasek stanu wstążki i pasek narzędzi Szybki dostęp.
 
-Aby użyć separatora w aplikacji, utworzenia nowego obiektu i dodać go do menu głównego aplikacji, jak pokazano poniżej:
+Aby użyć separatora w aplikacji, Utwórz nowy obiekt i dodaj go do głównego menu aplikacji, jak pokazano poniżej:
 
 ```
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -83,7 +83,8 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```
-Wywołaj [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) Dodawanie separatorów do paneli wstążki. Separatory są przydzielane i dodać wewnętrznie przez `AddSeparator` metody.
+
+Wywołaj [CMFCRibbonPanel:: AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) , aby dodać separatory do paneli wstążki. Separatory są przydzielone i dodawane wewnętrznie przez metodę `AddSeparator`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -95,11 +96,11 @@ Wywołaj [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-cla
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbaseribbonelement.h
+**Nagłówek:** afxbaseribbonelement. h
 
-##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox
+##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox
 
-Separator, który dodaje **polecenia** listy w **Dostosuj** okno dialogowe.
+Dodaje separator do listy **poleceń** w oknie dialogowym **Dostosuj** .
 
 ```
 virtual int AddToListBox(
@@ -110,18 +111,18 @@ virtual int AddToListBox(
 ### <a name="parameters"></a>Parametry
 
 *pWndListBox*<br/>
-[in] Wskaźnik do **polecenia** listy, w której zostanie dodany separatora.
+podczas Wskaźnik do listy **poleceń** , gdzie zostanie dodany separator.
 
 *bDeep*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks na ciąg w polu listy, określony przez *pWndListBox*.
+Indeks (liczony od zera) do ciągu w polu listy określonym przez *pWndListBox*.
 
-##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator
+##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator
 
-Konstruuje `CMFCRibbonSeparator` obiektu.
+Konstruuje obiekt `CMFCRibbonSeparator`.
 
 ```
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
@@ -130,21 +131,21 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bIsHoriz*<br/>
-[in] W przypadku opcji TRUE separatora jest poziomy; w przypadku wartości FAŁSZ separatora jest pionowy.
+podczas W przypadku wartości TRUE separator jest poziomy. w przypadku wartości FALSE separator jest pionowy.
 
 ### <a name="remarks"></a>Uwagi
 
-W menu aplikacji używane są separatory poziomej. Rozwiń na paskach narzędzi używane są separatory pionowy.
+Separatory poziome są używane w menu aplikacji. Separatory pionowe są używane w paskach narzędzi.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCRibbonSeparator` klasy.
+Poniższy przykład ilustruje sposób konstruowania obiektu klasy `CMFCRibbonSeparator`.
 
 [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]
 
-##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom
+##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom
 
-Metoda kopiowania, który określa zmienne Członkowskie separator z innego obiektu.
+Metoda kopiowania, która ustawia zmienne składowe separatora z innego obiektu.
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -152,10 +153,10 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parametry
 
-*src*<br/>
-[in] Element wstążki źródła do skopiowania.
+*SRC*<br/>
+podczas Źródłowy element wstążki, z którego mają zostać skopiowane.
 
-##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize
 
 Zwraca rozmiar separatora.
 
@@ -165,16 +166,16 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do zawartości urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do zawartości urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar separatora w kontekście danego urządzenia.
+Rozmiar separatora w danym kontekście urządzenia.
 
-##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator
+##  <a name="isseparator"></a>CMFCRibbonSeparator:: IsSeparator
 
-Wskazuje, czy jest separatorem.
+Wskazuje, czy ten element jest separatorem.
 
 ```
 virtual BOOL IsSeparator() const;
@@ -182,11 +183,11 @@ virtual BOOL IsSeparator() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze ma wartość TRUE dla tej klasy.
+Zawsze TRUE dla tej klasy.
 
-##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop
+##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop
 
-Wskazuje, czy jest tabulatora.
+Wskazuje, czy jest to tabulator tabulator.
 
 ```
 virtual BOOL IsTabStop() const;
@@ -198,11 +199,11 @@ Zawsze wartość FALSE dla tej klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Separator wstążki jest tabulatora.
+Separator wstążki nie jest tabulatorem.
 
-##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonSeparator:: OnDraw
 
-Metoda wywoływana przez system do rysowania separatora Wstążki lub paska narzędzi Szybki dostęp.
+Wywoływane przez system, aby narysować separator na Wstążce lub pasku narzędzi Szybki dostęp.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -210,12 +211,12 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList
+##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList
 
-Wywoływane przez system, aby narysować separatora na **polecenia** listy.
+Wywoływane przez system, aby narysować separator na liście **poleceń** .
 
 ```
 virtual void OnDrawOnList(
@@ -232,14 +233,14 @@ virtual void OnDrawOnList(
 |||
 |-|-|
 |Parametr|Opis|
-|*pDC*|[in] Wskaźnik do kontekstu urządzenia.|
-|*strText*|[in] Tekst wyświetlany na liście.|
-|*nTextOffset*|[in] Odstęp między tekstem a po lewej stronie prostokąt otaczający.|
-|*Rect*|[in] Określa prostokąt otaczający.|
-|*bIsSelected*|[in] Ignorowane.|
-|*bHighlighted*|[in] Ignorowane.|
+|*Domeny*|podczas Wskaźnik do kontekstu urządzenia.|
+|*strText*|podczas Tekst wyświetlany na liście.|
+|*nTextOffset*|podczas Odstępy między tekstem a lewą krawędzią prostokąta ograniczenia.|
+|*cinania*|podczas Określa prostokąt ograniczający.|
+|*bIsSelected*|podczas Ignoruj.|
+|*bHighlighted*|podczas Ignoruj.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

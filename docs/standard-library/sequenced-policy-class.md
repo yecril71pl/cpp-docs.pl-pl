@@ -1,18 +1,18 @@
 ---
-title: sequenced_policy klasy
+title: Klasa sequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268112"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444917"
 ---
-# <a name="sequencedpolicy-class"></a>sequenced_policy klasy
+# <a name="sequenced_policy-class"></a>Klasa sequenced_policy
 
-Używane jako typ unikatowy odróżnić przeciążenie algorytmu równoległego, i wymagają, że algorytmu równoległego wykonywania może nie być przetwarzane równolegle.
+Używany jako unikatowy typ odróżnienia przeciążenia algorytmu równoległego i wymaganie, aby wykonywanie algorytmu równoległego mogło nie być równoległe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,4 +22,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas wykonywania algorytmu równoległego za pomocą `execution::sequenced_policy` zasad, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwycony wyjątek `terminate()` nosi nazwę.
+W trakcie wykonywania algorytmu równoległego przy użyciu zasad `execution::sequenced_policy`, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwyconego wyjątku, `terminate()` zostanie wywołana.

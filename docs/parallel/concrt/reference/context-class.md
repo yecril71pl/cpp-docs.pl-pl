@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865504"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422179"
 ---
 # <a name="context-class"></a>Context — Klasa
 
@@ -37,7 +37,7 @@ Reprezentuje streszczenie dla kontekstu wykonania.
 class Context;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -113,7 +113,7 @@ Zwraca wskaźnik do bieżącego kontekstu.
 static Context* __cdecl CurrentContext();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do bieżącego kontekstu.
 
@@ -129,7 +129,7 @@ Zwraca identyfikator kontekstu, który jest unikatowy w obrębie harmonogramu, d
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator kontekstu, który jest unikatowy w obrębie harmonogramu, do którego należy kontekst.
 
@@ -141,7 +141,7 @@ Zwraca identyfikator grupy harmonogramu, nad którą aktualnie pracuje kontekst.
 virtual unsigned int GetScheduleGroupId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator grupy harmonogramu, nad którą aktualnie pracuje kontekst.
 
@@ -157,7 +157,7 @@ Zwraca identyfikator procesora wirtualnego, na którym aktualnie wykonywany jest
 virtual unsigned int GetVirtualProcessorId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli kontekst jest aktualnie wykonywany w procesorze wirtualnym, identyfikator procesora wirtualnego, na którym jest aktualnie wykonywany ten kontekst; w przeciwnym razie wartość `-1`.
 
@@ -173,7 +173,7 @@ Zwraca identyfikator bieżącego kontekstu, który jest unikatowy w obrębie har
 static unsigned int __cdecl Id();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli bieżący kontekst jest dołączony do harmonogramu, identyfikator bieżącego kontekstu, który jest unikatowy w obrębie harmonogramu, do którego należy bieżący kontekst; w przeciwnym razie wartość `-1`.
 
@@ -185,7 +185,7 @@ Zwraca wskazanie, czy kolekcja zadań, która jest obecnie wykonywana wewnętrzn
 static bool __cdecl IsCurrentTaskCollectionCanceling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli harmonogram jest dołączony do kontekstu wywołującego, a grupa zadań wykonuje zadanie wbudowane w tym kontekście, wskazuje, czy ta grupa zadań znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce); w przeciwnym razie wartość `false`.
 
@@ -197,7 +197,7 @@ Określa, czy kontekst jest blokowany synchronicznie. Kontekst jest uznawany za 
 virtual bool IsSynchronouslyBlocked() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Czy kontekst jest blokowany synchronicznie.
 
@@ -241,7 +241,7 @@ Zwraca identyfikator grupy harmonogramu, w której działa bieżący kontekst.
 static unsigned int __cdecl ScheduleGroupId();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli bieżący kontekst jest dołączony do harmonogramu i pracujesz nad grupą harmonogramów, identyfikator grupy harmonogramu, nad którą pracuje bieżący kontekst; w przeciwnym razie wartość `-1`.
 
@@ -269,7 +269,7 @@ Zwraca identyfikator procesora wirtualnego, na którym jest wykonywany bieżący
 static unsigned int __cdecl VirtualProcessorId();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli bieżący kontekst jest dołączony do harmonogramu, identyfikator procesora wirtualnego, na którym jest wykonywany bieżący kontekst; w przeciwnym razie wartość `-1`.
 

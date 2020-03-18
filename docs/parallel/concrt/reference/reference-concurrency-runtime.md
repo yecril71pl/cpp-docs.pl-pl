@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180150"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446279"
 ---
 # <a name="reference-concurrency-runtime"></a>Odwołanie (Współbieżność środowiska wykonawczego)
 
-Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego współbieżności.
+Ta sekcja zawiera informacje referencyjne dotyczące środowisko uruchomieniowe współbieżności.
 
 > [!Note]
-> C++ Standard języka c zastrzega stosowanie identyfikatorów, które zaczynają się od znaku podkreślenia (_) do implementacji takich jak biblioteki. Nie należy używać tych nazw w kodzie. Zachowanie kodu, elementy, które stosują taką konwencję nazw, których nie jest gwarantowane i mogą ulec zmianie w przyszłych wersjach. Z tego względu takie elementy kodu zostały pominięte z dokumentacji współbieżność środowiska wykonawczego.
+> Standard C++ języka rezerwuje użycie identyfikatorów, które zaczynają się od znaku podkreślenia (_) dla implementacji takich jak biblioteki. Nie używaj tych nazw w kodzie. Zachowanie elementów kodu, których nazwy są zgodne z tą konwencją, nie jest gwarantowane i może ulec zmianie w przyszłych wydaniach. Z tego powodu takie elementy kodu zostały pominięte w dokumentacji środowisko uruchomieniowe współbieżności.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-Przestrzeń nazwy współbieżności zawiera klasy i funkcje, które zapewniają dostęp do środowiska wykonawczego Concurrency, platformy programowania współbieżnego dla C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../concurrency-runtime.md).
+Przestrzeń nazw współbieżności zawiera klasy i funkcje, które zapewniają dostęp do środowisko uruchomieniowe współbieżności, współbieżnej platformy programistycznej C++dla programu. Aby uzyskać więcej informacji, zobacz [środowisko uruchomieniowe współbieżności](../concurrency-runtime.md).
 
-[obszar nazw STD](std-namespace.md)
+[STD — przestrzeń nazw](std-namespace.md)
 
 [stdx — przestrzeń nazw](stdx-namespace.md)

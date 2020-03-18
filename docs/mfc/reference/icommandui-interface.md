@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421297"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445695"
 ---
 # <a name="icommandui-interface"></a>ICommandUI, interfejs
 
@@ -31,7 +31,7 @@ Zarządza poleceniami interfejsu użytkownika.
 interface class ICommandUI
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -60,6 +60,7 @@ Aby uzyskać więcej informacji na temat sposobu zarządzania poleceniami interf
 ## <a name="check"></a>ICommandUI:: Check
 
 Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia do 
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 Informuje mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Jest to zaawansowana funkcja członkowska, która powinna być używana w połą
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
 Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Ta właściwość włącza lub wyłącza element interfejsu użytkownika dla teg
 ## <a name="id"></a>ICommandUI:: ID
 
 Pobiera identyfikator obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Ta właściwość pobiera identyfikator (uchwyt) elementu menu, przycisku paska 
 ## <a name="index"></a>ICommandUI:: index
 
 Pobiera indeks obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Ta właściwość Pobiera indeks (uchwyt) elementu menu, przycisku paska narzęd
 ## <a name="radio"></a>ICommandUI:: Radio
 
 Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia do 
 ## <a name="text"></a>ICommandUI:: text
 
 Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.
+
 ```
 property String^ Text;
 ```

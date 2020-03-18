@@ -9,7 +9,6 @@ f1_keywords:
 - CUtlProps::IsValidValue
 - CUtlProps.IsValidValue
 - IsValidValue
-- CUtlProps
 - OnPropertyChanged
 - CUtlProps.OnPropertyChanged
 - CUtlProps::OnPropertyChanged
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176125"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441036"
 ---
 # <a name="cutlprops-class"></a>CUtlProps — Klasa
 
-Implementuje właściwości dla różnych interfejsów właściwość OLE DB (na przykład `IDBProperties`, `IDBProperties`, i `IRowsetInfo`).
+Implementuje właściwości dla różnych OLE DB interfejsów właściwości (na przykład `IDBProperties`, `IDBProperties`i `IRowsetInfo`).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,12 +49,12 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa, która zawiera `BEGIN_PROPSET_MAP`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -63,23 +62,23 @@ Klasa, która zawiera `BEGIN_PROPSET_MAP`.
 
 |||
 |-|-|
-|[GetPropValue](#getpropvalue)|Pobiera właściwości z zestawu właściwości.|
-|[Isvalidvalue —](#isvalidvalue)|Używany do sprawdzania poprawności wartości przed ustawieniem właściwości.|
-|[OnInterfaceRequested](#oninterfacerequested)|Obsługuje żądania na potrzeby opcjonalny interfejs, gdy użytkownik wywołuje metodę dla interfejsu tworzenia obiektu.|
-|[OnPropertyChanged](#onpropertychanged)|Wywołuje się po ustawieniu właściwości w celu obsługi łańcuchowych właściwości.|
-|[SetPropValue](#setpropvalue)|Ustawia właściwość w zbiorze właściwości.|
+|[GetPropValue](#getpropvalue)|Pobiera właściwość z zestawu właściwości.|
+|[IsValidValue](#isvalidvalue)|Służy do sprawdzania poprawności wartości przed ustawieniem właściwości.|
+|[OnInterfaceRequested](#oninterfacerequested)|Obsługuje żądania dla opcjonalnego interfejsu, gdy odbiorca wywołuje metodę w interfejsie tworzenia obiektu.|
+|[OnPropertyChanged](#onpropertychanged)|Wywołuje się po ustawieniu właściwości w celu obsługi właściwości łańcucha.|
+|[SetPropValue](#setpropvalue)|Ustawia właściwość w zestawie właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
-W większości tej klasy jest szczegółowo opisuje implementacja.
+Większość tej klasy jest szczegółami implementacji.
 
-`CUtlProps` zawiera dwa elementy członkowskie do ustawiania właściwości wewnętrznie: [Getpropvalue —](../../data/oledb/cutlprops-getpropvalue.md) i [setpropvalue —](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` zawiera dwóch elementów członkowskich do ustawienia właściwości wewnętrznie: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) i [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
-Aby uzyskać więcej informacji na temat makra używane w mapie zestaw właściwości, zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) i [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Aby uzyskać więcej informacji na temat makr używanych na mapie zestawu właściwości, zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) i [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> CUtlProps::GetPropValue
+## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
-Pobiera właściwości z zestawu właściwości.
+Pobiera właściwość z zestawu właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -92,21 +91,21 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Parametry
 
 *pguidPropSet*<br/>
-[in] Identyfikator GUID zestawu właściwości.
+podczas Identyfikator GUID dla PropSet.
 
 *dwPropId*<br/>
-[in] Indeks właściwości.
+podczas Indeks właściwości.
 
 *pvValue*<br/>
-[out] Wskaźnik do typu variant, który zawiera nową wartość właściwości.
+określoną Wskaźnik do wariantu, który zawiera nową wartość właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`Failure` błąd i S_OK w przypadku powodzenia.
+`Failure` w przypadku awarii i S_OK, jeśli się to powiedzie.
 
-## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
+## <a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
-Używany do sprawdzania poprawności wartości przed ustawieniem właściwości.
+Służy do sprawdzania poprawności wartości przed ustawieniem właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -118,22 +117,22 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Parametry
 
 *iCurSet*<br/>
-Indeks do tablicy ustawioną właściwość; zero, jeśli istnieje tylko jedna właściwość.
+Indeks do tablicy zestawu właściwości; zero, jeśli istnieje tylko jeden zestaw właściwości.
 
 *pDBProp*<br/>
-Identyfikator właściwości i nową wartość w [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+Identyfikator właściwości i Nowa wartość w strukturze [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. Zwracana wartość domyślna to S_OK.
+Standardowa wartość HRESULT. Domyślną wartością zwracaną jest S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku dowolnej procedury weryfikacji, który ma zostać uruchomiony na podstawie wartości, które są używane do ustawiania właściwości powinny przesłaniać tę funkcję. Na przykład można sprawdzić poprawności DBPROP_AUTH_PASSWORD na tabeli hasło, aby określić prawidłową wartość.
+Jeśli masz jakiekolwiek procedury walidacji, które chcesz uruchomić na wartości, która ma zostać użyta do ustawienia właściwości, należy zastąpić tę funkcję. Na przykład można sprawdzić poprawność DBPROP_AUTH_PASSWORD względem tabeli haseł, aby określić prawidłową wartość.
 
-## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
+## <a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
-Obsługuje żądania na potrzeby opcjonalny interfejs, gdy użytkownik wywołuje metodę dla jednego obiektu Tworzenie interfejsów.
+Obsługuje żądania dla opcjonalnego interfejsu, gdy odbiorca wywołuje metodę na jednym z interfejsów tworzenia obiektów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -143,16 +142,16 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 #### <a name="parameters"></a>Parametry
 
-*Parametr riid*<br/>
-[in] IID dla żądanego interfejsu. Aby uzyskać więcej informacji, zobacz opis *riid* parametru `ICommand::Execute` w *OLE DB Podręcznik programisty* (w *MDAC SDK*).
+*riid*<br/>
+podczas Identyfikator IID dla żądanego interfejsu. Aby uzyskać więcej informacji, zobacz opis parametru *riid* `ICommand::Execute` w *Kompendium OLE DB programisty* (w *zestawie SDK MDAC*).
 
 ### <a name="remarks"></a>Uwagi
 
-`OnInterfaceRequested` obsługuje żądania klientów dotyczące opcjonalny interfejs, gdy użytkownik wywołuje metodę dla jednego obiektu Tworzenie interfejsów (takie jak `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, lub `ICommand`). Ustawia odpowiednie właściwości OLE DB dla żądanego interfejsu. Na przykład, jeśli użytkownik zażąda `IID_IRowsetLocate`, `OnInterfaceRequested` ustawia `DBPROP_IRowsetLocate` interfejsu. Ten sposób utrzymuje prawidłowy stan podczas tworzenia zestawu wierszy.
+`OnInterfaceRequested` obsługuje żądania konsumenta dla opcjonalnego interfejsu, gdy odbiorca wywołuje metodę na jednym z interfejsów tworzenia obiektów (takich jak `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`lub `ICommand`). Ustawia odpowiadającą właściwość OLE DB dla żądanego interfejsu. Na przykład jeśli użytkownik zażąda `IID_IRowsetLocate`, `OnInterfaceRequested` ustawia interfejs `DBPROP_IRowsetLocate`. Podczas tworzenia zestawu wierszy należy zachować prawidłowy stan.
 
-Ta metoda jest wywoływana, gdy użytkownik wywołuje `IOpenRowset::OpenRowset` lub `ICommand::Execute`.
+Ta metoda jest wywoływana, gdy odbiorca wywołuje `IOpenRowset::OpenRowset` lub `ICommand::Execute`.
 
-Jeśli użytkownik otwiera obiekt, żąda opcjonalny interfejs dostawcy należy ustawić właściwość skojarzoną z tym interfejsem VARIANT_TRUE. Aby zezwolić na przetwarzanie specyficzne dla właściwości `OnInterfaceRequested` jest wywoływana przed dostawcy `Execute` metoda jest wywoływana. Domyślnie `OnInterfaceRequested` obsługuje następujące interfejsy:
+Jeśli odbiorca otworzy obiekt i zażąda opcjonalnego interfejsu, dostawca powinien ustawić właściwość skojarzoną z tym interfejsem na VARIANT_TRUE. Aby umożliwić przetwarzanie specyficzne dla właściwości, `OnInterfaceRequested` jest wywoływana przed wywołaniem metody `Execute` dostawcy. Domyślnie `OnInterfaceRequested` obsługuje następujące interfejsy:
 
 - `IRowsetLocate`
 
@@ -164,11 +163,11 @@ Jeśli użytkownik otwiera obiekt, żąda opcjonalny interfejs dostawcy należy 
 
 - `IRowsetScroll`
 
-Jeśli chcesz obsłużyć inne interfejsy, należy przesłonić tę funkcję, w klasie źródła, sesji, polecenie lub zestawu wierszy danych dla funkcji procesu. Przesłonięcia powinny przechodzić przez interfejsy właściwości normalne Ustawianie/pobieranie, aby upewnić się, że ustawienie właściwości ustawia również wszelkie łańcuchowych właściwości (zobacz [onpropertychanged —](../../data/oledb/cutlprops-onpropertychanged.md)).
+Jeśli chcesz obsłużyć inne interfejsy, Przesłoń tę funkcję w klasie źródła danych, sesji, polecenia lub zestawu wierszy, aby przetwarzać funkcje. Przesłonięcie powinno przekroczyć normalne interfejsy zestawu/pobierania właściwości, aby upewnić się, że właściwości ustawienia również ustawiają wszystkie właściwości łańcucha (zobacz [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
+## <a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
 
-Wywołuje się po ustawieniu właściwości w celu obsługi łańcuchowych właściwości.
+Wywołuje się po ustawieniu właściwości w celu obsługi właściwości łańcucha.
 
 ### <a name="syntax"></a>Składnia
 
@@ -180,28 +179,28 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Parametry
 
 *iCurSet*<br/>
-Indeks do tablicy ustawioną właściwość; zero, jeśli istnieje tylko jedna właściwość.
+Indeks do tablicy zestawu właściwości; zero, jeśli istnieje tylko jeden zestaw właściwości.
 
 *pDBProp*<br/>
-Identyfikator właściwości i nową wartość w [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+Identyfikator właściwości i Nowa wartość w strukturze [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. Zwracana wartość domyślna to S_OK.
+Standardowa wartość HRESULT. Domyślną wartością zwracaną jest S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli chcesz obsługiwać właściwości łańcuchowych, takich jak zakładek lub aktualizacji, których wartości są zależne od wartości innej właściwości, należy przesłonić tę funkcję.
+Jeśli chcesz obsługiwać właściwości łańcucha, takie jak zakładki lub aktualizacje, których wartości są zależne od wartości innej właściwości, należy zastąpić tę funkcję.
 
 ### <a name="example"></a>Przykład
 
-W tej funkcji, użytkownik uzyskuje identyfikator właściwości z `DBPROP*` parametru. Teraz jest to możliwe do porównania Identyfikatora względem właściwość, która ma łańcuch. W przypadku odnalezienia właściwość `SetProperties` jest wywoływana z właściwość, która będzie teraz ustawić w połączeniu z innych właściwości. W tym przypadku jeden pobiera `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, lub `DBPROP_ORDEREDBOOKMARKS` właściwość, jedną wartość `DBPROP_BOOKMARKS` właściwości.
+W tej funkcji użytkownik pobiera identyfikator właściwości z parametru `DBPROP*`. Teraz można porównać identyfikator z właściwością do łańcucha. Gdy właściwość zostanie znaleziona, `SetProperties` jest wywoływana z właściwością, która zostanie teraz ustawiona w połączeniu z inną właściwością. W takim przypadku, jeśli jeden Pobiera właściwość `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`lub `DBPROP_ORDEREDBOOKMARKS`, jeden może ustawić właściwość `DBPROP_BOOKMARKS`.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps::SetPropValue
+## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
-Ustawia właściwość w zbiorze właściwości.
+Ustawia właściwość w zestawie właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -214,19 +213,19 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Parametry
 
 *pguidPropSet*<br/>
-[in] Identyfikator GUID zestawu właściwości.
+podczas Identyfikator GUID dla PropSet.
 
 *dwPropId*<br/>
-[in] Indeks właściwości.
+podczas Indeks właściwości.
 
 *pvValue*<br/>
-[in] Wskaźnik do typu variant, który zawiera nową wartość właściwości.
+podczas Wskaźnik do wariantu, który zawiera nową wartość właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`Failure` błąd i S_OK w przypadku powodzenia.
+`Failure` w przypadku awarii i S_OK, jeśli się to powiedzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

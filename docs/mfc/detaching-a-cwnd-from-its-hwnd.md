@@ -1,8 +1,6 @@
 ---
 title: Odłączanie obiektu CWnd od jego właściwości HWND
 ms.date: 11/04/2016
-f1_keywords:
-- CWnd
 helpviewer_keywords:
 - HWND, detaching CWnd from
 - removing HWNDs from CWnds
@@ -10,25 +8,25 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: 259af94958f88643e9c3ce725b25c4e92cc38226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a6f97ba9f1dd3a928a5450c1a899ce09a4ac5f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394575"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446960"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Odłączanie obiektu CWnd od jego właściwości HWND
 
-Jeśli potrzebujesz obejście obiekt -`HWND` relacji, biblioteka MFC zawiera inny `CWnd` funkcja elementu członkowskiego [Odłącz](../mfc/reference/cwnd-class.md#detach), który odłącza obiektu okna języka C++ z poziomu okna Windows. Zapobiega to zniszczenie okna Windows, kiedy niszczony jest obiekt destruktor.
+Jeśli zachodzi potrzeba obejścia relacji obiektu`HWND`, MFC udostępnia kolejną `CWnd` funkcji członkowskiej, [Odłącz](../mfc/reference/cwnd-class.md#detach), która rozłącza obiekt C++ Window z okna systemu Windows. Zapobiega to zniszczeniu okna systemu Windows, gdy obiekt zostanie zniszczony.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie okien](../mfc/creating-windows.md)
 
-- [Sekwencja likwidacji okna](../mfc/window-destruction-sequence.md)
+- [Sekwencja niszczenia okna](../mfc/window-destruction-sequence.md)
 
-- [Alokowanie i dealokowanie pamięci okna](../mfc/allocating-and-deallocating-window-memory.md)
+- [Przydzielanie i cofanie alokacji pamięci okna](../mfc/allocating-and-deallocating-window-memory.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obiekty okna](../mfc/window-objects.md)

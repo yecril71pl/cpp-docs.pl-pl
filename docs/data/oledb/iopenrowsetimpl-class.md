@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390779"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446327"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl — Klasa
 
-Udostępnia implementację dla `IOpenRowset` interfejsu.
+Zapewnia implementację interfejsu `IOpenRowset`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,11 +34,11 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>Parametry
 
 *SessionClass*<br/>
-Z klasą pochodną `IOpenRowsetImpl`.
+Klasa, która pochodzi od `IOpenRowsetImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -47,16 +46,16 @@ Z klasą pochodną `IOpenRowsetImpl`.
 
 |||
 |-|-|
-|[Createrowset —](#createrowset)|Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika.|
-|[OpenRowset](#openrowset)|Zostanie otwarty i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu. (Nie w ATLDB. GODZ.)|
+|[CreateRowset](#createrowset)|Tworzy obiekt zestawu wierszy. Nie wywołano bezpośrednio przez użytkownika.|
+|[OpenRowset](#openrowset)|Otwiera i zwraca zestaw wierszy, który zawiera wszystkie wiersze z pojedynczej tabeli bazowej lub indeksu. (Nie w ATLDB. C|
 
 ## <a name="remarks"></a>Uwagi
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) interfejsu jest obowiązkowa, aby obiekt sesji. Otwiera i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.
+Interfejs [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) jest obowiązkowy dla obiektu Session. Otwiera i zwraca zestaw wierszy, który zawiera wszystkie wiersze z pojedynczej tabeli podstawowej lub indeksu.
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="createrowset"></a>IOpenRowsetImpl:: isrowset
 
-Tworzy obiekt zestawu wierszy. Nie jest wywoływana bezpośrednio przez użytkownika. Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
+Tworzy obiekt zestawu wierszy. Nie wywołano bezpośrednio przez użytkownika. Zobacz [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
 ### <a name="syntax"></a>Składnia
 
@@ -75,16 +74,16 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Parametry
 
 *RowsetClass*<br/>
-Składowa klasy szablonu reprezentująca klasy zestawów wierszy przez użytkownika. Zwykle generowane przez kreatora.
+Składowa klasy szablonu reprezentująca klasę zestawu wierszy użytkownika. Zwykle generowany przez kreatora.
 
 *pRowsetObj*<br/>
-[out] Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale mogą używane, jeśli konieczne jest przeprowadzenie więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest ograniczone przez *ppRowset*.
+określoną Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale może być używany, jeśli trzeba wykonać więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest związany z *ppRowset*.
 
-Dla innych parametrów, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty.*
+Aby poznać inne parametry, zobacz [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="openrowset"></a>IOpenRowsetImpl:: OpenRowset
 
-Zostanie otwarty i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu.
+Otwiera i zwraca zestaw wierszy, który zawiera wszystkie wiersze z pojedynczej tabeli bazowej lub indeksu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -100,13 +99,13 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie znajduje się w ATLDB. H. Jest on tworzony przez kreatora ATL obiektu po utworzeniu dostawcy usługi.
+Ta metoda nie została znaleziona w ATLDB. C. Jest tworzony przez kreatora obiektów ATL podczas tworzenia dostawcy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

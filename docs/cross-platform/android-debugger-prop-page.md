@@ -7,20 +7,20 @@ f1_keywords:
 - VC.Project.AndroidDebugger.AndroidDeviceID
 - VC.Project.AndroidDebugger.PackagePath
 - VC.Project.AndroidDebugger.LaunchActivity
-ms.openlocfilehash: 8ff6e539828d697e103c820d05565969f6afb910
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3ac896b384181e4e2b436368f39a343d35fe321a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177529"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446893"
 ---
 # <a name="android-debugger-properties"></a>Właściwości debugera systemu Android
 
-Właściwość | Opis | Decyzji
---- | ---| ---
-Typ debugera | Określa typ kodu do debugowania. | **Tylko natywny**<br>**Tylko Java**<br>
-Element docelowy debugowania | Określa emulator lub urządzenie, które ma być używane na potrzeby debugowania. Jeśli nie są uruchomione żadne emulatory, użyj "Menedżera urządzeń wirtualnych systemu Android (AVD)", aby uruchomić urządzenie.
-Pakiet do uruchomienia | Określa lokalizację elementu *. apk* , który będzie debugowany. Ta opcja uruchamia pakiet (APK), gdy aplikacja jest debugowana.
-Działanie uruchamiania | Działanie systemu Android służące do uruchamiania aplikacji musi pasować do używanej w manifeście. Naciśnij przycisk Zastosuj, aby pobrać listę z *pliku AndroidManifest. XML* i wypełnić ją dynamicznie.
-Dodatkowe ścieżki wyszukiwania symboli | Dodatkowa ścieżka wyszukiwania dla symboli debugowania.
-Dodatkowe ścieżki wyszukiwania źródła Java | Dodatkowe ścieżki wyszukiwania dla plików źródłowych Java. (Stosuje się tylko wtedy, gdy typ debugera jest tylko w języku Java).
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Typ debugera | Określa typ kodu do debugowania. | **Tylko natywny**<br /><br />**Tylko Java** |
+| Element docelowy debugowania | Określa emulator lub urządzenie, które ma być używane na potrzeby debugowania. Jeśli nie są uruchomione żadne emulatory, użyj "Menedżera urządzeń wirtualnych systemu Android (AVD)", aby uruchomić urządzenie. |
+| Pakiet do uruchomienia | Określa lokalizację elementu *. apk* , który będzie debugowany. Ta opcja uruchamia pakiet (APK), gdy aplikacja jest debugowana. |
+| Działanie uruchamiania | Działanie systemu Android służące do uruchamiania aplikacji musi pasować do używanej w manifeście. Naciśnij przycisk Zastosuj, aby pobrać listę z *pliku AndroidManifest. XML* i wypełnić ją dynamicznie. |
+| Dodatkowe ścieżki wyszukiwania symboli | Dodatkowa ścieżka wyszukiwania dla symboli debugowania. |
+| Dodatkowe ścieżki wyszukiwania źródła Java | Dodatkowe ścieżki wyszukiwania dla plików źródłowych Java. (Stosuje się tylko wtedy, gdy typ debugera jest tylko w języku Java). |

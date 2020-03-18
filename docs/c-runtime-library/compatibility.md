@@ -2,19 +2,17 @@
 title: Zgodność
 description: Opisuje zgodność biblioteki uniwersalnego środowiska uruchomieniowego języka Microsoft (UCRT) w standardowym języku C, POSIX, bezpieczny CRT i aplikacje ze sklepu.
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988731"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443489"
 ---
 # <a name="compatibility"></a>Zgodność
 

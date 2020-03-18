@@ -1,5 +1,5 @@
 ---
-title: Zalecenia dotyczące obsługi We / Wy
+title: Zalecenia dotyczące obsługi danych wejściowych i wyjściowych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [MFC], about I/O
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956a92fd1761f61081afa2eb9c6cb35fe72b46d6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218567"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446897"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Zalecenia dotyczące obsługi we/wy
 
-Czy używasz opartych na plikach we/wy lub nie zależy od tego, jak odpowiadać na pytania w poniższym drzewie decyzyjnym:
+Niezależnie od tego, czy używasz operacji we/wy opartych na plikach, czy nie zależą od odpowiedzi na pytania w następującym drzewie decyzyjnym:
 
-**Podstawowym danych w aplikacji znajdują się w pliku na dysku**
+**Czy dane podstawowe w aplikacji znajdują się w pliku dysku**
 
-- Tak, podstawowe dane znajdują się w pliku na dysku:
+- Tak, podstawowe dane znajdują się w pliku dysku:
 
-     **Czy aplikacja wczytać całego pliku do pamięci na otwieranie pliku i zapisywać cały plik na dysku na zapisywanie pliku**
+     **Czy aplikacja odczytuje cały plik do pamięci po otwarciu pliku i zapisuje cały plik z powrotem do dysku przy zapisywaniu pliku**
 
-   - Tak: Jest to dokument domyślny MFC. Użyj `CDocument` serializacji.
+   - Tak: jest to domyślny przypadek dokumentu MFC. Użyj serializacji `CDocument`.
 
-   - Nie: Zazwyczaj jest to przypadek, opartej na transakcjach aktualizowania pliku. Zaktualizuj plik na podstawie każdej transakcji które nie potrzebują `CDocument` serializacji.
+   - Nie: zwykle jest to przypadek aktualizacji pliku na podstawie transakcji. Aktualizujesz plik w oparciu o transakcję i nie potrzebujesz serializacji `CDocument`.
 
-- Nie, podstawowe nie znajdują się w pliku na dysku:
+- Nie, dane podstawowe nie znajdują się w pliku dysku:
 
-     **Dane znajdują się w źródle danych ODBC**
+     **Czy dane znajdują się w źródle danych ODBC**
 
    - Tak, dane znajdują się w źródle danych ODBC:
 
-         Use MFC's database support. The standard MFC implementation for this case includes a `CDatabase` object, as discussed in the article [MFC: Using Database Classes with Documents and Views](../data/mfc-using-database-classes-with-documents-and-views.md). The application might also read and write an auxiliary file — the purpose of the application wizard "both a database view and file support" option. In this case, you'd use serialization for the auxiliary file.
+      Użyj obsługi bazy danych MFC. Standardowa implementacja MFC w tym przypadku zawiera obiekt `CDatabase`, zgodnie z opisem w artykule [MFC: używanie klas baz danych z dokumentami i widokami](../data/mfc-using-database-classes-with-documents-and-views.md). Aplikacja może również odczytywać i zapisywać plik pomocniczy — przeznaczenie Kreatora aplikacji "widok bazy danych i obsługa plików". W takim przypadku należy użyć serializacji dla pliku pomocniczego.
 
    - Nie, dane nie znajdują się w źródle danych ODBC.
 
-         Examples of this case: the data resides in a non-ODBC DBMS; the data is read via some other mechanism, such as OLE or DDE.
+      Przykłady w tym przypadku: dane znajdują się w systemie DBMS innym niż ODBC; dane są odczytywane za pośrednictwem innego mechanizmu, takiego jak OLE lub DDE.
 
-         In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a `CDocument` as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.
+      W takich przypadkach nie będziesz używać serializacji, a Twoja aplikacja nie będzie mieć elementów menu Otwórz i Zapisz. Nadal warto używać `CDocument` jako podstawy, podobnie jak aplikacja MFC ODBC używa dokumentu do przechowywania obiektów `CRecordset`. Ale nie będziesz używać domyślnej serializacji pliku Open/Save dla struktury.
 
-Na potrzeby obsługi Otwórz, Zapisz i Zapisz jako polecenia w menu Plik, struktura udostępnia serializacja dokumentu. Serializacja odczytuje i zapisuje dane, w tym obiekty pochodzi od klasy `CObject`, do trwałego magazynu, zwykle pliku na dysku. Serializacja jest łatwa w użyciu i obsługuje wiele wymagań, ale może być nieodpowiedni w wielu aplikacjach dostęp do danych. Dostęp do danych aplikacji zazwyczaj aktualizacji danych na podstawie każdej transakcji. Zaktualizowanie rekordów wpływ transakcji, a nie odczytywanie i zapisywanie pliku danych całą jednocześnie.
+Aby zapewnić obsługę poleceń Otwórz, Zapisz i Zapisz jako w menu plik, struktura zapewnia serializację dokumentu. Serializacja odczytuje i zapisuje dane, w tym obiekty pochodzące z klasy `CObject`, do magazynu trwałego, zazwyczaj plik dyskowy. Serializacja jest łatwa w użyciu i obsługuje wiele Twoich potrzeb, ale może być nieodpowiednia w wielu aplikacjach dostępu do danych. Aplikacje dostępu do danych zazwyczaj aktualizują dane na podstawie poszczególnych transakcji. Aktualizują rekordy, których dotyczy transakcja, zamiast odczytywania i zapisywania całego pliku danych jednocześnie.
 
 Aby uzyskać informacje o serializacji, zobacz [serializacji](../mfc/serialization-in-mfc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Serializacja: Serializacja programu vs. Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serializacja: serializacja a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)

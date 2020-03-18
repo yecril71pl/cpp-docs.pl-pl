@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::IDBInitializeImpl
 - ATL.IDBInitializeImpl
 - IDBInitializeImpl.IDBInitializeImpl
-- IDBInitializeImpl
 - IDBInitializeImpl::IDBInitializeImpl
 - Initialize
 - IDBInitializeImpl::Initialize
@@ -39,16 +38,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 3418ce11e1a607d66fee593b32fd3a4b7d197407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409021"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447372"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) interfejsu.
+Dostarcza implementację interfejsu [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,12 +58,12 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Z klasą pochodną `IDBInitializeImpl`.
+*&*<br/>
+Klasa, która pochodzi od `IDBInitializeImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -79,20 +78,20 @@ Z klasą pochodną `IDBInitializeImpl`.
 |||
 |-|-|
 |[Initialize](#initialize)|Uruchamia dostawcę.|
-|[Odinicjalizuj](#uninitialize)|Zatrzymuje dostawcy.|
+|[Uninitialize](#uninitialize)|Powoduje zatrzymanie dostawcy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |||
 |-|-|
 |[m_dwStatus](#dwstatus)|Flagi źródła danych.|
-|[m_pCUtlPropInfo](#pcutlpropinfo)|Wskaźnik do implementacji właściwości bazy danych.|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Wskaźnik do implementacji informacji o właściwościach bazy danych.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obowiązkowego interfejsu na obiekty źródła danych i opcjonalnie interfejsu na modułach wyliczających.
+Obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs w modułach wyliczających.
 
-## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
+## <a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
 
 Konstruktor.
 
@@ -106,9 +105,9 @@ IDBInitializeImpl();
 
 Inicjuje wszystkie elementy członkowskie danych.
 
-## <a name="initialize"></a> IDBInitializeImpl::Initialize
+## <a name="initialize"></a>IDBInitializeImpl:: Initialize
 
-Inicjuje obiekt źródła danych, przygotowywania jego obsługa właściwości.
+Inicjuje obiekt źródła danych przez przygotowanie jego obsługi właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -118,11 +117,11 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
+## <a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
 
-Umieszcza dane źródła obiektu w stanie niezainicjowanym przy zwalnianiu zasobów wewnętrznych, takich jak obsługa właściwości.
+Umieszcza obiekt źródła danych w stanie niezainicjowanym przez zwolnienie zasobów wewnętrznych, takich jak obsługa właściwości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -132,9 +131,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
+## <a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
 
 Flagi źródła danych.
 
@@ -146,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>Uwagi
 
-Te flagi określić lub wskazuje stan różnych atrybutów dla obiektu źródła danych. Zawiera co najmniej jeden z następujących **wyliczenia** wartości:
+Te flagi określają lub wskazują stan różnych atrybutów dla obiektu źródła danych. Zawiera co najmniej jedną z następujących wartości **wyliczeniowych** :
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -158,13 +157,13 @@ enum DATASOURCE_FLAGS {
 
 |||
 |-|-|
-|`DSF_MASK_INIT`|Maskę, aby włączyć Przywracanie niezainicjowanego stanu.|
-|`DSF_PERSIST_DIRTY`|Ustaw, jeśli obiekt źródła danych wymaga trwałości (to znaczy, jeśli wprowadzono zmiany).|
+|`DSF_MASK_INIT`|Maska umożliwiająca przywrócenie niezainicjowanego stanu.|
+|`DSF_PERSIST_DIRTY`|Ustaw, jeśli obiekt źródła danych wymaga trwałości (oznacza to, że zmiany zostały wprowadzone).|
 |`DSF_INITIALIZED`|Ustaw, jeśli źródło danych zostało zainicjowane.|
 
-## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
+## <a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
 
-Wskaźnik do obiektu implementacji, aby uzyskać informacje o właściwościach bazy danych.
+Wskaźnik do obiektu implementacji dla informacji o właściwościach bazy danych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -172,7 +171,7 @@ Wskaźnik do obiektu implementacji, aby uzyskać informacje o właściwościach 
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

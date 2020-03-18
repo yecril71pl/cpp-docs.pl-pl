@@ -2,18 +2,18 @@
 title: /TSAWARE
 ms.date: 11/04/2016
 f1_keywords:
-- /tsaware
+- /tsaware_editbin
 helpviewer_keywords:
 - -TSAWARE editbin option
 - /TSAWARE editbin option
 - TSAWARE editbin option
 ms.assetid: 84715050-c907-4118-8cff-2973411ae931
-ms.openlocfilehash: 0800b05cd4619c8ac380c878a5c81bf55be3ede5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66202743be20bc040560027a4ab1ebc5a16cd442
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317526"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438835"
 ---
 # <a name="tsaware"></a>/TSAWARE
 
@@ -23,8 +23,8 @@ ms.locfileid: "62317526"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/tsaware dla narzędzia polecenia EDITBIN umożliwia modyfikowanie obrazu programu w taki sam sposób, tak, jakby była wykorzystywana [/tsaware](tsaware-create-terminal-server-aware-application.md) — opcja konsolidatora.
+Opcja/TSAWARE narzędzia polecenia EDITBIN umożliwia modyfikowanie obrazu programu w taki sam sposób jak w przypadku użycia opcji konsolidatora [/TSAWARE](tsaware-create-terminal-server-aware-application.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje EDITBIN](editbin-options.md)

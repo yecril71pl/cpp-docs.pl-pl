@@ -1,24 +1,23 @@
 ---
-title: Platform::Array, klasa
+title: 'Platform:: Array, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Array Constructors
-- VCCORLIB/Namespace not found::Platform::Array::Value
+- VCCORLIB/Platform::Array
+- VCCORLIB/Platform::Array::Value
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221835"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445802"
 ---
-# <a name="platformarray-class"></a>Platform::Array, klasa
+# <a name="platformarray-class"></a>Platform:: Array, Klasa
 
-Reprezentuje jednowymiarowo, którą można modyfikować tablicę, która jest odbierany i przekazywane między interfejsem binarnym aplikacji (ABI).
+Reprezentuje jednowymiarową, modyfikowalną tablicę, którą można odbierać i przekazywać przez interfejs binarny aplikacji (ABI).
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>Elementy członkowskie
 
-Platform::Array dziedziczy wszystkie metody z [Platform::WriteOnlyArray, klasa](../cppcx/platform-writeonlyarray-class.md) i implementuje `Value` właściwość [Platform::IBoxArray, interfejs](../cppcx/platform-iboxarray-interface.md).
+Platform:: Array dziedziczy wszystkie jej metody z [klasy platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) i implementuje Właściwość `Value` [platformy:: IBoxArray](../cppcx/platform-iboxarray-interface.md).
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Konstruktory tablicy](#ctor)|Inicjuje jednowymiarowo, którą można modyfikować tablicę typów określonej przez parametr szablonu klasy *T*.|
+|[Konstruktory tablic](#ctor)|Inicjuje jednowymiarową, modyfikowalną tablicę typów określonych przez parametr szablonu klasy, *T*.|
 
 ### <a name="methods"></a>Metody
 
-Zobacz [Platform::WriteOnlyArray, klasa](../cppcx/platform-writeonlyarray-class.md).
+Zobacz [Klasa platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
 
 ### <a name="properties"></a>Właściwości
 
 |||
 |-|-|
-|[Array::Value](#value)|Pobiera uchwyt do bieżącej tablicy.|
+|[Array:: value](#value)|Pobiera dojście do bieżącej tablicy.|
 
 ### <a name="remarks"></a>Uwagi
 
-Array — klasa jest zapieczętowany i nie może być dziedziczona.
+Klasa Array jest zapieczętowana i nie może być dziedziczona.
 
-System typów środowiska wykonawczego Windows nie obsługuje pojęcie Tablice nieregularne i dlatego nie można przekazać IVector < Platform::Array\<T >> jako parametr zwracany wartość lub metody. Aby przekazać tablicę nieregularną lub sekwencji między interfejsem ABI, należy użyć `IVector<IVector<T>^>`.
+System typu środowisko wykonawcze systemu Windows nie obsługuje koncepcji tablic nieregularnych i dlatego nie można przekazać elementu IVector < platform:: Array\<T > > jako wartości zwracanej lub parametru metody. Aby przekazać nieregularną tablicę lub sekwencję sekwencji w ramach ABI, użyj `IVector<IVector<T>^>`.
 
-Aby uzyskać więcej informacji na temat czasu i sposobu użycia Platform::Array, zobacz [tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Aby uzyskać więcej informacji o tym, kiedy i jak używać platform:: Array, zobacz [Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-Ta klasa jest zdefiniowana w nagłówku vccorlib.h, który jest automatycznie dołączany przez kompilator. Jest ona widoczna na technologii IntelliSense, ale nie w przeglądarce obiektów, ponieważ nie jest typem publicznym zdefiniowanym w platform.winmd.
+Ta klasa jest zdefiniowana w nagłówku vccorlib. h, który jest automatycznie dołączany do kompilatora. Jest on widoczny w technologii IntelliSense, ale nie w Przeglądarka obiektów, ponieważ nie jest typem publicznym zdefiniowanym w elemencie platform. winmd.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: **/ZW**
+Opcja kompilatora: **/zw**
 
-## <a name="ctor"></a>  Konstruktory tablicy
+## <a name="ctor"></a>Konstruktory tablic
 
-Inicjuje jednowymiarowo, którą można modyfikować tablicę typów określonej przez parametr szablonu klasy *T*.
+Inicjuje jednowymiarową, modyfikowalną tablicę typów określonych przez parametr szablonu klasy, *T*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,20 +75,20 @@ Array(T* data, unsigned int size);
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Parametr szablonu klasy.
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Liczba elementów w tablicy.
 
-*data*<br/>
-Wskaźnik do tablicy danych typu `T` używany do zainicjowania tego obiektu tablicy.
+*Data*<br/>
+Wskaźnik do tablicy danych typu `T`, który jest używany do inicjowania tego obiektu Array.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji o sposobie tworzenia wystąpień Platform::Array, zobacz [tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Aby uzyskać więcej informacji na temat tworzenia wystąpień platform:: Array, zobacz [Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>  Metoda Array::Get
+## <a name="get"></a>Array:: Get — Metoda
 
 Pobiera odwołanie do elementu tablicy w określonej lokalizacji indeksu.
 
@@ -101,16 +100,16 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Liczony od zera indeks, który identyfikuje element w tablicy. Minimalna indeks to 0, a maksymalna wartość indeksu jest wartość określoną przez `size` parametru w [Array — Konstruktor](#ctor).
+*indeks*<br/>
+Indeks oparty na zero, który identyfikuje element w tablicy. Minimalny indeks to 0, a maksymalny indeks to wartość określona przez parametr `size` w [konstruktorze Array](#ctor).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Określony przez element tablicy `index` parametru.
+Element tablicy określony przez parametr `index`.
 
-## <a name="value"></a>  Właściwość Array::Value
+## <a name="value"></a>Array:: Value — właściwość
 
-Pobiera uchwyt do bieżącej tablicy.
+Pobiera dojście do bieżącej tablicy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -120,9 +119,9 @@ property Array^ Value;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do bieżącej tablicy.
+Uchwyt do bieżącej tablicy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

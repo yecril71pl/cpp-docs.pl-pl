@@ -1,24 +1,22 @@
 ---
 title: Korzystanie z CRichEditCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CRichEditCtrl
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411737"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441809"
 ---
 # <a name="using-cricheditctrl"></a>Korzystanie z CRichEditCtrl
 
-Kontrolki edycji wzbogaconej jest to okno, w którym użytkownik może wprowadzić i edytować tekst. Tekst można przypisać znaków i formatowanie akapitów i mogą zawierać osadzonych obiektów OLE. Kontrolki edycji wzbogaconej jest reprezentowana w MFC, [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy.
+Kontrolka edycji wzbogaconej to okno, w którym użytkownik może wprowadzać i edytować tekst. Do tekstu może być przypisany znak i formatowanie akapitu, które mogą zawierać osadzone obiekty OLE. Kontrolka edycji wzbogaconej jest reprezentowana w MFC przez klasę [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Omówienie kontrolki edycji wzbogaconej](../mfc/overview-of-the-rich-edit-control.md)
 
@@ -32,7 +30,7 @@ Kontrolki edycji wzbogaconej jest to okno, w którym użytkownik może wprowadzi
 
 - [Bieżące zaznaczenie w kontrolce edycji wzbogaconej](../mfc/current-selection-in-a-rich-edit-control.md)
 
-- [Podziały wyrazów w formancie edycji wzbogaconej](../mfc/word-breaks-in-rich-edit-controls.md)
+- [Podział wyrazów w kontrolce edycji wzbogaconej](../mfc/word-breaks-in-rich-edit-controls.md)
 
 - [Operacje schowka w kontrolkach edycji wzbogaconej](../mfc/clipboard-operations-in-rich-edit-controls.md)
 
@@ -44,6 +42,6 @@ Kontrolki edycji wzbogaconej jest to okno, w którym użytkownik może wprowadzi
 
 - [Powiadomienia z kontrolek edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

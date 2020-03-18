@@ -1,19 +1,17 @@
 ---
 title: 'Bezpieczne biblioteki: Standardowa biblioteka C++'
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454550"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446096"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bezpieczne biblioteki: Standardowa biblioteka C++
 
@@ -29,8 +27,8 @@ W poniższej tabeli wymieniono C++ metody biblioteki standardowej, które są po
 
 |Potencjalnie niebezpieczna Metoda|Bezpieczniejszy odpowiednik|
 |-------------------------------|----------------------|
-|[kopiowane](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|
-|[kopiowane](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|
+|[kopiowane](../standard-library/basic-string-class.md#copy)|[basic_string:: _Copy_s](../standard-library/basic-string-class.md#copy_s)|
+|[kopiowane](../standard-library/char-traits-struct.md#copy)|[char_traits:: _Copy_s](../standard-library/char-traits-struct.md#copy_s)|
 
 W przypadku wywołania jednej z potencjalnie niebezpiecznych metod powyżej lub w przypadku nieprawidłowego użycia iteratorów kompilator generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Aby uzyskać informacje na temat sposobu wyłączania tych ostrzeżeń, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
@@ -44,6 +42,6 @@ W przypadku wywołania jednej z potencjalnie niebezpiecznych metod powyżej lub 
 
 [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)

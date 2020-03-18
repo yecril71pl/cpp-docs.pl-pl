@@ -1,31 +1,29 @@
 ---
 title: Korzystanie z CReBarCtrl
 ms.date: 11/19/2018
-f1_keywords:
-- CReBarCtrl
 helpviewer_keywords:
 - child windows [MFC], rebar controls
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411907"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441964"
 ---
 # <a name="using-crebarctrl"></a>Korzystanie z CReBarCtrl
 
-Kontrolki paska pomocniczego działa jako kontener dla okien podrzędnych. Tych okien podrzędnych często inne kontrolki, są przypisane do grupy kontrolki paska pomocniczego. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup, z każdego pasma o dowolnej kombinacji pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego. Jednak grupy nie może zawierać więcej niż jedno okno podrzędne.
+Kontrolka paska pomocniczego działa jako kontener dla okien podrzędnych. Te okna podrzędne, często inne kontrolki, są przypisane do pasma paska pomocniczego Control. Kontrolka paska pomocniczego może zawierać co najmniej jedną grupę, a każdy z nich ma dowolną kombinację paska uchwytu, mapy bitowej, etykiety tekstowej i okna podrzędnego. Jednak pasma nie mogą zawierać więcej niż jednego okna podrzędnego.
 
-Poniższa ilustracja przedstawia formantu paska pomocniczego, który ma dwa pasma. Jeden zawiera pasek uchwytu, etykieta tekstowa ("Address") i okno podrzędne pola kombi. Inne urządzenia band zawiera pasek uchwytu, etykietę tekstową i prostych narzędzi, (implementowane za pomocą okna podrzędnego).
+Na poniższej ilustracji przedstawiono formant paska pomocniczego, który ma dwie pasma. Jeden zawiera pasek uchwytu, etykietę tekstową ("Address") i okno potomne pola kombi. Drugi pasek zawiera pasek uchwytu, etykietę tekstową i płaski pasek narzędzi (zaimplementowany przy użyciu okna podrzędnego).
 
-![Paska pomocniczego kontrolki, który ma dwa paski](../mfc/media/vc4ruz1.gif "paska pomocniczego kontrolki, który ma dwa paski")
+![Kontrolka paska pomocniczego, która ma dwie pasma](../mfc/media/vc4ruz1.gif "Kontrolka paska pomocniczego, która ma dwie pasma")
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [CReBar a CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
+- [CReBar a korzystanie CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
 
 - [Tworzenie kontrolki paska pomocniczego](../mfc/creating-a-rebar-control.md)
 
@@ -37,6 +35,6 @@ Poniższa ilustracja przedstawia formantu paska pomocniczego, który ma dwa pasm
 
 - [Przetwarzanie komunikatów powiadomień w kontrolce paska pomocniczego](../mfc/processing-notification-messages-in-a-rebar-control.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

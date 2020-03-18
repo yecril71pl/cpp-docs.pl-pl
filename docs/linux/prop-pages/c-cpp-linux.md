@@ -1,20 +1,20 @@
 ---
-title: Właściwości języka C/C++ (Linux C++)
+title: C/C++ właściwości (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: b5be7582970c45e25f1e2c90971d587c19eac2a0
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821335"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441474"
 ---
-# <a name="cc-properties-linux-c"></a>Właściwości języka C/C++ (Linux C++)
+# <a name="cc-properties-linux-c"></a>C/C++ właściwości (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
@@ -22,65 +22,65 @@ Pomoc techniczna Linux support jest dostępne w programie Visual Studio 2017 i n
 
 ## <a name="general"></a>Ogólne
 
-Właściwość | Opis | Opcje
---- | ---| ---
-Dodatkowe katalogi dyrektywy Include | Określa jeden lub więcej katalogów do dodania do ścieżki dołączania. Użyj średników do oddzielania wielu katalogów. (-I\[ścieżka]).
-Format informacji o debugowaniu | Określa typ informacji o debugowaniu generowanych przez kompilator. | **Brak** — tworzy żadnych informacji debugowania, więc kompilacja może przebiegać szybciej.<br/>**Minimalne informacje debugowania** — Generuj informacje debugowania minimalny.<br/>**Pełne informacje debugowania (DWARF2)** — Generowanie debugowania dwarf2.<br/>
-Nazwa pliku obiektu | Określa nazwę do zastąpienia domyślnej nazwy pliku obiektu. Może być nazwa pliku lub katalogu. (-o [nazwa]).
-Poziom ostrzeżeń | Wybiera się, jak chcesz, aby kompilator o błędów kodu.  Dodaj inne flagi bezpośrednio do **dodatkowe opcje**. (/ w, / weverything). | **Włącz Wyłącz wszystkie ostrzeżenia** — wyłącza wszystkie ostrzeżenia kompilatora.<br/>**EnableAllWarnings** -włącza wszystkie ostrzeżenia, w tym te domyślnie wyłączone.<br/>
-Traktuj ostrzeżenia jako błędy | Traktuje wszystkie ostrzeżenia kompilatora jako błędy. Dla nowego projektu może być najlepiej użyć werror we wszystkich kompilacjach. Rozwiąż wszystkie ostrzeżenia, aby upewnić się, jak najmniejsza liczba usterek możliwe kodu twardych do znalezienia.
-Dodatkowe ostrzeżenia języka C | Definiuje zestaw dodatkowych komunikatów ostrzegawczych.
-Dodatkowe ostrzeżenia języka C++ | Definiuje zestaw dodatkowych komunikatów ostrzegawczych.
-Włącz tryb informacji pełnej | Po włączeniu trybu informacji pełnej do drukowania informacji do diagnozowania kompilacji.
-C Compiler | Określa program do wywołania podczas kompilacji źródłowych plików języka C lub ścieżkę do kompilatora języka C w systemie zdalnym.
-Kompilator C++ | Określa program do wywołania podczas kompilacji pliki źródłowe C++ lub ścieżkę do kompilatora języka C++ w systemie zdalnym.
-Limit czasu kompilacji | Limit czasu zdalnej kompilacji, w milisekundach.
-Kopiuj pliki obiektów | Określa, czy kopiować pliki skompilowanych obiektów z systemu zdalnego na maszynę lokalną.
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Dodatkowe katalogi dołączane | Określa co najmniej jeden katalog do dodania do ścieżki dołączania. Użyj średników do rozdzielenia wielu katalogów. (-I\[ścieżka]). |
+| Format informacji o debugowaniu | Określa typ informacji o debugowaniu generowanych przez kompilator. | **Brak** — nie tworzy informacji o debugowaniu, dzięki czemu kompilacja może być szybsza.<br/>**Minimalne informacje debugowania** — generowanie minimalnych informacji o debugowaniu.<br/>**Pełne informacje o debugowaniu (DWARF2)** — generują informacje debugowania DWARF2.<br/> |
+| Nazwa pliku obiektu | Określa nazwę do przesłaniania domyślnej nazwy pliku obiektu. Może to być nazwa pliku lub katalogu. (-o [nazwa]). |
+| Poziom ostrzeżeń | Wybiera, jak ścisłość kompilator ma mieć wpływ na błędy kodu.  Dodaj inne flagi bezpośrednio do **dodatkowych opcji**. (/w,/Weverything). | Wyłącz **wszystkie ostrzeżenia** — wyłącza wszystkie ostrzeżenia kompilatora.<br/>**Włącz wszystkie ostrzeżenia** — włącza wszystkie ostrzeżenia, w tym wyłączone domyślnie.<br/> |
+| Traktuj ostrzeżenia jako błędy | Traktuje wszystkie ostrzeżenia kompilatora jako błędy. W przypadku nowego projektu najlepiej jest używać/Werror we wszystkich kompilacjach. Usuń wszystkie ostrzeżenia, aby upewnić się, że wady kodu są trudne do znalezienia. |
+| Dodatkowe ostrzeżenia dotyczące języka C | Definiuje zestaw dodatkowych komunikatów ostrzegawczych. |
+| C++Dodatkowe ostrzeżenia | Definiuje zestaw dodatkowych komunikatów ostrzegawczych. |
+| Włącz tryb pełny | Gdy tryb informacji pełnej jest włączony, program drukuje więcej informacji umożliwiających zdiagnozowanie kompilacji. |
+| Kompilator języka C | Określa program do wywołania podczas kompilacji źródłowych plików języka C lub ścieżkę do kompilatora języka C w systemie zdalnym. |
+| Kompilator C++ | Określa program do wywołania podczas kompilacji plików C++ źródłowych lub ścieżkę do C++ kompilatora w systemie zdalnym. |
+| Limit czasu kompilacji | Limit czasu kompilacji zdalnej (w milisekundach). |
+| Kopiuj pliki obiektów | Określa, czy mają być kopiowane skompilowane pliki obiektów z systemu zdalnego na maszynę lokalną. |
 
-## <a name="optimization"></a>optymalizacja
+## <a name="optimization"></a>Optymalizacja
 
-Właściwość | Opis | Opcje
---- | ---| ---
-optymalizacja | Określa poziom optymalizacji aplikacji. | **Niestandardowe** — niestandardowa Optymalizacja.<br/>**Wyłączone** -Wyłącz optymalizację.<br/>**Minimalizuj rozmiar** — Optymalizuj pod kątem rozmiaru.<br/>**Maksymalizuj szybkość** — Optymalizuj pod kątem szybkości.<br/>**Pełna optymalizacja** — kosztowne optymalizacje.
-Aliasowanie z ograniczeniami | Zakłada najbardziej rygorystyczne reguły aliasowania.  Obiekt danego typu nigdy nie zakłada się, że mają ten sam adres co obiekt innego typu.
-Odwiń pętle | Unrolls pętli, aby szybciej aplikacje dzięki zmniejszeniu liczby wykonywanych na rzecz większego rozmiaru kodu gałęzi.
-Optymalizacja czasu łączenia | Włącza optymalizacje między procedurami, umożliwiając optymalizatorowi przeglądanie plików obiektów w aplikacji.
-Pominięcie wskaźnika ramki | Pomija tworzenie wskaźników ramek na stosie wywołań.
-Brak bloków niestandardowych | Przydziela nawet niezainicjowane zmienne globalne w sekcji danych pliku obiektu, zamiast generować je jako bloki.
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Optymalizacja | Określa poziom optymalizacji aplikacji. | Optymalizacja **niestandardowa** .<br/>**Wyłączone** — wyłączenie optymalizacji.<br/>**Minimalizuj rozmiar** — Optymalizuj pod kątem rozmiaru.<br/>**Maksymalizuj szybkość** — Optymalizuj szybkość.<br/>**Pełna optymalizacja** — kosztowna Optymalizacja. |
+| Jednostrictne aliasowanie | Przyjmuje zasady najdokładniejszych aliasów.  Obiekt jednego typu nigdy nie przyjmuje się, że ma taki sam adres jak obiekt innego typu. |
+| Odwrócenie pętli | Wycofuje pętle, aby przyspieszyć działanie aplikacji dzięki zmniejszeniu liczby wykonywanych gałęzi przy użyciu kosztu większego rozmiaru kodu. |
+| Optymalizacja czasu konsolidacji | Włącza optymalizacje między procedurami, umożliwiając Optymalizatorowi przeglądanie plików obiektów w aplikacji. |
+| Pomiń wskaźnik ramki | Pomija tworzenie wskaźników ramek na stosie wywołań. |
+| Brak wspólnych bloków | Przydziela nawet Niezainicjowane zmienne globalne w sekcji danych pliku obiektu, zamiast generować je jako bloki wspólne. |
 
 ## <a name="preprocessor"></a>Preprocesor
 
-Właściwość | Opis | Opcje
---- | ---| ---
-Definicje preprocesora | Definiuje symbole przetwarzania wstępnego dla pliku źródłowego. (-D)
-Usuń definicje preprocesora | Określa, że jedno anulowanie definicji preprocesora jeden lub więcej.  (-U \[macro])
-Usuń wszystkie definicje preprocesora | Definicji do usunięcia wszystkich zdefiniowanych wcześniej wartości preprocesora.  (-undef)
-Pokaż zawierania | Generuje listę załączonych plików z danych wyjściowych kompilatora.  (-H)
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Definicje preprocesora | Definiuje symbole przetwarzania wstępnego dla pliku źródłowego. (-D) |
+| Usuń Definicje preprocesora | Określa co najmniej jedną definicję preprocesora.  (-U \[makro]) |
+| Usuń wszystkie Definicje preprocesora | Definiuje wszystkie zdefiniowane wcześniej wartości preprocesora.  (-undef) |
+| Pokaż zawiera | Generuje listę plików dołączanych z danymi wyjściowymi kompilatora.  (-H) |
 
 ## <a name="code-generation"></a>Generowanie kodu
 
-Właściwość | Opis | Opcje
---- | ---| ---
-Kod niezależny od położenia | Generuje kod niezależny od położenia (PIC) do użycia w bibliotece udostępnionej.
-Dane statyczne są wątkowo bezpieczne | Emituje dodatkowego kodu w celu użycia procedur określonych w C++ ABI dla wątkowo inicjowanie lokalnych danych statycznych. | **Nie** -Wyłącz wątkowo bezpieczne elementy statyczne.<br/>**Tak** -Włącz wątkowo bezpieczne elementy statyczne.
-Optymalizacja liczb zmiennoprzecinkowych | Umożliwia optymalizacji zmiennopozycyjnych dzięki złagodzeniu wymagań zgodności IEEE 754.
-Ukryte metody wbudowane | Po włączeniu końca wiersza kopii metod wbudowanych są deklarowane `private extern`.
-Symbole ukryte domyślnie | Wszystkie symbole są deklarowane jako `private extern` , chyba że jawnie oznaczone eksportu `__attribute` makra.
-Włącz wyjątki języka C++ | Określa model obsługi wyjątków, używane przez kompilator. | **Nie** -Wyłącz obsługę wyjątków.<br/>**Tak** -Włącz obsługę wyjątków.
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Umieść kod niezależny | Generuje kod niezależny od pozycji (PIC) do użycia w bibliotece udostępnionej. |
+| Elementy statyczne są wątkowo bezpieczne | Emituje dodatkowy kod, aby użyć procedur określonych w C++ ABI na potrzeby inicjowania bezpiecznego wątku lokalnych elementów statycznych. | **Nie** — Wyłącz statycznie bezpieczne dla wątków.<br/>**Tak** — Włącz statycznie bezpieczne wątki. |
+| Optymalizacja liczb zmiennoprzecinkowych | Włącza optymalizacje zmiennoprzecinkowe przez złagodzeniu wymagań dotyczących zgodności IEEE-754. |
+| Ukryte metody wbudowane | Gdy ta funkcja jest włączona, nieaktualne kopie metod wbudowanych są deklarowane `private extern`. |
+| Symbole są domyślnie ukryte | Wszystkie symbole są deklarowane `private extern`, chyba że zostaną jawnie oznaczone do eksportu przy użyciu makra `__attribute`. |
+| Włącz C++ wyjątki | Określa model obsługi wyjątków używany przez kompilator. | **Nie** -Wyłącz obsługę wyjątków.<br/>**Tak** — Włącz obsługę wyjątków. |
 
 ## <a name="language"></a>Język
 
-Właściwość | Opis | Opcje
---- | ---| ---
-Włącz informacje typu Run-Time | Dodaje kod do sprawdzania typów obiektów C++ w czasie wykonywania (informacje o typie środowiska uruchomieniowego).     (frtti, fno-rtti)
-Standard języka C | Określa standard języka C. | **Default**<br/>**C89** — Standard języka C89.<br/>**C99** — Standard języka C99.<br/>**C11** — Standard języka C11.<br/>**C99 (dialekt GNU)** — Standard języka programu C99 (dialekt GNU).<br/>**C11 (dialekt GNU)** — Standard języka programu C11 (dialekt GNU).
-Standard języka C++ | Określa standard języka C++. | **Default**<br/>**C ++ 03** — Standard C ++ 03 języka.<br/>**C ++ 11** — Standard C ++ 11 język.<br/>**C ++ 14** — Standard C ++ 14 języka.<br/>**C ++ 03 (dialekt GNU)** — C ++ 03 (dialekt GNU) języka Standard.<br/>**C ++ 11 (dialekt GNU)** — C ++ 11 (dialekt GNU) języka Standard.<br/>**C ++ 14 (dialekt GNU)** — C ++ 14 (dialekt GNU) języka Standard.
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Włącz informacje o typie w czasie wykonywania | Dodaje kod do sprawdzania C++ typów obiektów w czasie wykonywania (informacje o typie środowiska uruchomieniowego).     (frtti, FNO-RTTI) |
+| Standard języka C | Określa standard języka C. | **Domyślne**<br/>Standard języka **C89** -c89.<br/>Standard języka **C99** -C99.<br/>Standard języka **C11** -C11.<br/>Standard języka **C99 (DIALEKT GNU)** — C99 (dialekt GNU).<br/>Standard języka **C11 (DIALEKT GNU)** — C11 (dialekt GNU). |
+| C++Standard języka | Określa standard C++ języka. | **Domyślne**<br/>Standard języka **C++ 03** -c++ 03.<br/>Standard języka **C++ 11** — c++ 11.<br/>Standard języka **C++ 14** -c++ 14.<br/>**C++ 03 (DIALEKT GNU)** — Standard języka c++ 03 (dialekt GNU).<br/>**C++ 11 (DIALEKT GNU)** — Standard języka c++ 11 (dialekt GNU).<br/>**C++ 14 (DIALEKT GNU)** — Standard języka c++ 14 (dialekt GNU). |
 
 ## <a name="advanced"></a>Zaawansowane
 
-Właściwość | Opis | Opcje
---- | ---| ---
-Kompiluj jako | Wybiera opcję języka kompilowania dla plików .c i .cpp. (-x c, -x c++) | **Domyślne** — wykrywanie na podstawie rozszerzenia c lub CPP rozszerzenia.<br/>**Kompiluj jako kod C** — Kompiluj jako kod C.<br/>**Kompiluj jako C++ kodu** — Kompiluj jako C++ kodu.
-Wymuszone pliki dołączane | Określa co najmniej jeden wymuszony plik dyrektywy pliki dołączane (— obejmują \[nazwa])
+| Właściwość | Opis | Decyzji |
+|--|--|--|
+| Kompiluj jako | Wybiera opcję języka kompilacji dla plików. c i. cpp. (-x c, -x c++) | **Domyślne** — wykrywanie na podstawie rozszerzenia. c lub. cpp.<br/>**Kompiluj jako kod c** Kompiluj jako kod c.<br/>**Kompiluj jako C++**  kod Kompiluj jako C++ kod. |
+| Wymuszone pliki dołączane | Określa co najmniej jeden wymuszony plik dyrektywy include (-include \[Name]) |
 
 ::: moniker-end

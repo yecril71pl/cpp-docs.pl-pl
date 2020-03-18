@@ -1,33 +1,31 @@
 ---
 title: Wiersz polecenia DUMPBIN
 ms.date: 11/04/2016
-f1_keywords:
-- dumpbin
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 1f94b26ca3bdc2778c2f9ed41103b456f5194fe3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f663a74fd57f52aa559270d61df4a130cf7e86f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271947"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440071"
 ---
 # <a name="dumpbin-command-line"></a>Wiersz polecenia DUMPBIN
 
-Aby uruchomić DUMPBIN, użyj następującej składni:
+Aby uruchomić polecenia DUMPBIN, należy użyć następującej składni:
 
 ```
 DUMPBIN [options] files...
 ```
 
-Określ jeden lub więcej plików binarnych, razem ze wszystkimi opcjami wymagane do sterowania informacjami. DUMPBIN Wyświetla informacje do wyjścia standardowego. Możesz przekierować go do pliku lub użyj opcji Out, aby określić nazwę pliku dla danych wyjściowych.
+Określ co najmniej jeden plik binarny wraz z wszelkimi opcjami wymaganymi do kontrolowania informacji. POLECENIA DUMPBIN wyświetla informacje w standardowym wyjściu. Można przekierować do pliku lub użyć opcji/OUT, aby określić nazwę pliku dla danych wyjściowych.
 
-Po uruchomieniu polecenia DUMPBIN dla pliku bez określania opcji DUMPBIN Wyświetla przełącznika/Summary danych wyjściowych.
+Gdy uruchamiasz polecenia DUMPBIN w pliku bez określenia opcji, polecenia DUMPBIN wyświetla dane wyjściowe/SUMMARY.
 
-Po wpisaniu polecenia `dumpbin` bez żadnych innych danych wiersza polecenia DUMPBIN wyświetla instrukcji użycia, który podsumowuje opcje.
+Gdy wpiszesz polecenie `dumpbin` bez żadnych innych danych wejściowych wiersza polecenia, polecenia DUMPBIN wyświetli instrukcję Usage, która podsumowuje jej opcje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
+[Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)<br/>
 [DUMPBIN — dokumentacja](dumpbin-reference.md)

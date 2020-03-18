@@ -1,8 +1,6 @@
 ---
 title: Klasa CCmdUI
 ms.date: 11/04/2016
-f1_keywords:
-- CCmdUI
 helpviewer_keywords:
 - updating user interface objects [MFC]
 - user interface objects [MFC], updating
@@ -10,21 +8,21 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 105aa7ad6c5cc6a5563dbde8145327a2b3d066a1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306304"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447141"
 ---
 # <a name="the-ccmdui-class"></a>Klasa CCmdUI
 
-Gdy polecenie aktualizacji kieruje do jej obsługi, struktura przekazuje obsługi wskaźnik do `CCmdUI` obiektu (lub do obiektu `CCmdUI`-klasy pochodnej). Ten obiekt reprezentuje przycisk paska narzędzi lub elementu menu lub inny obiekt interfejsu użytkownika, który wygenerował polecenia. Procedura obsługi aktualizacji wywołuje element członkowski funkcji `CCmdUI` struktury za pomocą wskaźnika można zaktualizować obiektu interfejsu użytkownika. Na przykład poniżej przedstawiono procedury obsługi aktualizacji, wyczyść wszystkie elementu menu:
+Gdy kieruje polecenie Update do programu obsługi, struktura przekazuje programowi obsługi wskaźnik do obiektu `CCmdUI` (lub do obiektu klasy pochodnej `CCmdUI`). Ten obiekt reprezentuje element menu lub przycisk paska narzędzi lub inny obiekt interfejsu użytkownika, który wygenerował polecenie. Procedura obsługi aktualizacji wywołuje funkcje członkowskie struktury `CCmdUI` za pomocą wskaźnika, aby zaktualizować obiekt interfejsu użytkownika. Na przykład poniżej przedstawiono procedurę obsługi aktualizacji dla elementu menu Wyczyść wszystko:
 
 [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]
 
-Ten program obsługi wywołania `Enable` funkcji składowej typu obiektu z dostępem do elementu menu. `Enable` udostępnia element do użycia.
+Ta procedura obsługi wywołuje `Enable` funkcję członkowską obiektu z dostępem do elementu menu. `Enable` udostępnia element do użycia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Instrukcje: Aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
+[Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)

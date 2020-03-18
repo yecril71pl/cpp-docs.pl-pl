@@ -1,38 +1,36 @@
 ---
 title: Klasa CWinApp i kreator aplikacji MFC
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241587"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447042"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>Klasa CWinApp i kreator aplikacji MFC
 
-Podczas tworzenia szkielet aplikacji, Kreator aplikacji MFC deklaruje pochodną klasę aplikacji [CWinApp](../mfc/reference/cwinapp-class.md). Kreator aplikacji MFC generuje również plik implementacji, który zawiera następujące elementy:
+Podczas tworzenia aplikacji szkieletowej Kreator aplikacji MFC deklaruje klasę aplikacji pochodzącą od [CWinApp](../mfc/reference/cwinapp-class.md). Kreator aplikacji MFC generuje również plik implementacji zawierający następujące elementy:
 
-- Mapy komunikatów dla klasy aplikacji.
+- Mapa komunikatów dla klasy aplikacji.
 
-- Konstruktor pustą klasę.
+- Pusty Konstruktor klasy.
 
-- Zmienna, która deklaruje tylko obiekt klasy.
+- Zmienna, która deklaruje jeden i tylko obiekt klasy.
 
-- Standardowa implementacja usługi `InitInstance` funkcja elementu członkowskiego.
+- Standardowa implementacja funkcji składowej `InitInstance`.
 
-Klasa aplikacji znajduje się w nagłówku projektu i plików źródłowych głównego. Nazwy klasy i pliki tworzone są oparte na nazwę projektu, który podasz w Kreatorze aplikacji MFC. Najprostszym sposobem, aby wyświetlić kod dla tych klas jest za pośrednictwem [Widok klas](/visualstudio/ide/viewing-the-structure-of-code).
+Klasa aplikacji jest umieszczana w nagłówku projektu i głównych plikach źródłowych. Nazwy tworzonych klas i plików są oparte na nazwie projektu dostarczanej w Kreatorze aplikacji MFC. Najprostszym sposobem wyświetlania kodu dla tych klas jest [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code).
 
-Standardowe wdrożenia i mapy wiadomości podano są odpowiednie dla wielu celów, ale możesz modyfikować je stosownie do potrzeb. Najbardziej interesujące tych implementacji `InitInstance` funkcja elementu członkowskiego. Zazwyczaj należy dodać kod do implementacji szkieletowych `InitInstance`.
+Dostarczone implementacje standardowe i mapa komunikatów są odpowiednie dla wielu celów, ale można je zmodyfikować w razie potrzeby. Najbardziej interesujące są te implementacje `InitInstance` funkcji składowej. Zazwyczaj należy dodać kod do implementacji szkieletowej `InitInstance`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)<br/>
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)<br/>
 [Funkcje składowe CWinApp z możliwością zastąpienia](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Specjalne usługi CWinApp](../mfc/special-cwinapp-services.md)

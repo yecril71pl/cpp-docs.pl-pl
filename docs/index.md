@@ -3,13 +3,15 @@ layout: HubPage
 title: Dokumentacja C++ wizualna
 description: Dowiedz się, C++ jak używać programu do tworzenia aplikacji, usług i narzędzi dla Twoich platform i urządzeń.
 ms.topic: hub-page
-ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793803"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446105"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
@@ -60,7 +62,7 @@ ms.locfileid: "75793803"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Co nowego C++ w programie Visual Studio</h3>
+                                    <h3>Co nowego w języku C++ w programie Visual Studio</h3>
                                 </div>
                             </div>
                         </div>
@@ -73,11 +75,11 @@ ms.locfileid: "75793803"
         <h1>Dokumentacja C++ wizualna</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Obciążenia</a>
-                <ul id="workloads">
+                 
+                <a href="#workloads">obciążeń</a><ul id="workloads">
                     <li>
-                        <a href="#workloads1">Obciążenia</a>
-                        <ul id="workloads1" class="cardsC">
+                         
+                        <a href="#workloads1">obciążeń</a><ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
                                     <div class="cardSize">
@@ -108,7 +110,7 @@ ms.locfileid: "75793803"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Programowanie aplikacji Windows w języku C++</h3>
+                                                    <h3>Tworzenie aplikacji dla systemu Windows w języku C++</h3>
                                                     <p>Twórz klasyczne aplikacje pulpitu systemu Windows, statyczne libs i dll przy użyciu Win32, MFC, ATL, COM i/ C++lub/CLI.</p>
                                                 </div>
                                             </div>
@@ -232,7 +234,7 @@ ms.locfileid: "75793803"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>{1&gt;Kompilacja&lt;1}</h3>
+                                                    <h3>Kompilacja</h3>
                                                     <p>Kompiluj i łącz swój kod i Optymalizuj pod kątem maksymalnej przepływności.</p>
                                                 </div>
                                             </div>
@@ -270,7 +272,7 @@ ms.locfileid: "75793803"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>{1&gt;Test&lt;1}</h3>
+                                                    <h3>Testowanie</h3>
                                                     <p>Utwórz testy jednostkowe dla C++ kodu.</p>
                                                 </div>
                                             </div>
@@ -289,7 +291,7 @@ ms.locfileid: "75793803"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Wdrażanie programu</h3>
+                                                    <h3>Wdrażanie</h3>
                                                     <p>Dystrybuuj gotowy program do użytkowników końcowych.</p>
                                                 </div>
                                             </div>
@@ -309,7 +311,7 @@ ms.locfileid: "75793803"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Poprawianie wydajności</h3>
-                                                    <p>Zidentyfikuj wąskie gardła i zoptymalizować wydajność kodu za pomocą narzędzi diagnostycznych.</p>
+                                                    <p>Identyfikowanie wąskich gardeł i optymalizowanie wydajności kodu przy użyciu narzędzi diagnostycznych.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,7 +329,7 @@ ms.locfileid: "75793803"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>przenoszenie i uaktualnianie</h3>
+                                                    <h3>Eksportowanie i uaktualnianie</h3>
                                                     <p>Uaktualnij do najnowszej wersji programu Visual Studio i Migruj starsze aplikacje na nowoczesne platformy.</p>
                                                 </div>
                                             </div>

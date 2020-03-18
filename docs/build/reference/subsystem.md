@@ -2,22 +2,22 @@
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
-- /subsystem
+- /subsystem_editbin
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450731"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438861"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
-Określa środowisko wykonawcze, wymagane przez obraz uruchamiany.
+Określa środowisko wykonywania wymagane przez obraz wykonywalny.
 
 ```
 /SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|
@@ -27,48 +27,48 @@ Określa środowisko wykonawcze, wymagane przez obraz uruchamiany.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja edytuje obraz, aby wskazać który podsystem musi zostać wywołany systemu operacyjnego do wykonania.
+Ta opcja umożliwia edycję obrazu w celu wskazania, który podsystem musi zostać wywołany przez system operacyjny w celu wykonania.
 
-Można określić dowolny z poniższych podsystemów:
+Można określić dowolne z następujących podsystemów:
 
 **BOOT_APPLICATION**<br/>
-Aplikacja, która jest uruchamiana w środowisku Windows rozruchowego. Aby uzyskać więcej informacji dotyczących aplikacji rozruchu, zobacz [o dostawcy BCD WMI](/previous-versions/windows/desktop/bcd/about-bcd).
+Aplikacja działająca w środowisku rozruchu systemu Windows. Aby uzyskać więcej informacji na temat aplikacji rozruchowych, zobacz [Informacje o dostawcy WMI BCD](/previous-versions/windows/desktop/bcd/about-bcd).
 
-**KONSOLA**<br/>
-Tryb znakowy aplikacji Windows. System operacyjny zapewnia konsolę dla aplikacji konsoli.
+**KONSOLI**<br/>
+Aplikacja w trybie znakowym systemu Windows. System operacyjny udostępnia konsolę aplikacji konsolowych.
 
 **EFI_APPLICATION**<br/>
 **EFI_BOOT_SERVICE_DRIVER**<br/>
 **EFI_ROM**<br/>
 **EFI_RUNTIME_DRIVER**<br/>
-Extensible Firmware Interface (EFI) obrazu
+Obraz Extensible Firmware Interface (EFI)
 
-Opcje podsystemu EFI opisują wykonywalne obrazów, które działają w środowisku rozszerzalnego interfejsu oprogramowania układowego. To środowisko jest typowo wyposażone sprzęt i jest wykonywany przed załadowaniem systemu operacyjnego. Najważniejsze różnice między typami obrazów EFI są lokalizacji w pamięci, który obraz, który jest ładowany i akcję, która zostanie podjęta, gdy zwraca wywołanie do obrazu. Obraz EFI_APPLICATION jest zwolniony, gdy zwraca formant. EFI_BOOT_SERVICE_DRIVER lub EFI_RUNTIME_DRIVER jest zwalniany tylko wtedy, gdy formant zwraca kod błędu. Obraz EFI_ROM jest wykonywany z ROM. Aby uzyskać więcej informacji, zobacz specyfikację w witrynie [Unified EFI Forum](https://www.uefi.org/) witryny sieci Web.
+Opcje podsystemu EFI opisują obrazy wykonywalne, które działają w środowisku Extensible Firmware Interface. To środowisko jest zwykle dostarczane z sprzętem i wykonywane przed załadowaniem systemu operacyjnego. Główne różnice między typami obrazów EFI są lokalizacją pamięci, do której obraz jest ładowany, i akcją wykonywaną po powrocie wywołania obrazu. Obraz EFI_APPLICATION zostanie zwolniony po powrocie kontroli. EFI_BOOT_SERVICE_DRIVER lub EFI_RUNTIME_DRIVER jest zwalniane tylko wtedy, gdy sterowanie zwraca kod błędu. Obraz EFI_ROM jest wykonywany z pamięci ROM. Aby uzyskać więcej informacji, zapoznaj się ze specyfikacjami w witrynie [ujednoliconego forum interfejsu EFI](https://www.uefi.org/) .
 
-**NATYWNE**<br/>
-Kod, który jest uruchamiany bez środowiska podsystemu — na przykład sterowniki urządzeń trybu jądra i procesów systemu macierzystego. Ta opcja jest zazwyczaj zarezerwowana dla funkcji systemu Windows.
+**TRYBU**<br/>
+Kod, który jest uruchamiany bez środowiska podsystemu — na przykład sterowniki urządzeń trybu jądra i procesy systemu macierzystego. Ta opcja jest zwykle zarezerwowana dla funkcji systemu Windows.
 
 **POSIX**<br/>
-Aplikacja, która działa w podsystemie POSIX w Windows.
+Aplikacja działająca w podsystemie POSIX w systemie Windows.
 
-**SYSTEMU WINDOWS**<br/>
-Aplikacja, która działa w pśrodowisku graficznym Windows. Obejmuje to aplikacje pulpitu i aplikacje platformy uniwersalnej Windows (UWP).
+**Systemy**<br/>
+Aplikacja działająca w środowisku graficznym systemu Windows. Dotyczy to zarówno aplikacji klasycznych, jak i aplikacji platforma uniwersalna systemu Windows (platformy UWP).
 
 **WINDOWSCE**<br/>
-Podsystem WINDOWSCE oznacza, że aplikacja jest przeznaczony do uruchamiania na urządzeniu, które ma wersję jądra Windows CE. Wersje jądra obejmują PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 oraz Windows Embedded Compact 7.
+Podsystem WINDOWSCE wskazuje, że aplikacja jest przeznaczona do uruchamiania na urządzeniu z wersją jądra Windows CE. Wersje jądra obejmują PocketPC, Windows Mobile, Windows Phone 7, Windows CE V 1.0 — 6.0 R3 i Windows Embedded Compact 7.
 
-Opcjonalny `major` i `minor` wartości określają minimalną wymaganą wersję określonego podsystemu:
+Opcjonalne `major` i `minor` określają minimalną wymaganą wersję określonego podsystemu:
 
-- Cała część numeru wersji — część po lewej stronie przecinka dziesiętnego — jest reprezentowana przez `major`.
+- Liczba całkowita części numeru wersji — część po lewej stronie przecinka dziesiętnego — jest reprezentowana przez `major`.
 
-- Część ułamkowa numeru wersji — część po prawej stronie przecinka dziesiętnego — jest reprezentowana przez `minor`.
+- Część ułamkowa numeru wersji — część z prawej strony punktu dziesiętnego — jest reprezentowana przez `minor`.
 
-- Wartości `major` i `minor` musi być z zakresu od 0 do 65 535.
+- Wartości `major` i `minor` muszą zawierać się w zakresie od 0 do 65 535.
 
-Wybór podsystemu wpływa na domyślny początkowy adres dla programu. Aby uzyskać więcej informacji, zobacz [/Entry (Symbol punktu wejścia)](entry-entry-point-symbol.md), konsolidatora/Entry:*funkcja* opcji.
+Wybór podsystemu wpływa na domyślny adres początkowy programu. Aby uzyskać więcej informacji, zobacz [/entry (symbol punktu wejścia)](entry-entry-point-symbol.md), konsolidator/entry:*Funkcja* .
 
-Aby uzyskać więcej informacji, w tym wartościach minimalnych i domyślnych dla numerów wersji głównych i pomocniczych każdego podsystemu, zobacz [/Subsystem](subsystem-specify-subsystem.md) — opcja konsolidatora.
+Aby uzyskać więcej informacji, w tym wartości minimalne i domyślne dla głównych i pomocniczych numerów wersji dla każdego podsystemu, zobacz [/Subsystem](subsystem-specify-subsystem.md) -opcja konsolidatora.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje EDITBIN](editbin-options.md)

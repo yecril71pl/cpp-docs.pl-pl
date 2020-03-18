@@ -4,54 +4,54 @@ ms.date: 11/04/2016
 f1_keywords:
 - CDWordArray
 - AFXCOLL/CDWordArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CDWordArray::CDWordArray
+- AFXCOLL/CDWordArray::Add
+- AFXCOLL/CDWordArray::Append
+- AFXCOLL/CDWordArray::Copy
+- AFXCOLL/CDWordArray::ElementAt
+- AFXCOLL/CDWordArray::FreeExtra
+- AFXCOLL/CDWordArray::GetAt
+- AFXCOLL/CDWordArray::GetCount
+- AFXCOLL/CDWordArray::GetData
+- AFXCOLL/CDWordArray::GetSize
+- AFXCOLL/CDWordArray::GetUpperBound
+- AFXCOLL/CDWordArray::InsertAt
+- AFXCOLL/CDWordArray::IsEmpty
+- AFXCOLL/CDWordArray::RemoveAll
+- AFXCOLL/CDWordArray::RemoveAt
+- AFXCOLL/CDWordArray::SetAt
+- AFXCOLL/CDWordArray::SetAtGrow
+- AFXCOLL/CDWordArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CDWordArray [MFC], CDWordArray
+- CDWordArray [MFC], Add
+- CDWordArray [MFC], Append
+- CDWordArray [MFC], Copy
+- CDWordArray [MFC], ElementAt
+- CDWordArray [MFC], FreeExtra
+- CDWordArray [MFC], GetAt
+- CDWordArray [MFC], GetCount
+- CDWordArray [MFC], GetData
+- CDWordArray [MFC], GetSize
+- CDWordArray [MFC], GetUpperBound
+- CDWordArray [MFC], InsertAt
+- CDWordArray [MFC], IsEmpty
+- CDWordArray [MFC], RemoveAll
+- CDWordArray [MFC], RemoveAt
+- CDWordArray [MFC], SetAt
+- CDWordArray [MFC], SetAtGrow
+- CDWordArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-ms.openlocfilehash: 8cc67e62d905710ba5d63bf93c7b8aa1bf50f69c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f17caafd01bb5ddfa49afe378bfd79652149ebd8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206133"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447346"
 ---
 # <a name="cdwordarray-class"></a>Klasa CDWordArray
 
-Obsługuje macierze 32-bitowych słów podwójnych.
+Obsługuje tablice 32-bitowe doublewords.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,64 +61,64 @@ class CDWordArray : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje elementów członkowskich `CDWordArray` są podobne do funkcji elementów członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa można użyć `CObArray` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp `DWORD`.
+Funkcje składowe `CDWordArray` są podobne do funkcji składowych klasy [CObArray](../../mfc/reference/cobarray-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CObArray` dla specyficznych dla funkcji składowych. W każdym przypadku, gdy widzisz wskaźnik `CObject` jako parametr funkcji lub wartość zwracana, Zastąp `DWORD`.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
-na przykład przekłada się na
+na przykład tłumaczy na
 
 `DWORD CDWordArray::GetAt( int <nIndex> ) const;`
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Tworzy pustą tablicę.|
+|[CDWordArray::CDWordArray](../../mfc/reference/cobarray-class.md#cobarray)|Konstruuje pustą tablicę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Dodaje element do końca tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Dołącza innej tablicy do tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiuje innej tablicy do tablicy; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Zwraca tymczasowe odwołanie do bajtów w tablicy.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywanej pamięci powyżej bieżącego górną granicę.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość pod danym indeksem.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartości NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy nieprawidłowy indeks.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) z określonym indeksem.|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element pod określonym indeksem.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla podanego indeksu; Tablica nie może wzrosnąć.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla podanego indeksu; zwiększa rozmiar tablicy, jeśli to konieczne.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
+|[CDWordArray:: Add](../../mfc/reference/cobarray-class.md#add)|Dodaje element na końcu tablicy; w razie potrzeby powiększa tablicę.|
+|[CDWordArray:: Append](../../mfc/reference/cobarray-class.md#append)|Dołącza kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CDWordArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiuje kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CDWordArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Zwraca tymczasowe odwołanie do bajtu w tablicy.|
+|[CDWordArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywane pamięci powyżej bieżącej górnej granicy.|
+|[CDWordArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość w danym indeksie.|
+|[CDWordArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
+|[CDWordArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartość NULL.|
+|[CDWordArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
+|[CDWordArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy prawidłowy indeks.|
+|[CDWordArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) o określonym indeksie.|
+|[CDWordArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
+|[CDWordArray::](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
+|[CDWordArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element z określonym indeksem.|
+|[CDWordArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla danego indeksu; Tablica nie może być większa.|
+|[CDWordArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby powiększa tablicę.|
+|[CDWordArray:: setSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
+|[CDWordArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDWordArray` dołącza `IMPLEMENT_SERIAL` makra do obsługi serializacji i zrzucanie z jego elementów. Jeśli tablica wyrazy w liczbie mnogiej są przechowywane do archiwum, przy użyciu przeciążonych wstawiania ( **<<**) — operator lub `Serialize` funkcji członkowskiej, każdy element jest, pozycji serializacji.
+`CDWordArray` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i dumpingu jego elementów. Jeśli tablica doublewords jest przechowywana w archiwum, za pomocą operatora przeciążonego wstawiania ( **<<** ) lub funkcji składowej `Serialize`, każdy element jest z kolei serializowany.
 
 > [!NOTE]
->  Przed rozpoczęciem korzystania z tablicy, należy użyć `SetSize` jej rozmiaru i przydzielanie pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje, że często ponownie przydzielane i skopiować. Częste ponowne przydzielenie kopiowania są nieefektywne i może fragmentu pamięci.
+>  Przed użyciem tablicy Użyj `SetSize`, aby ustalić jej rozmiar i przydzielić pamięć. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje częste ponowną alokację i kopiowanie. Częste ponowne przydzielanie i kopiowanie są niewydajne i mogą fragmentację pamięci.
 
-Jeśli debugujesz potrzebne dane wyjściowe z poszczególnych elementów w tablicy, należy ustawić głębokość `CDumpContext` obiekt do 1 lub większą.
+Jeśli potrzebujesz debugowania danych wyjściowych z poszczególnych elementów w tablicy, musisz ustawić głębokość obiektu `CDumpContext` na 1 lub większą.
 
-Aby uzyskać więcej informacji na temat korzystania z `CDWordArray`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).
+Aby uzyskać więcej informacji na temat korzystania z `CDWordArray`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcoll.h
+**Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

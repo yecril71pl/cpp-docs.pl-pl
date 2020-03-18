@@ -3,12 +3,12 @@ title: Tworzenie i Konfigurowanie projektu systemu Linux CMake w programie Visua
 description: Jak utworzyć, skonfigurować, edytować i kompilować projekt systemu Linux CMake w programie Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a0b98e1d0e9ca5e68f5fd12c458fe29b9835b65c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419407"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446864"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Tworzenie i konfigurowanie projektu CMake systemu Linux
 
@@ -202,6 +202,7 @@ Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2
   ]
 }
 ```
+
 ::: moniker-end
 
 Aby uzyskać więcej informacji na temat tych ustawień, zobacz [Dokumentacja pliku cmakesettings. JSON](../build/cmakesettings-reference.md).

@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421346"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446459"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 
@@ -340,11 +340,11 @@ Nazwa obiektu uwidaczniana innym aplikacjom (ujętym w cudzysłów).
 *nFlags*<br/>
 Zawiera co najmniej jedną z następujących flag:
 
-   - `afxRegInsertable` umożliwia wyświetlenie formantu w oknie dialogowym Wstaw obiekt dla obiektów OLE.
-   - `afxRegApartmentThreading` ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
-   - `afxRegFreeThreading` ustawia model wątkowości w rejestrze, aby ThreadingModel = Free.
+- `afxRegInsertable` umożliwia wyświetlenie formantu w oknie dialogowym Wstaw obiekt dla obiektów OLE.
+- `afxRegApartmentThreading` ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
+- `afxRegFreeThreading` ustawia model wątkowości w rejestrze, aby ThreadingModel = Free.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading`, aby ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
 
 *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*, *B8* składniki klasy CLSID.
 

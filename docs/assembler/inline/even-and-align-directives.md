@@ -1,9 +1,6 @@
 ---
 title: EVEN i ALIGN — dyrektywy
 ms.date: 08/30/2018
-f1_keywords:
-- align
-- EVEN
 helpviewer_keywords:
 - EVEN directive
 - directives, MASM
@@ -11,21 +8,21 @@ helpviewer_keywords:
 - NOP (no operation instruction)
 - ALIGN directive
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
-ms.openlocfilehash: 522d5689d680d0fc334743d2802abe21570dd6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63fa73988b9b9433a988035789a923ac73936214
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167322"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441579"
 ---
 # <a name="even-and-align-directives"></a>EVEN i ALIGN — dyrektywy
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Mimo że wbudowanego asemblera nie obsługuje większość dyrektywy MASM, obsługuje on `EVEN` i **WYRÓWNAJ**. Te dyrektywy umieścić **NOP** (żadna operacja) zgodnie z instrukcjami w kodzie zestawu, zgodnie z potrzebami, aby wyrównać etykiety do określonych granic. To sprawia, że operacje pobierania instrukcji bardziej wydajne dla niektórych procesorów.
+Chociaż wbudowany asembler nie obsługuje większości dyrektyw MASM, obsługuje `EVEN` i **wyrównywania**. Te dyrektywy wprowadzają **NOP** (bez operacji) instrukcje w kodzie zestawu, jak jest to konieczne do wyrównywania etykiet do określonych granic. Dzięki temu operacje pobierania instrukcji są bardziej wydajne w przypadku niektórych procesorów.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

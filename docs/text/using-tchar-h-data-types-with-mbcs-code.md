@@ -1,8 +1,6 @@
 ---
 title: Używanie typów danych TCHAR.H z kodem _MBCS
 ms.date: 11/04/2016
-f1_keywords:
-- TCHAR
 helpviewer_keywords:
 - mapping generic-text
 - generic-text data types [C++]
@@ -11,60 +9,60 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 0e26aefd8b9099a2ca5e76ce9e2b7d1def2f9854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78e5d89e1e87d081e762fab1298eb990b914324c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410502"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446594"
 ---
-# <a name="using-tcharh-data-types-with-mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
+# <a name="using-tcharh-data-types-with-_mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 
-Gdy stała manifestu `_MBCS` jest zdefiniowany, danej procedury zwykłego tekstu mapuje do jednej z następujących rodzajów procedury:
+Gdy `_MBCS` jest zdefiniowana stała manifestu, dana procedura ogólna tekstu mapuje do jednego z następujących rodzajów procedur:
 
-- Procedury SBCS, która obsługuje wielobajtowych bajtów, znaków i ciągów, odpowiednio. W tym przypadku powinny być typu argumenty typu string `char*`. Na przykład `_tprintf` mapuje `printf`; argumentów ciągów `printf` typu `char*`. Jeśli używasz `_TCHAR` typ danych — zwykły tekst dla ciągu typy, typy formalnego i rzeczywistego parametru dla `printf` zgodny, ponieważ `_TCHAR*` mapuje `char*`.
+- Procedura SBCS, która obsługuje odpowiednio bajty wielobajtowe, znaki i ciągi. W takim przypadku argumenty ciągu powinny być typu `char*`. Na przykład `_tprintf` Maps `printf`; argumenty ciągu do `printf` są typu `char*`. Jeśli używasz typu danych `_TCHAR` Generic-Text dla typów ciągów, formalne i rzeczywiste typy parametrów dla `printf` Match, ponieważ `_TCHAR*` mapowania do `char*`.
 
-- Procedury specyficzne dla MBCS. W tym przypadku powinny być typu argumenty typu string `unsigned char*`. Na przykład `_tcsrev` mapuje `_mbsrev`, który oczekuje, że i zwraca ciąg typu `unsigned char*`. Jeśli używasz `_TCHAR` ma typ danych — zwykły tekst dla swojego typu string jest potencjalny konflikt typu `_TCHAR` mapy na typ `char`.
+- Procedura specyficzna dla MBCS. W takim przypadku argumenty ciągu powinny być typu `unsigned char*`. Na przykład `_tcsrev` mapuje do `_mbsrev`, która oczekuje i zwraca ciąg typu `unsigned char*`. Jeśli używasz typu danych `_TCHAR` Generic-Text dla typów ciągów, występuje konflikt typu potencjalnego, ponieważ `_TCHAR` mapuje do typu `char`.
 
-Poniżej przedstawiono trzy rozwiązania do zapobiegania ten konflikt typu (i ostrzeżenia kompilatora C lub C++ błędy kompilatora, które umożliwiałyby):
+Poniżej znajdują się trzy rozwiązania uniemożliwiające konflikt tego typu (oraz ostrzeżenia kompilatora C C++ lub błędy kompilatora, które byłyby wynikiem):
 
-- Użyj zachowania domyślnego. Tchar.h udostępnia prototypy procedur zwykłego tekstu dla procedur w bibliotekach wykonawczych, jak w poniższym przykładzie.
+- Użyj zachowania domyślnego. Używanie TCHAR. h zawiera prototypy procedury tekstu ogólnego dla procedur w bibliotekach czasu wykonywania, jak w poniższym przykładzie.
 
     ```cpp
     char * _tcsrev(char *);
     ```
 
-   W przypadku domyślnej prototypu `_tcsrev` mapuje `_mbsrev` za pośrednictwem osadzony w Libc.lib. Spowoduje to zmianę typów `_mbsrev` parametry przychodzące i wychodzące zwracają wartość z `_TCHAR*` (czyli `char *`) do `unsigned char *`. Ta metoda zapewnia typ dopasowania, gdy używasz `_TCHAR`, ale jest stosunkowo niska z powodu obciążenie wywołania funkcji.
+   W domyślnym przypadku prototyp `_tcsrev` mapowania do `_mbsrev` za pomocą thunk w libc. lib. Spowoduje to zmianę typów `_mbsrev` przychodzących parametrów i wychodzącej wartości zwracanej z `_TCHAR*` (czyli `char *`) do `unsigned char *`. Ta metoda zapewnia Dopasowywanie typów w przypadku używania `_TCHAR`, ale jest stosunkowo niska z powodu obciążenia wywołania funkcji.
 
-- Aby użyć funkcji wbudowanie, zawierające następującą instrukcję preprocesora w kodzie.
+- Użyj funkcji tworzenia i wykreślania w kodzie następujących instrukcji preprocesora.
 
     ```cpp
     #define _USE_INLINING
     ```
 
-   Ta metoda powoduje, że thunk funkcji wbudowanych, podany w pliku tchar.h procedury — zwykły tekst bezpośrednio mapować do odpowiedniej procedury MBCS. W poniższym fragmencie kodu z pliku tchar.h przykład jak to zrobić.
+   Ta metoda powoduje, że Wbudowana funkcja thunk w używanie TCHAR. h mapuje procedurę tekstu ogólnego bezpośrednio do odpowiedniej procedury MBCS. Poniższy fragment kodu z używanie TCHAR. h zawiera przykład tego, jak to zrobić.
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
     {return (char *)_mbsrev((unsigned char *)_s1);}
     ```
 
-   Jeśli użyjesz wstawienia, zrównoważenia jest najlepszym rozwiązaniem, ponieważ gwarantuje to typ dopasowania i ma koszt nie dodatkowego czasu.
+   Jeśli możesz użyć funkcji tworzenia konspektu, jest to najlepsze rozwiązanie, ponieważ gwarantuje ono zgodność typów i nie ma dodatkowego kosztu czasu.
 
-- Za pomocą bezpośredniego mapowania zawierające następującą instrukcję preprocesora w kodzie.
+- Używaj bezpośredniego mapowania, dołączając następującą instrukcję preprocesora w kodzie.
 
     ```cpp
     #define _MB_MAP_DIRECT
     ```
 
-   To podejście oferuje szybkie alternatywna, jeśli nie mają być używane domyślne zachowanie lub nie można użyć ze śródwierszowaniem. Powoduje procedury zwykłego tekstu mają być mapowane przez makro bezpośrednio do wersji MBCS standardowego, jak w poniższym przykładzie z tchar.h.
+   Takie podejście zapewnia szybką alternatywę, jeśli nie chcesz używać zachowania domyślnego lub nie można użyć funkcji tworzenia konspektu. Powoduje to zamapowanie procedury tekstu ogólnego przez makro bezpośrednio do wersji MBCS procedury, jak w poniższym przykładzie z używanie TCHAR. h.
 
     ```cpp
     #define _tcschr _mbschr
     ```
 
-   W przypadku zastosowania tego podejścia musi być ostrożnym, aby zapewnić stosowanie typów danych odpowiednie argumenty typu string i zwracane wartości ciągu. Rzutowanie typów można użyć do zapewnienia odpowiedniego typu dopasowania lub skorzystać z `_TXCHAR` typu danych — zwykły tekst. `_TXCHAR` mapuje do typu **char** SBCS kodu, ale mapy na typ **unsigned char** MBCS kodu. Aby uzyskać więcej informacji na temat makra zwykłego tekstu, zobacz [mapowania typ ogólny-tekst](../c-runtime-library/generic-text-mappings.md) w *odwołanie do biblioteki wykonawczej*.
+   Po podniesieniu tego podejścia należy zachować ostrożność, aby zapewnić użycie odpowiednich typów danych dla argumentów ciągów i wartości zwracanych przez ciąg. Można użyć rzutowania typu, aby upewnić się, że odpowiedni typ jest zgodny lub można użyć `_TXCHAR` typu danych rodzajowych. `_TXCHAR` mapuje do typu **char** w kodzie SBCS, ale mapuje na typ **unsigned char** in Code MBCS. Aby uzyskać więcej informacji na temat makr tekstu ogólnego, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w *dokumentacji biblioteki wykonawczej*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapowania typu ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)

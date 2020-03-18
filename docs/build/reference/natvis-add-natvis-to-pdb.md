@@ -1,50 +1,49 @@
 ---
-title: / NATVIS (Dodaj Natvis do PDB)
+title: /NATVIS (Dodaj Natvis do PDB)
 ms.date: 08/10/2017
 f1_keywords:
 - /natvis
-- VC.Project.VCLinkerTool.ImportLIbrary
 helpviewer_keywords:
 - NATVIS linker option
 - /NATVIS linker option
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16e320a2f8f946912fef6a354f27f6514a67e29
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320620"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439277"
 ---
-# <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (Dodaj Natvis do PDB)
+# <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (Dodaj Natvis do PDB)
 
-> / NATVIS:*nazwy pliku*
+> /NATVIS:*filename*
 
 ## <a name="parameters"></a>Parametry
 
 *Nazwa pliku*<br/>
-Plik Natvis do dodania do pliku PDB. Ona osadzona wizualizacji debugera w pliku Natvis do PDB.
+Plik Natvis do dodania do pliku PDB. Osadza wizualizacje debugera w pliku Natvis do PDB.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja /NATVIS osadza wizualizacji debugera, zdefiniowane w pliku Natvis *filename* w pliku PDB, wygenerowanego przez łącze. Dzięki temu debugera wyświetlić wizualizacje, niezależnie od pliku .natvis. Wiele opcji /NATVIS umożliwia osadzanie plików Natvis w wygenerowanym pliku PDB.
+Opcja/NATVIS osadza wizualizacje debugera zdefiniowane w pliku Natvis *filename* w pliku PDB wygenerowanym przez link. Dzięki temu debuger może wyświetlać wizualizacje niezależnie od pliku. Natvis. Można użyć wielu opcji/NATVIS do osadzenia więcej niż jednego pliku Natvis w wygenerowanym pliku PDB.
 
-LINK ignoruje /NATVIS, gdy plik PDB nie została utworzona przy użyciu [/DEBUG](debug-generate-debug-info.md) opcji. Aby uzyskać informacji na temat tworzenia i używania pliku .natvis, zobacz [Tworzenie niestandardowych widoków obiektów macierzystych w debugerze programu Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+LINK ignoruje/NATVIS, gdy plik PDB nie jest tworzony przy użyciu opcji [/Debug](debug-generate-debug-info.md) . Aby uzyskać informacje na temat tworzenia i używania plików. Natvis, zobacz [Tworzenie niestandardowych widoków obiektów natywnych w debugerze programu Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** — strona właściwości w **konsolidatora** folderu.
+1. Wybierz stronę właściwości **wiersza polecenia** w folderze **konsolidatora** .
 
-1. Dodaj opcję /NATVIS **dodatkowe opcje** pola tekstowego.
+1. Dodaj opcję/NATVIS do pola tekstowego **Opcje dodatkowe** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Ta opcja nie ma programowy odpowiednik.
+- Ta opcja nie ma programowego odpowiednika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

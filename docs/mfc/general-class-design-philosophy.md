@@ -1,8 +1,6 @@
 ---
 title: Ogólne zasady projektowania klas
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - designing classes [MFC]
 - MFC, Windows API
@@ -10,43 +8,43 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-ms.openlocfilehash: 4dfa11c73703f5f2d3d17f8278610d32178af679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a173802e3fa43615c05da4ce747592f851228f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219622"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441189"
 ---
 # <a name="general-class-design-philosophy"></a>Ogólne zasady projektowania klas
 
-Program Microsoft Windows została tak przygotowana, czas, zanim się języka C++. Tysiące aplikacji używają interfejsu programowania aplikacji (API) Windows języka C, ten interfejs zostanie zachowana w najbliższej przyszłości. Dowolny interfejs Windows C++ w związku z tym musi być utworzonych na szczycie procedurach interfejsu API języka C. Gwarantuje to, że aplikacji w języku C++ będzie pod kątem współistnienia z aplikacji C.
+System Microsoft Windows został zaprojektowany długo, C++ zanim język stał się popularny. Ze względu na to, że tysiące aplikacji korzysta z interfejsu programowania aplikacji systemu Windows (API) dla języka C, ten interfejs będzie obsługiwany w przyszłości. W C++ związku z tym każdy interfejs systemu Windows musi być zbudowany w oparciu o interfejs API języka C. Gwarantuje to, C++ że aplikacje będą mogły współistnieć z aplikacjami języka C.
 
-Biblioteki klas Microsoft Foundation jest zorientowany obiektowo interfejs Windows, która spełnia następujące cele projektu:
+Biblioteka MFC to interfejs zorientowany obiektowo dla systemu Windows, który spełnia następujące cele projektowe:
 
-- Znaczne zmniejszenie wysiłku, aby napisać aplikację dla Windows.
+- Znacząca redukcja nakładu pracy w celu napisania aplikacji dla systemu Windows.
 
-- Szybkość wykonywania porównywalne z interfejsem API języka C.
+- Szybkość wykonywania porównywalna z tym interfejsem API języka C.
 
-- Kod minimalny rozmiar koszty.
+- Minimalny koszt rozmiaru kodu.
 
-- Możliwość bezpośrednio wywoływać żadnych funkcji Windows C.
+- Możliwość bezpośredniej wywołania dowolnej funkcji systemu Windows C.
 
-- Łatwiejsze konwersji istniejących aplikacji C do języka C++.
+- Łatwiejsza Konwersja istniejących aplikacji C do C++programu.
 
-- Możliwość się, jak korzystać z istniejących podstawy języka C Windows środowisko programowania.
+- Możliwość wykorzystania z istniejącej podstawy środowiska programowania systemu Windows w języku C.
 
-- Łatwiejsze korzystanie z interfejsu API Windows przy użyciu języka C++ niż przy użyciu C.
+- Łatwiejsze korzystanie z interfejsu API systemu Windows C++ za pomocą języka C.
 
-- Łatwiejsze do użycia, ale zaawansowanych abstrakcje skomplikowane funkcji, takich jak kontrolki ActiveX, obsługa bazy danych, drukowanie, paski narzędzi i pasków stanu.
+- Łatwiejsze w użyciu jeszcze zaawansowane abstrakcje skomplikowanych funkcji, takich jak kontrolki ActiveX, obsługa bazy danych, drukowanie, paski narzędzi i paski stanu.
 
-- Wartość true, interfejs API Windows dla języka C++, które skutecznie korzysta z funkcji języka C++.
+- Prawdziwy interfejs API systemu C++ Windows, aby C++ efektywnie korzystać z funkcji języka.
 
-Aby uzyskać więcej informacji o projektu biblioteki MFC zobacz:
+Aby uzyskać więcej informacji na temat projektowania biblioteki MFC, zobacz:
 
 - [Struktura aplikacji](../mfc/application-framework.md)
 
 - [Relacja z interfejsem API języka C](../mfc/relationship-to-the-c-language-api.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

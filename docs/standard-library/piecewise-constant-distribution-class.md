@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455244"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446202"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution — Klasa
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution — Klasa
 
 Generuje rozkład elementowyą stałą o różnej szerokości, z jednolitym prawdopodobieństwem w każdym interwale.
 
@@ -80,12 +80,12 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba rzeczywista*\
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+\ *rzeczywistości*
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<> losowe](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta dystrybucja próbkowania ma różne interwały z jednorodnym prawdopodobieństwem w każdym interwale. Aby uzyskać informacje na temat innych dystrybucji próbkowania, zobacz [Piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [discrete_distribution](../standard-library/discrete-distribution-class.md).
+Ta dystrybucja próbkowania ma różne interwały z jednorodnym prawdopodobieństwem w każdym interwale. Aby uzyskać informacje na temat innych dystrybucji próbkowania, zobacz [Piecewise_linear_distribution klasy](../standard-library/piecewise-linear-distribution-class.md) i [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
 Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków:
 
@@ -94,19 +94,19 @@ Poniższa tabela zawiera linki do artykułów na temat poszczególnych członkó
 |[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
 |`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
 
-Funkcja `intervals()` Property`vector<result_type>` zwraca z zestawem przechowywanych interwałów dystrybucji.
+Funkcja Property `intervals()` zwraca `vector<result_type>` z zestawem przechowywanych interwałów dystrybucji.
 
-Funkcja `densities()` Property`vector<result_type>` zwraca wartość z wartościami przechowywanymi w każdym zestawie interwałów, które są obliczane na podstawie wag podanych w parametrach konstruktora.
+Funkcja Property `densities()` zwraca `vector<result_type>` z przechowywaną gęstością dla każdego zestawu interwałów, które są obliczane zgodnie z wagami podanymi w parametrach konstruktora.
 
-Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
+Element członkowski właściwości `param()` ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+Funkcje członkowskie `min()` i `max()` zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
+Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<losowo >](../standard-library/random.md).
 
 ## <a name="example"></a>Przykład
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowo >
 
 **Przestrzeń nazw:** std
 
@@ -257,10 +257,10 @@ Iterator danych wejściowych ostatniego elementu w zakresie dystrybucji.
 *firstW*\
 Iterator danych wejściowych pierwszego elementu w zakresie wag.
 
-*kontrol*\
+*interwały*\
 [Initializer_list](../cpp/initializers.md) z interwałami dystrybucji.
 
-*liczbą*\
+*liczba*\
 Liczba elementów w zakresie dystrybucji.
 
 *xmin*\
@@ -280,15 +280,17 @@ Struktura parametru używana do konstruowania rozkładu.
 Konstruktor domyślny ustawia przechowywane parametry w taki sposób, że istnieje jeden interwał, od 0 do 1, z gęstością prawdopodobieństwa 1.
 
 Konstruktor zakresu iteratora
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
     InputIteratorW firstW);
 ```
 
-konstruuje obiekt dystrybucji z itnervals z iteratorów w sekwencji [ `firstI`, `lastI`) i `firstW`pasującej sekwencji wagi, zaczynając od.
+Tworzy obiekt dystrybucji z itnervals z iteratorów na sekwencji [`firstI`, `lastI`) i zgodnej sekwencji wagi, zaczynając od `firstW`.
 
 Konstruktor listy inicjatorów
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 konstruuje obiekt dystrybucji z interwałami z listy inicjalizatora *interwałów* i wag wygenerowanych na podstawie funkcji *weightfunc*.
 
 Konstruktor zdefiniowany jako
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-konstruuje obiekt dystrybucji z  przedziałami zliczania równomiernie `xmin,xmax`rozłożonymi przez [], przypisując wszystkie wagi interwałów zgodnie z funkcją *weightfunc*, a *weightfunc* musi akceptować jeden parametr i mieć zwrot wartość, z której oba są konwertowane na `double`. **Warunek wstępny:** `xmin < xmax`
+konstruuje obiekt dystrybucji z uwzględnieniem interwałów *liczby* równomiernie rozłożonych na [`xmin,xmax`], przypisując wszystkie wagi interwałów zgodnie z funkcją *weightfunc*, a *weightfunc* musi akceptować jeden parametr i mieć wartość zwracaną, które są konwertowane na `double`. **Warunek wstępny:** `xmin < xmax`
 
 Konstruktor zdefiniowany jako
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -342,9 +346,9 @@ Zobacz parametry konstruktora dla [piecewise_constant_distribution](#piecewise_c
 
 **Warunek wstępny:** `xmin < xmax`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<losowe >](../standard-library/random.md)\
+[\<losowo >](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

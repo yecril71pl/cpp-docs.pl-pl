@@ -1,34 +1,32 @@
 ---
 title: Korzystanie z CAnimateCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CAnimateCtrl
 helpviewer_keywords:
 - animation controls [MFC], CAnimateCtrl class
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: b967cc6dde6b4f639ef081b3821f6a7e5a2fe295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79c1a0111317514ef6fd68acd0c6a2ebdccc3ba4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351644"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447102"
 ---
 # <a name="using-canimatectrl"></a>Korzystanie z CAnimateCtrl
 
-Formantu animacji, reprezentowane przez klasę [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), jest oknem, który wyświetla klip w formacie wideo z przeplotem AVI (Audio) — standardowego formatu audio/wideo Windows. Klip AVI to seria ramek mapy bitowej, takie jak film.
+Kontrolka animacji, reprezentowana przez klasę [Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md), to okno, w którym jest wyświetlany klip w formacie audio video INTERLEAVED (AVI) — standardowy format wideo/audio systemu Windows. Klip AVI to seria klatek mapy bitowej, takich jak film.
 
-Ponieważ wątek kontynuuje wykonywanie, gdy jest wyświetlana tylko klip AVI, co spotykanym sposobem wykorzystania formantu animacji jest wskazujący aktywności systemu podczas długotrwałej operacji. Na przykład okno dialogowe Znajdź Windows wyświetla przenoszenie szkła powiększającego jako system wyszukuje plik.
+Ponieważ wątek kontynuuje wykonywanie podczas wyświetlania klipu AVI, jednym typowym zastosowaniem formantu animacji jest wskazanie działania systemu podczas długotrwałej operacji. Na przykład okno dialogowe Znajdowanie systemu Windows wyświetla szklany lupę, w której system wyszukuje plik.
 
-Formanty animacji odtwarzać tylko proste klipy AVI, a nie obsługują one dźwięku. (Aby uzyskać pełną listę ograniczeń, zobacz [CAnimateCtrl](../mfc/reference/canimatectrl-class.md).) Ponieważ możliwości formantu animacji są znacznie ograniczone i może ulec zmianie, należy używać alternatywę, takie jak formant MCIWnd, jeśli potrzebujesz kontroli, aby zapewnić odtwarzania multimediów i/lub funkcje rejestrowania. Aby uzyskać więcej informacji na temat kontroli MCIWnd dokumentacji multimedialnych.
+Kontrolki animacji mogą odtwarzać tylko proste klipy AVI i nie obsługują dźwięku. (Aby uzyskać pełną listę ograniczeń, zobacz [Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md).) Ponieważ możliwości kontrolki animacji są poważnie ograniczone i mogą ulec zmianie, należy użyć alternatywnej metody, takiej jak kontrolka MCIWnd, jeśli potrzebna jest kontrolka umożliwiająca odtwarzanie i/lub nagrywanie multimediów. Więcej informacji o kontrolce MCIWnd można znaleźć w dokumentacji multimedialnej.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Używanie kontrolki animacji](../mfc/using-an-animation-control.md)
 
 - [Powiadomienia wysyłane przez kontrolki animacji](../mfc/notifications-sent-by-animation-controls.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: fd7b6787b372e220a32770e19d54d149f5ba6934
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fc0164b2d0046ca2d36291696dd6137a9fcef069
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502415"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447428"
 ---
 # <a name="cstatic-class"></a>Klasa CStatic
 
@@ -49,15 +49,15 @@ class CStatic : public CWnd
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CStatic::CStatic](#cstatic)|Konstruuje `CStatic` obiekt.|
+|[CStatic::CStatic](#cstatic)|Konstruuje obiekt `CStatic`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CStatic:: Create](#create)|Tworzy formant statyczny systemu Windows i dołącza go do `CStatic` obiektu.|
+|[CStatic:: Create](#create)|Tworzy formant statyczny systemu Windows i dołącza go do obiektu `CStatic`.|
 |[CStatic::D rawItem](#drawitem)|Przesłoń, aby narysować formant statyczny rysowany przez właściciela.|
 |[CStatic:: getmap](#getbitmap)|Pobiera uchwyt mapy bitowej poprzednio ustawiony za pomocą [Setmap bitowych](#setbitmap).|
 |[CStatic:: GetCursor](#getcursor)|Pobiera uchwyt obrazu kursora wcześniej ustawionego za pomocą elementu [SetCursor](#setcursor).|
@@ -70,13 +70,13 @@ class CStatic : public CWnd
 
 ## <a name="remarks"></a>Uwagi
 
-Kontrolka statyczna wyświetla ciąg tekstowy, pole, prostokąt, ikonę, kursor, mapę bitową lub ulepszony metaplik. Może służyć do etykietowania, pola lub oddzielania innych kontrolek. Statyczna kontrolka zwykle nie przyjmuje danych wejściowych i nie udostępnia danych wyjściowych. może jednak powiadomić swój element nadrzędny kliknięcia myszą, jeśli zostanie on utworzony przy użyciu stylu SS_NOTIFY.
+Kontrolka statyczna wyświetla ciąg tekstowy, pole, prostokąt, ikonę, kursor, mapę bitową lub ulepszony metaplik. Może służyć do etykietowania, pola lub oddzielania innych kontrolek. Statyczna kontrolka zwykle nie przyjmuje danych wejściowych i nie udostępnia danych wyjściowych. może jednak powiadomić swój element nadrzędny kliknięcia myszą, jeśli zostanie on utworzony z stylem SS_NOTIFY.
 
-Utwórz kontrolkę statyczną w dwóch krokach. Najpierw Wywołaj konstruktora w celu skonstruowania `CStatic` obiektu, a następnie wywołaj funkcję [tworzenia](#create) elementu członkowskiego, aby utworzyć formant statyczny i `CStatic` dołączyć go do obiektu.
+Utwórz kontrolkę statyczną w dwóch krokach. Najpierw Wywołaj konstruktora w celu skonstruowania obiektu `CStatic`, a następnie wywołaj funkcję [Create](#create) member, aby utworzyć statyczny formant i dołączyć go do obiektu `CStatic`.
 
-Jeśli utworzysz `CStatic` obiekt w oknie dialogowym (za pomocą zasobu okna dialogowego) `CStatic` , obiekt zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
+Jeśli utworzysz obiekt `CStatic` w oknie dialogowym (za pomocą zasobu okna dialogowego), obiekt `CStatic` zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
 
-Jeśli utworzysz `CStatic` obiekt w oknie, może być również konieczne jego zniszczenie. `CStatic` Obiekt utworzony na stosie w oknie jest automatycznie niszczony. Jeśli `CStatic` obiekt jest tworzony na stercie przy użyciu **nowej** funkcji, należy wywołać metodę **delete** dla obiektu, aby zniszczyć go po zakończeniu pracy z nim.
+Jeśli utworzysz obiekt `CStatic` w oknie, może być również konieczne jego zniszczenie. Obiekt `CStatic` utworzony na stosie w oknie jest automatycznie niszczony. Jeśli utworzysz obiekt `CStatic` na stercie przy użyciu **nowej** funkcji, musisz wywołać metodę **delete** dla obiektu, aby zniszczyć go po zakończeniu pracy z nim.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -94,7 +94,7 @@ Jeśli utworzysz `CStatic` obiekt w oknie, może być również konieczne jego z
 
 ##  <a name="create"></a>CStatic:: Create
 
-Tworzy formant statyczny systemu Windows i dołącza go do `CStatic` obiektu.
+Tworzy formant statyczny systemu Windows i dołącza go do obiektu `CStatic`.
 
 ```
 virtual BOOL Create(
@@ -114,10 +114,10 @@ Określa tekst, który ma zostać umieszczony w kontrolce. Jeśli wartość jest
 Określa styl okna kontrolki statycznej. Zastosuj dowolną kombinację [statycznych stylów kontroli](../../mfc/reference/styles-used-by-mfc.md#static-styles) do kontrolki.
 
 *cinania*<br/>
-Określa położenie i rozmiar kontrolki statycznej. Może to być `RECT` struktura `CRect` lub obiekt.
+Określa położenie i rozmiar kontrolki statycznej. Może to być struktura `RECT` lub `CRect` obiektu.
 
 *pParentWnd*<br/>
-`CDialog` Określa okno `CStatic` nadrzędne, zazwyczaj obiekt. Nie może mieć wartości NULL.
+Określa `CStatic` okno nadrzędne, zazwyczaj jest obiektem `CDialog`. Nie może mieć wartości NULL.
 
 *nID*<br/>
 Określa identyfikator kontrolki statycznej kontrolki.
@@ -128,13 +128,13 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`CStatic` Utwórz obiekt w dwóch krokach. Najpierw Wywołaj konstruktora `CStatic`, a następnie Wywołaj `Create`, który tworzy formant statyczny systemu Windows i `CStatic` dołącza go do obiektu.
+Utwórz obiekt `CStatic` w dwóch krokach. Najpierw Wywołaj konstruktora `CStatic`, a następnie Wywołaj `Create`, który tworzy formant statyczny systemu Windows i dołącza go do obiektu `CStatic`.
 
 Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) do kontrolki statycznej:
 
 - WS_CHILD zawsze
 
-- WS_VISIBLE zazwyczaj
+- WS_VISIBLE zwykle
 
 - WS_DISABLED rzadko
 
@@ -142,9 +142,9 @@ Jeśli w kontrolce statycznej ma być wyświetlana mapa bitowa, kursor, ikona lu
 
 - SS_BITMAP Użyj tego stylu dla map bitowych.
 
-- SS_ICON Użyj tego stylu dla kursorów i ikon.
+- SS_ICON użyć tego stylu dla kursorów i ikon.
 
-- SS_ENHMETAFILE Użyj tego stylu dla ulepszonych plików.
+- SS_ENHMETAFILE użyć tego stylu dla ulepszonych plików.
 
 W przypadku kursorów, map bitowych lub ikon warto również użyć następującego stylu:
 
@@ -156,7 +156,7 @@ W przypadku kursorów, map bitowych lub ikon warto również użyć następując
 
 ##  <a name="cstatic"></a>CStatic::CStatic
 
-Konstruuje `CStatic` obiekt.
+Konstruuje obiekt `CStatic`.
 
 ```
 CStatic();
@@ -181,11 +181,11 @@ Wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-dr
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby zaimplementować rysowanie dla obiektu rysowanego `CStatic` przez właściciela (kontrolka ma styl SS_OWNERDRAW).
+Zastąp tę funkcję, aby zaimplementować rysowanie dla obiektu `CStatic` rysowanego przez właściciela (kontrolka ma styl SS_OWNERDRAW).
 
 ##  <a name="getbitmap"></a>CStatic:: getmap
 
-Pobiera uchwyt mapy bitowej, wcześniej ustawiony za pomocą setmap [bitowych](#setbitmap), która jest skojarzona `CStatic`z.
+Pobiera uchwyt mapy bitowej, wcześniej ustawiony za pomocą [Setmap bitowych](#setbitmap), która jest skojarzona z `CStatic`.
 
 ```
 HBITMAP GetBitmap() const;
@@ -201,7 +201,7 @@ Dojście do bieżącej mapy bitowej lub wartość NULL, jeśli nie została usta
 
 ##  <a name="getcursor"></a>CStatic:: GetCursor
 
-Pobiera uchwyt kursora wcześniej ustawiony za pomocą elementu SetCursor [](#setcursor), który jest skojarzony z `CStatic`.
+Pobiera uchwyt kursora wcześniej ustawiony za pomocą elementu [SetCursor](#setcursor), który jest skojarzony z `CStatic`.
 
 ```
 HCURSOR GetCursor();
@@ -233,7 +233,7 @@ Dojście do bieżącego rozszerzonego metapliku lub wartość NULL, jeśli nie u
 
 ##  <a name="geticon"></a>CStatic:: GetIcon
 
-Pobiera uchwyt ikony wcześniej ustawionej za pomocą SetIcon [](#seticon), która jest skojarzona z `CStatic`.
+Pobiera uchwyt ikony wcześniej ustawionej za pomocą [SetIcon](#seticon), która jest skojarzona z `CStatic`.
 
 ```
 HICON GetIcon() const;
@@ -270,20 +270,21 @@ Mapa bitowa zostanie automatycznie narysowana w kontrolce statycznej. Domyślnie
 
 Można użyć różnych stylów okna i statycznych kontrolek, w tym:
 
-- SS_BITMAP Użyj tego stylu zawsze dla map bitowych.
+- SS_BITMAP używać tego stylu zawsze dla map bitowych.
 
 - SS_CENTERIMAGE użyć do wyśrodkowania obrazu w kontrolce statycznej. Jeśli obraz jest większy niż kontrolka statyczna, zostanie przycięty. Jeśli jest mniejsza niż kontrolka statyczna, puste miejsce wokół obrazu zostanie wypełnione kolorem piksela w lewym górnym rogu mapy bitowej.
 
-- MFC udostępnia klasę `CBitmap`, której można użyć, gdy konieczne jest wykonanie większej części obrazu mapy bitowej niż tylko wywoływanie funkcji `LoadBitmap`Win32. `CBitmap`, który zawiera jeden rodzaj obiektu GDI, jest często używany w współpracy z `CStatic`, która `CWnd` jest klasą, która jest używana do wyświetlania obiektu graficznego jako kontrolki statycznej.
+- MFC udostępnia klasę `CBitmap`, której można użyć, gdy trzeba wykonać więcej za pomocą obrazu mapy bitowej niż tylko wywołać funkcję Win32 `LoadBitmap`. `CBitmap`, który zawiera jeden rodzaj obiektu GDI, jest często używany w współpracy z `CStatic`, która jest klasą `CWnd`, która jest używana do wyświetlania obiektu graficznego jako kontrolki statycznej.
 
-`CImage`jest klasą ATL/MFC, która umożliwia łatwiejsze współdziałanie z niezależnymi mapami bitowymi urządzeń (DIB). Aby uzyskać więcej informacji, zobacz [Klasa funkcji CImage](../../atl-mfc-shared/reference/cimage-class.md).
+`CImage` jest klasą ATL/MFC, która umożliwia łatwiejsze współdziałanie z niezależnymi mapami bitowymi urządzeń (DIB). Aby uzyskać więcej informacji, zobacz [Klasa funkcji CImage](../../atl-mfc-shared/reference/cimage-class.md).
 
-- Typowym zastosowaniem jest `CStatic::SetBitmap` przyznanie obiektu GDI, który jest zwracany przez operator `CBitmap` HBITMAP obiektu lub `CImage` . Kod, aby to zrobić, jest podobny do następującego wiersza.
+- Typowym zastosowaniem jest nadanie `CStatic::SetBitmap` obiektu GDI zwracanego przez operator HBITMAP obiektu `CBitmap` lub `CImage`. Kod, aby to zrobić, jest podobny do następującego wiersza.
 
 ```
 MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```
-Poniższy przykład tworzy dwa `CStatic` obiekty na stercie. Następnie ładuje je za pomocą mapy bitowej systemu przy `CBitmap::LoadOEMBitmap` użyciu, a drugi z pliku przy `CImage::Load`użyciu.
+
+Poniższy przykład tworzy dwa `CStatic` obiekty na stercie. Następnie ładuje je za pomocą mapy bitowej systemu przy użyciu `CBitmap::LoadOEMBitmap`, a drugi z pliku przy użyciu `CImage::Load`.
 
 ### <a name="example"></a>Przykład
 
@@ -312,9 +313,9 @@ Kursor zostanie automatycznie narysowany w kontrolce statycznej. Domyślnie zost
 
 Można użyć różnych stylów okna i statycznych kontrolek, w tym następujących:
 
-- SS_ICON Użyj tego stylu zawsze dla kursorów i ikon.
+- SS_ICON używać tego stylu zawsze dla kursorów i ikon.
 
-- SS_CENTERIMAGE Użyj, aby wyśrodkować formant statyczny. Jeśli obraz jest większy niż kontrolka statyczna, zostanie przycięty. Jeśli jest mniejsza niż kontrolka statyczna, puste miejsce wokół obrazu zostanie wypełnione kolorem tła kontrolki statycznej.
+- SS_CENTERIMAGE użyć do wyśrodkowania w kontrolce statycznej. Jeśli obraz jest większy niż kontrolka statyczna, zostanie przycięty. Jeśli jest mniejsza niż kontrolka statyczna, puste miejsce wokół obrazu zostanie wypełnione kolorem tła kontrolki statycznej.
 
 ### <a name="example"></a>Przykład
 
@@ -343,7 +344,7 @@ Rozszerzony metaplik zostanie automatycznie narysowany w kontrolce statycznej. U
 
 Można użyć różnych stylów okna i statycznych kontrolek, w tym następujących:
 
-- SS_ENHMETAFILE Użyj tego stylu zawsze dla ulepszonych plików.
+- SS_ENHMETAFILE używać tego stylu zawsze dla ulepszonych plików.
 
 ### <a name="example"></a>Przykład
 
@@ -372,15 +373,15 @@ Ikona zostanie automatycznie narysowana w kontrolce statycznej. Domyślnie zosta
 
 Można użyć różnych stylów okna i statycznych kontrolek, w tym następujących:
 
-- SS_ICON Użyj tego stylu zawsze dla kursorów i ikon.
+- SS_ICON używać tego stylu zawsze dla kursorów i ikon.
 
-- SS_CENTERIMAGE Użyj, aby wyśrodkować formant statyczny. Jeśli obraz jest większy niż kontrolka statyczna, zostanie przycięty. Jeśli jest mniejsza niż kontrolka statyczna, puste miejsce wokół obrazu zostanie wypełnione kolorem tła kontrolki statycznej.
+- SS_CENTERIMAGE użyć do wyśrodkowania w kontrolce statycznej. Jeśli obraz jest większy niż kontrolka statyczna, zostanie przycięty. Jeśli jest mniejsza niż kontrolka statyczna, puste miejsce wokół obrazu zostanie wypełnione kolorem tła kontrolki statycznej.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

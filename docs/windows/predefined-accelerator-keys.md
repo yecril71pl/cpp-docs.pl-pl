@@ -1,8 +1,6 @@
 ---
 title: Klawisze skrótów (C++)
 ms.date: 02/14/2019
-f1_keywords:
-- vc.editors.accelerator
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
@@ -10,81 +8,81 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362390"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445402"
 ---
 # <a name="accelerator-keys-c"></a>Klawisze skrótów (C++)
 
 ## <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
 
-Istnieje kilka wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projektu aplikacji Windows. Niektóre z tych wirtualnych kluczy są w środowisku Windows. Inne osoby obsługuje przeglądarki lub aplikacji nieobsługujących kodu Unicode. W dowolnym akceleratora, można użyć dowolnego z tych kluczy.
+Istnieje wiele wstępnie zdefiniowanych klawiszy skrótów, które mogą być częścią projektu aplikacji systemu Windows. Niektóre z tych kluczy wirtualnych są przeznaczone dla środowiska systemu Windows. Inne obsługują przeglądarki lub aplikacje w formacie Unicode. Możesz użyć dowolnego z tych kluczy w dowolnym akceleratorze.
 
-|Key|Opis|
+|Klucz|Opis|
 |---------|-----------------|
-|VK_ACCEPT|(Editor IME) Zaakceptuj|
-|VK_BROWSER_BACK|(Windows) Przeglądarka **ponownie** klucza|
-|VK_BROWSER_FAVORITES|(Windows) Przeglądarka **ulubione** klucza|
-|VK_BROWSER_FORWARD|(Windows) Przeglądarka **do przodu** klucza|
-|VK_BROWSER_HOME|(Windows) Przeglądarka **Start** i **Home** klucza|
-|VK_BROWSER_REFRESH|(Windows) Przeglądarka **Odśwież** klucza|
-|VK_BROWSER_SEARCH|(Windows) Przeglądarka **wyszukiwania** klucza|
-|VK_BROWSER_STOP|(Windows) Przeglądarka **zatrzymać** klucza|
-|VK_CONVERT|Konwertuj (Editor IME)|
-|VK_FINAL|Tryb końca (Editor IME)|
-|VK_HANGUEL|EDITOR (IME) Tryb Hanguel (utrzymywana ze względu na zgodność, użyj VK_HANGUL)|
-|VK_HANGUL|EDITOR (IME) Tryb Hangul|
-|VK_HANJA|EDITOR (IME) Tryb Hanja|
-|VK_JUNJA|EDITOR (IME) Tryb Junja|
-|VK_KANA|EDITOR (IME) Tryb Kana|
-|VK_KANJI|EDITOR (IME) Tryb Kanji|
-|VK_LAUNCH_APP1|(Windows) **Start aplikacja 1** klucza|
-|VK_LAUNCH_APP2|(Windows) **Start 2 aplikacji** klucza|
-|VK_LAUNCH_MAIL|(Windows) **Uruchamianie poczty** klucza|
-|VK_LAUNCH_MEDIA_SELECT|(Windows) **Wybierz Media** klucza|
-|VK_LCONTROL|**Po lewej stronie Ctrl** klucza|
-|VK_LMENU|**Menu po lewej stronie** klucza|
-|VK_LSHIFT|**Przesunięcia w lewo** klucza|
-|VK_MEDIA_NEXT_TRACK|(Windows) **Następnej ścieżki** klucza|
-|VK_MEDIA_PLAY_PAUSE|(Windows) **Media odtwarzany/wstrzymywany** klucza|
-|VK_MEDIA_PREV_TRACK|(Windows) **Poprzedniej ścieżki** klucza|
-|VK_MEDIA_STOP|(Windows) **Zatrzymać Media** klucza|
-|VK_MODECHANGE|Żądanie zmiany trybu (IME)|
-|VK_NONCONVERT|Nonconvert (Editor IME)|
-|VK_OEM_1|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **;:** klucza|
-|VK_OEM_102|(Windows) Nawias kątowy klucz lub klucz ukośnik odwrotny na klawiaturze 102-key RT|
-|VK_OEM_2|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **/?** klawisz|
-|VK_OEM_3|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **`~** klucza|
-|VK_OEM_4|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **[{** klucza|
-|VK_OEM_5|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **\\ &#124;** klucza|
-|VK_OEM_6|(Windows) Dla Stanów Zjednoczonych, standardowy interfejs użytkownika **]}** klucza|
-|VK_OEM_7|(Windows) Dla Stanów Zjednoczonych standardowy interfejs użytkownika, klucz "pojedynczego — oferta/podwójny cudzysłów"|
-|VK_OEM_COMMA|(Windows) Dla jakiegokolwiek kraju/regionu **,** klucza|
-|VK_OEM_MINUS|(Windows) Dla jakiegokolwiek kraju/regionu **-** klucza|
-|VK_OEM_PERIOD|(Windows) Dla jakiegokolwiek kraju/regionu **.** klawisz|
-|VK_OEM_PLUS|(Windows) Dla jakiegokolwiek kraju/regionu **+** klucza|
-|VK_PACKET|(Windows) Używany do przekazywania znaków Unicode, tak jakby one naciśnięć klawiszy.|
-|VK_RCONTROL|**Po prawej stronie Ctrl** klucza|
-|VK_RMENU|**Menu po prawej stronie** klucza|
-|VK_RSHIFT|**Prawy Shift** klucza|
-|VK_SLEEP|**Komputer uśpiony** klucza|
-|VK_VOLUME_DOWN|(Windows) **Woluminu w dół** klucza|
-|VK_VOLUME_MUTE|(Windows) **Woluminu Wycisz** klucza|
-|VK_VOLUME_UP|(Windows) **Woluminu się** klucza|
-|VK_XBUTTON1|(Windows) **X1** przycisk myszy|
-|VK_XBUTTON2|(Windows) **X2** przycisk myszy|
+|VK_ACCEPT|(IME) Zaakceptuj|
+|VK_BROWSER_BACK|Systemy Przeglądarka, klawisz **powrotu**|
+|VK_BROWSER_FAVORITES|Systemy Przeglądarka, klucz **Ulubione**|
+|VK_BROWSER_FORWARD|Systemy Przeglądarka, klucz **do przodu**|
+|VK_BROWSER_HOME|Systemy Przeglądarka, **początek** i klucz **Home**|
+|VK_BROWSER_REFRESH|Systemy Przeglądarka, **Odśwież** klucz|
+|VK_BROWSER_SEARCH|Systemy Przeglądarka, klucz **wyszukiwania**|
+|VK_BROWSER_STOP|Systemy Przeglądarka, klawisz **stop**|
+|VK_CONVERT|(IME) — konwersja|
+|VK_FINAL|(IME) tryb końcowy|
+|VK_HANGUEL|Konwersje Tryb Hanguel (obsługiwany w celu zapewnienia zgodności, użyj VK_HANGUL)|
+|VK_HANGUL|Konwersje Tryb Hangul|
+|VK_HANJA|Konwersje Tryb Hanja|
+|VK_JUNJA|Konwersje Tryb Junja|
+|VK_KANA|Konwersje Tryb kana|
+|VK_KANJI|Konwersje Tryb kanji|
+|VK_LAUNCH_APP1|Systemy **Uruchom klucz aplikacji 1**|
+|VK_LAUNCH_APP2|Systemy Klucz **uruchamiania aplikacji 2**|
+|VK_LAUNCH_MAIL|Systemy **Uruchom klucz poczty**|
+|VK_LAUNCH_MEDIA_SELECT|Systemy **Wybierz klucz nośnika**|
+|VK_LCONTROL|**Lewy klawisz Ctrl**|
+|VK_LMENU|Klawisz **menu po lewej stronie**|
+|VK_LSHIFT|**Lewy klawisz Shift**|
+|VK_MEDIA_NEXT_TRACK|Systemy **Następny klucz śledzenia**|
+|VK_MEDIA_PLAY_PAUSE|Systemy **Odtwórz/Wstrzymaj klucz multimedialny**|
+|VK_MEDIA_PREV_TRACK|Systemy **Poprzedni klucz śledzenia**|
+|VK_MEDIA_STOP|Systemy **Zatrzymaj klucz nośnika**|
+|VK_MODECHANGE|(IME) żądanie zmiany trybu|
+|VK_NONCONVERT|(IME) nie Konwertuj|
+|VK_OEM_1|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz **;:**|
+|VK_OEM_102|Systemy Klawisza kąta lub klawisza ukośnika odwrotnego na klawiaturze RT 102-klawisz|
+|VK_OEM_2|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej **/?** key|
+|VK_OEM_3|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz **`~**|
+|VK_OEM_4|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej **[{** Key|
+|VK_OEM_5|Systemy Dla standardowej klawiatury amerykańskiej, klucz **\\&#124;**|
+|VK_OEM_6|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz **]}**|
+|VK_OEM_7|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej klucz "Single-Quote/Double-Quote"|
+|VK_OEM_COMMA|Systemy Dla każdego kraju/regionu, klucz **,**|
+|VK_OEM_MINUS|Systemy Dla każdego kraju/regionu klucz **-**|
+|VK_OEM_PERIOD|Systemy Dla każdego kraju/regionu, **.** key|
+|VK_OEM_PLUS|Systemy Dla każdego kraju/regionu klucz **+**|
+|VK_PACKET|Systemy Używane do przekazywania znaków Unicode, tak jakby były to naciśnięcia klawiszy.|
+|VK_RCONTROL|Klawisz **Ctrl w prawo**|
+|VK_RMENU|**Prawy klawisz menu**|
+|VK_RSHIFT|Klawisz **Shift w prawo**|
+|VK_SLEEP|Klucz **uśpienia komputera**|
+|VK_VOLUME_DOWN|Systemy Klucz **w dół woluminu**|
+|VK_VOLUME_MUTE|Systemy Klucz **wyciszenia woluminu**|
+|VK_VOLUME_UP|Systemy Klucz **zapasowy**|
+|VK_XBUTTON1|Systemy **X1** — przycisk myszy|
+|VK_XBUTTON2|Systemy **X2** przycisk myszy|
 
-## <a name="accelerator-key-association"></a>Skojarzenie klucza klawiszy skrótów
+## <a name="accelerator-key-association"></a>Skojarzenie klawisza skrótu
 
-Wiele razy potrzebujesz element menu i kombinacja klawiszy, aby Wydaj to samo polecenie program. Wykonaj tę akcję, przypisując tego samego identyfikatora zasobu (identyfikator), element menu oraz wpis w tabeli akceleratora aplikacji. Następnie Edytuj podpis elementu menu, aby wyświetlić nazwę akceleratora. Aby uzyskać więcej informacji na temat elementów menu oraz klawiszy skrótów, zobacz [poleceń Menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Wiele razy potrzebny jest element menu i kombinacja klawiatury, aby wydać to samo polecenie programu. Czynność tę należy wykonać, przypisując ten sam identyfikator zasobu (ID) do elementu menu i do wpisu w tabeli akceleratora aplikacji. Następnie można edytować podpis elementu menu, aby wyświetlić nazwę akceleratora. Aby uzyskać więcej informacji na temat elementów menu i klawiszy skrótów, zobacz [polecenia menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytor klawiszy skrótów](../windows/accelerator-editor.md)<br/>

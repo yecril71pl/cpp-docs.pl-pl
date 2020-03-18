@@ -1,19 +1,16 @@
 ---
 title: new i delete — operatory
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246447"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445449"
 ---
 # <a name="new-and-delete-operators"></a>new i delete, operatory
 
@@ -23,7 +20,7 @@ C++obsługuje dynamiczne przydzielanie i cofanie alokacji obiektów przy użyciu
 
 Aby zapoznać się z listą plików biblioteki wchodzących w skład biblioteki środowiska uruchomieniowego C C++ i biblioteki standardowej, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"></a> Operator new
+##  <a id="new_operator"> </a> Operator new
 
 Gdy w programie napotkana jest instrukcja, taka jak w programie, przekształci się w wywołaniu **operatora funkcji New**:
 
@@ -39,9 +36,9 @@ Dwa zakresy dla **operatora nowe** funkcje są opisane w poniższej tabeli.
 
 ### <a name="scope-for-operator-new-functions"></a>Zakres dla nowych funkcji operatora
 
-|Operator|Scope|
+|Operator|Zakres|
 |--------------|-----------|
-|**:: operator new**|Global|
+|**:: operator new**|Globalny|
 |*class-name* **:: operator new**|Klasa|
 
 Pierwszy argument **operatora new** musi być typu `size_t` (typ zdefiniowany w \<STDDEF. h >), a zwracany typ to zawsze **void** <strong>\*</strong>.
@@ -124,7 +121,7 @@ int main() {
 
 Istnieje inny sposób obsługi nieudanych żądań alokacji pamięci. Napisz niestandardową procedurę odzyskiwania, aby obsłużyć taką awarię, a następnie zarejestrować funkcję przez wywołanie funkcji [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Run-Time.
 
-##  <a id="delete_operator"></a> Operator delete
+##  <a id="delete_operator"> </a> Operator delete
 
 Pamięć, która jest przydzielana dynamicznie przy użyciu operatora **New** , może zostać zwolniona przy użyciu operatora **delete** . Operator delete wywołuje funkcję **delete operatora** , która zwalnia pamięć z powrotem do dostępnej puli. Użycie operatora **delete** powoduje również, że destruktor klasy (jeśli istnieje) do wywołania.
 

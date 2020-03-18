@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390935"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441139"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 
-Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w [irowsetimpl —](../../data/oledb/irowsetimpl-class.md) klasy.
+Udostępnia implementację domyślną dla uchwytu wiersza, który jest używany w klasie [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,7 +53,7 @@ class CSimpleRow
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -62,25 +61,25 @@ class CSimpleRow
 
 |||
 |-|-|
-|[Addrefrow —](#addrefrow)|Dodaje licznik odwołań do istniejących uchwyt wiersza.|
-|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.|
+|[AddRefRow](#addrefrow)|Dodaje liczbę odwołań do istniejącego dojścia do wiersza.|
+|[Compare](#compare)|Porównuje dwa wiersze, aby zobaczyć, czy odwołują się do tego samego wystąpienia wiersza.|
 |[CSimpleRow](#csimplerow)|Konstruktor.|
-|[Releaserow —](#releaserow)|Wersje wierszy.|
+|[ReleaseRow](#releaserow)|Zwalnia wiersze.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|Liczba odwołań do istniejących uchwyt wiersza.|
-|[m_iRowset](#irowset)|Indeks wierszy reprezentujący kursora.|
+|[m_dwRef](#dwref)|Liczba odwołań do istniejącego dojścia do wiersza.|
+|[m_iRowset](#irowset)|Indeks zestawu wierszy reprezentujący kursor.|
 
 ## <a name="remarks"></a>Uwagi
 
-Dojście do wiersza jest logicznie unikatowych tagów na podstawie wyniku wiersza. `IRowsetImpl` Tworzy nową `CSimpleRow` dla każdego wiersza w wymagane [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` może zostać również zamienione Twojej własnej implementacji dojście do wiersza, ponieważ jest domyślny argument szablonu, aby `IRowsetImpl`. Jedynym wymaganiem, które można zmienić tej klasy jest Klasa zastępcza dostarczyć konstruktora, który przyjmuje jeden parametr typu **długie**.
+Dojście do wiersza jest logicznie unikatowym tagiem dla wiersza wynikowego. `IRowsetImpl` tworzy nowy `CSimpleRow` dla każdego wiersza, który zażądał [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` można również zastąpić własną implementacją uchwytu wiersza, ponieważ jest to domyślny argument szablonu do `IRowsetImpl`. Jedynym wymaganiem do zamiany tej klasy jest posiadanie konstruktora, który akceptuje pojedynczy parametr typu **Long**.
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
-Dodaje licznik odwołań do istniejących dojściem do wiersza, w sposób bezpieczny dla wątków.
+Dodaje liczbę odwołań do istniejącego uchwytu wiersza w sposób bezpieczny dla wątków.
 
 ### <a name="syntax"></a>Składnia
 
@@ -88,9 +87,9 @@ Dodaje licznik odwołań do istniejących dojściem do wiersza, w sposób bezpie
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="compare"></a>CSimpleRow:: Compare
 
-Porównuje dwa wiersze, aby zobaczyć, jeśli odnoszą się do tego samego wystąpienia wiersza.
+Porównuje dwa wiersze, aby zobaczyć, czy odwołują się do tego samego wystąpienia wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -101,13 +100,13 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>Parametry
 
 *pRow*<br/>
-Wskaźnik do `CSimpleRow` obiektu.
+Wskaźnik do obiektu `CSimpleRow`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych.
+Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze, jest tym samym wystąpieniem wiersza lub S_FALSE, co oznacza, że dwa wiersze są różne. Aby uzyskać inne możliwe wartości zwracane, zobacz [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
+## <a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 Konstruktor.
 
@@ -120,15 +119,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>Parametry
 
 *iRowsetCur*<br/>
-[in] Indeks bieżącego zestawu wierszy.
+podczas Indeks do bieżącego zestawu wierszy.
 
 ### <a name="remarks"></a>Uwagi
 
-Zestawy [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) do *iRowsetCur*.
+Ustawia [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) na *iRowsetCur*.
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
-Wersje wierszy w sposób bezpieczny dla wątków.
+Zwalnia wiersze w sposób bezpieczny dla wątków.
 
 ### <a name="syntax"></a>Składnia
 
@@ -136,9 +135,9 @@ Wersje wierszy w sposób bezpieczny dla wątków.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="dwref"></a>CSimpleRow:: m_dwRef
 
-Liczba odwołań do istniejących uchwyt wiersza.
+Liczba odwołań do istniejącego dojścia do wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -146,9 +145,9 @@ Liczba odwołań do istniejących uchwyt wiersza.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="irowset"></a>CSimpleRow:: m_iRowset
 
-Indeks wierszy reprezentujący kursora.
+Indeks zestawu wierszy reprezentujący kursor.
 
 ### <a name="syntax"></a>Składnia
 
@@ -156,7 +155,7 @@ Indeks wierszy reprezentujący kursora.
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

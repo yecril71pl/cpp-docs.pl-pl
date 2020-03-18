@@ -3,20 +3,20 @@ title: com::ptr
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- ptr
+- msclr/com/com::ptr
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 74e168fe916b930e499a82ca3fcf5c7d0d669719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993511142b72bd769fe8582b2650e5d020bd6ce2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209207"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446265"
 ---
 # <a name="comptr"></a>com::ptr
 
-Otoka dla obiektu COM, który może służyć jako członek klasy CLR. Otoka także automatyzuje zarządzanie okresem istnienia obiektu COM, zwalniając należących do odwołania do obiektu, gdy jego destruktor jest wywoływany. Odpowiednikiem [klasa CComPtr](../atl/reference/ccomptr-class.md).
+Otoka dla obiektu COM, który może być używany jako element członkowski klasy CLR. Otoka również automatyzuje zarządzanie czasem istnienia obiektu COM, zwalniając odwołania do elementów należących do obiektu, gdy jego destruktor jest wywoływany. Analogiczne do [klasy CComPtr](../atl/reference/ccomptr-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,8 +26,8 @@ Otoka dla obiektu COM, który może służyć jako członek klasy CLR. Otoka tak
 
 ## <a name="remarks"></a>Uwagi
 
-[COM::PTR, klasa](../dotnet/com-ptr-class.md) jest zdefiniowany w \<msclr\com\ptr.h > pliku.
+[com::p TR Class](../dotnet/com-ptr-class.md) jest zdefiniowany w pliku \<msclr\com\ptr.h >.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

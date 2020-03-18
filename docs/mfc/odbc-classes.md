@@ -1,48 +1,46 @@
 ---
 title: Klasy ODBC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.data
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4cfa0d7afa197de7b65b6a0bd6b881a09534ef6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237778"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447696"
 ---
 # <a name="odbc-classes"></a>Klasy ODBC
 
-Te klasy działają z innych aplikacji framework klasami, aby zapewnić łatwy dostęp do szerokiej gamy baz danych, dla których dostępne są sterowników Open Database Connectivity (ODBC).
+Te klasy współpracują z innymi klasami struktury aplikacji, aby zapewnić łatwy dostęp do różnorodnych baz danych, dla których dostępne są sterowniki Open Database Connectivity (ODBC).
 
-Programy, które korzystają z baz danych ODBC będzie mieć co najmniej jeden `CDatabase` obiektu i `CRecordset` obiektu.
+Programy korzystające z baz danych ODBC będą mieć co najmniej obiekt `CDatabase` i obiekt `CRecordset`.
 
 [CDatabase](../mfc/reference/cdatabase-class.md)<br/>
-Hermetyzuje połączenie ze źródłem danych, dzięki któremu można działać na źródle danych.
+Hermetyzuje połączenie ze źródłem danych, za pomocą którego można pracować na źródle danych.
 
 [CRecordset](../mfc/reference/crecordset-class.md)<br/>
-Hermetyzuje zestaw rekordów wybranych ze źródła danych. Zestawy rekordów włączyć przewijanie między rekordami, aktualizowania rekordów (Dodawanie, edytowanie i usuwanie rekordów), kwalifikujących się zaznaczenie za pomocą filtru, sortowania zaznaczenie i parametryzacja zaznaczenia z informacjami o uzyskany lub obliczane w czasie wykonywania.
+Hermetyzuje zestaw rekordów wybranych ze źródła danych. Zestawy rekordów umożliwiają przewijanie rekordów do rekordu, aktualizowanie rekordów (Dodawanie, edytowanie i usuwanie rekordów), zakwalifikowanie zaznaczenia z filtrem, sortowanie zaznaczenia i parametryzacja zaznaczenie z informacjami uzyskanymi lub obliczanymi w czasie wykonywania.
 
-[CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Formularz zawiera widok podłączone bezpośrednio do obiektu zestawu rekordów. Danych w oknie dialogowym programu exchange (DDX) mechanizm wymiany danych między zestawu rekordów i kontrolki widoku rekordu. Podobnie jak wszystkie widoki formularzy widoku rekordu zależy od zasobu szablonu okna dialogowego. Widoki rekordów obsługują także przenoszenia między rekordami w zestawie rekordów, aktualizowania rekordów i zamyka skojarzony zestaw rekordów, po zamknięciu widoku rekordu.
+[Formularzy CRecordView](../mfc/reference/crecordview-class.md)<br/>
+Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów. Mechanizm wymiany danych okna dialogowego (DDX) wymienia dane między zestawem rekordów i kontrolkami widoku rekordu. Podobnie jak w przypadku wszystkich widoków formularzy widok rekordu jest oparty na zasobie szablonu okna dialogowego. Widoki rekordów obsługują również przechodzenie z rekordu do rekordu w zestawie rekordów, aktualizowanie rekordów i zamykanie skojarzonego zestawu rekordów, gdy widok rekordu zostanie zamknięty.
 
 [CDBException](../mfc/reference/cdbexception-class.md)<br/>
-Wyjątek wyniku przetwarzania błędów dostępu do danych. Ta klasa obsługuje tę samą funkcję co inne klasy wyjątku w mechanizm obsługi wyjątków biblioteki klas.
+Wyjątek wynikający z błędów w przetwarzaniu dostępu do danych. Ta klasa służy do tego samego celu, co inne klasy wyjątków w mechanizmie obsługi wyjątków biblioteki klas.
 
 [CFieldExchange](../mfc/reference/cfieldexchange-class.md)<br/>
-Dostarcza informacje o kontekście do obsługi wymiana pól rekordów (RFX), który wymienia dane między elementy członkowskie danych pola i elementy członkowskie danych parametru obiekty zestawów rekordów i odpowiednie kolumny tabeli w źródle danych. Analogiczny do klasy [CDataExchange](../mfc/reference/cdataexchange-class.md), która jest użyta podobnie wymiana danych okna dialogowego (DDX).
+Dostarcza informacje kontekstu do obsługi wymiany pól rekordów (RFX), które wymieniają dane między elementami członkowskimi danych pola i danymi parametrów obiektu zestawu rekordów i odpowiednimi kolumnami tabeli w źródle danych. Analogiczny do klasy [CDataExchange](../mfc/reference/cdataexchange-class.md), który jest używany podobnie do wymiany danych w oknie dialogowym (DDX).
 
-## <a name="related-classes"></a>Klasy pokrewne
+## <a name="related-classes"></a>Powiązane klasy
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Hermetyzuje dojścia do magazynu w celu duży obiekt binarny (BLOB), takie jak mapy bitowej. `CLongBinary` obiekty są używane do zarządzania obiektami dużych ilości danych przechowywanych w tabelach bazy danych.
+Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. obiekty `CLongBinary` są używane do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
 
 [CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
-Służy do przechowywania wartości bez martwienia się o typ danych wartości. `CDBVariant` śledzi bieżącą wartość przechowywaną w Unii typ danych.
+Umożliwia przechowywanie wartości bez obaw o typ danych wartości. `CDBVariant` śledzi typ danych bieżącej wartości, który jest przechowywany w Unii.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

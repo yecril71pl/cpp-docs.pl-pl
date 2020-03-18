@@ -1,22 +1,20 @@
 ---
 title: Użycie przerywania
 ms.date: 11/04/2016
-f1_keywords:
-- Abort
 helpviewer_keywords:
 - abort function
 ms.assetid: 3ba39b78-ef74-4a8d-8dee-2d62442de174
-ms.openlocfilehash: 0961f6f88f5de4d435fa65e50b9dbdbc478e7608
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8cc7bce552acf67c0f9bf2025e0040dc051cff6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244216"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446425"
 ---
 # <a name="using-abort"></a>Użycie przerywania
 
-Wywoływanie [przerwać](../c-runtime-library/reference/abort.md) funkcja powoduje natychmiastowe przerwanie działania. Pomija się zniszczenie normalny proces zainicjowane statycznych obiektów globalnych. Pomija również specjalnego przetwarzania, który został określony przy użyciu `atexit` funkcji.
+Wywołanie funkcji [Abort](../c-runtime-library/reference/abort.md) powoduje natychmiastowe zakończenie. Pomija proces normalnego niszczenia dla zainicjowanych globalnych obiektów statycznych. Pomija również specjalne przetwarzanie, które zostało określone przy użyciu funkcji `atexit`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodatkowe zagadnienia dotyczące kończenia](../cpp/additional-termination-considerations.md)

@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408956"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447049"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
 
-Udostępnia implementację [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interfejsu.
+Zapewnia implementację interfejsu [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,15 +35,15 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Klasy pochodzące z
+*&*<br/>
+Klasa pochodna
 
 *PropClass*<br/>
-Właściwości klasy.
+Klasa właściwości.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -53,16 +51,16 @@ Właściwości klasy.
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Zwraca listę właściwości grupy właściwości zestawu wierszy, które obecnie są żądane w zestawie wierszy.|
-|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwość zestawu wierszy.|
+|[GetProperties](#getproperties)|Zwraca listę właściwości w grupie Właściwości zestawu wierszy, która aktualnie żąda zestawu wierszy.|
+|[SetProperties](#setproperties)|Ustawia właściwości w grupie Właściwości zestawu wierszy.|
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to parametr obowiązkowy dla polecenia. Implementacja jest dostarczany przez funkcję statyczną, zdefiniowane przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) makra.
+Jest to obowiązkowe dla poleceń. Implementacja jest dostarczana przez funkcję statyczną zdefiniowaną przez makro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+## <a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
-Zwraca wszystkie zestawy żądanej właściwości z użyciem mapowania właściwości polecenia.
+Zwraca wszystkie żądane zestawy właściwości przy użyciu mapy właściwości polecenia.
 
 ### <a name="syntax"></a>Składnia
 
@@ -75,13 +73,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) w *Kompendium OLE DB programisty*.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+## <a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
 
 Ustawia właściwości dla obiektu polecenia.
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) w *Kompendium OLE DB programisty*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

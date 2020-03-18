@@ -1,26 +1,24 @@
 ---
 title: Korzystanie z CDateTimeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CDateTimeCtrl
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348604"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447075"
 ---
 # <a name="using-cdatetimectrl"></a>Korzystanie z CDateTimeCtrl
 
-Kontrolka selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje intuicyjne i rozpoznawalny metodę wprowadzania lub wybranie określonej daty. Główny interfejs formantu jest podobną funkcjonalność pola kombi. Użytkownik rozwija formantu, formant kalendarza miesięcznego pojawia się (domyślnie), zezwolenie użytkownikowi na określenie określonej daty. Po wybraniu daty formant kalendarza miesięcznego automatycznie zniknie.
+Kontrolka selektora daty i godziny ([Korzystanie CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje intuicyjną i rozpoznawalną metodę wprowadzania lub wybierania konkretnej daty. Główny interfejs formantu jest podobny do funkcji w polu kombi. Jeśli jednak użytkownik poszerzy formant, zostanie wyświetlony formant kalendarza miesięcznego (domyślnie), co umożliwia użytkownikowi określenie konkretnej daty. Po wybraniu daty zostanie automatycznie wyświetlona kontrolka kalendarza miesięcznego.
 
 > [!NOTE]
->  Korzystanie z obu `CDateTimePicker` i `CMonthCalCtrl` klasy w projekcie, należy uwzględnić AFXDTCTL. Godz., zazwyczaj w STDAFX projektu. Plik H.
+>  Aby użyć klas `CDateTimePicker` i `CMonthCalCtrl` w projekcie, należy uwzględnić AFXDTCTL. H, zazwyczaj w STDAFX projektu. Plik H.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie kontrolki selektora dat i godzin](../mfc/creating-the-date-and-time-picker-control.md)
 
@@ -34,6 +32,6 @@ Kontrolka selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimect
 
 - [Przetwarzanie komunikatów powiadomień w kontrolkach selektora dat i godzin](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

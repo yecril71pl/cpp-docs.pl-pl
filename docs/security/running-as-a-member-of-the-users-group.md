@@ -1,9 +1,6 @@
 ---
 title: Uruchamianie jako członek grupy użytkowników
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,45 +9,45 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411295"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445444"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Uruchamianie jako członek grupy użytkowników
 
-W tym temacie opisano sposób konfigurowania kont użytkowników Windows jako członek grupy Użytkownicy (w przeciwieństwie do grupy Administratorzy) zwiększa bezpieczeństwo, zmniejszając prawdopodobieństwo jest zainfekowany złośliwym kodem.
+W tym temacie wyjaśniono, jak skonfigurować konta użytkowników systemu Windows jako członek grupy użytkowników (w przeciwieństwie do grupy administratorów) zwiększa bezpieczeństwo, zmniejszając prawdopodobieństwo zainfekowania złośliwego kodu.
 
 ## <a name="security-risks"></a>Zagrożenia bezpieczeństwa
 
-Uruchomione jako administrator sprawia, że system jest narażony na kilka rodzajów atak na zabezpieczenia, takie jak "Koń trojański" i "przepełnienie buforu". Jedynie zaproszonych witryny internetowej jako administrator może uszkodzić system, jako złośliwy kod, który jest pobierany z witryny internetowej może ataku komputera. W przypadku powodzenia dziedziczy uprawnienia administratora, a następnie można wykonać akcje, takie jak usuwanie wszystkich plików, ponownego formatowania dysku twardego i tworzenia konta nowego użytkownika z dostępem administracyjnym.
+Uruchomienie programu jako administrator sprawia, że system jest narażony na kilka rodzajów ataków zabezpieczeń, takich jak "koń trojański" i "przepełnienie buforu". Tylko odwiedzanie witryny internetowej jako administrator może być szkodliwe dla systemu, ponieważ złośliwy kod pobrany z witryny internetowej może zaatakować komputer. Jeśli to się powiedzie, dziedziczy uprawnienia administratora i może wykonywać takie działania, jak usuwanie wszystkich plików, ponowne formatowanie dysku twardego i tworzenie nowych kont użytkowników z dostępem administracyjnym.
 
-## <a name="non-administrator-user-groups"></a>Grupy użytkowników innych niż Administrator
+## <a name="non-administrator-user-groups"></a>Grupy użytkowników niebędących administratorami
 
-Konta użytkowników Windows, które deweloperzy normalnie z niego korzystać, należy dodać do użytkowników lub grup użytkowników usługi Power. Deweloperzy również należy dodać do grupy debugowanie. Są oni członkami grupy Użytkownicy umożliwia wykonywanie rutynowych zadań, w tym uruchamianie programów i odwiedzania witryn internetowych bez narażania komputera niepotrzebnie. Jako członek grupy Użytkownicy zaawansowani można również wykonać zadania, takie jak instalowanie aplikacji, instalacja drukarki i większość operacji panelu sterowania. Jeśli potrzebujesz do wykonywania zadań administracyjnych, takich jak uaktualnianie systemu operacyjnego lub skonfigurowanie parametrów systemu, możesz powinni logować się do konta administratora tak długo wystarczający do wykonywania zadań administracyjnych. Alternatywnie Windows **runas** polecenia mogą służyć do uruchamiania konkretnych aplikacji z dostępem administracyjnym.
+Konta użytkowników systemu Windows, których deweloperzy używają normalnie, powinny być dodawane do grup Użytkownicy lub Użytkownicy zaawansowani. Deweloperzy powinni również dodać do grupy debugowania. Będąc członkiem grupy Użytkownicy, można wykonywać rutynowe zadania, w tym uruchamiać programy i odwiedzać witryny internetowe bez narażania komputera o niepotrzebne ryzyko. Jako członek grupy Użytkownicy zaawansowani można także wykonywać zadania, takie jak instalacja aplikacji, instalacja drukarki i większość operacji w panelu sterowania. Jeśli konieczne jest wykonanie zadań administracyjnych, takich jak Uaktualnianie systemu operacyjnego lub Konfigurowanie parametrów systemowych, należy zalogować się do konta administratora przez wystarczająco długo, aby można było wykonać zadanie administracyjne. Alternatywnie można użyć polecenia **Uruchom jako** systemu Windows do uruchomienia określonych aplikacji z dostępem administracyjnym.
 
-## <a name="exposing-customers-to-security-risks"></a>Udostępnianie klientom na zagrożenia bezpieczeństwa
+## <a name="exposing-customers-to-security-risks"></a>Ujawnianie klientom zagrożeń bezpieczeństwa
 
-Nie jest częścią grupy Administratorzy jest szczególnie ważne dla deweloperów, ponieważ, oprócz ochrony na komputerach deweloperskich, uniemożliwia deweloperom przypadkowo pisanie kodu, który wymaga od klientów do dołączenia do grupy Administratorzy kolejność do wykonywania aplikacji Ci tworzyć. Jeśli kod, który wymaga dostępu administratora zostanie wprowadzona podczas tworzenia, zakończy się niepowodzeniem w czasie wykonywania, wysyłać alerty o fakt, że teraz Twoja aplikacja wymaga od klientów do uruchamiania jako administrator.
+Administratorzy nie są częścią grupy administratorów, ponieważ oprócz ochrony maszyn programistycznych uniemożliwia deweloperom przypadkowe pisanie kodu, który wymaga od klientów dołączenia do grupy administratorów w programie Aby wykonać opracowywane aplikacje. Jeśli kod, który wymaga dostępu administratora jest wprowadzany podczas opracowywania, zakończy się niepowodzeniem w czasie wykonywania i zostanie wysłany alert informujący o tym, że aplikacja wymaga od klientów uruchamiania jako administratorów.
 
-## <a name="code-that-requires-administrator-privileges"></a>Kod, który wymaga uprawnień administratora
+## <a name="code-that-requires-administrator-privileges"></a>Kod wymagający uprawnień administratora
 
-Kod wymaga dostępu administratora do działania. Jeśli to możliwe należy dążyć alternatywy dla tego kodu. Przykłady operacji kodu, które wymagają dostępu administratora:
+Aby można było wykonać jakiś kod, wymagany jest dostęp administratora. Jeśli to możliwe, należy wykonać alternatywy dla tego kodu. Przykłady operacji kodu, które wymagają dostępu administratora, to:
 
-- Zapisywanie katalogów chronionych obszarach systemu plików, takich jak Windows lub Program Files
+- Zapisywanie w chronionych obszarach systemu plików, takich jak katalogi plików systemu Windows lub programu
 
-- Zapisywanie do rejestru, np. HKEY_LOCAL_MACHINE chronionych obszarach
+- Zapisywanie w chronionych obszarach rejestru, takich jak HKEY_LOCAL_MACHINE
 
 - Instalowanie zestawów w globalnej pamięci podręcznej zestawów (GAC)
 
-Ogólnie rzecz biorąc działania te powinny być ograniczone do programów instalacyjnych aplikacji. Dzięki temu użytkownicy mogą używać tylko tymczasowo stan administratora.
+Ogólnie rzecz biorąc, te działania powinny być ograniczone do programów instalacyjnych aplikacji. Dzięki temu użytkownicy mogą tylko tymczasowo korzystać z stanu administratora.
 
 ## <a name="debugging"></a>Debugowanie
 
-Można debugować wszystkie aplikacje, które można uruchomić w programie Visual Studio (natywne i niezarządzane) jako użytkowników niebędących administratorami, staje się częścią grupy debugowanie. Obejmuje to możliwość dołączenia do uruchomionej aplikacji przy użyciu Dołącz do procesu polecenia. Jednakże należy być częścią grupy administratorów, aby debugować aplikacje natywne i zarządzane, które zostały uruchomione przez innego użytkownika.
+Można debugować wszystkie aplikacje uruchamiane w programie Visual Studio (natywny i niezarządzany) jako niebędące administratorami, stając się częścią grupy debugowania. Obejmuje to możliwość dołączania do uruchomionej aplikacji przy użyciu polecenia Dołącz do procesu. Należy jednak być częścią grupy administratorów, aby debugować natywne lub zarządzane aplikacje, które zostały uruchomione przez innego użytkownika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Najlepsze rozwiązania dotyczące zabezpieczeń](security-best-practices-for-cpp.md)
+[Najlepsze rozwiązania w zakresie zabezpieczeń](security-best-practices-for-cpp.md)

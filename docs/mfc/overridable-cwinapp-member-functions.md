@@ -1,34 +1,32 @@
 ---
 title: Funkcje członkowskie CWinApp z możliwością zastąpienia
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - overriding [MFC], overridable functions in CWinApp
 - application class [MFC]
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
-ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ba243bd755e25db5f2cb03d08013f082fbc918
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297089"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447265"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Funkcje członkowskie CWinApp z możliwością zastąpienia
 
-[CWinApp](../mfc/reference/cwinapp-class.md) udostępnia kilka klucza możliwym do zastąpienia elementów członkowskich (`CWinApp` zastępuje te składowe z klasy [CWinThread](../mfc/reference/cwinthread-class.md), z którego `CWinApp` wywodzi się):
+[CWinApp](../mfc/reference/cwinapp-class.md) udostępnia kilka kluczowych funkcji członkowskich (`CWinApp` zastępuje te elementy członkowskie z klasy [CWinThread](../mfc/reference/cwinthread-class.md), z których `CWinApp` wynika):
 
 - [InitInstance](../mfc/initinstance-member-function.md)
 
-- [Uruchom](../mfc/run-member-function.md)
+- [Run](../mfc/run-member-function.md)
 
 - [ExitInstance](../mfc/exitinstance-member-function.md)
 
 - [OnIdle](../mfc/onidle-member-function.md)
 
-Tylko `CWinApp` jest funkcja elementu członkowskiego, konieczne jest przesłonięcie `InitInstance`.
+Jedyną `CWinApp` funkcją członkowską, którą należy przesłonić, jest `InitInstance`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

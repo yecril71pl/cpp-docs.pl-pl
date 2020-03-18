@@ -8,7 +8,6 @@ f1_keywords:
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
 - CBulkRowset::AddRefRows
-- AddRefRows
 - CBulkRowset.AddRefRows
 - ATL.CBulkRowset<TAccessor>.AddRefRows
 - ATL::CBulkRowset::AddRefRows
@@ -22,7 +21,6 @@ f1_keywords:
 - ATL.CBulkRowset.CBulkRowset
 - ATL::CBulkRowset<TAccessor>::CBulkRowset
 - CBulkRowset<TAccessor>::CBulkRowset
-- CBulkRowset
 - ATL.CBulkRowset.MoveFirst
 - CBulkRowset<TAccessor>.MoveFirst
 - ATL.CBulkRowset<TAccessor>.MoveFirst
@@ -39,7 +37,6 @@ f1_keywords:
 - ATL::CBulkRowset::MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveLast
 - CBulkRowset<TAccessor>::MoveLast
-- MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveNext
 - ATL::CBulkRowset::MoveNext
 - CBulkRowset::MoveNext
@@ -49,7 +46,6 @@ f1_keywords:
 - CBulkRowset<TAccessor>.MoveNext
 - CBulkRowset<TAccessor>::MoveNext
 - CBulkRowset::MovePrev
-- MovePrev
 - CBulkRowset<TAccessor>::MovePrev
 - ATL::CBulkRowset<TAccessor>::MovePrev
 - CBulkRowset<TAccessor>.MovePrev
@@ -59,20 +55,17 @@ f1_keywords:
 - ATL.CBulkRowset<TAccessor>.MovePrev
 - CBulkRowset<TAccessor>::MoveToBookmark
 - CBulkRowset.MoveToBookmark
-- MoveToBookmark
 - ATL.CBulkRowset.MoveToBookmark
 - CBulkRowset::MoveToBookmark
 - ATL::CBulkRowset<TAccessor>::MoveToBookmark
 - ATL::CBulkRowset::MoveToBookmark
 - CBulkRowset.MoveToRatio
 - ATL::CBulkRowset::MoveToRatio
-- MoveToRatio
 - CBulkRowset::MoveToRatio
 - ATL.CBulkRowset<TAccessor>.MoveToRatio
 - ATL::CBulkRowset<TAccessor>::MoveToRatio
 - ATL.CBulkRowset.MoveToRatio
 - CBulkRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - ATL.CBulkRowset<TAccessor>.ReleaseRows
 - ATL::CBulkRowset<TAccessor>::ReleaseRows
 - ATL.CBulkRowset.ReleaseRows
@@ -102,16 +95,16 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176472"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446055"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 
-Pobiera i obsługuje wiersze, aby pracować nad dane zbiorcze Pobieranie wielu dojść do wierszy za pomocą jednego wywołania.
+Pobiera i manipulowanie wierszami w celu pracy z danymi zbiorczo przez pobranie wielu dojść do wierszy z pojedynczym wywołaniem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -123,11 +116,11 @@ class CBulkRowset : public CRowset<TAccessor>
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu.
+Klasa akcesora.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -135,26 +128,26 @@ Klasa metody dostępu.
 
 |||
 |-|-|
-|[Addrefrows —](#addrefrows)|Zwiększa liczbę odwołań.|
+|[AddRefRows](#addrefrows)|Zwiększa liczbę odwołań.|
 |[CBulkRowset](#cbulkrowset)|Konstruktor.|
-|[MoveFirst](#movefirst)|Pobiera pierwszy wiersz danych, wykonywanie nowych pobierania zbiorczego w razie potrzeby.|
+|[MoveFirst](#movefirst)|Pobiera pierwszy wiersz danych, wykonując nowe pobieranie zbiorcze w razie potrzeby.|
 |[MoveLast](#movelast)|Przenosi do ostatniego wiersza.|
-|[MoveNext](#movenext)|Pobiera następny wiersz danych.|
+|[Element](#movenext)|Pobiera następny wiersz danych.|
 |[MovePrev](#moveprev)|Przenosi do poprzedniego wiersza.|
-|[MoveToBookmark](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
-|[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
-|[ReleaseRows](#releaserows)|Ustawia bieżący wiersz (`m_nCurrentRow`) do zera i zwalnia wszystkie wiersze.|
-|[Setrows —](#setrows)|Ustawia liczbę dojść do wierszy mają zostać pobrane przez jedno wywołanie.|
+|[MoveToBookmark](#movetobookmark)|Pobiera wiersz oznaczony zakładką lub wiersz w określonym przesunięciu od tej zakładki.|
+|[MoveToRatio](#movetoratio)|Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.|
+|[ReleaseRows](#releaserows)|Ustawia bieżący wiersz (`m_nCurrentRow`) na zero i zwalnia wszystkie wiersze.|
+|[Setrows](#setrows)|Ustawia liczbę dojść wierszy do pobrania przez jedno wywołanie.|
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `CBulkRowset` klasy.
+Poniższy przykład ilustruje użycie klasy `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset::AddRefRows
+## <a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
-Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.
+Wywołuje [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) , aby zwiększyć liczbę odwołań dla wszystkich wierszy aktualnie pobieranych z zestawu wierszy bulk.
 
 ### <a name="syntax"></a>Składnia
 
@@ -164,11 +157,11 @@ HRESULT AddRefRows() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
+## <a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
-Tworzy nową `CBulkRowset` obiektu i ustawia domyślną liczbę wierszy do 10.
+Tworzy nowy obiekt `CBulkRowset` i ustawia domyślną liczbę wierszy na 10.
 
 ### <a name="syntax"></a>Składnia
 
@@ -176,7 +169,7 @@ Tworzy nową `CBulkRowset` obiektu i ustawia domyślną liczbę wierszy do 10.
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset::MoveFirst
+## <a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Pobiera pierwszy wiersz danych.
 
@@ -188,9 +181,9 @@ HRESULT MoveFirst() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="movelast"></a> CBulkRowset::MoveLast
+## <a name="movelast"></a>CBulkRowset:: MoveLast
 
 Przenosi do ostatniego wiersza.
 
@@ -202,9 +195,9 @@ HRESULT MoveLast() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="movenext"></a> CBulkRowset::MoveNext
+## <a name="movenext"></a>CBulkRowset:: MoveNext
 
 Pobiera następny wiersz danych.
 
@@ -216,9 +209,9 @@ HRESULT MoveNext() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. Zwraca DB_S_ENDOFROWSET, gdy zostanie osiągnięty koniec zestawu wierszy.
+Standardowa wartość HRESULT. Po osiągnięciu końca zestawu wierszy zwraca DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a> CBulkRowset::MovePrev
+## <a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Przenosi do poprzedniego wiersza.
 
@@ -230,11 +223,11 @@ HRESULT MovePrev() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
+## <a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
-Pobiera wiersz oznaczone przez zakładki lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.
+Pobiera wiersz oznaczony zakładką lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.
 
 ### <a name="syntax"></a>Składnia
 
@@ -246,18 +239,18 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 #### <a name="parameters"></a>Parametry
 
 *Zakładka*<br/>
-[in] Zakładka, oznaczanie lokalizacji, z którego chcesz pobrać dane.
+podczas Zakładka oznaczająca lokalizację, z której mają zostać pobrane dane.
 
 *lSkip*<br/>
-[in] Liczbę wierszy z zakładki, aby wiersz docelowy. Jeśli *lSkip* wynosi zero, pierwszy wiersz pobrania jest zakładką wiersza. Jeśli *lSkip* wynosi 1, pierwszy wiersz pobrania jest wiersz po wierszu zakładką. Jeśli *lSkip* wynosi -1, pierwszy wiersz pobrania jest wierszy przed wierszem zakładką.
+podczas Liczba wierszy z zakładki do wiersza docelowego. Jeśli *lSkip* ma wartość zero, pierwszy wiersz jest pobierany z zakładką. Jeśli *lSkip* ma wartość 1, pierwszy wiersz jest pobierany wiersz po wierszu oznaczonym zakładką. Jeśli *lSkip* ma wartość-1, pierwszy wiersz pobierany jest wiersz przed wierszem oznaczonym zakładką.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
+## <a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
-Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.
+Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -269,26 +262,26 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>Parametry
 
 *nNumerator*<br/>
-[in] Licznik używany do określenia pozycji ułamkowych, z którego można pobrać danych.
+podczas Licznik używany do określenia pozycji ułamkowej, z której mają zostać pobrane dane.
 
 *nDenominator*<br/>
-[in] Denominator, używany do określenia pozycji ułamkowych, z którego można pobrać danych.
+podczas Mianownik używany do określenia położenia ułamkowego, z którego mają zostać pobrane dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`MoveToRatio` Pobiera wiersze około zgodnie z następującą formułę:
+`MoveToRatio` pobiera wiersze w sposób niezależny od następującej formuły:
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Gdzie `RowsetSize` jest rozmiar zestawu wierszy, mierzony w wierszach. Dokładność tej formuły zależy od konkretnego dostawcy. Aby uzyskać szczegółowe informacje, zobacz [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="releaserows"></a> CBulkRowset::ReleaseRows
+## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
-Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.
+Wywołuje [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , aby zmniejszyć liczbę odwołań dla wszystkich wierszy aktualnie pobranych z zestawu wierszy bulk.
 
 ### <a name="syntax"></a>Składnia
 
@@ -298,11 +291,11 @@ HRESULT ReleaseRows() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="setrows"></a> CBulkRowset::SetRows
+## <a name="setrows"></a>CBulkRowset:: setrows
 
-Ustawia liczbę dojść do wierszy pobierane przez każde wywołanie.
+Ustawia liczbę dojść do wierszy pobieranych przez każde wywołanie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -313,13 +306,13 @@ void SetRows(DBROWCOUNT nRows) throw();
 #### <a name="parameters"></a>Parametry
 
 *nRows*<br/>
-[in] Nowy rozmiar wierszy (liczba wierszy).
+podczas Nowy rozmiar zestawu wierszy (liczba wierszy).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli chcesz wywołać tę funkcję, należy przed otwarciem zestawu wierszy.
+Jeśli wywołasz tę funkcję, musi ona być przed otwarciem zestawu wierszy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

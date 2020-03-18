@@ -18,7 +18,6 @@ f1_keywords:
 - ATL.CDataSource.GetProperties
 - CDataSource.GetProperties
 - ATL::CDataSource::GetProperties
-- GetProperties
 - ATL::CDataSource::GetProperty
 - ATL.CDataSource.GetProperty
 - CDataSource.GetProperty
@@ -57,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 3cb522d1f6ed256f8e042bc2f978e8bc5100888c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501404"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445301"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 
@@ -84,11 +83,11 @@ class CDataSource
 
 |||
 |-|-|
-|[Zamknij](#close)|Zamyka połączenie.|
+|[Ściśle](#close)|Zamknięcie połączenia.|
 |[GetInitializationString](#getinitializationstring)|Pobiera ciąg inicjujący źródła danych, które jest aktualnie otwarte.|
 |[GetProperties](#getproperties)|Pobiera wartości właściwości aktualnie ustawionych dla połączonego źródła danych.|
 |[GetProperty](#getproperty)|Pobiera wartość pojedynczej właściwości, która jest aktualnie ustawiona dla połączonego źródła danych.|
-|[Otwórz](#open)|Tworzy połączenie z dostawcą (źródłem danych) przy użyciu albo `CLSID` `ProgID`lub `CEnumerator` monikera dostarczonego przez wywołującego.|
+|[Otwórz](#open)|Tworzy połączenie z dostawcą (źródłem danych) przy użyciu `CLSID`, `ProgID`lub `CEnumerator` monikera dostarczonego przez wywołującego.|
 |[OpenFromFileName](#openfromfilename)|Otwiera źródło danych z pliku określonego przez nazwę pliku dostarczoną przez użytkownika.|
 |[OpenFromInitializationString](#openfrominitializationstring)|Otwiera źródło danych określone przez ciąg inicjujący.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Umożliwia użytkownikowi wybranie utworzonego wcześniej pliku linku danych w celu otworzenia odpowiedniego źródła danych.|
@@ -96,13 +95,13 @@ class CDataSource
 
 ## <a name="remarks"></a>Uwagi
 
-Co najmniej jedna sesja bazy danych może zostać utworzona dla jednego połączenia. Te sesje są reprezentowane przez `CSession`program. Musisz wywołać [CDataSource:: Open](../../data/oledb/cdatasource-open.md) , aby otworzyć połączenie przed utworzeniem sesji przy użyciu `CSession::Open`usługi.
+Co najmniej jedna sesja bazy danych może zostać utworzona dla jednego połączenia. Te sesje są reprezentowane przez `CSession`. Musisz wywołać [CDataSource:: Open](../../data/oledb/cdatasource-open.md) , aby otworzyć połączenie przed utworzeniem sesji z `CSession::Open`.
 
-Aby zapoznać się z przykładem sposobu `CDataSource`użycia, zobacz przykład [catdb](../../overview/visual-cpp-samples.md) .
+Aby zapoznać się z przykładem użycia `CDataSource`, zobacz przykład [catdb](../../overview/visual-cpp-samples.md) .
 
 ## <a name="close"></a>CDataSource:: Close
 
-Zamyka połączenie, zwalniając `m_spInit` wskaźnik.
+Zamyka połączenie, zwalniając wskaźnik `m_spInit`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -152,7 +151,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) w odniesieniu do *OLE DB programisty* w Windows SDK.
+Zobacz [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -176,7 +175,7 @@ HRESULT GetProperty(const GUID& guid,
 
 #### <a name="parameters"></a>Parametry
 
-*guid*<br/>
+*ident*<br/>
 podczas Identyfikator GUID identyfikujący zestaw właściwości, dla którego ma zostać zwrócona właściwość.
 
 *identyfikatora właściwości*<br/>
@@ -195,7 +194,7 @@ Aby uzyskać wiele właściwości, użyj [Właściwości GetProperties](../../da
 
 ## <a name="open"></a>CDataSource:: Open
 
-Otwiera połączenie ze źródłem danych przy użyciu `CLSID`, `ProgID`lub `CEnumerator` moniker lub wyświetla użytkownikowi okno dialogowe lokalizatora.
+Otwiera połączenie ze źródłem danych przy użyciu `CLSID`, `ProgID`lub `CEnumerator` moniker lub wyświetli komunikat z oknem dialogowym lokalizatora.
 
 ### <a name="syntax"></a>Składnia
 
@@ -241,10 +240,10 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>Parametry
 
 *Identyfikator*<br/>
-podczas `CLSID` Dostawcy danych.
+podczas `CLSID` dostawcy danych.
 
 *pPropSet*<br/>
-podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w odniesieniu do *OLE DB programisty* w Windows SDK.
+podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK.
 
 *nPropertySets*<br/>
 podczas Liczba struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) przeniesiona w argumencie *pPropSet* .
@@ -264,8 +263,8 @@ podczas Tryb inicjalizacji bazy danych. Aby zapoznać się z listą prawidłowyc
 *szProgID*<br/>
 podczas Identyfikator programu.
 
-*enumerator*<br/>
-podczas Obiekt [CEnumerator](../../data/oledb/cenumerator-class.md) używany do uzyskania monikera otwierającego połączenie, gdy obiekt wywołujący nie określi `CLSID`.
+*liczeni*<br/>
+podczas Obiekt [CEnumerator](../../data/oledb/cenumerator-class.md) używany do uzyskania monikera do otwarcia połączenia, gdy obiekt wywołujący nie określa `CLSID`.
 
 *Właściwość*<br/>
 podczas Dojście do okna, które ma być obiektem nadrzędnym okna dialogowego. Użycie przeciążenia funkcji korzystającej z parametru *HWND* spowoduje automatyczne wywołanie składników usługi; Aby uzyskać szczegółowe informacje, zobacz uwagi.
@@ -285,7 +284,7 @@ Przeciążenia metody, które nie używają parametru *HWND* , otwierają obiekt
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak otworzyć źródło danych aparatu Jet 4,0 przy użyciu szablonów OLE DB. Źródło danych aparatu Jet jest traktowane jako OLE DB źródło danych. Jednak Twoje wywołanie `Open` wymaga dwóch zestawów właściwości: jeden dla DBPROPSET_DBINIT i innych dla DBPROPSET_JETOLEDB_DBINIT, dzięki czemu można ustawić DBPROP_JETOLEDB_DATABASEPASSWORD.
+Poniższy kod pokazuje, jak otworzyć źródło danych aparatu Jet 4,0 przy użyciu szablonów OLE DB. Źródło danych aparatu Jet jest traktowane jako OLE DB źródło danych. Jednak wywołanie do `Open` wymaga dwóch zestawów właściwości: jeden dla DBPROPSET_DBINIT i innych dla DBPROPSET_JETOLEDB_DBINIT, dzięki czemu można ustawić DBPROP_JETOLEDB_DATABASEPASSWORD.
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
@@ -393,13 +392,13 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>Parametry
 
 *Identyfikator*<br/>
-podczas `CLSID` Dostawcy danych.
+podczas `CLSID` dostawcy danych.
 
 *szProgID*<br/>
 podczas Identyfikator programu dostawcy danych.
 
 *pPropset*<br/>
-podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w odniesieniu do *OLE DB programisty* w Windows SDK. Jeśli obiekt źródła danych jest zainicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli ta sama właściwość została określona więcej niż raz w *pPropset*, a następnie używana jest wartość określona dla dostawcy. Jeśli *ulPropSets* ma wartość zero, ten parametr jest ignorowany.
+podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK. Jeśli obiekt źródła danych jest zainicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli ta sama właściwość została określona więcej niż raz w *pPropset*, a następnie używana jest wartość określona dla dostawcy. Jeśli *ulPropSets* ma wartość zero, ten parametr jest ignorowany.
 
 *ulPropSets*<br/>
 podczas Liczba struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) przeniesiona w argumencie *pPropSet* . Jeśli wartość jest równa zero, Dostawca ignoruje *pPropset*.
@@ -412,7 +411,7 @@ Standardowa wartość HRESULT.
 
 Ta metoda otwiera obiekt źródła danych przy użyciu składników usługi w Oledb32. dll; Ta biblioteka DLL zawiera implementację funkcji składników usługi, takich jak pule zasobów, automatyczne rejestracje transakcji itd. Aby uzyskać więcej informacji, zobacz informacje dotyczące OLE DB w [podręczniku OLE DB programisty](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

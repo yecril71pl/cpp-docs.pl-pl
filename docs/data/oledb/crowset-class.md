@@ -37,7 +37,6 @@ f1_keywords:
 - ATL::CRowset::CRowset
 - ATL::CRowset<TAccessor>::CRowset
 - ATL.CRowset.CRowset
-- CRowset
 - CRowset<TAccessor>.CRowset
 - CRowset::CRowset
 - ATL.CRowset<TAccessor>.CRowset
@@ -84,7 +83,6 @@ f1_keywords:
 - ATL.CRowset.GetDataHere
 - ATL.CRowset<TAccessor>.GetOriginalData
 - CRowset<TAccessor>::GetOriginalData
-- GetOriginalData
 - ATL::CRowset<TAccessor>::GetOriginalData
 - ATL.CRowset.GetOriginalData
 - CRowset::GetOriginalData
@@ -98,7 +96,6 @@ f1_keywords:
 - CRowset<TAccessor>::GetRowStatus
 - ATL.CRowset.GetRowStatus
 - CRowset<TAccessor>.GetRowStatus
-- GetRowStatus
 - ATL.CRowset<TAccessor>.Insert
 - CRowset.Insert
 - CRowset<TAccessor>.Insert
@@ -109,7 +106,6 @@ f1_keywords:
 - ATL::CRowset::Insert
 - CRowset::IsSameRow
 - CRowset.IsSameRow
-- IsSameRow
 - ATL::CRowset::IsSameRow
 - ATL.CRowset.IsSameRow
 - CRowset<TAccessor>::IsSameRow
@@ -129,7 +125,6 @@ f1_keywords:
 - ATL.CRowset.MoveLast
 - ATL::CRowset::MoveLast
 - CRowset<TAccessor>.MoveLast
-- MoveLast
 - CRowset::MoveLast
 - ATL.CRowset<TAccessor>.MoveLast
 - CRowset.MoveLast
@@ -143,7 +138,6 @@ f1_keywords:
 - ATL::CRowset::MoveNext
 - CRowset<TAccessor>.MovePrev
 - CRowset.MovePrev
-- MovePrev
 - CRowset::MovePrev
 - ATL.CRowset.MovePrev
 - ATL::CRowset<TAccessor>::MovePrev
@@ -154,11 +148,9 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::MoveToBookmark
 - ATL.CRowset.MoveToBookmark
 - ATL.CRowset<TAccessor>.MoveToBookmark
-- MoveToBookmark
 - CRowset::MoveToBookmark
 - CRowset.MoveToBookmark
 - CRowset<TAccessor>::MoveToBookmark
-- MoveToRatio
 - CRowset<TAccessor>::MoveToRatio
 - CRowset::MoveToRatio
 - CRowset<TAccessor>.MoveToRatio
@@ -167,7 +159,6 @@ f1_keywords:
 - CRowset.MoveToRatio
 - ATL.CRowset<TAccessor>.MoveToRatio
 - ATL::CRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - CRowset::ReleaseRows
 - ATL::CRowset<TAccessor>::ReleaseRows
 - CRowset<TAccessor>.ReleaseRows
@@ -177,7 +168,6 @@ f1_keywords:
 - CRowset<TAccessor>::ReleaseRows
 - ATL::CRowset::ReleaseRows
 - ATL.CRowset<TAccessor>.SetData
-- SetData
 - ATL::CRowset::SetData
 - CRowset<TAccessor>.SetData
 - CRowset::SetData
@@ -238,16 +228,16 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361971"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441176"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 
-Hermetyzuje obiektu zestawu wierszy OLE DB i kilka powiązanych interfejsów i dostarcza metod manipulowania wierszy danych.
+Hermetyzuje obiekt OLE DB zestawu wierszy oraz kilka powiązanych interfejsów i udostępnia metody operowania dla danych zestawu wierszy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -259,11 +249,11 @@ class CRowset
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
+Klasa akcesora. Wartość domyślna to `CAccessorBase`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -271,40 +261,40 @@ Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
 
 |||
 |-|-|
-|[Addrefrows —](#addrefrows)|Zwiększa liczbę odwołań skojarzone z bieżącego wiersza.|
-|[Zamknij](#close)|Wersje wierszy i bieżący `IRowset` interfejsu.|
-|[Compare](#compare)|Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
-|[CRowset](#crowset)|Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z `IRowset` interfejs dostarczany jako parametr.|
-|[Delete](#delete)|Usuwa wiersze z wierszy przy użyciu [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
-|[FindNextRow](#findnextrow)|Wyszukuje następny zgodny wiersz po zakładką.|
-|[GetApproximatePosition](#getapproximateposition)|Zwraca pozycję przybliżony wiersz odpowiadający zakładki.|
-|[GetData](#getdata)|Pobiera dane z zestawu wierszy kopię wiersza.|
-|[GetDataHere](#getdatahere)|Pobiera dane z określonego bufora.|
-|[GetOriginalData](#getoriginaldata)|Pobiera dane ostatnio pobrana z lub przesłana do źródła danych, ignorowanie oczekujące zmiany.|
+|[AddRefRows](#addrefrows)|Zwiększa liczbę odwołań skojarzoną z bieżącym wierszem.|
+|[Ściśle](#close)|Zwalnia wiersze i bieżący interfejs `IRowset`.|
+|[Compare](#compare)|Porównuje dwie zakładki przy użyciu [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[CRowset](#crowset)|Tworzy nowy obiekt `CRowset` i (opcjonalnie) kojarzy go z interfejsem `IRowset` dostarczonym jako parametr.|
+|[Usuwanie](#delete)|Usuwa wiersze z zestawu wierszy przy użyciu [IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[FindNextRow](#findnextrow)|Znajduje następny pasujący wiersz po określonej zakładce.|
+|[GetApproximatePosition](#getapproximateposition)|Zwraca przybliżoną pozycję wiersza odpowiadającego zakładce.|
+|[GetData](#getdata)|Pobiera dane z kopii wiersza zestawu wierszy.|
+|[GetDataHere](#getdatahere)|Pobiera dane z określonego buforu.|
+|[GetOriginalData](#getoriginaldata)|Pobiera dane, które zostały ostatnio pobrane z lub przesłane do źródła danych, ignorując oczekujące zmiany.|
 |[GetRowStatus](#getrowstatus)|Zwraca stan wszystkich wierszy.|
-|[Wstaw](#insert)|Tworzy i wstawia nowy wiersz za pomocą [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
-|[Issamerow —](#issamerow)|Porównuje określony wiersz z bieżącego wiersza.|
-|[MoveFirst](#movefirst)|Powoduje przeniesienie lokalizacji pobierania następnej pozycji początkowej.|
-|[MoveLast](#movelast)|Przesuwa ostatni rekord.|
-|[MoveNext](#movenext)|Pobiera dane z następny kolejny wiersz lub określoną liczbę pozycji poza następnego wiersza.|
+|[Wstawienia](#insert)|Tworzy i wstawia nowy wiersz przy użyciu [IRowsetChange: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[IsSameRow](#issamerow)|Porównuje określony wiersz z bieżącym wierszem.|
+|[MoveFirst](#movefirst)|Zmienia położenie lokalizacji następnego pobrania na pozycję początkową.|
+|[MoveLast](#movelast)|Przenosi do ostatniego rekordu.|
+|[Element](#movenext)|Pobiera dane z następnego sekwencyjnego wiersza lub określoną liczbę pozycji poza następnym wierszem.|
 |[MovePrev](#moveprev)|Przenosi do poprzedniego rekordu.|
-|[MoveToBookmark](#movetobookmark)|Pobiera zakładki lub wiersz w określonym przesunięciu z tej zakładki.|
-|[MoveToRatio](#movetoratio)|Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.|
-|[ReleaseRows](#releaserows)|Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.|
-|[SetData](#setdata)|Ustawia wartości danych w jednej lub kilku kolumn przy użyciu wiersza [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Cofnij](#undo)|Cofa wszelkie zmiany wprowadzone od czasu ostatniego pobrania wiersza lub [aktualizacji](../../data/oledb/crowset-update.md).|
-|[Aktualizacja](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone od czasu ostatniego pobrania lub aktualizacji bieżący wiersz.|
-|[UpdateAll](#updateall)|Przesyła wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego pobrania lub aktualizacji.|
+|[MoveToBookmark](#movetobookmark)|Pobiera wiersz oznaczony zakładką lub wiersz w określonym przesunięciu od tej zakładki.|
+|[MoveToRatio](#movetoratio)|Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.|
+|[ReleaseRows](#releaserows)|Wywołuje [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) w celu zwolnienia bieżącego uchwytu wiersza.|
+|[Operację](#setdata)|Ustawia wartości danych w co najmniej jednej kolumnie wiersza przy użyciu [IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
+|[Anulowanie](#undo)|Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](../../data/oledb/crowset-update.md).|
+|[Aktualizacja](#update)|Przesyła wszystkie oczekujące zmiany wprowadzone do bieżącego wiersza od momentu ostatniego pobrania lub aktualizacji.|
+|[UpdateAll](#updateall)|Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub aktualizacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-W OLE DB zestawu wierszy jest obiekt, za pomocą którego program ustawia i pobiera dane.
+W OLE DB zestaw wierszy jest obiektem, za pomocą którego program ustawia i pobiera dane.
 
-Ta klasa nie jest przeznaczona do wystąpienia, ale raczej przekazany jako parametr szablonu `CTable` lub `CCommand` (`CRowset` jest ustawieniem domyślnym).
+Ta klasa nie jest przeznaczona do tworzenia wystąpienia, ale nie została przeniesiona jako parametr szablonu do `CTable` lub `CCommand` (`CRowset` jest wartością domyślną).
 
-## <a name="addrefrows"></a> CRowset::AddRefRows
+## <a name="addrefrows"></a>CRowset:: AddRefRows
 
-Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) do zwiększenia (po jednym) licznik odwołań skojarzonych z bieżącym dojście do wiersza.
+Wywołuje [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) , aby zwiększyć (przez jeden) liczbę odwołań skojarzoną z bieżącym dojściem wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -314,15 +304,15 @@ HRESULT AddRefRows() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwiększa liczbę odwołań dla dojście do bieżącego wiersza. Wywołaj [releaserows —](../../data/oledb/crowset-releaserows.md) zmniejszyć liczbę. Wiersze zwrócone przez metody przenoszenia mają liczebności referencyjnej równej jeden.
+Ta metoda zwiększa liczbę odwołań dla uchwytu bieżącego wiersza. Wywołaj [ReleaseRows](../../data/oledb/crowset-releaserows.md) , aby zmniejszyć liczbę. Wiersze zwracane przez metody Move mają liczbę odwołań o jednej.
 
-## <a name="close"></a> CRowset::Close
+## <a name="close"></a>CRowset:: Close
 
-Wersje wierszy i bieżący [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejsu.
+Zwalnia wiersze i bieżący interfejs [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -332,11 +322,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwalnia wszystkie wiersze, obecnie w zestawie wierszy.
+Ta metoda zwalnia wszystkie wiersze znajdujące się obecnie w zestawie wierszy.
 
-## <a name="compare"></a> CRowset::Compare
+## <a name="compare"></a>CRowset:: Compare
 
-Porównuje dwa zakładki przy użyciu [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
+Porównuje dwie zakładki przy użyciu [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
 ### <a name="syntax"></a>Składnia
 
@@ -349,27 +339,27 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 #### <a name="parameters"></a>Parametry
 
 *Bookmark1*<br/>
-[in] Pierwszy zakładki do porównania.
+podczas Pierwsza zakładka do porównania.
 
 *Bookmark2*<br/>
-[in] Drugi zakładki do porównania.
+podczas Druga zakładka do porównania.
 
 *pComparison*<br/>
-[out] Wskaźnik do wyniku porównania.
+określoną Wskaźnik do wyniku porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetLocate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetLocate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetLocate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetLocate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Aby dowiedzieć się, jak korzystanie z zakładek w konsumentów, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md).
+Aby uzyskać informacje o korzystaniu z zakładek w konsumenci, zobacz [using zakładki](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowset"></a> CRowset::CRowset
+## <a name="crowset"></a>CRowset:: CRowset
 
-Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfejs dostarczany jako parametr.
+Tworzy nowy obiekt `CRowset` i (opcjonalnie) kojarzy go z interfejsem [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) dostarczonym jako parametr.
 
 ### <a name="syntax"></a>Składnia
 
@@ -382,11 +372,11 @@ CRowset(IRowset* pRowset);
 #### <a name="parameters"></a>Parametry
 
 *pRowset*<br/>
-[in] Wskaźnik do `IRowset` interfejsu ma zostać skojarzony z tą klasą.
+podczas Wskaźnik do interfejsu `IRowset`, który ma zostać skojarzony z tą klasą.
 
-## <a name="delete"></a> CRowset::Delete
+## <a name="delete"></a>CRowset::D Usuń
 
-Wywołania [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) można usunąć bieżący wiersz z zestawu wierszy.
+Wywołuje [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) , aby usunąć bieżący wiersz z zestawu wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -396,11 +386,11 @@ HRESULT Delete() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="findnextrow"></a> CRowset::FindNextRow
+## <a name="findnextrow"></a>CRowset:: FindNextRow
 
-Wyszukuje następny zgodny wiersz po zakładką.
+Znajduje następny pasujący wiersz po określonej zakładce.
 
 ### <a name="syntax"></a>Składnia
 
@@ -417,43 +407,43 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 #### <a name="parameters"></a>Parametry
 
-*OP*<br/>
-[in] Operacja używania przy porównywaniu wartości wiersza. W przypadku wartości zobacz [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85)).
+*op*<br/>
+podczas Operacja do użycia w porównaniu wartości wierszy. Aby uzyskać wartości, zobacz [IRowsetFind:: FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85)).
 
 *pData*<br/>
-[in] Wskaźnik do wartości, które mają być dopasowywane.
+podczas Wskaźnik do wartości, która ma zostać dopasowana.
 
 *wType*<br/>
-[in] Wskazuje typ danych wartości części buforu. Informacje wskaźników typu, zobacz [typy danych](/previous-versions/windows/desktop/ms723969(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
+podczas Wskazuje typ danych części wartości w buforze. Aby uzyskać informacje na temat wskaźników typu, zobacz [typy danych](/previous-versions/windows/desktop/ms723969(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK.
 
 *nLength*<br/>
-[in] Długość, w bajtach, struktury danych konsumentów przydzielonych do wartości danych. Aby uzyskać szczegółowe informacje, zobacz opis `cbMaxLen` w [struktury DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) w *OLE DB Podręcznik programisty.*
+podczas Długość (w bajtach) struktury danych odbiorcy przydzieloną dla wartości danych. Aby uzyskać szczegółowe informacje, zobacz Opis `cbMaxLen` w [strukturach DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
 *bPrecision*<br/>
-[in] Maksymalna dozwolona dokładność używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* jest DBTYPE_NUMERIC. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
+podczas Maksymalna precyzja użyta podczas pobierania danych. Używane tylko wtedy, gdy *wType* jest DBTYPE_NUMERIC. Aby uzyskać więcej informacji, zobacz [konwersje dotyczące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *Kompendium OLE DB programisty*.
 
 *bScale*<br/>
-[in] Skala używany podczas pobierania danych. Używane tylko wtedy, gdy *wType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Aby uzyskać więcej informacji, zobacz [konwersje obejmujące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *OLE DB Podręcznik programisty*.
+podczas Skala używana podczas pobierania danych. Używane tylko wtedy, gdy *wType* jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Aby uzyskać więcej informacji, zobacz [konwersje dotyczące DBTYPE_NUMERIC lub DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) w *Kompendium OLE DB programisty*.
 
 *bSkipCurrent*<br/>
-[in] Liczba wierszy z zakładki, od którego należy rozpocząć wyszukiwanie.
+podczas Liczba wierszy z zakładki, w której ma zostać rozpoczęte wyszukiwanie.
 
 *pBookmark*<br/>
-[in] Zakładki dla pozycji, od którego należy rozpocząć wyszukiwanie.
+podczas Zakładka dla pozycji, w której ma zostać rozpoczęte wyszukiwanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetFind`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetFind` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetFind`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetFind` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Aby dowiedzieć się, jak korzystanie z zakładek w konsumentów, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md).
+Aby uzyskać informacje o korzystaniu z zakładek w konsumenci, zobacz [using zakładki](../../data/oledb/using-bookmarks.md).
 
-## <a name="getapproximateposition"></a> CRowset::GetApproximatePosition
+## <a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
 
-Zwraca pozycję przybliżony wiersz odpowiadający zakładki.
+Zwraca przybliżoną pozycję wiersza odpowiadającego zakładce.
 
 ### <a name="syntax"></a>Składnia
 
@@ -466,27 +456,27 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 #### <a name="parameters"></a>Parametry
 
 *pBookmark*<br/>
-[in] Wskaźnik do zakładki, która identyfikuje wiersz, w których pozycja ma zostać znaleziona. Wartość NULL, jeśli liczba wierszy jest wymagany tylko.
+podczas Wskaźnik do zakładki, która identyfikuje wiersz, którego pozycja ma zostać znaleziona. Wartość NULL, jeśli jest wymagana tylko liczba wierszy.
 
 *pPosition*<br/>
-[out] Wskaźnik do lokalizacji, w którym `GetApproximatePosition` zwraca pozycję wiersza. Wartość NULL, jeśli pozycja nie jest wymagana.
+określoną Wskaźnik do lokalizacji, w której `GetApproximatePosition` zwraca pozycję wiersza. Wartość NULL, jeśli pozycja nie jest wymagana.
 
 *pcRows*<br/>
-[out] Wskaźnik do lokalizacji, w którym `GetApproximatePosition` zwraca łączną liczbę wierszy. Wartość NULL, jeśli liczba wierszy nie jest wymagana.
+określoną Wskaźnik do lokalizacji, w której `GetApproximatePosition` zwraca łączną liczbę wierszy. Wartość NULL, jeśli liczba wierszy nie jest wymagana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetScroll`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetScroll` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetScroll`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetScroll` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Aby dowiedzieć się, jak korzystanie z zakładek w konsumentów, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md).
+Aby uzyskać informacje o korzystaniu z zakładek w konsumenci, zobacz [using zakładki](../../data/oledb/using-bookmarks.md).
 
-## <a name="getdata"></a> CRowset::GetData
+## <a name="getdata"></a>CRowset:: GetData
 
-Pobiera dane z zestawu wierszy kopię wiersza.
+Pobiera dane z kopii wiersza zestawu wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -499,19 +489,19 @@ HRESULT GetData(int nAccessor) throw();
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer indeksu (zero przesunięcie) dostępu na potrzeby uzyskiwania dostępu do danych.
+podczas Numer indeksu (zero-offset) metody dostępu, która ma być używana do uzyskiwania dostępu do danych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli określisz metodę dostępu, który nie jest autoaccessor w [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), ta metoda umożliwia jawne uzyskanie danych, przekazując numer dostępu.
+W przypadku określenia akcesora, który nie jest autodostępnym w [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), Użyj tej metody, aby jawnie pobrać dane przez przekazanie numeru dostępu.
 
-## <a name="getdatahere"></a> CRowset::GetDataHere
+## <a name="getdatahere"></a>CRowset:: GetDataHere
 
-Pobiera dane z bieżącego wiersza i umieszcza go w określonego bufora.
+Pobiera dane z bieżącego wiersza i umieszcza je w określonym buforze.
 
 ### <a name="syntax"></a>Składnia
 
@@ -523,22 +513,22 @@ HRESULT GetDataHere(int nAccessor,
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer indeksu dostępu na potrzeby uzyskiwania dostępu do danych.
+podczas Numer indeksu akcesora, który ma być używany do uzyskiwania dostępu do danych.
 
 *pBuffer*<br/>
-[out] Bufor do której chcesz umieścić dane bieżącego rekordu.
+określoną Bufor, w którym mają zostać umieszczone dane dla bieżącego rekordu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład jak używać tej funkcji, zobacz [MultiRead przykładowe](../../overview/visual-cpp-samples.md).
+Przykład korzystania z tej funkcji można znaleźć w przykładowym [trybie odczytu](../../overview/visual-cpp-samples.md).
 
-## <a name="getoriginaldata"></a> CRowset::GetOriginalData
+## <a name="getoriginaldata"></a>CRowset:: GetOriginalData
 
-Wywołania `IRowsetUpdate::GetOriginalData` można pobrać danych ostatnio pobrana z lub przesłana do źródła danych.
+Wywołuje `IRowsetUpdate::GetOriginalData` w celu pobrania danych ostatnio pobranych z lub przesłanych do źródła danych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -548,15 +538,15 @@ HRESULT GetOriginalData() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera dane ostatnio pobrana z lub przesłana do źródła danych; go nie pobrać wartości na podstawie oczekujące zmiany.
+Ta metoda pobiera dane ostatnio pobrane z lub przesłane do źródła danych. nie pobiera wartości w oparciu o oczekujące zmiany.
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetUpdate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetUpdate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetUpdate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="getrowstatus"></a> CRowset::GetRowStatus
+## <a name="getrowstatus"></a>CRowset:: GetRowStatus
 
 Zwraca stan wszystkich wierszy.
 
@@ -569,19 +559,19 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 #### <a name="parameters"></a>Parametry
 
 *pStatus*<br/>
-[out] Wskaźnik do lokalizacji, gdzie `GetRowStatus` zwraca wartość stanu. Zobacz DBPENDINGSTATUS w odwołaniu do programisty OLE DB.
+określoną Wskaźnik do lokalizacji, w której `GetRowStatus` zwraca wartość stanu. Zobacz DBPENDINGSTATUS w dokumentacji programisty OLE DB.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetUpdate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetUpdate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetUpdate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="insert"></a> CRowset::Insert
+## <a name="insert"></a>CRowset:: INSERT
 
-Tworzy i inicjuje nowego wiersza przy użyciu danych z metody dostępu.
+Tworzy i inicjuje nowy wiersz przy użyciu danych z metody dostępu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -593,32 +583,32 @@ HRESULT Insert(int nAccessor = 0,
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer dostępu do użycia podczas wstawiania danych.
+podczas Numer metody dostępu do użycia podczas wstawiania danych.
 
 *bGetHRow*<br/>
-[in] Wskazuje, czy uchwyt wstawionego wiersza są pobierane.
+podczas Wskazuje, czy dojście dla wstawionego wiersza jest pobierane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetChange`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetChange` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetChange`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetChange` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Wstaw może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolumna nie jest zapisywalna. Zmodyfikuj mapy kursora, aby rozwiązać ten problem.
+Wstawianie może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolumna nie jest zapisywalna. Zmodyfikuj mapę kursorów, aby usunąć ją.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak dostęp do źródła danych za pomocą zestawu wierszy, a następnie wstawianie na ciąg przy użyciu tabeli, w tym zestawie wierszy.
+Poniższy przykład pokazuje, jak uzyskać dostęp do źródła danych za pośrednictwem zestawu wierszy, a następnie wstawić ciąg za pomocą tabeli w zestawie wierszy.
 
-Najpierw należy utworzyć klasę tabeli przez wstawienie nowego obiektu ATL do projektu. Na przykład, kliknij prawym przyciskiem myszy projekt w okienku obszaru roboczego i wybierz **nowy obiekt ATL**. Z **dostęp do danych** kategorii, wybierz opcję **konsumenta**. Utwórz typ obiektu odbiorcy **tabeli**. (Zaznaczenie **tabeli** tworzy zestawu wierszy bezpośrednio z tabeli; wybieranie **polecenia** tworzy wierszy za pomocą polecenia SQL.) Wybierz źródło danych, określając tabeli za pomocą którego można uzyskać dostępu tego źródła danych. Jeśli wywołanie obiektu konsumenta **CCustomerTable**, możesz następnie również zaimplementować kod wstawiania w następujący sposób:
+Najpierw Utwórz klasę tabeli, wstawiając nowy obiekt ATL do projektu. Na przykład kliknij prawym przyciskiem myszy projekt w okienku obszaru roboczego i wybierz polecenie **nowy obiekt ATL**. W kategorii **dostęp do danych** wybierz pozycję **Klient**. Utwórz obiekt odbiorcy typu **Table**. (Wybranie opcji **tabela** powoduje utworzenie zestawu wierszy bezpośrednio z tabeli; wybranie **polecenia** powoduje utworzenie zestawu wierszy za pośrednictwem polecenia SQL). Wybierz źródło danych, określając tabelę, za pomocą której chcesz uzyskać dostęp do tego źródła danych. Jeśli wywołasz **CCustomerTable**obiektu konsumenta, zaimplementuj kod wstawiania w następujący sposób:
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a> CRowset::IsSameRow
+## <a name="issamerow"></a>CRowset:: IsSameRow
 
-Porównuje określony wiersz z bieżącego wiersza.
+Porównuje określony wiersz z bieżącym wierszem.
 
 ### <a name="syntax"></a>Składnia
 
@@ -629,15 +619,15 @@ HRESULT IsSameRow(HROW hRow) const throw();
 #### <a name="parameters"></a>Parametry
 
 *hRow*<br/>
-[in] Dojście do wiersza do porównania z bieżącym wierszu.
+podczas Uchwyt do wiersza, który ma zostać porównany z bieżącym wierszem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. S_OK wskazuje, że wiersze są takie same. Aby uzyskać inne wartości, zobacz [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *OLE DB Podręcznik programisty* w zestawie Windows SDK.
+Standardowa wartość HRESULT. S_OK wskazuje, że wiersze są takie same. W przypadku innych wartości, zobacz [IRowsetIndentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) w *dokumentacji programisty OLE DB* w Windows SDK.
 
-## <a name="movefirst"></a> CRowset::MoveFirst
+## <a name="movefirst"></a>CRowset:: MoveFirst
 
-Przenosi kursor do położenie początkowe i pobiera początkowy wiersz.
+Przenosi kursor do pozycji początkowej i pobiera początkowy wiersz.
 
 ### <a name="syntax"></a>Składnia
 
@@ -647,13 +637,13 @@ HRESULT MoveFirst() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania następnej pozycji początkowej (pozycja został lokalizacji pobierania następnego podczas tworzenia zestawu wierszy) i pobiera początkowy wiersz.
+Wywołuje [IRowset:: operacja RestartPosition wykonywana](/previous-versions/windows/desktop/ms712877(v=vs.85)) w celu zmiany położenia lokalizacji następnego pobrania do początkowej pozycji (pozycja, która była lokalizacją następnego pobrania podczas tworzenia zestawu wierszy) i pobiera początkowy wiersz.
 
-## <a name="movelast"></a> CRowset::MoveLast
+## <a name="movelast"></a>CRowset:: MoveLast
 
 Przenosi kursor do ostatniego wiersza.
 
@@ -665,15 +655,15 @@ HRESULT MoveLast() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) służące do zmiany położenia lokalizacji pobierania dalej do ostatniej pozycji i pobiera ostatni wiersz.
+Wywołuje [IRowset:: operacja RestartPosition wykonywana](/previous-versions/windows/desktop/ms712877(v=vs.85)) w celu zmiany położenia lokalizacji następnego pobrania do ostatniej pozycji i pobrania ostatniego wiersza.
 
-Ta metoda wymaga, aby ustawić `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy. (Lepszą wydajność, możesz również ustawić `DBPROP_QUICKRESTART` VARIANT_TRUE.)
+Ta metoda wymaga ustawienia `DBPROP_CANSCROLLBACKWARDS` do VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy. (W celu uzyskania lepszej wydajności można również ustawić `DBPROP_QUICKRESTART` na VARIANT_TRUE).
 
-## <a name="movenext"></a> CRowset::MoveNext
+## <a name="movenext"></a>CRowset:: MoveNext
 
 Przenosi kursor do następnego rekordu.
 
@@ -689,28 +679,28 @@ HRESULT MoveNext(LONG lSkip,
 #### <a name="parameters"></a>Parametry
 
 *lSkip*<br/>
-[in] Liczba wierszy do pominięcia przed pobieranie.
+podczas Liczba wierszy do pominięcia przed pobraniem.
 
 *bForward*<br/>
-[in] Przekaż **true** przejścia do następnego rekordu **false** umożliwiający przenoszenie do tyłu.
+podczas Przekaż **wartość true** , aby przejść do następnego rekordu, **Fałsz** , aby przejść do tyłu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT. Zwraca DB_S_ENDOFROWSET, gdy zostanie osiągnięty koniec zestawu wierszy.
+Standardowa wartość HRESULT. Po osiągnięciu końca zestawu wierszy zwraca DB_S_ENDOFROWSET.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera następny wiersz sekwencyjne z `CRowset` obiektu, uzupełnij poprzedniej pozycji. Ewentualnie możesz przejść od razu *lSkip* wierszy lub przechodzenie do tyłu.
+Pobiera następny sekwencyjny wiersz z obiektu `CRowset`, zapamiętając poprzednią pozycję. Opcjonalnie możesz zrezygnować z *lSkip* wierszy lub przejść do tyłu.
 
-Ta metoda wymaga, że można ustawić następujące właściwości przed wywołaniem `Open` dotyczącej tabeli lub zawierające zestaw wierszy polecenia:
+Ta metoda wymaga ustawienia następujących właściwości przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy:
 
 - `DBPROP_CANSCROLLBACKWARDS` musi być VARIANT_TRUE, jeśli *lSkip* < 0
 
 - `DBPROP_CANFETCHBACKWARDS` musi być VARIANT_TRUE, jeśli *bForward* = false
 
-W przeciwnym razie (Jeśli *lSkip* > = 0 i *bForward* = true), nie musisz ustawiać żadnych dodatkowych właściwości.
+W przeciwnym razie (Jeśli *lSkip* > = 0 i *bForward* = true) nie trzeba ustawiać żadnych dodatkowych właściwości.
 
-## <a name="moveprev"></a> CRowset::MovePrev
+## <a name="moveprev"></a>CRowset:: MovePrev
 
 Przenosi kursor do poprzedniego rekordu.
 
@@ -722,15 +712,15 @@ HRESULT MovePrev() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga, ustaw opcję `DBPROP_CANFETCHBACKWARDS` lub `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga ustawienia `DBPROP_CANFETCHBACKWARDS` lub `DBPROP_CANSCROLLBACKWARDS` do VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="movetobookmark"></a> CRowset::MoveToBookmark
+## <a name="movetobookmark"></a>CRowset:: MoveToBookmark
 
-Pobiera wiersz oznaczone przez zakładki lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.
+Pobiera wiersz oznaczony zakładką lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.
 
 ### <a name="syntax"></a>Składnia
 
@@ -742,24 +732,24 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 #### <a name="parameters"></a>Parametry
 
 *Zakładka*<br/>
-[in] Zakładka, oznaczanie lokalizacji, z którego chcesz pobrać dane.
+podczas Zakładka oznaczająca lokalizację, z której mają zostać pobrane dane.
 
 *lSkip*<br/>
-[in] Liczbę wierszy z zakładki, aby wiersz docelowy. Jeśli *lSkip* wynosi zero, pierwszy wiersz pobrania jest zakładką wiersza. Jeśli *lSkip* wynosi 1, pierwszy wiersz pobrania jest wiersz po wierszu zakładką. Jeśli *lSkip* wynosi -1, pierwszy wiersz pobrania jest wierszy przed wierszem zakładką.
+podczas Liczba wierszy z zakładki do wiersza docelowego. Jeśli *lSkip* ma wartość zero, pierwszy wiersz jest pobierany z zakładką. Jeśli *lSkip* ma wartość 1, pierwszy wiersz jest pobierany wiersz po wierszu oznaczonym zakładką. Jeśli *lSkip* ma wartość-1, pierwszy wiersz pobierany jest wiersz przed wierszem oznaczonym zakładką.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetLocate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetLocate` VARIANT_TRUE i zestaw `DBPROP_CANFETCHBACKWARDS` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetLocate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetLocate` na VARIANT_TRUE i ustawić `DBPROP_CANFETCHBACKWARDS` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Aby dowiedzieć się, jak korzystanie z zakładek w konsumentów, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md).
+Aby uzyskać informacje o korzystaniu z zakładek w konsumenci, zobacz [using zakładki](../../data/oledb/using-bookmarks.md).
 
-## <a name="movetoratio"></a> CRowset::MoveToRatio
+## <a name="movetoratio"></a>CRowset:: MoveToRatio
 
-Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.
+Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -771,31 +761,31 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>Parametry
 
 *nNumerator*<br/>
-[in] Licznik używany do określenia ułamkowe pozycyjne, z którego można pobrać danych.
+podczas Licznik używany do określenia ułamka, z którego mają zostać pobrane dane.
 
 *nDenominator*<br/>
-[in] Denominator używany do określenia ułamkowe pozycyjne, z którego można pobrać danych.
+podczas Mianownik używany do określenia ułamka, z którego mają zostać pobrane dane.
 
 *bForward*<br/>
-[in] Wskazuje, czy do przechodzenia do przodu lub Wstecz. Wartość domyślna jest proste.
+podczas Wskazuje, czy przenieść do przodu czy do tyłu. Wartość domyślna to Prześlij dalej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`MoveToRatio` Pobiera wiersze, zgodnie z grubsza na następującą formułę:
+`MoveToRatio` pobiera wiersze zgodnie z przybliżeniem do następującej formuły:
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
+gdzie `RowsetSize` jest rozmiar zestawu wierszy, mierzony w wierszach. Dokładność tej formuły zależy od konkretnego dostawcy. Aby uzyskać szczegółowe informacje, zobacz [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetScroll`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetScroll` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetScroll`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetScroll` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="releaserows"></a> CRowset::ReleaseRows
+## <a name="releaserows"></a>CRowset:: ReleaseRows
 
-Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zwolnić dojście do bieżącego wiersza.
+Wywołuje [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) w celu zwolnienia bieżącego uchwytu wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -805,11 +795,11 @@ HRESULT ReleaseRows() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="setdata"></a> CRowset::SetData
+## <a name="setdata"></a>CRowset:: SetData
 
-Ustawia wartości danych w jednej lub kilku kolumn w wierszu.
+Ustawia wartości danych w co najmniej jednej kolumnie wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -822,23 +812,23 @@ HRESULT SetData(int nAccessor) const throw();
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Numer dostępu na potrzeby uzyskiwania dostępu do danych.
+podczas Numer metody dostępu służącej do uzyskiwania dostępu do danych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać `SetData` formularz, który akceptuje żadnych argumentów, wszystkie metody dostępu są używane do aktualizowania. Zwykle wywołują `SetData` do ustawiania wartości danych w kolumnach w wierszu, następnie wywołać [aktualizacji](../../data/oledb/crowset-update.md) przesyłać tych zmian.
+Dla formularza `SetData`, który nie akceptuje żadnych argumentów, do aktualizacji są używane wszystkie metody dostępu. Zazwyczaj Wywołaj `SetData`, aby ustawić wartości danych w kolumnach w wierszu, a następnie Wywołaj polecenie [Update](../../data/oledb/crowset-update.md) , aby przesłać te zmiany.
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetChange`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetChange` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetChange`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetChange` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-Operacja ustawienia może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolumna nie jest zapisywalna. Zmodyfikuj mapy kursora, aby rozwiązać ten problem.
+Operacja ustawienia może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolumna nie jest zapisywalna. Zmodyfikuj mapę kursorów, aby usunąć ją.
 
-## <a name="undo"></a> CRowset::Undo
+## <a name="undo"></a>CRowset:: Undo
 
-Cofa wszelkie zmiany wprowadzone od czasu ostatniego pobrania wiersza lub [aktualizacji](../../data/oledb/crowset-update.md).
+Cofa wszelkie zmiany wprowadzone w wierszu od momentu ostatniego pobrania lub [aktualizacji](../../data/oledb/crowset-update.md).
 
 ### <a name="syntax"></a>Składnia
 
@@ -851,25 +841,25 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Undo` zwraca liczbę wierszy nastąpiła próba Cofnij, jeśli jest to wymagane.
+określoną Wskaźnik do lokalizacji, w której `Undo` zwraca liczbę wierszy, które próbowano cofnąć, jeśli jest to wymagane.
 
 *phRow*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Undo` zwraca tablicę dojść do wszystkich wierszy nastąpiła próba Cofnij, jeśli jest to wymagane.
+określoną Wskaźnik do lokalizacji, w której `Undo` zwraca tablicę dojść do wszystkich wierszy, które próbowano cofnąć, jeśli jest to wymagane.
 
 *pStatus*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Undo` zwraca wartość stanu wiersza. Brak stanu jest zwracany, jeśli *pStatus* ma wartość null.
+określoną Wskaźnik do lokalizacji, w której `Undo` zwraca wartość stanu wiersza. Jeśli *pStatus* ma wartość null, żaden stan nie jest zwracany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetUpdate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetUpdate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetUpdate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="update"></a> CRowset::Update
+## <a name="update"></a>CRowset:: Update
 
-Przesyła wszystkie oczekujące zmiany wprowadzone do bieżącego wiersza od czasu ostatniego pobrania lub `Update` wywołania.
+Przesyła wszystkie oczekujące zmiany wprowadzone do bieżącego wiersza od momentu ostatniego pobrania lub `Update` na nim.
 
 ### <a name="syntax"></a>Składnia
 
@@ -882,27 +872,27 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Update` zwraca liczbę wierszy nastąpiła próba aktualizacji, jeśli jest to wymagane.
+określoną Wskaźnik do lokalizacji, w której `Update` zwraca liczbę wierszy, które próbowano zaktualizować, jeśli jest to wymagane.
 
 *phRow*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Update` zwraca uchwyt wiersza nastąpiła próba aktualizacji. Brak dojścia jest zwracany, jeśli *phRow* ma wartość null.
+określoną Wskaźnik do lokalizacji, w której `Update` zwraca dojście wiersza, który próbował zaktualizować. Jeśli *phRow* ma wartość null, nie jest zwracana żadna dojście.
 
 *pStatus*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Update` zwraca wartość stanu wiersza. Brak stanu jest zwracany, jeśli *pStatus* ma wartość null.
+określoną Wskaźnik do lokalizacji, w której `Update` zwraca wartość stanu wiersza. Jeśli *pStatus* ma wartość null, żaden stan nie jest zwracany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesyła wszystkie oczekujące zmiany do bieżącego wiersza od czasu ostatniego pobrania lub zaktualizować tego wiersza (przy użyciu `Update` lub [UpdateAll](../../data/oledb/crowset-updateall.md)). Zwykle wywołują [SetData](../../data/oledb/crowset-setdata.md) do ustawiania wartości danych w kolumnach w wierszu, a następnie wywołaj `Update` przesyłać tych zmian.
+Przesyła wszystkie oczekujące zmiany dokonane w bieżącym wierszu od momentu ostatniego pobrania lub zaktualizowania tego wiersza (przy użyciu `Update` lub [UPDATEALL](../../data/oledb/crowset-updateall.md)). Zazwyczaj wywoływanie metody [SetData](../../data/oledb/crowset-setdata.md) w celu ustawienia wartości danych w kolumnach w wierszu, a następnie wywołaj `Update`, aby przesłać te zmiany.
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetUpdate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetUpdate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetUpdate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
-## <a name="updateall"></a> CRowset::UpdateAll
+## <a name="updateall"></a>CRowset:: UpdateAll
 
-Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od czasu ostatniego pobrania lub `Update` wywołania.
+Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub `Update` na nim.
 
 ### <a name="syntax"></a>Składnia
 
@@ -915,30 +905,30 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Wskaźnik do lokalizacji, w którym `UpdateAll` zwraca liczbę wierszy nastąpiła próba aktualizacji, jeśli jest to wymagane.
+określoną Wskaźnik do lokalizacji, w której `UpdateAll` zwraca liczbę wierszy, które próbowano zaktualizować, jeśli jest to wymagane.
 
 *pphRow*<br/>
-[out] Wskaźnik do pamięci, w którym `UpdateAll` zwraca uchwyt wiersza nastąpiła próba aktualizacji. Brak dojścia jest zwracany, jeśli *pphRow* ma wartość null.
+określoną Wskaźnik do pamięci, w której `UpdateAll` zwraca dojście wiersza, który próbował zaktualizować. Jeśli *pphRow* ma wartość null, nie jest zwracana żadna dojście.
 
 *ppStatus*<br/>
-[out] Wskaźnik do lokalizacji, w którym `Update` zwraca wartość stanu wiersza. Brak stanu jest zwracany, jeśli *ppStatus* ma wartość null.
+określoną Wskaźnik do lokalizacji, w której `Update` zwraca wartość stanu wiersza. Jeśli *ppStatus* ma wartość null, żaden stan nie jest zwracany.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesyła wszystkie oczekujące zmiany do wszystkich wierszy, ponieważ te wiersze zostały ostatniego pobrania lub aktualizowania przy użyciu [aktualizacji](../../data/oledb/crowset-update.md) lub `UpdateAll`. `UpdateAll` zaktualizuje każdego wiersza, który został zmodyfikowany, niezależnie od tego, czy nadal masz uchwytu dla nich (zobacz *pphRow*) czy nie.
+Przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od momentu ostatniego pobrania lub zaktualizowania tych wierszy przy użyciu [aktualizacji](../../data/oledb/crowset-update.md) lub `UpdateAll`. `UpdateAll` zaktualizuje każdy wiersz, który został zmodyfikowany, bez względu na to, czy nadal masz dla nich uchwyt (zobacz *pphRow*).
 
-Na przykład, jeśli użyto `Insert` Aby wstawić pięć wierszy w zestawie wierszy, można wywołać `Update` pięć razy lub wywołanie `UpdateAll` raz, aby zaktualizować je wszystkie.
+Na przykład jeśli użyto `Insert` do wstawienia pięciu wierszy w zestawie wierszy, można wywołać `Update` pięć razy lub wywołać `UpdateAll` raz, aby zaktualizować je wszystkie.
 
-Ta metoda wymaga opcjonalny interfejs `IRowsetUpdate`, które mogą nie być obsługiwane na wszystkich dostawców; Jeśli tak jest, metoda zwraca E_NOINTERFACE. Należy także ustawić `DBPROP_IRowsetUpdate` VARIANT_TRUE przed wywołaniem `Open` dotyczącej tabeli lub polecenia zawierające zestaw wierszy.
+Ta metoda wymaga opcjonalnego interfejsu `IRowsetUpdate`, co może nie być obsługiwane we wszystkich dostawcach. w takim przypadku metoda zwraca E_NOINTERFACE. Należy również ustawić `DBPROP_IRowsetUpdate` na VARIANT_TRUE przed wywołaniem `Open` w tabeli lub poleceniem zawierającym zestaw wierszy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przykładowe DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Przykładowe multiRead](../../overview/visual-cpp-samples.md)<br/>
-[Przykładowe multiRead atrybutów](../../overview/visual-cpp-samples.md)<br/>
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Przykład DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
+[Przykład dla odczytu](../../overview/visual-cpp-samples.md)<br/>
+[Przykład atrybutów do odczytu](../../overview/visual-cpp-samples.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

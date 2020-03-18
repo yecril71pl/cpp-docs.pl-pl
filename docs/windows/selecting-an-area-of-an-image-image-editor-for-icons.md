@@ -3,7 +3,6 @@ title: 'Instrukcje: Edytowanie obrazu'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
-- vc.editors.image.editing
 helpviewer_keywords:
 - Image editor [C++], image selection
 - Image editor [C++], selecting images
@@ -40,189 +39,189 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d973ad444f719b905af5a33e47ef28f4895111f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387959"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447292"
 ---
 # <a name="how-to-edit-an-image"></a>Instrukcje: Edytowanie obrazu
 
-Narzędzia wyboru służy do definiowania obszar obrazu, który ma być wycinanie, kopiowanie, wyczyść, zmienić rozmiar, Odwróć lub przenoszenie. Za pomocą **prostokąta zaznaczenia** narzędzie można definiować i wybierz prostokątny obszar obrazu. Za pomocą **kształt** narzędzia można narysować freehand konspektu obszaru, który chcesz wybrać opcjami wycinania, kopiowania lub inna operacja.
+Narzędzia do zaznaczania umożliwiają definiowanie obszaru obrazu, który ma zostać wycięty, skopiowany, usunięty, zmiana rozmiaru, odwrócenie lub przeniesienie. Za pomocą narzędzia do **zaznaczania prostokąta** można definiować i wybierać prostokątny region obrazu. Za pomocą narzędzia **nieregularnego wyboru** można narysować konspekt odręczny dla obszaru, który ma zostać wybrany dla operacji wycinania, kopiowania lub innej.
 
 > [!NOTE]
-> Zobacz **prostokąta zaznaczenia** i **kształt** na schemacie narzędzia [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) lub wyświetlanie etykietek narzędzi, skojarzone z każdego przycisku w **Edytora obrazów** paska narzędzi.
+> Zobacz **Zaznaczanie prostokątne** i **Narzędzia nieregularnego wyboru** na [pasku narzędzi edytora obrazu](../windows/toolbar-image-editor-for-icons.md) lub Wyświetl etykietki narzędzi skojarzonych z każdym przyciskiem na pasku narzędzi **edytora obrazów** .
 
-Można również utworzyć niestandardowy obiekt brush z zaznaczenia. Aby uzyskać więcej informacji, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+Możesz również utworzyć niestandardowy pędzel na podstawie zaznaczenia. Aby uzyskać więcej informacji, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
 ## <a name="how-to"></a>Instrukcje
 
-Aby edytować obraz, zobacz jak:
+Aby edytować obraz, zobacz How to:
 
 ### <a name="to-select-an-image"></a>Aby wybrać obraz
 
-1. Użyj **edytora obrazów** paska narzędzi lub przejdź do menu **obraz** > **narzędzia** i wybierz narzędzie wyboru mają.
+1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu **obrazu** > **Narzędzia** , a następnie wybierz odpowiednie narzędzie do zaznaczania.
 
-1. Przesuń punkt wstawiania do jednego rogu obszaru obrazu, który ma zostać wybrana. Na ekranie są wyświetlane, gdy punkt wstawiania znajduje się na obrazie.
+1. Przesuń punkt wstawiania do jednego rogu obszaru obrazu, który chcesz wybrać. Krzyżyki są wyświetlane, gdy punkt wstawiania znajduje się na obrazie.
 
-1. Przeciągnij kursor przeciwległego rogu obszaru, który ma zostać wybrana. Prostokąt pokazuje, które piksele zostanie wybrany. Wszystkie piksele w obrębie prostokąta, łącznie z tymi w ramach prostokąt, są uwzględnione w zaznaczeniu.
+1. Przeciągnij punkt wstawiania do przeciwległego rogu obszaru, który chcesz wybrać. Prostokąt pokazuje, które piksele zostaną wybrane. Wszystkie piksele w obrębie prostokąta, w tym te pod prostokątem, są uwzględniane w zaznaczeniu.
 
-1. Zwolnij przycisk myszy. Obramowanie wyboru otacza zaznaczonego obszaru.
+1. Zwolnij przycisk myszy. Obramowanie zaznaczenia obejmuje wybrany obszar.
 
-#### <a name="to-select-an-entire-image"></a>Aby wybrać całego obrazu
+#### <a name="to-select-an-entire-image"></a>Aby wybrać cały obraz
 
-Wybierz obraz poza bieżącym zaznaczeniu. Krawędź zaznaczenia zmienia fokus i obejmuje cały obraz jeszcze raz.
+Wybierz obraz spoza bieżącego zaznaczenia. Obramowanie zaznaczenia zmieni fokus i ponownie obejmie cały obraz.
 
-### <a name="to-edit-parts-of-an-image"></a>Edytowanie części obrazu
+### <a name="to-edit-parts-of-an-image"></a>Aby edytować części obrazu
 
-Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenie i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)na to, czy zaznaczenie jest całego obrazu lub po prostu jego część. Ponieważ **edytora obrazów** używa **Schowka Windows**, mogą przesyłać obrazy między **edytora obrazów** i inne aplikacje dla Windows.
+Możesz wykonywać standardowe operacje edycji — wycinanie, kopiowanie, czyszczenie i przesuwanie — w [wyborze](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), niezależnie od tego, czy zaznaczenie jest całym obrazem, czy tylko jego częścią. Ponieważ **Edytor obrazów** używa **Schowka systemu Windows**, można przenieść obrazy między **edytorem obrazów** a innymi aplikacjami dla systemu Windows.
 
-Ponadto możesz zmienić rozmiar zaznaczenia, czy obejmuje cały obraz lub po prostu części.
+Ponadto można zmienić rozmiar zaznaczenia, niezależnie od tego, czy zawiera on cały obraz, czy tylko część.
 
-#### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Wytnij bieżącego zaznaczenia i przenieś go do Schowka
+#### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Aby wyciąć bieżące zaznaczenie i przenieść je do schowka
 
-Przejdź do menu **Edytuj** > **Wytnij**.
+Przejdź do menu **edytuj** > **Wytnij**.
 
 #### <a name="to-copy-the-selection"></a>Aby skopiować zaznaczenie
 
-1. Umieść kursor wewnątrz obramowania zaznaczenia lub dowolnego miejsca na nim, z wyjątkiem uchwytów zmiany rozmiaru.
+1. Umieść wskaźnik wewnątrz obramowania zaznaczenia lub w dowolnym miejscu, z wyjątkiem uchwytów zmiany rozmiarów.
 
-1. Naciśnij i przytrzymaj **Ctrl** klucza jako przeciągnij je do nowej lokalizacji. Obszar oryginalnego zaznaczenia pozostaje niezmieniony.
+1. Przytrzymaj wciśnięty klawisz **Ctrl** podczas przeciągania zaznaczenia do nowej lokalizacji. Obszar oryginalnego zaznaczenia jest niezmieniony.
 
-1. Aby skopiować zaznaczenie do obrazu w jego bieżącej lokalizacji, wybierz poza kursor wyboru.
+1. Aby skopiować zaznaczenie do obrazu w jego bieżącej lokalizacji, wybierz pozycję poza kursorem zaznaczenia.
 
-#### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Wklej zawartość Schowka do obrazu
+#### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Aby wkleić zawartość schowka do obrazu
 
-1. Przejdź do menu **Edytuj** > **Wklej**.
+1. Przejdź do menu **edytuj** > **Wklej**.
 
-   Zawartość Schowka otoczone obramowaniem zaznaczenia, są wyświetlane w lewym górnym rogu okienka.
+   Zawartość schowka, otoczona obramowaniem zaznaczenia, pojawia się w lewym górnym rogu okienka.
 
-1. Umieść kursor w granicach obramowania zaznaczenia, a następnie przeciągnij obraz do żądanej lokalizacji na obrazie.
+1. Umieść wskaźnik wewnątrz obramowania zaznaczenia i przeciągnij obraz do odpowiedniej lokalizacji na obrazie.
 
-1. Aby móc zakotwiczyć obrazu w nowej lokalizacji, wybierz poza krawędź zaznaczenia.
+1. Aby zakotwiczenie obrazu w nowej lokalizacji, wybierz poza obramowaniem zaznaczenia.
 
-#### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Aby usunąć bieżące zaznaczenie bez przenoszenia go do Schowka
+#### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Aby usunąć bieżące zaznaczenie bez przechodzenia do schowka
 
-Przejdź do menu **Edytuj** > **Usuń**.
+Przejdź do menu **edytuj** > **Usuń**.
 
-   Oryginalny obszar zaznaczenia jest wypełniany z bieżącym kolorem tła.
+   Oryginalny obszar zaznaczenia jest wypełniony bieżącym kolorem tła.
 
 > [!NOTE]
-> Możesz uzyskać dostęp **Wytnij**, **kopiowania**, **Wklej**, i **Usuń** polecenia, klikając prawym przyciskiem myszy **widok zasobów** okna.
+> Aby uzyskać dostęp do poleceń **wycinania**, **kopiowania**, **wklejania**i **usuwania** , kliknij prawym przyciskiem myszy w oknie **Widok zasobów** .
 
 #### <a name="to-move-the-selection"></a>Aby przenieść zaznaczenie
 
-1. Umieść kursor wewnątrz obramowania zaznaczenia lub dowolnego miejsca na nim, z wyjątkiem uchwytów zmiany rozmiaru.
+1. Umieść wskaźnik wewnątrz obramowania zaznaczenia lub w dowolnym miejscu, z wyjątkiem uchwytów zmiany rozmiarów.
 
 1. Przeciągnij zaznaczenie do nowej lokalizacji.
 
-1. Aby móc zakotwiczyć zaznaczenia w obrazie w nowej lokalizacji, wybierz poza krawędź zaznaczenia.
+1. Aby zakotwiczenie zaznaczenia w obrazie w nowej lokalizacji, zaznacz poza obramowaniem zaznaczenia.
 
-Aby uzyskać więcej informacji na temat rysowanie przy zaznaczeniem, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+Aby uzyskać więcej informacji na temat rysowania przy użyciu zaznaczenia, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
 ### <a name="to-flip-an-image"></a>Aby przerzucić obraz
 
-Można obracać lub obraz, aby utworzyć obraz lustrzany oryginał, nogami obrazu lub obrócić obraz w prawo o 90 stopni w danym momencie.
+Możesz przerzucić lub obrócić obraz, aby utworzyć lustrzane odbicie obrazu oryginalnego, obrócić obraz o 180 stopni lub obrócić obraz do prawej strony o 90 ° w danym momencie.
 
-- Aby przerzucić obraz w poziomie (obraz), przejdź do menu **obraz** > **Przerzuć w poziomie**.
+- Aby przerzucić obraz w poziomie (Obraz lustrzany), przejdź do **obrazu** menu > **Przerzuć w poziomie**.
 
-- Aby przerzucić obraz w pionie (nogami), przejdź do menu **obraz** > **Przerzuć w pionie**.
+- Aby przerzucić obraz w pionie (obrócić o 180 stopni), przejdź do menu **obraz** > **Przerzuć w pionie**.
 
-- Aby obrócić obraz o 90 stopni, przejdź do menu **obraz** > **Obrót o 90 stopni**.
+- Aby obrócić obraz 90 stopni, przejdź do **obrazu** menu, > **obrócić 90 stopni**.
 
    > [!NOTE]
-   > Można również użyć [klawisze skrótów (skrót)](../windows/accelerator-keys-image-editor-for-icons.md) dla tych poleceń lub uzyskać dostęp do poleceń menu skrótów (Wybierz poza obrazu podczas w **edytora obrazów**).
+   > Możesz również użyć [klawiszy skrótów](../windows/accelerator-keys-image-editor-for-icons.md) dla tych poleceń lub uzyskać dostęp do poleceń z menu skrótów (wybierz poza obrazem w **Edytorze obrazów**).
 
-### <a name="to-resize-an-image"></a>Zmiana rozmiaru obrazu
+### <a name="to-resize-an-image"></a>Aby zmienić rozmiar obrazu
 
-Zachowanie **edytora obrazów** podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.
+Zachowanie **edytora obrazu** podczas zmiany rozmiarów obrazu zależy od tego, czy [wybrano](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) cały obraz, czy jego część.
 
-Jeśli zaznaczenie obejmuje tylko część obrazu, **edytora obrazów** zmniejsza zaznaczenie przy usuwaniu wierszy lub kolumn pikseli i wypełniania opuszczonych regionów z bieżącym kolorem tła. Można również rozciągać zaznaczenie zduplikowane wiersze lub kolumny w pikselach.
+Gdy zaznaczenie zawiera tylko część obrazu, **Edytor obrazów** zmniejsza zaznaczenie, usuwając wiersze lub kolumny pikseli i wypełniając regiony opuszczone bieżącym kolorem tła. Może również rozciągnąć zaznaczenie poprzez duplikowanie wierszy lub kolumn pikseli.
 
-Jeśli zaznaczenie obejmuje cały obraz **edytora obrazów** albo zmniejsza rozciąga obrazu lub przycina i rozszerza je.
+Gdy zaznaczenie zawiera cały obraz, **Edytor obrazów** zmniejsza i rozciąga obraz albo przycina i rozszerza.
 
-Istnieją dwa mechanizmy do zmiany rozmiaru obrazu: uchwytów zmiany rozmiaru i [okno właściwości](/visualstudio/ide/reference/properties-window). Przeciągnij uchwyty zmiany rozmiaru, aby zmienić rozmiar wszystkich lub część obrazu. Uchwyty zmiany rozmiaru, które można przeciągać są wypełnione. Nie można przeciągnąć uchwyty, które są puste. Użyj **właściwości** okna, aby zmienić rozmiar całego tylko obraz nie jest częścią wybrane.
+Istnieją dwa mechanizmy zmiany rozmiarów obrazu: uchwyty zmiany rozmiarów i [okno właściwości](/visualstudio/ide/reference/properties-window). Przeciągając uchwyty rozmiaru, można zmienić rozmiar całości lub części obrazu. Rozmiary uchwytów, które można przeciągać, są trwałe. Nie można przeciągać uchwytów, które są puste. Użyj okna **Właściwości** , aby zmienić rozmiar całego obrazu, a nie na wybraną część.
 
-![Uchwytów na mapę bitową](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
-Uchwyty zmiany rozmiaru
+![Uchwyty zmiany rozmiarów mapy bitowej](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
+Uchwyty zmiany rozmiarów
 
 > [!NOTE]
-> Jeśli masz **Kafelek siatki** opcji wybranej w [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), następnie zmiany rozmiaru przyciąganie do następnego wiersza siatki kafelka. Jeśli tylko **siatkę pikseli** opcja jest zaznaczone (ustawienie domyślne), zmiana rozmiaru przyciąganie do następnego dostępne pikseli.
+> Jeśli opcja **Siatka kafelków** została wybrana w [oknie dialogowym Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), zmiany rozmiarów są przyciągane do następnej linii siatki kafelków. Jeśli wybrano tylko opcję **Siatka pikseli** (ustawienie domyślne), zmiany rozmiarów są przyciągane do następnego dostępnego piksela.
 
-#### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Zmiana rozmiaru całego obrazu w oknie właściwości
+#### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Aby zmienić rozmiar całego obrazu przy użyciu okna właściwości
 
 1. Otwórz obraz, którego właściwości chcesz zmienić.
 
-1. W **szerokość** i **wysokość** pola [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz wymiary, które mają.
+1. W polach **Szerokość** i **wysokość** w [okno właściwości](/visualstudio/ide/reference/properties-window)wpisz żądane wymiary.
 
-   Jeśli masz zwiększenie rozmiaru obrazu, **edytora obrazów** rozszerza obraz w prawo, dół, i / lub i wypełnia nowego regionu z bieżącym kolorem tła. Obraz, który nie jest rozciągana.
+   W przypadku zwiększenia rozmiaru obrazu **Edytor obrazów** rozszerza obraz z prawej strony, w dół lub w dół i wypełnia nowy region bieżącym kolorem tła. Obraz nie jest rozciągany.
 
-   Jeśli skrócić rozmiar obrazu, **edytora obrazów** Przycina obraz w prawo lub dolnej krawędzi i / lub.
+   W przypadku skrócenia rozmiaru obrazu **Edytor obrazów** przycina obraz do prawej lub dolnej krawędzi lub obu tych elementów.
 
    > [!NOTE]
-   > Możesz użyć **szerokość** i **wysokość** właściwości, aby zmienić rozmiar tylko całego obrazu, nie można zmienić rozmiar częściowy wybór.
+   > Właściwości **Width** i **Height** można użyć do zmiany rozmiaru tylko całego obrazu, a nie do zmiany rozmiaru częściowego zaznaczenia.
 
-#### <a name="to-crop-or-extend-an-entire-image"></a>Przycinanie lub rozszerzanie całego obrazu
+#### <a name="to-crop-or-extend-an-entire-image"></a>Aby przyciąć lub zwiększyć cały obraz
 
-1. Wybierz obraz.
+1. Zaznacz cały obraz.
 
-   Jeśli część obrazu jest aktualnie zaznaczona, a chcesz wybrać całego obrazu, wybierz dowolne miejsce dla obrazu spoza bieżącego zaznaczenia.
+   Jeśli część obrazu jest obecnie zaznaczona i chcesz zaznaczyć cały obraz, zaznacz dowolne miejsce w obrazie poza bieżącym obramowaniem zaznaczenia.
 
-1. Przeciągnij uchwyt zmiany rozmiaru, do momentu zilustrowano wielkości.
+1. Przeciągnij uchwyt zmiany rozmiaru do momentu, gdy obraz będzie miał właściwy rozmiar.
 
-Zwykle **edytora obrazów** Przycina lub powiększenie obrazu, gdy jej rozmiar, przenosząc uchwyt zmiany rozmiaru. Przytrzymanie **Shift** kluczy po przeniesieniu uchwyt zmiany rozmiaru **edytora obrazów** zmniejsza lub obraz jest rozciągany tak.
+Zwykle **Edytor obrazów** przycina lub powiększa obraz, gdy zmieniasz jego rozmiar, przenosząc uchwyt zmiany rozmiaru. Jeśli przytrzymasz klawisz **SHIFT** podczas przenoszenia uchwytu zmiany rozmiaru, **Edytor obrazów** zmniejsza lub rozciąga obraz.
 
-#### <a name="to-shrink-or-stretch-an-entire-image"></a>Aby zmniejszanie i rozciąganie całego obrazu
+#### <a name="to-shrink-or-stretch-an-entire-image"></a>Aby zmniejszyć lub rozciągnąć cały obraz
 
-1. Wybierz obraz.
+1. Zaznacz cały obraz.
 
-   Jeśli chcesz wybrać całego obrazu część obrazu jest aktualnie zaznaczona, wybierz dowolne miejsce dla obrazu spoza bieżącego zaznaczenia.
+   Jeśli część obrazu jest obecnie zaznaczona i chcesz zaznaczyć cały obraz, zaznacz dowolne miejsce w obrazie poza bieżącym obramowaniem zaznaczenia.
 
-1. Naciśnij i przytrzymaj **Shift** klucza, a następnie przeciągnij uchwyt zmiany rozmiaru, do momentu zilustrowano wielkości.
+1. Przytrzymaj wciśnięty klawisz **SHIFT** i przeciągnij uchwyt zmiany rozmiaru do momentu, gdy obraz będzie prawidłowym rozmiarem.
 
-#### <a name="to-shrink-or-stretch-part-of-an-image"></a>Aby zmniejszanie i rozciąganie części obrazu
+#### <a name="to-shrink-or-stretch-part-of-an-image"></a>Aby zmniejszyć lub rozciągnąć część obrazu
 
-1. Wybierz część obrazu, który chcesz zmienić. Aby uzyskać więcej informacji, zobacz [Zaznaczanie obszaru obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md).
+1. Zaznacz część obrazu, którego rozmiar chcesz zmienić. Aby uzyskać więcej informacji, zobacz [Zaznaczanie obszaru obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md).
 
-1. Przeciągnij jeden z uchwytów zmiany rozmiaru, dopóki nie obowiązuje wielkości.
+1. Przeciągnij jeden z uchwytów rozmiaru do momentu, aż wybór będzie prawidłowym rozmiarem.
 
-### <a name="to-edit-an-image-outside-of-a-project"></a>Edytowanie obrazu spoza projektu
+### <a name="to-edit-an-image-outside-of-a-project"></a>Aby edytować obraz poza projektem
 
-Możesz otwierać i edytować obrazy w środowisku programistycznym, tak samo jak w dowolnej aplikacji grafiki, na przykład otwierając mapę bitową do edycji autonomicznych. Obrazów, z którymi pracujesz nie muszą być częścią projektu programu Visual Studio.
+Możesz otwierać i edytować obrazy w środowisku deweloperskim tak samo jak w przypadku dowolnej aplikacji graficznej, na przykład otwierając mapę bitową do edycji autonomicznej. Obrazy, z którymi pracujesz, nie muszą być częścią projektu programu Visual Studio.
 
-1. Przejdź do menu **pliku** > **Otwórz**.
+1. Przejdź do **pliku** menu, > **Otwórz**.
 
-1. W **pliki typu** wybierz opcję **wszystkie pliki**.
+1. W polu **Pliki typu** wybierz pozycję **wszystkie pliki**.
 
-1. Znajdź i Otwórz obraz, który chcesz edytować.
+1. Zlokalizuj i Otwórz obraz, który chcesz edytować.
 
 ### <a name="to-change-image-properties"></a>Aby zmienić właściwości obrazu
 
-Można ustawić lub zmodyfikować właściwości obrazu, użyj [okno właściwości](/visualstudio/ide/reference/properties-window).
+Można ustawić lub zmodyfikować właściwości obrazu przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-1. Otwórz obraz w **edytora obrazów**.
+1. Otwórz obraz w **Edytorze obrazu**.
 
-1. W **właściwości** okna, zmiana dowolnych lub wszystkich właściwości dla obrazu.
+1. W oknie **Właściwości** zmień dowolne lub wszystkie właściwości obrazu.
 
    |Właściwość|Opis|
    |--------------|-----------------|
-   |**Kolory**|Określa schemat kolorów dla obrazu. Wybierz **monochromatyczny**, **16**, lub **256**, lub **True Color**.<br/><br/>Jeśli została już rysowania obrazu z paletę 16 kolorów, wybranie opcji **monochromatyczny** powoduje, że podstawienia białe kolorów na obrazie. Kontrast nie jest zawsze utrzymywane: na przykład obszarami pokrewnymi czerwonego i zielonego są zarówno konwertowane na czarny.|
-   |**Nazwa pliku**|Określa nazwę pliku obrazu.<br/><br/>Domyślnie program Visual Studio przypisuje podstawowej nazwy pliku tworzone przez usunięcie pierwsze cztery znaki ("IDB_") z domyślnego identyfikatora zasobu (IDB_BITMAP1) i dodawanie odpowiedniego rozszerzenia. Nazwa pliku obrazu, w tym przykładzie byłaby *BITMAP1.bmp*. Można zmienić jego nazwę *MYBITMAP1.bmp*.|
-   |**Wysokość**|Określa wysokość obrazu (w pikselach). Wartość domyślna to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce jest dodawana poniżej istniejącego obrazu.|
-   |**Identyfikator**|Ustawia identyfikator zasobu.<br/><br/>Obraz programu Microsoft Visual Studio domyślnie przypisuje następny dostępny identyfikator w serii: IDB_BITMAP1 IDB_BITMAP2 i tak dalej. Podobne nazwy są używane do ikony i kursory.|
-   |**Paleta**|Zmiany kolorów właściwości.<br/><br/>Kliknij dwukrotnie, aby wybrać kolor i wyświetlić [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach.|
-   |**SaveCompressed**|Wskazuje, czy obraz jest w formacie skompresowanym. Ta właściwość jest tylko do odczytu.<br/><br/>Visual Studio nie zezwala na zapisywanie obrazów w formacie skompresowany, więc wszystkie obrazy utworzone w programie Visual Studio, ta właściwość będzie miał **False**. Jeśli otworzysz skompresowanego obrazu (utworzonym w innym programie) w programie Visual Studio, ta właściwość będzie miał **True**. Jeśli zapiszesz skompresowanego obrazu za pomocą programu Visual Studio, będzie ona bez kompresji i ta właściwość zostanie przywrócona do **False**.|
-   |**Szerokość**|Ustawia szerokość obrazu (w pikselach). Wartość domyślna dla map bitowych to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce zostanie dodany do istniejącego obrazu po prawej stronie.|
+   |**Kolory**|Określa schemat kolorów obrazu. Wybierz opcję **monochromatyczna**, **16**lub **256**lub **True Color**.<br/><br/>Jeśli obraz został już narysowany z 16-kolorową paletą, wybranie opcji **monochromatyczny** powoduje, że dla kolorów na obrazie są nastawiane elementy czarno-białe. Kontrast nie jest zawsze utrzymywany: na przykład przyległe obszary czerwone i zielone są konwertowane na czerń.|
+   |**Nazwa pliku**|Określa nazwę pliku obrazu.<br/><br/>Domyślnie program Visual Studio przypisuje podstawową nazwę pliku utworzoną przez usunięcie pierwszych czterech znaków ("IDB_") z domyślnego identyfikatora zasobu (IDB_BITMAP1) i dodanie odpowiedniego rozszerzenia. Nazwa pliku obrazu w tym przykładzie byłaby *BITMAP1. bmp*. Można zmienić nazwę *MYBITMAP1. bmp*.|
+   |**Proporcj**|Ustawia wysokość obrazu (w pikselach). Wartość domyślna to 48.<br/><br/>Obraz zostanie przycięty lub zostanie dodane miejsce poniżej istniejącego obrazu.|
+   |**Identyfikator**|Ustawia identyfikator zasobu.<br/><br/>W przypadku obrazu Microsoft Visual Studio domyślnie przypisuje następny dostępny identyfikator w serii: IDB_BITMAP1, IDB_BITMAP2 i tak dalej. Podobne nazwy są używane dla ikon i kursorów.|
+   |**Palety**|Zmienia właściwości koloru.<br/><br/>Kliknij dwukrotnie, aby wybrać kolor i wyświetlić [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach tekstowych.|
+   |**SaveCompressed**|Wskazuje, czy obraz jest w formacie skompresowanym. Ta właściwość jest tylko do odczytu.<br/><br/>Program Visual Studio nie pozwala na zapisywanie obrazów w skompresowanym formacie, dlatego w przypadku obrazów utworzonych w programie Visual Studio ta właściwość będzie **fałszywa**. W przypadku otwarcia skompresowanego obrazu (utworzonego w innym programie) w programie Visual Studio ta właściwość będzie **prawdziwa**. Jeśli zapiszesz skompresowany obraz przy użyciu programu Visual Studio, zostanie on zdekompresowany i zostanie przywrócona **wartość false**.|
+   |**Szerokość**|Ustawia szerokość obrazu (w pikselach). Wartość domyślna dla map bitowych to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce jest dodawane z prawej strony istniejącego obrazu.|
 
 ## <a name="requirements"></a>Wymagania
 
-Brak
+None
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)<br/>
 [Instrukcje: Tworzenie ikony lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Instrukcje: Używanie narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Instrukcje: Praca z kolorami](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Instrukcje: korzystanie z narzędzia do rysowania](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Instrukcje: korzystanie z koloru](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

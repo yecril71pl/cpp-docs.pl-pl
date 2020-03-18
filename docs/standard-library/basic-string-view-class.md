@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416183"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445836"
 ---
 # <a name="basic_string_view-class"></a>Klasa basic_string_view
 
@@ -187,7 +187,7 @@ Typ znaków, które są przechowywane w string_view. Biblioteka C++ standardowa 
 *Cechy*\
 Wartość domyślna to [char_traits](char-traits-struct.md)<*CharType*>.
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
@@ -277,7 +277,7 @@ constexpr const_reference at(size_type offset) const;
 \ *przesunięcia*
 Indeks elementu, do którego ma zostać utworzone odwołanie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Const_reference znaku w położeniu określonym przez indeks parametru.
 
@@ -314,7 +314,7 @@ Zwraca const_reference do ostatniego elementu.
 constexpr const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Const_reference do ostatniego elementu w string_view.
 
@@ -375,7 +375,7 @@ Analogicznie jak [cbegin](#cbegin).
 constexpr const_iterator begin() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 Zwraca const_iterator odnoszący się do pierwszego elementu.
 
 ## <a name="cbegin"></a>basic_string_view:: cbegin
@@ -386,7 +386,7 @@ Zwraca const_iterator, która odnosi się do pierwszego elementu w zakresie.
 constexpr const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -398,7 +398,7 @@ Zwraca const_iterator, która odnosi się do lokalizacji tylko poza ostatnim ele
 constexpr const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator **stałej** dostępu swobodnego, który wskazuje tuż poza końcem zakresu.
 
@@ -439,7 +439,7 @@ Indeks *Strv* , w którym rozpoczyna się porównanie.
 \ *PTR*
 Ciąg języka C, który ma zostać porównany z tym string_view.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość ujemna, jeśli ta string_view jest mniejsza niż *Strv* lub *PTR*; zero, jeśli dwie sekwencje znaków są równe; lub wartość dodatnia, jeśli ten string_view jest większy niż *Strv* lub *PTR*.
 
@@ -574,7 +574,7 @@ Liczba znaków, które mają być skopiowane, z string_view źródłowej.
 \ *przesunięcia*
 Pozycja początkowa w string_view źródłowym, z której mają zostać wykonane kopie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba znaków rzeczywiście skopiowanych.
 
@@ -607,7 +607,7 @@ _ *Zliczanie* znaków, które mają być skopiowane, z ciągu źródłowego.
 *_Off*\
 Pozycja początkowa w ciągu źródłowym, z którego mają zostać wykonane kopie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba znaków rzeczywiście skopiowanych.
 
@@ -625,7 +625,7 @@ Zwraca const_reverse_iterator, który odnosi się do pierwszego elementu w odwr�
 constexpr const_reverse_iterator crbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Const_reverse_iterator, który odnosi się do pierwszego elementu w odwróconej string_view. 
 
@@ -637,7 +637,7 @@ Analogicznie jak [rend](#rend).
 constexpr const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca const_reverse_iterator, która odnosi się do jednej poza końcem odwróconej string_view.
 
@@ -649,7 +649,7 @@ Zwraca nieprzetworzony wskaźnik niebędący właścicielem do sekwencji znaków
 constexpr value_type *data() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do wartości stałej do pierwszego elementu sekwencji znaków.
 
@@ -667,7 +667,7 @@ Testuje, czy string_view zawiera znaki, czy nie.
 constexpr bool empty() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli obiekt string_view nie zawiera żadnych znaków; **wartość false** , jeśli ma co najmniej jeden znak.
 
@@ -683,7 +683,7 @@ Zwraca const_iterator dostępu swobodnego, który wskazuje na jeden ostatni z os
 constexpr const_iterator end() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca const_iterator dostępu swobodnego, który wskazuje na jeden ostatni z ostatniego elementu.
 
@@ -719,7 +719,7 @@ Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
 *liczba*\
 Liczba znaków w *PTR*, licząc od pierwszego znaku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
 
@@ -751,7 +751,7 @@ Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
 *liczba*\
 Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
 
@@ -783,7 +783,7 @@ Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla które
 *str*\
 String_view, dla którego funkcja członkowska ma być wyszukiwana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
 
@@ -815,7 +815,7 @@ Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
 *liczba*\
 Liczba znaków, która jest odliczana od pierwszego znaku w *PTR*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `string_view::npos`.
 
@@ -847,7 +847,7 @@ Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
 *liczba*\
 Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks ostatniego znaku podciągu przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
 
@@ -859,7 +859,7 @@ Zwraca const_reference do pierwszego elementu.
 constexpr const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Const_reference do pierwszego elementu.
 
@@ -887,7 +887,7 @@ Zwraca maksymalną liczbę znaków, jaką może zawierać string_view.
 constexpr size_type max_size() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Maksymalna liczba znaków, jaką może zawierać string_view.
 
@@ -902,12 +902,14 @@ Przypisuje string_view lub przekonwertowany obiekt ciągu do innego string_view.
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
+
 ### <a name="example"></a>Przykład
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
+
 ## <a name="op_at"></a>basic_string_view:: operator []
 
 Udostępnia const_reference znaku z określonym indeksem.
@@ -921,7 +923,7 @@ constexpr const_reference operator[](size_type offset) const;
 \ *przesunięcia*
 Indeks elementu, do którego ma zostać utworzone odwołanie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Const_reference znaku w położeniu określonym przez indeks parametru.
 
@@ -945,7 +947,7 @@ Zwraca iterator const do pierwszego elementu w odwróconej string_view.
 constexpr const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca iterator dostępu swobodnego do pierwszego elementu w odwróconej string_view, co może być ostatnim elementem w odpowiadającym mu nieodwróconym string_view.
 
@@ -985,7 +987,7 @@ Zwraca iterator const, który wskazuje na jeden ostatni element w odwróconym st
 constexpr reverse_iterator rend() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator typu const odwrotnie, który wskazuje na jeden ostatni element w odwróconej string_view.
 
@@ -1021,7 +1023,7 @@ Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla które
 *str*\
 String_view, dla którego funkcja członkowska ma być wyszukiwana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego znaku podciągu w przypadku powodzenia; w przeciwnym razie `npos`.
 
@@ -1033,7 +1035,7 @@ Zwraca liczbę elementów w string_view.
 constexpr size_type size() const noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Długość string_view.
 
@@ -1057,7 +1059,7 @@ Indeks lokalizowania elementu na pozycji, z której wykonano kopię, z wartości
 *liczba*\
 Liczba znaków do uwzględnienia w podciągu, jeśli są obecne.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt string_view, który reprezentuje określoną podsekwencję elementów.
 

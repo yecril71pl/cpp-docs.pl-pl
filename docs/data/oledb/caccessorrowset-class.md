@@ -9,15 +9,12 @@ f1_keywords:
 - CAccessorRowset::Bind
 - CAccessorRowset::CAccessorRowset
 - CAccessorRowset.CAccessorRowset
-- CAccessorRowset
 - ATL.CAccessorRowset.CAccessorRowset
 - ATL::CAccessorRowset::CAccessorRowset
 - CAccessorRowset.Close
 - CAccessorRowset::Close
 - CAccessorRowset::FreeRecordMemory
 - CAccessorRowset.FreeRecordMemory
-- FreeRecordMemory
-- GetColumnInfo
 - CAccessorRowset.GetColumnInfo
 - CAccessorRowset::GetColumnInfo
 helpviewer_keywords:
@@ -30,16 +27,16 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283836"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447274"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 
-Hermetyzuje zestawu wierszy i skojarzone metody dostępu w jednej klasie.
+Hermetyzuje zestaw wierszy i skojarzone z nim metody dostępu w pojedynczej klasie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,14 +49,14 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu.
+Klasa akcesora.
 
 *TRowset*<br/>
-Klasy zestawów wierszy.
+Klasa zestawu wierszy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -67,19 +64,19 @@ Klasy zestawów wierszy.
 
 |||
 |-|-|
-|[Bind](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[Bind](#bind)|Tworzy powiązania (używane, gdy `bBind` jest określony jako **false** w [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|
-|[Zamknij](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|
-|[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.|
-|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+|[Ściśle](#close)|Zamyka zestaw wierszy i wszelkie metody dostępu.|
+|[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.|
+|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `TAccessor` zarządza akcesor. Klasa *TRowset* zarządza zestawu wierszy.
+Klasa `TAccessor` zarządza akcesorem. Klasa *TRowset* zarządza zestawem wierszy.
 
-## <a name="bind"></a> CAccessorRowset::Bind
+## <a name="bind"></a>CAccessorRowset:: bind
 
-Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md).
+Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Składnia
 
@@ -89,11 +86,11 @@ HRESULT Bind();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
 
-Inicjuje `CAccessorRowset` obiektu.
+Inicjuje obiekt `CAccessorRowset`.
 
 ### <a name="syntax"></a>Składnia
 
@@ -101,9 +98,9 @@ Inicjuje `CAccessorRowset` obiektu.
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset::Close
+## <a name="close"></a>CAccessorRowset:: Close
 
-Zwalnia wszelkie aktywne metody dostępu i zestawu wierszy.
+Zwalnia wszystkie aktywne metody dostępu i zestaw wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -115,9 +112,9 @@ void Close();
 
 Zwalnia wszystkie skojarzone pamięci.
 
-## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+## <a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
 
-Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.
+Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.
 
 ### <a name="syntax"></a>Składnia
 
@@ -125,9 +122,9 @@ Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolnion
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+## <a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
 
-Pobiera informacje o kolumnach z otwartego zestawu wierszy.
+Pobiera informacje o kolumnie z otwartego zestawu wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -142,19 +139,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+Zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Użytkownik należy zwolnić informacji zwróconej kolumny i buforu ciągu. Użyj drugą wersję tej metody, gdy używasz [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) i trzeba zastąpić powiązania.
+Użytkownik musi zwolnić zwrócone informacje o kolumnie i buforze ciągów. Użyj drugiej wersji tej metody, jeśli używasz [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) i chcesz zastąpić powiązania.
 
-Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+Aby uzyskać więcej informacji, zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
