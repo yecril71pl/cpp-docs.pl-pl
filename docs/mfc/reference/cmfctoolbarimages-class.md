@@ -141,11 +141,11 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866709"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420233"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 
@@ -157,7 +157,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCToolBarImages : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -300,7 +300,7 @@ podczas Dojście do ikony, która ma zostać dodana.
 *bAlphaBlend*<br/>
 podczas PRAWDA, jeśli ta ikona jest używana z mieszaniem alfa; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) obrazu paska narzędzi, który został dodany w przypadku pomyślnego wykonania metody; w przeciwnym razie-1.
 
@@ -332,7 +332,7 @@ podczas Odwołanie do obiektu `CMFCToolbarImages` zawierającego obraz do dodani
 *nIndex*<br/>
 podczas Indeks w obiekcie `CMFCToolbarImages` źródłowym obrazu do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba obrazów pasków narzędzi, które są obsługiwane przez obiekt `CMFCToolBarImages` po pomyślnym dodaniu nowej mapy bitowej; -1, jeśli operacja nie powiodła się.
 
@@ -374,7 +374,7 @@ BOOL CopyImageToClipboard(int iImage);
 
 podczas *IImage*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -388,7 +388,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 
 podczas *Lista imageList*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -405,7 +405,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 *Obrazów*<br/>
 podczas Lista obrazów, która będzie używana jako źródło obrazów pasków narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość TRUE.
 
@@ -426,7 +426,7 @@ static HRGN __stdcall CreateRegionFromImage(
 podczas *BMP*<br/>
 podczas *clrTransparent*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -443,7 +443,7 @@ BOOL DeleteImage(int iImage);
 *iImage*<br/>
 podczas Określa indeks (liczony od zera) obrazu do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obraz został usunięty pomyślnie; FAŁSZ Jeśli indeks obrazu jest nieprawidłowy, obiekt `CMFCToolbarImages` jest tymczasowy, obiekt `CMFCToolbarImages` nie zawiera obrazów zdefiniowanych przez użytkownika lub jeśli wystąpił inny błąd.
 
@@ -497,7 +497,7 @@ podczas Ma wartość TRUE, jeśli obraz ma być rysowany w nieaktywnym stylu sta
 *alphaSrc*<br/>
 podczas Wartość kanału alfa (zmętnienie). Wartość 255 oznacza, że obraz jest rysowany jako nieprzezroczysty. Wartość 0 oznacza, że obraz jest rysowany jako przezroczysty. Ta wartość jest używana tylko w przypadku obrazów kolorowych z 32 i obrazów, które są wyświetlane w stylu systemu Windows Vista.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli określony obraz został pomyślnie wyświetlony; Wartość FALSE, jeśli indeks obrazu był nieprawidłowy lub Wystąpił inny błąd.
 
@@ -524,7 +524,7 @@ podczas *vertAlign*<br/>
 podczas *rectSrc*<br/>
 podczas *alphaSrc*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -566,7 +566,7 @@ HICON ExtractIcon(int nIndex);
 *nIndex*<br/>
 podczas Indeks (liczony od zera) na liście obrazów, w której znajduje się obraz, który ma zostać wyodrębniony jako ikona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do wyodrębnionej ikony lub wartość NULL, jeśli *nIndex* jest poza zakresem.
 
@@ -598,7 +598,7 @@ Użyj tej metody, aby wypełnić prostokąt kolorem średnim kolorów systemu CO
 BOOL GetAlwaysLight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -610,7 +610,7 @@ Zwraca liczbę obrazów z listy obrazów pasków narzędzi.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba obrazów w obiekcie `CMFCToolBarImages`.
 
@@ -622,7 +622,7 @@ Zwraca wartość kanału alfa (krycie), która jest używana dla wyłączonych o
 static BYTE GetDisabledImageAlpha();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca wartość kanału alfa.
 
@@ -636,7 +636,7 @@ Aby zmienić wartość kanału alfa, można wywołać metodę [CMFCToolBarImages
 static BYTE __stdcall GetFadedImageAlpha();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -653,7 +653,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 *bDest*<br/>
 podczas Wartość TRUE powoduje pobranie rozmiaru miejsca docelowego; Wartość FALSE, aby pobrać rozmiar obrazu źródłowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura `SIZE`, która określa rozmiar obrazu w pikselach.
 
@@ -671,7 +671,7 @@ Zwraca uchwyt mapy bitowej, która zawiera wszystkie obrazy pasków narzędzi.
 HBITMAP GetImageWell() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do mapy bitowej zawierającej obrazy pasków narzędzi.
 
@@ -685,7 +685,7 @@ Obrazy paska narzędzi są przechowywane w wierszu w pojedynczej mapie bitowej, 
 HBITMAP GetImageWellLight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -695,7 +695,7 @@ HBITMAP GetImageWellLight() const;
 CRect GetLastImageRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -705,7 +705,7 @@ CRect GetLastImageRect() const;
 int GetLightPercentage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -715,7 +715,7 @@ int GetLightPercentage() const;
 BOOL GetMapTo3DColors() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -729,7 +729,7 @@ HBITMAP GetMask(int iImage);
 
 podczas *IImage*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -746,7 +746,7 @@ int GetResourceOffset(UINT uiResId) const;
 *uiResId*<br/>
 podczas Identyfikator zasobu obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks obrazu, jeśli metoda zakończyła się pomyślnie; -1, jeśli obraz o określonym IDENTYFIKATORze zasobu nie istnieje.
 
@@ -756,7 +756,7 @@ Indeks obrazu, jeśli metoda zakończyła się pomyślnie; -1, jeśli obraz o ok
 COLORREF GetTransparentColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -773,7 +773,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 *nGrayImageLuminancePercentage*<br/>
 podczas Procent luminancji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obrazy w kolekcji zostały pomyślnie wyszarzone; w przeciwnym razie FALSE.
 
@@ -792,7 +792,7 @@ Określa, czy system operacyjny obsługuje 32-bitowe mieszanie Alpha.
 static BOOL Is32BitTransparencySupported();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli jest obsługiwana 32-bitowe mieszanie alfa; w przeciwnym razie FALSE.
 
@@ -806,7 +806,7 @@ Użyj tej metody statycznej, aby określić w czasie wykonywania, czy system ope
 BOOL IsPreMultiplyAutoCheck() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -818,7 +818,7 @@ Określa, czy obrazy paska narzędzi są tylko do odczytu.
 BOOL IsReadOnly() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli obrazy paska narzędzi są tylko do odczytu, w przeciwnym razie FALSE.
 
@@ -834,7 +834,7 @@ Określa, czy jest włączona obsługa od prawej do lewej (RTL).
 static BOOL IsRTL();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli włączona jest obsługa RTL; w przeciwnym razie FALSE.
 
@@ -850,7 +850,7 @@ Określa, czy ten zestaw obrazów pasków narzędzi zawiera obrazy zdefiniowane 
 BOOL IsUserImagesList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli obiekt `CMFCToolBarImages` zawiera obrazy paska narzędzi zdefiniowane przez użytkownika; w przeciwnym razie FALSE.
 
@@ -862,7 +862,7 @@ Wskazuje, czy ten zestaw obrazów pasków narzędzi zawiera prawidłowy obraz pa
 BOOL IsValid() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obiekt `CMFCToolBarImages` jest prawidłowy; w przeciwnym razie FALSE.
 
@@ -902,7 +902,7 @@ podczas Ścieżka do pliku dysku, z którego ma zostać załadowana Mapa bitowa.
 *nMaxFileSize*<br/>
 podczas Maksymalna liczba bajtów w pliku mapy bitowej; lub 0, aby załadować mapę bitową niezależnie od rozmiaru pliku. Jeśli rozmiar pliku przekracza ten maksymalny rozmiar, metoda zwraca wartość FALSE i nie ładuje mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli mapa bitowa została pomyślnie załadowana; w przeciwnym razie FALSE.
 
@@ -925,7 +925,7 @@ podczas *lpszResourceName*<br/>
 podczas *hinstRes*<br/>
 podczas *bDodaj*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -942,7 +942,7 @@ static COLORREF __stdcall MapFromSysColor(
 podczas *kolor*<br/>
 podczas *bUseRGBQUAD*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -961,7 +961,7 @@ podczas *bUseRGBQUAD*<br/>
 podczas *clrSrc*<br/>
 podczas *clrDest*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -978,7 +978,7 @@ static COLORREF __stdcall MapToSysColor(
 podczas *kolor*<br/>
 podczas *bUseRGBQUAD*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -992,7 +992,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 podczas *kolor*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1004,7 +1004,7 @@ Zamienia obrazy pasków narzędzi na ich poziomy Obraz lustrzany.
 BOOL Mirror();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obrazy zostały pomyślnie zdublowane; w przeciwnym razie FALSE.
 
@@ -1030,7 +1030,7 @@ static BOOL MirrorBitmap(
 *cxImage*<br/>
 podczas Szerokość obrazu w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obraz został pomyślnie zdublowany; w przeciwnym razie FALSE.
 
@@ -1051,7 +1051,7 @@ static BOOL __stdcall MirrorBitmapVert(
 podczas *hBmp*<br/>
 podczas *cyImage*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1061,7 +1061,7 @@ podczas *cyImage*<br/>
 BOOL MirrorVert();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1088,7 +1088,7 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 podczas *hBmp*<br/>
 podczas *bAutoCheckPremlt*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1129,7 +1129,7 @@ podczas Określa rozmiar obrazu docelowego.
 *bFadeInactive*<br/>
 podczas PRAWDA, jeśli chcesz, aby obrazy nieaktywne były rysowane jako wyblakłe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zasoby wymagane do narysowania obrazu paska narzędzi zostały przydzieloną pomyślnie, w przeciwnym razie FALSE.
 
@@ -1150,7 +1150,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 *lpszBmpFileName*<br/>
 Ścieżka do pliku na dysku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli obrazy paska narzędzi zostały pomyślnie zapisane; w przeciwnym razie FALSE.
 
@@ -1275,7 +1275,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 *clrTransparent*<br/>
 podczas Wartość RGB.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni kolor przezroczysty.
 
@@ -1301,7 +1301,7 @@ podczas Indeks (liczony od zera) obrazu do zaktualizowania.
 *hbmp*<br/>
 podczas Uchwyt mapy bitowej, z której ma zostać zaktualizowany obraz.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obraz został pomyślnie zaktualizowany; FAŁSZ, jeśli lista obrazów nie jest zdefiniowana przez użytkownika lub tymczasowa.
 
@@ -1328,7 +1328,7 @@ Zwraca bieżącą rozdzielczość obrazów podkreślonych.
 int GetBitsPerPixel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita reprezentująca bieżącą rozdzielczość obrazów podkreślonych w bitach na piksel (BPP).
 
@@ -1342,7 +1342,7 @@ Zwraca bieżący współczynnik skalowania obrazów podkreślonych.
 double GetScale() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość reprezentująca bieżący stosunek skali.
 
@@ -1356,7 +1356,7 @@ Wskazuje, czy podkreślone obrazy są skalowane czy nie.
 BOOL IsScaled () const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli podkreślone obrazy są skalowane; w przeciwnym razie FALSE.
 
@@ -1375,7 +1375,7 @@ BOOL SmoothResize(double dblImageScale);
 *dblImageScale*<br/>
 Współczynnik skalowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli zmiana rozmiaru powiodła się; w przeciwnym razie FALSE.
 

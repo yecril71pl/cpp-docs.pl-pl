@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855583"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421003"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -209,7 +209,7 @@ Klasa bazowa, z której pochodzi obiekt aplikacji systemu Windows.
 class CWinApp : public CWinThread
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -430,7 +430,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 *lpvParam*<br/>
 podczas Zarezerwowane do użytku w przyszłości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 0, jeśli ta metoda zakończyła się pomyślnie; niezerowe, jeśli wystąpi błąd.
 
@@ -472,7 +472,7 @@ BOOL CreatePrinterDC(CDC& dc);
 *DC*<br/>
 Odwołanie do kontekstu urządzenia drukarki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli kontekst urządzenia drukarki został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -525,7 +525,7 @@ Nazwa klucza rejestru, który ma zostać usunięty.
 *pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli funkcja się nie powiedzie, wartość zwracana jest niezerowym kodem błędu zdefiniowanym w Winerror. h.
 
@@ -555,7 +555,7 @@ Adres tekstu w oknie komunikatu.
 *nIDPrompt*<br/>
 Indeks ciągu kontekstu pomocy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca te same wartości co `AfxMessageBox`.
 
@@ -610,7 +610,7 @@ Model wątkowości fabryki D2D i tworzonych przez nią zasobów.
 *writeFactoryType*<br/>
 Wartość określająca, czy obiekt fabryki zapisu będzie współużytkowany, czy izolowany
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli włączono obsługę D2D, FAŁSZ — w przeciwnym razie
 
@@ -653,7 +653,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Określa, czy interakcja z paskiem zadań systemu Windows 7 powinna być włączona (TRUE), czy wyłączona (FALSE).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli interakcja paska zadań może być włączona lub wyłączona.
 
@@ -669,7 +669,7 @@ Wywoływane przez platformę z poziomu funkcji składowej `Run`, aby wyjść z t
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod zakończenia aplikacji; wartość 0 oznacza brak błędów, a wartości większe niż 0 wskazują na błąd. Ta wartość jest używana jako wartość zwracana z `WinMain`.
 
@@ -691,7 +691,7 @@ Pobiera parametr wejściowy dla metody odzyskiwania aplikacji.
 virtual LPVOID GetApplicationRecoveryParameter();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślny parametr wejściowy dla metody odzyskiwania aplikacji.
 
@@ -709,7 +709,7 @@ Zwraca czas oczekiwania przez Menedżera ponownego uruchomienia na zwrócenie pr
 virtual DWORD GetApplicationRecoveryPingInterval();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość czasu (w milisekundach).
 
@@ -727,7 +727,7 @@ Zwraca flagi Menedżera ponownego uruchamiania.
 virtual DWORD GetApplicationRestartFlags();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Flagi Menedżera ponownego uruchamiania. Domyślna implementacja zwraca wartość 0.
 
@@ -760,7 +760,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Klucz aplikacji, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -774,7 +774,7 @@ Pobiera procedurę obsługi odzyskiwania danych dla tego wystąpienia aplikacji.
 virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Program obsługi odzyskiwania danych dla tego wystąpienia aplikacji.
 
@@ -794,7 +794,7 @@ Pobiera pozycję pierwszego szablonu dokumentu w aplikacji.
 POSITION GetFirstDocTemplatePosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli lista jest pusta.
 
@@ -810,7 +810,7 @@ Pobiera typ pomocy używanej przez aplikację.
 AFX_HELP_TYPE GetHelpMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ pomocy używany przez aplikację. Aby uzyskać więcej informacji, zobacz [CWinApp:: m_eHelpType](#m_ehelptype) .
 
@@ -827,7 +827,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 *Terminal*<br/>
 Odwołanie do wartości pozycji zwróconej przez poprzednie wywołanie do `GetNextDocTemplate` lub [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Wartość jest aktualizowana do następnej pozycji przez to wywołanie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) .
 
@@ -852,7 +852,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 *pPrintDlg*<br/>
 Wskaźnik do struktury [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -890,7 +890,7 @@ Wskazuje wskaźnik, który będzie otrzymywał adres danych.
 *pBytes*<br/>
 Wskazuje element UINT, który będzie otrzymywał rozmiar danych (w bajtach).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -932,7 +932,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera wpis, którego wartość
 *nDefault*<br/>
 Określa wartość domyślną, która ma zostać zwrócona, jeśli struktura nie może znaleźć wpisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita ciągu, który następuje po poprawnym wpisie. Wartość zwracana jest wartością parametru *nDefault* , jeśli funkcja nie znajduje wpisu. Wartość zwracana jest równa 0, jeśli wartość odpowiadająca określonemu wpisowi nie jest liczbą całkowitą.
 
@@ -973,7 +973,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera wpis, którego ciąg ma 
 *lpszDefault*<br/>
 Wskazuje domyślną wartość ciągu dla danego wpisu, jeśli nie można odnaleźć wpisu w pliku inicjującym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana jest ciągiem z aplikacji. Plik INI lub *lpszDefault* , jeśli nie można znaleźć ciągu. Maksymalna długość ciągu obsługiwana przez platformę to _MAX_PATH. Jeśli *lpszDefault* ma wartość null, zwracana wartość jest ciągiem pustym.
 
@@ -1006,7 +1006,7 @@ Nazwa klucza do uzyskania.
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Klucz sekcji, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1052,7 +1052,7 @@ System Windows umożliwia uruchamianie kilku kopii tego samego programu w tym sa
 virtual BOOL InitInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1077,7 +1077,7 @@ Informuje, czy włączono interakcję paska zadań systemu Windows 7.
 virtual BOOL IsTaskbarInteractionEnabled();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli `EnableTaskbarInteraction` został wywołany, a system operacyjny to Windows 7 lub nowszy.
 
@@ -1101,7 +1101,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu kursora. D
 *nIDResource*<br/>
 Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do kursora w przypadku powodzenia; w przeciwnym razie wartość NULL.
 
@@ -1131,7 +1131,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu ikony. Mo�
 *nIDResource*<br/>
 Numer IDENTYFIKACYJNy zasobu ikony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do ikony, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1157,7 +1157,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 *nIDCursor*<br/>
 **OCR_** stały identyfikator manifestu, który określa wstępnie zdefiniowany kursor systemu Windows. Musisz mieć `#define OEMRESOURCE` przed `#include \<afxwin.h>`, aby uzyskać dostęp do stałych **OCR_** w systemie Windows. C.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do kursora w przypadku powodzenia; w przeciwnym razie wartość NULL.
 
@@ -1184,7 +1184,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 *nIDIcon*<br/>
 **OIC_** stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Musisz mieć `#define OEMRESOURCE` przed `#include \<afxwin.h>` dostępu do stałych **OIC_** w systemie Windows. C.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do ikony, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1229,7 +1229,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 - IDC_SIZENS pionowa strzałka z dwoma grotami
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do kursora w przypadku powodzenia; w przeciwnym razie wartość NULL.
 
@@ -1254,7 +1254,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 *lpszIconName*<br/>
 Stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Te identyfikatory są zdefiniowane w systemie WINDOWS. C. Aby zapoznać się z listą możliwych wstępnie zdefiniowanych wartości i ich opisów, zobacz parametr *lpIconName* w [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do ikony, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1551,7 +1551,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 *lpszCommand*<br/>
 Wskazuje ciąg polecenia DDE otrzymany przez aplikację.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli polecenie jest obsługiwane; w przeciwnym razie 0.
 
@@ -1690,7 +1690,7 @@ virtual BOOL OnIdle(LONG lCount);
 *lCount*<br/>
 Licznik jest zwiększany za każdym razem, `OnIdle` jest wywoływana, gdy kolejka komunikatów aplikacji jest pusta. Ta liczba jest resetowana do wartości 0 za każdym razem, gdy nowy komunikat jest przetwarzany. Można użyć parametru *lCount* , aby określić względną długość czasu bezczynności aplikacji bez przetwarzania komunikatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, aby uzyskać więcej czasu bezczynności przetwarzania; 0, jeśli nie jest wymagany więcej czasu bezczynności.
 
@@ -1741,7 +1741,7 @@ podczas Nazwa pliku, który ma zostać otwarty.
 *bAddToMRU*<br/>
 podczas Wartość TRUE wskazuje, że dokument jest jednym z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najnowszych plików.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do `CDocument`, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -1795,7 +1795,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat do przetworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli komunikat został w pełni przetworzony w `PreTranslateMessage` i nie powinien być przetwarzany jeszcze. Zero, jeśli komunikat powinien być przetwarzany w normalny sposób.
 
@@ -1817,7 +1817,7 @@ Określa kod punktu zaczepienia. Ta funkcja członkowska używa kodu do określe
 *lpMsg*<br/>
 Wskaźnik do trukturę Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat jest przetwarzany; w przeciwnym razie 0.
 
@@ -1840,7 +1840,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 *rCmdInfo*<br/>
 Odwołanie do obiektu [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli polecenie powłoki zostało pomyślnie przetworzone. Jeśli 0, zwróć wartość FALSE z [InitInstance](#initinstance).
 
@@ -1888,7 +1888,7 @@ Wskaźnik do nieprzechwyconego wyjątku.
 *pMsg*<br/>
 Komunikat [trukturę,](/windows/win32/api/winuser/ns-winuser-msg)który zawiera informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość, która powinna zostać zwrócona do systemu Windows. Zwykle jest to 0L dla komunikatów systemu Windows, 1L (TRUE) dla komunikatów poleceń.
 
@@ -1908,7 +1908,7 @@ Wykonuje wszelkie zadania rejestracji, które nie są obsługiwane przez `Regist
 virtual BOOL Register();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe po powodzeniu; w przeciwnym razie 0.
 
@@ -1970,9 +1970,9 @@ virtual HRESULT RegisterWithRestartManager(
 |*pRecoveryCallback*|podczas Funkcja wywołania zwrotnego odzyskiwania. Ta funkcja musi przyjmować parametr LPVOID jako dane wejściowe i zwracać wartość typu DWORD. Domyślna funkcja wywołania zwrotnego odzyskiwania jest `CWinApp::ApplicationRecoveryCallback`.|
 |*lpvParam*|podczas Parametr wejściowy funkcji wywołania zwrotnego odzyskiwania. Aby uzyskać więcej informacji, zobacz [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |*dwPingInterval*|podczas Czas oczekiwania przez Menedżera ponownego uruchomienia na zwrócenie przez funkcję wywołania zwrotnego odzyskiwania. Ten parametr jest w milisekundach.|
-|*dwCallbackFlags*|podczas Flagi przechodzą do funkcji wywołania zwrotnego odzyskiwania. Zarezerwowane do użytku w przyszłości.|
+|*dwCallbackFlags*|podczas Flagi przechodzą do funkcji wywołania zwrotnego odzyskiwania. Zarezerwowany do użytku w przyszłości.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie kod błędu.
 
@@ -2004,7 +2004,7 @@ Określa, czy Menedżer ponownego uruchamiania ponownie otwiera pliki otwarte, g
 virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE oznacza, że Menedżer ponownego uruchamiania ponownie otwiera poprzednio otwarte pliki; Wartość FALSE oznacza, że Menedżer ponownego uruchamiania nie jest.
 
@@ -2016,7 +2016,7 @@ Obsługuje ponowne uruchomienie aplikacji zainicjowane przez Menedżera ponowneg
 virtual BOOL CWinApp::RestartInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli program obsługi odzyskiwania danych otwiera wcześniej otwarte dokumenty; Wartość FALSE, jeśli program obsługi odzyskiwania danych ma błąd lub jeśli nie ma wcześniej otwartych dokumentów.
 
@@ -2034,7 +2034,7 @@ Określa, czy Menedżer ponownego uruchamiania przywraca automatycznie zapisane 
 virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE wskazuje, że Menedżer ponownego uruchamiania przywraca automatycznie zapisane pliki; Wartość FALSE oznacza, że Menedżer ponownego uruchamiania nie jest.
 
@@ -2046,7 +2046,7 @@ Udostępnia domyślną pętlę komunikatów.
 virtual int Run();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość **int** zwracana przez `WinMain`.
 
@@ -2064,7 +2064,7 @@ Wywołaj tę funkcję, aby określić, czy istnieje opcja " **/Automation.** " l
 BOOL RunAutomated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli opcja została znaleziona; w przeciwnym razie 0.
 
@@ -2080,7 +2080,7 @@ Wywołaj tę funkcję, aby określić, czy jest obecna opcja " **przełącznikie
 BOOL RunEmbedded();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli opcja została znaleziona; w przeciwnym razie 0.
 
@@ -2096,7 +2096,7 @@ Wywoływane przez platformę, by zapisać wszystkie dokumenty, gdy okno główne
 virtual BOOL SaveAllModified();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli chcesz bezpiecznie zakończyć działanie aplikacji; 0 Jeśli nie można bezpiecznie zakończyć aplikacji.
 
@@ -2178,7 +2178,7 @@ Określa, czy Menedżer ponownego uruchamiania odzyskuje aplikację, która nieo
 virtual BOOL SupportsApplicationRecovery() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE wskazuje, że Menedżer ponownego uruchamiania odzyska aplikację; Wartość FALSE oznacza, że Menedżer ponownego uruchamiania nie jest.
 
@@ -2190,7 +2190,7 @@ Określa, czy Menedżer ponownego uruchamiania automatycznie zapisuje otwarte do
 virtual BOOL SupportsAutosaveAtInterval() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE oznacza, że Menedżer ponownego uruchamiania automatycznie zapisuje otwarte dokumenty; Wartość FALSE oznacza, że Menedżer ponownego uruchamiania nie jest.
 
@@ -2202,7 +2202,7 @@ Określa, czy Menedżer ponownego uruchamiania automatycznie zapisuje wszystkie 
 virtual BOOL SupportsAutosaveAtRestart() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE oznacza, że Menedżer ponownego uruchamiania automatycznie zapisuje otwarte dokumenty po ponownym uruchomieniu aplikacji; Wartość FALSE oznacza, że Menedżer ponownego uruchamiania nie jest.
 
@@ -2214,7 +2214,7 @@ Określa, czy aplikacja obsługuje Menedżera ponownego uruchamiania.
 virtual BOOL SupportsRestartManager() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE oznacza, że aplikacja obsługuje Menedżera ponownego uruchamiania; Wartość FALSE oznacza, że aplikacja nie jest.
 
@@ -2226,7 +2226,7 @@ Wyrejestrowuje wszystkie pliki zarejestrowane przez obiekt aplikacji.
 virtual BOOL Unregister();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe po powodzeniu; w przeciwnym razie 0.
 
@@ -2298,7 +2298,7 @@ Wskazuje dane, które mają być zapisywane.
 *nBytes*<br/>
 Zawiera liczbę bajtów do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2332,7 +2332,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera wpis, w którym ma zosta
 *nWartość*<br/>
 Zawiera wartość do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2366,7 +2366,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera wpis, w którym ma zosta
 *lpszValue*<br/>
 Wskazuje ciąg, który ma zostać zapisany. Jeśli ten parametr ma wartość NULL, wpis określony przez parametr *lpszEntry* jest usuwany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

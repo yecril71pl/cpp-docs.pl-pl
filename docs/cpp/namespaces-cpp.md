@@ -8,11 +8,11 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856673"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418427"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 
@@ -264,6 +264,6 @@ namespace
 
 Jest to nazywane nienazwanymi lub anonimowymi przestrzeniami nazw i jest przydatne, gdy chcesz, aby deklaracje zmiennych były niewidoczne w kodzie w innych plikach (tj. powiązać wewnętrzne powiązania) bez konieczności tworzenia nazwanego obszaru nazw. Cały kod w tym samym pliku może zobaczyć identyfikatory w nienazwanym obszarze nazw, ale identyfikatory, wraz z samą przestrzenią nazw, nie są widoczne poza tym plikiem — lub dokładniej poza jednostką tłumaczenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i definicje](declarations-and-definitions-cpp.md)

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867040"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420527"
 ---
 # <a name="ccmdtarget-class"></a>Klasa CCmdTarget
 
@@ -63,17 +63,17 @@ Klasa bazowa dla architektury mapy komunikatów biblioteka MFC.
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CCmdTarget:: CCmdTarget](#ccmdtarget)|Konstruuje obiekt `CCmdTarget`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Wyświetla kursor jako klepsydrę kursora.|
 |[CCmdTarget::D oOleVerb](#dooleverb)|Powoduje wykonanie akcji określonej przez zlecenie OLE.|
@@ -171,7 +171,7 @@ Uchwyt okna dokumentu zawierającego obiekt.
 *lpRect*<br/>
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) zawierający współrzędne, w pikselach, które definiują prostokąt ograniczający obiekt w *hwndParent*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie, w przeciwnym razie FALSE.
 
@@ -244,7 +244,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 *ppenumOleVerb*<br/>
 Wskaźnik do wskaźnika do interfejsu [IEnumOLEVERB](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obiekt obsługuje co najmniej jedno zlecenie OLE (w tym przypadku \* *ppenumOleVerb* wskazuje na interfejs modułu wyliczającego `IEnumOLEVERB`), w przeciwnym razie false.
 
@@ -265,7 +265,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 *lpDispatch*<br/>
 Wskaźnik do obiektu `IDispatch`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CCmdTarget` skojarzonego z *LPDISPATCH*. Ta funkcja zwraca wartość NULL, jeśli obiekt `IDispatch` nie jest rozpoznawany jako obiekt `IDispatch` Microsoft Foundation Class.
 
@@ -286,7 +286,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 *pIID*<br/>
 Wskaźnik do identyfikatora interfejsu ( [GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie, w przeciwnym razie FALSE. Jeśli to się powiedzie, \* *piid* jest ustawiony na podstawowy identyfikator interfejsu wysyłania.
 
@@ -307,7 +307,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 *bAddRef*<br/>
 Określa, czy zwiększyć liczbę odwołań dla obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik `IDispatch` skojarzony z obiektem.
 
@@ -323,7 +323,7 @@ Pobiera liczbę interfejsów informacji o typie, które zapewnia obiekt.
 virtual UINT GetTypeInfoCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba interfejsów informacji o typie.
 
@@ -355,7 +355,7 @@ Identyfikator ustawień regionalnych (`LCID`).
 *ppTypeInfo*<br/>
 Wskaźnik do wskaźnika do interfejsu `ITypeInfo`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 WYNIK HRESULT wskazujący powodzenie lub Niepowodzenie wywołania. Jeśli się powiedzie, \* *ppTypeInfo* punkty do interfejsu informacji o typie.
 
@@ -377,7 +377,7 @@ Identyfikator ustawień regionalnych (LCID).
 *ppTypeLib*<br/>
 Wskaźnik do wskaźnika do interfejsu `ITypeLib`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 WYNIK HRESULT wskazujący powodzenie lub Niepowodzenie wywołania. Jeśli się powiedzie, \* *ppTypeLib* wskazuje interfejs biblioteki typów.
 
@@ -393,7 +393,7 @@ Pobiera pamięć podręczną biblioteki typów.
 virtual CTypeLibCache* GetTypeLibCache();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CTypeLibCache`.
 
@@ -414,7 +414,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 *DISPID*<br/>
 Identyfikator wysyłania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda może być wywoływana, w przeciwnym razie FALSE.
 
@@ -432,7 +432,7 @@ Użyj `IsResultExpected`, aby upewnić się, czy klient oczekuje wartości zwrac
 BOOL IsResultExpected();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja automatyzacji powinna zwrócić wartość; w przeciwnym razie 0.
 
@@ -470,7 +470,7 @@ Używane zgodnie z wartością *nCode*. Aby uzyskać więcej informacji na temat
 *pHandlerInfo*<br/>
 Jeśli nie ma wartości NULL, `OnCmdMsg` wypełnia elementy członkowskie *pTarget* i *PMF* struktury *pHandlerInfo* zamiast wysyłania polecenia. Zazwyczaj ten parametr powinien mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.
 
@@ -522,7 +522,7 @@ void RestoreWaitCursor();
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład ACDUAL MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>

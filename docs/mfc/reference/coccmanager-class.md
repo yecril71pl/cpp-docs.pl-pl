@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865941"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416761"
 ---
 # <a name="coccmanager-class"></a>Klasa COccManager
 
@@ -93,7 +93,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 *pWnd*<br/>
 Wskaźnik do obiektu okna skojarzonego z kontenerem lokacji niestandardowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego kontenera; w przeciwnym razie wartość NULL.
 
@@ -131,7 +131,7 @@ Wskaźnik do szablonu okna dialogowego służącego do tworzenia obiektu okna di
 *lpResource*<br/>
 Wskaźnik do zasobu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli formant został utworzony pomyślnie; w przeciwnym razie zero.
 
@@ -148,7 +148,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 *pCtrlCont*<br/>
 Wskaźnik do kontenera sterowania hostującym nową lokację sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonej lokacji sterowania.
 
@@ -171,7 +171,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 *pWnd*<br/>
 Obiekt window zawierający formant Button.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna z następujących wartości:
 
@@ -199,7 +199,7 @@ Wskaźnik do zamierzonego docelowego okna dialogowego komunikatu.
 *lpMsg*<br/>
 Wskaźnik do struktury `MSG`, która zawiera komunikat, który ma zostać sprawdzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat jest przetwarzany; w przeciwnym razie zero.
 
@@ -223,7 +223,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 *pWnd*<br/>
 Wskaźnik do okna zawierającego kontrolkę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli formant jest etykietą; w przeciwnym razie zero
 
@@ -253,7 +253,7 @@ Wskaźnik do okna zawierającego kontrolkę.
 *lpMsg*<br/>
 Wskaźnik do komunikatu zawierającego element, który ma być zgodny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli parametr jest zgodny z kontrolką; w przeciwnym razie zero
 
@@ -285,7 +285,7 @@ Obsługiwane zdarzenie.
 *pHandlerInfo*<br/>
 Jeśli nie ma wartości NULL, `OnEvent` wypełnia `pTarget` i `pmf` elementów członkowskich struktury `AFX_CMDHANDLERINFO` zamiast wysyłania polecenia. Zazwyczaj ten parametr powinien mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zdarzenie zostało obsłużone, w przeciwnym razie zero.
 
@@ -311,7 +311,7 @@ Struktura `_AFX_OCC_DIALOG_INFO` zawierająca informacje o szablonie okna dialog
 *pOrigTemplate*<br/>
 Wskaźnik do szablonu okna dialogowego, który ma zostać użyty podczas tworzenia okna dialogowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury szablonu okna dialogowego używany do tworzenia okna dialogowego.
 
@@ -358,7 +358,7 @@ Wskaźnik do okna zawierającego kontrolkę.
 *bDefault*<br/>
 Różne od zera, jeśli formant powinien stać się przyciskiem domyślnym; w przeciwnym razie zero.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -385,7 +385,7 @@ Wskaźnik do szablonu okna dialogowego, który ma zostać zbadany.
 *ppOleDlgItems*<br/>
 Lista wskaźników do elementów okna dialogowego, które są kontrolkami ActiveX.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury szablonu okna dialogowego zawierającego tylko kontrolki nieactivex. Jeśli kontrolki ActiveX nie są obecne, zwracana jest wartość NULL.
 

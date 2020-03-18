@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867316"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420632"
 ---
 # <a name="time_put-class"></a>time_put — Klasa
 
@@ -45,7 +45,7 @@ Typ iteratora, do którego funkcje czasu put zapisują swoje dane wyjściowe.
 
 Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikatorze.**
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -113,7 +113,7 @@ Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l
 *_Mod*\
 Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do pierwszej pozycji po wstawieniu ostatniego elementu.
 
@@ -185,7 +185,7 @@ Początek ciągu formatowania dla danych wyjściowych. Zobacz [strftime, wcsftim
 *ostatni*\
 Koniec ciągu formatowania dla danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do pierwszej pozycji po wstawieniu ostatniego elementu.
 

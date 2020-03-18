@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865143"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419568"
 ---
 # <a name="set-class"></a>set — Klasa
 
@@ -143,7 +143,7 @@ W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `st
 
 Iterator dostarczony przez klasę zestawu jest iteratorem dwukierunkowym, ale funkcje składowych klasy [INSERT](#insert) i [Set](#set) mają wersje przyjmujące jako parametry szablonu słabszy iterator danych wejściowych, którego wymagania funkcjonalności są mniejsze niż te gwarantowane przez klasę iteratorów dwukierunkowych. Pojęcia innych iteratorów formują rodzinę powiązaną przez udoskonalenia w ich funkcjonalnościach. Każde pojęcie iteratora ma swój własny zestaw wymagań, a algorytmy z nimi pracujące muszą ograniczać swoje założenia co do wymagań dostarczonych przez tego typu iterator. Można założyć, że z iteratora danych wejściowych można usunąć odwołanie, aby odwołać się do obiektu, a także, że może on być zwiększony do następnego iteratora w sekwencji. Jest to minimalny zestaw funkcjonalności, ale jest wystarczający, aby można było mówić istotnie o zakresie iteratorów [`First`, `Last`) w kontekście funkcji składowych klasy.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -235,7 +235,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu w zestawie lub lokalizacji, która powiodła się.
 
@@ -290,7 +290,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** Iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -316,7 +316,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kompletny Iterator dostępu **dwukierunkowego** , który wskazuje tuż poza końcem zakresu.
 
@@ -474,7 +474,7 @@ size_type count(const Key& key) const;
 *klucz*\
 Klucz elementów do dopasowania z zestawu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 1, jeśli zestaw zawiera element, którego klucz sortowania pasuje do klucza parametru. 0, jeśli zestaw nie zawiera elementu z pasującym kluczem.
 
@@ -527,7 +527,7 @@ Zwraca iterator const, który dotyczy pierwszego elementu w odwróconym zestawie
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconym zestawie lub adresowania ostatniego elementu w nieodwróconym zestawie.
 
@@ -573,7 +573,7 @@ Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim ele
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niepowodzenie odwrotnego iteratora dwukierunkowego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym zestawie (lokalizacja, która poprzedza pierwszy element w nieodwróconym zestawie).
 
@@ -699,7 +699,7 @@ emplace(
 |-|-|
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do zestawu, chyba że zawiera już element o równoważnej kolejności.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [Para](../standard-library/pair-structure.md) , której składnik bool zwraca wartość true, jeśli wykonano wstawienie, i wartość false, jeśli mapa już zawiera element, którego wartość miała odpowiednik wartości w kolejności. Składnik iteratora pary wartość zwracana zwraca adres, pod którym wstawiono nowy element (jeśli składnik bool ma wartość true) lub miejsce, w którym element został już zlokalizowany (jeśli składnik bool ma wartość false).
 
@@ -782,7 +782,7 @@ Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do
 *gdzie*\
 Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -846,7 +846,7 @@ Sprawdza, czy zestaw jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw jest pusty. **wartość false** , jeśli zestaw nie jest pusty.
 
@@ -891,7 +891,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator Past. Jeśli zestaw jest pusty, a następnie `set::end() == set::begin()`.
 
@@ -918,7 +918,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Para iteratorów, w których pierwszy jest [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
 
@@ -1012,7 +1012,7 @@ Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 *Klucz*\
 Wartość klucza elementów do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub element, który jest końcem zestawu, jeśli taki element nie istnieje.
 
@@ -1111,7 +1111,7 @@ const_iterator find(const Key& key) const;
 *klucz*\
 Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanego zestawu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element w zestawie (`set::end()`), jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1190,7 +1190,7 @@ Zwraca kopię obiektu alokatora użytego do skonstruowania zestawu.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez zestaw do zarządzania pamięcią, która jest parametrem szablonu `Allocator`.
 
@@ -1317,7 +1317,7 @@ Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściow
 \ *IList*
 [Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli zestaw już zawiera element o równoważnej wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
@@ -1457,7 +1457,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w zestawie
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji, który jest używany przez zestaw do porządkowania jego elementów, który jest `Traits`parametrem szablonu.
 
@@ -1579,7 +1579,7 @@ iterator lower_bound(const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator lub `const_iterator`, który odnosi się do lokalizacji elementu w zestawie, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w zestawie, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1640,7 +1640,7 @@ Zwraca maksymalną długość zestawu.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość zestawu.
 
@@ -1748,7 +1748,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróconym zestawie lub, który miał być ostatnim elementem w nieodwróconym zestawie.
 
@@ -1860,7 +1860,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym zestawie (lokalizacja, która poprzedza pierwszy element w nieodwróconym zestawie).
 
@@ -2146,7 +2146,7 @@ Zwraca liczbę elementów w zestawie.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość zestawu.
 
@@ -2274,7 +2274,7 @@ iterator upper_bound(const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `iterator` lub `const_iterator`, które odnoszą się do lokalizacji elementu w zestawie, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w zestawie, jeśli nie zostanie znaleziony żaden pasujący klucz.
 
@@ -2335,7 +2335,7 @@ Pobiera kopię obiektu porównania, użytego do uporządkowania wartości elemen
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji, który jest używany przez zestaw do porządkowania jego elementów, który jest `Traits`parametrem szablonu.
 

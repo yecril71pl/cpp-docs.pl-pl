@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874835"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419687"
 ---
 # <a name="ltostreamgt-operators"></a>Operatory &lt;ostream&gt;
 
@@ -98,7 +98,7 @@ Cechy znaków.
 *val*\
 Typ
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień.
 
@@ -267,6 +267,6 @@ zwraca `_Ostr` `<<` `val` (i konwertuje [odwołanie rvalue](../cpp/rvalue-refere
 
 Zobacz [opróżnianie](../standard-library/ostream-functions.md#flush) , aby zapoznać się z przykładem przy użyciu `operator<<`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ostream >](../standard-library/ostream.md)

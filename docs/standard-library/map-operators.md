@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883967"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419967"
 ---
 # <a name="ltmapgt-operators"></a>Operatory &lt;mapowania&gt;
 
@@ -43,7 +43,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapy nie są równe; **wartość false** , jeśli mapy są równe.
 
@@ -108,7 +108,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa po lewej stronie operatora jest ściśle mniejsza niż mapa po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -173,7 +173,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa po lewej stronie operatora jest mniejsza lub równa mapie po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -241,7 +241,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa po lewej stronie operatora jest równa mapie po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -306,7 +306,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa po lewej stronie operatora jest większa niż mapa po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -370,7 +370,7 @@ Obiekt typu `map`.
 *prawa*\
 Obiekt typu `map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa po lewej stronie operatora jest większa lub równa mapie po prawej stronie listy; w przeciwnym razie **false**.
 
@@ -438,7 +438,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapowanie wieloelementowe nie jest równe; **Fałsz** , jeśli mapowanie wieloelementowe jest równe.
 
@@ -503,7 +503,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli multimap po lewej stronie operatora jest ściśle mniejszy niż multimap po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -568,7 +568,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli multimap po lewej stronie operatora jest mniejszy lub równy multimap po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -636,7 +636,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli multimap po lewej stronie operatora jest równy multimap po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -701,7 +701,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli multimap po lewej stronie operatora jest większy od multimap po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -766,7 +766,7 @@ Obiekt typu `multimap`.
 *prawa*\
 Obiekt typu `multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli multimap po lewej stronie operatora jest większy lub równy multimap po prawej stronie listy; w przeciwnym razie **false**.
 

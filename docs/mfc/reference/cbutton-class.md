@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: 669bdb18e378c4dc39bdc6d51ca1ebe7f93fa839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870615"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418833"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -91,17 +91,17 @@ Oferuje funkcje kontrolek przycisku systemu Windows.
 class CButton : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CButton:: CButton](#cbutton)|Konstruuje obiekt `CButton`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CButton:: Create](#create)|Tworzy formant przycisku systemu Windows i dołącza go do obiektu `CButton`.|
 |[CButton::D rawItem](#drawitem)|Przesłoń, aby narysować obiekt `CButton` rysowany przez właściciela.|
@@ -228,7 +228,7 @@ Określa okno nadrzędne kontrolki przycisku, zazwyczaj `CDialog`. Nie może mie
 *nID*<br/>
 Określa identyfikator kontrolki przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -285,7 +285,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt mapy bitowej
 HBITMAP GetBitmap() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do mapy bitowej. Wartość NULL, jeśli nie określono wcześniej mapy bitowej.
 
@@ -301,7 +301,7 @@ Pobiera informacje o stylu kontrolki przycisku.
 UINT GetButtonStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca style przycisków dla tego obiektu `CButton`. Ta funkcja zwraca tylko [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) wartości stylu, a nie innych stylów okna.
 
@@ -317,7 +317,7 @@ Pobiera stan zaznaczenia przycisku radiowego lub pola wyboru.
 int GetCheck() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana z kontrolki Button utworzonego za pomocą BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON lub BS_3STATE stylu jest jedną z następujących wartości:
 
@@ -341,7 +341,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt kursora wcze
 HCURSOR GetCursor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt obrazu kursora. Wartość NULL, jeśli kursor nie jest wcześniej określony.
 
@@ -357,7 +357,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać uchwyt ikony, wcze�
 HICON GetIcon() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do ikony. Wartość NULL, jeśli nie określono wcześniej ikony.
 
@@ -378,7 +378,7 @@ BOOL GetIdealSize(SIZE* psize);
 *psize*<br/>
 Wskaźnik do bieżącego rozmiaru przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -399,7 +399,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 *pbuttonImagelist*<br/>
 Wskaźnik do listy obrazów obiektu `CButton`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -426,11 +426,11 @@ BOOL GetNote(
 |*lpszNote*|określoną Wskaźnik do buforu, którego obiekt wywołujący jest odpowiedzialny za przydzielanie i cofanie przydziału. Jeśli wartość zwracana ma wartość TRUE, bufor zawiera tekst komentarza, który jest skojarzony z bieżącą kontrolką łącza polecenia; w przeciwnym razie bufor nie zmieni się.|
 |*cchNote*|[in. out] Wskaźnik do zmiennej niepodpisanej liczby całkowitej.<br /><br /> Gdy ta metoda jest wywoływana, zmienna zawiera rozmiar buforu określony przez parametr *lpszNote* .<br /><br /> Gdy ta metoda zwraca, jeśli wartość zwracana jest TRUE, zmienna zawiera rozmiar notatki skojarzonej z bieżącym formantem łącza polecenia. Jeśli zwracaną wartością jest FALSE, zmienna zawiera rozmiar buforu wymagany do zawierania notatki.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W pierwszym przeciążeniu obiekt [CString](../../atl-mfc-shared/using-cstring.md) , który zawiera tekst komentarza skojarzony z bieżącą kontrolką łącza polecenia.
 
-—lub—
+— lub —
 
 W drugim przeciążeniu, wartość TRUE, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -448,7 +448,7 @@ Pobiera długość tekstu komentarza dla bieżącej kontrolki łącza polecenia.
 UINT GetNoteLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość tekstu notatki (w 16-bitowych znakach Unicode) dla bieżącej kontrolki linku polecenia.
 
@@ -466,7 +466,7 @@ Pobiera glif skojarzony z bieżącą kontrolką przycisku podziału.
 TCHAR GetSplitGlyph() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Znak glifu skojarzony z bieżącą kontrolką przycisku podziału.
 
@@ -486,7 +486,7 @@ Pobiera [listę obrazów](../../mfc/reference/cimagelist-class.md) dla kontrolki
 CImageList* GetSplitImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -510,7 +510,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 |---------------|-----------------|
 |*pInfo*|określoną Wskaźnik do struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , która otrzymuje informacje o bieżącym formancie przycisku podziału. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -534,7 +534,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 |---------------|-----------------|
 |*pSize*|określoną Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , która otrzymuje opis prostokąta.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -554,7 +554,7 @@ Pobiera style przycisku podziału definiujące bieżącą kontrolkę przycisku p
 UINT GetSplitStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
@@ -574,7 +574,7 @@ Pobiera stan kontrolki przycisku.
 UINT GetState() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pole bitowe, które zawiera kombinację wartości wskazujących bieżący stan kontrolki przycisku. Poniższa tabela zawiera listę możliwych wartości.
 
@@ -607,7 +607,7 @@ BOOL GetTextMargin(RECT* pmargin);
 *pmargin*<br/>
 Wskaźnik do marginesu tekstu obiektu `CButton`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca margines tekstu.
 
@@ -632,7 +632,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 *hBitmap*<br/>
 Uchwyt mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście mapy bitowej wcześniej skojarzonej z przyciskiem.
 
@@ -726,7 +726,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 *hCursor*<br/>
 Uchwyt kursora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt kursora wcześniej skojarzony z przyciskiem.
 
@@ -766,7 +766,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 |---------------|-----------------|
 |*fDropDown*|podczas Wartość TRUE, aby ustawić stan BST_DROPDOWNPUSHED; w przeciwnym razie FALSE.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -802,7 +802,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 |---------------|-----------------|
 |*fElevationRequired*|podczas Wartość TRUE, aby ustawić stan `elevation required`; w przeciwnym razie FALSE.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -825,7 +825,7 @@ HICON SetIcon(HICON hIcon);
 *hIcon*<br/>
 Uchwyt ikony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt ikony, która została wcześniej skojarzona z przyciskiem.
 
@@ -864,7 +864,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 *pbuttonImagelist*<br/>
 Wskaźnik do nowej listy obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -886,7 +886,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 |---------------|-----------------|
 |*lpszNote*|podczas Wskaźnik na ciąg Unicode, który jest ustawiany jako tekst komentarza dla kontrolki łącza polecenia.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -922,7 +922,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 |---------------|-----------------|
 |*chGlyph*|podczas Znak określający symbol, który ma być używany jako przycisk podziału strzałki rozwijanej.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -948,7 +948,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 |---------------|-----------------|
 |*pSplitImageList*|podczas Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który ma zostać przypisany do bieżącej kontrolki przycisku podziału.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -972,7 +972,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 |---------------|-----------------|
 |*pInfo*|podczas Wskaźnik do struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , która definiuje bieżącą kontrolkę przycisku podziału.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1008,7 +1008,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 |---------------|-----------------|
 |*pSize*|podczas Wskaźnik na strukturę [rozmiaru](/windows/win32/api/windef/ns-windef-size) opisującą prostokąt ograniczający.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1046,7 +1046,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 |---------------|-----------------|
 |*uSplitStyle*|podczas Bitowa kombinacja stylów przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` składową struktury [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1106,7 +1106,7 @@ BOOL SetTextMargin(RECT* pmargin);
 *pmargin*<br/>
 Wskaźnik do nowego marginesu tekstu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -1114,7 +1114,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu BCM_SETTEXTMARGIN, zgodnie z opisem w sekcji [przyciski](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

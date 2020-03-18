@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: a4b066bf1620f8aaca1b0fc581348c73d5255591
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874001"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419827"
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -149,9 +149,9 @@ Multimap porządkuje sekwencję, która kontroluje, przez wywołanie przechowywa
 
 W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -243,7 +243,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu w multimap lub lokalizacji po pomyślnym wykonaniu pustej multimap.
 
@@ -296,7 +296,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** Iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -322,7 +322,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kompletny Iterator dostępu **dwukierunkowego** , który wskazuje tuż poza końcem zakresu.
 
@@ -507,7 +507,7 @@ size_type count(const Key& key) const;
 *klucz*\
 Klucz elementów do dopasowania z multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów, których klucze sortowania pasują do klucza parametru; 0, jeśli multimap nie zawiera elementu z pasującym kluczem.
 
@@ -571,7 +571,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej multi
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconej [multimap](../standard-library/multimap-class.md) lub adresowania ostatniego elementu w nieodwróconej `multimap`.
 
@@ -621,7 +621,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej [multimap](../standard-library/multimap-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym `multimap`).
 
@@ -739,7 +739,7 @@ iterator emplace(Args&&... args);
 |-|-|
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do multimap.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -810,7 +810,7 @@ iterator emplace_hint(
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do multimap.|
 |*miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -832,7 +832,7 @@ Testuje, czy element multimap jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli multimap jest pusta; **Fałsz** , jeśli multimap nie jest pusty.
 
@@ -879,7 +879,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator Past. Jeśli multimap jest pusty, a następnie `multimap::end() == multimap::begin()`.
 
@@ -906,7 +906,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Para iteratorów, takich jak pierwszy jest [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
 
@@ -1002,7 +1002,7 @@ Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 *Klucz*\
 Klucz elementów do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem mapy, jeśli taki element nie istnieje.
 
@@ -1027,7 +1027,7 @@ const_iterator find(const Key& key) const;
 *klucz*\
 Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanego multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element w multimap (`multimap::end()`), jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1107,7 +1107,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania multimap.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez multimap.
 
@@ -1221,7 +1221,7 @@ IList);
 |*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
 |*IList*|[Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcje składowe pojedynczego elementu, (1) i (2) zwracają iterator do pozycji, w której nowy element został wstawiony do multimap.
 
@@ -1361,7 +1361,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w multimap
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt Function, którego multimap używa do porządkowania jego elementów.
 
@@ -1475,7 +1475,7 @@ const_iterator lower_bound(const Key& key) const;
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator lub `const_iterator`, który odnosi się do lokalizacji elementu w multimap, z kluczem, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w multimap, jeśli nie zostanie znaleziony żaden pasujący klucz.
 
@@ -1574,7 +1574,7 @@ Zwraca maksymalną długość multimap.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość multimap.
 
@@ -1867,7 +1867,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróconej multimap lub adresowania ostatniego elementu w nieodwróconym multimap.
 
@@ -2004,7 +2004,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej multimap (lokalizacja, która poprzedza pierwszy element w odwrocie multimap).
 
@@ -2108,7 +2108,7 @@ Zwraca liczbę elementów w multimap.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość multimap.
 
@@ -2240,7 +2240,7 @@ const_iterator upper_bound(const Key& key) const;
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator lub `const_iterator`, który odnosi się do lokalizacji elementu w multimap, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w multimap, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -2312,7 +2312,7 @@ Funkcja członkowska zwraca obiekt funkcji, który określa kolejność element�
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji porównania, którego multimap używa do porządkowania jego elementów.
 
@@ -2436,7 +2436,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Containers](../cpp/containers-modern-cpp.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

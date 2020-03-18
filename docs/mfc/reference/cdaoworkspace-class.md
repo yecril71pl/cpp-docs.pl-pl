@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883876"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420492"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 
@@ -79,7 +79,7 @@ Zarządza nazwaną, chronioną hasłem sesją bazy danych z logowania do wylogow
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -425,7 +425,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę obiektów ba
 short GetDatabaseCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba otwartych baz danych w obszarze roboczym.
 
@@ -483,7 +483,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać lokalizację ustawi
 static CString PASCAL GetIniPath();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający lokalizację rejestru.
 
@@ -501,7 +501,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać bieżącą wartoś�
 BOOL GetIsolateODBCTrans();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli transakcje ODBC są izolowane; w przeciwnym razie 0.
 
@@ -521,7 +521,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać bieżącą wartoś�
 static short PASCAL GetLoginTimeout();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba sekund przed wystąpieniem błędu podczas próby zalogowania się do bazy danych ODBC.
 
@@ -541,7 +541,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać zdefiniowaną przez
 CString GetName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający zdefiniowaną przez użytkownika nazwę obiektu obszaru roboczego DAO.
 
@@ -559,7 +559,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać nazwę właściciel
 CString GetUserName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) reprezentujący właściciela obiektu obszaru roboczego.
 
@@ -577,7 +577,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić używaną wersję
 static CString PASCAL GetVersion();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) wskazujący wersję aparatu bazy danych skojarzoną z obiektem.
 
@@ -595,7 +595,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę obiektów ob
 short GetWorkspaceCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba otwartych obszarów roboczych w kolekcji obszarów roboczych.
 
@@ -677,7 +677,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDao
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt obszaru roboczego jest otwarty; w przeciwnym razie 0.
 

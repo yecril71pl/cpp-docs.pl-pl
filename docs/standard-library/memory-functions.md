@@ -78,11 +78,11 @@ helpviewer_keywords:
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
 ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856686"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419939"
 ---
 # <a name="ltmemorygt-functions"></a>funkcje&gt; pamięci &lt;
 
@@ -109,7 +109,7 @@ const T* addressof(
 \ *wartości*
 Obiekt lub funkcja, dla których ma być uzyskany prawdziwy adres.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rzeczywisty adres obiektu lub funkcji, do której odwołuje się *wartość*, nawet jeśli przeciążone `operator&()` istnieje.
 
@@ -144,7 +144,7 @@ Adres początkowy dostępnej puli ciągłej pamięci, która ma być użyta. Ten
 
 Jeśli `align()` nie powiedzie się, ten parametr nie jest modyfikowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik o wartości null, jeśli żądany rozmiar buforu nie mieści się w dostępnym miejscu; w przeciwnym razie nowa wartość *PTR*.
 
@@ -631,7 +631,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 *liczba*\
 Maksymalna liczba elementów żądanych do przydzielenia pamięci.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `pair`, którego pierwszy składnik jest wskaźnikiem do pamięci, która została przypisana, a drugi składnik uzyskuje rozmiar buforu, wskazując największą liczbę elementów, które mogą być przechowywane.
 
@@ -1200,7 +1200,7 @@ Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie 
 \ miejsca *docelowego*
 Iterator do przodu, który dotyczy pierwszego elementu w zakresie docelowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, odnoszący się do pierwszej pozycji poza zakresem docelowym, chyba że zakres źródłowy był pusty.
 
@@ -1320,7 +1320,7 @@ Typ całkowitoliczbowy ze znakiem lub bez znaku, określający, ile razy obiekt 
 \ miejsca *docelowego*
 Iterator do przodu odwołujący się do lokalizacji nowych kopii.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, który odnosi się do pierwszej pozycji poza miejscem docelowym. Jeśli zakres źródłowy był pusty, *najpierw*adresy iteratora.
 
@@ -1411,7 +1411,7 @@ Iterator odnoszący się do pierwszego elementu w zakresie docelowym do konstruo
 *liczba*\
 Liczba elementów w zakresie docelowym do skonstruowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, odnoszący się do pierwszej pozycji poza zakresem docelowym, chyba że zakres źródłowy był pusty.
 
@@ -1804,6 +1804,6 @@ template <class T, class Alloc>
 inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [> pamięci \<](memory.md)

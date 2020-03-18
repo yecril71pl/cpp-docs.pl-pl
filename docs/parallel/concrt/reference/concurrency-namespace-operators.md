@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883775"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422144"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
@@ -56,7 +56,7 @@ Pierwsze zadanie do połączenia z wynikiem zadania.
 *RHS*<br/>
 Drugie zadanie, które ma zostać połączone z wynikiem zadania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zadanie, które zakończyło się pomyślnie, gdy jedno z zadań wejściowych zakończyło się pomyślnie. Jeśli zadania wejściowe są typu `T`, dane wyjściowe tej funkcji będą `task<std::vector<T>`. Jeśli zadania wejściowe są typu `void` zadanie wyjściowe będzie również `task<void>`.
 
@@ -105,7 +105,7 @@ Pierwsze zadanie do połączenia z wynikiem zadania.
 *RHS*<br/>
 Drugie zadanie, które ma zostać połączone z wynikiem zadania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zadanie, które zakończy się pomyślnie, gdy oba zadania wejściowe zostały wykonane pomyślnie. Jeśli zadania wejściowe są typu `T`, dane wyjściowe tej funkcji będą `task<std::vector<T>>`. Jeśli zadania wejściowe są typu `void` zadanie wyjściowe będzie również `task<void>`.
 
@@ -141,7 +141,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżny wektor po lewej stronie operatora jest równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -179,7 +179,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżne wektory nie są równe; **Fałsz** , jeśli współbieżne wektory są równe.
 
@@ -217,7 +217,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżny wektor po lewej stronie operatora jest mniejszy od współbieżnego wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -255,7 +255,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżny wektor po lewej stronie operatora jest mniejszy niż lub równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -293,7 +293,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżny wektor po lewej stronie operatora jest większy niż współbieżny wektor po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -331,7 +331,7 @@ Obiekt typu `concurrent_vector`.
 *_B*<br/>
 Obiekt typu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli współbieżny wektor po lewej stronie operatora jest większy niż lub równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -341,6 +341,6 @@ Zachowanie tego operatora jest identyczne z operatorem równoważnym dla klasy `
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

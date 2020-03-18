@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876207"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416768"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -42,9 +42,9 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 
 Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego innego typu `Type` jest **rzutowanie dla** rzeczywistej obliczeń, z **podwójnym** wynikiem przypisanym do przechowywanego obiektu typu `Type`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -172,7 +172,7 @@ T imag(const T& right);
 *prawa*\
 Liczba złożona, której wartość urojona ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Część urojona liczby zespolonej.
 
@@ -229,7 +229,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 *prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która została pomnożona przez liczbę określoną jako parametr.
 
@@ -314,7 +314,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 *prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma numer określony jako parametr dodany.
 
@@ -420,7 +420,7 @@ Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 *_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma numer określony jako parametr odejmowany od niego.
 
@@ -528,7 +528,7 @@ Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 *_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która została podzielona przez liczbę określoną jako parametr.
 
@@ -627,7 +627,7 @@ complex<Type>& operator=(const Type& right);
 *prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma przypisany numer określony jako parametr.
 
@@ -704,7 +704,7 @@ T real(const T& right);
 *prawa*\
 Liczba złożona, której rzeczywista wartość ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rzeczywista część liczby zespolonej.
 

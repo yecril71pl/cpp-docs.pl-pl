@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874025"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421444"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass, struktura
 
@@ -26,7 +26,7 @@ Każda klasa pochodna `CObject` jest skojarzona ze strukturą `CRuntimeClass`, k
 struct CRuntimeClass
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -82,7 +82,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 *lpszClassName*<br/>
 Znana nazwa klasy, która ma zostać utworzona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego obiektu lub wartość NULL, jeśli nie odnaleziono nazwy klasy lub gdy jest za mało pamięci, aby utworzyć obiekt.
 
@@ -109,7 +109,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 *lpszClassName*<br/>
 Znana nazwa klasy pochodnej `CObject`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CRuntimeClass`, odpowiadający nazwie przesłanej w *lpszClassName*. Funkcja zwraca wartość NULL, jeśli nie znaleziono pasującej nazwy klasy.
 
@@ -130,7 +130,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 *pBaseClass*<br/>
 Znana nazwa klasy pochodnej `CObject`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli Klasa wywołująca `IsDerivedFrom` jest pochodną klasy bazowej, której struktura `CRuntimeClass` została określona jako parametr; w przeciwnym razie FALSE.
 

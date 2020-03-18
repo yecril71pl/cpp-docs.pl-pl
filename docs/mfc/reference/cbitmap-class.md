@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855551"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418959"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 
@@ -51,7 +51,7 @@ Hermetyzuje mapę bitową interfejsu urządzenia graficznego (GDI) systemu Windo
 class CBitmap : public CGdiObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -143,7 +143,7 @@ Określa liczbę bitów koloru na piksel wyświetlania.
 *lpBits*<br/>
 Wskazuje tablicę bajtów zawierającą początkowe wartości bitowe mapy bitowej. Jeśli ma wartość NULL, Nowa mapa bitowa nie zostanie zainicjowana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -170,7 +170,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 *lpBitmap*<br/>
 Wskazuje strukturę [mapy bitowej](/windows/win32/api/wingdi/ns-wingdi-bitmap) , która zawiera informacje o mapie bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -204,7 +204,7 @@ Określa szerokość (w pikselach) mapy bitowej.
 *nHeight*<br/>
 Określa wysokość (w pikselach) mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -242,7 +242,7 @@ Określa szerokość mapy bitowej (w bitach).
 *nHeight*<br/>
 Określa wysokość (w bitach) mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -267,7 +267,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 *hBitmap*<br/>
 Określa mapę bitową interfejsu GDI systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CBitmap`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -288,7 +288,7 @@ int GetBitmap(BITMAP* pBitMap);
 *pBitMap*<br/>
 Wskaźnik do struktury [mapy bitowej](/windows/win32/api/wingdi/ns-wingdi-bitmap) , która będzie odbierać właściwości obrazu. Ten parametr nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -312,7 +312,7 @@ Liczba bajtów do skopiowania do buforu.
 *lpBits*<br/>
 Wskaźnik do buforu, który otrzyma mapę bitową.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów skopiowanych do buforu, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie 0.
 
@@ -328,7 +328,7 @@ Zwraca szerokość i wysokość mapy bitowej.
 CSize GetBitmapDimension() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość i wysokość mapy bitowej mierzona w jednostkach 0,1 milimetrów. Wysokość znajduje się w `cy` składowej obiektu `CSize`, a szerokość znajduje się w `cx` elemencie członkowskim. Jeśli szerokość i wysokość mapy bitowej nie została ustawiona przy użyciu `SetBitmapDimension`, zwracana wartość wynosi 0.
 
@@ -353,7 +353,7 @@ Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu mapy bitow
 *nIDResource*<br/>
 Określa numer identyfikatora zasobu mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -400,7 +400,7 @@ Wskaźnik do struktury `COLORMAP`, która zawiera informacje o kolorach, które 
 *nMapSize*<br/>
 Liczba map kolorów wskazywanych przez *lpColorMap*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -443,7 +443,7 @@ Numer IDENTYFIKACYJNy wstępnie zdefiniowanej mapy bitowej systemu Windows. Moż
 |OBM_OLD_LFARROW|OBM_ZOOM|
 |OBM_OLD_REDUCE|OBM_ZOOMD|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -461,7 +461,7 @@ Użyj tego operatora, aby uzyskać dojście do dołączonego interfejsu GDI syst
 operator HBITMAP() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows reprezentowanego przez obiekt `CBitmap`; w przeciwnym razie wartość NULL.
 
@@ -489,7 +489,7 @@ Określa liczbę bajtów wskazywanych przez *lpBits*.
 *lpBits*<br/>
 Wskazuje tablicę BAJTową zawierającą wartości pikseli, które mają być skopiowane do obiektu `CBitmap`. Aby Mapa bitowa mogła prawidłowo renderować swój obraz, wartości powinny być sformatowane tak, aby były zgodne z wartościami głębokości, szerokości i koloru, które zostały określone podczas tworzenia wystąpienia CBitmap. Aby uzyskać więcej informacji, zobacz [CBitmap:: ismap](#createbitmap).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów używanych podczas ustawiania bitów mapy bitowej; 0, jeśli funkcja nie powiedzie się.
 
@@ -511,7 +511,7 @@ Określa szerokość mapy bitowej (w jednostkach 0,1 milimetrów).
 *nHeight*<br/>
 Określa wysokość mapy bitowej (w jednostkach 0,1 milimetrów).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie wymiary mapy bitowej. Wysokość znajduje się w zmiennej składowej `cy` obiektu `CSize`, a szerokość znajduje się w zmiennej składowej `cx`.
 

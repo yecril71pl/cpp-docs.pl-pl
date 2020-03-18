@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 ms.openlocfilehash: f5d655aa7fd2eb9e41c15c60a71492c24ba43c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883905"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418588"
 ---
 # <a name="cgopherconnection-class"></a>Klasa CGopherConnection
 
@@ -34,7 +34,7 @@ Zarządza połączeniem z serwerem internetowym gopher.
 class CGopherConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -166,7 +166,7 @@ Wskaźnik do ciągu zawierającego nazwę serwera gopher.
 *nPort*<br/>
 Numer identyfikujący port internetowy dla tego połączenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) .
 
@@ -197,7 +197,7 @@ Rozdzielany spacjami ciąg określający nazwy żądanych atrybutów.
 *strResult*<br/>
 Odwołanie do elementu [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który odbiera typ lokalizatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -227,7 +227,7 @@ Wskaźnik do ciągu widoku pliku. Jeśli na serwerze istnieje kilka widoków pli
 *dwContext*<br/>
 Identyfikator kontekstu dla otwieranego pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CGopherFile](../../mfc/reference/cgopherfile-class.md) , który ma zostać otwarty.
 

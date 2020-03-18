@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865716"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418336"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct — Struktura
 
@@ -30,7 +30,7 @@ struct BoolStruct;
 
 Struktura `BoolStruct` określa, czy `ComPtr` zarządza okresem istnienia obiektu w interfejsie. `BoolStruct` jest używany wewnętrznie przez operator [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 

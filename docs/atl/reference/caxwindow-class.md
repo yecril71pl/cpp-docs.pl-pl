@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864754"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418007"
 ---
 # <a name="caxwindow-class"></a>Klasa CAxWindow
 
@@ -36,7 +36,7 @@ Ta klasa udostępnia metody manipulowania oknem obsługującym formant ActiveX.
 class CAxWindow : public CWindow
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -90,7 +90,7 @@ podczas Wskaźnik do `IUnknown` formantu.
 *ppUnkContainer*<br/>
 określoną Wskaźnik do `IUnknown` hosta (obiekt `AxWin`).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -154,7 +154,7 @@ określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. M
 *dwResID*<br/>
 Identyfikator zasobu zasobu HTML. Formant WebBrowser zostanie utworzony i załadowany z określonym zasobem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -230,7 +230,7 @@ podczas Wskaźnik do interfejsu `IUnknown` obiektu ujścia, który ma być poł�
 *dwResID*<br/>
 podczas Identyfikator zasobu zasobu HTML. Formant WebBrowser zostanie utworzony i załadowany z określonym zasobem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -252,7 +252,7 @@ Pobiera nazwę klasy okna.
 static LPCTSTR GetWndClassName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do ciągu zawierającego nazwę klasy okna, która może hostować nielicencjonowane kontrolki ActiveX.
 
@@ -269,7 +269,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 *Właściwość*<br/>
 Uchwyt do istniejącego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca odwołanie do bieżącego obiektu `CAxWindow`.
 
@@ -294,7 +294,7 @@ określoną Wskaźnik do interfejsu formantu. W wersji szablonu tej metody nie m
 *Pytania*<br/>
 podczas Interfejs, dla którego jest przeprowadzana kwerenda.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -319,7 +319,7 @@ określoną Wskaźnik do interfejsu na hoście. W wersji szablonu tej metody nie
 *Pytania*<br/>
 podczas Interfejs, dla którego jest przeprowadzana kwerenda.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -340,7 +340,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 *pDisp*<br/>
 podczas Wskaźnik do interfejsu `IDispatch`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -357,7 +357,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 *pUIHandler*<br/>
 podczas Wskaźnik do interfejsu `IDocHostUIHandlerDispatch`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 

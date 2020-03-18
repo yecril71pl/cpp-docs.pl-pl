@@ -345,11 +345,11 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866713"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420219"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 
@@ -363,7 +363,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCVisualManager : public CMFCBaseVisualManager
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -627,7 +627,7 @@ Struktura wywołuje tę metodę, aby określić, czy karty 3W powinny być zawsz
 virtual BOOL AlwaysHighlight3DTabs() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `TRUE`, jeśli mają być wyróżnione karty 3W.
 
@@ -694,7 +694,7 @@ podczas *Przechwytywanie&#42;*  zmian<br/>
 podczas *CRect*<br/>
 podczas Wartość *logiczna*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -714,7 +714,7 @@ podczas *Przechwytywanie&#42;*  zmian<br/>
 podczas *CRect*<br/>
 podczas Wartość *logiczna*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -734,7 +734,7 @@ podczas *CRect*<br/>
 podczas *CMFCButton&#42;*<br/>
 podczas *Uint*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -759,7 +759,7 @@ podczas *flagiDW*<br/>
 podczas *nGlowSize*<br/>
 podczas *clrText*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -788,7 +788,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 *pButton*<br/>
 podczas Wskaźnik do przycisku Autoukrywanie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który określa kolor tekstu elementu *pButton*.
 
@@ -804,7 +804,7 @@ Struktura wywołuje tę metodę, gdy rysuje przycisk paska narzędzi.
 virtual CSize GetButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) , który zawiera dodatkowy rozmiar obramowania przycisków paska narzędzi.
 
@@ -825,7 +825,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 *pBar*<br/>
 podczas Wskaźnik do paska podpisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje kolor tekstu w *pBar*.
 
@@ -839,7 +839,7 @@ Zastąp tę metodę w klasie pochodnej, aby dostosować kolor tekstu na pasku po
 virtual CSize GetCaptionButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -849,7 +849,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 virtual int GetDockingPaneCaptionExtraHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -861,7 +861,7 @@ Struktura wywołuje tę metodę podczas rysowania okienka, które jest zadokowan
 virtual int GetDockingTabsBordersSize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita określająca rozmiar obramowania okienka, które jest zadokowane i z zakładkami.
 
@@ -881,7 +881,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 podczas *pButton*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -893,7 +893,7 @@ Zwraca wskaźnik do bieżącego obiektu [klasy CMFCVisualManager](../../mfc/refe
 static CMFCVisualManager* GetInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CMFCVisualManager`.
 
@@ -909,7 +909,7 @@ Struktura wywołuje tę metodę, aby określić rozmiar obramowania okna MDITabs
 virtual int GetMDITabsBordersSize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar obramowania okna MDITabs.
 
@@ -923,7 +923,7 @@ Zastąp tę funkcję w klasie pochodnej, aby dostosować rozmiar obramowania okn
 virtual int GetMenuImageMargin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -940,9 +940,9 @@ virtual COLORREF GetMenuItemTextColor(
 
 podczas *pButton*<br/>
 podczas *bHighlighted*<br/>
-podczas poddany<br/>
+podczas *bDisabled* poddany<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -954,7 +954,7 @@ Pobiera szerokość i wysokość cienia menu.
 int GetMenuShadowDepth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość i wysokość cienia menu (w pikselach).
 
@@ -975,7 +975,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 *bSmall*<br/>
 podczas Parametr logiczny, który wskazuje, czy `GetNcBtnSize` powinien pobrać rozmiar małego lub dużego przycisku systemowego. Jeśli *bSmall* ma wartość TRUE, `GetNcBtnSize` zwraca rozmiar małego przycisku systemowego. W przeciwnym razie zwraca rozmiar dużego przycisku systemowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [CSize](../../atl-mfc-shared/reference/csize-class.md) wskazujący rozmiar przycisków systemowych.
 
@@ -991,7 +991,7 @@ Struktura wywołuje tę metodę, aby uzyskać rozmiar obramowania menu wyskakuj�
 virtual int GetPopupMenuBorderSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita określająca rozmiar obramowania menu wyskakujących.
 
@@ -1005,7 +1005,7 @@ Zastąp tę metodę, aby dostosować rozmiar obramowania menu wyskakujących w a
 virtual int GetPopupMenuGap() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1022,7 +1022,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 *pPropList*<br/>
 podczas Wskaźnik do listy właściwości, który jest rysowany przez strukturę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje kolor tła *pPropList*.
 
@@ -1043,7 +1043,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 *pPropList*<br/>
 podczas Wskaźnik do listy właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje kolor tekstu listy właściwości.
 
@@ -1061,7 +1061,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 podczas *pHyperLink*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1075,7 +1075,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 podczas *CMFCRibbonPanelMenu&#42;*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1085,7 +1085,7 @@ podczas *CMFCRibbonPanelMenu&#42;*<br/>
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1095,7 +1095,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1107,9 +1107,9 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-podczas poddany<br/>
+podczas *bDisabled* poddany<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1146,7 +1146,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 podczas *pStatusBar*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1163,7 +1163,7 @@ virtual int GetShowAllMenuItemsHeight(
 podczas *kontroler PDC*<br/>
 podczas *sizeDefault*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1188,7 +1188,7 @@ podczas *clrBaseGroupBorder*<br/>
 virtual COLORREF GetSmartDockingHighlightToneColor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1200,7 +1200,7 @@ Zwraca motyw używany do wyświetlania znaczników dokowania inteligentnej.
 virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca jedną z następujących wartości wyliczanych: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
@@ -1219,7 +1219,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
 podczas *pStatusBar*<br/>
 podczas *pPane*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1283,7 +1283,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 podczas *CMFCBaseTabCtrl&#42;*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1302,7 +1302,7 @@ podczas *CMFCBaseTabCtrl&#42;*<br/>
 podczas liczba *całkowita*<br/>
 podczas Wartość *logiczna*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1312,7 +1312,7 @@ podczas Wartość *logiczna*<br/>
 int GetTasksPaneGroupCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1322,7 +1322,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 int GetTasksPaneGroupCaptionHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1332,7 +1332,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 int GetTasksPaneGroupCaptionVertOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1342,7 +1342,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 int GetTasksPaneGroupVertOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1352,7 +1352,7 @@ int GetTasksPaneGroupVertOffset() const;
 int GetTasksPaneHorzMargin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1362,7 +1362,7 @@ int GetTasksPaneHorzMargin() const;
 int GetTasksPaneIconHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1372,7 +1372,7 @@ int GetTasksPaneIconHorzOffset() const;
 int GetTasksPaneIconVertOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1382,7 +1382,7 @@ int GetTasksPaneIconVertOffset() const;
 int GetTasksPaneTaskHorzOffset() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1392,7 +1392,7 @@ int GetTasksPaneTaskHorzOffset() const;
 int GetTasksPaneVertMargin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1414,7 +1414,7 @@ podczas Wskaźnik do przycisku paska narzędzi.
 *Państwu*<br/>
 podczas Stan przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor tekstu elementu *pButton* , gdy ma stan wskazywany przez *stan*.
 
@@ -1430,7 +1430,7 @@ Zastąp tę funkcję, aby dostosować kolor tekstu przycisku paska narzędzi w a
 virtual int GetToolBarCustomizeButtonMargin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1440,7 +1440,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 virtual COLORREF GetToolbarDisabledColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1452,7 +1452,7 @@ Struktura wywołuje tę funkcję, aby określić kolor tekstu przycisków paska 
 virtual COLORREF GetToolbarDisabledTextColor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor stosowany przez platformę dla kolor tekstu przycisków paska narzędzi, które są niedostępne.
 
@@ -1466,7 +1466,7 @@ Zastąp tę metodę w niestandardowym Menedżerze wizualizacji, aby ustawić kol
 virtual COLORREF GetToolbarHighlightColor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1483,7 +1483,7 @@ virtual BOOL GetToolTipInfo(
 podczas *Parametry*<br/>
 podczas *npowiadomienia*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1495,7 +1495,7 @@ Zwraca czy przyciski Autoukrywanie nakładają się w bieżącym programie Visua
 virtual BOOL HasOverlappedAutoHideButtons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przyciski Autoukrywanie nakładają się na siebie; FAŁSZ, jeśli nie.
 
@@ -1505,7 +1505,7 @@ PRAWDA, jeśli przyciski Autoukrywanie nakładają się na siebie; FAŁSZ, jeśl
 BOOL IsAutoDestroy() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1519,7 +1519,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 podczas *CMFCDesktopAlertWndButton&#42;*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1531,7 +1531,7 @@ Zwraca czy bieżący program Visual Manager rysuje obramowania wokół okienek, 
 virtual BOOL IsDockingTabHasBorder();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli program Visual Manager rysuje obramowanie wokół okienek, które są zadokowane i z zakładkami. W przeciwnym razie zwraca wartość FALSE.
 
@@ -1547,7 +1547,7 @@ Określa, czy struktura płaskorzeźba obrazów, które są niedostępne.
 BOOL IsEmbossDisabledImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli struktura płaskorzeźba obrazów, które są niedostępne; w przeciwnym razie 0.
 
@@ -1563,7 +1563,7 @@ Struktura wywołuje tę metodę, gdy rysuje obrazy nieaktywne na pasku narzędzi
 BOOL IsFadeInactiveImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli struktura używa efektu oświetlenia, gdy rysuje obrazy nieaktywne na pasku narzędzi lub w menu. w przeciwnym razie 0.
 
@@ -1577,7 +1577,7 @@ Efekt oświetlenia można aktywować lub dezaktywować przez wywołanie [CMFCVis
 BOOL IsFrameMenuCheckedItems() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1587,7 +1587,7 @@ BOOL IsFrameMenuCheckedItems() const;
 virtual BOOL IsHighlightOneNoteTabs() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1597,7 +1597,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 virtual BOOL IsHighlightWholeMenuItem();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1607,7 +1607,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 virtual BOOL IsLayeredRibbonKeyTip() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1619,7 +1619,7 @@ Wskazuje, czy przyciski menu są wyświetlane jako płaskie.
 BOOL IsMenuFlatLook() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przyciski menu są wyświetlane jako płaskie; 0 w przeciwnym razie.
 
@@ -1635,7 +1635,7 @@ Wskazuje, czy program Visual Manager implementuje menu w stylu pakietu Office XP
 virtual BOOL IsOfficeXPStyleMenus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli program Visual Manager wyświetla menu w stylu pakietu Office XP; w przeciwnym razie 0.
 
@@ -1649,7 +1649,7 @@ Niezerowe, jeśli program Visual Manager wyświetla menu w stylu pakietu Office 
 virtual BOOL IsOffsetPressedButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1661,7 +1661,7 @@ Wskazuje, czy bieżący program Visual Manager implementuje napisy rysowane prze
 virtual BOOL IsOwnerDrawCaption();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wszystkie okna ramowe w aplikacji mają podpisy rysowania przez właściciela; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1671,7 +1671,7 @@ PRAWDA, jeśli wszystkie okna ramowe w aplikacji mają podpisy rysowania przez w
 virtual BOOL IsOwnerDrawMenuCheck();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1683,7 +1683,7 @@ Wskazuje, czy podczas renderowania wyróżnionych obrazów w programie Visual Ma
 BOOL IsShadowHighlightedImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, gdy program Visual Manager wyświetla cienie w obszarze wyróżnione obrazy; 0 w przeciwnym razie.
 
@@ -1693,7 +1693,7 @@ Różna od zera, gdy program Visual Manager wyświetla cienie w obszarze wyróż
 BOOL IsToolbarButtonFillEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1707,7 +1707,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 podczas *CMFCToolBar&#42;*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1717,7 +1717,7 @@ podczas *CMFCToolBar&#42;*<br/>
 virtual BOOL IsWindowsThemingSupported() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1828,7 +1828,7 @@ podczas Wartość wyliczana, która określa stan przycisku.
 *clrText*<br/>
 określoną Odwołanie do parametru [COLORREF](/windows/win32/gdi/colorref) . Jest to wartość zarezerwowana i nie jest obecnie używana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2409,7 +2409,7 @@ podczas *kontroler PDC*<br/>
 podczas *pButton*<br/>
 podczas *rectButton*<br/>
 podczas *bHighlight*<br/>
-podczas poddany<br/>
+podczas *bDisabled* poddany<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2426,7 +2426,7 @@ virtual COLORREF OnDrawMenuLabel(
 podczas *kontroler PDC*<br/>
 podczas *prostokąt*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2677,7 +2677,7 @@ podczas Prostokąt, który określa granice podpisu.
 *rectButtons*<br/>
 podczas Prostokąt, który określa granice przycisków podpisów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje kolor tekstu podpisu.
 
@@ -2751,7 +2751,7 @@ podczas *kontroler PDC*<br/>
 podczas *rectCaption*<br/>
 podczas *pPopupWnd*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2821,7 +2821,7 @@ podczas Wskaźnik do grupy przycisków na Wstążce. Struktura rysuje tę grupę
 *Rect*<br/>
 podczas Prostokąt, który określa granice grupy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zastrzeżona. Domyślna implementacja zwraca wartość-1.
 
@@ -2927,7 +2927,7 @@ podczas Kontekst rysowania.
 *pContextCaption*<br/>
 podczas Wskaźnik do paska podpisu. Program Visual Manager rysuje ten obiekt [klasy CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje kolor tekstu na pasku podpisu.
 
@@ -2972,7 +2972,7 @@ podczas Wskaźnik do wystąpienia klasy `CMFCRibbonTab`. Struktura rysuje tę ka
 *bIsActive*<br/>
 podczas Parametr logiczny, który wskazuje, czy karta jest aktywna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor używany dla tekstu na karcie kategorii wstążki.
 
@@ -3260,7 +3260,7 @@ podczas Prostokąt, który określa granice panelu.
 *rectCaption*<br/>
 podczas Prostokąt, który określa granice podpisu panelu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor tekstu na panelu wstążki.
 
@@ -3508,7 +3508,7 @@ podczas Wskaźnik do paska stanu, który zawiera okienko.
 *pPane*<br/>
 podczas Wskaźnik do okienka paska stanu. Struktura rysuje ten obiekt [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zastrzeżona. Domyślna implementacja zwraca wartość-1.
 
@@ -3538,7 +3538,7 @@ Wskaźnik do obiektu [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 *rectTab*<br/>
 Prostokąt, który określa granice kart wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zastrzeżona. Domyślnie ta metoda zwraca wartość-1.
 
@@ -4154,7 +4154,7 @@ podczas Wskaźnik do kontekstu urządzenia.
 *rectClient*<br/>
 podczas Prostokąt, który określa granice obszaru klienta MDI.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zastrzeżona. Domyślna implementacja zwraca wartość FALSE.
 
@@ -4261,7 +4261,7 @@ podczas Prostokąt, który określa granice okna karty.
 *pTabWnd*<br/>
 podczas Wskaźnik do okna karty. Struktura usuwa ramkę dla tego `CMFCBaseTabCtrl`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -4392,7 +4392,7 @@ podczas *bIsDisabled*<br/>
 podczas *bHasDropDownArrow*<br/>
 podczas *bIsSysButton*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4418,7 +4418,7 @@ podczas Prostokąt, który określa granice przycisku.
 *bIsSelected*<br/>
 podczas Parametr logiczny, który wskazuje, czy przycisk jest wybrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor tekstu przycisku paska narzędzi.
 
@@ -4478,7 +4478,7 @@ podczas Wskaźnik do okna mini frame. Struktura rysuje pasek podpisu dla tego ok
 *bActive*<br/>
 podczas Parametr logiczny, który wskazuje, czy okno jest aktywne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor używany do wypełnienia tła paska podpisu.
 
@@ -4586,7 +4586,7 @@ podczas Wskaźnik do kontekstu urządzenia.
 *pButton*<br/>
 podczas Wskaźnik do obiektu [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . Struktura wypełnia wnętrze tego przycisku wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor tekstu przycisku wstążki określonego przez *pButton* , jeśli przycisk wstążki obsługuje tekst. Wartość-1, jeśli tekst dla przycisku wstążki jest nieprawidłowy.
 
@@ -4664,7 +4664,7 @@ podczas Wskaźnik do kontekstu urządzenia.
 *pButton*<br/>
 podczas Wskaźnik do obiektu [klasy CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . Struktura wypełnia ten przycisk wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kolor tekstu przycisku wstążki określonego przez *pButton* , jeśli przycisk wstążki obsługuje tekst. Wartość-1, jeśli tekst dla przycisku wstążki jest nieprawidłowy.
 
@@ -4894,7 +4894,7 @@ virtual BOOL OnNcActivate(
 podczas *pWnd*<br/>
 podczas *bActive*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4920,7 +4920,7 @@ podczas Lista przycisków systemu. Są one również znane jako przyciski podpis
 *rectRedraw*<br/>
 podczas Prostokąt, który określa granice obszaru nieklienckiego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zastrzeżona. Domyślna implementacja zwraca wartość FALSE.
 
@@ -4946,7 +4946,7 @@ podczas Wskaźnik do okna ze zmienionym regionem.
 *sizeWindow*<br/>
 podczas Rozmiar okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -4984,7 +4984,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 podczas *kolor*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 

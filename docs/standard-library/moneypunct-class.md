@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884009"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419855"
 ---
 # <a name="moneypunct-class"></a>moneypunct — Klasa
 
@@ -78,7 +78,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 Obiekt statyczny const Intl przechowuje wartość parametru szablonu *Intl*.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -140,7 +140,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 string_type curr_symbol() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg zawierający symbol waluty.
 
@@ -177,7 +177,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 CharType decimal_point() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako symbol separatora dziesiętnego.
 
@@ -223,7 +223,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, która zwraca sekwencję e
 virtual string_type do_curr_symbol() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako symbol separatora dziesiętnego.
 
@@ -239,7 +239,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca sekwencję elem
 virtual CharType do_decimal_point() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako symbol separatora dziesiętnego.
 
@@ -255,7 +255,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca specyficzną dl
 virtual int do_frac_digits() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Specyficzna dla ustawień regionalnych liczba cyfr do wyświetlenia po prawej stronie dowolnego punktu dziesiętnego.
 
@@ -271,7 +271,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca regułę specyf
 virtual string do_grouping() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
@@ -287,7 +287,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwróce
 virtual pattern do_neg_format() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych służącą do określania sposobu generowania pola danych wyjściowych pieniężnych dla liczby ujemnej. Każdy z czterech elementów `pattern::field` może mieć wartości:
 
@@ -317,7 +317,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w 
 virtual string_type do_negative_sign() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych, która ma być używana jako znak ujemny.
 
@@ -333,7 +333,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwróce
 virtual pattern do_pos_format() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych służącą do określania sposobu generowania pola danych wyjściowych pieniężnych dla liczby dodatniej. (Określa również, jak dopasować składniki pola danych wejściowych pieniężnych). Kodowanie jest takie samo jak w przypadku [do_neg_format](#do_neg_format).
 
@@ -351,7 +351,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca sekwencję elem
 virtual string_type do_positive_sign() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych, która ma być używana jako znak dodatni.
 
@@ -367,7 +367,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca element specyfi
 virtual CharType do_thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element specyficzny dla ustawień regionalnych, który ma być używany jako separator grupy po lewej stronie dowolnego punktu dziesiętnego.
 
@@ -383,7 +383,7 @@ Zwraca specyficzną dla ustawień regionalnych liczbę cyfr, które mają być w
 int frac_digits() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Specyficzna dla ustawień regionalnych liczba cyfr do wyświetlenia po prawej stronie dowolnego punktu dziesiętnego.
 
@@ -452,7 +452,7 @@ Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób g
 string grouping() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
@@ -548,7 +548,7 @@ Zwraca regułę specyficzną dla ustawień regionalnych przy formatowaniu danych
 pattern neg_format() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych służąca do formatowania danych wyjściowych z kwotami ujemnymi.
 
@@ -596,7 +596,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 string_type negative_sign() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol znaku ujemnego.
 
@@ -658,7 +658,7 @@ Zwraca regułę specyficzną dla ustawień regionalnych przy formatowaniu danych
 pattern pos_format() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych służąca do formatowania danych wyjściowych z kwotami dodatnimi.
 
@@ -706,7 +706,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 string_type positive_sign() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych do użycia jako symbol znaku dodatniego.
 
@@ -780,7 +780,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 CharType thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Sekwencja elementów specyficznych dla ustawień regionalnych, które mają być używane jako separator tysięcy
 
@@ -833,7 +833,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ustawienia regionalne >](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

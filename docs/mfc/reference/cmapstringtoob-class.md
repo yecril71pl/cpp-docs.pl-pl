@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876377"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418539"
 ---
 # <a name="cmapstringtoob-class"></a>Klasa CMapStringToOb
 
@@ -51,17 +51,17 @@ Klasa kolekcji słownika, która mapuje unikatowe `CString` obiekty na `CObject`
 class CMapStringToOb : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMapStringToOb:: GetCount](#getcount)|Zwraca liczbę elementów w tej mapie.|
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
@@ -79,7 +79,7 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMapStringToOb:: operator \[ \]](#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
 
@@ -126,7 +126,7 @@ Gdy mapa zostanie powiększona, pamięć jest przypisana w jednostkach wpisów *
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb:: CMapStringToOb`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**CMapPtrToPtr (INT_PTR** `nBlockSize` **= 10);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**CMapPtrToWord (INT_PTR** `nBlockSize` **= 10);**|
@@ -149,7 +149,7 @@ Określa, ile elementów znajduje się na mapie.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w tej mapie.
 
@@ -157,7 +157,7 @@ Liczba elementów w tej mapie.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::GetCount`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetCount () const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetCount () const;**|
@@ -180,7 +180,7 @@ Określa bieżącą liczbę elementów w tabeli skrótów.
 UINT GetHashTableSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę elementów w tabeli skrótów.
 
@@ -188,7 +188,7 @@ Zwraca liczbę elementów w tabeli skrótów.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::GetHashTableSize`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT GetHashTableSize () const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT GetHashTableSize () const;**|
@@ -233,7 +233,7 @@ To nie jest prawdziwe `GetNextAssoc` w przypadku map opartych na szablonach.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::GetNextAssoc`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\*&** *rKey* **, void\*&** *rValue* **) const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\*&** *rKey* **, Word &** *rValue* **) const;**|
@@ -265,7 +265,7 @@ Zwraca liczbę elementów mapy.
 INT_PTR GetSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów na mapie.
 
@@ -275,7 +275,7 @@ Wywołaj tę metodę, aby pobrać liczbę elementów na mapie.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::GetSize`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetSize () const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetSize () const;**|
@@ -296,7 +296,7 @@ Uruchamia iterację mapy przez zwrócenie wartości pozycji, która może zosta�
 POSITION GetStartPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji wskazująca na pozycję początkową dla iteracji mapy; lub wartość NULL, jeśli mapa jest pusta.
 
@@ -306,7 +306,7 @@ Sekwencja iteracji nie jest przewidywalna; w związku z tym "pierwszy element w 
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::GetStartPosition`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**POSITION GetStartPosition () const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**POSITION GetStartPosition () const;**|
@@ -332,7 +332,7 @@ UINT HashKey(LPCTSTR key) const;
 *Klucz*<br/>
 Klucz, dla którego ma zostać obliczona wartość skrótu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość skrótu klucza
 
@@ -340,7 +340,7 @@ Wartość skrótu klucza
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::HashKey`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Uint HashKey (void** <strong>\*</strong> `key` **) const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Uint HashKey (void** <strong>\*</strong> `key` **) const;**|
@@ -373,7 +373,7 @@ W celu uzyskania najlepszej wydajności rozmiar tabeli skrótów powinien być l
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::InitHashTable`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
@@ -390,7 +390,7 @@ Określa, czy mapa jest pusta.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli ta mapa nie zawiera żadnych elementów; w przeciwnym razie 0.
 
@@ -402,7 +402,7 @@ Zobacz [przykład dla mnie](#removeall).
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do **CMapStringToOb:: IsEmpty**.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL IsEmpty () const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL IsEmpty () const;**|
@@ -429,7 +429,7 @@ Określa klucz ciągu identyfikujący element, który ma zostać wyszukany.
 *rValue*<br/>
 Określa wartość zwracaną z elementu, który ma być wyszukiwany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element został znaleziony; w przeciwnym razie 0.
 
@@ -439,7 +439,7 @@ Niezerowe, jeśli element został znaleziony; w przeciwnym razie 0.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::LookUp`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Wyszukiwanie bool (void** <strong>\*</strong> `key` **, void\*&** `rValue` **) const;**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Wyszukiwanie bool (void** <strong>\*</strong> `key` **, Word &** `rValue` **) const;**|
@@ -472,7 +472,7 @@ Określa klucz ciągu identyfikujący element, który ma zostać wyszukany.
 *rKey*<br/>
 Odwołanie do skojarzonego klucza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli klucz został znaleziony; w przeciwnym razie 0.
 
@@ -482,7 +482,7 @@ Użycie odwołania do klucza jest niebezpieczne, jeśli jest używane po usunię
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb:: LookupKey`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Bool LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Bool LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
@@ -495,7 +495,7 @@ Wygodny substytut funkcji składowej `SetAt`.
 CObject*& operator[ ](lpctstr key);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wskaźnika do obiektu `CObject`ego; lub wartość NULL, jeśli mapa jest pusta lub *klucz* jest poza zakresem.
 
@@ -507,7 +507,7 @@ Nie ma "prawa strona" (r-Value) równoważnej temu operatorowi, ponieważ istnie
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::operator []`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|<strong>void\*& operatora\[] (void \*</strong> `key` **\);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Słowo & operator\[] (void** <strong>\*</strong> `key` **\);**|
@@ -546,7 +546,7 @@ Funkcja działa poprawnie, jeśli mapa jest już pusta.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::RemoveAll`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void No();**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void No();**|
@@ -574,7 +574,7 @@ BOOL RemoveKey(LPCTSTR key);
 *Klucz*<br/>
 Określa ciąg używany do wyszukiwania map.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, Jeśli wpis został znaleziony i pomyślnie usunięty; w przeciwnym razie 0.
 
@@ -584,7 +584,7 @@ Może to spowodować przecieki pamięci, jeśli obiekt `CObject` nie został usu
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::RemoveKey`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Bool RemoveKey (void** <strong>\*</strong> `key` **);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Bool RemoveKey (void** <strong>\*</strong> `key` **);**|
@@ -632,7 +632,7 @@ Najpierw jest wyszukiwany klucz. Jeśli klucz zostanie znaleziony, oznacza to, �
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CMapStringToOb::SetAt`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **);**|
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, Word** `newValue` **);**|
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

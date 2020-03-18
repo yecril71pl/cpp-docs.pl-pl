@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855737"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419316"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeni nazw współbieżności (AMP)
 
@@ -82,7 +82,7 @@ Lokalizacja, z której zostanie odczytana druga wartość do porównania.
 *value*<br/>
 Wartość, która ma być przechowywana w lokalizacji pamięci określonej w `_Dest`, jeśli `_Dest` jest równa `_Expected_value`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli operacja zakończyła się pomyślnie. w przeciwnym razie **false**.
 
@@ -115,7 +115,7 @@ Wskaźnik do lokalizacji docelowej.
 *value*<br/>
 Nowa wartość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji docelowej.
 
@@ -143,7 +143,7 @@ Wskaźnik do lokalizacji pamięci.
 *value*<br/>
 Wartość, która ma zostać dodana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji pamięci.
 
@@ -171,7 +171,7 @@ Wskaźnik do lokalizacji pamięci.
 *value*<br/>
 Wartość, która ma być używana w obliczeniach bitowych i.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji pamięci.
 
@@ -191,7 +191,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 *_Dest*<br/>
 Lokalizacja w pamięci wartości do zmniejszenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość przechowywana w lokalizacji pamięci.
 
@@ -210,7 +210,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 *_Dest*<br/>
 Lokalizacja w pamięci wartości do zwiększenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość przechowywana w lokalizacji pamięci.
 
@@ -238,7 +238,7 @@ Lokalizacja, z której jest odczytywana jedna z wartości, które mają być por
 *value*<br/>
 Wartość do porównania z wartością w określonej lokalizacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość przechowywana w określonej lokalizacji lokalizacji.
 
@@ -266,7 +266,7 @@ Lokalizacja, z której jest odczytywana jedna z wartości, które mają być por
 *value*<br/>
 Wartość do porównania z wartością w określonej lokalizacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość przechowywana w określonej lokalizacji lokalizacji.
 
@@ -294,7 +294,7 @@ Wskaźnik do lokalizacji pamięci.
 *value*<br/>
 Wartość, która ma być używana w obliczeniach bitowych lub.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji pamięci.
 
@@ -322,7 +322,7 @@ Wskaźnik do lokalizacji docelowej.
 *value*<br/>
 Wartość do odjęcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji pamięci.
 
@@ -350,7 +350,7 @@ Wskaźnik do lokalizacji pamięci.
 *value*<br/>
 Wartość, która ma zostać użyta w obliczeniach XOR.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oryginalna wartość lokalizacji pamięci.
 
@@ -540,7 +540,7 @@ Końcowy iterator do kontenera źródłowego.
 *value_type*<br/>
 Typ danych elementów, które są kopiowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `future<void>`, które mogą być oczekiwane.
 

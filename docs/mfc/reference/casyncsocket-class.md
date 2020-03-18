@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855345"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418889"
 ---
 # <a name="casyncsocket-class"></a>Klasa CAsyncSocket
 
@@ -91,7 +91,7 @@ Reprezentuje gniazdo systemu Windows — punkt końcowy komunikacji sieciowej.
 class CAsyncSocket : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -199,7 +199,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , który od
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach. *LpSockAddrLen* jest parametrem wyniku wartości: powinien początkowo zawierać ilość miejsca wskazywanego przez *lpSockAddr*; po zwróceniu będzie zawierać rzeczywistą Długość (w bajtach) zwróconego adresu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -254,7 +254,7 @@ Maska bitów, która określa kombinację zdarzeń sieci, w których interesuje 
 
 - FD_CLOSE chcesz otrzymywać powiadomienia, gdy gniazdo zostało zamknięte przez element równorzędny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -299,7 +299,7 @@ Maska bitów, która określa kombinację zdarzeń sieci, w których interesuje 
 
 - FD_CLOSE chcesz otrzymywać powiadomienia, gdy gniazdo zostało zamknięte przez element równorzędny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie.
 
@@ -335,7 +335,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , która za
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Poniższa lista zawiera kilka błędów, które mogą zostać zwrócone. Aby uzyskać pełną listę, zobacz [kody błędów usługi Windows Sockets](/windows/win32/winsock/windows-sockets-error-codes-2).
 
@@ -415,7 +415,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , która za
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Jeśli wskazuje to kod błędu WSAEWOULDBLOCK, a aplikacja korzysta z zaszeregowania wywołań zwrotnych, aplikacja otrzyma komunikat `OnConnect` po zakończeniu operacji łączenia. Następujące błędy dotyczą tej funkcji składowej:
 
@@ -499,7 +499,7 @@ Maska bitów, która określa kombinację zdarzeń sieci, w których interesuje 
 *lpszSockAddress*<br/>
 Wskaźnik do ciągu zawierającego adres sieciowy połączonego gniazda, numer kropkowany, taki jak "128.56.22.8". Przekazywanie ciągu o wartości NULL dla tego parametru wskazuje, że wystąpienie `CAsyncSocket` powinno nasłuchiwać aktywności klienta na wszystkich interfejsach sieciowych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -558,7 +558,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 *hSocket*<br/>
 Zawiera uchwyt do gniazda.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CAsyncSocket` lub wartość NULL, jeśli nie ma `CAsyncSocket` obiektu dołączonego do *hSocket*.
 
@@ -574,7 +574,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać stan błędu dla os
 static int PASCAL GetLastError();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana wskazuje kod błędu dla ostatniej procedury interfejsu API Windows Sockets wykonywanej przez ten wątek.
 
@@ -612,7 +612,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , która ot
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach. W przypadku powrotu argument *lpSockAddrLen* zawiera rzeczywisty rozmiar *lpSockAddr* zwrócony w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -650,7 +650,7 @@ Odwołanie do obiektu `CString`, który odbiera adres IP z kropką.
 *rPeerPort*<br/>
 Odwołanie do typu UINT, który przechowuje port.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -698,7 +698,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , który od
 *lpSockAddrLen*<br/>
 Wskaźnik do długości adresu w *lpSockAddr* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -738,7 +738,7 @@ Odwołanie do obiektu `CString`, który odbiera adres IP z kropką.
 *rSocketPort*<br/>
 Odwołanie do typu UINT, który przechowuje port.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -786,7 +786,7 @@ Wskaźnik do rozmiaru buforu *lpOptionValue* w bajtach.
 *nLevel*<br/>
 Poziom, na którym jest zdefiniowana opcja; Jedyne obsługiwane poziomy to SOL_SOCKET i IPPROTO_TCP.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Jeśli opcja nigdy nie została ustawiona przy użyciu `SetSockOpt`, `GetSockOpt` zwraca wartość domyślną dla opcji. Następujące błędy dotyczą tej funkcji składowej:
 
@@ -856,7 +856,7 @@ Polecenie do wykonania w gnieździe.
 *lpArgument*<br/>
 Wskaźnik do parametru dla *lCommand*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -895,7 +895,7 @@ BOOL Listen(int nConnectionBacklog = 5);
 *nConnectionBacklog*<br/>
 Maksymalna długość, do której można zwiększyć kolejkę oczekujących połączeń. Prawidłowy zakres to od 1 do 5.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1133,7 +1133,7 @@ Użyj tego operatora, aby pobrać uchwyt gniazda obiektu `CAsyncSocket`.
 operator SOCKET() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, uchwyt obiektu SOCKET; w przeciwnym razie wartość NULL.
 
@@ -1167,7 +1167,7 @@ Określa sposób, w jaki nawiązywane jest wywołanie. Semantyka tej funkcji jes
 
 - MSG_OOB Przetwarzaj dane poza pasmem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `Receive` zwraca liczbę odebranych bajtów. Jeśli połączenie zostało zamknięte, zwraca wartość 0. W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1258,7 +1258,7 @@ Określa sposób, w jaki nawiązywane jest wywołanie. Semantyka tej funkcji jes
 
 - MSG_OOB Przetwarzaj dane poza pasmem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `ReceiveFrom` zwraca liczbę odebranych bajtów. Jeśli połączenie zostało zamknięte, zwraca wartość 0. W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując `GetLastError`. Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1336,7 +1336,7 @@ Określa sposób, w jaki nawiązywane jest wywołanie. Semantyka tej funkcji jes
 
 - MSG_OOB Przetwarzaj dane poza pasmem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `ReceiveFromEx` zwraca liczbę odebranych bajtów. Jeśli połączenie zostało zamknięte, zwraca wartość 0. W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując `GetLastError`. Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1406,7 +1406,7 @@ Określa sposób, w jaki nawiązywane jest wywołanie. Semantyka tej funkcji jes
 
 - MSG_OOB Wysyłaj dane poza pasmem (tylko SOCK_STREAM).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `Send` zwraca łączną liczbę wysłanych znaków. (Należy pamiętać, że może to być mniejsze niż liczba wskazywana przez *nBufLen*). W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1501,7 +1501,7 @@ Wskaźnik do struktury [SOCKADDR](/windows/win32/winsock/sockaddr-2) , która za
 *nSockAddrLen*<br/>
 Długość adresu w *lpSockAddr* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `SendTo` zwraca łączną liczbę wysłanych znaków. (Należy pamiętać, że może to być mniejsze niż liczba wskazywana przez *nBufLen*). W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1591,7 +1591,7 @@ Określa sposób, w jaki nawiązywane jest wywołanie. Semantyka tej funkcji jes
 
 - MSG_OOB Wysyłaj dane poza pasmem (tylko SOCK_STREAM).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli błąd nie wystąpi, `SendToEx` zwraca łączną liczbę wysłanych znaków. (Należy pamiętać, że może to być mniejsze niż liczba wskazywana przez *nBufLen*). W przeciwnym razie zwracana jest wartość SOCKET_ERROR, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1673,7 +1673,7 @@ Rozmiar buforu *lpOptionValue* w bajtach.
 *nLevel*<br/>
 Poziom, na którym jest zdefiniowana opcja; Jedyne obsługiwane poziomy to SOL_SOCKET i IPPROTO_TCP.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1761,7 +1761,7 @@ Flaga opisująca, jakie typy operacji nie będą już dozwolone, przy użyciu na
 
 - **Oba = 2**
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
 
@@ -1827,7 +1827,7 @@ Protokół, który ma być używany z gniazdem specyficznym dla wskazanej rodzin
 *nAddressFormat*<br/>
 Specyfikacja rodziny adresów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca `TRUE` po powodzeniu, `FALSE` w przypadku niepowodzenia.
 

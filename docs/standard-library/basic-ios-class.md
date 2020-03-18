@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856563"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416992"
 ---
 # <a name="basic_ios-class"></a>basic_ios — Klasa
 
@@ -96,7 +96,7 @@ Obiekt klasy **basic_ios\<klasy elem, cechy klasy >** magazyny:
 
 - Znak wypełnienia w obiekcie typu `char_type`.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -158,7 +158,7 @@ Wskazuje utratę integralności buforu strumienia
 bool bad() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli `rdstate & badbit` jest różna od zera; w przeciwnym razie **false**.
 
@@ -254,7 +254,7 @@ const basic_ios<Elem, Traits>& right);
 *prawa*\
 Strumień, którego flagi mają zostać skopiowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt **dla strumienia, do** którego są kopiowane flagi.
 
@@ -291,7 +291,7 @@ Wskazuje, czy osiągnięto koniec strumienia.
 bool eof() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli osiągnięto koniec strumienia, w przeciwnym razie **zwraca wartość false** .
 
@@ -336,7 +336,7 @@ void exceptions(io_state Newexcept);
 *Newexcept*\
 Flagi, które mają zgłosić wyjątek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Flagi, które są obecnie określone do zgłaszania wyjątku dla strumienia.
 
@@ -388,7 +388,7 @@ Wskazuje, że nie powiodło się wyodrębnienie prawidłowego pola ze strumienia
 bool fail() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli [rdstate](#rdstate) `& (badbit|failbit)` ma wartość różną od zera, w przeciwnym razie **false**.
 
@@ -424,7 +424,7 @@ char_type fill(char_type Char);
 \ *char*
 Znak, który ma być znakiem wypełnienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący znak wypełnienia.
 
@@ -465,7 +465,7 @@ Wskazuje, że strumień jest w dobrym stanie.
 bool good() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli [rdstate](#rdstate) `== goodbit` (bez flag stanu nie są ustawione), w przeciwnym razie, **Fałsz**.
 
@@ -488,7 +488,7 @@ locale imbue(const locale& Loc);
 \. *Loc*
 Ciąg ustawień regionalnych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienia regionalne.
 
@@ -599,7 +599,7 @@ char narrow(char_type Char, char Default = '\0') const;
 \ *domyślne*
 **Znak** , który ma zostać zwrócony, jeśli nie zostanie znaleziony odpowiednika.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odpowiednik **znaku** dla danego `char_type`.
 
@@ -644,7 +644,7 @@ Wskazuje, czy strumień jest wciąż dobry.
 operator void *() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Operator zwraca wskaźnik o wartości null tylko w przypadku [niepowodzenia](#fail).
 
@@ -674,7 +674,7 @@ Wskazuje, czy strumień nie jest uszkodzony.
 bool operator!() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca [Niepowodzenie](#fail).
 
@@ -769,7 +769,7 @@ Odczytuje stan bitów dla flag.
 iostate rdstate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Informacje o stanie przechowywanego strumienia.
 
@@ -892,7 +892,7 @@ basic_ostream<Elem, Traits>* str);
 *str*\
 Strumień.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca przechowywany wskaźnik równości. Druga funkcja członkowska przechowuje *str* w wskaźniku krawat i zwraca jego poprzednią wartość przechowywaną.
 
@@ -939,7 +939,7 @@ char_type widen(char Char) const;
 \ *char*
 Znak do przekonwertowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Znajduje odpowiednik `char_type` danego **znaku**.
 

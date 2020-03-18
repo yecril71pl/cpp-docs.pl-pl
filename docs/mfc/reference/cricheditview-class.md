@@ -101,11 +101,11 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883670"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421479"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
@@ -117,7 +117,7 @@ Funkcja [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) i [CRichEditCn
 class CRichEditView : public CCtrlView
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -235,7 +235,7 @@ Wywołaj tę funkcję, aby określić, czy Schowek zawiera informacje, które mo
 BOOL CanPaste() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Schowek zawiera dane w formacie, który może akceptować ten widok wzbogaconej edycji. w przeciwnym razie 0.
 
@@ -301,7 +301,7 @@ Wskazuje, czy wyszukiwanie powinno uwzględniać tylko całe wyrazy, nie częśc
 *bNext*<br/>
 Wskazuje kierunek wyszukiwania. W przypadku wartości TRUE kierunek wyszukiwania jest skierowany ku końcu buforu. W przypadku wartości FALSE kierunek wyszukiwania jest skierowany do początku buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zostanie znaleziony tekst *lpszFind* ; w przeciwnym razie 0.
 
@@ -339,7 +339,7 @@ Wskazuje, czy wyszukiwanie powinno uwzględniać tylko całe wyrazy, nie częśc
 *bNext*<br/>
 Wskazuje kierunek wyszukiwania. W przypadku wartości TRUE kierunek wyszukiwania jest skierowany ku końcu buforu. W przypadku wartości FALSE kierunek wyszukiwania jest skierowany do początku buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zostanie znaleziony tekst *lpszFind* ; w przeciwnym razie 0.
 
@@ -355,7 +355,7 @@ Wywołaj tę funkcję, aby pobrać atrybuty formatowania znaku bieżącego zazna
 CHARFORMAT2& GetCharFormatSelection();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , która zawiera atrybuty formatowania znaku bieżącego zaznaczenia.
 
@@ -403,7 +403,7 @@ Wskaźnik do obiektu [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobje
 *lplpdataobj*<br/>
 Wskaźnik do zmiennej wskaźnika, która odbiera adres `IDataObject` obiektu reprezentującego zakres określony w parametrze *lpchrg* . Wartość *lplpdataobj* jest ignorowana, Jeśli zwracany jest błąd.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość HRESULT zgłasza sukces operacji. Aby uzyskać więcej informacji na temat HRESULT, zobacz [strukturę kodów błędów modelu COM](/windows/win32/com/structure-of-com-error-codes) w Windows SDK.
 
@@ -437,7 +437,7 @@ Wskaźnik do struktury `OLEOBJECT` określający pierwszy zaznaczony obiekt OLE,
 *lpchrg*<br/>
 Wskaźnik do struktury [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) zawierającej bieżący wybór.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do menu kontekstowego.
 
@@ -469,7 +469,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do `CRichEditDoc` skojarzonego z t
 CRichEditDoc* GetDocument() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) skojarzonego z obiektem `CRichEditView`.
 
@@ -481,7 +481,7 @@ Wywołaj tę funkcję, aby pobrać element OLE, który jest aktualnie aktywowany
 CRichEditCntrItem* GetInPlaceActiveItem() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pojedynczego, w miejscu aktywnego obiektu [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) w tym widoku edycji wzbogaconej; Wartość NULL, jeśli w stanie aktywnym nie ma obecnie elementu OLE.
 
@@ -493,7 +493,7 @@ Wywołaj tę funkcję, aby pobrać bieżące marginesy używane podczas drukowan
 CRect GetMargins() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Marginesy używane podczas drukowania, mierzone w MM_TWIPS.
 
@@ -505,7 +505,7 @@ Wywołaj tę funkcję, aby uzyskać wymiary strony używanej do drukowania.
 CRect GetPageRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Granice strony używanej podczas drukowania, mierzone w MM_TWIPS.
 
@@ -521,7 +521,7 @@ Wywołaj tę funkcję, aby pobrać bieżący rozmiar papieru.
 CSize GetPaperSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar papieru używanego do drukowania, mierzony w MM_TWIPS.
 
@@ -537,7 +537,7 @@ Wywołaj tę funkcję, aby pobrać atrybuty formatowania akapitu bieżącego zaz
 PARAFORMAT2& GetParaFormatSelection();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , która zawiera atrybuty formatowania akapitu bieżącego zaznaczenia.
 
@@ -553,7 +553,7 @@ Wywołaj tę funkcję, aby pobrać granice obszaru drukowania w obrębie prostok
 CRect GetPrintRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Granice obszaru obrazu używane podczas drukowania, mierzone w MM_TWIPS.
 
@@ -569,7 +569,7 @@ Wywołaj tę funkcję, aby określić szerokość obszaru drukowania.
 int GetPrintWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość obszaru drukowania mierzona w MM_TWIPS.
 
@@ -581,7 +581,7 @@ Wywołaj tę funkcję, aby pobrać obiekt [CRichEditCtrl](../../mfc/reference/cr
 CRichEditCtrl& GetRichEditCtrl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CRichEditCtrl` dla tego widoku.
 
@@ -597,7 +597,7 @@ Wywołaj tę funkcję, aby pobrać element OLE (obiekt `CRichEditCntrItem`) aktu
 CRichEditCntrItem* GetSelectedItem() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) zaznaczonego w obiekcie `CRichEditView`; Wartość NULL, jeśli nie wybrano żadnego elementu w tym widoku.
 
@@ -609,7 +609,7 @@ Wywołaj tę funkcję, aby pobrać długość tekstu w tym obiekcie `CRichEditVi
 long GetTextLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość tekstu w tym obiekcie `CRichEditView`.
 
@@ -631,7 +631,7 @@ Wartość określająca metodę, która ma być używana podczas określania dł
 *uCodePage*<br/>
 Strona kodowa dla tłumaczenia (CP_ACP dla strony kodowej ANSI 1200 dla Unicode).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków lub bajtów w kontrolce edycji. W przypadku ustawienia niezgodnych flag w *flagiDW*, ta funkcja członkowska zwraca E_INVALIDARG.
 
@@ -665,7 +665,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 *pItem*<br/>
 Wskaźnik na element, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość HRESULT wskazująca na powodzenie wstawiania.
 
@@ -686,7 +686,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 *Porównaj*<br/>
 Interesujący format schowka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli *CF* jest sformatowanym formatem tekstu lub Schowka.
 
@@ -703,7 +703,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 *pDocItem*<br/>
 Wskaźnik do obiektu w widoku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt jest zaznaczony; w przeciwnym razie 0.
 
@@ -828,7 +828,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 *lpStg*<br/>
 Wskaźnik do obiektu [Metoda IStorage](/windows/win32/api/objidl/nn-objidl-istorage) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0;
 
@@ -1061,7 +1061,7 @@ Indeks (liczony od zera) ostatniego znaku do sformatowania.
 *bOutput*<br/>
 Wskazuje, czy tekst powinien być renderowany. W przypadku wartości FALSE tekst jest mierzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks ostatniego znaku, który mieści się w obszarze wyjściowym plus jeden.
 
@@ -1095,7 +1095,7 @@ Indeks (liczony od zera) pierwszego znaku do sformatowania.
 *nIndexStop*<br/>
 Indeks (liczony od zera) ostatniego znaku do sformatowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks ostatniego znaku, który mieści się na stronie oraz jeden.
 
@@ -1127,7 +1127,7 @@ Wskaźnik do [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) do z
 Wskaźnik na akceptowalny format danych.
 
 *dwReco*<br/>
-Nie używany.
+Nie jest używany.
 
 *bReally*<br/>
 Wskazuje, czy operacja wklejania powinna być kontynuowana, czy nie.
@@ -1135,7 +1135,7 @@ Wskazuje, czy operacja wklejania powinna być kontynuowana, czy nie.
 *hMetaFile*<br/>
 Uchwyt do metapliku używanego do rysowania ikony elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość HRESULT zgłasza sukces operacji.
 
@@ -1229,7 +1229,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 *PF*<br/>
 Struktura [PARAFORMAT2a](/windows/win32/api/richedit/ns-richedit-paraformat2) zawierająca nowe domyślne atrybuty formatowania akapitu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

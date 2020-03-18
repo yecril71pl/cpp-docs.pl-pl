@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865603"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417195"
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 
@@ -47,8 +47,8 @@ Chociaż jest możliwe uzyskanie dostępu do danych z dowolnymi wyrównaniami, z
 |||||
 |-|-|-|-|
 |Typ skalarny|Typ danych języka C|Rozmiar magazynu (w bajtach)|Zalecane wyrównanie|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**znak bez znaku**|1|Byte|
+|**INT8**|**char**|1|Bajtów|
+|**UINT8**|**znak bez znaku**|1|Bajtów|
 |**INT16**|**short**|2|Word|
 |**UINT16**|**bez znaku Short**|2|Word|
 |**ELEMENTEM**|**int**, **Long**|4|Doubleword|
@@ -73,7 +73,7 @@ Inne typy, takie jak tablice, struktury i związki, mają ostrzejsze wymagania d
 
    Zawiera uporządkowaną grupę obiektów danych. W przeciwieństwie do elementów tablicy, obiekty danych w strukturze mogą mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze nosi nazwę *elementu członkowskiego*.
 
-- Union
+- Unia
 
    Obiekt, który zawiera jeden z zestawów nazwanych członków. Elementy członkowskie o nazwanym zestawie mogą być dowolnego typu. Magazyn przydzielony dla Unii jest równy magazynowi wymaganemu dla największego elementu członkowskiego Unii oraz wszelkich dopełnień wymaganych do wyrównania.
 
@@ -82,8 +82,8 @@ W poniższej tabeli przedstawiono silnie sugerowane wyrównanie dla skalarnych e
 ||||
 |-|-|-|
 |Typ skalarny|Typ danych języka C|Wymagane wyrównanie|
-|**INT8**|**char**|Byte|
-|**UINT8**|**znak bez znaku**|Byte|
+|**INT8**|**char**|Bajtów|
+|**UINT8**|**znak bez znaku**|Bajtów|
 |**INT16**|**short**|Word|
 |**UINT16**|**bez znaku Short**|Word|
 |**ELEMENTEM**|**int**, **Long**|Doubleword|
@@ -193,7 +193,7 @@ W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramac
 
 ||||
 |-|-|-|
-|Rejestruj|Stan|Zastosowanie|
+|Zarejestruj subskrypcję|Stan|Użycie|
 |RAX|Volatile|Rejestr wartości zwracanej|
 |RCX|Volatile|Pierwszy argument liczby całkowitej|
 |RDX|Volatile|Drugi argument liczby całkowitej|
@@ -238,6 +238,6 @@ Elementy wewnętrzne obsługiwane przez kompilator są opisane w funkcjach [wewn
 
 Format obrazu pliku wykonywalnego x64 to PE32 +. Obrazy wykonywalne (zarówno biblioteki DLL, jak i exe) są ograniczone do maksymalnego rozmiaru wynoszącego 2 gigabajty, więc względne adresy z przemieszczeniem 32-bitowym mogą służyć do adresowania statycznych danych obrazu. Te dane obejmują tabelę adresów importu, stałe ciągów, statyczne dane globalne itd.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)

@@ -11,11 +11,11 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884079"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419932"
 ---
 # <a name="ltmemorygt-operators"></a>Operatory&gt; pamięci &lt;
 
@@ -54,7 +54,7 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli obiekty nie są równe; **Fałsz** , jeśli obiekty są równe.
 
@@ -155,7 +155,7 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli obiekty są równe, **Fałsz** , jeśli obiekty nie są równe.
 

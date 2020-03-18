@@ -9,11 +9,11 @@ helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
 ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864405"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417762"
 ---
 # <a name="connection-point-global-functions"></a>Funkcje globalne punktu połączenia
 
@@ -61,7 +61,7 @@ podczas Identyfikator GUID punktu połączenia. Zwykle jest to takie samo, jak i
 *Kreatora*<br/>
 określoną Wskaźnik do pliku cookie, który jednoznacznie identyfikuje połączenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -98,7 +98,7 @@ podczas Identyfikator GUID punktu połączenia. Zwykle jest to takie samo, jak i
 *magazynu*<br/>
 podczas Plik cookie, który jednoznacznie identyfikuje połączenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -125,7 +125,7 @@ podczas Wskaźnik do obiektu zawierającego mapę ujścia.
 *bAdvise*<br/>
 podczas PRAWDA, jeśli wszystkie wpisy ujścia mają być zalecane; Wartość FALSE, jeśli wszystkie wpisy ujścia mają być niezalecane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 

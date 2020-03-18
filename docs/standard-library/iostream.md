@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856544"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418917"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -69,7 +69,7 @@ Obiekt `cerr` kontroluje dane wyjściowe do bufora strumienia skojarzonego z `st
 extern ostream cerr;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
@@ -115,7 +115,7 @@ Określa `cin` strumienia globalnego.
 extern istream cin;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [IStream](../standard-library/istream-typedefs.md#istream) .
 
@@ -166,7 +166,7 @@ Określa `clog` strumienia globalnego.
 extern ostream clog;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
@@ -186,7 +186,7 @@ Określa `cout` strumienia globalnego.
 extern ostream cout;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [ostream](../standard-library/ostream-typedefs.md#ostream) .
 
@@ -206,7 +206,7 @@ Określa `wcerr` strumienia globalnego.
 extern wostream wcerr;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 
@@ -226,7 +226,7 @@ Określa `wcin` strumienia globalnego.
 extern wistream wcin;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [wistream](../standard-library/istream-typedefs.md#wistream) .
 
@@ -246,7 +246,7 @@ Określa `wclog` strumienia globalnego.
 extern wostream wclog;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 
@@ -266,7 +266,7 @@ Określa `wcout` strumienia globalnego.
 extern wostream wcout;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [wostream —](../standard-library/ostream-typedefs.md#wostream) .
 

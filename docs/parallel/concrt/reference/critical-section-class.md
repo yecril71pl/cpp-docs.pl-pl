@@ -15,11 +15,11 @@ helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
 ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867173"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417153"
 ---
 # <a name="critical_section-class"></a>critical_section — Klasa
 
@@ -31,30 +31,30 @@ Niewspółpracujący obiekt mutex, który jest jawnie świadomy środowisko uruc
 class critical_section;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`native_handle_type`|Odwołanie do obiektu `critical_section`.|
 
 ### <a name="public-classes"></a>Klasy publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[critical_section:: scoped_lock, Klasa](#critical_section__scoped_lock_class)|Wyjątek RAII bezpiecznie dla obiektu `critical_section`.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[critical_section](#ctor)|Tworzy nową sekcję krytyczną.|
 |[~ critical_section destruktor](#dtor)|Niszczy sekcję krytyczną.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[lock](#lock)|Uzyskuje tę sekcję krytyczną.|
 |[native_handle](#native_handle)|Zwraca uchwyt macierzysty specyficzny dla platformy (jeśli taki istnieje).|
@@ -118,7 +118,7 @@ Zwraca uchwyt macierzysty specyficzny dla platformy (jeśli taki istnieje).
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do sekcji krytycznej.
 
@@ -163,7 +163,7 @@ Próbuje uzyskać blokadę bez blokowania.
 bool try_lock();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pozyskania blokady wartość **true**; w przeciwnym razie wartość **false**.
 
@@ -180,7 +180,7 @@ bool try_lock_for(unsigned int _Timeout);
 *_Timeout*<br/>
 Liczba milisekund oczekiwania przed upływem limitu czasu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pozyskania blokady wartość **true**; w przeciwnym razie wartość **false**.
 
@@ -192,7 +192,7 @@ Odblokowuje sekcję krytyczną.
 void unlock();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [reader_writer_lock, klasa](reader-writer-lock-class.md)

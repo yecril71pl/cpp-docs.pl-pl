@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867304"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418791"
 ---
 # <a name="cdaorecordset-class"></a>Klasa CDaoRecordset
 
@@ -183,7 +183,7 @@ Reprezentuje zestaw rekordów wybranych ze źródła danych.
 class CDaoRecordset : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -377,7 +377,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy poprzednio o
 BOOL CanAppend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` zwróci wartość 0, jeśli zestaw rekordów został otwarty jako tylko do odczytu.
 
@@ -393,7 +393,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy poprzednio o
 BOOL CanBookmark();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zestaw rekordów obsługuje zakładki, w przeciwnym razie 0.
 
@@ -430,7 +430,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekor
 BOOL CanRestart();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli `Requery` można wywołać, aby ponownie uruchomić zapytanie zestawu rekordów, w przeciwnym razie 0.
 
@@ -450,7 +450,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekor
 BOOL CanScroll() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli można przewijać rekordy, w przeciwnym razie 0.
 
@@ -468,7 +468,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekor
 BOOL CanTransact();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli bazowe źródło danych obsługuje transakcje, w przeciwnym razie 0.
 
@@ -484,7 +484,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekor
 BOOL CanUpdate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów może być aktualizowany (Dodawanie, aktualizowanie i usuwanie rekordów), w przeciwnym razie 0.
 
@@ -682,7 +682,7 @@ Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WH
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
@@ -710,7 +710,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
@@ -764,7 +764,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
@@ -806,7 +806,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
@@ -848,7 +848,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 Wyrażenie ciągu (takie jak klauzula **WHERE** w instrukcji SQL bez słowa **WHERE**) użytego do zlokalizowania rekordu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 
@@ -885,7 +885,7 @@ Zwraca numer rekordu bieżącego rekordu obiektu zestawu rekordów.
 long GetAbsolutePosition();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita z zakresu od 0 do liczby rekordów w zestawie rekordów. Odnosi się do pozycji porządkowej bieżącego rekordu w zestawie rekordów.
 
@@ -911,7 +911,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki
 COleVariant GetBookmark();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość reprezentującą zakładkę dla bieżącego rekordu.
 
@@ -934,7 +934,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać liczbę buforowanyc
 long GetCacheSize();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość określająca liczbę rekordów w zestawie rekordów typu zestaw dynamiczny zawierający dane, które mają być lokalnie buforowane ze źródła danych ODBC.
 
@@ -954,7 +954,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wartość zakładki
 COleVariant GetCacheStart();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `COleVariant`, który określa zakładkę pierwszego rekordu w zestawie rekordów, który ma zostać zbuforowany.
 
@@ -975,7 +975,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, że indeks jest 
 CString GetCurrentIndex();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString` zawierający nazwę indeksu, który jest aktualnie używany z zestawem rekordów typu tabela. Zwraca pusty ciąg, jeśli nie ustawiono indeksu.
 
@@ -995,7 +995,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę utw
 COleDateTime GetDateCreated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę utworzenia tabeli podstawowej.
 
@@ -1013,7 +1013,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę ost
 COleDateTime GetDateLastUpdated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę ostatniej aktualizacji struktury tabeli bazowej (schematu).
 
@@ -1031,7 +1031,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić nazwę bazy danyc
 virtual CString GetDefaultDBName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, który zawiera ścieżkę i nazwę bazy danych, z której pochodzi ten zestaw rekordów.
 
@@ -1051,7 +1051,7 @@ Struktura wywołuje tę funkcję elementu członkowskiego, aby uzyskać domyśln
 virtual CString GetDefaultSQL();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, która zawiera domyślną instrukcję SQL.
 
@@ -1071,7 +1071,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić stan edycji, któ
 short GetEditMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość wskazującą stan edycji bieżącego rekordu.
 
@@ -1093,7 +1093,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól (kolumn
 short GetFieldCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pól w zestawie rekordów.
 
@@ -1173,7 +1173,7 @@ Odwołanie do obiektu `COleVariant`, w którym będzie przechowywana wartość p
 *nIndex*<br/>
 Indeks (liczony od zera) pola w kolekcji pól zestawu rekordów dla wyszukiwania według indeksu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dwie wersje `GetFieldValue` zwracające wartość zwracają obiekt [COleVariant](../../mfc/reference/colevariant-class.md) , który zawiera wartość pola.
 
@@ -1198,7 +1198,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić liczbę indeksów
 short GetIndexCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba indeksów w zestawie rekordów typu tabela.
 
@@ -1260,7 +1260,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać zakładkę ostatnio 
 COleVariant GetLastModifiedBookmark();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `COleVariant` zawierający zakładkę, która wskazuje ostatnio dodany lub zmieniony rekord.
 
@@ -1280,7 +1280,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić typ blokowania w 
 BOOL GetLockingMode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli typ blokowania jest pesymistyczny, w przeciwnym razie, w przypadku blokowania rekordów optymistycznych.
 
@@ -1302,7 +1302,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę zestawu rekor
 CString GetName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString` zawierający nazwę zestawu rekordów.
 
@@ -1329,7 +1329,7 @@ Pozycja liczbowa parametru w źródłowym obiekcie DAOParameter.
 *lpszName*<br/>
 Nazwa parametru, którego wartość ma zostać wybrana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt klasy [COleVariant](../../mfc/reference/colevariant-class.md) , który zawiera wartość parametru.
 
@@ -1347,7 +1347,7 @@ Podczas pracy z zestawem rekordów typu dynamicznego lub typu migawek, jeśli wy
 float GetPercentPosition();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba z zakresu od 0 do 100, która wskazuje przybliżoną lokalizację bieżącego rekordu w obiekcie zestawu rekordów na podstawie procentu rekordów w zestawie rekordów.
 
@@ -1367,7 +1367,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby dowiedzieć się, ile rekord
 long GetRecordCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę rekordów, do których można uzyskać dostęp w obiekcie zestawu rekordów.
 
@@ -1395,7 +1395,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać instrukcję SQL, kt
 CString GetSQL() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, który zawiera instrukcję języka SQL.
 
@@ -1418,7 +1418,7 @@ Wywołaj tę funkcję elementu członkowskiego po otwarciu zestawu rekordów, ab
 short GetType();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedną z następujących wartości, która wskazuje typ zestawu rekordów:
 
@@ -1440,7 +1440,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić regułę używan�
 CString GetValidationRule();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString` zawierający wartość, która weryfikuje dane w rekordzie w miarę ich zmiany lub dodania do tabeli.
 
@@ -1460,7 +1460,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać tekst właściwości
 CString GetValidationText();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString` zawierający tekst komunikatu, który jest wyświetlany, jeśli wartość pola nie spełnia reguły walidacji powiązanego obiektu pola.
 
@@ -1476,7 +1476,7 @@ Wywołaj tę funkcję elementu członkowskiego przed przewinięciem rekordu do r
 BOOL IsBOF() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie wstecz przed pierwszym rekordem; w przeciwnym razie 0.
 
@@ -1512,9 +1512,9 @@ W poniższej tabeli przedstawiono skutki operacji przenoszenia, które nie lokal
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|Różną od zera|Różną od zera|
-|`Move` 0|Nie wprowadzono zmian|Nie wprowadzono zmian|
-|`MovePrev`, `Move` < 0|Różną od zera|Nie wprowadzono zmian|
-|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Różną od zera|
+|`Move` 0|Bez zmian|Bez zmian|
+|`MovePrev`, `Move` < 0|Różną od zera|Bez zmian|
+|`MoveNext`, `Move` > 0|Bez zmian|Różną od zera|
 
 Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF Properties" w pomocy DAO.
 
@@ -1526,7 +1526,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy bieżący re
 BOOL IsDeleted() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zestaw rekordów jest umieszczony na usuniętym rekordzie; w przeciwnym razie 0.
 
@@ -1549,7 +1549,7 @@ Wywołaj tę funkcję elementu członkowskiego podczas przewijania z rekordu do 
 BOOL IsEOF() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestaw rekordów nie zawiera żadnych rekordów lub przewinie się poza ostatnim rekordem; w przeciwnym razie 0.
 
@@ -1585,9 +1585,9 @@ W poniższej tabeli przedstawiono skutki operacji przenoszenia, które nie lokal
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|Różną od zera|Różną od zera|
-|`Move` 0|Nie wprowadzono zmian|Nie wprowadzono zmian|
-|`MovePrev`, `Move` < 0|Różną od zera|Nie wprowadzono zmian|
-|`MoveNext`, `Move` > 0|Nie wprowadzono zmian|Różną od zera|
+|`Move` 0|Bez zmian|Bez zmian|
+|`MovePrev`, `Move` < 0|Różną od zera|Bez zmian|
+|`MoveNext`, `Move` > 0|Bez zmian|Różną od zera|
 
 Aby uzyskać powiązane informacje, zobacz temat "BOF, EOF Properties" w pomocy DAO.
 
@@ -1604,7 +1604,7 @@ BOOL IsFieldDirty(void* pv);
 *wa*<br/>
 Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy dowolne z pól są zanieczyszczone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony element członkowski danych pola jest oflagowany jako zanieczyszczony; w przeciwnym razie 0.
 
@@ -1627,7 +1627,7 @@ BOOL IsFieldNull(void* pv);
 *wa*<br/>
 Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy którekolwiek z pól mają wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony element członkowski danych pola jest oflagowany jako null; w przeciwnym razie 0.
 
@@ -1656,7 +1656,7 @@ BOOL IsFieldNullable(void* pv);
 *wa*<br/>
 Wskaźnik do elementu członkowskiego danych pola, którego stan chcesz sprawdzić, lub wartość NULL, aby określić, czy którekolwiek z pól mają wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określony element członkowski danych pola może być wartością null; w przeciwnym razie 0.
 
@@ -1672,7 +1672,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy zestaw rekor
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wcześniej wywołano `Open` obiektu zestawu rekordów lub `Requery` funkcję członkowską, a zestaw rekordów nie został zamknięty; w przeciwnym razie 0.
 
@@ -2101,7 +2101,7 @@ Liczba całkowita odpowiadająca rozmiarowi tablicy, czyli liczbie pól w indeks
 > [!NOTE]
 >  W kluczach nie należy określać symboli wieloznacznych. Symbole wieloznaczne spowodują, że `Seek` nie zwróci pasujących rekordów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nierówna zero, jeśli znaleziono pasujące rekordy, w przeciwnym razie 0.
 

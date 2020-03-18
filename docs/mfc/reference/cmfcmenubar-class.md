@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869949"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420268"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
@@ -124,11 +124,11 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCMenuBar : public CMFCToolbar
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Przesłania `CMFCToolBar::AdjustLocations`).|
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Określa, czy etykiety tekstowe mogą być wyświetlane w obszarze obrazy na przyciskach paska narzędzi. (Przesłania [CMFCToolBar:: AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
@@ -236,7 +236,7 @@ Określa, czy etykiety tekstowe są dozwolone w obszarze obrazów na pasku menu.
 virtual BOOL AllowChangeTextLabels() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli użytkownik może wybrać opcję wyświetlania etykiet tekstowych w obszarze obrazy.
 
@@ -248,7 +248,7 @@ Zwraca wartość PRAWDA, jeśli użytkownik może wybrać opcję wyświetlania e
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -266,7 +266,7 @@ podczas *bStretch*<br/>
 
 podczas *bHorz*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -284,7 +284,7 @@ podczas *dwMode*<br/>
 
 podczas *nLength*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -294,7 +294,7 @@ podczas *nLength*<br/>
 virtual int CalcMaxButtonHeight();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -304,7 +304,7 @@ virtual int CalcMaxButtonHeight();
 virtual BOOL CanBeClosed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -314,7 +314,7 @@ virtual BOOL CanBeClosed() const;
 virtual BOOL CanBeRestored() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -340,7 +340,7 @@ podczas Styl nowego paska menu.
 *nID*<br/>
 podczas Identyfikator okna podrzędnego paska menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -383,7 +383,7 @@ podczas `CRect` parametr, który określa rozmiary obramowania obiektu `CMFCMenu
 *nID*<br/>
 podczas Identyfikator okna podrzędnego paska menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
@@ -477,7 +477,7 @@ Algorytm używany przez tę metodę jest skomplikowany i może obniżyć wydajno
 virtual int GetAvailableExpandSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -487,7 +487,7 @@ virtual int GetAvailableExpandSize() const;
 virtual int GetColumnWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -499,7 +499,7 @@ Pobiera uchwyt do oryginalnego menu. Struktura ładuje oryginalne menu z pliku z
 HMENU GetDefaultMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do zasobu menu.
 
@@ -515,7 +515,7 @@ Pobiera identyfikator zasobu dla menu domyślnego.
 UINT GetDefaultMenuResId() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator zasobu menu.
 
@@ -533,7 +533,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 
 podczas *pButton*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -543,7 +543,7 @@ podczas *pButton*<br/>
 BOOL GetForceDownArrows();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -555,7 +555,7 @@ Zwraca wskaźnik do pola kombi **pomocy** .
 CMFCToolBarComboBoxButton* GetHelpCombobox();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pola kombi **pomocy** . Wartość NULL, jeśli pole kombi **pomocy** jest ukryte lub nie jest włączone.
 
@@ -584,7 +584,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 *bHorz*<br/>
 podczas Parametr logiczny, który określa, czy ma zostać zwrócona czcionka pozioma, czy pionowa. Wartość TRUE oznacza czcionkę poziomą.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do parametru [CFont](../../mfc/reference/cfont-class.md) , który zawiera bieżącą czcionkę paska menu.
 
@@ -605,7 +605,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 *iItem*<br/>
 podczas Indeks elementu menu, który ma zostać zwrócony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CMFCToolBarButton`, który jest zgodny z indeksem określonym przez *iItem*. Wartość NULL, jeśli indeks jest nieprawidłowy.
 
@@ -615,7 +615,7 @@ Wskaźnik do obiektu `CMFCToolBarButton`, który jest zgodny z indeksem określo
 virtual int GetRowHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -633,7 +633,7 @@ podczas *uiBtn*<br/>
 
 podczas *bByCommand*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -643,7 +643,7 @@ podczas *bByCommand*<br/>
 int GetSystemButtonsCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -653,7 +653,7 @@ int GetSystemButtonsCount() const;
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -680,7 +680,7 @@ Domyślnie struktura nie wyróżnia niedostępnych elementów menu, gdy użytkow
 virtual BOOL IsButtonExtraSizeAvailable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -692,7 +692,7 @@ Wskazuje, czy struktura Podświetla elementy menu niedostępne.
 static BOOL IsHighlightDisabledItems();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli elementy menu niedostępne są wyróżnione; w przeciwnym razie FALSE.
 
@@ -708,7 +708,7 @@ Wskazuje, czy struktura rysuje cienie dla menu podręcznych.
 static BOOL IsMenuShadows();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli struktura rysuje cienie menu; w przeciwnym razie FALSE.
 
@@ -724,7 +724,7 @@ Wskazuje, czy ostatnio używane polecenia menu są wyświetlane na pasku menu.
 static BOOL IsRecentlyUsedMenus();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CMFCMenuBar` pokazuje ostatnio używane polecenia menu; w przeciwnym razie 0.
 
@@ -740,7 +740,7 @@ Wskazuje, czy menu wyświetla wszystkie polecenia.
 static BOOL IsShowAllCommands();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli `CMFCMenuBar` wyświetla wszystkie polecenia; w przeciwnym razie 0.
 
@@ -758,7 +758,7 @@ Wskazuje, czy obiekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) wy�
 static BOOL IsShowAllCommandsDelay();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pasek menu wyświetla pełne menu po krótkim opóźnieniu; w przeciwnym razie 0.
 
@@ -794,7 +794,7 @@ podczas Identyfikator kontrolki paska menu.
 *uiID*<br/>
 podczas Wartość zastrzeżona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -843,7 +843,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 podczas *pButton*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -860,7 +860,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 *pButton*<br/>
 podczas Wskaźnik do obiektu [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) , który użytkownik chce dostosować.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli struktura stosuje zmiany użytkownika na pasku menu; w przeciwnym razie FALSE.
 
@@ -882,7 +882,7 @@ podczas *punkt*<br/>
 
 podczas *PTI*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -896,7 +896,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 podczas *pMsg*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -908,7 +908,7 @@ Wywoływane przez platformę, gdy użytkownik wybierze **Reset** z okna dialogow
 virtual BOOL RestoreOriginalstate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
@@ -940,7 +940,7 @@ podczas Identyfikator kontrolki paska menu.
 *uiID*<br/>
 podczas Wartość zastrzeżona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE;
 
@@ -1042,7 +1042,7 @@ podczas Wskaźnik do struktury [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfont
 *bHorz*<br/>
 podczas PRAWDA, jeśli chcesz, aby parametr *lpLogFont* był używany dla czcionki pionowej, wartość false, jeśli ma być używana dla czcionki poziomej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -1082,7 +1082,7 @@ podczas Parametr logiczny, który określa, czy menu podręczne pokazuje wszystk
 
 Jeśli menu nie wyświetla wszystkich poleceń menu, ukrywa polecenia, które są rzadko używane. Aby uzyskać więcej informacji o wyświetlaniu poleceń menu, zobacz [Klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 36afd716009848ccd2e2f0ab966f66f573acdfd8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862937"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417895"
 ---
 # <a name="ccomcontrolbase-class"></a>Klasa CComControlBase
 
@@ -100,7 +100,7 @@ Ta klasa udostępnia metody tworzenia formantów ATL i zarządzania nimi.
 class ATL_NO_VTABLE CComControlBase
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
@@ -285,7 +285,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 *iVerb*<br/>
 Wartość wskazująca akcję, która ma zostać wykonana przez `DoVerb`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli *iVerb* jest równe OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW lub OLEIVERB_INPLACEACTIVATE; w przeciwnym razie zwraca wartość FALSE.
 
@@ -306,7 +306,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 *iVerb*<br/>
 Wartość wskazująca akcję, która ma zostać wykonana przez `DoVerb`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli *iVerb* jest równe OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW lub OLEIVERB_INPLACEACTIVATE. W przeciwnym razie metoda zwraca wartość FALSE.
 
@@ -326,7 +326,7 @@ Rezerwacj.
 *hwndParent*<br/>
 Uchwyt okna zawierającego formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -344,7 +344,7 @@ Wywołaj tę metodę, aby poinformować kontener o konieczności ponownego narys
 HRESULT FireViewChange();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -369,7 +369,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 *nAppearance*<br/>
 Właściwość DISPID_AMBIENT_APPEARANCE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -390,7 +390,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 *bAutoClip*<br/>
 Właściwość DISPID_AMBIENT_AUTOCLIP.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -407,7 +407,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 *BackColor*<br/>
 Właściwość DISPID_AMBIENT_BACKCOLOR.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -424,7 +424,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 *bstrCharSet*<br/>
 Właściwość DISPID_AMBIENT_CHARSET.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -441,7 +441,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 *ulCodePage*<br/>
 Właściwość DISPID_AMBIENT_CODEPAGE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -458,7 +458,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 *bDisplayAsDefault*<br/>
 Właściwość DISPID_AMBIENT_DISPLAYASDEFAULT.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -475,7 +475,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 *bstrDisplayName*<br/>
 Właściwość DISPID_AMBIENT_DISPLAYNAME.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -492,7 +492,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 *ppFont*<br/>
 Wskaźnik do otaczającego interfejsu [iFont](/windows/win32/api/ocidl/nn-ocidl-ifont) kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -513,7 +513,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 *ppFont*<br/>
 Wskaźnik do interfejsu wysyłania [IFontDisp](/windows/win32/api/ocidl/nn-ocidl-ifontdisp) otaczającego kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -534,7 +534,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 *ForeColor*<br/>
 Właściwość DISPID_AMBIENT_FORECOLOR.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -551,7 +551,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 *lcid*<br/>
 Właściwość DISPID_AMBIENT_LOCALEID.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -572,7 +572,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 *bMessageReflect*<br/>
 Właściwość DISPID_AMBIENT_MESSAGEREFLECT.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -589,7 +589,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 *hPalette*<br/>
 Właściwość DISPID_AMBIENT_PALETTE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -609,7 +609,7 @@ Identyfikator właściwości kontenera do pobrania.
 *var*<br/>
 Zmienna do odebrania właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -630,7 +630,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 *bRightToLeft*<br/>
 Właściwość DISPID_AMBIENT_RIGHTTOLEFT. Ustaw wartość TRUE, jeśli zawartość jest wyświetlana od prawej do lewej, FAŁSZ, jeśli jest wyświetlana od lewej do prawej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -647,7 +647,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 *bstrScaleUnits*<br/>
 Właściwość DISPID_AMBIENT_SCALEUNITS.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -664,7 +664,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 *bShowGrabHandles*<br/>
 Właściwość DISPID_AMBIENT_SHOWGRABHANDLES.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -681,7 +681,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 *bShowHatching*<br/>
 Właściwość DISPID_AMBIENT_SHOWHATCHING.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -698,7 +698,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 *bSupportsMnemonics*<br/>
 Właściwość DISPID_AMBIENT_SUPPORTSMNEMONICS.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -715,7 +715,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 *nTextAlign*<br/>
 Właściwość DISPID_AMBIENT_TEXTALIGN.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -732,7 +732,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 *bTopToBottom*<br/>
 Właściwość DISPID_AMBIENT_TOPTOBOTTOM. Ustaw wartość TRUE, jeśli tekst jest wyświetlany od góry do dołu, FAŁSZ, jeśli jest wyświetlany od dołu do góry.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -749,7 +749,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 *bUIDead*<br/>
 Właściwość DISPID_AMBIENT_UIDEAD.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -770,7 +770,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 *bUserMode*<br/>
 Właściwość DISPID_AMBIENT_USERMODE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -782,7 +782,7 @@ Zwraca wartość `m_bRequiresSave`elementu członkowskiego danych.
 BOOL GetDirty();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość [m_bRequiresSave](#m_brequiressave)elementu członkowskiego danych.
 
@@ -823,7 +823,7 @@ Wartość wskazująca akcję, która ma zostać wykonana przez [IOleObjectImpl::
 *prcPosRect*<br/>
 Wskaźnik na pozycję kontrolki miejscowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -849,7 +849,7 @@ Identyfikator IID wskaźnika interfejsu, który powinien zostać zwrócony w *pp
 *ppUnkSite*<br/>
 Adres zmiennej wskaźnika, która odbiera wskaźnik interfejsu żądany w *riid*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1252,7 +1252,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 *fosforan*<br/>
 Odwołanie do struktury [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , która zawiera informacje o rysunku, takie jak aspekt rysowania, granice kontrolki i czy rysunek jest zoptymalizowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -1279,7 +1279,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 *fosforan*<br/>
 Odwołanie do struktury [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , która zawiera informacje o rysunku, takie jak aspekt rysowania, granice kontrolki i czy rysunek jest zoptymalizowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -1314,7 +1314,7 @@ Rezerwacj.
 *bHandled*<br/>
 Flaga wskazująca, czy komunikat okna został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca 1.
 
@@ -1343,7 +1343,7 @@ Rezerwacj.
 *bHandled*<br/>
 Flaga wskazująca, czy komunikat okna został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca 1.
 
@@ -1372,7 +1372,7 @@ Rezerwacj.
 *lResult*<br/>
 Rezerwacj.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca zero.
 
@@ -1405,7 +1405,7 @@ Rezerwacj.
 *bHandled*<br/>
 Flaga wskazująca, czy komunikat okna został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca 1.
 
@@ -1430,7 +1430,7 @@ Rezerwacj.
 *hRet*<br/>
 Rezerwacj.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślnie zwraca wartość FALSE.
 
@@ -1442,7 +1442,7 @@ Powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza doradcy, 
 HRESULT SendOnClose();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1463,7 +1463,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 *advf*<br/>
 Zaleca flagi określające sposób wywołania [IAdviseSink:: OnDataChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-ondatachange) . Wartości pochodzą z wyliczenia [ADVF](/windows/win32/api/objidl/ne-objidl-advf) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1480,7 +1480,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 *głównych*<br/>
 Wskaźnik do nowej monikera formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1496,7 +1496,7 @@ Powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza powiadomi
 HRESULT SendOnSave();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1520,7 +1520,7 @@ Aspekt lub widok formantu.
 *lindex*<br/>
 Część widoku, która zmieniła się. Tylko-1 jest prawidłowy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -1541,7 +1541,7 @@ BOOL SetControlFocus(BOOL bGrab);
 *bGrab*<br/>
 W przypadku wartości TRUE ustawia fokus klawiatury dla kontrolki wywołującej. W przypadku wartości FALSE program usuwa fokus klawiatury z kontrolki wywołującej, pod warunkiem, że ma fokus.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, Jeśli kontrolka pomyślnie odbierze fokus; w przeciwnym razie FALSE.
 

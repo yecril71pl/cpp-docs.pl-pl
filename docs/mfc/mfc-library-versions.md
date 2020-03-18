@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856803"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420177"
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -139,6 +139,6 @@ Możesz użyć statycznej lub udostępnionej dynamicznie biblioteki MFC do tworz
 
 Podczas tworzenia projektu DLL przez połączenie z bibliotekami statycznymi MFC Biblioteka DLL może zostać wdrożona bez udostępnionych bibliotek DLL MFC. Gdy projekt DLL łączy się z*wersją*MFC bibliotek importu. LIB lub MFC*wersja*U. lib, należy wdrożyć zgodną*wersję*MFC udostępnionej biblioteki MFC. DLL lub MFC*wersja*U. dll wraz z biblioteką DLL. Aby uzyskać więcej informacji, zobacz [biblioteki DLL](../build/dlls-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)

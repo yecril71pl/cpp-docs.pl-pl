@@ -65,11 +65,11 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871590"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418560"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -81,17 +81,17 @@ Oferuje funkcje formantu typowego nagłówka systemu Windows.
 class CHeaderCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHeaderCtrl:: CHeaderCtrl](#cheaderctrl)|Konstruuje obiekt `CHeaderCtrl`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHeaderCtrl:: ClearAllFilters](#clearallfilters)|Czyści wszystkie filtry dla kontrolki nagłówka.|
 |[CHeaderCtrl:: ClearFilter](#clearfilter)|Czyści filtr dla kontrolki nagłówka.|
@@ -176,7 +176,7 @@ Czyści wszystkie filtry dla kontrolki nagłówka.
 BOOL ClearAllFilters();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -201,7 +201,7 @@ BOOL ClearFilter(int nColumn);
 *nColumn*<br/>
 Wartość kolumny wskazująca filtr, który ma zostać wyczyszczony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -239,7 +239,7 @@ Określa okno nadrzędne kontrolki nagłówka, zazwyczaj `CDialog`. Nie może mi
 *nID*<br/>
 Określa identyfikator kontrolki nagłówka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie zero.
 
@@ -309,7 +309,7 @@ Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 *nID*<br/>
 Identyfikator okna podrzędnego kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -330,7 +330,7 @@ CImageList* CreateDragImage(int nIndex);
 *nIndex*<br/>
 Indeks (liczony od zera) elementu w kontrolce nagłówka. Obraz przypisany do tego elementu jest podstawą dla przezroczystego obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , jeśli się to powiedzie; w przeciwnym razie wartość NULL. Zwracana lista zawiera tylko jeden obraz.
 
@@ -353,7 +353,7 @@ BOOL DeleteItem(int nPos);
 *nPos*<br/>
 Określa indeks (liczony od zera) elementu do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -406,7 +406,7 @@ Wartość, która określa, jak obsługiwać zmiany edytowane przez użytkownika
 
 Określ wartość TRUE, aby odrzucić zmiany wprowadzone przez użytkownika, lub wartość FAŁSZ, aby zaakceptować zmiany wprowadzone przez użytkownika.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -426,7 +426,7 @@ Pobiera szerokość marginesu mapy bitowej w kontrolce nagłówka.
 int GetBitmapMargin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość marginesu mapy bitowej w pikselach.
 
@@ -446,7 +446,7 @@ Pobiera indeks elementu, który ma fokus w bieżącym formancie nagłówka.
 int GetFocusedItem() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu nagłówka, który ma fokus.
 
@@ -474,7 +474,7 @@ Pobiera uchwyt listy obrazów używany do rysowania elementów nagłówka w form
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -504,7 +504,7 @@ Określa indeks (liczony od zera) elementu do pobrania.
 *pHeaderItem*<br/>
 Wskaźnik do struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która otrzymuje nowy element. Ta struktura jest używana z `InsertItem` i `SetItem` funkcji Członkowskich. Wszystkie flagi ustawione w elemencie `mask` gwarantują, że wartości w odpowiednich elementach są prawidłowo wypełnione po powrocie. Jeśli element `mask` ma wartość zero, wartości w innych elementach struktury są bezużyteczne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -520,7 +520,7 @@ Pobiera liczbę elementów w kontrolce nagłówka.
 int GetItemCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów kontrolnych nagłówka w przypadku powodzenia; w przeciwnym razie-1.
 
@@ -545,7 +545,7 @@ BOOL GetItemDropDownRect(
 |*iItem*|podczas Indeks (liczony od zera) elementu nagłówka, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` składową struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|określoną Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , aby otrzymać powiązane informacje o prostokącie.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta funkcja się powiedzie; w przeciwnym razie FALSE.
 
@@ -583,7 +583,7 @@ Indeks (liczony od zera) elementu formantu nagłówka.
 *lpRect*<br/>
 Wskaźnik do adresu struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , który odbiera powiązane informacje o prostokącie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -609,7 +609,7 @@ Wskaźnik do adresu bufora, który odbiera wartości indeksu elementów w forman
 *iCount*<br/>
 Liczba elementów kontrolki nagłówka. Musi być nieujemna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -635,7 +635,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 |---------------|-----------------|
 |*lpRect*|określoną Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która otrzymuje powiązane informacje o prostokącie.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta funkcja się powiedzie; w przeciwnym razie FALSE.
 
@@ -671,7 +671,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 |---------------|-----------------|
 |*phdhti*|[in. out] Wskaźnik na strukturę [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) , która określa punkt do testowania i odbiera wyniki testu.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu nagłówka (jeśli istnieje) na określonej pozycji; w przeciwnym razie-1.
 
@@ -709,7 +709,7 @@ Indeks (liczony od zera) elementu, który ma zostać wstawiony. Jeśli wartość
 *phdi*<br/>
 Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która zawiera informacje o elemencie, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks nowego elementu, jeśli powodzenie; w przeciwnym razie-1.
 
@@ -730,7 +730,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 *pHeaderLayout*<br/>
 Wskaźnik do struktury [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , która zawiera informacje używane do ustawiania rozmiaru i położenia kontrolki nagłówka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -755,7 +755,7 @@ int OrderToIndex(int nOrder) const;
 *nOrder*<br/>
 Kolejność od zera, która jest wyświetlana w formancie nagłówka, od lewej do prawej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks elementu na podstawie jego kolejności w formancie nagłówka. Indeks jest liczony od lewej do prawej, począwszy od 0.
 
@@ -776,7 +776,7 @@ int SetBitmapMargin(int nWidth);
 *nWidth*<br/>
 Szerokość (w pikselach) marginesu otaczającego mapę bitową w obrębie istniejącej kontrolki nagłówka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość marginesu mapy bitowej w pikselach.
 
@@ -801,7 +801,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 *dwTimeOut*<br/>
 Wartość limitu czasu (w milisekundach).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks kontrolki filtru, która jest modyfikowana.
 
@@ -827,7 +827,7 @@ BOOL SetFocusedItem(int iItem);
 |---------------|-----------------|
 |*iItem*|podczas Indeks elementu nagłówka liczony od zera.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -864,7 +864,7 @@ Pozycja wskaźnika. Kontrolka nagłówka podświetla odpowiedni podział na pods
 *nIndex*<br/>
 Indeks wyróżnionego separatora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks wyróżnionego separatora.
 
@@ -889,7 +889,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList` zawierającego listę obrazów, która ma zostać przypisana do kontrolki nagłówka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który został wcześniej przypisany do kontrolki nagłówka.
 
@@ -919,7 +919,7 @@ Indeks (liczony od zera) elementu do manipulowania.
 *pHeaderItem*<br/>
 Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która zawiera informacje o nowym elemencie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -945,7 +945,7 @@ Liczba elementów kontrolki nagłówka.
 *piArray*<br/>
 Wskaźnik do adresu bufora, który odbiera wartości indeksu elementów w formancie nagłówka, w kolejności, w jakiej są wyświetlane od lewej do prawej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -957,7 +957,7 @@ Ta funkcja członkowska implementuje zachowanie [HDM_SETORDERARRAY](/windows/win
 
   Zobacz przykład dla [CHeaderCtrl:: GetOrderArray](#getorderarray).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876364"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420387"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -111,7 +111,7 @@ Oferuje funkcje kontrolki edycji systemu Windows.
 class CEdit : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -181,7 +181,7 @@ Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows wysyłane prz
 
 Każdy wpis mapy komunikatów przyjmuje następującą formę:
 
-  **Powiadomienie ON_** **(** _ID_ **,** _memberFxn_ **)**
+  **Powiadomienie ON_** _NOTIFICATION_ **(** _ID_ **,** _memberFxn_ **)**
 
 gdzie `id` określa identyfikator okna podrzędnego kontrolki edycji wysyłającej powiadomienie, a `memberFxn` jest nazwą nadrzędnej funkcji członkowskiej, która została zapisywana w celu obsługi powiadomienia.
 
@@ -239,7 +239,7 @@ Wywołaj tę funkcję, aby określić, czy Ostatnia operacja edycji może zosta�
 BOOL CanUndo() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli Ostatnia operacja edycji może zostać cofnięta przez wywołanie funkcji składowej `Undo`; 0, jeśli nie można jej cofnąć.
 
@@ -280,7 +280,7 @@ int CharFromPos(CPoint pt) const;
 *zmiennoprzecinkow*<br/>
 Współrzędne punktu w obszarze klienta tego obiektu `CEdit`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks znaku w WYRAZie z małą kolejnością i indeks wiersza w WYRAZie o wysokim poziomie kolejności.
 
@@ -357,7 +357,7 @@ Określa okno nadrzędne kontrolki edycji (zwykle `CDialog`). Nie może mieć wa
 *nID*<br/>
 Określa identyfikator kontrolki edycji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -438,7 +438,7 @@ BOOL FmtLines(BOOL bAddEOL);
 *bAddEOL*<br/>
 Określa, czy znaki łamania wiersza są wstawiane. Wartość TRUE wstawia znaki; wartość FALSE usuwa je.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli występują jakiekolwiek formatowanie; w przeciwnym razie 0.
 
@@ -476,7 +476,7 @@ określoną Wskaźnik do ciągu, który zawiera tekst wskaźnika.
 *cchText*<br/>
 podczas Liczba znaków, które mogą zostać odebrane. Ta liczba zawiera kończący znak NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dla pierwszego przeciążenia, wartość TRUE, jeśli metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
@@ -494,7 +494,7 @@ Wywołaj tę funkcję, aby określić najwyższy widoczny wiersz w kontrolce edy
 int GetFirstVisibleLine() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) w górnym widocznym wierszu. W przypadku kontrolek edycji jednowierszowej wartość zwracana wynosi 0.
 
@@ -514,7 +514,7 @@ Wywołaj tę funkcję, aby pobrać dojście do pamięci, która jest aktualnie p
 HLOCAL GetHandle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt pamięci lokalnej, który identyfikuje bufor przechowujący zawartość kontrolki edycji. Jeśli wystąpi błąd, na przykład wysłanie komunikatu do kontrolki edycji pojedynczej, wartość zwracana wynosi 0.
 
@@ -552,7 +552,7 @@ BOOL GetHighlight(
 |*pichStart*|określoną Indeks (liczony od zera) pierwszego znaku z wyróżnionego zakresu tekstu.|
 |*pichEnd*|określoną Indeks (liczony od zera) ostatniego znaku w zakresie wyróżnionego tekstu.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -568,7 +568,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać limit tekstu dla te
 UINT GetLimitText() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący limit tekstu w TCHARs dla tego obiektu `CEdit`.
 
@@ -611,7 +611,7 @@ Wskazuje bufor, który otrzymuje kopię wiersza. Pierwszy wyraz bufora musi okre
 *nMaxLength*<br/>
 Określa maksymalną liczbę znaków używanie TCHAR, które można skopiować do buforu. `GetLine` umieszcza tę wartość w pierwszym słowie *lpszBuffer* przed wywołaniem do systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków rzeczywiście skopiowanych. Wartość zwracana jest równa 0, jeśli numer wiersza określony przez *nIndex* jest większy niż liczba wierszy w kontrolce edycji.
 
@@ -633,7 +633,7 @@ Wywołaj tę funkcję, aby pobrać liczbę wierszy w kontrolce edycji z wieloma 
 int GetLineCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita zawierająca liczbę wierszy w kontrolce edycji wielowierszowej. Jeśli tekst nie został wprowadzony do kontrolki edycji, wartość zwracana to 1.
 
@@ -655,7 +655,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać lewy i prawy margine
 DWORD GetMargins() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość lewego marginesu w SŁOWie o niskim porządku i szerokość prawego marginesu w SŁOWie o wysokiej kolejności.
 
@@ -680,7 +680,7 @@ Wywołaj tę funkcję, aby określić, czy zawartość kontrolki edycji została
 BOOL GetModify() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zawartość kontrolki edycji została zmodyfikowana; 0, jeśli nie zostały zmienione.
 
@@ -702,7 +702,7 @@ Wywołaj tę funkcję, aby pobrać znak hasła, który jest wyświetlany w kontr
 TCHAR GetPasswordChar() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa znak, który ma być wyświetlany zamiast znaku, który wpisano użytkownik. Wartość zwracana ma wartość NULL, jeśli nie istnieje żaden znak hasła.
 
@@ -761,7 +761,7 @@ Odwołanie do liczby całkowitej, która otrzyma pozycję pierwszego znaku w bie
 *nEndChar*<br/>
 Odwołanie do liczby całkowitej, która otrzyma pozycję pierwszego niezaznaczonego znaku poza końcem bieżącego zaznaczenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wersja, która zwraca element DWORD, zwraca wartość zawierającą pozycję początkową w słowie o niskim porządku i położenie pierwszego niezaznaczonego znaku po zakończeniu zaznaczania w wyrazie o wysokiej kolejności.
 
@@ -781,7 +781,7 @@ Ukrywa wszelką wskazówkę dymkową skojarzoną z bieżącą kontrolką edycji.
 BOOL HideBalloonTip();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametry
 
 *nChar*<br/>
-Określa długość (w TCHARs) tekstu, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest ustawiana na UINT_MAX bajtów. Jest to zachowanie domyślne.
+Określa długość (w TCHARs) tekstu, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest ustawiana na UINT_MAX bajtów. To zachowanie domyślne.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -828,7 +828,7 @@ int LineFromChar(int nIndex = -1) const;
 *nIndex*<br/>
 Zawiera wartość indeksu (liczony od zera) dla żądanego znaku w tekście kontrolki edycji lub zawiera-1. Jeśli *nIndex* ma wartość-1, określa bieżący wiersz, czyli wiersz zawierający karetkę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer wiersza (liczony od zera) zawierający indeks znaków określony przez *nIndex*. Jeśli *nIndex* ma wartość-1, zwracana jest liczba wierszy zawierających pierwszy znak zaznaczenia. Jeśli nie ma zaznaczenia, zostanie zwrócony bieżący numer wiersza.
 
@@ -857,7 +857,7 @@ int LineIndex(int nLine = -1) const;
 *nLine*<br/>
 Zawiera wartość indeksu żądanego wiersza w tekście kontrolki edycji lub zawiera-1. Jeśli *nline* ma wartość-1, określa bieżący wiersz, czyli wiersz zawierający karetkę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks znaku określony w *nline* lub-1, jeśli określony numer wiersza jest większy niż liczba wierszy w kontrolce edycji.
 
@@ -886,7 +886,7 @@ int LineLength(int nLine = -1) const;
 *nLine*<br/>
 Liczony od zera indeks znaku w wierszu, którego długość ma zostać pobrana. Wartość domyślna to-1.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku kontrolek edycji jednowierszowej wartość zwracana jest długością TCHARs tekstu w kontrolce edycji.
 
@@ -969,7 +969,7 @@ CPoint PosFromChar(UINT nChar) const;
 *nChar*<br/>
 Indeks (liczony od zera) określonego znaku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Współrzędne lewego górnego rogu znaku określonego przez *nchar*.
 
@@ -1038,7 +1038,7 @@ W przypadku wartości TRUE transparent jest rysowany nawet wtedy, gdy kontrolka 
 
 Wartość domyślna to FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
@@ -1228,7 +1228,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 *bReadOnly*<br/>
 Określa, czy ma zostać ustawiony lub usunięty stan tylko do odczytu kontrolki edycji. Wartość TRUE ustawia stan na tylko do odczytu; wartość FALSE ustawia stan na odczyt/zapis.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli operacja zakończyła się pomyślnie, lub 0, jeśli wystąpi błąd.
 
@@ -1363,7 +1363,7 @@ Określa liczbę tabulatorów zawartych w *rgTabStops*. Ta wartość musi być w
 *rgTabStops*<br/>
 Wskazuje tablicę liczb całkowitych bez znaku określającą tabulatory w jednostkach okna dialogowego. Jednostka okna dialogowego to odległość pozioma lub pionowa. Jedna pozioma jednostka okna dialogowego jest równa jednej czwartej bieżącej jednostki szerokości okna dialogowego i 1 jednostka okna dialogowego w pionie jest równa jednej ósmej aktualnej jednostki wysokości okna dialogowego. Jednostki bazowe okna dialogowego są obliczane na podstawie wysokości i szerokości bieżącej czcionki systemowej. Funkcja `GetDialogBaseUnits` systemu Windows zwraca bieżące jednostki bazowe okna dialogowego w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli karty zostały ustawione; w przeciwnym razie 0.
 
@@ -1405,7 +1405,7 @@ BOOL ShowBalloonTip(
 |*lpszText*|podczas Wskaźnik na ciąg Unicode, który zawiera tekst porady dymkowej.|
 |*ttiIcon*|podczas Liczba **całkowita** określająca typ ikony, która ma zostać skojarzona z końcówką dymka. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` składową struktury [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1433,7 +1433,7 @@ Wywołaj tę funkcję, aby cofnąć ostatnią operację edycji.
 BOOL Undo();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dla kontrolki edycji jednowierszowej wartość zwracana jest zawsze różna od zera. W przypadku kontrolki edycji wielowierszowej wartość zwracana jest różna od zera, jeśli operacja cofnięcia zakończyła się powodzeniem, lub 0, jeśli operacja cofania zakończy się niepowodzeniem.
 

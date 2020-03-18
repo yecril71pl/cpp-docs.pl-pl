@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855599"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421703"
 ---
 # <a name="coleinsertdialog-class"></a>Klasa COleInsertDialog
 
@@ -41,7 +41,7 @@ Używane na potrzeby okna dialogowego Wstawianie obiektu OLE.
 class COleInsertDialog : public COleDialog
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -147,7 +147,7 @@ BOOL CreateItem(COleClientItem* pItem);
 *pItem*<br/>
 Wskazuje element, który ma zostać utworzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element został utworzony; w przeciwnym razie 0.
 
@@ -178,7 +178,7 @@ Jedna z następujących wartości:
 
 Zero wstawia nie DocObject ani kontrolki ActiveX. Ta wartość jest taka sama jak implementacja pierwszego prototypu wymienionego powyżej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:
 
@@ -202,7 +202,7 @@ Wywołaj tę funkcję, aby uzyskać identyfikator CLSID skojarzony z wybranym el
 REFCLSID GetClassID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca identyfikator CLSID skojarzony z wybranym elementem.
 
@@ -218,7 +218,7 @@ Wywołaj tę funkcję, aby określić, czy użytkownik wybrał opcję wyświetla
 DVASPECT GetDrawAspect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Metoda wymagana do renderowania obiektu.
 
@@ -240,7 +240,7 @@ Wywołaj tę funkcję, aby uzyskać uchwyt do metapliku zawierającego ikonę wy
 HGLOBAL GetIconicMetafile() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do metapliku zawierającego ikonę z ikoną wybranego elementu, jeśli pole wyboru Wyświetl jako ikonę zostało zaznaczone, gdy okno dialogowe zostało odrzucone, wybierając **przycisk OK**. w przeciwnym razie wartość NULL.
 
@@ -252,7 +252,7 @@ Wywołaj tę funkcję, aby uzyskać pełną ścieżkę wybranego pliku tylko wte
 CString GetPathName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pełna ścieżka do pliku wybranego w oknie dialogowym. Jeśli typ zaznaczenia to `createNewItem`, ta funkcja zwraca bezwzględne `CString` w trybie wydania lub powoduje potwierdzenie w trybie debugowania.
 
@@ -264,7 +264,7 @@ Wywołaj tę funkcję, aby uzyskać typ wyboru wybrany podczas odrzucania okna d
 UINT GetSelectionType() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ dokonanego wyboru.
 

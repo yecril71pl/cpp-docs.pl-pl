@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874514"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418861"
 ---
 # <a name="carray-class"></a>Klasa CArray
 
@@ -68,7 +68,7 @@ Parametr szablonu, który określa typ obiektów przechowywanych w tablicy. *Typ
 *ARG_TYPE*<br/>
 Parametr szablonu, który określa typ argumentu, który jest używany do uzyskiwania dostępu do obiektów przechowywanych w tablicy. Często odwołanie do *typu*. *ARG_TYPE* jest parametrem, który jest przesyłany do `CArray`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -150,7 +150,7 @@ Parametr szablonu określający typ argumentów odwołujących się do elementó
 *newElement*<br/>
 Element, który ma zostać dodany do tej tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks dodanego elementu.
 
@@ -175,7 +175,7 @@ INT_PTR Append(const CArray& src);
 *SRC*<br/>
 Źródło elementów do dołączenia do tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks pierwszego dołączonego elementu.
 
@@ -242,7 +242,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 *nIndex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu tablicy.
 
@@ -287,7 +287,7 @@ Parametr szablonu określający typ elementów tablicy.
 *nIndex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element tablicy w bieżącym indeksie.
 
@@ -307,7 +307,7 @@ Zwraca liczbę elementów tablicy.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w tablicy.
 
@@ -333,7 +333,7 @@ TYPE* GetData();
 *Wprowadź*<br/>
 Parametr szablonu określający typ elementów tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu tablicy.
 
@@ -436,7 +436,7 @@ Określa, czy tablica jest pusta.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli tablica nie zawiera żadnych elementów; w przeciwnym razie 0.
 

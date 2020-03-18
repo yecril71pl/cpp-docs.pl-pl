@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876064"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422375"
 ---
 # <a name="ltvectorgt-operators"></a>Operatory&gt; &lt;Vector
 
@@ -41,7 +41,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli wektory nie są równe; **Fałsz** , jeśli wektory są równe.
 
@@ -92,7 +92,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli wektor po lewej stronie operatora jest mniejszy od wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -143,7 +143,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli wektor po lewej stronie operatora jest mniejszy lub równy wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -194,7 +194,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli wektor po lewej stronie operatora jest równy wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -245,7 +245,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli wektor po lewej stronie operatora jest większy niż wektor po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -297,7 +297,7 @@ Obiekt typu `vector`.
 *prawa*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli wektor po lewej stronie operatora jest większy niż lub równy wektorowi po prawej stronie wektora; w przeciwnym razie **false**.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: 2ccc8a4ef707942963b85edc6db9e21e05610b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857019"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417510"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>C++Zestaw SDK usługi Build Insights: tabela zdarzeń
 
@@ -73,7 +73,7 @@ Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017
 
 ## <a name="event-table"></a>Tabela zdarzeń
 
-| Wydarzenie | Właściwość | Opis |
+| Zdarzenie | Właściwość | Opis |
 |--|--|--|
 | <a name="back-end-pass"></a>BACK_END_PASS | Typ | Działanie |
 |  | Rodzicielski | [COMPILER](#compiler) |

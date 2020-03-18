@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
 ms.openlocfilehash: 22805550d13ecb400b151495363e5eda2dfb3b76
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856979"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421542"
 ---
 # <a name="coleobjectfactory-class"></a>Klasa COleObjectFactory
 
@@ -53,17 +53,17 @@ Implementuje fabrykę klas OLE, która tworzy obiekty OLE, takie jak serwery, ob
 class COleObjectFactory : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleObjectFactory:: COleObjectFactory](#coleobjectfactory)|Konstruuje obiekt `COleObjectFactory`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleObjectFactory:: GetClassID](#getclassid)|Zwraca identyfikator klasy OLE obiektów tworzonych przez tę fabrykę.|
 |[COleObjectFactory:: IsLicenseValid](#islicensevalid)|Określa, czy licencja kontrolki jest prawidłowa.|
@@ -78,7 +78,7 @@ class COleObjectFactory : public CCmdTarget
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleObjectFactory:: GetLicenseKey](#getlicensekey)|Żąda unikatowego klucza z biblioteki DLL kontrolki.|
 |[COleObjectFactory:: oncreateobject](#oncreateobject)|Wywoływane przez platformę, aby utworzyć nowy obiekt typu fabryki.|
@@ -171,7 +171,7 @@ Zwraca odwołanie do identyfikatora klasy OLE reprezentowanego przez fabrykę.
 REFCLSID GetClassID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do identyfikatora klasy OLE reprezentowanego przez tę fabrykę.
 
@@ -192,12 +192,12 @@ virtual BOOL GetLicenseKey(
 ### <a name="parameters"></a>Parametry
 
 *dwReserved*<br/>
-Zarezerwowane do użytku w przyszłości.
+Zarezerwowany do użytku w przyszłości.
 
 *pbstrKey*<br/>
 Wskaźnik na BSTR, który będzie przechowywać klucz licencji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli ciąg klucza licencji nie ma wartości NULL; w przeciwnym razie 0.
 
@@ -213,7 +213,7 @@ Określa, czy licencja kontrolki jest prawidłowa.
 BOOL IsLicenseValid();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli successul; w przeciwnym razie false.
 
@@ -225,7 +225,7 @@ Zwraca wartość różną od zera, jeśli fabryka jest zarejestrowana w bibliote
 virtual BOOL IsRegistered() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli fabryka jest zarejestrowana; w przeciwnym razie 0.
 
@@ -237,7 +237,7 @@ Wywoływane przez platformę, by utworzyć nowy obiekt.
 virtual CCmdTarget* OnCreateObject();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do utworzonego obiektu. Może zgłosić wyjątek pamięci, jeśli nie powiedzie się.
 
@@ -253,7 +253,7 @@ Rejestruje fabrykę obiektów przy użyciu bibliotek DLL systemu OLE.
 virtual BOOL Register();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli fabryka została pomyślnie zarejestrowana; w przeciwnym razie 0.
 
@@ -269,7 +269,7 @@ Rejestruje wszystkie fabryki obiektów aplikacji za pomocą bibliotek DLL system
 static BOOL PASCAL RegisterAll();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli fabryki zostały pomyślnie zarejestrowane; w przeciwnym razie 0.
 
@@ -309,7 +309,7 @@ Wyrejestrowuje wszystkie fabryki obiektów aplikacji.
 static BOOL PASCAL UnregisterAll();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -353,7 +353,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 *bRegister*<br/>
 Określa, czy fabryka obiektów klasy kontrolki ma zostać zarejestrowana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli fabryki zostały pomyślnie zaktualizowane; w przeciwnym razie 0.
 
@@ -374,7 +374,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 *bstrKey*<br/>
 BSTR — przechowywanie wersji ciągu licencji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli licencja czasu wykonywania jest prawidłowa; w przeciwnym razie 0.
 
@@ -394,11 +394,11 @@ Weryfikuje licencję czasu projektowania dla kontrolki OLE.
 virtual BOOL VerifyUserLicense();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli licencja czasu projektowania jest prawidłowa; w przeciwnym razie 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

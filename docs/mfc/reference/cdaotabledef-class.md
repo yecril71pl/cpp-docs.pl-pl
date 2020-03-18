@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883875"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418763"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef Class
 
@@ -89,17 +89,17 @@ Reprezentuje przechowywaną definicję tabeli bazowej lub dołączonej tabeli.
 class CDaoTableDef : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Konstruuje obiekt `CDaoTableDef`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoTableDef:: Append](#append)|Dodaje nową tabelę do bazy danych.|
 |[CDaoTableDef:: Update](#canupdate)|Zwraca wartość różną od zera, jeśli tabela może zostać zaktualizowana (definicje pól lub właściwości tabeli można modyfikować).|
@@ -134,7 +134,7 @@ class CDaoTableDef : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoTableDef:: m_pDAOTableDef](#m_pdaotabledef)|Wskaźnik do interfejsu DAO bazowego obiektu tabledef.|
 |[CDaoTableDef:: m_pDatabase](#m_pdatabase)|Źródłowa baza danych dla tej tabeli.|
@@ -143,7 +143,7 @@ class CDaoTableDef : public CObject
 
 Każdy obiekt bazy danych DAO utrzymuje kolekcję o nazwie TableDefs, która zawiera wszystkie zapisane obiekty DAO tabledef.
 
-Będziesz manipulować definicją tabeli przy użyciu obiektu `CDaoTableDef`. Możesz na przykład:
+Będziesz manipulować definicją tabeli przy użyciu obiektu `CDaoTableDef`. Można na przykład:
 
 - Przejrzyj strukturę pól i indeksów każdej lokalnej, dołączonej lub zewnętrznej tabeli w bazie danych.
 
@@ -214,7 +214,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy definicja ta
 BOOL CanUpdate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli struktura tabeli (schemat) może być modyfikowana (Dodawanie lub usuwanie pól i indeksów), w przeciwnym razie 0.
 
@@ -277,7 +277,7 @@ Wskaźnik do ciągu zawierającego nazwę tabeli.
 *lAttributes*<br/>
 Wartość odpowiadająca charakterystyce tabeli reprezentowanej przez obiekt tabledef. Można użyć bitowego lub do łączenia dowolnej z następujących stałych:
 
-|Stała|Opis|
+|Stały|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -338,7 +338,7 @@ Wartość wskazująca maksymalny rozmiar (w bajtach) pola, które zawiera tekst,
 *lAttributes*<br/>
 Wartość odpowiadająca charakterystyce pola i, która może być łączona przy użyciu bitowej lub.
 
-|Stała|Opis|
+|Stały|Opis|
 |--------------|-----------------|
 |`dbFixedField`|Rozmiar pola jest stały (domyślnie dla pól liczbowych).|
 |`dbVariableField`|Rozmiar pola to zmienna (tylko pola tekstowe).|
@@ -452,13 +452,13 @@ Dla obiektu `CDaoTableDef` wartość zwracana określa charakterystykę tabeli r
 long GetAttributes();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość, która wskazuje co najmniej jedną charakterystykę obiektu `CDaoTableDef`.
 
 ### <a name="remarks"></a>Uwagi
 
-|Stała|Opis|
+|Stały|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -481,7 +481,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać parametry połącze
 CString GetConnect();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString` zawierający ścieżkę i typ bazy danych dla tabeli.
 
@@ -507,7 +507,7 @@ Wywołaj tę funkcję, aby określić datę i godzinę utworzenia tabeli bazowej
 COleDateTime GetDateCreated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawierająca datę i godzinę utworzenia tabeli bazowej obiektu `CDaoTableDef`.
 
@@ -525,7 +525,7 @@ Wywołaj tę funkcję, aby określić datę i godzinę ostatniej aktualizacji ta
 COleDateTime GetDateLastUpdated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawierająca datę i godzinę ostatniej aktualizacji tabeli bazowej obiektu `CDaoTableDef`.
 
@@ -543,7 +543,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól zdefini
 short GetFieldCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pól w tabeli.
 
@@ -605,7 +605,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać liczbę indeksów d
 short GetIndexCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba indeksów dla tabeli.
 
@@ -667,7 +667,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać zdefiniowaną przez
 CString GetName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zdefiniowana przez użytkownika nazwa tabeli.
 
@@ -685,7 +685,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby dowiedzieć się, ile rekord
 long GetRecordCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba rekordów, do których można uzyskać dostęp w obiekcie tabledef.
 
@@ -703,7 +703,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę dołączonej 
 CString GetSourceTableName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString`, który określa nazwę źródła dołączonej tabeli, lub pusty ciąg, jeśli tabela danych natywnych.
 
@@ -721,7 +721,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać regułę walidacji d
 CString GetValidationRule();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString`, który sprawdza poprawność danych w polu w miarę ich zmiany lub dodania do tabeli.
 
@@ -739,7 +739,7 @@ Wywołaj tę funkcję, aby pobrać ciąg, który ma być wyświetlany, gdy użyt
 CString GetValidationText();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CString`, który określa tekst wyświetlany, jeśli użytkownik wprowadzi dane, które nie pasują do reguły walidacji.
 
@@ -757,7 +757,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDao
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli obiekt `CDaoTableDef` jest otwarty; w przeciwnym razie 0.
 
@@ -821,7 +821,7 @@ void SetAttributes(long lAttributes);
 *lAttributes*<br/>
 Charakterystyki tabeli reprezentowanej przez obiekt `CDaoTableDef` i mogą być sumą tych stałych:
 
-|Stała|Opis|
+|Stały|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -876,8 +876,8 @@ W poniższej tabeli przedstawiono możliwe typy baz danych oraz ich odpowiednie 
 |Import HTML|"Import HTML;"|"`drive`:\\\ *path*\ *filename*"|
 |Eksport HTML|"Eksport HTML;"|"`drive`:\\\ *Path*"|
 |Tekst|"Text;"|"dysk:\\\path"|
-|ODBC|Database Baza danych = `database`; UID = *użytkownik*; PWD = *hasło*; DSN = *DataSourceName;* LOGINTIMEOUT = *s;* " (Mogą to nie być kompletne parametry połączenia dla wszystkich serwerów; jest to tylko przykład. Bardzo ważne jest, aby nie mieć spacji między parametrami.)|Brak|
-|Program Exchange|Zamian<br /><br /> MAPILEVEL = *FolderPath*;<br /><br /> [TABLEtype = {0 &#124; 1};]<br /><br /> [Profil = *profil*;]<br /><br /> [PWD = *Password*;]<br /><br /> [Baza danych = `database`;] "|*"dysk*:\\\ *ścieżka*\\\ *filename*. MDB|
+|ODBC|Database Baza danych = `database`; UID = *użytkownik*; PWD = *hasło*; DSN = *DataSourceName;* LOGINTIMEOUT = *s;* " (Mogą to nie być kompletne parametry połączenia dla wszystkich serwerów; jest to tylko przykład. Bardzo ważne jest, aby nie mieć spacji między parametrami.)|None|
+|Exchange|Zamian<br /><br /> MAPILEVEL = *FolderPath*;<br /><br /> [TABLEtype = {0 &#124; 1};]<br /><br /> [Profil = *profil*;]<br /><br /> [PWD = *Password*;]<br /><br /> [Baza danych = `database`;] "|*"dysk*:\\\ *ścieżka*\\\ *filename*. MDB|
 
 > [!NOTE]
 >  Btrieve nie jest już obsługiwany w przypadku obiektów DAO 3,5.
@@ -972,7 +972,7 @@ Nie można ustawić tekstu walidacji dołączonej tabeli.
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationText" w pomocy DAO.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

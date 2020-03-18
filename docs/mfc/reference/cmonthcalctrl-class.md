@@ -91,11 +91,11 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: 963aecfed4f6eb67a0ab227df06fce98c0778f7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866393"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420205"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 
@@ -107,7 +107,7 @@ Hermetyzuje funkcjonalność formantu kalendarza miesięcznego.
 class CMonthCalCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -238,7 +238,7 @@ Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest okn
 *nID*<br/>
 Określa identyfikator formantu kalendarza miesięcznego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -268,7 +268,7 @@ Pobiera szerokość obramowania formantu kalendarza bieżącego miesiąca.
 int GetCalendarBorder() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość obramowania formantu (w pikselach).
 
@@ -284,7 +284,7 @@ Pobiera liczbę kalendarzy wyświetlanych w formancie kalendarza bieżącego mie
 int GetCalendarCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba kalendarzy aktualnie wyświetlanych w kontrolce kalendarza miesięcznego. Maksymalna dozwolona liczba kalendarzy to 12.
 
@@ -306,7 +306,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 |---------------|-----------------|
 |*pmcGridInfo*|określoną Wskaźnik na strukturę [MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) , która otrzymuje informacje o formancie kalendarza bieżącego miesiąca. Obiekt wywołujący jest odpowiedzialny za przydzielanie i Inicjowanie tej struktury.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -334,7 +334,7 @@ Pobiera identyfikator kalendarza dla kontrolki kalendarza bieżącego miesiąca.
 CALID GetCalID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna z stałych [identyfikatora kalendarza](/windows/win32/Intl/calendar-identifiers) .
 
@@ -357,7 +357,7 @@ COLORREF GetColor(int nRegion) const;
 *nRegion*<br/>
 Region formantu kalendarza miesięcznego, z którego pobierany jest kolor. Aby uzyskać listę wartości, zobacz *nRegion* parametru [SetColor](#setcolor).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) określająca kolor skojarzony z częścią kontrolki kalendarza miesięcznego, jeśli zakończyła się pomyślnie. W przeciwnym razie ta funkcja członkowska zwraca wartość-1.
 
@@ -369,7 +369,7 @@ Pobiera widok, który jest aktualnie wyświetlany przez formant kalendarza bież
 DWORD GetCurrentView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący widok, który jest wskazywany przez jedną z następujących wartości:
 
@@ -414,7 +414,7 @@ Odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime
 *pDateTime*<br/>
 Wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , który otrzyma aktualnie wybrane informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; otherwize 0.
 
@@ -440,7 +440,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 *pbLocal*<br/>
 Wskaźnik do wartości LOGICZNEj. Jeśli wartość jest różna od zera, ustawienie kontrolki nie jest zgodne z ustawieniem w panelu sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita reprezentująca pierwszy dzień tygodnia. Zobacz **uwagi** , aby uzyskać więcej informacji na temat tego, co reprezentuje te liczby całkowite.
 
@@ -470,7 +470,7 @@ Pobiera bieżącą maksymalną liczbę dni, którą można wybrać w kontrolce k
 int GetMaxSelCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita reprezentująca łączną liczbę dni, które można wybrać dla kontrolki.
 
@@ -490,7 +490,7 @@ Pobiera maksymalną szerokość ciągu "dzisiaj" dla kontrolki kalendarza bież�
 DWORD GetMaxTodayWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość ciągu "dzisiaj" (w pikselach).
 
@@ -525,7 +525,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 *pRect*<br/>
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , który będzie odbierać informacje o prostokątach powiązanych. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, funkcja członkowska zwraca wartość różną od zera, a `lpRect` otrzymuje odpowiednie powiązane informacje. Jeśli to się nie powiedzie, funkcja członkowska zwróci wartość 0.
 
@@ -541,7 +541,7 @@ Pobiera szybkość przewijania dla kontrolki kalendarza miesięcznego.
 int GetMonthDelta() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szybkość przewijania dla kontrolki kalendarza miesięcznego. Szybkość przewijania to liczba miesięcy, przez jaką formant przesuwa swój ekran, gdy użytkownik kliknie przycisk przewijania jeden raz.
 
@@ -592,7 +592,7 @@ Wartość określająca zakres limitów zakresu do pobrania. Ta wartość musi b
 |GMR_DAYSTATE|Uwzględnij poprzednie i końcowe miesiące widocznego zakresu, które są tylko częściowo wyświetlane.|
 |GMR_VISIBLE|Uwzględnij tylko te miesiące, które są wyświetlane w całości.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita reprezentująca zakres w miesiącach, w której łączone są dwa limity wskazywane przez *refMinRange* i *refMaxRange* w pierwszej i drugiej wersji, lub *pMinRange* i *pMaxRange* w trzeciej wersji.
 
@@ -630,7 +630,7 @@ Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury [SYSTEMTIME](
 *pMaxRange*<br/>
 Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) zawierającej datę z najwyższego końca zakresu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, która może być równa zero (nie są ustawione limity) lub kombinacja następujących wartości, które określają informacje o limicie.
 
@@ -679,7 +679,7 @@ Wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-
 *pMaxRange*<br/>
 Wskaźnik do struktury `SYSTEMTIME` zawierającej datę z najwyższego końca zakresu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -707,7 +707,7 @@ Odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime
 *pDateTime*<br/>
 Wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , która będzie otrzymywać informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -732,7 +732,7 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 *pMCHitTest*<br/>
 Wskaźnik do struktury [MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo) zawierający punkty testów trafień dla kontrolki kalendarza miesięcznego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość typu DWORD. Równa **uHitemu** elementowi członkowskiemu struktury `MCHITTESTINFO`.
 
@@ -748,7 +748,7 @@ Wskazuje, czy bieżącym widokiem formantu kalendarza bieżącego miesiąca jest
 BOOL IsCenturyView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli bieżący widok jest widokiem Century; w przeciwnym razie FALSE.
 
@@ -764,7 +764,7 @@ Wskazuje, czy bieżącym widokiem formantu kalendarza bieżącego miesiąca jest
 BOOL IsDecadeView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli bieżący widok jest widokiem dekady; w przeciwnym razie FALSE.
 
@@ -780,7 +780,7 @@ Wskazuje, czy bieżącym widokiem formantu kalendarza bieżącego miesiąca jest
 BOOL IsMonthView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli bieżący widok jest widokiem miesiąca. w przeciwnym razie FALSE.
 
@@ -796,7 +796,7 @@ Wskazuje, czy bieżącym widokiem formantu kalendarza bieżącego miesiąca jest
 BOOL IsYearView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli bieżący widok jest widokiem Year; w przeciwnym razie FALSE.
 
@@ -864,7 +864,7 @@ BOOL SetCalID(CALID calid);
 |---------------|-----------------|
 |*calid*|podczas Jedna z stałych [identyfikatora kalendarza](/windows/win32/Intl/calendar-identifiers) .|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -894,7 +894,7 @@ Ustawia kontrolkę kalendarz bieżący miesiąc, aby wyświetlić widok wieku.
 BOOL SetCenturyView();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -929,7 +929,7 @@ Wartość całkowita określająca, który kolor kalendarza ma zostać ustawiony
 *ref*<br/>
 Wartość COLORREF dla nowego ustawienia koloru dla określonej części kontrolki kalendarza miesięcznego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która reprezentuje poprzednie ustawienie koloru dla określonej części kontrolki kalendarza miesięcznego, jeśli to się powiedzie. W przeciwnym razie ten komunikat zwróci wartość-1.
 
@@ -955,7 +955,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 |---------------|-----------------|
 |*dwNewView*|podczas Jedna z następujących wartości, która określa miesięczny, roczny, dekadę lub Century widoku.<br /><br /> MCMV_MONTH: Widok miesięczny<br /><br /> MCMV_YEAR: Widok roczny<br /><br /> MCMV_DECADE: widok dekady<br /><br /> MCMV_CENTURY: Century — widok|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -981,7 +981,7 @@ Odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime
 *pDateTime*<br/>
 Wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , która zawiera datę, która ma być ustawiona jako bieżący wybór.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1011,7 +1011,7 @@ Wartość wskazująca, ile elementów znajduje się w tablicy, do której wskazu
 *pStates*<br/>
 Wskaźnik do [MONTHDAYSTATE](/windows/win32/Controls/monthdaystate) tablicy wartości, który definiuje, w jaki sposób formant kalendarza miesięcznego będzie rysowany codziennie na ekranie. Typ danych MONTHDAYSTATE jest polem bitowym, gdzie każdy bit (od 1 do 31) reprezentuje stan dnia w miesiącu. Jeśli bit jest włączony, odpowiedni dzień będzie wyświetlany pogrubiony; w przeciwnym razie będzie wyświetlana bez wyróżniania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1031,7 +1031,7 @@ Ustawia formant kalendarza bieżącego miesiąca na widok dekady.
 BOOL SetDecadeView();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1057,7 +1057,7 @@ Wartość całkowita reprezentująca dzień, który ma zostać ustawiony jako pi
 *lpnOld*<br/>
 Wskaźnik do liczby całkowitej wskazującej pierwszy dzień tygodnia, który został wcześniej ustawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli poprzedni pierwszy dzień tygodnia ma ustawioną wartość inną niż LOCALE_IFIRSTDAYOFWEEK, która jest dniem wskazanym w ustawieniu panelu sterowania. W przeciwnym razie ta funkcja zwraca wartość 0.
 
@@ -1082,7 +1082,7 @@ BOOL SetMaxSelCount(int nMax);
 *Nmaks.*<br/>
 Wartość, która będzie reprezentować maksymalną liczbę wybranych dni.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1107,7 +1107,7 @@ int SetMonthDelta(int iDelta);
 *iDelta*<br/>
 Liczba miesięcy, które mają zostać ustawione jako szybkość przewijania kontrolki. Jeśli ta wartość jest równa zero, Delta miesiąca jest resetowana do wartości domyślnej, co oznacza liczbę miesięcy wyświetlanych w formancie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia szybkość przewijania. Jeśli współczynnik przewijania nie został wcześniej ustawiony, wartość zwracana wynosi 0.
 
@@ -1123,7 +1123,7 @@ Ustawia kontrolkę kalendarz bieżący miesiąc, aby wyświetlić widok miesiąc
 BOOL SetMonthView();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1169,7 +1169,7 @@ Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury [SYSTEMTIME](
 *pMaxRange*<br/>
 Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury `SYSTEMTIME` zawierającej datę z najwyższego końca zakresu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1207,7 +1207,7 @@ Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury [SYSTEMTIME](
 *pMaxRange*<br/>
 Wskaźnik do obiektu `COleDateTime`, obiektu `CTime` lub struktury `SYSTEMTIME` zawierającej datę z najwyższego końca zakresu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1249,7 +1249,7 @@ Ustawia bieżącą kontrolkę kalendarza miesięcznego na rok.
 BOOL SetYearView();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1270,7 +1270,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 *bRepaint*<br/>
 Określa, czy kontrolka ma być odświeżana. Domyślnie wartość TRUE. W przypadku wartości FALSE nie następuje odświeżenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli rozmiar kontrolki kalendarza miesięcznego ma wartość minimum; w przeciwnym razie 0.
 
@@ -1292,7 +1292,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 |---------------|-----------------|
 |*lpRect*|podczas Wskaźnik do struktury [prostokąta](/previous-versions/dd162897\(v=vs.85\)) , który definiuje prostokąt zawierający żądaną liczbę kalendarzy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , który definiuje prostokąt, którego rozmiar jest mniejszy niż lub równy prostokątowi zdefiniowanemu przez parametr *lpRect* .
 

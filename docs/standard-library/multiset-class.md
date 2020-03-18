@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874000"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419834"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -115,7 +115,7 @@ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości ele
 W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
 \ *alokatora*
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to `allocator<Key>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartością domyślną jest `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -143,7 +143,7 @@ Zestaw wielokrotny porządkuje sekwencję, którą kontroluje, przez wywołanie 
 
 W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -239,7 +239,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu w zestawie wielokrotnym lub lokalizacji, która pomyślnie ma pusty zestaw wielokrotny.
 
@@ -290,7 +290,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stałe** Iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -316,7 +316,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kompletny Iterator dostępu **dwukierunkowego** , który wskazuje tuż poza końcem zakresu.
 
@@ -474,7 +474,7 @@ size_type count(const Key& key) const;
 *klucz*\
 Klucz elementów, które mają być dopasowane z zestawu wielokrotnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w zestawie wielokrotnym, których klucz sortowania pasuje do klucza parametru.
 
@@ -534,7 +534,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu w odwróconym zesta
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconym zestawie wielokrotnym lub na adres, który był ostatnim elementem w nieodwróconym zestawie wielokrotnym.
 
@@ -582,7 +582,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niepowodzenie odwrotnego iteratora dwukierunkowego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym zestawie wielokrotnym (lokalizacja, która poprzedza pierwszy element w nieodwróconym zestawie wielokrotnym).
 
@@ -707,7 +707,7 @@ iterator emplace(Args&&... args);
 |-|-|
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do zestawu wielokrotnego.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -776,7 +776,7 @@ iterator emplace_hint(
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do zestawu wielokrotnego.|
 |*miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -796,7 +796,7 @@ Testuje, czy zestaw wielokrotny jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw wielokrotny jest pusty. **Fałsz** , jeśli zestaw wielokrotny nie jest pusty.
 
@@ -841,7 +841,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator Past. Jeśli zestaw wielokrotny jest pusty, a następnie `multiset::end() == multiset::begin()`.
 
@@ -868,7 +868,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Para iteratorów, takich jak pierwszy jest [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
 
@@ -962,7 +962,7 @@ Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 *Klucz*\
 Wartość klucza elementów do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub element, który jest końcem zestawu wielokrotnego, jeśli taki element nie istnieje.
 
@@ -987,7 +987,7 @@ const_iterator find(const Key& key) const;
 *klucz*\
 Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element w zestawie wielokrotnym (`multiset::end()`), jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1066,7 +1066,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania zestawu wielokrotneg
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez zestaw wielokrotny.
 
@@ -1176,7 +1176,7 @@ IList);
 |*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
 |*IList*|[Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcje składowe pojedynczego elementu, (1) i (2) zwracają iterator do położenia, gdzie nowy element został wstawiony do zestawu wielokrotnego.
 
@@ -1306,7 +1306,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w zestawie
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji używany przez zestaw wielokrotny do porządkowania jego elementów, który jest parametrem szablonu `Compare`.
 
@@ -1424,7 +1424,7 @@ iterator lower_bound(const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `iterator` lub `const_iterator`, który odnosi się do lokalizacji elementu w zestawie wielokrotnym z kluczem, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji, która powiodła się po ostatnim elemencie w zestawie wielokrotnym, jeśli nie zostanie znalezione dopasowanie dla klucza.
 
@@ -1485,7 +1485,7 @@ Zwraca maksymalną długość zestawu wielokrotnego.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość zestawu wielokrotnego.
 
@@ -1771,7 +1771,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróconym zestawie wielokrotnym lub na adres, który był ostatnim elementem w nieodwróconym zestawie wielokrotnym.
 
@@ -1884,7 +1884,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym zestawie wielokrotnym (lokalizacja, która poprzedza pierwszy element w nieodwróconym zestawie wielokrotnym).
 
@@ -1971,7 +1971,7 @@ Zwraca liczbę elementów w zestawie wielokrotnym.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość zestawu wielokrotnego.
 
@@ -2099,7 +2099,7 @@ iterator upper_bound(const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego zestawu wielokrotnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Iterator** lub `const_iterator`, który odnosi się do lokalizacji elementu w zestawie wielokrotnym z kluczem, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w zestawie wielokrotnym, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -2160,7 +2160,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania wartości element
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji używany przez zestaw wielokrotny do porządkowania jego elementów, który jest parametrem szablonu `Compare`.
 
@@ -2298,7 +2298,7 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Containers](../cpp/containers-modern-cpp.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

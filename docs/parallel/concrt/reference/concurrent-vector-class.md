@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854229"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417251"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector — Klasa
 
@@ -61,11 +61,11 @@ Typ danych elementów, które mają być przechowywane w wektorze.
 *_Ax*<br/>
 Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dealokacji pamięci dla współbieżnego wektora. Ten argument jest opcjonalny, a wartość domyślna to `allocator<T>`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`allocator_type`|Typ, który reprezentuje klasę alokatora dla współbieżnego wektora.|
 |`const_iterator`|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytywać `const` element w współbieżnym wektorze.|
@@ -82,14 +82,14 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|Przeciążone. Konstruuje współbieżny wektor.|
 |[~ concurrent_vector destruktor](#dtor)|Kasuje wszystkie elementy i niszczy ten współbieżny wektor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[ponownie](#assign)|Przeciążone. Wymazuje elementy współbieżnego wektora i przypisuje do niego `_N` kopie `_Item`lub wartości określone przez zakres iteratora [`_Begin`, `_End`). Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[w](#at)|Przeciążone. Zapewnia dostęp do elementu pod danym indeksem w wektorze współbieżnym. Ta metoda jest bezpieczna pod kątem współbieżności dla operacji odczytu, a także podczas rozwijania wektora, o ile jest zapewniona, że wartość `_Index` jest mniejsza niż rozmiar współbieżnego wektora.|
@@ -119,7 +119,7 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[\[operatora \]](#operator_at)|Przeciążone. Zapewnia dostęp do elementu pod danym indeksem w wektorze współbieżnym. Ta metoda jest współbieżnie bezpieczna dla operacji odczytu, a także podczas wzrostu wektora, o ile jest zapewniona, że wartość `_Index` jest mniejsza niż wielkość współbieżnego wektora.|
 |[operator =](#operator_eq)|Przeciążone. Przypisuje do niego zawartość innego obiektu `concurrent_vector`. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
@@ -192,7 +192,7 @@ const_reference at(size_type _Index) const;
 *_Index*<br/>
 Indeks elementu, który ma zostać pobrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu pod podanym indeksem.
 
@@ -212,7 +212,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie lub `const` odwołanie do ostatniego elementu w współbieżnym wektorze.
 
@@ -226,7 +226,7 @@ iterator begin();
 const_iterator begin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `iterator` lub `const_iterator` do początku współbieżnego wektora.
 
@@ -238,7 +238,7 @@ Zwraca maksymalny rozmiar, do którego można zwiększyć współbieżny wektor 
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalny rozmiar, do którego można zwiększyć współbieżny wektor bez konieczności przydzielenia większej ilości pamięci.
 
@@ -254,7 +254,7 @@ Zwraca iterator typu `const_iterator` do początku współbieżnego wektora. Ta 
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `const_iterator` do początku współbieżnego wektora.
 
@@ -266,7 +266,7 @@ Zwraca iterator typu `const_iterator` na końcu współbieżnego wektora. Ta met
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `const_iterator` do końca współbieżnego wektora.
 
@@ -374,7 +374,7 @@ Zwraca iterator typu `const_reverse_iterator` do początku współbieżnego wekt
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `const_reverse_iterator` do początku współbieżnego wektora.
 
@@ -386,7 +386,7 @@ Zwraca iterator typu `const_reverse_iterator` na końcu współbieżnego wektora
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `const_reverse_iterator` do końca współbieżnego wektora.
 
@@ -398,7 +398,7 @@ Testuje, czy współbieżny wektor jest pusty w momencie wywołania tej metody. 
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli wektor był pusty w momencie wywołania funkcji, w przeciwnym razie **zwraca wartość false** .
 
@@ -412,7 +412,7 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `iterator` lub `const_iterator` do końca współbieżnego wektora.
 
@@ -426,7 +426,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie lub `const` odwołanie do pierwszego elementu w współbieżnym wektorze.
 
@@ -438,7 +438,7 @@ Zwraca kopię alokatora używaną do konstruowania współbieżnego wektora. Ta 
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kopia alokatora używana do konstruowania obiektu `concurrent_vector`.
 
@@ -463,7 +463,7 @@ Liczba elementów do dołączenia do obiektu.
 *_Item*<br/>
 Wartość, za pomocą której mają zostać zainicjowane nowe elementy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dołączany iterator do pierwszego elementu.
 
@@ -484,7 +484,7 @@ iterator grow_to_at_least(size_type _N);
 *_N*<br/>
 Nowy minimalny rozmiar obiektu `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który wskazuje na początek dołączonej sekwencji lub do elementu w indeksie `_N`, jeśli nie zostały dołączone żadne elementy.
 
@@ -496,7 +496,7 @@ Zwraca maksymalną liczbę elementów, które mogą być przechowywane przez wsp
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna liczba elementów, które mogą być przechowywane w `concurrent_vector` obiektu.
 
@@ -524,7 +524,7 @@ Typ alokatora wektora źródłowego.
 *_Vector*<br/>
 Obiekt źródłowy `concurrent_vector`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do tego obiektu `concurrent_vector`.
 
@@ -543,7 +543,7 @@ const_reference operator[](size_type _index) const;
 *_Index*<br/>
 Indeks elementu, który ma zostać pobrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu pod podanym indeksem.
 
@@ -568,7 +568,7 @@ iterator push_back(T&& _Item);
 *_Item*<br/>
 Wartość, która ma zostać dołączona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dołączany iterator do elementu.
 
@@ -582,7 +582,7 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `reverse_iterator` lub `const_reverse_iterator` do początku współbieżnego wektora.
 
@@ -596,7 +596,7 @@ reverse_iterator rend();
 const_reverse_iterator rend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator typu `reverse_iterator` lub `const_reverse_iterator` do końca współbieżnego wektora.
 
@@ -664,7 +664,7 @@ Zwraca liczbę elementów w wektorze współbieżnym. Ta metoda jest bezpieczna 
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w tym obiekcie `concurrent_vector`.
 
@@ -685,7 +685,7 @@ void swap(concurrent_vector& _Vector);
 *_Vector*<br/>
 Obiekt `concurrent_vector`, za pomocą którego ma zostać zamieniony zawartość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856619"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419491"
 ---
 # <a name="ltstringgt-functions"></a>&lt;funkcje&gt; ciągu
 
@@ -85,7 +85,7 @@ Ciąg, w którym są odczytywane znaki ze strumienia wejściowego.
 *delim*\
 Ogranicznik wiersza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień wejściowy *to*.
 
@@ -178,7 +178,7 @@ double stod(
 |*str*|Sekwencja znaków do przekonwertowania.|
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość **podwójnej precyzji** .
 
@@ -207,7 +207,7 @@ float stof(
 |*str*|Sekwencja znaków do przekonwertowania.|
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zmiennoprzecinkowa.
 
@@ -231,7 +231,7 @@ int stoi(
     int base = 10);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita.
 
@@ -275,7 +275,7 @@ long stol(
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 |*base*|Podstawa numeru, która ma zostać użyta.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość Long-Integer.
 
@@ -304,7 +304,7 @@ double stold(
 |*str*|Sekwencja znaków do przekonwertowania.|
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość **Long Double** .
 
@@ -336,7 +336,7 @@ long long stoll(
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 |*base*|Podstawa numeru, która ma zostać użyta.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Długa** wartość Long.
 
@@ -368,7 +368,7 @@ unsigned long stoul(
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 |*base*|Podstawa numeru, która ma zostać użyta.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieniepodpisana wartość Long-Integer.
 
@@ -400,7 +400,7 @@ unsigned long long stoull(
 |*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
 |*base*|Podstawa numeru, która ma zostać użyta.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieniepodpisana wartość **Long Long** .
 
@@ -486,7 +486,7 @@ string to_string(long double Val);
 |---------------|-----------------|
 |*Użyte*|Wartość do konwersji.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `string`, która reprezentuje wartość.
 
@@ -534,7 +534,7 @@ wstring to_wstring(long double Val);
 |---------------|-----------------|
 |`Val`|Wartość do konwersji.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg dwubajtowy, który reprezentuje wartość.
 
@@ -560,6 +560,6 @@ Funkcja konwertuje `Val` na sekwencję elementów przechowywanych w obiekcie arr
 
 Funkcja zwraca `wstring(Buf)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ciąg >](../standard-library/string.md)

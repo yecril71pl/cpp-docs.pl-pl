@@ -32,11 +32,11 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863221"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417916"
 ---
 # <a name="ccommodule-class"></a>Klasa CComModule
 
@@ -51,7 +51,7 @@ Od biblioteki ATL 7,0 `CComModule` jest przestarzała: zobacz [klasy modułów A
 class CComModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -143,7 +143,7 @@ podczas Identyfikator IID żądanego interfejsu.
 *ppv*<br/>
 określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *PPV* ma wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -161,7 +161,7 @@ Od biblioteki ATL 7,0 `CComModule` jest przestarzała: zobacz [klasy modułów A
 HINSTANCE GetModuleInstance() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 HINSTANCE identyfikacji tego modułu.
 
@@ -177,7 +177,7 @@ Od biblioteki ATL 7,0 `CComModule` jest przestarzała: zobacz [klasy modułów A
 HINSTANCE GetResourceInstance() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 HINSTANCE.
 
@@ -193,7 +193,7 @@ Od biblioteki ATL 7,0 `CComModule` jest przestarzała: zobacz [klasy modułów A
 HINSTANCE GetTypeLibInstance() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 HINSTANCE.
 
@@ -223,7 +223,7 @@ podczas HINSTANCE przeszedł do `DLLMain` lub `WinMain`.
 *plibid*<br/>
 podczas Wskaźnik do identyfikatora LIBID biblioteki typów skojarzonej z projektem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -355,7 +355,7 @@ podczas Identyfikator zasobu ciągu dla opisu obiektu.
 *flagiDW*<br/>
 podczas Określa model wątkowości, który ma zostać wprowadzony w rejestrze. Możliwe wartości to THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -381,7 +381,7 @@ podczas Określa kontekst, w którym obiekt klasy ma być uruchamiany. Możliwe 
 *flagiDW*<br/>
 podczas Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Aby uzyskać opis tych wartości, zobacz [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -407,7 +407,7 @@ podczas Wskazuje, czy biblioteka typów zostanie zarejestrowana. Wartość domy�
 *pCLSID*<br/>
 podczas Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -435,7 +435,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 *lpszIndex*<br/>
 podczas Ciąg w formacie `"\\N"`, gdzie `N` jest indeksem liczb całkowitych zasobu biblioteki typów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -453,7 +453,7 @@ Od biblioteki ATL 7,0 `CComModule` jest przestarzała: zobacz [klasy modułów A
 HRESULT RevokeClassObjects() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -495,7 +495,7 @@ podczas Identyfikator ProgID skojarzony z obiektem.
 *lpszVerIndProgID*<br/>
 podczas Identyfikator ProgID niezależny od wersji skojarzony z obiektem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -522,7 +522,7 @@ W przypadku wartości TRUE biblioteka typów jest również wyrejestrowana.
 *pCLSID*<br/>
 Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -579,7 +579,7 @@ Określa model wątkowości, który ma zostać wprowadzony w rejestrze. Możliwe
 *bRegister*<br/>
 Wskazuje, czy obiekt powinien być zarejestrowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -623,7 +623,7 @@ podczas Wskazuje, czy obiekt powinien być zarejestrowany.
 *pMapEntries*<br/>
 podczas Wskaźnik do mapowanej mapy przechowującej wartości skojarzone z parametrami wymiennymi skryptu. ATL automatycznie używa `%MODULE%`. Aby użyć dodatkowych parametrów wymiennych, zobacz uwagi w celu uzyskania szczegółowych informacji. W przeciwnym razie użyj wartości domyślnej o wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -673,7 +673,7 @@ podczas Wskazuje, czy skrypt zasobów powinien być zarejestrowany.
 *pMapEntries*<br/>
 podczas Wskaźnik do mapowanej mapy przechowującej wartości skojarzone z parametrami wymiennymi skryptu. ATL automatycznie używa `%MODULE%`. Aby użyć dodatkowych parametrów wymiennych, zobacz uwagi w celu uzyskania szczegółowych informacji. W przeciwnym razie użyj wartości domyślnej o wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 

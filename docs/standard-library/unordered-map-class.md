@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873998"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422571"
 ---
 # <a name="unordered_map-class"></a>unordered_map — Klasa
 
@@ -170,7 +170,7 @@ class unordered_map;
 |*Pred*|Typ obiektu funkcji porównywania równości.|
 |*Alokacj*|Klasa alokatora.|
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 |Definicja typu|Opis|
 |-|-|
@@ -296,7 +296,7 @@ const Ty& at(const Key& key) const;
 |-|-|
 |*Klucz*|Wartość klucza do wyszukania.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wartości danych znalezionego elementu.
 
@@ -602,7 +602,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -628,7 +628,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator **const** dostępu do przodu, który wskazuje tuż poza końcem zakresu.
 
@@ -1026,7 +1026,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 |-|-|
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_map, chyba że zawiera już element, którego wartość jest uporządkowana równorzędnie.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `pair`, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_map` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod którym wstawiono nowy element lub w którym znajduje się już element.
 
@@ -1056,7 +1056,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 |*argumentów*|Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_map, chyba że unordered_map już zawiera ten element lub, bardziej ogólnie, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.|
 |*miejscu*|Wskazówka dotycząca miejsca, w którym rozpoczyna się wyszukiwanie poprawnego punktu wstawiania.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -1252,7 +1252,7 @@ Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 *Klucz*\
 Wartość klucza elementów do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem mapy, jeśli taki element nie istnieje.
 
@@ -1480,7 +1480,7 @@ IList);
 |*InputIterator*|Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .|
 |*IList*|[Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli unordered_map już zawiera element, którego klucz ma odpowiednik wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
@@ -2101,7 +2101,7 @@ Ty& operator[](Key&& keyval);
 |-|-|
 |*Keyval*|Wartość klucza, która ma być znaleziona lub wstawiona.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wartości danych wstawionego elementu.
 

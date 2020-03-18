@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854074"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419694"
 ---
 # <a name="ltoptionalgt-operators"></a>opcjonalne operatory&gt; &lt;
 
@@ -89,7 +89,7 @@ Obiekt typu `optional`, `nullopt_t`lub `T`.
 *prawa*\
 Obiekt typu `optional`, `nullopt_t`lub `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -113,7 +113,7 @@ Obiekt typu `optional`, `nullopt_t`lub `T`.
 *prawa*\
 Obiekt typu `optional`, `nullopt_t`lub `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -141,7 +141,7 @@ Obiekt typu `optional`, `nullopt_t`lub `T`.
 *prawa*\
 Obiekt typu `optional`, `nullopt_t`lub `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -169,7 +169,7 @@ Obiekt typu `optional`, `nullopt_t`lub `T`.
 *prawa*\
 Obiekt typu `optional`, `nullopt_t`lub `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli `optional` po lewej stronie operatora jest większy lub równy `optional` po prawej stronie operatora; w przeciwnym razie **false**.
 

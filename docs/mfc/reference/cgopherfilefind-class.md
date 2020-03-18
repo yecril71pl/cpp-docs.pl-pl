@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
 ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875789"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418581"
 ---
 # <a name="cgopherfilefind-class"></a>Klasa CGopherFileFind
 
@@ -159,7 +159,7 @@ Flagi opisujące, jak obsłużyć tę sesję. Prawidłowe flagi to:
 
 - INTERNET_FLAG_USE_EXISTING Jeśli to możliwe, należy ponownie użyć istniejących połączeń z serwerem dla nowych żądań `FindFile`, zamiast tworzyć nową sesję dla każdego żądania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
 
@@ -175,7 +175,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby kontynuować wyszukiwanie pl
 virtual BOOL FindNextFile();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli istnieje więcej plików; zero, jeśli znaleziony plik jest ostatnim z nich w katalogu lub wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32. Jeśli znaleziony plik to ostatni plik w katalogu lub nie można znaleźć pasujących plików, funkcja `GetLastError` zwraca ERROR_NO_MORE_FILES.
 
@@ -196,7 +196,7 @@ Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-fi
 *refTime*<br/>
 Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetCreationTime` zwraca wartość 0 tylko wtedy, gdy [FindNextFile](#findnextfile) nigdy nie został wywołany w tym obiekcie `CGopherFileFind`.
 
@@ -224,7 +224,7 @@ Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
 *pTimeStamp*<br/>
 Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) zawierający czas ostatniego dostępu do pliku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetLastAccessTime` zwraca wartość 0 tylko wtedy, gdy [FindNextFile](#findnextfile) nigdy nie został wywołany w tym obiekcie `CGopherFileFind`.
 
@@ -252,7 +252,7 @@ Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-fi
 *refTime*<br/>
 Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetLastWriteTime` zwraca wartość 0 tylko wtedy, gdy [FindNextFile](#findnextfile) nigdy nie został wywołany w tym obiekcie `CGopherFileFind`.
 
@@ -271,7 +271,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać długość (w bajta
 virtual ULONGLONG GetLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość znalezionego pliku w bajtach.
 
@@ -294,7 +294,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać obiekt [CGopherLoca
 CGopherLocator GetLocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CGopherLocator`.
 
@@ -306,7 +306,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać nazwę ekranu gophe
 CString GetScreenName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa ekranu gopher.
 
@@ -318,7 +318,7 @@ Testuje znaczniki bieżącego katalogu i katalogu nadrzędnego podczas iterowani
 virtual BOOL IsDots() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli znaleziony plik ma nazwę "." lub "..", co oznacza, że znaleziony plik jest w rzeczywistości katalogiem. W przeciwnym razie 0.
 

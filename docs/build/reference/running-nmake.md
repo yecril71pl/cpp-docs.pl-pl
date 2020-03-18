@@ -12,11 +12,11 @@ helpviewer_keywords:
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856937"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417293"
 ---
 # <a name="running-nmake"></a>Uruchomienie NMAKE
 
@@ -34,7 +34,7 @@ Plik tekstowy *pliku polecenia* (lub plik odpowiedzi) zawiera dane wejściowe wi
 
 Opcje NMAKE są opisane w poniższej tabeli. Opcje są poprzedzone ukośnikiem (`/`) lub kreską (`-`) i nie jest rozróżniana wielkość liter. Użyj [`!CMDSWITCHES`](makefile-preprocessing-directives.md) , aby zmienić ustawienia opcji w pliku reguł programu make lub pliku Tools. ini.
 
-| Opcja | Cel |
+| Opcja | Przeznaczenie |
 | ------------ | ------------- |
 | **/A** | Wymusza kompilację wszystkich ocenionych elementów docelowych nawet wtedy, gdy nie są one nieaktualne w porównaniu do elementów zależnych. Nie wymusza kompilacji niepowiązanych elementów docelowych. |
 | **/B** | Wymusza kompilację, nawet jeśli sygnatury czasowe są równe. Zalecane tylko w przypadku systemów szybkich (rozdzielczości co najmniej dwa sekundy). |
@@ -74,6 +74,6 @@ NMAKE zwraca następujące kody zakończenia:
 | 4 | Błąd systemu — za mało pamięci |
 | 255 | Element docelowy jest nieaktualny (wydano tylko wtedy, gdy jest używany **/q** ) |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [NMAKE — dokumentacja](nmake-reference.md)

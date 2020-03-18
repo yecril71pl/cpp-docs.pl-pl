@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865078"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417657"
 ---
 # <a name="iatlmemmgr-class"></a>Klasa IAtlMemMgr
 
@@ -30,7 +30,7 @@ Ta klasa reprezentuje interfejs Menedżera pamięci.
 __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -69,7 +69,7 @@ void* Allocate(size_t nBytes) throw();
 *nBytes*<br/>
 Żądana liczba bajtów w nowym bloku pamięci.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do początku nowo przydzielony blok pamięci.
 
@@ -115,7 +115,7 @@ size_t GetSize(void* p) throw();
 *St*<br/>
 Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca rozmiar bloku pamięci w bajtach.
 
@@ -139,7 +139,7 @@ Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci.
 *nBytes*<br/>
 Żądana liczba bajtów w nowym bloku pamięci.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do początku nowo przydzielony blok pamięci.
 
@@ -166,7 +166,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 *pbAllowContextMenu*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -187,7 +187,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 *pbAllowShowUI*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -208,7 +208,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 *pbAllowWindowless*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -229,7 +229,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 *pclrBackground*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -250,7 +250,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 *pbDisplayAsDefault*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -271,7 +271,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 *pdwDocHostDoubleClickFlags*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -292,7 +292,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 *pdwDocHostFlags*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -313,7 +313,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 *pFont*<br/>
 określoną Adres wskaźnika `IFontDisp` interfejsu używany do odbierania bieżącej wartości tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -334,7 +334,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 *pclrForeground*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -355,7 +355,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 *plcidLocaleID*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -378,7 +378,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 *pbMessageReflect*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -399,7 +399,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 *pbstrOptionKeyPath*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -416,7 +416,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 *pbShowGrabHandles*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -437,7 +437,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 *pbShowHatching*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -458,7 +458,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 *pbUserMode*<br/>
 określoną Adres zmiennej, która ma otrzymać bieżącą wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -479,7 +479,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 *bAllowContextMenu*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -500,7 +500,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 *bAllowShowUI*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -521,7 +521,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 *bAllowWindowless*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -542,7 +542,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 *clrBackground*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -563,7 +563,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 *bDisplayAsDefault*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -584,7 +584,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 *dwDocHostDoubleClickFlags*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -605,7 +605,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 *dwDocHostFlags*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -626,7 +626,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 *pFont*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -647,7 +647,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 *clrForeground*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -668,7 +668,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 *lcidLocaleID*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -689,7 +689,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 *bMessageReflect*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -710,7 +710,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 *bstrOptionKeyPath*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -727,7 +727,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 *bUserMode*<br/>
 podczas Nowa wartość tej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -748,7 +748,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 *pDispatch*<br/>
 Wskaźnik do nowego interfejsu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -772,7 +772,7 @@ podczas Wskaźnik do interfejsu `IUnknown` formantu, który ma zostać dołączo
 *Właściwość*<br/>
 podczas Dojście do okna, które ma być używane na potrzeby hostingu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -798,7 +798,7 @@ podczas Dojście do okna, które ma być używane na potrzeby hostingu.
 *pStream*<br/>
 podczas Wskaźnik interfejsu dla strumienia zawierającego dane inicjujące dla kontrolki. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -844,7 +844,7 @@ podczas Identyfikator interfejsu interfejsu wychodzącego na zawartym obiekcie. 
 *punkAdvise*<br/>
 podczas Wskaźnik do interfejsu `IUnknown` obiektu ujścia, który ma być połączony z punktem połączenia w zawartym obiekcie określonym przez `iidSink`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -870,7 +870,7 @@ podczas Identyfikator interfejsu na żądanym formancie.
 *ppvObject*<br/>
 określoną Adres wskaźnika, który będzie otrzymywał określony interfejs utworzonej kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -887,7 +887,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 *pDisp*<br/>
 podczas Wskaźnik do interfejsu `IDispatch`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -904,7 +904,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 *pDisp*<br/>
 podczas Wskaźnik do interfejsu `IDocHostUIHandlerDispatch`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -967,6 +967,6 @@ Aby uzyskać opis pozostałych parametrów i wartości zwracanej, zobacz [IAxWin
 
 Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) dla przykładu korzystającego z `IAxWinHostWindowLic::CreateControlLicEx`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

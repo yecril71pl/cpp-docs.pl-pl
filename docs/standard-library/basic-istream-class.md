@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874838"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416922"
 ---
 # <a name="basic_istream-class"></a>basic_istream — Klasa
 
@@ -131,7 +131,7 @@ Obiekt klasy `basic_istream<Char_T, Tr>` magazynów:
 
 Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifstream-class.md) , aby dowiedzieć się więcej o strumieniach wejściowych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -210,7 +210,7 @@ Zwraca liczbę znaków odczytywanych podczas ostatniego niesformatowanych danych
 streamsize gcount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wyodrębniania.
 
@@ -281,7 +281,7 @@ Znak do pobrania.
 *strbuf*\
 Bufor, który ma zostać zapisany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Forma get bez parametrów zwraca element odczytaną jako liczbę całkowitą lub koniec pliku. Pozostałe formularze zwracają strumień (* `this`).
 
@@ -358,7 +358,7 @@ Znak, który powinien przerwać odczyt, jeśli został napotkany przed *liczbą*
 *str*\
 Ciąg, w którym ma zostać zapisany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -415,7 +415,7 @@ Liczba elementów do pominięcia z bieżącej pozycji odczytu.
 \ *ogranicznika*
 Element, który, jeśli napotka przed Count, powoduje, że `ignore` zwracać i dopuszcza wszystkie elementy po odczytaniu *ogranicznika* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -480,7 +480,7 @@ Obiekt typu `stream_buf`.
 *val*\
 Wartość, która ma zostać odczytana ze strumienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -587,7 +587,7 @@ basic_istream& operator=(basic_istream&& right);
 *prawa*\
 Odwołanie `rvalue` do obiektu `basic_ifstream`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca __* this__.
 
@@ -603,7 +603,7 @@ Zwraca następny znak, który ma zostać odczytany.
 int_type peek();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Następny znak, który zostanie odczytany.
 
@@ -654,7 +654,7 @@ basic_istream<Char_T, Tr>& putback(
 *Ch*\
 Znak, który ma zostać przywrócony do strumienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -706,7 +706,7 @@ Tablica, w której mają zostać odczytane znaki.
 *liczba*\
 Liczba znaków do odczytania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień (`*this`).
 
@@ -767,7 +767,7 @@ Tablica, w której `readsome` są przechowywane znaki odczytywane przez program.
 *liczba*\
 Liczba znaków do odczytania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków faktycznie odczytywanych, [`gcount`](#gcount).
 
@@ -827,7 +827,7 @@ Przesunięcie, aby przenieść wskaźnik odczytu względem *metody*.
 *sposób*\
 Jeden z [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerations.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -912,7 +912,7 @@ Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumie
 int sync();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) jest wskaźnikiem typu null, funkcja zwraca wartość-1. W przeciwnym razie wywołuje `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Jeśli to wywołanie zwróci wartość-1, funkcja wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` i zwraca wartość-1. W przeciwnym razie funkcja zwraca wartość zero.
 
@@ -924,7 +924,7 @@ Raportuje bieżącą pozycję odczytu w strumieniu.
 pos_type tellg();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca pozycja w strumieniu.
 
@@ -966,7 +966,7 @@ Umieszcza ostatnio odczytywany znak z powrotem do strumienia.
 basic_istream<Char_T, Tr>& unget();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Strumień ( __* this__).
 
@@ -1005,7 +1005,7 @@ Type 'abc': abc
 abc
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)

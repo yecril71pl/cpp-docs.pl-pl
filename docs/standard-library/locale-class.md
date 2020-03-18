@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856556"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420002"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -138,7 +138,7 @@ cout.imbue(loc);
 
 Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same jak w ustawieniach regionalnych języka C, nawet jeśli globalne ustawienia regionalne dostarczają zmiany reguł do wstawiania dat i kwot pieniężnych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -234,7 +234,7 @@ Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który repre
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do ustawień regionalnych języka C.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 Ustawienia regionalne zawierające zestaw reguł, który ma zostać wstawiony do docelowego ustawienia regionalnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do **\*ten** aspekt `Facet` wymieniony w *source_locale*.
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 Ustawienia regionalne, które mają być używane jako domyślne ustawienia regionalne programu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienia regionalne przed zresetowaniem domyślnych ustawień regionalnych.
 
@@ -520,7 +520,7 @@ Zwraca przechowywaną nazwę ustawień regionalnych.
 string name() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg określający nazwę ustawień regionalnych.
 
@@ -572,7 +572,7 @@ bool operator!=(const locale& right) const;
 *prawa*\
 Jedno z wartości lokalnych do przetestowania pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość logiczna **prawda** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych. Jest to **wartość FAŁSZ** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych.
 
@@ -639,7 +639,7 @@ Lewy ciąg.
 *prawa*\
 Prawidłowy ciąg.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca:
 
@@ -705,7 +705,7 @@ bool operator==(const locale& right) const;
 *prawa*\
 Jeden z ustawień regionalnych, które mają być testowane pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość logiczna **prawda** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych. Ma **wartość FAŁSZ** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych.
 

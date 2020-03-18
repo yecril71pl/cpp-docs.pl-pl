@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862517"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417475"
 ---
 # <a name="service-map-macros"></a>Makra Service Map
 
@@ -122,7 +122,7 @@ podczas Identyfikator interfejsu, do którego obiekt wywołujący ma uzyskać do
 *ppvObj*<br/>
 określoną Pośredni wskaźnik do żądanego interfejsu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwrócona wartość HRESULT ma jedną z następujących wartości:
 
@@ -140,7 +140,7 @@ Zwrócona wartość HRESULT ma jedną z następujących wartości:
 
 Gdy wywołasz `QueryService`, przekażesz zarówno identyfikator usługi (*guidService*), jak i identyfikator interfejsu (*riid*). *GuidService* określa usługę, do której chcesz uzyskać dostęp, a *riid* identyfikuje interfejs, który jest częścią usługi. W powrocie otrzymujesz pośredni wskaźnik do interfejsu.
 
-Obiekt, który implementuje interfejs, może również zaimplementować interfejsy, które są częścią innych usług. Rozważ następujące opcje:
+Obiekt, który implementuje interfejs, może również zaimplementować interfejsy, które są częścią innych usług. Rozważ następujące źródła:
 
 - Niektóre z tych interfejsów mogą być opcjonalne. Nie wszystkie interfejsy zdefiniowane w opisie usługi muszą być obecne w każdej implementacji usługi lub na każdym zwracanym obiekcie.
 
@@ -150,6 +150,6 @@ Obiekt, który implementuje interfejs, może również zaimplementować interfej
 
 Dwie różne usługi, takie jak SID_SMyService i SID_SYourService, mogą określić użycie tego samego interfejsu, nawet jeśli implementacja interfejsu może nie zawierać żadnych wspólnych wartości między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić inny obiekt niż `QueryService` (SID_SYourService, IID_IDispatch). Nie przyjmuje się tożsamości obiektu po określeniu innego identyfikatora usługi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Utworze](../../atl/reference/atl-macros.md)

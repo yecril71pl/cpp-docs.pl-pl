@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855631"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421262"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 
@@ -43,7 +43,7 @@ Implementuje po stronie klienta Automatyzacja OLE.
 class COleDispatchDriver
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -183,7 +183,7 @@ Wskaźnik do obiektu wyjątku OLE, który będzie przechowywać kod stanu wynika
 *lpszProgID*<br/>
 Wskaźnik na identyfikator programistyczny, taki jak "Excel. Document. 5" obiektu automatyzacji, dla którego ma zostać utworzony obiekt wysyłki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe po powodzeniu; w przeciwnym razie 0.
 
@@ -199,7 +199,7 @@ Odłącza bieżące połączenie `IDispatch` od tego obiektu.
 LPDISPATCH DetachDispatch();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do wcześniej dołączonego obiektu OLE `IDispatch`.
 

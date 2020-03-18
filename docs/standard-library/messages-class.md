@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884027"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419862"
 ---
 # <a name="messages-class"></a>messages — Klasa
 
@@ -53,7 +53,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie bazowej messages_base, pobiera wymagane informacje i zamyka katalog.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -161,7 +161,7 @@ Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikat�
 *_Dfault*\
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca kopię *_Dfault* w przypadku niepowodzenia. W przeciwnym razie zwraca kopię określonej sekwencji komunikatów.
 
@@ -191,7 +191,7 @@ Nazwa katalogu, który ma być przeszukiwany.
 *_Loc*\
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość, która porównuje mniej niż zero w przypadku niepowodzenia. W przeciwnym razie zwracana wartość może być używana jako pierwszy argument w późniejszej wywołaniu metody [Get](#get).
 
@@ -231,7 +231,7 @@ Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikat�
 *_Dfault*\
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca kopię *_Dfault* w przypadku niepowodzenia. W przeciwnym razie zwraca kopię określonej sekwencji komunikatów.
 
@@ -292,7 +292,7 @@ Nazwa katalogu, który ma być przeszukiwany.
 *_Loc*\
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość, która porównuje mniej niż zero w przypadku niepowodzenia. W przeciwnym razie zwracana wartość może być używana jako pierwszy argument w późniejszej wywołaniu metody [Get](#get).
 
@@ -312,7 +312,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji komunikatów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ustawienia regionalne >](../standard-library/locale.md)\
 \ [klasy messages_base](../standard-library/messages-base-class.md)

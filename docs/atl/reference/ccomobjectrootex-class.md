@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 8fa4e7a035ded2e1a20dd278a5d54d40252e1958
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862613"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417930"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -43,7 +43,7 @@ class CComObjectRootEx : public CComObjectRootBase
 *ThreadModel*<br/>
 Klasa, której metody implementują żądany model wątkowości. Można jawnie wybrać model wątkowości, ustawiając *ThreadModel* na [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)lub [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Domyślny model wątku serwera można zaakceptować, ustawiając *ThreadModel* na [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 

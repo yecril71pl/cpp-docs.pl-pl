@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855535"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421661"
 ---
 # <a name="cpalette-class"></a>Klasa CPalette
 
@@ -43,17 +43,17 @@ Hermetyzuje paletę kolorów systemu Windows.
 class CPalette : public CGdiObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPalette:: CPalette](#cpalette)|Konstruuje obiekt `CPalette` bez dołączonej palety systemu Windows. Aby można było użyć obiektu `CPalette`, należy zainicjować go przy użyciu jednej z funkcji Członkowskich inicjujących.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPalette:: AnimatePalette](#animatepalette)|Zamienia wpisy w palecie logicznej identyfikowane przez obiekt `CPalette`. Aplikacja nie musi aktualizować swojego obszaru klienckiego, ponieważ system Windows natychmiast mapuje nowe wpisy do palety systemowej.|
 |[CPalette:: CreateHalftonePalette](#createhalftonepalette)|Tworzy paletę półtonów dla kontekstu urządzenia i dołącza ją do obiektu `CPalette`.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPalette:: operator HPALETTE](#operator_hpalette)|Zwraca HPALETTE dołączony do `CPalette`.|
 
@@ -144,7 +144,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 *Domeny*<br/>
 Identyfikuje kontekst urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -167,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 *lpLogPalette*<br/>
 Wskazuje strukturę [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) , która zawiera informacje o kolorach w logicznej palecie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -188,7 +188,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 *hPalette*<br/>
 Uchwyt palety kolorów interfejsu GDI systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CPalette`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -204,7 +204,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę wpisów w da
 int GetEntryCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wpisów w logicznej palecie.
 
@@ -221,7 +221,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 *crColor*<br/>
 Określa kolor, który ma zostać dopasowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks wpisu w logicznej palecie. Wpis zawiera kolor, który jest najbardziej zbliżony do określonego koloru.
 
@@ -247,7 +247,7 @@ Określa liczbę wpisów w palecie logicznej do pobrania.
 *lpPaletteColors*<br/>
 Wskazuje tablicę struktur danych [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) do odbierania wpisów palety. Tablica musi zawierać co najmniej tyle struktur danych jak określono przez *nNumEntries*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wpisów pobranych z palety logicznej; 0, jeśli funkcja nie powiodła się.
 
@@ -259,7 +259,7 @@ Użyj tego operatora, aby uzyskać dojście do dołączonego interfejsu GDI syst
 operator HPALETTE() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows reprezentowanego przez obiekt `CPalette`; w przeciwnym razie wartość NULL.
 
@@ -282,7 +282,7 @@ BOOL ResizePalette(UINT nNumEntries);
 *nNumEntries*<br/>
 Określa liczbę wpisów w palecie po zmianie rozmiaru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli rozmiar palety został pomyślnie zmieniony; w przeciwnym razie 0.
 
@@ -314,7 +314,7 @@ Określa liczbę wpisów w palecie logicznej, która ma zostać ustawiona.
 *lpPaletteColors*<br/>
 Wskazuje tablicę struktur danych [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) do odbierania wpisów palety. Tablica musi zawierać co najmniej tyle struktur danych jak określono przez *nNumEntries*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wpisów ustawionych w palecie logicznej; 0, jeśli funkcja nie powiodła się.
 
@@ -324,7 +324,7 @@ Jeśli w kontekście urządzenia zostanie wybrana paleta logiczna, gdy aplikacja
 
 Aby uzyskać więcej informacji, zobacz [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład DIBLOOK MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>

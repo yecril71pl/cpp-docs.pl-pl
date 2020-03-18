@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862979"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417769"
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
 
@@ -50,11 +50,11 @@ Klasa bazowa klasy. Domyślnie Klasa bazowa to [CWindow](../../atl/reference/cwi
 *TWinTraits*<br/>
 [Klasa cech](../../atl/understanding-window-traits.md) , która definiuje style dla okna. Wartość domyślna to `CControlWinTraits`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWindowImpl:: Create](#create)|Tworzy okno.|
 
@@ -164,7 +164,7 @@ podczas Dla okna podrzędnego identyfikator okna. Dla okna najwyższego poziomu,
 *lpCreateParam*<br/>
 podczas Wskaźnik do danych tworzenia okna. Pełny opis można znaleźć w opisie parametru końcowego [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do nowo utworzonego okna. W przeciwnym razie wartość NULL.
 
@@ -204,7 +204,7 @@ podczas Dodatkowe informacje specyficzne dla wiadomości.
 *lParam*<br/>
 podczas Dodatkowe informacje specyficzne dla wiadomości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wynik przetwarzania komunikatów.
 
@@ -222,7 +222,7 @@ Zwraca bieżący komunikat spakowany w strukturze `MSG`.
 const MSG* GetCurrentMessage();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący komunikat.
 
@@ -234,7 +234,7 @@ Zwraca `WindowProc`, bieżącą procedurę okna.
 virtual WNDPROC GetWindowProc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca procedura okna.
 
@@ -250,7 +250,7 @@ Wywołuje się, by uzyskać [dostęp do informacji](#create) o klasie okna.
 static CWndClassInfo& GetWndClassInfo();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Statyczne wystąpienie elementu [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).
 
@@ -310,7 +310,7 @@ BOOL SubclassWindow(HWND hWnd);
 *Właściwość*<br/>
 podczas Dojście do okna podklasy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okno zostało pomyślnie podklasy; w przeciwnym razie FALSE.
 
@@ -329,7 +329,7 @@ Odłącza okno podklasy od obiektu `CWindowImpl` i przywraca pierwotną procedur
 HWND UnsubclassWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do okna, które zostało wcześniej podklasy.
 
@@ -359,7 +359,7 @@ podczas Dodatkowe informacje specyficzne dla wiadomości.
 *lParam*<br/>
 podczas Dodatkowe informacje specyficzne dla wiadomości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wynik przetwarzania komunikatów.
 
@@ -375,7 +375,7 @@ Wynik przetwarzania komunikatów.
 
 Można przesłonić `WindowProc`, aby zapewnić inny mechanizm obsługi komunikatów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>

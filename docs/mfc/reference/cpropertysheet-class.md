@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865457"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421010"
 ---
 # <a name="cpropertysheet-class"></a>Klasa CPropertySheet
 
@@ -69,17 +69,17 @@ Reprezentuje arkusze właściwości, znane również jako okna dialogowe kart.
 class CPropertySheet : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Konstruuje obiekt `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertySheet:: addPage](#addpage)|Dodaje stronę do arkusza właściwości.|
 |[CPropertySheet:: konstrukcja](#construct)|Konstruuje obiekt `CPropertySheet`.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertySheet:: m_psh](#m_psh)|Struktura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) systemu Windows. Zapewnia dostęp do podstawowych parametrów arkusza właściwości.|
 
@@ -349,7 +349,7 @@ Style okna dla arkusza właściwości. Aby uzyskać pełną listę dostępnych s
 *dwExStyle*<br/>
 Rozszerzone style okna dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Rozszerzone style okien](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli arkusz właściwości został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -379,7 +379,7 @@ Wyświetla modalny arkusz właściwości.
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 IDOK lub IDCANCEL, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0 lub-1. Jeśli arkusz właściwości został ustanowiony jako Kreator (zobacz [SetWizardMode](#setwizardmode)), `DoModal` zwraca albo ID_WIZFINISH lub IDCANCEL.
 
@@ -472,7 +472,7 @@ Pobiera numer indeksu aktywnej strony okna arkusza właściwości, a następnie 
 int GetActiveIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer indeksu aktywnej strony.
 
@@ -488,7 +488,7 @@ Pobiera aktywną stronę okna arkusza właściwości.
 CPropertyPage* GetActivePage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnej strony.
 
@@ -513,7 +513,7 @@ CPropertyPage* GetPage(int nPage) const;
 *nPage*<br/>
 Indeks żądanej strony, zaczynając od 0. Musi zawierać się w przedziale od 0 do mniej niż liczba stron w arkuszu właściwości włącznie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do strony odpowiadającej parametrowi *nPage* .
 
@@ -529,7 +529,7 @@ Określa liczbę stron znajdujących się obecnie w arkuszu właściwości.
 int GetPageCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba stron w arkuszu właściwości.
 
@@ -550,7 +550,7 @@ int GetPageIndex(CPropertyPage* pPage);
 *pPage*<br/>
 Wskazuje na stronę z indeksem, który ma zostać znaleziony. Nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer indeksu strony.
 
@@ -570,7 +570,7 @@ Pobiera wskaźnik do kontrolki karta, aby wykonać coś specyficznego dla kontro
 CTabCtrl* GetTabControl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kontrolki karta.
 
@@ -625,7 +625,7 @@ Przesłania do inicjowania arkusza właściwości rozszerzonego.
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa, czy aplikacja ustawi fokus wprowadzania na jeden z kontrolek w arkuszu właściwości. Jeśli `OnInitDialog` zwraca wartość różną od zera, system Windows ustawia fokus wprowadzania na pierwszy formant w arkuszu właściwości. Aplikacja może zwrócić 0 tylko wtedy, gdy jawnie ustawił fokus wprowadzania na jeden z kontrolek w arkuszu właściwości.
 
@@ -712,7 +712,7 @@ Indeks strony do ustawienia. Musi zawierać się w przedziale od 0 do mniej niż
 *pPage*<br/>
 Wskazuje stronę, która ma zostać ustawiona w arkuszu właściwości. Nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli arkusz właściwości został aktywowany pomyślnie; w przeciwnym razie 0.
 
@@ -828,7 +828,7 @@ Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu `S
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>

@@ -6,11 +6,11 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875961"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416901"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;przydzielania&gt; operatory
 
@@ -38,7 +38,7 @@ bool operator!=(
 |*lewym*|Jeden z obiektów alokatora, który ma być testowany pod kątem nierówności.|
 |*Kliknij*|Jeden z obiektów alokatora, który ma być testowany pod kątem nierówności.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli obiekty alokatora nie są równe; **Fałsz** , jeśli obiekty alokatora są równe.
 
@@ -64,7 +64,7 @@ bool operator==(
 |*lewym*|Jeden z obiektów alokatora, który ma być testowany pod kątem równości.|
 |*Kliknij*|Jeden z obiektów alokatora, który ma być testowany pod kątem równości.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekty alokatora są równe; **Fałsz** , jeśli obiekty alokatora nie są równe.
 
@@ -72,6 +72,6 @@ bool operator==(
 
 Ten operator szablonu zwraca `left.equals(right)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<przydzielania >](../standard-library/allocators-header.md)

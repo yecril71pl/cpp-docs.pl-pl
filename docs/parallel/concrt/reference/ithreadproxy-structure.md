@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854224"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417160"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy — Struktura
 
@@ -28,11 +28,11 @@ Abstrakcja wątku wykonania. W zależności od klucza zasad `SchedulerType` utwo
 struct IThreadProxy;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IThreadProxy:: GetId —](#getid)|Zwraca unikatowy identyfikator dla serwera proxy wątku.|
 |[IThreadProxy:: SwitchOut —](#switchout)|Usuwa kontekst z bazowego głównego procesora wirtualnego.|
@@ -61,7 +61,7 @@ Zwraca unikatowy identyfikator dla serwera proxy wątku.
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator liczby całkowitej.
 
@@ -136,7 +136,7 @@ Gdy wywoływany przez serwer proxy wątku, którego kopia zapasowa jest regularn
 
 należy wywołać `YieldToSystem` w interfejsie `IThreadProxy`, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IExecutionContext, struktura](iexecutioncontext-structure.md)<br/>

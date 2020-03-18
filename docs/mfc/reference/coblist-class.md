@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855335"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416873"
 ---
 # <a name="coblist-class"></a>Klasa CObList
 
@@ -67,17 +67,17 @@ fSupports uporządkowane listy nieunikatowych wskaźników `CObject` dostępnych
 class CObList : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CObList::CObList](#coblist)|Tworzy pustą listę wskaźników `CObject`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CObList:: addszef](#addhead)|Dodaje element (lub wszystkie elementy z innej listy) do nagłówka listy (tworzy nowy nagłówek).|
 |[CObList:: AddTail](#addtail)|Dodaje element (lub wszystkie elementy z innej listy) do ogona listy (tworzy nowy ogon).|
@@ -149,13 +149,13 @@ Wskaźnik `CObject`, który ma zostać dodany do tej listy.
 *pNewList*<br/>
 Wskaźnik do innej listy `CObList`. Elementy w *pNewList* zostaną dodane do tej listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza wersja zwraca wartość pozycji nowo wstawionego elementu.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::AddHead`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja addgłowy (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void addszef (CPtrList** <strong>\*</strong> `pNewList` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Pozycja addgłowy (const CString &** `newElement` **);**<br /><br /> **Pozycja addgłowy (LPCTSTR** `newElement` **);**<br /><br /> **void addszef (CStringList** <strong>\*</strong> `pNewList` **);**|
@@ -195,7 +195,7 @@ Wskaźnik `CObject`, który ma zostać dodany do tej listy.
 *pNewList*<br/>
 Wskaźnik do innej listy `CObList`. Elementy w *pNewList* zostaną dodane do tej listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza wersja zwraca wartość pozycji nowo wstawionego elementu.
 
@@ -205,7 +205,7 @@ Lista może być pusta przed operacją.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::AddTail`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja AddTail (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Pozycja AddTail (const CString &** `newElement` **);**<br /><br /> **Pozycja AddTail (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|
@@ -243,7 +243,7 @@ Gdy lista zostanie powiększona, pamięć jest przypisana w jednostkach wpisów 
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::CObList`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
@@ -276,7 +276,7 @@ Wskaźnik obiektu, który ma zostać odnaleziony na tej liście.
 *startAfter*<br/>
 Pozycja początkowa dla wyszukiwania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli nie można odnaleźć obiektu.
 
@@ -286,7 +286,7 @@ Należy zauważyć, że wartości wskaźnika są porównywane, a nie zawartość
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::Find`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja Znajdź (void** <strong>\*</strong> `searchValue` **, Position** `startAfter` **= null) const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Pozycja Find (LPCTSTR** `searchValue` **, Position** `startAfter` **= null) const;**|
@@ -310,7 +310,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 *nIndex*<br/>
 Indeks (liczony od zera) elementu listy, który ma zostać znaleziony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli *nIndex* jest zbyt duża. (Struktura generuje potwierdzenie, jeśli *nIndex* jest ujemna).
 
@@ -320,7 +320,7 @@ Rozpocznie skanowanie sekwencyjne od szefa listy, zatrzymując na *n*-tym elemen
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::FindIndex`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Position FindIndex — (INT_PTR** `nIndex` **) const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Position FindIndex — (INT_PTR** `nIndex` **) const;**|
@@ -345,7 +345,7 @@ const CObject*& GetAt(POSITION position) const;
 *umieścić*<br/>
 Wartość pozycji zwrócona przez poprzednie `GetHeadPosition` lub `Find` wywołanie funkcji składowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zobacz opis wartości zwracanej dla elementu [Getnagłówke](#gethead).
 
@@ -357,7 +357,7 @@ Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję n
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetAt`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (** *pozycja* położenia **) stała;**<br /><br /> **void\*& GetAt (** *pozycja* położenia **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (** *pozycja* położenia **) stała;**<br /><br /> **CString & GetAt (** *pozycja* położenia **);**|
@@ -374,13 +374,13 @@ Pobiera liczbę elementów na tej liście.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita zawierająca liczbę elementów.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetCount`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount () const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount () const;**|
@@ -400,7 +400,7 @@ CObject*& GetHead();
 const CObject*& GetHead() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CObList`, `GetHead` zwraca wskaźnik `CObject`. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
@@ -412,7 +412,7 @@ Przed wywołaniem `GetHead`należy upewnić się, że lista nie jest pusta. Jeś
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetHead`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& getnagłówku () const; void\*& getnagłówkowym ();**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & getgłowy () const; CString & getszef ();**|
@@ -433,13 +433,13 @@ Pobiera pozycję elementu nagłówkowego tej listy.
 POSITION GetHeadPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli lista jest pusta.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetHeadPosition`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetHeadPosition () const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetHeadPosition () const;**|
@@ -464,7 +464,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 *Elemencie rPosition*<br/>
 Odwołanie do wartości pozycji zwróconej przez poprzednie `GetNext`, `GetHeadPosition`lub inne wywołanie funkcji elementu członkowskiego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zobacz opis wartości zwracanej dla elementu [Getnagłówke](#gethead).
 
@@ -483,7 +483,7 @@ Istnieje możliwość usunięcia elementu podczas iteracji. Zobacz przykład dla
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetNext`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
@@ -515,7 +515,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 *Elemencie rPosition*<br/>
 Odwołanie do wartości pozycji zwróconej przez poprzednie `GetPrev` lub inne wywołanie funkcji składowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zobacz opis wartości zwracanej dla elementu [Getnagłówke](#gethead).
 
@@ -532,7 +532,7 @@ Jeśli pobrany element jest pierwszy na liście, Nowa wartość *elemencie rPosi
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetPrev`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
@@ -558,7 +558,7 @@ Zwraca liczbę elementów listy.
 INT_PTR GetSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów na liście.
 
@@ -568,7 +568,7 @@ Wywołaj tę metodę, aby pobrać liczbę elementów na liście.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetSize`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize () const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize () const;**|
@@ -588,7 +588,7 @@ CObject*& GetTail();
 const CObject*& GetTail() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zobacz opis wartości zwracanej dla elementu [Getnagłówke](#gethead).
 
@@ -598,7 +598,7 @@ Przed wywołaniem `GetTail`należy upewnić się, że lista nie jest pusta. Jeś
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetTail`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail () const; void\*& GetTail ();**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; CString & GetTail ();**|
@@ -617,13 +617,13 @@ Pobiera pozycję elementu końcowego z tej listy. **Wartość null** , jeśli li
 POSITION GetTailPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli lista jest pusta.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::GetTailPosition`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetTailPosition () const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetTailPosition () const;**|
@@ -654,12 +654,12 @@ Wskaźnik obiektu, który ma zostać dodany do tej listy.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::InsertAfter`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertAfter (pozycja położenia** **, void** <strong>\*</strong> `newElement` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (położenie pozycji** **, const CString &** `newElement` **);**<br /><br /> **Position InsertAfter (położenie pozycji** **, LPCTSTR** `newElement` **);**|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która jest taka sama jak parametr *pozycji* .
 
@@ -696,13 +696,13 @@ Wartość pozycji zwrócona przez poprzednie `GetNext`, `GetPrev`lub `Find` wywo
 *newElement*<br/>
 Wskaźnik obiektu, który ma zostać dodany do tej listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana do pobierania iteracji lub wskaźnika obiektu; Wartość NULL, jeśli lista jest pusta.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::InsertBefore`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertBefore (pozycja położenia** **, void** <strong>\*</strong> `newElement` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertBefore (położenie pozycji** **, const CString &** `newElement` **);**<br /><br /> **Position InsertBefore (położenie pozycji** **, LPCTSTR** `newElement` **);**|
@@ -730,13 +730,13 @@ Wskazuje, czy ta lista nie zawiera żadnych elementów.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli ta lista jest pusta; w przeciwnym razie 0.
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::IsEmpty`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty () const;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty () const;**|
@@ -761,7 +761,7 @@ Po usunięciu elementów z `CObList`, można usunąć z listy wskaźniki obiekt�
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::RemoveAll`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void No();**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void No();**|
@@ -793,7 +793,7 @@ Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję n
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::RemoveAt`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (** *pozycja* położenia **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (** *pozycja* położenia **);**|
@@ -822,7 +822,7 @@ Usuwa element z nagłówka listy i zwraca do niego wskaźnik.
 CObject* RemoveHead();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CObject` wskaźnik wcześniej na początku listy.
 
@@ -832,7 +832,7 @@ Przed wywołaniem `RemoveHead`należy upewnić się, że lista nie jest pusta. J
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::RemoveHead`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|
@@ -851,7 +851,7 @@ Usuwa element z ogona listy i zwraca do niego wskaźnik.
 CObject* RemoveTail();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu, który znajduje się na końcu listy.
 
@@ -861,7 +861,7 @@ Przed wywołaniem `RemoveTail`należy upewnić się, że lista nie jest pusta. J
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::RemoveTail`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail ();**|
@@ -898,7 +898,7 @@ Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję n
 
 W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne do `CObList::SetAt`.
 
-|Class|Funkcja elementów członkowskich|
+|Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (pozycja** `pos` **, const CString &** `newElement` **).**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt (pozycja** `pos` **, LPCTSTR** `newElement` **);**|
@@ -917,7 +917,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

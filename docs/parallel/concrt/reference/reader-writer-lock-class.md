@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867172"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417125"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock — Klasa
 
@@ -32,7 +32,7 @@ Blokada modułu zapisywania czytnika z preferencjami dla programu zapisywania z 
 class reader_writer_lock;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-classes"></a>Klasy publiczne
 
@@ -192,7 +192,7 @@ Próbuje uzyskać blokadę modułu zapisywania czytnika jako moduł zapisujący 
 bool try_lock();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pozyskania blokady wartość **true**; w przeciwnym razie wartość **false**.
 
@@ -204,7 +204,7 @@ Próbuje uzyskać blokadę modułu odczytującego czytnika jako czytnik bez blok
 bool try_lock_read();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pozyskania blokady wartość **true**; w przeciwnym razie wartość **false**.
 

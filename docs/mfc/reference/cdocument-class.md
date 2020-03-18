@@ -121,11 +121,11 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856764"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418700"
 ---
 # <a name="cdocument-class"></a>Klasa CDocument
 
@@ -137,7 +137,7 @@ Oferuje podstawowe funkcje dla klas dokumentów zdefiniowanych przez użytkownik
 class CDocument : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -302,7 +302,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 *pFrame*<br/>
 Wskazuje okno ramki widoku dołączonego do dokumentu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli można bezpiecznie zamknąć okno ramki; w przeciwnym razie 0.
 
@@ -378,7 +378,7 @@ Określa identyfikator GUID fragmentu do znalezienia.
 *identyfikatora*<br/>
 Określa identyfikator PID fragmentu do znalezienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W razie powodzenia Umieść na wewnętrznej liście fragmentów. W przeciwnym razie wartość NULL.
 
@@ -392,7 +392,7 @@ Zwraca wskaźnik do obiektu implementującego interfejs `IDocument`.
 virtual ATL::IDocument* GetAdapter();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu implementującego interfejs `IDocument`.
 
@@ -406,7 +406,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do szablonu dokumentu dla tego typ
 CDocTemplate* GetDocTemplate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do szablonu dokumentu dla tego typu dokumentu lub wartości NULL, jeśli dokument nie jest zarządzany przez szablon dokumentu.
 
@@ -436,7 +436,7 @@ Wskaźnik do istniejącego obiektu wyjątku pliku, który wskazuje stan ukończe
 *nOpenFlags*<br/>
 Tryb udostępniania i dostępu. Określa akcję, która ma zostać podjęta podczas otwierania pliku. Można połączyć opcje wymienione w konstruktorze CFile [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile) za pomocą operatora bitowego or (&#124;). Wymagane są jedno uprawnienie dostępu i jedna opcja udostępniania; tryby `modeCreate` i `modeNoInherit` są opcjonalne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CFile`.
 
@@ -448,7 +448,7 @@ Wywołaj tę funkcję, aby pobrać pozycję pierwszego widoku na liście widokó
 virtual POSITION GetFirstViewPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może być używana dla iteracji z funkcją składową [GetNextView](#getnextview) .
 
@@ -469,7 +469,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 *Elemencie rPosition*<br/>
 Odwołanie do wartości pozycji zwróconej przez poprzednie wywołanie do funkcji składowych `GetNextView` lub [GetFirstViewPosition](#getfirstviewposition) . Ta wartość nie może być RÓWNa NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do widoku identyfikowanego przez *elemencie rPosition*.
 
@@ -489,7 +489,7 @@ Wywołaj tę funkcję, aby uzyskać w pełni kwalifikowaną ścieżkę pliku dys
 const CString& GetPathName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W pełni kwalifikowana ścieżka dokumentu. Ten ciąg jest pusty, jeśli dokument nie został zapisany lub nie ma skojarzonego z nim pliku dyskowego.
 
@@ -515,7 +515,7 @@ Zawiera uchwyt do mapy bitowej, gdy funkcja zwraca się pomyślnie.
 *pdwAlpha*<br/>
 Zawiera element DWORD określający wartość kanału alfa, gdy funkcja zwraca się pomyślnie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli mapa bitowa dla miniatury została utworzona pomyślnie. w przeciwnym razie FALSE.
 
@@ -529,7 +529,7 @@ Wywołaj tę funkcję, aby uzyskać tytuł dokumentu, który zazwyczaj pochodzi 
 const CString& GetTitle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tytuł dokumentu.
 
@@ -553,7 +553,7 @@ Wywołaj tę funkcję, aby określić, czy dokument został zmodyfikowany od cza
 virtual BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli dokument został zmodyfikowany od czasu ostatniego zapisania; w przeciwnym razie 0.
 
@@ -565,7 +565,7 @@ Wskazuje, czy to wystąpienie `CDocument` zostało utworzone dla programu obsłu
 BOOL IsSearchAndOrganizeHandler() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli to wystąpienie `CDocument` zostało utworzone dla & wyszukiwania Organizuj program obsługi.
 
@@ -591,7 +591,7 @@ Wskaźnik do strumienia. Ten strumień jest dostarczany przez powłokę.
 *dwGrfMode*<br/>
 Tryb dostępu do strumienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli operacja ładowania się powiedzie, w przeciwnym razie HRESULT z kodem błędu.
 
@@ -709,7 +709,7 @@ Wywoływane przez platformę, gdy musi utworzyć ramkę podglądu dla zaawansowa
 virtual BOOL OnCreatePreviewFrame();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli ramka została utworzona pomyślnie. w przeciwnym razie FALSE.
 
@@ -795,7 +795,7 @@ Wskaźnik do strumienia przychodzącego.
 *grfMode*<br/>
 Tryb dostępu do strumienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli ładowanie zakończyło się pomyślnie; w przeciwnym razie kod błędu.
 
@@ -809,7 +809,7 @@ Wywoływane przez platformę w ramach polecenia nowy plik.
 virtual BOOL OnNewDocument();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli dokument został pomyślnie zainicjowany; w przeciwnym razie 0.
 
@@ -844,7 +844,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 *lpszPathName*<br/>
 Wskazuje ścieżkę do dokumentu do otwarcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli dokument został pomyślnie załadowany; w przeciwnym razie 0.
 
@@ -879,7 +879,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 *phwnd*<br/>
 określoną Gdy ta metoda zwraca, zawiera wskaźnik do elementu HWND zwróconego przez wywołanie funkcji `GetFocus` z wątku pierwszego planu obsługi podglądu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK, jeśli się powiedzie; lub w przeciwnym razie wartość błędu.
 
@@ -898,7 +898,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 *pmsg*<br/>
 podczas Wskaźnik do komunikatu okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli komunikat o naciśnięciu klawisza może być przetwarzany przez procedurę obsługi podglądu, program obsługi przetwarza go i zwraca S_OK. Jeśli program obsługi podglądu nie może przetworzyć komunikatu o naciśnięciu klawisza, oferuje go hostowi za pośrednictwem `IPreviewHandlerFrame::TranslateAccelerator`. Jeśli host przetwarza komunikat, ta metoda zwraca S_OK. Jeśli host nie przetwarza komunikatu, Metoda ta zwraca S_FALSE.
 
@@ -957,7 +957,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 *lpszPathName*<br/>
 Wskazuje w pełni kwalifikowaną ścieżkę, w której plik powinien zostać zapisany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli dokument został pomyślnie zapisany; w przeciwnym razie 0.
 
@@ -1026,7 +1026,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 *ppValue*<br/>
 określoną Gdy funkcja zwraca, *ppValue* zawiera wartość, która została odczytana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1137,7 +1137,7 @@ Wywoływane przez platformę przed zamknięciem zmodyfikowanego dokumentu.
 virtual BOOL SaveModified();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli jest bezpieczna do kontynuowania i zamknięcia dokumentu; 0, jeśli dokument nie powinien być zamknięty.
 
@@ -1158,7 +1158,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 *pValue*<br/>
 Określa wartość fragmentu do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

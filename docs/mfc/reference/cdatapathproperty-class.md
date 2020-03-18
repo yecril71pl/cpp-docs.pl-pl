@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890827"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418693"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
 
@@ -37,17 +37,17 @@ Implementuje właściwość kontrolki OLE, która może zostać załadowana asyn
 class CDataPathProperty : public CAsyncMonikerFile
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Konstruuje obiekt `CDataPathProperty`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDataPathProperty:: GetControl](#getcontrol)|Pobiera asynchroniczną kontrolkę OLE skojarzoną z obiektem `CDataPathProperty`.|
 |[CDataPathProperty:: GetPath](#getpath)|Pobiera nazwę ścieżki właściwości.|
@@ -115,7 +115,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać obiekt `COleControl`
 COleControl* GetControl();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do kontrolki OLE skojarzonej z obiektem `CDataPathProperty`. Wartość NULL, jeśli nie jest skojarzona żadna kontrola.
 
@@ -127,7 +127,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać ścieżkę, ustawić
 CString GetPath() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca nazwę ścieżki do samej właściwości. Może być puste, jeśli nie określono ścieżki.
 
@@ -163,7 +163,7 @@ Wskaźnik do wyjątku pliku. W przypadku błędu, zostanie ustawiony na przyczyn
 *lpszPath*<br/>
 Ścieżka, która może być bezwzględna lub względna, użyta do utworzenia asynchronicznej monikera, która odwołuje się do rzeczywistej absolutnej lokalizacji właściwości. `CDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli potrzebujesz `CDataPathProperty` obiektu dla pliku, poprzedź `file://` ścieżką.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -215,7 +215,7 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 Ścieżka, która może być bezwzględna lub względna, do właściwości, która jest ładowana asynchronicznie. `CDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli potrzebujesz `CDataPathProperty` obiektu dla pliku, poprzedź `file://` ścieżką.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład obrazu MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>

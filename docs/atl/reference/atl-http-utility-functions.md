@@ -3,11 +3,11 @@ title: Funkcje narzędziowe HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865039"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418182"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje narzędziowe HTTP ATL
 
@@ -68,7 +68,7 @@ Flagi ATL_URL kontrolujące zachowanie tej funkcji.
 
 - ATL_URL_NO_META nie usuwa z adresu URL meta sekwencji (takich jak "." i "..").
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -106,7 +106,7 @@ Wskaźnik do zmiennej zawierającej długość w znakach *szBuffer*. Jeśli funk
 *flagiDW*<br/>
 Flagi kontrolujące zachowanie tej funkcji. Zobacz [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -151,7 +151,7 @@ Rozmiar buforu *lpszStringOut*.
 *flagiDW*<br/>
 Flagi ATL_URL kontrolujące zachowanie tej funkcji. Zobacz [ATLCanonicalizeUrl](#atlcanonicalizeurl) , aby uzyskać możliwe wartości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -168,7 +168,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 *m_nScheme*<br/>
 Wartość [ATL_URL_SCHEME](atl-url-scheme-enum.md) identyfikująca schemat, dla którego chcesz uzyskać numer portu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzona z określonym schematem lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.
 
@@ -185,7 +185,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 *chIn*<br/>
 Znak, który ma być testowany pod kątem bezpieczeństwa.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli znak wejściowy jest niebezpieczny, w przeciwnym razie FALSE.
 
@@ -225,7 +225,7 @@ Wskaźnik na zmienną typu DWORD. Jeśli funkcja się powiedzie, zmienna otrzymu
 *dwMaxLength*<br/>
 Rozmiar buforu *lpszStringOut*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -255,7 +255,7 @@ Bufor przydzielony przez obiekt wywołujący, aby otrzymać tekst wartości kolo
 *nBuffer*<br/>
 Rozmiar w bajtach buforu (łącznie z miejscem dla terminatora o wartości null).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -281,7 +281,7 @@ Czas systemowy, który ma zostać uzyskany jako ciąg formatu HTTP.
 *strTime*<br/>
 Odwołanie do zmiennej ciągu, która ma otrzymać datę i godzinę HTTP zgodnie z definicją w dokumencie RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) i RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../active-template-library-atl-concepts.md)<br/>
 [Składniki ATL COM pulpitu](../atl-com-desktop-components.md)<br/>

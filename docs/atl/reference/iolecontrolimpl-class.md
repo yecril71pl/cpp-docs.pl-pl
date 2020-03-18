@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
 ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864966"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417629"
 ---
 # <a name="iolecontrolimpl-class"></a>Klasa IOleControlImpl
 
@@ -37,7 +37,7 @@ class IOleControlImpl
 *&*<br/>
 Klasa, która pochodzi od `IOleControlImpl`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -90,7 +90,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 Zobacz [IOleControl: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -102,7 +102,7 @@ Informuje formant, że co najmniej jedna z właściwości otoczenia kontenera zm
 HRESULT OnAmbientPropertyChange(DISPID dispid);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -118,7 +118,7 @@ Informuje kontrolkę, że użytkownik naciśnie określone naciśnięcie klawisz
 HRESULT OnMnemonic(LPMSG pMsg);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 

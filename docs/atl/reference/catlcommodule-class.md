@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
 ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863215"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418084"
 ---
 # <a name="catlcommodule-class"></a>Klasa CAtlComModule
 
@@ -29,18 +29,18 @@ Ta klasa implementuje moduł serwera COM.
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor.|
 |[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlComModule::RegisterServer](#registerserver)|Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektów.|
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|Wywołaj tę metodę, aby zarejestrować bibliotekę typów.|
@@ -103,7 +103,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana. Wartość
 *pCLSID*<br/>
 Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -125,7 +125,7 @@ HRESULT RegisterTypeLib();
 *lpszIndex*<br/>
 Ciąg w formacie "\\\N", gdzie N jest indeksem liczb całkowitych zasobu biblioteki typów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -151,7 +151,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma być wyrejestrowana. Wartość do
 *pCLSID*<br/>
 Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -177,11 +177,11 @@ Ciąg w formacie "\\\N", gdzie N jest indeksem liczb całkowitych zasobu bibliot
 
 Usuwa informacje o bibliotece typów z rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, użyj pierwszej wersji tej metody, aby określić, która biblioteka typów powinna być używana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

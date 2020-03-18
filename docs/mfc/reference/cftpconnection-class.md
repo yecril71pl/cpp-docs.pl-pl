@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
 ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890798"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418574"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -47,7 +47,7 @@ Zarządza połączeniem FTP z serwerem internetowym i umożliwia bezpośrednie m
 class CFtpConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -185,7 +185,7 @@ Wartość zawierająca flagi kontrolujące tę funkcję. Aby uzyskać pełną li
 *dwContext*<br/>
 Wskaźnik do wartości zawierającej wartość zdefiniowaną przez aplikację służącą do identyfikowania kontekstu aplikacji w wywołaniach zwrotnych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -208,7 +208,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 *pstrDirName*<br/>
 Wskaźnik do ciągu zawierającego nazwę katalogu do utworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana funkcja [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji systemu Windows w celu określenia przyczyny błędu.
 
@@ -246,7 +246,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 |Przy wpisie|Rozmiar buforu, do którego odwołuje się *pstrDirName*.|
 |Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które musi przydzielić aplikacja, aby otrzymać ciąg.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -284,7 +284,7 @@ Wskaźnik do typu DWORD, który zawiera następujące informacje:
 |Przy wpisie|Rozmiar buforu, do którego odwołuje się *pstrDirName*.|
 |Przy zwrocie|Liczba znaków przechowywanych do *pstrDirName*. Jeśli funkcja członkowska nie powiedzie się i zostanie zwrócona ERROR_INSUFFICIENT_BUFFER, *lpdwLen* zawiera liczbę bajtów, które musi przydzielić aplikacja, aby otrzymać ciąg.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -344,7 +344,7 @@ Określa warunki, w których odbywa się transfer. Ten parametr może być dowol
 *dwContext*<br/>
 Identyfikator kontekstu pobierania pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -388,7 +388,7 @@ Określa warunki, w których odbywa się kolejne transfery. Może to być dowoln
 *dwContext*<br/>
 Identyfikator kontekstu służący do otwierania pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CInternetFile](../../mfc/reference/cinternetfile-class.md) .
 
@@ -434,7 +434,7 @@ Określa warunki, w których występuje transfer pliku. Może być dowolną z FT
 *dwContext*<br/>
 Identyfikator kontekstu służący do umieszczania pliku. Aby uzyskać więcej informacji na temat *dwContext*, zobacz **uwagi** .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -457,7 +457,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 *pstrFileName*<br/>
 Wskaźnik do ciągu zawierającego nazwę pliku do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -478,7 +478,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 *pstrDirName*<br/>
 Wskaźnik do ciągu zawierającego katalog, który ma zostać usunięty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -506,7 +506,7 @@ Wskaźnik do ciągu zawierającego bieżącą nazwę pliku, który ma zostać zm
 *pstrNew*<br/>
 Wskaźnik do ciągu zawierającego nową nazwę pliku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 
@@ -527,7 +527,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 *pstrDirName*<br/>
 Wskaźnik do ciągu zawierającego nazwę katalogu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Jeśli wywołanie nie powiedzie się, może zostać wywołana [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) funkcji Win32, aby określić przyczynę błędu.
 

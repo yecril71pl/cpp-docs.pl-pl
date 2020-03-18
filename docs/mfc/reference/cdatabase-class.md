@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866270"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418756"
 ---
 # <a name="cdatabase-class"></a>Klasa CDatabase
 
@@ -67,17 +67,17 @@ Reprezentuje połączenie ze źródłem danych, za pomocą którego można praco
 class CDatabase : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDatabase:: CDatabase](#cdatabase)|Konstruuje obiekt `CDatabase`. Należy zainicjować obiekt, wywołując `OpenEx` lub `Open`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDatabase:: BeginTrans](#begintrans)|Uruchamia "transakcję" — szereg wywołań odwracalnych do `AddNew`, `Edit`, `Delete`i `Update` funkcji członkowskich klasy `CRecordset` — w połączonym źródle danych. Źródło danych musi obsługiwać transakcje `BeginTrans`, aby mieć efekt.|
 |[CDatabase:: BindParameters](#bindparameters)|Pozwala powiązać parametry przed wywołaniem `CDatabase::ExecuteSQL`.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDatabase:: m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) dojście połączenia do źródła danych. Wpisz *HDBC*.|
 
@@ -135,7 +135,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby rozpocząć transakcję z po
 BOOL BeginTrans();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wywołanie zakończyło się pomyślnie, a zmiany są zatwierdzane tylko ręcznie; w przeciwnym razie 0.
 
@@ -202,7 +202,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy baza danych 
 BOOL CanTransact() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zestawy rekordów używające tego obiektu `CDatabase` zezwalają na transakcje; w przeciwnym razie 0.
 
@@ -218,7 +218,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDat
 BOOL CanUpdate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CDatabase` zezwala na aktualizacje; w przeciwnym razie, wskazujące, że wartość TRUE w *bReadOnly* została przeniesiona, gdy otwarto obiekt `CDatabase` lub samo źródło danych jest tylko do odczytu. Źródło danych jest tylko do odczytu, jeśli wywołanie funkcji interfejsu API ODBC `SQLGetInfo` dla SQL_DATASOURCE_READ_ONLY zwraca wartość "y".
 
@@ -274,7 +274,7 @@ Wywołaj tę funkcję elementu członkowskiego po wykonaniu transakcji.
 BOOL CommitTrans();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli aktualizacje zostały pomyślnie zatwierdzone; w przeciwnym razie 0. Jeśli `CommitTrans` nie powiedzie się, stan źródła danych jest niezdefiniowany. Należy sprawdzić dane, aby ustalić ich stan.
 
@@ -321,7 +321,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić trwałość zakł
 DWORD GetBookmarkPersistence() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maska bitów, która identyfikuje operacje, za pomocą których zakładki są utrwalane na obiekcie zestawu rekordów. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
@@ -351,7 +351,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać parametry połączen
 const CString GetConnect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **Stała**[CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierająca parametry połączenia w przypadku wywołania `OpenEx` lub `Open`. w przeciwnym razie pusty ciąg.
 
@@ -367,7 +367,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, w jaki sposób o
 int GetCursorCommitBehavior() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskazująca wpływ transakcji na otwarte obiekty zestawu rekordów. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
@@ -391,7 +391,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, jak operacja [wy
 int GetCursorRollbackBehavior() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskazująca wpływ transakcji na otwarte obiekty zestawu rekordów. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
@@ -415,7 +415,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę aktualnie po�
 CString GetDatabaseName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który zawiera nazwę bazy danych, jeśli się powiedzie; w przeciwnym razie puste `CString`.
 
@@ -433,7 +433,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDat
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CDatabase` jest aktualnie połączony; w przeciwnym razie 0.
 
@@ -507,7 +507,7 @@ Określa parametry połączenia. Parametry połączenia łączą informacje, kt�
 *bUseCursorLib*<br/>
 Ma wartość TRUE, jeśli chcesz załadować bibliotekę DLL biblioteki kursora ODBC. Biblioteka kursorów maskuje pewne funkcje podstawowego sterownika ODBC, co skutecznie uniemożliwia korzystanie z zestawów dynamicznych (Jeśli sterownik ich obsługuje). Jedyne kursory obsługiwane, jeśli biblioteka kursorów jest załadowana, są migawkami statycznymi i kursorami progresywnymi. Wartość domyślna to TRUE. Jeśli planujesz utworzyć obiekt zestawu rekordów bezpośrednio z `CRecordset` bez jego wyprowadzania, nie należy ładować biblioteki kursorów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli połączenie zostało pomyślnie nawiązane; w przeciwnym razie, jeśli użytkownik wybierze przycisk Anuluj, gdy zostanie wyświetlone okno dialogowe z prośbą o dodatkowe informacje o połączeniu. We wszystkich innych przypadkach struktura zgłasza wyjątek.
 
@@ -558,7 +558,7 @@ Maska bitów, która określa kombinację następujących wartości. Wartość d
 
 - `CDatabase::forceOdbcDialog` zawsze wyświetlać okno dialogowe połączenie ODBC.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli połączenie zostało pomyślnie nawiązane; w przeciwnym razie, jeśli użytkownik wybierze przycisk Anuluj, gdy zostanie wyświetlone okno dialogowe z prośbą o dodatkowe informacje o połączeniu. We wszystkich innych przypadkach struktura zgłasza wyjątek.
 
@@ -586,7 +586,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby odwrócić zmiany wprowadzon
 BOOL Rollback();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli transakcja została pomyślnie odwrócona; w przeciwnym razie 0. Jeśli wywołanie `Rollback` nie powiedzie się, źródło danych i Stany transakcji są niezdefiniowane. Jeśli `Rollback` zwraca wartość 0, należy sprawdzić źródło danych w celu określenia jego stanu.
 
@@ -640,7 +640,7 @@ Operacja może przekroczyć limit czasu, ponieważ występują problemy z dostę
 
 Wartość domyślna dla limitów czasu zapytania wynosi 15 sekund. Nie wszystkie źródła danych obsługują możliwość ustawiania wartości limitu czasu zapytania. Jeśli ustawisz wartość limitu czasu zapytania równy 0, nie zostanie przekroczony limit czasu. Komunikacja ze źródłem danych może przestać odpowiadać. Takie zachowanie może być przydatne podczas opracowywania. Jeśli źródło danych nie obsługuje limitu czasu, uzyskasz wyniki śledzenia, ale nie wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

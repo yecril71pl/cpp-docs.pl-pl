@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854232"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419141"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 
@@ -73,7 +73,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 *_NumBytes*<br/>
 Liczba bajtów pamięci do przydzielenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo przydzieloną pamięć.
 
@@ -108,7 +108,7 @@ Wskaźnik lub odwołanie do elementu docelowego, do którego są wysyłane dane.
 *_Data*<br/>
 Odwołanie do danych do wysłania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli wiadomość została zaakceptowana przed zwróceniem metody, w przeciwnym razie **false** .
 
@@ -159,7 +159,7 @@ Typ.
 *_Func*<br/>
 Obiekt lambda lub Function, z którego ma zostać utworzona konstrukcja asynchroniczna środowisko wykonawcze systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Konstrukcja asynchroniczna reprezentowana przez IAsyncAction ^, IAsyncActionWithProgress\<TProgress > ^, IAsyncOperation\<TResult > ^ lub IAsyncOperationWithProgress\<TResult, TProgress > ^. Zwracany interfejs zależy od podpisu wyrażenia lambda przekazana do funkcji.
 
@@ -187,7 +187,7 @@ Zwraca interfejs, który reprezentuje pojedyncze wystąpienie Menedżer zasobów
 IResourceManager* __cdecl CreateResourceManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Interfejs `IResourceManager`.
 
@@ -227,7 +227,7 @@ Opcje zadania.
 *_Task*<br/>
 Zadanie, które ma zostać utworzone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowe zadanie typu `T`, które jest wywnioskowane z `_Param`.
 
@@ -249,7 +249,7 @@ Wyłącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli śledzenie zostało prawidłowo wyłączone, `S_OK` jest zwracana. Jeśli nie zainicjowano wcześniej śledzenia, `E_NOT_STARTED` jest zwracana
 
@@ -261,7 +261,7 @@ Włącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja 
 __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl EnableTracing();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli śledzenie zostało prawidłowo zainicjowane, zwracany jest `S_OK`. w przeciwnym razie zostanie zwrócona `E_NOT_STARTED`.
 
@@ -288,7 +288,7 @@ Aby uzyskać więcej informacji o tym, które scenariusze w aplikacji mogą skor
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ## <a name="getexecutioncontextid"></a>GetExecutionContextId —
 
@@ -298,7 +298,7 @@ Zwraca unikatowy identyfikator, który można przypisać do kontekstu wykonywani
 unsigned int __cdecl GetExecutionContextId();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator kontekstu wykonywania.
 
@@ -314,7 +314,7 @@ Zwraca wersję systemu operacyjnego.
 IResourceManager::OSVersion __cdecl GetOSVersion();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wyliczana reprezentująca system operacyjny.
 
@@ -330,7 +330,7 @@ Zwraca liczbę wątków sprzętowych w źródłowym systemie.
 unsigned int __cdecl GetProcessorCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wątków sprzętowych.
 
@@ -346,7 +346,7 @@ Zwraca liczbę węzłów NUMA lub pakietów procesorów w źródłowym systemie.
 unsigned int __cdecl GetProcessorNodeCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba węzłów NUMA lub pakietów procesora.
 
@@ -364,7 +364,7 @@ Zwraca unikatowy identyfikator, który można przypisać do harmonogramu impleme
 unsigned int __cdecl GetSchedulerId();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator dla harmonogramu.
 
@@ -414,7 +414,7 @@ Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżąc
 bool __cdecl is_current_task_group_canceling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obecnie wykonywana jest grupa zadań, w przeciwnym razie **false** .
 
@@ -471,7 +471,7 @@ Dodatkowe źródła.
 *_PScheduleGroup*<br/>
 Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `choice`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Blok komunikatów `choice` z co najmniej dwoma źródłami wejściowymi.
 
@@ -524,7 +524,7 @@ Dodatkowe źródła.
 *_PScheduleGroup*<br/>
 Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `multitype_join`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Blok komunikatów `greedy multitype_join` z co najmniej dwoma źródłami wejściowymi.
 
@@ -578,7 +578,7 @@ Dodatkowe źródła.
 *_PScheduleGroup*<br/>
 Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `multitype_join`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Blok komunikatów `non_greedy multitype_join` z co najmniej dwoma źródłami wejściowymi.
 
@@ -599,7 +599,7 @@ Typ obiektu funkcji, który zostanie wywołany do wykonania pracy reprezentowane
 *_Func*<br/>
 Funkcja, która będzie wywoływana w celu wykonania pracy reprezentowanej przez obiekt `task_handle`. Może to być Funktor lambda, wskaźnik do funkcji lub dowolny obiekt obsługujący wersję operatora wywołania funkcji z podpisem `void operator()()`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `task_handle`.
 
@@ -1162,7 +1162,7 @@ Funkcja symetryczna, która będzie używana w drugim zmniejszeniu. Aby uzyskać
 *_Range_fun*<br/>
 Funkcja, która będzie używana w pierwszej fazie zmniejszania. Aby uzyskać więcej informacji, zobacz uwagi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wynik redukcji.
 
@@ -1333,7 +1333,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *_Binary_op*<br/>
 Zdefiniowany przez użytkownika obiekt funkcji binarnej, który stosuje buforowanie w kolejności przesyłania dalej do dwóch zakresów źródłowych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator danych wyjściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie docelowym, który otrzymuje elementy wyjściowe przekształcone przez obiekt Function.
 
@@ -1391,7 +1391,7 @@ Maksymalny czas, przez który Metoda powinna być dla danych (w milisekundach).
 *_Filter_proc*<br/>
 Funkcja filtru określająca, czy komunikaty powinny być akceptowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość ze źródła typu ładunku.
 
@@ -1450,7 +1450,7 @@ Wskaźnik lub odwołanie do elementu docelowego, do którego są wysyłane dane.
 *_Data*<br/>
 Odwołanie do danych do wysłania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli wiadomość została zaakceptowana, w przeciwnym razie **false** .
 
@@ -1555,7 +1555,7 @@ task<_TaskType> task_from_exception(
 
 *_TaskOptions*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ## <a name="task_from_result"></a>task_from_result
 
@@ -1579,7 +1579,7 @@ inline task<void> task_from_result(
 
 *_TaskOptions*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ## <a name="trace_agents_register_name"></a>Trace_agents_register_name
 
@@ -1641,7 +1641,7 @@ Odwołanie do lokalizacji, w której zostanie umieszczony wynik.
 *_Filter_proc*<br/>
 Funkcja filtru określająca, czy komunikaty powinny być akceptowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość `bool` wskazująca, czy ładunek został umieszczony w `_value`.
 
@@ -1694,7 +1694,7 @@ Pozycja pierwszego elementu poza zakresem elementów, które mają być połącz
 *_TaskOptions*<br/>
 Obiekt `task_options`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zadanie, które zakończyło się pomyślnie, gdy wszystkie zadania wejściowe zostały zakończone pomyślnie. Jeśli zadania wejściowe są typu `T`, dane wyjściowe tej funkcji będą `task<std::vector<T>>`. Jeśli zadania wejściowe są typu `void` zadanie wyjściowe będzie również `task<void>`.
 
@@ -1747,7 +1747,7 @@ Pozycja pierwszego elementu poza zakresem elementów, które mają być połącz
 *_CancellationToken*<br/>
 Token anulowania, który kontroluje anulowanie zwracanego zadania. Jeśli nie podasz tokenu anulowania, zadanie wyniki otrzyma token anulowania zadania, które powoduje jego zakończenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zadanie, które zakończyło się pomyślnie po pomyślnym zakończeniu jednego z zadań wejściowych. Jeśli zadania wejściowe są typu `T`, dane wyjściowe tej funkcji będą `task<std::pair<T, size_t>>>`, gdzie pierwszy element pary jest wynikiem ukończenia zadania, a drugi element jest indeksem zadania, które zostało zakończone. Jeśli zadania wejściowe są typu `void` dane wyjściowe to `task<size_t>`, gdzie wynik jest indeksem ukończenia zadania.
 

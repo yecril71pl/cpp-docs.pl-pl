@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864892"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418091"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
 
@@ -51,7 +51,7 @@ Typ danych, które mają być przechowywane w tablicy.
 *ETraits*<br/>
 Kod używany do kopiowania lub przenoszenia elementów.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 

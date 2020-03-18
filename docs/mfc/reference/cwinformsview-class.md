@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872449"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420863"
 ---
 # <a name="cwinformsview-class"></a>Klasa CWinFormsView
 
@@ -27,7 +27,7 @@ Udostępnia funkcje ogólne do hostowania formantu Windows Forms jako widoku MFC
 class CWinFormsView : public CView;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

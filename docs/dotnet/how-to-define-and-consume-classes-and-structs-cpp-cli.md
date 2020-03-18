@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855788"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418294"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)
 
@@ -226,8 +226,8 @@ Ta tabela zawiera podsumowanie wpływu różnych specyfikatorów dostępu:
 
 |Specyfikator|Efekt|
 |---------------|------------|
-|public|Element członkowski jest dostępny wewnątrz i na zewnątrz zestawu.  Aby uzyskać więcej informacji, zobacz [Public](../cpp/public-cpp.md) .|
-|private|Składowa nie jest dostępna, ani wewnątrz ani poza zestawem.  Aby uzyskać więcej informacji, zobacz [Private](../cpp/private-cpp.md) .|
+|{1&gt;public&lt;1}|Element członkowski jest dostępny wewnątrz i na zewnątrz zestawu.  Aby uzyskać więcej informacji, zobacz [Public](../cpp/public-cpp.md) .|
+|prywatna|Składowa nie jest dostępna, ani wewnątrz ani poza zestawem.  Aby uzyskać więcej informacji, zobacz [Private](../cpp/private-cpp.md) .|
 |protected|Składowa jest dostępna wewnątrz i na zewnątrz zestawu, ale tylko dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [chroniona](../cpp/protected-cpp.md) .|
 |internal|Składowa jest publiczna wewnątrz zestawu, ale jest prywatna poza zestawem.  `internal` jest kontekstowego słowa kluczowego.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |publiczna chroniona lub chroniona publicznie|Składowa jest publiczna wewnątrz zestawu, ale chroniona poza zestawem.|

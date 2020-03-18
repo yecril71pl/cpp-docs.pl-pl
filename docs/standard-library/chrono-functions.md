@@ -6,11 +6,11 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865205"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416775"
 ---
 # <a name="ltchronogt-functions"></a>&lt;funkcje&gt; Chrono
 
@@ -30,7 +30,7 @@ template <class ToDuration, class Rep, class Period>
 constexpr ToDuration round(const duration<Rep, Period>& d);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `duration` typu `To`, który reprezentuje przedział czasu `Dur`, który jest obcinany, jeśli musi pasować do typu docelowego.
 
@@ -57,7 +57,7 @@ constexpr time_point<Clock, ToDuration>
 round(const time_point<Clock, Duration>& tp);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `time_point`, który ma czas trwania typu `To`.
 

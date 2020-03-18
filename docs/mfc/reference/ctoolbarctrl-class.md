@@ -183,11 +183,11 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856420"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420919"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -199,7 +199,7 @@ Oferuje funkcje formantu typowego paska narzędzi systemu Windows.
 class CToolBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -378,7 +378,7 @@ Identyfikator zasobu mapy bitowej zawierającej obraz przycisku lub obrazy do do
 *pBitmap*<br/>
 Wskaźnik do obiektu `CBitmap`, który zawiera obraz przycisku lub obrazy do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeksowanie pierwszego nowego obrazu (liczony od zera); w przeciwnym razie-1.
 
@@ -404,7 +404,7 @@ Liczba przycisków do dodania.
 *lpButtons*<br/>
 Adres tablicy struktur `TBBUTTON`, które zawierają informacje o przyciskach do dodania. Tablica musi mieć taką samą liczbę elementów jak przyciski określone przez *nNumButtons*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -486,7 +486,7 @@ int AddString(UINT nStringID);
 *nStringID*<br/>
 Identyfikator zasobu ciągu, który ma zostać dodany do listy ciągów kontrolki paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego nowego ciągu dodanego w przypadku powodzenia; w przeciwnym razie-1.
 
@@ -503,7 +503,7 @@ int AddStrings(LPCTSTR lpszStrings);
 *lpszStrings*<br/>
 Adres buforu, który zawiera co najmniej jeden ciąg zakończony znakiem null do dodania do listy ciągów paska narzędzi. Ostatni ciąg musi być zakończony dwoma znakami null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego nowego ciągu dodanego w przypadku powodzenia; w przeciwnym razie-1.
 
@@ -548,7 +548,7 @@ BOOL ChangeBitmap(
 |*idButton*|podczas Identyfikator polecenia przycisku, który ma otrzymać nową mapę bitową.|
 |*iBitmap*|podczas Indeks obrazu (liczony od zera) na liście obrazów na bieżącym formancie paska narzędzi.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -582,7 +582,7 @@ Identyfikator polecenia do sprawdzenia lub wyczyszczenia.
 *bCheck*<br/>
 PRAWDA, aby zaznaczyć przycisk, FAŁSZ, aby wyczyścić go.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -603,7 +603,7 @@ UINT CommandToIndex(UINT nID) const;
 *nID*<br/>
 Identyfikator polecenia, którego indeks przycisku ma zostać znaleziony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) dla przycisku skojarzonego z IDENTYFIKATORem polecenia.
 
@@ -635,7 +635,7 @@ Określa okno nadrzędne kontrolki paska narzędzi. Nie może mieć wartości NU
 *nID*<br/>
 Określa identyfikator kontrolki paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -689,7 +689,7 @@ Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 *nID*<br/>
 Identyfikator okna podrzędnego kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -734,7 +734,7 @@ BOOL DeleteButton(int nIndex);
 *nIndex*<br/>
 Indeks (liczony od zera) przycisku do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -758,7 +758,7 @@ Identyfikator polecenia przycisku, który ma zostać włączony lub wyłączony.
 *bEnable*<br/>
 Wartość TRUE, aby włączyć przycisk; Wartość FALSE powoduje wyłączenie przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -774,7 +774,7 @@ Pobiera ustawienie podświetlenia kotwicy dla paska narzędzi.
 BOOL GetAnchorHighlight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku niezerowego wyróżniania kotwic jest włączone. Jeśli zero, wyróżnianie kotwic jest wyłączone.
 
@@ -795,7 +795,7 @@ int GetBitmap(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku, którego indeks mapy bitowej ma zostać pobrany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca indeks mapy bitowej, jeśli to się powiedzie, lub zero w przeciwnym razie.
 
@@ -811,7 +811,7 @@ Pobiera flagi mapy bitowej z paska narzędzi.
 UINT GetBitmapFlags() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element UINT, który ma ustawioną flagę TBBF_LARGE, jeśli ekran może obsługiwać mapy bitowe na dużym pasku narzędzi, wyczyść w przeciwnym razie.
 
@@ -837,7 +837,7 @@ Indeks przycisku, dla którego ma zostać pobrane informacje.
 *lpButton*<br/>
 Adres struktury `TBBUTTON`, która ma otrzymać kopię informacji o przycisku. Aby uzyskać informacje na temat struktury `TBBUTTON`, zobacz [CToolBarCtrl:: AddButtons](#addbuttons) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -849,7 +849,7 @@ Pobiera liczbę przycisków znajdujących się obecnie w kontrolce paska narzęd
 int GetButtonCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba przycisków.
 
@@ -871,7 +871,7 @@ Identyfikator przycisku.
 *ptbbi*<br/>
 Wskaźnik do struktury [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) , która otrzymuje informacje o przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) przycisku, jeśli powodzenie; w przeciwnym razie-1.
 
@@ -887,7 +887,7 @@ Pobiera rozmiar przycisku paska narzędzi.
 DWORD GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, która zawiera odpowiednio wartości width i height w LOWORD i HIWORD.
 
@@ -905,7 +905,7 @@ CString GetButtonText(int idButton) const;
 |---------------|-----------------|
 |*idButton*|podczas Identyfikator przycisku, dla którego jest pobierany tekst wyświetlany.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element [CString](../../atl-mfc-shared/using-cstring.md) , który zawiera tekst wyświetlany określonego przycisku.
 
@@ -927,7 +927,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 |---------------|-----------------|
 |*lpColorScheme*|określoną Wskaźnik do struktury [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , która otrzymuje informacje o schemacie kolorów. Gdy ta metoda zwraca, struktura opisuje kolor wyróżnienia i kolor cienia kontrolki paska narzędzi.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -943,7 +943,7 @@ Pobiera listę obrazów używaną przez formant Toolbar do wyświetlania wyłąc
 CImageList* GetDisabledImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) lub wartość null, jeśli nie ustawiono listy obrazów wyłączonych.
 
@@ -964,7 +964,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 *ppDropTarget*<br/>
 Wskaźnik do wskaźnika interfejsu [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) . Jeśli wystąpi błąd, wskaźnik o wartości NULL zostanie umieszczony w tym adresie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość HRESULT wskazującą powodzenie lub niepowodzenie operacji.
 
@@ -980,7 +980,7 @@ Pobiera Style rozszerzone dla kontrolki paska narzędzi.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 DWORD, która reprezentuje style rozszerzone aktualnie używane dla formantu Toolbar. Aby zapoznać się z listą stylów, zobacz [Style rozszerzone paska narzędzi](/windows/win32/Controls/toolbar-extended-styles)w Windows SDK.
 
@@ -996,7 +996,7 @@ Pobiera listę obrazów używaną przez formant Toolbar do wyświetlania przycis
 CImageList* GetHotImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) lub wartość null, jeśli nie ustawiono listy obrazów wyłączonych.
 
@@ -1012,7 +1012,7 @@ Pobiera indeks elementu gorąca na pasku narzędzi.
 int GetHotItem() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu aktywnego na pasku narzędzi.
 
@@ -1028,7 +1028,7 @@ Pobiera listę obrazów używaną przez formant Toolbar do wyświetlania przycis
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) lub wartość null, jeśli nie ustawiono listy obrazów.
 
@@ -1061,7 +1061,7 @@ Pobiera kolor używany do rysowania znacznika wstawiania dla paska narzędzi.
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która zawiera bieżący kolor znacznika wstawiania.
 
@@ -1087,7 +1087,7 @@ Indeks przycisku, dla którego ma zostać pobrane informacje.
 *lpRect*<br/>
 Adres struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który odbiera współrzędne prostokąta ograniczenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1108,7 +1108,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 *pSize*<br/>
 Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , który odbiera rozmiar elementów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1124,7 +1124,7 @@ Pobiera maksymalną liczbę wierszy tekstu wyświetlanych na przycisku paska nar
 int GetMaxTextRows() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna liczba wierszy tekstu wyświetlanych na przycisku paska narzędzi.
 
@@ -1162,7 +1162,7 @@ BOOL GetPadding(
 |*pnHorzPadding*|określoną Liczba całkowita, która odbiera poziome dopełnienie formantu Toolbar (w pikselach).|
 |*pnVertPadding*|określoną Liczba całkowita, która odbiera pionowe dopełnienie formantu Toolbar w pikselach.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1178,7 +1178,7 @@ Pobiera listę obrazów używaną przez bieżący formant Toolbar do reprezentow
 CImageList* GetPressedImageList();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik na element [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który zawiera listę obrazów dla bieżącej kontrolki lub wartość null, jeśli nie jest ustawiona taka lista obrazów.
 
@@ -1204,7 +1204,7 @@ Identyfikator przycisku.
 *lpRect*<br/>
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , aby otrzymać powiązane informacje o prostokącie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -1220,7 +1220,7 @@ Pobiera liczbę wierszy przycisków aktualnie wyświetlanych przez formant paska
 int GetRows() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wierszy przycisków aktualnie wyświetlanych na pasku narzędzi.
 
@@ -1241,7 +1241,7 @@ int GetState(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku, dla którego mają zostać pobrane informacje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Informacje o stanie przycisku, jeśli zakończyły się pomyślnie lub-1 w przeciwnym razie. Informacje o stanie przycisku mogą być kombinacją wartości wymienionych w [CToolBarCtrl:: AddButtons](#addbuttons).
 
@@ -1278,7 +1278,7 @@ Długość buforu w bajtach.
 *str*<br/>
 Ciąg.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość ciągu w przypadku powodzenia,-1, jeśli nie.
 
@@ -1294,7 +1294,7 @@ Pobiera Style, które są aktualnie stosowane do kontrolki paska narzędzi.
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 DWORD zawierający kombinację [stylów kontrolki paska narzędzi](/windows/win32/Controls/toolbar-control-and-button-styles), zgodnie z opisem w Windows SDK.
 
@@ -1306,7 +1306,7 @@ Pobiera uchwyt kontrolki etykietki narzędzia (jeśli istnieje) skojarzoną z ko
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) skojarzonego z tym paskiem narzędzi lub ma wartość null, jeśli pasek narzędzi nie ma skojarzonej kontrolki etykietki narzędzia.
 
@@ -1327,7 +1327,7 @@ int HitTest(LPPOINT ppt) const;
 *formacie*<br/>
 Wskaźnik do struktury [punktu](/previous-versions/dd162805\(v=vs.85\)) , który zawiera współrzędne x testu trafień w składowej `x` i Współrzędne y testu trafień w składowej `y`. Współrzędne są względne dla obszaru klienckiego paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita wskazująca lokalizację punktu na pasku narzędzi. Jeśli wartość jest równa zero lub wartość dodatnia, ta wartość zwracana jest indeksem liczonym od zera elementu nierozdzielającego, w którym znajduje się punkt.
 
@@ -1355,7 +1355,7 @@ Identyfikator polecenia przycisku do ukrycia lub pokazywania.
 *bHide*<br/>
 TRUE, aby ukryć przycisk, wartość FALSE, aby je wyświetlić.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1381,7 +1381,7 @@ Identyfikator polecenia, którego stan nieokreślony ma być ustawiony lub wyczy
 *bIndeterminate*<br/>
 Wartość TRUE, aby ustawić nieokreślony stan dla określonego przycisku, FAŁSZ, aby wyczyścić go.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1407,7 +1407,7 @@ Indeks przycisku (liczony od zera). Ta funkcja wstawia przycisk Nowy po lewej st
 *lpButton*<br/>
 Adres struktury `TBBUTTON` zawierającej informacje o przycisku do wstawienia. Zobacz [CToolBarCtrl:: AddButtons](#addbuttons) , aby zapoznać się z opisem struktury `TBBUTTON`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1433,7 +1433,7 @@ Wskaźnik do struktury [punktu](/previous-versions/dd162805\(v=vs.85\)) , który
 *ptbim*<br/>
 Wskaźnik do struktury [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) , która otrzymuje informacje o znaczniku wstawiania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1454,7 +1454,7 @@ BOOL IsButtonChecked(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk jest zaznaczony; w przeciwnym razie zero.
 
@@ -1475,7 +1475,7 @@ BOOL IsButtonEnabled(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk jest włączony; w przeciwnym razie zero.
 
@@ -1496,7 +1496,7 @@ BOOL IsButtonHidden(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk jest ukryty; w przeciwnym razie zero.
 
@@ -1517,7 +1517,7 @@ BOOL IsButtonHighlighted(int nID) const;
 *nID*<br/>
 podczas Identyfikator polecenia dla przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dodatnia liczba całkowita, jeśli przycisk jest wyróżniony, 0 Jeśli przycisk nie jest wyróżniony lub-1, jeśli wystąpi błąd.
 
@@ -1534,7 +1534,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 *nID*<br/>
 podczas Identyfikator polecenia przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dodatnia liczba całkowita, jeśli przycisk jest nieokreślony, zero, jeśli przycisk nie jest nieokreślony, lub-1, jeśli wystąpi błąd.
 
@@ -1555,7 +1555,7 @@ BOOL IsButtonPressed(int nID) const;
 *nID*<br/>
 Identyfikator polecenia przycisku na pasku narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk jest wciśnięty, w przeciwnym razie zero.
 
@@ -1612,7 +1612,7 @@ Znak akceleratora do zamapowania. Ten znak jest tym samym znakiem, który jest p
 *pIDBtn*<br/>
 Wskaźnik do UINT, który odbiera identyfikator polecenia przycisku, który odpowiada akceleratorowi określonemu w *chAccel*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1638,7 +1638,7 @@ Identyfikator przycisku.
 *fHighlight*<br/>
 Określa stan wyróżnienia, który ma zostać ustawiony. Domyślnie wartość TRUE. W przypadku wybrania wartości FALSE przycisk jest ustawiany jako stan domyślny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1664,7 +1664,7 @@ Indeks (liczony od zera) przycisku, który ma zostać przeniesiony.
 *nNewPos*<br/>
 Indeks (liczony od zera) miejsca docelowego przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1688,7 +1688,7 @@ podczas Identyfikator polecenia przycisku do naciśnięcia lub zwolnienia.
 *bPress*<br/>
 podczas TRUE, aby nacisnąć określony przycisk; Wartość FALSE, aby zwolnić określony przycisk. Wartość domyślna to TRUE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
@@ -1712,7 +1712,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 |---------------|-----------------|
 |*pReplaceBitmap*|podczas Wskaźnik do struktury [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) , który opisuje mapę bitową, która ma zostać zastąpiona, i nową mapę bitową.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1799,7 +1799,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 *fAnchor*<br/>
 podczas Określa, czy wyróżnianie kotwic jest włączone, czy wyłączone. Jeśli ta wartość jest różna od zera, wyróżnianie kotwic zostanie włączone. Jeśli ta wartość jest równa zero, wyróżnianie kotwic zostanie wyłączone
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ustawienie poprzedniego zakotwiczenia. Jeśli wyróżnianie zostało włączone, ta wartość jest różna od zera. Jeśli wyróżnianie nie jest włączone, ta wartość jest równa zero.
 
@@ -1820,7 +1820,7 @@ BOOL SetBitmapSize(CSize size);
 *zmienia*<br/>
 Szerokość i wysokość obrazów mapy bitowej w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1846,7 +1846,7 @@ Identyfikator przycisku.
 *ptbbi*<br/>
 Wskaźnik do struktury [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) , która otrzymuje informacje o przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1867,7 +1867,7 @@ BOOL SetButtonSize(CSize size);
 *zmienia*<br/>
 Szerokość i wysokość przycisków w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1916,7 +1916,7 @@ Minimalna szerokość przycisku (w pikselach). Przyciski paska narzędzi nigdy n
 *cxMax*<br/>
 Maksymalna szerokość przycisku w pikselach. Jeśli tekst przycisku jest zbyt szeroki, formant wyświetla go z punktami wielokropka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1942,7 +1942,7 @@ Indeks (liczony od zera) przycisku, którego identyfikator polecenia ma być ust
 *nID*<br/>
 Identyfikator polecenia, na który ma zostać ustawiony wybrany przycisk.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość różną od zera, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -1985,7 +1985,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList` zawierającego obrazy, które mają być używane przez formant Toolbar do wyświetlania nieaktywnych obrazów przycisków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który był wcześniej używany przez kontrolkę Toolbar do wyświetlania nieaktywnych obrazów przycisków.
 
@@ -2011,7 +2011,7 @@ Kombinacja co najmniej jednej flagi DT_ określonej w funkcji Win32 [DrawText](/
 *dwDTFlags*<br/>
 Kombinacja co najmniej jednej flagi DT_ określonej w funkcji Win32 `DrawText`, która wskazuje, jak będzie rysowany tekst przycisku. Ta wartość jest przenoszona do `DrawText` po narysowaniu tekstu przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element DWORD zawierający poprzednie flagi rysowania tekstu.
 
@@ -2032,7 +2032,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 *dwExStyle*<br/>
 Wartość określająca nowe style rozszerzone. Ten parametr może być kombinacją rozszerzonych stylów paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, która reprezentuje poprzednie style rozszerzone. Aby zapoznać się z listą stylów, zobacz [Style rozszerzone paska narzędzi](/windows/win32/Controls/toolbar-extended-styles)w Windows SDK.
 
@@ -2053,7 +2053,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList` zawierającego obrazy, które mają być używane przez formant Toolbar do wyświetlania obrazów przycisków aktywnych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który był wcześniej używany przez kontrolkę Toolbar do wyświetlania obrazów przycisków aktywnych.
 
@@ -2076,7 +2076,7 @@ int SetHotItem(int nHot);
 *nHot*<br/>
 Liczony od zera numer indeksu elementu, który zostanie wykonany. Jeśli ta wartość to-1, żaden z elementów nie będzie gorąca.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks poprzedniego elementu gorąca lub-1, jeśli nie było elementu gorąca.
 
@@ -2097,7 +2097,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList` zawierającego obrazy, które mają być używane przez formant Toolbar do wyświetlania obrazów przycisków w ich stanie domyślnym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który był wcześniej używany przez formant Toolbar do wyświetlania obrazów przycisków w ich stanie domyślnym.
 
@@ -2120,7 +2120,7 @@ BOOL SetIndent(int iIndent);
 *iIndent*<br/>
 Wartość określająca wcięcie w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -2154,7 +2154,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 *clrNew*<br/>
 Wartość COLORREF, która zawiera nowy kolor znacznika wstawiania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która zawiera poprzedni kolor znacznika wstawiania.
 
@@ -2175,7 +2175,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 *iMaxRows*<br/>
 Maksymalna liczba wierszy, które mają zostać ustawione.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -2230,7 +2230,7 @@ DWORD SetPadding(
 |*nHorzPadding*|podczas Określa dopełnienie w poziomie formantu Toolbar (w pikselach).|
 |*nVertPadding*|podczas Określa dopełnienie w pionie kontrolki Toolbar (w pikselach).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, której dolny wyraz zawiera poprzedni poziom wypełnienia w poziomie i którego duże słowo zawiera poprzednią wartość dopełnienia pionowego. Wartości uzupełniania są mierzone w pikselach.
 
@@ -2261,7 +2261,7 @@ CImagelist* SetPressedImageList(
 |*iImageID*|podczas Indeks (liczony od zera) listy obrazów. Ten parametr należy ustawić na wartość zero, jeśli jest używana tylko jedna lista obrazów.|
 |*pImageList*|podczas Wskaźnik na element [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który zawiera nową listę obrazów.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik na element [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) , który zawiera poprzednią listę obrazów dla bieżącej kontrolki lub wartość null, jeśli nie została ustawiona taka lista obrazów.
 
@@ -2329,7 +2329,7 @@ Identyfikator polecenia przycisku.
 *nInformacje*<br/>
 Flagi stanu. Może to być kombinacja wartości wymienionych dla Stanów przycisków w [CToolBarCtrl:: AddButtons](#addbuttons).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -2376,7 +2376,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Wskaźnik do ciągu Unicode, który zawiera styl wizualizacji paska narzędzi do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana nie jest używana.
 

@@ -105,11 +105,11 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883678"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420247"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
@@ -121,18 +121,18 @@ Klasa `CMFCTabCtrl` zapewnia funkcjonalność dla kontrolki karta. Kontrolka kar
 class CMFCTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Konstruktor domyślny.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Wyświetla określoną kartę bieżącej kontrolki karty i ustawia fokus na tej karcie.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCTabCtrl:: m_bEnableActivate](#m_benableactivate)|Uniemożliwia aktywnemu widokowi utratę fokusu, gdy nowa karta jest wstawiona i włączona.|
 
@@ -273,7 +273,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze prawda.
 
@@ -328,7 +328,7 @@ podczas Lokalizacja kart. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać w
 *bCloseBtn*<br/>
 podczas TRUE, aby wyświetlić przycisk Zamknij na karcie; w przeciwnym razie FALSE. Wartość domyślna to FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -435,7 +435,7 @@ virtual BOOL EnsureVisible(int iTab);
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli zakończyła się pomyślnie; Wartość FALSE, jeśli indeks parametru *ITAB* jest nieprawidłowy.
 
@@ -456,7 +456,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 *nCmdID*<br/>
 podczas Identyfikator polecenia karty w menu podręcznym okna z kartami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt obrazu mapy bitowej.
 
@@ -468,7 +468,7 @@ Pobiera indeks pierwszej karty widocznej w bieżącym formancie tabulacji.
 virtual int GetFirstVisibleTabNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) karty w kontrolce karty.
 
@@ -484,7 +484,7 @@ Pobiera wartość określającą, jak można zmienić rozmiar bieżącego forman
 ResizeMode GetResizeMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna z wartości wyliczenia `CMFCTabCtrl::ResizeMode`, która określa, jak można zmienić rozmiar kontrolki karty. Listę możliwych wartości można znaleźć w sekcji uwagi metody [CMFCTabCtrl:: SetResizeMode](#setresizemode) .
 
@@ -496,7 +496,7 @@ Pobiera wskaźnik do obiektu paska przewijania, który jest skojarzony z formant
 CScrollBar* GetScrollBar();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu ScrollBar lub wartość NULL, jeśli formant karty nie został utworzony przy użyciu stylu STYLE_FLAT_SHARED_HORZ_SCROLL.
 
@@ -534,7 +534,7 @@ Pobiera maksymalną szerokość karty.
 int GetTabMaxWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna szerokość karty (w pikselach). Jeśli wartość zwracana to 0, Szerokość karty jest nieograniczona.
 
@@ -550,7 +550,7 @@ Pobiera wysokość obszaru karty bieżącej kontrolki karta.
 virtual int GetTabsHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość obszaru karty, jeśli dowolna karta jest widoczna lub zero, jeśli żadna karta nie jest widoczna.
 
@@ -647,7 +647,7 @@ Wskazuje, czy bieżąca karta kontrolki karta jest aktywną kartą w grupie kart
 BOOL IsActiveInMDITabGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli bieżąca karta kontrolki karta jest aktywną kartą w grupie kart MDI; w przeciwnym razie FALSE.
 
@@ -663,7 +663,7 @@ Wskazuje, czy tekst aktywnej karty jest wyświetlany przy użyciu pogrubionej cz
 BOOL IsActiveTabBoldFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli aktywna karta jest wyświetlana przy użyciu pogrubionej czcionki; w przeciwnym razie FALSE.
 
@@ -679,7 +679,7 @@ Wskazuje, czy przycisk zamknięcia ( **X**) jest wyświetlany na aktywnej karcie
 virtual BOOL IsActiveTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przycisk Zamknij jest wyświetlany na aktywnej karcie; FALSE, jeśli przycisk Zamknij jest wyświetlany w prawym górnym rogu obszaru kart.
 
@@ -693,7 +693,7 @@ Wskazuje, czy okno z kartami rysuje prostokąt ramki wokół osadzonych okienek.
 BOOL IsDrawFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli prostokąt ramki jest rysowany; w przeciwnym razie FALSE.
 
@@ -709,7 +709,7 @@ Wskazuje, czy ramka dookoła obszaru karty jest płaska, czy 3W.
 BOOL IsFlatFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ramka dookoła obszaru karty jest płaska; FAŁSZ, jeśli ramka jest trójwymiarowa.
 
@@ -725,7 +725,7 @@ Wskazuje, czy wygląd kart w bieżącym formancie karty jest płaski, czy nie.
 virtual BOOL IsFlatTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli wygląd kart w bieżącym formancie karty jest płaski; w przeciwnym razie FALSE.
 
@@ -737,7 +737,7 @@ Wskazuje, czy wygląd lewej i prawej strony karty w bieżącym formancie karty j
 virtual BOOL IsLeftRightRounded() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli boki każdej karty są zaokrąglane; w przeciwnym razie FALSE.
 
@@ -749,7 +749,7 @@ Wskazuje, czy bieżąca kontrolka karty jest zawarta w obszarze klienta okna int
 virtual BOOL IsMDITabGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli bieżąca kontrolka karty znajduje się w oknie klienta MDI; w przeciwnym razie FALSE.
 
@@ -761,7 +761,7 @@ Wskazuje, czy bieżąca kontrolka karty jest wyświetlana w stylu programu Micro
 virtual BOOL IsOneNoteStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, Jeśli kontrolka karta jest wyświetlana w stylu programu Microsoft OneNote. w przeciwnym razie FALSE.
 
@@ -773,7 +773,7 @@ Wskazuje, czy bieżąca kontrolka karty ma pasek przewijania, który umożliwia 
 BOOL IsSharedScroll() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, Jeśli kontrolka karty ma współużytkowany pasek przewijania; w przeciwnym razie FALSE.
 
@@ -789,7 +789,7 @@ Wskazuje, czy kontrolka karta wyświetla przyciski przewijania, czy przycisk, kt
 BOOL IsTabDocumentsMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okna z kartami są przewijane przy użyciu menu podręcznego etykiet okna z kartami; FAŁSZ, jeśli okna z kartami są przewijane przy użyciu przycisków przewijania do przodu i do tyłu.
 
@@ -805,7 +805,7 @@ Wskazuje, czy karty są rysowane przy użyciu stylu programu Visual Studio 2005.
 virtual BOOL IsVS2005Style() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli karty są rysowane przy użyciu stylu programu Visual Studio 2005; w przeciwnym razie FALSE.
 
@@ -838,7 +838,7 @@ BOOL ModifyTabStyle(Style style);
 *stylów*<br/>
 podczas Jedna z wartości wyliczenia, która określa wygląd kontrolki karta. Aby uzyskać więcej informacji, zobacz tabelę w obszarze uwagi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze prawda.
 
@@ -846,7 +846,7 @@ Zawsze prawda.
 
 Wartość parametru *Style* może być jedną z następujących `CMFCTabCtrl::Style` wyliczeń.
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |STYLE_3D|Wyświetla trzy wielowymiarowe prostokątne karty, które mają zaokrąglone rogi.|
 |STYLE_3D_ONENOTE|Wyświetla trzy wielowymiarowe karty, które mają jedną stronę pionową i jedną pochyłą i mające Zaokrąglone rogi.|
@@ -879,7 +879,7 @@ podczas Zawiera stan klawiszy modyfikujących. Ten parametr jest kombinacją bit
 *moment*<br/>
 podczas Zawiera bieżącą lokalizację kursora we współrzędnych klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze DROPEFFECT_NONE, co oznacza, że cel upuszczania nie może akceptować danych.
 
@@ -911,7 +911,7 @@ podczas Stan klawiszy modyfikujących, która jest kombinacją bitową (lub) MK_
 *moment*<br/>
 podczas Bieżąca pozycja myszy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze DROPEFFECT_NONE.
 
@@ -964,7 +964,7 @@ virtual BOOL SetActiveTab(int iTab);
 *iTab*<br/>
 podczas Określa indeks (liczony od zera) karty, który ma zostać aktywowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określona karta została uaktywniona; Wartość FALSE, jeśli określona wartość parametru *ITAB* jest nieprawidłowa.
 
@@ -1051,7 +1051,7 @@ podczas Kolor przezroczystego obrazu. Części obrazu, które są tym kolorem, b
 *hImageList*<br/>
 podczas Uchwyt do listy wstępnie załadowanych obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli ta metoda zakończyła się pomyślnie. FAŁSZ, jeśli formant karty jest tworzony przy użyciu stylu prostego lub jeśli pierwsze Przeciążenie metody nie może załadować mapy bitowej, która jest określona przez parametr *uiID* .
 
@@ -1078,7 +1078,7 @@ podczas Jedna z wartości wyliczenia `CMFCTabCtrl::ResizeMode`, która określa,
 
 Parametr *SizeMode* może być jedną z następujących `ResizeMode` wartości wyliczenia.
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |RESIZE_NO|Nie można zmienić rozmiaru formantu karty.|
 |RESIZE_VERT|Rozmiar formantu karty można zmienić w pionie, ale nie w poziomie.|
@@ -1127,7 +1127,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 *pScrollInfo*<br/>
 określoną Wskaźnik do struktury [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) lub wartości null. Gdy ta metoda zwraca, a jeśli ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartość domyślna to NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -1135,7 +1135,7 @@ PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
 Ta metoda ma wpływ tylko na formant karty wyświetlający karty płaskie. Pasek przewijania ma wpływ na wszystkie karty w tym samym czasie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

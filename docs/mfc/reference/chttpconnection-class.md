@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890795"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420401"
 ---
 # <a name="chttpconnection-class"></a>Klasa CHttpConnection
 
@@ -27,17 +27,17 @@ Zarządza połączeniem z serwerem HTTP.
 class CHttpConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHttpConnection::CHttpConnection](#chttpconnection)|Tworzy obiekt `CHttpConnection`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CHttpConnection::OpenRequest](#openrequest)|Otwiera żądanie HTTP.|
 
@@ -189,7 +189,7 @@ Liczba skojarzona z typem żądania HTTP. Może to być jeden z następujących 
 |HTTP_VERB_DELETE|5|
 |HTTP_VERB_UNLINK|6|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zażądano wskaźnika do obiektu [CHttpFile](../../mfc/reference/chttpfile-class.md) .
 
@@ -209,7 +209,7 @@ Zastąp domyślne `dwContext`, aby ustawić identyfikator kontekstu na wybraną 
 
 Wyjątki mogą być zgłaszane z tą funkcją.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

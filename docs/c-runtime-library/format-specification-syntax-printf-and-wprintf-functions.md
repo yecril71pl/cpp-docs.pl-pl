@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865505"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417174"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -97,7 +97,7 @@ Przed uruchomieniem programu Visual Studio 2015 CRT użył innego niestandardowe
 |+ nieskończoność|`1.#INF` *cyfry losowe*|
 |-nieskończoność|`-1.#INF` *cyfry losowe*|
 |Nieokreślony (taki sam jak cichy NaN)|*cyfra `.#IND`* liczbami *losowymi*|
-|NaN|*cyfra `.#NAN`* liczbami *losowymi*|
+|{1&gt;NaN&lt;1}|*cyfra `.#NAN`* liczbami *losowymi*|
 
 Dowolne z tych elementów mogło zostać poprzedzone znakiem i być sformatowane nieco inaczej w zależności od szerokości pola i precyzji, czasami z nietypowymi skutkami. Na przykład `printf("%.2f\n", INFINITY)` może drukować `1.#J`, ponieważ #INF będzie "zaokrąglona" do 2 cyfr dokładności.
 

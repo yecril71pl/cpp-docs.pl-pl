@@ -1,49 +1,49 @@
 ---
-title: CMapWordToOb Class
+title: Klasa CMapWordToOb
 ms.date: 11/04/2016
 f1_keywords:
 - CMapWordToOb
 - AFXCOLL/CMapWordToOb
-- AFXCOLL/CMapStringToOb::CMapStringToOb
-- AFXCOLL/CMapStringToOb::GetCount
-- AFXCOLL/CMapStringToOb::GetHashTableSize
-- AFXCOLL/CMapStringToOb::GetNextAssoc
-- AFXCOLL/CMapStringToOb::GetSize
-- AFXCOLL/CMapStringToOb::GetStartPosition
-- AFXCOLL/CMapStringToOb::HashKey
-- AFXCOLL/CMapStringToOb::InitHashTable
-- AFXCOLL/CMapStringToOb::IsEmpty
-- AFXCOLL/CMapStringToOb::Lookup
-- AFXCOLL/CMapStringToOb::LookupKey
-- AFXCOLL/CMapStringToOb::RemoveAll
-- AFXCOLL/CMapStringToOb::RemoveKey
-- AFXCOLL/CMapStringToOb::SetAt
+- AFXCOLL/CMapWordToOb::CMapWordToOb
+- AFXCOLL/CMapWordToOb::GetCount
+- AFXCOLL/CMapWordToOb::GetHashTableSize
+- AFXCOLL/CMapWordToOb::GetNextAssoc
+- AFXCOLL/CMapWordToOb::GetSize
+- AFXCOLL/CMapWordToOb::GetStartPosition
+- AFXCOLL/CMapWordToOb::HashKey
+- AFXCOLL/CMapWordToOb::InitHashTable
+- AFXCOLL/CMapWordToOb::IsEmpty
+- AFXCOLL/CMapWordToOb::Lookup
+- AFXCOLL/CMapWordToOb::LookupKey
+- AFXCOLL/CMapWordToOb::RemoveAll
+- AFXCOLL/CMapWordToOb::RemoveKey
+- AFXCOLL/CMapWordToOb::SetAt
 helpviewer_keywords:
-- CMapStringToOb [MFC], CMapStringToOb
-- CMapStringToOb [MFC], GetCount
-- CMapStringToOb [MFC], GetHashTableSize
-- CMapStringToOb [MFC], GetNextAssoc
-- CMapStringToOb [MFC], GetSize
-- CMapStringToOb [MFC], GetStartPosition
-- CMapStringToOb [MFC], HashKey
-- CMapStringToOb [MFC], InitHashTable
-- CMapStringToOb [MFC], IsEmpty
-- CMapStringToOb [MFC], Lookup
-- CMapStringToOb [MFC], LookupKey
-- CMapStringToOb [MFC], RemoveAll
-- CMapStringToOb [MFC], RemoveKey
-- CMapStringToOb [MFC], SetAt
+- CMapWordToOb [MFC], CMapWordToOb
+- CMapWordToOb [MFC], GetCount
+- CMapWordToOb [MFC], GetHashTableSize
+- CMapWordToOb [MFC], GetNextAssoc
+- CMapWordToOb [MFC], GetSize
+- CMapWordToOb [MFC], GetStartPosition
+- CMapWordToOb [MFC], HashKey
+- CMapWordToOb [MFC], InitHashTable
+- CMapWordToOb [MFC], IsEmpty
+- CMapWordToOb [MFC], Lookup
+- CMapWordToOb [MFC], LookupKey
+- CMapWordToOb [MFC], RemoveAll
+- CMapWordToOb [MFC], RemoveKey
+- CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375863"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442586"
 ---
-# <a name="cmapwordtoob-class"></a>CMapWordToOb Class
+# <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 
-Obsługuje mapy `CObject` wskaźników opartych na kluczach słów 16-bitowych.
+Obsługuje mapy wskaźników `CObject`, które są oparte na słowach 16-bitowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,53 +53,53 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje elementów członkowskich `CMapWordToOb` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, podstaw programu WORD.
-
-`BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const; "
-
-na przykład przekłada się na
+Funkcje składowe `CMapWordToOb` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CMapStringToOb` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CString` lub **stały wskaźnik do** **char** jako parametr funkcji lub wartość zwracaną, podstaw wyraz.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
+na przykład tłumaczy na
+
+`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
+
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
+|[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów na tej mapie.|
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Pobiera następny element do wykonania iteracji.|
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Zwraca liczbę elementów na tej mapie.|
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Zwraca pozycję pierwszego elementu.|
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Oblicza wartość skrótu dla określonego klucza.|
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicjuje tabelę mieszania.|
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testuje pod kątem warunku pusta Mapa (Brak elementów).|
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Wyszukuje wskaźnika void oparte na kluczu wskaźnika void. Wartość wskaźnika, a nie jednostki, który wskazuje, służy do porównywania kluczy.|
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Zwraca odwołanie do klucz skojarzony z określoną wartością klucza.|
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Usuwa wszystkie elementy z tej mapie.|
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Usuwa element określony przez klucz.|
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony.|
+|[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów w tej mapie.|
+|[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
+|[CMapWordToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Pobiera następny element do iteracji.|
+|[CMapWordToOb:: GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Zwraca liczbę elementów w tej mapie.|
+|[CMapWordToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Zwraca pozycję pierwszego elementu.|
+|[CMapWordToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Oblicza wartość skrótu określonego klucza.|
+|[CMapWordToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicjuje tablicę skrótów.|
+|[CMapWordToOb:: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testuje warunek pustej mapy (nie elementy).|
+|[CMapWordToOb:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Wyszukuje wskaźnik void na podstawie klucza wskaźnika void. Wartość wskaźnika, a nie jednostka, do której wskazuje, jest używana do porównania klucza.|
+|[CMapWordToOb:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Zwraca odwołanie do klucza skojarzonego z określoną wartością klucza.|
+|[CMapWordToOb::](../../mfc/reference/cmapstringtoob-class.md#removeall)|Usuwa wszystkie elementy z tej mapy.|
+|[CMapWordToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Usuwa element określony przez klucz.|
+|[CMapWordToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Wstawia element do mapy; Zastępuje istniejący element, jeśli zostanie znaleziony pasujący klucz.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|
+|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapWordToOb` dołącza IMPLEMENT_SERIAL — makro do obsługi serializacji i zrzucanie z jego elementów. Każdy element jest serializowana z kolei Jeśli mapa jest przechowywany do archiwum, przy użyciu przeciążonych wstawiania ( **<<**) — operator lub `Serialize` funkcja elementu członkowskiego.
+`CMapWordToOb` zawiera IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, za pomocą operatora przeciążonego wstawiania ( **<<** ) lub funkcji członkowskiej `Serialize`.
 
-Jeśli potrzebujesz zrzut poszczególnych WORD - `CObject` elementów, należy ustawić głębokość kontekstu zrzutu 1 lub większą.
+Jeśli potrzebujesz zrzutu poszczególnych elementów WYRAZów `CObject`, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
-Gdy `CMapWordToOb` obiekt zostanie usunięty lub gdy jego elementy są usuwane, `CObject` wskaźniki są usuwane. Obiektów, odwołuje się `CObject` wskaźniki nie są niszczone.
+Po usunięciu obiektu `CMapWordToOb` lub po usunięciu jego elementów, wskaźniki `CObject` są usuwane. Obiekty, do których odwołuje się wskaźniki `CObject`, nie są niszczone.
 
-Aby uzyskać więcej informacji na temat `CMapWordToOb`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).
+Aby uzyskać więcej informacji na temat `CMapWordToOb`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -109,9 +109,9 @@ Aby uzyskać więcej informacji na temat `CMapWordToOb`, zapoznaj się z artyku�
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcoll.h
+**Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

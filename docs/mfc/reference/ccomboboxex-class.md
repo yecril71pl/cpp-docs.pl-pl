@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865551"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420513"
 ---
 # <a name="ccomboboxex-class"></a>Klasa korzystanie CComboBoxEx
 
@@ -158,7 +158,7 @@ Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest okn
 *nID*<br/>
 Określa identyfikator kontrolki pola kombi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -218,7 +218,7 @@ Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 *nID*<br/>
 Identyfikator okna podrzędnego kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -241,7 +241,7 @@ int DeleteItem(int iIndex);
 *iIndex*<br/>
 Indeks elementu, który ma zostać usunięty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pozostałych elementów w formancie. Jeśli *IIndex* jest nieprawidłowy, funkcja zwraca CB_ERR.
 
@@ -257,7 +257,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do kontro
 CComboBox* GetComboBoxCtrl();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CComboBox`.
 
@@ -275,7 +275,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do kontro
 CEdit* GetEditCtrl();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CEdit](../../mfc/reference/cedit-class.md) .
 
@@ -293,7 +293,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać style rozszerzone u
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, która zawiera rozszerzone style, które są używane dla kontrolki pole kombi.
 
@@ -309,7 +309,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do listy 
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) . Jeśli to się nie powiedzie, funkcja członkowska zwraca wartość NULL.
 
@@ -330,7 +330,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 Wskaźnik do struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , która będzie odbierać informacje o elemencie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -346,7 +346,7 @@ Określa, czy użytkownik zmienił zawartość kontrolki edycji `ComboBoxEx`, wp
 BOOL HasEditChanged();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli użytkownik wpisze pole edycji kontrolki; w przeciwnym razie 0.
 
@@ -367,7 +367,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 Wskaźnik do struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , która będzie odbierać informacje o elemencie. Ta struktura zawiera wartości flag wywołania zwrotnego dla elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks, w którym wstawiono nowy element w przypadku powodzenia; w przeciwnym razie-1.
 
@@ -393,7 +393,7 @@ Wartość DWORD wskazująca, których stylów w *dwExStyles* mają dotyczyć. Ty
 *dwExStyles*<br/>
 Wartość DWORD, która zawiera rozszerzone style kontrolki pola kombi do ustawienia dla kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD, która zawiera style rozszerzone wcześniej używane dla formantu.
 
@@ -416,7 +416,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Wskaźnik do obiektu `CImageList` zawierającego obrazy do użycia z kontrolką `CComboBoxEx`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) zawierającego obrazy używane wcześniej przez formant `CComboBoxEx`. Wartość NULL, jeśli nie ustawiono wcześniej listy obrazów.
 
@@ -439,7 +439,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 Wskaźnik do struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , która będzie odbierać informacje o elemencie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -460,7 +460,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Wskaźnik do ciągu Unicode, który zawiera rozszerzony styl wizualny pola kombi do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana nie jest używana.
 

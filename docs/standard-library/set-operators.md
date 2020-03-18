@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875773"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419547"
 ---
 # <a name="ltsetgt-operators"></a>&lt;ustawić operatory&gt;
 
@@ -41,7 +41,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli zestawy nie są równe; **wartość false** , jeśli zestawy są równe.
 
@@ -102,7 +102,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw po lewej stronie operatora jest ściśle mniejszy niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -163,7 +163,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw po lewej stronie operatora jest mniejszy lub równy zestawowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -232,7 +232,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw po lewej stronie operatora jest równy zestawowi po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -294,7 +294,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw po lewej stronie operatora jest większy niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -355,7 +355,7 @@ Obiekt typu `set`.
 *prawa*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli zestaw po lewej stronie operatora jest większy lub równy zestawowi po prawej stronie listy; w przeciwnym razie **false**.
 
@@ -424,7 +424,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli zestawy lub zestawy wielozbiorowe nie są równe; **wartość false** , jeśli zestawy lub zestawy wielozbiorowe są równe.
 
@@ -486,7 +486,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest ściśle mniejszy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -552,7 +552,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest mniejszy lub równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -627,7 +627,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -689,7 +689,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest większy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -755,7 +755,7 @@ Obiekt typu `multiset`.
 *prawa*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest większy lub równy zestawowi wielokrotnemu po prawej stronie listy; w przeciwnym razie **false**.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855348"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420688"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState, struktura
 
@@ -25,7 +25,7 @@ Zapewnia wygodny sposób wykrywania przecieków pamięci w programie.
 struct CMemoryState
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -121,7 +121,7 @@ Początkowy stan pamięci określony przez punkt kontrolny `CMemoryState`.
 *newState*<br/>
 Nowy stan pamięci określony przez punkt kontrolny `CMemoryState`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli dwa stany pamięci są różne; w przeciwnym razie 0.
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874443"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420044"
 ---
 # <a name="ltlistgt-operators"></a>Operatory &lt;list&gt;
 
@@ -43,7 +43,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli listy nie są równe; **wartość false** , jeśli listy są równe.
 
@@ -94,7 +94,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -149,7 +149,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -204,7 +204,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli lista po lewej stronie operatora jest równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -255,7 +255,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -310,7 +310,7 @@ Obiekt typu `list`.
 *prawa*\
 Obiekt typu `list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest większa lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 

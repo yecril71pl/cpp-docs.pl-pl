@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
 ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866288"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416782"
 ---
 # <a name="basic_stringstream-class"></a>basic_stringstream — Klasa
 
@@ -45,7 +45,7 @@ Cechy znaków wyspecjalizowane dla elementu Basic ciągu.
 
 Szablon klasy opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>, z elementami typu `Elem`, których cechy znaków są określane przez klasę `Tr`, a których elementy są przydzielane przez Alokator klasy `Alloc`. Obiekt przechowuje obiekt klasy basic_stringbuf < **elem**, **TR**`Alloc`>.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -110,7 +110,7 @@ Zwraca adres buforu zapisanego strumienia typu **wskaźnik** do [basic_stringbuf
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Adres buforu zapisanego strumienia typu `pointer` do basic_stringbuf < **elem**, **TR**`Alloc`>.
 
@@ -134,7 +134,7 @@ void str(
 *_Newstr*\
 Nowy ciąg.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md)< **elem**, **TR**, `Alloc`>, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez **\*** .
 
@@ -146,7 +146,7 @@ Pierwsza funkcja członkowska zwraca [rdbuf](#rdbuf) -> [str](../standard-librar
 
 Przykład, który używa `str`, znajduje się w [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855519"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420611"
 ---
 # <a name="cdoctemplate-class"></a>Klasa CDocTemplate
 
@@ -63,7 +63,7 @@ Abstrakcyjna klasa bazowa, która definiuje podstawowe funkcje szablonów dokume
 class CDocTemplate : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -201,7 +201,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ### <a name="parameters"></a>Parametry
 
 *bEndSession*<br/>
-Nie używany.
+Nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -217,7 +217,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby utworzyć nowy dokument typu
 virtual CDocument* CreateNewDocument();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego dokumentu lub wartość NULL w przypadku wystąpienia błędu.
 
@@ -239,7 +239,7 @@ Dokument, do którego ma się odwoływać nowe okno ramki. Może mieć wartość
 *pOther*<br/>
 Okno ramek, na którym ma być oparta Nowa ramka. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego okna ramki lub wartość NULL w przypadku wystąpienia błędu.
 
@@ -271,7 +271,7 @@ Wskaźnik do dokumentu, do którego ma się odwoływać nowe okno ramki OLE.
 *bCreateView*<br/>
 Określa, czy widok jest tworzony wraz z ramką.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna ramki, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -311,7 +311,7 @@ Indeks podciągu pobieranego z ciągu, który opisuje typ dokumentu. Ten paramet
 
 - Nazwa `CDocTemplate::regFileTypeName` typu dokumentu, który ma być przechowywany w bazie danych rejestracji. Ten ciąg może być wyświetlany w oknach dialogowych aplikacji, które uzyskują dostęp do bazy danych rejestracji (na przykład "arkusz programu Microsoft Excel").
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli znaleziono określony podciąg; w przeciwnym razie 0.
 
@@ -329,7 +329,7 @@ Pobiera pozycję pierwszego dokumentu skojarzonego z tym szablonem.
 virtual POSITION GetFirstDocPosition() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, która może służyć do iteracji na liście dokumentów skojarzonych z tym szablonem dokumentu; lub wartość NULL, jeśli lista jest pusta.
 
@@ -347,7 +347,7 @@ Pobiera element list identyfikowany przez *RPO*, a następnie ustawia *RPO* na w
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do następnego dokumentu na liście dokumentów skojarzonych z tym szablonem.
 
@@ -422,7 +422,7 @@ Nazwa ścieżki pliku, którego typ ma zostać określony.
 *rpDocMatch*<br/>
 Wskaźnik do dokumentu, do którego przypisano pasujący dokument, jeśli plik określony przez *lpszPathName* jest już otwarty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość z wyliczenia **pewności** , która jest definiowana w następujący sposób:
 
@@ -470,7 +470,7 @@ podczas Wskaźnik do ścieżki pliku zawierającego dokument do otwarcia.
 *bAddToMRU*<br/>
 podczas Wartość TRUE wskazuje, że dokument jest jednym z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najnowszych plików.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do dokumentu, którego plik jest nazwany przez *lpszPathName*; Wartość NULL, jeśli nie powiedzie się.
 
@@ -503,7 +503,7 @@ Zapisuje wszystkie dokumenty, które zostały zmodyfikowane.
 virtual BOOL SaveAllModified();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość niezerowa, jeśli powodzenie; w przeciwnym razie 0.
 
@@ -593,7 +593,7 @@ Wskaźnik do okna nadrzędnego (zwykle udostępnianego przez powłokę).
 *pDoc*<br/>
 Wskaźnik do obiektu dokumentu, którego zawartość będzie wyświetlana w podglądzie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prawidłowy wskaźnik do obiektu `CFrameWnd` lub wartość NULL, jeśli Tworzenie nie powiedzie się.
 

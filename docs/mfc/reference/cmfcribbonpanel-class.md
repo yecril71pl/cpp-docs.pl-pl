@@ -115,11 +115,11 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883606"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420254"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 
@@ -133,7 +133,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCRibbonPanel : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -274,7 +274,7 @@ podczas Określa identyfikator zasobu dla gorąca obrazów paska narzędzi.
 *uiDisabledResID*<br/>
 podczas Określa identyfikator zasobu wyłączonych obrazów paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wywołaj tę metodę, aby dodać pasek narzędzi do panelu wstążki. Pasek narzędzi zostanie dodany obok elementu wstążki dodanego przez poprzednie wywołanie do [CMFCRibbonPanel:: Add](#add).
 
@@ -318,7 +318,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 *dwData*<br/>
 podczas Dane skojarzone z elementem wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.
 
@@ -337,7 +337,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 *uiCmdID*<br/>
 podczas Identyfikator polecenia elementu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element wstążki, który jest identyfikowany przez określony identyfikator polecenia; w przeciwnym razie wartość NULL, jeśli żaden element wstążki nie zostanie zidentyfikowany przy użyciu określonego identyfikatora polecenia.
 
@@ -349,7 +349,7 @@ Pobiera wysokość podpisu dla panelu wstążki.
 int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość (w pikselach) podpisu dla panelu wstążki.
 
@@ -363,7 +363,7 @@ Pobiera liczbę elementów wstążki, które są zawarte w panelu wstążki.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów wstążki, które są zawarte w panelu wstążki.
 
@@ -375,7 +375,7 @@ Zwraca dane zdefiniowane przez użytkownika skojarzone z panelem.
 DWORD_PTR GetData() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zdefiniowane przez użytkownika dane skojarzone z panelem.
 
@@ -387,7 +387,7 @@ Pobiera domyślny przycisk dla panelu wstążki.
 CMFCRibbonButton& GetDefaultButton();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przycisk domyślny dla panelu wstążki.
 
@@ -403,7 +403,7 @@ Pobiera wskaźnik do elementu wstążki, jeśli jego menu podręczne zostało us
 CMFCRibbonBaseElement* GetDroppedDown() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, który został usunięty z menu podręcznego. w przeciwnym razie wartość NULL, jeśli żaden element wstążki nie został usunięty z menu podręcznego.
 
@@ -424,7 +424,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 *nIndex*<br/>
 podczas Określa indeks (liczony od zera) elementu do pobrania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prawidłowy wskaźnik do podstawowego elementu wstążki znajdującego się w pozycji *nIndex* na panelu wstążki lub wartość null, jeśli nie ma elementu w określonym indeksie.
 
@@ -473,7 +473,7 @@ Pobiera element wstążki wyróżniony na panelu wstążki.
 CMFCRibbonBaseElement* GetHighlighted() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, który jest wyróżniony na panelu wstążki.
 
@@ -492,7 +492,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 *pElem*<br/>
 podczas Wskaźnik do elementu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) określonego elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie-1.
 
@@ -521,7 +521,7 @@ Pobiera nazwę panelu wstążki.
 LPCTSTR GetName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa panelu wstążki.
 
@@ -533,7 +533,7 @@ Nazwa panelu wstążki.
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -545,7 +545,7 @@ Zwraca kategorię nadrzędną panelu wstążki.
 CMFCRibbonCategory* GetParentCategory() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kategorii wstążki zawierającej ten panel wstążki.
 
@@ -555,7 +555,7 @@ Wskaźnik do kategorii wstążki zawierającej ten panel wstążki.
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -572,7 +572,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 *cinania*<br/>
 określoną Ten parametr nie jest używany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość FALSE.
 
@@ -588,7 +588,7 @@ Pobiera wskaźnik do elementu wstążki w panelu wstążki, jeśli użytkownik g
 CMFCRibbonBaseElement* GetPressed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, jeśli użytkownik go aktualnie naciśnie; w przeciwnym razie wartość NULL.
 
@@ -602,7 +602,7 @@ Pobiera prostokąt wyświetlania dla panelu wstążki.
 const CRect& GetRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Prostokąt wyświetlania dla panelu wstążki.
 
@@ -621,7 +621,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 *pElem*<br/>
 podczas Wskaźnik do elementu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli panel wstążki zawiera określony element wstążki; w przeciwnym razie FALSE.
 
@@ -665,7 +665,7 @@ podczas Współrzędne x i y wskaźnika względem lewego górnego rogu okna.
 *bCheckPanelCaption*<br/>
 podczas TRUE, aby przetestować podpis panelu wstążki; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu wstążki, jeśli znajduje się w nim określony punkt; w przeciwnym razie wartość NULL.
 
@@ -686,7 +686,7 @@ virtual int HitTestEx(CPoint point) const;
 *moment*<br/>
 podczas Współrzędne x i y wskaźnika względem lewego górnego rogu okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu wstążki, który ma określony punkt w nim; w przeciwnym razie-1.
 
@@ -712,7 +712,7 @@ int nIndex);
 *nIndex*<br/>
 podczas Wartość z zakresu od-1 do liczby elementów wstążki, które znajdują się w tablicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli element wstążki został wstawiony pomyślnie; w przeciwnym razie FALSE.
 
@@ -733,7 +733,7 @@ virtual BOOL InsertSeparator(int nIndex);
 *nIndex*<br/>
 podczas Określa indeks (liczony od zera), w którym wstawiany jest separator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli separator został wstawiony pomyślnie; w przeciwnym razie FALSE.
 
@@ -749,7 +749,7 @@ Wskazuje, czy pionowe położenia elementów wstążki są wyśrodkowane w obrę
 BOOL IsCenterColumnVert() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli pionowe położenia elementów wstążki są wyśrodkowane w obrębie ich prostokąta wyświetlania. w przeciwnym razie FALSE.
 
@@ -761,7 +761,7 @@ Wskazuje, czy rozmiar wyświetlania panelu wstążki jest zminimalizowany w pozi
 BOOL IsCollapsed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli rozmiar ekranu panelu wstążki jest zminimalizowany w kierunku poziomym. w przeciwnym razie FALSE.
 
@@ -777,7 +777,7 @@ Wskazuje, czy ekran panelu wstążki jest wyróżniony.
 BOOL IsHighlighted() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zostanie wyróżniony ekran panelu wstążki; w przeciwnym razie FALSE.
 
@@ -793,7 +793,7 @@ Wskazuje, czy wymiary wyświetlania elementów wstążki, które znajdują się 
 BOOL IsJustifyColumns() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wymiary wyświetlane elementów wstążki, które znajdują się w tej samej kolumnie w panelu wstążki, mają ustawioną taką samą szerokość; w przeciwnym razie FALSE.
 
@@ -805,7 +805,7 @@ Wskazuje, czy panel wstążki jest głównym panelem wstążki.
 virtual BOOL IsMainPanel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość FALSE.
 
@@ -821,7 +821,7 @@ Główny panel wstążki jest wyświetlany, gdy użytkownik wybierze przycisk ap
 BOOL IsMenuMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -835,7 +835,7 @@ virtual BOOL OnKey(UINT nChar);
 
 podczas *nchar*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -879,7 +879,7 @@ podczas Określa indeks (liczony od zera) elementu, który jest usuwany z panelu
 *bUsunięcie*<br/>
 podczas TRUE, aby usunąć usuwany element; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli element został usunięty i usunięty (Jeśli *bUsuń* ma wartość true); Wartość FALSE, jeśli element nie został usunięty lub nie ma elementu wstążki w *nIndex*.
 
@@ -917,7 +917,7 @@ podczas Określa indeks (liczony od zera) elementu, który ma zostać zamieniony
 *pElem*<br/>
 [in. out] Prawidłowy wskaźnik do elementu, który zastępuje oryginalny element.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli oryginalny element wstążki został pomyślnie zastąpiony przez nowy element wstążki; FAŁSZ, jeśli element wstążki nie został zastąpiony lub jeśli nie ma żadnego elementu w określonym indeksie.
 
@@ -943,7 +943,7 @@ podczas Określa identyfikator polecenia elementu, który ma zostać zamieniony.
 *pElem*<br/>
 [in. out] Prawidłowy wskaźnik do elementu, który zastąpi oryginalny element.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli oryginalny element wstążki został pomyślnie zastąpiony przez nowy element wstążki; FAŁSZ, jeśli element wstążki nie został zastąpiony lub jeśli nie istnieje żaden element o określonym IDENTYFIKATORze polecenia.
 
@@ -1018,7 +1018,7 @@ podczas PRAWDA, aby określić, że menu podręczne jest wyrównane do prawej st
 *uiMenuResID*<br/>
 podczas Określa identyfikator zasobu menu, które ma zostać dodane do panelu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli menu zostało przypisane do elementu wstążki; w przeciwnym razie FALSE.
 
@@ -1044,7 +1044,7 @@ podczas Określa indeks (liczony od zera) elementu wstążki, który ma zostać 
 *pRTC*<br/>
 [in. out] Wskaźnik do informacji o klasie środowiska uruchomieniowego dla elementu wstążki, który jest dodawany do panelu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element wstążki, który został utworzony przy użyciu określonych informacji o klasie środowiska uruchomieniowego.
 
@@ -1070,7 +1070,7 @@ podczas Określa identyfikator polecenia elementu wstążki, który ma zostać d
 *pRTC*<br/>
 [in. out] Wskaźnik do informacji o klasie środowiska uruchomieniowego skojarzonych z elementem wstążki, który jest dodawany do panelu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element wstążki, który został utworzony przy użyciu określonych informacji o klasie środowiska uruchomieniowego.
 
@@ -1151,7 +1151,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 *pButton*<br/>
 podczas Wskaźnik na przycisk domyślny panelu wstążki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do menu podręcznego dla panelu wstążki, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
 
@@ -1197,7 +1197,7 @@ Wskazuje, czy wstążka nadrzędna ma wygląd systemu Windows 7 (mały prostoką
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wstążka nadrzędna ma wygląd systemu Windows 7; w przeciwnym razie FALSE.
 
@@ -1228,7 +1228,7 @@ Zwraca prostokąt powiązany elementu galerii.
 CRect GetGalleryRect();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar i położenie elementu galerii w tym panelu.
 
@@ -1242,7 +1242,7 @@ Zwraca element z fokusem.
 CMFCRibbonBaseElement* GetFocused() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu z fokusem lub wartości NULL.
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857174"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417797"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
@@ -220,6 +220,6 @@ _ATL_SINGLE_THREADED
 
 Określa, że obiekt jest zawsze uruchamiany w podstawowym wątku COM. Aby zapoznać się z opisem modeli wątkowości dostępnych dla obiektu ATL, zobacz [Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątkowego i [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Utworze](../../atl/reference/atl-macros.md)

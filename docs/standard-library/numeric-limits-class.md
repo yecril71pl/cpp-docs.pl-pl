@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876035"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419771"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits — Klasa
 
@@ -95,7 +95,7 @@ Typ danych elementu podstawowego, którego właściwości są testowane lub są 
 
 ## <a name="remarks"></a>Uwagi
 
-Nagłówek definiuje jawne specjalizacje dla typów, **wchar_t**, **bool**, **char**, signed **char**, **unsigned char**, **Short**, unsigned **Short**, **int** **, Long** **int** **,** **Long** **char32_t** **char16_t** **, unsigned**Long Dla tych jawnych specjalizacji element członkowski [numeric_limits:: is_specialized](#is_specialized) ma **wartość true**, a wszystkie odpowiednie elementy członkowskie mają znaczące wartości. Program może podawać dodatkowe jawne specjalizacje. Większość funkcji członkowskich klasy opisuje lub testuje możliwe implementacje **zmiennoprzecinkowe**.
+Nagłówek definiuje jawne specjalizacje dla typów, **wchar_t**, **bool**, **char**, signed **char**, **unsigned char**, **Short**, unsigned **Short**, **int** **unsigned long long** **float** **, Long** **int** **,** **Long** **char32_t** **char16_t** **, unsigned**Long **double** Dla tych jawnych specjalizacji element członkowski [numeric_limits:: is_specialized](#is_specialized) ma **wartość true**, a wszystkie odpowiednie elementy członkowskie mają znaczące wartości. Program może podawać dodatkowe jawne specjalizacje. Większość funkcji członkowskich klasy opisuje lub testuje możliwe implementacje **zmiennoprzecinkowe**.
 
 W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczących wartości. Obiekt elementu członkowskiego, który nie ma zrozumiałej wartości, przechowuje zero (lub **Fałsz**) i funkcję członkowską, która nie zwraca znaczącej wartości zwraca `Type(0)`.
 
@@ -144,7 +144,7 @@ Zwraca najmniejszą niezerową wartość nieznormalizowaną.
 static constexpr Type denorm_min() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Najmniejsza nieznormalizowana wartość niezerową.
 
@@ -203,7 +203,7 @@ Zwraca liczbę podstawy cyfr, które typ może reprezentować bez utraty dokład
 static constexpr int digits = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Liczba podstawy, które typ może reprezentować bez utraty dokładności.
 
@@ -247,7 +247,7 @@ Zwraca liczbę cyfr dziesiętnych, które typ może reprezentować bez utraty do
 static constexpr int digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Liczba cyfr dziesiętnych, które typ może reprezentować bez utraty dokładności.
 
@@ -291,7 +291,7 @@ Funkcja zwraca różnicę z zakresu od 1 do najmniejszej wartości większej ni�
 static constexpr Type epsilon() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Różnica między 1 a najmniejszą wartością większą niż 1, która jest zaprezentowania dla typu danych.
 
@@ -343,7 +343,7 @@ Testuje, czy typ zezwala na nieznormalizowane wartości.
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wyliczenia typu **const**`float_denorm_style`, wskazująca, czy typ zezwala na nieznormalizowane wartości.
 
@@ -389,7 +389,7 @@ Testuje, czy ubytek dokładności został wykryty jako ubytek denormalizacji, a 
 static constexpr bool has_denorm_loss = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli utrata dokładności zostanie wykryta jako ubytek denormalizacji; **wartość false** , jeśli nie.
 
@@ -435,7 +435,7 @@ Testuje, czy typ ma reprezentację dla nieskończoności dodatniej.
 static constexpr bool has_infinity = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 ma **wartość true** , jeśli typ ma reprezentację dla nieskończoności dodatniej; **wartość false** , jeśli nie.
 
@@ -481,7 +481,7 @@ Testuje, czy typ ma reprezentację dla cichej nie liczby (NAN), która nie jest 
 static constexpr bool has_quiet_NaN = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli **Typ** ma reprezentację dla cichego NaN; **wartość false** , jeśli nie.
 
@@ -527,7 +527,7 @@ Testuje, czy typ ma reprezentację do sygnalizowania nie liczbą (NAN).
 static constexpr bool has_signaling_NaN = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli typ ma reprezentację sygnalizującego NaN; **wartość false** , jeśli nie.
 
@@ -573,7 +573,7 @@ Reprezentacja dodatniej nieskończoności dla typu, jeśli jest dostępna.
 static constexpr Type infinity() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Reprezentacja dodatniej nieskończoności dla typu, jeśli jest dostępna.
 
@@ -627,7 +627,7 @@ Testuje, czy zestaw wartości, które może reprezentować, jest ograniczony.
 static constexpr bool is_bounded = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 ma **wartość true** , jeśli typ ma ograniczony zestaw wartości, które są możliwe do zaprezentowania; **wartość false** , jeśli nie.
 
@@ -681,7 +681,7 @@ Testuje, czy obliczenia wykonywane na typie są wolne od błędów zaokrąglania
 static constexpr bool is_exact = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obliczenia są wolne od błędów zaokrąglania; **wartość false** , jeśli nie.
 
@@ -735,7 +735,7 @@ Testuje, czy typ jest zgodny ze standardami IEC 559.
 static constexpr bool is_iec559 = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli typ jest zgodny ze standardami IEC 559; **wartość false** , jeśli nie.
 
@@ -785,7 +785,7 @@ Testuje, czy typ ma reprezentację liczb całkowitych.
 static constexpr bool is_integer = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli typ ma reprezentację całkowitą; **wartość false** , jeśli nie.
 
@@ -835,7 +835,7 @@ Testuje, czy **Typ** ma reprezentację modulo.
 static constexpr bool is_modulo = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli typ ma reprezentację modulo; **wartość false** , jeśli nie.
 
@@ -885,7 +885,7 @@ Testuje, czy typ ma podpisaną reprezentację.
 static constexpr bool is_signed = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 ma **wartość true** , jeśli typ ma podpisaną reprezentację; **wartość false** , jeśli nie.
 
@@ -935,7 +935,7 @@ Testuje, czy typ ma jawną specjalizację zdefiniowaną w szablonie klasy `numer
 static constexpr bool is_specialized = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli typ ma jawną specjalizację zdefiniowaną w szablonie klasy; **wartość false** , jeśli nie.
 
@@ -989,7 +989,7 @@ Zwraca najbardziej ujemną wartość skończoną.
 static constexpr Type lowest() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca najbardziej ujemną wartość skończoną.
 
@@ -1005,7 +1005,7 @@ Zwraca maksymalną skończoną wartość dla typu.
 static constexpr Type max() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna wartość skończoną dla typu.
 
@@ -1047,7 +1047,7 @@ Zwraca liczbę cyfr dziesiętnych wymaganych do upewnienia się, że dwie odręb
 static constexpr int max_digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę cyfr dziesiętnych, które są wymagane, aby upewnić się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
@@ -1063,7 +1063,7 @@ Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmie
 static constexpr int max_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalny szacowany całkowity podstawy wykładnika oparta na typie.
 
@@ -1109,7 +1109,7 @@ Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmie
 static constexpr int max_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalny całkowity 10-podstawowy wykładnik, który jest zaprezentowany przez typ.
 
@@ -1155,7 +1155,7 @@ Zwraca minimalną znormalizowaną wartość dla typu.
 static constexpr Type min() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Minimalna znormalizowana wartość dla typu.
 
@@ -1205,7 +1205,7 @@ Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy mo
 static constexpr int min_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Minimalny całkowity podstawy wykładnika oparta na typie.
 
@@ -1251,7 +1251,7 @@ Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy mo
 static constexpr int min_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Minimalny całkowity, 10-podstawowy wykładnik do zaprezentowania przez typ.
 
@@ -1297,7 +1297,7 @@ Zwraca reprezentację wartości typu quiet nie jest liczbą (NAN) dla tego eleme
 static constexpr Type quiet_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Reprezentacja cichego NAN dla typu.
 
@@ -1343,7 +1343,7 @@ Zwraca część całkowitą, która jest określana jako podstawy, używana do r
 static constexpr int radix = 0;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Część podstawowa dla reprezentacji typu.
 
@@ -1389,7 +1389,7 @@ Zwraca maksymalny błąd zaokrąglenia typu.
 static constexpr Type round_error() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalny błąd zaokrąglania typu.
 
@@ -1431,7 +1431,7 @@ Zwraca wartość opisującą różne metody, które można wybrać, aby zaokrąg
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Wartość z wyliczenia `float_round_style` opisującego styl zaokrąglenia.
 
@@ -1478,7 +1478,7 @@ Zwraca reprezentację sygnalizującego nie jest liczbą (NAN) dla tego typu.
 static constexpr Type signaling_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Reprezentacja wartości NAN sygnalizującej typ.
 
@@ -1518,7 +1518,7 @@ Testuje, czy typ może określić, że wartość jest zbyt mała, aby reprezento
 static constexpr bool tinyness_before = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli typ może wykryć małe wartości przed zaokrągleniem; **wartość false** , jeśli nie jest.
 
@@ -1568,7 +1568,7 @@ Testuje, czy zalewkowanie raportów na wyjątkach arytmetycznych jest implemento
 static constexpr bool traps = false;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli Pułapka jest zaimplementowana dla typu; **wartość false** , jeśli nie jest.
 

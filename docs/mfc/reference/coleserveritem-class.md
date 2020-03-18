@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884108"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421087"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
 
@@ -91,7 +91,7 @@ Udostępnia interfejs serwera do elementów OLE.
 class COleServerItem : public CDocItem
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -253,7 +253,7 @@ Określa wpływ, przez który Źródło przeciągane będzie dozwolone w operacj
 *lpRectStartDrag*<br/>
 Wskaźnik do prostokąta, który definiuje, gdzie w rzeczywistości zostanie rozpoczęte przeciąganie. Aby uzyskać więcej informacji zobacz następujące sekcji uwag.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość z wyliczenia DROPEFFECT. W przypadku DROPEFFECT_MOVE należy usunąć oryginalne dane.
 
@@ -311,7 +311,7 @@ Wywołaj tę funkcję, aby uzyskać obiekt [by uzyskać COleDataSource](../../mf
 COleDataSource* GetDataSource();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `COleDataSource` używany do przechowywania formatów konwersji.
 
@@ -327,7 +327,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do dokumentu zawierającego elemen
 COleServerDoc* GetDocument() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do dokumentu zawierającego element; Wartość NULL, jeśli element nie jest częścią dokumentu.
 
@@ -364,7 +364,7 @@ Wywołaj tę funkcję, aby pobrać nazwę elementu.
 const CString& GetItemName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa elementu .
 
@@ -385,7 +385,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 *lpStgMedium*<br/>
 Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać CF_LINKSOURCE dane dla elementu OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -433,7 +433,7 @@ Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest połączony.
 BOOL IsConnected() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element jest połączony; w przeciwnym razie 0.
 
@@ -449,7 +449,7 @@ Wywołaj tę funkcję, aby zobaczyć, czy element OLE jest elementem połączony
 BOOL IsLinkedItem() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element jest elementem połączonym; w przeciwnym razie 0.
 
@@ -545,7 +545,7 @@ Wskaźnik do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , na kt
 *Elementu rsize*<br/>
 Rozmiar w jednostkach HIMETRIC, w którym ma zostać narysowany metaplik.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element został pomyślnie narysowany; w przeciwnym razie 0.
 
@@ -583,7 +583,7 @@ Wartość z wyliczenia DVASPECT. Ten parametr może mieć jedną z następujący
 *Elementu rsize*<br/>
 Rozmiar elementu w jednostkach HIMETRIC.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element został pomyślnie narysowany; w przeciwnym razie 0.
 
@@ -615,7 +615,7 @@ Przesunięcie kursora myszy od początku obiektu w pikselach.
 *lpSize*<br/>
 Rozmiar obiektu w pikselach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) zawierającego dane ze schowka.
 
@@ -649,7 +649,7 @@ Określa aspekt elementu OLE, którego granice mają zostać pobrane. Ten parame
 *Elementu rsize*<br/>
 Odwołanie do obiektu `CSize`, który będzie otrzymywał rozmiar elementu OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -687,7 +687,7 @@ Wskaźnik do obiektu danych OLE zawierającego dane w różnych formatach do ini
 *bCreation*<br/>
 Ma wartość TRUE, jeśli funkcja jest wywoływana w celu zainicjowania elementu OLE, który jest nowo utworzony przez aplikację kontenera. FAŁSZ, jeśli funkcja jest wywoływana, aby zastąpić zawartość już istniejącego elementu OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -721,7 +721,7 @@ Wywoływane przez platformę, aby określić, czy dowolne połączone elementy w
 virtual BOOL OnQueryUpdateItems();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli dokument zawiera elementy wymagające aktualizacji; 0, jeśli wszystkie elementy są aktualne.
 
@@ -747,7 +747,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *lpStgMedium*<br/>
 Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -779,7 +779,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *pFile*<br/>
 Wskazuje obiekt `CFile`, w którym mają być renderowane dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -809,7 +809,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ,
 *phGlobal*<br/>
 Wskazuje dojście do pamięci globalnej, w której mają zostać zwrócone dane. Jeśli żadna pamięć nie została przypisana, ten parametr może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -836,7 +836,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 *lpLogPalette*<br/>
 Wskaźnik do struktury [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli jest używana paleta kolorów; w przeciwnym razie 0.
 
@@ -868,7 +868,7 @@ Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmediu
 *bRelease*<br/>
 Wskazuje, kto ma własność nośnika magazynu po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za wydanie zasobów przyznanych w imieniu nośnika magazynu. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* jest różna od zera, element serwera przejmuje własność, zwalniając nośnik po zakończeniu jego używania. Gdy *bRelease* jest równa 0, obiekt wywołujący zachowuje własność, a element serwera może korzystać z nośnika magazynu tylko w czasie trwania wywołania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -906,7 +906,7 @@ Określa aspekt elementu OLE, którego granice są określone. Ten parametr moż
 *zmienia*<br/>
 Struktura [CSizea](../../atl-mfc-shared/reference/csize-class.md) określająca nowy rozmiar elementu OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856633"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419722"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
@@ -57,7 +57,7 @@ Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikatorze.**
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -111,7 +111,7 @@ Zwraca element ustawień regionalnych używany jako separator dziesiętny.
 CharType decimal_point() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element specyficzny dla ustawień regionalnych, który ma być używany jako punkt dziesiętny.
 
@@ -154,7 +154,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w 
 virtual CharType do_decimal_point() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element specyficzny dla ustawień regionalnych, który ma być używany jako punkt dziesiętny.
 
@@ -170,7 +170,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca sekwencję do użyci
 virtual string_type do_falsename() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg zawierający sekwencję do użycia jako tekstowa reprezentacja wartości **false**.
 
@@ -190,7 +190,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwróce
 virtual string do_grouping() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
@@ -210,7 +210,7 @@ Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w 
 virtual CharType do_thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca element specyficzny dla ustawień regionalnych używany jako separator tysięczny.
 
@@ -248,7 +248,7 @@ Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **fa
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg zawierający sekwencję `CharType`s do użycia jako tekstowa reprezentacja wartości **false**.
 
@@ -297,7 +297,7 @@ Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób g
 string grouping() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Reguła specyficzna dla ustawień regionalnych określająca sposób grupowania cyfr na lewo od dowolnego miejsca dziesiętnego.
 
@@ -382,7 +382,7 @@ Zwraca element specyficzny dla ustawień regionalnych używany jako separator ty
 CharType thousands_sep() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element specyficzny dla ustawień regionalnych, który ma być używany jako separator tysięcy.
 
@@ -425,7 +425,7 @@ Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **tr
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który ma być używany jako tekstowa reprezentacja wartości **true**.
 

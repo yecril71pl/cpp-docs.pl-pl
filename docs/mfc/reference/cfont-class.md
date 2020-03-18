@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866610"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418623"
 ---
 # <a name="cfont-class"></a>Klasa CFont
 
@@ -37,7 +37,7 @@ Hermetyzuje czcionkę interfejsu urządzenia graficznego (GDI) systemu Windows i
 class CFont : public CGdiObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -174,7 +174,7 @@ Określa gęstość i rodzinę czcionki. Aby uzyskać listę wartości i uzyska�
 *lpszFacename*<br/>
 `CString` lub wskaźnik do ciągu zakończonego wartością null, który określa nazwę kroju czcionki. Długość tego ciągu nie może przekraczać 30 znaków. Funkcja [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) systemu Windows może służyć do wyliczania wszystkich aktualnie dostępnych czcionek. Jeśli *lpszFacename* ma wartość null, w interfejsie GDI używany jest krój niezależny od urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -205,7 +205,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 *lpLogFont*<br/>
 Wskazuje strukturę `LOGFONT`, która definiuje charakterystykę czcionki logicznej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -243,7 +243,7 @@ BOOL CreatePointFont(
 *Domeny*<br/>
 Wskaźnik do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , który ma zostać użyty do przekonwertowania wysokości w *nPointSize* na jednostki logiczne. Jeśli wartość jest równa NULL, do konwersji jest używany kontekst urządzenia ekranu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli się powiedzie, w przeciwnym razie 0.
 
@@ -275,7 +275,7 @@ Wskazuje strukturę [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , kt
 *Domeny*<br/>
 Wskaźnik do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , który ma zostać użyty do przekonwertowania wysokości w `lfHeight` na jednostki logiczne. Jeśli wartość jest równa NULL, do konwersji jest używany kontekst urządzenia ekranu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli się powiedzie, w przeciwnym razie 0.
 
@@ -302,7 +302,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 *hFont*<br/>
 Dojście HFONT do czcionki systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CFont`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -327,7 +327,7 @@ int GetLogFont(LOGFONT* pLogFont);
 *pLogFont*<br/>
 Wskaźnik do struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , aby otrzymać informacje o czcionce.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie, w przeciwnym razie 0.
 
@@ -343,7 +343,7 @@ Użyj tego operatora, aby uzyskać uchwyt interfejsu GDI systemu Windows dla czc
 operator HFONT() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt obiektu czcionki GDI systemu Windows dołączony do `CFont`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 

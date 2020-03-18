@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866137"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417083"
 ---
 # <a name="source_block-class"></a>source_block — Klasa
 
@@ -59,7 +59,7 @@ Połącz rejestr, który ma być używany do przechowywania linków docelowych.
 *_MessageProcessorType*<br/>
 Typ procesora do przetwarzania komunikatów.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
@@ -143,7 +143,7 @@ virtual message<_Target_type>* accept(
 *_PTarget*<br/>
 Wskaźnik do bloku docelowego, który wywołuje metodę `accept`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
@@ -166,7 +166,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 *_MsgId*<br/>
 Tożsamość obiektu środowiska uruchomieniowego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
@@ -217,7 +217,7 @@ virtual message<_Target_type>* consume(
 *_PTarget*<br/>
 Wskaźnik do bloku docelowego, który wywołuje metodę `consume`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
@@ -242,7 +242,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 *_MsgId*<br/>
 `runtime_object_identity` zużywanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
@@ -415,7 +415,7 @@ virtual bool reserve(
 *_PTarget*<br/>
 Wskaźnik do bloku docelowego, który wywołuje metodę `reserve`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** . Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
 
@@ -438,7 +438,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 *_MsgId*<br/>
 `runtime_object_identity` obiektu `message`, który jest zarezerwowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** .
 

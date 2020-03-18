@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: d25d8837c549b425416632ee07e23bb57fbd17ae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856742"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419988"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -156,9 +156,9 @@ Mapa Porządkuje elementy, które kontroluje, przez wywołanie przechowywanego o
 >
 > W języku C++ 14 można włączyć wyszukiwanie heterogeniczne, określając `std::less<>` lub predykat `std::greater<>`, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [Wyszukiwanie heterogeniczne w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -249,7 +249,7 @@ const Type& at(const Key& key) const;
 klucz * \
 Wartość klucza do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wartości danych znalezionego elementu.
 
@@ -293,7 +293,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu w mapie lub lokalizacji, która pomyślnie ma pustą mapę.
 
@@ -346,7 +346,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stały **iterator dwukierunkowy odnoszący się do pierwszego** elementu w zakresie lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -372,7 +372,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kompletny Iterator dostępu **dwukierunkowego** , który wskazuje tuż poza końcem zakresu.
 
@@ -561,7 +561,7 @@ size_type count(const Key& key) const;
 *klucz*\
 Wartość klucza elementów do dopasowania z mapy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 1, jeśli mapa zawiera element, którego klucz sortowania jest zgodny z kluczem parametru; 0, jeśli mapa nie zawiera elementu z pasującym kluczem.
 
@@ -624,7 +624,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej mapie
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconej [mapie](../standard-library/map-class.md) lub na adres, który był ostatnim elementem w nieodwróconym `map`.
 
@@ -674,7 +674,7 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej [mapie](../standard-library/map-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym `map`).
 
@@ -791,7 +791,7 @@ emplace(
 *argumenty*\
 Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do mapy, chyba że zawiera już element o równoważnej kolejności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [Para](../standard-library/pair-structure.md) , której składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli mapa zawiera już element równoważnej wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
@@ -880,7 +880,7 @@ Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do
 *gdzie*\
 Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Jeśli ten punkt bezpośrednio poprzedza miejsce, w *którym*może następować amortyzowany stały czas zamiast czasu logarytmu).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do nowo wstawionego elementu.
 
@@ -946,7 +946,7 @@ Testuje, czy mapa jest pusta.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli mapa jest pusta; **wartość false** , jeśli mapa jest niepusta.
 
@@ -993,7 +993,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator Past. Jeśli mapa jest pusta, a następnie `map::end() == map::begin()`.
 
@@ -1020,7 +1020,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *klucz*\
 Wartość klucza argumentu do porównania z kluczem sortowania elementu z przeszukiwanej mapy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Aby uzyskać dostęp do pierwszego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **najpierw**i aby usunąć odwołanie do dolnego powiązanego iteratora, użyj \*(`pr`. **pierwszy**). Aby uzyskać dostęp do drugiego iteratora pary `pr` zwrócone przez funkcję członkowską, należy użyć `pr`. **drugi**i aby usunąć odwołanie do górnego powiązanego iteratora, użyj \*(`pr`. **sekundę**).
 
@@ -1114,7 +1114,7 @@ Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 *Klucz*\
 Wartość klucza elementów do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem mapy, jeśli taki element nie istnieje.
 
@@ -1215,7 +1215,7 @@ const_iterator find(const Key& key) const;
 *klucz*\
 Wartość klucza do dopasowania przez klucz sortowania elementu z przeszukiwanej mapy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który odwołuje się do lokalizacji elementu z określonym kluczem lub lokalizacji, w której znajduje się ostatni element na mapie (`map::end()`), jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1295,7 +1295,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania mapy.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez mapę.
 
@@ -1418,7 +1418,7 @@ Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściow
 \ *IList*
 [Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli mapa już zawiera element, którego klucz ma odpowiednik wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
@@ -1566,7 +1566,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w mapie.
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji, którego mapa używa do uporządkowania jej elementów.
 
@@ -1680,7 +1680,7 @@ const_iterator lower_bound(const Key& key) const;
 *klucz*\
 Wartość klucza argumentu do porównania z kluczem sortowania elementu z przeszukiwanej mapy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `iterator` lub `const_iterator`, który odnosi się do lokalizacji elementu w mapie, który ma klucz, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji z ostatnim elementem w mapie, jeśli nie zostanie znaleziony żaden pasujący klucz.
 
@@ -1967,7 +1967,7 @@ Zwraca maksymalną długość mapy.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość mapy.
 
@@ -2007,7 +2007,7 @@ Type& operator[](Key&& key);
 *klucz*\
 Wartość klucza elementu, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wartości danych wstawionego elementu.
 
@@ -2169,7 +2169,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróconej mapie lub odnoszący się do ostatniego elementu w mapie nieodwróconej.
 
@@ -2306,7 +2306,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej mapie (lokalizacja, która poprzedza pierwszy element na mapie nieodwróconej).
 
@@ -2410,7 +2410,7 @@ Zwraca liczbę elementów w mapie.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość mapy.
 
@@ -2543,7 +2543,7 @@ const_iterator upper_bound(const Key& key) const;
 *klucz*\
 Wartość klucza argumentu do porównania z wartością klucza sortowania elementu z przeszukiwanej mapy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `iterator` lub `const_iterator`, które odnoszą się do lokalizacji elementu w mapie, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji, która kończy się ostatnim elementem w mapie, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -2608,7 +2608,7 @@ Funkcja członkowska zwraca obiekt funkcji, który określa kolejność element�
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji porównywania, który jest wykorzystywany przez mapę do porządkowania jego elementów.
 
@@ -2728,7 +2728,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Containers](../cpp/containers-modern-cpp.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

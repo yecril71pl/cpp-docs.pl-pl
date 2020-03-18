@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866711"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420604"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -256,7 +256,7 @@ Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w fo
 class CMFCBaseTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -554,7 +554,7 @@ podczas Ciąg, który zawiera etykietę okna.
 *bDetachable*<br/>
 podczas Parametr logiczny, który wskazuje, czy okno jest odłączane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do otoki pochodnej z klasy `CDockablePane`, jeśli `CreateWrapper` pomyślnie utworzy klasę otoki dla *pWndToWrap*. Jeśli metoda zakończy się niepowodzeniem, retruns *pWndToWrap*.
 
@@ -588,7 +588,7 @@ podczas Indeks (liczony od zera) karty, który ma zostać odłączony.
 *bHide*<br/>
 podczas Parametr logiczny, który wskazuje, czy na platformie powinna być ukryta odłączona karta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -640,7 +640,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 podczas Wartość logiczna określająca, czy mają być używane niestandardowe etykietki narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -687,7 +687,7 @@ podczas Indeks karty (liczony od zera).
 *bEnable*<br/>
 podczas Wartość logiczna wskazująca, czy karta ma być odłączana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -721,7 +721,7 @@ virtual BOOL EnsureVisible(int iTab);
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -752,7 +752,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 *zmiennoprzecinkow*<br/>
 podczas Punkt, który jest zdefiniowany za pomocą współrzędnych obszaru klienta obiektu [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -782,7 +782,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 podczas *nNewTab*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -794,7 +794,7 @@ Pobiera indeks aktualnie aktywnej karty.
 virtual int GetActiveTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks aktywnych kart (liczony od zera); -1, jeśli nie ma aktywnej karty.
 
@@ -806,7 +806,7 @@ Pobiera kolor tła aktualnie aktywnej karty.
 virtual COLORREF GetActiveTabColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która określa kolor tła aktywnej karty.
 
@@ -822,7 +822,7 @@ Pobiera kolor tekstu dla aktywnej karty.
 virtual COLORREF GetActiveTabTextColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która określa kolor tekstu aktywnej karty.
 
@@ -838,7 +838,7 @@ Pobiera wskaźnik do aktywnego okna karty.
 virtual CWnd* GetActiveWnd() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna.
 
@@ -850,7 +850,7 @@ Pobiera tablicę kolorów używanych do automatycznego kolorowania.
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do tablicy wartości [COLORREF](/windows/win32/gdi/colorref) , które są używane przez obiekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) do automatycznego kolorowania kart.
 
@@ -878,7 +878,7 @@ określoną Odwołanie do liczby całkowitej. Ta metoda zapisuje indeks (liczony
 *iStartFrom*<br/>
 podczas Indeks (liczony od zera) pierwszej karty do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszej widocznej karty, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -894,7 +894,7 @@ Jeśli wartość *iStartFrom* jest większa lub równa liczbie kart w kontrolce 
 virtual int GetFirstVisibleTabNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -906,7 +906,7 @@ Pobiera indeks aktualnie wyróżnionej karty.
 int GetHighlightedTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) wyróżnionej karty.
 
@@ -916,7 +916,7 @@ Indeks (liczony od zera) wyróżnionej karty.
 virtual const CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -926,7 +926,7 @@ virtual const CImageList* GetImageList() const;
 virtual CSize GetImageSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -940,7 +940,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 podczas *iTabNum*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -952,7 +952,7 @@ Pobiera lokalizację części obszaru kart kontrolki karta.
 Location GetLocation() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Lokalizacja obszaru kart.
 
@@ -966,7 +966,7 @@ Możliwe wartości lokalizacji obszaru kart to LOCATION_BOTTOM i LOCATION_TOP.
 virtual CSize GetMaxWindowSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1007,7 +1007,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która wskazuje kolor tła określonej karty; -1, jeśli *ITAB* jest poza zakresem.
 
@@ -1019,7 +1019,7 @@ Pobiera rozmiar obramowania karty w kontrolce karty.
 virtual int GetTabBorderSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar obramowania karty (w pikselach).
 
@@ -1040,7 +1040,7 @@ virtual int GetTabByID(int id) const;
 *id*<br/>
 podczas Identyfikator karty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) karty, jeśli zostanie znaleziony; -1, jeśli nie można odnaleźć identyfikatora karty.
 
@@ -1054,7 +1054,7 @@ Identyfikatory kart są przypisywane automatycznie po dodaniu kart do kontrolki 
 CRect GetTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1071,7 +1071,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 *Właściwość*<br/>
 podczas Uchwyt do okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) karty, jeśli się powiedzie; -1, jeśli żadna karta nie zawiera parametru *HWND*.
 
@@ -1088,7 +1088,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 *zmiennoprzecinkow*<br/>
 podczas Punkt w współrzędnej klienta kontrolki karta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks karty zawierającej *pt*; -1, jeśli żadna karta nie zawiera *pt*.
 
@@ -1102,7 +1102,7 @@ virtual int GetTabFullWidth(int iTab) const;
 
 podczas *ITAB*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1119,7 +1119,7 @@ virtual HICON GetTabHicon(int iTab) const;
 *iTab*<br/>
 podczas Indeks (liczony od zera) dla karty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 HICON skojarzone z etykietą karty, jeśli się powiedzie; Wartość NULL, jeśli nie ma HICON lub jeśli metoda zakończy się niepowodzeniem.
 
@@ -1136,7 +1136,7 @@ virtual UINT GetTabIcon(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator ikony dla określonej karty, jeśli się powiedzie; -1, jeśli indeks jest nieprawidłowy.
 
@@ -1157,7 +1157,7 @@ int GetTabID(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator karty lub-1, jeśli *ITAB* jest poza zakresem.
 
@@ -1179,7 +1179,7 @@ podczas Indeks karty (liczony od zera).
 *strLabel*<br/>
 określoną Odwołanie do obiektu `CString`. Ta metoda przechowuje etykietę karty w tym parametrze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1207,7 +1207,7 @@ podczas Indeks karty (liczony od zera).
 *cinania*<br/>
 określoną Odwołanie do obiektu `CRect`. Ta metoda przechowuje rozmiar i położenie karty w tym parametrze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; Wartość FALSE, jeśli indeks karty jest nieprawidłowy.
 
@@ -1217,7 +1217,7 @@ Wartość TRUE, jeśli powodzenie; Wartość FALSE, jeśli indeks karty jest nie
 virtual int GetTabsHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1229,7 +1229,7 @@ Pobiera liczbę kart w kontrolce karty.
 virtual int GetTabsNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba kart w kontrolce karty.
 
@@ -1258,7 +1258,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Parametr [COLORREF](/windows/win32/gdi/colorref) wskazujący kolor tekstu określonej karty; -1, jeśli *ITAB* jest poza zakresem.
 
@@ -1275,7 +1275,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który znajduje się na karcie, którą określa *ITAB* . Wartość NULL, jeśli *ITAB* jest nieprawidłowy.
 
@@ -1298,7 +1298,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który znajduje się na określonej karcie; Wartość NULL, jeśli *ITAB* jest nieprawidłowy.
 
@@ -1316,7 +1316,7 @@ Pobiera odwołanie do contorl etykietki narzędzia.
 CToolTipCtrl& GetToolTipCtrl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do kontrolki ToolTip.
 
@@ -1328,7 +1328,7 @@ Pobiera liczbę aktualnie widocznych kart.
 virtual int GetVisibleTabsNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba widocznych kart.
 
@@ -1342,7 +1342,7 @@ virtual BOOL HasImage(int iTab) const;
 
 podczas *ITAB*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1425,7 +1425,7 @@ podczas *ITAB*<br/>
 virtual BOOL IsActiveTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1437,7 +1437,7 @@ Określa, czy kontrolka karty ma tryb Autokolor.
 BOOL IsAutoColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, Jeśli kontrolka karta jest w trybie autokolorach; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1451,7 +1451,7 @@ Tryb Autokolor można włączać lub wyłączać za pomocą metody [CMFCBaseTabC
 BOOL IsAutoDestroyWindow() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1461,7 +1461,7 @@ BOOL IsAutoDestroyWindow() const;
 virtual BOOL IsColored() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1471,7 +1471,7 @@ virtual BOOL IsColored() const;
 BOOL IsDialogControl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1481,7 +1481,7 @@ BOOL IsDialogControl() const;
 BOOL IsDrawNoPrefix() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1493,7 +1493,7 @@ Wskazuje, czy ramka kontrolki karta jest renderowana w stylu płaskim, czy w sty
 virtual BOOL IsFlatFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ramka kontrolki karta jest renderowana w stylu płaskim; FAŁSZ, jeśli ramka jest renderowana w stylu 3W.
 
@@ -1509,7 +1509,7 @@ Kontrolki tabulacji używające stylu programu Outlook nie mogą być renderowan
 virtual BOOL IsFlatTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1521,7 +1521,7 @@ Określa, czy kontrolka karta ukrywa etykietę karty, jeśli istnieje tylko jedn
 virtual BOOL IsHideSingleTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, Jeśli kontrolka karta ukrywa etykietę karty, gdy ma jedną kartę. w przeciwnym razie FALSE.
 
@@ -1543,7 +1543,7 @@ podczas *HICON*<br/>
 
 podczas *iIcon*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1555,7 +1555,7 @@ Wskazuje, czy formant karty jest skonfigurowany tak, aby umożliwić użytkownik
 virtual BOOL IsInPlaceEdit() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli włączono edytowanie w miejscu; w przeciwnym razie 0.
 
@@ -1569,7 +1569,7 @@ Edycję w miejscu można włączyć lub wyłączyć, wywołując metodę [CMFCBa
 virtual BOOL IsLeftRightRounded() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1579,7 +1579,7 @@ virtual BOOL IsLeftRightRounded() const;
 BOOL IsMDITab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1591,7 +1591,7 @@ Określa, czy karty są wyświetlane w stylu programu Microsoft OneNote.
 virtual BOOL IsOneNoteStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli karty są wyświetlane w stylu programu Microsoft OneNote; w przeciwnym razie FALSE.
 
@@ -1614,7 +1614,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 *moment*<br/>
 podczas Punkt do przetestowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli punkt znajduje się w obszarze kart; 0 w przeciwnym razie.
 
@@ -1628,7 +1628,7 @@ W `CMFCBaseTabCtrl Class`ta metoda jest czystą funkcją wirtualną i nie ma imp
 BOOL IsTabCloseButtonHighlighted() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1638,7 +1638,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 BOOL IsTabCloseButtonPressed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1655,7 +1655,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 *iTab*<br/>
 podczas Indeks (liczony od zera) zakładki do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli karta jest odłączana; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1676,7 +1676,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 *iTab*<br/>
 podczas Indeks karty (liczony od zera).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli etykieta karty ma tylko ikony; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1692,7 +1692,7 @@ Określa, czy kontrolka karty zezwala użytkownikowi na zmianę pozycji tabulacj
 BOOL IsTabSwapEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli użytkownik może zmienić pozycje tabulacji; w przeciwnym razie 0.
 
@@ -1713,7 +1713,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 *iTab*<br/>
 podczas Indeks (liczony od zera) zakładki do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli określona karta jest widoczna; w przeciwnym razie 0.
 
@@ -1723,7 +1723,7 @@ Różne od zera, jeśli określona karta jest widoczna; w przeciwnym razie 0.
 virtual BOOL IsVS2005Style() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1796,7 +1796,7 @@ podczas *DROPEFFECT*<br/>
 
 podczas *CPoint*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1817,7 +1817,7 @@ podczas *Wartość DWORD*<br/>
 
 podczas *CPoint*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1846,7 +1846,7 @@ podczas *Wartość DWORD*<br/>
 
 podczas *CPoint*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1862,7 +1862,7 @@ podczas liczba *całkowita*<br/>
 
 podczas *CString &*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1876,7 +1876,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 podczas *pMsg*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1922,7 +1922,7 @@ podczas Indeks karty (liczony od zera).
 *bRecalcLayout*<br/>
 podczas Parametr logiczny, który określa, czy należy ponownie obliczyć układ karty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli metoda pomyślnie usunie kartę; w przeciwnym razie FALSE.
 
@@ -1936,7 +1936,7 @@ Jeśli [CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow) ma warto�
 virtual BOOL RenameTab();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1973,7 +1973,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 *iTab*<br/>
 podczas Indeks karty liczony od zera. `SetActiveTab` sprawia, że karta z tym indeksem jest aktywna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2100,7 +2100,7 @@ podczas Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje przez
 *hImageList*<br/>
 podczas Uchwyt do listy wstępnie załadowanych obrazów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; 0 w przeciwnym razie.
 
@@ -2142,7 +2142,7 @@ podczas Indeks karty (liczony od zera).
 *Kolor*<br/>
 podczas Kolor, który ma zostać ustawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
@@ -2182,7 +2182,7 @@ podczas Indeks karty (liczony od zera). Ta metoda zmienia ikonę tej karty.
 *hIcon*<br/>
 podczas Uchwyt do ikony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2204,7 +2204,7 @@ podczas Liczony od zera indeks karty do zaktualizowania.
 *uiIcon*<br/>
 podczas Identyfikator ikony nowej ikony. Ten identyfikator odwołuje się do wewnętrznego obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2230,7 +2230,7 @@ podczas Parametr logiczny określający, czy mają być wyświetlane tylko ikony
 *bShowTooltipAlways*<br/>
 podczas Parametr logiczny, który określa, czy struktura zawiera etykietki narzędzi dla etykiety karty, która wyświetla tylko ikony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -2256,7 +2256,7 @@ podczas Liczony od zera indeks karty do zaktualizowania.
 *strLabel*<br/>
 podczas Odwołanie do ciągu, który zawiera nowy tekst dla etykiety karty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
@@ -2281,7 +2281,7 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 *arOrder*<br/>
 podczas Tablica indeksów opartych na zero, która definiuje nową kolejność tabulacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; Niepowodzenie w przeciwnym razie.
 
@@ -2307,7 +2307,7 @@ podczas Indeks karty (liczony od zera).
 *Kolor*<br/>
 podczas Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje nowy kolor tekstu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
@@ -2337,7 +2337,7 @@ podczas Parametr logiczny, który wskazuje, czy natychmiast ponownie obliczyć u
 *bActivate*<br/>
 podczas Parametr logiczny, który wskazuje, czy ma zostać wybrana karta określona przez *ITAB*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2355,7 +2355,7 @@ virtual BOOL StartRenameTab(int iTab);
 
 podczas *ITAB*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 

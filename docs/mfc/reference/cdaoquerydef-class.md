@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883892"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418798"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef Class
 
@@ -83,17 +83,17 @@ Reprezentuje definicję zapytania lub "querydef", zazwyczaj jeden zapisany w baz
 class CDaoQueryDef : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Konstruuje obiekt `CDaoQueryDef`. Następne wywołanie `Open` lub `Create`, w zależności od potrzeb.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoQueryDef:: Append](#append)|Dołącza obiekt querydef do kolekcji QueryDefs bazy danych jako zapisane zapytanie.|
 |[CDaoQueryDef:: Update](#canupdate)|Zwraca wartość różną od zera, jeśli zapytanie może aktualizować bazę danych.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDaoQueryDef:: m_pDAOQueryDef](#m_pdaoquerydef)|Wskaźnik do interfejsu OLE dla bazowego obiektu DAO querydef.|
 |[CDaoQueryDef:: m_pDatabase](#m_pdatabase)|Wskaźnik do obiektu `CDaoDatabase`, z którym jest skojarzona wartość querydef. Querydef może być zapisany w bazie danych programu.|
@@ -213,7 +213,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy można modyf
 BOOL CanUpdate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli masz uprawnienia do modyfikowania wartości querydef; w przeciwnym razie 0.
 
@@ -345,7 +345,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać parametry połącze
 CString GetConnect();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający parametry połączenia dla elementu querydef.
 
@@ -366,7 +366,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać datę utworzenia ob
 COleDateTime GetDateCreated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę utworzenia obiektu querydef.
 
@@ -382,7 +382,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać datę ostatniej akt
 COleDateTime GetDateLastUpdated();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zawierający datę i godzinę ostatniej aktualizacji obiektu querydef.
 
@@ -398,7 +398,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól w zapyt
 short GetFieldCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pól zdefiniowanych w zapytaniu.
 
@@ -454,7 +454,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę zapytania rep
 CString GetName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa zapytania.
 
@@ -470,7 +470,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać bieżący limit czas
 short GetODBCTimeout();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba sekund przed upływem limitu czasu zapytania.
 
@@ -489,7 +489,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę parametrów 
 short GetParameterCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba parametrów zdefiniowanych w zapytaniu.
 
@@ -554,7 +554,7 @@ Nazwa parametru, którego wartość ma być wyszukiwana według nazwy.
 *nIndex*<br/>
 Liczony od zera indeks parametru w kolekcji parametrów querydef dla wyszukiwania według indeksu. Tę wartość można uzyskać za pomocą wywołań [GetParameterCount](#getparametercount) i [GetParameterInfo](#getparameterinfo).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt klasy [COleVariant](../../mfc/reference/colevariant-class.md) , który zawiera wartość parametru.
 
@@ -572,7 +572,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić liczbę rekordów
 long GetRecordsAffected();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba rekordów, których to dotyczy.
 
@@ -590,7 +590,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt query
 BOOL GetReturnsRecords();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli obiekt querydef jest oparty na zapytaniu zwracającym rekordy; w przeciwnym razie 0.
 
@@ -608,7 +608,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać instrukcję SQL, kt�
 CString GetSQL();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Instrukcja SQL definiująca zapytanie, na którym bazuje querydef.
 
@@ -626,7 +626,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić typ zapytania dla
 short GetType();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Typ zapytania zdefiniowany przez querydef. Aby uzyskać wartości, zobacz uwagi.
 
@@ -669,7 +669,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDao
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CDaoQueryDef` jest aktualnie otwarty; w przeciwnym razie 0.
 
@@ -835,7 +835,7 @@ Ciąg zawierający kompletną instrukcję SQL, odpowiednią do wykonania. Skład
 
 Typowym zastosowaniem `SetSQL` jest skonfigurowanie obiektu querydef do użycia w zapytaniu przekazującym SQL. (Składnia zapytań przekazujących SQL w docelowym systemie DBMS znajduje się w dokumentacji systemu DBMS).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

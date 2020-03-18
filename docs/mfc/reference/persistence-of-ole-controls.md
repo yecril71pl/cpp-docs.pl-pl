@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855768"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421276"
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 
@@ -65,7 +65,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *hBlobDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -112,7 +112,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *bDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -151,7 +151,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *clrDefault*<br/>
 Wartość domyślna właściwości, zgodnie z definicją dewelopera kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -190,7 +190,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *cyDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -224,7 +224,7 @@ Nazwa wymienianej właściwości.
 *dataPathProperty*<br/>
 Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj zmienna członkowska klasy).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -263,7 +263,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *doubleDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -301,7 +301,7 @@ Wskaźnik do struktury `FONTDESC` zawierającej wartości do użycia podczas ini
 *pFontDispAmbient*<br/>
 Wskaźnik do `IFontDisp` interfejsu czcionki do użycia podczas inicjowania stanu domyślnego właściwości czcionki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -340,7 +340,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *floatDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -378,7 +378,7 @@ Identyfikator interfejsu wskazujący, który interfejs obiektu właściwości je
 *pUnkDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -417,7 +417,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *lDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -456,7 +456,7 @@ Odwołanie do obiektu [CPictureHolder](../../mfc/reference/cpictureholder-class.
 *pictDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -495,7 +495,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *sDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -534,7 +534,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *ulDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -573,7 +573,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *usDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -612,7 +612,7 @@ Odwołanie do zmiennej, w której jest przechowywana Właściwość (zazwyczaj z
 *strDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -638,7 +638,7 @@ Wskaźnik do obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md)
 *Font*<br/>
 Właściwość Font formantu OLE, który będzie zawierać skonwertowane właściwości powiązane z czcionką VBX.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -651,6 +651,6 @@ Ta funkcja powinna być używana tylko przez kontrolkę OLE, która została zap
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

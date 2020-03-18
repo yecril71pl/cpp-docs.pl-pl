@@ -1,24 +1,22 @@
 ---
 title: Korzystanie z CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411698"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442334"
 ---
 # <a name="using-cstatusbarctrl"></a>Korzystanie z CStatusBarCtrl
 
-Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) można utworzyć okna kontrolki odzwierciedlającą różnego rodzaju informacje o stanie dotyczące aplikacji. Okno stanu można podzielić na części, zawierające więcej niż jeden typ danych.
+Za pomocą kontrolki pasek stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) można utworzyć okno kontroli, które odzwierciedla różne rodzaje informacji o stanie aplikacji. Okno stanu można podzielić na części, które wyświetlają więcej niż jeden typ informacji.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Metody tworzenia paska stanu](../mfc/methods-of-creating-a-status-bar.md)
 
@@ -32,6 +30,6 @@ Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbar
 
 - [Używanie etykietek narzędzi w obiekcie CStatusBarCtrl](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki](../mfc/controls-mfc.md)

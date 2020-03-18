@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857061"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417433"
 ---
 # <a name="irelogger-class"></a>Klasa IRelogger
 
@@ -56,7 +56,7 @@ public:
 
 Domyślna wartość zwracana dla wszystkich funkcji, które nie są zastępowane, jest `AnalysisControl::CONTINUE`. Aby uzyskać więcej informacji, zobacz [AnalysisControl](analysis-control-enum-class.md).
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="destructor"></a>Destruktor
 
@@ -89,7 +89,7 @@ Ta funkcja jest wywoływana przed rozpoczęciem przebiegu rejestrowania.
 virtual AnalysisControl OnBeginRelogging();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -101,7 +101,7 @@ Ta funkcja jest wywoływana na początku przebiegu rejestrowania.
 virtual AnalysisControl OnBeginReloggingPass();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -113,7 +113,7 @@ Ta funkcja jest wywoływana po zakończeniu przebiegu rejestrowania.
 virtual AnalysisControl OnEndRelogging();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -125,7 +125,7 @@ Ta funkcja jest wywoływana po zakończeniu przebiegu rejestrowania.
 virtual AnalysisControl OnEndReloggingPass();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -142,7 +142,7 @@ Ta funkcja jest wywoływana, gdy trwa przetwarzanie prostego zdarzenia.
 *eventStack*\
 Stos zdarzeń dla tego prostego zdarzenia. Aby uzyskać więcej informacji na stosach zdarzeń, zobacz [zdarzenia](../event-table.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -159,7 +159,7 @@ Ta funkcja jest wywoływana, gdy trwa przetwarzanie zdarzenia uruchomienia dzia�
 *eventStack*\
 Stos zdarzeń dla tego zdarzenia uruchomienia działania. Aby uzyskać więcej informacji na stosach zdarzeń, zobacz [zdarzenia](../event-table.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -176,7 +176,7 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 *eventStack*\
 Stos zdarzeń dla tego zdarzenia zatrzymania działania. Aby uzyskać więcej informacji na stosach zdarzeń, zobacz [zdarzenia](../event-table.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 
@@ -193,7 +193,7 @@ Ta funkcja jest wywoływana raz na początku każdej analizy lub zarejestrowaniu
 *traceInfo*\
 Obiekt [TraceInfo](../cpp-event-data-types/trace-info.md) , który zawiera użyteczne właściwości dotyczące używanego śledzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod [AnalysisControl](analysis-control-enum-class.md) , który opisuje, co należy zrobić dalej.
 

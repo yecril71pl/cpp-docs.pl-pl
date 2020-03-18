@@ -7,11 +7,11 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855807"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419288"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d, funkcje przestrzeni nazw
 
@@ -38,7 +38,7 @@ Widok akceleratora D3D, na którym ma zostać utworzony stan próbnika D3D.
 *_Sampler*<br/>
 Obiekt próbnika, dla którego tworzony jest podstawowy interfejs stanu próbnika D3D.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik interfejsu IUnknown odpowiadający stanowi próbnika D3D, który reprezentuje dany próbnik.
 
@@ -80,7 +80,7 @@ Ranga tekstury.
 *_Texture*<br/>
 Widok tekstury lub tekstury skojarzony z accelerator_view, dla którego zwracany jest źródłowy interfejs tekstury Direct3D.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik interfejsu IUnknown odpowiadający teksturze Direct3D bazowej tekstury.
 
@@ -97,7 +97,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 *_D3D_sampler*<br/>
 Wskaźnik interfejsu IUnknown stanu próbnika D3D, z którego ma zostać utworzony próbnik.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Próbnik reprezentuje podany stan próbnika D3D.
 
@@ -133,7 +133,7 @@ Wskaźnik interfejsu IUnknown tekstury D3D, z którego ma zostać utworzona teks
 *_View_format*<br/>
 Format DXGI, który ma być używany dla widoków utworzonych na podstawie tej tekstury. Przekaż DXGI_FORMAT_UNKNOWN (wartość domyślna), aby utworzyć format z bazowego formatu _D3D_texture i value_type tego szablonu. Podany format musi być zgodny z źródłowym formatem _D3D_texture.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tekstura przy użyciu podanej tekstury D3D.
 
@@ -159,7 +159,7 @@ Tablica źródłowa 8 bajtów w wektorze dwóch wartości uint.
 *_Accum*<br/>
 Wektor 4 wartości, który ma zostać dodany do maskowanej sumy bezwzględnych różnic różnych bajtów między wartością referencyjną a wartością źródłową.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wektor 4 sum. Każda suma odnosi się do zamaskowanej sumy bezwzględnych różnic różnych bajtów między wartością referencyjną a wartością źródłową.
 

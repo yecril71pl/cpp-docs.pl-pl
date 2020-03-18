@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866937"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418686"
 ---
 # <a name="cdatetimectrl-class"></a>Klasa korzystanie CDateTimeCtrl
 
@@ -57,7 +57,7 @@ Hermetyzuje funkcjonalność formantu selektora daty i godziny.
 class CDateTimeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -166,7 +166,7 @@ Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który jest okn
 *nID*<br/>
 Określa identyfikator kontrolki selektora daty i godziny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Tworzenie zakończyło się pomyślnie; w przeciwnym razie 0.
 
@@ -198,7 +198,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 |---------------|-----------------|
 |*pDateTimePickerInfo*|określoną Wskaźnik do struktury [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) , która otrzymuje opis kontrolki selektora bieżącej daty i godziny.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury. Jednak ta metoda Inicjuje element członkowski *cbSize* struktury.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -231,7 +231,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 *iColor*<br/>
 Wartość **int** określająca, który obszar kolorów kalendarza miesiąca ma zostać pobrany. Aby zapoznać się z listą wartości, zobacz *iColor* parametr [SetMonthCalColor](#setmonthcalcolor).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która reprezentuje ustawienie koloru dla określonej części kontrolki kalendarza miesięcznego. Funkcja zwraca wartość-1, jeśli nie powiedzie się.
 
@@ -251,7 +251,7 @@ Pobiera obiekt `CMonthCalCtrl` skojarzony z kontrolką selektora daty i godziny.
 CMonthCalCtrl* GetMonthCalCtrl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) lub wartość null, jeśli okno nie jest widoczne.
 
@@ -271,7 +271,7 @@ Pobiera czcionkę używaną obecnie przez kontrolkę kalendarza miesięcznego ko
 CFont* GetMonthCalFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CFont](../../mfc/reference/cfont-class.md) lub wartość null, jeśli nie powiedzie się.
 
@@ -287,7 +287,7 @@ Pobiera styl kontrolki kalendarza miesiąca rozwijanego, która jest skojarzona 
 DWORD GetMonthCalStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Styl kontrolki kalendarza miesiąca rozwijanego, który jest kombinacją bitową (lub) stylów formantu selektora daty i godziny. Aby uzyskać więcej informacji, zobacz [Style kontrolki kalendarza miesięcznego](/windows/win32/Controls/month-calendar-control-styles).
 
@@ -317,7 +317,7 @@ Wskaźnik do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 *pMaxRange*<br/>
 Wskaźnik do obiektu `COleDateTime` lub obiektu `CTime` zawierającego ostatni czas dozwolony w obiekcie `CDateTimeCtrl`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DWORD zawierająca flagi wskazujące, które zakresy są ustawione. Jeśli użytkownik
 
@@ -355,7 +355,7 @@ W pierwszej wersji odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/ref
 *pTimeDest*<br/>
 Wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , aby uzyskać informacje o czasie systemowym. Nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W pierwszej wersji, niezerowej, jeśli czas został pomyślnie zapisany w obiekcie `COleDateTime`; w przeciwnym razie 0. W drugiej i trzeciej wersji wartość DWORD równa *dwFlagemu* zestawowi członkowskiemu w strukturze [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Aby uzyskać więcej informacji, zobacz sekcję **uwagi** poniżej.
 
@@ -383,7 +383,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 |---------------|-----------------|
 |*psize*|określoną Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , który zawiera idealny rozmiar kontrolki.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana jest zawsze prawdziwa.
 
@@ -416,7 +416,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 *pstrFormat*<br/>
 Wskaźnik do ciągu formatu zakończony zerem, który definiuje żądany ekran. Ustawienie tego parametru na wartość NULL spowoduje zresetowanie formantu do domyślnego ciągu formatu dla bieżącego stylu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -458,7 +458,7 @@ wartość **int** określająca, który obszar kontrolki kalendarza miesięczneg
 *ref*<br/>
 Wartość COLORREF reprezentująca kolor, który zostanie ustawiony dla określonego obszaru kalendarza miesiąca.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość COLORREF, która reprezentuje poprzednie ustawienie koloru dla określonej części kontrolki kalendarza miesięcznego. W przeciwnym razie komunikat zwróci wartość-1.
 
@@ -513,7 +513,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 |---------------|-----------------|
 |*dwStyle*|podczas Styl formantu kalendarza nowego miesiąca, który jest kombinacją bitową (lub) stylów formantu kalendarza miesięcznego. Aby uzyskać więcej informacji, zobacz [Style kontrolki kalendarza miesięcznego](/windows/win32/Controls/month-calendar-control-styles).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni styl kontrolki kalendarza miesiąca listy rozwijanej.
 
@@ -555,7 +555,7 @@ Wskaźnik do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-
 *pMaxRange*<br/>
 Wskaźnik do obiektu `COleDateTime` lub obiektu `CTime` zawierającego ostatni czas dozwolony w obiekcie `CDateTimeCtrl`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -585,7 +585,7 @@ Odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime
 *pTimeNew*<br/>
 W drugiej wersji, wskaźnik do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) zawierającego godzinę, do której zostanie ustawiony formant. W trzeciej wersji, wskaźnik do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) zawierającej godzinę, do której zostanie ustawiony formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 

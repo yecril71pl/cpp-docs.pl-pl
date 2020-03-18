@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863218"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417489"
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne rejestracji serwera
 
@@ -56,7 +56,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana.
 *pCLSID*<br/>
 Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. Jeśli wartość jest równa NULL, wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -88,7 +88,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana.
 *pCLSID*<br/>
 Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. Jeśli wartość NULL wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -120,7 +120,7 @@ Określa kontekst, w którym obiekt klasy ma być uruchamiany. Możliwe wartośc
 *flagiDW*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Aby uzyskać więcej informacji, zobacz [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -141,7 +141,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 *pComModule*<br/>
 Wskaźnik do modułu COM.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -175,7 +175,7 @@ Identyfikator IID żądanego interfejsu.
 *ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *PPV* ma wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -183,6 +183,6 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta funkcja pomocnika jest wykorzystywana przez [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (przestarzałe w ATL 7,0) i [CAtlDllModuleT:: GetClassObject](catldllmodulet-class.md#getclassobject).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../../atl/reference/atl-functions.md)

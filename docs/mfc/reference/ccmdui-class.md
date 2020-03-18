@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883628"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418826"
 ---
 # <a name="ccmdui-class"></a>Klasa CCmdUI
 
@@ -43,11 +43,11 @@ Jest używany tylko w ramach procedury obsługi `ON_UPDATE_COMMAND_UI` w klasie 
 class CCmdUI
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CCmdUI:: ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.|
 |[CCmdUI:: Enable](#enable)|Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.|
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CCmdUI:: m_nID](#m_nid)|Identyfikator obiektu interfejsu użytkownika.|
 |[CCmdUI:: m_nIndex](#m_nindex)|Indeks obiektu interfejsu użytkownika.|
@@ -77,7 +77,7 @@ Element menu można zastąpić przyciskiem paska kontrolnego lub innym obiektem 
 
 Poniższa tabela zawiera podsumowanie efektów, w których funkcje elementów członkowskich `CCmdUI`mają różne elementy interfejsu użytkownika.
 
-|Element interfejsu użytkownika|Włącz|SetCheck|SetRadio|SetText|
+|Element interfejsu użytkownika|Włączanie|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Element menu|Włącza lub wyłącza|Sprawdza lub nie sprawdza|Sprawdza przy użyciu kropki|Ustawia tekst elementu|
 |Przycisk paska narzędzi|Włącza lub wyłącza|Zaznacza, anuluje zaznaczenia lub nieokreślone|Taki sam jak `SetCheck`|(Nie dotyczy)|
@@ -229,7 +229,7 @@ Wskaźnik do ciągu tekstowego.
 
 [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

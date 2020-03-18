@@ -6,11 +6,11 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876281"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420730"
 ---
 # <a name="ltsystem_errorgt-operators"></a>&lt;system_error operatory&gt;
 
@@ -37,7 +37,7 @@ Obiekt, który ma być testowany pod kątem równości.
 *prawa*\
 Obiekt, który ma być testowany pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli obiekty są równe; **Fałsz** , jeśli obiekty nie są równe.
 
@@ -64,7 +64,7 @@ Obiekt, który ma być testowany pod kątem nierówności.
 *prawa*\
 Obiekt, który ma być testowany pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt przeszedł *po lewej stronie* nie jest równy obiektowi przekazannym w *prawej*; w przeciwnym razie **false**.
 
@@ -108,7 +108,7 @@ Obiekt do porównania.
 *prawa*\
 Obiekt do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt przeszedł *po lewej stronie* jest mniejszy niż obiekt przeszedł w *prawo*; W przeciwnym razie **false**.
 

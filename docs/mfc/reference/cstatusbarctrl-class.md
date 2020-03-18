@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865538"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420940"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
@@ -61,17 +61,17 @@ Oferuje funkcje kontrolki typowego paska stanu systemu Windows.
 class CStatusBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Konstruuje obiekt `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CStatusBarCtrl:: Create](#create)|Tworzy kontrolkę pasek stanu i dołącza ją do obiektu `CStatusBarCtrl`.|
 |[CStatusBarCtrl:: CreateEx](#createex)|Tworzy kontrolkę pasek stanu z określonymi stylami rozszerzonymi systemu Windows i dołącza je do obiektu `CStatusBarCtrl`.|
@@ -140,7 +140,7 @@ Określa okno nadrzędne kontrolki pasek stanu, zazwyczaj `CDialog`. Nie może m
 *nID*<br/>
 Określa identyfikator kontrolki paska stanu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -186,7 +186,7 @@ Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 *nID*<br/>
 Identyfikator okna podrzędnego kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -250,7 +250,7 @@ Odwołanie do liczby całkowitej, która otrzymuje szerokość obramowania piono
 *nSpacing*<br/>
 Odwołanie do liczby całkowitej, która otrzymuje szerokość obramowania między prostokątami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -276,7 +276,7 @@ HICON GetIcon(int iPart) const;
 |---------------|-----------------|
 |*iPart*|podczas Indeks (liczony od zera) części zawierającej ikonę, która ma zostać pobrana. Jeśli ten parametr ma wartość-1, przyjmuje się, że jest to pasek stanu prosty trybu prostego.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do ikony, jeśli metoda się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -316,7 +316,7 @@ Liczba części, dla których mają zostać pobrane współrzędne. Jeśli ten p
 *pParts*<br/>
 Adres tablicy liczb całkowitych, która ma taką samą liczbę elementów jak liczba części określona przez *nParts*. Każdy element w tablicy otrzymuje współrzędną klienta prawej krawędzi odpowiedniej części. Jeśli element ma ustawioną wartość-1, pozycja prawej krawędzi tej części rozciąga się do prawej krawędzi paska stanu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba części w kontrolce, jeśli się powiedzie, lub zero w przeciwnym razie.
 
@@ -346,7 +346,7 @@ Indeks (liczony od zera) części, której prostokąt powiązania ma zostać pob
 *lpRect*<br/>
 Adres struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która otrzymuje prostokąt powiązany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -388,7 +388,7 @@ Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może b
 
 - SBT_OWNERDRAW Jeśli tekst ma SBT_OWNERDRAW typ rysunku, *pType* odbiera ten komunikat i zwraca wartość 32-bitową skojarzoną z tekstem, a nie długość i typ operacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość (w znakach) tekstu lub [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierającego bieżący tekst.
 
@@ -422,7 +422,7 @@ Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może b
 
 - SBT_POPOUT tekst jest rysowany z obramowaniem, aby był wyświetlany powyżej płaszczyzny paska stanu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość (w znakach) tekstu.
 
@@ -443,7 +443,7 @@ CString GetTipText(int nPane) const;
 *nPane*<br/>
 Indeks (liczony od zera) okienka paska stanu do odbierania tekstu etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający tekst, który ma być używany w etykietce narzędzia.
 
@@ -463,7 +463,7 @@ Sprawdza formant okna stanu, aby określić, czy jest w trybie prostym.
 BOOL IsSimple() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli formant okna stanu jest w trybie prostym; w przeciwnym razie zero.
 
@@ -484,7 +484,7 @@ COLORREF SetBkColor(COLORREF cr);
 *znaki*<br/>
 Wartość COLORREF, która określa nowy kolor tła. Określ CLR_DEFAULT wartość, aby uniemożliwić użycie przez pasek stanu domyślnego koloru tła.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje poprzedni domyślny kolor tła.
 
@@ -514,7 +514,7 @@ Indeks (liczony od zera) okienka, który będzie otrzymywał ikonę. Jeśli ten 
 *hIcon*<br/>
 Dojście do ikony, która ma zostać ustawiona. Jeśli ta wartość jest RÓWNa NULL, ikona zostanie usunięta z części.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -565,7 +565,7 @@ Liczba części do ustawienia. Liczba części nie może być większa niż 255.
 *pWidths*<br/>
 Adres tablicy liczb całkowitych, która ma taką samą liczbę elementów jak części określone przez *nParts*. Każdy element w tablicy określa położenie, we współrzędnych klienta, prawej krawędzi odpowiedniej części. Jeśli element ma wartość-1, pozycja prawej krawędzi tej części rozciąga się z prawą krawędzią kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -586,7 +586,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 *bSimple*<br/>
 podczas Flaga typu wyświetlania. Jeśli ten parametr ma wartość TRUE, formant wyświetla prosty tekst; Jeśli ma wartość FALSE, wyświetla wiele części.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość 0.
 
@@ -616,7 +616,7 @@ Indeks (liczony od zera) części do ustawienia. Jeśli wartość jest równa 25
 *Npowiadomienia*<br/>
 Typ operacji rysowania. Listę możliwych wartości można znaleźć w [komunikacie SB_SETTEXT](/windows/win32/Controls/sb-settext) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
@@ -654,7 +654,7 @@ Ta funkcja członkowska implementuje zachowanie [SB_SETTIPTEXT](/windows/win32/C
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

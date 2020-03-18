@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857096"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417447"
 ---
 # <a name="event_data-structure"></a>Struktura EVENT_DATA
 
@@ -56,7 +56,7 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 |  |  |
 |--|--|

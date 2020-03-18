@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855592"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420989"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -835,17 +835,17 @@ Zapewnia podstawowe funkcje wszystkich klas okien w biblioteka MFC.
 class CWnd : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWnd:: CWnd](#cwnd)|Konstruuje obiekt `CWnd`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWnd:: accDoDefaultAction](#accdodefaultaction)|Wywoływane przez platformę, by wykonać akcję domyślną obiektu.|
 |[CWnd:: accHitTest](#acchittest)|Wywoływane przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym punkcie na ekranie.|
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWnd::D kwalifikator](#default)|Wywołuje domyślną procedurę okna, która zapewnia domyślne przetwarzanie wszystkich komunikatów okna, które nie są przetwarzane przez aplikację.|
 |[CWnd::D efWindowProc](#defwindowproc)|Wywołuje domyślną procedurę okna, która zapewnia domyślne przetwarzanie wszystkich komunikatów okna, które nie są przetwarzane przez aplikację.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWnd:: operator — HWND](#operator_hwnd)|Wywołanie pobrania uchwytu do okna.|
 |[CWnd:: operator! =](#operator_neq)|Określa, czy okno nie jest takie samo jak okno, którego uchwyt jest [m_hWnd](#m_hwnd).|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWnd:: m_hWnd](#m_hwnd)|Wskazuje Właściwość HWND dołączoną do tego `CWnd`.|
 
@@ -1312,7 +1312,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 *varChild*<br/>
 Określa, czy domyślna akcja do wywołania to obiekt lub jeden z elementów podrzędnych obiektu. Ten parametr może być CHILDID_SELF (aby wykonać akcję domyślną obiektu) lub IDENTYFIKATORem podrzędnym (aby wykonać akcję domyślną jednego z elementów podrzędnych obiektu).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) w Windows SDK.
 
@@ -1344,7 +1344,7 @@ Współrzędna Y punktu, który ma zostać przetestowany (w jednostkach ekranu).
 *pvarChild*<br/>
 Odbiera informacje identyfikujące obiekt w punkcie określonym przez *xLeft* i *yTop*. Zobacz *pvarID* w [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::accHitTest` w Windows SDK.
 
@@ -1386,7 +1386,7 @@ Pobiera wysokość obiektu (w jednostkach ekranu).
 *varChild*<br/>
 Określa, czy lokalizacja do pobrania to obiekt lub jeden z elementów podrzędnych obiektu. Ten parametr może być CHILDID_SELF (Aby uzyskać informacje o obiekcie) lub podrzędny identyfikator (Aby uzyskać informacje o elemencie podrzędnym obiektu).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::accLocation` w Windows SDK.
 
@@ -1418,7 +1418,7 @@ Określa obiekt początkowy. Zobacz *varStart* w `IAccessible::accNavigate` w Wi
 *pvarEndUpAt*<br/>
 Odbiera informacje o docelowym obiekcie interfejsu użytkownika. Zobacz *pvarEnd* w `IAccessible::accNavigate` w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::accNavigate` w Windows SDK.
 
@@ -1448,7 +1448,7 @@ Określa, jak zmienić bieżące zaznaczenie lub fokus. Zobacz *flagsSelect* w [
 *varChild*<br/>
 Określa obiekt, który ma zostać wybrany. Ten parametr może być CHILDID_SELF (aby można było wybrać obiekt) lub IDENTYFIKATORem podrzędnym (aby wybrać jeden z elementów podrzędnych obiektu).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::accSelect` w Windows SDK.
 
@@ -1478,7 +1478,7 @@ Określa czas trwania odtwarzania animacji (w milisekundach). Zwykle odtwarzanie
 *flagiDW*<br/>
 Określa typ animacji. Aby uzyskać pełną listę możliwych wartości, zobacz [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -1494,7 +1494,7 @@ Rozmieszcza wszystkie zminimalizowane (ikony) okna podrzędne.
 UINT ArrangeIconicWindows();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość jednego wiersza ikon, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -1521,7 +1521,7 @@ BOOL Attach(HWND hWndNew);
 *hWndNew*<br/>
 Określa uchwyt okna systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1556,7 +1556,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 *lpPaint*<br/>
 Wskazuje strukturę [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) , która ma otrzymywać informacje o malowaniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje kontekst urządzenia dla `CWnd`. Wskaźnik może być tymczasowy i nie powinien być przechowywany poza zakresem [EndPaint](#endpaint).
 
@@ -1738,7 +1738,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 *hWndNext*<br/>
 Identyfikuje okno, które następuje po `CWnd` w łańcuchu podglądu Schowka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1825,7 +1825,7 @@ Określa, które okna podrzędne mają zostać pominięte. Ten parametr może by
 |CWP_SKIPDISABLED|Pomiń wyłączone okna podrzędne|
 |CWP_SKIPTRANSPARENT|Pomiń przezroczyste okna podrzędne|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa okno podrzędne, które zawiera punkt. Jeśli dany punkt leży poza obszarem klienta, ma wartość NULL. Jeśli punkt znajduje się w obszarze klienta, ale nie jest zawarty w żadnym oknie podrzędnym, zostanie zwrócona `CWnd`.
 
@@ -1885,7 +1885,7 @@ Ta funkcja członkowska jest wywoływana przez [runmodalloop by](#runmodalloop) 
 virtual BOOL ContinueModal();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli Pętla modalna ma być kontynuowana; 0 po wywołaniu [EndModalLoop](#endmodalloop) .
 
@@ -1931,7 +1931,7 @@ podczas Identyfikator okna.
 *pContext*<br/>
 podczas Wskaźnik na strukturę [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) , która jest używana do dostosowywania architektury widoku dokumentu dla aplikacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -2083,7 +2083,7 @@ Opcjonalne dane klucza licencji. Te dane są potrzebne tylko do tworzenia forman
 *Identyfikator*<br/>
 Unikatowy identyfikator klasy formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2180,7 +2180,7 @@ Dla okna podrzędnego wskaźnik do okna nadrzędnego; w przeciwnym razie, wskaź
 *nID*<br/>
 Dla okna podrzędnego identyfikator okna; w przeciwnym razie identyfikator menu dla okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -2291,7 +2291,7 @@ Wywołuje domyślną procedurę okna.
 LRESULT Default();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zależy od wysyłanej wiadomości.
 
@@ -2325,7 +2325,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 Określa dodatkowe informacje zależne od komunikatów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zależy od wysyłanej wiadomości.
 
@@ -2357,7 +2357,7 @@ Niszczy okno systemu Windows dołączone do obiektu `CWnd`.
 virtual BOOL DestroyWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli okno zostanie zniszczone; w przeciwnym razie 0.
 
@@ -2387,7 +2387,7 @@ Odłącza dojście systemu Windows od obiektu `CWnd` i zwraca dojście.
 HWND Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Właściwość HWND obiektu systemu Windows.
 
@@ -2439,7 +2439,7 @@ Określa atrybuty plików, które mają być wyświetlane. Może to być dowolna
 
 - DDL_EXCLUSIVE wyłączny bit. Jeśli ustawiono bit wyłączny, wyświetlane są tylko pliki określonego typu; w przeciwnym razie są wyświetlane normalne pliki i pliki określonego typu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -2507,7 +2507,7 @@ Określa atrybuty plików DOS dla plików, które mają być wyświetlane. Może
 
 - DDL_EXCLUSIVE wyłączny bit. Jeśli ustawiono bit wyłączny, wyświetlane są tylko pliki określonego typu; w przeciwnym razie są wyświetlane normalne pliki i pliki określonego typu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wynik funkcji. To nie zero, jeśli utworzono listę, nawet pustą listę. Wartość zwracana 0 oznacza, że ciąg wejściowy nie zawiera prawidłowej ścieżki wyszukiwania.
 
@@ -2549,7 +2549,7 @@ Wskazuje bufor, który ma otrzymać bieżące zaznaczenie w polu listy.
 *nIDListBox*<br/>
 Określa całkowity identyfikator pola listy w oknie dialogowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2581,7 +2581,7 @@ Wskazuje bufor, który ma otrzymać wybraną ścieżkę.
 *nIDComboBox*<br/>
 Określa identyfikator liczby całkowitej pola kombi w oknie dialogowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -2654,7 +2654,7 @@ BOOL DragDetect(POINT pt) const;
 *zmiennoprzecinkow*<br/>
 Początkowe położenie myszy, we współrzędnych ekranu. Funkcja określa współrzędne prostokąta przeciągania przy użyciu tego punktu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli użytkownik przeniósł mysz poza prostokątem przeciągania, przytrzymując przycisk po lewej stronie, wartość zwracana jest różna od zera.
 
@@ -2686,7 +2686,7 @@ Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , określa
 *lprcTo*<br/>
 Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , określający lokalizację i rozmiar przywróconego okna
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -2716,7 +2716,7 @@ Wskaźnik do struktury RECT, który określa prostokąt ograniczający dla podpi
 *uFlags*<br/>
 Określa opcje rysowania. Aby uzyskać pełną listę wartości, zobacz [DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -2819,7 +2819,7 @@ Określa, czy strzałki paska przewijania są włączone, czy wyłączone, a kt�
 
 - ESB_DISABLE_BOTH wyłącza obie strzałki paska przewijania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli strzałki są włączone lub wyłączone w określony sposób. W przeciwnym razie jest to 0, co oznacza, że strzałki znajdują się już w żądanym stanie lub wystąpił błąd.
 
@@ -2858,7 +2858,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Określa, czy kontrolka etykietki narzędzia jest włączona, czy wyłączona. PRAWDA włącza kontrolkę; FALSE wyłącza formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli są włączone etykietki narzędzi; w przeciwnym razie FALSE.
 
@@ -2894,7 +2894,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Określa, czy wskazówki dotyczące narzędzi śledzenia są włączone, czy wyłączone. Jeśli ten parametr ma wartość TRUE, zostaną włączone etykietki narzędzi śledzenia. Jeśli ten parametr ma wartość FALSE, etykietki narzędzi śledzenia zostaną wyłączone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje stan przed wywołaniem funkcji składowej `EnableWindow`. Wartość zwracana jest różna od zera, jeśli okno zostało wcześniej wyłączone. Wartość zwracana jest równa 0, jeśli okno zostało wcześniej włączone lub wystąpił błąd.
 
@@ -2915,7 +2915,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Określa, czy dany okno ma być włączone, czy wyłączone. Jeśli ten parametr ma wartość TRUE, okno zostanie włączone. Jeśli ten parametr ma wartość FALSE, okno zostanie wyłączone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje stan przed wywołaniem funkcji składowej `EnableWindow`. Wartość zwracana jest różna od zera, jeśli okno zostało wcześniej wyłączone. Wartość zwracana jest równa 0, jeśli okno zostało wcześniej włączone lub wystąpił błąd.
 
@@ -3002,7 +3002,7 @@ Wskaźnik do ciągu zakończenia o wartości null, określający nazwę zasobu.
 *lpResource*<br/>
 Wskaźnik do zasobu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zasób okna dialogowego jest wykonywany; w przeciwnym razie FALSE.
 
@@ -3047,7 +3047,7 @@ Wskazuje ciąg zakończony znakiem null, który określa nazwę klasy okna (stru
 *lpszWindowName*<br/>
 Wskazuje ciąg zakończony znakiem null, który określa nazwę okna (tytuł okna). Jeśli *lpWindowName* ma wartość null, wszystkie nazwy okien są zgodne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno, które ma określoną nazwę klasy i nazwę okna. Jeśli nie zostanie znalezione takie okno, ma ono wartość NULL.
 
@@ -3087,7 +3087,7 @@ Wskaźnik na ciąg zakończony znakiem null, który określa nazwę klasy lub At
 *lpszWindow*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę okna (tytuł okna). Jeśli ten parametr ma wartość NULL, wszystkie nazwy okien są zgodne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest wskaźnikiem do obiektu okna z określonymi nazwami klas i okien. Jeśli funkcja się nie powiedzie, zwracana wartość ma wartość NULL.
 
@@ -3108,7 +3108,7 @@ BOOL FlashWindow(BOOL bInvert);
 *bInvert*<br/>
 Określa, czy `CWnd` ma być Flash czy zwracany do oryginalnego stanu. `CWnd` jest Flash z jednego stanu do drugiego, jeśli *bInvert* ma wartość true. Jeśli *bInvert* ma wartość false, okno jest zwracane do jego oryginalnego stanu (aktywne lub nieaktywne).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli okno było aktywne przed wywołaniem funkcji składowej `FlashWindow`; w przeciwnym razie 0.
 
@@ -3148,7 +3148,7 @@ Określa, ile razy należy wykonać błysk okna.
 *dwTimeout*<br/>
 Określa wyrażoną w milisekundach szybkość, z jaką okno zostanie przebłyskowe. Jeśli *dwTimeout* ma wartość zero, funkcja używa domyślnego współczynnika migania kursora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana określa stan okna przed wywołaniem funkcji `FlashWindowEx`. Jeśli podpis okna był rysowany jako aktywny przed wywołaniem, wartość zwracana jest różna od zera. W przeciwnym razie wartość zwracana jest równa zero.
 
@@ -3169,7 +3169,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 *Właściwość*<br/>
 Właściwość HWND okna systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do obiektu `CWnd`, gdy ma dojść do okna. Jeśli obiekt `CWnd` nie jest dołączony do dojścia, zostanie utworzony i dołączony tymczasowy obiekt `CWnd`.
 
@@ -3188,7 +3188,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 *Właściwość*<br/>
 Właściwość HWND okna systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd`.
 
@@ -3216,7 +3216,7 @@ Identyfikuje element podrzędny, którego interfejs `IDispatch` ma zostać pobra
 *ppdispChild*<br/>
 Odbiera adres interfejsu `IDispatch` obiektu podrzędnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) w Windows SDK.
 
@@ -3241,7 +3241,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 *pcountChildren*<br/>
 Odbiera liczbę elementów podrzędnych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) w Windows SDK.
 
@@ -3271,7 +3271,7 @@ Określa, czy domyślna akcja do pobrania to obiekt lub jeden z elementów podrz
 *pszDefaultAction*<br/>
 Adres typu BSTR, który odbiera zlokalizowany ciąg opisujący domyślną akcję dla określonego obiektu lub wartość NULL, jeśli ten obiekt nie ma domyślnej akcji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) w Windows SDK.
 
@@ -3301,7 +3301,7 @@ Określa, czy opis do pobrania to obiekt lub jeden z elementów podrzędnych obi
 *pszDescription*<br/>
 Adres typu BSTR, który odbiera zlokalizowany ciąg opisujący określony obiekt lub wartość NULL, jeśli dla tego obiektu nie jest dostępny żaden opis.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) w Windows SDK.
 
@@ -3326,7 +3326,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 *pvarChild*<br/>
 Odbiera informacje o obiekcie, który ma fokus. Zobacz *pvarID* w [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::get_accFocus` w Windows SDK.
 
@@ -3356,7 +3356,7 @@ Określa, czy informacje pomocy mają być pobierane, czy obiekt lub jeden z ele
 *pszHelp*<br/>
 Adres typu BSTR, który odbiera zlokalizowany ciąg zawierający informacje pomocy dla określonego obiektu lub wartość NULL, jeśli nie są dostępne żadne informacje pomocy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) w Windows SDK.
 
@@ -3390,7 +3390,7 @@ Określa, czy temat pomocy ma być pobierany, czy obiekt lub jeden z elementów 
 *pidTopic*<br/>
 Identyfikuje temat pliku pomocy skojarzony z określonym obiektem. Zobacz *pidTopic* w [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::get_accHelpTopic` w Windows SDK.
 
@@ -3420,7 +3420,7 @@ Określa, czy skrót klawiaturowy ma być pobierany przez obiekt, czy jeden z el
 *pszKeyboardShortcut*<br/>
 Adres typu BSTR, który odbiera zlokalizowany ciąg identyfikujący skrót klawiaturowy lub wartość NULL, jeśli żaden skrót klawiaturowy nie jest skojarzony z określonym obiektem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) w Windows SDK.
 
@@ -3450,7 +3450,7 @@ Określa, czy nazwa do pobrania to obiekt lub jeden z elementów podrzędnych ob
 *pszName*<br/>
 Adres typu BSTR, który odbiera ciąg zawierający nazwę określonego obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) w Windows SDK.
 
@@ -3475,7 +3475,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 *ppdispParent*<br/>
 Odbiera adres interfejsu `IDispatch` obiektu nadrzędnego. Zmienna jest ustawiona na wartość NULL, jeśli nie istnieje żadna relacja nadrzędna lub jeśli element podrzędny nie ma dostępu do jego elementu nadrzędnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) w Windows SDK.
 
@@ -3505,7 +3505,7 @@ Określa, czy informacje o roli mają być pobierane, czy obiekt lub jeden z ele
 *pvarRole*<br/>
 Odbiera informacje o roli. Zobacz *pvarRole* w [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::get_accRole` w Windows SDK.
 
@@ -3530,7 +3530,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 *pvarChildren*<br/>
 Odbiera informacje o tym, które elementy podrzędne są wybrane. Zobacz *pvarChildren* w [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::get_accSelection` w Windows SDK.
 
@@ -3560,7 +3560,7 @@ Określa, czy informacje o stanie mają być pobierane, czy obiekt lub jeden z e
 *pvarState*<br/>
 Odbiera informacje o stanie obiektu. Zobacz *pvarState* w [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w `IAccessible::get_accState` w Windows SDK.
 
@@ -3590,7 +3590,7 @@ Określa, czy informacje o wartości mają być pobierane, czy obiekt lub jeden 
 *pszValue*<br/>
 Adres typu BSTR, który odbiera zlokalizowany ciąg zawierający bieżącą wartość obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, kod błędu COM w przypadku niepowodzenia. Zobacz **wartości zwracane** w [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) w Windows SDK.
 
@@ -3610,7 +3610,7 @@ Pobiera wskaźnik do aktywnego okna.
 static CWnd* PASCAL GetActiveWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Aktywne okno lub wartość NULL, jeśli w momencie wywołania nie było aktywnego okna. Wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -3631,7 +3631,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 *gaFlags*<br/>
 Określa element nadrzędny, który ma zostać pobrany. Aby uzyskać pełną listę możliwych wartości, zobacz [getnadrzędny](/windows/win32/api/winuser/nf-winuser-getancestor).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest wskaźnikiem do obiektu okna nadrzędnego. Jeśli funkcja się nie powiedzie, zwracana wartość ma wartość NULL.
 
@@ -3647,7 +3647,7 @@ Pobiera okno, które ma przechwycenie myszy.
 static CWnd* PASCAL GetCapture();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno, w którym jest przechwytywane myszą. Jeśli żadne okno nie ma przechwycenia myszy, ma wartość NULL.
 
@@ -3665,7 +3665,7 @@ Pobiera współrzędne klienta bieżącego położenia karetki i zwraca je jako 
 static CPoint PASCAL GetCaretPos();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) zawierający współrzędne położenia karetki.
 
@@ -3691,7 +3691,7 @@ Określa identyfikator liczby całkowitej pierwszego przycisku radiowego w grupi
 *nIDLastButton*<br/>
 Określa identyfikator liczby całkowitej ostatniego przycisku radiowego w grupie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator zakontrolowanego przycisku radiowego lub 0, jeśli żaden nie jest zaznaczony.
 
@@ -3724,7 +3724,7 @@ Pobiera bieżącego właściciela Schowka.
 static CWnd* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa okno, do którego należy schowek, jeśli funkcja się powiedzie. W przeciwnym razie ma wartość NULL.
 
@@ -3742,7 +3742,7 @@ Pobiera pierwsze okno w łańcuchu podglądu Schowka.
 static CWnd* PASCAL GetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa okno, które jest aktualnie odpowiedzialne za wyświetlanie schowka, jeśli to się powiedzie; w przeciwnym razie wartość NULL (na przykład jeśli nie ma przeglądarki).
 
@@ -3756,7 +3756,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać wskaźnik do nieznan
 LPUNKNOWN GetControlUnknown();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) kontrolki OLE reprezentowanej przez ten obiekt `CWnd`. Jeśli ten obiekt nie reprezentuje kontrolki OLE, zwracana wartość ma wartość NULL.
 
@@ -3778,7 +3778,7 @@ Zwraca wskaźnik do komunikatu, który jest obecnie przetwarzany przez to okno. 
 static const MSG* PASCAL GetCurrentMessage();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat, że okno jest aktualnie przetwarzane. Powinien być wywoływany tylko w przypadku **programu obsługi**<em>komunikatów</em> .
 
@@ -3794,7 +3794,7 @@ Pobiera wskaźnik do wspólnego, klasy lub prywatnego kontekstu urządzenia dla 
 CDC* GetDC();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa kontekst urządzenia dla obszaru klienta `CWnd`, jeśli się to powiedzie; w przeciwnym razie zwracana wartość ma wartość NULL. Wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -3840,7 +3840,7 @@ Może mieć jedną z następujących wartości wstępnie ustawionych:
 
 - DCX_WINDOW zwraca kontekst urządzenia, który odpowiada prostokątowi okna zamiast prostokąta klienta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kontekst urządzenia dla określonego okna, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -3866,7 +3866,7 @@ Pobiera obiekt docelowy renderowania kontekstu urządzenia (DC) dla okna `CWnd`.
 CDCRenderTarget* GetDCRenderTarget();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt docelowy renderowania kontekstu urządzenia dla określonego okna, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -3890,7 +3890,7 @@ Określa identyfikator formantu lub okna podrzędnego do pobrania.
 *bOnlyPerm*<br/>
 Określa, czy okno, które ma zostać zwrócone, może być tymczasowe. W przypadku wartości TRUE można zwrócić tylko trwałe okno; w przypadku wartości FALSE funkcja może zwrócić okno tymczasowe. Aby uzyskać więcej informacji na temat tymczasowych okien, zobacz [Uwaga techniczna 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd` lub wartość NULL, jeśli nie znaleziono okna podrzędnego.
 
@@ -3906,7 +3906,7 @@ Zwraca okno pulpitu systemu Windows.
 static CWnd* PASCAL GetDesktopWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno pulpitu systemu Windows. Ten wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -3922,7 +3922,7 @@ Zwraca wartość identyfikatora okna lub formantu dla dowolnego okna podrzędneg
 int GetDlgCtrlID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator liczbowy okna podrzędnego `CWnd`, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -3954,7 +3954,7 @@ Określa identyfikator formantu lub okna podrzędnego do pobrania.
 *phWnd*<br/>
 Wskaźnik do okna podrzędnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do danego formantu lub okna podrzędnego. Jeśli nie istnieje żadna kontrola o IDENTYFIKATORze liczb całkowitych podanym przez parametr *NID* , wartość jest równa null.
 
@@ -3990,7 +3990,7 @@ Wskazuje zmienną logiczną, która ma otrzymać przetłumaczoną flagę.
 *bSigned*<br/>
 Określa, czy wartość do pobrania jest podpisana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa przetłumaczoną wartość tekstu elementu okna dialogowego. Ponieważ 0 jest prawidłową wartością zwracaną, *lpTrans* musi zostać użyty do wykrycia błędów. Jeśli pożądane jest podpisana wartość zwracana, należy rzutować ją na typ **int** .
 
@@ -4035,7 +4035,7 @@ Określa maksymalną długość ciągu, który ma zostać skopiowany do *lpStr*.
 *rString*<br/>
 Odwołanie do elementu [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa rzeczywistą liczbę znaków skopiowaną do bufora bez uwzględniania kończącego znaku null. Wartość jest równa 0, jeśli żaden tekst nie jest kopiowany.
 
@@ -4051,7 +4051,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać wskaźnik do podstaw
 IUnknown* GetDSCCursor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do kursora, który jest zdefiniowany przez kontrolę źródła danych. MFC obsługuje wywoływanie `AddRef` dla wskaźnika.
 
@@ -4071,7 +4071,7 @@ Pobiera wskaźnik do obiektu dynamicznego Menedżera układu.
 CMFCDynamicLayout* GetDynamicLayout();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu dynamicznego Menedżera układu lub wartość NULL, jeśli układ dynamiczny nie jest włączony.
 
@@ -4087,7 +4087,7 @@ Zwraca rozszerzony styl okna.
 DWORD GetExStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozszerzony styl okna. Aby uzyskać więcej informacji na temat rozszerzonego stylu okna używanego w MFC, zobacz [Style okna rozszerzonego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
@@ -4099,7 +4099,7 @@ Pobiera wskaźnik do `CWnd`, który aktualnie ma fokus wprowadzania.
 static CWnd* PASCAL GetFocus();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna, które ma bieżący fokus, lub wartość NULL, jeśli nie ma okna koncentracji uwagi.
 
@@ -4113,7 +4113,7 @@ Wysyła do okna komunikat WM_GETFONT, aby pobrać bieżącą czcionkę.
 CFont* GetFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu [CFont](../../mfc/reference/cfont-class.md) , który jest dołączony do bieżącej czcionki dla okna.
 
@@ -4129,7 +4129,7 @@ Zwraca wskaźnik do okna pierwszego planu (okna, w którym aktualnie pracuje uż
 static CWnd* PASCAL GetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna pierwszego planu. Może to być tymczasowy `CWnd` obiektu.
 
@@ -4150,7 +4150,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 *bBigIcon*<br/>
 Określa ikonę 32 pikseli o 32 pikseli w przypadku wartości TRUE; Określa ikonę 16 pikseli o 16 pikseli w przypadku wartości FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do ikony. Jeśli nie powiedzie się, zwraca wartość NULL.
 
@@ -4162,7 +4162,7 @@ Określa, które okno wyskakujące posiadane przez `CWnd` było ostatnio aktywne
 CWnd* GetLastActivePopup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje ostatnio aktywne okno podręczne. Wartość zwracana będzie to samo okno w przypadku spełnienia dowolnego z następujących warunków:
 
@@ -4200,7 +4200,7 @@ Wskaźnik na bajt, który odbiera wartość alfa używaną do opisywania nieprze
 *pdwFlags*<br/>
 Wskaźnik do typu DWORD, który odbiera flagę warstwową. Może to być wartość NULL, jeśli argument nie jest wymagany. Aby uzyskać pełną listę możliwych wartości, zobacz [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -4216,7 +4216,7 @@ Pobiera wskaźnik do menu dla tego okna.
 CMenu* GetMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje menu. Wartość jest RÓWNa NULL, jeśli `CWnd` nie ma menu. Wartość zwracana jest niezdefiniowana, jeśli `CWnd` jest oknem podrzędnym.
 
@@ -4252,7 +4252,7 @@ Określa element, dla którego mają zostać pobrane informacje. Jeśli ten para
 *pmbi*<br/>
 Wskaźnik do struktury [MENUBARINFO](/windows/win32/api/winuser/ns-winuser-menubarinfo) , która otrzymuje informacje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -4284,7 +4284,7 @@ Określa, jak funkcja ma przeszukiwać grupę kontrolek w oknie dialogowym. W pr
 *pCurSiteOrWnd*<br/>
 Identyfikuje formant `COleControlSiteOrWnd`. Aby uzyskać więcej informacji na temat `COleControlSiteOrWnd`, zobacz **uwagi**.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do poprzedniej lub następnej kontrolki w grupie, jeśli funkcja członkowska zakończyła się pomyślnie.
 
@@ -4330,7 +4330,7 @@ Identyfikuje formant `COleControlSiteOrWnd`. Aby uzyskać więcej informacji na 
 *bPrevious*<br/>
 Określa, jak funkcja ma przeszukiwać okno dialogowe. W przypadku wartości TRUE funkcja wyszukuje poprzednią kontrolkę w oknie dialogowym. w przypadku wartości FALSE szuka następnej kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do poprzedniej lub następnej kontrolki, która ma styl WS_TABSTOP, jeśli funkcja członkowska zakończyła się powodzeniem.
 
@@ -4351,7 +4351,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 *nFlag*<br/>
 Określa, czy funkcja zwraca wskaźnik do następnego okna lub poprzedniego okna. Może to być GW_HWNDNEXT, która zwraca okno, które następuje po obiekcie `CWnd` na liście Menedżera okien lub GW_HWNDPREV, które zwraca poprzednie okno na liście Menedżera okien.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa następne (lub poprzednie) okno na liście Menedżera okien, jeśli funkcja członkowska zakończyła się powodzeniem.
 
@@ -4384,7 +4384,7 @@ Pobiera uchwyt okna, w którym aktualnie jest otwarty schowek.
 static CWnd* PASCAL GetOpenClipboardWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt okna, w którym aktualnie jest otwarty schowek, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -4396,7 +4396,7 @@ Pobiera wskaźnik do właściciela okna.
 CWnd* GetOwner() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd`.
 
@@ -4414,7 +4414,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do okna nadrzędnego okna podrzęd
 CWnd* GetParent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zobacz sekcję wartości zwracane w [obiekcie GetParent](/windows/win32/api/winuser/nf-winuser-getparent) w Windows SDK.
 
@@ -4430,7 +4430,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać okno nadrzędnej ram
 CFrameWnd* GetParentFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna ramki, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -4446,7 +4446,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do okna n
 CWnd* GetParentOwner() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd`. Jeśli obiekt `CWnd` nie jest dołączony do dojścia, zostanie utworzony i dołączony tymczasowy obiekt `CWnd`. Wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -4495,7 +4495,7 @@ Pobiera obiekt docelowy renderowania skojarzony z tym oknem.
 CHwndRenderTarget* GetRenderTarget();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu docelowego renderowania lub wartości NULL.
 
@@ -4507,7 +4507,7 @@ Zwraca `m_hWnd`lub wartość NULL, jeśli **ten** wskaźnik ma wartość null.
 HWND GetSafeHwnd() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca uchwyt okna dla okna. Zwraca wartość NULL, jeśli `CWnd` nie jest dołączona do okna lub jeśli jest używana ze wskaźnikiem `CWnd` o wartości NULL.
 
@@ -4533,7 +4533,7 @@ Wskaźnik do okna nadrzędnego `CWnd`. Może mieć wartość NULL.
 *pWndTop*<br/>
 Wskaźnik do okna, które znajduje się obecnie w górnej części. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do bezpiecznego właściciela danego okna.
 
@@ -4561,7 +4561,7 @@ Określa typ paska przewijania. Parametr może przyjmować jedną z następując
 
 - SB_VERT Pobiera pozycję pionowego paska przewijania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kontrolka paska przewijania równorzędnego lub wartość NULL, jeśli nie.
 
@@ -4587,7 +4587,7 @@ Określa obiekt menu. Aby uzyskać listę możliwych wartości, zobacz [GetScrol
 *psbi*<br/>
 Wskaźnik do struktury [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) , która otrzymuje informacje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -4623,7 +4623,7 @@ Wskaźnik do struktury [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scroll
 *nMask*<br/>
 Określa parametry paska przewijania do pobrania. Wartość domyślna określa kombinację SIF_PAGE, SIF_POS, SIF_TRACKPOS i SIF_RANGE. Zobacz `SCROLLINFO`, aby uzyskać więcej informacji na temat wartości *nMask* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli komunikat pobrał wartości, zwracana jest wartość TRUE. W przeciwnym razie ma wartość FALSE.
 
@@ -4652,7 +4652,7 @@ Określa typ paska przewijania. Parametr może przyjmować jedną z następując
 
 - SB_VERT pobiera limit przewijania pionowego paska przewijania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa maksymalną pozycję paska przewijania, jeśli to się powiedzie; w przeciwnym razie 0.
 
@@ -4673,7 +4673,7 @@ Określa pasek przewijania do sprawdzenia. Parametr może przyjmować jedną z n
 
 - SB_VERT Pobiera pozycję pionowego paska przewijania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa bieżącą pozycję pola przewijania na pasku przewijania, jeśli to się powiedzie; w przeciwnym razie 0.
 
@@ -4721,7 +4721,7 @@ Zwraca bieżący styl okna.
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Styl okna. Aby uzyskać więcej informacji na temat stylów okna używanych w MFC, zobacz [Style okna](styles-used-by-mfc.md#window-styles).
 
@@ -4738,7 +4738,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 *bRevert*<br/>
 Określa akcję, która ma zostać podjęta. Jeśli *bRevert* ma wartość FALSE, `GetSystemMenu` zwraca dojście do kopii menu kontrolki, która jest aktualnie w użyciu. Ta kopia jest początkowo identyczna z menu sterowania, ale może być modyfikowana. Jeśli *bRevert* ma wartość TRUE, `GetSystemMenu` resetuje menu sterowania z powrotem do stanu domyślnego. Poprzednie, prawdopodobnie zmodyfikowane, menu sterowania, jeśli istnieje, jest niszczone. Wartość zwracana jest niezdefiniowana w tym przypadku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa kopię menu sterowania, jeśli *bRevert* ma wartość false. Jeśli *bRevert* ma wartość true, zwracana wartość jest niezdefiniowana.
 
@@ -4783,7 +4783,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać okno ramki najwyższ
 CFrameWnd* GetTopLevelFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno ramki najwyższego poziomu okna.
 
@@ -4801,7 +4801,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać okno najwyższego po
 CWnd* GetTopLevelOwner() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno najwyższego poziomu. Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -4817,7 +4817,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać element nadrzędny n
 CWnd* GetTopLevelParent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikuje okno nadrzędne najwyższego poziomu okna.
 
@@ -4835,7 +4835,7 @@ Wyszukuje okno podrzędne najwyższego poziomu, które należy do `CWnd`.
 CWnd* GetTopWindow() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa okno podrzędne najwyższego poziomu w `CWnd` połączonej liście okien podrzędnych. Jeśli nie istnieją żadne okna podrzędne, wartość jest RÓWNa NULL.
 
@@ -4865,7 +4865,7 @@ Ustaw ten parametr na wartość NULL, aby określić, czy region aktualizacji is
 *bErase*<br/>
 Określa, czy tło w regionie aktualizacji ma być wymazane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa stan regionu aktualizacji. Wartość jest różna od zera, jeśli region aktualizacji nie jest pusty. w przeciwnym razie 0.
 
@@ -4899,7 +4899,7 @@ Identyfikuje region aktualizacji.
 *bErase*<br/>
 Określa, czy tło zostanie wymazane, a obszary podrzędne systemu Windows będą rysowane nieklienckie. Jeśli wartość jest równa FALSE, rysowanie nie jest wykonywane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa flagę Short-Integer, która wskazuje typ pożądanego regionu. Wartość może przyjmować jedną z następujących wartości:
 
@@ -4942,7 +4942,7 @@ Określa relację między `CWnd` i zwracanym oknem. Może przyjmować jedną z n
 
 - GW_OWNER identyfikuje właściciela `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -4954,7 +4954,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać identyfikator kontek
 DWORD GetWindowContextHelpId() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator kontekstu pomocy. Zwraca wartość 0, jeśli okno nie ma żadnej wartości.
 
@@ -4966,7 +4966,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę skojarzonych
 long GetWindowedChildCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba okien podrzędnych skojarzonych z obiektem `CWnd`.
 
@@ -4978,7 +4978,7 @@ Pobiera kontekst wyświetlania dla całego okna, w tym pasek podpisu, menu i pas
 CDC* GetWindowDC();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa kontekst wyświetlania danego okna, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -5021,7 +5021,7 @@ Pobiera liczbę skojarzonych okien podrzędnych bez okien.
 long GetWindowlessChildCount();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba okien podrzędnych bez okien skojarzonych z obiektem `CWnd`.
 
@@ -5038,7 +5038,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 *lpwndpl*<br/>
 Wskazuje strukturę `WINDOWPLACEMENT`, która otrzymuje informacje o stanie i pozycji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -5076,7 +5076,7 @@ int GetWindowRgn(HRGN hRgn)const;
 *hRgn*<br/>
 Uchwyt do regionu okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana określa typ regionu, który uzyskuje funkcja. Może to być jedna z następujących wartości:
 
@@ -5120,7 +5120,7 @@ Określa maksymalną liczbę znaków, które mają być skopiowane do buforu, ł
 *rString*<br/>
 Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który ma otrzymać skopiowany ciąg tytułu okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa długość (w znakach) kopiowanego ciągu, bez uwzględniania kończącego znaku null. Wartość 0 oznacza, że `CWnd` nie ma podpisu lub jeśli podpis jest pusty.
 
@@ -5142,7 +5142,7 @@ Zwraca długość tytułu podpisu obiektu `CWnd`.
 int GetWindowTextLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa długość tekstu w znakach, a nie dołączenie żadnego znaku zakończenia o wartości null. Wartość jest równa 0, jeśli taki tekst nie istnieje.
 
@@ -5200,7 +5200,7 @@ Określa, czy element menu jest wyróżniony, czy wyróżnianie jest usuwane. Mo
 
 - MF_UNHILITE usuwa wyróżnienie z elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa, czy element menu został wyróżniony. Niezerowe, jeśli element został wyróżniony; w przeciwnym razie 0.
 
@@ -5379,7 +5379,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 *pWnd*<br/>
 Identyfikuje okno, które ma zostać przetestowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wynik funkcji. Wartość jest różna od zera, jeśli okno identyfikowane przez *pWnd* jest oknem podrzędnym `CWnd`; w przeciwnym razie 0.
 
@@ -5395,7 +5395,7 @@ Określa, czy obsługa D2D jest włączona.
 BOOL IsD2DSupportEnabled();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli funkcja jest włączona; w przeciwnym razie FALSE.
 
@@ -5412,7 +5412,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 *lpMsg*<br/>
 Wskazuje strukturę [komunikatów](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat, który ma zostać sprawdzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa, czy funkcja członkowska przetworzyła dany komunikat. Jeśli komunikat został przetworzony, jest różny od zera. w przeciwnym razie 0. Jeśli zwracana jest wartość 0, wywołaj funkcję członkowską [CWnd::P retranslatemessage](#pretranslatemessage) klasy bazowej, aby przetworzyć komunikat. W przypadku przesłonięcia funkcji składowej `CWnd::PreTranslateMessage` kod wygląda następująco:
 
@@ -5437,7 +5437,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 *nIDButton*<br/>
 Określa identyfikator liczby całkowitej kontrolki przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli dana kontrolka jest zaznaczona i 0, jeśli nie jest zaznaczone. Można zaznaczyć tylko przyciski radiowe i pola wyboru. W przypadku przycisków trzech stan zwracana wartość może być równa 2, jeśli przycisk jest nieokreślony. Ta funkcja członkowska zwraca wartość 0 dla elementu.
 
@@ -5453,7 +5453,7 @@ Określa, czy w tym oknie jest włączony układ dynamiczny. Jeśli jest włącz
 BOOL IsDynamicLayoutEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli jest włączony układ dynamiczny; w przeciwnym razie FALSE.
 
@@ -5467,7 +5467,7 @@ Określa, czy `CWnd` jest zminimalizowany (ikona).
 BOOL IsIconic() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli `CWnd` jest zminimalizowany; w przeciwnym razie 0.
 
@@ -5483,7 +5483,7 @@ Określa, czy `CWnd` ma obsługę dotykową.
 BOOL IsTouchWindow() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli `CWnd` ma obsługę dotykową; w przeciwnym razie FALSE.
 
@@ -5497,7 +5497,7 @@ Określa, czy `CWnd` jest włączony dla danych wejściowych myszy i klawiatury.
 BOOL IsWindowEnabled() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli `CWnd` jest włączona; w przeciwnym razie 0.
 
@@ -5513,7 +5513,7 @@ Określa stan widoczności danego okna.
 BOOL IsWindowVisible() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różna od zera, jeśli `CWnd` jest widoczny (ma ustawiony bit [WS_VISIBLE](styles-used-by-mfc.md#window-styles) styl, a okno nadrzędne jest widoczne). Ponieważ wartość zwracana odzwierciedla stan WS_VISIBLE bitu stylu, zwracana wartość może być różna od zera, mimo że `CWnd` jest całkowicie zasłonięta przez inne okna.
 
@@ -5535,7 +5535,7 @@ Określa, czy `CWnd` został zmaksymalizowany.
 BOOL IsZoomed() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli `CWnd` jest zmaksymalizowana; w przeciwnym razie 0.
 
@@ -5552,7 +5552,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 *nIDEvent*<br/>
 Wartość zdarzenia timer przeniesiona do elementu [Settimeer](#settimer).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wynik funkcji. Wartość jest różna od zera, jeśli zdarzenie zostało przerwane. Wartość 0 oznacza, że funkcja członkowska `KillTimer` nie mogła znaleźć określonego zdarzenia czasomierza.
 
@@ -5577,7 +5577,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 Nazwa zasobu, który zawiera wymagane informacje o układzie dynamicznym dla tego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie. Jeśli wystąpi awaria, wartość jest równa 0.
 
@@ -5593,7 +5593,7 @@ Wyłącza Rysowanie w danym oknie.
 BOOL LockWindowUpdate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie. Jeśli wystąpi błąd lub funkcja `LockWindowUpdate` została użyta do zablokowania innego okna, wartość wynosi 0.
 
@@ -5670,7 +5670,7 @@ Wskazuje na obiekt `CString` lub ciąg zakończony znakiem null, który ma być 
 *Npowiadomienia*<br/>
 Określa zawartość i zachowanie okna komunikatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda wykorzystuje funkcję [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) zgodnie z definicją w Windows SDK. Ta metoda zwraca wynik wywołania tej funkcji.
 
@@ -5713,7 +5713,7 @@ Określa style okna do dodania podczas modyfikacji stylu.
 *nFlags*<br/>
 Flagi do przesłania do [SetWindowPos](#setwindowpos)lub zero, jeśli `SetWindowPos` nie należy wywoływać. Wartością domyślną jest zero. Zobacz sekcję Uwagi, aby uzyskać listę predefiniowanych flag.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli styl został pomyślnie zmodyfikowany; w przeciwnym razie 0.
 
@@ -5762,7 +5762,7 @@ Określa style rozszerzone, które mają zostać dodane podczas modyfikacji styl
 *nFlags*<br/>
 Flagi do przesłania do [SetWindowPos](#setwindowpos)lub zero, jeśli `SetWindowPos` nie należy wywoływać. Wartością domyślną jest zero. Zobacz sekcję Uwagi, aby uzyskać listę predefiniowanych flag.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli styl został pomyślnie zmodyfikowany; w przeciwnym razie 0.
 
@@ -5941,7 +5941,7 @@ Identyfikator wysyłania żądanej właściwości otoczenia.
 *pvar*<br/>
 Wskaźnik do struktury `VARIANT` przydzieloną przez obiekt wywołujący, za pomocą której zostanie zwrócona wartość właściwości otoczenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli właściwość otoczenia jest obsługiwana; Wartość FALSE, jeśli nie.
 
@@ -6164,7 +6164,7 @@ Określa wskaźnik do pola listy. Może być tymczasowy.
 *nIndex*<br/>
 Określa bieżącą pozycję karetki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura wywołuje tę funkcję elementu członkowskiego, aby określić akcję wykonywaną przez aplikację w odpowiedzi na wywołanie. Zwracana wartość-2 wskazuje, że aplikacja obsłuży wszystkie aspekty wyboru elementu i nie chce żadnych dalszych akcji w polu listy. Zwracana wartość-1 oznacza, że pole listy powinno wykonać akcję domyślną w odpowiedzi na naciśnięcie klawisza. Wartość zwracana 0 lub większa Określa indeks (liczony od zera) elementu w polu listy i wskazuje, że pole listy powinno wykonać akcję domyślną dla naciśnięcia klawisza dla danego elementu.
 
@@ -6207,7 +6207,7 @@ Numer komunikatu systemu Windows jest wysyłany do okna nadrzędnego.
 *pLResult*<br/>
 Wskaźnik do wartości, która ma zostać zwrócona z procedury okna elementu nadrzędnego. Ten wskaźnik będzie miał wartość NULL, jeśli nie jest oczekiwana wartość zwracana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli to okno jest odpowiedzialne za obsługę wiadomości wysyłanej do jej elementu nadrzędnego; w przeciwnym razie 0.
 
@@ -6281,7 +6281,7 @@ Słowo *wParam* w niskiej kolejności identyfikuje identyfikator polecenia eleme
 *lParam*<br/>
 Identyfikuje kontrolkę, która wysyła komunikat, jeśli wiadomość pochodzi z formantu. W przeciwnym razie *lParam* jest równa 0.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Aplikacja zwraca wartość różną od zera, jeśli przetwarza ten komunikat; w przeciwnym razie 0.
 
@@ -6334,7 +6334,7 @@ Identyfikator kontrolki, która wysłała komunikat WM_COMPAREITEM.
 *lpCompareItemStruct*<br/>
 Zawiera długi wskaźnik do struktury danych [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) , która zawiera identyfikatory i dane dostarczone przez aplikację dla dwóch elementów w polu kombi lub w pole listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje względną pozycję dwóch elementów. Może to być dowolna z następujących wartości:
 
@@ -6412,7 +6412,7 @@ Wskaźnik do `CWnd` obiektu, który wysyła dane.
 *pCopyDataStruct*<br/>
 Wskaźnik do struktury [COPYDATASTRUCT](/windows/win32/api/winuser/ns-winuser-copydatastruct) zawierającej przesyłane dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli aplikacja do odbioru pomyślnie akceptuje dane. W przeciwnym razie zwraca wartość FALSE.
 
@@ -6442,7 +6442,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 Wskazuje strukturę elementu " [ISstruct](/windows/win32/api/winuser/ns-winuser-createstructw) ", która zawiera informacje o tworzonym obiekcie `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `OnCreate` musi zwrócić wartość 0, aby kontynuować tworzenie obiektu `CWnd`. Jeśli aplikacja zwróci wartość-1, okno zostanie zniszczone.
 
@@ -6493,7 +6493,7 @@ Zawiera jedną z następujących wartości, określając typ formantu:
 
 - CTLCOLOR_STATIC formant statyczny
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `OnCtlColor` musi zwrócić uchwyt do pędzla, który ma być używany do rysowania tła formantu.
 
@@ -6540,7 +6540,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-----------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM). Mały bajt wyrazu o wysokiej kolejności.|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony; w przeciwnym razie 0).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza; w przeciwnym razie 0).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wywołaniem, wartość 0, jeśli klucz jest wyłączony).|
@@ -6893,7 +6893,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 *Domeny*<br/>
 Określa obiekt kontekstu urządzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymazuje tło; w przeciwnym razie 0.
 
@@ -6969,7 +6969,7 @@ Wywoływana dla kontrolki, aby kontrolka mogła przetwarzać samo wprowadzanie k
 afx_msg UINT OnGetDlgCode();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Co najmniej jedna z następujących wartości, wskazująca typ danych wejściowych przetwarzanych przez aplikację:
 
@@ -7072,7 +7072,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 *lpHelpInfo*<br/>
 Wskaźnik do struktury [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) , która zawiera informacje na temat elementu menu, kontrolki, okna dialogowego lub okna, dla którego zażądano pomocy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli okno ma fokus klawiatury lub jeśli menu jest aktywne w oknie. Jeśli żadne okno nie ma fokusu klawiatury, zwraca wartość FALSE.
 
@@ -7384,7 +7384,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-----------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM).|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza; w przeciwnym razie 0).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wywołaniem, wartość 0, jeśli klucz jest wyłączony).|
@@ -7429,7 +7429,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-----------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM). Mały bajt wyrazu o wysokiej kolejności.|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony; w przeciwnym razie 0).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza; w przeciwnym razie 0).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wywołaniem, wartość 0, jeśli klucz jest wyłączony).|
@@ -7747,7 +7747,7 @@ Zawiera flagę MF_POPUP, jeśli menu jest menu podręczne. Zawiera flagę MF_SYS
 *pMenu*<br/>
 Zawiera wskaźnik do wybranego `CMenu`. Wskaźnik może być tymczasowy i nie powinien być przechowywany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Słowo o wysokim poziomie kolejności wartości zwracanej musi zawierać jeden z następujących kodów poleceń:
 
@@ -7783,9 +7783,9 @@ afx_msg UINT OnMenuDrag(
 |*nPos*|podczas Pozycja indeksu elementu menu, gdy rozpoczyna się operacja przeciągania.|
 |*pMenu*|podczas Wskaźnik do obiektu [CMenu](../../mfc/reference/cmenu-class.md) , który zawiera element menu.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-|Wartość zwracana|Znaczenie|
+|Wartość zwrócona|Znaczenie|
 |------------------|-------------|
 |MND_CONTINUE|Menu powinno pozostać aktywne. Jeśli mysz jest wydana, należy ją zignorować.|
 |MND_ENDMENU|Menu powinno zostać zakończone.|
@@ -7811,9 +7811,9 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 |---------------|-----------------|
 |*pMenu*|podczas Wskaźnik do struktury [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) , która zawiera informacje na temat menu przeciągnij-i-upuść, nad którym znajduje się kursor myszy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-|Wartość zwracana|Znaczenie|
+|Wartość zwrócona|Znaczenie|
 |------------------|-------------|
 |MNGO_NOERROR|Wskaźnik interfejsu obsługujący operacje usuwania i przeciągania jest zwracany w `pvObj` składowej struktury [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) . Obecnie obsługiwany jest tylko interfejs [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .|
 |MNGO_NOINTERFACE|Nie jest obsługiwany interfejs Drop-and-drag.|
@@ -7918,7 +7918,7 @@ Określa kod obszaru [testowania trafień](#onnchittest) . Test trafień to test
 *komunikat*<br/>
 Określa numer komunikatu myszy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa, czy należy aktywować `CWnd` i czy odrzucić zdarzenie myszy. Musi to być jedna z następujących wartości:
 
@@ -8087,7 +8087,7 @@ Wskazuje odległość obróconą. Wartość *zDelta* jest wyrażona w wielokrotn
 *zmiennoprzecinkow*<br/>
 Określa współrzędną x i y kursora. Współrzędne te są zawsze względne w lewym górnym rogu ekranu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli jest włączone przewijanie kółka myszy; w przeciwnym razie 0.
 
@@ -8163,7 +8163,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 *bActive*<br/>
 Określa, kiedy należy zmienić pasek podpisu lub ikonę, aby wskazać stan aktywny lub nieaktywny. Parametr *bActive* ma wartość true, jeśli jest rysowany aktywny podpis lub ikona. Dla nieaktywnego podpisu lub ikony występuje wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli system Windows powinien kontynuować przetwarzanie domyślne; 0, aby uniemożliwić dezaktywowanie paska podpisu lub ikony.
 
@@ -8218,7 +8218,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 Wskazuje strukturę danych elementu " [ISstruct](/windows/win32/api/winuser/ns-winuser-createstructw) " `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obszar niekliencki jest tworzony. Jeśli wystąpi błąd, wartość wynosi 0. Funkcja `Create` zwróci **błąd** w tym przypadku.
 
@@ -8254,7 +8254,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 *moment*<br/>
 Zawiera współrzędne x i y kursora. Współrzędne te są zawsze współrzędnymi ekranu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedno ze trafień myszy — wyliczone wartości. Aby uzyskać listę wartości, zobacz [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
@@ -8699,7 +8699,7 @@ Wskaźnik do struktury komunikatu powiadomienia (`NMHDR`), która zawiera kod po
 *pResult*<br/>
 Wskaźnik do zmiennej LRESULT, w której ma zostać zapisany kod wyniku, jeśli komunikat jest obsługiwany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Aplikacja zwraca wartość różną od zera, jeśli przetwarza ten komunikat; w przeciwnym razie 0.
 
@@ -8728,7 +8728,7 @@ afx_msg UINT OnNotifyFormat(
 |*pWnd*|podczas Wskaźnik do obiektu `CWnd`, który reprezentuje okno wysyłające komunikat [WM_NOTIFY](/windows/win32/controls/wm-notify) .<br /><br /> Ten parametr jest wskaźnikiem do kontrolki, jeśli parametr *nwykonywane polecenie* jest NF_QUERY lub wskaźnikiem do okna nadrzędnego kontrolki, jeśli *nwykonywane polecenie* jest NF_REQUERY.|
 |*Nwykonywane polecenie*|podczas Wartość polecenia, która określa WM_NOTIFY komunikatu. Możliwe wartości to:<br /><br /> -NF_QUERY-<br />     Komunikat jest zapytaniem, aby określić, czy struktury ANSI lub Unicode mają być używane w komunikatach WM_NOTIFY. Ten komunikat jest wysyłany z kontrolki do okna nadrzędnego podczas tworzenia kontrolki i w odpowiedzi na NF_REQUERY formę tej wiadomości.<br />-NF_REQUERY-<br />     Komunikat jest żądaniem kontrolki, która wysyła NF_QUERY formularz tej wiadomości do okna nadrzędnego. To żądanie jest wysyłane z okna nadrzędnego i żąda kontrolki, aby można było ponownie wykonać zapytanie o typ struktury do użycia w komunikatach WM_NOTIFY. Jeśli parametr *nwykonywane polecenie* jest NF_REQUERY, zwracana wartość jest wynikiem operacji PonówKwerendę.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 |Wartość zwracana|Znaczenie|
 |------------------|-------------|
@@ -8893,7 +8893,7 @@ afx_msg UINT OnPowerBroadcast(
 |*nPowerEvent*|podczas Zdarzenie zarządzania zużyciem.|
 |*nEventData*|podczas Dane specyficzne dla zdarzenia.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli zdarzenie jest żądaniem, zwróć wartość TRUE w celu udzielenia żądania lub BROADCAST_QUERY_DENY, aby odmówić żądania.
 
@@ -8914,7 +8914,7 @@ Struktura wywołuje tę funkcję elementu członkowskiego przez zminimalizowane 
 afx_msg HCURSOR OnQueryDragIcon();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość DoubleWord, która zawiera uchwyt kursora lub ikony w wyrazie z małą kolejnością. Kursor lub ikona muszą być zgodne z rozdzielczością sterownika wyświetlania. Jeśli aplikacja zwraca wartość NULL, system wyświetli kursor domyślny. Domyślna wartość zwracana to NULL.
 
@@ -8930,7 +8930,7 @@ Struktura wywołuje tę funkcję elementu członkowskiego, gdy użytkownik zdecy
 afx_msg BOOL OnQueryEndSession();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli aplikacja może być wygodnie zamykana; w przeciwnym razie 0.
 
@@ -8946,7 +8946,7 @@ Struktura wywołuje tę funkcję elementu członkowskiego, gdy obiekt `CWnd` ma 
 afx_msg BOOL OnQueryNewPalette();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli `CWnd` realizuje swoją paletę logiczną; w przeciwnym razie 0.
 
@@ -8958,7 +8958,7 @@ Struktura wywołuje tę funkcję elementu członkowskiego, gdy obiekt `CWnd` jes
 afx_msg BOOL OnQueryOpen();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, Jeśli ikona może być otwarta lub 0, aby uniemożliwić otwarcie ikony.
 
@@ -8974,7 +8974,7 @@ Wywołuje się, by pobrać stan interfejsu użytkownika dla okna.
 afx_msg UINT OnQueryUIState();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana ma wartość NULL, jeśli wskaźniki fokusu i akceleratory klawiatury są widoczne. W przeciwnym razie wartość zwracana może być jedną lub większą liczbą następujących wartości:
 
@@ -9127,7 +9127,7 @@ Położenie wskaźnika w poziomie.
 *lParam*<br/>
 Położenie wskaźnika w pionie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W tej chwili nie ma znaczenia. Zawsze zero.
 
@@ -9222,7 +9222,7 @@ Określa kod obszaru [testowania trafień](#onnchittest) . Test trafień określ
 *komunikat*<br/>
 Określa numer komunikatu myszy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowy, aby zatrzymać dalsze przetwarzanie, lub 0, aby kontynuować.
 
@@ -9646,7 +9646,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM). Mały bajt wyrazu o wysokiej kolejności.|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony; w przeciwnym razie 0).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza; w przeciwnym razie 0).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wywołaniem, wartość 0, jeśli klucz jest wyłączony).|
@@ -9685,7 +9685,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM). Mały bajt wyrazu o wysokiej kolejności.|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony; w przeciwnym razie 0).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza, 0 w przeciwnym przypadku).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wysłaniem komunikatu, 0 Jeśli klucz jest w górę).|
@@ -9732,7 +9732,7 @@ Określa kod skanowania, kod przejścia klucza, poprzedni stan klucza i kod kont
 |-----------|-------------|
 |0-7|Skanuj kod (wartość zależna od producenta OEM). Mały bajt wyrazu o wysokiej kolejności.|
 |8|Klucz rozszerzony, taki jak klucz funkcji lub klucz na klawiaturze numerycznej (1, jeśli jest to klucz rozszerzony; w przeciwnym razie 0).|
-|9-10|Nie używany.|
+|9-10|Nie jest używany.|
 |11-12|Używane wewnętrznie przez system Windows.|
 |13|Kod kontekstu (1, jeśli klawisz ALT jest wciśnięty podczas naciskania klawisza, 0 w przeciwnym przypadku).|
 |14|Poprzedni stan klucza (1, jeśli klucz nie działa przed wysłaniem komunikatu, 0 Jeśli klucz jest w górę).|
@@ -9750,7 +9750,7 @@ W przypadku klawiatury IBM Enhanced 101 i 102 klawiszy ulepszone klucze są praw
 
 W przypadku, gdy klawiatura "non-U. S" ma rozszerzoną 102 klawiszy, prawy klawisz ALT jest obsługiwany jako kombinacja klawiszy CTRL + ALT. Poniżej przedstawiono sekwencję komunikatów i wywołań tego wyniku, gdy użytkownik naciśnie i zwolni ten klucz:
 
-|Sequence|Dostęp do funkcji|Komunikat przeszedł|
+|Sekwencja|Dostęp do funkcji|Komunikat przeszedł|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
@@ -9868,7 +9868,7 @@ Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttool
 
 - *lpszText* = LPSTR_TEXTCALLBACK wskaźnik do ciągu, który ma być wyświetlany w określonym oknie
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli formant ToolTip został znaleziony, identyfikator formantu okna. Jeśli kontrolka etykietki narzędzia nie została znaleziona,-1.
 
@@ -9908,7 +9908,7 @@ Liczba wejść dotykowych.
 *pInput*<br/>
 Wskaźnik do struktury TOUCHINPUT.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli aplikacja przetwarza dane wejściowe systemu Windows w przeciwnym razie FALSE.
 
@@ -9932,7 +9932,7 @@ Całkowita liczba wejść dla systemu Windows dotykowych.
 *pInputs*<br/>
 Tablica TOUCHINPUT.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli aplikacja przetwarza dane wejściowe systemu Windows w przeciwnym razie FALSE.
 
@@ -10059,7 +10059,7 @@ Określa wskaźnik do pola listy. Wskaźnik może być tymczasowy i nie powinien
 *nIndex*<br/>
 Określa bieżącą pozycję karetki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa akcję wykonywaną przez aplikację w odpowiedzi na komunikat. Zwracana wartość-2 wskazuje, że aplikacja obsłuży wszystkie aspekty wyboru elementu i nie wymaga żadnych dalszych akcji przez pole listy. Zwracana wartość-1 oznacza, że pole listy powinno wykonać akcję domyślną w odpowiedzi na naciśnięcie klawisza. Wartość zwracana 0 lub większa Określa indeks (liczony od zera) elementu w polu listy i wskazuje, że pole listy powinno wykonać akcję domyślną dla naciśnięcia klawisza dla danego elementu.
 
@@ -10279,7 +10279,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *pResult*<br/>
 Wartość zwracana przez [WindowProc](#windowproc). Zależy od komunikatu; może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli komunikat został obsłużony; w przeciwnym razie FALSE.
 
@@ -10411,7 +10411,7 @@ Otwiera schowek.
 BOOL OpenClipboard();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Schowek jest otwarty za pośrednictwem `CWnd`lub 0, jeśli inna aplikacja lub okno ma otwarty schowek.
 
@@ -10446,7 +10446,7 @@ BOOL operator!=(const CWnd& wnd) const;
 *wnd*<br/>
 Odwołanie do obiektu `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli jest równa; w przeciwnym razie 0.
 
@@ -10463,7 +10463,7 @@ BOOL operator==(const CWnd& wnd) const;
 *wnd*<br/>
 Odwołanie do obiektu `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli jest równa; w przeciwnym razie 0.
 
@@ -10480,7 +10480,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 *Domeny*<br/>
 Kontekst urządzenia, dla którego mają zostać narysowane bezokienkowe kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli istnieje kontener kontrolki, a kontrolki bez okien są rysowane pomyślnie. w przeciwnym razie wartość FALSE.
 
@@ -10506,7 +10506,7 @@ Określa dodatkowe informacje o komunikacie. Zawartość tego parametru zależy 
 *lParam*<br/>
 Określa dodatkowe informacje o komunikacie. Zawartość tego parametru zależy od wysyłanej wiadomości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wiadomość została opublikowana; w przeciwnym razie 0.
 
@@ -10545,7 +10545,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 *Rejestr*<br/>
 Struktura [elementu](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli Tworzenie okna powinno być kontynuowane; 0, aby wskazać błąd tworzenia.
 
@@ -10593,7 +10593,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 Wskazuje strukturę [komunikatów](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat do przetworzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli wiadomość została przetłumaczona i nie powinna być wysyłana; 0, jeśli komunikat nie został przetłumaczony i powinien zostać wysłany.
 
@@ -10691,7 +10691,7 @@ Wskaźnik do kontekstu urządzenia, do którego ma zostać wydrukowany.
 *nFlags*<br/>
 Określa opcje rysowania. Aby uzyskać listę możliwych wartości, zobacz [PrintWindow](/windows/win32/api/winuser/nf-winuser-printwindow).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -10751,7 +10751,7 @@ Domyślnie system Windows, którego dotyczy funkcja `RedrawWindow`, zależy od t
 
 - RDW_NOCHILDREN wyklucza okna podrzędne, jeśli istnieją, z operacji odrysowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli okno zostało narysowane pomyślnie. w przeciwnym razie 0.
 
@@ -10785,7 +10785,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *pResult*<br/>
 Wynik wygenerowany przez okno podrzędne, które ma zostać zwrócone przez okno nadrzędne. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli komunikat został odzwierciedlony; w przeciwnym razie FALSE.
 
@@ -10815,7 +10815,7 @@ Uchwyt do okna podrzędnego.
 *pResult*<br/>
 Wynik wygenerowany przez okno podrzędne, które ma zostać zwrócone przez okno nadrzędne. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat został obsłużony; w przeciwnym razie 0.
 
@@ -10838,7 +10838,7 @@ int ReleaseDC(CDC* pDC);
 *Domeny*<br/>
 Określa kontekst urządzenia do zwolnienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -10914,7 +10914,7 @@ Określa komunikat systemu Windows do wysłania. Może być jedną z następują
 
 - MLF_SHOWONIDLE pokazać okno, gdy kolejka komunikatów przechodzi w stan bezczynności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wartość parametru *nwynik* przekazaną do funkcji członkowskiej [EndModalLoop](#endmodalloop) , która jest następnie używana do kończenia pętli modalnej.
 
@@ -11026,7 +11026,7 @@ Może mieć jedną z następujących wartości:
 
 - SW_SCROLLCHILDREN przewija wszystkie okna podrzędne, które przecinają prostokąt wskazywany przez *lpRectScroll* przez liczbę pikseli określoną w *DX* i *dy*. System Windows wysyła komunikat [WM_MOVE](/windows/win32/winmsg/wm-move) do wszystkich okien podrzędnych, które przecinają *lpRectScroll*, nawet jeśli nie są przenoszone. Karetka jest zmieniana w momencie przewinięcia okna podrzędnego, a prostokąt kursora przecina prostokąt przewijania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana to SIMPLEREGION (prostokąt niezweryfikowanego regionu), COMPLEXREGION (nieprostokątny region niezweryfikowany; nakładające się prostokąty) lub NULLREGION (bez unieważnienia regionu), jeśli funkcja się powiedzie. w przeciwnym razie wartość zwracana jest błąd.
 
@@ -11055,7 +11055,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 *pResult*<br/>
 Wynik wygenerowany przez okno podrzędne, które ma zostać zwrócone przez okno nadrzędne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli okno podrzędne przeobsługiwało komunikat wysłany do jego elementu nadrzędnego; w przeciwnym razie 0.
 
@@ -11091,7 +11091,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 Określa dodatkowe informacje zależne od komunikatów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa wartość zwracaną przez procedurę okna kontrolki lub 0, Jeśli kontrolka nie została znaleziona.
 
@@ -11127,7 +11127,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 Określa dodatkowe informacje zależne od komunikatów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wynik przetwarzania wiadomości; jego wartość zależy od wysłanej wiadomości.
 
@@ -11201,7 +11201,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 Określa dodatkowe informacje zależne od komunikatów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -11217,7 +11217,7 @@ Sprawia, `CWnd` aktywnego okna.
 CWnd* SetActiveWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Okno, które było wcześniej aktywne.
 
@@ -11235,7 +11235,7 @@ Powoduje, że wszystkie kolejne dane wejściowe myszy są wysyłane do bieżące
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu okna, który wcześniej otrzymał wszystkie dane wejściowe myszy. Jeśli nie ma takiego okna, ma wartość NULL. Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -11276,7 +11276,7 @@ Dodaje to okno do łańcucha systemu Windows, które są powiadamiane (za pomoc�
 HWND SetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Po pomyślnym przejściu do następnego okna w łańcuchu podglądu Schowka. Aplikacje powinny zapisywać to dojście (może być przechowywane jako zmienna członkowska) i używać go podczas reagowania na komunikaty łańcucha w podglądzie Schowka.
 
@@ -11301,7 +11301,7 @@ int SetDlgCtrlID(int nID);
 *nID*<br/>
 Nowa wartość do ustawienia dla identyfikatora formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzedni identyfikator okna, jeśli się powiedzie; w przeciwnym razie 0.
 
@@ -11373,7 +11373,7 @@ Umieszcza wątek, który utworzył okno na pierwszym planie, i aktywuje okno.
 BOOL SetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -11393,7 +11393,7 @@ Przejmuje fokus wprowadzania.
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu okna, który wcześniej miał fokus wprowadzania. Jeśli nie ma takiego okna, ma wartość NULL. Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany.
 
@@ -11445,7 +11445,7 @@ Uchwyt do poprzedniej ikony.
 *bBigIcon*<br/>
 Określa ikonę 32 pikseli o 32 pikseli w przypadku wartości TRUE; Określa ikonę 16 pikseli o 16 pikseli w przypadku wartości FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do ikony.
 
@@ -11479,7 +11479,7 @@ Wartość alfa użyta do opisania nieprzezroczystości okna warstwowego. Aby uzy
 *flagiDW*<br/>
 Określa akcję do wykonania. Ten parametr może mieć co najmniej jedną z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -11500,7 +11500,7 @@ BOOL SetMenu(CMenu* pMenu);
 *pMenu*<br/>
 Identyfikuje nowe menu. Jeśli ten parametr ma wartość NULL, bieżące menu zostanie usunięte.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli menu zostanie zmienione; w przeciwnym razie 0.
 
@@ -11548,7 +11548,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 *pWndNewParent*<br/>
 Identyfikuje nowe okno nadrzędne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do poprzedniego obiektu nadrzędnego okna, jeśli to się powiedzie. Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -11633,7 +11633,7 @@ Wskaźnik do struktury [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scroll
 *bRedraw*<br/>
 Określa, czy pasek przewijania ma być rysowany ponownie w celu odzwierciedlenia nowego położenia. Jeśli *bRedraw* ma wartość true, pasek przewijania jest rysowany ponownie. Jeśli wartość jest równa FALSE, nie jest ponownie narysowana. Pasek przewijania jest domyślnie rysowany ponownie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, zwraca wartość TRUE. W przeciwnym razie ma wartość FALSE.
 
@@ -11672,7 +11672,7 @@ Określa nową pozycję pola przewijania. Musi ona należeć do zakresu przewija
 *bRedraw*<br/>
 Określa, czy pasek przewijania ma być odświeżany w celu odzwierciedlenia nowej pozycji pola przewijania. Jeśli ten parametr ma wartość TRUE, pasek przewijania jest odświeżany; w przypadku wartości FALSE pasek przewijania nie jest odświeżany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia pozycja pola przewijania.
 
@@ -11745,7 +11745,7 @@ Określa wartość limitu czasu lub interwału (w milisekundach).
 *lpfnTimer*<br/>
 Określa adres `TimerProc` funkcji wywołania zwrotnego dostarczonej przez aplikację, która przetwarza komunikaty [WM_TIMER](/windows/win32/winmsg/wm-timer) . Jeśli ten parametr ma wartość NULL, komunikaty WM_TIMER są umieszczane w kolejce komunikatów aplikacji i obsługiwane przez obiekt `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator czasomierza nowego czasomierza, jeśli funkcja się powiedzie. Ta wartość może być równa wartości przesyłanej przez parametr *nIDEvent* . Aplikacja powinna zawsze przekazać wartość zwracaną do funkcji składowej [KillTimer](#killtimer) , aby skasować czasomierz. Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -11782,7 +11782,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 *dwContextHelpId*<br/>
 Identyfikator kontekstu pomocy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -11807,7 +11807,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 *lpwndpl*<br/>
 Wskazuje na strukturę [WindowPlacement](/windows/win32/api/winuser/ns-winuser-windowplacement) , która określa nowy stan i położenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -11881,7 +11881,7 @@ Określa opcje ustalania wielkości i pozycjonowania. Ten parametr może być ko
 
 - SWP_SHOWWINDOW wyświetla okno.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -11935,7 +11935,7 @@ Uchwyt do regionu.
 *bRedraw*<br/>
 Jeśli wartość jest równa TRUE, system operacyjny ponownie narysuje okno po ustawieniu regionu; w przeciwnym razie nie. Zazwyczaj Ustaw *bRedraw* na true, jeśli okno jest widoczne. W przypadku ustawienia wartości TRUE system wysyła WM_WINDOWPOSCHANGING i WM_WINDOWPOSCHANGED komunikatów do okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest różna od zera. Jeśli funkcja się nie powiedzie, zwracana wartość jest równa zero.
 
@@ -12068,7 +12068,7 @@ Określa sposób wyświetlania `CWnd`. Musi to być jedna z następujących wart
 
 - SW_SHOWNORMAL aktywuje i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, system Windows przywraca jego oryginalny rozmiar i położenie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli okno było wcześniej widoczne; 0, jeśli `CWnd` był wcześniej ukryty.
 
@@ -12098,7 +12098,7 @@ Identyfikator kontrolki.
 *pParent*<br/>
 Element nadrzędny kontrolki (zazwyczaj okno dialogowe).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -12125,7 +12125,7 @@ BOOL SubclassWindow(HWND hWnd);
 *Właściwość*<br/>
 Uchwyt do okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -12162,7 +12162,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby ustawić `WndProc` z powrote
 HWND UnsubclassWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do okna bez podklasy.
 
@@ -12183,7 +12183,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 *bSaveAndValidate*<br/>
 Flaga wskazująca, czy okno dialogowe jest inicjowane (FAŁSZ) czy trwa pobieranie danych (wartość TRUE).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0. Jeśli *bSaveAndValidat*e ma wartość true, wartość zwracana przez zero oznacza, że dane zostały pomyślnie zweryfikowane.
 
@@ -12263,7 +12263,7 @@ Wskaźnik na strukturę [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blen
 *flagiDW*<br/>
 Określa akcję do wykonania. Ten parametr może mieć co najmniej jedną z następujących wartości. Aby uzyskać listę możliwych wartości, zobacz [UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0.
 
@@ -12338,7 +12338,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 *moment*<br/>
 Określa strukturę danych obiektu [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) lub [punktu](/windows/win32/api/windef/ns-windef-point) , który definiuje punkt do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu okna, w którym znajduje się punkt. Ma wartość NULL, jeśli w danym punkcie nie istnieje okno. Zwrócony wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -12368,7 +12368,7 @@ Zawiera dodatkowe informacje używane podczas przetwarzania komunikatu. Wartoś�
 *lParam*<br/>
 Zawiera dodatkowe informacje używane podczas przetwarzania komunikatu. Wartość parametru zależy od komunikatu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana jest zależna od komunikatu.
 
@@ -12416,7 +12416,7 @@ Wartość TRUE oznacza rejestrowanie obsługi dotykowej systemu Windows; W przec
 *ulFlags*<br/>
 Zestaw flag bitowych, które określają opcjonalne modyfikacje. To pole może zawierać 0 lub jedną z następujących wartości: TWF_FINETOUCH, TWF_WANTPALM.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

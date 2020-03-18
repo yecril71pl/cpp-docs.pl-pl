@@ -25,11 +25,11 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854912"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419127"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;funkcje&gt; wyjątków
 
@@ -41,7 +41,7 @@ Uzyskuje inteligentny wskaźnik na bieżący wyjątek.
 exception_ptr current_exception();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) wskazujący na bieżący wyjątek.
 
@@ -69,7 +69,7 @@ template <class E>
 *Z wyjątkiem*\
 Klasa z wyjątkiem do skopiowania. Zazwyczaj należy określić obiekt [klasy wyjątku](../standard-library/exception-class.md) jako argument funkcji `make_exception_ptr`, chociaż każdy obiekt klasy może być argumentem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) wskazujący kopię bieżącego wyjątku dla programu *z wyjątkiem*.
 
@@ -117,7 +117,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 *fnew*\
 Funkcja, która ma zostać wywołana po zakończeniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Adres poprzedniej funkcji, która została wywołana po zakończeniu.
 
@@ -185,7 +185,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 *fnew*\
 Funkcja, która ma zostać wywołana w przypadku napotkania nieoczekiwanego wyjątku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Adres poprzedniego `unexpected_handler`.
 
@@ -257,7 +257,7 @@ Zwraca **wartość true** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie pr
 bool uncaught_exception();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca **wartość PRAWDA** po zakończeniu obliczania wyrażenia throw oraz przed ukończeniem inicjacji deklaracji wyjątku w procedurze obsługi dopasowania lub wywołując [nieoczekiwany](../standard-library/exception-functions.md#unexpected) wynik w wyniku wyrażenia throw. W szczególności `uncaught_exception` zwróci **wartość true** w przypadku wywołania z destruktora, który jest wywoływany podczas operacji unwindy wyjątku. Na urządzeniach `uncaught_exception` jest obsługiwana tylko w przypadku Windows CE 5,00 i nowszych wersji, w tym platform Windows Mobile 2005.
 

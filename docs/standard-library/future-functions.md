@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865180"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421752"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;przyszłych funkcji&gt;
 
@@ -95,7 +95,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 *Errno*\
 Wartość [future_errc](../standard-library/future-enums.md#future_errc) , która identyfikuje zgłoszony błąd.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `error_code(static_cast<int>(Errno), future_category());`
 
@@ -112,7 +112,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 *Errno*\
 Wartość [future_errc](../standard-library/future-enums.md#future_errc) , która identyfikuje zgłoszony błąd.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
@@ -136,6 +136,6 @@ Obiekt `promise` po lewej stronie.
 *Prawa*\
 Właściwy `promise` obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<przyszłość >](../standard-library/future.md)

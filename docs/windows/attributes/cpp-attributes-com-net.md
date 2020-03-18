@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856445"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421318"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty języka C++ dla modelu COM i platformy .NET
 
@@ -82,7 +82,7 @@ Ponadto, konsolidator wizualny C++ będzie wyprowadzał wszystkie informacje o a
 
 C++atrybuty można opisać przy użyciu czterech podstawowych pól: cel, do którego można zastosować (**dotyczy**), jeśli są powtarzalne lub nie (**powtarzalne**), wymagana obecność innych atrybutów (**wymaganych atrybutów**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w tabeli towarzyszącej w temacie odwołania do poszczególnych atrybutów. Każde z tych pól zostało opisane poniżej.
 
-### <a name="applies-to"></a>Dotyczy:
+### <a name="applies-to"></a>Dotyczy
 
 To pole opisuje różne C++ elementy języka, które są dozwolonymi celami dla określonego atrybutu. Na przykład, jeśli atrybut określa "Class" w polu **dotyczy** , oznacza to, że atrybut może być stosowany tylko do klasy prawnej C++ . Jeśli atrybut jest stosowany do funkcji składowej klasy, wynikiem może być błąd składniowy.
 

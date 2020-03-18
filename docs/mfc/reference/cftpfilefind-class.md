@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
 ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866301"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420373"
 ---
 # <a name="cftpfilefind-class"></a>Klasa CFtpFileFind
 
@@ -31,17 +31,17 @@ Pomoc dla wyszukiwania w pliku internetowym w przypadku serwerów FTP.
 class CFtpFileFind : public CFileFind
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|Konstruuje obiekt `CFtpFileFind`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CFtpFileFind:: FindFile —](#findfile)|Znajduje plik na serwerze FTP.|
 |[CFtpFileFind::FindNextFile](#findnextfile)|Kontynuuje wyszukiwanie plików od poprzedniego wywołania do [FindFile —](#findfile).|
@@ -127,7 +127,7 @@ Flagi opisujące, jak obsłużyć tę sesję. Flagi te można łączyć z operat
 
 - INTERNET_FLAG_EXISTING_CONNECT Jeśli to możliwe, ponownie Użyj istniejących połączeń z serwerem dla nowych żądań `FindFile` zamiast tworzenia nowej sesji dla każdego żądania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
 
@@ -147,7 +147,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby kontynuować wyszukiwanie pl
 virtual BOOL FindNextFile();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli istnieje więcej plików; zero, jeśli znaleziony plik jest ostatnim z nich w katalogu lub wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32. Jeśli znaleziony plik to ostatni plik w katalogu lub nie można znaleźć pasujących plików, funkcja `GetLastError` zwraca ERROR_NO_MORE_FILES.
 
@@ -169,7 +169,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać adres URL określon
 CString GetFileURL() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Plik i ścieżka lokalizatora zasobów uniwersalnych (URL).
 
@@ -177,7 +177,7 @@ Plik i ścieżka lokalizatora zasobów uniwersalnych (URL).
 
 `GetFileURL` jest podobna do funkcji składowej [CFileFind:: GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), z tą różnicą, że zwraca adres URL w `ftp://moose/dir/file.txt`formularza.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CFileFind](../../mfc/reference/cfilefind-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

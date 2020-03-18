@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855338"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418896"
 ---
 # <a name="carchive-class"></a>Klasa CArchive
 
@@ -69,17 +69,17 @@ Umożliwia zapisanie złożonej sieci obiektów w trwałej postaci binarnej (zaz
 class CArchive
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CArchive:: CArchive](#carchive)|Tworzy obiekt `CArchive`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CArchive:: Abort](#abort)|Zamyka archiwum bez zgłaszania wyjątku.|
 |[CArchive:: Close](#close)|Opróżnia niezapisywane dane i rozłącza z `CFile`.|
@@ -105,14 +105,14 @@ class CArchive
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CArchive:: operator &lt;&lt;](#operator_lt_lt)|Przechowuje obiekty i typy pierwotne w archiwum.|
 |[CArchive:: operator &gt;&gt;](#operator_gt_gt)|Ładuje obiekty i typy pierwotne z archiwum.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CArchive:: m_pDocument](#m_pdocument)||
 
@@ -246,7 +246,7 @@ Pobiera `CFile` wskaźnik obiektu dla tego archiwum.
 CFile* GetFile() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stały wskaźnik do obiektu `CFile` w użyciu.
 
@@ -266,7 +266,7 @@ Wywołaj tę funkcję z funkcji `Serialize`, aby określić wersję obiektu, kt�
 UINT GetObjectSchema();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Podczas deserializacji wersja obiektu jest odczytywana.
 
@@ -288,7 +288,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy wewnętrzny 
 BOOL IsBufferEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli bufor archiwum jest pusty; w przeciwnym razie 0.
 
@@ -308,7 +308,7 @@ Określa, czy archiwum ładuje dane.
 BOOL IsLoading() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli archiwum jest aktualnie używane do ładowania; w przeciwnym razie 0.
 
@@ -328,7 +328,7 @@ Określa, czy archiwum przechowuje dane.
 BOOL IsStoring() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli archiwum jest aktualnie używane do przechowywania; w przeciwnym razie 0.
 
@@ -435,7 +435,7 @@ CArchive& operator<<(ULONGLONG dwdw);
 CArchive& operator<<(LONGLONG dwdw);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie `CArchive`, które umożliwia wiele operatorów wstawiania w pojedynczym wierszu.
 
@@ -515,7 +515,7 @@ CArchive& operator>>(ULONGLONG& dwdw);
 CArchive& operator>>(LONGLONG& dwdw);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie `CArchive`, które umożliwia wiele operatorów wyodrębniania w jednym wierszu.
 
@@ -555,7 +555,7 @@ Wskaźnik do buforu dostarczonego przez użytkownika, który ma otrzymywać dane
 *Nmaks.*<br/>
 Liczba całkowita bez znaku określająca liczbę bajtów, które mają zostać odczytane z archiwum.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba całkowita bez znaku zawierająca liczbę bajtów, które są faktycznie odczytywane. Jeśli wartość zwracana jest mniejsza niż żądana liczba, osiągnięto koniec pliku. Nie zgłoszono wyjątku dla stanu końca pliku.
 
@@ -591,7 +591,7 @@ Wskaźnik do schematu klasy czasu wykonywania wcześniej przechowywanej.
 *pObTag*<br/>
 Liczba, która odnosi się do unikatowego tagu obiektu. Używane wewnętrznie przez implementację obiektu [ReadObject](#readobject). Dostępne tylko dla zaawansowanego programowania; *pObTag* zwykle powinna mieć wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) .
 
@@ -622,7 +622,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 *pClass*<br/>
 Stały wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który odnosi się do obiektu, który powinien zostać odczytany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik [CObject](../../mfc/reference/cobject-class.md) , który musi być bezpiecznie rzutowany do właściwej klasy pochodnej przy użyciu [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof).
 
@@ -656,7 +656,7 @@ Określa wskaźnik do buforu dostarczonego przez użytkownika, który będzie ot
 *Nmaks.*<br/>
 Określa maksymalną liczbę znaków do odczytania. Wartość musi być mniejsza niż rozmiar buforu *lpsz* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W wersji, która zwraca wartość logiczną, prawda, jeśli pomyślne; W przeciwnym razie zwraca wartość FALSE.
 
@@ -879,7 +879,7 @@ Kończący znak null (' \ 0 ') nie jest zapisywana w pliku; nie jest automatyczn
 
 [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>

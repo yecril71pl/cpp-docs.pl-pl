@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865456"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420905"
 ---
 # <a name="ctooltipctrl-class"></a>Klasa CToolTipCtrl
 
@@ -89,7 +89,7 @@ Hermetyzuje funkcjonalność "kontrolki etykietki narzędzia", czyli małego pod
 class CToolTipCtrl : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -218,7 +218,7 @@ Identyfikator narzędzia.
 *lpszText*<br/>
 Wskaźnik na tekst narzędzia. Jeśli ten parametr zawiera wartość LPSTR_TEXTCALLBACK, TTN_NEEDTEXT komunikaty powiadomień przejdą do elementu nadrzędnego okna, do którego wskazuje *pWnd* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -253,7 +253,7 @@ Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która z
 *bLarger*<br/>
 Jeśli wartość jest równa TRUE, *lprc* służy do określania prostokąta wyświetlania tekstu i otrzymuje odpowiedni prostokąt okna. W przypadku wartości FALSE *lprc* jest używany do określania prostokąta okna i odbiera odpowiedni prostokąt wyświetlania tekstu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli prostokąt został pomyślnie dostosowany; w przeciwnym razie 0.
 
@@ -279,7 +279,7 @@ Określa okno nadrzędne kontrolki etykietki narzędzia, zazwyczaj `CDialog`. Ni
 *dwStyle*<br/>
 Określa styl kontrolki etykietki narzędzia. Zobacz sekcję **uwagi** , aby uzyskać więcej informacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt `CToolTipCtrl` został pomyślnie utworzony; w przeciwnym razie 0.
 
@@ -324,7 +324,7 @@ Określa styl kontrolki etykietki narzędzia. Aby uzyskać więcej informacji, z
 *dwStyleEx*<br/>
 Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli w przeciwnym razie określono wartość 0.
 
@@ -379,7 +379,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 *lpToolInfo*<br/>
 Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar etykietki narzędzia.
 
@@ -401,7 +401,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 |---------------|-----------------|
 |*lpToolInfo*|określoną Wskaźnik na strukturę [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , która otrzymuje informacje o bieżącym oknie etykietki narzędzia.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli informacje są pobierane pomyślnie; w przeciwnym razie FALSE.
 
@@ -434,7 +434,7 @@ Flaga określająca, która wartość czasu trwania zostanie pobrana. Ten parame
 
 - TTDT_RESHOW pobrać długość czasu, przez który kolejne okna etykietki narzędzi będą wyświetlane, gdy wskaźnik przesuwa się z jednego narzędzia do innego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określony czas opóźnienia (w milisekundach)
 
@@ -474,7 +474,7 @@ Pobiera maksymalną szerokość okna etykietki narzędzia.
 int GetMaxTipWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna szerokość okna etykietki narzędzia.
 
@@ -516,7 +516,7 @@ Pobiera kolor tła w oknie etykietki narzędzia.
 COLORREF GetTipBkColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje kolor tła.
 
@@ -532,7 +532,7 @@ Pobiera kolor tekstu w oknie etykietki narzędzia.
 COLORREF GetTipTextColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje kolor tekstu.
 
@@ -566,7 +566,7 @@ Pobiera liczbę narzędzi zarejestrowanych przy użyciu kontrolki etykietki narz
 int GetToolCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba narzędzi zarejestrowanych w kontrolce etykietki narzędzia.
 
@@ -592,7 +592,7 @@ Wskaźnik do okna, które zawiera narzędzie.
 *nIDTool*<br/>
 Identyfikator narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -622,7 +622,7 @@ Wskaźnik do obiektu `CPoint` zawierającego współrzędne punktu do przetestow
 *lpToolInfo*<br/>
 Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , który zawiera informacje o narzędziu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli punkt określony przez informacje o teście trafień znajduje się w prostokącie obwiedni narzędzia; w przeciwnym razie 0.
 
@@ -766,7 +766,7 @@ int SetMaxTipWidth(int iWidth);
 *iWidth*<br/>
 Maksymalna szerokość okna etykietki narzędzia, która ma zostać ustawiona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia Maksymalna szerokość porady.
 
@@ -826,7 +826,7 @@ Zobacz *ikonę* w [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) w Windows
 *lpstrTitle*<br/>
 Wskaźnik do ciągu tytułu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -882,7 +882,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Wskaźnik do ciągu Unicode, który zawiera styl wizualizacji do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana nie jest używana.
 

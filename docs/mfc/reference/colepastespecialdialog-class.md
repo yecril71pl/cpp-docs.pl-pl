@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855608"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421248"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 
@@ -45,7 +45,7 @@ Używane dla okna dialogowego specjalne wklejanie OLE.
 class COlePasteSpecialDialog : public COleDialog
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -170,7 +170,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 *Porównaj*<br/>
 Format schowka do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Struktura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) zawierająca informacje dla nowego wpisu linku.
 
@@ -250,7 +250,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 *pNewItem*<br/>
 Wskazuje na wystąpienie `COleClientItem`. Nie może mieć wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli element został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -266,7 +266,7 @@ Wyświetla okno dialogowe specjalne wklejenie OLE.
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:
 
@@ -290,7 +290,7 @@ Określa, czy użytkownik zdecydował się wyświetlić wybrany element jako iko
 DVASPECT GetDrawAspect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Metoda wymagana do renderowania obiektu.
 
@@ -312,7 +312,7 @@ Pobiera metaplik skojarzony z elementem wybranym przez użytkownika.
 HGLOBAL GetIconicMetafile() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do metapliku zawierającego ikonę ikony wybranego elementu, jeśli pole wyboru Wyświetlaj jako ikonę zostało zaznaczone, gdy okno dialogowe zostało odrzucone, wybierając **przycisk OK**. w przeciwnym razie wartość NULL.
 
@@ -324,7 +324,7 @@ Pobiera wartość indeksu skojarzoną z wpisem wybranym przez użytkownika.
 int GetPasteIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks do tablicy struktur `OLEUIPASTEENTRY`, które zostały wybrane przez użytkownika. Format, który odpowiada wybranemu indeksowi, powinien być używany podczas wykonywania operacji wklejania.
 
@@ -340,7 +340,7 @@ Określa typ wyboru dokonany przez użytkownika.
 UINT GetSelectionType() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca typ dokonanego wyboru.
 

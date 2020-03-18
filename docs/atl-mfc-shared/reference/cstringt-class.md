@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
 ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856316"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418210"
 ---
 # <a name="cstringt-class"></a>Klasa CStringT
 
@@ -130,18 +130,18 @@ Określa, czy Klasa String wymaga obsługi biblioteki środowiska uruchomieniowe
 
    Klasa nie wymaga obsługi CRT i wyszukuje ciągi zasobów przy użyciu standardowego algorytmu wyszukiwania MFC.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CStringT:: CStringT](#cstringt)|Konstruuje obiekt `CStringT` na różne sposoby.|
 |[CStringT:: ~ CStringT](#_dtorcstringt)|Niszczy obiekt `CStringT`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CStringT:: AllocSysString](#allocsysstring)|Przypisuje element BSTR z `CStringT` danych.|
 |[CStringT:: AnsiToOem](#ansitooem)|Wprowadza konwersję w miejscu ze znaku ANSI ustawionym na zestaw znaków OEM.|
@@ -251,7 +251,7 @@ Następujące typy ciągów są dostępne w projektach, w których ATL_CSTRING_N
 
 Ponieważ `CStringT` używa argumentu szablonu do zdefiniowania typu znaku (obsługiwanego przez [wchar_t](../../c-runtime-library/standard-types.md) lub [char](../../c-runtime-library/standard-types.md)), typy parametrów metody mogą być skomplikowane w czasie. Aby uprościć ten problem, zestaw wstępnie zdefiniowanych typów jest definiowany i używany w całej klasie `CStringT`. W poniższej tabeli wymieniono różne typy:
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`XCHAR`|Pojedynczy znak (albo **wchar_t** lub **char**) o tym samym typie znaku co obiekt `CStringT`.|
 |`YCHAR`|Pojedynczy znak (albo **wchar_t** lub **char**) z odwrotnym typem znaku jako obiektem `CStringT`.|
@@ -284,7 +284,7 @@ Przypisuje ciąg typu BSTR, który jest zgodny z automatyzacją, i kopiuje do ni
 BSTR AllocSysString() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowo przydzielony ciąg.
 
@@ -359,7 +359,7 @@ int Collate(PCXSTR psz) const throw();
 *psz*<br/>
 Inny ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero, jeśli ciągi są identyczne, < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ*, lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ*.
 
@@ -380,7 +380,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 *psz*<br/>
 Inny ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero, jeśli ciągi są identyczne (w przypadku ignorowania wielkości liter), < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ* (bez uwzględnienia wielkości liter) lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ* (bez uwzględnienia wielkości liter).
 
@@ -405,7 +405,7 @@ int Compare(PCXSTR psz) const;
 *psz*<br/>
 Inny ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero, jeśli ciągi są identyczne, < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ*, lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ*.
 
@@ -434,7 +434,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 *psz*<br/>
 Inny ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero, jeśli ciągi są identyczne (w przypadku ignorowania wielkości liter), < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ* (bez uwzględnienia wielkości liter) lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ* (bez uwzględnienia wielkości liter).
 
@@ -616,7 +616,7 @@ Indeks (liczony od zera) pierwszego znaku w obiekcie `CStringT` do usunięcia.
 *nCount*<br/>
 Liczba znaków do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość zmienionego ciągu.
 
@@ -655,7 +655,7 @@ Indeks znaku w ciągu, w którym rozpoczyna się wyszukiwanie, lub 0, aby zaczą
 *ch*<br/>
 Pojedynczy znak do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego znaku w tym obiekcie `CStringT`, który pasuje do żądanego podciągu lub znaków; -1, jeśli podciąg lub znak nie zostanie znaleziony.
 
@@ -680,7 +680,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 *pszCharSet*<br/>
 Ciąg zawierający znaki do dopasowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego znaku w tym ciągu, który jest również w *pszCharSet*; -1, jeśli nie ma żadnego dopasowania.
 
@@ -823,7 +823,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 *pszVar*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa zmienną środowiskową.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -855,7 +855,7 @@ Wskaźnik do znacznika podciągu, który ma zostać wstawiony.
 *ch*<br/>
 Znak, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość zmienionego ciągu.
 
@@ -880,7 +880,7 @@ CStringT Left(int nCount) const;
 *nCount*<br/>
 Liczba znaków do wyodrębnienia z tego obiektu `CStringT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwrócony obiekt `CStringT` może być pusty.
 
@@ -915,7 +915,7 @@ Identyfikator zasobu ciągu systemu Windows.
 *wLanguageID*<br/>
 Język zasobu ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obciążenie zasobów zakończyło się pomyślnie; w przeciwnym razie 0.
 
@@ -935,7 +935,7 @@ Konwertuje obiekt `CStringT` na ciąg małymi literami.
 CStringT& MakeLower();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg z małymi literami.
 
@@ -951,7 +951,7 @@ Odwraca kolejność znaków w obiekcie `CStringT`.
 CStringT& MakeReverse();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg odwrócony.
 
@@ -967,7 +967,7 @@ Konwertuje obiekt `CStringT` na ciąg pisany wielką literą.
 CStringT& MakeUpper();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg z wielką literą.
 
@@ -994,7 +994,7 @@ Indeks (liczony od zera) pierwszego znaku w tym obiekcie `CStringT`, który ma z
 *nCount*<br/>
 Liczba znaków do wyodrębnienia z tego obiektu `CStringT`. Jeśli ten parametr nie zostanie podany, zostanie wyodrębniona pozostała część ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwróć uwagę, że zwrócony obiekt `CStringT` może być pusty.
 
@@ -1424,7 +1424,7 @@ int Remove(XCHAR chRemove);
 *chRemove*<br/>
 Znak, który ma zostać usunięty z ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków usuniętych z ciągu. Zero, jeśli ciąg nie jest zmieniany.
 
@@ -1459,7 +1459,7 @@ Znak, który ma zostać zastąpiony przez *chNew*.
 *chNew*<br/>
 Znak zastępujący *chOld*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę zamienionych wystąpień znaku lub podciągu lub zero, jeśli ciąg nie został zmieniony.
 
@@ -1478,7 +1478,7 @@ W przypadku `CString`typ danych jest wybierany w czasie kompilacji, na podstawie
 |_UNICODE|Znaki dwubajtowe|
 |_MBCS|Znaki wielobajtowe|
 |Żadna|Znaki jednobajtowe|
-|Obie|Niezdefiniowane|
+|Oba|Niezdefiniowany|
 
 ### <a name="example"></a>Przykład
 
@@ -1497,7 +1497,7 @@ int ReverseFind(XCHAR ch) const throw();
 *ch*<br/>
 Znak, który ma zostać wyszukany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) ostatniego znaku w tym `CStringT` obiektu, który pasuje do żądanego znaku lub-1, jeśli znak nie zostanie znaleziony.
 
@@ -1522,7 +1522,7 @@ CStringT Right(int nCount) const;
 *nCount*<br/>
 Liczba znaków do wyodrębnienia z tego obiektu `CStringT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwróć uwagę, że zwrócony obiekt `CStringT` może być pusty.
 
@@ -1549,7 +1549,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 *pbstr*<br/>
 Wskaźnik do ciągu znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowy ciąg.
 
@@ -1576,7 +1576,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 Ciąg interpretowany jako zestaw znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Podciąg, który zawiera znaki w ciągu, które nie znajdują się w *pszCharSet*, zaczynając od pierwszego znaku w ciągu i kończąc na pierwszym znaku znalezionym w ciągu, który jest również w *pszCharSet* (to jest, zaczynając od pierwszego znaku w ciągu i aż do wykluczenia pierwszego znaku w ciągu, który został znaleziony *pszCharSet*). Zwraca cały ciąg, jeśli w ciągu nie znaleziono żadnego znaku w *pszCharSet* .
 
@@ -1601,7 +1601,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 Ciąg interpretowany jako zestaw znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Podciąg zawierający znaki w ciągu, który znajduje się w *pszCharSet*, zaczynając od pierwszego znaku w ciągu i kończąc, gdy znak zostanie znaleziony w ciągu, który nie znajduje się w *pszCharSet*. `SpanIncluding` zwraca pusty ciąg, jeśli pierwszy znak w ciągu nie znajduje się w określonym zestawie.
 
@@ -1629,7 +1629,7 @@ Ciąg zawierający ograniczniki tokenu. Kolejność tych ograniczników nie jest
 *isrozpoczęcia*<br/>
 Indeks liczony od zera, aby rozpocząć wyszukiwanie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CStringT` zawierający bieżącą wartość tokenu.
 
@@ -1671,7 +1671,7 @@ Znak docelowy, który ma zostać przycięty.
 *pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie początkowe i końcowe wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca przycięty ciąg.
 
@@ -1716,7 +1716,7 @@ Znak docelowy, który ma zostać przycięty.
 *pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie wiodące wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Otrzymany ciąg, który został usunięty.
 
@@ -1752,7 +1752,7 @@ Znak docelowy, który ma zostać przycięty.
 *pszTargets*<br/>
 Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie końcowe wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt `CStringT`, który zawiera przycięty ciąg.
 
@@ -1778,7 +1778,7 @@ Wersja `CStringT& TrimRight()` nie wymaga żadnych parametrów. Obcina końcowe 
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>

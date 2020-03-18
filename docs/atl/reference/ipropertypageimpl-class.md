@@ -32,11 +32,11 @@ helpviewer_keywords:
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
 ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864986"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417636"
 ---
 # <a name="ipropertypageimpl-class"></a>Klasa IPropertyPageImpl
 
@@ -57,17 +57,17 @@ class IPropertyPageImpl
 *&*<br/>
 Klasa, która pochodzi od `IPropertyPageImpl`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IPropertyPageImpl:: Activate](#activate)|Tworzy okno dialogowe dla strony właściwości.|
 |[IPropertyPageImpl:: Apply](#apply)|Stosuje bieżące wartości strony właściwości do obiektów podstawowych określonych za pomocą `SetObjects`. Implementacja ATL zwraca S_OK.|
@@ -84,7 +84,7 @@ Klasa, która pochodzi od `IPropertyPageImpl`.
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IPropertyPageImpl:: m_bDirty](#m_bdirty)|Określa, czy stan strony właściwości został zmieniony.|
 |[IPropertyPageImpl:: m_dwDocString](#m_dwdocstring)|Przechowuje identyfikator zasobu skojarzony z ciągiem tekstowym opisującym stronę właściwości.|
@@ -137,7 +137,7 @@ Stosuje bieżące wartości strony właściwości do obiektów podstawowych okre
 HRESULT Apply();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -356,7 +356,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 Zobacz [IPropertyPage:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [Klasa IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

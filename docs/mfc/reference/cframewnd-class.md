@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866446"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418630"
 ---
 # <a name="cframewnd-class"></a>Klasa obiektu CFrameWnd
 
@@ -344,7 +344,7 @@ Określa atrybuty rozszerzonego [stylu](../../mfc/reference/styles-used-by-mfc.m
 *pContext*<br/>
 Określa wskaźnik do struktury [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ten parametr może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -372,7 +372,7 @@ Określa typ widoku i dokumentu.
 *nID*<br/>
 Numer IDENTYFIKACYJNy widoku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CWnd`, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
@@ -505,7 +505,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do bież�
 virtual CDocument* GetActiveDocument();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do bieżącego [CDocumentu](../../mfc/reference/cdocument-class.md). Jeśli nie ma bieżącego dokumentu, zwraca wartość NULL.
 
@@ -517,7 +517,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do okna p
 virtual CFrameWnd* GetActiveFrame();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnego okna podrzędnego MDI. Jeśli aplikacja jest aplikacją SDI lub okno ramki MDI nie ma aktywnego dokumentu, **ten** wskaźnik zostanie zwrócony.
 
@@ -533,7 +533,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do aktywn
 CView* GetActiveView() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do bieżącego [CViewu](../../mfc/reference/cview-class.md). Jeśli nie ma bieżącego widoku, zwraca wartość NULL.
 
@@ -556,7 +556,7 @@ CControlBar* GetControlBar(UINT nID);
 *nID*<br/>
 Numer IDENTYFIKACYJNy paska sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do paska sterowania, który jest skojarzony z IDENTYFIKATORem.
 
@@ -591,7 +591,7 @@ Pobiera stan wyświetlania menu w bieżącej aplikacji MFC.
 virtual DWORD GetMenuBarState();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana może mieć następujące wartości:
 
@@ -611,7 +611,7 @@ Wskazuje, czy domyślny stan menu w bieżącej aplikacji MFC jest ukryty czy wid
 virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca jedną z następujących wartości:
 
@@ -633,7 +633,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do paska 
 virtual CWnd* GetMessageBar();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna pasek stanu.
 
@@ -667,7 +667,7 @@ Pobiera tytuł obiektu okna.
 CString GetTitle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający bieżący tytuł obiektu window.
 
@@ -703,7 +703,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby sprawdzić, czy okno ramki j
 BOOL InModalState() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli tak; w przeciwnym razie 0.
 
@@ -715,7 +715,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy pasek rozdzi
 BOOL IsTracking() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli operacja rozdzielacza jest w toku; w przeciwnym razie 0.
 
@@ -732,7 +732,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 Identyfikuje nazwę zasobu akceleratora. Użyj MAKEINTRESOURCE, jeśli zasób jest identyfikowany za pomocą identyfikatora Integer.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli tabela akceleratorów została pomyślnie załadowana; w przeciwnym razie 0.
 
@@ -846,7 +846,7 @@ Zawiera jedną z następujących wartości z `enum BorderCmd`:
 *lpRectBorder*<br/>
 Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne obramowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -867,7 +867,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 *nID*<br/>
 Identyfikator wyświetlanego paska sterowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pasek sterowania istniał. w przeciwnym razie 0.
 
@@ -907,7 +907,7 @@ Wskaźnik do [struktury systemu Windows](/windows/win32/api/winuser/ns-winuser-c
 *pContext*<br/>
 Wskaźnik do struktury [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1095,7 +1095,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 |---------------|-----------------|
 |*nInformacje*|podczas Określa, czy menu ma być wyświetlane, czy ukryte. Parametr *nInformacje* może mieć następujące wartości:<br /><br />-AFX_MBS_VISIBLE (0x01) — wyświetla menu, jeśli jest ukryte, ale nie działa, jeśli jest widoczne.<br />-AFX_MBS_HIDDEN (0x02) — ukrywa menu, jeśli jest widoczne, ale nie działa, jeśli jest ukryte.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda pomyślnie zmienia stan menu; w przeciwnym razie FALSE.
 
@@ -1219,7 +1219,7 @@ Wskaźnik do ciągu, który zawiera tekst alternatywny dla informacji przekazywa
 *hIcon*<br/>
 Uchwyt ikony, która ma być używana jako nakładka. Powinna to być mała ikona, mierząca 16 96 pikseli na cal (dpi). Jeśli ikona nakładki została już zastosowana do przycisku paska zadań, istniejąca nakładka zostanie zastąpiona. Ta wartość może być RÓWNa NULL. Sposób obsługi wartości NULL zależy od tego, czy przycisk paska zadań reprezentuje pojedyncze okno, czy grupę okien. Aplikacja wywołująca jest odpowiedzialna za bezpłatną *HICON* , gdy nie jest już potrzebne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; Wartość FALSE, jeśli wersja systemu operacyjnego jest starsza niż Windows 7 lub jeśli wystąpi błąd podczas ustawiania ikony.
 

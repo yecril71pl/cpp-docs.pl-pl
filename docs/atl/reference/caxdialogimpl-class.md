@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865059"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418014"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 
@@ -46,11 +46,11 @@ Klasa, która pochodzi od `CAxDialogImpl`.
 *TBase*<br/>
 Klasa okna podstawowego dla `CDialogImplBaseT`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Wywołaj tę metodę, aby zalecić lub nielecić wszystkich wpisów w mapie zdarzeń mapy ujścia obiektu.|
 |[CAxDialogImpl:: Create](#create)|Wywołaj tę metodę, aby utworzyć niemodalne okno dialogowe.|
@@ -63,7 +63,7 @@ Klasa okna podstawowego dla `CDialogImplBaseT`.
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAxDialogImpl:: m_bModal](#m_bmodal)|Zmienna, która istnieje tylko w kompilacjach debugowania i ma ustawioną wartość true, jeśli okno dialogowe jest modalne.|
 
@@ -114,7 +114,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 *bAdvise*<br/>
 Ustaw wartość true, jeśli wszystkie wpisy ujścia mają być zalecane; wartość false, jeśli wszystkie wpisy ujścia mają być niezalecane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -138,7 +138,7 @@ podczas Określa wartość, która ma zostać przekazana do okna dialogowego w p
 *& RECT*<br/>
 Ten parametr nie jest używany. Ten parametr jest przesyłany przez `CComControl`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do nowo utworzonego okna dialogowego.
 
@@ -156,7 +156,7 @@ Wywołaj tę metodę, aby zniszczyć niemodalne okno dialogowe.
 BOOL DestroyWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno zostanie zniszczone pomyślnie. w przeciwnym razie FALSE.
 
@@ -182,7 +182,7 @@ podczas Uchwyt do okna właściciela. Wartość domyślna jest wartością zwrac
 *dwInitParam*<br/>
 podczas Określa wartość, która ma zostać przekazana do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, wartość parametru *nRetCode* określona w wywołaniu [zdarzenie EndDialog](#enddialog); w przeciwnym razie-1.
 
@@ -205,7 +205,7 @@ BOOL EndDialog(int nRetCode);
 *nRetCode*<br/>
 podczas Wartość, która ma zostać zwrócona przez [DoModal](#domodal).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okno dialogowe zostało zniszczone; w przeciwnym razie FALSE.
 
@@ -224,7 +224,7 @@ Wywołaj tę metodę, aby uzyskać wskaźnik do funkcji wywołania zwrotnego `Di
 virtual DLGPROC GetDialogProc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do funkcji wywołania zwrotnego `DialogProc`.
 
@@ -240,7 +240,7 @@ Wywołaj tę metodę, aby uzyskać identyfikator zasobu szablonu okna dialogoweg
 int GetIDD();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca identyfikator zasobu szablonu okna dialogowego.
 
@@ -257,7 +257,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 *pMsg*<br/>
 Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat, który ma zostać sprawdzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli komunikat został przetworzony, w przeciwnym razie FALSE.
 
@@ -273,7 +273,7 @@ Zmienna, która istnieje tylko w kompilacjach debugowania i ma ustawioną warto�
 bool m_bModal;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CDialogImpl](../../atl/reference/cdialogimpl-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

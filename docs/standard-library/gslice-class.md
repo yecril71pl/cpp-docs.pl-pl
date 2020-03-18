@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866257"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421738"
 ---
 # <a name="gslice-class"></a>gslice — Klasa
 
@@ -39,7 +39,7 @@ Jeśli zestaw zdefiniowany przez gslice jest podzbiorem stałej valarray, wówcz
 
 Operacje na valarrays są gwarantowane tylko wtedy, gdy źródłowe i docelowe podzestawy zdefiniowane przez gslices są różne i wszystkie indeksy są prawidłowe.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -83,7 +83,7 @@ Tablica określająca liczbę elementów w każdym wycinku.
 *_IncArray*\
 Tablica określająca krok w każdym wycinku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Konstruktor domyślny przechowuje zero dla indeksu początkowego i wektorów o zerowej długości dla wektorów długości i kroków. Drugi Konstruktor przechowuje *_StartIndex* dla początkowego indeksu, *_LenArray* dla tablicy długość i *_IncArray* dla tablicy kroków.
 
@@ -146,7 +146,7 @@ Znajduje wartości tablicy, określając liczbę elementów w ogólnym wycinku v
 valarray<size_t> size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray określający liczbę elementów w każdym wycinku ogólnego wycinka valarray.
 
@@ -224,7 +224,7 @@ Znajduje początkowy indeks ogólnego wycinka valarray.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Początkowy indeks ogólnego wycinka valarray.
 
@@ -287,7 +287,7 @@ Znajduje odległość między elementami w ogólnym wycinku valarray.
 valarray<size_t> stride() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray określający odległość między elementami w każdym wycinku ogólnego wycinka valarray.
 
@@ -347,6 +347,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865824"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418315"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase — Klasa
 
@@ -40,24 +40,24 @@ Typ [ComPtr\<t >](comptr-class.md) lub typ pochodzący od niego, nie tylko inter
 
 Reprezentuje klasę bazową dla klasy [ComPtrRef](comptrref-class.md) .
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-Nazwa            | Opis
+Name (Nazwa)            | Opis
 --------------- | -------------------------------------------------
 `InterfaceType` | Synonim dla typu parametru szablonu *T*.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-Nazwa                                                                       | Opis
+Name (Nazwa)                                                                       | Opis
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
 [ComPtrRefBase:: operator IInspectable * *](#operator-iinspectable-star-star) | Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IInspectable`.
 [ComPtrRefBase:: operator IUnknown * *](#operator-iunknown-star-star)         | Rzutuje bieżący element członkowski danych [ptr_](#ptr) na wskaźnik do wskaźnika do interfejsu `IUnknown`.
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
-Nazwa                        | Opis
+Name (Nazwa)                        | Opis
 --------------------------- | ----------------------------------------------------------------
 [ComPtrRefBase::p tr_](#ptr) | Wskaźnik do typu określonego przez bieżący parametr szablonu.
 

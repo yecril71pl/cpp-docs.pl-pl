@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865111"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418721"
 ---
 # <a name="cdialog-class"></a>Klasa CDialog
 
@@ -57,17 +57,17 @@ Klasa bazowa używana do wyświetlania okien dialogowych na ekranie.
 class CDialog : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDialog:: CDialog](#cdialog)|Konstruuje obiekt `CDialog`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDialog:: Create](#create)|Inicjuje obiekt `CDialog`. Tworzy niemodalne okno dialogowe i dołącza je do obiektu `CDialog`.|
 |[CDialog:: IsDirect](#createindirect)|Tworzy niemodalne okno dialogowe z szablonu okna dialogowego w pamięci (nie opartego na zasobach).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CDialog:: OnCancel](#oncancel)|Przesłoń, aby wykonać akcję Cancel lub klawisza ESC. Domyślnie zamyka okno dialogowe, a `DoModal` zwraca IDCANCEL.|
 |[CDialog:: OnOK —](#onok)|Przesłoń, aby wykonać akcję przycisku OK w modalnym oknie dialogowym. Domyślnie zamyka okno dialogowe, a `DoModal` zwraca IDOK.|
@@ -201,7 +201,7 @@ Wskazuje obiekt nadrzędny (typu [CWnd](../../mfc/reference/cwnd-class.md)), do 
 *nIDTemplate*<br/>
 Zawiera numer IDENTYFIKACYJNy zasobu szablonu okna dialogowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Oba formularze zwracają wartość różną od zera, jeśli Tworzenie i Inicjowanie okna dialogowego zakończyło się pomyślnie. w przeciwnym razie 0.
 
@@ -252,7 +252,7 @@ Wskazuje zasób DLGINIT.
 *hDialogTemplate*<br/>
 Zawiera dojście do pamięci globalnej zawierającej szablon okna dialogowego. Ten szablon ma postać struktury `DLGTEMPLATE` i danych dla każdej kontrolki w oknie dialogowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli okno dialogowe zostało utworzone i zainicjowane pomyślnie. w przeciwnym razie 0.
 
@@ -274,7 +274,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby wywołać modalne okno dialo
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość **int** , która określa wartość parametru *nwynik* , który został przekazano do funkcji członkowskiej [CDialog:: zdarzenie EndDialog](#enddialog) , która jest używana do zamykania okna dialogowego. Wartość zwracana to-1, jeśli funkcja nie może utworzyć okna dialogowego lub IDABORT, jeśli wystąpił inny błąd, w takim przypadku okno dane wyjściowe będzie zawierać informacje o błędzie z funkcji [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
@@ -326,7 +326,7 @@ Wywołaj funkcję elementu członkowskiego `GetDefID`, aby uzyskać identyfikato
 DWORD GetDefID() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość 32-bitowa (`DWORD`). Jeśli domyślny przycisk ma wartość identyfikatora, wyraz o wysokiej kolejności zawiera DC_HASDEFID a wyraz o niskiej kolejności zawiera wartość identyfikatora. Jeśli domyślny przycisk nie ma wartości identyfikatora, zwracana wartość wynosi 0.
 
@@ -384,7 +384,7 @@ Wskazuje obiekt obiektu nadrzędnego lub właściciela (typu [CWnd](../../mfc/re
 *lpDialogInit*<br/>
 Wskazuje zasób DLGINIT.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli obiekt okna dialogowego został pomyślnie utworzony i zainicjowany. w przeciwnym razie 0.
 
@@ -456,7 +456,7 @@ Ta metoda jest wywoływana w odpowiedzi na komunikat `WM_INITDIALOG`.
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Określa, czy aplikacja ustawi fokus wprowadzania na jeden z kontrolek w oknie dialogowym. Jeśli `OnInitDialog` zwraca wartość różną od zera, system Windows ustawia fokus wprowadzania do lokalizacji domyślnej, a pierwszy formant w oknie dialogowym. Aplikacja może zwrócić 0 tylko wtedy, gdy jawnie ustawił fokus wprowadzania na jeden z kontrolek w oknie dialogowym.
 
@@ -556,7 +556,7 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 Określa identyfikator pomocy kontekstowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład DLGCBR32 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład DLGTEMPL MFC](../../overview/visual-cpp-samples.md)<br/>

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874055"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418938"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator — Klasa
 
@@ -37,7 +37,7 @@ Typ kontenera, w którym elementy mają być wstawiane przez `insert_iterator`.
 
 Kontener typu `Container` musi spełniać wymagania dotyczące kontenera o zmiennym rozmiarze i mieć dwuargumentową funkcję członkowską INSERT, gdzie parametry typu `Container::iterator` i `Container::value_type`, które zwracają `Container::iterator`typu. C++Standardowa sekwencja biblioteki i posortowane Kontenery asocjacyjne spełniają te wymagania i można je dostosować do użycia z `insert_iterator`s. Dla kontenerów asocjacyjnych argument pozycji jest traktowany jako wskazówka, która ma potencjał, aby zwiększyć lub zmniejszyć wydajność w zależności od tego, jak dobra jest to wskazówka. Element `insert_iterator` musi być zawsze zainicjowany przy użyciu jego kontenera.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -180,7 +180,7 @@ Odwołuje się do iteratora INSERT zwracający element to addresss.
 insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
@@ -313,7 +313,7 @@ insert_iterator<Container>& operator=(
 *val*\
 Wartość, która ma zostać przypisana do kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do elementu wstawionego do kontenera.
 
@@ -427,7 +427,7 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<iterator >](../standard-library/iterator.md)\
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

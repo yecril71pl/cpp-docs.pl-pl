@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862936"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417720"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
@@ -41,24 +41,24 @@ class CWorkerThread
 *ThreadTraits*<br/>
 Klasa dostarczająca funkcję tworzenia wątku, na przykład [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) lub [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-structures"></a>Struktury chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor dla wątku roboczego.|
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|Destruktor wątku roboczego.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CWorkerThread:: AddHandle](#addhandle)|Wywołaj tę metodę, aby dodać uchwyt obiektu oczekującego do listy obsługiwanej przez wątek roboczy.|
 |[CWorkerThread:: addtimeer](#addtimer)|Wywołaj tę metodę, aby dodać okresowy czasomierz oczekujący na listę obsługiwaną przez wątek roboczy.|
@@ -114,7 +114,7 @@ Wskaźnik do interfejsu [IWorkerThreadClient](../../atl/reference/iworkerthreadc
 *dwParam*<br/>
 Parametr, który ma zostać przesłany do [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowaniu uchwytu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -148,7 +148,7 @@ Parametr, który ma zostać przesłany do [IWorkerThreadClient:: Execute](../../
 *phTimer*<br/>
 określoną Adres zmiennej dojścia, która po powodzeniu odbiera dojście do nowo utworzonego czasomierza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -186,7 +186,7 @@ Wywołaj tę metodę, aby uzyskać uchwyt wątku wątku roboczego.
 HANDLE GetThreadHandle() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca dojście do wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.
 
@@ -198,7 +198,7 @@ Wywołaj tę metodę, aby uzyskać identyfikator wątku wątku roboczego.
 DWORD GetThreadId() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca identyfikator wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.
 
@@ -217,7 +217,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 *pThread*<br/>
 Istniejący wątek roboczy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -242,7 +242,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 *hObject*<br/>
 Dojście do usunięcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -263,7 +263,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 *dwWait*<br/>
 Czas (w milisekundach) oczekiwania na zamknięcie wątku roboczego. ATL_WORKER_THREAD_WAIT wartość domyślna to 10 sekund. W razie potrzeby można zdefiniować własną wartość tego symbolu przed uwzględnieniem atlutil. h.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia, na przykład w przypadku przekroczenia limitu czasu, *dwWait*.
 
@@ -273,7 +273,7 @@ Aby ponownie użyć obiektu, wywołaj [CWorkerThread:: Initialize](#initialize) 
 
 Należy zauważyć, że wywołanie `Shutdown` na obiekcie zainicjowanym za pomocą wskaźnika do innego obiektu `CWorkerThread` nie ma żadnego efektu i zawsze zwraca S_OK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Klasy](../../atl/reference/atl-classes.md)<br/>

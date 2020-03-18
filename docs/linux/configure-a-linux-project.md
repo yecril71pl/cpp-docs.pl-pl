@@ -3,11 +3,11 @@ title: Konfigurowanie projektu C++ systemu Linux w programie Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865675"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419386"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -123,7 +123,7 @@ Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ustawianie właściwości kompilatora i Build](../build/working-with-project-properties.md)<br/>
 [C++Właściwości ogólne (Linux C++)](../linux/prop-pages/general-linux.md)<br/>

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865889"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421094"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
 
@@ -55,17 +55,17 @@ Służy do wyświetlania właściwości kontrolki niestandardowej w interfejsie 
 class AFX_NOVTABLE COlePropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COlePropertyPage:: COlePropertyPage](#colepropertypage)|Konstruuje obiekt `COlePropertyPage`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|Wskazuje, czy użytkownik zmodyfikował wartość w kontrolce.|
 |[COlePropertyPage:: GetObjectArray](#getobjectarray)|Zwraca tablicę obiektów, które są edytowane przez stronę właściwości.|
@@ -142,7 +142,7 @@ BOOL GetControlStatus(UINT nID);
 *nID*<br/>
 Identyfikator zasobu kontrolki strony właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli wartość kontrolki została zmodyfikowana; w przeciwnym razie FALSE.
 
@@ -159,7 +159,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 *pnObjects*<br/>
 Wskaźnik do bezcyfrowej liczby całkowitej bez znaku, która będzie otrzymywać liczbę obiektów edytowanych przez stronę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do tablicy wskaźników `IDispatch`, które są używane do uzyskiwania dostępu do właściwości każdej kontrolki na stronie właściwości. Obiekt wywołujący nie może zwolnić tych wskaźników interfejsu.
 
@@ -175,7 +175,7 @@ Pobiera wskaźnik do interfejsu `IPropertyPageSite` strony właściwości.
 LPPROPERTYPAGESITE GetPageSite();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do `IPropertyPageSite` interfejsu strony właściwości.
 
@@ -208,7 +208,7 @@ Określa, czy użytkownik zmienił wszystkie wartości na stronie właściwości
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli strona właściwości została zmodyfikowana.
 
@@ -225,7 +225,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 *DISPID*<br/>
 Identyfikator wysyłania edytowanej właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślna implementacja zwraca wartość FALSE. Zastąpienia tej funkcji powinny zwrócić wartość TRUE.
 
@@ -246,7 +246,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 *lpszHelpDir*<br/>
 Katalog zawierający plik pomocy strony właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślna implementacja zwraca wartość FALSE.
 
@@ -262,7 +262,7 @@ Struktura wywołuje tę funkcję po zainicjowaniu okna dialogowego strony właś
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślna implementacja zwraca wartość FALSE.
 
@@ -314,7 +314,7 @@ Zawiera identyfikator kontrolki strony właściwości.
 *bDirty*<br/>
 Określa, czy pole strony właściwości zostało zmodyfikowane. Ustaw wartość TRUE, jeśli pole zostało zmodyfikowane, wartość FALSE, jeśli nie została zmodyfikowana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ustawiono określony formant; w przeciwnym razie FALSE.
 
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 Wskaźnik na ciąg zawierający nazwę strony właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CIRC3 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład TESTHELP MFC](../../overview/visual-cpp-samples.md)<br/>

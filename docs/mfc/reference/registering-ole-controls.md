@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856381"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420758"
 ---
 # <a name="registering-ole-controls"></a>Rejestrowanie formantów OLE
 
@@ -129,7 +129,7 @@ Główny numer wersji klasy kontrolki.
 *wVerMinor*<br/>
 Pomocniczy numer wersji klasy kontrolki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, Jeśli zarejestrowano klasę kontrolki; w przeciwnym razie 0.
 
@@ -182,7 +182,7 @@ Może zawierać flagę:
 > [!NOTE]
 >  W wersjach MFC wcześniejszych niż MFC 4,2 parametr **int** *nRegFlags* był niedostępny. Należy zauważyć, że flaga `afxRegInsertable` nie jest prawidłową opcją dla stron właściwości i spowoduje, że zostanie potwierdzone w MFC, jeśli jest ustawiona
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, Jeśli zarejestrowano klasę kontrolki; w przeciwnym razie 0.
 
@@ -220,7 +220,7 @@ Wskazuje opcjonalną nazwę pliku zlokalizowanej biblioteki typów (. TLB) dla k
 *pszHelpDir*<br/>
 Nazwa katalogu, w którym można znaleźć plik pomocy dla biblioteki typów. Jeśli wartość jest równa NULL, zakłada się, że plik pomocy znajduje się w tym samym katalogu co sama biblioteka typów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli biblioteka typów została zarejestrowana; w przeciwnym razie 0.
 
@@ -254,7 +254,7 @@ Unikatowy identyfikator klasy kontrolki lub strony właściwości.
 *pszProgID*<br/>
 Unikatowy identyfikator programu na stronie kontrolki lub właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli Klasa strony kontrolki lub właściwości została pomyślnie wyrejestrowana; w przeciwnym razie 0.
 
@@ -275,7 +275,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 *tlID*<br/>
 Unikatowy identyfikator biblioteki typów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli biblioteka typów została pomyślnie wyrejestrowana; w przeciwnym razie 0.
 

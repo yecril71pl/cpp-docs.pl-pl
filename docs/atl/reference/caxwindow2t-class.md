@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864753"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417993"
 ---
 # <a name="caxwindow2t-class"></a>Klasa CAxWindow2T
 
@@ -39,17 +39,17 @@ template <class TBase = CWindow>
 *TBase*<br/>
 Klasa, z której `CAxWindowT` dziedziczy.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Konstruuje obiekt `CAxWindow2T`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAxWindow2T:: Create](#create)|Tworzy okno hosta.|
 |[CAxWindow2T:: issterowane](#createcontrollic)|Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.|
@@ -58,7 +58,7 @@ Klasa, z której `CAxWindowT` dziedziczy.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAxWindow2T:: operator =](#operator_eq)|Przypisuje Właściwość HWND do istniejącego obiektu `CAxWindow2T`.|
 
@@ -203,7 +203,7 @@ Pobiera nazwę klasy okna.
 static LPCTSTR GetWndClassName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do ciągu zawierającego nazwę klasy okna (`AtlAxWinLic80`), która może hostować licencjonowane i nielicencjonowane kontrolki ActiveX.
 
@@ -220,7 +220,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *Właściwość*<br/>
 Uchwyt istniejącego okna.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Kontrolki zawierania — często zadawane pytania](../../atl/atl-control-containment-faq.md)

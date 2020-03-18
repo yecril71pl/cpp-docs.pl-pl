@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
 ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863214"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418070"
 ---
 # <a name="catldllmodulet-class"></a>Klasa CAtlDllModuleT
 
@@ -37,18 +37,18 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 *&*<br/>
 Klasa pochodna od `CAtlDllModuleT`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|Konstruktor.|
 |[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlDllModuleT::D llCanUnloadNow](#dllcanunloadnow)|Testuje, czy biblioteka DLL może zostać zwolniona.|
 |[CAtlDllModuleT::D llGetClassObject](#dllgetclassobject)|Zwraca fabrykę klas.|
@@ -101,7 +101,7 @@ Testuje, czy biblioteka DLL może zostać zwolniona.
 HRESULT DllCanUnloadNow() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK, jeśli biblioteka DLL może zostać zwolniona, lub S_FALSE, jeśli nie może.
 
@@ -127,7 +127,7 @@ Identyfikator IID żądanego interfejsu.
 *ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *PPV* ma wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -147,7 +147,7 @@ W przypadku ustawienia wartości DLL_PROCESS_ATTACH wywołania powiadomień DLL_
 *lpReserved*<br/>
 Rezerwacj.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zawsze zwraca wartość TRUE.
 
@@ -168,7 +168,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 *bRegTypeLib*<br/>
 Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana. Wartość domyślna to TRUE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -185,7 +185,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 *bUnRegTypeLib*<br/>
 Ma wartość TRUE, jeśli biblioteka typów ma zostać usunięta z rejestru. Wartość domyślna to TRUE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -211,7 +211,7 @@ Identyfikator IID żądanego interfejsu.
 *ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *PPV* ma wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -219,7 +219,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta metoda jest wywoływana przez [CAtlDllModuleT::D llgetclassobject](#dllgetclassobject) i jest dołączana do zgodności z poprzednimi wersjami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
 [Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>

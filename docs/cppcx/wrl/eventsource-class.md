@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865733"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418308"
 ---
 # <a name="eventsource-class"></a>EventSource — Klasa
 
@@ -46,7 +46,7 @@ class EventSource;
 *TDelegateInterface*<br/>
 Interfejs do delegata, który reprezentuje procedurę obsługi zdarzeń.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -100,7 +100,7 @@ Interfejs do obiektu delegata, który reprezentuje procedurę obsługi zdarzeń.
 *klucza*<br/>
 Po zakończeniu tej operacji, dojście, które reprezentuje zdarzenie. Użyj tego tokenu jako parametru do metody [Remove ()](#remove) , aby odrzucić procedurę obsługi zdarzeń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
@@ -128,7 +128,7 @@ Pobiera liczbę programów obsługi zdarzeń skojarzonych z bieżącym obiektem 
 size_t GetSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba programów obsługi zdarzeń w [targets_](#targets).
 
@@ -367,7 +367,7 @@ HRESULT Remove(
 *klucza*<br/>
 Dojście, które reprezentuje procedurę obsługi zdarzeń. Ten token został zwrócony, gdy program obsługi zdarzeń został zarejestrowany przez metodę [Add ()](#add) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 

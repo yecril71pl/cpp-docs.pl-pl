@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
 ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854221"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417181"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource — Struktura
 
@@ -28,7 +28,7 @@ Abstrakcja wątku sprzętowego.
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -61,7 +61,7 @@ Zwraca liczbę aktywowanych katalogów głównych procesora wirtualnego i subskr
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący poziom subskrypcji.
 
@@ -83,7 +83,7 @@ Zwraca unikatowy identyfikator wątku sprzętowego reprezentowanego przez ten za
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator wątku sprzętowego odpowiadającego temu zasobowi wykonania.
 
@@ -99,7 +99,7 @@ Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób
 virtual unsigned int GetNodeId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator węzła procesora.
 

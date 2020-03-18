@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890879"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419106"
 ---
 # <a name="forward_list-class"></a>forward_list — Klasa
 
@@ -117,9 +117,9 @@ Iteratory, wskaźniki i odwołania mogą stać się nieprawidłowe, gdy elementy
 
 Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward_list:: insert_after](#insert_after), która jest jedyną funkcją członkowską, która wywołuje Konstruktor `Type(const  T&)`. `forward_list` może również wywołać konstruktory przenoszenia. Jeśli takie wyrażenie zgłasza wyjątek, obiekt kontenera nie wstawia żadnych nowych elementów i ponownie generuje wyjątek. W związku z tym obiekt typu `forward_list` pozostały w znanym stanie w przypadku wystąpienia takich wyjątków.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -243,7 +243,7 @@ const_iterator before_begin() const;
 iterator before_begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, który wskazuje tuż przed pierwszym elementem sekwencji (lub tuż przed końcem pustej sekwencji).
 
@@ -258,7 +258,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji).
 
@@ -272,7 +272,7 @@ Zwraca iterator const odnoszący się do pozycji przed pierwszym elementem na li
 const_iterator cbefore_begin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, który wskazuje tuż przed pierwszym elementem sekwencji (lub tuż przed końcem pustej sekwencji).
 
@@ -286,7 +286,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -311,7 +311,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dostępu do przodu, który wskazuje tuż za koniec zakresu.
 
@@ -405,7 +405,7 @@ Pozycja na liście docelowych przekazywania, w której jest konstruowany nowy el
 *val*\
 Argument konstruktora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który wyznacza nowo wstawiony element.
 
@@ -441,7 +441,7 @@ Testuje, czy lista do przodu jest pusta.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli lista przesyłania dalej jest pusta; w przeciwnym razie **false**.
 
@@ -454,7 +454,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator do przodu, który wskazuje tuż poza końcem sekwencji.
 
@@ -478,7 +478,7 @@ Początek zakresu do wymazania.
 *ostatni*\
 Koniec zakresu do wymazania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który wyznacza pierwszy element, który nie został usunięty, lub [forward_list:: end](#end) , jeśli taki element nie istnieje.
 
@@ -561,7 +561,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do pierwszego elementu kontrolowanej sekwencji, które nie może być puste.
 
@@ -573,7 +573,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania listy do przodu.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywany obiekt [alokatora](../standard-library/allocator-class.md) .
 
@@ -610,7 +610,7 @@ Element dodany do listy do przodu.
 \ *IList*
 Initializer_list do wstawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który wyznacza nowo wstawiony element (tylko funkcje pierwszej i ostatniego elementu członkowskiego).
 
@@ -652,7 +652,7 @@ Zwraca maksymalną długość listy do przodu.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość najdłuższej sekwencji, którą obiekt może kontrolować.
 

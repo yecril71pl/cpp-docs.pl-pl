@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863217"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417580"
 ---
 # <a name="object-map-macros"></a>Makra mapy obiektów
 
@@ -108,6 +108,6 @@ Makra wpisów obiektów są umieszczane w zakresie globalnym w projekcie w celu 
 
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO pozwala określić, że obiekt powinien być zarejestrowany i zainicjowany (zobacz [OBJECT_ENTRY_AUTO](#object_entry_auto) , aby uzyskać więcej informacji), ale nie powinien być możliwy do utworzenia za pośrednictwem `CoCreateInstance`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Utworze](../../atl/reference/atl-macros.md)

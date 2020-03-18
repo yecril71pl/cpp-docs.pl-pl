@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865040"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418168"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -79,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 *chIn*<br/>
 Znak szesnastkowy "0"-"9", "od-'F" lub "od-'F".
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość liczbowa znaku wejściowego interpretowana jako cyfra szesnastkowa. Na przykład wejście "0" zwraca wartość 0, a dane wejściowe elementu "A" zwracają wartość 10. Jeśli znak wejściowy nie jest cyfrą szesnastkową, ta funkcja zwraca wartość-1.
 
@@ -96,7 +96,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 *naruszon*<br/>
 Zastrzeżony wskaźnik.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość typu DWORD o wartości całkowitej wersji biblioteki ATL, która jest kompilowana lub uruchomiona.
 
@@ -136,7 +136,7 @@ Bufor przydzielony przez obiekt wywołujący, który odbiera zdekodowane dane.
 *pnDestLen*<br/>
 Wskaźnik do zmiennej zawierającej długość w bajtach *pbDest*. Jeśli funkcja się powiedzie, zmienna otrzymuje liczbę bajtów zapisywanych w buforze. Jeśli funkcja się nie powiedzie, zmienna otrzymuje wymaganą długość w bajtach buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -153,7 +153,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 Liczba znaków w zakodowanym ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów wymagana dla buforu, który może zawierać zdekodowany ciąg znaków *nSrcLen* .
 
@@ -183,7 +183,7 @@ Bufor przydzielony przez obiekt wywołujący, który ma odbierać zakodowane dan
 *pnDestLen*<br/>
 Wskaźnik do zmiennej zawierającej długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna otrzymuje liczbę znaków zapisywanych w buforze. Jeśli funkcja się nie powiedzie, zmienna otrzymuje wymaganą długość w znakach bufora.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -204,7 +204,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z *nSrcLen* bajtów.
 
@@ -221,7 +221,7 @@ inline short AtlHexValue(char chIn) throw();
 *chIn*<br/>
 Znak szesnastkowy "0"-"9", "od-'F" lub "od-'F".
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość liczbowa znaku wejściowego interpretowana jako cyfra szesnastkowa. Na przykład wejście "0" zwraca wartość 0, a dane wejściowe elementu "A" zwracają wartość 10. Jeśli znak wejściowy nie jest cyfrą szesnastkową, ta funkcja zwraca wartość-1.
 
@@ -251,7 +251,7 @@ Bufor przydzielony przez obiekt wywołujący, aby otrzymać przekonwertowany ci�
 *nDest*<br/>
 Długość w bajtach buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę znaków dla przekonwertowanego ciągu.
 
@@ -289,7 +289,7 @@ Wskaźnik do zmiennej zawierającej długość w znakach *szDest*. Jeśli funkcj
 *pszCharSet*<br/>
 Zestaw znaków do użycia podczas konwersji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -313,7 +313,7 @@ Liczba bajtów danych do zakodowania.
 *nCharsetLen*<br/>
 Długość w znakach zestawu znaków, który ma zostać użyty do konwersji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z *nSrcLen* bajtów.
 
@@ -354,7 +354,7 @@ ATL_ESC flagi opisujące sposób wykonywania konwersji.
 - ATL_ESC_FLAG_NONE zachowanie domyślne. Znaki cudzysłowu i apostrofy nie są konwertowane.
 - ATL_ESC_FLAG_ATTR znaki cudzysłowu i apostrofy są konwertowane na odpowiednio `&quot;` i `&apos;`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość przekonwertowanego ciągu znaków.
 
@@ -362,7 +362,7 @@ Długość przekonwertowanego ciągu znaków.
 
 W tabeli przedstawiono możliwe konwersje wykonywane przez tę funkcję:
 
-|Źródło|Miejsce docelowe|
+|Element źródłowy|Element docelowy|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -386,7 +386,7 @@ Ciąg do analizy.
 *nSrcLen*<br/>
 Długość ciągu znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę znaków rozszerzonych znalezionych w ciągu określonym przez [IsExtendedChar](#isextendedchar).
 
@@ -403,7 +403,7 @@ inline int IsExtendedChar(char ch) throw();
 *ch*<br/>
 Znak do przetestowania
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli znak jest rozszerzony, w przeciwnym razie zwraca wartość FALSE.
 
@@ -441,7 +441,7 @@ Zestaw znaków do użycia podczas konwersji.
 *pnNumEncoded*<br/>
 Wskaźnik do zmiennej, która zwraca, zawiera liczbę niebezpiecznych znaków, które musiały zostać przekonwertowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -465,7 +465,7 @@ Liczba bajtów danych do zakodowania.
 *nCharsetLen*<br/>
 Długość w znakach zestawu znaków, który ma zostać użyty do konwersji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z *nSrcLen* bajtów.
 
@@ -503,7 +503,7 @@ określoną Wskaźnik do zmiennej zawierającej długość w bajtach *szDest*. J
 *flagiDW*<br/>
 podczas ATLSMTP_QPENCODE flagi opisujące sposób wykonywania konwersji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -524,7 +524,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 Liczba znaków w zakodowanym ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów wymagana dla buforu, który może zawierać zdekodowany ciąg znaków *nSrcLen* .
 
@@ -568,7 +568,7 @@ ATLSMTP_QPENCODE flagi opisujące sposób wykonywania konwersji.
 
 Schemat kodowania do drukowania w cudzysłowach został opisany w [dokumencie RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -589,7 +589,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z *nSrcLen* bajtów.
 
@@ -623,7 +623,7 @@ Bufor przydzielony przez obiekt wywołujący, który odbiera zdekodowane dane.
 *pnDestLen*<br/>
 Wskaźnik do zmiennej zawierającej długość w bajtach *pbDest*. Jeśli funkcja się powiedzie, zmienna otrzymuje liczbę bajtów zapisywanych w buforze. Jeśli funkcja się nie powiedzie, zmienna otrzymuje wymaganą długość w bajtach buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -644,7 +644,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 Liczba znaków w zakodowanym ciągu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów wymagana dla buforu, który może zawierać zdekodowany ciąg znaków *nSrcLen* .
 
@@ -692,7 +692,7 @@ Flagi kontrolujące zachowanie tej funkcji.
 
 - ATLSMTP_UUENCODE_DOT dane zostaną wykonane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -713,7 +713,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z *nSrcLen* bajtów.
 
@@ -721,7 +721,7 @@ Liczba znaków wymagana dla buforu, który może przechowywać zakodowane dane z
 
 Ta implementacja uuencoding jest zgodna ze specyfikacją POSIX P 1003.2 b/D11.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../active-template-library-atl-concepts.md)<br/>
 [Składniki ATL COM pulpitu](../atl-com-desktop-components.md)

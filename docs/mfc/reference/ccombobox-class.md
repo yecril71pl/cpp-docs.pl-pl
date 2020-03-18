@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890814"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418819"
 ---
 # <a name="ccombobox-class"></a>Klasa CComboBox
 
@@ -275,7 +275,7 @@ int AddString(LPCTSTR lpszString);
 *lpszString*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać dodany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość zwracana jest większa lub równa 0, jest indeksem liczonym od zera do ciągu w polu listy. Wartość zwracana jest CB_ERR w przypadku wystąpienia błędu; wartość zwracana jest CB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
@@ -333,7 +333,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 *lpCompareItemStruct*<br/>
 Długi wskaźnik do struktury [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje względne położenie dwóch elementów opisanych w strukturze `COMPAREITEMSTRUCT`. Może to być dowolna z następujących wartości:
 
@@ -391,7 +391,7 @@ Określa okno nadrzędne (zwykle `CDialog`). Nie może mieć wartości NULL.
 *nID*<br/>
 Określa identyfikator kontrolki pola kombi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -473,7 +473,7 @@ int DeleteString(UINT nIndex);
 *nIndex*<br/>
 Określa indeks ciągu, który ma zostać usunięty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość zwracana jest większa lub równa 0, jest to liczba ciągów pozostałych na liście. Wartość zwracana jest CB_ERR, jeśli *nIndex* Określa indeks większy niż liczba elementów na liście.
 
@@ -519,7 +519,7 @@ Może to być dowolna kombinacja wartości **wyliczenia** opisana w [CFile:: Get
 *lpszWildCard*<br/>
 Wskazuje ciąg specyfikacji pliku. Ciąg może zawierać symbole wieloznaczne (na przykład *.\*).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość zwracana jest większa lub równa 0, jest indeksem liczonym od zera ostatniej nazwy pliku dodany do listy. Wartość zwracana jest CB_ERR w przypadku wystąpienia błędu; wartość zwracana jest CB_ERRSPACE, jeśli jest za mało miejsca, aby można było przechowywać nowe ciągi.
 
@@ -572,7 +572,7 @@ Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszuka
 *lpszString*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość zwracana jest większa lub równa 0, jest indeksem liczonym od zera pasującego elementu. Jest CB_ERR, jeśli wyszukiwanie nie powiodło się.
 
@@ -602,7 +602,7 @@ Określa indeks (liczony od zera) elementu przed pierwszym elementem do przeszuk
 *lpszFind*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać wyszukany. Ten ciąg może zawierać pełną nazwę pliku, łącznie z rozszerzeniem. W wyszukiwaniu nie jest rozróżniana wielkość liter, dlatego ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pasującego elementu lub CB_ERR, jeśli wyszukiwanie nie powiodło się.
 
@@ -627,7 +627,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 *pcbi*<br/>
 Wskaźnik do struktury [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -643,7 +643,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę elementów w
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów. Zwracana liczba jest większa niż wartość indeksu ostatniego elementu (indeks jest liczony od zera). CB_ERR w przypadku wystąpienia błędu.
 
@@ -670,7 +670,7 @@ BOOL GetCueBanner(
 |*lpszText*|określoną Wskaźnik do buforu, który odbiera tekst banera wskaźnika.|
 |*cchText*|podczas Rozmiar buforu, na który wskazuje parametr *lpszText* .|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W pierwszym przeciążeniu obiekt [CString](../../atl-mfc-shared/using-cstring.md) , który zawiera tekst banera wskaźnika, jeśli istnieje; w przeciwnym razie obiekt `CString` o zerowej długości.
 
@@ -692,7 +692,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, który element w
 int GetCurSel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) aktualnie zaznaczonego elementu w polu listy pola kombi lub CB_ERR, jeśli nie wybrano żadnego elementu.
 
@@ -729,7 +729,7 @@ Wywołaj funkcję elementu członkowskiego `GetDroppedState`, aby określić, cz
 BOOL GetDroppedState() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pole listy jest widoczne; w przeciwnym razie 0.
 
@@ -745,7 +745,7 @@ Wywołaj tę funkcję, aby pobrać minimalną dozwoloną Szerokość (w pikselac
 int GetDroppedWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, minimalna dozwolona Szerokość (w pikselach). w przeciwnym razie CB_ERR.
 
@@ -767,7 +767,7 @@ Pobiera początkową i końcową pozycję znaku bieżącego zaznaczenia w kontro
 DWORD GetEditSel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość 32-bitowa, która zawiera pozycję początkową w wyrazie z małą kolejnością i położenie pierwszego niezaznaczonego znaku po zakończeniu zaznaczania w wyrazie o wysokiej kolejności. Jeśli ta funkcja jest używana w polu kombi bez kontrolki edycji, CB_ERR jest zwracana.
 
@@ -783,7 +783,7 @@ Wywołaj funkcję elementu członkowskiego `GetExtendedUI`, aby określić, czy 
 BOOL GetExtendedUI() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pole kombi ma rozszerzony interfejs użytkownika; w przeciwnym razie 0.
 
@@ -809,7 +809,7 @@ Pobiera z pola kombi Szerokość (w pikselach), o jaką część pola listy pola
 UINT GetHorizontalExtent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość pola listy pola kombi przewijalnego w pikselach.
 
@@ -834,7 +834,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 *nIndex*<br/>
 Zawiera indeks (liczony od zera) elementu w polu listy pola kombi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 32-bitowa wartość skojarzona z elementem lub CB_ERR, jeśli wystąpi błąd.
 
@@ -859,7 +859,7 @@ void* GetItemDataPtr(int nIndex) const;
 *nIndex*<br/>
 Zawiera indeks (liczony od zera) elementu w polu listy pola kombi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pobiera wskaźnik lub-1, jeśli wystąpi błąd.
 
@@ -880,7 +880,7 @@ int GetItemHeight(int nIndex) const;
 *nIndex*<br/>
 Określa składnik pola kombi, którego wysokość ma zostać pobrana. Jeśli parametr *nIndex* ma wartość-1, pobierana jest wysokość części kontrolki edycji (lub statycznego tekstu) pola kombi. Jeśli pole kombi ma styl [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , *nIndex* Określa indeks (liczony od zera) elementu listy, którego wysokość ma zostać pobrana. W przeciwnym razie *nIndex* powinna być ustawiona na 0.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość (w pikselach) określonego elementu w polu kombi. Wartość zwracana jest CB_ERR w przypadku wystąpienia błędu.
 
@@ -913,7 +913,7 @@ Wskazuje bufor, który ma otrzymać ciąg. Bufor musi mieć wystarczającą ilo�
 *rString*<br/>
 Odwołanie do `CString`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość (w bajtach) ciągu, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest CB_ERR.
 
@@ -938,7 +938,7 @@ int GetLBTextLen(int nIndex) const;
 *nIndex*<br/>
 Zawiera indeks (liczony od zera) ciągu z polem listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość ciągu w bajtach, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest CB_ERR.
 
@@ -954,7 +954,7 @@ Pobiera ustawienia regionalne używane przez pole kombi.
 LCID GetLocale() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość identyfikatora ustawień regionalnych (LCID) dla ciągów w polu kombi.
 
@@ -974,7 +974,7 @@ Pobiera minimalną liczbę widocznych elementów z listy rozwijanej bieżącej k
 int GetMinVisible() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Minimalna liczba widocznych elementów na bieżącej liście rozwijanej.
 
@@ -990,7 +990,7 @@ Pobiera indeks (liczony od zera) pierwszego widocznego elementu w części pola 
 int GetTopIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego widocznego elementu w części pole kombi w przypadku powodzenia, CB_ERR w przeciwnym razie.
 
@@ -1020,7 +1020,7 @@ Określa liczbę elementów do dodania.
 *nBytes*<br/>
 Określa ilość pamięci (w bajtach) do przydzielenia dla ciągów elementów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, Maksymalna liczba elementów w polu kombi może być przechowywana przed ponownym alokacją pamięci, w przeciwnym razie CB_ERRSPACE, co oznacza, że nie jest dostępna wystarczająca ilość pamięci.
 
@@ -1054,7 +1054,7 @@ Zawiera indeks (liczony od zera) do pozycji w polu listy, która będzie odbiera
 *lpszString*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pozycji, w której został wstawiony ciąg. Wartość zwracana jest CB_ERR w przypadku wystąpienia błędu. Wartość zwracana jest CB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
@@ -1082,7 +1082,7 @@ BOOL LimitText(int nMaxChars);
 *nMaxChars*<br/>
 Określa długość (w bajtach) tekstu, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest ustawiona na 65 535 bajtów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera. Jeśli wywoływana dla pola kombi z stylem [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) lub pola kombi bez kontrolki edycji, wartość zwracana jest CB_ERR.
 
@@ -1167,7 +1167,7 @@ Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszuka
 *lpszString*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) wybranego elementu, jeśli ciąg został znaleziony. Jeśli wyszukiwanie nie powiodło się, wartość zwracana jest CB_ERR i bieżące zaznaczenie nie zostanie zmienione.
 
@@ -1195,7 +1195,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 |---------------|-----------------|
 |*lpszText*|podczas Wskaźnik na bufor zakończony zerem, który zawiera tekst kontrolny.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
@@ -1230,7 +1230,7 @@ int SetCurSel(int nSelect);
 *nWybierz*<br/>
 Określa indeks (liczony od zera) ciągu do wybrania. Jeśli-1, wszelkie bieżące zaznaczenie w polu listy zostanie usunięte, a kontrolka edycji zostanie wyczyszczona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu wybranego w przypadku pomyślnego zakończenia wiadomości. Wartość zwracana jest CB_ERR, jeśli *nWybierz* jest większa niż liczba elementów na liście lub jeśli *nWybierz* jest ustawiona na wartość-1, co czyści zaznaczenie.
 
@@ -1255,7 +1255,7 @@ int SetDroppedWidth(UINT nWidth);
 *nWidth*<br/>
 Minimalna dozwolona szerokość fragmentu pola listy pola kombi (w pikselach).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, Nowa szerokość pola listy, w przeciwnym razie CB_ERR.
 
@@ -1287,7 +1287,7 @@ Określa pozycję początkową. Jeśli pozycja początkowa ma wartość-1, wszys
 *nEndChar*<br/>
 Określa pozycję końcową. Jeśli pozycja końcowa jest ustawiona na wartość-1, zaznaczony jest cały tekst od pozycji początkowej do ostatniego znaku w kontrolce Edycja.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja członkowska zakończyła się powodzeniem; w przeciwnym razie 0. Jest CB_ERR, jeśli `CComboBox` ma styl [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) lub nie ma pola listy.
 
@@ -1315,7 +1315,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 *bExtended*<br/>
 Określa, czy pole kombi ma używać rozszerzonego interfejsu użytkownika czy domyślnego interfejsu użytkownika. Wartość TRUE powoduje wybranie rozszerzonego interfejsu użytkownika; wartość FALSE powoduje wybranie standardowego interfejsu użytkownika.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 CB_OKAY, jeśli operacja zakończyła się pomyślnie lub CB_ERR w przypadku wystąpienia błędu.
 
@@ -1372,7 +1372,7 @@ Zawiera indeks (liczony od zera) dla elementu, który ma zostać ustawiony.
 *dwItemData*<br/>
 Zawiera nową wartość do skojarzenia z elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 CB_ERR w przypadku wystąpienia błędu.
 
@@ -1402,7 +1402,7 @@ Zawiera indeks (liczony od zera) do elementu.
 *pData*<br/>
 Zawiera wskaźnik do skojarzenia z elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 CB_ERR w przypadku wystąpienia błędu.
 
@@ -1436,7 +1436,7 @@ Jeśli *nIndex* ma wartość-1, należy ustawić wysokość kontrolki edycji lub
 *cyItemHeight*<br/>
 Określa wysokość (w pikselach) składnika pola kombi identyfikowanego przez *nIndex*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 CB_ERR, jeśli indeks lub wysokość są nieprawidłowe; w przeciwnym razie 0.
 
@@ -1461,7 +1461,7 @@ LCID SetLocale(LCID nNewLocale);
 *nNewLocale*<br/>
 Nowa wartość identyfikatora ustawień regionalnych (LCID) do ustawienia dla pola kombi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość poprzedniego identyfikatora ustawień regionalnych (LCID) dla tego pola kombi.
 
@@ -1487,7 +1487,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 |---------------|-----------------|
 |*niewidoczny*|podczas Określa minimalną liczbę widocznych elementów.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1520,7 +1520,7 @@ int SetTopIndex(int nIndex);
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero jeśli kończy się pomyślnie lub CB_ERR, jeśli wystąpi błąd.
 

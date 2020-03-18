@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856739"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419442"
 ---
 # <a name="c-standard-library-containers"></a>C++Kontenery biblioteki standardowej
 
@@ -168,7 +168,7 @@ Wszystkie kontenery przeciążą operator = = do porównywania dwóch konteneró
 
 W języku C++ 14 i nowszych można porównać niepodobne kontenery i/lub różne typy elementów przy użyciu jednego z przeciążeń funkcji `std::equal`, `std::mismatch`lub `std::is_permutation`, które mają dwa kompletne zakresy. Te przeciążenia umożliwiają porównywanie kontenerów z różnymi długościami. Te przeciążenia są znacznie mniej podatne na błędy użytkownika i są zoptymalizowane pod kątem zwrócenia fałszywych wartości w czasie, gdy są porównywane kontenery o niepodobnej długości. Z tego względu zalecamy korzystanie z tych przeciążeń, chyba że (1) masz bardzo oczywisty powód nie dotyczy, lub (2) używasz kontenera [std:: list](../standard-library/list-class.md) , który nie korzysta z optymalizacji podwójnego zakresu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Containers](../cpp/containers-modern-cpp.md)\
 Dokumentacja biblioteki standardowej\ [ C++ ](../standard-library/cpp-standard-library-reference.md)

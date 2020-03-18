@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874759"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421794"
 ---
 # <a name="ltforward_listgt-operators"></a>&lt;forward_list operatory&gt;
 
@@ -65,7 +65,7 @@ Obiekt typu `forward_list`.
 *prawa*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli listy nie są równe; **wartość false** , jeśli listy są równe.
 
@@ -91,7 +91,7 @@ Obiekt typu `forward_list`.
 *prawa*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -117,7 +117,7 @@ Obiekt typu `forward_list`.
 *prawa*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -143,7 +143,7 @@ Obiekt typu `forward_list`.
 *prawa*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -169,7 +169,7 @@ Obiekt typu `forward_list`.
 *prawa*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli lista przesyłania dalej po lewej stronie operatora jest większa lub równa liście do przodu po prawej stronie operatora; w przeciwnym razie **false**.
 

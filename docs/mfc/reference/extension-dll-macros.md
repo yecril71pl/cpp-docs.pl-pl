@@ -5,11 +5,11 @@ helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
 ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854565"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421339"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra i funkcje do zarządzania bibliotekami DLL
 
@@ -133,7 +133,7 @@ Użyj tej funkcji, aby uzyskać bieżący stan flagi stanu dla modułu, która m
 BOOL AFXAPI AfxGetAmbientActCtx();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca wartość flagi stanu modułu.
 
@@ -159,7 +159,7 @@ Wywołaj tę funkcję, aby ustawić stan modułu przed inicjalizacją i/lub przy
 AFX_MODULE_STATE* AFXAPI AfxGetStaticModuleState( );
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury `AFX_MODULE_STATE`.
 
@@ -199,7 +199,7 @@ Odwołanie do struktury [struktury AFX_EXTENSION_MODULE](afx-extension-module-st
 *hModule*<br/>
 Dojście modułu DLL rozszerzenia MFC.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli biblioteka DLL rozszerzenia MFC została pomyślnie zainicjowana; w przeciwnym razie FALSE.
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855328"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416859"
 ---
 # <a name="cobject-class"></a>Klasa CObject
 
@@ -37,7 +37,7 @@ Główna Klasa bazowa dla biblioteka MFC.
 class AFX_NOVTABLE CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -189,7 +189,7 @@ Zwraca strukturę `CRuntimeClass` odpowiadającą klasie tego obiektu.
 virtual CRuntimeClass* GetRuntimeClass() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) odpowiadający klasie tego obiektu; nigdy nie **ma wartości null**.
 
@@ -230,7 +230,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 *pClass*<br/>
 Wskaźnik do struktury [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) skojarzonej z klasą pochodną `CObject`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli obiekt odpowiada klasie; w przeciwnym razie 0.
 
@@ -254,7 +254,7 @@ Sprawdza, czy ten obiekt kwalifikuje się do serializacji.
 BOOL IsSerializable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli ten obiekt może być serializowany; w przeciwnym razie 0.
 

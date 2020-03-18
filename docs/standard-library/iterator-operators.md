@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884134"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420107"
 ---
 # <a name="ltiteratorgt-operators"></a>Operatory&gt; iteratora &lt;
 
@@ -49,7 +49,7 @@ Obiekt typu `iterator`.
 *prawa*\
 Obiekt typu `iterator`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekty iteratorów nie są równe; **Fałsz** , jeśli obiekty iteratora są równe.
 
@@ -153,7 +153,7 @@ Obiekt typu iterator.
 *prawa*\
 Obiekt typu iterator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli obiekty iteratora są równe; **Fałsz** , jeśli obiekty iteratora nie są równe.
 
@@ -242,7 +242,7 @@ Obiekt typu `iterator`.
 *prawa*\
 Obiekt typu `iterator`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , Jeśli iterator po lewej stronie wyrażenia jest krótszy niż iterator po prawej stronie wyrażenia; **Fałsz** , jeśli jest większy lub równy iteratora po prawej stronie.
 
@@ -333,7 +333,7 @@ Obiekt typu iterator.
 *prawa*\
 Obiekt typu iterator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , Jeśli iterator po lewej stronie wyrażenia jest mniejszy lub równy iteratora po prawej stronie wyrażenia; **wartość false** , jeśli jest większa niż iterator po prawej stronie.
 
@@ -428,7 +428,7 @@ Obiekt typu iterator.
 *prawa*\
 Obiekt typu iterator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , Jeśli iterator po lewej stronie wyrażenia jest większy niż iterator po prawej stronie wyrażenia; **wartość false** , jeśli jest ona mniejsza lub równa iteratora po prawej stronie.
 
@@ -517,7 +517,7 @@ Obiekt typu iterator.
 *prawa*\
 Obiekt typu iterator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , Jeśli iterator po lewej stronie wyrażenia jest większy lub równy iteratora po prawej stronie wyrażenia; **wartość false** , jeśli jest mniejsza od iteratora po prawej stronie.
 
@@ -621,7 +621,7 @@ Liczba pozycji, w których stała move_iterator lub stała reverse_iterator ma b
 *prawa*\
 Iterator, który ma zostać przesunięty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca *sumę,* która +  *_Off*.
 
@@ -698,7 +698,7 @@ Iterator.
 *prawa*\
 Iterator.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różnica między dwoma iteratorami `.`
 

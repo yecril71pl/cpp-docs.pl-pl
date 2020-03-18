@@ -1,5 +1,5 @@
 ---
-title: Przeciąganie i upuszczanie elementów OLE
+title: przeciąganie i upuszczanie OLE
 description: Przegląd Microsoft Foundation Classes (MFC) OLE — przeciąganie i upuszczanie, jak zaimplementować Źródło upuszczania, miejsce docelowe upuszczania oraz jak dostosować przeciąganie i upuszczanie.
 ms.date: 02/09/2020
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855512"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420352"
 ---
-# <a name="ole-drag-and-drop"></a>Przeciąganie i upuszczanie elementów OLE
+# <a name="ole-drag-and-drop"></a>przeciąganie i upuszczanie OLE
 
 Funkcja przeciągania i upuszczania OLE jest szczególnie skrótem do kopiowania i wklejania danych. W przypadku używania schowka do kopiowania lub wklejania danych wymagane jest wykonanie kilku kroków. Wybierzesz dane, a następnie wybierz opcję **Wytnij** lub **Kopiuj** z menu **Edycja** . Następnie przejdziesz do docelowej aplikacji lub okna i umieścisz kursor w lokalizacji docelowej. Na koniec wybierz opcję **edytuj** > **Wklej** z menu.
 

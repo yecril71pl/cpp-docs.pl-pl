@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857154"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417503"
 ---
 # <a name="registry-macros"></a>Makra rejestru
 
@@ -192,6 +192,6 @@ Jeśli chcesz, aby ATL zamieniał wartości zastępcze w czasie wykonywania, nie
 
 Aby uzyskać więcej informacji na temat wymiennych parametrów i skryptów, zobacz artykuł dotyczący [składnika rejestru ATL (rejestratora)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Utworze](../../atl/reference/atl-macros.md)

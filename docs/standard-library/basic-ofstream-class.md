@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865873"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416908"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream — Klasa
 
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
 }
 ```
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -187,7 +187,7 @@ Wskazuje, czy plik jest otwarty.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli plik jest otwarty; w przeciwnym razie **zwraca wartość false** .
 
@@ -273,7 +273,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 *prawa*\
 Odwołanie rvalue do obiektu `basic_ofstream`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość `*this`.
 
@@ -289,7 +289,7 @@ Zwraca adres buforu zapisanego strumienia.
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca adres buforu zapisanego strumienia.
 
@@ -314,7 +314,7 @@ void swap(basic_ofstream& right);
 
 Funkcja członkowska zamienia zawartość tego obiektu na zawartość z *prawej strony*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 \ [klasy basic_ostream](../standard-library/basic-ostream-class.md)
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

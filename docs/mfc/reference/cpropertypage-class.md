@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
 ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865434"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421038"
 ---
 # <a name="cpropertypage-class"></a>Klasa CPropertyPage
 
@@ -57,17 +57,17 @@ Reprezentuje pojedyncze strony arkusza właściwości, w przeciwnym razie znane 
 class CPropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Konstruuje obiekt `CPropertyPage`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK na Odczytaj i wyłącza przycisk Anuluj po nieodwracalnej zmianie na stronie modalnego arkusza właściwości.|
 |[CPropertyPage:: konstrukcja](#construct)|Konstruuje obiekt `CPropertyPage`. Użyj `Construct`, jeśli chcesz określić parametry w czasie wykonywania lub w przypadku korzystania z tablic.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropertyPage:: m_psp](#m_psp)|Struktura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows. Zapewnia dostęp do podstawowych parametrów strony właściwości.|
 
@@ -269,7 +269,7 @@ const PROPSHEETPAGE& GetPSP() const;
 PROPSHEETPAGE& GetPSP();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do struktury `PROPSHEETPAGE`.
 
@@ -299,7 +299,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik wybie
 virtual BOOL OnApply();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli zmiany są akceptowane; w przeciwnym razie 0.
 
@@ -341,7 +341,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy strona nie jest j
 virtual BOOL OnKillActive();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli dane zostały pomyślnie zaktualizowane, w przeciwnym razie 0.
 
@@ -385,7 +385,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik klikn
 virtual BOOL OnQueryCancel();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość FALSE, aby zapobiec operacji anulowania lub wartości TRUE, aby zezwolić na to.
 
@@ -427,7 +427,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy strona zostanie w
 virtual BOOL OnSetActive();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli strona została pomyślnie ustawiona jako aktywna; w przeciwnym razie 0.
 
@@ -449,7 +449,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik klikn
 virtual LRESULT OnWizardBack();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 0, aby automatycznie przejść do następnej strony; -1, aby zapobiec zmienianiu strony. Aby przejść do strony innej niż Następna, zwróć identyfikator okna dialogowego do wyświetlenia.
 
@@ -471,7 +471,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik klikn
 virtual BOOL OnWizardFinish();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli arkusz właściwości zostanie zniszczony po zakończeniu pracy Kreatora; w przeciwnym razie zero.
 
@@ -503,7 +503,7 @@ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik klikn
 virtual LRESULT OnWizardNext();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 0, aby automatycznie przejść do następnej strony; -1, aby zapobiec zmienianiu strony. Aby przejść do strony innej niż Następna, zwróć identyfikator okna dialogowego do wyświetlenia.
 
@@ -535,7 +535,7 @@ Określa dodatkowe informacje zależne od komunikatów.
 *lParam*<br/>
 Określa dodatkowe informacje zależne od wiadomości
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera ze strony w arkuszu właściwości lub 0, jeśli wszystkie strony zwracają wartość 0.
 
@@ -572,7 +572,7 @@ Struktura śledzi, które strony są "zanieczyszczone", czyli strony właściwo�
 
 [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>

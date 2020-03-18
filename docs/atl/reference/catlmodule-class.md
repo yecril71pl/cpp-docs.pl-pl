@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857155"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418049"
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 
@@ -37,18 +37,18 @@ Ta klasa udostępnia metody używane przez kilka klas modułów ATL.
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Konstruktor.|
 |[CAtlModule:: ~ CAtlModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Zastąp tę metodę, aby dodać parametry do mapy wymiany składnika rejestru ATL (rejestratora).|
 |[CAtlModule::AddTermFunc](#addtermfunc)|Dodaje nową funkcję, która ma być wywoływana po zakończeniu działania modułu.|
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlModule:: m_libid](#m_libid)|Zawiera identyfikator GUID bieżącego modułu.|
 |[CAtlModule:: m_pGIT](#m_pgit)|Wskaźnik do tabeli interfejsu globalnego.|
@@ -99,7 +99,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 *pRegistrar*<br/>
 Rezerwacj.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -125,7 +125,7 @@ Wskaźnik do funkcji, która ma zostać dodana.
 *magazynu*<br/>
 Dane zdefiniowane przez użytkownika, przekazanie do funkcji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -166,7 +166,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 *ppGIT*<br/>
 Wskaźnik do zmiennej, która będzie odbierać wskaźnik do tabeli interfejsu globalnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK dla sukcesu lub kod błędu w przypadku niepowodzenia. E_POINTER jest zwracana, jeśli wartość *ppGIT* jest równa null.
 
@@ -186,7 +186,7 @@ Zwraca liczbę blokad.
 virtual LONG GetLockCount() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę blokad. Ta wartość może być przydatna w przypadku diagnostyki i debugowania.
 
@@ -198,7 +198,7 @@ Zwiększa liczbę blokad.
 virtual LONG Lock() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwiększa liczbę blokad i zwraca zaktualizowaną wartość. Ta wartość może być przydatna w przypadku diagnostyki i debugowania.
 
@@ -238,7 +238,7 @@ Zmniejsza liczbę blokad.
 virtual LONG Unlock() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zmniejsza liczbę blokad i zwraca zaktualizowaną wartość. Ta wartość może być przydatna w przypadku diagnostyki i debugowania.
 
@@ -272,7 +272,7 @@ Ma wartość TRUE, jeśli obiekt powinien być zarejestrowany; W przeciwnym razi
 *pMapEntries*<br/>
 Wskaźnik do mapowanej mapy przechowującej wartości skojarzone z parametrami wymiennymi skryptu. ATL automatycznie używa elementu% MODULE%. Aby użyć dodatkowych parametrów do przemieszczenia, zobacz [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -306,7 +306,7 @@ Wskazuje, czy obiekt powinien być zarejestrowany.
 *pMapEntries*<br/>
 Wskaźnik do mapowanej mapy przechowującej wartości skojarzone z parametrami wymiennymi skryptu. ATL automatycznie używa elementu% MODULE%. Aby użyć dodatkowych parametrów do przemieszczenia, zobacz [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -344,7 +344,7 @@ Wskazuje, czy skrypt zasobów powinien być zarejestrowany.
 *pMapEntries*<br/>
 Wskaźnik do mapowanej mapy przechowującej wartości skojarzone z parametrami wymiennymi skryptu. ATL automatycznie używa elementu% MODULE%. Aby użyć dodatkowych parametrów do przemieszczenia, zobacz [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -352,7 +352,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Podobnie jak w przypadku [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) , z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzy statyczne łącze do składnika rejestru ATL (Rejestrator).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>

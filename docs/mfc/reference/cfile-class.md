@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855388"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418707"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -77,7 +77,7 @@ Klasa bazowa klas plików klas Microsoft Foundation.
 class CFile : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -298,7 +298,7 @@ Konstruuje zduplikowany obiekt `CFile` dla danego pliku.
 virtual CFile* Duplicate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do zduplikowanego obiektu `CFile`.
 
@@ -330,7 +330,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę określonego 
 virtual CString GetFileName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nazwa pliku.
 
@@ -354,7 +354,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać pełną ścieżkę d
 virtual CString GetFilePath() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pełna ścieżka określonego pliku.
 
@@ -376,7 +376,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby pobrać tytuł pliku (nazwa 
 virtual CString GetFileTitle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tytuł pliku źródłowego.
 
@@ -398,7 +398,7 @@ Uzyskuje bieżącą długość logiczną pliku w bajtach.
 virtual ULONGLONG GetLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość pliku.
 
@@ -414,7 +414,7 @@ Uzyskuje bieżącą wartość wskaźnika pliku, która może być używana w pó
 virtual ULONGLONG GetPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik pliku.
 
@@ -458,7 +458,7 @@ Ciąg w zestawie znaków systemu Windows, który jest ścieżką do żądanego p
 *pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli informacje o stanie określonego pliku zostaną pomyślnie pobrane. w przeciwnym razie FALSE.
 
@@ -586,7 +586,7 @@ Wskaźnik do istniejącego obiektu wyjątku pliku, który otrzyma stan operacji 
 *pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli otwarcie zakończyło się pomyślnie; w przeciwnym razie 0. Parametr *pError* ma znaczenie tylko wtedy, gdy zwracana jest wartość 0.
 
@@ -601,7 +601,7 @@ W poniższej tabeli opisano możliwe wyniki `Open`.
 |`pError`|Wystąpił błąd|Wartość zwracana|Zawartość CFileException|
 |--------------|------------------------|------------------|----------------------------|
 |NULL|Nie|TRUE|Nie dotyczy|
-|PTR do `CFileException`|Nie|TRUE|Bez zmian|
+|PTR do `CFileException`|Nie|TRUE|bez zmian|
 |NULL|Yes|FAŁSZ|Nie dotyczy|
 |PTR do `CFileException`|Yes|FAŁSZ|zainicjowany do opisywania błędu|
 
@@ -637,7 +637,7 @@ Wskaźnik do buforu dostarczonego przez użytkownika, który ma otrzymywać dane
 *nCount*<br/>
 Maksymalna liczba bajtów, które mają być odczytywane z pliku. W przypadku plików w trybie tekstowym pary wierszy powrotu karetki są zliczane jako pojedyncze znaki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bajtów przesłanych do buforu. Dla wszystkich klas `CFile` wartość zwracana może być mniejsza niż *nCount* , jeśli osiągnięto koniec pliku.
 
@@ -723,7 +723,7 @@ Liczba bajtów do przeniesienia wskaźnika pliku. Wartości dodatnie przesuwają
 *NZE*<br/>
 Pozycja do wyszukania. Więcej wartości można znaleźć w sekcji uwagi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pozycja wskaźnika pliku, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie zwracana wartość jest niezdefiniowana i zostanie zgłoszony wskaźnik do `CFileException` wyjątek.
 
@@ -771,7 +771,7 @@ Ustawia wartość wskaźnika pliku na logiczny koniec pliku.
 ULONGLONG SeekToEnd();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość pliku w bajtach.
 

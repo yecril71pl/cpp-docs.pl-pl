@@ -87,16 +87,16 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856740"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419022"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap — Klasa
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Klasa kontenera hash_multimap jest rozszerzeniem C++ standardowej biblioteki i służy do przechowywania oraz szybkiego pobierania danych z kolekcji, w której każdy element jest parą z kluczem sortowania, którego wartość nie musi być unikatowa i skojarzona wartość danych.
 
@@ -154,7 +154,7 @@ Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji 
 
 Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, ale funkcje składowych klasy [INSERT](#insert) i [hash_multimap](#hash_multimap) mają wersje przyjmujące jako parametry szablonu słabszy iterator danych wejściowych, którego wymagania funkcjonalności są mniejsze niż te gwarantowane przez klasę iteratorów dwukierunkowych. Pojęcia innych iteratorów formują rodzinę powiązaną przez udoskonalenia w ich funkcjonalnościach. Każde pojęcie iteratora ma własne hash_multimap wymagania, a algorytmy, które z nich pracują, muszą ograniczyć ich założenia do wymagań dostarczonych przez ten typ iteratora. Można założyć, że z iteratora danych wejściowych można usunąć odwołanie, aby odwołać się do obiektu, a także, że może on być zwiększony do następnego iteratora w sekwencji. Jest to minimalny hash_multimap funkcjonalności, ale jest wystarczający, aby można było mówić istotnie o zakresie iteratorów `[First, Last)` w kontekście funkcji składowych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -225,7 +225,7 @@ Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, 
 ## <a name="allocator_type"></a>hash_multimap:: allocator_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który reprezentuje klasę alokatora dla obiektu hash_multimap.
 
@@ -246,7 +246,7 @@ Zapoznaj się z przykładem [get_allocator](#get_allocator) , aby zapoznać się
 ## <a name="begin"></a>hash_multimap:: BEGIN
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator odnoszący się do pierwszego elementu w hash_multimap.
 
@@ -256,7 +256,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy odnoszący się do pierwszego elementu w hash_multimap lub lokalizacji po pomyślnym wypełnieniu pustego hash_multimap.
 
@@ -311,7 +311,7 @@ The first element of hm1 is now 1.
 ## <a name="cbegin"></a>hash_multimap:: cbegin
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator const odnoszący się do pierwszego elementu w hash_multimap.
 
@@ -319,7 +319,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu w hash_multimap.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stały iterator dwukierunkowy odnoszący się do pierwszego elementu w [hash_multimap](../standard-library/hash-multimap-class.md) lub lokalizacji po pomyślnym wypełnieniu pustego `hash_multimap`.
 
@@ -355,7 +355,7 @@ The first element of hm1 is 2.
 ## <a name="cend"></a>hash_multimap:: cend
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w hash_multimap.
 
@@ -363,7 +363,7 @@ Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim ele
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stały iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w [hash_multimap](../standard-library/hash-multimap-class.md). Jeśli `hash_multimap` jest puste, a następnie `hash_multimap::cend == hash_multimap::begin`.
 
@@ -406,7 +406,7 @@ The value of last element of hm1 is 30.
 ## <a name="clear"></a>hash_multimap:: Clear
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Usuwa wszystkie elementy hash_multimap.
 
@@ -456,7 +456,7 @@ The size of the hash_multimap after clearing is 0.
 ## <a name="const_iterator"></a>hash_multimap:: const_iterator
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać element **const** w hash_multimap.
 
@@ -481,7 +481,7 @@ Zapoznaj [się](#begin) z przykładem dla przykładu korzystającego z `const_it
 ## <a name="const_pointer"></a>hash_multimap:: const_pointer
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza wskaźnik do elementu **const** w hash_multimap.
 
@@ -498,7 +498,7 @@ W większości przypadków [iterator](#iterator) powinien być używany do uzysk
 ## <a name="const_reference"></a>hash_multimap:: const_reference
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza odwołanie do elementu **const** przechowywanego w hash_multimap do odczytu i wykonywania operacji **const** .
 
@@ -554,7 +554,7 @@ The data value of 1st element in the hash_multimap is 10.
 ## <a name="const_reverse_iterator"></a>hash_multimap:: const_reverse_iterator
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny element **const** w hash_multimap.
 
@@ -579,7 +579,7 @@ Zapoznaj się z przykładem dla [rend](#rend) , aby zapoznać się z przykładem
 ## <a name="count"></a>hash_multimap:: Count
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca liczbę elementów w hash_multimap, których klucz pasuje do klucza określonego przez parametr.
 
@@ -592,7 +592,7 @@ size_type count(const Key& key) const;
 *klucz*\
 Klucz elementów do dopasowania z hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 1, jeśli hash_multimap zawiera element, którego klucz sortowania jest zgodny z kluczem parametru; 0, jeśli hash_multimap nie zawiera elementu z pasującym kluczem.
 
@@ -652,7 +652,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ## <a name="crbegin"></a>hash_multimap:: crbegin —
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej hash_multimap.
 
@@ -660,7 +660,7 @@ Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej hash_
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconej [hash_multimap](../standard-library/hash-multimap-class.md) lub adresowania ostatniego elementu w nieodwróconej `hash_multimap`.
 
@@ -704,7 +704,7 @@ The first element of the reversed hash_multimap hm1 is 3.
 ## <a name="crend"></a>hash_multimap:: crend
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator const, który odnosi się do lokalizacji następującej po ostatnim elemencie w odwróconym hash_multimap.
 
@@ -712,7 +712,7 @@ Zwraca iterator const, który odnosi się do lokalizacji następującej po ostat
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym [hash_multimap](../standard-library/hash-multimap-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym `hash_multimap`).
 
@@ -759,7 +759,7 @@ The last element of the reversed hash_multimap hm1 is 3.
 ## <a name="difference_type"></a>hash_multimap::d ifference_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów hash_multimap w zakresie między elementami wskazywanymi przez Iteratory.
 
@@ -836,7 +836,7 @@ The values of the mapped elements are: 10 20 30 20.
 ## <a name="emplace"></a>hash_multimap:: emplace
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Wstawia element skonstruowany w miejscu do hash_multimap.
 
@@ -851,7 +851,7 @@ iterator emplace(ValTy&& val);
 |-|-|
 |*użyte*|Wartość służąca do przenoszenia elementu konstrukcja, który ma zostać wstawiony do [hash_multimap](../standard-library/hash-multimap-class.md).|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska `emplace` zwraca iterator, który wskazuje na pozycję, w której został wstawiony nowy element.
 
@@ -891,7 +891,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="emplace_hint"></a>hash_multimap:: emplace_hint
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Wstawia element skonstruowany w miejscu do hash_multimap z wskazówką dotyczącą położenia.
 
@@ -909,7 +909,7 @@ iterator emplace_hint(
 |*użyte*|Wartość służąca do przenoszenia elementu konstrukcja, która ma zostać wstawiona do [hash_multimap](../standard-library/hash-multimap-class.md) , chyba że `hash_multimap` już zawiera ten element (lub, bardziej ogólnie, element, którego klucz jest równoważny uporządkowany).|
 |*_Where*|Wskazówka dotycząca miejsca, w którym rozpoczyna się wyszukiwanie poprawnego punktu wstawiania.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska [hash_multimap:: emplace](#emplace) zwraca iterator, który wskazuje na położenie, w którym nowy element został wstawiony do `hash_multimap`.
 
@@ -951,7 +951,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="empty"></a>hash_multimap:: Empty
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Testuje, czy hash_multimap jest pusty.
 
@@ -959,7 +959,7 @@ Testuje, czy hash_multimap jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli hash_multimap jest pusty. **wartość false** , jeśli hash_multimap nie jest pusta.
 
@@ -1002,7 +1002,7 @@ The hash_multimap hm2 is empty.
 ## <a name="end"></a>hash_multimap:: end
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator, który odnosi się do lokalizacji następującej po ostatnim elemencie w hash_multimap.
 
@@ -1012,7 +1012,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w hash_multimap. Jeśli hash_multimap jest puste, a następnie hash_multimap:: end = = hash_multimap:: BEGIN.
 
@@ -1073,7 +1073,7 @@ The value of last element of hm1 is now 20.
 ## <a name="equal_range"></a>hash_multimap:: equal_range
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca parę iteratorów odpowiednio do pierwszego elementu w hash_multimap z kluczem, który jest większy niż określony klucz i do pierwszego elementu w hash_multimap, z kluczem, który jest równy lub większy niż klucz.
 
@@ -1088,7 +1088,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Para iteratorów, takich jak pierwszy jest [lower_bound](#lower_bound) klucza, a drugi to [upper_bound](#upper_bound) klucza.
 
@@ -1162,7 +1162,7 @@ The hash_multimap hm1 doesn't have an element with a key less than 4.
 ## <a name="erase"></a>hash_multimap:: Erase
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Usuwa element lub zakres elementów w hash_multimap z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.
 
@@ -1188,7 +1188,7 @@ Umieść tuż poza ostatnim elementem usuniętym z hash_multimap.
 *klucz*\
 Klucz elementów do usunięcia z hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub wskaźnik do końca hash_multimap, jeśli taki element nie istnieje.
 
@@ -1288,7 +1288,7 @@ After another element with a key equal to that of the
 ## <a name="find"></a>hash_multimap:: find
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator odnoszący się do pierwszej lokalizacji elementu w hash_multimap, który ma klucz równoważny do określonego klucza.
 
@@ -1303,7 +1303,7 @@ const_iterator find(const Key& key) const;
 *klucz*\
 Klucz, który ma zostać dopasowany przez klucz sortowania elementu z przeszukiwanego hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który odnosi się do pierwszej lokalizacji elementu z określonym kluczem, lub lokalizacji, która kończy się na ostatnim elemencie w hash_multimap, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1384,7 +1384,7 @@ This is not the last element of hash_multimap hm1.
 ## <a name="get_allocator"></a>hash_multimap:: get_allocator
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca kopię obiektu alokatora używanego do konstruowania hash_multimap.
 
@@ -1392,7 +1392,7 @@ Zwraca kopię obiektu alokatora używanego do konstruowania hash_multimap.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Alokator używany przez hash_multimap.
 
@@ -1460,7 +1460,7 @@ int main( )
 ## <a name="hash_multimap"></a>hash_multimap:: hash_multimap
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Konstruuje hash_multimap, która jest pusta lub jest kopią wszystkich lub części niektórych innych hash_multimap.
 
@@ -1543,7 +1543,7 @@ Ostatnie trzy konstruktory używają initializer_list.
 ## <a name="insert"></a>hash_multimap:: INSERT
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Wstawia element lub zakres elementów do hash_multimap.
 
@@ -1580,7 +1580,7 @@ iterator insert(
 |*Pierwszego*|Pozycja pierwszego elementu, który ma zostać skopiowany z mapy.|
 |*Ostatniego*|Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany z mapy.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsze dwie `insert` funkcje członkowskie zwracają iterator, który wskazuje na pozycję, w której został wstawiony nowy element.
 
@@ -1599,7 +1599,7 @@ Wstawianie może odbywać się w amortyzowanym stałym czasie dla wskazówki `in
 ## <a name="iterator"></a>hash_multimap:: iterator
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować dowolny element w hash_multimap.
 
@@ -1624,7 +1624,7 @@ Zapoznaj [się](#begin) z przykładem dotyczącym sposobu deklarowania i używan
 ## <a name="key_comp"></a>hash_multimap:: key_comp
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w hash_multimap.
 
@@ -1632,7 +1632,7 @@ Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w hash_mul
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji, którego hash_multimap używa do porządkowania jego elementów.
 
@@ -1696,7 +1696,7 @@ int main( )
 ## <a name="key_compare"></a>hash_multimap:: key_compare
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza obiekt funkcji, który może porównać dwa klucze sortowania, aby określić względną kolejność dwóch elementów w hash_multimap.
 
@@ -1717,7 +1717,7 @@ Zapoznaj się z przykładem [key_comp](#key_comp) , aby zapoznać się z przykł
 ## <a name="key_type"></a>hash_multimap:: key_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który opisuje obiekt klucza sortowania, który stanowi każdy element hash_multimap.
 
@@ -1738,7 +1738,7 @@ Zapoznaj się z przykładem [value_type](#value_type) , aby zapoznać się z prz
 ## <a name="lower_bound"></a>hash_multimap:: lower_bound
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator do pierwszego elementu w hash_multimap z kluczem, który jest równy lub większy niż określony klucz.
 
@@ -1753,7 +1753,7 @@ const_iterator lower_bound(const Key& key) const;
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [Iterator](#iterator) lub [const_iterator](#const_iterator) , który odnosi się do lokalizacji elementu w hash_multimap z kluczem, który jest równy lub większy od klucza argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w hash_multimap, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -1833,7 +1833,7 @@ This is not the last element of hash_multimap hm1.
 ## <a name="mapped_type"></a>hash_multimap:: mapped_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który reprezentuje typ danych przechowywany w hash_multimap.
 
@@ -1854,7 +1854,7 @@ Zapoznaj się z przykładem [value_type](#value_type) , aby zapoznać się z prz
 ## <a name="max_size"></a>hash_multimap:: max_size
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca maksymalną długość hash_multimap.
 
@@ -1862,7 +1862,7 @@ Zwraca maksymalną długość hash_multimap.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Maksymalna możliwa długość hash_multimap.
 
@@ -1892,7 +1892,7 @@ int main( )
 ## <a name="op_eq"></a>hash_multimap:: operator =
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zastępuje elementy hash_multimap kopią innego hash_multimap.
 
@@ -1953,7 +1953,7 @@ int main( )
 ## <a name="pointer"></a>hash_multimap::p ointer
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza wskaźnik do elementu w hash_multimap.
 
@@ -1970,7 +1970,7 @@ W większości przypadków [iterator](#iterator) powinien być używany do uzysk
 ## <a name="rbegin"></a>hash_multimap:: rbegin
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator odnoszący się do pierwszego elementu w odwróconej hash_multimap.
 
@@ -1980,7 +1980,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu w odwróconym hash_multimap lub adresowania ostatniego elementu w nieodwróconej hash_multimap.
 
@@ -2055,7 +2055,7 @@ in the reversed hash_multimap is 2.
 ## <a name="reference"></a>hash_multimap:: Reference
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który zawiera odwołanie do elementu przechowywanego w hash_multimap.
 
@@ -2118,7 +2118,7 @@ The modified data value of first element is 15.
 ## <a name="rend"></a>hash_multimap:: rend
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator, który odnosi się do lokalizacji następującej po ostatnim elemencie w odwróconym hash_multimap.
 
@@ -2128,7 +2128,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym hash_multimap (lokalizacja, która poprzedza pierwszy element w nieodwróconym hash_multimap).
 
@@ -2206,7 +2206,7 @@ After the erasure, the last element in the reversed hash_multimap is 2.
 ## <a name="reverse_iterator"></a>hash_multimap:: reverse_iterator
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować element w odwróconej hash_multimap.
 
@@ -2227,7 +2227,7 @@ Zapoznaj się z przykładem dla [rbegin](#rbegin) , aby zapoznać się z przykł
 ## <a name="size"></a>hash_multimap:: size
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca liczbę elementów w hash_multimap.
 
@@ -2235,7 +2235,7 @@ Zwraca liczbę elementów w hash_multimap.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca długość hash_multimap.
 
@@ -2277,7 +2277,7 @@ The hash_multimap length is now 2.
 ## <a name="size_type"></a>hash_multimap:: size_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ liczby całkowitej bez znaku, który zlicza liczbę elementów w hash_multimap.
 
@@ -2294,7 +2294,7 @@ Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) przykładu sposobu dek
 ## <a name="swap"></a>hash_multimap:: swap
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Wymienia elementy dwóch hash_multimaps.
 
@@ -2366,7 +2366,7 @@ After swapping with hm3, hash_multimap hm1 is: 300.
 ## <a name="upper_bound"></a>hash_multimap:: upper_bound
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Zwraca iterator do pierwszego elementu w hash_multimap z kluczem, który jest większy niż określony klucz.
 
@@ -2381,7 +2381,7 @@ const_iterator upper_bound(const Key& key) const;
 *klucz*\
 Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z przeszukiwanego hash_multimap.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 [Iterator](#iterator) lub [const_iterator](#const_iterator) , który odnosi się do lokalizacji elementu w hash_multimap z kluczem, który jest większy niż klucz argumentu lub który odnosi się do lokalizacji po ostatnim elemencie w hash_multimap, jeśli nie znaleziono żadnego dopasowania dla klucza.
 
@@ -2452,7 +2452,7 @@ that of the initial element of hm1 is: 20.
 ## <a name="value_comp"></a>hash_multimap:: value_comp
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Funkcja członkowska zwraca obiekt funkcji, który określa kolejność elementów w hash_multimap, porównując ich wartości klucza.
 
@@ -2460,7 +2460,7 @@ Funkcja członkowska zwraca obiekt funkcji, który określa kolejność element�
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca obiekt funkcji porównania, którego hash_multimap używa do porządkowania jego elementów.
 
@@ -2522,7 +2522,7 @@ int main( )
 ## <a name="value_type"></a>hash_multimap:: value_type
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
+> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Typ, który reprezentuje typ obiektu przechowywanego w hash_multimap.
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867141"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422116"
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 
@@ -38,7 +38,7 @@ Reprezentuje streszczenie dla środowisko uruchomieniowe współbieżności Sche
 class Scheduler;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -112,7 +112,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 Zasady harmonogramu opisujące zachowanie nowo utworzonego harmonogramu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego harmonogramu. Ten obiekt `Scheduler` ma umieszczaną początkową liczbę odwołań.
 
@@ -139,7 +139,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której zadania w ramach grupy harmonogramu będą rozliczać do wykonywania w.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonej grupy harmonogramów. Ten obiekt `ScheduleGroup` ma umieszczaną początkową liczbę odwołań.
 
@@ -157,7 +157,7 @@ Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżąca liczba procesorów wirtualnych dla harmonogramu.
 
@@ -169,7 +169,7 @@ Zwraca kopię zasad, za pomocą której został utworzony harmonogram.
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kopia zasad, za pomocą których harmonogram został utworzony.
 
@@ -181,7 +181,7 @@ Zwraca unikatowy identyfikator dla harmonogramu.
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Unikatowy identyfikator dla harmonogramu.
 
@@ -198,7 +198,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której ma być wysyłana Kwerenda dotycząca usługi Scheduler.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazanie, czy lokalizacja określona przez argument `_Placement` jest dostępna w harmonogramie.
 
@@ -214,7 +214,7 @@ Zwiększa liczbę odwołań harmonogramu.
 virtual unsigned int Reference() = 0 ;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowo zwiększona liczba odwołań.
 
@@ -245,7 +245,7 @@ Zmniejsza liczbę odwołań do harmonogramu.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowo zmniejszona liczba odwołań.
 

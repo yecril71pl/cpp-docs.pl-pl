@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 ms.openlocfilehash: a4771e9c2c48bfe9c4c09629278533b031d60979
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890878"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421941"
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 
@@ -63,9 +63,9 @@ W przeciwieństwie do podobnej [klasy vector\<bool >](../standard-library/vector
 
 Bit jest ustawiony, jeśli jego wartość jest równa 1 i zresetowana, jeśli jej wartość wynosi 0. Aby przerzucić lub odwrócić bit, należy zmienić jego wartość z 1 na 0 lub z 0 na 1. *N* bitów w bitset są indeksowane wartości całkowite z przedziału od 0 do *N* -1, gdzie 0 indeksuje pierwszą pozycję bitową i *N* -1 ostatniej pozycji bitu.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -130,7 +130,7 @@ Testuje wszystkie bity w tym bitset, aby określić, czy są one ustawione na wa
 bool all() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli wszystkie bity w tym zestawie są spełnione. Zwraca **wartość false** , jeśli co najmniej jeden bity ma wartość false.
 
@@ -142,7 +142,7 @@ Testuje, czy dowolny bit w sekwencji jest ustawiony na 1.
 bool any() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli dowolny bit w bitset jest ustawiony na 1; **Fałsz** , jeśli wszystkie bity są równe 0.
 
@@ -350,7 +350,7 @@ Zwraca liczbę bitów ustawionych w sekwencji bitowej.
 size_t count() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bitów ustawiona w sekwencji bitowej.
 
@@ -466,7 +466,7 @@ bitset\<N>& flip(size_t _Pos);
 *_Pos*\
 Pozycja bitu, którego wartość ma zostać odwrócona.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Kopia zmodyfikowanego bitset, dla którego wywołano funkcję członkowską.
 
@@ -540,7 +540,7 @@ Testuje, czy żaden bit nie został ustawiony na 1 w obiekcie bitset.
 bool none() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli nie ustawiono bitu w bitset na 1; **wartość false** , jeśli co najmniej jeden bit został ustawiony na 1.
 
@@ -602,7 +602,7 @@ bool operator!=(const bitset\<N>& right) const;
 *prawa*\
 Bitset, który ma zostać porównany z bitsetem docelowym dla nierówności.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli bitsets są różne; **Fałsz** , jeśli są takie same.
 
@@ -664,7 +664,7 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 *prawa*\
 Bitset, który ma być połączony bitowy z bitsetem docelowym.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zmodyfikowana wartość docelowa bitset, która jest wynikiem operacji `AND` bitowej z bitset określoną jako parametr.
 
@@ -731,7 +731,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 *_Pos*\
 Liczba pozycji po lewej stronie, które mają zostać przesunięte w bitset.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zmodyfikowany bitset z bitami przenoszonymi w lewo do wymaganej liczby pozycji.
 
@@ -783,7 +783,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 *_Pos*\
 Liczba pozycji z lewej strony, które mają zostać przesunięte w bitset.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Celem bitset zmodyfikowano, tak aby bity były przesunięte w lewo do wymaganej liczby pozycji.
 
@@ -830,7 +830,7 @@ bool operator==(const bitset\<N>& right) const;
 *prawa*\
 Bitset, który ma zostać porównany z bitsetem docelowym.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli bitsets jest taka sama; **Fałsz** , jeśli są różne.
 
@@ -891,7 +891,7 @@ bitset\<N> operator>>(size_t _Pos) const;
 *_Pos*\
 Liczba pozycji z prawej strony, które mają zostać przesunięte w bitset.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Nowy bitset, w którym bity zostały przesunięte w prawo do wymaganej liczby pozycji względem dostosowanej bitset.
 
@@ -944,7 +944,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 *_Pos*\
 Liczba pozycji z prawej strony, które mają zostać przesunięte w bitset.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Celem bitset zmodyfikowano, tak aby bity były przesunięte do odpowiedniej liczby pozycji.
 
@@ -1036,7 +1036,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 *prawa*\
 Bitset, który ma być połączony bitowy z bitsetem docelowym.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zmodyfikowana wartość docelowa bitset, która wynika z operacji bitowego `OR` wyłącznego z bitset określony jako parametr.
 
@@ -1102,7 +1102,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 *prawa*\
 Bitset, który ma być połączony bitowy z bitsetem docelowym.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Zmodyfikowana wartość docelowa bitset, która jest wynikiem operacji bitowego `OR`, z bitsetem określonym jako parametr.
 
@@ -1164,7 +1164,7 @@ Odwraca wszystkie bity w docelowym bitset i zwraca wynik.
 bitset\<N> operator~() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Bitset z wszystkimi bitami odwracanymi w odniesieniu do dostosowanej bitset.
 
@@ -1225,7 +1225,7 @@ Wartość obiektu typu **bool** , która ma być przypisana do bitu w bitset.
 *_Bitref*\
 Odwołanie do postaci *x [i]* do bitu na pozycji *i* w bitset *x*.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do bitu w bitset określonym przez pozycję argumentu dla pierwszej, drugiej i piątej funkcji składowej klasy Reference oraz **wartości true** lub **false**, aby odzwierciedlić wartość zmodyfikowanego bitu w bitset dla trzeciej i czwartej funkcji składowej odwołania do klasy.
 
@@ -1337,7 +1337,7 @@ bitset\<N>& reset(size_t _Pos);
 *_Pos*\
 Pozycja bitu w bitset, która ma zostać zresetowana do wartości 0.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Kopia elementu bitset, dla którego wywołano funkcję członkowską.
 
@@ -1403,7 +1403,7 @@ Pozycja bitu w bitset, który ma być ustawiony na przypisaną wartość.
 *val*\
 Wartość, która ma zostać przypisana do bitu na określonej pozycji.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Kopia elementu bitset, dla którego wywołano funkcję członkowską.
 
@@ -1457,7 +1457,7 @@ Zwraca liczbę bitów w obiekcie bitset.
 size_t size() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 Liczba bitów, *n*, w bitset\<N >.
 
@@ -1504,7 +1504,7 @@ bool test(size_t _Pos) const;
 *_Pos*\
 Pozycja bitu w bitset, który ma być testowany jako wartość.
 
-#### <a name="return-value"></a>Wartość zwracana
+#### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli bit określony przez pozycję argumentu jest ustawiony na 1; w przeciwnym razie **false**.
 

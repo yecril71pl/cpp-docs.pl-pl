@@ -13,11 +13,11 @@ helpviewer_keywords:
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
 ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863220"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417944"
 ---
 # <a name="ccomcoclass-class"></a>Klasa CComCoClass
 
@@ -38,11 +38,11 @@ Klasa, która pochodzi od `CComCoClass`.
 *pclsid*<br/>
 Wskaźnik do identyfikatora CLSID obiektu.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CComCoClass:: CreateInstance](#createinstance)|Ruchom Tworzy wystąpienie klasy i zapytania dla interfejsu.|
 |[CComCoClass:: Error](#error)|Ruchom Zwraca informacje o rozbudowanym błędzie dla klienta.|
@@ -90,7 +90,7 @@ podczas Nieznana zewnętrzna lub kontrolka nieznana agregacji.
 *miesięcznie*<br/>
 określoną Adres zmiennej wskaźnika, która odbiera żądany wskaźnik interfejsu, jeśli Tworzenie zakończy się pomyślnie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT. Aby uzyskać opis możliwych zwracanych wartości, zobacz Funkcja [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) w Windows SDK.
 
@@ -177,7 +177,7 @@ podczas Ścieżka i nazwa pliku pomocy opisującego błąd.
 *hInst*<br/>
 podczas Dojście do zasobu. Domyślnie ten parametr jest `_AtlModule::GetResourceInstance`, gdzie `_AtlModule` jest globalnym wystąpieniem [CAtlModule](../../atl/reference/catlmodule-class.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
@@ -195,7 +195,7 @@ Zapewnia spójny sposób pobierania identyfikatora CLSID obiektu.
 static const CLSID& WINAPI GetObjectCLSID();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator klasy obiektu.
 
@@ -207,7 +207,7 @@ Ta funkcja statyczna Pobiera opis tekstu obiektu klasy.
 static LPCTSTR WINAPI GetObjectDescription();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Opis obiektu klasy.
 
@@ -221,6 +221,6 @@ Domyślna implementacja zwraca wartość NULL. Tę metodę można zastąpić za 
 
 Aby uzyskać więcej informacji na temat Kreatora projektu ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884167"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418448"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -423,7 +423,7 @@ int (*myFunction(char* s))(int);
 
 Poprzednia deklaracja jest równoważna z deklaracją przy użyciu elementu typedef powyżej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeładowywanie funkcji](../cpp/function-overloading.md)<br/>
 [Funkcje ze zmiennymi listami argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>

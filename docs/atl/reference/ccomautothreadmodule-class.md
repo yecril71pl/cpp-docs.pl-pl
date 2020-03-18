@@ -18,11 +18,11 @@ helpviewer_keywords:
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
 ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866176"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417923"
 ---
 # <a name="ccomautothreadmodule-class"></a>Klasa CComAutoThreadModule
 
@@ -43,7 +43,7 @@ class CComAutoThreadModule : public CComModule
 *ThreadAllocator*<br/>
 podczas Klasa, która zarządza wyborem wątku. Wartość domyślna to [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -121,7 +121,7 @@ podczas Identyfikator IID żądanego interfejsu.
 *ppvObj*<br/>
 określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObj* ma wartość null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Standardowa wartość HRESULT.
 
@@ -149,7 +149,7 @@ Od biblioteki ATL 7,0 `CComAutoThreadModule` jest przestarzała: zobacz [klasy m
 static int GetDefaultThreads();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wątków, które mają zostać utworzone w module EXE.
 
@@ -195,7 +195,7 @@ Od biblioteki ATL 7,0 `CComAutoThreadModule` jest przestarzała: zobacz [klasy m
 LONG Lock();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
@@ -247,7 +247,7 @@ Od biblioteki ATL 7,0 `CComAutoThreadModule` jest przestarzała: zobacz [klasy m
 LONG Unlock();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
@@ -257,7 +257,7 @@ Wykonuje niepodzielną liczbę blokad dla modułu i dla bieżącego wątku. `CCo
 
 Gdy liczba blokad modułu osiągnie zero, moduł może zostać zwolniony.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

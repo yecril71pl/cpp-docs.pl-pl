@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
 ms.openlocfilehash: e9ad7c363f2580200af20baeb0acd7a93c1f603b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871774"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420996"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 
@@ -39,11 +39,11 @@ Obsługuje implementację trwałości dla kontrolek OLE.
 class AFX_NOVTABLE CPropExchange
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Wymienia binarną Właściwość dużego obiektu (BLOB).|
 |[CPropExchange::ExchangeFontProp](#exchangefontprop)|Wymienia Właściwość Font.|
@@ -100,7 +100,7 @@ Wskaźnik do zmiennej wskazującej lokalizację, w której jest przechowywana W�
 *hBlobDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -136,7 +136,7 @@ Wskaźnik do struktury [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc) 
 *pFontDispAmbient*<br/>
 Wskaźnik do interfejsu `IFontDisp` czcionki, który ma być używany do inicjowania stanu domyślnego właściwości czcionki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -172,7 +172,7 @@ Identyfikator interfejsu interfejsu we właściwości, która będzie używana p
 *pUnkDefault*<br/>
 Wartość domyślna właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -218,7 +218,7 @@ Wskaźnik do wartości właściwości.
 *pvDefault*<br/>
 Wskaźnik na wartość domyślną właściwości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wymiana zakończyła się pomyślnie; 0, jeśli nie powiodło się.
 
@@ -250,7 +250,7 @@ Numer bieżącej wersji formantu.
 *bConvert*<br/>
 Wskazuje, czy dane trwałe mają być konwertowane do bieżącej wersji, czy nie mają być przechowywane w tej samej wersji, która została załadowana.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja się powiedzie; 0 w przeciwnym razie.
 
@@ -262,7 +262,7 @@ Wywołaj tę funkcję, aby pobrać numer wersji formantu.
 DWORD GetVersion();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Numer wersji formantu.
 
@@ -274,7 +274,7 @@ Określa, czy wymiana właściwości odbywa się asynchronicznie.
 BOOL IsAsynchronous();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli właściwości są wymieniane asynchronicznie, w przeciwnym razie FALSE.
 
@@ -286,11 +286,11 @@ Wywołaj tę funkcję, aby określić, czy właściwości są ładowane do kontr
 BOOL IsLoading();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli są ładowane właściwości; w przeciwnym razie 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

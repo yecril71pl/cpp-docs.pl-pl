@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876312"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421892"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -77,7 +77,7 @@ Inne specjalizacje `ctype<CharType>`szablonu klasy:
 
 Wszystkie inne operacje są wykonywane na wartościach **char** w taki sam sposób jak w przypadku jawnej specjalizacji `ctype<char>`.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -189,7 +189,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty
 \ miejsca *docelowego*
 Wskaźnik do początku tablicy, gdzie są przechowywane wartości maski charakteryzujące atrybuty każdego z znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca wartość logiczną **prawda** , jeśli testowany znak ma atrybut opisany przez wartość maski; **wartość false** , jeśli nie ma atrybutu.
 
@@ -236,7 +236,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekon
 \ miejsca *docelowego*
 Stała wskaźnik do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza chroniona funkcja członkowska zwraca natywny znak typu char, który odpowiada znakowi parametru typu `CharType` lub *wartość domyślna* , jeśli nie zdefiniowano odpowiednika.
 
@@ -272,7 +272,7 @@ Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określoną maską. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
@@ -306,7 +306,7 @@ Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
@@ -341,7 +341,7 @@ Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być 
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza chroniona funkcja członkowska zwraca małą formę parametru *ch*. Jeśli nie istnieje małe litery, zwraca wartość *ch*. Druga funkcja chronionego elementu członkowskiego zwraca wartość *Last*.
 
@@ -376,7 +376,7 @@ Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być 
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza chroniona funkcja członkowska zwraca wielką formę parametru *ch*. Jeśli nie istnieje Wielka litera, zwraca wartość *ch*. Druga funkcja chronionego elementu członkowskiego zwraca wartość *Last*.
 
@@ -415,7 +415,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekon
 \ miejsca *docelowego*
 Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza chroniona funkcja członkowska zwraca znak typu `CharType`, który odpowiada znakowi parametru typu natywnego **char**.
 
@@ -459,7 +459,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, którego atrybuty
 \ miejsca *docelowego*
 Wskaźnik do początku tablicy, gdzie są przechowywane wartości maski charakteryzujące atrybuty każdego z znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca **wartość true** , jeśli testowany znak ma atrybut opisany przez wartość maski; **wartość false** , jeśli nie ma atrybutu.
 
@@ -539,7 +539,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekon
 \ miejsca *docelowego*
 Stała wskaźnik do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca natywny znak typu **char** , który odpowiada znakowi parametru typu `CharType default`, jeśli nie określono odpowiednika.
 
@@ -597,7 +597,7 @@ Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszego znaku w zakresie, który jest zgodny z określoną maską. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
@@ -653,7 +653,7 @@ Wskaźnik do pierwszego znaku w zakresie, który ma być skanowany.
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie, który ma być skanowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski. Jeśli taka wartość nie istnieje, funkcja zwraca wartość *Last*.
 
@@ -708,7 +708,7 @@ Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być 
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca małą formę parametru *ch*. Jeśli nie istnieje małe litery, zwraca wartość *ch*.
 
@@ -763,7 +763,7 @@ Wskaźnik do pierwszego znaku w zakresie znaków, którego przypadki mają być 
 *ostatni*\
 Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków, którego przypadki mają być konwertowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca wielką formę parametru *ch*. Jeśli nie istnieje Wielka litera, zwraca wartość *ch*.
 
@@ -821,7 +821,7 @@ Wskaźnik do znaku bezpośrednio po ostatnim znaku w zakresie znaków do przekon
 \ miejsca *docelowego*
 Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowany zakres znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca znak typu `CharType`, który odpowiada znakowi parametru typu natywnego **char**.
 

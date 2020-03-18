@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857354"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418028"
 ---
 # <a name="catlwinmodule-class"></a>Klasa CAtlWinModule
 
@@ -30,18 +30,18 @@ Ta klasa zapewnia obsługę składników okienek ATL.
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Konstruktor.|
 |[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Dodaje obiekt danych.|
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Zwraca wskaźnik do obiektu danych modułu okna.|
@@ -112,11 +112,11 @@ Ta metoda zwraca wskaźnik do struktury `_AtlCreateWndData`.
 void* ExtractCreateWndData();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do struktury `_AtlCreateWndData`, która została wcześniej dodana z [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)lub null, jeśli żaden obiekt nie jest dostępny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>

@@ -3,24 +3,22 @@ title: CCustomCommand (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyprovidercommand
-- myproviderrs.h
 - ccustomcommand
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: b10d7bccae6fa9b86d072b8e13791f23516b2c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bd60b63490303c65729843c3c0351a570a8056
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230722"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444150"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CCustomCommand` Klasa jest implementacją dla obiektu polecenia dostawcy. Zapewnia to implementacja `IAccessor`, `ICommandText`, i `ICommandProperties` interfejsów. `IAccessor` Interfejs jest taka sama jak w zestawie wierszy. Obiekt polecenia używa metody dostępu w celu określenia powiązania parametrów. Obiektu zestawu wierszy są one używane do określenia powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w formie tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje niestandardowy kod; zastępuje ona również `ICommand::Execute` metody. `ICommandProperties` Interfejs obsługuje wszystkie właściwości dla obiektów poleceń i wierszy.
+Klasa `CCustomCommand` jest implementacją obiektu polecenia dostawcy. Zawiera implementację interfejsów `IAccessor`, `ICommandText`i `ICommandProperties`. Interfejs `IAccessor` jest taki sam jak w zestawie wierszy. Obiekt Command używa metody dostępu, aby określić powiązania dla parametrów. Obiekt zestawu wierszy używa ich do określania powiązań dla kolumn danych wyjściowych. Interfejs `ICommandText` to przydatny sposób, aby w sposób jednotekstowy określić polecenie. Ten przykład używa interfejsu `ICommandText` w późniejszym czasie, gdy dodaje kod niestandardowy; zastępuje ona również metodę `ICommand::Execute`. Interfejs `ICommandProperties` obsługuje wszystkie właściwości dla obiektów poleceń i zestawów wierszy.
 
 ```cpp
 // CCustomCommand
@@ -35,12 +33,12 @@ class ATL_NO_VTABLE CCustomCommand :
    public IColumnsInfoImpl<CCustomCommand>
 ```
 
-`IAccessor` Interfejsu zarządza wszystkie powiązania, używany w poleceniach i zestawy wierszy. Wywołania konsumenta `IAccessor::CreateAccessor` z tablicą `DBBINDING` struktury. Każdy `DBBINDING` struktura zawiera informacje dotyczące obsługi powiązania kolumny (takie jak typ i długość). Dostawca otrzymuje struktur i określa, jak należy przenieść dane oraz czy wszystkie konwersje niezbędne. `IAccessor` Interfejs jest używany w obiekcie polecenia do obsługi parametrów w poleceniu.
+Interfejs `IAccessor` zarządza wszystkimi powiązaniami używanymi w poleceniach i zestawach wierszy. Odbiorca wywołuje `IAccessor::CreateAccessor` z tablicą struktur `DBBINDING`. Każda struktura `DBBINDING` zawiera informacje dotyczące sposobu obsługi powiązań kolumn (takich jak typ i długość). Dostawca otrzymuje struktury, a następnie określa, jak powinny być transferowane dane oraz czy są wymagane wszystkie konwersje. Interfejs `IAccessor` jest używany w obiekcie polecenia do obsługi parametrów w poleceniu.
 
-Obiekt polecenia oferuje również implementację `IColumnsInfo`. OLE DB wymaga `IColumnsInfo` interfejsu. Interfejs umożliwia, aby pobrać informacje o parametrach z polecenia. Używa obiektu zestawu wierszy `IColumnsInfo` interfejsu do zwracania informacji dotyczących kolumn wyjściowych dostawcy.
+Obiekt Command zawiera również implementację `IColumnsInfo`. OLE DB wymaga interfejsu `IColumnsInfo`. Interfejs umożliwia konsumentowi pobieranie informacji o parametrach z polecenia. Obiekt zestawu wierszy używa interfejsu `IColumnsInfo`, aby zwrócić informacje o kolumnach wyjściowych do dostawcy.
 
-Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. `IObjectWithSite` Interfejs został wdrożony w wersji 2.0 biblioteki ATL i umożliwia implementujący do przekazywania informacji o sobie samym do jego podrzędny. Obiekt polecenia używa `IObjectWithSite` informacje, aby poinformować dowolne wygenerowane obiekty zestawu wierszy o który je utworzył.
+Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. Interfejs `IObjectWithSite` został zaimplementowany w ATL 2,0 i umożliwia programowi implementującemu przekazywanie informacji o sobie bezpośrednio do jego obiektu podrzędnego. Obiekt Command używa informacji `IObjectWithSite` do poinformowania o tym, kto utworzył te obiekty zestawu wierszy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

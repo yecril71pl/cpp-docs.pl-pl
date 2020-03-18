@@ -38,11 +38,11 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
 ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862978"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417594"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 
@@ -1019,6 +1019,6 @@ podczas Oznacza koniec ciągłego zakresu identyfikatorów kontrolek.
 *func*<br/>
 podczas Nazwa funkcji obsługi komunikatów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Utworze](../../atl/reference/atl-macros.md)

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865085"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418196"
 ---
 # <a name="csimplestringt-class"></a>Klasa CSimpleStringT
 
@@ -65,25 +65,25 @@ Typ znaku klasy String. Może to być jeden z następujących modyfikatorów dos
 
 - Używanie TCHAR (dla ciągów znaków ANSI i Unicode).
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSimpleStringT::P CXSTR](#pcxstr)|Wskaźnik do stałego ciągu.|
 |[CSimpleStringT::P XSTR](#pxstr)|Wskaźnik do ciągu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Konstrukcje `CSimpleStringT` obiektów na różne sposoby.|
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSimpleStringT:: Append](#append)|Dołącza obiekt `CSimpleStringT` do istniejącego obiektu `CSimpleStringT`.|
 |[CSimpleStringT::AppendChar](#appendchar)|Dołącza znak do istniejącego obiektu `CSimpleStringT`.|
@@ -112,7 +112,7 @@ Typ znaku klasy String. Może to być jeden z następujących modyfikatorów dos
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSimpleStringT:: operator PCXSTR](#operator_pcxstr)|Bezpośrednio uzyskuje dostęp do znaków przechowywanych w obiekcie `CSimpleStringT` jako ciąg w stylu C.|
 |[CSimpleStringT:: operator\[\]](#operator_at)|Zwraca znak w danej pozycji — podstawienie operatora dla `GetAt`.|
@@ -394,7 +394,7 @@ Pobiera przydzieloną długość obiektu `CSimpleStringT`.
 int GetAllocLength() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków przyznanych dla tego obiektu.
 
@@ -417,7 +417,7 @@ XCHAR GetAt(int iChar) const;
 *iChar*<br/>
 Liczony od zera indeks znaku w obiekcie `CSimpleStringT`. Parametr *iChar* musi być większy lub równy 0 i mniejszy od wartości zwracanej przez [GetLength](#getlength). W przeciwnym razie `GetAt` wygeneruje wyjątek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `XCHAR`, która zawiera znak znajdujący się w określonej pozycji w ciągu.
 
@@ -452,7 +452,7 @@ Minimalna liczba znaków, jaką może zawierać bufor znaków. Ta wartość nie 
 
 Jeśli wartość *nMinBufferLength* jest większa niż długość bieżącego buforu, `GetBuffer` niszczy bieżący bufor, zastępuje ją buforem żądanego rozmiaru i resetuje liczbę odwołań do obiektów na zero. Jeśli wcześniej wywołano [LockBuffer](#lockbuffer) w tym buforze, utracisz blokadę buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `PXSTR` wskaźnik do bufora znaków (zakończona wartością null) obiektu.
 
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 *nLength*<br/>
 Dokładny rozmiar buforu znaków `CSimpleStringT` w znakach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `PXSTR` wskaźnik do bufora znaków (zakończona wartością null) obiektu.
 
@@ -550,7 +550,7 @@ Zwraca liczbę znaków w obiekcie `CSimpleStringT`.
 int GetLength() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków w ciągu.
 
@@ -570,7 +570,7 @@ Pobiera Menedżera pamięci `CSimpleStringT` obiektu.
 IAtlStringMgr* GetManager() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do Menedżera pamięci dla obiektu `CSimpleStringT`.
 
@@ -588,7 +588,7 @@ Pobiera ciąg znaków.
 PCXSTR GetString() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do ciągu znaków zakończonych znakiem null.
 
@@ -619,7 +619,7 @@ Testuje obiekt `CSimpleStringT` dla pustego warunku.
 bool IsEmpty() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli obiekt `CSimpleStringT` ma 0 długości; w przeciwnym razie FALSE.
 
@@ -646,7 +646,7 @@ Wyłącza zliczanie odwołań i chroni ciąg w buforze.
 PXSTR LockBuffer();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CSimpleStringT` lub ciąg zakończony znakiem null.
 
@@ -837,7 +837,7 @@ Bezpośrednio uzyskuje dostęp do znaków przechowywanych w obiekcie `CSimpleStr
 operator PCXSTR() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik znaku do danych ciągu.
 
@@ -1108,7 +1108,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 *psz*<br/>
 Wskaźnik na ciąg zakończony znakiem null.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków w *PSZ*; nie zliczanie terminatora o wartości null.
 
@@ -1189,7 +1189,7 @@ Niszczy obiekt `CSimpleStringT`.
 
 Wywołaj tę metodę, aby zniszczyć obiekt `CSimpleStringT`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864891"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417713"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funkcje globalne debugowania i raportowania błędów
 
@@ -143,7 +143,7 @@ podczas Ścieżka i nazwa pliku pomocy opisującego błąd.
 *hInst*<br/>
 podczas Dojście do zasobu. Domyślnie ten parametr jest `__AtlBaseModuleModule::GetResourceInstance`, gdzie `__AtlBaseModuleModule` jest globalnym wystąpieniem [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) lub klasy pochodzącej od niej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli parametr *hRes* jest różny od zera, zwraca wartość *hRes*. Jeśli *hRes* ma wartość zero, wówczas pierwsze cztery wersje `AtlReportError` zwracają DISP_E_EXCEPTION. Ostatnie dwie wersje zwracają wynik **MAKE_HRESULT makro (1, FACILITY_ITF,** `nID` **)** .
 
@@ -221,7 +221,7 @@ Jeśli _ATL_NO_EXCEPTIONS jest zdefiniowany, funkcja powoduje błąd potwierdzen
 
 **Nagłówek:** atldef. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Makra debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-macros.md)

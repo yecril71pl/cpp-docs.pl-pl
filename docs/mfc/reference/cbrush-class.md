@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876051"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420541"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
 
@@ -41,7 +41,7 @@ Hermetyzuje pędzel interfejsu urządzenia graficznego (GDI) systemu Windows.
 class CBrush : public CGdiObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -151,7 +151,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 *lpLogBrush*<br/>
 Wskazuje strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) , która zawiera informacje o pędzlu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -194,7 +194,7 @@ Określa, czy `bmiColors[]` pola struktury danych [BITMAPINFO](/windows/win32/ap
 *lpPackedDIB*<br/>
 Wskazuje spakowaną wersję DIB składającą się ze struktury `BITMAPINFO` bezpośrednio po której następuje tablica bajtów definiująca piksele mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -254,7 +254,7 @@ Określa styl kreskowania pędzla. Może to być jedna z następujących wartoś
 *crColor*<br/>
 Określa kolor pierwszego planu pędzla jako kolor RGB (kolor kreskowań). Aby uzyskać więcej informacji, zobacz [COLORREF](/windows/win32/gdi/colorref) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -279,7 +279,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 *pBitmap*<br/>
 Identyfikuje mapę bitową.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -312,7 +312,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 *crColor*<br/>
 Struktura [COLORREF](/windows/win32/gdi/colorref) , która określa kolor pędzla. Kolor określa wartość RGB i można ją utworzyć za pomocą makra RGB w systemie WINDOWS. C.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -339,7 +339,7 @@ BOOL CreateSysColorBrush(int nIndex);
 *nIndex*<br/>
 Określa indeks koloru. Ta wartość odpowiada kolorowi użytemu do malowania jednego z 21 elementów okna. Aby uzyskać listę wartości, zobacz [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -366,7 +366,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 *hBrush*<br/>
 Dojście do pędzla GDI systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CBrush`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -393,7 +393,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 *pLogBrush*<br/>
 Wskazuje strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) , która zawiera informacje o pędzlu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, a *pLogBrush* jest prawidłowym wskaźnikiem, wartość zwracana jest liczbą bajtów przechowywanych w buforze.
 
@@ -419,7 +419,7 @@ Użyj tego operatora, aby uzyskać dojście do dołączonego interfejsu GDI syst
 operator HBRUSH() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows reprezentowanego przez obiekt `CBrush`; w przeciwnym razie wartość NULL.
 

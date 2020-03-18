@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867089"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421997"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;niepodzielne funkcje&gt;
 
@@ -113,7 +113,7 @@ Wskaźnik do wartości typu `Ty`.
 \ *wartości*
 Wartość typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli wartości są równe, w przeciwnym razie **false**.
 
@@ -160,7 +160,7 @@ Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) a
 *Order2*\
 Drugi argument `memory_order`. Wartość *Order2* nie może być `memory_order_release` ani `memory_order_acq_rel`, nie może być silniejszy niż wartość *Order1*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli wartości są równe, w przeciwnym razie **false**.
 
@@ -197,7 +197,7 @@ Wskaźnik do wartości typu `Ty`.
 \ *wartości*
 Wartość typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli wartości są równe, w przeciwnym razie **false**.
 
@@ -244,7 +244,7 @@ Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) a
 *Order2*\
 Drugi argument `memory_order`. Wartość *Order2* nie może być `memory_order_release` ani `memory_order_acq_rel`, ani nie może być silniejszy niż wartość *Order1*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli wartości są równe, w przeciwnym razie **false**.
 
@@ -272,7 +272,7 @@ Wskaźnik do obiektu `atomic`, w którym jest przechowywana wartość typu `Ty`.
 \ *wartości*
 Wartość typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywana wartość *Atom* przed wymianą.
 
@@ -309,7 +309,7 @@ Wartość typu `Ty`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywana wartość *Atom* przed wymianą.
 
@@ -336,7 +336,7 @@ Wskaźnik do obiektu `atomic`, który przechowuje wskaźnik do typu `T`.
 \ *wartości*
 Wartość typu `ptrdiff_t`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -380,7 +380,7 @@ Wskaźnik do obiektu `atomic`, który przechowuje wskaźnik do typu `T`.
 \ *wartości*
 Wartość typu `ptrdiff_t`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -423,7 +423,7 @@ Wskaźnik do obiektu `atomic`, w którym jest przechowywana wartość typu `T`.
 \ *wartości*
 Wartość typu `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -460,7 +460,7 @@ Wartość typu `T`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -487,7 +487,7 @@ Wskaźnik do obiektu `atomic`, w którym jest przechowywana wartość typu `T`.
 \ *wartości*
 Wartość typu `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -524,7 +524,7 @@ Wartość typu `T`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -556,7 +556,7 @@ Wskaźnik do obiektu `atomic`, który przechowuje wskaźnik do typu `T`.
 \ *wartości*
 Wartość typu `ptrdiff_t`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -598,7 +598,7 @@ Wskaźnik do obiektu `atomic`, który przechowuje wskaźnik do typu `T`.
 \ *wartości*
 Wartość typu `ptrdiff_t`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -642,7 +642,7 @@ Wskaźnik do obiektu `atomic`, w którym jest przechowywana wartość typu `T`.
 \ *wartości*
 Wartość typu `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -679,7 +679,7 @@ Wartość typu `T`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
@@ -732,7 +732,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 \ *flagi*
 Wskaźnik do obiektu `atomic_flag`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Początkowa wartość *flagi*.
 
@@ -753,7 +753,7 @@ Wskaźnik do obiektu `atomic_flag`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Początkowa wartość *flagi*.
 
@@ -796,7 +796,7 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 \ *Atom*
 Wskaźnik do obiektu `atomic`, w którym jest przechowywana wartość typu `T`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli operacje niepodzielne na *atomze* są wolne od blokady. w przeciwnym razie **false**.
 
@@ -820,7 +820,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 \ *Atom*
 Wskaźnik do obiektu `atomic`, który zawiera wartość typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pobrana wartość, która jest przechowywana w *Atom*.
 
@@ -847,7 +847,7 @@ Wskaźnik do obiektu `atomic`, który zawiera wartość typu `Ty`.
 \ *kolejności*
 [Memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie należy używać `memory_order_release` ani `memory_order_acq_rel`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pobrana wartość, która jest przechowywana w *Atom*.
 
@@ -973,7 +973,7 @@ Ty kill_dependency(Ty Arg) noexcept;
 \ *ARG*
 Wartość typu `Ty`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość zwracana to *ARG*. Obliczanie wartości *ARG* nie jest zależne od wywołania funkcji. Przez podzielenie możliwego łańcucha zależności funkcja może pozwolić kompilatorowi na generowanie bardziej wydajnego kodu.
 

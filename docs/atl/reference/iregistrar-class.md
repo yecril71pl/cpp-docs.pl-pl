@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857153"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417615"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar, interfejs
 
@@ -36,11 +36,11 @@ typedef interface IRegistrar IRegistrar;
 
 Aby uzyskać więcej informacji, zobacz temat [Używanie parametrów wymiennych (preprocesora rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) .
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Rejestruje zasób. |
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Wyrejestrowuje zasób.|
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie wymiennych parametrów (preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>

@@ -7,11 +7,11 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865850"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422382"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; Typedefs
 
@@ -87,6 +87,6 @@ Aby zapoznać się z listą konstruktorów ciągów, zobacz [basic_string:: basi
 > [!NOTE]
 > Rozmiar **wchar_t** to dwie bajty w systemie Windows, ale nie jest to konieczne w przypadku wszystkich platform. Jeśli potrzebujesz string_view typu dwubajtowego o szerokości, która ma być taka sama na wszystkich platformach, użyj [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) lub [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view >](../standard-library/string-view.md)

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855379"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418651"
 ---
 # <a name="cfileexception-class"></a>Klasa CFileException
 
@@ -41,7 +41,7 @@ Reprezentuje warunek wyjątku związany z plikiem.
 class CFileException : public CException
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -127,7 +127,7 @@ static int PASCAL ErrnoToException(int nErrno);
 *nErrno*<br/>
 Kod błędu liczby całkowitej, zgodnie z definicją w ERRNO pliku w czasie wykonywania. C.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wyliczana odpowiadająca podanej wartości błędu biblioteki wykonawczej.
 
@@ -161,7 +161,7 @@ podczas Maksymalna liczba znaków, jaką może zawierać określony bufor. Obejm
 *pnHelpContext*<br/>
 [in. out] Wskaźnik na liczbę całkowitą bez znaku, która odbiera identyfikator kontekstu pomocy. Jeśli `NULL`, żaden identyfikator nie jest zwracany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
@@ -260,7 +260,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 *lOsError*<br/>
 Kod błędu specyficzny dla systemu operacyjnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość wyliczana odpowiadająca danej wartości błędu systemu operacyjnego.
 

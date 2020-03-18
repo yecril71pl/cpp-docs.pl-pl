@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856577"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418973"
 ---
 # <a name="ios_base-class"></a>ios_base — Klasa
 
@@ -135,9 +135,9 @@ Obiekt klasy ios_base przechowuje informacje o formatowaniu, które składają s
 
 Obiekt klasy ios_base również przechowuje informacje o stanie strumienia, w obiekcie typu [`iostate`](#iostate)i stos wywołania zwrotnego.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -347,7 +347,7 @@ fmtflags flags(fmtflags fmtfl);
 *fmtfl*\
 Nowe ustawienie `fmtflags`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ustawienie poprzedniego lub bieżącego `fmtflags`.
 
@@ -463,7 +463,7 @@ Zwraca przechowywany obiekt locale.
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywany obiekt locale.
 
@@ -498,7 +498,7 @@ locale imbue(const locale& _Loc);
 *_Loc*\
 Nowe ustawienie regionalne.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienia regionalne.
 
@@ -650,7 +650,7 @@ ios_base& operator=(const ios_base& right);
 *prawa*\
 Obiekt typu `ios_base`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt, do którego jest przypisany.
 
@@ -674,7 +674,7 @@ streamsize precision(streamsize _Prec);
 *_Prec*\
 Liczba cyfr znaczących do wyświetlenia lub liczba cyfr po przecinku dziesiętnym w stałej notacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwsza funkcja członkowska zwraca zachowaną [precyzję wyświetlania](../standard-library/ios-base-class.md). Druga funkcja członkowska przechowuje *_Prec* z dokładnością wyświetlania i zwraca poprzednią przechowywaną wartość.
 
@@ -910,7 +910,7 @@ Flagi do włączenia.
 *_Unset*\
 Flagi, które należy wyłączyć.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie flagi formatu
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 *_Sync*\
 Czy wszystkie strumienie są zsynchronizowane z `stdio`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienie tej funkcji.
 
@@ -1004,7 +1004,7 @@ streamsize width(
 *_Wide*\
 Żądany rozmiar strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ustawienie bieżącej szerokości.
 
@@ -1041,7 +1041,7 @@ Określa, że zmienna jest częścią strumienia.
 static int xalloc( );
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Statyczna funkcja członkowska zwraca przechowywaną wartość statyczną, która zwiększa się w każdym wywołaniu.
 
@@ -1079,7 +1079,7 @@ int main( )
 testing
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)

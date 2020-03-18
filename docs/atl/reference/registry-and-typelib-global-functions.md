@@ -18,11 +18,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863216"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417496"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Rejestr i funkcje globalne biblioteki typów
 
@@ -71,7 +71,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 *pEnabled*<br/>
 określoną Wartość TRUE wskazuje, że informacje rejestru są kierowane do węzła **HKCU** ; Wartość FALSE oznacza, że aplikacja zapisuje informacje rejestru w domyślnym węźle. Domyślnym węzłem jest **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli metoda zakończy się pomyślnie, w przeciwnym razie kod błędu HRESULT w przypadku wystąpienia błędu.
 
@@ -109,7 +109,7 @@ Wskaźnik do zmiennej, która otrzymuje dojście do otwartego lub utworzonego kl
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli funkcja się nie powiedzie, wartość zwracana jest niezerowym kodem błędu zdefiniowanym w Winerror. h.
 
@@ -138,7 +138,7 @@ Nazwa klucza, który ma zostać usunięty.
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli funkcja się nie powiedzie, wartość zwracana jest niezerowym kodem błędu zdefiniowanym w Winerror. h.
 
@@ -187,7 +187,7 @@ Uchwyt do wystąpienia modułu.
 *lpszIndex*<br/>
 Ciąg w formacie "\\\N", gdzie N jest indeksem liczbowym zasobu biblioteki typów. Może mieć wartość NULL, jeśli indeks nie jest wymagany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -223,7 +223,7 @@ Wskaźnik do zmiennej, która otrzymuje dojście do tworzonego klucza.
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli funkcja się nie powiedzie, wartość zwracana jest niezerowym kodem błędu zdefiniowanym w Winerror. h.
 
@@ -261,7 +261,7 @@ Wskaźnik do zmiennej, która otrzymuje dojście do otwartego klucza.
 *pTM*<br/>
 Wskaźnik do obiektu `CAtlTransactionManager`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest ERROR_SUCCESS. Jeśli funkcja się nie powiedzie, wartość zwracana jest niezerowym kodem błędu zdefiniowanym w Winerror. h.
 
@@ -303,7 +303,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 *bEnable*<br/>
 podczas Wartość TRUE wskazuje, że informacje rejestru są kierowane do węzła **HKCU** ; Wartość FALSE oznacza, że aplikacja zapisuje informacje rejestru w domyślnym węźle. Domyślnym węzłem jest **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK, jeśli metoda zakończy się pomyślnie, w przeciwnym razie kod błędu HRESULT w przypadku wystąpienia błędu.
 
@@ -337,7 +337,7 @@ Uchwyt do wystąpienia modułu.
 *lpszIndex*<br/>
 Ciąg w formacie "\\\N", gdzie N jest indeksem liczbowym zasobu biblioteki typów. Może mieć wartość NULL, jeśli indeks nie jest wymagany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -377,7 +377,7 @@ Po pomyślnym powrocie, zawiera pełną ścieżkę modułu skojarzonego z biblio
 *ppTypeLib*<br/>
 Po pomyślnym powrocie, zawiera wskaźnik do wskaźnika do załadowanej biblioteki typów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -417,7 +417,7 @@ Wartość wyliczenia wskazująca, która operacja powinna zostać wykonana. Zapo
 *pItem*<br/>
 Wskaźnik na dane, które mają być odczytywane lub zapisywane w rejestrze. Dane mogą również reprezentować klucz, który ma zostać usunięty z rejestru. Wartość domyślna to NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 

@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864757"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417811"
 ---
 # <a name="cwindow-class"></a>Klasa CWindow
 
@@ -173,7 +173,7 @@ Ta klasa udostępnia metody manipulowania oknem.
 class CWindow
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -452,7 +452,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 *hWndCenter*<br/>
 podczas Uchwyt do okna, względem którego należy wyśrodkować. Jeśli parametr ten ma wartość NULL (wartość domyślna), Metoda ustawi *hWndCenter* w oknie nadrzędnym okna, jeśli jest ono oknem podrzędnym. W przeciwnym razie ustawimy *hWndCenter* do okna właściciela okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno zostało pomyślnie wyśrodkowane; w przeciwnym razie FALSE.
 
@@ -580,7 +580,7 @@ podczas Zmienna typu [_U_MENUorID](../../atl/reference/u-menuorid-class.md) okre
 *lpCreateParam*<br/>
 Wskaźnik do danych tworzenia okna zawartych [w strukturze elementu](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, dojście do nowo utworzonego okna, określone przez [m_hWnd](#m_hwnd). W przeciwnym razie wartość NULL.
 
@@ -697,7 +697,7 @@ Odłącza [m_hWnd](#m_hwnd) od obiektu `CWindow` i ustawia `m_hWnd` na null.
 HWND Detach() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Właściwość HWND skojarzona z obiektem `CWindow`.
 
@@ -904,7 +904,7 @@ HWND GetDescendantWindow(int nID) const throw();
 *nID*<br/>
 podczas Identyfikator okna podrzędnego do pobrania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do okna podrzędnego.
 
@@ -934,7 +934,7 @@ podczas Identyfikator interfejsu, który ma zostać pobrany z formantu.
 *ppCtrl*<br/>
 określoną Wskaźnik do interfejsu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub dowolnym prawidłowym błędzie HRESULT. Na przykład funkcja zwraca E_FAIL, jeśli nie można odnaleźć formantu określonego przez *NID* i zwraca E_NOINTERFACE, jeśli formant można znaleźć, ale nie obsługuje interfejsu określonego przez *Identyfikator IID*.
 
@@ -976,7 +976,7 @@ podczas Identyfikator interfejsu, który ma zostać pobrany z formantu.
 *ppHost*<br/>
 określoną Wskaźnik do interfejsu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK, jeśli okno określone przez *Identyfikator IID* jest kontenerem sterowania i żądany interfejs może zostać pobrany. Zwraca E_FAIL, jeśli okno nie jest kontenerem kontrolnym lub nie można pobrać żądanego interfejsu. Jeśli nie można znaleźć okna z określonym IDENTYFIKATORem, wartość zwracana jest równa HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND).
 
@@ -1042,7 +1042,7 @@ Pobiera Style okna rozszerzonego okna.
 DWORD GetExStyle() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Style rozszerzone okna.
 
@@ -1062,7 +1062,7 @@ Pobiera bieżącą czcionkę okna, wysyłając do okna komunikat [WM_GETFONT](/w
 HFONT GetFont() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt czcionki.
 
@@ -1074,7 +1074,7 @@ Określa klawisz dostępu skojarzony z oknem przez wysłanie wiadomości WM_GETH
 DWORD GetHotKey() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kod i Modyfikatory klucza wirtualnego dla klawisza skrótu skojarzonego z oknem. Aby uzyskać listę możliwych modyfikatorów, zobacz [WM_GETHOTKEY](/windows/win32/inputdev/wm-gethotkey) w Windows SDK. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h.
 
@@ -1091,7 +1091,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 *bBigIcon*<br/>
 podczas Jeśli wartość jest RÓWNa TRUE (wartość domyślna), metoda zwraca dużą ikonę. W przeciwnym razie zwraca małą ikonę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt ikony.
 
@@ -1210,7 +1210,7 @@ Pobiera Style okna okna.
 DWORD GetStyle() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Style okna.
 
@@ -1242,7 +1242,7 @@ Pobiera okno nadrzędne najwyższego poziomu okna.
 HWND GetTopLevelParent() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do okna nadrzędnego najwyższego poziomu.
 
@@ -1254,7 +1254,7 @@ Pobiera okno nadrzędne lub właściciela okna najwyższego poziomu.
 HWND GetTopLevelWindow() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do okna właściciela najwyższego poziomu.
 
@@ -1450,7 +1450,7 @@ Element BSTR, w którym będzie przechowywany tekst okna.
 *strText*<br/>
 `CString`, w którym ma być przechowywany tekst okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli tekst został pomyślnie skopiowany, zwracana wartość to TRUE; w przeciwnym razie zwracaną wartością jest FALSE.
 
@@ -1649,7 +1649,7 @@ Określa, czy okno nadrzędne kontrolki jest oknem dialogowym.
 BOOL IsParentDialog() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli okno nadrzędne jest oknem dialogowym, w przeciwnym razie ma wartość FALSE.
 
@@ -1754,7 +1754,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 *odblokowan*<br/>
 podczas W przypadku wartości TRUE (wartość domyślna) okno zostanie zablokowane. W przeciwnym razie zostanie odblokowane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno zostało pomyślnie zablokowane; w przeciwnym razie FALSE.
 
@@ -1832,7 +1832,7 @@ podczas Określa style okna, które mają zostać dodane podczas modyfikacji sty
 *nFlags*<br/>
 podczas Flagi pozycjonowania okna. Aby uzyskać listę możliwych wartości, zobacz funkcję [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli style okna są modyfikowane; w przeciwnym razie FALSE.
 
@@ -1878,7 +1878,7 @@ podczas Określa style rozszerzone, które mają zostać dodane podczas modyfika
 *nFlags*<br/>
 podczas Flagi pozycjonowania okna. Aby uzyskać listę możliwych wartości, zobacz funkcję [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli style okna rozszerzonego są modyfikowane; w przeciwnym razie FALSE.
 
@@ -2312,7 +2312,7 @@ int SetDlgCtrlID(int nID) throw();
 *nID*<br/>
 podczas Nowa wartość do ustawienia dla identyfikatora okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 W przypadku powodzenia, poprzedni identyfikator okna; w przeciwnym razie 0.
 
@@ -2391,7 +2391,7 @@ podczas Kod klucza wirtualnego klawisza skrótu. Aby uzyskać listę standardowy
 *wModifiers*<br/>
 podczas Modyfikatory klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz WM_SETHOTKEY w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Aby uzyskać listę możliwych zwracanych wartości, zobacz [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) w Windows SDK.
 
@@ -2411,7 +2411,7 @@ podczas Uchwyt do nowej ikony.
 *bBigIcon*<br/>
 podczas W przypadku wartości TRUE (wartość domyślna) Metoda ustawia dużą ikonę. W przeciwnym razie ustawia małą ikonę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do poprzedniej ikony.
 

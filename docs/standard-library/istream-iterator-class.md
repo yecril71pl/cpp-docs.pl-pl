@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869893"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420121"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator — Klasa
 
@@ -50,7 +50,7 @@ Typ całkowity ze znakiem, który reprezentuje typ różnicy dla `istream_iterat
 
 Po skonstruowaniu lub zwiększeniu obiektu klasy istream_iterator z niezerowym wskaźnikiem przechowywanym obiekt próbuje wyodrębnić i przechowywać obiekt typu `Type` ze skojarzonego strumienia wejściowego. Jeśli wyodrębnienie się nie uda, obiekt skutecznie zastępuje przechowywany wskaźnik wskaźnikiem pustym, tworząc wskaźnik końca sekwencji.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -205,7 +205,7 @@ Operator dereferencji zwraca przechowywany obiekt typu `Type` przez `istream_ite
 const Type& operator*() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywany obiekt typu `Type`.
 
@@ -249,7 +249,7 @@ Zwraca wartość elementu członkowskiego, jeśli istnieje.
 const Type* operator->() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość elementu członkowskiego, jeśli istnieje.
 
@@ -301,7 +301,7 @@ istream_iterator<Type, CharType, Traits, Distance>& operator++();
 istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pierwszy operator członkowski zwraca odwołanie do zwiększanego obiektu typu `Type` wyodrębnione ze strumienia wejściowego, a druga funkcja członkowska zwraca kopię obiektu.
 
@@ -384,7 +384,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Input_iterator_tag struktura](../standard-library/input-iterator-tag-struct.md)\
 \ [struktury iteratora](../standard-library/iterator-struct.md)

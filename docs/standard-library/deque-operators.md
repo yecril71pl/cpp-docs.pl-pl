@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883817"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419134"
 ---
 # <a name="ltdequegt-operators"></a>Operatory &lt;deque&gt;
 
@@ -41,7 +41,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekty deque nie są równe; **wartość false** , jeśli obiekty deque są równe.
 
@@ -92,7 +92,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli deque po lewej stronie operatora jest mniejszy niż i równy deque po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -147,7 +147,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli deque po lewej stronie operatora jest mniejszy lub równy deque po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -202,7 +202,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli deque po lewej stronie operatora jest równy deque po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -260,7 +260,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli deque po lewej stronie operatora jest większy od deque po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -316,7 +316,7 @@ Obiekt typu `deque`.
 *prawa*\
 Obiekt typu `deque`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **wartość true** , jeśli deque po lewej stronie operatora jest większy lub równy deque po prawej stronie operatora; w przeciwnym razie **false**.
 

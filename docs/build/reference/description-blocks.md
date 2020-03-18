@@ -8,11 +8,11 @@ helpviewer_keywords:
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
 ms.openlocfilehash: fb9cf4400c96b588e8704e972dd29ab27f41cae9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856936"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417300"
 ---
 # <a name="description-blocks"></a>Bloki opisów
 
@@ -212,6 +212,6 @@ reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 
 `reverse.exe` docelowa ma jedną zależność, `retro.obj`. Lista ujęta w nawiasy klamrowe określa dwa katalogi. NMAKE wyszukuje najpierw `retro.obj` w bieżącym katalogu. Jeśli tak nie jest, NMAKE przeszukuje katalog `\src\omega`, a następnie katalog `e:\repo\backwards`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [NMAKE — dokumentacja](nmake-reference.md)

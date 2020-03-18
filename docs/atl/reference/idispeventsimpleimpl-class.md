@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
 ms.openlocfilehash: 3ceb436e4f20a17ecd086fb68f9c1cfdcbe0be3e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864755"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417650"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Klasa IDispEventSimpleImpl
 
@@ -47,11 +47,11 @@ Klasa użytkownika, która jest pochodną `IDispEventSimpleImpl`.
 *pdiid*<br/>
 Wskaźnik do IID zdarzenia dispinterface zaimplementowane przez tę klasę.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IDispEventSimpleImpl:: Advise](#advise)|Ustanawia połączenie z domyślnym źródłem zdarzenia.|
 |[IDispEventSimpleImpl::D ispEventAdvise](#dispeventadvise)|Nawiązuje połączenie ze źródłem zdarzenia.|
@@ -112,7 +112,7 @@ HRESULT Advise(IUnknown* pUnk);
 *Punkt*<br/>
 podczas Wskaźnik do interfejsu `IUnknown` obiektu źródła zdarzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK lub jakakolwiek wartość HRESULT błędu.
 
@@ -141,7 +141,7 @@ podczas Wskaźnik do interfejsu `IUnknown` obiektu źródła zdarzenia.
 *piid*<br/>
 Wskaźnik do IID obiektu źródła zdarzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK lub jakakolwiek wartość HRESULT błędu.
 
@@ -170,7 +170,7 @@ podczas Wskaźnik do interfejsu `IUnknown` obiektu źródła zdarzenia.
 *piid*<br/>
 Wskaźnik do IID obiektu źródła zdarzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK lub jakakolwiek wartość HRESULT błędu.
 
@@ -260,7 +260,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 *Punkt*<br/>
 podczas Wskaźnik do interfejsu `IUnknown` obiektu źródła zdarzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 S_OK lub jakakolwiek wartość HRESULT błędu.
 
@@ -275,7 +275,7 @@ Po zerwaniu połączenia zdarzenia nie będą już kierowane do funkcji obsługi
 
 `Unavise` przerywa połączenie z domyślnym źródłem zdarzeń, pobiera identyfikator IID domyślnego źródła zdarzeń obiektu określonego przez [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
 [Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>

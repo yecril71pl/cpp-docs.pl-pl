@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
 ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875619"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422389"
 ---
 # <a name="ltvalarraygt-operators"></a>Operatory &lt;valarray&gt;
 
@@ -71,7 +71,7 @@ Pierwszy z dwóch valarrays, których elementy mają być testowane pod kątem n
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być testowane pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -168,7 +168,7 @@ Wartość lub valarray, która służy jako dywidenda, do której należy podzie
 *prawa*\
 Wartość lub valarray, która służy jako dzielnik i dzieli inną wartość lub valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy stanowią reszty z *lewej strony* podzielone przez *prawo*.
 
@@ -253,7 +253,7 @@ Pierwszy z dwóch valarrays, których odpowiednie elementy mają być połączon
 *prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z bitową `AND` lub określoną wartością typu elementu, który ma być połączony bitowy z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są kombinacją elementów koniunkcji bitowej i operacji *lewej* i *prawej*.
 
@@ -344,7 +344,7 @@ Pierwszy z dwóch valarrays, których odpowiednie elementy mają być połączon
 *prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z `AND` logiczne lub określona wartość typu elementu, który ma być połączony z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są typu bool i są kombinacją elementów dla logicznej operacji `AND` z *lewej* i *prawej*strony.
 
@@ -433,7 +433,7 @@ Pierwszy z dwóch valarrays, których elementy mają być porównane, lub okreś
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być porównane, lub określoną wartość do porównania z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -526,7 +526,7 @@ Pierwszy z dwóch valarrays, których elementy mają być porównane, lub okreś
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być porównane, lub określoną wartość do porównania z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -619,7 +619,7 @@ Wartość, która ma zostać przesunięta, lub valarray, której elementy mają 
 *prawa*\
 Wartość wskazująca ilość prawego przesunięcia lub valarray, której elementy wskazują ilość elementów po prawej stronie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy zostały przesunięte w prawo o określoną liczbę.
 
@@ -708,7 +708,7 @@ Pierwszy z dwóch valarrays, których elementy mają być porównane, lub okreś
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być porównane, lub określoną wartość do porównania z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -801,7 +801,7 @@ Pierwszy z dwóch valarrays, których elementy mają być porównane, lub okreś
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być porównane, lub określoną wartość do porównania z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -894,7 +894,7 @@ Wartość, która ma zostać przesunięta, lub valarray, której elementy mają 
 *prawa*\
 Wartość wskazująca ilość przesunięcia w lewo lub valarray, której elementy wskazują liczbę elementów przesunięcia w lewo.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy zostały przesunięte w lewo o określoną liczbę.
 
@@ -983,7 +983,7 @@ Pierwszy z dwóch valarrays, których elementy mają zostać pomnożone lub okre
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być pomnożone lub określonej wartości, która ma zostać pomnożona przez każdy element valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy stanowią iloczyn elementów z *lewej* i *prawej*strony.
 
@@ -1068,7 +1068,7 @@ Pierwszy z dwóch valarrays, których elementy mają być dodane lub określonej
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być dodane lub określonej wartości, która ma zostać dodana do każdego elementu valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są sumą rzeczy od *lewej* i *prawej*strony.
 
@@ -1153,7 +1153,7 @@ Wartość lub valarray, która służy jako odjemna, z którego inne wartości l
 *prawa*\
 Wartość lub valarray, która służy jako odjemnik, który ma zostać odjęty od innych wartości lub valarrays w celu utworzenia różnicy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray, których elementy są różnicą dla elementów z *lewej* i *prawej*strony.
 
@@ -1244,7 +1244,7 @@ Wartość lub valarray, która służy jako stawka, do której należy podzieli�
 *prawa*\
 Wartość lub valarray, która służy jako dzielnik i dzielący inną wartość lub valarray w tworzeniu ilorazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są elementem ilorazu *po lewej stronie* podzielonym po *prawej stronie*.
 
@@ -1335,7 +1335,7 @@ Pierwszy z dwóch valarrays, których elementy mają być testowane pod kątem r
 *prawa*\
 Drugi z dwóch valarrays, których elementy mają być testowane pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray wartości logicznych, z których każdy jest:
 
@@ -1428,7 +1428,7 @@ Pierwszy z dwóch valarrays, których odpowiednie elementy mają być połączon
 *prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z bitową **XOR** lub określoną wartością typu elementu, który ma być połączony bitowy z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są kombinacją elementów dla bitowej operacji **XOR** z *lewej* i *prawej*strony.
 
@@ -1523,7 +1523,7 @@ Pierwszy z dwóch valarrays, których odpowiednie elementy mają być połączon
 *prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z bitową `OR` lub określoną wartością typu elementu, który ma być połączony bitowy z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Valarray, których elementy są kombinacją elementów dla operacji bitowej `OR` w *lewo* i w *prawo*.
 
@@ -1618,7 +1618,7 @@ Pierwszy z dwóch valarrays, których odpowiednie elementy mają być połączon
 *prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z `OR` logiczne lub określona wartość typu elementu, który ma być połączony z każdym elementem valarray.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element valarray, którego elementy są typu **bool** i są połączeniem elementu logicznego lub operacji z *lewej* i *prawej*strony.
 

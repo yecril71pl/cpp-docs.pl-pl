@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: c372f43bc5184349e70f29b6c0ae6a490f2102ed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854571"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419162"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 
@@ -102,7 +102,7 @@ Określa dodatkową flagę, która kontroluje tworzenie wątku. Ta flaga może z
 *lpSecurityAttrs*\
 Wskazuje strukturę [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , która określa atrybuty zabezpieczeń wątku. Jeśli wartość jest równa NULL, używane są te same atrybuty zabezpieczeń co wątek tworzenia. Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowo utworzonego obiektu wątku lub wartość NULL, jeśli wystąpi awaria.
 
@@ -183,7 +183,7 @@ Wskaźnik do ciągu zawierającego identyfikator zasobu.
 *lpszType*\
 Wskaźnik do typu zasobu. Aby uzyskać listę typów zasobów, zobacz [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) w Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście do modułu zawierającego zasób.
 
@@ -220,7 +220,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 *hInstLib*\
 Dojście załadowanego modułu biblioteki. [AfxLoadLibrary](#afxloadlibrary) zwraca ten uchwyt.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli funkcja się powiedzie; w przeciwnym razie FALSE.
 
@@ -250,7 +250,7 @@ Wskaźnik zwracany przez tę funkcję może być używany w celu uzyskania dost�
 CWinApp* AFXAPI AfxGetApp();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pojedynczego obiektu `CWinApp` aplikacji.
 
@@ -274,7 +274,7 @@ Zwracany ciąg może być używany w przypadku komunikatów diagnostycznych lub 
 LPCTSTR AFXAPI AfxGetAppName();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg zakończony znakiem null zawierający nazwę aplikacji.
 
@@ -294,7 +294,7 @@ Ta funkcja umożliwia pobranie dojścia do wystąpienia bieżącej aplikacji.
 HINSTANCE  AFXAPI AfxGetInstanceHandle();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 HINSTANCE do bieżącego wystąpienia aplikacji. Jeśli wywoływana z poziomu biblioteki DLL połączonej z wersją USRDLL MFC, zwracany jest HINSTANCE do biblioteki DLL.
 
@@ -318,7 +318,7 @@ Jeśli aplikacja jest serwerem OLE, Wywołaj tę funkcję, aby pobrać wskaźnik
 CWnd* AFXAPI AfxGetMainWnd();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do obiektu okna ramki, który zawiera aktywny dokument w miejscu, jeśli serwer ma obiekt, który jest aktywny w miejscu wewnątrz aktywnego kontenera.
 
@@ -346,7 +346,7 @@ Użyj tej funkcji, aby określić, czy aplikacja przekierowuje dostęp do rejest
 BOOL AFXAPI AfxGetPerUserRegistration();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE wskazuje, że informacje rejestru są kierowane do węzła HKCU. Wartość FALSE oznacza, że aplikacja zapisuje informacje rejestru w domyślnym węźle. Domyślnym węzłem jest **HKEY_CLASSES_ROOT** (**HKCR**).
 
@@ -368,7 +368,7 @@ Użyj uchwytu HINSTANCE zwróconego przez tę funkcję, aby uzyskać dostęp do 
 extern HINSTANCE  AfxGetResourceHandle();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dojście HINSTANCE, w którym są ładowane domyślne zasoby aplikacji.
 
@@ -388,7 +388,7 @@ Wywołaj tę funkcję, aby uzyskać wskaźnik do obiektu [CWinThread](../../mfc/
 CWinThread* AfxGetThread();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktualnie wykonywanego wątku; w przeciwnym razie wartość NULL.
 
@@ -460,7 +460,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 *pWnd*\
 podczas Wskaźnik do obiektu, który jest pochodną `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli podane okno jest obiektem ramki rozszerzonej; w przeciwnym razie FALSE.
 
@@ -499,7 +499,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 *pWnd*\
 podczas Wskaźnik do obiektu, który jest pochodną `CWnd`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli podane okno jest obiektem Toolbar; w przeciwnym razie FALSE.
 
@@ -542,7 +542,7 @@ Jeśli ciąg Określa ścieżkę, ale plik nie istnieje w określonym katalogu, 
 
 Jeśli ścieżka nie zostanie określona i rozszerzenie nazwy pliku zostanie pominięte, domyślne rozszerzenie. Biblioteka DLL jest dołączana. Jednak ciąg filename może zawierać znak końcowy (.), aby wskazać, że nazwa modułu nie ma rozszerzenia. Jeśli ścieżka nie zostanie określona, funkcja używa [kolejności wyszukiwania dla aplikacji klasycznych](/windows/win32/dlls/dynamic-link-library-search-order#search-order-for-desktop-applications).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest dojściem do modułu. W przypadku niepowodzenia wartość zwracana jest RÓWNa NULL.
 
@@ -589,7 +589,7 @@ Ten parametr jest zarezerwowany do użytku w przyszłości. Musi mieć wartość
 *flagidw*\
 Akcja, która ma zostać wykonana podczas ładowania modułu. Jeśli nie określono żadnych flag, zachowanie tej funkcji jest identyczne z funkcją `AfxLoadLibrary`. Możliwe wartości tego parametru są opisane w dokumentacji [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja się powiedzie, wartość zwracana jest dojściem do modułu. W przypadku niepowodzenia wartość zwracana jest RÓWNa NULL.
 
@@ -648,7 +648,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 *lpWndClass*\
 Wskaźnik do struktury [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) zawierającej informacje o klasie okna, która ma zostać zarejestrowana. Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli klasa została pomyślnie zarejestrowana; w przeciwnym razie FALSE.
 
@@ -700,7 +700,7 @@ Określa dojście do zasobu pędzla, który ma zostać zainstalowany w każdym o
 *hIcon*\
 Określa dojście do zasobu ikony, który ma zostać zainstalowany w każdym oknie utworzonym z klasy Window. Jeśli zostanie użyta wartość domyślna **0**, otrzymasz standardową ikonę logo systemu Windows z flagą Waving.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg zakończony znakiem null zawierający nazwę klasy. Tę nazwę klasy można przekazać do funkcji składowej `Create` w `CWnd` lub innych klasach pochodnych **CWnd**do utworzenia okna. Nazwa jest generowana przez biblioteka MFC.
 
@@ -800,7 +800,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 *lpwsaData*\
 Wskaźnik do struktury [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata) . Jeśli *lpwsaData* nie jest równa null, adres struktury `WSADATA` jest wypełniany przez wywołanie do `WSAStartup`. Ta funkcja gwarantuje również, że `WSACleanup` jest wywoływana przed zakończeniem działania aplikacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 

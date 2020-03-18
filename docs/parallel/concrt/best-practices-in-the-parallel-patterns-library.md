@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
 ms.openlocfilehash: 641d85b03fca13a6592610d87563e3e701ad3e3e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854196"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419169"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 
@@ -256,7 +256,7 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expres
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

@@ -6,11 +6,11 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873996"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422550"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map operatory&gt;
 
@@ -34,7 +34,7 @@ Obiekt typu `unordered_map`.
 *prawa*\
 Obiekt typu `unordered_map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , Jeśli unordered_maps nie są równe; **Fałsz** , jeśli są równe.
 
@@ -98,7 +98,7 @@ Obiekt typu `unordered_map`.
 *prawa*\
 Obiekt typu `unordered_map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , Jeśli unordered_maps są równe; **wartość false** , jeśli nie są równe.
 
@@ -162,7 +162,7 @@ Obiekt typu `unordered_multimap`.
 *prawa*\
 Obiekt typu `unordered_multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli unordered_multimaps nie są równe; **Fałsz** , jeśli są równe.
 
@@ -227,7 +227,7 @@ Obiekt typu `unordered_multimap`.
 *prawa*\
 Obiekt typu `unordered_multimap`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli unordered_multimaps są równe; **wartość false** , jeśli nie są równe.
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<unordered_map>](../standard-library/unordered-map.md)

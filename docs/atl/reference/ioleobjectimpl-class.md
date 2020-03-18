@@ -50,11 +50,11 @@ helpviewer_keywords:
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
 ms.openlocfilehash: ded158b0ec862de5b0d0b23dd4b9edb50ad577ef
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862935"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417622"
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 
@@ -75,11 +75,11 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 *&*<br/>
 Klasa, która pochodzi od `IOleObjectImpl`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[IOleObjectImpl:: Advise](#advise)|Nawiązuje połączenie doradcze z kontrolką.|
 |[IOleObjectImpl:: Close](#close)|Zmienia stan formantu z uruchamiania na załadowany.|
@@ -215,7 +215,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -235,7 +235,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -255,7 +255,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -279,7 +279,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -299,7 +299,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -323,7 +323,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -343,7 +343,7 @@ podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 *hwndParent*<br/>
 podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -395,7 +395,7 @@ STDMETHOD(GetClipboardData)(
     IDataObject** /* ppDataObject */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -446,7 +446,7 @@ STDMETHOD(GetMoniker)(
     IMoniker** /* ppmk */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -493,7 +493,7 @@ STDMETHOD(InitFromData)(
     DWORD /* dwReserved */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -509,7 +509,7 @@ Sprawdza, czy kontrolka jest aktualna.
 STDMETHOD(IsUpToDate)(void);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -525,7 +525,7 @@ Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuconym stanie c
 HRESULT OnPostVerbDiscardUndo();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -541,7 +541,7 @@ Wywoływane przez [DoVerbHide](#doverbhide) , gdy kontrolka jest ukryta.
 HRESULT OnPostVerbHide();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -557,7 +557,7 @@ Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktywowaniu
 HRESULT OnPostVerbInPlaceActivate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -573,7 +573,7 @@ Wywoływane przez [DoVerbOpen](#doverbopen) po otwarciu kontrolki do edycji w os
 HRESULT OnPostVerbOpen();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -589,7 +589,7 @@ Wywoływane przez [DoVerbShow](#doverbshow) po przeprowadzeniu widoczności kont
 HRESULT OnPostVerbShow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -605,7 +605,7 @@ Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po aktywowaniu interfejs
 HRESULT OnPostVerbUIActivate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -621,7 +621,7 @@ Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed usunięciem stan
 HRESULT OnPreVerbDiscardUndo();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -637,7 +637,7 @@ Wywoływane przez [DoVerbHide](#doverbhide) przed ukryciem formantu.
 HRESULT OnPreVerbHide();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -653,7 +653,7 @@ Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) przed aktywowa
 HRESULT OnPreVerbInPlaceActivate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -669,7 +669,7 @@ Wywoływane przez [DoVerbOpen](#doverbopen) przed otwarciem kontrolki do edycji 
 HRESULT OnPreVerbOpen();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -685,7 +685,7 @@ Wywoływane przez [DoVerbShow](#doverbshow) przed udostępnieniem formantu.
 HRESULT OnPreVerbShow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -701,7 +701,7 @@ Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed aktywowaniem inter
 HRESULT OnPreVerbUIActivate();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -731,7 +731,7 @@ Zaleca schemat kolorów dla aplikacji kontrolki, jeśli istnieje.
 STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -767,7 +767,7 @@ Informuje kontrolkę o nazwie aplikacji kontenera i dokumentu kontenera.
 STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainerObj */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -785,7 +785,7 @@ STDMETHOD(SetMoniker)(
     IMoniker** /* pmk */);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca E_NOTIMPL.
 
@@ -813,7 +813,7 @@ Aktualizuje formant.
 STDMETHOD(Update)(void);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK.
 
@@ -821,7 +821,7 @@ Zwraca S_OK.
 
 Zobacz [IOleObject:: Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfejsy formantów ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>

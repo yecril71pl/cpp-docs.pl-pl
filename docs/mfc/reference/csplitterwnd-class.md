@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890957"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421458"
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
 
@@ -89,17 +89,17 @@ Udostępnia funkcje okna rozdzielacza, które jest oknem zawierającym wiele oki
 class CSplitterWnd : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSplitterWnd:: CSplitterWnd](#csplitterwnd)|Wywołanie konstruowania obiektu `CSplitterWnd`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSplitterWnd:: ActivateNext](#activatenext)|Wykonuje Następne okienko lub poprzednie okienko.|
 |[CSplitterWnd:: CanActivateNext](#canactivatenext)|Sprawdza, czy polecenie Następne okienko lub poprzednie okienko jest obecnie możliwe.|
@@ -133,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CSplitterWnd:: OnDraw](#ondraw)|Wywoływane przez platformę, by narysować okno rozdzielacza.|
 |[CSplitterWnd:: OnDrawSplitter](#ondrawsplitter)|Renderuje obraz okna podzielonego.|
@@ -223,7 +223,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 *bPrev*<br/>
 Wskazuje, które okno ma zostać aktywowane. **Wartość true** dla poprzedniego elementu; **Wartość false** dla następnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -269,7 +269,7 @@ Określa styl okna.
 *nID*<br/>
 Identyfikator okna podrzędnego okna. Identyfikator może być AFX_IDW_PANE_FIRST, chyba że okno rozdzielacza jest zagnieżdżone w innym oknie rozdzielacza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -311,7 +311,7 @@ Określa styl okna.
 *nID*<br/>
 Identyfikator okna podrzędnego okna. Identyfikator może być AFX_IDW_PANE_FIRST, chyba że okno rozdzielacza jest zagnieżdżone w innym oknie rozdzielacza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -349,7 +349,7 @@ Określa styl okna.
 *nID*<br/>
 Identyfikator okna podrzędnego okna. Identyfikator może być AFX_IDW_PANE_FIRST, chyba że okno rozdzielacza jest zagnieżdżone w innym oknie rozdzielacza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -403,7 +403,7 @@ Określa początkowy rozmiar nowego widoku.
 *pContext*<br/>
 Wskaźnik do kontekstu tworzenia używany do tworzenia widoku (zazwyczaj *pContext* przesłonięty do [obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md#oncreateclient) ramki nadrzędnej, w którym jest tworzone okno rozdzielacza).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -495,7 +495,7 @@ Wykonuje polecenie podziału klawiatury, zwykle "podział okna".
 virtual BOOL DoKeyboardSplit();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -537,7 +537,7 @@ Kod paska przewijania wskazujący żądanie przewijania użytkownika. Ten parame
 *bDoScroll*<br/>
 Określa, czy występuje określona akcja przewijania. Jeśli *bDoScroll* ma wartość true (oznacza to, że jeśli istnieje okno podrzędne, a jeśli rozdzielone okna mają zakres przewijania), można wykonać określoną akcję przewijania. Jeśli *bDoScroll* ma wartość false (oznacza to, że jeśli nie istnieje okno podrzędne lub widok podzielony nie ma zakresu przewijania), przewijanie nie następuje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli występuje synchroniczne przewijanie; w przeciwnym razie 0.
 
@@ -567,7 +567,7 @@ Liczba pikseli, które mają być przewijane w poziomie i w pionie.
 *bDoScroll*<br/>
 Określa, czy występuje określona akcja przewijania. Jeśli *bDoScroll* ma wartość true (oznacza to, że jeśli istnieje okno podrzędne, a jeśli rozdzielone okna mają zakres przewijania), można wykonać określoną akcję przewijania. Jeśli *bDoScroll* ma wartość false (oznacza to, że jeśli nie istnieje okno podrzędne lub widok podzielony nie ma zakresu przewijania), przewijanie nie następuje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli występuje synchroniczne przewijanie; w przeciwnym razie 0.
 
@@ -595,7 +595,7 @@ Wskaźnik do elementu **int** , aby pobrać numer wiersza aktywnego okienka.
 *pCol*<br/>
 Wskaźnik do elementu **int** , aby pobrać numer kolumny aktywnego okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnego okienka. Wartość NULL, jeśli nie istnieje aktywne okienko.
 
@@ -611,7 +611,7 @@ Zwraca liczbę kolumn bieżącego okienka.
 int GetColumnCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca bieżącą liczbę kolumn w rozdzielaczu. W przypadku rozdzielacza statycznego będzie to również Maksymalna liczba kolumn.
 
@@ -655,7 +655,7 @@ Określa wiersz.
 *kolumna*<br/>
 Określa kolumnę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca okienko w określonym wierszu i kolumnie. Zwracane okienko jest zwykle klasą pochodną [CView](../../mfc/reference/cview-class.md).
 
@@ -667,7 +667,7 @@ Zwraca liczbę wierszy bieżącego okienka.
 int GetRowCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca bieżącą liczbę wierszy w oknie rozdzielacza. W przypadku statycznego okna rozdzielacza będzie to również Maksymalna liczba wierszy.
 
@@ -705,7 +705,7 @@ Zwraca udostępniony styl paska przewijania okna rozdzielacza.
 DWORD GetScrollStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jedno lub więcej z następujących flag stylu systemu Windows, jeśli się powiedzie:
 
@@ -733,7 +733,7 @@ Określa wiersz okna rozdzielacza.
 *kolumna*<br/>
 Określa kolumnę okna rozdzielacza.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Identyfikator okna podrzędnego okienka.
 
@@ -767,7 +767,7 @@ Wskaźnik do liczby **całkowitej** , w której ma zostać zapisany numer wiersz
 *pCol*<br/>
 Wskaźnik do liczby **całkowitej** , w której ma zostać zapisany numer kolumny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wartość jest różna od zera, *pWnd* jest obecnie okienkiem podrzędnym tego okna rozdzielacza, a *PROW* i *pCol* są wypełniane pozycją okienka w oknie rozdzielacza. Jeśli *pWnd* nie jest okienkiem podrzędnym tego okna rozdzielacza, zwracana jest wartość 0.
 
@@ -787,7 +787,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy pasek rozdzi
 BOOL IsTracking();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli operacja rozdzielacza jest w toku; w przeciwnym razie 0.
 
@@ -986,7 +986,7 @@ virtual BOOL SplitColumn(int cxBefore);
 *cxBefore*<br/>
 Pozycja w pikselach, przed którą występuje podział.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1009,7 +1009,7 @@ virtual BOOL SplitRow(int cyBefore);
 *cyBefore*<br/>
 Pozycja w pikselach, przed którą występuje podział.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -1034,7 +1034,7 @@ Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład VIEWEX MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

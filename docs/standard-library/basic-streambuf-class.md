@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856570"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416866"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf — Klasa
 
@@ -158,7 +158,7 @@ Wszelkie chronione wirtualne funkcje członkowskie, które należy napisać dla 
 
 Obiekt klasy `basic_streambuf`< `Elem`, `Tr`> przechowuje sześć wcześniej opisanych wskaźników. Przechowuje również obiekt ustawień regionalnych w obiekcie typu [locale](../standard-library/locale-class.md) dla potencjalnego użycia przez pochodny bufor strumienia.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -267,7 +267,7 @@ Funkcja chroniona zwracająca wskaźnik do początku buforu wejściowego.
 char_type *eback() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do początku buforu wejściowego.
 
@@ -279,7 +279,7 @@ Funkcja chroniona zwracająca wskaźnik tuż poza końcem buforu wejściowego.
 char_type *egptr() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik tuż poza końcem buforu wejściowego.
 
@@ -291,7 +291,7 @@ Funkcja chroniona zwracająca wskaźnik tuż poza końcem buforu wyjściowego.
 char_type *epptr() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik tuż poza końcem buforu wyjściowego.
 
@@ -316,7 +316,7 @@ Pobiera ustawienia regionalne obiektu basic_streambuf.
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Przechowywany obiekt locale.
 
@@ -350,7 +350,7 @@ Funkcja chroniona zwracająca wskaźnik do następnego elementu buforu wejściow
 char_type *gptr() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do następnego elementu buforu wejściowego.
 
@@ -379,7 +379,7 @@ Zwraca liczbę elementów, które są gotowe do odczytu z bufora.
 streamsize in_avail();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów, które są gotowe do odczytu z bufora.
 
@@ -451,7 +451,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 *_Meta*\
 Znak do wstawienia do buforu lub **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca **traits_type:: eof** lub zgłasza wyjątek. W przeciwnym razie zwraca **traits_type::** [Not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *meta*). Domyślnym zachowaniem jest zwrócenie **traits_type:: eof**.
 
@@ -486,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 *_Meta*\
 Znak do wstawienia do buforu lub **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca **traits_type:: eof** lub zgłasza wyjątek. W przeciwnym razie zwraca inną wartość. Domyślnym zachowaniem jest zwrócenie **traits_type:: eof**.
 
@@ -508,7 +508,7 @@ Funkcja chroniona zwracająca wskaźnik do początku buforu wyjściowego.
 char_type *pbase() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do początku buforu wyjściowego.
 
@@ -541,7 +541,7 @@ Funkcja chroniona zwracająca wskaźnik do następnego elementu buforu wyjściow
 char_type *pptr() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do następnego elementu buforu wyjściowego.
 
@@ -558,7 +558,7 @@ locale pubimbue(const locale& _Loc);
 *_Loc*\
 Odwołanie do ustawień regionalnych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednia wartość przechowywana w obiekcie locale.
 
@@ -591,7 +591,7 @@ Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-libra
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca nową pozycję lub nieprawidłową pozycję strumienia ( [seekoff](#seekoff)( *off*, `_Way`, `_Which`)).
 
@@ -615,7 +615,7 @@ Pozycja do wyszukania.
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowa pozycja lub nieprawidłowa pozycja strumienia. Aby określić, czy pozycja strumienia jest nieprawidłowa, należy porównać wartość zwracaną z `pos_type(off_type(-1))`.
 
@@ -641,7 +641,7 @@ Wskaźnik do `char_type` dla tego wystąpienia.
 *liczba*\
 Rozmiar buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca [setbuf](#setbuf)(`_Buffer`, `count`).
 
@@ -653,7 +653,7 @@ Wywołuje [synchronizację](#sync), chronioną funkcję wirtualną, która jest 
 int pubsync();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość [Sync](#sync) lub-1, jeśli wystąpi błąd.
 
@@ -665,7 +665,7 @@ Odczytuje i zwraca bieżący element, przesuwając wskaźnik strumienia.
 int_type sbumpc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący element.
 
@@ -720,7 +720,7 @@ Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-libra
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca nową pozycję lub nieprawidłową pozycję strumienia (`seekoff` ( *off*, `_Way`, `_Which`)).
 
@@ -754,7 +754,7 @@ Pozycja do wyszukania.
 *_Which*\
 Określa tryb dla pozycji wskaźnika. Wartość domyślna to umożliwienie modyfikacji pozycji odczytu i zapisu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Nowa pozycja lub niepoprawna pozycja strumienia. Aby określić, czy pozycja strumienia jest nieprawidłowa, należy porównać wartość zwracaną z `pos_type(off_type(-1))`.
 
@@ -784,7 +784,7 @@ Wskaźnik do buforu.
 *liczba*\
 Rozmiar buforu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślnym zachowaniem jest to, aby **to**zrobić.
 
@@ -837,7 +837,7 @@ Zwraca bieżący element bez zmiany pozycji w strumieniu.
 int_type sgetc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący element.
 
@@ -885,7 +885,7 @@ Bufor zawierający wyodrębnione znaki.
 *liczba*\
 Liczba elementów, które mają zostać odczytane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba odczytanych elementów. Aby uzyskać więcej informacji, zobacz [dane StreamSize](../standard-library/ios-typedefs.md#streamsize) .
 
@@ -928,7 +928,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwracająca liczbę znaków
 virtual streamsize showmanyc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślne zachowanie ma zwrócić wartość zero.
 
@@ -940,7 +940,7 @@ Odczytuje bieżący element i zwraca następujący element.
 int_type snextc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Następny element w strumieniu.
 
@@ -985,7 +985,7 @@ int_type sputbackc(char_type _Ch);
 *_Ch*\
 Znak.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca znak lub niepowodzenie.
 
@@ -1033,7 +1033,7 @@ int_type sputc(char_type _Ch);
 *_Ch*\
 Znak.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca znak, jeśli powodzenie.
 
@@ -1079,7 +1079,7 @@ Ciąg znaków.
 *liczba*\
 Liczba znaków.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba znaków faktycznie wstawianych do strumienia.
 
@@ -1148,7 +1148,7 @@ Pobiera znak ze strumienia.
 int_type sungetc();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca znak lub błąd.
 
@@ -1216,7 +1216,7 @@ Chroniona funkcja wirtualna, która próbuje zsynchronizować kontrolowane strum
 virtual int sync();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli funkcja nie może się powieść, zwraca wartość-1. Domyślne zachowanie ma zwrócić wartość zero.
 
@@ -1240,7 +1240,7 @@ Chroniona funkcja wirtualna, która wyodrębnia bieżący element ze strumienia 
 virtual int_type uflow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący element.
 
@@ -1264,7 +1264,7 @@ Chroniona funkcja wirtualna w celu wyodrębnienia bieżącego elementu ze strumi
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżący element.
 
@@ -1306,7 +1306,7 @@ Bufor zawierający wyodrębnione znaki.
 *liczba*\
 Liczba elementów do wyodrębnienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wyodrębnionych elementów.
 
@@ -1330,7 +1330,7 @@ Wskaźnik do elementów do wstawienia.
 *liczba*\
 Liczba elementów do wstawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów rzeczywiście wstawionych do strumienia.
 

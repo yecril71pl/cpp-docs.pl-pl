@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- lfind
 - _lfind
 helpviewer_keywords:
 - linear searching
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953383"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442923"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -64,13 +63,13 @@ Wskaźnik do podstawy wyszukiwania danych.
 *Liczba*<br/>
 Liczba elementów tablicy.
 
-*width*<br/>
+*Szerokość*<br/>
 Szerokość elementów tablicy.
 
 *porównaniu*<br/>
 Wskaźnik do procedury porównania. Pierwszy parametr jest wskaźnikiem do klucza do wyszukania. Drugi parametr jest wskaźnikiem do elementu tablicy, który będzie porównywany z kluczem.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Jeśli klucz zostanie znaleziony, **_lfind** zwraca wskaźnik do elementu tablicy w *bazie* , który odpowiada *kluczowi*. Jeśli klucz nie zostanie znaleziony, **_lfind** zwraca **wartość null**.
 
@@ -78,13 +77,13 @@ Jeśli klucz zostanie znaleziony, **_lfind** zwraca wskaźnik do elementu tablic
 
 Funkcja **_lfind** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch**, **_lfind** nie wymaga sortowania tablicy. Argument *podstawowy* jest wskaźnikiem do podstawy tablicy do przeszukania. Argument *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą ich relację. **_lfind** wywołuje procedurę *Compare* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania. Procedura *Compare* musi porównać elementy, a następnie zwracać wartość różną od zera (oznacza to, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [parametrze Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *podstawa* ma **wartość null** , a *Liczba* jest różna od zera, lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lfind**|\<Wyszukaj. h >|
+|**_lfind**|\<Search. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -125,7 +124,7 @@ int main( )
 Hello found
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>

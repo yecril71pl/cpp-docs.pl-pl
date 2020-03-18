@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866444"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420534"
 ---
 # <a name="ccontrolbar-class"></a>Klasa CControlBar
 
@@ -61,7 +61,7 @@ Klasa bazowa dla klas paska sterowania [CStatusBar](../../mfc/reference/cstatusb
 class CControlBar : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -151,7 +151,7 @@ Następujące wstępnie zdefiniowane flagi są używane do określania wysokośc
 |LM_LENGTHY|Ustaw, jeśli *nLength* wskazuje wysokość (kierunek Y), a nie szerokość.|
 |LM_COMMIT|Resetuje LM_MRUWIDTH do bieżącej szerokości zmiennoprzecinkowego paska sterowania.|
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar paska sterowania (w pikselach) obiektu [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
@@ -177,7 +177,7 @@ Wskazuje, czy pasek ma być rozciągany do rozmiaru ramki. Parametr *bStretch* m
 *bHorz*<br/>
 Wskazuje, że pasek jest poziomy lub pionowo. Parametr *bHorz* jest różny od zera, jeśli pasek jest zorientowany w poziomie i ma wartość 0, jeśli jest zorientowana w pionie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rozmiar paska sterowania (w pikselach) obiektu `CSize`.
 
@@ -328,7 +328,7 @@ Wywołaj tę funkcję, aby określić, które ustawienia **CBRS_** (style paska 
 DWORD GetBarStyle();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bieżące ustawienia **CBRS_** (style paska kontroli) dla paska sterowania. Aby uzyskać pełną listę dostępnych stylów, zobacz [CControlBar:: SetBarStyle](#setbarstyle) .
 
@@ -344,7 +344,7 @@ Zwraca bieżące wartości obramowania paska sterowania.
 CRect GetBorders() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CRect`, który zawiera bieżącą Szerokość (w pikselach) każdej strony obiektu paska sterowania. Na przykład wartość *lewego* elementu członkowskiego obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) jest szerokość lewej krawędzi obramowania.
 
@@ -356,7 +356,7 @@ Zwraca liczbę elementów niebędących elementem HWND w obiekcie `CControlBar`.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów niebędących HWNDmi w obiekcie `CControlBar`. Ta funkcja zwraca wartość 0 dla obiektu [CDialogBar](../../mfc/reference/cdialogbar-class.md) .
 
@@ -372,7 +372,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do bież�
 CFrameWnd* GetDockingFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna ramki, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
@@ -390,7 +390,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby określić, czy pasek sterow
 BOOL IsFloating() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli pasek sterowania jest przestawny; w przeciwnym razie 0.
 

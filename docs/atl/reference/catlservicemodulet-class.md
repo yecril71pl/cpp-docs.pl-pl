@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
 ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864999"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418035"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa Funkcja CAtlServiceModuleT
 
@@ -64,7 +64,7 @@ Klasa pochodna od `CAtlServiceModuleT`.
 *nServiceNameID*<br/>
 Identyfikator zasobu usługi.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -180,7 +180,7 @@ Udostępnia domyślne ustawienia zabezpieczeń usługi.
 HRESULT InitializeSecurity() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -206,7 +206,7 @@ Instaluje i tworzy usługę.
 BOOL Install() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -222,7 +222,7 @@ Potwierdza, że usługa została zainstalowana.
 BOOL IsInstalled() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli usługa jest zainstalowana, w przeciwnym razie FALSE.
 
@@ -375,7 +375,7 @@ Wiersz polecenia.
 *pnRetCode*<br/>
 WYNIK HRESULT odpowiadający rejestracji (jeśli miało miejsce).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość true dla sukcesu lub false, jeśli nie można zarejestrować pliku RGS w wierszu polecenia.
 
@@ -396,7 +396,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 *nShowCmd*<br/>
 Ten parametr jest przesyłany do [CAtlExeModuleT::P remessageloop](../../atl/reference/catlexemodulet-class.md#premessageloop).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -417,7 +417,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 *bService*<br/>
 Aby zarejestrować się jako usługa, należy mieć wartość true.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -434,7 +434,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 *nShowCmd*<br/>
 Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Wartość domyślna to SW_HIDE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -494,7 +494,7 @@ HRESULT Start(int nShowCmd) throw();
 *nShowCmd*<br/>
 Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -510,7 +510,7 @@ Powoduje zatrzymanie i usunięcie usługi.
 BOOL Uninstall() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -526,7 +526,7 @@ Zmniejsza liczbę blokad usługi.
 LONG Unlock() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca liczbę blokad, która może być przydatna w przypadku diagnostyki i debugowania.
 
@@ -538,7 +538,7 @@ Usuwa usługę z rejestru.
 HRESULT UnregisterAppId() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -555,7 +555,7 @@ int WinMain(int nShowCmd) throw();
 *nShowCmd*<br/>
 Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość zwracaną przez usługę.
 

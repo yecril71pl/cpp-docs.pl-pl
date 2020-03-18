@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 20d74030cdc90ed2e1a7809c121967e74db21b4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866567"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418504"
 ---
 # <a name="cmdiframewnd-class"></a>Klasa CMDIFrameWnd
 
@@ -51,17 +51,17 @@ Oferuje funkcje okna ramki interfejsu Wielodokumentowego (MDI) systemu Windows w
 class CMDIFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Konstruuje `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMDIFrameWnd:: isclient](#createclient)|Tworzy okno MDICLIENT systemu Windows dla tego `CMDIFrameWnd`. Wywoływane przez `OnCreate`ą funkcję członkowską `CWnd`.|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Tworzy nowe okno podrzędne.|
@@ -111,7 +111,7 @@ Klasa `CMDIFrameWnd` dziedziczy wiele implementacji domyślnej z `CFrameWnd`. Ab
 
 - Okno ramki MDI zawiera również implementację ID_WINDOW_NEW, która tworzy nową ramkę i widok w bieżącym dokumencie. Aplikacja może zastąpić te domyślne implementacje poleceń, aby dostosować obsługę okna MDI.
 
-Nie używaj C++ operatora **delete** do niszczenia okna ramki. Zamiast nich należy używać słów kluczowych `CWnd::DestroyWindow`. `CFrameWnd` implementacja `PostNcDestroy` spowoduje usunięcie C++ obiektu, gdy okno zostanie zniszczone. Gdy użytkownik zamknie okno ramki, domyślna procedura obsługi `OnClose` wywoła `DestroyWindow`.
+Nie używaj C++ operatora **delete** do niszczenia okna ramki. Zamiast tego użyj polecenia cmdlet `CWnd::DestroyWindow`. `CFrameWnd` implementacja `PostNcDestroy` spowoduje usunięcie C++ obiektu, gdy okno zostanie zniszczone. Gdy użytkownik zamknie okno ramki, domyślna procedura obsługi `OnClose` wywoła `DestroyWindow`.
 
 Aby uzyskać więcej informacji na temat `CMDIFrameWnd`, zobacz [okna ramek](../../mfc/frame-windows.md).
 
@@ -165,7 +165,7 @@ Długi wskaźnik [do struktury elementu](/windows/win32/api/winuser/ns-winuser-c
 *pWindowMenu*<br/>
 Wskaźnik do menu podręcznego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -224,7 +224,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 *hMenuBar*<br/>
 Bieżący pasek menu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Menu rozwijane okno, jeśli taki istnieje; w przeciwnym razie wartość NULL.
 
@@ -299,7 +299,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 *pbMaximized*<br/>
 Wskaźnik do LOGICZNEj wartości zwracanej. Ustaw na wartość TRUE, jeśli okno jest zmaksymalizowane; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnego okna podrzędnego MDI.
 
@@ -409,7 +409,7 @@ Określa menu nowego okna z ramką. Jeśli wartość jest równa NULL, menu nie 
 *pWindowMenu*<br/>
 Określa menu nowego menu podręcznego okna. Jeśli wartość jest równa NULL, menu nie zostanie zmienione.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do menu okna z ramkami zastąpionych przez tę wiadomość. Wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -457,7 +457,7 @@ Pierwsza wersja `MDITile`bez parametrów kafelków w pionie Windows w systemie W
 
 Zobacz przykład dla [CMDIFrameWnd:: MDICascade](#mdicascade).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład MDIDOCVW MFC](../../overview/visual-cpp-samples.md)<br/>

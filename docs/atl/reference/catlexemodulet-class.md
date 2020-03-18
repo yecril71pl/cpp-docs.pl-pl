@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863219"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418056"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 *&*<br/>
 Klasa pochodna od `CAtlExeModuleT`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -134,7 +134,7 @@ Inicjuje model COM.
 static HRESULT InitializeCom() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -196,7 +196,7 @@ Wiersz polecenia przeszedł do aplikacji.
 *pnRetCode*<br/>
 WYNIK HRESULT odpowiadający rejestracji (jeśli miało miejsce).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwróć wartość true, jeśli aplikacja powinna nadal działać, w przeciwnym razie false.
 
@@ -212,7 +212,7 @@ Ta metoda jest wywoływana natychmiast po zakończeniu pętli komunikatów.
 HRESULT PostMessageLoop() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -233,7 +233,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 *nShowCmd*<br/>
 Wartość przeniesiona jako parametr *nShowCmd* w WinMain.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -257,7 +257,7 @@ Określa kontekst, w którym obiekt klasy ma być uruchamiany. Możliwe wartośc
 *flagiDW*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -269,7 +269,7 @@ Usuwa obiekt Class.
 HRESULT RevokeClassObjects() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -286,7 +286,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 *nShowCmd*<br/>
 Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Wartość domyślna to SW_HIDE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
@@ -326,7 +326,7 @@ Zmniejsza liczbę blokad modułu.
 LONG Unlock() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
@@ -343,7 +343,7 @@ int WinMain(int nShowCmd) throw();
 *nShowCmd*<br/>
 Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość zwracaną przez plik wykonywalny.
 

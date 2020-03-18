@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
 ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890918"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419421"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view operatory&gt;
 
@@ -63,7 +63,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt po lewej stronie operatora nie jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
@@ -102,7 +102,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt po lewej stronie operatora jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
@@ -141,7 +141,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy niż obiekt po prawej stronie; w przeciwnym razie **false**.
 
@@ -202,7 +202,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
@@ -228,7 +228,7 @@ strumień wyjściowy, w którym jest zapisywane.
 *Str*\
 String_view, które mają zostać wprowadzone do strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 strumień wyjściowy, w którym jest zapisywane.
 
@@ -265,7 +265,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy niż obiekt string_view po prawej stronie; w przeciwnym razie **false**.
 
@@ -302,7 +302,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 *prawa*\
 Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
@@ -327,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view >](../standard-library/string-view.md)

@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869919"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420590"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA — Struktura
 
@@ -72,7 +72,7 @@ Struktura `AFX_GLOBAL_DATA` zawiera pola i metody, które są używane do zarzą
 struct AFX_GLOBAL_DATA
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -196,7 +196,7 @@ Punkt, wokół którego ma zostać obrócony.
 *obszarze*<br/>
 Gdy ta metoda zwraca, zawiera nową transformację obrotu. Należy przydzielić magazyn dla tego parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK, jeśli się powiedzie, lub wartość błędu w przeciwnym razie.
 
@@ -222,7 +222,7 @@ podczas Wskaźnik do kontekstu urządzenia.
 *lpRect*<br/>
 podczas Wskaźnik do prostokąta, który jest powiązany z obszarem do rysowania. Wartość domyślna to NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -276,7 +276,7 @@ podczas Rozmiar efektu blasku rysowanego w tle przed rysowaniem określonego tek
 *clrText*<br/>
 podczas Kolor, w którym jest rysowany określony tekst. Wartością domyślną jest kolor domyślny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli motyw jest używany do rysowania określonego tekstu; w przeciwnym razie FALSE.
 
@@ -329,7 +329,7 @@ określoną Gdy ta metoda zwraca, parametr *strTag* zawiera tekst między otwier
 *bIsCharsList*<br/>
 podczas TRUE, aby przekonwertować symbole dla znaków ucieczki w parametrze *strTag* na rzeczywiste znaki ucieczki; Nie można wykonać konwersji. Wartość domyślna to FALSE. Aby uzyskać więcej informacji, zobacz uwagi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -362,7 +362,7 @@ COLORREF GetColor(int nColor);
 *nColor*<br/>
 podczas Wartość określająca element interfejsu użytkownika, którego kolor zostanie pobrany. Aby uzyskać listę prawidłowych wartości, zobacz parametr *nIndex* metody [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość koloru RGB określonego elementu interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz uwagi.
 
@@ -378,7 +378,7 @@ Zwraca wskaźnik do interfejsu ID2D1Factory, który jest przechowywany w danych 
 ID2D1Factory* GetDirect2dFactory();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu ID2D1Factory, jeśli Tworzenie fabryki powiedzie się, lub wartość NULL, jeśli Tworzenie nie powiedzie się lub bieżący system operacyjny nie obsługuje D2D.
 
@@ -390,7 +390,7 @@ Pobiera wstępnie zdefiniowany kursor, który przypomina ręką i którego ident
 HCURSOR GetHandCursor();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt kursora dłoni.
 
@@ -407,7 +407,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 *informacje*<br/>
 [in. out] Struktura [NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) , która zawiera skalowalne metryki skojarzone z nieklienckim obszarem niezminimalizowanego okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -424,7 +424,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 *bHorz*<br/>
 podczas Wartość TRUE, aby pobrać Wysokość znaków, gdy tekst jest uruchamiany w poziomie. Wartość FALSE, aby pobrać Wysokość znaków, gdy tekst jest uruchamiany w pionie. Wartość domyślna to TRUE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość bieżącej czcionki mierzona od jej rosnącej do jej najgórę.
 
@@ -436,7 +436,7 @@ Zwraca wskaźnik do interfejsu IWICImagingFactory, który jest przechowywany w d
 IWICImagingFactory* GetWICFactory();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu IWICImagingFactory, jeśli Tworzenie fabryki powiedzie się, lub wartość NULL, jeśli Tworzenie nie powiedzie się lub bieżący system operacyjny nie obsługuje WIC.
 
@@ -448,7 +448,7 @@ Zwraca wskaźnik do interfejsu IDWriteFactory, który jest przechowywany w danyc
 IDWriteFactory* GetWriteFactory();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu IDWriteFactory, jeśli Tworzenie fabryki powiedzie się, lub wartość NULL, jeśli Tworzenie nie powiedzie się lub bieżący system operacyjny nie obsługuje DirectWrite.
 
@@ -470,7 +470,7 @@ Model wątkowości fabryki D2D i tworzonych przez nią zasobów.
 *writeFactoryType*<br/>
 Wartość określająca, czy obiekt fabryki zapisu będzie współużytkowany, czy izolowany
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli fabryki zostały intilalizrd, FAŁSZ — w przeciwnym razie
 
@@ -482,7 +482,7 @@ Wskazuje, czy są obsługiwane wstępnie zdefiniowane ikony 32-bitowe.
 BOOL Is32BitIcons() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli są obsługiwane wstępnie zdefiniowane ikony 32-bitowe; w przeciwnym razie FALSE.
 
@@ -498,7 +498,7 @@ Wskazuje, czy włączono obsługę usługi Microsoft Active Accessibility.
 BOOL IsAccessibilitySupport() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli włączono obsługę dostępności; w przeciwnym razie FALSE.
 
@@ -516,7 +516,7 @@ Określa, czy D2D został zainicjowany
 BOOL IsD2DInitialized() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli D2D został zainicjowany; w przeciwnym razie FALSE.
 
@@ -528,7 +528,7 @@ Zapewnia prosty sposób wywołania metody [DwmIsCompositionEnabled](/windows/win
 BOOL IsDwmCompositionEnabled();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli kompozycja [Menedżer okien pulpitu](/windows/win32/dwm/dwm-overview) (DWM) jest włączona; w przeciwnym razie FALSE.
 
@@ -539,7 +539,7 @@ Wskazuje, czy obrazy są aktualnie wyświetlane z dużym kontrastem.
 BOOL IsHighContrastMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli obrazy są aktualnie wyświetlane w trybie czarno-białym o dużym kontraście; w przeciwnym razie FALSE.
 
@@ -555,7 +555,7 @@ Wskazuje, czy system operacyjny obsługuje okna z warstwami.
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli są obsługiwane okna z warstwami. w przeciwnym razie FALSE.
 
@@ -696,7 +696,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 *lpszClassNamePrefix*<br/>
 podczas Nazwa klasy okna do zarejestrowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Kwalifikowana nazwa zarejestrowanej klasy, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie [wyjątek zasobu](exception-processing.md#afxthrowresourceexception).
 
@@ -712,7 +712,7 @@ Ponownie inicjuje wewnętrzne wskaźniki funkcji, które mają dostęp do metod,
 BOOL Resume();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE. W trybie debugowania ta metoda potwierdza, czy ta metoda nie powiedzie się.
 
@@ -746,7 +746,7 @@ podczas Wartość alfa, która jest używana do opisywania nieprzezroczystości 
 *flagiDW*<br/>
 podczas Kombinacja bitowa (lub) flag, które określają parametry metody do użycia. Określ LWA_COLORKEY, aby użyć parametru *crKey* jako koloru przezroczystości. Określ LWA_ALPHA, aby użyć parametru *bAlpha* w celu określenia nieprzejrzystości okna warstwowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
@@ -768,7 +768,7 @@ podczas Wskaźnik do struktury zawierającej atrybuty czcionki.
 *bHorz*<br/>
 podczas PRAWDA, aby określić, że tekst jest uruchamiany w poziomie. Wartość FALSE, aby określić, że tekst jest uruchamiany pionowo.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE. W trybie debugowania ta metoda potwierdza, czy ta metoda nie powiedzie się.
 
@@ -828,7 +828,7 @@ Tworzy i przechowuje w danych globalnych wskaźnik do interfejsu `ITaskBarList`.
 ITaskbarList *GetITaskbarList();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu `ITaskbarList`, jeśli Tworzenie obiektu listy paska zadań powiedzie się; Wartość NULL, jeśli Tworzenie nie powiedzie się lub jeśli bieżący system operacyjny jest mniejszy niż Windows 7.
 
@@ -840,7 +840,7 @@ Tworzy i przechowuje w danych globalnych wskaźnik do interfejsu `ITaskBarList3`
 ITaskbarList3 *GetITaskbarList3();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do interfejsu `ITaskbarList3`, jeśli Tworzenie obiektu listy paska zadań powiedzie się; Wartość NULL, jeśli Tworzenie nie powiedzie się lub jeśli bieżący system operacyjny jest mniejszy niż Windows 7.
 
@@ -852,7 +852,7 @@ Określa pozycje w obszarze Autoukrywanie pasków powłoki.
 int GetShellAutohideBars();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita z zakodowanymi flagami, które określają położenia pasków z autoukrywaniem. Może łączyć następujące wartości: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT AFX_AUTOHIDE_RIGHT.
 
@@ -890,7 +890,7 @@ Odwołanie do identyfikatora interfejsu.
 *ppv*<br/>
 określoną Gdy ta funkcja zwraca, zawiera wskaźnik interfejsu żądany w *riid*. Jest to zwykle `IShellItem` lub `IShellItem2`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK, jeśli się powiedzie; w przeciwnym razie wartość błędu.
 

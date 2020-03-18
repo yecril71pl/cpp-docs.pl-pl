@@ -29,11 +29,11 @@ helpviewer_keywords:
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 ms.openlocfilehash: b88b745e3b70cf030f77f247ab03cd69d910109f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855647"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420933"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
@@ -718,7 +718,7 @@ Aby uzyskać więcej informacji na temat implementowania funkcji obsługi dla za
 
 **Nagłówek:** afxmsg_. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
 [TN006: mapy komunikatów](../tn006-message-maps.md)<br/>

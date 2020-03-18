@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864965"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417909"
 ---
 # <a name="ccomcompositecontrol-class"></a>Klasa CComCompositeControl
 
@@ -42,7 +42,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 *&*<br/>
 Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z innych interfejsów, które mają być obsługiwane dla formantu złożonego.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -115,7 +115,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 *bAdvise*<br/>
 Prawda, jeśli wszystkie kontrolki mają być zalecane; w przeciwnym razie false.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 |||
 |-|-|
@@ -143,7 +143,7 @@ BOOL CalcExtent(SIZE& size);
 *zmienia*<br/>
 Odwołanie do struktury `SIZE`, która ma zostać wypełniona przez tę metodę.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, Jeśli kontrolka jest hostowana przez okno dialogowe; w przeciwnym razie FALSE.
 
@@ -173,7 +173,7 @@ Rezerwacj.
 *dwInitParam*<br/>
 Dane, które mają zostać przesłane do kontrolki podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będą wyświetlane jako parametr LPARAM komunikatu [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) , który zostanie wysłany do kontrolki złożonej, gdy zostanie utworzony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do nowo utworzonego okna dialogowego formantu złożonego.
 
@@ -223,7 +223,7 @@ Uchwyt do okna nadrzędnego formantu.
 *rcPos*<br/>
 Prostokąt położenia kontrolki złożonej w współrzędnej klienta względem *hWndParent*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca uchwyt do nowo utworzonego okna dialogowego formantu złożonego.
 
@@ -255,7 +255,7 @@ Wywołaj tę metodę, aby ustawić kolor tła kontrolki złożonej przy użyciu 
 HRESULT SetBackgroundColorFromAmbient();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 

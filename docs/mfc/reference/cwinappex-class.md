@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869946"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420884"
 ---
 # <a name="cwinappex-class"></a>Klasa CWinAppEx
 
@@ -136,7 +136,7 @@ ms.locfileid: "78869946"
 class CWinAppEx : public CWinApp
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -253,7 +253,7 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 *lpszSectionName*<br/>
 podczas Ciąg, który zawiera ścieżkę klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -317,7 +317,7 @@ podczas Identyfikator menu pierwszego odrywania.
 *uiCmdLast*<br/>
 podczas Identyfikator menu ostatniego odrywania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli `CMenuTearOffManager` został utworzony i zainicjowany pomyślnie. Wartość FALSE, jeśli wystąpi błąd lub jeśli `CMenuTearOffManager` już istnieje.
 
@@ -359,7 +359,7 @@ podczas Identyfikator menu argumentów.
 *uInitDirMenuID*<br/>
 podczas Identyfikator menu początkowego katalogu narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli metoda tworzy i inicjuje obiekt `CUserToolsManager`; FAŁSZ, jeśli metoda nie powiedzie się lub jeśli obiekt `CUserToolsManager` już istnieje.
 
@@ -377,7 +377,7 @@ Aby uzyskać więcej informacji na temat narzędzi użytkownika i sposobu ich w�
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -403,7 +403,7 @@ określoną Wskaźnik do buforu, który Metoda wypełnia dane binarne.
 *pBytes*<br/>
 określoną Wskaźnik do liczby całkowitej bez znaku, która jest stosowana przez metodę w celu zapisania liczby odczytanych bajtów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
@@ -421,7 +421,7 @@ Zwraca wskaźnik do globalnego obiektu [CContextMenuManager](../../mfc/reference
 CContextMenuManager* GetContextMenuManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CContextMenuManager`.
 
@@ -435,7 +435,7 @@ Jeśli obiekt CContextMenuManager nie zostanie zainicjowany, funkcja wywołuje [
 int GetDataVersion() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -447,7 +447,7 @@ Zwraca wersję główną aplikacji, która jest zapisywana w rejestrze systemu W
 int GetDataVersionMajor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita, która zawiera główny numer wersji.
 
@@ -459,7 +459,7 @@ Zwraca pomocniczą wersję aplikacji, która jest zapisywana w rejestrze systemu
 int GetDataVersionMinor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość całkowita, która zawiera pomocniczy numer wersji.
 
@@ -481,7 +481,7 @@ podczas Ciąg, który zawiera nazwę wpisu rejestru.
 *nDefault*<br/>
 podczas Wartość domyślna zwracana przez metodę, jeśli określony wpis rejestru nie istnieje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dane rejestru, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie *nDefault*.
 
@@ -499,7 +499,7 @@ Zwraca wskaźnik do globalnego obiektu [CKeyboardManager](../../mfc/reference/ck
 CKeyboardManager* GetKeyboardManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CKeyboardManager`.
 
@@ -515,7 +515,7 @@ Zwraca wskaźnik do globalnego obiektu [CMouseManager](../../mfc/reference/cmous
 CMouseManager* GetMouseManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CMouseManager`.
 
@@ -541,7 +541,7 @@ podczas Ciąg, który zawiera ścieżkę względną wpisu rejestru.
 *obiektów*<br/>
 określoną Odwołanie do `CObject`. Ta metoda używa tego odwołania do przechowywania danych rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -559,7 +559,7 @@ Pobiera domyślną ścieżkę rejestru dla aplikacji.
 LPCTSTR GetRegistryBase();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który zawiera ścieżkę domyślnej lokalizacji rejestru.
 
@@ -580,7 +580,7 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 *szSectionAdd*<br/>
 podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 `CString`, który zawiera ścieżkę bezwzględną klucza rejestru.
 
@@ -614,7 +614,7 @@ określoną Wskaźnik do buforu, w którym metoda przechowuje dane.
 *pBytes*<br/>
 określoną Wskaźnik do niepodpisanej liczby całkowitej. Metoda zapisuje rozmiar *ppData* w tym parametrze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
@@ -646,7 +646,7 @@ podczas Ciąg, który zawiera wartość do odczytania.
 *nDefault*<br/>
 podczas Wartość domyślna, która ma zostać zwrócona, jeśli określona wartość nie istnieje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dane całkowite przechowywane w określonej wartości rejestru; *nDefault* , jeśli dane nie istnieją.
 
@@ -678,7 +678,7 @@ podczas Ciąg, który zawiera wartość do odczytania.
 *obiektów*<br/>
 określoną Odwołanie do `CObject`. Ta metoda używa tej `CObject` do przechowywania danych rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -710,7 +710,7 @@ podczas Ciąg, który zawiera wartość do odczytania.
 *lpszDefault*<br/>
 podczas Wartość domyślna, która ma zostać zwrócona, jeśli określona wartość nie istnieje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dane ciągu przechowywane w określonej wartości rejestru, jeśli istnieją dane; w przeciwnym razie *lpszDefault*.
 
@@ -728,7 +728,7 @@ Zwraca wskaźnik do globalnego obiektu [CShellManager](../../mfc/reference/cshel
 CShellManager* GetShellManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CShellManager`.
 
@@ -754,7 +754,7 @@ podczas Ciąg, który zawiera nazwę klucza rejestru.
 *lpzDefault*<br/>
 podczas Wartość domyślna zwracana przez metodę, jeśli określony wpis rejestru nie istnieje.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Dane ciągu przechowywane w rejestrze, jeśli zakończyły się pomyślnie; *lpszDefault* w inny sposób.
 
@@ -772,7 +772,7 @@ Zwraca wskaźnik do globalnego obiektu [CTooltipManager](../../mfc/reference/cto
 CTooltipManager* GetTooltipManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CTooltipManager`.
 
@@ -788,7 +788,7 @@ Zwraca wskaźnik do globalnego obiektu [CUserToolsManager](../../mfc/reference/c
 CUserToolsManager* GetUserToolsManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu globalnego `CUserToolsManager`; Wartość NULL, jeśli zarządzanie narzędziami użytkownika nie jest włączone dla aplikacji.
 
@@ -804,7 +804,7 @@ Inicjuje obiekt [CContextMenuManager](../../mfc/reference/ccontextmenumanager-cl
 BOOL InitContextMenuManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda tworzy obiekt CContextMenuManager; 0, jeśli obiekt `CContextMenuManager` już istnieje.
 
@@ -822,7 +822,7 @@ Inicjuje obiekt [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md
 BOOL InitKeyboardManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli metoda tworzy obiekt `CKeyboardManager`; 0, jeśli obiekt `CKeyboardManager` już istnieje.
 
@@ -840,7 +840,7 @@ Inicjuje obiekt [CMouseManager](../../mfc/reference/cmousemanager-class.md) .
 BOOL InitMouseManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli metoda tworzy obiekt `CMouseManager`; 0, jeśli obiekt `CMouseManager` już istnieje.
 
@@ -858,7 +858,7 @@ Inicjuje obiekt [CShellManager](../../mfc/reference/cshellmanager-class.md) .
 BOOL InitShellManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli metoda tworzy obiekt `CShellManager`; 0, jeśli obiekt `CShellManager` już istnieje.
 
@@ -876,7 +876,7 @@ Inicjuje obiekt [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) 
 BOOL InitTooltipManager();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli metoda tworzy obiekt `CTooltipManager`; 0, jeśli obiekt `CTooltipManager` już istnieje.
 
@@ -892,7 +892,7 @@ Jeśli aplikacja ma już Menedżera etykietki narzędzi i wywoła `InitTooltipMa
 BOOL IsResourceSmartUpdate() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -909,7 +909,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 *lpszSectionName*<br/>
 podczas Ciąg, który zawiera ścieżkę klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli klucz znajduje się w rejestrze; w przeciwnym razie 0.
 
@@ -960,7 +960,7 @@ podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 *pFrameImpl*<br/>
 podczas Wskaźnik do obiektu `CFrameImpl`. Metoda stosuje informacje o stanie w rejestrze do tego okna ramki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
@@ -994,7 +994,7 @@ określoną Flagi kontrolujące położenie zminimalizowanego okna oraz sposób 
 *nShowCmd*<br/>
 określoną Liczba całkowita, która określa stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd:: funkcja ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
@@ -1073,7 +1073,7 @@ podczas Wskaźnik do obiektu pochodnego od [klasy CView](../../mfc/reference/cvi
 *iViewId*<br/>
 podczas Identyfikator widoku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli struktura odnajdzie polecenie; w przeciwnym razie FALSE.
 
@@ -1091,7 +1091,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 podczas *CWnd&#38;*<br/>
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1132,7 +1132,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 *pFrame*<br/>
 podczas Wskaźnik do okna ramki.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; 0, jeśli ładowanie nie powiodło się lub nie ma danych do załadowania.
 
@@ -1185,7 +1185,7 @@ podczas Wskaźnik do obiektu `CFrameImpl`. Ta ramka jest zapisywana w rejestrze 
 *pFrame*<br/>
 podczas Wskaźnik do obiektu okna ramki. Ta ramka jest zapisywana w rejestrze systemu Windows.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
@@ -1208,7 +1208,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 *lpszSectionName*<br/>
 podczas Ciąg, który zawiera ścieżkę klucza rejestru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg, który zawiera ścieżkę domyślnej lokalizacji rejestru.
 
@@ -1238,7 +1238,7 @@ podczas Element [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , któr
 *pWnd*<br/>
 podczas Wskaźnik do okna, które jest właścicielem menu podręcznego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli menu podręczne jest wyświetlane pomyślnie; 0 w przeciwnym razie.
 
@@ -1270,7 +1270,7 @@ podczas Liczba całkowita, która określa stan okna. Aby uzyskać więcej infor
 *rectNormalPosition*<br/>
 podczas Prostokąt, który zawiera współrzędne głównego okna ramki, gdy jest w stanie przywróconym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
@@ -1302,7 +1302,7 @@ podczas Dane do zapisania.
 *nBytes*<br/>
 podczas Rozmiar *pData* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1330,7 +1330,7 @@ podczas Ciąg, który zawiera nazwę klucza rejestru.
 *nWartość*<br/>
 podczas Dane do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1358,7 +1358,7 @@ podczas Ciąg, który zawiera wartość do ustawienia.
 *obiektów*<br/>
 podczas Odwołanie do `CObject` danych, które będą przechowywane w metodzie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1392,7 +1392,7 @@ podczas Dane do zapisu w rejestrze.
 *nBytes*<br/>
 podczas Rozmiar *pData* w bajtach.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1424,7 +1424,7 @@ podczas Ciąg, który zawiera wartość do ustawienia.
 *nWartość*<br/>
 podczas Dane do zapisu w rejestrze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1456,7 +1456,7 @@ podczas Ciąg, który zawiera nazwę wartości do ustawienia.
 *obiektów*<br/>
 podczas Dane do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1488,7 +1488,7 @@ podczas Ciąg, który zawiera wartość do ustawienia.
 *lpszValue*<br/>
 podczas Dane ciągu do zapisu w rejestrze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
@@ -1516,7 +1516,7 @@ podczas Ciąg, który zawiera nazwę klucza rejestru.
 *lpszValue*<br/>
 podczas Dane do zapisania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 

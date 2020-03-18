@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865525"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420338"
 ---
 # <a name="clistbox-class"></a>Klasa CListBox
 
@@ -120,7 +120,7 @@ Oferuje funkcje pola listy systemu Windows.
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -253,7 +253,7 @@ int AddString(LPCTSTR lpszItem);
 *lpszItem*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać dodany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) do ciągu w polu listy. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
@@ -285,7 +285,7 @@ Kod ANSI znaku wpisanego przez użytkownika.
 *nIndex*<br/>
 Bieżąca pozycja karetki z polem listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość-1 lub-2 w przypadku braku dalszej akcji lub nieujemnej liczby, aby określić indeks elementu pola listy, w którym ma zostać wykonana domyślna akcja dla nacionięcia klawisza. Domyślna implementacja zwraca wartość-1.
 
@@ -338,7 +338,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 *lpCompareItemStruct*<br/>
 Długi wskaźnik do struktury `COMPAREITEMSTRUCT`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskazuje względne położenie dwóch elementów opisanych w strukturze [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Może to być dowolna z następujących wartości:
 
@@ -384,7 +384,7 @@ Określa okno nadrzędne pola listy (zazwyczaj obiekt `CDialog`). Nie może mie�
 *nID*<br/>
 Określa identyfikator formantu pola listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
@@ -452,7 +452,7 @@ int DeleteString(UINT nIndex);
 *nIndex*<br/>
 Określa indeks (liczony od zera) ciągu, który ma zostać usunięty.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba ciągów pozostałych na liście. Wartość zwracana jest LB_ERR, jeśli *nIndex* Określa indeks większy niż liczba elementów na liście.
 
@@ -493,7 +493,7 @@ Może być dowolną kombinacją wartości **wyliczenia** opisanych w `CFile::Get
 *lpszWildCard*<br/>
 Wskazuje ciąg specyfikacji pliku. Ciąg może zawierać symbole wieloznaczne (na przykład *.\*).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) ostatniej nazwy pliku dodany do listy. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było przechowywać nowe ciągi.
 
@@ -544,7 +544,7 @@ Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszuka
 *lpszItem*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pasującego elementu lub LB_ERR, jeśli wyszukiwanie nie powiodło się.
 
@@ -574,7 +574,7 @@ Określa indeks (liczony od zera) elementu przed pierwszym elementem do przeszuk
 *lpszFind*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać wyszukany. Ten ciąg może zawierać pełną nazwę pliku, łącznie z rozszerzeniem. W wyszukiwaniu nie jest rozróżniana wielkość liter, dlatego ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks pasującego elementu lub LB_ERR, jeśli wyszukiwanie nie powiodło się.
 
@@ -594,7 +594,7 @@ Pobiera indeks (liczony od zera) bieżącego elementu zakotwiczenia w polu listy
 int GetAnchorIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks bieżącego elementu zakotwiczonego, jeśli powodzenie; w przeciwnym razie LB_ERR.
 
@@ -614,7 +614,7 @@ Określa indeks elementu, który ma prostokąt fokus w polu listy wielokrotnego 
 int GetCaretIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) elementu, który ma prostokąt fokus w polu listy. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana jest indeksem elementu, który jest zaznaczony (jeśli istnieje).
 
@@ -634,7 +634,7 @@ Pobiera liczbę elementów w polu listy.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w polu listy lub LB_ERR, jeśli wystąpi błąd.
 
@@ -654,7 +654,7 @@ Pobiera indeks (liczony od zera) aktualnie wybranego elementu, jeśli istnieje, 
 int GetCurSel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) aktualnie wybranego elementu, jeśli jest to pole listy z pojedynczym wyborem. Jest LB_ERR, jeśli żaden element nie jest aktualnie wybrany.
 
@@ -676,7 +676,7 @@ Pobiera z pola listy szerokość w pikselach, w której można przewijać w pozi
 int GetHorizontalExtent() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość pola listy w pikselach.
 
@@ -701,7 +701,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu w polu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość skojarzona z elementem lub LB_ERR, jeśli wystąpi błąd.
 
@@ -726,7 +726,7 @@ void* GetItemDataPtr(int nIndex) const;
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu w polu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Pobiera wskaźnik lub-1, jeśli wystąpi błąd.
 
@@ -747,7 +747,7 @@ int GetItemHeight(int nIndex) const;
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma styl LBS_OWNERDRAWVARIABLE; w przeciwnym razie powinna być ustawiona na 0.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość w pikselach elementów w polu listy. Jeśli pole listy ma styl [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , wartość zwracana to wysokość elementu określonego przez *nIndex*. Jeśli wystąpi błąd, wartość zwracana jest LB_ERR.
 
@@ -773,7 +773,7 @@ Określa indeks (liczony od zera) elementu.
 *lpRect*<br/>
 Określa długi wskaźnik do [struktury Rect](/windows/win32/api/windef/ns-windef-rect) , który odbiera współrzędne klienta pola listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -789,7 +789,7 @@ Pobiera liczbę elementów na kolumnę.
 DWORD GetListBoxInfo() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów na kolumnę obiektu `CListBox`.
 
@@ -805,7 +805,7 @@ Pobiera ustawienia regionalne używane przez pole listy.
 LCID GetLocale() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość identyfikatora ustawień regionalnych (LCID) dla ciągów w polu listy.
 
@@ -830,7 +830,7 @@ int GetSel(int nIndex) const;
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba dodatnia, jeśli wybrano określony element; w przeciwnym razie jest równa 0. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu.
 
@@ -852,7 +852,7 @@ Pobiera łączną liczbę wybranych elementów w polu listy wielokrotnego wyboru
 int GetSelCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba wybranych elementów w polu listy. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana jest LB_ERR.
 
@@ -878,7 +878,7 @@ Określa maksymalną liczbę wybranych elementów, których numery elementów ma
 *rgIndex*<br/>
 Określa wskaźnik do buforu wystarczająco duży dla liczby liczb całkowitych określonych przez *nMaxItems*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rzeczywista liczba elementów umieszczonych w buforze. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana jest `LB_ERR`.
 
@@ -911,7 +911,7 @@ Wskazuje bufor, który odbiera ciąg. Bufor musi mieć wystarczającą ilość m
 *rString*<br/>
 Odwołanie do obiektu `CString`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość (w bajtach) ciągu, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
 
@@ -936,7 +936,7 @@ int GetTextLen(int nIndex) const;
 *nIndex*<br/>
 Określa indeks ciągu liczony od zera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość ciągu znaków, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
 
@@ -952,7 +952,7 @@ Pobiera indeks (liczony od zera) pierwszego widocznego elementu w polu listy.
 int GetTopIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pierwszego widocznego elementu w polu listy, jeśli się powiedzie, LB_ERR w przeciwnym razie.
 
@@ -982,7 +982,7 @@ Określa liczbę elementów do dodania.
 *nBytes*<br/>
 Określa ilość pamięci (w bajtach) do przydzielenia dla ciągów elementów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, Maksymalna liczba elementów, które mogą być przechowywane w polu listy przed ponownym alokacją pamięci, jest niezbędna, w przeciwnym razie LB_ERRSPACE, co oznacza, że jest za mało dostępnej pamięci.
 
@@ -1016,7 +1016,7 @@ Określa indeks pozycji (liczony od zera), w której ma zostać wstawiony ciąg.
 *lpszItem*<br/>
 Wskazuje ciąg zakończony znakiem null, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks (liczony od zera) pozycji, w której został wstawiony ciąg. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
@@ -1046,7 +1046,7 @@ Punkt, dla którego można znaleźć najbliższy element określony względem le
 *bOutside*<br/>
 Odwołanie do zmiennej LOGICZNEj, która zostanie ustawiona na wartość TRUE, jeśli *pt* znajduje się poza obszarem klienckim pola listy, wartość false, jeśli *pt* znajduje się w obszarze klienta pola listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks najbliższego elementu do punktu określonego w *pkt pt*.
 
@@ -1113,7 +1113,7 @@ Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszuka
 *lpszItem*<br/>
 Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks wybranego elementu, jeśli wyszukiwanie zakończyło się pomyślnie. Jeśli wyszukiwanie nie powiodło się, wartość zwracana jest LB_ERR i bieżące zaznaczenie nie zostanie zmienione.
 
@@ -1153,7 +1153,7 @@ Określa indeks (liczony od zera) pierwszego elementu, który ma zostać ustawio
 *nLastItem*<br/>
 Określa indeks (liczony od zera) ostatniego elementu, który ma zostać ustawiony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1204,7 +1204,7 @@ Określa indeks (liczony od zera) elementu, w którym ma zostać wyświetlony pr
 *bScroll*<br/>
 Jeśli ta wartość jest równa 0, element zostanie przewinięty do momentu, w którym jest w pełni widoczny. Jeśli ta wartość nie jest równa 0, element zostanie przewinięty do momentu, gdy jest on co najmniej częściowo widoczny.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1246,7 +1246,7 @@ int SetCurSel(int nSelect);
 *nWybierz*<br/>
 Określa indeks (liczony od zera) ciągu, który ma zostać wybrany. Jeśli *nWybierz* ma wartość-1, pole listy nie ma żadnego wyboru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1305,7 +1305,7 @@ Określa indeks (liczony od zera) elementu.
 *dwItemData*<br/>
 Określa wartość, która ma zostać skojarzona z elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1331,7 +1331,7 @@ Określa indeks (liczony od zera) elementu.
 *pData*<br/>
 Określa wskaźnik, który ma zostać skojarzony z elementem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1361,7 +1361,7 @@ Określa indeks (liczony od zera) elementu w polu listy. Ten parametr jest używ
 *cyItemHeight*<br/>
 Określa wysokość (w pikselach) elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR, jeśli indeks lub wysokość są nieprawidłowe.
 
@@ -1386,7 +1386,7 @@ LCID SetLocale(LCID nNewLocale);
 *nNewLocale*<br/>
 Nowa wartość identyfikatora ustawień regionalnych (LCID) do ustawienia w polu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość poprzedniego identyfikatora ustawień regionalnych (LCID) dla tego pola listy.
 
@@ -1416,7 +1416,7 @@ Zawiera indeks (liczony od zera) ciągu, który ma zostać ustawiony. Jeśli-1, 
 *bSelect*<br/>
 Określa, jak ustawić wybór. Jeśli *bSelect* ma wartość true, ciąg jest zaznaczony i wyróżniony; w przypadku wartości FALSE wyróżnienie jest usuwane, a ciąg nie jest już zaznaczony. Określony ciąg jest domyślnie zaznaczony i wyróżniony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 LB_ERR w przypadku wystąpienia błędu.
 
@@ -1454,7 +1454,7 @@ Określa liczbę zatrzymanych tabulatorów w polu listy.
 *rgTabStops*<br/>
 Wskazuje pierwszy element członkowski tablicy liczb całkowitych zawierających pozycje tabulatora w jednostkach okna dialogowego. Jednostka okna dialogowego to odległość pozioma lub pionowa. Jedna pozioma jednostka okna dialogowego jest równa jednej czwartej bieżącej jednostki szerokości okna dialogowego, a jedna pionowa jednostka okna dialogowego jest równa jednej ósmej aktualnej jednostki wysokości okna dialogowego. Jednostki bazowe okna dialogowego są obliczane na podstawie wysokości i szerokości bieżącej czcionki systemowej. Funkcja `GetDialogBaseUnits` systemu Windows zwraca bieżące jednostki bazowe okna dialogowego w pikselach. Tabulatory muszą być sortowane w kolejności rosnącej; karty wstecz są niedozwolone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli wszystkie karty zostały ustawione; w przeciwnym razie 0.
 
@@ -1483,7 +1483,7 @@ int SetTopIndex(int nIndex);
 *nIndex*<br/>
 Określa indeks (liczony od zera) elementu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zero jeśli kończy się pomyślnie lub LB_ERR, jeśli wystąpi błąd.
 
@@ -1513,7 +1513,7 @@ Kod klucza wirtualnego klucza naciśniętego przez użytkownika. Aby uzyskać li
 *nIndex*<br/>
 Bieżąca pozycja karetki z polem listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość-2 w przypadku braku dalszych akcji,-1 dla akcji domyślnej lub nieujemnej liczby, aby określić indeks elementu pola listy, w którym ma zostać wykonana domyślna akcja dla naciśnięcia klawisza.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856790"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417440"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Korzystanie z zestawu C++ narzędzi firmy Microsoft z poziomu wiersza polecenia
 
@@ -281,6 +281,6 @@ Zawiera łącza do artykułów, które omawiają Opcje konsolidatora i LINK. exe
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)<br/>
 Oferuje linki do narzędzi C/C++ Build, które są zawarte w programie Visual Studio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

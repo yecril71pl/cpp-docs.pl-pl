@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866710"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418497"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
@@ -173,7 +173,7 @@ Rozszerza funkcjonalność [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md
 class CMDIFrameWndEx : public CMDIFrameWnd
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -318,7 +318,7 @@ podczas Wskaźnik do okienka do zarejestrowania.
 *bTail*<br/>
 podczas Określa, czy dodać to okienko na końcu listy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość różną od zera, jeśli okienko zostało pomyślnie zarejestrowane. Zwraca wartość 0, jeśli okienko jest już zarejestrowane w Menedżerze dokowania.
 
@@ -370,7 +370,7 @@ określoną Wskaźnik do zmiennej całkowitej wskazującej, które funkcje są w
 
 - 2: grupy z kartami MDI są włączone.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli włączono karty MDI lub grupy z kartami MDI.
 
@@ -390,7 +390,7 @@ Wywoływane przez platformę, aby określić, czy okno ramki może skonwertować
 virtual BOOL CanCovertControlBarToMDIChild();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość PRAWDA, jeśli okno ramki może skonwertować okienka dokowania na dokumenty z kartami. w przeciwnym razie zwraca wartość FALSE.
 
@@ -411,7 +411,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 *pBar*<br/>
 Wskaźnik do okienka dokowania do przekonwertowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wskaźnik do nowego okna podrzędnego MDI zawierającego okienko dokowania.
 
@@ -437,7 +437,7 @@ podczas Ciąg tekstowy, który zawiera identyfikator dokumentu. Zwykle jest to p
 *pObj*<br/>
 podczas Wskaźnik do obiektu zdefiniowanego przez użytkownika. Na przykład deweloper może utworzyć strukturę danych specyficzną dla aplikacji opisującą dokument i informującą, jak dokument powinien być zainicjowany podczas uruchamiania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do `CMDIChildWndEx`.
 
@@ -473,7 +473,7 @@ podczas Nazwa dokumentu.
 *pObj*<br/>
 podczas Zarezerwowane do użytku w przyszłości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do nowego okna.
 
@@ -527,7 +527,7 @@ podczas Wskaźnik do okienka dokowania.
 *pLeftOf*<br/>
 podczas Wskaźnik do okienka, które służy jako witryna Docker. .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE, jeśli operacja zakończyła się pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
@@ -562,7 +562,7 @@ podczas Określa boki okna głównego ramki, które zostanie włączone. Użyj c
 
 - CBRS_ALIGN_BOTTOM
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wywołaj tę funkcję, aby włączyć tryb autoukrywania dla okienek, gdy są zadokowane na określonych stronach okna ramki głównej.
 
@@ -587,7 +587,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 podczas Określa styl dokowania, który ma zostać zastosowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 ### <a name="remarks"></a>Uwagi
 
@@ -861,7 +861,7 @@ Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.
 CMFCPopupMenu* GetActivePopup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do aktywnego menu podręcznego; Wartość NULL, jeśli menu podręczne nie jest aktywne.
 
@@ -877,7 +877,7 @@ Zwraca identyfikator zasobów udostępnionych okna ramki MDI.
 UINT GetDefaultResId() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość identyfikatora zasobu. 0, jeśli okno ramki nie ma paska menu.
 
@@ -893,7 +893,7 @@ Zwraca listę okien z kartami MDI.
 const CObList& GetMDITabGroups() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera listę okien z kartami. Nie należy przechowywać ani modyfikować listy.
 
@@ -909,7 +909,7 @@ Zwraca odwołanie do podkreślenia okna z zakładkami.
 CMFCTabCtrl& GetMDITabs();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do podkreślenia okna z kartami.
 
@@ -921,7 +921,7 @@ Zwraca kombinację flag, które określają, jakie operacje są prawidłowe, gdy
 DWORD GetMDITabsContextMenuAllowedItems();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Koniunkcja bitowa lub kombinacja następujących flag:
 
@@ -953,7 +953,7 @@ Zwraca wskaźnik do obiektu paska menu dołączonego do okna ramki.
 const CMFCMenuBar* GetMenuBar() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu paska menu.
 
@@ -970,7 +970,7 @@ CBasePane* GetPane(UINT nID);
 *nID*<br/>
 podczas Identyfikator formantu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okienka o określonym IDENTYFIKATORze kontrolki, jeśli istnieje. W przeciwnym razie wartość NULL.
 
@@ -982,7 +982,7 @@ Pobiera kontrolkę pasek wstążki dla ramki.
 CMFCRibbonBar* GetRibbonBar();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) dla ramki.
 
@@ -996,7 +996,7 @@ Zwraca listę odrywanych menu.
 const CObList& GetTearOffBars() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera kolekcję wskaźników do obiektów pochodnych `CPane`, które są w stanie odrywania.
 
@@ -1022,7 +1022,7 @@ podczas Wskaźnik do przycisku paska narzędzi.
 *strTTText*<br/>
 podczas Tekst etykietki narzędzia, który będzie wyświetlany dla przycisku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli etykietka narzędzia została wyświetlona. W przeciwnym razie zwraca wartość FALSE.
 
@@ -1050,7 +1050,7 @@ podczas Wskaźnik do okienka przed lub po wstawieniu okienka.
 *bAfter*<br/>
 podczas W przypadku wartości TRUE *pControlBar* jest wstawiany po *pTarget*. W przypadku wartości FALSE *pControlBar* jest wstawiany przed *pTarget*.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli metoda pomyślnie rejestruje okienko, FAŁSZ, jeśli okienko zostało już zarejestrowane za pomocą Menedżera dokowania.
 
@@ -1066,7 +1066,7 @@ Określa, czy okno ramki jest w trybie pełnoekranowym.
 BOOL IsFullScreen() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno ramki jest w trybie pełnoekranowym; w przeciwnym razie FALSE.
 
@@ -1082,7 +1082,7 @@ Określa, czy funkcja grup z kartami MDI jest włączona.
 BOOL IsMDITabbedGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli funkcja grup z kartami MDI jest włączona. w przeciwnym razie FALSE.
 
@@ -1103,7 +1103,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 *pWnd*<br/>
 podczas Wskaźnik do okna z kartami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli określone okno z kartami znajduje się na liście okien z kartami, które tworzą grupy z kartami MDI. W przeciwnym razie FALSE.
 
@@ -1115,7 +1115,7 @@ Określa, czy okno ramki ma pasek menu.
 BOOL IsMenuBarAvailable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli wskaźnik do obiektu paska menu nie ma wartości NULL; w przeciwnym razie FALSE.
 
@@ -1141,7 +1141,7 @@ podczas Określa, która krawędź punktu jest bliska. Możliwe wartości to CBR
 *bOuterEdge*<br/>
 podczas Ma wartość TRUE, jeśli punkt znajduje się blisko zewnętrznego obramowania witryny Docker; W przeciwnym razie zwraca wartość FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli punkt znajduje się blisko witryny Docker; w przeciwnym razie FALSE.
 
@@ -1157,7 +1157,7 @@ Określa, czy okno ramki jest w trybie podglądu wydruku.
 BOOL IsPrintPreview();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno ramki jest w trybie podglądu wydruku; w przeciwnym razie FALSE.
 
@@ -1189,7 +1189,7 @@ podczas Wskaźnik do elementu nadrzędnego ramki.
 *pContext*<br/>
 podczas Wskaźnik do [struktury CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Ten parametr może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie FALSE.
 
@@ -1206,7 +1206,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 *lpszProfileName*<br/>
 podczas Określa nazwę profilu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ładowanie zakończyło się pomyślnie; Wartość FALSE, jeśli ładowanie nie powiodło się lub nie ma danych do załadowania.
 
@@ -1324,7 +1324,7 @@ podczas Zawiera jedną z następujących wartości z `CFrameWnd::BorderCmd`Enum:
 *lpRectBorder*<br/>
 [in. out] Wskaźnik do [struktury Rect](/windows/win32/api/windef/ns-windef-rect) lub obiektu [klasy CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne obramowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1345,7 +1345,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 *pWnd*<br/>
 podczas Wskaźnik do zamkniętego okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko dokowania można zamknąć. W przeciwnym razie FALSE.
 
@@ -1368,7 +1368,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 *pWnd*<br/>
 podczas Wskaźnik do zamkniętego okna mini-frame.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli ruchome okno mini-frame może być zamknięte. W przeciwnym razie FALSE.
 
@@ -1421,7 +1421,7 @@ podczas Używane zgodnie z wartością *nCode*. Aby uzyskać więcej informacji 
 *pHandlerInfo*<br/>
 [in. out] Zazwyczaj ten parametr powinien mieć wartość NULL. Jeśli nie ma wartości NULL, `OnCmdMsg` wypełnia `pTarget` i `pmf` członków struktury *pHandlerInfo* zamiast wysyłania polecenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.
 
@@ -1447,7 +1447,7 @@ podczas Wskaźnik na przycisk menu.
 *rectImage*<br/>
 podczas Prostokąt obwiedni obrazu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli metoda rysuje obraz. Domyślna implementacja zwraca wartość FALSE.
 
@@ -1478,7 +1478,7 @@ Wywoływane przez platformę, gdy okno ramki MDI przetwarza komunikat WM_ERASEBK
 virtual BOOL OnEraseMDIClientBackground(CDC*);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli aplikacja przetwarza komunikat i kasuje tło.
 
@@ -1504,7 +1504,7 @@ podczas Przycisk paska narzędzi.
 *pTI*<br/>
 określoną Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli aplikacja wypełnia parametr *PTI* . Domyślna implementacja zwraca wartość FALSE.
 
@@ -1525,7 +1525,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 *pFrame*<br/>
 podczas Wskaźnik do okna mini-frame.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie FALSE.
 
@@ -1569,7 +1569,7 @@ podczas Wskaźnik do okienka szybkie dostosowywanie.
 *uiToolbarID*<br/>
 podczas Identyfikator kontrolki paska narzędzi, który ma zostać dostosowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zawsze zwraca wartość TRUE.
 
@@ -1611,7 +1611,7 @@ podczas Bitowa lub kombinacja flag wskazujących, jakie akcje są dozwolone dla 
 *bTabDrop*<br/>
 podczas TRUE, aby wyświetlić menu w wyniku przeciągnięcia karty na inną grupę z kartami. Wartość FALSE, aby wyświetlić menu jako menu skrótów na aktualnie aktywnej karcie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zastąp tę metodę w klasie pochodnej [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md).
 
@@ -1638,7 +1638,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 *bShow*<br/>
 podczas Wartość TRUE, aby pokazać okienka, wartość FALSE powoduje ukrycie okienek.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli stan okienek zmienia się w wyniku wywołania tej metody, FAŁSZ, jeśli okienka są już w stanie określonym przez *bShow*. Na przykład jeśli okienka są ukryte i *bShow* ma wartość false, wartość zwracana to false.
 
@@ -1656,7 +1656,7 @@ Wywoływane przez platformę, gdy otwiera menu podręczne.
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli menu podręczne ma być wyświetlane. W przeciwnym razie FALSE. Domyślna implementacja zwraca wartość TRUE.
 
@@ -1704,7 +1704,7 @@ podczas Wskaźnik do menu podręcznego.
 *pBar*<br/>
 podczas Wskaźnik do paska odrywania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, aby zezwolić na uaktywnienie menu podręcznego z paskiem odrywania; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
@@ -1760,7 +1760,7 @@ podczas Jeśli wartość jest inna niż NULL, Metoda wykonuje iterację tylko dl
 *dwAlignment*<br/>
 określoną Jeśli okienko zostanie znalezione, ten parametr określi, która strona okienka znajduje się najbliżej określonego punktu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okienka dokującego lub wartość NULL, jeśli żadna kontrolka nie zawiera punktu określonego przez *punkt*.
 
@@ -1834,7 +1834,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 *lpszProfileName*<br/>
 podczas Określa nazwę profilu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli zapis zakończył się pomyślnie; Wartość FALSE, jeśli zapisywanie nie powiodło się.
 
@@ -1970,7 +1970,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 *pMDIChildWnd*<br/>
 Wskaźnik do podrzędnego okna MDI zawierającego okienko dokowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie, FALSE w przypadku niepowodzenia.
 

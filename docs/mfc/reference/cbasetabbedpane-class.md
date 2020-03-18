@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883677"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418868"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
 
@@ -79,17 +79,17 @@ Rozszerza funkcjonalność [klasy CDockablePane](../../mfc/reference/cdockablepa
 class CBaseTabbedPane : public CDockablePane
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`CBaseTabbedPane::CBaseTabbedPane`|Konstruktor domyślny.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CBaseTabbedPane::AddTab](#addtab)|Dodaje nową kartę do okienka z kartami.|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy puste okienko z kartami może zostać zniszczone.|
@@ -181,7 +181,7 @@ podczas PRAWDA, aby karta była aktywna; w przeciwnym razie FALSE.
 *bDetachable*<br/>
 podczas PRAWDA, aby można było odłączać kartę; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie dodane jako karta i nie zostało zniszczone w procesie. FAŁSZ, jeśli dodawane okienko jest obiektem typu `CBaseTabbedPane`. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.
 
@@ -197,7 +197,7 @@ Określa, czy puste okienko z kartami może zostać zniszczone.
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli puste okienko z kartami może zostać zniszczone; w przeciwnym razie FALSE. Domyślna implementacja zawsze zwraca wartość TRUE.
 
@@ -230,7 +230,7 @@ Określa, czy okienko z kartami może być zmiennoprzecinkowe.
 virtual BOOL CanFloat() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okienko może być zmiennoprzecinkowe; w przeciwnym razie FALSE.
 
@@ -242,7 +242,7 @@ Określa, czy podpis okienka z kartami powinien wyświetlać ten sam tekst co ka
 virtual BOOL CanSetCaptionTextToTabName() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli tekst nagłówka okienka z kartami jest ustawiony na tekst aktywnej karty; w przeciwnym razie FALSE.
 
@@ -281,7 +281,7 @@ podczas Wskaźnik do okienka, aby odłączyć.
 *bHide*<br/>
 podczas Wartość logiczna określająca, czy struktura ukrywa okienko po odłączeniu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli struktura pomyślnie odłącza okienko; Wartość FALSE, jeśli *pBar* ma wartość null lub odwołuje się do okienka, które nie znajduje się w okienku z kartami.
 
@@ -327,7 +327,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 *uBarID*<br/>
 podczas Określa identyfikator okienka do znalezienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okienka, jeśli został odnaleziony; w przeciwnym razie wartość NULL.
 
@@ -353,7 +353,7 @@ podczas Określa indeks (liczony od zera) karty do pobrania.
 *bGetWrappedBar*<br/>
 podczas Wartość TRUE powoduje zwrócenie okna bazowego (opakowanego) okienka zamiast samego okienka; w przeciwnym razie FALSE. Dotyczy to tylko okienek pochodnych z [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli okienko zostanie znalezione, zwracany jest prawidłowy wskaźnik do przeszukiwanego okienka; w przeciwnym razie wartość NULL.
 
@@ -387,7 +387,7 @@ podczas Określa metodę, która ma być używana do przesunięcia okienka. Aby 
 *bHide*<br/>
 podczas Wartość TRUE powoduje ukrycie okienka przed liczbą zmiennoprzecinkową; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość TRUE, jeśli okienko jest przepływane; w przeciwnym razie FALSE.
 
@@ -405,7 +405,7 @@ Zwraca domyślną kolejność kart w okienku.
 const CArray<int,int>& GetDefaultTabsOrder();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt `CArray`, który określa domyślną kolejność kart w okienku.
 
@@ -426,7 +426,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 *iTabNum*<br/>
 podczas Odwołanie do liczby całkowitej. Ta metoda zapisuje indeks (liczony od zera) pierwszej wyświetlanej karty do tego parametru lub-1, jeśli nie zostanie znaleziona żadna wyświetlana karta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Jeśli powiedzie się, wskaźnik do pierwszej wyświetlonej karty; w przeciwnym razie wartość NULL.
 
@@ -512,7 +512,7 @@ Zwraca liczbę kart w oknie karty.
 virtual int GetTabsNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba kart w okienku z kartami.
 
@@ -524,7 +524,7 @@ Pobiera bazowe (opakowane) okno kart.
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do okna bazowej karty.
 
@@ -536,7 +536,7 @@ Zwraca liczbę widocznych kart.
 virtual int GetVisibleTabsNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba widocznych kart, które będą większe lub równe zeru.
 
@@ -552,7 +552,7 @@ Określa, czy okienko z kartami może być przełączane w tryb autoukrywania.
 virtual BOOL HasAutoHideMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli okienko można przełączyć w tryb Autoukrywanie; w przeciwnym razie FALSE.
 
@@ -568,7 +568,7 @@ Określa, czy okienko z kartami jest ukryte, gdy zostanie wyświetlona tylko jed
 virtual BOOL IsHideSingleTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okno karty nie jest wyświetlane, gdy istnieje tylko jedna widoczna karta; w przeciwnym razie FALSE.
 
@@ -589,7 +589,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 *pBar*<br/>
 [in. out] Wskaźnik do okienka, które ma zostać usunięte z okienka z kartami.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli okienko zostało pomyślnie usunięte z okienka z kartami i jeśli okienko z kartami jest nadal ważne. Wartość FALSE, jeśli ostatnie okienko zostało usunięte z okienka z kartami, a okienko z kartami zostanie zniszczone. Jeśli zwracaną wartością jest FALSE, nie należy używać okienka z kartami więcej.
 
@@ -640,7 +640,7 @@ podczas PRAWDA, aby opóźnić korektę układu karty; w przeciwnym razie FALSE.
 *bActivate*<br/>
 podczas PRAWDA, aby karta była aktywna; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli karta została pokazana lub Ukryta pomyślnie; w przeciwnym razie FALSE.
 
@@ -688,7 +688,7 @@ podczas Określa wyrównanie okienka Autoukrywanie, które ma zostać utworzone.
 *bUseTimer*<br/>
 podczas Określa, czy ma być używany efekt Autoukrywanie, gdy użytkownik przełącza okienko do trybu autoukrywania, lub w celu natychmiastowego ukrycia okienka.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do paska narzędzi Autoukrywanie, który jest tworzony podczas przełączania do trybu autoukrywania, lub wartość NULL, jeśli nie jest tworzony żaden pasek narzędzi.
 
@@ -700,7 +700,7 @@ Tryb autoukrywania jest ustawiany dla każdego okienka, które ma zostać odłą
 
 Wywołaj tę metodę, aby programowo włączyć tryb ukrywania okienka z kartami. Okienko musi być zadokowane do głównego okna ramki ( [CDockablePane:: GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) musi zwrócić prawidłowy wskaźnik do [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

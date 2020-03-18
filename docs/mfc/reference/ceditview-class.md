@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: e9b7dea980e607c776e2d50c679042c765080fdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872498"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418658"
 ---
 # <a name="ceditview-class"></a>Klasa elementu CEditView
 
@@ -57,7 +57,7 @@ Typ klasy widoku, która udostępnia funkcje kontrolki edycji systemu Windows i 
 class CEditView : public CCtrlView
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -192,7 +192,7 @@ Określa kierunek wyszukiwania. W przypadku wartości TRUE kierunek wyszukiwania
 *bCase*<br/>
 Określa, czy w wyszukiwaniu jest uwzględniana wielkość liter. W przypadku wartości TRUE wyszukiwanie uwzględnia wielkość liter. W przypadku wartości FALSE wyszukiwanie nie uwzględnia wielkości liter.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli zostanie znaleziony tekst wyszukiwania; w przeciwnym razie 0.
 
@@ -210,7 +210,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać liczbę znaków w b
 UINT GetBufferLength() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Długość ciągu w buforze.
 
@@ -222,7 +222,7 @@ Wywołaj `GetEditCtrl`, aby uzyskać odwołanie do kontrolki edycji używanej pr
 CEdit& GetEditCtrl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do obiektu `CEdit`.
 
@@ -245,7 +245,7 @@ Wywołaj `GetPrinterFont`, aby uzyskać wskaźnik do obiektu [CFont](../../mfc/r
 CFont* GetPrinterFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do obiektu `CFont`, który określa bieżącą czcionkę drukarki; Wartość NULL, Jeśli czcionka drukarki nie została ustawiona. Wskaźnik może być tymczasowy i nie powinien być przechowywany do późniejszego użycia.
 
@@ -276,7 +276,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do buforu
 LPCTSTR LockBuffer() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do buforu kontrolki edycji.
 
@@ -409,7 +409,7 @@ Indeks w buforze pierwszego znaku, który ma być renderowany.
 *nIndexStop*<br/>
 Indeks w buforze znaku następującego po ostatnim znaku do renderowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks następnego znaku do wydrukowania (oznacza to, że znak następujący po ostatnim znaku jest renderowany).
 

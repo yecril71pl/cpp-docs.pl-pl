@@ -53,11 +53,11 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867017"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421101"
 ---
 # <a name="coledocument-class"></a>Klasa COleDocument
 
@@ -69,17 +69,17 @@ Klasa bazowa dla dokumentów OLE, które obsługują edycję wizualizacji.
 class COleDocument : public CDocument
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Konstruuje obiekt `COleDocument`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDocument:: AddItem](#additem)|Dodaje element do listy elementów obsługiwanych przez dokument.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Ustawia urządzenie drukowania-docelowego dla wszystkich elementów klienta w dokumencie.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Obsługuje zdarzenia w menu Zmień ikonę.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Obsługuje konwersję osadzonego lub połączonego obiektu z jednego typu na drugi.|
@@ -169,7 +169,7 @@ Wskaźnik do struktury danych `DVTARGETDEVICE`, która zawiera informacje o nowy
 *PPD*<br/>
 Wskaźnik do struktury danych `PRINTDLG`, która zawiera informacje o nowym urządzeniu drukowania. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -225,7 +225,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 *pWnd*<br/>
 Wskaźnik do okna, w którym jest wyświetlany dokument kontenera.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pojedynczego, w miejscu aktywnego elementu OLE; Wartość NULL, jeśli w stanie "w miejscu aktywnym" nie ma obecnie elementu OLE.
 
@@ -242,7 +242,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 *Terminal*<br/>
 Odwołanie do wartości pozycji ustawionej przez poprzednie wywołanie do `GetNextClientItem`; wartość początkowa jest zwracana przez `GetStartPosition` funkcję członkowską.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do następnego elementu klienta w dokumencie lub wartość NULL, jeśli nie ma więcej elementów klienta.
 
@@ -267,7 +267,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 *Terminal*<br/>
 Odwołanie do wartości pozycji ustawionej przez poprzednie wywołanie do `GetNextItem`; wartość początkowa jest zwracana przez `GetStartPosition` funkcję członkowską.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do elementu dokumentu na określonej pozycji.
 
@@ -292,7 +292,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 *Terminal*<br/>
 Odwołanie do wartości pozycji ustawionej przez poprzednie wywołanie do `GetNextServerItem`; wartość początkowa jest zwracana przez `GetStartPosition` funkcję członkowską.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do następnego elementu serwera w dokumencie lub wartość NULL, jeśli nie ma więcej elementów serwera.
 
@@ -317,7 +317,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 *pView*<br/>
 Wskaźnik do aktywnego obiektu widoku wyświetlającego dokument.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do pojedynczego, wybranego elementu OLE; Wartość NULL, jeśli nie wybrano żadnych elementów OLE lub wybrano więcej niż jeden element.
 
@@ -333,7 +333,7 @@ Wywołaj tę funkcję, aby pobrać pozycję pierwszego elementu w dokumencie.
 virtual POSITION GetStartPosition() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość pozycji, której można użyć, aby rozpocząć iterację elementów dokumentu; Wartość NULL, jeśli dokument nie zawiera żadnych elementów.
 
@@ -349,7 +349,7 @@ Wywołaj tę funkcję, aby określić, czy dokument zawiera puste elementy.
 BOOL HasBlankItems() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli dokument zawiera puste elementy; w przeciwnym razie 0.
 
@@ -542,7 +542,7 @@ virtual void UpdateModifiedFlag();
 
 Dzięki temu platforma może monitować użytkownika o zapisanie dokumentu przed zamknięciem, nawet jeśli dane natywne w dokumencie nie zostały zmodyfikowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykładowy kontener MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład MFCBIND MFC](../../overview/visual-cpp-samples.md)<br/>
