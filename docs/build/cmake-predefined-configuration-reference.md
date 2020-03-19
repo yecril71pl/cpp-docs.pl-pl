@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624741"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509435"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake wstępnie zdefiniowanych konfiguracji kompilacji
 
@@ -26,7 +26,7 @@ W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakes
 - Wersja x86
 - Debugowanie x64
 - Wersja x64
-- Linux — debugowanie
+- Linux-Debug
 - Linux — wydanie
 - Debugowanie IoT
 - Wydanie IoT
@@ -351,6 +351,7 @@ Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym przed i po skomp
   ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -365,9 +366,9 @@ W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakes
 - Clang debugowanie x64
 - Wersja x64
 - Wersja x64 Clang
-- Linux — debugowanie
+- Linux-Debug
 - Linux — wydanie
-- Linux — Clang — Debuguj
+- Linux-Clang-Debug
 - Linux — Clang — wydanie
 - Istniejąca pamięć podręczna (zdalna)
 - Istniejąca pamięć podręczna
@@ -695,7 +696,7 @@ Po wybraniu konfiguracji jest ona dodawana do pliku pliku cmakesettings. JSON w 
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CMake projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>

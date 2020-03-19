@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 591af0d66c9c209ba56310a0bd5cf5cd74e34929
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 34a2f0530d33eb61ac50b65dc1ae123d5ea5a0be
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498353"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509487"
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
 
@@ -47,23 +47,23 @@ Okres istnienia buforu zapasowego w nowym HSTRING nie jest zarządzany przez śr
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-Nazwa                                                    | Opis
+Name (Nazwa)                                                    | Opis
 ------------------------------------------------------- | -----------------------------------------------------------
-[HStringReference:: HStringReference](#hstringreference) | Inicjuje nowe wystąpienie klasy `HStringReference` klasy.
+[HStringReference:: HStringReference](#hstringreference) | Inicjuje nowe wystąpienie klasy `HStringReference`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Element członkowski                              | Opis
+Członek                              | Opis
 ----------------------------------- | ------------------------------------------------------------------
-[HStringReference:: CopyTo](#copyto) | Kopiuje bieżący `HStringReference` obiekt do obiektu HSTRING.
+[HStringReference:: CopyTo](#copyto) | Kopiuje bieżący obiekt `HStringReference` do obiektu HSTRING.
 [HStringReference:: Get](#get)       | Pobiera wartość bazowego uchwytu HSTRING.
 [HStringReference:: GetRawBuffer](#getrawbuffer) | Pobiera wskaźnik do danych ciągu bazowego.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-Nazwa                                                  | Opis
+Name (Nazwa)                                                  | Opis
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
-[HStringReference:: operator =](#operator-assign)       | Przenosi wartość innego `HStringReference` obiektu do bieżącego `HStringReference` obiektu.
+[HStringReference:: operator =](#operator-assign)       | Przenosi wartość innego obiektu `HStringReference` do bieżącego obiektu `HStringReference`.
 [HStringReference:: operator = =](#operator-equality)    | Wskazuje, czy dwa parametry są równe.
 [HStringReference:: operator! =](#operator-inequality)  | Wskazuje, czy dwa parametry nie są równe.
 [HStringReference:: operator&lt;](#operator-less-than) | Wskazuje, czy pierwszy parametr jest mniejszy niż drugi parametr.
@@ -76,11 +76,11 @@ Nazwa                                                  | Opis
 
 **Nagłówek:** corewrappers. h
 
-**Obszaru** Microsoft:: WRL:: otoki
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki
 
 ## <a name="copyto"></a>HStringReference:: CopyTo
 
-Kopiuje bieżący `HStringReference` obiekt do obiektu HSTRING.
+Kopiuje bieżący obiekt `HStringReference` do obiektu HSTRING.
 
 ```cpp
 HRESULT CopyTo(
@@ -105,7 +105,7 @@ Pobiera wartość bazowego uchwytu HSTRING.
 HSTRING Get() const throw()
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość bazowego uchwytu HSTRING.
 
@@ -116,17 +116,18 @@ Pobiera wskaźnik do danych ciągu bazowego.
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Długość* Wskaźnik do zmiennej **int** , która otrzymuje długość danych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Stały wskaźnik do danych ciągu bazowego.
+Stały **wskaźnik do** danych ciągu bazowego.
 
 ## <a name="hstringreference"></a>HStringReference:: HStringReference
 
-Inicjuje nowe wystąpienie klasy `HStringReference` klasy.
+Inicjuje nowe wystąpienie klasy `HStringReference`.
 
 ```cpp
 template<unsigned int sizeDest>
@@ -141,29 +142,29 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*sizeDest*<br/>
-Parametr szablonu, który określa rozmiar buforu docelowego `HStringReference` .
+*o największej wielkości*<br/>
+Parametr szablonu określający rozmiar buforu `HStringReference` docelowego.
 
 *str*<br/>
 Odwołanie do ciągu znaków dwubajtowych.
 
 *Funkcja*<br/>
-Maksymalna długość buforu parametrów *str* , która ma być używana w tej operacji. Jeśli parametr *len* nie jest określony, zostanie użyty cały parametr *str* . Jeśli wartość *len* jest większaniż wartość, *len* jest ustawiony na1.
+Maksymalna długość buforu parametrów *str* , która ma być używana w tej operacji. Jeśli parametr *len* nie jest określony, zostanie użyty cały parametr *str* . Jeśli wartość *len* jest większa *niż wartość*, *len* jest *ustawiony na 1*.
 
-*other*<br/>
-Inny `HStringReference` obiekt.
+*różnych*<br/>
+Inny obiekt `HStringReference`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje nowy `HStringReference` obiekt, który ma taki sam rozmiar jak parametr *str*.
+Pierwszy Konstruktor inicjuje nowy obiekt `HStringReference`, który ma taki sam rozmiar jak parametr *str*.
 
-Drugi Konstruktor inicjuje nowy `HStringReference` obiekt, którego rozmiar specifeid przez parametr *len*.
+Drugi Konstruktor inicjuje nowy obiekt `HStringReference`, którego rozmiar specifeid przez parametr *len*.
 
-Trzeci Konstruktor inicjuje nowy `HStringReference` obiekt do wartości *innego* parametru, a następnie niszczy *inny* parametr.
+Trzeci Konstruktor inicjuje nowy obiekt `HStringReference` do wartości *innego* parametru, a następnie niszczy *inny* parametr.
 
 ## <a name="operator-assign"></a>HStringReference:: operator =
 
-Przenosi wartość innego `HStringReference` obiektu do bieżącego `HStringReference` obiektu.
+Przenosi wartość innego obiektu `HStringReference` do bieżącego obiektu `HStringReference`.
 
 ```cpp
 HStringReference& operator=(HStringReference&& other) throw()
@@ -171,12 +172,12 @@ HStringReference& operator=(HStringReference&& other) throw()
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
-Istniejący `HStringReference` obiekt.
+*różnych*<br/>
+Istniejący obiekt `HStringReference`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość istniejącego *innego* obiektu jest kopiowana do bieżącego `HStringReference` obiektu, a następnie *drugi* obiekt zostanie zniszczony.
+Wartość istniejącego *innego* obiektu jest kopiowana do bieżącego obiektu `HStringReference`, a następnie *drugi* obiekt zostanie zniszczony.
 
 ## <a name="operator-equality"></a>HStringReference:: operator = =
 
@@ -199,12 +200,12 @@ inline bool operator==(
 ### <a name="parameters"></a>Parametry
 
 *LHS*<br/>
-Pierwszy parametr do porównania. *LHS* może być `HStringReference` obiektem lub dojściem HSTRING.
+Pierwszy parametr do porównania. *LHS* może być obiektem `HStringReference` lub dojściem HSTRING.
 
 *RHS*<br/>
-Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektem lub uchwytem HSTRING.
+Drugi parametr do porównania.  *RHS* może być obiektem `HStringReference` lub uchwytem HSTRING.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli parametry *LHS* i *RHS* są równe; w przeciwnym razie **false**.
 
@@ -229,12 +230,12 @@ inline bool operator!=(
 ### <a name="parameters"></a>Parametry
 
 *LHS*<br/>
-Pierwszy parametr do porównania. *LHS* może być `HStringReference` obiektem lub dojściem HSTRING.
+Pierwszy parametr do porównania. *LHS* może być obiektem `HStringReference` lub dojściem HSTRING.
 
 *RHS*<br/>
-Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektem lub uchwytem HSTRING.
+Drugi parametr do porównania.  *RHS* może być obiektem `HStringReference` lub uchwytem HSTRING.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **prawda** , jeśli parametry *LHS* i *RHS* nie są równe; w przeciwnym razie **false**.
 
@@ -251,11 +252,11 @@ inline bool operator<(
 ### <a name="parameters"></a>Parametry
 
 *LHS*<br/>
-Pierwszy parametr do porównania. *LHS* może być odwołaniem do `HStringReference`.
+Pierwszy parametr do porównania. wyrażenie *LHS* może być odwołaniem do `HStringReference`.
 
 *RHS*<br/>
 Drugi parametr do porównania.  *RHS* może być odwołaniem do `HStringReference`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli parametr *LHS* jest mniejszy niż parametr *RHS* ; w przeciwnym razie **false**.

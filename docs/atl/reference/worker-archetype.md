@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495268"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509344"
 ---
 # <a name="worker-archetype"></a>Archetype procesu roboczego
 
-Klasy, które są zgodne z archetypeem roboczym, udostępniają kod do przetwarzania elementów roboczych w kolejce w puli wątków.
+Klasy, które są zgodne z archetypeem *roboczym* , udostępniają kod do przetwarzania elementów roboczych w kolejce w puli wątków.
 
 **Implementacja**
 
@@ -37,7 +37,7 @@ Typowa Klasa *procesu roboczego* wygląda następująco:
 
 Te klasy są zgodne z tym Archetype:
 
-|Class|Opis|
+|Klasa|Opis|
 |-----------|-----------------|
 |[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który jest tworzony i niszczony dla każdego żądania.|
 
@@ -45,7 +45,7 @@ Te klasy są zgodne z tym Archetype:
 
 Te parametry szablonu oczekują, aby Klasa była zgodna z tą Archetype:
 
-|Nazwa parametru|Używane przez|
+|Nazwa parametru|Używana przez|
 |--------------------|-------------|
 |*Odpowiedzialn*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
 |*Odpowiedzialn*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
@@ -71,14 +71,15 @@ void Execute(
 Element roboczy, który ma zostać przetworzony. Element roboczy jest tego samego typu co `RequestType`.
 
 *pvWorkerParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również `WorkerArchetype::Initialize` do `Terminate`i.
+Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Initialize` i `Terminate`.
 
 *pOverlapped*<br/>
-Wskaźnik do nakładającego się struktury użytego do utworzenia kolejki, w której elementy robocze zostały umieszczone w kolejce. [](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)
+Wskaźnik do [NAkładającego](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) się struktury użytego do utworzenia kolejki, w której elementy robocze zostały umieszczone w kolejce.
 
 ## <a name="initialize"></a>WorkerArchetype:: Initialize
 
-Wywołuje się, by zainicjować obiekt Worker przed przekazaniem żądań `WorkerArchetype::Execute`do.
+Wywołuje się, by zainicjować obiekt Worker przed przekazaniem żądań do `WorkerArchetype::Execute`.
+
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -86,9 +87,9 @@ BOOL Initialize(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również `WorkerArchetype::Terminate` do `WorkerArchetype::Execute`i.
+Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Terminate` i `WorkerArchetype::Execute`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
@@ -115,9 +116,9 @@ void Terminate(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również `WorkerArchetype::Initialize` do `WorkerArchetype::Execute`i.
+Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Initialize` i `WorkerArchetype::Execute`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../../atl/active-template-library-atl-concepts.md)<br/>
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

@@ -3,12 +3,12 @@ title: Zdarzenia (C++/CX)
 description: Jak używać C++programu/CX do tworzenia i używania programów obsługi zdarzeń w środowisko wykonawcze systemu Windows.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972200"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509376"
 ---
 # <a name="events-ccx"></a>Zdarzenia (C++/CX)
 
@@ -28,7 +28,7 @@ Poniższy przykład pokazuje sposób deklarowania i wyzwalania zdarzenia. Zwró�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Pomiar
+### <a name="usage"></a>Sposób użycia
 
 Poniższy przykład przedstawia sposób, w jaki Klasa subskrybowania używa operatora `+=`, aby subskrybować zdarzenie i zapewniać procedurę obsługi zdarzeń, która ma być wywoływana, gdy zdarzenie zostanie wyzwolone. Zwróć uwagę, że podana funkcja jest zgodna z sygnaturą delegata zdefiniowanego po stronie wydawcy w przestrzeni nazw `EventTest`.
 
@@ -59,7 +59,7 @@ Wiele programów obsługi może być skojarzonych z tym samym zdarzeniem. Źród
 
 Kolejność, w której źródło zdarzeń wywołuje procedury obsługi zdarzeń dla odbiorców zdarzeń, nie jest gwarantowana i może się różnić od wywołania wywołania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Delegaci](../cppcx/delegates-c-cx.md)<br/>

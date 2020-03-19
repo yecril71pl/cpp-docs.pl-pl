@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274745"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509454"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ projekty i systemy kompilacji w programie Visual Studio
 
@@ -23,7 +23,7 @@ Możesz użyć programu Visual Studio do edytowania, kompilowania i kompilowania
 
 ## <a name="c-compilation"></a>C++kompilowa
 
-Aby *skompilować* C++ program, należy skompilować kod źródłowy z jednego lub większej liczby plików, a następnie połączyć te pliki do pliku wykonywalnego (. exe), biblioteki dynamicznej ładowania (. dll) lub biblioteki statycznej (. lib). 
+C++ Aby *skompilować program, należy* skompilować kod źródłowy z jednego lub większej liczby plików, a następnie połączyć te pliki do pliku wykonywalnego (. exe), biblioteki dynamicznej ładowania (. dll) lub biblioteki statycznej (. lib). 
 
 Kompilacja C++ podstawowa obejmuje trzy główne kroki:
 
@@ -40,11 +40,12 @@ Można tworzyć proste programy, wywołując kompilator MSVC (CL. exe) bezpośre
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 Należy zauważyć, że kompilator (CL. exe) automatycznie wywołuje C++ preprocesor i konsolidator, aby utworzyć końcowy plik wyjściowy.  Aby uzyskać więcej informacji, zobacz [Kompilowanie w wierszu polecenia](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Kompiluj systemy i projekty
 
-Większość rzeczywistych programów korzysta z pewnego rodzaju *systemu kompilacji* do zarządzania złożonością kompilowania wielu plików źródłowych w wielu konfiguracjach (tj. debugowanie i wydanie), wielu platform (x86, x64, ARM itd.), niestandardowych kroków kompilacji i nawet wielu Pliki wykonywalne, które muszą zostać skompilowane w określonej kolejności. Należy wprowadzić ustawienia w plikach konfiguracji kompilacji, a system kompilacji akceptuje ten plik jako dane wejściowe przed wywołaniem kompilatora. Zestaw plików kodu źródłowego i pliki konfiguracji kompilacji wymagane do skompilowania pliku wykonywalnego nazywa się *projektem*. 
+Większość programów działających w świecie korzysta z pewnego rodzaju *systemu kompilacji* do zarządzania złożonością kompilowania wielu plików źródłowych w wielu konfiguracjach (tj. debugowanie i wydanie), wielu platform (x86, x64, ARM itd.), niestandardowych kroków kompilacji i nawet wielu plików wykonywalnych, które muszą być kompilowane w określonej kolejności. Należy wprowadzić ustawienia w plikach konfiguracji kompilacji, a system kompilacji akceptuje ten plik jako dane wejściowe przed wywołaniem kompilatora. Zestaw plików kodu źródłowego i pliki konfiguracji kompilacji wymagane do skompilowania pliku wykonywalnego nazywa się *projektem*. 
 
 Na poniższej liście przedstawiono różne opcje projektów programu Visual Studio C++:
 
@@ -77,7 +78,7 @@ W tym artykule omówiono sposób używania kompilatoraC++ C/i narzędzi do kompi
 
 [Tworzenie bibliotek DLL w programie Visual Studio](dlls-in-visual-cpp.md) Jak tworzyć, debugować i wdrażać C/C++ dll (biblioteki udostępnione) w programie Visual Studio.
 
-[Przewodnik: Tworzenie i używanie biblioteki](walkthrough-creating-and-using-a-static-library-cpp.md) statycznej, w której można utworzyć plik binarny. lib.
+[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md) Jak utworzyć plik binarny. lib.
 
 [Kompilowanie aplikacjiC++ C/izolowanych i zestawów równoległych](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Opisuje model wdrażania aplikacji klasycznych systemu Windows, na podstawie koncepcji izolowanych aplikacji i zestawów równoległych.
 
