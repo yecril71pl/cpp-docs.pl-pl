@@ -1,18 +1,18 @@
 ---
-title: vcxproj. filters — pliki
+title: Vcxproj. filters — pliki
 ms.date: 09/25/2019
 description: Użyj plików filtrów w projektach programu C++ Visual Studio, aby zdefiniować niestandardowe foldery logiczne dla plików w Eksplorator rozwiązań
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686860"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078278"
 ---
-# <a name="vcxprojfilters-files"></a>vcxproj. filters — pliki
+# <a name="vcxprojfilters-files"></a>Vcxproj. filters — pliki
 
 Plik *filtrów* (\*. vcxproj. filters) to plik XML w formacie MSBuild, który znajduje się w folderze głównym projektu. Określa, które typy plików przechodzą do folderu logicznego w **Eksplorator rozwiązań**. Na poniższej ilustracji pliki *. cpp* znajdują się pod węzłem **pliki źródłowe** . pliki *. h* znajdują się pod węzłem **plików nagłówkowych** , a pliki *. ico* i *. RC* znajdują się w obszarze **pliki zasobów**. To położenie jest kontrolowane przez plik Filters.
 
@@ -26,7 +26,7 @@ Program Visual Studio automatycznie tworzy ten plik. W przypadku aplikacji klasy
 
 Poniższy przykład pokazuje plik filtrów dla przykładu. Ma ona płaską hierarchię; Innymi słowy, nie ma zagnieżdżonych folderów logicznych. Węzeł `UniqueIdentifier` jest opcjonalny. Umożliwia interfejsom automatyzacji programu Visual Studio znalezienie filtru. `Extensions` jest również opcjonalny. Gdy nowy plik zostanie dodany do projektu, jest dodawany do filtru znajdującego się najwyżej przy użyciu pasującego rozszerzenia pliku. Aby dodać plik do określonego filtru, kliknij prawym przyciskiem myszy filtr i wybierz polecenie **Dodaj nowy element**.
 
-`ItemGroup`, który zawiera węzły `ClInclude` jest tworzony podczas pierwszego uruchomienia projektu. W przypadku generowania własnych plików vcxproj upewnij się, że wszystkie elementy projektu mają również wpis w pliku Filters. Wartości w węźle `ClInclude` zastępują domyślne filtrowanie na podstawie rozszerzeń plików. W przypadku dodania nowego elementu do projektu przy użyciu programu Visual Studio IDE doda do pliku filtrów pojedynczy wpis pliku. Filtr nie jest automatycznie ponownie przypisywany w przypadku zmiany rozszerzenia pliku. 
+`ItemGroup`, który zawiera węzły `ClInclude` jest tworzony podczas pierwszego uruchomienia projektu. W przypadku generowania własnych plików vcxproj upewnij się, że wszystkie elementy projektu mają również wpis w pliku Filters. Wartości w węźle `ClInclude` zastępują domyślne filtrowanie na podstawie rozszerzeń plików. W przypadku dodania nowego elementu do projektu przy użyciu programu Visual Studio IDE doda do pliku filtrów pojedynczy wpis pliku. Filtr nie jest automatycznie ponownie przypisywany w przypadku zmiany rozszerzenia pliku.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Aby utworzyć zagnieżdżone foldery logiczne, zadeklaruj wszystkie węzły w fi
     </Filter>
   </ItemGroup>
 ```
-

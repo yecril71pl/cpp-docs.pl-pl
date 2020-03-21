@@ -6,50 +6,49 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707004"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076207"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
 
-
 ::: moniker range="vs-2019"
 
-Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Ta strona kreatora umożliwia definiowanie wątkowości modelu i agregację poziomu strony właściwości, które tworzysz.
+Użyj tej strony kreatora, aby zdefiniować model wątkowości i poziom agregacji tworzonej strony właściwości.
 
 - **Model wątkowości**
 
-   Określa model wątkowy posługują się na stronie właściwości.
+   Określa model wątkowości używany przez stronę właściwości.
 
-   Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Aby uzyskać więcej informacji.
+   Aby uzyskać więcej informacji [, zobacz Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) .
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Single**|Na stronie właściwości działa tylko w podstawowym wątku com.|
-   |**Apartamentu**|Na stronie właściwości można utworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.|
+   |**Wiersz**|Strona właściwości jest uruchamiana tylko w podstawowym wątku COM.|
+   |**Apartamentu**|Stronę właściwości można utworzyć w dowolnym elemencie Apartment pojedynczego wątku. Domyślnie.|
 
 - **Agregacja**
 
-   Dodaje obsługę agregacji dla strony właściwości, które tworzysz. Zobacz [agregacji](../../atl/aggregation.md) Aby uzyskać więcej informacji.
+   Dodaje obsługę agregacji dla tworzonej strony właściwości. Aby uzyskać więcej informacji, zobacz [agregacja](../../atl/aggregation.md) .
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Tak**|Utwórz stronę właściwości, który może być agregowany.|
-   |**Brak**|Utwórz stronę właściwości nie można agregować.|
-   |**Only**|Utwórz stronę właściwości wystąpienia można tworzyć tylko za pomocą agregacji.|
+   |**Tak**|Utwórz stronę właściwości, którą można agregować.|
+   |**Nie**|Utwórz stronę właściwości, której nie można agregować.|
+   |**Jedyn**|Utwórz stronę właściwości, która może być tworzona tylko przy użyciu agregacji.|
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: f4bdb8fa30c44a6eaa83f53624c5bd43bd235261
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449372"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076624"
 ---
 # <a name="ltctimegt"></a>&lt;CTime&gt;
 
-Zawiera standardowy czas nagłówka \<biblioteki C. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<Time. h > i dodaje skojarzone nazwy do przestrzeni nazw `std`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ Zawiera standardowy czas nagłówka \<biblioteki C. h > i dodaje skojarzone nazw
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w przestrzeni nazw `std`.
 
 ## <a name="constants"></a>Stałe
 
@@ -41,14 +41,14 @@ namespace std {
     using time_t = see below ;
 }
 ```
-    
+
 ## <a name="structures"></a>Struktury
-    
+
 ```cpp
 struct timespec;
 struct tm;
 ```
-    
+
 ## <a name="functions"></a>Funkcje
 
 ```cpp
@@ -64,8 +64,8 @@ struct tm* localtime(const time_t* timer);
 size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* timeptr);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+Omówienie biblioteki standardowej\ [ C++ ](../standard-library/cpp-standard-library-overview.md)
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

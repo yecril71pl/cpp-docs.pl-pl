@@ -14,16 +14,16 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177339"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078292"
 ---
 # <a name="resources-property-page"></a>Strona właściwości zasobów
 
-W przypadku natywnych programów klasycznych systemu Windows kompilacja wywołuje [kompilator zasobów (RC. exe)](/windows/win32/menurc/resource-compiler) w celu dodania obrazów, tabel ciągów i plików *. res* do pliku binarnego. Właściwości uwidocznione na tej stronie właściwości są przesyłane do kompilatora zasobów, a nie do C++ kompilatora lub konsolidatora. Aby uzyskać więcej informacji o właściwościach wymienionych w tym miejscu i sposobach mapowania do wersji RC opcji wiersza polecenia, zobacz [using RC (wiersz polecenia RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Aby uzyskać informacje na temat uzyskiwania dostępu do stron właściwości **zasobów** , [Zobacz C++ Ustawianie kompilatora i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md). Aby programowo uzyskać dostęp do tych właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>, zobacz.
+W przypadku natywnych programów klasycznych systemu Windows kompilacja wywołuje [kompilator zasobów (RC. exe)](/windows/win32/menurc/resource-compiler) w celu dodania obrazów, tabel ciągów i plików *. res* do pliku binarnego. Właściwości uwidocznione na tej stronie właściwości są przesyłane do kompilatora zasobów, a nie do C++ kompilatora lub konsolidatora. Aby uzyskać więcej informacji o właściwościach wymienionych w tym miejscu i sposobach mapowania do wersji RC opcji wiersza polecenia, zobacz [using RC (wiersz polecenia RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Aby uzyskać informacje na temat uzyskiwania dostępu do stron właściwości **zasobów** , [Zobacz C++ Ustawianie kompilatora i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md). Aby programowo uzyskać dostęp do tych właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
 
 Właściwości zasobów platformy .NET w C++aplikacjach/CLI są ujawniane na [stronie właściwości zasoby zarządzane](managed-resources-property-page.md).
 
@@ -59,10 +59,10 @@ Pomijaj wyświetlanie banera startowego i komunikatu informacyjnego (/nologo)
 
 Określa nazwę pliku zasobu (/fo [plik])
 
-## <a name="null-terminate-strings"></a>Ciągi kończące wartości null 
+## <a name="null-terminate-strings"></a>Ciągi kończące wartości null
 
 Dołącz wartość null do wszystkich ciągów w tabelach ciągów. /n
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)

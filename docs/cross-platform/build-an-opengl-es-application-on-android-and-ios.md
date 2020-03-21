@@ -2,12 +2,12 @@
 title: Tworzenie aplikacji OpenGL ES w systemach Android i iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177676"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079667"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Tworzenie aplikacji OpenGL ES w systemach Android i iOS
 
@@ -109,7 +109,7 @@ Rozwiązanie utworzone przez szablon ustawia aplikację dla systemu Android jako
 
    Wygenerowana aplikacja systemu Android Native Activity i projekty biblioteki umieszczają kod C++ współużytkowany w bibliotece dynamicznej. Zawiera kod "Glue" do interfejsu z platformą systemu Android. Większość kodu aplikacji znajduje się w bibliotece. Instrukcje manifestu, zasobów i kompilacji znajdują się w projekcie pakietu. Kod współużytkowany jest wywoływany z Main. cpp w projekcie natywnym. Aby uzyskać więcej informacji o tym, jak programować działanie systemu Android Native, zobacz stronę [pojęcia](https://developer.android.com/ndk/guides/concepts.html) dla deweloperów systemu Android.
 
-   Visual Studio kompiluje natywne projekty aktywności systemu Android przy użyciu systemu Android NDK. Używa Clang jako zestawu narzędzi platformy. Program Visual Studio mapuje właściwości projektu do poleceń Kompiluj, Połącz i Debuguj na platformie docelowej. Aby uzyskać szczegółowe informacje, Otwórz okno dialogowe **strony właściwości** dla projektu MyOpenGLESApp. Android. Native. Aby uzyskać więcej informacji na temat przełączników wiersza polecenia, zobacz [Podręcznik użytkownika kompilatora Clang](http://clang.llvm.org/docs/UsersManual.html).
+   Visual Studio kompiluje natywne projekty aktywności systemu Android przy użyciu systemu Android NDK. Używa Clang jako zestawu narzędzi platformy. Program Visual Studio mapuje właściwości projektu do poleceń Kompiluj, Połącz i Debuguj na platformie docelowej. Aby uzyskać szczegółowe informacje, Otwórz okno dialogowe **strony właściwości** dla projektu MyOpenGLESApp. Android. Native. Aby uzyskać więcej informacji na temat przełączników wiersza polecenia, zobacz [Podręcznik użytkownika kompilatora Clang](https://clang.llvm.org/docs/UsersManual.html).
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>Kompilowanie i uruchamianie aplikacji dla systemu iOS na urządzeniu z systemem iOS
 

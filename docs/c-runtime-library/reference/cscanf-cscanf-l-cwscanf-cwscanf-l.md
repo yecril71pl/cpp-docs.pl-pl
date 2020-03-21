@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778311"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079992"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
-Odczytuje sformatowane dane z konsoli programu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
+Odczytuje sformatowane dane z konsoli programu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cscanf_s, _cscanf_s_l, _cwscanf_s _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do nagłówków `<stdio.h>` i `<conio.h>`. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, [Zobacz C++ historia zmian wizualnych 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
@@ -105,7 +105,7 @@ Liczba pól, które zostały pomyślnie przekonwertowane i przypisane. Wartość
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cscanf** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Podczas gdy **_cscanf** zwykle zwraca znak wejściowy, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
+Funkcja **_cscanf** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Mimo że **_cscanf** zwykle echo znaku wejściowego, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
 
 Ta funkcja sprawdza poprawność swoich parametrów. Jeśli format ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **znacznik EOF**.
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Wymiana pól rekordów: Używanie funkcji RFX'
+title: 'Wymiana pól rekordów: używanie funkcji RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC [C++], data types
@@ -10,46 +10,46 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a54dbc10e80e19f744bb58c23639a4376156d2e7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077096"
 ---
-# <a name="record-field-exchange-using-the-rfx-functions"></a>Wymiana pól rekordów: Używanie funkcji RFX
+# <a name="record-field-exchange-using-the-rfx-functions"></a>Wymiana pól rekordów: używanie funkcji RFX
 
-W tym temacie wyjaśniono, jak używać wywołania funkcji RFX, które tworzą treści swoje `DoFieldExchange` zastąpienia.
+W tym temacie wyjaśniono, jak używać wywołań funkcji RFX, które tworzą treść przesłonięcia `DoFieldExchange`.
 
 > [!NOTE]
->  Ten temat dotyczy klasy pochodne [CRecordset](../../mfc/reference/crecordset-class.md) w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy klas pochodnych [CRecordset](../../mfc/reference/crecordset-class.md) , w których nie zaimplementowano pobierania wierszy zbiorczych. W przypadku korzystania z pobierania wierszy zbiorczych zaimplementowano wymianę zbiorczych pól rekordów (bulk RFX). RFX Bulk jest podobna do RFX. Aby zrozumieć różnice, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Funkcje globalne RFX wymianę danych między kolumnami na źródłowym i pola danych elementów członkowskich danych w twoim zestawie rekordów. Pisania funkcji RFX wywołuje w twoim zestawie rekordów [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcja elementu członkowskiego. Ten temat krótko opisano funkcje i zawiera typy danych, dla których RFX funkcje są dostępne. [Techniczne 43 Uwaga](../../mfc/tn043-rfx-routines.md) w tym artykule opisano jak napisać własne funkcje RFX dla dodatkowe typy danych.
+Funkcje globalne RFX wymieniają dane między kolumnami w elementach członkowskich danych źródła danych i pól w zestawie rekordów. Należy napisać wywołania funkcji RFX w funkcji członkowskiej [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) zestawu rekordów. W tym temacie opisano krótko funkcje i przedstawiono typy danych, dla których dostępne są funkcje RFX. [Uwaga techniczna 43](../../mfc/tn043-rfx-routines.md) opisuje sposób pisania własnych funkcji RFX dla dodatkowych typów danych.
 
-##  <a name="_core_rfx_function_syntax"></a> Składnia funkcji RFX
+##  <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a>Składnia funkcji RFX
 
-Każda funkcja RFX przyjmuje trzy parametry (natomiast niektóre czwartym lub piątym parametr opcjonalny):
+Każda funkcja RFX przyjmuje trzy parametry (a kilka z nich przyjmuje opcjonalny, czwarty lub piąty parametr):
 
-- Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiektu. Po prostu przekazują `pFX` wskaźnik przekazywany do `DoFieldExchange`.
+- Wskaźnik do obiektu [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) . Po prostu przekazujesz wskaźnik `pFX` przekazany do `DoFieldExchange`.
 
-- Nazwa kolumny w postaci, w jakiej pojawia się w źródle danych.
+- Nazwa kolumny wyświetlanej w źródle danych.
 
-- Nazwa pola odpowiedni element członkowski danych lub element członkowski danych parametru w klasie zestawu rekordów.
+- Nazwa odpowiedniego elementu członkowskiego danych lub parametru elementu członkowskiego danych w klasie zestawu rekordów.
 
-- (Opcjonalnie) W niektórych funkcji, maksymalna długość ciągu lub tablicy przesyłane. Domyślnie jest to 255 bajtów, ale możesz chcieć ją zmienić. Maksymalny rozmiar opiera się na maksymalny rozmiar `CString` obiektu — **INT_MAX** bajtów (2 147 483 647) —, ale prawdopodobnie będą napotykać limity sterowników przed tym rozmiarze.
+- Obowiązkowe W niektórych funkcjach Maksymalna długość transferowanego ciągu lub tablicy. Wartość domyślna to 255 bajtów, ale można ją zmienić. Maksymalny rozmiar jest określany na podstawie maksymalnego rozmiaru `CString` obiektu — **INT_MAX** (2 147 483 647) b — ale prawdopodobnie napotkasz limity sterowników przed tym rozmiarem.
 
-- (Opcjonalnie) W `RFX_Text` funkcji, czasami piątego parametru do określenia używasz typu danych kolumny.
+- Obowiązkowe W funkcji `RFX_Text` czasami używasz piątego parametru, aby określić typ danych kolumny.
 
-Aby uzyskać więcej informacji, zapoznaj się z funkcjami RFX w obszarze [makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md) w *odwołanie do biblioteki klas*. Na przykład gdy można wprowadzać specjalne użycia parametrów, zobacz artykuł [zestaw rekordów: Uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
+Aby uzyskać więcej informacji, zobacz funkcje RFX w obszarze [MACROS i Globals](../../mfc/reference/mfc-macros-and-globals.md) w *bibliotece klas Reference*. Aby zapoznać się z przykładem sytuacji, w której można zastosować specjalne parametry, zobacz [zestaw rekordów: uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
 
-##  <a name="_core_rfx_data_types"></a> Typy danych RFX
+##  <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a>RFX — typy danych
 
-Biblioteka klas dostarcza funkcje RFX transferu wielu różnych typów danych między źródłem danych i zestawach rekordów. Na poniższej liście podsumowano funkcje RFX przez typ danych. W przypadkach, w którym należy napisać własne wywołania funkcji RFX wybierz z tych funkcji przez typ danych.
+Biblioteka klas udostępnia funkcje RFX do przesyłania wielu różnych typów danych między źródłem danych i zestawami rekordów. Poniższa lista zawiera podsumowanie funkcji RFX według typu danych. W przypadkach, w których należy napisać własne wywołania funkcji RFX, należy wybrać jedną z tych funkcji według typu danych.
 
 |Funkcja|Typ danych|
 |--------------|---------------|
-|`RFX_Bool`|**BOOL**|
-|`RFX_Byte`|**BAJTÓW**|
+|`RFX_Bool`|**LOGICZNA**|
+|`RFX_Byte`|**BAJC**|
 |`RFX_Binary`|`CByteArray`|
 |`RFX_Double`|**double**|
 |`RFX_Single`|**float**|
@@ -59,10 +59,9 @@ Biblioteka klas dostarcza funkcje RFX transferu wielu różnych typów danych mi
 |`RFX_Text`|`CString`|
 |`RFX_Date`|`CTime`|
 
+Aby uzyskać więcej informacji, zobacz dokumentację funkcji RFX w obszarze [MACROS i Globals](../../mfc/reference/mfc-macros-and-globals.md) w *bibliotece klas Reference*. Aby uzyskać informacje na C++ temat sposobu mapowania typów danych na typy danych SQL, zobacz Typy danych SQL ANSI zamapowane C++ na typy danych w [języku SQL: C++ SQL i typy danych (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-Aby uzyskać więcej informacji, zobacz dokumentację funkcji RFX w obszarze [makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md) w *odwołanie do biblioteki klas*. Aby uzyskać informacji na temat sposobu mapowania typów danych języka C++ na typy danych SQL, zobacz tabeli ANSI SQL danych typy mapowane na typy danych języka C++ w [SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
-
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>

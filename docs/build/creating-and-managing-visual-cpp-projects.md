@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624477"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078696"
 ---
 # <a name="visual-studio-projects---c"></a>Projekty programu Visual Studio — C++
 
@@ -23,7 +23,7 @@ ms.locfileid: "73624477"
 
 ::: moniker range="vs-2019"
 
-Możesz tworzyć C++ projekty, wybierając kolejno pozycje **plik** > **Nowy** > **projekt**, a następnie ustawiając C++ **Język** na. Na liście wyników zostanie wyświetlona lista szablonów projektu, które można filtrować, ustawiając typ **platformy** lub **projektu** oraz wpisując słowa kluczowe w polu wyszukiwania. 
+Możesz tworzyć C++ projekty, wybierając kolejno pozycje **plik** > **Nowy** > **projekt**, a następnie ustawiając C++ **Język** na. Na liście wyników zostanie wyświetlona lista szablonów projektu, które można filtrować, ustawiając typ **platformy** lub **projektu** oraz wpisując słowa kluczowe w polu wyszukiwania.
 
    ![Szablony projektów programu Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Okno dialogowe nowego projektu programu Visual Studio 2019")
 
@@ -51,7 +51,7 @@ Dodaj pliki kodu źródłowego, ikony lub inne elementy do projektu, klikając p
 
 ## <a name="add-third-party-libraries"></a>Dodaj biblioteki innych firm
 
-Aby dodać biblioteki innych firm, użyj Menedżera pakietów [vcpkg](vcpkg.md) . Uruchom krok integracja z programem Visual Studio, aby skonfigurować ścieżki do tej biblioteki podczas odwoływania się do niej z dowolnego projektu programu Visual Studio. 
+Aby dodać biblioteki innych firm, użyj Menedżera pakietów [vcpkg](vcpkg.md) . Uruchom krok integracja z programem Visual Studio, aby skonfigurować ścieżki do tej biblioteki podczas odwoływania się do niej z dowolnego projektu programu Visual Studio.
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Ustawianie opcji kompilatora i innych właściwości kompilacji
 
@@ -61,7 +61,7 @@ Aby skonfigurować ustawienia kompilacji dla projektu, kliknij prawym przyciskie
 
 Aby skompilować i uruchomić nowy projekt, naciśnij klawisz **F5** lub kliknij *listę rozwijaną Debug* z zieloną strzałką na głównym pasku narzędzi. *Lista rozwijana konfiguracji* umożliwia wybranie, czy należy przeprowadzić kompilację *debugowania* czy *wydania* (lub inną konfigurację niestandardową).
 
-Nowy projekt kompiluje się bez błędów. Podczas dodawania własnego kodu możesz czasami wprowadzić błąd lub wyzwolić ostrzeżenie. Błąd uniemożliwia ukończenie kompilacji; Ostrzeżenie nie jest. Wszystkie błędy i ostrzeżenia pojawią się zarówno w Okno Dane wyjściowe, jak i w Lista błędów podczas kompilowania projektu. 
+Nowy projekt kompiluje się bez błędów. Podczas dodawania własnego kodu możesz czasami wprowadzić błąd lub wyzwolić ostrzeżenie. Błąd uniemożliwia ukończenie kompilacji; Ostrzeżenie nie jest. Wszystkie błędy i ostrzeżenia pojawią się zarówno w Okno Dane wyjściowe, jak i w Lista błędów podczas kompilowania projektu.
 
    ![Okno danych wyjściowych i Lista błędów](../overview/media/vs2017-output-error-list.png)
 
@@ -74,7 +74,7 @@ Jak używać stron właściwości i arkuszy właściwości do określania ustawi
 
 [Odwoływanie się do bibliotek i składników podczas kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
 Jak dołączyć składniki libs, DLL, COM i .NET do projektu.
- 
+
 [Porządkowanie plików wyjściowych projektu](how-to-organize-project-output-files-for-builds.md)<br/>
 Jak dostosować lokalizację plików wykonywalnych utworzonych w procesie kompilacji.
 
@@ -84,7 +84,7 @@ Jak dodać dowolne dowolne polecenie do procesu kompilacji w określonych punkta
 [Tworzenie projektu z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Jak utworzyć nowy projekt programu Visual Studio na podstawie luźnej kolekcji plików źródłowych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br>
 [Przewodnik C++ dotyczący przenoszenia i uaktualniania firmy Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

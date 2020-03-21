@@ -5,12 +5,12 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduły w języku C++ 20 zapewniają nowoczesne alternatywy dla plików nagłówkowych.
-ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 286d2ec8a26dbd0a85e8f8721ad6fd7f12f45a31
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078042"
 ---
 # <a name="overview-of-modules-in-c"></a>Omówienie modułów w języku C++
 
@@ -31,7 +31,7 @@ Mimo że nie jest to określone przez standard C++ 20, firma Microsoft umożliwi
 - STD. wyrażenie regularne zapewnia zawartość nagłówka \<wyrażenie regularne >
 - STD. FileSystem udostępnia zawartość nagłówka \<systemie plików >
 - wartość std. Memory zapewnia zawartość nagłówka \<pamięci >
-- STD. Threading zapewnia zawartość nagłówków \<niepodzielne >, \<condition_variable >, \<przyszłości >, \<
+- STD. Threading zapewnia zawartość nagłówków \<niepodzielne >, \<condition_variable >, \<przyszłości >, \<>\<\<
 - STD. Core zapewnia wszystkie inne elementy w C++ standardowej bibliotece
 
 Aby korzystać z tych modułów, po prostu Dodaj deklarację importu na początku pliku kodu źródłowego. Na przykład:
@@ -52,7 +52,7 @@ export module Foo;
 
 #define ANSWER 42
 
-namespace Bar 
+namespace Bar
 {
    int f_internal() {
         return ANSWER;
@@ -168,6 +168,6 @@ import <vector>
 import "myheader.h"
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [moduł, import, eksport](import-export-module.md)

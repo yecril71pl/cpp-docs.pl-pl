@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Architektura (ODBC)'
+title: 'Zestaw rekordów: architektura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707978"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079863"
 ---
-# <a name="recordset-architecture-odbc"></a>Zestaw rekordów: Architektura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Zestaw rekordów: architektura (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie opisano elementy członkowskie danych składające się z architekturą obiekty zestawów rekordów:
+W tym temacie opisano składowe danych, które składają się na architekturę obiektu zestawu rekordów:
 
 - [Elementy członkowskie danych pola](#_core_field_data_members)
 
 - [Elementy członkowskie danych parametru](#_core_parameter_data_members)
 
-- [Za pomocą m_nfields — i m_nparams — elementy członkowskie danych](#_core_using_m_nfields_and_m_nparams)
+- [Używanie m_nFields i m_nParams składowych danych](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zaimplementowano zbiorcze pobieranie z wiersza architektura jest podobna. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodnych `CRecordset`, w których nie zaimplementowano pobierania wierszy zbiorczych. W przypadku zaimplementowania pobierania wierszy zbiorczych architektura jest podobna. Aby zrozumieć różnice, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_a_sample_class"></a> Przykładowa klasa
+##  <a name="sample-class"></a><a name="_core_a_sample_class"></a>Klasa Przykładowa
 
-> [!NOTE] 
-> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
+> [!NOTE]
+> Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
 
-Kiedy używać [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** pochodną kreatora, aby zadeklarować klasy zestawu rekordów `CRecordset`, wynikowy klasa ma ogólną strukturę pokazano w następującym prosty klasa:
+W przypadku używania [Kreatora interfejsu użytkownika ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z kreatora **dodawania klasy** do deklarowania klasy zestawu rekordów pochodnej od `CRecordset`, wynikowa Klasa ma strukturę ogólną pokazaną w następującej prostej klasie:
 
 ```cpp
 class CCourse : public CRecordset
@@ -54,47 +54,47 @@ public:
 };
 ```
 
-Na początku klasy, kreator zapisuje zbiór [elementy członkowskie danych pola](#_core_field_data_members). Podczas tworzenia klasy należy określić co najmniej jednego członka danych pola. Jeśli klasa jest sparametryzowane, jako przykład klasy jest (z elementem członkowskim danych `m_strIDParam`), należy ręcznie dodać [elementy członkowskie danych parametru](#_core_parameter_data_members). Kreator nie obsługuje dodawania parametrów do klasy.
+Na początku klasy kreator zapisuje zestaw [elementów członkowskich danych](#_core_field_data_members). Podczas tworzenia klasy należy określić co najmniej jeden element członkowski danych pola. Jeśli klasa jest sparametryzowane, ponieważ Klasa Przykładowa jest (z elementem członkowskim danych `m_strIDParam`), należy ręcznie dodać [elementy członkowskie danych parametru](#_core_parameter_data_members). Kreator nie obsługuje dodawania parametrów do klasy.
 
-##  <a name="_core_field_data_members"></a> Elementy członkowskie danych pola
+##  <a name="field-data-members"></a><a name="_core_field_data_members"></a>Elementy członkowskie danych pola
 
-Najważniejsze elementy członkowskie klasy zestawu rekordów są elementy członkowskie danych pola. Dla każdej kolumny, którą wybierzesz ze źródła danych klasa zawiera element członkowski danych o typie danych odpowiednie dla tej kolumny. Na przykład [przykładowa klasa](#_core_a_sample_class) wyświetlane na początku tego tematu zawiera dwa elementy członkowskie pola, oba typu `CString`, co jest nazywane `m_strCourseID` i `m_strCourseTitle`.
+Najważniejszymi elementami członkowskimi klasy zestawu rekordów są elementy danych pola. Dla każdej zaznaczonej kolumny ze źródła danych Klasa zawiera element członkowski danych o odpowiednim typie danych dla tej kolumny. Przykładowo [Klasa Przykładowa](#_core_a_sample_class) pokazana na początku tego tematu ma dwa elementy członkowskie danych pól, obu typów `CString`, nazywane `m_strCourseID` i `m_strCourseTitle`.
 
-Gdy zestaw rekordów wybierze zestaw rekordów, struktura automatycznie wiąże kolumny bieżącego rekordu (po `Open` wywołanie, pierwszy rekord jest bieżąca) do elementów członkowskich danych pola obiektu. Oznacza to, że struktura używa odpowiednie pole składowej danych jako bufor do przechowywania zawartości kolumny rekordu.
+Gdy zestaw rekordów wybiera zestaw rekordów, struktura automatycznie wiąże kolumny bieżącego rekordu (po wywołaniu `Open`, pierwszy rekord jest bieżący) do elementów członkowskich danych tego obiektu. Oznacza to, że struktura używa odpowiedniego elementu członkowskiego danych pola jako buforu do przechowywania zawartości kolumny rekordu.
 
-Jak użytkownik przewija widok nowy rekord, struktura używa elementy członkowskie danych pola, który reprezentuje bieżący rekord. Struktura odświeża elementy członkowskie danych pola, zastępując wartości poprzedniej rekordu. Elementy członkowskie danych pola są również używane do aktualizowania bieżącego rekordu i dodania nowych rekordów. W ramach procesu aktualizowania rekordu możesz określić wartości aktualizacji, przypisując wartości bezpośrednio do odpowiedniego pola element członkowski danych lub elementów członkowskich.
+Gdy użytkownik przewija nowy rekord, struktura używa elementów członkowskich danych pola do reprezentowania bieżącego rekordu. Struktura odświeża elementy członkowskie danych pola, zastępując wartości poprzedniego rekordu. Elementy członkowskie danych pola są również używane do aktualizowania bieżącego rekordu i dodawania nowych rekordów. W ramach procesu aktualizowania rekordu należy określić wartości aktualizacji, przypisując wartości bezpośrednio do odpowiedniego elementu członkowskiego danych pola lub członków.
 
-##  <a name="_core_parameter_data_members"></a> Elementy członkowskie danych parametru
+##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a>Elementy członkowskie danych parametru
 
-Jeśli klasa jest sparametryzowane, ma co najmniej jednego członka danych parametru. Klasa sparametryzowana pozwala Ci zapytania rekordów na informacjach uzyskanych lub obliczane w czasie wykonywania.
+Jeśli klasa jest sparametryzowane, zawiera co najmniej jeden element członkowski danych parametru. Klasa sparametryzowanej umożliwia oparcie zapytania zestawu rekordów o informacjach uzyskanych lub obliczonych w czasie wykonywania.
 
-Zazwyczaj parametr umożliwia zawężenie zaznaczenia, jak w poniższym przykładzie. Na podstawie [przykładowa klasa](#_core_a_sample_class) na początku tego tematu, obiekty zestawów rekordów może wykonać następującą instrukcję SQL:
+Zazwyczaj parametr pozwala zawęzić wybór, jak w poniższym przykładzie. Na podstawie [przykładowej klasy](#_core_a_sample_class) na początku tego tematu obiekt Recordset może wykonać następującą instrukcję SQL:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = ?
 ```
 
-"?" Jest symbolem zastępczym dla wartości parametru, który podasz w czasie wykonywania. Podczas konstruowania zestawu rekordów i ustaw jego `m_strIDParam` staje się od instrukcji SQL zestawu rekordów element członkowski danych do MATH101,:
+"?" Jest symbolem zastępczym dla wartości parametru, która jest dostarczana w czasie wykonywania. Podczas konstruowania zestawu rekordów i ustawiania jego składowej danych `m_strIDParam` MATH101, obowiązująca instrukcja SQL dla zestawu rekordów przyjmuje następujące wartości:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 ```
 
-Definiując elementy członkowskie danych parametru, poinformować szablon o parametrach w parametrach SQL. Struktura wiąże parametr, który umożliwia ODBC, o których wiadomo, gdzie można uzyskać wartości do zastąpienia symboli zastępczych. W tym przykładzie Wynikowy zestaw rekordów zawiera tylko rekord z tabeli Kurs z kolumną CourseID, którego wartością jest MATH101. Wybrano wszystkie określone kolumny tego rekordu. Można określić dowolną liczbę parametrów (i symbole zastępcze) według potrzeb.
+Definiując elementy członkowskie danych parametrów, poinformujemy platformę o parametrach w ciągu SQL. Struktura wiąże parametr, który umożliwia ODBC, gdzie należy uzyskać wartości, aby zastąpić symbol zastępczy. W przykładzie powstały zestaw rekordów zawiera tylko rekord z tabeli kursów z kolumną CourseID, której wartością jest MATH101. Wybrano wszystkie określone kolumny tego rekordu. Możesz określić tyle parametrów (i symboli zastępczych), ile potrzebujesz.
 
 > [!NOTE]
->  MFC nie robi nic, samego, przy użyciu parametrów — w szczególności, ale nie wykonuje podstawianie tekstu. Zamiast tego MFC informuje ODBC do uzyskania parameter; ODBC pobiera dane i wykonuje niezbędne parametryzacji.
+>  MFC nie robi nic w sobie z parametrami — w szczególności nie wykonuje podstawienia tekstu. Zamiast tego, MFC instruuje ODBC, gdzie pobrać parametr; ODBC pobiera dane i wykonuje niezbędne parametryzacja.
 
 > [!NOTE]
->  Ważna jest kolejność parametrów. Uzyskać informacje na ten temat i więcej informacji na temat parametrów, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  Kolejność parametrów jest ważna. Aby uzyskać informacje na temat tego i więcej informacji o parametrach, zobacz [zestaw rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> Przy użyciu m_nfields — i m_nparams —
+##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a>Używanie m_nFields i m_nParams
 
-Gdy kreator zapisuje konstruktora dla klasy, również inicjuje [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych, która określa liczbę [elementy członkowskie danych pola](#_core_field_data_members) w klasie. Jeśli dodasz dowolne [parametry](#_core_parameter_data_members) do klasy, musisz również dodać inicjowanie [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams) element członkowski danych, która określa liczbę elementy członkowskie danych parametru. Struktura używa tych wartości do pracy z elementów członkowskich danych.
+Gdy kreator zapisuje konstruktora dla klasy, inicjuje również element członkowski danych [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) , który określa liczbę [elementów członkowskich danych pola](#_core_field_data_members) w klasie. W przypadku dodania dowolnych [parametrów](#_core_parameter_data_members) do klasy należy również dodać inicjalizację dla elementu członkowskiego danych [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) , który określa liczbę elementów członkowskich danych parametru. Struktura używa tych wartości do pracy z elementami członkowskimi danych.
 
-Aby uzyskać więcej informacji i przykładów, zobacz [wymiana pól rekordów: Używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Aby uzyskać więcej informacji i przykładów, zobacz temat [wymiana pól rekordów: używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>

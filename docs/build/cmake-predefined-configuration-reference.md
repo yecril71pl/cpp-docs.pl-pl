@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509435"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078751"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake wstępnie zdefiniowanych konfiguracji kompilacji
 
@@ -34,7 +34,6 @@ W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakes
 - Wersja MinGW
 
 Po wybraniu konfiguracji jest ona dodawana do pliku *pliku cmakesettings. JSON* w folderze głównym projektu. Można następnie użyć go do skompilowania projektu. Aby uzyskać informacje o właściwościach konfiguracji, zobacz [pliku cmakesettings Reference](cmakesettings-reference.md).
-
 
 ## <a name="linux-predefined-build-configurations"></a>Wstępnie zdefiniowane konfiguracje kompilacji systemu Linux:
 
@@ -381,7 +380,6 @@ W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakes
 - Clang
 
 Po wybraniu konfiguracji jest ona dodawana do pliku pliku cmakesettings. JSON w folderze głównym projektu. Można następnie użyć go do skompilowania projektu.
-
 
 ```json
 {

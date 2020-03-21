@@ -2,12 +2,12 @@
 title: Deklaracje i definicjeC++()
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301551"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077206"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklaracje i definicjeC++()
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-W wierszu 5 jest zadeklarowana funkcja `main`. W wierszu 7 zmienna **const** o nazwie `pi` jest zadeklarowana i *zainicjowana*. W wierszu 8 liczba całkowita `i` jest zadeklarowana i inicjowana przy użyciu wartości wygenerowanej przez `f`funkcji. Nazwa `f` jest widoczna dla kompilatora z powodu *deklaracji Forward* w wierszu 3. 
+W wierszu 5 jest zadeklarowana funkcja `main`. W wierszu 7 zmienna **const** o nazwie `pi` jest zadeklarowana i *zainicjowana*. W wierszu 8 liczba całkowita `i` jest zadeklarowana i inicjowana przy użyciu wartości wygenerowanej przez `f`funkcji. Nazwa `f` jest widoczna dla kompilatora z powodu *deklaracji Forward* w wierszu 3.
 
-W wierszu 9 jest zadeklarowana zmienna o nazwie `obj` typu `C`. Jednakże ta deklaracja zgłasza błąd, ponieważ `C` nie jest zadeklarowany do późniejszego w programie i nie jest zadeklarowana dalej. Aby naprawić ten błąd, można przenieść całą *definicję* `C` przed `main` lub w przeciwnym razie dodać do niej deklarację przesyłania dalej. To zachowanie różni się od innych języków, takich C#jak, w których funkcje i klasy mogą być używane przed ich punktem deklaracji w pliku źródłowym. 
+W wierszu 9 jest zadeklarowana zmienna o nazwie `obj` typu `C`. Jednakże ta deklaracja zgłasza błąd, ponieważ `C` nie jest zadeklarowany do późniejszego w programie i nie jest zadeklarowana dalej. Aby naprawić ten błąd, można przenieść całą *definicję* `C` przed `main` lub w przeciwnym razie dodać do niej deklarację przesyłania dalej. To zachowanie różni się od innych języków, takich C#jak, w których funkcje i klasy mogą być używane przed ich punktem deklaracji w pliku źródłowym.
 
 W wierszu 10 zadeklarowana jest zmienna o nazwie `str` typu `std::string`. Nazwa `std::string` jest widoczna, ponieważ jest wprowadzana w [pliku nagłówkowym](header-files-cpp.md) `string`, który jest scalany z plikiem źródłowym w wierszu 1. `std` jest przestrzenią nazw, w której zadeklarowana jest Klasa `string`.
 
@@ -107,6 +107,6 @@ C++ Program może zawierać więcej niż jedną [jednostkę kompilacji](header-f
 [decltype](decltype-cpp.md)<br/>
 [Atrybuty wC++](attributes.md)<br/>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)<br/>

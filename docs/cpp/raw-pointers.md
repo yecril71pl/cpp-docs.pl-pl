@@ -4,12 +4,12 @@ description: Jak używać wskaźników surowych w programieC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250661"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077150"
 ---
 # <a name="raw-pointers-c"></a>Wskaźniki pierwotneC++()
 
@@ -45,7 +45,7 @@ Wskaźnik (jeśli nie jest zadeklarowany jako **const**) można zwiększyć lub 
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 Niektóre operacje arytmetyczne mogą być wykonywane na wskaźnikach innych niż const, aby wskazywały na nową lokalizację pamięci. Wskaźnik może być zwiększany i zmniejszany przy użyciu operatorów **++** , **+=** , **-=** i **--** . Ta technika może być używana w tablicach i jest szczególnie przydatna w przypadku buforów danych, które nie są typu. Wartość typu **void\*** zwiększa się o rozmiar **char** (1 bajt). Wskaźnik o określonym typie zwiększa się według rozmiaru typu, na który wskazuje.
 
-W poniższym przykładzie pokazano, jak można użyć arytmetycznego wskaźnika w celu uzyskania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Zwróć uwagę na użycie operatora **New** i **delete**oraz operator dereferencji. 
+W poniższym przykładzie pokazano, jak można użyć arytmetycznego wskaźnika w celu uzyskania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Zwróć uwagę na użycie operatora **New** i **delete**oraz operator dereferencji.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * wskaźniki
 
-Wskaźnik do typu **void** po prostu wskazuje lokalizację w pamięci nieprzetworzonej. Czasami konieczne jest użycie wskaźników **void\*** , na przykład podczas przekazywania między C++ kodem a funkcjami języka C. 
+Wskaźnik do typu **void** po prostu wskazuje lokalizację w pamięci nieprzetworzonej. Czasami konieczne jest użycie wskaźników **void\*** , na przykład podczas przekazywania między C++ kodem a funkcjami języka C.
 
 Gdy wpisany wskaźnik jest rzutowany na wskaźnik typu void, zawartość lokalizacji pamięci nie jest zmieniana, ale informacje o typie są tracone, dzięki czemu nie można wykonywać operacji zwiększania ani zmniejszania. Lokalizację pamięci można rzutować na przykład z MyClass * na void * i ponownie do MyClass *. Takie operacje są z natury podatne na błędy i wymagają dużej staranności, aby uniknąć błędów. Nowoczesne C++ odradza użycie wskaźników typu void, chyba że jest to absolutnie konieczne.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>Wskaźniki do funkcji
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Wskaźniki do funkcji
 
 W programowaniu w stylu języka C, wskaźniki funkcji są używane głównie do przekazywania funkcji do innych funkcji. W tym scenariuszu obiekt wywołujący może dostosować zachowanie funkcji bez jej modyfikowania. W nowoczesnych C++ [wyrażenia lambda](lambda-expressions-in-cpp.md) zapewniają taką samą funkcję, która zapewnia większe bezpieczeństwo typów i inne zalety.
 
@@ -342,7 +342,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Inteligentne wskaźniki](smart-pointers-modern-cpp.md)
 [operator pośredni: *](indirection-operator-star.md)<br/>

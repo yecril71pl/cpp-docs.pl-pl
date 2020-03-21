@@ -24,16 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419127"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076570"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;funkcje&gt; wyjątków
 
-## <a name="current_exception"></a>current_exception
+## <a name="current_exception"></a><a name="current_exception"></a>current_exception
 
 Uzyskuje inteligentny wskaźnik na bieżący wyjątek.
 
@@ -41,7 +41,7 @@ Uzyskuje inteligentny wskaźnik na bieżący wyjątek.
 exception_ptr current_exception();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) wskazujący na bieżący wyjątek.
 
@@ -55,7 +55,7 @@ Destruktor dla bieżącego wyjątku jest wywoływany na końcu bloku **catch** ,
 
 Kolejne wywołania funkcji `current_exception` zwracają obiekty `exception_ptr`, które odwołują się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
 
-## <a name="make_exception_ptr"></a>make_exception_ptr
+## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
 
 Tworzy obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , który przechowuje kopię wyjątku.
 
@@ -69,7 +69,7 @@ template <class E>
 *Z wyjątkiem*\
 Klasa z wyjątkiem do skopiowania. Zazwyczaj należy określić obiekt [klasy wyjątku](../standard-library/exception-class.md) jako argument funkcji `make_exception_ptr`, chociaż każdy obiekt klasy może być argumentem.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) wskazujący kopię bieżącego wyjątku dla programu *z wyjątkiem*.
 
@@ -79,7 +79,7 @@ Wywołanie funkcji `make_exception_ptr` jest równoważne do zgłaszania C++ wyj
 
 Aplikacja zwykle nie wymaga funkcji `make_exception_ptr` i odradzamy jej używanie.
 
-## <a name="rethrow_exception"></a>rethrow_exception
+## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
 
 Zgłasza wyjątek przekazany jako parametr.
 
@@ -96,7 +96,7 @@ Przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* jest [exception_ptr](
 
 Po przechowaniu przechwyconego wyjątku w obiekcie `exception_ptr`, wątek główny może przetworzyć obiekt. W wątku podstawowym wywołaj funkcję `rethrow_exception` razem z obiektem `exception_ptr` jako argumentem. Funkcja `rethrow_exception` wyodrębnia wyjątek z obiektu `exception_ptr`, a następnie zgłasza wyjątek w kontekście wątku głównego.
 
-## <a name="get_terminate"></a>get_terminate
+## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
 
 Uzyskuje bieżącą funkcję `terminate_handler`.
 
@@ -104,7 +104,7 @@ Uzyskuje bieżącą funkcję `terminate_handler`.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>set_terminate
+## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
 
 Ustanawia nowy `terminate_handler`, który ma zostać wywołany po zakończeniu programu.
 
@@ -117,7 +117,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 *fnew*\
 Funkcja, która ma zostać wywołana po zakończeniu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Adres poprzedniej funkcji, która została wywołana po zakończeniu.
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>get_unexpected
+## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
 
 Uzyskuje bieżącą funkcję `unexpected_handler`.
 
@@ -161,10 +161,10 @@ Uzyskuje bieżącą funkcję `unexpected_handler`.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a>rethrow_if_nested
+## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
-template <class E> 
+template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
@@ -172,7 +172,7 @@ template <class E>
 
 Jeśli nie jest to typ klasy polimorficznej lub jeśli `nested_exception` jest niedostępny lub niejednoznaczny, nie ma żadnego efektu. W przeciwnym razie wykonuje dynamiczne rzutowanie.
 
-## <a name="set_unexpected"></a>set_unexpected
+## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
 Ustanawia nowy `unexpected_handler`, jeśli wystąpił nieoczekiwany wyjątek.
 
@@ -185,7 +185,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 *fnew*\
 Funkcja, która ma zostać wywołana w przypadku napotkania nieoczekiwanego wyjątku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Adres poprzedniego `unexpected_handler`.
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>kończyć
+## <a name="terminate"></a><a name="terminate"></a>kończyć
 
 Wywołuje terminate_handler.
 
@@ -238,7 +238,7 @@ Procedura obsługi zakończenia nie może powrócić do jego obiektu wywołując
 
 Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem korzystania z `terminate`.
 
-## <a name="throw_with_nested"></a>throw_with_nested
+## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -249,7 +249,7 @@ template <class T> [[noreturn]]
 
 Zgłasza wyjątek z zagnieżdżonymi wyjątkami.
 
-## <a name="uncaught_exception"></a>uncaught_exception
+## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
 Zwraca **wartość true** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie przetwarzany.
 
@@ -257,7 +257,7 @@ Zwraca **wartość true** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie pr
 bool uncaught_exception();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca **wartość PRAWDA** po zakończeniu obliczania wyrażenia throw oraz przed ukończeniem inicjacji deklaracji wyjątku w procedurze obsługi dopasowania lub wywołując [nieoczekiwany](../standard-library/exception-functions.md#unexpected) wynik w wyniku wyrażenia throw. W szczególności `uncaught_exception` zwróci **wartość true** w przypadku wywołania z destruktora, który jest wywoływany podczas operacji unwindy wyjątku. Na urządzeniach `uncaught_exception` jest obsługiwana tylko w przypadku Windows CE 5,00 i nowszych wersji, w tym platform Windows Mobile 2005.
 
@@ -314,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>oczekiwan
+## <a name="unexpected"></a><a name="unexpected"></a>oczekiwan
 
 Wywołuje nieoczekiwaną procedurę obsługi.
 

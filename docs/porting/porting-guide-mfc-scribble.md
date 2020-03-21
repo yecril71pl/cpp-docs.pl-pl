@@ -2,12 +2,12 @@
 title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627213"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076966"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 
@@ -23,7 +23,7 @@ Przed podjęciem próby uaktualnienia upewnij się, że zainstalowano obciążen
 
 Następnie wykonaj kopię zapasową całego rozwiązania i całej jego zawartości.
 
-Na koniec Otwórz rozwiązanie w najnowszej wersji programu Visual Studio i zezwól kreatorowi na konwersję projektu. 
+Na koniec Otwórz rozwiązanie w najnowszej wersji programu Visual Studio i zezwól kreatorowi na konwersję projektu.
 
 Należy pamiętać, że można również uruchomić devenv w wierszu polecenia, korzystając z opcji `/Upgrade`, zamiast korzystać z kreatora w celu uaktualnienia projektów. Zobacz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Może to być przydatne w automatyzowaniu procesu uaktualniania dla dużej liczby projektów.
 
@@ -51,7 +51,7 @@ W takim przypadku problemy były wszystkie ostrzeżeniami, a program Visual Stud
 
 Przed rozpoczęciem kompilowania sprawdzimy zestaw narzędzi platformy, aby poznać, która wersja kompilatora używa systemu projektu. W oknie dialogowym właściwości projektu, w obszarze **Właściwości konfiguracji**, w kategorii **Ogólne** Sprawdź właściwość zestaw **narzędzi platformy** . Zawiera wersję programu Visual Studio i numer wersji narzędzia platformy, która w tym przypadku jest najnowsze 141 dla narzędzia Visual Studio 2017. Podczas konwersji projektu, który został pierwotnie skompilowany przy użyciu programu Visual Studio 2010, 2012, 2013 lub 2015, zestaw narzędzi nie jest automatycznie aktualizowany do najnowszego zestawu narzędzi.
 
-Aby przełączyć się na format Unicode, Otwórz właściwości projektu, w obszarze **Właściwości konfiguracji**, wybierz sekcję **Ogólne** i Znajdź właściwość **zestaw znaków** . Zmień tę wartość przy **użyciu zestawu znaków wielobajtowych** , aby **użyć zestawu znaków Unicode**. Efektem tej zmiany jest to, że teraz makra _UNICODE i Unicode są zdefiniowane i _MBCS nie, które można sprawdzić w oknie dialogowym właściwości w obszarze **C/C++**  Category we właściwości **wiersza polecenia** .
+Aby przełączyć się na format Unicode, Otwórz właściwości projektu, w obszarze **Właściwości konfiguracji**, wybierz sekcję **Ogólne** i Znajdź właściwość **zestaw znaków** . Zmień tę wartość przy **użyciu zestawu znaków wielobajtowych** , aby **użyć zestawu znaków Unicode**. Efektem tej zmiany jest to, że teraz makra _UNICODE i Unicode są zdefiniowane i nie _MBCS, które można sprawdzić w oknie dialogowym właściwości w kategorii **C/C++**  w właściwości **wiersza polecenia** .
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -65,7 +65,7 @@ Teraz Skompiluj rozwiązanie. W oknie dane wyjściowe kompilator informuje nas, 
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Jest to ostrzeżenie, a nie błąd i jest bardzo powszechne podczas uaktualniania projektu programu Visual Studio C++ . Jest to makro definiujące najmniejszą wersję systemu Windows, na której będzie działać aplikacja. Jeśli zignorujesz ostrzeżenie, akceptujemy wartość domyślną _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Aby zapoznać się z tabelą możliwych wartości, zobacz [Używanie nagłówków systemu Windows](/windows/win32/WinProg/using-the-windows-headers). Można na przykład skonfigurować go do uruchamiania w dowolnej wersji z systemu Vista.
+Jest to ostrzeżenie, a nie błąd i jest bardzo powszechne podczas uaktualniania projektu programu Visual Studio C++ . Jest to makro definiujące najmniejszą wersję systemu Windows, na której będzie działać aplikacja. Jeśli zignorujesz ostrzeżenie, przyjmie wartość domyślną _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Aby zapoznać się z tabelą możliwych wartości, zobacz [Używanie nagłówków systemu Windows](/windows/win32/WinProg/using-the-windows-headers). Można na przykład skonfigurować go do uruchamiania w dowolnej wersji z systemu Vista.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA
@@ -79,13 +79,13 @@ Nie ma zestawu testów, dlatego właśnie uruchomił aplikację, przetestował j
 
 ### <a name="step-4-improve-the-code"></a>Krok 4. Ulepszanie kodu
 
-Po przeprowadzeniu migracji do programu Visual Studio 2017 warto wprowadzić pewne zmiany, aby skorzystać z nowych C++ funkcji. Bieżąca wersja C++ kompilatora jest znacznie bardziej zgodna ze C++ standardowymi i poprzednimi wersjami, więc jeśli chcesz wprowadzić pewne zmiany w kodzie, aby zwiększyć bezpieczeństwo kodu, a inne kompilatory i systemy operacyjne są bardziej przenośne, należy Weź pod uwagę pewne ulepszenia.
+Po przeprowadzeniu migracji do programu Visual Studio 2017 warto wprowadzić pewne zmiany, aby skorzystać z nowych C++ funkcji. Bieżąca wersja C++ kompilatora jest znacznie bardziej zgodna ze C++ standardem i poprzednimi wersjami, więc jeśli chcesz wprowadzić pewne zmiany w kodzie, aby zwiększyć bezpieczeństwo kodu i zwiększyć ich przenośność do innych kompilatorów i systemów operacyjnych, należy wziąć pod uwagę pewne ulepszenia.
 
 ## <a name="next-steps"></a>Następne kroki
 
 Bazgroły były małymi i prostymi aplikacjami klasycznymi systemu Windows i nie było trudne do przekonwertowania. Wiele małych, prostych aplikacji, które są konwertowane równie łatwo, jak w przypadku nowej wersji.  W przypadku bardziej złożonych aplikacji z wieloma dodatkowymi wierszami kodu starszy starszy kod, który może nie mieć do nowoczesnych standardów inżynieryjnych, wielu projektów i bibliotek, niestandardowych kroków kompilacji lub złożonych zautomatyzowanych kompilacji inicjowanych przez skrypty, zajmie więcej czasu na uaktualnienie. Przejdź do [następnego przykładu](../porting/porting-guide-com-spy.md)— aplikacji ATL/com o nazwie com Spy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Następny przykład: COM Spy](../porting/porting-guide-com-spy.md)

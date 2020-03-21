@@ -14,27 +14,26 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17ba2b6dd79e8e62baa29bba403c136d16a0d95
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392820"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077534"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Klasy okien ramowych tworzone przez kreatora aplikacji
 
-Gdy projekt do tworzenia nowych MFC z **nowy projekt** okno dialogowe, oprócz aplikacji, klasy dokumentów i widoków, Kreator aplikacji tworzy klasy pochodnej okno ramowe aplikacji głównej ramki okna. Nosi nazwę klasy `CMainFrame` domyślnie i pliki go zawierające są nazywane MAINFRM. H i MAINFRM. CPP.
+W przypadku tworzenia nowego projektu MFC z okna dialogowego **Nowy projekt** , oprócz klas aplikacji, dokumentów i widoków, Kreator aplikacji tworzy pochodną klasę okna ramki dla głównego okna ramki aplikacji. Klasa jest nazywana `CMainFrame` domyślnie, a pliki, które zawierają, mają nazwę MAINFRM. H i MAINFRM. CPP.
 
-Jeśli aplikacja jest SDI, Twoje `CMainFrame` klasa pochodzi od klasy [CFrameWnd](../mfc/reference/cframewnd-class.md).
+Jeśli aplikacja jest SDI, Klasa `CMainFrame` pochodzi od klasy [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md).
 
-Jeśli aplikacja MDI, `CMainFrame` pochodzi od klasy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). W tym przypadku `CMainFrame` implementuje głównej ramki, który przechowuje paski menu, pasek narzędzi i stanu. Kreator aplikacji nie jest pochodny nowej klasy okien ramowych dokumentu dla Ciebie. Zamiast tego używa implementacji domyślnej w [klasa CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). Struktura MFC tworzy okno podrzędne zawierają każdego widoku (które mogą być typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`i tak dalej), aplikacja wymaga. Jeśli trzeba dostosować okna ramki dokumentu, można utworzyć nowej klasy okien ramowych dokumentu (zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)).
+Jeśli aplikacja jest MDI, `CMainFrame` pochodzi od klasy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). W tym przypadku `CMainFrame` implementuje ramkę główną, która zawiera menu, pasek narzędzi i paski stanu. Kreator aplikacji nie tworzy nowej klasy okna ramki dokumentu. Zamiast tego używa domyślnej implementacji w [klasie CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). Struktura MFC tworzy okno podrzędne, aby zawierało każdy widok (który może być typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`itd.) wymaganego przez aplikację. Jeśli musisz dostosować okno ramki dokumentu, możesz utworzyć nową klasę okna ramki dokumentu (zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)).
 
-Jeśli zdecydujesz się obsługiwać paska narzędzi, klasa ma również zmiennych składowych typu [CToolBar](../mfc/reference/ctoolbar-class.md) i [CStatusBar](../mfc/reference/cstatusbar-class.md) i `OnCreate` funkcji obsługi wiadomości, aby zainicjować dwa [ paski sterowania](../mfc/control-bars.md).
+Jeśli zdecydujesz się na obsługę paska narzędzi, Klasa zawiera również zmienne członkowskie typu [CToolBar](../mfc/reference/ctoolbar-class.md) i [CStatusBar](../mfc/reference/cstatusbar-class.md) oraz funkcję obsługi komunikatów `OnCreate`, aby inicjować dwa [paski sterowania](../mfc/control-bars.md).
 
-Te klasy okien ramowych działają podczas tworzenia, ale aby zwiększyć ich funkcji, należy dodać zmienne Członkowskie i funkcje Członkowskie. Można również mieć swojej klasy okna obsługi innych komunikatów Windows. Aby uzyskać więcej informacji, zobacz [Zmienianie stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+Te klasy okien ramowych działają jak utworzone, ale w celu zwiększenia ich funkcjonalności należy dodać zmienne składowe i funkcje członkowskie. Może być również konieczne, aby klasy okien obsługiwały inne komunikaty systemu Windows. Aby uzyskać więcej informacji, zobacz [Zmiana stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy okien ramowych](../mfc/frame-window-classes.md)<br/>
 [Program MFC lub źródło kontroli i pliki nagłówkowe](../build/reference/mfc-program-or-control-source-and-header-files.md)
-

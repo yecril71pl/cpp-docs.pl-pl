@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c2c3dccb93f8e2475cdf2c7494bf4af11b65aa2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399242"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079942"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t — Operatory relacyjne
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t — Operatory relacyjne
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Porównuje obiekt inteligentny wskaźnik do innego wskaźnika inteligentnego, surowego wskaźnika interfejsu, lub wartość NULL.
+Porównaj obiekt inteligentnego wskaźnika z innym wskaźnikiem inteligentnym, nieprzetworzonym wskaźnikiem interfejsu lub wartością NULL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,7 +47,7 @@ Porównuje obiekt inteligentny wskaźnik do innego wskaźnika inteligentnego, su
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -114,10 +114,10 @@ bool operator>=( _InterfaceType* p );
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje do innego obiektu inteligentnego wskaźnika inteligentnego wskaźnika surowego wskaźnika interfejsu, lub wartość NULL. Z wyjątkiem testów wskaźnika o wartości NULL, te operatory najpierw kwerendy oba wskaźniki `IUnknown`i porównać wyniki.
+Porównuje obiekt inteligentnego wskaźnika do innego wskaźnika inteligentnego, wskaźnika interfejsu Raw lub wartości NULL. Oprócz testów wskaźnika o wartości NULL te operatory najpierw wykonują zapytania dotyczące obu wskaźników dla `IUnknown`i porównują wyniki.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

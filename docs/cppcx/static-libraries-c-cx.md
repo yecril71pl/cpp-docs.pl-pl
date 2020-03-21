@@ -2,19 +2,18 @@
 title: Biblioteki statyczne (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302946"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077978"
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C++/CX)
 
 Biblioteka statyczna, która jest używana w aplikacji platforma uniwersalna systemu Windows (platformy UWP), może zawierać kod ISO C++ Standard, w tym typy STL, a także wywołania interfejsów API Win32, które nie są wykluczone z platformy aplikacji środowisko wykonawcze systemu Windows. Biblioteka statyczna wykorzystuje składniki środowisko wykonawcze systemu Windows i może tworzyć składniki środowisko wykonawcze systemu Windows z pewnymi ograniczeniami.
 
 ## <a name="creating-static-libraries"></a>Tworzenie bibliotek statycznych
-
 
 Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od zainstalowanej wersji programu Visual Studio. Upewnij się, że w lewym górnym rogu znajduje się selektor wersji w poprawnej wersji.
 
@@ -24,7 +23,7 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 1. Na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **platformy UWP**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **platformy UWP**.
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Biblioteka statyczna (uniwersalna systemu Windows C++-/CX)** , a następnie wybierz przycisk **dalej**. Na następnej stronie Nadaj projektowi nazwę i określ lokalizację projektu w razie potrzeby.
 
@@ -52,6 +51,6 @@ W przypadku korzystania z biblioteki statycznej, która tworzy publiczne klasy `
 
 Można bezpiecznie zignorować to ostrzeżenie tylko wtedy, gdy biblioteka statyczna nie produkuje składników środowisko wykonawcze systemu Windows, które są używane poza samą biblioteką. Jeśli biblioteka nie korzysta ze zdefiniowanego przez siebie składnika, konsolidator może zoptymalizować implementację, mimo że metadane publiczne zawierają informacje o typie. Oznacza to, że składniki publiczne w bibliotece statycznej zostaną skompilowane, ale nie zostaną aktywowane w czasie wykonywania. Z tego powodu każdy składnik środowisko wykonawcze systemu Windows, który jest przeznaczony do użycia przez inne składniki lub aplikacje, musi być zaimplementowany w bibliotece dołączanej dynamicznie (DLL).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wątkowość i marshaling](../cppcx/threading-and-marshaling-c-cx.md)

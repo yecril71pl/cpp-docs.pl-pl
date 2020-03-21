@@ -2,12 +2,12 @@
 title: Przenoszenie na platformę uniwersalną systemu Windows (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627206"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076856"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 
@@ -21,9 +21,9 @@ Ten temat zawiera następujące procedury dotyczące przenoszenia kodu do platfo
 
 - [Przenoszenie składnika środowiska uruchomieniowego Windows 8.1 do platformy UWP](#BK_81Component)
 
-Jeśli masz klasyczny plik Win32 DLL i chcesz go wywołać z aplikacji platformy UWP, możesz to zrobić. Za pomocą takich procedur można utworzyć warstwę interfejsu użytkownika platformy UWP dla istniejącej klasycznej C++ aplikacji klasycznej systemu Windows lub międzyplatformowego kodu w warstwie C++ standardowa. Zobacz [jak: korzystanie z istniejącego C++ kodu w aplikacji platforma uniwersalna systemu Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
+Jeśli masz klasyczny plik Win32 DLL i chcesz go wywołać z aplikacji platformy UWP, możesz to zrobić. Za pomocą takich procedur można utworzyć warstwę interfejsu użytkownika platformy UWP dla istniejącej klasycznej C++ aplikacji klasycznej systemu Windows lub międzyplatformowego kodu w warstwie C++ standardowa. Zobacz [jak: korzystanie z istniejącego C++ kodu w aplikacji platforma uniwersalna systemu Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="BK_81StoreApp"></a>Przenoszenie aplikacji ze sklepu Windows 8.1 do platformy UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a>Przenoszenie aplikacji ze sklepu Windows 8.1 do platformy UWP
 
 Jeśli masz aplikację ze sklepu Windows 8.1, możesz użyć tej procedury, aby uzyskać dostęp do platformy UWP i wszystkich urządzeń z systemem Windows 10.  Dobrym pomysłem jest najpierw skompilowanie projektu przy użyciu programu Visual Studio 2019 jako projektu Windows 8.1, aby najpierw wyeliminować wszelkie problemy związane ze zmianami w kompilatorze i bibliotekach. Po wykonaniu tych czynności istnieją dwa sposoby konwertowania tego elementu na projekt platformy UWP systemu Windows 10. Najprostszym sposobem (zgodnie z opisem w poniższej procedurze) jest utworzenie uniwersalnego projektu systemu Windows i skopiowanie do niego istniejącego kodu. Jeśli używasz uniwersalnego projektu dla Windows 8.1 Desktop i Windows 8.1 Phone, projekt rozpocznie się z dwoma różnymi układami w języku XAML, ale kończy się jednym układem dynamicznym, który dostosowuje się do rozmiaru ekranu.
 
@@ -68,7 +68,7 @@ Jeśli masz aplikację ze sklepu Windows 8.1, możesz użyć tej procedury, aby 
 
 1. Uruchamianie i debugowanie aplikacji na emulatorze lub urządzeniu fizycznym dla każdego typu urządzenia obsługiwanego przez aplikację. Aby uruchomić emulator, należy uruchomić program Visual Studio na komputerze fizycznym, a nie na maszynie wirtualnej.
 
-## <a name="BK_81Component"></a>Przenoszenie składnika środowiska uruchomieniowego Windows 8.1 do platformy UWP
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a>Przenoszenie składnika środowiska uruchomieniowego Windows 8.1 do platformy UWP
 
 Jeśli masz bibliotekę DLL lub składnik środowisko wykonawcze systemu Windows, który już działa z aplikacjami ze sklepu Windows 8.1, możesz użyć tej procedury, aby pobrać składnik lub bibliotekę DLL pracującą z platformy UWP i Windows 10. Podstawową procedurą jest utworzenie nowego projektu i skopiowanie do niego kodu.
 
@@ -106,7 +106,7 @@ W takim przypadku projekt nie jest kompilowany jako projekt uniwersalny systemu 
 
 Jeśli utworzono nowy projekt platformy UWP za pomocą programu Visual Studio, ten błąd nie powinien być widoczny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przewodnik C++ po przewoźnyu wizualnym](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Opracowywanie aplikacji na platformę uniwersalną systemu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

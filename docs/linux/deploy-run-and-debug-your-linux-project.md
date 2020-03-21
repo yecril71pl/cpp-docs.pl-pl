@@ -3,12 +3,12 @@ title: Wdrażanie, uruchamianie i debugowanie projektu systemu C++ Linux w progr
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu na zdalnym miejscu docelowym z wewnątrz projektu systemu Linux C++ w programie Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441658"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077837"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Wdrażanie, uruchamianie i debugowanie projektu systemu Linux
 
@@ -35,7 +35,7 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 ## <a name="debug-your-linux-project"></a>Debugowanie projektu systemu Linux
 
 1. Wybierz opcję Tryb debugowania na stronie właściwości **debugowania** .
-   
+
    ::: moniker range="vs-2019"
 
    GDB jest używany do debugowania aplikacji działających w systemie Linux. Podczas debugowania w systemie zdalnym (nie WSL) GDB można uruchomić w dwóch różnych trybach, które można wybrać z opcji **tryb debugowania** na stronie właściwości **debugowania** projektu:
@@ -51,7 +51,6 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
    ![Opcje GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - W trybie **serwera GDBSERVER** GDB jest uruchamiany lokalnie, który łączy się z serwera gdbserver w systemie zdalnym.  Należy zauważyć, że jest to jedyny tryb obsługiwany przez okno konsoli systemu Linux.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a>Określ różne maszyny do kompilowania i debugowania
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a>Określ różne maszyny do kompilowania i debugowania
 
 W programie Visual Studio 2019 w wersji 16,1 można rozdzielić zdalną maszynę kompilacji ze zdalnego komputera debugowania dla projektów systemu Linux opartych na programie MSBuild i projektów CMake przeznaczonych dla zdalnego komputera z systemem Linux. Można na przykład teraz przeprowadzić kompilację krzyżową na platformie x64 i wdrożyć ją na urządzeniu ARM w przypadku scenariuszy IoT.
 

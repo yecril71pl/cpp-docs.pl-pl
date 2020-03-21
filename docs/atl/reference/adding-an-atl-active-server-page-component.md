@@ -2,49 +2,48 @@
 title: Dodawanie składnika strony Active Server ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706929"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075297"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
 
-
 ::: moniker range="vs-2019"
 
-Kreator składników ATL strony ASP nie jest dostępne w programie Visual Studio 2019 r i nowszych.
+Kreator składnika strony Active Server ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Aby dodać obiekt Active Template Library (ATL) do projektu, projekt musi być utworzony jako aplikacji ATL COM lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, można wybrać **Dodawanie obsługi ATL do MFC** z [klasy okno dialogowe Dodawanie](../../ide/add-class-dialog-box.md) okno dialogowe, możesz także [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
+Aby dodać obiekt Active Template Library (ATL) do projektu, projekt musi zostać utworzony jako aplikacja ATL COM lub jako aplikacja MFC, która zawiera obsługę ATL. Możesz użyć [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md) do utworzenia aplikacji ATL, możesz wybrać opcję **Dodaj obsługę ATL do MFC** z okna dialogowego [Dodaj klasę](../../ide/add-class-dialog-box.md) lub [dodać obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
 
-Active Server Pages składniki są częścią architekturę Internet Information Services, która oferuje następujące funkcje zaawansowane programowanie sieci Web:
+Składniki stron Active Server są częścią architektury Internet Information Services, która udostępnia następujące zaawansowane funkcje Web Development:
 
-- Możesz osadzić składniki ASP do stron HTML do tworzenia zawartości dynamicznej, niezależnie od przeglądarki.
+- Możesz osadzić składniki ASP na stronach HTML, aby utworzyć dynamiczną, niezależną od przeglądarki zawartość.
 
-- Strony ASP służy do zapewniania łączności oparte na standardach bazy danych.
+- Strony ASP umożliwiają udostępnianie opartych na standardach połączeń baz danych.
 
-- Dla aplikacji sieci Web, można użyć możliwości obsługi błędów ASP.
+- Możesz użyć funkcji obsługi błędów ASP dla aplikacji sieci Web.
 
-## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Aby dodać składnik ATL strony ASP do projektu
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Aby dodać składnik ATL Active Server Pages do projektu
 
-1. W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnik ATL strony ASP.
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnik strony Active Server ATL.
 
-1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
+1. W menu skrótów kliknij polecenie **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
-1. W [Dodaj klasę](../../ide/add-class-dialog-box.md) dialogowym **szablony** okienku kliknij **składnik strony Active Server ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [Kreator składników stron Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. W oknie dialogowym [Dodawanie klasy](../../ide/add-class-dialog-box.md) w okienku **Szablony** kliknij pozycję **ATL Active Server Strona składnika**, a następnie kliknij przycisk **otwórz** , aby wyświetlić [Kreatora składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
 [Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md)<br/>
 [Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)<br/>
-[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[Klasa MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie rodzajowej klasy C++](../../ide/adding-a-generic-cpp-class.md)

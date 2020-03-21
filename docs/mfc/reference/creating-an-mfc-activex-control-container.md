@@ -9,35 +9,34 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 7591b3ed84c1703a201e4e62f699df877de36058
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 27f229a23595d4842a77409a3cedc7a57aa43e6c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220188"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079435"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Tworzenie kontenera kontrolek ActiveX MFC
 
-Kontener formantu ActiveX jest programu nadrzędnego, który dostarcza środowisko dla formantu ActiveX (dawniej OLE) uruchomić. Można utworzyć aplikację może zawierać kontrolki ActiveX z lub bez MFC, ale jest znacznie łatwiejsze wykonać za pomocą MFC.
+Kontener formantów ActiveX jest programem nadrzędnym, który dostarcza środowisko do uruchamiania kontrolki ActiveX (dawniej OLE). Można utworzyć aplikację, która może zawierać kontrolki ActiveX z MFC lub bez, ale jest to znacznie łatwiejsze w przypadku MFC.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](../activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](../activex-controls.md).
 
-Tworzenie MFC kontenera programu za pomocą [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md) umożliwia dostęp do funkcji wielu formantów ActiveX i automatyzacji, które są implementowane przez klasy MFC i ActiveX. Te funkcje obejmują edycja wizualna, Automation, tworzenie złożonych plików oraz obsługę formantów. Kreator aplikacji MFC visual edycji obsługujących program nadrzędnego dostępne są następujące opcje tworzenia kontenera, mini serwer, pełny serwer i program, który zarówno kontenera, jak i serwera.
+Tworzenie programu kontenera MFC przy użyciu [Kreatora aplikacji MFC](../../mfc/reference/mfc-application-wizard.md) pozwala uzyskać dostęp do wielu funkcji formantów ActiveX i automatyzacji, które są implementowane przez klasy MFC i ActiveX. Te funkcje obejmują edycję wizualizacji, automatyzację, tworzenie plików złożonych i obsługę formantów. Opcje edycji wizualnej Kreatora aplikacji MFC, które będą obsługiwane przez program nadrzędny, obejmują tworzenie kontenera, mini serwer, pełny serwer i program, który jest zarówno kontenerem, jak i serwerem.
 
-- **Nowa aplikacja MFC**. Aby utworzyć nowy program MFC, która obejmuje usługi Automation, edycja wizualna złożone pliki, lub kontrolować pomocy technicznej, użyj Kreatora aplikacji MFC i wybierz odpowiednie opcje automatyzacji.
+- **Nowa aplikacja MFC**. Aby utworzyć nowy program MFC, który obejmuje automatyzację, edycję wizualizacji, pliki złożone lub obsługę kontroli, użyj Kreatora aplikacji MFC i wybierz odpowiednie opcje automatyzacji.
 
-- **Istniejącej aplikacji MFC**. Jeśli dodajesz zawieranie kontrolek do istniejącej aplikacji MFC, zobacz [kontenery OLE kontrolek: Ręczne włączanie zawierania kontrolek OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
+- **Istniejąca aplikacja MFC**. Jeśli dodajesz kontrolkę zawieranie do istniejącej aplikacji MFC, zobacz [kontenery kontrolek OLE: ręczne włączanie zawierania kontrolek OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
 
-### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Aby utworzyć kontener ActiveX dla żadnego z następujących typów aplikacji
+### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Aby utworzyć kontener ActiveX dla dowolnego z następujących typów aplikacji
 
 1. [Kontenery](../../mfc/containers.md)
 
-1. [Edycja wizualna](../../mfc/ole-mfc.md)
+1. [Edytowanie wizualizacji](../../mfc/ole-mfc.md)
 
-1. [Kontrolki MFC ActiveX](../../mfc/mfc-activex-controls.md)
+1. [Kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++typy projektów w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)
-

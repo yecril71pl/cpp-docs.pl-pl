@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 9e8a671a7fe67150e1b867c62231173429f7b6ed
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415931"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078529"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Instrukcje: włączanie 64-bitowego, obsługiwanego przez x64 zestawu narzędzi MSVC w wierszu polecenia
 
@@ -25,7 +25,7 @@ Program Visual Studio C++ obejmuje kompilatory, linki i inne narzędzia, za pomo
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Użyj 64-bitowego, obsługiwanego skrótu wiersza polecenia dla deweloperów
 
-Aby uzyskać dostęp do tych wierszy poleceń w systemie Windows 10, w menu **Start** Otwórz folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**, a następnie wybierz jedno z wierszy poleceń dla deweloperów x64 lub wielu narzędzi. 
+Aby uzyskać dostęp do tych wierszy poleceń w systemie Windows 10, w menu **Start** Otwórz folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**, a następnie wybierz jedno z wierszy poleceń dla deweloperów x64 lub wielu narzędzi.
 
 ![wiersz polecenia narzędzi x64 Native Tools](media/x64-native-tools-command-prompt.png "Narzędzia x64 Native Tools w menu Start")
 

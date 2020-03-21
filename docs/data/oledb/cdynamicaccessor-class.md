@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 08e36606ae5d8dc34b9e25dd7d8dbc6d606520da
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a2dcb946b4161c03fe34f02608cfb3dbbca21695
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447384"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075848"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor — Klasa
 
@@ -180,7 +180,7 @@ Informacje o kolumnie są przechowywane w buforze, który jest tworzony i zarzą
 
 Aby zapoznać się z omówieniem i przykładami dotyczącymi korzystania z klas akcesorów dynamicznych, zobacz [Używanie dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
+## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
 
 Dodaje wpis powiązania do kolumn danych wyjściowych.
 
@@ -203,7 +203,7 @@ Jedna ze standardowych wartości HRESULT.
 
 Użyj tej metody podczas zastępowania domyślnego akcesora utworzonego za pomocą `CDynamicAccessor` (zobacz [jak pobrać dane?](../../data/oledb/fetching-data.md)).
 
-## <a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
+## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
 
 Tworzy wystąpienia i inicjuje obiekt `CDynamicAccessor`.
 
@@ -228,7 +228,7 @@ Jeśli używasz konstruktora do zainicjowania obiektu `CDynamicAccessor`, możes
 
 Możesz również określić sposób, w jaki `CDynamicAccessor` obsługuje dane kolumn, które są zgodne z danymi obiektów BLOB: może obsługiwać dane obiektów BLOB w sposób domyślny; może pomijać (nie tworzy powiązań) dane obiektów BLOB; może również powiązać dane obiektów BLOB w pamięci przydzieloną przez dostawcę.
 
-## <a name="close"></a>CDynamicAccessor:: Close
+## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: Close
 
 Cofa powiązania wszystkich kolumn, zwalnia przydzieloną pamięć i zwalnia wskaźnik interfejsu [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) w klasie.
 
@@ -238,7 +238,7 @@ Cofa powiązania wszystkich kolumn, zwalnia przydzieloną pamięć i zwalnia wsk
 void Close() throw();
 ```
 
-## <a name="getblobhandling"></a>CDynamicAccessor:: GetBlobHandling
+## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a>CDynamicAccessor:: GetBlobHandling
 
 Pobiera wartość obsługi obiektu BLOB dla bieżącego wiersza.
 
@@ -252,7 +252,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 Zwraca wartość obsługi obiektu BLOB *eBlobHandling* jako ustawioną przez [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
-## <a name="getblobsizelimit"></a>CDynamicAccessor:: GetBlobSizeLimit
+## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a>CDynamicAccessor:: GetBlobSizeLimit
 
 Pobiera maksymalny rozmiar obiektu BLOB w bajtach.
 
@@ -266,7 +266,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 Zwraca wartość obsługi obiektu BLOB *nBlobSize* jako ustawioną przez [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
-## <a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
+## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
 
 Pobiera zakładkę dla bieżącego wiersza.
 
@@ -289,7 +289,7 @@ Jedna ze standardowych wartości HRESULT.
 
 Aby można było pobrać zakładkę, należy ustawić `DBPROP_IRowsetLocate` VARIANT_TRUE.
 
-## <a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
+## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
 
 Pobiera liczbę kolumn.
 
@@ -303,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
 
 Liczba pobranych kolumn.
 
-## <a name="getcolumnflags"></a>CDynamicAccessor:: GetColumnFlags
+## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a>CDynamicAccessor:: GetColumnFlags
 
 Pobiera charakterystyki kolumny.
 
@@ -330,7 +330,7 @@ Zwraca **wartość true** , jeśli Charakterystyka kolumny została pobrana pomy
 
 Numer kolumny jest przesunięty od jednego. Kolumna zero jest szczególnym przypadkiem; jest to zakładka, jeśli jest dostępna.
 
-## <a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
+## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
 
 Zwraca metadane kolumny, które są zbędne przez większość użytkowników.
 
@@ -365,7 +365,7 @@ Jedna ze standardowych wartości HRESULT.
 
 Aby uzyskać informacje na temat typów danych `DBORDINAL`, `DBCOLUMNINFO`i `OLECHAR`, zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB* .
 
-## <a name="getcolumnname"></a>CDynamicAccessor:: getcolumnname
+## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: getcolumnname
 
 Pobiera nazwę podanej kolumny.
 
@@ -384,7 +384,7 @@ podczas Numer kolumny. Numery kolumn zaczynają się od 1. Wartość 0 oznacza k
 
 Nazwa określonej kolumny.
 
-## <a name="getcolumntype"></a>CDynamicAccessor:: GetColumnType
+## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a>CDynamicAccessor:: GetColumnType
 
 Pobiera typ danych określonej kolumny.
 
@@ -407,7 +407,7 @@ określoną Wskaźnik do typu danych w określonej kolumnie.
 
 Zwraca **wartość true** dla sukcesu lub **false** w przypadku niepowodzenia.
 
-## <a name="getlength"></a>CDynamicAccessor:: GetLength
+## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor:: GetLength
 
 Pobiera długość określonej kolumny.
 
@@ -443,7 +443,7 @@ Zwraca **wartość PRAWDA** , jeśli określona kolumna zostanie znaleziona. W p
 
 Pierwsze zastąpienie przyjmuje numer kolumny, a drugi i trzeci przesłonięcia przyjmują odpowiednio nazwę kolumny w formacie ANSI lub Unicode.
 
-## <a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
+## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
 
 Pobiera numer kolumny z podaną nazwą kolumny.
 
@@ -469,7 +469,7 @@ określoną Wskaźnik do numeru kolumny.
 
 Zwraca **wartość true** , jeśli zostanie znaleziona kolumna o określonej nazwie. W przeciwnym razie ta funkcja zwraca **wartość false**.
 
-## <a name="getstatus"></a>CDynamicAccessor:: GetStatus
+## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor:: GetStatus
 
 Pobiera stan określonej kolumny.
 
@@ -501,7 +501,7 @@ określoną Wskaźnik do zmiennej zawierającej stan kolumny. Aby uzyskać więc
 
 Zwraca **wartość PRAWDA** , jeśli określona kolumna zostanie znaleziona. W przeciwnym razie ta funkcja zwraca **wartość false**.
 
-## <a name="getvalue"></a>CDynamicAccessor:: GetValue
+## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
 
 Pobiera dane dla określonej kolumny.
 
@@ -550,7 +550,7 @@ Użyj wersji nienależących do szablonu, aby zwrócić kolumny zawierające ci�
 
 W trybie debugowania otrzymasz potwierdzenie, jeśli rozmiar *pData* jest nierówny rozmiarowi kolumny, do której wskazuje.
 
-## <a name="setblobhandling"></a>CDynamicAccessor:: SetBlobHandling
+## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a>CDynamicAccessor:: SetBlobHandling
 
 Ustawia wartość obsługi obiektów BLOB dla bieżącego wiersza.
 
@@ -577,7 +577,7 @@ Przed wywołaniem `Open`należy wywołać `SetBlobHandling`.
 
 Metoda konstruktora [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ustawia wartość obsługi obiektów BLOB na DBBLOBHANDLING_DEFAULT.
 
-## <a name="setblobsizelimit"></a>CDynamicAccessor:: SetBlobSizeLimit
+## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a>CDynamicAccessor:: SetBlobSizeLimit
 
 Ustawia maksymalny rozmiar obiektu BLOB w bajtach.
 
@@ -598,7 +598,7 @@ Ustawia maksymalny rozmiar obiektu BLOB w bajtach; dane kolumny większe niż ta
 
 Metoda konstruktora [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ustawia maksymalny rozmiar obiektu BLOB na wartość domyślną 8 000 bajtów.
 
-## <a name="setlength"></a>CDynamicAccessor:: SetLength
+## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a>CDynamicAccessor:: SetLength
 
 Ustawia długość określonej kolumny.
 
@@ -630,7 +630,7 @@ podczas Wskaźnik do ciągu znaków zawierającego nazwę kolumny.
 
 Zwraca **wartość true** , jeśli określona długość kolumny została ustawiona pomyślnie. W przeciwnym razie ta funkcja zwraca **wartość false**.
 
-## <a name="setstatus"></a>CDynamicAccessor:: SetStatus
+## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
 
 Ustawia stan określonej kolumny.
 
@@ -662,7 +662,7 @@ podczas Wskaźnik do ciągu znaków zawierającego nazwę kolumny.
 
 Zwraca **wartość PRAWDA** , jeśli określona kolumna stanu jest ustawiona pomyślnie. W przeciwnym razie ta funkcja zwraca **wartość false**.
 
-## <a name="setvalue"></a>CDynamicAccessor:: SetValue
+## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
 
 Przechowuje dane w określonej kolumnie.
 
@@ -674,7 +674,7 @@ bool SetValue(
    DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const CHAR * pColumnName,
    const ctype& data) throw( );

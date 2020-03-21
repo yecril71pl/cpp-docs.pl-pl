@@ -2,16 +2,16 @@
 title: Nawigacja w systemie plików
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518507"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076541"
 ---
 # <a name="file-system-navigation"></a>Nawigacja w systemie plików
 
-W nagłówku > \<systemu C++ plików zaimplementowano specyfikację techniczną typu "ISO/iec TS 18822:2015 (końcowa wersja robocza: [ISO/IEC JTC 1/SC 22/Via 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), która zawiera typy i funkcje, które umożliwiają pisanie kodu niezależnego od platformy w celu nawigowania w systemie plików. Ponieważ jest to platforma wieloplatformowa, zawiera interfejsy API, które nie są istotne dla systemów Windows. Na przykład oznacza to, że `is_fifo(const path&)` zawsze zwraca **wartość false** w systemie Windows.
+W nagłówku > \<systemu C++ plików zaimplementowano specyfikację techniczną typu "ISO/iec TS 18822:2015 (końcowa wersja robocza: [ISO/IEC JTC 1/SC 22/Via 21 N4100](https://wg21.link/n4100)), która zawiera typy i funkcje, które umożliwiają pisanie kodu niezależnego od platformy w celu nawigowania w systemie plików. Ponieważ jest to platforma wieloplatformowa, zawiera interfejsy API, które nie są istotne dla systemów Windows. Na przykład oznacza to, że `is_fifo(const path&)` zawsze zwraca **wartość false** w systemie Windows.
 
 ## <a name="overview"></a>Omówienie
 

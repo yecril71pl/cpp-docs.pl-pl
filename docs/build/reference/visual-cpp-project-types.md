@@ -10,16 +10,16 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498442"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079224"
 ---
 # <a name="c-project-templates"></a>Szablony projektów w języku C++
 
-Szablony projektu programu Visual Studio generują pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, `#include` odwołania i instrukcje, które są odpowiednie dla rodzaju projektu, który chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów C++ szablonów projektów i udostępnia kreatorów dla wielu z nich, aby można było dostosować projekty podczas ich tworzenia. Natychmiast po utworzeniu projektu można skompilować i uruchomić aplikację. dobrym sposobem jest utworzenie nieprzerwanie podczas opracowywania aplikacji.
+Szablony projektu programu Visual Studio generują pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i instrukcje `#include`, które są odpowiednie dla rodzaju projektu, który chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów C++ szablonów projektów i udostępnia kreatorów dla wielu z nich, aby można było dostosować projekty podczas ich tworzenia. Natychmiast po utworzeniu projektu można skompilować i uruchomić aplikację. dobrym sposobem jest utworzenie nieprzerwanie podczas opracowywania aplikacji.
 
 > [!NOTE]
 > Projekt języka C można utworzyć przy użyciu C++ szablonów projektu. W wygenerowanym projekcie zlokalizuj pliki o rozszerzeniu nazwy pliku. cpp i zmień je na. c. Następnie na stronie **właściwości projektu** dla projektu (nie dla rozwiązania) rozwiń węzeł **Właściwości konfiguracji**, **C++ C/** i wybierz pozycję **Zaawansowane**. Zmień ustawienie **Kompiluj jako** na **Kompiluj jako kod C (/TC)** .
@@ -52,7 +52,7 @@ Szablony projektu zawarte w programie Visual Studio zależą od wersji produktu 
 |----------------------|-----------------------------|
 |[Projekt ATL](../../atl/reference/creating-an-atl-project.md)|Projekt, który używa Active Template Library.|
 
-### <a name="test"></a>Test
+### <a name="test"></a>Testowanie
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
@@ -89,5 +89,3 @@ Aby zapoznać się z omówieniem uniwersalnych aplikacji C++systemu Windows w pr
 ## <a name="todo-comments"></a>Komentarze do zrobienia
 
 Wiele plików generowanych przez szablon projektu zawiera komentarze do zrobienia, które ułatwiają określenie, gdzie można podać własny kod źródłowy. Aby uzyskać więcej informacji na temat dodawania kodu, zobacz [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md) i [Praca z plikami zasobów](../../windows/working-with-resource-files.md).
-
-

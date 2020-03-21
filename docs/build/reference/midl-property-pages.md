@@ -47,30 +47,30 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927696"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076130"
 ---
 # <a name="midl-property-pages"></a>Strony właściwości MIDL
 
-Strony właściwości MIDL są dostępne jako właściwość elementu w. Plik IDL w C++ projekcie, który używa modelu com. Użyj ich do skonfigurowania [kompilatora MIDL](/windows/win32/midl/using-the-midl-compiler-2). Aby uzyskać informacje na temat sposobu programistycznego dostępu do C++ opcji MIDL dla <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> projektów, zobacz Object. Zobacz również [Ogólne MIDL składni wiersza polecenia](/windows/win32/midl/general-midl-command-line-syntax).
+Strony właściwości MIDL są dostępne jako właściwość elementu w. Plik IDL w C++ projekcie, który używa modelu com. Użyj ich do skonfigurowania [kompilatora MIDL](/windows/win32/midl/using-the-midl-compiler-2). Aby uzyskać informacje na temat sposobu programistycznego dostępu do C++ opcji MIDL dla projektów, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> Object. Zobacz również [Ogólne MIDL składni wiersza polecenia](/windows/win32/midl/general-midl-command-line-syntax).
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
 ### <a name="preprocessor-definitions"></a>Definicje preprocesora
 
-Określa co najmniej jedną definicję, w tym makra\]MIDL ([/d](/windows/win32/midl/-d))\[.
+Określa co najmniej jedną definicję, w tym makra MIDL ([/d](/windows/win32/midl/-d))\[makra\]).
 
 ### <a name="additional-include-directories"></a>Dodatkowe katalogi dołączane
 
-Określa co najmniej jeden katalog do dodania do ścieżki dołączania (ścieżka\][/i](/windows/win32/midl/-i)\[).
+Określa co najmniej jeden katalog do dodania do ścieżki dołączania ([/i](/windows/win32/midl/-i)\[ścieżka\]).
 
 ### <a name="additional-metadata-directories"></a>Dodatkowe katalogi metadanych
 
-Określ katalog zawierający plik Windows. Foundation. winmd (ścieżka\][/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Określ katalog zawierający plik Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) ścieżkę \[\]).
 
 ### <a name="enable-windows-runtime"></a>Włącz środowisko wykonawcze systemu Windows
 
@@ -78,7 +78,7 @@ Włącz semantykę środowisko wykonawcze systemu Windows, aby utworzyć plik me
 
 ### <a name="ignore-standard-include-path"></a>Ignoruj standardowe ścieżki dołączania
 
-Ignoruj bieżące i katalogi dołączane ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Zignoruj bieżące i katalogi dołączania ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
 ### <a name="mktyplib-compatible"></a>Zgodne MkTypLib
 
@@ -220,7 +220,7 @@ Określa format pliku biblioteki typów ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opcje przetwarzania wstępnego C
 
-Określa przełączniki do przekazania do preprocesora kompilatora języka C (przełączniki[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Określa przełączniki do przekazania do preprocesora kompilatora języka C ([/przełączniki cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Usuń Definicje preprocesora
 
@@ -242,7 +242,7 @@ Sprawdź, czy nie występują błędy pamięci (alokacja[/Error](/windows/win32/
 
 ### <a name="check-bounds"></a>Sprawdź granice
 
-Sprawdzanie rozmiaru i określania długości transmisji ([/Error](/windows/win32/midl/-error) bounds_check).
+Sprawdź rozmiar i określ długość transmisji ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Sprawdź zakres wyliczania
 
@@ -254,7 +254,7 @@ Sprawdź, czy wskaźniki ref nie mają wartości null ([/Error](/windows/win32/m
 
 ### <a name="check-stub-data"></a>Sprawdź dane szczątkowe
 
-Emituj dodatkowe sprawdzenie poprawności danych szczątkowych po stronie serwera ([/Error](/windows/win32/midl/-error) stub_data).
+Emituj dodatkowe sprawdzenie poprawności danych szczątkowych po stronie serwera ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Poprzedź z przestrzenią nazw "ABI"
 
@@ -262,7 +262,7 @@ Dołącz przestrzeń nazw "ABI" do wszystkich typów.  ([/ns_prefix](/windows/wi
 
 ### <a name="validate-parameters"></a>Weryfikuj parametry
 
-Generuj dodatkowe informacje, aby sprawdzić poprawność parametrów ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Generuj dodatkowe informacje, aby sprawdzić poprawność parametrów ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Wyrównanie elementu członkowskiego struktury
 
@@ -283,6 +283,3 @@ Przekierowuje dane wyjściowe z ekranu do pliku ([/o](/windows/win32/midl/-o) pl
 ### <a name="minimum-target-system"></a>Minimalny system docelowy
 
 Ustaw minimalny system docelowy ([/Target](/windows/win32/midl/-target) ciąg).
-
-
-

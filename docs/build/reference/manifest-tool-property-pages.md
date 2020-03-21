@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927669"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079496"
 ---
 # <a name="manifest-tool-property-pages"></a>Strony właściwości narzędzia manifestu
 
-Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze właściwości**konfiguracji** > **Właściwości** >  **projektu** > **narzędzie manifestu**.
+Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze **właściwości** > **projektu** > **Właściwości konfiguracji** > **narzędzie manifestu**.
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
@@ -47,11 +47,11 @@ Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/window
 
 ### <a name="assembly-identity"></a>Tożsamość zestawu * *
 
-Używa opcji/Identity, aby określić ciąg tożsamości, który składa się z atrybutów [ \<elementu assemblyIdentity >](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Ciąg tożsamości rozpoczyna się od `name` wartości atrybutu, po którym następuje para*wartości* *atrybutu* = . Atrybuty w ciągu tożsamości są rozdzielane przecinkami.
+Używa opcji/Identity, aby określić ciąg tożsamości, który składa się z atrybutów [elementu\<assemblyIdentity >](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Ciąg tożsamości rozpoczyna się od wartości atrybutu `name` i następuje po niej para par *wartości* = *Attribute* . Atrybuty w ciągu tożsamości są rozdzielane przecinkami.
 
-Jest to przykładowy ciąg tożsamości:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Jest to przykładowy ciąg tożsamości: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Strona właściwości danych wejściowych i wyjściowych     
+## <a name="input-and-output-property-page"></a>Strona właściwości danych wejściowych i wyjściowych
 
 ###  <a name="additional-manifest-files"></a>Dodatkowe pliki manifestu
 
@@ -59,7 +59,7 @@ Używa opcji **/manifest** , aby określić pełne ścieżki dodatkowych plików
 
 ###  <a name="input-resource-manifests"></a>Manifesty zasobów wejściowych
 
-Używa opcji **/inputresource** , aby określić pełną ścieżkę zasobu typu RT_MANIFEST, aby wejść do narzędzia manifestu. Po ścieżce może następować określony identyfikator zasobu. Przykład:
+Używa opcji **/inputresource** , aby określić pełną ścieżkę zasobu typu RT_MANIFEST, aby wejść do narzędzia manifestu. Po ścieżce może następować określony identyfikator zasobu. Na przykład:
 
 `dll_with_manifest.dll;#1`
 
@@ -99,13 +99,13 @@ Określa, czy aplikacja obsługuje DPI. Domyślnie ustawienie ma **wartość tak
 
 **Decyzji**
 
-- **Brak**
+- **Dawaj**
 - **Duże rozdzielczości DPI**
 - **Na monitor o wysokiej rozdzielczości DPI**
 
 ## <a name="isolated-com-property-page"></a>Strona właściwości izolowanego modelu COM
 
-Aby uzyskać więcej informacji na temat izolowanego modelu COM, [zobacz [izolowane aplikacje](/windows/win32/SbsCs/isolated-applications) i instrukcje: Twórz izolowane aplikacje do korzystania ze](../how-to-build-isolated-applications-to-consume-com-components.md)składników com.
+Aby uzyskać więcej informacji na temat izolowanego modelu COM, zobacz [izolowane aplikacje](/windows/win32/SbsCs/isolated-applications) i [instrukcje: Kompilowanie izolowanych aplikacji do korzystania ze składników com](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Plik biblioteki typów
 
@@ -137,7 +137,6 @@ Określa ścieżkę wyszukiwania do użycia podczas aktualizowania skrótów pli
 
 Opcje dodatkowe
 
-
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)

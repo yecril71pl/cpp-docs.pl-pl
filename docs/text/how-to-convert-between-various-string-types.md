@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konwertowanie między rozmaitymi typami ciągów'
+title: 'Porady: konwertowanie między rozmaitymi typami ciągów'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e7c83b70b4204cfc8880c968bb353b47e5b79e1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410736"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075548"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>Instrukcje: Konwertowanie między rozmaitymi typami ciągów
+# <a name="how-to-convert-between-various-string-types"></a>Porady: konwertowanie między rozmaitymi typami ciągów
 
-W tym temacie opisano sposób konwertowania różnych typów ciągu Visual C++ na inne ciągi. Typy ciągów skonwertowanych obejmują `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), i <xref:System.String?displayProperty=fullName>. We wszystkich przypadkach wykonano kopia ciągu po przekonwertowaniu do nowego typu. Wszelkie zmiany wprowadzone do nowego ciągu znaków nie wpłynie na oryginalny ciąg i na odwrót.
+W tym temacie pokazano, jak konwertować różne C++ typy ciągów wizualnych na inne ciągi. Typy ciągów, które są objęte zakresem obejmują `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)i <xref:System.String?displayProperty=fullName>. We wszystkich przypadkach kopia ciągu jest wykonywana po przekonwertowaniu na nowy typ. Wszelkie zmiany wprowadzone w nowym ciągu nie wpłyną na oryginalny ciąg i na odwrót.
 
-## <a name="converting-from-char-"></a>Konwersja z char \*
+## <a name="converting-from-char-"></a>Konwertowanie z typu char \*
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `char *` do innego typu ciągu wyszczególnionego powyżej. A `char *` ciąg (znany także jako ciąg stylu C) używa znaku null, aby wskazać koniec ciągu. Ciągi stylu C zwykle wymagają jeden bajt na znak, ale można również użyć dwóch bajtów. W poniższych przykładach `char *` ciągi są czasami określane jako ciągi znaków wielobajtowych ze względu na dane ciągów, które powstały na skutek konwersji z ciągów Unicode. Pojedynczy znak jednobajtowych jak i wielobajtowych (`MBCS`) funkcje mogą działać na `char *` ciągów.
+Ten przykład ilustruje sposób konwersji z `char *` na inne typy ciągów wymienione powyżej. Ciąg `char *` (znany również jako ciąg stylu C) używa znaku null, aby wskazać koniec ciągu. Ciągi stylu C zwykle wymagają jednego bajtu na znak, ale mogą również używać dwóch bajtów. W poniższych przykładach ciągi `char *` są czasami określane jako ciągi znaków wielobajtowych ze względu na dane ciągu, które wynikają z konwersji z ciągów Unicode. Funkcje pojedynczego bajtu i znaku wielobajtowego (`MBCS`) mogą działać na ciągach `char *`.
 
 ### <a name="code"></a>Kod
 
@@ -119,13 +119,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchart-"></a>Konwersja z wchar_t \*
+## <a name="converting-from-wchar_t-"></a>Konwertowanie z wchar_t \*
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `wchar_t *` do innego typu ciągu wyszczególnionego powyżej. Kilka typów ciągów, w tym `wchar_t *`, implementuje formaty szerokich znaków. Aby konwertować ciąg między wielobajtowym i format znaków dwubajtowych, możesz użyć pojedynczego wywołania funkcji takich jak `mbstowcs_s` lub inwokacji konstruktora dla klasy, takie jak `CStringA`.
+Ten przykład ilustruje sposób konwersji z `wchar_t *` na inne typy ciągów wymienione powyżej. Kilka typów ciągów, w tym `wchar_t *`, Implementuj formaty szerokich znaków. Aby przekonwertować ciąg między wielobajtowym i szerokim formatem znaków, można użyć pojedynczego wywołania funkcji, takiego jak `mbstowcs_s` lub wywołania konstruktora dla klasy, takiej jak `CStringA`.
 
 ### <a name="code"></a>Kod
 
@@ -243,13 +243,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-bstrt"></a>Konwersja z _bstr_t
+## <a name="converting-from-_bstr_t"></a>Konwertowanie z _bstr_t
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `_bstr_t` do innego typu ciągu wyszczególnionego powyżej. `_bstr_t` Obiekt jest sposobem hermetyzacji dwubajtowym `BSTR` ciągów. Ciąg BSTR ma wartość długości i nie używa znaku null zakończenie ciągu, ale konwersji na typ string może wymagać kończące wartość null.
+Ten przykład ilustruje sposób konwersji z `_bstr_t` na inne typy ciągów wymienione powyżej. Obiekt `_bstr_t` jest sposobem hermetyzowania ciągów znaków dwubajtowych `BSTR`. Ciąg BSTR ma wartość długości i nie używa znaku null do zakończenia ciągu, ale typ ciągu, który konwertujesz, może wymagać kończącego wartości null.
 
 ### <a name="code"></a>Kod
 
@@ -343,13 +343,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Konwersja z CComBSTR
+## <a name="converting-from-ccombstr"></a>Konwertowanie z CComBSTR
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `CComBSTR` do innego typu ciągu wyszczególnionego powyżej. Like _bstr_t `CComBSTR` obiekt jest sposobem hermetyzacji ciągów szerokich znaków BSTR. Ciąg BSTR ma wartość długości i nie używa znaku null zakończenie ciągu, ale konwersji na typ string może wymagać kończące wartość null.
+Ten przykład ilustruje sposób konwersji z `CComBSTR` na inne typy ciągów wymienione powyżej. Podobnie jak _bstr_t, obiekt `CComBSTR` jest sposobem hermetyzowania ciągów znaków dwubajtowych typu BSTR. Ciąg BSTR ma wartość długości i nie używa znaku null do zakończenia ciągu, ale typ ciągu, który konwertujesz, może wymagać kończącego wartości null.
 
 ### <a name="code"></a>Kod
 
@@ -453,15 +453,15 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Konwersja z CString
+## <a name="converting-from-cstring"></a>Konwertowanie z CString
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `CString` do innego typu ciągu wyszczególnionego powyżej. `CString` jest oparty na typie danych TCHAR, który z kolei jest zależny od tego, czy symbol `_UNICODE` jest zdefiniowana. Jeśli `_UNICODE` nie jest zdefiniowany, `TCHAR` jest definiowany jako zestaw znaków i `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest definiowany jako `wchar_t` i `CString` zawiera znak dwubajtowy ciąg.
+Ten przykład ilustruje sposób konwersji z `CString` na inne typy ciągów wymienione powyżej. `CString` jest oparty na typie danych używanie TCHAR, który z kolei zależy od tego, czy symbol `_UNICODE` jest zdefiniowany. Jeśli nie zdefiniowano `_UNICODE`, `TCHAR` jest zdefiniowany jako char, a `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest zdefiniowane jako `wchar_t` i `CString` zawiera ciąg znaków dwubajtowych.
 
-`CStringA` jest wielobajtowymi zawsze wersję `CString`, `CStringW` jest jedynie wersja ciąg znaku dwubajtowego. Ani `CStringA` ani `CStringW` użyj `_UNICODE` do określenia sposobu kompilacji. `CStringA` i `CStringW` są używane w tym przykładzie wyjaśnienie niewielkiej różnicy w alokacji rozmiaru buforu i wyjścia obsługi.
+`CStringA` jest ciągiem wielobajtowym zawsze z wersją `CString`, `CStringW` jest jedyną literą w postaci ciągu znaków. Nie `CStringA` ani `CStringW` użyć `_UNICODE`, aby określić sposób kompilowania. w tym przykładzie użyto `CStringA` i `CStringW` w celu wyjaśnienia drobnych różnic w alokacji rozmiaru buforu i obsłudze danych wyjściowych.
 
 ### <a name="code"></a>Kod
 
@@ -485,7 +485,7 @@ int main()
     // Set up a multibyte CStringA string.
     CStringA origa("Hello, World!");
     cout << origa << " (CStringA)" << endl;
-    
+
     // Set up a wide character CStringW string.
     CStringW origw("Hello, World!");
     wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;
@@ -545,7 +545,7 @@ int main()
     // Convert to a wide character CComBSTR string from
     // a wide character CStringW string.
     CComBSTR ccombstrw(origw);
-    
+
     // Append the type of string to it, and display the result.
     if (ccombstrw.Append(_T(" (CComBSTR)")) == S_OK)
     {
@@ -572,7 +572,7 @@ int main()
     systemstring += " (System::String)";
     Console::WriteLine("{0}", systemstring);
     delete systemstring;
-    
+
     // Convert a wide character CStringW to a
     // System::String.
     String ^systemstringw = gcnew String(origw);
@@ -597,13 +597,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basicstring"></a>Konwersja z podstawowego ciągu
+## <a name="converting-from-basic_string"></a>Konwertowanie z basic_string
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować z `basic_string` do innego typu ciągu wyszczególnionego powyżej.
+Ten przykład ilustruje sposób konwersji z `basic_string` na inne typy ciągów wymienione powyżej.
 
 ### <a name="code"></a>Kod
 
@@ -693,13 +693,13 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Konwersja z System::String
+## <a name="converting-from-systemstring"></a>Konwersja z System:: String
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak konwertować ze znaków dwubajtowych (Unicode) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) do innego typu ciągu wyszczególnionego powyżej.
+Ten przykład ilustruje sposób konwersji z typu szerokiej litery (Unicode) [:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) na inne typy ciągów wymienione powyżej.
 
 ### <a name="code"></a>Kod
 
@@ -800,13 +800,13 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[ATL i makr konwersji ciągu MFC](../atl/reference/string-conversion-macros.md)<br/>
+[Makra konwersji ATL i MFC String](../atl/reference/string-conversion-macros.md)<br/>
 [CString — operacje odnoszące się do ciągów stylu C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [Instrukcje: konwertowanie ciągu standardowego na obiekt System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
 [Instrukcje: konwertowanie obiektu System::String na ciąg standardowy](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[Instrukcje: Konwertowanie obiektu System::String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[Instrukcje: konwertowanie system:: String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programowanie przy użyciu CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>

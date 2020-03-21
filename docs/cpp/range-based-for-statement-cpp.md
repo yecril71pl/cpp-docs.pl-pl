@@ -2,12 +2,12 @@
 title: Range-based for — instrukcja (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244147"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077186"
 ---
 # <a name="range-based-for-statement-c"></a>Range-based for — instrukcja (C++)
 
@@ -22,11 +22,11 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj bazująca na zakresie **dla** instrukcji do konstruowania pętli, które muszą być wykonywane za pomocą "wielu", która jest zdefiniowana jako wszystkich elementów, które można wykonać iterację — na przykład `std::vector`, wszelkie inne standardowej biblioteki języka C++ sekwencji, której zakres jest definicją `begin()` i `end()`. Nazwa, która jest zadeklarowana w `for-range-declaration` jest lokalną grupą część **dla** instrukcji i nie może być ponownie zadeklarowany w `expression` lub `statement`. Należy pamiętać, że [automatycznie](../cpp/auto-cpp.md) — słowo kluczowe jest preferowane w `for-range-declaration` część instrukcji.
+Użyj instrukcji **for** opartej na zakresie, aby utworzyć pętle, które muszą być wykonywane przez "zakres", który jest zdefiniowany jako wszystkie elementy, które można wykonać za pośrednictwem, na przykład C++ `std::vector`, lub dowolnej innej standardowej sekwencji biblioteki, której zakres jest definiowany przez `begin()` i `end()`. Nazwa zadeklarowana w części `for-range-declaration` jest lokalną instrukcją **for** i nie może zostać ponownie zadeklarowana w `expression` lub `statement`. Należy [zauważyć, że słowo kluczowe](../cpp/auto-cpp.md) "Select" jest preferowane w części `for-range-declaration` instrukcji.
 
-**Nowość w programie Visual Studio 2017:**  Oparta na zakresie dla pętli nie jest już wymagany, czy begin() i metodę end() zwracają obiektów tego samego typu. Dzięki temu metoda end() zwracać obiekt wartownik, takie jak używane przez zakresy zgodnie z definicją w propozycji zakresów V3. Aby uzyskać więcej informacji, zobacz [uogólnianie bazująca na zakresie pętli For](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) i [biblioteki zakresu v3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
+**Nowość w programie Visual Studio 2017:**  Pętle oparte na zakresie dla pętli nie wymagają już, aby obiekty Begin () i End () były zwracane przez ten sam typ. Umożliwia to end () zwrócenie obiektu wskaźnikowego, takiego jak używany przez zakresy, zgodnie z definicją w propozycji zakres-v3. Aby uzyskać więcej informacji, zobacz [uogólnianie pętli for opartej na zakresie](https://wg21.link/p0184r0) i [biblioteki z zakresem V3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
 
-Ten kod przedstawia sposób użycia oparte na zakresie **dla** pętli, aby wykonać iterację tablicy i wektor:
+Ten kod pokazuje, w jaki sposób **używać pętli opartych na zakresie** do iterowania przez tablicę i wektor:
 
 ```cpp
 // range-based-for.cpp
@@ -96,17 +96,17 @@ end of integer array test
 end of vector test
 ```
 
-Opartej na zakresie **dla** pętli skończy się, gdy jeden z tych `statement` jest wykonywana: [podziału](../cpp/break-statement-cpp.md), [zwracają](../cpp/return-statement-cpp.md), lub [przejdź do](../cpp/goto-statement-cpp.md) się etykietą instrukcji poza bazująca na zakresie **dla** pętli. A [nadal](../cpp/continue-statement-cpp.md) instrukcji w opartej na zakresie **dla** pętli kończy tylko bieżącą iterację.
+Pętla **for** jest przerywana, gdy jest wykonywane jedno z następujących w `statement`: [Break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md) do instrukcji oznaczonej poza zakresem pętli **for** . Instrukcja [Continue](../cpp/continue-statement-cpp.md) w pętli **for** opartej na zakresie kończy się tylko bieżącą iteracją.
 
-Należy pamiętać fakty te informacje oparte na zakresie **dla**:
+Weź pod uwagę te fakty dotyczące zakresu **dla**:
 
-- Automatycznie rozpoznaje tablic.
+- Automatycznie rozpoznaje tablice.
 
-- Rozpoznaje kontenerów, które mają `.begin()` i `.end()`.
+- Rozpoznaje kontenery, które mają `.begin()` i `.end()`.
 
-- Używa wyszukiwania zależnego od argumentów `begin()` i `end()` dla żadnych innych czynności.
+- Używa `begin()` wyszukiwania zależnego od argumentów i `end()` dla innych elementów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [auto](../cpp/auto-cpp.md)<br/>
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>

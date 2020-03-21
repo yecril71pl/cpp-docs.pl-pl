@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626601"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076948"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild a MSBuild: Kompiluj zmiany systemu w programie Visual Studio 2010
 
@@ -63,7 +63,7 @@ Gdy **Eksplorator rozwiązań** jest używany do dodawania pliku do projektu, pl
 
 ## <a name="vc-directories-settings"></a>Ustawienia katalogów VC + +
 
-Ustawienia C++ katalogów wizualnych są określone na [stronie właściwości Katalogi VC + +](../ide/vcpp-directories-property-page.md). W programie Visual Studio 2008 i wcześniejszych ustawienia katalogów dotyczą poszczególnych użytkowników, a lista wykluczonych katalogów jest określona w pliku *sysincl. dat* . 
+Ustawienia C++ katalogów wizualnych są określone na [stronie właściwości Katalogi VC + +](../ide/vcpp-directories-property-page.md). W programie Visual Studio 2008 i wcześniejszych ustawienia katalogów dotyczą poszczególnych użytkowników, a lista wykluczonych katalogów jest określona w pliku *sysincl. dat* .
 
 Nie można zmienić ustawień katalogów VC + +, jeśli uruchomisz [devenv/ResetSettings](/visualstudio/ide/reference/resetsettings-devenv-exe) w wierszu polecenia. Nie można również zmienić ustawień, jeśli otworzysz menu **Narzędzia** , kliknij przycisk **Importuj i Eksportuj ustawienia**, a następnie wybierz opcję **Zresetuj wszystkie ustawienia** .
 
@@ -73,6 +73,6 @@ Aby przeprowadzić migrację ustawień katalogów VC + + z pliku *VSSETTINGS* , 
 2. Wybierz opcję **Importuj wybrane ustawienia środowiska**
 3. Postępuj zgodnie z instrukcjami wyświetlanymi w kreatorze.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MSBuild w wierszu polecenia-C++](../build/msbuild-visual-cpp.md)

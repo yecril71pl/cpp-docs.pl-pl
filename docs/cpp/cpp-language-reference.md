@@ -1,20 +1,20 @@
 ---
-title: C++ Language Reference
+title: Materiał referencyjny na temat języka C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301590"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079926"
 ---
-# <a name="c-language-reference"></a>C++ Language Reference
+# <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 
-To odwołanie wyjaśnia język C++ programowania wdrożony w kompilatorze firmy C++ Microsoft. Organizacja jest oparta na [*podręczniku C++ dokumentacji z adnotacjami*](http://www.stroustrup.com/arm.html) Margaret Ellis i Bjarne'a Stroustrupa oraz w standardzie międzynarodowym ANSI/ C++ ISO (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
+To odwołanie wyjaśnia język C++ programowania wdrożony w kompilatorze firmy C++ Microsoft. Organizacja jest oparta na *podręczniku C++ dokumentacji z adnotacjami* Margaret Ellis i Bjarne'a Stroustrupa oraz w standardzie międzynarodowym ANSI/ C++ ISO (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
 
 Aby zapoznać się z omówieniem C++ nowoczesnych praktyk programistycznych, zobacz [Witamy w C++ ](welcome-back-to-cpp-modern-cpp.md)programie.
 
@@ -110,6 +110,6 @@ Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefinio
 [Biblioteki C++ wizualne](../standard-library/cpp-standard-library-reference.md)<br/>
 Lista linków do stron początkowych odwołań dla różnych bibliotek firmy Microsoft C++ .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

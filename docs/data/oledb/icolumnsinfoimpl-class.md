@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 07f6fc4773a207f1d0b5a1b8bf23fbd86fd62f43
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447061"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077989"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl — Klasa
 
@@ -42,7 +42,7 @@ Zapewnia implementację interfejsu [IColumnsInfo](/previous-versions/windows/des
 ```cpp
 template <class T>
 class ATL_NO_VTABLE IColumnsInfoImpl :
-   public IColumnsInfo, 
+   public IColumnsInfo,
    public CDBIDOps
 ```
 
@@ -68,7 +68,7 @@ Klasa, która pochodzi od `IColumnsInfoImpl`.
 
 Obowiązkowy interfejs dla zestawów wierszy i poleceń. Aby zmodyfikować zachowanie implementacji `IColumnsInfo` dostawcy, należy zmodyfikować mapę kolumn dostawcy.
 
-## <a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
 
 Zwraca metadane kolumny, które są zbędne przez większość użytkowników.
 
@@ -84,7 +84,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 Zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB*.
 
-## <a name="mapcolumnids"></a>IColumnsInfoImpl:: MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl:: MapColumnIDs
 
 Zwraca tablicę liczb porządkowych kolumn w zestawie wierszy, które są identyfikowane przez określone identyfikatory kolumn.
 

@@ -1,17 +1,17 @@
 ---
-title: Okres istnienia obiektu i zarządzanie zasobami (RAII)
+title: Okres istnienia obiektów i zarządzanie zasobami (RAII)
 description: Postępuj zgodnie z zasadami RAII w C++ nowoczesne, aby uniknąć przecieków zasobów.
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303374"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078028"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>Okres istnienia obiektu i zarządzanie zasobami (RAII)
+# <a name="object-lifetime-and-resource-management-raii"></a>Okres istnienia obiektów i zarządzanie zasobami (RAII)
 
 W przeciwieństwie do języków C++ zarządzanych nie ma automatycznego *wyrzucania elementów bezużytecznych*. Jest to proces wewnętrzny, który zwalnia pamięć sterty i inne zasoby w miarę uruchamiania programu. C++ Program jest odpowiedzialny za zwracanie wszystkich przejętych zasobów do systemu operacyjnego. Niepowodzenie zwolnienia nieużywanego zasobu jest nazywane *wyciekiem*. Przecieki zasobów są niedostępne dla innych programów do momentu zakończenia procesu. Przecieki pamięci w szczególności są typowymi przyczynami błędów w programowaniu w stylu języka C.
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 W poniższym przykładzie `w` jest właścicielem zasobu pamięci i dlatego musi mieć kod w jego destruktorze, aby usunąć pamięć.
- 
+
 ```cpp
 class widget
 {
@@ -89,7 +89,7 @@ Przy użyciu inteligentnych wskaźników alokacji pamięci można wyeliminować 
 
 Projekt C++ gwarantuje, że obiekty są niszczone, gdy wykraczają poza zakres. Oznacza to, że zostaną zniszczone jako bloki, w odwrotnej kolejności konstrukcji. Gdy obiekt jest niszczony, jego bazy i składowe są niszczone w określonej kolejności. Obiekty zadeklarowane poza blokiem w zakresie globalnym mogą prowadzić do problemów. Debugowanie może być trudne, jeśli Konstruktor obiektu globalnego zgłosi wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>

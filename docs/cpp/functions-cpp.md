@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418448"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076157"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -261,7 +261,7 @@ Zmienna zadeklarowana wewnątrz treści funkcji jest nazywana *zmienną lokalną
 
 W C++ zmiennej lokalnej może być zadeklarowany jako statyczny. Zmienna jest widoczna tylko wewnątrz treści funkcji, ale jedna kopia zmiennej istnieje dla wszystkich wystąpień funkcji. Lokalne obiekty statyczne są niszczone podczas kończenia określonego przez `atexit`. Jeśli obiekt statyczny nie został skonstruowany, ponieważ przepływ sterowania programu został pominięty w jego deklaracji, nie podjęto próby zniszczenia tego obiektu.
 
-##  <a name="type_deduction"></a>Typ odejmowania w typach zwracanych (C++ 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Typ odejmowania w typach zwracanych (C++ 14)
 
 W języku C++ 14 **można użyć funkcji** Auto, aby nakazać kompilatorowi wywnioskowanie typu zwracanego z treści funkcji bez konieczności podawania końcowego typu zwracanego. Należy pamiętać, że **Funkcja autowypełnia** zawsze wartość zwracaną przez. Użyj `auto&&`, aby nakazać kompilatorowi wywnioskowanie odwołania.
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 Należy pamiętać, że **Funkcja** autostałość nie zachowuje typu const-deargumentd. W przypadku funkcji przekazywania, których wartość zwracana musi zachować stałą-stałość lub ref-stałość argumentów, można użyć słowa kluczowego **decltype (Auto)** , w którym są używane reguły wnioskowania typu **decltype** i zachowuje wszystkie informacje o typie. **decltype (Auto)** może być używana jako zwykła wartość zwrotna po lewej stronie lub jako końcowa wartość zwracana.
 
-Poniższy przykład (oparty na kodzie z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) pokazuje, że **decltype (Auto)** służy do włączania doskonałego przekazywania argumentów funkcji w zwracanym typie, który nie jest znany do momentu wystąpienia szablonu.
+Poniższy przykład (oparty na kodzie z [N3493](https://wg21.link/n3493)) pokazuje, że **decltype (Auto)** służy do włączania doskonałego przekazywania argumentów funkcji w zwracanym typie, który nie jest znany do momentu wystąpienia szablonu.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>Zwracanie wielu wartości z funkcji
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Zwracanie wielu wartości z funkcji
 
 Istnieją różne sposoby zwracania więcej niż jednej wartości z funkcji:
 

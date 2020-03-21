@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940943"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077338"
 ---
 # <a name="fflush"></a>fflush
 
@@ -47,7 +47,7 @@ int fflush(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -63,9 +63,9 @@ Funkcja **fflush** opróżnia *strumień*strumienia. Jeśli strumień został ot
 
 Jeśli *strumień* ma **wartość null**, zachowanie jest takie samo jak wywołanie **fflush** w każdym otwartym strumieniu. Wszystkie strumienie otwarte w trybie zapisu i wszystkie strumienie otwarte w trybie aktualizacji, w których Ostatnia operacja była zapisu, są opróżniane. Wywołanie nie ma wpływu na inne strumienie.
 
-Bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas zapisywania danych na dysku: gdy bufor jest zapełniony, gdy strumień jest zamknięty lub gdy program kończy normalne działanie bez zamykania strumienia. Funkcja zatwierdzania na dysku w bibliotece wykonawczej pozwala zagwarantować, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie w buforach systemu operacyjnego. Bez ponownego zapisywania istniejącego programu można włączyć tę funkcję, łącząc pliki obiektów programu z TOWARami. OBJ. W utworzonym pliku wykonywalnym wywołania **_flushall** zapisują zawartość wszystkich buforów na dysku. Tylko **_flushall** i **fflush** mają wpływ na towary. obj.
+Bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas zapisywania danych na dysku: gdy bufor jest zapełniony, gdy strumień jest zamknięty lub gdy program kończy normalne działanie bez zamykania strumienia. Funkcja zatwierdzania na dysku w bibliotece wykonawczej pozwala zagwarantować, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie w buforach systemu operacyjnego. Bez ponownego zapisywania istniejącego programu można włączyć tę funkcję, łącząc pliki obiektów programu z TOWARami. OBJ. W utworzonym pliku wykonywalnym program wywołuje **_flushall** zapisać zawartość wszystkich buforów na dysku. Tylko **_flushall** i **fflush** mają wpływ na towary. obj.
 
-Aby uzyskać informacje dotyczące kontrolowania funkcji zatwierdzania na dysku, zobacz [przesyłanie strumieniowe we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
+Aby uzyskać informacje o kontrolowaniu funkcji "Commit-to-Disk", zobacz [przesyłanie strumieniowe we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
 
 Ta funkcja blokuje wątek wywołujący i dlatego jest bezpieczna wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fflush_nolock**.
 
@@ -73,7 +73,7 @@ Ta funkcja blokuje wątek wywołujący i dlatego jest bezpieczna wątkowo. W prz
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fflush**|\<stdio.h>|
+|**fflush**|\<stdio. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }
@@ -127,7 +127,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

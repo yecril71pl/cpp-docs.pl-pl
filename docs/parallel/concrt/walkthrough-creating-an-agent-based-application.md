@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142043"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080003"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
 
@@ -28,7 +28,7 @@ Aby ukończyć ten przewodnik, należy zapoznać się z następującymi tematami
 
 - [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a>Poszczególne
 
 W tym instruktażu przedstawiono sposób wykonywania następujących zadań:
 
@@ -38,7 +38,7 @@ W tym instruktażu przedstawiono sposób wykonywania następujących zadań:
 
 - [Korzystanie z klasy file_reader w aplikacji](#useagentclass)
 
-## <a name="createapplication"></a>Tworzenie aplikacji konsolowej
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>Tworzenie aplikacji konsolowej
 
 W tej sekcji pokazano, jak utworzyć C++ aplikację konsolową, która odwołuje się do plików nagłówkowych, które będą używane przez program. Początkowe kroki różnią się w zależności od używanej wersji programu Visual Studio. Upewnij się, że selektor wersji został poprawnie ustawiony w lewym górnym rogu tej strony.
 
@@ -48,7 +48,7 @@ W tej sekcji pokazano, jak utworzyć C++ aplikację konsolową, która odwołuje
 
 1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**.
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie Wprowadź `BasicAgent` jako nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
@@ -80,7 +80,7 @@ W tej sekcji pokazano, jak utworzyć C++ aplikację konsolową, która odwołuje
 
 [[Top](#top)]
 
-## <a name="createagentclass"></a>Tworzenie klasy file_reader
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>Tworzenie klasy file_reader
 
 W tej sekcji przedstawiono sposób tworzenia klasy `file_reader`. Środowisko uruchomieniowe planuje wykonanie pracy we własnym kontekście przez każdego agenta. W związku z tym można utworzyć agenta, który wykonuje zadania synchronicznie, ale współdziała z innymi składnikami asynchronicznie. Klasa `file_reader` odczytuje dane z danego pliku wejściowego i wysyła dane z tego pliku do danego składnika docelowego.
 
@@ -128,7 +128,7 @@ Poniższy przykład pokazuje kompletną zawartość file_reader. h.
 
 [[Top](#top)]
 
-## <a name="useagentclass"></a>Korzystanie z klasy file_reader w aplikacji
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>Korzystanie z klasy file_reader w aplikacji
 
 W tej sekcji pokazano, jak za pomocą klasy `file_reader` odczytać zawartość pliku tekstowego. Przedstawiono w nim również sposób tworzenia obiektu [concurrency:: Call](../../parallel/concrt/reference/call-class.md) , który odbiera dane tego pliku i oblicza sumę kontrolną Adler-32.
 
@@ -192,7 +192,7 @@ W przypadku użycia z przykładowymi danymi wejściowymi ten program tworzy nast
 Adler-32 sum is fefb0d75
 ```
 
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
 Aby zapobiec współbieżnemu dostępowi do elementów członkowskich danych, zalecamy dodanie metod, które wykonują prace do sekcji `protected` lub `private` w klasie. Tylko metody, które wysyłają lub odbierają wiadomości do lub z agenta, do sekcji `public` klasy.
 

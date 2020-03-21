@@ -14,33 +14,33 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422501"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075597"
 ---
 # <a name="ltutilitygt-functions"></a>funkcje&gt; &lt;narzędzi
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
 template <class T> void as_const(const T&&) = delete;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca *T*.
 
-## <a name="declval"></a>declval —
+## <a name="declval"></a><a name="declval"></a>declval —
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>zamian
+## <a name="exchange"></a><a name="exchange"></a>zamian
 
 **(C++ 14)** Przypisuje nową wartość do obiektu i zwraca jego starą wartość.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>prześlą
+## <a name="forward"></a><a name="forward"></a>prześlą
 
 Warunkowo rzutuje swój argument do odwołania rvalue, jeśli argument to rvalue lub odwołanie rvalue. Spowoduje to przywrócenie cechy rvalue argumentu do funkcji przekazywania do przodu, aby obsłużyć doskonałe przekazywanie do przodu.
 
@@ -115,7 +115,7 @@ Typ wartości przekazaną w *ARG*, która może być różna od typu *ARG*. Zwyk
 \ *ARG*
 Argument do rzutowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca odwołanie rvalue do *argumentu ARG* , jeśli wartość przeniesiona w *ARG* była pierwotnie rvalue lub odwołaniem do rvalue; w przeciwnym razie zwraca *ARG* bez modyfikowania jego typu.
 
@@ -127,19 +127,19 @@ Musisz określić jawny argument szablonu, aby wywołać `forward`.
 
 Przywrócenie pierwotnej wartości argumentu rvalue-stałość w celu przeprowadzenia rozpoznawania przeciążenia jest znane jako *doskonałe przekazywanie dalej*. Doskonałe przekazywanie do przodu umożliwia funkcji szablonu zaakceptowanie argumentu któregokolwiek typu odwołania i przywrócenie jego cechy rvalue, gdy jest to niezbędne do poprawnego rozwiązania przeciążenia. Za pomocą doskonałego przekazywania do przodu można zachować semantykę przenoszenia dla rvalue i uniknąć konieczności zapewnienia przeciążeń dla funkcji, które różnią się tylko pod względem typu odwołania ich argumentów.
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a>Pobierz
 
 Pobiera element z obiektu `pair` według pozycji indeksu lub według typu.
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 Funkcja szablonu, której można użyć do konstruowania obiektów typu `pair`, w których typy składników są automatycznie wybierane na podstawie typów danych, które są przesyłane jako parametry.
 
@@ -289,7 +289,7 @@ Wartość, która inicjuje pierwszy element `pair`.
 *Val2*\
 Wartość, która inicjuje drugi element `pair`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt pary, który jest zbudowany: `pair`<`T`,`U`> (`Val1`, `Val2`).
 
@@ -313,7 +313,7 @@ Funkcja pomocnika `make_pair` umożliwia również przekazywanie dwóch wartośc
 
 Aby zapoznać się z przykładem dotyczącym sposobu używania funkcji pomocnika `make_pair` zadeklarować i zainicjować parę, zobacz [parowanie struktury](../standard-library/pair-structure.md).
 
-## <a name="move"></a>Przenieś
+## <a name="move"></a><a name="move"></a>Przenieś
 
 Bezwarunkowo rzutuje swój argument na odwołanie rvalue, a tym samym sygnalizuje, że może być przeniesione, jeśli jego typ umożliwia przenoszenie.
 
@@ -330,7 +330,7 @@ Typ wywnioskowany z typu argumentu, który przeszedł w *ARG*, wraz z regułami 
 \ *ARG*
 Argument do rzutowania. Mimo że typ *argumentu* jest określony jako odwołanie rvalue, `move` również akceptuje argumenty lvalue, ponieważ odwołania lvalue mogą być powiązane z odwołaniami do rvalue.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 `Arg` jako odwołanie rvalue, niezależnie od tego, czy typ jest typem referencyjnym.
 
@@ -342,13 +342,13 @@ Argument do rzutowania. Mimo że typ *argumentu* jest określony jako odwołanie
 
 Jeśli wartość przeniesiona w *ARG* to lvalue — to znaczy, że ma nazwę lub jego adres może zostać pobrany — jest on unieważniony po przeniesieniu. Nie należy odwoływać się do wartości przekazaną w *ARG* o nazwę lub adres po przeniesieniu.
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Wymienia elementy dwóch obiektów struktury typu lub [pary](../standard-library/pair-structure.md) .
 
@@ -373,18 +373,18 @@ Obiekt typu lub `pair`.
 
 Jedną z zalet `swap` jest to, że typy obiektów, które są przechowywane, są określane automatycznie przez kompilator i nie muszą być jawnie określone. Nie używaj jawnych argumentów szablonu, takich jak `swap<int, int>(1, 2)`, gdy używasz `swap`, ponieważ jest on pełny i dodaje złożone problemy referencyjne rvalue, które mogą spowodować błąd kompilacji.
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 

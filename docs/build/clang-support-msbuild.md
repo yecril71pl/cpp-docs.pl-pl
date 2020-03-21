@@ -4,12 +4,12 @@ ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 819f96bf2fd949f80ae72ca878ba7eb9cb1bffcc
-ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
+ms.openlocfilehash: 5bd90141cdc7646dce206e6b02a605b73d78de95
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75914368"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078810"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Obsługa Clang/LLVM w projektach programu Visual Studio
 
@@ -23,9 +23,9 @@ Obsługa Clang dla projektów CMake i MSBuild jest dostępna w programie Visual 
 
 Do edytowania, kompilowania i debugowania C++ projektów programu Visual Studio (MSBuild) przeznaczonych dla systemu Windows lub Linux można użyć programu visual Studio 2019 w wersji 16,2 z Clang.
 
-## <a name="install"></a>Instalacja programu
+## <a name="install"></a>Instalowanie
 
-Aby zapewnić najlepszą obsługę środowiska IDE w programie Visual Studio, zalecamy korzystanie z najnowszych narzędzi kompilatora Clang dla systemu Windows. Jeśli jeszcze tego nie zrobiono, możesz je zainstalować, otwierając Instalator programu Visual Studio i wybierając  **C++ narzędzia Clang dla systemu Windows** w obszarze **Programowanie aplikacji klasycznych z C++**  opcjonalnymi składnikami. Jeśli wolisz używać istniejącej instalacji Clang na maszynie, wybierz  **C++ narzędzia do kompilacji Clang-CL dla v142.** składnik opcjonalny. Biblioteka standardowa C++ firmy Microsoft wymaga obecnie co najmniej Clang 8.0.0; wersja pakietu Clang zostanie automatycznie zaktualizowana tak, aby zachować aktualność z aktualizacjami w ramach implementacji standardowej biblioteki firmy Microsoft. 
+Aby zapewnić najlepszą obsługę środowiska IDE w programie Visual Studio, zalecamy korzystanie z najnowszych narzędzi kompilatora Clang dla systemu Windows. Jeśli jeszcze tego nie zrobiono, możesz je zainstalować, otwierając Instalator programu Visual Studio i wybierając  **C++ narzędzia Clang dla systemu Windows** w obszarze **Programowanie aplikacji klasycznych z C++**  opcjonalnymi składnikami. Jeśli wolisz używać istniejącej instalacji Clang na maszynie, wybierz  **C++ narzędzia do kompilacji Clang-CL dla v142.** składnik opcjonalny. Biblioteka standardowa C++ firmy Microsoft wymaga obecnie co najmniej Clang 8.0.0; wersja pakietu Clang zostanie automatycznie zaktualizowana tak, aby zachować aktualność z aktualizacjami w ramach implementacji standardowej biblioteki firmy Microsoft.
 
 ![Instalacja składnika Clang](media/clang-install-vs2019.png)
 
@@ -45,16 +45,16 @@ W przypadku projektów systemu Linux program Visual Studio używa frontonu zgodn
 
 Aby skonfigurować projekt programu Visual Studio Linux do korzystania z Clang:
 
-1. Kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. 
-1. Zazwyczaj należy najpierw wybrać **wszystkie konfiguracje** w górnej części okna dialogowego. 
+1. Kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
+1. Zazwyczaj należy najpierw wybrać **wszystkie konfiguracje** w górnej części okna dialogowego.
 1. W obszarze **ogólne** > **platform zestawu narzędzi**wybierz **WSL_Clang_1_0** , jeśli używasz podsystemu Windows dla systemu Linux lub **Remote_Clang_1_0** , jeśli używasz maszyny zdalnej lub maszyny wirtualnej.
-1. Naciśnij klawisz **OK**.
+1. Naciśnij przycisk **OK**.
 
 ![Instalacja składnika Clang](media/clang-msbuild-prop-page.png)
 
 W systemie Linux program Visual Studio domyślnie używa pierwszej lokalizacji Clang, która napotka we właściwości środowisko ścieżki. W przypadku korzystania z niestandardowej instalacji Clang należy zmienić wartość właściwości `LLVMInstallDir` lub zastąpić ścieżkę w obszarze **właściwości** > **projektu** > **VC + + katalogi** > **Właściwości konfiguracji** > **katalogów plików wykonywalnych**. Aby uzyskać więcej informacji [, zobacz Ustawianie niestandardowej lokalizacji LLVM](#custom_llvm_location) .
 
-## <a name="custom_llvm_location"></a>Ustawianie niestandardowej lokalizacji LLVM
+## <a name="set-a-custom-llvm-location"></a><a name="custom_llvm_location"></a>Ustawianie niestandardowej lokalizacji LLVM
 
 Możesz ustawić niestandardową ścieżkę dla LLVM dla jednego lub wielu projektów, tworząc plik *Directory. Build. props* i dodając ten plik do folderu głównego dowolnego projektu. Możesz dodać go do folderu rozwiązania głównego, aby zastosować go do wszystkich projektów w rozwiązaniu. Plik powinien wyglądać następująco (ale zastąpić rzeczywistą ścieżkę):
 

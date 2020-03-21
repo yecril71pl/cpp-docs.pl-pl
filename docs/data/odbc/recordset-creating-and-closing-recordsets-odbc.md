@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)'
+title: 'Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,61 +9,61 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707984"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075918"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)
 
-> [!NOTE] 
-> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
+> [!NOTE]
+> Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
 
 Ten temat dotyczy klas MFC ODBC.
 
-Aby użyć zestawu rekordów, konstruowania obiektu zestawu rekordów, a następnie wywołać jej `Open` funkcja elementu członkowskiego do uruchamiania kwerend w zestawie rekordów i wybierania rekordów. Po zakończeniu za pomocą zestawu rekordów, zamknij i zniszcz obiekt.
+Aby użyć zestawu rekordów, Utwórz obiekt zestawu rekordów, a następnie Wywołaj jego `Open` funkcję członkowską, aby uruchomić zapytanie zestawu rekordów i wybrać pozycję rekordy. Po zakończeniu pracy z zestawem rekordów Zamknij i zniszcz obiekt.
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
-- [Kiedy i jak można utworzyć obiektu zestawu rekordów](#_core_creating_recordsets_at_run_time).
+- [Kiedy i jak utworzyć obiekt zestawu rekordów](#_core_creating_recordsets_at_run_time).
 
-- [Kiedy i jak zakwalifikować się zachowanie zestawu rekordów, parametryzacja, filtrowanie, sortowanie i blokowanie go](#_core_setting_recordset_options).
+- [Kiedy i jak można zakwalifikować działanie zestawu rekordów przez parametryzacja, filtrowanie, sortowanie lub blokowanie](#_core_setting_recordset_options).
 
-- [Kiedy i jak zamykać obiekty zestawów rekordów](#_core_closing_a_recordset).
+- [Kiedy i jak zamknąć obiekt zestawu rekordów](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Tworzenie zestawów rekordów w czasie wykonywania
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a>Tworzenie zestawów rekordów w czasie wykonywania
 
-Zanim będzie można utworzyć zestawu rekordów obiektów w programie klasy specyficzne dla aplikacji zestawu rekordów jest zazwyczaj zapisu. Aby uzyskać więcej informacji dotyczących tego kroku wstępnych, zobacz [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+Przed utworzeniem obiektów zestawu rekordów w programie zazwyczaj należy napisać klasy zestawu rekordów specyficzne dla aplikacji. Aby uzyskać więcej informacji o tym kroku wstępnym, zobacz [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
-Otwórz obiekt dynamiczny lub, gdy trzeba wybrać rekordy ze źródła danych. Typ obiektu do utworzenia zależy od tego, co należy zrobić z danymi w aplikacji i na jakie sterownika ODBC obsługuje. Aby uzyskać więcej informacji, zobacz [dynamiczny](../../data/odbc/dynaset.md) i [migawki](../../data/odbc/snapshot.md).
+Otwórz obiekt dynamiczny lub migawek, gdy musisz wybrać rekordy ze źródła danych. Typ tworzonego obiektu zależy od tego, co należy zrobić z danymi w aplikacji, oraz od tego, co obsługuje sterownik ODBC. Aby uzyskać więcej informacji, zobacz [zestaw dynamiczny](../../data/odbc/dynaset.md) i [migawka](../../data/odbc/snapshot.md).
 
-#### <a name="to-open-a-recordset"></a>Aby otworzyć zestawu rekordów
+#### <a name="to-open-a-recordset"></a>Aby otworzyć zestaw rekordów
 
-1. Utworzyć obiekt usługi `CRecordset`-klasy pochodnej.
+1. Konstruowanie obiektu klasy pochodnej `CRecordset`.
 
-   Można skonstruować obiekt na stosie, lub na ramce stosu funkcji.
+   Można skonstruować obiekt na stercie lub w ramce stosu funkcji.
 
-1. Opcjonalnie zmodyfikuj domyślne zachowanie zestawu rekordów. Opcje dostępne w temacie [Ustawianie opcji rekordów](#_core_setting_recordset_options).
+1. Opcjonalnie zmodyfikuj domyślne zachowanie zestawu rekordów. Aby uzyskać dostęp do dostępnych opcji, zobacz [Ustawianie opcji zestawu rekordów](#_core_setting_recordset_options).
 
-1. Wywołanie obiektu [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego.
+1. Wywołaj funkcję [otwierającego](../../mfc/reference/crecordset-class.md#open) elementu członkowskiego obiektu.
 
-W konstruktorze, należy przekazać wskaźnik do `CDatabase` obiektu lub przekazać wartości NULL, aby użyć obiektu tymczasowej bazy danych, który konstruuje platformę i zostanie otwarta na podstawie parametrów połączenia, zwracany przez [getdefaultconnect —](../../mfc/reference/crecordset-class.md#getdefaultconnect) funkcja elementu członkowskiego. `CDatabase` Obiekt może być podłączony do źródła danych.
+W konstruktorze Przekaż wskaźnik do obiektu `CDatabase` lub przekaż wartość NULL, aby użyć obiektu tymczasowej bazy danych, który jest konstrukcja i otwierany przez platformę na podstawie parametrów połączenia zwracanych przez funkcję członkowską [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) . Obiekt `CDatabase` może już być połączony ze źródłem danych.
 
-Wywołanie `Open` używa języka SQL, aby wybrać rekordy ze źródła danych. Pierwszy rekord zaznaczone (jeśli istnieje) jest bieżącego rekordu. Wartości pól danego rekordu są przechowywane w elementy członkowskie danych pola obiektu zestawu rekordów. Jeśli wybrano wszystkie rekordy, zarówno `IsBOF` i `IsEOF` funkcje Członkowskie zwracają 0.
+Wywołanie `Open` używa języka SQL do wybierania rekordów ze źródła danych. Pierwszy wybrany rekord (jeśli istnieje) jest bieżącym rekordem. Wartości pól tego rekordu są przechowywane w elementach członkowskich danych pola obiektu recordset. W przypadku wybrania dowolnego rekordu zarówno funkcje członkowskie `IsBOF`, jak i `IsEOF` zwracają 0.
 
-W swojej [Otwórz](../../mfc/reference/crecordset-class.md#open) wywołania, można:
+W [otwartym](../../mfc/reference/crecordset-class.md#open) wywołaniu można:
 
-- Określ, czy zestaw rekordów jest dynamiczny lub migawki. Zestawy rekordów jako migawki domyślnie otwierane przez. Lub można określić zestaw rekordów tylko do przodu, który zezwala na tylko do przodu przewijania, do jednego rekordu w danym momencie.
+- Określ, czy zestaw rekordów jest typu dynamiczny, czy migawką. Domyślnie zestawy rekordów są otwierane jako migawki. Lub można określić zestaw rekordów tylko do przodu, który umożliwia przewijanie tylko do przodu, po jednym rekordzie.
 
-   Używa domyślnie domyślny typ przechowywane w zestawie rekordów `CRecordset` element członkowski danych `m_nDefaultType`. Kreatorzy napisać kod, aby zainicjować `m_nDefaultType` do typu zestawu rekordów, możesz wybrać w kreatorze. Zamiast przyjmuje ustawienie domyślne, można zastąpić innego typu zestawu rekordów.
+   Domyślnie zestaw rekordów używa typu domyślnego przechowywanego w `m_nDefaultType`składowej danych `CRecordset`. Kreatorzy zapisują kod w celu zainicjowania `m_nDefaultType` do typu zestawu rekordów wybranego w kreatorze. Zamiast zaakceptowania tego ustawienia domyślnego można zastąpić inny typ zestawu rekordów.
 
-- Określ ciąg znaków, aby zastąpić domyślny kod SQL **wybierz** instrukcję, która tworzy zestaw rekordów.
+- Określ ciąg, który ma zastąpić domyślną instrukcję **SELECT** języka SQL, którą tworzy zestaw rekordów.
 
-- Określ, czy zestaw rekordów jest tylko do odczytu lub tylko do dołączania. Zestawy rekordów Zezwalaj na pełne, aktualizowanie domyślnie, ale, można ograniczyć do dodawania nowych rekordów tylko lub może nie zezwalaj na wszystkie aktualizacje.
+- Określ, czy zestaw rekordów jest tylko do odczytu, czy tylko do dołączania. Zestawy rekordów domyślnie zezwalają na pełne aktualizowanie, ale można ograniczyć Dodawanie tylko nowych rekordów lub uniemożliwić wszystkie aktualizacje.
 
-Poniższy przykład pokazuje, jak otworzyć migawkę służącą tylko do odczytu obiektu klasy `CStudentSet`, klasy specyficzne dla aplikacji:
+Poniższy przykład pokazuje, jak otworzyć obiekt migawki tylko do odczytu klasy `CStudentSet`, klasy specyficznej dla aplikacji:
 
 ```cpp
 // Construct the snapshot object
@@ -74,43 +74,43 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Po wywołaniu metody `Open`, użyj członków funkcje i dane Członkowskie obiektu, aby pracować z rekordami. W niektórych przypadkach możesz chcieć Requery — ani nie odświeżaj zestawu rekordów, aby uwzględnić zmiany, które wystąpiły w źródle danych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Po wywołaniu `Open`Użyj funkcji elementów członkowskich i elementów członkowskich danych obiektu do pracy z rekordami. W niektórych przypadkach może być konieczne ponowne wykonanie kwerendy lub odświeżenie zestawu rekordów w celu uwzględnienia zmian, które wystąpiły w źródle danych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: przeszukiwanie zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  Ciąg parametrów połączenia, używane podczas programowania może nie być ten sam ciąg połączenia, który ostatecznej użytkownicy potrzebują. Aby poznać, w związku z tym uogólnianie aplikacji, zobacz [źródła danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  Ciąg połączenia używany podczas opracowywania może nie być tym samym ciągiem połączenia, który jest wymagany przez użytkowników. Aby poznać pomysły dotyczące uogólniania aplikacji w tym zakresie, zobacz [Źródło danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Ustawianie opcji zestawu rekordów
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a>Ustawianie opcji zestawu rekordów
 
-Po utworzenia obiektu zestawu rekordów, ale przed wywołaniem `Open` do wybierania rekordów, warto ustawić kilka opcji do sterowania zachowaniem zestawu rekordów. Dla wszystkich zestawów rekordów możesz wykonywać następujące czynności:
+Po utworzeniu obiektu zestawu rekordów, ale przed wywołaniem `Open` w celu wybrania rekordów, można ustawić pewne opcje sterujące zachowaniem zestawu rekordów. Dla wszystkich zestawów rekordów można:
 
-- Określ [filtru](../../data/odbc/recordset-filtering-records-odbc.md) ogranicza wybór rekordów.
+- Określ [Filtr](../../data/odbc/recordset-filtering-records-odbc.md) , aby ograniczyć wybór rekordu.
 
-- Określ [sortowania](../../data/odbc/recordset-sorting-records-odbc.md) kolejność rekordów.
+- Określ kolejność [sortowania](../../data/odbc/recordset-sorting-records-odbc.md) rekordów.
 
-- Określ [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) , można wybrać rekordy przy użyciu informacji uzyskanych lub obliczane w czasie wykonywania.
+- Określ [Parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) , aby można było wybierać rekordy przy użyciu informacji uzyskanych lub obliczanych w czasie wykonywania.
 
-Jeśli warunki są odpowiednie, można też ustawić następujące opcje:
+Możesz również ustawić następującą opcję, jeśli warunki są prawidłowe:
 
-- Jeśli zestaw rekordów można aktualizować i obsługuje opcje blokowania, podaj [blokowania](../../data/odbc/recordset-locking-records-odbc.md) metody stosowane przy aktualizacjach.
+- Jeśli zestaw rekordów jest aktualizowalny i obsługuje opcje blokowania, Określ metodę [blokowania](../../data/odbc/recordset-locking-records-odbc.md) używaną dla aktualizacji.
 
 > [!NOTE]
->  Aby wpłynąć na wybór rekordów, należy ustawić te opcje przed wywołaniem `Open` funkcja elementu członkowskiego.
+>  Aby mieć wpływ na wybór rekordów, należy ustawić te opcje przed wywołaniem funkcji składowej `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Zamykanie zestawu rekordów
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a>Zamykanie zestawu rekordów
 
-Po zakończeniu wprowadzania zmian przy użyciu rekordów, należy ją usunąć i cofanie przydziału pamięci.
+Po zakończeniu pracy z zestawem rekordów należy usunąć go i cofnąć jego ilość.
 
-#### <a name="to-close-a-recordset"></a>Aby zamknąć zestawu rekordów
+#### <a name="to-close-a-recordset"></a>Aby zamknąć zestaw rekordów
 
-1. Wywoływanie jej [Zamknij](../../mfc/reference/crecordset-class.md#close) funkcja elementu członkowskiego.
+1. Wywoływanie funkcji [zamykającej](../../mfc/reference/crecordset-class.md#close) elementu członkowskiego.
 
-1. Zniszczenie obiektu zestawu rekordów.
+1. Zniszcz obiekt zestawu rekordów.
 
-   Jeżeli zadeklarowano na ramce stosu funkcji, obiekt jest niszczony automatycznie, gdy obiekt wykracza poza zakres. W przeciwnym razie użyj **Usuń** operatora.
+   Jeśli zadeklarowano ją w ramce stosu funkcji, obiekt zostanie zniszczony automatycznie, gdy obiekt wykracza poza zakres. W przeciwnym razie użyj operatora **delete** .
 
-`Close` zwalnia zestawu rekordów `HSTMT` obsługi. Go nie niszczy obiektów C++.
+`Close` zwalnia uchwytu `HSTMT` zestawu rekordów. Nie niszczy C++ obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

@@ -6,37 +6,37 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524628"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075273"
 ---
 # <a name="adding-an-atl-property-page"></a>Dodawanie strony właściwości ATL
 
-> [!NOTE] 
-> Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+> [!NOTE]
+> Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
-Aby dodać stronę właściwości Active Template Library (ATL) do projektu, projekt musi być utworzony jako aplikacji ATL lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji ATL lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
+Aby dodać stronę właściwości Active Template Library (ATL) do projektu, projekt musi zostać utworzony jako aplikacja ATL lub aplikacja MFC, która zawiera obsługę ATL. Za pomocą [Kreatora projektu ATL](../../atl/reference/atl-project-wizard.md) można utworzyć aplikację ATL lub [dodać obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
 
-W przypadku dodawania strony właściwości dla formantu, formant musi obsługiwać [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interfejsu. Domyślnie ten interfejs jest na liście pochodnym kontroli nad klasy, gdy użytkownik [tworzenia kontrolki ATL](../../atl/reference/adding-an-atl-control.md) przy użyciu [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md).
+Jeśli dodajesz stronę właściwości kontrolki, formant musi obsługiwać interfejs [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) . Domyślnie ten interfejs znajduje się na liście rodzajów pochodnych klasy kontrolki podczas [tworzenia kontrolki ATL](../../atl/reference/adding-an-atl-control.md) przy użyciu [Kreatora kontrolki ATL](../../atl/reference/atl-control-wizard.md).
 
 > [!NOTE]
-> Jeśli nie ma klasy kontrolki [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) liście pochodnym, należy dodać ją ręcznie.
+> Jeśli Klasa kontrolki nie ma [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) na liście pochodnych, należy ją dodać ręcznie.
 
-## <a name="to-add-an-atl-property-page-to-your-project"></a>Aby dodać strony właściwości ATL do projektu
+## <a name="to-add-an-atl-property-page-to-your-project"></a>Aby dodać stronę właściwości ATL do projektu
 
-1. W obu **Eksploratora rozwiązań** lub [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać stronę właściwości ATL.
+1. W **Eksplorator rozwiązań** lub [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać stronę właściwości ATL.
 
-1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
+1. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj klasę**.
 
-1. W [Dodaj klasę](../../ide/add-class-dialog-box.md) dialogowym **szablony** okienku kliknij **strony właściwości ATL** a następnie kliknij przycisk **Otwórz** do wyświetlenia [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md).
+1. W oknie dialogowym [Dodawanie klasy](../../ide/add-class-dialog-box.md) w okienku **Szablony** kliknij pozycję **Strona właściwości ATL** , a następnie kliknij przycisk **Otwórz** , aby wyświetlić [Kreatora strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md).
 
-Po utworzeniu strony właściwości kontrolki, należy podać [PROP_PAGE](property-map-macros.md#prop_page) wpis map właściwości dla formantu.
+Po utworzeniu strony właściwości dla kontrolki musisz podać wpis [PROP_PAGE](property-map-macros.md#prop_page) w mapie właściwości dla kontrolki.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strony właściwości](../../atl/atl-com-property-pages.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Przykład: implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
+[Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)

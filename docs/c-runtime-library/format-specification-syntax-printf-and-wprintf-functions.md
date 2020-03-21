@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417174"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078050"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
-Różne funkcje `printf` i `wprintf` przyjmują ciąg formatu i argumenty opcjonalne i tworzą sformatowaną sekwencję znaków dla danych wyjściowych. Ciąg formatu zawiera zero lub więcej *dyrektyw*, które są znakami literału dla danych wyjściowych lub zakodowanych *specyfikacji konwersji* , które opisują sposób formatowania argumentu w danych wyjściowych. W tym artykule opisano składnię używaną do kodowania specyfikacji konwersji w ciągu formatu. Aby uzyskać listę tych funkcji, zobacz [przesyłanie strumieniowe we/wy](../c-runtime-library/stream-i-o.md). 
+Różne funkcje `printf` i `wprintf` przyjmują ciąg formatu i argumenty opcjonalne i tworzą sformatowaną sekwencję znaków dla danych wyjściowych. Ciąg formatu zawiera zero lub więcej *dyrektyw*, które są znakami literału dla danych wyjściowych lub zakodowanych *specyfikacji konwersji* , które opisują sposób formatowania argumentu w danych wyjściowych. W tym artykule opisano składnię używaną do kodowania specyfikacji konwersji w ciągu formatu. Aby uzyskać listę tych funkcji, zobacz [przesyłanie strumieniowe we/wy](../c-runtime-library/stream-i-o.md).
 
 Specyfikacja konwersji składa się z pól opcjonalnych i wymaganych w tej postaci:
 
@@ -39,7 +39,7 @@ Podstawowa specyfikacja konwersji zawiera tylko znak procentu i *Typ* . Na przyk
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do nagłówków `<stdio.h>` i `<conio.h>`. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, [Zobacz C++ historia zmian wizualnych 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Specyfikator konwersji typów
@@ -97,7 +97,7 @@ Przed uruchomieniem programu Visual Studio 2015 CRT użył innego niestandardowe
 |+ nieskończoność|`1.#INF` *cyfry losowe*|
 |-nieskończoność|`-1.#INF` *cyfry losowe*|
 |Nieokreślony (taki sam jak cichy NaN)|*cyfra `.#IND`* liczbami *losowymi*|
-|{1&gt;NaN&lt;1}|*cyfra `.#NAN`* liczbami *losowymi*|
+|NaN|*cyfra `.#NAN`* liczbami *losowymi*|
 
 Dowolne z tych elementów mogło zostać poprzedzone znakiem i być sformatowane nieco inaczej w zależności od szerokości pola i precyzji, czasami z nietypowymi skutkami. Na przykład `printf("%.2f\n", INFINITY)` może drukować `1.#J`, ponieważ #INF będzie "zaokrąglona" do 2 cyfr dokładności.
 

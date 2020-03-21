@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 4583bef3ef3033b6ba493ccac1c4fc5360c70e35
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 52aa99cf5bdf7ddcf83a8423b946a03d2ca95d2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624892"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079265"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (Określ wersję standardową języka)
 
@@ -27,15 +27,15 @@ Opcja **/STD** jest dostępna w programie Visual Studio 2017 i nowszych. Służy
 
 Domyślna opcja **/std: c++ 14** włącza zestaw funkcji języka c++ 14 wdrożonych przez kompilator MSVC. Ta opcja powoduje wyłączenie obsługi biblioteki kompilatora i standardowej dla funkcji, które są zmieniane lub nowe w nowszych wersjach Standard języka, z wyjątkiem niektórych funkcji C++ 17 już zaimplementowanych w poprzednich wersjach kompilatora MSVC. Aby uniknąć istotnej zmiany dla użytkowników, którzy już korzystali z funkcji dostępnych w programie Visual Studio 2015 Update 2, te funkcje pozostają włączone, gdy zostanie określona opcja **/std: c++ 14** :
 
-- [Reguły dla Autotekstu z klamrami-init-list](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+- [Reguły dla Autotekstu z klamrami-init-list](https://wg21.link/n3922)
 
-- [TypeName w szablonie szablonu — parametry](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
+- [TypeName w szablonie szablonu — parametry](https://wg21.link/n4051)
 
-- [Usuwanie trigraphs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
+- [Usuwanie trigraphs](https://wg21.link/n4086)
 
-- [Atrybuty dla przestrzeni nazw i modułów wyliczających](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+- [Atrybuty dla przestrzeni nazw i modułów wyliczających](https://wg21.link/n4266)
 
-- [literały znaków U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
+- [literały znaków U8](https://wg21.link/n4267)
 
 Aby uzyskać dodatkowe informacje o tym, które funkcje języka C++ 14 i C++ 17 są włączone, gdy **/std: c++ 14** jest określony, zobacz uwagi w [tabeli zgodność z językiem Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
@@ -44,7 +44,7 @@ Opcja **/std: c++ 17** umożliwia korzystanie z pełnego zestawu funkcji języka
 Opcja **/std: c + + Najnowsza** włącza funkcje języka post-c + + 17, które są obecnie zaimplementowane w kompilatorze i bibliotekach. Mogą one obejmować funkcje z roboczej wersji języka C++ 20 i aktualizacje usterek C++ standardowego, które nie są uwzględnione w języku c++ 17, a także eksperymentalne propozycje dotyczące wersji Standard. Aby zapoznać się z listą obsługiwanych języków i funkcji biblioteki, zobacz [co nowego w C++programie Visual ](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). Opcja **/std: c + + Najnowsza** nie włącza funkcji chronionych przez przełącznik **/Experimental** , ale może być wymagana, aby je włączyć.
 
 > [!IMPORTANT]
-> Funkcje kompilatora i biblioteki włączane przez **/std: c + + Najnowsza** reprezentuje funkcje, które mogą być wyświetlane w C++ przyszłości, a także funkcje języka c++ 20, które są zatwierdzone. Funkcje, które nie zostały zatwierdzone, podlegają istotnym zmianom lub usunięciu bez powiadomienia i są udostępniane na bieżąco. 
+> Funkcje kompilatora i biblioteki włączane przez **/std: c + + Najnowsza** reprezentuje funkcje, które mogą być wyświetlane w C++ przyszłości, a także funkcje języka c++ 20, które są zatwierdzone. Funkcje, które nie zostały zatwierdzone, podlegają istotnym zmianom lub usunięciu bez powiadomienia i są udostępniane na bieżąco.
 
 Opcja **/STD** w działaniu podczas C++ kompilacji może zostać wykryta przy użyciu makra preprocesora [\_MSVC\_lang](../../preprocessor/predefined-macros.md) . Aby uzyskać więcej informacji, zobacz [makra preprocesora](../../preprocessor/predefined-macros.md).
 
@@ -61,7 +61,7 @@ Opcja **/STD** w działaniu podczas C++ kompilacji może zostać wykryta przy u�
 
 1. W obszarze  **C++ Standard języka**wybierz Standard języka, który ma być obsługiwany przez kontrolkę listy rozwijanej, a następnie wybierz przycisk **OK** lub **Zastosuj** , aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

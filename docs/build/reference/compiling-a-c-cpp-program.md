@@ -1,27 +1,27 @@
 ---
-title: Odwołanie do kompilatora MSVC C/C++ — Visual Studio
+title: MSVC C/C++ kompilator Reference-Visual Studio
 description: Opcje zestawu narzędzi kompilatora MSVC.
 ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75176b139895d7b00d88aca1c58604b47386894
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294151"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077378"
 ---
-# <a name="compiling-a-cc-project"></a>Kompilowanie projektu języka C/C++
+# <a name="compiling-a-cc-project"></a>Kompilowanie projektu CC++ /
 
-W środowisku IDE programu Visual Studio lub w wierszu polecenia można ustawić opcje kompilatora C i C++. 
+Opcje języka C++ C i kompilatora można ustawić w środowisku IDE programu Visual Studio lub w wierszu polecenia.
 
-## <a name="in-visual-studio"></a>In Visual Studio
+## <a name="in-visual-studio"></a>W programie Visual Studio
 
-Można ustawić opcje kompilatora dla każdego projektu w jego programu Visual Studio **stron właściwości** okno dialogowe. W okienku po lewej stronie wybierz **właściwości konfiguracji**, **C/C++** , a następnie wybierz kategorię opcji kompilatora. Temat dla każdej opcji kompilatora opisuje, jak ją można ustawić i gdzie występuje w środowisku programistycznym. Zobacz [opcje kompilatora MSVC](compiler-options.md) pełną listę.
+Można ustawić opcje kompilatora dla każdego projektu w oknie dialogowym **strony właściwości** programu Visual Studio. W lewym okienku wybierz **Właściwości konfiguracji**, **C/C++**  , a następnie wybierz kategorię opcji kompilatora. Temat dla każdej opcji kompilatora opisuje, jak ją można ustawić i gdzie występuje w środowisku programistycznym. Aby uzyskać pełną listę, zobacz [Opcje kompilatora MSVC](compiler-options.md) .
 
-## <a name="from-the-command-line"></a>Z poziomu wiersza polecenia
+## <a name="from-the-command-line"></a>Z wiersza polecenia
 
 Można ustawić opcje kompilatora (CL.exe):
 
@@ -43,8 +43,8 @@ Opcje kompilatora są przetwarzane „od lewej do prawej,” a w przypadku wykry
 
 - [CL wywołuje konsolidator](cl-invokes-the-linker.md)
 
-Aby uzyskać informacje na temat wybierania kompilatora Architektura źródłowa i docelowa, zobacz [Konfigurowanie projektów w języku C++ dla wersji 64-bitowych, x64 cele](../configuring-programs-for-64-bit-visual-cpp.md).
+Aby uzyskać informacje na temat wybierania hosta kompilatora i architektury docelowej, [Zobacz C++ konfigurowanie projektów dla 64-bitowych i x64 obiektów docelowych](../configuring-programs-for-64-bit-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)

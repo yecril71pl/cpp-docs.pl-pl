@@ -1,69 +1,68 @@
 ---
-title: Odwołania konsolidatora MSVC
+title: Dokumentacja konsolidatora MSVC
 ms.date: 12/10/2018
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
-ms.openlocfilehash: 3a9eebef0a264b0131311b5ca96011a4d56264a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46874b5eaff889834df284ba90e6c6f196d8d66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176632"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079510"
 ---
 # <a name="linking"></a>Konsolidacja
 
-W projekcie w języku C++ *łączenie* kroku odbywa się po kompilator został skompilowany kod źródłowy w plikach object (*.obj). Łączący (link.exe) łączy pliki obiektu w jednym pliku wykonywalnym. 
+W C++ projekcie krok *konsolidacji* jest wykonywany po skompilowaniu przez kompilator kodu źródłowego w plikach obiektów (*. obj). Konsolidator (link. exe) łączy pliki obiektów w jeden plik wykonywalny.
 
-Można ustawić opcje konsolidatora wewnątrz lub na zewnątrz programu Visual Studio. W programie Visual Studio, opcje konsolidatora dostępu przez kliknięcie prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierając pozycję **właściwości** do wyświetlania na stronach właściwości. Wybierz **konsolidatora** w lewym okienku rozwiń węzeł i wszystkie opcje. 
-
+Opcje konsolidatora można ustawić wewnątrz lub na zewnątrz programu Visual Studio. W programie Visual Studio można uzyskać dostęp do opcji konsolidatora, klikając prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierając **Właściwości** , aby wyświetlić strony właściwości. Wybierz **konsolidator** w okienku po lewej stronie, aby rozwinąć węzeł i wyświetlić wszystkie opcje.
 
 ## <a name="linker-command-line-syntax"></a>Składnia wiersza polecenia konsolidatora
 
-Po uruchomieniu łącze poza programem Visual Studio, należy określić dane wejściowe w jeden lub więcej sposobów:
+Gdy uruchamiasz LINK poza programem Visual Studio, możesz określić dane wejściowe na jeden lub kilka sposobów:
 
 - W wierszu polecenia
 
-- Korzystanie z plików poleceń
+- Używanie plików poleceń
 
 - W zmiennych środowiskowych
 
-Opcje procesów pierwszy LINK określone w zmiennej środowiskowej łącza, następuje opcje w kolejności są one określone w wierszu polecenia i w plikach poleceń. Jeśli opcja jest powtarzany z różnymi argumentami, pierwszeństwo ma ostatni przetworzony.
+Opcja Połącz pierwsze procesy określone w zmiennej środowiskowej LINKu, a następnie opcje w kolejności określonej w wierszu polecenia i w plikach poleceń. Jeśli opcja jest powtórzona przy użyciu różnych argumentów, pierwszeństwo ma ostatnie.
 
-Opcje mają zastosowanie do całej kompilacji; Brak opcji można zastosować do określonych plików wejściowych.
+Opcje mają zastosowanie do całej kompilacji; nie można zastosować żadnych opcji do określonych plików wejściowych.
 
-Aby uruchomić łącza. Plik EXE, należy użyć następującej składni polecenia:
+Do uruchomienia LINKu. EXE, użyj następującej składni polecenia:
 
 ```
 LINK arguments
 ```
 
-`arguments` Obejmują opcje i nazwy plików i może być określony w dowolnej kolejności. Dostępne są opcje przetwarzania pierwsze, następnie pliki. Użyj miejsc do magazynowania lub karty do oddzielenia argumentów.
+`arguments` zawierają opcje i nazwy plików, które można określić w dowolnej kolejności. Opcje są przetwarzane jako pierwsze, a następnie pliki. Użyj co najmniej jednej spacji lub tabulatorów, aby oddzielić argumenty.
 
 > [!NOTE]
->  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.
+>  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z poziomu wiersza polecenia systemu lub Eksploratora plików.
 
 ## <a name="command-line"></a>Wiersz polecenia
 
-W wierszu polecenia opcję składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), a następnie Nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmować argument, określone po dwukropek (:). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji z wyjątkiem w ciąg w cudzysłowie w opcji/Comment. Określ argumenty liczbowe w wartości dziesiętne lub notacji języka C. Nie jest uwzględniana wielkość liter nazw opcji oraz ich argumentach — słowo kluczowe lub nazwę pliku, ale identyfikatorów jako argumentów jest uwzględniana wielkość liter.
+W wierszu polecenia opcja składa się ze specyfikatora opcji, kreski (-) lub ukośnika (/), po którym następuje nazwa opcji. Nazwy opcji nie mogą być skracane. Niektóre opcje przyjmują argument, określony po dwukropku (:). W specyfikacji opcji nie można używać spacji ani tabulatorów, z wyjątkiem cudzysłowu w ciągu w opcji/COMMENT. Określ argumenty liczbowe w notacji dziesiętnej lub w języku C. W nazwach opcji i ich słowach kluczowych lub nazwach plików nie jest rozróżniana wielkość liter, ale w identyfikatorach jako argumenty jest uwzględniana wielkość liter.
 
-Aby przekazać plik do konsolidatora, określ nazwę pliku w wierszu polecenia po poleceniu łącza. Można określić ścieżkę bezwzględną lub względną z nazwę pliku i można używać symboli wieloznacznych w nazwie pliku. Jeśli zostanie pominięty, kropki (.) i rozszerzenie nazwy pliku, łącze przyjęto założenie, .obj, w celu znajdowania plików. ŁĄCZE nie używa rozszerzenia nazw plików lub brak ich się założeń dotyczących zawartości plików. Określa typ pliku, badając ją i przetwarza je w związku z tym.
+Aby przekazać plik do konsolidatora, należy określić nazwę pliku w wierszu polecenia po poleceniu LINK. Można określić ścieżkę bezwzględną lub względną z nazwą pliku i można użyć symboli wieloznacznych w nazwie pliku. W przypadku pominięcia rozszerzenia kropki (.) i nazwy pliku LINK zakłada. obj na potrzeby znajdowania pliku. LINK nie używa rozszerzeń nazw plików ani braku ich w celu założeń dotyczących zawartości plików; Określa typ pliku, sprawdzając go i odpowiednio przetwarza.
 
-Link.exe zwraca 0 w przypadku sukcesu (bez błędów).  W przeciwnym razie program łączący zwraca numer błędu, który zatrzymał łącze.  Na przykład jeśli konsolidator wygeneruje LNK1104, konsolidator zwraca 1104.  W związku z tym najniższy numer błędu zwracany w przypadku błędu przez konsolidator wynosi 1000.  Zwracana wartość wynosząca 128 reprezentuje na problem z konfiguracją systemu operacyjnego lub pliku .config; Moduł ładujący nie została załadowana link.exe lub c2.dll.
+link. exe zwraca zero dla sukcesu (bez błędów).  W przeciwnym razie konsolidator zwraca numer błędu, który zatrzymał link.  Na przykład, jeśli konsolidator generuje LNK1104, konsolidator zwraca 1104.  W związku z tym najniższy numer błędu zwrócony w przypadku błędu przez konsolidatora to 1000.  Wartość zwracana przez 128 reprezentuje problem z konfiguracją w systemie operacyjnym lub pliku. config; moduł ładujący nie załadował pliku link. exe lub C2. dll.
 
 ## <a name="link-command-files"></a>Wiersze poleceń LINK
 
-Argumenty wiersza polecenia można przekazać do LINKU w formie pliku polecenia. Aby określić plik poleceń do konsolidatora, użyj następującej składni:
+Argumenty wiersza polecenia można przekazać do LINKu w postaci pliku poleceń. Aby określić plik poleceń dla konsolidatora, należy użyć następującej składni:
 
-> **ŁĄCZE \@**  <em>commandfile</em>
+> **LINK \@** <em>CommandFile</em>
 
-*Commandfile* to nazwa pliku tekstowego. Nie spacji lub tabulatorów jest dozwolone między znakiem (**\@**) i nazwę pliku. Nie ma rozszerzenia domyślną; należy określić pełną nazwę pliku, łącznie z dowolnym rozszerzeniem. Nie można używać symboli wieloznacznych. Można określić ścieżkę bezwzględną lub względną nazwę pliku. ŁĄCZE nie używa zmiennej środowiskowej, aby wyszukać ten plik.
+*CommandFile* jest nazwą pliku tekstowego. Między znakiem ( **\@** ) i nazwą pliku nie można używać spacji ani tabulatora. Nie ma domyślnego rozszerzenia; należy określić pełną nazwę pliku, łącznie z dowolnym rozszerzeniem. Nie można używać symboli wieloznacznych. Można określić ścieżkę bezwzględną lub względną z nazwą pliku. LINK nie używa zmiennej środowiskowej do wyszukania pliku.
 
-W pliku poleceń argumenty mogą być oddzielone tabulacji lub spacji (jak w wierszu polecenia) i znaki nowego wiersza.
+W pliku poleceń argumenty mogą być oddzielone spacjami lub tabulatorami (podobnie jak w wierszu polecenia) i znakami nowego wiersza.
 
-Całość lub część wiersza polecenia można określić w pliku poleceń. Można użyć więcej niż jeden plik polecenia za pomocą polecenia łącza. LINK akceptuje dane wejściowe plik poleceń tak, jakby zostały określone w tej lokalizacji, w wierszu polecenia. Pliki poleceń nie mogą być zagnieżdżone. LINK funkcją zawartość plików poleceń, chyba że [/nologo](nologo-suppress-startup-banner-linker.md) określono opcję.
+Możesz określić wszystko lub część wiersza polecenia w pliku poleceń. W poleceniu LINKu można użyć więcej niż jednego pliku polecenia. LINK akceptuje dane wejściowe z pliku polecenia, tak jakby były określone w tej lokalizacji w wierszu polecenia. Pliki poleceń nie mogą być zagnieżdżane. LINK zwraca zawartość plików poleceń, o ile nie określono opcji [/nologo](nologo-suppress-startup-banner-linker.md) .
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie, aby tworzyć biblioteki DLL przekazuje nazwy plików obiektów i bibliotek w plikach osobne polecenie i używa innego polecenia w pliku Specyfikacja opcji/EXPORTS:
+Następujące polecenie do kompilowania biblioteki DLL przekazuje nazwy plików obiektów i bibliotek w oddzielnych plikach poleceń i używa trzeciego pliku poleceń do określenia opcji/EXPORTS:
 
 ```cmd
 link /dll @objlist.txt @liblist.txt @exports.txt
@@ -71,19 +70,19 @@ link /dll @objlist.txt @liblist.txt @exports.txt
 
 ## <a name="link-environment-variables"></a>Zmienne środowiskowe LINK
 
-Narzędzie łącze używane następujące zmienne środowiskowe:
+W narzędziu LINKu są stosowane następujące zmienne środowiskowe:
 
-- ŁĄCZA i \_łącze\_, jeśli została zdefiniowana. Narzędzie łącze dołącza opcje i argumenty zdefiniowanej zmiennej środowiskowej łącze i dołącza opcje i argumenty zdefiniowane w \_łącze\_ zmiennej środowiskowej, aby argumenty wiersza polecenia, przed rozpoczęciem przetwarzania.
+- LINKI i \_linków\_, jeśli zostały zdefiniowane. Narzędzie LINKu łączy opcje i argumenty zdefiniowane w zmiennej środowiskowej KONSOLIDACJi i dołącza opcje i argumenty zdefiniowane w zmiennej środowiskowej\_ \_do argumentów wiersza polecenia przed przetworzeniem.
 
-- LIB, jeśli została zdefiniowana. Narzędzia łącze używa ścieżki LIB, aby wyszukać obiekt, bibliotekę lub inny plik określony w wierszu polecenia lub przez [/BASE](base-base-address.md) opcji. Używa również ścieżki biblioteki można znaleźć pliku .pdb o nazwie w obiekcie. Lib — zmienna może zawierać specyfikacji ścieżki, oddzielając je średnikami. Jedna ścieżka musi wskazywać podkatalog \lib instalację programu Visual C++.
+- LIB, jeśli jest zdefiniowana. Narzędzia łączy używają ścieżki LIB podczas wyszukiwania obiektu, biblioteki lub innego pliku określonego w wierszu polecenia lub przez opcję [/Base](base-base-address.md) . Używa również ścieżki LIB, aby znaleźć plik. pdb o nazwie w obiekcie. Zmienna LIB może zawierać co najmniej jedną specyfikację ścieżki rozdzieloną średnikami. Jedna ścieżka musi wskazywać podkatalog \lib instalacji wizualizacji C++ .
 
-- ŚCIEŻKA, jeśli narzędzie musi zostać uruchomiony CVTRES i nie można odnaleźć pliku w tym samym katalogu co LINKU. (LINK wymaga CVTRES połączyć plik .res). ŚCIEŻKA musi wskazywać w podkatalogu \bin instalację programu Visual C++.
+- ŚCIEŻKA, jeśli narzędzie wymaga uruchomienia CVTRES i nie może znaleźć pliku w tym samym katalogu, co sam LINK. (LINK wymaga CVTRES, aby połączyć plik. res). ŚCIEŻKA musi wskazywać podkatalog \Bin instalacji wizualizacji C++ .
 
-- TMP, aby określić katalog podczas łączenia OMF lub .res plików.
+- TMP, aby określić katalog podczas łączenia plików OMF lub res.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołanie kompilacji C/C++](c-cpp-building-reference.md)
+[Odwołanie CC++ /Building](c-cpp-building-reference.md)
 [opcje konsolidatora MSVC](linker-options.md)
-[pliki definicji modułu (.def)](module-definition-dot-def-files.md)
-[Obsługa konsolidatora dla Bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)
+[pliki definicji modułów (. def)](module-definition-dot-def-files.md)
+[Obsługa konsolidatora dla bibliotek DLL ładowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)

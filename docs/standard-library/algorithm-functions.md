@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422137"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076830"
 ---
 # <a name="ltalgorithmgt-functions"></a>funkcje&gt; algorytm &lt;
 
-## <a name="adjacent_find"></a>adjacent_find
+## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
 
 Wyszukuje dwa sąsiadujące elementy, które są równe lub spełniają określony warunek.
 
@@ -327,7 +327,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>all_of
+## <a name="all_of"></a><a name="all_of"></a>all_of
 
 Zwraca **wartość PRAWDA** , jeśli warunek jest obecny dla każdego elementu w danym zakresie.
 
@@ -403,7 +403,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>any_of
+## <a name="any_of"></a><a name="any_of"></a>any_of
 
 Zwraca **wartość PRAWDA** , jeśli warunek występuje co najmniej raz w określonym zakresie elementów.
 
@@ -480,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>binary_search
+## <a name="binary_search"></a><a name="binary_search"></a>binary_search
 
 Testuje, czy w sortowanym zakresie istnieje element, który jest równy określonej wartości lub który jest odpowiednikiem w sensie określonym przez predykat binarny.
 
@@ -619,7 +619,7 @@ Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
 There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
-## <a name="clamp"></a>opraw
+## <a name="clamp"></a><a name="clamp"></a>opraw
 
 Porównuje wartość z górną i dolną granicą i zwraca odwołanie do wartości, jeśli jest między granicami lub odwołaniem do górnej lub dolnej granicy, jeśli wartość jest odpowiednio powyżej lub poniżej.
 
@@ -660,7 +660,7 @@ Zwraca odwołanie do *mniejszej* , jeśli `value < lower`lub odwołanie do *gór
 
 Zachowanie jest niezdefiniowane, jeśli *Górna* wartość jest mniejsza niż *Dolna*.
 
-## <a name="copy"></a>kopiowane
+## <a name="copy"></a><a name="copy"></a>kopiowane
 
 Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do przodu.
 
@@ -763,7 +763,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>copy_backward
+## <a name="copy_backward"></a><a name="copy_backward"></a>copy_backward
 
 Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do tyłu.
 
@@ -860,7 +860,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
-## <a name="copy_if"></a>copy_if
+## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
 W zakresie elementów Kopiuje elementy, które są **spełnione** dla określonego warunku.
 
@@ -939,7 +939,7 @@ int main()
 
     // is_even checks if the element is even.
     auto is_even = [](int const elem) { return !(elem % 2); };
-    // use copy_if to select only even elements from li 
+    // use copy_if to select only even elements from li
     // and copy them to le, starting from le's begin position
     auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
     le.resize(std::distance(le.begin(), ec));  // shrink le to new size
@@ -965,7 +965,7 @@ Even numbers are le = ( 46 88 72 60 40 84 )
 Odd numbers are lo = ( 59 79 71 5 )
 ```
 
-## <a name="copy_n"></a>copy_n
+## <a name="copy_n"></a><a name="copy_n"></a>copy_n
 
 Kopiuje określoną liczbę elementów.
 
@@ -1035,7 +1035,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a>liczbą
 
 Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.
 
@@ -1116,7 +1116,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>count_if
+## <a name="count_if"></a><a name="count_if"></a>count_if
 
 Zwraca liczbę elementów w zakresie, których wartości spełniają określony warunek.
 
@@ -1201,7 +1201,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>większy
+## <a name="equal"></a><a name="equal"></a>większy
 
 Porównuje dwa zakresy elementów przez element pod kątem równości lub równoważności w sensie określonym przez Predykat binarny.
 
@@ -1336,7 +1336,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 Mając uporządkowany zakres, znajduje Podzakres, w którym wszystkie elementy są równoważne danej wartości.
 
@@ -1502,7 +1502,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>pełni
+## <a name="fill"></a><a name="fill"></a>pełni
 
 Przypisuje tę samą nową wartość każdemu elementowi w określonym zakresie.
 
@@ -1580,7 +1580,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>fill_n
+## <a name="fill_n"></a><a name="fill_n"></a>fill_n
 
 Przypisuje nową wartość do określonej liczby elementów w zakresie rozpoczynającym się od określonego elementu.
 
@@ -1669,7 +1669,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>wyświetlić
+## <a name="find"></a><a name="find"></a>wyświetlić
 
 Lokalizuje pozycję pierwszego wystąpienia elementu w zakresie, który ma określoną wartość.
 
@@ -1712,7 +1712,7 @@ Iterator danych wejściowych odnoszący się do pierwszego wystąpienia określo
 
 Aby zapoznać się z przykładem kodu przy użyciu `find()`, zobacz [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="find_end"></a>find_end
+## <a name="find_end"></a><a name="find_end"></a>find_end
 
 Wyszukuje w zakresie ostatnią podsekwencję, która jest identyczna z określoną sekwencją lub jest równoważna w sensie określonym przez predykat binarny.
 
@@ -1876,7 +1876,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>find_first_of
+## <a name="find_first_of"></a><a name="find_first_of"></a>find_first_of
 
 Wyszukuje pierwsze wystąpienie którejś z kilku wartości w zakresie docelowym lub pierwsze wystąpienie któregoś z kilku elementów, które są równoważne w sensie określonym przez predykat binarny dla określonego zestawu elementów.
 
@@ -2043,7 +2043,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>find_if
+## <a name="find_if"></a><a name="find_if"></a>find_if
 
 Lokalizuje pozycję pierwszego wystąpienia elementu w zakresie, który spełnia określony warunek.
 
@@ -2165,7 +2165,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>find_if_not
+## <a name="find_if_not"></a><a name="find_if_not"></a>find_if_not
 
 Zwraca pierwszy element we wskazanym zakresie, który nie spełnia warunku.
 
@@ -2204,7 +2204,7 @@ Ta funkcja szablonu jest generalizacją w celu [znalezienia](../standard-library
 
 Aby zapoznać się z przykładem kodu, który można łatwo dostosować do `find_if_not()`, zobacz [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a>for_each
+## <a name="for_each"></a><a name="for_each"></a>for_each
 
 Stosuje określony obiekt funkcji do każdego elementu w kolejności do przodu w zakresie i zwraca obiekt funkcji.
 
@@ -2359,7 +2359,7 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a>for_each_n
+## <a name="for_each_n"></a><a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
@@ -2376,7 +2376,7 @@ ForwardIterator for_each_n(
     Function f);
 ```
 
-## <a name="generate"></a>utworzenie
+## <a name="generate"></a><a name="generate"></a>utworzenie
 
 Przypisuje wartości generowane przez obiekt funkcji do każdego elementu w zakresie.
 
@@ -2456,7 +2456,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>generate_n
+## <a name="generate_n"></a><a name="generate_n"></a>generate_n
 
 Przypisuje wartości generowane przez obiekt funkcji do określonej liczby elementów w zakresie i powraca do położenia jednego z ostatniej przypisanej wartości.
 
@@ -2542,7 +2542,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>łącznie
+## <a name="includes"></a><a name="includes"></a>łącznie
 
 Sprawdza, czy jeden posortowany zakres zawiera wszystkie elementy zawarte w drugim posortowanym zakresie, gdzie kryterium szeregowania lub równoważności między elementami może zostać określone przez predykat binarny.
 
@@ -2767,7 +2767,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>inplace_merge
+## <a name="inplace_merge"></a><a name="inplace_merge"></a>inplace_merge
 
 Łączy elementy z dwóch następujących po sobie posortowanych zakresów w pojedynczy posortowany zakres, gdzie kryterium szeregowania może być określone przez predykat binarny.
 
@@ -2937,7 +2937,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>is_heap
+## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
 Zwraca **wartość true** , jeśli elementy w określonym zakresie tworzą stertę.
 
@@ -2993,7 +2993,7 @@ Druga funkcja szablonu zwraca
 
 `is_heap_until(first, last, pred) == last`.
 
-## <a name="is_heap_until"></a>is_heap_until
+## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
 Zwraca iterator umieszczony na pierwszym elemencie w zakresie [`first`, `last`), który nie spełnia warunku porządkowania sterty lub *kończy* , jeśli zakres tworzy stertę.
 
@@ -3047,7 +3047,7 @@ Pierwsza funkcja szablonu zwraca ostatni `next` iteratora w `[first, last)` gdzi
 
 Druga funkcja szablonu zachowuje się tak samo jak pierwszy, z tą różnicą, że używa predykatu *pred* zamiast `std::less<>` jako warunek porządkowania sterty.
 
-## <a name="is_partitioned"></a>is_partitioned
+## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
 Zwraca **wartość true** , jeśli wszystkie elementy w danym zakresie, które testują **wartość true** dla warunku, są przed wszystkimi elementami, które testują **wartość false**.
 
@@ -3088,7 +3088,7 @@ Zwraca **wartość PRAWDA** , jeśli wszystkie elementy w danym zakresie, które
 
 Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy wszystkie elementy w `[first, last)` są podzielone na partycje przez *pred*; oznacza to, że wszystkie elementy `X` w `[first, last)`, dla których `pred (X)` jest spełniony, zanim wszystkie elementy `Y`, dla których `pred (Y)` ma **wartość false**.
 
-## <a name="is_permutation"></a>is_permutation
+## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
 Zwraca wartość true, jeśli oba zakresy zawierają te same elementy, niezależnie od tego, czy elementy znajdują się w tej samej kolejności. Używaj przeciążeń podwójnego zakresu w kodzie języka C++ 14, ponieważ przeciążenia, które pobierają tylko jeden iterator dla drugiego zakresu, nie wykryją różnic, jeśli drugi zakres jest dłuższy niż pierwszy zakres i spowoduje niezdefiniowane zachowanie, jeśli drugi zakres jest krótszy niż pierwszy zakres.
 
@@ -3208,7 +3208,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>is_sorted
+## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
 Zwraca **wartość true** , jeśli elementy w określonym zakresie są sortowane według kolejności.
 
@@ -3258,7 +3258,7 @@ Pierwsza funkcja szablonu zwraca [is_sorted_until](#is_sorted_until)`( first, la
 
 Druga funkcja szablonu zwraca `is_sorted_until( first, last , pred ) == last`. Funkcja predykatu *pred* wykonuje porównanie kolejności.
 
-## <a name="is_sorted_until"></a>is_sorted_until
+## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
 
 Zwraca `ForwardIterator`, który jest ustawiony do ostatniego elementu, który jest sortowany w kolejności od określonego zakresu.
 
@@ -3314,7 +3314,7 @@ Pierwsza funkcja szablonu zwraca ostatni `next` iteratora w `[first, last]`, tak
 
 Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje `operator<(X, Y)` z `pred(X, Y)`.
 
-## <a name="iter_swap"></a>iter_swap
+## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
 
 Wymienia dwie wartości, do których odnosi się para określonych iteratorów.
 
@@ -3470,7 +3470,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>lexicographical_compare
+## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a>lexicographical_compare
 
 Porównuje dwie sekwencje element po elemencie, aby określić, która z nich jest mniejsza.
 
@@ -3637,7 +3637,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
 
 Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż lub równoważną określonej wartości, gdzie kryterium szeregowania może być określone przez predykat binarny.
 
@@ -3776,7 +3776,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>make_heap
+## <a name="make_heap"></a><a name="make_heap"></a>make_heap
 
 Konwertuje elementy z określonego zakresu na stertę, w której pierwszy element jest największy i dla której kryterium sortowania może być określone przez predykat binarny.
 
@@ -3858,7 +3858,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>Maksymalny
+## <a name="max"></a><a name="max"></a>Maksymalny
 
 Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -4071,7 +4071,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>max_element
+## <a name="max_element"></a><a name="max_element"></a>max_element
 
 Znajduje pierwsze wystąpienie największego elementu w określonym zakresie, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -4225,7 +4225,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>połączenie
+## <a name="merge"></a><a name="merge"></a>połączenie
 
 Łączy wszystkie elementy z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium sortowania może być określone przez Predykat binarny.
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>długości
+## <a name="min"></a><a name="min"></a>długości
 
 Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -4635,7 +4635,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>min_element
+## <a name="min_element"></a><a name="min_element"></a>min_element
 
 Znajduje pierwsze wystąpienie najmniejszego elementu w określonym zakresie, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -4799,7 +4799,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>minmax_element
+## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
 
 Wykonuje działania wykonywane przez `min_element` i `max_element` w jednym wywołaniu.
 
@@ -4859,7 +4859,7 @@ Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje
 
 Jeśli sekwencja nie jest pusta, funkcja wykonuje co najwyżej `3 * (last - first - 1) / 2` porównania.
 
-## <a name="minmax"></a>MinMax
+## <a name="minmax"></a><a name="minmax"></a>MinMax
 
 Porównuje dwa parametry wejściowe i zwraca je jako parę, w kolejności od najmniejszej do wyższej.
 
@@ -4909,7 +4909,7 @@ Pozostałe funkcje szablonu zachowują się tak samo, z tą różnicą, że zast
 
 Funkcja wykonuje dokładnie jedno porównanie.
 
-## <a name="mismatch"></a>nieodpowiedni
+## <a name="mismatch"></a><a name="mismatch"></a>nieodpowiedni
 
 Porównuje dwa zakresy elementów według elementu i lokalizuje pierwsze miejsce, w którym występuje różnica.
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg&gt; przenoszenia
+## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg&gt; przenoszenia
 
 Przenieś elementy związane z określonym zakresem.
 
@@ -5151,7 +5151,7 @@ Iterator danych wyjściowych, który ma zawierać przeniesione elementy.
 
 Funkcja szablonu oblicza `*(dest + N) = move(*(first + N))` raz dla każdego `N` w zakresie `[0, last - first)`, dla ściśle rosnących wartości `N`, zaczynając od najniższej wartości. Następnie zwraca `dest + N`. Jeśli `dest` i *najpierw* wyznaczać regiony magazynu, miejscem *docelowy* nie może być w zakresie `[first, last)`.
 
-## <a name="move_backward"></a>move_backward
+## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
 Przenosi elementy jednego iteratora do drugiego. Przeniesienie rozpoczyna się od ostatniego elementu w określonym zakresie, a kończy się na pierwszym elemencie w tym zakresie.
 
@@ -5180,7 +5180,7 @@ Funkcja szablonu oblicza `*(destEnd - N - 1) = move(*(last - N - 1))` raz dla ka
 
 `move` i `move_backward` są funkcjonalnie równoważne z użyciem `copy` i `copy_backward` z iteratorem przenoszenia.
 
-## <a name="next_permutation"></a>next_permutation
+## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
 
 Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.
 
@@ -5359,7 +5359,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>nth_element
+## <a name="nth_element"></a><a name="nth_element"></a>nth_element
 
 Dzieli zakres elementów, poprawnie lokalizując *n*-ty element sekwencji w zakresie, tak aby wszystkie elementy przed nim były mniejsze lub równe, a wszystkie elementy, które podążają w sekwencji, są większe lub równe.
 
@@ -5486,7 +5486,7 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>none_of
+## <a name="none_of"></a><a name="none_of"></a>none_of
 
 Zwraca **wartość PRAWDA** , jeśli warunek nigdy nie występuje między elementami w danym zakresie.
 
@@ -5527,7 +5527,7 @@ Zwraca **wartość true** , jeśli warunek nie jest wykrywany co najmniej raz we
 
 Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` w zakresie `[0, last - first)`, predykat `pred(*(first + N))` ma zawsze **wartość false**.
 
-## <a name="partial_sort"></a>partial_sort
+## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
 Rozmieszcza określoną liczbę mniejszych elementów w zakresie w niemalejącej kolejności, lub według kryteriów sortowania określonych przez binarny predykat.
 
@@ -5658,7 +5658,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>partial_sort_copy
+## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a>partial_sort_copy
 
 Kopiuje elementy z zakresu źródłowego do zakresu docelowego, gdzie elementy źródłowe są uporządkowane według albo zasady mniejszy niż, albo innego określonego predykatu binarnego.
 
@@ -5802,7 +5802,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>podzielić
+## <a name="partition"></a><a name="partition"></a>podzielić
 
 Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają.
 
@@ -5888,7 +5888,7 @@ int main()
 }
 ```
 
-## <a name="partition_copy"></a>partition_copy
+## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
 Kopiuje elementy, dla których warunek ma **wartość true** do jednego miejsca docelowego i dla którego warunek ma **wartość false** . Elementy muszą pochodzić z określonego zakresu.
 
@@ -5935,7 +5935,7 @@ Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkown
 
 Funkcja Template kopiuje każdy element `X` w `[first,last)` do `*dest1++` Jeśli `pred(X)` ma wartość true lub `*dest2++`, jeśli nie. Zwraca `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a>partition_point
+## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
 Zwraca pierwszy element w danym zakresie, który nie spełnia warunku. Elementy są sortowane, aby te, które spełniają warunek, występowały przed tymi, które go nie spełniają.
 
@@ -5966,7 +5966,7 @@ Zwraca `ForwardIterator`, która odwołuje się do pierwszego elementu, który n
 
 Funkcja Template znajduje pierwszy iterator `it` w `[first, last)`, dla którego `pred(*it)` ma **wartość false**. Sekwencja musi być uporządkowana według *pred*.
 
-## <a name="pop_heap"></a>pop_heap
+## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
 Usuwa największy element z przodu sterty do przedostatniej pozycji w zakresie, a następnie tworzy nową stertę z pozostałych elementów.
 
@@ -6075,7 +6075,7 @@ int main()
 }
 ```
 
-## <a name="prev_permutation"></a>prev_permutation
+## <a name="prev_permutation"></a><a name="prev_permutation"></a>prev_permutation
 
 Zmienia kolejność elementów w zakresie, aby oryginalne porządkowanie zostało zastąpione przez lexicographically poprzednią permutację (jeśli istnieje), gdzie Sense Previous można określić za pomocą predykatu binarnego.
 
@@ -6250,7 +6250,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>push_heap
+## <a name="push_heap"></a><a name="push_heap"></a>push_heap
 
 Dodaje element znajdujący się na końcu zakresu do istniejącej sterty, która składa się z poprzednich elementów w zakresie.
 
@@ -6363,11 +6363,11 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>random_shuffle
+## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
 Funkcja std:: random_shuffle () jest przestarzała, zastąpiona przez [std:: losowo](../standard-library/algorithm-functions.md#shuffle). Aby uzyskać przykład kodu i więcej informacji, zobacz [\<losowo >](../standard-library/random.md) i Stack Overflow post [dlaczego są std:: random_shuffle metody przestarzałe w języku c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a>usuwa
 
 Eliminuje określoną wartość z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.
 
@@ -6463,7 +6463,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy"></a>remove_copy
+## <a name="remove_copy"></a><a name="remove_copy"></a>remove_copy
 
 Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy o określonej wartości nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.
 
@@ -6561,7 +6561,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy_if"></a>remove_copy_if
+## <a name="remove_copy_if"></a><a name="remove_copy_if"></a>remove_copy_if
 
 Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z wyjątkiem elementów, które spełniają predykat. Elementy są kopiowane bez zakłócania kolejności pozostałych elementów. Zwraca koniec nowego zakresu docelowego.
 
@@ -6668,7 +6668,7 @@ int main()
 }
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 Eliminuje elementy, które spełniają predykat, z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.
 
@@ -6769,7 +6769,7 @@ int main()
 }
 ```
 
-## <a name="replace"></a>stępować
+## <a name="replace"></a><a name="replace"></a>stępować
 
 Sprawdza każdy element w zakresie i zastępuje go, jeśli odpowiada określonej wartości.
 
@@ -6856,7 +6856,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy"></a>replace_copy
+## <a name="replace_copy"></a><a name="replace_copy"></a>replace_copy
 
 Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli odpowiada określonej wartości, jednocześnie kopiując wynik do nowego zakresu docelowego.
 
@@ -6971,7 +6971,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy_if"></a>replace_copy_if
+## <a name="replace_copy_if"></a><a name="replace_copy_if"></a>replace_copy_if
 
 Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli spełnia określony predykat, jednocześnie kopiując wynik do nowego zakresu docelowego.
 
@@ -7094,7 +7094,7 @@ int main()
 }
 ```
 
-## <a name="replace_if"></a>replace_if
+## <a name="replace_if"></a><a name="replace_if"></a>replace_if
 
 Sprawdza każdy element w zakresie i zastępuje go, jeśli spełnia określony predykat.
 
@@ -7190,7 +7190,7 @@ int main()
 }
 ```
 
-## <a name="reverse"></a>cofnięci
+## <a name="reverse"></a><a name="reverse"></a>cofnięci
 
 Odwraca kolejność elementów w obrębie zakresu.
 
@@ -7265,7 +7265,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>reverse_copy
+## <a name="reverse_copy"></a><a name="reverse_copy"></a>reverse_copy
 
 Odwraca kolejność elementów w obrębie zakresu źródłowego, jednocześnie kopiując je do zakresu docelowego
 
@@ -7347,7 +7347,7 @@ int main()
 }
 ```
 
-## <a name="rotate"></a>obróceni
+## <a name="rotate"></a><a name="rotate"></a>obróceni
 
 Wymienia elementy znajdujące się w dwóch sąsiednich zakresach.
 
@@ -7461,7 +7461,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>rotate_copy
+## <a name="rotate_copy"></a><a name="rotate_copy"></a>rotate_copy
 
 Wymienia elementy w dwóch sąsiednich zakresach w ramach zakresu źródłowego i kopiuje wynik do zakresu docelowego.
 
@@ -7569,7 +7569,7 @@ int main()
 }
 ```
 
-## <a name="sample"></a>Northwind
+## <a name="sample"></a><a name="sample"></a>Northwind
 
 ```cpp
 template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
@@ -7581,7 +7581,7 @@ SampleIterator sample(
     UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a>wyszukiwania
+## <a name="search"></a><a name="search"></a>wyszukiwania
 
 Wyszukuje pierwsze wystąpienie sekwencji w zakresie docelowym, której elementy są równe tym w danej sekwencji elementów lub której elementy są równoważne w sensie określonym przez predykat binarny dla elementów w danej sekwencji.
 
@@ -7759,7 +7759,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>search_n
+## <a name="search_n"></a><a name="search_n"></a>search_n
 
 Wyszukuje pierwszą podsekwencję w zakresie, w której określona liczba elementów ma określoną wartość lub relację do tej wartości określoną przez predykat binarny.
 
@@ -7912,7 +7912,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>set_difference
+## <a name="set_difference"></a><a name="set_difference"></a>set_difference
 
 Łączy w sobie wszystkie elementy, które należą do jednego posortowanego zakresu źródłowego, ale nie do drugiego posortowanego zakresu źródłowego, w pojedynczy, posortowany zakres docelowy, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -8114,7 +8114,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>set_intersection
+## <a name="set_intersection"></a><a name="set_intersection"></a>set_intersection
 
 Łączy w sobie wszystkie elementy, które należą do obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.
 
@@ -8312,7 +8312,7 @@ int main()
 }
 ```
 
-## <a name="set_symmetric_difference"></a>set_symmetric_difference
+## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a>set_symmetric_difference
 
 Łączy w sobie wszystkie elementy, które należą do jednego z, ale nie obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.
 
@@ -8514,7 +8514,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>set_union
+## <a name="set_union"></a><a name="set_union"></a>set_union
 
 Łączy w sobie wszystkie elementy, które należą do przynajmniej jednego z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.
 
@@ -8716,7 +8716,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>konfigurację
+## <a name="shuffle"></a><a name="shuffle"></a>konfigurację
 
 Powoduje losowe (rozmieszczanie) elementów dla danego zakresu przy użyciu generatora liczb losowych.
 
@@ -8743,7 +8743,7 @@ Generator liczb losowych, który będzie używany przez funkcję `shuffle()` dla
 
 Aby uzyskać więcej informacji i przykład kodu, który używa `shuffle()`, zobacz [\<losowo >](../standard-library/random.md).
 
-## <a name="sort"></a>porządku
+## <a name="sort"></a><a name="sort"></a>porządku
 
 Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryteriów sortowania określonych przez binarny predykat.
 
@@ -8863,7 +8863,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>sort_heap
+## <a name="sort_heap"></a><a name="sort_heap"></a>sort_heap
 
 Konwertuje stertę na sortowany zakres.
 
@@ -8963,7 +8963,7 @@ int main()
 }
 ```
 
-## <a name="stable_partition"></a>stable_partition
+## <a name="stable_partition"></a><a name="stable_partition"></a>stable_partition
 
 Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają, zachowując względną kolejność elementów równoważnych.
 
@@ -9053,7 +9053,7 @@ int main()
 }
 ```
 
-## <a name="stable_sort"></a>stable_sort
+## <a name="stable_sort"></a><a name="stable_sort"></a>stable_sort
 
 Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryterium sortowania określonego przez binarny predykat i zachowuje względną kolejność elementów równoważnych.
 
@@ -9172,7 +9172,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Pierwsze zastąpienie wymienia wartości dwóch obiektów. Drugie zastąpienie wymienia wartości między dwiema tablicami obiektów.
 
@@ -9255,7 +9255,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>swap_ranges
+## <a name="swap_ranges"></a><a name="swap_ranges"></a>swap_ranges
 
 Zamienia elementy jednego zakresu przez elementy innego zakresu, zakresy mają równe wielkości.
 
@@ -9359,7 +9359,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>przekształcania
+## <a name="transform"></a><a name="transform"></a>przekształcania
 
 Stosuje określony obiekt funkcji dla każdego elementu w zakresie sortowania lub dla pary elementów z dwóch zakresów sortowania i kopiuje zwracane wartości obiektu funkcji do zakresu docelowego.
 
@@ -9515,7 +9515,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>unikatowy
+## <a name="unique"></a><a name="unique"></a>unikatowy
 
 Usuwa zduplikowane elementy, które sąsiadują ze sobą w określonym zakresie.
 
@@ -9664,7 +9664,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>unique_copy
+## <a name="unique_copy"></a><a name="unique_copy"></a>unique_copy
 
 Kopiuje elementy z zakresu źródłowego do zakresu docelowego z wyjątkiem zduplikowanych elementów, które ze sobą sąsiadują.
 
@@ -9801,7 +9801,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
 
 Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż określona wartość, gdzie kryterium sortowania może być określone przez predykat binarny.
 

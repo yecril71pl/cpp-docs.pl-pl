@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688510"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075529"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution — Klasa
 
@@ -70,8 +70,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *rzeczywistości*
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+\ *rzeczywistości*
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<> losowe](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -92,9 +92,9 @@ Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej,
 
 Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<losowo >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat dystrybucji Weibulla, zobacz artykuł Wolfram MathWorld [rozkład Weibulla](http://mathworld.wolfram.com/WeibullDistribution.html).
+Aby uzyskać szczegółowe informacje na temat dystrybucji Weibulla, zobacz artykuł Wolfram MathWorld [rozkład Weibulla](https://mathworld.wolfram.com/WeibullDistribution.html).
 
 ## <a name="example"></a>Przykład
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<random >
+**Nagłówek:** \<losowo >
 
 **Przestrzeń nazw:** std
 
-## <a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution:: weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -223,12 +223,12 @@ explicit weibull_distribution(const param_type& parm);
 ### <a name="parameters"></a>Parametry
 
 *\*
-@No__t_0 parametr dystrybucji.
+`a` parametr dystrybucji.
 
-*b* \
-@No__t_0 parametr dystrybucji.
+*b*\
+`b` parametr dystrybucji.
 
-*parametr* \
+*parametr*\
 Struktura `param_type` używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
@@ -239,7 +239,7 @@ Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `a` wartość prz
 
 Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
 
-## <a name="param_type"></a>weibull_distribution::p aram_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -258,12 +258,12 @@ struct param_type {
 ### <a name="parameters"></a>Parametry
 
 *\*
-@No__t_0 parametr dystrybucji.
+`a` parametr dystrybucji.
 
-*b* \
-@No__t_0 parametr dystrybucji.
+*b*\
+`b` parametr dystrybucji.
 
-*prawa* \
+*prawa*\
 Obiekt `param_type`, do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
@@ -272,6 +272,6 @@ Obiekt `param_type`, do którego ma zostać wykonane porównanie.
 
 Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<random >](../standard-library/random.md)
+[\<losowe >](../standard-library/random.md)

@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441709"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076512"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> W wersji programu Visual Studio 2017 nagłówek \<filesystem> nie był jeszcze C++ standardem. C++w programie Visual Studio 2017 RTW implementuje ostateczną wersję standardową, która znajduje się w [normie ISO/IEC JTC 1/SC 22/powyżej 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). Program Visual Studio 2017 w wersji 15,7 lub nowszej obsługuje nowe filesystem> Standard C++ 17 \<.
+> W wersji programu Visual Studio 2017 nagłówek \<filesystem> nie był jeszcze C++ standardem. C++w programie Visual Studio 2017 RTW implementuje ostateczną wersję standardową, która znajduje się w [normie ISO/IEC JTC 1/SC 22/powyżej 21 N4100](https://wg21.link/n4100). Program Visual Studio 2017 w wersji 15,7 lub nowszej obsługuje nowe filesystem> Standard C++ 17 \<.
 > Jest to zupełnie nowa implementacja niezgodna z poprzednią wersją `std::experimental`. Było to wymagane przez pomoc techniczną link symboliczny, poprawki błędów i zmiany w zachowaniu standardowym. Obecnie w tym \<filesystem> udostępnia nowy `std::filesystem` i poprzedni `std::experimental::filesystem`. Uwzględnienie \<experimental/filesystem> zapewnia tylko starą implementację experimental. Implementacja experimental zostanie usunięta w następnej ABIej wersji biblioteki.
 
 Ten nagłówek obsługuje systemy plików dla jednej z dwóch szerokich klas systemów operacyjnych hosta: Microsoft Windows i POSIX.

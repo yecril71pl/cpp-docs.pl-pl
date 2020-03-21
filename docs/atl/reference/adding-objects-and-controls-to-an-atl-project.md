@@ -11,43 +11,43 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706847"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075309"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
-> [!NOTE] 
-> Składnik kreatora ATL COM + 1.0, ATL OLE DB Kreator konsumenta i Kreator składników stron serwera Active ATL nie są dostępne, w programie Visual Studio 2019 r i nowszych.
+> [!NOTE]
+> Kreator składnika ATL COM+ 1,0, Kreator ATL OLE DB użytkownika i ATL Active Server Web Component nie są dostępne w programie Visual Studio 2019 lub nowszym.
 
-Można użyć jednego z kreatorów kodu biblioteki ATL, można dodać obiektu lub formantu do swoich projektów ATL lub MFC oparte na. Do każdego obiektu COM lub kontrolki, możesz dodać, Kreator generuje .cpp i .h plików, a także pliku .rgs obsługi opartych na skryptach rejestru. Następujących kreatorów kodu biblioteki ATL są dostępne w programie Visual Studio:
+Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do projektów opartych na ATL lub MFC. Dla każdego obiektu COM lub dodawanej kontrolki Kreator generuje pliki. cpp i. h, a także plik. RGS na potrzeby obsługi rejestru opartego na skrypcie. Następujące kreatory kodu ATL są dostępne w programie Visual Studio:
 
 ||||
 |-|-|-|
-|[Prosty obiekt ATL](../../atl/reference/atl-simple-object-wizard.md)|[Okno dialogowe ATL](../../atl/reference/atl-dialog-wizard.md)|[Kontrolka ATL](../../atl/reference/atl-control-wizard.md)|
-|[Strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)|[Składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Konsumenta ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[Dodaj obsługę ATL do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Kreator składników ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Dostawcy ATL OLE DB](../../atl/reference/atl-ole-db-provider-wizard.md)|
+|[Prosty obiekt ATL](../../atl/reference/atl-simple-object-wizard.md)|[Okno dialogowe ATL](../../atl/reference/atl-dialog-wizard.md)|[Formant ATL](../../atl/reference/atl-control-wizard.md)|
+|[Strona właściwości ATL](../../atl/reference/atl-property-page-wizard.md)|[Składnik strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Klient ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[Dodawanie obsługi ATL do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Kreator składników ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Dostawca OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
-> Przed dodaniem obiektu ATL do projektu, należy przejrzeć szczegóły i wymagania dotyczące obiektu w jego powiązane tematy Pomocy.
+> Przed dodaniem obiektu ATL do projektu, należy przejrzeć szczegóły i wymagania dotyczące obiektu w powiązanych tematach pomocy.
 
-## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Aby dodać obiekt lub kontrolki przy użyciu kreator kontrolki ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Aby dodać obiekt lub kontrolkę przy użyciu kreatora kontrolki ATL
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu i kliknij przycisk **Dodaj** z menu skrótów. Kliknij przycisk **Dodaj klasę**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu, a następnie kliknij polecenie **Dodaj** z menu skrótów. Kliknij pozycję **Dodaj klasę**.
 
-   [Dodaj klasę](../../ide/add-class-dialog-box.md) pojawi się okno dialogowe.
+   Pojawi się okno dialogowe [Dodaj klasę](../../ide/add-class-dialog-box.md) .
 
-1. Za pomocą **ATL** folder wybrany w **kategorie** okienku, wybierz obiekt do wstawienia z **szablony** okienka. Kliknij przycisk **Otwórz**. Zostanie wyświetlony Kreator kod dla wybranego obiektu.
+1. Po wybraniu folderu **ATL** w okienku **Kategorie** wybierz obiekt do wstawienia z okienka **Szablony** . Kliknij przycisk **Open** (Otwórz). Zostanie wyświetlony Kreator kodu dla wybranego obiektu.
 
    > [!NOTE]
-   > Jeśli chcesz dodać obiekt ATL do projektu MFC, należy dodać obsługę ATL do istniejącego projektu. Można to zrobić, postępując zgodnie z instrukcjami w [Dodawanie obsługi ATL do projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Jeśli chcesz dodać obiekt ATL do projektu MFC, musisz dodać obsługę ATL do istniejącego projektu. Można to zrobić, postępując zgodnie z instrukcjami w temacie [Dodawanie obsługi ATL do projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-   Alternatywnie Jeśli spróbujesz dodać obiekt ATL do projektu MFC bez wcześniej Dodawanie obsługi ATL programu Visual Studio wyświetli monit o określenie, czy mają obsługi ATL dodanej do projektu. Kliknij przycisk **tak** Dodaj obsługę ATL do projektu i Otwórz kreatora ATL wybrane.
+   Alternatywnie, Jeśli podjęto próbę dodania obiektu ATL do projektu MFC bez uprzedniego dodania obsługi ATL, program Visual Studio będzie monitował o określenie, czy do projektu ma zostać dodana obsługa ATL. Kliknij przycisk **tak** , aby dodać obsługę ATL do projektu i otworzyć wybranego kreatora ATL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [C++typy projektów w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>

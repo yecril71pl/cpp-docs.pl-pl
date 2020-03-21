@@ -3,12 +3,12 @@ title: Instalowanie obciążenia C++ systemu Linux w programie Visual Studio
 description: Opisuje sposób pobierania, instalowania i konfigurowania obciążenia systemu Linux dla C++ programu Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966208"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077642"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
@@ -20,11 +20,11 @@ Projekty systemu Linux są obsługiwane w programie Visual Studio 2017 i nowszyc
 
 ::: moniker range=">=vs-2017"
 
-Możesz użyć środowiska IDE programu Visual Studio w systemie Windows, aby tworzyć, edytować C++ i debugować projekty wykonywane w zdalnym systemie Linux, maszynie wirtualnej lub [podsystemie Windows dla systemu Linux](/windows/wsl/about). 
+Możesz użyć środowiska IDE programu Visual Studio w systemie Windows, aby tworzyć, edytować C++ i debugować projekty wykonywane w zdalnym systemie Linux, maszynie wirtualnej lub [podsystemie Windows dla systemu Linux](/windows/wsl/about).
 
-Możesz korzystać z istniejącej bazy kodu, która używa CMake bez konieczności konwertowania jej na projekt programu Visual Studio. Jeśli baza kodu jest międzyplatformowa, można wskazać zarówno system Windows, jak i Linux z poziomu programu Visual Studio. Na przykład można edytować, kompilować i debugować kod w systemie Windows przy użyciu programu Visual Studio, a następnie szybko przekierować projekt dla systemu Linux w celu kompilowania i debugowania w środowisku z systemem Linux. Pliki nagłówkowe systemu Linux są automatycznie kopiowane na komputer lokalny, gdzie program Visual Studio używa ich do zapewnienia pełnej obsługi technologii IntelliSense (uzupełnianie instrukcji, przejdź do definicji itd.). 
- 
-W przypadku każdego z tych scenariuszy wymagane jest **Programowanie przy C++ użyciu systemu Linux z** obciążeniem. 
+Możesz korzystać z istniejącej bazy kodu, która używa CMake bez konieczności konwertowania jej na projekt programu Visual Studio. Jeśli baza kodu jest międzyplatformowa, można wskazać zarówno system Windows, jak i Linux z poziomu programu Visual Studio. Na przykład można edytować, kompilować i debugować kod w systemie Windows przy użyciu programu Visual Studio, a następnie szybko przekierować projekt dla systemu Linux w celu kompilowania i debugowania w środowisku z systemem Linux. Pliki nagłówkowe systemu Linux są automatycznie kopiowane na komputer lokalny, gdzie program Visual Studio używa ich do zapewnienia pełnej obsługi technologii IntelliSense (uzupełnianie instrukcji, przejdź do definicji itd.).
+
+W przypadku każdego z tych scenariuszy wymagane jest **Programowanie przy C++ użyciu systemu Linux z** obciążeniem.
 
 ::: moniker-end
 

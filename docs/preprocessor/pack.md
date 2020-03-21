@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965255"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079976"
 ---
 # <a name="pack-pragma"></a>pack — Wartość dyrektywy pragma
 
@@ -35,14 +35,14 @@ Obowiązkowe Wyświetla bieżącą wartość bajtu na potrzeby wyrównania pakow
 Obowiązkowe Wypycha bieżącą wartość wyrównania pakowania na wewnętrznym stosie kompilatora i ustawia bieżącą wartość wyrównania pakowania na *n*. Jeśli *n* nie jest określony, bieżąca wartość wyrównania pakowania jest wypchnięcia.
 
 \ **pop**
-Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie jest określony za pomocą **pop**, wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* zostanie nową wartością wyrównania. Jeśli używasz *identyfikatora*, na przykład `#pragma pack(pop, r1)`, wszystkie rekordy na stosie są zdjęte do momentu znalezienia rekordu o *identyfikatorze* . Ten rekord to zdjęte, a wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli używasz *identyfikatora* , który nie został znaleziony w żadnym rekordzie na stosie **, zostanie on** zignorowany. 
+Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie jest określony za pomocą **pop**, wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* zostanie nową wartością wyrównania. Jeśli używasz *identyfikatora*, na przykład `#pragma pack(pop, r1)`, wszystkie rekordy na stosie są zdjęte do momentu znalezienia rekordu o *identyfikatorze* . Ten rekord to zdjęte, a wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli używasz *identyfikatora* , który nie został znaleziony w żadnym rekordzie na stosie **, zostanie on** zignorowany.
 
 `#pragma pack (pop, r1, 2)` instrukcji jest równoznaczna z `#pragma pack (pop, r1)`, a następnie `#pragma pack(2)`.
 
 *identyfikator*\
 Obowiązkowe W przypadku użycia z opcją **push**przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
 
-*n* \
+*n*\
 Obowiązkowe Określa wartość w bajtach, która ma być używana na potrzeby pakowania. Jeśli opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md) nie jest ustawiona dla modułu, wartość domyślna dla *n* to 8. Prawidłowe wartości to 1, 2, 4, 8 i 16. Wyrównanie elementu członkowskiego znajduje się na granicy, która jest wielokrotnością *n*lub wielokrotnością rozmiaru elementu członkowskiego, w zależności od tego, który jest mniejszy.
 
 ## <a name="remarks"></a>Uwagi
@@ -120,6 +120,6 @@ Poniższy przykład pokazuje, jak używać składni *wypychania*, *pop*i *show* 
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,27 +1,26 @@
 ---
 title: Biblioteki
 ms.date: 11/18/2018
-ms.openlocfilehash: 7eba3905fc0010f37b15b4af40f6135c4fd97f47
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400700"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075607"
 ---
 # <a name="libraries"></a>Biblioteki
 
-Podczas instalowania co najmniej jeden obciążeniach C++, Visual Studio zawiera następujące biblioteki. Aby uzyskać informacje o instalowaniu bibliotek innych firm 3, zobacz [vcpkg: Menedżer pakietów języka C++ dla Windows, Linux i MacOS](../build/vcpkg.md).
+Program Visual Studio zawiera następujące biblioteki podczas instalowania jednego lub większej liczby C++ obciążeń. Aby uzyskać informacje na temat instalowania bibliotek innych firm, zobacz [vcpkg: C++ A Package Manager for Windows, Linux i MacOS](../build/vcpkg.md).
 
-## <a name="standard-libraries"></a>Standardowe biblioteki
+## <a name="standard-libraries"></a>Biblioteki standardowe
 
 [Biblioteka środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Biblioteka SafeInt](../safeint/safeint-library.md)<br/>
 [OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)
 
-## <a name="libraries-for-windows-applications"></a>Biblioteki dla aplikacji Windows
+## <a name="libraries-for-windows-applications"></a>Biblioteki dla aplikacji systemu Windows
 
 [MFC/ATL](../mfc/mfc-and-atl.md)<br/>
-[Biblioteki równoległych](../parallel/parallel-programming-in-visual-cpp.md)<br/>
+[Biblioteki równoległe](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 [Biblioteki dostępu do danych](../data/data-access-in-cpp.md)
-

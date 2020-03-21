@@ -1,27 +1,27 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4471
+title: Ostrzeżenie kompilatora (poziom 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
 - C4471
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 0345b730b8fc37329f632bb5d8486c67efd8e3b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400789"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076938"
 ---
-# <a name="compiler-warning-level-4-c4471"></a>Kompilatora (poziom 4) ostrzeżenie C4471
+# <a name="compiler-warning-level-4-c4471"></a>Ostrzeżenie kompilatora (poziom 4) C4471
 
-"*wyliczenie*": deklaracja zapowiadająca wyliczenia nieobjętego zakresem musi mieć podstawowy typ (zakładany jest int)
+"*Wyliczenie*": Deklaracja do przodu wyliczenia nienależącego do zakresu musi mieć typ podstawowy (założono int)
 
-Deklaracja zapowiadająca wyliczenia nieobjętego zakresem odnaleziono bez specyfikatora typu bazowego. Domyślnie przyjęto założenie, Visual C++ `int` jest podstawowym typem wyliczenia. Może to spowodować problemy, czy innego typu jest używana w definicji wyliczenia, na przykład, jeśli określono innego typu explicit, czy innego typu jest niejawnie ustawiony przez inicjatora. Może również mieć problemy; nie należy zakładać, inne kompilatory `int` jest podstawowym typem wyliczenia.
+Nie znaleziono deklaracji do przodu wyliczenia nienależącego do zakresu bez specyfikatora dla typu źródłowego. Domyślnie Wizualizacja C++ zakłada, `int` jest typem podstawowym dla wyliczenia. Może to powodować problemy, jeśli inny typ jest używany w definicji wyliczenia, na przykład, jeśli określono inny jawny typ lub inny typ jest niejawnie ustawiany przez inicjatora. Możesz również mieć problemy z przenośnością; Inne kompilatory nie zakładają, `int` jest podstawowym typem wyliczenia.
 
-To ostrzeżenie jest wyłączone domyślnie; Możesz użyć /Wall lub Wn*N*4471, aby ją włączyć w wierszu polecenia lub użyj #pragma [ostrzeżenie](../../preprocessor/warning.md) w pliku źródłowym.
+To ostrzeżenie jest domyślnie wyłączone; Możesz użyć/Wall lub/w*N*4471, aby włączyć go w wierszu polecenia, lub użyć [ostrzeżenia](../../preprocessor/warning.md) #pragma w pliku źródłowym.
 
-W niektórych przypadkach to ostrzeżenie jest fałszywe. Jeśli deklaracja wyliczenia pojawi się po definicji, może wyzwalać to ostrzeżenie. Na przykład ten kod jest prawidłowy, mimo że może to spowodować C4471:
+W niektórych przypadkach to ostrzeżenie jest fałszywe. Jeśli deklaracja do przodu dla wyliczenia zostanie wyświetlona po definicji, to ostrzeżenie może zostać wywołane. Na przykład ten kod jest prawidłowy, mimo że może to spowodować C4471:
 
 ```cpp
 // C4471a.cpp
@@ -33,7 +33,7 @@ enum Example;    // Spurious C4471
 
 ## <a name="example"></a>Przykład
 
-Ogólnie rzecz biorąc jest bezpieczny w użyciu pełna definicja wyliczenia niewystępującego w zakresie zamiast deklaracją do przodu. Możesz umieścić definicję w pliku nagłówkowym i uwzględnić go w plikach źródłowych, które odwołują się do niego. To działanie kodu napisanego w języku C ++ 98 i nowszych. Firma Microsoft zaleca to rozwiązanie do przenoszenia i łatwość konserwacji.
+Ogólnie rzecz biorąc, można bezpiecznie użyć pełnej definicji dla wyliczenia nienależącego do zakresu zamiast deklaracji do przodu. Można umieścić definicję w pliku nagłówkowym i uwzględnić ją w plikach źródłowych, które odwołują się do niego. Działa to w kodzie zapisanym dla języka C++ 98 i nowszych. Zalecamy używanie tego rozwiązania do przenośności i łatwości konserwacji.
 
 ```cpp
 // C4471b.cpp
@@ -46,7 +46,7 @@ enum Example;    // C4471
 
 ## <a name="example"></a>Przykład
 
-W języku C ++ 11 możesz dodać jawnego typu wyliczenia niewystępującego w zakresie i jej deklaracją do przodu. Firma Microsoft zaleca tego rozwiązania, tylko wtedy, gdy logika włączenia complex — nagłówek uniemożliwia korzystanie z definicji zamiast deklaracją do przodu. To rozwiązanie może prowadzić do konserwacyjne: Zmień typ podstawowy, używane w definicji wyliczenia, należy także zmienić wszystkie deklaracje przechodzenia do przodu do dopasowania, czy masz dyskretnej błędów w kodzie. Deklaracją do przodu można umieścić w pliku nagłówka, aby zminimalizować ten problem.
+W języku C++ 11 można dodać jawny typ do wyliczenia nienależącego do zakresu i do jego deklaracji do przodu. Zalecamy to rozwiązanie tylko wtedy, gdy złożona logika dołączania nagłówka uniemożliwia użycie definicji zamiast deklaracji do przodu. To rozwiązanie może prowadzić do problemów z konserwacją: Jeśli zmienisz typ podstawowy używany do definicji wyliczenia, musisz również zmienić wszystkie deklaracje przesyłania dalej, aby dopasować, lub w kodzie mogą występować błędy dyskretne. Aby zminimalizować ten problem, można umieścić deklarację przekazującą do pliku nagłówkowego.
 
 ```cpp
 // C4471c.cpp
@@ -66,11 +66,11 @@ enum Example : unsigned { item = 0x80000000 }; // explicit type
 // ...
 ```
 
-Jeśli określisz jawnego typu wyliczenia, firma Microsoft zaleca również włączyć ostrzeżenie [C4369](compiler-warning-level-1-C4369.md), która jest domyślnie włączone. Identyfikuje przypadki, w którym element wyliczenia wymaga innego typu niż jawnie określonego typu.
+Jeśli określisz typ jawny dla wyliczenia, zalecamy również włączenie [C4369](compiler-warning-level-1-C4369.md)z ostrzeżeniem, który jest domyślnie włączony. Wskazuje przypadki, w których element wyliczenia wymaga innego typu niż jawnie określony typ.
 
 ## <a name="example"></a>Przykład
 
-Możesz zmienić swój kod, aby użyć wyliczeniowym w zakresie funkcji, co nowego w języku C ++ 11. Zarówno definicję, jak i wszelki kod klienta, który używa typu wyliczenia musi zostać zmieniona na typ wyliczeniowy w zakresie użycia. Zaleca się, że używasz wyliczeniowym, jeśli masz problemy z zanieczyszczenie przestrzeni nazw, nazw elementów zdefiniowanych wyliczenia są ograniczone do zakresu wyliczenia. Kolejną funkcją wyliczeń w zakresie jest jego składowych nie można niejawnie przekonwertować na inny typ całkowity lub wyliczeniowy, który może być źródłem subtelnych błędów.
+Można zmienić kod w taki sposób, aby używał wyliczenia w zakresie, funkcji, która jest nowa w języku C++ 11. Należy zmienić zarówno definicję, jak i kod klienta używający typu wyliczenia, aby użyć wyliczenia w zakresie. Zalecamy użycie wyliczenia w zakresie w przypadku problemów ze zanieczyszczeniem przestrzeni nazw, ponieważ nazwy zdefiniowanych elementów wyliczenia są ograniczone do zakresu wyliczenia. Inną funkcją wyliczenia w zakresie jest to, że jego składowe nie mogą zostać niejawnie przekonwertowane na inny typ całkowity lub wyliczeniowy, który może być źródłem błędów o niewielkim stopniu.
 
 ```cpp
 // C4471e.cpp
@@ -89,4 +89,3 @@ enum Example;    // C4471
 enum class Example { item = 0 };
 // ...
 ```
-

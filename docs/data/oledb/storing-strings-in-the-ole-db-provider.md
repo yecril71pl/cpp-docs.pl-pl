@@ -4,20 +4,19 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1d6d2b73495d5ca6e275b13ed3c430f8169179d4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525354"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079111"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Przechowywanie ciągów w dostawcy OLE DB
 
-> [!NOTE] 
-> Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+> [!NOTE]
+> Kreator dostawcy OLE DB ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
-
-W *niestandardowe*RS.h, **Kreator biblioteki ATL OLE DB Provider** tworzy rekord użytkownika domyślnego o nazwie `CWindowsFile`. Aby obsługiwać dwa ciągi, zmodyfikuj `CWindowsFile` jak pokazano w poniższym kodzie:
+W *niestandardowym*RS. h **kreator dostawcy ATL OLE DB** tworzy domyślny rekord użytkownika o nazwie `CWindowsFile`. Aby obsłużyć dwa ciągi, zmodyfikuj `CWindowsFile` jak pokazano w poniższym kodzie:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -52,10 +51,10 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Elementy członkowskie danych `szCommand` i `szText` reprezentują dwa ciągi przy użyciu `szCommand2` i `szText2` za pomocą dodatkowych kolumn, jeśli to konieczne. Element członkowski danych `dwBookmark` nie jest wymagane dla tego prostego dostawcy tylko do odczytu, ale jest używany później dodać `IRowsetLocate` interfejsu; zobacz [udoskonalanie prostego odczytu tylko dostawcy](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operator porównuje wystąpienia (Implementowanie Ten operator jest opcjonalny).
+Elementy członkowskie danych `szCommand` i `szText` reprezentują dwa ciągi, z `szCommand2` i `szText2` z dodatkowymi kolumnami w razie konieczności. Element członkowski danych `dwBookmark` nie jest wymagany dla tego prostego dostawcy tylko do odczytu, ale jest używany później do dodawania interfejsu `IRowsetLocate`; Zobacz [ulepszanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md). Operator `==` porównuje wystąpienia (implementowanie tego operatora jest opcjonalne).
 
-Po zakończeniu tej operacji można dodawać funkcjonalność [wczytywanie ciągów do dostawcy OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+Gdy to zrobisz, możesz dodać funkcję [odczytywania ciągów do dostawcy OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Implementowanie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

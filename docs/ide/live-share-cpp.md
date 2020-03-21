@@ -1,56 +1,56 @@
 ---
-title: Współpracuj z udostępnianie na żywo dla C++ w programie Visual Studio
-description: Użyj, funkcja udostępniania na żywo dla C++ w programie Visual Studio do współpracy i udostępniania kodu w czasie rzeczywistym.
+title: Współpraca z Live Shareami dla C++ programu Visual Studio
+description: Użyj Live Share dla C++ programu Visual Studio, aby współpracować i udostępniać kod w czasie rzeczywistym.
 ms.date: 05/24/2019
-ms.openlocfilehash: 8886bb3ea4b7389a9d6953655e2dc6ccfa1c7c9a
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: e6e983c6acb56dffd12756d8bbaccef32dd57f38
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743394"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077800"
 ---
-# <a name="collaborate-using-live-share-for-c"></a>Bezpieczna współpraca przy użyciu funkcja udostępniania na żywo dlaC++
+# <a name="collaborate-using-live-share-for-c"></a>Współpraca przy użyciu rozszerzenia Live Share dla języka C++
 
-W Visual Studio 2019 r i Visual Studio Code, można użyć **udostępniania na żywo** do współpracy nad C++ projektów w czasie rzeczywistym. Za pomocą **udostępniania na żywo** innej osobie można edytować i debugowanie kodu bez konieczności instalowania projektu lub dowolną z jego zależności. Występują one, a każdy edytowanie zostanie oznaczony o nazwie osoby, która mogła zostanie wyświetlona jego edycji. 
+W programie Visual Studio 2019 i Visual Studio Code można używać **Live Share** do współpracy nad C++ projektami w czasie rzeczywistym. Za pomocą **Live Share** inna osoba może edytować i debugować kod bez konieczności instalowania projektu lub żadnej z jego zależności. Wszystkie zmiany są widoczne w miarę ich występowania, a każda Edycja jest oznaczona nazwą osoby, która ją wprowadziła.
 
-![C&#43; &#43; udziału edytowanie na żywo](../ide/media/live-share-edit-cpp.png "edytowanie na żywo udziałuC++")
+![Edytowanie&#43; &#43; Live Share w języku C](../ide/media/live-share-edit-cpp.png "Live Share edytowanie wC++")
 
-## <a name="live-share-host-and-guests"></a>Na żywo udziału hostów i gości
+## <a name="live-share-host-and-guests"></a>Live Share hosta i Gości
 
-W sesji udostępniania na żywo ma hosta i co najmniej jeden gości. Zarówno hosta, jak i gości, można użyć programu Visual Studio lub Visual Studio Code. Visual Studio 2019 hosta, na Windows mogą udostępniać gościa programu Visual Studio Code w systemie Linux.
+W sesji Live Share istnieje Host i co najmniej jeden gość. Zarówno host, jak i Goście mogą korzystać z programu Visual Studio lub Visual Studio Code. Host programu Visual Studio 2019 w systemie Windows może udostępniać Visual Studio Code gościa w systemie Linux.
 
-Host zawiera gościom ze wszystkim, co jest potrzebne do wydajnej. Goście nie muszą mieć kod źródłowy, kompilator, zależnościami zewnętrznymi lub nawet sam zainstalowanych składników. 
+Host udostępnia Gościom wszystko, czego potrzebują do pracy. Goście nie muszą mieć kodu źródłowego, kompilatora, zależności zewnętrznych, a nawet tych samych zainstalowanych składników.
 
-Hostów i gości można korzystać z funkcji IntelliSense: 
+Host i Goście mogą korzystać z tych funkcji IntelliSense:
 
 - Lista elementów członkowskich
-- Parametr pomocy
+- Pomoc dotycząca parametrów
 - Szybkie informacje
-- Debugowanie/punktów przerwania
+- Debugowanie/punkty przerwania
 - Znajdź wszystkie odwołania
 - Przejdź do definicji
-- Wyszukiwanie symbolu (Ctrl + T)
+- Wyszukiwanie symboli (Ctrl + T)
 - Wyróżnianie odwołań
-- Diagnostyka/błędy/faliste linie
+- Diagnostyka/błędy/zygzaki
 
-![C&#43; &#43; udziału debugowania na żywo](../ide/media/live-share-debug-cpp.png "mieszka udziału debugowaniaC++")
+![Debugowanie&#43; &#43; Live Share języka C](../ide/media/live-share-debug-cpp.png "Live Share debugowanie wC++")
 
-## <a name="start-and-end-a-live-share-session"></a>Uruchamianie i kończenie sesji udostępniania na żywo
+## <a name="start-and-end-a-live-share-session"></a>Uruchamianie i kończenie sesji Live Share
 
-Aby rozpocząć sesję udostępniania na żywo w programie Visual Studio, kliknij przycisk Udostępnij w prawym górnym lub przejdź do **pliku** > **Uruchom sesję współpracy**. Spowoduje to wygenerowanie łącze, które mogą udostępniać swoje współpracowników.
+Aby rozpocząć sesję Live Share w programie Visual Studio, kliknij przycisk Udostępnij w prawym górnym rogu lub przejdź do **pliku** > **Rozpocznij sesję współpracy**. Spowoduje to wygenerowanie linku, który można udostępnić współpracownikom.
 
-![C&#43; &#43; Live przycisk Udostępnij](../ide/media/live-share-button-cpp.png "Live przycisk Udostępnij")
+![Przycisk&#43; &#43; Live Share C](../ide/media/live-share-button-cpp.png "Przycisk Live Share")
 
-Aby zakończyć sesję, wybierz pozycję **Zakończ sesję współpracy** z **udostępniania** listy rozwijanej.
+Aby zakończyć sesję, wybierz pozycję **Zakończ sesję współpracy** z listy rozwijanej **udostępnianie** .
 
-![C&#43; &#43; Live przycisk Udostępnij](../ide/media/live-share-end-session-cpp.png "Live przycisk Udostępnij")
+![Przycisk&#43; &#43; Live Share C](../ide/media/live-share-end-session-cpp.png "Przycisk Live Share")
 
 ## <a name="for-more-information"></a>Więcej informacji
 
-Aby uzyskać więcej informacji na temat **udostępniania na żywo** w programie Visual Studio, zobacz [co to jest Visual Studio funkcja udostępniania na żywo?](/visualstudio/liveshare/). Aby uzyskać więcej informacji na temat udostępniania na żywo w programie Visual Studio Code, zobacz [ udostępniania na żywo](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare).
+Aby uzyskać więcej informacji na temat **Live Share** w programie Visual Studio, zobacz [co to jest Visual Studio Live Share?](/visualstudio/liveshare/). Aby uzyskać więcej informacji na temat Live Share w Visual Studio Code, zobacz [Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytuj i refaktoryzacji kodu (C++)](writing-and-refactoring-code-cpp.md)</br>
-[Przejdź z C++ kodu bazowego w programie Visual Studio](navigate-code-cpp.md)</br>
-[Dokładnie zapoznaj się C++ kodu](read-and-understand-code-cpp.md)</br>
+[Edytuj i Refaktoryzacja kodu (C++)](writing-and-refactoring-code-cpp.md)</br>
+[Nawigowanie C++ po bazie kodu w programie Visual Studio](navigate-code-cpp.md)</br>
+[Odczytuj i rozumiej C++ kod](read-and-understand-code-cpp.md)</br>

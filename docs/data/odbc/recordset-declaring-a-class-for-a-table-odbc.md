@@ -1,33 +1,33 @@
 ---
-title: 'Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)'
+title: 'Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: b6e7f4456b5ff29cec854d1b4818fda965e04b96
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707949"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076986"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Zestaw rekordów: Deklarowanie klasy dla tabeli (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)
 
-> [!NOTE] 
-> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
+> [!NOTE]
+> Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
 
 Ten temat dotyczy klas MFC ODBC.
 
-Najbardziej typowe klasy zestawu rekordów otwiera pojedynczą tabelę. Aby zadeklarować klasę zestawu rekordów dla pojedynczej tabeli, użyj [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** i wybierz polecenie każda kolumna ma za pomocą nazw odpowiedni element członkowski danych pola zestawu rekordów.
+Najbardziej typowa Klasa zestawu rekordów otwiera pojedynczą tabelę. Aby zadeklarować klasę zestawu rekordów dla pojedynczej tabeli, użyj [Kreatora użytkownika ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **klasy Dodaj** i wybierz każdą z kolumn, wpisując nazwę odpowiedniego elementu członkowskiego danych pola zestawu rekordów.
 
-Zestawy rekordów innych zastosowań obejmują:
+Inne zastosowania dla zestawów rekordów obejmują:
 
-- Sprzęganie dwóch lub więcej tabel.
+- Sprzęganie co najmniej dwóch tabel.
 
-- Zawierającego wyniki wstępnie zdefiniowanego zapytania.
+- Zawierający wyniki wstępnie zdefiniowanego zapytania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>

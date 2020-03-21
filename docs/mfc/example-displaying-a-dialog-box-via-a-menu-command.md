@@ -1,5 +1,5 @@
 ---
-title: 'Przykład: Wyświetlanie okna dialogowego za pomocą polecenia menu'
+title: 'Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095923"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078832"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: Wyświetlanie okna dialogowego za pomocą polecenia menu
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu
 
 Ten temat zawiera następujące procedury:
 
@@ -44,7 +44,7 @@ W procedurach użyto następujących nazw i wartości:
 
 1. Dodaj klasę do okna dialogowego. Aby uzyskać więcej informacji [, zobacz Dodawanie klasy](../ide/adding-a-class-visual-cpp.md) .
 
-1. W **Widok klasy**wybierz klasę dokumentu (CDisplayDialogDoc). W oknie **Właściwości** kliknij przycisk **zdarzenia** . Kliknij dwukrotnie identyfikator polecenia menu (ID_VIEW_TEST). Następnie kliknij strzałkę w dół i wybierz pozycję  **\<Dodaj > OnViewTest**.
+1. W **Widok klasy**wybierz klasę dokumentu (CDisplayDialogDoc). W oknie **Właściwości** kliknij przycisk **zdarzenia** . Kliknij dwukrotnie identyfikator polecenia menu (ID_VIEW_TEST). Następnie kliknij strzałkę w dół i wybierz pozycję **\<dodaj > OnViewTest**.
 
    Jeśli dodano polecenie menu do komputera mainframe aplikacji MDI, zamiast tego wybierz klasę aplikacji (CDisplayDialogApp).
 
@@ -54,11 +54,11 @@ W procedurach użyto następujących nazw i wartości:
    #include "TestDialog.h"
    ```
 
-1. Dodaj następujący kod w `OnViewTest` celu zaimplementowania funkcji:
+1. Dodaj następujący kod do `OnViewTest`, aby zaimplementować funkcję:
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Aby wyświetlić niemodalne okno dialogowe
@@ -99,7 +99,7 @@ W procedurach użyto następujących nazw i wartości:
    delete m_pTestDlg;
    ```
 
-   - Dodaj następujący kod w `OnViewTest` celu zaimplementowania funkcji:
+   - Dodaj następujący kod do `OnViewTest`, aby zaimplementować funkcję:
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ W procedurach użyto następujących nazw i wartości:
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Modalne i niemodalne okna dialogowe](../mfc/modal-and-modeless-dialog-boxes.md)

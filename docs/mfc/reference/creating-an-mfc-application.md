@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 5f3a24a46db1c9013e5458143812faa079ade013
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 16dbbc4a3b2e8927643d3612bec034f9f5da8d9c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108508"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077518"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 
@@ -29,14 +29,13 @@ Aplikacja MFC jest aplikacją wykonywalną dla systemu Windows opartą na biblio
 
 Kreator aplikacji MFC generuje odpowiednie klasy i pliki dla dowolnego z tych typów aplikacji, w zależności od opcji wybranych w kreatorze.
 
-
 Najprostszym sposobem tworzenia aplikacji MFC jest użycie Kreatora aplikacji MFC (**projekt aplikacji MFC** w programie Visual Studio 2019). Aby utworzyć aplikację konsolową MFC (program wiersza polecenia, który używa bibliotek MFC, ale działa w oknie konsoli), użyj Kreatora pulpitu systemu Windows i wybierz opcję **Aplikacja konsolowa** i **nagłówki MFC** .
 
 ::: moniker range=">=vs-2019"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Aby utworzyć formularze MFC lub aplikację opartą na oknach dialogowych
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 1. Wprowadź ciąg "MFC" w polu wyszukiwania, a następnie wybierz pozycję **aplikacja MFC** z listy wynik.
 1. Zmodyfikuj wartości domyślne zgodnie z wymaganiami, a następnie naciśnij przycisk **Create (Utwórz** ), aby otworzyć **Kreatora aplikacji MFC**.
 1. Zmodyfikuj wartości konfiguracyjne zgodnie z wymaganiami, a następnie naciśnij przycisk **Zakończ**.
@@ -49,7 +48,7 @@ Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na form
 
 Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibliotek MFC, ale działa w oknie konsoli.
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 1. Wprowadź ciąg "Desktop" w polu wyszukiwania, a następnie wybierz pozycję **Kreator pulpitu systemu Windows** z listy wyników.
 1. Zmodyfikuj odpowiednio nazwę projektu, a następnie naciśnij przycisk **dalej** , aby otworzyć **Kreatora pulpitu systemu Windows**.
 1. Zaznacz pole **nagłówki MFC** i ustaw inne wartości zgodnie z wymaganiami, a następnie naciśnij przycisk **Zakończ**.
@@ -62,8 +61,8 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Aby utworzyć formularze MFC lub aplikację opartą na oknach dialogowych
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
-1. W obszarze **zainstalowane** szablony wybierz pozycję **Visual C++**   >  **MFC/ATL**. Jeśli nie są one widoczne, użyj Instalator programu Visual Studio, aby je dodać.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
+1. W obszarze **zainstalowane** szablony wybierz pozycję **Visual C++**  > **MFC/ATL**. Jeśli nie są one widoczne, użyj Instalator programu Visual Studio, aby je dodać.
 1. Wybierz pozycję **aplikacja MFC** w środkowym okienku.
 1. Zmodyfikuj wartości konfiguracyjne zgodnie z wymaganiami, a następnie naciśnij przycisk **Zakończ**.
 
@@ -75,7 +74,7 @@ Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na form
 
 Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibliotek MFC, ale działa w oknie konsoli.
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 1. W obszarze **zainstalowane** szablony wybierz pozycję **Visual C++**  > **Windows Desktop**.
 1. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows** .
 1. Zmodyfikuj odpowiednio nazwę projektu, a następnie naciśnij przycisk **OK** , aby otworzyć **Kreatora pulpitu systemu Windows**.
@@ -89,7 +88,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Aby utworzyć formularze MFC lub aplikację opartą na oknach dialogowych
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 1. W obszarze **zainstalowane** szablony wybierz pozycję **Visual C++**  > **MFC**.
 1. Wybierz pozycję **aplikacja MFC** w środkowym okienku.
 1. Kliknij przycisk **dalej** , aby uruchomić **Kreatora aplikacji MFC**.
@@ -102,7 +101,7 @@ Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji MFC opartej na form
 
 Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibliotek MFC, ale działa w oknie konsoli.
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 1. W obszarze **zainstalowane** szablony wybierz pozycję **Visual C++**  > **Win32**.
 1. W środkowym okienku wybierz pozycję **aplikacja konsoli Win32** .
 1. Zmodyfikuj nazwę projektu zgodnie z wymaganiami, a następnie naciśnij przycisk **OK**.
@@ -112,7 +111,7 @@ Aplikacja konsolowa MFC jest programem wiersza polecenia, który korzysta z bibl
 
 Po utworzeniu projektu można wyświetlić pliki utworzone w **Eksplorator rozwiązań**. Aby uzyskać więcej informacji na temat plików tworzonych przez kreatora dla projektu, zobacz plik Readme. txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów C++ programu Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Strony właściwości](../../build/reference/property-pages-visual-cpp.md)

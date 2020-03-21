@@ -17,76 +17,76 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 972478923a7c4c60d8ff949c5532b00a1de1efc0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400768"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075500"
 ---
 # <a name="menu-commands-c"></a>Polecenia menu (C++)
 
-Poniższe informacje są organizowane według **Menu** właściwości, które pojawiają się w [okno właściwości](/visualstudio/ide/reference/properties-window) po wybraniu polecenia menu. Te są wymieniane alfabetycznie mimo że **właściwości** okno umożliwia również wyświetlanie tych właściwości według kategorii.
+Poniższe informacje są zorganizowane zgodnie z właściwościami **menu** , które pojawiają się w [oknie właściwości](/visualstudio/ide/reference/properties-window) po wybraniu polecenia menu. Są one wyświetlane alfabetycznie, mimo że okno **Właściwości** umożliwia również wyświetlanie tych właściwości według kategorii.
 
 |Właściwość|Opis|
 |--------------|-----------------|
-|**BREAK**|Może być jedną z następujących wartości:<br/>  - **Brak**: Bez przerwy. Domyślnie włączone.<br/>  - **Kolumna**: Statyczne menu ta wartość umieszcza polecenie menu w nowym wierszu.<br/>      Ta wartość wyskakujących menu umieszcza polecenia menu w nową kolumnę z nie jednoznaczny kolumn.<br/>      Ustawienie tej właściwości ma wpływ na wygląd menu tylko w czasie wykonywania, nie Edytor menu.<br />   - **Pasek**: Taki sam jak **kolumny** z wyjątkiem sytuacji, menu podręczne tę wartość oddziela nowej kolumny od starego kolumnę z pionowym wierszem.<br/>      Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w **Edytor Menu**.|
-|**Podpis**|Tekst etykiety polecenia menu (Nazwa menu). Aby utworzyć kolekcję liter w podpisie menu poleceń klawisz dostępu, należy poprzedzić handlowe "i" (&).|
-|**Zaznaczone**|Jeśli **True**, polecenia menu jest domyślnie zaznaczone. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
-|**Włączone**|Jeśli **False**, element menu jest wyłączona.|
-|**Wyszarzony**|Jeśli **True**, polecenia menu jest początkowo wygaszone i nieaktywnych. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
-|**Pomoc**|Wyrównuje elementu menu z prawej strony. Wartość domyślna: **FALSE**.<br/><br/>Na przykład **pomocy** polecenia menu jest zawsze po prawej stronie we wszystkich aplikacjach Windows. Jeśli ustawisz tę właściwość, element menu, ten element pojawi się po bardzo prawej stronie i na końcu menu. Dotyczy to elementów najwyższego poziomu.|
-|**Identyfikator**|Symbol zdefiniowany w pliku nagłówkowym. Wpisz: **Symbol**, **całkowitą**, lub **ciąg w cudzysłowach**.<br/><br/>Może używać dowolny symbol, który jest powszechnie dostępne we wszystkich edytory, nawet jeśli [okno właściwości](/visualstudio/ide/reference/properties-window) nie zawiera listy rozwijanej, wybierz z.|
-|**Popup**|Jeśli **True**, polecenia menu jest menu podręczne. Wpisz: **wartość logiczna**. Wartość domyślna: **Wartość true,** najwyższego poziomu menu na pasku menu, w przeciwnym razie **False**.|
-|**wiersz**|Zawiera tekst wyświetlany na pasku stanu wyróżnionego to polecenie menu. Tekst jest umieszczany w tabeli ciągów zawierających ten sam identyfikator jak polecenie menu.<br/><br/>Ta właściwość jest dostępna dla wszystkich typów projektów, ale funkcje środowiska wykonawczego jest określone MFC.|
-|**Wyjustuj do prawej do lewej**|Po prawej stronie uzasadnia polecenia menu na pasku menu w czasie wykonywania. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
-|**Od prawej do lewej kolejności**|Umożliwia polecenia menu wyświetlić od prawej do lewej, gdy interfejs jest zlokalizowane dla dowolnego języka, który odczytuje prawej do lewej, takich jak hebrajskiego i arabskiego.|
-|**Separator**|Jeśli **True**, polecenia menu jest separatorem. Wpisz: **wartość logiczna**. Wartość domyślna: **FALSE**.|
+|**Przerwij**|Może być jedną z następujących wartości:<br/>  - **Brak**: brak przerwy. Domyślnie włączone.<br/>  **kolumna**- : dla statycznych menu, ta wartość umieszcza polecenie menu w nowym wierszu.<br/>      W przypadku menu podręcznych ta wartość umieszcza polecenie menu w nowej kolumnie bez linii podziału między kolumnami.<br/>      Ustawienie tej właściwości wpływa na wygląd menu tylko w czasie wykonywania, a nie w edytorze menu.<br />   **pasek**- : taki sam jak **kolumna** z wyjątkiem, dla menu podręcznych, ta wartość oddziela nową kolumnę od starej kolumny linią pionową.<br/>      Ustawienie tej właściwości wpływa na wygląd menu tylko w czasie wykonywania, a nie w **Edytorze menu**.|
+|**Caption**|Tekst, który jest oznakowany poleceniem menu (nazwa menu). Aby wykonać jedną z liter w podpisie polecenia menu, klawisz skrótu, poprzedź go znakiem handlowego "i" (&).|
+|**Dane**|W przypadku opcji **true**polecenie menu jest początkowo zaznaczone. Typ: **bool**. Wartość domyślna: **false**.|
+|**Enabled (Włączone)**|W przypadku **wartości false**element menu jest wyłączony.|
+|**Wygaszone**|W przypadku **wartości true**polecenie menu jest początkowo wyszarzone i nieaktywne. Typ: **bool**. Wartość domyślna: **false**.|
+|**Pomoc**|Wyrównuje element menu w prawo. Wartość domyślna: **false**.<br/><br/>Na przykład polecenie menu **Pomoc** jest zawsze z prawej strony we wszystkich aplikacjach systemu Windows. Jeśli ustawisz tę właściwość w elemencie menu, ten element pojawi się po prawej stronie i na końcu menu. Dotyczy elementów najwyższego poziomu.|
+|**Identyfikator**|Symbol zdefiniowany w pliku nagłówkowym. Type: **symbol**, **Liczba całkowita**lub **ciąg ujęty w cudzysłów**.<br/><br/>Możesz użyć dowolnego symbolu, który jest powszechnie dostępny w którymkolwiek z edytorów, nawet jeśli [okno właściwości](/visualstudio/ide/reference/properties-window) nie zawiera listy rozwijanej, z której można wybrać opcję.|
+|**Okno podręczne**|W przypadku **wartości true**polecenie menu jest menu podręcznym. Typ: **bool**. Wartość domyślna: **true** dla menu najwyższego poziomu na pasku menu, w przeciwnym razie **false**.|
+|**Pytać**|Zawiera tekst, który ma być wyświetlany na pasku stanu, gdy to polecenie menu jest wyróżnione. Tekst zostanie umieszczony w tabeli ciągów z tym samym identyfikatorem co polecenie menu.<br/><br/>Ta właściwość jest dostępna dla dowolnego typu projektu, ale funkcjonalność czasu wykonywania jest specyficzna dla MFC.|
+|**Wyjustuj od prawej do lewej**|Right — Justuje polecenie menu na pasku menu w czasie wykonywania. Typ: **bool**. Wartość domyślna: **false**.|
+|**Kolejnooć od prawej do lewej**|Zezwala na wyświetlanie poleceń menu po lewej stronie, gdy interfejs jest zlokalizowany w dowolnym języku, który odczytuje od prawej do lewej, na przykład hebrajski lub arabski.|
+|**Separator**|W przypadku **wartości true**polecenie menu jest separatorem. Typ: **bool**. Wartość domyślna: **false**.|
 
-## <a name="associate-menu-commands"></a>Kojarzenie poleceń Menu
+## <a name="associate-menu-commands"></a>Kojarzenie poleceń menu
 
-Są często razy polecenia menu a kombinacja klawiszy, Wydaj to samo polecenie program. Polecenia identyczne są wydawane za pomocą **Edytor Menu** można przypisać tego samego identyfikatora zasobu, do polecenia menu i wpis w tabeli klawiszy skrótu aplikacji. Następnie Edytuj [podpis](../windows/menu-command-properties.md) polecenia menu, aby wyświetlić nazwę klawisza skrótu.
+Często zdarza się, aby polecenie menu i kombinację klawiatury były wystawiane przez to samo polecenie programu. Identyczne polecenia są wydawane przy użyciu **edytora menu** do przypisania tego samego identyfikatora zasobu do polecenia menu i do wpisu w tabeli akceleratora aplikacji. Następnie można edytować [podpis](../windows/menu-command-properties.md) polecenia menu, aby wyświetlić nazwę klawisza skrótu.
 
-### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Aby skojarzyć polecenia menu z klawiszem skrótu
+### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Aby skojarzyć polecenie menu z klawiszem skrótu
 
-1. W **Edytor Menu**, wybierz polecenia menu, które ma.
+1. W **Edytorze menu**wybierz odpowiednie polecenie menu.
 
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window), Dodaj nazwę klawisza skrótu do **podpis** właściwości:
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)Dodaj nazwę klawisza skrótu do właściwości **Caption** :
 
-   - Następujący podpis menu Typ sekwencji ucieczki dla karty (\t) tak, aby wszystkie klawisze skrótów menu są pozostawiane wyrównane.
+   - Po podpisie menu wpisz sekwencję ucieczki dla karty (\t), tak aby wszystkie klawisze skrótów menu były wyrównane do lewej.
 
-   - Wpisz nazwę klawisz modyfikujący (**Ctrl**, **Alt**, lub **Shift**) ze znakiem plus ( **+** ) i nazwę, litery, lub symbol dodatkowy klucz.
+   - Wpisz nazwę klawisza modyfikującego (**Ctrl**, **Alt**lub **SHIFT**), po którym następuje znak plusa ( **+** ) oraz nazwę, literę lub symbol dodatkowego klucza.
 
-   Na przykład, aby przypisać **Ctrl**+**O** do **Otwórz** polecenie **pliku** menu modyfikowanie polecenia menu  **Podpis** tak, aby wyglądało następujący tekst:
+   Na przykład, aby przypisać **klawisz Ctrl**+**o** do polecenia **Otwórz** w menu **plik** , należy zmodyfikować **podpis** polecenia menu, tak aby wyglądał następująco:
 
    ```
    &Open...\tCtrl+O
    ```
 
-   Polecenia menu w **Edytor Menu** zostanie zaktualizowany w celu odzwierciedlenia nowy podpis w trakcie pisania.
+   Polecenie menu w **Edytorze menu** jest aktualizowane w celu odzwierciedlenia nowego podpisu podczas jego wpisywania.
 
-1. [Tworzenie wpisu tabeli akceleratora](../windows/adding-an-entry-to-an-accelerator-table.md) w **akceleratora** edytora i przypisać ją w taki sam identyfikator jak polecenie menu. Użyj kombinacji klawiszy, które uważasz, że będzie łatwa do zapamiętania.
+1. [Utwórz wpis akceleratora w tabeli](../windows/adding-an-entry-to-an-accelerator-table.md) w edytorze **akceleratora** i przypisz go do tego samego identyfikatora co polecenie menu. Skorzystaj z kombinacji klawiszy, którą myślisz.
 
-Aplikacja MFC można wyświetlić tekst opisu dla każdego polecenia menu, które użytkownik może wybrać. Wyświetlić tekst opisu, przypisując ciąg tekstowy do każdego menu polecenie przy użyciu **monitu** właściwość **właściwości** okna. Jeśli w ciągu [tabeli ciągów](../windows/string-editor.md) których identyfikator jest taki sam jak polecenia, aplikacji MFC będą automatycznie wyświetlać ten zasób ciąg w pasku stanu w uruchomionej aplikacji po użytkownik myszy nad element menu.
+Aplikacja MFC może wyświetlać tekst opisowy dla każdego polecenia menu, które użytkownik może wybrać. Wyświetlanie tekstu opisowego przez przypisanie ciągu tekstowego do każdego polecenia menu przy użyciu właściwości **monitu** w oknie **Właściwości** . Jeśli w [tabeli ciągów](../windows/string-editor.md) znajduje się ciąg, którego identyfikator jest taki sam jak polecenie, aplikacja MFC automatycznie wyświetli ten zasób ciągu na pasku stanu uruchomionej aplikacji, gdy użytkownik umieści wskaźnik myszy nad elementem menu.
 
-- Aby skojarzyć polecenia menu z stanu paska ciąg tekstowy w aplikacjach MFC w **Edytor Menu**, wybierz polecenie menu. W [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz tekst skojarzony z nim stan paska w **monitu** pole.
+- Aby skojarzyć polecenie menu z ciągiem tekstowym paska stanu w aplikacjach MFC, w **Edytorze menu**wybierz polecenie menu. W [oknie właściwości](/visualstudio/ide/reference/properties-window)wpisz skojarzony tekst paska stanu w polu **monit** .
 
-W projekcie w języku C++ klawisza dostępu (Mnemonik, który umożliwia użytkownikowi wybranie w menu za pomocą klawiatury) można przypisać do menu i poleceń menu.
+W C++ projekcie można przypisać klucz dostępu (element, który umożliwia użytkownikowi wybranie menu za pomocą klawiatury) do menu i poleceń menu.
 
-- Aby przypisać klawisza dostępu (skrót), polecenia menu, wpisz znak (`&`) przed litery w nazwie menu lub nazwa polecenia, aby określić tę literę jako odpowiedniego klucza dostępu. 
+- Aby przypisać klucz dostępu (skrót) do polecenia menu, wpisz znak handlowego "i" (`&`) przed literą w nazwie menu lub nazwie polecenia, aby określić tę literę jako odpowiedni klucz dostępu.
 
-   Na przykład "& plik" ustawia **Alt**+**F** jako klawisza skrótu dla **pliku** menu w aplikacji napisanych dla Microsoft Windows.
+   Na przykład "& plik" ustawia **Alt**+**F** jako klawisz skrótu menu **plik** w aplikacjach utworzonych dla systemu Microsoft Windows.
 
-   Element menu będzie udostępniać widoczne oznaką jedna z liter ma do niej przypisany klawisz skrótu. Następujące list, zostaną wyświetlone handlowe "i" podkreślone (warunkowe w systemie operacyjnym).
+   Element menu zapewni widoczną kontrolkę, do której jeden z liter ma przypisany klawisz skrótu. Litera po znaku "handlowe" będzie wyświetlana jako podkreślona (w zależności od systemu operacyjnego).
 
 > [!NOTE]
-> Upewnij się, wszystkie klucze dostępu w menu są unikatowe, klikając prawym przyciskiem myszy menu i wybierając pozycję **Sprawdź mnemonik**.
+> Upewnij się, że wszystkie klucze dostępu w menu są unikatowe, klikając prawym przyciskiem myszy menu i wybierając pozycję **zaznacz**.
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytor menu](../windows/menu-editor.md)
 

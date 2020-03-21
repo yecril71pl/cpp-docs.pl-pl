@@ -3,16 +3,16 @@ title: Wyrównanie
 description: Sposób wyrównania danych w nowoczesnej C++.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443666"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076114"
 ---
 # <a name="alignment"></a>Wyrównanie
 
-Jedną z funkcji niskiego poziomu systemu C++ jest możliwość określania precyzyjnego wyrównania obiektów w pamięci w celu maksymalnego wykorzystania konkretnej architektury sprzętu. Domyślnie kompilator wyrównuje elementy członkowskie klasy i struktury według ich wartości rozmiaru: `bool` i `char` na granicach 1-bajtowych, `short` na granicach 2-bajtowych, `int`, `long`i `float` na granicach 4-bajtowych, a `long long`, `double`i `long double` przy 8-bajtowych granicach. 
+Jedną z funkcji niskiego poziomu systemu C++ jest możliwość określania precyzyjnego wyrównania obiektów w pamięci w celu maksymalnego wykorzystania konkretnej architektury sprzętu. Domyślnie kompilator wyrównuje elementy członkowskie klasy i struktury według ich wartości rozmiaru: `bool` i `char` na granicach 1-bajtowych, `short` na granicach 2-bajtowych, `int`, `long`i `float` na granicach 4-bajtowych, a `long long`, `double`i `long double` przy 8-bajtowych granicach.
 
 W większości scenariuszy nigdy nie trzeba być wyrównaniu, ponieważ domyślne wyrównanie jest już optymalne. W niektórych przypadkach można jednak uzyskać znaczące ulepszenia wydajności lub oszczędności pamięci, określając niestandardowe wyrównanie struktur danych. Przed uruchomieniem programu Visual Studio 2015 można użyć słów kluczowych określonych przez firmę Microsoft `__alignof` i `declspec(alignas)`, aby określić wyrównanie większe niż domyślne. Począwszy od programu Visual Studio 2015 należy używać standardowych słów kluczowych języka C++ 11 **alignof** i **alignas** w celu uzyskania maksymalnej przenośności kodu. Nowe słowa kluczowe działają w taki sam sposób, jak w przypadku rozszerzeń specyficznych dla firmy Microsoft. Dokumentacja tych rozszerzeń dotyczy również nowych słów kluczowych. Aby uzyskać więcej informacji, zobacz [__Alignof operatora](../cpp/alignof-operator.md) i [align](../cpp/align-cpp.md). Standard nie określa zachowania pakowania w przypadku granic mniejszych niż domyślne ustawienia kompilatora dla platformy docelowej, dlatego w takim przypadku nadal trzeba używać pakietu Microsoft #pragma Pack. [pack](../preprocessor/pack.md) C++
 

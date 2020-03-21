@@ -3,16 +3,16 @@ title: Udostępnianie lub ponowne używanie ustawień projektu programu Visual S
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303209"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078707"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Udostępnianie lub ponowne używanie ustawień projektów programu Visual Studio
 
-Aby utworzyć niestandardową grupę ustawień, które można udostępniać innym osobom lub użyć ich ponownie w wielu projektach, użyj **Menedżer właściwości** , aby utworzyć *Arkusz właściwości* (. props) do przechowywania ustawień dla każdego rodzaju projektu, które mają być możliwe do ponownego użycia lub udostępnienia innym osobom. Używanie arkuszy właściwości jest znacznie mniej podatne na błędy niż inne sposoby tworzenia ustawień globalnych. 
+Aby utworzyć niestandardową grupę ustawień, które można udostępniać innym osobom lub użyć ich ponownie w wielu projektach, użyj **Menedżer właściwości** , aby utworzyć *Arkusz właściwości* (. props) do przechowywania ustawień dla każdego rodzaju projektu, które mają być możliwe do ponownego użycia lub udostępnienia innym osobom. Używanie arkuszy właściwości jest znacznie mniej podatne na błędy niż inne sposoby tworzenia ustawień globalnych.
 
 > [!IMPORTANT]
 > **pliki. User i dlaczego są problematyczne**

@@ -23,74 +23,73 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aeaf435874b6d6b9dbc8a3d12ec06d38bf33aaae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316291"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078261"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format informacji o debugowaniu)
 
-Określa typ informacji o debugowaniu utworzonych dla programu, czy te informacje są przechowywane w plikach obiektowych lub w pliku bazy danych (PDB) programu.
+Określa typ informacji o debugowaniu utworzonych dla programu oraz tego, czy te informacje są przechowywane w plikach obiektów, czy w pliku bazy danych programu (PDB).
 
 ## <a name="syntax"></a>Składnia
 
-> **/Z**{**7**|**i**|**I**}
+> **/Z**{**7**|**i**|**i**}
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kod jest skompilowany i wbudowane w trybie debugowania, kompilator generuje nazwy symboli dla funkcji i zmiennych, informacje o typie i lokalizacje numeru wiersza na potrzeby używania przez debuger. Ta symboliczne informacje debugowania można dołączyć, w plikach obiektowych (.obj pliki) generowany przez kompilator lub w oddzielnym pliku PDB (plik .pdb) dla pliku wykonywalnego.  W poniższych sekcjach opisano opcje formatu informacji debugowania.
+Gdy kod jest kompilowany i skompilowany w trybie debugowania, kompilator tworzy nazwy symboli dla funkcji i zmiennych, informacje o typie i lokalizacje numerów wierszy do użycia przez debuger. Te informacje dotyczące debugowania symbolicznego mogą być zawarte w plikach obiektów (. obj) generowanych przez kompilator lub w osobnym pliku PDB (plik. pdb) dla pliku wykonywalnego.  Opcje formatu informacji debugowania są opisane w poniższych sekcjach.
 
-### <a name="none"></a>Brak
+### <a name="none"></a>None
 
-Domyślnie jeśli określono żadnej opcji formatu informacji debugowania, kompilator generuje nie informacji o debugowaniu, więc kompilacja jest szybsza.
+Domyślnie, jeśli nie określono opcji Format informacji debugowania, kompilator nie tworzy informacji o debugowaniu, więc kompilacja jest szybsza.
 
 ### <a name="z7"></a>/Z7
 
-**/Z7** opcja tworzy plików obiektów, które również zawierać pełne symboliczne informacje debugowania do użytku z debugerem. Tych plików obiektów i wbudowanych pliku wykonywalnego może być znacznie większe niż pliki, których żadnych informacji debugowania. Symboliczne informacje debugowania zawierają nazwy i typy zmiennych, jak również funkcje i numery wierszy. Plik PDB nie jest generowany.
+Opcja **/Z7** tworzy pliki obiektów, które zawierają również pełne symboliczne informacje o debugowaniu do użycia z debugerem. Te pliki obiektów i skompilowany plik wykonywalny mogą być znacznie większe niż pliki, które nie mają informacji o debugowaniu. Symboliczne informacje debugowania obejmują nazwy i typy zmiennych, a także funkcje i numery wierszy. Nie jest tworzony żaden plik PDB.
 
-Dla dystrybutorów bibliotek innych firm wersje do debugowania ma swoją zaletę nieposiadanie pliku PDB. Jednak pliki obiektów dla dowolnego wstępnie skompilowanych nagłówków są niezbędne w fazie biblioteki, a także do debugowania. Jeśli jest tylko typ informacji (i nie ma kodu) w pliku obiektu .pch, musisz również użyć [/Yl (wstrzyknąć Odnośnik PCH dla bibliotek debugowania)](yl-inject-pch-reference-for-debug-library.md) opcja, która jest domyślnie włączone, podczas kompilowania biblioteki.
+W przypadku dystrybutorów wersji debugowania bibliotek innych firm istnieje możliwość, że nie ma pliku PDB. Jednak pliki obiektów dla wszystkich prekompilowanych nagłówków są niezbędne podczas fazy linku biblioteki i debugowania. Jeśli istnieje tylko informacja o typie (i brak kodu) w pliku obiektu PCH, należy również użyć opcji [/yl (wstrzyknięcie odwołania PCH dla biblioteki debugowania)](yl-inject-pch-reference-for-debug-library.md) , która jest domyślnie włączona podczas kompilowania biblioteki.
 
-Przestarzała [/Gm (Włącz minimalną ponowną kompilację)](gm-enable-minimal-rebuild.md) opcja jest niedostępna, gdy **/z7** jest określony.
+Przestarzała opcja [/GM (Włącz minimalną](gm-enable-minimal-rebuild.md) ponowną kompilację) nie jest dostępna, jeśli określono **/Z7** .
 
 ### <a name="zi"></a>/Zi
 
-**/Zi** opcja generuje oddzielny plik PDB, który zawiera wszystkie symboliczne informacje debugowania do użytku z debugerem. Informacje o debugowaniu nie znajduje się w plikach obiektowych lub pliku wykonywalnego, co sprawia, że ich znacznie mniejszy.
+Opcja **/Zi** generuje oddzielny plik PDB, który zawiera wszystkie symboliczne informacje o debugowaniu do użycia z debugerem. Informacje o debugowaniu nie są zawarte w plikach obiektów lub pliku wykonywalnym, co sprawia, że są znacznie mniejsze.
 
-Korzystanie z **/zi** nie wpływa na optymalizację. Jednak **/zi** oznaczają **/debug**; zobacz [/Debug (generowanie informacji debugowania)](debug-generate-debug-info.md) Aby uzyskać więcej informacji.
+Korzystanie z **/Zi** nie wpływa na optymalizacje. **/Zi** jest jednak oznacza **/Debug**; Aby uzyskać więcej informacji, zobacz [/debug (generowanie informacji o debugowaniu)](debug-generate-debug-info.md) .
 
-Po określeniu zarówno **/zi** i **/CLR**, <xref:System.Diagnostics.DebuggableAttribute> atrybut nie jest umieszczany w metadanych zestawu. Jeśli chcesz go, należy określić go w kodzie źródłowym. Ten atrybut może wpłynąć na wydajność wykonywania aplikacji. Aby uzyskać więcej informacji o tym, jak **Debuggable** atrybut ma wpływ na wydajność i jak można zmodyfikować ten wpływ na wydajność, zobacz [ułatwianie obrazu do debugowania](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
+Po określeniu zarówno **/Zi** , jak i **/CLR**atrybut <xref:System.Diagnostics.DebuggableAttribute> nie jest umieszczany w metadanych zestawu. Jeśli chcesz, musisz określić ją w kodzie źródłowym. Ten atrybut może mieć wpływ na wydajność środowiska uruchomieniowego aplikacji. Aby uzyskać więcej informacji o tym, jak atrybut **możliwością debugowania** ma wpływ na wydajność i jak można zmodyfikować wpływ na wydajność, zobacz [Ułatw debugowanie obrazu](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
-Kompilator nazywa plik PDB *projektu*.pdb. Jeśli skompilujesz plik spoza projektu, kompilator tworzy plik PDB o nazwie VC*x*.pdb, gdzie *x* jest łączenie numer wersji głównych i pomocniczych używanej wersji kompilatora. Kompilator osadza nazwę PDB i identyfikujące podpisu oznaczony sygnaturą czasową w każdym pliku obiektów utworzonych za pomocą tej opcji, które wskazuje debugera do lokalizacji informacje symboliczne i numer wiersza. Nazwa i podpis w pliku PDB musi być zgodny plik wykonywalny dla symboli, które zostały załadowane w debugerze. Debuger WinDBG załadować symbole niedopasowanych przy użyciu `.symopt+0x40` polecenia. Program Visual Studio nie ma opcji podobny, aby załadować symbole niezgodne.
+Kompilator nazywa plik PDB pliku *Project*. pdb. Jeśli kompilujesz plik poza projektem, kompilator tworzy plik PDB o nazwie VC*x*. pdb, gdzie *x* jest konkatenacją głównego i pomocniczego numeru wersji używanej przez wersję kompilatora. Kompilator osadza nazwę PDB i identyfikujący podpis sygnatury czasowej w każdym pliku obiektu utworzonym za pomocą tej opcji, który wskazuje na lokalizację symboliczną i informacje o liczbie wierszy. Nazwa i podpis w pliku PDB muszą być zgodne z plikiem wykonywalnym dla symboli, które mają zostać załadowane w debugerze. Debuger WinDBG może załadować niezgodne symbole przy użyciu polecenia `.symopt+0x40`. Program Visual Studio nie ma podobnej opcji do ładowania niezgodnych symboli.
 
-Jeśli tworzysz bibliotekę z obiektów, które zostały skompilowane przy użyciu **/zi**, skojarzony plik .pdb musi być dostępny, gdy biblioteka jest połączone z programem. W związku z tym jeśli rozpowszechniasz bibliotekę, musisz również rozpowszechniać pliku PDB. Aby utworzyć bibliotekę, która zawiera informacje o debugowaniu bez używania plików PDB, należy wybrać **/z7** opcji. Jeśli używasz opcji wstępnie skompilowanych nagłówków, debugowanie informacji zarówno dla prekompilowanego pliku nagłówkowego i pozostałej części kodu źródłowego jest umieszczany w pliku PDB.
+Jeśli utworzysz bibliotekę z obiektów, które zostały skompilowane przy użyciu **/Zi**, skojarzony plik. pdb musi być dostępny, gdy biblioteka jest połączona z programem. W ten sposób, jeśli dystrybuujesz bibliotekę, musisz również rozproszyć plik PDB. Aby utworzyć bibliotekę, która zawiera informacje o debugowaniu bez używania plików PDB, należy wybrać opcję **/Z7** . Jeśli używasz opcji prekompilowanych nagłówków, informacje debugowania dla prekompilowanego nagłówka i reszty kodu źródłowego są umieszczane w pliku PDB.
 
 ### <a name="zi"></a>/ZI
 
-**/Zi** opcja jest podobna do **/zi**, ale tworzy plik PDB w formacie, który obsługuje [Edytuj i Kontynuuj](/visualstudio/debugger/edit-and-continue-visual-cpp) funkcji. Aby użyć polecenia Edytuj i Kontynuuj debugowanie funkcji, należy użyć tej opcji. Funkcja Edytuj i Kontynuuj jest przydatne w przypadku pracy deweloperskiej, ale mogą powodować problemy w zgodności rozmiar, wydajności i kompilator kodu. Ponieważ większość optymalizacji jest niezgodnych z funkcją Edytuj i Kontynuuj, za pomocą **/zi** wyłącza wszelkie `#pragma optimize` instrukcji w kodzie. **/Zi** opcja również jest niezgodna z użyciem [ &#95; &#95;wiersza&#95; &#95; wstępnie zdefiniowane makro](../../preprocessor/predefined-macros.md); kodu skompilowanego z **/zi** nie można użyć **&#95; &#95;Wiersza&#95; &#95;** jako argument szablonu bez typu, mimo że **&#95; &#95;wiersza&#95; &#95;** mogą być używane w makrze rozszerzenia.
+Opcja **/Zi** jest podobna do **/Zi**, ale tworzy plik PDB w formacie, który obsługuje funkcję [Edytuj i Kontynuuj](/visualstudio/debugger/edit-and-continue-visual-cpp) . Aby korzystać z funkcji Edytuj i Kontynuuj debugowanie, należy użyć tej opcji. Funkcja Edytuj i Kontynuuj jest przydatna w przypadku produktywności dla deweloperów, ale może powodować problemy w rozmiarze kodu, wydajności i zgodności kompilatora. Ponieważ większość optymalizacji jest niezgodna z funkcją Edytuj i Kontynuuj, użycie **/Zi** wyłącza wszystkie instrukcje `#pragma optimize` w kodzie. Opcja **/Zi** jest również niezgodna z użyciem [ &#95; &#95;wstępnie zdefiniowanego&#95; &#95; makra wiersza](../../preprocessor/predefined-macros.md); kod skompilowany za pomocą elementu **/Zi** nie może używać **&#95; &#95;linii&#95;** jako argumentu szablonu bez typu,  **&#95; &#95;chociaż&#95; wiersz** może być używany w rozwinięcia makra.
 
-**/Zi** opcja wymusza zarówno [/Gy (Włącz łączenie poziomie funkcji)](gy-enable-function-level-linking.md) i [/FC (pełna ścieżka z pliku kodu źródłowego w diagnostyce)](fc-full-path-of-source-code-file-in-diagnostics.md) opcje, które zostaną użyte w kompilacji.
+Opcja **/Zi** wymusza zarówno [/Gy (Włącz łączenie na poziomie funkcji)](gy-enable-function-level-linking.md) , jak i [/FC (pełną ścieżkę pliku kodu źródłowego w diagnostyce)](fc-full-path-of-source-code-file-in-diagnostics.md) , który będzie używany w kompilacji.
 
-**/ Zi** nie jest zgodny z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](clr-common-language-runtime-compilation.md).
+**/Zi** nie jest zgodna z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> **/Zi** opcja jest dostępna tylko w kompilatorach przeznaczonych dla procesorów x86 i x64; tę opcję kompilatora nie jest dostępna w kompilatorach przeznaczonych dla procesorów ARM.
+> Opcja **/Zi** jest dostępna tylko w kompilatorach przeznaczonych dla procesorów x86 i x64; Ta opcja kompilatora nie jest dostępna w kompilatorach przeznaczonych dla procesorów ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
+1. Otwórz okno **Właściwości konfiguracji** > **C/C++**  > **Ogólne** strony właściwości.
 
-1. Modyfikowanie **formatu informacji debugowania** właściwości. Wybierz **OK** Aby zapisać zmiany.
+1. Zmodyfikuj właściwość **Format informacji o debugowaniu** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
-

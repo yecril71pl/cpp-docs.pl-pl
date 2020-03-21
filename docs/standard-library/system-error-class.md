@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-ms.openlocfilehash: 3f544cac1835a5a01e4d287cee1084bc56141716
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a18d2f9f229a62a539be072870e38a990677636
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246242"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076360"
 ---
-# <a name="systemerror-class"></a>system_error — Klasa
+# <a name="system_error-class"></a>system_error — Klasa
 
-Reprezentuje klasę bazową dla wszystkich wyjątków generowanych, aby zgłosić błąd systemowy niskiego poziomu.
+Reprezentuje klasę bazową dla wszystkich wyjątków zgłoszonych w celu zgłaszania błędu systemu niskiego poziomu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +25,7 @@ class system_error : public runtime_error {
     system_error(error_code _Errcode, const char *_Message);
     system_error(error_code::value_type _Errval, const error_category& _Errcat, const string& _Message);
     system_error(error_code::value_type _Errval, const error_category& _Errcat, const char *_Message);
-    
+
     const error_code& code() const throw();
     const char* what() const noexcept override;
 };
@@ -33,6 +33,6 @@ class system_error : public runtime_error {
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt `what` w klasie [wyjątek](../standard-library/exception-class.md) jest zbudowany z `_Message` i przechowywany obiekt typu [error_code](../standard-library/error-code-class.md) (albo `code` lub `error_code(_Errval, _Errcat)`).
+Wartość zwrócona przez `what` w [wyjątku](../standard-library/exception-class.md) klasy jest tworzona z `_Message` i przechowywanego obiektu typu [error_code](../standard-library/error-code-class.md) (`code` lub `error_code(_Errval, _Errcat)`).
 
-Funkcja elementu członkowskiego `code` zwraca przechowywaną [error_code](../standard-library/error-code-class.md) obiektu.
+Funkcja członkowska `code` zwraca przechowywany obiekt [error_code](../standard-library/error-code-class.md) .

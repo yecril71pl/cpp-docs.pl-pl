@@ -7,86 +7,86 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5e31105e682e8acecbdc0da461614fc46e4ae227
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707813"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079773"
 ---
 # <a name="sql"></a>SQL
 
-SQL (Structured Query Language) jest sposób komunikowania się z relacyjnej bazy danych, który pozwala zdefiniować zapytanie, modyfikować i kontrolowanie danych. Przy użyciu składni SQL, można skonstruować instrukcję, która wyodrębnia rekordów zgodnie z kryteriami, które określisz.
+SQL (Structured Query Language) to sposób komunikowania się z relacyjną bazą danych, która umożliwia definiowanie, wykonywanie zapytań, modyfikowanie i kontrolowanie danych. Przy użyciu składni SQL, można utworzyć instrukcję, która wyodrębnia rekordy zgodnie z określonymi kryteriami.
 
 > [!NOTE]
->  Te informacje dotyczą klas MFC ODBC. Pracy przy użyciu klas MFC DAO, zobacz temat porównania programu Microsoft Jet aparat SQL Database i ANSI SQL w Pomocy programu DAO.
+>  Te informacje dotyczą klas MFC ODBC. Jeśli pracujesz z klasami MFC DAO, zapoznaj się z tematem porównanie usługi Microsoft Jet Database Engine SQL i ANSI SQL w pomocy DAO.
 
-Instrukcje SQL zaczynają się od zlecenie — słowo kluczowe takich jak **Utwórz** lub **wybierz**. SQL jest bardzo zaawansowanym językiem; pojedynczej instrukcji może mieć wpływ na całą tabelę.
+Instrukcje SQL zaczynają się od zlecenia słowa kluczowego, takiego jak **Create** lub **SELECT**. SQL to bardzo zaawansowany język; Pojedyncza instrukcja może mieć wpływ na całą tabelę.
 
-Istnieje wiele wersji programu SQL Server, każde rozwinięte z określonego systemu DBMS na uwadze. Klasy bazy danych MFC rozpoznaje zestaw instrukcji SQL, które odnosi się do X / Open i specyfikacja wersja robocza SQL dostępu grupy typowych aplikacji środowiska wspomaganych Komputerowo SQL (1991). Aby uzyskać informacje na temat składni te instrukcje, zobacz dodatek C w *ODBC SDK* *odwołania programisty* na dysku CD z biblioteki MSDN.
+Istnieje wiele wersji programu SQL, z których każdy został opracowany z konkretnym systemem DBMS. Klasy baz danych MFC rozpoznają zestaw instrukcji SQL, które są zgodne ze specyfikacją projektu X/Open i Microsoft Access Group Common Applications Environment (CAE) SQL (1991). Aby uzyskać informacje na temat składni tych instrukcji, zobacz Dodatek C w *dokumentacji programisty* *zestawu ODBC SDK* na dysku CD biblioteki MSDN.
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
 - [Relacja między ODBC i SQL](#_core_open_database_connectivity_.28.odbc.29).
 
-- [Najbardziej typowe słów kluczowych SQL używane przez klasy bazy danych](#_core_the_database_classes).
+- [Najpopularniejsze słowa kluczowe SQL używane przez klasy baz danych](#_core_the_database_classes).
 
-- [Jak korzystanie z klas baz danych SQL](#_core_how_the_database_classes_use_sql).
+- [Jak klasy baz danych używają języka SQL](#_core_how_the_database_classes_use_sql).
 
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
+##  <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)
 
-Klasy bazy danych są implementowane za pomocą ODBC, która używa języka SQL w poziomie wywołań za pomocą interfejsu zamiast osadzania poleceń SQL w kodzie. ODBC używa języka SQL do komunikowania się z [źródła danych](../../data/odbc/data-source-odbc.md) za pomocą sterowników ODBC. Te sterowniki interpretacji języka SQL i tłumaczenie, jeśli to konieczne, do użycia w formacie określonej bazy danych, takich jak program Microsoft Access. Aby uzyskać więcej informacji o używaniu ODBC SQL, zobacz [ODBC](../../data/odbc/odbc-basics.md) i zestawu SDK ODBC *odwołania programisty* na dysku CD z biblioteki MSDN.
+Klasy baz danych są implementowane za pomocą ODBC, która używa języka SQL w interfejsie na poziomie wywołań zamiast osadzania poleceń SQL w kodzie. ODBC używa programu SQL do komunikowania się ze [źródłem danych](../../data/odbc/data-source-odbc.md) za pośrednictwem sterowników ODBC. Te sterowniki interpretują dane SQL i tłumaczą je, w razie potrzeby, do użycia z określonym formatem bazy danych, takim jak Microsoft Access. Aby uzyskać więcej informacji na temat sposobu korzystania z programu SQL, zobacz [ODBC](../../data/odbc/odbc-basics.md) i informacje dotyczące programu ODBC SDK *programisty* na dysku CD biblioteki MSDN.
 
-##  <a name="_core_the_database_classes"></a> Klasy bazy danych
+##  <a name="database-classes"></a><a name="_core_the_database_classes"></a>Klasy baz danych
 
-> [!NOTE] 
-> Kreator konsumenta interfejsu ODBC MFC nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Nadal można utworzyć odbiorcę ręcznie.
+> [!NOTE]
+> Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
 
-Klasy bazy danych są przeznaczone do umożliwiają manipulowanie i aktualizowanie danych w istniejącym [źródła danych](../../data/odbc/data-source-odbc.md). [Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (dostępne za pośrednictwem **Dodaj klasę**), i klasy baz danych konstruowania większość instrukcji SQL dla Ciebie.
+Klasy baz danych umożliwiają manipulowanie i aktualizowanie danych w istniejącym [źródle danych](../../data/odbc/data-source-odbc.md). [Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Kreator użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (dostęp za pośrednictwem **klasy Add Class**) i klasy baz danych konstruują większość instrukcji SQL.
 
-Klasy bazy danych użyj części programu SQL Server, znane jako język manipulacji danych (DML). Te polecenia pozwalają pracować w całości lub części źródła danych, dodawać nowe rekordy, edytowania rekordów i usuwania rekordów. W poniższej tabeli wymieniono najbardziej typowe słów kluczowych SQL, i sposoby klas baz danych, używać ich.
+Klasy baz danych używają części programu SQL znanej jako język manipulowania danymi (DML). Te polecenia pozwalają korzystać z wszystkich lub części źródła danych, dodawać nowe rekordy, edytować rekordy i usuwać rekordy. W poniższej tabeli wymieniono najpopularniejsze słowa kluczowe SQL i sposoby ich używania przez klasy baz danych.
 
 ### <a name="some-common-sql-keywords"></a>Niektóre typowe słowa kluczowe SQL
 
-|SQL — słowo kluczowe|Kreatory i klasy baz danych go używać|
+|Słowo kluczowe SQL|Kreatorzy i klasy baz danych używają go|
 |-----------------|---------------------------------------------|
-|**SELECT**|Aby zidentyfikować, które tabele i kolumny w źródle danych mają być używane.|
-|**WHERE**|Aby zastosować filtr, który Zawęża zaznaczenie.|
-|**ORDER BY**|Aby zastosować kolejność sortowania do zestawu rekordów.|
-|**INSERT**|Aby dodać nowych rekordów do zestawu rekordów.|
-|**USUŃ**|Do usuwania rekordów z zestawu rekordów.|
-|**UPDATE**|Aby zmodyfikować pola rekordu.|
+|**SELECT**|Aby określić, które tabele i kolumny w źródle danych mają być używane.|
+|**WHERE**|Aby zastosować filtr, który zawęża zaznaczenie.|
+|**ORDER BY**|Aby zastosować porządek sortowania do zestawu rekordów.|
+|**INSERT**|Aby dodać nowe rekordy do zestawu rekordów.|
+|**DELETE**|Aby usunąć rekordy z zestawu rekordów.|
+|**AKTUALIZACJI**|Aby zmodyfikować pola rekordu.|
 
-Oprócz klas baz danych rozpoznaje ODBC **WYWOŁANIA** instrukcji, których można użyć, aby wywołać wstępnie zdefiniowanego zapytania (lub procedura składowana) dla niektórych źródeł danych. Sterownik bazy danych ODBC interpretuje tych instrukcji i zastępuje tego polecenia odpowiednio dla każdego systemu DBMS.
+Ponadto klasy baz danych rozpoznają instrukcje **wywołania** ODBC, których można użyć do wywołania wstępnie zdefiniowanego zapytania (lub procedury składowanej) dla niektórych źródeł danych. Sterownik bazy danych ODBC interpretuje te instrukcje i zastępuje polecenie odpowiednie dla każdego systemu DBMS.
 
 > [!NOTE]
->  Nie wszystkie obsługują systemów DBMS **WYWOŁANIA** instrukcji.
+>  Nie wszystkie systemy DBMS obsługują instrukcje **wywoływania** .
 
-Jeśli klasy nie może rozpoznać oświadczenie dostarczone przez użytkownika w `CRecordset::Open`, będzie interpretowany jako nazwy tabeli.
+Jeśli klasy nie mogą rozpoznać instrukcji dostarczonej przez użytkownika w `CRecordset::Open`, jest interpretowana jako nazwa tabeli.
 
-Wyjaśnienie, jak struktura konstruuje instrukcje SQL, można zobaczyć [zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Aby dowiedzieć się, jak struktura konstruuje instrukcje SQL, zobacz [zestaw rekordów: jak zestawy rekordów wybierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Bazy danych SQL używać typów danych, podobne do tych w C i C++. Omówienie tych podobieństwa, zobacz [SQL: Program SQL oraz typów danych języka C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Bazy danych SQL używają typów danych podobnych do tych używanych w języku C++C i. Aby poznać te podobieństwa, zobacz [SQL: SQL i C++ typy danych (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-Można znaleźć więcej informacji na temat języka SQL, w tym listę obsługiwanych instrukcji języka SQL, typy danych, Gramatyka języka SQL podstawowych i przeczytania zalecane publikacji o SQL, w *ODBC SDK* *Podręcznik programisty*  na dysku CD z biblioteki MSDN.
+Więcej informacji na temat programu SQL, w tym listę obsługiwanych instrukcji SQL, typów danych, gramatyki SQL Core i odczytywanie listy zalecanych publikacji dotyczących języka SQL, znajduje się w *dokumentacji programisty* *zestawu ODBC* na dysku CD biblioteki MSDN.
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> Jak korzystanie z klas baz danych SQL
+##  <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a>Jak klasy baz danych używają języka SQL
 
-Zestawy rekordów, które pochodzą z klasy bazy danych używanie ODBC do komunikowania się ze źródłem danych, a ODBC pobiera rekordy ze źródła danych, wysyłając instrukcji języka SQL. W tym temacie opisano relację między klasami bazy danych i SQL.
+Zestawy rekordów pochodne od klas baz danych używają ODBC do komunikowania się ze źródłem danych, a ODBC pobiera rekordy ze źródła danych przez wysłanie instrukcji SQL. W tym temacie opisano relację między klasami baz danych i SQL.
 
-Zestaw rekordów konstruuje instrukcji języka SQL, budowanie rodzajów instrukcję SQL do `CString`. Ten ciąg jest konstruowany jako **wybierz** instrukcję, która zwraca zestaw rekordów.
+Zestaw rekordów tworzy instrukcję SQL, tworząc fragmenty instrukcji SQL w `CString`. Ciąg jest konstruowany jako instrukcja **SELECT** , która zwraca zestaw rekordów.
 
-Gdy zestaw rekordów wywołuje ODBC, aby wysłać instrukcję SQL do źródła danych, Menedżera sterowników ODBC przekazuje instrukcji ze sterownikiem ODBC i sterownik wysyła je do odpowiedniego systemu DBMS. Systemu DBMS zwraca zestaw wyników rekordów i sterownik ODBC zwraca rekordy do aplikacji. Klasy bazy danych umożliwiają dostęp programu zestawu wyników w bezpieczny klasy języka C++ jest pochodną `CRecordset`.
+Gdy zestaw rekordów wywołuje ODBC w celu wysłania instrukcji SQL do źródła danych, Menedżer sterowników ODBC przekazuje instrukcję do sterownika ODBC, a sterownik wysyła go do bazowego systemu DBMS. System DBMS zwraca zestaw wyników rekordów, a sterownik ODBC zwraca rekordy do aplikacji. Klasy baz danych pozwalają programowi na dostęp do zestawu wyników w klasie z bezpiecznym C++ typem pochodzącym z `CRecordset`.
 
-Więcej informacji na temat sposobu korzystanie z klas baz danych SQL można znaleźć w następujących tematach:
+Poniższe tematy zawierają więcej informacji na temat używania języka SQL przez klasy baz danych:
 
-- [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL: typy danych SQL i C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
 - [SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Podstawy ODBC](../../data/odbc/odbc-basics.md)

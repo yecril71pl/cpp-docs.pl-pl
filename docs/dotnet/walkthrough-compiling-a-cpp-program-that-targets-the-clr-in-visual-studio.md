@@ -1,6 +1,6 @@
 ---
-title: Skompilować C++sposób niezamierzony Program, który jest przeznaczony dla środowiska CLR
-description: Użyj usługi Microsoft C++ do tworzenia programów i bibliotek, które można połączyć z natywnych C++ kodu i programy platformy .NET.
+title: Kompiluj program C++/CLI, który jest przeznaczony dla środowiska CLR
+description: Użyj firmy C++ Microsoft do tworzenia programów i bibliotek, które mogą C++ łączyć kod natywny i programy platformy .NET.
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,106 +8,106 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 36c41856dfcdb5c5f50ba59205b4c73c5fde5963
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221807"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080016"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: Skompilować C++Program w sposób niezamierzony, przeznaczonego dla CLR w programie Visual Studio
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Przewodnik: kompilowanie C++programu/CLI, który jest przeznaczony dla środowiska CLR w programie Visual Studio
 
-Za pomocą C++/interfejsu wiersza polecenia można utworzyć C++ programów, które używają klas platformy .NET, a także native C++ typów. C++/ Interfejs wiersza polecenia jest przeznaczony do użycia w aplikacji konsoli w bibliotekach DLL, które umieszczają w otoce natywnych C++ kod i go udostępnić z programy platformy .NET. Aby utworzyć interfejs użytkownika Windows oparte na platformie .NET, należy użyć C# lub Visual Basic. 
+Za pomocą C++/CLI można tworzyć C++ programy korzystające z klas .NET, a także typy C++ natywne. C++/CLI jest przeznaczona do użycia w aplikacjach konsolowych i w bibliotekach DLL C++ , które zawijają kod natywny i umożliwiają dostęp z programów .NET. Aby utworzyć interfejs użytkownika systemu Windows oparty na platformie .NET, C# użyj lub Visual Basic.
 
-Do wykonania tej procedury możesz wpisać swój własny program C++ lub użyć jednego z przykładowych programów. Przykładowy program używanego w tej procedurze tworzy plik tekstowy o nazwie textfile.txt i zapisuje go do katalogu projektu.
+W ramach tej procedury można wpisać własny C++ program lub użyć jednego z przykładowych programów. Przykładowy program używany w tej procedurze tworzy plik tekstowy o nazwie textfile. txt i zapisuje go w katalogu projektu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Po zrozumieniu podstaw języka C++.
-- W programie Visual Studio 2017 i nowszych C++/obsługę interfejsu wiersza polecenia jest opcjonalnym składnikiem. Aby go zainstalować, otwórz **Instalatora programu Visual Studio** z menu Windows Start. Upewnij się, że **programowanie aplikacji klasycznych przy użyciu C++**  kafelka jest zaznaczone, a następnie w **opcjonalne** sekcji składników, również sprawdzanie poprawności  **C++obsługę interfejsu wiersza polecenia**.
+- Zrozumienie podstaw C++ języka.
+- W programie Visual Studio 2017 i nowszych C++/CLI jest to opcjonalny składnik. Aby go zainstalować, Otwórz **Instalator programu Visual Studio** z menu Start systemu Windows. Upewnij się, że jest zaznaczone pole **Programowanie aplikacji klasycznych z C++**  kafelkiem, a następnie w sekcji składniki **opcjonalne** Sprawdź  **C++również pomoc techniczną/CLI**.
 
 ## <a name="create-a-new-project"></a>Tworzenie nowego projektu
 
-Poniższe kroki różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+Poniższe kroki różnią się w zależności od używanej wersji programu Visual Studio. Upewnij się, że selektor wersji w lewym górnym rogu tej strony jest poprawnie ustawiony.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Aby utworzyć C++sposób niezamierzony projekt w programie Visual Studio 2019 r.
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Aby utworzyć projekt C++/CLI w programie Visual Studio 2019
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy, u góry, aby otworzyć **Utwórz nowy projekt** okno dialogowe.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy u góry, aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego wpisz **CLR** w wyszukiwaniu pole, a następnie wybierz **pusty projekt CLR** z listy wyników. 
+1. W górnej części okna dialogowego wpisz **CLR** w polu wyszukiwania, a następnie wybierz pozycję **CLR pusty projekt** z listy wyników.
 
-1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Aby utworzyć C++sposób niezamierzony projektu w programie Visual Studio 2017
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Aby utworzyć projekt C++/CLI w programie Visual Studio 2017
 
-1. Utwórz nowy projekt. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.
+1. Tworzenie nowego projektu. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
 
-1. Typy projektów Visual C++, kliknij **CLR**, a następnie kliknij przycisk **pusty projekt CLR**.
+1. W oknie typy C++ projektu wizualizacji kliknij pozycję **CLR**, a następnie kliknij pozycję **pusty projekt środowiska CLR**.
 
-1. Wpisz nazwę projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
+1. Wpisz nazwę projektu. Domyślnie rozwiązanie, które zawiera projekt, ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
 
-1. Kliknij przycisk **OK** Aby utworzyć nowy projekt.
+1. Kliknij przycisk **OK** , aby utworzyć nowy projekt.
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Aby utworzyć C++sposób niezamierzony projektu w programie Visual Studio 2015
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Aby utworzyć projekt C++/CLI w programie Visual Studio 2015
 
-1. Utwórz nowy projekt. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.
+1. Tworzenie nowego projektu. W menu **plik** wskaż polecenie **Nowy**, a następnie kliknij pozycję **projekt**.
 
-1. Typy projektów Visual C++, kliknij **CLR**, a następnie kliknij przycisk **pusty projekt CLR**.
+1. W oknie typy C++ projektu wizualizacji kliknij pozycję **CLR**, a następnie kliknij pozycję **pusty projekt środowiska CLR**.
 
-1. Wpisz nazwę projektu. Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
+1. Wpisz nazwę projektu. Domyślnie rozwiązanie, które zawiera projekt, ma taką samą nazwę jak nowy projekt, ale można wprowadzić inną nazwę. Jeśli chcesz, możesz wprowadzić inną lokalizację dla projektu.
 
-1. Kliknij przycisk **OK** Aby utworzyć nowy projekt.
+1. Kliknij przycisk **OK** , aby utworzyć nowy projekt.
 
 ::: moniker-end
 
 ## <a name="add-a-source-file"></a>Dodawanie pliku źródłowego
 
-1. Jeśli **Eksploratora rozwiązań** nie jest widoczny, kliknij przycisk **Eksploratora rozwiązań** na **widoku** menu.
+1. Jeśli **Eksplorator rozwiązań** nie jest widoczny, kliknij przycisk **Eksplorator rozwiązań** w menu **Widok** .
 
 1. Dodaj nowy plik źródłowy do projektu:
 
-   - Kliknij prawym przyciskiem myszy **pliki źródłowe** folderu w **Eksploratora rozwiązań**, wskaż polecenie **Dodaj**i kliknij przycisk **nowy element**.
+   - Kliknij prawym przyciskiem myszy folder **pliki źródłowe** w **Eksplorator rozwiązań**, wskaż polecenie **Dodaj**i kliknij pozycję **nowy element**.
 
-   - Kliknij przycisk **plik C++ (.cpp)** i wpisz nazwę pliku, a następnie kliknij przycisk **Dodaj**.
+   - Kliknij pozycję  **C++ plik (. cpp)** i wpisz nazwę pliku, a następnie kliknij przycisk **Dodaj**.
 
-   **.Cpp** plik pojawia się w **pliki źródłowe** folderu w **Eksploratora rozwiązań** i zostanie wyświetlone okno z kartami, za pomocą miejscem, gdzie wpisujesz kod ma w tym pliku.
+   Plik **. cpp** zostanie wyświetlony w folderze **pliki źródłowe** w **Eksplorator rozwiązań** i zostanie wyświetlone okno z kartami, w którym można wpisać kod, który ma być w tym pliku.
 
-1. Kliknij nowo utworzoną karcie w programie Visual Studio i wpisz prawidłowy program Visual C++ lub skopiuj i Wklej jeden z przykładowych programów.
+1. Kliknij nowo utworzoną kartę w programie Visual Studio i wpisz prawidłowy program wizualny C++ lub skopiuj i wklej jeden z przykładowych programów.
 
-   Na przykład, można użyć [jak: Wpisywanie tekstu do pliku (C++sposób niezamierzony)](how-to-write-a-text-file-cpp-cli.md) przykładowego programu (w **Obsługa plików i we/wy** węzła Programming Guide).
+   Na przykład możesz użyć programu przykładowego [: Napisz plik tekstowyC++(/CLI)](how-to-write-a-text-file-cpp-cli.md) (w węźle **Obsługa plików i we/wy** przewodnika programowania).
 
-   Jeśli korzystasz z przykładowego program, zwróć uwagę, że używasz `gcnew` słowa kluczowego zamiast `new` podczas tworzenia obiektu platformy .NET, a `gcnew` zwraca uchwyt (`^`) zamiast wskaźnik (`*`):
+   W przypadku korzystania z przykładowego programu należy zauważyć, że użycie słowa kluczowego `gcnew` zamiast `new` podczas tworzenia obiektu .NET, a `gcnew` zwraca dojście (`^`), a nie wskaźnik (`*`):
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Aby uzyskać więcej informacji na temat C++sposób niezamierzony składni, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
+   Aby uzyskać więcej informacji C++na temat składni/CLI, zobacz [rozszerzenia składników dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md).
 
-1. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+1. W menu **Kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
 
-   **Dane wyjściowe** okna wyświetla informacje o postępie kompilacji, takie jak lokalizacja dziennika kompilacji i komunikat o statusie kompilacji.
+   W oknie **dane wyjściowe** są wyświetlane informacje o postępie kompilacji, takie jak lokalizacja dziennika kompilacji i komunikat informujący o stanie kompilacji.
 
-   Jeśli wprowadzono zmiany i uruchom program bez wykonania tej operacji kompilacji, okno dialogowe może oznaczać, że projekt jest nieaktualny. Zaznacz pole wyboru, w tym oknie dialogowym, zanim klikniesz pozycję **OK** Jeśli chcesz, aby Visual Studio, aby zawsze używać bieżącej wersji plików, zamiast monitowania użytkownika za każdym razem, tworzy on aplikacji.
+   Jeśli wprowadzisz zmiany i uruchomisz program bez wykonywania kompilacji, okno dialogowe może wskazywać, że projekt jest nieaktualny. Zaznacz pole wyboru w tym oknie dialogowym przed kliknięciem przycisku **OK** , jeśli chcesz, aby program Visual Studio zawsze używał bieżących wersji plików zamiast monitowania użytkownika za każdym razem, gdy kompiluje aplikację.
 
-1. Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.
+1. W menu **debugowanie** kliknij polecenie **Uruchom bez debugowania**.
 
-1. Jeśli użyto przykładowego programu, po uruchomieniu program zostanie wyświetlone okno polecenia, który wskazuje, że utworzono plik tekstowy.
+1. Jeśli użyto przykładowego programu, podczas uruchamiania programu wyświetlane jest okno polecenia, które wskazuje, że plik tekstowy został utworzony.
 
-   **Textfile.txt** plik tekstowy znajduje się teraz w katalogu projektu. Możesz otworzyć ten plik za pomocą Notatnika.
+   Plik tekstowy **textfile. txt** znajduje się teraz w katalogu projektu. Możesz otworzyć ten plik za pomocą Notatnika.
 
    > [!NOTE]
-   > Wybieranie CLR pusty szablon projektu automatycznie ustawiony `/clr` — opcja kompilatora. Aby to sprawdzić, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i klikając **właściwości**, a następnie sprawdź, **Obsługa środowiska uruchomieniowego języka wspólnego** opcji  **Ogólne** węźle **właściwości konfiguracji**.
+   > Wybór pustego szablonu projektu CLR powoduje automatyczne ustawienie opcji kompilatora `/clr`. Aby to sprawdzić, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i kliknij polecenie **Właściwości**, a następnie sprawdź opcję **Obsługa środowiska uruchomieniowego** CLR **General** w węźle ogólne **Właściwości konfiguracji**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

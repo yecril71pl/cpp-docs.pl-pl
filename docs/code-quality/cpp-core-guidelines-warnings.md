@@ -3,12 +3,12 @@ title: C++Ostrzeżenia dotyczące podstawowych wytycznych
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-ms.openlocfilehash: f499374c84973be09e2f02e6d2f2e6d9a6548363
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 544c737470a6578e65e82bb3c8cf1824ec93895f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418831"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079969"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>Korzystanie z kontrolerów podstawowych wytycznych dotyczących języka C++
 
@@ -16,7 +16,7 @@ C++ Podstawowe wytyczne są przenośnym zestawem wytycznych, zasad i najlepszych
 
 ## <a name="the-c-core-guidelines-project"></a>Projekt C++ podstawowych wytycznych
 
-Podstawowe wytyczne są tworzone przez Bjarne'a Stroustrupa i C++ inne, ale w sposób C++ bezpieczny i efektywny. Wytyczne podkreślają bezpieczeństwo typu statycznego i bezpieczeństwo zasobów. Identyfikują one sposoby eliminacji lub minimalizowania najbardziej podatnych na błędy części języka, a także sugerują sposób prostszego i bardziej wydajnego wykonywania kodu. Te wytyczne są obsługiwane przez standardową C++ podstawę. Aby dowiedzieć się więcej, zobacz dokumentację, [ C++ podstawowe wytyczne](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)i dostęp do C++ plików projektu dokumentacji podstawowych wytycznych w serwisie [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Podstawowe wytyczne są tworzone przez Bjarne'a Stroustrupa i C++ inne, ale w sposób C++ bezpieczny i efektywny. Wytyczne podkreślają bezpieczeństwo typu statycznego i bezpieczeństwo zasobów. Identyfikują one sposoby eliminacji lub minimalizowania najbardziej podatnych na błędy części języka, a także sugerują sposób prostszego i bardziej wydajnego wykonywania kodu. Te wytyczne są obsługiwane przez standardową C++ podstawę. Aby dowiedzieć się więcej, zobacz dokumentację, [ C++ podstawowe wytyczne](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)i dostęp do C++ plików projektu dokumentacji podstawowych wytycznych w serwisie [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Włącz C++ podstawowe wskazówki dotyczące sprawdzania w analizie kodu
 
@@ -151,7 +151,7 @@ Zamiast #pragmas można użyć opcji wiersza polecenia na stronie właściwości
 
 Za pomocą opcji wiersza polecenia można tymczasowo wyłączyć wszystkie analizy kodu dla pliku, określając `/analyze-`. Spowoduje to wygenerowanie ostrzeżenia *D9025 przesłanianie "/ANALYZE" z "/ANALYZE-"* , który będzie przypominać później ponownie włączyć analizę kodu.
 
-## <a name="corecheck_per_file"></a>Włączanie sprawdzania C++ podstawowych wytycznych dla określonych plików projektu
+## <a name="enabling-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Włączanie sprawdzania C++ podstawowych wytycznych dla określonych plików projektu
 
 Czasami warto rozważyć skoncentrowaną analizę kodu i nadal korzystać z programu Visual Studio IDE. Poniżej znajduje się przykładowy scenariusz, który może być używany w dużych projektach do zapisywania czasu kompilacji i ułatwiający filtrowanie wyników.
 
@@ -219,9 +219,9 @@ Należy ustawić kilka zmiennych środowiskowych i użyć odpowiednich opcji wie
 
 ## <a name="use-the-guideline-support-library"></a>Korzystanie z biblioteki podstawowej pomocy technicznej
 
-Podstawowa Biblioteka pomocy technicznej została zaprojektowana w celu ułatwienia przestrzegania podstawowych wytycznych. GSL zawiera definicje, które umożliwiają zamianę konstrukcji podatnych na błędy z bezpieczniejszymi alternatywami. Na przykład można zastąpić `T*, length` parę parametrów `span<T>` typem. GSL jest dostępny w [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Biblioteka jest open source, dzięki czemu można przeglądać źródła, wprowadzać komentarze lub współtworzyć. Projekt można znaleźć w [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+Podstawowa Biblioteka pomocy technicznej została zaprojektowana w celu ułatwienia przestrzegania podstawowych wytycznych. GSL zawiera definicje, które umożliwiają zamianę konstrukcji podatnych na błędy z bezpieczniejszymi alternatywami. Na przykład można zastąpić `T*, length` parę parametrów `span<T>` typem. GSL jest dostępny w [https://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Biblioteka jest open source, dzięki czemu można przeglądać źródła, wprowadzać komentarze lub współtworzyć. Projekt można znaleźć w [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
-## <a name="vs2015_corecheck"></a>Korzystanie z C++ podstawowych wskazówek dotyczących sprawdzania w projektach programu Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Korzystanie z C++ podstawowych wskazówek dotyczących sprawdzania w projektach programu Visual Studio 2015
 
 W przypadku korzystania z C++ programu Visual Studio 2015 zestawy reguł analizy kodu podstawowego nie są instalowane domyślnie. Należy wykonać kilka dodatkowych kroków, aby można było włączyć podstawowe C++ narzędzia do analizy kodu w programie Visual Studio 2015. Firma Microsoft zapewnia pomoc techniczną dla projektów programu Visual Studio 2015 przy użyciu pakietu NuGet. Pakiet ma nazwę Microsoft. CppCoreCheck i jest dostępny w [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Ten pakiet wymaga co najmniej programu Visual Studio 2015 z aktualizacją Update 1.
 

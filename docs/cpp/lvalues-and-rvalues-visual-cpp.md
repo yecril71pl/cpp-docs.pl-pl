@@ -1,42 +1,42 @@
 ---
-title: 'Wartość kategorie: Lvalues i Rvalues (C++)'
+title: 'Kategorie wartości: lvalues i rvalues (C++)'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222020"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077237"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues i Rvalues (C++)
 
-Każde wyrażenie C++ ma typ i należy do *kategorii wartości*. Kategorie wartość stanowią podstawę dla reguł, które kompilatory muszą wykonać podczas tworzenia, kopiowania i przenoszenia obiektów tymczasowych podczas obliczania wyrażenia.
+Każde C++ wyrażenie ma typ i należy do *kategorii wartości*. Kategorie wartości są podstawą reguł, które kompilatorzy muszą wykonać podczas tworzenia, kopiowania i przemieszczania obiektów tymczasowych podczas obliczania wyrażenia.
 
-C ++ 17 standardowa definiuje kategorie wartości wyrażenia w następujący sposób:
+Standard C++ 17 definiuje kategorie wartości wyrażeń w następujący sposób:
 
-- A *glvalue* jest wyrażeniem, którego oceny określa tożsamość obiektu, pole bitowe lub funkcji.
-- A *prvalue* jest wyrażeniem, którego oceny inicjuje obiekt lub pole bitowe lub oblicza wartość operand operatora, jak określone przez kontekst, w którym jest wyświetlana.
-- *Xvalue* jest glvalue, który wskazuje obiekt lub pola bitowego, którego zasoby mogą być ponownie używane (zazwyczaj, ponieważ jest osiągnie koniec okresu jego istnienia). Przykład: Niektóre rodzaje wyrażeń zawierających odwołania rvalue (8.3.2) przynieść xvalues, takie jak wywołania funkcji, którego typem zwracanym jest odwołaniem rvalue lub Rzutowanie na typ odwołania rvalue.
-- *L-wartości* jest glvalue, który nie jest xvalue.
-- *Rvalue* prvalue lub xvalue.
+- *Glvalue* jest wyrażeniem, którego Ocena Określa tożsamość obiektu, pole bitowe lub funkcję.
+- *Wartością prvalue bez* jest wyrażeniem, którego Ocena inicjuje obiekt lub pole bitowe lub oblicza wartość operandu operatora, zgodnie z opisem w kontekście, w którym występuje.
+- *XValue* to glvalue, który oznacza obiekt lub pole bitowe, którego zasoby mogą być ponownie używane (zazwyczaj ponieważ zbliża się do końca okresu istnienia). Przykład: niektóre rodzaje wyrażeń, w tym odwołania rvalue (8.3.2), dają XValues, takie jak wywołanie funkcji, której zwracany typ to odwołanie rvalue lub rzutowanie na typ referencyjny rvalue.
+- *Lvalue* to glvalue, który nie jest XValue.
+- *Rvalue* to wartością prvalue bez lub XValue.
 
 Na poniższym diagramie przedstawiono relacje między kategoriami:
 
-![Kategorie wartości wyrażenia języka C++](media/value_categories.png "kategorie wartości wyrażenia języka C++")
+![C++Kategorie wartości wyrażenia](media/value_categories.png "C++Kategorie wartości wyrażenia")
 
-L-wartości ma adres, który mogą uzyskiwać dostęp do programu. Przykłady wyrażeń l-wartości obejmują nazwy zmiennej, w tym **const** zmienne, elementy tablicy, funkcja wywołania, które zwracają odwołanie lvalue, pól bitowych, Unii i elementy członkowskie klasy.
+Lvalue ma adres, do którego Twój program może uzyskać dostęp. Przykłady wyrażeń lvalue zawierają nazwy zmiennych, w tym zmienne **stałe** , elementy tablicy, wywołania funkcji, które zwracają odwołanie lvalue, pola bitowe, Unii i składowe klas.
 
-Wyrażenie prvalue nie ma żadnego adresu, który jest dostępny dla programu. Przykłady wyrażeń prvalue literały, wywołania funkcji, które zwracają typ niebędący odniesieniem i obiekty tymczasowe, które są tworzone podczas evalution wyrażenia, ale dostępna tylko przez kompilator.
+Wyrażenie wartością prvalue bez nie ma adresu, który jest dostępny dla programu. Przykłady wyrażeń wartością prvalue bez obejmują literały, wywołania funkcji, które zwracają typ niebędący odwołaniem i obiekty tymczasowe, które są tworzone podczas wyrażenia evalution, ale dostępne tylko dla kompilatora.
 
-Wyrażenie wartości x równej ma adres, nie będą dostępne przez program, ale może służyć do zainicjowania odwołanie rvalue, która zapewnia dostęp do wyrażenia. Przykłady obejmują wywołania funkcji, które zwracają odwołanie rvalue, a indeks dolny tablicy, elementu członkowskiego i wskaźnik do wyrażenia elementu członkowskiego gdzie tablicy lub obiektu jest odwołaniem rvalue.
+Wyrażenie XValue ma adres, który nie jest już dostępny dla programu, ale może służyć do inicjowania odwołania rvalue, które zapewnia dostęp do wyrażenia. Przykłady obejmują wywołania funkcji, które zwracają odwołanie rvalue, oraz indeks dolny tablicy, składowej i wskaźnika do wyrażeń elementów członkowskich, w których tablica lub obiekt jest odwołaniem rvalue.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano kilka poprawne i niepoprawne wartości użycia lvalues i rvalues:
+Poniższy przykład ilustruje kilka prawidłowych i nieprawidłowych użycia lvalues i rvalues:
 
 ```cpp
 // lvalues_and_rvalues2.cpp
@@ -56,7 +56,7 @@ int main()
 
     // Correct usage: the conditional operator returns an lvalue.
     ((i < 3) ? i : j) = 7;
-    
+
     // Incorrect usage: the constant ci is a non-modifiable lvalue (C3892).
     const int ci = 7;
     ci = 9; // C3892
@@ -64,11 +64,11 @@ int main()
 ```
 
 > [!NOTE]
-> Przykłady w tym temacie pokazują poprawne i niepoprawne użycie, gdy operatory nie są przeciążone. Przeciążając operatory, aby włączyć wyrażenia takie jak `j * 4` l-wartością.
+> W przykładach w tym temacie przedstawiono poprawne i nieprawidłowe użycie, gdy operatory nie są przeciążone. Przez przeciążanie operatorów można utworzyć wyrażenie, takie jak `j * 4` lvalue.
 
-Warunki *l-wartości* i *rvalue* są często używane przy odwoływaniu się odwołania do obiektu. Aby uzyskać więcej informacji na temat odwołań, zobacz [l-wartości Reference Declarator: &](../cpp/lvalue-reference-declarator-amp.md) i [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Warunki *lvalue* i *rvalue* są często używane podczas odwoływania się do odwołań do obiektów. Aby uzyskać więcej informacji na temat odwołań, zobacz [lvalue Reference deklarator: &](../cpp/lvalue-reference-declarator-amp.md) i [rvalue reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)<br/>
 [Deklarator odwołania do wartości L: &](../cpp/lvalue-reference-declarator-amp.md)<br/>

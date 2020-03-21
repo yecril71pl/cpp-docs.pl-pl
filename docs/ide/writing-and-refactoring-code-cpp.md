@@ -4,12 +4,12 @@ description: Użyj edytora C++ kodu w programie Visual Studio do formatowania, n
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438162"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077845"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Edytuj i Refaktoryzacja C++ kodu w programie Visual Studio
 
@@ -70,15 +70,15 @@ Przycisk jest wyświetlany tylko wtedy, gdy jest on istotny dla bieżącej sesji
 
 ## <a name="template-intellisense"></a>IntelliSense szablonu
 
-Gdy karetka znajduje się wewnątrz definicji szablonu, pojawi się **pasek szablonu** , który umożliwia podanie przykładowych argumentów szablonu dla funkcji IntelliSense. 
+Gdy karetka znajduje się wewnątrz definicji szablonu, pojawi się **pasek szablonu** , który umożliwia podanie przykładowych argumentów szablonu dla funkcji IntelliSense.
 
 ![Szablon&#43; &#43; języka C IntelliSense przedstawia istniejące wystąpienia](../ide/media/template-intellisense-cpp-1.png "Funkcja IntelliSense szablonów Wyświetla istniejące wystąpienia")
 
-Kliknij ikonę **\<t >** , aby rozwinąć/zwinąć **pasek szablonu**. Kliknij ikonę ołówka lub dwukrotnie kliknij **pasek szablonu** , aby otworzyć okno **Edycja** . 
+Kliknij ikonę **\<t >** , aby rozwinąć/zwinąć **pasek szablonu**. Kliknij ikonę ołówka lub dwukrotnie kliknij **pasek szablonu** , aby otworzyć okno **Edycja** .
 
 ![IntelliSense&#43; &#43; szablonu języka C](../ide/media/template-intellisense-cpp-3.png "IntelliSense szablonu")
 
-Zmiany wprowadzone w oknie są stosowane bezpośrednio do kodu źródłowego, dzięki czemu można zobaczyć efekty w czasie rzeczywistym. 
+Zmiany wprowadzone w oknie są stosowane bezpośrednio do kodu źródłowego, dzięki czemu można zobaczyć efekty w czasie rzeczywistym.
 
 Pasek szablonu może automatycznie wypełniać kandydatów w oparciu o wystąpienia w kodzie. Kliknij przycisk **Dodaj wszystkie istniejące wystąpienia** , aby wyświetlić listę wszystkich konkretnych argumentów, które zostały użyte do utworzenia wystąpienia szablonu w bazie kodu.
 
@@ -94,13 +94,13 @@ Informacje **paska szablonu** są traktowane jako specyficzne dla użytkownika. 
 
 Jeśli Edytor wykrywa problemy z kodem, spowoduje to dodanie kolorowych zygzaków w obszarze problemu. Czerwona zygzakowata oznacza kod, który nie kompiluje się. Zielone zygzaki wskazują inne rodzaje problemów, które nadal mogą być poważne. Możesz otworzyć okno **Lista błędów** , aby uzyskać więcej informacji o problemach.
 
-W przypadku niektórych rodzajów błędów, a także wspólnych wzorców kodowania, Edytor będzie oferować **szybką poprawkę** w postaci żarówki, która pojawia się po umieszczeniu wskaźnika myszy na zygzaku. Kliknij strzałkę w dół, aby wyświetlić sugestie. 
+W przypadku niektórych rodzajów błędów, a także wspólnych wzorców kodowania, Edytor będzie oferować **szybką poprawkę** w postaci żarówki, która pojawia się po umieszczeniu wskaźnika myszy na zygzaku. Kliknij strzałkę w dół, aby wyświetlić sugestie.
 
 W poniższym przykładzie `vector` został zadeklarowany, ale nie znaleziono definicji, więc Edytor oferuje niezbędny plik nagłówka:
 
 ![Szybka&#43; &#43; poprawka języka C](../ide/media/quick-fix-for-header-cpp.png "C++Szybka naprawa")
 
-Edytor oferuje również szybkie poprawki w przypadku niektórych możliwości refaktoryzacji. Na przykład, Jeśli deklarujesz klasę w pliku nagłówkowym, Visual Studio będzie oferować definicję dla niego w osobnym pliku. cpp. 
+Edytor oferuje również szybkie poprawki w przypadku niektórych możliwości refaktoryzacji. Na przykład, Jeśli deklarujesz klasę w pliku nagłówkowym, Visual Studio będzie oferować definicję dla niego w osobnym pliku. cpp.
 
 ![Szybka&#43; &#43; poprawka języka C](../ide/media/quick-fix.png "C++Szybka naprawa")
 

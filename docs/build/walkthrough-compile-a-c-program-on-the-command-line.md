@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051530"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078253"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: kompilowanie programu w języku C w wierszu polecenia
 
@@ -63,9 +63,8 @@ Jeśli używasz innej wersji systemu Windows, poszukaj w menu Start lub stronie 
 Jeśli zainstalowano narzędzia Microsoft C++ Visual Build Tools 2015 w systemie Windows 10, otwórz menu **Start** , a następnie przewiń w dół i Otwórz folder  **C++ Visual Build Tools** . Wybierz **pozycję C++ Visual 2015 wiersz polecenia narzędzi x86 Native Tools** , aby otworzyć okno wiersza polecenia.
 
 Jeśli używasz innej wersji systemu Windows, poszukaj w menu Start lub stronie startowej folderu Visual Studio Tools zawierającego skrót do wiersza polecenia dla deweloperów. Możesz również użyć funkcji wyszukiwania systemu Windows w celu wyszukania "wiersz polecenia dewelopera" i wybrać odpowiedni, który jest zgodny z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
-   
-::: moniker-end
 
+::: moniker-end
 
 Następnie sprawdź, czy wiersz polecenia C++ Visual Developer został prawidłowo skonfigurowany. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
 
@@ -183,7 +182,7 @@ Języki C i C++ są podobne, ale nie są takie same. Kompilator Microsoft C/C++ 
 
 MSVC jest zgodna ze standardem ISO C99, ale nie jest ściśle zgodne. W większości przypadków przenośny kod C zostanie skompilowany i uruchomiony zgodnie z oczekiwaniami. Wizualizacja C++ nie obsługuje większości zmian w pliku ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez MSVC. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w artykule CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżeniu kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przewodnik: tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Dokumentacja języka C](../c-language/c-language-reference.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416936"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076846"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — historia zmian w latach 2003–2015
 
@@ -36,9 +36,9 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
 - [środowisko uruchomieniowe współbieżności istotne zmiany](#BK_ConcRT)
 
-## <a name="VC_2015"></a>Zmiany zgodności programu Visual Studio 2015
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a>Zmiany zgodności programu Visual Studio 2015
 
-###  <a name="BK_CRT"></a>Biblioteka środowiska uruchomieniowego języka C (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>Biblioteka środowiska uruchomieniowego języka C (CRT)
 
 #### <a name="general-changes"></a>Ogólne zmiany
 
@@ -78,7 +78,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
 - **Zgodność zmiennoprzecinkowa**
 
-   Wprowadzono wiele zmian w bibliotece matematycznej w celu poprawienia zgodności z specyfikacjami w języku IEEE-754 i C11, w odniesieniu do specjalnych danych wejściowych przypadku, takich jak NaNs i nieskończoności. Na przykład ciche dane wejściowe NaN, które często były traktowane jako błędy w poprzednich wersjach biblioteki, nie są już traktowane jako błędy. Zobacz [IEEE 754 Standard](https://standards.ieee.org/standard/754-2008.html) i załącznik F [standardu C11](http://www.iso-9899.info/wiki/The_Standard).
+   Wprowadzono wiele zmian w bibliotece matematycznej w celu poprawienia zgodności z specyfikacjami w języku IEEE-754 i C11, w odniesieniu do specjalnych danych wejściowych przypadku, takich jak NaNs i nieskończoności. Na przykład ciche dane wejściowe NaN, które często były traktowane jako błędy w poprzednich wersjach biblioteki, nie są już traktowane jako błędy. Zobacz [IEEE 754 Standard](https://standards.ieee.org/standard/754-2008.html) i załącznik F [standardu C11](https://www.iso.org/standard/57853.html).
 
    Te zmiany nie powodują błędów w czasie kompilacji, ale mogą powodować, że programy działają inaczej i bardziej prawidłowo zgodnie ze standardem.
 
@@ -106,7 +106,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Podczas kompilowania C++ kodu [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz sprawdza poprawność w czasie kompilacji, do którego argument przeszedł do nie jest typem referencyjnym. Argumenty typu odwołania są zabronione przez C++ Standard.
 
-#### <a name="stdio_and_conio"></a>\<stdio. h > i \<CONIO. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio. h > i \<CONIO. h >
 
 - **Rodzina funkcji printf i scanf jest teraz zdefiniowana jako wbudowana.**
 
@@ -303,7 +303,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Makro CLOCKS_PER_SEC jest teraz rozwijane do liczby całkowitej typu `clock_t`, zgodnie z wymaganiami języka C.
 
-####  <a name="BK_STL"></a>C++ Biblioteka standardowa
+####  <a name="c-standard-library"></a><a name="BK_STL"></a>C++ Biblioteka standardowa
 
 Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standardowej biblioteki C++ w Visual Studio celowo łamie zgodność binarną między wersjami. W związku z tym gdy używana jest standardowa biblioteka C++, pliki obiektowe i biblioteki statyczne, które są kompilowane przy użyciu różnych wersji, nie mogą być mieszane w jednym pliku binarnym (EXE lub DLL), a obiekty standardowej biblioteki C++ nie mogą być przekazywane między plikami binarnymi, które są kompilowane przy użyciu różnych wersji. Takie mieszanie powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER. (_MSC_VER to makro zawierające wersję główną kompilatora, na przykład 1800 dla Visual Studio 2013.) Ten test nie może wykryć mieszania DLL i nie może wykryć mieszania, które obejmuje program Visual Studio 2008 lub jego wcześniejszą.
 
@@ -385,7 +385,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
    Niestandardowa `launch::any` i zasady `launch::sync` zostały usunięte. Zamiast tego dla `launch::any`Użyj `launch:async | launch:deferred`. Aby uzyskać `launch::sync`, użyj `launch::deferred`. Zobacz [Uruchamianie wyliczania](../standard-library/future-enums.md#launch).
 
-####  <a name="BK_MFC"></a>MFC i ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a>MFC i ATL
 
 - **Microsoft Foundation Classes (MFC)**
 
@@ -393,7 +393,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
    Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.
 
-####  <a name="BK_ConcRT"></a>środowisko uruchomieniowe współbieżności
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>środowisko uruchomieniowe współbieżności
 
 - **Nadaje makro z systemu Windows. h powodujące konflikt z elementem concurrency:: Context:: Yield**
 
@@ -421,7 +421,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - [Ulepszenia zgodności w aktualizacji Update 3](#VS_Update3)
 
-###  <a name="VS_RTM"></a>Ulepszenia zgodności w programie Visual Studio 2015
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Ulepszenia zgodności w programie Visual Studio 2015
 
 - /Zc: forScope — opcja
 
@@ -1697,7 +1697,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
     C c;
     ```
 
-###  <a name="VS_Update1"></a>Ulepszenia zgodności w aktualizacji Update 1
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>Ulepszenia zgodności w aktualizacji Update 1
 
 - **Prywatne wirtualne klasy bazowe i dziedziczenie pośrednie**
 
@@ -2201,7 +2201,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
     }
     ```
 
-###  <a name="VS_Update2"></a>Ulepszenia zgodności w aktualizacji Update 2
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>Ulepszenia zgodności w aktualizacji Update 2
 
 - **Dodatkowe ostrzeżenia i błędy mogą być wydawane w wyniku częściowego wsparcia dla SFINAE wyrażeń**
 
@@ -2463,7 +2463,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Naprawianie kodu, który jest pisany w ten sposób, może wymagać, aby definicje operatora były przenoszone poza plik nagłówka i do odpowiedniego pliku źródłowego.
 
-###  <a name="VS_Update3"></a>Ulepszenia zgodności w aktualizacji Update 3
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>Ulepszenia zgodności w aktualizacji Update 3
 
 - **std:: is_convertable teraz wykrywają samodzielne przypisanie** (standardowa biblioteka)
 
@@ -2938,7 +2938,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 - Teraz, gdy szablony wariadyczne są zaimplementowane, _VARIADIC_MAX i powiązane makra nie mają żadnego efektu. Jeśli nadal tworzysz _VARIADIC_MAX, zostanie on zignorowany. Jeśli przyjmiesz nasze rozwiązania makr przeznaczone do wspierania symulowanych szablonów wariadycznych w jakikolwiek inny sposób, musisz zmienić kod.
 
-- Oprócz zwykłych słów kluczowych, C++ nagłówki biblioteki standardowej teraz zabraniają zastępowania makra kontekstowych słów kluczowych i **końcowych**.
+- Oprócz zwykłych słów kluczowych, C++ nagłówki biblioteki standardowej teraz zabraniają zastępowania makra kontekstowych słów kluczowych i **override** **końcowych**.
 
 - `reference_wrapper`, `ref()`i `cref()` teraz Zabroń powiązania z obiektami tymczasowymi.
 
@@ -3302,7 +3302,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 - Zmienna środowiskowa __MSVCRT_HEAP_SELECT nie jest już obsługiwana. Ta zmienna środowiskowa jest usuwana i nie ma żadnych zastąpień.
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler Reference
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie
 
 - Kilka dyrektyw zostało usuniętych z kompilatora odwołania asemblera makr firmy Microsoft. Usunięte dyrektywy to `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`i `.NO87`.
 

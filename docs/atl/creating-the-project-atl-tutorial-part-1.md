@@ -3,12 +3,12 @@ title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509398"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075333"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
@@ -24,7 +24,7 @@ Ten samouczek przeprowadzi Cię krok po kroku przez Projekt ATL nienależący do
 > #endif
 > ```
 >
-> elementem
+> with
 >
 > ```
 > #ifndef WINVER
@@ -45,7 +45,7 @@ Ten samouczek przeprowadzi Cię krok po kroku przez Projekt ATL nienależący do
 
     Lokalizacja dla kodu źródłowego zwykle będzie domyślnie \Users\\\<username > \source\repos, a nowy folder zostanie utworzony automatycznie.
 
-1. W programie Visual Studio 2019 zaakceptuj wartości domyślne i kliknij przycisk **OK**. 
+1. W programie Visual Studio 2019 zaakceptuj wartości domyślne i kliknij przycisk **OK**.
    W programie Visual Studio 2017 kliknij przycisk **OK** , aby otworzyć kreatora **Projekt ATL** . Kliknij pozycję **Ustawienia aplikacji** , aby wyświetlić dostępne opcje. Ponieważ ten projekt tworzy formant i formant musi być serwerem działającym w procesie, pozostaw **Typ aplikacji** jako bibliotekę DLL. Kliknij przycisk **OK**.
 
 Program Visual Studio utworzy projekt, generując kilka plików. Można wyświetlić te pliki w **Eksplorator rozwiązań** , rozszerzając obiekt `Polygon`. Poniżej znajdują się pliki.

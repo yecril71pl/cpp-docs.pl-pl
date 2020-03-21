@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)'
+title: 'Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397851"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079824"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: Pobieranie rekordów zbiorcze (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-Klasa `CRecordset` zapewnia obsługę zbiorcze pobieranie z wiersza, co oznacza, że wiele rekordów można pobrać tylko raz podczas pobierania jednego, a nie podczas pobierania jednego rekordu w danym momencie ze źródła danych. Możesz zaimplementować zbiorcze pobieranie z wiersza tylko w pochodnej `CRecordset` klasy. Proces przesyłania danych ze źródła danych do obiektu zestawu rekordów jest nazywany zbiorcza wymiana pól rekordów (zbiorcze RFX). Należy pamiętać, że jeśli nie używasz zbiorcze pobieranie z wiersza w `CRecordset`-klasy pochodnej, dane są przesyłane za pośrednictwem wymiana pól rekordów (RFX). Aby uzyskać więcej informacji, zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Klasa `CRecordset` zapewnia obsługę pobierania wierszy zbiorczych, co oznacza, że wiele rekordów można pobrać jednocześnie w ramach pojedynczego pobrania, zamiast pobierać jeden rekord jednocześnie ze źródła danych. Pobieranie wierszy zbiorczych można zaimplementować tylko w klasie pochodnej `CRecordset`. Proces przenoszenia danych ze źródła danych do obiektu zestawu rekordów jest nazywany zbiorczym polem rekordów wymiany (bulk RFX). Należy pamiętać, że jeśli nie używasz pobierania wierszy zbiorczych w klasie pochodnej `CRecordset`, dane są transferowane za pośrednictwem wymiany pól rekordów (RFX). Aby uzyskać więcej informacji, zobacz [rekord Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
-- [Jak CRecordset obsługuje zbiorcze pobieranie z wiersza](#_core_how_crecordset_supports_bulk_row_fetching).
+- [Jak CRecordset obsługuje pobieranie wierszy zbiorczych](#_core_how_crecordset_supports_bulk_row_fetching).
 
-- [Pewne specjalne zagadnienia dotyczące korzystania z zbiorcze pobieranie z wiersza](#_core_special_considerations).
+- [Niektóre specjalne zagadnienia dotyczące korzystania z pobierania wierszy zbiorczych](#_core_special_considerations).
 
-- [Jak zaimplementować zbiorcza wymiana pól rekordów](#_core_how_to_implement_bulk_record_field_exchange).
+- [Jak zaimplementować wymianę pól rekordów zbiorczych](#_core_how_to_implement_bulk_record_field_exchange).
 
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Jak CRecordset obsługuje pobieranie z wiersza zbiorcze
+##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Jak CRecordset obsługuje pobieranie wierszy zbiorczych
 
-Przed otwarciem obiekt zestawu rekordów, można zdefiniować rozmiar wierszy przy użyciu `SetRowsetSize` funkcja elementu członkowskiego. Rozmiar zestawu wierszy Określa, ile rekordy mają zostać pobrane podczas pobierania jednego. Po zaimplementowaniu zbiorcze pobieranie z wiersza domyślny rozmiar wierszy to 25. Jeśli nie jest zaimplementowana zbiorcze pobieranie z wiersza, rozmiar wierszy nie zmienia się na 1.
+Przed otwarciem obiektu zestawu rekordów można zdefiniować rozmiar zestawu wierszy przy użyciu funkcji składowej `SetRowsetSize`. Rozmiar zestawu wierszy określa, ile rekordów ma być pobieranych podczas pojedynczego pobierania. Po zaimplementowaniu pobierania wierszy zbiorczych domyślny rozmiar zestawu wierszy wynosi 25. Jeśli pobieranie wierszy zbiorczych nie jest zaimplementowane, rozmiar zestawu wierszy pozostaje ustalony na 1.
 
-Po zainicjują rozmiar wierszy, wywołać [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego. W tym miejscu należy określić `CRecordset::useMultiRowFetch` opcji *dwOptions* parametru, aby zaimplementować zbiorcze pobieranie z wiersza. Ponadto można ustawić `CRecordset::userAllocMultiRowBuffers` opcji. Mechanizm wymiany pól rekordów zbiorcze używa tablic do przechowywania wielu wierszy pobranych podczas pobierania danych. Bufory magazynu można przydzielić automatycznie przez strukturę lub przydzielać je ręcznie. Określanie `CRecordset::userAllocMultiRowBuffers` opcji oznacza, że wykonasz alokacji.
+Po zainicjowaniu rozmiaru zestawu wierszy wywołaj funkcję [Open](../../mfc/reference/crecordset-class.md#open) member. W tym miejscu należy określić opcję `CRecordset::useMultiRowFetch` parametru *dwOptions* w celu zaimplementowania pobierania wierszy zbiorczych. Ponadto możesz ustawić opcję `CRecordset::userAllocMultiRowBuffers`. Mechanizm wymiany pól rekordów zbiorczych używa tablic do przechowywania wielu wierszy danych pobranych podczas pobierania. Te bufory magazynów mogą być przydzielane automatycznie przez platformę lub można je przydzielić ręcznie. Określenie opcji `CRecordset::userAllocMultiRowBuffers` oznacza, że zostanie przydzielone.
 
-W poniższej tabeli wymieniono funkcje elementów członkowskich, dostarczone przez `CRecordset` do obsługi zbiorcze pobieranie z wiersza.
+Poniższa tabela zawiera listę funkcji Członkowskich udostępnianych przez `CRecordset` do obsługi pobierania wierszy zbiorczych.
 
-|Funkcja elementu członkowskiego|Opis|
+|Funkcja członkowska|Opis|
 |---------------------|-----------------|
-|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Funkcja wirtualna, która obsługuje wszystkie błędy, które występują podczas pobierania.|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje zbiorczo wymiana pól rekordów. Wywołuje się automatycznie z transferami wiele wierszy danych ze źródła danych do obiektu zestawu rekordów.|
-|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Pobiera bieżące ustawienie rozmiaru wierszy.|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Informuje o tym, ile wierszy rzeczywiście zostały pobrane po pobraniu danego. W większości przypadków jest to rozmiar zestawu wierszy, chyba że pobrano wierszy niekompletne.|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla danego wiersza w zestawie wierszy.|
+|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Funkcja wirtualna, która obsługuje wszystkie błędy występujące podczas pobierania.|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implementuje wymianę pól rekordów zbiorczych. Wywoływana automatycznie do przesyłania wielu wierszy danych ze źródła danych do obiektu zestawu rekordów.|
+|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Pobiera bieżące ustawienie rozmiaru zestawu wierszy.|
+|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Informuje o liczbie wierszy, które zostały faktycznie pobrane po wykonaniu danego pobrania. W większości przypadków jest to rozmiar zestawu wierszy, chyba że pobrano niekompletny zestaw wierszy.|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Zwraca stan pobierania dla określonego wiersza w zestawie wierszy.|
 |[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Odświeża dane i stan określonego wiersza w zestawie wierszy.|
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Przenosi kursor do określonego wiersza w zestawie wierszy.|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna, która zmienia ustawienie rozmiaru wierszy z podaną wartością.|
+|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna, która zmienia ustawienie rozmiaru zestawu wierszy na określoną wartość.|
 
-##  <a name="_core_special_considerations"></a> Specjalne uwagi
+##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>Uwagi specjalne
 
-Mimo że zbiorcze pobieranie z wiersza jest bardziej wydajne, niektóre funkcje działają inaczej. Przed podjęciem decyzji o implementacji zbiorcze pobieranie z wiersza, należy wziąć pod uwagę następujące informacje:
+Chociaż pobieranie wierszy zbiorczych jest wzrostem wydajności, niektóre funkcje działają inaczej. Przed podjęciem decyzji o zaimplementowaniu pobierania wierszy zbiorczych należy wziąć pod uwagę następujące kwestie:
 
-- Struktura automatycznie wywołuje `DoBulkFieldExchange` funkcja elementu członkowskiego na przesyłanie danych ze źródła danych do obiektu zestawu rekordów. Jednak dane nie są przesyłane z zestawu rekordów do źródła danych. Wywoływanie `AddNew`, `Edit`, `Delete`, lub `Update` wyniki funkcji elementu członkowskiego w potwierdzenie nie powiodło się. Mimo że `CRecordset` aktualnie nie zapewnia mechanizm aktualizacji zbiorczej wiersze danych, można napisać własne funkcje za pomocą funkcji interfejsu API ODBC `SQLSetPos`. Aby uzyskać więcej informacji na temat `SQLSetPos`, zobacz *ODBC SDK Podręcznik programisty* w dokumentacji MSDN.
+- Struktura automatycznie wywołuje funkcję elementu członkowskiego `DoBulkFieldExchange`, aby przesłać dane ze źródła danych do obiektu zestawu rekordów. Jednak dane nie są przesyłane z zestawu rekordów z powrotem do źródła danych. Wywołanie funkcji elementów członkowskich `AddNew`, `Edit`, `Delete`lub `Update` powoduje niepowodzenie potwierdzenia. Chociaż `CRecordset` obecnie nie oferuje mechanizmu aktualizowania wierszy danych zbiorczych, można napisać własne funkcje przy użyciu funkcji ODBC API `SQLSetPos`. Aby uzyskać więcej informacji na temat `SQLSetPos`, zobacz *Kompendium zestawu ODBC SDK programisty* w dokumentacji MSDN.
 
-- Funkcje elementów członkowskich `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`, i `SetFieldNull` nie można używać w zestawach rekordów, który implementuje zbiorcze pobieranie z wiersza. Jednak można wywoływać `GetRowStatus` zamiast `IsDeleted`, i `GetODBCFieldInfo` zamiast `IsFieldNullable`.
+- Funkcji Członkowskich `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`i `SetFieldNull` nie można używać w zestawach rekordów, które implementują pobieranie wierszy zbiorczych. Można jednak wywołać `GetRowStatus` zamiast `IsDeleted`i `GetODBCFieldInfo` zamiast `IsFieldNullable`.
 
-- `Move` Operacje powoduje przeniesienie rekordów w zestawie wierszy. Na przykład załóżmy, że możesz otworzyć zestaw rekordów, które ma 100 rekordów o rozmiarze 10 początkowego zestawu wierszy. `Open` Pobiera wiersze od 1 do 10 z bieżącym rekordem umieszczony w wierszu 1. Wywołanie `MoveNext` pobierze następny zestaw wierszy nie następnego wiersza. Ten zestaw wierszy składa się z wierszach od 11 do 20 z bieżącym rekordem umieszczony w wierszu 11. Należy pamiętać, że `MoveNext` i `Move( 1 )` nie są równoważne, gdy zbiorcze pobieranie z wiersza jest zaimplementowana. `Move( 1 )` Pobiera zestaw wierszy, który rozpoczyna się 1 wiersz z bieżącego rekordu. W tym przykładzie wywołanie `Move( 1 )` po wywołaniu `Open` pobiera wierszy składający się z wierszy od 2 do 11 z bieżącym rekordem umieszczony w wierszu 2. Aby uzyskać więcej informacji, zobacz [przenieść](../../mfc/reference/crecordset-class.md#move) funkcja elementu członkowskiego.
+- Operacje `Move` zmieniają położenie zestawu rekordów według zestawu wierszy. Załóżmy na przykład, że otworzysz zestaw rekordów, który ma 100 rekordów o początkowym rozmiarze zestawu wierszy 10. `Open` pobiera wiersze od 1 do 10 z bieżącym rekordem umieszczonym w wierszu 1. Wywołanie `MoveNext` pobiera następny zestaw wierszy, a nie następny wiersz. Ten zestaw wierszy składa się z wierszy od 11 do 20 z bieżącym rekordem umieszczonym w wierszu 11. Należy pamiętać, że `MoveNext` i `Move( 1 )` nie są równoważne, gdy zaimplementowano pobieranie wierszy zbiorczych. `Move( 1 )` Pobiera zestaw wierszy, który rozpoczyna 1 wiersz od bieżącego rekordu. W tym przykładzie wywoływanie `Move( 1 )` po wywołaniu `Open` Pobiera zestaw wierszy składający się z wierszy od 2 do 11, z bieżącym rekordem umieszczonym w wierszu 2. Aby uzyskać więcej informacji, zobacz Funkcja [przenoszenia](../../mfc/reference/crecordset-class.md#move) elementu członkowskiego.
 
-- W odróżnieniu od wymiana pól rekordów kreatorów nie obsługują zbiorcza wymiana pól rekordów. Oznacza to, należy ręcznie zadeklarować swoje elementy członkowskie danych pola i ręcznie przezwyciężyć `DoBulkFieldExchange` , pisząc wywołania funkcji zbiorcze RFX. Aby uzyskać więcej informacji, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) w *odwołanie do biblioteki klas*.
+- W przeciwieństwie do wymiany pól rekordów kreatorzy nie obsługują wymiany pól rekordów zbiorczych. Oznacza to, że należy ręcznie zadeklarować elementy członkowskie danych pola i ręcznie przesłonić `DoBulkFieldExchange` przez zapisanie wywołań do funkcji Bulk RFX. Aby uzyskać więcej informacji, zobacz [Rejestrowanie funkcji wymiany pól](../../mfc/reference/record-field-exchange-functions.md) w *dokumentacji biblioteki klas*.
 
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Jak zaimplementować wymiana pól rekordów zbiorcze
+##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Jak zaimplementować wymianę pól rekordów zbiorczych
 
-Zbiorcza wymiana pól rekordów przesyła zestawu wierszy danych ze źródła danych do obiektu zestawu rekordów. Funkcje zbiorcze RFX używać tablic do przechowywania danych, a także tablic do przechowywania długość każdego elementu danych w zestawie wierszy. W definicji klasy należy zdefiniować swoje elementy członkowskie danych pola jako wskaźniki do tablic danych dostęp. Ponadto należy zdefiniować zestaw wskaźniki do tablic o długości dostępu. Wszystkie elementy członkowskie danych parametru nie powinien być deklarowany jako wskaźniki; deklarowanie elementy członkowskie danych parametru w przypadku korzystania z zbiorcza wymiana pól rekordów jest taka sama jak deklarowanie je, korzystając z wymiana pól rekordów. Poniższy kod pokazuje prosty przykład:
+Wymiana pól rekordów zbiorczych przenosi zestaw wierszy danych ze źródła danych do obiektu recordset. Funkcje Bulk RFX używają tablic do przechowywania tych danych, a także tablic do przechowywania długości każdego elementu danych w zestawie wierszy. W definicji klasy należy zdefiniować elementy członkowskie danych pola jako wskaźniki umożliwiające dostęp do tablic danych. Ponadto należy zdefiniować zestaw wskaźników, aby uzyskać dostęp do tablic długości. Wszystkie elementy członkowskie danych parametrów nie powinny być deklarowane jako wskaźniki; Deklarowanie elementów członkowskich danych podczas korzystania z wymiany pól rekordów zbiorczych jest taka sama jak deklarująca je podczas korzystania z wymiany pól rekordów. Poniższy kod przedstawia prosty przykład:
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-Możesz przydzielić bufory magazynu ręcznie lub mieć platformę, czy przydział. Aby przydzielić bufory samodzielnie, należy określić `CRecordset::userAllocMultiRowBuffers` opcji *dwOptions* parametru w `Open` funkcja elementu członkowskiego. Należy ustawić co najmniej równa rozmiarowi wierszy rozmiary tablic. Jeśli chcesz mieć platformę, czy przydział, należy zainicjować wskaźniki do wartości NULL. Zazwyczaj jest to wykonywane w Konstruktorze obiektu zestaw rekordów:
+Te bufory magazynu można przydzielić ręcznie lub w ramach alokacji. Aby samodzielnie przydzielić bufory, należy określić opcję `CRecordset::userAllocMultiRowBuffers` parametru *dwOptions* w funkcji członkowskiej `Open`. Pamiętaj, aby ustawić rozmiary tablic co najmniej równe rozmiarowi zestawu wierszy. Jeśli chcesz, aby struktura wykonał alokację, należy zainicjować wskaźniki do wartości NULL. Zwykle jest to wykonywane w konstruktorze obiektu zestawu rekordów:
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-Ponadto konieczne jest przesłonięcie `DoBulkFieldExchange` funkcja elementu członkowskiego. Elementy członkowskie danych pola można wywołać w funkcji zbiorcze RFX; wszystkie elementy członkowskie danych parametru można wywołać w funkcji RFX. Jeśli zestaw rekordów został otwarty przez przekazanie instrukcji SQL lub procedurę przechowywaną, aby `Open`, kolejność, w którym możesz wykonywać wywołania zbiorcze RFX musi odpowiadać kolejności kolumn w zestawie rekordów; podobnie kolejność RFX wywołuje dla parametrów musi odpowiadać. polecenie parametry w instrukcji SQL lub procedury składowanej.
+Na koniec należy zastąpić funkcję elementu członkowskiego `DoBulkFieldExchange`. Dla elementów członkowskich danych pola Wywołaj funkcje RFX zbiorczych; dla dowolnego elementu członkowskiego danych, wywołaj funkcje RFX. Jeśli zestaw rekordów został otwarty przez przekazanie instrukcji SQL lub procedury składowanej do `Open`, kolejność wykonywania wywołań zbiorczych RFX musi odpowiadać kolejności kolumn w zestawie rekordów; Podobnie porządek RFX wywołań parametrów musi odpowiadać kolejności parametrów w instrukcji SQL lub procedurze składowanej.
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,13 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  Należy wywołać `Close` funkcji składowej przed swoje pochodnej `CRecordset` klasy wykracza poza zakres. Daje to gwarancję, że wszystkie pamięci przydzielonej przez platformę są zwalniane. Jest dobrą praktyką, aby zawsze jawnie wywołać programowania `Close`, niezależnie od tego, czy udało Ci się wdrożyć zbiorcze pobieranie z wiersza.
+>  Musisz wywołać funkcję członkowską `Close`, zanim Klasa pochodna `CRecordset` wyjdzie poza zakres. Gwarantuje to, że wszystkie pamięci przydzielone przez platformę zostaną zwolnione. Dobrym sposobem programowania jest zawsze jawne wywołanie `Close`, niezależnie od tego, czy wdrożono pobieranie wierszy zbiorczych.
 
-Aby uzyskać więcej informacji na temat wymiana pól rekordów (RFX), zobacz [wymiana pól rekordów: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji o korzystaniu z parametrów, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) i [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Aby uzyskać więcej informacji na temat wymiany pól rekordów (RFX), zobacz [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Aby uzyskać więcej informacji na temat używania parametrów, zobacz [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) i [Recordset: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
-
+[CRecordset:: m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset:: m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

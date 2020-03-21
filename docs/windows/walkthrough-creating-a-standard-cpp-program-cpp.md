@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627141"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075437"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Przewodnik: Tworzenie programu standardowego C++ (C++)
 
@@ -36,7 +36,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 
 1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**.
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie Wprowadź nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
@@ -54,7 +54,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 
 1. Wpisz nazwę dla projektu. Domyślnie rozwiązanie, które zawiera projekt, ma taką samą nazwę jak projekt, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
 
-1. Kliknij przycisk **OK** , aby utworzyć projekt.
+1. Kliknij przycisk **OK**, aby utworzyć projekt.
 
 ::: moniker-end
 
@@ -70,13 +70,13 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 
 1. Wpisz nazwę dla projektu. Domyślnie rozwiązanie, które zawiera projekt, ma taką samą nazwę jak projekt, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.
 
-1. Kliknij przycisk **OK** , aby utworzyć projekt.
+1. Kliknij przycisk **OK**, aby utworzyć projekt.
 
-1. Ukończ pracę **Kreatora aplikacji Win32**. 
+1. Ukończ pracę **Kreatora aplikacji Win32**.
 
-1. Kliknij przycisk **dalej**, upewnij się, że **Aplikacja konsolowa** jest zaznaczona i usuń zaznaczenie pola **prekompilowane nagłówki** . 
+1. Kliknij przycisk **dalej**, upewnij się, że **Aplikacja konsolowa** jest zaznaczona i usuń zaznaczenie pola **prekompilowane nagłówki** .
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 
 1. Zapisz plik.
 
-1. W menu **kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
+1. W menu **Kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
 
    W oknie **dane wyjściowe** są wyświetlane informacje o postępie kompilacji, na przykład lokalizacja dziennika kompilacji i komunikat informujący o stanie kompilacji.
 
@@ -109,7 +109,7 @@ Poniższe kroki różnią się w zależności od używanej wersji programu Visua
 **Poprzedni:** [aplikacje konsolowe w C++ wizualizacji](../windows/console-applications-in-visual-cpp.md)<br/>
 **Dalej:** [Przewodnik: kompilowanie programu C++ natywnego w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446768"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076409"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view operatory&gt;
 
-Te operatory służą do porównywania dwóch string_view obiektów lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char\*** ), dla których podano niejawną konwersję. 
+Te operatory służą do porównywania dwóch string_view obiektów lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char\*** ), dla których podano niejawną konwersję.
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ Te operatory służą do porównywania dwóch string_view obiektów lub string_v
 |[&lt; operatora](#op_lt)|[&lt;operatora &lt;](#op_lt_lt)|[&lt;operatora =](#op_lt_eq)|
 |[operator = =](#op_eq_eq)|[operator "" SV](#op_sv)|
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
@@ -69,11 +69,11 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie.
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe. W przeciwnym razie są one nierówne.
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
@@ -108,12 +108,11 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie.
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe.
 
-
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>&lt; operatora
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy niż obiekt z prawej strony sidestring_view
 
@@ -148,7 +147,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie.
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Po napotkaniu pierwszej nierównej pary znaków jest zwracany wynik tego porównania. Jeśli nie zostaną znalezione żadne nierówne znaki, ale jedna sekwencja jest krótsza, krótsza sekwencja jest mniejsza niż dłuższa. Inaczej mówiąc, "Cat" jest mniejszy niż "koty".
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
@@ -211,7 +210,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_lt_lt"></a>&lt;operatora &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>&lt;operatora &lt;
 
 Zapisuje string_view w strumieniu wyjściowym.
 
@@ -237,7 +236,7 @@ strumień wyjściowy, w którym jest zapisywane.
 
 Użyj tego operatora, aby wstawić zawartość string_view do strumienia wyjściowego, na przykład używając [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>&gt; operatora
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
@@ -274,7 +273,7 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 
@@ -311,9 +310,9 @@ Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównani
 
 Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_sv"></a>operator "" OHR (string_view literal)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>operator "" OHR (string_view literal)
 
-Konstruuje string_view z literału ciągu. Wymaga `std::literals::string_view_literals`przestrzeni nazw. 
+Konstruuje string_view z literału ciągu. Wymaga `std::literals::string_view_literals`przestrzeni nazw.
 
 ### <a name="example"></a>Przykład
 

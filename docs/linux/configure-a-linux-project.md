@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu C++ systemu Linux w programie Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419386"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077725"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -17,9 +17,9 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-W tym temacie opisano sposób konfigurowania projektu C++ systemu Linux zgodnie z opisem w artykule [Tworzenie C++ nowego projektu systemu Linux w programie Visual Studio](create-a-new-linux-project.md). W przypadku projektów CMake Linux zobacz [Configure a Linux CMAKE Project ](cmake-linux-project.md). 
+W tym temacie opisano sposób konfigurowania projektu C++ systemu Linux zgodnie z opisem w artykule [Tworzenie C++ nowego projektu systemu Linux w programie Visual Studio](create-a-new-linux-project.md). W przypadku projektów CMake Linux zobacz [Configure a Linux CMAKE Project ](cmake-linux-project.md).
 
-Istnieje możliwość skonfigurowania projektu systemu Linux, który będzie przeznaczony dla fizycznego komputera z systemem Linux, maszyny wirtualnej lub [podsystemu Windows for Linux](/windows/wsl/about) (WSL). 
+Istnieje możliwość skonfigurowania projektu systemu Linux, który będzie przeznaczony dla fizycznego komputera z systemem Linux, maszyny wirtualnej lub [podsystemu Windows for Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Ponieważ cała kompilacja odbywa się na komputerze zdalnym (lub WSL), kilka do
 
 ![Zdarzenia kompilacji](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a>Funkcja IntelliSense dla nagłówków w systemach zdalnych
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a>Funkcja IntelliSense dla nagłówków w systemach zdalnych
 
 Po dodaniu nowego połączenia w **Menedżerze połączeń**program Visual Studio automatycznie wykrywa katalogi dołączania dla kompilatora w systemie zdalnym. Program Visual Studio następnie Zips pliki i skopiuje je do katalogu na lokalnym komputerze z systemem Windows. Po wykonaniu tej operacji, za każdym razem, gdy korzystasz z tego połączenia w projekcie programu Visual Studio lub CMake, nagłówki w tych katalogach są używane do udostępniania technologii IntelliSense.
 

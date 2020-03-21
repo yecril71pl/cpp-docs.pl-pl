@@ -2,12 +2,12 @@
 title: Odczytuj i rozumiej C++ kod w programie Visual Studio
 description: Użyj edytora C++ kodu w programie Visual Studio, aby sformatować i zrozumieć swój kod.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416129"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079042"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Odczytuj i rozumiej C++ kod w programie Visual Studio
 
@@ -61,7 +61,7 @@ Umieść kursor nad dowolną zmienną, funkcją lub innym symbolem, aby uzyskać
 
 ![Szybkie informacje w języku C&#43;&#43;](../ide/media/quick-info-vs2019.png "Szybkie informacje")
 
-Etykietka narzędzia **szybkie informacje** zawiera link **wyszukiwania online** . Przejdź do pozycji **narzędzia** > **Opcje** > **Edytor tekstów** > **C++**  > **widoku** , aby określić dostawcę wyszukiwania. 
+Etykietka narzędzia **szybkie informacje** zawiera link **wyszukiwania online** . Przejdź do pozycji **narzędzia** > **Opcje** > **Edytor tekstów** > **C++**  > **widoku** , aby określić dostawcę wyszukiwania.
 
 Jeśli wystąpi błąd w kodzie, możesz umieścić wskaźnik myszy nad nim, a w oknie **szybkie informacje** zostanie wyświetlony komunikat o błędzie. Komunikat o błędzie można również znaleźć w oknie Lista błędów.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189008"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075203"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
@@ -242,10 +242,9 @@ Te informacje dotyczą powyższej listy:
 
 - Wskazówka `#undef` w katalogu `A2` usunął wskazówki dotyczące `OBRACE` i `CBRACE` w pliku wskazówek dotyczących katalogu `Debug`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy plików utworzone dla projektów programu C++ Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Adnotacje SAL](../../c-runtime-library/sal-annotations.md)<br>
-

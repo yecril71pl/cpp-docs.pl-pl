@@ -3,16 +3,16 @@ title: Strony właściwości konsolidatora
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927703"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079596"
 ---
 # <a name="linker-property-pages"></a>Strony właściwości konsolidatora
 
-W obszarze właściwości**konfiguracji** >  > właściwości > projektu**konsolidator**znajduje się następujące właściwości. Aby uzyskać więcej informacji na temat konsolidatora, zobacz [CL wywołuje Opcje konsolidatora](cl-invokes-the-linker.md) i [konsolidatora](linker-options.md).
+W obszarze **właściwości > ** **projektu** można znaleźć następujące właściwości > **Właściwości konfiguracji** > **konsolidatora**. Aby uzyskać więcej informacji na temat konsolidatora, zobacz [CL wywołuje Opcje konsolidatora](cl-invokes-the-linker.md) i [konsolidatora](linker-options.md).
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
@@ -27,7 +27,7 @@ Drukuje wiadomości dotyczące postępu konsolidatora
 **Decyzji**
 
 - **Nie ustawiono** — brak szczegółowości.
-- **Wyświetl wszystkie komunikaty o postępie** — wyświetla wszystkie komunikaty o postępie. 
+- **Wyświetl wszystkie komunikaty o postępie** — wyświetla wszystkie komunikaty o postępie.
 - **W przypadku przeszukiwanych bibliotek** — wyświetla komunikaty o postępie wskazujące tylko przeszukiwane biblioteki.
 - **Informacje o COMDAT składania podczas zoptymalizowanego łączenia** — wyświetla informacje na temat składania COMDAT podczas zoptymalizowanego łączenia.
 - Informacje **o danych usuniętych podczas zoptymalizowanego łączenia** — wyświetla informacje o funkcjach i danych usuniętych podczas zoptymalizowanej konsolidacji.
@@ -40,27 +40,27 @@ Opcja [/Version](version-version-information.md) nakazuje konsolidatorowi umiesz
 
 ### <a name="enable-incremental-linking"></a>Włącz konsolidację przyrostową
 
-Włącza łączenie przyrostowe. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL: NO)
+Włącza łączenie przyrostowe. ([/Incremental](incremental-link-incrementally.md),/Incremental: No)
 
 ### <a name="suppress-startup-banner"></a>Pomiń transparent startowy
 
-Opcja [/nologo](nologo-suppress-startup-banner-linker.md) uniemożliwia wyświetlanie komunikatu o prawach autorskich i numeru wersji. 
+Opcja [/nologo](nologo-suppress-startup-banner-linker.md) uniemożliwia wyświetlanie komunikatu o prawach autorskich i numeru wersji.
 
 ### <a name="ignore-import-library"></a>Ignoruj bibliotekę importowaną
 
 Ta właściwość nakazuje konsolidatorowi łączenie się z danymi wyjściowymi lib wygenerowanymi przez tę kompilację z dowolnym projektem zależnym. Umożliwia systemowi projektu obsługę plików DLL, które nie generują pliku lib po skompilowaniu. Jeśli projekt jest zależny od innego projektu, który tworzy bibliotekę DLL, system projektu automatycznie łączy plik lib utworzony przez ten projekt podrzędny. Ta właściwość może być niepotrzebna w projektach, które generują biblioteki DLL COM lub biblioteki DLL z samymi zasobami, ponieważ te biblioteki DLL nie mają żadnych znaczących eksportów. Jeśli biblioteka DLL nie ma żadnych eksportów, konsolidator nie generuje pliku. lib. Jeśli plik eksportu. lib nie istnieje, a system projektu nakazuje konsolidatorowi łączenie się z brakującą biblioteką DLL, link kończy się niepowodzeniem. Aby rozwiązać ten problem, użyj właściwości **Ignorowanie biblioteki importowanej** . W przypadku ustawienia **opcji tak**system projektu ignoruje obecność lub brak pliku. lib i powoduje, że każdy projekt, który zależy od tego projektu nie jest połączony z nieistniejącym plikiem. lib.
 
-Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>, zobacz.
+Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
 ### <a name="register-output"></a>Rejestruj dane wyjściowe
 
-Działa `regsvr32.exe /s $(TargetPath)` w danych wyjściowych kompilacji, które są prawidłowe tylko w projektach. dll. W projektach plików .exe właściwość jest ignorowana. Aby zarejestrować dane wyjściowe pliku. exe, należy ustawić zdarzenie postbuild w konfiguracji, aby wykonać rejestrację niestandardową, która jest zawsze wymagana dla zarejestrowanych plików. exe.
+Uruchamia `regsvr32.exe /s $(TargetPath)` w danych wyjściowych kompilacji, które są prawidłowe tylko w projektach. dll. W projektach plików .exe właściwość jest ignorowana. Aby zarejestrować dane wyjściowe pliku. exe, należy ustawić zdarzenie postbuild w konfiguracji, aby wykonać rejestrację niestandardową, która jest zawsze wymagana dla zarejestrowanych plików. exe.
 
-Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>, zobacz.
+Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.
 
 ### <a name="per-user-redirection"></a>Przekierowanie na użytkownika
 
-Rejestracja w programie Visual Studio tradycyjnie zakończyła się w KLUCZu HKEY_CLASSES_ROOT (HKCR). W systemach operacyjnych Windows Vista i nowszych w celu uzyskania dostępu do HKCR należy uruchomić program Visual Studio w trybie podniesionych uprawnień. Deweloperzy nie zawsze chcą uruchamiać w trybie podniesionych uprawnień, ale nadal muszą pracować z rejestracją. Przekierowanie na użytkownika umożliwia rejestrację bez konieczności uruchamiania w trybie podniesionych uprawnień.
+Rejestracja w programie Visual Studio jest tradycyjnie wykonywana w HKEY_CLASSES_ROOT (HKCR). W systemach operacyjnych Windows Vista i nowszych w celu uzyskania dostępu do HKCR należy uruchomić program Visual Studio w trybie podniesionych uprawnień. Deweloperzy nie zawsze chcą uruchamiać w trybie podniesionych uprawnień, ale nadal muszą pracować z rejestracją. Przekierowanie na użytkownika umożliwia rejestrację bez konieczności uruchamiania w trybie podniesionych uprawnień.
 
 Przekierowanie na użytkownika wymusza przekierowanie wszystkich zapisów do HKCR do HKEY\_bieżącego\_użytkownika (HKCU). Jeśli przekierowanie na użytkownika jest wyłączone, może to spowodować [błąd PRJ0050 kompilacji projektu](../../error-messages/tool-errors/project-build-error-prj0050.md) , gdy program próbuje wykonać zapis do HKCR.
 
@@ -72,7 +72,7 @@ Zezwala użytkownikowi na przesłanianie ścieżki biblioteki środowiskowej. ([
 
 Określa, czy mają być połączone pliki. lib, które są tworzone przez projekty zależne. Zazwyczaj chcesz połączyć w plikach lib, ale w przypadku niektórych bibliotek DLL może nie być to możliwe.
 
-Można również określić plik. obj, podając nazwę pliku i ścieżkę względną, na przykład ".. \\.. \MyLibProject\MyObjFile.obj". Jeśli kod źródłowy dla pliku. obj #includes prekompilowanego nagłówka, na przykład PCH. h, plik PCH. obj znajduje się w tym samym folderze co MyObjFile. obj. Należy również dodać PCH. obj jako dodatkową zależność.
+Można również określić plik. obj, podając nazwę pliku i ścieżkę względną, na przykład "..\\.. \MyLibProject\MyObjFile.obj". Jeśli kod źródłowy dla pliku. obj #includes prekompilowanego nagłówka, na przykład PCH. h, plik PCH. obj znajduje się w tym samym folderze co MyObjFile. obj. Należy również dodać PCH. obj jako dodatkową zależność.
 
 ### <a name="use-library-dependency-inputs"></a>Użyj danych wejściowych zależności biblioteki
 
@@ -82,7 +82,7 @@ Aby uzyskać informacje na temat uzyskiwania dostępu do strony właściwości *
 
 ### <a name="link-status"></a>Stan łącza
 
-Określa, czy konsolidator powinien wyświetlać wskaźnik postępu pokazujący, jaki procent łącza został ukończony. Wartość domyślna to nie wyświetlaj informacji o stanie. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: NOSTATUS)
+Określa, czy konsolidator powinien wyświetlać wskaźnik postępu pokazujący, jaki procent łącza został ukończony. Wartość domyślna to nie wyświetlaj informacji o stanie. ([/LTCG](ltcg-link-time-code-generation.md): status | LTCG: NOSTATUS)
 
 ### <a name="prevent-dll-binding"></a>Zapobiegaj powiązaniu biblioteki DLL
 
@@ -125,7 +125,7 @@ Określa dodatkowe elementy do dodania do wiersza polecenia linku, na przykład 
 
 ### <a name="ignore-all-default-libraries"></a>Ignoruj wszystkie biblioteki domyślne
 
-Opcja [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informuje konsolidator, aby usunął co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. 
+Opcja [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informuje konsolidator, aby usunął co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych.
 
 ### <a name="ignore-specific-default-libraries"></a>Ignoruj określone biblioteki domyślne
 
@@ -133,7 +133,7 @@ Określa co najmniej jedną nazwę bibliotek domyślnych do zignorowania. Rozdzi
 
 ### <a name="module-definition-file"></a>Plik definicji modułu
 
-Opcja [/def](def-specify-module-definition-file.md) przekazuje plik definicji modułu (. def) do konsolidatora. Tylko jeden plik. def może być określony do łączenia. 
+Opcja [/def](def-specify-module-definition-file.md) przekazuje plik definicji modułu (. def) do konsolidatora. Tylko jeden plik. def może być określony do łączenia.
 
 ### <a name="add-module-to-assembly"></a>Dodaj moduł do zestawu
 
@@ -149,7 +149,7 @@ Opcja [/include](include-force-symbol-references.md) informuje konsolidator, aby
 
 ### <a name="delay-loaded-dlls"></a>Opóźnienie załadowanych bibliotek DLL
 
-Opcja [/DELAYLOAD](delayload-delay-load-import.md) powoduje opóźnione ładowanie bibliotek DLL. Nazwa biblioteki DLL określa plik DLL, aby opóźnić ładowanie. 
+Opcja [/DELAYLOAD](delayload-delay-load-import.md) powoduje opóźnione ładowanie bibliotek DLL. Nazwa biblioteki DLL określa plik DLL, aby opóźnić ładowanie.
 
 ### <a name="assembly-link-resource"></a>Zasób linku zestawu
 
@@ -171,11 +171,11 @@ Opcja [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-reso
 
 ### <a name="allow-isolation"></a>Zezwalaj na izolację
 
-Określa zachowanie wyszukiwania manifestu. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): NO)
+Określa zachowanie wyszukiwania manifestu. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): No)
 
 ### <a name="enable-user-account-control-uac"></a>Włącz kontrolę konta użytkownika (UAC)
 
-Określa, czy kontrola konta użytkownika jest włączona.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: NO)
+Określa, czy kontrola konta użytkownika jest włączona.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: No)
 
 ### <a name="uac-execution-level"></a>Poziom wykonywania kontroli konta użytkownika
 
@@ -201,8 +201,8 @@ Ta opcja umożliwia tworzenie informacji debugowania dla pliku exe lub DLL.
 
 - **Nie** — nie tworzy informacji o debugowaniu.
 - **Generuj informacje o debugowaniu** — Utwórz kompletną bazę danych programu (PDB) idealny do dystrybucji na serwerze symboli firmy Microsoft.
-- **Generuj informacje o debugowaniu zoptymalizowane pod kątem szybszych linków** — tworzy bazę danych programu (PDB) idealną dla cyklu Edit-link-Debug. 
-- **Generuj informacje o debugowaniu zoptymalizowane pod kątem udostępniania i publikowania** — tworzy bazę danych programu (PDB) idealną dla cyklu Edit-link-Debug. 
+- **Generuj informacje o debugowaniu zoptymalizowane pod kątem szybszych linków** — tworzy bazę danych programu (PDB) idealną dla cyklu Edit-link-Debug.
+- **Generuj informacje o debugowaniu zoptymalizowane pod kątem udostępniania i publikowania** — tworzy bazę danych programu (PDB) idealną dla cyklu Edit-link-Debug.
 
 ### <a name="generate-program-database-file"></a>Generuj plik bazy danych programu
 
@@ -237,7 +237,7 @@ Opcja [/Subsystem](subsystem-specify-subsystem.md) informuje system operacyjny, 
 **Decyzji**
 
 - **Nie ustawiono** — nie ustawiono podsystemu.
-- Aplikacja w trybie znakowym w systemie Win32. Aplikacje konsolowe uzyskują konsolę przez system operacyjny. Jeśli jest zdefiniowany główny lub wmain, konsola jest wartością domyślną.
+- **Console** Aplikacja w trybie znakowym w systemie Win32. Aplikacje konsolowe uzyskują konsolę przez system operacyjny. Jeśli jest zdefiniowany główny lub wmain, konsola jest wartością domyślną.
 - **Windows** -aplikacja nie wymaga konsoli, prawdopodobnie dlatego, że tworzy własne okna do interakcji z użytkownikiem. Jeśli zdefiniowano WinMain lub wWinMain, System WINDOWS jest wartością domyślną.
 - Sterowniki urządzeń **natywnych** dla systemu Windows NT. Jeśli jest określony wartość parametru//lub, natywny jest tryb macierzysty.
 - Aplikacja **EFI Application** -EFI.
@@ -290,12 +290,12 @@ Aby skompilować sterownik trybu jądra systemu Windows NT, użyj opcji [/konsol
 
 - **Nie ustawiono** domyślnego ustawienia sterownika.
 - **Sterownik-sterownik**
-- **Tylko** do-///-//-/-//-tylko: powoduje, że KONSOLIDATOR dodaje IMAGE_FILE_UP_SYSTEM_ONLY bit do charakterystyki w nagłówku danych wyjściowych, aby określić, że jest to sterownik jednoprocesorowy. System operacyjny odmówi załadowania sterownika w systemie wieloprocesorowym (MP).
-- **WDM** -IMAGE_DLLCHARACTERISTICS_WDM_DRIVER: WDM powoduje, że konsolidator ustawia bit w polu DLLCHARACTERISTICS opcjonalnego nagłówka.
+- **Tylko** do-///-//-/-//-tylko: powoduje, że konsolidator dodaje IMAGE_FILE_UP_SYSTEM_ONLY bit do charakterystyki w nagłówku danych wyjściowych, aby określić, że jest to sterownik jednoprocesorowy. System operacyjny odmówi załadowania sterownika w systemie wieloprocesorowym (MP).
+- **WDM** -DLLCHARACTERISTICS: WDM powoduje, że konsolidator ustawia IMAGE_DLLCHARACTERISTICS_WDM_DRIVER bit w polu nagłówka opcjonalnego.
 
 ## <a name="optimization-property-page"></a>Strona właściwości optymalizacji
 
-### <a name="references"></a>Odwołania
+### <a name="references"></a>Dokumentacja
 
 [/Opt](opt-optimizations.md): ref eliminuje funkcje i/lub dane, które nigdy nie są przywoływane, podczas gdy/OPT: NOREF utrzymuje funkcje i/lub dane, które nigdy nie są przywoływane.
 
@@ -381,7 +381,7 @@ Opcja [/entry](entry-entry-point-symbol.md) określa funkcję punktu wejścia ja
 
 ### <a name="no-entry-point"></a>Brak punktu wejścia
 
-Opcja [/NOENTRY](noentry-no-entry-point.md)jest wymagana do utworzenia biblioteki DLL tylko dla zasobów. Użyj tej opcji, aby zapobiec łączeniu łącza z odwołaniem `_main` do biblioteki DLL.
+Opcja [/NOENTRY](noentry-no-entry-point.md)jest wymagana do utworzenia biblioteki DLL tylko dla zasobów. Użyj tej opcji, aby zapobiec łączeniu łącza z odwołaniem do `_main` do biblioteki DLL.
 
 ### <a name="set-checksum"></a>Ustaw sumę kontrolną
 
@@ -389,19 +389,19 @@ Opcja [/Release](release-set-the-checksum.md) ustawia sumę kontrolną w nagłó
 
 ### <a name="base-address"></a>Adres podstawowy
 
-Ustawia adres podstawowy dla programu. ([/Base](base-base-address.md): {Address\[, size] | @filename, klucz})
+Ustawia adres podstawowy dla programu. ([/Base](base-base-address.md): {Address\[, size] | @filename, Key})
 
 ### <a name="randomized-base-address"></a>Losowy adres podstawowy
 
-Losowy adres podstawowy. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+Losowy adres podstawowy. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: No])
 
 ### <a name="fixed-base-address"></a>Stały adres podstawowy
 
-Tworzy program, który można załadować tylko przy użyciu preferowanego adresu podstawowego. ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+Tworzy program, który można załadować tylko przy użyciu preferowanego adresu podstawowego. ([/FIXED](fixed-fixed-base-address.md)\[: No])
 
 ### <a name="data-execution-prevention-dep"></a>Zapobieganie wykonywaniu danych (DEP)
 
-Oznacza plik wykonywalny, który został przetestowany pod kątem zgodności z funkcją zapobiegania wykonywaniu danych systemu Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+Oznacza plik wykonywalny, który został przetestowany pod kątem zgodności z funkcją zapobiegania wykonywaniu danych systemu Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: No])
 
 ### <a name="turn-off-assembly-generation"></a>Wyłącz generowanie zestawu
 
@@ -409,11 +409,11 @@ Opcja [/NOASSEMBLY](noassembly-create-a-msil-module.md) informuje konsolidator, 
 
 ### <a name="unload-delay-loaded-dll"></a>Ładowanie biblioteki DLL z opóźnieniem
 
-Kwalifikator **Unload** informuje funkcję pomocnika ładowania opóźnień, aby obsługiwała jawne zwolnienie biblioteki DLL. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+Kwalifikator **Unload** informuje funkcję pomocnika ładowania opóźnień, aby obsługiwała jawne zwolnienie biblioteki DLL. ([/delay](delay-delay-load-import-settings.md): Unload)
 
 ### <a name="nobind-delay-loaded-dll"></a>Biblioteka DLL załadowanej z opóźnieniem NOBIND
 
-Kwalifikator **NOBIND** informuje konsolidator, aby nie zawierał IAT możliwego do powiązania w końcowym obrazie. Wartość domyślna to utworzenie IAT możliwego do powiązania dla bibliotek DLL ładowanych z opóźnieniem. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+Kwalifikator **NOBIND** informuje konsolidator, aby nie zawierał IAT możliwego do powiązania w końcowym obrazie. Wartość domyślna to utworzenie IAT możliwego do powiązania dla bibliotek DLL ładowanych z opóźnieniem. ([/delay](delay-delay-load-import-settings.md): NOBIND)
 
 ### <a name="import-library"></a>Importuj bibliotekę
 
@@ -445,7 +445,7 @@ Opcja [/Machine](machine-specify-target-platform.md) określa docelową platform
 
 ### <a name="profile"></a>Profil
 
-Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności. Wymaga ustawienia GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/PROFILE](profile-performance-tools-profiler.md))
+Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności. Wymaga ustawienia GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/Profile](profile-performance-tools-profiler.md))
 
 ### <a name="clr-thread-attribute"></a>Atrybut wątku CLR
 

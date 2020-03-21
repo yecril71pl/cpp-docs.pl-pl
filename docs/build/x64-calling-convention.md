@@ -3,12 +3,12 @@ title: Konwencja wywoływania x64
 description: Szczegóły domyślnej konwencji wywoływania ABI x64.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417167"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078079"
 ---
 # <a name="x64-calling-convention"></a>Konwencja wywoływania x64
 
@@ -147,7 +147,7 @@ Rejestry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 i górnych części YMM0-15 i Z
 Rejestry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 i XMM6-15 są uznawane za nietrwałe i muszą zostać zapisane i przywrócone przez funkcję, która go używa.
 
 ## <a name="function-pointers"></a>Wskaźniki funkcji
- 
+
 Wskaźniki funkcji są po prostu wskaźnikami do etykiety odpowiedniej funkcji. Nie ma wymagań dotyczących spisu treści (TOC) dla wskaźników funkcji.
 
 ## <a name="floating-point-support-for-older-code"></a>Obsługa zmiennoprzecinkowa dla starszego kodu

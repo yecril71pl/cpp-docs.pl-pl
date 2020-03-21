@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444029"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077710"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
 
@@ -28,7 +28,7 @@ Zapewnia implementację interfejsu [ISessionProperties](/previous-versions/windo
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
@@ -57,7 +57,7 @@ Klasa właściwości, która jest określana przez użytkownika, która domyśln
 
 Obowiązkowy interfejs w sesjach. Ta klasa implementuje właściwości sesji przez wywołanie funkcji statycznej zdefiniowanej przez [mapę właściwości](../../data/oledb/begin-propset-map.md). W klasie sesji należy określić mapę zestawu właściwości.
 
-## <a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
 
 Zwraca listę właściwości w `DBPROPSET_SESSION` grupie właściwości, które są obecnie ustawione w sesji.
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 Zobacz [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) w *Kompendium OLE DB programisty*.
 
-## <a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
 
 Ustawia właściwości w `DBPROPSET_SESSION` grupie właściwości.
 

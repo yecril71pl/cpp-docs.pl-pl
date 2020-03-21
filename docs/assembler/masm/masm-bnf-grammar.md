@@ -4,12 +4,12 @@ description: BNF opis MASM dla architektury x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322807"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075464"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft Macro asembler BNF — Gramatyka
 
@@ -218,7 +218,7 @@ Gramatyka BNF umożliwia używanie definicji cyklicznych. Na przykład Gramatyka
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 *directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*dyrektywa* | *directiveList*
+&nbsp;&nbsp;&nbsp;&nbsp;*dyrektywa* | *directiveList* *directive*
 
 \ *odległości*
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
@@ -270,15 +270,15 @@ Gramatyka BNF umożliwia używanie definicji cyklicznych. Na przykład Gramatyka
 &nbsp;&nbsp;&nbsp;&nbsp;( *Expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *Expr* ⟧ \
 &nbsp;&nbsp;&nbsp;&nbsp;| **Szerokość** *\*
-&nbsp;&nbsp;&nbsp;&nbsp;|  *Identyfikator* maski\
+&nbsp;&nbsp;&nbsp;&nbsp;| **MASK** *Identyfikator* maski\
 &nbsp;&nbsp;&nbsp; **&nbsp;| ** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **SIZEOF** *sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatorze* **długości** | 
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatorze* **długości** | \
 &nbsp;&nbsp;&nbsp;&nbsp;| **LENGTHOF** *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *ciąg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *stała*\
-&nbsp;&nbsp;&nbsp; *&nbsp;| *
+&nbsp;&nbsp;&nbsp; *&nbsp;| * \
 &nbsp;&nbsp;&nbsp;&nbsp;| *id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **$**\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister*\
@@ -303,10 +303,10 @@ Gramatyka BNF umożliwia używanie definicji cyklicznych. Na przykład Gramatyka
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNB** *textitem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDEF** *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNDEF** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIF** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIFI** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDN** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDNI** *textitem*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIF** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIFI** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDN** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDNI** *textitem*\ *textItem*
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF1**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF2**
 
@@ -414,10 +414,10 @@ Gramatyka BNF umożliwia używanie definicji cyklicznych. Na przykład Gramatyka
 &nbsp;&nbsp;&nbsp;&nbsp;**REQ** | = *Textliteral*
 
 *fpuRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;**St**
+&nbsp;&nbsp;&nbsp;&nbsp;**St** *expr*
 
 *frameExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp; *Identyfikator* SEG\
+&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *Identyfikator* SEG\
 &nbsp;&nbsp;&nbsp;&nbsp;| **DGROUP** : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister* : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikator* | 
@@ -442,7 +442,7 @@ Gramatyka BNF umożliwia używanie definicji cyklicznych. Na przykład Gramatyka
 &nbsp;&nbsp;&nbsp;&nbsp;AX | EAX | CX | ECX | DX | EDX | BX | EBX | DI | EDI | SI | ESI | BP | EBP | SP | ESP | ŻĄDANIE RSP | R8W | R8D | R9W | R9D | R12D | R13W | R13D | R14W | R14D
 
 *groupDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **grupy** GroupID *segIdList*
+&nbsp;&nbsp;&nbsp;&nbsp;*groupId* **grupy** GroupID *segIdList*
 
 Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
@@ -470,10 +470,10 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFNB** *textitem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ifdef** *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ifndef** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFDIF** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFDIFI** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFIDN** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFIDNI** *textitem*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFDIF** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFDIFI** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFIDN** *textitem*\ *textItem*
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFIDNI** *textitem*\ *textItem*
 &nbsp;&nbsp;&nbsp;&nbsp;| **IF1**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IF2**
 
@@ -519,7 +519,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *instrPrefix* ⟧ *asmInstruction*
 
 *invokeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*register* :: *register* | *wyrażenie* | **adresu**
+&nbsp;&nbsp;&nbsp;&nbsp;*register* :: *register* | *wyrażenie* | **adresu** *expr*
 
 *invokeDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;**Wywołaj** *wyrażenie* ⟦, ⟦;; ⟧ *invokeList* ⟧;;
@@ -537,7 +537,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* : | *Identyfikator* :: | @@:
 
 *labelDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *kwalifikowana* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **LABEL** *kwalifikowana* ;;
 
 \ *langtype*
 &nbsp;&nbsp;&nbsp;&nbsp;**C** | **PASCAL** | **pascal** | **Basic** | **syscall** | **stdcall**
@@ -600,7 +600,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
 *macroForc*\
-&nbsp;&nbsp;&nbsp;&nbsp; *Identyfikator* forcDir, *textliteral* ;; \
+&nbsp;&nbsp;&nbsp;&nbsp;*forcDir* *Identyfikator* forcDir, *textliteral* ;; \
 &nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
@@ -650,7 +650,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;**wszystkie** | **Brak** | **NOTPUBLIC**
 
 *memOption*\
-&nbsp;&nbsp; **&nbsp;&nbsp;niewielka | ** **mała** | **średnia** | **Compact** | **duże** | ogromny ** | **
+&nbsp;&nbsp; **&nbsp;&nbsp;niewielka | ** **mała** | **średnia** | **Compact** | **duże** | ogromny ** | ** **HUGE**
 
 *\*
 &nbsp;&nbsp;&nbsp;&nbsp;Nazwa instrukcji.
@@ -803,7 +803,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* **proto** *protoSpec*
 
 *pubDef*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langtype* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langtype* ⟧ *id*
 
 *publicDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;**Public** *pubList* ;;
@@ -872,7 +872,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*initValue* | *scalarInstList* , ⟦;; ⟧ *initValue*
 
 *segAlign*\
-&nbsp;&nbsp;&nbsp;&nbsp;**bajt** | **Word** | **DWORD** | **para** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**bajt** | **Word** | **DWORD** | **para** | **PAGE**
 
 *segAttrib*\
 &nbsp;&nbsp;&nbsp;&nbsp;**PUBLIC** | **Stack** | **Common** | **Memory** | **w** obszarze *constExpr* | **Private**
@@ -960,7 +960,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*stringChar* | *stext* *stringChar*
 
 *ciąg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*cytat* ⟦ *stext* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;*cytat* ⟦ *stext* ⟧ *quote*
 
 *stringChar*\
 &nbsp;&nbsp;&nbsp;&nbsp;oferta *oferty* *|* Dowolny znak z wyjątkiem cudzysłowu.
@@ -1000,7 +1000,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* |! *simpleExpr*
 
 \ *tekstu*
-&nbsp;&nbsp;&nbsp;&nbsp;*textliteral* | znak *tekstu* |! *znak | * *znaku |* ! *znak*
+&nbsp;&nbsp;&nbsp;&nbsp;*textliteral* | znak *tekstu* |! *znak | * *znaku |* ! *character* *znak*
 
 *textDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* *textMacroDir* ;;
@@ -1040,7 +1040,7 @@ Identyfikator *groupId*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *unionTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordTag*\
-&nbsp;&nbsp;&nbsp; *&nbsp;| *
+&nbsp;&nbsp;&nbsp; *&nbsp;| * \
 &nbsp;&nbsp;&nbsp;&nbsp;| *dataType*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *typeId*
 
@@ -1071,4 +1071,3 @@ Identyfikator *groupId*\
 
 *xmmRegister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

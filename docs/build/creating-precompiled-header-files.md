@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417377"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078581"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
-Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie pliki z stabilnymi nagłówkami, na przykład nagłówki biblioteki standardowej, takie jak `<vector>`, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka. 
+Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie pliki z stabilnymi nagłówkami, na przykład nagłówki biblioteki standardowej, takie jak `<vector>`, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka.
 
-Opcje kompilatora dla prekompilowanych nagłówków to [/y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > prekompilowane nagłówki**. Można zrezygnować z używania prekompilowanych nagłówków i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego. 
+Opcje kompilatora dla prekompilowanych nagłówków to [/y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > prekompilowane nagłówki**. Można zrezygnować z używania prekompilowanych nagłówków i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego.
 
 ## <a name="custom-precompiled-code"></a>Niestandardowy kod wstępnie skompilowany
 

@@ -2,12 +2,12 @@
 title: 'Wskazówki: mnożenie macierzy'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518494"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075706"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 
@@ -33,7 +33,7 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 1. Na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**.
 
 1. Z listy filtrowane typy projektów wybierz pozycję **pusty projekt** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź *MatrixMultiply* w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
@@ -57,7 +57,7 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 1. Wybierz pozycję **pusty projekt**, wprowadź *MatrixMultiply* w polu **Nazwa** , a następnie wybierz przycisk **OK** .
 
-1. Wybierz **dalej** przycisku.
+1. Wybierz przycisk **dalej** .
 
 1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz **Dodaj** > **nowy element**.
 
@@ -320,7 +320,7 @@ Aby zaimplementować ten algorytm, kod:
 
 1. Naciśnij klawisz **spacji** , aby zakończyć działanie aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Przewodnik: debugowanie aplikacji C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

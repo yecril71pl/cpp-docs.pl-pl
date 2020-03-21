@@ -5,18 +5,18 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6061fc7da6f4c4dd53ae70a0e2d5ba7ec40023
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175501"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079644"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 
-Makra PROVIDER_COLUMN_ENTRY zwykle obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania. Jednak ponieważ konsumenta wybrać korzystanie z zakładek, dostawca musi mieć możliwość zmiany kolumn zwrócone w zależności od tego, czy użytkownik poprosi o podanie zakładki.
+Makra PROVIDER_COLUMN_ENTRY zwykle obsługują wywołanie `IColumnsInfo::GetColumnsInfo`. Ponieważ jednak odbiorca może wybrać używanie zakładek, dostawca musi mieć możliwość zmiany kolumn zwracanych w zależności od tego, czy użytkownik pyta o zakładkę.
 
-Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CCustomWindowsFile` rekordu użytkownika w *niestandardowe*RS.h i zastąp go własną definicję `GetColumnInfo` Funkcja:
+Aby obsłużyć `IColumnsInfo::GetColumnsInfo` wywołanie, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`z rekordu użytkownika `CCustomWindowsFile` w polu *niestandardowy*RS. h i zastąp go definicją własnej funkcji `GetColumnInfo`:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -39,11 +39,11 @@ public:
 };
 ```
 
-Następnie należy zaimplementować `GetColumnInfo` działa w programach *niestandardowe*RS.cpp, jak pokazano w poniższym kodzie.
+Następnie Zaimplementuj funkcję `GetColumnInfo` w *niestandardowym*RS. cpp, jak pokazano w poniższym kodzie.
 
-`GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Pobrać właściwości, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasę, która utworzony zestaw wierszy, jest to klasa przechowywania map właściwości. `GetColumnInfo` rzutowaniach typu `pThis` wskaźnik do `RCustomRowset` wskaźnika.
+`GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Aby uzyskać właściwość, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. Wskaźnik `pThis` reprezentuje klasę, która utworzyła zestaw wierszy, która jest klasą, w której jest przechowywana Mapa właściwości. `GetColumnInfo` typecasts wskaźnik `pThis` do wskaźnika `RCustomRowset`.
 
-Pod kątem `DBPROP_BOOKMARKS` właściwości `GetColumnInfo` używa `IRowsetInfo` interfejs, który można uzyskać przez wywołanie metody `QueryInterface` na `pRowset` interfejsu. Alternatywnie, można użyć ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metody zamiast tego.
+Aby wyszukać Właściwość `DBPROP_BOOKMARKS`, `GetColumnInfo` używa interfejsu `IRowsetInfo`, który można uzyskać, wywołując `QueryInterface` w interfejsie `pRowset`. Alternatywnie, zamiast tego można użyć metody ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) .
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
-   // Check the property flag for bookmarks; if it is set, set the zero 
+   // Check the property flag for bookmarks; if it is set, set the zero
    // ordinal entry in the column map with the bookmark information.
    CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
@@ -75,25 +75,25 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
   
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark,
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
   
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-W tym przykładzie użyto tablicy statycznej do przechowywania informacji o kolumnie. Jeśli użytkownik nie chce, aby kolumna zakładki, jeden wpis w tablicy jest nieużywany. Aby obsługiwać informacje, należy utworzyć dwa makra tablicy: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX przyjmuje jako dodatkowy parametr *flagi*, która jest wymagane, jeśli należy wyznaczyć kolumna zakładki.
+Ten przykład używa tablicy statycznej do przechowywania informacji o kolumnie. Jeśli odbiorca nie powinna mieć kolumny zakładki, jeden wpis w tablicy jest nieużywany. Aby obsłużyć te informacje, należy utworzyć dwa makra tablicowe: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. W przypadku wyznaczania kolumny zakładki ADD_COLUMN_ENTRY_EX przyjmuje dodatkowe *Parametry, które*są potrzebne.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -135,7 +135,7 @@ W tym przykładzie użyto tablicy statycznej do przechowywania informacji o kolu
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```
 
-W `GetColumnInfo` służy funkcja i makra zakładki następująco:
+W funkcji `GetColumnInfo` makro zakładki jest używane w następujący sposób:
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -143,8 +143,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą i sprawdź, czy konsumenta test pobiera odpowiednie ciągi od dostawcy.
+Teraz można skompilować i uruchomić zwiększony dostawca. Aby przetestować dostawcę, należy zmodyfikować konsumenta testowego zgodnie z opisem w temacie [implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom konsumenta testowego u dostawcy i sprawdź, czy konsument testowy pobiera odpowiednie ciągi od dostawcy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>
