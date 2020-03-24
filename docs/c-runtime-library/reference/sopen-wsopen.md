@@ -35,12 +35,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: d337b2353ad15eade15235b4b5217a3b881bab1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8a8bad8888e141e7be77cb605f4774722753bfb4
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150731"
 ---
 # <a name="_sopen-_wsopen"></a>_sopen, _wsopen
 
@@ -86,7 +86,7 @@ Jeśli *filename* lub *Oflag* jest wskaźnikiem **null** lub jeśli wartość *O
 |errno wartość|Warunek|
 |-|-|
 | **EACCES** | Dana ścieżka jest katalogiem lub plik jest tylko do odczytu, ale podjęto próbę wykonania operacji otwierania do zapisu. |
-| **EEXIST** | Określono flagi **_O_CREAT** i **_O_EXCL** , ale *Nazwa pliku* już istnieje. |
+| **EEXIST** | Określono **_O_CREAT** i **_O_EXCL** flag, ale *filename* już istnieje. |
 | **EINVAL** | Nieprawidłowy argument *Oflag* lub *Shflag* . |
 | **EMFILE** | Nie ma więcej dostępnych deskryptorów plików. |
 | **ENOENT** | Nie znaleziono pliku lub ścieżki. |
@@ -95,7 +95,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_sopen** otwiera plik określony przez *filename* i przygotowuje plik do odczytu lub zapisu, zgodnie z definicją *Oflag* i *Shflag*. **_wsopen** to dwubajtowa wersja **_sopen**; argumentem *filename* **_wsopen** jest ciąg znaków dwubajtowych. **_wsopen** i **_sopen** zachowują się identycznie w inny sposób.
+Funkcja **_sopen** otwiera plik określony przez *filename* i przygotowuje plik do odczytu lub zapisu, zgodnie z definicją *Oflag* i *Shflag*. **_wsopen** to dwubajtowa wersja **_sopen**; argument *filename* **_wsopen** jest ciągiem znaków dwubajtowych. **_wsopen** i **_sopen** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -109,10 +109,10 @@ Wyrażenie liczby całkowitej *Oflag* jest tworzone przez połączenie co najmni
 |-|-|
 | **_O_APPEND** | Przenosi wskaźnik pliku na koniec pliku przed każdą operacją zapisu. |
 | **_O_BINARY** | Otwiera plik w trybie binarnym (nieprzetłumaczonym). (Zobacz [fopen](fopen-wfopen.md) , aby zapoznać się z opisem trybu binarnego). |
-| **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie działa, jeśli istnieje plik określony przez *filename* . Argument *PMODE* jest wymagany, gdy jest określony **_O_CREAT** . |
-| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe, nie jest opróżniany na dysk. Argument *PMODE* jest wymagany, gdy jest określony **_O_CREAT** . |
-| **_O_CREAT** &#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptora pliku. Argument *PMODE* jest wymagany, gdy jest określony **_O_CREAT** . |
-| **_O_CREAT** &#124;` _O_EXCL` | Zwraca wartość błędu, jeśli istnieje plik określony przez *nazwę* pliku. Ma zastosowanie tylko w przypadku, gdy jest używany z **_O_CREAT**. |
+| **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie działa, jeśli istnieje plik określony przez *filename* . Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe, nie jest opróżniany na dysk. Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptora pliku. Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
+| **_O_CREAT** &#124; `_O_EXCL` | Zwraca wartość błędu, jeśli istnieje plik określony przez *nazwę* pliku. Ma zastosowanie tylko w przypadku, gdy jest używany z **_O_CREAT**. |
 | **_O_NOINHERIT** | Uniemożliwia utworzenie deskryptora pliku udostępnionego. |
 | **_O_RANDOM** | Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, losowy dostęp z dysku. |
 | **_O_RDONLY** | Otwiera plik tylko do odczytu. Nie można określić za pomocą **_O_RDWR** lub **_O_WRONLY**. |
@@ -125,13 +125,13 @@ Wyrażenie liczby całkowitej *Oflag* jest tworzone przez połączenie co najmni
 | **_O_U8TEXT** | Otwiera plik w trybie Unicode UTF-8. |
 | **_O_WTEXT** | Otwiera plik w trybie Unicode. |
 
-Aby określić tryb dostępu do pliku, należy określić wartość **_O_RDONLY**, **_O_RDWR**lub **_O_WRONLY**. Brak wartości domyślnej dla trybu dostępu.
+Aby określić tryb dostępu do pliku, należy określić **_O_RDONLY**, **_O_RDWR**lub **_O_WRONLY**. Brak wartości domyślnej dla trybu dostępu.
 
-Gdy plik jest otwarty w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT**lub **_O_U16TEXT**, funkcje wejściowe tłumaczą dane, które są odczytywane z pliku do danych UTF-16 przechowywanych jako **wchar_t**typu. Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane UTF-16 przechowywane jako typ **wchar_t**. Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
+Gdy plik jest otwierany w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT**lub **_O_U16TEXT**, funkcje wejściowe przekładają dane odczytane z pliku do danych UTF-16 przechowywanych jako **wchar_t**typu. Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **wchar_t**. Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
 
-Jeśli **_sopen** jest wywoływana z **_O_WRONLY** |  **_O_APPEND** (append Mode) i **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go ponownie dla tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
+Jeśli **_sopen** jest wywoływana z **_O_WRONLY** |  **_O_APPEND** (tryb Append) i **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
 
-Argument *Shflag* jest wyrażeniem stałym składającym się z jednej z następujących stałych manifestu, które są zdefiniowane \<w udziale. h >.
+Argument *Shflag* jest wyrażeniem stałym składającym się z jednej z następujących stałych manifestu, które są zdefiniowane w \<udziału. h >.
 
 |stała *Shflag*|Zachowanie|
 |-|-|
@@ -140,7 +140,7 @@ Argument *Shflag* jest wyrażeniem stałym składającym się z jednej z następ
 | **_SH_DENYRD** | Odmowa dostępu do odczytu do pliku. |
 | **_SH_DENYNO** | Zezwala na dostęp do odczytu i zapisu. |
 
-Argument *PMODE* jest wymagany tylko wtedy, gdy jest określony **_O_CREAT** . Jeśli plik nie istnieje, *PMODE* określa ustawienia uprawnień pliku, które są ustawiane, gdy nowy plik jest zamykany po raz pierwszy. W przeciwnym razie *PMODE* jest ignorowana. *PMODE* jest wyrażeniem liczb całkowitych, które zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, które są zdefiniowane \<w sys\stat.h >. Po otrzymaniu obu stałych są one łączone z operatorem bitowym lub. Znaczenie *PMODE* jest następujące.
+Argument *PMODE* jest wymagany tylko wtedy, gdy określono **_O_CREAT** . Jeśli plik nie istnieje, *PMODE* określa ustawienia uprawnień pliku, które są ustawiane, gdy nowy plik jest zamykany po raz pierwszy. W przeciwnym razie *PMODE* jest ignorowana. *PMODE* jest wyrażeniem liczb całkowitych, które zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, które są zdefiniowane w \<sys\stat.h >. Po otrzymaniu obu stałych są one łączone z operatorem bitowym lub. Znaczenie *PMODE* jest następujące.
 
 |*pmode*|Znaczenie|
 |-|-|
@@ -150,22 +150,22 @@ Argument *PMODE* jest wymagany tylko wtedy, gdy jest określony **_O_CREAT** . J
 
 Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są odczytywane; nie można udzielić uprawnienia tylko do zapisu. W związku z tym tryby **_S_IWRITE** i **_S_IREAD** |  **_S_IWRITE** są równoważne.
 
-**_sopen** stosuje bieżącą maskę uprawnień pliku do *PMODE* przed ustawieniem uprawnień. (Zobacz [_umask](umask.md)).
+**_sopen** stosuje bieżącą maskę uprawnień pliku do *PMODE* przed ustawieniem uprawnień. (Zobacz [_umask](umask.md).)
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
-|**_wsopen**|\<IO. h > lub \<WCHAR. h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_sopen**|\<we/wy >|\<fcntl. h >, \<sys\types.h >, \<sys\stat.h >, \<Share. h >|
+|**_wsopen**|\<we/wy > lub \<WCHAR. h >|\<fcntl. h >, \<sys\types.h >, \<sys\stat.h >, \<Share. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [_locking](locking.md).
+Zapoznaj się z przykładem [_locking](locking.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

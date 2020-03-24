@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150619"
 ---
 # <a name="num_get-class"></a>num_get — Klasa
 
@@ -37,7 +37,7 @@ class num_get : public locale::facet;
 \ *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
-*InputIterator* \
+*InputIterator*\
 Typ iteratora, z którego liczbowe funkcje get odczytują swoje dane wejściowe.
 
 ## <a name="remarks"></a>Uwagi
@@ -70,7 +70,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="char_type"></a>num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>num_get:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu **CharType**.
 
-## <a name="do_get"></a>num_get::d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>num_get::d o_get
 
 Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej lub logicznej z sekwencji znaków.
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Początek zakresu znaków, z którego ma zostać odczytana liczba.
 
-*ostatni* \
+*ostatni*\
 Koniec zakresu znaków, z którego ma zostać odczytana liczba.
 
-*iosbase* \
-[Ios_base](../standard-library/ios-base-class.md) , którego flagi są używane przez konwersję.
+*iosbase*\
+[Ios_base](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
 
 \ *stanu*
-Stan, do którego failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
+Stan, do którego zostanie dodany failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) w przypadku niepowodzenia.
 
-*val* \
+*val*\
 Wartość, która została odczytana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -211,7 +211,7 @@ Jeśli `iosbase.flags() & ios_base::basefield == 0`, specyfikacja konwersji jest
 
 W przeciwnym razie specyfikacja konwersji jest `ld`.
 
-Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)`fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Opracowany
+Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)`fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Są to:
 
 `fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` określa, jak cyfry są pogrupowane po lewej stronie dowolnego punktu dziesiętnego
 
@@ -323,13 +323,13 @@ virtual iter_type do_get(
 
 zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach się na wypełnienie kompletnego, niepustego pola wejściowego Boolean. W przypadku pomyślnego przeprowadzenia konwersji pola danych wejściowych Boolean na wartość typu **bool** i przechowuje tę wartość w *Val*.
 
-Pole danych wejściowych Boolean przyjmuje jeden z dwóch form. Jeśli `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) ma wartość false, jest taka sama jak pole danych wejściowych Integer, z tą różnicą, że przekonwertowana wartość musi być równa 0 (dla wartości false) lub 1 (dla prawdy). W przeciwnym razie sekwencja musi pasować do `fac.`[numpunct:: falsename](../standard-library/numpunct-class.md#falsename) `()` (dla wartości false) lub `fac.`[numpunct:: TrueName](../standard-library/numpunct-class.md#truename) `()` (dla prawdy).
+Pole danych wejściowych Boolean przyjmuje jeden z dwóch form. Jeśli `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) ma wartość false, jest taka sama jak pole danych wejściowych Integer, z tą różnicą, że przekonwertowana wartość musi być równa 0 (dla wartości false) lub 1 (dla prawdy). W przeciwnym razie sekwencja musi pasować do `fac.`[numpunct:: falsename](../standard-library/numpunct-class.md#falsename)`()` (dla wartości false) lub `fac.`[numpunct:: TrueName](../standard-library/numpunct-class.md#truename)`()` (dla prawdy).
 
 ### <a name="example"></a>Przykład
 
 Zobacz przykład dla [Get](#get), gdzie wirtualna funkcja członkowska jest wywoływana przez `do_get`.
 
-## <a name="get"></a>num_get:: Get
+## <a name="num_getget"></a><a name="get"></a>num_get:: Get
 
 Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* \
+*pierwszy*\
 Początek zakresu znaków, z którego ma zostać odczytana liczba.
 
-*ostatni* \
+*ostatni*\
 Koniec zakresu znaków, z którego ma zostać odczytana liczba.
 
-*iosbase* \
-[Ios_base](../standard-library/ios-base-class.md) , którego flagi są używane przez konwersję.
+*iosbase*\
+[Ios_base](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
 
 \ *stanu*
-Stan, do którego failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
+Stan, do którego zostanie dodany failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) w przypadku niepowodzenia.
 
-*val* \
+*val*\
 Wartość, która została odczytana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -441,7 +441,7 @@ Pierwsza wirtualna chroniona funkcja członkowska próbuje dopasować elementy s
 
 Pole danych wejściowych Integer jest konwertowane na te same reguły, które są używane przez funkcje skanowania do dopasowywania i konwertowania serii elementów **char** z pliku. Każdy taki element **char** jest założono, aby mapować do równoważnego elementu typu `CharType` przez proste mapowanie jeden do jednego. Zgodna specyfikacja konwersji skanowania jest określana w następujący sposób:
 
-- W przypadku `iosbase.`[flag](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[KTZ](../standard-library/ios-functions.md#oct)specyfikacja konwersji jest `lo`.
+- W przypadku `iosbase.`[flag](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[KTZ](../standard-library/ios-functions.md#oct)specyfikacja konwersji jest `lo`.
 
 - W przypadku `iosbase.flags & ios_base::basefield == ios_base::`[HEX](../standard-library/ios-functions.md#hex)specyfikacja konwersji jest `lx`.
 
@@ -449,7 +449,7 @@ Pole danych wejściowych Integer jest konwertowane na te same reguły, które s�
 
 - W przeciwnym razie specyfikacja konwersji jest `ld`.
 
-Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) `fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Opracowany
+Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) `fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Są to:
 
 - [grupowanie](../standard-library/numpunct-class.md#grouping) `fac.`określa, jak cyfry są pogrupowane na lewo od dowolnego miejsca dziesiętnego.
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get:: iter_type
 
 Typ, który opisuje iterator danych wejściowych.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu `InputIterator`.
 
-## <a name="num_get"></a>num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>num_get:: num_get
 
 Konstruktor dla obiektów typu `num_get`, które są używane do wyodrębniania wartości liczbowych z sekwencji.
 
@@ -590,8 +590,8 @@ Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chro
 
 Konstruktor inicjuje swój obiekt podstawowy z `locale::`[aspektem](../standard-library/locale-class.md#facet_class)`(refs)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<locale >](../standard-library/locale.md) \
-[Klasa aspektów](../standard-library/locale-class.md#facet_class) \
+[\<ustawienia regionalne >](../standard-library/locale.md)\
+[Klasa aspektów](../standard-library/locale-class.md#facet_class)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

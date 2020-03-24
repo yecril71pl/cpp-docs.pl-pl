@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 55c870263fdf6bd96cf8a137308adb329866c9e5
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150670"
 ---
 # <a name="forward_list-class"></a>forward_list — Klasa
 
@@ -117,9 +117,9 @@ Iteratory, wskaźniki i odwołania mogą stać się nieprawidłowe, gdy elementy
 
 Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward_list:: insert_after](#insert_after), która jest jedyną funkcją członkowską, która wywołuje Konstruktor `Type(const  T&)`. `forward_list` może również wywołać konstruktory przenoszenia. Jeśli takie wyrażenie zgłasza wyjątek, obiekt kontenera nie wstawia żadnych nowych elementów i ponownie generuje wyjątek. W związku z tym obiekt typu `forward_list` pozostały w znanym stanie w przypadku wystąpienia takich wyjątków.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |||
 |-|-|
@@ -178,7 +178,7 @@ Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward
 |-|-|
 |[operator =](#op_eq)|Zamienia elementy listy do przodu z kopią innej listy do przodu.|
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 Typ, który reprezentuje klasę alokatora dla obiektu listy do przodu.
 
@@ -190,7 +190,7 @@ typedef Allocator allocator_type;
 
 `allocator_type` jest synonimem dla alokatora parametrów szablonu.
 
-## <a name="assign"></a>ponownie
+## <a name="assign"></a><a name="assign"></a>ponownie
 
 Wymazuje elementy z listy do przodu i kopiuje nowy zestaw elementów na listę docelową do przodu.
 
@@ -234,7 +234,7 @@ Druga funkcja członkowska zastępuje sekwencję, która jest kontrolowana przez
 
 Trzecia funkcja członkowska Kopiuje elementy initializer_list do forward_list.
 
-## <a name="before_begin"></a>before_begin
+## <a name="before_begin"></a><a name="before_begin"></a>before_begin
 
 Zwraca iterator odnoszący się do pozycji przed pierwszym elementem na liście do przodu.
 
@@ -243,13 +243,13 @@ const_iterator before_begin() const;
 iterator before_begin();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, który wskazuje tuż przed pierwszym elementem sekwencji (lub tuż przed końcem pustej sekwencji).
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a>zaczną
 
 Zwraca iterator odnoszący się do pierwszego elementu na liście do przodu.
 
@@ -258,13 +258,13 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji).
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cbefore_begin"></a>cbefore_begin
+## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
 
 Zwraca iterator const odnoszący się do pozycji przed pierwszym elementem na liście do przodu.
 
@@ -272,13 +272,13 @@ Zwraca iterator const odnoszący się do pozycji przed pierwszym elementem na li
 const_iterator cbefore_begin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, który wskazuje tuż przed pierwszym elementem sekwencji (lub tuż przed końcem pustej sekwencji).
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 
@@ -286,7 +286,7 @@ Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
@@ -303,7 +303,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
 Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
@@ -311,7 +311,7 @@ Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostat
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator dostępu do przodu, który wskazuje tuż za koniec zakresu.
 
@@ -331,7 +331,7 @@ auto i2 = Container.cend();
 
 Nie należy wywoływać wartości zwracanej przez `cend`.
 
-## <a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a>Wyczyść
 
 Kasuje wszystkie elementy listy do przodu.
 
@@ -343,7 +343,7 @@ void clear();
 
 Ta funkcja elementu członkowskiego wywołuje `erase_after(before_begin(), end()).`
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
 Typ, który zapewnia stały iterator dla listy do przodu.
 
@@ -355,7 +355,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` opisuje obiekt, który może obsłużyć ciągły iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację.
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
 Typ, który dostarcza wskaźnik do elementu **const** na liście do przodu.
 
@@ -366,7 +366,7 @@ typedef typename Allocator::const_pointer
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
 Typ, który dostarcza stałe odwołanie do elementu na liście do przodu.
 
@@ -376,7 +376,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów listy do przodu w zakresie między elementami wskazywanymi przez Iteratory.
 
@@ -388,7 +388,7 @@ typedef typename Allocator::difference_type difference_type;
 
 `difference_type` opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji.
 
-## <a name="emplace_after"></a>emplace_after
+## <a name="emplace_after"></a><a name="emplace_after"></a>emplace_after
 
 Przenieś konstruuje nowy element po określonej pozycji.
 
@@ -405,7 +405,7 @@ Pozycja na liście docelowych przekazywania, w której jest konstruowany nowy el
 *val*\
 Argument konstruktora.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator, który wyznacza nowo wstawiony element.
 
@@ -413,7 +413,7 @@ Iterator, który wyznacza nowo wstawiony element.
 
 Ta funkcja członkowska wstawia element z argumentami konstruktora *Val* tuż po elemencie wskazywanym przez *WHERE* w kontrolowanej sekwencji. Jego zachowanie jest takie samo jak [forward_list:: insert_after](#insert_after).
 
-## <a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
 
 Dodaje element skonstruowany w miejscu na początku listy.
 
@@ -433,7 +433,7 @@ Ta funkcja członkowska wstawia element z argumentami konstruktora `_ val` na ko
 
 Jeśli wyjątek jest zgłaszany, kontener pozostaje niezmienione i wyjątek jest ponownie zgłaszany.
 
-## <a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a>ciągiem
 
 Testuje, czy lista do przodu jest pusta.
 
@@ -441,11 +441,11 @@ Testuje, czy lista do przodu jest pusta.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli lista przesyłania dalej jest pusta; w przeciwnym razie **false**.
 
-## <a name="end"></a>punktów
+## <a name="end"></a><a name="end"></a>punktów
 
 Zwraca iterator, który odnosi się do lokalizacji na końcu ostatniego elementu na liście do przodu.
 
@@ -454,11 +454,11 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator do przodu, który wskazuje tuż poza końcem sekwencji.
 
-## <a name="erase_after"></a>erase_after
+## <a name="erase_after"></a><a name="erase_after"></a>erase_after
 
 Usuwa elementy z listy do przodu po określonej pozycji.
 
@@ -478,7 +478,7 @@ Początek zakresu do wymazania.
 *ostatni*\
 Koniec zakresu do wymazania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator, który wyznacza pierwszy element, który nie został usunięty, lub [forward_list:: end](#end) , jeśli taki element nie istnieje.
 
@@ -492,7 +492,7 @@ Wymazywanie `N` elementów powoduje wywołanie `N` destruktora. [Ponowna alokacj
 
 Funkcja członkowska nigdy nie zgłasza wyjątku.
 
-## <a name="forward_list"></a>forward_list
+## <a name="forward_list"></a><a name="forward_list"></a>forward_list
 
 Konstruuje obiekt typu `forward_list`.
 
@@ -538,7 +538,7 @@ Initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory przechowują [Alokator](../standard-library/allocator-class.md) i inicjują kontrolowaną sekwencję. Obiekt alokatora jest argumentem *Al*, jeśli jest obecny. Dla konstruktora kopiującego jest ` right.get_allocator()`. W przeciwnym razie jest `Allocator()`.
+Wszystkie konstruktory przechowują [Alokator](../standard-library/allocator-class.md) i inicjują kontrolowaną sekwencję. Obiekt alokatora jest argumentem *Al*, jeśli jest obecny. Dla konstruktora kopiującego jest `right.get_allocator()`. W przeciwnym razie jest `Allocator()`.
 
 Pierwsze dwa konstruktory określają pustą, początkową sekwencję.
 
@@ -552,7 +552,7 @@ Szósty konstruktor określa kopię sekwencji kontrolowanej przez *prawo*. Jeśl
 
 Ostatni konstruktor określa początkową kontrolowana sekwencję z obiektem klasy `initializer_list<Type>`.
 
-## <a name="front"></a>FSB
+## <a name="front"></a><a name="front"></a>FSB
 
 Zwraca odwołanie do pierwszego elementu na liście do przodu.
 
@@ -561,11 +561,11 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do pierwszego elementu kontrolowanej sekwencji, które nie może być puste.
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Zwraca kopię obiektu alokatora używanego do konstruowania listy do przodu.
 
@@ -573,11 +573,11 @@ Zwraca kopię obiektu alokatora używanego do konstruowania listy do przodu.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Przechowywany obiekt [alokatora](../standard-library/allocator-class.md) .
 
-## <a name="insert_after"></a>insert_after
+## <a name="insert_after"></a><a name="insert_after"></a>insert_after
 
 Dodaje elementy do listy do przodu po określonej pozycji.
 
@@ -610,7 +610,7 @@ Element dodany do listy do przodu.
 \ *IList*
 Initializer_list do wstawienia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator, który wyznacza nowo wstawiony element (tylko funkcje pierwszej i ostatniego elementu członkowskiego).
 
@@ -632,7 +632,7 @@ Wstawianie `N` elementów powoduje `N` wywołań konstruktora. [Ponowna alokacja
 
 Jeśli wyjątek jest zgłaszany podczas wstawiania jednego lub kilku elementów, kontener pozostaje niezmienione i zostanie ponownie zgłoszony wyjątek.
 
-## <a name="iterator"></a>Iterator
+## <a name="iterator"></a><a name="iterator"></a>Iterator
 
 Typ, który dostarcza iterator dla listy do przodu.
 
@@ -644,7 +644,7 @@ typedef implementation-defined iterator;
 
 `iterator` opisuje obiekt, który może obsłużyć iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację.
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Zwraca maksymalną długość listy do przodu.
 
@@ -652,13 +652,13 @@ Zwraca maksymalną długość listy do przodu.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Długość najdłuższej sekwencji, którą obiekt może kontrolować.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="merge"></a>połączenie
+## <a name="merge"></a><a name="merge"></a>połączenie
 
 Łączy dwie posortowane sekwencje w jedną posortowaną sekwencję w czasie liniowym. Usuwa elementy z listy argumentów i wstawia je do tej `forward_list`. Dwie listy powinny być sortowane według tego samego obiektu funkcji Compare przed wywołaniem do `merge`. Połączona lista będzie sortowana według tego obiektu funkcji porównywania.
 
@@ -686,7 +686,7 @@ W wyniku kontrolowanej sekwencji nie są odwrócone żadne pary elementów w ory
 
 Wyjątek występuje tylko wtedy, gdy `comp` zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonej kolejności, a wyjątek jest zgłaszany ponownie.
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 Zamienia elementy listy do przodu z kopią innej listy do przodu.
 
@@ -712,7 +712,7 @@ Drugi operator członkowski zastępuje kontrolowaną sekwencję z obiektu klasy 
 
 Trzeci operator członkowski jest taki sam jak pierwszy, ale z odwołaniem [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) .
 
-## <a name="pointer"></a>przytrzymaj
+## <a name="pointer"></a><a name="pointer"></a>przytrzymaj
 
 Typ, który dostarcza wskaźnik do elementu na liście do przodu.
 
@@ -720,7 +720,7 @@ Typ, który dostarcza wskaźnik do elementu na liście do przodu.
 typedef typename Allocator::pointer pointer;
 ```
 
-## <a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a>pop_front
 
 Usuwa element na początku listy do przodu.
 
@@ -734,7 +734,7 @@ Pierwszy element listy do przodu nie może być pusty.
 
 Funkcja członkowska nigdy nie zgłasza wyjątku.
 
-## <a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a>push_front
 
 Dodaje element na początku listy do przodu.
 
@@ -752,7 +752,7 @@ Element dodany na początku listy do przodu.
 
 Jeśli wyjątek jest zgłaszany, kontener pozostaje niezmienione i wyjątek jest ponownie zgłaszany.
 
-## <a name="reference"></a>odwoła
+## <a name="reference"></a><a name="reference"></a>odwoła
 
 Typ, który zawiera odwołanie do elementu na liście do przodu.
 
@@ -760,7 +760,7 @@ Typ, który zawiera odwołanie do elementu na liście do przodu.
 typedef typename Allocator::reference reference;
 ```
 
-## <a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a>usuwa
 
 Usuwa elementy z listy do przodu, które pasują do określonej wartości.
 
@@ -779,7 +779,7 @@ Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznacz
 
 Funkcja członkowska nigdy nie zgłasza wyjątku.
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 Usuwa elementy z listy do przodu, dla których spełniony jest określony predykat.
 
@@ -795,11 +795,11 @@ Predykat jednoargumentowy, który, jeśli jest spełniony przez element, powoduj
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P`iteratora, dla których ` pred(*P)` ma wartość true.
+Funkcja członkowska usuwa z kontrolowanej sekwencji wszystkie elementy, wyznaczone przez `P`iteratora, dla których `pred(*P)` ma wartość true.
 
 Wyjątek występuje tylko wtedy, gdy *pred* zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonym stanie, a wyjątek jest zgłaszany ponownie.
 
-## <a name="resize"></a>Zmień rozmiar
+## <a name="resize"></a><a name="resize"></a>Zmień rozmiar
 
 Określa nowy rozmiar listy do przodu.
 
@@ -820,7 +820,7 @@ Wartość, która ma zostać użyta do uzupełnienia.
 
 Funkcje składowe gwarantują, że liczba elementów na liście jest odtąd *_Newsize*. Jeśli ta sekwencja musi być większa, funkcja pierwszej składowej dołącza elementy o wartości `Type()`, podczas gdy druga funkcja członkowska dołącza elementy o wartości *Val*. W celu skrócenia kontrolowanej sekwencji obydwa funkcje elementów członkowskich skutecznie wywołują `erase_after(begin() + _Newsize - 1, end())`.
 
-## <a name="reverse"></a>cofnięci
+## <a name="reverse"></a><a name="reverse"></a>cofnięci
 
 Odwraca kolejność, w jakiej elementy pojawiają się na liście do przodu.
 
@@ -828,7 +828,7 @@ Odwraca kolejność, w jakiej elementy pojawiają się na liście do przodu.
 void reverse();
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Typ, który reprezentuje odległość bez znaku między dwoma elementami.
 
@@ -840,7 +840,7 @@ typedef typename Allocator::size_type size_type;
 
 Typ liczby całkowitej bez znaku opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji.
 
-## <a name="sort"></a>porządku
+## <a name="sort"></a><a name="sort"></a>porządku
 
 Rozmieszcza elementy w kolejności rosnącej lub z kolejnością określoną przez predykat.
 
@@ -863,7 +863,7 @@ W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j`Pi
 
 Wyjątek występuje tylko wtedy, gdy *pred* zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonej kolejności, a wyjątek jest zgłaszany ponownie.
 
-## <a name="splice_after"></a>splice_after
+## <a name="splice_after"></a><a name="splice_after"></a>splice_after
 
 Usuwa elementy ze źródła forward_list i wstawia je do forward_list docelowej.
 
@@ -992,7 +992,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Wymienia elementy dwóch list do przodu.
 
@@ -1009,7 +1009,7 @@ Lista przesyłania dalej zawierająca elementy, które mają być wymieniane.
 
 Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli `get_allocator() ==  right.get_allocator()`, robi to w stałym czasie, nie zgłasza wyjątków i unieważnia odwołania, wskaźniki lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
 
-## <a name="unique"></a>unikatowy
+## <a name="unique"></a><a name="unique"></a>unikatowy
 
 Eliminuje wszystkie elementy oprócz pierwszego elementu z każdej kolejnej grupy równych elementów.
 
@@ -1030,11 +1030,11 @@ Zachowuje pierwszy z każdego unikatowego elementu i usuwa resztę. Elementy mus
 
 Pierwsza funkcja członkowska usuwa z kontrolowanej sekwencji każdy element, który jest porównywany z poprzednim elementem. W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j`Druga funkcja członkowska usuwa każdy element, dla którego `i + 1 == j &&  comp(*Pi, *Pj)`.
 
-Dla kontrolowanej sekwencji `N` (> 0) ` comp(*Pi, *Pj)` predykatu jest oceniane `N - 1` razy.
+Dla kontrolowanej sekwencji `N` (> 0) `comp(*Pi, *Pj)` predykatu jest oceniane `N - 1` razy.
 
 Wyjątek występuje tylko wtedy, gdy `comp` zgłasza wyjątek. W takim przypadku kontrolowana sekwencja pozostanie w nieokreślonym stanie, a wyjątek jest zgłaszany ponownie.
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Typ, który reprezentuje typ elementu przechowywanego na liście do przodu.
 

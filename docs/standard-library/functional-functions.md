@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421801"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150683"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkcjonalne funkcje&gt;
 
@@ -51,7 +51,7 @@ Te funkcje są przestarzałe w języku C++ 17:
 |-|-|
 |[not1 —](#not1)|[not2 —](#not2)|
 
-## <a name="bind"></a>węglowodor
+## <a name="bind"></a><a name="bind"></a>węglowodor
 
 Tworzy powiązania argumentów z wywoływanym obiektem.
 
@@ -81,7 +81,7 @@ N-ty argument wywołania.
 
 Typy `FT, T1, T2, ..., TN` muszą mieć wartość Copy-konstrukcyjną, a `INVOKE(fn, t1, ..., tN)` musi być prawidłowym wyrażeniem dla niektórych wartości `w1, w2, ..., wN`.
 
-Pierwsza funkcja szablonu zwraca otokę wywołania przekazującego `g` z słabym typem wyniku. Efektem `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, gdzie `cv` to kwalifikatory CV `g`, a wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów, które można wywołać.
+Pierwsza funkcja szablonu zwraca otokę wywołania przekazującego `g` z słabym typem wyniku. Efektem `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, gdzie `cv` to kwalifikatory CV `g`, a wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów, które można wywołać.
 
 Druga funkcja szablonu zwraca otokę wywołania przekazywania `g` z typem zagnieżdżonym `result_type`, który jest synonimem dla `RTy`. Efekt `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN, RTy)`, gdzie `cv` jest kwalifikatorami OKS `g`, a wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów o dopasowanej postaci i z określonym typem zwracanym.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st —
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st —
 
 Funkcja szablonu pomocnika, która tworzy adapter do przekonwertowania obiektu funkcji binarnej na jednoargumentowy obiekt funkcji. Wiąże pierwszy argument funkcji Binary z określoną wartością. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
@@ -169,7 +169,7 @@ Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 \ *lewo*
 Wartość, do której należy powiązać pierwszy argument obiektu funkcji binarnej.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania pierwszego argumentu obiektu funkcji binarnej z wartością *pozostawioną*.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd —
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd —
 
 Funkcja szablonu pomocnika, która tworzy adapter do przekonwertowania obiektu funkcji binarnej na jednoargumentowy obiekt funkcji. Wiąże drugi argument funkcji Binary z określoną wartością. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
@@ -263,7 +263,7 @@ Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 *prawa*\
 Wartość, do której należy powiązać drugi argument obiektu funkcji binarnej.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt funkcji jednoargumentowej wynik powiązania drugiego argumentu obiektu funkcji binarnej z *prawą*.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe (binarne `operator&`) w argumentach.
 
@@ -373,7 +373,7 @@ Lewy operand operacji bitowej i. Niewyspecjalizowany szablon przyjmuje argument 
 *Prawa*\
 Prawy operand operacji koniunkcji binarnej. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik `Left & Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator&`.
 
@@ -381,7 +381,7 @@ Wynik `Left & Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyn
 
 `bit_and` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator&`binarną.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje dopełnienia bitowego (nie) (jednoargumentowe `operator~`) dla tego argumentu. Dodano w języku C++ 14.
 
@@ -409,7 +409,7 @@ Typ, który obsługuje jednoargumentowy `operator~`.
 *Prawa*\
 Operand operacji uzupełniania bitowego. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentu odwołania lvalue lub rvalue *typu*wywnioskowanego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik `~ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator~`.
 
@@ -417,7 +417,7 @@ Wynik `~ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, 
 
 `bit_not` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator~`binarną.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe (`operator|`) w argumentach.
 
@@ -450,7 +450,7 @@ Lewy operand operacji bitowej or. Niewyspecjalizowany szablon przyjmuje argument
 *Prawa*\
 Prawy operand operacji bitowej or. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik `Left | Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator|`.
 
@@ -458,7 +458,7 @@ Wynik `Left | Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyn
 
 `bit_or` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację bitową XOR (`operator^`binarny) w argumentach.
 
@@ -491,7 +491,7 @@ Lewy operand operacji bitowej XOR. Niewyspecjalizowany szablon przyjmuje argumen
 *Prawa*\
 Prawy operand operacji bitowej XOR. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wynik `Left ^ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator^`.
 
@@ -499,7 +499,7 @@ Wynik `Left ^ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyn
 
 `bit_xor` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator^`binarną.
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 Tworzy element const `reference_wrapper` z argumentu.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>wywołuje
+## <a name="invoke"></a><a name="invoke"></a>wywołuje
 
 Wywołuje dowolny możliwy do wykonania obiekt z podanym argumentami. Dodano w języku C++ 17.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Generuje prosty otokę wywołania.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Funkcje szablonu pomocnika służące do konstruowania adapterów obiektów funkcji dla funkcji Członkowskich po zainicjowaniu z argumentami wskaźnika. Przestarzałe w języku C++ 11 dla [mem_fn](#mem_fn) i [powiązania](#bind)i usunięte w języku c++ 17.
 
@@ -762,7 +762,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 *pMem*\
 Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt funkcji **const** lub **non_const** typu `mem_fun_t` lub `mem_fun1_t`.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Funkcje szablonu pomocnika służące do konstruowania adapterów obiektów funkcji dla funkcji Członkowskich po zainicjowaniu przy użyciu argumentów odwołania. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
@@ -849,7 +849,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 *pMem*\
 Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt funkcji **const** lub `non_const` typu `mem_fun_ref_t` lub `mem_fun1_ref_t`.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1 —
+## <a name="not1"></a><a name="not1"></a>not1 —
 
 Zwraca uzupełnienie predykatu jednoargumentowego. Przestarzałe dla [not_fn](#not_fn) w języku c++ 17.
 
@@ -945,7 +945,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 \ *predykatu*
 Predykat jednoargumentowy, który ma być negacją.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Predykat jednoargumentowy, który jest negacją predykatu jednoargumentowego zmodyfikowanego.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2 —
+## <a name="not2"></a><a name="not2"></a>not2 —
 
 Zwraca uzupełnienie predykatu binarnego. Przestarzałe dla [not_fn](#not_fn) w języku c++ 17.
 
@@ -1017,7 +1017,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 \ *Func*
 Predykat binarny, który ma być negacją.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Predykat binarny, który jest negacją elementu binarnego predykatu.
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 Szablon funkcji `not_fn` przyjmuje możliwy do naprawnego obiektu i zwraca możliwy do naprawny obiekt. Gdy zwracany obiekt wywołujący jest później wywoływany z niektórymi argumentami, przekazuje je do oryginalnego możliwego do wywołania obiektu i logicznie negacj wynik. Zachowuje wartość i zachowanie kategorii const dla zapakowanego obiektu, który jest wywoływany. `not_fn` jest Nowość w języku C++ 17 i zastępuje przestarzałe `std::not1`, `std::not2`, `std::unary_negate`i `std::binary_negate`.
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Funkcje szablonu pomocnika służące do konwersji jednoargumentowych i binarnych wskaźników funkcji, odpowiednio, do funkcji, które można dostosowywać jednoargumentowo. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
@@ -1196,7 +1196,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 *pfunc*\
 Wskaźnik funkcji jednoargumentowej lub binarnej, który ma zostać przekonwertowany na funkcję adaptacyjną.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Pierwsza funkcja szablonu zwraca funkcję jednoargumentową [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **wynik**> (\* `pfunc`).
 
@@ -1210,7 +1210,7 @@ Wskaźnik funkcji jest obiektem funkcji. Może być przekazanie do dowolnego alg
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>umieszczone
+## <a name="ref"></a><a name="ref"></a>umieszczone
 
 Konstruuje `reference_wrapper` z argumentu.
 
@@ -1222,7 +1222,7 @@ template <class Ty>
     reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do `arg`; w `reference_wrapper<Ty>(arg)`.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Zamienia dwa obiekty `function`.
 

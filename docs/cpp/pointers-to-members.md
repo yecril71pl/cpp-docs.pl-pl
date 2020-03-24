@@ -8,59 +8,56 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150793"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 
-Deklaracje wskaźników do elementów członkowskich to specjalne przypadki deklaracji wskaźnika.  Są deklarowane za pomocą następującej sekwencji:
+Deklaracje wskaźników do elementów członkowskich to specjalne przypadki deklaracji wskaźnika.  Są one deklarowane przy użyciu następującej sekwencji:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]qualified-name ::* [cv-qualifiers] identifier
-[= & qualified-name :: member-name];
-```
+> *specyfikatory klasy magazynu*<sub>opt</sub> *pm-initializer*<sub>opt</sub> <sub>wybierają</sub> *kwalifikatory życiorysu* *Typ-specyfikatora* *MS-modyfikator*<sub>opt</sub> - *name* **`::*`** **`;`** *kwalifikator CV*<sub>opt</sub> *identifier*
 
-1. Specyfikator deklaracji
+1. Specyfikator deklaracji:
 
-   - Opcjonalna specyfikator urządzenia klasy magazynowania.
+   - Opcjonalny specyfikator klasy magazynu.
 
-   - Opcjonalne specyfikatory **const** i/lub **volatile** .
+   - Opcjonalne specyfikatory **const** i **volatile** .
 
-   - Specyfikator typu: nazwa typu.  Jest to typ elementu członkowskiego, do którego należy wskazać, a nie do klasy.
+   - Specyfikator typu: nazwa typu. Jest to typ elementu członkowskiego, który ma być wskazywany, a nie Klasa.
 
-1. Specyfikator:
+1. Deklarator:
 
-   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Opcjonalny modyfikator specyficzny dla firmy Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).
 
    - Kwalifikowana nazwa klasy zawierającej członków do wskazywania.
 
-   - Operator __::__ .
+   - Operator __`::`__ .
 
-   - Operator __\*__ .
+   - Operator __`*`__ .
 
-   - Opcjonalne specyfikatory **const** i/lub **volatile** .
+   - Opcjonalne specyfikatory **const** i **volatile** .
 
    - Identyfikator identyfikujący wskaźnik do elementu członkowskiego.
 
-1. Opcjonalny inicjator:
+1. Opcjonalny inicjator wskaźnika do składowej:
 
-   - Operator **=** .
+   - Operator **`=`** .
 
-   - Operator **&** .
+   - Operator **`&`** .
 
    - Kwalifikowana nazwa klasy.
 
-   - Operator __::__ .
+   - Operator __`::`__ .
 
    - Nazwa niestatycznej składowej klasy odpowiedniego typu.
 
-Jak zawsze, wiele Deklaratory (i skojarzonych inicjatorów) są dozwolone w jednej deklaracji.
+Jak zawsze, wiele Deklaratory (i skojarzonych inicjatorów) są dozwolone w jednej deklaracji. Wskaźnik do elementu członkowskiego nie może wskazywać statycznej składowej klasy, składowej typu referencyjnego ani **`void`** .
 
-Wskaźnik do składowej klasy różni się od normalnego wskaźnika, ponieważ zawiera on informacje o typie elementu członkowskiego i dla klasy, do której należy element członkowski. Normalny wskaźnik identyfikuje (ma adres) tylko jeden obiekt w pamięci. Wskaźnik do składowej klasy identyfikuje ten element członkowski w dowolnym wystąpieniu klasy. Poniższy przykład deklaruje klasę, `Window`i niektóre wskaźniki do danych elementu członkowskiego.
+Wskaźnik do składowej klasy różni się od normalnego wskaźnika: zawiera informacje o typie elementu członkowskiego i dla klasy, do której należy element członkowski. Normalny wskaźnik identyfikuje (ma adres) tylko jeden obiekt w pamięci. Wskaźnik do składowej klasy identyfikuje ten element członkowski w dowolnym wystąpieniu klasy. Poniższy przykład deklaruje klasę, `Window`i niektóre wskaźniki do danych elementu członkowskiego.
 
 ```cpp
 // pointers_to_members1.cpp
@@ -82,7 +79,7 @@ int main()
 }
 ```
 
-W poprzednim przykładzie `pwCaption` jest wskaźnikiem do każdego elementu członkowskiego klasy `Window`, który ma `char*`typu. Typ `pwCaption` jest `char * Window::* `. Następny fragment kodu deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji Członkowskich.
+W poprzednim przykładzie `pwCaption` jest wskaźnikiem do dowolnego elementu członkowskiego klasy `Window` tego typu `char*`. Typ `pwCaption` jest `char * Window::* `. Następny fragment kodu deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji Członkowskich.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +101,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-Różnica między **.** Operatory <strong>\*</strong> i **->** <strong>\*</strong> (operatory wskaźnika do składowej) to **.** operator <strong>\*</strong> wybiera składowe, którym przywoływany jest obiekt lub odwołanie do obiektu, podczas gdy operator **->** <strong>\*</strong> wybiera składowe za pomocą wskaźnika. (Aby uzyskać więcej informacji na temat tych operatorów, zobacz [wyrażenia z operatorami wskaźnika do składowej](../cpp/pointer-to-member-operators-dot-star-and-star.md).)
+Różnica między operatorami **`.*`** i **`->*`** (operatory wskaźnik-element-składowa) polega na tym, że operator **`.*`** wybiera składowe przywoływane przez obiekt lub odwołanie do obiektu, natomiast operator **`->*`** wybiera członków za pomocą wskaźnika. Aby uzyskać więcej informacji na temat tych operatorów, zobacz [wyrażenia z operatorami wskaźnika do składowej](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
-Wynik operatorów wskaźnika do składowej jest typem elementu członkowskiego — w tym przypadku `char *`.
+Wynik operatorów wskaźnika do składowej jest typem elementu członkowskiego. W tym przypadku jest `char *`.
 
 Poniższy fragment kodu wywołuje funkcje składowe `GetCaption` i `SetCaption` przy użyciu wskaźników do elementów członkowskich:
 
@@ -127,11 +124,11 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Ograniczenia dotyczące wskaźników do elementów członkowskich
 
-Adres statycznego elementu członkowskiego nie jest wskaźnikiem do elementu członkowskiego. Jest to zwykły wskaźnik do jednego wystąpienia statycznego elementu członkowskiego. Ze względu na to, że istnieje tylko jedno wystąpienie statycznej składowej dla wszystkich obiektów danej klasy, można używać zwykłych operatorów adresów ( **&** ) i dereferencji (<strong>\*</strong>).
+Adres statycznego elementu członkowskiego nie jest wskaźnikiem do elementu członkowskiego. Jest to zwykły wskaźnik do jednego wystąpienia statycznego elementu członkowskiego. Dla wszystkich obiektów danej klasy istnieje tylko jedno wystąpienie statycznej składowej. Oznacza to, że można użyć operatorów zwykłych adresów ( **&** ) i dereferencji (<strong>\*</strong>).
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Wskaźniki do elementów członkowskich i funkcji wirtualnych
 
-Wywoływanie funkcji wirtualnej za pomocą funkcji wskaźnika do składowej działa tak, jakby funkcja została wywołana bezpośrednio; poprawna funkcja jest wyszukiwana w tabeli v i wywoływana.
+Wywoływanie funkcji wirtualnej za pomocą funkcji wskaźnika do składowej działa tak, jakby funkcja została wywołana bezpośrednio. Poprawna funkcja jest wyszukiwana w tabeli v i wywoływana.
 
 Klucz do działających funkcji wirtualnych, tak jak zawsze, jest wywoływany przez wskaźnik do klasy bazowej. (Aby uzyskać więcej informacji na temat funkcji wirtualnych, zobacz [funkcje wirtualne](../cpp/virtual-functions.md)).
 

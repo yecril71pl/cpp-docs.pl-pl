@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150748"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map operatory&gt;
 
@@ -19,10 +19,10 @@ ms.locfileid: "79419015"
 |[operator!=](#op_neq)|[operator! = (multimap)](#op_neq_mm)|
 |[operator = =](#op_eq_eq)|[operator = = (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 > [!NOTE]
-> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_map](unordered-map-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_map](unordered-map-class.md).
 
 Testuje, czy obiekt hash_map po lewej stronie operatora nie jest równy obiektowi hash_map po prawej stronie.
 
@@ -38,7 +38,7 @@ Obiekt typu `hash_map`.
 *prawa*\
 Obiekt typu `hash_map`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli hash_maps nie są równe; **wartość false** , jeśli hash_maps są równe.
 
@@ -88,10 +88,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 > [!NOTE]
-> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_map](unordered-map-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_map](unordered-map-class.md).
 
 Testuje, czy obiekt hash_map po lewej stronie operatora jest równy obiektowi hash_map po prawej stronie.
 
@@ -107,7 +107,7 @@ Obiekt typu `hash_map`.
 *prawa*\
 Obiekt typu `hash_map`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli hash_map po lewej stronie operatora jest równy hash_map po prawej stronie operatora; w przeciwnym razie **false**.
 
@@ -155,10 +155,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! = (hash_multimap)
 
 > [!NOTE]
-> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](unordered-multimap-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](unordered-multimap-class.md).
 
 Testuje, czy obiekt hash_multimap po lewej stronie operatora nie jest równy obiektowi hash_multimap po prawej stronie.
 
@@ -174,7 +174,7 @@ Obiekt typu `hash_multimap`.
 *prawa*\
 Obiekt typu `hash_multimap`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli hash_multimaps nie są równe; **wartość false** , jeśli hash_multimaps są równe.
 
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
 
 > [!NOTE]
-> {1&gt;Ten interfejs API jest przestarzały.&lt;1} Alternatywą jest [klasa unordered_multimap](unordered-multimap-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [klasa unordered_multimap](unordered-multimap-class.md).
 
 Testuje, czy obiekt hash_multimap po lewej stronie operatora jest równy obiektowi hash_multimap po prawej stronie.
 
@@ -241,7 +241,7 @@ Obiekt typu `hash_multimap`.
 *prawa*\
 Obiekt typu `hash_multimap`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 **ma wartość true** , jeśli hash_multimap po lewej stronie operatora jest równy hash_multimap po prawej stronie operatora; w przeciwnym razie **false**.
 

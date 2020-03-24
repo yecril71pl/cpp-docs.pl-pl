@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150761"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — historia zmian w latach 2003–2015
 
@@ -3040,7 +3040,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 ### <a name="standard-library"></a>Standardowa biblioteka
 
-- Po rozróżnieniu między standardami C++ 98/03 i C++ 11 przy użyciu jawnych argumentów szablonu do wywołania `make_pair()` — podobnie jak w przypadku `make_pair<int, int>(x, y)` — zwykle nie C++ kompiluje się w wizualizacji w programie visual Studio 2012. Rozwiązanie ma zawsze wywoływać `make_pair() `bez jawnych argumentów szablonu — jak w `make_pair(x, y)`. Dostarczanie jawnych argumentów szablonu zakłóca przeznaczenie funkcji. Jeśli potrzebujesz precyzyjnej kontroli nad typem wyniku, użyj `pair` zamiast `make_pair` — jak w `pair<short, short>(int1, int2)`.
+- Po rozróżnieniu między standardami C++ 98/03 i C++ 11 przy użyciu jawnych argumentów szablonu do wywołania `make_pair()` — podobnie jak w przypadku `make_pair<int, int>(x, y)` — zwykle nie C++ kompiluje się w wizualizacji w programie visual Studio 2012. Rozwiązanie ma zawsze wywoływać `make_pair()` bez jawnych argumentów szablonu — jak w `make_pair(x, y)`. Dostarczanie jawnych argumentów szablonu zakłóca przeznaczenie funkcji. Jeśli potrzebujesz precyzyjnej kontroli nad typem wyniku, użyj `pair` zamiast `make_pair` — jak w `pair<short, short>(int1, int2)`.
 
 - Inna nieprzerwana zmiana między standardami C++ 98/03 i C++ 11: gdy program jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, ale nie jest niejawnie konwertowany na C, C++ 98/03 i Visual Studio 2010 dozwolone `pair<A, X>` do przekonwertowania (niejawnie lub jawnie) do `pair<C, X>`. (Inny typ, X, nie jest interesujący w tym miejscu i nie jest specyficzny dla pierwszego typu pary). C++ Kompilator w programie Visual Studio 2012 wykrywa, że nie jest niejawnie konwertowany na C i usuwa konwersję pary z rozpoznawania przeciążenia. Ta zmiana jest dodatnia dla wielu scenariuszy. Na przykład Przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywołanie `func()` z `pair<const char *, const char *>` zostanie skompilowane z tą zmianą. Jednak ta zmiana powoduje przerwanie kodu, który opiera się na przeliczeniu agresywnych par. Taki kod można zazwyczaj naprawić, wykonując jedną część konwersji jawnie — na przykład przez przekazanie `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.
 
