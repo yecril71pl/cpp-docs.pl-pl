@@ -1,5 +1,5 @@
 ---
-title: 'Operator logiczny AND: &amp;&amp;'
+title: 'Operator logiczny i: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179435"
 ---
-# <a name="logical-and-operator-ampamp"></a>Operator logiczny AND: &amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Operator logiczny i: &amp;&amp;
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ expression && expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operator logiczny AND (**&&**) zwraca wartość logiczną PRAWDA, jeśli oba operandy są prawdziwe, a w przeciwnym razie zwraca wartość FALSE. Argumenty operacji są niejawnie konwertowane na typ **bool** przed oceny, a wynik jest typu **bool**. Operator logiczny oraz ma łączność od lewej do prawej.
+Operator logiczny AND ( **&&** ) zwraca wartość logiczną PRAWDA, jeśli oba operandy mają wartość true i w przeciwnym razie zwraca wartość false. Operandy są niejawnie konwertowane na typ **bool** przed oszacowaniem, a wynik jest typu **bool**. Koniunkcja logiczna i ma łączność od lewej do prawej.
 
-Argumenty operacji dla operatora logicznego i nie muszą być tego samego typu, ale muszą być typu wartości całkowitej lub wskaźnika. Argumenty operacji są często relacyjnych lub wyrażeniach porównania.
+Operandy operatora logicznego AND nie muszą być tego samego typu, ale muszą być typu całkowitego lub wskaźnika. Operandy są zwykle wyrażeniami relacyjnymi lub równości.
 
-Pierwszy operand jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi odbywa się przed kontynuowaniem oceny wyrażenie logiczne AND.
+Pierwszy operand jest obliczany całkowicie i wszystkie efekty uboczne są kończone przed kontynuowaniem oceny logicznej i wyrażenia.
 
-Drugi operand jest oceniany, tylko wtedy, gdy pierwszy operand ma wartość true (niezerową) wartość. Ta ocena eliminuje niepotrzebnego oceny drugiego operandu, gdy wyrażenie logiczne AND ma wartość false. Możesz użyć tej funkcji ocena zwarcia zapobiegające wyłuskanie wskaźnika o wartości null, jak pokazano w poniższym przykładzie:
+Drugi operand jest oceniany tylko wtedy, gdy pierwszy operand zwraca wartość true (niezerową). Ta ocena eliminuje konieczność oceny drugiego operandu, gdy wyrażenie logiczne AND ma wartość false. Możesz użyć tej oceny krótkiego obwodu, aby zapobiec dereferencji wskaźnika o wartości null, jak pokazano w następującym przykładzie:
 
 ```cpp
 char *pch = 0;
@@ -39,11 +39,11 @@ char *pch = 0;
 (pch) && (*pch = 'a');
 ```
 
-Jeśli `pch` ma wartość null (0), po prawej stronie wyrażenia nigdy nie jest obliczane. W związku z tym przypisania poprzez wskaźnik o wartości null jest niemożliwe.
+Jeśli `pch` ma wartość null (0), prawa strona wyrażenia nigdy nie jest szacowana. W związku z tym przypisanie przez wskaźnik o wartości null jest niemożliwe.
 
-## <a name="operator-keyword-for-"></a>Słowo kluczowe operator & &
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla & &
 
-**i** operator jest odpowiednikiem tekstu **&&**. Istnieją dwa sposoby dostępu do **i** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Operator **i** jest odpowiednikiem tekstu **&&** . Istnieją dwa sposoby uzyskania dostępu do operatora **i** w programach: Dołącz plik nagłówka `iso646.h`lub skompiluj przy użyciu opcji kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Wyłącz rozszerzenia językowe).
 
 ## <a name="example"></a>Przykład
 
@@ -67,8 +67,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Operatory języka C++ wbudowane pierwszeństwo i łączność](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Pierwszeństwo operatorów wbudowanych i łączność](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatory logiczne języka C](../c-language/c-logical-operators.md)

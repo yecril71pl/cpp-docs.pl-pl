@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: f71112d3f37f3e4d1a4f41bade95726d7aa0a0bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205364"
 ---
 # <a name="compiler-error-c2439"></a>Błąd kompilatora C2439
 
-'Identyfikator': nie można zainicjować składowej
+"Identyfikator": nie można zainicjować elementu członkowskiego
 
-Nie można zainicjować klasy, struktury lub Unii.
+Nie można zainicjować klasy, struktury lub składowej Unii.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Podczas próby zainicjowania pośredniej klasy bazowej lub struktury.
+1. Podjęto próbę zainicjowania pośredniej klasy bazowej lub struktury.
 
-1. Podczas próby zainicjowania dziedziczonej składowej klasy lub struktury. Dziedziczonej składowej musi zostać zainicjowany przez Konstruktor klasy lub struktury.
+1. Próba zainicjowania dziedziczonego elementu członkowskiego klasy lub struktury. Dziedziczony element członkowski musi być zainicjowany przez konstruktora klasy lub struktury.

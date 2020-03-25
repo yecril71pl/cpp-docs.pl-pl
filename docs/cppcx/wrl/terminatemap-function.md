@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213554"
 ---
 # <a name="terminatemap-function"></a>TerminateMap — Funkcja
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,17 +30,17 @@ inline bool TerminateMap(
 ### <a name="parameters"></a>Parametry
 
 *module*<br/>
-A [modułu](module-class.md).
+[Moduł](module-class.md).
 
 *serverName*<br/>
-Nazwa podzbiór fabryki klas w module, który został określony przez parametr *modułu*.
+Nazwa podzbioru fabryk klasy w module określonym przez *moduł*parametrów.
 
 *forceTerminate*<br/>
-**wartość true,** zakończenie klasy fabryk, niezależnie od ich są aktywne; **false** nie zakończyć fabryki klas, jeśli wszystkie fabryki jest aktywny.
+**wartość true** powoduje zakończenie fabryk klasy niezależnie od ich aktywności. **wartość false** , aby nie kończyć fabryk klas, jeśli jakakolwiek fabryka jest aktywna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** gdyby zakończone; w przeciwnym razie wszystkie fabryki klas **false**.
+**prawda** , jeśli wszystkie fabryki klas zostały zakończone; w przeciwnym razie **false**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -48,10 +48,10 @@ Zamyka fabryki klas w określonym module.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module.h
+**Nagłówek:** module. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

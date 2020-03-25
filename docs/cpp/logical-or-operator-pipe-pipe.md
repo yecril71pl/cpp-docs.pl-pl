@@ -9,38 +9,38 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b2bc024dd7223ac7adacc72924f5ee289bab37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178083"
 ---
 # <a name="logical-or-operator-"></a>Operator logiczny OR: ||
 
 ## <a name="syntax"></a>Składnia
 
-> *lub wyrażenie logiczne* **||** *-i wyrażenie logiczne*
+> wyrażenie *logiczne-and-* Expression **||** *logiczne i wyrażenie*
 
 ## <a name="remarks"></a>Uwagi
 
-Operator logiczny OR (**||**) zwraca wartość logiczną PRAWDA, jeśli ma wartość TRUE lub obydwa operandy, a w przeciwnym razie zwraca wartość FALSE. Argumenty operacji są niejawnie konwertowane na typ **bool** przed oceny, a wynik jest typu **bool**. Operator logiczny lub ma łączność od lewej do prawej.
+Operator logiczny OR ( **||** ) zwraca wartość logiczną PRAWDA, jeśli jeden lub oba operandy mają wartość true i w przeciwnym razie zwraca wartość false. Operandy są niejawnie konwertowane na typ **bool** przed oszacowaniem, a wynik jest typu **bool**. Logiczny lub ma łączność od lewej do prawej.
 
-Argumenty operacji dla operatora logicznego OR nie muszą być tego samego typu, ale muszą być typu wartości całkowitej lub wskaźnika. Argumenty operacji są często relacyjnych lub wyrażeniach porównania.
+Operandy operatora logicznego OR nie mogą być tego samego typu, ale muszą być typu całkowitego lub wskaźnika. Operandy są zwykle wyrażeniami relacyjnymi lub równości.
 
-Pierwszy operand jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi odbywa się przed kontynuowaniem oceny wyrażenie logiczne OR.
+Pierwszy operand jest obliczany całkowicie i wszystkie efekty uboczne są kończone przed kontynuowaniem obliczania wyrażenia logicznego OR.
 
-Drugi operand jest oceniany, tylko wtedy, gdy pierwszy operand wartość false (0). Pozwala to wyeliminować niepotrzebnego oceny drugiego operandu, gdy wyrażenie logiczne OR ma wartość true.
+Drugi operand jest oceniany tylko wtedy, gdy pierwszy operand zwraca wartość false (0). Eliminuje to potrzebę niepotrzebnej oceny drugiego operandu, gdy wyrażenie logiczne OR ma wartość true.
 
 ```cpp
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-W powyższym przykładzie Jeśli `x` jest równa albo `w`, `y`, lub `z`, drugi argument `printf` funkcja zwraca wartość true, a wartość 1, wydrukowaniu. W przeciwnym razie zwróci wartość false, a wartość 0, wydrukowaniu. Tak szybko, jak jeden z warunków jest spełniony, zakończenie oceny.
+W powyższym przykładzie, jeśli `x` jest równa `w`, `y`lub `z`, drugi argument funkcji `printf` zwróci wartość true, a wartość 1 jest drukowana. W przeciwnym razie zostanie wyznaczona wartość false i zostanie wydrukowany wynik 0. Gdy tylko jeden z warunków zwróci wartość true, ocena zostanie przerwana.
 
-## <a name="operator-keyword-for-124124"></a>Operator Keyword for &#124;&#124;
+## <a name="operator-keyword-for-124124"></a>Słowo kluczowe operatora dla&#124;&#124;
 
-**Lub** operator jest odpowiednikiem tekstu **||**. Istnieją dwa sposoby dostępu do **lub** operatora w programach: uwzględnić plik nagłówka \<iso646.h >, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Operator **or** jest odpowiednikiem tekstu **||** . Istnieją dwa sposoby uzyskania dostępu do operatora **or** w programach: Dołącz plik nagłówka \<iso646. h > lub skompiluj z opcją kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Przykład
 
@@ -62,8 +62,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Operatory języka C++ wbudowane pierwszeństwo i łączność](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Pierwszeństwo operatorów wbudowanych i łączność](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatory logiczne języka C](../c-language/c-logical-operators.md)

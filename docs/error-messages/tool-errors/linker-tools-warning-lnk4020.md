@@ -5,17 +5,17 @@ f1_keywords:
 - LNK4020
 helpviewer_keywords:
 - LNK4020
-ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e818909cc0b590b0f7727846cfd7b469e8bc0e3f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194229"
 ---
 # <a name="linker-tools-warning-lnk4020"></a>Ostrzeżenie narzędzi konsolidatora LNK4020
 
-> rekord typu w elemencie "*filename*" jest uszkodzony; niektóre symbole i typy mogą być niedostępne z debugera
+> rekord typu w pliku "*filename*" jest uszkodzony; Niektóre symbole i typy mogą być niedostępne z debugera
 
-Plik PDB *filename* został uszkodzony typu rekordu.
+*Nazwa* pliku PDB ma uszkodzony rekord typu.
 
-Ten problem jest często pomocniczego do innych problemów z kompilacją; chyba że jest to pierwszy problemu zgłoszonego kompilacji, przeciwdziałania inne błędy i ostrzeżenia pierwszy. Jeśli jest to pierwszy zgłoszonego problemu, może być konieczne czyszczenie katalogów kompilacji i ponownie skompiluj projekt. Jeśli używasz procesów kompilacji równoległych, zobacz, jeśli błąd się powtarza, podczas kompilacji.
+Ten problem jest często pomocniczy dla innych problemów z kompilacją; o ile nie jest to pierwszy zgłoszony problem kompilacji, najpierw należy zająć się innymi błędami i ostrzeżeniami. Jeśli jest to pierwszy zgłoszony problem, może być konieczne wyczyszczenie katalogów kompilacji i ponowne skompilowanie projektu. Jeśli używasz równoległych procesów kompilacji, zobacz, czy błąd będzie nadal występować podczas serializacji kompilacji.

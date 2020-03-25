@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210720"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl — Klasa
 
@@ -42,7 +42,7 @@ Klasa poleceń.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
@@ -54,7 +54,7 @@ Klasa poleceń.
 
 Opcjonalny interfejs w obiekcie sesji, aby uzyskać nowe polecenie.
 
-## <a name="createcommand"></a>IDBCreateCommandImpl —:: SetCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl —:: SetCommand
 
 Tworzy nowe polecenie i zwraca żądany interfejs.
 

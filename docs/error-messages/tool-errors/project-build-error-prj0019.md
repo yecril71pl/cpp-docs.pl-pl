@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aed7ca5dcf5803305d8765f50430520a5b73d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192539"
 ---
 # <a name="project-build-error-prj0019"></a>Błąd PRJ0019 kompilacji projektu
 
 Narzędzie zwróciło kod błędu z
 
-Błąd poziomu była wartość różną od zera dla niestandardowego kroku budowania lub zdarzenia kompilacji.
+Poziom błędu był różny od zera dla niestandardowego kroku kompilacji lub zdarzenia kompilacji.
 
-Zobaczysz również PRJ0019 gdy narzędzie zwróciło kod błędu, ale bez komunikatu o błędzie. Może to nastąpić, na przykład, jeśli przekierować dane wyjściowe MIDL do NUL.
+Zobaczysz również PRJ0019, gdy narzędzie zwróci kod błędu, ale nie ma komunikatu o błędzie. Może się tak zdarzyć na przykład w przypadku przekierowania danych wyjściowych MIDL do NUL.
 
-Zobacz [Rozwiązywanie problemów z niestandardowe kroki kompilacji i zdarzenia kompilacji](../../build/troubleshooting-build-customizations.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji [, zobacz Rozwiązywanie problemów dotyczących niestandardowych kroków kompilacji i zdarzeń kompilacji](../../build/troubleshooting-build-customizations.md) .
 
-Ten błąd może również wystąpić, gdy są uruchomione jako członek grupy Użytkownicy i potrzebny jest dostęp administracyjny do. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](../../security/running-as-a-member-of-the-users-group.md).
+Ten błąd może również wystąpić, gdy użytkownik jest uruchomiony jako członek grupy Użytkownicy i jest wymagany dostęp administracyjny. Aby uzyskać więcej informacji, zobacz [Uruchamianie jako członek grupy użytkowników](../../security/running-as-a-member-of-the-users-group.md).

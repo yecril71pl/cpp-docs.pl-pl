@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1051
 ms.assetid: 87dcbd3b-0952-499a-bd42-64f9e8de2605
-ms.openlocfilehash: afc851cc9e46df0555d3702db982d5c3890d99ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa897d6e7f4d1d5d6bdd06dba33d0eeb1c238049
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204506"
 ---
 # <a name="fatal-error-c1051"></a>Błąd krytyczny C1051
 
-plik bazy danych programu "pdbfile", ma przestarzały format, usuń go i ponownie skompilować
+plik bazy danych programu, "pdbfile", ma przestarzały format, usuń go i ponownie skompiluj
 
-Kompilator nie może zaktualizować pliku bazy danych programu, który ma starsze numer wersji. Usuń ten plik i ponownie skompilować program jest połączony z **/zi** lub **/zi**. Aby uzyskać więcej informacji, zobacz  [ /z7, / zi, /ZI (Format informacji debugowania)](../../build/reference/z7-zi-zi-debug-information-format.md)
+Kompilator nie może zaktualizować pliku bazy danych programu, który ma starszy numer wersji. Usuń plik i Skompiluj ponownie program za pomocą **/Zi** lub **/Zi**. Aby uzyskać więcej informacji, zobacz [/Z7,/Zi,/ZI (format informacji o debugowaniu)](../../build/reference/z7-zi-zi-debug-information-format.md)

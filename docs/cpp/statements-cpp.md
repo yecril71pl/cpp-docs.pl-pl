@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59eb1ef2cbb9046a8ed9ea134a0c37aba6c37ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267196"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178616"
 ---
 # <a name="statements-c"></a>Instrukcje (C++)
 
-Instrukcje języka C++ są elementy programu, które kontrolują, jak i w jakiej kolejności obiekty są zmieniane. Ta sekcja zawiera:
+C++Instrukcje to elementy programu kontrolujące sposób manipulowania obiektami kolejności. Ta sekcja zawiera:
 
 - [Omówienie](../cpp/overview-of-cpp-statements.md)
 
@@ -22,22 +22,22 @@ Instrukcje języka C++ są elementy programu, które kontrolują, jak i w jakiej
 
 - Kategorie instrukcji
 
-   - [Instrukcje wyrażeń](../cpp/expression-statement.md). Te instrukcje ocenia wyrażenie z efektami ubocznymi lub jego wartość zwracaną.
+   - [Instrukcje wyrażeń](../cpp/expression-statement.md). Te instrukcje służą do obliczenia wyrażenia dla jego efektów ubocznych lub wartości zwracanej.
 
-   - [Wartość null, instrukcje](../cpp/null-statement.md). Instrukcje te można podać w przypadku, gdy instrukcja jest wymagane przez składnię języka C++, ale w przypadku, gdy podejmowana jest żadnej akcji.
+   - [Instrukcje o wartości null](../cpp/null-statement.md). Te instrukcje można podać w przypadku, gdy instrukcja jest wymagana przez C++ składnię, ale gdzie nie ma być wykonywana żadna akcja.
 
-   - [Instrukcje złożone](../cpp/compound-statements-blocks.md). Te instrukcje są grupami z instrukcji ujętych w nawiasy klamrowe ({}). Mogą one używane wszędzie tam, gdzie można stosować pojedynczej instrukcji.
+   - [Złożone instrukcje](../cpp/compound-statements-blocks.md). Te instrukcje są grupami instrukcji ujętych w nawiasy klamrowe ({}). Można ich używać wszędzie tam, gdzie można użyć pojedynczej instrukcji.
 
-   - [Instrukcje wyboru](../cpp/selection-statements-cpp.md). Te instrukcje wykonywania testu; są następnie wykonywane jedną sekcję kodu, jeśli test zwraca wartość true (niezerową). Jeśli test nie jest spełniony, są wykonywane innej sekcji kodu.
+   - [Instrukcje wyboru](../cpp/selection-statements-cpp.md). Te instrukcje wykonują test; następnie wykonują jedną część kodu, jeśli test ma wartość true (niezerową). Mogą wykonać kolejną sekcję kodu, jeśli test ma wartość false.
 
-   - [Instrukcje iteracji](../cpp/iteration-statements-cpp.md). Instrukcje te zapewniają wielokrotnego wykonywania blok kodu do momentu spełnienia kryteriów zakończenia określonego.
+   - [Instrukcje iteracji](../cpp/iteration-statements-cpp.md). Te instrukcje zapewniają wielokrotne wykonywanie bloku kodu do momentu spełnienia określonego kryterium zakończenia.
 
-   - [Instrukcje skoku](../cpp/jump-statements-cpp.md). Te instrukcje kontrola jest przekazywana bezpośrednio do innej lokalizacji w funkcji lub zwrócić formant z funkcji.
+   - [Instrukcje skoku](../cpp/jump-statements-cpp.md). Te instrukcje umożliwiają natychmiastowe przeniesienie kontroli do innej lokalizacji w funkcji lub Sterowanie zwracaną przez funkcję.
 
    - [Instrukcje deklaracji](declarations-and-definitions-cpp.md). Deklaracje wprowadzają nazwę do programu.
 
-Instrukcje dotyczące instrukcje obsługi wyjątków, zobacz [wyjątków](../cpp/exception-handling-in-visual-cpp.md).
+Aby uzyskać informacje dotyczące instrukcji obsługi wyjątków, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

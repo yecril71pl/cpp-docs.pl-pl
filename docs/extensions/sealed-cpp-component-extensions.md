@@ -1,5 +1,5 @@
 ---
-title: sealed (C++sposób niezamierzony i C++/CX)
+title: zapieczętowane (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181801"
 ---
-# <a name="sealed--ccli-and-ccx"></a>sealed (C++sposób niezamierzony i C++/CX)
+# <a name="sealed--ccli-and-ccx"></a>zapieczętowane (C++/CLI i C++/CX)
 
-**zapieczętowane** jest słowem kluczowym kontekstowych dla klasy ref, która wskazuje, że wirtualny element członkowski nie może być zastąpiona, lub typu nie można użyć jako typu podstawowego.
+**Sealed** to kontekstowe słowo kluczowe dla klas referencyjnych, które wskazują, że nie można przesłonić wirtualnego elementu członkowskiego lub że typ nie może być używany jako typ podstawowy.
 
 > [!NOTE]
-> ISO C ++ 11 standardowy język wprowadzone [końcowego](../cpp/final-specifier.md) — słowo kluczowe. Użyj **końcowego** na standardowych klas i **zapieczętowanego** na klasy ref.
+> Język standardowy ISO C++ 11 wprowadził słowo kluczowe [Final](../cpp/final-specifier.md) . Używaj **wersji Final** dla klas standardowych i **zapieczętowanych** w klasach ref.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -33,41 +33,41 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator*<br/>
-Nazwa klasy lub funkcji.
+*identyfikatora*<br/>
+Nazwa funkcji lub klasy.
 
-*zwracany typ*<br/>
+*Typ zwracany*<br/>
 Typ, który jest zwracany przez funkcję.
 
 ## <a name="remarks"></a>Uwagi
 
-W pierwszym przykładzie składni klasa jest zapieczętowany. W drugim przykładzie funkcją wirtualną jest zapieczętowany.
+W pierwszej składni, Klasa jest zapieczętowana. W drugim przykładzie funkcja wirtualna jest zapieczętowana.
 
-Użyj **zapieczętowanego** — słowo kluczowe ref klas i ich funkcji wirtualnych elementów członkowskich. Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Używaj **zapieczętowanego** słowa kluczowego dla klas referencyjnych i ich wirtualnych funkcji składowych. Aby uzyskać więcej informacji, zobacz [specyfikatory przesłonięcia i kompilacje natywne](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Można wykrywać w czasie kompilacji, czy typ jest zapieczętowany przy użyciu `__is_sealed(type)` cechy typu. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](compiler-support-for-type-traits-cpp-component-extensions.md).
+Możesz wykryć w czasie kompilacji, niezależnie od tego, czy typ jest zapieczętowany przy użyciu cech typu `__is_sealed(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-**zapieczętowane** jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+**zapieczętowany** jest kontekstowym słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Zobacz [klasy i struktury odwołania](../cppcx/ref-classes-and-structs-c-cx.md).
+Zobacz [klasy referencyjne i struktury](../cppcx/ref-classes-and-structs-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowiska uruchomieniowego języka wspólnego).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Ten poniższy kod ilustruje efekt **zapieczętowanego** na wirtualny element członkowski.
+Poniższy przykład kodu przedstawia efekt **zapieczętowanego** elementu członkowskiego.
 
 ```cpp
 // sealed_keyword.cpp
@@ -118,7 +118,7 @@ X::f override of I1::g
 Y::f override of I1::f
 ```
 
-Następny przykład kodu pokazuje, jak oznaczyć klasę jako zapieczętowany.
+Następny przykład kodu pokazuje, jak oznaczyć klasę jako Sealed.
 
 ```cpp
 // sealed_keyword_2.cpp
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

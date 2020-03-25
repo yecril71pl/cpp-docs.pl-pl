@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202920"
 ---
 # <a name="fatal-error-c1601"></a>Błąd krytyczny C1601
 
-Nieobsługiwany wbudowany zestaw opcode
+nieobsługiwany Wbudowany zestaw opcode
 
-Ten błąd wskazuje niezgodności w plikach .exe kompilatora, które mogły wystąpić z powodu niekompletną instalację. Na przykład może zainstalowano dodatek service pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.
+Ten błąd wskazuje niezgodność plików kompilatora. exe, które mogły wystąpić z powodu niekompletnej instalacji. Na przykład może być zainstalowany dodatek Service Pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.

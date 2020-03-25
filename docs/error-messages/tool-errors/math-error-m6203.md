@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6203
 ms.assetid: bd7fdd1c-83e4-4d6a-901e-10a0308bf5be
-ms.openlocfilehash: 4433a024d461ee1bc43aa5fa82344190377243b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371a6c673826c6ce71d7a0eb3b9e08d9488f53f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400776"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193696"
 ---
 # <a name="math-error-m6203"></a>Błąd matematyczny M6203
 
-'Funkcja': błąd _OVERFLOW
+"Function": błąd _OVERFLOW
 
-Wynik daną funkcję była zbyt duża, aby mogły być reprezentowane.
+Dany wynik funkcji był zbyt duży, aby można go było przedstawić.
 
-Ten błąd wywołania `_matherr` funkcję z nazwy funkcji, argumentów i typ błędu. Można napisać ponownie `_matherr` funkcję, aby dostosować obsługi niektórych błędów zmiennoprzecinkowym zapisu matematycznego w czasie wykonywania.
+Ten błąd wywołuje funkcję `_matherr` z nazwą funkcji, jej argumentami i typem błędu. Można ponownie napisać funkcję `_matherr`, aby dostosować obsługę określonych błędów matematycznych zmiennoprzecinkowych w czasie wykonywania.

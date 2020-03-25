@@ -5,20 +5,20 @@ helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: 1e6d715011cfaab7e250e23a9a31bb3f0c83f36a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190706"
 ---
 # <a name="assignment"></a>Przypisanie
 
-Operator przypisania (**=**) jest ściśle rzecz ujmując, operatora binarnego. Jego deklaracji jest taka sama jak innych operatora binarnego, z następującymi wyjątkami:
+Operator przypisania ( **=** ) jest, ściśle mówiący, operator binarny. Jego deklaracja jest taka sama jak każdy inny operator binarny z następującymi wyjątkami:
 
-- Musi być funkcją składową Niestatyczne. Nie **operator =** mogą być deklarowane jako funkcja niebędących.
-- Nie jest dziedziczone przez klasy pochodne.
-- Domyślnie **operator =** funkcji mogą być generowane przez kompilator dla typu klasy, jeśli żaden nie istnieje.
+- Musi to być niestatyczna funkcja członkowska. Nie można zadeklarować **operatora =** jako funkcji nienależącej do elementu członkowskiego.
+- Nie są dziedziczone przez klasy pochodne.
+- Funkcja **operatora domyślnego =** może być generowana przez kompilator dla typów klas, jeśli nie istnieje.
 
 Poniższy przykład ilustruje sposób deklarowania operatora przypisania:
 
@@ -49,13 +49,13 @@ int main()
 }
 ```
 
-Podany argument to po prawej stronie wyrażenia. Operator zwraca obiekt, aby zachować zachowanie operator przypisania zwraca wartość po lewej stronie, po zakończeniu przydziału. Dzięki temu łańcucha przypisań, takich jak:
+Dostarczony argument jest prawą stroną wyrażenia. Operator zwraca obiekt, aby zachować zachowanie operatora przypisania, który zwraca wartość po lewej stronie po zakończeniu przypisywania. Pozwala to na łączenie łańcuchów przypisań, takich jak:
 
 ```cpp
 pt1 = pt2 = pt3;
 ```
 
-Operator przypisania kopiowania jest nie należy mylić z konstruktora kopiującego. Drugim jest wywoływana podczas tworzenia nowego obiektu z istniejącą grupę:
+Nie należy mylić operatora przypisania kopii z konstruktorem kopiującym. Ten drugi jest wywoływany podczas tworzenia nowego obiektu z istniejącej:
 
 ```cpp
 // Copy constructor is called--not overloaded copy assignment operator!
@@ -66,9 +66,9 @@ Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]
-> Zaleca się wykonać [reguły trzech](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) , klasy, który definiuje operator przypisania kopiowania należy także jawnie zdefiniować Konstruktor kopiujący, destruktor, a, począwszy od C ++ 11, przejść Konstruktor i Przenieś przypisania operatora.
+> Zaleca się przestrzeganie [reguły trzech](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) , że Klasa, która definiuje operator przypisania kopii, powinna również jawnie definiować Konstruktor kopiujący, destruktor i, rozpoczynając od c++ 11, przenieść konstruktora i operator przypisania przenoszenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Przeładowanie operatora](../cpp/operator-overloading.md)
 - [Konstruktory kopiujące i kopiujące operatory przypisania (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

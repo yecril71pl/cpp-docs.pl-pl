@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214750"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -39,12 +39,12 @@ Zobacz [call_as](call-as.md) , aby zapoznać się z przykładem użycia **lokaln
 |-|-|
 |**Dotyczy**|**interfejs**, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

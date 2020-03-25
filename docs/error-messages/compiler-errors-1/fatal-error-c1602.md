@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1602
 ms.assetid: a9365c58-fe66-49c4-a702-9bb75429cc1a
-ms.openlocfilehash: 71b721e05db5d4ace61774feb83a364c6c828496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bb4c6bfa2508afa56fde7c27b08e5446c60ff85
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375031"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202907"
 ---
 # <a name="fatal-error-c1602"></a>Błąd krytyczny C1602
 
-nieobsługiwane wewnętrzne
+Nieobsługiwane wewnętrznie
 
-Ten błąd wskazuje niezgodności w plikach .exe kompilatora, które mogły wystąpić z powodu niekompletną instalację. Na przykład może zainstalowano dodatek service pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.
+Ten błąd wskazuje niezgodność plików kompilatora. exe, które mogły wystąpić z powodu niekompletnej instalacji. Na przykład może być zainstalowany dodatek Service Pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.

@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a25c59fa5c9ba0102666f6c8922a61b063e7627a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202309"
 ---
 # <a name="compiler-error-c2712"></a>Błąd kompilatora C2712
 
-> Nie można Użyj __try w funkcjach, które wymagają rozwinięcia obiektu
+> nie można użyć __try w funkcjach, które wymagają odwinięcia obiektu
 
 ## <a name="remarks"></a>Uwagi
 
-C2712 błąd może wystąpić, jeśli używasz [/ehsc](../../build/reference/eh-exception-handling-model.md), i funkcji z obsługi wyjątków strukturalnych, również ma obiektów, które wymagają odwijania (niszczenie).
+C2712 błędów może wystąpić, jeśli używasz [/EHsc](../../build/reference/eh-exception-handling-model.md), a funkcja z obsługą wyjątków strukturalnych również ma obiekty, które wymagają odwinięcia (zniszczenia).
 
 Możliwe rozwiązania:
 
-- Przenieś kod, który wymaga strukturalnej obsługi wyjątków do innej funkcji
+- Przenieś kod wymagający SEH z inną funkcją
 
-- Należy zmodyfikować funkcje, które Użyj strukturalnej obsługi wyjątków, aby uniknąć użycia zmienne lokalne i parametry, które mają destruktory. Nie używaj strukturalnej obsługi wyjątków w konstruktorów i destruktorów
+- Ponownie Napisz funkcje, które używają SEH, aby uniknąć używania zmiennych lokalnych i parametrów, które mają destruktory. Nie używaj SEH w konstruktorach ani destruktorach
 
-- Skompilować bez/ehsc
+- Kompiluj bez/EHsc
 
-Błąd C2712 może również wystąpić, jeśli wywołanie metody zadeklarowanej przy użyciu [__event](../../cpp/event.md) — słowo kluczowe. Ponieważ zdarzenia mogą być używane w środowisku wielowątkowym, kompilator generuje kod, który uniemożliwia manipulowania obiektu bazowego event, a następnie umieszcza wygenerowany kod w SEH [try-finally — instrukcja](../../cpp/try-finally-statement.md). W związku z tym C2712 wystąpi błąd Jeśli wywołanie metody zdarzeń i przekazać wartość argumentu o typie ma destruktor. Jedno rozwiązanie w tym przypadku jest przekazanie argumentu jako stałe odwołanie.
+Błąd C2712 może również wystąpić w przypadku wywołania metody zadeklarowanej za pomocą słowa kluczowego [__event](../../cpp/event.md) . Ponieważ zdarzenie może być używane w środowisku wielowątkowym, kompilator generuje kod, który uniemożliwia manipulowanie obiektem zdarzenia bazowego, a następnie umieszcza wygenerowany kod w [instrukcji SEH try-finally](../../cpp/try-finally-statement.md). W związku z tym Błąd C2712 wystąpi, jeśli wywołasz metodę zdarzenia i przejdziesz przez wartość argumentu, którego typ ma destruktor. Jednym z rozwiązań w tym przypadku jest przekazanie argumentu jako odwołania do stałej.
 
-C2712 może również wystąpić, jeśli kompilujesz z opcją **/CLR: pure** i Zadeklaruj statyczne tablicę wskaźników do funkcji w `__try` bloku. Statyczny element członkowski wymaga kompilator korzystać dynamiczna Inicjalizacja w obszarze **/CLR: pure**, co oznacza obsługi wyjątków C++. Jednak obsługa wyjątków języka C++ nie jest dozwolona w `__try` bloku.
+C2712 może również wystąpić, Jeśli kompilujesz z **/CLR: Pure** i deklaruj statyczną tablicę wskaźników do funkcji w bloku `__try`. Statyczny element członkowski wymaga, aby kompilator używał dynamicznej inicjacji z **/CLR: Pure**, co C++ oznacza obsługę wyjątków. Jednak obsługa C++ wyjątków nie jest dozwolona w bloku `__try`.
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2712 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C2712 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
 // C2712.cpp

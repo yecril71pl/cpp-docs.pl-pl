@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
-ms.openlocfilehash: f89e7416efe7a0069ee2dae8df921933bbe76bcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46ed5750bd1f315f20658ace9b83fac532fbbabb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196681"
 ---
 # <a name="command-line-warning-d9027"></a>Ostrzeżenie D9027 dla wiersza polecenia
 
-plik źródłowy "\<nazwa pliku >" zignorowany
+Zignorowano plik źródłowy "\<filename >"
 
-CL.exe zignorowany plik źródła danych wejściowych.
+CL. exe zignorował wejściowy plik źródłowy.
 
-To ostrzeżenie może być spowodowany odstęp między opcją /Fo i nazwa pliku wyjściowego, w wierszu polecenia z opcją/c. Na przykład:
+To ostrzeżenie może być spowodowane spacją między opcją/fo a wyjściową nazwą pliku w wierszu polecenia z/c opcją. Na przykład:
 
 ```
 cl /c /Fo output.obj input.c
 ```
 
-Ponieważ odstęp między /Fo i `output.obj`, przyjmuje CL.exe `output.obj` jako nazwę pliku wejściowego. Aby rozwiązać ten problem, Usuń miejsce:
+Ponieważ istnieje spacja między/FO i `output.obj`, CL. exe pobiera `output.obj` jako nazwę pliku wejściowego. Aby rozwiązać ten problem, Usuń miejsce:
 
 ```
 cl /c /Fooutput.obj input.c

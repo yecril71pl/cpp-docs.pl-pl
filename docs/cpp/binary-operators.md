@@ -6,69 +6,69 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181307"
 ---
 # <a name="binary-operators"></a>Operatory binarne
 
 W poniższej tabeli przedstawiono listę operatorów, które mogą być przeciążone.
 
-## <a name="redefinable-binary-operators"></a>Operatory dwuargumentowe które można definiować ponownie
+## <a name="redefinable-binary-operators"></a>Przedefiniowane operatory binarne
 
-|Operator|Nazwa|
+|Operator|Name (Nazwa)|
 |--------------|----------|
 |**,**|Przecinek|
-|**\!=**|Nierówność|
-|**%**|Modulo|
-|**%=**|Modulo i i przypisanie|
+|**!=**|Nierówność|
+|**%**|Modulus|
+|**%=**|Moduł/przypisanie|
 |**&**|Bitowe ORAZ|
 |**&&**|Logicznego AND|
-|**&=**|Bitowe AND / przydziału|
+|**&=**|Bitowe i/przypisanie|
 |**&#42;**|Mnożenie|
-|**&#42;=**|Mnożenie i przypisanie|
+|**&#42;=**|Mnożenie/przypisanie|
 |**+**|Dodawanie|
-|**+=**|Dodawanie i przypisanie|
+|**+=**|Dodawanie/przypisywanie|
 |**-**|Odejmowanie|
-|**-=**|Odejmowanie i przypisanie|
+|**-=**|Odejmowanie/przypisanie|
 |**->**|Wybór elementu członkowskiego|
-|**->&#42;**|Wybór wskaźników do elementów członkowskich|
+|**->&#42;**|Wybór wskaźnika do elementu członkowskiego|
 |**/**|Dzielenie|
-|**/=**|Dzielenie i przypisanie|
+|**/=**|Dzielenie/przypisanie|
 |**<**|Mniejsze niż|
 |**<<**|Przesunięcie w lewo|
-|**<<=**|Lewy shift/przypisania|
+|**<<=**|Przesunięcie w lewo/przypisanie|
 |**<=**|Mniejsze niż lub równe|
 |**=**|Przypisanie|
 |**==**|Równości|
 |**>**|Większe niż|
 |**>=**|Większe niż lub równe|
 |**>>**|Przesunięcie w prawo|
-|**>>=**|Przesunięcia w prawo/przypisania|
-|**^**|Wykluczające OR|
-|**^=**|Wykluczające OR / przydziału|
+|**>>=**|Przesunięcie w prawo/przypisanie|
+|**^**|Wyłączny lub|
+|**^=**|Wyłączne lub/przypisanie|
 |**&#124;**|Bitowe alternatywne OR|
-|**&#124;=**|Bitowe alternatywne OR / przydziału|
+|**&#124;=**|Przypisanie bitowe lub//|
 |**&#124;&#124;**|Logicznego OR|
 
-Aby zadeklarować funkcję operatora binarnego jako niestatyczny element członkowski, należy zadeklarować ją w postaci:
+Aby zadeklarować funkcję operatora binarnego jako niestatyczną składową, należy zadeklarować ją w postaci:
 
-> *RET-type* **operator** *op* **(** *arg* **)**
+> *RET-Type —* **operator** *operacja* **operatora (** *ARG* **)**
 
-gdzie *ret-type* jest typem zwracanym *op* jest jednym z operatorów wymienionych w powyższej tabeli i *arg* jest argumentem typu.
+gdzie *RET-Type* jest typem zwracanym, *op* jest jednym z operatorów wymienionych w powyższej tabeli *, a argument* jest argumentem dowolnego typu.
 
 Aby zadeklarować funkcję operatora binarnego jako funkcję globalną, należy zadeklarować ją w postaci:
 
-> *RET-type* **operator** *op* **(** _arg1_**,** _argument2_ **)**
+> *RET-Type* **operatora** *op* **(** _arg1_ **,** _arg2_ **)**
 
-gdzie *ret-type* i *op* są opisane dla funkcji operatora składowej i *arg1* i *argument2* argumentów. Co najmniej jeden z argumentów musi być typem klasy.
+gdzie *RET-Type* i *op* są zgodnie z opisem dla funkcji operatora składowych, a *arg1* i *arg2* są argumentami. Co najmniej jeden z argumentów musi być typu klasy.
 
 > [!NOTE]
-> Nie ma żadnych ograniczeń względem typów zwracanych operatorów binarnych; Jednak większość zdefiniowanych przez użytkownika operatory dwuargumentowe Zwróć odwołanie do typu klasy lub typu klasy.
+> Nie ma ograniczeń dla zwracanych typów operatorów binarnych; Jednak większość operatorów binarnych zdefiniowanych przez użytkownika zwraca typ klasy lub odwołanie do typu klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeładowanie operatora](../cpp/operator-overloading.md)

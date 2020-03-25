@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195503"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Błąd CXX0036 programu Expression Evaluator
 
-Zły kontekst {...} specyfikacja
+zły kontekst {...} specyfikacja
 
-Ten komunikat może zostać wygenerowany przez dowolnego z kilku błędów w stosowaniu operator kontekstu (**{}**).
+Ten komunikat może być generowany przez dowolny z kilku błędów podczas korzystania z operatora kontekstu ( **{}** ).
 
-- Składnia operator kontekstu (**{}**) podano niepoprawnie.
+- Składnia operatora kontekstu ( **{}** ) została nieprawidłowo określona.
 
-   Składnia operator kontekstu jest następująca:
+   Składnia operatora kontekstu to:
 
-     {*funkcja*,*modułu*,*dll*}*wyrażenia*
+     {*Function*,*module*,*dll*} *wyrażenie*
 
-   Określa kontekst *wyrażenie*. Operator kontekstu ma ten sam priorytet i użycia jako rzutowanie typu.
+   Określa kontekst *wyrażenia*. Operator kontekstu ma takie samo pierwszeństwo i użycie jak rzutowanie typu.
 
-   Można pominąć końcowe przecinkami. Jeśli dowolny z *funkcja*, *modułu*, lub *dll* zawiera przecinek literału, całą nazwę należy ująć w nawiasy.
+   Końcowe przecinki można pominąć. Jeśli którakolwiek z *funkcji*, *modułów*lub *dll* zawiera przecinek literału, należy ująć całą nazwę w nawiasy.
 
-- Nazwa funkcji został wpisany niepoprawnie lub nie istnieje w określonym module lub biblioteka dołączana dynamicznie.
+- Nazwa funkcji została wpisana niepoprawnie lub nie istnieje w określonym module lub bibliotece dołączanej dynamicznie.
 
-   Ponieważ C jest rozróżniana wielkość liter języka, *funkcja* musi być podany w dokładne dopasowanie wielkości liter, jak jest zdefiniowany w źródle.
+   Ponieważ język C jest rozróżniana wielkość liter, *Funkcja* musi być określona w dokładnie takim przypadku, jak jest zdefiniowana w źródle.
 
-- Nie można odnaleźć modułu lub biblioteki DLL.
+- Nie można znaleźć modułu lub biblioteki DLL.
 
    Sprawdź pełną nazwę ścieżki określonego modułu lub biblioteki DLL.
 
-Ten błąd jest taka sama jak CAN0036.
+Ten błąd jest identyczny z CAN0036.

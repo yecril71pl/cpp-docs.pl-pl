@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-ms.openlocfilehash: 83cb02f4d9d5232eda45b3bdbb591dd819fa12d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96d1b5655fc2c3f78efc04e1dc11c45f7b4ccee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192981"
 ---
 # <a name="project-build-error-prj0007"></a>Błąd PRJ0007 kompilacji projektu
 
-Nie można utworzyć katalogu wyjściowego 'katalog'.
+Nie można utworzyć katalogu wyjściowego "katalog".
 
-Visual C++ nie można utworzyć katalogu wyjściowego. Możliwe przyczyny:
+Wizualizacja C++ nie mogła utworzyć katalogu wyjściowego. Możliwe przyczyny:
 
-- Katalogu, w których katalog wyjściowy był ma zostać utworzony jest tylko do odczytu.
+- Katalog, w którym ma zostać utworzony katalog wyjściowy, jest tylko do odczytu.
 
-- Komputer jest mało miejsca na dysku.
+- Brak miejsca na dysku na komputerze.
 
-- Określona nieprawidłowa ścieżka katalogu.
+- Określono nieprawidłową ścieżkę do katalogu.
 
-- Uprawnienia użytkownika nie są wystarczające, aby utworzyć katalog.
+- Uprawnienia użytkownika nie są wystarczające do utworzenia katalogu.

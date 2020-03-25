@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: d928d8de34c6caab0f86e9205d0aea45b5ed737c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e02e928f65ab4cd918e730135abc62ed3237decf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079449"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215127"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 
 Aplikacja w stylu przeglądarki sieci Web może uzyskać dostęp do informacji z Internetu (na przykład HTML lub dokumentów aktywnych) lub intranetu, a także folderów w lokalnym systemie plików i w sieci. Dzięki wykorzystaniu klasy widoku aplikacji od [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie można utworzyć aplikację za pomocą przeglądarki sieci Web, dostarczając widok z kontrolką WebBrowser.
 
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Aby utworzyć aplikację przeglądarki sieci Web opartą na architekturze dokumentu MFC/widoku
+## <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Aby utworzyć aplikację przeglądarki sieci Web opartą na architekturze dokumentu MFC/widoku
 
 1. Postępuj zgodnie z instrukcjami w temacie [Tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).
 
@@ -35,7 +35,7 @@ Aplikacja w stylu przeglądarki sieci Web może uzyskać dostęp do informacji z
 Kontrolka WebBrowser obsługuje przeglądanie w sieci Web za pomocą hiperłączy i nawigacji Uniform Resource Locator (URL). Kontrolka utrzymuje listę historii, która umożliwia użytkownikowi przeglądanie do przodu i do tyłu przez wcześniej przeglądane witryny, foldery i dokumenty. Kontrolka bezpośrednio obsługuje nawigację, hiperłącza, listy historii, Ulubione i zabezpieczenia. Aplikacje mogą używać kontrolki WebBrowser jako kontenera dokumentów aktywnych również do hostowania dokumentów aktywnych. W związku z tym rozbudowane dokumenty, takie jak arkusze kalkulacyjne programu Microsoft Excel lub dokumenty programu Word, można otwierać i edytować w miejscu z poziomu kontrolki WebBrowser. Formant WebBrowser jest również kontenerem formantów ActiveX, który może obsługiwać dowolny formant ActiveX.
 
 > [!NOTE]
->  Formant ActiveX WebBrowser (i w związku z tym `CHtmlView`) jest dostępny tylko dla aplikacji uruchomionych w wersjach systemu Windows, w których jest zainstalowany program Internet Explorer 4,0 lub nowszy.
+> Formant ActiveX WebBrowser (i w związku z tym `CHtmlView`) jest dostępny tylko dla aplikacji uruchomionych w wersjach systemu Windows, w których jest zainstalowany program Internet Explorer 4,0 lub nowszy.
 
 Ponieważ `CHtmlView` po prostu implementuje formant przeglądarki sieci Web firmy Microsoft, jego obsługa drukowania nie jest taka sama jak w przypadku innych klas pochodnych [CView](../../mfc/reference/cview-class.md). Zamiast tego formant WebBrowser implementuje interfejs użytkownika i drukowanie drukarki. W związku z tym `CHtmlView` nie obsługuje podglądu wydruku, a struktura nie zapewnia innych funkcji obsługi drukowania: na przykład [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)i [CView:: OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.
 
@@ -69,7 +69,7 @@ void CWebView::OnInitialUpdate()
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład MFCIE MFC](https://github.com/Microsoft/VCSamples)<br/>
+[Przykład MFCIE MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet)<br/>
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Ustawianie właściwości kompilatora i Build](../../build/working-with-project-properties.md)<br/>
 [Strony właściwości](../../build/reference/property-pages-visual-cpp.md)<br/>

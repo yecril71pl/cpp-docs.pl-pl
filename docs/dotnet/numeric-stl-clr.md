@@ -17,16 +17,16 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1939a6dd9b6d8186eb278623f3b0a5a3d851f4d3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384806"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208484"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
-Definiuje funkcje szablonu kontenera, które wykonują algorytmy dostępne dla numerycznego przetwarzania.
+Definiuje funkcje szablonu kontenera, które wykonują algorytmy przeznaczone do przetwarzania liczbowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,24 +36,24 @@ Definiuje funkcje szablonu kontenera, które wykonują algorytmy dostępne dla n
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext — / liczbowe >
+**Nagłówek:** \<cliext/> liczbowej
 
-**Namespace:** cliext —
+**Przestrzeń nazw:** cliext
 
 ## <a name="declarations"></a>Deklaracje
 
 |Funkcja|Opis|
 |--------------|-----------------|
-|[accumulate (STL/CLR)](#accumulate)|Oblicza sumę wszystkich elementów w określonym zakresie, w tym niektóre wartości początkowe przez obliczanie kolejnych sum częściowych, lub oblicza kolejne wyniki częściowe podobnie uzyskanej przy użyciu określonej operacji binarnej niż suma.|
+|[accumulate (STL/CLR)](#accumulate)|Oblicza sumę wszystkich elementów w określonym zakresie, w tym pewną wartość początkową przez Obliczanie kolejnych sum częściowych lub oblicza wynik kolejnych częściowe wyniki, podobnie jak w przypadku użycia określonej operacji binarnej innej niż suma.|
 |[adjacent_difference (STL/CLR)](#adjacent_difference)|Oblicza kolejne różnice między każdym elementem i jego poprzednikiem w zakresie wejściowym i generuje wyjściowe wyniki do zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja różnicy zostaje zastąpiona przez inną, określoną operację binarną.|
-|[inner_product (STL/CLR)](#inner_product)|Oblicza sumę mnożenia elementów z dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sumowania i danych binarnych są zastępowane przez inne określone operacje binarne.|
-|[partial_sum (STL/CLR)](#partial_sum)|Oblicza serię sum zakresu wejściowego od pierwszego elementu przez `i`Ty element i zapisuje wynik każdej takiej sumy w `i`-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie suma operacji zastępuje inną określoną operację binarną.|
+|[inner_product (STL/CLR)](#inner_product)|Oblicza sumę iloczynów elementów z dwóch zakresów i dodaje ją do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sum i danych binarnych produktu są zastępowane przez inne określone operacje binarne.|
+|[partial_sum (STL/CLR)](#partial_sum)|Oblicza serię sum w zakresie wejściowym od pierwszego elementu za pośrednictwem `i`ego elementu i zapisuje wynik każdej takiej sumy w `i`tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja sum jest zastępowana przez inną określoną operację binarną.|
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-## <a name="accumulate"></a> accumulate (STL/CLR)
+## <a name="accumulate-stlclr"></a><a name="accumulate"></a>Akumulacja (STL/CLR)
 
-Oblicza sumę wszystkich elementów w określonym zakresie, w tym niektóre wartości początkowe przez obliczanie kolejnych sum częściowych, lub oblicza kolejne wyniki częściowe podobnie uzyskanej przy użyciu określonej operacji binarnej niż suma.
+Oblicza sumę wszystkich elementów w określonym zakresie, w tym pewną wartość początkową przez Obliczanie kolejnych sum częściowych lub oblicza wynik kolejnych częściowe wyniki, podobnie jak w przypadku użycia określonej operacji binarnej innej niż suma.
 
 ### <a name="syntax"></a>Składnia
 
@@ -66,9 +66,9 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa w taki sam, jak funkcja liczbowa standardowej biblioteki języka C++ `accumulate`. Aby uzyskać więcej informacji, zobacz [accumulate](../standard-library/numeric-functions.md#accumulate).
+Ta funkcja zachowuje się tak samo jak w C++ przypadku standardowej funkcji numerycznej `accumulate`. Aby uzyskać więcej informacji, zobacz [gromadzenie](../standard-library/numeric-functions.md#accumulate).
 
-## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
+## <a name="adjacent_difference-stlclr"></a><a name="adjacent_difference"></a>adjacent_difference (STL/CLR)
 
 Oblicza kolejne różnice między każdym elementem i jego poprzednikiem w zakresie wejściowym i generuje wyjściowe wyniki do zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja różnicy zostaje zastąpiona przez inną, określoną operację binarną.
 
@@ -85,11 +85,11 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa w taki sam, jak funkcja liczbowa standardowej biblioteki języka C++ `adjacent_difference`. Aby uzyskać więcej informacji, zobacz [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).
+Ta funkcja zachowuje się tak samo jak w C++ przypadku standardowej funkcji numerycznej `adjacent_difference`. Aby uzyskać więcej informacji, zobacz [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).
 
-## <a name="inner_product"></a> inner_product — (STL/CLR)
+## <a name="inner_product-stlclr"></a><a name="inner_product"></a>inner_product (STL/CLR)
 
-Oblicza sumę mnożenia elementów z dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sumowania i danych binarnych są zastępowane przez inne określone operacje binarne.
+Oblicza sumę iloczynów elementów z dwóch zakresów i dodaje ją do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sum i danych binarnych produktu są zastępowane przez inne określone operacje binarne.
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,11 +105,11 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa w taki sam, jak funkcja liczbowa standardowej biblioteki języka C++ `inner_product`. Aby uzyskać więcej informacji, zobacz [inner_product —](../standard-library/numeric-functions.md#inner_product).
+Ta funkcja zachowuje się tak samo jak w C++ przypadku standardowej funkcji numerycznej `inner_product`. Aby uzyskać więcej informacji, zobacz [inner_product](../standard-library/numeric-functions.md#inner_product).
 
-## <a name="partial_sum"></a> partial_sum — (STL/CLR)
+## <a name="partial_sum-stlclr"></a><a name="partial_sum"></a>partial_sum (STL/CLR)
 
-Oblicza serię sum zakresu wejściowego od pierwszego elementu przez `i`Ty element i zapisuje wynik każdej takiej sumy w `i`-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie suma operacji zastępuje inną określoną operację binarną.
+Oblicza serię sum w zakresie wejściowym od pierwszego elementu za pośrednictwem `i`ego elementu i zapisuje wynik każdej takiej sumy w `i`tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja sum jest zastępowana przez inną określoną operację binarną.
 
 ### <a name="syntax"></a>Składnia
 
@@ -123,4 +123,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja działa w taki sam, jak funkcja liczbowa standardowej biblioteki języka C++ `partial_sum`. Aby uzyskać więcej informacji, zobacz [partial_sum —](../standard-library/numeric-functions.md#partial_sum).
+Ta funkcja zachowuje się tak samo jak w C++ przypadku standardowej funkcji numerycznej `partial_sum`. Aby uzyskać więcej informacji, zobacz [partial_sum](../standard-library/numeric-functions.md#partial_sum).

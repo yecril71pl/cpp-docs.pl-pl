@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299741"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197460"
 ---
 # <a name="bscmake-warning-bk4502"></a>Ostrzeżenie BSCMAKE BK4502
 
-obcięte. Plik SBR "filename", nie w nazwie pliku
+Cięcie. Plik SBR "filename" nie znajduje się w pliku
 
-Plik SBR o zerowej długości, który nie był pierwotnie części pliku .bsc została określona podczas aktualizacji.
+Plik o zerowej długości. sbr, który nie był pierwotnie częścią pliku BSC, został określony podczas aktualizacji.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Określono nieprawidłowe nazwy pliku.
+1. Określono nieprawidłową nazwę pliku.
 
-1. Plik został usunięty. (Błąd [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) wyników.)
+1. Plik został usunięty. (Błąd [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) wyników).
 
-1. Plik uszkodzony, wymagających BSCMAKE celu pełnej kompilacji.
+1. Plik jest uszkodzony, wymagając BSCMAKE do wykonania pełnej kompilacji.

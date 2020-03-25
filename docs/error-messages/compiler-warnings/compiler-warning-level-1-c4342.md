@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4342
+title: Ostrzeżenie kompilatora (poziom 1) C4342
 ms.date: 11/04/2016
 f1_keywords:
 - C4342
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 439c4976f25688fd9220c3f58ceb933266b5f15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187512"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162923"
 ---
-# <a name="compiler-warning-level-1-c4342"></a>Kompilator ostrzeżenie (poziom 1) C4342
+# <a name="compiler-warning-level-1-c4342"></a>Ostrzeżenie kompilatora (poziom 1) C4342
 
-Zmiana zachowania: "*funkcja*" o nazwie, ale operator składowej został wywołany w poprzednich wersjach
+zmiana zachowania: wywołano*funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach
 
-W wersjach programu Visual C++ przed Visual Studio 2002, element członkowski został wywołany, ale to zachowanie została zmieniona i kompilator znajdzie teraz najlepsze dopasowanie w zakresie przestrzeni nazw.
+W wersjach wizualizacji C++ przed visual Studio 2002, element członkowski został wywołany, ale to zachowanie zostało zmienione i kompilator znalazł teraz najlepsze dopasowanie w zakresie przestrzeni nazw.
 
-Jeśli operator składowej został znaleziony, kompilator będzie wcześniej nie należy wziąć pod uwagę dowolnego obszaru nazw operatorów zakresu. W przypadku będący lepszym dopasowaniem w zakresie przestrzeni nazw, bieżącego kompilator poprawnie wywołuje, natomiast poprzedniego kompilatory nie należy wziąć pod uwagę jej.
+Jeśli zostanie znaleziony operator elementu członkowskiego, kompilator nie uwzględni wcześniej operatorów zakresu przestrzeni nazw. W przypadku lepszego dopasowania w zakresie przestrzeni nazw, bieżący kompilator prawidłowo wywołuje go, podczas gdy poprzedni kompilator nie uważa go.
 
-To ostrzeżenie powinna być wyłączona po przeniesiesz kod do bieżącej wersji.  Kompilator może stanowić fałszywych alarmów, generuje to ostrzeżenie dla kodu w przypadku, gdy nastąpiła żadna zmiana zachowania.
+To ostrzeżenie powinno być wyłączone po pomyślnym przejściu kodu do bieżącej wersji.  Kompilator może dać fałszywe pozytywne wartości, generując to ostrzeżenie dla kodu, w którym nie ma żadnych zmian w zachowaniu.
 
-To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Poniższy przykład spowoduje wygenerowanie C4342:
+Poniższy przykład generuje C4342:
 
 ```cpp
 // C4342.cpp

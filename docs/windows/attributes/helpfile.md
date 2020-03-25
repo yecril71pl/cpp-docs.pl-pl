@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166981"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -44,12 +44,12 @@ Zobacz przykład dla [modułu](module-cpp.md) , aby zapoznać się z przykładem
 |-|-|
 |**Dotyczy**|**interfejs**, **typedef**, **Klasa**, metoda, **Właściwość**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

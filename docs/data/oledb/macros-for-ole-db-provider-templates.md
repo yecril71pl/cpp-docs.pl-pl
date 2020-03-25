@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: b11455c1de13321bce52fbc3be906014b2844aee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210148"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 
@@ -101,7 +101,7 @@ Makra dostawcy szablonów OLE DB oferują funkcje w następujących kategoriach:
 
 **Nagłówek:** ATLDB. h
 
-### <a name="begin_property_set"></a>BEGIN_PROPERTY_SET
+### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
 
 Oznacza początek zestawu właściwości w mapie zestawu właściwości.
 
@@ -120,7 +120,7 @@ podczas Identyfikator GUID właściwości.
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
+### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
 
 Oznacza początek zestawu właściwości w mapie zestawu właściwości.
 
@@ -142,7 +142,7 @@ podczas UPROPSET_HIDDEN dla dowolnych zestawów właściwości, których nie chc
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
+### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
 
 Oznacza początek wpisów mapy zestawu właściwości.
 
@@ -169,7 +169,7 @@ Oto przykładowa Mapa zestawu właściwości:
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
-### <a name="chain_property_set"></a>CHAIN_PROPERTY_SET
+### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
 
 To makro umożliwia łączenie grup właściwości.
 
@@ -191,7 +191,7 @@ Można utworzyć łańcuch zestawu właściwości z innej klasy do własnej klas
 > [!CAUTION]
 >  Używaj tego makra oszczędnie. Niewłaściwe użycie może spowodować niepowodzenie przez konsumenta testów zgodności OLE DB.
 
-### <a name="end_property_set"></a>END_PROPERTY_SET
+### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
 
 Oznacza koniec zestawu właściwości.
 
@@ -210,7 +210,7 @@ podczas Identyfikator GUID właściwości.
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="end_propset_map"></a>END_PROPSET_MAP
+### <a name="end_propset_map"></a><a name="end_propset_map"></a>END_PROPSET_MAP
 
 Oznacza koniec wpisów mapy zestawu właściwości.
 
@@ -224,7 +224,7 @@ END_PROPSET_MAP()
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
+### <a name="property_info_entry"></a><a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
 
 Reprezentuje określoną właściwość w zestawie właściwości.
 
@@ -247,7 +247,7 @@ To makro ustawia wartość właściwości typu `DWORD` na wartość domyślną z
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
+### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
 
 Reprezentuje określoną właściwość w zestawie właściwości.
 
@@ -282,7 +282,7 @@ Za pomocą tego makra można bezpośrednio określić wartość właściwości t
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
+### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
 
 Reprezentuje określoną właściwość w zestawie właściwości.
 
@@ -308,7 +308,7 @@ Za pomocą tego makra można bezpośrednio określić wartość właściwości t
 
 Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
+### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
 
 Oznacza początek wpisów mapowania kolumn dostawcy.
 
@@ -329,7 +329,7 @@ Oto przykładowa Mapa kolumn dostawcy:
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
-### <a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
+### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
 
 Oznacza koniec wpisów mapowania kolumn dostawcy.
 
@@ -343,7 +343,7 @@ END_PROVIDER_COLUMN_MAP()
 
 Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
+### <a name="provider_column_entry"></a><a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -364,7 +364,7 @@ podczas Numer kolumny. Jeśli kolumna nie jest kolumną zakładki, numer kolumny
 *członkiem*<br/>
 podczas Zmienna członkowska w `dataClass` odpowiadająca kolumnie.
 
-### <a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -396,7 +396,7 @@ Pozwala określić typ danych kolumny.
 
 Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
+### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -436,7 +436,7 @@ Identyfikator GUID zestawu wierszy schematu. Aby uzyskać listę zestawów wiers
 
 Pozwala określić rozmiar kolumny, typ danych, dokładność, skalę i identyfikator GUID zestawu wierszy schematu.
 
-### <a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -468,7 +468,7 @@ Pozwala określić rozmiar kolumny.
 
 Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
+### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -497,7 +497,7 @@ Użyj tego makra, gdy przyjmuje się, że dane kolumny mają być [DBTYPE_STR](/
 
 Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -528,7 +528,7 @@ podczas Zmienna członkowska w klasie danych, która przechowuje dane.
 
 Podobnie jak w przypadku [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , ale pozwala także określić typ danych kolumny i rozmiar.
 
-### <a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 
 Reprezentuje konkretną kolumnę obsługiwaną przez dostawcę.
 
@@ -553,7 +553,7 @@ podczas Zmienna członkowska w klasie danych, która przechowuje dane.
 
 To makro jest używane, gdy dane kolumny są zakończono wartością null ciągu znaków Unicode, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-### <a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
+### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
 
 Wskazuje początek mapy schematu.
 
@@ -572,7 +572,7 @@ Klasa, która zawiera mapę. Zwykle jest to Klasa sesji.
 
 Aby uzyskać więcej informacji na temat zestawów wierszy schematu, zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) w Windows SDK.
 
-### <a name="end_schema_map"></a>END_SCHEMA_MAP
+### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
 
 Wskazuje koniec mapy schematu.
 
@@ -586,7 +586,7 @@ END_SCHEMA_MAP()
 
 Aby uzyskać więcej informacji, zobacz [Klasa IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
-### <a name="schema_entry"></a>SCHEMA_ENTRY
+### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
 
 Kojarzy identyfikator GUID z klasą.
 

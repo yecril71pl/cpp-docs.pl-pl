@@ -7,24 +7,24 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211007"
 ---
 # <a name="defining-stored-procedures"></a>Definiowanie procedur składowanych
 
-Przed wywołaniem procedury składowanej, należy najpierw zdefiniować, za pomocą [DEFINE_COMMAND](../../data/oledb/define-command.md) makra. Podczas definiowania polecenia oznaczenia parametry znakiem zapytania (?) jako znacznik parametru:
+Przed wywołaniem procedury składowanej należy najpierw ją zdefiniować przy użyciu makra [DEFINE_COMMAND](../../data/oledb/define-command.md) . Podczas definiowania polecenia należy zauważyć, że parametry ze znakiem zapytania (?) jako znacznik parametru:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
 ```
 
-Składnia (Użyj nawiasów klamrowych i tak dalej), przykłady kodu, w tym temacie jest specyficzne dla programu SQL Server. Składnia używanego w przechowywanych procedur może się różnić zależnie od dostawcy, których używasz.
+Składnia (użycie nawiasów klamrowych itd.) użyta w przykładach kodu w tym temacie jest specyficzna dla SQL Server. Składnia, która jest używana w procedurach składowanych, może się różnić w zależności od używanego dostawcy.
 
-Następnie w mapie parametr należy określić parametry, używane w poleceniu listą parametrów w kolejności występowania w poleceniu:
+Następnie w polu Mapa parametru Określ parametry, które zostały użyte w poleceniu, aby wyświetlić listę parametrów w kolejności, w jakiej występują w poleceniu:
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -35,20 +35,20 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-Poprzedni przykład definiuje procedury składowanej, ponieważ przechodzi ona. Zazwyczaj do efektywnego ponownego użycia kodu, baza danych zawiera zestaw wstępnie zdefiniowanych procedur składowanych z nazwami takich jak `Sales by Year` lub `dt_adduserobject`. Można wyświetlić ich definicji przy użyciu programu SQL Server Enterprise Manager. Wywoływania ich w następujący sposób (umieszczanie *?* Parametry są zależne od interfejsu procedura składowana):
+W poprzednim przykładzie zdefiniowano procedurę przechowywaną. Zwykle w celu wydajnego ponownego użycia kodu baza danych zawiera zestaw wstępnie zdefiniowanych procedur przechowywanych z nazwami, takimi jak `Sales by Year` lub `dt_adduserobject`. Definicje można wyświetlić za pomocą Menedżera SQL Server Enterprise. Są one wywoływane w następujący sposób (rozmieszczenie *?* parametry są zależne od interfejsu procedury składowanej:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }"))
 ```
 
-Następnie można zadeklarować klasy poleceń:
+Następnie zadeklaruj klasę poleceń:
 
 ```cpp
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-Na koniec wywołaj procedurę składowaną `OpenRowset` w następujący sposób:
+Na koniec Wywołaj procedurę składowaną w `OpenRowset` w następujący sposób:
 
 ```cpp
 CSession m_session;
@@ -59,12 +59,12 @@ HRESULT OpenRowset()
 }
 ```
 
-Należy również zauważyć, który można zdefiniować procedurę składowaną, za pomocą atrybutów bazy danych [db_command —](../../windows/db-command.md) w następujący sposób:
+Należy również pamiętać, że można zdefiniować procedurę przechowywaną przy użyciu atrybutu bazy danych [db_command](../../windows/db-command.md) w następujący sposób:
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)

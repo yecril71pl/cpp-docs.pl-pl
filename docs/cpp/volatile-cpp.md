@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187430"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -54,7 +54,7 @@ Jeśli C# znasz słowo kluczowe volatile lub znasz zachowanie **nietrwałe** we 
 
 ## <a name="end-of-iso-compliant"></a>Koniec zgodności z ISO
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Gdy używana jest opcja " **/volatile: MS** Compiler" — domyślnie, gdy architektury inne niż ARM są celem — kompilator generuje dodatkowy kod, aby zachować porządkowanie między odwołaniami do obiektów nietrwałych, a także do zarządzania kolejnością odwołań do innych obiektów globalnych. W szczególności:
 
@@ -69,7 +69,7 @@ Pozwala to na używanie obiektów lotnych do blokowania pamięci i wydań w apli
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>

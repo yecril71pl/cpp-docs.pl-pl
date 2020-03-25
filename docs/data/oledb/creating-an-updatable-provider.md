@@ -6,81 +6,81 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2811cd56bdc87282b9d4395a9a79ba9b333dadee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211396"
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 
-Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zaktualizować (zapisu) do magazynu danych. W tym temacie omówiono sposób tworzenia aktualizowalni dostawcy za pomocą szablonów OLE DB.
+Wizualizacja C++ obsługuje aktualizowalnych dostawców lub dostawców, którzy mogą aktualizować (zapisywać do) magazyn danych. W tym temacie omówiono sposób tworzenia aktualizowalnych dostawców przy użyciu szablonów OLE DB.
 
-W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego. Istnieją dwa kroki, aby tworzenie aktualizowalnego dostawcy. Należy najpierw zdecyduj, jak dostawca wprowadzi zmiany w przechowalni danych; ściślej mówiąc czy zmiany mają być wykonywane od razu lub odroczone do czasu wydano polecenie aktualizacji. Sekcja "[tworzenie aktualizowalnego dostawcy](#vchowmakingprovidersupdatable)" opisano zmiany i ustawienia, które należy wykonać w kodzie dostawcy.
+W tym temacie założono, że rozpoczynasz pracę od dostawcy. Istnieją dwa kroki umożliwiające utworzenie aktualizowalnego dostawcy. Najpierw należy zdecydować, w jaki sposób dostawca wprowadzi zmiany do magazynu danych; w odróżnieniu od tego, czy zmiany mają zostać wykonane natychmiast, czy odroczone do momentu wystawienia polecenia aktualizacji. Sekcja "[Tworzenie dostawców aktualizowalnych](#vchowmakingprovidersupdatable)" zawiera opis zmian i ustawień, które należy wykonać w kodzie dostawcy.
 
-Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.
+Następnie musisz upewnić się, że dostawca zawiera wszystkie funkcje do obsługi wszystkich elementów, których może żądać klient. Jeśli odbiorca chce zaktualizować magazyn danych, dostawca musi zawierać kod, który utrzymuje dane w magazynie danych. Na przykład można użyć biblioteki wykonawczej C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[Zapisywanie do źródła danych](#vchowwritingtothedatasource)" zawiera opis sposobu zapisywania do źródła danych, działania z wartościami domyślnymi oraz ustawiania flag kolumn.
 
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama jak MyProv, ale z aktualizowalną obsługą.
 
-##  <a name="vchowmakingprovidersupdatable"></a> Tworzenie aktualizowalnego dostawcy
+##  <a name="making-providers-updatable"></a><a name="vchowmakingprovidersupdatable"></a>Tworzenie aktualizowalnych dostawców
 
-Klucz w tworzenie aktualizowalnego dostawcy jest zrozumienie, jakie operacje ma dostawcy do wykonania w magazynie danych oraz sposób dostawcy w celu przeprowadzania tych operacji. W szczególności poważnym problemem jest, czy aktualizacje do magazynu danych mają być wykonywane od razu lub odroczone (wsadowe) do momentu wydano polecenie aktualizacji.
+Klucz służący do aktualizowania dostawcy zawiera informacje o operacjach, które mają być wykonywane przez dostawcę w magazynie danych, oraz o tym, w jaki sposób dostawca ma wykonywać te operacje. Istotny problem polega na tym, czy aktualizacje magazynu danych mają zostać wykonane natychmiastowo, czy odroczone (wsadowe) do momentu wygenerowania polecenia aktualizacji.
 
-Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w swojej klasy zestawu wierszy. W zależności od tego, który z nich wybierzesz do zaimplementowania, będzie mieć wpływ na funkcjonalność z trzech metod: `SetData`, `InsertRows`, i `DeleteRows`.
+Najpierw należy zdecydować, czy należy dziedziczyć z `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w klasie zestawu wierszy. W zależności od tego, który z nich zostanie wdrożony, wpłynie to na funkcjonalność trzech metod: `SetData`, `InsertRows`i `DeleteRows`.
 
-- Jeśli dziedziczą z [irowsetchangeimpl —](../../data/oledb/irowsetchangeimpl-class.md), wywoływanie tych trzech metod natychmiast zmienia się z magazynem danych.
+- W przypadku dziedziczenia z [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), wywołanie tych trzech metod natychmiast zmienia magazyn danych.
 
-- Jeśli dziedziczą z [irowsetupdateimpl —](../../data/oledb/irowsetupdateimpl-class.md), metody Odrocz zmiany w magazynie danych, dopóki nie zostanie wywołana `Update`, `GetOriginalData`, lub `Undo`. Jeśli aktualizacja obejmuje kilka zmian, są wykonywane w trybie wsadowym (Zauważ, że przetwarzanie wsadowe zmiany można dodać pamięć znaczne obciążenie).
+- W przypadku dziedziczenia z [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)metody Odłóż zmiany do magazynu danych do momentu wywołania `Update`, `GetOriginalData`lub `Undo`. Jeśli aktualizacja obejmuje kilka zmian, są one wykonywane w trybie wsadowym (należy zauważyć, że zmiany wsadowe mogą zwiększyć znaczne obciążenie pamięci).
 
-Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.
+Należy zauważyć, że `IRowsetUpdateImpl` pochodzą z `IRowsetChangeImpl`. W ten sposób `IRowsetUpdateImpl` zapewnia zmianę możliwości oraz możliwość wykonywania zadań wsadowych.
 
-### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy
+### <a name="to-support-updatability-in-your-provider"></a>Aby obsłużyć możliwość aktualizacji w dostawcy
 
-1. W klasie wierszy dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl`. Te klasy oferują interfejsy odpowiednie zmiany do magazynu danych:
+1. W klasie zestawu wierszy Dziedzicz po `IRowsetChangeImpl` lub `IRowsetUpdateImpl`. Te klasy zapewniają odpowiednie interfejsy umożliwiające zmianę magazynu danych:
 
-   **Adding IRowsetChange**
+   **Dodawanie IRowsetChange**
 
-   Dodaj `IRowsetChangeImpl` na swój łańcuch dziedziczenia, za pomocą tego formularza:
+   Dodaj `IRowsetChangeImpl` do łańcucha dziedziczenia przy użyciu tego formularza:
 
     ```cpp
     IRowsetChangeImpl< rowset-name, storage-name >
     ```
 
-   Również dodać `COM_INTERFACE_ENTRY(IRowsetChange)` do `BEGIN_COM_MAP` sekcji klasy zestawu wierszy.
+   Dodaj również `COM_INTERFACE_ENTRY(IRowsetChange)` do sekcji `BEGIN_COM_MAP` w klasie zestawu wierszy.
 
    **Dodawanie IRowsetUpdate**
 
-   Dodaj `IRowsetUpdate` na swój łańcuch dziedziczenia, za pomocą tego formularza:
+   Dodaj `IRowsetUpdate` do łańcucha dziedziczenia przy użyciu tego formularza:
 
     ```cpp
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
    > [!NOTE]
-   > Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.
+   > Należy usunąć wiersz `IRowsetChangeImpl` z łańcucha dziedziczenia. Ten jeden wyjątek do dyrektywy wymienionej wcześniej musi zawierać kod dla `IRowsetChangeImpl`.
 
-1. Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):
+1. Dodaj następujący obiekt do mapy modelu COM (`BEGIN_COM_MAP ... END_COM_MAP`):
 
-   |  W przypadku zastosowania   |           Dodaj do mapy COM             |
+   |  W przypadku zaimplementowania   |           Dodaj do mapy COM             |
    |---------------------|--------------------------------------|
    | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
    | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
 
-   | W przypadku zastosowania | Dodaj do mapy zestaw właściwości |
+   | W przypadku zaimplementowania | Dodaj do mapy zestawu właściwości |
    |----------------------|-----------------------------|
    | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. W poleceniu, Dodaj następujący element do mapy zestaw właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
+1. W poleceniu Dodaj następujące elementy do mapy zestawu właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
 
-   |  W przypadku zastosowania   |                                             Dodaj do mapy zestaw właściwości                                              |
+   |  W przypadku zaimplementowania   |                                             Dodaj do mapy zestawu właściwości                                              |
    |---------------------|------------------------------------------------------------------------------------------------------------------|
    | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. Na mapie zestaw właściwości należy także uwzględnić wszystkie z następujących ustawień, w jakiej występują poniżej:
+1. Na mapie zestawu właściwości należy również uwzględnić wszystkie poniższe ustawienia, które znajdują się poniżej:
 
     ```cpp
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
@@ -100,95 +100,95 @@ Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)
     ```
 
-   Można znaleźć wartości użyte w tych wywołań makra, wyszukując w Atldb.h identyfikatory właściwości i wartości (jeśli Atldb.h różni się od dokumentacji online, Atldb.h zastępuje dokumentacji).
+   Wartości używane w tych wywołaniach makr można znaleźć, wyszukując w ATLDB. h identyfikatory właściwości i wartości (jeśli ATLDB. h różni się od dokumentacji online, ATLDB. h zastępuje dokumentację).
 
    > [!NOTE]
-   > Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawienia są wymagane przez Szablony OLE DB; specyfikacji OLE DB mówi ich odczytu/zapisu, ale szablony OLE DB może obsługiwać tylko jedną wartość.
+   > Wiele `VARIANT_FALSE` i `VARIANT_TRUE` ustawień jest wymaganych przez szablony OLE DB; Specyfikacja OLE DB mówi, że mogą być odczytywane i zapisywane, ale szablony OLE DB mogą obsługiwać tylko jedną wartość.
 
-   **W przypadku zaimplementowania irowsetchangeimpl —**
+   **W przypadku zaimplementowania IRowsetChangeImpl**
 
-   W przypadku zaimplementowania `IRowsetChangeImpl`, należy ustawić następujące właściwości w dostawcy usługi. Te właściwości są używane głównie do żądania interfejsów za pośrednictwem `ICommandProperties::SetProperties`.
+   W przypadku zaimplementowania `IRowsetChangeImpl`należy ustawić dla dostawcy następujące właściwości. Te właściwości są używane przede wszystkim do żądania interfejsów za `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Ustawienie to automatycznie ustawia `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: ustawienie automatycznie ustawia `DBPROP_IRowsetChange`.
 
-   - `DBPROP_UPDATABILITY`: Maska bitowa określenie obsługiwanych metod na `IRowsetChange`: `SetData`, `DeleteRows`, lub `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Maska bitów określająca obsługiwane metody w `IRowsetChange`: `SetData`, `DeleteRows`lub `InsertRow`.
 
-   - `DBPROP_CHANGEINSERTEDROWS`: Konsument może wywołać `IRowsetChange::DeleteRows` lub `SetData` dla nowo wstawione wiersze.
+   - `DBPROP_CHANGEINSERTEDROWS`: konsument może wywołać `IRowsetChange::DeleteRows` lub `SetData` dla nowo wstawionych wierszy.
 
-   - `DBPROP_IMMOBILEROWS`: Zestaw wierszy nie mogli zmienić kolejności wstawionych lub zaktualizowanych wierszy.
+   - `DBPROP_IMMOBILEROWS`: zestaw wierszy nie zmieni kolejności wstawionych lub zaktualizowanych wierszy.
 
-   **W przypadku zaimplementowania irowsetupdateimpl —**
+   **W przypadku zaimplementowania IRowsetUpdateImpl**
 
-   W przypadku zaimplementowania `IRowsetUpdateImpl`, należy ustawić następujące właściwości w dostawcy usługi dodatkowo z ustawieniem dla wszystkich właściwości `IRowsetChangeImpl` wymienionych powyżej:
+   W przypadku zaimplementowania `IRowsetUpdateImpl`należy ustawić następujące właściwości dostawcy, oprócz ustawienia wszystkich właściwości dla `IRowsetChangeImpl` wymienionych wcześniej:
 
    - `DBPROP_IRowsetUpdate`.
 
-   - `DBPROP_OWNINSERT`: Musi być READ_ONLY i VARIANT_TRUE.
+   - `DBPROP_OWNINSERT`: musi być READ_ONLY i VARIANT_TRUE.
 
-   - `DBPROP_OWNUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.
+   - `DBPROP_OWNUPDATEDELETE`: musi być READ_ONLY i VARIANT_TRUE.
 
-   - `DBPROP_OTHERINSERT`: Musi być READ_ONLY i VARIANT_TRUE.
+   - `DBPROP_OTHERINSERT`: musi być READ_ONLY i VARIANT_TRUE.
 
-   - `DBPROP_OTHERUPDATEDELETE`: Musi być READ_ONLY i VARIANT_TRUE.
+   - `DBPROP_OTHERUPDATEDELETE`: musi być READ_ONLY i VARIANT_TRUE.
 
-   - `DBPROP_REMOVEDELETED`: Musi być READ_ONLY i VARIANT_TRUE.
+   - `DBPROP_REMOVEDELETED`: musi być READ_ONLY i VARIANT_TRUE.
 
    - `DBPROP_MAXPENDINGROWS`.
 
    > [!NOTE]
-   > Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.
+   > Jeśli obsługujesz powiadomienia, możesz również mieć inne właściwości. Zapoznaj się z sekcją `IRowsetNotifyCP` na tej liście.
 
-##  <a name="vchowwritingtothedatasource"></a> Zapisywanie do źródła danych
+##  <a name="writing-to-the-data-source"></a><a name="vchowwritingtothedatasource"></a>Zapisywanie w źródle danych
 
-Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).
+Aby odczytać ze źródła danych, wywołaj funkcję `Execute`. Aby zapisać w źródle danych, wywołaj funkcję `FlushData`. (W ogólnym sensie opróżnianie oznacza zapisanie wprowadzonych zmian w tabeli lub indeksie na dysku).
 
 ```cpp
 FlushData(HROW, HACCESSOR);
 ```
 
-Dojście do wiersza (HROW) i argumenty uchwytu (HACCESSOR) dostępu umożliwiają określenie obszaru do zapisu. Zazwyczaj można napisać jedno pole danych w danym momencie.
+Argumenty uchwytów wiersza (HROW) i dojście metody dostępu (HACCESSOR) umożliwiają określenie regionu do zapisu. Zwykle można napisać pojedyncze pole danych jednocześnie.
 
-`FlushData` Metoda zapisuje dane w formacie, w której została oryginalnie zapisane. Jeśli nie zastąpisz tej funkcji, Twój dostawca będzie działać prawidłowo, ale zmiany nie zostaną opróżnione do magazynu danych.
+Metoda `FlushData` zapisuje dane w formacie, w którym były pierwotnie przechowywane. Jeśli ta funkcja nie zostanie zastąpiona, dostawca będzie działać prawidłowo, ale zmiany nie zostaną opróżnione do magazynu danych.
 
-### <a name="when-to-flush"></a>Kiedy opróżniania
+### <a name="when-to-flush"></a>Kiedy należy opróżniać
 
-Szablony dostawców wywołać flushdata — zawsze wtedy, gdy dane muszą być zapisywane do magazynu danych; to zwykle (ale nie zawsze) występuje w wyniku wywołania do następujących funkcji:
+Szablony dostawcy wywołują FlushData za każdym razem, gdy dane muszą zostać zapisane w magazynie danych. zwykle (ale nie zawsze) występuje w wyniku wywołań następujących funkcji:
 
 - `IRowsetChange::DeleteRows`
 
 - `IRowsetChange::SetData`
 
-- `IRowsetChange::InsertRows` (jeśli ma nowych danych do wstawienia w wierszu)
+- `IRowsetChange::InsertRows` (jeśli pojawiły się nowe dane do wstawienia w wierszu)
 
 - `IRowsetUpdate::Update`
 
 ### <a name="how-it-works"></a>Jak to działa
 
-Użytkownik wywołuje wymagającego opróżniania (na przykład aktualizacja), a to wywołanie jest przekazywane do dostawcy, który zawsze wykonuje następujące czynności:
+Konsument wykonuje wywołanie, które wymaga opróżniania (na przykład aktualizacji), a to wywołanie jest przesyłane do dostawcy, który zawsze wykonuje następujące czynności:
 
-- Wywołania `SetDBStatus` zawsze, gdy ma wartość stanu granicy.
+- Wywołania `SetDBStatus` zawsze, gdy masz powiązana wartość stanu.
 
-- Sprawdza, czy kolumna flagi.
+- Sprawdza flagi kolumn.
 
 - Wywołania `IsUpdateAllowed`.
 
-Te trzy kroki pomagają zapewnić bezpieczeństwo. Następnie wywołuje dostawcę `FlushData`.
+Te trzy kroki pomagają zapewnić bezpieczeństwo. Następnie dostawca wywołuje `FlushData`.
 
-### <a name="how-to-implement-flushdata"></a>Jak zaimplementować flushdata —
+### <a name="how-to-implement-flushdata"></a>Jak zaimplementować FlushData
 
-Aby zaimplementować `FlushData`, należy wziąć pod uwagę kilka kwestii:
+Aby zaimplementować `FlushData`, należy wziąć pod uwagę kilka problemów:
 
-Upewnienie się, że magazyn danych może obsługiwać zmiany.
+Upewnij się, że magazyn danych może obsłużyć zmiany.
 
 Obsługa wartości NULL.
 
-### <a name="handling-default-values"></a>Obsługa wartości domyślne.
+### <a name="handling-default-values"></a>Obsługa wartości domyślnych.
 
-Aby zaimplementować własną `FlushData` metody, należy:
+Aby zaimplementować własną metodę `FlushData`, musisz:
 
-- Przejdź do swojej klasy zestawu wierszy.
+- Przejdź do klasy zestawu wierszy.
 
-- W zestawie wierszy klasy umieść deklaracji:
+- W klasie zestawu wierszy należy umieścić deklarację:
 
    ```cpp
    HRESULT FlushData(HROW, HACCESSOR)
@@ -197,21 +197,21 @@ Aby zaimplementować własną `FlushData` metody, należy:
    }
    ```
 
-- Udostępnia implementację `FlushData`.
+- Podaj implementację `FlushData`.
 
-Dobre implementacji `FlushData` przechowuje tylko wiersze i kolumny, które rzeczywiście zostały zaktualizowane. Parametry HROW i HACCESSOR służy do określenia bieżącego wiersza i kolumny są przechowywane na potrzeby optymalizacji.
+Dobrą implementacją `FlushData` są przechowywane tylko wiersze i kolumny, które zostały faktycznie zaktualizowane. Możesz użyć parametrów HROW i HACCESSOR, aby określić bieżący wiersz i kolumnę przechowywane do optymalizacji.
 
-Zazwyczaj największe wyzwanie współpracuje z własny magazyn danych w trybie macierzystym. Jeśli to możliwe spróbuj:
+Zazwyczaj największe wyzwanie działa z własnym natywnym magazynem danych. Jeśli to możliwe, spróbuj wykonać następujące polecenie:
 
-- Zachowaj metody zapisu ze swoim magazynem danych jest tak proste, jak to możliwe.
+- Zachowaj metodę zapisu w magazynie danych, jak to możliwe.
 
-- Obsługa wartości NULL (opcjonalne, ale zalecany).
+- Obsługuj wartości NULL (opcjonalne, ale zalecane).
 
-- Obsługa wartości domyślne (opcjonalne, ale zalecany).
+- Obsługuj wartości domyślne (opcjonalne, ale zalecane).
 
-Najlepiej, aby zrobić jest rzeczywiste wartości określonej w magazynie danych o wartości NULL i domyślne wartości. Najlepiej umożliwiają ekstrapolację tych danych. Jeśli nie, zalecana jest nie akceptuje wartości NULL i domyślne.
+Najlepszym zadaniem do wykonania jest posiadanie wartości NULL i domyślnych wartości w magazynie danych. Jest to najlepsze rozwiązanie, jeśli można ekstrapolację tych danych. Jeśli nie, zaleca się, aby nie zezwalać na wartości NULL i domyślne.
 
-W poniższym przykładzie przedstawiono sposób `FlushData` jest zaimplementowana w `RUpdateRowset` klasy w `UpdatePV` próbki (patrz Rowset.h w przykładowym kodzie):
+Poniższy przykład pokazuje, jak `FlushData` jest zaimplementowany w klasie `RUpdateRowset` w przykładowym `UpdatePV` (zobacz Rowset. h w przykładowym kodzie):
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -293,27 +293,27 @@ HRESULT FlushData(HROW, HACCESSOR)
 }
 ```
 
-### <a name="handling-changes"></a>Obsługa zmiany
+### <a name="handling-changes"></a>Obsługa zmian
 
-W przypadku dostawcy do obsługi zmian, należy najpierw upewnij się, że magazyn danych (np. plik tekstowy lub plik wideo) oferuje pozwalające na wprowadzanie zmian w niej. Jeśli nie, należy utworzyć kod oddzielnie z projektu dostawcy.
+Aby Twój dostawca obsługiwał zmiany, najpierw musisz upewnić się, że magazyn danych (na przykład plik tekstowy lub plik wideo) zawiera funkcje, które umożliwiają wprowadzanie zmian na tym komputerze. Jeśli tak nie jest, należy utworzyć ten kod niezależnie od projektu dostawcy.
 
 ### <a name="handling-null-data"></a>Obsługa danych o wartości NULL
 
-Istnieje możliwość, że użytkownik końcowy będzie wysyłać dane o wartości NULL. Kiedy piszesz wartości NULL do pól w źródle danych, może być potencjalne problemy. Wyobraź sobie sporządzania zamówienia aplikację, która akceptuje wartości miasta i kodu pocztowego; można go zaakceptować jednego lub obu tych wartości, ale nie ani, ponieważ w takim przypadku dostarczania byłyby niemożliwe. W związku z tym musisz ograniczyć niektóre kombinacje wartości NULL w polach, które mają sens dla swojej aplikacji.
+Istnieje możliwość, że użytkownik końcowy wyśle dane o wartości NULL. Gdy zapisujesz wartości NULL do pól w źródle danych, mogą występować potencjalne problemy. Wyobraź sobie, że aplikacja do tworzenia zamówień akceptuje wartości dla miasta i kodu pocztowego; może akceptować jedną lub obie wartości, ale nie nie, ponieważ w takim przypadku dostarczenie może być niemożliwe. W związku z tym należy ograniczyć niektóre kombinacje wartości NULL w polach, które mają sens dla aplikacji.
 
-Jako deweloper dostawcy należy wziąć pod uwagę, jak będą przechowywane te dane, jak odczyta dane z magazynu danych i jak można określić, że do użytkownika. W szczególności należy rozważyć sposób zmiany stanu danych wierszy danych w źródle danych (na przykład DataStatus = NULL). Możesz zdecydować, jaka wartość do zwrócenia, gdy użytkownik uzyskuje dostęp do pola zawierającego wartość NULL.
+Jako deweloper dostawcy musisz wziąć pod uwagę, jak będą przechowywane te dane, w jaki sposób odczytywać te dane z magazynu danych i jak określać użytkownika. W tym celu należy rozważyć zmianę stanu danych zestawu wierszy w źródle danych (na przykład DataStatus = NULL). Użytkownik wybiera wartość zwracaną, gdy konsument uzyskuje dostęp do pola zawierającego wartość NULL.
 
-Spójrz na kod w przykładzie UpdatePV; przykład ilustruje jak dostawca może obsłużyć danych o wartości NULL. W UpdatePV dostawca przechowuje dane o wartości NULL, pisząc ciąg "NULL" w magazynie danych. Podczas wczytywania danych o wartości NULL z magazynu danych, będzie widział te parametry, a następnie opróżnia bufor, tworząc pusty ciąg. Ma on także nadpisanie `IRowsetImpl::GetDBStatus` w której ta zwraca DBSTATUS_S_ISNULL, jeśli ta wartość danych jest pusta.
+Przyjrzyj się kodowi z przykładu UpdatePV; ilustruje sposób, w jaki dostawca może obsłużyć dane o wartości NULL. W UpdatePV Dostawca przechowuje dane o wartości NULL, pisząc ciąg "NULL" w magazynie danych. Gdy odczytuje dane o wartości NULL z magazynu danych, zobaczy ten ciąg, a następnie opróżnia bufor, tworząc ciąg o wartości NULL. Ma również przesłonięcie `IRowsetImpl::GetDBStatus`, w którym zwraca DBSTATUS_S_ISNULL, jeśli ta wartość danych jest pusta.
 
 ### <a name="marking-nullable-columns"></a>Oznaczanie kolumn dopuszczających wartości null
 
-Jeśli również wdrożenia zestawów wierszy schematu (zobacz `IDBSchemaRowsetImpl`), w zestawie wierszy DBSCHEMA_COLUMNS (zwykle oznaczony w dostawcy za CxxxSchemaColSchemaRowset) należy określić implementacji, że kolumna jest dopuszczającego wartość null.
+W przypadku implementacji również zestawów wierszy schematu (zobacz `IDBSchemaRowsetImpl`) implementacja powinna być określona w DBSCHEMA_COLUMNS zestawie wierszy (zwykle oznaczonym przez CxxxSchemaColSchemaRowset), że kolumna dopuszcza wartość null.
 
-Należy również określić, że wszystkie kolumny dopuszczające wartość null, zawierają wartość DBCOLUMNFLAGS_ISNULLABLE w używanej wersji programu `GetColumnInfo`.
+Należy również określić, że wszystkie kolumny wartości null zawierają wartość DBCOLUMNFLAGS_ISNULLABLE w używanej wersji `GetColumnInfo`.
 
-W implementacji szablonów OLE DB do oznaczania kolumny jako dopuszczającego wartość null, w przeciwnym przypadku dostawcę założono, że musi zawierać wartość i nie zezwala, aby wysłać go wartości null.
+W implementacji szablonów OLE DB, jeśli nie można oznaczyć kolumn jako nullable, dostawca zakłada, że muszą zawierać wartość i nie zezwoli konsumentowi na wysyłanie wartości null.
 
-W poniższym przykładzie pokazano sposób, w jaki `CommonGetColInfo` funkcja jest zaimplementowana w CUpdateCommand (patrz UpProvRS.cpp) w UpdatePV. Należy zauważyć, jak kolumny to DBCOLUMNFLAGS_ISNULLABLE dla kolumny dopuszczające wartość null.
+Poniższy przykład pokazuje, jak funkcja `CommonGetColInfo` jest zaimplementowana w CUpdateCommand (zobacz UpProvRS. cpp) w UpdatePV. Zwróć uwagę, jak kolumny mają ten DBCOLUMNFLAGS_ISNULLABLE w przypadku kolumn dopuszczających wartości null.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////////
@@ -370,11 +370,11 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 
 ### <a name="default-values"></a>Wartości domyślne
 
-Podobnie jak w przypadku danych o wartości NULL, masz odpowiedzialność, aby poradzić sobie ze zmianą wartości domyślne.
+Podobnie jak w przypadku danych o wartości NULL, użytkownik jest odpowiedzialny za wprowadzanie zmian wartości domyślnych.
 
-Domyślne ustawienie `FlushData` i `Execute` ma zwrócić S_OK. W związku z tym, jeśli nie zastąpisz tej funkcji, zmiany będą widoczne powiodła się (S_OK zostaną zwrócone), ale nie będą przesyłane do magazynu danych.
+Domyślną wartością `FlushData` i `Execute` jest zwrócenie S_OK. W związku z tym, jeśli ta funkcja nie zostanie zastąpiona, zmiany pojawią się po pomyślnym (S_OK zostaną zwrócone), ale nie zostaną przesłane do magazynu danych.
 
-W `UpdatePV` przykład (w Rowset.h) `SetDBStatus` obsługiwała wartości domyślne w następujący sposób:
+W przykładzie `UpdatePV` (w Rowset. h) Metoda `SetDBStatus` obsługuje wartości domyślne w następujący sposób:
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
@@ -411,13 +411,13 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }
 ```
 
-### <a name="column-flags"></a>Kolumna flagi
+### <a name="column-flags"></a>Flagi kolumn
 
-Jeśli są używane wartości domyślne na kolumn należy ustawić go za pomocą metadanych w \<klasa dostawcy\>SchemaRowset klasy. Ustaw `m_bColumnHasDefault = VARIANT_TRUE`.
+Jeśli w kolumnach są obsługiwane wartości domyślne, należy ustawić je za pomocą metadanych w klasie dostawcy \<\>klasie SchemaRowset. Ustaw `m_bColumnHasDefault = VARIANT_TRUE`.
 
-Masz również odpowiedzialny za można ustawić flagi kolumny, które są określone, że za pomocą DBCOLUMNFLAGS Typ wyliczany. Flagi kolumnie opisano charakterystyki kolumny.
+Istnieje również odpowiedzialność za ustawienie flag kolumn, które są określone za pomocą typu wyliczeniowego DBCOLUMNFLAGS. Flagi kolumn opisują właściwości kolumn.
 
-Na przykład w `CUpdateSessionColSchemaRowset` klasy w `UpdatePV` (Session.h), pierwsza kolumna skonfigurowano w ten sposób:
+Na przykład w klasie `CUpdateSessionColSchemaRowset` w `UpdatePV` (w sesji. h) pierwsza kolumna jest skonfigurowana w następujący sposób:
 
 ```cpp
 // Set up column 1
@@ -432,8 +432,8 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);
 ```
 
-Ten kod określa, między innymi, że kolumna obsługuje wartości domyślnej 0, że jest zapisywalny, i że wszystkie dane w kolumnie mają tę samą długość. Jeśli chcesz, aby dane w kolumnie o zmiennej długości, nie ustawi tę flagę.
+Ten kod określa między innymi, że kolumna obsługuje wartość domyślną 0, którą można zapisywalne i że wszystkie dane w kolumnie mają tę samą długość. Jeśli chcesz, aby dane w kolumnie miały długość zmiennej, nie ustawisz tej flagi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie dostawcy OLE DB](creating-an-ole-db-provider.md)

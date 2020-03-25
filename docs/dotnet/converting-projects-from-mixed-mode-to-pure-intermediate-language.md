@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208812"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język pośredni
 
@@ -31,21 +31,21 @@ Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora firmy Micros
 
    2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości** w menu skrótów, aby otworzyć strony właściwości aplikacji.
 
-   3. Na stronie właściwości projektu zaawansowanego dla **konsolidatora**wybierz **punkt wejścia** , a następnie wprowadź wartość **Main** w tym polu.
+   3. Na stronie właściwości projektu **zaawansowanego** dla **konsolidatora**wybierz **punkt wejścia** , a następnie wprowadź wartość **Main** w tym polu.
 
    4. W przypadku aplikacji konsolowych na stronie właściwości projektu **systemu** dla **konsolidatora**wybierz pole **podsystem** i Zmień to na **Console (/SUBSYSTEM: Console)** .
 
       > [!NOTE]
       > Nie trzeba ustawiać tej właściwości dla Windows Forms aplikacji, ponieważ pole **podsystem** jest domyślnie ustawione na **system Windows (/SUBSYSTEM: Windows)** .
 
-   5. W *stdafx. h*Dodaj komentarz do `#include` wszystkich instrukcji. Na przykład w aplikacjach konsoli programu:
+   5. W *stdafx. h*Dodaj komentarz do wszystkich instrukcji `#include`. Na przykład w aplikacjach konsoli programu:
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       —lub—
+       — lub —
 
        Na przykład w aplikacjach Windows Forms:
 
@@ -56,7 +56,7 @@ Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora firmy Micros
       // #include <tchar.h>
       ```
 
-   6. W przypadku aplikacji Windows Forms w formularzu Form1. cpp Dodaj komentarz do `#include` instrukcji odwołującej się do systemu Windows. h. Na przykład:
+   6. W przypadku aplikacji Windows Forms w formularzu Form1. cpp Dodaj komentarz do instrukcji `#include`, która odwołuje się do systemu Windows. h. Na przykład:
 
       ```cpp
       // #include <windows.h>
@@ -77,20 +77,20 @@ Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora firmy Micros
 
    |Struktura|Opis|
    |---------------|-----------------|
-   |[Boolean](/dotnet/api/system.boolean)|Reprezentuje wartość logiczną.|
-   |[Byte](/dotnet/api/system.byte)|Reprezentuje 8-bitową liczbę całkowitą bez znaku.|
+   |[Wartość logiczna](/dotnet/api/system.boolean)|Reprezentuje wartość logiczną.|
+   |[Bajc](/dotnet/api/system.byte)|Reprezentuje 8-bitową liczbę całkowitą bez znaku.|
    |[Delikatn](/dotnet/api/system.char)|Reprezentuje znak Unicode.|
-   |[DateTime](/dotnet/api/system.datetime)|Reprezentuje chwilę w czasie, zwykle wyrażoną jako datę i godzinę dnia.|
-   |[Decimal](/dotnet/api/system.decimal)|Reprezentuje liczbę dziesiętną.|
+   |[Datę](/dotnet/api/system.datetime)|Reprezentuje chwilę w czasie, zwykle wyrażoną jako datę i godzinę dnia.|
+   |[Dokładności](/dotnet/api/system.decimal)|Reprezentuje liczbę dziesiętną.|
    |[Double](/dotnet/api/system.double)|Reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji.|
    |[Ident](/dotnet/api/system.guid)|Reprezentuje unikatowy identyfikator globalny (GUID).|
    |[Int16](/dotnet/api/system.int16)|Reprezentuje 16-bitową liczbę całkowitą ze znakiem.|
-   |[Int32](/dotnet/api/system.int32)|Reprezentuje 32-bitową liczbę całkowitą ze znakiem.|
+   |[Elementem](/dotnet/api/system.int32)|Reprezentuje 32-bitową liczbę całkowitą ze znakiem.|
    |[Int64](/dotnet/api/system.int64)|Reprezentuje 64-bitową liczbę całkowitą ze znakiem.|
    |[IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub dojścia.|
    |[SByte](/dotnet/api/system.byte)|Reprezentuje 8-bitową liczbę całkowitą ze znakiem.|
-   |[Single](/dotnet/api/system.single)|Reprezentuje liczbę zmiennoprzecinkową o pojedynczej precyzji.|
-   |[TimeSpan](/dotnet/api/system.timespan)|Reprezentuje interwał czasu.|
+   |[Wiersz](/dotnet/api/system.single)|Reprezentuje liczbę zmiennoprzecinkową o pojedynczej precyzji.|
+   |[Czasu](/dotnet/api/system.timespan)|Reprezentuje interwał czasu.|
    |[UInt16](/dotnet/api/system.uint16)|Reprezentuje 16-bitową liczbę całkowitą bez znaku.|
    |[Równ](/dotnet/api/system.uint32)|Reprezentuje 32-bitową liczbę całkowitą bez znaku.|
    |[UInt64](/dotnet/api/system.uint64)|Reprezentuje 64-bitową liczbę całkowitą bez znaku.|

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - BK1513
 ms.assetid: 9ba87c09-8d82-4c80-b0cf-a8de63dcf9da
-ms.openlocfilehash: c02e9b47b3d32e4d21914188b96913d6dff03127
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a16163f33814be18a67833995362ee9b13d8118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197642"
 ---
 # <a name="bscmake-error-bk1513"></a>Błąd BSCMAKE BK1513
 
-nieprzyrostowa aktualizacja wymaga wszystkich. Pliki SBR
+Aktualizacja nieprzyrostowa wymaga wszystkich. Pliki SBR
 
-BSCMAKE nie może utworzyć nowego pliku przeglądania informacji (.bsc), ponieważ jeden lub więcej plików SBR są obcinane. Aby znaleźć nazwy plików SBR obcięty, przeczytaj [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) ostrzeżenia, dołączone do tego błędu.
+BSCMAKE nie może utworzyć nowego pliku informacji o przeglądaniu (BSC), ponieważ co najmniej jeden plik. sbr został obcięty. Aby znaleźć nazwy obciętych plików SBR, przeczytaj ostrzeżenia [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) , które towarzyszą temu błędowi.
 
-BSCMAKE można zaktualizować pliku .bsc przy użyciu pliku SBR obcięty, ale nie można utworzyć nowy. BSCMAKE może utworzyć nowego pliku .bsc z następujących powodów:
+BSCMAKE może zaktualizować plik BSC z obciętym plikiem. sbr, ale nie może utworzyć nowego. BSCMAKE może utworzyć nowy plik BSC z następujących powodów:
 
-- Brak pliku .bsc.
+- Brak pliku BSC.
 
-- Problem nie określono nazwy pliku dla pliku .bsc.
+- Określono nieprawidłową nazwę pliku dla pliku BSC.
 
-- Plik .bsc uszkodzony.
+- Uszkodzony plik BSC.
 
-Aby rozwiązać ten problem, Usuń pliki SBR obcięte i ponownej kompilacji, lub wyczyść rozwiązanie i ponownie skompilować. (W środowisku IDE, wybierz **kompilacji**, **czyste rozwiązanie**, a następnie wybierz **kompilacji**, **Kompiluj rozwiązanie**.)
+Aby rozwiązać ten problem, Usuń obcięte pliki SBR i Skompiluj ponownie lub wyczyść rozwiązanie i Skompiluj ponownie. (W środowisku IDE wybierz opcję **Kompiluj**, **Wyczyść rozwiązanie**, a następnie wybierz **kompilacja**, **Skompiluj ponownie rozwiązanie**).

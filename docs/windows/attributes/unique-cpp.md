@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214438"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -39,12 +39,12 @@ Zobacz przykład [odwołania](ref-cpp.md) dla przykładowego zastosowania **unik
 |-|-|
 |**Dotyczy**|**typedef**, **struct**, **Union**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

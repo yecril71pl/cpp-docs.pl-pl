@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - BK1506
 ms.assetid: f51f8cea-f8fc-4323-bcf2-b7bd119792ee
-ms.openlocfilehash: d1f74a90657985a87accc13bc2b576c1d7fd5a4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b272a12e1d729e33794b550c911fd2e56f1af006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279817"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197798"
 ---
 # <a name="bscmake-error-bk1506"></a>Błąd BSCMAKE BK1506
 
-Nie można otworzyć pliku 'NazwaPliku' [: przyczyny]
+nie można otworzyć pliku "filename" [: Przyczyna]
 
-BSCMAKE, nie można otworzyć pliku.
+BSCMAKE nie może otworzyć pliku.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Plik jest zablokowany przez inny proces. Jeśli `reason` mówi **pozwolono**, przeglądarka może korzystać z pliku. Zamknij okno przeglądania i ponów próbę kompilacji.
+1. Plik zablokowany przez inny proces. Jeśli `reason` mówi **uprawnienia**, przeglądarka może korzystać z pliku. Zamknij okno przeglądania i ponów próbę kompilacji.
 
-1. Pełne dysku.
+1. Pełny dysk.
 
 1. Błąd sprzętowy.
 
-1. Określony plik wyjściowy ma taką samą nazwę jak istniejący podkatalogu.
+1. Określony plik wyjściowy ma taką samą nazwę jak istniejący podkatalog.

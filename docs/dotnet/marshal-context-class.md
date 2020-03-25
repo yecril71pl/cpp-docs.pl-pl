@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 7fb22754248e66d7a20292af41a8e1b8ba050451
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 146a0f7a7cc1402f7c28e6bf09fead1914c7c6be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208531"
 ---
 # <a name="marshal_context-class"></a>marshal_context — Klasa
 
@@ -31,7 +31,7 @@ Użyj klasy `marshal_context` na potrzeby konwersji danych, które wymagają kon
 
 Ten sam `marshal_context` może służyć do licznych konwersji danych. Użycie kontekstu w ten sposób nie wpłynie na wyniki poprzednich wywołań kierujących.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

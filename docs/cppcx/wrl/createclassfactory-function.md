@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214061"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory — Funkcja
 
@@ -32,32 +32,32 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*flagi*<br/>
-Kombinacji jednego lub więcej [RuntimeClassType](runtimeclasstype-enumeration.md) wartości wyliczenia.
+*znaczników*<br/>
+Kombinacja co najmniej jednej wartości wyliczenia [RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Wskaźnik do [creatormap —](creatormap-structure.md) zawierający informacje o parametrze inicjowania i rejestracji *riid*.
+Wskaźnik do [CreatorMap](creatormap-structure.md) , który zawiera informacje o inicjacji i rejestracji parametru *riid*.
 
-*Parametr riid*<br/>
+*riid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
 *ppFactory*<br/>
-Jeśli operacja zakończy się pomyślnie, wskaźnik do fabryki klas.
+Jeśli ta operacja zakończy się pomyślnie, wskaźnik do fabryki klas.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Błąd potwierdzenia jest emitowane, jeśli parametr szablonu *fabryki* nie pochodzi z interfejsu `IClassFactory`.
+Błąd potwierdzenia jest emitowany, jeśli *fabryka* parametrów szablonu nie pochodzi od `IClassFactory`interfejsu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module.h
+**Nagłówek:** module. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Wrappers::Details, przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)

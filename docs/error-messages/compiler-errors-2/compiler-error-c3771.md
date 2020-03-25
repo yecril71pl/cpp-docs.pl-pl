@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c29ad6007d33c43ae1e4758ae05caa9109053e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400165"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165733"
 ---
 # <a name="compiler-error-c3771"></a>Błąd kompilatora C3771
 
-"identyfikator": deklaracja zaprzyjaźniona nie można znaleźć w najbliższym zakresie przestrzeni nazw
+"Identyfikator": Deklaracja zaprzyjaźniona nie może zostać znaleziona w najbliższym zakresie przestrzeni nazw
 
-Deklaracja szablonu klasy dla określonego szablonu *identyfikator* nie można odnaleźć w bieżącym obszarze nazw.
+W bieżącej przestrzeni nazw nie można znaleźć deklaracji szablonu klasy dla określonego *identyfikatora* szablonu.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Upewnij się, że deklaracja szablonu klasy dla identyfikatora szablonu jest zdefiniowana w bieżącej przestrzeni nazw lub identyfikator szablonu jest w pełni kwalifikowaną nazwę.
+- Upewnij się, że deklaracja szablonu klasy dla identyfikatora szablonu jest zdefiniowana w bieżącej przestrzeni nazw lub że identyfikator szablonu jest w pełni kwalifikowaną nazwą.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu deklaruje szablonu klasy, a funkcja w przestrzeni nazw `NA`, ale próbuje zadeklarować zaprzyjaźnionego szablonu funkcji, w obszarze nazw `NB`.
+Poniższy przykład kodu deklaruje szablon klasy i funkcję w przestrzeni nazw `NA`, ale próbuje zadeklarować szablon zaprzyjaźnionej funkcji w przestrzeni nazw `NB`.
 
 ```cpp
 // C3771.cpp
@@ -47,6 +47,6 @@ namespace NB {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../../cpp/templates-cpp.md)

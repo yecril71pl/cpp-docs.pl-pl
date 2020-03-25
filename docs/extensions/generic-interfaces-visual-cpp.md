@@ -1,27 +1,27 @@
 ---
-title: Interfejsy ogólne (C++sposób niezamierzony)
+title: Interfejsy ogólne (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350629"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182022"
 ---
-# <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C++sposób niezamierzony)
+# <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C++/CLI)
 
-Ograniczenia, które są stosowane do parametrów typu w klasach są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C++sposób niezamierzony)](generic-classes-cpp-cli.md)).
+Ograniczenia, które są stosowane do parametrów typu dla klas są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C++/CLI)](generic-classes-cpp-cli.md)).
 
-Reguły które kontrolują, przeciążanie funkcji — są takie same dla funkcji w ramach ogólnego klas lub interfejsów ogólnych.
+Reguły, które kontrolują przeciążanie funkcji są takie same dla funkcji w klasach ogólnych lub ogólnych interfejsach.
 
-W jawnej implementacji elementu członkowskiego pracują z typami skonstruowanego interfejsu w taki sam sposób jak z typami prosty interfejs (zobacz poniższy przykład).
+Jawne implementacje elementu członkowskiego interfejsu działają z skonstruowanymi typami interfejsów w taki sam sposób jak w przypadku prostych typów interfejsów (Zobacz poniższe przykłady).
 
-Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy](interface-class-cpp-component-extensions.md).
+Aby uzyskać więcej informacji na temat interfejsów, zobacz [Klasa interfejsu](interface-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,36 +32,36 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy]
 
 ## <a name="remarks"></a>Uwagi
 
-*Atrybuty*<br/>
-(Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
+*Attributes*<br/>
+Obowiązkowe Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na temat atrybutów i klas atrybutów, zobacz **atrybuty**.
 
-*class-key*<br/>
-**Klasa** lub **typename**
+*klucz klasy*<br/>
+**Class** lub **TypeName**
 
-*Typ — parametr-identyfikatory*<br/>
+*identyfikatory parametrów typu*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
-*type-parameter-constraints-clauses*<br/>
-Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md)
+*ograniczenia parametrów typu-Parameter-klauzule*<br/>
+Przyjmuje formularz określony w [ograniczeniach dla parametrów typu ogólnego (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*accessibility-modifiers*<br/>
-(Opcjonalnie) Modyfikatory dostępności (np. **publiczne, prywatne**).
+*ułatwienia dostępu — Modyfikatory*<br/>
+Obowiązkowe Modyfikatory dostępności (np. **publiczne, prywatne**).
 
-*Identyfikator*<br/>
+*identyfikatora*<br/>
 Nazwa interfejsu.
 
-*base-list*<br/>
-(Opcjonalnie) Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
+*Lista podstawowa*<br/>
+Obowiązkowe Lista zawierająca jeden lub więcej jawnych interfejsów podstawowych oddzielonych przecinkami.
 
-*interface-body*<br/>
-Deklaracje członków interfejsu.
+*Interfejs — treść*<br/>
+Deklaracje elementów członkowskich interfejsu.
 
-*deklaratory*<br/>
-(Opcjonalnie) Deklaracje zmiennych na podstawie tego typu.
+*Deklaratory*<br/>
+Obowiązkowe Deklaracje zmiennych na podstawie tego typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób deklarowania i utworzyć wystąpienie ogólny interfejs. W tym przykładzie interfejs ogólny `IList<ItemType>` jest zadeklarowana. Następnie jest implementowany przez dwie klasy ogólne, `List1<ItemType>` i `List2<ItemType>`, za pomocą różne implementacje.
+Poniższy przykład ilustruje sposób deklarowania i tworzenia wystąpienia interfejsu ogólnego. W tym przykładzie ogólny `IList<ItemType>` interfejsu jest zadeklarowany. Są one następnie implementowane przez dwie klasy ogólne, `List1<ItemType>` i `List2<ItemType>`, z różnymi implementacjami.
 
 ```cpp
 // generic_interface.cpp
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie deklaruje ogólny interfejs `IMyGenIface`, a dwa interfejsy nieogólnego, `IMySpecializedInt` i `ImySpecializedString`, który specialize `IMyGenIface`. Dwa interfejsy wyspecjalizowane następnie są implementowane przez dwie klasy `MyIntClass` i `MyStringClass`. W przykładzie pokazano sposób specialize interfejsów ogólnych, wystąpienia interfejsów ogólnych i nieogólnych i wywoływać elementy członkowskie jawnie implementowane na interfejsach.
+Ten przykład deklaruje interfejs ogólny, `IMyGenIface`i dwa interfejsy inne niż ogólne, `IMySpecializedInt` i `ImySpecializedString`, które specjalizują się `IMyGenIface`. Dwa wyspecjalizowane interfejsy są następnie implementowane przez dwie klasy `MyIntClass` i `MyStringClass`. W przykładzie przedstawiono sposób specjalizacji interfejsów ogólnych, tworzenia wystąpienia ogólnych i nieogólnych interfejsów oraz wywoływania jawnie zaimplementowanych elementów członkowskich w interfejsach.
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

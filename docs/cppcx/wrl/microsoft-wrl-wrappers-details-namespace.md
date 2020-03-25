@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
-ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005fa79d413708f630b0a6aebbc06782086c81b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213762"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details — Przestrzeń nazw
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,27 +30,27 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 namespace Microsoft::WRL::Wrappers::Details;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Klasy
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[SyncLockT, klasa](synclockt-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
-|[SyncLockWithStatusT, klasa](synclockwithstatust-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|
+|[SyncLockT, klasa](synclockt-class.md)|Reprezentuje typ, który może przyjmować lub udostępniać prawa własności do zasobu.|
+|[SyncLockWithStatusT, klasa](synclockwithstatust-class.md)|Reprezentuje typ, który może przyjmować lub udostępniać prawa własności do zasobu.|
 
 ### <a name="methods"></a>Metody
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CompareStringOrdinal, metoda](comparestringordinal-method.md)|Porównuje dwa określone `HSTRING` obiekty i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.|
+|[CompareStringOrdinal, metoda](comparestringordinal-method.md)|Porównuje dwa określone obiekty `HSTRING` i zwraca liczbę całkowitą, która wskazuje ich położenie względne w kolejności sortowania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Wrappers, przestrzeń nazw](microsoft-wrl-wrappers-namespace.md)

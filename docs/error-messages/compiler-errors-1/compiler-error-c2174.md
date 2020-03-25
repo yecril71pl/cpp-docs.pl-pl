@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2174
 ms.assetid: 161d563c-76e9-47e9-9142-7812e9ea169e
-ms.openlocfilehash: c9634dea7a29df55612c2f20e70c94601881af57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a951cc6e31c8cc25a728e9fc1599ea9303060f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174604"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206999"
 ---
 # <a name="compiler-error-c2174"></a>Błąd kompilatora C2174
 
-'Funkcja': rzeczywisty parametr jest typu "void": parametr liczba1, liczba2 listy parametrów
+"Function": rzeczywisty parametr jest typu "void": parametr Liczba1, lista parametrów liczba2
 
-Parametr `number1` przekazywane do listy parametrów `number2` jest `void` parametru. Parametry nie może mieć typu `void`. Zamiast nich należy używać słów kluczowych `void*`.
+Parametr `number1` przesłany do listy parametrów `number2` jest parametrem `void`. Parametry nie mogą mieć typu `void`. Zamiast tego użyj polecenia cmdlet `void*`.

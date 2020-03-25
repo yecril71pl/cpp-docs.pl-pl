@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213866"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,21 +27,21 @@ struct InterfaceList;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Nazwa interfejsu; Pierwszy interfejs na liście cykliczne.
+*&*<br/>
+Nazwa interfejsu; Pierwszy interfejs na liście cyklicznej.
 
-*U*<br/>
-Nazwa interfejsu; pozostałe interfejsy na liście cykliczne.
+*'T*<br/>
+Nazwa interfejsu; Pozostałe interfejsy na liście cyklicznej.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyty do utworzenia cyklicznego listę interfejsów.
+Służy do tworzenia cyklicznej listy interfejsów.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`FirstT`|Synonim dla parametru szablonu *T*.|
 |`RestT`|Synonim dla parametru szablonu *U*.|
@@ -52,10 +52,10 @@ Użyty do utworzenia cyklicznego listę interfejsów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

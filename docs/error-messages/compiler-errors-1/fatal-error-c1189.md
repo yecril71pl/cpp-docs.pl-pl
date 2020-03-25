@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2217b865109cc48151e4e96b2d38b88764c0c64f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229062"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203650"
 ---
 # <a name="fatal-error-c1189"></a>Błąd krytyczny C1189
 
-> **\#Błąd:** *komunikat o błędzie podanych przez użytkownika.*
+> **błąd\#:** *komunikat o błędzie podany przez użytkownika*
 
 ## <a name="remarks"></a>Uwagi
 
-C1189 jest generowany przez `#error` dyrektywy. Deweloper, który kodów dyrektywa określa tekst komunikatu o błędzie. Aby uzyskać więcej informacji, zobacz [#error — dyrektywa (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 jest generowana przez dyrektywę `#error`. Deweloper, który koduje dyrektywę określa tekst komunikatu o błędzie. Aby uzyskać więcej informacji, zobacz [#error dyrektywie (CC++/)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C1189. W tym przykładzie Deweloper generuje niestandardowy komunikat o błędzie, ponieważ `_WIN32` nie zdefiniowano identyfikatora:
+Poniższy przykład generuje C1189. W przykładzie deweloper wystawia niestandardowy komunikat o błędzie, ponieważ nie zdefiniowano identyfikatora `_WIN32`:
 
 ```cpp
 // C1189.cpp
@@ -33,6 +33,6 @@ Poniższy przykład spowoduje wygenerowanie C1189. W tym przykładzie Deweloper 
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

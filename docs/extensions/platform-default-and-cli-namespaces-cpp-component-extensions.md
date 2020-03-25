@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181827"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Przestrzenie nazw platform, Default i CLIC++(/CLI C++i/CX)
 
@@ -30,7 +30,7 @@ Aby uzyskać więcej informacji, zobacz [przestrzenie nazw iC++widoczność typu
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -42,7 +42,7 @@ using namespace cli;
 
 ### <a name="remarks"></a>Uwagi
 
-C++/CLI obsługuje przestrzeń nazw **interfejsu wiersza polecenia** . W przypadku kompilowania przy użyciu `/clr`instrukcji **using** w sekcji składnia jest implikowana.
+C++/CLI obsługuje przestrzeń nazw **interfejsu wiersza polecenia** . Podczas kompilowania z `/clr`jest implikowana instrukcja **using** w sekcji składni.
 
 W przestrzeni nazw **interfejsu wiersza polecenia** znajdują się następujące funkcje języka:
 
@@ -56,7 +56,7 @@ W przestrzeni nazw **interfejsu wiersza polecenia** znajdują się następujące
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

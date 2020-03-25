@@ -1,5 +1,5 @@
 ---
-title: Operatory dostępu do składowych:. i -&gt;
+title: Operatory dostępu do elementów członkowskich:. i&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - .
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-ms.openlocfilehash: 0f370aa04af2e78efd5edfb7836fb71a4c4516a7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 05bab55e1646783e0f8ab9b414d608c912f60a0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178018"
 ---
-# <a name="member-access-operators--and--gt"></a>Operatory dostępu do składowych:. i -&gt;
+# <a name="member-access-operators--and--gt"></a>Operatory dostępu do elementów członkowskich:. i&gt;
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,17 +32,17 @@ postfix-expression -> name
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory dostępu do składowych **.** i **->** służą do odwoływania się do elementów członkowskich struktury, Unii i klasy. Wyrażenia dostępu do składowych mają wartość i typ wybranego elementu członkowskiego.
+Operatory dostępu do elementów członkowskich **.** i **->** są używane do odwoływania się do elementów członkowskich struktur, Unii i klas. Wyrażenia dostępu do składowych mają wartość i typ wybranego elementu członkowskiego.
 
-Istnieją dwa rodzaje wyrażenia dostępu do składowych:
+Istnieją dwa formy wyrażeń dostępu do składowych:
 
-1. W pierwszej formie *wyrażeniem przyrostkowym* reprezentuje wartość struktury, klasy lub typ union i *nazwa* nazwy członka określonej struktury, Unii lub klasy. Wartością operacji jest *nazwa* i jest l wartością, jeśli *wyrażeniem przyrostkowym* jest l wartością.
+1. W pierwszej postaci *wyrażenie przyrostkowe* reprezentuje wartość typu struct, Class lub Union, a *Nazwa* nazwy składowej określonej struktury, Unii lub klasy. Wartość operacji to *Nazwa* i jest l-wartością, jeśli *przyrostke wyrażenie* jest l-wartością.
 
-1. W drugim formularzu *wyrażeniem przyrostkowym* reprezentuje wskaźnik do struktury, Unii lub klasy, i *nazwa* nazwy członka określonej struktury, Unii lub klasy. Wartość jest *nazwa* i jest l wartością. **->** Operator wyłuskania wskaźnika. W związku z tym, wyrażenia `e->member` i `(*e).member` (gdzie *e* reprezentuje wskaźnik) uzyskanie takie same wyniki (z wyjątkiem, gdy operatory **->** lub <strong>\*</strong> są przeciążone).
+1. W drugiej postaci *wyrażenie przyrostkowe* reprezentuje wskaźnik do struktury, Unii lub klasy, a *Nazwa* nazwy składowej określonej struktury, Unii lub klasy. Wartość jest równa wartości *name* i jest l-wartością. Operator **->** odwołuje wskaźnik. W związku z tym wyrażenia `e->member` i `(*e).member` (gdzie *e* reprezentuje wskaźnik) dają identyczne wyniki (z wyjątkiem sytuacji, gdy operatory **->** lub <strong>\*</strong> są przeciążone).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano oba rodzaje operator dostępu do elementu członkowskiego.
+Poniższy przykład ilustruje obie formy operatora dostępu do elementu członkowskiego.
 
 ```cpp
 // expre_Selection_Operator.cpp
@@ -76,7 +76,7 @@ int main() {
 2/1/2000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

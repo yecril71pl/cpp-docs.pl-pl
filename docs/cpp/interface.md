@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178214"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Microsoft C++ interfejsu można zdefiniować w następujący sposób:
+Interfejs Microsoft C++ można zdefiniować w następujący sposób:
 
-- Może dziedziczyć z zero lub więcej podstawowych interfejsów.
+- Może dziedziczyć z zero lub więcej interfejsów podstawowych.
 
 - Nie można dziedziczyć z klasy bazowej.
 
-- Może zawierać tylko publiczne, czystych metod wirtualnych.
+- Może zawierać tylko publiczne, czyste metody wirtualne.
 
-- Nie może zawierać konstruktory, destruktory lub operatorów.
+- Nie może zawierać konstruktorów, destruktorów ani operatorów.
 
-- Nie może zawierać metod statycznych.
+- Nie mogą zawierać metod statycznych.
 
-- Nie może zawierać elementy członkowskie danych; właściwości są dozwolone.
+- Nie może zawierać składowych danych; właściwości są dozwolone.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,9 +39,9 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Uwagi
 
-A C++ [klasy](../cpp/class-cpp.md) lub [struktury](../cpp/struct-cpp.md) implementacji przy użyciu tych zasad, ale **__interface** je egzekwuje.
+C++ [Klasę](../cpp/class-cpp.md) lub [strukturę](../cpp/struct-cpp.md) można zaimplementować przy użyciu tych reguł, ale **__interface** wymuszają te reguły.
 
-Na przykład Oto przykładowa definicja interfejsu:
+Na przykład poniżej przedstawiono przykładową definicję interfejsu:
 
 ```cpp
 __interface IMyInterface {
@@ -50,19 +50,19 @@ __interface IMyInterface {
 };
 ```
 
-Aby uzyskać informacji na temat interfejsów zarządzanych, zobacz [interfejsu klasy](../extensions/interface-class-cpp-component-extensions.md).
+Aby uzyskać informacje na temat interfejsów zarządzanych, zobacz [Klasa interfejsu](../extensions/interface-class-cpp-component-extensions.md).
 
-Zwróć uwagę, że nie trzeba jawnie wskazać, że `CommitX` i `get_X` są czyste funkcje wirtualne. Równoważną deklarację dla pierwszej funkcji mogą być następujące:
+Należy zauważyć, że nie trzeba jawnie wskazywać, że `CommitX` i `get_X` funkcje są czystymi wirtualnymi. Równoważną deklaracją dla pierwszej funkcji będzie:
 
 ```cpp
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** oznacza [novtable](../cpp/novtable.md) **__declspec** modyfikator.
+**__interface** sugeruje modyfikator __declspec [notablicę](../cpp/novtable.md) **__declspec** .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia właściwości zadeklarowanych w interfejsie.
+Poniższy przykład pokazuje, jak używać właściwości zadeklarowanych w interfejsie.
 
 ```cpp
 // deriv_interface.cpp
@@ -142,9 +142,9 @@ p->int_data = 100
 bstr_data = Testing
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Atrybuty interfejsu](../windows/attributes/interface-attributes.md)

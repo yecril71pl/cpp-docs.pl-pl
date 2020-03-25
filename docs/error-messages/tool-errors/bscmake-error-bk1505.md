@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1505
 ms.assetid: a25765f8-e950-4ca8-9f16-419d779e2744
-ms.openlocfilehash: 996bb2cf6adb307cec9af9af6bdb140ebb07ec8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24164e85a7835ed537b1435927d4049504c3d2b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197824"
 ---
 # <a name="bscmake-error-bk1505"></a>Błąd BSCMAKE BK1505
 
-Nie można odczytać z pliku 'NazwaPliku' [: przyczyny]
+nie można odczytać z pliku "filename" [: Przyczyna]
 
-BSCMAKE, nie można odczytać z pliku.
+BSCMAKE nie można odczytać z pliku.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
 1. Uszkodzenie pliku.
 
-1. Plik obcinanie do kompilatora wyczerpuje się miejsce na dysku lub jest przerwane podczas tworzenia pliku .sbr.
+1. Obcinanie pliku do kompilatora z wyczerpaniem miejsca na dysku lub przerywane podczas tworzenia pliku. sbr.

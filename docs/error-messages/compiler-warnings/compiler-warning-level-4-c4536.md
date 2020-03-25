@@ -1,22 +1,22 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4536
+title: Ostrzeżenie kompilatora (poziom 4) C4536
 ms.date: 11/04/2016
 f1_keywords:
 - C4536
 helpviewer_keywords:
 - C4536
 ms.assetid: ab4d0686-f813-4e88-a264-b40d3630ed6c
-ms.openlocfilehash: ac651b7cf6ea3e3f5e7e68d5f6097af78accff77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d3c81282f7299317eef8bd69e340076a3a3fc96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198370"
 ---
-# <a name="compiler-warning-level-4-c4536"></a>Kompilator ostrzeżenie (poziom 4) C4536
+# <a name="compiler-warning-level-4-c4536"></a>Ostrzeżenie kompilatora (poziom 4) C4536
 
-'Nazwa typu': Nazwa typu przekracza limit meta danych znaków 'limit'
+"type name": nazwa typu przekracza limit meta danych znaków "limit"
 
-Nazwa typu, który zostałyby obcięte w metadanych, jeśli był typ zarządzany. Zobacz [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) Aby uzyskać więcej informacji.
+Nazwa typu zostałaby obcięta w metadanych, jeśli była typem zarządzanym. Aby uzyskać więcej informacji, zobacz [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) .
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .

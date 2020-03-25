@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4166
+title: Ostrzeżenie kompilatora (poziom 1) C4166
 ms.date: 11/04/2016
 f1_keywords:
 - C4166
 helpviewer_keywords:
 - C4166
 ms.assetid: 4e5398a1-d913-4791-a470-06fc99c36ac5
-ms.openlocfilehash: 0ce391704be3b38879e40110d6ceed143be5edd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c93a426cb35cb566d5e841a6558da9fa778739c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163640"
 ---
-# <a name="compiler-warning-level-1-c4166"></a>Kompilator ostrzeżenie (poziom 1) C4166
+# <a name="compiler-warning-level-1-c4166"></a>Ostrzeżenie kompilatora (poziom 1) C4166
 
-**Niedozwolona konwencja wywołania dla konstruktora/destruktora**
+**niedozwolona Konwencja wywołania dla konstruktora/destruktora**
 
-Konstruktory i destruktory nie mogą mieć wywoływania konwencje inną niż domyślna platformy (z wyjątkiem sytuacji, gdy jawnie określić **__clrcall**).
+Konstruktory i destruktory nie mogą mieć konwencji wywoływania innej niż domyślna dla platformy (z wyjątkiem sytuacji, w której jawnie określono **__clrcall**).

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514677"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168047"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -26,10 +26,10 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Nazwij*<br/>
 Zdefiniowana przez użytkownika nazwa bloku kodu, który będzie wyświetlany w pliku IDL.
 
-*dllname*<br/>
+*nazwa_pliku_dll*<br/>
 Obowiązkowe Plik. dll, który zawiera eksport.
 
 *uuid*<br/>
@@ -48,7 +48,7 @@ Obowiązkowe Identyfikator pomocy dla tej biblioteki typów.
 Obowiązkowe Parametr, który uniemożliwia wyświetlenie biblioteki. Aby uzyskać więcej informacji, zobacz [ukryty](/windows/win32/Midl/hidden) atrybut MIDL.
 
 *restricted*<br/>
-Obowiązkowe Nie można arbitralnie wywołać elementów członkowskich biblioteki. Aby uzyskać [](/windows/win32/Midl/restricted) więcej informacji, zobacz atrybut MIDL z ograniczeniami.
+Obowiązkowe Nie można arbitralnie wywołać elementów członkowskich biblioteki. Aby uzyskać więcej informacji, zobacz atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 *Deklaracja funkcji*<br/>
 Funkcja, która zostanie zdefiniowana.
@@ -61,7 +61,7 @@ Atrybut **idl_module** ma funkcje podobne do atrybutu MIDL [modułu](/windows/wi
 
 Można eksportować elementy z obiektu COM, który można wyeksportować z pliku DLL przez umieszczenie punktu wejścia biblioteki DLL w bloku biblioteki pliku. idl.
 
-Musisz użyć **idl_module** w dwóch krokach. Najpierw należy zdefiniować parę nazwa/Biblioteka DLL. Następnie, gdy używasz **idl_module** do określenia punktu wejścia, określ nazwę i wszelkie dodatkowe atrybuty.
+Należy używać **idl_module** w dwóch krokach. Najpierw należy zdefiniować parę nazwa/Biblioteka DLL. Następnie, korzystając z **idl_module** , aby określić punkt wejścia, określ nazwę i wszelkie dodatkowe atrybuty.
 
 ## <a name="example"></a>Przykład
 
@@ -84,12 +84,12 @@ void FuncName(int i);
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214412"
 ---
 # <a name="string-editor-c"></a>Edytor ciągów (C++)
 
@@ -58,7 +58,7 @@ Tabele ciągów ułatwiają lokalizowanie aplikacji w różnych językach. Jeśl
 
 1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Przejdź do menu **Edycja** > **Znajdź i Zamień** i wybierz **Znajdź**.
+1. Przejdź do menu **edytuj** > **Znajdź i Zamień** i wybierz **Znajdź**.
 
 1. W polu **Znajdź** , wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz tekst podpisu lub identyfikator zasobu ciągu, który ma zostać znaleziony.
 
@@ -69,13 +69,13 @@ Tabele ciągów ułatwiają lokalizowanie aplikacji w różnych językach. Jeśl
 >
 > Wpisz wyrażenie regularne zgodne ze wzorcem lub wybierz przycisk z prawej strony pola **Znajdź** , aby wyświetlić listę zwykłych wyrażeń wyszukiwania. Po wybraniu wyrażenia z tej listy zostanie on zastąpiony jako tekst wyszukiwania w polu **Znajdź** .
 >
-> Jeśli używasz wyrażeń regularnych, upewnij się, że **używasz: Pole wyboru** wyrażenia regularne jest zaznaczone.
+> Jeśli używasz wyrażeń regularnych, upewnij się, że jest zaznaczone pole wyboru **Użyj: wyrażenia regularne** .
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Aby dodać lub usunąć zasób ciągu
 
 Można szybko wstawiać i usuwać wpisy w tabeli ciągów przy użyciu **edytora ciągów**. Nowe ciągi są umieszczane na końcu tabeli i otrzymują następny dostępny identyfikator. W razie konieczności można edytować właściwości **identyfikatora**, **wartości**lub **podpisu** w [okno właściwości](/visualstudio/ide/reference/properties-window) .
 
-**Edytor ciągów** gwarantuje, że nie używasz identyfikatora, który jest już używany. Jeśli wybierzesz identyfikator, który jest już używany, **Edytor ciągów** wyświetli powiadomienie, a następnie przypisze ogólny unikatowy identyfikator, na `IDS_STRING58113`przykład.
+**Edytor ciągów** gwarantuje, że nie używasz identyfikatora, który jest już używany. W przypadku wybrania identyfikatora, który jest już używany, **Edytor ciągów** powiadamia użytkownika, a następnie przypisze ogólny unikatowy identyfikator, na przykład `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Aby dodać wpis tabeli ciągów
 
@@ -96,7 +96,7 @@ Można szybko wstawiać i usuwać wpisy w tabeli ciągów przy użyciu **edytora
 
 Wybierz wpis, który chcesz usunąć, i wykonaj jedną z następujących czynności:
 
-- Przejdź do menu **Edycja** > **Usuń**.
+- Przejdź do menu **edytuj** > **Usuń**.
 
 - Kliknij prawym przyciskiem myszy ciąg, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
@@ -106,7 +106,7 @@ Wybierz wpis, który chcesz usunąć, i wykonaj jedną z następujących czynno�
 
 1. [Otwórz tabele ciągów w obu plikach. RC](../windows/how-to-create-a-resource-script-file.md).
 
-1. Kliknij prawym przyciskiem myszy ciąg, który chceszprzenieść, a następnie wybierz polecenie Wytnij.
+1. Kliknij prawym przyciskiem myszy ciąg, który chcesz przenieść, a następnie wybierz polecenie **Wytnij**.
 
 1. Umieść kursor w oknie **edytora ciągu** docelowego.
 
@@ -142,7 +142,7 @@ Aby zmienić właściwości **identyfikatora**, **wartości**i **podpisu** , mo�
 
 1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)wpisz nową wartość właściwości, którą chcesz zmienić.
 
-1. Naciśnij klawisz **wprowadź**.
+1. Naciśnij klawisz **Enter**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aby dodać formatowanie lub znaki specjalne do zasobu ciągu
 
@@ -155,9 +155,9 @@ Aby zmienić właściwości **identyfikatora**, **wartości**i **podpisu** , mo�
    |Aby to zrobić...|Wpisz to...|
    |-----------------|---------------|
    | Nowy wiersz | \\n |
-   | Znak powrotu karetki | \\® |
+   | Znak powrotu karetki | \\r |
    | Tab | \\t |
-   | Ukośnik odwrotny\\() | \\\\ |
+   | Ukośnik odwrotny (\\) | \\\\ |
    | Znak ASCII | \\DDD (notacja ósemkowa) |
    | Alert (dzwonek) | \\a |
 
@@ -168,9 +168,9 @@ Aby zmienić właściwości **identyfikatora**, **wartości**i **podpisu** , mo�
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[](../windows/resource-editors.md)
-[Ciągi](/windows/win32/menurc/strings) edytorów zasobów<br/>
+[Edytory zasobów](../windows/resource-editors.md)
+[ciągi](/windows/win32/menurc/strings)<br/>
 [Ciągi — informacje](/windows/win32/menurc/about-strings)<br/>
 [Dostosowywanie układów okien](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

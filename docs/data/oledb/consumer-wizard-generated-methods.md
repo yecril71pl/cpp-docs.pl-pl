@@ -4,38 +4,38 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211513"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 
 ::: moniker range="vs-2019"
 
-Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje.
+Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-**OLE DB Kreator konsumenta ATL** i **Kreator aplikacji MFC** generować pewne funkcje, których należy wiedzieć. Niektóre metody są implementowane w inny sposób w projektach atrybutami, więc istnieje kilka zastrzeżenia; Każdy przypadek jest opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzonego kodu, zobacz [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).
+**Kreator użytkownika ATL OLE DB** i **Kreator aplikacji MFC** generują pewne funkcje, których należy wiedzieć. Niektóre metody są implementowane inaczej w projektach z atrybutami, więc istnieją pewne zastrzeżenia: Każdy przypadek jest objęty poniżej. Aby uzyskać informacje na temat wyświetlania wstrzykniętego kodu, zobacz [debugowanie wstrzykiwanego kodu](/visualstudio/debugger/how-to-debug-injected-code).
 
-- `OpenAll` Otwiera źródło danych, zestawy wierszy i powoduje włączenie zakładki, jeśli są one dostępne.
+- `OpenAll` otwiera źródło danych, zestawy wierszy i włącza zakładki, jeśli są dostępne.
 
-- `CloseAll` Zamyka wszystkie otwarte zestawów wierszy i wersje wszystkich wykonań poleceń.
+- `CloseAll` zamyka wszystkie otwarte zestawy wierszy i zwalnia wszystkie wykonania poleceń.
 
-- `OpenRowset` jest wywoływana przez `OpenAll` otworzyć konsumenta lub zbiory wierszy.
+- `OpenRowset` jest wywoływana przez `OpenAll`, aby otworzyć zestaw wierszy lub zestawy wierszy konsumenta.
 
-- `GetRowsetProperties` pobiera wskaźnik do za pomocą właściwości, które można ustawić właściwość zestawu wierszy.
+- `GetRowsetProperties` Pobiera wskaźnik do zbioru właściwości zestawu wierszy, dla którego można ustawić właściwości.
 
-- `OpenDataSource` Otwiera źródło danych przy użyciu parametrów inicjacji określone w **właściwości Linku danych** okno dialogowe.
+- `OpenDataSource` otwiera źródło danych przy użyciu ciągu inicjującego określonego w oknie dialogowym **Właściwości łącza danych** .
 
-- `CloseDataSource` Zamyka źródła danych w odpowiedni sposób.
+- `CloseDataSource` zamyka źródło danych w odpowiedni sposób.
 
-## <a name="openall-and-closeall"></a>Openall — i closeall —
+## <a name="openall-and-closeall"></a>Metody OpenAll i CloseAll
 
 ```cpp
 HRESULT OpenAll();
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-W poniższym przykładzie pokazano, jak można wywołać `OpenAll` i `CloseAll` podczas wykonywania tego samego polecenia wielokrotnie. Porównaj przykładowy kod z [CCommand::Close](../../data/oledb/ccommand-close.md), który wskazuje odmiany, który wywołuje `Close` i `ReleaseCommand` zamiast `CloseAll`.
+Poniższy przykład pokazuje, jak można wywołać `OpenAll` i `CloseAll`, gdy wielokrotnie wykonujesz to samo polecenie. Porównaj przykład kodu w [CCommand:: Close](../../data/oledb/ccommand-close.md), który pokazuje odmianę, która wywołuje `Close` i `ReleaseCommand` zamiast `CloseAll`.
 
 ```cpp
 int main(int argc, char* argv[])
@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zdefiniujesz `HasBookmark` metody `OpenAll` kod ustawia `DBPROP_IRowsetLocate` właściwości; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.
+W przypadku zdefiniowania metody `HasBookmark`, kod `OpenAll` ustawia właściwość `DBPROP_IRowsetLocate`; Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
 
 ## <a name="openrowset"></a>OpenRowset
 
@@ -89,7 +89,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
 ```
 
-`OpenAll` wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywoływać `OpenRowset` , chyba że chcesz pracować z wieloma danych źródła/sesje/zestawów wierszy. `OpenRowset` jest zadeklarowana w pliku nagłówkowym klasę polecenia lub tabeli:
+`OpenAll` wywołuje tę metodę, aby otworzyć zestaw wierszy lub zestawy wierszy w odbiorcy. Zazwyczaj nie trzeba wywoływać `OpenRowset`, chyba że chcesz współpracować z wieloma źródłami danych/sesjami/zestawami wierszy. `OpenRowset` jest zadeklarowana w pliku nagłówkowym polecenia lub klasy tabeli:
 
 ```cpp
 // OLE DB Template version:
@@ -104,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }
 ```
 
-Atrybuty zaimplementować tę metodę w różny sposób. Ta wersja przyjmuje obiekt sesji i ciąg polecenia, który domyślnie przyjmuje wartość ciągu polecenia określony w db_command —, mimo że można przekazać inny. Jeśli zdefiniujesz `HasBookmark` metody `OpenRowset` kod ustawia `DBPROP_IRowsetLocate` właściwości; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.
+Atrybuty implementują tę metodę inaczej. Ta wersja pobiera obiekt sesji i ciąg polecenia, który domyślnie jest ciągiem poleceń określonym w db_command, chociaż można przekazać inny. W przypadku zdefiniowania metody `HasBookmark`, kod `OpenRowset` ustawia właściwość `DBPROP_IRowsetLocate`; Upewnij się, że jest to możliwe tylko wtedy, gdy dostawca obsługuje tę właściwość.
 
 ```cpp
 // Attribute-injected version:
@@ -129,7 +129,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);
 ```
 
-Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; można użyć tego wskaźnika można ustawić właściwości, takie jak `DBPROP_IRowsetChange`. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:
+Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; Możesz użyć tego wskaźnika, aby ustawić właściwości, takie jak `DBPROP_IRowsetChange`. `GetRowsetProperties` jest używany w klasie rekordu użytkownika w następujący sposób. Możesz zmodyfikować ten kod, aby ustawić dodatkowe właściwości zestawu wierszy:
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -143,9 +143,9 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 
 ### <a name="remarks"></a>Uwagi
 
-Nie należy zdefiniować globalną `GetRowsetProperties` metoda, ponieważ może ona konflikt z wersją zdefiniowana przez kreatora. Jest to metoda generowane przez kreatora, której można korzystać z projektów oparte na szablonach i opartego na atrybutach; atrybuty nie wstrzyknąć tego kodu.
+Nie należy definiować globalnej metody `GetRowsetProperties`, ponieważ może ona powodować konflikt z elementem zdefiniowanym przez kreatora. Jest to metoda wygenerowana przez kreatora, którą można uzyskać z szablonem i projektami z atrybutami. atrybuty nie wstrzyknąć tego kodu.
 
-## <a name="opendatasource-and-closedatasource"></a>OpenDataSource i closedatasource —
+## <a name="opendatasource-and-closedatasource"></a>OpenDataSource i CloseDataSource
 
 ```cpp
 HRESULT OpenDataSource();
@@ -155,10 +155,10 @@ void CloseDataSource();
 
 ### <a name="remarks"></a>Uwagi
 
-Kreator definiuje metody `OpenDataSource` i `CloseDataSource`; `OpenDataSource` wywołania [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
+Kreator definiuje metody `OpenDataSource` i `CloseDataSource`; wywołania `OpenDataSource` [CDataSource:: OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

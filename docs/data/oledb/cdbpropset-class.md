@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212036"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
 
@@ -53,7 +53,7 @@ class CDBPropSet : public tagDBPROPSET
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Dostawcy OLE DB i konsumenci używają struktur `DBPROPSET` do przekazywania tablic struktur `DBPROP`. Każda struktura `DBPROP` reprezentuje pojedynczą właściwość, którą można ustawić.
 
-## <a name="addproperty"></a>CDBPropSet:: Add— Właściwość
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: Add— Właściwość
 
 Dodaje właściwość do zestawu właściwości.
 
@@ -124,7 +124,7 @@ podczas Wartość waluty CY użyta do zainicjowania wartości właściwości dla
 
 **ma wartość true** , jeśli właściwość została pomyślnie dodana. W przeciwnym razie **false**.
 
-## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
 Konstruktor. Inicjuje pola `rgProperties`, `cProperties`i `guidPropertySet` struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ podczas Identyfikator GUID służący do inicjowania pola `guidPropertySet`.
 *propset*<br/>
 podczas Inny obiekt `CDBPropSet` na potrzeby konstruowania kopii.
 
-## <a name="setguid"></a>CDBPropSet:: SetGuid
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGuid
 
 Ustawia pole `guidPropertySet` w strukturze `DBPROPSET`.
 
@@ -165,7 +165,7 @@ podczas Identyfikator GUID służący do ustawiania pola `guidPropertySet` struk
 
 To pole można również ustawić przez [konstruktora](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
 
 Przypisuje zawartość jednego zestawu właściwości do innego zestawu właściwości.
 

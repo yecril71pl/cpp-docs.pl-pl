@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b52661097ca1feab4c8045be240e4138a0c0f21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190667"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Linki `_bstr_t` opakowanie `BSTR`.
+Łączy otokę `_bstr_t` z `BSTR`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,19 +29,19 @@ void Attach(
 
 #### <a name="parameters"></a>Parametry
 
-*s*<br/>
-A `BSTR` skojarzony lub przypisane do, `_bstr_t` zmiennej.
+*wolumin*<br/>
+`BSTR`, która ma być skojarzona z lub przypisana do zmiennej `_bstr_t`.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli `_bstr_t` był wcześniej przypisany do innego `BSTR`, `_bstr_t` spowoduje oczyszczenie `BSTR` zasobu, jeśli żadne inne `_bstr_t` używają zmiennych `BSTR`.
+Jeśli `_bstr_t` była wcześniej dołączona do innego `BSTR`, `_bstr_t` czyści zasób `BSTR`, jeśli żadna inna zmienna `_bstr_t` nie używa `BSTR`.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) dla przykłady dotyczące używania **Dołącz**.
+Zobacz [_bstr_t:: Assign](../cpp/bstr-t-assign.md) dla przykładu przy użyciu **dołączania**.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_bstr_t, klasa](../cpp/bstr-t-class.md)

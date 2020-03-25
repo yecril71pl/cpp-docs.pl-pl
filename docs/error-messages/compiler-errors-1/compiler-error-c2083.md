@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2083
 ms.assetid: 5fc4f931-eab6-4d8d-a3ee-3b8e11e64b18
-ms.openlocfilehash: 5a09d4c1ca294ca082ed9a2fb00b015b2519ef5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf3fbde1ce1a79528a11fe6564ccf1604645f718
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207726"
 ---
 # <a name="compiler-error-c2083"></a>Błąd kompilatora C2083
 
-niedozwolone porównanie struct/union
+niedozwolone porównanie struktury/związku
 
-Struktury lub Unii jest porównywana bezpośrednio z innego typu zdefiniowanego przez użytkownika. Nie jest to dozwolone, jeśli nie zdefiniowano operator porównania lub istnieje konwersja na typ skalarny.
+Struktura lub Unia jest porównywana bezpośrednio z innym typem zdefiniowanym przez użytkownika. Ta wartość jest niedozwolona, jeśli nie zdefiniowano operatora porównania lub istnieje konwersja typu skalarnego.

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1512
 ms.assetid: 0a626ff3-63db-4797-abe4-31545ce2c2c1
-ms.openlocfilehash: 46a6a144e5820e243cf4bdeecf13f2b851b4bf75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3fed3d0de6a96f49df8bd8fdeed1c0148b1fe24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279376"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197655"
 ---
 # <a name="bscmake-error-bk1512"></a>Błąd BSCMAKE BK1512
 
-Nazwa pliku: Przekroczono pojemność
+Nazwa pliku: przekroczono pojemność
 
-BSCMAKE nie może utworzyć pliku informacyjnego przeglądarki, ponieważ liczba definicje, odwołania, modułów lub inne informacje przekracza limit.
+BSCMAKE nie może skompilować pliku informacji o przeglądaniu, ponieważ liczba definicji, odwołań, modułów lub innych informacji przekracza limit.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Wykluczyć pewne informacje przy użyciu /Em, /Es lub /Ei.
+1. Wykluczanie niektórych informacji przy użyciu/em,/ES lub/EI.
 
-1. Pominięto opcję /Iu.
+1. Pomiń opcję/IU.

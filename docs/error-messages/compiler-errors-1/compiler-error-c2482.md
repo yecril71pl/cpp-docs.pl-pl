@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205156"
 ---
 # <a name="compiler-error-c2482"></a>Błąd kompilatora C2482
 
->"*identyfikator*": dynamiczna inicjalizacja danych "thread" nie jest dozwolone w kodzie zarządzany WinRT
+>"*Identyfikator*": dynamiczna inicjalizacja danych "Thread" jest niedozwolona w kodzie zarządzanym/WinRT
 
 ## <a name="remarks"></a>Uwagi
 
-W zarządzanych lub kod WinRT, zmienne zadeklarowane za pomocą [__declspec(thread)](../../cpp/thread.md) atrybutu modyfikator klasy magazynu lub [thread_local](../../cpp/storage-classes-cpp.md#thread_local) specyfikatora klasy magazynu nie można zainicjować za pomocą wyrażenia wymaga wersji ewaluacyjnej, w czasie wykonywania. Statyczne wyrażenie jest wymagane do zainicjowania `__declspec(thread)` lub `thread_local` danych w tych środowiskach środowiska uruchomieniowego.
+W kodzie zarządzanym lub WinRT zmienne zadeklarowane przy użyciu atrybutu modyfikatora klasy magazynu [__declspec (wątku)](../../cpp/thread.md) lub [thread_localgo](../../cpp/storage-classes-cpp.md#thread_local) specyfikatora klasy magazynu nie mogą zostać zainicjowane przy użyciu wyrażenia wymagającego oceny w czasie wykonywania. Do zainicjowania `__declspec(thread)` lub `thread_local` danych w tych środowiskach środowiska uruchomieniowego jest wymagane wyrażenie statyczne.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2482 w zarządzanych (**/CLR**) i WinRT (**/ZW**) kod:
+Poniższy przykład generuje C2482 w kodzie Managed ( **/CLR**) i in WinRT ( **/zw**):
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Aby rozwiązać ten problem, inicjowanie magazynu wątków lokalnych za pomocą stałą, **constexpr**, lub wyrażenie statyczne. Wykonać oddzielnie inicjowanie właściwe dla wątków.
+Aby rozwiązać ten problem, zainicjuj lokalne przechowywanie wątków przy użyciu wyrażenia stałego, **constexpr**lub static. Wykonaj osobno każdą inicjalizację specyficzną dla wątku.

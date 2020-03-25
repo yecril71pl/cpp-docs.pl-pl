@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214850"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -26,11 +26,11 @@ Umożliwia określenie wartości domyślnej dla wpisanego parametru opcjonalnego
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość domyślna parametru.
+Wartość domyślna dla parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **DefaultValue** C++ ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/defaultvalue) MIDLvalue.
+Atrybut **DefaultValue** C++ ma taką samą funkcjonalność jak atrybut [MIDLvalue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Przykład
 
@@ -62,12 +62,12 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>

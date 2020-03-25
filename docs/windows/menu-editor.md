@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214451"
 ---
 # <a name="menu-editor-c"></a>Edytor menu (C++)
 
@@ -59,7 +59,7 @@ Menu umożliwiają rozmieszczenie poleceń w logicznym i łatwym w użyciu spos�
 
 ### <a name="to-create-a-standard-menu"></a>Aby utworzyć menu standardowe
 
-1. Przejdź do **widoku**menu,  > **inne okna** > **Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
+1. Przejdź do **widoku** menu, > **inne** > **Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
 
 1. Zaznacz pole **nowy element** (prostokąt zawierający *tekst*) na pasku menu.
 
@@ -113,7 +113,7 @@ Wybierz istniejącą nazwę menu i naciśnij klawisz **INSERT** lub kliknij praw
    Ten krok powoduje utworzenie wpisu w tabeli ciągów z tym samym identyfikatorem zasobu co utworzone polecenie menu.
 
    > [!NOTE]
-   > Polecenia monitujące mogą dotyczyć tylko elementów menu z właściwością popup **równą true**. Na przykład elementy menu najwyższego poziomu mogą mieć zapytanie, czy mają elementy menu podrzędnego. W celu **wyświetlenia monitu** należy wskazać, co się stanie, jeśli użytkownik wybierze element menu.
+   > Polecenia monitujące mogą dotyczyć tylko elementów menu z **Popup** właściwością popup **równą true**. Na przykład elementy menu najwyższego poziomu mogą mieć zapytanie, czy mają elementy menu podrzędnego. W celu **wyświetlenia monitu** należy wskazać, co się stanie, jeśli użytkownik wybierze element menu.
 
 1. Naciśnij klawisz **Enter** , aby zakończyć polecenie menu.
 
@@ -194,7 +194,7 @@ Zwykle podczas pracy w **Edytorze menu**zasób menu jest wyświetlany jako pasek
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Polecenia menu](../windows/menu-command-properties.md)<br/>

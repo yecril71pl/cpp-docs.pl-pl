@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210733"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl — Klasa
 
-Udostępnia implementację na potrzeby [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) interfejsu.
+Dostarcza implementację interfejsu [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,20 +43,20 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Klasa polecenia pochodną `ICommandTextImpl`.
+*&*<br/>
+Klasa polecenia pochodna od `ICommandTextImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** altdb.h
+**Nagłówek:** altdb. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
 |||
 |-|-|
-|[GetCommandText](#getcommandtext)|Zwraca tekst polecenia ustawione przez ostatnie wywołanie elementu [SetCommandText —](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[GetCommandText](#getcommandtext)|Zwraca polecenie tekstowe ustawione przez ostatnie wywołanie metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
 |[SetCommandText](#setcommandtext)|Ustawia tekst polecenia, zastępując istniejący tekst polecenia.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
@@ -67,11 +67,11 @@ Klasa polecenia pochodną `ICommandTextImpl`.
 
 ## <a name="remarks"></a>Uwagi
 
-Obowiązkowego interfejsu na polecenia.
+Obowiązkowy interfejs dla poleceń.
 
-## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
 
-Zwraca tekst polecenia ustawione przez ostatnie wywołanie elementu [SetCommandText —](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Zwraca polecenie tekstowe ustawione przez ostatnie wywołanie metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
 ### <a name="syntax"></a>Składnia
 
@@ -82,9 +82,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.
+Zobacz [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) w *dokumentacji programisty OLE DB*. Parametr *pguidDialect* jest domyślnie ignorowany.
 
-## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
 
 Ustawia tekst polecenia, zastępując istniejący tekst polecenia.
 
@@ -97,11 +97,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
 
-Zapisuje ciąg tekstu polecenia.
+Zapisuje ciąg tekstowy polecenia.
 
 ### <a name="syntax"></a>Składnia
 
@@ -109,7 +109,7 @@ Zapisuje ciąg tekstu polecenia.
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

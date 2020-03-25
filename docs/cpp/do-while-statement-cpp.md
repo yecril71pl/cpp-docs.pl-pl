@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189276"
 ---
 # <a name="do-while-statement-c"></a>do-while — instrukcja (C++)
 
-Wykonuje *instrukcji* wielokrotnie, aż określony warunek kończący ( *wyrażenie*) osiągnie wartość zero.
+Wykonuje *instrukcję* wielokrotnie, dopóki określony warunek zakończenia ( *wyrażenie*) zwróci wartość zero.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,17 +30,17 @@ while ( expression ) ;
 
 ## <a name="remarks"></a>Uwagi
 
-Test warunku zakończenia jest przeprowadzany po każdym wykonaniu pętli. w związku z tym **czy — gdy** pętla jest wykonywana raz lub więcej razy, w zależności od wartości wyrażenia ukończenia. **Czy — podczas** instrukcji można także zakończyć, gdy [podziału](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), lub [zwracają](../cpp/return-statement-cpp.md) instrukcja jest wykonywana w treści instrukcji.
+Test warunku zakończenia jest wykonywany po każdym wykonaniu pętli; w związku z tym pętla **do-while** wykonuje jeden lub więcej razy, w zależności od wartości wyrażenia zakończenia. Instrukcja **do-while** może również kończyć się, gdy instrukcja [Break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)lub [Return](../cpp/return-statement-cpp.md) jest wykonywana w treści instrukcji.
 
-*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnika. Wykonanie działa w następujący sposób:
+*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnikowy. Wykonanie przebiega w następujący sposób:
 
-1. Instrukcja zostaje wykonana.
+1. Treść instrukcji jest wykonywana.
 
-1. Następnie *wyrażenie* jest oceniany. Jeśli *wyrażenie* ma wartość FAŁSZ, **czy — gdy** kończy się i przekazuje kontrolę do następnej instrukcji w programie. Jeśli *wyrażenie* jest prawdziwe (niezerowe), proces jest powtarzany, zaczynając od kroku 1.
+1. Następnie *wyrażenie* jest oceniane. Jeśli *wyrażenie* ma wartość false, instrukcja **do-while** kończy działanie i kontrola przechodzi do następnej instrukcji w programie. Jeśli *wyrażenie* jest prawdziwe (niezerowe), proces jest powtarzany, zaczynając od kroku 1.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano **czy — gdy** instrukcji:
+W poniższym przykładzie pokazano instrukcję **do-while** :
 
 ```cpp
 // do_while_statement.cpp
@@ -55,7 +55,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

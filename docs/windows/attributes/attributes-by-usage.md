@@ -6,78 +6,78 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd5c5826b4119409dd288d0587c3e53a7d3f3aab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167397"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 
-Ten temat zawiera listę atrybutów zgodnie z elementów języka C++, których dotyczą.
+Ten temat zawiera listę atrybutów według elementów C++ języka, do których mają zastosowanie.
 
-Jeśli atrybut poprzedza element, który nie znajduje się w zakresie ten atrybut, blok atrybutu jest traktowany jako komentarz.
+Jeśli atrybut poprzedza element, który nie znajduje się w zakresie atrybutu, blok atrybutu jest traktowany jako komentarz.
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[Atrybuty modułów](module-attributes.md)|Dotyczy [modułu](module-cpp.md) atrybutu.|
-|[Atrybuty interfejsu](interface-attributes.md)|Dotyczy [__interface](../../cpp/interface.md) C++ — słowo kluczowe.|
-|[Atrybuty klasy](class-attributes.md)|Ma zastosowanie do słowa kluczowego języka C++.|
-|[Atrybuty metody](method-attributes.md)|Ma zastosowanie do metody w klasie, klasa coclass lub interfejs.|
-|[Atrybuty parametru](parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejsie.|
-|[Atrybuty składowych danych](data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|
-|[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)|Ma zastosowanie do słów kluczowych języka C++.|
-|[Atrybuty tablicy](array-attributes.md)|Ma zastosowanie do tablic lub `SAFEARRAY`s.|
-|[Oddzielne atrybuty](stand-alone-attributes.md)|Działa bardziej przypominające wiersz kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.|
-|[Atrybuty niestandardowe](custom-attributes-cpp.md)|Umożliwia użytkownikowi rozszerzanie metadanych.|
+|[Atrybuty modułów](module-attributes.md)|Dotyczy atrybutu [modułu](module-cpp.md) .|
+|[Atrybuty interfejsu](interface-attributes.md)|Dotyczy słowa kluczowego [__interface](../../cpp/interface.md) C++ .|
+|[Atrybuty klasy](class-attributes.md)|Stosuje się do C++ słowa kluczowego.|
+|[Atrybuty metody](method-attributes.md)|Dotyczy metod w klasie, klasie coclass lub interfejsie.|
+|[Atrybuty parametru](parameter-attributes.md)|Dotyczy parametrów metody w klasie lub interfejsie.|
+|[Atrybuty składowych danych](data-member-attributes.md)|Dotyczy składowych danych w klasie, klasie lub interfejsie.|
+|[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)|Stosuje się do C++ słów kluczowych.|
+|[Atrybuty tablicy](array-attributes.md)|Dotyczy tablic lub `SAFEARRAY`s.|
+|[Oddzielne atrybuty](stand-alone-attributes.md)|Działa podobnie jak wiersz kodu, ale nie działa na C++ słowie kluczowym. Autonomiczne instrukcje atrybutów wymagają średnika na końcu wiersza.|
+|[Atrybuty niestandardowe](custom-attributes-cpp.md)|Zezwala użytkownikowi na rozszerzonie metadanych.|
 
 ## <a name="module-attributes"></a>Atrybuty modułów
-Następujący atrybut będzie stosowany tylko do [modułu](module-cpp.md) atrybutu.
+Następujący atrybut może być stosowany tylko do atrybutu [modułu](module-cpp.md) .
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
+|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).|
 
 ## <a name="interface-attributes"></a>Atrybuty interfejsu
 
-Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) C++ — słowo kluczowe.
+Następujące atrybuty dotyczą słowa kluczowego [Interface (lub __interface)](../../cpp/interface.md) C++ .
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
-|[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
-|[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
-|[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
-|[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|
-|[helpfile](helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|
-|[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|
-|[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
-|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
-|[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
-|[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
-|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
-|[nonextensible](nonextensible.md)|Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójną](dual.md) interfejsu.|
-|[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
-|[object](object-cpp.md)|Określa niestandardowy interfejs.|
-|[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
-|[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
-|[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
-|[restricted](restricted.md)|Określa, które elementy członkowskie biblioteki nie może być wywoływana arbitralnie.|
-|[uuid](uuid-cpp-attributes.md)|Zawiera unikatowy identyfikator biblioteki|
+|[async_uuid](async-uuid.md)|Określa identyfikator UUID, który kieruje kompilator MIDL do definiowania synchronicznych i asynchronicznych wersji interfejsu COM.|
+|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnych atrybutów.|
+|[dispinterface](dispinterface.md)|Umieszcza interfejs w pliku. idl jako interfejs wysyłania.|
+|[dual](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
+|[export](export.md)|Powoduje, że struktura danych zostanie umieszczona w pliku IDL.|
+|[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tym elemencie w pliku pomocy.|
+|[helpfile](helpfile.md)|Ustawia nazwę pliku pomocy dla biblioteki typów.|
+|[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie.|
+|[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku HLP lub chm.|
+|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).|
+|[hidden](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[library_block](library-block.md)|Umieszcza konstrukcję w bloku biblioteki pliku IDL.|
+|[local](local-cpp.md)|Umożliwia użycie kompilatora MIDL jako generatora nagłówka, gdy jest używany w nagłówku interfejsu. W przypadku użycia w pojedynczej funkcji określa procedurę lokalną, dla której nie są generowane żadne wycinki.|
+|[nonextensible](nonextensible.md)|Określa, że implementacja `IDispatch` zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można jej rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójnym](dual.md) interfejsie.|
+|[odl](odl.md)|Identyfikuje interfejs jako interfejs ODL (Object Description Language).|
+|[object](object-cpp.md)|Identyfikuje niestandardowy interfejs.|
+|[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodny z automatyzacją.|
+|[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnika dla wszystkich wskaźników oprócz wskaźników najwyższego poziomu, które są wyświetlane na listach parametrów.|
+|[ptr](ptr.md)|Wyznacza wskaźnik jako pełny wskaźnik.|
+|[restricted](restricted.md)|Określa, które elementy członkowskie biblioteki nie mogą być wywoływane arbitralnie.|
+|[uuid](uuid-cpp-attributes.md)|Zapewnia unikatowy identyfikator biblioteki|
 
-Musisz przestrzegać tych reguł określających interfejs:
+Aby zdefiniować interfejs, należy przestrzegać następujących zasad:
 
-- Domyślna konwencja wywołania jest [__stdcall](../../cpp/stdcall.md).
+- Domyślna konwencja wywoływania to [__stdcall](../../cpp/stdcall.md).
 
-- Identyfikator GUID jest dostarczany za Ciebie, jeśli nie podasz.
+- Identyfikator GUID jest dostarczany dla Ciebie, jeśli nie zostanie podany.
 
-- Nie przeciążone metody są dozwolone.
+- Nie są dozwolone żadne przeciążone metody.
 
-Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
+Jeśli nie określisz atrybutu [UUID](uuid-cpp-attributes.md) i używasz tej samej nazwy interfejsu w różnych projektach atrybutów, generowany jest ten sam identyfikator GUID.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grup](attributes-by-group.md)<br/>

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209355"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Korzystanie z istniejącego zestawu rekordów ADO
 
-Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należy użyć ADO można otworzyć zestawu rekordów (odpowiadających dla zestawu wierszy OLE DB konsumenta szablonów). W przypadku zestawu rekordów, wykonaj następujące polecenie, aby nawiązać połączenie z zestawu wierszy OLE DB:
+Aby mieszać OLE DB Szablony konsumentów i obiekty danych aktywnych (ADO), należy użyć obiektów ADO do otwarcia zestawu rekordów (odpowiadającego zestawowi wierszy w szablonach OLE DB konsumentów). W przypadku zestawu rekordów wykonaj następujące czynności, aby nawiązać połączenie z zestawem wierszy OLE DB:
 
-1. Wywołaj `QueryInterface` dla `IRowset` i `IAccessor` wskaźników.
+1. Wywołaj `QueryInterface` dla wskaźników `IRowset` i `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należ
     ```
 
     > [!NOTE]
-    > *lpUnk* wskazuje `IUnknown` obiekt zestawu rekordów ADO.
+    > *lpUnk* wskazuje obiekt `IUnknown` zestawu rekordów ADO.
 
-1. Dołącz metody dostępu i zestawu wierszy do ich odpowiednich klas szablonów konsumentów OLE DB.
+1. Dołącz metodę dostępu i zestaw wierszy do odpowiednich OLE DB klas szablonu użytkownika.
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należ
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

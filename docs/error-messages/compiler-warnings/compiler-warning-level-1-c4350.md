@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4350
+title: Ostrzeżenie kompilatora (poziom 1) C4350
 ms.date: 11/04/2016
 f1_keywords:
 - C4350
 helpviewer_keywords:
 - C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
-ms.openlocfilehash: 8f23751151d8d83c68608d926ef422d56dde41a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 890ecd4fcec1212fa04a58b0eaab8c2eb4206763
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187222"
 ---
-# <a name="compiler-warning-level-1-c4350"></a>Kompilator ostrzeżenie (poziom 1) C4350
+# <a name="compiler-warning-level-1-c4350"></a>Ostrzeżenie kompilatora (poziom 1) C4350
 
 zmiana zachowania: wywołano element członkowski 'członek1' zamiast 'członek2'
 
-Odwołanie niestałe nie może być powiązane rvalue. W wersjach programu Visual C++ przed Visual Studio 2003 było możliwe powiązać rvalue odwołanie niestałe w inicjalizacji bezpośredniej. Ten kod wyświetla teraz ostrzeżenie.
+Element rvalue nie może być powiązany z odwołaniem niestałym. W wersjach programu Visual C++ przed visual Studio 2003 można było powiązać rvalue z odwołaniem niestałym w ramach inicjalizacji bezpośredniej. Ten kod zawiera teraz ostrzeżenie.
 
-W celu zapewnienia zgodności z poprzednimi wersjami jest nadal możliwe powiązać rvalues odwołania do wartości innej niż stała, ale konwersje standardowe są preferowane w przypadku, gdy jest to możliwe.
+W celu zapewnienia zgodności z poprzednimi wersjami nadal można powiązać rvalues z odwołaniami niebędącymi const, ale standardowe konwersje są preferowane wszędzie tam, gdzie to możliwe.
 
-To ostrzeżenie reprezentuje zmianę zachowania kompilatora Visual C++ .NET 2002. Jeśli włączone, to ostrzeżenie można prawdopodobnie należy podać prawidłowy kod. Na przykład może być udzielona, gdy za pomocą **std::auto_ptr** szablonu klasy.
+To ostrzeżenie reprezentuje zmianę zachowania z kompilatora Visual C++ .NET 2002. W przypadku włączenia tego ostrzeżenia może być możliwe poprawność kodu. Na przykład, może być podawane przy użyciu szablonu klasy **std:: auto_ptr** .
 
-Jeśli to ostrzeżenie, należy zbadać jego kod, aby sprawdzić, czy jest to uzależnione od rvalues wiązanie do odwołania o wartości innej niż stała. Dodawanie typu const do odwołania albo udostępniające dodatkowe przeciążenia odwołanie niestałe może rozwiązać ten problem.
+Jeśli zostanie wyświetlone to ostrzeżenie, sprawdź kod, aby sprawdzić, czy zależy on od powiązania rvalues z odwołaniami niebędącymi const. Dodanie stałej do odwołania lub dostarczenie dodatkowego przeciążenia odwołania do stałej może rozwiązać problem.
 
-To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Poniższy przykład spowoduje wygenerowanie C4350:
+Poniższy przykład generuje C4350:
 
 ```cpp
 // C4350.cpp

@@ -15,40 +15,40 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de6f514d8e3ad8e7715c9cd13a695e3398fffc8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164810"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Ostrzeżenie kompilatora (poziom 1 i 3) C4793
 
-> "*funkcja*": funkcja jest kompilowana jako kod natywny: "*Przyczyna*"
+> "*Function*": funkcja została skompilowana jako kod natywny: "*Przyczyna*"
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator nie może skompilować *funkcja* wywołanie kodu zarządzanego, nawet jeśli [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) określono opcję kompilatora. Zamiast tego kompilator emituje ostrzeżenie C4793 i komunikat wyjaśniający kontynuacji, a następnie kompiluje *funkcja* kod natywny. Komunikat kontynuacji zawiera *Przyczyna* tekst, który wyjaśnia, dlaczego *funkcja* nie może zostać skompilowana do `MSIL`.
+Kompilator nie może kompilować *funkcji* do kodu zarządzanego, mimo że określono opcję kompilatora [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Zamiast tego kompilator emituje ostrzeżenie C4793 i wyjaśniający komunikat kontynuacji, a następnie kompiluje *funkcję* w kodzie natywnym. Komunikat kontynuacji zawiera tekst *przyczyny* wyjaśniający, dlaczego nie można skompilować *funkcji* do `MSIL`.
 
-To ostrzeżenie poziomu 1 po określeniu **/CLR: pure** — opcja kompilatora.  **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Jest to ostrzeżenie poziomu 1 w przypadku określenia opcji **/CLR: Pure** kompilatora.  **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Poniższa tabela zawiera listę wszystkich możliwych kontynuacji wiadomości.
+W poniższej tabeli wymieniono wszystkie możliwe komunikaty kontynuacji.
 
-|Przyczyna wiadomości|Uwagi|
+|Komunikat dotyczący przyczyny|Uwagi|
 |--------------------|-------------|
-|Wyrównane typy danych nie są obsługiwane w kodzie zarządzanym|Środowisko CLR musi być w stanie przydzielić danych zgodnie z potrzebami, która może nie być możliwe w przypadku danych jest powiązana z deklaracji, takich jak [__m128](../../cpp/m128.md) lub [wyrównać](../../cpp/align-cpp.md).|
-|Funkcje, które używają "__ImageBase" nie są obsługiwane w kodzie zarządzanym|`__ImageBase` jest symbol specjalny konsolidatora, który zazwyczaj jest używana tylko przez kod macierzysty niskiego poziomu można załadować biblioteki DLL.|
-|varargs nie są obsługiwane przez "/ clr" — opcja kompilatora|Funkcje natywne nie można wywołać funkcji zarządzanych, które mają [listy zmiennych argumentów](../../cpp/functions-with-variable-argument-lists-cpp.md) (VARARG), ponieważ funkcje mają inny stos wymagania związane z układem. Jednak w przypadku określenia **/CLR: pure** — opcja kompilatora, zmiennym argumentem list są obsługiwane, ponieważ zestaw może zawierać tylko funkcje zarządzane. Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
-|64-bitowe środowisko CLR nie obsługuje danych zadeklarowany za pomocą modyfikatora __ptr32|Wskaźnik musi być taki sam rozmiar jak wskaźnik natywny na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|32-bitowe środowisko CLR nie obsługuje danych zadeklarowany za pomocą modyfikatora __ptr64|Wskaźnik musi być taki sam rozmiar jak wskaźnik natywny na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|Funkcje wewnętrzne co najmniej jeden nie jest obsługiwana w kodzie zarządzanym|Nazwa wewnętrznego nie jest dostępna w czasie, który jest emitowane wiadomości. Jednak wewnętrznie, powoduje, że ten komunikat zazwyczaj reprezentuje instrukcji niskiego poziomu maszyny.|
-|Wbudowany natywny zestaw (__asm) nie jest obsługiwana w kodzie zarządzanym|[Wbudowany kod asemblera](../../assembler/inline/asm.md) może zawierać dowolne kodu natywnego, które nie mogą być zarządzane.|
-|Wywołanie funkcji wirtualnej __clrcall nie muszą być kompilowane jako natywne|Innej niż[__clrcall](../../cpp/clrcall.md) thunk funkcji wirtualnej musi używać adresu niezarządzanych.|
-|Funkcji za pomocą "_setjmp powoduje" muszą być kompilowane jako natywne|Środowisko CLR musi mieć możliwość kontrolowania wykonywania programu. Jednak [setjmp](../../cpp/using-setjmp-longjmp.md) funkcja pomija wykonywania regularnych programu, zapisywanie i przywracanie informacji niskiego poziomu, takie jak rejestrów i stan wykonywania.|
+|Wyrównane typy danych nie są obsługiwane w kodzie zarządzanym|Środowisko CLR musi być w stanie alokować dane zgodnie z wymaganiami, co może nie być możliwe, jeśli dane są wyrównane z deklaracjami, takimi jak [__m128](../../cpp/m128.md) lub [align](../../cpp/align-cpp.md).|
+|Funkcje używające "__ImageBase" nie są obsługiwane w kodzie zarządzanym|`__ImageBase` jest specjalnym symbolem konsolidatora, który jest zazwyczaj używany tylko przez kod natywny niskiego poziomu do załadowania biblioteki DLL.|
+|element VarArgs nie jest obsługiwany przez opcję kompilatora "/CLR"|Funkcje natywne nie mogą wywoływać funkcji zarządzanych, które mają [listę zmiennych argumentów](../../cpp/functions-with-variable-argument-lists-cpp.md) (VarArgs), ponieważ funkcje mają różne wymagania układu stosu. Jeśli jednak określisz opcję **/CLR: Pure** kompilatora, listy zmiennych argumentów są obsługiwane, ponieważ zestaw może zawierać tylko funkcje zarządzane. Aby uzyskać więcej informacji, zobacz [czysty i możliwy doC++zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
+|64-bitowe środowisko CLR nie obsługuje danych zadeklarowanych za pomocą modyfikatora __ptr32|Wskaźnik musi mieć taki sam rozmiar jak natywny wskaźnik na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32 \__ptr64](../../cpp/ptr32-ptr64.md).|
+|32-bitowe środowisko CLR nie obsługuje danych zadeklarowanych za pomocą modyfikatora __ptr64|Wskaźnik musi mieć taki sam rozmiar jak natywny wskaźnik na bieżącej platformie. Aby uzyskać więcej informacji, zobacz [__ptr32 \__ptr64](../../cpp/ptr32-ptr64.md).|
+|Co najmniej jeden z elementów wewnętrznych nie jest obsługiwany w kodzie zarządzanym|Nazwa wewnętrzna nie jest dostępna w chwili, gdy komunikat jest emitowany. Jednak wewnętrznie, które powoduje, że ten komunikat zazwyczaj reprezentuje instrukcję komputera niskiego poziomu.|
+|Wbudowany zestaw natywny ("__asm") nie jest obsługiwany w kodzie zarządzanym|[Wbudowany kod asemblera](../../assembler/inline/asm.md) może zawierać dowolny kod natywny, którego nie można zarządzać.|
+|Thunk funkcji wirtualnych innej niż __clrcall muszą być skompilowane jako natywne|Funkcja wirtualna[nie__clrcall](../../cpp/clrcall.md) thunk musi używać niezarządzanego adresu.|
+|Funkcja używająca elementu "_setjmp" musi być skompilowana jako natywna|Środowisko CLR musi być w stanie kontrolować wykonywanie programu. Jednak funkcja [setjmp](../../cpp/using-setjmp-longjmp.md) pomija regularne wykonywanie programów przez zapisanie i przywrócenie informacji niskiego poziomu, takich jak rejestry i stan wykonania.|
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4793.
+Poniższy przykład generuje C4793.
 
 ```cpp
 // C4793.cpp
@@ -66,7 +66,7 @@ warning C4793: 'asmfunc' : function is compiled as native code:
         Inline native assembly ('__asm') is not supported in managed code
 ```
 
-Poniższy przykład spowoduje wygenerowanie C4793.
+Poniższy przykład generuje C4793.
 
 ```cpp
 // C4793_b.cpp

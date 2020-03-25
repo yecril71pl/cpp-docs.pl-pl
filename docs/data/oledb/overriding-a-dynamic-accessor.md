@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209849"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Zastępowanie dynamicznej metody dostępu
 
-Kiedy używać dynamicznej metody dostępu takich jak `CDynamicAccessor`, polecenie `Open` metoda tworzy metodę dostępu, możesz automatycznie na podstawie informacji o kolumnie otwartego zestawu wierszy. Można zastąpić dynamicznej metody dostępu do kontrolowania, dokładnie tak, jak kolumny są powiązane.
+W przypadku korzystania z dynamicznego akcesora, takiego jak `CDynamicAccessor`, polecenie `Open` Metoda automatycznie tworzy metodę dostępu dla Ciebie na podstawie informacji o kolumnie otwartego zestawu wierszy. Można zastąpić dynamiczną metodę dostępu, aby dokładnie kontrolować sposób powiązania kolumn.
 
-Aby zastąpić dynamicznej metody dostępu, należy przekazać **false** jako ostatni parametr `CCommand::Open` metody. Zapobiega to `Open` z automatycznego tworzenia metody dostępu. Następnie możesz wywołać `GetColumnInfo` i wywołać `AddBindEntry` dla każdej kolumny, które chcesz powiązać. Poniższy kod pokazuje, jak to zrobić:
+Aby zastąpić dynamiczną metodę dostępu, należy przekazać **wartość false** jako ostatni parametr do metody `CCommand::Open`. Uniemożliwia to `Open` automatyczne tworzenie metody dostępu. Następnie można wywoływać `GetColumnInfo` i wywoływać `AddBindEntry` dla każdej kolumny, która ma zostać powiązana. Poniższy kod pokazuje, jak to zrobić:
 
 ```cpp
 USES_CONVERSION;
@@ -69,6 +69,6 @@ while (product.MoveNext() == S_OK)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

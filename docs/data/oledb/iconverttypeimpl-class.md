@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210694"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl — Klasa
 
-Udostępnia implementację [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) interfejsu.
+Zapewnia implementację interfejsu [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,28 +35,28 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Z klasą pochodną `IConvertTypeImpl`.
+*&*<br/>
+Klasa, która pochodzi od `IConvertTypeImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|Udostępnia informacje o dostępności konwersje typów dotyczącą polecenia lub w zestawie wierszy.|
+|[Przekonwertuj](#canconvert)|Podaje informacje o dostępności konwersji typu dla polecenia lub zestawu wierszy.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest obowiązkowa w przypadku poleceń, zestawy wierszy i zestawy wierszy indeksu. `IConvertTypeImpl` implementuje interfejs przez delegowanie do konwersji obiektu pochodzącego z OLE DB.
+Ten interfejs jest obowiązkowy dla poleceń, zestawów wierszy i zestawów wierszy indeksu. `IConvertTypeImpl` implementuje interfejs poprzez delegowanie do obiektu konwersji dostarczonego przez OLE DB.
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl —:: setconvert
 
-Udostępnia informacje o dostępności konwersje typów dotyczącą polecenia lub w zestawie wierszy.
+Podaje informacje o dostępności konwersji typu dla polecenia lub zestawu wierszy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IConvertType:: deconvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) in the *OLE DB programmer's Reference*.
 
 ### <a name="remarks"></a>Uwagi
 
 Używa konwersji danych OLE DB w `MSADC.DLL`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

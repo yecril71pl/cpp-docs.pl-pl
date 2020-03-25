@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2654
 ms.assetid: ca7de1bd-576b-40bf-96fc-a91984827d20
-ms.openlocfilehash: 31bd7cb3d6566b7a0cb1d7f264a2f88f9811ef46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1a3bc8c87a4c4e0d8237d8c7a283f34a6053b7a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177199"
 ---
 # <a name="compiler-error-c2654"></a>Błąd kompilatora C2654
 
-'Identyfikator': próba uzyskania dostępu do składowej spoza funkcji składowej
+"Identyfikator": próba uzyskania dostępu do składowej spoza funkcji składowej
 
-Element członkowski jest dostępny w deklaracji. Element członkowski danych są dostępne tylko w funkcji elementów członkowskich.
+Dostęp do elementu członkowskiego jest uzyskiwany w deklaracji. Dostęp do danych elementu członkowskiego można uzyskać tylko w funkcjach składowych.
 
-Ten błąd może być spowodowany podczas próby zainicjowania zmiennych w deklaracji. W tym celu należy użyć konstruktora.
+Ten błąd może być spowodowany próbą zainicjowania zmiennych w deklaracji. Użyj w tym celu konstruktora.

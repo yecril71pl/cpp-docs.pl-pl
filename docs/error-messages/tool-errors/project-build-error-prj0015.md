@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0015
 ms.assetid: 2096c8f1-e96c-49a4-a690-1cb893a8bf6f
-ms.openlocfilehash: b83c8f6ba7dac5b4af44cb03d941750fb0092df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d88a3c2c25542cf492f374fb9857e709697c865d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192578"
 ---
 # <a name="project-build-error-prj0015"></a>Błąd PRJ0015 kompilacji projektu
 
-Urządzenie o wartości NULL nie ma w systemie. Nie możemy do uruchomienia kompilacji.
+W systemie brakuje urządzenia o wartości NULL. Nie można uruchomić kompilacji.
 
-Ten błąd może być spowodowany przez niewystarczające zasoby systemu. Zamknij niektóre aplikacje lub ponowne uruchomienie.
+Przyczyną tego błędu może być mała z zasobów systemowych. Zamknij niektóre aplikacje lub Uruchom ponownie.
 
-Mogą także spowodowane, jeśli nie masz wystarczających uprawnień do urządzenia o wartości NULL na komputerze.
+Może być również przyczyną, że nie masz wystarczających uprawnień do urządzenia o wartości NULL na komputerze.

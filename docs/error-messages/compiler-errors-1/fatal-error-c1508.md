@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1508
 ms.assetid: 1112c17d-d60f-470d-b886-fd1a9556c0ea
-ms.openlocfilehash: 7a68fb016406b238bc322955dc5dd2f79253c0fc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 57940484b581d6aaadcb9a0ea9078f348a631973
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203011"
 ---
 # <a name="fatal-error-c1508"></a>Błąd krytyczny C1508
 
-ograniczenie kompilatora: 'Funkcja': więcej niż 65 535 bajtów argumentu
+ograniczenie kompilatora: "Function": więcej niż 65535 bajtów argumentu
 
-Parametry formalne funkcji przekracza limit 65 535 bajtów.
+Formalne parametry funkcji przekraczają limit 65535 bajtów.

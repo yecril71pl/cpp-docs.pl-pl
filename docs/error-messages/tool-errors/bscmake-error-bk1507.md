@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197733"
 ---
 # <a name="bscmake-error-bk1507"></a>Błąd BSCMAKE BK1507
 
-Nie można otworzyć pliku tymczasowego "filename" [: przyczyny]
+nie można otworzyć pliku tymczasowego "filename" [: Przyczyna]
 
-BSCMAKE, nie można otworzyć pliku tymczasowego.
+BSCMAKE nie może otworzyć pliku tymczasowego.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. **TMP** zmienna środowiskowa nie jest równa prawidłowy dysk i katalog.
+1. Zmienna środowiskowa **tmp** nie jest ustawiona na prawidłowy dysk i katalog.
 
-1. Pełne dysku.
+1. Pełny dysk.

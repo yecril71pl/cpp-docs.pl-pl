@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: 0cf1b47cc03d1839ae5c547393c3c193dab439d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c82d756690c6c2a719cb03f458c471aa44e3d5b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211734"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor — Klasa
 
-Może służyć jako argument szablonu (`TAccessor`) dla klasy szablonów, takich jak `CCommand` i `CTable`, który wymaga argumentu klasy dostępu.
+Może służyć jako argument szablonu (`TAccessor`) dla klas szablonu, takich jak `CCommand` i `CTable`, które wymagają argumentu klasy metody dostępu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,39 +27,39 @@ class CNoAccessor
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `CNoAccessor` jako argument szablonu, jeśli nie chcesz, aby klasy, która ma obsługiwać parametry lub kolumny wyjściowe.
+Użyj `CNoAccessor` jako argumentu szablonu, gdy nie chcesz, aby Klasa obsługiwała parametry lub kolumny wyjściowe.
 
-`CNoAccessor` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:
+`CNoAccessor` implementuje następujące metody zastępcze, z których każdy odpowiada innym metodom klasy metody dostępu:
 
-- `BindColumns` — Wiąże kolumn metod dostępu.
+- `BindColumns` — wiąże kolumny z dostępem do metod dostępu.
 
-- `BindParameters` — Wiąże parametry utworzonych kolumn.
+- `BindParameters` — tworzy powiązanie utworzonych parametrów z kolumnami.
 
-- `Bind` -Tworzy wiązania.
+- `Bind` — tworzy powiązania.
 
-- `Close` -Zamyka akcesor.
+- `Close` — zamyka metodę dostępu.
 
-- `ReleaseAccessors` -Zwalnia Akcesory utworzone przez klasę.
+- `ReleaseAccessors` — zwalnia metody dostępu utworzone przez klasę.
 
-- `FreeRecordMemory` -Zwalnia żadnej kolumny w bieżącym rekordzie, które muszą zostać uwolniona.
+- `FreeRecordMemory` — zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.
 
-- `GetColumnInfo` — Pobiera informacje o kolumnach z otwartego zestawu wierszy.
+- `GetColumnInfo` — pobiera informacje o kolumnie z otwartego zestawu wierszy.
 
-- `GetNumAccessors` -Pobiera liczbę metod dostępu tworzone przez klasę.
+- `GetNumAccessors` — Pobiera liczbę metod dostępu utworzonych przez klasę.
 
-- `IsAutoAccessor` — Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.
+- `IsAutoAccessor`-zwraca wartość true, jeśli podczas operacji przenoszenia dane są pobierane automatycznie.
 
-- `GetHAccessor` -Pobiera dojście metody dostępu określonej metody dostępu.
+- `GetHAccessor` — Pobiera dojście metody dostępu do określonego akcesora.
 
-- `GetBuffer` -Pobiera wskaźnik do buforu zakładki.
+- `GetBuffer` — Pobiera wskaźnik do buforu zakładek.
 
-- `NoBindOnNullRowset` -Zapobiega powiązania danych na pusty zestawów wierszy.
+- `NoBindOnNullRowset` — uniemożliwia powiązanie danych z pustymi zestawami wierszy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

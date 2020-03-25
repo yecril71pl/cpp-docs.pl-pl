@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188663"
 ---
 # <a name="final-specifier"></a>final, specyfikator
 
-Możesz użyć **końcowego** — słowo kluczowe, aby wyznaczyć funkcje wirtualne, które nie mogą być zastępowane w klasie pochodnej. Można również użyć do wyznaczenia klas, które nie może być dziedziczona.
+Możesz użyć słowa kluczowego **Final** , aby wyznaczyć funkcje wirtualne, których nie można zastąpić w klasie pochodnej. Można go również użyć do wyznaczania klas, które nie mogą być dziedziczone.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,13 +26,13 @@ class class-name final base-classes
 
 ## <a name="remarks"></a>Uwagi
 
-**końcowe** jest zależny od kontekstu i ma specjalne znaczenie, gdy jest używany po deklarację funkcji lub klasy nazwę; w przeciwnym razie, nie jest zarezerwowanym słowem kluczowym tylko.
+**wersja ostateczna** jest zależna od kontekstu i ma specjalne znaczenie tylko wtedy, gdy jest używana po deklaracji funkcji lub nazwie klasy; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.
 
-Gdy **końcowego** jest używany w deklaracjach klas `base-classes` jest opcjonalnym składnikiem deklaracji.
+Gdy **końcowa** jest używana w deklaracjach klas, `base-classes` jest opcjonalną częścią deklaracji.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto **końcowego** — słowo kluczowe, aby określić, czy funkcja wirtualna nie może być zastąpiona.
+Poniższy przykład używa **końcowego** słowa kluczowego, aby określić, że nie można zastąpić funkcji wirtualnej.
 
 ```cpp
 class BaseClass
@@ -47,9 +47,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Uzyskać informacji o sposobie określania, funkcje składowe można przesłonić, zobacz [specyfikator override](../cpp/override-specifier.md).
+Aby dowiedzieć się, jak określić, że funkcje składowe mogą zostać zastąpione, zobacz [specyfikator override](../cpp/override-specifier.md).
 
-W następnym przykładzie użyto **końcowego** — słowo kluczowe, aby określić, że klasa nie może być dziedziczona.
+W następnym przykładzie używane jest słowo kluczowe **Final** , aby określić, że Klasa nie może być dziedziczona.
 
 ```cpp
 class BaseClass final
@@ -62,7 +62,7 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [override, specyfikator](../cpp/override-specifier.md)

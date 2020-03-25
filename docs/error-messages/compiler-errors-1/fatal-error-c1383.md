@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1383
 ms.assetid: ca224d14-d687-4fd6-80c2-8b82f28924ea
-ms.openlocfilehash: 4ab96c0516ee5593a969669c03ae22f0c211ae27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c0be830cb56b760f1397ea2b2f81b42a87e9ba6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203089"
 ---
 # <a name="fatal-error-c1383"></a>Błąd krytyczny C1383
 
-— Opcja kompilatora /GL jest niezgodna z zainstalowaną wersją środowiska uruchomieniowego języka wspólnego
+Opcja kompilatora/GL jest niezgodna z zainstalowaną wersją środowiska uruchomieniowego języka wspólnego
 
-C1383 występuje podczas korzystania z poprzedniej wersji środowiska uruchomieniowego języka wspólnego za pomocą kompilatora nowsza, a podczas kompilowania z **/CLR** i   **/GL.**
+C1383 występuje w przypadku używania poprzedniej wersji środowiska uruchomieniowego języka wspólnego z nowszym kompilatorem i podczas kompilowania z **/CLR** i **/GL.**
 
-Aby rozwiązać problem, nie należy używać **/GL** z **/CLR** lub zainstaluj wersję środowiska uruchomieniowego języka wspólnego dostarczanej z kompilatora.
+Aby rozwiązać ten problem, należy użyć opcji **/GL** with **/CLR** lub zainstalować wersję środowiska uruchomieniowego języka wspólnego, która została dostarczona z kompilatorem.
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) i [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) i [/GL (Optymalizacja całego programu)](../../build/reference/gl-whole-program-optimization.md).

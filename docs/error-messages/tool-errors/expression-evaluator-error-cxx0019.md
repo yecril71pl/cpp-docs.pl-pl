@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CXX0019
 - CAN0019
 ms.assetid: 4c6431fd-3310-4a61-934d-58b070b330fe
-ms.openlocfilehash: 266e97f28cf0f27cb87e9743399c66aba87c0e8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61646462eeba4918a4993b23f7f4b394083296ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397110"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195893"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Błąd CXX0019 programu Expression Evaluator
 
-Zły typ rzutowania
+nieprawidłowe rzutowanie typu
 
-Ewaluator wyrażeń C nie można wykonać rzutowanie, jak zostały napisane typu.
+Ewaluatora wyrażenia języka C nie może wykonać rzutowania typu jako zapisaną.
 
-Ten błąd jest taka sama jak CAN0019.
+Ten błąd jest identyczny z CAN0019.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
 1. Określony typ jest nieznany.
 
-1. Wystąpiło zbyt wiele poziomów typów wskaźnika. Na przykład rzutowanie typu
+1. Wystąpiło zbyt wiele poziomów typu wskaźnika. Na przykład typ rzutowania
 
     ```
     (char **)h_message
     ```
 
-   Nie można obliczyć przez Ewaluator wyrażeń C.
+   nie można obliczyć przy użyciu ewaluatora wyrażeń języka C.

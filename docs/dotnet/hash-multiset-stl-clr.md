@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-ms.openlocfilehash: 8d8e7ab9bcbaf9ea8ce95558c53d5936473f9c8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87315a24f314222f91e6aa0536ca442bf00f012c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208693"
 ---
-# <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
+# <a name="hash_multiset-stlclr"></a>hash_multiset (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającego dostęp dwukierunkowy. Korzystasz z kontenera `hash_multiset` każdego wpisu tabeli przechowywania dwukierunkowy, aby zarządzać sekwencję elementów w postaci tabeli wyznaczania wartości skrótu, połączoną listę węzłów i w każdym węźle przechowywania jeden element. Wartość każdy element służy jako klucz do ustalania kolejności sekwencji.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. `hash_multiset` kontenera służy do zarządzania sekwencją elementów jako tabelą skrótów, każdy wpis w tabeli przechowujący dwukierunkową listę połączonych węzłów oraz każdy węzeł przechowujący jeden element. Wartość każdego elementu jest używana jako klucz do porządkowania sekwencji.
 
-W poniższym opisie `GValue` jest taka sama jak `GKey`, który z kolei jest taka sama jak *klucz* o ile nie jest typem odwołania, w którym to przypadku jest `Key^`.
+W poniższym opisie `GValue` jest taka sama jak `GKey`, która z kolei jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w tym przypadku jest `Key^`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -126,14 +126,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
-Typ kluczowy składnik elementu w kontrolowanej sekwencji.
+*Klucz*<br/>
+Typ składnika klucza elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext — / hash_set >
+**Nagłówek:** \<cliext/hash_set >
 
-**Namespace:** cliext —
+**Przestrzeń nazw:** cliext
 
 ## <a name="declarations"></a>Deklaracje
 
@@ -141,20 +141,20 @@ Typ kluczowy składnik elementu w kontrolowanej sekwencji.
 |---------------------|-----------------|
 |[hash_multiset::const_iterator (STL/CLR)](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|
 |[hash_multiset::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|
-|[hash_multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ iteratora odwrotnego stałego dla kontrolowanej sekwencji.|
-|[hash_multiset::difference_type (STL/CLR)](#difference_type)|Typ (prawdopodobnie odległości ze znakiem) między dwoma elementami.|
-|[hash_multiset::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla kontenera.|
-|[hash_multiset::generic_iterator (STL/CLR)](#generic_iterator)|Typ iteratora dla ogólny interfejs dla kontenera.|
-|[hash_multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ iteratora odwrotnego dla ogólny interfejs dla kontenera.|
-|[hash_multiset::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólny interfejs dla kontenera.|
-|[hash_multiset::hasher (STL/CLR)](#hasher)|Delegat wyznaczania wartości skrótu dla klucza.|
+|[hash_multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.|
+|[hash_multiset::difference_type (STL/CLR)](#difference_type)|Typ (prawdopodobnie podpisany) odległości między dwoma elementami.|
+|[hash_multiset::generic_container (STL/CLR)](#generic_container)|Typ interfejsu generycznego dla kontenera.|
+|[hash_multiset::generic_iterator (STL/CLR)](#generic_iterator)|Typ iteratora dla interfejsu generycznego dla kontenera.|
+|[hash_multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ iteratora odwrotnego dla interfejsu generycznego dla kontenera.|
+|[hash_multiset::generic_value (STL/CLR)](#generic_value)|Typ elementu dla interfejsu generycznego dla kontenera.|
+|[hash_multiset::hasher (STL/CLR)](#hasher)|Delegat skrótu dla klucza.|
 |[hash_multiset::iterator (STL/CLR)](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
-|[hash_multiset::key_compare (STL/CLR)](#key_compare)|Szeregowania delegat dla obiektu dwa klucze.|
+|[hash_multiset::key_compare (STL/CLR)](#key_compare)|Delegat porządkowania dla dwóch kluczy.|
 |[hash_multiset::key_type (STL/CLR)](#key_type)|Typ klucza sortowania.|
 |[hash_multiset::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|
 |[hash_multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ iteratora odwrotnego dla kontrolowanej sekwencji.|
-|[hash_multiset::size_type (STL/CLR)](#size_type)|Typ odległości (wartość nieujemną) między dwoma elementami.|
-|[hash_multiset::value_compare (STL/CLR)](#value_compare)|Szeregowania delegat dla obiektu dwie wartości elementów.|
+|[hash_multiset::size_type (STL/CLR)](#size_type)|Typ (nieujemnej) odległości między dwoma elementami.|
+|[hash_multiset::value_compare (STL/CLR)](#value_compare)|Delegat porządkowania dla dwóch wartości elementów.|
 |[hash_multiset::value_type (STL/CLR)](#value_type)|Typ elementu.|
 
 |Funkcja elementów członkowskich|Opis|
@@ -162,7 +162,7 @@ Typ kluczowy składnik elementu w kontrolowanej sekwencji.
 |[hash_multiset::begin (STL/CLR)](#begin)|Określa początek kontrolowanej sekwencji.|
 |[hash_multiset::bucket_count (STL/CLR)](#bucket_count)|Zlicza liczbę przedziałów.|
 |[hash_multiset::clear (STL/CLR)](#clear)|Usuwa wszystkie elementy.|
-|[hash_multiset::count (STL/CLR)](#count)|Liczba elementów pasujących do określonego klucza.|
+|[hash_multiset::count (STL/CLR)](#count)|Zlicza elementy pasujące do określonego klucza.|
 |[hash_multiset::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|
 |[hash_multiset::end (STL/CLR)](#end)|Określa koniec kontrolowanej sekwencji.|
 |[hash_multiset::equal_range (STL/CLR)](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
@@ -171,72 +171,72 @@ Typ kluczowy składnik elementu w kontrolowanej sekwencji.
 |[hash_multiset::hash_delegate (STL/CLR)](#hash_delegate)|Kopiuje delegata wyznaczania wartości skrótu dla klucza.|
 |[hash_multiset::hash_multiset (STL/CLR)](#hash_multiset)|Konstruuje obiekt kontenera.|
 |[hash_multiset::insert (STL/CLR)](#insert)|Dodaje elementy.|
-|[hash_multiset::key_comp (STL/CLR)](#key_comp)|Kopiuje szeregowania delegata dwa klucze.|
+|[hash_multiset::key_comp (STL/CLR)](#key_comp)|Kopiuje delegata porządkowania dla dwóch kluczy.|
 |[hash_multiset::load_factor (STL/CLR)](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[hash_multiset::lower_bound (STL/CLR)](#lower_bound)|Znajduje początek zakresu, który odpowiada określonemu kluczowi.|
-|[hash_multiset::make_value (STL/CLR)](#make_value)|Tworzy obiekt wartości.|
+|[hash_multiset::make_value (STL/CLR)](#make_value)|Konstruuje obiekt wartości.|
 |[hash_multiset::max_load_factor (STL/CLR)](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|
-|[hash_multiset::rbegin (STL/CLR)](#rbegin)|Określa początek kontrolowanej sekwencji odwróconej.|
+|[hash_multiset::rbegin (STL/CLR)](#rbegin)|Określa początek odwróconej sekwencji kontrolowanej.|
 |[hash_multiset::rehash (STL/CLR)](#rehash)|Przebudowuje tabelę mieszania.|
-|[hash_multiset::rend (STL/CLR)](#rend)|Określa koniec kontrolowanej sekwencji odwróconej.|
+|[hash_multiset::rend (STL/CLR)](#rend)|Określa koniec odwróconej kontrolowanej sekwencji.|
 |[hash_multiset::size (STL/CLR)](#size)|Liczy liczbę elementów.|
 |[hash_multiset::swap (STL/CLR)](#swap)|Zamienia zawartości dwóch kontenerów.|
-|[hash_multiset::to_array (STL/CLR)](#to_array)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|
+|[hash_multiset::to_array (STL/CLR)](#to_array)|Kopiuje przekontrolowaną sekwencję do nowej tablicy.|
 |[hash_multiset::upper_bound (STL/CLR)](#upper_bound)|Znajduje koniec zakresu, który odpowiada określonemu kluczowi.|
-|[hash_multiset::value_comp (STL/CLR)](#value_comp)|Kopiuje szeregowania delegata dwie wartości elementów.|
+|[hash_multiset::value_comp (STL/CLR)](#value_comp)|Kopiuje delegata porządkowania dla dwóch wartości elementów.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|[hash_multiset::operator= (STL/CLR)](#op)|Zastępuje kontrolowanej sekwencji.|
+|[hash_multiset::operator= (STL/CLR)](#op)|Zastępuje kontrolowaną sekwencję.|
 
 ## <a name="interfaces"></a>Interfejsy
 
 |Interface|Opis|
 |---------------|-----------------|
-|<xref:System.ICloneable>|Duplikowanie obiektów.|
-|<xref:System.Collections.IEnumerable>|Przeprowadzaj sekwencjonowanie przez elementy.|
+|<xref:System.ICloneable>|Duplikowanie obiektu.|
+|<xref:System.Collections.IEnumerable>|Sekwencja przez elementy.|
 |<xref:System.Collections.ICollection>|Obsługa grupy elementów.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Przeprowadzaj Sekwencjonowanie za pośrednictwem typizowanych elementów.|
-|<xref:System.Collections.Generic.ICollection%601>|Obsługa grupy typizowanych elementów.|
-|IHash\<klucz, wartość >|Obsługa kontenerów ogólnego.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Sekwencja przez wpisane elementy.|
+|<xref:System.Collections.Generic.ICollection%601>|Obsługuj grupę wpisanych elementów.|
+|IHash\<klucz, wartość >|Obsługa kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt przydziela i zwalnia pamięć dla sekwencji, które kontroluje jako poszczególnych węzłów w połączonej listy dwukierunkowej. Aby przyspieszyć dostęp, obiekt przechowuje różnej długości tablicy wskaźników do listy (Tabela skrótów), efektywne zarządzanie całą listę jako sekwencja podlisty, lub przedziałów. Wstawia elementy do zasobnika, który utrzymuje uporządkowanym, zmieniając linki między węzłami, nigdy, kopiując zawartość jednego węzła do drugiego. Oznacza to, można wstawić i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.
+Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły na liście połączonej dwukierunkowo. Aby przyspieszyć dostęp, obiekt przechowuje również tablicę o różnej długości wskaźników do listy (tabela skrótów), efektywnie zarządzając całą listą jako sekwencję podlistów lub zasobników. Wstawia elementy do zasobnika, który ma być uporządkowany przez zmianę linków między węzłami, bez kopiowania zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów.
 
-Obiekt porządkuje każdego przedziału, którą kontroluje, przez wywołanie obiektu przechowywanej delegat typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli obiekt delegowany nie zostanie określony, wartością domyślną jest porównanie `operator<=(key_type, key_type)`.
+Obiekt porządkuje każdy przedział IT, wywołując zapisany obiekt delegata typu [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<=(key_type, key_type)`.
 
-Dostęp do obiektu delegowanego przechowywanych przez wywołanie funkcji elementu członkowskiego [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Obiektu delegowanego musi definiować równoważną kolejność pomiędzy kluczami typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, dla dowolnego dwa klucze `X` i `Y`:
+Dostęp do przechowywanego obiektu delegata można uzyskać, wywołując funkcję członkowską [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Taki obiekt delegata musi definiować równoważne porządkowanie między kluczami typu [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y`:
 
-`key_comp()(X, Y)` Zwraca wynik tego samego typu Boolean przy każdym wywołaniu.
+`key_comp()(X, Y)` zwraca ten sam wynik Boolean dla każdego wywołania.
 
-Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, następnie `X` i `Y` są określane jako mają równoważną kolejność.
+Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne.
 
-Szeregowania reguł, który zachowuje się jak `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje kolejność eqivalent.
+Każda reguła porządkowania, która zachowuje się jak `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje porządkowanie eqivalent.
 
-Należy pamiętać, że kontener gwarantuje tylko elementy którego klucze mają równoważną kolejność (i skrótu na tę samą wartość liczby całkowitej) sąsiadująco w pojemniku. W odróżnieniu od klasy szablonu [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), obiekt klasy szablonu `hash_multiset` nie wymaga ona, że klucze dla wszystkich elementów są unikatowe. (Dwa lub więcej klucze mają równoważną kolejność.)
+Należy zauważyć, że kontener gwarantuje tylko te elementy, których klucze mają równoważne porządkowanie (i które mieszanie z tą samą wartością całkowitą) jest przyległy w obrębie przedziału. W przeciwieństwie do klas szablonu [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), obiekt klasy szablonu `hash_multiset` nie wymaga, aby klucze dla wszystkich elementów były unikatowe. (Co najmniej dwa klucze mogą mieć równoważne porządkowanie).
 
-Obiektu określa, w którym zasobniku powinien zawierać danego klucza sortowania przez wywołanie obiektu przechowywanej delegat typu [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Ten przechowywany obiekt jest dostępu przez wywołanie funkcji elementu członkowskiego [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` można uzyskać wartość całkowitą, która jest zależna od wartości klucza. Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli żaden obiekt delegowany jest określony, wartość domyślna to funkcja `System::Object::hash_value(key_type)`. Oznacza to, do żadnych kluczy `X` i `Y`:
+Obiekt określa, który zasobnik powinien zawierać dany klucz porządkowania, wywołując zapisany obiekt delegata typu [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` w celu uzyskania wartości całkowitej, która zależy od wartości klucza. Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest funkcja `System::Object::hash_value(key_type)`. Oznacza to, że dla wszystkich kluczy `X` i `Y`:
 
-`hash_delegate()(X)` zwraca ten sam wynik liczby całkowitej na każde wywołanie.
+`hash_delegate()(X)` zwraca ten sam wynik całkowity dla każdego wywołania.
 
-Jeśli `X` i `Y` mają równoważną kolejność, następnie `hash_delegate()(X)` powinna zwracać ten sam wynik liczby całkowitej jako `hash_delegate()(Y)`.
+Jeśli `X` i `Y` mają równoważnej kolejności, `hash_delegate()(X)` powinny zwracać ten sam wynik liczby całkowitej jako `hash_delegate()(Y)`.
 
-Każdy element służy jako zarówno klucz i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwania, wstawiania i usuwania dowolnego elementu z liczba operacji, która jest niezależna od liczbę elementów w sekwencji (stały czas) — co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
+Każdy element służy jako klucz i wartość. Sekwencja jest reprezentowana w sposób umożliwiający wyszukiwanie, wstawianie i usuwanie dowolnego elementu z liczbą operacji, która jest niezależna od liczby elementów w sekwencji (stały czas) — co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
-Jeśli wartości skrótu nie są równomiernie rozłożone, jednak tabeli mieszania może dwa wymiary degeneracji. W skrajnej — dla funkcji skrótu, która zawsze zwraca taką samą wartość — wyszukiwania, wstawiania i usuwania są proporcjonalne do liczby elementów w sekwencji (liniowy czas). Kontener usiłują wybierz funkcję mieszania uzasadnione, mean zasobnika rozmiar, a rozmiar tabeli skrótów (całkowita liczba zasobników), ale można zastąpić niektóre lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Jeśli wartości skrótów nie są dystrybuowane równomiernie, może to spowodować wygenerowanie tabeli skrótów. W skrajnym — dla funkcji skrótu, która zawsze zwraca tę samą wartość — wyszukiwanie, wstawianie i usuwanie jest proporcjonalna do liczby elementów w sekwencji (czas liniowy). Kontener przedsięwzięciach, aby wybrać rozsądną funkcję mieszania, średni rozmiar przedziału i rozmiar tabeli skrótów (łączna liczba przedziałów), ale można przesłonić dowolne lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Hash_multiset — obsługują Iteratory dwukierunkowe, co oznacza, że użytkownik może przechodzić do sąsiadujących elementów podany iterator, który wskazuje element w kontrolowanej sekwencji. Specjalne węzłem odnosi się do iteratora zwrócony przez [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Można zmniejszyć tego iteratora, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Inkrementacji iteratora hash_multiset, aby dotrzeć do węzła głównego, a następnie porównaj równa `end()`. Ale nie można wyłuskać iteratora zwrócony przez `end()`.
+Hash_multiset obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator hash_multiset, aby dotrzeć do węzła głównego. następnie będzie on porównywany z `end()`. Ale nie można usunąć odwołania do iteratora zwróconego przez `end()`.
 
-Należy pamiętać, że nie można odwołać się do elementu hash_multiset bezpośrednio podanej pozycji liczbowych — wymagającego iteratora dostępu swobodnego.
+Należy zauważyć, że nie można odwołać się do hash_multiset elementu bezpośrednio przy użyciu pozycji liczbowej — która wymaga iteratora dostępu swobodnego.
 
-Hash_multiset iterator przechowuje dojścia do węzła skojarzone hash_multiset, która z kolei przechowuje dojście do jego skojarzony kontener. Iteratory można użyć tylko w nich obiekty skojarzony kontener. Hash_multiset iterator zachowuje ważność tak długo, jak jego hash_multiset skojarzony węzeł jest skojarzony z niektórych hash_multiset. Ponadto, prawidłowy iteratora jest wyłuskiwania — służy do uzyskiwania dostępu lub zmienić wartości elementu ustanowi — tak długo, jak nie jest równa `end()`.
+Iterator hash_multiset przechowuje dojście do skojarzonego z nim węzła hash_multiset, co z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator hash_multiset pozostaje prawidłowy, dopóki jego skojarzony węzeł hash_multiset jest skojarzony z pewnymi hash_multisetami. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, którą wyznacza, tak długo, jak nie jest równa `end()`.
 
-Wymazywanie lub usunięcie elementu wywołuje destruktor do jego przechowywanej wartości. Niszczenie kontenera usuwa wszystkie elementy. W związku z tym kontener, którego typ elementu jest klasą ref gwarantuje, że żadne elementy on nakreślał kontenera. Należy jednak pamiętać, że kontener dojścia nie *nie* zniszczyć jego elementów.
+Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej wartości. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W tym celu kontener, którego typem elementu jest Klasa ref, zapewnia, że żadne elementy nie wyprowadzą kontenera. Należy jednak zauważyć, że kontener dojść *nie* niszczy swoich elementów.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-## <a name="begin"></a> hash_multiset::BEGIN (STL/CLR)
+## <a name="hash_multisetbegin-stlclr"></a><a name="begin"></a>hash_multiset:: begin (STL/CLR)
 
 Określa początek kontrolowanej sekwencji.
 
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca iteratora dwukierunkowego, który wyznacza pierwszego elementu w kontrolowanej sekwencji lub tuż za koniec pustą sekwencją. Służy do uzyskiwania iterator, który wyznacza `current` początek kontrolowanej sekwencji, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator dwukierunkowy, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -284,7 +284,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="bucket_count"></a> hash_multiset::bucket_count (STL/CLR)
+## <a name="hash_multisetbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multiset:: bucket_count (STL/CLR)
 
 Zlicza liczbę przedziałów.
 
@@ -296,7 +296,7 @@ int bucket_count();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich zwraca bieżącej liczby przedziałów. Możesz użyć do określenia rozmiaru tablicy skrótów.
+Funkcje członkowskie zwracają bieżącą liczbę zasobników. Służy do określania rozmiaru tabeli skrótów.
 
 ### <a name="example"></a>Przykład
 
@@ -358,7 +358,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_multiset::Clear (STL/CLR)
+## <a name="hash_multisetclear-stlclr"></a><a name="clear"></a>hash_multiset:: Clear (STL/CLR)
 
 Usuwa wszystkie elementy.
 
@@ -370,7 +370,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego skutecznie wywołuje [hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset::end (STL/CLR) ](../dotnet/hash-multiset-end-stl-clr.md)`())`. Umożliwia ona upewnij się, że kontrolowanej sekwencji jest pusty.
+Funkcja członkowska skutecznie wywołuje [hash_multiset:: Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)`(` [hash_multiset:: begin (STL/clr)](../dotnet/hash-multiset-begin-stl-clr.md)`(),` [HASH_MULTISET:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`())`. Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -416,7 +416,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_multiset::const_iterator (STL/CLR)
+## <a name="hash_multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multiset:: const_iterator (STL/CLR)
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -428,7 +428,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T2` który może służyć jako iterator dwukierunkowy stałe dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T2`, który może obsłużyć jako stały iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -458,7 +458,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_multiset::const_reference (STL/CLR)
+## <a name="hash_multisetconst_reference-stlclr"></a><a name="const_reference"></a>hash_multiset:: const_reference (STL/CLR)
 
 Typ stałego odwołania do elementu.
 
@@ -503,9 +503,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_multiset::const_reverse_iterator (STL/CLR)
+## <a name="hash_multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator (STL/CLR)
 
-Typ iteratora odwrotnego stałego dla kontrolowanej sekwencji...
+Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -515,7 +515,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T4` który może służyć jako stałe odwrotnego iteratora dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T4`, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -545,7 +545,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_multiset::Count (STL/CLR)
+## <a name="hash_multisetcount-stlclr"></a><a name="count"></a>hash_multiset:: Count (STL/CLR)
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -562,7 +562,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca liczbę elementów w kontrolowanej sekwencji, które mają równoważną kolejność z *klucz*. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.
+Funkcja członkowska zwraca liczbę elementów w kontrolowanej sekwencji, które mają równoważną kolejność z *kluczem*. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -598,9 +598,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_multiset::difference_type (STL/CLR)
+## <a name="hash_multisetdifference_type-stlclr"></a><a name="difference_type"></a>hash_multiset::d ifference_type (STL/CLR)
 
-Typy odległości ze znakiem między dwoma elementami.
+Typy podpisanej odległości między dwoma elementami.
 
 ### <a name="syntax"></a>Składnia
 
@@ -610,7 +610,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje liczba element prawdopodobnie ujemna.
+Typ opisuje prawdopodobnie ujemną liczbę elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -653,7 +653,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_multiset::EMPTY (STL/CLR)
+## <a name="hash_multisetempty-stlclr"></a><a name="empty"></a>hash_multiset:: empty (STL/CLR)
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -665,7 +665,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy hash_multiset jest pusty.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest to odpowiednik`() == 0`[hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) . Służy do sprawdzania, czy hash_multiset jest puste.
 
 ### <a name="example"></a>Przykład
 
@@ -705,7 +705,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_multiset::end (STL/CLR)
+## <a name="hash_multisetend-stlclr"></a><a name="end"></a>hash_multiset:: end (STL/CLR)
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -717,7 +717,7 @@ iterator end();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca iterator dwukierunkowy, który wskazuje tuż za koniec kontrolowanej sekwencji. Służy do uzyskiwania iterator, który określa koniec kontrolowanej sekwencji; jego stan nie zmieniać, jeśli zmieni się długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator dwukierunkowy, który wskazuje tuż poza końcem kontrolowanej sekwencji. Służy do uzyskania iteratora, który wyznacza koniec kontrolowanej sekwencji; jego stan nie zmienia się w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -754,7 +754,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_multiset::equal_range (STL/CLR)
+## <a name="hash_multisetequal_range-stlclr"></a><a name="equal_range"></a>hash_multiset:: equal_range (STL/CLR)
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -771,7 +771,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))`. Możesz użyć do określenia zakresu elementów aktualnie w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.
+Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_multiset:: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)`(key),` [hash_multiset:: upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))`. Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_multiset::ERASE (STL/CLR)
+## <a name="hash_multiseterase-stlclr"></a><a name="erase"></a>hash_multiset:: Erase (STL/CLR)
 
 Usuwa elementy z określonych pozycji.
 
@@ -828,27 +828,27 @@ bool erase(key_type key)
 
 #### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
-Początek zakresu, aby wymazać.
+*pierwszego*<br/>
+Początek zakresu do wymazania.
 
 *Klucz*<br/>
 Wartość klucza do wymazania.
 
-*last*<br/>
-Koniec zakresu, aby wymazać.
+*ostatniego*<br/>
+Koniec zakresu do wymazania.
 
-*gdzie*<br/>
-Element, aby wymazać.
+*miejscu*<br/>
+Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkostwa usuwa element kontrolowanej sekwencji wskazywany przez *gdzie*i zwraca iterator opisujący pierwszy element pozostający poza elementem, który został usunięty, lub [hash_multiset::end () STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` jeśli taki element nie istnieje. Umożliwia ona usunąć pojedynczy element.
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`, jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
 
-Funkcja drugiego członka usuwa elementy kontrolowanej sekwencji w zakresie [`first`, `last`) i zwraca iterator opisujący pierwszy element pozostający poza wszelkimi elementami usuniętymi lub `end()` jeśli taki element nie istnieje... Umożliwia ona usunąć zero lub więcej elementów sąsiadujących.
+Druga funkcja członkowska usuwa elementy kontrolowanej sekwencji z zakresu [`first`, `last`) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()`, jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
-Trzecia funkcja członkowska usuwa jakiegokolwiek elementu w kontrolowanej sekwencji, których klucz ma równoważną kolejność do *klucz*i zwraca liczbę elementów usuniętych. Możesz użyć do usunięcia, a liczba wszystkich elementów, które odpowiadają określonemu kluczowi.
+Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza*i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
 
-Każdy element wymazywania czasochłonne proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji.
+Każdy element wymazuje czas proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_multiset::Find (STL/CLR)
+## <a name="hash_multisetfind-stlclr"></a><a name="find"></a>hash_multiset:: Find (STL/CLR)
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -915,7 +915,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jednego elementu w kontrolowanej sekwencji ma równoważną kolejność z *klucz*, funkcja elementu członkowskiego zwraca iterację, wyznaczanie jednego z tych elementów; w przeciwnym razie zwraca [hash_multiset::end (STL/CLR) ](../dotnet/hash-multiset-end-stl-clr.md)`()`. Umożliwia ona obecnie Znajdź element w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
+Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
 
 ### <a name="example"></a>Przykład
 
@@ -954,9 +954,9 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a> hash_multiset::generic_container (STL/CLR)
+## <a name="hash_multisetgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multiset:: generic_container (STL/CLR)
 
-Typ ogólny interfejs dla kontenera.
+Typ interfejsu generycznego dla kontenera.
 
 ### <a name="syntax"></a>Składnia
 
@@ -968,7 +968,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje ogólny interfejs dla tej klasy szablonu w kontenerze.
+Typ opisuje ogólny interfejs dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1018,9 +1018,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> hash_multiset::generic_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multiset:: generic_iterator (STL/CLR)
 
-Typ iteratora do użytku z ogólny interfejs dla kontenera.
+Typ iteratora do użycia z interfejsem ogólnym dla kontenera.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1032,7 +1032,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje iterator ogólny, który mogą być używane z ogólny interfejs dla tej klasy szablonu w kontenerze.
+Typ opisuje iterator ogólny, który może być używany z interfejsem ogólnym dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1074,9 +1074,9 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> hash_multiset::generic_reverse_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multiset:: generic_reverse_iterator (STL/CLR)
 
-Typ iteratora odwrotnego do użytku z ogólny interfejs dla kontenera.
+Typ iteratora odwrotnego do użycia z interfejsem ogólnym dla kontenera.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1088,7 +1088,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje iterator odwrotny ogólnego, które mogą być używane z ogólny interfejs dla tej klasy kontenera szablonu.
+Typ opisuje ogólny iterator odwrotny, który może być używany z ogólnym interfejsem klasy kontenera tego szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1130,9 +1130,9 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a> hash_multiset::generic_value (STL/CLR)
+## <a name="hash_multisetgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multiset:: generic_value (STL/CLR)
 
-Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.
+Typ elementu do użycia z interfejsem ogólnym dla kontenera.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1142,7 +1142,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje.
+Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1184,7 +1184,7 @@ a b c
 a
 ```
 
-## <a name="hash_delegate"></a> hash_multiset::hash_delegate (STL/CLR)
+## <a name="hash_multisethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multiset:: hash_delegate (STL/CLR)
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1196,7 +1196,7 @@ hasher^ hash_delegate();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca delegata używany do konwersji wartości klucza na liczbę całkowitą. Możesz użyć do tworzenia skrótu klucza.
+Funkcja członkowska zwraca delegata użyty do przekonwertowania wartości klucza na liczbę całkowitą. Jest on używany do mieszania klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1222,7 +1222,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multiset"></a> hash_multiset::hash_multiset (STL/CLR)
+## <a name="hash_multisethash_multiset-stlclr"></a><a name="hash_multiset"></a>hash_multiset:: hash_multiset (STL/CLR)
 
 Konstruuje obiekt kontenera.
 
@@ -1251,20 +1251,20 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszego*<br/>
 Początek zakresu do wstawienia.
 
 *hashfn*<br/>
-Hash — funkcja klucze mapowania do zasobników.
+Funkcja skrótu do mapowania kluczy na przedziały.
 
-*last*<br/>
+*ostatniego*<br/>
 Koniec zakresu do wstawienia.
 
-*P.*<br/>
-Kolejność predykat dla kontrolowanej sekwencji.
+*pred*<br/>
+Predykat porządkowania dla kontrolowanej sekwencji.
 
-*right*<br/>
-Obiekt lub zakresu do wstawienia.
+*Kliknij*<br/>
+Obiekt lub zakres do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1272,67 +1272,67 @@ Konstruktor:
 
 `hash_multiset();`
 
-Inicjuje kontrolowanej sekwencji bez elementów z domyślną kolejność predykatu `key_compare()`i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, przy użyciu domyślnego porządkowanie funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem kolejności domyślnej `key_compare()`i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z zastosowaniem domyślnego predykatu porządkowania i funkcji skrótu.
 
 Konstruktor:
 
 `explicit hash_multiset(key_compare^ pred);`
 
-Inicjuje kontrolowanej sekwencji bez elementów, z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, określony predykat szeregowania i domyślnej funkcji skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred*i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `hash_multiset(key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowanej sekwencji bez elementów, z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, za pomocą określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
 `hash_multiset(hash_multiset<Key>% right);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`right.begin()`, `right.end()`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt hash_multiset *prawo*z predykatem, po którym sortowania domyślnego i funkcji skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [`right.begin()`, `right.end()`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_multiset *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
 
 Konstruktor:
 
 `hash_multiset(hash_multiset<Key>^ right);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`right->begin()`, `right->end()`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt hash_multiset *prawo*z predykatem, po którym sortowania domyślnego i funkcji skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [`right->begin()`, `right->end()`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_multiset *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
 
 Konstruktor:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona Utwórz kopię innej sekwencji kontrolowanej sekwencji z domyślną kolejność funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji z domyślnym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`), z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji, określony predykat szeregowania i domyślnej funkcji skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`), z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona kopię sekwencji kontrolowanej sekwencji innego, określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`), z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*z domyślną kolejność predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający z domyślną kolejność funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z domyślnym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*, z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający, przy użyciu określonego szeregowania predykat i domyślnej funkcji skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*, z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający, za pomocą określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*, z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i funkcją skrótu.
 
 ### <a name="example"></a>Przykład
 
@@ -1462,9 +1462,9 @@ a b c
 a b c
 ```
 
-## <a name="hasher"></a> hash_multiset::hasher (STL/CLR)
+## <a name="hash_multisethasher-stlclr"></a><a name="hasher"></a>hash_multiset:: Hasher (STL/CLR)
 
-Delegat wyznaczania wartości skrótu dla klucza.
+Delegat skrótu dla klucza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1475,7 +1475,7 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt delegowany, który konwertuje wartość klucza na liczbę całkowitą.
+Typ opisuje delegata, który konwertuje wartość klucza na liczbę całkowitą.
 
 ### <a name="example"></a>Przykład
 
@@ -1501,7 +1501,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multiset::INSERT (STL/CLR)
+## <a name="hash_multisetinsert-stlclr"></a><a name="insert"></a>hash_multiset:: Insert (STL/CLR)
 
 Dodaje elementy.
 
@@ -1517,34 +1517,34 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Parametry
 
-*pierwszy*<br/>
+*pierwszego*<br/>
 Początek zakresu do wstawienia.
 
-*last*<br/>
+*ostatniego*<br/>
 Koniec zakresu do wstawienia.
 
-*right*<br/>
+*Kliknij*<br/>
 Wyliczenie do wstawienia.
 
-*Val*<br/>
+*użyte*<br/>
 Wartość klucza do wstawienia.
 
-*gdzie*<br/>
-Miejsce w kontenerze, aby wstawić (tylko wskazówki).
+*miejscu*<br/>
+Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 ### <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji elementu członkowskiego wstawia sekwencję określone przez pozostałe argumenty operacji.
+Każda funkcja członkowska wstawia sekwencję określoną przez pozostałe operandy.
 
-Pierwsza funkcja elementu członkowskiego wstawia element z wartością *val*i zwraca iterator, który wyznacza nowo wstawionego elementu. Umożliwia ona wstawić jeden element.
+Pierwsza funkcja członkowska wstawia element z wartością *Val*i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu.
 
-Funkcja drugiego członka wstawia element z wartością *val*przy użyciu *gdzie* jako wskazówkę (Aby poprawić wydajność) i zwraca iterator, który wyznacza nowo wstawionego elementu. Umożliwia ona Wstaw pojedynczy element, który może być w przylegającymi do elementu, które znasz.
+Druga funkcja członkowska wstawia element z wartością *Val*przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
 
-Trzecia funkcja członkowska wstawia sekwencję [`first`, `last`). Umożliwia ona Wstawianie zero lub więcej elementów, skopiowane z innej sekwencji.
+Trzecia funkcja członkowska wstawia sekwencję [`first`, `last`). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
 
-Czwarty funkcja elementu członkowskiego wstawia sekwencję wyznaczonym przez *prawo*. Umożliwia ona Wstaw sekwencję opisanego przez moduł wyliczający.
+Czwarta funkcja członkowska wstawia sekwencję wydaną po *prawej stronie*. Służy do wstawiania sekwencji opisanej przez moduł wyliczający.
 
-Każdy element wstawiania czasochłonne proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji. Wstawiania może wystąpić w amortyzowanym stałym czasie, jednak podane wskazówkę, opisująca element przylegające do punktu wstawiania.
+Każde wstawienie elementu ma czas proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji. Wstawianie może odbywać się w amortyzowanym stałym czasie, Jednakże z uwzględnieniem wskazówki, która wyznacza element przyległy do punktu wstawiania.
 
 ### <a name="example"></a>Przykład
 
@@ -1614,7 +1614,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> hash_multiset::iterator (STL/CLR)
+## <a name="hash_multisetiterator-stlclr"></a><a name="iterator"></a>hash_multiset:: iterator (STL/CLR)
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -1626,7 +1626,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T1` który może służyć jako iterator dwukierunkowy dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T1`, który może obsłużyć iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1656,9 +1656,9 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_multiset::key_comp (STL/CLR)
+## <a name="hash_multisetkey_comp-stlclr"></a><a name="key_comp"></a>hash_multiset:: key_comp (STL/CLR)
 
-Kopiuje szeregowania delegata dwa klucze.
+Kopiuje delegata porządkowania dla dwóch kluczy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1668,7 +1668,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca szeregowania obiektu delegowanego porządkowania kontrolowanej sekwencji. Umożliwia ona porównać dwa klucze.
+Funkcja członkowska zwraca delegat porządkowania używany do uporządkowania kontrolowanej sekwencji. Służy do porównywania dwóch kluczy.
 
 ### <a name="example"></a>Przykład
 
@@ -1715,9 +1715,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multiset::key_compare (STL/CLR)
+## <a name="hash_multisetkey_compare-stlclr"></a><a name="key_compare"></a>hash_multiset:: key_compare (STL/CLR)
 
-Szeregowania delegat dla obiektu dwa klucze.
+Delegat porządkowania dla dwóch kluczy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1728,7 +1728,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla delegata, która określa kolejność argumentów klucza.
+Typ jest synonimem dla delegata, który określa kolejność argumentów klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1775,7 +1775,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_multiset::key_type (STL/CLR)
+## <a name="hash_multisetkey_type-stlclr"></a><a name="key_type"></a>hash_multiset:: key_type (STL/CLR)
 
 Typ klucza sortowania.
 
@@ -1787,7 +1787,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu *klucz*.
+Typ jest synonimem dla *klucza*parametru szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1820,7 +1820,7 @@ int main()
 a b c
 ```
 
-## <a name="load_factor"></a> hash_multiset::load_factor (STL/CLR)
+## <a name="hash_multisetload_factor-stlclr"></a><a name="load_factor"></a>hash_multiset:: load_factor (STL/CLR)
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1832,7 +1832,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `(float)` [hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`. Możesz użyć do określenia rozmiaru przedziału średniej.
+Funkcja członkowska zwraca `(float)`[hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() /` [hash_multiset:: bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`. Służy do określania średniego rozmiaru przedziału.
 
 ### <a name="example"></a>Przykład
 
@@ -1894,7 +1894,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_multiset::lower_bound (STL/CLR)
+## <a name="hash_multisetlower_bound-stlclr"></a><a name="lower_bound"></a>hash_multiset:: lower_bound (STL/CLR)
 
 Znajduje początek zakresu, który odpowiada określonemu kluczowi.
 
@@ -1911,7 +1911,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego Określa pierwszy element `X` w kontrolowanej sekwencji, która tworzy skrót do tego samego zasobnika jako *klucz* i ma równoważną kolejność, tak aby *klucz*. Jeśli taki element nie istnieje, zwraca [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza `X`. Umożliwia ona obecnie zlokalizuj na początku sekwencji elementów w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.
+Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza `X`. Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1951,9 +1951,9 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> hash_multiset::make_value (STL/CLR)
+## <a name="hash_multisetmake_value-stlclr"></a><a name="make_value"></a>hash_multiset:: make_value (STL/CLR)
 
-Tworzy obiekt wartości.
+Konstruuje obiekt wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1968,7 +1968,7 @@ Wartość klucza do użycia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `value_type` obiektu, którego klucz jest *klucz*. Możesz użyć do redagowania odpowiedni do użytku z wielu innych funkcji Członkowskich obiektu.
+Funkcja członkowska zwraca obiekt `value_type`, którego klucz jest *kluczem*. Służy do redagowania obiektu odpowiedniego do użycia z kilkoma innymi funkcjami składowymi.
 
 ### <a name="example"></a>Przykład
 
@@ -1997,7 +1997,7 @@ int main()
 a b c
 ```
 
-## <a name="max_load_factor"></a> hash_multiset::max_load_factor (STL/CLR)
+## <a name="hash_multisetmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multiset:: max_load_factor (STL/CLR)
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -2011,13 +2011,13 @@ void max_load_factor(float new_factor);
 #### <a name="parameters"></a>Parametry
 
 *new_factor*<br/>
-Maksymalna nowe obciążenia współczynnik do przechowywania.
+Nowy maksymalny współczynnik obciążenia do zapisania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca bieżący współczynnik przechowywanych maksymalnego obciążenia. Możesz użyć do określenia rozmiar maksymalny przedział średniej.
+Pierwsza funkcja członkowska zwraca bieżący przechowywany maksymalny współczynnik obciążenia. Służy do określenia maksymalnego średniego rozmiaru przedziału.
 
-Funkcja drugiego członka zastępuje współczynnik maksymalnego obciążenia magazynu za pomocą *new_factor*. Nie automatycznego rehashing występuje aż do kolejnych insert.
+Druga funkcja członkowska zastępuje maksymalny współczynnik obciążenia magazynu *new_factor*. Automatyczne ponowne tworzenie skrótów nie odbywa się do kolejnych operacji wstawiania.
 
 ### <a name="example"></a>Przykład
 
@@ -2079,9 +2079,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multiset::operator = (STL/CLR)
+## <a name="hash_multisetoperator-stlclr"></a><a name="op"></a>hash_multiset:: operator = (STL/CLR)
 
-Zastępuje kontrolowanej sekwencji.
+Zastępuje kontrolowaną sekwencję.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2091,12 +2091,12 @@ hash_multiset<Key>% operator=(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*right*<br/>
+*Kliknij*<br/>
 Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -2134,9 +2134,9 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_multiset::rbegin (STL/CLR)
+## <a name="hash_multisetrbegin-stlclr"></a><a name="rbegin"></a>hash_multiset:: rbegin (STL/CLR)
 
-Określa początek kontrolowanej sekwencji odwróconej.
+Określa początek odwróconej sekwencji kontrolowanej.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2146,7 +2146,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca odwrotnego iteratora, który wyznacza wartość ostatniego elementu w kontrolowanej sekwencji lub tuż za koniec pustą sekwencją. Dzięki temu wyznacza `beginning` odwrotnej kolejności. Służy do uzyskiwania iterator, który wyznacza `current` początek kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym wyznacza `beginning` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji widocznej w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2182,7 +2182,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_multiset::Reference (STL/CLR)
+## <a name="hash_multisetreference-stlclr"></a><a name="reference"></a>hash_multiset:: Reference (STL/CLR)
 
 Typ odwołania do elementu.
 
@@ -2227,7 +2227,7 @@ int main()
 a b c
 ```
 
-## <a name="rehash"></a> hash_multiset::rehash (STL/CLR)
+## <a name="hash_multisetrehash-stlclr"></a><a name="rehash"></a>hash_multiset:: rehash (STL/CLR)
 
 Przebudowuje tabelę mieszania.
 
@@ -2239,7 +2239,7 @@ void rehash();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego przebudowuje tabelę mieszania, upewniając się, że [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). W przeciwnym razie tabeli mieszania rozmiar zwiększa się tylko w razie potrzeby po wstawieniu. (Nigdy automatycznie zmniejszenie rozmiaru.) Umożliwia ona Dopasowywanie rozmiaru tablicy skrótów.
+Funkcja członkowska ponownie kompiluje tablicę skrótów, upewniając się, że [hash_multiset:: load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)`() <=` [hash_multiset:: max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). W przeciwnym razie tabela skrótów zwiększa rozmiar tylko w razie konieczności po wstawieniu. (Rozmiar nigdy nie zmniejsza się automatycznie). Służy do dostosowywania rozmiaru tabeli skrótów.
 
 ### <a name="example"></a>Przykład
 
@@ -2301,9 +2301,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_multiset::rend (STL/CLR)
+## <a name="hash_multisetrend-stlclr"></a><a name="rend"></a>hash_multiset:: rend (STL/CLR)
 
-Określa koniec kontrolowanej sekwencji odwróconej.
+Określa koniec odwróconej kontrolowanej sekwencji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2313,7 +2313,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca odwrotnego iteratora, który wskazuje tuż za początek kontrolowanej sekwencji. Dzięki temu wyznacza `end` odwrotnej kolejności. Służy do uzyskiwania iterator, który wyznacza `current` koniec kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym wyznacza `end` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` końca kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2350,7 +2350,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_multiset::reverse_iterator (STL/CLR)
+## <a name="hash_multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multiset:: reverse_iterator (STL/CLR)
 
 Typ iteratora odwrotnego dla kontrolowanej sekwencji.
 
@@ -2362,7 +2362,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T3` który może służyć jako odwrotnego iteratora dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T3`, który może działać jako iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2392,7 +2392,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_multiset::size (STL/CLR)
+## <a name="hash_multisetsize-stlclr"></a><a name="size"></a>hash_multiset:: size (STL/CLR)
 
 Liczy liczbę elementów.
 
@@ -2404,7 +2404,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [hash_multiset:: empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Przykład
 
@@ -2446,9 +2446,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_multiset::size_type (STL/CLR)
+## <a name="hash_multisetsize_type-stlclr"></a><a name="size_type"></a>hash_multiset:: size_type (STL/CLR)
 
-Typ odległości ze znakiem między dwoma elementu.
+Typ podpisanej odległości między dwoma elementami.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2458,7 +2458,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje liczby nieujemnej wartości elementu.
+Typ opisuje nieujemną liczbę elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -2494,7 +2494,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multiset::swap (STL/CLR)
+## <a name="hash_multisetswap-stlclr"></a><a name="swap"></a>hash_multiset:: swap (STL/CLR)
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2506,12 +2506,12 @@ void swap(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*right*<br/>
-Kontener do wymiany zawartości z.
+*Kliknij*<br/>
+Kontener, za pomocą którego ma zostać zamieniony zawartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zamienia kontrolowanej sekwencji między `this` i *prawo*. Robi to w stałym czasie i w wyniku weryfikacji zgłasza wyjątek bez wyjątków. Możesz użyć go w prosty sposób do wymiany zawartości dwóch kontenerów.
+Funkcja członkowska zamienia kontrolowane sekwencje między `this` i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
 
 ### <a name="example"></a>Przykład
 
@@ -2562,9 +2562,9 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a> hash_multiset::to_array (STL/CLR)
+## <a name="hash_multisetto_array-stlclr"></a><a name="to_array"></a>hash_multiset:: to_array (STL/CLR)
 
-Kopiuje kontrolowanej sekwencji do nowej tablicy.
+Kopiuje przekontrolowaną sekwencję do nowej tablicy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2574,7 +2574,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.
+Funkcja członkowska zwraca tablicę zawierającą kontrolowaną sekwencję. Służy do uzyskania kopii kontrolowanej sekwencji w formularzu tablicowym.
 
 ### <a name="example"></a>Przykład
 
@@ -2612,7 +2612,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_multiset::upper_bound (STL/CLR)
+## <a name="hash_multisetupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multiset:: upper_bound (STL/CLR)
 
 Znajduje koniec zakresu, który odpowiada określonemu kluczowi.
 
@@ -2629,7 +2629,7 @@ Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego określa po ostatnim elemencie `X` w kontrolowanej sekwencji, która tworzy skrót do tego samego zasobnika jako *klucz* i ma równoważną kolejność, tak aby *klucz*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, funkcja zwraca [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza pierwszego elementu poza `X`. Umożliwia ona obecnie Znajdź koniec sekwencji elementów w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.
+Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X`. Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2669,9 +2669,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_multiset::value_comp (STL/CLR)
+## <a name="hash_multisetvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multiset:: value_comp (STL/CLR)
 
-Kopiuje szeregowania delegata dwie wartości elementów.
+Kopiuje delegata porządkowania dla dwóch wartości elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2681,7 +2681,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca szeregowania obiektu delegowanego porządkowania kontrolowanej sekwencji. Umożliwia ona porównać dwie wartości elementów.
+Funkcja członkowska zwraca delegat porządkowania używany do uporządkowania kontrolowanej sekwencji. Służy do porównywania dwóch wartości elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -2713,9 +2713,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_multiset::value_compare (STL/CLR)
+## <a name="hash_multisetvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multiset:: value_compare (STL/CLR)
 
-Szeregowania delegat dla obiektu dwie wartości elementów.
+Delegat porządkowania dla dwóch wartości elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2726,7 +2726,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla delegata, który określa kolejność wartości argumentów.
+Typ jest synonimem dla delegata, który określa kolejność argumentów wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_multiset::value_type (STL/CLR)
+## <a name="hash_multisetvalue_type-stlclr"></a><a name="value_type"></a>hash_multiset:: value_type (STL/CLR)
 
 Typ elementu.
 

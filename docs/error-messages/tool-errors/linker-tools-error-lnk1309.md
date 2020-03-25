@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-ms.openlocfilehash: ea675ca835dfc3fe4881e5fabbea746a4442b10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88b05512fd45adb6dc96a6c130ceccb74f3ab14e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194905"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Błąd narzędzi konsolidatora LNK1309
 
-> *type1* moduł wykrył; jest on nieprawidłowy z przełącznika/clrimagetype:*Typ2*
+> Wykryto moduł *Type1* ; Nieprawidłowy z przełącznikiem/CLRIMAGETYPE:*Type2*
 
 ## <a name="remarks"></a>Uwagi
 
-Typ obrazu CLR została zażądana przy użyciu **/clrimagetype** , ale konsolidator nie może utworzyć obrazu tego typu, ponieważ przynajmniej jeden moduł były niezgodne z tym typem.
+Zażądano typu obrazu CLR z **/CLRIMAGETYPE** , ale konsolidator nie może utworzyć obrazu tego typu, ponieważ co najmniej jeden moduł był niezgodny z tym typem.
 
-Na przykład, jeśli określisz zostanie wyświetlone LNK1309 **Safe** i przekazać Moduł skompilowany z **/CLR: pure**.
+Na przykład zobaczysz LNK1309, jeśli określisz **/CLRIMAGETYPE: Safe** i przekażesz Moduł skompilowany z **/CLR: Pure**.
 
-**/CLR: pure** i **/CLR: Safe** kompilatora biblioteki opcje i pomocy technicznej są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR: bezpieczne** opcje kompilatora i biblioteki obsługi są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Jeśli użytkownik podejmie próbę tworzenie aplikacji częściowo zaufanej czystego środowiska CLR, za pomocą .lib ptrustu [d], zostanie wyświetlone LNK1309. Aby uzyskać informacje na temat tworzenia aplikacji częściowo zaufanej, zobacz [jak: Tworzenie aplikacji częściowo zaufanej przez usunięcie zależności biblioteki DLL środowiska CRT](../../dotnet/create-a-partially-trusted-application.md).
+Zobaczysz również LNK1309, jeśli próbujesz skompilować częściowo zaufaną czystą aplikację CLR przy użyciu ptrustu [d]. lib. Aby uzyskać informacje na temat sposobu tworzenia częściowo zaufanej aplikacji, zobacz [jak to zrobić: Tworzenie częściowo zaufanej aplikacji przez usunięcie zależności od biblioteki dll Biblioteka CRT](../../dotnet/create-a-partially-trusted-application.md).
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) i [/clrimagetype (określenie typu z obrazu CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) i [/CLRIMAGETYPE (Określ typ obrazu CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

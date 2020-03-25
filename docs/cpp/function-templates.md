@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179747"
 ---
 # <a name="function-templates"></a>Szablony funkcji
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Za pomocą tego szablonu możesz wygenerować funkcje, które będą zamieniać **int** i **długie** typów, a także typy zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.
+Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Z tego szablonu można generować funkcje, które zastąpią typy **int** i **Long** , a także typy zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.
 
-Ponadto, szablon funkcji zapobiega zamienianiu obiektów różnych typów, ponieważ kompilator zna typy *a* i *b* parametrów w czasie kompilacji.
+Ponadto szablon funkcji uniemożliwi zamianę obiektów różnych typów, ponieważ kompilator zna typy parametrów *a* i *b* w czasie kompilacji.
 
 Mimo że funkcja ta może zostać wykonana przez funkcję nieszablonową, za pomocą wskaźników o typie void, wersja z szablonem jest bezpiecznego typu. Rozważ następujące wywołania:
 
@@ -55,9 +55,9 @@ int main(int j) {
 }
 ```
 
-Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie, kompilator konwertuje `j` na typ **char**.
+Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie kompilator wykona konwersję `j` do typu **char**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 [Tworzenie wystąpienia szablonu funkcji](../cpp/function-template-instantiation.md)<br/>

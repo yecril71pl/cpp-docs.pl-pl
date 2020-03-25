@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dołączanie zasobów w czasie kompilacji (C++)'
+title: 'Instrukcje: uwzględnianie zasobów w czasie kompilacji (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vs.resvw.resource.including
@@ -23,80 +23,80 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e931a0246340e81049df6ed0f8e26a4b91b570c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215198"
 ---
-# <a name="how-to-include-resources-at-compile-time-c"></a>Instrukcje: Dołączanie zasobów w czasie kompilacji (C++)
+# <a name="how-to-include-resources-at-compile-time-c"></a>Instrukcje: uwzględnianie zasobów w czasie kompilacji (C++)
 
-Domyślnie wszystkie zasoby znajdują się w jednym pliku skryptu (.rc) zasobu jednak istnieje wiele przyczyn można umieścić zasoby w pliku innych niż plik .rc główne:
+Domyślnie wszystkie zasoby znajdują się w jednym pliku skryptu zasobu (. RC), ale istnieje wiele powodów, aby umieścić zasoby w pliku innym niż główny plik. rc:
 
-- Aby dodać komentarze do instrukcji zasobów, które nie będą usuwane podczas zapisywania pliku .rc.
+- Aby dodać komentarze do instrukcji zasobów, które nie zostaną usunięte podczas zapisywania pliku. rc.
 
-- Aby dołączyć zasoby, które już opracowany i przetestowany i nie wymagają dalszych modyfikacji. Wszystkie pliki, które są uwzględniane, ale nie ma rozszerzenia .rc nie będzie można edytować za pomocą edytory zasobów.
+- Aby uwzględnić zasoby, które zostały już opracowane i przetestowane, i nie potrzebujesz dalszej modyfikacji. Wszystkie pliki, które są dołączone, ale nie mają rozszerzenia. RC, nie będą edytowalne przez edytory zasobów.
 
-- Aby dołączyć zasoby, które są używane przez różne projekty lub które są częścią systemu kontroli wersji kodu źródłowego. Te zasoby muszą istnieć w centralnej lokalizacji, w którym zmiany będzie miało wpływ na wszystkie projekty.
+- Aby uwzględnić zasoby, które są używane przez różne projekty lub które są częścią systemu kontroli wersji kodu źródłowego. Te zasoby muszą znajdować się w centralnej lokalizacji, w której modyfikacje wpłyną na wszystkie projekty.
 
-- Aby uwzględnić zasobów (takich jak zasoby RCDATA), które są formatu niestandardowego. Zasoby RCDATA mają specjalne wymagania, których nie można użyć wyrażenia jako wartość `nameID` pola.
+- Aby uwzględnić zasoby (takie jak zasoby RCDATA), które są niestandardowym formatem. Zasoby RCDATA mają specjalne wymagania, w przypadku których nie można użyć wyrażenia jako wartości pola `nameID`.
 
-Jeśli masz sekcje w istniejących plikach .rc, które spełniają dowolne z tych warunków, umieść następujące sekcje w jednym lub więcej oddzielnych plików .rc i umieszczone w projekcie za pomocą **zasób zawiera** okno dialogowe.
+Jeśli masz sekcje w istniejących plikach. RC, które spełniają którykolwiek z tych warunków, Umieść te sekcje w jednym lub kilku oddzielnych plikach. RC, a następnie dołącz je do projektu przy użyciu okna dialogowego **zasób zawiera** .
 
-## <a name="resource-includes"></a>Zasób zawiera
+## <a name="resource-includes"></a>Zasób obejmuje
 
-Możesz dodać zasoby z innych plików do projektu w czasie kompilacji przez wymienienie ich w **dyrektywy czasu kompilacji** pole w **zasób zawiera** okno dialogowe. Użyj **zasób zawiera** okno dialogowe, aby zmodyfikować środowisko projektu normalnej pracy rozmieszczenie przechowywania wszystkich zasobów w pliku .rc projektu, a wszystkie [symbole](../windows/symbols-resource-identifiers.md) w `Resource.h`.
+Możesz dodać zasoby z innych plików do projektu w czasie kompilacji, umieszczając je w polu **dyrektywy kompilacji** w oknie dialogowym **zasób zawiera** . Za pomocą okna dialogowego **zasób zawiera** można modyfikować normalne działania środowiska projektu dotyczące przechowywania wszystkich zasobów w pliku Project. RC i wszystkich [symboli](../windows/symbols-resource-identifiers.md) w `Resource.h`.
 
-Aby rozpocząć, otwórz **zasób zawiera** okno dialogowe, klikając prawym przyciskiem myszy plik .rc w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz opcję **zasób zawiera** i zanotuj następujące właściwości:
+Aby rozpocząć, Otwórz okno dialogowe **zasób zawiera** , klikając prawym przyciskiem myszy plik. rc w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz pozycję **zasób zawiera** i zanotuj następujące właściwości:
 
 | Właściwość | Opis |
 |---|---|
-| **Plik nagłówkowy symboli** | Umożliwia zmianę nazwy pliku nagłówkowego, w którym przechowywane są definicje symboli dla plików zasobów.<br/><br/>Aby uzyskać więcej informacji, zobacz [zmiana nazwy pliki nagłówkowe symboli](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Dyrektywy symboli tylko do odczytu** | Można dołączyć plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane.<br/><br/>Na przykład pliki symboli być współużytkowane z innymi projektami. Może to również obejmować pliki .h MFC. Aby uzyskać więcej informacji, zobacz [tym udostępnionych (tylko do odczytu) lub symbole obliczane](../windows/including-shared-read-only-or-calculated-symbols.md). |
-| **Dyrektywy czasu kompilacji** | Pozwala dołączyć pliki zasobów, które są tworzone i edytować oddzielnie z zasobów z głównego pliku zasobów, zawierać dyrektywy czasu kompilacji (takich jak te dyrektywy warunkowo obejmujące zasoby) lub zasobów w niestandardowym formacie.<br/><br/>Można również użyć **pole dyrektywy czasu kompilacji** obejmujący standardowe pliki zasobów biblioteki MFC. |
+| **Plik nagłówka symboli** | Pozwala zmienić nazwę pliku nagłówka, w którym są przechowywane definicje symboli dla plików zasobów.<br/><br/>Aby uzyskać więcej informacji, zobacz [zmiana nazw plików nagłówkowych symboli](../windows/changing-the-names-of-symbol-header-files.md). |
+| **Dyrektywy symboli tylko do odczytu** | Umożliwia dołączenie plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane.<br/><br/>Na przykład pliki symboli mają być współużytkowane z innymi projektami. Może to również obejmować pliki MFC. h. Aby uzyskać więcej informacji, zobacz [Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Dyrektywy czasu kompilacji** | Umożliwia dołączenie plików zasobów, które są tworzone i edytowane niezależnie od zasobów w głównym pliku zasobów, zawierają dyrektywy czasu kompilowania (takie jak dyrektywy, które warunkowo obejmują zasoby) lub zawierają zasoby w formacie niestandardowym.<br/><br/>Możesz również użyć **pola dyrektywy czasu kompilacji** , aby uwzględnić standardowe pliki zasobów MFC. |
 
 > [!NOTE]
-> Wpisy w tych polach tekstowych pojawiają się w pliku .rc, oznaczony za `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, i `TEXTINCLUDE 3` odpowiednio. Aby uzyskać więcej informacji, zobacz [TN035: Przy użyciu wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
+> Wpisy w tych polach tekstowych pojawiają się w pliku. RC oznaczone odpowiednio `TEXTINCLUDE 1`, `TEXTINCLUDE 2`i `TEXTINCLUDE 3`. Aby uzyskać więcej informacji, zobacz [TN035: używanie wielu plików zasobów i plików nagłówkowych C++z wizualizacją ](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Po dokonaniu zmian do pliku zasobów za pomocą **zasób zawiera** okno dialogowe, musisz zamknąć i ponownie otworzyć *.rc* pliku, aby zmiany zaczęły obowiązywać.
+Po wprowadzeniu zmian w pliku zasobów przy użyciu okna dialogowego **zasób zawiera** należy zamknąć i ponownie otworzyć plik *. RC* , aby zmiany zaczęły obowiązywać.
 
-### <a name="to-include-resources-in-your-project-at-compile-time"></a>Aby dołączyć zasoby do projektu w czasie kompilacji
+### <a name="to-include-resources-in-your-project-at-compile-time"></a>Aby uwzględnić zasoby w projekcie w czasie kompilacji
 
-1. Umieść zasoby w pliku skryptu zasobu przy użyciu unikatowej nazwy pliku. Nie używaj *projectname.rc*, ponieważ jest to nazwa pliku używany dla pliku skryptu zasobu głównego.
+1. Umieść zasoby w pliku skryptu zasobu z unikatową nazwą pliku. Nie używaj *ProjectName. RC*, ponieważ jest to nazwa pliku używanego dla głównego pliku skryptu zasobu.
 
-1. Kliknij prawym przyciskiem myszy *.rc* w pliku [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) i wybierz **zasób zawiera**.
+1. Kliknij prawym przyciskiem myszy plik *. RC* w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) i wybierz pozycję **zasób zawiera**.
 
-1. W **dyrektywy czasu kompilacji** Dodaj [#include](../preprocessor/hash-include-directive-c-cpp.md) dyrektywy kompilatora, które mają zostać objęte nowego pliku zasobu z głównego pliku zasobów w środowisku programistycznym.
+1. W polu **dyrektywy czasu kompilacji** Dodaj dyrektywę kompilatora [#include](../preprocessor/hash-include-directive-c-cpp.md) , aby uwzględnić nowy plik zasobów w głównym pliku zasobów w środowisku deweloperskim.
 
-Zasoby w plikach uwzględnione w ten sposób są wykonywane tylko część pliku wykonywalnego w czasie kompilacji i nie są dostępne do edycji lub modyfikacji, podczas pracy w pliku .rc głównego projektu. Pliki .rc dołączony muszą być otwarte osobno, a wszystkie pliki dołączone bez rozszerzenia .rc nie będzie można edytować za pomocą edytory zasobów.
+Zasoby w plikach zawarte w ten sposób są częścią pliku wykonywalnego w czasie kompilacji i nie są dostępne do edycji ani modyfikacji podczas pracy z głównym plikiem projektu. rc. Pliki. RC muszą być otwierane oddzielnie, a wszystkie pliki z rozszerzeniem. RC nie będą edytowalne przez edytorów zasobów.
 
-### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Do określenia katalogów dołączanych dla pliku określonego zasobu (.rc)
+### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Aby określić katalogi dołączane dla określonego pliku zasobu (. RC)
 
-1. Kliknij prawym przyciskiem myszy *.rc* w pliku **Eksploratora rozwiązań** i wybierz **właściwości**.
+1. Kliknij prawym przyciskiem myszy plik *. RC* w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
 
-1. Wybierz **zasobów** węzła w okienku po lewej stronie i określić wszelkie dodatkowe katalogi dołączane we **dodatkowe katalogi dołączane** właściwości.
+1. W lewym okienku wybierz węzeł **zasoby** i określ dodatkowe katalogi dołączane we właściwości **Dodatkowe katalogi dołączane** .
 
-### <a name="to-find-symbols-in-resources"></a>Aby znaleźć symboli w zasobach
+### <a name="to-find-symbols-in-resources"></a>Aby znaleźć symbole w zasobach
 
-1. Przejdź do menu **Edytuj** > [Znajdź Symbol](/visualstudio/ide/go-to).
+1. Przejdź do menu **Edycja** , > [znaleźć symbol](/visualstudio/ide/go-to).
 
    > [!TIP]
-   > Aby użyć [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) wyszukiwania, wybierz [Znajdź w plikach](/visualstudio/ide/reference/find-command) w **Edytuj** menu zamiast **Znajdź Symbol**. Wybierz **użycia: Wyrażenia regularne** pole wyboru w [okno dialogowe Znajdź](/visualstudio/ide/finding-and-replacing-text) i **Znajdź** okno wyrażeń regularnych wyszukiwania można wybrać z listy rozwijanej. Po wybraniu wyrażenia z tej listy, zostanie zastąpiony jako wyszukiwany tekst w **Znajdź** pole.
+   > Aby używać [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) w wyszukiwaniu, wybierz pozycję [Znajdź w plikach](/visualstudio/ide/reference/find-command) w menu **Edycja** zamiast **symbolu Znajdź**. Zaznacz pole wyboru **Użyj: wyrażenia regularne** w oknie [dialogowym Znajdź](/visualstudio/ide/finding-and-replacing-text) , a następnie w polu **Znajdź** możesz wybrać wyrażenie regularne wyszukiwanie z listy rozwijanej. Po wybraniu wyrażenia z tej listy zostanie on zastąpiony jako tekst wyszukiwania w polu **Znajdź** .
 
-1. W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisza skrótu, którą chcesz znaleźć, na przykład `ID_ACCEL1`.
+1. W polu **Znajdź** , wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisz akceleratora, który chcesz znaleźć, na przykład `ID_ACCEL1`.
 
-1. Wybierz dowolny z **znaleźć** opcje, a następnie wybierz **Znajdź następny**.
+1. Wybierz dowolną z opcji **Znajdź** i wybierz pozycję **Znajdź dalej**.
 
 > [!NOTE]
-> Nie można wyszukiwać symbole w ciągu, akcelerator lub zasobów binarnych.
+> Nie można wyszukiwać symboli w zasobach typu String, Accelerator lub Binary.
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
-[Instrukcje: Utwórz zasoby](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Instrukcje: Zarządzaj zasobami](../windows/how-to-copy-resources.md)<br/>
+[Instrukcje: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Instrukcje: zarządzanie zasobami](../windows/how-to-copy-resources.md)<br/>

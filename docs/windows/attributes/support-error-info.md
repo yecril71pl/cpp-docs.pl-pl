@@ -1,21 +1,21 @@
 ---
-title: support_error_info — (C++ atrybutów COM)
+title: support_error_info (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407292"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166149"
 ---
-# <a name="supporterrorinfo"></a>support_error_info
+# <a name="support_error_info"></a>support_error_info
 
-Implementuje obsługę zwracania szczegółowe informacje o błędach.
+Implementuje obsługę zwracania szczegółowych błędów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,17 +26,17 @@ Implementuje obsługę zwracania szczegółowe informacje o błędach.
 ### <a name="parameters"></a>Parametry
 
 *error_interface*<br/>
-Identyfikator implementującego interfejs `IErrorInfo`.
+Identyfikator interfejsu implementującego `IErrorInfo`.
 
 ## <a name="remarks"></a>Uwagi
 
-**Support_error_info —** C++ atrybut implementuje obsługę zwracania szczegółowe, kontekstowe błędów napotkanych przez obiekt docelowy do klienta. Dla obiektu do obsługi błędów, metody `IErrorInfo` interfejsu muszą być zaimplementowane przez obiekt. Aby uzyskać więcej informacji, zobacz [obsługi IDispatch i IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+Atrybut **support_error_info** C++ implementuje obsługę zwracania szczegółowych błędów kontekstowych napotkanych przez obiekt docelowy dla klienta. Aby obiekt mógł obsłużyć błędy, metody interfejsu `IErrorInfo` muszą być implementowane przez obiekt. Aby uzyskać więcej informacji, zobacz [Obsługa IDispatch i IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
-Ten atrybut dodaje [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) klasy jako klasę bazową do obiektu docelowego. Skutkuje to domyślna Implementacja klasy `ISupportErrorInfo` i mogą być używane, gdy jeden interfejs generuje błędy na obiekcie.
+Ten atrybut dodaje klasę [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) jako klasę bazową do obiektu docelowego. Powoduje to wykonanie domyślnej implementacji `ISupportErrorInfo` i może być używane, gdy pojedynczy interfejs generuje błędy w obiekcie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod dodaje domyślną obsługę `ISupportErrorInfo` współpracować w celu `CMyClass` obiektu.
+Poniższy kod dodaje domyślną obsługę interfejsu `ISupportErrorInfo` do obiektu `CMyClass`.
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -66,12 +66,12 @@ class CMyClass
 |-|-|
 |**Dotyczy**|**class**|
 |**Powtarzalne**|Yes|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

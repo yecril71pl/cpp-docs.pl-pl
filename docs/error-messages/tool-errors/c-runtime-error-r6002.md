@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: f8b5fe69c9fd688f4d0a181176cda247cde9ac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197421"
 ---
 # <a name="c-runtime-error-r6002"></a>Błąd czasu wykonania języka C R6002
 
-Obsługa liczb zmiennoprzecinkowych nie załadowano
+Obsługa zmiennoprzecinkowa nie została załadowana
 
-Niezbędne biblioteki zmiennoprzecinkowe nie został połączony.
+Wymagana biblioteka zmiennoprzecinkowa nie została połączona.
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez wadę w kodzie aplikacji lub przy próbie uruchomienia aplikacji, która nie została skompilowana dla procesora konkretnego komputera.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem wewnętrzny. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane usterką w kodzie aplikacji lub przez próbę uruchomienia aplikacji, która nie została skompilowana dla określonego procesora komputera.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Ten błąd może wystąpić w swojej aplikacji, gdy biblioteka zmiennoprzecinkowe nie został połączony. Sprawdź, czy jeden z tych przyczyn:
+Ten błąd może wystąpić w aplikacji, gdy biblioteka zmiennoprzecinkowa nie została połączona. Sprawdź jedną z następujących przyczyn:
 
-- Ciąg formatu dla `printf_s` lub `scanf_s` funkcja zawarte specyfikacji formatu zmiennoprzecinkowego i program nie zawiera żadnych wartości zmiennoprzecinkowych lub zmienne. Aby rozwiązać ten problem, użyj argumentu zmiennoprzecinkowego, aby odpowiadać specyfikacji formatu zmiennoprzecinkowego lub wykonać zmiennoprzecinkowych przypisania w innym miejscu w programie. To powoduje, że obsługa modelu zmiennoprzecinkowego do załadowania.
+- Ciąg formatu dla funkcji `printf_s` lub `scanf_s` zawiera specyfikację formatu zmiennoprzecinkowego, a program nie zawierał żadnych wartości zmiennoprzecinkowych ani zmiennych. Aby rozwiązać ten problem, użyj argumentu zmiennoprzecinkowego, aby odpowiadał specyfikacji formatu zmiennoprzecinkowego, lub w innym miejscu w programie wykonać przypisanie zmiennoprzecinkowe. Powoduje to załadowanie obsługi zmiennoprzecinkowej.
 
-- Kompilator minimalizuje rozmiar programu, ładując Obsługa liczb zmiennoprzecinkowych tylko wtedy, gdy jest to konieczne. Kompilator nie może wykryć operacji zmiennoprzecinkowych lub specyfikacji formatu zmiennoprzecinkowego ciągów formatu, dzięki czemu nie ładuje niezbędnych procedur zmiennoprzecinkowych. Aby rozwiązać ten problem, użyj specyfikacji formatu zmiennoprzecinkowego i podać argument zmiennoprzecinkowy lub wykonać zmiennoprzecinkowych przypisania w innym miejscu w programie. To powoduje, że obsługa modelu zmiennoprzecinkowego do załadowania.
+- Kompilator minimalizuje rozmiar programu przez załadowanie obsługi zmiennoprzecinkowej tylko wtedy, gdy jest to konieczne. Kompilator nie może wykryć operacji zmiennoprzecinkowych lub specyfikacji formatu zmiennoprzecinkowego w ciągach formatu, dlatego nie ładuje niezbędnych procedur zmiennoprzecinkowych. Aby rozwiązać ten problem, należy użyć specyfikacji formatu zmiennoprzecinkowego i podać argument zmiennoprzecinkowy lub w innym miejscu w programie wykonać przypisanie zmiennoprzecinkowe. Powoduje to załadowanie obsługi zmiennoprzecinkowej.
 
-- W programie w językach mieszanych biblioteki C została określona przed biblioteki FORTRAN, gdy program został połączony. Połącz ponownie, a ostatnia określ bibliotekę języka C.
+- W programie w języku mieszanym biblioteka C została określona przed biblioteką Pascal, gdy program został połączony. Połącz ponownie i Określ bibliotekę C jako ostatnią.

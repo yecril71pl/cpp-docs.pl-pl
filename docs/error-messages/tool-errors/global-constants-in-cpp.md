@@ -5,20 +5,20 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195477"
 ---
 # <a name="global-constants-in-c"></a>Stałe globalne w C++
 
-Stałe globalne w C++ ma połączenie static. Stanowi to odmianę C. Jeśli spróbujesz użyć globalną stałe języka C++ w wielu plikach wystąpi błąd nierozwiązane zewnętrznych. Kompilator optymalizuje stałe globalne, brakuje miejsca zarezerwowane dla zmiennej.
+C++stałe globalne mają połączenie statyczne. Jest to inne niż C. Jeśli spróbujesz użyć stałej globalnej w C++ programie w przypadku wielu plików, wystąpi błąd zewnętrzny. Kompilator optymalizuje stałe globalne, pozostawiając bez miejsca zarezerwowane dla zmiennej.
 
-Jest jednym ze sposobów, aby rozwiązać ten problem do uwzględnienia inicjalizacje const w pliku nagłówkowym, a następnie dołączyć ten nagłówek w plikach CPP, gdy jest to konieczne, tak, jakby była prototypu funkcji. Inną możliwością jest ustaw dla zmiennej niestałe i używać stałe odwołanie, oceniając go.
+Jednym ze sposobów na rozwiązanie tego błędu jest dołączenie do pliku nagłówkowego inicjujących inicjalizacje i uwzględnienie tego nagłówka w plikach CPP, podobnie jak w przypadku prototypu funkcji. Kolejną możliwością jest, aby zmienna nie stała i używała stałego odwołania podczas jego oceniania.
 
-Poniższy przykład spowoduje wygenerowanie C2019:
+Poniższy przykład generuje C2019:
 
 ```cpp
 // global_constants.cpp
@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-Następnie wyszukaj maszynę
+a następnie
 
 ```cpp
 // global_constants_2.cpp
@@ -43,6 +43,6 @@ void test() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

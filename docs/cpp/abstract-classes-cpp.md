@@ -7,20 +7,20 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181697"
 ---
 # <a name="abstract-classes-c"></a>Klasy abstrakcyjne (C++)
 
-Klasy abstrakcyjne działają jak wyrażenia ogólnych pojęć, z których mogą być uzyskane bardziej specyficzne klasy. Nie można utworzyć obiektu typu klasy abstrakcyjnej; jednak można użyć wskaźników i odwołań do typu klasy abstrakcyjnej.
+Klasy abstrakcyjne pełnią rolę wyrażeń ogólnych, z których można wyprowadzać bardziej konkretne klasy. Nie można utworzyć obiektu typu klasy abstrakcyjnej; można jednak używać wskaźników i odwołań do typów klas abstrakcyjnych.
 
-Klasa, która zawiera co najmniej jedną czystą mfunkcję wirtualną jest traktowany jako klasa abstrakcyjna. Klasy pochodne klasy abstrakcyjnej muszą implementować czystą funkcję wirtualną lub są one zbyt, klasy abstrakcyjne.
+Klasa, która zawiera co najmniej jedną czystą funkcję wirtualną, jest uznawana za klasę abstrakcyjną. Klasy pochodne klasy abstrakcyjnej muszą implementować czystą funkcję wirtualną lub są one również klasami abstrakcyjnymi.
 
-Rozważmy przykład przedstawiony w [funkcji wirtualnych](../cpp/virtual-functions.md). Zamiarem klasy `Account` ma na celu dostarczenie ogólnych funkcji, ale obiekty typu `Account` są zbyt ogólne, by były przydatne. W związku z tym `Account` jest dobrym kandydatem do klasy abstrakcyjnej:
+Rozważmy przykład przedstawiony w [funkcjach wirtualnych](../cpp/virtual-functions.md). Celem klasy `Account` jest zapewnienie ogólnych funkcji, ale obiekty typu `Account` są zbyt ogólne, aby były użyteczne. W związku z tym `Account` jest dobrym kandydatem do klasy abstrakcyjnej:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -35,27 +35,27 @@ private:
 };
 ```
 
-Jedyna różnica pomiędzy tą deklaracją, a poprzedni dotyczy `PrintBalance` jest zadeklarowana za pomocą czysty specyfikator (`= 0`).
+Jedyną różnicą między tą deklaracją a poprzednią jest to, że `PrintBalance` jest zadeklarowany za pomocą czystego specyfikatora (`= 0`).
 
-## <a name="restrictions-on-abstract-classes"></a>Ograniczenia dotyczące klasy abstrakcyjne
+## <a name="restrictions-on-abstract-classes"></a>Ograniczenia dotyczące klas abstrakcyjnych
 
-Klasy abstrakcyjne nie może służyć do:
+Klas abstrakcyjnych nie można używać dla:
 
-- Element członkowski danych lub zmiennych
+- Zmienne lub dane elementu członkowskiego
 
 - Typy argumentów
 
 - Zwracane typy funkcji
 
-- Jawne konwersje typów
+- Typy konwersji jawnych
 
-Innym ograniczeniem jest to, że jeśli Konstruktor dla klasy abstrakcyjnej wywołuje jest czysta funkcja wirtualna, albo bezpośrednio lub pośrednio, wynik jest niezdefiniowany. Jednak konstruktory i destruktory klasy abstrakcyjne mogą wywoływać innych funkcji Członkowskich.
+Inne ograniczenie polega na tym, że jeśli Konstruktor klasy abstrakcyjnej wywołuje czystą funkcję wirtualną, bezpośrednio lub pośrednio, wynik jest niezdefiniowany. Konstruktory i destruktory dla klas abstrakcyjnych mogą jednak wywoływać inne funkcje członkowskie.
 
-Czyste funkcje wirtualne mogą być definiowane dla klas abstrakcyjnych, ale wywołać bezpośrednio tylko przy użyciu składni:
+Czyste funkcje wirtualne można definiować dla klas abstrakcyjnych, ale można je wywoływać bezpośrednio tylko przy użyciu składni:
 
-*abstrakcyjna klasa nazwa*::*nazwy funkcji*)
+*abstrakcyjna klasa-Name*::*Function-Name*()
 
-Dzięki temu podczas projektowania hierarchii klas, których klas podstawowych obejmują czysto wirtualne destruktory, ponieważ destruktory klasy bazowej zawsze są wywoływane w trakcie niszczenia obiektu. Rozważmy następujący przykład:
+Pomaga to podczas projektowania hierarchii klas, których klasy podstawowe zawierają czyste destruktory wirtualne, ponieważ destruktory klasy bazowej są zawsze wywoływane w procesie niszczenia obiektu. Rozważmy następujący przykład:
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.
@@ -81,11 +81,11 @@ int main() {
 }
 ```
 
-Gdy obiekt wskazywany przez `pDerived` zostanie usunięty, destruktor klasy `derived` nosi nazwę i następnie destruktor klasy `base` jest wywoływana. Pusty implementacji dla czystych funkcji wirtualnych gwarantuje, czy co najmniej kilku implementacja istnieje dla tej funkcji.
+Gdy obiekt wskazywany przez `pDerived` jest usuwany, destruktor dla klasy `derived` jest wywoływany, a następnie destruktor klasy `base` jest wywoływany. Pusta implementacja czystej funkcji wirtualnej zapewnia, że dla funkcji istnieje co najmniej pewna implementacja.
 
 > [!NOTE]
-> W powyższym przykładzie czystą funkcję wirtualną `base::~base` jest wywoływana niejawnie z `derived::~derived`. Istnieje również możliwość wywołania czystych funkcji wirtualnych, które jawnie przy użyciu funkcji składowej w pełni kwalifikowanej nazwy.
+> W poprzednim przykładzie czysta funkcja wirtualna `base::~base` jest wywoływana niejawnie z `derived::~derived`. Istnieje również możliwość wywołania czystych funkcji wirtualnych jawnie przy użyciu w pełni kwalifikowanej nazwy funkcji składowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dziedziczenie](../cpp/inheritance-cpp.md)

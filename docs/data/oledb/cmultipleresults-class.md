@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88bc956c3a08c6dddbd7d26a18cfc10f778cabcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211833"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults — Klasa
 
-Jeśli chcesz, aby polecenia do obsługi wielu zestawów wyników, użyj `CMultipleResults` dla `CCommand` argument szablonu *TMultiple*.
+Jeśli chcesz, aby polecenie obsługiwało wiele zestawów wyników, użyj `CMultipleResults` dla `CCommand` szablonu argumentu *TMultiple*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,13 +27,13 @@ class CMultipleResults
 
 ## <a name="remarks"></a>Uwagi
 
-Do obsługi wielu wyników ustawia [CCommand](../../data/oledb/ccommand-class.md) musi dziedziczyć z tej klasy.
+Aby obsłużyć wiele zestawów wyników, [CCommand](../../data/oledb/ccommand-class.md) musi dziedziczyć z tej klasy.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atldbcli
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

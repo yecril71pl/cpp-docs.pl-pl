@@ -6,20 +6,20 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180917"
 ---
 # <a name="class-templates"></a>Szablony klas
 
-W tym temacie opisano reguły, które są specyficzne dla szablonów klas w języku C++.
+W tym temacie opisano reguły, które są C++ specyficzne dla szablonów klas.
 
-## <a name="member-functions-of-class-templates"></a>Funkcje Członkowskie szablonów klas
+## <a name="member-functions-of-class-templates"></a>Funkcje składowe szablonów klas
 
-Funkcje składowe można zdefiniować wewnątrz lub na zewnątrz szablonu klasy. Jeśli zdefiniowane poza szablonem klasy są zdefiniowane takich jak szablonów funkcji.
+Funkcje składowe mogą być zdefiniowane wewnątrz lub poza szablonem klasy. Są one zdefiniowane jako szablony funkcji, jeśli zostały zdefiniowane poza szablonem klasy.
 
 ```cpp
 // member_function_templates1.cpp
@@ -51,9 +51,9 @@ int main()
 }
 ```
 
-Należy pamiętać, że podobnie jak w przypadku żadnej funkcji składowej klasy szablonu definicji funkcji składowej konstruktora klasy zawiera listę argumentów szablonu dwa razy.
+Należy pamiętać, że podobnie jak w przypadku każdej funkcji składowej klasy szablonu, definicja funkcji składowej konstruktora klasy zawiera dwa razy listę argumentów szablonu.
 
-Funkcje Członkowskie można samodzielnie się szablonów funkcji, określania dodatkowych parametrów, jak w poniższym przykładzie.
+Funkcje składowe mogą być szablonami funkcji, określając dodatkowe parametry, jak w poniższym przykładzie.
 
 ```cpp
 // member_templates.cpp
@@ -77,11 +77,11 @@ int main()
 
 ## <a name="nested-class-templates"></a>Zagnieżdżone szablony klas
 
-Szablony można zdefiniować w obrębie klasy lub szablony klas, w którym to przypadku one są określane jako szablonów elementów członkowskich. Szablony elementu członkowskiego, które są klas są określane jako zagnieżdżone szablony klas. Szablony składowych, które są funkcjami zostały omówione w [szablony funkcji składowych](../cpp/member-function-templates.md).
+Szablony można definiować w ramach klas lub szablonów klas, w takim przypadku są one nazywane szablonami elementów członkowskich. Szablony elementów członkowskich, które są klasami, są nazywane szablonami klas zagnieżdżonych. Szablony elementów członkowskich, które są funkcjami, są omówione w [szablonach funkcji składowych](../cpp/member-function-templates.md).
 
-Zagnieżdżone szablony klas są deklarowane jako szablony klas w zakresie klasy zewnętrznej. Mogą być definiowane wewnątrz lub na zewnątrz otaczającej klasy.
+Szablony klas zagnieżdżonych są deklarowane jako szablony klas wewnątrz zakresu klasy zewnętrznej. Można je definiować wewnątrz lub na zewnątrz otaczającej klasy.
 
-Poniższy kod demonstruje szablonu klasy zagnieżdżone wewnątrz zwykłej klasy.
+Poniższy kod ilustruje zagnieżdżony szablon klasy wewnątrz klasy zwykłej.
 
 ```cpp
 // nested_class_template1.cpp
@@ -191,11 +191,11 @@ X<T>::Y<U>::~Y()
 X<T>::Y<U>::~Y()
 ```
 
-Klasy lokalnej nie mogą mieć szablonów składowych.
+Lokalne klasy nie mogą mieć szablonów składowych.
 
-## <a name="template-friends"></a>Zaprzyjaźnione szablony
+## <a name="template-friends"></a>Znajomi z szablonami
 
-Szablony klas mogą posiadać [znajomych](friend-cpp.md). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.
+Szablony klas mogą mieć [znajomych](friend-cpp.md). Klasa, szablon klasy, funkcja lub szablon funkcji może być elementem zaprzyjaźnionym dla klasy szablonu. Elementy zaprzyjaźnione mogą być także specjalizacjami szablonu klasy lub szablonu funkcji, ale nie specjalizacjami częściowymi.
 
 W poniższym przykładzie, funkcja zaprzyjaźniona jest zdefiniowana jako szablon funkcji w ramach szablonu klasy. Ten kod tworzy wersję funkcji zaprzyjaźnionej dla każdego wystąpienia szablonu. Ta konstrukcja jest przydatna, gdy funkcja zaprzyjaźniona zależy od tych samych parametrów szablonu, co klasa.
 
@@ -413,7 +413,7 @@ a
 
 ## <a name="reuse-of-template-parameters"></a>Ponowne użycie parametrów szablonu
 
-Parametry szablonu mogą być ponownie używane na liście parametrów szablonu. Na przykład poniższy kod jest dozwolony:
+Parametry szablonu mogą być ponownie używane na liście parametrów szablonu. Na przykład następujący kod jest dozwolony:
 
 ```cpp
 // template_specifications2.cpp
@@ -438,6 +438,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../cpp/templates-cpp.md)

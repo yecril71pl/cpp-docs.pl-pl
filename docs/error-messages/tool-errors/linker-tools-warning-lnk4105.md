@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-ms.openlocfilehash: 880c8519a530f492d0c322575a1386af8a7d0187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 655a6dfde77984cd0c941ec0d8abb0c4d099c80f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183296"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>Ostrzeżenie LNK4105 narzędzi konsolidatora
 
-Brak argumentu określony za pomocą opcji "opcji"; Zignorowano opcję
+nie określono argumentu z opcją "Option"; Ignorowanie opcji
 
-Ostrzeżenie to pojawia się tylko po [/libpath —](../../build/reference/libpath-additional-libpath.md) ustawiono opcję. Jeśli nie określono katalogu przy użyciu tej opcji, konsolidator ignoruje opcję i generuje ten komunikat ostrzegawczy.
+To ostrzeżenie występuje tylko wtedy, gdy opcja [/LIBPATH](../../build/reference/libpath-additional-libpath.md) jest ustawiona. Jeśli dla tej opcji nie określono katalogu, konsolidator zignoruje opcję i wygeneruje ten komunikat ostrzegawczy.
 
-Jeśli jest konieczne zastąpienie istniejących ustawień biblioteki środowiska, należy usunąć/libpath — opcja z wiersza polecenia konsolidatora. Jeśli chcesz użyć ścieżki alternatywnej wyszukiwania dla bibliotek, należy określić ścieżkę alternatywną, zgodnie z opcją/libpath —.
+Jeśli nie musisz przesłonić istniejących ustawień biblioteki środowiskowej, Usuń opcję/LIBPATH z wiersza polecenia konsolidatora. Jeśli chcesz użyć alternatywnej ścieżki wyszukiwania dla bibliotek, określ alternatywną ścieżkę po opcji/LIBPATH.
 
 ## <a name="example"></a>Przykład
 
@@ -27,4 +27,4 @@ Jeśli jest konieczne zastąpienie istniejących ustawień biblioteki środowisk
 link /libpath:c:\filepath\lib bar.obj
 ```
 
-będzie kierować konsolidator, aby wyszukać wymaganych bibliotek w `c:\filepath\lib` przed wyszukiwaniem w lokalizacji domyślnej.
+nakazuje konsolidatorowi wyszukanie wymaganych bibliotek w `c:\filepath\lib` przed wyszukiwaniem w lokalizacjach domyślnych.

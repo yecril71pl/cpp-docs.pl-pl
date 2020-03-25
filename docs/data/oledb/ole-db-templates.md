@@ -6,56 +6,56 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525340"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209875"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 
-Szablony OLE DB ułatwiają dostęp do danych OLE DB. Visual C++ zapewnia klasy szablonów, które implementują wiele powszechnie używanych interfejsów OLE DB. Można użyć szablonów konsumentów Visual C++ do pisania aplikacji klienckich (użytkownik) OLE DB i szablony dostawcy do pisania aplikacji serwera (dostawcy).
+Szablony OLE DB ułatwiają OLE DB dostępu do danych. Wizualizacja C++ zawiera klasy szablonów, które implementują wiele powszechnie używanych interfejsów OLE DB. Można użyć szablonów konsumentów wizualnych C++ do napisania aplikacji klienta OLE DB i szablonów dostawcy w celu zapisania aplikacji serwera (dostawcy).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-Zawiera łącza do klas OLE DB szablon konsumenta, wymienionych według użycia.
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+Oferuje linki do OLE DB klas szablonów konsumentów wymienionych według użycia.
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-Zawiera łącza do klas szablonów dostawców OLE DB, wymienionych według użycia.
+Zawiera łącza do klas szablonów dostawców OLE DB wymienionych według użycia.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
-W tym artykule opisano, co to jest OLE DB, a w tym artykule omówiono Uniwersalny dostęp do danych w OLE DB.
+W tym artykule opisano, co OLE DB ma i omówiono uniwersalne dostęp do danych w programie OLE DB.
 
-[Dokumentacja dotycząca OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
-Zawiera łącza do dokumentacji zestawu Windows SDK dla OLE DB.
+[Dokumentacja programisty OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
+Zawiera łącza do dokumentacji Windows SDK w OLE DB.
 
 [Przykłady szablonów OLE DB](../../overview/visual-cpp-samples.md)<br/>
-Zawiera łącza do przykładów szablonów OLE DB, które pokazują, jak korzystać z OLE DB w swoich projektach.
+Zawiera łącza do przykładów szablonów OLE DB, które pokazują, jak używać OLE DB w projektach.
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-W tym artykule omówiono koncepcyjnego materiału informacje o szablonach klientów bazy danych OLE.
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+W tym artykule omówiono materiał koncepcyjny dotyczący OLE DB szablonów konsumentów.
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-W tym artykule omówiono koncepcyjnego materiału o szablony OLE DB Provider.
+W tym artykule omówiono materiał koncepcyjny dotyczący szablonów dostawców OLE DB.
 
 [Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
-W tym artykule opisano tworzenie konsumenta OLE DB szablonów.
+Opisuje tworzenie klienta szablonów OLE DB.
 
 [Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
-W tym artykule opisano tworzenie prostego dostawcy tylko do odczytu, która odczytuje pary ciągów.
+Opisuje Tworzenie prostego dostawcy tylko do odczytu, który odczytuje parę ciągów.
 
 [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)<br/>
-W tym artykule opisano tworzenie dostawców, którzy mogą zapisywać dane w magazynie danych.
+Opisuje tworzenie dostawców, którzy mogą zapisywać w magazynie danych.
 
 [Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)<br/>
-W tym artykule omówiono uproszczony interfejs iniekcję kodu opartego na OLE DB konsumenta szablony do tworzenia konsumentów OLE DB pracy.
+W tym artykule omówiono uproszczony interfejs służący do dodawania kodu na podstawie OLE DB szablonów konsumentów do tworzenia roboczych OLE DB konsumentów.
 
-[Odwołanie do Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)<br/>
-Oferuje materiały źródłowe dotyczące biblioteki ATL, zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów COM.
+[Informacje dotyczące Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)<br/>
+Zapewnia materiały referencyjne dla biblioteki ATL, zestaw klas opartych na C++ szablonach, które upraszczają programowanie obiektów com.
 
 [Debugowanie](/visualstudio/debugger/debugging-in-visual-studio)<br/>
-Zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.
+Oferuje linki do korzystania z debugera programu Visual Studio w celu poprawienia błędów logiki w aplikacji lub procedurach składowanych.

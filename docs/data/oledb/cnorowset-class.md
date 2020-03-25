@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1e01fd29c74cf1c44081c24bf384704cf2acd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230480"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211475"
 ---
 # <a name="cnorowset-class"></a>CNoRowset — Klasa
 
@@ -31,33 +31,33 @@ class CNoRowset
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.
+Klasa akcesora. Wartość domyślna to `CAccessorBase`.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `CNoRowset` jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.
+Użyj `CNoRowset` jako argumentu szablonu, jeśli polecenie nie zwraca zestawu wierszy.
 
-`CNoRowset` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:
+`CNoRowset` implementuje następujące metody zastępcze, z których każdy odpowiada innym metodom klasy metody dostępu:
 
-- `BindFinished` — Wskazuje, kiedy powiązania jest ukończone (zwraca `S_OK`).
+- `BindFinished` — wskazuje, kiedy wiązanie jest kompletne (zwraca `S_OK`).
 
-- `Close` -Zwalnia wierszy i bieżącego interfejsu IRowset.
+- `Close` — zwalnia wiersze i bieżący interfejs IRowset.
 
-- `GetIID` -Pobiera identyfikator interfejsu punktu połączenia.
+- `GetIID` — Pobiera identyfikator interfejsu punktu połączenia.
 
-- `GetInterface` -Pobiera interfejs.
+- `GetInterface` — pobiera interfejs.
 
-- `GetInterfacePtr` -Pobiera wskaźnik zhermetyzowany interfejsu.
+- `GetInterfacePtr` — pobiera zhermetyzowany wskaźnik interfejsu.
 
-- `SetAccessor` -Ustawia wskaźnik akcesor.
+- `SetAccessor` — ustawia wskaźnik na metodę dostępu.
 
-- `SetupOptionalRowsetInterfaces` -Konfiguruje interfejsy opcjonalne dla zestawu wierszy.
+- `SetupOptionalRowsetInterfaces` — konfiguruje opcjonalne interfejsy dla zestawu wierszy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

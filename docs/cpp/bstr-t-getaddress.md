@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetAddress method [C++]
 ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: 4d51539d2afbb2fbcc860b6c4d821df119aca418
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78bd1b607ba4a86bbc824887a7ec767cd5476e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181255"
 ---
-# <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
+# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zwalnia wszelkie istniejących parametrów i zwraca adres nowo przydzielonego ciągu.
+Zwalnia wszystkie istniejące ciągi i zwraca adres nowo przydzielony ciąg.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +27,18 @@ BSTR* GetAddress( );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `BSTR` opakowane przez `_bstr_t`.
+Wskaźnik do `BSTR` opakowany przez `_bstr_t`.
 
 ## <a name="remarks"></a>Uwagi
 
-**Getaddress —** ma wpływ na wszystkie `_bstr_t` obiekty udziału `BSTR`. Więcej niż jeden `_bstr_t` mogą udostępniać `BSTR` za pomocą konstruktora kopiującego i **operator =**.
+**GetAddress** ma wpływ na wszystkie obiekty `_bstr_t`, które współużytkują `BSTR`. Więcej niż jeden `_bstr_t` może współdzielić `BSTR` za pomocą konstruktora kopiującego i **operatora =** .
 
 ## <a name="example"></a>Przykład
 
-Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład użycie **getaddress —**.
+Zobacz [_bstr_t:: Assign](../cpp/bstr-t-assign.md) dla przykładu przy użyciu **GetAddress**.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_bstr_t, klasa](../cpp/bstr-t-class.md)

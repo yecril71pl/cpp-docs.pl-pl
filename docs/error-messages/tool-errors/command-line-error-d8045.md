@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - D8045
 ms.assetid: 01c8808c-bac1-4b4d-8a90-b595f95e9318
-ms.openlocfilehash: 7964c2539b5358d2d946e530c4ee75110857446d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05a2d3851e58062e1e326781a223e2f4b0346620
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196849"
 ---
 # <a name="command-line-error-d8045"></a>Błąd D8045 wiersza polecenia
 
-Nie można skompilować pliku C "file" z opcją/CLR
+nie można skompilować pliku C "File" z opcją/CLR
 
-Tylko pliki źródłowe C++ kod może być przekazywany do kompilacji, który używa **/CLR**.  Użyj **/TP** skompilować plik .c, jako plik .cpp; zobacz [TP, /Tp-TP, /TP (Określ źródło pliku typu)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) Aby uzyskać więcej informacji.
+Tylko C++ pliki kodu źródłowego można przesłać do kompilacji korzystającej z **/CLR**.  Użyj **/TP** , aby skompilować plik. c jako plik. cpp; Aby uzyskać więcej informacji [, zobacz/TC,/TP,/TC,/TP (Określ typ pliku źródłowego)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-D8045 wiersza polecenia może również wystąpić, jeśli kompilujesz aplikację ATL, przy użyciu języka Visual C++. Zobacz [jak: Migracja do/CLR](../../dotnet/how-to-migrate-to-clr.md) Aby uzyskać więcej informacji.
+D8045 wiersza polecenia może również wystąpić w przypadku kompilowania aplikacji ATL przy użyciu C++wizualizacji. Aby uzyskać więcej informacji [, zobacz How to: Migruj do/CLR](../../dotnet/how-to-migrate-to-clr.md) .

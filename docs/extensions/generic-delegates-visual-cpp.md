@@ -1,21 +1,21 @@
 ---
-title: Delegaty ogólne (C++sposób niezamierzony)
+title: Delegaty ogólneC++(/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182035"
 ---
-# <a name="generic-delegates-ccli"></a>Delegaty ogólne (C++sposób niezamierzony)
+# <a name="generic-delegates-ccli"></a>Delegaty ogólneC++(/CLI)
 
-Można używać parametrów typu ogólnego, przy użyciu delegatów. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegowanie (C++sposób niezamierzony i C++/CX)](delegate-cpp-component-extensions.md).
+Parametry typu ogólnego można użyć z delegatami. Aby uzyskać więcej informacji na temat delegatów, zobacz [C++delegat C++(/CLI and/CX)](delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,30 +29,30 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybuty*<br/>
-(Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
+*Attributes*<br/>
+Obowiązkowe Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na temat atrybutów i klas atrybutów, zobacz atrybuty.
 
-*Typ — parametr-identyfikatory*<br/>
-Rozdzielana przecinkami lista identyfikatorów dla parametrów typu.
+*identyfikatory parametrów typu*<br/>
+Rozdzielana przecinkami lista identyfikatorów parametrów typu.
 
-*type-parameter-constraints-clauses*<br/>
-Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md)
+*ograniczenia parametrów typu-Parameter-klauzule*<br/>
+Przyjmuje formularz określony w [ograniczeniach dla parametrów typu ogólnego (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
-*accessibility-modifiers*<br/>
-(Opcjonalnie) Modyfikatory dostępności (np. **publicznych**, **prywatnej**).
+*ułatwienia dostępu — Modyfikatory*<br/>
+Obowiązkowe Modyfikatory dostępności (np. **publiczne**, **prywatne**).
 
-*result-type*<br/>
+*Typ wyniku*<br/>
 Zwracany typ delegata.
 
-*Identyfikator*<br/>
-Nazwa obiektu delegowanego.
+*identyfikatora*<br/>
+Nazwa delegata.
 
-*parametrów formalnych*<br/>
-(Opcjonalnie) Lista parametrów delegata.
+*parametry formalne*<br/>
+Obowiązkowe Lista parametrów delegata.
 
 ## <a name="example"></a>Przykład
 
-Parametry typu delegata są określone w punkcie, w którym tworzony jest obiekt delegowany. Delegat i skojarzona metoda musi mieć taki sam podpis. Oto przykład deklaracja delegata ogólnego.
+Parametry typu delegata są określone w punkcie, w którym jest tworzony obiekt delegowany. Obiekt delegowany i skojarzona z nim Metoda musi mieć taki sam podpis. Poniżej znajduje się przykład ogólnej deklaracji delegata.
 
 ```cpp
 // generics_generic_delegate1.cpp
@@ -65,11 +65,11 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 
 Poniższy przykład pokazuje, że
 
-- Nie można użyć tego samego obiektu delegowanego z różnymi typami skonstruowany. Utwórz delegata różnych obiektów dla różnych typów.
+- Nie można użyć tego samego obiektu delegowanego z różnymi skonstruowanymi typami. Utwórz różne obiekty delegatów dla różnych typów.
 
-- Delegat ogólny może być skojarzony z metody rodzajowej.
+- Delegat generyczny może być skojarzony z metodą rodzajową.
 
-- Po wywołaniu metody ogólnej bez określania argumentów typu kompilator próbuje wywnioskować argumentów typu na wywołanie.
+- Gdy metoda ogólna jest wywoływana bez określenia argumentów typu, kompilator próbuje wywnioskować argumenty typu dla wywołania.
 
 ```cpp
 // generics_generic_delegate2.cpp
@@ -107,7 +107,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje Delegat ogólny `GenDelegate<ItemType>`, a następnie tworzy wystąpienie przez skojarzenie jej z metodą `MyMethod` używającą parametrów typu `ItemType`. Dwa wystąpienia delegata (całkowitą i wartość o podwójnej precyzji) są tworzone i wywołana.
+Poniższy przykład deklaruje ogólny delegat `GenDelegate<ItemType>`, a następnie tworzy jego wystąpienie, kojarząc go z metodą `MyMethod`, która używa parametru typu `ItemType`. Tworzone i wywoływane są dwa wystąpienia delegata (liczba całkowita i podwójna).
 
 ```cpp
 // generics_generic_delegate.cpp
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

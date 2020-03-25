@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0044
 ms.assetid: 5d78c45a-f9e9-4d2b-a3b6-5a5d1421ab84
-ms.openlocfilehash: 3d9fd25dc5b39de69735c7d3d5cf0a6bb64c0482
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab2fd5f6562ac85c9c86cafc851315c21cd28da3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192107"
 ---
 # <a name="project-build-error-prj0044"></a>Błąd PRJ0044 kompilacji projektu
 
-Właściwość 'Dodatkowe zależności' dla reguły niestandardowej kompilacji 'reguły', przypisanej do pliku 'Plik' jest nieprawidłowa. Właściwość zawiera 'string', co jest ewaluowane jako 'value'.
+Właściwość "dodatkowe zależności" dla reguły niestandardowej reguły kompilacji "Rule" przypisana do pliku "File" jest nieprawidłowa. Właściwość zawiera ciąg "String", który jest obliczany jako "value".
 
-**Dodatkowe zależności** właściwości obliczane ciągiem pustym lub ciąg, który zawiera nieprawidłowe znaki (dowolny znak, który nie może być nazwa pliku lub katalogu). Niestandardowej kompilacji potrzebę reguły danych wyjściowych akcji kompilacji.
+Właściwość **dodatkowych zależności** została oceniona jako pusty ciąg lub do ciągu, który zawiera nieprawidłowe znaki (dowolny znak, który nie może znajdować się w nazwie pliku lub katalogu). Niestandardowe reguły kompilacji wymagają danych wyjściowych akcji kompilacji.
 
-Aby uzyskać więcej informacji, zobacz [Określanie niestandardowego narzędzia kompilacji](../../build/specifying-custom-build-tools.md).
+Aby uzyskać więcej informacji, zobacz [Określanie niestandardowych narzędzi kompilacji](../../build/specifying-custom-build-tools.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - virtual base classes [C++]
 - base classes [C++]
 ms.assetid: 6e6d54d0-6f21-4a16-9103-22935d98f596
-ms.openlocfilehash: 59c474f54ea439acf83cf6923eba6e167901dd37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50bddef3ea1ee1462d8cf115c0980270c8deab25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392418"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181476"
 ---
 # <a name="base-classes"></a>Klasy podstawowe
 
-Proces dziedziczenie powoduje utworzenie nowej klasy pochodnej, która składa się z elementów członkowskich klas podstawowych, a także żadnych nowych elementów członkowskich dodane w klasie pochodnej. W dziedziczenia wielokrotnego jest możliwe do utworzenia wykresu dziedziczenia gdzie tej samej klasy bazowej jest częścią więcej niż jednej z klas pochodnych. Na poniższej ilustracji przedstawiono taki wykres.
+Proces dziedziczenia tworzy nową klasę pochodną, która składa się z elementów członkowskich klasy podstawowej (ES) i nowych elementów członkowskich dodanych przez klasę pochodną. W przypadku wielokrotnego dziedziczenia możliwe jest konstruowanie wykresu dziedziczenia, gdzie taka sama klasa bazowa jest częścią więcej niż jednej klasy pochodnej. Na poniższej ilustracji przedstawiono ten wykres.
 
-![Wiele wystąpień klasy bazowej](../cpp/media/vc38xn1.gif "wielu wystąpień klasy bazowej") <br/>
-Wiele wystąpień pojedyncza klasa bazowa
+![Wiele wystąpień klasy bazowej](../cpp/media/vc38xn1.gif "Wiele wystąpień klasy bazowej") <br/>
+Wiele wystąpień pojedynczej klasy podstawowej
 
-Na rysunku, połączyć reprezentacje składniki `CollectibleString` i `CollectibleSortable` są wyświetlane. Jednak klasy bazowej, `Collectible`, znajduje się w `CollectibleSortableString` za pośrednictwem `CollectibleString` ścieżki i `CollectibleSortable` ścieżki. Aby wyeliminować tę nadmiarowość, takich klas mogą być deklarowane jako wirtualne klasy bazowe, gdy są one dziedziczone.
+Na rysunku przedstawiono ilustrację obrazkową składników `CollectibleString` i `CollectibleSortable`. Jednak Klasa bazowa, `Collectible`, jest w `CollectibleSortableString` za pomocą ścieżki `CollectibleString` i ścieżki `CollectibleSortable`. Aby wyeliminować tę nadmiarowość, takie klasy mogą być deklarowane jako wirtualne klasy bazowe, gdy są dziedziczone.

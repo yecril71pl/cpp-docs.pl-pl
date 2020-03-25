@@ -7,16 +7,16 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 47bf9c50a2da039b0ffa074796a768290b732bb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268541"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178985"
 ---
 # <a name="return-statement-c"></a>return — instrukcja (C++)
 
-Kończy wykonywanie funkcji i przekazuje sterowanie do funkcji wywołującej (lub systemu operacyjnego w przypadku przenoszenia kontrolki z `main` funkcji). Wznawia wykonywanie w funkcji wywołującej w punkcie, w następującej natychmiast po wywołaniu.
+Kończy wykonywanie funkcji i zwraca kontrolę do funkcji wywołującej (lub systemu operacyjnego, Jeśli przeniesiesz kontrolę z funkcji `main`). Wykonanie wznowione w funkcji wywołującej w punkcie bezpośrednio po wywołaniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ return [expression];
 
 ## <a name="remarks"></a>Uwagi
 
-`expression` Klauzuli, jeśli jest obecny, jest konwertowany na typie określonym w deklaracji funkcji tak, jakby były wykonywane inicjowanie. Konwersja z typu wyrażenia do **zwracają** typ funkcji można tworzyć obiektów tymczasowych. Aby uzyskać więcej informacji na temat sposobu i czasu obiekty tymczasowe są tworzone, zobacz [obiekty tymczasowe](../cpp/temporary-objects.md).
+Klauzula `expression`, jeśli jest obecna, jest konwertowana na typ określony w deklaracji funkcji, tak jak w przypadku wykonywania inicjalizacji. Konwersja z typu wyrażenia na **zwracany** typ funkcji może tworzyć obiekty tymczasowe. Aby uzyskać więcej informacji o tym, jak i kiedy obiekty tymczasowe są tworzone, zobacz [obiekty tymczasowe](../cpp/temporary-objects.md).
 
-Wartość `expression` klauzula jest zwracana do funkcji wywołującej. Jeśli wyrażenie jest pominięty, wartość zwracana funkcji jest niezdefiniowane. Konstruktory i destruktory i funkcji typu **void**, nie można określić wyrażenie w **zwracają** instrukcji. Funkcje wszystkich innych typów, należy określić wyrażenie w **zwracają** instrukcji.
+Wartość klauzuli `expression` jest zwracana do funkcji wywołującej. Jeśli wyrażenie zostanie pominięte, zwracana wartość funkcji jest niezdefiniowana. Konstruktory i destruktory oraz funkcje typu **void**nie mogą określać wyrażenia w instrukcji **Return** . Funkcje wszystkich innych typów muszą określać wyrażenie w instrukcji **Return** .
 
-Przepływ sterowania opuszcza blok otaczający definicji funkcji, wynik jest taka sama jak byłoby Jeśli **zwracają** miał została wykonana instrukcja bez wyrażenia. To ustawienie jest nieprawidłowe dla funkcji, które są zadeklarowane jako zwracanie wartości.
+Gdy przepływ sterowania opuszcza blok zawierający definicję funkcji, wynik jest taki sam, jak gdyby instrukcja **Return** bez wyrażenia została wykonana. Jest to nieprawidłowe dla funkcji, które są zadeklarowane jako zwracające wartość.
 
-Funkcja może mieć dowolną liczbę **zwracają** instrukcji.
+Funkcja może zawierać dowolną liczbę instrukcji **Return** .
 
-W poniższym przykładzie użyto wyrażenia z **zwracają** instrukcję, aby uzyskać największy dwóch liczb całkowitych.
+Poniższy przykład używa wyrażenia z instrukcją **Return** , aby uzyskać największą z dwóch liczb całkowitych.
 
 ## <a name="example"></a>Przykład
 
@@ -56,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje skoku](../cpp/jump-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

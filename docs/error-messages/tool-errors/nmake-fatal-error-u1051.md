@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: ddf1d262fb8dfc6e63b0bf5cc098b7b140539310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193683"
 ---
 # <a name="nmake-fatal-error-u1051"></a>Błąd krytyczny NMAKE U1051
 
-Za mało pamięci
+za mało pamięci
 
-NMAKE za mało pamięci, w tym pamięci wirtualnej, ponieważ pliku reguł programu make jest zbyt duże lub zbyt złożone.
+NMAKE zabrakło pamięci, w tym pamięci wirtualnej, ponieważ plik reguł programu make jest zbyt duży lub skomplikowany.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Zwolnij miejsce na dysku.
+1. Zwolnij trochę miejsca na dysku.
 
-1. Zwiększenie rozmiaru pliku stronicowania systemu Windows NT lub pliku wymiany Windows.
+1. Zwiększ rozmiar pliku stronicowania systemu Windows NT lub pliku wymiany systemu Windows.
 
-1. Jeśli tylko część pliku reguł programu make jest używany, dzielenie pliku reguł programu make w osobnych plikach albo użyj **! Jeśli** dyrektywy, aby ograniczyć, które musi przetworzyć NMAKE przetwarzania wstępnego. **! Jeśli** dyrektywy zawierają **! Jeśli**, `!IFDEF`, **! IFNDEF**, **! Jeśli nie**, **! ELSE** `IFDEF`, i **! ELSE** `IFNDEF`.
+1. Jeśli jest używana tylko część pliku reguł programu make, należy podzielić plik reguł programu make na osobne pliki **lub użyć go. W przypadku** wstępnego przetwarzania dyrektyw w celu ograniczenia ilości, którą NMAKE musi przetworzyć. **! Jeśli** dyrektywy obejmują **! Jeśli**, `!IFDEF`, **! IFNDEF**, **! ELSE IF**, **! ELSE** `IFDEF`i **! ELSE** `IFNDEF`.

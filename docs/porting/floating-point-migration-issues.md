@@ -2,12 +2,12 @@
 title: Problemy przy migracji liczb zmiennoprzecinkowych
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215023"
 ---
 # <a name="floating-point-migration-issues"></a>Problemy przy migracji liczb zmiennoprzecinkowych
 
@@ -29,7 +29,7 @@ Ulepszenia poprawności generowania kodu w różnych trybach zmiennoprzecinkowyc
 
 W większości przypadków zmiany zmiennoprzecinkowe w najnowszych kompilatorach i bibliotekach spowodują szybsze lub bardziej prawidłowe działanie lub oba te elementy. Jeśli instrukcje SSE2 zastępują instrukcje x87, możesz nawet zobaczyć lepszą wydajność mocy procesora. Jednakże jeśli masz kod, który musi dokładnie replikować zachowanie zmiennoprzecinkowe starszego kompilatora, rozważ użycie natywnych możliwości wielowymiarowych programu Visual Studio, a następnie Skompiluj odnośny projekt przy użyciu starszego zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](use-native-multi-targeting.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uaktualnianie projektów ze starszych wersji wizualizacjiC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

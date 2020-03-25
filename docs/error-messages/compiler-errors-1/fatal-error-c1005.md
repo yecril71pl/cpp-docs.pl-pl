@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1005
 ms.assetid: 150daf8e-a38a-4669-9c1a-a05b5a1f65ef
-ms.openlocfilehash: a84791367656729b1cbd50ca180368f6c01531a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b0fe71dcfb6253327de247d24ef9d90c59181d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204870"
 ---
 # <a name="fatal-error-c1005"></a>Błąd krytyczny C1005
 
-ciąg zbyt duże dla buforu
+zbyt duży ciąg dla buforu
 
-Ciąg w pośredniego pliku kompilatora nastąpiło przepełnienie buforu.
+Ciąg w pliku pośrednim kompilatora przepełnił bufor.
 
-Ten błąd może wystąpić podczas parametr, który zostanie przekazany do jednej [/Fd](../../build/reference/fd-program-database-file-name.md) lub [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opcje kompilatora jest większa niż 256 bajtów.
+Ten błąd może wystąpić, gdy parametr przekazany do opcji kompilatora [/FD](../../build/reference/fd-program-database-file-name.md) lub [/yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) jest większy niż 256 bajtów.

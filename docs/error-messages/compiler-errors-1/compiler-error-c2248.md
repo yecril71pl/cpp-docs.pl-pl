@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206560"
 ---
 # <a name="compiler-error-c2248"></a>Błąd kompilatora C2248
 
-"*elementu członkowskiego*": nie można uzyskać dostępu "*access_level*"składowa zadeklarowana w klasie"*klasy*"
+"*member*": nie można uzyskać dostępu do składowej "*access_level*" zadeklarowanej w klasie "*class*"
 
-Elementy członkowskie klasy pochodnej nie może uzyskać dostępu `private` członków klasy podstawowej. Nie można uzyskać dostępu `private` lub `protected` składowych wystąpienia klasy.
+Elementy członkowskie klasy pochodnej nie mogą uzyskać dostępu `private` składowych klasy bazowej. Nie można uzyskać dostępu do `private` lub `protected` członków wystąpień klasy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2248 podczas prywatnych lub chronionych składowych klasy są dostępne z poza klasy. Aby rozwiązać ten problem, nie ma dostępu te elementy członkowskie bezpośrednio poza klasą. Użyj publicznego elementu członkowskiego danych i elementów członkowskich do interakcji z klasą.
+Poniższy przykład generuje C2248 podczas uzyskiwania dostępu do prywatnych lub chronionych elementów członkowskich klasy spoza klasy. Aby rozwiązać ten problem, nie należy uzyskiwać dostępu do tych elementów członkowskich bezpośrednio poza klasą. Użyj publicznych danych elementu członkowskiego i funkcji Członkowskich, aby współdziałać z klasą.
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Inny problem zgodności, który udostępnia C2248 polega na użyciu zaprzyjaźnione i specjalizacji. Aby rozwiązać ten problem, deklarowanie przyjaznych funkcje szablonu za pomocą pusty szablon parametru listy <> lub parametry określonego szablonu.
+Inny problem zgodności, który ujawnia C2248, to użycie znajomych i specjalizacji szablonów. Aby rozwiązać ten problem, należy zadeklarować zaprzyjaźnione funkcje szablonu za pomocą pustej listy parametrów szablonu < > lub określonych parametrów szablonu.
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-Inny problem zgodności, który udostępnia C2248 jest przy próbie deklarować elementu przyjaznego klasy i klasa nie jest widoczny dla deklaracją elementu zaprzyjaźnionego w zakresie klasy. Aby rozwiązać ten problem, należy udzielić przyjaźni do klasy otaczającej.
+Innym problemem zgodności, który ujawnia C2248, jest próba zadeklarować przyjaciela klasy i gdy Klasa nie jest widoczna dla deklaracji zaprzyjaźnionej w zakresie klasy. Aby rozwiązać ten problem, udziel przyjaźni do otaczającej klasy.
 
 ```cpp
 // C2248_enclose.cpp

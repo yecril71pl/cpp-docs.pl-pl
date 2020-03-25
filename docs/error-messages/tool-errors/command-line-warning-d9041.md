@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c685a1ca3195ad4ab52bab8b5d32b1a51534b24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213786"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196578"
 ---
 # <a name="command-line-warning-d9041"></a>Ostrzeżenie D9041 dla wiersza polecenia
 
-Nieprawidłowa wartość 'value' dla '/ opcja'; Zakładając, że 'value'; Dodaj "/ analyze" do opcji wiersza poleceń podczas określania tego ostrzeżenia
+Nieprawidłowa wartość "value" dla "Option"; przyjęto "value"; Dodaj "/ANALYZE" do opcji wiersza poleceń podczas określania tego ostrzeżenia
 
-Numer ostrzeżenia analizy kodu została dodana do **/wd**, **/we**, **/wo**, lub **/wl** opcji wiersza polecenia bez jednoczesnego określenia **/ analyze** opcji wiersza polecenia. Aby rozwiązać ten błąd, Dodaj **/ analyze** wiersza polecenia lub usuń nieprawidłowy numer ostrzeżenia z odpowiednią **Wn** opcji wiersza polecenia.
+Numer ostrzeżenia analizy kodu został dodany do opcji wiersza polecenia **/WD**, **/we**, **/wo**lub **/WL** bez również określania opcji wiersza polecenia **/analyze** . Aby naprawić ten błąd, Dodaj opcję wiersza polecenia **/analyze** lub usuń nieprawidłowy numer ostrzegawczy z odpowiedniej opcji wiersza polecenia **/w** .
 
 ## <a name="example"></a>Przykład
 
@@ -27,9 +27,9 @@ Poniższy przykład wiersza polecenia generuje ostrzeżenie D9041:
 cl /EHsc /LD /wd6001 filename.cpp
 ```
 
-Aby usunąć to ostrzeżenie, należy dodać **/ analyze** opcji wiersza polecenia. Jeśli **/ analyze** jest nieobsługiwane w wersji kompilatora, usuń nieprawidłowy numer ostrzeżenia z **/wd** opcji.
+Aby naprawić ostrzeżenie, Dodaj opcję wiersza polecenia **/analyze** . Jeśli **/analyze** nie jest obsługiwany w używanej wersji kompilatora, usuń nieprawidłowy numer ostrzegawczy z opcji **/WD** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błędy wiersza polecenia od D8000 do D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [Opcje kompilatora MSVC](../../build/reference/compiler-options.md)

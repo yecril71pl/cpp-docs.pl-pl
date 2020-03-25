@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3268
+title: Błąd kompilatora C3268
 ms.date: 11/04/2016
 f1_keywords:
 - C3268
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201464"
 ---
-# <a name="compiler-error-c3268"></a>Compiler Error C3268
+# <a name="compiler-error-c3268"></a>Błąd kompilatora C3268
 
-> "*funkcja*": funkcja ogólna lub funkcji składowej klasy ogólnej nie może mieć zmiennej listy parametrów
+> "*Function*": funkcja generyczna lub Funkcja składowa klasy generycznej nie może mieć zmiennej listy parametrów
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [Ogólne](../../extensions/generics-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3268.
+Poniższy przykład generuje C3268.
 
 ```cpp
 // C3268.cpp

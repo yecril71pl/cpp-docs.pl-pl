@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215218"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: zarządzanie zasobami (C++)
 
@@ -46,7 +46,7 @@ Można kopiować zasoby z jednego pliku do innego bez zmieniania ich lub zmiany 
 Można łatwo kopiować zasoby z istniejącego zasobu lub pliku wykonywalnego do bieżącego pliku zasobów. Aby skopiować zasoby, należy otworzyć oba pliki zawierające zasoby w tym samym czasie i przeciągnąć elementy z jednego pliku do innego lub skopiować i wkleić między dwoma plikami. Ta metoda działa w przypadku plików skryptów zasobów (. RC) i plików szablonów zasobów (. rct) oraz plików wykonywalnych (exe).
 
 > [!NOTE]
-> Wizualizacja C++ zawiera przykładowe pliki zasobów, których można użyć we własnej aplikacji. Aby uzyskać więcej informacji, zobacz [clipart: Common sources](https://github.com/Microsoft/VCSamples).
+> Wizualizacja C++ zawiera przykładowe pliki zasobów, których można użyć we własnej aplikacji. Aby uzyskać więcej informacji, zobacz [clipart: Common sources](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików zasobów w projekcie (**Widok zasobów**) i autonomicznych plikach. RC otwartych w oknach dokumentów. Można to zrobić w poprzednich wersjach produktu. Należy używać metody przeciągania i upuszczania między plikami. RC, które są otwarte poza projektem.
 
@@ -130,4 +130,4 @@ Win32
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Instrukcje: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Instrukcje: dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Instrukcje: dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece26b3f9928d44a593de830cf8a25c57e4c2d89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213749"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers — Przestrzeń nazw
 
-Definiuje typy otoki zasobów nabycia jest inicjowania (RAII), które upraszczają Zarządzanie okresem istnienia obiektów, ciągi i uchwyty.
+Definiuje typy otoki inicjującej pozyskiwanie zasobów (RAII), które upraszczają zarządzanie obiektami, ciągami i uchwytami.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,34 +24,34 @@ Definiuje typy otoki zasobów nabycia jest inicjowania (RAII), które upraszczaj
 namespace Microsoft::WRL::Wrappers;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`FileHandle`|`HandleT<HandleTraits::FileHandleTraits>`|
 
 ### <a name="classes"></a>Klasy
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CriticalSection, klasa](criticalsection-class.md)|Reprezentuje obiekt sekcję krytyczną.|
-|[Event, Klasa (WRL)](event-class-wrl.md)|Przedstawia zdarzenie.|
-|[HandleT, klasa](handlet-class.md)|Reprezentuje uchwyt do obiektu.|
-|[HString, klasa](hstring-class.md)|Zapewnia obsługę manipulowania uchwytami HSTRING.|
-|[HStringReference, klasa](hstringreference-class.md)|Reprezentuje HSTRING, utworzony na podstawie istniejącego ciągu.|
-|[Mutex — Klasa](mutex-class.md)|Reprezentuje obiekt synchronizacji, który wyłącznie kontroluje zasobu udostępnionego.|
-|[RoInitializeWrapper, klasa](roinitializewrapper-class.md)|Inicjuje środowisko wykonawcze Windows.|
-|[Semaphore, klasa](semaphore-class.md)|Reprezentuje obiekt synchronizacji, który kontroluje zasobu udostępnionego, który może obsługiwać ograniczoną liczbę użytkowników.|
-|[SRWLock, klasa](srwlock-class.md)|Reprezentuje kieszeń czytnika/blokadę.|
+|[CriticalSection, klasa](criticalsection-class.md)|Reprezentuje obiekt sekcji krytycznej.|
+|[Event, Klasa (WRL)](event-class-wrl.md)|Reprezentuje zdarzenie.|
+|[HandleT, klasa](handlet-class.md)|Reprezentuje dojście do obiektu.|
+|[HString, klasa](hstring-class.md)|Zapewnia obsługę manipulowania dojściami HSTRING.|
+|[HStringReference, klasa](hstringreference-class.md)|Reprezentuje element HSTRING, który jest tworzony na podstawie istniejącego ciągu.|
+|[Mutex — Klasa](mutex-class.md)|Reprezentuje obiekt synchronizacji, który kontroluje wyłącznie zasób udostępniony.|
+|[RoInitializeWrapper, klasa](roinitializewrapper-class.md)|Inicjuje środowisko wykonawcze systemu Windows.|
+|[Semaphore, klasa](semaphore-class.md)|Reprezentuje obiekt synchronizacji, który kontroluje zasób udostępniony, który może obsługiwać ograniczoną liczbę użytkowników.|
+|[SRWLock, klasa](srwlock-class.md)|Przedstawia cienkią blokadę czytnika/składnika zapisywania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

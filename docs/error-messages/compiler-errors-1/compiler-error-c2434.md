@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 869db3b49075fa477860e045e59306e22a381ca4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205468"
 ---
 # <a name="compiler-error-c2434"></a>Błąd kompilatora C2434
 
-> "*symbol*': zadeklarowanego symbolu z __declspec(process) nie można zainicjować dynamicznie w/CLR: pure tryb czysty
+> "*symbol*": symbol zadeklarowany z __declspec (Process) nie może być inicjowany dynamicznie w/CLR: Pure Mode
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Nie jest możliwe dynamicznie zainicjować zmienną na proces w ramach **/CLR: pure**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) i [procesu](../../cpp/process.md).
+Nie można dynamicznie zainicjować zmiennej dla procesu w opcji **/CLR: Pure**. Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) i [proces](../../cpp/process.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2434. Aby rozwiązać ten problem, użyj stałych, aby zainicjować `process` zmiennych.
+Poniższy przykład generuje C2434. Aby rozwiązać ten problem, należy użyć stałych do zainicjowania zmiennych `process`.
 
 ```cpp
 // C2434.cpp

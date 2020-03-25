@@ -5,19 +5,19 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3016126d09b39ec74f4acb758a2176be05052648
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175345"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210967"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Włączanie i wyłączanie usług OLE DB
 
-Menedżer składników usługi OLE DB porównuje właściwości określone przez konsumenta właściwości obsługiwanych przez dostawcę, aby ustalić, czy składniki usługi poszczególnych może służyć do spełnienia rozszerzone funkcje wymagane przez klienta. Na przykład jeśli aplikacja żąda przewijany kursora i dostawca obsługuje jedynie kursora tylko do przodu, usługi Menedżer składników używa składnika usługi Aparat kursora klienta do zapewnienia przewijany funkcji. Jeśli aplikacja powołuje się na rozszerzone funkcje obsługiwane domyślnie na dostawcy wierszy, a aplikacja nie jawnie ustawić właściwości żądania, że funkcje, funkcje mogą nie być wyświetlane na zestaw wierszy zwrócony przez klienta Aparat kursora. Jako międzyoperacyjnych, aplikacje powinny zawsze Ustaw właściwości w celu jawnego żądania rozszerzoną funkcjonalność w razie potrzeby.
+Menedżer składników usługi OLE DB porównuje właściwości określone przez konsumenta z właściwościami obsługiwanymi przez dostawcę w celu określenia, czy poszczególne składniki usługi mogą być używane do zaspokojenia rozszerzonych funkcji zażądanych przez klienta. Na przykład jeśli aplikacja żąda przewijanego kursora, a dostawca obsługuje tylko kursor tylko do przodu, Menedżer składników usług używa składnika usługi aparat kursora klienta w celu zapewnienia możliwości przewijania. Jeśli aplikacja korzysta z rozszerzonych funkcji obsługiwanych domyślnie w zestawie wierszy dostawcy, a aplikacja nie ustawi jawnie właściwości do żądania tej funkcjonalności, funkcjonalność może nie być widoczna w zestawie wierszy zwracanym przez klienta. Aparat kursora. Aby można było współdziałać, aplikacje powinny zawsze ustawiać właściwości, aby jawnie zażądać rozszerzonych funkcji, gdy jest to konieczne.
 
-W niektórych przypadkach może być konieczne wyłączenie poszczególnych usług OLE DB współdziała dobrze z istniejących aplikacji, które zakładają właściwości dostawcy. Usługi OLE DB zapewniają możliwość wyłączenia poszczególnych usług lub wszystkich usług, na podstawie połączenia przez połączenie lub dla wszystkich aplikacji za pomocą jednego dostawcy.
+W niektórych przypadkach może być konieczne wyłączenie poszczególnych usług OLE DB, aby działały prawidłowo z istniejącymi aplikacjami, które składają się na informacje o charakterystyce dostawcy. Usługi OLE DB umożliwiają wyłączenie poszczególnych usług lub wszystkich usług, w zależności od połączenia lub dla wszystkich aplikacji korzystających z jednego dostawcy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Buforowanie zasobów i usługi OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)

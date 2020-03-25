@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164816"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177160"
 ---
 # <a name="compiler-error-c2668"></a>Błąd kompilatora C2668
 
-'Funkcja': niejednoznaczne wywołanie przeciążonej funkcji
+"Function": niejednoznaczne wywołanie przeciążonej funkcji
 
-Nie można rozpoznać wywołania określonej przeciążonej funkcji. Można jawnie rzutowane co najmniej jeden z parametrów rzeczywistych.
+Nie można rozpoznać określonego przeciążonego wywołania funkcji. Możesz chcieć jawnie rzutować co najmniej jeden z rzeczywistych parametrów.
 
-Ten błąd można także uzyskać za pomocą szablonu. W przypadku, w tej samej klasie funkcja regularny członek i oparte na szablonach składowa o tej samej sygnaturze, oparte na szablonach jeden musi umieszczone jako pierwsze. To ograniczenie bieżąca implementacja języka Visual C++.
+Ten błąd można także uzyskać za pomocą szablonu. Jeśli w tej samej klasie istnieje zwykła funkcja członkowska i wbudowana funkcja członkowska o tym samym podpisie, szablon, który musi być wcześniej. Jest to ograniczenie bieżącej implementacji wizualizacji C++.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2668:
+Poniższy przykład generuje C2668:
 
 ```cpp
 // C2668.cpp
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Innym sposobem, aby rozwiązać ten problem jest [użycie — deklaracja](../../cpp/using-declaration.md):
+Innym sposobem na rozwiązanie tego błędu jest [użycie deklaracji using](../../cpp/using-declaration.md):
 
 ```cpp
 // C2668b.cpp
@@ -86,9 +86,9 @@ class MyTestCase : public AppTestCase {
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: niejednoznaczne konwersję na rzutowanie stała 0.
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: niejednoznaczna konwersja na rzutowanie stałej 0.
 
-Konwersja na rzutowanie za pomocą stała 0 jest niejednoznaczny, ponieważ int wymaga konwersji zarówno do czasu i typ void *. Aby rozwiązać ten problem, należy rzutować 0, aby dokładnie typ parametru funkcji, który jest używany dla tak, aby konwersji muszą mieć miejsce (ten kod będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET, Visual c++).
+Konwersja na rzutowanie przy użyciu stałej 0 jest niejednoznaczna, ponieważ int wymaga konwersji zarówno na wartość Long, jak i na wartość pustą *. Aby rozwiązać ten problem, należy rzutować 0 do dokładnego typu parametru funkcji, który jest używany przez, aby nie trzeba było przeprowadzać konwersji (kod ten będzie prawidłowy w Visual Studio .NET 2003 i Visual Studio .NET C++
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowe i podwójne formularze wszystkich funkcji matematycznych.
+Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowe i podwójne formy wszystkich funkcji matematycznych.
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może wystąpić, ponieważ pow (int, int) został usunięty z math.h w CRT.
+Ten błąd może wystąpić, ponieważ pow (int, int) została usunięta z Math. h w CRT.
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten kod zakończy się pomyślnie w programie Visual Studio 2015, ale nie powiedzie się w programie Visual Studio 2017 i nowszym z C2668. W programie Visual Studio 2015 kompilator błędnie traktowane listy Inicjalizacja kopiowania na w taki sam sposób, jak regularne Inicjowanie kopiowania; uznaje się jedynie konwertowanie konstruktory przeciążeń z późnym wiązaniem.
+Ten kod działa prawidłowo w programie Visual Studio 2015, ale kończy się niepowodzeniem w programie Visual Studio 2017 lub nowszym z C2668. W programie Visual Studio 2015 kompilator błędnie traktował inicjalizację listy kopiowania w taki sam sposób jak regularne inicjowanie kopiowania; jest on uważany tylko za konwersję konstruktorów w celu rozpoznania przeciążenia.
 
 ```cpp
 struct A {

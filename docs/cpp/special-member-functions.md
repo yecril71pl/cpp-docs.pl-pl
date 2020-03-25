@@ -1,5 +1,5 @@
 ---
-title: Specjalne funkcje Członkowskie
+title: Specjalne funkcje składowe
 ms.date: 12/06/2016
 helpviewer_keywords:
 - special member functions [C++]
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: 3b26628fd18749bd19819fe787888fd3264a79d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178694"
 ---
-# <a name="special-member-functions"></a>Specjalne funkcje Członkowskie
+# <a name="special-member-functions"></a>Specjalne funkcje składowe
 
-*Specjalnych funkcji Członkowskich* są klasy (lub struktury) elementów członkowskich, że w niektórych przypadkach kompilator automatycznie generuje dla Ciebie. Te funkcje są [domyślnego konstruktora](constructors-cpp.md#default_constructors), [destruktor](destructors-cpp.md), [Konstruktor kopiujący i operator przypisania kopiowania](copy-constructors-and-copy-assignment-operators-cpp.md)i [Konstruktor przenoszący i operator przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md). Jeśli klasa nie definiuje jedną lub więcej funkcji specjalnych elementów członkowskich, kompilator może niejawnie deklarowania i definiowania funkcji, które są używane. Implementacje generowanych przez kompilator są nazywane *domyślne* funkcji specjalnych elementów członkowskich. Kompilator nie generuje funkcji, jeśli nie są wymagane.
+*Specjalne funkcje członkowskie* to funkcje członkowskie klasy (lub struktury), które w niektórych przypadkach automatycznie generują kompilator. Te funkcje są [konstruktorem domyślnym](constructors-cpp.md#default_constructors), [destruktorem](destructors-cpp.md), [konstruktorem kopiującym i operatorem przypisania kopiowania](copy-constructors-and-copy-assignment-operators-cpp.md), a [konstruktorem przenoszenia i operatorem przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md). Jeśli Klasa nie definiuje co najmniej jednej specjalnej funkcji składowej, kompilator może niejawnie deklarować i zdefiniować funkcje, które są używane. Implementacje generowane przez kompilator są nazywane *domyślnymi* specjalnymi funkcjami składowymi. Kompilator nie generuje funkcji, jeśli nie są one zbędne.
 
-Można jawnie zadeklarować domyślną specjalną funkcję członkowską, za pomocą **= default** — słowo kluczowe. To powoduje, że kompilator, aby zdefiniować funkcję tylko, jeśli jest to konieczne, w taki sam sposób jak, jeśli funkcja nie został zadeklarowany w ogóle.
+Można jawnie zadeklarować domyślną specjalną funkcję członkowską za pomocą słowa kluczowego **= default** . Powoduje to, że kompilator definiuje funkcję tylko w razie potrzeby, w taki sam sposób, jak w przypadku, gdy funkcja nie została zadeklarowana w ogóle.
 
-W niektórych przypadkach, kompilator może wygenerować *usunięte* specjalnych funkcji Członkowskich, które nie są zdefiniowane i dlatego nie jest wywoływane. Może to nastąpić w przypadkach, w którym wywołanie konkretnego specjalną funkcję członkowską klasy nie ma sensu, biorąc pod uwagę inne właściwości klasy. Aby jawnie zapobiec automatycznego generowania funkcji specjalnych elementów członkowskich, można zadeklarować je jako usunięte za pomocą **= delete** — słowo kluczowe.
+W niektórych przypadkach kompilator może generować *usunięte* specjalne funkcje członkowskie, które nie są zdefiniowane i w związku z tym nie są wywoływane. Może się tak zdarzyć w przypadkach, gdy wywołanie określonej specjalnej funkcji składowej w klasie nie ma sensu, pod kątem innych właściwości klasy. Aby jawnie zapobiec automatycznemu generowaniu specjalnej funkcji składowej, można zadeklarować ją jako usuniętą za pomocą słowa kluczowego **= delete** .
 
-Kompilator generuje *domyślnego konstruktora*, Konstruktor, który nie przyjmuje żadnych argumentów, tylko wtedy, gdy nie zostanie zgłoszone dowolnego innego konstruktora. Jeśli zadeklarowano tylko konstruktora przyjmującego parametry kod, który próbuje wywołać konstruktora domyślnego powoduje, że kompilator generuje komunikat o błędzie. Konstruktor domyślny wygenerowany przez kompilator wykonuje prostą member-wise [domyślna Inicjalizacja](initializers.md#default_initialization) obiektu. Domyślna Inicjalizacja pozostawi wszystkie zmienne składowe w stanie nieokreślonym.
+Kompilator generuje *Konstruktor domyślny*, Konstruktor, który nie przyjmuje argumentów, tylko wtedy, gdy nie został zadeklarowany żaden inny Konstruktor. Jeśli zadeklarowano tylko konstruktora, który pobiera parametry, kod, który próbuje wywołać Konstruktor domyślny powoduje, że kompilator tworzy komunikat o błędzie. Konstruktor domyślny wygenerowany przez kompilator wykonuje prostą [domyślną inicjalizację](initializers.md#default_initialization) obiektu. Domyślna Inicjalizacja pozostawia wszystkie zmienne Członkowskie w nieokreślonym stanie.
 
-Domyślnym destruktorze wykonuje member-wise zniszczenia obiektu. Jest wirtualny tylko wtedy, gdy wirtualny destruktor klasy podstawowej.
+Domyślny destruktor wykonuje zniszczenie obiektu przez element. Jest ona wirtualna tylko wtedy, gdy destruktor klasy bazowej jest wirtualny.
 
-Domyślne kopiowania i przenoszenia konstrukcja i operacji przypisania wykonać member-wise wzorca bitowego kopiuje lub przenosi dane niestatycznych elementów członkowskich. Operacje tylko są generowane, gdy są zadeklarowane nie destruktora ani przenosić ani kopiować operacji przenoszenia. Domyślny Konstruktor kopiujący jest generowany tylko w sytuacji, gdy żaden Konstruktor kopiujący jest zadeklarowany. Jest niejawnie usunięta, jeśli operacja przeniesienia jest zadeklarowany. Operator przypisania kopii domyślny jest generowany tylko wtedy, gdy żaden operator przypisywania kopiowania jest zadeklarowany w sposób jawny. Jest niejawnie usunięta, jeśli operacja przeniesienia jest zadeklarowany.
+Domyślne kopiowanie i przenoszenie oraz operacje tworzenia i przypisywania są wykonywane w ramach kopiowania wzorca bitowego lub przenoszenia niestatycznych elementów członkowskich danych. Operacje przenoszenia są generowane tylko wtedy, gdy nie są zadeklarowane żadne operacje wykonywania destruktora lub przenoszenia lub kopiowania. Domyślny konstruktor kopiujący jest generowany tylko wtedy, gdy żaden Konstruktor kopiowania nie jest zadeklarowany. Jest on niejawnie usuwany w przypadku zadeklarowania operacji przenoszenia. Domyślny operator przypisania kopii jest generowany tylko wtedy, gdy żaden operator przypisania kopiowania nie został jawnie zadeklarowany. Jest on niejawnie usuwany w przypadku zadeklarowania operacji przenoszenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](cpp-language-reference.md)

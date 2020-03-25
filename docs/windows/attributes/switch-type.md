@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214529"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -32,7 +32,7 @@ Typ przełącznika może być liczbą całkowitą, znakiem, wartością logiczn�
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **switch_type** C++ ma takie same funkcje jak atrybut [switch_type](/windows/win32/Midl/switch-type) MIDL.
+Atrybut **switch_type** C++ ma taką samą funkcjonalność jak atrybut [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
 C++atrybuty nie obsługują [Unii hermetyzowanych](/windows/win32/Midl/encapsulated-unions). [Niehermetyzowane Unii](/windows/win32/Midl/nonencapsulated-unions) są obsługiwane tylko w następującej postaci:
 
@@ -65,12 +65,12 @@ Zobacz przykład [przypadku](case-cpp.md) przykładowego zastosowania **switch_t
 |-|-|
 |**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

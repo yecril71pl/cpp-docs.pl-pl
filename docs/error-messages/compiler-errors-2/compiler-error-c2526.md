@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2526
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
-ms.openlocfilehash: 909f1d0d9b2d0ad16948f07a086f29ab194731e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3267b84aa913ec8b8d070fdc0a206abfa0c5a636
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202608"
 ---
 # <a name="compiler-error-c2526"></a>Błąd kompilatora C2526
 
-"identifier1": Powiązanie z funkcją języka C nie można zwrócić C++ klasy "identifier2"
+"Identifier1": funkcja powiązania języka C nie może C++ zwrócić klasy "identifier2"
 
-Funkcję zdefiniowaną z powiązaniem C nie może zwracać typ zdefiniowany przez użytkownika.
+Funkcja zdefiniowana za pomocą powiązania C nie może zwrócić typu zdefiniowanego przez użytkownika.

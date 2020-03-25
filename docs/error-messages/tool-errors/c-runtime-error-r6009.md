@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - R6009
 ms.assetid: edfb1f8b-3807-48f4-a994-318923b747ae
-ms.openlocfilehash: 5e1914d5d2f665609cfc24c2db3dc8a123d7e83f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64391f8ec05a99bb85a9d6cd00d6488a945fdb62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299754"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197356"
 ---
 # <a name="c-runtime-error-r6009"></a>Błąd czasu wykonania języka C R6009
 
-Brak wystarczającej ilości miejsca dla środowiska
+za mało miejsca na środowisko
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci, zbyt dużej ilości pamięci, przez zmienne środowiskowe lub usterkę w programie.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem z pamięcią wewnętrzną. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane bardzo małą ilością pamięci, zbyt dużą ilością pamięci przez zmienne środowiskowe lub usterką w programie.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne uruchomione aplikacje lub Uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Było wystarczającej ilości pamięci, aby załadować program, ale nie ma wystarczającej ilości pamięci do utworzenia **envp** tablicy.  Może to być spowodowane przez warunki bardzo małej ilości pamięci lub przez użycie zmiennych środowiskowych nietypowo dużej. Należy wziąć pod uwagę jedną z następujących rozwiązań:
+Za mało pamięci, aby załadować program, ale za mało pamięci, aby utworzyć tablicę **envp** .  Przyczyną może być bardzo mała ilość pamięci lub niezazwyczaj duże użycie zmiennej środowiskowej. Rozważ jedno z następujących rozwiązań:
 
 - Zwiększ ilość pamięci dostępnej dla programu.
 
 - Zmniejsz liczbę i rozmiar argumentów wiersza polecenia.
 
-- Zmniejsz rozmiar środowiska przez usunięcie niepotrzebnych zmiennych.
+- Zmniejsz rozmiar środowiska, usuwając zbędne zmienne.

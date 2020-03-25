@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388672"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164912"
 ---
 # <a name="compiler-warning-c4957"></a>Ostrzeżenie kompilatora C4957
 
-> "*rzutowania*": jawne rzutowanie z "*cast_from*"to"*cast_to*" nie jest możliwe do zweryfikowania
+> "*Cast*": jawne rzutowanie z "*cast_from*" na "*cast_to*" nie jest możliwe do zweryfikowania
 
 ## <a name="remarks"></a>Uwagi
 
-Rzutowania spowoduje nieweryfikowalnego obrazu.
+Rzutowanie spowoduje niemożliwy do sprawdzenia obraz.
 
-Niektóre rzutowania są bezpieczne (na przykład `static_cast` , wyzwala konwersje zdefiniowane przez użytkownika i `const_cast`). A [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) jest gwarantowane do tworzenia kodu możliwe do zweryfikowania.
+Niektóre rzuty są bezpieczne (na przykład `static_cast`, które wyzwala konwersje zdefiniowane przez użytkownika i `const_cast`). [Safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) jest gwarantowany do tworzenia kodu możliwego do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czysty i możliwy doC++zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Opcja " **/CLR: Safe** Compiler" jest przestarzała w programie visual Studio 2015 i nie jest obsługiwana w programie visual Studio 2017.
 
-Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+To ostrzeżenie jest wydawane jako błąd i można je wyłączyć za pomocą dyrektywy pragma [Warning](../../preprocessor/warning.md) lub opcji kompilatora [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4957:
+Poniższy przykład generuje C4957:
 
 ```cpp
 // C4957.cpp

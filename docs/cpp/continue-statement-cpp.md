@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154636"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180280"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C++)
 
-Wymusza transfer kontroli do kontrolowania wyrażenia najmniejszy otaczający [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), lub [podczas](../cpp/while-statement-cpp.md) pętli.
+Wymusza przeniesienie kontroli do wyrażenia sterującego najmniejszej otaczającej pętli [Zrób](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)lub [while](../cpp/while-statement-cpp.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ continue;
 
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie pozostałe instrukcje w bieżącej iteracji nie zostaną wykonane. Następnej iteracji pętli jest określane w następujący sposób:
+Wszystkie pozostałe instrukcje w bieżącej iteracji nie są wykonywane. Następna iteracja pętli jest określana w następujący sposób:
 
-- W **czy** lub **podczas** pętli, następnej iteracji należy zacząć od reevaluating kontrolowanie wyrażenia **czy** lub **podczas** instrukcji.
+- W pętli **do** lub **while** następna iteracja jest uruchamiana przez ponowną ocenę wyrażenia sterującego instrukcji **do** lub **while** .
 
-- W **dla** pętli (przy użyciu składni `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` klauzula jest wykonywany. A następnie `cond-expr` klauzula jest ponownie oceniane i, w zależności od wyniku pętli albo kończy się lub występuje innej iteracji.
+- W pętli **for** (przy użyciu składni `for`(`init-expr`; `cond-expr`; `loop-expr`)) jest wykonywana klauzula `loop-expr`. Następnie klauzula `cond-expr` jest ponownie Szacowana i, w zależności od wyniku, pętla lub jest wykonywana inna iteracja.
 
-W poniższym przykładzie pokazano sposób, w jaki **nadal** instrukcja może być używana do obejścia sekcje kodu i rozpocząć kolejnej iteracji pętli.
+Poniższy przykład pokazuje, jak można użyć instrukcji **Continue** , aby pominąć sekcje kodu i rozpocząć następną iterację pętli.
 
 ## <a name="example"></a>Przykład
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje skoku](../cpp/jump-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,21 +1,21 @@
 ---
-title: podwójne (atrybut COM C++)
+title: Podwójny (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409684"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168216"
 ---
 # <a name="dual"></a>dual
 
-Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.
+Umieszcza interfejs w pliku. idl jako podwójny interfejs.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **podwójną** atrybut C++ poprzedza interfejs, sprawia, że interfejs, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.
+Gdy **podwójny** C++ atrybut poprzedza interfejs, powoduje, że interfejs należy umieścić wewnątrz bloku biblioteki w wygenerowanym pliku IDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod jest blokiem atrybut, który używa **podwójną** przed definicję interfejsu:
+Poniższy kod jest blokiem atrybutu, który używa **dwóch** przed definicją interfejsu:
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -61,12 +61,12 @@ __interface IStatic : IDispatch
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)<br/>

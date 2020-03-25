@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167891"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobówC++()
 
@@ -73,7 +73,7 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Aby wyświetlić zasób Win32 w edytorze zasobów
 
-1. Przejdź do **widoku**menu  > **innych** **Widok zasobów**Windows  > .
+1. Przejdź do **widoku** menu, > inne > **Widok zasobów** **systemu Windows** .
 
 1. Jeśli okno **Widok zasobów** nie jest oknem najwyższego poziomu, wybierz kartę **Widok zasobów** , aby ją wyświetlić.
 
@@ -113,20 +113,20 @@ Następujące zasoby nie udostępniają wizualizacji Visual Preview: akcelerator
 
 ### <a name="to-preview-resources"></a>Aby wyświetlić podgląd zasobów
 
-1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) lub oknie dokumentu wybierz swój zasób, na przykład **IDD_ABOUTBOX**.
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) lub oknie dokumentu wybierz zasób, na przykład **IDD_ABOUTBOX**.
 
 1. W [okno właściwości](/visualstudio/ide/reference/properties-window)wybierz przycisk **strony właściwości** .
 
    > [!TIP]
-   > Użyj skrótu, przejdź do **widoku**menu,  > **strony właściwości**.
+   > Użyj skrótu, przejdź do **widoku** menu, > **strony właściwości**.
 
    Zostanie otwarta strona **Właściwości** zasobu wyświetlająca podgląd tego zasobu. Możesz użyć klawiszy strzałek w **górę** i **w dół** , aby nawigować po formancie drzewa w **Widok zasobów** lub oknie dokumentu. Na stronie **Właściwości** pozostanie otwarta i zostanie wyświetlony dowolny zasób, który ma fokus i będzie można go wyświetlić.
 
 ## <a name="requirements"></a>Wymagania
 
-Brak
+None
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>

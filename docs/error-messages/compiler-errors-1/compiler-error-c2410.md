@@ -1,22 +1,22 @@
 ---
-title: C2410 błąd kompilatora
+title: Błąd kompilatora C2410
 ms.date: 11/04/2016
 f1_keywords:
 - C2410
 helpviewer_keywords:
 - C2410
 ms.assetid: b69b2de1-56f3-4ebc-8913-04ac57ffe8a1
-ms.openlocfilehash: 8b01a2f7b9c55fb57c880df5033538f4e45f76b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4d30ff0fbca7428fb1dcf252bcad50bd53488d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205706"
 ---
-# <a name="compiler-error-c2410"></a>C2410 błąd kompilatora
+# <a name="compiler-error-c2410"></a>Błąd kompilatora C2410
 
-"identyfikator": niejednoznaczna nazwa składowej w "context"
+"Identyfikator": niejednoznaczna nazwa składowej w "context"
 
 Identyfikator jest członkiem więcej niż jednej struktury lub Unii w tym kontekście.
 
-W przypadku argumentu operacji, które spowodowały błąd, należy użyć specyfikatora struktury lub Unii. Specyfikator struktury lub Unii jest identyfikatorem typu `struct` lub `union` ( `typedef` nazwy lub zmienną typu tej samej struktury lub Unii, do którego nastąpiło odwołanie). Specyfikator musi być lewy operand pierwszy operator wyboru elementów członkowskich (.) do użycia operandu.
+Użyj struktury lub specyfikatora Union dla operandu, który spowodował błąd. Specyfikator struktury lub Unii jest identyfikatorem typu `struct` lub `union` (nazwą `typedef` lub zmienną tego samego typu co struktura lub Unia, do której odwołuje się odwołanie). Specyfikator musi być lewym operandem pierwszego operatora wyboru elementu członkowskiego (.), aby użyć operandu.

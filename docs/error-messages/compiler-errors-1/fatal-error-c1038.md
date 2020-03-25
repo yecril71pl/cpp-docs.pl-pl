@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1038
 ms.assetid: 560dccb8-5b45-46f0-9412-caa4a6172aef
-ms.openlocfilehash: 6d7626e31403626765c2dcf72dbb91e883d26f21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 203379989553fd7b69662f1d5332e397c42eb14b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204612"
 ---
 # <a name="fatal-error-c1038"></a>Błąd krytyczny C1038
 
-ograniczenie kompilatora: funkcja: zbyt złożone, stan przepływu sterowania Uprość funkcję
+ograniczenie kompilatora: funkcja: stan przepływu sterowania zbyt skomplikowany; Uprość funkcję
 
-Funkcja ma więcej stanów przepływu sterowania niż kompilator może obsłużyć. Uprość przepływ sterowania lub funkcja split na mniejsze.
+Funkcja ma więcej stanów sterujących przepływem niż kompilator może obsłużyć. Uprość przepływ sterowania lub Podziel funkcję na mniejsze funkcje.

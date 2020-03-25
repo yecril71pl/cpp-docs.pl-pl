@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 19d95c9519670db39f3ca467aff794233823d7ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222505"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180891"
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
 
-Ta sekcja wprowadza C++ klas i struktur. Konstrukcje dwa są identyczne w języku C++, z tą różnicą, że w strukturach publiczne, jest wartość domyślna dostępu, natomiast w klasach, wartością domyślną jest prywatny.
+W tej sekcji C++ przedstawiono klasy i struktury. Te dwa konstrukcje są takie same C++ , z wyjątkiem tego, że w strukturach domyślna dostępność jest publiczna, natomiast w klasach domyślnie są prywatne.
 
-Klasy i struktury są konstrukcje, według których należy zdefiniować własne typy. Klasy i struktury można zawierają elementy członkowskie danych i funkcje Członkowskie, które umożliwiają opisują typ stanem i zachowaniem.
+Klasy i struktury są konstrukcjami, w których można definiować własne typy. Klasy i struktury mogą zawierać zarówno składowe danych, jak i funkcje członkowskie, które umożliwiają opisywanie stanu i zachowania typu.
 
-Uwzględnione są następujące tematy:
+Dostępne są następujące tematy:
 
 - [class](../cpp/class-cpp.md)
 
@@ -33,7 +33,7 @@ Uwzględnione są następujące tematy:
 
 - [Konwersje typów zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md)
 
-- [Modyfikowalne elementy członkowskie danych (specyfikator modyfikowalny)](../cpp/mutable-data-members-cpp.md)
+- [Modyfikowalne składowe danych (specyfikator modyfikowalny)](../cpp/mutable-data-members-cpp.md)
 
 - [Zagnieżdżone deklaracje klas](../cpp/nested-class-declarations.md)
 
@@ -45,18 +45,18 @@ Uwzględnione są następujące tematy:
 
 - [Pola bitowe języka C++](../cpp/cpp-bit-fields.md)
 
-Typy trzy klasy są struktury, klasy lub union. Są deklarowane za pomocą [struktury](../cpp/struct-cpp.md), [klasy](../cpp/class-cpp.md), i [Unii](../cpp/unions.md) słów kluczowych. W poniższej tabeli przedstawiono różnice między typami trzy klasy.
+Trzy typy klas to struktura, Klasa i Unia. Są one deklarowane przy użyciu [struktur](../cpp/struct-cpp.md), [klas](../cpp/class-cpp.md)i [słów kluczowych](../cpp/unions.md) . W poniższej tabeli przedstawiono różnice między trzema typami klas.
 
-Aby uzyskać więcej informacji na temat Unii, zobacz [unie](../cpp/unions.md). Aby uzyskać informacje dotyczące klas i struktur w C++sposób niezamierzony i C++/CX, zobacz [klas i struktur](../extensions/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać więcej informacji na temat Unii, zobacz [Unions](../cpp/unions.md). Aby uzyskać informacje dotyczące klas i struktur w C++/CLI i C++/CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md).
 
-### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Kontrola dostępu i ograniczenia struktury, klasy i unie
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Access Control i ograniczenia struktur, klas i Unii
 
 |Struktury|Klasy|Unie|
 |----------------|-------------|------------|
-|klucz klasy jest **— struktura**|klucz klasy jest **klasy**|klucz klasy jest **Unii**|
-|Dostęp domyślny jest publiczny|Dostęp domyślny jest prywatny|Dostęp domyślny jest publiczny|
-|Bez ograniczeń użycia|Bez ograniczeń użycia|Użyj tylko jednego członka w czasie|
+|klucz klasy jest **strukturą**|klucz klasy jest **klasą**|klucz klasy to **Unia**|
+|Domyślny dostęp jest publiczny|Domyślny dostęp jest prywatny|Domyślny dostęp jest publiczny|
+|Brak ograniczeń użycia|Brak ograniczeń użycia|Używaj tylko jednej składowej naraz|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

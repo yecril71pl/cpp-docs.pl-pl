@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
-ms.openlocfilehash: ec2490bad70d2b2eb72cbb48771900f09f8c2f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56e092b5f7c33ad9543951621b2a9d8f6992331f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226494"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191993"
 ---
 # <a name="project-build-error-prj0050"></a>Błąd PRJ0050 kompilacji projektu
 
-Nie można zarejestrować dane wyjściowe. Upewnij się, że masz odpowiednie uprawnienia do modyfikowania rejestru.
+Nie można zarejestrować danych wyjściowych. Upewnij się, że masz odpowiednie uprawnienia do modyfikowania rejestru.
 
-System kompilacji Visual C++ nie mógł zarejestrować dane wyjściowe kompilacji, (biblioteki dll lub .exe). Musisz zalogować się jako administrator, aby zmodyfikować rejestr.
+System kompilacji C++ wizualnej nie mógł zarejestrować danych wyjściowych kompilacji (DLL lub exe). Aby zmodyfikować rejestr, należy zalogować się jako administrator.
 
-Jeśli tworzysz dll może próbować zarejestrować plik .dll, ręcznie przy użyciu regsvr32.exe, powinno to wyświetlenie informacji na temat przyczyny niepowodzenia kompilacji.
+Jeśli tworzysz plik. dll, możesz spróbować zarejestrować plik. dll ręcznie przy użyciu programu Regsvr32. exe, aby wyświetlić informacje o tym, dlaczego kompilacja nie powiodła się.
 
-Jeśli nie tworzysz dll, Przyjrzyj się polecenie, które powoduje błąd w dzienniku kompilacji.
+Jeśli nie tworzysz pliku dll, poszukaj w dzienniku kompilacji polecenia, które powoduje błąd.

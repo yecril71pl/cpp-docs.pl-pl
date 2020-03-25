@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189549"
 ---
 # <a name="default-arguments"></a>Argumenty domyślne
 
-W wielu przypadkach funkcje mają argumenty, które są używane sporadycznie, który może wystarczyć wartość domyślną. Aby rozwiązać ten problem, funkcji argument domyślny umożliwia określenie tylko te argumenty funkcji powinny być opisowe w danym wywołania. Aby zilustrować to pojęcie, rozważmy przykład przedstawiony w [przeciążanie funkcji](../cpp/function-overloading.md).
+W wielu przypadkach funkcje mają argumenty, które są używane tak rzadko, że wystarcza wartość domyślna. Aby rozwiązać ten scenariusz, funkcja domyślnego argumentu zezwala na określenie tylko tych argumentów funkcji, które mają znaczenie w danym wywołaniu. Aby zilustrować to pojęcie, rozważmy przykład zaprezentowany w [przeciążeniu funkcji](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -29,7 +29,7 @@ int print( double dvalue, int prec );  // Print a double with a
 //  given precision.
 ```
 
-W wielu aplikacjach uzasadnione domyślne mogą być podawane dla `prec`, eliminując konieczność łączenia się dwie funkcje:
+W wielu aplikacjach można dostarczyć rozsądną wartość domyślną dla `prec`, eliminując konieczność stosowania dwóch funkcji:
 
 ```cpp
 // Prototype two print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-Implementacja `print` funkcji jest nieznacznie zmienione w celu uwzględnienia faktów dla typu istnieje tylko jeden taki funkcja **double**:
+Implementacja funkcji `print` jest nieco zmieniana w celu odzwierciedlenia faktu, że tylko jedna taka funkcja istnieje dla typu **Double**:
 
 ```cpp
 // default_arguments.cpp
@@ -71,7 +71,7 @@ int print( double dvalue, int prec ) {
 }
 ```
 
-Aby wywołać nową `print` funkcji, użyj następującego kodu:
+Aby wywołać nową funkcję `print`, należy użyć następującego kodu:
 
 ```cpp
 print( d );    // Precision of 2 supplied by default argument.
@@ -79,15 +79,15 @@ print( d, 0 ); // Override default argument to achieve other
 //  results.
 ```
 
-Należy zwrócić uwagę te punkty, korzystając z domyślnych argumentów:
+Należy pamiętać o tych punktach przy użyciu domyślnych argumentów:
 
-- Argumenty domyślne są używane tylko w przypadku wywołania funkcji, gdzie Opuszczono końcowe argumenty — muszą być ostatnie argumenty. W związku z tym poniższy kod jest niedozwolone:
+- Argumenty domyślne są używane tylko w wywołaniach funkcji, w których końcowe argumenty są pomijane — muszą być ostatnimi argumentami. W związku z tym następujący kod jest niedozwolony:
 
     ```cpp
     int print( double dvalue = 0.0, int prec );
     ```
 
-- Argument domyślny nie można ponownie zdefiniować w deklaracjach nowsze, nawet jeśli ponowne zdefiniowanie jest taka sama jak oryginalne. W związku z tym poniższy kod generuje błąd:
+- Nie można ponownie zdefiniować argumentu domyślnego w późniejszych deklaracjach, nawet jeśli zmiana definicji jest taka sama jak oryginalna. W związku z tym Poniższy kod generuje błąd:
 
     ```cpp
     // Prototype for print function.
@@ -102,11 +102,11 @@ Należy zwrócić uwagę te punkty, korzystając z domyślnych argumentów:
     }
     ```
 
-   Problem z tym kodem jest, że deklaracji funkcji w definicji redefiniuje argument domyślny dla `prec`.
+   Problem z tym kodem polega na tym, że deklaracja funkcji w definicji ponownie definiuje domyślny argument dla `prec`.
 
-- Argumenty domyślne dodatkowych można dodawać przez nowszy deklaracji.
+- Dodatkowe argumenty domyślne mogą być dodawane przez późniejsze deklaracje.
 
-- Argumenty domyślne można podać dla wskaźników do funkcji. Na przykład:
+- Dla wskaźników do funkcji można podać argumenty domyślne. Na przykład:
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

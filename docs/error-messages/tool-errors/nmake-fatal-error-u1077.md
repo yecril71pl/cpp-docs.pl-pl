@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-ms.openlocfilehash: 6b0e7b13628c9f38231f4a8772e9babadaf90636
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da50af5a1dc0fc6086629d1f26ebe949a25d6faf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193502"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Błąd krytyczny NMAKE U1077
 
-"program": zwrócony kod "value"
+"program": Kod powrotu "value"
 
-Polecenia lub program o nazwie według NMAKE nie powiodło się i zwróciło kod zakończenia danego.
+Podanym poleceniem lub programie wywoływanym przez NMAKE nie powiodło się i zwróciło dany kod zakończenia.
 
-Aby pominąć ten błąd i kontynuować sesję NMAKE, użyj opcji/i **. Ignoruj** dyrektywy kropka lub kreska (**-**) modyfikator polecenia. Aby kontynuować sesję NMAKE niezwiązanych części drzewo zależności, użyj opcji/k.
+Aby pominąć ten błąd i kontynuować sesję NMAKE, użyj opcji/I **. IGNOROWANie** dyrektywy dot lub modyfikatora poleceń łącznika ( **-** ). Aby kontynuować sesję NMAKE dla niepowiązanych części drzewa zależności, użyj opcji/K.

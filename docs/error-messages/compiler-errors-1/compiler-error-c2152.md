@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-ms.openlocfilehash: 072b5f13a639b1bd3d8e028fcd6c811012bfa2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10178d2cd40af60603b908a9351b8e14d12c5570
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207197"
 ---
 # <a name="compiler-error-c2152"></a>Błąd kompilatora C2152
 
-'Identyfikator': wskaźniki do funkcji z różnymi atrybutami
+"Identyfikator": wskaźniki do funkcji z różnymi atrybutami
 
-Wskaźnik do funkcji z jednego konwencji wywoływania (`__cdecl`, `__stdcall`, lub `__fastcall`) jest przypisany do wskaźnika do funkcji z inną Konwencją wywoływania.
+Wskaźnik do funkcji z jedną konwencją wywoływania (`__cdecl`, `__stdcall`lub `__fastcall`) jest przypisany do wskaźnika do funkcji z inną konwencją wywoływania.

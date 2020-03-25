@@ -2,22 +2,22 @@
 title: Jawnie domyślne i usunięte funkcje
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179981"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Jawnie domyślne i usunięte funkcje
 
-W języku C ++ 11 domyślne i usunięte funkcje umożliwiają jawną kontrolę nad tym, czy specjalne funkcje Członkowskie są generowane automatycznie. Funkcje usunięte udostępniają prosty język, aby zapobiegać występowaniu problematycznych promocji typu w argumentach funkcji wszystkich typów – zarówno w specjalnych funkcjach członkowskich, jak i w normalnych funkcjach członkowskich oraz funkcjach nieczłonkowskich – które mogą w przeciwnym razie spowodować niechciane wywołania funkcji.
+W języku C++ 11 funkcje domyślne i usunięte zapewniają jawną kontrolę nad tym, czy specjalne funkcje członkowskie są generowane automatycznie. Funkcje usunięte udostępniają prosty język, aby zapobiegać występowaniu problematycznych promocji typu w argumentach funkcji wszystkich typów – zarówno w specjalnych funkcjach członkowskich, jak i w normalnych funkcjach członkowskich oraz funkcjach nieczłonkowskich – które mogą w przeciwnym razie spowodować niechciane wywołania funkcji.
 
-## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Korzyści z jawnie domyślnych i usuniętych funkcji
+## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Zalety funkcji jawnie domyślnych i usuniętych
 
-W języku C++, kompilator automatycznie generuje konstruktor domyślny, konstruktor kopiujący, operator przypisania kopii oraz destruktor dla typu, jeśli ten nie deklaruje samodzielnie. Funkcje te są znane jako *specjalnych funkcji Członkowskich*, i są one, co sprawia, że zdefiniowane przez użytkownika typy proste w języku C++ zachowują się jak struktury w C. Oznacza to można utworzyć, kopiować i niszczyć bez żadnych dodatkowych nakładów pracy kodowania. W standardzie C++11 dodano do języka przenoszenie semantyki oraz konstruktor przenoszący i operator przypisania przeniesienia do listy specjalnych funkcji członkowskich, które kompilator może wygenerować automatycznie.
+W języku C++, kompilator automatycznie generuje konstruktor domyślny, konstruktor kopiujący, operator przypisania kopii oraz destruktor dla typu, jeśli ten nie deklaruje samodzielnie. Te funkcje są znane jako *specjalne funkcje członkowskie*i są, co sprawia, że proste typy zdefiniowane przez użytkownika zachowują się C++ jak struktury w C. Oznacza to, że można je tworzyć, kopiować i niszczyć bez dodatkowych nakładów związanych z programowaniem. W standardzie C++11 dodano do języka przenoszenie semantyki oraz konstruktor przenoszący i operator przypisania przeniesienia do listy specjalnych funkcji członkowskich, które kompilator może wygenerować automatycznie.
 
-Jest to wygodne dla typów prostych, ale typy złożone często definiują jedną lub więcej specjalnych funkcji Członkowskich, a może to uniemożliwić innych specjalnych funkcji Członkowskich są generowane automatycznie. W praktyce:
+Jest to wygodne dla typów prostych, ale typy złożone często definiują co najmniej jedną specjalną funkcję członkowską i może to uniemożliwić automatyczne generowanie innych specjalnych funkcji Członkowskich. W ramach ćwiczenia:
 
 - Jeśli dowolny konstruktor jest zadeklarowany w sposób jawny, to żaden domyślny konstruktor nie jest generowany automatycznie.
 
@@ -25,15 +25,15 @@ Jest to wygodne dla typów prostych, ale typy złożone często definiują jedn�
 
 - Jeśli konstruktor przenoszący lub operator przypisania przeniesienia jest zadeklarowany w sposób jawny, to:
 
-   - Żaden Konstruktor kopiujący jest generowany automatycznie.
+   - Żaden Konstruktor kopiujący nie jest generowany automatycznie.
 
-   - Żaden operator przypisywania kopiowania jest generowany automatycznie.
+   - Żaden operator przypisania kopii nie jest generowany automatycznie.
 
 - Jeśli konstruktor kopiujący, operator przypisania kopiowania, konstruktor przeniesienia, operator przypisania przeniesienia lub destruktor jest zadeklarowany w sposób jawny, to:
 
-   - Żaden konstruktor przenoszący nie jest generowany automatycznie.
+   - Konstruktor przenoszący nie jest generowany automatycznie.
 
-   - Żaden operator przypisywania przenoszenia, jest generowany automatycznie.
+   - Nie jest generowany automatycznie żaden operator przypisania przenoszenia.
 
 > [!NOTE]
 > Ponadto, standard C++11 określa następujące reguły dodatkowe:
@@ -43,9 +43,9 @@ Jest to wygodne dla typów prostych, ale typy złożone często definiują jedn�
 >
 > W obu przypadkach, program Visual Studio kontynuuje automatyczne generowanie niezbędnych funkcji niejawnie i nie emituje ostrzeżenia.
 
-Konsekwencje tych reguł mogą również wyciec do hierarchii obiektów. Na przykład, jeśli z jakiegokolwiek powodu klasa bazowa nie będzie mieć domyślnego konstruktora, który jest wywoływany z Klasa pochodna — oznacza to, że **publicznych** lub **chronione** Konstruktor, który nie przyjmuje żadnych parametrów — następnie klasy który pochodzi od klasy nie może automatycznie wygenerować własnego konstruktora domyślnego.
+Konsekwencje tych reguł mogą również wyciec do hierarchii obiektów. Na przykład jeśli z jakiegokolwiek powodu Klasa bazowa nie może mieć domyślnego konstruktora, który jest wywoływany z klasy pochodnej, czyli konstruktora **publicznego** lub **chronionego** , który nie przyjmuje parametrów, a następnie Klasa, która dziedziczy z niej, nie może automatycznie wygenerować własnego domyślnego konstruktora.
 
-Te reguły mogą skomplikować Implementowanie tego czymś co powinno być typy proste, zdefiniowane przez użytkownika i wspólnego idiomy języka C++ — na przykład, dzięki czemu typ zdefiniowany przez użytkownika niekopiowalnych przez zadeklarowanie Konstruktor kopiujący i operator przypisania kopiowania, prywatnie i nie Definiowanie ich.
+Te reguły mogą komplikują implementację tego, co powinno być proste, zdefiniowane przez użytkownika typy i typowe C++ idiomy — na przykład, aby typ zdefiniowany przez użytkownika nie mógł być kopiowany przez zadeklarowanie konstruktora kopiującego i operatora przypisania kopiowania prywatnie, a nie ich Definiowanie.
 
 ```cpp
 struct noncopyable
@@ -58,15 +58,15 @@ private:
 };
 ```
 
-Przed C ++ 11 ten fragment kodu był formą idiomatyczną typów niekopiowalnych. Jednak ma kilka problemów:
+Przed C++ 11 ten fragment kodu był idiomatyczne formą typów nienależących do kopiowania. Występuje jednak kilka problemów:
 
-- Konstruktor kopiowania musi być zadeklarowany prywatnie, aby je ukryć, ale ponieważ jest on zadeklarowany w ogóle, automatyczne generowanie konstruktora domyślnego nie będzie mógł być. Musisz jawnie zdefiniować Konstruktor domyślny, jeśli chcesz, nawet jeżeli nic nie robi.
+- Konstruktor kopiujący musi być zadeklarowany prywatnie, aby go ukryć, ale ponieważ został zadeklarowany w całości, automatyczne generowanie domyślnego konstruktora jest uniemożliwione. Musisz jawnie zdefiniować Konstruktor domyślny, jeśli chcesz, nawet jeśli nie robi nic.
 
-- Nawet jeśli jawnie zdefiniowany Konstruktor domyślny nic nie robi, uznaje się nietrywialnymi przez kompilator. Jest on mniej skuteczny niż automatycznie generowany konstruktor domyślny i uniemożliwia elementom `noncopyable` bycie prawdziwym typem POD.
+- Nawet jeśli jawnie zdefiniowany Konstruktor domyślny nie robi nic, jest traktowany jako nieuproszczony przez kompilator. Jest on mniej skuteczny niż automatycznie generowany konstruktor domyślny i uniemożliwia elementom `noncopyable` bycie prawdziwym typem POD.
 
 - Nawet jeśli konstruktor kopiujący i operator przypisania kopiowania są ukryte przed kodem zewnętrznym, to funkcje członkowskie i elementy zaprzyjaźnione `noncopyable` nadal mogą je widzieć i wywoływać. Jeśli są one zadeklarowane, ale nie zdefiniowane, wywołanie ich powoduje błąd konsolidatora.
 
-- Chociaż jest to powszechnie akceptowany idiom, zamiar nie jest jasny, chyba że rozumiesz wszystkie reguły do automatycznego generowania funkcji specjalnych elementów członkowskich.
+- Chociaż jest to powszechnie akceptowane idiom, zamiar nie jest jasne, chyba że rozumiesz wszystkie reguły automatycznego generowania specjalnych funkcji Członkowskich.
 
 W języku C++11 idiom „non-copyable” może być implementowany w sposób, który jest bardziej bezpośredni.
 
@@ -79,23 +79,23 @@ struct noncopyable
 };
 ```
 
-Zwróć uwagę jak problemy z wstępnie-C ++ 11 idiom zostały rozwiązane:
+Zwróć uwagę na to, jak rozwiązywane są problemy z idiommi pre-C + + 11:
 
 - Generowanie konstruktora domyślnego nadal jest uniemożliwiane przez zadeklarowanie konstruktora kopiującego, ale można go przywrócić przez jawne ustawienie go jako domyślnego.
 
 - Specjalne funkcje członkowskie jawnie ustawione jako domyślne są nadal uważane za trywialne, zatem nie zachodzi pogorszenie wydajności, a elementy `noncopyable` nie są powstrzymywane przed zostaniem prawdziwymi typami POD.
 
-- Konstruktor kopiujący i operator przydzielania kopii są publiczne, ale zostały usunięte. Jest to błąd kompilacji, aby zdefiniować lub wywoływać funkcję usuniętą.
+- Konstruktor kopiujący i operator przypisania kopiowania są publiczne, ale usuwane. Jest to błąd czasu kompilacji służący do definiowania lub wywoływania usuniętej funkcji.
 
-- Intencja jest jasna dla każdego, kto rozumie `=default` i `=delete`. Nie musisz rozumieć zasad generacji automatycznej funkcji specjalnych elementów członkowskich.
+- Intencja jest jasna dla każdego, kto rozumie `=default` i `=delete`. Nie trzeba zrozumieć reguł automatycznego generowania specjalnych funkcji Członkowskich.
 
-Podobne idiomy do tworzenia typów zdefiniowanych przez użytkownika, które są nieruchome, który tylko można dynamicznie przydzielić lub którego nie można przydzielać dynamicznie. Każdy z tych idiomy mieć pre-C ++ 11 implementacje których występują podobne problemy i są podobnie rozwiązane w C ++ 11, wdrażając je na podstawie domyślnych i usuniętych funkcji specjalnych elementów członkowskich.
+Podobne idiomy istnieją do tworzenia typów zdefiniowanych przez użytkownika, które nie są przenośne, które mogą być przydzielane dynamicznie lub nie mogą być przydzielane dynamicznie. Każdy z tych idiomy ma implementacje pre-C + + 11, które odnoszą się do podobnych problemów i są podobnie rozwiązane w języku C++ 11 przez implementację ich w postaci domyślnych i usuniętych specjalnych funkcji Członkowskich.
 
-## <a name="explicitly-defaulted-functions"></a>Funkcje jawnie przyjmujące wartości domyślne
+## <a name="explicitly-defaulted-functions"></a>Jawnie domyślne funkcje
 
-Domyślne dowolne specjalne funkcje Członkowskie — Aby jawnie określać, że specjalna funkcja członkowska używa implementacji domyślnej, określić specjalną funkcję członkowską z kwalifikatorem dostęp publiczny lub przywrócić specjalnych elementów członkowskich z których funkcji Automatyczna generacja została uniemożliwiona przez inne okoliczności.
+Można domyślnie użyć dowolnych specjalnych funkcji składowych — aby jawnie określić, że Specjalna funkcja członkowska używa domyślnej implementacji, do definiowania specjalnej funkcji składowej z kwalifikatorem niepublicznego dostępu lub do przywracania specjalnej funkcji składowej, której Automatyczne generowanie zostało uniemożliwione przez inne okoliczności.
 
-Ustawiasz jako domyślną specjalną funkcję członkowską deklarując ją jak w poniższym przykładzie:
+Domyślnie Specjalna funkcja członkowska deklaruje ją jak w poniższym przykładzie:
 
 ```cpp
 struct widget
@@ -108,13 +108,13 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;
 ```
 
-Należy zauważyć, że można ustawić domyślną specjalną funkcję członkowską poza treścią klasy tak długo, jak jest możliwa do wbudowania.
+Należy zauważyć, że można domyślnie wykonać specjalną funkcję członkowską poza treścią klasy, o ile jest to wbudowania.
 
-Ze względu na korzyści dotyczących wydajności trivial specjalnych funkcji Członkowskich firma Microsoft zaleca preferowanie automatycznie generowanych specjalne funkcje Członkowskie za pośrednictwem ciało funkcji jest puste, jeśli chcesz, zachowanie domyślne. Można to zrobić, ustawiając jako domyślną specjalną funkcję członkowską, albo nie deklarując jej (i również nie deklarując innych specjalnych funkcji Członkowskich, które uniemożliwiałyby jej automatyczne generowanie)
+Ze względu na wydajność zalet prostych specjalnych funkcji składowych zaleca się, aby automatycznie generować specjalne funkcje członkowskie dla pustych jednostek funkcji, gdy ma to zastosowanie. Można to zrobić przez jawne ustawienie specjalnej funkcji składowej lub niedeklarowanie jej (a także niedeklarowanie innych specjalnych funkcji Członkowskich, które uniemożliwią automatyczne wygenerowanie.)
 
 ## <a name="deleted-functions"></a>Funkcje usunięte
 
-Można usunąć specjalne funkcje Członkowskie, a także normalnych funkcjach Członkowskich oraz funkcjach nieczłonkowskich – zapobiegające je lub nazywaniu. Usuwanie specjalnych funkcji Członkowskich zapewnia bardziej przejrzysty sposób zapobiegania generowaniu przez kompilatora z generowania funkcji specjalnych elementów członkowskich, które nie mają. Funkcja musi zostać usunięta, ponieważ jest przestarzała; dlatego nie może zostać później usunięta w sposób, w jaki została zadeklarowana, a następnie ustawiona jako domyślna.
+Można usunąć specjalne funkcje składowe, a także normalne funkcje członkowskie i funkcje nieczłonkowskie, aby zapobiec ich zdefiniowaniu lub wywołaniu. Usuwanie specjalnych funkcji Członkowskich zapewnia przejrzysty sposób uniemożliwiający kompilatorowi generowanie specjalnych funkcji Członkowskich, które nie są potrzebne. Funkcja musi zostać usunięta, ponieważ jest przestarzała; dlatego nie może zostać później usunięta w sposób, w jaki została zadeklarowana, a następnie ustawiona jako domyślna.
 
 ```cpp
 struct widget
@@ -124,7 +124,7 @@ struct widget
 };
 ```
 
-Usuwanie normalnej funkcji członkowskiej lub nieczłonkowskiej zapobiega problematycznym promocjom spowodowanym powoduje niezamierzone funkcja do wywołania. To działa, ponieważ usunięte funkcje nadal uczestniczy w przeciążeniu rozdzielczości i zapewniają lepsze dopasowane niż funkcja, która może być wywoływana po wypromowaniu typów. Wywołanie funkcji jest rozpoznawane jako funkcja bardziej specyficzna (jednak usunięta) i powoduje błąd kompilatora.
+Usunięcie normalnej funkcji składowej lub funkcji nienależących do elementów członkowskich zapobiega wywoływaniu nieoczekiwanych funkcji. Dzieje się tak, ponieważ usunięte funkcje nadal uczestniczą w rozwiązywaniu przeciążenia i zapewniają lepszą zgodność niż funkcja, która może być wywoływana po podwyższeniu poziomu. Wywołanie funkcji jest rozpoznawane jako funkcja bardziej specyficzna (jednak usunięta) i powoduje błąd kompilatora.
 
 ```cpp
 // deleted overload prevents call through type promotion of float to double from succeeding.
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Należy zauważyć w poprzednim przykładzie, że wywołanie `call_with_true_double_only` przy użyciu **float** argument spowodowałoby błąd kompilatora, ale wywołanie `call_with_true_double_only` przy użyciu **int** argument może nie; w **int** przypadku argument zostanie promowany z **int** do **double** i pomyślnie wywoła **double** wersja tej funkcji, Mimo że może nie być zamierzone. Aby upewnić się, że każde wywołanie funkcji przy użyciu argumentu o typie innym niż double spowoduje błąd kompilacji, możesz zadeklarować wersję szablonową usuwanej funkcji.
+Zwróć uwagę na powyższym przykładzie, który wywołuje `call_with_true_double_only` przy użyciu argumentu **zmiennoprzecinkowego** spowoduje błąd kompilatora, ale wywołanie `call_with_true_double_only` przy użyciu argumentu **int** nie byłoby; w przypadku **int** wartość argumentu zostanie podwyższona od **int** do **Double** i pomyślnie wywołała **podwójnej** wersji funkcji, nawet jeśli nie jest to zamierzone. Aby upewnić się, że każde wywołanie funkcji przy użyciu argumentu o typie innym niż double spowoduje błąd kompilacji, możesz zadeklarować wersję szablonową usuwanej funkcji.
 
 ```cpp
 template < typename T >

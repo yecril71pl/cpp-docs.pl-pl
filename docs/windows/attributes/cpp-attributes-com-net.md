@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214932"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atrybuty języka C++ dla modelu COM i platformy .NET
 
@@ -78,7 +78,7 @@ Niektóre projekty zawierają wiele niezależnych plików. idl. Są one używane
 
 Ponadto, konsolidator wizualny C++ będzie wyprowadzał wszystkie informacje o atrybutach IDL do pojedynczego pliku MIDL. Nie będzie można generować dwóch bibliotek typów z pojedynczego projektu.
 
-## <a name="contexts"></a>Konteksty atrybutu
+## <a name="attribute-contexts"></a><a name="contexts"></a>Konteksty atrybutu
 
 C++atrybuty można opisać przy użyciu czterech podstawowych pól: cel, do którego można zastosować (**dotyczy**), jeśli są powtarzalne lub nie (**powtarzalne**), wymagana obecność innych atrybutów (**wymaganych atrybutów**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w tabeli towarzyszącej w temacie odwołania do poszczególnych atrybutów. Każde z tych pól zostało opisane poniżej.
 

@@ -2,16 +2,16 @@
 title: Rozpoznawanie nazwy dla typów zależnych
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222405"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161157"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 
-Użyj **typename** dla kwalifikowanych nazw w definicjach szablonów, aby poinformować kompilator, że dany kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [typename](../cpp/typename.md).
+Użyj parametru **TypeName** dla kwalifikowana nazw w definicjach szablonów, aby poinformować kompilator, że dana kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [TypeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,9 +40,9 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-Wyszukiwanie nazw dla nazwy zależne sprawdza nazwy w kontekście definicji szablonu — w poniższym przykładzie spowoduje znalezienie tego kontekstu `myFunction(char)`— i obiekt context Tworzenie wystąpienia szablonu. W poniższym przykładzie zostanie utworzone wystąpienie szablonu w głównym; w związku z tym `MyNamespace::myFunction` jest widoczna od momentu utworzenia wystąpienia i jest wybrany jako lepsze dopasowanie. Jeśli `MyNamespace::myFunction` zostały zmienione, `myFunction(char)` czy zamiast tego wywoływany.
+Funkcja wyszukiwania nazw dla nazw zależnych bada nazwy zarówno z kontekstu definicji szablonu, jak i w poniższym przykładzie ten kontekst znajdowa `myFunction(char)`— oraz kontekst tworzenia wystąpienia szablonu. W poniższym przykładzie szablon został skonkretyzowany jako główny; w związku z tym `MyNamespace::myFunction` jest widoczny z punktu tworzenia wystąpienia i jest wybierany jako lepszy odpowiednik. Jeśli zmieniono nazwę `MyNamespace::myFunction`, zamiast tego zostanie wywołane `myFunction(char)`.
 
-Wszystkie nazwy są rozpoznawane tak, jakby były one nazwy zależne. Niemniej jednak zaleca się korzystać z w pełni kwalifikowane nazwy, jeśli możliwych konfliktów.
+Wszystkie nazwy są rozpoznawane tak, jakby były nazwami zależnymi. Niemniej jednak zalecamy użycie w pełni kwalifikowanych nazw, jeśli występuje konflikt.
 
 ```cpp
 // template_name_resolution2.cpp
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Uściślanie szablonu
 
-Program Visual Studio 2012 wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual Studio 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  Program Visual Studio 2012 akceptuje tylko zgodnych wierszy.
+Program Visual Studio 2012 wymusza stosowanie standardowych reguł języka C++ 98/03/11 przy użyciu słowa kluczowego "template". W poniższym przykładzie program Visual Studio 2010 akceptuje zarówno niezgodne wiersze, jak i wiersze.  Program Visual Studio 2012 akceptuje tylko wiersze zgodne.
 
 ```cpp
 #include <iostream>
@@ -119,8 +119,8 @@ int main() {
 }
 ```
 
-Zgodność z zasadami uściślania jest wymagana, ponieważ domyślnie C++ założono, że `AY::Rebind` nie jest szablonem, i dlatego kompilator interpretuje następujące "`<`" jako mniej-niż. Ma poinformować, że `Rebind` jest szablonem, dzięki czemu można poprawnie przeanalizować "`<`" jako nawias ostry.
+Zgodność z regułami uściślania jest wymagana, ponieważ domyślnie C++ zakłada, że `AY::Rebind` nie jest szablonem i dlatego kompilator interpretuje następujący element "`<`" jako mniej niż. Musi wiedzieć, że `Rebind` jest szablonem, dzięki czemu może prawidłowo analizować "`<`" jako nawias ostry.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)

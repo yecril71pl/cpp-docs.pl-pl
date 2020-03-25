@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178954"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Reguły i ograniczenia dotyczące używania funkcji Naked
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Następujące reguły i ograniczenia mają zastosowanie do funkcji niezwiązanych z wypełnieniem:
 
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywołania funkcji Naked](../cpp/naked-function-calls.md)

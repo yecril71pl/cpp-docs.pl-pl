@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211305"
 ---
 # <a name="crestrictions-class"></a>Klasa CRestrictions
 
-Ogólna klasa, która pozwala określić ograniczenia dla zestawów wierszy schematu.
+Klasa ogólna, która umożliwia określenie ograniczeń dla zestawów wierszy schematu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,30 +34,30 @@ class CRestrictions :
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Klasa, używane do dostępu.
+*&*<br/>
+Klasa używana dla metody dostępu.
 
 *nRestrictions*<br/>
 Liczba kolumn ograniczeń dla zestawu wierszy schematu.
 
 *pguid*<br/>
-Wskaźnik do identyfikatora GUID dla schematu.
+Wskaźnik do identyfikatora GUID schematu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbsch.h
+**Nagłówek:** atldbsch. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Otwórz](#open)|Zwraca wynik ustawione zgodnie z ograniczeniami dostarczone przez użytkownika.|
+|[Otwórz](#open)|Zwraca zestaw wyników zgodnie z ograniczeniami wprowadzonymi przez użytkownika.|
 
-## <a name="open"></a> CRestrictions::Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
 
-Zwraca wynik ustawione zgodnie z ograniczeniami dostarczone przez użytkownika.
+Zwraca zestaw wyników zgodnie z ograniczeniami wprowadzonymi przez użytkownika.
 
 ### <a name="syntax"></a>Składnia
 
@@ -75,27 +75,27 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parametry
 
-*Sesji*<br/>
-[in] Określa istniejącego obiektu sesji używane do połączenia ze źródłem danych.
+*obrad*<br/>
+podczas Określa istniejący obiekt sesji używany do nawiązywania połączenia ze źródłem danych.
 
 *lpszParam*<br/>
-[in] Określa ograniczenia na zestaw wierszy schematu.
+podczas Określa ograniczenia dotyczące zestawu wierszy schematu.
 
 *bBind*<br/>
-[in] Określa, czy należy automatycznie powiązania na mapie kolumny. Wartość domyślna to **true**, co powoduje, że mapa kolumny z oświadczeniem automatycznie. Ustawienie *bBind* do **false** uniemożliwia automatyczne powiązania mapy kolumnę tak, aby można powiązać ręcznie. (Ręczne powiązanie to szczególne znaczenie w odniesieniu do użytkowników OLAP).
+podczas Określa, czy automatycznie powiązać mapę kolumn. Wartość domyślna to **true**, co powoduje automatyczne powiązanie mapy kolumn. Ustawienie *bBind* na **false** uniemożliwia automatyczne powiązanie mapy kolumn, aby można było utworzyć powiązanie ręcznie. (Ręczne powiązanie ma szczególne znaczenie dla użytkowników OLAP).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Można określić maksymalnie siedem ograniczeń w zestawie wierszy schematu.
+W zestawie wierszy schematu można określić maksymalnie siedem ograniczeń.
 
-Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) informacji o zdefiniowanych ograniczenia na każdy zestaw wierszy schematu.
+Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , aby uzyskać informacje o zdefiniowanych ograniczeniach dla każdego zestawu wierszy schematu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

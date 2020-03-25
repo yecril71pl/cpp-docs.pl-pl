@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
-ms.openlocfilehash: 3ff730c6fea7d2c57c4ec3054fc627cdc6227e2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4fdac833e69e748dd29b9cf772c167fc1dbbd00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206664"
 ---
 # <a name="compiler-error-c2220"></a>Błąd kompilatora C2220
 
-Ostrzeżenie potraktowano jako błąd - nie plik wygenerowanego obiektu
+Ostrzeżenie potraktowano jako błąd — nie Wygenerowano pliku obiektu
 
-[/WX](../../build/reference/compiler-option-warning-level.md) nakazuje kompilatorowi na traktowanie wszystkich ostrzeżeń jako błędy. Ponieważ wystąpił błąd, żaden obiekt lub plik wykonywalny został wygenerowany.
+[/WX](../../build/reference/compiler-option-warning-level.md) instruuje kompilator, aby traktuje wszystkie ostrzeżenia jako błędy. Ponieważ wystąpił błąd, nie Wygenerowano obiektu ani pliku wykonywalnego.
 
-Ten błąd pojawia się wtedy kiedy **/WX** jest ustawiona flaga i występuje ostrzeżenie podczas kompilacji. Aby naprawić ten błąd, należy wyeliminować każde ostrzeżenie w projekcie.
+Ten błąd pojawia się tylko wtedy, gdy flaga **/WX** jest ustawiona, a podczas kompilacji występuje ostrzeżenie. Aby naprawić ten błąd, należy wyeliminować każde ostrzeżenie w projekcie.
 
-### <a name="to-fix-use-one-of-the-following-techniques"></a>Aby rozwiązać problem, użyj jednej z następujących technik
+### <a name="to-fix-use-one-of-the-following-techniques"></a>Aby rozwiązać ten problem, użyj jednej z następujących technik
 
-- Naprawianie problemów, które powodują ostrzeżenia w projekcie.
+- Rozwiąż problemy, które powodują ostrzeżenia w projekcie.
 
-- Skompiluj na niższym poziomie ostrzeżenia — na przykład użyć **/W3** zamiast **/W4**.
+- Kompiluj z niższym poziomem ostrzeżeń — na przykład użyj **/W3** zamiast **/W4**.
 
-- Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może wyłączyć lub blokować szczególne ostrzeżenie.
+- Użyj [ostrzeżenia](../../preprocessor/warning.md) pragma, aby wyłączyć lub pominąć określone ostrzeżenie.
 
-- Nie używaj **/WX** do skompilowania.
+- Nie używaj **/WX** do kompilowania.

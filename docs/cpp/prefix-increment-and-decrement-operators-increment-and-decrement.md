@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32c210961c4966bb7b2cbcc597bd3c99f0d6ed24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177667"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatory prefiksów inkrementacji i dekrementacji: ++ i --
 
@@ -31,13 +31,13 @@ ms.locfileid: "62392105"
 
 ## <a name="remarks"></a>Uwagi
 
-Operator inkrementacji prefiksu (**++**) dodaje je do swojego operandu; Ta zwiększona wartość jest wynikiem wyrażenia. Argument musi być l wartością nie jest typu **const**. Wynik jest l wartością tego samego typu jako argumentu operacji.
+Operator przyrostu prefiksu ( **++** ) dodaje jeden do operandu; Ta wartość zwiększa wynik wyrażenia. Argument operacji musi być l-wartością typu **const**. Wynik jest l-wartością tego samego typu co operand.
 
-Operator dekrementacji prefiksu (**--**) jest odpowiednikiem operator inkrementacji prefiksu, z tą różnicą, że argument jest zmniejszana o jeden, a wynik jest ta zmniejszona wartość.
+Operator zmniejszania prefiksu ( **--** ) jest analogiczny do operatora przyrostu prefiksu, z tą różnicą, że operand jest zmniejszany o jeden, a wynikiem jest wartość tego zmniejszenia.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand operatora inkrementacji lub dekrementacji nie może być typu **bool**.
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): operand operatora Increment lub zmniejszania nie może być typu **bool**.
 
-Prefiks i przyrostka inkrementacji i dekrementacji operatory mają wpływ na ich argumentów. Główną różnicą między nimi jest kolejność, w którym inkrementacyjna lub dekrementacyjna odbywa się w wyniku obliczenia wyrażenia. (Aby uzyskać więcej informacji, zobacz [operatory przyrostka inkrementacji i dekrementacji](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) W formularzu prefiks inkrementacyjna lub dekrementacyjna odbywa się przed zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest inny niż wartość operandu. W formularzu przyrostka inkrementacji lub dekrementacji odbywa się po zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład, poniższy program odbitek "`++i = 6`":
+Operatory prefix i Increment przyrostu i zmniejszania wpływają na ich operandy. Kluczową różnicą między nimi jest kolejność, w której zwiększenie lub zmniejszenie odbywa się podczas obliczania wyrażenia. (Aby uzyskać więcej informacji, zobacz [Operatory przyrostu i zmniejszania](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)). W formie prefiksu, przyrost lub zmniejszenie odbywa się przed użyciem wartości podczas obliczania wyrażenia, więc wartość wyrażenia jest inna niż wartość operandu. W formie przyrostkowej przyrost lub zmniejszenie odbywa się po użyciu wartości podczas obliczania wyrażenia, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład następujący program drukuje "`++i = 6`":
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -52,9 +52,9 @@ int main() {
 }
 ```
 
-Argument operacji typu całkowitego lub zmiennoprzecinkowego jest zwiększone lub zmniejszone wartość całkowita 1. Typ wyniku jest taki sam jak typ operandu. Argument operacji typu wskaźnika jest zwiększone lub zmniejszone rozmiar obiektu, które ona rozwiązuje. Wskazuje zwiększona wskaźnik do następnego obiektu. zmniejszony wskaźnik wskazuje poprzedniego obiektu.
+Operand typu całkowitego lub zmiennoprzecinkowego jest zwiększany lub zmniejszany przez wartość całkowitą 1. Typ wyniku jest taki sam jak typ argumentu operacji. Operand typu wskaźnika jest zwiększany lub zmniejszany o rozmiar obiektu, do którego się odnosi. Przyrostowy wskaźnik wskazuje na następny obiekt; zmniejszający wskaźnik wskazuje na poprzedni obiekt.
 
-Ponieważ operatory inkrementacji i dekrementacji mają skutki uboczne, za pomocą wyrażenia z operatorami inkrementacyjna lub dekrementacyjna w [makro preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:
+Ze względu na to, że operatory zwiększania i zmniejszania mają efekty uboczne, Używanie wyrażeń z operatorami przyrostu lub zmniejszania w [makrze preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp
@@ -67,18 +67,18 @@ int main()
 }
 ```
 
-Makro rozszerza się, aby:
+Makro powiększa się do:
 
 ```cpp
 k = ((++i)<(j))?(j):(++i);
 ```
 
-Jeśli `i` jest większa niż lub równa `j` lub mniej niż `j` o 1, jego jest zwiększany dwa razy.
+Jeśli wartość `i` jest większa lub równa `j` lub mniejsza niż `j` przez 1, zostanie dwukrotnie zwiększona.
 
 > [!NOTE]
->  Funkcji śródwierszowych języka C++ są preferowane w porównaniu do makr w wielu przypadkach, ponieważ eliminuje efekty uboczne, takich jak te opisane w tym miejscu i Zezwalaj na język do wykonywania bardziej szczegółowy sprawdzania typu.
+>  C++funkcje wbudowane są preferowane w przypadku makr w wielu przypadkach, ponieważ eliminują efekty uboczne, takie jak opisane tutaj, i zezwalają na wykonywanie dokładniejszego sprawdzania typu przez język.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

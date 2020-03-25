@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)'
+title: 'Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,69 +8,69 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578b3b39d90b3beb80dbd201d4982fee30dc6bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397812"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212878"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-Oprócz możliwość wybierania rekordów ze źródła danych zestawy rekordów (opcjonalnie) zaktualizować lub usunąć wybrane rekordy lub dodawać nowe rekordy. Trzech czynników updateability zestaw rekordów: czy połączonego źródła danych można aktualizować, opcje, można określić podczas tworzenia obiektu zestawu rekordów i SQL Server, który jest tworzony.
+Oprócz możliwości wybierania rekordów ze źródła danych zestawy rekordów mogą (opcjonalnie) aktualizować lub usuwać wybrane rekordy lub dodawać nowe rekordy. Trzy czynniki określają możliwość aktualizowania zestawu rekordów: to, czy połączone źródło danych jest możliwe do zaktualizowania, które opcje są określane podczas tworzenia obiektu zestawu rekordów i utworzonego języka SQL.
 
 > [!NOTE]
->  SQL, na którym Twoja `CRecordset` opiera się obiekt może mieć wpływ na updateability zestawu rekordów. Na przykład jeśli SQL zawiera instrukcję join lub **GROUP BY** klauzuli MFC ustawia updateability na wartość FALSE.
+>  SQL, na którym opiera się obiekt `CRecordset`, może mieć wpływ na możliwość aktualizowania zestawu rekordów. Na przykład, jeśli SQL zawiera klauzulę Join lub **Group by** , MFC ustawia właściwość Update na false.
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodnych `CRecordset`, w których nie zaimplementowano pobierania wierszy zbiorczych. Jeśli używasz pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
-- [Twoja rola w aktualizowania rekordów](#_core_your_role_in_recordset_updating) i struktura jest dla Ciebie.
+- [Rola w usłudze zestaw rekordów](#_core_your_role_in_recordset_updating) i co to jest platforma.
 
-- [Zestaw rekordów jako bufor edycji](#_core_the_edit_buffer) i [różnice między zestawów dynamicznych i migawek](#_core_dynasets_and_snapshots).
+- [Zestaw rekordów jako bufor Edytuj](#_core_the_edit_buffer) i [różnice między zestawami dynamicznymi i migawkami](#_core_dynasets_and_snapshots).
 
-[Zestaw rekordów: Jak działają funkcje AddNew, Edit i Usuń pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) opisuje akcje te funkcje z punktu widzenia zestawu rekordów.
+[Zestaw rekordów: jak Metoda AddNew, Edit i DELETE Work (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) opisuje działania tych funkcji z punktu widzenia zestawu rekordów.
 
-[Zestaw rekordów: Więcej o aktualizacje (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) kończy historię aktualizacji zestawu rekordów, wyjaśniające, jak transakcje wpływają na aktualizacje, jak zamknąć zestawu rekordów lub przewijanie wpływa na aktualizacje w toku i sposób interakcji aktualizacje za pomocą aktualizacji innych użytkowników.
+[Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) uzupełnia historię aktualizacji zestawu rekordów przez wyjaśnienie, jak transakcje mają wpływ na aktualizacje, jak zamknięcie zestawu rekordów lub przewijania wpływa na aktualizacje w toku oraz jak aktualizacje są współdziałane z aktualizacjami innych użytkowników.
 
-##  <a name="_core_your_role_in_recordset_updating"></a> Twoja rola w aktualizacji zestawu rekordów
+##  <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a>Rola w ramach aktualizacji zestawu rekordów
 
-W poniższej tabeli przedstawiono Twojej roli przy użyciu zestawów rekordów, aby dodać, edytować lub usuwać rekordy oraz platformę jest dla Ciebie.
+W poniższej tabeli przedstawiono rolę w korzystaniu z zestawów rekordów, aby dodawać, edytować lub usuwać rekordy oraz do czego służy platforma.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Aktualizowanie zestawu rekordów: Użytkownik i struktury
+### <a name="recordset-updating-you-and-the-framework"></a>Aktualizowanie zestawu rekordów: ty i struktura
 
-|Można|Struktura|
+|Można|Struktura programu|
 |---------|-------------------|
-|Ustal, czy źródło danych jest można aktualizować (lub appendable).|Dostarcza [CDatabase](../../mfc/reference/cdatabase-class.md) funkcji elementów członkowskich do testowania updateability lub appendability źródła danych.|
-|Otwórz nadaje się do aktualizacji zestawu rekordów (dowolnego typu).||
-|Ustal, czy zestaw rekordów jest nadaje się do aktualizacji, przez wywołanie metody `CRecordset` aktualizacji funkcji, takich jak `CanUpdate` lub `CanAppend`.||
-|Wywołaj rekordów elementów członkowskich do dodawania, edytowania i usuwania rekordów.|Zarządza mechanika wymiana danych między obiekt zestawu rekordów a źródłem danych.|
-|Opcjonalnie można użyć transakcji do kontrolowania procesu aktualizacji.|Dostarcza `CDatabase` funkcji elementów członkowskich do obsługi transakcji.|
+|Ustal, czy źródło danych jest aktualizowalne (czy można je dołączyć).|Dostarcza funkcje składowe [CDatabase](../../mfc/reference/cdatabase-class.md) do testowania operacji aktualizowania lub dołączania źródła danych.|
+|Otwórz aktualizowalny zestaw rekordów (dowolnego typu).||
+|Ustal, czy zestaw rekordów jest aktualizowalny przez wywoływanie funkcji `CRecordset` Update, takich jak `CanUpdate` lub `CanAppend`.||
+|Wywołaj funkcje składowe zestawu rekordów, aby dodawać, edytować i usuwać rekordy.|Zarządza mechanicsem wymiany danych między obiektem zestawu rekordów a źródłem danych.|
+|Opcjonalnie użyj transakcji, aby kontrolować proces aktualizacji.|Dostarcza `CDatabase` funkcje członkowskie do obsługi transakcji.|
 
-Aby uzyskać więcej informacji na temat transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
+Aby uzyskać więcej informacji na temat transakcji, zobacz [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-##  <a name="_core_the_edit_buffer"></a> Bufor edycji
+##  <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a>Bufor edycji
 
-Podjęta zbiorczo, elementy członkowskie danych pola zestawu rekordów pełnić rolę buforu edycji, który zawiera jeden rekord — bieżącego rekordu. Operacje aktualizacji używają tego buforu może działać w bieżącym rekordzie.
+Zebrane zbiorczo elementy członkowskie danych pola zestawu rekordów pełnią rolę bufora edycji, który zawiera jeden rekord — bieżący rekord. Operacje aktualizacji używają tego buforu do działania w bieżącym rekordzie.
 
-- Po dodaniu rekordu, bufor edycji jest używany do tworzenia nowego rekordu. Po dodaniu rekordu, rekord, który został wcześniej bieżącego staje się bieżącym ponownie.
+- Po dodaniu rekordu do tworzenia nowego rekordu używany jest bufor edycji. Po zakończeniu dodawania rekordu, rekord, który był wcześniej bieżącym, jest ponownie bieżący.
 
-- Po zaktualizowaniu buforu (Edytuj) rekord edycji służy można skonfigurować elementy członkowskie danych pola zestawu rekordów na nowe wartości. Po zakończeniu aktualizowania zaktualizowanym rekordem jest obecne.
+- Podczas aktualizowania (edycji) rekordu, bufor edycji służy do ustawiania elementów członkowskich danych pola zestawu rekordów na nowe wartości. Po zakończeniu aktualizacji zaktualizowany rekord jest nadal aktualny.
 
-Gdy wywołujesz [działają funkcje AddNew](../../mfc/reference/crecordset-class.md#addnew) lub [Edytuj](../../mfc/reference/crecordset-class.md#edit), bieżącego rekordu są przechowywane, więc można go przywrócić później zgodnie z potrzebami. Gdy wywołujesz [Usuń](../../mfc/reference/crecordset-class.md#delete), bieżący rekord nie są przechowywane, ale jest oznaczony jako usunięty, i musi przewiń do innego rekordu.
+Gdy wywoływana jest metoda [AddNew](../../mfc/reference/crecordset-class.md#addnew) lub [Edit](../../mfc/reference/crecordset-class.md#edit), bieżący rekord jest przechowywany, aby można go było przywrócić później, zgodnie z wymaganiami. Po wywołaniu metody [delete](../../mfc/reference/crecordset-class.md#delete)bieżący rekord nie jest przechowywany, ale jest oznaczony jako usunięty i należy przewinąć do innego rekordu.
 
 > [!NOTE]
->  Bufor edycji odgrywa żadnej roli w usuwania rekordów. Po usunięciu bieżącego rekordu, rekord zostanie oznaczony jako usunięty, a zestaw rekordów jest "ale nie na rekord", dopóki przewiń do innego rekordu.
+>  W przypadku usunięcia rekordu nie są odtwarzane żadne role w buforze edycji. Po usunięciu bieżącego rekordu rekord zostanie oznaczony jako usunięty, a zestaw rekordów nie jest rekordem, dopóki nie przewiniesz do innego rekordu.
 
-##  <a name="_core_dynasets_and_snapshots"></a> Migawki i zestawów dynamicznych
+##  <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a>Zestawy dynamiczne i migawki
 
-[Zestawy dynamiczne](../../data/odbc/dynaset.md) Odśwież zawartość rekordu podczas przewijania w rekordzie. [Migawki](../../data/odbc/snapshot.md) są statyczne reprezentujących rekordy, więc zawartość rekordu nie są odświeżane, chyba że wywołujesz [Requery](../../mfc/reference/crecordset-class.md#requery). Aby korzystać z funkcji zestawów dynamicznych, musisz pracować ze sterownikiem ODBC, który jest zgodny z odpowiedniego poziomu obsługi interfejsu API ODBC. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [dynamiczny](../../data/odbc/dynaset.md).
+[Zestawy dynamiczne](../../data/odbc/dynaset.md) odświeżają zawartość rekordu podczas przewijania do rekordu. [Migawki](../../data/odbc/snapshot.md) to statyczne reprezentacje rekordów, więc zawartość rekordu nie jest odświeżana, chyba że zostanie wywołana [kwerenda](../../mfc/reference/crecordset-class.md#requery). Aby korzystać ze wszystkich funkcji zestawów dynamicznych, należy pracować ze sterownikiem ODBC, który jest zgodny z poprawnym poziomem obsługi interfejsu API ODBC. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [dynamiczny](../../data/odbc/dynaset.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

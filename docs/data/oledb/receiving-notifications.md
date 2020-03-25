@@ -10,22 +10,22 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: b35c1d3d6ff7d5d74493e843575f7448c4df8d8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b630a9728770a5e35e6d6300cf465b90238350c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209803"
 ---
 # <a name="receiving-notifications"></a>Odbieranie powiadomień
 
-OLE DB zawiera interfejsy otrzymywanie powiadomień po wystąpieniu zdarzenia. Te ustawienia zostały opisane w [OLE DB obiektu powiadomienia](/previous-versions/windows/desktop/ms725406(v=vs.85)) w **OLE DB Podręcznik programisty**. Ustawienia te zdarzenia używa standardowego mechanizmu COM w punkt połączenia. Na przykład obiekt ATL, który chce, aby pobrać zdarzenia za pośrednictwem `IRowsetNotify` implementuje `IRowsetNotify` interfejsu, dodając `IRowsetNotify` Klasa pochodna listy i ujawnienie go za pośrednictwem com_interface_entry — makro.
+OLE DB udostępnia interfejsy do otrzymywania powiadomień w przypadku wystąpienia zdarzeń. Są one opisane w [OLE DB powiadomienia dotyczące obiektów](/previous-versions/windows/desktop/ms725406(v=vs.85)) w **odniesieniu do OLE DB programisty**. Konfiguracja tych zdarzeń używa standardowego mechanizmu punktu połączenia modelu COM. Na przykład obiekt ATL, który chce pobrać zdarzenia za pomocą `IRowsetNotify` implementuje interfejs `IRowsetNotify` przez dodanie `IRowsetNotify` do listy pochodnej klasy i udostępnienie go za pomocą makra COM_INTERFACE_ENTRY.
 
-`IRowsetNotify` ma trzy metody, które mogą być wywoływane w różnym czasie. Jeśli chcesz odpowiedzieć na tylko jeden z tych metod, możesz użyć [irowsetnotifyimpl —](../../data/oledb/irowsetnotifyimpl-class.md) klasy, która zwraca E_NOTIMPL dla metody nie jest zainteresowany.
+`IRowsetNotify` ma trzy metody, które można wywoływać w różnym czasie. Jeśli chcesz odpowiedzieć tylko na jedną z tych metod, możesz użyć klasy [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , która zwraca E_NOTIMPL dla nieinteresujących Cię metod.
 
-Podczas tworzenia zestawu wierszy, musisz poinformować dostawcy ma obiektu zwróconego zestawu wierszy, do obsługi `IConnectionPointContainer`, który jest wymagany do skonfigurowania powiadomień.
+Podczas tworzenia zestawu wierszy należy poinformować dostawcę, że ma on obsługiwać zwracany obiekt zestawu wierszy `IConnectionPointContainer`, co jest potrzebne do skonfigurowania powiadomienia.
 
-Poniższy kod przedstawia sposób otwierania zestawu wierszy z obiektu ATL i użyj `AtlAdvise` funkcję, aby skonfigurować obiekt sink powiadomień. `AtlAdvise` Zwraca wartość pliku cookie, który jest używany podczas wywoływania `AtlUnadvise`.
+Poniższy kod przedstawia sposób otwierania zestawu wierszy z obiektu ATL i używania funkcji `AtlAdvise` w celu skonfigurowania ujścia powiadomień. `AtlAdvise` zwraca plik cookie, który jest używany podczas wywoływania `AtlUnadvise`.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -40,6 +40,6 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

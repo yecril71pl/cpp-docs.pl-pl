@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176731"
 ---
 # <a name="compiler-error-c2989"></a>Błąd kompilatora C2989
 
-"class": typ klasy została już zadeklarowana jako typ klasy korporacyjnej
+"Class": typ klasy został już zadeklarowany jako typ inny niż Klasa
 
-Klasa ogólna lub szablonu redefiniuje nieszablonowe lub nieogólnej klasy. Sprawdź pliki nagłówkowe dla konfliktów.
+Klasa ogólna lub szablon ponownie definiuje klasę niebędącą szablonem lub nieogólną. Sprawdź pliki nagłówkowe pod kątem konfliktów.
 
-Poniższy przykład spowoduje wygenerowanie C2989:
+Poniższy przykład generuje C2989:
 
 ```cpp
 // C2989.cpp
@@ -31,7 +31,7 @@ class C{};  // C2989
 class C2{};
 ```
 
-C2989 może również wystąpić, gdy za pomocą typów ogólnych:
+C2989 może również wystąpić przy użyciu typów ogólnych:
 
 ```cpp
 // C2989b.cpp

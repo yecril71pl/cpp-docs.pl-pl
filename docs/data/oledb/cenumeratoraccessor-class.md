@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211836"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor — Klasa
 
@@ -56,7 +56,7 @@ class CEnumeratorAccessor
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -72,7 +72,7 @@ class CEnumeratorAccessor
 
 Ten zestaw wierszy składa się ze źródeł danych i modułów wyliczających widocznych z bieżącego modułu wyliczającego.
 
-## <a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
 
 Zmienna wskazująca, czy moduł wyliczający jest nadrzędnym modułem wyliczania, jeśli wiersz jest modułem wyliczającym.
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Aby uzyskać więcej informacji, zobacz [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-## <a name="ntype"></a>CEnumeratorAccessor:: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
 
 Zmienna wskazująca, czy w wierszu opisano źródło danych czy moduł wyliczający.
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 Aby uzyskać więcej informacji, zobacz [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-## <a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
 
 Opis źródła danych lub modułu wyliczającego.
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Aby uzyskać więcej informacji, zobacz [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-## <a name="szname"></a>CEnumeratorAccessor:: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
 
 Nazwa źródła danych lub modułu wyliczającego.
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 Aby uzyskać więcej informacji, zobacz [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) w *dokumentacji programisty OLE DB* .
 
-## <a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
 
 Ciąg do przekazania do [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) w celu uzyskania monikera dla źródła danych lub modułu wyliczającego.
 

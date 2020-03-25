@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1352
 ms.assetid: d044e8b0-b6ef-4d57-8eb5-6254071be707
-ms.openlocfilehash: fbba87cea05d666d6dc3a385ca1fe52e143fdb5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07bd0f28e35dd2992ca537dbe744d756cc2afe80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203128"
 ---
 # <a name="fatal-error-c1352"></a>Błąd krytyczny C1352
 
-Nieprawidłowe lub uszkodzone MSIL w funkcji "function" z modułu 'Plik'
+Nieprawidłowe lub uszkodzone MSIL w funkcji "Function" z modułu "File"
 
-.Netmodule został przekazany do kompilatora, ale kompilator wykrył uszkodzenie w pliku.  Poproś osobę, kto produkowane .netmodule do badania.
+Do kompilatora został przekazano element. module, ale kompilator wykrył uszkodzenie w pliku.  Poproszenie osoby, która wyprodukowała moduł.
 
-Kompilator nie sprawdza pliki .netmodule dla wszystkich typów uszkodzenia.  Jednak Sprawdź, czy wszystkie ścieżki kontroli w funkcji zawiera instrukcję return.
+Kompilator nie sprawdza plików modułu dla wszystkich typów uszkodzeń.  Należy jednak sprawdzić, czy wszystkie ścieżki kontroli w funkcji zawierają instrukcję return.
 
-Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).
+Aby uzyskać więcej informacji, zobacz [. moduły plików jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).

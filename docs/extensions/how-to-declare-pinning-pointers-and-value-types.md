@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Deklarowanie unieruchamiania wskaźników i typów wartości'
+title: 'Porady: deklarowanie unieruchamiania wskaźników i typów wartości'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-ms.openlocfilehash: 901980c76aac5dd364f2fa2fae0e007f5d25f3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ef7e82161703a272a571392fd66e6055371c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181970"
 ---
-# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Instrukcje: Deklarowanie unieruchamiania wskaźników i typów wartości
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Porady: deklarowanie unieruchamiania wskaźników i typów wartości
 
-Typ wartości może być zapakowany niejawnie. Następnie można zadeklarować przypinania wskaźnik do obiektu typu wartościowego sam i użycia **pin_ptr** typem wartości spakowanej.
+Typ wartości może być niejawnie opakowany. Następnie można zadeklarować przypinany wskaźnik do samego obiektu typu wartości i użyć **pin_ptr** do opakowanego typu wartości.
 
 ## <a name="example"></a>Przykład
 
@@ -45,6 +45,6 @@ int main() {
 7
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

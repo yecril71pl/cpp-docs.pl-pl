@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398852"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214178"
 ---
 # <a name="asweak-function"></a>AsWeak — Funkcja
 
@@ -30,25 +30,25 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Wskaźnik do typu parametru *p*.
 
-*p*<br/>
+*St*<br/>
 Wystąpienie typu.
 
 *pWeak*<br/>
-Po zakończeniu tej operacji, wskaźnik do słabe odwołanie do parametru *p*.
+Po zakończeniu tej operacji wskaźnik do słabego odwołania do parametru *p*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli operacja się powiedzie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę błędu.
+S_OK, jeśli ta operacja zakończyła się pomyślnie; w przeciwnym razie błąd HRESULT, który wskazuje przyczynę niepowodzenia.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

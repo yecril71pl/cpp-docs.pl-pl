@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-ms.openlocfilehash: 7551e2f3f1efc90913981feb674f48aadb9ace51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 091d4e173bfb2eff8ffee2b5c30647f4d5e3bc04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195373"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Błąd narzędzi konsolidatora LNK1106
 
-Nieprawidłowy plik lub dysk jest pełny: nie można przejść do lokalizacji
+nieprawidłowy plik lub dysk: nie można przejść do lokalizacji
 
-Narzędzie nie można odczytać lub zapisać `location` w pliku mapowanych na pamięć.
+Narzędzie nie mogło odczytać lub zapisać w `location` w pliku mapowanym na pamięć.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
 1. Dysk jest zapełniony.
 
-   Zwolnij trochę miejsca i połącz ponownie.
+   Zwolnij trochę miejsca i Połącz ponownie.
 
-1. Podjęto próbę połączenia za pośrednictwem sieci.
+1. Próba połączenia przez sieć.
 
-   Niektóre sieci nie obsługują w pełni pliki mapowane w pamięci używane przez konsolidator. Spróbuj konsolidacji na dysku lokalnym.
+   Niektóre sieci nie obsługują w pełni plików mapowanych na pamięć używanych przez konsolidator. Spróbuj połączyć się na dysku lokalnym.
 
-1. Nieprawidłowy blok na dysku.
+1. Zły blok na dysku.
 
-   Mimo że system operacyjny i sprzęt dysku powinien mieć wykryte takiego komunikatu o błędzie, możesz uruchomić program sprawdzania dysku.
+   Mimo że sprzęt systemu operacyjnego i dysku powinien wykryć taki błąd, można uruchomić program do sprawdzania dysku.
 
-1. Brak miejsca na stosie.
+1. Za mało miejsca na stercie.
 
-   Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.
+   Aby uzyskać więcej informacji, zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) .

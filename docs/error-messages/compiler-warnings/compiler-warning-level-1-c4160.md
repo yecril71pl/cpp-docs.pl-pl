@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4160
+title: Ostrzeżenie kompilatora (poziom 1) C4160
 ms.date: 08/27/2018
 f1_keywords:
 - C4160
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391845"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176172"
 ---
-# <a name="compiler-warning-level-1-c4160"></a>Kompilator ostrzeżenie (poziom 1) C4160
+# <a name="compiler-warning-level-1-c4160"></a>Ostrzeżenie kompilatora (poziom 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (POP, Point,...): nie znaleziono poprzednio włożonego identyfikatora "*identyfikator*"
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...): nie znaleziono wcześniej wypchnięcia identyfikatora "*Identifier*"
 
 ## <a name="remarks"></a>Uwagi
 
-Pragma instrukcji w kodzie źródłowym próbuje pop identyfikator, który nie został wypchnięty. Aby uniknąć tego ostrzeżenia, upewnij się, prawidłowo przypisany identyfikator są zdjęte ze stosu.
+Instrukcja pragma w kodzie źródłowym próbuje wystawić identyfikator, który nie został wypchnięte. Aby uniknąć tego ostrzeżenia, należy się upewnić, że identyfikator zdjęte został prawidłowo wypchnięte.
 
 ## <a name="example"></a>Przykład
 

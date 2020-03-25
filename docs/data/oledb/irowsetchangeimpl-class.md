@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b069cd08814855a0528806ac6d19ed8f5beb6f37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210460"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl — Klasa
 
@@ -75,7 +75,7 @@ Jednostka magazynowa dla wszystkich dojść wiersza przechowywanych przez dostaw
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>Metody interfejsu (używane z IRowsetChange)
 
@@ -108,7 +108,7 @@ Implementacja szablonów OLE DB obsługuje wszystkie metody podstawowe (`SetData
 
 - Zobacz również, jak Klasa `RUpdateRowset` jest używana w przykładzie [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
 
 Usuwa wiersze z zestawu wierszy.
 
@@ -125,7 +125,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 Zobacz [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
 
 Tworzy i inicjuje nowy wiersz w zestawie wierszy.
 
@@ -142,7 +142,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 Zobacz [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="setdata"></a>IRowsetChangeImpl:: SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowsetChangeImpl:: SetData
 
 Ustawia wartości danych w co najmniej jednej kolumnie.
 
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 Zobacz [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="flushdata"></a>IRowsetChangeImpl:: FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowsetChangeImpl:: FlushData
 
 Przesłonięte przez dostawcę, aby zatwierdzić dane do swojego magazynu.
 

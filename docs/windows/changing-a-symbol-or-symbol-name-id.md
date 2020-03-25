@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zarządzanie symboli'
+title: 'Instrukcje: Zarządzanie symbolami'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
@@ -35,68 +35,68 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215207"
 ---
-# <a name="how-to-manage-symbols"></a>Instrukcje: Zarządzanie symboli
+# <a name="how-to-manage-symbols"></a>Instrukcje: Zarządzanie symbolami
 
-Podczas tworzenia nowego zasobu lub obiektu zasobu, środowisko programistyczne przypisuje mu domyślnej nazwy symbolu, na przykład `IDD_DIALOG1`. Możesz użyć [okno właściwości](/visualstudio/ide/reference/properties-window) zmienić domyślną nazwę symbolu lub zmień nazwę symbolu już skojarzony z zasobem.
+Podczas tworzenia nowego zasobu lub obiektu zasobu środowisko programistyczne przypisuje mu domyślną nazwę symbolu, na przykład `IDD_DIALOG1`. Za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window) można zmienić domyślną nazwę symbolu lub zmienić nazwę dowolnego symbolu, który jest już skojarzony z zasobem.
 
-Dla symboli skojarzone z pojedynczego zasobu, można również użyć **właściwości** okna, aby zmienić wartość symbol. Możesz użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) zmianę wartości symboli nie jest aktualnie przypisany do zasobu.
+W przypadku symboli skojarzonych z pojedynczym zasobem można także użyć okna **Właściwości** , aby zmienić wartość symbolu. Za pomocą [okna dialogowego symbole zasobów](../windows/resource-symbols-dialog-box.md) można zmienić wartość symboli, które nie są aktualnie przypisane do zasobu.
 
-Zwykle symbol wszystkie definicje są zapisywane w `Resource.h`. Może jednak może być konieczna zmiana to zawierać nazwę pliku na przykład korzystania z więcej niż jeden plik zasobów w tym samym katalogu.
+Zwykle wszystkie definicje symboli są zapisywane w `Resource.h`. Może jednak być konieczna zmiana nazwy pliku dołączanego, aby można było na przykład współpracować z więcej niż jednym plikiem zasobów w tym samym katalogu.
 
 > [!NOTE]
-> Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [jak: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md).
+> Jeśli projekt nie zawiera jeszcze pliku. RC, zobacz [How to: Create Resources](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="symbol-name-restrictions"></a>Ograniczenia dotyczące nazwy symbolu
 
-Ograniczenia dotyczące nazwy symbolu są następujące:
+Ograniczenia dotyczące nazw symboli są następujące:
 
-- Wszystkie [symbole](../windows/symbols-resource-identifiers.md) musi być unikatowa w zakresie aplikacji, aby zapobiec sprzecznych definicji symbolu w plikach nagłówkowych.
+- Wszystkie [symbole](../windows/symbols-resource-identifiers.md) muszą być unikatowe w obrębie zakresu aplikacji, aby zapobiec sprzecznym definicjami symboli w plikach nagłówkowych.
 
-- Nieprawidłowe znaki dla nazwy symbolu to A-Z, a – z, 0-9 i znaki podkreślenia (_).
+- Prawidłowe znaki nazwy symbolu obejmują A-Z, a-z, 0-9 i podkreślenia (_).
 
-- Nazwy symboli nie może zaczynać się liczbą i są ograniczone do 247 znaków.
+- Nazwy symboli nie mogą rozpoczynać się od cyfry i są ograniczone do 247 znaków.
 
-- Nazwy symboli nie może zawierać spacji.
+- Nazwy symboli nie mogą zawierać spacji.
 
-- Nazwy symboli nie uwzględniana wielkość liter, ale są zachowywane w przypadku pierwszej definicji symbolu.
+- W nazwach symboli nie jest rozróżniana wielkość liter, ale wielkość liter w pierwszej definicji symbolu jest zachowywana.
 
-   Plik nagłówka, który definiuje symbole jest używany przez kompilator/Edytor zasobów i C++ programy do odwoływania się zasoby zdefiniowane w pliku zasobów. Dwie nazwy symbolu które różnią się, tylko w przypadku, program w języku C++ zostanie wyświetlony dwa oddzielne symbole, gdy kompilator/Edytor zasobów zostanie wyświetlony obie nazwy jako odnoszące się do jednego pojedynczego symbolu.
+   Plik nagłówkowy definiujący symbole jest używany przez kompilator/Edytor zasobów i C++ program do odwoływania się do zasobów zdefiniowanych w pliku zasobów. Dla dwóch nazw symboli, które różnią się tylko wielkością liter, C++ program zobaczy dwa oddzielne symbole, podczas gdy kompilator/Edytor zasobów zobaczy obie nazwy jako odwołujące się do jednego pojedynczego symbolu.
 
 > [!NOTE]
-> Jeśli nie zgodnie ze schematem nazwę standardowego symbolu (ID*_[keyword]) opisane poniżej i nazwę symbolu stanie się być taka sama jak słowo kluczowe wiadomo, że kompilator skryptu zasobów, próba skompilowania pliku skryptu zasobu spowoduje błąd pozornie losowe generowanie który jest trudny do zdiagnozowania. Aby tego uniknąć, należy przestrzegać standardowych schemat nazewnictwa.
+> Jeśli nie obserwujesz standardowego schematu nazw symboli (identyfikator * _ [słowo kluczowe]) przedstawiony poniżej, a nazwa symbolu ma być taka sama jak słowo kluczowe znane do kompilatora skryptów zasobów, Próba skompilowania pliku skryptu zasobu spowoduje pozornie losowe generowanie błędów jest to trudne do zdiagnozowania. Aby tego uniknąć, należy przestrzegać standardowego schematu nazewnictwa.
 
-Nazwy symboli ma opisowe prefiksy, które wskazują rodzaj zasobu lub obiektów, które reprezentują. Prefiksy te opisowy zaczynają się od identyfikatora kombinację tekstu Biblioteka Microsoft Foundation Class (MFC) używa symbol poniższą tabelą konwencji nazewnictwa:
+Nazwy symboli mają opisowe prefiksy wskazujące rodzaj zasobów lub obiektów, które reprezentują. Te prefiksy opisowe zaczynają się od identyfikatora kombinacji tekstu. Biblioteka Microsoft Foundation Class (MFC) używa konwencji nazewnictwa symboli pokazanych w poniższej tabeli:
 
-|Kategoria|Prefiks|Zastosowanie|
+|Kategoria|Prefiks|Użycie|
 |--------------|------------|---------|
-|Zasoby|IDR_, IDD_, IDC_, IDI_, IDB_|Akcelerator lub menu (i skojarzone lub niestandardowe zasoby), okno dialogowe, kursor, ikony, mapy bitowej|
+|Zasoby|IDR_, IDD_, IDC_, IDI_, IDB_|Akcelerator lub menu (oraz skojarzone lub niestandardowe zasoby), okno dialogowe, kursor, ikona, mapa bitowa|
 |Elementy menu|ID_|Element menu|
 |Polecenia|ID_|Polecenie|
-|Formanty i okien podrzędnych|IDC_|formant|
-|Ciągi|IDS_|Parametry w tabeli ciągów|
-|MFC|AFX_|Zarezerwowane dla wstępnie zdefiniowane symbole MFC|
+|Kontrolki i okna podrzędne|IDC_|Kontrola|
+|Ciągi|IDS_|Ciąg w tabeli ciągów|
+|MFC|AFX_|Zarezerwowane dla wstępnie zdefiniowanych symboli MFC|
 
 ### <a name="to-change-a-symbol-name-id"></a>Aby zmienić nazwę symbolu (ID)
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz zasób.
+1. W obszarze [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)wybierz zasób.
 
-1. W **właściwości** okna, wpisz nową nazwę symbolu lub wybierz z listy istniejących symboli w **identyfikator** pole.
+1. W oknie **Właściwości** wpisz nową nazwę symbolu lub wybierz z listy istniejących symboli w polu **ID** .
 
-   Jeśli wpiszesz nową nazwę symbolu, automatycznie przypisał wartości.
+   Wpisanie nowej nazwy symbolu powoduje automatyczne przypisanie wartości.
 
 > [!NOTE]
-> Możesz użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) się zmienić nazwy symboli nie jest aktualnie przypisany do zasobu.
+> Za pomocą [okna dialogowego symbole zasobów](../windows/resource-symbols-dialog-box.md) można zmienić nazwy symboli, które nie są aktualnie przypisane do zasobu.
 
 ## <a name="symbol-value-restrictions"></a>Ograniczenia dotyczące wartości symbolu
 
-Wartością symboliczną, może być liczbą całkowitą, wyrażone w normalny sposób dla `#define` dyrektywy preprocesora. Poniżej przedstawiono kilka przykładów wartości symboli:
+Wartość symbolu może być dowolną liczbą całkowitą wyrażoną w normalny sposób dla dyrektyw preprocesora `#define`. Poniżej przedstawiono kilka przykładów wartości symboli:
 
 ```
 18
@@ -105,114 +105,114 @@ Wartością symboliczną, może być liczbą całkowitą, wyrażone w normalny s
 -3456
 ```
 
-Wartości symboli dla zasobów, takich jak akceleratorów, mapy bitowe, kursorów, okna dialogowe, ikony, menu, tabele ciągów i wersji informacji, muszą być liczbami dziesiętnymi z zakresu od 0 do 32 767, ale nie może być szesnastkowe. Wartości symboli dla części zasobów, takich jak formanty okna dialogowego lub poszczególne ciągi w tabeli ciągów może być z zakresu od 0 do 65,534 lub od-32 768 do 32 767 znaków. Aby uzyskać więcej informacji na temat zakresów liczb, zobacz [TN023: Standardowe zasoby MFC](../mfc/tn023-standard-mfc-resources.md).
+Wartości symboli dla zasobów takich jak akceleratory, mapy bitowe, kursory, okna dialogowe, ikony, menu, tabele ciągów i informacje o wersji muszą być liczbami dziesiętnymi z zakresu od 0 do 32 767, ale nie może być szesnastkowa. Wartości symboli dla części zasobów, takich jak kontrolki okna dialogowego lub poszczególne ciągi w tabeli ciągów, mogą mieć wartość z przedziału od 0 do 65 534 lub z-32 768 do 32 767. Aby uzyskać więcej informacji o zakresach liczbowych, zobacz [TN023: standardowe zasoby MFC](../mfc/tn023-standard-mfc-resources.md).
 
-Symbole zasobów są 16-bitowymi liczbami. Można je wprowadzić jako podpisane lub niepodpisane, jednak są używane wewnętrznie jako liczb całkowitych bez znaku, dzięki czemu będzie można rzutować wartości ujemne ich odpowiednich wartości dodatniej.
+Symbole zasobów są liczbami 16-bitowymi. Można je wprowadzić jako podpisane lub niepodpisane, ale są one używane wewnętrznie jako liczby całkowite bez znaku, więc liczby ujemne będą rzutowane na odpowiadające im wartości dodatnie.
 
-Niektóre ograniczenia wartości symboli są:
+Niektóre ograniczenia dotyczące wartości symboli są następujące:
 
-- Środowisko projektowe programu Visual Studio i MFC na użytek niektóre liczba zakresów specjalnych celów. Wszystkie liczby z zestawem najbardziej znaczący bit (-32 768 -1 lub 32768 do 65,534, w zależności od logowania) są zarezerwowane przez MFC.
+- Środowisko deweloperskie programu Visual Studio i MFC używają niektórych zakresów liczbowych do specjalnych celów. Wszystkie liczby z najbardziej znaczącym zestawem bitów (-32 768 do-1 lub 32 768 do 65 534, w zależności od znaku) są zarezerwowane przez MFC.
 
-- Nie można zdefiniować wartości symboliczną za pomocą innych ciągów symboli. Na przykład następująca definicja symbol nie jest obsługiwane:
+- Nie można zdefiniować wartości symbolu przy użyciu innych ciągów symboli. Na przykład następująca definicja symbolu nie jest obsługiwana:
 
     ```cpp
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- Nie można użyć makra preprocesora z argumentami, jako wartość definicje. Poniższy przykład nie jest prawidłowym wyrażeniem niezależnie od tego, co `ID` daje w wyniku w czasie kompilacji:
+- Nie można użyć makr preprocesora z argumentami jako definicje wartości. Poniższy przykład nie jest prawidłowym wyrażeniem, bez względu na to, co `ID` oblicza w czasie kompilacji:
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
     ```
 
-- Aplikacja może mieć istniejący plik zawierający symboli zdefiniowanych za pomocą wyrażeń.
+- Twoja aplikacja może mieć istniejący plik zawierający symbole zdefiniowane za pomocą wyrażeń.
 
-### <a name="to-change-a-symbol-value"></a>Aby zmienić wartości symbolu
+### <a name="to-change-a-symbol-value"></a>Aby zmienić wartość symbolu
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), wybierz zasób.
+1. W obszarze [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)wybierz zasób.
 
-1. W **właściwości** okna, typ nazwy symbolu następuje znak równości i całkowitą **identyfikator** polu, na przykład:
+1. W oknie **Właściwości** wpisz nazwę symbolu, a po nim znak równości i liczbę całkowitą w polu **Identyfikator** , na przykład:
 
     ```
     IDC_EDITNAME=5100
     ```
 
-   Nowa wartość są przechowywane w pliku nagłówkowym symboli podczas następnego zapisany projekt. Tylko nazwa symbolu pozostaje widoczna w polu Identyfikator i równości i wartości nie są wyświetlane po ich są weryfikowane.
+   Nowa wartość jest przechowywana w pliku nagłówkowym symboli przy następnym zapisaniu projektu. Tylko nazwa symbolu pozostaje widoczna w polu ID, a znak równości i wartość nie będą wyświetlane po sprawdzeniu poprawności.
 
 ## <a name="change-or-delete-symbols"></a>Zmień lub Usuń symbole
 
-W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), edytować lub usunąć istniejące symboli, które nie są już przypisane do zasobu lub obiektu.
+W [oknie dialogowym symbole zasobów](../windows/resource-symbols-dialog-box.md)można edytować lub usuwać istniejące symbole, które nie są już przypisane do zasobu lub obiektu.
 
-### <a name="to-change-an-unassigned-symbol"></a>Aby zmienić nieprzypisanych symboli
+### <a name="to-change-an-unassigned-symbol"></a>Aby zmienić nieprzypisany symbol
 
-1. W **nazwa** wybierz nieprzypisanych symboli, a wybierz **zmiany**.
+1. W polu **Nazwa** wybierz nieprzypisany symbol i wybierz pozycję **Zmień**.
 
-1. Edytuj nazwę symbolu lub wartości w polach w **Zmień Symbol** okno dialogowe.
-
-> [!NOTE]
-> Aby zmienić symbol, który jest przypisany do zasobu lub obiektu, należy użyć edytora zasobów lub **właściwości** okna.
-
-### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisanych symboli (nieużywane)
-
-W **symboli zasobów** okna dialogowego Wybierz symbol, który chcesz usunąć, a następnie wybierz **Usuń**.
+1. Edytuj nazwę lub wartość symbolu w polach, które znajdują się w oknie dialogowym **Zmień symbol** .
 
 > [!NOTE]
-> Przed usunięciem nieużywane symboli w pliku zasobów, upewnij się, że nie jest on używany gdzie indziej w programie lub plików zasobów znajdujących się w czasie kompilacji.
+> Aby zmienić symbol przypisany do zasobu lub obiektu, należy użyć edytora zasobów lub okna **Właściwości** .
 
-## <a name="include-symbols"></a>Dołączać symbole
+### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisany symbol (nieużywany)
 
-Środowisko projektowe odczytuje plik zasobów utworzony przez inną aplikację po raz pierwszy oznacza wszystkie pliki nagłówkowe dołączone jako tylko do odczytu. Chociaż można użyć [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md) można dodać dodatkowe symboli tylko do odczytu plików nagłówkowych.
+W oknie dialogowym **symbole zasobów** wybierz symbol, który chcesz usunąć, a następnie wybierz pozycję **Usuń**.
 
-Jest jednym z powodów warto używać definicje symboli tylko do odczytu dla plików symboli, które mają być udostępnianie dla kilku projektów.
+> [!NOTE]
+> Przed usunięciem nieużywanego symbolu w pliku zasobów upewnij się, że nie jest on używany w innym miejscu w programie ani w plikach zasobów uwzględnionych w czasie kompilacji.
 
-Umożliwia także pliki symboli uwzględnione Jeśli masz istniejące zasoby dzięki definicje symboli, używające wyrażenia zamiast prostych liczb całkowitych do definiowania wartości symbolu. Na przykład:
+## <a name="include-symbols"></a>Dołącz symbole
+
+Gdy środowisko programistyczne odczytuje plik zasobów utworzony przez inną aplikację, oznacza wszystkie dołączone pliki nagłówkowe jako tylko do odczytu. Chociaż możesz użyć [okna dialogowego zasób zawiera](../windows/resource-includes-dialog-box.md) , aby dodać dodatkowe pliki nagłówka symboli tylko do odczytu.
+
+Jedną z przyczyn może być użycie definicji symboli tylko do odczytu dla plików symboli, które planujesz udostępnić między kilka projektów.
+
+Można również użyć dołączonych plików symboli, jeśli masz istniejące zasoby z definicjami symboli, które używają wyrażeń zamiast prostych liczb całkowitych, aby zdefiniować wartość symbolu. Na przykład:
 
 ```cpp
 #define   IDC_CONTROL1 2100
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)
 ```
 
-Środowisko zostanie poprawnie interpretować te symbole obliczane tak długo, jak:
+Środowisko będzie poprawnie interpretować te symbole obliczeniowe tak długo, jak:
 
-- Symbole obliczane są umieszczane w pliku symboli tylko do odczytu.
+- Symbole obliczeniowe są umieszczane w pliku symboli tylko do odczytu.
 
-- Plik zasobów zawiera zasoby, do których te symbole obliczane są już przypisane.
+- Plik zasobów zawiera zasoby, do których zostały już przypisane te symbole obliczeniowe.
 
 - Oczekiwano wyrażenia liczbowego.
 
 > [!NOTE]
-> Jeśli oczekiwany jest ciąg lub wyrażenie numeryczne, wyrażenie nie jest oceniany.
+> Jeśli oczekiwano ciągu lub wyrażenia liczbowego, wyrażenie nie jest oceniane.
 
-### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Aby uwzględnić symbole udostępnione (tylko do odczytu) w pliku zasobów
+### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Aby uwzględnić udostępnione symbole (tylko do odczytu) w pliku zasobów
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* plik i wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](../windows/resource-includes-dialog-box.md).
 
-1. W **dyrektywy symboli tylko do odczytu** , używaj `#include` dyrektywy kompilatora, aby określić plik, którego symbole tylko do odczytu, które mają być przechowywane.
+1. W polu **dyrektywy symboli tylko do odczytu** Użyj dyrektywy kompilatora `#include`, aby określić plik, w którym mają być przechowywane symbole tylko do odczytu.
 
-   Nie wywołuj pliku `Resource.h`, ponieważ jest to, nazwa_pliku zwykle używane przez plik nagłówka symbolu głównego.
+   Nie wywołuj `Resource.h`pliku, ponieważ jest to nazwa pliku zwykle używana przez główny plik nagłówka symboli.
 
    > [!NOTE]
-   > Wpisz w **dyrektywy symboli tylko do odczytu** pola znajdują się w pliku zasobów, dokładnie tak, jak możesz wpisać. Upewnij się, w jakiej został wpisany nie zawiera błędów pisowni lub nieprawidłowa składnia.
+   > Wpisany tekst w polu **dyrektywy symboli tylko do odczytu** jest dołączany do pliku zasobu dokładnie podczas jego wpisywania. Upewnij się, że typ nie zawiera żadnych błędów pisowni ani składni.
 
-   Użyj **dyrektywy symboli tylko do odczytu** pole, aby uwzględnić pliki przy użyciu tylko definicje symbolu. Nie zawierają definicje zasobów, inne zduplikowane definicje zostaną utworzone, gdy plik jest zapisywany.
+   Użyj pola **dyrektywy symboli tylko do odczytu** w celu uwzględnienia tylko plików z definicjami symboli. Nie dołączaj definicji zasobów, w przeciwnym razie podczas zapisywania pliku zostaną utworzone zduplikowane definicje zasobów.
 
-1. W pliku, który określiłeś, należy umieścić symbole.
+1. Umieść symbole w określonym pliku.
 
-   Symbole w plików znajdujących się w ten sposób są obliczane zawsze przy otwieraniu Twojego pliku zasobu, ale nie są zastępowane na dysku po zapisaniu pliku.
+   Symbole w plikach zawartych w ten sposób są oceniane przy każdym otwarciu pliku zasobów, ale nie są one zastępowane na dysku podczas zapisywania pliku.
 
 1. Kliknij przycisk **OK**.
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Aby zmienić nazwę pliku nagłówkowego symboli zasobów
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy użytkownika *.rc* pliku, a następnie wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md).
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję [zasób zawiera](../windows/resource-includes-dialog-box.md).
 
-1. W **plik nagłówka symbolu** wpisz nową nazwę dla pliku dyrektywy include.
+1. W polu **plik nagłówka symbolu** wpisz nową nazwę dla pliku dołączanego.
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
 [Instrukcje: Tworzenie symboli](../windows/creating-new-symbols.md)<br/>

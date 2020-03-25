@@ -6,28 +6,28 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0514f6a9285936c85608f08774c1d377fd72d6ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211058"
 ---
 # <a name="data-sources-and-sessions"></a>Źródła i sesje danych
 
-Na poniższej ilustracji przedstawiono klas, które obsługują łączenie się i uzyskiwania dostępu do źródła danych. Każda klasa zależy od standardowej implementacji składnika OLE DB.
+Na poniższej ilustracji przedstawiono klasy, które obsługują łączenie się ze źródłem danych i uzyskiwanie do niego dostępu. Każda klasa jest oparta na standardowej implementacji składnika OLE DB.
 
-![Klasy danych źródła i sesji](../../data/oledb/media/vcdatasourcesessionclasses.gif "klas danych źródła i sesji") <br/>
-Klasy sesji i źródła danych
+![Klasy źródła danych i sesji](../../data/oledb/media/vcdatasourcesessionclasses.gif "Klasy źródła danych i sesji") <br/>
+Klasy źródła danych i sesji
 
-Dostępne są następujące klasy:
+Klasy są:
 
-- [CDataSource](../../data/oledb/cdatasource-class.md) tej klasy tworzy wystąpienie obiektu źródła danych, które tworzy i zarządza nimi połączenie ze źródłem danych za pośrednictwem dostawcy OLE DB. Źródło danych ma informacje, takie jak adres i uwierzytelniania informacje o źródle danych w postaci ciągu połączenia.
+- [CDataSource](../../data/oledb/cdatasource-class.md) Ta klasa tworzy wystąpienie obiektu źródła danych, który umożliwia utworzenie połączenia ze źródłem danych i zarządzanie nim za pomocą dostawcy OLE DB. Źródło danych pobiera informacje takie jak adres źródła danych i informacje uwierzytelniania w postaci parametrów połączenia.
 
-   Warto również zauważyć, że klasa pomocy [CEnumerator](../../data/oledb/cenumerator-class.md) jest często używana, zanim wszystkie połączenie zostanie nawiązane, aby uzyskać listę dostępnych dostawców zarejestrowanych w systemie. Dzięki temu można wybrać dostawcę jako źródła danych. Na przykład **właściwości Linku danych** okno dialogowe korzysta z tej klasy do wypełniania listy dostawców na **dostawców** kartę. Jego jest równa `SQLBrowseConnect` lub `SQLDriverConnect` funkcji.
+   Warto również zauważyć, że Klasa pomocnika [CEnumerator](../../data/oledb/cenumerator-class.md) jest często używana przed nawiązaniem połączenia w celu uzyskania listy dostępnych dostawców zarejestrowanych w systemie. Pozwala to wybrać dostawcę jako źródło danych. Na przykład okno dialogowe **Właściwości łącza danych** używa tej klasy do wypełniania listy dostawców na karcie **dostawcy** . Jest ono równe funkcji `SQLBrowseConnect` lub `SQLDriverConnect`.
 
-- [CSession](../../data/oledb/csession-class.md) tej klasy tworzy wystąpienie obiektu sesji, który reprezentuje sesję jednolity dostęp do źródła danych. Jednak można utworzyć wiele sesji na źródle danych. Dla każdej sesji można utworzyć zestawy wierszy polecenia i innych obiektów dostępu do danych ze źródła danych. Sesja obsługuje transakcji.
+- [CSession](../../data/oledb/csession-class.md) Ta klasa tworzy wystąpienie obiektu Session, który reprezentuje pojedynczą sesję dostępu do źródła danych. Można jednak utworzyć wiele sesji w źródle danych. Dla każdej sesji można utworzyć zestawy wierszy, polecenia i inne obiekty, aby uzyskać dostęp do danych ze źródła danych. Sesja obsługuje transakcje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)

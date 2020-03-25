@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-ms.openlocfilehash: c21c495f70b9e6f5619b6b46fe1a6ce826de9d95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cee6993a108a5dc006476b31042e615b8d4aa81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390571"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165583"
 ---
 # <a name="compiler-error-c3832"></a>Błąd kompilatora C3832
 
-'biblioteka typów': typ Biblioteka wygląda tak, jakby został zbudowany dla 32-bitowych wskaźników; Zmień kwalifikator "ptrsize"
+"Biblioteka typów": Biblioteka typów wygląda tak, jakby była skompilowana dla wskaźników 32-bitowych; Zmień kwalifikator "ptrsize"
 
-Jawne informacje dostarczone z `ptrsize` atrybutu [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy nie zgadza się za pomocą kompilatora znalezione w bibliotece typów.
+Jawne informacje dostarczone z atrybutem `ptrsize` dyrektywy [#import](../../preprocessor/hash-import-directive-cpp.md) nie zgadzają się z elementem kompilatora znalezionym w bibliotece typów.

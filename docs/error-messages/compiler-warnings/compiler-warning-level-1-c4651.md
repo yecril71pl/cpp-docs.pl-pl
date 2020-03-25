@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4651
+title: Ostrzeżenie kompilatora (poziom 1) C4651
 ms.date: 11/04/2016
 f1_keywords:
 - C4651
 helpviewer_keywords:
 - C4651
 ms.assetid: f1ea82aa-4dc1-4972-b55a-57fdb962f0dd
-ms.openlocfilehash: 01e2472a547e73eda5fcc56952949a0d9611029f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc8131665c970c3b86bb1e84e39636ae8f93897b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199545"
 ---
-# <a name="compiler-warning-level-1-c4651"></a>Kompilator ostrzeżenie (poziom 1) C4651
+# <a name="compiler-warning-level-1-c4651"></a>Ostrzeżenie kompilatora (poziom 1) C4651
 
-"definition" określony dla prekompilowanego nagłówka, ale nie dla bieżącej kompilacji
+określono element "Definition" dla prekompilowanego nagłówka, ale nie dla bieżącego kompilowania
 
-Definicja została określona podczas generowania prekompilowanego nagłówka, ale nie znajduje się w tej kompilacji.
+Definicja została określona podczas generowania prekompilowanego nagłówka, ale nie w tej kompilacji.
 
-Definicja będzie obowiązywać wewnątrz prekompilowanego nagłówka, ale nie znajduje się w dalszej części kodu.
+Definicja będzie obowiązywać w prekompilowanym nagłówku, ale nie w pozostałej części kodu.
 
-Jeśli prekompilowanego nagłówka został utworzony za pomocą /DSYMBOL, kompilator generuje to ostrzeżenie, jeśli kompilacji /Yu nie ma /DSYMBOL.  Dodawanie /DSYMBOL do wiersza polecenia /Yu rozwiązuje to ostrzeżenie.
+W przypadku skompilowania prekompilowanego nagłówka z/DSYMBOL, kompilator generuje to ostrzeżenie, jeśli kompilacja/Yu nie ma/DSYMBOL.  Dodanie/DSYMBOL do wiersza polecenia/Yu rozwiązuje to ostrzeżenie.

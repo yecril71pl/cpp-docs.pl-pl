@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-ms.openlocfilehash: d6dc742a181d8aebc041d9ffadd6256d3b7c9348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5984573074b07ae4cbd961ad7d8821173e0b04b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201910"
 ---
 # <a name="compiler-error-c2828"></a>Błąd kompilatora C2828
 
-"operator operator" nie może być przesłaniany globalnie formy binarnej
+"operator operatora" nie może być przesłaniany globalnie za pomocą postaci binarnej
 
-Operator nie może mieć formy binarnej poza obiekt.
+Operator nie może mieć postaci binarnej poza obiektem.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Przeciążony operator należy lokalnego do obiektu.
+1. Ustaw przeciążony operator jako lokalny dla obiektu.
 
-1. Wybierz operator jednoargumentowy odpowiednie do przeciążenia.
+1. Wybierz odpowiedni operator jednoargumentowy do przeciążenia.

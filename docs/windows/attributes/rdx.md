@@ -1,17 +1,17 @@
 ---
-title: RDX (atrybut COM C++)
+title: RDX (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214633"
 ---
 # <a name="rdx"></a>rdx
 
@@ -28,17 +28,17 @@ Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.
 *Klucz*<br/>
 Nazwa klucza, który ma zostać utworzony lub otwarty.
 
-*VALUENAME*<br/>
-(Opcjonalnie) Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.
+*Pełna*<br/>
+Obowiązkowe Określa pole wartości, które ma zostać ustawione. Jeśli pole wartości o tej nazwie nie istnieje jeszcze w kluczu, zostanie dodane.
 
 *regtype*<br/>
-Typ klucza rejestru dodawane. Może być jedną z następujących czynności: `text`, `dword`, `binary`, lub `CString`.
+Typ klucza rejestru, który jest dodawany. Może być jedną z następujących wartości: `text`, `dword`, `binary`lub `CString`.
 
 ## <a name="remarks"></a>Uwagi
 
-**Rdx** atrybut C++ tworzy lub modyfikuje istniejący klucz rejestru dla składnika COM. Ten atrybut dodaje makro BEGIN_RDX_MAP do obiektu, który implementuje docelowy element członkowski. `RegistryDataExchange`, funkcja wprowadzonym w wyniku makro BEGIN_RDX_MAP może służyć do przesyłania danych między rejestru i elementy członkowskie danych
+Atrybut **RDX** C++ tworzy lub modyfikuje istniejący klucz rejestru dla składnika com. Ten atrybut dodaje makro BEGIN_RDX_MAP do obiektu, który implementuje docelowy element członkowski. `RegistryDataExchange`, funkcja wstrzykiwana jako wynik makra BEGIN_RDX_MAP, może służyć do transferowania danych między Rejestrem a elementami członkowskimi danych
 
-Ten atrybut może być używany w połączeniu z [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybuty lub innych oznacza jeden z nich.
+Ten atrybut może być używany w połączeniu z atrybutami [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) lub innymi atrybutami, które implikują jeden z nich.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -46,16 +46,16 @@ Ten atrybut może być używany w połączeniu z [coclass](coclass.md), [progid]
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa** lub **struktury** elementu członkowskiego|
+|**Dotyczy**|składowa **klasy** lub **struktury**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod dodaje klucza rejestru o nazwie MyValue systemowi opisujące składnika CMyClass COM.
+Poniższy kod dodaje klucz rejestru o nazwie CMyClass do systemu opisującego składnik COM.
 
 ```cpp
 // cpp_attr_ref_rdx.cpp
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

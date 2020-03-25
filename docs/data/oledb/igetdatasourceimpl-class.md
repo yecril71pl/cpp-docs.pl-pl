@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210616"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl — Klasa
 
-Udostępnia implementację [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) obiektu.
+Dostarcza implementację obiektu [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,28 +34,28 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Z klasą pochodną `IGetDataSourceImpl`.
+*&*<br/>
+Klasa, która pochodzi od `IGetDataSourceImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
 |||
 |-|-|
-|[GetDataSource](#getdatasource)|Zwraca wskaźnik interfejsu na obiekt źródła danych, do utworzenia sesji.|
+|[GetDataSource](#getdatasource)|Zwraca wskaźnik interfejsu w obiekcie źródła danych, który utworzył sesję.|
 
 ## <a name="remarks"></a>Uwagi
 
-To obowiązkowego interfejsu na sesję umożliwiającą uzyskanie wskaźnika interfejsu do obiektu źródła danych.
+Jest to obowiązkowy interfejs w sesji w celu uzyskania wskaźnika interfejsu do obiektu źródła danych.
 
-## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl —:: GetDataSource
 
-Zwraca wskaźnik interfejsu na obiekt źródła danych, do utworzenia sesji.
+Zwraca wskaźnik interfejsu w obiekcie źródła danych, który utworzył sesję.
 
 ### <a name="syntax"></a>Składnia
 
@@ -66,13 +66,13 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IGetDataSource:: GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr jest przydatne, jeśli potrzebujesz uzyskać dostęp do właściwości w obiekcie źródła danych.
+Przydatne, jeśli trzeba uzyskać dostęp do właściwości w obiekcie źródła danych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

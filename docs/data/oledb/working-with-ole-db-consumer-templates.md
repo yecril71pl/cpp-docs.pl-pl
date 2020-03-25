@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209264"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Praca z szablonami konsumentów OLE DB
 
-Przykłady dotyczące używania szablonów konsumentów bazy danych OLE w typowych scenariuszach można znaleźć w następujących tematach:
+W poniższych tematach przedstawiono kilka przykładów użycia szablonów konsumentów OLE DB w typowych scenariuszach:
 
 - [Upraszczanie dostępu do danych za pomocą atrybutów bazy danych](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -48,16 +48,16 @@ Przykłady dotyczące używania szablonów konsumentów bazy danych OLE w typowy
 
 - [Odbieranie powiadomień](../../data/oledb/receiving-notifications.md)
 
-Aby uzyskać przykład tworzenia i implementowanie OLE DB konsumenta, zobacz [Tworzenie prostego konsumenta](../../data/oledb/creating-an-ole-db-consumer.md).
+Aby zapoznać się z przykładem tworzenia i implementowania konsumenta OLE DB, zobacz [Tworzenie prostego konsumenta](../../data/oledb/creating-an-ole-db-consumer.md).
 
-Można również znaleźć przykłady sposobów użycia szablony OLE DB klientów w następujących przykładach:
+Przykłady użycia szablonów konsumentów OLE DB można znaleźć w następujących przykładach:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [Odczytaj](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
-ms.openlocfilehash: 6545f708fd23b9f3a292ab8fa86087b9e67b3623
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f5b3ba45d64b23cdfb4d157193e826ac0c90998f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345447"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200593"
 ---
 # <a name="compiler-error-c3555"></a>Błąd kompilatora C3555
 
 > Nieprawidłowy argument dla "decltype"
 
-Argument `decltype(` *wyrażenie* `)` Specyfikator typu nie jest prawidłowym wyrażeniem.
+Argument *wyrażenia* `decltype(``)` specyfikator typu nie jest prawidłowym wyrażeniem.
 
 > [!NOTE]
->  C3555 nie jest prawdopodobne. Jeśli kompilator generuje C3555, prawdopodobnie wystąpił błąd wewnętrzny kompilatora.
+>  C3555 prawdopodobnie nie wystąpi. Jeśli kompilator emituje C3555, prawdopodobnie z powodu wystąpienia wewnętrznego błędu kompilatora.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błąd kompilatora C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)<br/>
 [Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)

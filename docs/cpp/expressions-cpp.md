@@ -5,30 +5,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179942"
 ---
 # <a name="expressions-c"></a>Wyrażenia (C++)
 
-W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencje, operatorów i argumentów operacji, które są używane do co najmniej jedną z tych celów:
+W tej sekcji C++ opisano wyrażenia. Wyrażenia to sekwencje operatorów i operandów, które są używane dla co najmniej jednego z tych celów:
 
-- Wykrywanie wartość z zakresu od argumentów.
+- Obliczanie wartości z operandów.
 
 - Wyznaczanie obiektów lub funkcji.
 
-- Generowanie "efekty uboczne." (Efekty uboczne są wszystkie akcje inne niż obliczania wyrażenia — na przykład, zmieniając wartość obiektu.)
+- Generowanie "efektów ubocznych". (Efekty uboczne to wszystkie akcje inne niż Obliczanie wyrażenia — na przykład modyfikacja wartości obiektu).
 
-W języku C++ mogą być przeciążone operatory i ich znaczenie może być zdefiniowana przez użytkownika. Jednak nie można modyfikować ich priorytet i liczba argumentów operacji, które przyjmują. W tej sekcji opisano składnia i semantyka operatorów, ponieważ są one dostarczane przy użyciu języka nie jest przeciążona. Oprócz [Typy wyrażeń](../cpp/types-of-expressions.md) i [semantyki wyrażeń](../cpp/semantics-of-expressions.md), omówiono następujące tematy:
+W C++programie operatory mogą być przeciążone, a ich znaczenie może być zdefiniowane przez użytkownika. Nie można jednak zmodyfikować ich pierwszeństwa i liczby podejmowanych przez nie argumentów operacji. W tej sekcji opisano składnię i semantykę operatorów w miarę ich dostarczania w języku, a nie przeciążony. Oprócz [typów wyrażeń](../cpp/types-of-expressions.md) i [semantyki wyrażeń](../cpp/semantics-of-expressions.md), omówione są następujące tematy:
 
 - [Wyrażenia podstawowe](../cpp/primary-expressions.md)
 
-- [Operator rozpoznawania zakresów](../cpp/scope-resolution-operator.md)
+- [Operator rozpoznawania zakresu](../cpp/scope-resolution-operator.md)
 
-- [Wyrażenia przyrostków](../cpp/postfix-expressions.md)
+- [Wyrażenia przyrostkowe](../cpp/postfix-expressions.md)
 
 - [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)
 
@@ -40,19 +40,19 @@ W języku C++ mogą być przeciążone operatory i ich znaczenie może być zdef
 
 - [Operatory rzutowania](../cpp/casting-operators.md)
 
-- [Informacje typu Run-time](../cpp/run-time-type-information.md)
+- [Informacje o typie w czasie wykonywania](../cpp/run-time-type-information.md)
 
-Tematy dotyczące operatorów w innych częściach:
+Tematy dotyczące operatorów w innych sekcjach:
 
 - [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-- [Operatory przeciążone](../cpp/operator-overloading.md)
+- [Przeciążone operatory](../cpp/operator-overloading.md)
 
-- [TypeID](../extensions/typeid-cpp-component-extensions.md) (C++sposób niezamierzony)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
-    >  Nie mogą być przeciążone operatory dla wbudowanych typów; ich zachowanie jest wstępnie zdefiniowane.
+    >  Operatory dla typów wbudowanych nie mogą być przeciążone; ich zachowanie jest wstępnie zdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

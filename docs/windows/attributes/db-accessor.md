@@ -1,21 +1,21 @@
 ---
-title: db_accessor — (C++ atrybutów COM)
+title: db_accessor (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214867"
 ---
-# <a name="dbaccessor"></a>db_accessor
+# <a name="db_accessor"></a>db_accessor
 
-Grupy `db_column` atrybuty, które uczestniczą w `IAccessor`— na podstawie powiązania.
+Grupuje `db_column` atrybuty, które uczestniczą w powiązaniu opartym na `IAccessor`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,25 +25,25 @@ Grupy `db_column` atrybuty, które uczestniczą w `IAccessor`— na podstawie po
 
 #### <a name="parameters"></a>Parametry
 
-*num*<br/>
-Określa numer metody dostępu (indeks nieujemną liczbę całkowitą). Należy określić metody dostępu w rosnącej kolejności liczb całkowitych lub zdefiniowane wartości.
+*numerowan*<br/>
+Określa numer metody dostępu (indeks liczby całkowitej liczony od zera). Numery metod dostępu należy określić w kolejności rosnącej, przy użyciu liczb całkowitych lub zdefiniowanych wartości.
 
 *auto*<br/>
-Wartość logiczna określająca, czy akcesor jest automatycznie pobierany (TRUE) czy nie są pobierane (FALSE).
+Wartość logiczna określająca, czy metoda dostępu jest pobierana automatycznie (TRUE), czy nie jest pobierana (FALSE).
 
 ## <a name="remarks"></a>Uwagi
 
-**db_accessor —** definiuje bazowego akcesora OLE DB dla kolejnych `db_column` i `db_param` atrybutów w obrębie tej samej klasy lub funkcji. **db_accessor —** można używać na poziomie elementu członkowskiego i są używane do grupy `db_column` atrybuty, które uczestniczą w OLE DB `IAccessor`— na podstawie powiązania. Jest używana w połączeniu z oboma `db_table` lub `db_command` atrybutów. Wywołanie tego atrybutu jest podobny do wywoływania [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra.
+**db_accessor** definiuje podstawowe metody dostępu OLE DB dla kolejnych atrybutów `db_column` i `db_param` w obrębie tej samej klasy lub funkcji. **db_accessor** można używać na poziomie elementu członkowskiego i służy do grupowania atrybutów `db_column`, które uczestniczą w OLE DB `IAccessor`. Jest on używany w połączeniu z atrybutami `db_table` lub `db_command`. Wywołanie tego atrybutu jest podobne do wywoływania [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makr.
 
-**db_accessor —** generuje zestawu wierszy i wiąże go do odpowiedniego map metody dostępu. Jeśli nie zostanie wywołana **db_accessor —** akcesor 0 będą automatycznie generowane i wszystkie powiązania kolumny zostaną zmapowane do tego bloku metody dostępu.
+**db_accessor** generuje zestaw wierszy i wiąże go z odpowiednimi mapami dostępu. Jeśli nie wywołasz **db_accessor**, metoda dostępu 0 zostanie wygenerowana automatycznie, a wszystkie powiązania kolumn zostaną zamapowane na ten blok dostępu.
 
-**db_accessor —** grupy bazy danych powiązania kolumny w jedną lub więcej metod dostępu. Aby uzyskać omówienie scenariuszy, w których należy użyć wielu metod dostępu, zobacz [przy użyciu wielu metod dostępu w zestawie wierszy](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Zobacz też "Użytkownik rekordu pomocy technicznej dla wielu metod dostępu" w [rekordów użytkowników](../../data/oledb/user-records.md).
+**db_accessor** powiązań kolumn bazy danych w jeden lub więcej metod dostępu. Omówienie scenariuszy, w których należy użyć wielu metod dostępu, można znaleźć [w temacie Używanie wielu metod dostępu w zestawie wierszy](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Zobacz również sekcję "Obsługa rekordu użytkownika dla wielu metod dostępu" w [rekordach użytkowników](../../data/oledb/user-records.md).
 
-Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.
+Gdy dostawca atrybutu odbiorcy zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_akcesor *YourClassName*, gdzie *YourClassName* jest nazwą, którą nadano klasy, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi od metody dostępu \_*YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto **db_accessor —** do grupy kolumn w tabeli zamówienia z bazy danych Northwind, do dwóch metod dostępu. Akcesor 0 jest automatyczne metody dostępu i metody dostępu 1 nie jest.
+Poniższy przykład używa **db_accessor** do grupowania kolumn w tabeli Orders z bazy danych Northwind do dwóch metod dostępu. Metoda dostępu 0 to metoda automatyczna, a metoda dostępu 1 to nie.
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp
@@ -73,11 +73,11 @@ public:
 |-|-|
 |**Dotyczy**|Bloki atrybutów|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

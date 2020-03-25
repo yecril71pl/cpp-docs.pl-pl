@@ -1,21 +1,21 @@
 ---
-title: importidl — (atrybut COM C++)
+title: importidl (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409437"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166825"
 ---
 # <a name="importidl"></a>importidl
 
-Wstawia pliku .idl określony w pliku .idl wygenerowany.
+Wstawia określony plik IDL do wygenerowanego pliku IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,13 +26,13 @@ Wstawia pliku .idl określony w pliku .idl wygenerowany.
 ### <a name="parameters"></a>Parametry
 
 *idl_file*<br/>
-Określa nazwę pliku .idl, którego chcesz scalić z pliku .idl, którego zostanie wygenerowany dla aplikacji.
+Określa nazwę pliku. idl, który ma zostać scalony z plikiem. idl, który zostanie wygenerowany dla aplikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-**Importidl —** C++ atrybut umieszcza sekcji poza blokiem biblioteki (w *idl_file*) w pliku .idl wygenerowanego programu i w sekcji biblioteki (w *idl_file*) w sekcji biblioteki w pliku .idl wygenerowanego programu.
+Atrybut **importidl** C++ umieszcza sekcję poza blokiem biblioteki (w *idl_file*) w wygenerowanym przez program pliku IDL i sekcji biblioteki (w *idl_file*) do sekcji Biblioteka wygenerowanego pliku IDL programu.
 
-Możesz chcieć użyć **importidl —**, na przykład, aby za pomocą pliku .idl wygenerowany przy użyciu pliku .idl kodowane ręcznie.
+Możesz użyć **importidl**, na przykład, jeśli chcesz użyć ręcznie zakodowanego pliku. idl z wygenerowanym plikiem. idl.
 
 ## <a name="example"></a>Przykład
 
@@ -49,14 +49,14 @@ Możesz chcieć użyć **importidl —**, na przykład, aby za pomocą pliku .id
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

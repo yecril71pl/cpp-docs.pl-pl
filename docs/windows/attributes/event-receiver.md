@@ -1,5 +1,5 @@
 ---
-title: event_receiver (C++ atrybutów COM)
+title: event_receiver (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9653a0b5c756857d92914496b9c5c6f8aee56ebb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409640"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167085"
 ---
-# <a name="eventreceiver"></a>event_receiver
+# <a name="event_receiver"></a>event_receiver
 
-Tworzy odbiorca zdarzenia (ujścia).
+Tworzy odbiorcę zdarzeń (ujścia).
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,11 +33,11 @@ Tworzy odbiorca zdarzenia (ujścia).
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Wyliczenie jednego z następujących wartości:
+Wyliczenie jednej z następujących wartości:
 
-- `native` dla niezarządzanego kodu C/C++ (domyślnie dla macierzystych klas).
+- `native` dla niezarządzanegoC++ kodu C/Code (domyślnie dla klas natywnych).
 
-- `com` dla kodu COM. Ta wartość wymaga, że zawrzesz następujące pliki nagłówków:
+- `com` dla kodu COM. Ta wartość wymaga uwzględnienia następujących plików nagłówkowych:
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -46,22 +46,22 @@ Wyliczenie jednego z następujących wartości:
     ```
 
 *layout_dependent*<br/>
-Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent* jest wartością logiczną:
+Określ *layout_dependent* tylko wtedy, gdy `type`=**com**. *layout_dependent* jest wartością logiczną:
 
-- **wartość true,** oznacza, że podpis delegatów w przypadku odbiornika musi dokładnie odpowiadać tych, do których są podłączone w zdarzeniu źródła. Nazwy programów obsługi odbiorcy zdarzeń muszą być zgodne nazwy określone w interfejsie źródła istotnych zdarzeń. Należy użyć `coclass` podczas *layout_dependent* jest **true**. Jest nieco bardziej efektywne, aby określić **true**.
+- **prawda** oznacza, że podpis delegatów w odbiorcy zdarzeń musi dokładnie pasować do tych, do których są one podłączane w źródle zdarzeń. Nazwy programu obsługi odbiornika zdarzeń muszą być zgodne z nazwami określonymi w odpowiednim interfejsie źródła zdarzenia. Należy użyć `coclass`, gdy *layout_dependent* ma **wartość true**. Określenie **wartości true**jest nieco bardziej wydajne.
 
-- **FALSE** (ustawienie domyślne) oznacza, że wywołania Konwencji i klasy pamięci (wirtualne, statyczne i inne) ani nie musi odpowiadać metody zdarzeń i obsługi; czy nazwy programów obsługi muszą odpowiadać nazwom metody interfejsu źródła zdarzeń.
+- **false** (domyślnie) oznacza, że Konwencja wywoływania i Klasa magazynu (wirtualne, statyczne i inne) nie muszą być zgodne z metodą zdarzenia i obsługą; ani nazwy programu obsługi muszą być zgodne z nazwami metod interfejsu źródłowego zdarzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-**Event_receiver** C++ atrybut określa, że odbiorca zdarzenia, za pomocą wizualizacji będzie klasy lub struktury, do którego zastosowano C++ zdarzenia ujednoliconego modelu.
+Atrybut **event_receiver** C++ określa, że Klasa lub struktura, do której ma zastosowanie, będzie odbiorcą zdarzeń przy użyciu C++ ujednoliconego modelu zdarzeń.
 
-**event_receiver** jest używana z [event_source](event-source.md) atrybutu i [__hook](../../cpp/hook.md) i [__unhook](../../cpp/unhook.md) słów kluczowych. Użyj `event_source` utworzyć źródła zdarzeń. Użyj **__hook** w metodach odbiorca zdarzenia, aby skojarzyć metody odbiorcy zdarzeń ("hook") na potrzeby zdarzeń źródła zdarzeń. Użyj **__unhook** usunąć ich skojarzenia.
+**event_receiver** jest używany z atrybutem [event_source](event-source.md) i słowami kluczowymi [__hook](../../cpp/hook.md) i [__unhook](../../cpp/unhook.md) . Użyj `event_source`, aby utworzyć źródła zdarzeń. Użyj **__hook** w metodach odbiorcy zdarzeń, aby skojarzyć metody odbiornika zdarzeń ("Hook") z zdarzeniami źródła zdarzeń. Użyj **__unhook** , aby usunąć ich skojarzenie.
 
-*layout_dependent* jest określana tylko dla odbiorcy zdarzeń COM (`type`=**com**). Wartość domyślna dla *layout_dependent* jest **false**.
+*layout_dependent* jest określony tylko dla odbiorników zdarzeń COM (`type`=**com**). Wartość domyślna dla *layout_dependent* ma **wartość false**.
 
 > [!NOTE]
-> Szablonem klasy lub struktury nie mogą zawierać zdarzenia.
+> Klasa lub struktura z szablonem nie może zawierać zdarzeń.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -69,14 +69,14 @@ Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent*
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|`coclass` gdy *layout_dependent*=**true**|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|`coclass`, gdy *layout_dependent*=**true**|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [event_source](event-source.md)<br/>

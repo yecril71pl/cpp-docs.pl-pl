@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-ms.openlocfilehash: 8a7acf943bd4c8180e60748b89a96fdf44a19576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0195973e7d23baf2f2853bdb00bedcbc841c3549
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279583"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197696"
 ---
 # <a name="bscmake-error-bk1508"></a>Błąd BSCMAKE BK1508
 
-Nie można usunąć pliku tymczasowego "filename" [: przyczyny]
+nie można usunąć pliku tymczasowego "filename" [: Przyczyna]
 
-BSCMAKE, nie można usunąć jednego z jego plików tymczasowych.
+BSCMAKE nie może usunąć jednego z jego plików tymczasowych.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Inny proces ma plik jest otwarty.
+1. Plik jest otwarty przez inny proces.
 
 1. Błąd sprzętowy.

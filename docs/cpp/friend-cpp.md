@@ -8,16 +8,16 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 744d0dcf8aafdfe336db0c49307b8e1756b8cf7f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179929"
 ---
 # <a name="friend-c"></a>friend (C++)
 
-W niektórych sytuacjach jest bardziej wygodne do udzielania dostępu poziom elementu członkowskiego do funkcji, które nie są elementami członkowskimi klasę lub do wszystkich elementów członkowskich w osobnej klasy. Można zadeklarować tylko implementujący klasy, którzy swoich znajomych. Funkcji lub klasy nie można zadeklarować sam jako zaprzyjaźniona z dowolnej klasy. W definicji klasy, należy użyć **friend** — słowo kluczowe i nazwy funkcji składowej lub innej klasy, aby przyznać jej dostęp do prywatnych i chronionych składowych klasy. W definicji szablonu parametr typu może być zadeklarowana jako zaprzyjaźniona.
+W niektórych sytuacjach wygodniejsze jest przyznanie dostępu na poziomie elementu członkowskiego do funkcji, które nie są członkami klasy ani do wszystkich elementów członkowskich w oddzielnym klasie. Tylko implementujący Klasa może zadeklarować, kto jest jego znajomych. Funkcja lub Klasa nie można zadeklarować siebie jako zaprzyjaźnionej z jakąkolwiek klasą. W definicji klasy należy użyć słowa kluczowego **zaprzyjaźnionego** i nazwy funkcji nieczłonkowskiej lub innej klasy w celu udzielenia jej dostępu do prywatnych i chronionych elementów członkowskich klasy. W definicji szablonu parametr typu może być zadeklarowany jako zaprzyjaźniony.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,13 +26,13 @@ class friend F
 friend F;
 ```
 
-## <a name="friend-declarations"></a>Deklaracje funkcji Friend
+## <a name="friend-declarations"></a>Deklaracje zaprzyjaźnione
 
-Jeśli deklarowana jest funkcja zaprzyjaźniona, który nie został wcześniej zadeklarowany, tej funkcji są eksportowane do zasięgu nonclass.
+Jeśli zadeklarujesz funkcję zaprzyjaźnioną, która nie została wcześniej zadeklarowana, ta funkcja jest eksportowana do otaczającego zakresu nieklasowego.
 
-Funkcje zadeklarowane w deklaracji elementu zaprzyjaźnionego są traktowane tak, jakby one zostały zgłoszone za pomocą **extern** — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [extern](extern-cpp.md).
+Funkcje zadeklarowane w deklaracji zaprzyjaźnionej są traktowane tak, jakby zostały zadeklarowane za pomocą słowa kluczowego **extern** . Aby uzyskać więcej informacji, zobacz [extern](extern-cpp.md).
 
-Chociaż funkcje z zakresu globalnego mogą być deklarowane jako znajomych przed ich prototypy, elementów członkowskich nie można zadeklarować jako typu Friend przed pojawieniem się jego deklarację pełnej klasy. W poniższym kodzie Dlaczego to się nie powiedzie:
+Chociaż funkcje z zakresem globalnym można zadeklarować jako znajomych przed ich prototypami, funkcje składowe nie mogą być deklarowane jako zaprzyjaźnione przed wyglądem kompletnej deklaracji klasy. Poniższy kod przedstawia przyczynę niepowodzenia:
 
 ```cpp
 class ForwardDeclared;   // Class name is known.
@@ -42,18 +42,18 @@ class HasFriends
 };
 ```
 
-Poprzedni przykład wprowadza imię i nazwisko klasy `ForwardDeclared` do zakresu, ale pełną deklarację — w szczególności fragment, który deklaruje funkcję `IsAFriend` — nie jest znany. W związku z tym **friend** deklaracji w klasie `HasFriends` generuje błąd.
+Poprzedni przykład wprowadza nazwę klasy `ForwardDeclared` do zakresu, ale kompletna deklaracja — w odróżnieniu od części, która deklaruje `IsAFriend` funkcji — jest nieznana. W związku z tym, deklaracja **zaprzyjaźniona** w klasie `HasFriends` generuje błąd.
 
-Począwszy od C ++ 11, istnieją dwa rodzaje deklaracje funkcji friend dla klasy:
+Począwszy od języka C++ 11, istnieją dwie formy deklaracji zaprzyjaźnionych dla klasy:
 
 ```cpp
 friend class F;
 friend F;
 ```
 
-Pierwszy formularz wprowadza nową klasę F, jeśli żadna z istniejących klas o tej nazwie został znaleziony w najbardziej przestrzeni nazw. **C++11**: Druga forma nie wprowadza nową klasę; może służyć klasy został już zadeklarowany, gdy należy użyć podczas deklarowania parametrowi typu szablonu lub typedef jako zaprzyjaźniona.
+W pierwszym formularzu wprowadzono nową klasę F, jeśli żadna istniejąca Klasa o tej nazwie nie została znaleziona w wewnętrznej przestrzeni nazw. **C++ 11**: drugi formularz nie wprowadza nowej klasy; można go użyć, gdy klasa została już zadeklarowana, i musi być użyta podczas deklarowania parametru typu szablonu lub elementu typedef jako przyjaciela.
 
-Użyj `class friend F` kiedy przywoływany typ nie ma jeszcze zadeklarowana:
+Użyj `class friend F`, gdy przywoływany typ nie został jeszcze zadeklarowany:
 
 ```cpp
 namespace NS
@@ -75,7 +75,7 @@ namespace NS
 }
 ```
 
-W poniższym przykładzie `friend F` odwołuje się do `F` klasy, która jest zadeklarowana poza zakresem NS.
+W poniższym przykładzie `friend F` odwołuje się do klasy `F`, która jest zadeklarowana poza zakresem NS.
 
 ```cpp
 class F {};
@@ -88,7 +88,7 @@ namespace NS
 }
 ```
 
-Użyj `friend F` Aby zadeklarować parametr szablonu jako zaprzyjaźniona:
+Użyj `friend F`, aby zadeklarować parametr szablonu jako zaprzyjaźniony:
 
 ```cpp
 template <typename T>
@@ -99,7 +99,7 @@ class my_class
 };
 ```
 
-Użyj `friend F` do deklarowania typedef jako friend:
+Użyj `friend F`, aby zadeklarować element typedef jako zaprzyjaźniony:
 
 ```cpp
 class Foo {};
@@ -112,16 +112,16 @@ class G
 };
 ```
 
-Aby zadeklarować dwóch klas, które są wzajemnie znajomych, cała klasa sekundę muszą być określone jako zaprzyjaźniona z pierwszej klasy. Przyczyną tego ograniczenia jest, że kompilator ma za mało informacji do deklarowania friend poszczególnych funkcji tylko w punkcie, w którym zadeklarowana jest klasa sekundę.
+Aby zadeklarować dwie klasy, które są znajomych ze sobą, cała druga Klasa musi być określona jako osoba zaprzyjaźniona pierwszej klasy. Przyczyną tego ograniczenia jest fakt, że kompilator ma wystarczającą ilość informacji, aby zadeklarować poszczególne funkcje zaprzyjaźnione tylko w punkcie, w którym jest zadeklarowana druga Klasa.
 
 > [!NOTE]
->  Mimo że cała klasa sekundę musi być elementem zaprzyjaźnionym pierwszej klasy, możesz wybrać funkcje, które w pierwszej klasie będzie przyjaciół klasy sekundy.
+>  Chociaż cała druga Klasa musi być zaprzyjaźniona z pierwszą klasą, można wybrać funkcje w pierwszej klasie, które będą przyjaciółmi drugiej klasy.
 
 ## <a name="friend-functions"></a>friend — funkcje
 
-A **friend** funkcja jest funkcją, która nie jest składową klasy, ale ma dostęp do prywatnych i chronionych składowych klasy. Friend — funkcje nie są traktowane jako elementy członkowskie klasy; są one normalnej funkcji zewnętrznych, które są określone uprawnienia dostępu specjalnego. Znajomych nie znajdują się w zakresie klasy i ich nie są wywoływane przy użyciu operatorów wyboru elementów członkowskich ( **.** i - **>** ), chyba że są oni członkami innej klasy. A **friend** funkcja jest zadeklarowana przez klasę, która udziela praw dostępu. **Friend** deklaracji można umieścić w dowolnym miejscu w deklaracji klasy. Nie występuje według słów kluczowych kontroli dostępu.
+Funkcja **zaprzyjaźniona** to funkcja, która nie jest elementem członkowskim klasy, ale ma dostęp do prywatnych i chronionych elementów członkowskich klasy. Funkcje zaprzyjaźnione nie są uznawane za składowe klasy; są one normalnymi funkcjami zewnętrznymi, które mają specjalne uprawnienia dostępu. Przyjaciele nie znajdują się w zakresie klasy i nie są wywoływane przy użyciu operatorów wyboru elementu członkowskiego ( **.** i- **>** ), chyba że są członkami innej klasy. Funkcja **zaprzyjaźniona** jest zadeklarowana przez klasę, która udziela dostępu. Deklarację **zaprzyjaźnioną** można umieścić w dowolnym miejscu w deklaracji klasy. Słowa kluczowe kontroli dostępu nie mają na nie wpływ.
 
-W poniższym przykładzie przedstawiono `Point` klasa i funkcja zaprzyjaźniona `ChangePrivate`. **Friend** funkcji ma dostęp do prywatnych danych elementu członkowskiego `Point` obiekt otrzymuje jako parametr.
+Poniższy przykład pokazuje klasę `Point` i funkcję zaprzyjaźnioną, `ChangePrivate`. Funkcja **zaprzyjaźniona** ma dostęp do prywatnego elementu członkowskiego danych obiektu `Point`, który odbiera jako parametr.
 
 ```cpp
 // friend_functions.cpp
@@ -153,9 +153,9 @@ int main()
 }
 ```
 
-## <a name="class-members-as-friends"></a>Składowe klasy jako typu Friend
+## <a name="class-members-as-friends"></a>Składowe klas jako znajomych
 
-Funkcje składowych klasy mogą być deklarowane jako znajomych w innych klas. Rozważmy następujący przykład:
+Funkcje składowe klasy mogą być deklarowane jako zaprzyjaźnione w innych klasach. Rozważmy następujący przykład:
 
 ```cpp
 // classes_as_friends1.cpp
@@ -183,15 +183,15 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248
 ```
 
-W poprzednim przykładzie, tylko funkcja `A::Func1( B& )` otrzymuje przyjazny dostęp do klasy `B`. W związku z tym, dostęp do prywatnego członka `_b` jest poprawny w `Func1` klasy `A` , ale nie `Func2`.
+W poprzednim przykładzie tylko funkcja `A::Func1( B& )` ma udzielony dostęp do klasy `B`. W związku z tym, dostęp do `_b` prywatnego elementu członkowskiego jest poprawny w `Func1` klasy `A` ale nie w `Func2`.
 
-A `friend` klasa jest klasą są wszystkie funkcje Członkowskie, których zaprzyjaźnionych funkcji w klasie, oznacza to, którego funkcje Członkowskie mają dostęp do prywatnych i chronionych członków innych klas. Załóżmy, że `friend` deklaracji w klasie `B` była:
+Klasa `friend` jest klasą, której wszystkie funkcje składowe są zaprzyjaźnionymi funkcjami klasy, czyli, których składowe mają dostęp do prywatnych i chronionych elementów członkowskich klasy. Załóżmy, że deklaracja `friend` w klasie `B` była:
 
 ```cpp
 friend class A;
 ```
 
-W takim przypadku wszystkie funkcje składowych klasy `A` czy przyznano dostęp zaprzyjaźniony do klasy `B`. Poniższy kod jest przykładem klasy zaprzyjaźnionej:
+W takim przypadku wszystkie funkcje składowe w klasie `A` zostałyby przyznany dostęp przyjaciela do klasy `B`. Poniższy kod jest przykładem klasy zaprzyjaźnionej:
 
 ```cpp
 // classes_as_friends2.cpp
@@ -222,21 +222,21 @@ int main() {
 }
 ```
 
-Przyjaźni nie jest wzajemne, chyba że jawnie określone jako takie. W powyższym przykładzie, funkcje składowe `YourClass` nie może uzyskać dostępu do prywatnych składowych z `YourOtherClass`.
+Przyjaźń nie jest wzajemna, chyba że wyraźnie określono jako takie. W powyższym przykładzie funkcja członkowska `YourClass` nie może uzyskać dostępu do prywatnych członków `YourOtherClass`.
 
-Typ zarządzany (w C++sposób niezamierzony) nie może mieć żadnych zaprzyjaźnionych funkcji, klasy przyjazne lub friend interfejsów.
+Typ zarządzany (w C++/CLI) nie może mieć żadnych zaprzyjaźnionych funkcji, zaprzyjaźnionych klas ani interfejsów zaprzyjaźnionych.
 
-Przyjaźni nie jest dziedziczone, co oznacza, że klasy pochodne klasy `YourOtherClass` nie ma dostępu do `YourClass`firmy prywatnych elementów członkowskich. Przyjaźni nie jest przechodnia, więc klasy, które są znajomych `YourOtherClass` nie ma dostępu do `YourClass`firmy prywatnych elementów członkowskich.
+Przyjaźń nie jest dziedziczona, co oznacza, że klasy pochodzące z `YourOtherClass` nie mogą uzyskać dostępu do prywatnych członków `YourClass`. Przyjaźń nie jest przechodnia, dlatego klasy, które są przyjaciółmi `YourOtherClass` nie mogą uzyskać dostępu do prywatnych członków `YourClass`.
 
-Na poniższej ilustracji przedstawiono cztery deklaracje klas: `Base`, `Derived`, `aFriend`, i `anotherFriend`. Tylko klasy `aFriend` ma bezpośredni dostęp do prywatnych składowych `Base` (oraz wszystkie elementy członkowskie `Base` może być dziedziczona).
+Na poniższej ilustracji przedstawiono cztery deklaracje klas: `Base`, `Derived`, `aFriend`i `anotherFriend`. Tylko `aFriend` klas ma bezpośredni dostęp do prywatnych członków `Base` (i do wszystkich elementów członkowskich, `Base` mogą mieć Odziedziczone).
 
-![Implikacje relacji friend](../cpp/media/vc38v41.gif "skutki relacji friend") <br/>
-Implikacje relacji friend
+![Implikacje relacji zaprzyjaźnionej](../cpp/media/vc38v41.gif "Implikacje relacji zaprzyjaźnionej") <br/>
+Implikacje relacji zaprzyjaźnionej
 
-## <a name="inline-friend-definitions"></a>Definicje friend wbudowane
+## <a name="inline-friend-definitions"></a>Wbudowane definicje zaprzyjaźnione
 
-Friend — funkcje mogą być definiowane (podany w treści funkcji) wewnątrz deklaracji klasy. Te funkcje są wbudowane funkcje i podobnie jak wbudowanego elementu członkowskiego, które funkcje, które zachowują się tak, jakby zostały zdefiniowane natychmiast po wszystkich klasy widoczne są członkami ale przed klasy zakres jest zamknięty (koniec deklaracji klasy). Friend — funkcje, które są zdefiniowane w obrębie deklaracji klasy znajdują się w zakresie otaczającej klasy.
+Funkcje zaprzyjaźnione mogą być zdefiniowane (w treści funkcji) wewnątrz deklaracji klasy. Te funkcje są funkcjami wbudowanymi, podobnie jak funkcje wbudowanego elementu członkowskiego, tak jakby były zdefiniowane bezpośrednio po dodaniu wszystkich elementów członkowskich klasy, ale przed zamknięciem zakresu klasy (koniec deklaracji klasy). Zaprzyjaźnione funkcje, które są zdefiniowane wewnątrz deklaracji klasy, znajdują się w zakresie otaczającej klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

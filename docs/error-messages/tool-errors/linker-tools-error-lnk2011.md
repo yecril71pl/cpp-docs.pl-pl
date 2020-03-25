@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-ms.openlocfilehash: c8c62da6c1b4ea856f7a0854b998946893f2be63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e08f068099af68375523eae0f0cc4d63960f3261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194814"
 ---
 # <a name="linker-tools-error-lnk2011"></a>Błąd narzędzi konsolidatora LNK2011
 
-prekompilowany obiekt nie został skonsolidowany; Obraz może nie działać.
+wstępnie skompilowany obiekt nie jest połączony z; nie można uruchomić obrazu
 
-Korzystając z wstępnie skompilowanych nagłówków, LINK wymaga, że wszystkie pliki obiektów utworzonych za pomocą wstępnie skompilowanych nagłówków muszą zostać połączone w. Jeśli masz plik źródłowy, który służy do generowania prekompilowanego nagłówka do użytku z innych plikach źródłowych, możesz teraz musi zawierać pliku obiektu utworzonym wraz z prekompilowanego pliku nagłówkowego.
+Jeśli używasz prekompilowanych nagłówków, LINK wymaga, aby wszystkie pliki obiektów utworzone przy użyciu prekompilowanych nagłówków muszą być połączone. Jeśli masz plik źródłowy używany do generowania prekompilowanego nagłówka do użycia z innymi plikami źródłowymi, musisz teraz dołączyć plik obiektu utworzony razem z prekompilowanym nagłówkiem.
 
-Na przykład jeśli skompilujesz plik o nazwie STUB.cpp tworzenia prekompilowanego nagłówka do użytku z innych plikach źródłowych, należy połączyć z STUB.obj lub otrzyma ten błąd. W następujących wierszach polecenia w pierwszej linii adresu służy do tworzenia prekompilowanego nagłówka COMMON.pch, który jest używany z PROG1.cpp i PROG2.cpp w wierszach, 2 i 3. Plik STUB.cpp zawiera tylko `#include` wierszy (takie same `#include` wiersze, tak jak PROG1.cpp i PROG2.cpp) i jest używany tylko do generowania wstępnie skompilowanych nagłówków. W ostatnim wierszu STUB.obj muszą być połączone w celu uniknięcia LNK2011.
+Na przykład, Jeśli kompilujesz plik o nazwie STUB. cpp, aby utworzyć prekompilowany nagłówek do użytku z innymi plikami źródłowymi, musisz połączyć się z klasą ZASTĘPCZą. obj lub ten błąd zostanie wyświetlony. W poniższych wierszach poleceń wiersz jeden jest używany do tworzenia prekompilowanego nagłówka, COMMON. PCH, który jest używany z PROG1. cpp i PROG2. cpp w wierszach 2 i 3. Plik ZASTĘPCZy. cpp zawiera tylko `#include` wierszy (te same wiersze `#include`, jak w PROG1. cpp i PROG2. cpp) i służy tylko do generowania prekompilowanych nagłówków. W ostatnim wierszu należy połączyć się z klasą ZASTĘPCZą. obj, aby uniknąć LNK2011.
 
 ```
 cl /c /Yccommon.h stub.cpp

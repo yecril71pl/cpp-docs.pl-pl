@@ -7,16 +7,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209246"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Praca z szablonami dostawców OLE DB
 
-Aby dowiedzieć się, jak pracować z szablonami dostawców OLE DB, zobacz następujące tematy:
+Aby dowiedzieć się, jak korzystać z szablonów dostawców OLE DB, zobacz następujące tematy:
 
 - [Dodawanie interfejsu do dostawcy](../../data/oledb/adding-an-interface-to-your-provider.md)
 
@@ -34,7 +34,7 @@ Aby dowiedzieć się, jak pracować z szablonami dostawców OLE DB, zobacz nast�
 
 - [Konwertowanie danych nieobsługiwanych przez dostawcę](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)

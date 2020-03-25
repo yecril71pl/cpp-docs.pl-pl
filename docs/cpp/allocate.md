@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181528"
 ---
 # <a name="allocate"></a>allocate
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-**Przydzielić** Specyfikator deklaracji nazwy segmentu danych, w którym będzie można przydzielić elementu danych.
+Specyfikator deklaracji **alokacji** zawiera nazwę segmentu danych, do którego zostanie przydzielony element danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ ms.locfileid: "62155280"
 
 ## <a name="remarks"></a>Uwagi
 
-Nazwa *segname* musi być zadeklarowana przy użyciu jednej z następujące pragmy:
+Nazwa *segname* musi być zadeklarowana przy użyciu jednej z następujących pragm:
 
 - [code_seg](../preprocessor/code-seg.md)
 
@@ -51,9 +51,9 @@ int main() {
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

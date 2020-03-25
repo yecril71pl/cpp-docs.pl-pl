@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2155
 ms.assetid: 54d408af-fc48-4121-9011-5e75c7072e01
-ms.openlocfilehash: bee0b6707df6f559412917eb32d9471c9c7842dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7a2041c5b65973eaa398f05010cfe4f0a76ff2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175477"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207171"
 ---
 # <a name="compiler-error-c2155"></a>Błąd kompilatora C2155
 
-"?": lewy operand nieprawidłowy, oczekiwano arytmetycznego lub typu wskaźnika
+"?": Nieprawidłowy lewy operand, oczekiwano arytmetycznego lub typu wskaźnika
 
-Wyrażenie w lewym dolnym rogu `?` nie można porównać do zera. Należy użyć wyrażenia arytmetycznego lub wskaźnikowego, który można porównać do zera.
+Wyrażenie po lewej stronie `?` nie może być porównane z zerem. Należy użyć wyrażenia arytmetycznego lub wskaźnika, które może być porównane z zerem.

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c497347689bcfc5528280bd22aa5183d5fafd61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197007"
 ---
 # <a name="c-runtime-error-r6035"></a>Błąd czasu wykonania języka C R6035
 
-Biblioteki Microsoft Visual C++ środowiska uruchomieniowego, R6035 błąd - module w tej aplikacji Trwa inicjowanie plik cookie zabezpieczeń globalnych modułu w czasie gdy aktywny jest funkcją, opierając się na ten plik cookie zabezpieczeń.  Wywołaj __security_init_cookie wcześniej.
+Biblioteka środowiska C++ uruchomieniowego Microsoft Visual Runtime, Error R6035-module w tej aplikacji inicjuje globalny plik cookie zabezpieczeń modułu, podczas gdy funkcja polegające na tym pliku cookie zabezpieczeń jest aktywna.  Wywołaj __security_init_cookie wcześniej.
 
-[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) musi zostać wywołana przed pierwszym użyciem plik cookie zabezpieczeń globalnych.
+[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) musi zostać wywołana przed pierwszym użyciem globalnego pliku cookie zabezpieczeń.
 
-Plik cookie zabezpieczeń globalnych służy do ochrony przepełnienie buforu w kodzie skompilowanym z [/GS (Sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) i w kodzie, który używa strukturalna Obsługa wyjątków. Zasadniczo przy wejściu do funkcji chronionych przekroczenie, plik cookie jest umieszczany na stosie, a przy zamykaniu, wartość na stosie jest porównywana globalnego pliku cookie. Wszelkie różnice między nimi wskazuje, że przepełnienie buforu wystąpił i powoduje natychmiastowe przerwanie działania programu.
+Globalny plik cookie zabezpieczeń jest używany na potrzeby ochrony przepełnienia buforu w kodzie skompilowanym za pomocą [/GS (sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) i w kodzie, który używa obsługi wyjątków strukturalnych. Zasadniczo przy wejściu do funkcji chronionej przez przepełnienie plik cookie jest umieszczany na stosie, a po zakończeniu wartość na stosie jest porównywana z globalnym plikiem cookie. Każda różnica między nimi wskazuje, że przepełnienie buforu nastąpiło i powoduje natychmiastowe zakończenie działania programu.
 
-R6035 błąd wskazuje, że wywołanie `__security_init_cookie` został utworzony po wprowadzono funkcję chronionych. Gdyby kontynuować wykonywanie, przepełnienie buforu fałszywe będzie wykryła, ponieważ plik cookie na stosie już nie będzie odpowiadać globalnego pliku cookie.
+R6035 błędów wskazuje, że wywołanie `__security_init_cookie` zostało wykonane po wprowadzeniu chronionej funkcji. Jeśli wykonanie było kontynuowane, zostanie wykryte przepełnienie bufora fałszywe, ponieważ plik cookie na stosie nie jest już zgodny z globalnym plikiem cookie.
 
-Rozważmy następujący przykład biblioteki DLL. Punkt wejścia biblioteki DLL jest równa DllEntryPoint za pośrednictwem konsolidatora [/Entry (Symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md) opcji. Pomija to Inicjalizacja CRT, który zazwyczaj będzie zainicjować plik cookie zabezpieczeń globalnych, więc wywołania biblioteki DLL, sama `__security_init_cookie`.
+Rozważmy następujący przykład biblioteki DLL. Punkt wejścia biblioteki DLL jest ustawiany na DllEntryPoint za pomocą opcji konsolidatora [/entry (symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md) . Pomija to inicjalizację CRT, która zwykle inicjuje globalną ochronę pliku cookie, dlatego sama Biblioteka DLL musi wywoływać `__security_init_cookie`.
 
 ```
 // Wrong way to call __security_init_cookie
@@ -42,9 +42,9 @@ void DllInitialize() {
 }
 ```
 
-Ten przykład wygeneruje błąd R6035, ponieważ DllEntryPoint używa strukturalna Obsługa wyjątków i w związku z tym używa pliku cookie zabezpieczeń do wykrywania przepełnienia buforu. Przez razem, gdy jest wywoływana DllInitialize plik cookie zabezpieczeń globalnych już została wprowadzona na stosie.
+Ten przykład generuje błąd R6035, ponieważ DllEntryPoint używa obsługi wyjątków strukturalnych, w związku z czym używa pliku cookie zabezpieczeń do wykrywania przepełnień buforu. Gdy DllInitialize jest wywoływana, plik cookie zabezpieczeń globalnych został już umieszczony na stosie.
 
-Prawidłowy sposób została przedstawiona w tym przykładzie:
+Prawidłowy sposób przedstawiono w tym przykładzie:
 
 ```
 // Correct way to call __security_init_cookie
@@ -63,11 +63,11 @@ void DllEntryHelper() {
 }
 ```
 
-W tym przypadku DllEntryPoint nie są chronione przed przepełnienia buforu (go ma buforów ciągu lokalne i nie używa strukturalna Obsługa wyjątków); w związku z tym można bezpiecznie wywołać `__security_init_cookie`. Następnie wywołuje funkcję pomocnika, która jest chroniona.
+W takim przypadku DllEntryPoint nie jest chroniony przed przekroczeniem buforu (nie ma on lokalnych buforów ciągów i nie używa obsługi wyjątków strukturalnych); w związku z tym może bezpiecznie wywołać `__security_init_cookie`. Następnie wywołuje funkcję pomocnika, która jest chroniona.
 
 > [!NOTE]
->  Komunikat o błędzie, który jest R6035 tylko generowane przez x86 debugowania CRT i tylko w przypadku strukturalna Obsługa wyjątków, ale ten stan jest na wszystkich platformach i dla wszystkich formularzy wyjątek obsługę błędów, takich jak EH w języku C++.
+>  Komunikat o błędzie R6035 jest generowany tylko przez CRT debugowania x86 i tylko dla obsługi wyjątków strukturalnych, ale warunek jest błędem na wszystkich platformach i dla wszystkich form obsługi wyjątków, takich jak C++ EH.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Funkcje zabezpieczeń w MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)
+[Funkcje zabezpieczeń w programie MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)

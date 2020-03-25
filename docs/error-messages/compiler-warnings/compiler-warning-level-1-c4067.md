@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4067
+title: Ostrzeżenie kompilatora (poziom 1) C4067
 ms.date: 11/04/2016
 f1_keywords:
 - C4067
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bdd16f5c3182e4217e195475bdb4a9a0f60fa6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386515"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164121"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>Kompilator ostrzeżenie (poziom 1) C4067
+# <a name="compiler-warning-level-1-c4067"></a>Ostrzeżenie kompilatora (poziom 1) C4067
 
-> nieoczekiwane tokeny po dyrektywie preprocesora - oczekiwano nowego wiersza
+> nieoczekiwane tokeny po dyrektywie preprocesora-oczekiwano nowego wiersza
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator znalezione i zignorowane dodatkowe znaki następujące dyrektywy preprocesora. Może to być spowodowane przez wszelkie nieoczekiwane znaki, że typową przyczyną jest zabłąkany średnik, po zakończeniu dyrektywy. Komentarze nie powoduje to ostrzeżenie. **/Za** — opcja kompilatora umożliwia to ostrzeżenie, aby uzyskać więcej dyrektywy preprocesora niż domyślne ustawienie.
+Kompilator odnalazł i zignorował dodatkowe znaki po dyrektywie preprocesora. Może to być spowodowane wszelkimi nieoczekiwanymi znakami, chociaż częstą przyczyną jest bezproblemowy średnik po dyrektywie. Komentarze nie powodują tego ostrzeżenia. Opcja kompilatora **/za** włącza to ostrzeżenie dla większej liczby dyrektyw preprocesora niż ustawienie domyślne.
 
 ## <a name="example"></a>Przykład
 
@@ -39,7 +39,7 @@ int main()
 }
 ```
 
-Aby rozwiązać to ostrzeżenie, usuń znaki zabłąkany lub przenieść je do blok komentarza. Niektórych ostrzeżeń C4067 mogą być wyłączone przez usunięcie **/Za** — opcja kompilatora.
+Aby usunąć to ostrzeżenie, Usuń niewidoczne znaki lub przenieś je do bloku komentarz. Niektóre ostrzeżenia C4067 można wyłączyć, usuwając opcję kompilatora **/za** .
 
 ```cpp
 // C4067b.cpp

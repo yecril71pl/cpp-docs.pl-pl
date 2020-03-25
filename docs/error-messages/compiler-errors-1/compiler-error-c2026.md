@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208068"
 ---
 # <a name="compiler-error-c2026"></a>Błąd kompilatora C2026
 
 ciąg zbyt długi, obcięto końcowe znaki
 
-Ciąg znaków był dłuższy niż limit 16380 znaków jednobajtowych.
+Ciąg jest dłuższy niż limit 16380 znaków jednobajtowych.
 
-Przed ciągów sąsiadujących są łączone ciąg nie może być dłuższa niż 16380 znaków jednobajtowych.
+Przed połączeniem sąsiednich ciągów ciąg nie może zawierać więcej niż 16380 znaków jednobajtowych.
 
-Ciąg Unicode długości połowy ten będzie również wygenerować ten błąd.
+Ciąg Unicode o około jednej połowie tej długości również generuje ten błąd.
 
-Jeśli masz ciąg, który został zdefiniowany w następujący sposób, generuje C2026:
+Jeśli masz zdefiniowany ciąg w następujący sposób, generuje on C2026:
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-Użytkownik może Podziel je w następujący sposób:
+Można to zrobić w następujący sposób:
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-Warto przechowywać literałów ciągów wyjątkowo dużą (32 KB lub więcej) zasobów niestandardowych lub zewnętrznego pliku. Zobacz [Tworzenie nowej niestandardowej lub zasobów danych](../../windows/creating-a-new-custom-or-data-resource.md) Aby uzyskać więcej informacji.
+Warto przechowywać wyjątkowo duże literały ciągu (32 KB lub więcej) w niestandardowym lub zewnętrznym pliku. Aby uzyskać więcej informacji [, zobacz Tworzenie nowego niestandardowego lub zasobu danych](../../windows/creating-a-new-custom-or-data-resource.md) .

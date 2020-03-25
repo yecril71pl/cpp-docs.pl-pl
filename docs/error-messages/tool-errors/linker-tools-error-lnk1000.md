@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-ms.openlocfilehash: b0e6eb3ba44216e9300506eb84adb61a6529903d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48b976f6e996d0e076849dc9b20b4cedd47dfbcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195425"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Błąd narzędzi konsolidatora LNK1000
 
-> Nieznany błąd; można znaleźć w dokumentacji dostępne opcje pomocy technicznej
+> nieznany błąd; Zapoznaj się z dokumentacją dotyczącą opcji pomocy technicznej
 
-Należy pamiętać, okoliczności wystąpienia błędu, a następnie spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia. Aby uzyskać informacje na temat sposobu badania i zgłoszenie tych błędów, zobacz [Zgłaszanie problemu z zestawu narzędzi Visual C++ lub dokumentacji](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Zanotuj sytuacje błędu, a następnie spróbuj wyizolować problem i utworzyć powtarzalny przypadek testowy. Aby uzyskać informacje o tym, jak zbadać i zgłosić te błędy, zobacz [Jak zgłosić problem z zestawem C++ narzędzi wizualnych lub dokumentacją](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
-Błąd ten może wystąpić po przemieszaniu pliki nagłówkowe standard (na przykład Windows.h) i we własnych plikach. Obejmują prekompilowanego nagłówka, jeśli dowolny, pierwszy, a następnie standardowych nagłówków, a następnie pliki nagłówkowe.
+Ten błąd może wystąpić, jeśli Mieszasz standardowe pliki nagłówkowe (na przykład Windows. h) i własne pliki. Dołącz prekompilowany nagłówek (jeśli istnieje), a następnie nagłówki standardowe, a następnie własne pliki nagłówkowe.

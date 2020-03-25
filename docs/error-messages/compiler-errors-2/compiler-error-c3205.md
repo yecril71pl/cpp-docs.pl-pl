@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3205
 ms.assetid: 802d306e-5ff3-4491-8a22-c5f1c072d005
-ms.openlocfilehash: bd4d17ff2b6a0197db730a53c5846806335c9fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7cb38a687daed93f72655337cd7cd3f25aaa08d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402700"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176432"
 ---
 # <a name="compiler-error-c3205"></a>Błąd kompilatora C3205
 
-Brak listy argumentów dla parametru szablonu "parametru"
+Brak listy argumentów dla parametru szablonu "parameter"
 
-A [szablonu](../../cpp/templates-cpp.md) brakuje parametru.
+Brak parametru [szablonu](../../cpp/templates-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3205:
+Poniższy przykład generuje C3205:
 
 ```cpp
 // C3205.cpp

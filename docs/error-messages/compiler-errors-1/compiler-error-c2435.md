@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ef22711884dabb83efa8c7ebfdb7648316c12ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205416"
 ---
 # <a name="compiler-error-c2435"></a>Błąd kompilatora C2435
 
@@ -19,15 +19,15 @@ ms.locfileid: "62166649"
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Inicjowanie zmiennej globalnej domeny dla aplikacji wymaga CRT skompilowany przy użyciu `/clr:pure`, nie tworzy obraz możliwe do zweryfikowania.
+Inicjalizacja globalnej zmiennej domeny dla aplikacji wymaga skompilowania CRT z `/clr:pure`, który nie produkuje obrazu do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).
+Aby uzyskać więcej informacji, zobacz temat [AppDomain](../../cpp/appdomain.md) i [Process](../../cpp/process.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2435:
+Poniższy przykład generuje C2435:
 
 ```cpp
 // C2435.cpp

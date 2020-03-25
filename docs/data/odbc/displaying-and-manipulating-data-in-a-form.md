@@ -9,21 +9,21 @@ helpviewer_keywords:
 - data [MFC]
 - data [MFC], displaying in a form
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
-ms.openlocfilehash: e50c433e701fbae2e607d79d7abb34efe8eba5b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b663fabd0c87d9a2773e6f5a2796bcc8f57ce29
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213255"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Wyświetlanie danych w formularzu i operowanie nimi
 
-Wiele aplikacji dostęp do danych wybierz dane i wyświetl ją w pól w formularzu. Klasa bazy danych [CRecordView](../../mfc/reference/crecordview-class.md) daje [CFormView](../../mfc/reference/cformview-class.md) obiektu podłączone bezpośrednio do obiektu zestawu rekordów. Używa widoku rekordu [wymiana danych okna dialogowego (DDX)](../../mfc/dialog-data-exchange-and-validation.md) przenoszenia wartości pól bieżącego rekordu w zestawie do kontrolek w formularzu i przenieść zaktualizowane informacje z powrotem do zestawu rekordów. Zestaw rekordów, z kolei używa wymiana pól rekordów (RFX) do przenoszenia danych między jej elementy członkowskie danych pola i odpowiednie kolumny w tabeli w źródle danych.
+Wiele aplikacji dostępu do danych wybiera dane i wyświetla je w polach formularza. Klasa bazy danych [formularzy CRecordView](../../mfc/reference/crecordview-class.md) zapewnia obiekt [CFormView](../../mfc/reference/cformview-class.md) bezpośrednio połączony z obiektem zestawu rekordów. Widok rekordu używa [wymiany danych okna dialogowego (DDX)](../../mfc/dialog-data-exchange-and-validation.md) do przenoszenia wartości pól bieżącego rekordu z zestawu rekordów do kontrolek w formularzu i przenoszenia zaktualizowanych informacji z powrotem do zestawu rekordów. Zestaw rekordów, z kolei używa wymiany pól rekordów (RFX) do przenoszenia danych między elementami członkowskimi danych pola i odpowiednimi kolumnami w tabeli w źródle danych.
 
-Można użyć Kreatora aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) do utworzenia klasa widoku i jego klasa skojarzony zestaw rekordów w połączeniu.
+Można użyć Kreatora aplikacji MFC lub **dodać klasę** (zgodnie z opisem w temacie [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) do utworzenia klasy widoku i skojarzonej z nią klasy zestawu rekordów w połączeniu.
 
-Widoków rekordów i rekordów jego są niszczone, po zamknięciu dokumentu. Aby uzyskać więcej informacji na temat widoków rekordów, zobacz [widoków rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać więcej informacji na temat RFX zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Widok rekordu i jego zestaw rekordów są niszczone po zamknięciu dokumentu. Aby uzyskać więcej informacji na temat widoków rekordów, zobacz [widoki rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać więcej informacji na temat RFX, zobacz [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

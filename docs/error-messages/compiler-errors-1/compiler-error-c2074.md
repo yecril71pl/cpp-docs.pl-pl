@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2074
 ms.assetid: 1abe5934-61db-4374-8c48-1fa7281317f4
-ms.openlocfilehash: 48b02fde345cc79b091fb5c61b3da41a445698c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bf76287295887c117011753dfde92392e84ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207767"
 ---
 # <a name="compiler-error-c2074"></a>Błąd kompilatora C2074
 
-'Identyfikator': "klucz klasy" Inicjowanie wymaga nawiasów klamrowych
+"Identyfikator": inicjalizacja klasy wymaga nawiasów klamrowych
 
-Nie było żadnych nawiasów klamrowych wokół określonej klasy, struktury lub Unii inicjatora.
+Brak nawiasów klamrowych wokół określonej klasy, struktury lub inicjatora Union.

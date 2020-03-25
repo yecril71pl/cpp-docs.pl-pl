@@ -5,12 +5,12 @@ helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627012"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214997"
 ---
 # <a name="fix-your-dependencies-on-c-library-internals"></a>Popraw zależności od C++ elementów wewnętrznych biblioteki
 
@@ -74,7 +74,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uaktualnianie projektów ze starszych wersji wizualizacjiC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

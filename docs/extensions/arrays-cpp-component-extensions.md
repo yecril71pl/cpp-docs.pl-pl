@@ -1,5 +1,5 @@
 ---
-title: Tablice (C++sposób niezamierzony i C++/CX)
+title: Tablice (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182243"
 ---
-# <a name="arrays-ccli-and-ccx"></a>Tablice (C++sposób niezamierzony i C++/CX)
+# <a name="arrays-ccli-and-ccx"></a>Tablice (C++/CLI i C++/CX)
 
-`Platform::Array<T>` Wpisać C++/CX, lub **tablicy** — słowo kluczowe w C++/CLI, deklaruje tablicę określonego typu i wartości początkowej.
+Typ `Platform::Array<T>` w C++/CX lub słowo kluczowe **Array** w C++/CLI, deklaruje tablicę określonego typu i wartość początkową.
 
 ## <a name="all-platforms"></a>Wszystkie platformy
 
-Tablica musi być zadeklarowany za pomocą modyfikatora uchwytu do obiektu (^) po zamykającego nawiasu ostrego (>) w deklaracji.
-Liczba elementów w tablicy nie jest częścią tego typu. Jednej zmiennej tablicy mogą odwoływać się do tablic o różnych rozmiarach.
+Tablica musi być zadeklarowana przy użyciu modyfikatora dojścia do obiektu (^) po zamykającym nawiasie ostrym (>) w deklaracji.
+Liczba elementów tablicy nie jest częścią typu. Jedna zmienna tablicowa może odwoływać się do tablic o różnych rozmiarach.
 
-W przeciwieństwie do standardowego języka C++ Tworzenie indeksów dolnych nie jest synonimem arytmetyka wskaźnika i nie jest przemiennego.
+W przeciwieństwie C++do standardowej, indeks dolny nie jest synonimem dla operacji arytmetycznych wskaźnika i nie jest komutatywna.
 
-Aby uzyskać więcej informacji na temat tablic zobacz:
+Aby uzyskać więcej informacji na temat tablic, zobacz:
 
 - [Instrukcje: korzystanie z tablic w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
@@ -38,11 +38,11 @@ Aby uzyskać więcej informacji na temat tablic zobacz:
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Tablice są elementami członkowskimi `Platform` przestrzeni nazw. Tablice mogą być tylko jednowymiarowa.
+Tablice są elementami członkowskimi `Platform` przestrzeni nazw. Tablice mogą być tylko jednowymiarowe.
 
 ### <a name="syntax"></a>Składnia
 
-W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo kluczowe do przydzielania tablicy. Drugi przykład deklaruje lokalnej tablicy.
+Pierwszy przykład składni używa **ref new** Aggregate słowo kluczowe do przydzielenia tablicy. Drugi przykład deklaruje tablicę lokalną.
 
 ```cpp
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
@@ -52,35 +52,35 @@ W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo klucz
     {initialization-list [,...]}
 ```
 
-*Kwalifikatory*<br/>
-(Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
+*kwalifikatory*<br/>
+Obowiązkowe Co najmniej jeden specyfikator klasy magazynu: [modyfikowalny](../cpp/mutable-data-members-cpp.md), [nietrwały](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczny](../cpp/static-members-cpp.md).
 
-*Typ tablicy*<br/>
-Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy ref i struktury, klasy wartości i struktury i natywnymi wskaźnikami (`type*`).
+*typ tablicy*<br/>
+Typ zmiennej tablicowej. Prawidłowe typy to klasy środowisko wykonawcze systemu Windows i typy podstawowe, klasy referencyjne i struktury, klasy wartości i struktury oraz wskaźniki natywne (`type*`).
 
-*rank*<br/>
-(Opcjonalnie) Liczba wymiarów tablicy. Musi mieć wartość 1.
+*stopni*<br/>
+Obowiązkowe Liczba wymiarów tablicy. Musi mieć 1.
 
-*Identyfikator*<br/>
-Nazwa zmiennej tablicy.
+*identyfikatora*<br/>
+Nazwa zmiennej tablicowej.
 
-*typ inicjalizacji*<br/>
-Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inicjalizacji* tego samego typu. Jednak może być inny, jeśli istnieje konwersja z typów *typ inicjalizacji* do *typ tablicy*— na przykład, jeśli *typ inicjalizacji* jest tworzony na podstawie *typ tablicy*.
+*Typ inicjalizacji*<br/>
+Typ wartości, które inicjują tablicę. Typowo, typ *tablicy* i *Typ inicjalizacji* są tego samego typu. Jednak typy mogą być różne, jeśli istnieje konwersja z *typu inicjalizacji* na *typ Array*— na przykład, jeśli *Typ inicjalizacji* jest pochodną *typu Array*.
 
-*listy inicjowania*<br/>
-(Opcjonalnie) Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które zainicjować elementy tablicy. Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tablicę jednowymiarową 3 elementów *listy inicjowania* może być `{1,2,3}`.
+*Lista inicjowania*<br/>
+Obowiązkowe Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które inicjują elementy tablicy. Na przykład jeśli `(3)`*rangi o rozmiarze* , który deklaruje tablicę jednowymiarową z 3 elementami, można `{1,2,3}`*listę inicjalizacji* .
 
 ### <a name="remarks"></a>Uwagi
 
-Można wykrywać w czasie kompilacji, czy typ jest tablicą zliczonych odwołań z `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](compiler-support-for-type-traits-cpp-component-extensions.md).
+Możesz wykryć w czasie kompilacji, niezależnie od tego, czy typ jest tablicą zliczaną względem z `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład tworzy jednowymiarową tablicę, która zawiera 100 elementów.
+Poniższy przykład tworzy tablicę jednowymiarową, która ma elementy 100.
 
 ```cpp
 // cwr_array.cpp
@@ -98,7 +98,7 @@ int main() {
 
 ### <a name="syntax"></a>Składnia
 
-W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydzielania tablicy. Drugi przykład deklaruje lokalnej tablicy.
+Pierwszy przykład składni używa słowa kluczowego **gcnew** , aby przydzielić tablicę. Drugi przykład deklaruje tablicę lokalną.
 
 ```cpp
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
@@ -108,50 +108,50 @@ W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydz
     {initialization-list [,...]}
 ```
 
-*Kwalifikatory*<br/>
-(Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
+*kwalifikatory*<br/>
+Obowiązkowe Co najmniej jeden specyfikator klasy magazynu: [modyfikowalny](../cpp/mutable-data-members-cpp.md), [nietrwały](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczny](../cpp/static-members-cpp.md).
 
-*Typ tablicy*<br/>
-Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy i struktury, klasy wartości i struktury odwołania, natywnymi wskaźnikami (`type*`) i natywnych typów POD (zwykłe stare dane).
+*typ tablicy*<br/>
+Typ zmiennej tablicowej. Prawidłowe typy to klasy środowisko wykonawcze systemu Windows i typy podstawowe, klasy referencyjne i struktury, klasy wartości i struktury, wskaźniki natywne (`type*`) i natywne (zwykłe stare dane).
 
-*rank*<br/>
-(Opcjonalnie) Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
+*stopni*<br/>
+Obowiązkowe Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest samym tablicą.
 
-*Identyfikator*<br/>
-Nazwa zmiennej tablicy.
+*identyfikatora*<br/>
+Nazwa zmiennej tablicowej.
 
-*typ inicjalizacji*<br/>
-Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inicjalizacji* tego samego typu. Jednak może być inny, jeśli istnieje konwersja z typów *typ inicjalizacji* do *typ tablicy*— na przykład, jeśli *typ inicjalizacji* jest tworzony na podstawie *typ tablicy*.
+*Typ inicjalizacji*<br/>
+Typ wartości, które inicjują tablicę. Typowo, typ *tablicy* i *Typ inicjalizacji* są tego samego typu. Jednak typy mogą być różne, jeśli istnieje konwersja z *typu inicjalizacji* na *typ Array*— na przykład, jeśli *Typ inicjalizacji* jest pochodną *typu Array*.
 
-*rank-size-list*<br/>
-Rozdzielana przecinkami lista rozmiar każdego wymiaru tablicy. Alternatywnie Jeśli *listy inicjowania* parametr jest określony, kompilator może wywnioskować rozmiaru każdego wymiaru i *ranga rozmiar listy* można pominąć.
+*Ranga-rozmiar-lista*<br/>
+Rozdzielana przecinkami lista rozmiarów każdego wymiaru w tablicy. Alternatywnie, jeśli określono parametr z *listą inicjalizacji* , kompilator może wywnioskować rozmiar każdego wymiaru, a *Lista rangi o rozmiarze* może zostać pominięta.
 
-*listy inicjowania*<br/>
-(Opcjonalnie) Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które zainicjować elementy tablicy. Lub rozdzielaną przecinkami listę zagnieżdżonych *listy inicjowania* elementy, które inicjowania elementów w tablicy wielowymiarowej.
+*Lista inicjowania*<br/>
+Obowiązkowe Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które inicjują elementy tablicy. Lub rozdzielana przecinkami lista zagnieżdżonych elementów *listy inicjalizacji* , które inicjują elementy w tablicy wielowymiarowej.
 
-Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tablicę jednowymiarową 3 elementów *listy inicjowania* może być `{1,2,3}`. Jeśli *ranga rozmiar listy* zostały `(3,2,4)`, która deklaruje tablicę trójwymiarową 3 elementy pierwszego wymiaru, 2 elementów w drugim i 4 elementy w trzecim *listy inicjowania* może to być `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
+Na przykład jeśli `(3)`*rangi o rozmiarze* , który deklaruje tablicę jednowymiarową z 3 elementami, można `{1,2,3}`*listę inicjalizacji* . Jeśli *Lista o rozmiarze rangi* została `(3,2,4)`, co deklaruje trójwymiarową tablicę 3 elementów w pierwszym wymiarze, dwa elementy w drugim i 4 elementy z trzeciej, *Lista inicjowania* może być `{{1,2,3},{0,0},{-5,10,-21,99}}`a.)
 
 ### <a name="remarks"></a>Uwagi
 
-**Tablica** znajduje się w [platformy, domyślna i cli przestrzenie nazw](platform-default-and-cli-namespaces-cpp-component-extensions.md) przestrzeni nazw.
+**Tablica** znajduje się w przestrzeni nazw [platform, Default i CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md) .
 
-Podobnie jak standardowy C++indeksy tablicy są oparte na zerze i tablicy jest indeksowanych przy użyciu nawiasy kwadratowe ([]). W przeciwieństwie do standardowego C++, indeksy tablicy wielowymiarowej są określone na liście indeksów dla każdego wymiaru zamiast zestawu operatorów kwadratowym ([]) dla każdego wymiaru. Na przykład *identyfikator*[*index1*, *index2*] zamiast *identyfikator*[*index1*] [ *index2*].
+Podobnie jak C++w przypadku standardu, indeksy tablicy są oparte na zero, a tablica jest poddana indeksem za pomocą nawiasów kwadratowych ([]). W przeciwieństwie C++do standardu, indeksy wielowymiarowej tablicy są określone na liście indeksów dla każdego wymiaru zamiast zestawu operatorów kwadratowych ([]) dla każdego wymiaru. Na przykład *Identyfikator*[*index1*, *index2*] zamiast *identyfikatora*[*index1*] [ *index2*].
 
-Dziedzicz wszystkich zarządzanych tablic `System::Array`. Wszelkie metody lub właściwości `System::Array` mogą być stosowane bezpośrednio do zmiennej tablicowej.
+Wszystkie zarządzane tablice dziedziczą z `System::Array`. Każdą metodę lub właściwość `System::Array` można zastosować bezpośrednio do zmiennej tablicowej.
 
-Podczas przydzielania tablicy którego typ elementu to wskaźnik-do zarządzanej klasy elementy są inicjowane przez 0.
+Po przydzieleniu tablicy, której typ elementu jest wskaźnikiem do klasy zarządzanej, elementy są zainicjowane przez 0.
 
-Podczas przydzielania tablicy którego typ elementu to typ wartości `V`, domyślnego konstruktora dla `V` jest stosowana do każdego elementu tablicy. Aby uzyskać więcej informacji, zobacz [odpowiedniki programie .NET Framework C++ typach natywnych (C++sposób niezamierzony)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Po przydzieleniu tablicy, której typem elementu jest typ wartości `V`, Konstruktor domyślny dla `V` jest stosowany do każdego elementu tablicy. Aby uzyskać więcej informacji, zobacz [.NET Framework odpowiednikami C++ typów natywnychC++(/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
 
-W czasie kompilacji może wykryć, czy typ jest wspólnej tablicy środowiska uruchomieniowego (języka wspólnego CLR) języka przy użyciu `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](compiler-support-for-type-traits-cpp-component-extensions.md).
+W czasie kompilacji można wykryć, czy typ jest tablicą środowiska uruchomieniowego języka wspólnego (CLR) z `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład tworzy jednowymiarową tablicę, która zawiera 100 elementów i trójwymiarowej tablicy, która ma 3 elementy w pierwszym wymiarze, 5 elementów, w drugim i 6 elementów w trzecim.
+Poniższy przykład tworzy tablicę jednowymiarową, która ma elementy 100 i trójwymiarową tablicę, która ma 3 elementy w pierwszym wymiarze, 5 elementów w drugim i 6 elementów w trzecim.
 
 ```cpp
 // clr_array.cpp
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3728
 ms.assetid: 6b510cb1-887f-4fcd-9a1f-3bb720417ed1
-ms.openlocfilehash: 68aa23843b0470f15f409b6f3b58624f979ccfae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aec3ae1ff629ef7fa000182cde29e306a471315
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328110"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165878"
 ---
 # <a name="compiler-error-c3728"></a>Błąd kompilatora C3728
 
-"event": zdarzenie nie posiada metody wzrostu
+"zdarzenie": zdarzenie nie ma metody podniesienia
 
-Metadane utworzone za pomocą języka, takich jak C#, która nie zezwala na zdarzenia z poza klasy, w którym został zdefiniowany, został uwzględniony w [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy i programu Visual C++ przy użyciu CLR — programowanie podjęto próbę Wywołaj zdarzenie.
+Metadane utworzone przy użyciu języka, takie jak C#, które nie zezwalają na wywoływanie zdarzenia spoza klasy, w której został zdefiniowany, został dołączony do dyrektywy [#using](../../preprocessor/hash-using-directive-cpp.md) , a program wizualny C++ korzystający z programowania CLR próbował podnieść zdarzenie.
 
-Aby wywołać zdarzenie w programie w języku, takim jak C#, klasy zawierającej zdarzenia musi także definiować metodę publiczną, która wywołuje zdarzenie.
+Aby zgłosić zdarzenie w programie utworzonym w języku takim jak C#, Klasa zawierająca zdarzenie musi także definiować metodę publiczną, która wywołuje zdarzenie.

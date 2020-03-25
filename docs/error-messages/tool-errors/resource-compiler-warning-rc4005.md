@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC4005
 ms.assetid: 71f03b4a-c9a9-415d-920f-bf2e58507f93
-ms.openlocfilehash: 571c4ac285e9477b017dbc21cf9ff733539759d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c428fefa90cceed6a8bc9b7f6e4b95ec2db5e039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182412"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>Ostrzeżenie RC4005 kompilatora zasobów
 
-'Identyfikator': ponowna definicja makra
+"Identyfikator": Ponowna definicja makra
 
-Identyfikator zdefiniowano dwa razy. Kompilator używał drugi definicji makra.
+Identyfikator jest definiowany dwa razy. Kompilator użył drugiej definicji makra.
 
-To ostrzeżenie może być spowodowany przez zdefiniowanie makra w wierszu polecenia i w kodzie adresem `#define` dyrektywy. On również może być spowodowane makra zaimportowane z plików dołączanych.
+To ostrzeżenie może być spowodowane przez zdefiniowanie makra w wierszu polecenia i w kodzie z dyrektywą `#define`. Przyczyną może być również makra importowane z plików dołączanych.
 
-Aby usunąć to ostrzeżenie, usuń jedną z definicji lub użyj `#undef` dyrektywy przed definicją drugiego.
+Aby wyeliminować ostrzeżenie, Usuń jedną z definicji lub użyj dyrektywy `#undef`ej przed drugą definicją.

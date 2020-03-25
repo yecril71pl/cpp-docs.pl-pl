@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196706"
 ---
 # <a name="command-line-warning-d9026"></a>Ostrzeżenie D9026 dla wiersza polecenia
 
-opcje są stosowane do całego wiersza polecenia
+Opcje stosują się do całego wiersza polecenia
 
-Określono opcję dotyczącą polecenia po określono nazwę pliku. Opcja została zastosowana do pliku, który go poprzedzał.
+Opcja została określona w poleceniu po określeniu nazwy pliku. Opcja została zastosowana do pliku, który poprzedzał go.
 
 Na przykład w poleceniu
 
@@ -25,6 +25,6 @@ Na przykład w poleceniu
 CL verdi.c /G5 puccini.c
 ```
 
-Plik VERDI.c zostanie skompilowany przy użyciu opcji /G5, a nie domyślnym /G4.
+plik VERDI. c zostanie skompilowany przy użyciu opcji/G5, a nie domyślnego/G4.
 
-To zachowanie różni się od niektórych poprzednich wersji, które były stosowane tylko opcje określone przed nazwy pliku, co spowoduje VERDI.c kompilowany przy użyciu/4. generacji i PUCCINI.c kompilowany przy użyciu /G5.
+To zachowanie jest inne niż w przypadku niektórych poprzednich wersji, które dotyczyły tylko opcji określonych przed nazwą pliku, co spowodowało VERDI. c jest kompilowane przy użyciu/G4 i PUCCINI. c, które są kompilowane przy użyciu/G5.

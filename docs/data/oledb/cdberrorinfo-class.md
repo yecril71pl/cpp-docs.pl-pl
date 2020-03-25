@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447468"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212037"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo — Klasa
 
@@ -59,7 +59,7 @@ class CDBErrorInfo
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -76,7 +76,7 @@ class CDBErrorInfo
 
 Ten interfejs zwraca jeden lub więcej rekordów błędów do użytkownika. Najpierw Wywołaj [CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) , aby uzyskać liczbę rekordów błędów. Następnie Wywołaj jedną z funkcji dostępu, na przykład [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), aby pobrać informacje o błędzie dla każdego rekordu.
 
-## <a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
 
 Zwraca wszystkie typy informacji o błędzie zawartych w rekordzie błędu.
 
@@ -126,7 +126,7 @@ Wartość wyjściowa *pbstrDescription* jest uzyskiwana wewnętrznie przez wywo�
 
 1. wartość *LCID* nie jest równa wartości zwracanej przez GetUserDefaultLCID.
 
-## <a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
 
 Wywołuje [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) , aby zwrócić podstawowe informacje o błędzie, takie jak kod powrotu i numer błędu specyficzny dla dostawcy.
 
@@ -145,7 +145,7 @@ Zobacz [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms
 
 Standardowa wartość HRESULT.
 
-## <a name="getcustomerrorobject"></a>CDBErrorInfo:: getcustomerrorobject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo:: getcustomerrorobject
 
 Wywołuje [IErrorRecords:: Getcustomerrorobject](/previous-versions/windows/desktop/ms725417(v=vs.85)) , aby zwrócić wskaźnik do interfejsu w obiekcie błędu niestandardowego.
 
@@ -164,7 +164,7 @@ Zobacz [IErrorRecords:: Getcustomerrorobject](/previous-versions/windows/desktop
 
 Standardowa wartość HRESULT.
 
-## <a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
 
 Wywołuje [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) , aby zwrócić wskaźnik interfejsu [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) do określonego rekordu.
 
@@ -183,7 +183,7 @@ Zobacz [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms71123
 
 Standardowa wartość HRESULT.
 
-## <a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
 
 Wywołuje [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) w celu zwrócenia parametrów błędu.
 
@@ -202,7 +202,7 @@ Zobacz [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/m
 
 Standardowa wartość HRESULT.
 
-## <a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
 
 Pobiera rekordy błędów dla określonego obiektu.
 

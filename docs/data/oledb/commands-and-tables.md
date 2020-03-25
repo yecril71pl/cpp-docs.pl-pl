@@ -11,30 +11,30 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: b2cdf7a2b439af3a564f5801e015f6064fb141dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5f6bd8d5f813497cba399e5c071f43dc1a7c4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211526"
 ---
 # <a name="commands-and-tables"></a>Polecenia i tabele
 
-Zezwalaj na dostęp do zestawów wierszy; polecenia i tabele oznacza to należy otworzyć zestawów wierszy, wykonaj polecenia i powiązać kolumny. [CCommand](../../data/oledb/ccommand-class.md) i [CTable](../../data/oledb/ctable-class.md) klasy wystąpienia obiektów polecenia i tabeli, odpowiednio. Te klasy pochodzić od [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) jak pokazano na poniższej ilustracji.
+Polecenia i tabele umożliwiają dostęp do zestawów wierszy; oznacza to, że otwieranie zestawów wierszy, wykonywanie poleceń i kolumn powiązań. Klasy [CCommand](../../data/oledb/ccommand-class.md) i [CTable](../../data/oledb/ctable-class.md) odpowiednio tworzyją obiekty Command i Table. Te klasy pochodzą z [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) , jak pokazano na poniższej ilustracji.
 
 ![CCommand i CTable](../../data/oledb/media/vccommandstables.gif "CCommand i CTable")<br/>
-Polecenie i klasy tabeli
+Klasy poleceń i tabel
 
-W poprzedniej tabeli `TAccessor` mogą być dowolnego typu metody dostępu na liście [typy metod dostępu](../../data/oledb/accessors-and-rowsets.md). `TRowset` może być dowolnego typu zestawu wierszy na liście [typów w zestawie wierszy](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Określa typ wyniku (jednej lub wielu zestawu wyników).
+W poprzedniej tabeli `TAccessor` może być dowolnym typem metody dostępu wymienionym w [typach metod dostępu](../../data/oledb/accessors-and-rowsets.md). `TRowset` może być dowolnym typem zestawu wierszy wymienionym w [typach zestawów wierszy](../../data/oledb/accessors-and-rowsets.md). `TMultiple` określa typ wyniku (jeden lub wiele zestawów wyników).
 
-[OLE DB Kreator konsumenta ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) pozwala określić, czy obiekt polecenia lub tabeli.
+[Kreator OLE DB użytkownika ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) pozwala określić, czy chcesz, aby obiekt polecenia lub tabeli.
 
-- W przypadku źródeł danych bez poleceń, można użyć `CTable` klasy. Zazwyczaj służy ono do proste zestawy wierszy, które nie określono żadnych parametrów, wymagają wielu wyników. Ta klasa prostych otwiera tabeli w źródle danych, za pomocą nazwy tabeli, który określisz.
+- W przypadku źródeł danych bez poleceń można użyć klasy `CTable`. Jest on zwykle używany dla prostych zestawów wierszy, które określają brak parametrów i nie wymagają wielu wyników. Ta prosta Klasa otwiera tabelę w źródle danych przy użyciu określonej nazwy tabeli.
 
-- W przypadku źródeł danych, które obsługują polecenia, można użyć `CCommand` klasy zamiast tego. Aby wykonanie polecenia, należy wywołać [Otwórz](../../data/oledb/ccommand-open.md) od tej klasy. Alternatywnie, można wywołać `Prepare` przygotować polecenie, które chcesz wykonać więcej niż jeden raz.
+- W przypadku źródeł danych, które obsługują polecenia, można zamiast tego użyć klasy `CCommand`. Aby wykonać polecenie, należy wywołać metodę [Open](../../data/oledb/ccommand-open.md) dla tej klasy. Alternatywnie można wywołać `Prepare`, aby przygotować polecenie, które ma zostać wykonane więcej niż raz.
 
-   `CCommand` ma trzy argumenty szablonu: typu dostępu, typ zestawu wierszy i typ wyniku (`CNoMultipleResults`, domyślnie lub `CMultipleResults`). Jeśli określisz `CMultipleResults`, `CCommand` klasy obsługuje `IMultipleResults` interfejs i obsługuje wiele zestawów wierszy. [DBVIEWER](https://github.com/Microsoft/VCSamples) przykład pokazuje, jak obsługiwać wiele wyników.
+   `CCommand` ma trzy argumenty szablonu: typ akcesora, typ zestawu wierszy i typ wyniku (`CNoMultipleResults`, domyślnie lub `CMultipleResults`). W przypadku określenia `CMultipleResults`Klasa `CCommand` obsługuje interfejs `IMultipleResults` i obsługuje wiele zestawów wierszy. Przykład [DBviewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) pokazuje, jak obsługiwać wiele wyników.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)

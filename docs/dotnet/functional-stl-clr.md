@@ -63,16 +63,16 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d06a92fea9a702633216e3244879687b66f97d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208731"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
-Dołącz nagłówek STL/CLR `<cliext/functional>` zdefiniować liczbę klasy szablonów i delegatów pokrewne szablonu i funkcje.
+Dołącz nagłówek STL/CLR `<cliext/functional>`, aby zdefiniować liczbę klas szablonu i powiązane z nią delegatów szablonu i funkcje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,53 +82,53 @@ Dołącz nagłówek STL/CLR `<cliext/functional>` zdefiniować liczbę klasy sza
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext — / funkcjonalności >
+**Nagłówek:** \<cliext/> funkcjonalne
 
-**Namespace:** cliext —
+**Przestrzeń nazw:** cliext
 
 ## <a name="declarations"></a>Deklaracje
 
 |Delegate|Opis|
 |--------------|-----------------|
-|[binary_delegate (STL/CLR)](#binary_delegate)|Delegat dwuargumentową.|
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegat dwuargumentową, zwracając **void**.|
-|[unary_delegate (STL/CLR)](#unary_delegate)|Delegat jeden argument.|
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|One-argument — delegowanego, zwracając **void**.|
+|[binary_delegate (STL/CLR)](#binary_delegate)|Delegat dwóch argumentów.|
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegat dwóch argumentów zwraca **typ void**.|
+|[unary_delegate (STL/CLR)](#unary_delegate)|Delegat z jednym argumentem.|
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegat z jednym argumentem zwraca **typ void**.|
 
-|Class|Opis|
+|Klasa|Opis|
 |-----------|-----------------|
-|[binary_negate (STL/CLR)](#binary_negate)|Funktor do zanegowania funktor dwuargumentową.|
-|[binder1st (STL/CLR)](#binder1st)|Funktor, aby powiązać funktor dwóch argumentów pierwszy argument.|
-|[binder2nd (STL/CLR)](#binder2nd)|Funktor, aby powiązać funktor dwuargumentową drugi argument.|
-|[divides (STL/CLR)](#divides)|Podziel funktor.|
-|[equal_to (STL/CLR)](#equal_to)|Porównanie równego funktor.|
-|[greater (STL/CLR)](#greater)|Większa funktor porównania.|
-|[greater_equal (STL/CLR)](#greater_equal)|Większe lub równe porównania funktor.|
-|[less (STL/CLR)](#less)|Mniej funktor porównania.|
-|[less_equal (STL/CLR)](#less_equal)|Porównanie mniejsze lub równe funktor.|
-|[logical_and (STL/CLR)](#logical_and)|Logiczne AND funktor.|
-|[logical_not (STL/CLR)](#logical_not)|Logiczne nie funktor.|
-|[logical_or (STL/CLR)](#logical_or)|Logiczne lub funktor.|
-|[minus (STL/CLR)](#minus)|Odejmij funktor.|
-|[modulus (STL/CLR)](#modulus)|Modulo funktor.|
-|[multiplies (STL/CLR)](#multiplies)|Pomnóż funktor.|
-|[negate (STL/CLR)](#negate)|Funktor do zwrócenia jej argument ujemna.|
-|[not_equal_to (STL/CLR)](#not_equal_to)|Nie równa się porównanie funktor.|
-|[plus (STL/CLR)](#plus)|Dodaj funktor.|
-|[unary_negate (STL/CLR)](#unary_negate)|Funktor do zanegowania funktor jeden argument.|
+|[binary_negate (STL/CLR)](#binary_negate)|Funktor Negate dwa argumentu Funktor.|
+|[binder1st (STL/CLR)](#binder1st)|Funktor, aby powiązać pierwszy argument z dwoma argumentami Funktor.|
+|[binder2nd (STL/CLR)](#binder2nd)|Funktor do powiązania drugiego argumentu z dwoma argumentami Funktor.|
+|[divides (STL/CLR)](#divides)|Podziel Funktor.|
+|[equal_to (STL/CLR)](#equal_to)|Równe porównanie Funktor.|
+|[greater (STL/CLR)](#greater)|Większe porównanie Funktor.|
+|[greater_equal (STL/CLR)](#greater_equal)|Większe lub równe porównanie Funktor.|
+|[less (STL/CLR)](#less)|Mniej porównania Funktor.|
+|[less_equal (STL/CLR)](#less_equal)|Mniejsze lub równe porównanie Funktor.|
+|[logical_and (STL/CLR)](#logical_and)|Koniunkcja logiczna i Funktor.|
+|[logical_not (STL/CLR)](#logical_not)|Logiczna nie Funktor.|
+|[logical_or (STL/CLR)](#logical_or)|Logiczne lub Funktor.|
+|[minus (STL/CLR)](#minus)|Odejmij Funktor.|
+|[modulus (STL/CLR)](#modulus)|Moduł Funktor.|
+|[multiplies (STL/CLR)](#multiplies)|Pomnóż Funktor.|
+|[negate (STL/CLR)](#negate)|Funktor, aby zwrócić argument z negacją.|
+|[not_equal_to (STL/CLR)](#not_equal_to)|Nie równa się Funktor porównania.|
+|[plus (STL/CLR)](#plus)|Dodaj Funktor.|
+|[unary_negate (STL/CLR)](#unary_negate)|Funktor Negate z jednym argumentem Funktor.|
 
 |Funkcja|Opis|
 |--------------|-----------------|
-|[bind1st (STL/CLR)](#bind1st)|Generuje binder1st — argument i funktor.|
-|[bind2nd (STL/CLR)](#bind2nd)|Generuje binder2nd — argument i funktor.|
-|[not1 (STL/CLR)](#not1)|Generuje unary_negate — dla funktorem.|
-|[not2 (STL/CLR)](#not2)|Generuje binary_negate — dla funktorem.|
+|[bind1st (STL/CLR)](#bind1st)|Generuje binder1st — dla argumentu i Funktor.|
+|[bind2nd (STL/CLR)](#bind2nd)|Generuje binder2nd — dla argumentu i Funktor.|
+|[not1 (STL/CLR)](#not1)|Generuje unary_negate dla elementu Funktor.|
+|[not2 (STL/CLR)](#not2)|Generuje binary_negate dla elementu Funktor.|
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-## <a name="binary_delegate"></a> binary_delegate — (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
 
-Klasa genereic opisuje dwuargumentową delegata. Możesz użyć Określ delegata pod względem jego argumentów i typów.
+Klasa genereic opisuje delegata dwóch argumentów. Służy do tego określenie delegata w odniesieniu do jego argumentu i typów zwracanych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -147,20 +147,20 @@ Typ pierwszego argumentu.
 *Arg2*<br/>
 Typ drugiego argumentu.
 
-*wynik*<br/>
+*Wynika*<br/>
 Typ zwracany.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic opisano funkcję dwuargumentową.
+Delegat genereic opisuje funkcję dwuargumentową.
 
-Należy pamiętać, że dla:
+Należy pamiętać, że w przypadku:
 
 `binary_delegate<int, int, int> Fun1;`
 
 `binary_delegate<int, int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimy, podczas gdy dla:
+typy `Fun1` i `Fun2` są synonimami, a w przypadku:
 
 `delegate int Fun1(int, int);`
 
@@ -202,9 +202,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn — (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
 
-Klasa genereic opisuje delegata dwuargumentową, która zwraca **void**. Możesz użyć Określ delegata pod kątem jej argument.
+Klasa genereic opisuje delegata dwóch argumentów, która zwraca wartość **void**. Używasz tego elementu jako delegata w odniesieniu do jego argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -224,15 +224,15 @@ Typ drugiego argumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic w tym artykule opisano funkcję dwuargumentową, która zwraca **void**.
+Delegat genereic opisuje funkcję dwuargumentową zwracającą **typ void**.
 
-Należy pamiętać, że dla:
+Należy pamiętać, że w przypadku:
 
 `binary_delegate_noreturn<int, int> Fun1;`
 
 `binary_delegate_noreturn<int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimy, podczas gdy dla:
+typy `Fun1` i `Fun2` są synonimami, a w przypadku:
 
 `delegate void Fun1(int, int);`
 
@@ -272,9 +272,9 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate"></a> binary_negate — (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
 
-Klasa szablonu opisuje funktorem, który po wywołaniu zwraca logiczny nie z jego przechowywanej funktor dwuargumentową. Możesz użyć Określ obiekt funkcyjny pod względem jego przechowywanej funktor.
+Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca wartość logiczną, a nie przechowywane dwa argumenty Funktor. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -302,33 +302,33 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawa*<br/>
-Typ przechowywanych funktor.
+*Zabawny*<br/>
+Typ przechowywanego Funktor.
 
 ## <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
-|stored_function_type|Typ funkcję.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
+|stored_function_type|Typ Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|binary_negate|Tworzy funkcję.|
+|binary_negate|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^() — operator|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^ ()|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktorem dwuargumentową, który przechowuje inny dwuargumentową funktor. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca logiczny nie jest przechowywane funkcję o nazwie z dwóch argumentów.
+Klasa szablonu opisuje dwa argumenty Funktor, które przechowują kolejne dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z dwoma argumentami.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -386,9 +386,9 @@ int main()
 1 0
 ```
 
-## <a name="bind1st"></a> bind1st — (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st — (STL/CLR)
 
-Generuje `binder1st` argumentu i funktor.
+Generuje `binder1st` dla argumentu i Funktor.
 
 ### <a name="syntax"></a>Składnia
 
@@ -404,20 +404,20 @@ template<typename Fun,
 *ARG*<br/>
 Typ argumentu.
 
-*Zabawa*<br/>
-Typ funkcję.
+*Zabawny*<br/>
+Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
 
-*funktor*<br/>
-Funkcję do opakowania.
+*Funktor*<br/>
+Funktor do zawijania.
 
-*left*<br/>
-Pierwszy argument do opakowania.
+*lewym*<br/>
+Pierwszy argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [binder1st — (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Służy jako wygodny sposób opakować funktor dwuargumentową i jej pierwszy argument w funktorem jeden argument, który ją wywołuje z drugiego argumentu.
+Funkcja Template zwraca [binder1st — (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego pierwszego argumentu w Funktor jednoargumentowym, który wywołuje ją z drugim argumentem.
 
 ### <a name="example"></a>Przykład
 
@@ -467,9 +467,9 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd"></a> bind2nd — (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd — (STL/CLR)
 
-Generuje `binder2nd` argumentu i funktor.
+Generuje `binder2nd` dla argumentu i Funktor.
 
 ### <a name="syntax"></a>Składnia
 
@@ -485,20 +485,20 @@ template<typename Fun,
 *ARG*<br/>
 Typ argumentu.
 
-*Zabawa*<br/>
-Typ funkcję.
+*Zabawny*<br/>
+Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
 
-*funktor*<br/>
-Funkcję do opakowania.
+*Funktor*<br/>
+Funktor do zawijania.
 
-*right*<br/>
-Drugi argument do opakowania.
+*Kliknij*<br/>
+Drugi argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [binder2nd — (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Służy jako wygodny sposób zabalit funktorem jeden argument, który ją wywołuje, którego pierwszy argument funktor dwuargumentową i drugi argument.
+Funkcja Template zwraca [binder2nd — (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego drugiego argumentu w Funktor jednym argumencie, który wywołuje go przy użyciu pierwszego argumentu.
 
 ### <a name="example"></a>Przykład
 
@@ -548,9 +548,9 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st"></a> binder1st — (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st — (STL/CLR)
 
-Klasa szablonu opisuje funktor one-argument — który, po wywołaniu zwraca jego przechowywanej funktor dwuargumentową volat swój pierwszy argument przechowywanych i dostarczony drugi argument. Możesz użyć Określ obiekt funkcyjny pod względem jego przechowywanej funktor.
+Klasa szablonu opisuje jednoargumentowe Funktor, które, po wywołaniu, zwraca przechowywane dwa argumenty Funktor, które są wywoływane z przechowywanym pierwszym argumentem i podanym drugim argumentem. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -577,33 +577,33 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawa*<br/>
-Typ przechowywanych funktor.
+*Zabawny*<br/>
+Typ przechowywanego Funktor.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
-|stored_function_type|Typ funkcję.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
+|stored_function_type|Typ Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|binder1st|Tworzy funkcję.|
+|binder1st|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^() — operator|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^ ()|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktorem jeden argument, który przechowuje funktor dwuargumentową i pierwszy argument. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, funkcja zwraca wynik wywołania przechowywanych funktor za pomocą składowanych pierwszy argument i dostarczony drugi argument.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i pierwszy argument. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania przechowywanej Funktor z przechowywanym pierwszym argumentem i podanym drugim argumentem.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -653,9 +653,9 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd"></a> binder2nd — (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd — (STL/CLR)
 
-Klasa szablonu opisuje funktor one-argument — który, po wywołaniu zwraca jego przechowywanej funktor dwuargumentową volat podane pierwszy argument i jego przechowywanej drugi argument. Możesz użyć Określ obiekt funkcyjny pod względem jego przechowywanej funktor.
+Klasa szablonu opisuje jednoargumentowe Funktor, które, po wywołaniu, zwraca przechowywane dwa argumenty Funktor, które są wywoływane przy użyciu podanego pierwszego argumentu i przechowywanego drugiego argumentu. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -682,33 +682,33 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawa*<br/>
-Typ przechowywanych funktor.
+*Zabawny*<br/>
+Typ przechowywanego Funktor.
 
 ## <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
-|stored_function_type|Typ funkcję.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
+|stored_function_type|Typ Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|binder2nd|Tworzy funkcję.|
+|binder2nd|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^() — operator|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^ ()|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktorem jeden argument, który przechowuje funktor dwuargumentową i drugi argument. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, funkcja zwraca wynik wywołania przechowywanych funktor przy użyciu podanej pierwszy argument i przechowywanych drugi argument.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i drugi argument. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania przechowywanego Funktor z podanym pierwszym argumentem i przechowywaną drugim argumentem.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -758,9 +758,9 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> dzieli (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a>podziały (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość pierwszego argumentu podzieloną przez drugi. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument podzielony przez drugi. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -788,31 +788,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typ argumentów i wartości zwracanej.
+Typ argumentów i wartość zwracana.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|divides|Tworzy funkcję.|
+|divides|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^() — operator|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^ ()|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość pierwszego argumentu podzieloną przez drugi.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument podzielony przez drugi.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -859,9 +859,9 @@ int main()
 2 3
 ```
 
-## <a name="equal_to"></a> equal_to — (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument jest równe drugiemu. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -889,31 +889,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|equal_to|Tworzy funkcję.|
+|equal_to|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^() — operator|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^ ()|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument jest równe drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest równy drugiemu.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -960,9 +960,9 @@ int main()
 1 0
 ```
 
-## <a name="greater"></a> większa (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a>większe (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument jest większy od drugiego. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy od drugiego. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -990,31 +990,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|greater|Tworzy funkcję.|
+|greater|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument jest większy od drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy od drugiego.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1061,9 +1061,9 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal"></a> greater_equal — (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true, tylko jeśli pierwszy argument jest większy niż lub równe drugiemu. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy lub równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1091,31 +1091,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|greater_equal|Tworzy funkcję.|
+|greater_equal|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument jest większy niż lub równe drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy lub równy drugiemu.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1162,9 +1162,9 @@ int main()
 1 0
 ```
 
-## <a name="less"></a> mniej (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument jest mniejszy od drugiego. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy od drugiego. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1192,31 +1192,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|less|Tworzy funkcję.|
+|less|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument jest mniejszy od drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy od drugiego.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1263,9 +1263,9 @@ int main()
 0 1
 ```
 
-## <a name="less_equal"></a> less_equal — (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true, tylko jeśli pierwszy argument jest mniejszy niż lub równe drugiemu. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy lub równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1293,31 +1293,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|less_equal|Tworzy funkcję.|
+|less_equal|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument jest mniejszy niż lub równe drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy lub równy drugiemu.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1364,9 +1364,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_and"></a> logical_and — (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument i drugi test jako wartość true. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy oba argumenty i drugi test mają wartość true. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1394,31 +1394,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|logical_and|Tworzy funkcję.|
+|logical_and|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument i drugi test jako wartość true.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy oba argumenty i drugi test mają wartość true.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1465,9 +1465,9 @@ int main()
 1 0
 ```
 
-## <a name="logical_not"></a> logical_not — (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy albo jej argument testy jako wartość false. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy jego argument ma wartość false. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1493,30 +1493,30 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
+|argument_type|Typ argumentu Funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|logical_not|Tworzy funkcję.|
+|logical_not|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor jeden argument. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, jego zwraca wartość true, tylko jeśli jej argument testy jako wartość false.
+Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy jego argument ma wartość false.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1555,9 +1555,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_or"></a> logical_or — (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument lub drugie testów jako wartość true. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugi test ma wartość true. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1585,31 +1585,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|logical_or|Tworzy funkcję.|
+|logical_or|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument lub drugie testów jako wartość true.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugi test ma wartość true.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1656,9 +1656,9 @@ int main()
 1 0
 ```
 
-## <a name="minus"></a> minus (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a>minus (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość pierwszego argumentu, minus sekundę. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca pierwszy argument minus sekunda. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1686,31 +1686,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typ argumentów i wartości zwracanej.
+Typ argumentów i wartość zwracana.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|minus|Tworzy funkcję.|
+|minus|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość pierwszego argumentu, minus sekundę.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator składowej `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument minus sekunda.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1757,9 +1757,9 @@ int main()
 2 2
 ```
 
-## <a name="modulus"></a> modulo (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a>Moduł (STL/CLR)
 
-Klasa szablonu opisuje funktorem, który po wywołaniu zwraca pierwszy argument modulo drugiego. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument modulo drugi. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1787,31 +1787,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typ argumentów i wartości zwracanej.
+Typ argumentów i wartość zwracana.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|modulus|Tworzy funkcję.|
+|modulus|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, funkcja zwraca pierwszy argument modulo drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument modulo w drugim.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1858,9 +1858,9 @@ int main()
 1 0
 ```
 
-## <a name="multiplies"></a> Mnoży (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a>Mnoży (STL/CLR)
 
-Klasa szablonu opisuje funktorem, który po wywołaniu zwraca pierwszy argument razy drugiego. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje element Funktor, który po wywołaniu zwraca pierwszy argument, który przetimes sekundy. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1888,31 +1888,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typ argumentów i wartości zwracanej.
+Typ argumentów i wartość zwracana.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|multiplies|Tworzy funkcję.|
+|multiplies|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, funkcja zwraca pierwszy argument razy drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument razy w drugim.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -1959,9 +1959,9 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> negate — (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a>Negate (STL/CLR)
 
-Klasa szablonu opisuje funktorem, który po wywołaniu zwraca jej argument ujemna. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca swój argument negacji. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -1987,30 +1987,30 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
+|argument_type|Typ argumentu Funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|negate|Tworzy funkcję.|
+|negate|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor jeden argument. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, funkcja zwraca jej argument ujemna.
+Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca swój argument Negacja.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -2049,9 +2049,9 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> not_equal_to — (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, zwraca wartość true tylko wtedy, gdy jest to pierwszy argument nie jest równe drugiemu. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument nie jest równy drugiemu. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2079,31 +2079,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typy argumentów.
+Typ argumentów.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|not_equal_to|Tworzy funkcję.|
+|not_equal_to|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca wartość true, tylko jeśli pierwszy argument nie jest równe drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument nie jest równy drugiemu.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -2150,9 +2150,9 @@ int main()
 0 1
 ```
 
-## <a name="not1"></a> not1 — (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a>not1 — (STL/CLR)
 
-Generuje `unary_negate` dla funktorem.
+Generuje `unary_negate` dla elementu Funktor.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2163,17 +2163,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry szablonu
 
-*Zabawa*<br/>
-Typ funkcję.
+*Zabawny*<br/>
+Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
 
-*funktor*<br/>
-Funkcję do opakowania.
+*Funktor*<br/>
+Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [unary_negate — (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Służy jako wygodny sposób opakować funktor jeden argument w funktorem, który dostarcza jego logiczne NOT.
+Funkcja szablonu zwraca [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Jest on używany jako wygodny sposób zawijania Funktor z jednym argumentem w Funktor, który dostarcza jej wartość logiczną.
 
 ### <a name="example"></a>Przykład
 
@@ -2222,9 +2222,9 @@ int main()
 1 0
 ```
 
-## <a name="not2"></a> not2 — (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a>not2 — (STL/CLR)
 
-Generuje `binary_negate` dla funktorem.
+Generuje `binary_negate` dla elementu Funktor.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2235,17 +2235,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry szablonu
 
-*Zabawa*<br/>
-Typ funkcję.
+*Zabawny*<br/>
+Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
 
-*funktor*<br/>
-Funkcję do opakowania.
+*Funktor*<br/>
+Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [binary_negate — (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Służy jako wygodny sposób zabalit funktor dwuargumentową funktorem, który dostarcza jego logiczne NOT.
+Funkcja szablonu zwraca [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego w Funktor, który zapewnia jego wartość logiczną.
 
 ### <a name="example"></a>Przykład
 
@@ -2303,9 +2303,9 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> plus (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a>Plus (STL/CLR)
 
-Klasa szablonu opisuje funktorem, gdy zostanie wywołana, funkcja zwraca pierwszy argument, a także drugi. Możesz użyć Określ obiekt funkcyjny pod względem jego typ argumentu.
+Klasa szablonu opisuje Funktor, który po wywołaniu zwraca pierwszy argument Plus sekunda. Służy do określania obiektu funkcji w postaci typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2333,31 +2333,31 @@ public:
 #### <a name="parameters"></a>Parametry
 
 *ARG*<br/>
-Typ argumentów i wartości zwracanej.
+Typ argumentów i wartość zwracana.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
 |delegate_type|Typ delegata ogólnego.|
-|first_argument_type|Typ pierwszego argumentu funktor.|
-|result_type|Typ wyniku funktor.|
-|second_argument_type|Typ drugiego argumentu funktor.|
+|first_argument_type|Typ pierwszego argumentu Funktor.|
+|result_type|Typ wyniku Funktor.|
+|second_argument_type|Typ drugiego argumentu Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|plus|Tworzy funkcję.|
+|plus|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|Operator delegate_type ^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type operatora ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktor dwuargumentową. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca pierwszy argument, a także drugi.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator składowej `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument Plus sekunda.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 
@@ -2404,9 +2404,9 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate"></a> unary_delegate — (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
 
-Klasa genereic opisuje delegata jeden argument. Możesz użyć Określ delegata pod względem jego argumentów i typów.
+Klasa genereic opisuje delegata z jednym argumentem. Służy do tego określenie delegata w odniesieniu do jego argumentu i typów zwracanych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2421,20 +2421,20 @@ generic<typename Arg,
 *ARG*<br/>
 Typ argumentu.
 
-*wynik*<br/>
+*Wynika*<br/>
 Typ zwracany.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic opisano funkcję jeden argument.
+Delegat genereic opisuje funkcję z jednym argumentem.
 
-Należy pamiętać, że dla:
+Należy pamiętać, że w przypadku:
 
 `unary_delegare<int, int> Fun1;`
 
 `unary_delegare<int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimy, podczas gdy dla:
+typy `Fun1` i `Fun2` są synonimami, a w przypadku:
 
 `delegate int Fun1(int);`
 
@@ -2470,9 +2470,9 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn — (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
 
-Klasa genereic opisuje delegat jeden argument, który zwraca **void**. Możesz użyć Określ delegata pod względem jego typ argumentu.
+Klasa genereic opisuje delegata z jednym argumentem, który zwraca wartość **void**. Służy do tego określenie delegata pod względem jego typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2488,15 +2488,15 @@ Typ argumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic zawiera opis funkcji jednym argumentem, która zwraca **void**.
+Delegat genereic opisuje funkcję jednoargumentową zwracającą **typ void**.
 
-Należy pamiętać, że dla:
+Należy pamiętać, że w przypadku:
 
 `unary_delegare_noreturn<int> Fun1;`
 
 `unary_delegare_noreturn<int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimy, podczas gdy dla:
+typy `Fun1` i `Fun2` są synonimami, a w przypadku:
 
 `delegate void Fun1(int);`
 
@@ -2533,9 +2533,9 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate"></a> unary_negate — (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
 
-Klasa szablonu opisuje funktorem, który po wywołaniu zwraca logiczny nie z jego przechowywanej funktor jeden argument. Możesz użyć Określ obiekt funkcyjny pod względem jego przechowywanej funktor.
+Klasa szablonu opisuje Funktor, który, gdy wywoływana, zwraca wartość logiczną, a nie przechowywany Funktor jednego argumentu. Służy do określania obiektu funkcji w postaci Funktor przechowywanych elementów.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2561,31 +2561,31 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawa*<br/>
-Typ przechowywanych funktor.
+*Zabawny*<br/>
+Typ przechowywanego Funktor.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
+|argument_type|Typ argumentu Funktor.|
 |delegate_type|Typ delegata ogólnego.|
-|result_type|Typ wyniku funktor.|
+|result_type|Typ wyniku Funktor.|
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|unary_negate|Tworzy funkcję.|
+|unary_negate|Konstruuje Funktor.|
 
 |Operator|Opis|
 |--------------|-----------------|
-|operator()|Oblicza odpowiednią funkcję.|
-|delegate_type^|Rzutuje funktor do delegata.|
+|operator ()|Oblicza odpowiednią funkcję.|
+|delegate_type ^|Rzutuje Funktor na delegata.|
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje funktorem jeden argument, który przechowuje inny funktor jeden argument. Definiuje operator składowy `operator()` tak, że gdy obiekt jest wywoływana jako funkcja, zwraca logiczny nie jest przechowywane funktor wywołane z argumentem.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje kolejną Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z argumentem.
 
-Możesz też przekazać obiekt jako argumentu funkcji, którego typem jest `delegate_type^` i zostanie przekonwertowany odpowiednio.
+Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
 
 ### <a name="example"></a>Przykład
 

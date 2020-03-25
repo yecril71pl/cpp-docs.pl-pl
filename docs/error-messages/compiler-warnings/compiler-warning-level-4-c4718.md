@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4718
+title: Ostrzeżenie kompilatora (poziom 4) C4718
 ms.date: 11/04/2016
 f1_keywords:
 - C4718
 helpviewer_keywords:
 - C4718
 ms.assetid: 29507f8a-b024-42c1-a3b8-f35d1f2641f3
-ms.openlocfilehash: c313e26af5f5b17db9c7d001a705ff7211461c2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48452ed53b93d7cd89daadd3f7ab3a69b453e1a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395173"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198162"
 ---
-# <a name="compiler-warning-level-4-c4718"></a>Kompilator ostrzeżenie (poziom 4) C4718
+# <a name="compiler-warning-level-4-c4718"></a>Ostrzeżenie kompilatora (poziom 4) C4718
 
 "wywołanie funkcji": wywołanie cykliczne nie ma żadnych efektów ubocznych, usuwanie
 
-Funkcja zawiera wywołanie cykliczne, a w przeciwnym razie ma żadnych efektów ubocznych. Wywołanie tej funkcji jest usuwana. Poprawność program nie ma wpływu, ale jest to zachowanie. Natomiast opuszczania wywołanie może spowodować wyjątek przepełnienia stosu środowiska uruchomieniowego, usuwając wywołanie usuwa tę możliwość.
+Funkcja zawiera wywołanie cykliczne, ale w przeciwnym razie nie ma żadnych efektów ubocznych. Trwa usuwanie wywołania tej funkcji. Nie dotyczy to poprawnego programu, ale zachowanie to. Pozostawienie wywołania w może spowodować wyjątek przepełnienia stosu środowiska uruchomieniowego, usunięcie tego wywołania spowoduje usunięcie takiej możliwości.

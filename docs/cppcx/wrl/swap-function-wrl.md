@@ -1,20 +1,20 @@
 ---
-title: Swap — funkcja (WRL)
+title: Swap — Funkcja (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213567"
 ---
-# <a name="swap-function-wrl"></a>Swap — funkcja (WRL)
+# <a name="swap-function-wrl"></a>Swap — Funkcja (WRL)
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,24 +27,24 @@ WRL_NOTHROW inline void Swap(
 
 ### <a name="parameters"></a>Parametry
 
-*left*<br/>
+*lewym*<br/>
 Pierwszy argument.
 
-*right*<br/>
+*Kliknij*<br/>
 Drugi argument.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 ## <a name="remarks"></a>Uwagi
 
-Zamienia wartości dwóch określonych argumentów.
+Wymienia wartości dwóch określonych argumentów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** internal.h
+**Nagłówek:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

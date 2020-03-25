@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - R6027
 ms.assetid: c06a62b3-08d9-4bf5-bcad-8340ec552f69
-ms.openlocfilehash: 2884f148091d9407d3229f0690a161639b5195e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c2aab7b090dbfa4553b8d1622f13aef13f58aa3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395147"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197174"
 ---
 # <a name="c-runtime-error-r6027"></a>Błąd czasu wykonania języka C R6027
 
-Brak wystarczającej ilości miejsca do zainicjowania lowio
+za mało miejsca na zainicjowanie lowio
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane przez warunek bardzo małej ilości pamięci. Może być także spowodowane przez usterkę w aplikacji, uszkodzenie bibliotek Visual C++, których używa lub sterownika.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem z pamięcią wewnętrzną. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane bardzo małą ilością pamięci. Może być również przyczyną błędu w aplikacji przez uszkodzenie bibliotek wizualnych C++ , których używa, lub przez sterownik.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Jeśli aplikacja była praca przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia Nowa aplikacja lub sterownika i spróbuj ponownie aplikację.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie wszystkie kopie Microsoft Visual C++ Redistributable.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne uruchomione aplikacje lub Uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Jeśli aplikacja działała przed ostatnią instalacją innej aplikacji lub sterownika, użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby usunąć nową aplikację lub sterownik, a następnie spróbuj ponownie wykonać swoją aplikację.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować wszystkie kopie pakietu redystrybucyjnego C++ Microsoft Visual.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Ten błąd występuje, gdy nie ma wystarczającej ilości wolnego pamięci zainicjować obsługi operacji We/Wy niskiego poziomu, w środowisku uruchomieniowym języka C. Ten błąd zazwyczaj występuje podczas uruchamiania aplikacji. Upewnij się, że Twoja aplikacja i sterowniki i bibliotek DLL, która ładuje nie spowodują uszkodzenia sterty przy uruchamianiu.
+Ten błąd występuje, gdy jest za mało dostępnej wolnej pamięci, aby zainicjować obsługę operacji we/wy niskiego poziomu w środowisku uruchomieniowym języka C. Ten błąd występuje zwykle podczas uruchamiania aplikacji. Sprawdź, czy aplikacja oraz sterowniki i biblioteki DLL, które ładuje, nie uszkadzają sterty podczas uruchamiania.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0028
 ms.assetid: 0a6e0da7-cb3d-40b6-81a6-6196a9c2526b
-ms.openlocfilehash: 9b74c64cee2b5734beab2bf30475b129160e67ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34cfe15d1f2a8f767dfecb11adae362778b3898d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265415"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192266"
 ---
 # <a name="project-build-error-prj0028"></a>Błąd PRJ0028 kompilacji projektu
 
-Plik tymczasowy 'Plik' zawiera znaki unikodowe, które nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+Plik tymczasowy "plik" zawiera zawartość Unicode, której nie można przetłumaczyć na stronę kodową ANSI użytkownika.
 
-Określono wartość z [/MIDL (Określ opcje ze wiersza polecenia w MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) opcji konsolidatora, która nie została rozpoznana przez stronę kodową systemu.
+Określono wartość z [/MIDL (Określ opcje wiersza polecenia MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) , której nie można rozpoznać przez systemową stronę kodową.
 
-Strona kodowa używana podczas określania polecenia MIDL (wejściowej strony kodowej) musi być taka sama jak systemowa strona kodowa.
+Strona kodowa używana po określeniu polecenia MIDL (strona kodowa danych wejściowych) musi być taka sama jak strona kodowa systemu.

@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211097"
 ---
 # <a name="debugging-your-provider"></a>Debugowanie dostawcy
 
-Istnieją dwa sposoby, aby debugować dostawcy:
+Istnieją dwa sposoby debugowania dostawcy:
 
-- Ponieważ dostawców są tworzone w procesie, można utworzyć kodu odbiorcy zwykle za pomocą szablony konsumentów OLE DB i Wkrocz do dostawcy.
+- Ze względu na to, że dostawcy są tworzone w procesie, można utworzyć pewien kod konsumenta przy użyciu szablonów konsumentów OLE DB i przekroczyć dostawcę w normalny sposób.
 
-- Możesz użyć różnych narzędzi, które pochodzą z programem Visual C++.
+- Możesz użyć różnych narzędzi dostarczanych z wizualizacją C++.
 
-## <a name="to-use-debugging"></a>Aby użyć debugowania
+## <a name="to-use-debugging"></a>Aby używać debugowania
 
 1. Otwórz projekt dostawcy.
 
-1. Na **projektów** menu, kliknij przycisk **właściwości**.
+1. W menu **projekty** kliknij polecenie **Właściwości**.
 
-1. W **stron właściwości** okno dialogowe, kliknij przycisk **debugowanie** kartę.
+1. W oknie dialogowym **strony właściwości** kliknij kartę **debugowanie** .
 
-1. Wybierz opcje jako wymagane, kliknij przycisk **OK**.
+1. Wybierz odpowiednie opcje, a następnie kliknij przycisk **OK**.
 
-1. Ustawianie punktów przerwania, a następnie debugować w zwykły sposób.
+1. Ustaw punkty przerwania, a następnie Debuguj w zwykły sposób.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

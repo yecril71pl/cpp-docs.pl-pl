@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214694"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -29,7 +29,7 @@ Atrybut **OleAutomation** C++ ma takie same funkcje jak atrybut [OleAutomation](
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykłady dla elementów [](defaultvalue.md) DefaultValue [](nonextensible.md) i unextensible dla przykładowego użycia **OleAutomation**.
+Zobacz przykłady dla elementów [DefaultValue](defaultvalue.md) i [unextensible](nonextensible.md) dla przykładowego użycia **OleAutomation**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -39,12 +39,12 @@ Zobacz przykłady dla elementów [](defaultvalue.md) DefaultValue [](nonextensib
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|**dispinterface**|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)

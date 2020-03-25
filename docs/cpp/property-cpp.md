@@ -7,18 +7,18 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179305"
 ---
 # <a name="property-c"></a>właściwość (C++)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Ten atrybut można stosować do niestatycznych "elementy członkowskie danych wirtualnej" w definicji klasy lub struktury. Kompilator traktuje te "wirtualnych elementów członkowskich danych" jako elementy członkowskie danych, zmieniając ich odwołań do wywołania funkcji.
+Ten atrybut może być stosowany do niestatycznych "wirtualnych elementów członkowskich danych" w definicji klasy lub struktury. Kompilator traktuje te "wirtualne elementy członkowskie danych" jako składowe danych, zmieniając ich odwołania na wywołania funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,17 +30,17 @@ Ten atrybut można stosować do niestatycznych "elementy członkowskie danych wi
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kompilator będzie widział element członkowski danych zadeklarowana za pomocą tego atrybutu po prawej stronie operatora wyboru składowej ("**.**"or"**->**"), konwertuje operacji `get` lub `put` funkcji, w zależności od tego, czy takie wyrażenie jest wartością l i r-wartości. Bardziej skomplikowane kontekstach, takich jak "`+=`", nadpisania odbywa się przez zastosowanie obu podejść `get` i `put`.
+Gdy kompilator widzi składową danych zadeklarowaną z tym atrybutem po prawej stronie operatora wyboru elementu członkowskiego (" **.** " lub " **->** "), konwertuje operację na funkcję `get` lub `put`, w zależności od tego, czy takie wyrażenie jest wartością l lub r-Value. W bardziej skomplikowanych kontekstach, takich jak "`+=`", wielokrotne pisanie odbywa się przez wykonanie obu `get` i `put`.
 
-Ten atrybut umożliwia także w deklaracji pustą tablicę w definicji klasy lub struktury. Na przykład:
+Ten atrybut może być również używany w deklaracji pustej tablicy w definicji klasy lub struktury. Na przykład:
 
 ```cpp
 __declspec(property(get=GetX, put=PutX)) int x[];
 ```
 
-Powyższe stwierdzenie wskazuje, że `x[]` mogą być używane z co najmniej jeden indeksy tablicy. W tym przypadku `i=p->x[a][b]` będą przekształcane w `i=p->GetX(a, b)`, i `p->x[a][b] = i` będą przekształcane w `p->PutX(a, b, i);`
+Powyższa instrukcja wskazuje, że `x[]` mogą być używane z co najmniej jednym indeksem tablicy. W takim przypadku `i=p->x[a][b]` zostanie włączona do `i=p->GetX(a, b)`, a `p->x[a][b] = i` zostanie włączona `p->PutX(a, b, i);`
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="example"></a>Przykład
 
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

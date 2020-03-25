@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161168"
 ---
 # <a name="nested-class-declarations"></a>Zagnieżdżone deklaracje klas
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w obrębie `BufferedIO`. Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
+`BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w `BufferedIO`. Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
 
 Klasy zagnieżdżone mogą bezpośrednio korzystać z nazw, nazwy typów, nazw statycznych składowych i wyliczeń tylko z otaczającej klasy. Aby używać nazw innych składowych klasy, należy użyć wskaźników, odwołań lub nazw obiektów.
 
@@ -92,11 +92,11 @@ int main()
 
 ## <a name="access-privilege-in-nested-classes"></a>Uprawnienia dostępu w zagnieżdżonych klasach
 
-Zagnieżdżanie klasy, w ramach innej klasy nie daje uprawnień dostępu do składowych klasy zagnieżdżonej. Podobnie funkcji elementów członkowskich otaczającej klasy nie mają specjalne dostępu do składowych klasy zagnieżdżone.
+Zagnieżdżanie klasy w innej klasie nie daje specjalnych uprawnień dostępu do funkcji składowych klasy zagnieżdżonej. Podobnie funkcje członkowskie otaczającej klasy nie mają specjalnego dostępu do elementów członkowskich klasy zagnieżdżonej.
 
-## <a name="member-functions-in-nested-classes"></a>Zaprzyjaźnione funkcje w zagnieżdżonych klasach
+## <a name="member-functions-in-nested-classes"></a>Funkcje składowe w klasach zagnieżdżonych
 
-Funkcji elementów członkowskich zadeklarowanych w klasach zagnieżdżonych można zdefiniować w zakresie pliku. Poprzedni przykład może być napisane tak:
+Funkcje składowe zadeklarowane w zagnieżdżonych klasach mogą być zdefiniowane w zakresie pliku. Powyższy przykład mógł zostać zapisany:
 
 ```cpp
 // member_functions_in_nested_classes.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-W powyższym przykładzie *kwalifikowana type-name* używana jest składnia do deklarowania nazwy funkcji. Deklaracji:
+W poprzednim przykładzie składnia *kwalifikowana-type-name* jest używana do deklarowania nazwy funkcji. Deklaracja:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-oznacza, że " `read` funkcja, która jest elementem członkowskim `BufferedInput` klasę, która znajduje się w zakresie `BufferedIO` klasy." Ponieważ ta deklaracja korzysta *kwalifikowana type-name* składni, możliwe są konstrukcje następującą postać:
+oznacza "funkcję `read`, która jest elementem członkowskim klasy `BufferedInput`, która znajduje się w zakresie klasy `BufferedIO`". Ponieważ ta deklaracja korzysta z składni *nazwy typu kwalifikowana* , możliwe są konstrukcje z następującej postaci:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,11 +148,11 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-Poprzednia deklaracja jest równoważna do poprzedniego, ale używa on **typedef** nazwę zamiast nazwy klas.
+Poprzednia deklaracja jest równoważna z poprzednią, ale używa nazwy **typedef** zamiast nazw klas.
 
 ## <a name="friend-functions-in-nested-classes"></a>Zaprzyjaźnione funkcje w zagnieżdżonych klasach
 
-Friend — funkcje zadeklarowane w klasie zagnieżdżonej są uznawane za w zakresie klasy zagnieżdżonej nie otaczającej klasy. Friend — funkcje uzyskać nie uprawnienia dostępu do członków ani funkcji elementów członkowskich otaczającej klasy. Jeśli chcesz użyć nazwy, która jest zadeklarowana w klasie zagnieżdżonej w funkcji zaprzyjaźnionej, funkcja zaprzyjaźniona jest zdefiniowana w zakresie pliku użyć kwalifikowanych nazw typów w następujący sposób:
+Zaprzyjaźnione funkcje zadeklarowane w klasie zagnieżdżonej są uważane za należące do zakresu klasy zagnieżdżonej, a nie otaczającej klasy. W związku z tym zaprzyjaźnione funkcje nie uzyskują specjalnych uprawnień dostępu do elementów członkowskich lub funkcji Członkowskich otaczającej klasy. Jeśli chcesz użyć nazwy, która jest zadeklarowana w klasie zagnieżdżonej w funkcji zaprzyjaźnionej, a funkcja zaprzyjaźniona jest zdefiniowana w zakresie pliku, użyj kwalifikowanych nazw typów w następujący sposób:
 
 ```cpp
 // friend_functions_and_nested_classes.cpp
@@ -198,14 +198,14 @@ int main()
 }
 ```
 
-Poniższy kod przedstawia funkcję `GetExtendedErrorStatus` zadeklarowana jako funkcja zaprzyjaźniona. W funkcji, która jest zdefiniowana w zakresie pliku, komunikat jest kopiowana z tablicy statycznej do składowej klasy. Należy pamiętać, że lepszej realizacji `GetExtendedErrorStatus` jest Zadeklaruj go jako:
+Poniższy kod przedstawia funkcję, `GetExtendedErrorStatus` zadeklarowana jako funkcja zaprzyjaźniona. W funkcji, która jest zdefiniowana w zakresie pliku, komunikat jest kopiowany z tablicy statycznej do składowej klasy. Należy pamiętać, że lepszą implementacją `GetExtendedErrorStatus` jest zadeklarować ją jako:
 
 ```cpp
 int GetExtendedErrorStatus( char *message )
 ```
 
-Poprzedni interfejs kilka klas może korzystać z usług tę funkcję, przekazując lokalizacji pamięci, gdzie mają być kopiowane komunikat o błędzie.
+W powyższym interfejsie kilka klas może korzystać z usług tej funkcji przez przekazanie lokalizacji pamięci, w której ma zostać skopiowany komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

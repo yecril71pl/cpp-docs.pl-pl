@@ -5,41 +5,41 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 45078d8e1bdbeb23dd311d915ba2cf47e42b2663
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194515"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Błąd narzędzi konsolidatora LNK2038
 
-> Wykryto niezgodność "*nazwa*": wartość "*value_1*"nie jest zgodna wartość"*value_2*" w *filename.obj*
+> wykryto niezgodność dla elementu "*name*": wartość "*value_1*" nie jest zgodna z wartością "*value_2*" w *pliku filename. obj*
 
-Niezgodność symboli została wykryta przez konsolidator. Ten błąd wskazuje, że różne części aplikacji, takimi jak biblioteki lub innych obiektów kodu czy połączeń aplikacji, używają sprzecznych definicji symbolu. [Wykrycia niezgodności](../../preprocessor/detect-mismatch.md) pragmy jest używane do definiowania takich symboli i wykrywanie ich wartości powodujących konflikt.
+Program łączący wykrył niezgodność symboli. Ten błąd wskazuje, że różne części aplikacji, w tym biblioteki lub inny kod obiektu, z którym łączy się aplikacja, używają definicji w konflikcie symboli. Dyrektywa pragma [wykrywania niezgodności](../../preprocessor/detect-mismatch.md) służy do definiowania takich symboli i wykrywania ich wartości powodujących konflikt.
 
-## <a name="possible-causes-and-solutions"></a>Możliwe przyczyny i potencjalne rozwiązania
+## <a name="possible-causes-and-solutions"></a>Możliwe przyczyny i rozwiązania
 
-Ten błąd może wystąpić, gdy plik obiektu w projekcie jest nieaktualny. Zanim spróbujesz innych rozwiązań tego błędu, należy wykonać czystą kompilację, aby upewnić się, że pliki obiektów są aktualne.
+Ten błąd może wystąpić, gdy plik obiektu w projekcie jest nieaktualny. Przed podjęciem próby wykonania innych rozwiązań tego błędu Wykonaj czystą kompilację, aby upewnić się, że pliki obiektów są aktualne.
 
-Program Visual Studio definiuje następujące symbole, aby zapobiec łączeniu niezgodnego kodu, który może spowodować błędy czasu wykonywania lub inne nieoczekiwane zachowania.
+Program Visual Studio definiuje następujące symbole, aby zapobiec łączeniu niezgodnego kodu, co może spowodować błędy w czasie wykonywania lub inne nieoczekiwane zachowanie.
 
-- `_MSC_VER` Wskazuje numery wersji głównych i pomocniczych firmy Microsoft C++ kompilatora (MSVC), który jest używany do tworzenia aplikacji lub biblioteki. Kod, który jest kompilowany przy użyciu jednej wersji MSVC jest niezgodny z kodem, który jest kompilowany przy użyciu wersji zawierającej różnych głównych i pomocniczych numerów wersji. Aby uzyskać więcej informacji, zobacz `_MSC_VER` w [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` wskazuje główne i pomocnicze numery wersji kompilatora firmy Microsoft C++ (MSVC), które są używane do kompilowania aplikacji lub biblioteki. Kod kompilowany przy użyciu jednej wersji MSVC jest niezgodny z kodem, który jest kompilowany przy użyciu wersji, która ma inne główne i pomocnicze numery wersji. Aby uzyskać więcej informacji, zobacz `_MSC_VER` w [wstępnie zdefiniowanych makrach](../../preprocessor/predefined-macros.md).
 
-   Jeśli tworzysz łącze do biblioteki, która nie jest zgodna z wersją MSVC, który jest używany i nie możesz nabyć lub skompilować zgodnej wersji biblioteki, aby skompilować projekt, można użyć starszej wersji kompilatora: Zmień  **Zestaw narzędzi platformy** właściwości projektu wcześniejszej zestawu narzędzi. Aby uzyskać więcej informacji, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Jeśli łączysz się z biblioteką niezgodną z używaną wersją programu MSVC i nie możesz uzyskać ani skompilować zgodnej wersji biblioteki, możesz użyć starszej wersji kompilatora do skompilowania projektu: Zmień właściwość zestawu **narzędzi platformy** dla projektu na wcześniejszy zestaw narzędzi. Aby uzyskać więcej informacji, zobacz [jak: modyfikowanie platformy docelowej i zestawu narzędzi platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- `_ITERATOR_DEBUG_LEVEL` Wskazuje poziom zabezpieczeń i funkcje debugujące, które są włączone w standardowej biblioteki języka C++. Te funkcje mogą zmienić reprezentację niektórych obiektów standardowej biblioteki języka C++ i tym samym są zgodne z tymi, które używają różnych zabezpieczeń i funkcji do debugowania. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
+- `_ITERATOR_DEBUG_LEVEL` wskazuje poziom zabezpieczeń i funkcji debugowania, które są włączone w C++ standardowej bibliotece. Te funkcje mogą zmieniać reprezentację niektórych C++ standardowych obiektów biblioteki, a tym samym sprawiać, że są one niezgodne z tymi, które używają różnych funkcji zabezpieczeń i debugowania. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary` Wskazuje wersję środowiska wykonawczego standardowej biblioteki języka C++ i C, który jest używany przez aplikację lub bibliotekę. Kod, który używa jednej wersji środowiska wykonawczego standardowej biblioteki języka C++ lub C jest niezgodny z kodem, który korzysta z innej wersji. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` wskazuje wersję biblioteki C++ standardowej i środowiska uruchomieniowego języka C, która jest używana przez aplikację lub bibliotekę. Kod korzystający z jednej wersji biblioteki C++ standardowej lub środowiska uruchomieniowego języka C jest niezgodny z kodem, który używa innej wersji. Aby uzyskać więcej informacji, zobacz [/MD,/MT,/LD (Korzystanie z biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT` Wskazuje, że kod, który używa [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) jest połączony z obiektami skompilowanymi przy użyciu różnych ustawienie [/ZW](../../build/reference/zw-windows-runtime-compilation.md) — opcja kompilatora. (**/ZW** obsługuje C++/CX.) Kod, który używa lub zależy od PPL, muszą być skompilowane, korzystając z tych samych **/ZW** ustawienia, która jest używana w pozostałej części aplikacji.
+- `_PPLTASKS_WITH_WINRT` wskazuje, że kod, który używa [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) jest połączony z obiektami skompilowanymi przy użyciu innego ustawienia dla opcji kompilatora [/zw](../../build/reference/zw-windows-runtime-compilation.md) . ( **/Zw** obsługuje C++/CX.) Kod, który używa lub zależy od PPL, musi być skompilowany przy użyciu tego samego ustawienia **/zw** , które jest używane w pozostałej części aplikacji.
 
-Upewnij się, że wartości tych symboli są spójne dla projektów w rozwiązaniu programu Visual Studio i są one zgodne z kodem i bibliotekami, które łączą się aplikacje.
+Upewnij się, że wartości tych symboli są spójne w projektach w rozwiązaniu programu Visual Studio, a także że są one spójne z kodem i bibliotekami, z którymi łączy się aplikacja.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteki innych firm i Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteką innych firm i Vcpkg
 
-Jeśli zostanie wyświetlony ten błąd, jeśli próbujesz skonfigurować biblioteki innych firm w ramach kompilacji, należy rozważyć użycie [Vcpkg](../../vcpkg.md), do Visual C++ Menedżera pakietów, instalowanie i tworzenie biblioteki. Vcpkg obsługująca duży i rosnący [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports)i ustawia właściwości konfiguracji i zależności wymagane do pomyślnej kompilacji w ramach projektu. Aby uzyskać więcej informacji, zobacz powiązane [blogu Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) wpis.
+Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, należy rozważyć użycie [Vcpkg](../../vcpkg.md), Menedżera pakietów Visual C++ Package, aby zainstalować i skompilować bibliotekę. Program Vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu. Aby uzyskać więcej informacji, zobacz odpowiedni wpis w [blogu wizualnym C++ ](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

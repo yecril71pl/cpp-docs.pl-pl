@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1097
 ms.assetid: dc6868b3-8425-4920-858a-774ad0c4c5f1
-ms.openlocfilehash: 52339a00511c8d41270fff8c9ca532ac193d8df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f42d63ada85c2f27fc9681e6168c9f80e7f96cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298344"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193410"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Błąd krytyczny NMAKE U1097
 
-Składnia nazwy pliku części wymaga elementu zależnego
+Składnia nazwy pliku-części wymaga zależnych
 
-Bieżący zależności nie ma jawnych zależnych od ustawień lokalnych lub niejawne zależnych od ustawień lokalnych. Składnia nazwy pliku części, używający procent (`%`) specyfikator reprezentuje składniki pierwszy zależnego bieżącą lokalizację docelową.
+Bieżąca zależność nie ma jawnie zależnej lub niejawnej zależności. Składnia nazwy pliku-części, która używa specyfikatora procentu (`%`), reprezentuje składniki pierwszego zależne od bieżącego elementu docelowego.

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d868939425c11f13dffd84e28c1afee45e3b11a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197305"
 ---
 # <a name="c-runtime-error-r6017"></a>Błąd czasu wykonania języka C R6017
 
-Błąd nieoczekiwanego blokady wielowątkowych
+nieoczekiwany błąd blokady wielowątkowej
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez wadę w kodzie aplikacji.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem wewnętrzny. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane usterką w kodzie aplikacji.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Proces Odebrano nieoczekiwany błąd podczas próby uzyskania dostępu do języka C środowiska uruchomieniowego wielowątkowych blokady dla zasobu systemowego. Ten błąd występuje przeważnie, jeśli proces przypadkowo zmienia dane sterty środowiska uruchomieniowego. Jednak to może również być spowodowane błąd wewnętrzny w bibliotece wykonawczej lub kodu systemu operacyjnego.
+Proces otrzymał nieoczekiwany błąd podczas próby uzyskania dostępu do blokady wielowątkowej środowiska uruchomieniowego C dla zasobu systemowego. Ten błąd występuje zazwyczaj, gdy proces przypadkowo zmienia dane sterty środowiska uruchomieniowego. Jednak może być również przyczyną błędu wewnętrznego w bibliotece środowiska uruchomieniowego lub kodu systemu operacyjnego.
 
-Aby rozwiązać ten problem, sprawdź, czy błędy uszkodzenia sterty w kodzie. Aby uzyskać więcej informacji i przykładów, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, czy są przy użyciu najnowszych pakietów redystrybucyjnych dla danego wdrożenia aplikacji. Aby uzyskać informacje, zobacz [wdrożenia w programie Visual C++](../../windows/deployment-in-visual-cpp.md).
+Aby rozwiązać ten problem, sprawdź, czy w kodzie nie występują usterki dotyczące uszkodzenia sterty. Aby uzyskać więcej informacji i przykładów, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, czy używasz najnowszych pakietów redystrybucyjnych dla wdrożenia aplikacji. Aby uzyskać więcej informacji, zobacz [wdrażanie C++w programie Visual ](../../windows/deployment-in-visual-cpp.md).

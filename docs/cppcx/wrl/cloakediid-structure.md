@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214113"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid — Struktura
 
-Wskazuje, aby `RuntimeClass`, `Implements` i `ChainInterfaces` określonego interfejsu nie jest dostępny na liście IID szablonów.
+Wskazuje `RuntimeClass`, `Implements` i `ChainInterfaces` szablonów, których określony interfejs nie jest dostępny na liście IID.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +27,12 @@ struct CloakedIid : T;
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Interfejs który jest ukryty (osłonięty).
+*&*<br/>
+Interfejs, który jest ukryty (zamaskowany).
 
 ## <a name="remarks"></a>Uwagi
 
-Poniżej przedstawiono przykładowy sposób **cloakediid —** służy: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+Poniżej przedstawiono przykład sposobu użycia **CloakedIid —** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -42,10 +42,10 @@ Poniżej przedstawiono przykładowy sposób **cloakediid —** służy: `struct 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

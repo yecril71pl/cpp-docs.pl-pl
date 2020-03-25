@@ -1,5 +1,5 @@
 ---
-title: 'Operatory relacyjne: &lt;, &gt;, &lt;=, i &gt;='
+title: 'Operatory relacyjne: &lt;, &gt;, &lt;= i &gt;='
 ms.date: 11/04/2016
 f1_keywords:
 - <
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-ms.openlocfilehash: 52a3c10e6da42f6c181d3f93de13168e22141bec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38e05b78d334ca690d9523797f7ca1813834c5d3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179123"
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>Operatory relacyjne: &lt;, &gt;, &lt;=, i &gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>Operatory relacyjne: &lt;, &gt;, &lt;= i &gt;=
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,17 +35,17 @@ expression >= expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory relacyjne binarne określają następujące relacje:
+Binarne operatory relacyjne określają następujące relacje:
 
-- Mniej niż (**\<**)
+- Mniejsze niż ( **\<** )
 
-- Większa (**>**)
+- Większe niż ( **>** )
 
-- Mniejsze niż lub równe (**\<=**)
+- Mniejsze niż lub równe ( **\<=** )
 
-- Większa niż lub równe (**>=**)
+- Większe niż lub równe ( **>=** )
 
-Operatory relacyjne mają łączność od lewej do prawej. Oba operandy operatory relacyjne musi być typu arytmetycznego lub wskaźnikowego. Dają one wartości typu **bool**. Wartość zwracana jest **false** (0), jeśli relacja wyrażenia jest wartość FAŁSZ; w przeciwnym razie, wartość zwracana jest **true** (1).
+Operatory relacyjne mają łączność od lewej do prawej. Oba operandy operatorów relacyjnych muszą być typu arytmetycznego lub wskaźnika. Dają one wartości typu **bool**. Zwracana wartość ma wartość **false** (0), jeśli relacja w wyrażeniu ma wartość false. w przeciwnym razie zwrócona wartość jest **równa true** (1).
 
 ## <a name="example"></a>Przykład
 
@@ -64,35 +64,35 @@ int main() {
 }
 ```
 
-Wyrażenia w poprzednim przykładzie muszą być ujęte w nawiasy, ponieważ operator wstawiania strumienia (**<<**) mają wyższy priorytet niż operatory relacyjne. Dlatego pierwsze wyrażenie bez nawiasów oceniono jako:
+Wyrażenia w poprzednim przykładzie muszą być ujęte w nawiasy, ponieważ operator wstawiania strumienia ( **<<** ) ma wyższy priorytet niż operatory relacyjne. W związku z tym pierwsze wyrażenie bez nawiasów będzie oceniane jako:
 
 ```cpp
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");
 ```
 
-Popularne konwersje arytmetyczne omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandy typów arytmetycznych.
+Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów typów arytmetycznych.
 
 ## <a name="comparing-pointers"></a>Porównywanie wskaźników
 
-Gdy dwa wskaźniki do obiektów tego samego typu są porównywane, wynik zależy od lokalizacji obiektów wskazywanych w przestrzeni adresowej programu. Wskaźniki można również porównać do stałego wyrażenia, które ocenia na 0 lub do wskaźnika typu `void *`. Jeśli wskaźnik jest porównywany wskaźnika typu `void *`, drugi wskaźnik jest niejawnie konwertowany na typ `void *`. Następnie dokonywane jest porównanie.
+Gdy dwa wskaźniki do obiektów tego samego typu są porównywane, wynik zależy od lokalizacji obiektów wskazywanych w przestrzeni adresowej programu. Wskaźniki można także porównać do stałego wyrażenia, które ma wartość 0 lub do wskaźnika typu `void *`. Jeśli porównywany jest wskaźnik na wskaźniku typu `void *`, inny wskaźnik jest niejawnie konwertowany na typ `void *`. Następnie dokonywane jest porównanie.
 
 Nie można porównać dwóch wskaźników różnego typu, chyba że:
 
 - Jeden typ to typ klasy pochodzącej z drugiego typu.
 
-- Co najmniej jeden ze wskaźników jest jawnie konwertowany (rzutowany) na typ `void *`. (Drugi wskaźnik jest niejawnie konwertowany na typ `void *` do konwersji.)
+- Co najmniej jeden ze wskaźników jest jawnie konwertowany (rzutowany) na typ `void *`. (Drugi wskaźnik jest niejawnie konwertowany na typ `void *` dla konwersji).
 
 Wynik porównania dwóch wskaźników tego samego typu, które wskazują ten sam obiekt zawsze będzie równy. Jeżeli porównywane są dwa wskaźniki do niestatycznych elementów członkowskich obiektu, obowiązują następujące zasady:
 
-- Jeśli typem klasy nie jest **Unii**, a jeśli dwa elementy członkowskie nie są rozdzielone *specyfikator dostępu*, takich jak **publicznych**, **chronione**, lub **prywatnej**, wskaźnik do składowej zadeklarowanej ostatnio da większy wynik porównania niż wskaźnik do składowej zadeklarowanej wcześniej.
+- Jeśli typ klasy nie jest **Unią**, a dwa elementy członkowskie nie są oddzielone *specyfikatorem dostępu*, takim jak **Public**, **Protected**lub **Private**, wskaźnik do składowej zadeklarowanej jako Last zostanie porównany na wyższy niż wskaźnik do składowej zadeklarowanej wcześniej.
 
-- Jeśli dwa elementy członkowskie są rozdzielone *specyfikator dostępu*, wyniki są niezdefiniowane.
+- Jeśli dwa elementy członkowskie są oddzielone *specyfikatorem dostępu*, wyniki są niezdefiniowane.
 
-- Jeśli typem klasy jest **Unii**, wskaźniki do różnych składowych danych w tym **Unii** porównania równości.
+- Jeśli typ klasy jest **Unią**, wskaźniki do różnych składowych danych w tej **Unii** są równe.
 
 Jeśli dwa wskaźniki wskazują elementy tej samej tablicy lub na pierwszy element poza tablicą, wskaźnik do obiektu z wyższym indeksem dolnym daje większy wynik porównania. Porównanie wskaźników jest gwarantowane jako prawidłowe tylko wtedy, gdy wskaźniki dotyczą obiektów w jednej tablicy lub do pierwszej lokalizacji poza tablicą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

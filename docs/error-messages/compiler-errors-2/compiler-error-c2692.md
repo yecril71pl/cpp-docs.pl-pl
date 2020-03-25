@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2692
 ms.assetid: 02ade3b4-b757-448b-b065-d7d71bc3f441
-ms.openlocfilehash: c469f4944417c9116c7316b01642dd4b370b8c4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ce57cd50e9ec83cf80ec64e14f49eb9714f9208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177095"
 ---
 # <a name="compiler-error-c2692"></a>Błąd kompilatora C2692
 
-"nazwa_funkcji": wymagano w pełni prototypowanych funkcji w kompilatorze języka C z "/ clr" opcja
+"function_name": funkcje w pełni prototypowe wymagane w kompilatorze języka C z opcją "/CLR"
 
-W przypadku kodu zarządzanego kompilowania dla platformy .NET, kompilator języka C wymaga deklaracji funkcji ANSI. Ponadto, jeśli funkcja nie przyjmuje żadnych parametrów, go jawnie zadeklarować `void` jako typ parametru.
+Podczas kompilowania kodu zarządzanego .NET kompilator języka C wymaga deklaracji funkcji ANSI. Ponadto, jeśli funkcja nie przyjmuje żadnych parametrów, musi jawnie zadeklarować `void` jako typ parametru.

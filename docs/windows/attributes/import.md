@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514623"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166839"
 ---
 # <a name="import"></a>import
 
@@ -32,9 +32,9 @@ Nazwa pliku. idl, który ma zostać zaimportowany do biblioteki typów w bieżą
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **Import** C++ powoduje umieszczenie `import "docobj.idl"` instrukcji poniżej instrukcji w wygenerowanym pliku IDL. `#import` Atrybut **Import** ma takie same funkcje jak atrybut [Import](/windows/win32/Midl/import) MIDL.
+Atrybut **Import** C++ powoduje umieszczenie instrukcji `#import` poniżej instrukcji `import "docobj.idl"` w wygenerowanym pliku IDL. Atrybut **Import** ma takie same funkcje jak atrybut [Import](/windows/win32/Midl/import) MIDL.
 
-Atrybut **Import** umieszcza tylko określony plik w pliku. idl, który zostanie wygenerowany przez projekt; atrybut **Import** nie pozwala na wywoływanie konstrukcji w określonym pliku z kodu źródłowego w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodu źródłowego w projekcie, użyj [#import](../../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` atrybutu albo możesz dołączyć plik h dla *idl_file*, jeśli istnieje plik. h.
+Atrybut **Import** umieszcza tylko określony plik w pliku. idl, który zostanie wygenerowany przez projekt; atrybut **Import** nie pozwala na wywoływanie konstrukcji w określonym pliku z kodu źródłowego w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodu źródłowego w projekcie, użyj [#import](../../preprocessor/hash-import-directive-cpp.md) i atrybutu `embedded_idl` lub można dołączyć plik h dla *idl_file*, jeśli istnieje plik. h.
 
 ## <a name="example"></a>Przykład
 
@@ -68,12 +68,12 @@ library MyLib {
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

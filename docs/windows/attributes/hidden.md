@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168099"
 ---
 # <a name="hidden"></a>hidden
 
@@ -39,12 +39,12 @@ Zobacz przykład dla [powiązania](bindable.md) z przykładem, jak używać **uk
 |-|-|
 |**Dotyczy**|**interfejs**, **Klasa**, **Struktura**, metoda, właściwość|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**Klasa coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: 6955d755897d326479d2b3789edb02ff66806175
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177984"
 ---
 # <a name="member-function-templates"></a>Szablony funkcji członkowskich
 
-Termin szablonem składowej odnosi się do zarówno szablony funkcji składowych i zagnieżdżone szablony klas. Szablony funkcji Członkowskich są funkcje szablonu, które należą do klasy lub szablonu klasy.
+Termin szablon elementu członkowskiego odwołuje się zarówno do szablonów funkcji składowych, jak i szablonów klas zagnieżdżonych. Szablony funkcji Członkowskich są funkcjami szablonu, które są elementami członkowskimi szablonu klasy lub klasy.
 
-Funkcje składowe mogą być szablonów funkcji w wielu kontekstach. Wszystkie funkcje szablonów klas są rodzajowe, ale nie są określone jako szablony składowych lub szablony funkcji Członkowskich. Jeśli te funkcje elementów członkowskich wykonać swoje własne argumentów szablonu, są one traktowane jako szablony funkcji Członkowskich.
+Funkcje składowe mogą być szablonami funkcji w kilku kontekstach. Wszystkie funkcje szablonów klas są ogólne, ale nie są określane jako szablony elementów członkowskich lub szablony funkcji składowych. Jeśli te funkcje elementu członkowskiego korzystają z własnych argumentów szablonu, są one uznawane za szablony funkcji składowych.
 
 ## <a name="example"></a>Przykład
 
-Szablony funkcji składowych klas nieszablonu lub szablonu są deklarowane jako szablony funkcji za pomocą swoich parametrów szablonu.
+Szablony funkcji członkowskich klas nienależących do szablonu lub szablonu są deklarowane jako szablony funkcji ze swoimi parametrami szablonu.
 
 ```cpp
 // member_function_templates.cpp
@@ -38,7 +38,7 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano element członkowski funkcji szablonu klasy szablonu.
+Poniższy przykład pokazuje szablon funkcji składowej klasy szablonu.
 
 ```cpp
 // member_function_templates2.cpp
@@ -81,11 +81,11 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Klasy lokalnej nie mogą mieć szablonów składowych.
+Lokalne klasy nie mogą mieć szablonów składowych.
 
-Szablon elementów członkowskich nie może mieć funkcji wirtualnych i nie można przesłonić funkcje wirtualne z klasy bazowej, gdy są one zadeklarowane z taką samą nazwę jak funkcją wirtualną klasę bazową.
+Funkcje szablonu elementu członkowskiego nie mogą być funkcjami wirtualnymi i nie mogą przesłonić funkcji wirtualnych z klasy podstawowej, gdy są one zadeklarowane przy użyciu takiej samej nazwy jak funkcja wirtualna klasy bazowej.
 
-Poniższy przykład przedstawia oparte na szablonach konwersja zdefiniowana przez użytkownika:
+W poniższym przykładzie przedstawiono zdefiniowaną przez użytkownika konwersję:
 
 ```cpp
 // templated_user_defined_conversions.cpp
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony funkcji](../cpp/function-templates.md)

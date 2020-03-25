@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3334
 ms.assetid: e972c625-77e7-4022-8aba-e1db01d7a0d7
-ms.openlocfilehash: 4562ddda90e31fdde50369b97875186b002eebc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7bebbb925a71189fc692bda0bce8eb41ad1499
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300677"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201231"
 ---
 # <a name="compiler-error-c3334"></a>Błąd kompilatora C3334
 
-Nie można #import uszkodzony wpisz biblioteki
+nie można #import uszkodzonych bibliotek typów
 
-Plik biblioteki w `#import` instrukcji jest uszkodzony i nie mogą być używane przez kompilator.  Uszkodzenie mogą pochodzić z nieprawidłowe generowanie modułu, w wyniku uszkodzenia dysku, lub jeśli plik binarny w jakiś sposób edytować i modyfikować.
+Plik biblioteki w instrukcji `#import` jest uszkodzony i nie może być używany przez kompilator.  Uszkodzenie może pochodzić z nieprawidłowej generacji modułu, uszkodzenia dysku lub, jeśli plik binarny był w jakiś sposób edytowany i modyfikowany.
 
-Aby uzyskać więcej informacji, zobacz [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+Aby uzyskać więcej informacji, zobacz [#import dyrektywie](../../preprocessor/hash-import-directive-cpp.md).

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - restrictions, termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e
-ms.openlocfilehash: 6c39407270037756c55dc42aed80e1d04616c9ee
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: befe181a41ed418a4a824b131e741a9f02f90e38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246384"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179071"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ograniczenia dotyczące programu obsługi zakończenia
 
@@ -21,7 +21,7 @@ Ponadto niektóre rodzaje kodu dozwolone w programie obsługi zakończenia dają
 
 Instrukcja **Return** w bloku instrukcji **__finally** przedstawia przybliżoną taką samą sytuację. Kontrolka powraca do bezpośredniego obiektu wywołującego funkcji, która zawiera procedurę obsługi zakończenia. Jeśli system spowodował odtworzenie stosu, ten proces jest zatrzymany, a program będzie kontynuował działanie tak, jakby nie został zgłoszony wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

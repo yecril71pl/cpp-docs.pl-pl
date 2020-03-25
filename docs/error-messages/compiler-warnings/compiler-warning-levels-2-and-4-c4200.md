@@ -1,25 +1,25 @@
 ---
-title: Ostrzeżenie (poziomy 2 i 4) kompilatora — od C4200
+title: Ostrzeżenie kompilatora (poziomy 2 i 4) — od C4200
 ms.date: 11/04/2016
 f1_keywords:
 - C4200
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0750fe50e18214e0841eff6b3459438e9a6aec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197954"
 ---
-# <a name="compiler-warning-levels-2-and-4-c4200"></a>Ostrzeżenie (poziomy 2 i 4) kompilatora — od C4200
+# <a name="compiler-warning-levels-2-and-4-c4200"></a>Ostrzeżenie kompilatora (poziomy 2 i 4) — od C4200
 
-użyto niestandardowego rozszerzenia: tablica o rozmiarze zero w struct/union
+użyto niestandardowego rozszerzenia: tablica o rozmiarze zerowym w strukturze/Unii
 
-Wskazuje, że struktura lub Unia zawiera tablicę o rozmiarze zero.
+Wskazuje, że struktura lub Unia zawiera tablicę o rozmiarze zerowym.
 
-Deklaracja tablicy o rozmiarze zero jest rozszerzeniem firmy Microsoft. To powoduje, że ostrzeżenia poziomu 2, gdy plik C++ jest kompilowany i ostrzeżenia poziomu 4 podczas kompilowania pliku C. C++Kompilacja zapewnia również tego ostrzeżenia: "Nie można wygenerować operatora domyślnego elementu ctor kopiowania lub przypisania kopiowania po UDT zawiera zerowy rozmiar tablicy." Ten przykład generuje ostrzeżenie — od C4200:
+Deklaracja tablicy o rozmiarze zerowym jest rozszerzeniem firmy Microsoft. Powoduje to wyświetlenie ostrzeżenia poziomu 2 podczas kompilowania C++ pliku oraz ostrzeżenia poziomu 4 podczas kompilowania pliku języka C. C++Kompilacja daje również następujące ostrzeżenie: "nie można wygenerować operatora Copy-ctor lub Copy-przypisania, gdy UDT zawiera tablicę o rozmiarze zerowym". Ten przykład generuje ostrzeżenie — od C4200:
 
 ```cpp
 // C4200.cpp
@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-To rozszerzenie niestandardowe jest często używane do kodu interfejsu ze strukturami danych zewnętrznych, które mają o zmiennej długości. Jeśli ten scenariusz ma zastosowanie do kodu, możesz wyłączyć to ostrzeżenie:
+To niestandardowe rozszerzenie jest często używane do interfejsu kodu z zewnętrznymi strukturami danych o zmiennej długości. Jeśli ten scenariusz ma zastosowanie do kodu, można wyłączyć Ostrzeżenie:
 
 ## <a name="example"></a>Przykład
 

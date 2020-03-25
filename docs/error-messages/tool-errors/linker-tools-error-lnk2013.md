@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299071"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194749"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Błąd narzędzi konsolidatora LNK2013
 
-przepełnienie naprawy typ naprawy. Element docelowy "symbol name" jest poza zakresem
+przepełnienie naprawy typu naprawy. Obiekt docelowy "Nazwa symbolu" jest poza zakresem
 
-Konsolidator nie pasują niezbędne adres lub przesunięcie do podanej instrukcji, ponieważ symbol docelowy jest zbyt daleko od lokalizacji instrukcji.
+Konsolidator nie może dopasować wymaganego adresu lub przesunięcia do podanych instrukcji, ponieważ symbol docelowy jest zbyt daleko od lokalizacji instrukcji.
 
-Ten problem można rozwiązać przez utworzenie wielu obrazów lub za pomocą [/ORDER](../../build/reference/order-put-functions-in-order.md) opcja tak instrukcji i docelowy są ze sobą bliżej.
+Ten problem można rozwiązać przez utworzenie wielu obrazów lub użycie opcji [/Order](../../build/reference/order-put-functions-in-order.md) , aby instrukcje i cel zostały bliżej siebie.
 
-Gdy nazwa symbolu jest symbol zdefiniowany przez użytkownika (i nie symbol generowanych przez kompilator), możesz wypróbować następujące czynności, aby naprawić błąd:
+Gdy nazwa symbolu jest symbolem zdefiniowanym przez użytkownika (a nie symbolem wygenerowanym przez kompilator), możesz również spróbować wykonać następujące czynności, aby rozwiązać ten problem:
 
-- Zmienić statyczne funkcji niestatycznych.
+- Zmień statyczną funkcję na niestatyczną.
 
-- Zmień nazwę sekcji kodu, zawierającej funkcję statyczną, aby była taka sama jak obiekt wywołujący.
+- Zmień nazwę sekcji kodu zawierającej funkcję statyczną tak, aby była taka sama jak obiekt wywołujący.
 
-Użyj `DUMPBIN /SYMBOLS`, aby sprawdzić, czy funkcja jest statyczne.
+Użyj `DUMPBIN /SYMBOLS`, aby sprawdzić, czy funkcja jest statyczna.
