@@ -9,22 +9,22 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169334"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Przeskakiwanie do etykiet w asemblerze wbudowanym
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Jak zwykłe C lub C++ etykiety, etykiety w `__asm` bloku ma zakres w całej funkcji, w którym zdefiniowano (nie tylko w bloku). Zarówno instrukcje zestawu i `goto` instrukcji przeskoczyć do etykiety wewnątrz lub na zewnątrz `__asm` bloku.
+Podobnie jak zwykła C lub C++ etykieta, etykieta w bloku `__asm` ma zakres w całej funkcji, w której jest zdefiniowany (nie tylko w bloku). Instrukcje dotyczące zestawu i instrukcje `goto` mogą przeskoczyć do etykiet wewnątrz lub na zewnątrz bloku `__asm`.
 
-Etykiety zdefiniowane w `__asm` bloków nie jest uwzględniana wielkość liter; obie `goto` instrukcji i instrukcje montażu mogą odwoływać się do tych etykiet bez uwzględniania wielkości liter. Etykiety C i C++ jest uwzględniana tylko wtedy, gdy jest używany przez `goto` instrukcji. Instrukcje zestawu można przeskoczyć do etykiety C lub C++ bez uwzględniania wielkości liter.
+Etykiety zdefiniowane w blokach `__asm` nie uwzględniają wielkości liter. instrukcje `goto` instrukcji i zestawu mogą odwoływać się do tych etykiet bez względu na wielkość liter. W języku C++ C i etykietach jest rozróżniana wielkość liter, gdy są używane przez instrukcje `goto`. Instrukcje zestawu mogą przeskoczyć do etykiety C C++ lub bez względu na wielkość liter.
 
-Poniższy kod pokazuje wszystkie permutacji:
+Poniższy kod przedstawia wszystkie permutacje:
 
 ```cpp
 void func( void )
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Nie używaj nazwy funkcji biblioteki C jako etykiety w `__asm` bloków. Na przykład możesz chcieć wykorzystać do użycia `exit` jako etykietę w następujący sposób:
+Nie używaj nazw funkcji biblioteki języka C jako etykiet w blokach `__asm`. Na przykład możesz być skłonny do używania `exit` jako etykiety w następujący sposób:
 
 ```cpp
 ; BAD TECHNIQUE: using library function name as label
@@ -66,9 +66,9 @@ exit:
    ; More __asm code follows
 ```
 
-Ponieważ **wyjść** jest nazwą funkcji biblioteki C, ten kod może spowodować, że przechodzenie do **wyjść** zamiast funkcji do żądanej lokalizacji.
+Ponieważ **Exit** jest nazwą funkcji biblioteki języka C, ten kod może spowodować przeskoczenie do funkcji **Exit** zamiast do żądanej lokalizacji.
 
-Jak MASM programy symboli dolara (`$`) stanowi bieżącą wartość licznika lokalizacji. Jest etykietę dla instrukcji obecnie składany. W `__asm` bloków, głównie jest zapewnienie przechodzi długo warunkowego:
+Podobnie jak w przypadku programów MASM symbol dolara (`$`) służy jako bieżąca wartość licznika lokalizacji. Jest to etykieta dla aktualnie składanej instrukcji. W blokach `__asm`, jego głównym zastosowaniem jest wykonywanie długich skoków warunkowych:
 
 ```cpp
    jne $+5 ; next instruction is 5 bytes long
@@ -79,8 +79,8 @@ Jak MASM programy symboli dolara (`$`) stanowi bieżącą wartość licznika lok
 farlabel:
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

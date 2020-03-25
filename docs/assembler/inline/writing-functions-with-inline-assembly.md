@@ -7,18 +7,18 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169061"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Pisanie funkcji w zestawie wbudowanym
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Jeśli piszesz funkcji z kodem asemblera wbudowanego, jest łatwo przekazywać argumenty do funkcji i zwracanie wartości z niego. W następującym przykładzie porównano funkcji najpierw jest przeznaczony dla stosowania oddzielnego asemblera i ulegną asemblera wbudowanego. Wywołana funkcja `power2`, otrzymuje dwa parametry, mnożenie pierwszy parametr przez 2 do potęgi równej drugi parametr. Przeznaczony dla stosowania oddzielnego asemblera, funkcja może wyglądać następująco:
+Jeśli piszesz funkcję z wbudowanym kodem zestawu, można łatwo przekazywać argumenty do funkcji i zwracać wartość z niej. Poniższe przykłady porównują funkcję, która najpierw została zapisywana dla oddzielnego asemblera, a następnie ponownie napisano dla asemblera wbudowanego. Funkcja o nazwie `power2`odbiera dwa parametry, mnożąc pierwszy parametr o wartość 2 do potęgi drugiego parametru. W przypadku osobnego asemblera funkcja może wyglądać następująco:
 
 ```asm
 ; POWER.ASM
@@ -42,11 +42,11 @@ _TEXT   ENDS
         END
 ```
 
-Ponieważ jest on przeznaczony dla stosowania oddzielnego asemblera, funkcja wymaga kroki oddzielne źródło pliku i asemblacji i łączenia. C i C++ argumenty funkcji są zazwyczaj przekazywane na stosie, dlatego ta wersja `power2` funkcja uzyskuje dostęp do argumentów według ich położenia na stosie. (Należy pamiętać, że **modelu** dyrektywy, dostępne w MASM i innych asemblerów umożliwia również dostęp do argumentów stosu i zmiennych lokalnych stosu według nazwy.)
+Ponieważ jest zapisywana dla oddzielnego asemblera, funkcja wymaga oddzielnego pliku źródłowego oraz zestawu i kroków łącza. Argumenty funkcji C++ C i są zwykle przekazane na stosie, więc ta wersja funkcji `power2` uzyskuje dostęp do jej argumentów przez ich pozycje na stosie. (Należy zauważyć, że dyrektywa **modelu** , dostępna w MASM i innych asemblerach, umożliwia również dostęp do argumentów stosu i lokalnych zmiennych stosu według nazwy).
 
 ## <a name="example"></a>Przykład
 
-Ten program zapisuje `power2` funkcji z wbudowany kod asemblera:
+Ten program zapisuje funkcję `power2` przy użyciu wbudowanego kodu zestawu:
 
 ```cpp
 // Power2_inline_asm.c
@@ -74,12 +74,12 @@ int power2( int num, int power )
 }
 ```
 
-Wbudowane wersję `power2` funkcja odnosi się do jego argumentów według nazwy i pojawia się w tym samym pliku źródłowym jako pozostałej części programu. Ta wersja również wymaga mniejszej liczby instrukcje zestawu.
+Wersja wbudowana funkcji `power2` odnosi się do jej argumentów według nazwy i pojawia się w tym samym pliku źródłowym co reszta programu. Ta wersja wymaga również mniej instrukcji dotyczących zestawu.
 
-Ponieważ wbudowane wersję `power2` nie jest wykonywany C `return` instrukcji powoduje nieszkodliwe ostrzeżenie w przypadku kompilacji na poziom ostrzeżeń 2 lub nowszej. Funkcja zwraca wartość, ale kompilator nie wiadomo, że w przypadku braku `return` instrukcji. Możesz użyć [ostrzeżenie #pragma](../../preprocessor/warning.md) Aby wyłączyć generowanie to ostrzeżenie.
+Ponieważ wbudowana wersja `power2` nie wykonuje instrukcji C `return`, powoduje to nieszkodliwe Ostrzeżenie w przypadku kompilowania na poziomie ostrzeżeń 2 lub wyższym. Funkcja zwraca wartość, ale kompilator nie może stwierdzić, czy w nieobecności instrukcji `return`. Aby wyłączyć generowanie tego ostrzeżenia, można użyć [ostrzeżenia #pragma](../../preprocessor/warning.md) .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183729"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188938"
 ---
 # <a name="false-c"></a>false (C++)
 
-Słowo kluczowe jest jedną z dwóch wartości do zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenia warunkowego jest teraz **true** wyrażenia logicznego). Na przykład jeśli `i` jest zmienną typu **bool**, `i = false;` instrukcja przypisuje **false** do `i`.
+Słowo kluczowe jest jedną z dwóch wartości dla zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenie warunkowe to teraz **prawdziwe** wyrażenie logiczne). Na przykład jeśli `i` jest zmienną typu **bool**, instrukcja `i = false;` przypisuje **Fałsz** do `i`.
 
 ## <a name="example"></a>Przykład
 
@@ -37,6 +37,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

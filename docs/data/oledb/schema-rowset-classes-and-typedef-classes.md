@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444145"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209706"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 
@@ -598,7 +598,7 @@ W poniższej tabeli przedstawiono każdy zestaw wierszy schematu OLE DB i odpowi
 |[Widoki](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a>CAssertions, CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions, CAssertionInfo
 
 Wywołaj klasę typedef `CAssertions`, aby zaimplementować jej klasę parametrów `CAssertionInfo`.
 
@@ -619,7 +619,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy dla `CAsserti
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|OPIS|
 
-## <a name="catalog"></a>CCatalogs, CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs, CCatalogInfo
 
 Wywołaj klasę typedef `CCatalogs`, aby zaimplementować jej klasę parametrów `CCatalogInfo`.
 
@@ -636,7 +636,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szName|CATALOG_NAME|
 |m_szDescription|OPIS|
 
-## <a name="characterset"></a>CCharacterSets, CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets, CCharacterSetInfo
 
 Wywołaj klasę typedef `CCharacterSets`, aby zaimplementować jej klasę parametrów `CCharacterSetInfo`.
 
@@ -659,7 +659,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
 
 Wywołaj klasę typedef `CCheckConstraints`, aby zaimplementować jej klasę parametrów `CCheckConstraintInfo`.
 
@@ -679,7 +679,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|OPIS|
 
-## <a name="collation"></a>CCollations, CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations, CCollationInfo
 
 Wywołaj klasę typedef `CCollations`, aby zaimplementować jej klasę parametrów `CCollationInfo`.
 
@@ -701,7 +701,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
 
 Wywołaj klasę typedef `CColumnDomainUsage`, aby zaimplementować jej klasę parametrów `CColumnDomainUsageInfo`.
 
@@ -725,7 +725,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
 
 Wywołaj klasę typedef `CColumnPrivileges`, aby zaimplementować jej klasę parametrów `CColumnPrivilegeInfo`.
 
@@ -750,7 +750,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a>CColumns, CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns, CColumnsInfo
 
 Wywołaj klasę typedef `CColumns`, aby zaimplementować jej klasę parametrów `CColumnsInfo`.
 
@@ -793,7 +793,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|OPIS|
 
-## <a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
 
 Wywołaj klasę typedef `CConstraintColumnUsage`, aby zaimplementować jej klasę parametrów `CConstraintColumnUsageInfo`.
 
@@ -817,7 +817,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
 
 Wywołaj klasę typedef `CConstraintTableUsage`, aby zaimplementować jej klasę parametrów `CConstraintTableUsageInfo`.
 
@@ -838,7 +838,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
 
 Wywołaj klasę typedef `CForeignKeys`, aby zaimplementować jej klasę parametrów `CForeignKeysInfo`.
 
@@ -868,7 +868,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a>CIndexes, CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes, CIndexInfo
 
 Wywołaj klasę typedef `CIndexes`, aby zaimplementować jej klasę parametrów `CIndexInfo`.
 
@@ -907,7 +907,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_nPages|Page|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
 
 Wywołaj klasę typedef `CKeyColumns`, aby zaimplementować jej klasę parametrów `CKeyColumnInfo`.
 
@@ -932,7 +932,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
 
 Wywołaj klasę typedef `CPrimaryKeys`, aby zaimplementować jej klasę parametrów `CPrimaryKeyInfo`.
 
@@ -954,7 +954,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|LICZBĄ|
 
-## <a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
 
 Wywołaj klasę typedef `CProcedureColumns`, aby zaimplementować jej klasę parametrów `CProcedureColumnInfo`.
 
@@ -985,7 +985,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|OPIS|
 
-## <a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
 
 Wywołaj klasę typedef `CProcedureParameters`, aby zaimplementować jej klasę parametrów `CProcedureParamInfo`.
 
@@ -1015,7 +1015,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|OPIS|
 
-## <a name="procedure"></a>CProcedures, CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures, CProcedureInfo
 
 Wywołaj klasę typedef `CProcedures`, aby zaimplementować jej klasę parametrów `CProcedureInfo`.
 
@@ -1036,7 +1036,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|OPIS|
 
-## <a name="provider"></a>CProviderTypes, CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes, CProviderInfo
 
 Wywołaj klasę typedef `CProviderTypes`, aby zaimplementować jej klasę parametrów `CProviderInfo`.
 
@@ -1071,7 +1071,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
 
 Wywołaj klasę typedef `CReferentialConstraints`, aby zaimplementować jej klasę parametrów `CReferentialConstraintInfo`.
 
@@ -1096,7 +1096,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|OPIS|
 
-## <a name="schemata"></a>CSchemata, CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata, CSchemataInfo
 
 Wywołaj klasę typedef `CSchemata`, aby zaimplementować jej klasę parametrów `CSchemataInfo`.
 
@@ -1117,7 +1117,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
 
 Wywołaj klasę typedef `CSQLLanguages`, aby zaimplementować jej klasę parametrów `CSQLLanguageInfo`.
 
@@ -1139,7 +1139,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a>CStatistics, CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics, CStatisticInfo
 
 Wywołaj klasę typedef `CStatistics`, aby zaimplementować jej klasę parametrów `CStatisticInfo`.
 
@@ -1158,7 +1158,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|KARDYNALNOŚCI|
 
-## <a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
 
 Wywołaj klasę typedef `CTableConstraints`, aby zaimplementować jej klasę parametrów `CTableConstraintInfo`.
 
@@ -1183,7 +1183,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|OPIS|
 
-## <a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
 
 Wywołaj klasę typedef `CTablePrivileges`, aby zaimplementować jej klasę parametrów `CTablePrivilegeInfo`.
 
@@ -1205,7 +1205,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a>CTables, CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a>CTables, CTableInfo
 
 Wywołaj klasę typedef `CTables`, aby zaimplementować jej klasę parametrów `CTableInfo`.
 
@@ -1226,7 +1226,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_guidTable|TABLE_GUID|
 |m_szDescription|OPIS|
 
-## <a name="translation"></a>CTranslations, CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations, CTranslationInfo
 
 Wywołaj klasę typedef `CTranslations`, aby zaimplementować jej klasę parametrów `CTranslationInfo`.
 
@@ -1250,7 +1250,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
 
 Wywołaj klasę typedef `CUsagePrivileges`, aby zaimplementować jej klasę parametrów `CUsagePrivilegeInfo`.
 
@@ -1273,7 +1273,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
 
 Wywołaj klasę typedef `CViewColumnUsage`, aby zaimplementować jej klasę parametrów `CViewColumnInfo`.
 
@@ -1297,7 +1297,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a>CViews, CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews, CViewInfo
 
 Wywołaj klasę typedef `CViews`, aby zaimplementować jej klasę parametrów `CViewInfo`.
 
@@ -1319,7 +1319,7 @@ W poniższej tabeli wymieniono elementy członkowskie danych klasy i odpowiadaj�
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|OPIS|
 
-## <a name="viewtable"></a>CViewTableUsage, CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage, CViewTableInfo
 
 Wywołaj klasę typedef `CViewTableUsage`, aby zaimplementować jej klasę parametrów `CViewTableInfo`.
 

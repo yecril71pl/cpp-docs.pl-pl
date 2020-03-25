@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: 71213391032989e5faf8889761b29194928125a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182828"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Błąd krytyczny NMAKE U1064
 
-Nie znaleziono polecenia MAKEFILE i nie określono elementu docelowego
+Nie znaleziono pliku reguł programu make i nie określono elementu docelowego
 
-W wierszu polecenia NMAKE nie określono pliku reguł programu make lub obiektu docelowego, a bieżący katalog nie zawiera plik o nazwie pliku reguł programu MAKE.
+W wierszu polecenia NMAKE nie określono pliku reguł programu make lub elementu docelowego, a bieżący katalog nie zawiera plik o nazwie make.
 
-NMAKE wymaga pliku reguł programu make lub wiersza polecenia docelowego (lub obu). Aby udostępnić pliku reguł programu make NMAKE, określ opcję /F albo umieścić plik o nazwie pliku reguł programu MAKE w bieżącym katalogu. NMAKE można utworzyć obiektu docelowego wiersza polecenia przy użyciu reguły wnioskowania, jeśli nie podano pliku reguł programu make.
+NMAKE wymaga pliku reguł programu make lub wiersza polecenia (lub obu tych opcji). Aby udostępnić plik reguł programu make NMAKE, należy określić opcję/F lub umieścić w bieżącym katalogu pliku o nazwie reguł programu make. NMAKE może utworzyć obiekt docelowy wiersza polecenia za pomocą reguły wnioskowania, jeśli nie podano pliku reguł programu make.

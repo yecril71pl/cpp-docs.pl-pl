@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 07af1b507cf256b84ac2f0f2db4061790a23555a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232017"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190719"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operator wyłączny sumy bitowej OR: ^
 
@@ -27,13 +27,13 @@ expression ^ expression
 
 ## <a name="remarks"></a>Uwagi
 
-Bitowy operator OR wyłączne (**^**) porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.
+Operator wyłączny bitowego or ( **^** ) porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli jeden bit ma wartość 0, a drugi bit to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.
 
-Oba operandy bitowe wyłączny operator OR musi być typu całkowitoliczbowego. Popularne konwersje arytmetyczne omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów.
+Oba argumenty operacji w operatorze wykluczającym or muszą być typami całkowitymi. Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów.
 
-## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla ^
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla ^
 
-**Xor** operator jest odpowiednikiem tekstu **^**. Istnieją dwa sposoby dostępu do **xor** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Operator **XOR** jest odpowiednikiem tekstu **^** . Istnieją dwa sposoby uzyskania dostępu do operatora **XOR** w programach: Dołącz plik nagłówka `iso646.h`lub Kompiluj z opcją kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Wyłącz rozszerzenia językowe).
 
 ## <a name="example"></a>Przykład
 
@@ -51,6 +51,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

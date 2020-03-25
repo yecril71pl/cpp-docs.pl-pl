@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1169
 ms.assetid: e079d518-f184-48cd-8b38-969bf137af54
-ms.openlocfilehash: f167c82c28834d1de82578735e5557d0e9d6b5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ac8bb8bd28f42b28fb86e64e72f4ea01f01ab1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183998"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Błąd narzędzi konsolidatora LNK1169
 
-co najmniej jeden wielokrotnie zdefiniowane symbole znajdujące się
+znaleziono co najmniej jeden wielokrotnie zdefiniowany symbol
 
-Kompilacja nie powiodła się ze względu na wiele definicji jednego lub wielu symboli. Ten błąd jest poprzedzony przez błąd [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
+Kompilacja nie powiodła się z powodu wielu definicji jednego lub więcej symboli. Ten błąd jest poprzedzony błędem [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
 
-[/FORCE](../../build/reference/force-force-file-output.md) lub **/FORCE:MULTIPLE** opcja przesłania tego błędu.
+Opcja [/Force](../../build/reference/force-force-file-output.md) lub **/Force: Multiple** zastępuje ten błąd.

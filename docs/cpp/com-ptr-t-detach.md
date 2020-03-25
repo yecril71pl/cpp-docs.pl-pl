@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
-ms.openlocfilehash: affaefd8af4802836733587af62977171ba01410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ba42f19e3474cc4a3199771f761b021221f430e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190017"
 ---
-# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+# <a name="_com_ptr_tdetach"></a>_com_ptr_t::Detach
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs.
+Wyodrębnia i zwraca wskaźnik interfejsu hermetyzowanego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,10 +27,10 @@ Interface* Detach( ) throw( );
 
 ## <a name="remarks"></a>Uwagi
 
-Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs, a następnie czyści magazyn zhermetyzowanego wskaźnika o wartości NULL. Spowoduje to usunięcie wskaźnika interfejsu z hermetyzacji. Aby wywołać to `Release` na wskaźnik interfejsu zwrócone.
+Wyodrębnia i zwraca wskaźnik interfejsu hermetyzowanego, a następnie czyści pamięć hermetyzowaną wskaźnika do wartości NULL. Spowoduje to usunięcie wskaźnika interfejsu z hermetyzacji. Jest to możliwe do wywołania `Release` na zwróconym wskaźniku interfejsu.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

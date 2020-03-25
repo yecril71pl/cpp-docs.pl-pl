@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169893"
 ---
 # <a name="create-a-c-makefile-project"></a>Tworzenie projektu C++ pliku reguł programu make
 
@@ -20,11 +20,11 @@ Plik *reguł programu make* jest plikiem tekstowym zawierającym instrukcje doty
 Jeśli masz istniejący projekt pliku reguł programu make, możesz wybrać tę opcję, jeśli chcesz, aby kod i/lub debugować go w środowisku IDE programu Visual Studio:
 
 - Utwórz projekt pliku reguł programu make w programie Visual Studio, który korzysta z istniejącego programu make, aby skonfigurować plik. vcxproj, który będzie używany przez program Visual Studio na potrzeby technologii IntelliSense. (Nie będziesz mieć wszystkich funkcji środowiska IDE, które uzyskasz przy użyciu natywnego projektu MSBuild). Zobacz [, aby utworzyć projekt pliku reguł programu make](#create_a_makefile_project) poniżej.
-- Użyj kreatora **tworzenia nowego projektu z istniejących plików z kodem** , aby utworzyć natywny projekt MSBuild na podstawie kodu źródłowego. Oryginalny plik reguł programu make nie zostanie użyty po tym. Aby uzyskać więcej informacji, zobacz [jak: Utwórz C++ projekt na podstawie istniejącego kodu](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Program Visual Studio 2017 lub nowszy**: Funkcja **Otwórz folder** umożliwia edytowanie i kompilowanie projektu pliku reguł programu make jako niezwiązanego z żadnym udziałem systemu MSBuild. Aby uzyskać więcej informacji, zobacz temat [Otwieranie projektów C++folderu dla ](../open-folder-projects-cpp.md).
-- **Program Visual Studio 2019 lub nowszy**: Tworzenie projektu pliku reguł programu make dla systemu Linux.
+- Użyj kreatora **tworzenia nowego projektu z istniejących plików z kodem** , aby utworzyć natywny projekt MSBuild na podstawie kodu źródłowego. Oryginalny plik reguł programu make nie zostanie użyty po tym. Aby uzyskać więcej informacji, zobacz [How to: Create C++ a Project from Existing Code](../how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 i nowsze**: Użyj funkcji **Otwórz folder** , aby edytować i skompilować projekt pliku reguł programu make jako niebędący żadnym udziałem systemu MSBuild. Aby uzyskać więcej informacji, zobacz temat [Otwieranie projektów C++folderu dla ](../open-folder-projects-cpp.md).
+- **Visual Studio 2019 i nowsze**: Tworzenie projektu pliku reguł programu make dla systemu Linux.
 
-## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project">Aby utworzyć projekt pliku reguł programu make przy użyciu szablonu projektu reguł programu make
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> utworzyć projektu pliku reguł programu make przy użyciu szablonu projektu reguł programu make
 
 W programie Visual Studio 2017 i nowszych szablon projektu pliku reguł programu make jest dostępny C++ po zainstalowaniu obciążenia programowania na komputerze stacjonarnym.
 
@@ -38,9 +38,9 @@ Plik wyjściowy określany w projekcie nie ma wpływu na nazwę, którą generuj
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Aby utworzyć projekt pliku reguł programu make w programie Visual Studio 2019
 
-1. Z menu głównego programu Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** i wpisz "make" w polu wyszukiwania. Lub w oknie dialogowym **Nowy projekt** rozwiń  > pozycję **Visual C++**  **General** (Visual Studio 2015) lub **inny** (Visual Studio 2017), a następnie wybierz jedną z dwóch opcji w zależności od tego, czy będziesz mieć system Windows, czy System.
+1. Z menu głównego programu Visual Studio wybierz kolejno pozycje **plik** > **Nowy** > **projekt** i wpisz "make" w polu wyszukiwania. Lub w oknie dialogowym **Nowy projekt** rozwiń pozycję **Visual C++**  > **Ogólne** (Visual Studio 2015) lub **inny** (Visual Studio 2017), a następnie wybierz jedną z dwóch opcji w zależności od tego, czy będziesz mieć system Windows, czy Linux.
 
-1. **Tylko system Windows**: Na stronie **Ustawienia konfiguracji debugowania** podaj informacje o poleceniach, danych wyjściowych, czyszczeniu i odbudowywaniu dla kompilacji do debugowania i sprzedaży detalicznej. Kliknij przycisk **dalej** , jeśli chcesz określić różne ustawienia konfiguracji wydania.
+1. **Tylko system Windows**: na stronie **Ustawienia konfiguracji debugowania** podaj informacje o poleceniach, danych wyjściowych, czyszczeniu i odbudowywaniu dla kompilacji do debugowania i sprzedaży detalicznej. Kliknij przycisk **dalej** , jeśli chcesz określić różne ustawienia konfiguracji wydania.
 
 1. Kliknij przycisk **Zakończ** , aby zamknąć okno dialogowe i otworzyć nowo utworzony projekt w **Eksplorator rozwiązań**.
 
@@ -50,7 +50,7 @@ Plik wyjściowy określany w projekcie nie ma wpływu na nazwę, którą generuj
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Aby utworzyć projekt pliku reguł programu make w programie Visual Studio 2015 lub Visual Studio 2017
 
-1. Na stronie startowej programu Visual Studio wpisz "plik reguł programu make" w polu wyszukiwania **Nowy projekt** . Lub w oknie dialogowym **Nowy projekt** rozwiń  > pozycję **Visual C++**  **General** (Visual Studio 2015) lub **inny** (Visual Studio 2017), a następnie wybierz pozycję **Projekt pliku reguł programu make** w okienku szablony, aby otworzyć projekt. Kreatora.
+1. Na stronie startowej programu Visual Studio wpisz "plik reguł programu make" w polu wyszukiwania **Nowy projekt** . Lub w oknie dialogowym **Nowy projekt** rozwiń pozycję **Visual C++**  > **Ogólne** (Visual Studio 2015) lub **inny** (Visual Studio 2017), a następnie wybierz pozycję **Projekt pliku reguł programu make** w okienku szablony, aby otworzyć Kreatora projektu.
 
 1. Na stronie **Ustawienia aplikacji** podaj informacje o poleceniach, danych wyjściowych, czyszczeniu i odbudowywaniu dla kompilacji do debugowania i sprzedaży detalicznej.
 
@@ -72,7 +72,7 @@ Po utworzeniu projektu pliku reguł programu make można wyświetlić i edytowa�
 
 - **Wiersz polecenia ponownego kompilowania:** Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze opcję Kompiluj ponownie z menu Kompilacja. Wyświetlany w polu Kompiluj ponownie wszystkie wiersze polecenia na stronie NMAKE na stronie właściwości projektu.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Instrukcje: Włącz funkcję IntelliSense dla projektów reguł programu make
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make
 
 Funkcja IntelliSense w projektach programu make kończy się niepowodzeniem, gdy niektóre ustawienia projektu lub opcje kompilatora są nieprawidłowo skonfigurowane. Wykonaj następujące kroki, aby skonfigurować projekty pliku reguł programu make, tak aby funkcja IntelliSense działała zgodnie z oczekiwaniami:
 
@@ -86,9 +86,9 @@ Funkcja IntelliSense w projektach programu make kończy się niepowodzeniem, gdy
 
    - Ustaw właściwość **Uwzględnij ścieżkę wyszukiwania** , aby określić listę katalogów, które będą wyszukiwane przez kompilator w celu rozpoznania odwołań do plików, które są przesyłane do dyrektyw preprocesora w projekcie reguł programu make. Aby uzyskać więcej informacji, zobacz [/i (Dodatkowe katalogi dołączane)](i-additional-include-directories.md).
 
-    - W przypadku projektów utworzonych przy użyciu CL. EXE z okna polecenia, Ustaw zmienną środowiskową **include** , aby określić katalogi, które kompilator będzie przeszukiwać w celu rozpoznania odwołań do plików, które są przesyłane do dyrektyw preprocesora w projekcie reguł programu make.
+   - W przypadku projektów utworzonych przy użyciu CL. EXE z okna polecenia, Ustaw zmienną środowiskową **include** , aby określić katalogi, które kompilator będzie przeszukiwać w celu rozpoznania odwołań do plików, które są przesyłane do dyrektyw preprocesora w projekcie reguł programu make.
 
-   - Ustaw właściwość **wymuszone includes** , aby określić, które pliki nagłówkowe mają być przetwarzane podczas kompilowania projektu reguł programu make. Aby uzyskać więcej informacji, zobacz [/Fi (Nazwij plik](fi-name-forced-include-file.md)z wymuszonym dołączeniem).
+   - Ustaw właściwość **wymuszone includes** , aby określić, które pliki nagłówkowe mają być przetwarzane podczas kompilowania projektu reguł programu make. Aby uzyskać więcej informacji, zobacz [/Fi (Nazwij plik z wymuszonym dołączeniem)](fi-name-forced-include-file.md).
 
    - Ustaw właściwość **Ścieżka wyszukiwania zestawu** , aby określić listę katalogów, które będą wyszukiwane przez kompilator w celu rozpoznania odwołań do zestawów .NET w projekcie. Aby uzyskać więcej informacji, zobacz [/AI (Określ katalogi metadanych)](ai-specify-metadata-directories.md).
 
@@ -102,10 +102,10 @@ Funkcja IntelliSense w projektach programu make kończy się niepowodzeniem, gdy
 
 Przy następnym otwarciu projektu pliku reguł programu make w środowisku deweloperskim programu Visual Studio Uruchom polecenie **Oczyść rozwiązanie** , a następnie polecenie **Kompiluj rozwiązanie** w projekcie reguł programu make. Technologia IntelliSense powinna prawidłowo funkcjonować w środowisku IDE.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE — dokumentacja](nmake-reference.md)<br>
-[Instrukcje: Tworzenie C++ projektu na podstawie istniejących](../how-to-create-a-cpp-project-from-existing-code.md)[znaków specjalnych kodu](special-characters-in-a-makefile.md) 
-w pliku reguł programu make<br/>
+[Instrukcje: Tworzenie C++ projektu na podstawie istniejącego kodu](../how-to-create-a-cpp-project-from-existing-code.md)
+[znaki specjalne w pliku reguł programu make](special-characters-in-a-makefile.md)<br/>
 [Zawartość pliku reguł programu Make](contents-of-a-makefile.md)<br/>

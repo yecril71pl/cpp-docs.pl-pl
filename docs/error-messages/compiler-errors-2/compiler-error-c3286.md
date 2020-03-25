@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201399"
 ---
 # <a name="compiler-error-c3286"></a>Błąd kompilatora C3286
 
-> "*specyfikator*": Zmienna iteracji nie może mieć żadnych specyfikatory klasy magazynowania
+> "*specyfikator*": Zmienna iteracji nie może mieć żadnych specyfikatorów klasy magazynu
 
-Nie można określić klasę magazynu w zmiennej iteracji. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../../cpp/storage-classes-cpp.md) i [dla poszczególnych usług, w](../../dotnet/for-each-in.md).
+Nie można określić klasy magazynu dla zmiennej iteracji. Aby uzyskać więcej informacji, zobacz [klasy magazynuC++()](../../cpp/storage-classes-cpp.md) i [dla każdego z nich w](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3286, a także pokazuje poprawne użycie.
+Poniższy przykład generuje C3286, a także wyświetla poprawne użycie.
 
 ```cpp
 // C3286.cpp

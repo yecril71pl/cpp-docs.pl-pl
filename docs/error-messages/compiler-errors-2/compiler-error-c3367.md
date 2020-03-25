@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201165"
 ---
 # <a name="compiler-error-c3367"></a>Błąd kompilatora C3367
 
-"static_member_function": nie można użyć statycznej funkcji by utworzyć niezwiązanego delegata
+"static_member_function": nie można użyć funkcji statycznej w celu utworzenia niepowiązanego delegata
 
-Jeśli chcesz wywołać niezwiązanego delegata, należy przekazać wystąpienia obiektu. Ponieważ funkcja statycznej składowej jest wywoływana za pośrednictwem nazwy klasy, można tylko utworzyć wystąpienie niezwiązanego delegata z funkcję składową wystąpienia.
+Gdy wywołujesz niepowiązanego delegata, musisz przekazać wystąpienie obiektu. Ze względu na to, że statyczna funkcja członkowska jest wywoływana za pomocą nazwy klasy, można utworzyć jedynie wystąpienie niepowiązanego delegata z funkcją członkowską wystąpienia.
 
-Aby uzyskać więcej informacji na temat niezwiązane obiekty delegowane zobacz [jak: Definiowanie i używanie delegatów (C++sposób niezamierzony)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Aby uzyskać więcej informacji na temat niezwiązanych delegatów, zobacz [How to: define andC++use delegats (/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3367.
+Poniższy przykład generuje C3367.
 
 ```cpp
 // C3367.cpp

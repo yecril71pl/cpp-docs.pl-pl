@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3320
 ms.assetid: 2ef72d9a-1f1d-4b2e-b244-9fd3f3e70cb6
-ms.openlocfilehash: 622e7366dda4cd6693d9b6128855fa0966e07952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0289d49ebbb0e30153beb6b0b2bc758bff5ef118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201308"
 ---
 # <a name="compiler-error-c3320"></a>Błąd kompilatora C3320
 
-"type": typ nie może mieć taką samą nazwę jak właściwość modułu "name"
+"Type": typ nie może mieć takiej samej nazwy jak Właściwość modułu "name"
 
-Wyeksportowanego typu zdefiniowanego przez użytkownika (UDT), co może być struktury, klasy, enum lub Unii, nie może mieć takiej samej nazwie, jako parametr przekazywany do [modułu](../../windows/module-cpp.md) właściwości name atrybutu.
+Wyeksportowany typ zdefiniowany przez użytkownika (UDT), który może być strukturą, klasą, wyliczeniem lub Unią, nie może mieć takiej samej nazwy jak parametr przesłany do właściwości Nazwa atrybutu [modułu](../../windows/module-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3320:
+Poniższy przykład generuje C3320:
 
 ```cpp
 // C3320.cpp

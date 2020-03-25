@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2109
 ms.assetid: b800aa67-33c0-42f5-81a2-7a64a3b6b824
-ms.openlocfilehash: adfbc32adc9e55f4cc0e1a49d3b5505efead5d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49edd32da192816ba22cb030958f87cd049ec59c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191564"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Błąd kompilatora zasobów RC2109
 
-Oczekiwano stałej wartości liczbowych okna dialogowego
+oczekiwana stała numeryczna okna dialogowego
 
-A **okna DIALOGOWEGO** instrukcja wymaga wartości całkowitoliczbowe dla *x, y, szerokość*, i *wysokość* pola. Upewnij się, że te wartości są objęte po **okna DIALOGOWEGO** — słowo kluczowe i że nie są one ujemna.
+Instrukcja **okna dialogowego** wymaga wartości liczb całkowitych dla pól *x, y, Szerokość*i *wysokość* . Upewnij się, że te wartości są zawarte po słowie kluczowym **okna dialogowego** i że nie są ujemne.

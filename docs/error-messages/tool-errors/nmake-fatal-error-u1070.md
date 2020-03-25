@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - U1070
 ms.assetid: 8639fc39-b4b1-48f5-ac91-0e9fb61680fd
-ms.openlocfilehash: 35bea47f6626dfe283a537d3d96340921c37f3f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 008d49df3460cb7cf760e4b278db20da444555fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182776"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Błąd krytyczny NMAKE U1070
 
-cykl w definicji makra "makra"
+cykl w definicji makra "Macroname"
 
-Makro, którego definicja zawiera danego — makro znajdujących się w definicji makra danego. Definicje makr cykliczne są nieprawidłowe.
+Dana definicja makra zawiera makro, którego definicja zawierała podane makro. Definicje makr cyklicznych są nieprawidłowe.
 
 ## <a name="example"></a>Przykład
 
-Następujące definicje — makro
+Następujące definicje makr
 
 ```
 ONE=$(TWO)
 TWO=$(ONE)
 ```
 
-powodują następujący błąd:
+Przyczyna następującego błędu:
 
 ```
 cycle in macro definition 'TWO'

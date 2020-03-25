@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4011
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
-ms.openlocfilehash: 3b73e92c929b3dd5924584ab732f731d565d0430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1701ffc83f849d2482bd14b25d65c04c496899
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193150"
 ---
 # <a name="nmake-warning-u4011"></a>Ostrzeżenie NMAKE U4011
 
-'target': nie wszystkie elementy zależne, które są dostępne; docelowy nie został skompilowany
+"target": nie wszystkie elementy zależne są dostępne; obiekt docelowy nie został skompilowany
 
-Zależnych od ustawień lokalnych z danym obiektem docelowym nie istnieje lub została nieaktualne i polecenia do aktualizowania zależne od zwrócił kod zakończenia różny od zera. Opcja /K informację NMAKE kontynuować przetwarzanie niepowiązanych części kompilacji i wydania kod zakończenia 1, po zakończeniu sesji NMAKE.
+Zależna od danego elementu docelowego nie istniała lub była nieaktualna, a polecenie aktualizacji elementu zależnego zwróciło niezerowy kod zakończenia. Opcja/K poinformowała NMAKE, aby kontynuować przetwarzanie niepowiązanych części kompilacji i wydać kod zakończenia 1 po zakończeniu sesji NMAKE.
 
-To ostrzeżenie jest poprzedzony ostrzeżenie [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) dla każdego zależnych od ustawień lokalnych, nie może zostać utworzony lub zaktualizowany.
+To ostrzeżenie jest poprzedzone ostrzeżeniem [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) dla każdego elementu zależnego, który nie został utworzony ani zaktualizowany.

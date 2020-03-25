@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2421
 ms.assetid: 0a9afb9f-60d8-4df7-b2ae-5c36e86df891
-ms.openlocfilehash: efa4e16ccc153ede4938abcf685bf8764e60019a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabee67ecf55fad82ea2f8aa875f54491f65e21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205438"
 ---
 # <a name="compiler-error-c2421"></a>Błąd kompilatora C2421
 
-PTR operator używany z rejestrem w "context"
+Operator PTR używany z rejestrem w "context"
 
-`PTR` Nie można używać operatora `register` operand.
+Nie można użyć operatora `PTR` z argumentem operacji `register`.

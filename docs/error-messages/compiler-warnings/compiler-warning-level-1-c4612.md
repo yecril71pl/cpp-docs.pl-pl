@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4612
+title: Ostrzeżenie kompilatora (poziom 1) C4612
 ms.date: 08/27/2018
 f1_keywords:
 - C4612
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185987"
 ---
-# <a name="compiler-warning-level-1-c4612"></a>Kompilator ostrzeżenie (poziom 1) C4612
+# <a name="compiler-warning-level-1-c4612"></a>Ostrzeżenie kompilatora (poziom 1) C4612
 
-> Błąd w nazwie pliku dołączanego
+> błąd w nazwie pliku dołączanego
 
 ## <a name="remarks"></a>Uwagi
 
-Ostrzeżenie to pojawia się za pomocą **#pragma include_alias** gdy nazwa pliku jest nieprawidłowe lub niekompletne.
+To ostrzeżenie występuje **#pragma include_alias** , gdy nazwa pliku jest nieprawidłowa lub nie została podana.
 
-Argumenty **#pragma include_alias** instrukcji można użyć formy oferty ("*filename*") lub formularz nawias kątowy (\<*filename*>), ale oba muszą Użyj tego samego formularza.
+Argumenty do instrukcji **#pragma include_alias** mogą używać formularza cudzysłowu ("*filename*") lub nawiasu klamrowego (\<*filename*>), ale oba muszą używać tego samego formularza.
 
 ## <a name="example"></a>Przykład
 

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196069"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Błąd CXX0015 programu Expression Evaluator
 
 wyrażenie jest zbyt złożone (przepełnienie stosu)
 
-Wprowadzone wyrażenie jest zbyt złożonego lub zagnieżdżone zbyt głęboko ilości miejsca dostępnego na Ewaluator wyrażeń C w magazynie.
+Wprowadzone wyrażenie jest zbyt złożone lub zagnieżdżone zbyt głęboko dla ilości miejsca do magazynowania dostępnego dla ewaluatora wyrażeń w języku C.
 
-Z powodu zbyt wielu obliczeń oczekujące zwykle występuje przepełnienie.
+Przepełnienie występuje zwykle z powodu zbyt wielu oczekujących obliczeń.
 
-Rozmieszczanie wyrażenie, tak aby każdy składnik wyrażenie może przyjąć, ponieważ jest ona napotkał, zamiast czekać na inne części wyrażenia, które mają być obliczane.
+Przemieść ponownie wyrażenie, aby można było ocenić każdy składnik wyrażenia w miarę jego napotkania, a nie trzeba czekać, aż pozostałe części wyrażenia mają zostać obliczone.
 
-Podziel wyrażenia na wielu poleceń.
+Podziel wyrażenie na wiele poleceń.
 
-Ten błąd jest taka sama jak CAN0015.
+Ten błąd jest identyczny z CAN0015.

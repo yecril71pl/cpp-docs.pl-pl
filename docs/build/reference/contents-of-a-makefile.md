@@ -5,22 +5,22 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169919"
 ---
 # <a name="contents-of-a-makefile"></a>Zawartość pliku reguł programu Make
 
-Zawiera pliku reguł programu make:
+Plik reguł programu make zawiera:
 
-- [Bloki opisów](description-blocks.md)
+- [Bloki opisu](description-blocks.md)
 
 - [Polecenia](commands-in-a-makefile.md)
 
-- [Makra](macros-and-nmake.md)
+- [Utworze](macros-and-nmake.md)
 
 - [Zasady wnioskowania](inference-rules.md)
 
@@ -30,10 +30,10 @@ Zawiera pliku reguł programu make:
 
 ## <a name="remarks"></a>Uwagi
 
-Inne funkcje, które można używać w pliku reguł programu make są [symboli wieloznacznych](wildcards-and-nmake.md), [długie nazwy plików](long-filenames-in-a-makefile.md), [komentarze](comments-in-a-makefile.md), i [znaki specjalne](special-characters-in-a-makefile.md).
+Inne funkcje, których można użyć w pliku reguł programu make, to [symbole wieloznaczne](wildcards-and-nmake.md), [długie nazwy plików](long-filenames-in-a-makefile.md), [Komentarze](comments-in-a-makefile.md)i [znaki specjalne](special-characters-in-a-makefile.md).
 
-Dla przykładu, zobacz [przykładowy plik reguł programu make](sample-makefile.md).
+Aby uzyskać przykład, zobacz [przykład pliku reguł programu make](sample-makefile.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [NMAKE — dokumentacja](nmake-reference.md)

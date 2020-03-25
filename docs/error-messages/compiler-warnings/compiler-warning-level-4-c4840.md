@@ -1,30 +1,30 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4840
+title: Ostrzeżenie kompilatora (poziom 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185207"
 ---
-# <a name="compiler-warning-level-4-c4840"></a>Kompilatora (poziom 4) ostrzeżenie C4840
+# <a name="compiler-warning-level-4-c4840"></a>Ostrzeżenie kompilatora (poziom 4) C4840
 
-> nieprzenośne użycie klasy*typu*"jako argumentu do funkcji ze zmienną liczbą argumentów
+> nieprzenośne użycie klasy "*Type*" jako argumentu funkcji wariadyczne
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy lub struktury, które są przekazywane do funkcji ze zmienną liczbą argumentów musi być kopiowania. Podczas przekazywania takie obiekty, kompilator po prostu sprawia, że kopia bitowa i nie wywołuje konstruktor lub destruktor.
+Klasy lub struktury, które są przenoszone do funkcji wariadyczne, muszą być proste do skopiowania. Podczas przekazywania takich obiektów kompilator po prostu wykonuje kopię bitową i nie wywołuje konstruktora ani destruktora.
 
-To ostrzeżenie jest dostępne począwszy od wersji programu Visual Studio 2017.
+To ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4840 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C4840 i pokazuje, jak to naprawić:
 
 ```cpp
 // C4840.cpp
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-Ciągi utworzone i zarządzane przy użyciu `CStringW`, podane `operator LPCWSTR()` powinien być używany do rzutowania `CStringW` obiektu wskaźnik ciąg stylu C, oczekiwany przez ciąg formatu:
+W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW`, podane `operator LPCWSTR()` powinny być używane do rzutowania obiektu `CStringW` na wskaźnik ciągu w stylu C oczekiwany przez ciąg formatu:
 
 ```cpp
     CStringW str1;

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1071
 ms.assetid: 328a0c1f-a867-410e-943d-7b6b75a975ab
-ms.openlocfilehash: d9bf335e05993df774bac0684a68197650973bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f696915aafec25d49ba0aea555e447ab899e8988
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182711"
 ---
 # <a name="nmake-fatal-error-u1071"></a>Błąd krytyczny NMAKE U1071
 
-cykl w drzewie zależności dla elementu docelowego "targetname"
+cykl w drzewie zależności dla elementu docelowego "TargetName"
 
-Istnieje zależność cykliczną w drzewie zależności dla danego obiektu docelowego. Danym obiektem docelowym jest zależna od jednej z zależności z danym obiektem docelowym. Zależności cykliczne są nieprawidłowe.
+Zależność cykliczna istnieje w drzewie zależności dla danego elementu docelowego. Dany element docelowy jest zależny od jednej z elementów zależnych danego elementu docelowego. Zależności cykliczne są nieprawidłowe.

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189770"
 ---
 # <a name="comma-operator-"></a>Operator przecinkowy: ,
 
-Umożliwia grupowanie dwóch instrukcji, gdzie oczekiwany jest jeden wiersz.
+Zezwala na grupowanie dwóch instrukcji, w których jest oczekiwany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,20 +25,20 @@ expression , expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operator przecinkowy ma łączność od lewej do prawej. Dwóch wyrażeń, oddzielając wartości przecinkami są obliczane od lewej do prawej. Lewy operand zawsze jest obliczane, a wszystkie efekty uboczne są wykonywane przed prawy operand jest oceniany.
+Operator przecinek ma łączność od lewej do prawej. Dwa wyrażenia oddzielone przecinkami są szacowane od lewej do prawej. Lewy operand jest zawsze oceniany, a wszystkie efekty uboczne są kończone przed oceną prawego operandu.
 
-Przecinki może służyć jako separatorów w niektórych kontekstach, takich jak listy argumentów funkcji. Nie należy mylić użycie przecinka jako separatora przy jego użyciu jako operator; używa dwóch całkowicie różnią się.
+Przecinki mogą być używane jako separatory w niektórych kontekstach, takich jak listy argumentów funkcji. Nie należy mylić użycia przecinka jako separatora przy użyciu jako operatora; te dwa zastosowania są całkowicie różne.
 
-Rozważ wyrażenie `e1, e2`. Typ i wartość wyrażenia są typu i wartości *e2*; wynik obliczania wartości *e1* jest odrzucany. Wynik jest wartością l, jeśli prawy operand jest l wartością.
+Rozważ wyrażenie `e1, e2`. Typ i wartość wyrażenia to typ i wartość *E2*; wynik oceny *E1* jest odrzucany. Wynik jest l-wartością, jeśli prawy operand jest l-wartością.
 
-W przypadku, gdy przecinek jest zwykle używany jako separator (na przykład w rzeczywiste argumenty do funkcji lub inicjatory agregacji), operatora przecinka i jego operandy muszą być ujęte w nawiasy. Na przykład:
+Gdzie przecinek jest zwykle używany jako separator (na przykład w rzeczywistych argumentach funkcji lub agregacji inicjatorów), operator przecinki i jego operandy muszą być ujęte w nawiasy. Na przykład:
 
 ```cpp
 func_one( x, y + 2, z );
 func_two( (x--, y + 2), z );
 ```
 
-W funkcji wywołanie `func_one` powyżej, trzech argumentów, oddzielając je średnikami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, nawiasy wymuszają na kompilatorze interpretowanie przecinkiem jako operator obliczania sekwencyjnego. Wywołanie tej funkcji przekazuje dwa argumenty `func_two`. Pierwszy argument jest wynikiem operacji obliczania sekwencyjnego `(x--, y + 2)`, który ma wartość i typ wyrażenia `y + 2`; drugi argument funkcji jest `z`.
+W wywołaniu funkcji do `func_one` powyżej, trzy argumenty, oddzielone przecinkami, są przenoszone: `x`, `y + 2`i `z`. W wywołaniu funkcji do `func_two`, nawiasy wymuszają, aby kompilator interpretował pierwszy przecinek jako operator oceny sekwencyjnej. To wywołanie funkcji przekazuje dwa argumenty do `func_two`. Pierwszy argument jest wynikiem operacji sekwencyjnej oceny `(x--, y + 2)`, która ma wartość i typ wyrażenia `y + 2`; drugi argument jest `z`.
 
 ## <a name="example"></a>Przykład
 
@@ -60,7 +60,7 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

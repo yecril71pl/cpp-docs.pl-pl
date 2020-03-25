@@ -46,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188619"
 ---
 # <a name="built-in-types-c"></a>Typy wbudowane (C++)
 
@@ -69,7 +69,7 @@ W poniższej tabeli opisano ograniczenia dotyczące rozmiarów typów w zależno
 
 ### <a name="built-in-type-size-restrictions"></a>Ograniczenia rozmiaru typu wbudowanego
 
-|Kategoria|Typ|Spis treści|
+|Kategoria|Typ|Zawartość|
 |--------------|----------|--------------|
 |Integraln|**char**|Typ **char** jest typem całkowitym, który zwykle zawiera elementy członkowskie podstawowego zestawu znaków wykonywania — domyślnie jest to ASCII w firmie Microsoft C++.<br /><br /> Kompilator traktuje zmienne typu **char** **, ze znakiem**znaku i **unsigned char** jako mające różne typy. C++ Zmienne typu **char** są podwyższane do wartości **int** , tak jakby były typu ze znakiem **podpisane** domyślnie, chyba że zostanie użyta opcja/j kompilacja. W tym przypadku są one traktowane jako znaki typu **unsigned** i są promowane jako **int** bez rozszerzenia.|
 ||**bool**|Typ **bool** jest typem całkowitym, który może mieć jedną z dwóch wartości **true** lub **false**. Nie określono jego rozmiaru.|

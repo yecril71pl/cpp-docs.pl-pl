@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202086"
 ---
 # <a name="compiler-error-c2797"></a>Błąd kompilatora C2797
 
-(Przestarzałe) Inicjowanie listy wewnątrz listy inicjatorów składowych lub inicjatora składowej danych niestatycznych nie jest zaimplementowana.
+Zbędn Inicjalizacja listy wewnątrz listy inicjatorów składowych lub inicjatora niestatycznej składowej danych nie jest zaimplementowana.
 
-To ostrzeżenie jest przestarzała w programie Visual Studio 2015. W programie Visual Studio 2013 i wcześniejszych wersjach programu Microsoft C++ kompilatora nie implementuje Inicjowanie listy wewnątrz listy inicjatorów składowej lub inicjatora składowej danych niestatycznych. Przed Visual Studio 2013 Update 3 to był dyskretnie konwertowane wywołanie funkcji, która może spowodować wygenerowanie złego kodu. Visual Studio 2013 Update 3 to raporty jako błąd.
+To ostrzeżenie jest przestarzałe w programie Visual Studio 2015. W Visual Studio 2013 i wcześniejszych wersjach kompilator firmy Microsoft C++ nie implementuje inicjalizacji listy wewnątrz listy inicjatorów składowych lub inicjatora niestatycznej składowej danych. Przed Visual Studio 2013 Update 3, zostało to dyskretnie skonwertowane do wywołania funkcji, co może prowadzić do nieprawidłowego generowania kodu. Visual Studio 2013 Update 3 raportuje jako błąd.
 
 Ten przykład generuje C2797:
 
@@ -45,7 +45,7 @@ struct S2 {
 };
 ```
 
-Aby rozwiązać ten problem, można użyć konstrukcji jawnych list wewnętrzny. Na przykład:
+Aby rozwiązać ten problem, można użyć jawnej konstrukcji list wewnętrznych. Na przykład:
 
 ```
 #include <vector>
@@ -58,7 +58,7 @@ struct S {
 };
 ```
 
-Jeśli nie potrzebujesz inicjalizacji listy:
+Jeśli nie jest wymagane inicjowanie listy:
 
 ```
 struct S {
@@ -69,4 +69,4 @@ struct S {
 };
 ```
 
-(Kompilator programu Visual Studio 2013 robi to niejawnie przed Visual Studio 2013 Update 3.)
+(Kompilator w Visual Studio 2013 robi to niejawnie przed Visual Studio 2013 Update 3).

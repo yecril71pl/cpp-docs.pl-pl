@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4839
+title: Ostrzeżenie kompilatora (poziom 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198578"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>Kompilator ostrzeżenie (poziom 3) C4839
+# <a name="compiler-warning-level-3-c4839"></a>Ostrzeżenie kompilatora (poziom 3) C4839
 
-> niestandardowe użycie klasy*typu*"jako argumentu do funkcji ze zmienną liczbą argumentów
+> niestandardowe użycie klasy "*Type*" jako argumentu funkcji wariadyczne
 
-Klasy lub struktury, które są przekazywane do funkcji ze zmienną liczbą argumentów, takich jak `printf` musi być kopiowania. Podczas przekazywania takie obiekty, kompilator po prostu sprawia, że kopia bitowa i nie wywołuje konstruktor lub destruktor.
+Klasy lub struktury, które są przesyłane do funkcji wariadyczne, takie jak `printf`, muszą być składowane w sposób prosty. Podczas przekazywania takich obiektów kompilator po prostu wykonuje kopię bitową i nie wywołuje konstruktora ani destruktora.
 
-To ostrzeżenie jest dostępne począwszy od wersji programu Visual Studio 2017.
+To ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4839:
+Poniższy przykład generuje C4839:
 
 ```cpp
 // C4839.cpp
@@ -44,14 +44,14 @@ int main()
 }
 ```
 
-Aby poprawić ten błąd, należy wywołać funkcji składowej, która zwraca typ trywialne,
+Aby poprawić błąd, można wywołać funkcję członkowską, która zwraca typ z możliwością kopiowania,
 
 ```cpp
     std::atomic<int> i(0);
     printf("%i\n", i.load());
 ```
 
-Ciągi utworzone i zarządzane przy użyciu `CStringW`, podane `operator LPCWSTR()` powinien być używany do rzutowania `CStringW` obiektu do wskaźnika C, oczekiwany przez ciąg formatu.
+W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW`, podane `operator LPCWSTR()` powinny być używane do rzutowania obiektu `CStringW` na wskaźnik C oczekiwany przez ciąg formatu.
 
 ```cpp
     CStringW str1;

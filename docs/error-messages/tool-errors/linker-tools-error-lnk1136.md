@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1136
 ms.assetid: 40c6d909-eb3f-4045-a0fc-4caa2f6db506
-ms.openlocfilehash: 272198c2baea44bb31f075cb09097ef53e92089c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee078fd24bed9efdef9e0c92d82b71a49918759a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184232"
 ---
 # <a name="linker-tools-error-lnk1136"></a>Błąd narzędzi konsolidatora LNK1136
 
 nieprawidłowy lub uszkodzony plik
 
-Plik wejściowy zawiera nagłówek w uszkodzona lub jest równe zeru, rozmiar lub jest nieprawidłowo małe.
+Plik wejściowy ma uszkodzony nagłówek lub ma rozmiar zerowy lub nietypowy.
 
-Jeśli plik został niepoprawnie określony jako dodatkową zależność, może być także spowodowane LNK1136.
+LNK1136 może również być przyczyną, jeśli plik został niepoprawnie określony jako zależność dodatkowa.

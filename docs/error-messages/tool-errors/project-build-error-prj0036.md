@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0036
 ms.assetid: ee215cd1-2d66-474d-9a63-b9096f1c4923
-ms.openlocfilehash: 9b9232583c464548167e22d0104e0c6098093eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a225f907d06cd240ec2ebef236c0b4e0b849e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192106"
 ---
 # <a name="project-build-error-prj0036"></a>Błąd PRJ0036 kompilacji projektu
 
-Właściwość 'Dodatkowe pliki' narzędzia wdrażania Web zawiera niepoprawny wpis.
+Właściwość "dodatkowe pliki" narzędzia Web Deployment zawierała nieprawidłowy wpis.
 
-Właściwość dodatkowe pliki na stronie właściwości sieci Web Deployment zawiera błąd, prawdopodobnie z powodu problemu z oceny makra. Ten błąd może również oznaczać, że ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
+Właściwość dodatkowe pliki na stronie właściwości wdrożenia sieci Web zawiera błąd, prawdopodobnie z powodu problemu z oceną makra. Ten błąd może również oznaczać, że ścieżka jest źle sformułowana, zawierającą znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
 
-Aby rozwiązać ten problem, napraw makra, lub usuń specyfikację ścieżki. Oceniono ścieżka jest ścieżką bezwzględną z katalogu projektu.
+Aby rozwiązać ten problem, napraw makro lub Popraw specyfikację ścieżki. Szacowana ścieżka jest ścieżką bezwzględną z katalogu projektu.
 
-Ten błąd może również oznaczać, że jeden z plików, do których odwołuje się nie istnieje.
+Ten błąd może również oznaczać, że jeden z plików, do którego się odwołuje, nie istnieje.

@@ -26,13 +26,13 @@ helpviewer_keywords:
 - wcsset function
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
-ms.openlocfilehash: ed974968b75b130ed1ac8cbe6c96ef7392399abe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 399f046d295c040c166ff7f7c1b5563e14976838
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170127"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 
-Te funkcje są przestarzałe. Użyj ISO C++ zgodne [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset,](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) _mbsset_l lub Security-Enhanced [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md) zamiast.
+Te funkcje są przestarzałe. Użyj zgodnej C++ z normą ISO [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) lub _strset_s z ulepszonym zabezpieczeniami [, _strset_s_l,](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md) _wcsset_s, _wcsset_s_l _mbsset_s, _mbsset_s_l zamiast tego.

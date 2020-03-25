@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4603
+title: Ostrzeżenie kompilatora (poziom 1) C4603
 ms.date: 11/04/2016
 f1_keywords:
 - C4603
 helpviewer_keywords:
 - C4603
 ms.assetid: f065994e-e3e5-4694-b868-c124472b3342
-ms.openlocfilehash: 7934b9eab6d6ee91a99f3d03913983c2e98ca409
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a971325a7a05628d0d2ea0ca4526eccab9351433
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186027"
 ---
-# <a name="compiler-warning-level-1-c4603"></a>Kompilator ostrzeżenie (poziom 1) C4603
+# <a name="compiler-warning-level-1-c4603"></a>Ostrzeżenie kompilatora (poziom 1) C4603
 
-"\<identyfikator >": makro jest niezdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka
+"\<identyfikator >": makro nie jest zdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka
 
-Określone przez makro *identyfikator* różnych lub nie jest już zdefiniowany jest symbol zastępczy po nagłówków prekompilowanych jest używana.
+Makro określone przez symbol zastępczy *identyfikatora* jest inne lub nie jest już zdefiniowane po użyciu nagłówka prekompilatoru.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie prekompilowanych plików nagłówka](../../build/creating-precompiled-header-files.md)

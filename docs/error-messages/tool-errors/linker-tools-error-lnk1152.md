@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1152
 ms.assetid: 2523b61a-1359-4612-9c16-7d1f705f32e6
-ms.openlocfilehash: 156e9894c078587cd264c344e6d094aeb60d4649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c7cf650505314745b168c3a191b2e608d50e080
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184076"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Błąd narzędzi konsolidatora LNK1152
 
-Nie można rozpoznać co najmniej jednego niedekorowanego
+nie można rozpoznać co najmniej jednego niedekoracyjnego symbolu
 
-Ten błąd jest poprzedzony jedną ostrzeżenie [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) dla każdego niedekorowanego symbolu, który nie można rozpoznać i przez co najmniej dwa ostrzeżenia [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) symboli zduplikowane znaleziono niedekorowanego symbolu.
+Ten błąd jest poprzedzony przez jedną [LNK4022 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) ostrzegawczą dla każdego niedekoracyjnego symbolu, którego nie można rozpoznać, i co najmniej dwa ostrzeżenia [LNK4002 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) dla zduplikowanych symboli znalezionych dla symbolu niedekoracyjnego.

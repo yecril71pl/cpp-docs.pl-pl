@@ -6,34 +6,34 @@ helpviewer_keywords:
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: d1557f53a07a544ff4f9e5a63f905e6854fb74ce
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cc00c971eac2a089ccec5bd9eab594bdf4e8348e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857168"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173520"
 ---
 # <a name="name-decoration"></a>Nazwij dekorację
 
-Nazwij dekorację zazwyczaj odwołuje się do konwencji nazewnictwa języka C++, ale można zastosować do wielu przypadków C, jak również. Domyślnie C++ używa nazwy funkcji, parametry oraz zwracany typ do utworzenia konsolidatora nazwy funkcji. Rozważmy następującą deklarację funkcji:
+Dekoracja nazw zazwyczaj odnosi się do C++ konwencji nazewnictwa, ale może być również stosowana do wielu przypadków C. Domyślnie program C++ używa nazwy funkcji, parametrów i typu zwracanego, aby utworzyć nazwę konsolidatora dla funkcji. Rozważmy następującą deklarację funkcji:
 
 `void CALLTYPE test(void);`
 
-W poniższej tabeli przedstawiono nazwy konsolidatora dla różnych konwencji wywoływania.
+W poniższej tabeli przedstawiono nazwę konsolidatora dla różnych konwencji wywoływania.
 
-|Konwencja wywoływania|`extern "C"` lub `.c` pliku|`.cpp`, `.cxx` lub `/TP`|
+|Konwencja wywoływania|plik `extern "C"` lub `.c`|`.cpp`, `.cxx` lub `/TP`|
 |------------------------|---------------------------|------------------------|
 |Konwencja nazewnictwa języka C (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
-|Szybkie wywołanie konwencji nazewnictwa (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
-|Standardowe wywołanie konwencji nazewnictwa (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
-|Vector konwencją wywołania (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
+|Konwencja nazewnictwa szybkiego wywołania (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
+|Standardowa Konwencja nazewnictwa wywołań (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
+|Konwencja nazewnictwa wywołań wektorowych (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
 
-Użyj `extern "C"` do wywoływania funkcji języka C z C++. `extern "C"` wymusza użycie języka C Konwencja nazewnictwa dla klasy korporacyjnej C++ funkcji. Należy pamiętać o przełączniki kompilatora **TP** lub **/Tp**, które nakazuje kompilatorowi ignorowanie rozszerzenie nazwy pliku i skompiluj plik jako C lub C++, odpowiednio. Te opcje mogą powodować nazwy konsolidatora, które nie będą raczej.
+Użyj `extern "C"`, aby wywołać funkcję C z C++. `extern "C"` wymusza użycie konwencji nazewnictwa języka C dla funkcji niebędących klasami C++ . Należy pamiętać o przełącznikach kompilatora **/TC** lub **/TP**, które poinformują kompilator, aby ignorował rozszerzenie nazwy pliku i kompilować plik jako C++C lub, odpowiednio. Te opcje mogą spowodować nieoczekiwane nazwy konsolidatora.
 
-Posiadanie prototypy funkcji, które mają niezgodne parametry może spowodować błąd. Nazwij dekorację dołącza parametry funkcji do końcowego funkcji dekorowane nazwy. Wywołanie funkcji z typami parametrów, które nie odpowiadają wartościom w deklaracji funkcji może spowodować LNK2001.
+W przypadku prototypów funkcji, które mają niezgodne parametry, może być również przyczyną tego błędu. Dekoracja nazwy obejmuje parametry funkcji w końcowej nazwie funkcji dekoracyjnej. Wywołanie funkcji z typami parametrów, które nie pasują do tych w deklaracji funkcji, może również spowodować LNK2001.
 
-Obecnie nie istnieją standardy dla C++ nazewnictwa między dostawcami kompilatora lub nawet między różnymi wersjami kompilatora. Łączenie plików obiektów skompilowany przez inne kompilatory nie może utworzyć ten sam schemat nazewnictwa i może powodować nierozpoznane obiekty zewnętrzne.
+Obecnie nie ma żadnych standardów C++ nazewnictwa między dostawcami kompilatora, a nawet między różnymi wersjami kompilatora. Łączenie plików obiektów skompilowanych przez inne kompilatory może nie dawać tego samego schematu nazewnictwa i może powodować nierozpoznane zewnętrzne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błąd narzędzi konsolidatora LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)

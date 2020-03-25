@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1201
 ms.assetid: 64c3f496-a428-4b54-981e-faa82ef9c8a1
-ms.openlocfilehash: c5cbb9a7159a976ad0f96f46462669cff7b19f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d02743333c02c7cdff3b75e4a16bfecda442fa9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195113"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Błąd narzędzi konsolidatora LNK1201
 
-Wystąpił błąd podczas zapisywania do bazy danych programu 'NazwaPliku'; Sprawdź, czy brak miejsca na dysku, nieprawidłowa ścieżka lub niewystarczające uprawnienia
+Wystąpił błąd podczas zapisywania do bazy danych programu "filename"; Sprawdź, czy jest za mało miejsca na dysku, nieprawidłowa ścieżka lub niewystarczające uprawnienia
 
-ŁĄCZE nie można zapisać w bazie danych programu (PDB) dla pliku wyjściowego.
+LINK nie może zapisać do bazy danych programu (PDB) dla pliku wyjściowego.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Plik jest uszkodzony. Usuń plik PDB i połącz ponownie.
+1. Plik jest uszkodzony. Usuń plik PDB i ponownie połącz.
 
-1. Nie ma wystarczającej ilości miejsca na dysku do zapisania pliku.
+1. Za mało miejsca na dysku, aby zapisać plik.
 
-1. Dysk nie jest dostępna, prawdopodobnie z powodu problemu sieciowego.
+1. Stacja dysków jest niedostępna, prawdopodobnie z powodu problemu z siecią.
 
-1. Debuger jest aktywny w programie, w którym próbujesz się połączyć.
+1. Debuger jest aktywny w programie, który próbujesz połączyć.
 
-1. Brak miejsca na stosie.  Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.
+1. Za mało miejsca na stercie.  Aby uzyskać więcej informacji, zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) .

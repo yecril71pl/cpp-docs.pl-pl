@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4223
 ms.assetid: 6fc44336-0250-4432-928b-fc5dbe7b7c1c
-ms.openlocfilehash: ab44a547902e00b9408c05843c4cd131631de318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8b2e82e01b48c1605c26ee076c40dd561703827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198032"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>Ostrzeżenie kompilatora (poziomy 1 i 4) C4223
 
-użyto niestandardowego rozszerzenia: tablica l-wartości przekonwertować wskaźnik
+użyto niestandardowego rozszerzenia: tablica nielvaluea konwertowana na wskaźnik
 
-W standardowej C nie można przekonwertować tablicę l-wartości do wskaźnika. Przy użyciu domyślnych rozszerzeń firmy Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), możesz.
+W standardowym języku C nie można skonwertować tablicy innej niż lvalue na wskaźnik. Przy użyciu domyślnych rozszerzeń Microsoft ([/ze](../../build/reference/za-ze-disable-language-extensions.md)) możesz.

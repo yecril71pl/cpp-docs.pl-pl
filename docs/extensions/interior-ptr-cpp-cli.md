@@ -9,32 +9,32 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172155"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
-*Wskaźnika wewnętrznego* deklaruje wskaźnik do wewnątrz typu odwołania, ale nie do samego obiektu. Uchwyt odwołania, typ wartości, uchwyt typ spakowany, składowej typu zarządzanego lub element tablicy zarządzanej, można wskazać wskaźnika wewnętrznego.
+*Wewnętrzny wskaźnik* deklaruje wskaźnik do wewnątrz typu referencyjnego, ale nie do samego obiektu. Wewnętrzny wskaźnik może wskazywać na dojście do odwołania, typ wartości, dojście do typu opakowanego, składową typu zarządzanego lub do elementu tablicy zarządzanej.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-(Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie do wszystkich środowisk uruchomieniowych).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowisko wykonawcze systemu Windows).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-W poniższym przykładzie składnia pokazuje wskaźnika wewnętrznego.
+Poniższy przykład składni ilustruje wewnętrzny wskaźnik.
 
 ### <a name="syntax"></a>Składnia
 
@@ -45,34 +45,34 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>Parametry
 
 *cv_qualifier*<br/>
-**Const** lub **volatile** kwalifikatorów.
+kwalifikatory **const** lub **volatile** .
 
 *type*<br/>
 Typ *inicjatora*.
 
 *var*<br/>
-Nazwa **pomocą interior_ptr** zmiennej.
+Nazwa zmiennej **interior_ptr** .
 
-*initializer*<br/>
-Element członkowski typu odwołania, element tablicy zarządzanej lub inny obiekt, który można przypisać na wskaźnik natywny.
+*skład*<br/>
+Składową typu referencyjnego, elementu tablicy zarządzanej lub dowolnego innego obiektu, który można przypisać do wskaźnika natywnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wskaźnik natywny nie jest w stanie śledzić element jako jego zmiany lokalizacji na zarządzanym stosie, które powstały na skutek przenoszenie wystąpień obiektu moduł odśmiecania pamięci. Wskaźnik do poprawnie odwołują się do wystąpienia, środowisko uruchomieniowe potrzebuje aktualizacji wskaźnik do nowo pozycjonowane obiektu.
+Natywny wskaźnik nie może śledzić elementu, ponieważ jego lokalizacja zmienia się w zarządzanym stosie, co wynika z przenoszonej instancji obiektu modułu zbierającego elementy bezużyteczne. Aby wskaźnik prawidłowo odwoływał się do wystąpienia, środowisko uruchomieniowe musi zaktualizować wskaźnik do nowo położeniu obiektu.
 
-**Pomocą interior_ptr** stanowi nadzbiór funkcji wskaźnik natywny.  W związku z tym, wszystkie elementy, które mogą być przypisane do wskaźnik natywny można również przypisać do **pomocą interior_ptr**.  Wskaźnika wewnętrznego może wykonać ten sam zestaw operacji co natywnymi wskaźnikami, w tym porównania i arytmetyka wskaźnika.
+**Interior_ptr** reprezentuje nadzbiór funkcji wskaźnika natywnego.  W związku z tym wszystkie elementy, które mogą być przypisane do wskaźnika natywnego, można także przypisać do **interior_ptr**.  Wewnętrzny wskaźnik jest dozwolony do wykonywania tego samego zestawu operacji jako wskaźników natywnych, w tym porównania i arytmetycznego wskaźnika.
 
-Wskaźnika wewnętrznego, mogą być deklarowane tylko na stosie.  Nie można zadeklarować wskaźnika wewnętrznego jako składowej klasy.
+Wewnętrzny wskaźnik można zadeklarować tylko na stosie.  Wewnętrzny wskaźnik nie może być zadeklarowany jako element członkowski klasy.
 
-Ponieważ wskaźników wnętrza istnieje tylko na stosie, biorąc pod adres wskaźnika wewnętrznego daje niezarządzanym wskaźnikiem.
+Ponieważ wewnętrzne wskaźniki istnieją tylko na stosie, pobranie adresu wskaźnika wewnętrznego daje niezarządzany wskaźnik.
 
-**pomocą interior_ptr** ma niejawną konwersję do **bool**, co pozwala na jej użycie w instrukcjach warunkowych.
+**interior_ptr** ma niejawną konwersję na wartość **logiczną**, która umożliwia korzystanie z instrukcji warunkowych.
 
-Aby uzyskać informacje na temat sposobu deklarowania wnętrza wskaźnika, który wskazuje na obiekt, którego nie można przenieść na stercie zebranych elementów bezużytecznych, zobacz [pin_ptr](pin-ptr-cpp-cli.md).
+Aby uzyskać informacje na temat sposobu deklarowania wewnętrznego wskaźnika, który wskazuje na obiekt, którego nie można przenieść na stertie zebranych elementów bezużytecznych, zobacz [pin_ptr](pin-ptr-cpp-cli.md).
 
-**pomocą interior_ptr** znajduje się w przestrzeni nazw cli.  Zobacz [platformy, domyślna i cli przestrzenie nazw](platform-default-and-cli-namespaces-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+**interior_ptr** znajduje się w przestrzeni nazw interfejsu wiersza polecenia.  Aby uzyskać więcej informacji [, zobacz przestrzenie nazw platform, Default i CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md) .
 
-Aby uzyskać więcej informacji na wskaźnikach posługiwanie się nimi Zobacz
+Aby uzyskać więcej informacji na temat wewnętrznych wskaźników, zobacz.
 
 - [Instrukcje: deklarowanie wewnętrznych wskaźników i zarządzanych tablic oraz posługiwanie się nimi (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
@@ -84,11 +84,11 @@ Aby uzyskać więcej informacji na wskaźnikach posługiwanie się nimi Zobacz
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład pokazuje sposób deklarowania i użyć wskaźnika wewnętrznego na typ odwołania.
+Poniższy przykład pokazuje sposób deklarowania i używania wewnętrznego wskaźnika w typie referencyjnym.
 
 ```cpp
 // interior_ptr.cpp
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

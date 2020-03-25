@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: c216c4d01513868dd56f47c7d5ca7f8b734d1797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173663"
 ---
 # <a name="math-error-m6202"></a>Błąd matematyczny M6202
 
-'Funkcja': błąd
+"Function": błąd _SING
 
-Argument do danej funkcji była wartość singularity dla tej funkcji. Funkcja nie jest zdefiniowany dla tego argumentu.
+Argument danej funkcji był wartością Singularity tej funkcji. Funkcja nie jest zdefiniowana dla tego argumentu.
 
-Ten błąd wywołania `_matherr` funkcję z nazwy funkcji, argumentów i typ błędu. Można napisać ponownie `_matherr` funkcję, aby dostosować obsługi niektórych błędów zmiennoprzecinkowym zapisu matematycznego w czasie wykonywania.
+Ten błąd wywołuje funkcję `_matherr` z nazwą funkcji, jej argumentami i typem błędu. Można ponownie napisać funkcję `_matherr`, aby dostosować obsługę określonych błędów matematycznych zmiennoprzecinkowych w czasie wykonywania.

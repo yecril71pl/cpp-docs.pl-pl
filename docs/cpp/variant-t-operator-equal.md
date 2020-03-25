@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187625"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 ## <a name="syntax"></a>Składnia
 
@@ -117,42 +117,42 @@ _variant_t& operator=(
 
 ## <a name="remarks"></a>Uwagi
 
-Operator przypisuje nową wartość do `_variant_t` obiektu:
+Operator przypisuje nową wartość do obiektu `_variant_t`:
 
-- **Operator = (***varSrc***)** przypisuje istniejące `VARIANT` do `_variant_t` obiektu.
+- **operator = (**  *varSrc*  **)** Przypisuje istniejące `VARIANT` do obiektu `_variant_t`.
 
-- **Operator = (***pVarSrc***)** przypisuje istniejące `VARIANT` do `_variant_t` obiektu.
+- **operator = (**  *pVarSrc*  **)** Przypisuje istniejące `VARIANT` do obiektu `_variant_t`.
 
-- **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` obiekt `_variant_t` obiektu.    
+- **operator = (**  *var_t_Src*  **)** Przypisuje istniejący obiekt `_variant_t` do obiektu `_variant_t`.
 
-- **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą na `_variant_t` obiektu.
+- **operator = (**  *sSrc*  **)** Przypisuje **krótką** wartość całkowitą do obiektu `_variant_t`.
 
-- **Operator = (**`lSrc`**)** przypisuje **długie** wartość całkowitą na `_variant_t` obiektu.
+- **operator = (** `lSrc` **)** Przypisuje wartość **Long** Integer do obiektu `_variant_t`.
 
-- **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową celu `_variant_t` obiektu.
+- **operator = (**  *fltSrc*  **)** Przypisuje wartość liczbową **zmiennoprzecinkową** do obiektu `_variant_t`.
 
-- **Operator = (***dblSrc***)** przypisuje **double** wartość liczbową celu `_variant_t` obiektu.
+- **operator = (**  *dblSrc*  **)** Przypisuje **podwójną** wartość liczbową do obiektu `_variant_t`.
 
-- **Operator = (***cySrc***)** przypisuje `CY` obiekt `_variant_t` obiektu.
+- **operator = (**  *cySrc*  **)** Przypisuje obiekt `CY` do `_variant_t` obiektu.
 
-- **Operator = (***bstrSrc***)** przypisuje `BSTR` obiekt `_variant_t` obiektu.
+- **operator = (**  *bstrSrc*  **)** Przypisuje obiekt `BSTR` do `_variant_t` obiektu.
 
-- **Operator = (***wstrSrc***)** przypisuje ciąg Unicode na `_variant_t` obiektu.
+- **operator = (**  *wstrSrc*  **)** Przypisuje ciąg Unicode do obiektu `_variant_t`.
 
-- **Operator = (**`strSrc`**)** przypisuje wielobajtowy ciąg do `_variant_t` obiektu.
+- **operator = (** `strSrc` **)** Przypisuje ciąg wielobajtowy do obiektu `_variant_t`.
 
-- **Operator = (** `bSrc` **)** przypisuje **bool** wartość `_variant_t` obiektu.
+- **operator = (** `bSrc` **)** Przypisuje wartość **logiczną** do obiektu `_variant_t`.
 
-- **Operator = (***pDispSrc***)** przypisuje `VT_DISPATCH` obiekt `_variant_t` obiektu.
+- **operator = (**  *pDispSrc*  **)** Przypisuje obiekt `VT_DISPATCH` do `_variant_t` obiektu.
 
-- **Operator = (***pIUnknownSrc***)** przypisuje `VT_UNKNOWN` obiekt `_variant_t` obiektu.
+- **operator = (**  *pIUnknownSrc*  **)** Przypisuje obiekt `VT_UNKNOWN` do `_variant_t` obiektu.
 
-- **Operator = (***decSrc***)** przypisuje `DECIMAL` wartość `_variant_t` obiektu.
+- **operator = (**  *decSrc*  **)** Przypisuje wartość `DECIMAL` do obiektu `_variant_t`.
 
-- **Operator = (** `bSrc` **)** przypisuje `BYTE` wartość `_variant_t` obiektu.
+- **operator = (** `bSrc` **)** Przypisuje wartość `BYTE` do obiektu `_variant_t`.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_variant_t, klasa](../cpp/variant-t-class.md)

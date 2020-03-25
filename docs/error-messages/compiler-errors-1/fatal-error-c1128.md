@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-ms.openlocfilehash: bb1d9af10084d6b3e75325450c7f13ea1683ee2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64671c9abe8ed1375df1e91ca7509e6a597366ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229049"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203651"
 ---
 # <a name="fatal-error-c1128"></a>Błąd krytyczny C1128
 
-Liczba sekcji przekroczyła limit formatu pliku obiektowego: skompiluj z parametrem/bigobj
+Liczba sekcji przekroczyła limit formatu pliku obiektu: Kompiluj z/bigobj
 
-Plik .obj przekracza liczbę sekcji dopuszczalny rozmiar, ograniczenia formatu pliku obiektu COFF.
+Plik. obj przekroczył liczbę dozwolonych sekcji, ograniczenie formatu pliku obiektu COFF.
 
-Osiągnięcie tego ograniczenia sekcji mogą być wynikiem przy użyciu [/Gy](../../build/reference/gy-enable-function-level-linking.md) i kompilacji debugowania; **/Gy** niektóre funkcje przejść do ich własnej sekcji COMDAT. Do kompilacji debugowanej Brak sekcji informacji o debugowaniu dla poszczególnych funkcji COMDAT.
+Osiągnięcie tego ograniczenia sekcji może wynikać z używania [/Gy](../../build/reference/gy-enable-function-level-linking.md) i kompilacji debugowania; **/Gy** powoduje, że funkcje przechodzą do swoich własnych sekcji COMDAT. W kompilacji debugowania istnieje sekcja informacji o debugowaniu dla każdej funkcji COMDAT.
 
-Również może być spowodowany C1128, gdy istnieje zbyt wiele wbudowanych funkcji.
+C1128 może być również spowodowany tym, że jest zbyt wiele funkcji wbudowanych.
 
-Aby naprawić ten błąd, rozdzielić pliku źródłowego w wielu plikach kodu źródłowego, należy skompilować bez **/Gy**, lub kompilowanie z  [ /bigobj (Zwiększ ilość sekcji w. Plik obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Jeśli użytkownik nie można skompilować przy użyciu **/Gy**, musisz określić optymalizacje pojedynczo, ponieważ **/O2** i **/O1** zarówno implikują **/Gy**.
+Aby naprawić ten błąd, Podziel plik źródłowy na wiele plików kodu źródłowego, Kompiluj bez **/Gy**lub Kompiluj z [/bigobj (Zwiększ liczbę sekcji w. Plik obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Jeśli nie kompilujesz z **/Gy**, musisz określić optymalizacje pojedynczo, ponieważ **/O2** i **/O1** obydwie oznaczają **/Gy**.
 
-Jeśli to możliwe należy skompilować bez informacji debugowania.
+Jeśli to możliwe, Kompiluj bez debugowania informacji.
 
-Może trzeba będzie również mieć określonych wystąpień szablonów w plikach kodu źródłowego w oddzielnych, zamiast konieczności kompilator emisji ich.
+Może być również konieczne posiadanie określonych wystąpień szablonów w oddzielnych plikach kodu źródłowego, a nie ich emitowanie przez kompilator.
 
-Podczas przenoszenia kodu, C1128 prawdopodobnie pojawi się pierwszy podczas korzystania z x64 kompilatora i znacznie później za pomocą x86 kompilatora. x64 będzie miał co najmniej 4 sekcje skojarzone z każdą funkcję skompilowany **/Gy** lub śródwierszowa z szablonów lub wbudowane klasy: kodu, pdata oraz debugowanie informacji i prawdopodobnie xdata.  X86 nie będzie miał pdata.
+Podczas przenoszenia kodu, C1128 będzie prawdopodobnie najpierw wyświetlany podczas korzystania z kompilatora x64 i znacznie później z kompilatorem x86. Architektura x64 będzie zawierać co najmniej 4 sekcje skojarzone z każdą funkcją skompilowaną **/Gy** lub wbudowaną na podstawie szablonów lub klas wbudowanych: kod, pData i informacje debugowania, a także XData.  X86 nie będzie mieć pdata.

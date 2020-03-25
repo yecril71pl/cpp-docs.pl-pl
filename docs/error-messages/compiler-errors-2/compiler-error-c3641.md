@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44356fb1a1818a02102d23e6b308457f2f39506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200515"
 ---
 # <a name="compiler-error-c3641"></a>Błąd kompilatora C3641
 
-> "*funkcja*": nieprawidłowy, Konwencja wywoływania "calling_convention" dla funkcji kompilowanych z/CLR: pure lub/CLR: Safe
+> "*Function*": nieprawidłowa Konwencja wywoływania "calling_convention" dla funkcji skompilowanej z/CLR: Pure lub/CLR: Safe
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Tylko [__clrcall](../../cpp/clrcall.md) konwencja wywołania jest dozwolona z [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+Tylko Konwencja wywoływania [__clrcall](../../cpp/clrcall.md) jest dozwolona z [/CLR: Pure](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3641:
+Poniższy przykład generuje C3641:
 
 ```cpp
 // C3641.cpp

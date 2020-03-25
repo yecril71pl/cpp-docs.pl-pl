@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CAN0064
 - CXX0064
 ms.assetid: aa509e71-0616-41ca-a94e-6c376b041e57
-ms.openlocfilehash: 71e4e3e87b33849e6b487b79268ebc9574c2e5a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f763754299ed9257fb909b49a7a19c6f3ad58681
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184466"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Błąd CXX0064 programu Expression Evaluator
 
-Nie można ustawić punktu przerwania w powiązanej wirtualnej funkcji składowej
+nie można ustawić punktu przerwania dla powiązanej wirtualnej funkcji członkowskiej
 
-Punkt przerwania ustawiono funkcja wirtualna elementu członkowskiego, za pomocą wskaźnika do obiektu, takie jak:
+Punkt przerwania został ustawiony dla wirtualnej funkcji składowej za pomocą wskaźnika do obiektu, takiego jak:
 
 ```
 pClass->vfunc( int );
 ```
 
-Dla wirtualnej funkcji można ustawić punktu przerwania, wprowadzając klasy, takie jak:
+Punkt przerwania można ustawić dla funkcji wirtualnej, wprowadzając klasę, taką jak:
 
 ```
 Class::vfunc( int );
 ```
 
-Ten błąd jest taka sama jak CAN0064.
+Ten błąd jest identyczny z CAN0064.

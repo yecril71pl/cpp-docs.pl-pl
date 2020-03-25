@@ -1,5 +1,5 @@
 ---
-title: 'Wymiana pól rekordów: Jak działa RFX'
+title: 'Wymiana pól rekordów: jak działa RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,120 +10,120 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0661e61bceeedc0dd049ef47f5a0a0b71a8d82ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213073"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>Wymiana pól rekordów: Jak działa RFX
+# <a name="record-field-exchange-how-rfx-works"></a>Wymiana pól rekordów: jak działa RFX
 
-W tym temacie opisano proces RFX. Jest to zaawansowany obejmujący tematu:
+W tym temacie opisano proces RFX. Jest to zaawansowany temat obejmujący:
 
-- [RFX i zestawu rekordów](#_core_rfx_and_the_recordset)
+- [RFX i zestaw rekordów](#_core_rfx_and_the_recordset)
 
 - [Proces RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Ten temat dotyczy klasy pochodne `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy klas pochodnych `CRecordset`, w których nie zaimplementowano pobierania wierszy zbiorczych. W przypadku korzystania z pobierania wierszy zbiorczych zaimplementowano wymianę zbiorczych pól rekordów (bulk RFX). RFX Bulk jest podobna do RFX. Aby zrozumieć różnice, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_rfx_and_the_recordset"></a> RFX i zestawu rekordów
+##  <a name="rfx-and-the-recordset"></a><a name="_core_rfx_and_the_recordset"></a>RFX i zestaw rekordów
 
-Obiekty zestawów rekordów pola danych elementów członkowskich, razem wzięte, stanowią buforu edycji, który przechowuje zaznaczonych kolumnach do jednego rekordu. Jeśli zestaw rekordów pierwszym otwarciu, ma odczytywać pierwszy rekord RFX powiązania (kojarzy) każdego wybrać kolumny do adresu odpowiednie pole składowej danych. Gdy zestaw rekordów aktualizuje rekord, RFX wywołuje funkcje interfejsu API ODBC, aby wysłać SQL **aktualizacji** lub **Wstaw** instrukcji do sterownika. RFX używa jej wiedzy elementy członkowskie danych pola w celu określenia kolumn do zapisania.
+Elementy członkowskie danych pola obiektu zestawu rekordów, a razem stanowią bufor edycji, który zawiera wybrane kolumny jednego rekordu. Gdy zestaw rekordów jest otwierany i ma odczytać pierwszy rekord, RFX bind (Associates) każdej zaznaczonej kolumny do adresu odpowiedniego elementu członkowskiego danych pola. Gdy zestaw rekordów aktualizuje rekord, RFX wywołuje funkcje interfejsu API ODBC w celu wysłania instrukcji SQL **Update** lub **INSERT** do sterownika. RFX używa swoich informacji o elementach członkowskich danych pól, aby określić kolumny do zapisu.
 
-Struktura wykonuje kopię zapasową buforu edycji na określonym etapie, dzięki czemu można przywrócić jego zawartość, jeśli to konieczne. Przed dodaniem nowego rekordu i przed rozpoczęciem edycji istniejącego rekordu RFX kopię zapasową buforu edycji. Spowoduje przywrócenie buforu edycji w niektórych przypadkach, na przykład po `Update` następujące wywołanie `AddNew`. Porzuć bufor nowo zmienionego edycji, na przykład przeniesienie do innego rekordu przed wywołaniem nie jest przywracane buforu edycji `Update`.
+Platforma tworzy kopię zapasową bufora edycji na określonych etapach, aby można było przywrócić jego zawartość w razie potrzeby. RFX tworzy kopię zapasową buforu edycji przed dodaniem nowego rekordu i przed edytowaniem istniejącego rekordu. Przywraca bufor edycji w niektórych przypadkach, na przykład po wywołaniu `Update` po `AddNew`. Bufor edycji nie zostanie przywrócony, jeśli porzucasz nowo zmieniony bufor edycji przez, na przykład, przechodzenie do innego rekordu przed wywołaniem `Update`.
 
-Oprócz wymiana danych między źródłem danych i elementy członkowskie danych pola zestawu rekordów, RFX zarządza Parametry wiążące. Po otwarciu zestawu rekordów w kolejności od związane są wszystkie elementy członkowskie danych parametru "?" symbole zastępcze w instrukcji SQL, `CRecordset::Open` konstrukcji. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Oprócz wymiany danych między źródłem danych i elementami członkowskimi danych pola zestawu rekordów RFX zarządza parametrami powiązań. Po otwarciu zestawu rekordów wszystkie elementy członkowskie danych parametrów są powiązane z kolejnością symboli zastępczych "?" w instrukcji SQL, która `CRecordset::Open` konstrukcje. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-Klasa zestawu rekordów zastąpieniu obiektu `DoFieldExchange` wykonuje całą pracę przenoszenia danych w obu kierunkach. Takie jak wymiana danych okna dialogowego (DDX) RFX potrzebuje informacji na temat elementów członkowskich danych klasy. Kreator dostarcza niezbędne informacje, pisząc implementacji specyficznych dla zestawu rekordów `DoFieldExchange` , na podstawie pola danych elementu członkowskiego nazwy i typy danych, określ za pomocą kreatora.
+Zastąpienie klasy zestawu rekordów `DoFieldExchange` wykonuje całą prace, co przenosi dane w obu kierunkach. Podobnie jak w wymianie danych okna dialogowego (DDX), RFX potrzebuje informacji o elementach członkowskich danych klasy. Kreator udostępnia niezbędne informacje, pisząc implementację specyficzną dla zestawu rekordów dla `DoFieldExchange`, na podstawie nazw elementów członkowskich danych pól i typów danych określonych za pomocą kreatora.
 
-##  <a name="_core_the_record_field_exchange_process"></a> Proces wymiany pól rekordu
+##  <a name="record-field-exchange-process"></a><a name="_core_the_record_field_exchange_process"></a>Proces wymiany pola rekordu
 
-W tej sekcji opisano sekwencję zdarzeń RFX jako obiekt zestawu rekordów jest otwarty, a w miarę dodawania, aktualizowania i usuwania rekordów. Tabela [sekwencji z RFX operacje podczas rekordów otwórz](#_core_sequence_of_rfx_operations_during_recordset_open) i tabeli [sekwencji z RFX operacje podczas przewijania](#_core_sequence_of_rfx_operations_during_scrolling) w tym temacie pokazują proces jako procesy RFX `Move` polecenia w pliku zestaw rekordów i RFX zarządza aktualizacji. Podczas tych procesów [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) jest wywoływana, aby wykonywać wiele różnych operacji. `m_nOperation` Element członkowski danych [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiektu określa kolejnej operacji jest wymagane. Może okazać się przydatne do odczytania [zestaw rekordów: Jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [zestaw rekordów: Jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) przed przeczytaniem tego materiału.
+W tej sekcji opisano sekwencję zdarzeń RFX, które są otwierane, a w miarę dodawania, aktualizowania i usuwania rekordów. Sekwencja tabeli [operacji RFX podczas otwierania zestawu rekordów](#_core_sequence_of_rfx_operations_during_recordset_open) i [sekwencja tabeli operacji RFX podczas przewijania](#_core_sequence_of_rfx_operations_during_scrolling) w tym temacie przedstawia proces jako RFX przetwarza polecenie `Move` w zestawie rekordów oraz jako RFX zarządza aktualizacją. Podczas tych procesów [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) jest wywoływana w celu wykonywania wielu różnych operacji. Element członkowski danych `m_nOperation` obiektu [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) określa, której operacji żądano. Pomocne może być odczytanie [zestawu rekordów: jak zestawy rekordów wybierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) i [zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) przed odczytaniem tego materiału.
 
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Początkowa powiązanie kolumn i parametry
+###  <a name="rfx-initial-binding-of-columns-and-parameters"></a><a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a>RFX: początkowe powiązanie kolumn i parametrów
 
-Występują następujące działania RFX, w poniższej kolejności, gdy zostanie wywołana obiektem rekordem [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego:
+Następujące działania RFX są wykonywane w pokazanej kolejności, gdy wywoływana jest funkcja [Open](../../mfc/reference/crecordset-class.md#open) member obiektu zestawu rekordów:
 
-- Jeśli zestaw rekordów zawiera elementy członkowskie danych parametru, struktura wywołuje `DoFieldExchange` powiązać parametry zastępcze parametru w parametrach instrukcji SQL zestawu rekordów. Dane zależne od typu reprezentacja wartości parametru jest używana dla każdego symbolu zastępczego znalezione w **wybierz** instrukcji. Dzieje się tak, po instrukcji SQL jest gotowa, ale zanim zostanie on wykonany. Aby uzyskać informacji na temat przygotowywania poufności informacji, zobacz `::SQLPrepare` funkcji w ODBC *odwołania programisty*.
+- Jeśli zestaw rekordów zawiera elementy członkowskie danych parametrów, struktura wywołuje `DoFieldExchange`, aby powiązać parametry z symbolami zastępczymi parametrów w ciągu instrukcji SQL zestawu rekordów. Reprezentacja wartości parametru w zależności od typu danych jest używana dla każdego symbolu zastępczego znalezionego w instrukcji **SELECT** . Dzieje się tak po przygotowaniu instrukcji SQL, ale przed jej wykonaniem. Aby uzyskać informacje na temat przygotowania instrukcji, zobacz funkcję `::SQLPrepare` w *Kompendium ODBC Programmer's Reference*.
 
-- Struktura wywołuje `DoFieldExchange` po raz drugi, aby powiązać wartości wybranej kolumny odpowiednie elementy członkowskie danych pola w zestawie rekordów. W ten sposób ustanawiany obiekty zestawów rekordów jako bufor edycji zawierająca kolumny pierwszy rekord.
+- Platforma wywołuje `DoFieldExchange` drugi raz, aby powiązać wartości wybranych kolumn z odpowiednimi elementami członkowskimi danych w zestawie rekordów. Spowoduje to nawiązanie obiektu zestawu rekordów jako buforu edycji zawierającego kolumny pierwszego rekordu.
 
-- Zestaw rekordów wykonuje instrukcję SQL i źródła danych wybiera pierwszy rekord. Kolumny rekordu są ładowane do elementów członkowskich danych pole w zestawie rekordów.
+- Zestaw rekordów wykonuje instrukcję SQL, a źródło danych wybiera pierwszy rekord. Kolumny rekordu są ładowane do elementów członkowskich danych pola zestawu rekordów.
 
-W poniższej tabeli przedstawiono sekwencję operacji RFX po otwarciu zestawu rekordów.
+W poniższej tabeli przedstawiono sekwencję operacji RFX podczas otwierania zestawu rekordów.
 
-### <a name="_core_sequence_of_rfx_operations_during_recordset_open"></a> Sekwencja operacji RFX podczas otwierania zestawu rekordów
+### <a name="sequence-of-rfx-operations-during-recordset-open"></a><a name="_core_sequence_of_rfx_operations_during_recordset_open"></a>Sekwencja operacji RFX podczas otwierania zestawu rekordów
 
-|Operacja|Operacja dofieldexchange —|Operacja bazy danych/SQL|
+|Operacja|DoFieldExchange, operacja|Operacja bazy danych/SQL|
 |--------------------|-------------------------------|-----------------------------|
 |1. Otwórz zestaw rekordów.|||
-||2. Tworzenie instrukcji SQL.||
-|||3. Wyślij SQL.|
-||4. Powiąż elementy członkowskie danych parametru.||
-||5. Powiąż elementy członkowskie danych pola kolumn.||
-|||6. ODBC nie przenoszenia i wypełnia je.|
-||7. Napraw dane dla języka C++.||
+||2. Utwórz instrukcję języka SQL.||
+|||3. Wyślij kod SQL.|
+||4. powiązywanie elementów członkowskich danych parametru.||
+||5. powiązywanie elementów członkowskich danych pól z kolumnami.||
+|||6. ODBC wykonuje przenoszenie i wypełnianie danych.|
+||7. napraw dane dla programu C++.||
 
-Zestawy rekordów Użyj przygotowany wykonywania ODBC firmy, aby zezwolić na szybkie ponowne wysyłanie zapytania przy użyciu tej samej instrukcji SQL. Aby uzyskać więcej informacji na temat wykonywania przygotowany Zobacz ODBC SDK *odwołania programisty* w bibliotece MSDN.
+Zestawy rekordów używają przygotowanego wykonania ODBC, aby umożliwić szybkie przeszukiwanie przy użyciu tej samej instrukcji SQL. Aby uzyskać więcej informacji o przygotowanym wykonaniu, zobacz Kompendium zestawu ODBC SDK *programisty* w bibliotece MSDN.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Przewijanie
+###  <a name="rfx-scrolling"></a><a name="_mfc_rfx.3a_.scrolling"></a>RFX: przewijanie
 
-Podczas przewijania z jednego rekordu do innego, struktura wywołuje `DoFieldExchange` zastąpieniu ich odpowiednimi wartościami wcześniej zapisane w elementy członkowskie danych pola z wartościami dla nowego rekordu.
+Podczas przewijania z jednego rekordu do innego, struktura wywołuje `DoFieldExchange`, aby zastąpić wartości wcześniej przechowywane w elementach członkowskich danych pola wartościami dla nowego rekordu.
 
-W poniższej tabeli przedstawiono sekwencję operacji RFX, gdy użytkownik przesuwa się między rekordami.
+W poniższej tabeli przedstawiono sekwencję operacji RFX, gdy użytkownik przechodzi z rekordu do rekordu.
 
-### <a name="_core_sequence_of_rfx_operations_during_scrolling"></a> Sekwencja operacji RFX podczas przewijania
+### <a name="sequence-of-rfx-operations-during-scrolling"></a><a name="_core_sequence_of_rfx_operations_during_scrolling"></a>Sekwencja operacji RFX podczas przewijania
 
-|Operacja|Operacja dofieldexchange —|Operacja bazy danych/SQL|
+|Operacja|DoFieldExchange, operacja|Operacja bazy danych/SQL|
 |--------------------|-------------------------------|-----------------------------|
-|1. Wywołaj `MoveNext` lub jednego z innych funkcji przenoszenia.|||
-|||2. ODBC nie przenoszenia i wypełnia je.|
-||3. Napraw dane dla języka C++.||
+|1. Wywołaj `MoveNext` lub jedną z innych funkcji przenoszenia.|||
+|||2. ODBC wykonuje przenoszenie i wypełnianie danych.|
+||3. napraw dane dla programu C++.||
 
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Dodawanie nowych rekordów oraz edytowanie istniejących rekordów
+###  <a name="rfx-adding-new-records-and-editing-existing-records"></a><a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a>RFX: Dodawanie nowych rekordów i edytowanie istniejących rekordów
 
-Po dodaniu nowego rekordu, zestaw rekordów działa jako bufor edycji do zbudowania zawartość nowego rekordu. Podobnie jak w przypadku dodawania rekordów, edytowanie rekordów polega na zmianę wartości elementów członkowskich danych pole w zestawie rekordów. Z perspektywy RFX sekwencja jest:
+W przypadku dodania nowego rekordu zestaw rekordów działa jako bufor edycji, aby skompilować zawartość nowego rekordu. Podobnie jak w przypadku dodawania rekordów, Edycja rekordów obejmuje zmianę wartości elementów członkowskich danych pola zestawu rekordów. W perspektywie RFX sekwencja jest następująca:
 
-1. Wywołania do zestawu rekordów [działają funkcje AddNew](../../mfc/reference/crecordset-class.md#addnew) lub [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcja elementu członkowskiego powoduje, że RFX do przechowywania bieżącego buforu edycji, dlatego można je później przywrócić.
+1. Wywołanie metody [AddNew](../../mfc/reference/crecordset-class.md#addnew) lub [Edit](../../mfc/reference/crecordset-class.md#edit) elementu członkowskiego zestawu rekordów powoduje, że RFX do przechowywania bieżącego buforu edycji, aby można go było przywrócić później.
 
-1. `AddNew` lub `Edit` przygotowuje pól w buforze edycji, dlatego RFX może wykryć elementy członkowskie danych zmienionego pola.
+1. `AddNew` lub `Edit` przygotowuje pola w buforze edycji tak, aby RFX mogli wykryć zmieniony element członkowski danych pola.
 
-   Ponieważ nowy rekord nie ma żadnych poprzedniej wartości, aby porównać Zdobywaj wiedzę dzięki, `AddNew` ustawia wartość każdy element członkowski danych pola na wartość PSEUDO_NULL. Później, gdy wywołujesz `Update`, RFX porównuje wartość każdego członka danych o wartości PSEUDO_NULL. Jeśli tak, element członkowski danych został ustawiony. (PSEUDO_NULL nie jest taka sama jak kolumny rekord z wartością true o wartości Null ani nie jest jedną z tych wersji taka sama jak C++ o wartości NULL.)
+   Ponieważ nowy rekord nie ma poprzednich wartości do porównania nowych z, `AddNew` ustawia wartość każdego elementu członkowskiego danych pola na wartość PSEUDO_NULL. Później, podczas wywoływania `Update`, RFX porównuje wartości poszczególnych członków danych z wartością PSEUDO_NULL. Jeśli istnieje różnica, element członkowski danych został ustawiony. (PSEUDO_NULL nie jest taka sama jak kolumna rekordu o prawdziwej wartości null ani nie jest taka sama jak C++ wartość null.
 
-   W odróżnieniu od `Update` wywołania dla `AddNew`, `Update` wywołania dla `Edit` porównuje zaktualizowane wartości przy użyciu zapisanych wcześniej wartości, a nie przy użyciu PSEUDO_NULL. Różnica jest to, że `AddNew` nie ma żadnych zapisanych wcześniej wartości do porównania.
+   W przeciwieństwie do `Update` wywołania `AddNew`, wywołanie `Update` dla `Edit` porównuje zaktualizowane wartości z wcześniej przechowywanymi wartościami zamiast korzystać z PSEUDO_NULL. Różnica polega na tym, że `AddNew` nie ma poprzednio przechowywanych wartości do porównania.
 
-1. Bezpośrednio ustawisz wartości elementy członkowskie danych pola, których wartości, którą chcesz edytować, lub czy chcesz wypełnić dla nowego rekordu. Może to obejmować wywołania `SetFieldNull`.
+1. Można bezpośrednio ustawić wartości elementów członkowskich danych pól, których wartości mają być edytowane lub które mają zostać wypełnione dla nowego rekordu. Może to obejmować `SetFieldNull`wywoływania.
 
-1. Wywołania do [aktualizacji](../../mfc/reference/crecordset-class.md#update) sprawdza, czy zmienionego pola danych elementów członkowskich, zgodnie z opisem w kroku 2 (zobacz tabelę [sekwencji z RFX operacje podczas przewijania](#_core_sequence_of_rfx_operations_during_scrolling)). Jeśli nie zostały zmienione, `Update` zwraca wartość 0. Jeśli niektóre elementy członkowskie danych pola zostały zmienione, `Update` przygotowuje i wykonuje SQL **Wstaw** instrukcji, która zawiera wartości dla wszystkich zaktualizowanymi polami w rekordzie.
+1. Twoje wywołanie [aktualizacji](../../mfc/reference/crecordset-class.md#update) sprawdza, czy zmieniono elementy członkowskie danych pola, zgodnie z opisem w kroku 2 (zobacz [sekwencję tabeli operacji RFX podczas przewijania](#_core_sequence_of_rfx_operations_during_scrolling)). Jeśli żaden z nich nie został zmieniony, `Update` zwraca wartość 0. Jeśli niektóre elementy członkowskie danych pola uległy zmianie, `Update` przygotowuje i wykonuje instrukcję **INSERT** języka SQL, która zawiera wartości dla wszystkich zaktualizowanych pól w rekordzie.
 
-1. Aby uzyskać `AddNew`, `Update` stwierdza, przez przywrócenie wcześniej przechowywane wartości rekordu, które były aktualne przed `AddNew` wywołania. Aby uzyskać `Edit`, pozostają nowe edytowanych wartości.
+1. W przypadku `AddNew``Update` końcowych przez przywrócenie wcześniej przechowywanych wartości rekordu, który był aktualny przed wywołaniem `AddNew`. W przypadku `Edit`nowe edytowane wartości pozostają na miejscu.
 
-W poniższej tabeli przedstawiono sekwencję operacji RFX podczas dodawania nowego rekordu lub edytować istniejący rekord.
+W poniższej tabeli przedstawiono sekwencję operacji RFX podczas dodawania nowego rekordu lub edytowania istniejącego rekordu.
 
-### <a name="sequence-of-rfx-operations-during-addnew-and-edit"></a>Sekwencja operacji RFX podczas działają funkcje AddNew, Edit
+### <a name="sequence-of-rfx-operations-during-addnew-and-edit"></a>Sekwencja operacji RFX podczas AddNew i Edit
 
-|Operacja|Operacja dofieldexchange —|Operacja bazy danych/SQL|
+|Operacja|DoFieldExchange, operacja|Operacja bazy danych/SQL|
 |--------------------|-------------------------------|-----------------------------|
 |1. Wywołaj `AddNew` lub `Edit`.|||
 ||2. Utwórz kopię zapasową buforu edycji.||
-||3. Aby uzyskać `AddNew`, Oznacz elementy członkowskie danych pola jako "czyste" i wartość Null.||
+||3. Aby uzyskać `AddNew`, Oznacz elementy członkowskie danych pola jako "czyste" i null.||
 |4. Przypisz wartości do elementów członkowskich danych pola zestawu rekordów.|||
 |5. Wywołaj `Update`.|||
-||6. Sprawdź, czy zmienione pola.||
-||7. Tworzenie SQL **Wstaw** poufności informacji dotyczące `AddNew` lub **aktualizacji** poufności informacji dotyczące `Edit`.||
-|||8. Wyślij SQL.|
-||9. Aby uzyskać `AddNew`, Przywróć buforu Edytuj zawartość kopii zapasowej. Aby uzyskać `Edit`, jest usunięcie kopii zapasowej.||
+||6. Sprawdź, czy zmieniono pola.||
+||7. Kompiluj instrukcję SQL **INSERT** dla `AddNew` lub instrukcji **Update** dla `Edit`.||
+|||8. Wyślij kod SQL.|
+||9. Aby uzyskać `AddNew`, Przywróć jego zawartość kopii zapasowej. Aby uzyskać `Edit`, Usuń kopię zapasową.||
 
-### <a name="rfx-deleting-existing-records"></a>RFX: Usuwanie istniejących rekordów
+### <a name="rfx-deleting-existing-records"></a>RFX: usuwanie istniejących rekordów
 
-Po usunięciu rekordu RFX Ustawia wszystkie pola na wartość NULL, jako przypomnienie, że rekord zostanie usunięty, a następnie należy przenieść, wyłącz ją. Inne informacje sekwencji RFX nie jest konieczne.
+Po usunięciu rekordu RFX ustawia wszystkie pola na NULL jako przypomnienie, że rekord został usunięty i należy go przenieść. Nie są potrzebne żadne inne informacje o sekwencji RFX.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Korzystanie z MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Makra, funkcje globalne i zmienne globalne](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Klasa CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
-[CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)
+[CRecordset::D oFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

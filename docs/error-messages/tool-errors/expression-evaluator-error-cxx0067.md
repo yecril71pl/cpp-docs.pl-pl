@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0067
 - CAN0067
 ms.assetid: 9a3e642b-4746-41ac-b665-bd98a6fa0cb3
-ms.openlocfilehash: 61178f1a0c89306bdc0318c12b2c347aa6a3255f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf9ddc1474ba32ecaee35ba9003bf76a424e4a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184323"
 ---
 # <a name="expression-evaluator-error-cxx0067"></a>Błąd CXX0067 programu Expression Evaluator
 
 Obliczanie funkcji nie jest obsługiwane
 
-Wyrażenie zawiera wywołanie funkcji. Niektóre ewaluatory wyrażeń nie obsługują wywołań funkcji.
+Wyrażenie zawiera wywołanie funkcji. Niektóre oceny wyrażeń nie obsługują wywołań funkcji.
 
-Ten błąd jest taka sama jak CAN0067.
+Ten błąd jest identyczny z CAN0067.

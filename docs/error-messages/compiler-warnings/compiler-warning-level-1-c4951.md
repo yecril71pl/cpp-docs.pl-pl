@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4951
+title: Ostrzeżenie kompilatora (poziom 1) C4951
 ms.date: 08/27/2018
 f1_keywords:
 - C4951
 helpviewer_keywords:
 - C4951
 ms.assetid: 669d8bb7-5efa-4ba9-99db-4e65addbf054
-ms.openlocfilehash: 73e048aeaa044c35e09539b07d51398829a0fdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d94347df17bac01334cfd85c2bd9f6c8a98b5fc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174599"
 ---
-# <a name="compiler-warning-level-1-c4951"></a>Kompilator ostrzeżenie (poziom 1) C4951
+# <a name="compiler-warning-level-1-c4951"></a>Ostrzeżenie kompilatora (poziom 1) C4951
 
-> "*funkcja*" został wyedytowany od profilu dane zostały zebrane, nieużywane dane profilu funkcji
+> *Funkcja "Function*" została edytowana od czasu zebrania danych profilowych, dane profilu funkcji nie zostały użyte
 
-Funkcja został zmodyfikowany w danych wejściowych modułu [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), dzięki czemu dane profilu są obecnie nieprawidłowe. Moduł wejściowy został ponownie kompilowana po **pginstrument** i ma funkcję (*funkcja*) przy użyciu różnych przepływu sterowania niż w module w momencie **pginstrument**  operacji.
+Funkcja została edytowana w module wejściowym do [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), tak aby dane profilu były teraz nieprawidłowe. Moduł wejściowy został ponownie skompilowany po **/LTCG: PGINSTRUMENT** i ma funkcję (*funkcję*) z innym przepływem sterowania niż w module w czasie operacji **/LTCG: PGINSTRUMENT** .
 
-To ostrzeżenie ma charakter informacyjny. Aby rozwiązać tego ostrzeżenia, należy uruchomić **pginstrument**, powtórz wszystkie testu działa, a następnie uruchom **/LTCG:PGOPTIMIZE**.
+To ostrzeżenie jest informacje. Aby usunąć to ostrzeżenie, uruchom polecenie **/LTCG: PGINSTRUMENT**, wykonaj ponownie wszystkie przebiegi testowe i uruchom **/LTCG: PGOPTIMIZE**.
 
-To ostrzeżenie zostanie zamienione błąd Jeśli **/LTCG:PGOPTIMIZE** została użyta.
+To ostrzeżenie zostanie zastąpione błędem, jeśli użyto **/LTCG: PGOPTIMIZE** .

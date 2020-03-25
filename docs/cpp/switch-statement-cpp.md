@@ -10,16 +10,16 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160817"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C++)
 
-Umożliwia wybór między wielokrotnymi sekcjami kodu, w zależności od wartości wyrażenia liczby całkowitej.
+Zezwala na wybór między wieloma sekcjami kodu, w zależności od wartości wyrażenia całkowitego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,21 +31,21 @@ Umożliwia wybór między wielokrotnymi sekcjami kodu, w zależności od wartoś
 
 ## <a name="remarks"></a>Uwagi
 
-*Wyrażenie* musi być typu całkowitego lub typu klasy, dla którego istnieje jednoznaczna konwersja na typ całkowitoliczbowy. Promocja typu całkowitego odbywa się zgodnie z opisem w [konwersje standardowe](standard-conversions.md).
+*Wyrażenie* musi być typem całkowitym lub typem klasy, dla którego istnieje jednoznaczna konwersja na typ całkowity. Promocja typu całkowitego jest wykonywana zgodnie z opisem w temacie [Konwersje standardowe](standard-conversions.md).
 
-**Przełącz** treść instrukcji składa się z szeregu **przypadek** etykiet i opcjonalnej **domyślne** etykiety. Żadne dwa wyrażenia stałe w **przypadek** instrukcji można ocenić tę samą wartość. **Domyślne** etykieta może wystąpić tylko raz. Instrukcje opatrzone etykietami nie są wymaganiami składni, ale **Przełącz** instrukcja jest bez znaczenia bez nich.   Domyślna deklaracja nie musi pojawić się na końcu; go może występować w dowolnym miejscu w treści instrukcji switch. Sprawa lub domyślna etykieta może wystąpić tylko wewnątrz instrukcji switch.
+Treść instrukcji **Switch** składa się z serii etykiet **wielkości liter** i opcjonalnej etykiety **domyślnej** . W instrukcjach **Case** nie mogą być obliczane dwa wyrażenia stałe o tej samej wartości. Etykieta **Domyślna** może wystąpić tylko raz. Instrukcje etykietowane nie są wymaganiami składni, ale instrukcja **Switch** nie ma znaczenia.   Instrukcja domyślna nie musi znajdować się na końcu; może pojawić się w dowolnym miejscu w treści instrukcji switch. Etykieta Case lub default może wystąpić tylko wewnątrz instrukcji switch.
 
-*Wyrażenie_stałe* w każdym **przypadek** etykiety jest konwertowane na typ *wyrażenie* i w porównaniu z *wyrażenie* dla równości. Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* odpowiada wartości *wyrażenie*. Zachowanie wynikowe jest przedstawione w poniższej tabeli.
+*Wyrażenie stałe* w każdej etykiecie **Case** jest konwertowane na typ *wyrażenia* i porównywane z *wyrażeniem* dla równości. Kontrolka przechodzi do instrukcji, której **wielkość liter** *— wyrażenie* dopasowuje wartość *wyrażenia*. Wynikowe zachowanie jest pokazane w poniższej tabeli.
 
-### <a name="switch-statement-behavior"></a>Zachowanie instrukcji przełączania
+### <a name="switch-statement-behavior"></a>Zachowanie instrukcji switch
 
 |Warunek|Akcja|
 |---------------|------------|
-|Przekonwertowane wartości zgodne z promowanym wyrażeniem kontrolowania.|Kontrola jest przekazywana do instrukcji następującej po tej etykiecie.|
-|Żadna ze stałych nie pasuje do stałych w **przypadek** etykiet; **domyślne** etykiety jest obecny.|Kontrola jest przekazywana do **domyślne** etykiety.|
-|Żadna ze stałych nie pasuje do stałych w **przypadek** etykiet; **domyślne** etykieta nie jest obecny.|Kontrola jest przekazywana do instrukcji następującej po **Przełącz** instrukcji.|
+|Przekonwertowana wartość jest zgodna z wyróżnionym wyrażeniem kontroli.|Kontrolka jest przenoszona do instrukcji następującej po etykiecie.|
+|Żadna ze stałych nie pasuje do stałych w etykietach **przypadku** ; obecna jest etykieta **Domyślna** .|Kontrolka jest przenoszona do etykiety **domyślnej** .|
+|Żadna ze stałych nie pasuje do stałych w etykietach **przypadku** ; Etykieta **Domyślna** nie jest obecna.|Kontrolka jest przekazywana do instrukcji po instrukcji **Switch** .|
 
-Jeśli zostanie znalezione pasujące wyrażenie, formant nie jest utrudniane przez kolejne **przypadek** lub **domyślne** etykiety. [Podziału](../cpp/break-statement-cpp.md) instrukcja jest używane, aby zatrzymać wykonywanie, a kontrola jest przekazywana do instrukcji następującej po **Przełącz** instrukcji. Bez **podziału** instrukcji, każda instrukcja z dopasowanej **przypadek** etykiet na końcu **Przełącz**, w tym **domyślne**, jest wykonany. Na przykład:
+Jeśli zostanie znalezione pasujące wyrażenie, kontrolka nie jest obsługiwana w kolejnych etykietach instrukcji **Case** i **default** . Instrukcja [Break](../cpp/break-statement-cpp.md) jest używana, aby zatrzymać wykonywanie i transfer kontroli do instrukcji po instrukcji **Switch** . Bez instrukcji **Break** , jest wykonywana każda instrukcja z dopasowanej etykiety **Case** do końca **przełącznika**, łącznie z **wartością domyślną**. Na przykład:
 
 ```cpp
 // switch_statement1.cpp
@@ -76,9 +76,9 @@ int main() {
 }
 ```
 
-W powyższym przykładzie `capa` jest zwiększana, gdy `c` jest wielką `A`. **Podziału** instrukcji znajdującej się po `capa++` kończy wykonywanie **Przełącz** treści instrukcji i przekazuje kontrolę **podczas** pętli. Bez **podziału** instrukcji, wykonanie "spadnie za pośrednictwem" do następnej instrukcji etykietą, tak aby `lettera` i `nota` również by wzrosła. Podobny cel jest obsługiwany przez **podziału** poufności informacji dotyczące `case 'a'`. Jeśli `c` jest małymi literami `a`, `lettera` jest zwiększany i **podziału** kończy się **Przełącz** treść instrukcji. Jeśli `c` nie `a` lub `A`, **domyślne** instrukcja jest wykonywana.
+W powyższym przykładzie `capa` jest zwiększana, jeśli `c` jest `A`wielką literą. Instrukcja **Break** po `capa++` kończy wykonywanie treści instrukcji **Switch** i kontrola przechodzi do pętli **while** . Bez instrukcji **Break** wykonanie "przepada" do następnej instrukcji oznaczonej etykietą, tak aby `lettera` i `nota` również były zwiększane. Podobny cel jest obsługiwany przez instrukcję **Break** dla `case 'a'`. Jeśli `c` jest małymi literami `a`, `lettera` jest zwiększana, a instrukcja **Break** kończy treść instrukcji **Switch** . Jeśli `c` nie jest `a` lub `A`, zostanie wykonana instrukcja **Domyślna** .
 
-**Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut jest określony w standardzie C ++ 17. Mogą być używane w **Przełącz** instrukcji jako wskazówka do kompilatora (lub kto czyta kodu) jest przeznaczona należą do tego zachowania. Microsoft C++ kompilatora aktualnie nie ostrzegaj przed witrynami dla fallthrough zachowania, więc ten atrybut nie ma wpływu na zachowanie kompilatora. Należy pamiętać, że atrybut jest stosowany do pustą instrukcję w ramach instrukcja labeled; innymi słowy średnik jest konieczne.
+**Visual Studio 2017 i nowsze:** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) atrybut `[[fallthrough]]` jest określony w standardzie c++ 17. Może być używana w instrukcji **Switch** jako Wskazówka do kompilatora (lub do każdego odczytu kodu), że jest zamierzone zachowanie. Kompilator firmy C++ Microsoft obecnie nie ostrzega w przypadku zachowania fallthrough, więc ten atrybut nie ma wpływu na zachowanie kompilatora. Należy zauważyć, że atrybut jest stosowany do pustej instrukcji w instrukcji oznaczonej etykietą. Innymi słowy, średnik jest zbędny.
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)):  Instrukcja switch mogą wprowadzać i Inicjowanie zmiennej, których zakres jest ograniczony do bloku instrukcji switch:
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): instrukcja SWITCH może wprowadzić i zainicjować zmienną, której zakres jest ograniczony do bloku instrukcji switch:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-Wewnętrzny blok **Przełącz** instrukcji może zawierać definicje z inicjalizacji, tak długo, jak są one dostępne — to znaczy nie są pomijane przez wszystkie możliwe wykonania ścieżki. Nazwy wprowadzone za pomocą tych deklaracji mają zakres lokalny. Na przykład:
+Wewnętrzny blok instrukcji **Switch** może zawierać definicje z inicjalizacjami o ile są one osiągalne — to znaczy, które nie są pomijane przez wszystkie możliwe ścieżki wykonywania. Nazwy wprowadzone przy użyciu tych deklaracji mają zakres lokalny. Na przykład:
 
 ```cpp
 // switch_statement2.cpp
@@ -154,17 +154,17 @@ int main(int argc, char *argv[])
 }
 ```
 
-A **Przełącz** poufności informacji mogą być zagnieżdżone. W takich przypadkach **przypadek** lub **domyślne** etykiety są skojarzone z najbliższą **Przełącz** instrukcji, która je otacza.
+Instrukcja **Switch** może być zagnieżdżona. W takich przypadkach etykiety **Case** lub **default** są skojarzone z najbliższą instrukcją **Switch** , która je obejmuje.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Microsoft C nie ogranicza liczby przypadków wartości w **Przełącz** instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w **Przełącz** instrukcji.
+Firma Microsoft C nie ogranicza liczby wartości wielkości liter w instrukcji **Switch** . Liczba jest ograniczona tylko przez dostępną pamięć. ANSI C wymaga co najmniej 257 etykiet wielkości liter w instrukcji **Switch** .
 
-Wartość domyślna Microsoft C to, że są włączone rozszerzenia Microsoft. Użyj [/Za](../build/reference/za-ze-disable-language-extensions.md) opcję kompilatora, aby wyłączyć te rozszerzenia.
+Domyślnym ustawieniem dla Microsoft C jest włączenie rozszerzeń Microsoft. Aby wyłączyć te rozszerzenia, użyj opcji kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

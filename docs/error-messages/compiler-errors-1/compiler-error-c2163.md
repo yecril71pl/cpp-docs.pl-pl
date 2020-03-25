@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2163
 ms.assetid: 6428d1e9-1ba1-46fc-bbf6-91d6fef2734c
-ms.openlocfilehash: d5ad39b7deba77069cf4b40ddec852ac2135b37b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd86be999ef36666e99281cdffac99802a5699f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174805"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207041"
 ---
 # <a name="compiler-error-c2163"></a>Błąd kompilatora C2163
 
-'Funkcja': nie jest dostępna jako funkcja wewnętrzna
+"Function": nie jest dostępna jako funkcja wewnętrzna
 
-`intrinsic` Lub `function` pragma Wyświetla listę funkcji nie jest dostępna w formie wewnętrzne. Na przykład niektóre funkcje wewnętrzne nie są dostępne podczas kompilowania program, który używa programowania/CLR.
+`intrinsic` lub `function` pragma zawiera listę funkcji, która nie jest dostępna w formie wewnętrznej. Na przykład niektóre elementy wewnętrzne nie są dostępne podczas kompilowania programu, który korzysta z programowania/CLR.

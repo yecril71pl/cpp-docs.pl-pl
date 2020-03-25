@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RC1002
 ms.assetid: b43dfece-0dc3-4d0b-9d8f-509699b9ae80
-ms.openlocfilehash: 0804e7db92355c023e4f9f1dbef8d9194caa3718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e6069a9c0901071d366a6deafeab7c064c18efc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297746"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173195"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Błąd krytyczny kompilatora zasobów RC1002
 
-miejsca na stercie
+za mało miejsca na stercie
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Zwiększ ilość miejsca na plik wymiany dla Windows. Aby uzyskać więcej informacji na temat zwiększeniu ilości miejsca na plik wymiany Zobacz pamięci wirtualnej w Pomocy Windows.
+1. Zwiększ miejsce na pliki wymiany systemu Windows. Aby uzyskać więcej informacji na temat zwiększania przestrzeni wymiany plików, zobacz pamięć wirtualna w pomocy systemu Windows.
 
 1. Podziel bieżący plik na mniejsze pliki i skompiluj je oddzielnie.
 
-1. Usuń inne programy lub sterowniki uruchomionych w systemie.
+1. Usuń inne programy lub sterowniki działające w systemie.

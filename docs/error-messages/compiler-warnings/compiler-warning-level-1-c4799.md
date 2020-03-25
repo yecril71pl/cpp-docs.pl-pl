@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4799
+title: Ostrzeżenie kompilatora (poziom 1) C4799
 ms.date: 11/04/2016
 f1_keywords:
 - C4799
 helpviewer_keywords:
 - C4799
 ms.assetid: 8ecbd06f-c778-4371-a2fb-c690b6743ec8
-ms.openlocfilehash: 475451b47d461e7ea1428eb715a876fb023694d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec92da425718cd5ddc579d1d733a0bc4e56dc04a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152219"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175106"
 ---
-# <a name="compiler-warning-level-1-c4799"></a>Kompilator ostrzeżenie (poziom 1) C4799
+# <a name="compiler-warning-level-1-c4799"></a>Ostrzeżenie kompilatora (poziom 1) C4799
 
-> Nie EMMS na końcu funkcji "*funkcja*"
+> Brak EMMS na końcu funkcji "*Function*"
 
-Funkcja ma co najmniej jednej instrukcji MMX, ale nie ma `EMMS` instrukcji. Użycie instrukcji multimedialnych `EMMS` instrukcji lub `_mm_empty` wewnętrzne należy również wyczyścić word multimedialnych znacznik na końcu kod MMX.
+Funkcja ma co najmniej jedną instrukcję MMX, ale nie ma instrukcji `EMMS`. Gdy jest używana instrukcja multimedialna, `EMMS` instrukcji lub `_mm_empty` wewnętrznej należy również użyć, aby wyczyścić słowo tag multimedialny na końcu kodu MMX.
 
-C4799 może wystąpić, gdy za pomocą ivec.h, wskazującą, czy kod nie korzysta z prawidłowo wykonania instrukcji EMMS przed zwróceniem. Jest to fałszywe ostrzeżenie dla tych nagłówków. Licencjobiorca może wyłączyć te definiując _SILENCE_IVEC_C4799 w ivec.h. Należy jednak pamiętać, że także zapobiegnie kompilator od wydawania poprawne ostrzeżenia tego typu.
+Użytkownik może uzyskać C4799 podczas korzystania z ivec. h, wskazując, że kod nie używa prawidłowo instrukcji EMMS przed zwróceniem. Jest to fałszywe ostrzeżenie dla tych nagłówków. Można je wyłączyć przez zdefiniowanie _SILENCE_IVEC_C4799 w IVEC. h. Należy jednak pamiętać, że spowoduje to również zachowanie przez kompilator prawidłowych ostrzeżeń tego typu.
 
-Aby uzyskać powiązane informacje, zobacz [firmy Intel MMX rozkazów](../../assembler/inline/intel-s-mmx-instruction-set.md).
+Aby uzyskać powiązane informacje, zobacz [zestaw instrukcji MMX firmy Intel](../../assembler/inline/intel-s-mmx-instruction-set.md).

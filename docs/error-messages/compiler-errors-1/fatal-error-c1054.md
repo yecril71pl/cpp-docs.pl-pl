@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1054
 ms.assetid: 9cfb7307-b22a-4418-b7c0-2621b0ab5b1b
-ms.openlocfilehash: 0bfd0c03378b1a9c616a014ac96153b3ab04af9d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d094d0892d43a5f9894f03538f72e59b57bad6db
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204467"
 ---
 # <a name="fatal-error-c1054"></a>Błąd krytyczny C1054
 
 ograniczenie kompilatora: inicjatory są zagnieżdżone zbyt głęboko
 
-Kod przekracza limit zagnieżdżania inicjatory (w zależności od kombinacji typów inicjowany poziomy 10 – 15).
+Kod przekracza limit zagnieżdżenia dla inicjatorów (10-15 poziomów, w zależności od kombinacji typów, które są inicjowane).
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Uprość inicjowany, aby zmniejszyć zagnieżdżanie typów danych.
+1. Uprość typy danych, które są inicjowane w celu zmniejszenia zagnieżdżenia.
 
-1. Po zadeklarowaniu, należy zainicjować zmienne w osobnych instrukcji.
+1. Inicjuj zmienne w oddzielnych instrukcjach po deklaracji.

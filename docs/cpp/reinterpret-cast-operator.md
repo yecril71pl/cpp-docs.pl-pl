@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 421a1fdce6834f800cd33a55d75c9dc4f88ffc93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403428"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188288"
 ---
-# <a name="reinterpretcast-operator"></a>Operator reinterpret_cast
+# <a name="reinterpret_cast-operator"></a>Operator reinterpret_cast
 
-Umożliwia dowolny wskaźnik do przekonwertowania na dowolny inny typ wskaźnika. Umożliwia również dowolnego typu całkowitoliczbowego ma zostać przekonwertowany na dowolny typ wskaźnika i odwrotnie.
+Zezwala na konwersję dowolnego wskaźnika do dowolnego innego typu wskaźnika. Umożliwia także konwersję dowolnego typu całkowitego na dowolny typ wskaźnika i na odwrót.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Uwagi
 
-Nieprawidłowe użycie **reinterpret_cast** łatwo operator może być niebezpieczne. Chyba że żądany konwersji jest natury niskiego poziomu, należy użyć jednego z innych operatorów rzutowania.
+Niewłaściwe użycie operatora **reinterpret_cast** może być łatwo niebezpieczne. Chyba że żądana konwersja jest z natury niskiego poziomu, należy użyć jednego z innych operatorów rzutowania.
 
-**Reinterpret_cast** operator może służyć do konwersji takich jak `char*` do `int*`, lub `One_class*` do `Unrelated_class*`, które są założenia niebezpieczne.
+Operatora **reinterpret_cast** można używać do konwersji, takich jak `char*` do `int*`lub `One_class*` do `Unrelated_class*`, które są z natury niebezpieczne.
 
-Wynik **reinterpret_cast** bezpiecznie nie można używać do coś innego niż rzutowany powrót do oryginalnego typu. Inne zastosowania to, co najlepiej nonportable.
+Wynik **reinterpret_cast** nie może być bezpiecznie użyty dla wszystkiego innego niż rzutowanie na jego pierwotny typ. Inne zastosowania są, w największej, nieportowe.
 
-**Reinterpret_cast** operator nie może oddać **const**, **volatile**, lub **__unaligned** atrybutów. Zobacz [const_cast Operator](../cpp/const-cast-operator.md) informacji na temat usuwania tych atrybutów.
+Operator **reinterpret_cast** nie może rzutować atrybutów **const**, **volatile**lub **__unaligned** . Aby uzyskać informacje na temat usuwania tych atrybutów, zobacz [Operator const_cast](../cpp/const-cast-operator.md) .
 
-**Reinterpret_cast** operator konwertuje wartość pustego wskaźnika do wartości pustego wskaźnika typu miejsca docelowego.
+Operator **reinterpret_cast** konwertuje wartość wskaźnika o wartości null na wartość wskaźnika o wartości null typu docelowego.
 
-Jednym z zastosowań praktycznych **reinterpret_cast** znajduje się w funkcji mieszania, mapująca wartość do indeksu w taki sposób, że dwóch odrębnych wartości rzadko zakończenia się przy użyciu tego samego indeksu.
+Jednym z praktycznych metod korzystania z **reinterpret_cast** jest funkcja skrótu, która mapuje wartość na indeks w taki sposób, że dwa różne wartości rzadko kończą się tym samym indeksem.
 
 ```cpp
 #include <iostream>
@@ -77,9 +77,9 @@ Output:
 64829
 ```
 
-**Reinterpret_cast** umożliwia wskaźnika, który powinien być traktowany jako typ całkowitoliczbowy. Wynik jest następnie bit przesunięte i XORed z samym sobą, aby wygenerować unikatowego indeksu (unikatowe wysokiego stopnia prawdopodobieństwa). Indeks jest następnie obcięte przez standard C rzutowania w stylu zwracany typ funkcji.
+**Reinterpret_cast** umożliwia traktowanie wskaźnika jako typu całkowitego. Następnie wynik jest bitowy i XORed, aby utworzyć unikatowy indeks (unikatowy dla wysokiego prawdopodobieństwa). Indeks jest następnie obcinany przez standardowe Rzutowanie w stylu C do zwracanego typu funkcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory rzutowania](../cpp/casting-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

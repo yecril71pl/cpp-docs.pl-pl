@@ -15,18 +15,18 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187573"
 ---
-# <a name="variantt-relational-operators"></a>_variant_t — Operatory relacyjne
+# <a name="_variant_t-relational-operators"></a>_variant_t — Operatory relacyjne
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Porównanie dwóch `_variant_t` obiektów dla równości i nierówności.
+Porównaj dwa `_variant_t` obiekty pod kątem równości lub nierówności.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,21 +44,21 @@ bool operator!=(
 #### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-A `VARIANT` ma zostać porównane z `_variant_t` obiektu.
+`VARIANT` do porównania z obiektem `_variant_t`.
 
 *pSrc*<br/>
-Wskaźnik do `VARIANT` ma zostać porównane z `_variant_t` obiektu.
+Wskaźnik do `VARIANT`, który ma zostać porównany z obiektem `_variant_t`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca **true** Jeśli przechowuje porównania, **false** w przeciwnym razie.
+Zwraca **wartość PRAWDA** , jeśli porównanie ma wartość **Fałsz** , jeśli nie.
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje `_variant_t` obiekt z `VARIANT`, testowanie dla równości i nierówności.
+Porównuje obiekt `_variant_t` z `VARIANT`, testowania pod kątem równości lub nierówności.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_variant_t, klasa](../cpp/variant-t-class.md)

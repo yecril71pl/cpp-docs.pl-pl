@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 722757b93d3423b02340c382b16e08a31626bc01
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209508"
 ---
 # <a name="testing-your-provider"></a>Testowanie dostawcy
 
@@ -23,6 +23,6 @@ Przed zwolnieniem dostawcy należy wykonać następujące testy w podanej kolejn
 
 1. Uruchom testy zgodności OLE DB (w tym testy zgodne z ADO), aby pokazać, że Twój dostawca spełnia normy poziomu 0 dla dostawców OLE DB. (Aby uzyskać wyjaśnienie poziomu 0, Wyszukaj **testy zgodne z poziomem OLE DB 0** w [przewodniku OLE DB programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Te testy i powiązane dokumenty są dołączone do wizualizacji C++ w zestawie SDK dostępu do danych. Te testy pomagają również sprawdzić, czy dostawca działa dobrze, gdy są agregowane przez innych [dostawców usług](../../data/oledb/ole-db-resource-pooling-and-services.md) i są szczególnie przydatne w przypadku modyfikowania lub dodawania właściwości. Aby uzyskać więcej informacji na temat testów zgodności, zobacz plik Readme dla zestawu SDK dostępu do danych, który znajduje się na jednym z dysków CD programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

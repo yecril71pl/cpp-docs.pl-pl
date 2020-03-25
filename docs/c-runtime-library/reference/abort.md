@@ -25,12 +25,12 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 3f183d6fbf9d7bce7f638e44cdc3f3b450def57b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 46c8e25483799df3211a5022be6c4338f2c4732a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170400"
 ---
 # <a name="abort"></a>przerwij
 
@@ -47,13 +47,13 @@ void abort( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**przerwanie** nie zwraca kontroli do procesu wywołującego. Domyślnie sprawdza obsługę sygnałów przerwania i wywołuje `SIGABRT` , czy jest ustawiona. Następnie **Przerwij przerywa** bieżący proces i zwraca kod zakończenia do procesu nadrzędnego.
+**przerwanie** nie zwraca kontroli do procesu wywołującego. Domyślnie sprawdza obsługę sygnałów przerwania i wywołuje `SIGABRT`, jeśli jest ustawiona. Następnie **Przerwij przerywa** bieżący proces i zwraca kod zakończenia do procesu nadrzędnego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Domyślnie, gdy aplikacja jest skompilowana przy użyciu biblioteki środowiska uruchomieniowego debugowania, procedura **Abort** wyświetla komunikat o błędzie przed `SIGABRT` podniesieniem. W przypadku aplikacji konsolowych działających w trybie konsoli komunikat jest wysyłany `STDERR`do. Aplikacje klasyczne systemu Windows i aplikacje konsolowe działające w trybie okienkowym wyświetlają komunikat w oknie komunikatu. Aby pominąć komunikat, użyj [_set_abort_behavior](set-abort-behavior.md) , aby wyczyścić `_WRITE_ABORT_MSG` flagę. Wyświetlany komunikat zależy od używanej wersji środowiska uruchomieniowego. W przypadku aplikacji zbudowanych przy użyciu najnowszych wersji wizualizacji C++komunikat jest podobny do następującego:
+Domyślnie, gdy aplikacja jest skompilowana przy użyciu biblioteki środowiska uruchomieniowego debugowania, procedura **Abort** wyświetla komunikat o błędzie przed podjęciem `SIGABRT`. W przypadku aplikacji konsolowych działających w trybie konsoli komunikat jest wysyłany do `STDERR`. Aplikacje klasyczne systemu Windows i aplikacje konsolowe działające w trybie okienkowym wyświetlają komunikat w oknie komunikatu. Aby pominąć komunikat, użyj [_set_abort_behavior](set-abort-behavior.md) , aby wyczyścić flagę `_WRITE_ABORT_MSG`. Wyświetlany komunikat zależy od używanej wersji środowiska uruchomieniowego. W przypadku aplikacji zbudowanych przy użyciu najnowszych wersji wizualizacji C++komunikat jest podobny do następującego:
 
 > R6010-Abort () został wywołany
 
@@ -63,11 +63,11 @@ W poprzednich wersjach biblioteki środowiska uruchomieniowego języka C zostani
 
 Gdy program jest kompilowany w trybie debugowania, w oknie komunikatu są wyświetlane opcje **przerwania**, **ponawiania**lub **ignorowania**. Jeśli użytkownik wybierze przycisk **Przerwij**, program zakończy działanie natychmiast i zwróci kod zakończenia 3. Jeśli użytkownik wybierze pozycję **Ponów próbę**, debuger jest wywoływany dla debugowania just-in-Time, jeśli jest dostępny. Jeśli użytkownik wybierze opcję **Ignoruj**, **przerwanie** kontynuuje normalne przetwarzanie.
 
-W przypadku kompilacji detalicznych i debugowania, **Przerwij** następnie sprawdza, czy ustawiono procedurę obsługi sygnałów przerwania. Jeśli ustawiono program obsługi sygnałów inny niż domyślny, **przerywaj** wywołania `raise(SIGABRT)`. Za pomocą funkcji [sygnału](signal.md) Skojarz funkcję obsługi sygnałów przerwania z `SIGABRT` sygnałem. Możesz wykonywać niestandardowe akcje — na przykład czyścić zasoby lub rejestrować informacje, a także kończyć aplikację przy użyciu własnego kodu błędu w funkcji obsługi. Jeśli nie zdefiniowano niestandardowego programu obsługi sygnałów, Metoda **Abort** nie podnosi `SIGABRT` sygnału.
+W przypadku kompilacji detalicznych i debugowania, **Przerwij** następnie sprawdza, czy ustawiono procedurę obsługi sygnałów przerwania. Jeśli ustawiono program obsługi sygnałów inny niż domyślny, wywołania **przerwania** `raise(SIGABRT)`. Za pomocą funkcji [sygnału](signal.md) Skojarz funkcję obsługi sygnałów przerwania z sygnałem `SIGABRT`. Możesz wykonywać niestandardowe akcje — na przykład czyścić zasoby lub rejestrować informacje, a także kończyć aplikację przy użyciu własnego kodu błędu w funkcji obsługi. Jeśli nie zdefiniowano niestandardowego programu obsługi sygnałów, Metoda **Abort** nie podnosi sygnału `SIGABRT`.
 
-Domyślnie, w kompilacjach niedebugowanych aplikacji klasycznych lub konsolowych, **przerwanie** wywołuje mechanizm usługi Raportowanie błędów systemu Windows (wcześniej znany jako Dr. Watson), aby zgłosić błędy do firmy Microsoft. To zachowanie można włączyć lub wyłączyć przez wywołanie `_set_abort_behavior` i ustawienie lub maskowanie `_CALL_REPORTFAULT` flagi. Gdy flaga jest ustawiona, system Windows wyświetla okno komunikatu z tekstem podobnym do "A problem spowodował, że program przestanie prawidłowo działać". Użytkownik może wybrać opcję wywołania debugera za pomocą przycisku **Debuguj** lub wybrać przycisk **Zamknij program** , aby zakończyć aplikację z kodem błędu zdefiniowanym przez system operacyjny.
+Domyślnie, w kompilacjach niedebugowanych aplikacji klasycznych lub konsolowych, **Abort** , a następnie wywołuje mechanizm usługi Raportowanie błędów systemu Windows (wcześniej znany jako Dr Watson), aby zgłosić błędy do firmy Microsoft. To zachowanie można włączyć lub wyłączyć przez wywołanie `_set_abort_behavior` i ustawienie lub maskowanie flagi `_CALL_REPORTFAULT`. Gdy flaga jest ustawiona, system Windows wyświetla okno komunikatu z tekstem podobnym do "A problem spowodował, że program przestanie prawidłowo działać". Użytkownik może wybrać opcję wywołania debugera za pomocą przycisku **Debuguj** lub wybrać przycisk **Zamknij program** , aby zakończyć aplikację z kodem błędu zdefiniowanym przez system operacyjny.
 
-Jeśli program obsługi raportowania błędów systemu Windows nie zostanie wywołany, **Przerwij** wywołania [_exit](exit-exit-exit.md) , aby zakończyć proces z kodem zakończenia 3 i zwraca kontrolę do procesu nadrzędnego lub systemu operacyjnego. `_exit`nie opróżnia buforów strumieni ani nie `atexit` / `_onexit` przetwarza.
+Jeśli program obsługi raportowania błędów systemu Windows nie zostanie wywołany, należy **przerwać** wywołania [_exit](exit-exit-exit.md) , aby zakończyć proces z kodem zakończenia 3 i zwraca kontrolę do procesu nadrzędnego lub systemu operacyjnego. `_exit` nie opróżnia buforów strumieni ani `atexit`/`_onexit` przetwarzanie.
 
 Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [techniki debugowania CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -115,7 +115,7 @@ int main( void )
 File could not be opened: No such file or directory
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie funkcji abort](../../cpp/using-abort.md)<br/>
 [abort, funkcja](../../c-language/abort-function-c.md)<br/>

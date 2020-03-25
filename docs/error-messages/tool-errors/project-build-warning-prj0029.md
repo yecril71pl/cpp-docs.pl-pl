@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0029
 ms.assetid: f02c09c6-09f3-4d44-8cd4-9a25336be1ea
-ms.openlocfilehash: 1daac3435bc8f1b4bd4ed8462caf3b8eaa397e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16a9e7dd31f3aa80cdb73f48c37215deca45113d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298039"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191954"
 ---
 # <a name="project-build-warning-prj0029"></a>Ostrzeżenie PRJ0029 dotyczące kompilacji projektu
 
-Nie ustawiono właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji. Niestandardowy krok kompilacji będzie pominięty.
+Właściwość "Outputs" niestandardowego kroku kompilacji na poziomie projektu nie jest ustawiona. Niestandardowy krok kompilacji zostanie pominięty.
 
-Niestandardowy krok kompilacji nie został wykonany, ponieważ określono żadnych danych wyjściowych.
+Niestandardowy krok kompilacji nie został wykonany, ponieważ nie określono danych wyjściowych.
 
 Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:
 
-- Wykluczanie niestandardowego kroku kompilacji z kompilacji.
+- Wyklucz niestandardowy krok kompilacji z kompilacji.
 
 - Dodaj dane wyjściowe.
 
-- Usuń zawartość polecenie kroku kompilacji niestandardowej.
+- Usuń zawartość polecenia niestandardowego kroku kompilacji.

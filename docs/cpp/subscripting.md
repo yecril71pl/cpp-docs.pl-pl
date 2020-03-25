@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160895"
 ---
 # <a name="subscripting"></a>Tworzenie indeksów dolnych
 
-Operator indeksu dolnego (**[**), takiej jak operator wywołania funkcji jest uznawany za operatora binarnego. Operator indeksu dolnego, musi być funkcją niestatycznej składowej, która przyjmuje jeden argument. Ten argument może być dowolnego typu i wyznacza indeks dolny tablicy żądaną.
+Operator indeksu dolnego ( **[]** ), podobnie jak operator wywołania funkcji, jest traktowany jako operator binarny. Operator indeksu dolnego musi być niestatyczną funkcją składową, która przyjmuje jeden argument. Ten argument może być dowolnego typu i wyznacza żądany indeks dolny tablicy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób tworzenia wektorów typu **int** implementującej sprawdzanie granic:
+W poniższym przykładzie pokazano, jak utworzyć wektor typu **int** , który implementuje sprawdzanie granic:
 
 ```cpp
 // subscripting.cpp
@@ -91,10 +91,10 @@ Element: [10] = 10
 
 ## <a name="comments"></a>Komentarze
 
-Gdy `i` osiągnie 10 poprzedni program **— operator []** wykryje, że liczbach indeksu jest używana i wysyła komunikat o błędzie.
+Gdy `i` osiągnie 10 w poprzednim programie, **operator []** wykryje, że jest używany indeks dolny z ograniczeniami i wygeneruje komunikat o błędzie.
 
-Należy pamiętać, że funkcja **— operator []** zwraca typ odwołania. To powoduje, że do l wartością, co pozwala na korzystanie z indeksem wyrażeń po obu stronach operatory przypisania.
+Należy zauważyć, że **operator funkcji []** zwraca typ referencyjny. Powoduje to, że jest to wartość l, co pozwala na korzystanie z wyrażeń w indeksach po obu stronach operatorów przypisania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeładowanie operatora](../cpp/operator-overloading.md)

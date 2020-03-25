@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4638
+title: Ostrzeżenie kompilatora (poziom 3) C4638
 ms.date: 08/27/2018
 f1_keywords:
 - C4638
 helpviewer_keywords:
 - C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-ms.openlocfilehash: 1bdd7541e16f5c02756678ae78a777094b5fe588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3662116359f906ef6f0a004fada8efd6771d0a0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174131"
 ---
-# <a name="compiler-warning-level-3-c4638"></a>Kompilator ostrzeżenie (poziom 3) C4638
+# <a name="compiler-warning-level-3-c4638"></a>Ostrzeżenie kompilatora (poziom 3) C4638
 
-> Docelowy komentarza dokumentu XML: odwołanie do nieznanego symbolu "*symbol*"
+> Obiekt docelowy komentarza dokumentu XML: odwołanie do nieznanego symbolu "*symbol*"
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator nie może rozpoznać symbolu (*symbol*). Symbol muszą być prawidłowe w kompilacji.
+Kompilator nie może rozpoznać symbolu (*symbol*). Symbol musi być prawidłowy w kompilacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4638:
+Poniższy przykład generuje C4638:
 
 ```cpp
 // C4638.cpp

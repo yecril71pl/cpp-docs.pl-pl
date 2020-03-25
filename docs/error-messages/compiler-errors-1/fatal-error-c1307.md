@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1307
 ms.assetid: 6f77d3d4-ba8a-476c-b540-aff19eb4efc4
-ms.openlocfilehash: 1acdda77ac9cbf8d99752de3b78ab9c32bbb4cbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7eb90c8e17408f6898ef7ff1a9d9e5efcafb4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338535"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203349"
 ---
 # <a name="fatal-error-c1307"></a>Błąd krytyczny C1307
 
 Program został wyedytowany od czasu zebrania danych profilowych
 
-Korzystając z [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), konsolidator wykryto moduł wejściowy nie kompilowanej po pginstrument, i że moduł został zmieniony w punkcie, w którym istniejące dane profilu nie są już odpowiednie. Na przykład jeśli zmienione wykresu wywołań w module ponownej kompilacji, kompilator wygeneruje C1307.
+W przypadku korzystania z [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)konsolidator wykrył Moduł wejściowy, który został ponownie skompilowany po/LTCG: PGINSTRUMENT i że moduł został zmieniony do punktu, w którym istniejące dane profilowe nie są już ważne. Na przykład, jeśli wykres wywołań został zmieniony w module rekompilowanym, kompilator wygeneruje C1307.
 
-Aby rozwiązać ten problem, uruchom pginstrument, wykonaj ponownie wszystkie przebiegi testowe i uruchom /LTCG:PGOPTIMIZE. Jeśli nie możesz uruchomić pginstrument i powtórz test wszystkich przebiegów, zamiast /LTCG:PGUPDATE /LTCG:PGOPTIMIZE do utworzenia zoptymalizowanego obrazu.
+Aby rozwiązać ten problem, Uruchom/LTCG: PGINSTRUMENT, ponów wszystkie przebiegi testowe i Uruchom/LTCG: PGOPTIMIZE. Jeśli nie możesz uruchomić/LTCG: PGINSTRUMENT i wykonaj ponownie wszystkie przebiegi testowe, użyj/LTCG: PGUPDATE zamiast/LTCG: PGOPTIMIZE w celu utworzenia zoptymalizowanego obrazu.

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 42953c92e4cf31b5ccd02dd51811fc1fdeedbcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170674"
 ---
-# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+# <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wywołania **QueryInterface** funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.
+Wywołuje funkcję elementu członkowskiego **QueryInterface** elementu `IUnknown` na wyhermetyzowanym wskaźniku interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,15 +38,15 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 *IID*<br/>
 `IID` wskaźnika interfejsu.
 
-*p*<br/>
-Surowego wskaźnika interfejsu.
+*St*<br/>
+Pierwotny wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołania `IUnknown::QueryInterface` we wskaźniku zhermetyzowany interfejs z określonym `IID` i zwraca wynikowy surowego wskaźnika interfejsu w *p*. Ta procedura zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia.
+Wywołuje `IUnknown::QueryInterface` na hermetyzowanym wskaźniku interfejsu z określonym `IID` i zwraca wynikowy wskaźnik interfejsu w *p*. Ta procedura zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

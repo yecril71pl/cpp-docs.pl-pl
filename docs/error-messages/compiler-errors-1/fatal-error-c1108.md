@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1108
 ms.assetid: 3cadf07b-b7a7-41c7-ad5c-06ceb8af8c3b
-ms.openlocfilehash: 6e029e5cff5994282e96484d7c1ea04ca61049f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a1891713cfe513f6de63a9e66a0f30147ce96c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203702"
 ---
 # <a name="fatal-error-c1108"></a>Błąd krytyczny C1108
 
-> Nie można odnaleźć biblioteki DLL: "*nazwa biblioteki dll*"
+> nie można odnaleźć biblioteki DLL: "*nazwa biblioteki DLL*"
 
-Określonej biblioteki DLL (*nazwa biblioteki dll*) nie został odnaleziony w ścieżce.
+Nie można znaleźć podanej biblioteki DLL (*nazwa biblioteki DLL*) w ścieżce.
 
-Aby rozwiązać ten problem, zainstaluj ponownie Visual C++ lub skopiuj plik dll odpowiednie z instalacji na komputerze.
+Aby rozwiązać ten problem, zainstaluj ponownie C++ wizualizację lub skopiuj odpowiedni plik. dll z instalacji na komputer.

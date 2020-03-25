@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4191704da2fdac849ac1ce97692c2421ba7cda41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168386"
 ---
 # <a name="attribute-programming-faq"></a>Pogramowanie oparte na atrybutach - najczęściej zadawane pytania
 
-W tym temacie odpowiedzi na następujące często zadawane pytania:
+Ten temat zawiera odpowiedzi na następujące często zadawane pytania:
 
-- [Co to jest wartość HRESULT?](#vcconattributeprogrammmingfaqanchor1)
+- [Co to jest HRESULT?](#vcconattributeprogrammmingfaqanchor1)
 
-- [Gdy ma do określenia nazwy parametru atrybutu](#vcconattributeprogrammmingfaqanchor2)
+- [Kiedy muszę określić nazwę parametru dla atrybutu?](#vcconattributeprogrammmingfaqanchor2)
 
-- [Czy można użyć komentarze, w bloku atrybutów?](#vcconattributeprogrammmingfaqanchor3)
+- [Czy mogę używać komentarzy w bloku atrybutów?](#vcconattributeprogrammmingfaqanchor3)
 
-- [Jak atrybuty są powiązani z dziedziczenia?](#vcconattributeprogrammmingfaqanchor4)
+- [Jak atrybuty współdziałają z dziedziczeniem?](#vcconattributeprogrammmingfaqanchor4)
 
-- [Jak używać atrybutów w nonattributed Projekt ATL?](#vcconattributeprogrammmingfaqanchor5)
+- [Jak można używać atrybutów w nieatrybutowym projekcie ATL?](#vcconattributeprogrammmingfaqanchor5)
 
-- [Jak używać pliku .idl w projekcie z atrybutami?](#vcconattributeprogrammmingfaqanchor6)
+- [Jak mogę użyć pliku IDL w projekcie z atrybutami?](#vcconattributeprogrammmingfaqanchor6)
 
-- [Można zmodyfikować kod, który jest wprowadzony przez atrybut?](#vcconattributeprogrammmingfaqanchor7)
+- [Czy mogę zmodyfikować kod, który jest wstrzykiwany przez atrybut?](#vcconattributeprogrammmingfaqanchor7)
 
-- [Jak można dalej zadeklarować interfejsu opartego na atrybutach?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [Jak mogę zadeklarować interfejs z atrybutem "dalej"?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [Na klasę pochodną klasę, która używa również atrybuty można używać atrybutów?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [Czy można używać atrybutów klasy pochodnej z klasy, która również używa atrybutów?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co to jest wartość HRESULT?
+##  <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>Co to jest HRESULT?
 
-Wartość HRESULT to typ prosty danych, który jest często używana jako wartość zwracaną przez atrybuty i ATL ogólnie rzecz biorąc. W poniższej tabeli opisano różne wartości. Więcej wartości są zawarte w plikach winerror.h pliku nagłówka.
+HRESULT to prosty typ danych, który jest często używany jako wartość zwracana przez atrybuty i ATL w ogólności. W poniższej tabeli opisano różne wartości. Więcej wartości znajduje się w pliku nagłówkowym Winerror. h.
 
-|Nazwa|Opis|Wartość|
+|Name (Nazwa)|Opis|Wartość|
 |----------|-----------------|-----------|
-|S_OK|Operacja zakończona powodzeniem|0x00000000|
+|S_OK|Operacja zakończona pomyślnie|0x00000000|
 |E_UNEXPECTED|Nieoczekiwany błąd|0x8000FFFF|
 |E_NOTIMPL|Nie zaimplementowano|0x80004001|
-|E_OUTOFMEMORY|Nie można przydzielić wymaganej ilości pamięci|0x8007000E|
-|E_INVALIDARG|Jeden lub więcej argumentów są nieprawidłowe|0x80070057|
-|E_NOINTERFACE|Taki interfejs nie jest obsługiwane|0x80004002|
+|E_OUTOFMEMORY|Nie można przydzielić potrzebnej pamięci|0x8007000E|
+|E_INVALIDARG|Co najmniej jeden argument jest nieprawidłowy|0x80070057|
+|E_NOINTERFACE|Brak obsługiwanego interfejsu|0x80004002|
 |E_POINTER|Nieprawidłowy wskaźnik|0x80004003|
-|E_HANDLE|Nieprawidłowe dojście|0x80070006|
-|E_ABORT|Operacja została przerwana|0x80004004|
+|E_HANDLE|Nieprawidłowy uchwyt|0x80070006|
+|E_ABORT|Operacja przerwana|0x80004004|
 |E_FAIL|Nieokreślony błąd|0x80004005|
 |E_ACCESSDENIED|Ogólny błąd odmowy dostępu|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Gdy ma do określenia nazwy parametru atrybutu
+##  <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>Kiedy muszę określić nazwę parametru dla atrybutu?
 
-W większości przypadków Jeśli ten atrybut ma jeden parametr, ten parametr nosi nazwę. Ta nazwa nie jest wymagane podczas wstawiania atrybutu w kodzie. Na przykład następujące użycie polecenia [się agregowaniu](aggregatable.md) atrybutu:
+W większości przypadków, jeśli atrybut ma jeden parametr, ten parametr ma nazwę. Ta nazwa nie jest wymagana podczas wstawiania atrybutu w kodzie. Na przykład następujące użycie atrybutu [agregowanego](aggregatable.md) :
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -76,7 +76,7 @@ class CMyClass
 };
 ```
 
-Jednak następujące atrybuty mają pojedynczą, bez nazwy parametrów:
+Jednak następujące atrybuty mają pojedyncze, nienazwane parametry:
 
 ||||
 |-|-|-|
@@ -92,11 +92,11 @@ Jednak następujące atrybuty mają pojedynczą, bez nazwy parametrów:
 |[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Czy można użyć komentarze, w bloku atrybutów?
+##  <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>Czy mogę używać komentarzy w bloku atrybutów?
 
-Można użyć jednowierszowego i wielowierszowe komentarze, w bloku attribute. Jednak nie można używać obu stylów komentarz w nawiasach zawierający parametry do atrybutu.
+W bloku atrybutu można używać zarówno komentarzy jednowierszowych, jak i wielu wierszy. Nie można jednak użyć żadnego stylu komentarza w nawiasach, które mają parametry do atrybutu.
 
-Dozwolone jest:
+Dozwolone są następujące elementy:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +105,30 @@ Dozwolone jest:
 ]
 ```
 
-Niedozwolone jest:
+Następujące elementy są niedozwolone:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Jak atrybuty są powiązani z dziedziczenia?
+##  <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>Jak atrybuty współdziałają z dziedziczeniem?
 
-Inne klasy, które mogą sami można przypisać lub nie może dziedziczyć unattributed i opartego na atrybutach klas. Wynik pochodząca z atrybutami klasy jest taka sama jak pochodząca z tej klasy po dostawca atrybucie został przekształcony swój kod. Atrybuty nie są przesyłane do klasy poprzez dziedziczenie C++ pochodne. Dostawca atrybucie tylko przekształca kod spowodowanych antyaliasingiem w pobliżu jego atrybuty.
+Można dziedziczyć zarówno klasy z atrybutami, jak i nieatrybutowymi z innych klas, które mogą być przypisana lub nie. Wynik pochodzący z klasy z atrybutami jest taki sam jak pochodny klasy, gdy dostawca atrybutów przeprowadził swój kod. Atrybuty nie są przekazywane do klas pochodnych przez C++ dziedziczenie. Dostawca atrybutu tylko przekształca kod w sąsiedztwie jego atrybutów.
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak używać atrybutów w nonattributed Projekt ATL?
+##  <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>Jak można używać atrybutów w nieatrybutowym projekcie ATL?
 
-Masz nonattributed Projekt ATL, który ma pliku .idl, i chcesz rozpocząć dodawanie obiektów opartego na atrybutach. W takim przypadku należy użyć **Kreator dodawania klasy** zapewnienie kodu.
+Może istnieć nieprzypisany Projekt ATL, który ma plik. idl, i można rozpocząć dodawanie obiektów z atrybutami. W takim przypadku należy użyć **Kreatora dodawania klasy** , aby podać kod.
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Jak używać pliku .idl w projekcie z atrybutami?
+##  <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>Jak mogę użyć pliku IDL w projekcie z atrybutami?
 
-Może być pliku .idl, którego chcesz użyć w projekcie ATL opartego na atrybutach. W tym przypadku używasz [importidl —](importidl.md) atrybutu, skompilować pliku .idl, aby plik .h (zobacz [strony właściwości MIDL](../../build/reference/midl-property-pages.md) w projekcie **strony właściwości** okno dialogowe), a następnie dołącz plik .h klasy w projekcie.
+Może istnieć plik. idl, który ma być używany w projekcie z atrybutami ATL. W takim przypadku należy użyć atrybutu [importidl](importidl.md) , skompilować plik. idl do pliku h (zobacz [stronę właściwości MIDL](../../build/reference/midl-property-pages.md) w oknie dialogowym **strony właściwości** projektu), a następnie dołączyć plik h do projektu.
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Można zmodyfikować kod, który jest wprowadzony przez atrybut?
+##  <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>Czy mogę zmodyfikować kod, który jest wstrzykiwany przez atrybut?
 
-Niektóre atrybuty wstrzyknięcie kodu do projektu. Zobaczysz wprowadzonego kodu za pomocą [/Fx](../../build/reference/fx-merge-injected-code.md) — opcja kompilatora. Jest również możliwe, aby skopiować kod z pliku wprowadzony i wklej go w kodzie źródłowym. Umożliwia modyfikowanie zachowania atrybutu. Jednak trzeba zmodyfikować inne części kodu także.
+Niektóre atrybuty wsuwają kod do projektu. Wprowadzany kod można zobaczyć przy użyciu opcji kompilatora [/FX](../../build/reference/fx-merge-injected-code.md) . Możliwe jest również skopiowanie kodu z wstrzykniętego pliku i wklejenie go do kodu źródłowego. Pozwala to modyfikować zachowanie atrybutu. Jednak może być konieczne zmodyfikowanie również innych części kodu.
 
-Poniższy przykład jest wynikiem kopiowania wstrzyknięty kod do pliku kodu źródłowego:
+Poniższy przykład jest wynikiem kopiowania wstrzykniętego kodu do pliku kodu źródłowego:
 
 ```cpp
 // attr_injected.cpp
@@ -234,14 +234,14 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Jak można dalej zadeklarować interfejsu opartego na atrybutach?
+##  <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Jak mogę zadeklarować interfejs z atrybutem "dalej"?
 
-Jeśli zamierzasz utworzyć deklaracja interfejsu opartego na atrybutach, należy zastosować te same atrybuty do deklaracją do przodu, które są stosowane do deklaracji rzeczywistego interfejsu. Należy również zastosować [wyeksportować](export.md) atrybutu z deklaracją do przodu.
+Jeśli zamierzasz złożyć deklarację do przodu o przypisanym interfejsie, należy zastosować te same atrybuty do deklaracji do przodu, która jest stosowana do rzeczywistej deklaracji interfejsu. Należy również zastosować atrybut [eksportu](export.md) do deklaracji do przodu.
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Na klasę pochodną klasę, która używa również atrybuty można używać atrybutów?
+##  <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Czy można używać atrybutów klasy pochodnej z klasy, która również używa atrybutów?
 
-Nie, przy użyciu atrybutów na klasę pochodną klasę, która używa również atrybutów nie jest obsługiwana.
+Nie, Używanie atrybutów klasy pochodnej z klasy, która również używa atrybutów, nie jest obsługiwane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)

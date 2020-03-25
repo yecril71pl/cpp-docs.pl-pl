@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187703"
 ---
-# <a name="variantt-extractors"></a>_variant_t — Ekstraktory
+# <a name="_variant_t-extractors"></a>_variant_t — Ekstraktory
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wyodrębnianie danych z zhermetyzowany `VARIANT` obiektu.
+Wyodrębnij dane z hermetyzowanego obiektu `VARIANT`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>Uwagi
 
-Wyodrębnia dane pierwotne z zhermetyzowany `VARIANT`. Jeśli `VARIANT` nie jest jeszcze odpowiedniego typu `VariantChangeType` służy do próba konwersji i zostanie wygenerowany błąd w przypadku niepowodzenia:
+Wyodrębnia pierwotne dane z hermetyzowanej `VARIANT`. Jeśli `VARIANT` nie jest jeszcze właściwym typem, `VariantChangeType` jest używany do próby konwersji, a w przypadku niepowodzenia zostanie wygenerowany błąd:
 
-- **krótki () — operator** wyodrębnia **krótki** wartość całkowitą.
+- **operator short ()** Wyodrębnia **krótką** wartość całkowitą.
 
-- **długi () — operator** wyodrębnia **długie** wartość całkowitą.
+- **Długość operatora ()** Wyodrębnia wartość **Long** Integer.
 
-- **Operator float ()** wyodrębnia **float** wartość liczbową.
+- **zmiennoprzecinkowy operatora ()** Wyodrębnia wartość liczbową **zmiennoprzecinkową** .
 
-- **double () — operator** wyodrębnia **double** wartość całkowitą.
+- **operator Double ()** Wyodrębnia wartość o **podwójnej** liczbie całkowitej.
 
-- **Operator () CY** wyodrębnia `CY` obiektu.
+- **operator cy ()** Wyodrębnia obiekt `CY`.
 
-- **(operator bool)** wyodrębnia **bool** wartość.
+- wartość **logiczna operatora ()** Wyodrębnia wartość **logiczną** .
 
-- **Operator (dziesiętna)** wyodrębnia `DECIMAL` wartość.
+- **liczba dziesiętna operatora ()** Wyodrębnia wartość `DECIMAL`.
 
-- **Operator (BAJTÓW)** wyodrębnia `BYTE` wartość.
+- **bajt operatora ()** Wyodrębnia wartość `BYTE`.
 
-- **Operator () z _bstr_t** wyodrębnia ciąg, który jest hermetyzowany w `_bstr_t` obiektu.
+- **_bstr_t operatora ()** Wyodrębnia ciąg, który jest hermetyzowany w obiekcie `_bstr_t`.
 
-- **Operator IDispatch\*()** wyodrębnia wskaźnik dispinterface z zhermetyzowany `VARIANT`. `AddRef` jest wywoływana w wskaźnik wynikowy, tak aby wywołać to `Release` zwolnienie go.
+- **\*operatora IDispatch ()** Wyodrębnia wskaźnik dispinterface z hermetyzowanej `VARIANT`. `AddRef` jest wywoływana na wskaźniku będącym wynikiem, dlatego można wywołać `Release`, aby go zwolnić.
 
-- **Operator IUnknown\*()** wyodrębnia wskaźnika interfejsu COM z zhermetyzowany `VARIANT`. `AddRef` jest wywoływana w wskaźnik wynikowy, tak aby wywołać to `Release` zwolnienie go.
+- **\*operatora IUnknown ()** Wyodrębnia wskaźnik interfejsu COM z hermetyzowanej `VARIANT`. `AddRef` jest wywoływana na wskaźniku będącym wynikiem, dlatego można wywołać `Release`, aby go zwolnić.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_variant_t, klasa](../cpp/variant-t-class.md)

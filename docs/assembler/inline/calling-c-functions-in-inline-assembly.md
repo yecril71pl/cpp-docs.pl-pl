@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 4d12321cd90f596c94c2337e100663436d512107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169594"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Wywoływanie funkcji C w asemblerze wbudowanym
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`__asm` Bloku można wywołać funkcji języka C, w tym C biblioteki procedur. Poniższy przykład wywołuje `printf` procedury biblioteki:
+Blok `__asm` może wywoływać funkcje C, w tym procedury biblioteki języka C. Poniższy przykład wywołuje procedurę biblioteki `printf`:
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -50,16 +50,16 @@ int main( void )
 }
 ```
 
-Ponieważ argumenty funkcji są przekazywane na stosie, po prostu wypychania wymagane argumenty — ciąg wskaźników w poprzednim przykładzie — przed wywołaniem funkcji. Argumenty są przekazywane w odwrotnej kolejności, więc pochodzą ze stosu w odpowiedni sposób. Aby emulować instrukcji C
+Ponieważ argumenty funkcji są przekazywane na stosie, po prostu wypchnij potrzebne argumenty — wskaźniki ciągu, w poprzednim przykładzie — przed wywołaniem funkcji. Argumenty są wypychane w odwrotnej kolejności, dlatego są wychodzące ze stosu w odpowiedniej kolejności. Aby emulować instrukcję języka C
 
 ```cpp
 printf( format, hello, world );
 ```
 
-przykład wypycha wskaźniki do `world`, `hello`, i `format`, w tej kolejności, a następnie wywołania `printf`.
+przykład wypchnięcie wskaźników do `world`, `hello`i `format`w tej kolejności, a następnie wywołuje `printf`.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

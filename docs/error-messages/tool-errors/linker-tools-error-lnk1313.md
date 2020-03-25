@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194866"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Błąd narzędzi konsolidatora LNK1313
 
-> Wykryto; moduł IJW/macierzyste Nie można połączyć z modułami czyste
+> Wykryto IJW/moduł macierzysty; nie można połączyć z czystymi modułami
 
 ## <a name="remarks"></a>Uwagi
 
-Bieżąca wersja programu Visual C++ nie obsługuje łączenia plików .obj kodu zarządzanego/rodzimego natywny lub mieszany przy użyciu plików .obj skompilowany przy użyciu **/CLR: pure**.
+Bieżąca wersja programu Visual C++ nie obsługuje łączenia natywnych lub mieszanych plików. obj z atrybutami. obj, które zostały skompilowane z **/CLR: Pure**.
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
@@ -43,7 +43,7 @@ void test(){}
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK1313.
+Poniższy przykład generuje LNK1313.
 
 ```cpp
 // LNK1313_c.cpp

@@ -9,43 +9,43 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169828"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formatowanie danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji
 
-Jeśli w danych wyjściowych niestandardowego kroku budowania lub zdarzenia kompilacji jest prawidłowo sformatowany, użytkownicy uzyskują następujące korzyści:
+Jeśli dane wyjściowe niestandardowego kroku kompilacji lub zdarzenia kompilacji są sformatowane prawidłowo, użytkownicy uzyskują następujące korzyści:
 
-- Ostrzeżenia i błędy, które są uwzględniane w **dane wyjściowe** okna.
+- Ostrzeżenia i błędy są zliczane w oknie **danych wyjściowych** .
 
-- Dane wyjściowe pojawia się w **listy zadań** okna.
+- Dane wyjściowe są wyświetlane w oknie **Lista zadań** .
 
-- Kliknięcie na dane wyjściowe w **dane wyjściowe** odpowiedniego tematu jest wyświetlana w oknie.
+- Kliknięcie danych wyjściowych w oknie **danych wyjściowych** spowoduje wyświetlenie odpowiedniego tematu.
 
-- Povoleny operace F1 w **listy zadań** okna lub **dane wyjściowe** okna.
+- Operacje F1 są włączane w oknie **Lista zadań** lub w oknie **danych wyjściowych** .
 
 Format danych wyjściowych powinien być:
 
-> {<em>filename</em>**(**<em>wiersza #</em> \[ **,** <em>kolumnę #</em>]**)** &#124; *toolname*} **:** \[ <em>dowolny tekst</em> ] {**błąd** &#124;  **Ostrzeżenie**} <em>+ numer</em>**:**<em>możliwych do zlokalizowania ciągu</em> \[ <em>dowolny tekst</em> ]
+> {<em>filename</em> **(** <em>wiersz #</em> \[ **,** <em>kolumna #</em>] **)** &#124; *ToolName*} **:** \[ <em>dowolny tekst</em> ] {**error** &#124; **Warning**error} <em>Code + Number</em> **:** <em>Lokalizowalny ciąg</em> \[ <em>dowolny tekst</em> ]
 
 Gdzie:
 
-- {*a* &#124; *b*} jest wybór albo *a* lub *b*.
+- {*a* &#124; *b*} to wybór *a* lub *b*.
 
-- \[<em>element</em>] jest opcjonalny ciąg lub parametr.
+- <em>element</em>\[] jest opcjonalnym ciągiem lub parametrem.
 
-- **Pogrubienie** reprezentuje literału.
+- **Pogrubienie** reprezentuje literał.
 
 Na przykład:
 
-> C:\\*sourcefile.cpp*(134): błąd C2143: błąd składniowy: brakuje ";" przed "}"
+> C:\\*SourceFile. cpp*(134): błąd C2143: błąd składniowy: Brak znaku ";" przed "}"
 >
-> LINK: błąd krytyczny LNK1104: nie można otworzyć pliku "*somelib.lib*"
+> LINK: błąd krytyczny LNK1104: nie można otworzyć pliku "*somelib. lib*"
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)

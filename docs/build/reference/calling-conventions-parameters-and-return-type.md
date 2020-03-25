@@ -6,16 +6,16 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294710"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169750"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Wywoływanie konwencji, parametrów oraz typu powrotu
 
-Procedura pomocnika prototyp to:
+Prototyp procedury pomocnika:
 
 ```
 FARPROC WINAPI __delayLoadHelper2(
@@ -27,22 +27,22 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Parametry
 
 *pidd*<br/>
-A `const` wskaźnik do `ImgDelayDescr` zawierający przesunięcia różne dane dotyczące importowania, sygnaturę czasową, aby uzyskać informacje o powiązaniu i zestaw atrybutów, które zapewniają dodatkowe informacje o zawartości deskryptora. Obecnie ma tylko jeden atrybut `dlattrRva`, która wskazuje, że adresy w deskryptorze względnych adresów wirtualnych. Aby uzyskać więcej informacji, zobacz deklaracji w *delayimp.h*.
+`const` wskaźnik do `ImgDelayDescr`, który zawiera przesunięcia różnych danych związanych z importem, sygnaturę czasową do powiązania informacji oraz zestaw atrybutów, które zawierają dodatkowe informacje o zawartości deskryptora. Obecnie istnieje tylko jeden atrybut `dlattrRva`, który wskazuje, że adresy w deskryptorze są względnymi adresami wirtualnymi. Aby uzyskać więcej informacji, zobacz Deklaracje w *delayimp. h*.
 
-Dla definicji `PCImgDelayDescr` struktury, zobacz [struktura i stała — definicje](structure-and-constant-definitions.md).
+Aby zapoznać się z definicją struktury `PCImgDelayDescr`, zobacz [struktury i definicje stałe](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Wskaźnik do gniazda w opóźnienie ładowania tabeli adresów importowania (IAT), będą aktualizowane przy użyciu adresu funkcji zaimportowane. Procedura pomocnika musi przechowywać tę samą wartość, która zwraca go do tej lokalizacji.
+Wskaźnik do gniazda w tabeli adresów importu opóźnionego ładowania (IAT), który jest aktualizowany przy użyciu adresu zaimportowanej funkcji. Procedura pomocnika musi przechowywać tę samą wartość, która zwraca do tej lokalizacji.
 
-## <a name="expected-return-values"></a>Oczekiwano wartości zwracane
+## <a name="expected-return-values"></a>Oczekiwane wartości zwracane
 
-Jeśli funkcja się powiedzie, zwraca adresu funkcji zaimportowane.
+Jeśli funkcja się powiedzie, zwraca adres zaimportowanej funkcji.
 
-Jeśli funkcja zawiedzie, zgłasza wyjątek i zwraca wartość 0. Może zostać wywołane trzy rodzaje wyjątków:
+Jeśli funkcja się nie powiedzie, zgłasza wyjątek i zwraca 0. Można podwyższyć trzy typy wyjątków:
 
-- Nieprawidłowy parametr, który się dzieje w przypadku atrybutów w `pidd` nie są poprawnie określone.
+- Nieprawidłowy parametr, co się stanie, jeśli atrybuty w `pidd` nie są określone prawidłowo.
 
-- `LoadLibrary` nie powiodło się na określonej biblioteki DLL.
+- nie można `LoadLibrary` dla określonej biblioteki DLL.
 
 - Niepowodzenie `GetProcAddress`.
 
@@ -50,13 +50,13 @@ Jest odpowiedzialny za obsługę tych wyjątków.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwencja wywoływania funkcji pomocnika to `__stdcall`. Typ zwracanej wartości nie jest istotne, więc FARPROC jest używany. Funkcja ta ma powiązanie C.
+Konwencja wywoływania dla funkcji pomocnika jest `__stdcall`. Typ wartości zwracanej nie jest odpowiedni, więc FARPROC jest używany. Ta funkcja ma powiązanie C.
 
-Wartość zwracana przez pomocnika obciążenia opóźnienia muszą być przechowywane w lokalizacji wskaźnika przekazany w funkcji, chyba że chcesz, aby Twoja procedura pomocnika ma być używany jako zaczepienia powiadomień. W takiej sytuacji kod jest odpowiedzialny za znalezienie wskaźnika odpowiednią funkcję do zwrócenia. Kod thunk, których konsolidator generuje następnie pobiera tę wartość zwracana jako rzeczywistych obiekt docelowy importu i przechodzi bezpośrednio do niego.
+Wartość zwracana pomocnika ładowania opóźnienia musi być przechowywana w lokalizacji wskaźnika funkcji przekazanej, chyba że chcesz, aby procedura pomocnika była używana jako punkt zaczepienia powiadomienia. W takim przypadku kod jest odpowiedzialny za znalezienie odpowiedniego wskaźnika funkcji do zwrócenia. Kod thunk, który generuje, następnie pobiera wartość zwracaną jako rzeczywisty element docelowy importu i przechodzi bezpośrednio do niego.
 
-## <a name="sample"></a>Przykład
+## <a name="sample"></a>Sample
 
-Poniższy kod przedstawia sposób implementowania funkcji podłączania proste.
+Poniższy kod pokazuje, jak zaimplementować prostą funkcję haka.
 
 ```C
 FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)

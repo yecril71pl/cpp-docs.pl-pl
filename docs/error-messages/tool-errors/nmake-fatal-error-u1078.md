@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193657"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Błąd krytyczny NMAKE U1078
 
-przepełnienie wartości stałej w "expression"
+przepełnienie stałe w "Expression"
 
-Podane wyrażenie zawiera stałą przekroczenia zakresu - 2 147 483 2 147 483 648 do 647. Stała pojawiły się w jednym z następujących sytuacji:
+Podane wyrażenie zawiera stałą, która przekroczyła zakres od-2 147 483 648 do 2 147 483 647. Stała pojawiła się w jednej z następujących sytuacji:
 
-- Wyrażenie określony za pomocą dyrektywy preprocesora
+- Wyrażenie określone z dyrektywą preprocesora
 
-- Błąd poziomu określony za pomocą myślnik (**-**) modyfikator polecenia
+- Poziom błędu określony za pomocą modyfikatora poleceń łącznika ( **-** )

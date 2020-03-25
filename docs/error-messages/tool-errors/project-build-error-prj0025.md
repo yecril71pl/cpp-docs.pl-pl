@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192357"
 ---
 # <a name="project-build-error-prj0025"></a>Błąd PRJ0025 kompilacji projektu
 
-> Plik wsadowy '*pliku*' zawiera znaki unikodowe, które nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+> Plik wsadowy "*File*" zawiera zawartość Unicode, której nie można przetłumaczyć na stronę kodową ANSI użytkownika.
 >
-> *UNICODE zawartość pliku*
+> *Zawartość UNICODE pliku*
 
-System projektu znaleziono unikodowe w niestandardowej reguły kompilacji lub twórz zdarzenie, dla którego nie można przetłumaczyć prawidłowo na bieżącą stronę kodową ANSI użytkownika.
+System projektu znalazł zawartość Unicode w niestandardowej regule kompilacji lub zdarzeniu kompilacji, której nie można prawidłowo przetłumaczyć na bieżącą stronę kodową ANSI użytkownika.
 
-Rozwiązanie dotyczące tego błędu jest aktualizować zawartość reguły kompilacji lub zdarzenie, aby użyć ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system kompilacji.
+Rozwiązanie dla tego błędu polega na zaktualizowaniu zawartości reguły kompilacji lub zdarzenia kompilacji w celu użycia ANSI lub do zainstalowania strony kodowej na komputerze i ustawieniu jej jako wartości domyślnej systemu.
 
-Aby uzyskać więcej informacji na temat niestandardowych kroków kompilacji i zdarzenia kompilacji, zobacz [niestandardowych krokach kompilacji zrozumienie i zdarzenia kompilacji](../../build/understanding-custom-build-steps-and-build-events.md).
+Aby uzyskać więcej informacji na temat niestandardowych kroków kompilacji i zdarzeń kompilacji, zobacz [Opis niestandardowych kroków kompilacji i zdarzeń kompilacji](../../build/understanding-custom-build-steps-and-build-events.md).

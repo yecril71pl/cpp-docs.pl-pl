@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4503
+title: Ostrzeżenie kompilatora (poziom 1) C4503
 ms.date: 05/14/2018
 f1_keywords:
 - C4503
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186550"
 ---
-# <a name="compiler-warning-level-1-c4503"></a>Kompilator ostrzeżenie (poziom 1) C4503
+# <a name="compiler-warning-level-1-c4503"></a>Ostrzeżenie kompilatora (poziom 1) C4503
 
-> "*identyfikator*": przekroczona długość nazwy, dekorowanej nazwa została obcięta
+> "*Identyfikator*": przekroczono długość nazwy dekoracyjnej, nazwa została obcięta
 
 ## <a name="remarks"></a>Uwagi
 
-Ostrzeżenie kompilatora jest przestarzała i nie są generowane w Visual Studio 2017 i nowszym kompilatory.
+To ostrzeżenie kompilatora jest przestarzałe i nie jest generowane w kompilatorach programu Visual Studio 2017 i nowszych.
 
-Również nazwę uzupełnioną trwało dłużej niż limit kompilatora (4096) i zostały obcięte. Aby uniknąć tego ostrzeżenia i obcinania, Zmniejsz liczbę argumentów lub długości nazwy identyfikatory używane. Nazw, które są dłuższy niż limit kompilatora skrót zastosowane i nie są zagrożone kolizji nazw ozdobionych.
+Nazwa dekoracyjna była dłuższa niż limit kompilatora (4096) i została obcięta. Aby uniknąć tego ostrzeżenia i obcinania, zmniejsz liczbę argumentów lub długość nazw używanych identyfikatorów. Nazwy dekoracyjne, które są dłuższe niż limit kompilatora, mają zastosowanie skrótu i nie są niebezpieczne dla kolizji nazw.
 
-Przy użyciu starszej wersji programu Visual Studio, mogą być wystawiane to ostrzeżenie, jeśli kod zawiera szablony przeznaczone na szablonach wielokrotnie. Na przykład mapa map (ze standardowej biblioteki C++). W takiej sytuacji można zmienić swoje definicje typów typu ( **struktury**, na przykład) który zawiera mapę.
+W przypadku korzystania ze starszej wersji programu Visual Studio to ostrzeżenie można wydać, gdy kod zawiera szablony wyspecjalizowane dla szablonów. Na przykład mapa map (z biblioteki C++ standardowa). W takiej sytuacji można sprawić, aby definicje typów (na przykład **struktury**) zawierały mapę.
 
-Może jednak zadecydować, nie restrukturyzacji swój kod.  Istnieje możliwość dostarczania aplikacji, która generuje C4503, ale jeśli na obcięte symbolu występują błędy czasu łącze, może być trudniejsze można ustalić typu symbolu w błędzie. Debugowanie może również być trudniejsze; debuger może mieć problemy mapowania nazwy symbolu do nazwy typu. Jednak poprawność programu, jest niezależny od skróconą nazwę.
+Można jednak zrezygnować z restrukturyzacji kodu.  Istnieje możliwość wysłania aplikacji generującej C4503, ale jeśli zostaną wyświetlone błędy czasu łącza w obciętym symbolu, może być trudniejsze do określenia typu symbolu w błędzie. Debugowanie może być również trudniejsze; Debuger może mieć trudne mapowanie nazwy symbolu na nazwę typu. Poprawność programu jest jednak niezależna od skróconej nazwy.
 
 ## <a name="example"></a>Przykład
 
@@ -47,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-W tym przykładzie przedstawiono jeden ze sposobów do przepisania kodu można rozpoznać C4503:
+Ten przykład pokazuje jeden ze sposobów, aby ponownie napisać kod w celu rozwiązania C4503:
 
 ```cpp
 // C4503b.cpp

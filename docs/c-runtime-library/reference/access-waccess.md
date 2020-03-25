@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170387"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -60,7 +60,7 @@ int _waccess(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*path*<br/>
 Ścieżka pliku lub katalogu.
 
 *wyst*<br/>
@@ -68,7 +68,7 @@ Atrybut odczytu/zapisu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca wartość-1, jeśli nazwany plik nie istnieje lub nie ma podanego trybu; w tym przypadku jest `errno` ustawiony tak, jak pokazano w poniższej tabeli.
+Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca wartość-1, jeśli nazwany plik nie istnieje lub nie ma podanego trybu; w takim przypadku `errno` jest ustawiona jak pokazano w poniższej tabeli.
 
 |||
 |-|-|
@@ -80,7 +80,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy jest używany z plikami, funkcja **_access** określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *trybu*. Gdy jest używany z katalogami, **_access** określa tylko, czy określony katalog istnieje; w systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
+Gdy jest używany z plikami, funkcja **_access** określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *trybu*. Gdy jest używany z katalogami, **_access** określa, czy określony katalog istnieje; w systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
 
 |wartość *trybu*|Sprawdza plik dla|
 |------------------|---------------------|
@@ -91,9 +91,9 @@ Gdy jest używany z plikami, funkcja **_access** określa, czy określony plik l
 
 Ta funkcja sprawdza tylko, czy plik i katalog są tylko do odczytu, czy nie, nie sprawdza ustawień zabezpieczeń systemu plików. Dla tego wymaga tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokeny dostępu](/windows/win32/SecAuthZ/access-tokens). Klasa ATL istnieje, aby zapewnić tę funkcję; Zobacz [Klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** to dwubajtowa wersja **_access**; argument *Path* **_waccess** jest ciągiem znaków dwubajtowych. **_waccess** i **_access** zachowują się identycznie w inny sposób.
+**_waccess** to dwubajtowa wersja **_access**; argument *ścieżki* **_waccess** jest ciągiem znaków dwubajtowych. **_waccess** i **_access** zachowują się identycznie w inny sposób.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia `errno` jako `EINVAL` i zwraca wartość-1.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia `errno` na `EINVAL` i zwraca wartość-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -105,8 +105,8 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* ma warto
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_access**|\<io.h>|\<errno.h>|
-|**_waccess**|\<WCHAR. h > lub \<IO. h >|\<errno.h>|
+|**_access**|\<we/wy >|\<errno. h >|
+|**_waccess**|\<WCHAR. h > lub \<we/wy >|\<errno. h >|
 
 ## <a name="example"></a>Przykład
 
@@ -142,10 +142,10 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat Functions](stat-functions.md)
+[_stat, funkcje _wstat](stat-functions.md)

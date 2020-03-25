@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C999
 ms.assetid: a3a49a96-a352-4ff2-aa84-84eb6a9a81f1
-ms.openlocfilehash: 767973e3e69734c7d1f813d27e1e402ac2751cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f02578891664853bf8c2b5f445e69c5d36e0f6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165713"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202628"
 ---
 # <a name="fatal-error-c999"></a>Błąd krytyczny C999
 
-Nieznany komunikat, wybierz polecenie Pomoc techniczna w Visual C++ menu Pomoc lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji
+NIEZNANY komunikat wybierz polecenie Pomoc techniczna w menu Pomoc wizualna C++ lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji
 
-Ten błąd zazwyczaj oznacza, że są różnych plików z różnych wersji kompilatora lub kompilatora instalacji jest uszkodzony. Użyj **programy i funkcje** apletu w Panelu sterowania, aby naprawić lub zainstalować ponownie produkt.
+Ten błąd zazwyczaj oznacza, że istnieją pliki mieszane z różnych wersji kompilatora lub instalacja kompilatora jest uszkodzona. Aby naprawić lub ponownie zainstalować produkt, użyj apletu **programy i funkcje** w panelu sterowania.

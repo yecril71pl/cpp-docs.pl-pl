@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-ms.openlocfilehash: e8f82ed4ce8ad77a22961a42c8e9a256e6f647db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d290bd2288f76d0ddefa2057e3e01c9edc3cbc7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205325"
 ---
 # <a name="compiler-error-c2461"></a>Błąd kompilatora C2461
 
-> "*klasy*": składni konstruktora brakuje parametrów formalnych
+> "*Class*": w składni konstruktora brakuje parametrów formalnych
 
-Konstruktor dla klasy nie określono żadnych parametrów formalnych. Deklaracja konstruktora, należy określić formalnej listy parametrów. Lista może być pusta.
+Konstruktor dla klasy nie określa żadnych formalnych parametrów. Deklaracja konstruktora musi określać formalną listę parametrów. Lista może być pusta.
 
-Aby rozwiązać ten problem, Dodaj parę nawiasów po zadeklarowaniu *klasy*:: **klasy*.
+Aby rozwiązać ten problem, Dodaj parę nawiasów po deklaracji *klasy* *::*.*
 
 ## <a name="example"></a>Przykład
 

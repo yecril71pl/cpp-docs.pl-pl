@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2164
 ms.assetid: 23d7691d-80f3-4979-a519-378e5498d2d1
-ms.openlocfilehash: d9da84f6f59782f93d7a13d0e9aa46b1a88cc064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e01dabb2f6b13ea38de833fcd0a3e271e05c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191213"
 ---
 # <a name="resource-compiler-error-rc2164"></a>Błąd kompilatora zasobów RC2164
 
 Nieoczekiwana wartość w RCDATA
 
-*Danych pierwotnych* wartości w **RCDATA** instrukcji muszą być liczbami całkowitymi lub ciągów, każda jest oddzielona przecinkiem. Upewnij się, nie Opuść przecinek lub nie Opuść cudzysłów wokół ciągu.
+Wartości *danych pierwotnych* w instrukcji **RCDATA** muszą być liczbami całkowitymi lub ciągami, z których każda oddzielona przecinkami. Upewnij się, że nie opuścisz przecinka lub nie opuszczasz znaku cudzysłowu otaczającego ciąg.

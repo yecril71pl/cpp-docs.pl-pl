@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160830"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Można jawnie określać dla funkcji, które są zastępowanie wywołujesz implementacji klasy podstawowej.
+Umożliwia jawne określenie, że wywoływana jest implementacja klasy bazowej dla zastępowanej funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,13 +27,13 @@ __super::member_function();
 
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie dostępne metody klasy podstawowej są traktowane jako fazie rozdzielczość przeciążenia, a funkcja, która udostępnia najlepsze dopasowanie jest tą, która jest wywoływana.
+Wszystkie dostępne metody klasy podstawowej są brane pod uwagę podczas fazy rozpoznawania przeciążenia, a funkcja, która zapewnia najlepszą zgodność, jest wywoływana.
 
-**__super** może wystąpić tylko wewnątrz treści funkcji składowej.
+**__super** może występować tylko w treści funkcji składowej.
 
-**__super** nie można używać z za pomocą deklaracji. Zobacz [użycie — deklaracja](../cpp/using-declaration.md) Aby uzyskać więcej informacji.
+nie można użyć **__super** z deklaracją using. Aby uzyskać więcej informacji, zobacz [Używanie deklaracji](../cpp/using-declaration.md) .
 
-Wraz z wprowadzeniem [atrybuty](../windows/attributes/attributes-alphabetical-reference.md) , wstrzyknięcie kodu, Twój kod może zawierać jeden lub więcej klas bazowych, których nazwy, może nie wiesz, ale które zawierają metody, które chcesz wywołać.
+Wprowadzając [atrybuty](../windows/attributes/attributes-alphabetical-reference.md) , które wprowadzają kod, kod może zawierać co najmniej jedną klasę bazową, której nazwy mogą nie być znane, ale zawierają metody, które chcesz wywołać.
 
 ## <a name="example"></a>Przykład
 
@@ -58,8 +58,8 @@ struct D : B1, B2 {
 };
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

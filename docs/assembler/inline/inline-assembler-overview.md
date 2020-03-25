@@ -7,24 +7,24 @@ helpviewer_keywords:
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6233e07e115c21a0a173f094079dc9c1753533b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169400"
 ---
 # <a name="inline-assembler-overview"></a>Omówienie wbudowanego asemblera
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Asembler wbudowany pozwala osadzić instrukcje języka asemblera w programach źródłowych C i C++, bez dodatkowych kroków asemblacji i łączenia. Asembler wbudowany jest wbudowany w kompilator — nie ma potrzeby stosowania oddzielnego asemblera takich jak Microsoft Macro Assembler (MASM).
+Wbudowany asembler umożliwia osadzenie instrukcji języka asemblera w programach C i C++ source bez dodatkowych kroków zestawu i łącza. Wbudowany asembler jest wbudowany w kompilator — nie potrzebujesz oddzielnego asemblera, takiego jak asembler programu Microsoft Macro (MASM).
 
-Ponieważ wbudowanego asemblera nie wymaga osobny zestaw i kroki łącze, jest bardziej wygodne niż stosowania oddzielnego asemblera. Wbudowany kod asemblera, można użyć dowolnego języka C lub C++ nazwy zmiennej lub funkcji, która znajduje się w zakresie, dzięki czemu można łatwo ją zintegrować z kodu C i C++ programu. A ponieważ kodu zestawu mogą być mieszane w instrukcjach języka C i C++, można to zrobić zadania, które są uciążliwe lub wręcz niemożliwe w C lub C++ samodzielnie.
+Ponieważ wbudowany asembler nie wymaga oddzielnego zestawu i kroków łączy, jest bardziej wygodne niż oddzielny asembler. Wbudowany kod asemblera może używać dowolnej nazwy C++ języka c lub zmiennej lub funkcji, która znajduje się w zakresie, dzięki czemu można łatwo zintegrować ją z kodem C++ c i. I ponieważ kod zestawu może być mieszany z C i C++ instrukcjami, może wykonywać zadania, które są uciążliwe lub niemożliwe w języku c C++ lub samodzielnie.
 
-[__Asm](../../assembler/inline/asm.md) — słowo kluczowe wywoła asembler wbudowany i może pojawić się wszędzie tam, gdzie C lub C++ instrukcji jest dozwolony. Nie może występować samodzielnie. Jego musi następować instrukcja zestawu, grupa instrukcji ujęta w nawiasy klamrowe, lub co najmniej, para pustych nawiasów klamrowych. Termin "`__asm` blok" odnosi się tutaj do każdej instrukcji lub grupy instrukcji, czy w nawiasach klamrowych.
+Słowo kluczowe [__asm](../../assembler/inline/asm.md) wywołuje wbudowany asembler i może występować wszędzie tam, gdzie C++ jest to dozwolone. Nie może być wyświetlana sama przez siebie. Po nim musi następować instrukcja zestawu, Grupa instrukcji ujętych w nawiasy klamrowe lub, co najmniej, pustą parę nawiasów klamrowych. Termin "`__asm` blok" odnosi się do dowolnej instrukcji lub grupy instrukcji, niezależnie od tego, czy znajdują się w nawiasach klamrowych.
 
-Poniższy kod jest prosty `__asm` bloku ujęte w nawiasy klamrowe. (Kod jest funkcję niestandardową sekwencję prologu).
+Poniższy kod to prosty blok `__asm` ujęty w nawiasy klamrowe. (Kod jest sekwencją funkcji niestandardowej.)
 
 ```cpp
 // asm_overview.cpp
@@ -46,7 +46,7 @@ void __declspec(naked) main()
 }
 ```
 
-Alternatywnie, możesz umieścić `__asm` przed każdą instrukcję montażu:
+Alternatywnie można umieścić `__asm` przed każdą instrukcją zestawu:
 
 ```cpp
 __asm push ebp
@@ -54,14 +54,14 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE
 ```
 
-Ponieważ `__asm` — słowo kluczowe jest separatorem instrukcji, instrukcje zestawu można także umieścić w tym samym wierszu:
+Ponieważ `__asm` słowo kluczowe jest separatorem instrukcji, można również umieścić instrukcje zestawu w tym samym wierszu:
 
 ```cpp
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

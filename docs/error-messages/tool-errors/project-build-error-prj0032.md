@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 62efa0e72c6fbe4bd38983ff0507923392427c04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192487"
 ---
 # <a name="project-build-error-prj0032"></a>Błąd PRJ0032 kompilacji projektu
 
-Właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji zawiera makra, które ewaluowane jest jako "macro_expansion".
+Właściwość "Outputs" niestandardowego kroku kompilacji na poziomie projektu zawiera "makro", które oblicza wartość "macro_expansion".
 
-Niestandardowego kroku kompilacji w projekcie ma nieprawidłowe dane wyjściowe, prawdopodobnie z powodu problemu z oceny makra. Ten błąd może również oznaczać, że ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
+Niestandardowy krok kompilacji w projekcie miał prawdopodobnie nieprawidłowe wyniki wyjściowe z powodu problemu z oceną makra. Ten błąd może również oznaczać, że ścieżka jest źle sformułowana, zawierającą znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
 
-Aby rozwiązać ten problem, napraw makra, lub usuń specyfikację ścieżki. Oceniono ścieżka jest ścieżką bezwzględną z katalogu projektu.
+Aby rozwiązać ten problem, napraw makro lub Popraw specyfikację ścieżki. Szacowana ścieżka jest ścieżką bezwzględną z katalogu projektu.

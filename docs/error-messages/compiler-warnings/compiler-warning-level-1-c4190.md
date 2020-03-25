@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4190
+title: Ostrzeżenie kompilatora (poziom 1) C4190
 ms.date: 11/04/2016
 f1_keywords:
 - C4190
 helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-ms.openlocfilehash: 05984594a57878aad8037861a15ac9284ff65192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d110aa70a470382e274546e95599804fa3bc7d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386502"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199878"
 ---
-# <a name="compiler-warning-level-1-c4190"></a>Kompilator ostrzeżenie (poziom 1) C4190
+# <a name="compiler-warning-level-1-c4190"></a>Ostrzeżenie kompilatora (poziom 1) C4190
 
-"identifier1" ma określone powiązanie C, ale zwraca UDT identifier2, co jest niezgodne z C
+"Identifier1" ma określone powiązanie C, ale zwraca UDT "identifier2", które jest niezgodne z C
 
-Funkcja lub wskaźnikiem do funkcji ma UDT (typ zdefiniowany przez użytkownika, który jest klasy, struktury, wyliczenia lub Unii) jako typ zwracany i `extern` powiązania "C". To jest legalna jeśli:
+Funkcja lub wskaźnik do funkcji ma typ UDT (zdefiniowany przez użytkownika, który jest klasą, strukturą, wyliczeniem lub Unią) jako zwracany typ i `extern` "C" powiązania. Jest to dozwolone, jeśli:
 
-- Wszystkie wywołania do tej funkcji występują w języku C++.
+- Wszystkie wywołania tej funkcji występują z C++.
 
-- Jest definicją funkcji w języku C++.
+- Definicja funkcji znajduje się w C++.
 
 ## <a name="example"></a>Przykład
 

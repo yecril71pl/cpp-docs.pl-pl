@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6032
 ms.assetid: 52092a63-cc51-444a-bfc3-fad965a3558e
-ms.openlocfilehash: e0ae3acc491658840d74e262f3ab2719e613d60e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b29b946d08cff903cf0ca398ba0d7589cb5d54ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197096"
 ---
 # <a name="c-runtime-error-r6032"></a>Błąd czasu wykonania języka C R6032
 
-Brak wystarczającej ilości miejsca dla informacji o ustawieniach regionalnych
+Za mało miejsca na informacje o ustawieniach regionalnych
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci lub usterkę w programie.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem z pamięcią wewnętrzną. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane bardzo małą ilością pamięci lub usterką w programie.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne uruchomione aplikacje lub Uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Środowisko uruchomieniowe przechowuje informacje o ustawieniach regionalnych dla każdego wątku, tak, aby przetworzyć wywołania funkcji zależne od ustawień regionalnych. Jeśli alokacja pamięci dla tych informacji nie powiedzie się, środowisko uruchomieniowe nie może kontynuować, ponieważ zbyt wiele urządzeń podstawowych od niego zależne.
+Środowisko uruchomieniowe utrzymuje informacje o ustawieniach regionalnych poszczególnych wątków, aby można było przetwarzać wywołania do funkcji zależnych od ustawień regionalnych. Jeśli alokacja pamięci dla tych informacji nie powiedzie się, środowisko uruchomieniowe nie może działać, ponieważ zależą od niej zbyt wiele podstawowych funkcji.

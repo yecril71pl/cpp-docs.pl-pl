@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6111
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
-ms.openlocfilehash: 44f406881d64d13e23ca2c0911ee278c864a2c11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8abedf6a326a826d0c8ac513b15037c8bf89bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173694"
 ---
 # <a name="math-error-m6111"></a>Błąd matematyczny M6111
 
 Niedopełnienie stosu
 
-W wyniku operacji zmiennoprzecinkowej Niedopełnienie stosu w Koprocesor 8087/287/387 lub emulator.
+Operacja zmiennoprzecinkowa spowodowała Niedopełnienie stosu na współprocesorze 8087/287/387 lub w emulatorze.
 
-Ten błąd jest często spowodowane przez wywołanie `long double` funkcja, która nie zwraca wartości. Na przykład następujące generuje ten błąd, gdy skompilowane i uruchom:
+Ten błąd jest często spowodowany wywołaniem funkcji `long double`, która nie zwraca wartości. Na przykład poniższy generuje ten błąd podczas kompilowania i uruchamiania:
 
 ```
 long double ld() {};
@@ -29,4 +29,4 @@ main ()
 }
 ```
 
-Program kończy się z kodem zakończenia 139.
+Program kończy pracę z kodem zakończenia 139.

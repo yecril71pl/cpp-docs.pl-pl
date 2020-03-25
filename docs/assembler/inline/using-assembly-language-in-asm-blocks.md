@@ -6,20 +6,20 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166571"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169126"
 ---
-# <a name="using-assembly-language-in-asm-blocks"></a>Korzystanie z języka Asembler w blokach __asm
+# <a name="using-assembly-language-in-__asm-blocks"></a>Korzystanie z języka Asembler w blokach __asm
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wbudowany asembler ma wiele wspólnych innych asemblerów. Na przykład akceptuje dowolne wyrażenie, które jest dozwolony w MASM. W tej sekcji opisano korzystanie z funkcji języka asembler w `__asm` bloków.
+Wbudowany asembler ma wiele wspólnych z innymi asemblerami. Na przykład akceptuje dowolne wyrażenie, które jest prawne w MASM. W tej sekcji opisano sposób korzystania z funkcji języka zestawu w blokach `__asm`.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Zestaw instrukcji dla zestawu wbudowanego](../../assembler/inline/instruction-set-for-inline-assembly.md)
 
@@ -37,14 +37,14 @@ Wbudowany asembler ma wiele wspólnych innych asemblerów. Na przykład akceptuj
 
 - [Komentarze języka zestawu](../../assembler/inline/assembly-language-comments.md)
 
-- [Pseudoinstrukcja _emit](../../assembler/inline/emit-pseudoinstruction.md)
+- [_Emit pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)
 
 - [Debugowanie i listy dla zestawu wbudowanego](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
 - [MMX firmy Intel — zestaw instrukcji](../../assembler/inline/intel-s-mmx-instruction-set.md)
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

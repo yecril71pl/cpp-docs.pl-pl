@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1166
 ms.assetid: d69548a8-0efb-44e1-90b7-b27636a4b575
-ms.openlocfilehash: 5be078133d849070e4d1eec8a970740ffe5511a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e154b0ed24e3e13bc0e73c938a6da94692af7ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184024"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Błąd narzędzi konsolidatora LNK1166
 
-Nie można dostosować kodu przy przesunięciu = przesunięcie, oceny luk w zabezpieczeniach = wartość
+nie można dostosować kodu przy przesunięciu = przesunięcie, VA = wartość
 
-ŁĄCZE nie może uzupełnianie kodu zgodnie z potrzebami.
+LINK nie może zapełnić kodu zgodnie z potrzebami.
 
-Niektóre instrukcje nie są dozwolone do przekroczenia granic strony na niektórych procesorach. LINK podejmuje próbę dodania okienka, aby naprawić tę sytuację. W tym przypadku LINKU nie można obejść ten problem.
+Niektóre instrukcje nie mogą przekroczyć granic stron na niektórych procesorach. LINK próbuje dodać konsole, aby rozwiązać ten problem. W takim przypadku łącze nie mogło obejść problemu.

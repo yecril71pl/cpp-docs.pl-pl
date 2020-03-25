@@ -1,5 +1,5 @@
 ---
-title: Przegląd typów ogólnych w C++sposób niezamierzony
+title: Przegląd typów ogólnych w C++/CLI
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172077"
 ---
-# <a name="overview-of-generics-in-ccli"></a>Przegląd typów ogólnych w C++sposób niezamierzony
+# <a name="overview-of-generics-in-ccli"></a>Przegląd typów ogólnych w C++/CLI
 
-Typy ogólne są obsługiwane przez środowisko uruchomieniowe języka wspólnego typami z parametrami. Typ sparametryzowany jest typem, która jest zdefiniowana za pomocą parametru nieznany typ, który jest określony, gdy ogólnego jest używany.
+Typy ogólne są typami sparametryzowanymi obsługiwanymi przez środowisko uruchomieniowe języka wspólnego. Typ sparametryzowany jest typem, który jest zdefiniowany za pomocą nieznanego parametru typu, który jest określany podczas użycia generycznego.
 
-## <a name="why-generics"></a>Dlaczego ogólne?
+## <a name="why-generics"></a>Dlaczego generyczne?
 
-Język C++ obsługuje szablony i zarówno i typy ogólne obsługuje sparametryzowanych typów do tworzenia klas typizowaną kolekcją. Jednak Szablony zapewniają parametryzacji w czasie kompilacji. Nie można odwoływać się do zestawu zawierającego definicji szablonu i utworzyć nowe specjalizacje szablonu. Po skompilowaniu wyspecjalizowane szablon wygląda jak inne klasy lub metody. Z kolei typy ogólne są emitowane w kodzie MSIL jako typ sparametryzowany znane przez środowisko uruchomieniowe jako typ sparametryzowany; Kod źródłowy, który odwołuje się do zestawu zawierającego typ ogólny, można utworzyć specjalizacje typu ogólnego. Aby uzyskać więcej informacji na porównaniu standardu C++ szablonami i typami ogólnymi, zobacz [typy ogólne i szablony (C++sposób niezamierzony)](generics-and-templates-visual-cpp.md).
+C++obsługuje szablony i zarówno szablony, jak i typy generyczne obsługują sparametryzowane klasy kolekcji. Jednak szablony zapewniają parametryzacja czasu kompilacji. Nie można odwołać się do zestawu zawierającego definicję szablonu i utworzyć nowe specjalizacje szablonu. Po skompilowaniu wyspecjalizowany szablon wygląda podobnie do żadnej innej klasy lub metody. Z kolei typy ogólne są emitowane w języku MSIL jako typ sparametryzowany znany przez środowisko uruchomieniowe jako typ sparametryzowany. kod źródłowy, który odwołuje się do zestawu zawierającego typ ogólny, może tworzyć specjalizacje typu ogólnego. Aby uzyskać więcej informacji na temat porównania standardowych C++ szablonów i typów ogólnych, zobacz [Ogólne i szablony (C++/CLI)](generics-and-templates-visual-cpp.md).
 
-## <a name="generic-functions-and-types"></a>Funkcje ogólne i typów
+## <a name="generic-functions-and-types"></a>Funkcje i typy ogólne
 
-Typy klas, tak długo, jak są one zarządzane typy, może być ogólny. Na przykład może być `List` klasy. Typ obiektu, na liście będzie parametru typu. W razie potrzeby możesz `List` klasy dla wielu różnych typów obiektów, zanim możliwe, że używasz typów ogólnych `List` przyjmującej `System::Object` jako typ elementu. Jednak, Zezwalaj na dowolny obiekt (w tym obiekty niewłaściwego typu) ma być używany na liście. Takie listy będzie wywoływana klasy kolekcji bez typu. W najlepszym możesz sprawdzić typ w czasie wykonywania i zgłosić wyjątek. Lub może być używany jako szablon, który spowoduje utratę jego jakość ogólnego raz kompilowane do zestawu. Konsumenci zestawu nie może utworzyć własne specjalizacje szablonu. Typy ogólne pozwalają tworzyć klasy typizowaną kolekcją, załóżmy, że `List<int>` (Odczyt, jak "Lista int") i `List<double>` ("Lista podwójnej") nie który wygeneruje błąd w czasie kompilacji, jeśli próbowano put typ, który został kolekcji przeznaczona do akceptowania pod kontrolą typów Kolekcja. Ponadto te typy rodzajowe po pozostają są one kompilowane.
+Typy klas, o ile są typami zarządzanymi, mogą być ogólne. Przykładem może być Klasa `List`. Typ obiektu na liście jest parametrem typu. Jeśli potrzebujesz klasy `List` dla wielu różnych typów obiektów, przed ogólnymi może być użyty `List`, który pobiera `System::Object` jako typ elementu. Ale może to spowodować użycie dowolnego obiektu (w tym obiektów niewłaściwego typu) na liście. Taka lista powinna być nazywana klasą kolekcji niewpisanej. Najlepiej sprawdzić typ w czasie wykonywania i zgłosić wyjątek. Może być też używany szablon, który spowodowałaby utratę jego jakości ogólnej po skompilowaniu do zestawu. Odbiorcy Twojego zestawu nie mogą utworzyć własnych specjalizacji szablonu. Typy ogólne umożliwiają tworzenie klas kolekcji o określonym typie, powiedz `List<int>` (Odczytaj jako "list of int") i `List<double>` ("list of Double"), który wygeneruje błąd czasu kompilacji, Jeśli podjęto próbę umieszczenia typu, którego kolekcja nie została zaprojektowana w celu zaakceptowania do wpisanej kolekcji. Ponadto te typy pozostają ogólne po skompilowaniu.
 
-Opis składni klasy ogólne można znaleźć w [klasy ogólne (C++sposób niezamierzony)](generic-classes-cpp-cli.md). Nowy obszar nazw <xref:System.Collections.Generic>, wprowadza zestaw typów sparametryzowanych kolekcji, w tym <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.LinkedList%601>.
+Opis składni klas ogólnych można znaleźć w [klasach generycznychC++(/CLI)](generic-classes-cpp-cli.md). Nowy obszar nazw, <xref:System.Collections.Generic>, wprowadza zestaw sparametryzowanych typów kolekcji, w tym <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> i <xref:System.Collections.Generic.LinkedList%601>.
 
-Zarówno wystąpienia i elementów członkowskich klasy statycznej, delegatów i funkcje globalne mogą być również ogólne. Funkcje ogólne może być konieczne, jeśli parametry funkcji są nieznanego typu lub jeśli sama funkcja należy skontaktować się z typów ogólnych. W wielu przypadkach gdzie `System::Object` były używane w przeszłości jako parametru dla nieznany typ obiektu, parametr typu ogólnego może być używany zamiast tego, co zapewnia więcej kod bezpiecznego typu. Każda próba przekazania w typie, że funkcja nie jest przeznaczone dla zostanie oznaczony jako błąd w czasie kompilacji. Za pomocą `System::Object` jako parametru funkcji, nieumyślne przekazywanie obiektu funkcji nie ma dotyczyć nie można wykryć i trzeba byłoby rzutowania nieznany typ obiektu określonego typu w treści funkcji, a konto możliwość InvalidCastException. Za pomocą zwykłego kodu próby przekazania obiektu do funkcji spowoduje, że konflikt typu, dzięki czemu gwarantuje ma niepoprawny typ treści funkcji.
+Zarówno funkcja, jak i elementy członkowskie klasy statycznej, delegatów i funkcje globalne mogą być również ogólne. Funkcje generyczne mogą być niezbędne, jeśli parametry funkcji są nieznanego typu lub jeśli sama funkcja musi działać z typami ogólnymi. W wielu przypadkach, w których `System::Object` mogły być używane w przeszłości jako parametr dla nieznanego typu obiektu, zamiast tego można użyć parametru typu ogólnego, co pozwala na bardziej bezpieczny typ kodu. Każda próba przekazania w typie, do którego funkcja nie została zaprojektowana, zostanie oflagowana jako błąd w czasie kompilacji. Używanie `System::Object` jako parametru funkcji, nieoczekiwane przekazanie obiektu, do którego nie została zaprojektowana funkcja, nie zostanie wykryte i konieczne będzie rzutowanie nieznanego typu obiektu na określony typ w treści funkcji i konto dla możliwości InvalidCastException. Przy użyciu generycznego kodu próba przekazania obiektu do funkcji spowodowałaby konflikt typu, aby treść funkcji była poprawna.
 
-Te same korzyści mają zastosowanie do klasy kolekcji, w oparciu o typy ogólne. Użyj klasy kolekcji w przeszłości `System::Object` do przechowywania elementów w kolekcji. Wstawianie obiektów tego typu, który kolekcji nie jest przeznaczone dla nie została oflagowana, w czasie kompilacji, a często nawet w przypadku, gdy obiekty zostały wstawione. Zazwyczaj obiekt może być rzutowany innego typu dostępie w kolekcji. Tylko wtedy, gdy Rzutowanie nie powiodło się. nieoczekiwany typ można wykryć. Typy ogólne rozwiązuje ten problem w czasie kompilacji został określony poprzez wykrycie wszelki kod, który wstawia typ, który nie odpowiada (lub niejawnie konwertowane) parametr typu kolekcji ogólnej.
+Te same korzyści dotyczą klas kolekcji opartych na typach ogólnych. Klasy kolekcji w przeszłości używają `System::Object` do przechowywania elementów w kolekcji. Wstawianie obiektów typu, dla których kolekcja nie została zaprojektowana, nie jest oflagowane w czasie kompilacji i często nie nawet po wstawieniu obiektów. Zazwyczaj obiekt zostałby przerzutowany do innego typu, gdy uzyskano do niego dostęp w kolekcji. Tylko wtedy, gdy rzutowanie nie powiodło się, zostanie wykryty nieoczekiwany typ. Typy ogólne rozwiązują ten problem w czasie kompilacji przez wykrycie dowolnego kodu, który wstawia typ, który jest niezgodny (lub niejawnie konwertowany na) parametr typu kolekcji ogólnej.
 
-Aby uzyskać opis składni, zobacz [funkcje ogólne (C++sposób niezamierzony)](generic-functions-cpp-cli.md).
+Aby zapoznać się z opisem składni, zobacz [funkcje ogólne (C++/CLI)](generic-functions-cpp-cli.md).
 
-## <a name="terminology-used-with-generics"></a>Terminologia używana za pomocą typów ogólnych
+## <a name="terminology-used-with-generics"></a>Terminologia używana z typami ogólnymi
 
 ### <a name="type-parameters"></a>Parametry typów
 
-Deklaracji ogólnej zawiera co najmniej jeden nieznany typ znany jako *parametry typu*. Parametry typu są podane nazwy, który oznacza typ w treści deklaracji ogólnej. Parametr typu jest używany jako typ w treści deklaracji ogólnej. Ogólny deklaracji pod kątem `List<T>` zawiera parametr typu T.
+Deklaracja generyczna zawiera jeden lub więcej nieznanych typów znanych jako *parametry typu*. Parametry typu mają nazwę oznaczającą typ w treści deklaracji ogólnej. Parametr typu jest używany jako typ w treści deklaracji ogólnej. Deklaracja ogólna dla `List<T>` zawiera parametr typu T.
 
 ### <a name="type-arguments"></a>Argumenty typu
 
-*Argument typu* jest rzeczywisty typ używać zamiast parametru typu ogólnego jest przeznaczone dla określonego typu lub typów. Na przykład **int** jest argumentem typu w `List<int>`. Typy wartości i uchwyt to jedyne typy, które są dozwolone w jako argument typu ogólnego.
+*Argument typu* jest rzeczywistym typem używanym zamiast parametru typu, gdy ogólny jest wyspecjalizowany dla określonego typu lub typów. Na przykład **int** jest argumentem typu w `List<int>`. Typy wartości i typy dojścia są jedynymi typami dozwolonymi w jako argument typu ogólnego.
 
-### <a name="constructed-type"></a>Skonstruowany typ
+### <a name="constructed-type"></a>Typ skonstruowany
 
-Typ skonstruowany z typu generycznego jest określany jako *skonstruowany typ*. Typ, nie są w pełni określona, takich jak `List<T>` jest *Otwórz skonstruowanego typu*; w pełni określona, takie jak typ `List<double>,` jest *zamknięte skonstruowanego typu* lub *wyspecjalizowane typu* . Otwórz typy utworzone mogą być używane w definicji innych typów ani metod ogólnych i nie może być w pełni określona do momentu ogólnego otaczający jest określony. Na przykład Oto Użyj skonstruowanego typu otwartego jako klasę bazową dla ogólnej:
+Typ zbudowany z typu ogólnego jest określany jako *Typ skonstruowany*. Typ, który nie jest w pełni określony, taki jak `List<T>`, to *otwarty typ skonstruowany*; Typ w pełni określony, taki jak `List<double>,` jest *zamkniętym typem skonstruowanym* lub *typem wyspecjalizowanym*. Otwarte typy skonstruowane mogą być używane w definicji innych typów ogólnych lub metod i mogą nie być w pełni określone, dopóki nie zostanie określony element ogólny. Na przykład poniższy kod jest używany jako klasa bazowa dla ogólnego:
 
 ```cpp
 // generics_overview.cpp
@@ -65,15 +65,15 @@ generic <typename T>
 ref class Queue : public List<T> {};
 ```
 
-### <a name="constraint"></a>Ograniczenia
+### <a name="constraint"></a>Typu
 
-Ograniczenie jest ograniczenie typów, które mogą być używane jako parametr typu. Na przykład danej klasy ogólnej może akceptować tylko klasy, które dziedziczą z określonej klasy lub implementacji określonego interfejsu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md).
+Ograniczenie to ograniczenie typów, które mogą być używane jako parametr typu. Na przykład dana klasa generyczna może akceptować tylko klasy, które dziedziczą z określonej klasy, lub implementują określony interfejs. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnegoC++(/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="reference-types-and-value-types"></a>Typy odwołań i typy wartości
 
-Obsługuje typy i wartości może służyć jako argumentów typu. W ogólnych definicji, w którym typ mogą być używane, składnia jest typy odwołań. Na przykład `->` operator jest używany do dostęp do elementów członkowskich typu parametru typu, czy typ ostatecznie używany jest typem referencyjnym lub typem wartości. Jeśli typ wartości jest używana jako argument typu, środowisko uruchomieniowe generuje kod, który używa typów wartości bezpośrednio, bez konwersja boxing typów wartości.
+Typy dojść i typy wartości mogą być używane jako argumenty typu. W definicji generycznej, w której można użyć dowolnego typu, składnia jest dla typów referencyjnych. Na przykład operator `->` jest używany do uzyskiwania dostępu do składowych typu parametru typu niezależnie od tego, czy typ ostatecznie używany jest typem referencyjnym, czy typem wartości. Gdy typ wartości jest używany jako argument typu, środowisko uruchomieniowe generuje kod, który używa typów wartości bezpośrednio bez pakowania typów wartości.
 
-Korzystając z typem referencyjnym jako argument typu ogólnego, należy użyć składni dojście. Podczas korzystania z typu wartości jako argument typu ogólnego, nazwa typu korzystać bezpośrednio.
+W przypadku używania typu referencyjnego jako argumentu typu ogólnego należy użyć składni dojścia. W przypadku używania typu wartości jako argumentu typu ogólnego należy użyć nazwy typu bezpośrednio.
 
 ```cpp
 // generics_overview_2.cpp
@@ -93,7 +93,7 @@ int main() {
 
 ## <a name="type-parameters"></a>Parametry typów
 
-Parametry typu rodzajowego klasy są traktowane jak innych identyfikatorów. Ponieważ typ nie jest znany, istnieją jednak ograniczenia związane z ich użyciem. Na przykład nie można użyć elementów członkowskich i metod klasy parametr typu, chyba że parametr typu jest znany do obsługi tych elementów członkowskich. Oznacza to aby uzyskiwanie dostępu do członka za pomocą parametru typu, należy dodać typ, który zawiera element członkowski do listy ograniczenia parametru typu.
+Parametry typu w klasie generycznej są traktowane jak inne identyfikatory. Jednak ponieważ typ nie jest znany, istnieją ograniczenia dotyczące ich użycia. Na przykład nie można używać składowych i metod klasy parametru typu, chyba że parametr typu jest znany do obsługi tych elementów członkowskich. Oznacza to, aby uzyskać dostęp do elementu członkowskiego za pomocą parametru typu, należy dodać typ, który zawiera element członkowski do listy ograniczeń parametru typu.
 
 ```cpp
 // generics_overview_3.cpp
@@ -122,14 +122,14 @@ int main() {
 }
 ```
 
-Te ograniczenia mają zastosowanie również operatorów. Nie można używać parametru typu ogólnego nieograniczonego `==` i `!=` operatory do porównywania dwóch wystąpień z parametrem typu, w przypadku, gdy typ nie obsługuje tych operatorów. Te testy są niezbędne do typów ogólnych, ale nie dla szablonów, ponieważ może można wyspecjalizować typy ogólne w czasie wykonywania za pomocą dowolnej klasy spełniającego ograniczenia, gdy jest za późno, aby sprawdzić, czy użycie nieprawidłowych członków.
+Te ograniczenia dotyczą również operatorów. W przypadku nieograniczonego parametru typu ogólnego nie można używać operatorów `==` i `!=` do porównywania dwóch wystąpień parametru typu, jeśli typ nie obsługuje tych operatorów. Te testy są konieczne w przypadku typów ogólnych, ale nie dla szablonów, ponieważ typy ogólne mogą być wyspecjalizowane w czasie wykonywania z dowolną klasą, która spełnia ograniczenia, gdy jest zbyt późno, aby sprawdzić użycie nieprawidłowych elementów członkowskich.
 
-Domyślne wystąpienie parametru typu można tworzyć przy użyciu `()` operatora. Na przykład:
+Domyślne wystąpienie parametru typu można utworzyć za pomocą operatora `()`. Na przykład:
 
 `T t = T();`
 
-gdzie `T` jest parametrem typu w definicji klasy lub metody rodzajowe, inicjuje zmienną na wartość domyślną. Jeśli `T` jest klasą referencyjną, będzie on wskaźnikiem typu null; Jeśli `T` jest klasą wartość obiektu jest inicjowane od zera. Jest to nazywane *domyślny inicjator*.
+gdzie `T` jest parametrem typu w klasie generycznej lub definicji metody, inicjuje zmienną do wartości domyślnej. Jeśli `T` jest klasą referencyjną, będzie to wskaźnik o wartości null; Jeśli `T` jest klasą wartości, obiekt jest inicjowany do zera. Jest to nazywane *inicjatorem domyślnym*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

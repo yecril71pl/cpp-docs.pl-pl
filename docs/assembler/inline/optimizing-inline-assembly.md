@@ -8,21 +8,21 @@ helpviewer_keywords:
 - optimizing performance, inline assembly
 - __asm keyword [C++], optimizing
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
-ms.openlocfilehash: d4956ba12e0bc268d78a895e6cb1ec6e2059262a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0051b16ddc19e233cfac2688c0b77e1e023f0833
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169269"
 ---
 # <a name="optimizing-inline-assembly"></a>Optymalizacja wbudowanego asemblera
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Obecność `__asm` bloku w funkcji ma wpływ optymalizacji na kilka sposobów. Po pierwsze, kompilator nie próbuje zoptymalizować `__asm` block sam. Pisanie w języku zestawu jest dokładnie, co można uzyskać. Drugi, obecności `__asm` wpływa na blok zarejestrować zmiennej magazynu. Kompilator eliminuje rejestrowanie zmienne z różnych `__asm` zablokować, jeśli zawartość rejestru zostaną zmienione przez `__asm` bloku. Na koniec włączenia języka zestawu w funkcji wpływ inne optymalizacje całej funkcji.
+Obecność bloku `__asm` w funkcji ma wpływ na optymalizację na kilka sposobów. Najpierw kompilator nie próbuje zoptymalizować samego bloku `__asm`. To, co otrzymujesz w języku asemblera, jest dokładne. Po drugie, obecność bloku `__asm` ma wpływ na rejestr magazynu zmiennych. Kompilator pozwala uniknąć zmiennych rejestrowanie w bloku `__asm`, jeśli zawartość rejestru zostanie zmieniona przez blok `__asm`. Na koniec niektóre inne optymalizacje na poziomie funkcji mają wpływ na włączenie języka zestawu w funkcji.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

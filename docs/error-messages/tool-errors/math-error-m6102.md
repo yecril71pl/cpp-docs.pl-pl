@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173767"
 ---
 # <a name="math-error-m6102"></a>Błąd matematyczny M6102
 
-zdenormalizowany
+denormal
 
-Operacja wygenerowała bardzo mała liczba zmiennoprzecinkowa, który jest nieprawidłowy ze względu utrata znaczenia. Zdenormalizowany wyjątki zmiennoprzecinkowe zwykle są maskowane, powoduje zablokował i wykonywane działania.
+Operacja wygenerowała bardzo małą liczbę zmiennoprzecinkową, która jest nieprawidłową przyczyną utraty istotności. Nienormalne wyjątki zmiennoprzecinkowe są zwykle maskowane, co sprawia, że są one zalewkowane i obsługiwane.
 
-Program kończy się z kodem zakończenia 130.
+Program kończy pracę z kodem zakończenia 130.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
-ms.openlocfilehash: 6cbcc2a7017a221c113086a0ea20a63a1992fbac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01b13aa160c39d71b793d30c6392a35c6a24e118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208198"
 ---
 # <a name="compiler-error-c2020"></a>Błąd kompilatora C2020
 
-"członek": redefinicja składowej "class"
+"member": Ponowna definicja elementu członkowskiego "Class"
 
-Składową odziedziczoną z klasy bazowej lub struktury zostało przedefiniowane. Nie można przedefiniować dziedziczone elementy członkowskie, o ile nie jest zadeklarowany jako `virtual` w klasie bazowej.
+Członek Dziedziczony z klasy bazowej lub struktury jest ponownie zdefiniowany. Dziedziczone elementy członkowskie nie mogą być ponownie zdefiniowane, chyba że zadeklarowane jako `virtual` w klasie bazowej.

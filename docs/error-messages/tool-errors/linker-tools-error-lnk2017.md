@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2017
 ms.assetid: f7c21733-b0fb-4888-a295-9b453ba6ee77
-ms.openlocfilehash: ce5332c2812740ef0b8c7d8e9c64a095d20a4e2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02e80de5c34809a331003f3b0fb28d32e138a531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299059"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194736"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Błąd narzędzi konsolidatora LNK2017
 
-relokacja "symbol" do "segmentu" Nieprawidłowa bez pamięci
+przemieszczenie "symbol" do "segment" jest nieprawidłowe bez/LARGEADDRESSAWARE: NO
 
-Chcesz utworzyć obraz 64-bitowym z 32-bitowymi adresami. Aby to zrobić, musisz mieć:
+Próbujesz utworzyć obraz 64-bitowy z 32-bitowymi adresami. W tym celu należy wykonać następujące czynności:
 
-- Użyj adresu obciążenia stały.
+- Użyj stałego adresu ładowania.
 
-- Obraz należy ograniczyć do 3 GB.
+- Ogranicz obraz do 3 GB.
 
-- Określ [pamięci](../../build/reference/largeaddressaware-handle-large-addresses.md).
+- Określ [/LARGEADDRESSAWARE: No](../../build/reference/largeaddressaware-handle-large-addresses.md).

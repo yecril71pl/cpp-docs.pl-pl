@@ -9,20 +9,20 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493355"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169880"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie
 
-Program Visual Studio obsługuje model wdrażania dla aplikacji klienckich systemu Windows oparty na koncepcji [izolowanych aplikacji](/windows/win32/SbsCs/isolated-applications) i [zestawów równoległych](/windows/win32/SbsCs/about-side-by-side-assemblies-). Domyślnie program Visual Studio kompiluje wszystkie natywne aplikacjeC++ C/w postaci aplikacji izolowanych, które używają manifestów do opisywania zależności od bibliotek wizualnych. [](/windows/win32/sbscs/manifests) C++
+Program Visual Studio obsługuje model wdrażania dla aplikacji klienckich systemu Windows oparty na koncepcji [izolowanych aplikacji](/windows/win32/SbsCs/isolated-applications) i [zestawów równoległych](/windows/win32/SbsCs/about-side-by-side-assemblies-). Domyślnie program Visual Studio kompiluje wszystkie natywne aplikacjeC++ C/w postaci aplikacji izolowanych, które używają [manifestów](/windows/win32/sbscs/manifests) do opisywania zależności od bibliotek wizualnych C++ .
 
-Kompilowanie CC++ /programów jako aplikacji izolowanych przedstawia szereg zalet. Na przykład aplikacja izolowana nie ma zastosowania, gdy inne C/C++ aplikacje instalują lub odinstalują biblioteki wizualne C++ . Biblioteki C++ wizualne używane przez aplikacje izolowane mogą być nadal rozpowszechniane w folderze lokalnym aplikacji lub przez instalację do natywnej pamięci podręcznej zestawów (winsxs); jednak obsługa bibliotek wizualnych C++ dla już wdrożonych aplikacji może być uproszczona przy użyciu [pliku konfiguracji wydawcy](/windows/win32/SbsCs/publisher-configuration). Model wdrażania izolowanych aplikacji ułatwia upewnienie się, że aplikacje CC++ /uruchomione na określonym komputerze używają najnowszej wersji bibliotek wizualnych C++ , pozostawiając jednocześnie możliwość otwarcia systemu Administratorzy i autorzy aplikacji, aby kontrolować jawne powiązanie wersji aplikacji z ich zależnymi bibliotekami DLL.
+Kompilowanie CC++ /programów jako aplikacji izolowanych przedstawia szereg zalet. Na przykład aplikacja izolowana nie ma zastosowania, gdy inne C/C++ aplikacje instalują lub odinstalują biblioteki wizualne C++ . Biblioteki C++ wizualne używane przez aplikacje izolowane mogą być nadal rozpowszechniane w folderze lokalnym aplikacji lub przez instalację do natywnej pamięci podręcznej zestawów (winsxs); jednak obsługa bibliotek wizualnych C++ dla już wdrożonych aplikacji może być uproszczona przy użyciu [pliku konfiguracji wydawcy](/windows/win32/SbsCs/publisher-configuration). Model wdrażania izolowanych aplikacji ułatwia upewnienie się, że aplikacje CC++ /uruchomione na określonym komputerze używają najnowszej wersji bibliotek wizualnych C++ , pozostawiając jednocześnie możliwość otwarcia przez administratorów systemu i autorów aplikacji jawnych powiązań wersji aplikacji z ich zależnymi bibliotekami DLL.
 
-W tej sekcji omówiono, jak można skompilować aplikację CC++ /aplikacje jako izolowaną aplikację i upewnić się, że jest C++ ona powiązana z bibliotekami wizualnymi przy użyciu manifestu. Informacje zawarte w tej sekcji dotyczą głównie natywnych lub niezarządzanych C++ aplikacji. Aby uzyskać informacje o wdrażaniu aplikacji natywnych C++ skompilowanych za pomocą programu Visual Studio, zobacz Redystrybuowanie [plików wizualnych C++ ](../windows/redistributing-visual-cpp-files.md).
+W tej sekcji omówiono, jak można skompilować aplikację CC++ /aplikacje jako izolowaną aplikację i upewnić się, że jest C++ ona powiązana z bibliotekami wizualnymi przy użyciu manifestu. Informacje zawarte w tej sekcji dotyczą głównie natywnych lub niezarządzanych C++ aplikacji. Aby uzyskać informacje o wdrażaniu aplikacji natywnych C++ skompilowanych za pomocą programu Visual Studio, zobacz [Redystrybuowanie plików wizualnych C++ ](../windows/redistributing-visual-cpp-files.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

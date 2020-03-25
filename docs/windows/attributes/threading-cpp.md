@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214503"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -25,32 +25,32 @@ Określa model wątkowości dla obiektu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*model*<br/>
+*wzorów*<br/>
 Obowiązkowe Jeden z następujących modeli wątkowości:
 
-- `apartment`(wątkowość apartamentu)
+- `apartment` (wątkowość apartamentu)
 
-- `neutral`(Składniki .NET Framework bez interfejsu użytkownika)
+- `neutral` (składniki .NET Framework bez interfejsu użytkownika)
 
-- `single`(prosta wątkowość)
+- `single` (prosta wątkowość)
 
-- `free`(bezpłatna wątkowość)
+- `free` (bezpłatna wątkowość)
 
-- `both`(Apartment i Free Threading)
+- `both` (Apartment i Free Threading)
 
-Wartość domyślna to `apartment`.
+Wartością domyślną jest `apartment`.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut Threading nie jest wyświetlany w wygenerowanym pliku IDL, ale zostanie użyty w implementacji obiektu com. C++
+C++ Atrybut **Threading** nie jest wyświetlany w wygenerowanym pliku IDL, ale zostanie użyty w implementacji obiektu com.
 
-W projektach ATL, jeśli istnieje również atrybut [klasy coclass](coclass.md) , model wątkowości określony przez *model* jest przenoszona jako parametr szablonu do `coclass` klasy [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , wstawiany przez atrybut.
+W projektach ATL, jeśli istnieje również atrybut [klasy coclass](coclass.md) , model wątkowości określony przez *model* jest przenoszona jako parametr szablonu do klasy [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , wstawiany przez atrybut `coclass`.
 
 Atrybut **wątkowości** chroni również dostęp do [event_source](event-source.md).
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj [](licensed.md) się z licencjonowanym przykładem użycia **wątku**.
+Zapoznaj się z [licencjonowanym](licensed.md) przykładem użycia **wątku**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -61,11 +61,11 @@ Zapoznaj [](licensed.md) się z licencjonowanym przykładem użycia **wątku**.
 |**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|**coclass**|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

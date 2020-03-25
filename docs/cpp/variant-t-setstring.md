@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: d07e995be0ecd99974356a7516e7c4deee677637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187560"
 ---
-# <a name="varianttsetstring"></a>_variant_t::SetString
+# <a name="_variant_tsetstring"></a>_variant_t::SetString
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Przypisuje ten ciąg `_variant_t` obiektu.
+Przypisuje ciąg do tego obiektu `_variant_t`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,10 +32,10 @@ Wskaźnik do ciągu znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje ciąg znaków ANSI Unicode `BSTR` ciąg, a następnie przypisuje go do tego `_variant_t` obiektu.
+Konwertuje ciąg znaków ANSI na ciąg `BSTR` Unicode i przypisuje go do tego `_variant_t` obiektu.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_variant_t, klasa](../cpp/variant-t-class.md)

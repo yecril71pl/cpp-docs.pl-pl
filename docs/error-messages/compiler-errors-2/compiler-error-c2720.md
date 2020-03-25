@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-ms.openlocfilehash: c6499fd3f279099ea7c5b31860e70bdaa285e3f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f4329ee631eafc7c2670d9ebf28609c22e7592
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383051"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202139"
 ---
 # <a name="compiler-error-c2720"></a>Błąd kompilatora C2720
 
-> "*identyfikator*": "*specyfikator*" Specyfikator klasy składującej niedozwolony dla składowych
+> "*Identyfikator*": specyfikator klasy magazynu "*specyfikator*" jest niedozwolony w składowych
 
-Klasa magazynu nie można używać dla składowych klasy poza deklaracją. Aby naprawić ten błąd, należy usunąć niepotrzebne [klasę magazynu](../../cpp/storage-classes-cpp.md) specyfikator w definicji elementu członkowskiego poza deklaracją klasy.
+Klasy Storage nie można używać w składowych klasy poza deklaracją. Aby naprawić ten błąd, Usuń niepotrzebny specyfikator [klasy magazynu](../../cpp/storage-classes-cpp.md) z definicji elementu członkowskiego spoza deklaracji klasy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2720 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2720 i pokazuje, jak to naprawić:
 
 ```cpp
 // C2720.cpp

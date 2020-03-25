@@ -9,65 +9,65 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-ms.openlocfilehash: 4101c2fe30bcba44e9b69ed4d6d022845e6e8904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2276f6a3c28c6f2fac509ef0e4bc14cce9932582
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321582"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170466"
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatory przetwarzania wstępnego pliku reguł programu Make
 
-Pliku reguł programu make wstępnego przetwarzania wyrażenia można użyć operatorów, które działają na stałe wartości, kody wyjścia z poleceń, ciągi, makr i ścieżki systemu plików. Można obliczyć wyrażenia, preprocesor najpierw rozszerza makra i następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są obliczane w kolejności jawne grupowania w nawiasach, a następnie zgodnie z kolejnością pierwszeństwo operatorów. Wynik jest wartością stałą.
+Wyrażenia przetwarzania wstępnego pliku reguł programu make mogą używać operatorów, które działają na wartościach stałych, kody wyjścia z poleceń, ciągów, makr i ścieżek systemu plików. Aby oszacować wyrażenie, preprocesor najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane w kolejności jawnej grupowania w nawiasach, a następnie w kolejności pierwszeństwa operatorów. Wynik jest wartością stałą.
 
-**Zdefiniowane** operator jest operator logiczny, który działa na nazwę makra. Wyrażenie **zdefiniowane (**_makra_**)** ma wartość true Jeśli *makra* jest zdefiniowany, nawet jeśli nie ma przypisaną wartość. **ZDEFINIOWANE** w połączeniu z **! Jeśli** lub **! Jeśli nie** jest odpowiednikiem **! IFDEF** lub **! ELSE IFDEF**. Jednak w przeciwieństwie do tych dyrektyw **zdefiniowane** mogą być używane w złożonych wyrażeń.
+**Zdefiniowany** operator jest operatorem logicznym, który działa w nazwie makra. Wyrażenie **zdefiniowane (** _Macroname_ **)** ma wartość true, jeśli określono wartość *Macroname* , nawet jeśli nie ma przypisanej wartości. **Zdefiniowane** w połączeniu z **! IF** lub **! ELSE IF** jest równoważne **! IFDEF** lub **! ELSE IFDEF**. Jednak w przeciwieństwie do tych dyrektyw, **zdefiniowane** można używać w wyrażeniach złożonych.
 
-**ISTNIEJE** operator jest operator logiczny, który działa w ścieżce systemu plików. **ISTNIEJE (**_ścieżki_**)** ma wartość true Jeśli *ścieżki* istnieje. Wynik **ISTNIEJE** mogą być używane w wyrażenia binarnego. Jeśli *ścieżki* zawiera spacje, należy ją ująć w znaki podwójnego cudzysłowu.
+Operator **exist** jest operatorem logicznym, który działa na ścieżce systemu plików. **Istnieje (** _ścieżka_ **)** ma wartość true, jeśli *ścieżka* istnieje. Wynik z **istnieje** może być używany w wyrażeniach binarnych. Jeśli *ścieżka* zawiera spacje, ujmij ją w znaki podwójnego cudzysłowu.
 
-Aby porównać dwa ciągi, należy użyć równości (**==**) operatora i nierówności (**! =**) — operator. Ciągi należy ująć w znaki podwójnego cudzysłowu.
+Aby porównać dwa ciągi, użyj operatora równości ( **==** ) lub operatora nierówności ( **! =** ). Ciągi ujęte w znaki podwójnego cudzysłowu.
 
-Stałe całkowite można użyć operatorów jednoargumentowych dla wartości liczbowych negacji (**-**), jednego użytkownika uzupełniają (**~**), a logiczny negacji (**!**).
+Stałe całkowite mogą używać jednoargumentowych operatorów dla liczbowych negacji ( **-** ), jednego uzupełnienia ( **~** ) i logicznego negacji ( **!** ).
 
-Wyrażenia można używać następujących operatorów. Operatory równy priorytet są zgrupowane razem i grup są wymienione w kolejności malejącej. Operatory jednoargumentowe skojarzyć z argument operacji po prawej stronie. Operatory dwuargumentowe równe pierwszeństwo skojarzyć argumentów od lewej do prawej.
+Wyrażenia mogą używać następujących operatorów. Operatory równego pierwszeństwa są grupowane razem, a grupy są wyświetlane w kolejności malejącej pierwszeństwa. Operatory jednoargumentowe są kojarzone z argumentem operacji po prawej stronie. Operatory binarne o równych priorytetach kojarzą operandy od lewej do prawej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|**ZDEFINIOWANE (** *makra* **)**|Tworzy wartość logiczną, aby uzyskać bieżący stan definicji *makra*.|
-|**ISTNIEJE (** *ścieżki* **)**|Tworzy wartość logiczną, istnieje w pliku, *ścieżki*.|
+|**Zdefiniowane (** *Macroname* **)**|Tworzy wartość logiczną dla bieżącego stanu definicji *Macroname*.|
+|**Istnieje (** *ścieżka* **)**|Tworzy wartość logiczną dla istnienia pliku w *ścieżce*.|
 |||
-|**\!**|Jednoargumentowy logiczne NOT.|
-|**~**|Jednoargumentowy jednostkowego dopełnienia.|
-|**-**|Negacja Jednoargumentowa.|
+|**!**|Logiczne jednoargumentowe NOT.|
+|**~**|Jednoargumentowy uzupełnienie jednego.|
+|**-**|Jednoargumentowa Negacja.|
 |||
 |**&#42;**|Mnożenia.|
 |**/**|Dzielenie.|
-|**%**|Moduł (resztę).|
+|**%**|Moduł (reszta).|
 |||
 |**+**|Dodatek.|
 |**-**|Odejmowanie.|
 |||
-|**\<\<**|Operatory przesunięcia w lewo.|
-|**>>**|Bitowe przesunięcia w prawo.|
+|**\<\<**|Przesunięcie bitowe w lewo.|
+|**>>**|Przesunięcie bitowe w prawo.|
 |||
 |**\<=**|Mniejsze niż lub równe.|
-|**>=**|Większe lub równe.|
+|**>=**|Większe niż lub równe.|
 |**\<**|Mniejsze niż.|
 |**>**|Większe niż.|
 |||
-|**==**|Równości.|
-|**\!=**|Nierówności.|
+|**==**|Kryteri.|
+|**!=**|Nierówności.|
 |||
 |**&**|Operatora bitowego AND.|
 |**^**|Bitowe XOR.|
 |**&#124;**|Bitowe OR.|
 |||
-|**&&**|Operatora logicznego AND.|
+|**&&**|Koniunkcja logiczna i.|
 |||
 |**&#124;&#124;**|Logiczne OR.|
 
 > [!NOTE]
-> Bitowy operator XOR (**^**) jest taka sama jak znak ucieczki. Ponadto należy użyć znaków ucieczki (jako **^^**) gdy jest używany w wyrażeniu.
+> Bitowy operator XOR ( **^** ) jest taki sam jak znak ucieczki i musi mieć wartość ucieczki (jako **^^** ), gdy jest używany w wyrażeniu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](expressions-in-makefile-preprocessing.md)

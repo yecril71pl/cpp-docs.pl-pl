@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301603"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170608"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C++
 
@@ -48,7 +48,7 @@ Układ pamięci obiektu Date
 
 Należy pamiętać, że `nYear` jest 8 bitów Long i spowodowałoby przepełnienie granicy słowa zadeklarowanego typu, **bez znaku** **.** W związku z tym rozpoczyna się na początku nowego **niepodpisanego znaku** **.** Nie jest konieczne, aby wszystkie pola bitowe mieściły się w jednym obiekcie typu podstawowego; przydzielono nowe jednostki magazynu, zgodnie z liczbą bitów żądaną w deklaracji.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Kolejność danych zadeklarowanych jako pola bitowe jest od niskiej do wysokiego bitu, jak pokazano na powyższym rysunku.
 
@@ -85,6 +85,6 @@ Poniższa lista zawiera błędne operacje dotyczące pól bitowych:
 
 - Inicjowanie odwołania**niestałego** za pomocą pola bitowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

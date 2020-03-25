@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4772
+title: Ostrzeżenie kompilatora (poziom 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
 - C4772
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175137"
 ---
-# <a name="compiler-warning-level-1-c4772"></a>Kompilator ostrzeżenie (poziom 1) C4772
+# <a name="compiler-warning-level-1-c4772"></a>Ostrzeżenie kompilatora (poziom 1) C4772
 
-> \#Importuj odwołanie do typu z brakującej biblioteki typów; "*brakuje typu*" używana jako symbol zastępczy
+> \#zaimportować przywoływany typ z brakującej biblioteki typów; "*Brak typu*" używany jako symbol zastępczy
 
-Odwołanie do biblioteki typów z [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy. Jednak biblioteka typów zawiera odwołanie do innej biblioteki typów, który nie był przywoływany z `#import`. Nie znaleziono pliku .tlb przez kompilator.
+Do biblioteki typów odwołuje się dyrektywa [#import](../../preprocessor/hash-import-directive-cpp.md) . Jednak biblioteka typów zawiera odwołanie do innej biblioteki typów, do której nie odwołuje się `#import`. Kompilator nie znalazł tego innego pliku. tlb.
 
-Należy pamiętać, że kompilator nie znajdzie biblioteki typów w różnych katalogach Jeśli używasz [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md) opcję kompilatora, aby określić te katalogi. Jeśli chcesz, aby kompilator, aby znaleźć biblioteki typów w różnych katalogach, należy dodać te katalogi do zmiennej środowiskowej PATH.
+Należy zauważyć, że kompilator nie będzie znajdował bibliotek typów w różnych katalogach, jeśli do określenia tych katalogów jest używany program [/i (Dodatkowe katalogi dołączane)](../../build/reference/i-additional-include-directories.md) . Jeśli chcesz, aby kompilator znalazł biblioteki typów w różnych katalogach, Dodaj te katalogi do zmiennej środowiskowej PATH.
 
-Domyślnie to ostrzeżenie jako błąd. Nie można pominąć C4772 z /W0.
+Domyślnie to ostrzeżenie jest wysyłane jako błąd. Nie można pominąć C4772 z/W0.
 
 ## <a name="example"></a>Przykład
 
-Jest to pierwszy wymaganymi do odtworzenia C4772 biblioteki typów.
+Jest to pierwsza biblioteka typów wymagana do odtworzenia C4772.
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Jest to potrzebne do odtworzenia C4772 drugi biblioteki typów.
+Jest to druga biblioteka typów wymagana do odtworzenia C4772.
 
 ```IDL
 // c4772b.idl
@@ -58,7 +58,7 @@ library C4772bLib
 };
 ```
 
-Poniższy przykład spowoduje wygenerowanie C4772:
+Poniższy przykład generuje C4772:
 
 ```cpp
 // C4772.cpp

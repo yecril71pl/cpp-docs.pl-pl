@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0020
 ms.assetid: 54bb8cd4-af7c-4d62-8125-3ab5ff5f2cc4
-ms.openlocfilehash: 2e9a35d17bd3365d5f4ad3166b440b94fb521e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33ca7ead85744ab1ef1f1ecb4dd2775c7b0c603
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192669"
 ---
 # <a name="project-build-error-prj0020"></a>Błąd PRJ0020 kompilacji projektu
 
-> Narzędzie '*narzędzie*", właściwość"*właściwość*"zawiera niepoprawną nazwę pliku"*pliku*".
+> Narzędzie "*Tool*", właściwość "*Property*" zawiera nieprawidłową nazwę pliku "*File*".
 
-Nazwa pliku *pliku*określone we właściwości *właściwość* narzędzia *narzędzie*, był nieprawidłowy.
+*Plik*nazwy pliku określony we *Właściwości* właściwości *Narzędzia*jest nieprawidłowy.
 
-Być może użyto nieznanego lub nieprawidłowego — makro.
+Być może użyto nieznanego lub nieprawidłowego makra.
 
-Zobacz [ustawienie właściwości projektu Visual C++](../../build/working-with-project-properties.md) informacji na temat uzyskiwania dostępu do właściwości projektu.
+Aby uzyskać informacje na temat sposobu uzyskania dostępu do właściwości projektu, zobacz [Ustawianie właściwości projektu wizualnego C++ ](../../build/working-with-project-properties.md) .

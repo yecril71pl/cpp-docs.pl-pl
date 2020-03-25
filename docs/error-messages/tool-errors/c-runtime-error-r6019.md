@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-ms.openlocfilehash: 93d340b2a12a00420a9003429251387b2f04ad37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b647825b7e856be9dc51a5a652be87a4cc6d0e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197265"
 ---
 # <a name="c-runtime-error-r6019"></a>Błąd czasu wykonania języka C R6019
 
-Nie można otworzyć konsoli urządzenia
+nie można otworzyć urządzenia konsoli
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ próbowała ona dostęp do konsoli, ale go nie ma wystarczających uprawnień. Istnieje kilka możliwych przyczyn tego błędu, ale zwykle jest to spowodowane należy uruchomić program jako administrator lub jest to błąd w programie.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ próbowała uzyskać dostęp do konsoli, ale nie ma wystarczających uprawnień. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane tym, że program musi być uruchomiony jako administrator lub występuje usterka w programie.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
 > - Uruchom program jako administrator.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Ten błąd występuje, ponieważ aplikacja wywołuje funkcję konsoli, ale system operacyjny nie udostępni dostęp do konsoli. Z wyjątkiem w trybie debugowania, konsoli funkcje zwykle nie są dozwolone w aplikacji Microsoft Store. Jeśli aplikacja wymaga uprawnień administratora do uruchomienia, upewnij się, że jest zainstalowana do uruchamiania jako administrator, domyślnie.
+Ten błąd występuje, ponieważ aplikacja nosi funkcję konsoli, ale system operacyjny nie przyznał dostępu do konsoli. Poza trybem debugowania funkcje konsoli są zwykle niedozwolone w aplikacjach Microsoft Store. Jeśli aplikacja wymaga uprawnień administratora, upewnij się, że jest zainstalowana w celu domyślnego uruchomienia jako administrator.

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193553"
 ---
 # <a name="nmake-fatal-error-u1052"></a>Błąd krytyczny NMAKE U1052
 
-> Plik "*filename*" nie znaleziono
+> nie znaleziono pliku "*filename*"
 
-NMAKE nie można odnaleźć pliku określonego przez jedną z następujących czynności:
+NMAKE nie mógł znaleźć określonego pliku z jedną z następujących:
 
-- **/F** opcji
+- **/F** — opcja
 
-- **! OBEJMUJĄ** dyrektywy preprocesora
+- **! UWZGLĘDNIj** dyrektywę przetwarzania wstępnego
 
-- Znak (**\@**) specyfikator dla pliku odpowiedzi
+- Specyfikator znaku ( **\@** ) dla pliku odpowiedzi
 
-Upewnij się, że plik istnieje i nazwa pliku jest poprawna.
+Sprawdź, czy plik istnieje i czy nazwa pliku jest poprawna.

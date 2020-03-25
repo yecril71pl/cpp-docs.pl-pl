@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2444
 ms.assetid: 6339ed82-caad-45d3-a8ff-6c746589fd03
-ms.openlocfilehash: 277b5ba3199b059b493a8bc8c7228740c8f75a61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1cdee8cd5cc2fbd653d1daf9849f98cfd98ae0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205273"
 ---
 # <a name="compiler-error-c2444"></a>Błąd kompilatora C2444
 
-'Identyfikator': używany prototyp ANSI, znaleziono "type", oczekiwano "{" lub ";"
+"Identyfikator": użyty prototyp ANSI, znaleziono "Type", oczekiwano "{" lub ";"
 
-Prototyp funkcji następuje typu.
+Po prototypie funkcji następuje typ.
 
-Ten błąd może być spowodowany przez Brak średnika lub nawiasu klamrowego.
+Ten błąd może być spowodowany brakiem średnika lub nawiasem klamrowym.

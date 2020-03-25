@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2175
 ms.assetid: 3864a371-dba8-41a7-962c-e792709774f1
-ms.openlocfilehash: d8ddd8063bc614561d5b4657df092b69d7cffe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10af91f56efd2e10c9ce8ab95c2aaa2694d19d17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396817"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190732"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Błąd kompilatora zasobów RC2175
 
-zasób, nazwa_pliku pliku nie jest w formacie 3.00
+Nazwa pliku zasobu nie jest w formacie 3,00
 
-Określony zasób używany format starszych niż w wersji 3.00. Plik zasobu musi zostać skonwertowany lub ponownie utworzony przy użyciu formatu dla wersji 3.00 lub nowszej.
+Określony zasób używał formatu wcześniejszego niż wersja 3,00. Plik zasobów musi być konwertowany lub ponownie utworzony przy użyciu formatu w wersji 3,00 lub nowszej.

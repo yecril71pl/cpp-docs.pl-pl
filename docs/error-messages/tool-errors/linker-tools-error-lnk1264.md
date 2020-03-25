@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00041e677ac7b69df9981551ee3b6cc18f9eb33d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160591"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183764"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Błąd narzędzi konsolidatora LNK1264
 
-Pginstrument określone, lecz generowanie kodu nie jest wymagane; Instrumentacja nie powiodła się
+/LTCG: PGINSTRUMENT określony, ale nie jest wymagane generowanie kodu; Instrumentacja nie powiodła się
 
-**Pginstrument** został określony, ale nie znaleziono plików .obj, które zostały skompilowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md). Instrumentacja nie można przyjąć miejsce i łącza nie powiodło się. Musi istnieć co najmniej jeden plik .obj w wierszu polecenia, który został skompilowany z **/GL** tak, może wystąpić Instrumentację.
+**/LTCG: PGINSTRUMENT** został określony, ale nie znaleziono plików. obj, które zostały skompilowane z [/GL](../../build/reference/gl-whole-program-optimization.md). Nie można przeprowadzić instrumentacji, a łącze nie powiodło się. W wierszu polecenia, który jest kompilowany za pomocą **/GL** , musi istnieć co najmniej jeden plik. obj, dzięki czemu może wystąpić Instrumentacja.
 
-Optymalizacja z przewodnikiem profilu (PGO) jest dostępna tylko w kompilatorach, 64-bitowych.
+Optymalizacja profilowana (PGO) jest dostępna tylko w kompilatorach 64-bitowych.

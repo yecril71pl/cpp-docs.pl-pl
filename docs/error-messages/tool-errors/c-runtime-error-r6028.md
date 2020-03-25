@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
-ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c165b7c9351e34ef6316962cd90663f2b6152ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380516"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197135"
 ---
 # <a name="c-runtime-error-r6028"></a>Błąd czasu wykonania języka C R6028
 
 nie można zainicjować sterty
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje wiele możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci, usterki w programie lub uszkodzenie sprzętu sterowników.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem z pamięcią wewnętrzną. Istnieje wiele możliwych przyczyn tego błędu, ale często jest to spowodowane bardzo małą ilością pamięci, usterką w programie lub uszkodzonymi sterownikami sprzętowymi.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Jeśli aplikacja była praca przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia Nowa aplikacja lub sterownika i spróbuj ponownie aplikację.
-> - Sprawdź witrynę sieci Web z dostawcą sprzętu lub **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania i sterowników.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne uruchomione aplikacje lub Uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Jeśli aplikacja działała przed ostatnią instalacją innej aplikacji lub sterownika, użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby usunąć nową aplikację lub sterownik, a następnie spróbuj ponownie wykonać swoją aplikację.
+> - Sprawdź witrynę sieci Web dostawcy sprzętu lub **Windows Update** w **Panelu sterowania** , aby uzyskać aktualizacje oprogramowania i sterowników.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Ten błąd występuje, gdy system operacyjny nie może utworzyć puli pamięci dla aplikacji. W szczególności C Runtime (CRT) wywołała funkcję Win32 `HeapCreate`, która zwróciła wartość NULL wskazującą niepowodzenie.
+Ten błąd występuje, gdy system operacyjny nie może utworzyć puli pamięci dla aplikacji. W przypadku środowiska uruchomieniowego języka C (CRT) o nazwie `HeapCreate`funkcji Win32, która zwróciła błąd wskazujący wartość NULL.
 
 Jeśli ten błąd występuje podczas uruchamiania aplikacji, system może nie być w stanie spełnić żądań sterty, ponieważ ładowane są uszkodzone sterowniki. Sprawdź witrynę Windows Update lub witrynę dostawcy sprzętu, aby uzyskać zaktualizowane sterowniki.

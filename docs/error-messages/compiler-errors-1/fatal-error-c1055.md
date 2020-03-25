@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1055
 ms.assetid: a9fb9190-d7eb-4d5f-b1a2-a41e584a28c1
-ms.openlocfilehash: e6df4870d7af49c369be7e513791955599c48326
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c349c09b4931c0a303e7619b364ab237394bd4fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204454"
 ---
 # <a name="fatal-error-c1055"></a>Błąd krytyczny C1055
 
-ograniczenie kompilatora: Brak kluczy
+ograniczenie kompilatora: brak kluczy
 
-Plik źródłowy zawiera zbyt wiele symboli. Kompilator zabrakło klawisze skrótu do tabeli symboli.
+Plik źródłowy zawiera za dużo symboli. Kompilator wypełnił klucze skrótu dla tabeli symboli.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Plik źródłowy można podzielić na mniejsze pliki.
+1. Podziel plik źródłowy na mniejsze pliki.
 
-1. Usuń pliki nagłówkowe niepotrzebne.
+1. Eliminowanie niepotrzebnych plików nagłówkowych.
 
-1. Ponowne użycie zmiennych globalnych i tymczasowe zamiast tworzyć nowe.
+1. Ponownie Użyj zmiennych tymczasowych i globalnych zamiast tworzyć nowe.

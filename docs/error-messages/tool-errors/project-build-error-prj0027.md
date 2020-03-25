@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0027
 ms.assetid: 85d73a78-4b9e-4553-9f5d-2d76c48a790a
-ms.openlocfilehash: bc87ec33e78b9d45625432bd379b4ec7aeeecb52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc69f34dd291f2af241edae51bda9f09aeb9916d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192253"
 ---
 # <a name="project-build-error-prj0027"></a>Błąd PRJ0027 kompilacji projektu
 
-Wiadomości dziennika Unicode "treść" zawiera zawartość, która nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+Komunikat dziennika Unicode "Content" zawiera zawartość, której nie można przetłumaczyć na stronę kodową ANSI użytkownika.
 
-Zwykle widoczne są tylko to ostrzeżenie w połączeniu z błędami podczas tworzenia plików wsadowych i/lub odpowiedzi.
+To ostrzeżenie będzie zwykle widoczne tylko w połączeniu z błędami w tworzeniu plików wsadowych i/lub odpowiedzi.
 
-To rozwiązanie dotyczące tego błędu można zaktualizować zawartości dziennika kompilacji, aby użyć ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system.
+Rozwiązanie tego błędu polega na zaktualizowaniu zawartości dziennika kompilacji w celu użycia ANSI lub instalacji strony kodowej na komputerze i ustawieniu jej jako wartości domyślnej systemu.

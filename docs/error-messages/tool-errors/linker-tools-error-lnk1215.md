@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1215
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
-ms.openlocfilehash: cc9763771778118a823d8c54f922026215b534f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35279d9f47735489902fde284314a2c94f7a682
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242776"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195074"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Błąd narzędzi konsolidatora LNK1215
 
-Operacja metadanych nie powiodła się (wynik HRESULT): błąd
+Operacja na metadanych nie powiodła się (HRESULT): błąd
 
-Konsolidator odebrał błąd ze środowiska wykonawczego .NET podczas próby aktualizacji metadanych, za pomocą środowiska uruchomieniowego .NET.
+Konsolidator otrzymał błąd z środowiska uruchomieniowego .NET podczas próby przeprowadzenia aktualizacji metadanych za pośrednictwem środowiska uruchomieniowego .NET.
 
-`HRESULT` jest HRESULT z metody środowiska uruchomieniowego .NET. `error` jest. Tekst dostarczone przez sieć.
+`HRESULT` jest wartością HRESULT z metody środowiska uruchomieniowego platformy .NET. `error` to. Tekst dostarczony przez sieć.
 
-To prawdopodobnie niedopasowanych konsolidatora i środowisko uruchomieniowe platformy .NET Zainstaluj ponownie Visual C++.
+Prawdopodobnie masz niezgodną konsolidator i środowisko uruchomieniowe platformy .NET. Zainstaluj ponownie C++program Visual.

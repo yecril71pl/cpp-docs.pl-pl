@@ -1,19 +1,19 @@
 ---
-title: com_interface_entry — (C++ atrybutów COM)
+title: com_interface_entry (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168307"
 ---
-# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+# <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
 Dodaje wpis interfejsu do mapy COM klasy docelowej.
 
@@ -27,17 +27,17 @@ Dodaje wpis interfejsu do mapy COM klasy docelowej.
 ### <a name="parameters"></a>Parametry
 
 *com_interface_entry*<br/>
-Ciąg zawierający tekst wpisu. Aby uzyskać listę możliwych wartości, zobacz [com_interface_entry — makra](../../atl/reference/com-interface-entry-macros.md).
+Ciąg zawierający rzeczywisty tekst wpisu. Listę możliwych wartości można znaleźć w temacie [COM_INTERFACE_ENTRY MACROS](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Com_interface_entry —** C++ atrybut wstawia retransmitowanych w systemie zawartość ciągu znaków do mapy interfejsu COM, obiektu docelowego. Jeśli ten atrybut jest stosowany jeden raz do obiektu docelowego, wpis jest wstawiany do początku istniejącej mapy interfejsu. Jeśli ten atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy zostaną wstawione na początku mapę interfejsu w kolejności, w której zostały odebrane.
+Atrybut **COM_INTERFACE_ENTRY** C++ Wstawia zawartość nieskróconą ciągu znakowego do mapy interfejsu com obiektu docelowego. Jeśli atrybut jest stosowany raz do obiektu docelowego, wpis zostanie wstawiony na początku istniejącej mapy interfejsu. Jeśli atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy są wstawiane na początku mapy interfejsu w kolejności, w jakiej zostały odebrane.
 
-Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
-Ponieważ pierwsze użycie **com_interface_entry —** powoduje, że nowy interfejs, który ma zostać wstawiony na początku mapę interfejsu musi mieć jedną z następujących typów com_interface_entry —:
+Ponieważ pierwsze użycie **COM_INTERFACE_ENTRY** powoduje, że nowy interfejs zostanie wstawiony na początku mapy interfejsu, musi być jednym z następujących typów COM_INTERFACE_ENTRY:
 
-- COM_INTERFACE_ENTRY —
+- COM_INTERFACE_ENTRY
 
 - COM_INTERFACE_ENTRY_IID
 
@@ -45,9 +45,9 @@ Ponieważ pierwsze użycie **com_interface_entry —** powoduje, że nowy interf
 
 - COM_INTERFACE_ENTRY2_IID
 
-Dodatkowe sposoby użycia **com_interface_entry —** atrybut można używać wszystkich obsługiwanych typów com_interface_entry —.
+Dodatkowe zastosowania atrybutu **COM_INTERFACE_ENTRY** mogą korzystać ze wszystkich obsługiwanych typów COM_INTERFACE_ENTRY.
 
-To ograniczenie jest konieczne, ponieważ ATL używa pierwszy wpis w mapie interfejsu jako tożsamość `IUnknown`; w związku z tym, wpis musi być prawidłową interfejsu. Na przykład poniższy przykładowy kod jest nieprawidłowe, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.
+To ograniczenie jest konieczne, ponieważ ATL używa pierwszego wpisu w mapie interfejsu jako tożsamości `IUnknown`; w związku z tym wpis musi być prawidłowym interfejsem. Na przykład następujący przykładowy kod jest nieprawidłowy, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ To ograniczenie jest konieczne, ponieważ ATL używa pierwszy wpis w mapie inter
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod dodaje dwa wpisy do istniejącej mapy interfejsu COM z `CMyBaseClass`. Pierwsza to standardowy interfejs, a druga ukrywa `IDebugTest` interfejsu.
+Poniższy kod dodaje dwa wpisy do istniejącej mapy interfejsu COM `CMyBaseClass`. Pierwszy jest standardowym interfejsem, a drugi ukrywa interfejs `IDebugTest`.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-Wynikowy mapy obiektu COM dla `CMyBaseClass` jest następująca:
+W wyniku mapowania obiektów COM dla `CMyBaseClass` jest następująca:
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,14 +109,14 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
-|**Powtarzalne**|Tak|
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Dotyczy**|**Klasa**, **Struktura**|
+|**Powtarzalne**|Yes|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

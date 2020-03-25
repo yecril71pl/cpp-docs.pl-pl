@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406967"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201958"
 ---
 # <a name="compiler-error-c2823"></a>Błąd kompilatora C2823
 
-> szablon elementu typedef jest niedozwolony
+> szablon typedef jest niedozwolony
 
-Szablony nie są dozwolone w `typedef` definicje.
+Szablony są niedozwolone w definicjach `typedef`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2823 i pokazano jeden ze sposobów, aby rozwiązać ten problem:
+Poniższy przykład generuje C2823 i pokazuje jeden ze sposobów rozwiązania tego problemu:
 
 ```cpp
 // C2823.cpp

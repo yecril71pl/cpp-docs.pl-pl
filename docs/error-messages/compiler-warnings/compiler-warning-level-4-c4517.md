@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4517
+title: Ostrzeżenie kompilatora (poziom 4) C4517
 ms.date: 11/04/2016
 f1_keywords:
 - C4517
 helpviewer_keywords:
 - C4517
 ms.assetid: 87cc12b8-7331-4f3a-a863-d6a75d9599c3
-ms.openlocfilehash: 1441571a2546ae5851a952fae18a37d54c3c5cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f366e143b4bade2a8be359db1a88eaaa9a15533
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220915"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198409"
 ---
-# <a name="compiler-warning-level-4-c4517"></a>Kompilator ostrzeżenie (poziom 4) C4517
+# <a name="compiler-warning-level-4-c4517"></a>Ostrzeżenie kompilatora (poziom 4) C4517
 
 deklaracje dostępu są przestarzałe; deklaracje using składowej zapewniają lepszą alternatywę
 
-Komitet ANSI C++ zadeklarował deklaracje dostępu (zmienianie dostępu do elementu członkowskiego w klasie pochodnej bez [przy użyciu](../../cpp/using-declaration.md) — słowo kluczowe) będą nieaktualne. Deklaracje dostępu nie mogą być obsługiwane przez przyszłych wersji języka c++.
+Komitet ANSI C++ zadeklaruje deklaracje dostępu (zmiana dostępu elementu członkowskiego w klasie pochodnej bez słowa kluczowego [using](../../cpp/using-declaration.md) ) na przestarzałą. Deklaracje dostępu mogą nie być obsługiwane przez przyszłe C++wersje programu.

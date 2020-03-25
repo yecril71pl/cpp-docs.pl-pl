@@ -7,34 +7,34 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 30b2f9ca8c658b65819709bb2e536b5aaecad676
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51147a217ec56c525fc01e1b36a9381b9356ba4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169158"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Korzystanie z rejestrów i zachowywanie ich w asemblerze wbudowanym
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Ogólnie rzecz biorąc, nie należy zakładać, że rejestr danej wartości podczas `__asm` rozpoczyna się w bloku. Wartości rejestru nie musi być zachowana w oddzielnych `__asm` bloków. Jeśli kończyć bloku kodu wbudowanego i rozpoczęcia następnego nie można polegać na rejestrów w drugim bloku do zachowują swoje wartości z pierwszego bloku. `__asm` Bloku dziedziczy zarejestrować niezależnie od wartości wyniku normalny przepływ sterowania.
+Ogólnie rzecz biorąc nie należy zakładać, że rejestr będzie miał daną wartość, gdy zostanie rozpoczęty blok `__asm`. Wartości rejestru nie należy zachować w oddzielnym bloku `__asm`. Jeśli zakończysz blok kodu śródwierszowego i zaczniesz inny, nie możesz polegać na rejestrach w drugim bloku, aby zachować ich wartości z pierwszego bloku. Blok `__asm` dziedziczy wszelkie wartości rejestru wynik z normalnego przepływu sterowania.
 
-Jeśli używasz `__fastcall` konwencji wywoływania, kompilator przekazuje argumenty funkcji w rejestrach, a nie na stosie. To może tworzyć problemy w funkcji z `__asm` blokuje, ponieważ funkcja nie ma możliwości powiedzieć, którym parametr znajduje się w której rejestruje. Jeśli funkcja stanie się pojawić parametr w EAX i natychmiast przechowuje czymś innym w EAX, oryginalnym parametr zostaną utracone. Ponadto należy zachować ECX, zarejestruj się w dowolnej funkcji zadeklarowanych za pomocą `__fastcall`.
+Jeśli używasz konwencji wywoływania `__fastcall`, kompilator przekazuje argumenty funkcji w rejestrach zamiast na stosie. Może to spowodować problemy w funkcjach z blokami `__asm`, ponieważ funkcja nie ma żadnego sposobu, aby stwierdzić, który parametr jest używany do rejestracji. Jeśli funkcja ma otrzymać parametr w EAX i natychmiast przechowuje coś innego w EAX, oryginalny parametr zostanie utracony. Ponadto należy zachować rejestr ECX w każdej funkcji zadeklarowanej za pomocą `__fastcall`.
 
-Aby uniknąć konfliktów takich rejestru, nie należy używać `__fastcall` Konwencji dla funkcji, które zawierają `__asm` bloku. Jeśli określisz `__fastcall` Konwencja, za pomocą GR — opcja kompilatora zadeklarować, co funkcja zawierająca `__asm` blokowania z `__cdecl` lub `__stdcall`. ( `__cdecl` Atrybut informuje kompilator, aby używać konwencji wywoływania języka C dla tej funkcji.) Jeśli nie są kompilowane przy użyciu GR, należy unikać deklarowania funkcji o `__fastcall` atrybutu.
+Aby uniknąć takich konfliktów rejestrowania, nie należy używać konwencji `__fastcall` dla funkcji, które zawierają blok `__asm`. W przypadku określenia `__fastcall` Konwencji globalnie przy użyciu opcji kompilatora/GR należy zadeklarować każdą funkcję zawierającą blok `__asm` z `__cdecl` lub `__stdcall`. (Atrybut `__cdecl` informuje kompilator, aby używał konwencji wywoływania C dla tej funkcji). Jeśli nie kompilujesz z/gr, unikaj deklarowania funkcji z atrybutem `__fastcall`.
 
-Korzystając z `__asm` pisanie języka zestawu w funkcji języka C/C++, nie trzeba zachować rejestrów EAX, EBX, ECX EDX, ESI lub EDI. Na przykład w POWER2. Przykład C w [pisanie funkcji w zestawie wbudowanym](../../assembler/inline/writing-functions-with-inline-assembly.md), `power2` funkcja nie zachowuje wartość w rejestrze EAX. Jednak przy użyciu tych rejestrów wpłynie na jakość kodu ponieważ alokatora rejestru nie można ich używać do przechowywania wartości między `__asm` bloków. Ponadto za pomocą EBX i ESI, EDI w wbudowany kod asemblera, możesz wymusić na kompilatorze do zapisywania i przywracania tych rejestrów w funkcji prologu i epilogu.
+W przypadku używania `__asm` do pisania języka zestawu w językuC++ C/Functions nie trzeba zachować rejestrów EAX, EBX, ECX, EDX, ESI lub EDI. Na przykład w POWER2. Przykład podczas [pisania funkcji z wbudowanym zestawem](../../assembler/inline/writing-functions-with-inline-assembly.md)funkcja `power2` nie zachowuje wartości w rejestrze EAX. Jednak użycie tych rejestrów wpłynie na jakość kodu, ponieważ Alokator rejestru nie może użyć ich do przechowywania wartości w blokach `__asm`. Ponadto przy użyciu EBX, ESI lub EDI w kodzie zestawu wbudowanego należy wymusić, aby kompilator zapisywał i przywrócił te rejestry w funkcji prologu i epilogu.
 
-Należy zachować innych rejestrów użyć (np. usługi Katalogowej, SS, SP, najlepszych praktyk w zakresie i flagi rejestrów) do zakresu `__asm` bloku. Należy zachować rejestrów ESP i EBP, chyba że z jakiegoś powodu, aby zmienić ich (na przykład przełączyć stosów). Zobacz też [Optymalizacja wbudowanego asemblera](../../assembler/inline/optimizing-inline-assembly.md).
+Należy zachować inne rejestry, z których korzystasz (na przykład rejestry DS, SS, SP, BP i flag) dla zakresu bloku `__asm`. Należy zachować rejestry ESP i EBP, chyba że istnieje jakiś powód, aby je zmienić (na przykład w celu przełączenia stosów). Zobacz też [Optymalizacja wbudowanego zestawu](../../assembler/inline/optimizing-inline-assembly.md).
 
-Niektóre typy SSE wymaga wyrównania stosu 8 bajtową wymuszanie kompilator będzie emitować Kod dynamiczne wyrównania stosu. Aby mieć możliwość dostępu do zmiennych lokalnych i parametrów funkcji po wyrównanie, kompilator obsługuje dwóch wskaźników ramek.  Kompilator wykonuje pominięcie wskaźnika ramki (ang.), zostanie użyty EBP i ESP.  Jeśli kompilator nie wykonuje FPO, użyje EBX i EBP. Aby upewnić się, kod działa poprawnie, nie należy modyfikować EBX w kodzie asm, jeśli funkcja wymaga wyrównania stosu dynamicznej można modyfikować, wskaźnik ramki. Przenieś typy wyrównany 8 bajtową z funkcji lub EBX należy unikać.
+Niektóre typy SSE wymagają 8-bajtowego wyrównania stosu, wymuszając kompilator do emitowania dynamicznego kodu wyrównania stosu. Aby można było uzyskać dostęp do zarówno zmiennych lokalnych, jak i parametrów funkcji po wyrównaniu, kompilator utrzymuje dwa wskaźniki ramek.  Jeśli kompilator wykonuje pominięcie wskaźnika ramki (FPO), będzie używać EBP i ESP.  Jeśli kompilator nie wykonuje FPO, będzie używać EBX i EBP. Aby upewnić się, że kod działa prawidłowo, nie należy modyfikować EBX w kodzie ASM, jeśli funkcja wymaga dynamicznego wyrównywania stosu, ponieważ może zmodyfikować wskaźnik ramki. Przenieś typy wyrównane przez osiem bajtów poza funkcję lub Unikaj używania EBX.
 
 > [!NOTE]
->  Flaga kierunku, korzystając z instrukcji standardowe lub CLD zmiany kodu zestawu wbudowanego flagi należy przywrócić do oryginalnej wartości.
+>  Jeśli wewnętrzny kod asemblera zmienia flagę kierunku przy użyciu instrukcji STD lub CLD, należy przywrócić flagę do oryginalnej wartości.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

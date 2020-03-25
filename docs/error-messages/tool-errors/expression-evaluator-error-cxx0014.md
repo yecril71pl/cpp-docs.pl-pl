@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0014
 - CXX0014
 ms.assetid: 3bb0278d-3dd6-4626-9945-3cf29afbbacb
-ms.openlocfilehash: 686c3767ab071b444e922e1c47fdc0a7f939b238
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3aa6df2de3bf3203fb6e5c1ba4aa90a2a07965b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196082"
 ---
 # <a name="expression-evaluator-error-cxx0014"></a>Błąd CXX0014 programu Expression Evaluator
 
 Brak operandu
 
-Operator został określony bez wymaganego argumentu operacji. Sprawdź składnię wyrażenia.
+Operator został określony bez wymaganego operandu. Sprawdź składnię wyrażenia.
 
-Ten błąd jest taka sama jak CAN0014.
+Ten błąd jest identyczny z CAN0014.

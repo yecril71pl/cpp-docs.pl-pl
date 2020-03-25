@@ -12,38 +12,38 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168776"
 ---
 # <a name="c-bitwise-operators"></a>Operatory bitowe języka C
 
-Operatory bitowe wykonać alternatywy bitowej- i (**&**), bitowe OR wyłączne (**^**), a włącznie — Alternatywy bitowej (**&#124;**) operacje.
+Operatory bitowe wykonują operacje bitowe-i ( **&** ), bitowe wykluczające lub ( **^** ) i bitowe lub ( **&#124;** ).
 
 ## <a name="syntax"></a>Składnia
 
-*Wyrażenia i*: &nbsp; &nbsp; *wyrażenie równości* &nbsp; &nbsp; *i wyrażenie* **&** *wyrażenie równości*
+*And-Expression*: &nbsp;&nbsp;*wyrażenia równości* &nbsp;&nbsp;*i-Expression* **&** *wyrażenie równości*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*wyłączne lub wyrażeniu*: &nbsp;&nbsp;*i-Expression* &nbsp;&nbsp;z *wyłączeniem lub-* Expression **^** *i-Expression*
 
-*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*włączne lub wyrażeniu*: &nbsp;&nbsp;*wyłączny lub wyrażeniu* &nbsp;&nbsp;*włącznie* &#124; lub-Expression *-lub-* Expression
 
-Operandy operatory bitowe muszą mieć typów całkowitych, ale ich typy mogą być różne. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem operandu po konwersji.
+Operandy operatorów bitowych muszą mieć typy całkowite, ale ich typy mogą być różne. Operatory te wykonują zwykle konwersje arytmetyczne; Typ wyniku jest typem operandów po konwersji.
 
-Operatory bitowe języka C zostały opisane poniżej:
+Operatory bitowe języka C są opisane poniżej:
 
 |Operator|Opis|
 |--------------|-----------------|
-|**&**|Operatora testu koniunkcji — i operator porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli oba bity są 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
-|**^**|Operator bitowy OR wyłączne porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
-|**&#124;**|Operator włącznie — Alternatywy porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli bit albo ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
+|**&**|Operator koniunkcji bitowej porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli obie bity są 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.|
+|**^**|Operator z wyłączeniem bitowym lub porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli jeden bit ma wartość 0, a drugi bit to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.|
+|**&#124;**|Operator "bitowego" lub "porównujący każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli jeden z bitów to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.|
 
 ## <a name="examples"></a>Przykłady
 
-Deklaracje te są używane następujące trzy przykłady:
+Te deklaracje są używane w następujących trzech przykładach:
 
 ```C
 short i = 0xAB00;
@@ -53,7 +53,7 @@ short n;
 n = i & j;
 ```
 
-Wynik przypisane do `n` w tym pierwszym przykładzie jest taka sama jak `i` (0xAB00 szesnastkowym).
+Wynik przypisany do `n` w tym pierwszym przykładzie jest taki sam jak `i` (0xAB00 w formacie szesnastkowym).
 
 ```C
 n = i | j;
@@ -61,11 +61,11 @@ n = i | j;
 n = i ^ j;
 ```
 
-Bitowe alternatywne OR w drugim przykładzie powoduje wartość 0xABCD (szesnastkowo), podczas gdy lub wyłączny sumy bitowej w przykładzie trzeci tworzy wypełniania wartościami 0xCD (szesnastkowo).
+Bitowe lub w drugim przykładzie wynikiem jest wartość 0xABCD (szesnastkowo), natomiast w przypadku bitowego wyłącznych lub w trzecim przykładzie powstaje 0xCD (szesnastkowo).
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wyniki operacja bitowa na liczby całkowite ze znakiem zależy od implementacji zgodnie ze standardu ANSI C. Kompilator Microsoft C: Operacje bitowe na liczby całkowite ze znakiem praca taka sama jak operacje bitowe na liczb całkowitych bez znaku. Na przykład `-16 & 99` mogą być wyrażone w danych binarnych jako
+Wyniki operacji bitowej dla liczb całkowitych ze znakiem są zdefiniowane w implementacji zgodnej ze standardem ANSI C. W przypadku kompilatora języka Microsoft C operacje bitowe w podpisanych liczbach całkowitych działają tak samo jak operacje bitowe w liczbach całkowitych bez znaku. Na przykład `-16 & 99` może być wyrażona jako plik binarny jako
 
 ```Expression
   11111111 11110000
@@ -74,12 +74,12 @@ Wyniki operacja bitowa na liczby całkowite ze znakiem zależy od implementacji 
   00000000 01100000
 ```
 
-Bitowe AND powstaje 96 dziesiętną.
+Wynik bitowy i to 96 dziesiętny.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bitowy operator AND: &](../cpp/bitwise-and-operator-amp.md)<br/>
 [Operator wyłączny sumy bitowej OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
-[Bitowe alternatywne OR — Operator:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
+[Operator włączny bitowego or:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

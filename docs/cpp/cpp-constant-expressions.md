@@ -6,48 +6,48 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170582"
 ---
 # <a name="c-constant-expressions"></a>Wyrażenia stałe języka C++
 
-A *stałej* wartość to taki, który nie powoduje zmiany. C++ zawiera dwa słowa kluczowe umożliwiające express celem obiektu nie jest przeznaczony do modyfikacji i wymusić tym przeznaczeniem.
+*Stała* wartość to taka, która nie zmienia się. C++Program udostępnia dwa słowa kluczowe, które umożliwiają wyrażenie zamiaru, że obiekt nie jest przeznaczony do modyfikacji i wymuszenie tego celu.
 
-C++ wymaga wyrażenia stałe — wyrażeń, które oszacowane jako stała — dla deklaracji:
+C++wymaga wyrażeń stałych — wyrażenia, których wynikiem jest stała — dla deklaracji:
 
 - Granice tablicy
 
-- Selektory w instrukcji case
+- Selektory w instrukcjach Case
 
-- Specyfikacja długości pole bitowe
+- Specyfikacja długości pola bitowego
 
 - Inicjatory wyliczenia
 
-Tylko argumentów operacji, które są dopuszczalne w wyrażenia stałe są następujące:
+Jedyne operandy, które są dozwolone w wyrażeniach stałych, to:
 
 - Literały
 
-- Stałe wyliczeń
+- Stałe wyliczające
 
-- Jako const zadeklarowane jako wartości, które są inicjowane przy użyciu wyrażeń stałych
+- Wartości zadeklarowane jako const, które są inicjowane za pomocą wyrażeń stałych
 
-- **Operator sizeof** wyrażeń
+- wyrażenia **sizeof**
 
-Stałe nonintegral muszą zostać przekonwertowane (jawnie lub niejawnie) typów całkowitych pod kątem w wyrażeniu stałym. W związku z tym poniższy kod jest dozwolony:
+Stałe niecałkowite muszą zostać przekonwertowane (jawnie lub niejawnie) do typów całkowitych, aby były dozwolone w wyrażeniu stałym. W związku z tym Poniższy kod jest dozwolony:
 
 ```cpp
 const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-Jawne konwersje typów całkowitych są niedozwolone w wyrażeniach stałych innych typów i typów pochodnych są niedozwolone z wyjątkiem sytuacji, gdy używana jako argumenty do **sizeof** operatora.
+Jawne konwersje typów całkowitych są dozwolone w wyrażeniach stałych; wszystkie inne typy i typy pochodne są niedozwolone, chyba że są używane jako operandy operatora **sizeof** .
 
-Nie można użyć operatora przecinka i operatory przypisania w wyrażeniach stałych.
+Operatorów przecinek i operator przypisania nie można używać w wyrażeniach stałych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy wyrażeń](../cpp/types-of-expressions.md)

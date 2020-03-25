@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2111
 ms.assetid: 118cba57-82a4-4199-acf4-9d9561946218
-ms.openlocfilehash: bf8cce125920e6506c2c37a6e840acfecd80bc5a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3f8626b22b10e9d1180eae2b16a9be538354978c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191525"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Błąd kompilatora zasobów RC2111
 
-Nieprawidłowy typ formantu
+Nieprawidłowy typ kontrolki
 
-Każdej instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi mieć jedną z następujących czynności: 3STATE AUTO3, POSTACI AUTOCHECK, AUTORADIO, BEDYCJA, ZAZNACZ POLE WYBORU, COMBOBOX, KONTROLKI, CTEXT, DEFPUSHBUTTON, TYPU CZĘŚCI EDITTEXT, GROUPBOX, HEDIT, IKONY, IEDIT, LISTBOX, LTEXT, PUSHBOX, PRZYCISK, RADIOBUTTON, RTEXT, PASEK PRZEWIJANIA, USERBUTTON.
+Każda instrukcja STERUJĄCa w instrukcji **okna dialogowego** musi mieć jedną z następujących wartości: 3STATE, AUTO3, AutoCheck, autoradio, BEDIT, CheckBox, ComboBox, Control, CTEXT, DEFPUSHBUTTON, EditText, ListBox, HEdit, Icon, IEDIT, ListBox, LTEXT, PUSHBOX, przycisk, RadioButton, RTEXT, SCROLLBAR, UserButton.
 
-Upewnij się, że oświadczenia te KONTROLKI jest poprawna.
+Upewnij się, że te instrukcje sterujące są poprawnie napisane.

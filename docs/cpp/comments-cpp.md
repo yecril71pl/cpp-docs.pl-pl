@@ -7,25 +7,25 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-ms.openlocfilehash: a90d9d37e69cb2e8be4ab18f77026fdce1221307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3326ad7d0b5118182a5d582061fd0c103986f232
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399177"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189757"
 ---
 # <a name="comments-c"></a>Komentarze (C++)
 
-Komentarz to tekst, który Kompilator ignoruje, ale jest to przydatne dla programistów. Komentarze są zwykle używane do Dodawanie adnotacji do kodu do użytku w przyszłości. Kompilator traktuje je jako biały znak. Komentarze w zakresie testowania można użyć do dezaktywowania pewnych linii kodu; jednak `#if` / `#endif` dyrektywy preprocesora usprawnieniu to ponieważ można otoczyć kod, który zawiera komentarze, ale nie można zagnieździć komentarzy.
+Komentarz jest tekstem, który kompilator ignoruje, ale jest przydatny dla programistów. Komentarze są zwykle używane do dodawania adnotacji do kodu w przyszłości. Kompilator traktuje je jako biały znak. Możesz użyć komentarzy w testowaniu, aby niektóre wiersze kodu były nieaktywne; Jednakże dyrektywy preprocesora `#if`/`#endif` działały lepiej, ponieważ możesz otoczyć kod zawierający komentarze, ale nie możesz zagnieżdżać komentarzy.
 
-Komentarz C++ są zapisywane w jednym z następujących sposobów:
+C++ Komentarz jest zapisywana w jeden z następujących sposobów:
 
-- `/*` (Ukośnika, gwiazdka) znaki, po których dowolnej sekwencji znaków (łącznie z nowych wierszy), a następnie `*/` znaków. Ta składnia jest taka sama jak ANSI C.
+- `/*` (ukośnik, gwiazdka), po którym następuje jakakolwiek sekwencja znaków (w tym nowe wiersze), po której następuje `*/` znaków. Ta składnia jest taka sama jak ANSI C.
 
-- `//` Znaków (dwa ukośniki), a następnie przez dowolną sekwencję znaków. Ta forma komentarz kończy się znakiem nowego wiersza nie od razu poprzedzone znakiem ukośnika odwrotnego. W związku z tym często jest nazywane "komentarz jednowierszowy".
+- `//` (dwa ukośniki), po którym następuje jakakolwiek sekwencja znaków. Nowy wiersz bezpośrednio poprzedzony ukośnikiem odwrotnym kończy tę formę komentarza. W związku z tym często nazywa się "jednowierszowym komentarzem".
 
-Znaki komentarza (`/*`, `*/`, i `//`) mają nie specjalne znaczenie w w obrębie stałej znaku literał ciągu lub Dodaj komentarz. Komentarze przy użyciu składni pierwszy, dlatego nie mogą być zagnieżdżone.
+Znaki komentarza (`/*`, `*/`i `//`) nie mają specjalnego znaczenia w obrębie znaku stałej, literału ciągu ani komentarza. Komentarze z użyciem pierwszej składni nie mogą być zagnieżdżane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje leksykalne](../cpp/lexical-conventions.md)

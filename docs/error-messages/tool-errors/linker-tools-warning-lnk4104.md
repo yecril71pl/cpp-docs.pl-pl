@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193969"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Ostrzeżenie LNK4104 narzędzi konsolidatora
 
-Eksport symbolu "symbol" powinien mieć atrybut PRIVATE
+Eksport symbolu "symbol" powinien być prywatny
 
-`symbol` Może być jedną z następujących czynności:
+`symbol` może być jedną z następujących:
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ Eksport symbolu "symbol" powinien mieć atrybut PRIVATE
 
 - `RasCustomEntryDlg`
 
-To ostrzeżenie jest emitowane podczas kompilowania biblioteki importowanej dla biblioteki DLL i eksportowanie jednej z powyższych funkcji bez określania jako prywatny, w pliku definicji modułu. Ogólnie rzecz biorąc te funkcje są eksportowane do użytku tylko przez OLE. Umieszczenie ich w bibliotece importu może prowadzić do nietypowych zachowań, po program, nieprawidłowo połączona z biblioteką wywołań do nich. Aby uzyskać więcej informacji na temat PRIVATE — słowo kluczowe, zobacz [EKSPORTY](../../build/reference/exports.md).
+To ostrzeżenie jest emitowane podczas tworzenia biblioteki importu dla biblioteki DLL i eksportowania jednej z powyższych funkcji bez określania jej jako prywatnego w pliku definicji modułu. Ogólnie rzecz biorąc, te funkcje są eksportowane do użycia tylko przez OLE. Umieszczenie ich w bibliotece import może prowadzić do nietypowego zachowania, gdy program połączony z biblioteką niepoprawnie wywołuje te wywołania. Aby uzyskać więcej informacji na temat prywatnego słowa kluczowego, zobacz [eksporty](../../build/reference/exports.md).

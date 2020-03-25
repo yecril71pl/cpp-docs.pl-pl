@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1164
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
-ms.openlocfilehash: 8685a9e0eb356719eaab129af9df9a1cc0ebb085
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f32fbd455faff449f57cfb9bb38009b03005913
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184037"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Błąd narzędzi konsolidatora LNK1164
 
-sekcja wyrównanie sekcji (numer) większa niż wartość opcji/align
+Wyrównanie sekcji sekcji (liczba) większa niż wartość/ALIGN
 
-Rozmiar wyrównania sekcji podanej w pliku obiektu przekracza wartość określoną za pomocą [/ALIGN](../../build/reference/align-section-alignment.md) opcji. **/ALIGN** wartość musi być potęgą liczby 2 i musi być równa lub przekracza wyrównanie sekcji podany w pliku obiektu.
+Rozmiar wyrównania dla danej sekcji w pliku obiektu przekracza wartość określoną przy użyciu opcji [/align](../../build/reference/align-section-alignment.md) . Wartość **/align** musi być potęgą liczby 2 i musi być równa lub większa niż wyrównanie sekcji podaną w pliku obiektu.
 
-Albo Skompiluj ponownie z mniejszych wyrównanie sekcji lub zwiększ **/ALIGN** wartość.
+Wykonaj ponowną kompilację z mniejszym wyrównaniem sekcji lub Zwiększ wartość **/align** .

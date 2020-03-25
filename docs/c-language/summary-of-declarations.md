@@ -2,12 +2,12 @@
 title: Podsumowanie deklaracji
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170439"
 ---
 # <a name="summary-of-declarations"></a>Podsumowanie deklaracji
 
@@ -15,25 +15,25 @@ ms.locfileid: "74857024"
 &nbsp;&nbsp;&nbsp;&nbsp;atrybut *-specyfikatory deklaracji* *-SEQ*<sub>opt</sub> *init-deklarator-list*<sub>opt</sub> **;**
 
 *specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora klasy magazynu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *kwalifikatora typu*
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub>opt</sub> *specyfikatora klasy magazynu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub>opt</sub> *specyfikatora typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub>opt</sub> *kwalifikatora typu*
 
 *Attribute-SEQ* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*specyficzne dla firmy Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;atrybut *atrybutu* &nbsp; *-SEQ*<sub>opt</sub>
 
 *atrybut* : jeden z&nbsp;&nbsp;&nbsp;&nbsp;/\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall __based](../cpp/stdcall.md) [](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [](../cpp/thiscall.md) [](../cpp/cdecl.md) __thiscall __cdecl [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
+&nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall __based](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) __thiscall __cdecl [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
-*init-declarator-list*:<br/>
+*init-deklarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator-list* **,** *init-deklarator*
 
-*init-declarator*:<br/>
+*init-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjatora*  / \* inicjowania skalarne \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjator* /\* do inicjowania skalarnego \*/
 
-*storage-class-specifier*:<br/>
+*specyfikator klasy magazynu*:<br/>
 &nbsp;&nbsp; **&nbsp;&nbsp;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
@@ -61,7 +61,7 @@ ms.locfileid: "74857024"
 
 *kwalifikator typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**const**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**volatile**
+&nbsp;&nbsp;&nbsp;&nbsp;**nietrwałe**
 
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;deklarator *wskaźnika*"<sub>opt</sub> *Direct-"*
@@ -70,19 +70,19 @@ ms.locfileid: "74857024"
 &nbsp;&nbsp;&nbsp;*identyfikator* &nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **(** *deklarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **[** *wyrażenie stałego wyrażenia*<sub>zgody</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *Typ parametru-list* **)**  /\* New-Style deklarator \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *opt z listą identyfikatorów*<sub></sub> **)**  /\* przestarzałego stylu deklarator \*
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *Typ parametru-list* **)**  /\* New-Style deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *opt z listą identyfikatorów*<sub>opt</sub> **)**  /\* przestarzałego stylu deklarator \*/
 
 *wskaźnik*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Typ kwalifikator*<sub></sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Typ kwalifikatora listy*<sub></sub>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Typ kwalifikator*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Typ kwalifikatora listy*<sub>opt</sub> *pointer*
 
 *parametr-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* listy parametrów \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
 
 *Lista parametrów*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji parametru*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parametrów-list* **,** *deklaracji parametru*
 
 *kwalifikator typu-list*:<br/>
@@ -90,8 +90,8 @@ ms.locfileid: "74857024"
 &nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu list* - *kwalifikator*
 
 *Wyliczenie — specyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**rozliczanie** *identyfikatora*<sub></sub> wyliczenia **{** *Enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Wyliczenie**
+&nbsp;&nbsp;&nbsp;&nbsp;**rozliczanie** *identyfikatora*<sub>opt</sub> wyliczenia **{** *Enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Wyliczenie** *identifier*
 
 *Lista modułów wyliczających*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*modułu wyliczającego*<br/>
@@ -104,29 +104,29 @@ ms.locfileid: "74857024"
 *wyliczenie — stała*:<br/>
 &nbsp;&nbsp;&nbsp;*identyfikator* &nbsp;
 
-*struct-or-union-specifier*:<br/>
+*specyfikator struct-or-Union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;, w którym *identyfikatorem* *struktury lub Unii* jest<sub>wybór</sub> **{** *struct-deklaracji-list* **}**<br/>
-&nbsp;&nbsp; *&nbsp;&nbsp;*
+&nbsp;&nbsp; *&nbsp;&nbsp;* *identifier*
 
-*struct-or-union*:<br/>
+*struct-lub-Union*:<br/>
 &nbsp;&nbsp; **&nbsp;&nbsp;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Unii**
 
-*struct-declaration-list*:<br/>
+*Struktura-deklaracja-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struktury deklaracji*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura* *-Deklaracja* -list
 
-*struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
+*Deklaracja struktury*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specyfikator-list kwalifikator* - *deklarator-list* **;**
 
-*specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;*specyfikatora*<sub></sub> *typu* &nbsp;specyfikatora-kwalifikator<br/>
-&nbsp;&nbsp;&nbsp;*specyfikator*<sub></sub> *kwalifikatora typu* &nbsp;
+*specyfikator — lista kwalifikatorów*:<br/>
+&nbsp;&nbsp;&nbsp;*specyfikatora*<sub>opt</sub> *typu* &nbsp;specyfikatora-kwalifikator<br/>
+&nbsp;&nbsp;&nbsp;*specyfikator*<sub>opt</sub> *kwalifikatora typu* &nbsp;
 
-*struct-declarator-list*:<br/>
+*struct-deklarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-deklarator* *struct-deklarator-list* **,** *struct-deklarator*
 
-*struct-declarator*:<br/>
+*Struktura-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specyfikator typu* *deklarator*<sub>opt</sub> **:** *wyrażenie stałe*
 
@@ -142,29 +142,29 @@ ms.locfileid: "74857024"
 &nbsp;&nbsp; *&nbsp;&nbsp;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>opt</sub> - *abstract-deklarator*
 
-*direct-abstract-declarator*:<br/>
+*deklarator pośredni-abstrakcyjny*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-deklarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-deklarator*<sub>opt</sub> **[** *wyrażenie stałe*<sub></sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*bezpośrednie-abstrakcyjne-deklarator*<sub></sub> **(** *opt-Type-list*<sub></sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-deklarator*<sub>opt</sub> **[** *wyrażenie stałe*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bezpośrednie-abstrakcyjne-deklarator*<sub>opt</sub> **(** *opt-Type-list*<sub>opt</sub> **)**
 
 *inicjator*:<br/>
 *wyrażenie przypisania* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *inicjator-list* **}**  /\* do agregowania \*. /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *inicjator — lista* **}**
 
-*initializer-list*:<br/>
+*Lista inicjalizatora*:<br/>
 *inicjator* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inicjator listy* **,** *inicjator*
 
 *Nazwa typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;*specyfikator &nbsp;kwalifikator-list* - *deklarator*<sub>opt</sub>
 
 *typedef-Name*:<br/>
 &nbsp;&nbsp;&nbsp;*identyfikator* &nbsp;
 
 *Extended-decl-modyfikator-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony-decl-modyfikator*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony-decl-modyfikator-SEQ* *Extended-decl-modyfikator*
 
 *Extended-decl-modyfikator*:&nbsp;&nbsp;&nbsp;&nbsp;/\* specyficzne dla Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;**wątku** &nbsp;<br/>
@@ -172,7 +172,7 @@ ms.locfileid: "74857024"
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)<br/>
 [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)<br/>

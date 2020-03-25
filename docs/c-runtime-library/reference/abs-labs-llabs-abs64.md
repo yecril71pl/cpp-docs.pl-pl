@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171414"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -69,31 +69,31 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
+*Azotan*<br/>
 Wartość numeryczna.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ABS**, **Labs**, **llabs** i **_abs64** zwracają wartość bezwzględną parametru *n*. Nie będzie zwrotu błędu.
+Funkcje **ABS**, **Labs**, **llabs** i **_abs64** zwracają wartość bezwzględną parametru *n*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia metody **ABS** , które pobierają izwracają długie **, długie** **długie**, **zmiennoprzecinkowe**, **podwójne**i **długie** **podwójne** wartości. Te przeciążenia są zdefiniowane w nagłówku \<cmath >. W programie w języku C funkcja **ABS** zawsze przyjmuje i zwraca liczbę **całkowitą.**
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia metody **ABS** , które pobierają i **long**zwracają długie **, długie** **długie**, **zmiennoprzecinkowe**, **podwójne**i **długie** **podwójne** wartości. Te przeciążenia są zdefiniowane w nagłówku \<cmath >. W programie w języku C funkcja **ABS** zawsze przyjmuje i zwraca liczbę **całkowitą.**
 
-**Specyficzne dla firmy Microsoft**: ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane przy użyciu dowolnego typu całkowitego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, możliwe jest podanie argumentu tym funkcjom, których nie można przekonwertować. Jeśli wartość bezwzględna argumentu nie może być reprezentowana przez zwracany typ, funkcje **ABS** zwracają wartość argumentu bez zmian. `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, a `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że funkcje **ABS** nie mogą być używane w celu zagwarantowania wartości dodatniej.
+**Specyficzne dla firmy Microsoft**: ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane przy użyciu dowolnego typu całkowitego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, możliwe jest podanie argumentu tym funkcjom, których nie można przekonwertować. Jeśli wartość bezwzględna argumentu nie może być reprezentowana przez zwracany typ, funkcje **ABS** zwracają wartość argumentu bez zmian. W `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, a `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że funkcje **ABS** nie mogą być używane w celu zagwarantowania wartości dodatniej.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|-----------------------|---------------------------|
 |**ABS**, **Labs**, **llabs**|\<Math. h > lub \<STDLIB. h >|\<cmath >, \<cstdlib >, \<STDLIB. h > lub \<Math. h >|
-|**_abs64**|\<stdlib.h>|\<cstdlib > lub \<STDLIB. h >|
+|**_abs64**|\<STDLIB. h >|\<cstdlib > lub \<STDLIB. h >|
 
-Aby można było użyć przeciążonych wersji elementów C++ABS w, należy uwzględnić \<cmath > nagłówek.
+Aby można było użyć przeciążonych **abs** wersji elementów C++ABS w, należy uwzględnić \<cmath > nagłówek.
 
 ## <a name="example"></a>Przykład
 
-Program ten wylicza i wyświetla wartości bezwzględne dla kilku numerów.
+Ten program oblicza i wyświetla wartości bezwzględne kilku liczb.
 
 ```C
 // crt_abs.c
@@ -148,7 +148,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942613"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171219"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -59,7 +59,7 @@ long double creal( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -68,17 +68,17 @@ Rzeczywista *część z.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Creal** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** i zwracają wartości **zmiennoprzecinkowe** lub **długie Double** . W programie C **Creal** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójną** .
+Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia **Creal** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają wartości **zmiennoprzecinkowe** lub **długie Double** . W programie C **Creal** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójnej precyzji** .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**Creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
+|**Creal**, **crealf**, **creall**|\<złożonej >. h|\<ccomplex >|
 
-Typy **_Fcomplex**, **_Dcomplex**i **_Lcomplex** to charakterystyczne dla firmy Microsoft ekwiwalenty niezaimplementowanych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **podwójnie _Complex**i **Long podwójnie _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Typy **_Fcomplex**, **_Dcomplex**i **_Lcomplex** są odpowiednikami charakterystycznymi dla niewdrożonych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **Double _Complex**i **Long Double _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447372"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210772"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
@@ -65,7 +65,7 @@ Klasa, która pochodzi od `IDBInitializeImpl`.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -91,7 +91,7 @@ Klasa, która pochodzi od `IDBInitializeImpl`.
 
 Obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs w modułach wyliczających.
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
 
 Konstruktor.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inicjuje wszystkie elementy członkowskie danych.
 
-## <a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
 
 Inicjuje obiekt źródła danych przez przygotowanie jego obsługi właściwości.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Zobacz [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
 
 Umieszcza obiekt źródła danych w stanie niezainicjowanym przez zwolnienie zasobów wewnętrznych, takich jak obsługa właściwości.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Zobacz [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
 
 Flagi źródła danych.
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Ustaw, jeśli obiekt źródła danych wymaga trwałości (oznacza to, że zmiany zostały wprowadzone).|
 |`DSF_INITIALIZED`|Ustaw, jeśli źródło danych zostało zainicjowane.|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
 
 Wskaźnik do obiektu implementacji dla informacji o właściwościach bazy danych.
 

@@ -1,35 +1,35 @@
 ---
-title: Atrybuty zdefiniowane przez użytkownika (C++sposób niezamierzony i C++/CX)
+title: Atrybuty zdefiniowane przez użytkownika (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264973"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171895"
 ---
-# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C++sposób niezamierzony i C++/CX)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C++/CLI i C++/CX)
 
-C++/ Interfejs wiersza polecenia i C++/CX umożliwiają tworzenie atrybuty specyficzne dla platformy, które rozszerzają metadane interfejsu, klasy lub struktury, metody, parametr lub wyliczenia. Te atrybuty różnią się od [standardowe atrybuty C++](../cpp/attributes.md).
+C++/CLI i C++/CX umożliwiają tworzenie atrybutów specyficznych dla platformy, które zwiększają metadane interfejsu, klasy lub struktury, metody, parametru lub wyliczenia. Te atrybuty różnią się od [standardowych C++ atrybutów](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Można zastosować C++/CX atrybuty do właściwości, ale nie do konstruktorów i metod.
+Można zastosować C++atrybuty/CX do właściwości, ale nie do konstruktorów lub metod.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Informacje i składni przedstawione w tym temacie jest przeznaczona do zastąpienia informacje znajdujące się w [atrybutu](../windows/attributes/attribute.md).
+Informacje i składnia przedstawione w tym temacie mają na celu zastąpienie informacji przedstawionych w [atrybucie](../windows/attributes/attribute.md).
 
-Można zdefiniować atrybut niestandardowy typ definiujący i dokonując <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosowanie <xref:System.AttributeUsageAttribute> atrybutu.
+Można zdefiniować atrybut niestandardowy, definiując typ i wprowadzając <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosując atrybut <xref:System.AttributeUsageAttribute>.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -37,15 +37,15 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Typy parametrów atrybutu](attribute-parameter-types-cpp-component-extensions.md)
 
-Instrukcje dotyczące podpisywania zestawów w elemencie wizualnym C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Aby uzyskać informacje dotyczące podpisywania zestawów w C++wizualizacji, zobacz [zestawy o silnych nazwachC++(podpisywanie zestawów) (/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład pokazuje sposób definiowania atrybutu niestandardowego.
+Poniższy przykład pokazuje, jak zdefiniować atrybut niestandardowy.
 
 ```cpp
 // user_defined_attributes.cpp
@@ -62,7 +62,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};
 ```
 
-W poniższym przykładzie pokazano kilka ważnych funkcji atrybutów niestandardowych. Na przykład, w tym przykładzie wspólne użycie atrybutów niestandardowych: utworzenie wystąpienia serwera, na którym można w pełni opisania siebie klientom.
+Poniższy przykład ilustruje kilka ważnych funkcji atrybutów niestandardowych. Na przykład w tym przykładzie przedstawiono typowe użycie atrybutów niestandardowych: Tworzenie wystąpienia serwera, który może być w pełni opisywany klientom.
 
 ```cpp
 // extending_metadata_b.cpp
@@ -151,11 +151,11 @@ Service Priority = 1
 Service Access = Read
 ```
 
-`Object^` Typu zastępuje typ danych variant. W poniższym przykładzie zdefiniowano niestandardowy atrybut, który przyjmuje tablicę `Object^` jako parametry.
+Typ `Object^` zastępuje typ danych Variant. W poniższym przykładzie zdefiniowano atrybut niestandardowy, który pobiera tablicę `Object^` jako parametry.
 
-Argumenty atrybutów muszą być stałymi kompilacji; w większości przypadków powinny one być stałe literały.
+Argumenty atrybutu muszą być stałymi czasu kompilacji; w większości przypadków powinny to być literały stałe.
 
-Zobacz [typeid](typeid-cpp-component-extensions.md) informacji na temat sposobu zwracania wartości System::Type z bloku atrybutów niestandardowych.
+Aby uzyskać informacje na temat sposobu zwracania wartości system:: Type z bloku atrybutu niestandardowego, zobacz [typeid](typeid-cpp-component-extensions.md) .
 
 ```cpp
 // extending_metadata_e.cpp
@@ -173,7 +173,7 @@ public:
 public ref class SomeClass {};
 ```
 
-Środowisko uruchomieniowe wymaga, że publiczną część klasy atrybutu niestandardowego musi podlegać serializacji.  Podczas tworzenia niestandardowych atrybutów, argumenty nazwane atrybutu niestandardowego są ograniczone do stałych w czasie kompilacji.  (Go traktować jako sekwencja bitów dołączany do układu klasy w metadanych.)
+Środowisko uruchomieniowe wymaga, aby publiczna część klasy atrybutu niestandardowego musiała być serializowana.  Podczas tworzenia atrybutów niestandardowych, nazwane argumenty atrybutu niestandardowego są ograniczone do stałych czasu kompilacji.  (Pomyśl, że jest to sekwencja bitów dołączona do układu klasy w metadanych).
 
 ```cpp
 // extending_metadata_f.cpp
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

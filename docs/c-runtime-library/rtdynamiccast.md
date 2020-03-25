@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957340"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170075"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -52,7 +52,7 @@ Wskaźnik do obiektu polimorficznego.
 Przesunięcie wskaźnika funkcji wirtualnej w obiekcie.
 
 *SrcType*<br/>
-Typ statyczny obiektu wskazywanego przez `inptr` parametr.
+Typ statyczny obiektu wskazywany przez parametr `inptr`.
 
 *Typ*<br/>
 Zamierzony wynik rzutowania.
@@ -66,11 +66,11 @@ Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli powodzenie; w przeciwnym
 
 ## <a name="exceptions"></a>Wyjątki
 
-`bad_cast()`Jeśli dane wejściowe `dynamic_cast<>` to odwołanie, a rzutowanie nie powiedzie się.
+`bad_cast()`, jeśli dane wejściowe do `dynamic_cast<>` są odwołania, a rzutowanie nie powiedzie się.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje `inptr` do obiektu typu `TargetType`. Typ elementu `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType`musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
+Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType` musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
 
 ## <a name="requirements"></a>Wymagania
 

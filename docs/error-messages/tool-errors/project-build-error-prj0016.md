@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cab1e35a36ab78426923d60acafb5cdf2942469
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192747"
 ---
 # <a name="project-build-error-prj0016"></a>Błąd PRJ0016 kompilacji projektu
 
@@ -25,6 +25,6 @@ Ten błąd może również wystąpić, jeśli ustawiono następujący klucz reje
 
 Aby rozwiązać ten problem, Usuń klucz RestrictRun. Jeśli ten klucz rejestru jest wymagany, Dołącz **VCSpawn. exe** do listy wpisów w kluczu.
 
-Inną przyczyną tego błędu jest to, że ustawienie zasad nie zawiera VCSpawn. exe w kluczu rejestru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako dozwolony program okna dla tego konta użytkownika.
+Inną przyczyną tego błędu jest to, że ustawienie zasad nie obejmuje VCSpawn. exe w kluczu rejestru, HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako dozwolony program okna dla tego konta użytkownika.
 
 Aby uzyskać dodatkowe informacje, zobacz temat [zgodne z ustawieniami zasad systemu](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings), w sekcji "uruchamianie tylko dozwolonych aplikacji systemu Windows".

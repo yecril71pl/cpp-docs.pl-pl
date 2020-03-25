@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1026
 ms.assetid: 89bb9d40-673a-44aa-a9f4-b42c07b49d44
-ms.openlocfilehash: b1a659967a9a62cb79e1084f7d1fa1729bae14da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7c7a5da01c8b4a44c307a00f53530acb12a8009
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347132"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204656"
 ---
 # <a name="fatal-error-c1026"></a>Błąd krytyczny C1026
 
-przepełnienie stosu analizatora składni, zbyt złożony program
+przepełnienie stosu parsera, zbyt skomplikowany program
 
-Miejsca wymaganego do analizowania program spowodowało przepełnienie stosu kompilatora.
+Miejsce wymagane do przeanalizowania programu spowodowało przepełnienie stosu kompilatora.
 
-Zmniejsz złożoność wyrażenia przez:
+Zmniejsz złożoność wyrażeń przez:
 
-- Zmniejszenie zagnieżdżenia w `for` i `switch` instrukcji. Umieść głębiej zagnieżdżonych instrukcji w funkcji.
+- Zmniejszenie zagnieżdżenia w `for` i `switch` instrukcji. Umieść bardziej głęboko zagnieżdżone instrukcje w osobnych funkcjach.
 
-- Podzielenie długich wyrażeń obejmujących operatory przecinkami lub wywołania funkcji.
+- Przerywanie długich wyrażeń, które obejmują operatory przecinkowe lub wywołania funkcji.

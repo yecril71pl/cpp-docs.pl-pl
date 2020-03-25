@@ -1,24 +1,24 @@
 ---
-title: Elementy docelowe atrybutu (C++sposób niezamierzony i C++/CX)
+title: Cele atrybutu (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172623"
 ---
-# <a name="attribute-targets-ccli-and-ccx"></a>Elementy docelowe atrybutu (C++sposób niezamierzony i C++/CX)
+# <a name="attribute-targets-ccli-and-ccx"></a>Cele atrybutu (C++/CLI i C++/CX)
 
-Specyfikatory użycia atrybutu umożliwiają określenie docelowe atrybuty.  Każdy atrybut jest zdefiniowany dotyczą niektóre elementy języka. Na przykład być stosowana tylko do klasy i struktury można zdefiniować atrybut.  Na poniższej liście przedstawiono możliwe elementy składni, w których można użyć atrybutu niestandardowego. Kombinacje tych wartości (przy użyciu logicznych lub) mogą być używane.
+Specyfikatory użycia atrybutów pozwalają określić cele atrybutu.  Każdy atrybut jest zdefiniowany do zastosowania do niektórych elementów języka. Na przykład atrybut może być zdefiniowany do zastosowania tylko do klas i struktur.  Na poniższej liście przedstawiono możliwe elementy składni, w których można użyć atrybutu niestandardowego. Mogą być używane kombinacje tych wartości (za pomocą logicznych lub).
 
-Aby określić element docelowy atrybutu, aby przekazać co najmniej jeden <xref:System.AttributeTargets> moduły wyliczające do <xref:System.AttributeUsageAttribute> podczas definiowania atrybutu.
+Aby określić element docelowy atrybutu, należy przekazać co najmniej jeden moduł wyliczający <xref:System.AttributeTargets> do <xref:System.AttributeUsageAttribute> podczas definiowania atrybutu.
 
-Oto lista elementów docelowych prawidłowego atrybutu:
+Poniżej znajduje się lista prawidłowych obiektów docelowych atrybutu:
 
 - `All` (dotyczy wszystkich konstrukcji)
 
@@ -30,7 +30,7 @@ Oto lista elementów docelowych prawidłowego atrybutu:
     [assembly:Attr];
     ```
 
-- `Assembly` (dotyczy całego zestawu)
+- `Assembly` (dotyczy zestawu jako całości)
 
     ```cpp
     using namespace System;
@@ -40,7 +40,7 @@ Oto lista elementów docelowych prawidłowego atrybutu:
     [assembly:Attr];
     ```
 
-- `Module` (dotyczy moduł jako całość)
+- `Module` (dotyczy modułu jako całości)
 
     ```cpp
     using namespace System;
@@ -193,23 +193,23 @@ Oto lista elementów docelowych prawidłowego atrybutu:
     };
     ```
 
-Zazwyczaj atrybut bezpośrednio poprzedza element języka, do której jest stosowany. W niektórych przypadkach, pozycja atrybut nie jest wystarczające, aby określić docelową ten atrybut. Rozważmy następujący przykład:
+Zazwyczaj atrybut bezpośrednio poprzedza element języka, do którego się odnosi. Jednak w niektórych przypadkach pozycja atrybutu nie jest wystarczająca do określenia zamierzonego celu atrybutu. Rozważmy następujący przykład:
 
 ```cpp
 [Attr] int MyFn(double x)...
 ```
 
-Syntaktycznie, nie ma żadnego sposobu, aby poinformować, jeśli ten atrybut jest przeznaczony do zastosowania do metody lub wartość zwracaną metody (w tym przypadku domyślnie metody). W takich przypadkach specyfikatorze użycia atrybutu może być używany. Na przykład aby atrybutu, dotyczy wartości zwracanej, należy użyć `returnvalue` specyfikator w następujący sposób:
+Syntaktycznie nie istnieje sposób, aby stwierdzić, czy atrybut jest przeznaczony do zastosowania do metody lub do wartości zwracanej metody (w tym przypadku jest to wartość domyślna metody). W takich przypadkach można użyć specyfikatora użycia atrybutu. Na przykład, aby zastosować atrybut do wartości zwracanej, użyj specyfikatora `returnvalue` w następujący sposób:
 
 ```cpp
 [returnvalue:Attr] int MyFn(double x)... // applies to return value
 ```
 
-Specyfikatory użycia atrybutu są wymagane w następujących sytuacjach:
+Specyfikatory użycia atrybutów są wymagane w następujących sytuacjach:
 
 - Aby określić atrybut na poziomie zestawu lub modułu.
 
-- Aby określić, czy atrybut dotyczy wartości zwracanej metody, nie metody:
+- Aby określić, że atrybut ma zastosowanie do wartości zwracanej metody, a nie z metody:
 
     ```cpp
     [method:Attr] int MyFn(double x)...     // Attr applies to method
@@ -217,7 +217,7 @@ Specyfikatory użycia atrybutu są wymagane w następujących sytuacjach:
     [Attr] int MyFn(double x)...            // default: method
     ```
 
-- Aby określić, że atrybut ma zastosowanie do właściwości metody dostępu właściwość nie:
+- Aby określić, że atrybut ma zastosowanie do akcesora właściwości, a nie do właściwości:
 
     ```cpp
     [method:MyAttr(123)] property int Property()
@@ -225,7 +225,7 @@ Specyfikatory użycia atrybutu są wymagane w następujących sytuacjach:
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 
-- Aby określić, że atrybut ma zastosowanie do metody dostępu zdarzeń, nie zdarzenia:
+- Aby określić, że atrybut ma zastosowanie do akcesora zdarzenia, a nie zdarzenia:
 
     ```cpp
     delegate void MyDel();
@@ -236,7 +236,7 @@ Specyfikatory użycia atrybutu są wymagane w następujących sytuacjach:
     }
     ```
 
-Specyfikator użycia atrybutu ma zastosowanie tylko do atrybutu, który następuje bezpośrednio po nim; Czyli
+Specyfikator użycia atrybutu ma zastosowanie tylko do atrybutu, który bezpośrednio następuje po nim. Czyli
 
 ```cpp
 [returnvalue:Attr1, Attr2]
@@ -252,7 +252,7 @@ różni się od
 
 ### <a name="description"></a>Opis
 
-Ten przykład pokazuje, jak określić wiele elementów docelowych.
+Ten przykład pokazuje, jak określić wiele obiektów docelowych.
 
 ### <a name="code"></a>Kod
 
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty zdefiniowane przez użytkownika](user-defined-attributes-cpp-component-extensions.md)

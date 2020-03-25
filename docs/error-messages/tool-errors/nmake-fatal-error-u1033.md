@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173390"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Błąd krytyczny NMAKE U1033
 
-Błąd składniowy: "string" Nieoczekiwany
+Błąd składniowy: Nieoczekiwany element "String"
 
-Ciąg nie jest częścią prawidłowej składni dla pliku reguł programu make.
+Ciąg nie jest częścią prawidłowej składni pliku reguł programu make.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Jeśli zestaw zamykający nawias ostry (**<<**) dla pliku wbudowanego nie są wyświetlane na początku wiersza, wystąpi następujący błąd:
+1. Jeśli końcowy zestaw nawiasów ostrych ( **<<** ) dla pliku wbudowanego nie znajduje się na początku wiersza, wystąpi następujący błąd:
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. Jeśli definicji makra w pliku reguł programu make zawiera znak równości (**=**) bez poprzedza nazwę lub jeśli nazwa definiowanego to makro, które rozszerza się na wartość nothing, wystąpi następujący błąd:
+1. Jeśli definicja makra w pliku reguł programu make zawierała znak równości ( **=** ) bez wcześniejszej nazwy lub jeśli zdefiniowana nazwa jest makrem, który rozwija się do Nothing, wystąpi następujący błąd:
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. Jeśli średnik (**;**) w wierszu komentarza, w menu Narzędzia. INI nie jest na początku wiersza, wystąpi następujący błąd:
+1. Jeśli średnik ( **;** ) w wierszu komentarza w narzędziach. INI nie znajduje się na początku wiersza, wystąpi następujący błąd:
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. Jeśli w pliku reguł programu make został sformatowany przy użyciu edytora tekstu, może wystąpić następujący błąd:
+1. Jeśli plik reguł programu make został sformatowany przez Edytor tekstów, może wystąpić następujący błąd:
 
     ```
     syntax error : ':' unexpected

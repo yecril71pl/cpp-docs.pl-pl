@@ -1,35 +1,35 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4382
+title: Ostrzeżenie kompilatora (poziom 1) C4382
 ms.date: 11/04/2016
 f1_keywords:
 - C4382
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186975"
 ---
-# <a name="compiler-warning-level-1-c4382"></a>Kompilator ostrzeżenie (poziom 1) C4382
+# <a name="compiler-warning-level-1-c4382"></a>Ostrzeżenie kompilatora (poziom 1) C4382
 
-> Zgłaszanie "*typu*": typ z destruktorem __clrcall lub konstruktorem kopiującym można tylko przechwycić w/CLR: pure modułu
+> Zgłaszanie elementu "*Type*": typ z destruktorem __clrcall lub konstruktorem kopiującym można przechwycić tylko w module/CLR: Pure
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Gdy skompilowano z opcją **/CLR** (nie **/CLR: pure**), obsługa wyjątków oczekuje, że funkcje elementów członkowskich w typie natywnym za [__cdecl](../../cpp/cdecl.md) i nie [__clrcall](../../cpp/clrcall.md). Typy natywne za pomocą funkcji elementów członkowskich przy użyciu `__clrcall` konwencji wywoływania, nie można przechwycić w module, który został skompilowany przy użyciu **/CLR**.
+Podczas kompilowania z **/CLR** (nie **/CLR: Pure**), obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi konwencji wywoływania `__clrcall` nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
 
-Jeśli wyjątek zostanie zgłoszony w module, który został skompilowany przy użyciu **/CLR: pure**, można zignorować to ostrzeżenie.
+Jeśli wyjątek zostanie przechwycony w module skompilowanym za pomocą **/CLR: Pure**, można zignorować to ostrzeżenie.
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4382.
+Poniższy przykład generuje C4382.
 
 ```cpp
 // C4382.cpp

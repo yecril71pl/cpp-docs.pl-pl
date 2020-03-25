@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0053
 - CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-ms.openlocfilehash: 4ba55e7e8f684ed0b0332be4a8f3ae9d52e9150d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba42e0279cd7c73b575e842cada4fbf569051d19
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299575"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184791"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Błąd CXX0053 programu Expression Evaluator
 
-nonfunction symbol odpowiadać podczas tworzenie powiązań punktów przerwania
+dopasowanie symbolu niefunkcyjnego podczas wiązania punktów przerwania
 
-Symbol używany jako punkt przerwania nie funkcji. Określając element członkowski danych jako punkt przerwania może być przyczyną tego błędu.
+Symbol używany jako punkt przerwania nie jest funkcją. Określenie elementu członkowskiego danych jako punktu przerwania może spowodować wystąpienie tego błędu.
 
-Ten błąd jest taka sama jak CAN0053.
+Ten błąd jest identyczny z CAN0053.

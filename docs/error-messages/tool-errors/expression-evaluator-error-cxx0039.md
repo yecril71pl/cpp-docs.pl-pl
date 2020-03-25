@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0039
 - CAN0039
 ms.assetid: 8bf698d2-e015-4595-944f-72b81aa43d22
-ms.openlocfilehash: 053e57a21f0cb75cbd96732edb6812b3557bcd50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5706d002eb3d566d05b059cb04b6b1626fdb3d33
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185129"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Błąd CXX0039 programu Expression Evaluator
 
 symbol jest niejednoznaczny
 
-Ewaluator wyrażeń C nie można określić, które wystąpienie symboli do użycia w wyrażeniu. Symbol występuje więcej niż raz w poziomach drzewa dziedziczenia.
+Ewaluatora wyrażeń języka C nie może określić, które wystąpienie symbolu ma być używane w wyrażeniu. Symbol występuje więcej niż jeden raz w drzewie dziedziczenia.
 
-Należy użyć operatora rozpoznawania zakresu (`::`) Aby jawnie określić wystąpienie do użycia w wyrażeniu.
+Musisz użyć operatora rozpoznawania zakresu (`::`), aby jawnie określić wystąpienie do użycia w wyrażeniu.
 
-Ten błąd jest taka sama jak CAN0039.
+Ten błąd jest identyczny z CAN0039.

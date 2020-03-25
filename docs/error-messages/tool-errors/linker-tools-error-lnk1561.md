@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-ms.openlocfilehash: ad216c7b7a09b8dd5d2ca2b86bc3a386fa18a552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 706cf6c90dc187b6c343edc82cebb93bb8660452
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194853"
 ---
 # <a name="linker-tools-error-lnk1561"></a>Błąd narzędzi konsolidatora LNK1561
 
-punkt wejścia musi być zdefiniowany.
+punkt wejścia musi być zdefiniowany
 
-Konsolidator nie znalazł *punktu wejścia*, początkowej funkcja do wywołania w plik wykonywalny. Domyślnie konsolidator szuka `main` lub `wmain` dla aplikacji konsoli, funkcja `WinMain` lub `wWinMain` dla aplikacji Windows, funkcja lub `DllMain` dla biblioteki DLL, która wymaga inicjowania. Należy określić inną funkcję za pomocą [/Entry](../../build/reference/entry-entry-point-symbol.md) — opcja konsolidatora.
+Konsolidator nie znalazł *punktu wejścia*, funkcja początkowa wywoływana w pliku wykonywalnym. Domyślnie konsolidator szuka funkcji `main` lub `wmain` dla aplikacji konsolowej, `WinMain` lub funkcji `wWinMain` dla aplikacji systemu Windows lub `DllMain` dla biblioteki DLL wymagającej inicjalizacji. Możesz określić inną funkcję przy użyciu opcji konsolidatora [/entry](../../build/reference/entry-entry-point-symbol.md) .
 
 Ten błąd może mieć kilka przyczyn:
-- Może nie dołączono plik który definiuje punktem wejścia na liście plików w celu połączenia. Upewnij się, że plik, który zawiera funkcję punktu wejścia jest połączony z Twoją aplikacją.
-- Definicja punktu wejścia przy użyciu sygnatury funkcji problem; na przykład możesz mieć błędnie napisana lub używany nieprawidłowy przypadek dla nazwy funkcji lub niepoprawnie określony zwracany typ lub typy parametrów.
-- Nie określono [/dll](../../build/reference/dll-build-a-dll.md) opcję podczas kompilowania biblioteki DLL.
-- Być może określono nazwę funkcji punktu wejścia niepoprawnie użycia [/Entry](../../build/reference/entry-entry-point-symbol.md) — opcja konsolidatora.
-- Jeśli używasz [LIB](../../build/reference/lib-reference.md) narzędzie do tworzenia biblioteki DLL, określony plik .def. Jeśli tak, usuń plik .def z kompilacji.
+- Być może nie dołączono pliku, który definiuje punkt wejścia na liście plików do połączenia. Sprawdź, czy plik zawierający funkcję punktu wejścia jest połączony z Twoją aplikacją.
+- Punkt wejścia mógł zostać zdefiniowany przy użyciu nieprawidłowej sygnatury funkcji; na przykład może być błędnie wpisana lub użyto nieprawidłowej wielkości liter dla nazwy funkcji lub określono nieprawidłowy typ zwracany lub typy parametrów.
+- Nie określono opcji [/dll](../../build/reference/dll-build-a-dll.md) podczas KOMPILOWANIA biblioteki DLL.
+- W przypadku użycia opcji konsolidatora [/entry](../../build/reference/entry-entry-point-symbol.md) może być nieprawidłowo określona nazwa funkcji punktu wejścia.
+- Jeśli używasz narzędzia [lib](../../build/reference/lib-reference.md) do KOMPILOWANIA biblioteki DLL, być może został określony plik. def. Jeśli tak, usuń plik. def z kompilacji.
 
-Podczas kompilowania aplikacji, konsolidator szuka funkcję punktu wejścia do wywołania, aby uruchomić kod. Jest to funkcja, która jest wywoływana po załadowaniu aplikacji i środowiska uruchomieniowego jest zainicjowany. Należy podać funkcję punktu wejścia dla aplikacji lub nie można uruchomić aplikacji. Punkt wejścia jest opcjonalne dla biblioteki DLL. Domyślnie konsolidator szuka funkcji punktu wejścia, który ma jeden z kilku konkretne nazwy i podpisy, takie jak `int main(int, char**)`. Można określić inną nazwę funkcji jako wpis punktu, przy użyciu opcji konsolidatora/Entry.
+Podczas kompilowania aplikacji konsolidator szuka funkcji punktu wejścia, aby wywołać metodę uruchamiania kodu. Jest to funkcja, która jest wywoływana po załadowaniu aplikacji i zainicjowaniu środowiska uruchomieniowego. Musisz podać funkcję punktu wejścia dla aplikacji lub nie można uruchomić aplikacji. Punkt wejścia jest opcjonalny dla biblioteki DLL. Domyślnie konsolidator szuka funkcji punktu wejścia, która ma jedną z kilku określonych nazw i podpisów, takich jak `int main(int, char**)`. Jako punkt wejścia można określić inną nazwę funkcji, używając opcji konsolidatora/ENTRY.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK1561:
+Poniższy przykład generuje LNK1561:
 
 ```cpp
 // LNK1561.cpp

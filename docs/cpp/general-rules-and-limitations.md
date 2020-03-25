@@ -2,20 +2,20 @@
 title: Ograniczenia i reguły ogólne
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1adbaf9d9be3a0fc0724603e01b81700554839bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188602"
 ---
 # <a name="general-rules-and-limitations"></a>Ograniczenia i reguły ogólne
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-- Jeśli zadeklarujesz funkcję lub obiekt bez atrybutu **dllimport** lub **dllexport** , funkcja lub obiekt nie jest uważany za część interfejsu dll. W związku z tym definicja funkcji lub obiektu musi być obecna w tym module lub w innym module tego samego programu. Aby uczynić funkcję lub obiektem w interfejsie DLL, należy zadeklarować definicję funkcji lub obiektu w innym module jako **dllexport**. W przeciwnym wypadku zostanie wygenerowany błąd konsolidatora.
+- Jeśli zadeklarujesz funkcję lub obiekt bez atrybutu **dllimport** lub **dllexport** , funkcja lub obiekt nie jest uważany za część interfejsu dll. W związku z tym definicja funkcji lub obiektu musi być obecna w tym module lub w innym module tego samego programu. Aby uczynić funkcję lub obiektem w interfejsie DLL, należy zadeklarować definicję funkcji lub obiektu w innym module jako **dllexport**. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
 
-   Jeśli deklarujesz funkcję lub obiekt z atrybutem **dllexport** , jego definicja musi znajdować się w pewnym module tego samego programu. W przeciwnym wypadku zostanie wygenerowany błąd konsolidatora.
+   Jeśli deklarujesz funkcję lub obiekt z atrybutem **dllexport** , jego definicja musi znajdować się w pewnym module tego samego programu. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
 
 - Jeśli pojedynczy moduł w programie zawiera deklaracje **dllimport** i **dllexport** dla tej samej funkcji lub obiektu, atrybut **dllexport** ma pierwszeństwo przed atrybutem **dllimport** . Jest jednak generowane ostrzeżenie kompilatora. Na przykład:
 
@@ -85,6 +85,6 @@ ms.locfileid: "74857531"
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

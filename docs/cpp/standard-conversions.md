@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161013"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -189,22 +189,22 @@ Pierwszym przypadkiem jest to, że określona klasa bazowa jest dostępna, a kon
 
 Określa, czy klasa bazowa jest dostępna, zależy od rodzaju dziedziczenia używanego do wyprowadzania. Rozważ dziedziczenie zilustrowane na poniższej ilustracji.
 
-![Wykres dziedziczenia przedstawiający wykres dziedziczenia dostępności klasy podstawowej&#45;](../cpp/media/vc38xa1.gif "przedstawiający dostępność klasy podstawowej&#45;") <br/>
+![Wykres dziedziczenia pokazujący dostępność klasy podstawowej&#45;](../cpp/media/vc38xa1.gif "Wykres dziedziczenia pokazujący dostępność klasy podstawowej&#45;") <br/>
 Wykres dziedziczenia dla zilustrowania dostępności klasy podstawowej
 
 W poniższej tabeli przedstawiono dostępność klasy podstawowej dla sytuacji zilustrowanej na rysunku.
 
 |Typ funkcji|Pochodnych|Konwersja z<br /><br /> B * na\*ą prawną?|
 |----------------------|----------------|-------------------------------------------|
-|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Prywatna|Nie|
+|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Private|Nie|
 ||Chronione|Nie|
-||Publiczne|Tak|
-|B funkcja członkowska (w zakresie B)|Prywatna|Tak|
-||Chronione|Tak|
-||Publiczne|Tak|
-|Funkcja członkowska języka c (w zakresie języka C)|Prywatna|Nie|
-||Chronione|Tak|
-||Publiczne|Tak|
+||Public|Yes|
+|B funkcja członkowska (w zakresie B)|Private|Yes|
+||Chronione|Yes|
+||Public|Yes|
+|Funkcja członkowska języka c (w zakresie języka C)|Private|Nie|
+||Chronione|Yes|
+||Public|Yes|
 
 Drugi przypadek, w którym wskaźnik do klasy może być konwertowany na wskaźnik do klasy bazowej, jest używany w przypadku jawnej konwersji typu. Aby uzyskać więcej informacji na temat jawnych konwersji typów, zobacz [operator Explicit konwersji typu](explicit-type-conversion-operator-parens.md).
 
@@ -327,6 +327,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++Dokumentacja języka](../cpp/cpp-language-reference.md)

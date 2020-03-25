@@ -9,21 +9,21 @@ helpviewer_keywords:
 - inline assembly, registers
 - registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-ms.openlocfilehash: 5c07fa897da23a55f376a20e7588c8c8c269d1a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865fc5fac5f46cdc8c55966e9989227d1d671d6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167377"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169256"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Odwołania do segmentu w zestawie wbudowanym
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Konieczne jest odwołanie się do segmentów rejestru, a nie nazwy (Nazwa segmentu `_TEXT` jest nieprawidłowy, na przykład). Segment zastąpień należy użyć rejestru jawnie, tak jak ES: [BX].
+Należy odwołać się do segmentów, rejestrując zamiast nazwy (nazwa segmentu `_TEXT` jest nieprawidłowa, na przykład). Zastąpienia segmentu muszą używać rejestru jawnie, jak w ES: [BX].
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

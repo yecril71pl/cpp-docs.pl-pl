@@ -1,30 +1,30 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4639
+title: Ostrzeżenie kompilatora (poziom 4) C4639
 ms.date: 11/04/2016
 f1_keywords:
 - C4639
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198253"
 ---
-# <a name="compiler-warning-level-4-c4639"></a>Kompilator ostrzeżenie (poziom 4) C4639
+# <a name="compiler-warning-level-4-c4639"></a>Ostrzeżenie kompilatora (poziom 4) C4639
 
-Błąd oprogramowania MSXML, dokumentu XML, które nie będą przetwarzane komentarze. Przyczyna
+Błąd MSXML, komentarze dokumentu XML nie zostaną przetworzone. reason
 
-To ostrzeżenie może wystąpić na dowolną liczbę powodów.
+To ostrzeżenie może wystąpić z dowolnej liczby przyczyn.
 
-Aby rozwiązać tego ostrzeżenia:
+Aby usunąć to ostrzeżenie:
 
 - Skompiluj ponownie.
 
 - Ponownie zainstaluj program MSXML przez ponowne zainstalowanie środowiska uruchomieniowego języka wspólnego.
 
-- Edytuj lub Usuń komentarz dokumentacji, który powoduje ostrzeżenie i ponownej kompilacji.
+- Edytuj lub Usuń komentarz dokumentacji, który powoduje ostrzeżenie i ponowną kompilację.
 
-Po wygenerowaniu C4639, wszystkie dalsze przetwarzanie komentarza XML jest wyłączona, a plik .xdc nie jest generowany.
+Po wystawieniu C4639 wszystkie dalsze przetwarzanie komentarza XML jest wyłączone, a plik. xdc nie jest generowany.

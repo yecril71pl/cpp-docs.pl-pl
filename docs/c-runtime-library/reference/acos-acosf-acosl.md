@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171297"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -60,7 +60,7 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Wartość z przedziału od-1 do 1, dla którego ma zostać obliczony arcus cosinus (arcus cosinus).
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -71,9 +71,9 @@ Domyślnie, jeśli *x* jest mniejsza niż-1 lub większa niż 1, **Acos** zwraca
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|NIEPRAWIDŁOWY|_DOMAIN|
+|± ∞|Nieprawidłowy|_DOMAIN|
 |QNAN, IND|brak|_DOMAIN|
-|&#124;x&#124;>1|NIEPRAWIDŁOWY|_DOMAIN|
+|&#124;x&#124;>1|Nieprawidłowy|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -83,11 +83,11 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Aco
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**Acos**, **acosf —** , **acosl**|\<math.h>|\<errno.h>|
+|**Acos**, **acosf —** , **acosl**|\<> Math. h|\<errno. h >|
 
 ## <a name="example"></a>Przykład
 
-Ten program prosi o wartość z zakresu od 1 do 1. Wartości wejściowe spoza tego zakresu powodują `_DOMAIN` generowanie komunikatów o błędach. W przypadku wprowadzenia prawidłowej wartości, program drukuje arcus sinus i arcus cosinus tej wartości.
+Ten program prosi o wartość z zakresu od 1 do 1. Wartości wejściowe spoza tego zakresu dają `_DOMAIN` komunikaty o błędach. W przypadku wprowadzenia prawidłowej wartości, program drukuje arcus sinus i arcus cosinus tej wartości.
 
 ```C
 // crt_asincos.c
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

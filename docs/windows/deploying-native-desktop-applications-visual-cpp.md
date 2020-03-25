@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160193"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Wdrażanie natywnych aplikacji komputerowych (Visual C++)
 
@@ -27,7 +27,7 @@ Program Visual Studio oferuje różne technologie wdrażania aplikacji systemu W
 
 - Technologii Instalator Windows można użyć do wdrożenia natywnych C++ aplikacji lub C++ aplikacji przeznaczonych dla środowiska CLR.
 
-Artykuły w tej sekcji dokumentacji omawiają, jak zapewnić, że Natywna aplikacja wizualna C++ działa na dowolnym komputerze, który zapewnia obsługiwaną platformę docelową, które pliki należy dołączyć do pakietu instalacyjnego, oraz zalecane sposoby Dystrybuuj ponownie składniki, od których zależy aplikacja.
+Artykuły w tej sekcji dokumentacji omawiają, w jaki sposób zapewnić, że natywna C++ aplikacja wizualna działa na dowolnym komputerze, który oferuje obsługiwaną platformę docelową, które pliki należy dołączyć do pakietu instalacyjnego, oraz zalecane sposoby na ponowne rozproszenie składników, od których zależy aplikacja.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -57,6 +57,6 @@ Artykuły w tej sekcji dokumentacji omawiają, jak zapewnić, że Natywna aplika
 
 - [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
-- [Wdrażanie](/dotnet/framework/deployment/index)
+- [Wdrożenie](/dotnet/framework/deployment/index)
 
 - [Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

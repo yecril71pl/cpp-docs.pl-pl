@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1311
 ms.assetid: 6590a06c-ce9d-4f17-8f62-c809343143b8
-ms.openlocfilehash: ba2b797c9bf521533e7c2ccff8d358b6216d392f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57e4e0899a5f9d81e87a203b1b699cef0884f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266469"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203271"
 ---
 # <a name="fatal-error-c1311"></a>Błąd krytyczny C1311
 
-COFF format statycznie nie może zainicjować "var" przy użyciu numeru bajtem(ów) adresu
+Format COFF statycznie nie może zainicjować "var" z liczbą bajtów adresu
 
-Adres, którego wartość nie jest znany w czasie kompilacji nie statycznie przypisany do zmiennej, którego typ ma magazynu mniej niż cztery bajty.
+Adres, którego wartość nie jest znana w czasie kompilacji, nie może być statycznie przypisany do zmiennej, której typ ma magazyn mniejszy niż 4 bajty.
 
-Ten błąd może wystąpić na kod, który jest prawidłowy w języku C++.
+Ten błąd może wystąpić w kodzie, który jest nieprawidłowy C++.
 
-Poniższy przykład przedstawia jeden warunek, który może spowodować C1311.
+Poniższy przykład pokazuje jeden warunek, który może powodować C1311.
 
 ```
 char c = (char)"Hello, world";   // C1311

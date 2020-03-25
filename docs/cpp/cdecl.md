@@ -9,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8f2b2b0cea8ff30cc450aae534fbff0d7b77f457
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190102"
 ---
 # <a name="__cdecl"></a>__cdecl
 
 **__cdecl** jest domyślną konwencją wywoływania dla C i C++ programów. Ponieważ stos jest czyszczony przez obiekt wywołujący, może `vararg` funkcje. Konwencja wywoływania **__cdecl** tworzy większe pliki wykonywalne niż [__stdcall](../cpp/stdcall.md), ponieważ wymaga, aby każde wywołanie funkcji obejmowało kod czyszczący stosu. Na poniższej liście przedstawiono implementację niniejszej konwencji wywoływania. Modyfikator **__cdecl** jest specyficzny dla firmy Microsoft.
 
-|Element|Implementacja|
+|Element|Wdrażanie|
 |-------------|--------------------|
 |Kolejność przekazywania argumentów|Od prawej do lewej.|
 |Odpowiedzialność za utrzymanie stosu|Funkcja wywołująca pobiera argumenty ze stosu.|
@@ -58,7 +58,7 @@ Aby zapewnić zgodność z poprzednimi wersjami, **CDECL** i **_cdecl** są syno
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie kompilator jest zobowiązany do używania konwencji nazewnictwa C i konwencji wywoływania języka dla funkcji `system`.
+W poniższym przykładzie kompilator jest zobowiązany do używania konwencji nazewnictwa języka C i konwencje wywoływania dla funkcji `system`.
 
 ```cpp
 // Example of the __cdecl keyword on function
@@ -67,7 +67,7 @@ int __cdecl system(const char *);
 typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

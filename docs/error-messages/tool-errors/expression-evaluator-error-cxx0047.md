@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0047
 - CXX0047
 ms.assetid: db23d0db-fce2-4d86-b391-6e1d6ad13fd4
-ms.openlocfilehash: ecc2ca4061f01cfa3ef868ed2916ceaeb5513116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5a8ebaaac351833970b10336f4f71940082114
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184908"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Błąd CXX0047 programu Expression Evaluator
 
-Lista argumentów jest niezgodna z funkcją
+Lista argumentów nie jest zgodna z funkcją
 
-Wyrażenie wywołuje funkcję z listy rzeczywisty parametr, które nie pasuje do listy parametrów formalnych żadnej funkcji o tej samej nazwie, zdefiniowane w programie.
+Wyrażenie nazywane funkcją z rzeczywistą listą parametrów, która nie pasuje do formalnej listy parametrów dowolnej funkcji o tej samej nazwie zdefiniowanej w programie.
 
-Przeciążone funkcje mogą być wywoływane tylko wtedy, gdy parametr dokładne dopasowanie lub dopasowania, które nie wymagają do budowy obiektu.
+Przeciążone funkcje mogą być wywoływane tylko wtedy, gdy istnieje dokładne dopasowanie parametrów lub dopasowanie, które nie wymaga konstrukcji obiektu.
 
-Ten błąd jest taka sama jak CAN0047.
+Ten błąd jest identyczny z CAN0047.

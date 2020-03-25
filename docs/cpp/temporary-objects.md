@@ -5,18 +5,18 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-ms.openlocfilehash: 19fd21da09149e730aac9bd0fb2cde066043e030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b298872a688c3b8e383a04ea4d82753859cbb2e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266806"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160752"
 ---
 # <a name="temporary-objects"></a>Obiekty tymczasowe
 
 W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych przez kompilator. Takie obiekty tymczasowe mogą być utworzone z następujących powodów:
 
-- Aby zainicjować **const** odwołanie za pomocą inicjatora o typie różniącym się od tego typu podstawowego inicjowanego odwołania.
+- Aby zainicjować odwołanie **const** z inicjatorem typu innego niż typ podstawowy inicjowanego odwołania.
 
 - Aby przechowywać wartość zwracaną przez funkcję, która zwraca typ zdefiniowany przez użytkownika. Takie obiekty tymczasowe są tworzone tylko wtedy, gdy program nie kopiuje wartości zwracanej do obiektu. Na przykład:
 
@@ -33,7 +33,7 @@ W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych prze
 
    Ponieważ wartość zwracana nie jest kopiowana do innego obiektu, tworzony jest obiekt tymczasowy. Częstszy przypadek tworzenia obiektów tymczasowych występuje w trakcie obliczania wyrażenia, w którym muszą zostać wywołane funkcje przeciążonego operatora. Takie funkcje przeciążonego operatora zwracają typ zdefiniowany przez użytkownika, który często nie jest kopiowany do innego obiektu.
 
-   Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie, wyrażenie *tymczasowe* `+ Complex3` zostało ocenione, a wynik jest kopiowany do `ComplexResult` (zakładając, że operator przypisania nie jest przeciążony).
+   Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie obliczane jest *tymczasowe* `+ Complex3` wyrażenia, a wynik jest kopiowany do `ComplexResult` (przy założeniu, że operator przypisania nie jest przeciążony).
 
 - Aby przechować wynik rzutowania na typ zdefiniowany przez użytkownika. Gdy obiekt danego typu jest jawnie konwertowany na typ zdefiniowany przez użytkownika, nowy obiekt jest konstruowany jako obiekt tymczasowy.
 
@@ -43,5 +43,5 @@ Obiekty tymczasowe mają okres istnienia zdefiniowany w punkcie utworzenia oraz 
 
 |Powód utworzenia obiektów tymczasowych|Punkt niszczenia|
 |------------------------------|-----------------------|
-|Wynik obliczania wyrażenia|Wszystkie obiekty tymczasowe, utworzone w wyniku obliczenia wyrażenia są niszczone na końcu instrukcji wyrażenia (to znaczy w średniku), lub na końcu wyrażeń sterujących **dla**, **Jeśli**, **podczas**, **czy**, i **Przełącz** instrukcji.|
-|Inicjowanie **const** odwołania|Jeśli inicjator nie jest l-wartością tego samego typu co inicjowane odwołanie, tworzony jest obiekt tymczasowy o typie podstawowym obiektu i inicjowany za pomocą wyrażenia inicjowania. Obiekt tymczasowy jest niszczony natychmiast po zniszczeniu odwoływanego obiektu z którym jest powiązany.|
+|Wynik obliczania wyrażenia|Wszystkie obiekty tymczasowe utworzone w wyniku obliczania wyrażenia są niszczone na końcu instrukcji wyrażenia (to jest, na średniku) lub na końcu wyrażeń kontrolnych dla instrukcji **for**, **if**, **while** **, do**i **Switch** .|
+|Inicjowanie odwołań **const**|Jeśli inicjator nie jest l-wartością tego samego typu co inicjowane odwołanie, tworzony jest obiekt tymczasowy o typie podstawowym obiektu i inicjowany za pomocą wyrażenia inicjowania. Obiekt tymczasowy jest niszczony natychmiast po zniszczeniu odwoływanego obiektu z którym jest powiązany.|

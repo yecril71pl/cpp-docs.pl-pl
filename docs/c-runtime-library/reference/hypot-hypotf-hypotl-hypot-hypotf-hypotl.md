@@ -40,12 +40,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954790"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168749"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -85,9 +85,9 @@ long double _hypotl(
 *x*, *y*<br/>
 Wartości zmiennoprzecinkowe.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Jeśli to się powiedzie, **hypot —** zwraca długość przeciwprostokątnej; w przypadku przepełnienia funkcja **hypot —** zwraca plik inf (nieskończoność), a zmienna **errno** jest ustawiona na **ERANGE**. Możesz użyć **_matherr** , aby zmodyfikować obsługę błędów.
+Jeśli to się powiedzie, **hypot —** zwraca długość przeciwprostokątnej; w przypadku przepełnienia funkcja **hypot —** zwraca plik inf (nieskończoność), a zmienna **errno** jest ustawiona na **ERANGE**. Za pomocą **_matherr** można modyfikować obsługę błędów.
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -101,7 +101,7 @@ Wersje funkcji, które mają wiodące znaki podkreślenia, są zapewniane pod k�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**hypot —** , **hypotf —** , **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot —** , **hypotf —** , **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<> Math. h|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

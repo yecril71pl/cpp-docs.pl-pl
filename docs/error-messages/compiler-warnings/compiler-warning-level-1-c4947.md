@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4947
+title: Ostrzeżenie kompilatora (poziom 1) C4947
 ms.date: 11/04/2016
 f1_keywords:
 - C4947
 helpviewer_keywords:
 - C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-ms.openlocfilehash: d18632e51a53205d151bb84b2cf2051d2882211f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102e6b73d2c1a0622ac8934272cd26b63a2be580
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199100"
 ---
-# <a name="compiler-warning-level-1-c4947"></a>Kompilator ostrzeżenie (poziom 1) C4947
+# <a name="compiler-warning-level-1-c4947"></a>Ostrzeżenie kompilatora (poziom 1) C4947
 
-"type_or_member": oznaczony jako przestarzały
+"type_or_member": oznaczono jako przestarzały
 
-Element członkowski lub typ został oznaczony jako przestarzały z <xref:System.ObsoleteAttribute> klasy.
+Element członkowski lub typ został oznaczony jako przestarzały z klasą <xref:System.ObsoleteAttribute>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4947:
+Poniższy przykład generuje C4947:
 
 ```cpp
 // C4947.cpp

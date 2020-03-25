@@ -5,24 +5,24 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265168"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171934"
 ---
 # <a name="type-forwarding-ccli"></a>Przekazywanie dalej typu (C++/CLI)
 
-*Przekazywanie dalej typu* pozwala na przenoszenie typu z jednego zestawu (assembly A) do innego zestawu (assembly B), taki sposób, że nie jest konieczne ponownie skompilować klientów korzystających z zestawu A.
+*Przekazywanie typu* umożliwia przeniesienie typu z jednego zestawu (zestawu a) do innego zestawu (zestawu B), tak aby nie trzeba było ponownie kompilować klientów korzystających z zestawu a.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Ta funkcja nie jest obsługiwana w środowisku uruchomieniowym Windows.
+Ta funkcja nie jest obsługiwana w środowisko wykonawcze systemu Windows.
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Poniższy przykład kodu demonstruje sposób używania przekazywanie dalej typu.
+Poniższy przykład kodu demonstruje, jak używać przekazywania typu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -34,26 +34,26 @@ Poniższy przykład kodu demonstruje sposób używania przekazywanie dalej typu.
 ### <a name="parameters"></a>Parametry
 
 *new*<br/>
-Zestaw, do którego chcesz przenieść definicji typu.
+Zestaw, do którego jest przenoszona definicja typu.
 
 *type*<br/>
-Typ, których definicje są przenoszone do innego zestawu.
+Typ, którego definicja jest przenoszona do innego zestawu.
 
 ### <a name="remarks"></a>Uwagi
 
-Po części (assembly) jest dostarczany jest używana przez aplikacje klienckie, służy typu przekazywania przenieść typu składnika (assembly) do innego zestawu, dostarczaj aktualizowanego składnika (i wszelkie dodatkowe zestawy wymagane) i klienta aplikacje będą nadal działać bez są ponownie kompilowane.
+Gdy składnik (zestaw) jest używany przez aplikacje klienckie, można użyć przesyłania dalej typu w celu przeniesienia typu z składnika (zestawu) do innego zestawu, wysłania zaktualizowanego składnika (oraz wszelkich dodatkowych wymaganych zestawów) i klienta programu aplikacje będą nadal działały bez ponownej kompilacji.
 
-Przekazywanie dalej typu działa tylko dla składników przywoływane przez istniejące aplikacje. Podczas ponownego kompilowania aplikacji to musi istnieć odpowiednie odwołania do zestawów dla wszystkich typów używanych w aplikacji.
+Przekazywanie typu działa tylko dla składników, do których odwołują się istniejące aplikacje. Podczas odbudowywania aplikacji muszą istnieć odpowiednie odwołania do zestawów dla wszystkich typów używanych w aplikacji.
 
-Podczas przesyłania dalej typu (typ A) z zestawu, należy dodać `TypeForwardedTo` atrybutu dla tego typu, a także odwołania do zestawu. Zestaw, do którego można odwołać się musi zawierać jeden z następujących czynności:
+Podczas przekazywania typu (typu A) z zestawu, należy dodać atrybut `TypeForwardedTo` dla tego typu, a także odwołanie do zestawu. Zestaw, do którego się odwołuje, musi zawierać jedną z następujących czynności:
 
 - Definicja typu A.
 
-- A `TypeForwardedTo` atrybutu dla typu A, jak również odwołania do zestawu.
+- Atrybut `TypeForwardedTo` typu A, a także odwołanie do zestawu.
 
-Przykłady typów, które mogą być przekazywane między innymi:
+Przykłady typów, które mogą być przekazywane, obejmują:
 
-- klasy REF
+- klasy referencyjne
 
 - klasy wartości
 
@@ -61,33 +61,33 @@ Przykłady typów, które mogą być przekazywane między innymi:
 
 - interfejsy
 
-Nie można przesłać dalej następujących typów:
+Nie można przekazywać następujących typów:
 
 - Typy ogólne
 
 - Typy natywne
 
-- Zagnieżdżone typy (Jeśli chcesz przesłać dalej typu zagnieżdżonego, powinien przesyłania dalej typ otaczający)
+- Zagnieżdżone typy (Jeśli chcesz przekazywać Typ zagnieżdżony, należy przekazać typ otaczający)
 
-Można przekazać dalej typ do zestawu, który został utworzony w dowolnym języku, przeznaczone dla środowiska uruchomieniowego języka wspólnego.
+Można przesłać dalej typ do zestawu, który został utworzony w dowolnym języku przeznaczonym dla środowiska uruchomieniowego języka wspólnego.
 
-Tak, jeśli plik kodu źródłowego, który jest używany do tworzenia zestawu A.dll zawiera definicję dla typu (`ref class MyClass`), i chcesz przenieść ten typ definicji do zestawu B.dll, jak:
+Tak więc, jeśli plik kodu źródłowego, który jest używany do kompilowania zestawu A. dll zawiera definicję typu (`ref class MyClass`) i chcesz przenieść definicję tego typu do zestawu B. dll, można:
 
-1. Przenieś `MyClass` definicji do pliku kodu źródłowego, używany do tworzenia B.dll typu.
+1. Przenieś definicję typu `MyClass` do pliku kodu źródłowego użytego do skompilowania B. dll.
 
-2. Kompilacja zestawów B.dll
+2. Kompiluj zestaw B. dll
 
-3. Usuń `MyClass` wpisz definicję z kodu źródłowego, używane do tworzenia A.dll i zastąp go następującym kodem:
+3. Usuń definicję typu `MyClass` z kodu źródłowego użytego do skompilowania biblioteki. dll i Zastąp ją następującym:
 
     ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```
 
-4. Kompilacja zestawów A.dll.
+4. Kompiluj zestaw A. dll.
 
-5. Użyj A.dll bez konieczności ponownego kompilowania aplikacji klienckich.
+5. Użyj. dll bez ponownego kompilowania aplikacji klienckich.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`

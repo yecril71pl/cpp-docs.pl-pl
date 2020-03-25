@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-ms.openlocfilehash: efd5b9dd5cdd7ee174bc786c38d9dd841e2ad6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1d7255dd64239a6a76bb15a1f309b43eac0d4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202959"
 ---
 # <a name="fatal-error-c1509"></a>Błąd krytyczny C1509
 
-ograniczenie kompilatora: zbyt wiele stanów obsługi wyjątków w funkcji "function". Uprość funkcję
+ograniczenie kompilatora: zbyt wiele stanów obsługi wyjątków w funkcji "Function". Uprość funkcję
 
-Kod przekracza limit wewnętrzny stanów obsługi wyjątków (32 768 stany).
+Kod przekracza limit wewnętrzny w Stanach obsługi wyjątków (32 768 Stany).
 
-Najczęstszą przyczyną jest to, czy funkcja zawiera złożone wyrażenie zmienne klasy zdefiniowane przez użytkownika i operatorów arytmetycznych.
+Najbardziej typową przyczyną jest to, że funkcja zawiera złożone wyrażenie zmiennych klas zdefiniowanych przez użytkownika i operatorów arytmetycznych.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać ten problem, można użyć następujących rozwiązań
 
-1. Uprość wyrażenia przez przypisywanie typowych podwyrażenia zmiennych tymczasowych.
+1. Uprość wyrażenia przez przypisanie wspólnych podwyrażeń do zmiennych tymczasowych.
 
-1. Funkcja split na mniejsze.
+1. Podziel funkcję na mniejsze funkcje.

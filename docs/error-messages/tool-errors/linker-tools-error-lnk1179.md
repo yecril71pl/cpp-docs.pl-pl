@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183960"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Błąd narzędzi konsolidatora LNK1179
 
-nieprawidłowy lub uszkodzony plik: Zduplikowana sekcja COMDAT "filename"
+nieprawidłowy lub uszkodzony plik: zduplikowana COMDAT "filename"
 
-Moduł obiektu zawiera co najmniej dwóch Comdat o takiej samej nazwie.
+Moduł obiektu zawiera dwa lub więcej COMDAT o tej samej nazwie.
 
-Ten błąd może być spowodowany przy użyciu [/h](../../build/reference/h-restrict-length-of-external-names.md), co ogranicza długość nazw zewnętrznych i [/Gy](../../build/reference/gy-enable-function-level-linking.md), który pakuje funkcje w Comdat.
+Ten błąd może być spowodowany użyciem wartości [/h](../../build/reference/h-restrict-length-of-external-names.md), która ogranicza długość nazw zewnętrznych i [/Gy](../../build/reference/gy-enable-function-level-linking.md), które pakiety funkcje w COMDAT.
 
 ## <a name="example"></a>Przykład
 
-W poniższym kodzie `function1` i `function2` są identyczne w pierwszych osiem znaków. Kompilowanie przy użyciu **/Gy** i **/H8** generuje błąd łącza.
+W poniższym kodzie `function1` i `function2` są identyczne w pierwszych osiem znaków. Kompilowanie za pomocą **/Gy** i **/H8** powoduje utworzenie błędu łącza.
 
 ```
 void function1(void);

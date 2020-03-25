@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4672
+title: Ostrzeżenie kompilatora (poziom 4) C4672
 ms.date: 11/04/2016
 f1_keywords:
 - C4672
 helpviewer_keywords:
 - C4672
 ms.assetid: 3ae1b9cd-e53e-41e7-a330-7238b7aa0679
-ms.openlocfilehash: 3b0622fc4731577b7f98c816c19ed5f1684c0c65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9bb79ee664c2874f0b5091f9d2f9db6355d728f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388569"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198201"
 ---
-# <a name="compiler-warning-level-4-c4672"></a>Kompilator ostrzeżenie (poziom 4) C4672
+# <a name="compiler-warning-level-4-c4672"></a>Ostrzeżenie kompilatora (poziom 4) C4672
 
-"identifier1": niejednoznaczne. Pierwszy raz widziane jako "identifier2"
+"Identifier1": niejednoznaczny. Pierwszy widziany jako "identifier2"
 
-Określony obiekt, aby były generowane w **spróbuj** bloku jest niejednoznaczna. Obiekt nie rozróżniane, jeśli zostanie on zgłoszony.
+Określony obiekt do wyrzucania w bloku **try** jest niejednoznaczny. Nie można odróżnić obiektu, jeśli został zgłoszony.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1057
 ms.assetid: 1e67e727-963d-42c5-8c32-c0e370d32735
-ms.openlocfilehash: 5000cdd0d91b35fab48655d99b14f17993161292
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4cfdfa40c13d7bc4290a3696ef7fb679b12fc58
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204428"
 ---
 # <a name="fatal-error-c1057"></a>Błąd krytyczny C1057
 
-Nieoczekiwany koniec pliku w rozwinięciu makra
+nieoczekiwany koniec pliku w rozwinięciu makra
 
-Kompilator osiągnięto koniec pliku źródłowego podczas zbierania argumentów wywołanie makra, prawdopodobnie z powodu brakujących prawy nawias okrągły w wywołaniu makra.
+Kompilator osiągnął koniec pliku źródłowego podczas zbierania argumentów wywołania makra, prawdopodobnie z powodu brakujący prawy nawias w wywołaniu makra.

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-ms.openlocfilehash: 137aa15dd9dad4b08d52af55da60a9cdf8b58055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c00fb32e4b36eff119195efbb34d536d80df6a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183660"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Błąd narzędzi konsolidatora LNK1277
 
-Obiekt nie odnaleziono rekordu w pliku pgd (nazwa_pliku)
+nie znaleziono rekordu obiektu w pliku PGD (filename)
 
-Korzystając z [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), ścieżka pliki wejściowe lib, def lub .obj różnił się od ścieżki, na którym zostały znalezione podczas pginstrument. Po pginstrument to może wyjaśnić przez zmianę w zmiennej środowiskowej LIB. Pełna ścieżka do plików wejściowych jest przechowywany w pliku .pgd.
+Podczas używania [/LTCG: PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)ścieżka jednej z plików Input. lib, def lub. obj różni się od ścieżki, w której zostały znalezione podczas/LTCG: PGINSTRUMENT. Może to być wyjaśnione zmianą w zmiennej środowiskowej LIB po/LTCG: PGINSTRUMENT. Pełna ścieżka do plików wejściowych jest przechowywana w pliku. pgd.
 
-/LTCG:PGOPTIMIZE wymaga taka sama jak faza pginstrument dane wejściowe.
+/LTCG: PGOPTIMIZE wymaga, aby dane wejściowe były identyczne z fazą/LTCG: PGINSTRUMENT.
 
-Aby rozwiązać tego ostrzeżenia, wykonaj jedną z następujących czynności:
+Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:
 
-- Uruchom pginstrument, wykonaj ponownie wszystkie przebiegi testowe i uruchom /LTCG:PGOPTIMIZE.
+- Uruchom/LTCG: PGINSTRUMENT, wykonaj ponownie wszystkie uruchomienia testów i Uruchom/LTCG: PGOPTIMIZE.
 
-- Jakie były po uruchomieniu pginstrument, należy zmienić zmiennej środowiskowej LIB.
+- Zmień zmienną środowiskową LIB na zainstalowaną w programie/LTCG: PGINSTRUMENT.
 
-Nie zaleca się, że obejść LNK1277 przy użyciu /LTCG:PGUPDATE.
+Nie zaleca się obejść LNK1277 za pomocą/LTCG: PGUPDATE.

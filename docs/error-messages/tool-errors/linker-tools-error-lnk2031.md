@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298922"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194567"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Błąd narzędzi konsolidatora LNK2031
 
-> Nie można wygenerować p/invoke do "*function_declaration*" *decorated_name*; Brak metadanych konwencji wywoływania
+> nie można wygenerować elementu p/Invoke dla "*function_declaration*" *decorated_name*; Brak konwencji wywoływania w metadanych
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas próby zaimportowania funkcji natywnej do czystego obrazu, należy pamiętać, że niejawne konwencji wywoływania różnią się macierzystych i czystych kompilacji. Aby uzyskać więcej informacji o obrazach czystego, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Podczas próby zaimportowania funkcji natywnej do czystego obrazu należy pamiętać, że niejawne konwencje wywoływania różnią się między natywnymi i czystymi kompilacjami. Aby uzyskać więcej informacji o czystych obrazach, zobacz [czysty iC++możliwy do zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Ten przykładowy kod generuje składnika za pomocą funkcji eksportowanych, natywnego, którego Konwencja wywołania jest niejawnie [__cdecl](../../cpp/cdecl.md).
+Ten przykładowy kod generuje składnik z wyeksportowaną, natywną funkcją, której Konwencja wywołania jest niejawnie [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2031.cpp
@@ -37,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy czystego klienta, który używa funkcji macierzystej. Jednak konwencji wywoływania, w obszarze **/CLR: pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład spowoduje wygenerowanie LNK2031.
+Poniższy przykład tworzy czysty klient korzystający z funkcji natywnej. Jednakże Konwencja wywoływania w opcji **/CLR: Pure** jest [__clrcall](../../cpp/clrcall.md). Poniższy przykład generuje LNK2031.
 
 ```cpp
 // LNK2031_b.cpp
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje jak używać funkcji natywnej za pomocą czystego obrazu. Należy pamiętać, jawnie **__cdecl** wywoływania specyfikator Konwencji.
+Poniższy przykład pokazuje, jak używać funkcji natywnej z czystego obrazu. Zanotuj jawny specyfikator konwencji wywoływania **__cdecl** .
 
 ```cpp
 // LNK2031_c.cpp

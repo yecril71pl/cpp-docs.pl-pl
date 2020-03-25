@@ -10,18 +10,18 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244164"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187794"
 ---
-# <a name="uuidof-operator"></a>Operator __uuidof
+# <a name="__uuidof-operator"></a>Operator __uuidof
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Pobiera identyfikator GUID podłączony do wyrażenia.
+Pobiera identyfikator GUID dołączony do wyrażenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,24 +31,24 @@ __uuidof (expression)
 
 ## <a name="remarks"></a>Uwagi
 
-*Wyrażenie* może być nazwą typu, wskaźnik, odwołanie lub tablicy tego typu, szablon przeznaczone specjalnie dla tych typów lub zmienną typu. Argument jest nieprawidłowy, tak długo, jak kompilator służy można znaleźć dołączonego identyfikatora GUID.
+*Wyrażenie* może być nazwą typu, wskaźnikiem, odwołaniem lub tablicą tego typu, szablonem wyspecjalizowanym dla tych typów lub zmienną tych typów. Argument jest prawidłowy, o ile kompilator może go użyć, aby znaleźć dołączony identyfikator GUID.
 
-Przypadek specjalny tym wewnętrznych jest, gdy albo **0** lub wartość NULL jest dostarczany jako argument. W tym przypadku **__uuidof** zwróci identyfikator GUID składają się z zer.
+Szczególnym przypadkiem tego wewnętrznego jest podano wartość **0** lub null jako argument. W takim przypadku **__uuidof** zwróci identyfikator GUID składający się z zer.
 
-Użyj słowa kluczowego, aby wyodrębnić identyfikator GUID podłączony do:
+Użyj tego słowa kluczowego, aby wyodrębnić identyfikator GUID dołączony do:
 
-- Obiekt o [uuid](../cpp/uuid-cpp.md) atrybutów rozszerzonych.
+- Obiekt według atrybutu rozszerzonego [UUID](../cpp/uuid-cpp.md) .
 
-- Blok biblioteki utworzonych za pomocą [modułu](../windows/attributes/module-cpp.md) atrybutu.
+- Blok biblioteki utworzony przy użyciu atrybutu [modułu](../windows/attributes/module-cpp.md) .
 
 > [!NOTE]
-> Do kompilacji debugowanej **__uuidof** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **__uuidof** statycznie (w czasie kompilacji) można zainicjować obiektu.
+> W kompilacji debugowania **__uuidof** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **__uuidof** można statycznie (w czasie kompilacji) zainicjować obiekt.
 
-W celu zgodności z poprzednimi wersjami **_uuidof** jest synonimem dla **__uuidof** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
+W celu zapewnienia zgodności z poprzednimi wersjami **_uuidof** jest synonimem dla **__uuidof** , chyba że opcja kompilatora [/za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod (skompilowany przy użyciu ole32.lib) spowoduje wyświetlenie uuid bloku biblioteki utworzonych za pomocą atrybutu modułu:
+Poniższy kod (skompilowany za pomocą ole32. lib) będzie wyświetlał identyfikator UUID bloku biblioteki utworzonego za pomocą atrybutu modułu:
 
 ```cpp
 // expre_uuidof.cpp
@@ -73,15 +73,15 @@ int main() {
 
 ## <a name="comments"></a>Komentarze
 
-W przypadkach, w którym nazwa biblioteki nie jest już w zakresie, można użyć `__LIBID_` zamiast **__uuidof**. Na przykład:
+W przypadkach, gdy nazwa biblioteki nie znajduje się już w zakresie, można użyć `__LIBID_` zamiast **__uuidof**. Na przykład:
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

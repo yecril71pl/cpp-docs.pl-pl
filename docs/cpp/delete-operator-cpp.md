@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
-ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
+ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024644"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189471"
 ---
 # <a name="delete-operator-c"></a>delete — Operator (C++)
 
@@ -36,7 +36,7 @@ delete MyDialog;
 
 Użycie polecenia **delete** na wskaźniku do obiektu, który nie jest przydzielony przy użyciu funkcji **New** , daje nieprzewidywalne wyniki. Można jednak użyć **delete** na wskaźniku o wartości 0. Dzięki temu, gdy **nowe** zwraca wartość 0 w przypadku niepowodzenia, usunięcie wyniku nieudanej **nowej** operacji jest nieszkodliwe. Aby uzyskać więcej informacji, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md).
 
-Operatorów **New** i **delete** można także używać w przypadku typów wbudowanych, w tym tablic. Jeśli `pointer` odwołuje się do tablicy, umieść puste nawiasy ( `pointer``[]`) przed:
+Operatorów **New** i **delete** można także używać w przypadku typów wbudowanych, w tym tablic. Jeśli `pointer` odwołuje się do tablicy, umieść puste nawiasy klamrowe (`[]`) przed `pointer`:
 
 ```cpp
 int* set = new int[100];
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-Dwa następujące przypadki generują niezdefiniowane wyniki: przy użyciu formy tablicowej Delete`delete []`() dla obiektu oraz przy użyciu formy usuwania z tablicy.
+Dwa następujące przypadki generują niezdefiniowane wyniki: przy użyciu formy tablicowej Delete (`delete []`) w obiekcie i przy użyciu formy DELETE w tablicy.
 
 ## <a name="example"></a>Przykład
 
@@ -90,10 +90,10 @@ Przykłady użycia polecenia **delete**można znaleźć w temacie [New Operator]
 
 Operator delete wywołuje **operator funkcji Delete**.
 
-Dla obiektów, które nie są typu klasy ([Klasa](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)lub [Unia](../cpp/unions.md)), jest wywoływany operator usuwania globalnego. W przypadku obiektów typu klasy nazwa funkcji cofania alokacji jest rozpoznawana w zakresie globalnym, jeśli wyrażenie delete zaczyna się od jednoargumentowego operatora rozpoznawania zakresu`::`(). W przeciwnym razie operator delete wywołuje destruktor dla obiektu przed cofnięciem alokacji pamięci (jeśli wskaźnik nie ma wartości null). Operator delete można zdefiniować dla poszczególnych klas. Jeśli nie ma takiej definicji dla danej klasy, zostanie wywołany globalny operator delete. Jeśli wyrażenie delete służy do cofnięcia alokacji obiektu klasy, którego typ statyczny ma destruktor wirtualny, funkcja cofania alokacji jest rozwiązywana przez destruktor wirtualny typu dynamicznego obiektu.
+Dla obiektów, które nie są typu klasy ([Klasa](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)lub [Unia](../cpp/unions.md)), jest wywoływany operator usuwania globalnego. W przypadku obiektów typu klasy nazwa funkcji cofania alokacji jest rozpoznawana w zakresie globalnym, jeśli wyrażenie delete zaczyna się od jednoargumentowego operatora rozpoznawania zakresu (`::`). W przeciwnym razie operator delete wywołuje destruktor dla obiektu przed cofnięciem alokacji pamięci (jeśli wskaźnik nie ma wartości null). Operator delete można zdefiniować dla poszczególnych klas. Jeśli nie ma takiej definicji dla danej klasy, zostanie wywołany globalny operator delete. Jeśli wyrażenie delete służy do cofnięcia alokacji obiektu klasy, którego typ statyczny ma destruktor wirtualny, funkcja cofania alokacji jest rozwiązywana przez destruktor wirtualny typu dynamicznego obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)\
-[Keywords](../cpp/keywords-cpp.md)\
+[Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)\
+[Słowa kluczowe](../cpp/keywords-cpp.md)\
 [new i delete, operatory](../cpp/new-and-delete-operators.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4096
 ms.assetid: ef6fba38-59a1-4d86-bcac-cadf44d87a36
-ms.openlocfilehash: 5b561d5e9c48d806be566aec104f63743d4409e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28d7bd2918c90716ab9d7eba67b59ca345fc5a17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183348"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Ostrzeżenie LNK4096 narzędzi konsolidatora
 
-/ BASE "number" jest nieprawidłowa dla Windows 95 i Windows 98. Obraz może nie działać.
+Wartość/BASE "number" jest nieprawidłowa dla systemów Windows 95 i Windows 98; nie można uruchomić obrazu
 
-Adres podstawowy wskazana jest nieprawidłowy. Pliki wykonywalne systemu Windows 95 i Windows 98 musi mieć większą niż 0x400000 adres podstawowy. Aby uzyskać więcej informacji na temat adres podstawowy, zobacz [/BASE](../../build/reference/base-base-address.md) — opcja konsolidatora.
+Określony adres podstawowy jest nieprawidłowy. Pliki wykonywalne systemu Windows 95 i Windows 98 muszą mieć adres podstawowy większy niż 0x400000. Aby uzyskać więcej informacji na temat adresów podstawowych, zobacz [/Base](../../build/reference/base-base-address.md) — opcja konsolidatora.

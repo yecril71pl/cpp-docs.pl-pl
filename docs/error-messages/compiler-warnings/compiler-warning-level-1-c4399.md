@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4399
+title: Ostrzeżenie kompilatora (poziom 1) C4399
 ms.date: 11/04/2016
 f1_keywords:
 - C4399
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408345"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186806"
 ---
-# <a name="compiler-warning-level-1-c4399"></a>Kompilator ostrzeżenie (poziom 1) C4399
+# <a name="compiler-warning-level-1-c4399"></a>Ostrzeżenie kompilatora (poziom 1) C4399
 
-> "*symbol*": symbol w procesie nie powinien być oznaczony przy użyciu atrybutu __declspec(dllimport), gdy skompilowano z opcją/CLR: pure
+> "*symbol*": symbol dla procesu nie powinien być oznaczony przy użyciu __declspec (dllimport), gdy jest kompilowany z/CLR: Pure
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Nie można zaimportować dane z obrazów natywnych lub obrazu macierzystego i konstrukcje CLR w czysty obraz. Aby rozwiązać to ostrzeżenie, skompiluj z **/CLR** (nie **/CLR: pure**) lub usunąć `__declspec(dllimport)`.
+Dane z obrazu natywnego lub obrazu z konstrukcjami macierzystymi i CLR nie mogą zostać zaimportowane do czystego obrazu. Aby rozwiązać ten problem, skompiluj z **opcją/CLR** (nie **/CLR: Pure**) lub Usuń `__declspec(dllimport)`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4399.
+Poniższy przykład generuje C4399.
 
 ```cpp
 // C4399.cpp

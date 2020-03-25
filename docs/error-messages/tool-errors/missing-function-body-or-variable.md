@@ -5,20 +5,20 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857155"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173624"
 ---
 # <a name="missing-function-body-or-variable"></a>Brakująca treść funkcji lub zmienna
 
-Po prostu prototypu funkcji kompilator może kontynuować bez błędów, ale konsolidator nie można rozpoznać wywołania adresu, ponieważ nie ma kodu funkcji lub zmienna zarezerwowanego miejsca. Nie będą widzieć tego błędu, dopóki nie zostanie utworzony wywołanie funkcji, że konsolidator musi zostać rozpoznany.
+Za pomocą tylko prototypu funkcji kompilator może kontynuować bez błędu, ale konsolidator nie może rozpoznać wywołania do adresu, ponieważ nie istnieje kod funkcji ani zarezerwowane miejsce na zmienne. Ten błąd nie zostanie wyświetlony do momentu utworzenia wywołania funkcji, którą konsolidator musi rozpoznać.
 
 ## <a name="example"></a>Przykład
 
-Wywołanie funkcji w głównym oknie spowoduje LNK2019, ponieważ prototyp umożliwia kompilatorowi wydaje się, że istnieje funkcja.  Konsolidator wykryje, czy nie.
+Wywołanie funkcji w głównym spowoduje wystąpienie LNK2019, ponieważ prototyp umożliwia kompilatorowi określenie, że funkcja już istnieje.  Konsolidator stwierdzi, że nie.
 
 ```cpp
 // LNK2019_MFBV.cpp
@@ -31,7 +31,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-W języku C++ upewnij się, obejmują implementacji określoną funkcję dla klasy i nie tylko prototypu w definicji klasy. Jeśli jest definiowana klasa poza pliku nagłówka, należy uwzględnić nazwę klasy przed funkcji (`Classname::memberfunction`).
+W C++programie upewnij się, że dołączysz implementację określonej funkcji dla klasy, a nie tylko prototyp w definicji klasy. Jeśli definiujesz klasę poza plikiem nagłówkowym, pamiętaj o uwzględnieniu nazwy klasy przed funkcją (`Classname::memberfunction`).
 
 ```cpp
 // LNK2019_MFBV_2.cpp
@@ -49,6 +49,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

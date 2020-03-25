@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4077
 ms.assetid: c2d28805-b33f-41ad-afba-33b3f788c649
-ms.openlocfilehash: fb9684b812e039bd37278f9f27db9225d0131f23
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 90797463595cda07c5b37e1530964b23c656b027
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200289"
 ---
 # <a name="compiler-warning-level-1-c4077"></a>Ostrzeżenie kompilatora (poziom 1) C4077
 
 nieznana opcja check_stack
 
-Stara forma dyrektywy pragma **check_stack** jest używana z nieznanym argumentem. Argument musi być `+`, `-`, `(on)`, `(off)`lub pusty.
+Stara forma **check_stack** pragma jest używana z nieznanym argumentem. Argument musi być `+`, `-`, `(on)`, `(off)`lub pusty.
 
 Kompilator ignoruje pragmę i pozostawia sprawdzanie stosu bez zmian.
 

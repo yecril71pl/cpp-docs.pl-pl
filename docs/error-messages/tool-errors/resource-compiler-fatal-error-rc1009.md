@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1009
 ms.assetid: c377a068-bcc3-4ec4-b725-eb6927e10128
-ms.openlocfilehash: 594294b0a6ad0e8ce3bb9048cad8892607d75729
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a0629ac999b3ac13f9988a8219709ce6f9fe6b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173169"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Błąd krytyczny kompilatora zasobów RC1009
 
-ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko "makro"
+ograniczenie kompilatora: makra są zbyt głęboko zagnieżdżone "makro"
 
-Plik przekracza limit kompilator zasobów dla makra zagnieżdżania. Sprawdź, czy określony plik źródłowy do Zmniejsz głębokość zagnieżdżenia jego makr.
+Plik przekracza limit kompilatora zasobów dla zagnieżdżania makr. Popraw określony plik źródłowy, aby zmniejszyć głębokość zagnieżdżenia jego makr.

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172363"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 
-Klasa generyczna jest zadeklarowany, za pomocą następującej postaci:
+Klasa generyczna jest zadeklarowana przy użyciu następującej postaci:
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,43 +35,43 @@ class-body
 
 ## <a name="remarks"></a>Uwagi
 
-W powyższej składni używane są następujące warunki:
+W powyższej składni są używane następujące terminy:
 
-*Atrybuty*<br/>
-(Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
+*Attributes*<br/>
+Obowiązkowe Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na temat atrybutów i klas atrybutów, zobacz atrybuty.
 
-*class-key*<br/>
-Albo **klasy** lub **typename**
+*klucz klasy*<br/>
+**Klasa** lub **TypeName**
 
-*Typ — parametr-identyfikatory*, rozdzielana przecinkami lista identyfikatorów określających nazwy parametrów typu.
+identyfikatory *parametrów typu*, rozdzielana przecinkami lista identyfikatorów określających nazwy parametrów typu.
 
-*constraint-clauses*<br/>
-Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia dla parametrów typu. Ma postać:
+*Klauzula CONSTRAINT — klauzule*<br/>
+Lista (nie rozdzielona przecinkami) klauzul **WHERE** , które określają ograniczenia dotyczące parametrów typu. Przyjmuje formę:
 
-> **gdzie** *typu parametru identyfikatorów* **:** *lista ograniczeń***...**
+> **gdzie** *Typ-parametru-Identifier* **:** *Constraint-list*  **...**
 
 *Lista ograniczeń*<br/>
 *Klasa lub interfejs*[`,` *...* ]
 
-*accessibility-modifiers*<br/>
-Modyfikatory dostępności dla klasy ogólnej. Dla środowiska wykonawczego Windows, jest dozwolony tylko modyfikator **prywatnej**. Środowisko uruchomieniowe języka wspólnego, są dozwolone Modyfikatory **prywatnej** i **publicznych**.
+*ułatwienia dostępu — Modyfikatory*<br/>
+Modyfikatory dostępności dla klasy generycznej. Dla środowisko wykonawcze systemu Windows jedynym dozwolonym modyfikatorem jest **prywatny**. Dla środowiska uruchomieniowego języka wspólnego dozwolone Modyfikatory są **prywatne** i **publiczne**.
 
-*Identyfikator*<br/>
-Nazwa klasy ogólnej dowolnego prawidłowego identyfikatora C++.
+*identyfikatora*<br/>
+Nazwa klasy generycznej, dowolny prawidłowy C++ identyfikator.
 
 *Modyfikatory*<br/>
-(Opcjonalnie) Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
+Obowiązkowe Dozwolone Modyfikatory to **Sealed** i **abstract**.
 
-*base-list*<br/>
-Lista, która zawiera jedną klasę bazową i wszystkie zaimplementowane interfejsy, wszystkie rozdzielonych przecinkami.
+*Lista podstawowa*<br/>
+Lista zawierająca jedną klasę bazową i wszystkie zaimplementowane interfejsy, które są rozdzielone przecinkami.
 
-*class-body*<br/>
-Treść tej klasy, zawierający pola, funkcje składowe itp.
+*Treść klasy*<br/>
+Treść klasy, zawierająca pola, funkcje członkowskie itd.
 
-*deklaratory*<br/>
-Deklaracje żadnych zmiennych tego typu. Na przykład: `^` *identyfikator*[`,` ...]
+*Deklaratory*<br/>
+Deklaracje wszelkich zmiennych tego typu. Na przykład: *identyfikator*`^`[`,`...]
 
-Można zadeklarować klasy ogólne takich (należy pamiętać, że słowa kluczowego **klasy** mogą być używane zamiast **typename**). W tym przykładzie `ItemType`, `KeyType` i `ValueType` są nieznane typy, które są określone w punkcie, w którym typu. `HashTable<int, int>` jest zbudowany typ ogólny typ `HashTable<KeyType, ValueType>`. Liczba różne typy utworzone można skonstruować z jednego ogólnego typu. Typy utworzone skonstruowany na podstawie klasy ogólne są traktowane jak dowolny inny typ klasy ref.
+Można zadeklarować klasy ogólne, takie jak te (należy zauważyć, że **Klasa** słowo kluczowe może być używana zamiast **TypeName**). W tym przykładzie `ItemType`, `KeyType` i `ValueType` są nieznane typy, które są określone w punkcie, w którym typ. `HashTable<int, int>` jest typem konstruowanym `HashTable<KeyType, ValueType>`typu ogólnego. Wiele różnych skonstruowanych typów można utworzyć z jednego typu ogólnego. Skonstruowane typy zbudowane z klas ogólnych są traktowane jak każdy inny typ klasy referencyjnej.
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-Oba typy wartości (albo wbudowanych typów, takich jak **int** lub **double**, lub wartości zdefiniowanej przez użytkownika typy) i typy referencyjne mogą być używane jako argument typu ogólnego. Składnia w ramach ogólnego definicji jest taka sama niezależnie od tego. Syntaktycznie nieznany typ jest traktowany tak, jakby był to typ odwołania. Jednak środowiska uruchomieniowego jest w stanie określić, jeśli typ faktycznie używany jest typ wartości i Zastąp odpowiedni kod generowany dla bezpośredniego dostępu do elementów członkowskich. Typy wartości używane jako argumenty typu generycznego nie są opakowany i dlatego nie ponieść spadek wydajności, skojarzone z pakowania. Składnią używaną w ramach organu ogólnych powinny być `T^` i `->` zamiast `.`. Jakiekolwiek wykorzystanie [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) dla typu parametru będzie odpowiednio interpretowany przez środowisko uruchomieniowe jako proste tworzenie typu wartości, jeśli argument typu jest typem wartości.
+Oba typy wartości (wbudowane typy, takie jak **int** lub **Double**lub typy wartości zdefiniowane przez użytkownika) i typy referencyjne mogą być używane jako argument typu ogólnego. Składnia w definicji ogólnej jest taka sama niezależnie od. Syntaktycznie nieznany typ jest traktowany tak, jakby był typem referencyjnym. Jednak środowisko uruchomieniowe jest w stanie określić, że jeśli typ rzeczywiście używany jest typem wartości i zastępuje odpowiedni wygenerowany kod dla bezpośredniego dostępu do elementów członkowskich. Typy wartości używane jako argumenty typu generycznego nie są opakowane i dlatego nie pogorszenia wydajności związanej z opakowaniem. Składnia użyta w treści generycznej powinna być `T^` i `->` zamiast `.`. Wszelkie użycie [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) dla parametru typu będzie odpowiednio interpretowane przez środowisko uruchomieniowe jako proste tworzenie typu wartości, jeśli argument typu jest typem wartości.
 
-Można również zadeklarować klasy ogólnej z [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](constraints-on-generic-type-parameters-cpp-cli.md) na typy, które mogą być używane dla parametru typu. W poniższym przykładzie używany dowolny typ dla `ItemType` musi implementować `IItem` interfejsu. Podjęto próbę użycia **int**, na przykład, który nie implementuje `IItem`, wywołałoby błąd w czasie kompilacji, ponieważ argument typu nie spełnia warunków ograniczenia.
+Można również zadeklarować klasę generyczną z [ograniczeniami dotyczącymi parametrów typuC++ogólnego (/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) dla typów, które mogą być używane dla parametru typu. W poniższym przykładzie dowolny typ używany dla `ItemType` musi implementować interfejs `IItem`. Próba użycia **int**, na przykład, który nie implementuje `IItem`, spowoduje błąd czasu kompilacji, ponieważ argument typu nie spełnia ograniczenia.
 
 ```cpp
 // generic_classes_2.cpp
@@ -108,7 +108,7 @@ where ItemType : IItem
 ref class Stack {};
 ```
 
-Klasy ogólne w tej samej przestrzeni nazw nie mogą być przeciążone, tylko zmieniając liczbę lub typy parametrów typu. Jednak jeśli każda klasa znajduje się w innej przestrzeni nazw, one mogą być przeciążone. Na przykład, należy wziąć pod uwagę następujące dwie klasy `MyClass` i `MyClass<ItemType>`, w przestrzeniach nazw `A` i `B`. Dwie klasy, następnie mogą być przeciążone w trzecim C: przestrzeni nazw
+Klasy generyczne w tej samej przestrzeni nazw nie mogą być przeciążone przez zmianę liczby lub typów parametrów typu. Jeśli jednak każda klasa znajduje się w innej przestrzeni nazw, mogą one być przeciążone. Rozważmy na przykład następujące dwie klasy `MyClass` i `MyClass<ItemType>`w przestrzeniach nazw `A` i `B`. Dwie klasy mogą następnie być przeciążone w trzecim obszarze nazw C:
 
 ```cpp
 // generic_classes_3.cpp
@@ -135,7 +135,7 @@ namespace C {
 }
 ```
 
-Klasa bazowa i interfejsy podstawowe nie może mieć parametrów typu. Jednak klasy bazowej może obejmować parametr typu jako argumentu, tak jak w przypadku następujących:
+Klasa bazowa i interfejsy podstawowe nie mogą być parametrami typu. Jednak Klasa bazowa może dotyczyć parametru typu jako argumentu, jak w następujących przypadkach:
 
 ```cpp
 // generic_classes_4.cpp
@@ -147,19 +147,19 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};
 ```
 
-Konstruktory i destruktory są wykonywane raz dla każdego wystąpienia obiektu (standardowe); Konstruktory statyczne są wykonywane raz dla każdego skonstruowanego typu.
+Konstruktory i destruktory są wykonywane raz dla każdego wystąpienia obiektu (jak zwykle); Konstruktory statyczne są wykonywane raz dla każdego skompilowanego typu.
 
 ## <a name="fields-in-generic-classes"></a>Pola w klasach ogólnych
 
-W tej sekcji przedstawiono użycie wystąpienie i pola statyczne w klasach ogólnych.
+W tej sekcji pokazano, jak używać wystąpień i pól statycznych w klasach ogólnych.
 
 ### <a name="instance-variables"></a>Zmienne wystąpienia
 
-Zmienne wystąpienia klasy generycznej może mieć typów i zmiennych inicjatory, które obejmują wszystkie parametry typu z otaczającej klasy.
+Zmienne wystąpień klasy generycznej mogą mieć typy i inicjatory zmiennych, które zawierają parametry typu z otaczającej klasy.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie trzy różne wystąpienia klasy ogólnej MyClass\<ItemType >, są tworzone za pomocą odpowiednie argumenty typu (**int**, **double**i **ciąg**).
+W poniższym przykładzie trzy różne wystąpienia klasy generycznej, MyClass\<ItemType >, są tworzone przy użyciu odpowiednich argumentów typu (**int**, **Double**i **String**).
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -201,13 +201,13 @@ String field = ABC
 
 ## <a name="static-variables"></a>Zmienne statyczne
 
-Po utworzeniu nowego typu ogólnego są tworzone nowe wystąpienia żadnych statycznych zmiennych i wszelkie Konstruktor statyczny dla tego typu jest wykonywany.
+W przypadku tworzenia nowego typu ogólnego tworzone są nowe wystąpienia wszelkich zmiennych statycznych, a każdy Konstruktor statyczny dla tego typu jest wykonywany.
 
-Zmienne statyczne parametrów można używać dowolnego typu z otaczającej klasy.
+Zmienne statyczne mogą używać wszelkich parametrów typu z klasy otaczającej.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, za pomocą pola statyczne i Konstruktor statyczny w obrębie klasy ogólnej.
+Poniższy przykład demonstruje użycie pól statycznych i konstruktora statycznego w obrębie klasy generycznej.
 
 ```cpp
 // generics_static2.cpp
@@ -262,29 +262,29 @@ Static constructor called.
 Test1
 ```
 
-## <a name="methods-in-generic-classes"></a>Metod w klasach ogólnych
+## <a name="methods-in-generic-classes"></a>Metody w klasach ogólnych
 
-Metod w klasach ogólny może być ogólny. metody nieogólnego zostanie niejawnie sparametryzowany przez parametr typu klasy.
+Metody w klasach ogólnych mogą być same ogólnymi; Metody inne niż ogólne będą niejawnie sparametryzowane przez parametr typu klasy.
 
-Następujące reguły specjalne dotyczą metod w klasach ogólnych:
+Poniższe reguły specjalne dotyczą metod w klasach ogólnych:
 
-- Metody klasy ogólne można używać parametrów typu jako parametry, zwracanych typów lub zmiennych lokalnych.
+- Metody w klasach ogólnych mogą używać parametrów typu jako parametrów, typów zwracanych lub zmiennych lokalnych.
 
-- Metod w klasach ogólnych służy otwarte lub zamknięte typy utworzone jako parametry, zwracanych typów lub zmiennych lokalnych.
+- Metody w klasach generycznych mogą używać typów skonstruowanych lub zamkniętych, jako parametrów, typów zwracanych lub zmiennych lokalnych.
 
-### <a name="non-generic-methods-in-generic-classes"></a>Metody Nieogólnej klasy ogólne
+### <a name="non-generic-methods-in-generic-classes"></a>Metody nieogólne w klasach generycznych
 
-Metod w klasach ogólnych, które nie mają typu dodatkowych parametrów są zwykle określane jako nieogólnego mimo, że są one niejawnie sparametryzowany przez otaczającej klasy ogólnej.
+Metody klasy generycznej, które nie mają dodatkowych parametrów typu, są zwykle określane jako nieogólne, chociaż są niejawnie sparametryzowane przez otaczającą klasę generyczną.
 
-Podpis metody nieogólnego może zawierać jeden lub więcej parametrów typu w otaczającej klasy, bezpośrednio lub skonstruowanego typu otwartego. Na przykład:
+Sygnatura metody niegenerycznej może zawierać jeden lub więcej parametrów typu otaczającej klasy, bezpośrednio lub w otwartym typie skonstruowanym. Na przykład:
 
 `void MyMethod(MyClass<ItemType> x) {}`
 
-Treść metody te można również użyć tych parametrów typu.
+Treść tych metod może również używać tych parametrów typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje metodę inną niż ogólna `ProtectData`, wewnątrz klasy ogólnej `MyClass<ItemType>`. Metoda używa parametru typu klasy `ItemType` w jeho signatura w ramach skonstruowanego typu otwartego.
+Poniższy przykład deklaruje metodę nierodzajową, `ProtectData`w klasie generycznej `MyClass<ItemType>`. Metoda używa parametru typu klasy `ItemType` w jego podpisie w otwartym typie skonstruowanym.
 
 ```cpp
 // generics_non_generic_methods1.cpp
@@ -341,7 +341,7 @@ Amount: $123.00**
 
 ## <a name="generic-methods-in-generic-classes"></a>Metody ogólne w klasach ogólnych
 
-Można zadeklarować metody rodzajowe w ogólnych i nieogólnych klasach. Na przykład:
+Można zadeklarować metody generyczne zarówno w klasach ogólnych, jak i nierodzajowych. Na przykład:
 
 ## <a name="example"></a>Przykład
 
@@ -365,13 +365,13 @@ public:
 };
 ```
 
-Metoda nieogólnego jest nadal ogólna, w tym sensie, że jest ona sparametryzowany przez parametr typu klasy, ale go nie ma dodatkowych parametrów typu.
+Metoda niegeneryczna nadal jest ogólna w sensie, że jest sparametryzowane przez parametr typu klasy, ale nie ma żadnych dodatkowych parametrów typu.
 
-Wszystkie typy metod w klasach ogólnych może być ogólny, takie jak statyczne, wystąpienia i metod wirtualnych.
+Wszystkie typy metod w klasach generycznych mogą być ogólne, w tym statyczne, wystąpienia i metody wirtualne.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje deklarowanie i używanie metod ogólnych w obrębie klasy ogólne:
+Poniższy przykład demonstruje deklarowanie i używanie metod ogólnych w klasach ogólnych:
 
 ```cpp
 // generics_generic_method2.cpp
@@ -418,9 +418,9 @@ MyMethod returned: Hello #1
 MyMethod returned: Hello World!
 ```
 
-## <a name="using-nested-types-in-generic-classes"></a>Korzystanie z typów zagnieżdżonych w klasach ogólnych
+## <a name="using-nested-types-in-generic-classes"></a>Używanie zagnieżdżonych typów w klasach ogólnych
 
-Podobnie jak w przypadku zwykłych klas można zadeklarować innych typów wewnątrz klasy ogólnej. Deklaracji klasy zagnieżdżonej jest niejawnie sparametryzowany przez parametry typu w deklaracji klasy zewnętrznego. W związku z tym różne zagnieżdżona klasa jest zdefiniowana dla każdego skonstruowanego typu zewnętrznego. Na przykład w deklaracji
+Podobnie jak w przypadku zwykłych klas, można zadeklarować inne typy wewnątrz klasy generycznej. Deklaracja klasy zagnieżdżonej jest niejawnie sparametryzowana przez parametry typu deklaracji klasy zewnętrznej. W tym celu dla każdego skonstruowanego typu zewnętrznego jest definiowana odrębna Klasa zagnieżdżona. Na przykład, w deklaracji,
 
 ```cpp
 // generic_classes_5.cpp
@@ -433,7 +433,7 @@ ref struct Outer {
 
 Typ `Outer<int>::Inner` nie jest taki sam jak typ `Outer<double>::Inner`.
 
-Podobnie jak w przypadku metod rodzajowych w klasach ogólnych parametrów typu dodatkowe mogą być definiowane dla typu zagnieżdżonego. Jeśli używasz tej samej nazwy parametrów typu w klasie wewnętrznych i zewnętrznych, parametr typu wewnętrznego spowoduje ukrycie parametr typu zewnętrznego.
+Podobnie jak w przypadku metod rodzajowych w klasach ogólnych, można zdefiniować dodatkowe parametry typu dla typu zagnieżdżonego. Jeśli używasz tych samych nazw parametrów typu w klasie wewnętrznej i zewnętrznej, parametr typu wewnętrznego spowoduje ukrycie zewnętrznego parametru typu.
 
 ```cpp
 // generic_classes_6.cpp
@@ -449,11 +449,11 @@ ref class Outer {
 };
 ```
 
-Ponieważ nie istnieje sposób do odwoływania się do parametru typu zewnętrznego, kompilator generuje ostrzeżenie w takiej sytuacji.
+Ponieważ nie ma sposobu odwoływania się do parametru typu zewnętrznego, kompilator generuje ostrzeżenie w tej sytuacji.
 
-Gdy noszą skonstruowany zagnieżdżonych typów rodzajowych, parametr typu dla typu zewnętrznego jest niedostępna na liście parametrów typu dla typu wewnętrznego, mimo że wewnętrzny typu jest niejawnie sparametryzowany przez parametr typu zewnętrznego. W przypadku powyższych będzie nazwa skonstruowanego typu `Outer<int>::Inner<string>`.
+W przypadku konstruowania zagnieżdżonych typów ogólnych, parametr typu dla typu zewnętrznego nie jest uwzględniony na liście parametrów typu dla typu wewnętrznego, chociaż typ wewnętrzny jest niejawnie sparametryzowane przez parametr typu zewnętrznego. W powyższym przypadku nazwa złożonego typu byłaby `Outer<int>::Inner<string>`.
 
-Poniższy przykład ilustruje tworzenie i odczytywanie połączonej listy przy użyciu zagnieżdżonych typów ogólnych klas.
+Poniższy przykład ilustruje Kompilowanie i odczytywanie połączonej listy przy użyciu zagnieżdżonych typów w klasach generycznych.
 
 ## <a name="example"></a>Przykład
 
@@ -546,19 +546,19 @@ Reading nodes:
 0.1
 ```
 
-## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Właściwości, zdarzenia, indeksatorów i operatory w klasach ogólnych
+## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Właściwości, zdarzenia, indeksatory i operatory w klasach ogólnych
 
-- Właściwości, zdarzenia, indeksatorów i operatorów, można używać parametrów typu otaczającej klasy ogólnej jako wartości zwracane, parametry i zmienne lokalne, takie jak czas `ItemType` jest parametrem typu klasy:
+- Właściwości, zdarzenia, indeksatory i operatory mogą używać parametrów typu otaczającej klasy generycznej jako wartości zwracanych, parametrów lub zmiennych lokalnych, na przykład gdy `ItemType` jest parametrem typu klasy:
 
     ```cpp
     public ItemType MyProperty {}
     ```
 
-- Właściwości, zdarzenia, indeksatorów i operatory nie mogą się być parametryzowane.
+- Właściwości, zdarzenia, indeksatory i operatory nie mogą być sparametryzowane.
 
 ## <a name="example"></a>Przykład
 
-W przykładzie pokazano deklaracje właściwości wystąpienia w ramach klasy ogólnej.
+Ten przykład przedstawia deklaracje właściwości instance w klasie generycznej.
 
 ```cpp
 // generics_generic_properties1.cpp
@@ -598,7 +598,7 @@ John, 234
 
 ## <a name="example"></a>Przykład
 
-W kolejnym przykładzie pokazano klasę ogólną ze zdarzeniem.
+W następnym przykładzie pokazano klasę generyczną ze zdarzeniem.
 
 ```cpp
 // generics_generic_with_event.cpp
@@ -659,13 +659,13 @@ int main() {
 }
 ```
 
-## <a name="generic-structs"></a>Struktury ogólne
+## <a name="generic-structs"></a>Struktury generyczne
 
-Zasady deklarowanie i używanie struktur ogólnego są takie same jak w przypadku klas ogólnych, z wyjątkiem różnic, o których wspomniano w dokumentacji języka Visual C++.
+Reguły deklarowania i używania struktur generycznych są takie same jak dla klas ogólnych, z wyjątkiem różnic zanotowanych w odwołaniu do C++ języka wizualnego.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje to struktura generyczna `MyGenStruct`, z jednym polem `myField`, a następnie przypisuje wartości o różnych typach (**int**, **double**, `String^`) do tego pola.
+Poniższy przykład deklaruje strukturę generyczną `MyGenStruct`, z jednym polem, `myField`i przypisuje wartości różnych typów (**int**, **Double**, `String^`) do tego pola.
 
 ```cpp
 // generics_generic_struct1.cpp
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

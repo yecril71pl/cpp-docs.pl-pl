@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4819
+title: Ostrzeżenie kompilatora (poziom 1) C4819
 ms.date: 04/08/2019
 f1_keywords:
 - C4819
 helpviewer_keywords:
 - C4819
 ms.assetid: c0316e85-249c-414d-9df0-622d077c6bc2
-ms.openlocfilehash: d43b49d473e7113d8cdfb89aaa6e93045e13d0f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9bf60e8eec0ee6416bda3323583f3e056fce1a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174885"
 ---
-# <a name="compiler-warning-level-1-c4819"></a>Kompilator ostrzeżenie (poziom 1) C4819
+# <a name="compiler-warning-level-1-c4819"></a>Ostrzeżenie kompilatora (poziom 1) C4819
 
-> Plik zawiera znak, który nie może być przedstawiony w bieżącej stronie kodowej (*numer*). Zapisz plik w formacie Unicode, aby zapobiec utracie danych.
+> Plik zawiera znak, który nie może być przedstawiony w bieżącej stronie kodowej (*Number*). Zapisz plik w formacie Unicode, aby zapobiec utracie danych.
 
-C4819 występuje podczas kompilowania pliku źródłowego ANSI w systemie przy użyciu strony kodowej, który nie może reprezentować wszystkie znaki w pliku.
+C4819 występuje podczas kompilowania pliku źródłowego ANSI w systemie przy użyciu strony kodowej, która nie może reprezentować wszystkich znaków w pliku.
 
-Istnieje kilka sposobów, aby rozwiązać C4819. Prostym sposobem jest usunięcie wskazuje niedozwolony znak, jeśli nie potrzebujesz go, na przykład, jeśli znajduje się w komentarzu. Systemowa strona kodowa można ustawić w Panelu sterowania, które obsługuje zestaw znaków wykorzystywany przez kod źródłowy. Unicode można użyć [sekwencje unikowe](/cpp/c-language/escape-sequences) Aby utworzyć znaki lub ciągi, korzystających z podstawowych ANSI znak zestawu w kodzie źródłowym. Na koniec można zapisać pliku w formacie Unicode, za pomocą podpisu, znany także jako znacznik kolejności bajtów (BOM).
+Istnieje kilka sposobów na rozwiązanie C4819. Jeden prosty sposób polega na usunięciu znaku powodującego problemy, jeśli nie jest on potrzebny, na przykład jeśli jest w komentarzu. Można ustawić stronę kodową systemu w panelu sterowania na taką, która obsługuje zestaw znaków używany przez kod źródłowy. [Sekwencje unikowe](/cpp/c-language/escape-sequences) Unicode mogą służyć do tworzenia znaków lub ciągów, które używają tylko podstawowego znaku ANSI w kodzie źródłowym. Na koniec można zapisać plik w formacie Unicode za pomocą podpisu, znanego również jako znacznik kolejności bajtów (BOM).
 
-Aby zapisać plik w formacie Unicode, w programie Visual Studio, wybierz opcję **pliku** > **Zapisz jako**. W **Zapisz plik jako** okna dialogowego Wybierz listę rozwijaną na **Zapisz** przycisk, a następnie wybierz **Zapisz z kodowaniem**. Jeśli zapiszesz tę samą nazwę pliku, może być konieczne upewnij się, że chcesz zastąpić ten plik. W **zaawansowane opcje zapisywania** okno dialogowe, wybierz kodowanie, który może reprezentować wszystkie znaki w pliku — na przykład **Unicode (UTF-8 z podpisem) - strona kodowa 65001**— a następnie wybierz  **OK**.
+Aby zapisać plik w formacie Unicode, w programie Visual Studio wybierz **plik** > **Zapisz jako**. W oknie dialogowym **Zapisz plik jako** wybierz listę rozwijaną na przycisku **Zapisz** , a następnie wybierz pozycję **Zapisz z kodowaniem**. Jeśli zapiszesz w tej samej nazwie pliku, może być konieczne potwierdzenie, że chcesz zastąpić plik. W oknie dialogowym **Zaawansowane opcje zapisywania** wybierz kodowanie, które może reprezentować wszystkie znaki w pliku — na przykład **Unicode (UTF-8 z podpisem)-strona kodowa 65001**, a następnie wybierz **przycisk OK**.

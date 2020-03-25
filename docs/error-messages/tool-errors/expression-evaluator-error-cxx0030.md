@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0030
 - CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-ms.openlocfilehash: 1e52b238905fba5c310a89377b81548a1c6b5784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 477ec31d18924e91baf2d8b7b732bc7a50eee53b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195620"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Błąd CXX0030 programu Expression Evaluator
 
-Wyrażenie nie evaluatable
+wyrażenie nie jest do oceny
 
-Ewaluator wyrażeń debugera nie można uzyskać wartości dla wyrażenia, jak zostały napisane. Jedną z prawdopodobnych przyczyn jest to, że wyrażenie odwołuje się do pamięci, która znajduje się poza przestrzeni adresowej programu (wyłuskanie wskaźnika o wartości null jest jednym z przykładów). Windows nie zezwala na dostęp do pamięci, która znajduje się poza przestrzeni adresowej programu.
+Ewaluatora wyrażeń w debugerze nie może uzyskać wartości dla wyrażenia jako zapisania. Jedną z możliwych przyczyn jest to, że wyrażenie odwołuje się do pamięci, która znajduje się poza przestrzenią adresową programu (na przykład można wycofać wskaźnik o wartości null). System Windows nie zezwala na dostęp do pamięci spoza przestrzeni adresowej programu.
 
-Możesz chcieć Napisz ponownie wyrażenie przy użyciu nawiasów można określić kolejność oceny.
+Możesz chcieć ponownie napisać wyrażenie przy użyciu nawiasów, aby kontrolować kolejność obliczeń.
 
-Ten błąd jest taka sama jak CAN0030.
+Ten błąd jest identyczny z CAN0030.

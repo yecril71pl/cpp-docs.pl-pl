@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209789"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Przechodzenie testów zgodności z OLE DB
 
-Aby dostawców bardziej spójną, Data Access SDK zawiera zestaw testów zgodności z OLE DB. Testy Sprawdź wszystkie aspekty dostawcą i zapewniają wystarczającą pewność, że dostawca funkcji jako oczekiwana. Testów zgodności z OLE DB można znaleźć na Microsoft Data Access SDK. Ta sekcja koncentruje się na elementy, które należy wykonać, aby pomyślnie przejść testy zgodności. Aby uzyskać informacje na temat uruchamiania testów zgodności z OLE DB zobacz zestaw SDK.
+Aby zapewnić bardziej spójność dostawców, zestaw SDK dostępu do danych zawiera zestaw OLE DB testów zgodności. Testy sprawdzają wszystkie aspekty dostawcy i zapewniają gwarancję, że dostawca działa zgodnie z oczekiwaniami. Testy zgodności OLE DB można znaleźć w zestawie SDK dostępu do danych firmy Microsoft. Ta sekcja koncentruje się na czynnościach, które należy wykonać, aby przekazać testy zgodności. Aby uzyskać informacje o uruchamianiu testów zgodności OLE DB, zobacz zestaw SDK.
 
 ## <a name="running-the-conformance-tests"></a>Uruchamianie testów zgodności
 
-W Visual C++ 6.0 szablony dostawców OLE DB dodano wiele funkcji podłączania pozwala sprawdzić właściwości i wartości. Większość tych funkcji dodanych w odpowiedzi na testów zgodności.
+W programie C++ Visual 6,0 szablony dostawcy OLE DB dodaliśmy wiele funkcji podłączania, aby umożliwić sprawdzanie wartości i właściwości. Większość z tych funkcji została dodana w odpowiedzi na testy zgodności.
 
 > [!NOTE]
-> Musisz dodać kilka funkcji sprawdzania poprawności dla dostawcy do przekazania testów zgodności z OLE DB.
+> Należy dodać kilka funkcji walidacji dla dostawcy, aby przekazać OLE DB testy zgodności.
 
-Ten dostawca wymaga dwóch procedur weryfikacji. Pierwszy procedury `CRowsetImpl::ValidateCommandID`, jest częścią klasy zestawu wierszy. Wywoływana podczas tworzenia zestawu wierszy za pomocą szablonów dostawcy. W przykładzie użyto tej procedury, aby poinformować użytkowników nie obsługuje indeksów. Pierwsze wywołanie jest `CRowsetImpl::ValidateCommandID` (należy pamiętać, że dostawca używa `_RowsetBaseClass` typedef dodany do mapy interfejsu dla `CCustomRowset` w [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md), więc nie trzeba wpisywać tego długi wiersz szablonu argumenty). Następnie zwraca DB_E_NOINDEX, jeśli parametr indeksu nie jest wartością NULL (oznacza to, że użytkownik chce użyć indeksu na NAS). Aby uzyskać więcej informacji na temat identyfikatorów poleceń, zobacz specyfikację OLE DB i poszukaj `IOpenRowset::OpenRowset`.
+Ten dostawca wymaga dwóch procedur walidacji. Pierwsza procedura, `CRowsetImpl::ValidateCommandID`, jest częścią klasy zestawu wierszy. Jest on wywoływany podczas tworzenia zestawu wierszy przez szablony dostawców. Przykład korzysta z tej procedury, aby poinformować odbiorców, że nie obsługuje indeksów. Pierwsze wywołanie ma `CRowsetImpl::ValidateCommandID` (należy pamiętać, że Dostawca używa `_RowsetBaseClass` typedef dodanego w mapie interfejsu dla `CCustomRowset` w ramach [obsługi dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md), więc nie trzeba pisać tego długiego wiersza argumentów szablonu). Następnie Zwróć DB_E_NOINDEX, jeśli parametr index nie ma wartości NULL (oznacza to, że odbiorca chce użyć indeksu w Stanach Zjednoczonych). Aby uzyskać więcej informacji o identyfikatorach poleceń, zobacz specyfikację OLE DB i poszukaj `IOpenRowset::OpenRowset`.
 
-Poniższy kod jest `ValidateCommandID` procedurze weryfikacji:
+Następujący kod jest `ValidateCommandID` procedury walidacji:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +48,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-Wywołanie szablony dostawcy `OnPropertyChanged` metody zawsze wtedy, gdy ktoś zmieni się właściwość w grupie DBPROPSET_ROWSET. Jeśli chcesz obsługiwać właściwości dla innych grup, możesz dodać je do odpowiedniego obiektu (czyli kontroli DBPROPSET_SESSION go w programie `CCustomSession` klasy).
+Szablony dostawcy wywołują metodę `OnPropertyChanged`, gdy ktoś zmieni właściwość w grupie DBPROPSET_ROWSET. Aby obsłużyć właściwości innych grup, należy dodać je do odpowiedniego obiektu (to jest, DBPROPSET_SESSION sprawdzenia w klasie `CCustomSession`).
 
-Ten kod najpierw sprawdza, czy właściwość jest połączone z innym. Jeśli właściwość jest powiązane, ustawia właściwość DBPROP_BOOKMARKS `True`. Dodatek C specyfikacji OLE DB zawiera informacje dotyczące właściwości. Te informacje również informuje, czy właściwość jest powiązany inny.
+Kod najpierw sprawdza, czy właściwość jest połączona z inną. Jeśli właściwość jest łańcucha, ustawia właściwość DBPROP_BOOKMARKS na `True`. Dodatek C specyfikacji OLE DB zawiera informacje na temat właściwości. Informacje te informują również o tym, czy właściwość jest łańcuchem do innej.
 
-Można także dodać `IsValidValue` rutynowej w kodzie. Wywołanie szablony `IsValidValue` podczas próby ustawienia właściwości. Czy zastąpić tę metodę, jeśli potrzebujesz dodatkowego przetwarzania podczas ustawiania wartości właściwości. Może mieć jedną z następujących metod dla każdego zestawu właściwości.
+Możesz również dodać do kodu procedurę `IsValidValue`. Podczas próby ustawienia właściwości `IsValidValue` wywołanie szablonów. Tę metodę należy zastąpić, jeśli wymagane jest dodatkowe przetwarzanie podczas ustawiania wartości właściwości. Dla każdego zestawu właściwości można mieć jedną z tych metod.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

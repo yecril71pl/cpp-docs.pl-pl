@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171323"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -59,7 +59,7 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*path*<br/>
 Ścieżka pliku lub katalogu.
 
 *wyst*<br/>
@@ -67,7 +67,7 @@ Ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub jest niedostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia `errno` tę samą wartość.
+Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub jest niedostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia `errno` na tę samą wartość.
 
 |errno wartość|Warunek|
 |-|-|
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_n
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia z plikami funkcja **_access_s** określa, czy określony plik istnieje i czy można uzyskać do niego dostęp zgodnie z określoną wartością *trybu*. Gdy jest używany z katalogami, **_access_s** określa, czy istnieje określony katalog. W systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
+W przypadku użycia z plikami funkcja **_access_s** określa, czy określony plik istnieje i czy można uzyskać do niego dostęp zgodnie z określoną wartością *trybu*. W przypadku używania z katalogami, **_access_s** określa, czy istnieje określony katalog. W systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
 
 |wartość trybu|Sprawdza plik dla|
 |----------------|---------------------|
@@ -90,7 +90,7 @@ W przypadku użycia z plikami funkcja **_access_s** określa, czy określony pli
 
 Uprawnienie do odczytu lub zapisu pliku jest za mało, aby można było otworzyć plik. Na przykład, jeśli plik jest zablokowany przez inny proces, może nie być dostępny, nawet jeśli **_access_s** zwraca 0.
 
-**_waccess_s** to dwubajtowa wersja **_access_s**, gdzie argument *Path* dla **_waccess_s** jest ciągiem znaków dwubajtowych. W przeciwnym razie **_waccess_s** i **_access_s** zachowują się identycznie.
+**_waccess_s** to wersja znaku dwubajtowego **_access_s**, gdzie argument *ścieżki* **_waccess_s** jest ciągiem znaków dwubajtowych. W przeciwnym razie **_waccess_s** i **_access_s** zachowują się identycznie.
 
 Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` na `EINVAL` i zwracają `EINVAL`.
 
@@ -104,8 +104,8 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wa
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_access_s**|\<io.h>|\<errno.h>|
-|**_waccess_s**|\<WCHAR. h > lub \<IO. h >|\<errno.h>|
+|**_access_s**|\<we/wy >|\<errno. h >|
+|**_waccess_s**|\<WCHAR. h > lub \<we/wy >|\<errno. h >|
 
 ## <a name="example"></a>Przykład
 
@@ -151,11 +151,11 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat Functions](stat-functions.md)
+[_stat, funkcje _wstat](stat-functions.md)

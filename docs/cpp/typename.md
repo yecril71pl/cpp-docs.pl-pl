@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160687"
 ---
 # <a name="typename"></a>typename
 
-W definicjach szablonów stanowi wskazówkę kompilator, że typem jest nieznany identyfikator. W przypadku list parametrów szablonu służy do określania parametrów typu.
+W obszarze definicje szablonu program dostarcza wskazówkę do kompilatora, że nieznany identyfikator jest typem. Na listach parametrów szablonu służy do określania parametru typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,9 +25,9 @@ typename identifier;
 
 ## <a name="remarks"></a>Uwagi
 
-This — słowo kluczowe należy użyć, jeśli nazwa w definicji szablonu jest kwalifikowana nazwa, która jest zależna od argumentu szablonu; jest to opcjonalne, jeśli kwalifikowana nazwa nie jest zależny. Aby uzyskać więcej informacji, zobacz [szablony i rozpoznawanie nazw](../cpp/templates-and-name-resolution.md).
+Tego słowa kluczowego należy użyć, jeśli nazwa w definicji szablonu jest kwalifikowana nazwa, która jest zależna od argumentu szablonu; jest opcjonalne, jeśli kwalifikowana nazwa nie jest zależna. Aby uzyskać więcej informacji, zobacz [Szablony i rozpoznawanie nazw](../cpp/templates-and-name-resolution.md).
 
-**Element TypeName** mogą być używane przez dowolny typ w dowolnym miejscu w deklaracji szablonu lub definicji. Nie są dozwolone na liście klas bazowych, chyba że jako argument szablonu dla klasy bazowej szablonu.
+**Właściwość TypeName** może być używana przez dowolny typ dowolnego miejsca w deklaracji lub definicji szablonu. Nie jest to dozwolone na liście klas bazowych, chyba że jako argument szablonu dla klasy podstawowej szablonu.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename** — słowo kluczowe może również służyć zamiast **klasy** parametr szablonu na liście. Na przykład poniższe instrukcje są semantycznie równoważne:
+Można również użyć słowa kluczowego **TypeName** zamiast **klasy** na listach parametrów szablonu. Na przykład następujące instrukcje są semantycznie równoważne:
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

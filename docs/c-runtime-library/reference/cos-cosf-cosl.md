@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942835"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170258"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -60,7 +60,7 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -70,7 +70,7 @@ Cosinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
 |QNAN, IND|brak|**_DOMAIN**|
-|± INF|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|± INF|**Nieprawidłowy**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -80,7 +80,7 @@ Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia funkc
 
 |Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|---------------------|-|
-|**cos**, **cosh —** , **cosf —**|\<math.h>|\<cmath > lub \<Math. h >|
+|**cos**, **cosh —** , **cosf —**|\<> Math. h|\<cmath > lub \<Math. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -88,7 +88,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład w [Sin, SINF —, sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189528"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Konwertuje `BSTR` wartość `char *`.
+Konwertuje wartość `BSTR` na `char *`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ Zmienna BSTR.
 
 ## <a name="remarks"></a>Uwagi
 
-**Convertbstrtostring —** przydziela ciąg, należy usunąć.
+**ConvertBSTRToString** przypisuje ciąg, który należy usunąć.
 
 ## <a name="example"></a>Przykład
 
@@ -60,14 +60,14 @@ BSTR text: Test
 char * text: Test
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<comutil.h >
+**Nagłówek:** \<comutil. h >
 
-**Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)
+**Lib:** comsuppw. lib lub comsuppwd. lib (patrz [/Zc: Wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)

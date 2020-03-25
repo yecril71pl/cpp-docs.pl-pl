@@ -8,28 +8,28 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168840"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Obsługa formatu Unicode w kompilatorze i konsolidatorze
 
-Większość narzędzi kompilacji Visual C++ obsługuje Unicode w danych wejściowych i wyjściowych.
+Większość narzędzi C++ do tworzenia wizualizacji obsługuje dane wejściowe i wyjściowe w formacie Unicode.
 
 ## <a name="filenames"></a>Nazwy plików
 
-Nazwy plików określone w wierszu polecenia lub w dyrektywach kompilatora (takich jak `#include`) może zawierać znaków Unicode.
+Nazwy plików określone w wierszu polecenia lub w dyrektywach kompilatora (takie jak `#include`) mogą zawierać znaki Unicode.
 
 ## <a name="source-code-files"></a>Pliki kodu źródłowego
 
-Znaki Unicode są obsługiwane w identyfikatorach, makrach, literałach ciągów i znakowe oraz w komentarzach.  Uniwersalne nazwy znaków są również obsługiwane.
+Znaki Unicode są obsługiwane w identyfikatorach, makrach, literałach ciągów i znakach oraz w komentarzach.  Obsługiwane są również uniwersalne nazwy znaków.
 
-Unicode można wprowadzić do pliku kodu źródłowego w formie następującego kodowania:
+Unicode może być wejściowy do pliku kodu źródłowego w następujących kodowaniu:
 
-- Little endian UTF-16 z lub bez znacznika kolejności bajtów (BOM)
+- UTF-16 little endian z lub bez znacznika kolejności bajtów (BOM)
 
 - Big endian UTF-16 z lub bez BOM
 
@@ -37,16 +37,16 @@ Unicode można wprowadzić do pliku kodu źródłowego w formie następującego 
 
 ## <a name="output"></a>Dane wyjściowe
 
-Podczas kompilacji kompilator wyprowadza diagnostykę do konsoli w UTF-16.  Znaki, które mogą być wyświetlane w konsoli są zależne od właściwości okna konsoli.  Dane wyjściowe kompilatora przekierowane do pliku jest bieżąca strona kodowa konsoli ANSI.
+Podczas kompilacji kompilator wyprowadza diagnostykę do konsoli w UTF-16.  Znaki, które mogą być wyświetlane w konsoli programu, zależą od właściwości okna konsoli.  Wyjście kompilatora przekierowane do pliku znajduje się w bieżącej stronie kodowej konsoli ANSI.
 
 ## <a name="linker-response-files-and-def-files"></a>Pliki odpowiedzi konsolidatora i. Pliki DEF
 
-Pliki odpowiedzi i pliki DEF mogą być UTF-16 z BOM lub ANSI.
+Pliki odpowiedzi i DEF plików mogą być w formacie UTF-16 z BOM lub ANSI.
 
-## <a name="asm-and-cod-dumps"></a>zrzuty plików .asm i .cod
+## <a name="asm-and-cod-dumps"></a>zrzuty. ASM i. COD
 
-zrzuty plików .asm i .cod są w formacie ANSI, domyślnie dla zapewnienia zgodności z MASM. Użyj [/fau](fa-fa-listing-file.md) do wyprowadzenia UTF-8. Należy pamiętać, że jeśli określisz **/FAS**, zmieszane źródło tylko zostanie zostanie wydrukowane bezpośrednio i może wyglądać na zniekształcone, na przykład jeśli kod źródłowy jest UTF-8, a nie określił **/FAsu**.
+zrzuty. ASM i. COD są domyślnie w standardzie ANSI w celu zapewnienia zgodności z MASM. Użyj [/FAU](fa-fa-listing-file.md) do wyprowadzania UTF-8. Należy pamiętać, że w przypadku określenia **/FAS**Źródło wymieszaniu zostanie bezpośrednio wydrukowane i może być zniekształcone, na przykład jeśli kod źródłowy to UTF-8 i nie określono **/FAsu**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](../building-on-the-command-line.md)

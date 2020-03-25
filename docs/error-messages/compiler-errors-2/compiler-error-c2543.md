@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2543
 ms.assetid: 6e4d2d03-ef34-4514-92fe-763543a71fa8
-ms.openlocfilehash: f4a36aa14884f1d666a4093c577d9479b8931569
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993a715a4c63f6a743719ff351107d59239d33cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174669"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202556"
 ---
 # <a name="compiler-error-c2543"></a>Błąd kompilatora C2543
 
-Oczekiwano "]" dla operatora "[]"
+Oczekiwano znaku "]" dla operatora "[]"
 
-Subscripting operator brakuje lewy nawias kwadratowy.
+W operatorze indeksu dolnego brakuje lewego nawiasu.
 
-Ten błąd może być spowodowany przez rozwinięciu makra.
+Ten błąd może być spowodowany przez rozwinięcie makra.

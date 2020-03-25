@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187508"
 ---
 # <a name="virtual-c"></a>wirtualne (C++)
 
-**Wirtualnego** — słowo kluczowe deklaruje funkcję wirtualną lub wirtualnej klasy bazowej.
+**Wirtualne** słowo kluczowe deklaruje funkcję wirtualną lub wirtualną klasę bazową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,24 +30,24 @@ virtual [access-specifier] base-class-name
 
 #### <a name="parameters"></a>Parametry
 
-*Specyfikatory typów*<br/>
-Określa typ zwracany funkcja wirtualna elementu członkowskiego.
+*Specyfikatory typu*<br/>
+Określa zwracany typ wirtualnej funkcji członkowskiej.
 
-*member-function-declarator*<br/>
+*member-Function-deklarator*<br/>
 Deklaruje funkcję członkowską.
 
-*access-specifier*<br/>
-Określa poziom dostępu do klasy bazowej, **publicznych**, **chronione** lub **prywatnej**. Może znajdować się przed lub po **wirtualnego** — słowo kluczowe.
+*specyfikator dostępu*<br/>
+Definiuje poziom dostępu do klasy podstawowej, **Public**, **Protected** lub **Private**. Może pojawić się przed lub po słowie kluczowym **Virtual** .
 
-*base-class-name*<br/>
-Określa typ klasy zadeklarowanej wcześniej.
+*Nazwa klasy podstawowej*<br/>
+Identyfikuje poprzednio zadeklarowany typ klasy.
 
 ## <a name="remarks"></a>Uwagi
 
-Zobacz [funkcji wirtualnych](../cpp/virtual-functions.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [funkcje wirtualne](../cpp/virtual-functions.md) .
 
-Zobacz też następujące słowa kluczowe: [klasy](../cpp/class-cpp.md), [prywatnej](../cpp/private-cpp.md), [publicznych](../cpp/public-cpp.md), i [chronione](../cpp/protected-cpp.md).
+Zobacz również następujące słowa kluczowe: [Klasa](../cpp/class-cpp.md), [prywatna](../cpp/private-cpp.md), [publiczna](../cpp/public-cpp.md)i [chroniona](../cpp/protected-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

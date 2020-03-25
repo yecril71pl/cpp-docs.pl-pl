@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19e3f820b5bd7fdd8eac2f7b5a96fb5923ae0b92
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160565"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183803"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Błąd narzędzi konsolidatora LNK1245
 
-Nieprawidłowy podsystem "podsystemu" określone; / SUBSYSTEM musi być WINDOWS, WINDOWSCE lub CONSOLE
+określono nieprawidłowy podsystem "Subsystem"; /SUBSYSTEM musi być WINDOWS, WINDOWSCE lub KONSOLą
 
-[/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) został użyty do kompilowania obiektu, ale jeden z następujących warunków true:
+do skompilowania obiektu użyto [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) , a jeden z następujących warunków został spełniony:
 
-- Został zdefiniowany punkt wejścia niestandardowe ([/Entry](../../build/reference/entry-entry-point-symbol.md)), w taki sposób, że konsolidator nie można wywnioskować podsystemu.
+- Zdefiniowano niestandardowy punkt wejścia ([/entry](../../build/reference/entry-entry-point-symbol.md)), który nie może wywnioskować podsystemu przez konsolidator.
 
-- Wartość został przekazany do [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcji konsolidatora, która nie jest prawidłowa dla obiektów w/CLR.
+- Wartość została przeniesiona do opcji konsolidatora [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) , która nie jest prawidłowa dla obiektów/CLR.
 
-Dla obu sytuacjach rozwiązania jest Określ prawidłową wartość, aby opcja/Subsystem — opcja konsolidatora.
+W obu przypadkach rozdzielczość jest określona dla opcji konsolidatora/SUBSYSTEM.

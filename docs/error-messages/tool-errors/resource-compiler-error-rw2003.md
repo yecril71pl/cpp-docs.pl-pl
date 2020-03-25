@@ -6,55 +6,55 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60e813fff46ebc015f281dfed99d2916ca0eb4bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396787"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190615"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Błąd kompilatora zasobów RW2003
 
-Błąd generowania
+Błąd generacji
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. **Błąd: Mapa bitowa plik z pliku zasobów nie jest w formacie 3.00**
+1. **Błąd: plik mapy bitowej nie ma formatu 3,00**
 
-   Nie można używać mapy bitowej w formacie Windows w wersji 2.x pliki w wersji 3.x zasobów. Mapa bitowa musi być narysowany ponownie lub przekonwertowane na 3.x format.
+   Mapy bitowe używające formatu systemu Windows w wersji 2. x nie mogą być używane w plikach zasobów w wersji 3. x. Mapa bitowa musi być odświeżana lub konwertowana na format 3. x.
 
-1. **Błąd: Stary DIB w nazwie zasobu. Przekazuj SDKPAINT**
+1. **Błąd: stary format DIB w nazwie zasobu. Przekazuj za poorednictwem SDKPAINT**
 
-   Niezależnie od mapy bitowej urządzenia (DIB) w określonym zasobie nie jest zgodny z formatem Windows 3.0. Mapa bitowa musi być narysowany ponownie lub przekonwertowane na 3.x format.
+   Mapa bitowa niezależna od urządzenia (DIB) w określonym zasobie jest niezgodna z formatem systemu Windows 3,0. Mapa bitowa musi być odświeżana lub konwertowana na format 3. x.
 
-1. **Błąd: Zasób — Nazwa pliku zasobu nie jest w formacie 3.00**
+1. **Błąd: nazwa zasobu pliku zasobu nie jest w formacie 3,00**
 
-   Ikony lub kursora w określonym zasobie używany format z poprzedniej wersji systemu Windows. Ikony lub kursor musi odświeżać lub konwertowana na format 3.x.
+   Ikona lub kursor w określonym zasobie używał formatu z poprzedniej wersji systemu Windows. Ikona lub kursor muszą zostać narysowane lub przekonwertowane na format 3. x.
 
 1. **Nieznany format nagłówka DIB**
 
-   Nagłówek mapa bitowa nie jest BITMAPCOREHEADER lub BITMAPINFOHEADER struktury.
+   Nagłówek mapy bitowej nie jest strukturą BITMAPCOREHEADER ani BITMAPINFOHEADER.
 
 1. **Nie można zainicjować informacji o symbolach**
 
-   Ten błąd występuje tylko w języku Visual C++. Prawdopodobna przyczyna to, że zawiera zbyt wiele otwartych plików, lub nie można otworzyć lub zapisać pliki danych potrzebne do importowania symboli w skrypcie języka Visual C++. Visual C++ podejmuje próbę utworzenia tych plików w katalogu określonym przez **TMP** zmiennej środowiskowej lub bieżącego katalogu, jeśli nie określono.
+   Ten błąd występuje tylko w wizualizacji C++. Prawdopodobną przyczyną jest zbyt wiele otwartych plików lub nie można otwierać ani zapisywać plików danych wymaganych do wizualizacji C++ w celu zaimportowania symboli w skrypcie. Wizualizacja C++ próbuje utworzyć te pliki w katalogu określonym przez zmienną środowiskową **tmp** lub bieżącym katalogu, jeśli żaden nie został określony.
 
 1. **Nie można zapisać informacji o symbolach**
 
-   Ten błąd występuje tylko w języku Visual C++. Prawdopodobna przyczyna to, że zawiera zbyt wiele otwartych plików, lub nie można zamknąć lub zapis w plikach danych potrzebne do importowania symboli w skrypcie języka Visual C++. Visual C++ podejmują próbę użycia tych plików w katalogu określonym przez **TMP** zmiennej środowiskowej lub bieżącego katalogu, jeśli nie określono.
+   Ten błąd występuje tylko w wizualizacji C++. Prawdopodobną przyczyną jest zbyt wiele otwartych plików lub nie można zamknąć ani zapisywać plików danych wymaganych do wizualizacji C++ w celu zaimportowania symboli w skrypcie. Wizualizacja C++ próbuje użyć tych plików w katalogu określonym przez zmienną środowiskową **tmp** lub bieżącym katalogu, jeśli żaden nie został określony.
 
-1. **Mapa bitowa plik zasobu nie jest w formacie 2.03**
+1. **Plik zasobów pliku mapy bitowej nie jest w formacie 2,03**
 
-   Mapy bitowej używany format starszych niż w wersji 2.03. Mapa bitowa musi być przekonwertowany lub ponownie, wystawione przy użyciu formatu dla wersji 3.00 lub nowszej.
+   Mapa bitowa używała formatu wcześniejszego niż wersja 2,03. Mapa bitowa musi być konwertowana lub ponownie narysowana przy użyciu formatu w wersji 3,00 lub nowszej.
 
-1. **Zasób za duży**
+1. **Zasób jest zbyt duży**
 
-   Dla Windows 3.1 zasobu nie może przekroczyć około 65000 bajtów. Jeśli zasób jest, następnie nie można skompilować je przy użyciu języka Visual C++ i kompilator zasobów wiersza polecenia. To ograniczenie nie ma zastosowania do kursorów, ikony, mapy bitowe lub inne zasoby oparte na plikach.
+   W przypadku systemu Windows 3,1 zasób nie może przekroczyć około 65000 bajtów. Jeśli zasób nie będzie można skompilować za pomocą wizualizacji C++ lub kompilatora zasobów wiersza polecenia. Ten limit nie dotyczy kursorów, ikon, map bitowych ani innych zasobów opartych na plikach.
 
-1. **Plik zasobu nie jest w formacie 3.00**
+1. **Plik zasobów nie jest w formacie 3,00**
 
-   Kursor lub ikonę wcześniej niż w wersji 3.00 używany format. Zasób musi być przekonwertowany lub ponownie, wystawione przy użyciu formatu dla wersji 3.00 lub nowszej.
+   Kursor lub ikona używały formatu starszej niż wersja 3,00. Zasób musi zostać skonwertowany lub ponownie narysowany przy użyciu formatu w wersji 3,00 lub nowszej.
 
 1. **Nie można otworzyć pliku tymczasowego**
 
-   Nie można otworzyć pliku tymczasowego zasobu kompilatora/Visual C++. Prawdopodobna przyczyna to, że katalog nie istnieje albo nie masz uprawnień do zapisu dla katalogu. Zasób kompilatora/Visual C++ podejmują próbę użycia tych plików w katalogu określonym przez **TMP** zmiennej środowiskowej lub bieżącego katalogu, jeśli nie określono.
+   Kompilator zasobów/Wizualizacja C++ nie mogła otworzyć pliku tymczasowego. Prawdopodobną przyczyną jest to, że nie masz uprawnień do zapisu w katalogu lub katalog nie istnieje. Kompilator zasobów/Wizualizacja C++ próbuje użyć tych plików w katalogu określonym przez zmienną środowiskową **tmp** lub bieżącym katalogu, jeśli żaden nie został określony.

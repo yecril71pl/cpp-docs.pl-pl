@@ -13,45 +13,45 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e621db339102f1f40030bc7826d383d306a39be8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190771"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Przekazywanie argumentów i konwencje nazewnictwa
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Microsoft C++ kompilatory umożliwiają określanie konwencje dotyczących przekazywania argumentów i zwracanie wartości między funkcjami a obiektami wywołującymi. Nie wszystkie konwencje są dostępne na wszystkich obsługiwanych platformach, a niektóre konwencje używają implementacji specyficznych dla platformy. W większości przypadków słowa kluczowe lub przełączniki kompilatora, które określają nieobsługiwaną Konwencję na konkretnej platformie są ignorowane, a domyślna Konwencja platformy jest używana.
+Kompilatory C++ firmy Microsoft umożliwiają określenie Konwencji przekazywania argumentów i zwracania wartości między funkcjami i obiektami wywołującymi. Nie wszystkie konwencje są dostępne na wszystkich obsługiwanych platformach, a niektóre konwencje korzystają z implementacji specyficznych dla platformy. W większości przypadków słowa kluczowe lub przełączniki kompilatora, które określają nieobsługiwaną Konwencję na określonej platformie, są ignorowane, a używana jest Konwencja domyślna platformy.
 
-Na x86 platformach wszystkie argumenty są rozszerzone do 32 bitów, gdy są przekazywane. Wartości zwracane są również rozszerzone do 32 bitów i zwracane w rejestrze EAX, z wyjątkiem struktur 8-bajtowych, które są zwracane w EAX. Większe struktury są zwracane w rejestrze EAX jako wskaźniki ukryte struktury zwrotu. Parametry są wypychane na stosie od prawej do lewej. Struktury, które nie są zasobników nie zostaną zwrócone w rejestrach.
+W przypadku architektury x86 platformach wszystkie argumenty są rozszerzane do 32 bitów podczas przekazywania. Wartości zwracane są również rozszerzane do 32 bitów i zwracane w rejestrze EAX, z wyjątkiem struktur 8-bajtowych, które są zwracane w parze rejestru EDX: EAX. Większe struktury są zwracane w rejestrze EAX jako wskaźniki do ukrytych struktur powrotu. Parametry są wypychane na stosie od prawej do lewej. Struktury, które nie są, nie są zwracane w rejestrach.
 
-Kompilator generuje prologu i epilogu do zapisywania i przywracania rejestrów ESI, EDI, EBX i EBP rejestruje, jeśli są one używane w funkcji.
+Kompilator generuje kod prologu i epilogu w celu zapisania i przywrócenia rejestrów ESI, EDI, EBX i EBP, jeśli są one używane w funkcji.
 
 > [!NOTE]
-> Gdy struktura, Unia lub klasa jest zwracany przez funkcję według wartości, wszystkie definicje tego typu muszą być takie same, w przeciwnym razie program może zakończyć się niepowodzeniem w czasie wykonywania.
+> Gdy struktura, Unia lub Klasa jest zwracana z funkcji przez wartość, wszystkie definicje tego typu muszą być takie same, w przeciwnym razie program może zakończyć się niepowodzeniem w czasie wykonywania.
 
-Aby uzyskać informacje dotyczące sposobu definiowania własnego kodu prologu i epilogu funkcji, zobacz [wywołania funkcji "naked"](../cpp/naked-function-calls.md).
+Aby uzyskać informacje na temat sposobu definiowania własnego kodu prologu i epilogu, zobacz [wywołania funkcji](../cpp/naked-function-calls.md)bez użycia.
 
-Aby uzyskać informacje o domyślnych konwencjach wywoływania w kodzie, które elementy docelowe x64 platform, zobacz [x64 konwencji wywoływania](../build/x64-calling-convention.md). Aby uzyskać informacje o problemach z Konwencją wywoływania w kodzie, który jest przeznaczony dla platform ARM, zobacz [typowe Visual C++ ARM problemy przy migracji](../build/common-visual-cpp-arm-migration-issues.md).
+Aby uzyskać informacje na temat domyślnych konwencji wywoływania w kodzie, który jest przeznaczony dla platform x64, zobacz [konwencję wywoływania x64](../build/x64-calling-convention.md). Informacje o problemach z konwencją wywoływania w kodzie, który jest przeznaczony dla platform ARM, można znaleźć w temacie [typowe problemy dotyczące migracji do usługi C++ Visual ARM](../build/common-visual-cpp-arm-migration-issues.md)
 
-Poniższe konwencje wywoływania są obsługiwane przez kompilator Visual C/C++.
+Visual C/C++ kompilator obsługuje następujące konwencje wywoływania.
 
-|Słowo kluczowe|Oczyszczanie stosu|Przekazywanie parametru|
+|Słowo kluczowe|Czyszczenie stosu|Przekazywanie parametrów|
 |-------------|-------------------|-----------------------|
-|[__cdecl](../cpp/cdecl.md)|Caller|Przesuwa parametry w stosie, w odwrotnej kolejności (od prawej do lewej)|
-|[__clrcall](../cpp/clrcall.md)|n/d|Obciążenie parametrów na stosie wyrażenia CLR w kolejności (od lewej do prawej).|
-|[__stdcall](../cpp/stdcall.md)|/ / Wywoływany|Przesuwa parametry w stosie, w odwrotnej kolejności (od prawej do lewej)|
-|[__fastcall](../cpp/fastcall.md)|/ / Wywoływany|Przechowywane w rejestrach, następnie wypychane na stos|
-|[__thiscall](../cpp/thiscall.md)|/ / Wywoływany|Przesunięty na stosie; **to** wskaźnika przechowywania w ECX|
-|[__vectorcall](../cpp/vectorcall.md)|/ / Wywoływany|Przechowywane w rejestrach, następnie wypychane na stos w odwrotnej kolejności (od prawej do lewej)|
+|[__cdecl](../cpp/cdecl.md)|Obiekt wywołujący|Wypychanie parametrów na stosie w odwrotnej kolejności (od prawej do lewej)|
+|[__clrcall](../cpp/clrcall.md)|Nie dotyczy|Załaduj parametry na stos wyrażeń CLR w kolejności (od lewej do prawej).|
+|[__stdcall](../cpp/stdcall.md)|Wywoływany|Wypychanie parametrów na stosie w odwrotnej kolejności (od prawej do lewej)|
+|[__fastcall](../cpp/fastcall.md)|Wywoływany|Przechowywane w rejestrach, następnie wypychane na stosie|
+|[__thiscall](../cpp/thiscall.md)|Wywoływany|Wypchnięcie na stosie; **ten** wskaźnik jest przechowywany w ECX|
+|[__vectorcall](../cpp/vectorcall.md)|Wywoływany|Przechowywane w rejestrach, następnie wypychane na stosie w odwrotnej kolejności (od prawej do lewej)|
 
-Aby uzyskać powiązane informacje, zobacz [przestarzałe Konwencje wywoływania](../cpp/obsolete-calling-conventions.md).
+Aby uzyskać powiązane informacje, zobacz [Przestarzałe konwencje wywoływania](../cpp/obsolete-calling-conventions.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)

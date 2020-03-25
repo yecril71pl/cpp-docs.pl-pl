@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4917
+title: Ostrzeżenie kompilatora (poziom 1) C4917
 ms.date: 11/04/2016
 f1_keywords:
 - C4917
 helpviewer_keywords:
 - C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-ms.openlocfilehash: 97f6f0a08c8ef292d81471cb5d0d94e359466933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a2d72b429f762e476286093c7f273a9a546cb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393496"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174677"
 ---
-# <a name="compiler-warning-level-1-c4917"></a>Kompilator ostrzeżenie (poziom 1) C4917
+# <a name="compiler-warning-level-1-c4917"></a>Ostrzeżenie kompilatora (poziom 1) C4917
 
-'deklarator': identyfikator GUID może być skojarzony tylko z klasą, interfejsem lub przestrzeni nazw
+"deklarator": identyfikator GUID może być skojarzony tylko z klasą, interfejsem lub przestrzenią nazw
 
-Struktura zdefiniowanych przez użytkownika innego niż [klasy](../../cpp/class-cpp.md), [interfejsu](../../cpp/interface.md), lub [przestrzeni nazw](../../cpp/namespaces-cpp.md) nie może mieć postać identyfikatora GUID.
+Zdefiniowana przez użytkownika struktura inna niż [Klasa](../../cpp/class-cpp.md), [interfejs](../../cpp/interface.md)lub [przestrzeń nazw](../../cpp/namespaces-cpp.md) nie może mieć identyfikatora GUID.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykładowy kod generuje C4917:
+Następujący przykładowy kod generuje C4917:
 
 ```cpp
 // C4917.cpp

@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330469"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188132"
 ---
-# <a name="tilestatic-keyword"></a>tile_static — słowo kluczowe
+# <a name="tile_static-keyword"></a>tile_static — słowo kluczowe
 
-**Tile_static** — słowo kluczowe jest używane do deklarowania zmiennej, która może zostać oceniony przez wszystkie wątki we fragmencie wątków. Okres istnienia zmiennej rozpoczyna się, gdy wykonywanie osiągnie punkt deklaracji i kończy się, gdy funkcja jądra. Aby uzyskać więcej informacji na temat korzystania z kafelków, zobacz [kafelków za pomocą](../parallel/amp/using-tiles.md).
+Słowo kluczowe **tile_static** jest używane do deklarowania zmiennej, do której można uzyskać dostęp przez wszystkie wątki na kafelku wątków. Okres istnienia zmiennej zaczyna się, gdy wykonanie osiągnie punkt deklaracji i kończy się, gdy funkcja jądra zwróci wartość. Aby uzyskać więcej informacji na temat używania kafelków, zobacz [Używanie kafelków](../parallel/amp/using-tiles.md).
 
-**Tile_static** — słowo kluczowe ma następujące ograniczenia:
+Słowo kluczowe **tile_static** ma następujące ograniczenia:
 
-- Może służyć tylko w zmiennych, które znajdują się w funkcję, która ma `restrict(amp)` modyfikator.
+- Może być używany tylko w przypadku zmiennych, które znajdują się w funkcji, która ma modyfikator `restrict(amp)`.
 
-- Nie można używać zmiennych, które są typami wskaźnika lub odwołania.
+- Nie można go używać dla zmiennych będących wskaźnikami lub typami referencyjnymi.
 
-- A **tile_static** zmiennej nie może mieć inicjatora. Domyślne konstruktory i destruktory nie są wywoływane automatycznie.
+- Zmienna **tile_static** nie może mieć inicjatora. Domyślne konstruktory i destruktory nie są wywoływane automatycznie.
 
-- Wartość niezainicjowanej **tile_static** zmienna jest niezdefiniowana.
+- Wartość niezainicjowanej zmiennej **tile_static** jest niezdefiniowana.
 
-- Jeśli **tile_static** zmienna jest zadeklarowana w wykres wywołań, który jest ścieżką przez wywołanie niefragmentującą `parallel_for_each`, generowane jest ostrzeżenie i zachowanie zmienna jest niezdefiniowana.
+- Jeśli zmienna **tile_static** jest zadeklarowana w grafie wywołań, który jest odblokowany przez niesąsiadujące wywołania do `parallel_for_each`, zostanie wygenerowane ostrzeżenie i zachowanie zmiennej jest niezdefiniowane.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób **tile_static** zmienna może służyć do gromadzenie danych między kilka wątków we fragmencie.
+Poniższy przykład pokazuje, jak zmienna **tile_static** może być używana do gromadzenia danych w kilku wątkach na kafelku.
 
 ```cpp
 // Sample data:
@@ -144,9 +144,9 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
 [Przegląd C++ AMP](../parallel/amp/cpp-amp-overview.md)<br/>
-[parallel_for_each — funkcja (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
-[Przewodnik: Mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)
+[Funkcja parallel_for_each (C++ amp)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
+[Przewodnik: mnożenie macierzy](../parallel/amp/walkthrough-matrix-multiplication.md)

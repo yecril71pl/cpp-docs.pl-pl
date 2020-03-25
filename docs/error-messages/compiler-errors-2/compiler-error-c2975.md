@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344702"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201568"
 ---
 # <a name="compiler-error-c2975"></a>Błąd kompilatora C2975
 
-> "*argument*": nieprawidłowy argument szablonu dla "*typu*", oczekiwano stałego wyrażenia czasu kompilacji
+> "*argument*": nieprawidłowy argument szablonu dla elementu "*Type*", oczekiwano wyrażenia stałej czasu kompilacji
 
-Argument szablonu jest niezgodna z deklaracją szablonu; wyrażenie stałe powinny być wyświetlane w nawiasach kątowych. Zmienne nie są dozwolone jako rzeczywistych argumentów szablonu. Sprawdź definicję szablonu, aby znaleźć poprawne typy.
+Argument szablonu nie jest zgodny z deklaracją szablonu; wyrażenie stałe powinno pojawić się w nawiasach kątowych. Zmienne nie są dozwolone jako argumenty rzeczywiste szablonu. Sprawdź definicję szablonu, aby znaleźć prawidłowe typy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2975 oraz pokazuje poprawne użycie:
+Poniższy przykład generuje C2975, a także wyświetla poprawne użycie:
 
 ```cpp
 // C2975.cpp
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 występuje także w przypadku używania &#95; &#95;wiersza&#95; &#95; jako Stała kompilacji za pomocą [/zi](../../build/reference/z7-zi-zi-debug-information-format.md). Jedno rozwiązanie może polegać na kompilacji z [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) zamiast **/zi**.
+C2975 występuje również w przypadku używania &#95; &#95;linii&#95; &#95; jako stałej czasu kompilowania z [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Jednym z rozwiązań będzie Kompilowanie za pomocą [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) zamiast **/Zi**.
 
 ```cpp
 // C2975b.cpp

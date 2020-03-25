@@ -1,34 +1,34 @@
 ---
-title: Typy parametrów atrybutu (C++sposób niezamierzony i C++/CX)
+title: Typy parametrów atrybutu (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172649"
 ---
-# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrów atrybutu (C++sposób niezamierzony i C++/CX)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrów atrybutu (C++/CLI i C++/CX)
 
-Wartości przekazane do atrybutów musi być znane, aby kompilator w czasie kompilacji.  Parametry atrybutów może być następujących typów:
+Wartości przesyłane do atrybutów muszą być znane kompilatorowi w czasie kompilacji.  Parametry atrybutu mogą być następujące:
 
 - **bool**
 
-- **CHAR**, **unsigned char**
+- **char**, **znak bez znaku**
 
-- **krótki**, **typ unsigned short**
+- **krótkie**, **niepodpisane, krótkie**
 
 - **int**, **unsigned int**
 
-- **długi**, **unsigned long**
+- **Long**, **Long unsigned**
 
-- **__int64**, **__int64 bez znaku**
+- **__int64**, **niepodpisane __int64**
 
-- **float**, **double**
+- **float**, **Double**
 
 - **wchar_t**
 
@@ -69,7 +69,7 @@ ref struct MyStruct {
 
 ### <a name="description"></a>Opis
 
-Podczas określania atrybutów, wszystkich nienazwanych argumentów (pozycyjny) musi poprzedzać wszystkie argumenty nazwane.
+Podczas określania atrybutów wszystkie argumenty nienazwane (pozycyjne) muszą poprzedzać nazwane argumenty.
 
 ### <a name="code"></a>Kod
 
@@ -103,7 +103,7 @@ ref class ClassD {};   // Positional and named
 
 ### <a name="description"></a>Opis
 
-Atrybut parametry mogą być tablice jednowymiarowe poprzedniego typów.
+Parametry atrybutu mogą być jednowymiarowymi tablicami poprzednich typów.
 
 ### <a name="code"></a>Kod
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty zdefiniowane przez użytkownika](user-defined-attributes-cpp-component-extensions.md)

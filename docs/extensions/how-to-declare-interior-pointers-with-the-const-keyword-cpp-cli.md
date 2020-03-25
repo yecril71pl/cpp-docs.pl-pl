@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++sposób niezamierzony)'
+title: 'Poradnik: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 62daa255749747e3c4b9b24e29d38c0cb6f50d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172312"
 ---
-# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Instrukcje: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++sposób niezamierzony)
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Poradnik: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)
 
-Poniższy przykład pokazuje sposób użycia **const** w deklaracji wskaźnika wewnętrznego.
+Poniższy przykład pokazuje, jak używać **stałej** w deklaracji wskaźnika wewnętrznego.
 
 > [!IMPORTANT]
-> Tej funkcji języka jest obsługiwana przez `/clr` — opcja kompilatora, ale nie za `/ZW` — opcja kompilatora.
+> Ta funkcja języka jest obsługiwana przez opcję kompilatora `/clr`, ale nie za pomocą opcji kompilatora `/ZW`.
 
 ## <a name="example"></a>Przykład
 
@@ -78,6 +78,6 @@ int main() {
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

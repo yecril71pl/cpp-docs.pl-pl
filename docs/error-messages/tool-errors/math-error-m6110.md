@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - M6110
 ms.assetid: aac9ae37-6a6d-46e9-85d4-dfe03f1c3e11
-ms.openlocfilehash: d56326c0daa326ef832eb81024850d6ef06f5649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7302ce1d8b715dfcceb638958fef4c6db8af375e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173715"
 ---
 # <a name="math-error-m6110"></a>Błąd matematyczny M6110
 
 przepełnienie stosu
 
-Wyrażenie typu zmiennoprzecinkowego spowodowała przepełnienie stosu zmiennoprzecinkowego.
+Wyrażenie zmiennoprzecinkowe spowodowało przepełnienie stosu zmiennoprzecinkowego.
 
-Przepełnienie stosu wyjątki zmiennoprzecinkowe są zablokował do określonego limitu siedem poziomów oprócz ośmiu poziomów, które zwykle są obsługiwane przez Koprocesor 8087/287/387 z usługą.
+Wyjątki zmiennoprzecinkowe przepełnienia stosu są zalewkowane do limitu siedmiu poziomów oprócz ośmiu poziomów zwykle obsługiwanych przez współprocesor 8087/287/387.
 
-Program kończy się z kodem zakończenia 138.
+Program kończy pracę z kodem zakończenia 138.

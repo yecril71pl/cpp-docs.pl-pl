@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4398
+title: Ostrzeżenie kompilatora (poziom 3) C4398
 ms.date: 11/04/2016
 f1_keywords:
 - C4398
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198669"
 ---
-# <a name="compiler-warning-level-3-c4398"></a>Kompilator ostrzeżenie (poziom 3) C4398
+# <a name="compiler-warning-level-3-c4398"></a>Ostrzeżenie kompilatora (poziom 3) C4398
 
-> "*zmiennej*": globalny obiekt dla poszczególnych procesu mogą nie działać poprawnie z wieloma domenami aplikacji; należy wziąć pod uwagę użycie __declspec(appdomain)
+> "*zmienna*": globalny obiekt dla procesu może nie funkcjonować poprawnie z wieloma domenami aplikacji; Rozważ użycie __declspec (AppDomain)
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja wirtualna, za pomocą [__clrcall](../../cpp/clrcall.md) konwencji wywoływania w typie natywnym powoduje utworzenie na vtable domeny aplikacji. Takie zmiennej nie może rozwiązać poprawnie, gdy jest używana w wielu domenach aplikacji.
+Funkcja wirtualna z [__clrcall](../../cpp/clrcall.md) konwencją wywoływania w typie natywnym powoduje utworzenie tabeli dla każdej domeny aplikacji. Taka zmienna może nie poprawić prawidłowo, gdy jest używana w wielu domenach aplikacji.
 
-To ostrzeżenie można rozwiązać, oznaczając jawnie zmiennej `__declspec(appdomain)`. W wersjach programu Visual Studio przed Visual Studio 2017, można usunąć to ostrzeżenie, kompilowania za pomocą **/CLR: pure**, co sprawia, że zmienne globalne dla domeny appdomain domyślnie. **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Możesz rozwiązać to ostrzeżenie poprzez jawne oznaczenie zmiennej `__declspec(appdomain)`. W wersjach programu Visual Studio przed Visual Studio 2017 można rozwiązać to ostrzeżenie przez skompilowanie z **/CLR: Pure**, co powoduje domyślne zmienne globalne na domenę aplikacji. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [domeny aplikacji i programu Visual C++](../../dotnet/application-domains-and-visual-cpp.md).
+Aby uzyskać więcej informacji, [Zobacz](../../cpp/appdomain.md) [domeny aplikacji i aplikacje i C++wizualizację ](../../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4398.
+Poniższy przykład generuje C4398.
 
 ```cpp
 // C4398.cpp

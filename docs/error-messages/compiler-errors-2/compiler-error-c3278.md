@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201438"
 ---
 # <a name="compiler-error-c3278"></a>Błąd kompilatora C3278
 
-> bezpośrednie wywołanie interfejsu lub czystej metody "*metoda*" zakończy się niepowodzeniem w czasie wykonywania
+> bezpośrednie wywołanie interfejsu lub czystej metody "*Method*" zakończy się niepowodzeniem w czasie wykonywania
 
 ## <a name="remarks"></a>Uwagi
 
-Wykonano wywołanie do metody interfejsu lub czystej metody, która nie jest dozwolona.
+Wykonano wywołanie metody interfejsu lub czystej metody, co jest niedozwolone.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3278:
+Poniższy przykład generuje C3278:
 
 ```cpp
 // C3278_2.cpp

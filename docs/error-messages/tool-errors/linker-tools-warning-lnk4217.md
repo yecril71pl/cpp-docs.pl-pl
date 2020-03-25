@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183114"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Ostrzeżenie LNK4217 narzędzi konsolidatora
 
 > Symbol "*symbol*" zdefiniowany w elemencie "*filename_1. obj*" został zaimportowany przez element "*filename_2. obj*" w funkcji "*Function*"
 
-określono [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) dla symbolu, chociaż symbol jest zdefiniowany w pliku obiektu w tym samym obrazie. Usuń modyfikator `__declspec(dllimport)` , aby rozwiązać to ostrzeżenie.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) została określona dla symbolu, chociaż symbol jest zdefiniowany w pliku obiektu w tym samym obrazie. Usuń modyfikator `__declspec(dllimport)`, aby usunąć to ostrzeżenie.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -39,7 +39,7 @@ int main()
 
 ```
 
-A następnie
+a następnie
 
 ```cpp
 // tt.cpp
@@ -62,8 +62,8 @@ lib.exe tt.obj /export:func /def
 link.exe main.obj tt.lib
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Linker Tools Warning LNK4049](linker-tools-warning-lnk4049.md) \
+[Ostrzeżenie narzędzi konsolidatora lnk4049 narzędzi konsolidatora](linker-tools-warning-lnk4049.md) \
 [Ostrzeżenie narzędzi konsolidatora LNK4286](linker-tools-warning-lnk4286.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

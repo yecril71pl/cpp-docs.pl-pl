@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6107
 ms.assetid: a827a2a4-40b7-4e28-8e8d-530c6ffcf0c9
-ms.openlocfilehash: bdf9cde1d1af0ab354850d9d0179f1e6997fbf61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8b13a48e84213add9e052f6d638ff0877d5bba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173754"
 ---
 # <a name="math-error-m6107"></a>Błąd matematyczny M6107
 
-unemulated
+nieemulowane
 
-Próbowano wykonać instrukcję Koprocesor, który jest nieprawidłowy lub nie jest obsługiwana przez emulator.
+Podjęto próbę wykonania instrukcji współprocesora, która jest nieprawidłowa lub nie jest obsługiwana przez emulator.
 
-Program kończy się z kodem zakończenia 135.
+Program kończy pracę z kodem zakończenia 135.

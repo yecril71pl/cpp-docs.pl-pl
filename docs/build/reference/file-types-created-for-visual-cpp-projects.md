@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169022"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Typy plików utworzone dla projektów programu C++ Visual Studio
 
@@ -47,21 +47,21 @@ Projekty zwykle tworzą plik EXE lub DLL. Projekty mogą być od siebie zależne
 
 W poniższej tabeli przedstawiono typowe pliki w projekcie programu Visual Studio i są one identyfikowane przy użyciu rozszerzenia pliku.
 
-|Rozszerzenie pliku|Typ|Spis treści|
+|Rozszerzenie pliku|Typ|Zawartość|
 |--------------------|----------|--------------|
-|. asmx|Source|Plik wdrożenia.|
-|. ASP|Source|Plik stronicowania Active Server.|
-|. ATP|Projekt|Plik projektu szablonu aplikacji.|
+|. asmx|Element źródłowy|Plik wdrożenia.|
+|. ASP|Element źródłowy|Plik stronicowania Active Server.|
+|. ATP|Project|Plik projektu szablonu aplikacji.|
 |BMP, DIB, GIF, jpg,. jpe,. png|Zasób|Ogólne pliki obrazów.|
 |. bsc|Tworzenie|Plik kodu przeglądarki.|
-|. cpp,. c|Source|Główne pliki kodu źródłowego aplikacji.|
+|. cpp,. c|Element źródłowy|Główne pliki kodu źródłowego aplikacji.|
 |. CUR|Zasób|Plik graficzny kursora mapy bitowej.|
-|.dbp|Projekt|Plik projektu bazy danych.|
-|.disco|Source|Plik dokumentu odnajdywania dynamicznego. Obsługuje odnajdywanie usług sieci Web XML.|
-|.exe, .dll|Projekt|Pliki bibliotek wykonywalnych lub dynamicznych.|
-|. h|Source|Plik nagłówka (include).|
+|.dbp|Project|Plik projektu bazy danych.|
+|.disco|Element źródłowy|Plik dokumentu odnajdywania dynamicznego. Obsługuje odnajdywanie usług sieci Web XML.|
+|.exe, .dll|Project|Pliki bibliotek wykonywalnych lub dynamicznych.|
+|. h|Element źródłowy|Plik nagłówka (include).|
 |. htm,. html,. XSP,. ASP,. HTC,. hta,. XML|Zasób|Wspólne pliki sieci Web.|
-|.HxC|Projekt|Plik projektu pomocy.|
+|.HxC|Project|Plik projektu pomocy.|
 |.ico|Zasób|Plik graficzny mapy bitowej ikony.|
 |. IDB|Tworzenie|Plik stanu zawierający informacje o zależnościach między plikami źródłowymi i definicjami klas. Może być używany przez kompilator podczas kompilacji przyrostowej. Użyj opcji kompilatora [/FD](fd-program-database-file-name.md) , aby określić nazwę pliku. IDB.|
 |. idl|Tworzenie|Plik języka definicji interfejsu. Aby uzyskać więcej informacji, zobacz [plik definicji interfejsu (IDL)](/windows/win32/Rpc/the-interface-definition-language-idl-file) w Windows SDK.|
@@ -75,15 +75,15 @@ W poniższej tabeli przedstawiono typowe pliki w projekcie programu Visual Studi
 |.sln|Rozwiązanie|Plik [rozwiązania](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |.suo|Rozwiązanie|Plik opcji rozwiązania.|
 |. txt|Zasób|Plik tekstowy, zazwyczaj plik Readme.|
-|.vap|Projekt|Plik projektu Analizator programu Visual Studio.|
+|.vap|Project|Plik projektu Analizator programu Visual Studio.|
 |.vbg|Rozwiązanie|Zgodny plik grupy projektu.|
-|. VBP,. VIP,. vbproj|Projekt|Plik projektu Visual Basic.|
-|. vcxitems|Projekt|Projekt elementów udostępnionych do udostępniania plików kodu między wieloma C++ projektami. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
-|. vcxproj|Projekt|Plik projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
-|. vcxproj. filters|Projekt|Używany do dodawania pliku do projektu przy użyciu Eksplorator rozwiązań. Plik filtrów definiuje, gdzie w widoku drzewa Eksplorator rozwiązań dodać plik, na podstawie jego rozszerzenia nazwy pliku.|
-|.vdproj|Projekt|Plik projektu wdrożenia programu Visual Studio.|
-|. vmx|Projekt|Plik projektu makra.|
-|.vup|Projekt|Plik projektu narzędzia.|
+|. VBP,. VIP,. vbproj|Project|Plik projektu Visual Basic.|
+|. vcxitems|Project|Projekt elementów udostępnionych do udostępniania plików kodu między wieloma C++ projektami. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
+|. vcxproj|Project|Plik projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pliki projektu i rozwiązania](project-and-solution-files.md).|
+|. vcxproj. filters|Project|Używany do dodawania pliku do projektu przy użyciu Eksplorator rozwiązań. Plik filtrów definiuje, gdzie w widoku drzewa Eksplorator rozwiązań dodać plik, na podstawie jego rozszerzenia nazwy pliku.|
+|.vdproj|Project|Plik projektu wdrożenia programu Visual Studio.|
+|. vmx|Project|Plik projektu makra.|
+|.vup|Project|Plik projektu narzędzia.|
 
 Aby uzyskać informacje dotyczące innych plików skojarzonych z programem Visual Studio, zobacz [typy plików i rozszerzenia plików w programie Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
@@ -91,7 +91,7 @@ Pliki projektu są zorganizowane w foldery w Eksplorator rozwiązań. Program Vi
 
 Po dodaniu elementu do projektu, Dodaj element do wszystkich konfiguracji dla tego projektu. Element jest dodawany niezależnie od tego, czy jest możliwe do skompilowania. Na przykład jeśli masz projekt o nazwie Moje projekty, dodanie elementu powoduje dodanie go do konfiguracji projektu Debug i Release.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie projektów programu Visual Studio C++ i zarządzanie nimi](../creating-and-managing-visual-cpp-projects.md)<br>
 [Typy projektów C++ programu Visual Studio](visual-cpp-project-types.md)<br>

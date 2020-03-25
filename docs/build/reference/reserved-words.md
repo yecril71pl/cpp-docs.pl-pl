@@ -17,45 +17,45 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171154"
 ---
 # <a name="reserved-words"></a>Słowa zastrzeżone
 
-Wyrazy są zarezerwowane przez konsolidator. Te nazwy mogą być używane jako argumenty w [instrukcji definicji modułu](module-definition-dot-def-files.md) tylko wtedy, gdy nazwa jest ujęta w znaki podwójnego cudzysłowu ("").
+Następujące słowa są zastrzeżone przez konsolidator. Te nazwy mogą być używane jako argumenty w [instrukcjach definicji modułów](module-definition-dot-def-files.md) tylko wtedy, gdy nazwa jest ujęta w znaki podwójnego cudzysłowu ("").
 
 ||||
 |-|-|-|
-|**ELEMENTU APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**WSTĘPNE ZAŁADOWANIE**|
-|**BASE**|**IOPL**|**PRYWATNE**|
-|**KOD**|**BIBLIOTEKA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**ZGODNE**|**LOADONCALL**<sup>1</sup>|**CZYSTY**<sup>1</sup>|
-|**DANE**|**LONGNAMES**<sup>2</sup>|**TYLKO DO ODCZYTU**|
-|**OPIS ELEMENTU**|**MOVABLE**<sup>1</sup>|**ODCZYTU I ZAPISU**|
-|**DEV386**|**RUCHOMA**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**DISCARDABLE**|**WIELE**|**NA TERENIE TEGO KRAJU**|
-|**DYNAMICZNE**|**NAZWA**|**RESIDENTNAME**<sup>1</sup>|
-|**TYLKO DO WYKONANIA**|**NEWFILES**<sup>2</sup>|**SEKCJE**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTY**|
-|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**UDOSTĘPNIONE**|
-|**EXETYPE**|**BEZ NAZWY**|**POJEDYNCZY**|
-|**EXPORTS**|**NIEZGODNE**<sup>1</sup>|**STACKSIZE**|
-|**NAPRAWIONO**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**FUNCTIONS**<sup>2</sup>|**BRAK**|**WERSJA**|
+|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**Ładuj**|
+|**OPIERA**|**IOPL**|**UŻYTEK**|
+|**KODU**|**Biblioteka**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**NIEZGODNEJ**|**LOADONCALL**<sup>1</sup>|**Czysty**<sup>1</sup>|
+|**DATA**|**LONGNAMES**<sup>2</sup>|**TRYBIE**|
+|**ZHARMONIZOWAN**|**MOVABLE**<sup>1</sup>|**READWRITE**|
+|**DEV386**|**Ruchome**<sup>1</sup>|Liczba **rzeczywista**<sup>1</sup>|
+|**Odrzucanie**|**WIELOKROTN**|**REZYDENCI**|
+|**DYNAMICZNYCH**|**NAZWIJ**|**Rezydentname**<sup>1</sup>|
+|**TYLKO DO WYKONANIA**|**NEWFILES**<sup>2</sup>|**POSZCZEGÓLNE**|
+|**EXECUTEONLY**|Brak **danych**<sup>1</sup>|**ODCINK**|
+|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**UDOSTĘPNIAĆ**|
+|**EXETYPE**|**NONAME**|**WIERSZ**|
+|**EXPORTS**|**Niezgodne**<sup>1</sup>|**STACKSIZE**|
+|**Stała**<sup>1</sup>|**Odrzucane**|**STUB**|
+|**Funkcje**<sup>2</sup>|**DAWAJ**|**Wersja**|
 |**HEAPSIZE**|**NIEUDOSTĘPNIONYCH**|**WINDOWAPI**|
-|**IMPORTS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**OCZYŚCIĆ ZANIECZYSZCZONY**<sup>1</sup>|**OBJECTS**|**SYSTEMU WINDOWS**|
-|**OBEJMUJĄ**<sup>2</sup>|**OLD**<sup>1</sup>||
+|**IMPORTOWANIA**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**Nieczysty**<sup>1</sup>|**ELEMENTY**|**Systemy**|
+|**Uwzględnij**<sup>2</sup>|**Stary**<sup>1</sup>||
 
-<sup>1</sup> konsolidator emituje ostrzeżenie ("zignorowana"), po napotkaniu ten termin. Jednak słowo jest nadal zarezerwowany.
+<sup>1</sup> konsolidator emituje ostrzeżenie ("zignorowano") w momencie napotkania tego terminu. Jednak słowo jest nadal zarezerwowane.
 
-<sup>2</sup> konsolidator ignoruje ten wyraz, ale emituje ostrzeżenie.
+<sup>2</sup> konsolidator ignoruje ten wyraz, ale nie emituje ostrzeżenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
 - [Opcje konsolidatora MSVC](linker-options.md)

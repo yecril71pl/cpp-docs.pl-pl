@@ -10,21 +10,21 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beabe4c6219975d33c7af98a94498188c9abfa55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189535"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory kopiujące i kopiujące operatory przypisania (C++)
 
 > [!NOTE]
-> Począwszy od C ++ 11, dwa rodzaje przypisania są obsługiwane w języku: *przypisania kopiowania* i *Przenieś przypisania*. W tym artykule "przypisania" oznacza przypisania kopiowania, chyba że wyraźnie określono inaczej. Aby uzyskać informacji na temat przypisania przeniesienia, zobacz [konstruktory przenoszenia i operatory przenoszenia przypisania (C++)](move-constructors-and-move-assignment-operators-cpp.md).
+> Począwszy od języka C++ 11, obsługiwane są dwa rodzaje przypisywania w języku: *Kopiuj przypisanie* i *Przenieś przypisanie*. W tym artykule "przypisanie" oznacza przypisanie kopiowania, chyba że wyraźnie określono inaczej. Informacje o przypisywaniu przenoszenia znajdują się w temacie [przenoszenie konstruktorówC++i operatory przypisania przenoszenia ()](move-constructors-and-move-assignment-operators-cpp.md).
 >
-> Operacja przypisania i z operację zainicjowanie spowodować obiekty do skopiowania.
+> Zarówno operacja przypisania, jak i operacja inicjowania powodują, że obiekty mają być kopiowane.
 
-- **Przypisanie**: Gdy wartość jeden obiekt jest przypisany do innego obiektu, pierwszy obiekt jest kopiowany do drugiego obiektu. W związku z tym,
+- **Przypisanie**: gdy wartość jednego obiektu jest przypisana do innego obiektu, pierwszy obiekt jest kopiowany do drugiego obiektu. Zatem
 
     ```cpp
     Point a, b;
@@ -32,11 +32,11 @@ ms.locfileid: "62392300"
     a = b;
     ```
 
-   powoduje, że wartość `b` do skopiowania do `a`.
+   powoduje, że wartość `b` ma być kopiowana do `a`.
 
-- **Inicjowanie**: Inicjalizacja występuje, gdy nowy obiekt jest zadeklarowana, gdy argumenty są przekazywane do funkcji przez wartość lub wartości są zwracane przez funkcje według wartości.
+- **Inicjalizacja**: inicjalizacja występuje, gdy jest zadeklarowany nowy obiekt, gdy argumenty są przenoszone do funkcji przez wartość lub gdy wartości są zwracane z funkcji przez wartość.
 
-Można zdefiniować semantykę "Kopiuj" dla obiektów typu klasy. Na przykład, rozważmy ten kod:
+Można zdefiniować semantykę "Copy" dla obiektów typu klasy. Na przykład, rozważmy ten kod:
 
 ```cpp
 TextFile a, b;
@@ -45,15 +45,15 @@ b.Open( "FILE2.DAT" );
 b = a;
 ```
 
-Powyższy kod może oznaczać, że "skopiuj zawartość Plik1. DAT, aby Plik2. DAT"lub jest on może oznaczać, że"ignorowania Plik2. DAT i `b` drugi dojścia do FILE1.DAT. " Odpowiednie semantyki kopiowania należy dołączyć do każdej klasy, w następujący sposób.
+Poprzedni kod może oznaczać "Kopiowanie zawartości plik1. DAT do PLIK2. DAT "lub może oznaczać" ignorowanie PLIK2. DAT i wprowadź `b` drugim dojściem do plik1. DAT. " Należy dołączyć odpowiednie semantyke kopiowania do każdej klasy w następujący sposób.
 
-- Za pomocą operatora przypisania **operator =** wraz z odwołaniem do typu klasy jako zwracany typ i parametr, który jest przekazywany przez **const** odwołania — na przykład `ClassName& operator=(const ClassName& x);`.
+- Używając operatora operatora przypisania **=** wraz z odwołaniem do typu klasy jako zwracany typ i parametr, który jest przesyłany przez odwołanie **const** , na przykład `ClassName& operator=(const ClassName& x);`.
 
 - Za pomocą konstruktora kopiującego.
 
-Jeśli nie deklaruj konstruktora kopiującego, kompilator generuje konstruktora kopiującego member-wise dla Ciebie.  Jeśli nie deklaruj operator przypisania kopii, kompilator generuje operatora przypisanej kopii member-wise dla Ciebie. Zadeklarowanie konstruktora kopiującego nie pomija operator przypisania kopiowania generowanych przez kompilator, ani na odwrót. W przypadku zastosowania pojedynczo, firma Microsoft zaleca również Implementowanie innego tak, aby znaczenia kodu jest wyczyszczone.
+Jeśli Konstruktor kopiujący nie zostanie zadeklarowany, kompilator generuje dla Ciebie Konstruktor kopiujący.  Jeśli operator przypisania kopiowania nie zostanie zadeklarowany, kompilator generuje dla Ciebie operatora przypisania kopii dla elementu członkowskiego. Deklarowanie konstruktora kopiującego nie powoduje pomijania operatora przypisania kopii generowanego przez kompilator ani odwrotnie. W przypadku zaimplementowania jednego z nich zalecamy także zaimplementowanie drugiego, tak aby znaczenie kodu było jasne.
 
-Konstruktor kopiujący przyjmuje argument typu <em>Nazwa klasy</em><strong>&</strong>, gdzie *Nazwa klasy* jest nazwa klasy, dla którego zdefiniowano konstruktora. Na przykład:
+Konstruktor kopiujący przyjmuje argument typu <em>class-name</em> <strong>&</strong>, gdzie *class-name* to nazwa klasy, dla której jest zdefiniowany Konstruktor. Na przykład:
 
 ```cpp
 // spec1_copying_class_objects.cpp
@@ -70,19 +70,19 @@ int main()
 ```
 
 > [!NOTE]
-> Zmień typ argumentu konstruktora kopiującego **const** <em>Nazwa klasy</em> <strong>&</strong> zawsze, gdy jest to możliwe. Zapobiega to przypadkowym zmianom obiektu, z którego jest kopiowanie konstruktora kopiującego. Umożliwia także skopiowanie **const** obiektów.
+> Zmień typ argumentu konstruktora kopiującego na wartość **const** <em>class-name</em> <strong>&</strong> , jeśli to możliwe. Zapobiega to przypadkowemu zmianie obiektu, z którego jest kopiowany przez konstruktora kopiującego. Umożliwia również kopiowanie z obiektów **const** .
 
-## <a name="compiler-generated-copy-constructors"></a>Konstruktory kopiujące wygenerowanego przez kompilator
+## <a name="compiler-generated-copy-constructors"></a>Konstruktory kopiujące wygenerowane przez kompilator
 
-Konstruktory kopiujące generowanych przez kompilator, takich jak konstruktorów kopiujących zdefiniowanych przez użytkownika mają pojedynczy argument typu "odwołanie do *Nazwa klasy*." Jest wyjątek, jeśli wszystkie klasy podstawowe i element członkowski klasy konstruktorów kopiujących zadeklarowane jako pojedynczy argument typu biorąc **const** <em>Nazwa klasy</em><strong>&</strong>. W takim przypadku argument Konstruktor kopiujący wygenerowany przez kompilator jest również **const**.
+Konstruktory kopiujące generowane przez kompilator, takie jak konstruktory kopiowania zdefiniowane przez użytkownika, mają pojedynczy argument typu "odwołanie do *nazwy klasy*". Wyjątek polega na tym, że wszystkie klasy bazowe i klasy składowe mają konstruktory kopiujące zadeklarowane jako przyjmujące pojedynczy argument typu **const** <em>class-name</em> <strong>&</strong>. W takim przypadku argument konstruktora kopiującego generowany przez kompilator jest również wartością **const**.
 
-Gdy typ argumentu do konstruktora kopiującego nie jest **const**, inicjowanie, kopiując **const** obiektu spowoduje wygenerowanie błędu. Odwrotnej nie jest spełniony: Jeśli argument jest **const**, można zainicjować przez skopiowanie obiektu, który nie jest **const**.
+Gdy typ argumentu konstruktora kopiującego nie jest wartością **stałą**, inicjowanie przez skopiowanie obiektu **const** generuje błąd. Odwrócenie nie jest prawdziwe: Jeśli argument jest **stałą**, można zainicjować przez skopiowanie obiektu, który nie jest **stałą**.
 
-Operatory przypisania generowane przez kompilator, należy wykonać w odniesieniu do tego samego wzorca **const.** Przyjmują jeden argument typu <em>Nazwa klasy</em> <strong>&</strong> , chyba że operatory przypisania w wszystkie klasy podstawowe i składowe przyjmują argumenty typu **const** <em>Nazwa klasy</em><strong>&</strong>. W tym przypadku klasy użytkownika generowany przyjmuje operatora przypisania **const** argumentu.
+Operatory przypisania generowane przez kompilator stosują ten sam wzorzec w odniesieniu do **const.** Przyjmuje jeden argument typu <em>class-name</em> <strong>&</strong> , chyba że operatory przypisania we wszystkich klasach bazowych i Członkowskich nie przyjmują argumentów typu **const** <em>class-name</em> <strong>&</strong>. W takim przypadku generowany operator przypisania klasy przyjmuje argument **const** .
 
 > [!NOTE]
-> Gdy wirtualne klasy bazowe są inicjowane przez konstruktory kopiujące, generowane przez kompilator lub zdefiniowanych przez użytkownika są inicjowanie tylko raz: w momencie, gdy zostały skonstruowane.
+> Gdy wirtualne klasy bazowe są inicjowane przez konstruktory kopiujące, generowane przez kompilator lub zdefiniowane przez użytkownika, są inicjowane tylko raz: w momencie ich konstruowania.
 
-Implikacje są podobne do występujących dla konstruktora kopiującego. Gdy typ argumentu nie jest **const**, przypisanie z **const** obiektu spowoduje wygenerowanie błędu. Odwrotnej nie jest spełniony: Jeśli **const** wartość jest przypisywana wartość, która nie jest **const**, przypisanie zakończy się pomyślnie.
+Konsekwencje są podobne do tych w konstruktorze kopiującym. Gdy typ argumentu nie jest **stałą**, przypisanie z obiektu **const** generuje błąd. Odwrócenie nie jest prawdziwe: Jeśli wartość **stała** jest przypisana do wartości, która nie jest **stałą**, przypisanie zakończy się pomyślnie.
 
-Aby uzyskać więcej informacji na temat przypisania przeciążone operatory zobacz [przypisania](../cpp/assignment.md).
+Aby uzyskać więcej informacji o przeciążonych operatorach przypisania, zobacz [przypisanie](../cpp/assignment.md).

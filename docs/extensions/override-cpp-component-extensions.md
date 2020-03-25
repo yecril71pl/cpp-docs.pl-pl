@@ -1,33 +1,33 @@
 ---
-title: Przesłoń (C++sposób niezamierzony i C++/CX)
+title: override (C++/CLI i C++/CX)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 8dc7a0a0e6cf759d956fd701d033bd773e572af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32c825539efe670528eab7416afefe07d4cb1b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254479"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172103"
 ---
-# <a name="override--ccli-and-ccx"></a>Przesłoń (C++sposób niezamierzony i C++/CX)
+# <a name="override--ccli-and-ccx"></a>override (C++/CLI i C++/CX)
 
-**Zastąpienia** kontekstowe słowo kluczowe wskazuje, że składowej typu zastępuje klasy bazowej lub składowej interfejsu podstawowego.
+**Przesłonięcie** kontekstowego słowa kluczowego wskazuje, że element członkowski typu zastępuje klasę bazową lub składową interfejsu podstawowego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Zastąpienia** — słowo kluczowe jest prawidłowy, podczas kompilowania dla natywnych obiektów docelowych (opcja kompilatora domyślna), elementy docelowe środowisko uruchomieniowe Windows (`/ZW` — opcja kompilatora), lub obiektów docelowych środowiska uruchomieniowego języka wspólnego (`/clr` — opcja kompilatora).
+Słowo kluczowe **override** jest prawidłowe w przypadku kompilowania natywnych obiektów docelowych (opcja domyślnego kompilatora), środowisko wykonawcze systemu Windows targets (opcja kompilatora`/ZW`) lub obiektów docelowych środowiska uruchomieniowego języka wspólnego (opcja kompilatora`/clr`).
 
-Aby uzyskać więcej informacji na temat nadpisania specyfikatorów, zobacz [specyfikator override](../cpp/override-specifier.md) i [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Aby uzyskać więcej informacji na temat specyfikatorów przesłonięcia, zobacz specyfikator [override](../cpp/override-specifier.md) i specyfikatory przesłonięcia [oraz kompilacje natywne](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Aby uzyskać więcej informacji na temat kontekstowych słów kluczowych, zobacz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+Aby uzyskać więcej informacji na temat kontekstowych słów kluczowych, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje, że **zastąpienia** może również służyć w kompilacjach kodu natywnego.
+Poniższy przykład kodu pokazuje, że **przesłonięcie** może być również używane w kompilacjach natywnych.
 
 ```cpp
 // override_keyword_1.cpp
@@ -43,7 +43,7 @@ struct X : public I1 {
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **zastąpienia** mogą być używane w kompilacjach środowiska wykonawczego Windows.
+Poniższy przykład kodu pokazuje, że **przesłonięcie** może być używane w kompilacjach środowisko wykonawcze systemu Windows.
 
 ```cpp
 // override_keyword_2.cpp
@@ -59,11 +59,11 @@ ref struct X : public I1 {
 
 #### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **zastąpienia** mogą być używane w typowych kompilacje środowiska uruchomieniowego języka.
+Poniższy przykład kodu pokazuje, że **zastąpienie** może być używane w kompilacjach środowiska uruchomieniowego języka wspólnego.
 
 ```cpp
 // override_keyword_3.cpp
@@ -79,9 +79,9 @@ ref struct X : public I1 {
 
 #### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [override, specyfikator](../cpp/override-specifier.md)<br/>
 [Specyfikatory zastąpienia](override-specifiers-cpp-component-extensions.md)

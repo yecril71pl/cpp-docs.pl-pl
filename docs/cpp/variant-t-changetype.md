@@ -9,18 +9,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160466"
 ---
-# <a name="varianttchangetype"></a>_variant_t::ChangeType
+# <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zmienia typ `_variant_t` wskazany obiekt `VARTYPE`.
+Zmienia typ obiektu `_variant_t` na wskazany `VARTYPE`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,18 +33,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametry
 
-*vartype*<br/>
-`VARTYPE` Tego `_variant_t` obiektu.
+*VARTYPE*<br/>
+`VARTYPE` dla tego obiektu `_variant_t`.
 
 *pSrc*<br/>
-Wskaźnik do `_variant_t` obiekt do skonwertowania. Jeśli ta wartość wynosi NULL, konwersja odbywa się w miejscu.
+Wskaźnik do obiektu `_variant_t` do przekonwertowania. Jeśli ta wartość jest RÓWNa NULL, konwersja jest wykonywana na miejscu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego konwertuje `_variant_t` wskazany obiekt `VARTYPE`. Jeśli *pSrc* ma wartość NULL, konwersja odbywa się w miejscu, w przeciwnym razie to `_variant_t` obiekt jest kopiowany z *pSrc* , a następnie konwertowana.
+Ta funkcja członkowska Konwertuje obiekt `_variant_t` na wskazany `VARTYPE`. Jeśli *pSrc* ma wartość null, konwersja jest wykonywana, w przeciwnym razie ten obiekt `_variant_t` jest kopiowany z *pSrc* , a następnie konwertowany.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_variant_t, klasa](../cpp/variant-t-class.md)

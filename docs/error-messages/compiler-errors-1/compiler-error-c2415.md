@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2415
 ms.assetid: f225c913-2bea-46b1-b096-3d358ac94a15
-ms.openlocfilehash: 81e2da31b39b323919132ae86cd365d9c119be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0cdd528eca8ea267c62e6d44752d29ae16830c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402960"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205624"
 ---
 # <a name="compiler-error-c2415"></a>Błąd kompilatora C2415
 
 niewłaściwy typ operandu
 
-Opcode nie używać argumentów operacji tego typu.
+Kod operacji nie używa operandów tego typu.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Opcode nie obsługuje liczby operandów używane. Sprawdź podręcznika język asemblera, aby określić poprawną liczbę argumentów.
+1. Kod operacji nie obsługuje liczby użytych operandów. Zapoznaj się z instrukcją Skorowidz języka zestawu, aby określić poprawną liczbę operandów.
 
-1. Procesor nowsza obsługuje instrukcji za pomocą dodatkowych typów. Dostosuj [/arch (minimalna architektura Procesora)](../../build/reference/arch-minimum-cpu-architecture.md) możliwość użycia procesora nowsze.
+1. Nowszy procesor obsługuje instrukcję z dodatkowymi typami. Dostosuj opcję [/arch (minimalna architektura procesora)](../../build/reference/arch-minimum-cpu-architecture.md) , aby użyć późniejszego procesora.

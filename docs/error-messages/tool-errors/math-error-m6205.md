@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6205
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
-ms.openlocfilehash: cdcaa714836f77d6238cc790457a5422cc825889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb9c646329a4db224b853bea91e69576bee04be6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173637"
 ---
 # <a name="math-error-m6205"></a>Błąd matematyczny M6205
 
-'Funkcja': błąd _TLOSS
+"Function": błąd _TLOSS
 
-Wystąpił całkowita utrata znaczenia (dokładności).
+Całkowita utrata istotności (precyzja).
 
-Ten błąd może być spowodowany jako argument sin, co zapewnia bardzo dużą liczbą cos lub tan, ponieważ argument operacji musi być ograniczone do liczbą z zakresu od 0 do 2 * pi.
+Ten błąd może być spowodowany złożeniem bardzo dużej liczby jako argumentu operacji Sin, cos lub Tan, ponieważ operand musi być zredukowany do liczby z zakresu od 0 do 2 * pi.

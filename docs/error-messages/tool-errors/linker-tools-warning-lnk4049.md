@@ -6,44 +6,44 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8e4416eafd47f584de4ab1c83aa7303cab0440a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194138"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Ostrzeżenie LNK4049 narzędzi konsolidatora
 
-> symbol "*symbol*"zdefiniowane w"*filename.obj*" jest importowany
+> Symbol "*symbol*" zdefiniowany w elemencie "*filename. obj*" został zaimportowany
 
-[__declspec(DllImport)](../../cpp/dllexport-dllimport.md) określono *symbol* nawet, jeśli symbol jest zdefiniowany w pliku obiektu *filename.obj* w ten sam obraz. Usuń `__declspec(dllimport)` modyfikator, aby rozwiązać tego ostrzeżenia.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) została określona dla *symbolu* , chociaż symbol jest zdefiniowany w pliku obiektu *filename. obj* w tym samym obrazie. Usuń modyfikator `__declspec(dllimport)`, aby usunąć to ostrzeżenie.
 
 ## <a name="remarks"></a>Uwagi
 
-To ostrzeżenie jest generowana przez konsolidator, gdy zdefiniować symbol w jeden obiekt pliku i odwoływać się do niego przy użyciu `__declspec(dllimport)` modyfikator deklaracji w innym.
+To ostrzeżenie jest generowane przez konsolidator podczas definiowania symbolu w jednym pliku obiektu i odwoływania się do niego przy użyciu modyfikatora deklaracji `__declspec(dllimport)` w innym.
 
-Ostrzeżenie LNK4049 jest nieco bardziej ogólnych [LNK4217 ostrzeżenie narzędzi konsolidatora](linker-tools-warning-lnk4217.md). Konsolidator generuje ostrzeżenie LNK4049, gdy nie można określić, plik, który funkcji lub obiektu odwołanie do symbolu zaimportowane.
+Ostrzeżenie LNK4049 narzędzi KONSOLIDATORA to bardziej ogólna wersja [narzędzi konsolidatora LNK4217 narzędzi konsolidatora](linker-tools-warning-lnk4217.md). Konsolidator generuje ostrzeżenie LNK4049 narzędzi KONSOLIDATORA, gdy nie może ustalić, który plik funkcji lub obiektu odwołuje się do zaimportowanego symbolu.
 
-Typowe przypadki, gdzie LNK4049 jest generowany zamiast LNK4217 są następujące:
+Typowe przypadki, w których Wygenerowano LNK4049 narzędzi KONSOLIDATORA zamiast LNK4217 narzędzi KONSOLIDATORA są następujące:
 
-- Korzystając z [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) opcji.
+- W przypadku korzystania z opcji [/Incremental](../../build/reference/incremental-link-incrementally.md) .
 
-- Korzystając z [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md) opcji.
+- W przypadku korzystania z opcji [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) .
 
-Aby rozwiązać LNK4049, wypróbuj jedną z następujących procedur:
+Aby rozwiązać LNK4049 narzędzi KONSOLIDATORA, wypróbuj jedną z następujących procedur:
 
-- Usuń `__declspec(dllimport)` modyfikator z deklaracją do przodu, który wyzwolił LNK4049 symbolu. Można wyszukiwać symbole w obrębie obrazów binarnych, za pomocą **DUMPBIN** narzędzia. **DUMPBIN /SYMBOLS** przełącznik wyświetla tabelą symboli COFF obrazu. Aby uzyskać więcej informacji na temat **DUMPBIN** narzędzia, zobacz [odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md).
+- Usuń modyfikator `__declspec(dllimport)` z deklaracji Forward symbolu, który wyzwolił LNK4049 narzędzi KONSOLIDATORA. Symbole w obrazie binarnym można wyszukiwać za pomocą narzędzia **polecenia DUMPBIN** . Przełącznik **polecenia DUMPBIN/Symbols** Wyświetla tabelę symboli COFF obrazu. Aby uzyskać więcej informacji na temat narzędzia **polecenia DUMPBIN** , zobacz [polecenia DUMPBIN Reference](../../build/reference/dumpbin-reference.md).
 
-- Aby tymczasowo wyłączyć przyrostowe konsolidowanie i optymalizacji całego programu. Gdy ponownie skompilowana, aplikacja generuje ostrzeżenie LNK4217, która zawiera nazwę funkcji, która odwołuje się do zaimportowanych symboli. Usuń `__declspec(dllimport)` modyfikator deklaracji z zaimportowanych symboli i ponownie Włącz konsolidację przyrostową lub optymalizacja całego programu, zgodnie z potrzebami.
+- Tymczasowo wyłącz konsolidację przyrostową i optymalizację całego programu. Po ponownym skompilowaniu aplikacja generuje ostrzeżenie LNK4217 narzędzi KONSOLIDATORA, która zawiera nazwę funkcji, która odwołuje się do zaimportowanego symbolu. Usuń modyfikator deklaracji `__declspec(dllimport)` z zaimportowanego symbolu, a następnie ponownie włącz konsolidację przyrostową lub optymalizację całego programu zgodnie z potrzebami.
 
-Mimo że końcowy wygenerowany kod działa poprawnie, kod wygenerowany w wywołaniu funkcji importowanych jest mniej wydajne niż bezpośrednie wywoływanie funkcji. To ostrzeżenie nie jest wyświetlany podczas kompilowania przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opcji.
+Mimo że ostatni wygenerowany kod działa prawidłowo, kod wygenerowany do wywołania zaimportowanej funkcji jest mniej wydajny niż bezpośrednie wywoływanie funkcji. To ostrzeżenie nie pojawia się podczas kompilowania przy użyciu opcji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-Aby uzyskać więcej informacji na temat Importowanie i eksportowanie danych deklaracji, zobacz [dllexport i dllimport](../../cpp/dllexport-dllimport.md).
+Aby uzyskać więcej informacji na temat importowania i eksportowania deklaracji danych, zobacz [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
 
 ## <a name="example"></a>Przykład
 
-Łączenie dwóch następujących modułów wygeneruje LNK4049. Pierwszy moduł generuje obiekt zawierający pojedynczy wyeksportowanej funkcji.
+Łączenie następujących dwóch modułów spowoduje wygenerowanie LNK4049 narzędzi KONSOLIDATORA. Pierwszy moduł generuje plik obiektu zawierający pojedynczą wyeksportowaną funkcję.
 
 ```cpp
 // LNK4049a.cpp
@@ -55,7 +55,7 @@ __declspec(dllexport) int func()
 }
 ```
 
-Drugi moduł generuje plik obiektu zawierającego deklaracją do przodu do funkcji wyeksportowany w module pierwszy wraz z wywołania tę funkcję wewnątrz `main` funkcji. Ten moduł przy użyciu pierwszego modułu konsolidacji wygeneruje LNK4049. Usuń `__declspec(dllimport)` modyfikator z deklaracji, aby rozwiązać ostrzeżenia.
+Drugi moduł generuje plik obiektu zawierający deklarację do przodu do funkcji wyeksportowanej w pierwszym module wraz z wywołaniem tej funkcji wewnątrz funkcji `main`. Połączenie tego modułu z pierwszym modułem spowoduje wygenerowanie LNK4049 narzędzi KONSOLIDATORA. Usuń modyfikator `__declspec(dllimport)` z deklaracji, aby rozwiązać ten problem.
 
 ```cpp
 // LNK4049b.cpp
@@ -72,8 +72,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Linker Tools Warning LNK4217](linker-tools-warning-lnk4217.md) \
-[Linker Tools Warning LNK4286](linker-tools-warning-lnk4286.md) \
+[Ostrzeżenie narzędzi konsolidatora lnk4217 narzędzi konsolidatora](linker-tools-warning-lnk4217.md) \
+[Ostrzeżenie narzędzi konsolidatora LNK4286](linker-tools-warning-lnk4286.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

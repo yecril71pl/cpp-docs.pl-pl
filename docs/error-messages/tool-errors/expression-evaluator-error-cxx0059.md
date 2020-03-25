@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0059
 - CAN0059
 ms.assetid: e8bdcb74-1315-4083-b24d-e47eac7d1ec0
-ms.openlocfilehash: 9d031044ffc89df40bb4196c8c5f19749b76898d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3473d4ae3380b5896005bc2801ef334f3a5ec4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184583"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Błąd CXX0059 programu Expression Evaluator
 
-Lewy operand jest klasa nie nazwy funkcji
+Lewy argument operacji jest klasą, a nie nazwą funkcji
 
-Lewy operand wywołanie funkcji było nazwy klasy i nie można rozpoznać wywołania funkcji. Pomijając nazwę funkcji składowej w wyrażeniu może być przyczyną tego błędu.
+Lewy argument operacji wywołania funkcji był nazwą klasy i nie można go rozpoznać do wywołania funkcji. Pominięcie nazwy funkcji składowej w wyrażeniu może spowodować wystąpienie tego błędu.
 
-Ten błąd jest taka sama jak CAN0059.
+Ten błąd jest identyczny z CAN0059.

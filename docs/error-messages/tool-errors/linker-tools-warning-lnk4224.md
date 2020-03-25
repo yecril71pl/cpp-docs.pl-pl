@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4224
 ms.assetid: 8624b70e-0b93-43cf-b457-834d38632d0b
-ms.openlocfilehash: eb0a019cc80e5218a52697b8bcd5e91b811d04d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e52dd533d897e729aba5f2b43ea6c019a024d43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182984"
 ---
 # <a name="linker-tools-warning-lnk4224"></a>Ostrzeżenie LNK4224 narzędzi konsolidatora
 
-> *Opcja* nie jest już obsługiwany; zignorowano
+> *opcja* nie jest już obsługiwana; Ignoruj
 
 ## <a name="remarks"></a>Uwagi
 
-— Opcja konsolidatora nieprawidłowy, przestarzałe została określona i ignorowane.
+Określono nieprawidłową, przestarzałą opcję konsolidatora i została zignorowana.
 
-Na przykład LNK4224 może wystąpić, jeśli w pojawia się dyrektywa/Comment. obiektu Dyrektywa/Comment były dodawane przy użyciu [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md) pragma, przy użyciu opcji exestr przestarzałe. Użyj polecenia dumpbin [/ALL](../../build/reference/all.md) wyświetlić dyrektywy konsolidatora w pliku .obj.
+Na przykład LNK4224 narzędzi KONSOLIDATORA może wystąpić, jeśli dyrektywa/Comment pojawia się w. obj. Dyrektywa/Comment zostałaby dodana za pośrednictwem [komentarza (CC++/)](../../preprocessor/comment-c-cpp.md) pragma przy użyciu przestarzałej opcji exestr. Użyj polecenia DUMPBIN [/All](../../build/reference/all.md) , aby wyświetlić dyrektywy konsolidatora w pliku. obj.
 
-Jeśli to możliwe modyfikowanie źródła dla plików .obj i Usuń pragmy. Jeśli zignorujesz to ostrzeżenie, jest możliwe, że .executable skompilowany przy użyciu **/CLR: pure** nie będzie działać zgodnie z oczekiwaniami. **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Jeśli to możliwe, zmodyfikuj Źródło dla. obj i Usuń pragmę. Jeśli zignorujesz to ostrzeżenie, istnieje możliwość, że plik wykonywalny skompilowany za pomocą **/CLR: Pure** nie będzie działać zgodnie z oczekiwaniami. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK4224.
+Poniższy przykład generuje LNK4224 narzędzi KONSOLIDATORA.
 
 ```cpp
 // LNK4224.cpp

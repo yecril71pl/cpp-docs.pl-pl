@@ -8,16 +8,16 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a259b80b941e37e0c3040ad55894c114fe4bc82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312157"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160531"
 ---
-# <a name="unhook"></a>__unhook
+# <a name="__unhook"></a>__unhook
 
-Dissociates metody obsługi zdarzeń.
+Deskojarzenie metody obsługi ze zdarzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,66 +39,66 @@ long  __unhook(
 
 #### <a name="parameters"></a>Parametry
 
-**&** *SourceClass* `::` *EventMethod* wskaźnik do metody zdarzeń, z którego odczepić metody obsługi zdarzeń:
+**&** *SourceClass* `::` *EventMethod* wskaźnik do metody zdarzenia, z której zostanie odłożona metoda obsługi zdarzeń:
 
-- Zdarzenia natywnego języka C++: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.
+- Zdarzenia C++ natywne: *SourceClass* jest klasą źródłową zdarzenia, a *EventMethod* to zdarzenie.
 
-- Zdarzenia COM: *SourceClass* interfejs źródła zdarzeń i *EventMethod* jest jednym z jej metody.
+- Zdarzenia COM: *SourceClass* jest interfejsem źródła zdarzeń, a *EventMethod* jest jedną z jej metod.
 
-- Zdarzenia zarządzane: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.
+- Zdarzenia zarządzane: *SourceClass* jest klasą źródłową zdarzenia, a *EventMethod* to zdarzenie.
 
 *interface*<br/>
-Nazwa interfejsu, jest unhooked z *odbiorcy*, tylko w przypadku odbiorników zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/attributes/event-receiver.md) atrybut jest **true**.
+Nazwa interfejsu, która jest odłączana od *odbiornika*, tylko dla odbiorników zdarzeń com, w których parametr *layout_dependent* atrybutu [event_receiver](../windows/attributes/event-receiver.md) ma **wartość true**.
 
 *source*<br/>
-Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` określonych w `event_receiver`, *źródła* może być jedną z następujących czynności:
+Wskaźnik do wystąpienia źródła zdarzeń. W zależności od kodu `type` określonego w `event_receiver`, *Źródło* może być jednym z następujących:
 
-- Wskaźnik obiektu źródła zdarzeń macierzystych.
+- Natywny wskaźnik obiektu źródła zdarzenia.
 
-- `IUnknown`-Oparte wskaźnikiem (źródło modelu COM).
+- Wskaźnik oparty na `IUnknown`(Źródło COM).
 
-- Wskaźnik zarządzanego obiektu (w przypadku zarządzanych zdarzeń).
+- Wskaźnik obiektu zarządzanego (dla zdarzeń zarządzanych).
 
-**&** *ReceiverClass* `::` `HandlerMethod` wskaźnik do metody obsługi zdarzeń jako unhooked ze zdarzenia. Program obsługi jest określony jako metoda klasy lub odwołanie do tej samej; Jeśli nie określisz nazwy klasy, **__unhook** przyjęto założenie, klasy, która ma być, że w którym jest wywoływana.
+**&** *ReceiverClass* `::` `HandlerMethod` wskaźnik do metody obsługi zdarzeń, który ma zostać odpinany ze zdarzenia. Procedura obsługi jest określana jako metoda klasy lub odwołania do tego samego; Jeśli nie określisz nazwy klasy, **__unhook** zakłada, że Klasa jest taka, w której jest wywoływana.
 
-- Zdarzenia natywnego języka C++: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.
+- Zdarzenia C++ natywne: *ReceiverClass* jest klasą odbiorcy zdarzeń, a `HandlerMethod` jest programem obsługi.
 
-- Zdarzenia COM: *ReceiverClass* interfejs odbiorcy zdarzeń i `HandlerMethod` jest jednym z jego obsługę.
+- Zdarzenia COM: *ReceiverClass* jest interfejsem odbiorcy zdarzeń, a `HandlerMethod` jest jednym z jej obsługi.
 
-- Zdarzenia zarządzane: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.
+- Zdarzenia zarządzane: *ReceiverClass* jest klasą odbiorcy zdarzeń, a `HandlerMethod` jest programem obsługi.
 
-*odbiornik*(opcjonalnie) wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest odbiorcy klasy lub struktury, w którym **__unhook** jest wywoływana.
+*odbiorca*(opcjonalnie) wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest Klasa odbiornika lub struktura, w której jest wywoływana **__unhook** .
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Sposób użycia
 
-Może być użycie w zakresie dowolnej funkcji, łącznie z głównym, poza klasy odbiorcy zdarzeń.
+Można używać w dowolnym zakresie funkcji, w tym Main, poza klasą odbiorcy zdarzeń.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja wewnętrzna **__unhook** w odbiorcy zdarzeń, aby usunąć skojarzenie lub "odczepić" metodę programu obsługi z metody zdarzeń.
+Użyj funkcji wewnętrznej **__unhook** w odbiorniku zdarzenia, aby usunąć skojarzenie lub "odpina" metodę obsługi z metody zdarzenia.
 
-Istnieją trzy rodzaje **__unhook**. W większości przypadków można użyć pierwszy formy (4 argument). Można użyć drugiej formy (dwuargumentową) **__unhook** tylko dla odbiorcy zdarzenia COM; to unhooks interfejsu całe zdarzenie. Trzecia formą (one-argument —) umożliwia Odpięcie wszystkich obiektów delegowanych pochodzących z określonego źródła.
+Istnieją trzy formy **__unhook**. W większości przypadków można użyć pierwszego (czterech argumentów) formularza. Można użyć drugiej (dwóch argumentów) formy **__unhook** tylko dla odbiorcy zdarzeń com; spowoduje to odpinanie całego interfejsu zdarzenia. Możesz użyć trzeciego (jednego argumentu) formularza, aby odpiąć wszystkie delegatów z określonego źródła.
 
-Wartość różną od zera, zwracana wartość wskazuje na to, że wystąpił błąd (zdarzenia zarządzane spowoduje zgłoszenie wyjątku).
+Wartość zwrotna niezerowa wskazuje, że wystąpił błąd (zdarzenia zarządzane spowodują zgłoszenie wyjątku).
 
-Jeśli wywołasz **__unhook** na zdarzenia i program obsługi zdarzeń, które nie są już podłączone odniesie żadnego skutku.
+Jeśli wywołasz **__unhook** na zdarzeniu i obsłudze zdarzeń, które nie zostały już podłączane, nie będzie żadnego efektu.
 
-W czasie kompilacji kompilator sprawdza, czy zdarzenie istnieje i czy parametr typu sprawdzenie z określonym programem obsługi.
+W czasie kompilacji kompilator sprawdza, czy zdarzenie istnieje i sprawdza typ parametru z określoną obsługą.
 
-Z wyjątkiem zdarzeń COM **__hook** i **__unhook** może być wywołana poza odbiorcy zdarzeń.
+Z wyjątkiem zdarzeń COM, **__hook** i **__unhook** mogą być wywoływane poza odbiorcą zdarzeń.
 
-Alternatywa dla użycia **__unhook** jest użycie operatora-=.
+Alternatywą dla korzystania z **__unhook** jest użycie operatora-=.
 
-Aby uzyskać informacji na temat kodowania zarządzanych zdarzeń w nowej składni, zobacz [zdarzeń](../extensions/event-cpp-component-extensions.md).
+Aby uzyskać informacje na temat kodowania zdarzeń zarządzanych w nowej składni, zobacz [Event](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
->  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.
+>  Klasa lub struktura z szablonem nie może zawierać zdarzeń.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) i [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md) przykładów.
+Przykłady można znaleźć [w temacie C++ obsługa zdarzeń w natywnym](../cpp/event-handling-in-native-cpp.md) i [obsłudze zdarzeń w modelu COM](../cpp/event-handling-in-com.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>

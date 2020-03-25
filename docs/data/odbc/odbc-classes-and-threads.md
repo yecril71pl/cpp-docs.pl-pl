@@ -6,27 +6,27 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 2d11cdab632e916f548011462f9738bc267fc730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cb5df605bef31e177e976798f975bb4ca14ced7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395823"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213189"
 ---
 # <a name="odbc-classes-and-threads"></a>Klasy i wątki ODBC
 
-Począwszy od MFC 4.2 jest obsługa wielowątkowości w przypadku klas MFC ODBC. Należy jednak pamiętać, że MFC nie zapewnia obsługi wielowątkowości dla klas DAO.
+Począwszy od MFC 4,2, istnieje obsługa wielowątkowości dla klas MFC ODBC. Należy jednak pamiętać, że MFC nie zapewnia obsługi wielowątkowości dla klas DAO.
 
-Obsługa wielowątkowości w przypadku klasy ODBC ma pewne ograniczenia. Ponieważ klasy te zawijać interfejsu API ODBC, są one ograniczone do obsługi wielowątkowości składników, na których zostały one utworzone. Na przykład wiele sterowników ODBC nie jest metodą o bezpiecznych wątkach; w związku z tym klasach MFC ODBC nie są wątkowo korzystania z jednej z tych sterowników. Należy sprawdzić, czy określonego sterownika jest metodą o bezpiecznych wątkach.
+Obsługa wielowątkowości dla klas ODBC ma pewne ograniczenia. Ponieważ te klasy zawijają interfejs API ODBC, są ograniczone do obsługi wielowątkowości składników, na których zostały skompilowane. Na przykład wiele sterowników ODBC nie jest bezpieczny wątkowo. w związku z tym klasy MFC ODBC nie są bezpieczne wątkowo, jeśli są używane z jednym z tych sterowników. Należy sprawdzić, czy konkretny sterownik jest bezpieczny dla wątków.
 
-Podczas tworzenia aplikacji wielowątkowych, powinno być dużą ostrożność podczas przy użyciu wielu wątków do manipulowania tego samego obiektu. Na przykład, korzystając z tych samych `CRecordset` obiektu w dwa wątki, które mogą powodować problemy podczas pobierania danych; operację pobierania w jeden wątek może zastąpić dane pobierane w innym wątku. Częściej spotykanym sposobem wykorzystania klas MFC ODBC w oddzielnych wątkach jest udostępnienie otwartą `CDatabase` obiektu w wątkach, aby użyć tego samego połączenia ODBC za pomocą oddzielnego `CRecordset` obiektów każdego wątku. Należy pamiętać, że użytkownik nie mają być przekazywane nieotwarte `CDatabase` obiekt `CRecordset` obiektu w innym wątku.
+Podczas tworzenia aplikacji wielowątkowej należy zachować ostrożność przy użyciu wielu wątków do manipulowania tym samym obiektem. Na przykład użycie tego samego obiektu `CRecordset` w dwóch wątkach może powodować problemy podczas pobierania danych; operacja pobierania w jednym wątku może zastąpić dane pobrane w innym wątku. Bardziej typowym zastosowaniem klas MFC ODBC w oddzielnych wątkach jest udostępnienie otwartego obiektu `CDatabase` w wielu wątkach w celu użycia tego samego połączenia ODBC z oddzielnym obiektem `CRecordset` w każdym wątku. Należy zauważyć, że nie należy przekazywać nieotwartego obiektu `CDatabase` do obiektu `CRecordset` w innym wątku.
 
 > [!NOTE]
->  Jeśli konieczne jest posiadanie wielu wątków, manipulowania tego samego obiektu, powinien implementować synchronizacji odpowiednich mechanizmów, takich jak sekcje krytyczne. Należy pamiętać, że niektóre operacje, takie jak `Open`, nie są chronione. Należy się upewnić, że te operacje nie zostaną wywołane jednocześnie z oddzielnych wątkach.
+>  Jeśli trzeba mieć wiele wątków manipuluje tym samym obiektem, należy zaimplementować odpowiednie mechanizmy synchronizacji, takie jak sekcje krytyczne. Należy pamiętać, że niektóre operacje, takie jak `Open`, nie są chronione. Należy się upewnić, że operacje te nie zostaną wywołane współbieżnie z oddzielnych wątków.
 
-Aby uzyskać więcej informacji o tworzeniu aplikacji wielowątkowych, zobacz [tematy o wielowątkowości](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Aby uzyskać więcej informacji na temat tworzenia aplikacji wielowątkowych, zobacz [temat wielowątkowość](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[Programowanie (MFC/ATL) dostępu do danych](../../data/data-access-programming-mfc-atl.md)
+[Programowanie dostępu do danych (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: d60e9b6284c79828fda1f7af542fcf197f189ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173728"
 ---
 # <a name="math-error-m6108"></a>Błąd matematyczny M6108
 
-Pierwiastek kwadratowy
+pierwiastek kwadratowy
 
-Argument operacji pierwiastek kwadratowy była ujemna.
+Operand w operacji typu kwadratowego jest ujemny.
 
-Program kończy się z kodem zakończenia 136.
+Program kończy pracę z kodem zakończenia 136.
 
 > [!NOTE]
->  `sqrt` Funkcji biblioteki wykonawczej C i Wewnętrzna funkcja FORTRAN **SQRT** nie generują tego błędu. C `sqrt` funkcja sprawdza, czy argument przed wykonaniem tej operacji i zwraca wartość błędu, jeśli argument jest ujemna. FORTRAN **SQRT** funkcja generuje błąd domeny [M6201](../../error-messages/tool-errors/math-error-m6201.md) zamiast tego błędu.
+>  Funkcja `sqrt` w bibliotece środowiska uruchomieniowego C i Pascal wewnętrzna funkcja **sqrt** nie generują tego błędu. Funkcja C `sqrt` sprawdza argument przed wykonaniem operacji i zwraca wartość błędu, jeśli operand jest ujemny. Funkcja Pascal **sqrt** GENERUJE błąd domeny [matematyczny M6201](../../error-messages/tool-errors/math-error-m6201.md) zamiast tego błędu.

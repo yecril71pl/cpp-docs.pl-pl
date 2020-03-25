@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210868"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl — Klasa
 
@@ -71,7 +71,7 @@ Jednostka magazynowa dla informacji o kolumnie. Wartość domyślna to [CAtlMap]
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -92,7 +92,7 @@ Jednostka magazynowa dla informacji o kolumnie. Wartość domyślna to [CAtlMap]
 
 Jest to obowiązkowe dla zestawów wierszy i poleceń. OLE DB wymaga od dostawców zaimplementowania HACCESSOR, który jest tagiem tablicy struktur [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . HACCESSORs zapewniane przez `IAccessorImpl` są adresami struktur `BindType`. Domyślnie `BindType` jest definiowana jako `ATLBINDINGS` w definicji szablonu w `IAccessorImpl`. `BindType` zapewnia mechanizm używany przez `IAccessorImpl` do śledzenia liczby elementów w tablicy `DBBINDING` oraz liczby odwołań i flag dostępu.
 
-## <a name="iaccessorimpl"></a>IAccessorImpl:: IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl:: IAccessorImpl
 
 Konstruktor.
 
@@ -102,7 +102,7 @@ Konstruktor.
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a>IAccessorImpl:: AddRefAccessor
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl:: AddRefAccessor
 
 Dodaje liczbę odwołań do istniejącej metody dostępu.
 
@@ -117,7 +117,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 Zobacz [IAccessor:: AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="createaccessor"></a>IAccessorImpl:: isdostępu
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl:: isdostępu
 
 Tworzy metodę dostępu z zestawu powiązań.
 
@@ -136,7 +136,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 Zobacz [IAccessor:: textaccess](/previous-versions/windows/desktop/ms720969(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="getbindings"></a>IAccessorImpl:: GetBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl:: GetBindings
 
 Zwraca podstawowe powiązania kolumn od konsumenta w metodzie dostępu.
 
@@ -153,7 +153,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 Zobacz [IAccessor:: GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="releaseaccessor"></a>IAccessorImpl:: ReleaseAccessor
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl:: ReleaseAccessor
 
 Zwalnia metodę dostępu.
 

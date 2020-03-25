@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0048
 - CXX0048
 ms.assetid: 294416f9-5e38-4450-8713-c13bcbaaf615
-ms.openlocfilehash: 369869c1256fea1ee2f49e2d088cc044100a16d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a82d825aa97e048c54ca3e5d7d54402e4edf3c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184895"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Błąd CXX0048 programu Expression Evaluator
 
-sekwencja wywoływania nie jest obsługiwane
+Sekwencja wywołująca nie jest obsługiwana
 
-Sekwencja wywoływania nie są obsługiwane przez Ewaluator wyrażeń C korzysta z funkcji w wyrażeniu. Nie można wywołać tę funkcję w wyrażenia okna wyrażeń kontrolnych.
+Funkcja określona w wyrażeniu używa sekwencji wywołującej, która nie jest obsługiwana przez ewaluatora wyrażeń języka C. Nie można wywołać tej funkcji w wyrażeniu okno wyrażeń kontrolnych.
 
-Ten błąd jest taka sama jak CAN0048.
+Ten błąd jest identyczny z CAN0048.

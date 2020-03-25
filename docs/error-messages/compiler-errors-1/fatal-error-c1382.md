@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
-ms.openlocfilehash: 2b7f6fd878f0d0ba6cde19a3a316a01c390e954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ed70a81c4ae2028d09b694f325f83454e99a587
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228567"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203102"
 ---
 # <a name="fatal-error-c1382"></a>Błąd krytyczny C1382
 
-Plik PCH "file" został przebudowany od "obj" został wygenerowany. Przebuduj ten obiekt
+plik PCH "File" został odbudowany od momentu wygenerowania "obj". Skompiluj ponownie ten obiekt
 
-Korzystając z [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykrył pliku .pch, która jest nowsza niż .obj CIL, wskazujące na. Informacje zawarte w pliku .obj CIL jest nieaktualna. Ponownie skompiluj obiektu.
+W przypadku korzystania z [/LTCG](../../build/reference/ltcg-link-time-code-generation.md)Kompilator wykrył plik. PCH, który jest NOWSZY niż CIL. obj wskazuje na to. Informacje w pliku CIL. obj są nieaktualne. Skompiluj ponownie obiekt.
 
-C1382 może również wystąpić, jeśli kompilujesz z opcją **/Yc**, ale również przekazać wielu plików kodu w kompilatorze.  Aby rozwiązać problem, nie należy używać **/Yc** podczas przekazywania wielu plików kodu w kompilatorze.  Aby uzyskać więcej informacji, zobacz [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md).
+C1382 może również wystąpić, Jeśli kompilujesz z **/YC**, ale również przekażesz wiele plików kodu źródłowego do kompilatora.  Aby rozwiązać ten problem, nie należy używać **/YC** podczas przekazywania wielu plików kodu źródłowego do kompilatora.  Aby uzyskać więcej informacji, zobacz [/YC (Create prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md).

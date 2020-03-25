@@ -1,26 +1,26 @@
 ---
-title: Kompilator ostrzeżenie (poziomy 1 i 4) C4115
+title: Ostrzeżenie kompilatora (poziomy 1 i 4) C4115
 ms.date: 11/04/2016
 f1_keywords:
 - C4115
 helpviewer_keywords:
 - C4115
 ms.assetid: f3f94e72-fc49-4d09-b3e7-23d68e61152f
-ms.openlocfilehash: 20e44eba3b6f6079e6f37b7cf33fa530a996e829
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e39e8c837d94776a804da2bf38643b453edb949
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198045"
 ---
-# <a name="compiler-warning-levels-1-and-4-c4115"></a>Kompilator ostrzeżenie (poziomy 1 i 4) C4115
+# <a name="compiler-warning-levels-1-and-4-c4115"></a>Ostrzeżenie kompilatora (poziomy 1 i 4) C4115
 
-"type": nazwana definicja typu w nawiasach
+"Type": nazwana definicja typu w nawiasach
 
-Dany symbol jest używany do definiowania struktury, Unii lub Typ wyliczany wewnątrz wyrażenia w nawiasach. Zakres definicja może być nieoczekiwany.
+Dany symbol jest używany do definiowania struktury, Unii lub typu wyliczeniowego wewnątrz wyrażenia ujętego w nawiasy. Zakres definicji może być nieoczekiwany.
 
-W wywołaniu funkcji C definicja ma zakres globalny. W wywołaniu C++ definicja ma taki sam zakres jak wywoływanej funkcji.
+W wywołaniu funkcji języka C definicja ma zakres globalny. W C++ wywołaniu definicja ma ten sam zakres, co funkcja, która jest wywoływana.
 
-To ostrzeżenie może również wpływać deklaratory wewnątrz nawiasów (na przykład prototypy), które nie są wyrażenia w nawiasach.
+To ostrzeżenie może być również spowodowane przez Deklaratory w nawiasach (takich jak prototypy), które nie są wyrażeniami w nawiasach.
 
-Jest to ostrzeżenia poziomu 1 z programy C++ i C opracowane w ramach zgodności z ANSI (/Za). W przeciwnym razie jest poziom 3.
+Jest to ostrzeżenie poziomu-1 z C++ programami i programami C skompilowanymi pod kątem zgodności ze standardem ANSI (/za). W przeciwnym razie jest to poziom 3.

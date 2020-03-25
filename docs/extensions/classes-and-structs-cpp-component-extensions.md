@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172571"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class i ref struct (C++/CLI i C++/CX)
 
@@ -43,7 +43,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *class_access*<br/>
 Obowiązkowe Dostępność klasy lub struktury poza zestawem. Możliwe wartości to **Public** i **Private** (wartość domyślna to**Private** ). Zagnieżdżone klasy lub struktury nie mogą mieć specyfikatora *class_access* .
 
-*name*<br/>
+*Nazwij*<br/>
 Nazwa klasy lub struktury.
 
 *modyfikator*<br/>
@@ -63,7 +63,7 @@ Domyślną dostępnością elementu członkowskiego obiektu zadeklarowanego za p
 
 Gdy typ referencyjny dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej muszą jawnie zostać zastąpione (z [zastąpieniem](override-cpp-component-extensions.md)) lub ukryty (z [nowym miejscem w tabeli metod wirtualnych)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej muszą być również jawnie oznaczone jako **wirtualne**.
 
-Aby wykryć w czasie kompilacji, niezależnie od tego, czy typ jest klasą referencyjną, czy **strukturą ref**, czy klasą `__is_value_class (type)` **wartości** lub `__is_simple_value_class (type)` **strukturą wartości**, użyj `__is_ref_class (type)`,, lub. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
+Aby wykryć w czasie kompilacji, niezależnie od tego, czy typ jest **klasą referencyjną** , czy **strukturą ref**, czy **klasą wartości** lub **strukturą wartości**, użyj `__is_ref_class (type)`, `__is_value_class (type)`lub `__is_simple_value_class (type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Aby uzyskać więcej informacji na temat klas i struktur, zobacz
 
@@ -73,7 +73,7 @@ Aby uzyskać więcej informacji na temat klas i struktur, zobacz
 
 - [Klasy, struktury i związki](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory i finalizatory, w jaki sposób: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory i finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operatory zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -100,7 +100,7 @@ Podczas deklarowania obiektu za pomocą **klasy wartości** lub słów kluczowyc
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -119,8 +119,8 @@ Słowa kluczowe **klasy wartości** i **struktury wartości** instruują kompila
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

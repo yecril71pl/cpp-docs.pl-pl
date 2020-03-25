@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4379
+title: Ostrzeżenie kompilatora (poziom 1) C4379
 ms.date: 11/04/2016
 f1_keywords:
 - C4379
 helpviewer_keywords:
 - C4379
 ms.assetid: b23e8132-69aa-4649-9c1e-09813b9fb5b7
-ms.openlocfilehash: 110d45749bcfd219b38bf7a4e57a3263bffc5c65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1163364778edd2dd34487fb7cd109e968006d937
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186988"
 ---
-# <a name="compiler-warning-level-1-c4379"></a>Kompilator ostrzeżenie (poziom 1) C4379
+# <a name="compiler-warning-level-1-c4379"></a>Ostrzeżenie kompilatora (poziom 1) C4379
 
-Wersja wersja środowiska uruchomieniowego języka wspólnego nie jest obsługiwana przez ten kompilator. Korzystanie z tej wersji może spowodować nieoczekiwane wyniki.
+Wersja wersji środowiska uruchomieniowego języka wspólnego nie jest obsługiwana przez ten kompilator. Użycie tej wersji może spowodować nieoczekiwane wyniki.
 
-Masz poprzednią wersję środowiska uruchomieniowego języka wspólnego na komputerze, ale nie bieżącej wersji. Aby rozwiązać C4379, należy zainstalować wersję środowiska uruchomieniowego języka wspólnego dostarczanej z kompilatora.
+Masz poprzednią wersję środowiska uruchomieniowego języka wspólnego na swojej maszynie, ale nie bieżącą wersję. Aby rozwiązać C4379, Zainstaluj wersję środowiska uruchomieniowego języka wspólnego, która została dostarczona z kompilatorem.

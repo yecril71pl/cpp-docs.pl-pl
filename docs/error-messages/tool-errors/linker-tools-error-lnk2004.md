@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194840"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Błąd narzędzi konsolidatora LNK2004
 
-przepełnienie naprawy względem elementu GP pod kątem; krótka sekcja "section" jest za duża lub poza zakresem.
+przepełnienie naprawy względem elementu GP do "target"; krótka sekcja "sekcja" jest za duża lub poza zakresem.
 
-Sekcja była zbyt duża.
+Sekcja jest za duża.
 
-Aby rozwiązać ten problem, należy zmniejszyć rozmiar krótka sekcja albo jawnie umieszczenie danych w długich fragmentów za pośrednictwem sekcji #pragma (".sectionname", odczytu, zapisu, długi) i używając `__declspec(allocate(".sectionname"))` na danych definicje i deklaracje.  Na przykład
+Aby rozwiązać ten problem, zmniejsz rozmiar krótkiej sekcji, jawnie umieszczając dane w długich sekcjach za pośrednictwem #pragma sekcji (". SectionName", Odczytaj, Zapisz, Long) i używając `__declspec(allocate(".sectionname"))` na temat definicji i deklaracji danych.  Na przykład:
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-Można również przenieść dane logicznie pogrupowane w jego własnej strukturę, która będzie Kolekcja danych, które są większe niż 8 bajtów, które kompilator przydzieli w sekcji danych long.  Na przykład
+Można również przenieść logicznie pogrupowane dane do własnej struktury, która będzie kolekcją danych większą niż 8 bajtów, które kompilator przydzieli w jednolongowej sekcji danych.  Na przykład:
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-Ten błąd występuje błąd krytyczny `LNK1165`.
+Następuje błąd krytyczny `LNK1165`.

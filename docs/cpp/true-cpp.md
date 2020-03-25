@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-ms.openlocfilehash: 5cfc99f446499201a0f54c8e5b1dcc2d7152445c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b497c3c9eb1b30074c9b7286c438d0077525e05b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404705"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188041"
 ---
 # <a name="true-c"></a>true (C++)
 
@@ -24,7 +24,7 @@ bool-expression logical-operator true ;
 
 ## <a name="remarks"></a>Uwagi
 
-To słowo kluczowe jest jedną z dwóch wartości do zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenia warunkowego jest teraz wyrażenie logiczne true). Jeśli `i` typu **bool**, then — instrukcja `i = true;` przypisuje **true** do `i`.
+To słowo kluczowe jest jedną z dwóch wartości dla zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenie warunkowe to teraz prawdziwe wyrażenie logiczne). Jeśli `i` jest typu **bool**, instrukcja `i = true;` przypisuje **wartość true** do `i`.
 
 ## <a name="example"></a>Przykład
 
@@ -45,6 +45,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

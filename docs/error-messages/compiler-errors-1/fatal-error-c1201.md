@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1201
 ms.assetid: e58b9b9a-2c6f-454d-8719-9773aca765d1
-ms.openlocfilehash: 21f429ebffb7cacd6f50b9559d72a63527bfade9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca16f89b3f6b3053211762dab622d33695d4783
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203492"
 ---
 # <a name="fatal-error-c1201"></a>Błąd krytyczny C1201
 
-Nie można kontynuować po błędzie składniowym w definicji szablonu klasy
+nie można kontynuować po błędzie składniowym w definicji szablonu klasy
 
 Wystąpił nieoczekiwany błąd podczas analizowania definicji szablonu klasy.
 
-Usuń inne błędy i ponownie skompilować. Jeśli na tym kończy się niepowodzeniem, pamiętaj okoliczności wystąpienia błędu, spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia, skontaktuj się [pomoc techniczna firmy Microsoft](/visualstudio/ide/talk-to-us).
+Usuń wszystkie inne błędy i ponownie skompiluj. Jeśli to się nie powiedzie, zanotuj sytuacje błędu, spróbuj wyizolować problem i utworzyć powtarzalny przypadek testowy, a następnie skontaktuj się z [pomocą techniczną firmy Microsoft](/visualstudio/ide/talk-to-us).

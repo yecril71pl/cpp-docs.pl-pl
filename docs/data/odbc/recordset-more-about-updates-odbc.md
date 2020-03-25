@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Więcej informacji na temat aktualizacje (ODBC)'
+title: 'Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,102 +10,102 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f11c723e4589cb28a3f38100050a69a78fc0809e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397773"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212852"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Zestaw rekordów: Więcej informacji na temat aktualizacje (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Zestaw rekordów: więcej informacji o aktualizacjach (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
-- [Jak inne operacje, takie jak transakcje wpływają na aktualizacje](#_core_how_transactions_affect_updates).
+- [Sposób, w jaki inne operacje, takie jak transakcje, wpływają na aktualizacje](#_core_how_transactions_affect_updates).
 
-- [Aktualizacje i innych użytkowników](#_core_your_updates_and_the_updates_of_other_users).
+- [Aktualizacje i inni użytkownicy](#_core_your_updates_and_the_updates_of_other_users).
 
-- [Więcej informacji na temat funkcji elementów członkowskich Update i Delete](#_core_more_about_update_and_delete).
+- [Więcej informacji o funkcjach aktualizowania i usuwania elementów członkowskich](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `AddNew`, `Edit`, `Delete`, i `Update` funkcji składowych; Jednakże, można wykonać transakcji. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Ten temat dotyczy obiektów pochodnych `CRecordset`, w których nie zaimplementowano pobierania wierszy zbiorczych. Jeśli zaimplementowano pobieranie wierszy zbiorczych, niektóre informacje nie są stosowane. Na przykład nie można wywołać funkcji Członkowskich `AddNew`, `Edit`, `Delete`i `Update`. można jednak wykonywać transakcje. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_how_other_operations_affect_updates"></a> Jak inne operacje wpływają na aktualizacje
+##  <a name="how-other-operations-affect-updates"></a><a name="_core_how_other_operations_affect_updates"></a>Jak inne operacje mają wpływ na aktualizacje
 
-Aktualizacje są zagrożone transakcji obowiązuje w czasie aktualizacji, zamykając zestawu rekordów przed ukończeniem transakcji i przewijając przed ukończeniem transakcji.
+Na aktualizacje mają wpływ transakcje wprowadzone w momencie aktualizacji, zamykając zestaw rekordów przed ukończeniem transakcji i przewijając przed ukończeniem transakcji.
 
-###  <a name="_core_how_transactions_affect_updates"></a> Jak transakcje wpływają na aktualizacje
+###  <a name="how-transactions-affect-updates"></a><a name="_core_how_transactions_affect_updates"></a>Jak transakcje mają wpływ na aktualizacje
 
-Poza zrozumienia sposobu `AddNew`, `Edit`, i `Delete` pracy, ważne jest, aby zrozumieć sposób, w jaki `BeginTrans`, `CommitTrans`, i `Rollback` funkcje elementów członkowskich [CDatabase](../../mfc/reference/cdatabase-class.md) działają z Funkcje update [CRecordset](../../mfc/reference/crecordset-class.md).
+Oprócz zrozumienia, jak `AddNew`, `Edit`i `Delete` pracy, ważne jest, aby zrozumieć, jak `BeginTrans`, `CommitTrans`i `Rollback` funkcje członkowskie [CDatabase](../../mfc/reference/cdatabase-class.md) pracy z funkcjami aktualizacji [CRecordset](../../mfc/reference/crecordset-class.md).
 
-Domyślnie wywołuje w celu `AddNew` i `Edit` mogą wpłynąć na źródło danych natychmiast, gdy zostanie wywołana `Update`. `Delete` wywołania zaczynają obowiązywać natychmiast. Jednak można było określić transakcji i wykonywanie partii takich połączeń. Aktualizacje nie są trwałe, aż je zatwierdzisz. Jeśli zmienisz zdanie, można wycofać transakcji, zamiast go zatwierdzania.
+Domyślnie wywołania `AddNew` i `Edit` mają wpływ na źródło danych natychmiast po wywołaniu `Update`. wywołania `Delete` zaczynają obowiązywać natychmiast. Można jednak ustanowić transakcję i wykonać partię takich wywołań. Aktualizacje nie są trwałe, dopóki nie zostaną zatwierdzone. Jeśli zmienisz zdanie, możesz wycofać transakcję zamiast jej zatwierdzania.
 
-Aby uzyskać więcej informacji na temat transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
+Aby uzyskać więcej informacji na temat transakcji, zobacz [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Jak zamknięcia zestawu rekordów wpływa na aktualizacje
+###  <a name="how-closing-the-recordset-affects-updates"></a><a name="_core_how_closing_the_recordset_affects_updates"></a>Jak zamknięcie zestawu rekordów ma wpływ na aktualizacje
 
-Jeśli zamkniesz zestaw rekordów lub związanych z nią `CDatabase` obiektu z transakcją w toku (nie wywołano [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) lub [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), transakcja została wycofana Utwórz kopię automatycznie (o ile bazy danych zaplecza jest aparat bazy danych Microsoft Jet).
+W przypadku zamknięcia zestawu rekordów lub skojarzonego z nim obiektu `CDatabase`, gdy transakcja jest w toku (nie wywołano [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) lub [CDatabase:: Rollback](../../mfc/reference/cdatabase-class.md#rollback)), transakcja zostanie wycofana automatycznie (chyba że zaplecze bazy danych jest aparatem bazy danych Microsoft Jet).
 
 > [!CAUTION]
->  Jeśli używasz aparatu bazy danych Microsoft Jet zamknięcia zestawu rekordów wewnątrz transakcji jawnej nie powoduje zwalnianie wierszy, które zostały zmodyfikowane ani blokad, które zostały wprowadzone do momentu jawnego transakcji nie zostanie przekazana lub wycofana. Zaleca się że należy zawsze zarówno otwierających i zamykających zestawy rekordów wewnątrz lub na zewnątrz transakcji jawnej Jet.
+>  W przypadku korzystania z aparatu bazy danych Microsoft Jet zamknięcie zestawu rekordów wewnątrz jawnej transakcji nie powoduje zwolnienia żadnego z wierszy, które zostały zmodyfikowane lub zablokowane, dopóki transakcja jawna nie zostanie zatwierdzona lub wycofana. Zaleca się, aby zawsze otwierać i zamykać zestawy rekordów wewnątrz lub na zewnątrz jawnej transakcji aparatu Jet.
 
-###  <a name="_core_how_scrolling_affects_updates"></a> Jak przewijanie wpływa na aktualizacje
+###  <a name="how-scrolling-affects-updates"></a><a name="_core_how_scrolling_affects_updates"></a>Jak przewijanie ma wpływ na aktualizacje
 
-Gdy użytkownik [zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) w zestawie rekordów buforu edycji jest wypełniany każdego nowego rekordu bieżącej (poprzedniego rekordu nie znajduje się pierwszy). Przewijanie pomija za pośrednictwem wcześniej usuniętych rekordów. Po przewinięciu w po `AddNew` lub `Edit` wywołania bez wywoływania `Update`, `CommitTrans`, lub `Rollback` najpierw wszelkie zmiany zostaną utracone (z bez ostrzeżenia dla użytkownika) jako nowy rekord jest umieszczany w buforze edycji. Bufor edycji zostanie wypełnione przy użyciu rekordu przewijane w, przechowywane rekordu jest zwalniana i nie zmienią się w źródle danych. Dotyczy to zarówno `AddNew` i `Edit`.
+Gdy [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) w zestawie rekordów, bufor edycji jest wypełniany każdym nowym rekordem bieżącym (poprzedni rekord nie jest przechowywany jako pierwszy). Przewijanie powoduje pominięcie poprzednio usuniętych rekordów. Jeśli przewiniesz po `AddNew` lub `Edit` wywołaniu bez wywoływania `Update`, `CommitTrans`lub `Rollback`, wszelkie zmiany zostaną utracone (bez ostrzeżenia użytkownika), ponieważ nowy rekord zostanie przeniesiony do buforu edycji. Bufor edycji jest wypełniony rekordem, w którym przewiniesz, przechowywany rekord jest zwolniony i nie ma żadnych zmian w źródle danych. Dotyczy to zarówno `AddNew`, jak i `Edit`.
 
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Aktualizacje i aktualizacje innych użytkowników
+##  <a name="your-updates-and-the-updates-of-other-users"></a><a name="_core_your_updates_and_the_updates_of_other_users"></a>Aktualizacje i aktualizacje innych użytkowników
 
-Gdy używasz zestawu rekordów do aktualizowania danych aktualizacje wpłynąć na innych użytkowników. Podobnie aktualizacje innych użytkowników w okresie istnienia rekordów napotkasz.
+W przypadku aktualizowania danych przy użyciu zestawu rekordów aktualizacje wpływają na innych użytkowników. Podobnie aktualizacje innych użytkowników w okresie istnienia zestawu rekordów mają wpływ na użytkownika.
 
-W środowisku wielodostępnym innych użytkownicy mogą otwierać zestawy rekordów, które zawierają niektóre z tych samych wybranych w twoim zestawie rekordów. Zmiany z rekordem, przed pobraniem go są odzwierciedlane w twoim zestawie rekordów. Ponieważ zestawów dynamicznych pobrać rekordu za każdym razem, gdy przewiń do niego, zestawów dynamicznych odzwierciedlać zmiany, każdym razem, gdy przewiń do rekordu. Migawki pobrać rekordu przewijania, więc migawek odzwierciedlenia tych zmian, występujących przed przewiń do rekordu początkowo po raz pierwszy.
+W środowisku wielodostępnym inni użytkownicy mogą otwierać zestawy rekordów zawierające niektóre z tych samych rekordów, które zostały wybrane w zestawie rekordów. Zmiany w rekordzie przed pobraniem zostaną odzwierciedlone w zestawie rekordów. Ze względu na to, że zestawy dynamiczne pobierają rekord po każdym przewinięciu do niego, zestawy dynamiczne odzwierciedlają zmiany przy każdym przewinięciu do rekordu. Migawki pobierają rekord po raz pierwszy, dlatego migawki odzwierciedlają tylko te zmiany, które wystąpiły przed pierwszym przewinięciem do rekordu.
 
-Rekordów dodanych przez innych użytkowników, po otwarciu zestawu rekordów nie są wyświetlane w twoim zestawie rekordów, chyba że użytkownik requery. Jeśli rekordów jest dynamiczny, zmiany w istniejących rekordach przez innych użytkowników są wyświetlane w swojej dynamiczny podczas przewijania, do których to dotyczy rekordu. Jeśli rekordów jest migawką, zmiany nie są wyświetlane do czasu requery migawki. Jeśli chcesz zobaczyć rekordów dodanych lub usunięty przez innych użytkowników w swojej migawki lub rekordów dodanych przez innych użytkowników w Twojej dynamiczny wywołać [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) odbudować zestawu rekordów. (Zwróć uwagę, że usuwania innych użytkowników pojawiają się w Twojej dynamiczny). Może również wywołać `Requery` Aby wyświetlić rekordy dodasz, ale nie do Zobacz wprowadzone usunięcia.
+Rekordy dodawane przez innych użytkowników po otwarciu zestawu rekordów nie są wyświetlane w zestawie rekordów, chyba że zostanie ponownie przeszukany. Jeśli zestaw rekordów jest dynamiczny, zmiany w istniejących rekordach przez innych użytkowników są wyświetlane w dynamicznym czasie podczas przewijania do rekordu, którego to dotyczy. Jeśli zestaw rekordów jest migawką, zmiany nie są wyświetlane, dopóki nie zostanie ponownie przestawiona migawka. Jeśli chcesz zobaczyć rekordy dodane lub usunięte przez innych użytkowników w migawce lub rekordy dodane przez innych użytkowników w zestawie dynamicznym, wywołaj [CRecordset:: Requery](../../mfc/reference/crecordset-class.md#requery) , aby skompilować zestaw rekordów. (Należy zauważyć, że usunięcia innych użytkowników są wyświetlane w ramach zestawu dynamicznego). Możesz również wywołać `Requery`, aby wyświetlić dodane rekordy, ale nie widzisz usunięć.
 
 > [!TIP]
->  Aby wymusić buforowania cały migawki jednocześnie, należy wywołać `MoveLast` bezpośrednio po otwarciu migawki. Następnie wywołaj `MoveFirst` do rozpoczęcia pracy z rekordów. `MoveLast` jest odpowiednikiem przewijanie przez wszystkie rekordy, ale pobierany je wszystkie na raz. Należy jednak pamiętać, to może obniżyć wydajność i może nie być wymagana dla niektórych sterowników.
+>  Aby wymusić jednoczesne buforowanie całej migawki, wywołaj `MoveLast` natychmiast po otwarciu migawki. Następnie Wywołaj `MoveFirst`, aby rozpocząć pracę z rekordami. `MoveLast` jest równoznaczna z przewijaniem wszystkich rekordów, ale pobiera je wszystkie jednocześnie. Należy jednak pamiętać, że może to obniżyć wydajność i może nie być wymagana w przypadku niektórych sterowników.
 
-Efekty aktualizacje dla innych użytkowników są podobne do ich wpływu na użytkownik.
+Efekty aktualizacji innych użytkowników są podobne do ich efektów.
 
-##  <a name="_core_more_about_update_and_delete"></a> Więcej informacji na temat Update i Delete
+##  <a name="more-about-update-and-delete"></a><a name="_core_more_about_update_and_delete"></a>Więcej informacji o aktualizacjach i usuwaniu
 
-Ta sekcja zawiera dodatkowe informacje pomocne podczas pracy z programami `Update` i `Delete`.
+Ta sekcja zawiera dodatkowe informacje ułatwiające korzystanie z `Update` i `Delete`.
 
-### <a name="update-success-and-failure"></a>Aktualizacja sukcesów i niepowodzeń
+### <a name="update-success-and-failure"></a>Powodzenie i niepowodzenie aktualizacji
 
-Jeśli `Update` zakończy się powodzeniem, `AddNew` lub `Edit` trybu. Aby rozpocząć `AddNew` lub `Edit` tryb ponownie, wywołanie `AddNew` lub `Edit`.
+W przypadku pomyślnego `Update` tryb `AddNew` lub `Edit` kończy się. Aby ponownie rozpocząć `AddNew` lub `Edit`, wywołaj `AddNew` lub `Edit`.
 
-Jeśli `Update` zakończy się niepowodzeniem (zwraca wartość FALSE lub zgłasza wyjątek), pozostają w `AddNew` lub `Edit` tryb, w zależności od funkcji użytkownik o nazwie ostatniego. Można następnie wykonaj jedną z następujących czynności:
+Jeśli `Update` nie powiedzie się (zwraca wartość FALSE lub zgłosi wyjątek), pozostanie w trybie `AddNew` lub `Edit`, w zależności od tego, która funkcja została wywołana jako Ostatnia. Następnie można wykonać jedną z następujących czynności:
 
-- Zmodyfikuj element członkowski danych pola i spróbuj `Update` ponownie.
+- Zmodyfikuj element członkowski danych pola i spróbuj ponownie wykonać `Update`.
 
-- Wywołaj `AddNew` zresetować elementy członkowskie danych pola na wartość Null, ustaw wartości elementów członkowskich danych pola, a następnie wywołaj `Update` ponownie.
+- Wywołaj `AddNew`, aby zresetować elementy członkowskie danych pola do wartości null, ustaw wartości elementów członkowskich danych pola, a następnie Wywołaj `Update` ponownie.
 
-- Wywołaj `Edit` ponowne załadowanie wartości, które były w zestawie rekordów przed pierwszym wywołaniu `AddNew` lub `Edit`, ustaw wartości elementów członkowskich danych pola, a następnie wywołaj `Update` ponownie. Po pomyślnym przeprowadzeniu `Update` wywołać (z wyjątkiem po `AddNew` wywołania), elementy członkowskie danych pola zachowują swoje nowe wartości.
+- Wywołaj `Edit`, aby ponownie załadować wartości, które znajdowały się w zestawie rekordów przed pierwszym wywołaniem `AddNew` lub `Edit`, ustaw wartości elementów członkowskich danych pola, a następnie ponownie wywołaj `Update`. Po pomyślnym wywołaniu `Update` (z wyjątkiem wywołania `AddNew`) elementy członkowskie danych pola zachowują nowe wartości.
 
-- Wywołania `Move` (w tym `Move` z parametrem AFX_MOVE_REFRESH lub 0), która czyści dowolne zmiany i kończy się dowolny `AddNew` lub `Edit` tryb efekt.
+- Wywołaj `Move` (w tym `Move` z parametrem AFX_MOVE_REFRESH lub 0), która opróżnia wszystkie zmiany i zamyka tryb `AddNew` lub `Edit`.
 
 ### <a name="update-and-delete"></a>Aktualizowanie i usuwanie
 
-Ten rozdział ma zastosowanie do obu `Update` i `Delete`.
+Ta sekcja dotyczy zarówno `Update`, jak i `Delete`.
 
-Na `Update` lub `Delete` operację, należy zaktualizować jeden i tylko jeden rekord. Ten rekord jest bieżący rekord, który odnosi się do wartości danych w polach zestawu rekordów. Jeśli z dowolnej przyczyny dotyczą żadnych rekordów lub występuje więcej niż jeden rekord, zgłaszany jest wyjątek zawierającą jeden z następujących **RETCODE** wartości:
+W przypadku operacji `Update` lub `Delete` należy zaktualizować jeden i tylko jeden rekord. Ten rekord jest bieżącym rekordem, który odnosi się do wartości danych w polach zestawu rekordów. Jeśli z jakiegoś powodu nie ma lub nie dotyczy więcej rekordów, zgłaszany jest wyjątek zawierający jedną z następujących wartości **RETCODE** :
 
 - AFX_SQL_ERROR_NO_ROWS_AFFECTED
 
 - AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED
 
-Po zgłoszeniu tych wyjątków pozostaną w `AddNew` lub `Edit` stanu aktywnej w momencie wywołana `Update` lub `Delete`. Poniżej przedstawiono najbardziej typowych scenariuszy, w których zobaczysz tych wyjątków. Możesz najbardziej prawdopodobne zobaczyć:
+Kiedy te wyjątki są zgłaszane, pozostanie w `AddNew` lub `Edit` stanie, w którym nastąpiło wywołanie `Update` lub `Delete`. Poniżej przedstawiono najczęstsze scenariusze, w których te wyjątki są widoczne. Najprawdopodobniej zobaczysz:
 
-- AFX_SQL_ERROR_NO_ROWS_AFFECTED, gdy używany jest tryb blokowanie optymistyczne i inny użytkownik zmodyfikował rekord w taki sposób, który uniemożliwia ramach identyfikowanie właściwy rekord, zaktualizować lub usunąć.
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED w przypadku korzystania z trybu blokowania optymistycznego, a inny użytkownik zmodyfikował rekord w taki sposób, że program nie będzie mógł zidentyfikować poprawnego rekordu do aktualizacji lub usunięcia.
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED podczas aktualizowania tabeli nie ma klucza podstawowego lub unikatowego indeksu, a nie ma wystarczającej liczby kolumn w zestawie rekordów do jednoznacznego identyfikowania wiersza tabeli.
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, gdy aktualizowana tabela nie ma klucza podstawowego lub unikatowego indeksu i nie masz wystarczającej liczby kolumn w zestawie rekordów, aby jednoznacznie identyfikować wiersz tabeli.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów wybierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [Wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md)

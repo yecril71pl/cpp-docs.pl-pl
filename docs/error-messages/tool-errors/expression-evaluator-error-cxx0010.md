@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0010
 - CXX0010
 ms.assetid: 8bd474b0-da12-4990-8569-6392f09f05f6
-ms.openlocfilehash: d7d8de32bd62e0c92ea293f151376d9faa6cb9b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afcce2405d487a2d88399ea28a95e63fd47f7106
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196147"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Błąd CXX0010 programu Expression Evaluator
 
-Brak nawiasu otwierającego
+Brak lewego nawiasu
 
-Wyrażenie zawiera niezrównoważone nawiasami kwadratowymi. Wpisz ponownie wyrażenia w nawiasy kwadratowe o zrównoważonym obciążeniu.
+Wyrażenie zawiera niezrównoważone nawiasy kwadratowe. Wpisz ponownie wyrażenie z wyrównanymi nawiasami kwadratowymi.
 
-Ten błąd jest taka sama jak CAN0010.
+Ten błąd jest identyczny z nie0,010.

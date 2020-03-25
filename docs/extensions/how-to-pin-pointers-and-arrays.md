@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Numer PIN wskaźników oraz tablic'
+title: 'Porady: unieruchamianie wskaźników oraz tablic'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-ms.openlocfilehash: ae8c1da79f41cf9209f2765ce5aa2f7ca3d34aea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc42690f0f56b97b2af3ed54dfb17d49b081695
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172220"
 ---
-# <a name="how-to-pin-pointers-and-arrays"></a>Instrukcje: Numer PIN wskaźników oraz tablic
+# <a name="how-to-pin-pointers-and-arrays"></a>Porady: unieruchamianie wskaźników oraz tablic
 
-Przypinanie podobiekcie definiowane w obiekcie zarządzanych efektem przypinanie cały obiekt.  Na przykład jeśli dowolny element w tablicy jest przypięty, następnie całej tablicy również jest przypięty. Brak bez rozszerzeń języka do deklarowania przypiętych tablicy. Aby przypiąć tablicy, należy zadeklarować przypiętego wskaźnika do typu elementu i numer pin, jednego z jego elementów.
+Przypinanie obiektu podrzędnego zdefiniowanego w obiekcie zarządzanym ma wpływ na przypinanie całego obiektu.  Na przykład, jeśli jakikolwiek element tablicy jest przypięty, cała tablica jest również przypięta. Brak rozszerzeń języka do deklarowania przypiętej tablicy. Aby przypiąć tablicę, zadeklaruj przypinany wskaźnik do jego typu elementu i Przypnij jeden z jego elementów.
 
 ## <a name="example"></a>Przykład
 
@@ -45,6 +45,6 @@ int main() {
 ++
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

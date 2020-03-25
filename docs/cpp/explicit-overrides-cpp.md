@@ -8,26 +8,26 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184257"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189029"
 ---
 # <a name="explicit-overrides-c"></a>Jawne przesłonięcia (C++)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Jeśli ten sam funkcji wirtualna jest zadeklarowana w co najmniej dwóch [interfejsów](../cpp/interface.md) i jeśli klasa jest pochodną tych interfejsów, można wyraźnie przezwyciężyć każdej funkcji wirtualnej.
+Jeśli ta sama funkcja wirtualna jest zadeklarowana w co najmniej dwóch [interfejsach](../cpp/interface.md) i jeśli klasa pochodzi od tych interfejsów, można jawnie zastępować każdą funkcję wirtualną.
 
-Instrukcje dotyczące jawne przesłonięcia przy użyciu kodu zarządzanego C++sposób niezamierzony, zobacz [jawne zastępowanie](../extensions/explicit-overrides-cpp-component-extensions.md).
+Aby uzyskać informacje na temat jawnych zastąpień w kodzie zarządzanym za pomocą C++/CLI, zobacz [jawne zastąpienia](../extensions/explicit-overrides-cpp-component-extensions.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu ilustruje sposób użycia jawne przesłonięcia:
+Poniższy przykład kodu ilustruje sposób używania jawnych zastąpień:
 
 ```cpp
 // deriv_ExplicitOverrides.cpp
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dziedziczenie](../cpp/inheritance-cpp.md)

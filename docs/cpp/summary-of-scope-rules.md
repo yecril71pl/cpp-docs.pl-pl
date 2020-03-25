@@ -8,42 +8,42 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160882"
 ---
 # <a name="summary-of-scope-rules"></a>Podsumowanie reguł zakresu
 
-Użycie nazwy muszą być jednoznaczną w jego zakresie (aż do momentu, w której jest określana przeciążenie). Jeśli nazwa wskazuje funkcję, funkcja musi być jednoznaczną względem numer i typ parametrów. Jeśli nazwa jest jednoznaczna, [dostęp do elementu członkowskiego](../cpp/member-access-control-cpp.md) reguły są stosowane.
+Użycie nazwy musi być jednoznaczne w swoim zakresie (do momentu określenia przeciążenia). Jeśli nazwa oznacza funkcję, funkcja musi być niejednoznaczna w odniesieniu do liczby i typu parametrów. Jeśli nazwa pozostanie niejednoznaczna, stosowane są reguły [dostępu do elementów członkowskich](../cpp/member-access-control-cpp.md) .
 
 ## <a name="constructor-initializers"></a>Inicjatory konstruktora
 
-[Inicjatory konstruktora](constructors-cpp.md#member_init_list) są oceniane w zakresie bloku peryferyjnych konstruktora, dla której są określone. W związku z tym mogą używać nazwy parametrów konstruktora.
+[Inicjatory konstruktora](constructors-cpp.md#member_init_list) są oceniane w zakresie najbardziej zewnętrznego bloku konstruktora, dla którego są określone. W związku z tym mogą używać nazw parametrów konstruktora.
 
 ## <a name="global-names"></a>Nazwy globalne
 
-Nazwa obiektu, funkcji lub modułu wyliczającego jest globalna, jeśli zostanie wprowadzone poza żadnych funkcji lub klasy lub poprzedzony globalnego zakresu jednoargumentowej (`::`), a jeśli nie jest używany w połączeniu z dowolną z tych operatorów binarnych:
+Nazwa obiektu, funkcji lub modułu wyliczającego jest globalna, jeśli jest wprowadzana poza jakąkolwiek funkcją lub klasą lub poprzedzona przez globalny operator zakresu jednoargumentowego (`::`) i jeśli nie jest używany w połączeniu z żadnym z następujących operatorów binarnych:
 
-- Rozpoznawania zakresu (`::`)
+- Rozpoznawanie zakresu (`::`)
 
-- Wybór elementów członkowskich dla obiektów i odwołania (**.**)
+- Wybór elementów członkowskich dla obiektów i odwołań ( **.** )
 
-- Wybieranie wskaźników do elementów członkowskich (**->**)
+- Wybór elementu członkowskiego dla wskaźników ( **->** )
 
 ## <a name="qualified-names"></a>Kwalifikowane nazwy
 
 Nazwy używane z binarnym operatorem rozwiązywania zakresu (`::`) są nazywane „nazwami kwalifikowanymi”. Nazwa określona po binarnym operatorze rozwiązywania zakresu musi być składową klasy określonej po lewej stronie operatora lub składową jej klas podstawowych.
 
-Nazwy określone po operatorze wyboru składowej (**.** lub **->**) muszą być elementami członkowskimi typu klasy obiektu określonego po lewej stronie operatora lub składowymi jej klas podstawowych. Nazwy określone po prawej stronie operatora wyboru składowej (**->**) mogą być również obiektami innego typu klasy, pod warunkiem, że po lewej stronie **->** jest obiektem klasy i czy klasy definiuje operator przeciążona wybór elementów członkowskich (**->**) który ocenia do wskaźnika do typu innej klasy. (Omówiono bardziej szczegółowo w tym zapisem [dostęp do składowej klasy](../cpp/member-access.md).)
+Nazwy określone po operatorze wyboru elementu członkowskiego ( **.** lub **->** ) musi być elementami członkowskimi typu klasy obiektu określonego po lewej stronie operatora lub składowymi jego klas podstawowych. Nazwy określone po prawej stronie operatora wyboru elementu członkowskiego ( **->** ) mogą być również obiektami innego typu klasy, pod warunkiem, że lewa strona **->** jest obiektem klasy i że klasa definiuje przeciążony operator wyboru elementu członkowskiego ( **->** ), który jest obliczany jako wskaźnik do innego typu klasy. (Ta obsługa jest omówiona bardziej szczegółowo w [dostępie do elementu członkowskiego klasy](../cpp/member-access.md)).
 
 Kompilator wyszukuje nazwy w następującej kolejności, zatrzymując się, gdy nazwa zostanie znaleziona:
 
 1. Bieżący blok zakresu, jeśli nazwa jest używana wewnątrz funkcji; w przeciwnym przypadku, zakres globalny.
 
-1. Na zewnątrz przez każdy otaczający blok zakresu, łącznie z najbardziej zewnętrznym zakresem funkcji (która obejmuje parametry funkcji).
+1. Na zewnątrz przez każdy otaczający zakres bloku, łącznie z zewnętrznym zakresem funkcji (który obejmuje parametry funkcji).
 
 1. Jeśli nazwa jest używana wewnątrz funkcji składowej, to nazwa jest wyszukiwana w zakresie klasy.
 
@@ -57,20 +57,20 @@ Jednakże, możesz wykonać następujące modyfikacje kolejności wyszukiwania:
 
 1. Nazwy poprzedzone operatorem `::` wymuszają rozpoczęcie wyszukiwania od zakresu globalnego.
 
-1. Nazwy poprzedzone **klasy**, **struktury**, i **Unii** słowa kluczowe wymusić na kompilatorze wyszukiwanie tylko **klasy**,  **Struktura**, lub **Unii** nazwy.
+1. Nazwy poprzedzone przez **klasy**, **struktury**i słowa kluczowe **Union** wymuszają kompilator, aby wyszukiwać tylko nazwy **klasy**, **struktury**lub **Unii** .
 
-1. Nazwy po lewej stronie operatora rozpoznawania zakresu (`::`) może być tylko **klasy**, **struktury**, **przestrzeni nazw**, lub **Unii**nazwy.
+1. Nazwy po lewej stronie operatora rozpoznawania zakresu (`::`) mogą być tylko nazwami **klasy**, **struktury**, **przestrzeni nazw**lub **Unii** .
 
-Jeśli nazwa odwołuje się do niestatycznego elementu członkowskiego, ale jest używana w statycznej funkcji członkowskiej, to wygenerowany zostanie komunikat o błędzie. Podobnie, jeśli nazwa odwołuje się do dowolnej, niestatycznej składowej w otaczającej klasie, komunikat o błędzie jest generowany ponieważ klasy otaczające nie mają wskaźnika otaczającej klasy **to** wskaźników.
+Jeśli nazwa odwołuje się do niestatycznego elementu członkowskiego, ale jest używana w statycznej funkcji członkowskiej, to wygenerowany zostanie komunikat o błędzie. Podobnie, jeśli nazwa odwołuje się do dowolnego niestatycznej składowej w otaczającej klasie, generowany jest komunikat o błędzie, ponieważ zawarte w nich klasy nie mają otaczających **tych** wskaźników.
 
 ## <a name="function-parameter-names"></a>Nazwy parametrów funkcji
 
-Nazwy parametrów funkcji, definicje funkcji są uznawane za w zakresie bloku najbardziej zewnętrznej funkcji. W związku z tym są w lokalnej nazwy i wykraczają poza zakres, gdy funkcja jest został zakończony.
+Nazwy parametrów funkcji w definicjach funkcji są uważane za należące do zakresu najbardziej zewnętrznego bloku funkcji. W związku z tym są nazwami lokalnymi i wykraczają poza zakres, gdy funkcja zostanie zakończona.
 
-Nazwy parametrów funkcji w deklaracjach funkcji (prototypy) znajdują się w zakresie lokalnym deklaracji i wykraczają poza zakres na końcu deklaracji.
+Nazwy parametrów funkcji w deklaracjach funkcji (prototypach) znajdują się w lokalnym zakresie deklaracji i wykraczają poza zakres na końcu deklaracji.
 
-Domyślne parametry znajdują się w zakresie parametru, w którym są domyślnie, zgodnie z opisem w dwóch poprzednich akapitach. Jednak mogą nie dostęp do zmiennych lokalnych lub niestatycznych składowych. Domyślne parametry są oceniane w momencie wywołania funkcji, ale są one obliczane w deklaracji funkcji oryginalny zakres. W związku z tym domyślne parametry dla funkcji elementów członkowskich są obliczane zawsze w zakresie klasy.
+Parametry domyślne znajdują się w zakresie parametru, dla którego są domyślne, zgodnie z opisem w poprzednich dwóch akapitach. Nie mogą jednak uzyskać dostępu do zmiennych lokalnych ani niestatycznych elementów członkowskich klas. Parametry domyślne są oceniane w punkcie wywołania funkcji, ale są oceniane w oryginalnym zakresie deklaracji funkcji. W związku z tym domyślne parametry funkcji Członkowskich są zawsze oceniane w zakresie klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dziedziczenie](../cpp/inheritance-cpp.md)

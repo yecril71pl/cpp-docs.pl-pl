@@ -1,22 +1,22 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4192
+title: Ostrzeżenie kompilatora (poziom 3) C4192
 ms.date: 11/04/2016
 f1_keywords:
 - C4192
 helpviewer_keywords:
 - C4192
 ms.assetid: ea5f91fa-8c96-4f3f-ac42-0c8a86d4e5df
-ms.openlocfilehash: 56b27596296b87edcc6de406e7b6621d5723815d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b346e0a90729bda431b9cb578a03806be1ea4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402232"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198981"
 ---
-# <a name="compiler-warning-level-3-c4192"></a>Kompilator ostrzeżenie (poziom 3) C4192
+# <a name="compiler-warning-level-3-c4192"></a>Ostrzeżenie kompilatora (poziom 3) C4192
 
-automatycznie pomija "name" podczas importowania biblioteki typów "library"
+automatyczne wykluczanie "name" podczas importowania biblioteki typów "Library"
 
-A `#import` biblioteka zawiera element, *nazwa*, która jest również zdefiniowane w nagłówkach systemu Win32. Ze względu na ograniczenia bibliotek typów, takich jak nazwy **IUnknown** lub identyfikator GUID często są zdefiniowane w bibliotece typów duplikowania definicji z nagłówków systemu. `#import` wykryje te elementy i odmawiają dołączać je w plikach nagłówkowych .tlh i .tli.
+Biblioteka `#import` zawiera element, *nazwę*, który jest również zdefiniowany w nagłówkach systemu Win32. Ze względu na ograniczenia bibliotek typów, nazwy takie jak **IUnknown** lub GUID są często definiowane w bibliotece typów, duplikując definicję z nagłówków systemowych. `#import` wykryje te elementy i odmówi, że zostaną one dołączone do plików nagłówkowych. tlh i. tli.
 
-Aby zmienić to zachowanie, użyj `#import` atrybuty [no_auto_exclude —](../../preprocessor/no-auto-exclude.md) i [include()](../../preprocessor/include-parens.md).
+Aby zastąpić to zachowanie, użyj atrybutów `#import` [no_auto_exclude](../../preprocessor/no-auto-exclude.md) i [include ()](../../preprocessor/include-parens.md).

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4076
 ms.assetid: c424d43b-abb3-4df4-be66-8907b859a555
-ms.openlocfilehash: 05a05c63b9b63aafc52854aa9dcdcccbdc6f8d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f5c5f6bd33fd0e43ccf3c7b55ab54a3cc25ba68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182310"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183439"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Ostrzeżenie LNK4076 narzędzi konsolidatora
 
-Nieprawidłowy plik stanu przyrostowego "filename"; zostanie wykonana Konsolidacja nieprzyrostowa
+Nieprawidłowy przyrostowy plik stanu "filename"; Łączenie nieprzyrostowe
 
-ŁĄCZE nie można zapisać pliku stanu przyrostowego (.ilk). Albo `filename` jest uszkodzony lub nie jest bazą danych przyrostowe łączenia. Usuń plik i połącz ponownie.
+LINK nie może zapisywać do pliku stanu przyrostowego (. ilk). `filename` jest uszkodzona lub nie jest przyrostową bazą danych łączenia. Usuń plik i Połącz ponownie.

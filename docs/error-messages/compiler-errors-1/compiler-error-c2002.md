@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
-ms.openlocfilehash: 30f472aa7a9475a19eea0e92fe5c2ea0d54e382b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c37a9b94be837248c8025a4fc069d8a242128542
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209039"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208250"
 ---
 # <a name="compiler-error-c2002"></a>Błąd kompilatora C2002
 
-Nieprawidłowa stała dwubajtowego znaku
+Nieprawidłowa stała znaku dwubajtowego
 
-Stała znak wielobajtowy jest nieprawidłowa.
+Stała znaków wielobajtowych jest nieprawidłowa.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Stała dwubajtowego znaku zawiera większą liczbę bajtów, niż oczekiwano.
+1. Stała znaku dwubajtowego zawiera więcej bajtów niż oczekiwano.
 
-1. Standardowy nagłówek STDDEF.h nie jest włączony.
+1. Nie dołączono standardowego nagłówka STDDEF. h.
 
-1. Znaki dwubajtowe, nie można połączyć z literały ciągów znaków zwykłych.
+1. Znaki dwubajtowe nie mogą być łączone z zwykłymi literałami ciągu.
 
-1. Stała dwubajtowego znaku musi być poprzedzona znakiem "L":
+1. Stała znaku dwubajtowego musi być poprzedzona znakiem "L":
 
     ```
     L'mbconst'
     ```
 
-1. Dla Microsoft C++ argumenty tekst dyrektywy preprocesora muszą być ASCII. Na przykład, dyrektywa `#pragma message(L"string")`, jest nieprawidłowy.
+1. Dla firmy C++Microsoft argumenty tekstowe dyrektywy preprocesora muszą mieć format ASCII. Na przykład dyrektywa `#pragma message(L"string")`, jest nieprawidłowa.

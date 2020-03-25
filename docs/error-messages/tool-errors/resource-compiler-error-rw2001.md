@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
-ms.openlocfilehash: 4d298cdd9d96c55f283ce7f0e2ba04dd664941f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 900bfed9d57af0f6f5dd8fac19380bb7c382addc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190745"
 ---
 # <a name="resource-compiler-error-rw2001"></a>Błąd kompilatora zasobów RW2001
 
-Nieprawidłową dyrektywę w wstępnie przetworzony plik RC
+Nieprawidłowa dyrektywa w wstępnie przetworzonym pliku RC
 
-Plik RC zawiera **#pragma** dyrektywy.
+Plik RC zawiera dyrektywę **#pragma** .
 
-Użyj **#ifndef** dyrektywy preprocesora, za pomocą **RC_INVOKED** stałej, że kompilator zasobów definiuje podczas przetwarzania pliku dołączanego. Miejsce **#pragma** dyrektywy wewnątrz bloku kodu, który nie jest przetwarzane, gdy **RC_INVOKED** stała jest zdefiniowana. Kod w bloku jest przetwarzany tylko przez kompilator C/C++, a nie przez kompilator zasobów. Następujący przykładowy kod przedstawia tej techniki:
+Użyj dyrektywy preprocesora **#ifndef** ze stałą **RC_INVOKED** , którą kompilator zasobów definiuje podczas przetwarzania pliku dołączanego. Umieść dyrektywę **#pragma** wewnątrz bloku kodu, który nie jest przetwarzany, gdy zostanie zdefiniowana stała **RC_INVOKED** . Kod w bloku jest przetwarzany tylko przez kompilator C/C++ , a nie przez kompilator zasobów. Następujący przykładowy kod demonstruje tę technikę:
 
 ```
 #ifndef RC_INVOKED
@@ -27,6 +27,6 @@ Użyj **#ifndef** dyrektywy preprocesora, za pomocą **RC_INVOKED** stałej, że
 #endif
 ```
 
-**#Pragma** dyrektywy preprocesora nie ma znaczenia w. Plik RC. **#Include** dyrektywy preprocesora jest używany często w. Plik RC, aby uwzględnić plik nagłówka (plik nagłówka niestandardowego na podstawie projektu lub pliku standardowy nagłówek dostarczonego przez firmę Microsoft przy użyciu jednego z produktów). Niektóre z nich obejmują pliki zawierają **#pragma** dyrektywy. Ponieważ plik nagłówkowy może zawierać jeden lub więcej inne pliki nagłówkowe, plik który zawiera naruszeń **#pragma** dyrektywy może nie być od razu widoczne.
+Dyrektywa preprocesora **#pragma** nie ma znaczenia w. Plik RC. Dyrektywa preprocesora **#include** jest często używana w. Plik RC obejmujący plik nagłówka (plik niestandardowego nagłówka bazujący na projekcie lub standardowy plik nagłówkowy dostarczany przez firmę Microsoft z jednym z jego produktów). Niektóre z tych plików dołączanych zawierają dyrektywę **#pragma** . Ponieważ plik nagłówkowy może zawierać jeden lub więcej innych plików nagłówkowych, plik zawierający **nie#pragmaą** dyrektywę może nie być natychmiast oczywisty.
 
-**#Ifndef RC_INVOKED** technika można sterować tym pliki nagłówków w plikach nagłówkowych opartego na projektach.
+Technikę **RC_INVOKED #ifndef** może kontrolować, w tym pliki nagłówkowe w plikach nagłówkowych opartych na projekcie.

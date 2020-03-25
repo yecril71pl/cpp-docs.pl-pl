@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0066
 - CAN0066
 ms.assetid: 1321e4e1-b441-424b-9e76-c208d4a6f6ea
-ms.openlocfilehash: 108f9f7e957c69140da1cda9dcc2ffafe1830ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be4e81b96150b2c0ab3211dbba6a14fe13332a96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299221"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184401"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>Błąd CXX0066 programu Expression Evaluator
 
-statyczny element członkowski nie istnieje
+Statyczny element członkowski jest nieobecny
 
-Statycznej składowej klasy nie został odnaleziony lub nie został zdefiniowany. Ten błąd może spowodować od klasy statycznej składowej, która jest zadeklarowana ale nie zdefiniowane, lub został tylko zdefiniowany i jest przywoływany w modułach, które nie zawierają informacji o debugowaniu.
+Statyczny element członkowski klasy nie został odnaleziony lub nie został zdefiniowany. Ten błąd może wynikać ze statycznej składowej klasy, która jest zadeklarowana, ale nie jest zdefiniowana, lub jest tylko zdefiniowana i przywoływana w modułach, które nie zawierają informacji debugowania.
 
-Ten błąd jest taka sama jak CAN0066.
+Ten błąd jest identyczny z CAN0066.

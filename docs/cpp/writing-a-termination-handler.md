@@ -11,29 +11,29 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: f0b994075a8d59ce5d0955f10bf8c61d357d2db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209471"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187313"
 ---
 # <a name="writing-a-termination-handler"></a>Pisanie programu obsługi zakończenia
 
-W przeciwieństwie do obsługi wyjątków programu obsługi zakończenia zawsze jest wykonywany w całości, niezależnie od tego, czy chroniony blok kodu zostało zakończone normalnie. Wyłącznie do celów programu obsługi zakończenia powinno być upewnij się, że zasoby, takie jak pamięć, obsługi i plików, są poprawnie zamknięte niezależnie od tego, jak sekcji kodu zakończy się wykonywanie.
+W przeciwieństwie do programu obsługi wyjątków, program obsługi zakończenia jest zawsze wykonywany, niezależnie od tego, czy chroniony blok kodu został zakończony normalnie. Jedynym celem programu obsługi zakończenia powinna być upewnienie się, że zasoby, takie jak pamięć, uchwyty i pliki, są prawidłowo zamknięte niezależnie od tego, jak sekcja kodu kończy wykonywanie.
 
-Programy obsługi zakończenia użyj instrukcji try-finally.
+Programy obsługi zakończenia używają instrukcji try-finally.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Try-finally — instrukcja](../cpp/try-finally-statement.md)
+- [Instrukcja try-finally](../cpp/try-finally-statement.md)
 
-- [Oczyszczanie zasobów](../cpp/cleaning-up-resources.md)
+- [Czyszczenie zasobów](../cpp/cleaning-up-resources.md)
 
-- [Czas działania w obsłudze wyjątków](../cpp/timing-of-exception-handling-a-summary.md)
+- [Chronometraż akcji w obsłudze wyjątków](../cpp/timing-of-exception-handling-a-summary.md)
 
-- [Ograniczenia dotyczące programu obsługi zakończenia](../cpp/restrictions-on-termination-handlers.md)
+- [Ograniczenia dotyczące obsługi zakończenia](../cpp/restrictions-on-termination-handlers.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4099
 ms.assetid: 358170a4-07cd-43fe-918f-82c32757ffc5
-ms.openlocfilehash: dcf4d44c3a0b5b10035af763040c2912afc8c6f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f330924b8e47e0649268142106a050c83cb20a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183322"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Ostrzeżenie LNK4099 narzędzi konsolidatora
 
-Nie można odnaleźć pliku PDB "filename", "bibliotek/obiektów" lub "ścieżce;" skonsolidowany obiektu bez informacji debugowania
+Nie znaleziono pliku PDB "filename" z elementem "Object/Library" lub "Path"; Łączenie obiektu bez informacji debugowania
 
-Konsolidator nie może odnaleźć pliku .pdb. Skopiuj go do katalogu, który zawiera `object/library`.
+Konsolidator nie może odnaleźć pliku. pdb. Skopiuj go do katalogu, który zawiera `object/library`.
 
-Aby znaleźć nazwę pliku .pdb, skojarzone z plikiem obiektu:
+Aby znaleźć nazwę pliku. pdb skojarzonego z plikiem obiektu:
 
-1. Wyodrębnij plik obiektu z biblioteki za pomocą [lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**.obj** `xyz` **.lib**.
+1. Wyodrębnij plik obiektu z biblioteki z biblioteką [lib](../../build/reference/lib-reference.md) **/Extract:** `objectname` **. obj** `xyz` **. lib**.
 
-1. Sprawdź ścieżkę do pliku .pdb o **dumpbin /section:.debug$ T /rawdata** `objectname` **.obj**.
+1. Sprawdź ścieżkę do pliku. pdb z **polecenia DUMPBIN/Section:. Debug $ T/rawdata** `objectname` **. obj**.
 
-Można również kompilacji z [/z7](../../build/reference/z7-zi-zi-debug-information-format.md), więc pliku pdb nie musi być używane, lub usuń [/DEBUG](../../build/reference/debug-generate-debug-info.md) opcji konsolidatora, jeśli nie masz pliki .pdb dla obiektów, jest tworzone połączenie.
+Można również kompilować z [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), aby nie trzeba było używać PDB, lub usunąć opcję [/Debug](../../build/reference/debug-generate-debug-info.md) konsolidatora, jeśli nie ma plików. pdb dla obiektów, które tworzysz.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6101
 ms.assetid: 8c8d5097-d725-4a2c-92e9-fcf28c871d74
-ms.openlocfilehash: a32378b12586141b844dc5d631f0f83ba6e8faf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b120b069a329cb1158b26574b935b6374661bf67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173780"
 ---
 # <a name="math-error-m6101"></a>Błąd matematyczny M6101
 
@@ -19,6 +19,6 @@ nieprawidłowe
 
 Nieprawidłowa operacja.
 
-Ten błąd może być spowodowany, gdy argument jest NaN (nieliczbową) lub nieskończoność.
+Ten błąd może być spowodowany tym, że argument operacji to NaN (nie liczba) lub nieskończoność.
 
-Program kończy się z kodem zakończenia 129.
+Program kończy pracę z kodem zakończenia 129.

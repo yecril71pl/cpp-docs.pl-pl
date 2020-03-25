@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
-ms.openlocfilehash: 91753a49498548b4e523cd8564ee7a7ca7a3b373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca5117342d406983e8cba675c2589d2431d09d38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204181"
 ---
 # <a name="fatal-error-c1076"></a>Błąd krytyczny C1076
 
 > limit kompilatora : limit sterty wewnętrznej osiągnięty; użyj /Zm, aby określić wyższy limit
 
-Ten błąd może być spowodowany przez zbyt wiele symboli lub zbyt wiele wystąpień szablonu. Począwszy od programu Visual Studio 2015, ten komunikat ma mogą wynikać z dużego wykorzystania pamięci wirtualnej Windows spowodowane zbyt wielu procesów kompilacji równoległych. W takim przypadku zalecenie, aby używać **/Zm** opcji mają być ignorowane, chyba że używasz `#pragma hdrstop` dyrektywy.
+Ten błąd może być spowodowany przez zbyt wiele symboli lub zbyt wiele wystąpień szablonu. Począwszy od programu Visual Studio 2015, ten komunikat może być spowodowany przez zbyt wiele równoległych procesów kompilacji. W takim przypadku zalecenie dotyczące korzystania z opcji **/zm** powinno być ignorowane, chyba że używana jest dyrektywa `#pragma hdrstop`.
 
 Aby rozwiązać ten błąd:
 
-1. Jeśli korzysta z prekompilowanego pliku nagłówkowego `#pragma hdrstop` dyrektywy, użyj [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opcję, aby ustawić limit pamięci kompilatora na wartość określoną w [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) komunikat o błędzie. Aby uzyskać więcej informacji o tym, jak ustawić tę wartość w programie Visual Studio, zobacz sekcję Uwagi w [/Zm (Określ wstępnie skompilowany nagłówek Memory Allocation Limit)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+1. Jeśli prekompilowany nagłówek używa dyrektywy `#pragma hdrstop`, użyj opcji [/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) , aby ustawić limit pamięci kompilatora na wartość określoną w komunikacie o błędzie [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) . Aby uzyskać więcej informacji dotyczących sposobu ustawiania tej wartości w programie Visual Studio, zobacz sekcję Uwagi w [/zm (Określ limit alokacji pamięci prekompilowanego nagłówka)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
 
-1. Należy wziąć pod uwagę, co zmniejsza liczbę równoległych procesów określone za pomocą **/maxcpucount** opcji do programu MSBUILD. Plik EXE w połączeniu z **/MP** opcji cl. PLIK EXE. Aby uzyskać więcej informacji, zobacz [Prekompilowanego nagłówka (PCH) zagadnienia i zalecenia dotyczące](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
+1. Rozważ zmniejszenie liczby procesów równoległych określonych przy użyciu opcji **/maxcpucount** do programu MSBuild. EXE w połączeniu z opcją **/MP** do CL. EXE. Aby uzyskać więcej informacji, zobacz [artykuły prekompilowanego nagłówka (pch) i zalecenia](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
-1. Jeśli używasz kompilatorów dla hostów 32-bitowych w 64-bitowym systemie operacyjnym, użyj kompilatorów dla hostów 64-bitowych. Aby uzyskać więcej informacji, zobacz [jak: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Jeśli używasz kompilatorów dla hostów 32-bitowych w 64-bitowym systemie operacyjnym, użyj kompilatorów dla hostów 64-bitowych. Aby uzyskać więcej informacji, zobacz [How to: Enable a 64-bitowy C++ zestaw narzędzi wizualnych w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
 1. Wyeliminuj niepotrzebne pliki dołączane.
 
@@ -33,4 +33,4 @@ Aby rozwiązać ten błąd:
 
 1. Usuń nieużywane deklaracje.
 
-Jeśli C1076 pojawia się natychmiast po uruchomieniu kompilacji, wartość określona dla **/Zm** prawdopodobnie jest zbyt duża dla Twojego programu. Zmniejsz **/Zm** wartości.
+Jeśli C1076 występuje natychmiast po rozpoczęciu kompilacji, wartość określona dla **/zm** jest prawdopodobnie zbyt wysoka dla programu. Zmniejsz wartość **/zm** .

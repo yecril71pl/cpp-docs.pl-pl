@@ -1,20 +1,20 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4613
+title: Ostrzeżenie kompilatora (poziom 1) C4613
 ms.date: 11/04/2016
 f1_keywords:
 - C4613
 helpviewer_keywords:
 - C4613
 ms.assetid: 399f521b-651c-4997-bc91-f40198e9a4d4
-ms.openlocfilehash: 3eaea39f49b985334247da41fa8f3499d3697815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb3883d318ccd885d19469e7722362485f782144
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327304"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185948"
 ---
-# <a name="compiler-warning-level-1-c4613"></a>Kompilator ostrzeżenie (poziom 1) C4613
+# <a name="compiler-warning-level-1-c4613"></a>Ostrzeżenie kompilatora (poziom 1) C4613
 
-"segmentu": klasa segmentu nie można jej zmienić.
+"segment": Klasa segmentu nie może być zmieniona
 
-Próbowano utworzyć segment o tej samej nazwie klasy jako segment używane przez kompilator. Nie nowa klasa segmentu został utworzony.
+Podjęto próbę utworzenia segmentu z taką samą nazwą klasy jak segment używany przez kompilator. Nie utworzono nowej klasy segmentu.

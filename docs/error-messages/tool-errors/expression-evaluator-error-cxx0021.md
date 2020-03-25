@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CXX0021
 - CAN0021
 ms.assetid: d6c0c35a-16c2-42c0-a7d2-e910350a47f0
-ms.openlocfilehash: 373829e7200a556b3f832b1da127b4e33aa75749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a800deb6bacbcae8666a3abad08b87d4f027790f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195842"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>Błąd CXX0021 programu Expression Evaluator
 
-struktury lub Unii, używane jako skalarne
+Struktura lub Unia używana jako skalarna
 
-Struktury lub Unii, które zostało użyte w wyrażeniu, ale element nie został określony.
+W wyrażeniu użyto struktury lub Unii, ale nie określono żadnego elementu.
 
-Manipulowanie struktury lub Unii zmiennej, nazwa zmiennej może występować samodzielnie, bez kwalifikatora pola. Jeśli struktury lub Unii jest używany w wyrażeniu, musi być kwalifikowana za pomocą określonego elementu żądanego.
+Podczas manipulowania strukturą lub zmienną Union, nazwa zmiennej może być wyświetlana przez samą siebie, bez kwalifikatora pola. Jeśli struktura lub Unia jest używana w wyrażeniu, musi być kwalifikowana z żądanym elementem.
 
-Określ element, którego wartość ma być używany w wyrażeniu.
+Określ element, którego wartość ma być użyta w wyrażeniu.
 
-Ten błąd jest taka sama jak CAN0021.
+Ten błąd jest identyczny z CAN0021.

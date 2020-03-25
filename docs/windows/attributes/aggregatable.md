@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: aa70c2417b3262e98118b5e717ce39d0147024de
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168528"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,17 +28,17 @@ Wskazuje, że Klasa obsługuje agregację.
 *value*<br/>
 Obowiązkowe Parametr wskazujący, kiedy można agregować obiekt COM:
 
-- `never`Nie można agregować obiektu COM.
+- `never` nie można agregować obiektu COM.
 
-- `allowed`Obiekt COM można utworzyć bezpośrednio lub może być zagregowany. Domyślnie włączone.
+- `allowed` obiekt COM można utworzyć bezpośrednio lub można go agregować. Domyślnie włączone.
 
-- `always`Obiektu COM nie można utworzyć bezpośrednio i można go agregować tylko. Po wywołaniu `CoCreateInstance` dla tego obiektu należy określić `IUnknown` interfejs obiektu agregowania (kontrolka `IUnknown`).
+- `always` obiektu COM nie można utworzyć bezpośrednio i można go tylko agregować. Podczas wywoływania `CoCreateInstance` dla tego obiektu należy określić interfejs `IUnknown` obiektu agregowania (kontrolka `IUnknown`).
 
 ## <a name="remarks"></a>Uwagi
 
 **Agregowany** C++ atrybut ma takie same funkcje jak atrybut MIDL do [agregowania](/windows/win32/Midl/aggregatable) . Oznacza to, że kompilator przekaże atrybut **agregowany** do wygenerowanego pliku IDL.
 
-Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ### <a name="atl-projects"></a>Projekty ATL
 
@@ -74,12 +74,12 @@ class CMyClass {};
 |-|-|
 |**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`, lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4686
+title: Ostrzeżenie kompilatora (poziom 3) C4686
 ms.date: 08/27/2018
 f1_keywords:
 - C4686
 helpviewer_keywords:
 - C4686
 ms.assetid: 767c83c2-9e4b-4f9e-88c8-02128ba563f4
-ms.openlocfilehash: 5e23e6aa69fe8a59e3dfd22af7e33780c223cdd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8eae1ddeb875d267b82c67e989cb41e8c9b2afb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401608"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185454"
 ---
-# <a name="compiler-warning-level-3-c4686"></a>Kompilator ostrzeżenie (poziom 3) C4686
+# <a name="compiler-warning-level-3-c4686"></a>Ostrzeżenie kompilatora (poziom 3) C4686
 
-> "*typu zdefiniowanego przez użytkownika*': możliwe zmiany w zachowaniu, zmiana UDT zwracają konwencji wywoływania
+> "*Typ zdefiniowany przez użytkownika*": możliwa zmiana w zachowaniu, zmiana w Konwencji WYWOŁYWANIA powrotu UDT
 
 ## <a name="remarks"></a>Uwagi
 
-Specjalizacja szablonu klasy nie jest zdefiniowany, zanim został on użyty w zwracanym typem. Wszystkie elementy, które tworzy wystąpienie klasy rozwiąże C4686; deklarowanie wystąpienia lub uzyskiwania dostępu do członka (C\<int >:: niczego) są również opcje.
+Specjalizacja szablonu klasy nie została zdefiniowana przed użyciem w zwracanym typie. Wszystko, co spowoduje wystąpienie klasy, rozwiązuje C4686; Deklarowanie wystąpienia lub uzyskiwanie dostępu do elementu członkowskiego (C\<int >:: cokolwiek) jest również opcjami.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Przykład
 

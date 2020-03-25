@@ -1,24 +1,24 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4953
+title: Ostrzeżenie kompilatora (poziom 1) C4953
 ms.date: 08/27/2018
 f1_keywords:
 - C4953
 helpviewer_keywords:
 - C4953
 ms.assetid: 3c4f6ac6-3976-41ab-8a27-3c41d7472ea7
-ms.openlocfilehash: 1948342e1ff97c38ca3a44694dc7e7d399d96825
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f07227b5df62938cc51a7be4cf4f3595a0d947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174522"
 ---
-# <a name="compiler-warning-level-1-c4953"></a>Kompilator ostrzeżenie (poziom 1) C4953
+# <a name="compiler-warning-level-1-c4953"></a>Ostrzeżenie kompilatora (poziom 1) C4953
 
-> Wbudowany "*funkcja*" został wyedytowany od profilu dane zostały zebrane, dane profilu nieużywane
+> *Funkcja "Function*" została edytowana od czasu zebrania danych profilowych, dane profilowe nie są używane
 
-Korzystając z [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykrył moduł wejściowy nie kompilowanej po `/LTCG:PGINSTRUMENT` i ma funkcję (*funkcja*), był edytowany i którym wskazany działa istniejącego testu pełnią kandydatem do wbudowanie. Jednak w wyniku o konieczności ponownego kompilowania modułu, funkcja nie będzie już kandydatem do wbudowanie.
+W przypadku korzystania z [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)Kompilator wykrył Moduł wejściowy, który został ponownie skompilowany po `/LTCG:PGINSTRUMENT` i ma funkcję (*funkcję*), która była edytowana, a istniejące uruchomienia testów znalazły funkcję jako kandydat dla dekreślenia. Jednak w wyniku ponownego kompilowania modułu funkcja nie będzie już kandydatem do wykreślania.
 
-To ostrzeżenie ma charakter informacyjny. Aby rozwiązać tego ostrzeżenia, należy uruchomić `/LTCG:PGINSTRUMENT`, powtórz wszystkie testu działa, a następnie uruchom `/LTCG:PGOPTIMIZE`.
+To ostrzeżenie jest informacje. Aby usunąć to ostrzeżenie, uruchom polecenie `/LTCG:PGINSTRUMENT`, wykonaj ponownie wszystkie przebiegi testowe i uruchom `/LTCG:PGOPTIMIZE`.
 
-To ostrzeżenie zostanie zamienione błąd Jeśli `/LTCG:PGOPTIMIZE` została użyta.
+To ostrzeżenie zostanie zastąpione błędem w przypadku użycia `/LTCG:PGOPTIMIZE`.

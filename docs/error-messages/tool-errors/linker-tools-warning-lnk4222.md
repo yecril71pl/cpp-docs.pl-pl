@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-ms.openlocfilehash: 52a4fee532eb9997dcf013f95246b27fdffc4c20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f74379861ad04142fd78a8e307af165072c9cadd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160409"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183036"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Ostrzeżenie LNK4222 narzędzi konsolidatora
 
 do wyeksportowanego symbolu "symbol" nie należy przypisywać liczby porządkowej
 
-Według liczby porządkowej, nie powinien można wyeksportować następujących symboli:
+Następujące symbole nie powinny być eksportowane według numeru porządkowego:
 
 - `DllCanUnloadNow`
 
@@ -33,7 +33,7 @@ Według liczby porządkowej, nie powinien można wyeksportować następujących 
 
 - `DllUnregisterServer`
 
-Te funkcje zawsze znajdują się przy użyciu nazwy, za pomocą `GetProcAddress`. Konsolidator ostrzega o tym jest rodzaj eksportu, ponieważ może to spowodować większy obraz. Może się to zdarzyć, jeśli zakres Twojej porządkową eksportu jest duży wywozu stosunkowo niewielką liczbą. Na przykład
+Te funkcje są zawsze zlokalizowane według nazwy, przy użyciu `GetProcAddress`. Konsolidator ostrzega o tym rodzaju eksportu, ponieważ może to skutkować większym obrazem. Taka sytuacja może wystąpić, jeśli zakres eksportów porządkowych jest duży z stosunkowo niewielkim eksportem. Na przykład:
 
 ```
 EXPORTS
@@ -41,7 +41,7 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-będzie wymagać 100 miejsca w tabeli eksportu adresu z 98 ich po prostu wypełniacza (2-99). Z drugiej strony
+Program będzie wymagał 100 gniazd w tabeli adresów eksportu z 98 z nich (2-99). Z drugiej strony
 
 ```
 EXPORTS
@@ -49,4 +49,4 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-wymaga dwóch miejsc. (Należy pamiętać, że można również wyeksportować z [/EXPORT](../../build/reference/export-exports-a-function.md) — opcja konsolidatora.)
+wymagane są dwa gniazda. Należy pamiętać, że można również wyeksportować z opcją [/Export](../../build/reference/export-exports-a-function.md) konsolidatora.

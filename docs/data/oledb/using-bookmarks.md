@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209317"
 ---
 # <a name="using-bookmarks"></a>Korzystanie z zakładek
 
-Zanim utworzysz zestaw wierszy, musisz poinformować dostawcę chcesz używać zakładek. Aby to zrobić, należy ustawić `DBPROP_BOOKMARKS` właściwości **true** we właściwości Twojego zestawu. Dostawca pobiera zakładek jako kolumny wartości zero, więc należy użyć makro specjalne BOOKMARK_ENTRY i `CBookmark` klasy, jeśli używasz statycznej metody dostępu. `CBookmark` jest klasą szablonu, gdy argument jest długość w bajtach buforu zakładki. Długość buforu wymaganych do zakładki, zależy od dostawcy. Jeśli używasz dostawcy ODBC OLE DB, jak pokazano w poniższym przykładzie, rozmiar buforu musi być 4 bajty.
+Przed otwarciem zestawu wierszy należy poinformować dostawcę, którego ma używać zakładek. W tym celu ustaw właściwość `DBPROP_BOOKMARKS` na **wartość true** w zestawie właściwości. Dostawca pobiera zakładki jako kolumny zero, dlatego należy użyć specjalnego makra BOOKMARK_ENTRY i klasy `CBookmark`, jeśli używasz statycznej metody dostępu. `CBookmark` jest klasą szablonu, w której argument jest długością w bajtach buforu zakładki. Długość buforu wymaganego dla zakładki zależy od dostawcy. Jeśli używasz dostawcy OLE DB ODBC, jak pokazano w poniższym przykładzie, bufor musi mieć 4 bajty.
 
 ```cpp
 class CProducts
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-Jeśli używasz `CDynamicAccessor`, rozmiar buforu jest ustawiane dynamicznie w czasie wykonywania. W takim przypadku można użyć wersji specjalistycznej metody `CBookmark` dla której nie zostanie określona długość buforu. Użyj funkcji `GetBookmark` można pobrać z bieżącego rekordu zakładki, jak pokazano w tym przykładowym kodzie:
+Jeśli używasz `CDynamicAccessor`, bufor jest ustawiany dynamicznie w czasie wykonywania. W takim przypadku można użyć wyspecjalizowanej wersji `CBookmark`, dla której nie zostanie określona długość buforu. Użyj `GetBookmark` funkcji, aby pobrać zakładkę z bieżącego rekordu, jak pokazano w tym przykładzie kodu:
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,8 +55,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-Aby dowiedzieć się, jak obsługa zakładek w dostawcy, zobacz [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md).
+Aby uzyskać informacje na temat obsługi zakładek w dostawcach, zobacz [obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

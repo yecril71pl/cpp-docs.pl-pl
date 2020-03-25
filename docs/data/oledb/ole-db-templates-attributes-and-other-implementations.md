@@ -6,52 +6,52 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722bfdf02dc89e061351fd2a87b5d019db10da6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209888"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Szablony i atrybuty OLE DB oraz inne implementacje
 
-## <a name="atl-ole-db-templates"></a>Szablony ATL OLE DB
+## <a name="atl-ole-db-templates"></a>Szablony OLE DB ATL
 
-Szablony OLE DB, które są częścią ATL (biblioteki Active Template Library), ułatwiają technologii baz danych OLE DB o wysokiej wydajności do użycia, zapewniając klas implementujących wiele powszechnie używanych interfejsów OLE DB. Wraz z tego szablonu biblioteka jest dostarczana Obsługa kreatora do tworzenia aplikacji starter OLE DB.
+Szablony OLE DB, które są częścią ATL (Active Template Library), ułatwiają korzystanie z wysokiej wydajności OLE DBj bazy danych, zapewniając klasy, które implementują wiele powszechnie używanych interfejsów OLE DB. Wraz z tą biblioteką szablonów jest dostępna obsługa Kreatora tworzenia OLE DB aplikacji początkowych.
 
-Ta biblioteka szablon zawiera dwie części:
+Ta biblioteka szablonów zawiera dwie części:
 
-- **Szablony OLE DB konsumenta** używaną do zaimplementowania aplikacja kliencka (użytkownik) OLE DB.
+- **OLE DB Szablony konsumentów** Służy do implementowania aplikacji klienta OLE DB.
 
-- **Szablony OLE DB Provider** używany do implementowania aplikacji serwera (dostawca) OLE DB.
+- **Szablony dostawców OLE DB** Służy do implementowania aplikacji serwera OLE DB (dostawcy).
 
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
+Aby korzystać z szablonów OLE DB, należy zapoznać się z C++ szablonami, modelem COM i interfejsami OLE DB. Jeśli nie znasz OLE DB, zobacz [OLE DB Dokumentacja programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
-Aby uzyskać więcej informacji możesz wykonywać następujące czynności:
+Aby uzyskać więcej informacji, możesz:
 
-- Zapoznaj się z tematami o [szablony OLE DB konsumenta](../../data/oledb/ole-db-consumer-templates-cpp.md) lub [szablony OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).
+- Zapoznaj się z tematami dotyczącymi [szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) lub [szablonów dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-- Tworzenie [konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) lub [dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md).
+- Utwórz [klienta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) lub [OLE DB dostawcę](../../data/oledb/creating-an-ole-db-provider.md).
 
-- Przejrzyj listę rzeczy, [klasy konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) lub [klasy dostawców OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).
+- Zobacz listę [klas konsumenckich OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) lub [OLE DB klas dostawcy](../../data/oledb/ole-db-provider-templates-reference.md).
 
-- Przejrzyj listę rzeczy, [przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples).
+- Zapoznaj się z listą [przykładów OLE DB szablonów](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB).
 
-- Zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (w Windows SDK).
+- Zobacz [odwołanie OLE DB programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (w Windows SDK).
 
-## <a name="ole-db-attributes"></a>Atrybuty bazy danych OLE
+## <a name="ole-db-attributes"></a>Atrybuty OLE DB
 
-[Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md) zapewniają wygodny sposób, aby utworzyć konsumentów OLE DB. Atrybuty OLE DB wstrzyknięcie kodu, w oparciu o [szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) do utworzenia konsumentów OLE DB pracy i dostawców. Należy określić funkcji nieobsługiwanych przez atrybuty, można użyć szablonów OLE DB w połączeniu z atrybutów, w kodzie.
+[OLE DB atrybuty konsumenta](../../windows/ole-db-consumer-attributes.md) zapewniają wygodny sposób tworzenia OLE DB konsumentów. Atrybuty OLE DB wstrzyknąć kod na podstawie [szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) do tworzenia roboczych OLE DB odbiorców i dostawców. Jeśli konieczne jest określenie funkcji nieobsługiwanych przez atrybuty, można użyć szablonów OLE DB w połączeniu z atrybutami w kodzie.
 
 ## <a name="mfc-ole-db-classes"></a>Klasy MFC OLE DB
 
-Biblioteka MFC zawiera jedną klasę [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), który wyświetla rekordy bazy danych w kontrolkach. Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu i wyświetla pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego. Dostarcza również domyślna implementacja przechodzenia do pierwszego, dalej, poprzednie lub ostatni rekord a interfejsem aktualizowania rekordu aktualnie w widoku. Aby uzyskać więcej informacji, zobacz `COleDBRecordView`.
+Biblioteka MFC ma jedną klasę [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), która wyświetla rekordy bazy danych w kontrolkach. Widok to widok formularza połączony bezpośrednio z obiektem `CRowset` i wyświetla pola obiektu `CRowset` w kontrolkach szablonu okna dialogowego. Udostępnia również domyślną implementację do przechodzenia do pierwszego, następnego, poprzedniego lub ostatniego rekordu oraz interfejs do aktualizowania rekordu aktualnie w widoku. Aby uzyskać więcej informacji, zobacz `COleDBRecordView`.
 
-## <a name="ole-db-sdk-interfaces"></a>OLE DB interfejsów zestawu SDK
+## <a name="ole-db-sdk-interfaces"></a>Interfejsy zestawu SDK OLE DB
 
-W przypadkach, w którym szablony OLE DB nie obsługują funkcji OLE DB należy użyć interfejsy OLE DB, samodzielnie. Aby uzyskać więcej informacji, zobacz [OLE DB Podręcznik programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) w zestawie Windows SDK.
+W przypadkach, w których szablony OLE DB nie obsługują funkcji OLE DB, należy użyć samych interfejsów OLE DB. Aby uzyskać więcej informacji, zobacz [OLE DB dereferencja programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)

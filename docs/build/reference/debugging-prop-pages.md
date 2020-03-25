@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927735"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169711"
 ---
 # <a name="c-debugging-property-pages"></a>C++Debugowanie stron właściwości
 
-Te strony właściwości są dostępne**we właściwościach** >  **projektu** >  > **debugowanie**właściwości. Wybierz typ debugera w kontrolce listy rozwijanej. Aby uzyskać więcej informacji na C++ temat debugowania kodu [, zobacz Samouczek: Dowiedz się C++ , jak debugować kod](/visualstudio/debugger/getting-started-with-the-debugger-cpp) przy użyciu programu Visual Studio i [debugować kod natywny](/visualstudio/debugger/debugging-native-code).
+Te strony właściwości są dostępne w obszarze **właściwości** > **projektu** > **Właściwości konfiguracji** > **debugowanie**. Wybierz typ debugera w kontrolce listy rozwijanej. Aby uzyskać więcej informacji na C++ temat debugowania kodu, zobacz [Samouczek: Nauka C++ debugowania kodu przy użyciu programu Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) i [Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Strona właściwości lokalnego debugera systemu Windows
 
@@ -60,7 +60,7 @@ Argumenty wiersza polecenia do przekazania do aplikacji.
 
 Katalog roboczy aplikacji. Domyślnie katalog zawierający plik projektu.
 
-### <a name="attach"></a>Dołącz
+### <a name="attach"></a>Attach
 
 Określa, czy debuger powinien podjąć próbę dołączenia do istniejącego procesu, gdy debugowanie rozpocznie się.
 
@@ -165,7 +165,7 @@ Ustawia częstotliwość przerwy między debugerem GPU.
 - **Przerwij raz na wypaczenie** , raz na osnowę
 - **Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)** — Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)
 
-### <a name="attach"></a>Dołącz
+### <a name="attach"></a>Attach
 
 Określa, czy debuger powinien podjąć próbę dołączenia do istniejącego procesu, gdy debugowanie rozpocznie się.
 

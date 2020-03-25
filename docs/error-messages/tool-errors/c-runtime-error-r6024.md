@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
-ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de89d2e9e2b34f40b906a5dacca4179eade23f7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197200"
 ---
 # <a name="c-runtime-error-r6024"></a>Błąd czasu wykonania języka C R6024
 
-Brak wystarczającej ilości miejsca dla tabeli _onexit/atexit
+za mało miejsca na _onexit tabeli/atexit
 
 > [!NOTE]
-> Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Ten błąd jest zazwyczaj powodowane przez warunek bardzo małej ilości pamięci lub rzadko, usterki w programie lub uszkodzenie bibliotek Visual C++, których używa.
+> Jeśli ten komunikat o błędzie wystąpi podczas uruchamiania aplikacji, aplikacja została zamknięta, ponieważ ma problem z pamięcią wewnętrzną. Ten błąd jest zwykle spowodowany przez bardzo małą ilość pamięci lub rzadko przez usterkę w programie lub uszkodzenie bibliotek wizualnych C++ , z których korzysta.
 >
 > Możesz wypróbować następujące kroki, aby naprawić ten błąd:
 >
-> - Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
-> - Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie wszystkie kopie Microsoft Visual C++ Redistributable.
-> - Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
-> - Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+> - Zamknij inne uruchomione aplikacje lub Uruchom ponownie komputer, aby zwolnić pamięć.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować program.
+> - Użyj strony **aplikacje i funkcje** lub **programy i funkcje** w **Panelu sterowania** , aby naprawić lub ponownie zainstalować wszystkie kopie pakietu redystrybucyjnego C++ Microsoft Visual.
+> - Sprawdź, **Windows Update** w **Panelu sterowania** aktualizacje oprogramowania.
+> - Sprawdź dostępność zaktualizowanej wersji aplikacji. Jeśli problem będzie nadal występował, skontaktuj się z dostawcą aplikacji.
 
 **Informacje dla programistów**
 
-Ten błąd występuje, ponieważ pamięć nie jest dostępna dla `_onexit` lub `atexit` funkcji. Ten błąd jest spowodowany przez niedostatecznej ilości pamięci. Należy rozważyć, wstępnie przydziela buforów przy uruchamianiu aplikacji, aby pomóc w zapisując dane i wykonywanie czystej aplikacji Zamknij warunków małej ilości pamięci.
+Ten błąd występuje, ponieważ nie ma dostępnej pamięci dla funkcji `_onexit` lub `atexit`. Ten błąd jest spowodowany przez warunek braku pamięci. Możesz rozważyć wstępne przydzielanie buforów podczas uruchamiania aplikacji, aby pomóc w zapisywaniu danych użytkownika i wykonywaniu czystego działania aplikacji w warunkach braku pamięci.
