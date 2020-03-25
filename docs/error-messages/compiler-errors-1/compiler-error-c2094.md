@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2094
+title: Błąd kompilatora C2094
 ms.date: 11/04/2016
 f1_keywords:
 - C2094
 helpviewer_keywords:
 - C2094
 ms.assetid: 9e4f8f88-f189-46e7-91c9-481bacc7af87
-ms.openlocfilehash: 072c51ca4ae25c6f51b1841ea129a7b4fb495bdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022fca01706fefca2a14ea952586ec91b0c5b240
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207686"
 ---
-# <a name="compiler-error-c2094"></a>Compiler Error C2094
+# <a name="compiler-error-c2094"></a>Błąd kompilatora C2094
 
-Etykieta 'Identyfikator' nie została zdefiniowana
+etykieta "identifier" była niezdefiniowana
 
-Etykietę używaną przez [goto](../../cpp/goto-statement-cpp.md) instrukcji nie istnieje w funkcji.
+Etykieta użyta przez instrukcję [goto](../../cpp/goto-statement-cpp.md) nie istnieje w funkcji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2094:
+Poniższy przykład generuje C2094:
 
 ```cpp
 // C2094.c

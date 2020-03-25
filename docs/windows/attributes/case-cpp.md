@@ -1,21 +1,21 @@
 ---
-title: w przypadku (atrybut COM C++)
+title: Case (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167343"
 ---
 # <a name="case-c"></a>case (C++)
 
-Używane z [switch_type —](switch-type.md) atrybutu w **Unii**.
+Używany z atrybutem [switch_type](switch-type.md) w **Unii**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ Używane z [switch_type —](switch-type.md) atrybutu w **Unii**.
 #### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Możliwa wartość danych wejściowych, dla którego chcesz podać przetwarzania. Typ **wartość** może być jedną z następujących typów:
+Możliwa wartość wejściowa, dla której ma zostać przetworzone przetwarzanie. Typ **wartości** może być jednym z następujących typów:
 
 - `int`
 
@@ -40,11 +40,11 @@ lub identyfikator takiego typu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Przypadek** atrybut C++ ma taką samą funkcjonalność jak **przypadek** atrybutów w MIDL. Ten atrybut jest używany tylko z [switch_type —](switch-type.md) atrybutu.
+Atrybut **Case** C++ ma takie same funkcje jak atrybut MIDL **przypadku** . Ten atrybut jest używany tylko z atrybutem [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **przypadek** atrybutu:
+Poniższy kod przedstawia użycie atrybutu **Case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -69,14 +69,14 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Dotyczy**|Członek **klasy** lub **— struktura**|
+|**Dotyczy**|Składowa **klasy** lub **struktury**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

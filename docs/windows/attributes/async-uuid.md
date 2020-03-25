@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168463"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -30,7 +30,7 @@ Identyfikator UUID, który identyfikuje wersję interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **async_uuid** C++ ma takie same funkcje jak atrybut [async_uuid](/windows/win32/Midl/async-uuid) MIDL.
+Atrybut **async_uuid** C++ ma taką samą funkcjonalność jak atrybut [async_uuid](/windows/win32/Midl/async-uuid) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -54,12 +54,12 @@ __interface ICustom {
 |-|-|
 |**Dotyczy**|`interface`|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|**Dual**, **dispinterface**|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)

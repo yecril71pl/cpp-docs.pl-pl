@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-ms.openlocfilehash: d62c774411fda80a3e94044b3272567177328ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816355276a203adba1401841ce02eb94a18085b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192786"
 ---
 # <a name="project-build-error-prj0006"></a>Błąd PRJ0006 kompilacji projektu
 
-Nie można otworzyć pliku tymczasowego 'Plik'. Upewnij się, że plik istnieje i że katalog jest nie zabezpieczony przed zapisem.
+Nie można otworzyć pliku tymczasowego "File". Upewnij się, że plik istnieje i że katalog nie jest chroniony przed zapisem.
 
-Visual C++ nie można utworzyć pliku tymczasowego w procesie kompilacji. Przyczyny są między innymi:
+Wizualizacja C++ nie może utworzyć pliku tymczasowego podczas procesu kompilacji. Przyczyny są między innymi następujące:
 
-- Nie katalogu tymczasowego.
+- Brak katalogu tymczasowego.
 
-- Tylko do odczytu katalogu tymczasowego.
+- Katalog tymczasowy tylko do odczytu.
 
 - Brak miejsca na dysku.
 
-- $(IntDir) folder jest tylko do odczytu lub zawiera pliki tymczasowe, które są przeznaczone tylko do odczytu.
+- Folder $ (IntDir) jest w trybie tylko do odczytu lub zawiera pliki tymczasowe, które są tylko do odczytu.
 
-Ten błąd wystąpi również następujący błąd PRJ0007: Nie można utworzyć katalogu wyjściowego 'katalog'. Błąd PRJ0007 oznacza, że nie można utworzyć katalogu $(IntDir) obszaru tworzenie tymczasowo plików będą również zakończyć się niepowodzeniem.
+Ten błąd wystąpi również po wystąpieniu błędu PRJ0007: nie można utworzyć katalogu wyjściowego "Directory". Błąd PRJ0007 oznacza, że nie można utworzyć katalogu $ (IntDir), co oznacza, że tworzenie tymczasowego plików również zakończy się niepowodzeniem.
 
-Pliki tymczasowe są tworzone w każdym przypadku, gdy należy określić:
+Pliki tymczasowe są tworzone po każdym określeniu:
 
 - Plik odpowiedzi.
 
-- Niestandardowego kroku kompilacji.
+- Niestandardowy krok kompilacji.
 
-- To zdarzenie kompilacji.
+- Zdarzenie kompilacji.

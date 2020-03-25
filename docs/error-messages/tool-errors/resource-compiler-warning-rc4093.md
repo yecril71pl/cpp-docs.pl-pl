@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC4093
 ms.assetid: 3c61b4a4-b418-465b-a4fd-cb1ff0adb8dd
-ms.openlocfilehash: 23bf436e6e8338f89bc576564181c84715028332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d24f1e380f5c531e170e5dc23cf5c77eefb874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182295"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>Ostrzeżenie RC4093 kompilatora zasobów
 
-o niezmienionym znaczeniu nowego wiersza w stałej znakowej w nieaktywnego kodu
+niezmieniony nowy wiersz w stałej znakowej w nieaktywnym kodzie
 
-Wyrażenie stałe `#if`, `#elif`, **#ifdef**, lub **#ifndef** dyrektywy preprocesora, obliczone na wartość 0, dzięki czemu kod jest zgodna nieaktywne. W tym nieaktywnego kodu znaku nowego wiersza pojawiły się w ramach zestawu pojedyncze lub podwójne znaki cudzysłowu.
+Wyrażenie stałe dla dyrektywy preprocesora `#if`, `#elif`, **#ifdef**lub **#ifndef** zostało ocenione jako zero, tworząc kod, który jest nieaktywny. W tym nieaktywnym kodzie, znak nowego wiersza pojawił się w obrębie zestawu pojedynczego lub podwójnego cudzysłowu.
 
-Cały tekst, aż do następnego podwójny cudzysłów został uznany za w obrębie stałej znaku.
+Cały tekst do momentu następnego podwójnego cudzysłowu był traktowany jako jako znak stałej.

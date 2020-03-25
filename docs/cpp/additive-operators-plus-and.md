@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181671"
 ---
 # <a name="additive-operators--and--"></a>Operatory dodawania: + i -
 
@@ -30,41 +30,41 @@ expression - expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory dodawania są:
+Operatory addytywne to:
 
-- Dodawanie (**+**)
+- Dodawanie ( **+** )
 
-- Odejmowanie (**-**)
+- Odejmowanie ( **-** )
 
 Te operatory dwuargumentowe mają łączność od lewej do prawej.
 
-Operatory dodawania przyjmują operandy typu arytmetycznego lub wskaźnikowego. Wynik dodawania (**+**) operator jest sumę argumentów. Wynik odejmowania (**-**) — operator różni się od argumentów. Jeśli co najmniej jeden z argumentów są wskaźnikami, muszą być wskaźników do obiektów, a nie do funkcji. Jeśli oba operandy są wskaźnikami, wyniki nie są istotne, chyba że oba są wskaźnikami do obiektów w tej samej tablicy.
+Operatory addytywne pobierają operandy arytmetyczne lub typu wskaźnika. Wynik operatora dodawania ( **+** ) jest sumą argumentów operacji. Wynikiem operatora odejmowania ( **-** ) jest różnica między operandami. Jeśli jeden lub oba operandy są wskaźnikami, muszą być wskaźnikami do obiektów, a nie do funkcji. Jeśli oba operandy są wskaźnikami, wyniki nie są znaczące, chyba że oba są wskaźnikami do obiektów w tej samej tablicy.
 
-Operatory dodawania przyjmują operandy z *arytmetyczne*, *całkowitego*, i *skalarne* typów. Są one zdefiniowane w poniższej tabeli.
+Operatory addytywne pobierają operandy dla typów *arytmetycznych*, *całkowitych*i *skalarnych* . Są one zdefiniowane w poniższej tabeli.
 
-### <a name="types-used-with-additive-operators"></a>Typy używane z operatorów dodawania
+### <a name="types-used-with-additive-operators"></a>Typy używane z operatorami dodatków
 
 |Typ|Znaczenie|
 |----------|-------------|
-|*Operacje arytmetyczne*|Typów całkowitych i zmiennoprzecinkowych są nazywane zbiorczo "arytmetyczne" typów.|
-|*integral*|Typy char i int (długi, krótki) i wyliczenia są typy "zintegrowane".|
-|*scalar*|Argumenty skalarne są argumentów operacji typu arytmetycznego lub wskaźnikowego.|
+|*obliczeń*|Typy całkowite i zmiennoprzecinkowe są nazywane zbiorczo typami "arytmetycznymi".|
+|*integraln*|Typy char i int wszystkich rozmiarów (Long, Short) i Enumeration są typami całkowitymi.|
+|*Funkcja*|Argumenty operacji skalarnych to operandy typu arytmetycznego lub wskaźnika.|
 
-Prawne kombinacje tych operatorów są:
+Odpowiednie kombinacje dla tych operatorów są następujące:
 
-*arytmetyczny* + *arytmetyczne*
+*arytmetyczne + * *arytmetyczne*
 
-*scalar* + *integral*
+*skalarna* + *Całka*
 
-*integral* + *scalar*
+Funkcja *skalarna* + *całkowitego*
 
-*arytmetyczny* - *arytmetyczne*
+*arytmetyczne - * *arytmetyczne*
 
-*scalar* - *scalar*
+*skalarna - * *skalarna*
 
-Należy pamiętać, że dodawanie i odejmowanie nie są równoważne operacji.
+Należy zauważyć, że dodawanie i odejmowanie nie są odpowiednikami operacji.
 
-Jeśli oba operandy są typu arytmetycznego, konwersje omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów, a wynik jest typu konwertowanego.
+Jeśli oba operandy są typu arytmetycznego, konwersje omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów, a wynik jest konwertowany typ.
 
 ## <a name="example"></a>Przykład
 
@@ -86,9 +86,9 @@ int main() {
 }
 ```
 
-## <a name="pointer-addition"></a>Dodawanie wskaźników
+## <a name="pointer-addition"></a>Dodawanie wskaźnika
 
-Jeśli jeden z argumentów operacji dodawania jest wskaźnik do tablicy obiektów, druga musi być typu całkowitego. Wynik jest wskaźnik jest taki sam typ co oryginalny wskaźnik i który wskazuje na inny element tablicy. Poniższy fragment kodu ilustruje tę koncepcję:
+Jeśli jeden z operandów w operacji dodawania jest wskaźnikiem do tablicy obiektów, drugi musi być typu całkowitego. Wynik jest wskaźnikiem, który jest tego samego typu co oryginalny wskaźnik i wskazuje na inny element tablicy. Poniższy fragment kodu ilustruje tę koncepcję:
 
 ```cpp
 short IntArray[10]; // Objects of type short occupy 2 bytes
@@ -102,18 +102,18 @@ for( int i = 0; i < 10; ++i )
 }
 ```
 
-Mimo że całkowitą wartość 1 jest dodawana do `pIntArray`, nie oznacza "Dodaj 1 adres"; zamiast oznacza "Dostosuj kursor do następnego obiektu w tablicy" jest 2 bajty (lub `sizeof( int )`) natychmiast.
+Chociaż wartość całkowita 1 jest dodawana do `pIntArray`, nie oznacza to "Dodaj 1 do adresu"; nie oznacza to, że "dopasowuje wskaźnik do punktu do następnego obiektu w tablicy", który ma mieć wartość 2 bajty (lub `sizeof( int )`).
 
 > [!NOTE]
->  Kod w postaci `pIntArray = pIntArray + 1` rzadko zostanie znaleziony w programach języka C++; przeprowadzić przyrostu te formularze są preferowane: `pIntArray++` lub `pIntArray += 1`.
+>  Kod `pIntArray = pIntArray + 1` w formularzu jest rzadko znaleziony w C++ programach; Aby wykonać przyrost, te formularze są preferowane: `pIntArray++` lub `pIntArray += 1`.
 
 ## <a name="pointer-subtraction"></a>Odejmowanie wskaźnika
 
-Jeśli oba operandy są wskaźnikami, wynik odejmowania różni (w elementach tablicy) argumentów. Wyrażenie odejmowania daje podpisem całkowitego wynik o typie `ptrdiff_t` (zdefiniowane w pliku standardowych dołączonych \<stddef.h >).
+Jeśli oba operandy są wskaźnikami, wynikiem odejmowania jest różnica (w elementach tablicy) między operandami. Wyrażenie odejmowania daje podpisany wynik łączny typu `ptrdiff_t` (zdefiniowany w standardowym pliku dołączanym \<STDDEF. h >).
 
-Jeden z argumentów może być typu całkowitego, tak długo, jak jest drugi argument operacji. Wynik odejmowania jest taki sam typ co oryginalny wskaźnik. Wartość odejmowania jest wskaźnikiem do (*n* - *i*) th elementu tablicy, której *n* jest element wskazywany przez oryginalny wskaźnik i *i* jest całkowitą wartość drugiego operandu.
+Jeden z operandów może być typu całkowitego, o ile jest to drugi operand. Wynik odejmowania jest tego samego typu co oryginalny wskaźnik. Wartość odejmowania jest wskaźnikiem do elementu tablicy (*n* - *i*), gdzie *n* jest elementem wskazywanym przez oryginalny *wskaźnik i jest* wartością całkowitą drugiego operandu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

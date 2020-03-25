@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208074"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164888"
 ---
 # <a name="compiler-warning-c4958"></a>Ostrzeżenie kompilatora C4958
 
-> "*operacji*": arytmetyka wskaźnika nie jest możliwe do zweryfikowania
+> "*Operation*": arytmetyka wskaźnika nie jest możliwa do zweryfikowania
 
 ## <a name="remarks"></a>Uwagi
 
-Za pomocą arytmetyki wskaźnika dadzą nieweryfikowalnego obrazu.
+Użycie funkcji arytmetycznej wskaźnika spowoduje utworzenie obrazu, który będzie możliwy do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czysty i możliwy doC++zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Opcja " **/CLR: Safe** Compiler" jest przestarzała w programie visual Studio 2015 i nie jest obsługiwana w programie visual Studio 2017.
 
-Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+To ostrzeżenie jest wydawane jako błąd i można je wyłączyć za pomocą dyrektywy pragma [Warning](../../preprocessor/warning.md) lub opcji kompilatora [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4958:
+Poniższy przykład generuje C4958:
 
 ```cpp
 // C4958.cpp
@@ -44,9 +44,9 @@ int main( ) {
 }
 ```
 
-Kompilator implementuje operacje arytmetyka wskaźnika tablicy. W związku z tym tablice natywnego nie są możliwe do zweryfikowania; Zamiast tego użyj tablicy CLR. Aby uzyskać więcej informacji, zobacz [tablicy](../../extensions/arrays-cpp-component-extensions.md).
+Kompilator implementuje operacje tablicowe przy użyciu arytmetycznego wskaźnika. W związku z tym tablice natywne nie są możliwe do zweryfikowania; Zamiast tego użyj tablicy CLR. Aby uzyskać więcej informacji, zobacz [Array](../../extensions/arrays-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C4958:
+Poniższy przykład generuje C4958:
 
 ```cpp
 // C4958b.cpp

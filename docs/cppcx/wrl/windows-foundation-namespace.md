@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213528"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation — Przestrzeń nazw
 
-Zapewnia podstawowe funkcje środowiska wykonawczego Windows, takie jak utworzenie obiektu i fabryki.
+Włącza podstawowe funkcje środowisko wykonawcze systemu Windows, takie jak tworzenie obiektów i fabryk.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,21 +25,21 @@ Zapewnia podstawowe funkcje środowiska wykonawczego Windows, takie jak utworzen
 namespace Windows::Foundation;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>Funkcje
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[ActivateInstance, funkcja](activateinstance-function.md)|Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.|
+|[ActivateInstance, funkcja](activateinstance-function.md)|Rejestruje i Pobiera wystąpienie określonego typu zdefiniowane w określonym IDENTYFIKATORze klasy.|
 |[GetActivationFactory, funkcja](getactivationfactory-function.md)|Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Windows
+**Przestrzeń nazw:** Systemy
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Windows platformy uniwersalnej systemu Windows w przestrzeni nazw](/uwp/api/)
+[Przestrzenie nazw platformy UWP systemu Windows](/uwp/api/)

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Error method [C++]
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
-ms.openlocfilehash: 606f553060e71ece18b3d48159ec40133be28965
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e2c52d10b15822703329dcea18944773f5784ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180761"
 ---
-# <a name="comerrorerror"></a>_com_error::Error
+# <a name="_com_errorerror"></a>_com_error::Error
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Pobiera wartość HRESULT przekazany do konstruktora.
+Pobiera wartość HRESULT przekazaną do konstruktora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,14 +28,14 @@ HRESULT Error( ) const throw( );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Nieprzetworzone elementu HRESULT przekazany do konstruktora.
+Nieprzetworzony element HRESULT przeszedł do konstruktora.
 
 ## <a name="remarks"></a>Uwagi
 
-Pobiera element HRESULT hermetyzowany w `_com_error` obiektu.
+Pobiera hermetyzowany element HRESULT w obiekcie `_com_error`.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_com_error, klasa](../cpp/com-error-class.md)

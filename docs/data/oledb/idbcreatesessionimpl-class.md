@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409164"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210785"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl — Klasa
 
-Udostępnia implementację na potrzeby [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interfejsu.
+Dostarcza implementację interfejsu [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,31 +33,31 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-KLASY POCHODZĄCE Z
+*&*<br/>
+KLASA POCHODNA
 
 *SessionClass*<br/>
 Obiekt sesji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldb.h
+**Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
 |||
 |-|-|
-|[CreateSession](#createsession)|Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzoną sesji.|
+|[Moja sesja](#createsession)|Tworzy nową sesję z obiektu źródła danych i zwraca żądany interfejs w nowo utworzonej sesji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obowiązkowego interfejsu na obiekty źródła danych.
+Obowiązkowy interfejs dla obiektów źródła danych.
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl —:: issession
 
-Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzoną sesji.
+Tworzy nową sesję z obiektu źródła danych i zwraca żądany interfejs w nowo utworzonej sesji.
 
 ### <a name="syntax"></a>Składnia
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobacz [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) w *OLE DB Podręcznik programisty*.
+Zobacz [IDBCreateSession:: issession](/previous-versions/windows/desktop/ms714942(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

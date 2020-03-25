@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184245"
 ---
 # <a name="function-inlining-problems"></a>Problemy ze śródwierszowaniem funkcji
 
-Jeśli korzystasz ze śródwierszowaniem funkcji, musisz mieć:
+W przypadku korzystania z funkcji dekreślenia należy:
 
-- Ma wbudowane funkcje implementowane w pliku nagłówkowym, które należy uwzględnić.
+- Mają wbudowane funkcje zaimplementowane w pliku nagłówkowym, który zawiera.
 
-- Masz wbudowanie włączone w pliku nagłówkowym.
+- Włączenie funkcji tworzenia konspektu w pliku nagłówkowym.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -37,7 +37,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }
 ```
 
-Następnie wyszukaj maszynę
+a następnie
 
 ```cpp
 // LNK2019_function_inline_2.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Jeśli używasz `#pragma inline_depth` kompilatora dyrektywy, upewnij się, że ma wartość 2 lub nowszej. Wartość zero spowoduje wyłączenie wbudowanie. Upewnij się, używane są również **/Ob1** lub **/ob2** opcje kompilatora.
+Jeśli używasz dyrektywy kompilatora `#pragma inline_depth`, upewnij się, że jest ustawiona wartość 2 lub większa. Wartość zerowa spowoduje wyłączenie funkcji tworzenia konspektu. Upewnij się również, że używasz opcji kompilatora **/OB1** lub **/Ob2** .
 
-Mieszanie wbudowane i innych niż inline opcji kompilacji na różnych modułów może czasami powodować problemy. Jeśli biblioteka języka C++ jest tworzony za pomocą funkcji wbudowanie włączona ([/Ob1](../../build/reference/ob-inline-function-expansion.md) lub [/ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpowiedni plik nagłówkowy zawierająca opis funkcji ma wbudowanie wyłączone (nie opcji), otrzymasz błąd LNK2001. Funkcji nie może korzystać z pliku nagłówka w wbudowana w kodzie, ale ponieważ nie znajdują się w pliku biblioteki nie ma żadnego adresu rozpoznać odwołania.
+Mieszanie wbudowanych i niewbudowanych opcji kompilacji w różnych modułach może czasami spowodować problemy. Jeśli C++ biblioteka jest tworzona z włączonym wykreśleniem funkcji ([/OB1](../../build/reference/ob-inline-function-expansion.md) lub [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpowiedni plik nagłówkowy opisujący funkcje ma wyłączone wyłączenie (Brak opcji), zostanie wyświetlony komunikat o błędzie LNK2001. Funkcje nie są uwzględniane w kodzie z pliku nagłówkowego, ale ponieważ nie znajdują się w pliku biblioteki, nie ma adresu do rozpoznania odwołania.
 
-Podobnie projekt, który korzysta ze śródwierszowaniem funkcji jeszcze Określa funkcje w pliku .cpp, a nie w nagłówku pliku otrzymają również LNK2019. Plik nagłówkowy jest dołączony wszędzie, gdzie uważasz to za właściwe, ale są tylko funkcje śródwierszowe plik .cpp przejścia przez kompilator; w związku z tym konsolidator uznaje funkcji nierozpoznane obiekty zewnętrzne, gdy jest używana w innych modułach.
+Podobnie, projekt, który używa funkcji, definiuje jeszcze funkcje w pliku. cpp, a nie w pliku nagłówkowym, również otrzymuje LNK2019. Plik nagłówkowy jest uwzględniany wszędzie tam, gdzie jest to odpowiednie, ale funkcje są podkreślane tylko wtedy, gdy plik. cpp przechodzi przez kompilator; w związku z tym konsolidator widzi funkcje jako nierozwiązane zewnętrzne, gdy są używane w innych modułach.
 
 ```cpp
 // LNK2019_FIP.h
@@ -67,7 +67,7 @@ struct testclass {
 };
 ```
 
-Następnie wyszukaj maszynę
+a następnie
 
 ```cpp
 // LNK2019_FIP.cpp
@@ -76,7 +76,7 @@ Następnie wyszukaj maszynę
 inline void testclass::PublicStatMemFunc1(void) {}
 ```
 
-Następnie wyszukaj maszynę
+a następnie
 
 ```cpp
 // LNK2019_FIP_2.cpp
@@ -91,6 +91,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

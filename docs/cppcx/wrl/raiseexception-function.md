@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213632"
 ---
 # <a name="raiseexception-function"></a>RaiseException — Funkcja
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,24 +28,24 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parametry
 
-*godz.*<br/>
-Kod wyjątku wyjątków zgłaszanych; oznacza to, że wartość HRESULT operację zakończoną niepowodzeniem.
+*wysoki*<br/>
+Kod wyjątku dla zgłoszonego wyjątku; oznacza to, że HRESULT operacji zakończonej niepowodzeniem.
 
 *dwExceptionFlags*<br/>
-Flaga wskazująca pozwala na kontynuację wyjątek (wartość flagi wynosi zero), lub noncontinuable wyjątek (wartość flagi jest różna od zera). Domyślnie wyjątek jest wystąpieniu.
+Flaga wskazująca ciągły wyjątek (wartość flagi to zero) lub wyjątek nieciągły (wartość flagi jest różna od zera). Domyślnie wyjątek nie jest ciągły.
 
 ## <a name="remarks"></a>Uwagi
 
-Zgłasza wyjątek w wątku wywołującego.
+Wywołuje wyjątek w wątku wywołującym.
 
-Aby uzyskać więcej informacji, zobacz Windows `RaiseException` funkcji.
+Aby uzyskać więcej informacji, zobacz Funkcja `RaiseException` systemu Windows.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** internal.h
+**Nagłówek:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

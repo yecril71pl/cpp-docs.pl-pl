@@ -1,25 +1,25 @@
 ---
-title: Organizacja kodu źródłowego (szablony języka C++)
+title: Organizacja kodu źródłowego (C++ szablony)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611392"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178733"
 ---
-# <a name="source-code-organization-c-templates"></a>Organizacja kodu źródłowego (szablony języka C++)
+# <a name="source-code-organization-c-templates"></a>Organizacja kodu źródłowego (C++ szablony)
 
-Podczas definiowania szablonu klasy, należy zorganizować kodu źródłowego w taki sposób, że definicje elementów członkowskich są widoczne w kompilatorze, kiedy ich potrzebuje.   Masz do wyboru używania *modelu włączenia* lub *jawne utworzenie wystąpienia* modelu. W modelu dołączania możesz uwzględnić definicje elementów członkowskich w każdym pliku, który używa szablonu. To podejście jest najprostsza i zapewnia maksymalną elastyczność pod względem typów konkretnych mogą być używane z szablonu. Jego wadą jest to zwiększyć czas kompilacji. Wpływ może być istotne, jeśli projekt i/lub same pliki dołączone są duże. W przypadku jawnego utworzenia wystąpienia metody samego szablonu tworzy konkretnych klas lub składowych klasy dla określonych typów.  Takie podejście może przyspieszyć czasy kompilacji, ale ogranicza użycie do tych klas, które implementujący szablon ma włączone wcześniej. Ogólnie rzecz biorąc zaleca się użycie modelu dołączania, chyba że czasy kompilacji stać się problemem.
+Podczas definiowania szablonu klasy należy zorganizować kod źródłowy w taki sposób, aby definicje elementów członkowskich były widoczne dla kompilatora, gdy ich potrzebują.   Możesz wybrać *model dołączania* lub *jawny model tworzenia wystąpienia* . W modelu dołączania można uwzględnić definicje elementów członkowskich w każdym pliku, który używa szablonu. Ta metoda jest najprostsza i zapewnia maksymalną elastyczność w zakresie tego, jakie konkretne typy mogą być używane z szablonem. Wadą jest to, że może to wydłużyć czas kompilacji. Wpływ może być znaczący, jeśli projekt i/lub dołączone pliki są duże. W przypadku jawnego podejścia tworzenia wystąpienia, sam szablon tworzy wystąpienia konkretnych klas lub elementów członkowskich klasy dla określonych typów.  Takie podejście może przyspieszyć kompilację, ale ogranicza użycie wyłącznie do tych klas, które implementują szablon. Ogólnie rzecz biorąc, zalecamy użycie modelu dołączania, chyba że czasy kompilacji staną się problemem.
 
 ## <a name="background"></a>Tło
 
-Szablony nie są takie jak zwykłej klasy, w tym sensie, że kompilator nie generuje kod obiektowy dla szablonu lub dowolny z jej członków. Nie ma nic do generowania, dopóki nie zostanie utworzone wystąpienie szablonu przy użyciu typów konkretnych. Gdy kompilator napotka konkretyzacji szablonu takich jak `MyClass<int> mc;` i klasy z ten podpis istnieje jeszcze, generuje nową klasę. Ponadto próbuje wygenerować kod dla dowolnej funkcji elementów członkowskich, które są używane. Jeśli te definicje znajdują się w pliku, który nie jest #included, bezpośrednio lub pośrednio w pliku .cpp, który jest kompilowany, kompilator nie widzi.  Z punktu widzenia kompilatora to niekoniecznie błąd, ponieważ funkcje mogą być zdefiniowane w innej jednostce translacji, w których przypadku konsolidator będzie je znaleźć.  Jeśli konsolidator nie może znaleźć kod, uruchamia **nierozpoznany zewnętrzny** błędu.
+Szablony nie są podobne do zwykłych klas w sensie, że kompilator nie generuje kodu obiektu dla szablonu lub któregokolwiek z jego składowych. Nie ma nic do wygenerowania do momentu wystąpienia szablonu z konkretnymi typami. Gdy kompilator napotyka Tworzenie wystąpienia szablonu, takiego jak `MyClass<int> mc;` i nie istnieje jeszcze Klasa o tej sygnaturze, generuje nową klasę. Próbuje również wygenerować kod dla wszystkich używanych funkcji składowych. Jeśli te definicje znajdują się w pliku, który nie jest #included, bezpośrednio lub pośrednio, w pliku. cpp, który jest kompilowany, kompilator nie może ich zobaczyć.  Z punktu widzenia kompilatora nie jest to konieczne, ponieważ funkcje mogą być zdefiniowane w innej jednostce tłumaczenia, w takim przypadku konsolidator znajdzie je.  Jeśli konsolidator nie znajdzie tego kodu, wywołuje **nierozpoznany błąd zewnętrzny** .
 
 ## <a name="the-inclusion-model"></a>Model dołączania
 
-Najprostszy i najbardziej powszechnym sposobem widoczności w całej jednostki translacji, definicje szablonów jest umieścić definicje w samym pliku nagłówka.  Dowolny plik .cpp, która używa tego szablonu, ale po prostu ma # include. To podejście użyte w standardowej bibliotece.
+Najprostszym i najbardziej typowym sposobem, aby definicje szablonów były widoczne w jednostce translacji, jest umieszczenie definicji w samym pliku nagłówkowym.  Każdy plik. cpp, który używa szablonu, po prostu ma #include nagłówku. Jest to podejście używane w standardowej bibliotece.
 
 ```cpp
 #ifndef MYARRAY
@@ -49,13 +49,13 @@ public:
 #endif
 ```
 
-W przypadku tej metody kompilator ma dostęp do definicji kompletny szablon oraz można utworzyć wystąpienie szablony na żądanie dla dowolnego typu. Jest proste i stosunkowo łatwa w obsłudze. Jednak model włączenia kosztują pod względem czasy kompilacji.   Ten koszt może być istotne w przypadku dużych programów, zwłaszcza wtedy, gdy sam nagłówek szablonu #includes innych nagłówków. Pliki .cpp, każdy z #includes nagłówek otrzyma własną kopię szablony funkcji i wszystkich definicji. Konsolidator zazwyczaj będzie można posortować elementy tak, aby nie kończą z wieloma definicjami dla funkcji, ale zajmuje trochę czasu, aby wykonać to zadanie. Mniejszymi programami, że czas kompilacji dodatkowe, prawdopodobnie nie ma znaczenia.
+W tym podejściu kompilator ma dostęp do kompletnej definicji szablonu i może tworzyć wystąpienia szablonów na żądanie dla dowolnego typu. Jest to proste i stosunkowo łatwe w obsłudze. Jednak model dołączania ma koszt w odniesieniu do czasu kompilacji.   Ten koszt może być znaczny w dużych programach, szczególnie jeśli sam nagłówek szablonu #includes inne nagłówki. Każdy plik CPP, który #includes nagłówku, otrzyma własną kopię szablonów funkcji i wszystkie definicje. Konsolidator będzie zazwyczaj mógł posortować elementy w taki sposób, aby nie można było wykonać wielu definicji dla funkcji, ale konieczne jest wykonanie tej czynności. W mniejszych programach czas trwania dodatkowej kompilacji prawdopodobnie nie jest znaczący.
 
-## <a name="the-explicit-instantiation-model"></a>Model jawne Tworzenie wystąpienia
+## <a name="the-explicit-instantiation-model"></a>Jawny model tworzenia wystąpienia
 
-Jeśli model dołączania nie jest wygodną dla projektu, a ostatecznie znasz zestaw typów, które będą używane do utworzenia wystąpienia szablonu, można rozdzielić kod szablonu do pliku .h i .cpp i w pliku .cpp jawnie utworzyć wystąpienie szablonów. Spowoduje to generowania kodu obiektu kompilator zostanie wyświetlony, gdy wystąpi wystąpień użytkownika.
+Jeśli model dołączania nie jest żywotny dla Twojego projektu i chcesz uzyskać ostateczny zestaw typów, które będą używane do tworzenia wystąpienia szablonu, można oddzielić kod szablonu do pliku. h i. cpp, a w pliku. cpp jawnie utworzyć wystąpienia szablonów. Spowoduje to wygenerowanie kodu obiektu, który będzie wyświetlany w kompilatorze po napotkaniu wystąpień użytkownika.
 
-Jawne tworzenie wystąpienia możesz utworzyć przy użyciu szablonu — słowo kluczowe, następuje podpis jednostka, do której chcesz utworzyć wystąpienie. Może to być typu lub elementu członkowskiego. Jeśli jawnie utworzyć wystąpienia typu, wszystkie elementy członkowskie są tworzone.
+Można utworzyć jawne utworzenie wystąpienia przy użyciu szablonu słowa kluczowego, po którym następuje podpis jednostki, którą chcesz utworzyć. Może to być typ lub element członkowski. Jeśli jawnie utworzysz wystąpienie typu, zostaną utworzone wszystkie elementy członkowskie.
 
 ```cpp
 template MyArray<double, 5>;
@@ -99,7 +99,7 @@ void MyArray<T,N>::Print()
 template MyArray<double, 5>;template MyArray<string, 5>;
 ```
 
-W poprzednim przykładzie jawne utworzenie wystąpień są w dolnej części pliku .cpp. A `MyArray` mogą być używane tylko w przypadku **double** lub `String` typów.
+W poprzednim przykładzie jawne wystąpienia są w dolnej części pliku. cpp. `MyArray` może być używana tylko dla typów **podwójnych** lub `String`.
 
 > [!NOTE]
-> W języku C ++ 11 **wyeksportować** — słowo kluczowe została zakończona w kontekście definicji szablonu. W praktyce ma little wpływ ponieważ nigdy nie obsługuje większość kompilatorów.
+> W języku C++ 11 słowo kluczowe **Export** zostało zaniechane w kontekście definicji szablonu. W praktyce mają niewielki wpływ, ponieważ większość kompilatorów nigdy nie obsługuje.

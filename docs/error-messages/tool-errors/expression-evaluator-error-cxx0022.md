@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0022
 - CAN0022
 ms.assetid: f6b299ac-a4ee-492c-bd9f-6fff005bc537
-ms.openlocfilehash: ac726c60d30a13d6458636d31dda6a8fb2cbd02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5858ce936acfb8b949351c9263f3a9379c73648e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359868"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195828"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Błąd CXX0022 programu Expression Evaluator
 
 Wywołanie funkcji przed _main
 
-Ewaluator wyrażeń C nie można obliczyć funkcję, aby debuger wszedł funkcja **_main**. Program nie został prawidłowo zainicjowany do momentu **_main** została wywołana.
+Ewaluatora wyrażeń języka C nie może oszacować funkcji, zanim debuger wprowadzi funkcję **_main**. Program nie jest prawidłowo zainicjowany do momentu wywołania **_main** .
 
-Ten błąd jest taka sama jak CAN0022.
+Ten błąd jest identyczny z CAN0022.

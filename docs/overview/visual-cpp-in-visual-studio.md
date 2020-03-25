@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1e567f2264fe40e6b386bf8d1758ed866d8f3f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215075"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -65,7 +65,7 @@ Dowiedz się o języku C++, uzyskaj omówienie nowoczesnego języka C++, znajdź
 [Poznaj wizualizacjęC++](../build/vscpp-step-1-create.md)<br/>
 Rozpocznij naukę języka C++.
 
-[Przykłady Visual C++](visual-cpp-samples.md)<br/>
+[Przykłady dla C++ programu Visual Studio](visual-cpp-samples.md)<br/>
 Informacje dotyczące przykładów.
 
 ## <a name="c-development-tools"></a>C++Narzędzia programistyczne

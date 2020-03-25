@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398176"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213710"
 ---
 # <a name="move-function"></a>Move — Funkcja
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,28 +29,28 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ argumentu.
 
 *ARG*<br/>
-Argument do przenoszenia.
+Argument do przeniesienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Parametr *arg* po cech odwołanie lub odwołanie rvalue, jeśli zostały usunięte.
+*Argument* Parameter po elemencie Reference lub rvalue-Reference (jeśli any) został usunięty.
 
 ## <a name="remarks"></a>Uwagi
 
-Przenosi określonego argumentu z jednej lokalizacji.
+Przenosi określony argument z jednej lokalizacji do innej.
 
-Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Aby uzyskać więcej informacji, zobacz sekcję **przenoszenie semantyki** [rvalue Reference deklarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** internal.h
+**Nagłówek:** Internal. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

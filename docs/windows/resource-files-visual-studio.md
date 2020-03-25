@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167878"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -46,11 +46,11 @@ Termin *plik zasobów* może odwoływać się do wielu typów plików, takich ja
 
 - Pojedynczy zasób istniejący jako plik autonomiczny. Ten typ zawiera mapę bitową, ikonę lub plik kursora, do którego odwołuje się plik. rc.
 
-- Plik nagłówka generowany przez środowisko deweloperskie. Ten typ obejmuje `Resource.h`, który jest określany na podstawie pliku. rc.
+- Plik nagłówka generowany przez środowisko deweloperskie. Ten typ zawiera `Resource.h`, do którego odwołuje się plik. rc.
 
 Zasoby znajdujące się w innych typach plików, takich jak pliki exe, DLL i. res, są określane jako *zasoby*.
 
-Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można również korzystać z tych, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem programistycznym programu Visual Studio. Możesz na przykład:
+Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można również korzystać z tych, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem programistycznym programu Visual Studio. Można na przykład:
 
 - Pracuj z zagnieżdżonymi i warunkowo plikami zasobów.
 
@@ -64,7 +64,7 @@ Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można 
 
 - Uwzględnij typy zasobów nieobsługiwane przez środowisko programistyczne.
 
-Aby uzyskać więcej informacji o zasobach, zobacz How to [Create](../windows/how-to-create-a-resource-script-file.md)Resources, [Manage](../windows/how-to-copy-resources.md)Resources i include Resources [w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).
+Aby uzyskać więcej informacji o zasobach, zobacz How to [Create Resources](../windows/how-to-create-a-resource-script-file.md), [Manage Resources](../windows/how-to-copy-resources.md)i include Resources [w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).
 
 ## <a name="editable-resources"></a>Zasoby edytowalne
 
@@ -108,7 +108,7 @@ W C++ projektach klasycznych zasoby manifestu są plikami XML, które opisują z
 </dependency>
 ```
 
-W przypadku aplikacji systemu Windows XP lub Windows Vista zasób manifestu powinien określać najbardziej aktualną wersję formantów wspólnych systemu Windows, które mają być używane przez aplikację. W powyższym przykładzie `6.0.0.0`używa się wersji, która obsługuje [formant Syslink](/windows/win32/Controls/syslink-overview).
+W przypadku aplikacji systemu Windows XP lub Windows Vista zasób manifestu powinien określać najbardziej aktualną wersję formantów wspólnych systemu Windows, które mają być używane przez aplikację. Powyższy przykład używa wersji `6.0.0.0`, która obsługuje [formant Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Dla każdego modułu można mieć tylko jeden zasób manifestu.
@@ -129,7 +129,7 @@ Aby wyświetlić informacje o wersji i typie zawarte w zasobie manifestu, Otwór
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
 [Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>

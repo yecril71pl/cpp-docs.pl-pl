@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13d2ed705bff7b42eb3c348692a5829bd54158b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388667"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164875"
 ---
 # <a name="compiler-warning-c4959"></a>Ostrzeżenie kompilatora C4959
 
-> Nie można zdefiniować niezarządzanego struct "*typu*" w/CLR: Safe, ponieważ dostęp do jego składowych daje nieweryfikowalny kod
+> nie można zdefiniować niezarządzanej struktury "*Type*" w/CLR: Safe, ponieważ dostęp do jej elementów członkowskich daje kod niemożliwy do zweryfikowania
 
 ## <a name="remarks"></a>Uwagi
 
-Dostęp do składowej typu niezarządzanego dadzą obrazu nieweryfikowalnego (peverify.exe).
+Uzyskanie dostępu do elementu członkowskiego typu niezarządzanego spowoduje utworzenie obrazu (peverify. exe), który ma być możliwy do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [czystej i weryfikowalny kod (C++sposób niezamierzony)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czysty i możliwy doC++zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: Safe** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Opcja " **/CLR: Safe** Compiler" jest przestarzała w programie visual Studio 2015 i nie jest obsługiwana w programie visual Studio 2017.
 
-Ostrzeżenie to jest wydana jako błąd i mogą zostać wyłączone za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+To ostrzeżenie jest wydawane jako błąd i można je wyłączyć za pomocą dyrektywy pragma [Warning](../../preprocessor/warning.md) lub opcji kompilatora [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4959:
+Poniższy przykład generuje C4959:
 
 ```cpp
 // C4959.cpp

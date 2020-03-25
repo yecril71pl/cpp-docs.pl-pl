@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166165"
 ---
 # <a name="string-c"></a>string (C++)
 
-Wskazuje, że tablica Jednowymiarowa, **wchar_t**, `byte` (lub równoważna) lub wskaźnik do takiej tablicy musi być traktowana jako ciąg.
+Wskazuje **, że tablica Jednowymiarowa**, **wchar_t**, `byte` (lub równoważna) lub wskaźnik do takiej tablicy musi być traktowana jako ciąg.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,12 +52,12 @@ __interface IFireTabCtrl
 |-|-|
 |**Dotyczy**|Tablica lub wskaźnik do tablicy, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty tablicy](array-attributes.md)<br/>

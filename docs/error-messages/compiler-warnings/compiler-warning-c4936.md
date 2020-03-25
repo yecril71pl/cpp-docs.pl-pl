@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: bbb69cccbf93be6e97d13db5008780f57e63f9da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6d54cf8b6704eec2a9e6af890c5c80c67106995
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165005"
 ---
 # <a name="compiler-warning-c4936"></a>Ostrzeżenie kompilatora C4936
 
-> Ta deklaracja __declspec jest obsługiwana tylko w przypadku, gdy skompilowano z opcją/CLR lub/CLR: pure
+> Ta __declspec jest obsługiwana tylko wtedy, gdy skompilowano z opcją/CLR lub/CLR: Pure
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-A `__declspec` modyfikator użyto ale `__declspec` modyfikator tylko jest prawidłowa, gdy kompilowany przy użyciu jednego z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opcje.
+Użyto modyfikatora `__declspec`, ale ten modyfikator `__declspec` jest prawidłowy tylko wtedy, gdy jest kompilowany z jedną z opcji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).
+Aby uzyskać więcej informacji, zobacz temat [AppDomain](../../cpp/appdomain.md) i [Process](../../cpp/process.md).
 
-C4936 zawsze jest wystawiany jako błąd.  Można wyłączyć C4936 z [ostrzeżenie](../../preprocessor/warning.md) pragmy.
+C4936 jest zawsze wystawiony jako błąd.  C4936 można wyłączyć za pomocą dyrektywy pragma [ostrzeżenia](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4936:
+Poniższy przykład generuje C4936:
 
 ```cpp
 // C4936.cpp

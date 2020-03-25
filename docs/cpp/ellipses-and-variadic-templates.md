@@ -2,44 +2,44 @@
 title: Wielokropki i szablony wariadyczne
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 387cf4478192cb9470804c219eee8046f8e47abe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9294089b9f0a144946b7f6b81da2a71ca710bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189263"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Wielokropki i szablony wariadyczne
 
-W tym artykule przedstawiono sposób użycia wielokropka (`...`) za pomocą szablonów ze zmienną liczbą argumentów języka C++. Wielokropek miał wiele zastosowań w C i C++. Należą do nich listy zmiennych argumentów dla funkcji. `printf()` Funkcji z biblioteki środowiska uruchomieniowego języka C jest jednym z najbardziej znanych przykładów.
+W tym artykule pokazano, jak używać wielokropka (`...`C++ ) z szablonami wariadyczne. Wielokropek ma wiele użycia w C i C++. Obejmują one listy zmiennych argumentów dla funkcji. Funkcja `printf()` z biblioteki środowiska uruchomieniowego języka C jest jednym z najbardziej znanych przykładów.
 
-A *szablonu wariadycznego* jest szablonu klasy lub funkcji, która obsługuje dowolną liczbę argumentów. Ten mechanizm jest szczególnie przydatny dla deweloperów bibliotek C++, ponieważ dotyczą zarówno szablony klas, jak i szablonów funkcji, a tym samym zapewniać szeroki zakres bezpiecznego typu i zaawansowanej funkcjonalności i elastyczności.
+*Szablon wariadyczne* jest klasą lub szablonem funkcji, który obsługuje dowolną liczbę argumentów. Ten mechanizm jest szczególnie przydatny C++ dla deweloperów biblioteki, ponieważ można go zastosować do szablonów klas i szablonów funkcji, a tym samym zapewnić szeroką gamę bezpiecznych i nieprostych funkcji oraz elastyczność.
 
 ## <a name="syntax"></a>Składnia
 
-Wielokropek jest używany na dwa sposoby przez zmienne szablony. Po lewej stronie nazwy parametru, oznacza *pakiet parametrów*, a po prawej stronie nazwy parametru, rozszerza pakiety parametru w osobne nazwy.
+Wielokropek jest używany na dwa sposoby według szablonów wariadyczne. Po lewej stronie nazwy parametru oznacza *pakiet parametrów*, a po prawej stronie nazwy parametru rozszerza pakiety parametrów do oddzielnych nazw.
 
-Oto przykład podstawowej *klasy zmiennego szablonu* składnię definicji:
+Oto przykład podstawowej składni definicji *klasy szablonu wariadyczne* :
 
 ```cpp
 template<typename... Arguments> class classname;
 ```
 
-Pakietami parametrów i rozszerzenia można dodać odstęp wokół Wielokropek na podstawie preferencji użytkownika, jak pokazano w tych przykładach:
+W przypadku pakietów parametrów i rozszerzeń można dodać odstępy wokół wielokropka na podstawie preferencji, jak pokazano w poniższych przykładach:
 
 ```cpp
 template<typename ...Arguments> class classname;
 ```
 
-Lub to:
+Lub:
 
 ```cpp
 template<typename ... Arguments> class classname;
 ```
 
-Zwróć uwagę, że w tym artykule używa konwencji, która jest wyświetlana w pierwszym przykładzie (wielokropka jest dołączony do `typename`).
+Zwróć uwagę, że w tym artykule jest stosowana Konwencja pokazana w pierwszym przykładzie (wielokropek jest dołączony do `typename`).
 
-W powyższych przykładach *argumenty* jest pakietem parametrów. Klasa `classname` może akceptować zmienną liczbę argumentów, jak w następujących przykładach:
+W powyższych przykładach *argumenty* są pakietem parametrów. Klasa `classname` może akceptować zmienną liczbę argumentów, jak w następujących przykładach:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -50,21 +50,21 @@ vtclass<float, bool> vtinstance3;
 vtclass<long, std::vector<int>, std::string> vtinstance4;
 ```
 
-Za pomocą definicji klasy zmiennej szablonu, możesz również wymagać co najmniej jednego parametru:
+Za pomocą definicji klasy szablonu wariadyczne można także wymagać co najmniej jednego parametru:
 
 ```cpp
 template <typename First, typename... Rest> class classname;
 ```
 
-Oto przykład podstawowej *funkcji zmiennego szablonu* składni:
+Oto przykład podstawowej składni *funkcji szablonu wariadyczne* :
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-*Argumenty* pakiet parametrów jest rozszerzany do użycia, jak pokazano w następnej sekcji **zrozumienie szablonów zmiennych**.
+Pakiet parametrów *argumentów* jest następnie rozwinięty do użycia, jak pokazano w następnej sekcji, **opisując szablony wariadyczne**.
 
-Możliwe są inne formy Składnia funkcji zmiennych szablonów — w tym, między innymi, te przykłady:
+Możliwe są inne formy składni funkcji szablonu wariadyczne — w tym następujące przykłady:
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments&... args);
@@ -72,19 +72,19 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);
 ```
 
-Specyfikatory takie jak **const** są również dozwolone:
+Specyfikatory, takie jak **const** , są również dozwolone:
 
 ```cpp
 template <typename... Arguments> returntype functionname(const Arguments&... args);
 ```
 
-Jak z definicjami klasy zmiennej szablonu można także wykonać funkcje, które wymagają co najmniej jednego parametru:
+Podobnie jak w przypadku definicji klas szablonów wariadyczne, można utworzyć funkcje, które wymagają co najmniej jednego parametru:
 
 ```cpp
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);
 ```
 
-Szablony zmienne korzystają `sizeof...()` — operator (niezwiązany ze starszym `sizeof()` operator):
+Szablony wariadyczne używają operatora `sizeof...()` (niepowiązane ze starszym operatorem `sizeof()`):
 
 ```cpp
 template<typename... Arguments>
@@ -98,13 +98,13 @@ void tfunc(const Arguments&... args)
 }
 ```
 
-## <a name="more-about-ellipsis-placement"></a>Więcej informacji na temat umieszczania wielokropka
+## <a name="more-about-ellipsis-placement"></a>Więcej informacji o rozmieszczeniu wielokropka
 
-Wcześniej w tym artykule opisano umieszczania wielokropka, definiujący pakietami parametrów i rozszerzenia jako "po lewej stronie nazwy parametru, oznacza pakiet parametrów, a po prawej stronie nazwy parametru, rozszerza pakiety parametru w osobne nazwy". Z technicznego punktu widzenia obowiązuje, ale może być myląca w tłumaczeniu do kodu. Należy wziąć pod uwagę:
+Wcześniej w tym artykule opisano rozmieszczenie wielokropka, które definiuje pakiety parametrów i rozszerzenia jako "po lewej stronie nazwy parametru, oznacza pakiet parametrów i po prawej stronie nazwy parametru rozszerza pakiety parametrów do oddzielnych nazw". Jest to technicznie prawdziwe, ale może być mylące w tłumaczeniu na kod. Należy wziąć pod uwagę:
 
-- W szablonie listy parametrów (`template <parameter-list>`), `typename...` wprowadza pakiet parametrów szablonu.
+- Na liście parametrów szablonu (`template <parameter-list>`) `typename...` wprowadza pakiet parametrów szablonu.
 
-- W parametrze deklaracji — klauzuli (`func(parameter-list)`), "najwyższego poziomu" wielokropka wprowadza pakiet parametrów funkcji i pozycjonowanie wielokropka jest ważne:
+- W klauzuli deklaracji parametrów (`func(parameter-list)`) wielokropek "najwyższego poziomu" wprowadza pakiet parametrów funkcji, a rozmieszczenie wielokropka jest ważne:
 
     ```cpp
     // v1 is NOT a function parameter pack:
@@ -114,11 +114,11 @@ Wcześniej w tym artykule opisano umieszczania wielokropka, definiujący pakieta
     template <typename... Types> void func2(std::vector<Types>... v2);
     ```
 
-- W przypadku, gdy przycisk wielokropka pojawia się natychmiast po nazwę parametru, masz rozwinięciem pakietu parametrów.
+- Gdy wielokropek pojawia się bezpośrednio po nazwie parametru, masz rozszerzenie pakietu parametrów.
 
 ## <a name="example"></a>Przykład
 
-Dobrym sposobem ilustrowania mechanizmu funkcji zmiennych szablonu jest z niego korzystać w celu ponownego napisania niektórych funkcji `printf`:
+Dobrym sposobem zilustrowania mechanizmu funkcji szablonu wariadyczne jest użycie go w celu ponownego zapisu niektórych funkcji `printf`:
 
 ```cpp
 #include <iostream>
@@ -161,4 +161,4 @@ first, 2, third, 3.14159
 ```
 
 > [!NOTE]
->  Większość implementacji, które zawierają funkcje szablonów ze zmienną liczbą argumentów rekursję jakąś formę, ale różni się nieco od tradycyjnych rekursji.  Tradycyjna rekursja obejmuje wywoływanie się za pomocą tego samego podpisu funkcji przez. (Może to być przeciążone lub oparte na szablonach, ale ten sam podpis jest wybierany każdorazowo). Rekursja zmienna polega na wywołanie funkcji ze zmienną liczbą argumentów szablonu za pomocą różnych (prawie zawsze malejących) argumentów, a tym samym wybijaniu inny podpis każdym. "Przypadek podstawowy" jest wciąż wymagany, ale różni się rodzaj rekursji.
+>  Większość implementacji obejmujących funkcje szablonu wariadyczne korzysta z rekursji niektórych form, ale nieco różni się od tradycyjnej rekursji.  Tradycyjna rekursja obejmuje wywoływanie funkcji za pomocą tej samej sygnatury. (Może być przeciążony lub z szablonem, ale ten sam podpis jest wybierany za każdym razem). Rekursja wariadyczne obejmuje wywoływanie szablonu funkcji wariadyczne przy użyciu różnych (prawie zawsze malejących) liczb argumentów, a tym samym Wykreślanie innej sygnatury za każdym razem. Nadal wymagany jest "przypadek podstawowy", ale charakter rekursji jest inny.

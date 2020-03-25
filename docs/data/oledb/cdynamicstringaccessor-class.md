@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211872"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor — Klasa
 
-Umożliwia dostęp do źródła danych, gdy masz nie znajomości schematu bazy danych (wewnętrzna struktura bazy danych).
+Pozwala uzyskać dostęp do źródła danych, gdy nie ma informacji o schemacie bazy danych (źródłowa struktura bazy danych).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,32 +32,32 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: atldbcli.h
+**Nagłówek**: atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[GetString](#getstring)|Pobiera dane określonej kolumny jako ciąg.|
-|[Setstring —](#setstring)|Ustawia dane określonej kolumny jako ciąg.|
+|[GetString](#getstring)|Pobiera dane określonego kolumny jako ciąg.|
+|[Metodami SetString](#setstring)|Ustawia dane określonego kolumny jako ciąg.|
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) żąda danych w formacie natywnym zgłoszony przez dostawcę `CDynamicStringAccessor` żądań, że dostawca pobrać wszystkie dane używane z magazynu danych jako dane ciągu. Jest to szczególnie przydatne w przypadku prostych zadań, które nie wymagają obliczenia wartości w magazynie danych, takich jak wyświetlanie lub drukowanie zawartość magazynu danych.
+Podczas gdy [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) żąda danych w formacie natywnym zgłoszonym przez dostawcę, `CDynamicStringAccessor` żądania pobrania przez dostawcę wszystkich danych, do których uzyskano dostęp z magazynu danych jako dane ciągu. Jest to szczególnie przydatne w przypadku prostych zadań, które nie wymagają obliczenia wartości w magazynie danych, na przykład wyświetlania lub drukowania zawartości magazynu danych.
 
-Natywnego typu danych kolumny w magazynie danych nie ma znaczenia; tak długo, jak dostawca może obsługiwać Konwersja danych, jej będzie dostarczać dane w formacie ciągu. Jeśli dostawca nie obsługuje konwersji z typu danych natywnych na ciąg, (która nie jest często), żądanie wywołania zwróci wartość powodzenia DB_S_ERRORSOCCURED i stan odpowiednia kolumna będą wskazywać problem z konwersją z DBSTATUS_E_CANTCONVERTVALUE.
+Natywny typ danych kolumn w magazynie danych nie ma znaczenia; tak długo, jak dostawca może obsługiwać konwersję danych, dostarczy dane w formacie ciągu. Jeśli dostawca nie obsługuje konwersji z natywnego typu danych na ciąg (który nie jest typowy), wywołanie żądania zwróci wartość sukcesu DB_S_ERRORSOCCURED, a stan odpowiedniej kolumny wskazuje na problem z konwersją DBSTATUS_E_CANTCONVERTVALUE.
 
-Użyj `CDynamicStringAccessor` metody, aby uzyskać informacje o kolumnach. Informacje o kolumnie umożliwia dynamiczne tworzenie metody dostępu w czasie wykonywania.
+Użyj metod `CDynamicStringAccessor`, aby uzyskać informacje o kolumnie. Te informacje o kolumnie służą do dynamicznego tworzenia akcesora w czasie wykonywania.
 
-Informacje o kolumnach są przechowywane w buforze tworzone i zarządzane przez tę klasę. Uzyskiwanie danych z bufora przy użyciu [GetString —](../../data/oledb/cdynamicstringaccessor-getstring.md), czy zapisać je przy użyciu buforu [setstring —](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Informacje o kolumnie są przechowywane w buforze utworzonym i zarządzanym przez tę klasę. Pobierz dane z buforu za pomocą polecenia [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)lub Zapisz je w buforze przy użyciu polecenia [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
-Dyskusję na temat i przykłady użycia klas dynamicznej metody dostępu, zobacz [przy użyciu dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).
+Aby zapoznać się z omówieniem i przykładami dotyczącymi korzystania z klas akcesorów dynamicznych, zobacz [Używanie dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
-Pobiera dane określonej kolumny jako ciąg.
+Pobiera dane określonego kolumny jako ciąg.
 
 ### <a name="syntax"></a>Składnia
 
@@ -72,22 +72,22 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 #### <a name="parameters"></a>Parametry
 
 *nColumn*<br/>
-[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.
+podczas Numer kolumny. Numery kolumn zaczynają się od 1. Wartość 0 oznacza kolumnę zakładki (jeśli istnieje).
 
 *pColumnName*<br/>
-[in] Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
+podczas Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wartości ciągu jest pobierana z określonej kolumny. Wartość jest typu `BaseType`, który będzie stanowić **CHAR** lub **WCHAR** w zależności od tego, czy _UNICODE zdefiniowano, czy nie. Zwraca wartość NULL, jeśli nie można odnaleźć określonej kolumny.
+Wskaźnik do wartości ciągu pobranej z określonej kolumny. Wartość jest typu `BaseType`, która będzie równa **char** lub **WCHAR** , w zależności od tego, czy _UNICODE jest zdefiniowany, czy nie. Zwraca wartość NULL, jeśli nie można odnaleźć określonej kolumny.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugi musi zostać zastąpiona formularz przyjmuje nazwy kolumny jako ciąg ANSI. Trzeci musi zostać zastąpiona formularz przyjmuje nazwy kolumny jako ciąg Unicode.
+Drugi formularz przesłonięcia przyjmuje nazwę kolumny jako ciąg ANSI. Trzeci formularz przesłonięcia przyjmuje nazwę kolumny jako ciąg Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
 
-Ustawia dane określonej kolumny jako ciąg.
+Ustawia dane określonego kolumny jako ciąg.
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,27 +105,27 @@ HRESULT SetString(const WCHAR* pColumnName,
 #### <a name="parameters"></a>Parametry
 
 *nColumn*<br/>
-[in] Numer kolumny. Numery kolumn zaczynać od 1. Specjalna wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.
+podczas Numer kolumny. Numery kolumn zaczynają się od 1. Wartość specjalna 0 odwołuje się do kolumny zakładki (jeśli istnieje).
 
 *pColumnName*<br/>
-[in] Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
+podczas Wskaźnik do ciągu znaków, który zawiera nazwę kolumny.
 
-*data*<br/>
-[in] Wskaźnik do danych ciągu, są zapisywane w określonej kolumnie.
+*Data*<br/>
+podczas Wskaźnik do danych ciągu, który ma zostać zapisany w określonej kolumnie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wartości ciągu, do którego można ustawić określonej kolumny. Wartość jest typu `BaseType`, który będzie stanowić **CHAR** lub **WCHAR** w zależności od tego, czy _UNICODE zdefiniowano, czy nie.
+Wskaźnik do wartości ciągu, do której ma zostać ustawiona określona kolumna. Wartość jest typu `BaseType`, która będzie równa **char** lub **WCHAR** , w zależności od tego, czy _UNICODE jest zdefiniowany, czy nie.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugi Zastąp formularz przyjmuje nazwę kolumny jako ciąg ANSI i trzeci Zastąp formularz przyjmuje nazwę kolumny jako ciąg Unicode.
+Drugi formularz przesłonięcia przyjmuje nazwę kolumny jako ciąg ANSI, a trzeci formularz przesłonięcia przyjmuje nazwę kolumny jako ciąg Unicode.
 
-Jeśli _SECURE_ATL jest zdefiniowana ma wartość różną od zera, jeśli zostanie wygenerowany błąd asercji czasu wykonywania dane wejściowe *danych* ciąg jest dłuższy niż maksymalna dopuszczalna długość kolumny danych występujące w odwołaniu. W przeciwnym razie ciąg wejściowy zostanie obcięty, jeśli przekracza maksymalną dozwoloną długość.
+Jeśli _SECURE_ATL jest zdefiniowany jako mające wartość różną od zera, zostanie wygenerowany błąd potwierdzenia środowiska uruchomieniowego, jeśli ciąg *danych* wejściowych będzie dłuższy niż maksymalna dozwolona długość kolumny danych, której dotyczy odwołanie. W przeciwnym razie ciąg wejściowy zostanie obcięty, jeśli przekracza maksymalną dozwoloną długość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

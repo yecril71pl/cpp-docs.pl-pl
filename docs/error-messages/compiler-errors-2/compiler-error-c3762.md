@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3762
 ms.assetid: b79b6506-2cea-44a0-855a-5fdcb9fd7ad9
-ms.openlocfilehash: 108d0ae2e864ee569d8a1138d057bbc7d310229f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af6894b72fe66bff9dca1a8dd6b67f4e3751705f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165850"
 ---
 # <a name="compiler-error-c3762"></a>Błąd kompilatora C3762
 
-Nie można przetworzyć atrybutu "attribute"
+nie można przetworzyć atrybutu "Attribute"
 
-Atrybut zdefiniowanych przez użytkownika, który dziedziczy z `System.Security.Permissions.SecurityAttribute` jest używany do definiowania atrybutu zabezpieczeń. Takiego atrybutu nie można użyć tego samego zestawu, w którym jest zdefiniowana.
+Zdefiniowany przez użytkownika atrybut, który dziedziczy po `System.Security.Permissions.SecurityAttribute` jest używany do definiowania atrybutu zabezpieczeń. Takiego atrybutu nie można używać w tym samym zestawie, w którym jest zdefiniowany.

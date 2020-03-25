@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215283"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -24,18 +24,18 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-*Elem* \
+*Elem*\
 Typ elementu dwubajtowego.
 
-*Maxcode* \
+*Maxcode*\
 Maksymalna liczba znaków dla zestawu reguł ustawień regionalnych.
 
-@No__t_1 *trybu*
+\ *trybu*
 Informacje o konfiguracji zestawu reguł ustawień regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten szablon klasy wykonuje konwersję między znakami dwubajtowymi zakodowanymi jako UCS-2 lub UCS-4 i zakodowaną strumieniowo jako UTF-16LE, jeśli tryb & LITTLE_ENDIAN lub UTF-16BE w inny sposób.
+Ten szablon klasy wykonuje konwersję między znakami dwubajtowymi zakodowanymi jako UCS-2 lub UCS-4 i zakodowaną strumieniowo jako UTF-16LE, jeśli tryb & little_endian lub UTF-16BE w inny sposób.
 
 Strumień bajtów powinien być zapisany w pliku binarnym; może być uszkodzona, jeśli Zapisano w pliku tekstowym.
 

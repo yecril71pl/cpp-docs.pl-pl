@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214230"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance — Funkcja
 
-Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.
+Rejestruje i Pobiera wystąpienie określonego typu zdefiniowane w określonym IDENTYFIKATORze klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,25 +31,25 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ, aby aktywować.
+*&*<br/>
+Typ do uaktywnienia.
 
-*activatableClassId*<br/>
-Nazwa Identyfikatora klasy, który definiuje parametru *T*.
+*Wpisy*<br/>
+Nazwa identyfikatora klasy, który definiuje parametr *T*.
 
-*instance*<br/>
-Po zakończeniu tej operacji, odwołanie do wystąpienia *T*.
+*np*<br/>
+Po zakończeniu tej operacji odwołanie do wystąpienia *T*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę błędu.
+S_OK, jeśli się to powiedzie; w przeciwnym razie błąd HRESULT, który wskazuje przyczynę błędu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Windows::Foundation
+**Przestrzeń nazw:** Windows:: Foundation
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Windows::Foundation, przestrzeń nazw](windows-foundation-namespace.md)

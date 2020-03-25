@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398244"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213892"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,9 +26,9 @@ struct ImplementsBase;
 
 ## <a name="remarks"></a>Uwagi
 
-Służy do sprawdzania typów parametrów szablonu w [Implements — struktura](implements-structure.md).
+Służy do sprawdzania poprawności typów parametrów szablonu w [strukturze implementującej](implements-structure.md).
 
-**Implementsbase —** struktura jest pusta, zgodnie z projektem.
+Struktura **ImplementsBase —** jest pusta przez konstrukcję.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -36,10 +36,10 @@ Służy do sprawdzania typów parametrów szablonu w [Implements — struktura](
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

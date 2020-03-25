@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4986
 ms.assetid: a3a7b008-29dd-4203-85f3-7740ab6790bb
-ms.openlocfilehash: fb52e33ceeadda03105e391d8e0b5b3f6234d6b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df6fc88ffe98dd2b4a3129800c7881f26d4f625b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280597"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164823"
 ---
 # <a name="compiler-warning-c4986"></a>Ostrzeżenie kompilatora C4986
 
-'Funkcja': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
+"Function": Specyfikacja wyjątku nie jest zgodna z poprzednią deklaracją
 
-To ostrzeżenie mogą być generowane po specyfikacji wyjątku w jednej deklaracji, a nie drugą.
+To ostrzeżenie można wygenerować, gdy istnieje Specyfikacja wyjątku w jednej deklaracji, a nie druga.
 
-Domyślnie C4986 jest wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Domyślnie C4986 jest wyłączona. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4986.
+Poniższy przykład generuje C4986.
 
 ```cpp
 class X { };

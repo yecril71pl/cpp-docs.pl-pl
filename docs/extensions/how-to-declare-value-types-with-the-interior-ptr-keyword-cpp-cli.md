@@ -1,30 +1,30 @@
 ---
-title: 'Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++sposób niezamierzony)'
+title: 'Poradnik: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172285"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Instrukcje: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++sposób niezamierzony)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Poradnik: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)
 
-**Pomocą interior_ptr** może być używany z typem wartości.
+**Interior_ptr** może być używana z typem wartości.
 
 > [!IMPORTANT]
-> Tej funkcji języka jest obsługiwana przez `/clr` — opcja kompilatora, ale nie za `/ZW` — opcja kompilatora.
+> Ta funkcja języka jest obsługiwana przez opcję kompilatora `/clr`, ale nie za pomocą opcji kompilatora `/ZW`.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Następujące C++/interfejsu wiersza polecenia przykład pokazuje, jak używać **pomocą interior_ptr** z typem wartości.
+Poniższy C++przykład/CLI pokazuje, jak używać **interior_ptr** z typem wartości.
 
 ### <a name="code"></a>Kod
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>Opis
 
-Utworzenie typu wartości **to** wskaźnika, daje w wyniku pomocą interior_ptr.
+W typie wartości wskaźnik **ten** jest obliczany do interior_ptr.
 
-W treści niestatycznej funkcji składowej typu wartości `V`, **to** to wyrażenie typu `interior_ptr<V>` którego wartość jest adres obiektu, dla której wywołano tę funkcję.
+W treści niestatycznej funkcji składowej typu wartości `V`jest **to** wyrażenie typu `interior_ptr<V>` którego wartość jest adresem obiektu, dla którego wywoływana jest funkcja.
 
 ### <a name="code"></a>Kod
 
@@ -91,9 +91,9 @@ value struct V {
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład pokazuje sposób użycia operatora address-of przy użyciu statycznych elementów członkowskich.
+Poniższy przykład pokazuje, jak używać operatora address-of ze statycznymi składowymi.
 
-Adres statyczny element członkowski typu Visual C++ daje wskaźnik natywny.  Adres elementu członkowskiego typu wartości statycznej jest wskaźnika zarządzanych, ponieważ składowa typu wartości jest przydzielony na stosie uruchomieniowym i mogą być przenoszone przez moduł odśmiecania pamięci.
+Adres statycznego elementu członkowskiego C++ typu wizualizacji daje wskaźnik natywny.  Adres elementu członkowskiego typu wartości statycznej jest wskaźnikiem zarządzanym, ponieważ element członkowski typu wartości jest przypisywany na stercie środowiska uruchomieniowego i może być przenoszony przez moduł zbierający elementy bezużyteczne.
 
 ### <a name="code"></a>Kod
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

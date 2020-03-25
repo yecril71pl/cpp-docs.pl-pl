@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501768"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214919"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -34,7 +34,7 @@ Atrybut **cpp_quote** C++ jest przydatny, jeśli chcesz umieścić dyrektywę pr
 
 Można również użyć **cpp_quote** i wygenerować plik h jako część kompilacji MIDL. Na przykład, jeśli masz plik C++ nagłówka, który używa C++ atrybutów IDL, ale nie można użyć tego pliku do pewnego zadania, można skompilować go w celu utworzenia pliku MIDL. h, który powinien być w stanie używać.
 
-**Cpp_quote —** atrybut ma taką samą funkcjonalność jak [cpp_quote —](/windows/win32/Midl/cpp-quote) atrybutów w MIDL.
+Atrybut **cpp_quote** ma taką samą funkcjonalność jak atrybut [cpp_quote](/windows/win32/Midl/cpp-quote) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -48,12 +48,12 @@ Zobacz przykład dla [podwójnego](dual.md) przykładu użycia **cpp_quote**.
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)

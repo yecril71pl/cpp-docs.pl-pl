@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3813
 ms.assetid: ffdbc489-71bf-4cd6-988c-f824c9ab3ceb
-ms.openlocfilehash: 302b21d709424cda50abd0247f7b82048511cd73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c16ce501e25040a7ac7672a9ea131b4fe89570f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165616"
 ---
 # <a name="compiler-error-c3813"></a>Błąd kompilatora C3813
 
-Deklaracja właściwości może wystąpić tylko wewnątrz definicji zarządzanej lub typu WinRT
+Deklaracja właściwości może wystąpić tylko w definicji typu zarządzanego lub WinRT
 
-A [właściwości](../../dotnet/how-to-use-properties-in-cpp-cli.md) mogą być deklarowane tylko w zarządzanej lub Windows Runtime typu. Typy natywne nie obsługują `property` — słowo kluczowe.
+[Właściwość](../../dotnet/how-to-use-properties-in-cpp-cli.md) może być zadeklarowana tylko w typie zarządzanym lub środowisko wykonawcze systemu Windows. Typy natywne nie obsługują słowa kluczowego `property`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3813 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C3813 i pokazuje, jak to naprawić:
 
 ```cpp
 // C3813.cpp

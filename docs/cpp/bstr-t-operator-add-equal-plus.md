@@ -8,18 +8,18 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-ms.openlocfilehash: 0a2c374fc160a0575e0a17cc85ab51c65fa9392a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9eddca85d66f4978e1b33299ca655cd880cf45e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181151"
 ---
-# <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
+# <a name="_bstr_toperator--"></a>_bstr_t::operator +=, +
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Dołącza znaki do końca `_bstr_t` obiektu lub łączy dwa ciągi.
+Dołącza znaki do końca obiektu `_bstr_t` lub łączy dwa ciągi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,29 +32,29 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 
 #### <a name="parameters"></a>Parametry
 
-*s1*<br/>
-Element `_bstr_t` obiektu.
+*S2*<br/>
+Obiekt `_bstr_t`.
 
-*s2*<br/>
-Ciąg znaków wielobajtowych.
+*S2*<br/>
+Ciąg wielobajtowy.
 
-*s3*<br/>
+*S3*<br/>
 Ciąg Unicode.
 
 ## <a name="remarks"></a>Uwagi
 
-Te operatory wykonaj ciągów:
+Te operatory wykonują łączenie ciągów:
 
-- **+= — Operator (***s1***)** dołącza znaki w zhermetyzowany `BSTR` z *s1* na końcu tego obiektu zhermetyzowany`BSTR`.
+- **operator + = (**  *S1*  **)** Dołącza znaki w hermetyzowanej `BSTR` z *S1* do końca `BSTR`hermetyzowane tego obiektu.
 
-- **Operator + (***s1***)** zwraca nową `_bstr_t` , jest tworzona przez złączenie tego obiektu `BSTR` z tymi, które *s1*.
+- **operator + (**  *S1*  **)** Zwraca nowy `_bstr_t`, który jest tworzony przez złączenie `BSTR` tego obiektu z elementem *S1*.
 
-- **Operator + (***s2***&#124;***s1***)** zwraca nowy `_bstr_t` , jest tworzona przez złączenie ciąg znaków wielobajtowych *s2*, przekonwertowane na format Unicode, za pomocą `BSTR` hermetyzowane w *s1*.
+- **operator + (**  *S2*  **&#124;**  *S1*  **)** Zwraca nowy `_bstr_t`, który jest tworzony przez złączenie ciągu wielobajtowego *S2*, przekonwertowane na Unicode, z `BSTR` hermetyzowane w *S1*.
 
-- **Operator + (***s3* **,***s1***)** zwraca nowy `_bstr_t` , jest tworzona przez złączenie ciąg Unicode *s3* z `BSTR` hermetyzowane w *s1*.
+- **operator + (**  *S3* **,**  *S1*  **)** Zwraca nowy `_bstr_t`, który jest tworzony przez połączenie ciągu Unicode *S3* z `BSTR` hermetyzowane w *S1*.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_bstr_t, klasa](../cpp/bstr-t-class.md)

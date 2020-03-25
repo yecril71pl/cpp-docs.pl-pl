@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273565"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204792"
 ---
 # <a name="fatal-error-c1010"></a>Błąd krytyczny C1010
 
@@ -37,16 +37,16 @@ Aby wyłączyć użycie prekompilowanego nagłówka w projekcie, wykonaj następ
 
 1. Z listy rozwijanej **Konfiguracja** wybierz pozycję **wszystkie konfiguracje**.
 
-1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **prekompilowane nagłówki** .
+1. Wybierz **Właściwości konfiguracji** > stronie właściwości **prekompilowane nagłówki** **C/C++**  > .
 
 1. Na liście właściwości wybierz listę rozwijaną dla właściwości **prekompilowanego nagłówka** , a następnie wybierz opcję **nie używa prekompilowanych nagłówków**. Wybierz **przycisk OK** , aby zapisać zmiany.
 
 1. W oknie **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy plik źródłowy *PCH. cpp* w projekcie. (W starszych projektach plik może mieć nazwę *stdafx. cpp*). Wybierz opcję **Wyklucz z projektu** , aby usunąć go z kompilacji.
 
-1. Użyj polecenia menu **Kompiluj** > **czyste rozwiązanie** dla każdej kompilacji, którą tworzysz, aby usunąć wszystkie pliki *Project_Name. PCH* z pośrednich katalogów kompilacji.
+1. Użyj menu **kompiluj** > **Wyczyść rozwiązanie** dla każdej kompilacji, którą tworzysz, aby usunąć wszystkie pliki *Project_Name. PCH* z pośrednich katalogów kompilacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wstępnie skompilowane pliki nagłówkowe](../../build/creating-precompiled-header-files.md)\
+[Prekompilowane pliki nagłówkowe](../../build/creating-precompiled-header-files.md)\
 [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md)\
 [/Yu (Użyj prekompilowanego pliku nagłówkowego)](../../build/reference/yu-use-precompiled-header-file.md)

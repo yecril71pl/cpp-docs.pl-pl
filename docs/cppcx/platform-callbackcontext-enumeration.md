@@ -1,5 +1,5 @@
 ---
-title: Platform::CallbackContext, wyliczenie
+title: 'Platform:: CallbackContext, Wyliczenie'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161683"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214282"
 ---
-# <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext, wyliczenie
+# <a name="platformcallbackcontext-enumeration"></a>Platform:: CallbackContext, Wyliczenie
 
-Określa kontekst wątku, w którym wykonuje funkcję wywołania zwrotnego (program obsługi zdarzeń).
+Określa kontekst wątku, w którym jest wykonywana funkcja wywołania zwrotnego (procedura obsługi zdarzeń).
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,19 +24,19 @@ Określa kontekst wątku, w którym wykonuje funkcję wywołania zwrotnego (prog
 enum class CallbackContext {};
 ```
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
 |Kod typu|Opis|
 |---------------|-----------------|
-|Dowolne|Funkcja wywołania zwrotnego można wykonywać w dowolnym kontekście wątku.|
-|Ten sam|Funkcja wywołania zwrotnego można wykonać w kontekście wątku, który uruchomił operację asynchroniczną.|
+|Dowolne|Funkcja wywołania zwrotnego można wykonać w dowolnym kontekście wątku.|
+|Ten|Funkcja wywołania zwrotnego można wykonać tylko w kontekście wątku, w którym uruchomiono operację asynchroniczną.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd

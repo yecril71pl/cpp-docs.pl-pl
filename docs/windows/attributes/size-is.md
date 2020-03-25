@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166253"
 ---
 # <a name="size_is"></a>size_is
 
@@ -25,16 +25,16 @@ Określ rozmiar pamięci przydzieloną dla wskaźników rozmiaru, wskaźniki roz
 
 ### <a name="parameters"></a>Parametry
 
-*expression*<br/>
+*wyrażenia*<br/>
 Rozmiar pamięci przydzieloną dla wskaźników rozmiaru.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **size_is** C++ ma takie same funkcje jak atrybut [size_is](/windows/win32/Midl/size-is) MIDL.
+Atrybut **size_is** C++ ma taką samą funkcjonalność jak atrybut [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [first_is](first-is.md) , aby uzyskać przykład sposobu określania sekcji tablicy.
+Zapoznaj się z przykładem [first_is](first-is.md) , aby uzyskać przykład sposobu określania sekcji tablicy.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -44,12 +44,12 @@ Zobacz przykład dla [first_is](first-is.md) , aby uzyskać przykład sposobu ok
 |-|-|
 |**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|`max_is`|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

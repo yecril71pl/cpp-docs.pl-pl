@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211045"
 ---
 # <a name="cxmlaccessor-class"></a>Klasa CXMLAccessor
 
-Umożliwia dostęp do źródła danych jako dane ciągu, jeśli masz nie znajomości schematu magazynu danych (wewnętrzna struktura).
+Pozwala uzyskać dostęp do źródeł danych jako dane ciągu, gdy nie masz informacji o schemacie magazynu danych (struktura bazowa).
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,32 +39,32 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: atldbcli.h
+**Nagłówek**: atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[GetXMLColumnData](#getxmlcolumndata)|Pobiera informacje o kolumnach.|
+|[GetXMLColumnData](#getxmlcolumndata)|Pobiera informacje o kolumnie.|
 |[GetXMLRowData](#getxmlrowdata)|Pobiera całą zawartość tabeli według wierszy.|
 
 ## <a name="remarks"></a>Uwagi
 
-Jednak `CXMLAccessor` różni się od `CDynamicStringAccessorW` , konwertuje wszystkie dane używane z magazynu danych jako danych (oznakowany) w formacie XML. Jest to szczególnie przydatne dla danych wyjściowych do stron sieci Web XML-aware. Nazwy tagów XML w możliwie najlepszy sposób będą zgodne nazwy kolumn w magazynie danych.
+Jednak `CXMLAccessor` różni się od `CDynamicStringAccessorW` w tym, że konwertuje wszystkie dane, do których uzyskano dostęp z magazynu danych jako dane sformatowane w formacie XML (oznakowane). Jest to szczególnie przydatne w przypadku danych wyjściowych na stronach sieci Web obsługujących język XML. Nazwy tagów XML będą zgodne z nazwami kolumn magazynu danych tak blisko jak to możliwe.
 
-Użyj `CDynamicAccessor` metody, aby uzyskać informacje o kolumnach. Informacje o kolumnie umożliwia dynamiczne tworzenie metody dostępu w czasie wykonywania.
+Użyj metod `CDynamicAccessor`, aby uzyskać informacje o kolumnie. Te informacje o kolumnie służą do dynamicznego tworzenia akcesora w czasie wykonywania.
 
-Informacje o kolumnach są przechowywane w buforze tworzone i zarządzane przez tę klasę. Uzyskaj informacje przy użyciu kolumny [getxmlcolumndata —](#getxmlcolumndata) lub uzyskania kolumny danych według wierszy przy użyciu [getxmlrowdata —](#getxmlrowdata).
+Informacje o kolumnie są przechowywane w buforze utworzonym i zarządzanym przez tę klasę. Uzyskiwanie informacji o kolumnach przy użyciu [GetXMLColumnData](#getxmlcolumndata) lub uzyskiwanie danych z kolumn przez wiersze przy użyciu [GetXMLRowData](#getxmlrowdata).
 
 ## <a name="example"></a>Przykład
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor:: GetXMLColumnData
 
-Pobiera informacje o typie kolumny tabeli jako ciąg w formacie XML danych, według kolumny.
+Pobiera informacje o typie kolumny tabeli jako dane ciągu sformatowane w formacie XML według kolumny.
 
 ### <a name="syntax"></a>Składnia
 
@@ -75,15 +75,15 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 #### <a name="parameters"></a>Parametry
 
 *strOutput*<br/>
-[out] Odwołanie do buforu ciągu zawierający informacje o typie kolumny mają zostać pobrane. Ten ciąg jest formatowana przy użyciu nazwy tagów XML i być zgodne z nazwami kolumn magazynu danych.
+określoną Odwołanie do buforu ciągu zawierającego informacje o typie kolumny do pobrania. Ciąg jest sformatowany przy użyciu nazw tagów XML, które pasują do nazw kolumn magazynu danych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Poniżej przedstawiono, jak informacje o typie kolumny jest sformatowany w języku XML. `type` Określa typ danych kolumny. Należy pamiętać, że typy danych są oparte na typach danych OLE DB, wyklucza te bazy danych, do którego uzyskiwany jest dostęp.
+Poniżej przedstawiono sposób formatowania informacji o typie kolumny w formacie XML. `type` określa typ danych kolumny. Należy pamiętać, że typy danych są oparte na typach danych OLE DB, a nie w przypadku uzyskiwania dostępu do bazy danych.
 
 `<columninfo>`
 
@@ -91,9 +91,9 @@ Poniżej przedstawiono, jak informacje o typie kolumny jest sformatowany w języ
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor:: GetXMLRowData
 
-Pobiera całą zawartość tabeli jako dane ciągu w formacie XML, po wierszu.
+Pobiera całą zawartość tabeli jako dane ciągu w formacie XML według wiersza.
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,18 +105,18 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 #### <a name="parameters"></a>Parametry
 
 *strOutput*<br/>
-[out] Odwołanie do buforu, zawierająca dane tabeli, które mają zostać pobrane. Dane są sformatowane jako ciąg danych przy użyciu nazwy tagów XML i być zgodne z nazwami kolumn magazynu danych.
+określoną Odwołanie do buforu zawierającego dane tabeli do pobrania. Dane są formatowane jako dane ciągu z nazwami tagów XML, które pasują do nazw kolumn magazynu danych.
 
 *bAppend*<br/>
-[in] Wartość logiczna określająca, czy dołączyć ciąg na końcu danych wyjściowych.
+podczas Wartość logiczna określająca, czy dołączać ciąg na końcu danych wyjściowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Na poniższym obrazie przedstawiono sposób formatowania danych wierszy w formacie XML. `DATA` poniżej reprezentuje wiersz danych. Użyj opcji move metody, aby przejść do żądanego wiersza.
+Poniżej pokazano, jak dane wiersza są formatowane w formacie XML. `DATA` poniżej reprezentuje dane wiersza. Użyj metody Move, aby przejść do żądanego wiersza.
 
 `<row>`
 
@@ -124,9 +124,9 @@ Na poniższym obrazie przedstawiono sposób formatowania danych wierszy w formac
 
 `</row>`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>

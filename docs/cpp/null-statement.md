@@ -6,20 +6,20 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
-ms.openlocfilehash: 2797937b184bebe0e29f8e5eae428f601c824811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167a1e579c15fd59da1979efd9aa979184318115
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177810"
 ---
 # <a name="null-statement"></a>Instrukcja o wartości Null
 
-"Instrukcja o wartości null" jest za pomocą instrukcji wyrażenia *wyrażenie* Brak. Jest to przydatne, gdy składni języka wywołuje dla instrukcji, ale nie Obliczanie wyrażenia. Składa się z średnikiem.
+"Instrukcja o wartości null" jest instrukcją wyrażenia z brakującym *wyrażeniem* . Jest przydatne, gdy składnia języka wywołuje instrukcję, ale nie ma oceny wyrażenia. Składa się z średnika.
 
-Instrukcji o wartości null są często używane jako symbole zastępcze w wywołaniach iteracja — instrukcje lub instrukcji, na którym ma zostać umieszczony etykiet na końcu instrukcji złożonej lub funkcji.
+Instrukcje o wartości null są często używane jako symbole zastępcze w instrukcjach iteracji lub jako instrukcje umieszczania etykiet na końcu złożonych instrukcji lub funkcji.
 
-Poniższy fragment kodu pokazuje, jak skopiować jednego ciągu do innego i dołącza instrukcja o wartości null:
+Poniższy fragment kodu przedstawia sposób kopiowania jednego ciągu do innego i zawiera instrukcję o wartości null:
 
 ```cpp
 // null_statement.cpp
@@ -41,6 +41,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcja wyrażeń](../cpp/expression-statement.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: dbcc4a86731bba092d8358a046fd3f9eb949f91f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150606"
+ms.locfileid: "80214971"
 ---
 # <a name="ltstringgt-functions"></a>&lt;funkcje&gt; ciągu
 
@@ -52,70 +52,70 @@ Wyodrębnij ciągi ze strumienia wejściowego w wierszu.
 // (1) delimiter as parameter
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    CharType delim);
+    CharType delimiter);
 
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>&& is,
+    basic_istream<CharType, Traits>&& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    const CharType delim);
+    const CharType delimiter);
 
 // (2) default delimiter used
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str);
 
 template <class Allocator, class Traits, class Allocator>
 basic_istream<Allocator, Traits>& getline(
-    basic_istream<Allocator, Traits>&& is,
+    basic_istream<Allocator, Traits>&& in_stream,
     basic_string<Allocator, Traits, Allocator>& str);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*jest*\
+*in_stream*\
 Strumień wejściowy, z którego ma zostać wyodrębniony ciąg.
 
 *str*\
 Ciąg, w którym są odczytywane znaki ze strumienia wejściowego.
 
-*delim*\
+\ *ogranicznika*
 Ogranicznik wiersza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień wejściowy *to*.
+Strumień wejściowy *in_stream*.
 
 ### <a name="remarks"></a>Uwagi
 
-Para sygnatur funkcji oznaczona `(1)` Wyodrębnij znaki z *jest* do momentu znalezienia *delim* , przechowywanie ich w *str*.
+Para sygnatur funkcji oznaczona `(1)` Wyodrębnij znaki z *in_stream* do momentu znalezienia *ogranicznika* , przechowując je w *str*.
 
-Para sygnatur funkcji oznaczona `(2)` używać nowego wiersza jako ogranicznika linii domyślnej i zachowuje się jak **getline**(`is`, `str``is`. `widen`("`\n`").
+Para sygnatur funkcji oznaczona `(2)` Użyj nowego wiersza jako domyślnego ogranicznika linii i zachowuje się jako `getline(in_stream, str, in_stream. widen('\n'))`.
 
 Druga funkcja każdej pary jest analogiczna do pierwszej z nich do obsługi [odwołań rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
 Ekstrakcja zostaje zatrzymana, gdy wystąpi jedno z następujących wystąpień:
 
-- Na końcu pliku, w którym przypadku Flaga stanu wewnętrznego *jest* ustawiona na `ios_base::eofbit`.
+- Na końcu pliku, w którym przypadku Flaga stanu wewnętrznego *in_stream* jest ustawiona na `ios_base::eofbit`.
 
-- Po wyodrębnieniu elementu, który porównuje wartość równą `delim`, w takim przypadku element nie jest umieszczany ani dołączany do kontrolowanej sekwencji.
+- Po wyodrębnieniu elementu, który porównuje równe *ogranicznika*. Element nie jest umieszczany lub dołączany do kontrolowanej sekwencji.
 
-- Gdy funkcja wyodrębnia `str.`elementy [max_size](../standard-library/basic-string-class.md#max_size) , w tym przypadku Flaga stanu wewnętrznego *jest* ustawiona na `ios_base::failbit`.
+- Po wyodrębnieniu przez funkcję `str.`elementów [max_size](../standard-library/basic-string-class.md#max_size) . Flaga stanu wewnętrznego *in_stream* jest ustawiona na `ios_base::failbit`.
 
-- Inne błędy inne niż wymienione wcześniej, w tym przypadku Flaga stanu wewnętrznego *jest* ustawiona na `ios_base::badbit`
+- Inne błędy inne niż wymienione wcześniej; Flaga stanu wewnętrznego *in_stream* jest ustawiona na `ios_base::badbit`.
 
 Aby uzyskać informacje na temat flag stanu wewnętrznego, zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate).
 
-Jeśli funkcja nie wyodrębnia żadnych elementów, Flaga stanu wewnętrznego *jest* ustawiona na `ios_base::failbit`. W każdym przypadku *`getline` zwraca wartość*.
+Jeśli funkcja nie wyodrębnia żadnych elementów, Flaga stanu wewnętrznego *in_stream* jest ustawiona na `ios_base::failbit`. W każdym przypadku `getline` zwraca *in_stream*.
 
-Jeśli wyjątek jest zgłaszany, a i *str* , *jest* pozostawiony w prawidłowym stanie.
+Jeśli wyjątek jest zgłaszany, *in_stream* i *str* są pozostawione w prawidłowym stanie.
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod ilustruje `getline()` w dwóch trybach: najpierw z Domyślnym ogranicznikiem (nowy wiersz) i drugim z odstępem jako ogranicznikiem. Znak końca pliku (CTRL-Z na klawiaturze) służy do sterowania przerwaniem pętli while. Ustawia flagę stanu wewnętrznego `cin` na `eofbit`, która musi zostać wyczyszczona z [basic_ios:: Clear ()](../standard-library/basic-ios-class.md#clear) przed sekundą, gdy pętla będzie działać prawidłowo.
+Poniższy kod ilustruje `getline()` w dwóch trybach: najpierw z Domyślnym ogranicznikiem (nowy wiersz) i drugim z odstępem jako ogranicznikiem. Znak końca pliku (CTRL-Z na klawiaturze) służy do sterowania przerwaniem pętli while. Ta wartość ustawia flagę stanu wewnętrznego `cin` na `eofbit`, która musi zostać wyczyszczona z [basic_ios:: Clear ()](../standard-library/basic-ios-class.md#clear) przed sekundą, gdy pętla będzie działać prawidłowo.
 
 ```cpp
 // compile with: /EHsc /W4
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="stod"></a><a name="stod"></a>stod
 
-Konwertuje sekwencję znaków na wartość typu **Double**.
+Konwertuje sekwencję znaków na **`double`** .
 
 ```cpp
 double stod(
@@ -173,18 +173,19 @@ double stod(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **podwójnej precyzji** .
+Wartość **`double`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **Double** jako IF, wywołując `strtod( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`double`** jak if, wywołując `strtod( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stof"></a><a name="stof"></a>stof
 
@@ -202,18 +203,19 @@ float stof(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zmiennoprzecinkowa.
+Wartość **`float`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **float** jako IF, wywołując `strtof( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`float`** jak if, wywołując `strtof( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stoi"></a><a name="stoi"></a>stoi
 
@@ -237,23 +239,26 @@ Wartość całkowita.
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Zawiera indeks pierwszego nieskonwertowanego znaku w zwracaniu.|
-|*base*|Podstawa numeru, która ma zostać użyta.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
+
+\ *podstawowe*
+Podstawa numeru, która ma zostać użyta.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `stoi` konwertuje sekwencję znaków w *str* na wartość typu **int** i zwraca wartość. Na przykład, gdy przeszedł sekwencję znaków "10", wartość zwracana przez `stoi` jest liczbą całkowitą 10.
+Funkcja `stoi` konwertuje sekwencję znaków w *str* na wartość typu **`int`** i zwraca wartość. Na przykład, gdy przeszedł sekwencję znaków "10", wartość zwracana przez `stoi` jest liczbą całkowitą 10.
 
 `stoi` zachowuje się podobnie do `strtol` funkcji dla znaków jednobajtowych, gdy jest wywoływana w sposób `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji; lub `wcstol` dla szerokich znaków, gdy jest wywoływana w podobny sposób, `wcstol(Str.c_str(), _Eptr, idx)`. Aby uzyskać więcej informacji, zobacz [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
 
-Jeśli `str.c_str() == *_Eptr`, `stoi` zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`lub jeśli zwracana wartość nie może być reprezentowana jako obiekt typu **int**, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr - str.c_str()` w `*idx`.
+Jeśli `str.c_str() == *_Eptr`, `stoi` zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, lub jeśli zwracana wartość nie może być reprezentowana jako obiekt typu **`int`** , zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr - str.c_str()` w `*idx`.
 
 ## <a name="stol"></a><a name="stol"></a>stol
 
-Konwertuje sekwencję znaków na wartość typu **Long**.
+Konwertuje sekwencję znaków na **`long`** .
 
 ```cpp
 long stol(
@@ -269,11 +274,14 @@ long stol(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
-|*base*|Podstawa numeru, która ma zostać użyta.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
+
+\ *podstawowe*
+Podstawa numeru, która ma zostać użyta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -281,11 +289,11 @@ Wartość Long-Integer.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **Long** as IF, wywołując `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`long`** jak if, wywołując `strtol( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stold"></a><a name="stold"></a>stold
 
-Konwertuje sekwencję znaków na wartość typu **Long Double**.
+Konwertuje sekwencję znaków na **`long double`** .
 
 ```cpp
 double stold(
@@ -299,22 +307,23 @@ double stold(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **Long Double** .
+Wartość **`long double`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **Long Double** jako IF, wywołując `strtold( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`long double`** jak if, wywołując `strtold( str.c_str(), _Eptr)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stoll"></a><a name="stoll"></a>stoll
 
-Konwertuje sekwencję znaków na **długą długą**.
+Konwertuje sekwencję znaków na **`long long`** .
 
 ```cpp
 long long stoll(
@@ -330,19 +339,22 @@ long long stoll(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
-|*base*|Podstawa numeru, która ma zostać użyta.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
+
+\ *podstawowe*
+Podstawa numeru, która ma zostać użyta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**Długa** wartość Long.
+Wartość **`long long`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **Long** Long as IF, wywołując `strtoll( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`long long`** jak if, wywołując `strtoll( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stoul"></a><a name="stoul"></a>stoul
 
@@ -362,11 +374,14 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
-|*base*|Podstawa numeru, która ma zostać użyta.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
+
+\ *podstawowe*
+Podstawa numeru, która ma zostać użyta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -374,11 +389,11 @@ Nieniepodpisana wartość Long-Integer.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* na wartość `val` typu **unsigned long** as IF, wywołując `strtoul( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`unsigned long`** jak if, wywołując `strtoul( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="stoull"></a><a name="stoull"></a>stoull
 
-Konwertuje sekwencję znaków na **unsigned long long**.
+Konwertuje sekwencję znaków na **`unsigned long long`** .
 
 ```cpp
 unsigned long long stoull(
@@ -394,19 +409,22 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*str*|Sekwencja znaków do przekonwertowania.|
-|*IDX*|Wartość indeksu pierwszego nieskonwertowanego znaku.|
-|*base*|Podstawa numeru, która ma zostać użyta.|
+*str*\
+Sekwencja znaków do przekonwertowania.
+
+*idx*\
+Wartość indeksu pierwszego nieskonwertowanego znaku.
+
+\ *podstawowe*
+Podstawa numeru, która ma zostać użyta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nieniepodpisana wartość **Long Long** .
+Wartość **`unsigned long long`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje sekwencję elementów w *str* do `val` wartości typu **unsigned long long** as IF, wywołując `strtoull( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr` generuje obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca `val`.
+Funkcja konwertuje sekwencję elementów w *str* na wartość typu **`unsigned long long`** jak if, wywołując `strtoull( str.c_str(), _Eptr, idx)`, gdzie `_Eptr` jest obiektem wewnętrznym dla funkcji. Jeśli `str.c_str() == *_Eptr`, zgłasza obiekt typu `invalid_argument`. Jeśli takie wywołanie ustawi `errno`, zgłasza obiekt typu `out_of_range`. W przeciwnym razie, jeśli *IDX* nie jest wskaźnikiem null, funkcja przechowuje `*_Eptr -  str.c_str()` w `*idx` i zwraca wartość.
 
 ## <a name="swap"></a><a name="swap"></a>wymiany
 
@@ -420,7 +438,7 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 ### <a name="parameters"></a>Parametry
 
 \ *lewo*
-Jeden ciąg, którego elementy mają zostać zamienione na inne ciągi.
+Jeden ciąg, którego elementy mają zostać zamienione na elementy innego ciągu.
 
 *prawa*\
 Inny ciąg, którego elementy mają zostać zamienione na pierwszy ciąg.
@@ -469,22 +487,21 @@ The basic_string s2 = Tweedledee.
 Konwertuje wartość na `string`.
 
 ```cpp
-string to_string(int Val);
-string to_string(unsigned int Val);
-string to_string(long Val);
-string to_string(unsigned long Val);
-string to_string(long long Val);
-string to_string(unsigned long long Val);
-string to_string(float Val);
-string to_string(double Val);
-string to_string(long double Val);
+string to_string(int value);
+string to_string(unsigned int value);
+string to_string(long value);
+string to_string(unsigned long value);
+string to_string(long long value);
+string to_string(unsigned long long value);
+string to_string(float value);
+string to_string(double value);
+string to_string(long double value);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Użyte*|Wartość do konwersji.|
+\ *wartości*
+Wartość do konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -492,23 +509,23 @@ string to_string(long double Val);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje wartość *Val* na sekwencję elementów przechowywanych w obiekcie array `Buf` wewnętrzna dla funkcji tak, jakby przez wywoływanie `sprintf(Buf, Fmt, Val)`, gdzie `Fmt` jest
+Funkcja konwertuje *wartość* na sekwencję elementów przechowywanych w obiekcie array, `Buf` wewnętrzna dla funkcji tak jak w przypadku wywoływania `sprintf(Buf, Fmt, value)`, gdzie `Fmt` jest
 
-- `"%d"`, jeśli `Val` ma typ **int**
+- `"%d"` Jeśli *wartość* jest typu **`int`**
 
-- `"%u"`, jeśli `Val` ma typ **int bez znaku**
+- `"%u"` Jeśli *wartość* jest typu **`unsigned int`**
 
-- `"%ld"`, jeśli `Val` ma typ **Long**
+- `"%ld"` Jeśli *wartość* jest typu **`long`**
 
-- `"%lu"`, jeśli `Val` ma typ **unsigned long**
+- `"%lu"` Jeśli *wartość* jest typu **`unsigned long`**
 
-- `"%lld"`, jeśli `Val` typu **Long** Long
+- `"%lld"` Jeśli *wartość* jest typu **`long long`**
 
-- `"%llu"`, jeśli `Val` ma typ **unsigned long long**
+- `"%llu"` Jeśli *wartość* jest typu **`unsigned long long`**
 
-- `"%f"`, jeśli `Val` ma typ **float** lub **Double**
+- `"%f"` Jeśli *wartość* jest typu **`float`** lub **`double`**
 
-- `"%Lf"`, jeśli `Val` ma typ **Long Double**
+- `"%Lf"` Jeśli *wartość* jest typu **`long double`**
 
 Funkcja zwraca `string(Buf)`.
 
@@ -517,22 +534,21 @@ Funkcja zwraca `string(Buf)`.
 Konwertuje wartość na ciąg znaków dwubajtowych.
 
 ```cpp
-wstring to_wstring(int Val);
-wstring to_wstring(unsigned int Val);
-wstring to_wstring(long Val);
-wstring to_wstring(unsigned long Val);
-wstring to_wstring(long long Val);
-wstring to_wstring(unsigned long long Val);
-wstring to_wstring(float Val);
-wstring to_wstring(double Val);
-wstring to_wstring(long double Val);
+wstring to_wstring(int value);
+wstring to_wstring(unsigned int value);
+wstring to_wstring(long value);
+wstring to_wstring(unsigned long value);
+wstring to_wstring(long long value);
+wstring to_wstring(unsigned long long value);
+wstring to_wstring(float value);
+wstring to_wstring(double value);
+wstring to_wstring(long double value);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|`Val`|Wartość do konwersji.|
+\ *wartości*
+Wartość do konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -540,23 +556,23 @@ Ciąg dwubajtowy, który reprezentuje wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja konwertuje `Val` na sekwencję elementów przechowywanych w obiekcie array `Buf` wewnętrzna dla funkcji tak, jakby przez wywoływanie `swprintf(Buf, Len, Fmt, Val)`, gdzie `Fmt` jest
+Funkcja konwertuje *wartość* na sekwencję elementów przechowywanych w obiekcie array, `Buf` wewnętrzna dla funkcji tak jak w przypadku wywoływania `swprintf(Buf, Len, Fmt, value)`, gdzie `Fmt` jest
 
-- `L"%d"`, jeśli `Val` ma typ **int**
+- `L"%d"` Jeśli *wartość* jest typu **`int`**
 
-- `L"%u"`, jeśli `Val` ma typ **int bez znaku**
+- `L"%u"` Jeśli *wartość* jest typu **`unsigned int`**
 
-- `L"%ld"`, jeśli `Val` ma typ **Long**
+- `L"%ld"` Jeśli *wartość* jest typu **`long`**
 
-- `L"%lu"`, jeśli `Val` ma typ **unsigned long**
+- `L"%lu"` Jeśli *wartość* jest typu **`unsigned long`**
 
-- `L"%lld"`, jeśli `Val` typu **Long** Long
+- `L"%lld"` Jeśli *wartość* jest typu **`long long`**
 
-- `L"%llu"`, jeśli `Val` ma typ **unsigned long long**
+- `L"%llu"` Jeśli *wartość* jest typu **`unsigned long long`**
 
-- `L"%f"`, jeśli `Val` ma typ **float** lub **Double**
+- `L"%f"` Jeśli *wartość* jest typu **`float`** lub **`double`**
 
-- `L"%Lf"`, jeśli `Val` ma typ **Long Double**
+- `L"%Lf"` Jeśli *wartość* jest typu **`long double`**
 
 Funkcja zwraca `wstring(Buf)`.
 

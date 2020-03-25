@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214542"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -25,7 +25,7 @@ Określa wyrażenie lub identyfikator działający jako discriminant Unii, któr
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **switch_is** C++ ma takie same funkcje jak atrybut [switch_is](/windows/win32/Midl/switch-is) MIDL.
+Atrybut **switch_is** C++ ma taką samą funkcjonalność jak atrybut [switch_is](/windows/win32/Midl/switch-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -39,12 +39,12 @@ Zobacz przykład [przypadku](case-cpp.md) przykładowego zastosowania **switch_i
 |-|-|
 |**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

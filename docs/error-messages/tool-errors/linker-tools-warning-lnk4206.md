@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395082"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193882"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>Ostrzeżenie LNK4206 narzędzi konsolidatora
 
-> informacje o wstępnie skompilowanym typie nie znaleziono; "*filename*" nie połączone lub zastąpione; skonsolidowany obiektu bez informacji debugowania
+> nie znaleziono wstępnie skompilowanych informacji o typie; *plik "filename*" nie jest połączony ani nadpisany; Łączenie obiektu bez informacji debugowania
 
-*Filename* skompilowane przy użyciu pliku obiektu [/Yc](../../build/reference/yc-create-precompiled-header-file.md), albo nie został określony w poleceniu łącze lub została zastąpiona.
+Plik obiektu *filename* , skompilowany za pomocą [/YC](../../build/reference/yc-create-precompiled-header-file.md), nie został określony w poleceniu linku lub został zastąpiony.
 
-Typowy scenariusz w przypadku tego ostrzeżenia jest .obj, który został skompilowany z parametrem/yc znajduje się w bibliotece i których nie odwołania do symboli do tego .obj w kodzie.  W takim przypadku konsolidator będzie nie używać (lub nawet zobaczysz) pliku .obj.  W takiej sytuacji należy ponownie skompilować kod i użyj [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) dla obiektów skompilowanych przy użyciu [/Yu](../../build/reference/yu-use-precompiled-header-file.md).
+Typowym scenariuszem tego ostrzeżenia jest to, że obiekt. obj, który został skompilowany za pomocą/YC, znajduje się w bibliotece i gdzie nie ma odwołań do symboli do tego elementu. obj z kodu.  W takim przypadku konsolidator nie będzie używać (lub nawet wyświetlania) pliku. obj.  W takiej sytuacji należy ponownie skompilować kod i użyć [/yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) dla obiektów kompilowanych przy użyciu [/Yu](../../build/reference/yu-use-precompiled-header-file.md).

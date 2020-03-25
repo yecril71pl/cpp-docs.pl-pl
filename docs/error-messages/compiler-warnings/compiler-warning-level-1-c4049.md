@@ -1,28 +1,28 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4049
+title: Ostrzeżenie kompilatora (poziom 1) C4049
 ms.date: 11/04/2016
 f1_keywords:
 - C4049
 helpviewer_keywords:
 - C4049
 ms.assetid: d11c1870-bcfc-4d71-8945-b87ec6ec3514
-ms.openlocfilehash: a4958bb446b5f7e80ef2eef92b52a0f86cf6a134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 214ccae5d9835bc4a3b66bbbe1cd5ded4bc651cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164147"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Kompilator ostrzeżenie (poziom 1) C4049
+# <a name="compiler-warning-level-1-c4049"></a>Ostrzeżenie kompilatora (poziom 1) C4049
 
-ograniczenie kompilatora: Kończenie emisji numeru wiersza
+ograniczenie kompilatora: Trwa kończenie emisji numeru wiersza
 
-Ten plik zawiera więcej niż 16 777 215 (2<sup>24</sup>-1) źródła wierszy. Kompilator zatrzymuje numerowanie od 16 777 215.
+Plik zawiera więcej niż 16 777 215<sup>(2)</sup>wierszy źródłowych. Kompilator przerywa numerowanie o 16 777 215.
 
 Dla kodu po wierszu 16 777 215:
 
-- Obraz, który będzie zawierać informacji debugowania dla numerów wierszy.
+- Obraz nie będzie zawierał żadnych informacji debugowania dla numerów wierszy.
 
-- Niektóre funkcje diagnostyczne mogą być zgłaszane z numerami wierszy niepoprawne.
+- Niektóre funkcje diagnostyczne mogą być zgłaszane z nieprawidłowymi numerami wierszy.
 
-- oferty .asm (/ FAs) mogą mieć nieprawidłowe numery.
+- listy. asm (/FAs) mogą mieć niepoprawne numery wierszy.

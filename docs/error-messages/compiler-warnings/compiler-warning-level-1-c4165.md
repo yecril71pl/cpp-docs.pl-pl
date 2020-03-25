@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4165
+title: Ostrzeżenie kompilatora (poziom 1) C4165
 ms.date: 11/04/2016
 f1_keywords:
 - C4165
 helpviewer_keywords:
 - C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-ms.openlocfilehash: 4d6377730e262efafb38f5e714989e9075a77a04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb036f7672a074e859d3e19083e256bd80c93578
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391741"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176104"
 ---
-# <a name="compiler-warning-level-1-c4165"></a>Kompilator ostrzeżenie (poziom 1) C4165
+# <a name="compiler-warning-level-1-c4165"></a>Ostrzeżenie kompilatora (poziom 1) C4165
 
-"HRESULT" jest konwertowana na "bool"; Czy na pewno jest to, co chcesz zrobić?
+"HRESULT" jest konwertowany na "bool"; Czy na pewno chcesz to zrobić?
 
-Korzystając z wartości HRESULT w [Jeśli](../../cpp/if-else-statement-cpp.md) instrukcji, HRESULT zostaną przekonwertowane na [bool](../../cpp/bool-cpp.md) , chyba że jawnie testu dla zmiennej jako wartość HRESULT. To ostrzeżenie jest domyślnie wyłączona.
+W przypadku użycia HRESULT w instrukcji [if](../../cpp/if-else-statement-cpp.md) , wynik HRESULT zostanie skonwertowany na wartość [logiczną](../../cpp/bool-cpp.md) , chyba że jawnie przetestujesz zmienną jako wynik HRESULT. To ostrzeżenie jest domyślnie wyłączone.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4165
+Poniższy przykład generuje C4165
 
 ```cpp
 // C4165.cpp

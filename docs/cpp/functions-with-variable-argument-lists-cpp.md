@@ -1,5 +1,5 @@
 ---
-title: Funkcje z zmiennej listami argumentów (C++)
+title: Funkcje z listami zmiennych argumentówC++()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], variable number of
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f456f31dec631f7d9340563a93dfafeea49a72b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178447"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>Funkcje z zmiennej listami argumentów (C++)
+# <a name="functions-with-variable-argument-lists--c"></a>Funkcje z listami zmiennych argumentówC++()
 
-Deklaracje funkcji, w których ostatniego członka jest może wielokropek (...) potrwać zmienną liczbę argumentów. W takich przypadkach C++ zapewnia kontrolę tylko w przypadku argumentów zadeklarowany w sposób jawny typów. Listy zmiennych argumentów można użyć, gdy należy wprowadzić funkcję, więc ogólne, że nawet liczbę i typy argumentów mogą się różnić. Rodziny funkcji jest przykładem funkcje korzystające z listy zmiennych argumentów. `printf` *lista deklaracji argumentów*
+Deklaracje funkcji, w których ostatni element członkowski jest wielokropka (...), mogą przyjmować zmienną liczbę argumentów. W takich przypadkach C++ zapewnia sprawdzanie typu tylko dla jawnie zadeklarowanych argumentów. Listy zmiennych argumentów można użyć, gdy trzeba wykonać funkcję tak, że nawet liczba i typy argumentów mogą się różnić. Rodzina funkcji to przykład funkcji, które używają list argumentów zmiennych.`printf`*deklaracji argumentów*
 
-## <a name="functions-with-variable-arguments"></a>Funkcje ze zmiennymi argumentami
+## <a name="functions-with-variable-arguments"></a>Funkcje z zmiennymi argumentami
 
-Dostęp do argumentów po tych zadeklarowanych, użyj makra zawarte w pliku standardowych dołączonych \<stdarg.h > zgodnie z poniższym opisem.
+Aby uzyskać dostęp do argumentów po tych zadeklarowanych, użyj makr zawartych w standardowym pliku dołączanym \<STDARG. h > zgodnie z poniższym opisem.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Microsoft C++ umożliwia z wielokropkiem, aby określić jako argument, gdy przycisk wielokropka jest ostatni argument i jest poprzedzony wielokropka, przecinkiem. Dlatego deklaracja `int Func( int i, ... );` jest dozwolony, ale `int Func( int i ... );` nie jest.
+Firma C++ Microsoft umożliwia określenie wielokropka jako argumentu, jeśli wielokropek jest ostatnim argumentem, a wielokropek jest poprzedzony przecinkiem. W związku z tym deklaracja `int Func( int i, ... );` ma charakter prawny, ale `int Func( int i ... );` nie jest.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Deklaracja funkcji, która przyjmuje zmienną liczbę argumentów wymaga co najmniej jednego argumentu symbolu zastępczego, nawet jeśli nie jest używany. Jeśli ten argument zastępczy nie jest podany, nie ma możliwości dostępu pozostałe argumenty do.
+Deklaracja funkcji, która przyjmuje zmienną liczbę argumentów, wymaga co najmniej jednego argumentu symbolu zastępczego, nawet jeśli nie jest używana. Jeśli nie podano tego argumentu symbolu zastępczego, nie ma możliwości uzyskania dostępu do pozostałych argumentów.
 
-Gdy argumentów typu **char** są przekazywane jako argumenty zmiennych są konwertowane na typ **int**. Podobnie, jeśli argumenty typu **float** są przekazywane jako argumenty zmiennych są konwertowane na typ **double**. Argumenty inne typy podlegają standardowym promocje typów całkowitych i zmiennoprzecinkowych. Zobacz [konwersje standardowe](standard-conversions.md) Aby uzyskać więcej informacji.
+Gdy argumenty typu **char** są przekazane jako argumenty zmiennych, są konwertowane na typ **int**. Podobnie, gdy argumenty typu **float** są przekazane jako argumenty zmiennych, są konwertowane na typ **Double**. Argumenty innych typów podlegają zwykłym, całkowitym i przepływającym awansom. Zobacz [standardowe konwersje](standard-conversions.md) , aby uzyskać więcej informacji.
 
-Funkcje, które wymagają listy zmiennych są zadeklarowane za pomocą wielokropek (...) na liście argumentów. Używać typów i makra, które są opisane w \<stdarg.h > Dołącz plik do argumentów dostępu, które są przekazywane przez listy zmiennych. Aby uzyskać więcej informacji na temat tych makr, zobacz [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji biblioteki wykonawczej C.
+Funkcje, które wymagają list zmiennych, są deklarowane przy użyciu wielokropka (...) na liście argumentów. Użyj typów i makr, które są opisane w \<STDARG. h > Uwzględnij plik, aby uzyskać dostęp do argumentów, które są przekazane przez listę zmiennych. Aby uzyskać więcej informacji na temat tych makr, zobacz [va_arg, va_copy, va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji biblioteki wykonawczej C.
 
-W poniższym przykładzie pokazano, jak makra współpracuje z typu (zadeklarowanych w \<stdarg.h >):
+Poniższy przykład pokazuje, jak makra współpracują ze sobą z typem (zadeklarowanym w \<STDARG. h >):
 
 ```cpp
 // variable_argument_lists.cpp
@@ -112,12 +112,12 @@ void ShowVar( char *szTypes, ... ) {
 // Test string
 ```
 
-Poprzedni przykład ilustruje te ważne pojęcia:
+W poprzednim przykładzie przedstawiono następujące ważne pojęcia:
 
-1. Należy ustanowić znacznika listy jako zmienną typu `va_list` przed argumenty zmiennych są dostępne. W poprzednim przykładzie, nosi nazwę znacznika `vl`.
+1. Przed uzyskaniem dostępu do zmiennych argumentów należy ustanowić znacznik listy jako zmienną typu `va_list`. W poprzednim przykładzie znacznik jest nazywany `vl`.
 
-1. Oddzielne argumenty są dostępne przy użyciu `va_arg` makra. Musisz poinformować `va_arg` — makro typ argumentu do pobrania, aby go przenieść poprawną liczbę bajtów ze stosu. Jeśli określono nieprawidłowy typ o rozmiarze różni się od dostarczona przez program wywołujący do `va_arg`, wyniki są nieprzewidywalne.
+1. Do poszczególnych argumentów uzyskuje się dostęp za pomocą makra `va_arg`. Musisz popowiedzieć `va_arg` makro typ argumentu do pobrania, aby można było przesłać poprawną liczbę bajtów ze stosu. W przypadku określenia nieprawidłowego typu rozmiaru innego niż dostarczony przez wywołujący program do `va_arg`wyniki są nieprzewidywalne.
 
-1. Należy jawnie rzutowane wynik uzyskany przy użyciu `va_arg` makra do typu, który chcesz.
+1. Należy jawnie rzutować wynik uzyskany przy użyciu makra `va_arg` na żądany typ.
 
-Musisz wywołać makra, aby zakończyć przetwarzanie argumentów zmiennej.`va_end`
+Należy wywołać makro, aby przerwać przetwarzanie argumentów zmiennej.`va_end`

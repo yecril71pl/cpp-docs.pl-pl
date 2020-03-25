@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: ee2a76edb967923a03ce6720b4163baf1cc48c32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755a8f58ffc290d73d6060b0b0924905ecbf6028
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500474"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213879"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass — Makro
 
@@ -40,8 +40,8 @@ Makro **InspectableClass** może być używane tylko z typami środowisko wykona
 
 **Nagłówek:** implementuje. h
 
-**Obszaru** Microsoft:: WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [RuntimeClass, klasa](runtimeclass-class.md)

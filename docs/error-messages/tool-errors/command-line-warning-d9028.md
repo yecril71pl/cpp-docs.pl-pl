@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-ms.openlocfilehash: 007c0a9e9a0f51740b1d6b668905fa20d7ef2964
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e65881159176ba0d144a8abc5f395ce1b96402f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196654"
 ---
 # <a name="command-line-warning-d9028"></a>Ostrzeżenie D9028 dla wiersza polecenia
 
-> Minimalna ponowna kompilacja awaria, powrót do normalnej kompilacji
+> Minimalna ponowna kompilacja nie powiodła się, powrót do normalnej kompilacji
 
-Plik .idb projektu jest uszkodzony. Usuń ten plik i ponownie skompilować.
+Plik Project. IDB jest uszkodzony. Usuń plik i Skompiluj ponownie.
 
-Aby uzyskać więcej informacji o minimalnym ponowne kompilowanie i pliku .idb Zobacz przestarzałego [/Gm — opcja kompilatora](../../build/reference/gm-enable-minimal-rebuild.md).
+Aby uzyskać więcej informacji na temat minimalnej rekompilacji i pliku. IDB, zobacz przestarzałą [opcję kompilatora/GM](../../build/reference/gm-enable-minimal-rebuild.md).

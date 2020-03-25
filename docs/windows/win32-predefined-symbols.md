@@ -6,39 +6,39 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165928"
 ---
 # <a name="win32-predefined-symbols"></a>Wstępnie zdefiniowane symbole Win32
 
-Te symbole są zdefiniowane w plikach nagłówkowych Win32 i obsługują standardowe funkcje aplikacji Windows i akcje. Te symbole są głównie używane wspólnych elementów interfejsu użytkownika. Podczas pracy z kontrolkami w edytorach zasobów te symbole pojawią się w [okno właściwości](/visualstudio/ide/reference/properties-window) skojarzone z wspólnych formantów. Na przykład jeśli ikony aplikacji powinien być wyświetlany pasek narzędzi, ikona będzie skojarzona z symbolem IDI_SMALL w **właściwość** okna.
+Te symbole są zdefiniowane w plikach nagłówkowych Win32 i obsługują standardowe funkcje aplikacji i akcje systemu Windows. Te symbole są głównie używane w przypadku typowych elementów interfejsu użytkownika. Podczas pracy z kontrolkami w edytorach zasobów te symbole będą widoczne w [okno właściwości](/visualstudio/ide/reference/properties-window) skojarzonych ze wspólnymi kontrolkami. Na przykład jeśli na pasku narzędzi powinna zostać wyświetlona ikona aplikacji, ikona zostanie skojarzona z symbolem IDI_SMALL w oknie **Właściwości** .
 
 |||
 |-|-|
-|IDABORT|(formant) Okno dialogowe, przycisk Przerwij|
-|IDC_STATIC|(formant) Tekst statyczny w oknie dialogowym|
-|IDCANCEL|(formant) Okno dialogowe, przycisk Anuluj|
-|IDD_ABOUTBOX|(okno dialogowe) Okno dialogowe produktu — informacje|
-|IDI_PROJECTNAME|(ikona) Bieżąca ikona projektu|
-|IDI_SMALL|(ikona) Mała ikona bieżącego projektu|
-|IDIGNORE|(formant) Używany przycisk Ignoruj w oknach dialogowych|
-|IDM_ABOUT|(element menu) Używane przy pomocy... Temat...|
-|IDM_EXIT|(element menu) Używane z pliku... Zakończ...|
-|IDNO|(formant) Okno dialogowe, ma przycisku|
-|IDOK|(formant) Okno dialogowe, przycisk OK|
-|IDRETRY|(formant) Okno dialogowe, przycisk Ponów próbę|
-|IDS_APP_TITLE|(string) Bieżąca nazwa aplikacji|
-|IDYES|(formant) Okno dialogowe, przycisk Tak|
+|IDABORT|kontroli Przycisk przerywania|
+|IDC_STATIC|kontroli Tekst statyczny w oknie dialogowym|
+|IDCANCEL|kontroli Przycisk Anuluj|
+|IDD_ABOUTBOX|oknie dialogowym Okno dialogowe produktu — informacje|
+|IDI_PROJECTNAME|ikona Ikona bieżącego projektu|
+|IDI_SMALL|ikona Mała ikona bieżącego projektu|
+|IDIGNORE|kontroli Używane z przyciskiem Ignoruj w oknach dialogowych|
+|IDM_ABOUT|(element menu) Używane z pomocą... Informacje o...|
+|IDM_EXIT|(element menu) Używany z plikiem... Zakończ...|
+|IDNO|kontroli Okno dialogowe, bez przycisku|
+|IDOK|kontroli Przycisk OK|
+|IDRETRY|kontroli Przycisk Ponów próbę|
+|IDS_APP_TITLE|parametry Nazwa bieżącej aplikacji|
+|IDYES|kontroli Przycisk OK|
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)<br/>
 [Wstępnie zdefiniowane symbole MFC](../windows/mfc-predefined-symbols.md)<br/>

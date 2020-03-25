@@ -1,24 +1,24 @@
 ---
-title: Klasa wyliczeniowa (C++sposób niezamierzony i C++/CX)
+title: enum — KlasaC++(/CLI C++i/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182139"
 ---
-# <a name="enum-class--ccli-and-ccx"></a>Klasa wyliczeniowa (C++sposób niezamierzony i C++/CX)
+# <a name="enum-class--ccli-and-ccx"></a>enum — KlasaC++(/CLI C++i/CX)
 
-Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany przez użytkownika, składających się z szeregu nazwanych stałych zwanych wyliczeniami.
+Deklaruje Wyliczenie w zakresie przestrzeni nazw, który jest typem zdefiniowanym przez użytkownika składającym się z zestawu nazwanych stałych o nazwie Enumerators.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
 ### <a name="remarks"></a>Uwagi
 
-C++/CX i C++/interfejsu wiersza polecenia obsługuje **klasy publicznym typie wyliczeniowym** i **klasa wyliczeniowa prywatnej** które są podobne do standardowych C++ **klasa wyliczeniowa** , ale z dodatkiem Specyfikator ułatwień dostępu. W obszarze **/CLR**, C ++ 11 **klasa wyliczeniowa** typ jest dozwolone, ale spowoduje wygenerowanie ostrzeżenia C4472 jest zapewnienie naprawdę typu wyliczeniowego ISO i nie C++/CX i C++typu w sposób niezamierzony. Aby uzyskać więcej informacji na temat ISO Standard C++ **wyliczenia** — słowo kluczowe, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
+C++/CX i C++/CLI obsługują **publiczną klasę wyliczeniową** i **prywatną klasę wyliczeniową** , która jest podobna do standardowej C++ **klasy enum** , ale z dodaniem specyfikatora dostępności. W obszarze **/CLR**typ **klasy wyliczenia** języka c++ 11 jest dozwolony, ale generuje C4472 ostrzegawczy, który jest przeznaczony do zapewnienia, że naprawdę chcesz, aby typ wyliczenia ISO C++, a C++nie typ/CX i/CLI. Aby uzyskać więcej informacji na temat standardowego C++ słowa kluczowego **enum** ISO, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -34,40 +34,40 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-Dostępność wyliczenia, które mogą być **publicznych** lub **prywatnej**.
+*niego*<br/>
+Dostępność wyliczenia, która może być **publiczna** lub **prywatna**.
 
-*enumeration-identifier*<br/>
+*Wyliczenie — identyfikator*<br/>
 Nazwa wyliczenia.
 
-*underlying-type*<br/>
-(Opcjonalnie) Podstawowy typ wyliczenia.
+*Typ podstawowy*<br/>
+Obowiązkowe Podstawowy typ wyliczenia.
 
-(Opcjonalnie. Tylko Windows Runtime) podstawowym typem wyliczenia, które mogą być **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, lub `uint64`.
+Obowiązkowe. Tylko środowisko wykonawcze systemu Windows) podstawowy typ wyliczenia, który może być **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`lub `uint64`.
 
-*enumerator-list*<br/>
-Rozdzielana przecinkami lista nazw wyliczania.
+*moduł wyliczający — lista*<br/>
+Rozdzielana przecinkami lista nazw modułów wyliczających.
 
-Wartość każdy moduł wyliczający jest wyrażeniem stałym, zdefiniowanego albo niejawnie przez kompilator, lub jawnie przez notacji, *modułu wyliczającego*`=`*wyrażenie_stałe*. Domyślnie wartość modułu wyliczającego pierwszego wynosi zero, jeśli jest niejawnie definiowany. Wartość każdej kolejnej modułu wyliczającego niejawnie definiowany jest wartość poprzedniego enumeratora + 1.
+Wartość każdego modułu wyliczającego jest wyrażeniem stałym zdefiniowanym niejawnie przez kompilator lub jawnie przez notację, *moduł wyliczający*`=`*wyrażenie stałe*. Domyślnie wartość pierwszego modułu wyliczającego jest równa zero, jeśli jest niejawnie zdefiniowana. Wartość każdego kolejnego zdefiniowanego niejawnie modułu wyliczającego jest wartością poprzedniego modułu wyliczającego + 1.
 
 *var*<br/>
-(Opcjonalnie) Nazwa zmiennej typu wyliczenia.
+Obowiązkowe Nazwa zmiennej typu wyliczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji i przykładów, zobacz [wyliczenia](../cppcx/enums-c-cx.md).
+Aby uzyskać więcej informacji i zapoznać się z przykładami, zobacz [wyliczenia](../cppcx/enums-c-cx.md).
 
-Należy pamiętać, że kompilator generuje komunikaty o błędach, jeśli wyrażenie stałe, który definiuje wartość modułu wyliczającego nie może być przedstawiona przez *typu bazowego*.  Jednak kompilator nie zgłasza błędu dla wartości, który jest nieodpowiedni dla podstawowego typu. Na przykład:
+Należy zauważyć, że kompilator emituje komunikaty o błędach, jeśli wyrażenie stałe definiujące wartość modułu wyliczającego nie może być reprezentowane przez *Typ podstawowy*.  Jednak kompilator nie zgłasza błędu dla wartości, która jest nieodpowiedni dla typu źródłowego. Na przykład:
 
-- Jeśli *typu bazowego* to pole liczbowe, a moduł wyliczający określa maksymalną wartość dla tego typu, nie może być przedstawiony wartość następnego enumeratoin niejawnie zdefiniowany.
+- Jeśli *Typ podstawowy* jest wartością numeryczną, a moduł wyliczający określa maksymalną wartość tego typu, wartość kolejnej niejawnie zdefiniowanej enumeratoin nie może być reprezentowana.
 
-- Jeśli *typu bazowego* jest **bool**, i więcej niż dwa moduły wyliczające są niejawną kolekcją zdefiniowane moduły wyliczające po pierwsze dwa nie może być reprezentowana.
+- Jeśli *Typ podstawowy* jest typem **bool**i więcej niż dwa moduły wyliczające są niejawnie zdefiniowane, nie można przedstawić modułów wyliczających po pierwszych dwóch.
 
-- Jeśli *typu bazowego* jest `char16`i wartość wyliczenia zakresu od 0xD800 do 0xDFFF, może być reprezentowany wartość. Jednak wartości logicznie niepoprawne, ponieważ reprezentuje on połowa Unicode dwuskładnikowy i nie powinny być wyświetlane w izolacji.
+- Jeśli *Typ podstawowy* jest `char16`, a wartość wyliczenia mieści się w zakresie od 0XD800 do 0xDFFF, wartość może być reprezentowana. Jednakże wartość logiczna jest nieprawidłowa, ponieważ reprezentuje połowę pary dwuskładnikowej Unicode i nie powinna być wyświetlana w izolacji.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -82,34 +82,34 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-Dostępność wyliczenia. Może być **publicznych** lub **prywatnej**.
+*niego*<br/>
+Dostępność wyliczenia. Może być **publiczna** lub **prywatna**.
 
-*enumerator-list*<br/>
-Rozdzielana przecinkami lista identyfikatorów (moduły wyliczające), która znajduje się w wyliczeniu.
+*moduł wyliczający — lista*<br/>
+Rozdzielana przecinkami lista identyfikatorów (modułów wyliczających) w wyliczeniu.
 
-*Nazwa*<br/>
-Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
+*Nazwij*<br/>
+Nazwa wyliczenia. Anonimowe wyliczenia zarządzane są niedozwolone.
 
 *type*<br/>
-(Opcjonalnie) Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
+Obowiązkowe Typ podstawowy *identyfikatorów*. Może to być dowolny typ skalarny, taki jak podpisane lub niepodpisane wersje **int**, **Short**lub **Long**.  dozwolony jest również typ **bool** lub **char** .
 
 *var*<br/>
-(Opcjonalnie) Nazwa zmiennej typu wyliczenia.
+Obowiązkowe Nazwa zmiennej typu wyliczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-**Klasa wyliczeniowa** i **enum struct** są równoważne deklaracji.
+**Klasa enum** i **Struktura wyliczenia** są równoważnymi deklaracjami.
 
-Istnieją dwa rodzaje wyliczeń: zarządzane lub C++/CX i standard.
+Istnieją dwa typy wyliczeniowe: Managed lub C++/CX i Standard.
 
-Zarządzany lub C++/CX wyliczenia można zdefiniować w następujący sposób,
+Wyliczenie zarządzane lub C++/CX może być zdefiniowane w następujący sposób:
 
 ```cpp
 public enum class day {sun, mon };
 ```
 
-i semantycznie równoważne:
+i jest semantycznie równoważne z:
 
 ```cpp
 ref class day {
@@ -119,30 +119,30 @@ public:
 };
 ```
 
-Standardowa wyliczenia można zdefiniować w następujący sposób:
+Standardowe Wyliczenie może być zdefiniowane w następujący sposób:
 
 ```cpp
 enum day2 { sun, mon };
 ```
 
-i semantycznie równoważne:
+i jest semantycznie równoważne z:
 
 ```cpp
 static const int sun = 0;
 static const int mon = 1;
 ```
 
-Zarządzane nazwy modułu wyliczającego (*identyfikatory*) nie są wprowadzane do zakresu, w którym zdefiniowano wyliczenia; wszystkie odniesienia do wyliczenia musi być w pełni kwalifikowana (*nazwa* `::` *identyfikator*).  Z tego powodu nie można zdefiniować wyliczenie zarządzane anonimowe.
+Zarządzane nazwy modułów wyliczających (*identyfikatory*) nie są wstrzykiwane do zakresu, w którym zdefiniowano Wyliczenie; wszystkie odwołania do modułów wyliczających muszą być w pełni kwalifikowane (*nazwa*`::`*Identyfikator*).  Z tego powodu nie można zdefiniować anonimowego wyliczenia zarządzanego.
 
-Moduły wyliczające standardowa wyliczenia silnie są wprowadzane w zasięgu.  Oznacza to jeśli istnieje inny symbol o tej samej nazwie jak moduł wyliczający w zasięgu, kompilator wygeneruje błąd.
+Moduły wyliczające standardowe wyliczenie są silnie wstrzykiwane do otaczającego zakresu.  Oznacza to, że jeśli istnieje inny symbol o takiej samej nazwie jak moduł wyliczający w otaczającym zakresie, kompilator wygeneruje błąd.
 
-W Visual Studio 2002 i Visual Studio 2003 moduły wyliczające słabo zostały dodane (widoczne w zasięgu o ile nie wystąpił inny identyfikator o takiej samej nazwie).
+W programie Visual Studio 2002 i Visual Studio 2003 moduły wyliczające zostały słabo wstrzykiwane (widoczne w otaczającym zakresie, chyba że istnieje inny identyfikator o tej samej nazwie).
 
-Jeśli nie zdefiniowano standard wyliczeniową C++ (bez **klasy** lub **struktury**), kompilowanie za pomocą `/clr` spowoduje, że wyliczenie jest kompilowana jako wyliczenie zarządzane.  Wyliczanie nadal ma semantykę niezarządzane wyliczenia.  Należy pamiętać, kompilator wprowadza atrybutu `Microsoft::VisualC::NativeEnumAttribute` do identyfikowania intencji programisty dla wyliczenia jako natywnym wyliczeniem.  Inne kompilatory po prostu zostanie wyświetlony standardowy wyliczenia jako wyliczenie zarządzane.
+Jeśli zdefiniowano C++ standardowe Wyliczenie (bez **klasy** lub **struktury**), kompilacja z `/clr` spowoduje, że Wyliczenie zostanie skompilowane jako zarządzane Wyliczenie.  Wyliczenie ma nadal semantykę niezarządzanego wyliczania.  Należy zauważyć, że kompilator wprowadza atrybut, `Microsoft::VisualC::NativeEnumAttribute`, aby zidentyfikować intencję programisty, aby Wyliczenie było natywnym wyliczeniem.  Inne kompilatory będą po prostu wyświetlać standardowe Wyliczenie jako zarządzane Wyliczenie.
 
-Element o nazwie, standardowe wyliczenia skompilowany przy użyciu `/clr` będą widoczne w zestawie, jako wyliczenie zarządzane i mogą być używane przez inne zarządzane kompilatora.   Jednak bez nazwy wyliczenia standard nie będą publicznie widoczne z zestawu.
+Nazwane, standardowe Wyliczenie skompilowane z `/clr` będzie widoczne w zestawie jako zarządzane Wyliczenie i może być używane przez dowolny inny zarządzany kompilator.   Jednak nienazwane Wyliczenie standardowe nie będzie publicznie widoczne z zestawu.
 
-W Visual Studio 2002 i Visual Studio 2003, standard wyliczenia, używany jako typ parametru funkcji:
+W programie Visual Studio 2002 i Visual Studio 2003, standardowe Wyliczenie używane jako typ w parametrze funkcji:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -156,27 +156,27 @@ int main() {
 }
 ```
 
-czy emitować następujące opcje w MSIL dla sygnatury funkcji:
+emituje następujące instrukcje w języku MSIL dla sygnatury funkcji:
 
 ```cpp
 void f(int32);
 ```
 
-Jednak w bieżącej wersji kompilatora standardowa wyliczenia jest emitowane, jako wyliczenie zarządzane przy użyciu [NativeEnumAttribute] i następujące opcje w MSIL dla sygnatury funkcji:
+Jednak w bieżących wersjach kompilatora standardowe wyliczenie jest emitowane jako zarządzane Wyliczenie z [NativeEnumAttribute] i następujące w języku MSIL dla sygnatury funkcji:
 
 ```cpp
 void f(E)
 ```
 
-Aby uzyskać więcej informacji dotyczących natywnych typów wyliczeniowych, zobacz [deklaracje modułów Wyliczających języka C++](../cpp/enumerations-cpp.md).
+Aby uzyskać więcej informacji na temat natywnych wyliczeń, zobacz [ C++ deklaracje wyliczenia](../cpp/enumerations-cpp.md).
 
-Aby uzyskać więcej informacji na temat typów wyliczeniowych CLR zobacz:
+Aby uzyskać więcej informacji na temat typów wyliczeniowych CLR, zobacz:
 
-- [Podstawowym typem wyliczenia](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
+- [Typ podstawowy wyliczenia](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

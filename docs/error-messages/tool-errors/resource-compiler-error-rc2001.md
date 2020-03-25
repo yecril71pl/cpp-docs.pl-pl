@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346694"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191729"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Błąd kompilatora zasobów RC2001
 
-Nowy wiersz w stałej
+stała nowego wiersza
 
-Stała typu string była kontynuowana w drugim wierszu bez kreski ułamkowej odwróconej (**\\**) lub zamknięcie i otwarcie podwójnego cudzysłowu (**"**).
+Stała ciągu była kontynuowana w drugim wierszu bez ukośnika odwrotnego ( **\\** ) albo zamykania i otwierania podwójnych cudzysłowów ( **"** ).
 
-Aby przerwać stała ciągu, która znajduje się na dwa wiersze w pliku źródłowym, wykonaj jedną z następujących czynności:
+Aby przerwać stałą ciągu, która znajduje się w dwóch wierszach w pliku źródłowym, wykonaj jedną z następujących czynności:
 
-- Koniec pierwszy wiersz od znaku kontynuacji wiersza, ukośnika odwrotnego.
+- Zakończ pierwszy wiersz za pomocą znaku kontynuacji wiersza, ukośnika odwrotnego.
 
-- Zamknij ciąg znaków w pierwszym wierszu za pomocą podwójnego cudzysłowu i otwórz ciągu w następnym wierszu, kolejny znak cudzysłowu.
+- Zamknij ciąg w pierwszym wierszu ze znakiem podwójnego cudzysłowu i Otwórz ciąg w następnym wierszu z innym znakiem cudzysłowu.
 
-Nie jest wystarczające, aby zakończyć pierwszy wiersz z \n, sekwencja unikowa osadzania znak nowego wiersza w stałą typu string.
+Nie wystarczy, aby zakończyć pierwszy wiersz za pomocą \n, sekwencji unikowej osadzania znaku nowego wiersza w stałej ciągu.

@@ -5,31 +5,31 @@ f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0205ba065f6e410383c38a0f1c2eaa0da55fe93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173871"
 ---
 # <a name="linker-tools-warning-lnk4286"></a>Ostrzeżenie narzędzi konsolidatora LNK4286
 
-> symbol "*symbol*"zdefiniowane w"*filename_1.obj*"zaimportowanych przez"*filename_2.obj*"
+> Symbol "*symbol*" zdefiniowany w elemencie "*filename_1. obj*" został zaimportowany przez element "*filename_2. obj*"
 
-[__declspec(DllImport)](../../cpp/dllexport-dllimport.md) określono *symbol* nawet, jeśli symbol jest zdefiniowany w pliku obiektu *filename_1.obj* w ten sam obraz. Usuń `__declspec(dllimport)` modyfikator, aby rozwiązać tego ostrzeżenia.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) została określona dla *symbolu* , chociaż symbol jest zdefiniowany w pliku obiektu *filename_1. obj* w tym samym obrazie. Usuń modyfikator `__declspec(dllimport)`, aby usunąć to ostrzeżenie.
 
 ## <a name="remarks"></a>Uwagi
 
-Ostrzeżenie LNK4286 jest nieco bardziej ogólnych [LNK4217 ostrzeżenie narzędzi konsolidatora](linker-tools-warning-lnk4217.md). Konsolidator wygeneruje ostrzeżenie LNK4286, gdy można stwierdzić, plik, który obiekt odwołanie do symbolu, ale nie funkcji.
+Ostrzeżenie LNK4286 to bardziej ogólna wersja [narzędzi konsolidatora LNK4217 narzędzi konsolidatora](linker-tools-warning-lnk4217.md). Konsolidator generuje ostrzeżenie LNK4286, gdy może rozpoznać plik obiektu, do którego odwołuje się symbol, ale nie funkcję.
 
-Aby rozwiązać LNK4286, Usuń `__declspec(dllimport)` modyfikator deklaracji z deklaracją do przodu o *symbol* zawartymi w *filename_2.obj*.
+Aby rozwiązać LNK4286, Usuń modyfikator deklaracji `__declspec(dllimport)` z deklaracji do przodu *symboli* , do której odwołuje się element *filename_2. obj*.
 
-Chociaż końcowego wygenerowany kod działa poprawnie, kod generowany w celu wywołania funkcji importowanych jest mniej wydajne niż bezpośrednie wywoływanie funkcji. To ostrzeżenie nie jest wyświetlany podczas kompilowania przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opcji.
+Mimo że ostatni wygenerowany kod działa prawidłowo, kod wygenerowany do wywołania zaimportowanej funkcji jest mniej wydajny niż bezpośrednie wywoływanie funkcji. To ostrzeżenie nie pojawia się podczas kompilowania przy użyciu opcji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-Aby uzyskać więcej informacji na temat Importowanie i eksportowanie danych deklaracji, zobacz [dllexport i dllimport](../../cpp/dllexport-dllimport.md).
+Aby uzyskać więcej informacji na temat importowania i eksportowania deklaracji danych, zobacz [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Linker Tools Warning LNK4049](linker-tools-warning-lnk4049.md) \
-[Linker Tools Warning LNK4217](linker-tools-warning-lnk4217.md) \
+[Ostrzeżenie narzędzi konsolidatora lnk4049 narzędzi konsolidatora](linker-tools-warning-lnk4049.md) \
+[Ostrzeżenie narzędzi konsolidatora lnk4217 narzędzi konsolidatora](linker-tools-warning-lnk4217.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

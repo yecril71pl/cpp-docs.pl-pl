@@ -1,5 +1,5 @@
 ---
-title: Identyfikatory zasobów (symbolom) (C++)
+title: Identyfikatory zasobów (symbole) (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba0958e455557660ef704f1c2fa570d46307082f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214399"
 ---
-# <a name="resource-identifiers-symbols-c"></a>Identyfikatory zasobów (symbolom) (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identyfikatory zasobów (symbole) (C++)
 
-Symbol jest identyfikatorem zasobu (identyfikator) składający się z dwóch części nazwy symbolu (ciąg tekstowy) zamapowany na wartość symbolu (liczba całkowita), na przykład:
+Symbol jest identyfikatorem zasobu (ID), który składa się z dwóch części, nazwy symbolu (ciągu tekstowego) zamapowanego na wartość symbolu (liczba całkowita), na przykład:
 
 ```
 IDC_EDITNAME = 5100
 ```
 
-Nazwy symboli w większości przypadków są określane jako identyfikatorów.
+Nazwy symboli są najczęściej określane mianem identyfikatorów.
 
-Symbole Podaj opisową sposób odwoływania się do zasobów i obiektów interfejsu użytkownika, zarówno w kodzie źródłowym, jak i podczas pracy z nimi w edytorach zasobów. Możesz wyświetlać i manipulować symboli w jednym wygodnym miejscu przy użyciu [okno dialogowe symboli zasobów](../windows/viewing-resource-symbols.md).
+Symbole zapewniają opisowy sposób odwoływania się do zasobów i obiektów interfejsu użytkownika, zarówno w kodzie źródłowym, jak i podczas pracy z nimi w edytorach zasobów. Można wyświetlać symbole i manipulować nimi w jednym wygodnym miejscu przy użyciu [okna dialogowego symbole zasobów](../windows/viewing-resource-symbols.md).
 
-W miarę wzrostu aplikacji w rosnąca liczba i rozmiar, co powoduje jego ilość zasobów oraz symbole. Śledzenie dużą liczbę symboli, rozproszone w wielu plików może być trudne. **Symboli zasobów** okno dialogowe upraszcza zarządzanie symboli, oferując narzędzie centralnego za pomocą którego można:
+W miarę zwiększania się rozmiaru i złożoności aplikacji, więc jest to liczba zasobów i symboli. Śledzenie dużej liczby symboli rozmieszczonych w kilku plikach może być trudne. Okno dialogowe **symbole zasobów** upraszcza zarządzanie symbolami, oferując centralne narzędzie, za pomocą którego można:
 
 - [Tworzenie symboli](../windows/creating-new-symbols.md)
 
-- [Zarządzanie symboli](../windows/changing-a-symbol-or-symbol-name-id.md)
+- [Zarządzanie symbolami](../windows/changing-a-symbol-or-symbol-name-id.md)
 
-- [Wyświetl wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)
+- [Wyświetlanie wstępnie zdefiniowanych identyfikatorów symboli](../windows/predefined-symbol-ids.md)
 
-Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows/resource-editors.md) Podaj nazwę domyślną dla danego zasobu, na przykład `IDC_RADIO1`i przypisać jej wartości. Definicja name plus wartość jest przechowywana w `Resource.h` pliku.
+Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows/resource-editors.md) udostępniają nazwę domyślną dla zasobu, na przykład `IDC_RADIO1`, i przypisują do niej wartość. Nazwa i Definicja wartości są przechowywane w pliku `Resource.h`.
 
 > [!NOTE]
-> Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku .rc do innego, Visual C++ mogą ulec zmianie, przeniesione zasób wartości symbolu lub nazwy symbolu i wartości, aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku.
+> Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku. RC do innego, Wizualizacja C++ może zmienić wartość symbolu transferowanego zasobu lub nazwę i wartość symbolu, aby uniknąć konfliktów z nazwami symboli lub wartościami w istniejącym pliku.
 
 ## <a name="requirements"></a>Wymagania
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>

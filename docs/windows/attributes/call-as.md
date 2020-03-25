@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501804"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167340"
 ---
 # <a name="call_as"></a>call_as
 
@@ -30,11 +30,11 @@ Funkcja lokalna, która ma być wywoływana, gdy wywoływana jest funkcja zdalna
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **call_as** C++ ma takie same funkcje jak atrybut [call_as](/windows/win32/Midl/call-as) MIDL.
+Atrybut **call_as** C++ ma taką samą funkcjonalność jak atrybut [call_as](/windows/win32/Midl/call-as) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak można użyć **call_as** do mapowania funkcji niezdalnych (`f1`) na funkcję zdalną (`Remf1`):
+Poniższy kod pokazuje, jak za pomocą **call_as** mapowania funkcji niezdalnych (`f1`) na funkcję zdalną (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -56,12 +56,12 @@ __interface IMInterface {
 |-|-|
 |**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: library_block — (C++ atrybutów COM)
+title: library_block (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214776"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-Umieszcza konstrukcję wewnątrz bloku Biblioteka IDL.
+Umieszcza konstrukcję w bloku biblioteki IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Umieszcza konstrukcję wewnątrz bloku Biblioteka IDL.
 
 ## <a name="remarks"></a>Uwagi
 
-Umieszczenie konstrukcję wewnątrz bloku biblioteki pozwala mieć pewność, że zostaną przekazane do biblioteki typów, niezależnie od tego, czy jest ona przywoływana. Domyślnie tylko konstrukcje zmodyfikowane przez [coclass](coclass.md), [dispinterface](dispinterface.md), i [idl_module](idl-module.md) atrybuty są umieszczane w bloku biblioteki.
+Gdy umieszczasz konstrukcję wewnątrz bloku biblioteki, upewnij się, że zostanie ona przeniesiona do biblioteki typów, niezależnie od tego, czy jest przywoływany. Domyślnie tylko konstrukcje modyfikowane przez atrybuty [coclass](coclass.md), [dispinterface](dispinterface.md)i [idl_module](idl-module.md) są umieszczane w bloku biblioteki.
 
 ## <a name="example"></a>Przykład
 
-W poniższym kodzie niestandardowy interfejs znajduje się wewnątrz bloku biblioteki.
+W poniższym kodzie interfejs niestandardowy jest umieszczany wewnątrz bloku biblioteki.
 
 ```cpp
 // cpp_attr_ref_library_block.cpp
@@ -48,14 +48,14 @@ __interface IMyInterface {
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1056
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
-ms.openlocfilehash: b15b14c04dd91ae648ea4311612c122f04f90477
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10131e518fa608292fff58672ede36390bcd665b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182906"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Błąd krytyczny NMAKE U1056
 
-Nie można znaleźć procesora poleceń
+nie można znaleźć procesora poleceń
 
-Procesor poleceń nie znajdowała się w ścieżce określonej w **COMSPEC** lub **ścieżki** zmiennych środowiskowych.
+Procesor poleceń nie znajduje się w ścieżce określonej w zmiennych środowiskowych **wywołana** lub **Path** .
 
-NMAKE używa COMMAND.COM lub CMD. EXE jako podmiot przetwarzający polecenia podczas wykonywania polecenia. Szuka procesora poleceń najpierw w ścieżce w **COMSPEC**. Jeśli **COMSPEC** nie istnieje, NMAKE wyszukiwania katalogów określonych w **ścieżki**.
+NMAKE używa COMMAND.COM lub CMD. EXE jako procesor poleceń podczas wykonywania poleceń. Szuka najpierw procesora poleceń w ścieżce ustawionej w **wywołana**. Jeśli **wywołana** nie istnieje, NMAKE Przeszukuje katalogi określone w polu **ścieżka**.

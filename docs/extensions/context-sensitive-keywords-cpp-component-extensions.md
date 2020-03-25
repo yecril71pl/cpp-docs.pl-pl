@@ -1,5 +1,5 @@
 ---
-title: Kontekstowe słowa kluczowe (C++sposób niezamierzony i C++/CX)
+title: Kontekstowe słowa kluczowe (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345833"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182178"
 ---
-# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe (C++sposób niezamierzony i C++/CX)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe (C++/CLI i C++/CX)
 
-*Kontekstowe słowa kluczowe* są elementami języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekstem kontekstowe słowo kluczowe może być symbolem zdefiniowanych przez użytkownika.
+*Kontekstowe słowa kluczowe* są elementami języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekstem, kontekstowe słowo kluczowe może być symbolem zdefiniowanym przez użytkownika.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
 ### <a name="remarks"></a>Uwagi
 
-Oto lista kontekstowych słów kluczowych:
+Poniżej znajduje się lista kontekstowych słów kluczowych:
 
 - [abstract](abstract-cpp-component-extensions.md)
 
@@ -46,33 +46,33 @@ Oto lista kontekstowych słów kluczowych:
 
 - [sealed](sealed-cpp-component-extensions.md)
 
-- `where` (część [ogólne](generics-cpp-component-extensions.md))
+- `where` (część [generyczna](generics-cpp-component-extensions.md))
 
-Dla potrzeb czytelności warto ograniczyć korzystanie z kontekstowych słów kluczowych jako symboli zdefiniowanych przez użytkownika.
+Na potrzeby czytelności można ograniczyć użycie słów kluczowych kontekstowych jako symboli zdefiniowanych przez użytkownika.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
 ### <a name="remarks"></a>Uwagi
 
-(Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).
+(Nie ma żadnych uwag specyficznych dla platformy dla tej funkcji).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ### <a name="remarks"></a>Uwagi
 
-(Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).
+(Nie ma żadnych uwag specyficznych dla platformy dla tej funkcji).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje, że w odpowiedniego kontekstu **właściwość** kontekstowe słowo kluczowe może służyć do definiowania właściwości i zmiennej.
+Poniższy przykład kodu pokazuje, że w odpowiednim kontekście słowo kluczowe kontekstowe **Właściwości** może służyć do definiowania właściwości i zmiennej.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

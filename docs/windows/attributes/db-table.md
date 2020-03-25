@@ -1,21 +1,21 @@
 ---
-title: db_table — (C++ atrybutów COM)
+title: db_table (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148123"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167254"
 ---
-# <a name="dbtable"></a>db_table
+# <a name="db_table"></a>db_table
 
-Zostanie otwarty tabeli OLE DB.
+Otwiera tabelę OLE DB.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,29 +23,29 @@ Zostanie otwarty tabeli OLE DB.
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *db_table*<br/>
 Ciąg określający nazwę tabeli bazy danych (na przykład "produkty").
 
-*Nazwa*<br/>
-(Opcjonalnie) Nazwa uchwyt, używanej do pracy z tabeli. Należy określić ten parametr, aby zwrócić więcej niż jeden wiersz wyników. **db_table —** generuje zmienna o określonej *nazwa* który może służyć do przechodzenia zestawu wierszy lub wykonywać wiele zapytań akcji.
+*Nazwij*<br/>
+Obowiązkowe Nazwa dojścia używanego do pracy z tabelą. Należy określić ten parametr, jeśli chcesz zwrócić więcej niż jeden wiersz wyników. **DB_Table** generuje zmienną o określonej *nazwie* , która może służyć do przechodzenia w zestawie wierszy lub wykonywania wielu zapytań akcji.
 
 *source_name*<br/>
-(Opcjonalnie) `CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](db-source.md).
+Obowiązkowe Zmienna `CSession` lub wystąpienie klasy, do której zastosowano atrybut `db_source`, na którym jest wykonywane polecenie. Zobacz [db_source](db-source.md).
 
-*hresult*<br/>
-(Opcjonalnie) Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
+*wynik*<br/>
+Obowiązkowe Identyfikuje zmienną, która będzie otrzymywać wartość HRESULT tego polecenia bazy danych. Jeśli zmienna nie istnieje, zostanie automatycznie wprowadzona przez atrybut.
 
 ## <a name="remarks"></a>Uwagi
 
-**db_table —** tworzy [CTable](../../data/oledb/ctable-class.md) obiektu, który jest używany przez konsumenta OLE DB, aby otworzyć tabeli. Można użyć tego atrybutu tylko na poziomie klasy; Nie można używać go wbudowanego. Użyj `db_column` powiązać kolumny tabeli zmiennych; użyj `db_param` do ograniczania (nastavit typ parametru, a tym samym) parametrów.
+**DB_Table** tworzy obiekt [CTable](../../data/oledb/ctable-class.md) , który jest używany przez konsumenta OLE DB do otwierania tabeli. Tego atrybutu można używać tylko na poziomie klasy; nie można użyć go jako wbudowanego. Użyj `db_column`, aby powiązać kolumny tabeli z zmiennymi; Użyj `db_param`, aby rozdzielić (ustawić typ parametru itd.) parametrów.
 
-Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.
+Gdy dostawca atrybutu odbiorcy zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_akcesor *YourClassName*, gdzie *YourClassName* jest nazwą, którą nadano klasy, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi od metody dostępu \_*YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie otwierany tabeli Produkty do użytku przez `CProducts`.
+W poniższym przykładzie zostanie otwarta tabela Products (produkty) do użycia przez `CProducts`.
 
 ```cpp
 // db_table.cpp
@@ -60,7 +60,7 @@ class CProducts {
 };
 ```
 
-Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](https://github.com/Microsoft/VCSamples) i [MultiRead](https://github.com/Microsoft/VCSamples).
+Aby zapoznać się z przykładem tego atrybutu używanym w aplikacji, zobacz [Odczytaj](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -68,13 +68,13 @@ Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](http
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)

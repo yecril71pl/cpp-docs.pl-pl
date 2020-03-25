@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211799"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 
-Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.
+Używa obiektu modułu wyliczającego OLE DB, który uwidacznia Interfejs [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) , aby zwracał zestaw wierszy, który zawiera opis wszystkich źródeł danych i modułów wyliczających.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,25 +42,25 @@ class CEnumerator :
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Znajdź](#find)|Wyszukuje dostępnych dostawców (źródła danych), wyszukiwania dla jednej z określoną nazwą.|
-|[GetMoniker](#getmoniker)|Pobiera `IMoniker` interfejsu dla bieżącego rekordu.|
-|[Otwórz](#open)|Zostanie otwarty modułu wyliczającego.|
+|[Wyszukiwanie](#find)|Wyszukuje dostępne dostawcy (źródła danych) szukające jednego z określoną nazwą.|
+|[GetMoniker](#getmoniker)|Pobiera interfejs `IMoniker` dla bieżącego rekordu.|
+|[Otwórz](#open)|Otwiera moduł wyliczający.|
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz pobrać `ISourcesRowset` danych pośrednio od tej klasy.
+`ISourcesRowset` dane można pobrać pośrednio z tej klasy.
 
-## <a name="find"></a> CEnumerator::Find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
 
-Wyszukuje określoną nazwą wśród dostępnych dostawców.
+Wyszukuje określoną nazwę wśród dostępnych dostawców.
 
 ### <a name="syntax"></a>Składnia
 
@@ -71,19 +71,19 @@ bool Find(TCHAR* szSearchName) throw();
 #### <a name="parameters"></a>Parametry
 
 *szSearchName*<br/>
-[in] Nazwa do wyszukania.
+podczas Nazwa do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli nazwa została znaleziona. W przeciwnym razie **false**.
+**ma wartość true** , jeśli znaleziono nazwę. W przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfejsu.
+Ta nazwa jest mapowana do `SOURCES_NAME`ego elementu członkowskiego interfejsu [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="getmoniker"></a> CEnumerator::GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
-Analizuje nazwę wyświetlaną, aby wyodrębnić składnika ciąg, który można przekonwertować na krótka.
+Analizuje nazwę wyświetlaną, aby wyodrębnić składnik ciągu, który można przekonwertować na moniker.
 
 ### <a name="syntax"></a>Składnia
 
@@ -97,18 +97,18 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>Parametry
 
 *ppMoniker*<br/>
-[out] Moniker pochodzącą z nazwy wyświetlanej analizy ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) bieżącego wiersza.
+określoną Moniker przeanalizowany z nazwy wyświetlanej ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) bieżącego wiersza.
 
 *lpszDisplayName*<br/>
-[in] Nazwa wyświetlana, można przeanalizować.
+podczas Nazwa wyświetlana do przeanalizowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="open"></a> CEnumerator::Open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
 
-Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Tworzy powiązanie monikera dla modułu wyliczającego, jeśli został on określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego przez wywołanie [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Składnia
 
@@ -123,20 +123,20 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 #### <a name="parameters"></a>Parametry
 
 *pMoniker*<br/>
-[in] Wskaźnik do moniker moduł wyliczający.
+podczas Wskaźnik do monikera modułu wyliczającego.
 
 *pClsid*<br/>
-[in] Wskaźnik do `CLSID` modułu wyliczającego.
+podczas Wskaźnik do `CLSID` modułu wyliczającego.
 
-*enumerator*<br/>
-[in] Odwołanie do modułu wyliczającego.
+*liczeni*<br/>
+podczas Odwołanie do modułu wyliczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa HRESULT.
+Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

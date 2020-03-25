@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514605"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166812"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ Nazwa pliku. tlb, w cudzysłowie, która ma zostać zaimportowana do biblioteki 
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **importlib** C++ powoduje umieszczenie instrukcjiwblokubibliotekiwygenerowanegoplikuIDL.`importlib` Atrybut **importlib** ma takie same funkcje jak atrybut [importlib](/windows/win32/Midl/importlib) MIDL.
+Atrybut **importlib** C++ powoduje umieszczenie instrukcji `importlib` w bloku biblioteki wygenerowanego pliku IDL. Atrybut **importlib** ma takie same funkcje jak atrybut [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -51,12 +51,12 @@ Poniższy kod przedstawia przykład użycia **importlib**:
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

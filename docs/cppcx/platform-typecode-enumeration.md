@@ -1,5 +1,5 @@
 ---
-title: Platform::TypeCode, wyliczenie
+title: 'Platform:: TypeCode, Wyliczenie'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214286"
 ---
-# <a name="platformtypecode-enumeration"></a>Platform::TypeCode, wyliczenie
+# <a name="platformtypecode-enumeration"></a>Platform:: TypeCode, Wyliczenie
 
-Określa liczbowych kategorię, która reprezentuje typ wbudowany.
+Określa kategorię liczbową reprezentującą typ wbudowany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,34 +24,34 @@ Określa liczbowych kategorię, która reprezentuje typ wbudowany.
 enum class TypeCode {};
 ```
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
 |Kod typu|Opis|
 |---------------|-----------------|
-|Boolean|Typ Platform::Boolean.|
-|char16|Typ default::char16.|
-|DataGodzina|Typ daty/godziny.|
-|Wartość dziesiętna|Typ liczbowy.|
-|Double|Typ default::float64.|
-|Pusty|Void|
-|Int16|Typ default::int16.|
-|Int32|Typ default::int32.|
-|Int64|Typ default::int64.|
-|Int8|Typ default::int8.|
-|Obiekt|Typ Platform::Object.|
-|Single|Typ default::float32.|
-|String|Typ Platform::String.|
-|UInt16|Typ default::uint16.|
-|UInt32|Typ default::uint32.|
-|UInt64|Typ default::uint64.|
-|UInt8|Typ default::uint8.|
+|Wartość logiczna|Typ platformy:: Boolean.|
+|Char16|Wartość domyślna:: char16.|
+|DateTime|Typ DateTime.|
+|Dziesiętna|Typ liczbowy.|
+|Podwójne|Wartość domyślna:: Float64.|
+|Pusty|Pozycję|
+|Int16|Domyślny typ:: Int16.|
+|Int32|Domyślny typ:: Int32.|
+|Int64|Domyślny typ:: Int64.|
+|Int8|Wartość domyślna:: Int8.|
+|Obiekt|Platform:: Object — typ.|
+|Single|Wartość domyślna:: float32.|
+|Ciąg|Typ platform:: String.|
+|UInt16|Wartość domyślna:: UInt16.|
+|UInt32|Wartość domyślna:: UInt32.|
+|UInt64|Wartość domyślna:: UInt64.|
+|UInt8|Wartość domyślna:: Uint8.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd

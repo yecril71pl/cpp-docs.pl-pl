@@ -1,39 +1,39 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4412
+title: Ostrzeżenie kompilatora (poziom 2) C4412
 ms.date: 11/04/2016
 f1_keywords:
 - C4412
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161792"
 ---
-# <a name="compiler-warning-level-2-c4412"></a>Kompilator ostrzeżenie (poziom 2) C4412
+# <a name="compiler-warning-level-2-c4412"></a>Ostrzeżenie kompilatora (poziom 2) C4412
 
-> "*funkcja*': podpis funkcji podpis zawiera typ"*typu*'; Obiekty C++ są bezpieczne przekazywanie między kodem czystym i mieszanym lub macierzystym.
+> "*Function*": Sygnatura funkcji zawiera typ "*Type*"; C++ obiekty nie są bezpieczne do przechodzenia między czystym kodem a mieszanym lub natywnym.
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli masz kod, który musi być czysty, firma Microsoft zaleca przenosi go na C#.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017. Jeśli masz kod, który musi być czysty, zalecamy jego port C#.
 
-Kompilator wykrył potencjalnie niebezpieczną sytuację, która może spowodować błąd w czasie wykonywania: wykonywane jest wywołanie z **/CLR: pure** compiland — do funkcji, który został zaimportowany za pośrednictwem dllimport i sygnatura funkcji zawiera niezabezpieczonego typu . Typ jest niebezpieczne, jeśli zawiera funkcję członkowską, lub ma element członkowski danych, który jest niezabezpieczonego typu lub pośrednio do niezabezpieczonego typu.
+Kompilator wykrył potencjalnie niebezpieczną sytuację, która może spowodować błąd w czasie wykonywania: wywołanie jest wykonywane z **/CLR: Pure** jednostka kompilacji do funkcji zaimportowanej za pośrednictwem elementu dllimport, a sygnatura funkcji zawiera niebezpieczny typ. Typ jest niebezpieczny, jeśli zawiera funkcję członkowską lub ma element członkowski danych, który jest niebezpiecznym typem lub pośrednim do niebezpiecznego typu.
 
-To jest niebezpieczne ze względu na różnice w domyślnej Konwencji między kod czysty i natywnych wywoływania (lub mieszanych natywnego i zarządzanego). Podczas importowania (za pośrednictwem `dllimport`) funkcji do **/CLR: pure** compiland —, upewnij się, że deklaracje każdego typu w podpisie są identyczne z tymi w compiland —, które eksportuje — funkcja (ostrożność szczególnie różnice w niejawne konwencji wywoływania.)
+Jest to niebezpieczne z powodu różnic w domyślnych konwencjach wywoływania między kodem czystym i natywnym (lub mieszanym natywnym i zarządzanym). Podczas importowania (za pośrednictwem `dllimport`) funkcji do **/CLR: Pure** jednostka kompilacji upewnij się, że deklaracje każdego typu w podpisie są identyczne z tymi w jednostka kompilacji, które eksportują funkcję (są szczególnie ważne w przypadku różnic w niejawnych konwencjach wywoływania).
 
-Funkcja wirtualna elementu członkowskiego jest szczególnie podatne na dawać nieoczekiwane wyniki.  Jednak nawet funkcję niewirtualną powinien zostać przetestowany, aby upewnić się, że masz prawidłowe wyniki. Jeśli masz pewność, że pojawiają się poprawne wyniki, możesz zignorować to ostrzeżenie.
+Wirtualna funkcja członkowska jest szczególnie podatna na zadawanie nieoczekiwanych wyników.  Jednak nawet niewirtualna funkcja powinna być testowana, aby upewnić się, że są odpowiednie wyniki. Jeśli masz pewność, że otrzymujesz poprawne wyniki, możesz zignorować to ostrzeżenie.
 
-C4412 jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) i [dllexport i dllimport](../../cpp/dllexport-dllimport.md) Aby uzyskać więcej informacji.
+C4412 jest domyślnie wyłączona. Zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) i [dllexport, dllimport,](../../cpp/dllexport-dllimport.md) Aby uzyskać więcej informacji.
 
-Aby rozwiązać tego ostrzeżenia, należy usunąć wszystkie funkcje z typu.
+Aby usunąć to ostrzeżenie, Usuń wszystkie funkcje z typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4412.
+Poniższy przykład generuje C4412.
 
 ```cpp
 // C4412.cpp
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład jest plik nagłówka, który deklaruje dwa typy. `Unsafe` Typu jest niebezpieczne, ponieważ ma on funkcję członkowską.
+Poniższy przykład to plik nagłówka, który deklaruje dwa typy. Typ `Unsafe` jest niebezpieczny, ponieważ ma funkcję członkowską.
 
 ```cpp
 // C4412.h
@@ -81,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie eksportuje funkcje przy użyciu typów zdefiniowanych w pliku nagłówkowym.
+Ten przykład eksportuje funkcje z typami zdefiniowanymi w pliku nagłówkowym.
 
 ```cpp
 // C4412_2.cpp
@@ -98,9 +98,9 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>Przykład
 
-Domyślną konwencję wywoływania **/CLR: pure** kompilacja różni się od natywnej kompilacji.  Gdy wchodzi C4412.h `Test` wartość domyślna to `__clrcall`. Jeśli możesz skompilować i uruchomić ten program (nie używaj **/c**), program spowoduje zgłoszenie wyjątku.
+Domyślna konwencja wywoływania w funkcji **/CLR: Pure** kompilacja różni się od kompilacji natywnej.  Po dołączeniu C4412. h `Test` domyślnie `__clrcall`. W przypadku kompilowania i uruchamiania tego programu (nie należy używać **/c**) program zgłosi wyjątek.
 
-Poniższy przykład spowoduje wygenerowanie C4412.
+Poniższy przykład generuje C4412.
 
 ```cpp
 // C4412_3.cpp

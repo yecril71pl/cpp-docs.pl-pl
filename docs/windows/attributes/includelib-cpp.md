@@ -1,21 +1,21 @@
 ---
-title: includelib — (atrybut COM C++)
+title: includelib — (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214851"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
-Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.
+Powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,16 +25,16 @@ Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygene
 
 ### <a name="parameters"></a>Parametry
 
-*name.idl*<br/>
-Nazwa pliku .idl, którego mają być dołączane jako część pliku .idl wygenerowany.
+*Nazwa. idl*<br/>
+Nazwa pliku. idl, który ma zostać uwzględniony jako część wygenerowanego pliku IDL.
 
 ## <a name="remarks"></a>Uwagi
 
-**Includelib —** atrybut C++ powoduje pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany po `importlib` instrukcji.
+Atrybut **includelib —** C++ powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL, po instrukcji `importlib`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod jest pokazywana w pliku .cpp:
+Poniższy kod jest przedstawiony w pliku. cpp:
 
 ```cpp
 // cpp_attr_ref_includelib.cpp
@@ -49,14 +49,14 @@ Poniższy kod jest pokazywana w pliku .cpp:
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Yes|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

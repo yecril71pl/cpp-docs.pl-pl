@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214100"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal — Metoda
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,30 +26,30 @@ inline INT32 CompareStringOrdinal(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy obiekt HSTRING do porównania.
+*LHS*<br/>
+Pierwszy HSTRING do porównania.
 
 *RHS*<br/>
-Drugi obiekt HSTRING do porównania.
+Druga HSTRING do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 |Wartość|Warunek|
 |-----------|---------------|
-|-1|*Lewa strona reguły przepisywania* jest mniejsza niż *rhs*.|
-|0|*Lewa strona reguły przepisywania* jest równa *rhs*.|
-|1|*Lewa strona reguły przepisywania* jest większa niż *rhs*.|
+|-1|*LHS* jest mniejszy niż *RHS*.|
+|0|*LHS* równa się *RHS*.|
+|1|wartość *LHS* jest większa niż *RHS*.|
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje dwa obiekty HSTRING określonego i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.
+Porównuje dwa określone obiekty HSTRING i zwraca liczbę całkowitą, która wskazuje ich położenie względne w kolejności sortowania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Wrappers::Details, przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)

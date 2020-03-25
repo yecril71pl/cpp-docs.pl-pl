@@ -1,5 +1,5 @@
 ---
-title: Migawka
+title: Snapshot
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
@@ -11,39 +11,39 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62b5952f3052a3248175ce7892b1cf4615f1dd17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212696"
 ---
-# <a name="snapshot"></a>Migawka
+# <a name="snapshot"></a>Snapshot
 
-Migawka to zestaw rekordów, które odzwierciedla widok statyczny danych, która istniała w momencie utworzenia migawki. Po otwarciu migawki i Przenieś do wszystkich rekordów, zawiera zestaw rekordów i ich wartości nie należy zmieniać dopóki odbudować migawki przez wywołanie metody `Requery`.
+Migawka jest zestawem rekordów, który odzwierciedla statyczny widok danych, który istniał w momencie utworzenia migawki. Gdy otworzysz migawkę i przejdziesz do wszystkich rekordów, zestaw rekordów, które zawiera, i ich wartości nie zmieniają się, dopóki migawka nie zostanie odbudowana przez wywołanie `Requery`.
 
 > [!NOTE]
->  Ten temat dotyczy klas MFC ODBC. Jeśli używasz klas MFC DAO zamiast klas MFC ODBC, zobacz [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) opis zestawów rekordów typu migawka.
+>  Ten temat dotyczy klas MFC ODBC. Jeśli używasz klas MFC DAO zamiast klas MFC ODBC, zobacz [CDaoRecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open) , aby uzyskać opis zestawów rekordów typu Snapshot.
 
-Można utworzyć migawki można aktualizować lub tylko do odczytu z klasami bazy danych. W przeciwieństwie do dynamicznego można aktualizować migawka nie oddaje zmiany do rejestrowania wartości wprowadzone przez innych użytkowników, ale będzie odzwierciedlał, aktualizacji i usunięć wprowadzone przez program. Liczba rekordów dodanych do migawki nie stanie się widoczna do migawki, dopóki nie zostanie wywołana `Requery`.
+Możliwe jest tworzenie migawek do aktualizacji lub tylko do odczytu z klasami baz danych. W przeciwieństwie do zestawu dynamicznego, aktualizowalna migawka nie odzwierciedla zmian wartości rekordów wprowadzonych przez innych użytkowników, ale odzwierciedla aktualizacje i usunięcia dokonane przez program. Rekordy dodane do migawki nie stają się widoczne dla migawki do momentu wywołania `Requery`.
 
 > [!TIP]
->  Migawka jest kursor statyczny ODBC. Kursory statyczne nie uzyskać wiersz danych do momentu przewiń do tego rekordu. Aby upewnić się, że od razu pobierane są wszystkie rekordy, można przewiń do końca rekordów, a następnie przewiń do pierwszego rekordu, który chcesz wyświetlić. Należy jednak pamiętać, że przewijając do końca pociąga za sobą dodatkowe koszty i może obniżyć wydajność.
+>  Migawka jest statycznym kursorem ODBC. Kursory statyczne nie pobierają wiersza danych do momentu przewinięcia tego rekordu. Aby upewnić się, że wszystkie rekordy są pobierane natychmiast, można przewijać do końca zestawu rekordów, a następnie przewijać do pierwszego rekordu, który ma zostać wyświetlony. Należy jednak zauważyć, że przewijanie do końca wiąże się z dodatkowym obciążeniem i może obniżyć wydajność.
 
-Migawki są najbardziej przydatne, gdy będą potrzebne dane pozostają z ustaloną podczas operacji, podczas generowania raportu lub wykonywania obliczeń. Mimo tego źródła danych można rozdzielić znacznie z migawek, dzięki czemu możesz chcieć od czasu do czasu ponownie skompilować.
+Migawki są najbardziej cenne, gdy potrzebne dane mają być stałe w trakcie operacji, tak jak podczas generowania raportu lub wykonywania obliczeń. Nawet dlatego źródło danych może znacząco rozróżnić się od migawki, dzięki czemu możesz chcieć ponownie skompilować ją od czasu do czasu.
 
-Obsługa migawki opiera się na z biblioteki kursorów ODBC, która udostępnia Kursory statyczne i umieszczony aktualizacji (wymagane dla updateability) dla dowolnego sterownika poziomu 1. Biblioteka kursorów biblioteki DLL muszą zostać załadowane w pamięci dla tej obsługi. Podczas konstruowania `CDatabase` obiektu, a następnie wywołać jej `OpenEx` funkcji członkowskiej, należy określić `CDatabase::useCursorLib` opcji *dwOptions* parametru. Jeśli wywołasz `Open` funkcja elementu członkowskiego, z biblioteki kursorów jest ładowany przez domyślny. Jeśli używasz zestawów dynamicznych zamiast migawki, nie chcesz spowodować załadowanie biblioteki kursora.
+Obsługa migawek jest oparta na bibliotece kursora ODBC, która zapewnia statyczne kursory i Aktualizacje pozycjonowane (potrzebne do aktualizacji) dla dowolnego sterownika poziomu 1. Biblioteka DLL biblioteki kursorów musi zostać załadowana do pamięci dla tej obsługi. Podczas konstruowania obiektu `CDatabase` i wywołania funkcji składowej `OpenEx` należy określić opcję `CDatabase::useCursorLib` parametru *dwOptions* . Jeśli wywołasz funkcję elementu członkowskiego `Open`, Biblioteka kursorów zostanie domyślnie załadowana. Jeśli używasz zestawów dynamicznych zamiast migawek, nie chcesz, aby Biblioteka kursorów została załadowana.
 
-Migawki są dostępne tylko wtedy, gdy załadowano z biblioteki kursorów ODBC, kiedy `CDatabase` został skonstruowany obiekt lub sterownik ODBC, którego używasz obsługuje Kursory statyczne.
-
-> [!NOTE]
->  W przypadku niektórych sterowników ODBC migawek (Kursory statyczne) może nie być można aktualizować. Sprawdź dokumentację sterownik dla obsługiwanych typów kursora i typy współbieżności, które obsługują. Aby zagwarantować migawek można aktualizować, upewnij się, załadować z biblioteki kursorów do pamięci podczas tworzenia `CDatabase` obiektu. Aby uzyskać więcej informacji, zobacz [ODBC: ODBC — Biblioteka kursorów](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Migawki są dostępne tylko wtedy, gdy biblioteka kursorów ODBC została załadowana podczas konstruowania obiektu `CDatabase` lub używany sterownik ODBC obsługuje Kursory statyczne.
 
 > [!NOTE]
->  Jeśli chcesz użyć migawek i zestawy dynamiczne, należy utworzyć je na dwóch różnych `CDatabase` obiektów (w dwóch różnych połączeń).
+>  W przypadku niektórych sterowników ODBC migawki (Kursory statyczne) mogą nie być aktualizowalne. Zapoznaj się z dokumentacją sterownika pod kątem obsługiwanych typów kursorów i typów współbieżności, które obsługują. W celu zagwarantowania migawek aktualizowalnych upewnij się, że podczas tworzenia obiektu `CDatabase` załadujesz bibliotekę kursorów do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
-Aby uzyskać więcej informacji na temat udostępniania migawek właściwości z wszystkich zestawów rekordów, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać więcej informacji na temat ODBC i migawki, łącznie z biblioteki kursorów ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md).
+> [!NOTE]
+>  Jeśli chcesz użyć migawek i zestawów dynamicznych, musisz oprzeć je na dwóch różnych obiektach `CDatabase` (dwa różne połączenia).
 
-## <a name="see-also"></a>Zobacz także
+Aby uzyskać więcej informacji na temat migawek właściwości udostępnianych z wszystkimi zestawami rekordów, zobacz [zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać więcej informacji na temat ODBC i migawek, w tym biblioteki kursora ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

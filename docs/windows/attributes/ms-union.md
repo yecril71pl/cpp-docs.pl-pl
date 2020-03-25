@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514367"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166643"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,11 +25,11 @@ Kontroluje wyrównanie danych sieci do wyrównania niehermetyzowanych Unii.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **ms_union** C++ ma takie same funkcje jak atrybut [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
+Atrybut **ms_union** C++ ma taką samą funkcjonalność jak atrybut [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia umiejscowienie elementu **ms_union**:
+Poniższy kod ilustruje rozmieszczenie **ms_union**:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -62,12 +62,12 @@ __interface IFireTabCtrl {
 |-|-|
 |**Dotyczy**|Niehermetyzowane związki|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

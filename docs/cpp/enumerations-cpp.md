@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180189"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Zauważ, że wiersz `hand = account_num;` nadal powoduje błąd występujący z wyliczeniem nieobjętym zakresem, jak pokazano wcześniej. Jest to dozwolone w przypadku jawnego rzutowania. Jednak w przypadku typów wyliczeniowych w zakresie próba konwersji w następnej instrukcji `account_num = Suit::Hearts;`nie jest już dozwolona bez jawnego rzutowania.
 
-## <a name="no_enumerators"></a>Wyliczenia bez modułów wyliczających
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Wyliczenia bez modułów wyliczających
 
 **Visual Studio 2017 w wersji 15,3 i nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): przez zdefiniowanie wyliczenia (regularnego lub w zakresie) z jawnym typem podstawowym i brak modułów wyliczających, można wprowadzić nowy typ całkowity, który nie ma jawnej konwersji na inny typ. Przy użyciu tego typu, a nie wbudowanego typu podstawowego, można wyeliminować potencjalne błędy powodowane przez przypadkowe konwersje niejawne.
 

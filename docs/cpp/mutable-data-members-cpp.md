@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: 8d592eb97f70bfc26c075317c57ec4d5c78e3956
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3a9594a77a9ada971213eaea74a9842bd96a54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301594"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179344"
 ---
 # <a name="mutable-data-members-c"></a>Modyfikowalne elementy członkowskie danych (C++)
 
-This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych niestatyczna i wartości innej niż stała klasy. Zadeklarowana składowa danych **mutable**, a następnie jest legalne, aby przypisać wartość do tego elementu członkowskiego danych, z **const** funkcja elementu członkowskiego.
+To słowo kluczowe może być stosowane tylko do niestatycznych i niestałych elementów członkowskich danych klasy. Jeśli element członkowski danych jest zadeklarowany jako **modyfikowalny**, dozwolone jest przypisanie wartości do tego elementu członkowskiego danych z funkcji składowej **const** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +25,7 @@ mutable member-variable-declaration;
 
 ## <a name="remarks"></a>Uwagi
 
-Na przykład, poniższy kod zostanie skompilowana bez błędów, ponieważ `m_accessCount` został zadeklarowany jako **mutable**i może być modyfikowana przez `GetFlag` mimo że `GetFlag` jest funkcją składową const.
+Na przykład poniższy kod zostanie skompilowany bez błędu, ponieważ `m_accessCount` został zadeklarowany jako **modyfikowalny**i w związku z tym może być modyfikowany przez `GetFlag`, mimo że `GetFlag` jest funkcją członkowską const.
 
 ```cpp
 // mutable.cpp
@@ -47,6 +47,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

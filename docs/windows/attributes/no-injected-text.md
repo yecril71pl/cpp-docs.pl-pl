@@ -1,21 +1,21 @@
 ---
-title: no_injected_text (C++ atrybutów COM)
+title: no_injected_text (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409294"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166617"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.
+Uniemożliwia kompilatorowi wstrzyknięcie kodu w wyniku użycia atrybutów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,12 +25,12 @@ Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybut typu wartość logiczna*<br/>
-(Opcjonalnie) **true** Jeśli chcesz, aby bez kodu, które są wstrzykiwane, **false** do kodu, ich wstrzyknięcie. **wartość true,** jest ustawieniem domyślnym.
+*typu*<br/>
+Obowiązkowe **prawda** , jeśli chcesz, aby żaden kod nie został wstrzyknięty, **wartość false** , aby zezwolić na wstrzyknięcie kodu. **wartość** domyślna to true.
 
 ## <a name="remarks"></a>Uwagi
 
-Najbardziej powszechnym zastosowaniem programu **no_injected_text** C++ polega na atrybut [/Fx](../../build/reference/fx-merge-injected-code.md) opcji kompilatora, która wstawia **no_injected_text** atrybutu do pliku .mrg.
+Najbardziej typowym zastosowaniem atrybutu **No_injected_text** C++ jest opcja kompilatora [/FX](../../build/reference/fx-merge-injected-code.md) , która wstawia atrybut **No_injected_text** do pliku. MRG.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -38,13 +38,13 @@ Najbardziej powszechnym zastosowaniem programu **no_injected_text** C++ polega n
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)

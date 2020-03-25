@@ -1,55 +1,55 @@
 ---
-title: Atrybuty interfejsu (C++ COM)
+title: Atrybuty interfejsu (C++ com)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81a88ddfd74f20fa57ef615c988ba9786f41c1ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214828"
 ---
 # <a name="interface-attributes"></a>Atrybuty interfejsu
 
-Następujące atrybuty dotyczą [interfejsu (lub __interface)](../../cpp/interface.md) C++ — słowo kluczowe.
+Następujące atrybuty dotyczą słowa kluczowego [Interface (lub __interface)](../../cpp/interface.md) C++ .
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[async_uuid](async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
-|[custom](custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
-|[dispinterface](dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
-|[dual](dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
-|[export](export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
-|[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|
-|[helpfile](helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|
-|[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|
-|[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
-|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
-|[hidden](hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
-|[library_block](library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
-|[local](local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
-|[nonextensible](nonextensible.md)|Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójną](dual.md) interfejsu.|
-|[odl](odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
-|[object](object-cpp.md)|Określa niestandardowy interfejs.|
-|[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
-|[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
-|[ptr](ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
-|[restricted](restricted.md)|Określa, które elementy członkowskie biblioteki nie może być wywoływana arbitralnie.|
-|[uuid](uuid-cpp-attributes.md)|Zawiera unikatowy identyfikator biblioteki|
+|[async_uuid](async-uuid.md)|Określa identyfikator UUID, który kieruje kompilator MIDL do definiowania synchronicznych i asynchronicznych wersji interfejsu COM.|
+|[custom](custom-cpp.md)|Umożliwia zdefiniowanie własnych atrybutów.|
+|[dispinterface](dispinterface.md)|Umieszcza interfejs w pliku. idl jako interfejs wysyłania.|
+|[dual](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
+|[export](export.md)|Powoduje, że struktura danych zostanie umieszczona w pliku IDL.|
+|[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tym elemencie w pliku pomocy.|
+|[helpfile](helpfile.md)|Ustawia nazwę pliku pomocy dla biblioteki typów.|
+|[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie.|
+|[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku HLP lub chm.|
+|[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).|
+|[hidden](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[library_block](library-block.md)|Umieszcza konstrukcję w bloku biblioteki pliku IDL.|
+|[local](local-cpp.md)|Umożliwia użycie kompilatora MIDL jako generatora nagłówka, gdy jest używany w nagłówku interfejsu. W przypadku użycia w pojedynczej funkcji określa procedurę lokalną, dla której nie są generowane żadne wycinki.|
+|[nonextensible](nonextensible.md)|Określa, że implementacja `IDispatch` zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można jej rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójnym](dual.md) interfejsie.|
+|[odl](odl.md)|Identyfikuje interfejs jako interfejs ODL (Object Description Language).|
+|[object](object-cpp.md)|Identyfikuje niestandardowy interfejs.|
+|[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodny z automatyzacją.|
+|[pointer_default](pointer-default.md)|Określa domyślny atrybut wskaźnika dla wszystkich wskaźników oprócz wskaźników najwyższego poziomu, które są wyświetlane na listach parametrów.|
+|[ptr](ptr.md)|Wyznacza wskaźnik jako pełny wskaźnik.|
+|[restricted](restricted.md)|Określa, które elementy członkowskie biblioteki nie mogą być wywoływane arbitralnie.|
+|[uuid](uuid-cpp-attributes.md)|Zapewnia unikatowy identyfikator biblioteki|
 
-Musisz przestrzegać tych reguł określających interfejs:
+Aby zdefiniować interfejs, należy przestrzegać następujących zasad:
 
-- Domyślna konwencja wywołania jest [__stdcall](../../cpp/stdcall.md).
+- Domyślna konwencja wywoływania to [__stdcall](../../cpp/stdcall.md).
 
-- Identyfikator GUID jest dostarczany za Ciebie, jeśli nie podasz.
+- Identyfikator GUID jest dostarczany dla Ciebie, jeśli nie zostanie podany.
 
-- Nie przeciążone metody są dozwolone.
+- Nie są dozwolone żadne przeciążone metody.
 
-Podczas określania nie [uuid](uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
+Jeśli nie określisz atrybutu [UUID](uuid-cpp-attributes.md) i używasz tej samej nazwy interfejsu w różnych projektach atrybutów, generowany jest ten sam identyfikator GUID.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty w zależności od zastosowania](attributes-by-usage.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213853"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,48 +42,48 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 ### <a name="parameters"></a>Parametry
 
 *T0*<br/>
-Parametr szablonu, 0, który jest wymagany.
+Wymagany jest parametr szablonu 0.
 
-*T1*<br/>
-Parametr szablonu, 1, która domyślnie jest nieokreślona.
+*Połączeń*<br/>
+Parametr szablonu 1, który domyślnie jest nieokreślony.
 
 *T2*<br/>
-Parametr szablonu, 2, która domyślnie jest nieokreślona. Trzeci parametr szablonu.
+Parametr szablonu 2, który domyślnie jest nieokreślony. Trzeci parametr szablonu.
 
 *T3*<br/>
-Parametr szablonu, 3, która domyślnie jest nieokreślona.
+Parametr szablonu 3, który domyślnie jest nieokreślony.
 
-*T4*<br/>
-Parametr szablonu, 4, która domyślnie jest nieokreślona.
+*Twórz*<br/>
+Parametr szablonu 4, który domyślnie jest nieokreślony.
 
-*T5*<br/>
-Parametr szablonu, 5, która domyślnie jest nieokreślona.
+*Otrzymując*<br/>
+Parametr szablonu 5, który domyślnie jest nieokreślony.
 
 *T6*<br/>
-Parametr szablonu, 6, która domyślnie jest nieokreślona.
+Parametr szablonu 6, który domyślnie jest nieokreślony.
 
 *T7*<br/>
-Parametr szablonu, 7, która domyślnie jest nieokreślona.
+Parametr szablonu 7, który domyślnie jest nieokreślony.
 
 *T8*<br/>
-Parametr szablonu, 8, która domyślnie jest nieokreślona.
+Parametr szablonu 8, który domyślnie jest nieokreślony.
 
 *T9*<br/>
-Parametr szablonu, 9, która domyślnie jest nieokreślona.
+Parametr szablonu 9, który domyślnie jest nieokreślony.
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilacje `InterfaceList` typu przez rekursywnie stosowanie argumentów parametru określonego szablonu.
+Kompiluje typ `InterfaceList` przez cykliczne stosowanie określonych argumentów parametrów szablonu.
 
-**Interfacelisthelper —** szablon używa parametru szablonu *T0* do definiowania pierwszy element członkowski danych w `InterfaceList` struktury, a następnie rekursywnie stosuje  **Interfacelisthelper —** szablon, aby wszystkie pozostałe parametry szablonu. **Interfacelisthelper —** zatrzymuje, gdy nie ma żadnych pozostałych parametrów szablonu.
+Szablon **InterfaceListHelper —** używa parametru szablonu *T0* do definiowania pierwszego elementu członkowskiego danych w strukturze `InterfaceList`, a następnie rekursywnie stosuje szablon **InterfaceListHelper —** do wszelkich pozostałych parametrów szablonu. **InterfaceListHelper —** zostaje zatrzymana, gdy nie ma pozostałych parametrów szablonu.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`TypeT`|Synonim dla typu interfacelist —.|
+|`TypeT`|Synonim dla typu InterfaceList —.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -91,10 +91,10 @@ Kompilacje `InterfaceList` typu przez rekursywnie stosowanie argumentów paramet
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

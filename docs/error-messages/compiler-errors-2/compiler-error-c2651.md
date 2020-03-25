@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2651
 ms.assetid: c3524a89-47d1-43f6-9e20-2cda15f9ae8a
-ms.openlocfilehash: 5712595cf8e502df4d434478e8b44d852e60751b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9959c549c7f2d43f1f4f8aec3e73b8465c4c580c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177212"
 ---
 # <a name="compiler-error-c2651"></a>Błąd kompilatora C2651
 
-"data type": po lewej stronie 'operator' musi być klasy, struktury lub Unii
+"typ danych": po lewej "operator" musi być klasą, strukturą lub Unią
 
-Aby użyć parametru szablonu, tak, jakby była klasą, specjalizują się szablonu klasy za pomocą klasy zamiast typu całkowitego.
+Aby użyć parametru szablonu, tak jakby jest klasą, należy przeprowadzić specjalizację szablonu klasy z klasą zamiast typu całkowitego.

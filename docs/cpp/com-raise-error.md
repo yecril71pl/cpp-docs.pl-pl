@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2012ec98d8d40d60a7f12feb68bdc371e1616223
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189796"
 ---
-# <a name="comraiseerror"></a>_com_raise_error
+# <a name="_com_raise_error"></a>_com_raise_error
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zgłasza [_com_error](../cpp/com-error-class.md) w odpowiedzi na błąd.
+Zgłasza [_com_error](../cpp/com-error-class.md) w odpowiedzi na awarię.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,19 +30,19 @@ void __stdcall _com_raise_error(
 
 #### <a name="parameters"></a>Parametry
 
-*godz.*<br/>
+*wysoki*<br/>
 Informacje o HRESULT.
 
 *perrinfo*<br/>
-`IErrorInfo` obiekt.
+`IErrorInfo` obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_com_raise_error —**, który jest zdefiniowany w \<comdef.h >, może być zastąpiony napisany przez użytkownika wersję taką samą nazwę i prototypu. To było zrobić, jeśli chcesz używać `#import` , ale nie chcesz używać obsługę wyjątków C++. W takim przypadku użytkownik wersji **_com_raise_error —** zdecydować, czy `longjmp` lub wyświetlić okno komunikatu i zatrzymany. Wersja użytkownika nie powinny zwracać, jednak, ponieważ kod obsługi kompilatora COM nie oczekuje do zwrócenia.
+**_com_raise_error**, która jest zdefiniowana w \<comdef. h >, może być zastąpiona przez zapisaną przez użytkownika wersję o tej samej nazwie i prototypie. Można to zrobić, jeśli chcesz użyć `#import`, ale nie chcesz korzystać C++ z obsługi wyjątków. W takim przypadku wersja użytkownika **_com_raise_error** może zdecydować się na wykonanie `longjmp` lub wyświetlenie okna komunikatu i zatrzymanie. Wersja użytkownika nie powinna zwracać, chociaż, ponieważ kod obsługi języka COM kompilatora nie oczekuje, że zwraca.
 
-Można również użyć [_set_com_error_handler —](../cpp/set-com-error-handler.md) zastąpić domyślną funkcję obsługi błędów.
+Można również użyć [_set_com_error_handler](../cpp/set-com-error-handler.md) , aby zastąpić domyślną funkcję obsługi błędów.
 
-Domyślnie **_com_raise_error —** jest zdefiniowana w następujący sposób:
+Domyślnie **_com_raise_error** jest zdefiniowana w następujący sposób:
 
 ```cpp
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
@@ -50,15 +50,15 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<comdef.h >
+**Nagłówek:** \<comdef. h >
 
-**Biblioteki:** Jeśli **wchar_t jest typem natywnym** — opcja kompilatora jest włączona, użyj comsuppw.lib lub comsuppwd.lib. Jeśli **wchar_t jest typem natywnym** jest wyłączone, użyj comsupp.lib. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Jeśli **wchar_t jest opcja kompilatora typu natywnego** , użyj comsuppw. lib lub comsuppwd. lib. Jeśli **wchar_t jest typu natywnego** , użyj comsupp. lib. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)<br/>
 [_set_com_error_handler](../cpp/set-com-error-handler.md)

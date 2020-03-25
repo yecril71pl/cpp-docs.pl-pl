@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214763"
 ---
 # <a name="licensed"></a>licensed
 
-Wskazuje, że obiekt COM, do którego ma zastosowanie, jest licencjonowany i musi być skonkretyzowany `IClassFactory2`przy użyciu.
+Wskazuje, że obiekt COM, do którego ma zastosowanie, jest licencjonowany i musi być skonkretyzowany przy użyciu `IClassFactory2`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,11 +57,11 @@ public:
 |**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|`coclass`|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

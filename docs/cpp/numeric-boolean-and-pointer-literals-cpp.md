@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177745"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Literały numeryczne, wartości logicznych i wskaźników
 
@@ -103,7 +103,7 @@ Chociaż **Long Double** i **Double** mają tę samą reprezentację, nie są te
 void func( double );
 ```
 
-and
+i
 
 ```cpp
 void func( long double );
@@ -137,7 +137,7 @@ if (num < 100)
 
 W poprzednim przykładzie lepszym rozwiązaniem jest użycie nazwanej stałej, która daje jasne znaczenie, na przykład "MAXIMUM_ERROR_THRESHOLD". A jeśli wartość zwracana "powodzenie" jest widoczna dla użytkowników końcowych, warto lepiej użyć nazwanej stałej ciągu, która może być przechowywana w jednej lokalizacji w pliku, z której można ją lokalizować w innych językach. Używanie nazwanych stałych pomaga innym, a także sobie zrozumieć intencję kodu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje leksykalne](../cpp/lexical-conventions.md)<br/>
 [C++Literały ciągu](../cpp/string-and-character-literals-cpp.md)<br/>

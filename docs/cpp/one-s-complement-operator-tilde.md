@@ -1,5 +1,5 @@
 ---
-title: 'Jeden&#39;operatorem dopełnienia s: ~'
+title: 'Operator&#39;uzupełnienia s: ~'
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245036"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177719"
 ---
-# <a name="one39s-complement-operator-"></a>Jeden&#39;operatorem dopełnienia s: ~
+# <a name="one39s-complement-operator-"></a>Operator&#39;uzupełnienia s: ~
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,11 +27,11 @@ ms.locfileid: "62245036"
 
 ## <a name="remarks"></a>Uwagi
 
-Operator dopełnienia jednostkowego (`~`), czasami nazywane operator "dopełnienia bitowego", daje bitowej, jeden na uzupełnienie swojego operandu. Każdego bitu, który ma wartość 1 w argumencie operacji jest 0, w wyniku. Z drugiej strony każdego bitu, który ma wartość 0 w argumencie operacji wynosi 1, w wyniku. Argument operacji do operator dopełnienia jednostkowego musi być typu całkowitego.
+Operator dopełnienia (`~`), czasami nazywany operatorem "deuzupełnienie", daje bitową część tego operandu. Oznacza to, że każdy bit, który jest 1 w operandzie, ma wartość 0 w wyniku. Z kolei każdy bit, który jest równy 0 w operandzie, ma wartość 1 w wyniku. Operand do operatora dopełnienia musi być typem całkowitym.
 
-## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla ~
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla ~
 
-**Compl** operator jest odpowiednikiem tekstu `~`. Istnieją dwa sposoby dostępu do **compl** operatora w programach: dołączanie pliku nagłówka `iso646.h`, lub kompilowanie z [/za](../build/reference/za-ze-disable-language-extensions.md).
+Operator **zgodności** jest odpowiednikiem tekstu `~`. Istnieją dwa sposoby uzyskania dostępu do operatora **zgodności** w programach: Dołącz plik nagłówka `iso646.h`lub skompiluj z [/za](../build/reference/za-ze-disable-language-extensions.md).
 
 ## <a name="example"></a>Przykład
 
@@ -50,11 +50,11 @@ int main () {
 }
 ```
 
-W tym przykładzie nowa wartość przypisana do `y` to uzupełnienie jedynkowe 0xFFFF lub 0x0000 wartości bez znaku.
+W tym przykładzie nowa wartość przypisana do `y` jest uzupełnieniem jednego z wartości bez znaku lub 0x0000.
 
-Promocja typu całkowitego odbywa się w przypadku argumentów operacji typu całkowitego, a wynikowy typ jest typem, do którego argument jest podnoszony. Zobacz [konwersje standardowe](standard-conversions.md) więcej informacji na temat jak jest wykonywane podwyższenia poziomu.
+Promocja całkowa jest wykonywana na całkowitych operandach, a wynikowy typ to typ, do którego zostanie podwyższony operand. Zobacz [standardowe konwersje](standard-conversions.md) , aby uzyskać więcej informacji na temat sposobu przeprowadzania promocji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

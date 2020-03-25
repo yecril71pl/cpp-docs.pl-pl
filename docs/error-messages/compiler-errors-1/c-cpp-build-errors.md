@@ -1,5 +1,5 @@
 ---
-title: C /C++ błędy i ostrzeżenia narzędzi kompilacji
+title: Błędy iC++ ostrzeżenia narzędzi kompilacji C/build
 ms.date: 11/17/2017
 helpviewer_keywords:
 - builds [C++], errors
@@ -7,74 +7,74 @@ helpviewer_keywords:
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-ms.openlocfilehash: d16b691592a7b35a08bc02a0214f5415bd4ad2dd
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 92b0402a85edd4ac6ac8ffaace676b045c05064c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208312"
 ---
 # <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>Błędy i ostrzeżenia narzędzi do kompilacji i kompilatora C/C++
 
-Artykuły w tej sekcji dokumentacji wyjaśniają diagnostycznych błędach i komunikaty ostrzegawcze, które są generowane przez Microsoft C /C++ narzędzia kompilatora i tworzenia.
+Artykuły w tej sekcji dokumentacji wyjaśniają błąd diagnostyczny i komunikaty ostrzegawcze, które są generowane przez kompilator Microsoft CC++ /Compiler and Build Tools.
 
 [!INCLUDE[error-boilerplate](../includes/error-boilerplate.md)]
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[BSCMAKE błędy i ostrzeżenia (BKxxxx)](../tool-errors/bscmake-errors-bk1500-through-bk4505.md) \
-Błędy i ostrzeżenia wygenerowane przez przeglądanie informacji o konserwacji narzędzie Microsoft (BSCMAKE. Z ROZSZERZENIEM EXE).
+[BSCMAKE błędów i ostrzeżeń (BKxxxx)](../tool-errors/bscmake-errors-bk1500-through-bk4505.md) \
+Błędy i ostrzeżenia wygenerowane przez narzędzie do konserwacji przeglądanych informacji firmy Microsoft (BSCMAKE. EXE).
 
-[Błędy wiersza polecenia i ostrzeżenia](../tool-errors/command-line-errors-d8000-through-d9999.md) \
-Błędy i ostrzeżenia wygenerowane przez narzędzia do kompilacji w przypadku problemów z opcji wiersza polecenia.
+[Błędy i ostrzeżenia wiersza polecenia](../tool-errors/command-line-errors-d8000-through-d9999.md) \
+Błędy i ostrzeżenia wygenerowane przez narzędzia kompilacji dla opcji wiersza polecenia.
 
-[Błąd krytyczny błędy kompilatora od C999 - C1999](../compiler-errors-1/compiler-fatal-errors-c999-through-c1999.md) \
-Błędy, które zatrzymanie C++ kompilatora (CL. Z ROZSZERZENIEM EXE).
+[Błędy krytyczne kompilatora C999-C1999](../compiler-errors-1/compiler-fatal-errors-c999-through-c1999.md) \
+Błędy, które wstrzymują C++ KOMPILATOR (CL. EXE).
 
-[Błędy kompilatora C2001 - C3999](../compiler-errors-1/compiler-errors-c2001-through-c2099.md) \
-Błędy wykryte przez C++ kompilatora (CL. Z ROZSZERZENIEM EXE).
+[Błędy kompilatora C2001-C3999](../compiler-errors-1/compiler-errors-c2001-through-c2099.md) \
+Błędy wykryte przez C++ KOMPILATOR (CL. EXE).
 
-[Ostrzeżenia kompilatora od C4000 - C5999](../compiler-warnings/compiler-warnings-c4000-through-c4199.md) \
-Ostrzeżenia dotyczące problemów wykrytych przez C++ kompilatora (CL. Z ROZSZERZENIEM EXE).
+[Ostrzeżenia kompilatora C4000-C5999](../compiler-warnings/compiler-warnings-c4000-through-c4199.md) \
+Ostrzeżenia dotyczące problemów wykrytych C++ przez KOMPILATOR (CL. EXE).
 
 [Ostrzeżenia kompilatora według wersji kompilatora](../compiler-warnings/compiler-warnings-by-compiler-version.md) \
-Listę ostrzeżeń, wynikające z każdą wersją kompilatora.
+Lista ostrzeżeń wprowadzonych przez każdą wersję kompilatora.
 
-[Błędy środowiska wykonawczego języka C (Rxxxx)](../tool-errors/c-runtime-errors-r6002-through-r6035.md) \
-Błędy generowane w czasie wykonywania przez biblioteki środowiska uruchomieniowego C (CRT).
+[Błędy środowiska uruchomieniowego języka C (Rxxxx)](../tool-errors/c-runtime-errors-r6002-through-r6035.md) \
+Błędy generowane w czasie wykonywania przez bibliotekę środowiska uruchomieniowego języka C (CRT).
 
-[Błędy CVTRES i ostrzeżenia (CVTxxxx)](../tool-errors/cvtres-errors-cvt1100-through-cvt4001.md) \
-Błędy i ostrzeżenia wygenerowane przez zasobów plik do formatu COFF obiektu konwersji narzędzie Microsoft (CVTRES. Z ROZSZERZENIEM EXE).
+[CVTRES błędów i ostrzeżeń (CVTxxxx)](../tool-errors/cvtres-errors-cvt1100-through-cvt4001.md) \
+Błędy i ostrzeżenia wygenerowane przez plik zasobów firmy Microsoft do narzędzia konwersji obiektów COFF (CVTRES. EXE).
 
 [Błędy ewaluatora wyrażeń (CXXxxxx)](../tool-errors/expression-evaluator-errors-cxx0000-through-cxx0072.md) \
-Błędy generowane przez debuger i narzędzia diagnostyczne.
+Błędy generowane przez narzędzia debugera i diagnostyki.
 
-[Błędy i ostrzeżenia (LNKxxxx) narzędzi konsolidatora](../tool-errors/linker-tools-errors-and-warnings.md) \
-Błędy i ostrzeżenia wygenerowane przez konsolidator oraz narzędzia (LINK pokrewne. EXE, LIB. PLIK EXE DUMPBIN. PLIK EXE EDITBIN. Z ROZSZERZENIEM EXE).
+[Błędy i ostrzeżenia narzędzi konsolidatora (LNKxxxx)](../tool-errors/linker-tools-errors-and-warnings.md) \
+Błędy i ostrzeżenia wygenerowane przez konsolidator i powiązane narzędzia (LINK. EXE, LIB. EXE, POLECENIA DUMPBIN. EXE, POLECENIA EDITBIN. EXE).
 
 [Błędy matematyczne (Mxxxx)](../tool-errors/math-errors-m6101-through-m6205.md) \
-Błędy wygenerowane przez bibliotekę zmiennoprzecinkowym zapisu matematycznego środowiska uruchomieniowego.
+Błędy wygenerowane przez bibliotekę matematyczną zmiennoprzecinkową środowiska uruchomieniowego.
 
-[NMAKE błędy i ostrzeżenia (Uxxxx)](../tool-errors/nmake-errors-u1000-through-u4011.md) \
-Błędy i ostrzeżenia wygenerowane przez narzędzie Microsoft pliku reguł programu make (NMAKE. Z ROZSZERZENIEM EXE).
+[NMAKE błędów i ostrzeżeń (uXXXX)](../tool-errors/nmake-errors-u1000-through-u4011.md) \
+Błędy i ostrzeżenia wygenerowane przez narzędzie Microsoft Make Tool (NMAKE. EXE).
 
-[Optymalizacja sterowana profilem — błędy i ostrzeżenia (PGxxxx)](../tool-errors/profile-guided-optimization-errors-and-warnings.md) \
-Błędy i ostrzeżenia wygenerowane przez narzędzia Profile-Guided Optymalizacja (PGO).
+[Błędy i ostrzeżenia optymalizacji opartej na profilach (PGxxxx)](../tool-errors/profile-guided-optimization-errors-and-warnings.md) \
+Błędy i ostrzeżenia wygenerowane przez narzędzia optymalizacji opartej na profilach (PGO).
 
-[Błędy kompilacji projektu oraz ostrzeżenia (PRJxxxx)](../tool-errors/project-build-errors-and-warnings-prjxxxx.md) \
-Błędy i ostrzeżenia wygenerowane przez natywnych C++ projekt systemu w programie Visual Studio kompilacji.
+[Błędy i ostrzeżenia kompilacji projektu (PRJxxxx)](../tool-errors/project-build-errors-and-warnings-prjxxxx.md) \
+Błędy i ostrzeżenia wygenerowane przez natywny C++ system kompilacji projektu w programie Visual Studio.
 
-[Błędy kompilatora zasobów i ostrzeżenia (RCxxxx, RWxxxx)](../tool-errors/resource-compiler-errors-rc1000-through-rc4413.md) \
-Błędy i ostrzeżenia wygenerowane przez kompilator zasobów (RC. Z ROZSZERZENIEM EXE).
+[Błędy i ostrzeżenia kompilatora zasobów (RCxxxx, RWxxxx)](../tool-errors/resource-compiler-errors-rc1000-through-rc4413.md) \
+Błędy i ostrzeżenia wygenerowane przez kompilator zasobów (RC. EXE).
 
-[Komunikaty wektoryzatora i paralelizatora](../tool-errors/vectorizer-and-parallelizer-messages.md) \
-Komunikaty diagnostyczne wygenerowane wektoryzatora i paralelizatora opcjach optymalizacji w kompilatorze.
+[Wektoryzator i paralelizacji wiadomości](../tool-errors/vectorizer-and-parallelizer-messages.md) \
+Komunikaty diagnostyczne generowane przez opcje kompilatora optymalizacji wektoryzator i paralelizacji.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+[Domyślnie wyłączone ostrzeżenia kompilatora](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md) \
+ \ [odwołaniaC++ w języku C/Building](../../build/reference/c-cpp-building-reference.md)
 [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

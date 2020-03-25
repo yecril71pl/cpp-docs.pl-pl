@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b0a6d000309a709c528822870f910521f51100df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68821119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208311"
 ---
 > [!IMPORTANT]
 > Kompilatory i narzędzia kompilacji programu Visual Studio mogą raportować wiele rodzajów błędów i ostrzeżeń. Po znalezieniu błędu lub ostrzeżenia narzędzia do kompilacji mogą wprowadzić założenia dotyczące założeń kodu i podjąć próbę kontynuowania, aby można było zgłosić więcej problemów w tym samym czasie. Jeśli narzędzia te nie mają niewłaściwego założeń, późniejsze błędy lub ostrzeżenia mogą nie dotyczyć Twojego projektu. W przypadku rozwiązywania problemów w projekcie należy zawsze rozpoczynać się od pierwszego błędu lub ostrzeżenia, które zostało zgłoszone, i często ponownie skompilować. Jedna poprawka może spowodować, że wiele kolejnych błędów nie zniknie.

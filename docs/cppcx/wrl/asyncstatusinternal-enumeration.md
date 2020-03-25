@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398787"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214152"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal — Wyliczenie
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,31 +26,31 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>Uwagi
 
-Określa mapowanie między wewnętrznego wyliczenia stanu operacji asynchronicznych i `Windows::Foundation::AsyncStatus` wyliczenia.
+Określa mapowanie między wyliczeniem wewnętrznym dla stanu operacji asynchronicznych i wyliczeniem `Windows::Foundation::AsyncStatus`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 `_Created`<br/>
-Wartość równoważna `::Windows::Foundation::AsyncStatus::Created`
+Równoważne `::Windows::Foundation::AsyncStatus::Created`
 
 `_Started`<br/>
-Wartość równoważna `::Windows::Foundation::AsyncStatus::Started`
+Równoważne `::Windows::Foundation::AsyncStatus::Started`
 
 `_Completed`<br/>
-Wartość równoważna `::Windows::Foundation::AsyncStatus::Completed`
+Równoważne `::Windows::Foundation::AsyncStatus::Completed`
 
 `_Cancelled`<br/>
-Wartość równoważna `::Windows::Foundation::AsyncStatus::Cancelled`
+Równoważne `::Windows::Foundation::AsyncStatus::Cancelled`
 
 `_Error`<br/>
-Wartość równoważna `::Windows::Foundation::AsyncStatus::Error`
+Równoważne `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** async.h
+**Nagłówek:** Async. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)

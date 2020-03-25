@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214126"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy — Wyliczenie
 
-Wskazuje, jak operacja asynchroniczna użytkownika próba przejście w stan końcowy ukończone lub błąd powinien działać względem klient zażądał stanem anulowane.
+Wskazuje, w jaki sposób operacja asynchroniczna przechodzi do stanu końcowego zakończone lub błąd powinien zachowywać się w odniesieniu do stanu anulowanego przez klienta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,21 +26,21 @@ Wskazuje, jak operacja asynchroniczna użytkownika próba przejście w stan koń
 enum CancelTransitionPolicy;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Wartości
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`RemainCanceled`|Jeśli operacja asynchroniczna jest aktualnie klient zażądał stanem anulowane, oznacza to, że pozostaną ze stanem anulowane, w przeciwieństwie do terminal ukończone lub stan błędu.|
-|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie klient zażądał stanem anulowane, wskazuje to, że stan powinien przejść przy jego użyciu stanem anulowane na stan końcowy ukończone lub błąd zgodnie z ustaleniami wywołanie, które korzysta z tej flagi.|
+|`RemainCanceled`|Jeśli operacja asynchroniczna jest obecnie w stanie anulowania żądanym przez klienta, oznacza to, że pozostanie w stanie anulowanym w przeciwieństwie do przejścia do stanu zakończenia lub błędu terminalu.|
+|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie w stanie anulowania żądanym przez klienta, oznacza to, że stan powinien przejść z tego stanu, aby stan został anulowany lub błąd został określony przez wywołanie, które wykorzystuje tę flagę.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** async.h
+**Nagłówek:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

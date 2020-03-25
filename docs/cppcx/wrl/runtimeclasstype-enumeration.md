@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213580"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType — Wyliczenie
 
-Określa typ [RuntimeClass](runtimeclass-class.md) wystąpienia, która jest obsługiwana.
+Określa typ wystąpienia [RuntimeClass](runtimeclass-class.md) , które jest obsługiwane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,25 +24,25 @@ Określa typ [RuntimeClass](runtimeclass-class.md) wystąpienia, która jest obs
 enum RuntimeClassType;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Wartości
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`ClassicCom`|Klasa klasycznego środowiska uruchomieniowego COM.|
-|`Delegate`|Odpowiednikiem `ClassicCom`.|
-|`InhibitFtmBase`|Wyłącza `FtmBase` obsługi podczas `__WRL_CONFIGURATION_LEGACY__` nie został zdefiniowany.|
-|`InhibitWeakReference`|Wyłącza obsługę słabe odwołanie.|
-|`WinRt`|Klasa środowiska wykonawczego Windows.|
-|`WinRtClassicComMix`|Kombinacji `WinRt` i `ClassicCom`.|
+|`ClassicCom`|Klasyczna Klasa środowiska uruchomieniowego COM.|
+|`Delegate`|Równoważne `ClassicCom`.|
+|`InhibitFtmBase`|Wyłącza obsługę `FtmBase`, gdy `__WRL_CONFIGURATION_LEGACY__` nie jest zdefiniowany.|
+|`InhibitWeakReference`|Wyłącza obsługę słabej referencji.|
+|`WinRt`|Klasa środowisko wykonawcze systemu Windows.|
+|`WinRtClassicComMix`|Kombinacja `WinRt` i `ClassicCom`.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

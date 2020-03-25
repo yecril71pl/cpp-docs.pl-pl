@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Filtrowanie rekordów (ODBC)'
+title: 'Zestaw rekordów: filtrowanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e742ee02e142fd87df3f149379d9971c4acd166
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397864"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212914"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Zestaw rekordów: Filtrowanie rekordów (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Zestaw rekordów: filtrowanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie wyjaśniono, jak filtrować zestaw rekordów, tak, aby wybierało konkretnego podzbioru dostępnych rekordów. Na przykład można zaznaczyć klasy sekcji danego kursu, takich jak MATH101. Filtr jest warunek wyszukiwania zdefiniowane przez zawartość SQL **gdzie** klauzuli. Gdy w ramach dołącza je do instrukcji SQL zestawu rekordów, **gdzie** klauzuli ogranicza wybór.
+W tym temacie wyjaśniono sposób filtrowania zestawu rekordów w taki sposób, aby wybierał tylko określony podzestaw dostępnych rekordów. Na przykład można wybrać tylko sekcje klasy dla określonego kursu, takie jak MATH101. Filtr to warunek wyszukiwania zdefiniowany przez zawartość klauzuli **WHERE** języka SQL. Gdy struktura dołącza go do instrukcji SQL zestawu rekordów, klauzula **WHERE** ogranicza wybór.
 
-Po utworzenia obiekt, ale przed wywołaniem, musisz ustanowić filtr obiektem rekordem jego `Open` funkcji składowej (lub przed wywołaniem `Requery` funkcja elementu członkowskiego dla istniejącego zestawu rekordów obiektu, którego `Open` funkcja elementu członkowskiego ma wywołana wcześniej).
+Należy ustanowić filtr obiektu zestawu rekordów po utworzeniu obiektu, ale przed wywołaniem funkcji składowej `Open` (lub przed wywołaniem `Requery` funkcji składowej dla istniejącego obiektu zestawu rekordów, którego funkcja członkowska `Open` została wcześniej wywołana).
 
 #### <a name="to-specify-a-filter-for-a-recordset-object"></a>Aby określić filtr dla obiektu zestawu rekordów
 
-1. Utworzyć nowy obiekt zestawu rekordów (lub Przygotuj się do wywołania `Requery` istniejącego obiektu).
+1. Utwórz nowy obiekt zestawu rekordów (lub Przygotuj do wywołania `Requery` dla istniejącego obiektu).
 
-1. Ustaw wartość obiektu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) element członkowski danych.
+1. Ustaw wartość elementu członkowskiego danych [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) obiektu.
 
-   Filtr jest ciąg zakończony znakiem null znajduje się zawartość SQL **gdzie** klauzuli, ale nie — słowo kluczowe **gdzie**. Na przykład użyć:
+   Filtr jest ciągiem zakończonym wartością null, który zawiera zawartość klauzuli **WHERE** języka SQL, ale nie słowo kluczowe **WHERE**. Możesz na przykład użyć następujących usług:
 
     ```
     m_pSet->m_strFilter = "CourseID = 'MATH101'";
@@ -42,19 +42,19 @@ Po utworzenia obiekt, ale przed wywołaniem, musisz ustanowić filtr obiektem re
     ```
 
     > [!NOTE]
-    >  Ciąg literału "MATH101" jest wyświetlany w pojedynczy cudzysłów powyżej. W specyfikacji ODBC SQL apostrofy służą do oznaczania literału ciągu znaków. Zajrzyj do dokumentacji sterownika ODBC dla quoting wymagań systemu DBMS w takiej sytuacji. Ta składnia jest również omówiona dalsze pod koniec tego tematu.
+    >  Ciąg literału "MATH101" jest pokazywany w pojedynczym cudzysłowie powyżej. W specyfikacji ODBC SQL pojedyncze cudzysłowy są używane do określenia literału ciągu znaków. W tej sytuacji należy zapoznać się z dokumentacją sterownika ODBC dotyczącą wymagań w systemie DBMS. Ta składnia jest również omówiona w dalszej części końca tego tematu.
 
-1. Ustaw inne opcje, których potrzebujesz, takie jak kolejność sortowania, tryb blokowania lub parametrów. Określenie parametru jest szczególnie przydatne. Aby dowiedzieć się, jak parametryzacja filtru, zobacz [zestaw rekordów: Parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Ustaw inne potrzebne opcje, takie jak porządek sortowania, tryb blokowania lub parametry. Określanie parametru jest szczególnie przydatne. Aby uzyskać informacje o parametryzacja filtru, zobacz [zestaw rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-1. Wywołaj `Open` dla nowego obiektu (lub `Requery` wcześniej otwartych obiektu).
-
-> [!TIP]
->  Przy użyciu parametrów w filtrze prawdopodobnie jest to najwydajniejsza metoda pobierania rekordów.
+1. Wywołaj `Open` dla nowego obiektu (lub `Requery` dla wcześniej otwartego obiektu).
 
 > [!TIP]
->  Zestaw rekordów filtry są przydatne w przypadku [dołączania](../../data/odbc/recordset-performing-a-join-odbc.md) tabel i przy użyciu [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) na podstawie informacji uzyskanych lub obliczane w czasie wykonywania.
+>  Używanie parametrów w filtrze jest potencjalnie najbardziej wydajną metodą pobierania rekordów.
 
-Zestaw rekordów wybiera tylko te rekordy, które spełniają określony warunek wyszukiwania. Na przykład, aby określić filtr kurs opisanych powyżej (zakładając, że zmienna `strCourseID` ustawione, na przykład "MATH101"), wykonaj następujące czynności:
+> [!TIP]
+>  Filtry zestawu rekordów są przydatne w przypadku [sprzęgania](../../data/odbc/recordset-performing-a-join-odbc.md) tabel i używania [parametrów](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) na podstawie informacji uzyskanych lub obliczanych w czasie wykonywania.
+
+Zestaw rekordów wybiera tylko te rekordy, które spełniają określony warunek wyszukiwania. Na przykład, aby określić filtr kurs opisany powyżej (przy założeniu, że zmienna `strCourseID` obecnie ustawiona na wartość "MATH101"), wykonaj następujące czynności:
 
 ```
 // Using the recordset pointed to by m_pSet
@@ -68,29 +68,29 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset
 ```
 
-Zestaw rekordów zawiera rekordy dla wszystkich sekcji klasy MATH101.
+Zestaw rekordów zawiera rekordy dla wszystkich sekcji klasy dla MATH101.
 
-Zwróć uwagę, jak ciąg filtru został ustawiony w powyższym przykładzie, za pomocą zmiennej ciągu. Jest to typowy sposób użycia. Jednak Załóżmy, że chcesz określić wartość literału 100 dla identyfikatora kursu. Poniższy kod przedstawia sposób ustawiania ciągu filtru poprawnie z wartością literału:
+Zwróć uwagę, jak ciąg filtru został ustawiony w powyższym przykładzie przy użyciu zmiennej ciągu. Jest to typowy sposób użycia. Ale Załóżmy, że chcemy określić wartość literału 100 dla identyfikatora kursu. Poniższy kod pokazuje, jak prawidłowo ustawić ciąg filtru z wartością literału:
 
 ```
 m_strFilter = "StudentID = '100'";   // correct
 ```
 
-Zwróć uwagę na użycie znaków pojedynczego cudzysłowu. Jeśli ustawisz ciąg filtru bezpośrednio, ciąg filtru jest **nie**:
+Zwróć uwagę na użycie znaków pojedynczego cudzysłowu; Jeśli ustawisz ciąg filtru bezpośrednio, ciąg filtru **nie**będzie:
 
 ```
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Cytowanie, pokazanym powyżej jest zgodny ze specyfikacją ODBC, ale niektóre systemów DBMS, może być wymagane inne znaki cudzysłowu. Aby uzyskać więcej informacji, zobacz [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Cytowane pokazane powyżej jest zgodne ze specyfikacją ODBC, ale niektóre systemy DBMS mogą wymagać innych znaków cudzysłowu. Aby uzyskać więcej informacji, zobacz [SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Jeśli zdecydujesz się zastąpić ciąg SQL domyślnego zestawu rekordów, przekazując własne parametry SQL do `Open`, nie należy ustawiać filtr, jeśli zawiera tekst niestandardowy **gdzie** klauzuli. Aby uzyskać więcej informacji na temat zastępowania domyślny kod SQL zobacz [SQL: Dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Jeśli zdecydujesz się zastąpić domyślny ciąg SQL zestawu rekordów, przekazując własny ciąg SQL do `Open`, nie należy ustawiać filtru, jeśli niestandardowy ciąg zawiera klauzulę **WHERE** . Aby uzyskać więcej informacji na temat przesłaniania domyślnego SQL, zobacz [SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: sortowanie rekordów (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Zestaw rekordów: jak zestawy rekordów wybierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Zestaw rekordów: blokowanie rekordów (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

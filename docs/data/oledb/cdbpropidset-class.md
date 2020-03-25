@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212034"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet — Klasa
 
@@ -52,7 +52,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 OLE DB konsumenci używają struktur `DBPROPIDSET`, aby przekazywać tablicę identyfikatorów właściwości, dla których odbiorca chce uzyskać informacje o właściwościach. Właściwości identyfikowane w pojedynczej strukturze [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) należy do jednego zestawu właściwości.
 
-## <a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
 
 Dodaje identyfikator właściwości do zestawu identyfikatora właściwości.
 
@@ -87,7 +87,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 *identyfikatora właściwości*<br/>
 podczas Identyfikator właściwości, która ma zostać dodana do zestawu identyfikatora właściwości.
 
-## <a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
 
 Konstruktor. Inicjuje `rgProperties`, `cProperties`i (opcjonalnie) `guidPropertySet` pól struktury [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
@@ -109,7 +109,7 @@ podczas Identyfikator GUID służący do inicjowania pola `guidPropertySet`.
 *propidset*<br/>
 podczas Inny obiekt `CDBPropIDSet` na potrzeby konstruowania kopii.
 
-## <a name="setguid"></a>CDBPropIDSet:: SetGuid
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet:: SetGuid
 
 Ustawia pole GUID w strukturze `DBPROPIDSET`.
 
@@ -128,7 +128,7 @@ podczas Identyfikator GUID służący do ustawiania pola `guidPropertySet` struk
 
 To pole można również ustawić przez [konstruktora](../../data/oledb/cdbpropidset-cdbpropidset.md) . Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.
 
-## <a name="op_equal"></a>CDBPropIDSet:: operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet:: operator =
 
 Przypisuje zawartość jednego identyfikatora właściwości ustawionego na inny identyfikator właściwości.
 

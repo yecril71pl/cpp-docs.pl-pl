@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Poprawianie wydajności za pomocą typów ogólnych (C++sposób niezamierzony)'
+title: 'Instrukcje: Poprawianie wydajności za pomocą typów ogólnychC++(/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181944"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Instrukcje: Poprawianie wydajności za pomocą typów ogólnych (C++sposób niezamierzony)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Instrukcje: Poprawianie wydajności za pomocą typów ogólnychC++(/CLI)
 
-Za pomocą typów ogólnych można utworzyć na podstawie parametru typu kodu wielokrotnego użytku. Rzeczywisty typ parametru typu jest odroczone do czasu wywołania przez kod klienta. Aby uzyskać więcej informacji na temat typów ogólnych, zobacz [ogólne](generics-cpp-component-extensions.md).
+W przypadku typów ogólnych można utworzyć kod wielokrotnego użytku oparty na parametrze typu. Rzeczywisty typ parametru typu jest odroczony do momentu wywołania przez kod klienta. Aby uzyskać więcej informacji na temat typów ogólnych, zobacz [typy ogólne](generics-cpp-component-extensions.md).
 
-W tym artykule przedstawimy, jak ogólne może pomóc zwiększyć wydajność aplikacji korzystającej z kolekcji.
+W tym artykule omówiono sposób, w jaki typy ogólne mogą pomóc zwiększyć wydajność aplikacji korzystającej z kolekcji.
 
 ## <a name="example"></a>Przykład
 
-.NET Framework, który jest dostarczany z wielu klas kolekcji przestrzeni <xref:System.Collections?displayProperty=fullName> przestrzeni nazw. Większość tych kolekcji działają na obiektach typu <xref:System.Object?displayProperty=fullName>. Dzięki temu kolekcji do przechowywania dowolnego typu, ponieważ wszystkie typy w .NET Framework, nawet typy wartości pochodzą z <xref:System.Object?displayProperty=fullName>. Istnieją dwie wady tego podejścia.
+.NET Framework zawiera wiele klas kolekcji w przestrzeni nazw <xref:System.Collections?displayProperty=fullName>. Większość z tych kolekcji działa na obiektach typu <xref:System.Object?displayProperty=fullName>. Dzięki temu kolekcje mogą przechowywać dowolny typ, ponieważ wszystkie typy w .NET Framework typy wartości parzystych pochodzą z <xref:System.Object?displayProperty=fullName>. Istnieją jednak dwie wady tego podejścia.
 
-Po pierwsze, jeśli kolekcja jest przechowywania typów wartości, takich jak liczb całkowitych, wartość musi być opakowany przed dodaniem do kolekcji i rozpakowywany, gdy wartość jest pobierana z kolekcji. Są to kosztownych operacji.
+Po pierwsze, jeśli kolekcja przechowuje typy wartości, takie jak liczby całkowite, wartość musi być opakowana przed dodaniem do kolekcji i nieopakowany, gdy wartość jest pobierana z kolekcji. Są to kosztowne operacje.
 
-Po drugie nie ma możliwości kontrolować, które typy mogą być dodawane do kolekcji. Jest idealnie legalne, aby dodać liczbę całkowitą i ciąg do tej samej kolekcji, nawet jeśli jest to, co prawdopodobnie nie był przeznaczony. W związku z tym aby swój kod jest bezpiecznym typem, należy sprawdzić, czy typ pobierane z kolekcji naprawdę oczekiwanym.
+Po drugie nie istnieje sposób sterowania tym, które typy można dodać do kolekcji. Dobrze jest dodać liczbę całkowitą i ciąg do tej samej kolekcji, nawet jeśli jest to prawdopodobnie nieoczekiwane. W związku z tym, aby kod był bezpieczny, należy sprawdzić, czy typ pobrany z kolekcji rzeczywiście jest oczekiwany.
 
-Poniższy przykład kodu pokazuje dwa główne minusy kolekcji .NET Framework przed typów ogólnych.
+Poniższy przykład kodu przedstawia dwa główne wady kolekcji .NET Framework przed ogólnymi.
 
 ```cpp
 // perf_pre_generics.cpp
@@ -80,9 +80,9 @@ Popped an int: 7
 
 ## <a name="example"></a>Przykład
 
-Nowy <xref:System.Collections.Generic?displayProperty=fullName> przestrzeń nazw zawiera wiele można znaleźć w kolekcji ten sam <xref:System.Collections?displayProperty=fullName> przestrzeni nazw, ale zostały zmodyfikowane w celu akceptowania parametrów typu genetycznego. Eliminuje to dwie wady innych niż ogólne kolekcje: pakowania i rozpakowywania typów wartości i z brakiem, aby określić typy, które mają być przechowywane w kolekcjach. Operacje na dwie kolekcje są identyczne; różnią się tylko po to, w jaki sposób są tworzone.
+Nowa przestrzeń nazw <xref:System.Collections.Generic?displayProperty=fullName> zawiera wiele z tych samych kolekcji znalezionych w przestrzeni nazw <xref:System.Collections?displayProperty=fullName>, ale zostały zmodyfikowane w celu akceptowania parametrów typu ogólnego. Eliminuje to dwie wady nieogólnych kolekcji: opakowanie i rozpakowywanie typów wartości i niemożność określenia typów, które mają być przechowywane w kolekcjach. Operacje w dwóch kolekcjach są identyczne. różnią się one tylko sposobem tworzenia wystąpienia.
 
-Porównaj przykład powyżej napisanych przy użyciu następującego przykładu, który korzysta z ogólnego <xref:System.Collections.Generic.Stack%601> kolekcji. W dużych kolekcjach, które są często używane wydajności, w tym przykładzie będzie znacznie większa niż poprzedniego przykładu.
+Porównaj przykład zapisany powyżej z tym przykładem, który używa ogólnej kolekcji <xref:System.Collections.Generic.Stack%601>. W przypadku dużych kolekcji, które są często używane, wydajność tego przykładu będzie znacznie większa niż w poprzednim przykładzie.
 
 ```cpp
 // perf_post_generics.cpp
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

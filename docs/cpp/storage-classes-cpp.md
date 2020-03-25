@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178551"
 ---
 # <a name="storage-classes"></a>Klasy magazynu
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447318"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>ruchom
+## <a name="static"></a><a name="static"></a>ruchom
 
 **Statycznego** słowa kluczowego można użyć do deklarowania zmiennych i funkcji w zakresie globalnym, zakresie przestrzeni nazw i zakresu klasy. Zmienne statyczne mogą być również deklarowane w zakresie lokalnym.
 
@@ -155,11 +155,11 @@ var == value
 
 Począwszy od języka C++ 11, inicjowanie statycznej zmiennej lokalnej jest zagwarantowane bezpieczny wątkowo. Ta funkcja jest czasami nazywana *Magic statics*. Jednak w aplikacji wielowątkowej wszystkie kolejne przypisania muszą zostać zsynchronizowane. Funkcję inicjalizacji statycznej z bezpiecznym wątkiem można wyłączyć za pomocą flagi [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) , aby uniknąć tworzenia zależności na CRT.
 
-## <a name="extern"></a>modyfikator
+## <a name="extern"></a><a name="extern"></a>modyfikator
 
 Obiekty i zmienne zadeklarowane jako **extern** deklarują obiekt, który jest zdefiniowany w innej jednostce translacji lub w otaczającym zakresie jako mający połączenie zewnętrzne. Aby uzyskać więcej informacji, [Zobacz](extern-cpp.md) zewnętrzne [jednostki i powiązania](program-and-linkage-cpp.md).
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Zmienna zadeklarowana ze specyfikatorem **thread_local** jest dostępna tylko w wątku, w którym został utworzony. Zmienna jest tworzona podczas tworzenia wątku i niszczona, gdy wątek zostanie zniszczony. Każdy wątek ma własną kopię zmiennej. W systemie Windows **thread_local** jest funkcjonalnie równoważny z atrybutem [__declspec (wątek)](../cpp/thread.md) specyficznym dla firmy Microsoft.
 
@@ -194,7 +194,7 @@ Rzeczy do zanotowania dotyczące specyfikatora **thread_local** :
 
 W systemie Windows **thread_local** jest funkcjonalnie odpowiednikiem [__declspec (thread)](../cpp/thread.md) , z wyjątkiem tego, że **__declspec (thread)** można zastosować do definicji typu i jest on prawidłowy w kodzie C. Jeśli to możliwe, użyj **thread_local** , ponieważ jest częścią C++ standardu i dlatego jest bardziej przenośne.
 
-##  <a name="register"></a>zarejestrować
+##  <a name="register"></a><a name="register"></a>zarejestrować
 
 **Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): słowo kluczowe **register** nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości.
 

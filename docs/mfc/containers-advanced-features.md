@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214360"
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 
@@ -27,7 +27,7 @@ W tym artykule opisano kroki niezbędne do uwzględnienia opcjonalnych zaawansow
 
 - [Łącze OLE do osadzonego obiektu](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a>Tworzenie aplikacji kontenera/serwera
+##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Tworzenie aplikacji kontenera/serwera
 
 Aplikacja kontenera/serwera to aplikacja, która działa zarówno jako kontener, jak i serwer. Przykładem tego programu jest program Microsoft Word dla systemu Windows. Możesz osadzić program Word for Windows Documents w innych aplikacjach, a także osadzić elementy w programie Word dla dokumentów systemu Windows. Proces modyfikowania aplikacji kontenera jako kontenera i pełnego serwera (nie można utworzyć kombinacji kontenera/aplikacji miniserver) jest podobny do procesu tworzenia pełnego serwera.
 
@@ -41,11 +41,11 @@ Artykuł [serwery: implementacja serwera](../mfc/servers-implementing-a-server.m
 
    Na przykład [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE przykład osadzony element utworzony przez aplikację kontener/serwer. Otwórz aplikację OCLIENT i w miejscu Edytuj element utworzony przez aplikację kontener/serwer. Podczas edytowania elementu aplikacji użytkownik decyduje o osadzeniu elementu utworzonego przez przykładową [HIERSVR](../overview/visual-cpp-samples.md)MFC OLE. W tym celu nie można użyć aktywacji w miejscu. Aby aktywować ten element, należy w pełni otworzyć HIERSVR. Ponieważ biblioteka MFC nie obsługuje tej funkcji OLE, zastępowanie `COleClientItem::CanActivate` pozwala na sprawdzenie tej sytuacji i uniemożliwienie możliwego błędu czasu wykonywania w aplikacji.
 
-Jeśli tworzysz nową aplikację i chcesz, aby działała ona jako aplikacja kontenera/serwera, wybierz tę opcję w oknie dialogowym Opcje OLE w Kreatorze aplikacji, a ta obsługa zostanie utworzona automatycznie. Aby uzyskać więcej informacji, zobacz [Omówienie artykułu: Tworzenie kontenera kontrolki ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Aby uzyskać informacje na temat przykładów MFC, zobacz MFC Samples.
+Jeśli tworzysz nową aplikację i chcesz, aby działała ona jako aplikacja kontenera/serwera, wybierz tę opcję w oknie dialogowym Opcje OLE w Kreatorze aplikacji, a ta obsługa zostanie utworzona automatycznie. Aby uzyskać więcej informacji, zobacz [Omówienie artykułu: Tworzenie kontenera kontrolki ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Aby uzyskać informacje na temat przykładów MFC, zobacz [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
 Należy pamiętać, że nie można wstawić aplikacji MDI do samej siebie. Aplikacji, która jest kontenerem/serwerem, nie można wstawić do samego siebie, chyba że jest to aplikacja SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a>Linki do osadzonych obiektów
+##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Linki do osadzonych obiektów
 
 Funkcja linków do obiektów osadzonych umożliwia użytkownikowi utworzenie dokumentu z linkiem OLE do osadzonego obiektu wewnątrz aplikacji kontenera. Na przykład Utwórz dokument w edytorze tekstów zawierający osadzony arkusz kalkulacyjny. Jeśli aplikacja obsługuje linki do osadzonych obiektów, może wkleić link do arkusza kalkulacyjnego zawartego w dokumencie edytora tekstów. Ta funkcja pozwala aplikacji na korzystanie z informacji zawartych w arkuszu kalkulacyjnym bez znajomości tego, gdzie został pierwotnie uzyskany przez procesor wyrazów.
 

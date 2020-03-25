@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210980"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
 
-Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz go potrzebować, ponieważ:
+Upewnij się, że naprawdę potrzebujesz dynamicznego powiązania kolumn. Może być konieczne, ponieważ:
 
 - Kolumny zestawu wierszy nie są zdefiniowane w czasie kompilacji.
 
-- Obsługujesz element, na przykład zakładki, która dodaje kolumn.
+- Obsługiwany jest element, taki jak zakładka, która dodaje kolumny.
 
-## <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn
+## <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne wiązanie kolumn
 
-1. Usuń wszystkie `PROVIDER_COLUMN_MAP`s w kodzie.
+1. Usuń wszystkie `PROVIDER_COLUMN_MAP`s z kodu.
 
-1. W rekordzie użytkownika (struktura) dodaj następującą deklarację:
+1. W rekordzie użytkownika (struktury) Dodaj następującą deklarację:
 
     ```cpp
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Implementowanie `GetColumnInfo` funkcji. Ta funkcja określa się, jak informacje są przechowywane. Konieczne może być pobieranie właściwości lub inne informacje dla tej funkcji. Możesz chcieć utworzyć makro, podobnie jak [COLUMN_ENTRY](../../data/oledb/column-entry.md) makra, aby dodać własne informacje.
+1. Zaimplementuj funkcję `GetColumnInfo`. Ta funkcja określa sposób przechowywania informacji. Może być konieczne uzyskanie właściwości lub innych informacji dotyczących tej funkcji. Możesz chcieć utworzyć makro, podobnie jak makro [COLUMN_ENTRY](../../data/oledb/column-entry.md) , aby dodać własne informacje.
 
-   W poniższym przykładzie przedstawiono `GetColumnInfo` funkcji.
+   Poniższy przykład przedstawia funkcję `GetColumnInfo`.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -86,6 +86,6 @@ Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz 
     }
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

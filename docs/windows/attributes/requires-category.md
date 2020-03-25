@@ -1,21 +1,21 @@
 ---
-title: requires_category — (C++ atrybutów COM)
+title: requires_category (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214555"
 ---
-# <a name="requirescategory"></a>requires_category
+# <a name="requires_category"></a>requires_category
 
-Określa kategorie wymaganego składnika klasy docelowej.
+Określa kategorie wymaganych składników klasy docelowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,13 +31,13 @@ Identyfikator wymaganej kategorii.
 
 ## <a name="remarks"></a>Uwagi
 
-**Requires_category —** C++ atrybut określa kategorii składników wymaganych przez klasy docelowej. Aby uzyskać więcej informacji, zobacz [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
+Atrybut **requires_category** C++ określa kategorie składników wymagane przez klasę docelową. Aby uzyskać więcej informacji, zobacz [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
-Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod wymaga, że obiekt implementować Kategoria kontroli.
+Poniższy kod wymaga, aby obiekt zaimplementował kategorię kontroli.
 
 ```cpp
 // cpp_attr_ref_requires_category.cpp
@@ -59,14 +59,14 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)<br/>
 [implements_category](implements-category.md)

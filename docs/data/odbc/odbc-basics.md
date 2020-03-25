@@ -8,63 +8,63 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213216"
 ---
 # <a name="odbc-basics"></a>Podstawy ODBC
 
-Ten temat zawiera podstawowe informacje z Open Database Connectivity (ODBC):
+Ten temat zawiera podstawowe informacje dotyczące Open Database Connectivity (ODBC):
 
-- [Jak działa ODBC z klasami bazy danych](../../data/odbc/odbc-and-the-database-classes.md)
+- [Jak działa ODBC z klasami baz danych](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [Jak sterowniki ODBC odnoszą się do zestawów dynamicznych](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [Jak sterowniki ODBC działają z dynamicznymi](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [Jakie ODBC — składniki potrzebne do ponownej dystrybucji ze swoimi aplikacjami](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [Jakie składniki ODBC potrzebne do rozdzielenia z aplikacjami](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-Należy również przeczytać temat pokrewny [ODBC: ODBC — Biblioteka kursorów](../../data/odbc/odbc-the-odbc-cursor-library.md).
-
-> [!NOTE]
-> ODBC — źródła danych są dostępne za pośrednictwem klas MFC ODBC, zgodnie z opisem w tym temacie lub przy użyciu klas MFC obiekt DAO (Data Access).
+Warto również zapoznać się z tematem [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
-> Klasy MFC ODBC obsługują standardu Unicode i wielowątkowości. Aby uzyskać więcej informacji na temat obsługi wielowątkowości, zobacz [klasy i wątki ODBC](../../data/odbc/odbc-classes-and-threads.md)
+> Źródła danych ODBC są dostępne za pośrednictwem klas MFC ODBC, zgodnie z opisem w tym temacie lub za pośrednictwem klas obiektów dostępu do danych MFC (DAO).
 
-ODBC jest interfejsu poziom wywołań, który umożliwia aplikacjom dostęp do danych w dowolnej bazie danych, dla których ma sterownika ODBC. Przy użyciu interfejsu ODBC, możesz tworzyć aplikacje bazy danych dzięki dostępowi do każdej bazy danych, dla którego użytkownikowi końcowemu ma sterownik ODBC. ODBC udostępnia interfejs API, który umożliwia aplikacji niezależnie od system zarządzania bazami danych źródła (danych DBMS).
+> [!NOTE]
+> Klasy MFC ODBC obsługują kodowanie Unicode i wielowątkowość. Aby uzyskać więcej informacji na temat obsługi wielowątkowości, zobacz [klasy i wątki ODBC](../../data/odbc/odbc-classes-and-threads.md)
 
-ODBC jest bazy danych programu Microsoft Windows otwórz usług architektury (WOSA), czyli interfejsu, który umożliwia oparte na Windows aplikacji klasycznych, połączyć się z wielu środowiskach obliczeniowych bez konieczności ponownego zapisu aplikacji dla każdej platformy.
+ODBC jest interfejsem na poziomie wywołań, który umożliwia aplikacjom dostęp do danych w dowolnej bazie danych, dla której istnieje sterownik ODBC. Korzystając z ODBC, można tworzyć aplikacje bazy danych z dostępem do dowolnej bazy danych, dla której użytkownik końcowy ma sterownik ODBC. ODBC oferuje interfejs API, który umożliwia aplikacji niezależne od systemu zarządzania bazami danych (DBMS).
+
+ODBC jest częścią bazy danych Microsoft Windows Open Services Architecture (WOSA), która jest interfejsem, który umożliwia aplikacjom klasycznym opartym na systemie Windows łączenie się z wieloma środowiskami obliczeniowymi bez ponownego zapisywania aplikacji dla każdej platformy.
 
 Poniżej przedstawiono składniki ODBC:
 
-- ODBC API
+- INTERFEJS API ODBC
 
-   Wywołuje bibliotekę funkcji, zestaw kodów błędów i standard [SQL](../../data/odbc/sql.md) składni do uzyskiwania dostępu do danych dotyczących systemów DBMS.
+   Biblioteka wywołań funkcji, zestaw kodów błędów oraz standardowa składnia [SQL](../../data/odbc/sql.md) służąca do uzyskiwania dostępu do danych w systemie DBMS.
 
 - Menedżer sterowników ODBC
 
-   Biblioteka dołączana dynamicznie (Odbc32.dll), który ładuje sterowników ODBC w imieniu aplikacji. Ta biblioteka DLL jest niewidoczny dla aplikacji.
+   Biblioteka dołączana dynamicznie (biblioteki odbc32. dll), która ładuje sterowniki ODBC bazy danych w imieniu aplikacji. Ta biblioteka DLL jest niewidoczna dla aplikacji.
 
-- Sterowników ODBC
+- Sterowniki baz danych ODBC
 
-   Jeden lub więcej bibliotek DLL, które przetwarzają wywołania funkcji ODBC dla określonych systemów DBMS. Aby uzyskać listę sterowników dostarczony, zobacz [lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
+   Co najmniej jedna biblioteka DLL, która przetwarza wywołania funkcji ODBC dla określonych systemów DBMS. Aby zapoznać się z listą dostarczonych sterowników, zobacz [listę sterowników ODBC](../../data/odbc/odbc-driver-list.md).
 
 - [Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-   Biblioteka dołączana dynamicznie (Odbccr32.dll), znajduje się między Menedżera sterowników ODBC i sterowników, który obsługuje przewijanie danych.
+   Biblioteka dołączana dynamicznie (Odbccr32. dll), która znajduje się między menedżerem sterowników ODBC a sterownikami i obsługuje przewijanie danych.
 
 - [Administrator ODBC](../../data/odbc/odbc-administrator.md)
 
-   Narzędzie używane podczas konfigurowania DBMS, aby udostępnić go jako źródło danych dla aplikacji.
+   Narzędzie służące do konfigurowania systemu DBMS, aby było dostępne jako źródło danych dla aplikacji.
 
-Aplikacja uzyskuje niezależność od systemów DBMS pracy za pośrednictwem sterownika ODBC napisanych specjalnie dla systemu DBMS, a nie praca bezpośrednio z systemu DBMS. Sterownik tłumaczy wywołuje polecenia użyć jego DBMS, upraszczanie pracy dewelopera i udostępniając szerokiej gamy źródeł danych.
+Aplikacja uzyskuje niezależność od systemów DBMS przez przechodzenie przez sterownik ODBC przeznaczony dla systemu DBMS zamiast pracy bezpośrednio z systemem DBMS. Sterownik tłumaczy wywołania na polecenia, których może używać System DBMS, upraszczając pracę dewelopera i udostępniając go dla szerokiego zakresu źródeł danych.
 
-Klasy bazy danych obsługują dowolnego źródła danych, do której masz sterownika ODBC. Na przykład może to obejmować, relacyjnej bazy danych, bazę danych indeksowane metody dostępu sekwencyjnego (ISAM), arkusz kalkulacyjny programu Excel lub plik tekstowy. Sterowniki ODBC Zarządzanie połączenia ze źródłem danych, a SQL służy do wybierania rekordów z bazy danych.
+Klasy baz danych obsługują wszystkie źródła danych, dla których masz sterownik ODBC. Może to obejmować na przykład relacyjną bazę danych, indeksowaną bazę danych metody dostępu sekwencyjnego (ISAM), arkusz kalkulacyjny programu Microsoft Excel lub plik tekstowy. Sterowniki ODBC zarządzają połączeniami ze źródłem danych, a SQL służy do wybierania rekordów z bazy danych.
 
-Lista sterowników ODBC zawarte w tej wersji programu Visual C++ i informacji na temat uzyskiwania dodatkowych sterowników, zobacz [lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
+Aby uzyskać listę sterowników ODBC uwzględnionych w tej wersji programu Visual C++ i uzyskać informacje o uzyskiwaniu dodatkowych sterowników, zobacz [Lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

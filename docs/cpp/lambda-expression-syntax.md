@@ -4,28 +4,28 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9ac2fdea1a8fc8dcf2b03059455c3141daf86aa8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222388"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179656"
 ---
 # <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda
 
-W tym artykule przedstawiono składnię i elementy strukturalne wyrażeń lambda. Aby uzyskać opis wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).
+W tym artykule przedstawiono składnię i elementy strukturalne wyrażeń lambda. Aby uzyskać opis wyrażeń lambda, zobacz [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="function-objects-vs-lambdas"></a>A obiekty funkcji Wyrażenia Lambda
+## <a name="function-objects-vs-lambdas"></a>Obiekty funkcyjne vs. wyrażenia lambda
 
-Podczas pisania kodu, prawdopodobnie używasz wskaźników funkcji i obiektów funkcyjnych do rozwiązywania problemów i wykonywania obliczeń, zwłaszcza gdy używasz [algorytmami standardowej biblioteki C++](../cpp/algorithms-modern-cpp.md). Wskaźniki funkcji, jak i obiekty funkcyjne mają zalety i wady — na przykład wskaźniki funkcji mają minimalne obciążenie składniowe, ale nie przechowują stanu w zakresie i obiekty funkcyjne mogą przechowywać stan, lecz wymagają obciążenia składniowego definicji klasy.
+Gdy piszesz kod, prawdopodobnie używasz wskaźników funkcji i obiektów funkcyjnych do rozwiązywania problemów i wykonywania obliczeń, szczególnie w przypadku korzystania [ C++ z algorytmów biblioteki standardowej](../cpp/algorithms-modern-cpp.md). Wskaźniki funkcji i obiekty funkcji każdy ma zalety i wady — na przykład wskaźniki funkcji mają minimalny narzut na składnię, ale nie są zachowywane w zakresie, a obiekty funkcyjne mogą zachować stan, ale wymagają obciążenia składniowego Definicja klasy.
 
-Lambda łączy korzyści wskaźników funkcji i obiektów funkcyjnych, unikając ich wad. Podobnie jak obiekty funkcyjne Wyrażenie lambda jest elastyczne i może zachowywać stan, ale w przeciwieństwie do obiektów funkcyjnych jego zwarta składnia nie wymaga definicji klasy jawne. Używając wyrażeń lambda, można pisać kod, który jest mniej skomplikowany i mniej podatny na błędy niż kod dla odpowiadających im obiektów funkcyjnych.
+Lambda łączy korzyści wskaźników funkcji i obiektów funkcyjnych, unikając ich wad. Podobnie jak w przypadku obiektów Functions, wyrażenie lambda jest elastyczne i może zachować stan, ale w przeciwieństwie do obiektu funkcji, jego zwarta składnia nie wymaga jawnej definicji klasy. Używając wyrażeń lambda, można pisać kod, który jest mniej skomplikowany i mniej podatny na błędy niż kod dla odpowiadających im obiektów funkcyjnych.
 
-W następującym przykładzie porównano użycie wyrażenia lambda z użyciem obiektu funkcyjnego. W pierwszym przykładzie użyto wyrażenia lambda można wyświetlić w konsoli czy każdy element w `vector` obiekt jest parzysta lub nieparzysta. W drugim przykładzie użyto obiektu funkcyjnego do zrealizowania tego samego zadania.
+W następującym przykładzie porównano użycie wyrażenia lambda z użyciem obiektu funkcyjnego. Pierwszy przykład używa wyrażenia lambda do drukowania do konsoli, czy każdy element w obiekcie `vector` jest parzysty, czy nieparzysty. W drugim przykładzie użyto obiektu funkcyjnego do zrealizowania tego samego zadania.
 
-## <a name="example-1-using-a-lambda"></a>Przykład 1: Używanie wyrażenia Lambda
+## <a name="example-1-using-a-lambda"></a>Przykład 1: Używanie wyrażenia lambda
 
-Ten przykład przekazuje wyrażenia lambda **for_each** funkcji. Wyrażenie lambda drukuje wynik z informacją, czy każdy element w `vector` obiekt jest parzysta lub nieparzysta.
+Ten przykład przekazuje wyrażenie lambda do funkcji **for_each** . Lambda drukuje wynik informujący, czy każdy element w obiekcie `vector` jest parzysty, czy nieparzysty.
 
 ### <a name="code"></a>Kod
 
@@ -79,13 +79,13 @@ There are 4 even numbers in the vector.
 
 ### <a name="comments"></a>Komentarze
 
-W przykładzie trzeci argument **for_each** funkcji jest wyrażeniem lambda. `[&evenCount]` Część określa klauzulę przechwytywania wyrażenia, `(int n)` Określa listę parametrów, a pozostała część określa treść wyrażenia.
+W przykładzie trzeci argument funkcji **for_each** jest wyrażeniem lambda. Część `[&evenCount]` określa klauzulę przechwytywania wyrażenia, `(int n)` określa listę parametrów, a pozostała część określa treść wyrażenia.
 
 ## <a name="example-2-using-a-function-object"></a>Przykład 2: Używanie obiektu funkcyjnego
 
-Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie użyto obiektu funkcyjnego zamiast wyrażenia lambda, wraz z **for_each** funkcji w celu uzyskania tych samych wyników jak z przykładu 1. Oba przykłady przechowują liczbę liczb parzystych w `vector` obiektu. Aby utrzymywać stan operacji `FunctorClass` klasa przechowuje `m_evenCount` zmiennych przez odwołanie jako zmienną składową. Do wykonania tej operacji `FunctorClass` implementuje operator wywołania funkcji **operator()**. Microsoft C++ kompilator generuje kod, który jest porównywalny rozmiar oraz wydajność kodem wyrażenia lambda z przykładu 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.
+Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie przy użyciu obiektu Function zamiast lambda wraz z funkcją **for_each** można generować te same wyniki jako przykład 1. Oba przykłady przechowują liczbę parzystych liczb w obiekcie `vector`. Aby zachować stan operacji, Klasa `FunctorClass` przechowuje zmienną `m_evenCount` przez odwołanie jako zmienną członkowską. Aby wykonać operację, `FunctorClass` implementuje operator wywołania funkcji, **operator ()** . Kompilator firmy C++ Microsoft generuje kod, który jest porównywalny w rozmiarze i wydajności do kodu lambda w przykładzie 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.
 
-Aby uzyskać więcej informacji na temat **operator()**, zobacz [wywołania funkcji](../cpp/function-call-cpp.md). Aby uzyskać więcej informacji na temat **for_each** funkcji, zobacz [for_each](../standard-library/algorithm-functions.md#for_each).
+Aby uzyskać więcej informacji na temat **operatora ()** , zobacz [wywołanie funkcji](../cpp/function-call-cpp.md). Aby uzyskać więcej informacji na temat funkcji **for_each** , zobacz [for_each](../standard-library/algorithm-functions.md#for_each).
 
 ### <a name="code"></a>Kod
 
@@ -157,11 +157,11 @@ int main()
 There are 4 even numbers in the vector.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md)<br/>
-[Generowanie](../standard-library/algorithm-functions.md#generate)<br/>
+[utworzenie](../standard-library/algorithm-functions.md#generate)<br/>
 [generate_n](../standard-library/algorithm-functions.md#generate_n)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)<br/>
 [Specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: obiekt (atrybut COM C++)
+title: Object (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407539"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214693"
 ---
 # <a name="object-c"></a>object (C++)
 
-Określa niestandardowy interfejs.
+Identyfikuje niestandardowy interfejs.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ Określa niestandardowy interfejs.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy poprzedzających definicję interfejsu **obiektu** C++ atrybutu powoduje, że interfejs, który ma być umieszczony w pliku .idl, jako niestandardowego interfejsu.
+W przypadku powyższej definicji interfejsu atrybut **Object** C++ powoduje umieszczenie interfejsu w pliku. idl jako interfejsu niestandardowego.
 
-Dowolny interfejs oznaczona za pomocą obiektu musi dziedziczyć `IUnknown`. Ten warunek jest spełniony, jeśli dowolne interfejsy podstawowe dziedziczyć `IUnknown`. Jeśli nie interfejsy podstawowe dziedziczą z `IUnknown`, kompilator spowoduje, że interfejs oznaczone **obiektu** wyprowadzenia z `IUnknown`.
+Wszystkie interfejsy oznaczone atrybutem Object muszą dziedziczyć po `IUnknown`. Ten warunek jest spełniony, jeśli którykolwiek z interfejsów podstawowych dziedziczy po `IUnknown`. Jeśli żadne interfejsy podstawowe nie dziedziczą z `IUnknown`, kompilator spowoduje, że interfejs oznaczony przy użyciu **obiektu** zostanie utworzony z `IUnknown`.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [nonbrowsable —](nonbrowsable.md) przykład sposobu użycia **obiektu**.
+Zobacz [nonbrowsable](nonbrowsable.md) , aby zapoznać się z przykładem użycia **obiektu**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -41,12 +41,12 @@ Zobacz [nonbrowsable —](nonbrowsable.md) przykład sposobu użycia **obiektu**
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

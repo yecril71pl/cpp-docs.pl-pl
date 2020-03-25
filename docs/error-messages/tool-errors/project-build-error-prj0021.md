@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0021
 ms.assetid: bcab794d-4a6d-4b4d-aaca-73676c0cec75
-ms.openlocfilehash: c815e821b4049a0fc35a04cab284bf9b6e80864b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f838bc2fdf03b2e1056e76caa7a06155f5535e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192396"
 ---
 # <a name="project-build-error-prj0021"></a>Błąd PRJ0021 kompilacji projektu
 
-> Narzędzie '*narzędzie*", właściwość"*właściwość*' zawiera niepoprawną nazwę pliku.
+> Narzędzie "*Narzędzie*", właściwość "*Property*" zawiera nieprawidłową nazwę pliku.
 
-Nazwa pliku określona we właściwości *właściwość* narzędzia *narzędzie* był nieprawidłowy.
+Nazwa pliku określona we *Właściwości* właściwości *Narzędzia* narzędzia była nieprawidłowa.
 
-Być może użyto nieznanego lub nieprawidłowego — makro.
+Być może użyto nieznanego lub nieprawidłowego makra.
 
-Zobacz [ustawienie właściwości projektu Visual C++](../../build/working-with-project-properties.md) informacji na temat uzyskiwania dostępu do właściwości projektu.
+Aby uzyskać informacje na temat sposobu uzyskania dostępu do właściwości projektu, zobacz [Ustawianie właściwości projektu wizualnego C++ ](../../build/working-with-project-properties.md) .

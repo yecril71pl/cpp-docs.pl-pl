@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180979"
 ---
 # <a name="class-c"></a>klasa (C++)
 
-**Klasy** — słowo kluczowe deklaruje typu klasy lub definiuje obiekt typu klasy.
+Słowo kluczowe **Class** deklaruje typ klasy lub definiuje obiekt typu klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,34 +31,34 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parametry
 
-*template-spec*<br/>
-Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [szablony](templates-cpp.md).
+*szablon — Specyfikacja*<br/>
+Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zapoznaj się z [szablonami](templates-cpp.md).
 
 *class*<br/>
-**Klasy** — słowo kluczowe.
+Słowo kluczowe **Class** .
 
-*ms-decl-spec*<br/>
-Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.
+*MS-decl-spec*<br/>
+Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zapoznaj się ze słowem kluczowym [__declspec](../cpp/declspec.md) .
 
-*Tag*<br/>
-Nazwa typu nadana tej klasy. Znacznik staje się słowem zastrzeżonym w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia jest zdefiniowana klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
+*seryjn*<br/>
+Nazwa typu nadana klasie. Tag zostaje zastrzeżonym słowem w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana Klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
-*base-list*<br/>
-Opcjonalna lista klas lub struktur tej klasy, z której pochodzą składowe. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.
+*Lista podstawowa*<br/>
+Opcjonalna lista klas lub struktur, z których ta klasa będzie dziedziczyć członków. Aby uzyskać więcej informacji, zobacz [klasy bazowe](../cpp/base-classes.md) . Każda nazwa klasy bazowej lub struktury może być poprzedzona przez specyfikator dostępu ([Public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md), [Protected](../cpp/protected-cpp.md)) i [wirtualne](../cpp/virtual-cpp.md) słowo kluczowe. Aby uzyskać więcej informacji, zobacz tabelę dostępu do elementów członkowskich w temacie [Kontrola dostępu do składowych klasy](member-access-control-cpp.md) .
 
 *Lista elementów członkowskich*<br/>
-Lista składowych klasy. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji.
+Lista elementów członkowskich klasy. Aby uzyskać więcej informacji, zapoznaj się z [omówieniem składowej klasy](../cpp/class-member-overview.md) .
 
-*deklaratory*<br/>
-Lista deklaratora określająca nazwy co najmniej jedno wystąpienie typu klasy. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie składowe danych klasy są **publicznych**. Jest to bardziej powszechne w strukturach, w których elementy członkowskie danych są **publicznych** domyślnie niż w klasach. Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.
+*Deklaratory*<br/>
+Lista deklarator określa nazwy jednego lub większej liczby wystąpień typu klasy. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych klasy są **publiczne**. Jest to bardziej popularne w strukturach, których elementy członkowskie danych są domyślnie **publiczne** , niż w klasach. Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](../cpp/overview-of-declarators.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można skorzystać z jednego z następujących tematów:
+Więcej informacji o klasach ogólnie można znaleźć w następujących tematach:
 
 - [struct](../cpp/struct-cpp.md)
 
-- [Unia](../cpp/unions.md)
+- [Unii](../cpp/unions.md)
 
 - [__multiple_inheritance](../cpp/inheritance-keywords.md)
 
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można sko
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Aby uzyskać informacje dotyczące zarządzanych klas i struktur w C++sposób niezamierzony i C++/CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur w C++/CLI i C++/CX, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Przykład
 
@@ -141,7 +141,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

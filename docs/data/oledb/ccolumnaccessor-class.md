@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2d65fb047e758f449ed76c954bb4ac0c3623f6dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212113"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor — Klasa
 
-Generuje kod wprowadzonego konsumenta.
+Generuje wstrzykiwany kod klienta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,31 +27,31 @@ class CColumnAccessor : public CAccessorBase
 
 ## <a name="remarks"></a>Uwagi
 
-W wprowadzonego kodu każda kolumna jest powiązany jako osobne metody dostępu. Należy pamiętać, że ta klasa jest używana w wprowadzonego kodu (na przykład, można napotkać go podczas debugowania), ale zwykle nie trzeba używać jej lub jego metod bezpośrednio.
+W kodzie wstrzykiwanym każda kolumna jest powiązana jako oddzielna metoda dostępu. Należy pamiętać, że ta klasa jest używana w wstrzykiwanym kodzie (na przykład może wystąpić podczas debugowania), ale zazwyczaj nie trzeba używać jej bezpośrednio ani jej metod.
 
-`CColumnAccessor` implementuje następujących metod klasy zastępczej, z których każdy odpowiadają w działaniu innych metod klasy dostępu:
+`CColumnAccessor` implementuje następujące metody zastępcze, z których każdy odpowiada w działaniu z innymi metodami klasy metody dostępu:
 
-- `CColumnAccessor` Konstruktor; Tworzy i inicjuje `CColumnAccessor` obiektu.
+- `CColumnAccessor` konstruktora; tworzy wystąpienia i inicjuje obiekt `CColumnAccessor`.
 
-- `CreateAccessor` Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.
+- `CreateAccessor` przydziela pamięci dla struktur powiązań kolumn i inicjuje składowe danych kolumny.
 
-- `BindColumns` Tworzy powiązanie kolumn z metod dostępu.
+- `BindColumns` wiąże kolumny z dostępem do metod dostępu.
 
-- `SetParameterBuffer` Przydziela buforów dla parametrów.
+- `SetParameterBuffer` przydziela bufory dla parametrów.
 
-- `AddParameter` Dodaje wpis parametr do parametru struktury wpisu.
+- `AddParameter` dodaje wpis parametru do struktur wpisów parametrów.
 
-- `HasOutputColumns` Określa, czy akcesor ma produkt wyjściowy kolumn
+- `HasOutputColumns` określa, czy akcesor ma kolumny wyjściowe
 
-- `HasParameters` Określa, czy akcesor ma następujące parametry.
+- `HasParameters` określa, czy metoda dostępu ma parametry.
 
-- `BindParameters` Wiąże parametry utworzonych kolumn.
+- `BindParameters` powiązania utworzonych parametrów z kolumnami.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli.h
+**Nagłówek:** atldbcli. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aa3b936b9f06153170dac013f9dcd03485c8bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213229"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Dalsze informacje o klasach MFC ODBC
 
-Dodatkowo w następujących tematach opisano, pojęcia i techniki opisanymi w tym temacie:
+W poniższych tematach omówiono koncepcje i techniki wprowadzone w tym temacie:
 
 - [Obsługa bazy danych, kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
@@ -39,7 +39,7 @@ Dodatkowo w następujących tematach opisano, pojęcia i techniki opisanymi w ty
 
 - [Widoki rekordów](../../data/record-views-mfc-data-access.md)
 
-- [Serializacja: serializacja a Dane wejściowe/wyjściowe bazy danych](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serializacja: serializacja a dane wejściowe/wyjściowe bazy danych](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Migawka](../../data/odbc/snapshot.md)
 
@@ -47,11 +47,11 @@ Dodatkowo w następujących tematach opisano, pojęcia i techniki opisanymi w ty
 
 - [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)
 
-Jest dobrym miejscem do rozpoczęcia swoje odczytu [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md).
+Dobrym miejscem do rozpoczęcia czytania jest [zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md).
 
-W *odwołanie MFC*, zobacz [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), i [CDBException](../../mfc/reference/cdbexception-class.md).
+W *dokumentacji MFC*zobacz [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [formularzy CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)i [CDBException](../../mfc/reference/cdbexception-class.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Programowanie (MFC/ATL) dostępu do danych](../../data/data-access-programming-mfc-atl.md)
+[Programowanie dostępu do danych (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

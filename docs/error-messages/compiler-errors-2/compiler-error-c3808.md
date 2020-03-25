@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e854764dc3f8d3ede79965302b62055b91df0a4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165629"
 ---
 # <a name="compiler-error-c3808"></a>Błąd kompilatora C3808
 
-> "*typu*": klasa z atrybutem ComImport nie może definiować składowej "*elementu członkowskiego*", tylko abstrakcyjne lub dllimport funkcje są dozwolone
+> "*Type*": Klasa o atrybucie atrybutem ComImport nie może definiować składowej "*member*", dozwolone są tylko funkcje abstrakcyjne lub dllimport
 
 ## <a name="remarks"></a>Uwagi
 
-Typ, który pochodzi od <xref:System.Runtime.InteropServices.ComImportAttribute> nie można zdefiniować *elementu członkowskiego*.
+Typ pochodzący od <xref:System.Runtime.InteropServices.ComImportAttribute> nie może definiować *elementu członkowskiego*.
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3808.
+Poniższy przykład generuje C3808.
 
 ```cpp
 // C3808.cpp

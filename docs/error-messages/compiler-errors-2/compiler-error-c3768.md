@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400217"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165746"
 ---
 # <a name="compiler-error-c3768"></a>Błąd kompilatora C3768
 
-> Nie można przyjąć adresu wirtualnej funkcji vararg w czystym kodzie zarządzanym
+> nie można przyjąć adresu wirtualnej funkcji vararg w czystym kodzie zarządzanym
 
 ## <a name="remarks"></a>Uwagi
 
-**/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Podczas kompilowania za pomocą **/CLR: pure**, nie można przyjąć adresu wirtualnej `vararg` funkcji.
+Podczas kompilowania z **/CLR: Pure**nie można przyjąć adresu wirtualnej funkcji `vararg`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3768:
+Poniższy przykład generuje C3768:
 
 ```cpp
 // C3768.cpp

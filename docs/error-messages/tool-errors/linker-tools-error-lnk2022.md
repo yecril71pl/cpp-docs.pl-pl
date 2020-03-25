@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: e55202274c5ec3982f784ad6cdf074a5a99e922f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d30dad6f8ad146ff467eb4eaf32b21dd6950d25f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194645"
 ---
 # <a name="linker-tools-error-lnk2022"></a>Błąd narzędzi konsolidatora LNK2022
 
-> Operacja metadanych nie powiodła się (*HRESULT*): *error_message*
+> Operacja metadanych nie powiodła się (*HRESULT*): *ERROR_MESSAGE*
 
-Konsolidator wykrył błąd podczas scalania metadanych. Błędów metadanych muszą zostać rozwiązane, aby połączyć się pomyślnie.
+Konsolidator wykrył błąd podczas scalania metadanych. Błędy metadanych muszą zostać rozwiązane, aby można było pomyślnie połączyć.
 
-Jednym ze sposobów, aby zdiagnozować ten problem jest uruchomienie **ildasm — tokeny** plików obiektu, aby dowiedzieć się, jakie typy mają tokenów na liście `error_message`i poszukaj różnice.  W metadanych dwa różne typy o takiej samej nazwie jest nieprawidłowy, nawet jeśli po prostu atrybut element LayoutType różni się.
+Jednym ze sposobów zdiagnozowania tego problemu jest uruchomienie **Ildasm tokenów** w plikach obiektów w celu znalezienia, które typy mają tokeny wymienione w `error_message`, i poszukaj różnic.  W metadanych dwa różne typy o tej samej nazwie są nieprawidłowe, nawet jeśli atrybut tylko LayoutType jest inny.
 
-Jeden przyczyny LNK2022 jest typem (na przykład struktury) istnieje w wielu compilands o takiej samej nazwie, ale z definicjami powodujące konflikt, i kiedy kompilujesz z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  W takim przypadku upewnij się, że typ ma identyczne definicję w compilands wszystkich.  Nazwa typu jest wyświetlana w `error_message`.
+Jedną z przyczyn LNK2022 jest to, że typ (taki jak struktura) istnieje w wielu compilandsach o tej samej nazwie, ale z definicjami powodującymi konflikt i w przypadku kompilowania z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  W tym przypadku upewnij się, że typ ma identyczną definicję we wszystkich compilands.  Nazwa typu jest wymieniona w `error_message`.
 
-Inną możliwą przyczyną LNK2022 jest, jeśli konsolidator znajdzie plik metadanych w innej lokalizacji niż określono w kompilatorze (przy użyciu [#using](../../preprocessor/hash-using-directive-cpp.md) ). Upewnij się, że plik metadanych (.dll lub moduł .netmodule) jest w tej samej lokalizacji, gdy przekazywane do konsolidatora, jak w momencie został przekazany do kompilatora.
+Kolejną możliwą przyczyną LNK2022 jest to, że konsolidator odnajdzie plik metadanych w innej lokalizacji niż został określony w kompilatorze (z [#using](../../preprocessor/hash-using-directive-cpp.md) ). Upewnij się, że plik metadanych (. dll lub. module) znajduje się w tej samej lokalizacji podczas przekazywania do konsolidatora, ponieważ był on przekazano do kompilatora.
 
-Podczas tworzenia aplikacji biblioteki ATL, użyj makra `_ATL_MIXED` jest wymagany w wszystkich compilands, jeśli jest on używany w co najmniej jednym.
+Podczas kompilowania aplikacji ATL, użycie makra `_ATL_MIXED` jest wymagane we wszystkich compilandsach, jeśli jest używany w co najmniej jednym.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład definiuje typ puste.
+Poniższy przykład definiuje pusty typ.
 
 ```cpp
 // LNK2022_a.cpp
@@ -39,9 +39,9 @@ public ref class Test {};
 
 ## <a name="example"></a>Przykład
 
-Niniejszy przykład pokazuje, że nie można połączyć dwa pliki kodu źródłowego, zawierających typy o takiej samej nazwie, ale różnych definicjach.
+Ten przykład pokazuje, że nie można połączyć dwóch plików kodu źródłowego, które zawierają typy o takiej samej nazwie, ale różne definicje.
 
-Poniższy przykład spowoduje wygenerowanie LNK2022.
+Poniższy przykład generuje LNK2022.
 
 ```cpp
 // LNK2022_b.cpp

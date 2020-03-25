@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214373"
 ---
 # <a name="version-information-editor-c"></a>Edytor informacji o wersjiC++()
 
@@ -50,11 +50,11 @@ Zasób informacji o wersji ma górny blok i co najmniej jeden niższy blok: poje
 
 Wybierz element raz, aby go wybrać, a następnie ponownie, aby rozpocząć jego edytowanie. Wprowadzanie zmian bezpośrednio w tabeli **informacji o wersji** lub w [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.
 
-Podczas edytowania `FILEFLAGS` klucza w **Edytorze informacji o wersji**należy zauważyć, że nie można ustawić **właściwości debugowania**, **prywatnej kompilacji**ani **specjalnej kompilacji** w oknie **Właściwości** dla plików. rc:
+Podczas edytowania klucza `FILEFLAGS` w **Edytorze informacji o wersji**należy zauważyć, że nie można ustawić właściwości **debugowania**, **prywatnej kompilacji**ani **specjalnej kompilacji** w oknie **Właściwości** dla plików. rc:
 
-   - **Edytor informacji o wersji** ustawia `#ifdef` Właściwość **Debug** z w skrypcie `_DEBUG` zasobu na podstawie flagi Build.
+- **Edytor informacji o wersji** ustawia właściwość **Debug** z `#ifdef` w skrypcie zasobów na podstawie flagi kompilacji `_DEBUG`.
 
-  - `FILEFLAGS` Jeśli klucz ma ustawioną wartość w tabeli informacji o wersji, odpowiadająca jej Właściwość prywatnej kompilacji w oknie właściwości klucza będzie mieć wartość true. `Private Build` Jeśli **wartość** jest pusta, właściwość będzie mieć **wartość false**. Analogicznie, **specjalny klucz kompilacji** w tabeli **informacji o wersji** jest powiązany z specjalną właściwością `FILEFLAGS` **kompilacji** klucza.
+- Jeśli klucz `Private Build` ma ustawioną **wartość** w tabeli **informacji o wersji** , odpowiednia właściwość **prywatnej kompilacji** w oknie **Właściwości** dla klucza `FILEFLAGS` ma **wartość true**. Jeśli **wartość** jest pusta, właściwość będzie mieć **wartość false**. Analogicznie, **specjalny klucz kompilacji** w tabeli **informacji o wersji** jest powiązany z **specjalną** właściwością kompilacji dla klucza `FILEFLAGS`.
 
 Można sortować sekwencję informacji bloku ciągu, wybierając pozycję **klucz** lub nagłówki kolumn **wartości** . Te nagłówki automatycznie przestawiają informacje na wybraną sekwencję.
 
@@ -84,7 +84,7 @@ Jeśli chcesz uzyskać dostęp do informacji o wersji z poziomu programu, użyj 
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Menu i inne zasoby](/windows/win32/menurc/resources)<br/>

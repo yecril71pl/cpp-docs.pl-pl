@@ -5,48 +5,48 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209576"
 ---
 # <a name="setting-properties-in-your-provider"></a>Ustawianie właściwości w dostawcy
 
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) w **OLE DB Podręcznik programisty**.
+Znajdź grupę właściwości i identyfikator właściwości dla właściwości, którą chcesz. Aby uzyskać więcej informacji, zobacz [OLE DB właściwości](/previous-versions/windows/desktop/ms722734(v=vs.85)) w **kompendium programisty OLE DB**.
 
-W kodzie dostawcy generowane przez kreatora należy znaleźć map właściwości odpowiadającego grupie właściwości. Nazwa grupy właściwości zazwyczaj odnosi się do nazwy obiektu. Właściwości polecenia i zestawu wierszy można znaleźć w polecenia lub zestaw wierszy; właściwości źródła i Inicjowanie danych można znaleźć w obiektu źródła danych.
+W kodzie dostawcy wygenerowanym przez Kreatora Znajdź mapę właściwości odpowiadającą grupie właściwości. Nazwa grupy właściwości zazwyczaj odpowiada nazwie obiektu. Właściwości polecenia i zestawu wierszy można znaleźć w poleceniu lub zestawie wierszy. właściwości źródła danych i inicjowania można znaleźć w obiekcie źródła danych.
 
-Mapy właściwości, należy dodać [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) makra. PROPERTY_INFO_ENTRY_EX przyjmuje cztery parametry:
+Na mapie właściwości Dodaj makro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX przyjmuje cztery parametry:
 
-- Identyfikator właściwości odpowiadający Twojej właściwości. Usuń najpierw siedem znaków ("DBPROP_") z przodu nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS`, przekazać `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, należy przekazać Pełna nazwa identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).
+- Identyfikator właściwości odpowiadający właściwości. Usuń pierwsze siedem znaków ("DBPROP_") od początku nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS`, Przekaż `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, Przekaż pełną nazwę identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).
 
-- Typ wariantu właściwości (w [właściwości OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) w **OLE DB Podręcznik programisty**). Wprowadź VT_ odpowiadającego typowi (lub VT_I2 VT_BOOL.) na typ danych.
+- Typ Variant właściwości (WE [właściwościach OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) w **odniesieniu do OLE DB programisty**). Wprowadź typ VT_ (na przykład VT_BOOL lub VT_I2) odpowiadający typowi danych.
 
-- Flagi, aby wskazać, czy właściwość jest czytelny i zapisywalny i grupy, do której należy. Na przykład poniższy kod wskazuje właściwości odczytu/zapisu, należącego do grupy wierszy:
+- Flagi wskazujące, czy właściwość jest czytelna i zapisywalna oraz do grupy, do której należy. Na przykład poniższy kod wskazuje właściwość odczytu/zapisu należącej do grupy zestawów wierszy:
 
     ```cpp
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE
     ```
 
-- Podstawowa wartość właściwości. Może to być `VARIANT_FALSE` dla logicznego wpisz lub zero dla typu integer, na przykład. Właściwość ma tę wartość, chyba że zostanie on zmieniony.
+- Wartość podstawowa właściwości. Może to być `VARIANT_FALSE` dla typu Boolean lub zero dla typu Integer, na przykład. Właściwość ma tę wartość, o ile nie została zmieniona.
 
     > [!NOTE]
-    > Niektóre właściwości są połączone lub łączyć je do innych właściwości, takie jak zakładek lub aktualizacji. Po użytkownik ustawia jedną właściwość na wartość true, mogą również ustawić inną właściwość. Szablony dostawców OLE DB obsługuje to za pomocą metody [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
+    > Niektóre właściwości są połączone lub są powiązane z innymi właściwościami, takimi jak zakładki lub aktualizacje. Gdy konsument ustawi jedną właściwość na true, można również ustawić inną właściwość. Szablony dostawcy OLE DB obsługują tę procedurę za pomocą metody [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
 
 ## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Właściwości ignorowane przez dostawców OLE DB firmy Microsoft
 
-Dostawcy OLE DB firmy Microsoft Ignoruj następujące właściwości OLE DB:
+Dostawcy OLE DB firmy Microsoft ignorują następujące właściwości OLE DB:
 
-- `DBPROP_MAXROWS` działa tylko w przypadku dostawcy tylko do odczytu (czyli, gdzie `DBPROP_IRowsetChange` i `DBPROP_IRowsetUpdate` są **false**); w przeciwnym razie ta właściwość nie jest obsługiwana.
+- `DBPROP_MAXROWS` działa tylko w przypadku dostawców tylko do odczytu (czyli, w których `DBPROP_IRowsetChange` i `DBPROP_IRowsetUpdate` są **fałszywe**); w przeciwnym razie ta właściwość nie jest obsługiwana.
 
-- `DBPROP_MAXPENDINGROWS` jest ignorowana. Dostawca określa swój własny limit.
+- `DBPROP_MAXPENDINGROWS` jest ignorowana; Dostawca określa swój własny limit.
 
-- `DBPROP_MAXOPENROWS` jest ignorowana. Dostawca określa swój własny limit.
+- `DBPROP_MAXOPENROWS` jest ignorowana; Dostawca określa swój własny limit.
 
-- `DBPROP_CANHOLDROWS` jest ignorowana. Dostawca określa swój własny limit.
+- `DBPROP_CANHOLDROWS` jest ignorowana; Dostawca określa swój własny limit.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

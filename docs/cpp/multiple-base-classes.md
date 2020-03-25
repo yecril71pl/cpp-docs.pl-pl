@@ -7,16 +7,16 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b8bc411b1b8d0b459fe58a39cf351d59d09b2d0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179518"
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 
-Klasy mogą pochodzić z więcej niż jednej klasy bazowej. W modelu dziedziczenia wielokrotnego (gdzie klasy pochodzą z więcej niż jednej klasy bazowej) klasy bazowe są określane za pomocą *lista_bazowa* elementu gramatyki. Na przykład, można określić deklarację klasy dla `CollectionOfBook`, pochodzącej z `Collection` i `Book`:
+Klasa może pochodzić z więcej niż jednej klasy bazowej. W modelu wielokrotnego dziedziczenia (gdzie klasy pochodzą z więcej niż jednej klasy bazowej) klasy bazowe są określane przy użyciu elementu *listy podstawowej* gramatyki. Na przykład, można określić deklarację klasy dla `CollectionOfBook`, pochodzącej z `Collection` i `Book`:
 
 ```cpp
 // deriv_MultipleBaseClasses.cpp
@@ -31,14 +31,14 @@ class CollectionOfBook : public Book, public Collection {
 
 Kolejność, w której określane są klasy bazowe nie ma znaczenia z wyjątkiem niektórych przypadków, gdy wywoływane są konstruktory i destruktory. W tych przypadkach, kolejność, w której określane są klasy bazowe ma wpływ na:
 
-- Kolejność, w której następuje inicjowanie przez konstruktor. Jeśli kod opiera się na tym, aby część `Book` kolekcji `CollectionOfBook` została zainicjowana przed częścią `Collection`, kolejność specyfikacji ma znaczenie. Inicjowanie odbywa się w kolejności klas określonej w *lista_bazowa*.
+- Kolejność, w której następuje inicjowanie przez konstruktor. Jeśli kod opiera się na tym, aby część `Book` kolekcji `CollectionOfBook` została zainicjowana przed częścią `Collection`, kolejność specyfikacji ma znaczenie. Inicjalizacja odbywa się w kolejności, w jakiej klasy są określone na *liście podstawowej*.
 
-- Kolejność, w której wywoływane są destruktory, aby dokonać czyszczenia. Ponownie, jeśli określona „część” klasy musi być obecna, gdy niszczona jest inna część, kolejność ma znaczenie. Destruktory są wywoływane w odwrotnej kolejności klas do określonej w *lista_bazowa*.
+- Kolejność, w której wywoływane są destruktory, aby dokonać czyszczenia. Ponownie, jeśli określona „część” klasy musi być obecna, gdy niszczona jest inna część, kolejność ma znaczenie. Destruktory są wywoływane w odwrotnej kolejności klas określonych na *liście podstawowej*.
 
     > [!NOTE]
     >  Kolejność specyfikacji klas bazowych może wpływać na układ pamięci klasy. Nie należy podejmować żadnych decyzji programistycznych na podstawie kolejności elementów podstawowych w pamięci.
 
-Podczas określania *lista_bazowa*, tej samej nazwy klasy nie można określić więcej niż jeden raz. Jednak klasa może być pośrednią podstawą dla klasy pochodnej więcej niż raz.
+Podczas określania *listy podstawowej*nie można określić tej samej nazwy klasy więcej niż raz. Jednak klasa może być pośrednią podstawą dla klasy pochodnej więcej niż raz.
 
 ## <a name="virtual-base-classes"></a>Wirtualne klasy bazowe
 
@@ -48,17 +48,17 @@ Każdy obiekt niewirtualny zawiera kopię składowych danych zdefiniowanych w kl
 
 Gdy klasa podstawowa jest określona jako baza wirtualna, może ona działać jako baza pośrednia więcej niż raz, bez duplikacji jej składowych danych. Pojedyncza kopia składowych danych jest współużytkowana przez wszystkie klasy podstawowe, które używają jej jako bazy wirtualnej.
 
-Podczas deklarowania wirtualnej klasy bazowej, **wirtualnego** — słowo kluczowe jest wyświetlana na listach bazowych klas pochodnych.
+Podczas deklarowania wirtualnej klasy bazowej, **wirtualne** słowo kluczowe pojawia się na podstawowych listach klas pochodnych.
 
 Należy uwzględnić hierarchię klas na poniższym rysunku, który ilustruje symulowaną kolejkę po obiad.
 
-![Wykres symulowanej obiad](../cpp/media/vc38xp1.gif "Wykres symulowanej kolejkę po obiad") <br/>
-Wykres symulowanej kolejki po obiad
+![Wykres symulowanej pozostałej linii obiadu](../cpp/media/vc38xp1.gif "Wykres symulowanej pozostałej linii obiadu") <br/>
+Wykres symulowanej linii obiadowej
 
 Na rysunku `Queue` jest klasą bazową dla `CashierQueue` i `LunchQueue`. Jednakże, gdy obie klasy są połączone, tworząc `LunchCashierQueue`, pojawia się następujący problem: nowa klasa zawiera dwa podobiekty typu `Queue`, jeden `CashierQueue`, a drugi `LunchQueue`. Na poniższej ilustracji pokazano koncepcyjny układ pamięci (rzeczywisty układ pamięci może być zoptymalizowany).
 
-![Symulowane obiad&#45;obiektu wiersza](../cpp/media/vc38xp2.gif "symulowane obiad&#45;obiektu wiersza") <br/>
-Obiekt symulowanej kolejki po obiad
+![Obiekt symulowanego&#45;wiersza obiadu](../cpp/media/vc38xp2.gif "Obiekt symulowanego&#45;wiersza obiadu") <br/>
+Symulowany obiekt linii obiadu
 
 Należy zauważyć, że istnieją dwa podobiekty `Queue` w obiekcie `LunchCashierQueue`. W poniższym kodzie `Queue` zadeklarowano jako wirtualną klasę bazową:
 
@@ -71,27 +71,27 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 ```
 
-**Wirtualnego** — słowo kluczowe gwarantuje, że tylko jedna kopia podobiektu `Queue` wchodzi (patrz poniższy rysunek).
+**Wirtualne** słowo kluczowe zapewnia tylko jedną kopię `Queue` podobiektu (patrz poniższy rysunek).
 
-![Symulowane obiad&#45;obiektu wiersza, wirtualne klasy bazowe](../cpp/media/vc38xp3.gif "symulowane obiad&#45;obiektu wiersza, wirtualne klasy bazowe") <br/>
-Obiekt symulowanej kolejki po obiad z wirtualnymi klasami bazowymi
+![Obiekt symulowanego&#45;wiersza obiadu, wirtualne klasy bazowe](../cpp/media/vc38xp3.gif "Obiekt symulowanego&#45;wiersza obiadu, wirtualne klasy bazowe") <br/>
+Symulowany obiekt linii obiadu z wirtualnymi klasami podstawowymi
 
 Klasa może mieć zarówno wirtualny jak i niewirtualny składnik danego typu. Tak się dzieje w warunkach przedstawionych na poniższej ilustracji.
 
-![Wirtualny i innych niż&#45;składniki wirtualnej klasy](../cpp/media/vc38xp4.gif "wirtualnych i innych niż&#45;składniki wirtualnej klasy") <br/>
-Składniki wirtualnej i niewirtualnej tej samej klasy
+![Wirtualne i&#45;niewirtualne składniki klasy](../cpp/media/vc38xp4.gif "Wirtualne i&#45;niewirtualne składniki klasy") <br/>
+Wirtualne i niewirtualne składniki tej samej klasy
 
 Na rysunku `CashierQueue` i `LunchQueue` używają `Queue` jako wirtualnej klasy bazowej. Jednak `TakeoutQueue` określa `Queue` jako klasę bazową, a nie wirtualną klasę bazową. W związku z tym `LunchTakeoutCashierQueue` posiada dwa podobiekty typu `Queue`: jeden ze ścieżki dziedziczenia, która zawiera `LunchCashierQueue` a drugi ze ścieżki, która zawiera `TakeoutQueue`. To zostało zilustrowane na poniższym rysunku.
 
-![Wirtualne i inne niż&#45;dziedziczenie wirtualne w układzie obiektu](../cpp/media/vc38xp5.gif "Wirtua & bez&#45;dziedziczenie wirtualne w układzie obiektów") <br/>
-Układ obiektu z wirtualnym i niewirtualną dziedziczenia
+![Wirtualne & inne&#45;niż wirtualne dziedziczenie w układzie obiektu](../cpp/media/vc38xp5.gif "Wirtualne & inne&#45;niż wirtualne dziedziczenie w układzie obiektu") <br/>
+Układ obiektu za pomocą dziedziczenia wirtualnego i niewirtualnego
 
 > [!NOTE]
 >  Dziedziczenie wirtualne zapewnia znaczące korzyści dotyczące rozmiaru w porównaniu do dziedziczenia niewirtualnego. Jednak może to wprowadzić dodatkowe obciążenie dotyczące przetwarzania.
 
-Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. `/vd0` — Opcja kompilatora pomija dodanie elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp ukryte. `/vd1` — Opcja kompilatora, domyślnie, włącza je gdzie są one niezbędne. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.
+Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. Opcja kompilatora `/vd0` pomija dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora vtordisp/destruktora. Opcja kompilatora `/vd1` domyślnie umożliwia ich w razie potrzeby. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.
 
-`/vd` — Opcja kompilatora ma wpływ na cały moduł kompilacji. Użyj `vtordisp` pragmy do pominięcia i ponownego `vtordisp` pola na zasadzie klasa po klasie:
+Opcja kompilatora `/vd` ma wpływ na cały moduł kompilacji. Użyj dyrektywy pragma `vtordisp`, aby pominąć i ponownie włączyć pola `vtordisp` w oparciu o klasę klasy:
 
 ```cpp
 #pragma vtordisp( off )
@@ -99,7 +99,7 @@ class GetReal : virtual public { ... };
 \#pragma vtordisp( on )
 ```
 
-## <a name="name-ambiguities"></a>Niejednoznaczności nazw
+## <a name="name-ambiguities"></a>Niejasności nazwy
 
 Wielokrotne dziedziczenie wprowadza dla nazw możliwość dziedziczenia wzdłuż więcej niż jednej ścieżki. Nazwy klas składowych wzdłuż tych ścieżek nie muszą być unikatowe. Te konflikty nazw są nazywane „niejasnościami”.
 
@@ -142,7 +142,7 @@ Kompilator wykrywa niejasności wykonując testy w następującej kolejności:
 
 1. Jeśli funkcje przeciążone są jednoznaczne, są one rozwiązane.
 
-1. Jeśli dostęp do nazwy narusza uprawnienia dostępu do elementu członkowskiego, generowany jest komunikat o błędzie. (Aby uzyskać więcej informacji, zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md).)
+1. Jeśli dostęp do nazwy narusza uprawnienia dostępu do elementu członkowskiego, generowany jest komunikat o błędzie. (Aby uzyskać więcej informacji, zobacz [element członkowski-Access Control](../cpp/member-access-control-cpp.md).)
 
 Gdy wyrażenie powoduje niejednoznaczność poprzez dziedziczenie, można ją rozwiązać ręcznie kwalifikując nazwę w pytaniu o nazwę klasy. Aby w poprzednim przykładzie skompilować poprawnie, bez niejasności, należy użyć kodu takiego jak:
 
@@ -157,9 +157,9 @@ pc->B::a();
 
 ### <a name="dominance"></a>Dominacja
 
-Istnieje możliwość dla więcej niż jedną nazwę (funkcji, obiekt lub moduł wyliczający) można połączyć się za pośrednictwem programu graph dziedziczenia. Takie przypadki są traktowane jako niejednoznaczny z niewirtualnych klas podstawowych. Są one również niejednoznaczny z wirtualnymi klasami bazowymi, chyba że jedną z nazw "zajmuje większą część ekranu" inne.
+Jest możliwe, aby więcej niż jedna nazwa (funkcja, obiekt lub moduł wyliczający) była osiągnięta za poorednictwem grafu dziedziczenia. Takie przypadki są uważane za niejednoznaczne z niewirtualnymi klasami podstawowymi. Są one również niejednoznaczne dla wirtualnych klas bazowych, chyba że jedna z nazw "dominuje".
 
-Nazwę większą inną nazwę, jeśli jest zdefiniowana w obu klasach i jedna klasa pochodzi od innych. Nazwa dominująca jest nazwą klasy pochodnej; Ta nazwa jest używana, gdy niejednoznaczność mogłyby w przeciwnym razie pojawiły się, jak pokazano w poniższym przykładzie:
+Nazwa dominuje inną nazwę, jeśli jest zdefiniowana w obu klasach, a jedna klasa pochodzi od drugiej. Nazwa dominująca jest nazwą w klasie pochodnej; Ta nazwa jest używana, gdy niejednoznaczność byłaby w inny sposób, jak pokazano w następującym przykładzie:
 
 ```cpp
 // deriv_Dominance.cpp
@@ -182,37 +182,37 @@ public:
 };
 ```
 
-### <a name="ambiguous-conversions"></a>Wyrażenie niejednoznaczne
+### <a name="ambiguous-conversions"></a>Konwersje niejednoznaczne
 
-Jawne i niejawne konwersje z wskaźników lub odwołań do typów klasy może powodować niejednoznaczności. Na kolejnej ilustracji, niejednoznaczne konwersję wskaźniki do klas podstawowych, przedstawiono poniżej:
+Jawne i niejawne konwersje ze wskaźników lub odwołań do typów klas mogą spowodować niejasności. Kolejna ilustracja, niejednoznaczna konwersja wskaźników do klas bazowych, pokazuje następujące elementy:
 
 - Deklaracja obiektu typu `D`.
 
-- Efektem zastosowania operatora address-of (**&**) do tego obiektu. Należy pamiętać, że operator address-of zawsze dostarcza adres podstawowy obiekt.
+- Efekt zastosowania operatora address-of ( **&** ) do tego obiektu. Należy zauważyć, że operator address-of zawsze dostarcza adres podstawowy obiektu.
 
-- Efekt jawnej konwersji wskaźnika uzyskany przy użyciu operatora address-of na typ klasy bazowej `A`. Należy pamiętać, coercing adresu obiektu na typ `A*` nie zawsze zawiera kompilator o wystarczającej ilości informacji na temat których podobiektu typu `A` wybrać; w tym przypadku istnieją dwa podobiekty.
+- Efekt jawnej konwersji wskaźnika uzyskanego przy użyciu operatora address-of na typ klasy bazowej `A`. Należy zauważyć, że wymuszony adres obiektu do wpisania `A*` nie zawsze zapewnia kompilatorowi wystarczające informacje, które podobiekty typu `A` do wybrania; w takim przypadku istnieją dwa podobiekty.
 
-![Niejednoznaczna konwersja wskaźniki do klas bazowych](../cpp/media/vc38xt1.gif "niejednoznaczne konwersję wskaźniki do klas bazowych") <br/>
-Niejednoznaczna konwersja wskaźniki do klas bazowych
+![Niejednoznaczna konwersja wskaźników do klas bazowych](../cpp/media/vc38xt1.gif "Niejednoznaczna konwersja wskaźników do klas bazowych") <br/>
+Niejednoznaczna konwersja wskaźników do klas bazowych
 
-Konwersja na typ `A*` (wskaźnik do `A`) jest niejednoznaczny, ponieważ nie istnieje sposób do określenia, które podobiektu typu na `A` jest poprawne. Należy zwrócić uwagę na to, że można uniknąć niejednoznaczności, jawnie ustawiając podobiektów, który miał zostać użyty w następujący sposób:
+Konwersja do typu `A*` (wskaźnik do `A`) jest niejednoznaczna, ponieważ nie istnieje sposób, aby rozpoznać, który podobiekt typu `A` jest poprawnym. Należy pamiętać, że można uniknąć niejednoznaczności, jawnie określając, który podobiekt ma być używany, w następujący sposób:
 
 ```cpp
 (A *)(B *)&d       // Use B subobject.
 (A *)(C *)&d       // Use C subobject.
 ```
 
-### <a name="ambiguities-and-virtual-base-classes"></a>Niejednoznaczności i wirtualne klasy bazowe
+### <a name="ambiguities-and-virtual-base-classes"></a>Niejasności i wirtualne klasy bazowe
 
-Wirtualne klasy bazowe są używane, funkcji, obiekty, typy i moduły wyliczające można uzyskać dostęp przez ścieżki dziedziczenia wielokrotnego. Ponieważ istnieje tylko jedno wystąpienie klasy bazowej, nie ma żadnych niejednoznaczności podczas uzyskiwania dostępu do tych nazw.
+Jeśli wirtualne klasy bazowe są używane, funkcje, obiekty, typy i moduły wyliczające można osiągnąć przez ścieżki wielokrotnego dziedziczenia. Ponieważ istnieje tylko jedno wystąpienie klasy bazowej, podczas uzyskiwania dostępu do tych nazw nie ma niejednoznaczności.
 
-Poniższy rysunek przedstawia sposób obiekty są złożone, wirtualnej, a dziedziczenia niewirtualnego.
+Na poniższej ilustracji przedstawiono sposób tworzenia obiektów przy użyciu wirtualnego i niewirtualnego dziedziczenia.
 
-![Dziedziczenia wirtualnego i innych niż&#45;dziedziczenia wirtualnego](../cpp/media/vc38xr1.gif "pochodnym wirtualnych i innych niż&#45;dziedziczenia wirtualnego") <br/>
-Wirtualne a niewirtualną tworzenie wartości pochodnych
+![Wirtualne wyprowadzenie i&#45;niewirtualne wyprowadzanie](../cpp/media/vc38xr1.gif "Wirtualne wyprowadzenie i&#45;niewirtualne wyprowadzanie") <br/>
+Wirtualne a niewirtualne wyprowadzanie
 
-Na rysunku, uzyskiwanie dostępu do dowolnego elementu członkowskiego klasy `A` za pośrednictwem niewirtualnych klas podstawowych przyczyn wiadomość niejednoznaczności; kompilator nie ma informacji o który objaśnia, czy ma być używany podobiektu skojarzone z `B` lub podobiektów skojarzone z `C`. Jednak gdy `A` jest określony jako wirtualnej klasy bazowej, nie ma żadnych pytanie podobiektów, który jest dostępny.
+Na rysunku dostęp do dowolnego elementu członkowskiego klasy `A` za pomocą niewirtualnych klas bazowych powoduje niejednoznaczność; Kompilator nie ma informacji, które wyjaśniają, czy należy używać podobiektu skojarzonego z `B` lub podobiektem skojarzonym z `C`. Jeśli jednak `A` określono jako wirtualną klasę bazową, nie ma pytania, do którego jest uzyskiwany dostęp do obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dziedziczenie](../cpp/inheritance-cpp.md)

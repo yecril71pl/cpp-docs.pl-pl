@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446055"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212126"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 
@@ -122,7 +122,7 @@ Klasa akcesora.
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -145,7 +145,7 @@ Poniższy przykład ilustruje użycie klasy `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a>CBulkRowset:: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
 Wywołuje [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) , aby zwiększyć liczbę odwołań dla wszystkich wierszy aktualnie pobieranych z zestawu wierszy bulk.
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 Standardowa wartość HRESULT.
 
-## <a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
 Tworzy nowy obiekt `CBulkRowset` i ustawia domyślną liczbę wierszy na 10.
 
@@ -169,7 +169,7 @@ Tworzy nowy obiekt `CBulkRowset` i ustawia domyślną liczbę wierszy na 10.
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Pobiera pierwszy wiersz danych.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 Standardowa wartość HRESULT.
 
-## <a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
 
 Przenosi do ostatniego wiersza.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 Standardowa wartość HRESULT.
 
-## <a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
 
 Pobiera następny wiersz danych.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 Standardowa wartość HRESULT. Po osiągnięciu końca zestawu wierszy zwraca DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a>CBulkRowset:: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Przenosi do poprzedniego wiersza.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 Standardowa wartość HRESULT.
 
-## <a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
 Pobiera wiersz oznaczony zakładką lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.
 
@@ -248,7 +248,7 @@ podczas Liczba wierszy z zakładki do wiersza docelowego. Jeśli *lSkip* ma wart
 
 Zobacz [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="movetoratio"></a>CBulkRowset:: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
 Pobiera wiersze zaczynające się od pozycji ułamkowej w zestawie wierszy.
 
@@ -279,7 +279,7 @@ Standardowa wartość HRESULT.
 
 Gdzie `RowsetSize` jest rozmiar zestawu wierszy, mierzony w wierszach. Dokładność tej formuły zależy od konkretnego dostawcy. Aby uzyskać szczegółowe informacje, zobacz [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
 Wywołuje [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , aby zmniejszyć liczbę odwołań dla wszystkich wierszy aktualnie pobranych z zestawu wierszy bulk.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 Standardowa wartość HRESULT.
 
-## <a name="setrows"></a>CBulkRowset:: setrows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: setrows
 
 Ustawia liczbę dojść do wierszy pobieranych przez każde wywołanie.
 

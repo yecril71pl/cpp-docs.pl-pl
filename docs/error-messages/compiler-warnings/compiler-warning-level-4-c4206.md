@@ -1,22 +1,22 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4206
+title: Ostrzeżenie kompilatora (poziom 4) C4206
 ms.date: 11/04/2016
 f1_keywords:
 - C4206
 helpviewer_keywords:
 - C4206
 ms.assetid: 3df97812-3ed7-4003-9769-057acf97ce3c
-ms.openlocfilehash: b4125e598aa7df946b16b3d41af1c6eabab00531
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae1e4d814d38409f362efd27cecae983eb86479a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401218"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173988"
 ---
-# <a name="compiler-warning-level-4-c4206"></a>Kompilator ostrzeżenie (poziom 4) C4206
+# <a name="compiler-warning-level-4-c4206"></a>Ostrzeżenie kompilatora (poziom 4) C4206
 
-**użyto niestandardowego rozszerzenia: jednostka tłumaczeniowa jest pusta**
+**użyto niestandardowego rozszerzenia: jednostka tłumaczenia jest pusta**
 
-Plik był pusty po przetwarzania wstępnego.
+Plik był pusty po przeprowadzeniu wstępnego przetwarzania.
 
-To rozszerzenie może uniemożliwić kod przenośny innych kompilatorach. Zostanie wygenerowany błąd w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) i ma zastosowanie tylko do kodu źródłowego C.
+To rozszerzenie może uniemożliwić przenośnie kodu do innych kompilatorów. Generuje błąd w obszarze zgodność ze standardem ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) i ma zastosowanie tylko do kodu źródłowego języka C.

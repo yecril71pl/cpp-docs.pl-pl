@@ -1,5 +1,5 @@
 ---
-title: 'Operator Address-of: &amp;'
+title: 'Operator address-of: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181606"
 ---
-# <a name="address-of-operator-amp"></a>Operator Address-of: &amp;
+# <a name="address-of-operator-amp"></a>Operator address-of: &amp;
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ ms.locfileid: "62385027"
 
 ## <a name="remarks"></a>Uwagi
 
-Jednoargumentowy operator address-of (**&**) przyjmuje adres jego operandu. Operand operatora address-of może być określeniem funkcji lub l wartość opisująca obiekt, który nie jest polem bitowym.
+Jednoargumentowy operator address-of ( **&** ) Pobiera adres operandu. Argument operacji operatora address-of może być oznaczeniem funkcji lub l-wartością, która określa obiekt, który nie jest polem bitowym.
 
-Operator address-of można stosować tylko do zmiennych o strukturze podstawowych, klasy lub typy Unii, które są zadeklarowane na poziomie zakresu pliku lub do indeksowanych odwołań do tablic. W tych wyrażeniach wyrażenie stałe, które nie zawiera operatora address-of można dodać do lub odjęte od wyrażenia adresu.
+Operator address-of może być stosowany tylko do zmiennych z typami podstawowymi, strukturami, klasami lub Unii, które są zadeklarowane na poziomie pliku lub w odniesieniu do tablic indeksów. W tych wyrażeniach wyrażenie stałe, które nie zawiera operatora address-of, może być dodawane lub odejmowane od wyrażenia adresu.
 
-Po zastosowaniu do funkcji lub l wartości, wynikiem wyrażenia typu wskaźnika (r) pochodzi od typu operand. Na przykład, jeśli argument jest typu **char**, wynikiem wyrażenia jest typ wskaźnika do **char**. Operator address-of, dotyczą **const** lub **volatile** obiektów, daje w wyniku `const type *` lub `volatile type *`, gdzie **typu** jest typ pierwotny obiekt.
+W przypadku zastosowania do funkcji lub wartości l, wynik wyrażenia jest typem wskaźnika (r-Value) pochodnym typu operandu. Na przykład, jeśli operand jest typu **char**, wynik wyrażenia jest typu wskaźnika do **char**. Operator address-of, stosowany do obiektów **const** lub **volatile** , oblicza do `const type *` lub `volatile type *`, gdzie **Type** jest typem oryginalnego obiektu.
 
-Po zastosowaniu operatora address-of kwalifikowaną nazwę, wynik zależy od tego, czy *kwalifikowana nazwa* określa statyczny element członkowski. Jeśli tak, wynik jest wskaźnikiem do typu określonego w deklaracji elementu członkowskiego. Jeśli element członkowski nie jest statyczna, wynik jest wskaźnikiem do elementu członkowskiego *nazwa* klasy wskazanego przez *kwalifikowana class-name*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) więcej informacji na temat *kwalifikowana class-name*.) Poniższy fragment kodu przedstawia, jak wynik różnią się zależnie od tego, czy jest statyczny element członkowski:
+Gdy operator address-of jest stosowany do kwalifikowanej nazwy, wynik zależy od tego, czy *kwalifikowana nazwa* określa statyczną składową. Jeśli tak, wynik jest wskaźnikiem do typu określonego w deklaracji elementu członkowskiego. Jeśli składowa nie jest statyczna, wynik jest wskaźnikiem do *nazwy* elementu członkowskiego klasy wskazanej przez *kwalifikowana nazwa klasy*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) , aby uzyskać więcej informacji na temat *kwalifikowanej klasy-Name*). Poniższy fragment kodu pokazuje, jak wynik różni się w zależności od tego, czy element członkowski jest statyczny:
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -49,11 +49,11 @@ int main() {
 }
 ```
 
-W tym przykładzie wyrażenie `&PTM::fValue` daje typu `float *` zamiast typu `float PTM::*` ponieważ `fValue` jest składową statyczną.
+W tym przykładzie wyrażenie `&PTM::fValue` zwraca typ `float *` zamiast `float PTM::*`, ponieważ `fValue` jest statycznym elementem członkowskim.
 
-Adres przeciążonej funkcji mogą być wykonywane tylko wtedy, gdy jest to oczywiste, jest ono przywoływane wersji funkcji. Zobacz [przeciążanie funkcji](function-overloading.md) informacji o tym, jak w celu uzyskania adresu określonego przeciążonej funkcji.
+Adres przeciążonej funkcji można wykonać tylko wtedy, gdy jest jasne, która wersja funkcji jest przywoływana. Zobacz [przeciążanie funkcji](function-overloading.md) , aby uzyskać informacje na temat sposobu uzyskiwania adresu określonej przeciążonej funkcji.
 
-Zastosowanie operatora address-of do typu odwołania daje ten sam wynik w postaci zastosowania operatora do obiektu, z którym związane są odwołania. Na przykład:
+Zastosowanie operatora address-of do typu referencyjnego daje ten sam wynik, co zastosowanie operatora do obiektu, do którego jest powiązane odwołanie. Na przykład:
 
 ## <a name="example"></a>Przykład
 
@@ -78,7 +78,7 @@ int main() {
 &d equals &rd
 ```
 
-W poniższym przykładzie użyto operatora address-of, aby przekazać argumentu będącego wskaźnikiem do funkcji:
+Poniższy przykład używa operatora address-of do przekazania argumentu wskaźnika do funkcji:
 
 ```cpp
 // expre_Address_Of_Operator3.cpp
@@ -105,7 +105,7 @@ int main() {
 25
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

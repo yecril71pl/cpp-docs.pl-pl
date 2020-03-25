@@ -2,14 +2,14 @@
 title: Jednostki tłumaczenia i powiązania (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e4e86dc15280bc7aa079f552014975b7ddc68e51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188327"
 ---
-# <a name="translation-units-and-linkage"></a>Jednostki tłumaczenia i powiązania
+# <a name="translation-units-and-linkage"></a>Jednostki translacji i połączenie
 
 W C++ programie, *symbol*, na przykład zmienna lub nazwa funkcji, można zadeklarować dowolną liczbę razy w swoim zakresie, ale można ją zdefiniować tylko raz. Ta reguła jest "jedną regułą definicji" (ODR). *Deklaracja* wprowadza (lub wprowadza) nazwę do programu. *Definicja* wprowadza nazwę. Jeśli nazwa reprezentuje zmienną, definicja jawnie inicjuje ją. *Definicja funkcji* składa się z podpisu i treści funkcji. Definicja klasy składa się z nazwy klasy, po której następuje blok zawierający listę wszystkich elementów członkowskich klasy. (Treść funkcji składowych może być opcjonalnie zdefiniowana osobno w innym pliku).
 
@@ -60,6 +60,6 @@ extern const int value = 42;
 
 Aby uzyskać więcej informacji, zobacz [extern](extern-cpp.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193761"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Ostrzeżenie LNK4237 narzędzi konsolidatora
 
-Subsystem określony podczas importowania pozycji z 'dll'; Użyj opcji lub/Subsystem: Windows.
+/SUBSYSTEM: NATYWNy określony podczas importowania z "dll"; Użyj/SUBSYSTEM: CONSOLE lub/SUBSYSTEM: WINDOWS.
 
-[Subsystem](../../build/reference/subsystem-specify-subsystem.md) została określona podczas tworzenia aplikacji systemu windows (Win32), który bezpośrednio korzysta z co najmniej jeden z następujących czynności:
+[/SUBSYSTEM:](../../build/reference/subsystem-specify-subsystem.md) podczas kompilowania aplikacji systemu Windows (Win32) został określony kod natywny, który bezpośrednio używa co najmniej jednego z następujących elementów:
 
 - kernel32.dll
 
@@ -25,6 +25,6 @@ Subsystem określony podczas importowania pozycji z 'dll'; Użyj opcji lub/Subsy
 
 - user32.dll
 
-- jedną z msvcrt\* biblioteki dll.
+- Jedna z msvcrt\* biblioteki DLL.
 
-Rozwiązanie to ostrzeżenie, nie określając **Subsystem**.
+Usuń to ostrzeżenie, nie określając **/SUBSYSTEM: Native**.

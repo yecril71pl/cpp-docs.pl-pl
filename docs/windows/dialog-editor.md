@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215257"
 ---
 # <a name="dialog-editor-c"></a>Edytor okien dialogowych (C++)
 
@@ -92,7 +92,7 @@ Po wybraniu kontrolki wybierz przycisk **ControlEvents** lub przycisk **komunika
 
 Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okien dialogowych** .  
 
-|Polecenie|Ponownie|Opis|
+|Polecenie|Klucze|Opis|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **SHIFT** + **Strzałka w dół**|Wyrównuje dolne krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
 |Format.AlignCenters|**Shift** + **F9**|Wyrównuje Pionowe centra zaznaczonych kontrolek z kontrolką dominującą.|
@@ -102,19 +102,19 @@ Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okie
 |Format.AlignTops|**Ctrl** + **SHIFT** + **Strzałka w górę**|Wyrównuje górne krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
 |Format.ButtonBottom|**Ctrl** + **B**|Umieszcza wybrane przyciski wzdłuż środka okna dialogowego.|
 |Format.ButtonRight|**Ctrl** + **R**|Umieszcza wybrane przyciski w prawym górnym rogu okna dialogowego.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Ustawia poziomy formantów w poziomie okna dialogowego.|
-|Format.CenterVertical|**CTRL** + **F9**|Ustawia kontrolki w pionie wewnątrz okna dialogowego.|
+|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Ustawia poziomy formantów w poziomie okna dialogowego.|
+|Format.CenterVertical|**Ctrl** + **F9**|Ustawia kontrolki w pionie wewnątrz okna dialogowego.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Sprawdza unikatowość symboli.|
 |Format. SizeToContent|**Shift** + **F7**|Zmienia rozmiar zaznaczonych kontrolek w celu dopasowania do tekstu podpisu.|
 |Format.SpaceAcross|**Alt** + **Strzałka w lewo**|Równo zaznaczaj zaznaczone kontrolki w poziomie.|
 |Format.SpaceDown|**Alt** + **strzałkę w dół**|Równo zaznaczaj zaznaczone kontrolki w pionie.|
 |Format.TabOrder|**Ctrl** + **D**|Ustawia kolejność formantów w oknie dialogowym.|
-|Format.TestDialog|**CTRL** + **T**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
+|Format.TestDialog|**Ctrl** + **t**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
 |Format.ToggleGuides|**Ctrl** + **G**|Przełączanie między nie siatką, wskazówkami i siatką w celu edytowania okna dialogowego.|
 
 - Aby zmienić klawisze skrótów, przejdź do menu **Narzędzia** , > **Opcje**, a następnie wybierz pozycję **Klawiatura** w obszarze folder **środowiska** .
 
-   Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 - Aby zmienić ustawienia, przejdź do menu **narzędzia** > **Importuj i Eksportuj ustawienia**.
 
@@ -124,7 +124,7 @@ Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okie
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
 [Instrukcje: Tworzenie okna dialogowego](../windows/creating-a-new-dialog-box.md)<br/>

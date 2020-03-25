@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208530"
 ---
 # <a name="lock-class"></a>Klasa lock
 
@@ -37,7 +37,7 @@ ref class lock;
 
 Wewnętrznie, Klasa Lock używa <xref:System.Threading.Monitor> do synchronizowania dostępu. Aby uzyskać więcej informacji, zobacz artykuł, którego dotyczy odwołanie.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

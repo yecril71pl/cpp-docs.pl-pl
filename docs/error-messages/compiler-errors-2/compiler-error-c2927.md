@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2927
 ms.assetid: 3f75beec-ff5c-44e1-9085-990ecd55198d
-ms.openlocfilehash: acdb33c28021d007c3f1b25ae7b4419ffbbf6bef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f7c9ecdc178e98881d519c343372e99f7f03128
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382934"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176953"
 ---
 # <a name="compiler-error-c2927"></a>Błąd kompilatora C2927
 
-'Funkcja': szablon funkcji musi zostać wywołany z co najmniej jednego argumentu
+"Function": szablon funkcji musi być wywołany z co najmniej jednym argumentem
 
-Nie można wywołać funkcji szablonu, bez argumentów. Typy argumentów szablonu określa, jakie wersje funkcji do generowania.
+Nie można wywołać funkcji szablonu bez argumentów. Typ argumentów szablonu określa wersję funkcji do wygenerowania.

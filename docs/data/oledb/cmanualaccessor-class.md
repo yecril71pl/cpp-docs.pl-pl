@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447377"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211851"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor — Klasa
 
@@ -51,7 +51,7 @@ class CManualAccessor : public CAccessorBase
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -66,7 +66,7 @@ class CManualAccessor : public CAccessorBase
 
 Za pomocą `CManualAccessor`można określić parametry i powiązania kolumn wyjściowych przez wywołania funkcji czasu wykonywania.
 
-## <a name="addbindentry"></a>CManualAccessor:: AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
 
 Dodaje wpis powiązania do kolumn danych wyjściowych.
 
@@ -106,7 +106,7 @@ podczas Wskaźnik do zmiennej, która ma zostać powiązana ze stanem kolumny, j
 
 Aby użyć tej funkcji, należy najpierw wywołać metodę [dostępu](../../data/oledb/cmanualaccessor-createaccessor.md). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor`.
 
-## <a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
 
 Dodaje wpis parametru do struktur wpisów parametrów.
 
@@ -150,7 +150,7 @@ podczas Określa, czy parametr, z którym jest skojarzone powiązanie, jest para
 
 Aby użyć tej funkcji, należy najpierw wywołać [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="createaccessor"></a>CManualAccessor:: isdostępu
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: isdostępu
 
 Przydziela pamięć dla struktur powiązań kolumn i inicjuje elementy członkowskie danych kolumny.
 
@@ -181,7 +181,7 @@ Jedna ze standardowych wartości HRESULT.
 
 Wywołaj tę funkcję przed wywołaniem funkcji `CManualAccessor::AddBindEntry`.
 
-## <a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
 
 Przydziela pamięć dla struktur powiązań parametrów i inicjuje elementy członkowskie danych parametru.
 

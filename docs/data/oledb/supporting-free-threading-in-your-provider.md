@@ -5,20 +5,20 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404497"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209554"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Obsługa wolnych wątków w dostawcy
 
-Wszystkie klasy dostawcy OLE DB są odporne na wątki i wpisy rejestru są odpowiednio ustawiane. To dobry pomysł, aby obsługa wolnych wątków w celu zapewnienia wysokiego poziomu wydajności w sytuacjach, w wielu użytkowników. Aby zapewnić dostawcą metodą o bezpiecznych wątkach, należy sprawdzić, czy kod jest zablokowany prawidłowo. Zawsze, gdy zapisu lub przechowywania danych, należy zablokować dostęp za pomocą sekcji krytycznych.
+Wszystkie klasy dostawcy OLE DB są bezpieczne dla wątków, a wpisy rejestru są odpowiednio ustawiane. Dobrym pomysłem jest wsparcie bezpłatnego wątku w celu zapewnienia wysokiego poziomu wydajności w sytuacjach wielodostępnych. Aby zapewnić bezpieczeństwo wątków dostawcy, należy sprawdzić, czy kod jest prawidłowo zablokowany. Za każdym razem, gdy zapisujesz lub zapisujesz dane, musisz zablokować dostęp z sekcji krytycznych.
 
-Każdy obiekt szablonu dostawcy OLE DB ma swój własny sekcję krytyczną. Aby łatwiej blokowania, każda nowa klasa tworzenia powinna być klasą szablonu, biorąc klasy nadrzędnej nazwę jako argument.
+Każdy obiekt szablonu dostawcy OLE DB ma swoją własną sekcję krytyczną. Aby ułatwić blokowanie, każda utworzona nowa klasa powinna być klasą szablonu przyjmującą nazwę klasy nadrzędnej jako argument.
 
-Poniższy przykład pokazuje, jak zablokować kodu:
+Poniższy przykład pokazuje, jak zablokować kod:
 
 ```cpp
 template <class T>
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Aby uzyskać więcej informacji o tym, jak chronić krytyczne sekcje z `Lock` i `Unlock`, zobacz [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat ochrony sekcji krytycznych przy użyciu `Lock` i `Unlock`, zobacz [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Sprawdź, czy jakiekolwiek metody zastąpisz (takie jak `Execute`) jest metodą o bezpiecznych wątkach.
+Sprawdź, czy wszystkie metody zastępujące (takie jak `Execute`) są bezpieczne dla wątków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

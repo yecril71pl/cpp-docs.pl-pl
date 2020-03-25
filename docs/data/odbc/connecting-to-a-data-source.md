@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213346"
 ---
 # <a name="connecting-to-a-data-source"></a>Nawiązywanie połączenia ze źródłem danych
 
-Źródła danych ODBC jest określony zbiór danych, informacje wymagane do dostępu do danych i lokalizacja źródła danych, które można opisać za pomocą nazwy źródła danych. Z punktu widzenia programu źródło danych zawiera dane, systemu DBMS, sieci (jeśli istnieje) i ODBC.
+Źródło danych ODBC to określony zestaw danych, informacje wymagane do uzyskania dostępu do tych danych oraz lokalizacja źródła danych, które można opisać przy użyciu nazwy źródła danych. Z punktu widzenia programu źródło danych zawiera dane, system DBMS, Sieć (jeśli istnieje) i ODBC.
 
-Dostęp do danych ze źródła danych, program musi najpierw nawiąż połączenie ze źródłem danych. Dostępu do wszystkich danych odbywa się za pośrednictwem tego połączenia.
+Aby uzyskać dostęp do danych dostarczanych przez źródło danych, program musi najpierw nawiązać połączenie ze źródłem danych. Cały dostęp do danych jest zarządzany przez to połączenie.
 
-Połączenia źródła danych są hermetyzowane przez klasę [CDatabase](../../mfc/reference/cdatabase-class.md). Gdy `CDatabase` obiekt jest połączony ze źródłem danych, możesz:
+Połączenia ze źródłem danych są hermetyzowane przez klasę [CDatabase](../../mfc/reference/cdatabase-class.md). Gdy obiekt `CDatabase` jest połączony ze źródłem danych, można:
 
-- Konstruowania [zestawy rekordów](../../mfc/reference/crecordset-class.md), które wybrać rekordy z tabel lub kwerend.
+- Konstruowanie [zestawów rekordów](../../mfc/reference/crecordset-class.md), które wybierają rekordy z tabel lub zapytań.
 
-- Zarządzanie [transakcji](../../data/odbc/transaction-odbc.md), aktualizacje przetwarzania wsadowego, więc wszystkie zobowiązujemy się do źródła danych tylko raz (lub cała transakcja została wycofana, ponownie, aby źródła danych ulega) — Jeśli źródło danych obsługuje wymaganego poziomu transakcji.
+- Zarządzanie [transakcjami](../../data/odbc/transaction-odbc.md), przetwarzanie wsadowe aktualizacji i wszystkie są zatwierdzane jednocześnie do źródła danych (lub cała transakcja jest wycofywana, więc źródło danych jest niezmienione) — Jeśli źródło danych obsługuje wymagany poziom transakcji.
 
-- Bezpośrednie wykonywanie [SQL](../../data/odbc/sql.md) instrukcji.
+- Bezpośrednie wykonywanie instrukcji [SQL](../../data/odbc/sql.md) .
 
-Po zakończeniu pracy z połączenia źródła danych, Zamknij `CDatabase` obiektu, a następnie go zniszcz lub użyć go ponownie do nowego połączenia. Aby uzyskać więcej informacji na temat połączeń ze źródłami danych, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md).
+Po zakończeniu pracy z połączeniem źródła danych należy zamknąć `CDatabase` obiektu i zniszczyć go lub ponownie użyć nowego połączenia. Aby uzyskać więcej informacji na temat połączeń ze źródłem danych, zobacz [Data Source (ODBC)](../../data/odbc/data-source-odbc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

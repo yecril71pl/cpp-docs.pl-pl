@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1103
 ms.assetid: c8e9bc54-6a71-471c-899e-6f98122ee3c4
-ms.openlocfilehash: 1dc70044113e06b4a19e1bbe1a054c944761214b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 668b354750171daefe0713d32f84f835134f93c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195386"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Błąd narzędzi konsolidatora LNK1103
 
-informacje debugowania uszkodzone; Skompiluj ponownie moduł
+uszkodzone informacje debugowania; Kompiluj ponownie moduł
 
-Ten błąd może być spowodowany, ponieważ kompilacja zostało zakończone, zanim plik prawidłowy obiekt został utworzony.
+Ten błąd może być spowodowany przerwaniem kompilacji przed utworzeniem prawidłowego pliku obiektu.
 
-Skompiluj ponownie plik danego obiektu. Jeśli ponownej kompilacji nie rozwiąże problemu, należy pamiętać, okoliczności wystąpienia błędu, spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia. Następnie zapoznaj się z plikiem pomocy technicznej firmy lub w sekcji Pomoc techniczna w jednej instrukcji.
+Ponownie skompiluj dany plik obiektu. Jeśli ponowna kompilacja nie rozwiązuje problemu, należy zwrócić uwagę na sytuacje błędu, spróbować wyizolować problem i utworzyć powtarzalny przypadek testowy. Następnie zapoznaj się z dokumentacją techniczną pomocy technicznej lub sekcją pomocy technicznej w jednej z Twoich instrukcji.

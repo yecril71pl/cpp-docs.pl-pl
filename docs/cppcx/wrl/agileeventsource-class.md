@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214191"
 ---
 # <a name="agileeventsource-class"></a>Klasa AgileEventSource
 
@@ -53,7 +53,7 @@ Większość składników w środowisko wykonawcze systemu Windows są składnik
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -61,7 +61,7 @@ Większość składników w środowisko wykonawcze systemu Windows są składnik
 |----------|-----------------|
 |[AgileEventSource:: Add — Metoda](#add)|Dołącza obsługę zdarzeń Agile reprezentowane przez określony interfejs delegata do zestawu obsługi zdarzeń dla bieżącego obiektu **AgileEventSource** .|
 
-## <a name="add"></a>AgileEventSource:: Add — Metoda
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource:: Add — Metoda
 
 Dołącza obsługę zdarzeń reprezentowane przez określony interfejs delegata do zestawu obsługi zdarzeń dla bieżącego obiektu [EventSource](eventsource-class.md) .
 

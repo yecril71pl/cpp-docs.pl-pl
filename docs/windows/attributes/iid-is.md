@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167995"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -25,16 +25,16 @@ Określa identyfikator IID interfejsu COM wskazywanego przez wskaźnik interfejs
 
 ### <a name="parameters"></a>Parametry
 
-*expression*<br/>
+*wyrażenia*<br/>
 Wyrażenie języka C, które określa identyfikator IID interfejsu COM wskazywanego przez wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **iid_is** C++ ma takie same funkcje jak atrybut [iid_is](/windows/win32/Midl/iid-is) MIDL.
+Atrybut **iid_is** C++ ma taką samą funkcjonalność jak atrybut [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia użycie **iid_is**:
+Poniższy kod ilustruje użycie **iid_is**:
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -59,12 +59,12 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Dotyczy**|Parametr interfejsu, element członkowski danych|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)

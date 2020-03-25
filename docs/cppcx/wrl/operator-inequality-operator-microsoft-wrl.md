@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213660"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operator (Microsoft::WRL)
 
-Operator nierówności dla [ComPtr](comptr-class.md) i [comptrref —](comptrref-class.md) obiektów.
+Operator nierówności dla obiektów [ComPtr](comptr-class.md) i [ComPtrRef](comptrref-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,22 +55,22 @@ WRL_NOTHROW bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Obiekt, który po lewej stronie.
+*z*<br/>
+Lewy obiekt.
 
 *b*<br/>
-Obiekt, do prawej.
+Prawidłowy obiekt.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty nie są równe; w przeciwnym razie **false**.
+**prawda** , jeśli obiekty nie są równe; w przeciwnym razie **false**.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

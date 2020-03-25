@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214893"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -46,14 +46,14 @@ Atrybut **niestandardowy** ma taką samą funkcjonalność jak [niestandardowy](
 
 |||
 |-|-|
-|**Dotyczy**|**Interfejs**niebędący modelem COM, **Klasa**, `idl_module` **Wyliczenie**s, metody, składowe interfejsu, parametry interfejsu, **typedef**s, **Union**s, **struct**s|
-|**Powtarzalne**|Tak|
-|**Wymagane atrybuty**|**Klasa coclass** (używany w klasie)|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Dotyczy**|**Interfejs**inny niż com, **Klasa**, **Wyliczenie**s, metody `idl_module`, składowe interfejsu, parametry interfejsu, **typedef**s, **Union**s, **struct**s|
+|**Powtarzalne**|Yes|
+|**Wymagane atrybuty**|**Klasa coclass** (używana w klasie)|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

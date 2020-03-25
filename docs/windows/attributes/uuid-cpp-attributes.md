@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c507a9ae42afc5081c290d38464aa7f24c277d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514952"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166123"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
 
@@ -38,7 +38,7 @@ Jeśli nie określisz **identyfikatora UUID**, kompilator generuje ten sam ident
 
 Aby wygenerować własne unikatowe identyfikatory, można użyć uuidgen. exe lub Guidgen. exe. (Aby uruchomić dowolne z tych narzędzi, kliknij przycisk **Start** , a następnie kliknij pozycję **Uruchom** w menu. Następnie wprowadź nazwę wymaganego narzędzia.
 
-W przypadku użycia w projekcie, który nie używa także ATL, określenie atrybutu **UUID** jest takie samo jak określenie modyfikatora [UUID](../../cpp/uuid-cpp.md) **__declspec** . Aby pobrać **identyfikator UUID** klasy, można użyć [__uuidof](../../cpp/uuidof-operator.md)
+W przypadku użycia w projekcie, który nie używa także ATL, określenie atrybutu **UUID** jest takie samo jak określanie [identyfikatora UUID](../../cpp/uuid-cpp.md) **__declspec** . Aby pobrać **identyfikator UUID** klasy, można użyć [__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>Przykład
 
@@ -52,12 +52,12 @@ Zobacz przykład [powiązania](bindable.md) dla przykładowego zastosowania **id
 |-|-|
 |**Dotyczy**|**Class**, **struct**, **Interface**, **Union**, **enum**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

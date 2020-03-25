@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501603"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167047"
 ---
 # <a name="export"></a>export
 
@@ -29,7 +29,7 @@ Atrybut **Export** C++ powoduje, że struktura danych zostanie umieszczona w pli
 
 Nie można zastosować atrybutu **Export** do klasy, nawet jeśli klasa ma tylko publiczne elementy członkowskie (odpowiednik **struktury**).
 
-Jeśli eksportujesz nienazwane **Wyliczenie** lub **strukturę**, otrzymujesz nazwę rozpoczynającą się od **__unnamed**<em>x</em>, gdzie *x* jest numerem sekwencyjnym.
+Jeśli eksportujesz nienazwane **Wyliczenie** lub **strukturę**, otrzymujesz nazwę zaczynającą się od **__unnamed**<em>x</em>, gdzie *x* jest numerem sekwencyjnym.
 
 Elementy typedef są prawidłowe dla eksportu są typami podstawowymi, strukturami, związkami, wyliczeniami lub identyfikatorami typów.  Aby uzyskać więcej informacji, zobacz [element typedef](/windows/win32/Midl/typedef) .
 
@@ -56,12 +56,12 @@ struct MyStruct {
 |-|-|
 |**Dotyczy**|**Union**, **typedef**, **enum**, **struct**lub **Interface**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

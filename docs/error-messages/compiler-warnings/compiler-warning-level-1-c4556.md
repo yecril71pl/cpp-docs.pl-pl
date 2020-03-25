@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4556
+title: Ostrzeżenie kompilatora (poziom 1) C4556
 ms.date: 08/27/2018
 f1_keywords:
 - C4556
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501d79a8a86fcd3e2d8ba08dc2f03488f9abb827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162312"
 ---
-# <a name="compiler-warning-level-1-c4556"></a>Kompilator ostrzeżenie (poziom 1) C4556
+# <a name="compiler-warning-level-1-c4556"></a>Ostrzeżenie kompilatora (poziom 1) C4556
 
-> wartość wewnętrznego argumentu natychmiastowego "*wartość*"jest poza zakresem"*ich* - *górnej granicy*"
+> wartość wewnętrznego argumentu bezpośredniego "*Value*" jest poza zakresem "*lowerbound* - *upperbound*"
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrzna pasuje do instrukcji sprzętu. Instrukcja sprzętu ma stałą liczbę bitów, aby zakodować stałej. Jeśli *wartość* jest poza zakresem, go nie koduje nowe prawidłowo. Kompilator obcina dodatkowych bitów.
+Wewnętrznie pasuje do instrukcji sprzętowej. Instrukcja sprzętowa ma ustaloną liczbę bitów do zakodowania stałej. Jeśli *wartość* znajduje się poza zakresem, nie zostanie poprawnie zakodować. Kompilator obcina dodatkowe bity.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład C4556 spowoduje wygenerowanie:
+Poniższy przykład generuje C4556:
 
 ```cpp
 // C4556.cpp

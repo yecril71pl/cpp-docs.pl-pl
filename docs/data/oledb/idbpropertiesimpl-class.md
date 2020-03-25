@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210707"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
 
@@ -48,7 +48,7 @@ Klasa, która pochodzi od `IDBPropertiesImpl`.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Metody interfejsu
 
@@ -62,7 +62,7 @@ Klasa, która pochodzi od `IDBPropertiesImpl`.
 
 [IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) to obowiązkowy interfejs dla obiektów źródła danych i opcjonalny interfejs dla modułów wyliczających. Jeśli jednak moduł wyliczający ujawnia [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musi ujawnić `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu funkcji statycznej zdefiniowanej przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl:: GetProperties
 
 Zwraca wartości właściwości ze źródła danych, informacje o źródle danych i grupy właściwości inicjalizacji, które są obecnie ustawione w obiekcie źródła danych lub wartości właściwości w grupie właściwości inicjowania, które są obecnie ustawione w liczeni.
 
@@ -92,7 +92,7 @@ Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* r
 
 Jeśli dostawca jest zainicjowany, ta metoda zwraca wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT grupy właściwości, które są obecnie ustawione dla obiektu źródła danych. Jeśli dostawca nie został zainicjowany, zwraca tylko DBPROPSET_DBINIT właściwości grupy.
 
-## <a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl:: GetPropertyInfo
 
 Zwraca informacje o właściwościach obsługiwane przez źródło danych.
 
@@ -121,7 +121,7 @@ Niektóre parametry odpowiadają parametrom *referencyjnym programisty OLE DB* r
 
 Używa [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) w celu zaimplementowania tej funkcji.
 
-## <a name="setproperties"></a>IDBPropertiesImpl:: SetProperties
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl:: SetProperties
 
 Ustawia właściwości w grupach właściwości źródła danych i inicjalizacji dla obiektów źródła danych lub grupy właściwości inicjalizacji dla modułów wyliczających.
 

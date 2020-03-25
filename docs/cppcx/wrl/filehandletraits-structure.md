@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c20bad1b67719a9fcfb8ea9fa1dfede1feb42ddf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398436"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213996"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits — Struktura
 
-Definiuje właściwości dojście do pliku.
+Definiuje charakterystykę dojścia do pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,7 +24,7 @@ Definiuje właściwości dojście do pliku.
 struct FileHandleTraits : HANDLETraits;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -34,10 +34,10 @@ struct FileHandleTraits : HANDLETraits;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](microsoft-wrl-wrappers-handletraits-namespace.md)

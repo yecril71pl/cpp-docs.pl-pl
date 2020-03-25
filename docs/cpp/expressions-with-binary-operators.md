@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188990"
 ---
 # <a name="expressions-with-binary-operators"></a>Wyrażenia z operatorami dwuargumentowymi
 
@@ -29,23 +29,23 @@ Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dw
 
    - Dodawanie (+)
 
-   - Odejmowania (-)
+   - Odejmowanie (-)
 
 - [Operatory przesunięcia](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Przesunięcia w prawo (>>)
+   - Przesuń w prawo (> >)
 
-   - Przesunięcie w lewo (<<)
+   - Lewy Shift (< <)
 
 - [Operatory relacyjne i porównania](../cpp/relational-operators-equal-and-equal.md)
 
-   - Mniej niż (\<)
+   - Mniejsze niż (\<)
 
    - Większe niż (>)
 
    - Mniejsze niż lub równe (\<=)
 
-   - Większa niż lub równe (> =)
+   - Większe niż lub równe (> =)
 
    - Równa się (==)
 
@@ -53,17 +53,17 @@ Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dw
 
 - Operatory bitowe
 
-   - [Bitowe AND (&)](../cpp/bitwise-and-operator-amp.md)
+   - [Bitowe i (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [Bitowe or wykluczające OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+   - [Bitowe wykluczające or (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Bitowe alternatywne OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [Bitowe włącznie lub (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Operatory logiczne
 
-   - [Logiczne AND (& &)](../cpp/logical-and-operator-amp-amp.md)
+   - [Koniunkcja logiczna i (& &)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [Operator logiczny lub (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+   - [Logiczne OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operatory przypisania](../cpp/assignment-operators.md)
 
@@ -71,7 +71,7 @@ Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dw
 
    - Dodawanie i przypisanie (+=)
 
-   - Przypisanie odejmowania (-)
+   - Przypisanie odejmowania (-=)
 
    - Mnożenie i przypisanie (*=)
 
@@ -81,16 +81,16 @@ Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dw
 
    - Przypisanie przesunięcia w lewo (<\<=)
 
-   - Przypisanie przesunięcia bitowego w prawo (>> =)
+   - Przypisanie przesunięcia w prawo (> > =)
 
-   - Bitowe and i przypisanie (& =)
+   - Bitowe i przypisanie (& =)
 
    - Bitowe OR wykluczające i przypisanie (^=)
 
-   - Bitowe or alternatywne i przypisanie (&#124;=)
+   - Bitowe włącznie lub przypisanie (&#124;=)
 
 - [Operator przecinkowy](../cpp/comma-operator.md) (,)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy wyrażeń](../cpp/types-of-expressions.md)

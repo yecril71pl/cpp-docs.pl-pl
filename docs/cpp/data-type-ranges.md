@@ -35,12 +35,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: 43eb5f34bc587e3ce86532c56d393da3e07c1b03
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8b4031eccccb432342790fef4da809542e77d669
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180267"
 ---
 # <a name="data-type-ranges"></a>Zakresy typu danych
 
@@ -91,7 +91,7 @@ Zakresy, które są określone w poniższej tabeli, obejmują włącznie.
 |**enum**|różni się|brak| |
 |**float**|4|brak|3.4 e +/-38 (7 cyfr)|
 |**double**|8|brak|1.7 e +/-308 (15 cyfr)|
-|**Long Double**|taka sama jak **Double**|brak|Taka sama jak **Double**|
+|**Long Double**|Taka sama jak **Double**|brak|Taka sama jak **Double**|
 |**wchar_t**|2|**__wchar_t**|od 0 do 65 535|
 
 W zależności od tego, jak jest używany, zmienna **__wchar_t** wyznacza typ znaku dwubajtowego lub typ znaku wieloznacznego. Użyj prefiksu `L` przed znakiem lub stałą ciągu, aby wyznaczyć stałą typu znaku dwubajtowego.
@@ -106,7 +106,7 @@ Aby uzyskać więcej informacji na temat ograniczeń rozmiarów poszczególnych 
 
 Zakres wyliczeniowych typów różni się w zależności od kontekstu języka i określonych flag kompilatora. Aby uzyskać więcej informacji, zobacz [deklaracje](../c-language/c-enumeration-declarations.md) i [wyliczenia](../cpp/enumerations-cpp.md)języka C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Typy wbudowane](../cpp/fundamental-types-cpp.md)

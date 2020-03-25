@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167189"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -27,7 +27,7 @@ Wskazuje, że niestandardowe lub dispinterface zdefiniowane w ramach klasy cocla
 
 ### <a name="parameters"></a>Parametry
 
-*interface1*<br/>
+*, interfejs1*<br/>
 Domyślny interfejs, który zostanie udostępniony dla środowisk skryptów, które tworzą obiekt na podstawie klasy zdefiniowanej przy użyciu atrybutu **domyślnego** .
 
 Jeśli nie określono żadnego interfejsu domyślnego, domyślnie używane jest pierwsze wystąpienie interfejsu nieźródłowego.
@@ -43,7 +43,7 @@ Jeśli nie określono żadnego domyślnego interfejsu źródłowego, domyślnie 
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak **domyślny** jest używany w definicji klasy coclass, aby określić `ICustomDispatch` jako domyślny interfejs programowania:
+Poniższy kod pokazuje, jak **domyślny** jest używany w definicji klasy coclass, aby określić `ICustomDispatch` jako domyślny interfejs programowalności:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -101,12 +101,12 @@ Atrybut [Source](source-cpp.md) zawiera również przykład sposobu użycia wart
 |-|-|
 |**Dotyczy**|**Klasa**, **Struktura**, składowa danych|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**Klasa coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

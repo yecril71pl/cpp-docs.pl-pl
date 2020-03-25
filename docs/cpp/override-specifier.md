@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345867"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188483"
 ---
 # <a name="override-specifier"></a>override, specyfikator
 
-Możesz użyć **zastąpienia** — słowo kluczowe, aby wyznaczyć element członkowski funkcji, które zastępują funkcję wirtualną w klasie bazowej.
+Możesz użyć słowa kluczowego **override** , aby wyznaczyć funkcje członkowskie, które zastępują funkcję wirtualną w klasie bazowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>Uwagi
 
-**Zastąp** jest zależny od kontekstu i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklarację funkcji członkowskiej; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.
+**zastąpienie** jest zależne od kontekstu i ma specjalne znaczenie tylko wtedy, gdy jest używane po deklaracji funkcji składowej; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.
 
 ## <a name="example"></a>Przykład
 
-Użyj **zastąpienia** pomagające zapobiec nieumyślnemu dziedziczeniu w kodzie. Poniższy przykład ukazuje gdzie, bez używania **zastąpienia**, zachowanie funkcji członkowskiej klasy pochodnej może nie być planowane. Kompilator nie emituje żadnych błędów dla tego kodu.
+Użyj funkcji **override** , aby zapobiec nieumyślnemu dziedziczeniu w kodzie. Poniższy przykład pokazuje, gdzie, bez użycia **przesłonięcia**, zachowanie funkcji składowej klasy pochodnej może nie być zamierzone. Kompilator nie emituje żadnych błędów dla tego kodu.
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Kiedy używasz **zastąpienia**, kompilator generuje błędy zamiast dyskretnie tworzyć nowe funkcje Członkowskie.
+Gdy używasz **przesłonięcia**, kompilator generuje błędy zamiast dyskretnie tworzyć nowe funkcje członkowskie.
 
 ```cpp
 class BaseClass
@@ -78,9 +78,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Aby określić funkcje nie mogą być zastępowane i że klasy nie może być dziedziczona, użyj [końcowego](../cpp/final-specifier.md) — słowo kluczowe.
+Aby określić, że funkcje nie mogą być zastępowane i że klasy nie mogą być dziedziczone, użyj słowa kluczowego [Final](../cpp/final-specifier.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [final, specyfikator](../cpp/final-specifier.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

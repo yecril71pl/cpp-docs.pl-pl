@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196763"
 ---
 # <a name="command-line-warning-d9024"></a>Ostrzeżenie D9024 dla wiersza polecenia
 
-Nierozpoznany źródło pliku typu "filename", ponieważ obiekt zakłada, że plik
+nierozpoznany typ pliku źródłowego "filename" — założono plik obiektu
 
-Rozszerzenie określony plik nie został rozpoznany. Plik został zakłada się, że plik obiektu i została przekazana do konsolidatora.
+Nie rozpoznano rozszerzenia określonego pliku. Przyjęto, że plik jest plikiem obiektu i został przekazano do konsolidatora.
 
-Rozpoznawane są następujące rozszerzenia:
+Rozpoznano następujące rozszerzenia:
 
-- .c (plik źródłowy C)
+- . c (plik źródłowy C)
 
-- .cxx (pliku źródłowego języka C++)
+- . cxx (C++ plik źródłowy)
 
-- .cpp (pliku źródłowego języka C++)
+- . cpp (C++ plik źródłowy)
 
-- .obj (pliku obiektu)
+- . obj (plik obiektu)
 
-- lib (plik biblioteki)
+- . lib (plik biblioteki)
 
-- .def (plik definicji modułu)
+- . def (plik definicji modułu)
 
-- EXP (konsolidator eksportuje plik tworzony przez łącze/lib)
+- . EXP (plik eksportu konsolidatora, utworzony przez LINK/LIB)

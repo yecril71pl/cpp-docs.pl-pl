@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210551"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl — Klasa
 
-Wykonuje te same funkcje, `IObjectWithSite` co, ale również włącza właściwości `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`OLE DB.
+Wykonuje te same funkcje co `IObjectWithSite`, ale również włącza `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`właściwości OLE DB.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,14 +40,14 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Klasa pochodna `IRowsetCreator`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -57,9 +57,9 @@ Klasa pochodna `IRowsetCreator`.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dziedziczy z [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) i przesłania [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Gdy polecenie dostawcy lub obiekt sesji tworzy `QueryInterface` zestaw wierszy, wywołuje obiekt zestawu wierszy `IObjectWithSite` szukający i wywołuje `SetSite` przekazanie `IUnkown` interfejsu obiektu zestawu wierszy jako interfejsu lokacji.
+Ta klasa dziedziczy z [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) i przesłania [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Gdy polecenie dostawcy lub obiekt sesji tworzy zestaw wierszy, wywołuje `QueryInterface` w obiekcie zestawu wierszy szukające `IObjectWithSite` i wywołań `SetSite` przekazanie interfejsu `IUnkown` obiektu zestawu wierszy jako interfejsu lokacji.
 
-## <a name="setsite"></a>IRowsetCreatorImpl —:: SetSite
+## <a name="irowsetcreatorimplsetsite"></a><a name="setsite"></a>IRowsetCreatorImpl —:: SetSite
 
 Ustawia lokację zawierającą obiekt zestawu wierszy. Aby uzyskać więcej informacji, zobacz [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
 
@@ -72,7 +72,7 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>Parametry
 
 *pCreator*<br/>
-podczas Wskaźnik do `IUnknown` wskaźnika interfejsu lokacji zarządzającej obiektem zestawu wierszy.
+podczas Wskaźnik do wskaźnika interfejsu `IUnknown` lokacji zarządzającej obiektem zestawu wierszy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -82,7 +82,7 @@ Standardowa wartość HRESULT.
 
 Ponadto `IRowsetCreatorImpl::SetSite` włącza OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

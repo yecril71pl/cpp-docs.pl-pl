@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3180
 ms.assetid: 5281f583-7df7-418a-8507-d4da67ed6572
-ms.openlocfilehash: bfe2699ce448aa879f0c93aa431a17dbc1334274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c94019bf7a58492fcbb27c4f092a6e5f7e36ca25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382444"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176458"
 ---
 # <a name="compiler-error-c3180"></a>Błąd kompilatora C3180
 
-'Nazwa typu': nazwa przekracza limit meta danych znaków "limit"
+"nazwa typu": nazwa przekracza limit meta danych znaków "limit"
 
-Kompilator obcięte nazwę typu zarządzanego w metadanych. Obcinania spowoduje, że typ będzie bezużyteczny z `#using` — dyrektywa (lub równowartość w innym języku).
+Kompilator obciął nazwę typu zarządzanego w metadanych. Obcinanie uniemożliwi używanie tego typu z dyrektywą `#using` (lub odpowiednikiem w innym języku).
 
-Limit Nazwa typu zawiera jakiekolwiek zastrzeżenia przestrzeni nazw.
+Limit nazw typów obejmuje wszelkie kwalifikacje przestrzeni nazw.

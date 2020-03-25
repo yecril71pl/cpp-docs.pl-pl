@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c3db18b400ce94bff3c643d6728a6613061039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165135"
 ---
 # <a name="compiler-warning-c4693"></a>Ostrzeżenie kompilatora C4693
 
-> "class": zapieczętowana klasa abstrakcyjna nie może mieć żadnych składowych wystąpienia "Test"
+> "Class": zapieczętowana Klasa abstrakcyjna nie może mieć żadnych składowych wystąpienia "test"
 
-Jeśli typ jest oznaczony [zapieczętowanego](../../extensions/sealed-cpp-component-extensions.md) i [abstrakcyjne](../../extensions/abstract-cpp-component-extensions.md), może mieć tylko statyczne elementy członkowskie.
+Jeśli typ jest oznaczony jako [Sealed](../../extensions/sealed-cpp-component-extensions.md) i [abstract](../../extensions/abstract-cpp-component-extensions.md), może mieć tylko statyczne elementy członkowskie.
 
-To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md).
+To ostrzeżenie jest automatycznie podwyższana do błędu. Jeśli chcesz zmodyfikować to zachowanie, użyj [#pragma ostrzeżenie](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4693.
+Poniższy przykład generuje C4693.
 
 ```cpp
 // C4693.cpp

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178283"
 ---
 # <a name="indirection-operator-"></a>Operator bezpośredni: *
 
@@ -24,11 +24,11 @@ ms.locfileid: "62183586"
 
 ## <a name="remarks"></a>Uwagi
 
-Jednoargumentowy operator pośredni (<strong>\*</strong>) wyłuskania wskaźnika; oznacza to, konwertuje wartość wskaźnika do l wartością. Argument operacji operatora pośredniego musi być wskaźnikiem do typu. Wynik wyrażenia pośredni to typ, z którego jest tworzony na typ wskaźnika. Korzystanie z <strong>\*</strong> operatora w tym kontekście różni się od jego znaczenie jako operator binarny, który jest mnożenia.
+Jednoargumentowy operator pośredni (<strong>\*</strong>) odwołuje wskaźnik; oznacza to, że konwertuje wartość wskaźnika na wartość l. Argument operacji operatora pośredni musi być wskaźnikiem do typu. Wynik wyrażenia pośredniego jest typem, z którego pochodzi typ wskaźnika. Użycie operatora <strong>\*</strong> w tym kontekście różni się od jego znaczenia jako operatora binarnego, który jest wynikiem mnożenia.
 
 Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje on lokalizację magazynu, wynikiem jest l-wartość opisująca lokalizację magazynu.
 
-Operator pośredni mogą łącznie używane w celu wyłuskania wskaźniki do wskaźników. Na przykład:
+Operator pośredni może być używany łącznie, aby wyłuskać wskaźniki do wskaźników. Na przykład:
 
 ```cpp
 // expre_Indirection_Operator.cpp
@@ -60,7 +60,7 @@ Jeśli wartość wskaźnika jest nieprawidłowa, wynik jest niezdefiniowany. Nas
 
 - Wskaźnik określa adres nieużywany przez program wykonujący.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

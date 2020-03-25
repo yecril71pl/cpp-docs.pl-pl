@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1305
 ms.assetid: 1629c850-e2db-4678-83d8-9bfc85323bc5
-ms.openlocfilehash: 988842a0d5e8002ffd1478a2e10a8c88ee971911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad00eb3d95e9f09d4f84daefb7e2a87fd1a3abf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203362"
 ---
 # <a name="fatal-error-c1305"></a>Błąd krytyczny C1305
 
-Baza danych profilu "pgd_file" jest przeznaczona dla innej architektury
+Baza danych profilów "pgd_file" jest dla innej architektury
 
-Plik .pgd, który został wygenerowany przez operację pginstrument dla innej platformy został przekazany do [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Optymalizacje sterowane profilem](../../build/profile-guided-optimizations.md) są dostępne dla x86 i x64 64. Jednak nie jest prawidłowy plik .pgd wygenerowany z operacją pginstrument na jednej platformie jako dane wejściowe /LTCG:PGOPTIMIZE dla różnych platform.
+Plik. PGD wygenerowany z/LTCG: PGINSTRUMENT operacji dla innej platformy został przekazano do [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Optymalizacje oparte na profilach](../../build/profile-guided-optimizations.md) są dostępne dla platform x86 i x64. Jednak plik. PGD wygenerowany przy użyciu operacji/LTCG: PGINSTRUMENT dla jednej platformy nie jest prawidłowy jako dane wejściowe do/LTCG: PGOPTIMIZE dla innej platformy.
 
-Aby rozwiązać ten problem, Przekaż tylko plik .pgd utworzone za pomocą pginstrument do /LTCG:PGOPTIMIZE na jednej platformie.
+Aby rozwiązać ten problem, należy przekazać plik. pgd, który został utworzony za pomocą/LTCG: PGINSTRUMENT do/LTCG: PGOPTIMIZE na tej samej platformie.

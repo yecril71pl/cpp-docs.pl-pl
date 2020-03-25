@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166695"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -28,15 +28,15 @@ Definiuje blok biblioteki w pliku IDL.
 *type*<br/>
 Obowiązkowe Może być jedną z następujących czynności:
 
-- `dll`Dodaje funkcje i klasy, które umożliwiają, aby dana Biblioteka DLL działała jako serwer COM w procesie. Jest to wartość domyślna.
+- `dll` dodaje funkcje i klasy, które umożliwiają działanie biblioteki DLL w procesie jako serwer COM. Jest to wartość domyślna.
 
-- `exe`Dodaje funkcje i klasy, które umożliwiają wynikającym z pliku wykonywalnego działanie jako poza procesem.
+- `exe` dodaje funkcje i klasy, które umożliwiają działanie programu wykonywalnego jako poza procesem.
 
-- `service`Dodaje funkcje i klasy, które zezwalają programowi wykonywalnemu na działanie jako usługę NT.
+- `service` dodaje funkcje i klasy, które umożliwiają działanie programu wykonywalnego jako usługi NT.
 
-- `unspecified`Wyłącza iniekcję kodu ATL związanego z atrybutem module: iniekcja klasy modułu ATL, _AtlModule wystąpienia globalnego i funkcje punktu wejścia. Nie wyłącza iniekcji kodu ATL ze względu na inne atrybuty projektu.
+- `unspecified` wyłącza iniekcję kodu ATL związanego z atrybutem modułu: iniekcja klasy modułu ATL, globalnych _AtlModule wystąpień i funkcji punktu wejścia. Nie wyłącza iniekcji kodu ATL ze względu na inne atrybuty projektu.
 
-*name*<br/>
+*Nazwij*<br/>
 Obowiązkowe Nazwa bloku biblioteki.
 
 *version*<br/>
@@ -70,7 +70,7 @@ Obowiązkowe Aby uzyskać więcej informacji, zobacz [helpstringcontext](helpstr
 Obowiązkowe Zapobiega wyświetlaniu całej biblioteki. To użycie jest przeznaczone do użycia z kontrolkami. Hosty muszą utworzyć nową bibliotekę typów, która zawija formant z rozszerzonymi właściwościami. Aby uzyskać więcej informacji, zobacz [ukryty](/windows/win32/Midl/hidden) atrybut MIDL.
 
 *restricted*<br/>
-Obowiązkowe Elementy członkowskie biblioteki nie mogą być wywoływane arbitralnie. Aby uzyskać [](/windows/win32/Midl/restricted) więcej informacji, zobacz atrybut MIDL z ograniczeniami.
+Obowiązkowe Elementy członkowskie biblioteki nie mogą być wywoływane arbitralnie. Aby uzyskać więcej informacji, zobacz atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 *custom*<br/>
 Obowiązkowe Jeden lub więcej atrybutów; jest to podobne do atrybutu [niestandardowego](custom-cpp.md) . Pierwszy parametr do *niestandardowego* jest identyfikatorem GUID atrybutu. Na przykład:
@@ -87,13 +87,13 @@ Identyfikator zasobu ciągu pliku. RGS używany do rejestrowania identyfikatora 
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli nie określisz parametru z ograniczeniami [emitidl](emitidl.md), **moduł** jest wymagany w dowolnym programie, C++ który używa atrybutów.
+Jeśli nie określisz parametru z *ograniczeniami* [emitidl](emitidl.md), **moduł** jest wymagany w dowolnym programie, C++ który używa atrybutów.
 
-Blok biblioteki zostanie utworzony, jeśli oprócz atrybutu **module** kod źródłowy korzysta również z [dispinterface](dispinterface.md), podwójnego [obiektu](object-cpp.md)lub atrybutu [](dual.md), który implikuje [klasę coclass](coclass.md).
+Blok biblioteki zostanie utworzony, jeśli oprócz atrybutu **module** kod źródłowy korzysta również z [dispinterface](dispinterface.md), [podwójnego](dual.md) [obiektu](object-cpp.md)lub atrybutu, który implikuje [klasę coclass](coclass.md).
 
 Jeden blok biblioteki jest dozwolony w pliku IDL. Wiele wpisów modułu w kodzie źródłowym zostanie scalonych z najnowszymi wartościami parametrów, które są implementowane.
 
-Jeśli ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie zmiany atrybutu. Poza powyższym zachowaniem, atrybut wstawia również obiekt globalny (o nazwie `_AtlModule`) właściwego typu i dodatkowy kod pomocniczy. Jeśli atrybut jest autonomiczny, wstawia klasę pochodną poprawnego typu modułu. Jeśli atrybut jest stosowany do klasy, dodaje klasę bazową poprawnego typu modułu. Prawidłowy typ jest określany przez wartość parametru *typu* :
+Jeśli ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie zmiany atrybutu. Oprócz powyższego zachowania, atrybut wstawia również obiekt globalny (o nazwie `_AtlModule`) poprawnego typu i dodatkowy kod pomocniczy. Jeśli atrybut jest autonomiczny, wstawia klasę pochodną poprawnego typu modułu. Jeśli atrybut jest stosowany do klasy, dodaje klasę bazową poprawnego typu modułu. Prawidłowy typ jest określany przez wartość parametru *typu* :
 
 - `type` = **dll**
 
@@ -103,11 +103,11 @@ Jeśli ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie 
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) jest używany jako klasa bazowa i standardowy punkt wejścia [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **usługi**
+- **usługa**  = `type`
 
    [Funkcja CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) jest używany jako klasa bazowa i standardowy punkt wejścia [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **nieokreślony**
+- nieokreślony **unspecified** `type` = 
 
    Wyłącza iniekcję kodu ATL związanego z atrybutem modułu.
 
@@ -121,7 +121,7 @@ Poniższy kod pokazuje, jak utworzyć blok biblioteki w wygenerowanym pliku IDL.
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-Poniższy kod pokazuje, że można podać własną implementację funkcji, która będzie widoczna w kodzie, który został wstrzykiwany w wyniku użycia **modułu**. Zobacz [/FX](../../build/reference/fx-merge-injected-code.md) , aby uzyskać więcej informacji na temat wyświetlania iniekcji kodu. Aby przesłonić jedną z funkcji wstawianych przez atrybut **modułu** , należy utworzyć klasę, która będzie zawierać implementację funkcji, i nadać jej atrybut do tej klasy.
+Poniższy kod pokazuje, że można podać własną implementację funkcji, która będzie widoczna w kodzie, który został wstrzykiwany w wyniku użycia **modułu**. Zobacz [/FX](../../build/reference/fx-merge-injected-code.md) , aby uzyskać więcej informacji na temat wyświetlania iniekcji kodu. Aby przesłonić jedną z funkcji wstawianych przez atrybut **modułu** , należy utworzyć klasę, która będzie zawierać implementację funkcji, i nadać **jej atrybut do tej klasy** .
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -154,12 +154,12 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

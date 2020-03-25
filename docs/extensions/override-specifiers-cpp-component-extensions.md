@@ -1,27 +1,27 @@
 ---
-title: Specyfikatory zastąpienia (C++sposób niezamierzony i C++/CX)
+title: Specyfikatory przesłonięciaC++( C++/CLI i/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181905"
 ---
-# <a name="override-specifiers--ccli-and-ccx"></a>Specyfikatory zastąpienia (C++sposób niezamierzony i C++/CX)
+# <a name="override-specifiers--ccli-and-ccx"></a>Specyfikatory przesłonięciaC++( C++/CLI i/CX)
 
-*Specyfikatory przesłonięć* zmodyfikować sposób dziedziczone typy i członkowie typów dziedziczonych zachowują się w typach pochodnych.
+*Specyfikatory przesłonięcia* modyfikują sposób, w jaki dziedziczone typy i elementy członkowskie dziedziczonych typów zachowują się w typach pochodnych.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:
+Aby uzyskać więcej informacji na temat specyfikatorów zastąpienia, zobacz:
 
 - [abstract](abstract-cpp-component-extensions.md)
 
@@ -31,28 +31,28 @@ Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:
 
 - [sealed](sealed-cpp-component-extensions.md)
 
-- [Zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
+- [Specyfikatory przesłonięcia i kompilacje natywne](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
 
-**abstrakcyjna** i **zapieczętowanego** są również prawidłowe w typach deklaracji, gdzie nie działają jak zastępujące specyfikatory.
+**abstrakcyjne** i **zapieczętowane** są również prawidłowe dla deklaracji typu, gdzie nie działają jako specyfikatory przesłonięcia.
 
-Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowej, zobacz [jawne zastępowanie](explicit-overrides-cpp-component-extensions.md).
+Aby uzyskać informacje na temat jawnego przesłaniania funkcji klasy podstawowej, zobacz [jawne przesłonięcia](explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowisko wykonawcze systemu Windows).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowiska uruchomieniowego języka wspólnego).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

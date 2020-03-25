@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a2a9ec803fba1be0012fcb58bf3b42e78f9071
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214165"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType — Wyliczenie
 
-Określa typ wyniku zwracanego przez `GetResults()` metody.
+Określa typ wyniku zwróconego przez metodę `GetResults()`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,21 +24,21 @@ Określa typ wyniku zwracanego przez `GetResults()` metody.
 enum AsyncResultType;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="values"></a>Wartości
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`MultipleResults`|Zbiór wielu wyników, które są prezentowane stopniowo między `Start` stanu i przed `Close()` jest wywoływana.|
-|`SingleResult`|Pojedynczy wynik, który jest przedstawiony po `Complete` wystąpi zdarzenie.|
+|`MultipleResults`|Zestaw wielu wyników, które są prezentowane stopniowo między stanem `Start` i przed wywołaniem `Close()`.|
+|`SingleResult`|Pojedynczy wynik, który jest prezentowany po wystąpieniu `Complete` zdarzenia.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** async.h
+**Nagłówek:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

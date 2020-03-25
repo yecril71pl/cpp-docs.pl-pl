@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215231"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -25,11 +25,11 @@ Określa typ danych, który będzie używany do przesyłania zamiast typu danych
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **wire_marshal** C++ ma takie same funkcje jak atrybut [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
+Atrybut **wire_marshal** C++ ma taką samą funkcjonalność jak atrybut [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia użycie **wire_marshal**:
+Poniższy kod ilustruje użycie **wire_marshal**:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -55,12 +55,12 @@ Poniższy kod przedstawia użycie **wire_marshal**:
 |-|-|
 |**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0031
 - CXX0031
 ms.assetid: adafbcb7-982f-495f-a34d-72e95d7e54c7
-ms.openlocfilehash: 29bd4959c7bdd20b25279ca5d0e18814d1b23039
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd4b0d744f9fc101ec4a7bc3a2a01f1d14cfbf7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195594"
 ---
 # <a name="expression-evaluator-error-cxx0031"></a>Błąd CXX0031 programu Expression Evaluator
 
-wyrażenie rozwijania
+wyrażenie nie jest rozszerzalne
 
-Ewaluator wyrażeń napotkał błąd wewnętrzny.
+W ewaluatora wyrażeń Wystąpił błąd wewnętrzny.
 
-Można napisać równoważne wyrażenie, które może przyjąć poprawnie.
+Może być możliwe zapisanie równoważnego wyrażenia, które może być oceniane prawidłowo.
 
-Ten błąd jest taka sama jak CAN0031.
+Ten błąd jest identyczny z CAN0031.

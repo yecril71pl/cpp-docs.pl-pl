@@ -5,25 +5,25 @@ helpviewer_keywords:
 - Visual Studio C++ projects, CLR programming
 - .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-ms.openlocfilehash: e41544adb040175fc8e53ab0e6bc4f8275891580
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 45295a3395f19d32dbf29948e1cbd15cd844adb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169009"
 ---
 # <a name="files-created-for-clr-projects"></a>Pliki utworzone dla projektów CLR
 
-Gdy używasz języka Visual C++, szablony do tworzenia projektów kilka plików są tworzone w zależności od szablonu możesz używać. Poniższa tabela zawiera listę wszystkich plików, które są tworzone przez Szablony projektu dla projektów programu .NET Framework.
+W przypadku tworzenia projektów C++ przy użyciu szablonów wizualnych w zależności od używanego szablonu są tworzone kilka plików. W poniższej tabeli wymieniono wszystkie pliki, które są tworzone przez szablony projektu dla projektów .NET Framework.
 
 |Nazwa pliku|Opis pliku|
 |---------------|----------------------|
-|AssemblyInfo.cpp|Plik zawierający informacje (oznacza to, atrybuty, pliki, zasoby, typów, informacji o wersji, informacje o podpisywaniu i tak dalej) do modyfikowania metadanych zestawu projektu. Aby uzyskać więcej informacji, zobacz [pojęcia zestawu](/dotnet/framework/app-domains/assembly-contents).|
-|*projname*.asmx|Plik tekstowy, że odwołania zarządzane klas, które zapewniają funkcjonalność usługi XML sieci Web.|
-|*Projname*.cpp|Główne źródło pliku i punktu wejścia do aplikacji programu Visual Studio utworzone automatycznie. Określa plik .dll projektu i przestrzeni nazw projektu. Podaj własny kod w tym pliku.|
-|*projname*.vsdisco|Plik XML wdrażania, zawierające linki do innych zasobów, które opisują usługi XML sieci Web.|
-|*Projname*.h|Główne dołączanego pliku projektu, który zawiera wszystkie deklaracje, symbole globalne, a `#include` dyrektywy dla innych plików nagłówkowych.|
-|*projname*.sln|Plik rozwiązania, używane w środowisku deweloperskim organizować wszystkie elementy projektu w ramach jednego rozwiązania.|
-|*projname*.suo|Plik opcji rozwiązanie używane w środowisku deweloperskim.|
-|*Projname*.vcxproj|Plik projektu, używany w środowisku deweloperskim, która przechowuje informacje specyficzne dla tego projektu.|
-|Plik ReadMe.txt|Plik opisujący każdego pliku w projekcie przy użyciu rzeczywiste nazwy plików utworzone przez szablon.|
+|AssemblyInfo. cpp|Plik zawierający informacje (czyli atrybuty, pliki, zasoby, typy, informacje o wersji, informacje o podpisywaniu itd.) w celu zmodyfikowania metadanych zestawu projektu. Aby uzyskać więcej informacji, zobacz [pojęcia związane z zestawem](/dotnet/framework/app-domains/assembly-contents).|
+|*Projname*. asmx|Plik tekstowy, który odwołuje się do zarządzanych klas, które hermetyzują funkcjonalność usługi sieci Web XML.|
+|*Projname*. cpp|Główny plik źródłowy i punkt wejścia do aplikacji utworzonej przez program Visual Studio. Identyfikuje plik Project. dll i przestrzeń nazw projektu. Podaj własny kod w tym pliku.|
+|*Projname*. vsdisco|Plik wdrożenia XML zawierający linki do innych zasobów, które opisują usługę sieci Web XML.|
+|*Projname*. h|Główny plik dołączany dla projektu, który zawiera wszystkie deklaracje, symbole globalne i dyrektywy `#include` dla innych plików nagłówkowych.|
+|*Projname*. sln|Plik rozwiązania używany w środowisku deweloperskim do organizowania wszystkich elementów projektu w jednym rozwiązaniu.|
+|*Projname*. suo|Plik opcji rozwiązania używany w środowisku programistycznym.|
+|*Projname*. vcxproj|Plik projektu używany w środowisku deweloperskim, w którym przechowywane są informacje specyficzne dla tego projektu.|
+|Plik Readme. txt|Plik opisujący każdy plik w projekcie przy użyciu rzeczywistych nazw plików utworzonych przez szablon.|

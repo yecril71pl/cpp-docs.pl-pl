@@ -1,17 +1,17 @@
 ---
-title: Synchronizuj (atrybut COM C++)
+title: Synchronizuj (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214516"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -25,15 +25,15 @@ Synchronizuje dostęp do metody docelowej.
 
 ## <a name="remarks"></a>Uwagi
 
-**Zsynchronizować** atrybut C++ zapewnia obsługę synchronizacji metodę docelowego obiektu. Synchronizacja umożliwia wielu obiektów, które korzystają z typowych zasobu (np. metody klasy) poprzez kontrolowanie dostępu do metody docelowej.
+Atrybut **Synchronize** C++ implementuje obsługę synchronizowania metody docelowej obiektu. Synchronizacja umożliwia wielu obiektom użycie wspólnego zasobu (takiego jak metoda klasy) poprzez kontrolowanie dostępu do metody docelowej.
 
-Kod wstawione przez ten atrybut wywołuje odpowiednią `Lock` — metoda (określany przez model wątkowy) na początku metody docelowej. Gdy metoda jest został zakończony, `Unlock` jest wywoływana automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
+Kod wstawiony przez ten atrybut wywołuje właściwą metodę `Lock` (określoną przez model wątkowości) na początku metody docelowej. Gdy metoda zostanie zakończona, `Unlock` jest wywoływana automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod zawiera synchronizację `UpdateBalance` metody `CMyClass` obiektu.
+Poniższy kod umożliwia synchronizację metody `UpdateBalance` obiektu `CMyClass`.
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -66,13 +66,13 @@ class CMyClass {
 
 |||
 |-|-|
-|**Dotyczy**|Metody klasy, metoda|
+|**Dotyczy**|Metoda klasy, Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
+|**Nieprawidłowe atrybuty**|None|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty COM](com-attributes.md)

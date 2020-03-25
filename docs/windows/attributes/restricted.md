@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166370"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,12 +27,12 @@ Określa, że element członkowski modułu, interfejsu lub dispinterface nie mo�
 
 ### <a name="parameters"></a>Parametry
 
-*interfaces*<br/>
+*interfejsów*<br/>
 Co najmniej jeden interfejs, który może nie być wywoływany arbitralnie dla obiektu COM. Ten parametr jest prawidłowy tylko wtedy, gdy jest stosowany do klasy.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut C++ z ograniczeniami ma taką samą funkcjonalność jak atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
+Atrybut z **ograniczeniami** C++ ma taką samą funkcjonalność jak atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Przykład
 
@@ -69,12 +69,12 @@ class c : public a, public b
 |-|-|
 |**Dotyczy**|Interface — Metoda, **interfejs**, **Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**Klasa coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

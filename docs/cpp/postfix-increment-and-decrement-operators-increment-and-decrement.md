@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177680"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatory przyrostka inkrementacji i dekrementacji: ++ i --
 
@@ -32,23 +32,23 @@ postfix-expression --
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ zawiera przedrostkowe i przyrostkowe operatory inkrementacyjne i dekrementacyjne; w tej sekcji opisano tylko przyrostkowe operatory inkrementacyjne i dekrementacyjne. (Aby uzyskać więcej informacji, zobacz [operatory prefiksów inkrementacji i dekrementacji](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) Różnica między tymi dwoma jest, że w notacji przyrostkowej, operator pojawia się po *wyrażeniem przyrostkowym*, natomiast w notacji przedrostkowej, operator pojawia się przed *wyrażenia.* W poniższym przykładzie pokazano przyrostkowy operator inkrementacyjny:
+Język C++ zawiera przedrostkowe i przyrostkowe operatory inkrementacyjne i dekrementacyjne; w tej sekcji opisano tylko przyrostkowe operatory inkrementacyjne i dekrementacyjne. (Aby uzyskać więcej informacji, zobacz [Operatory zwiększania i zmniejszania prefiksu](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)). Różnica między nimi polega na tym, że w notacji przyrostkowej operator występuje po *przyrostkowym wyrażeniu*, natomiast w notacji prefiksu operator pojawia się przed *wyrażeniem.* W poniższym przykładzie pokazano przyrostkowy operator inkrementacyjny:
 
 ```cpp
 i++;
 ```
 
-Efektem zastosowania przyrostkowego operatora inkrementacyjnego (**++**) jest, że wartość argumentu operacji jest zwiększana o jedną jednostkę odpowiedniego typu. Podobnie efektem zastosowania przyrostkowego operatora dekrementacyjnego (**--**) jest, że wartość argumentu operacji zostaje zmniejszona o jedną jednostkę odpowiedniego typu.
+Efekt zastosowania przyrostkowego operatora przyrostu ( **++** ) polega na tym, że wartość operandu jest zwiększana o jedną jednostkę odpowiedniego typu. Analogicznie, efekt zastosowania operatora zmniejszania przyrostu ( **--** ) polega na tym, że wartość operandu zostanie zmniejszona o jedną jednostkę odpowiedniego typu.
 
-Ważne jest, aby należy pamiętać, że zwiększenie przyrostkowe lub dekrementacji wyrażenie zwróci wartość wyrażenia *przed* zastosowaniem odpowiedniego operatora. Operacja inkrementacyjna lub dekrementacyjna występuje *po* operand zostaje oceniony. Problem występuje tylko wtedy, gdy przyrostkowa operacja inkrementacyjna lub dekrementacyjna występuje w kontekście większego wyrażenia.
+Należy zwrócić uwagę, że przyrostowe wyrażenie zwiększające lub zmniejszania daje wartość wyrażenia *przed* zastosowaniem odpowiedniego operatora. Operacja zwiększania lub zmniejszania występuje *po* obliczeniu operandu. Problem występuje tylko wtedy, gdy przyrostkowa operacja inkrementacyjna lub dekrementacyjna występuje w kontekście większego wyrażenia.
 
 Po zastosowaniu przyrostkowego operatora do argumentu funkcji, nie ma gwarancji, że wartość zostanie zwiększona lub zmniejszona przed przekazaniem jej do funkcji.  Zobacz sekcję 1.9.17 w standardzie języka C++, aby uzyskać więcej informacji.
 
-Zastosowanie przyrostkowego operatora inkrementacyjnego do wskaźnika do tablicy obiektów typu **długie** powoduje w rzeczywistości dodanie liczby cztery do wewnętrznej reprezentacji wskaźnika. To zachowanie powoduje, że wskaźnik, który wcześniej odwoływał się do *n*element th do odwoływania się do tablicy (*n*+ 1) th element.
+Stosowanie przyrostkowego operatora przyrostu do wskaźnika do tablicy obiektów typu **Long** w rzeczywistości dodaje cztery do wewnętrznej reprezentacji wskaźnika. To zachowanie powoduje, że wskaźnik, który wcześniej odnosił się do *n*-tym elementu tablicy, odwołuje się do elementu (*n*+ 1).
 
-Argumenty operacji dla przyrostkowych operatorów inkrementacyjnych i dekrementacyjnych muszą być modyfikowalnymi (nie **const**) l wartościami typu arytmetycznego lub wskaźnikowego. Typ wyniku jest taki sam, jak w przypadku *wyrażeniem przyrostkowym*, ale nie jest już l wartością.
+Operandy arytmetyczne przyrostu oraz operatory zmniejszania przyrostowego muszą być modyfikowalnymi (niestałymi **) l**-wartościami typu arytmetyki lub wskaźnika. Typ wyniku jest taki sam jak w przypadku *wyrażenia przyrostkowego*, ale nie jest już wartością l.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Argument przyrostka inkrementacji i dekrementacji operator nie może być typu **bool**.
+**Visual Studio 2017 w wersji 15,3 i nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): operand przyrostka lub operator zmniejszania przyrostkowego nie może być typu **bool**.
 
 Poniższy kod ilustruje przyrostkowy operator inkrementacyjny:
 
@@ -73,7 +73,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

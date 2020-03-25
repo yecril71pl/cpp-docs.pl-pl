@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194008"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Ostrzeżenie LNK4070 narzędzi konsolidatora
 
-/ Out: nazwa_pliku dyrektywy w. EXP różni się od nazwy pliku wyjściowego 'NazwaPliku'; dyrektywa została zignorowana
+/OUT: filename — dyrektywa w. Różnica jest inna niż nazwa pliku wyjściowego "filename"; ignorowanie dyrektywy
 
-`filename` Określonych w [nazwa](../../build/reference/name-c-cpp.md) lub [biblioteki](../../build/reference/library.md) instrukcji podczas tworzenia pliku .exp różni się od danych wyjściowych `filename` , był domyślnie zakłada, że albo określony za pomocą [/OUT](../../build/reference/out-output-file-name.md) opcji.
+`filename` określony w instrukcji [name](../../build/reference/name-c-cpp.md) lub [Library](../../build/reference/library.md) , gdy plik EXP został utworzony różni się od `filename` wyjściowego, który został przyjęty domyślnie lub określony przy użyciu opcji [/out](../../build/reference/out-output-file-name.md) .
 
-Jeśli zmienisz nazwę pliku wyjściowego w środowisku deweloperskim i gdzie plik .def projektu nie zostało zaktualizowane, zostanie wyświetlone to ostrzeżenie. Ręcznie zaktualizować plik .def, aby rozwiązać tego ostrzeżenia.
+To ostrzeżenie zostanie wyświetlone, jeśli zmienisz nazwę pliku wyjściowego w środowisku deweloperskim, a plik. def projektu nie został zaktualizowany. Ręcznie zaktualizuj plik. def, aby rozwiązać to ostrzeżenie.
 
-Program kliencki, który używa wynikowej biblioteki DLL mogą wystąpić problemy.
+Program kliencki, który używa uzyskanej biblioteki DLL, może napotkać problemy.

@@ -1,5 +1,5 @@
 ---
-title: '&lt; operatora (&lt;sample kontenera &gt;)'
+title: '&lt; operatora (&lt;przykładowego kontenera&gt;)'
 ms.date: 11/04/2016
 f1_keywords:
 - std::operator<
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: fc2a14d882b5ccfbfdaae543c76ca673f9018a59
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215270"
 ---
-# <a name="operatorlt-ltsample-containergt"></a>&lt; operatora (&lt;sample kontenera &gt;)
+# <a name="operatorlt-ltsample-containergt"></a>&lt; operatora (&lt;przykładowego kontenera&gt;)
 
 > [!NOTE]
 > Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
@@ -39,10 +39,10 @@ bool operator<(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.
+Zwraca wartość `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<sample kontenera >](../standard-library/sample-container.md) \
-[rozpocznij](../standard-library/container-class-begin.md) \
+[\<przykładowego kontenera >](../standard-library/sample-container.md)\
+[rozpocznij](../standard-library/container-class-begin.md)\
 [punktów](../standard-library/container-class-end.md)

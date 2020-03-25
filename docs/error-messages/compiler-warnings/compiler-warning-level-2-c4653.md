@@ -1,22 +1,22 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4653
+title: Ostrzeżenie kompilatora (poziom 2) C4653
 ms.date: 11/04/2016
 f1_keywords:
 - C4653
 helpviewer_keywords:
 - C4653
 ms.assetid: 90ec3317-3d39-4b4c-bcd1-97e7c799e1b6
-ms.openlocfilehash: 664b1b3ec732c323d0074310902890cdd6eca9a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994e9a4963e7e10af2313b3dcea5bb8b2b93426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161740"
 ---
-# <a name="compiler-warning-level-2-c4653"></a>Kompilator ostrzeżenie (poziom 2) C4653
+# <a name="compiler-warning-level-2-c4653"></a>Ostrzeżenie kompilatora (poziom 2) C4653
 
-— Opcja kompilatora "opcji" niespójna z prekompilowanym nagłówkiem; Bieżąca opcja wiersza polecenia została zignorowana
+Opcja kompilatora "Option" jest niespójna z prekompilowanym nagłówkiem; Bieżąca opcja wiersza poleceń została zignorowana
 
-Opcja określony za pomocą Użyj nagłówków prekompilowanych ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) opcja była niespójna przy użyciu opcje określone podczas tworzenia prekompilowanego pliku nagłówkowego. Tej kompilacji jest używana opcja, określony podczas tworzenia prekompilowanego pliku nagłówkowego.
+Opcja określona z opcją Użyj prekompilowanych nagłówków ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) była niespójna z opcjami określonymi podczas tworzenia prekompilowanego nagłówka. Ta kompilacja użyła opcji określonej podczas tworzenia prekompilowanego nagłówka.
 
-To ostrzeżenie może wystąpić, gdy inną wartość dla opcji struktury pakietu ([/ZP](../../build/reference/zp-struct-member-alignment.md)) został określony podczas kompilacji prekompilowanego pliku nagłówkowego.
+To ostrzeżenie może wystąpić, gdy podczas kompilacji prekompilowanego nagłówka określono inną wartość opcji struktury pakietów ([/ZP](../../build/reference/zp-struct-member-alignment.md)).

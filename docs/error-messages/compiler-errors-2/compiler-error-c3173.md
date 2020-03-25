@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
-ms.openlocfilehash: aeec64f8e724b92262d322b83de07ccfe57ac2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b9b1b74bb8b4484026873f5c6052b5624c4f69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176471"
 ---
 # <a name="compiler-error-c3173"></a>Błąd kompilatora C3173
 
-Niezgodność wersji w scaleniu idl
+niezgodność wersji w scaleniu IDL
 
-Ten błąd występuje, gdy plik obiektu zawiera osadzone idl, który został wygenerowany za pomocą poprzedniej wersji kompilatora. Kompilator koduje numeru wersji w celu zapewnienia tego samego kompilatora, które są używane do generowania zawartości pliku idl, osadzonego w pliki .obj również tego samego kompilatora służącą do scalania osadzone idl.
+Ten błąd występuje, gdy plik obiektu zawiera osadzony IDL, który został wygenerowany przy użyciu poprzedniej wersji kompilatora. Kompilator koduje numer wersji, aby upewnić się, że ten sam kompilator używany do generowania zawartości IDL osadzonej w plikach. obj jest również tym samym kompilatorem, który jest używany do scalania osadzonego IDL.
 
-Aktualizacji instalacji Visual C++, tak aby wszystkie narzędzia są z najnowszą wersję oficjalną.
+Zaktualizuj instalację wizualizacji C++ , tak aby wszystkie narzędzia były z najnowszej wersji.

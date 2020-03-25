@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166786"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,13 +30,13 @@ Nazwa pliku, który ma zostać uwzględniony w wygenerowanym pliku IDL.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **include** C++ powoduje umieszczenie `import "docobj.idl"` instrukcji poniżej instrukcji w wygenerowanym pliku IDL. `#include`
+Atrybut **include** C++ powoduje umieszczenie instrukcji `#include` poniżej instrukcji `import "docobj.idl"` w wygenerowanym pliku IDL.
 
 Atrybut **include** C++ ma takie same funkcje jak atrybut [include](/windows/win32/Midl/include) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia przykład użycia metody **include**. W tym przykładzie plik zawiera. h zawiera tylko `#include` instrukcję.
+Poniższy kod przedstawia przykład użycia metody **include**. W tym przykładzie plik zawiera. h zawiera tylko instrukcję `#include`.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -53,12 +53,12 @@ Poniższy kod przedstawia przykład użycia metody **include**. W tym przykładz
 |-|-|
 |**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Oddzielne atrybuty](stand-alone-attributes.md)<br/>

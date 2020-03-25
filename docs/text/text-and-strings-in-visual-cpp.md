@@ -24,41 +24,41 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411802"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167605"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Tekst i ciągi w programie Visual C++
 
-Ważnym aspektem projektowania aplikacji na rynki międzynarodowe jest odpowiednią reprezentację zestawy znaków lokalnych. Zestaw znaków ASCII definiuje znaki z zakresu od 0x00, 0x7F. Istnieją inne zestawy znaków Europejskiego przede wszystkim, zdefiniuj znaki w zakresie 0x00, 0x7F identycznie do zestawu znaków ASCII, który również zdefiniować znak rozszerzony ustawić od 0x80 do 0xFF. W związku z tym 8-bitową i pojedynczych bajtów znaków zestaw (SBCS) jest wystarczająca do reprezentowania zestawu znaków ASCII, a także zestawów znaków dla wielu języków Europejskiego. Jednak niektóre zestawy znaków Nieeuropejskie, takich jak japoński Kanji zawierają wiele więcej znaków niż schemat kodowania pojedynczych bajtów może reprezentować i dlatego wymaga zestawu znaków wielobajtowych (MBCS) kodowania.
+Ważnym aspektem opracowywania aplikacji na rynkach międzynarodowych jest odpowiednia reprezentacja lokalnych zestawów znaków. Zestaw znaków ASCII definiuje znaki w zakresie od 0x00 do 0x7F. Istnieją inne zestawy znaków, głównie europejskie, które definiują znaki w zakresie od 0x00 do 0x7F identycznie z zestawem znaków ASCII, a także definiują rozszerzony zestaw znaków z 0x80 na 0xFF. W ten sposób 8-bitowy zestaw znaków jednobajtowych (SBCS) jest wystarczający do reprezentowania zestawu znaków ASCII, a także zestawów znaków dla wielu języków europejskich. Jednak niektóre nieeuropejskie zestawy znaków, takie jak japoński Kanji, zawierają wiele więcej znaków niż schemat kodowania jednobajtowego może reprezentować i dlatego wymagać kodowania zestawu znaków wielobajtowych (MBCS).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
-W tym artykule omówiono obsługę języka Visual C++ do programowania Unicode i MBCS.
+Omawia obsługę C++ wizualizacji na potrzeby programowania Unicode i MBCS.
 
 [Obsługa formatu Unicode](../text/support-for-unicode.md)<br/>
-W tym artykule opisano Unicode, specyfikacji do obsługi wszystkich zestawów znaków, łącznie z zestawów znaków, które nie mogą być reprezentowane w jednobajtowych.
+Opisuje Unicode, specyfikację do obsługi wszystkich zestawów znaków, w tym zestawów znaków, które nie mogą być reprezentowane w pojedynczym bajcie.
 
 [Obsługa zestawów znaków wielobajtowych (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
-W tym artykule omówiono MBCS, zamiast Unicode do obsługi zestawów znaków, takich jak japońskim i chińskim, który nie może być przedstawiony w jednobajtowych.
+Omawia MBCS, alternatywę dla Unicode dla pomocniczych zestawów znaków, takich jak japoński i chiński, które nie mogą być reprezentowane w pojedynczym bajcie.
 
 [Mapowania typu ogólny-tekst w pliku tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
-Mapowania zwykłego tekstu specyficzne dla firmy Microsoft zawiera wiele typów danych, procedury i innych obiektów.
+Zapewnia mapowanie tekstu ogólnego specyficznego dla firmy Microsoft dla wielu typów danych, procedur i innych obiektów.
 
-[Instrukcje: Konwertowanie między różnymi typami ciągów](../text/how-to-convert-between-various-string-types.md)<br/>
-Pokazuje, jak konwertować różnych typów ciągu Visual C++ na inne ciągi.
+[Instrukcje: konwertowanie między rozmaitymi typami ciągów](../text/how-to-convert-between-various-string-types.md)<br/>
+Pokazuje, w jaki sposób konwertować C++ różne typy ciągu wizualnego na inne ciągi.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
-W tym artykule omówiono Obsługa wymagań międzynarodowych w biblioteki wykonawczej C.
+W tym artykule omówiono obsługę międzynarodową w bibliotece wykonawczej C.
 
-[Przykłady międzynarodowe](https://github.com/Microsoft/VCSamples)<br/>
-Zawiera łącza do przykładów, demonstrując internacjonalizacji w programie Visual C++.
+[Przykłady międzynarodowe](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
+Zawiera łącza do przykładów demonstrujących informacje o języku C++wielojęzycznym w wizualizacji.
 
-[Język i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-Udostępnia ciągów języka i kraju/regionu w biblioteki wykonawczej C.
+[Ciągi języka i kraju/regionu](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Zawiera ciągi języka i kraju/regionu w bibliotece wykonawczej C.

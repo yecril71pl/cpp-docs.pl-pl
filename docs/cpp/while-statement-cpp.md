@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325419"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187326"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C++)
 
-Wykonuje *instrukcji* wielokrotnie do momentu *wyrażenie* osiągnie wartość zero.
+Wykonuje *instrukcję* wielokrotnie, dopóki *wyrażenie* zwróci wartość zero.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Uwagi
 
-Test *wyrażenie* ma miejsce przed każdym wykonaniu pętli, dlatego **podczas** pętla jest wykonywana zero lub więcej razy. *wyrażenie* musi być typem całkowitym, typem wskaźnika lub typu klasy za pomocą jednoznaczną konwersję na całkowite lub typu wskaźnika.
+Test *wyrażenia* odbywa się przed każdym wykonaniem pętli; w związku z tym pętla **while** wykonuje zero lub więcej razy. *wyrażenie* musi być typu całkowitego, typu wskaźnika lub typu klasy z nieniejednoznaczną konwersją na typ całkowitego lub typu wskaźnika.
 
-A **podczas** pętli można także zakończyć, gdy [podziału](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), lub [zwracają](../cpp/return-statement-cpp.md) w ramach instrukcja zostaje wykonana. Użyj [nadal](../cpp/continue-statement-cpp.md) zakończenie bieżącej iteracji bez zamykania **podczas** pętli. **Kontynuuj** przekazuje kontrolę do następnej iteracji **podczas** pętli.
+Pętla **while** można także przerwać, gdy zostanie wykonane [przerwanie](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)lub [Return](../cpp/return-statement-cpp.md) w treści instrukcji. Użyj [Kontynuuj](../cpp/continue-statement-cpp.md) , aby zakończyć bieżącą iterację bez kończenia pętli **while** . **Kontynuuj** przekazuje kontrolę do następnej iteracji pętli **while** .
 
-Poniższy kod używa **podczas** pętli można przycięcia końcowe podkreślenia z ciągu:
+Poniższy kod używa pętli **while** do przycinania końcowego podkreślenia z ciągu:
 
 ```cpp
 // while_statement.cpp
@@ -60,9 +60,9 @@ int main()
 }
 ```
 
-Warunku zakończenia jest oceniany u góry pętli. Jeśli nie ma żadnych końcowe znaki podkreślenia, pętla nigdy nie jest wykonywany.
+Warunek zakończenia jest oceniany w górnej części pętli. Jeśli nie ma żadnych końcowych podkreśleń, pętla nigdy nie jest wykonywana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

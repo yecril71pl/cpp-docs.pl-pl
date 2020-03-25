@@ -1,20 +1,20 @@
 ---
-title: operator&lt; — Operator (Microsoft::WRL)
+title: 'operator&lt; operatora (Microsoft:: WRL)'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator<
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-ms.openlocfilehash: 4887a7ebf3906edbc4a5a2a723caff0ad7732c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04f5598667f7e0e036f0a55cd3f9cc52b5356299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213645"
 ---
-# <a name="operatorlt-operator-microsoftwrl"></a>operator&lt; — Operator (Microsoft::WRL)
+# <a name="operatorlt-operator-microsoftwrl"></a>operator&lt; operatora (Microsoft:: WRL)
 
-Określa, czy adres jeden obiekt jest mniejszy niż inny.
+Określa, czy adres jednego obiektu jest mniejszy niż inny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,22 +27,22 @@ bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Obiekt, który po lewej stronie.
+*z*<br/>
+Lewy obiekt.
 
 *b*<br/>
-Obiekt, do prawej.
+Prawidłowy obiekt.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli adres *a* jest mniejszy niż adres *b*; w przeciwnym razie **false**.
+**prawda** *, jeśli adres jest mniejszy* niż adres *b*; w przeciwnym razie **false**.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

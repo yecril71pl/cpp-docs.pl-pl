@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0c33791fbe6011a3eddc6e535a3a4ed838e5e06c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498747"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180813"
 ---
 # <a name="_com_error-class"></a>_com_error — Klasa
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowanych z biblioteki typów lub przez jedną z klas obsługi com. Klasa **_com_error** hermetyzuje kod błędu HRESULT i dowolny skojarzony `IErrorInfo Interface` obiekt.
+Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowanych z biblioteki typów lub przez jedną z klas obsługi modelu com. Klasa **_com_error** hermetyzuje kod błędu HRESULT i wszystkie powiązane `IErrorInfo Interface` obiektu.
 
 ### <a name="construction"></a>Zrekonstruowan
 
@@ -35,19 +35,19 @@ Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otok
 
 |||
 |-|-|
-|[Error](../cpp/com-error-error.md)|Pobiera wartość HRESULT przekazaną do konstruktora.|
-|[ErrorInfo](../cpp/com-error-errorinfo.md)|`IErrorInfo` Pobiera obiekt przesłany do konstruktora.|
-|[WCode](../cpp/com-error-wcode.md)|Pobiera 16-bitowy kod błędu mapowany na hermetyzowaną wartość HRESULT.|
+|[Błąd](../cpp/com-error-error.md)|Pobiera wartość HRESULT przekazaną do konstruktora.|
+|[ErrorInfo](../cpp/com-error-errorinfo.md)|Pobiera obiekt `IErrorInfo` przekazywać do konstruktora.|
+|[Kodostrzeżenia](../cpp/com-error-wcode.md)|Pobiera 16-bitowy kod błędu mapowany na hermetyzowaną wartość HRESULT.|
 
 ### <a name="ierrorinfo-functions"></a>Funkcje IErrorInfo
 
 |||
 |-|-|
-|[Opis](../cpp/com-error-description.md)|Wywołuje `IErrorInfo::GetDescription` funkcję.|
-|[HelpContext](../cpp/com-error-helpcontext.md)|Wywołuje `IErrorInfo::GetHelpContext` funkcję.|
-|[HelpFile](../cpp/com-error-helpfile.md)|Calls `IErrorInfo::GetHelpFile` — funkcja|
-|[Element źródłowy](../cpp/com-error-source.md)|Wywołuje `IErrorInfo::GetSource` funkcję.|
-|[IDENT](../cpp/com-error-guid.md)|Wywołuje `IErrorInfo::GetGUID` funkcję.|
+|[Opis](../cpp/com-error-description.md)|Wywołuje funkcję `IErrorInfo::GetDescription`.|
+|[Atrybut HelpContext](../cpp/com-error-helpcontext.md)|Wywołuje funkcję `IErrorInfo::GetHelpContext`.|
+|[HelpFile](../cpp/com-error-helpfile.md)|Wywołuje funkcję `IErrorInfo::GetHelpFile`|
+|[Element źródłowy](../cpp/com-error-source.md)|Wywołuje funkcję `IErrorInfo::GetSource`.|
+|[IDENT](../cpp/com-error-guid.md)|Wywołuje funkcję `IErrorInfo::GetGUID`.|
 
 ### <a name="format-message-extractor"></a>Wyodrębnianie formatu komunikatów
 
@@ -59,8 +59,8 @@ Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otok
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Maps 32-bit HRESULT do 16-bitowego `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16- `wCode` bitowe do 32-bitowej HRESULT.|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Odwzorowuje 32-bitowy wynik HRESULT na 16-bitowy `wCode`.|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16-bitowe `wCode` na 32-bitową wartość HRESULT.|
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -68,9 +68,9 @@ Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otok
 
 **Nagłówek:** \<comdef. h >
 
-`Lib:`comsuppw. lib lub comsuppwd. lib (patrz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby uzyskać więcej informacji.
+`Lib:` comsuppw. lib lub comsuppwd. lib (patrz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)<br/>
 [IErrorInfo, interfejs](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

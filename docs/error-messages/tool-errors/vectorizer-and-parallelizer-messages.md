@@ -8,18 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182204"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 
-Można użyć programu Microsoft C++ opcje kompilatora [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) można ustawić [automatyczna paralelizacja i wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) na powód dane wyjściowe kody i komunikatami informacyjnymi o swojej działalności. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
+Możesz użyć opcji kompilatora firmy C++ Microsoft [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , aby ustawić [autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) do danych wyjściowych kodów przyczyn i komunikatów informacyjnych dotyczących działania. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
 
-## <a name="BKMK_InformationalMessages"></a> Komunikaty informacyjne
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Komunikaty informacyjne
 
 W zależności od poziomu raportowania, określonego przez użytkownika, pojawi się jeden z następujących komunikatów informacyjnych dla każdej pętli.
 
@@ -33,15 +33,15 @@ Informacje na temat kodów przyczyny można znaleźć w następnej części tego
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-W poniższych sekcjach wymieniono możliwe kody przyczyn wektoryzatora i paralelizatora.
+W poniższych sekcjach wymieniono możliwe kody przyczyn dla paralelizacji i wektoryzator.
 
-## <a name="BKMK_ReasonCode50x"></a> Kody przyczyn 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>kody przyczyn 5xx
 
-5*xx* kodów przyczyny dotyczą wektoryzatora i paralelizatora.
+Kody przyczyn 5*XX* dotyczą zarówno paralelizacji, jak i wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
-|500|Ogólny komunikat, który obejmuje kilka przypadków — na przykład pętla zawiera wiele wyjść lub nagłówek pętli nie kończy się zwiększaniem zmiennej indukowanej.|
+|500|Komunikat ogólny, który obejmuje kilka przypadków — na przykład pętla zawiera wiele wyjść lub nagłówek pętli nie kończy się przez zwiększenie zmiennej nieindukcji.|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> Kody przyczyn 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>kody przyczyn 10xx
 
-10*xx* kodów przyczyny dotyczą paralelizatora.
+Kody przyczyn 10*XX* mają zastosowanie do paralelizacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> Kody przyczyn 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>kody przyczyn 11xx
 
-11*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
+Kody przyczyn 11*XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> Kody przyczyn 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>kody przyczyn 12xx
 
-12*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
+Kody przyczyn 12*XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> Kody przyczyn 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>kody przyczyn 13xx
 
-13*xx* kodów przyczyny dotyczą automatycznej wektoryzacji.
+Kody przyczyn 13*XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> Kody przyczyn 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>kody przyczyn 14xx
 
-14*xx* Przyczyna kody wystąpić, gdy określono opcję, która jest niezgodna z wektoryzacji.
+Kody przyczyn 14*XX* występują, gdy określona jest opcja niezgodna z wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -834,9 +834,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> Kody przyczyn 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>kody przyczyn 15xx
 
-15*xx* kody przyczyn dotyczy tworzenia aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
+Kody przyczyn 15*XX* dotyczą aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[C /C++ kompilatora i tworzenia błędy i ostrzeżenia narzędzi](../compiler-errors-1/c-cpp-build-errors.md)
-[automatyczna paralelizacja i wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Auto-Vectorizer w programie Visual Studio 2012 — omówienie](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md) \
-[/ Qpar raport (raportowania automatycznej Paralelizacji poziomu)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md)
+[autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Autowektoryzator w programie Visual Studio 2012 — omówienie](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[pętla #pragma ()](../../preprocessor/loop.md) \
+[/Q opcji (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md) \
+[/Qpar-report (poziom raportowania autoparalelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

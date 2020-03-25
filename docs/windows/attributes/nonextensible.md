@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214692"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Określa, że `IDispatch` implementacja zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można go rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania.
+Określa, że implementacja `IDispatch` zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można jej rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ Określa, że `IDispatch` implementacja zawiera tylko właściwości i metody wy
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut C++ nierozszerzalny ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/nonextensible) nierozszerzalny MIDL.
+Atrybut **nierozszerzalny** C++ ma taką samą funkcjonalność jak atrybut [nierozszerzalny](/windows/win32/Midl/nonextensible) MIDL.
 
-Użycie nierozszerzalne wymaga również atrybutu [OleAutomation](oleautomation.md) .
+Użycie **nierozszerzalne** wymaga również atrybutu [OleAutomation](oleautomation.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje jedno użycie atrybutu nierozszerzalny:
+Poniższy kod pokazuje jedno użycie atrybutu **nierozszerzalny** :
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,12 +56,12 @@ __interface IFireTabCtrl
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|`dual`i `oleautomation`lub`dispinterface`|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|`dual` i `oleautomation`, lub `dispinterface`|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)

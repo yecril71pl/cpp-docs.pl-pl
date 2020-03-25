@@ -1,39 +1,39 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4275
+title: Ostrzeżenie kompilatora (poziom 2) C4275
 ms.date: 02/08/2019
 f1_keywords:
 - C4275
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349688"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162000"
 ---
-# <a name="compiler-warning-level-2-c4275"></a>Kompilator ostrzeżenie (poziom 2) C4275
+# <a name="compiler-warning-level-2-c4275"></a>Ostrzeżenie kompilatora (poziom 2) C4275
 
-> inne niż - klasy interfejsu biblioteki DLL*class_1*"używany jako podstawowa dla klasy interfejsu biblioteki DLL"*class_2*"
+> Klasa "*class_1*" klasy innej niż dll została użyta jako podstawowa dla klasy interfejsu DLL "*class_2*"
 
-Wyeksportowanej klasy pochodzi z klasy, która nie została wyeksportowana.
+Wyeksportowana Klasa pochodzi z klasy, która nie została wyeksportowana.
 
-Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy za pomocą [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), upewnij się, że:
+Aby zminimalizować prawdopodobieństwo uszkodzenia danych podczas eksportowania klasy z [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), upewnij się, że:
 
-- Wszystkie dane statyczne odbywa się za pośrednictwem funkcji, które są eksportowane z biblioteki DLL.
+- Do wszystkich danych statycznych uzyskuje się dostęp za pośrednictwem funkcji wyeksportowanych z biblioteki DLL.
 
-- Nie śródwierszowych metody klasy można modyfikować danych statycznych.
+- Żadna z nieliniowych metod klasy nie może modyfikować danych statycznych.
 
-- Żadne śródwierszowych metody klasy, użyj funkcji CRT lub inne jego funkcje biblioteki, które używają danych statycznych.
+- Żadna z nieliniowych metod klasy używa funkcji CRT lub innych funkcji biblioteki, które używają danych statycznych.
 
-- Brak funkcji śródwierszowych klasy, użyj funkcji CRT lub inne funkcje biblioteki gdzie uzyskujesz dostęp do danych statycznych.
+- W funkcjach klasy wbudowanej nie są używane funkcje CRT ani inne funkcje biblioteki, w których uzyskuje się dostęp do danych statycznych.
 
-- Nie metody klasy (niezależnie od wartości inlining) można używać typów, których wystąpienia w pliku EXE i DLL mają różnice statyczne dane.
+- Żadna metoda klasy (bez względu na dekreślenie) może używać typów, w których wystąpienie w EXE i DLL ma różnice danych statycznych.
 
-Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
+Można uniknąć eksportowania klas przez zdefiniowanie biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi, oraz funkcje, które można wywołać w celu utworzenia wystąpienia i usunięcia obiektów typu.  Następnie można wywołać funkcje wirtualne w typie.
 
-C4275 można zignorować w programie Visual C++, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i gdzie komunikat o błędzie kompilatora odnosi się do `_Container_base`.
+C4275 można zignorować w wizualizacji C++ , jeśli pochodzą z typu w bibliotece C++ standardowej, kompilując wersję debug ( **/MTD**) i gdzie komunikat o błędzie kompilatora odnosi się do `_Container_base`.
 
 ```cpp
 // C4275.cpp

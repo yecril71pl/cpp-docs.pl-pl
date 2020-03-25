@@ -1,40 +1,40 @@
 ---
-title: Stylu C rzutuje z / clr (C++sposób niezamierzony)
+title: Rzutowania w stylu języka C z opcją-C++CLR (/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172597"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Rzutowania w stylu C i kompilator /clr (C++/CLI)
 
 Poniższy temat dotyczy tylko środowiska uruchomieniowego języka wspólnego.
 
-W przypadku użycia z typami CLR, kompilator próbuje zamapować C rzutowania w stylu do jednego z rzutowania wymienione poniżej pod warunkiem w następującej kolejności:
+W przypadku użycia z typami CLR kompilator próbuje zmapować rzutowania w stylu C do jednego z rzutów wymienionych poniżej, w następującej kolejności:
 
 1. const_cast
 
 2. safe_cast
 
-3. safe_cast, a także operator const_cast
+3. safe_cast Plus const_cast
 
 4. static_cast
 
-5. static_cast plus const_cast
+5. static_cast Plus const_cast
 
-Jeśli żaden z rzutowania wymienionych powyżej nie jest prawidłowy i typ wyrażenia i typ docelowy są typami odwołań CLR, rzutowania w stylu C jest mapowany na sprawdzanie czasu wykonywania (castclass instrukcji MSIL). W przeciwnym razie rzutowania w stylu C jest uznawane za nieprawidłowe i kompilator generuje błąd.
+Jeśli żaden z wymienionych powyżej elementów rzutowania nie jest prawidłowy, a jeśli typem wyrażenia i typem docelowym są typy odwołań CLR, Rzutowanie w stylu języka C mapuje do sprawdzenia w czasie wykonywania (Castclass instrukcji MSIL). W przeciwnym razie Rzutowanie w stylu języka C jest traktowane jako nieprawidłowe i kompilator wygeneruje błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Rzutowania w stylu języka C nie jest zalecane. Podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md), użyj [safe_cast](safe-cast-cpp-component-extensions.md).
+Nie zaleca się rzutowania w stylu języka C. Podczas kompilowania z [opcją/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)Użyj [safe_cast](safe-cast-cpp-component-extensions.md).
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na **const_cast**.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany na **const_cast**.
 
 ```cpp
 // cstyle_casts_1.cpp
@@ -48,7 +48,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na **safe_cast**.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany na **safe_cast**.
 
 ```cpp
 // cstyle_casts_2.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na **safe_cast** oraz **const_cast**.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany do **safe_cast** Plus **const_cast**.
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na **static_cast**.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany na **static_cast**.
 
 ```cpp
 // cstyle_casts_4.cpp
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na **static_cast** oraz **const_cast**.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany do **static_cast** Plus **const_cast**.
 
 ```cpp
 // cstyle_casts_5.cpp
@@ -123,7 +123,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje C rzutowania w stylu mapowana na sprawdzanie w czasie wykonania.
+Poniższy przykład pokazuje Rzutowanie w stylu C, który jest mapowany do sprawdzenia w czasie wykonywania.
 
 ```cpp
 // cstyle_casts_6.cpp
@@ -144,7 +144,7 @@ int main() {
 }
 ```
 
-Poniższy przykład pokazuje nieprawidłowy C rzutowania w stylu, co powoduje, że kompilator na błąd.
+Poniższy przykład pokazuje nieprawidłowe Rzutowanie w stylu C, co powoduje, że kompilator wystawia błąd.
 
 ```cpp
 // cstyle_casts_7.cpp
@@ -158,8 +158,8 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)

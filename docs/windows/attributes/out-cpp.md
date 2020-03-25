@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214695"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -29,7 +29,7 @@ Atrybut **out** C++ ma taką samą funkcjonalność, jak atrybut [out](/windows/
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem [powiązania](bindable.md) dla przykładowego użycia.
+Zapoznaj się z przykładem [powiązania](bindable.md) dla przykładowego użycia **.**
 
 ## <a name="requirements"></a>Wymagania
 
@@ -39,12 +39,12 @@ Zapoznaj się z przykładem [powiązania](bindable.md) dla przykładowego użyci
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: 708f78c09db263584d478d16863999d4428e4891
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178564"
 ---
 # <a name="static-members-c"></a>Statyczne elementy członkowskie (C++)
 
-Klasy mogą zawierać statyczny element członkowski danych i elementów członkowskich. Gdy element członkowski danych jest zadeklarowany jako **statyczne**, tylko jedna kopia danych jest zachowywana na potrzeby wszystkich obiektów klasy.
+Klasy mogą zawierać statyczne dane elementów członkowskich i funkcje członkowskie. Gdy element członkowski danych jest zadeklarowany jako **statyczny**, tylko jedna kopia danych jest utrzymywana dla wszystkich obiektów klasy.
 
-Statyczne elementy członkowskie danych nie są częścią obiektów typu danej klasy. W rezultacie deklaracja składowej danych statycznych nie jest uważany za definicję. Element członkowski danych jest zadeklarowana w zakresie klasy, ale definicji odbywa się w zakresie pliku. Te statyczne elementy członkowskie mają powiązania zewnętrzne. Ilustruje to poniższy przykład:
+Statyczne elementy członkowskie danych nie są częścią obiektów danego typu klasy. W związku z tym deklaracja statycznego elementu członkowskiego danych nie jest uważana za definicję. Element członkowski danych jest zadeklarowany w zakresie klasy, ale definicja jest wykonywana w zakresie pliku. Te statyczne elementy członkowskie mają powiązania zewnętrzne. Zostało to przedstawione w poniższym przykładzie:
 
 ```cpp
 // static_data_members.cpp
@@ -55,15 +55,15 @@ int main()
 }
 ```
 
-W poprzednim kodzie elementu członkowskiego `bytecount` jest zadeklarowana w klasie `BufferedOutput`, ale musi być zdefiniowana poza deklaracją klasy.
+W poprzednim kodzie element członkowski `bytecount` jest zadeklarowany w klasie `BufferedOutput`, ale musi być zdefiniowany poza deklaracją klasy.
 
-Statyczne elementy członkowskie danych można się odwoływać bez odwołujące się do obiektu typu klasy. Liczba bajtów zapisanych, za pomocą `BufferedOutput` obiektów można uzyskać w następujący sposób:
+Statyczne składowe danych mogą być określane bez odwoływania się do obiektu typu klasy. Liczba bajtów zapisanych przy użyciu obiektów `BufferedOutput` można uzyskać w następujący sposób:
 
 ```cpp
 long nBytes = BufferedOutput::bytecount;
 ```
 
-Statyczny element członkowski ma nie jest to konieczne, że istnieją wszystkie obiekty typu klasy. Statyczne elementy członkowskie można również uzyskać dostęp za pomocą wyboru elementów członkowskich (**.** i **->**) operatorów. Na przykład:
+Aby statyczny element członkowski mógł istnieć, nie jest konieczne, aby istniały wszystkie obiekty typu klasy. Dostęp do statycznych elementów członkowskich można także uzyskać za pomocą wyboru elementu członkowskiego ( **.** Operatory i **->** ). Na przykład:
 
 ```cpp
 BufferedOutput Console;
@@ -71,12 +71,12 @@ BufferedOutput Console;
 long nBytes = Console.bytecount;
 ```
 
-W przypadku poprzedniego odwołanie do obiektu (`Console`) nie jest oceniany; wartość zwracana jest to, że obiektu statycznego `bytecount`.
+W poprzednim przypadku odwołanie do obiektu (`Console`) nie jest oceniane; zwracana wartość jest równa `bytecount`obiektu statycznego.
 
-Statyczne elementy członkowskie danych podlegają reguły dostępu do składowej klasy, więc prywatny dostęp do elementów członkowskich danych statycznych jest dozwolony tylko w przypadku funkcji składowych klasy i znajomym. Te reguły są opisane w [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md). Wyjątek stanowi tego dane statyczne, które elementy członkowskie muszą być zdefiniowane w zakresie pliku, niezależnie od ich ograniczenia dostępu. Jeśli składowej danych, które ma być jawnie zainicjowana, należy podać inicjatora z definicją.
+Statyczne elementy członkowskie danych podlegają regułom dostępu do elementów członkowskich klasy, więc prywatny dostęp do statycznych elementów członkowskich danych jest dozwolony tylko dla funkcji składowych i znajomych klasy. Te reguły są opisane w [Access Control elementu członkowskiego](../cpp/member-access-control-cpp.md). Wyjątek polega na tym, że statyczne elementy członkowskie danych muszą być zdefiniowane w zakresie pliku, niezależnie od ich ograniczeń dostępu. Jeśli składowa danych ma być jawnie inicjowana, inicjator musi być dostarczony z definicją.
 
-Typ członka statycznego nie jest kwalifikowana przez nazwę klasy. W związku z tym, typ `BufferedOutput::bytecount` jest **długie**.
+Typ statycznego elementu członkowskiego nie kwalifikuje się do jego nazwy klasy. W związku z tym typ `BufferedOutput::bytecount` jest **długi**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

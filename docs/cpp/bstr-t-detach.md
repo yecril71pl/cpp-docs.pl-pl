@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
-ms.openlocfilehash: 51561c6f7cf5ba49c86f818d925db548438b2981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ad29ae9e7fdcf7e8d354bda570364c7be8901
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386177"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181268"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zwraca `BSTR` opakowane przez `_bstr_t` oraz odłącza `BSTR` z `_bstr_t`.
+Zwraca `BSTR` opakowany `_bstr_t` i odłącza `BSTR` od `_bstr_t`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,14 +27,14 @@ BSTR Detach( ) throw;
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`BSTR` Opakowane przez `_bstr_t`.
+`BSTR` opakowany przez `_bstr_t`.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład użycie **Odłącz**.
+Zobacz [_bstr_t:: Assign](../cpp/bstr-t-assign.md) dla przykładu przy użyciu opcji **Odłącz**.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_bstr_t, klasa](../cpp/bstr-t-class.md)

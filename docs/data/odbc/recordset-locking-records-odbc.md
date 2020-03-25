@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Blokowanie rekordów (ODBC)'
+title: 'Zestaw rekordów: blokowanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,60 +10,60 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e80816a131c997e9f5bfaa34f025394b05a358
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212865"
 ---
-# <a name="recordset-locking-records-odbc"></a>Zestaw rekordów: Blokowanie rekordów (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Zestaw rekordów: blokowanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
-- [Rodzaje dostępnych blokowanie rekordów](#_core_record.2d.locking_modes).
+- [Rodzaje blokowania rekordów dostępne](#_core_record.2d.locking_modes).
 
-- [Jak zablokować rekordów rekordów podczas aktualizacji](#_core_locking_records_in_your_recordset).
+- [Jak blokować rekordy w zestawie rekordów podczas aktualizacji](#_core_locking_records_in_your_recordset).
 
-Gdy używasz zestawu rekordów próbę zaktualizowania rekordu w źródle danych aplikacji można zablokować rekordu, więc żaden inny użytkownik może zaktualizować rekord, w tym samym czasie. Stan rekordu, który został zaktualizowany przez dwóch użytkowników, w tym samym czasie jest niezdefiniowana, chyba że system może zagwarantować, że dwóch użytkowników nie można zaktualizować rekord jednocześnie.
-
-> [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli udało Ci się wdrożyć zbiorcze pobieranie z wiersza, niektóre informacje nie ma zastosowania. Na przykład nie można wywołać `Edit` i `Update` funkcji elementów członkowskich. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
-
-##  <a name="_core_record.2d.locking_modes"></a> Tryby blokowania rekordów
-
-Klasy bazy danych Podaj dwie [blokowanie rekordów tryby](../../mfc/reference/crecordset-class.md#setlockingmode):
-
-- Optymistyczne blokowanie (domyślnie)
-
-- Pesymistycznego blokowania
-
-Trwa aktualizowanie rekordu odbywa się w trzech krokach:
-
-1. Rozpocznij operację, wywołując [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcja elementu członkowskiego.
-
-1. Możesz zmienić odpowiednie pola bieżącego rekordu.
-
-1. Możesz zakończyć operację — i zwykle Zatwierdzanie aktualizacji — przez wywołanie metody [aktualizacji](../../mfc/reference/crecordset-class.md#update) funkcja elementu członkowskiego.
-
-Optymistyczne blokowanie blokuje rekord w źródle danych tylko w trakcie `Update` wywołania. Jeśli używasz optymistyczne blokowanie w środowisku wielodostępnym, aplikacja powinna obsługiwać `Update` stanu błędu. Pesymistycznego blokowania blokuje rekord, tak szybko, jak należy wywołać `Edit` i nie zwalnia je do momentu wywołania `Update` (błędy są oznaczone za pomocą `CDBException` mechanizmu, a nie przez wartość FALSE, zwracany przez `Update`). Pesymistycznego blokowania ma potencjalne zmniejszenie wydajności dla innych użytkowników, ponieważ równoczesnego dostępu do tego samego rekordu może być konieczne poczekanie, aż do zakończenia aplikacji `Update` procesu.
-
-##  <a name="_core_locking_records_in_your_recordset"></a> Blokowanie rekordów w twoim zestawie rekordów
-
-Jeśli chcesz zmienić obiektem rekordem [tryb blokowania](#_core_record.2d.locking_modes) niż domyślne, należy zmienić tryb przed wywołaniem `Edit`.
-
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Aby zmienić bieżący tryb blokowanie rekordów
-
-1. Wywołaj [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) funkcji członkowskiej, określając opcję `CRecordset::pessimistic` lub `CRecordset::optimistic`.
-
-Nowy tryb blokowania pozostaje, dopóki ponownie zmienić lub zestawu rekordów jest zamknięty.
+W przypadku aktualizowania rekordu w źródle danych przy użyciu zestawu rekordów aplikacja może zablokować rekord, tak aby żaden inny użytkownik nie mógł zaktualizować rekordu w tym samym czasie. Stan rekordu aktualizowany przez dwóch użytkowników w tym samym czasie jest niezdefiniowany, chyba że system może zagwarantować, że dwóch użytkowników nie można jednocześnie zaktualizować rekordu.
 
 > [!NOTE]
->  Sterowniki ODBC relatywnie mało obecnie obsługuje pesymistycznego blokowania.
+>  Ten temat dotyczy obiektów pochodnych `CRecordset`, w których nie zaimplementowano pobierania wierszy zbiorczych. Jeśli zaimplementowano pobieranie wierszy zbiorczych, niektóre informacje nie są stosowane. Na przykład nie można wywołać `Edit` i `Update` funkcji Członkowskich. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-## <a name="see-also"></a>Zobacz także
+##  <a name="record-locking-modes"></a><a name="_core_record.2d.locking_modes"></a>Tryby blokowania rekordów
+
+Klasy baz danych zapewniają dwa [tryby blokowania rekordów](../../mfc/reference/crecordset-class.md#setlockingmode):
+
+- Optymistyczne blokowanie (wartość domyślna)
+
+- Zablokowanie pesymistyczne
+
+Aktualizacja rekordu odbywa się w trzech krokach:
+
+1. Aby rozpocząć operację, należy wywołać funkcję [Edytuj](../../mfc/reference/crecordset-class.md#edit) element członkowski.
+
+1. Zmienisz odpowiednie pola bieżącego rekordu.
+
+1. Kończysz operację — i zazwyczaj zatwierdzasz aktualizację — przez wywołanie funkcji elementu członkowskiego [aktualizacji](../../mfc/reference/crecordset-class.md#update) .
+
+Optymistyczne blokowanie blokuje rekord w źródle danych tylko podczas wywołania `Update`. Jeśli używasz optymistycznego blokowania w środowisku wielodostępnym, aplikacja powinna obsłużyć `Update` warunku niepowodzenia. Pesymistyczne blokowanie blokuje rekord zaraz po wywołaniu `Edit` i nie zwolni go do momentu wywołania `Update` (niepowodzenia są wskazywane przez mechanizm `CDBException` nie przez wartość FALSE zwracaną przez `Update`). Zablokowanie pesymistyczne ma potencjalną wydajność dla innych użytkowników, ponieważ współbieżny dostęp do tego samego rekordu może zaczekać, aż zakończy się proces `Update` aplikacji.
+
+##  <a name="locking-records-in-your-recordset"></a><a name="_core_locking_records_in_your_recordset"></a>Blokowanie rekordów w zestawie rekordów
+
+Aby zmienić domyślny [tryb blokowania](#_core_record.2d.locking_modes) obiektu zestawu rekordów, należy zmienić tryb przed wywołaniem `Edit`.
+
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Aby zmienić bieżący tryb blokowania dla zestawu rekordów
+
+1. Wywołaj funkcję elementu członkowskiego [Setlockmode](../../mfc/reference/crecordset-class.md#setlockingmode) określającą `CRecordset::pessimistic` lub `CRecordset::optimistic`.
+
+Nowy tryb blokowania będzie obowiązywać, dopóki nie zostanie ponownie zmieniony lub zestaw rekordów zostanie zamknięty.
+
+> [!NOTE]
+>  Stosunkowo mało sterowniki ODBC obsługują obecnie pesymistyczne blokowanie.
+
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>

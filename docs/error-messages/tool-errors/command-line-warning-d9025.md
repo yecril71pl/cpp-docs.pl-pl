@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4afd4d4dc07ffaae6038c025ee371278ebbebea6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196719"
 ---
 # <a name="command-line-warning-d9025"></a>Ostrzeżenie D9025 dla wiersza polecenia
 
-zastępowanie opcja "1" z "opcja2"
+zastępowanie "opcja1" opcją "opcja2"
 
-*Opcja1* opcji została określona, ale następnie została zastąpiona przez *opcja2*. *Opcja2* użyto opcji.
+Opcja *opcja1* została określona, ale została przesłonięta przez *opcja2*. Użyto opcji *opcja2* .
 
-Dwie opcje określenia sprzecznych lub niezgodne dyrektywy, zostanie użyta dyrektywy określone lub też dorozumianych, w przypadku opcji najdalej z prawej strony w wierszu polecenia.
+Jeśli dwie opcje określają sprzeczne lub niezgodne dyrektywy, zostanie użyta dyrektywa określona lub implikowana w opcji znajdującej się najdalej z prawej strony w wierszu polecenia.
 
-Jeśli pobieranie tego ostrzeżenia podczas kompilowania środowiska programowania, a nie pewności, skąd pochodzą opcje powodujące konflikt, należy rozważyć następujące kwestie:
+Jeśli zostanie wyświetlone to ostrzeżenie podczas kompilowania ze środowiska programistycznego i nie ma pewności, gdzie są dostępne opcje powodujące konflikt, należy wziąć pod uwagę następujące kwestie:
 
-- Opcjonalnie można określić w kodzie lub w ustawieniach projektu z projektu. Jeśli przyjrzymy się kompilatora [strony właściwości wiersza polecenia](../../build/reference/command-line-property-pages.md) i jeśli widzisz opcje powodujące konflikt w **wszystkie opcje** pola, a następnie opcje są ustawione na stronach właściwości projektu, w przeciwnym razie, opcje są ustawione w kodzie źródłowym.
+- Opcję można określić w kodzie lub w ustawieniach projektu projektu. Jeśli widzisz [strony właściwości wiersza polecenia](../../build/reference/command-line-property-pages.md) kompilatora i jeśli w polu **wszystkie opcje** zostaną wyświetlone opcje powodujące konflikt, opcje są ustawiane na stronach właściwości projektu, w przeciwnym razie opcje są ustawiane w kodzie źródłowym.
 
-   Jeśli opcje są ustawione na stronach właściwości projektu, sprawdź na stronie właściwości preprocesora kompilatora (z węzła projektu wybranego w oknie Solution Explorer).  Jeśli nie widzisz opcji tam ustawione, sprawdź ustawienia strony preprocesora właściwości dla każdego pliku kodu źródłowego (w Eksploratorze rozwiązań), aby upewnić się, nie został dodany istnieje.
+   Jeśli opcje są ustawione na stronach właściwości projektu, należy poszukać na stronie właściwości preprocesora kompilatora (z węzłem projektu wybranym w Eksplorator rozwiązań).  Jeśli ta opcja nie jest widoczna, sprawdź ustawienia strony właściwości preprocesora dla każdego pliku kodu źródłowego (w Eksplorator rozwiązań), aby upewnić się, że nie został on dodany.
 
-   Jeśli opcje są ustawione w kodzie można ustawić w kodzie lub w nagłówkach systemu windows.  Możesz spróbować tworzenia wstępnie przetworzonego pliku ([/P](../../build/reference/p-preprocess-to-a-file.md)) i wyszukaj symbolu.
+   Jeśli opcje są ustawione w kodzie, można ustawić je w kodzie lub w nagłówkach systemu Windows.  Możesz spróbować utworzyć wstępnie przetworzony plik ([/p](../../build/reference/p-preprocess-to-a-file.md)) i wyszukać go dla symbolu.

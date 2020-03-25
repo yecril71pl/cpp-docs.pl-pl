@@ -1,21 +1,21 @@
 ---
-title: satype — (atrybut COM C++)
+title: satype (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166279"
 ---
 # <a name="satype"></a>satype
 
-Określa typ danych `SAFEARRAY` struktury.
+Określa typ danych struktury `SAFEARRAY`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ Określa typ danych `SAFEARRAY` struktury.
 ### <a name="parameters"></a>Parametry
 
 *data_type*<br/>
-Typ danych dla `SAFEARRAY` struktury danych, który jest przekazywany jako parametr do metody interfejsu.
+Typ danych dla `SAFEARRAY`ej struktury danych, która jest przesyłana jako parametr do metody interfejsu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -34,17 +34,17 @@ Typ danych dla `SAFEARRAY` struktury danych, który jest przekazywany jako param
 
 |||
 |-|-|
-|**Dotyczy**|Interfejs parametru metody interfejsu|
+|**Dotyczy**|Parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 ## <a name="remarks"></a>Uwagi
 
-**Satype —** C++ atrybut określa typ danych `SAFEARRAY`.
+Atrybut **satype** C++ określa typ danych `SAFEARRAY`.
 
 > [!NOTE]
-> Poziom pośrednictwa zostanie usunięte ze `SAFEARRAY` wskaźnika w pliku .idl wygenerowany, w jaki sposób zostanie ona zadeklarowana w pliku .cpp.
+> Poziom pośredni został porzucony ze wskaźnika `SAFEARRAY` w wygenerowanym pliku. idl, z poziomu tego, jak jest zadeklarowany w pliku. cpp.
 
 ## <a name="example"></a>Przykład
 
@@ -59,7 +59,7 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: Programy obsługi poleceń do rekordu przewijania (dostęp do danych MFC)
+title: Programy obsługi poleceń do przewijania rekordów (dostęp do danych MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record views [C++], scrolling
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213450"
 ---
-# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Programy obsługi poleceń do rekordu przewijania (dostęp do danych MFC)
+# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Programy obsługi poleceń do przewijania rekordów (dostęp do danych MFC)
 
-[CRecordView](../mfc/reference/crecordview-class.md) klasa udostępnia domyślną obsługi poleceń dla następujących poleceń standardowych:
+Klasa [formularzy CRecordView](../mfc/reference/crecordview-class.md) udostępnia domyślną obsługę poleceń dla następujących standardowych poleceń:
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,11 +25,11 @@ ms.locfileid: "62398048"
 
 - ID_RECORD_MOVE_PREV
 
-`OnMove` Funkcja elementu członkowskiego zawiera domyślne obsługi poleceń dla wszystkich czterech poleceń, które przemieszczać się między rekordami. Te polecenia są wydawane, RFX (lub DFX) ładuje nowy rekord do pola zestawu rekordów i DDX przenosi wartości do kontrolki formularza rekordów. Aby uzyskać informacje na temat RFX, zobacz [wymiany pól rekordu (RFX)](../data/odbc/record-field-exchange-rfx.md).
+Funkcja członkowska `OnMove` udostępnia domyślną obsługę poleceń dla wszystkich czterech poleceń, które przechodzą z rekordu do rekordu. Po wydaniu tych poleceń RFX (lub DFX) ładuje nowy rekord do pól zestawu rekordów i DDX przenosi wartości do kontrolek formularza rekordu. Aby uzyskać informacje na temat RFX, zobacz temat [Rejestrowanie pól rekordów (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 > [!NOTE]
->  Należy użyć tych identyfikatory poleceń standardowych dla obiektów interfejsu użytkownika skojarzony z poleceń standardowych nawigacji rekordów.
+>  Należy pamiętać, aby użyć tych standardowych identyfikatorów poleceń dla wszystkich obiektów interfejsu użytkownika skojarzonych z poleceniami nawigacji rekordu standardowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

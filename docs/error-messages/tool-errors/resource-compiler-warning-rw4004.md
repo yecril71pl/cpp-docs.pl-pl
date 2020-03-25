@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RW4004
 ms.assetid: 596b6a89-9ce7-4ba7-bdcb-e8054c7efafa
-ms.openlocfilehash: bafd1084a665fc656fe184064a48e5fffc61c957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca0fb271a5ab43994ec37cc8d59c33877903f6e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182347"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Ostrzeżenie RW4004 kompilatora zasobów
 
-Znak ASCII nie są równoważne kod klawisza wirtualnego
+Znak ASCII nie jest odpowiednikiem kodu klucza wirtualnego
 
-Literał ciągu użyto wirtualnego kod klucza w akceleratorze typu VIRTKEY.
+Literał ciągu został użyty dla kodu klucza wirtualnego w akceleratorze typu standardowym VIRTKEY.
 
-To ostrzeżenie można kontynuować, ale należy pamiętać, klawisze skrótów generowane może nie odpowiadać ciągu, wskazane przez Ciebie. (VIRTKEYs używają różnych kody klawiszy niż akceleratory ASCII).
+To ostrzeżenie pozwala kontynuować, ale należy pamiętać, że wygenerowane klucze akceleratora mogą być niezgodne z podanym ciągiem. (VIRTKEYs używają innych kodów kluczy niż akceleratory ASCII).
 
-Literały ciągów są nieprawidłową składnię, należy można tylko mieć pewność, że akcelerator, za pomocą **VK_\* #define** wartości WINDOWS.h.
+Gdy literały ciągu są syntaktycznie prawidłowe, można upewnić się, że odpowiedni akcelerator jest uzyskiwany przy użyciu **VK_\* #define** wartości w systemie Windows. h.

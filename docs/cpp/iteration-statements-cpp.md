@@ -5,30 +5,30 @@ helpviewer_keywords:
 - iteration statements
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
-ms.openlocfilehash: 72f81e2fc58a31db0c4cd3f77ba182bd8b8152a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8f064fd19e69de2819673f48a7f14e26d60b87e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178262"
 ---
 # <a name="iteration-statements-c"></a>Instrukcje iteracji (C++)
 
-Instrukcje iteracji spowodować instrukcji (lub instrukcje złożone) do wykonania, zero lub więcej razy, z zastrzeżeniem niektórych kryteriów zakończenia pętli. Jeśli te instrukcje są instrukcje złożone, są one wykonywane w kolejności, chyba że albo [podziału](../cpp/break-statement-cpp.md) instrukcji lub [nadal](../cpp/continue-statement-cpp.md) napotkania instrukcji.
+Instrukcje iteracji powodują, że instrukcje (lub złożone instrukcje), które mają być wykonywane zero lub więcej razy, podlegają pewnym kryteriom zakończenia pętli. Kiedy te instrukcje są instrukcjami złożonymi, są wykonywane w kolejności, z wyjątkiem przypadków, gdy napotkana jest instrukcja [Break](../cpp/break-statement-cpp.md) lub [Continue](../cpp/continue-statement-cpp.md) .
 
-C++ zapewnia cztery instrukcje iteracji — [podczas](../cpp/while-statement-cpp.md), [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), i [for z zakresem](../cpp/range-based-for-statement-cpp.md). Każda z tych iteracje do momentu jego zakończenia wyrażenie ma zero (false), lub zakończenia pętli jest wymuszone za pomocą **podziału** instrukcji. Poniższa tabela zawiera podsumowanie tych instrukcji i działań; każdy jest szczegółowo omówione w kolejnych sekcjach.
+C++zawiera cztery instrukcje iteracji — [while](../cpp/while-statement-cpp.md), [do](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md)i z [zakresu dla](../cpp/range-based-for-statement-cpp.md). Każda z tych iteracji wykonuje iteracje do momentu, gdy jego wyrażenie zakończenia zwróci wartość zero (false) lub do momentu zakończenia pętli z instrukcją **Break** . Poniższa tabela zawiera podsumowanie tych instrukcji i ich działań; Każdy z nich został szczegółowo omówiony w poniższych sekcjach.
 
 ### <a name="iteration-statements"></a>Instrukcje iteracji
 
-|Instrukcja|Oceniona|Inicjalizacja|Inkrementacja|
+|Wyciąg|Oceniane na|Inicjowanie|Pełny|
 |---------------|------------------|--------------------|---------------|
-|**while**|Góry pętli|Nie|Nie|
-|**do**|Dołu pętli|Nie|Nie|
-|**for**|Góry pętli|Yes|Tak|
-|**for z zakresem**|Góry pętli|Tak|Tak|
+|**while**|Góra pętli|Nie|Nie|
+|**do**|Dolna pętla|Nie|Nie|
+|**for**|Góra pętli|Yes|Yes|
+|**oparte na zakresie dla**|Góra pętli|Yes|Yes|
 
-Część instrukcji w instrukcji iteracji nie może być deklaracji. Jednak może być instrukcji złożonej zawierającej deklaracji.
+Część instrukcji instrukcji iteracji nie może być deklaracją. Jednak może to być złożonej instrukcji zawierającej deklarację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd instrukcji C++](../cpp/overview-of-cpp-statements.md)

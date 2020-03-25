@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 056db975fecef4e101dbbba7e2084236489498c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202868"
 ---
 # <a name="fatal-error-c1853"></a>Błąd krytyczny C1853
 
-> "*filename*" prekompilowanego pliku nagłówkowego pochodzi z poprzedniej wersji kompilatora lub prekompilowany plik nagłówkowy jest w języku C++ i używania go z C (lub odwrotnie)
+> prekompilowany plik nagłówkowy "*filename*" pochodzi z poprzedniej wersji kompilatora lub prekompilowany nagłówek jest i jest C++ używany w języku C (lub odwrotnie)
 
 Możliwe przyczyny:
 
-- Prekompilowany plik nagłówkowy został skompilowany przy użyciu poprzedniej wersji kompilatora. Spróbuj ponownej kompilacji nagłówka z bieżącym kompilatora.
+- Prekompilowany nagłówek został skompilowany z poprzednią wersją kompilatora. Spróbuj ponownie skompilować nagłówek przy użyciu bieżącego kompilatora.
 
-- Prekompilowany plik nagłówkowy jest w języku C++ i korzystają z C. Spróbuj ponownej kompilacji nagłówka do użycia przy użyciu języka C, określając jedną z [TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opcje kompilatora lub zmiana sufiksu pliku źródłowego "c". Aby uzyskać więcej informacji, zobacz [dwa wybory dla wstępnej kompilacji kodu](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).
+- Prekompilowany nagłówek jest C++ używany w języku c. Spróbuj ponownie skompilować nagłówek do użycia z c, określając jedną z opcji kompilatora [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) lub zmieniając sufiks pliku źródłowego na "c". Aby uzyskać więcej informacji, zobacz [dwie opcje wstępnego kompilowania kodu](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

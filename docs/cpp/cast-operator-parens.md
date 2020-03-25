@@ -5,16 +5,16 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 54345637665736085d812b88f5822a94014eaa74
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190160"
 ---
 # <a name="cast-operator-"></a>Operator rzutowania: ()
 
-Rzutowanie typu udostępnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.
+Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w określonej sytuacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,9 +24,9 @@ unary-expression ( type-name ) cast-expression
 
 ## <a name="remarks"></a>Uwagi
 
-Dowolne wyrażenie jednoargumentowe jest traktowany jako wyrażenia rzutowania.
+Każde wyrażenie jednoargumentowe jest traktowane jako wyrażenie rzutowania.
 
-Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do konwersji obiektów o dowolnym typie skalarnym do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez te same zasady, które określają skutki niejawne konwersje. Dodatkowe ograniczenia na rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentację określonych typów.
+Kompilator traktuje *wyrażenie cast* jako typ *type-name* po wprowadzeniu rzutowania typu. Rzutowania mogą służyć do konwertowania obiektów dowolnego typu skalarnego na lub z dowolnego innego typu skalarnego. Rzutowania typu jawnego są ograniczone przez te same reguły, które określają efekty konwersji niejawnych. Dodatkowe ograniczenia dotyczące rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentacji określonych typów.
 
 ## <a name="example"></a>Przykład
 
@@ -118,7 +118,7 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

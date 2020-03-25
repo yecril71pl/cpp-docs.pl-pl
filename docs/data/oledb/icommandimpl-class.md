@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212165"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
@@ -81,7 +81,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -106,7 +106,7 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 Obowiązkowy interfejs w obiekcie Command.
 
-## <a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
 
 Anuluje bieżące wykonanie polecenia.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 Zobacz [Interfejs ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-## <a name="cancelexecution"></a>ICommandImpl:: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: CancelExecution
 
 Anuluje bieżące wykonanie polecenia.
 
@@ -130,7 +130,7 @@ Anuluje bieżące wykonanie polecenia.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a>ICommandImpl:: isrowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: isrowset
 
 Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) , aby utworzyć pojedynczy zestaw wierszy.
 
@@ -179,7 +179,7 @@ Aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworz
 
 Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
-## <a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
 
 Wykonuje polecenie.
 
@@ -203,7 +203,7 @@ Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms71809
 
 `Execute` wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
 
-## <a name="getdbsession"></a>ICommandImpl:: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
 Zwraca wskaźnik interfejsu do sesji, która utworzyła polecenie.
 
@@ -222,7 +222,7 @@ Zobacz [Interfejs ICommand:: GetDBSession](/previous-versions/windows/desktop/ms
 
 Przydatne do pobierania właściwości z sesji.
 
-## <a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
 
 Konstruktor.
 
@@ -232,7 +232,7 @@ Konstruktor.
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
 
 Wskazuje, czy polecenie zostało anulowane.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 Tę zmienną można pobrać w metodzie `Execute` klasy Command i anulować odpowiednie działania.
 
-## <a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
 Wskazuje, czy polecenie może zostać anulowane podczas wykonywania.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Wartość domyślna to **true** (może być anulowana).
 
-## <a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
 Wskazuje, czy polecenie jest aktualnie wykonywane.
 

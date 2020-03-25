@@ -6,29 +6,29 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c792f94e675ba3f83b4aad8c180ede46770c6856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215010"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP w programie Visual C++
 
-Interfejs aplikacji OpenMP C i C++ pozwala pisać aplikacje, które skutecznie korzystać z wielu procesorów. Visual C++ obsługuje standard OpenMP 2.0.
+Interfejs programu OpenMP C C++ i aplikacji pozwala pisać aplikacje, które efektywnie używają wielu procesorów. Wizualizacja C++ obsługuje standard OpenMP 2,0.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Odwołanie do biblioteki](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
-Zawiera łącza do konstrukcji używanych w interfejsie API OpenMP.
+[Dokumentacja biblioteki](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
+Oferuje linki do konstrukcji używanych w interfejsie API OpenMP.
 
-[Interfejs aplikacji C++ i C](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
-W tym artykule omówiono OpenMP C i C++ interfejsu API, zgodnie z opisem w specyfikacji wersji 2.0 z Review Board architektury OpenMP.
+[Język C C++ i interfejs programu aplikacji](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+Omawia język OpenMP C i C++ interfejs API, zgodnie z opisem w specyfikacji wersja 2,0 na tablicy przeglądu architektury OpenMP.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [/openmp (Włącz obsługę OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
-Powoduje, że kompilator przetwarzania `#pragma omp`.
+Powoduje, że kompilator przetwarza `#pragma omp`.
 
 [Wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md)<br/>
-Nazwy wstępnie zdefiniowanych makra implementacji ANSI C i C++ firmy Microsoft. Zobacz _OPENMP — makro.
+Nazwy wstępnie zdefiniowanych makr ANSI C i C++ implementacji firmy Microsoft. Zobacz makro _OPENMP.

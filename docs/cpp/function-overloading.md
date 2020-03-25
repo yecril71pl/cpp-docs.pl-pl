@@ -6,33 +6,33 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe390ae190f422f7951f7101a7c08808b1c6a526
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179786"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 
-C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Funkcje te są nazywane *przeciążone* funkcji. Przeciążone funkcje umożliwiają podanie różnego znaczenia dla funkcji, w zależności od typu i liczby argumentów.
+C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Te funkcje są nazywane *przeciążonymi* funkcjami. Przeciążone funkcje umożliwiają dostarczenie różnych semantyki dla funkcji, w zależności od typów i liczby argumentów.
 
-Na przykład `print` funkcji, która przyjmuje `std::string` argument może wykonywać bardzo różne zadania niż ta, która przyjmuje argument typu **double**. Przeciążanie pozwala uniknąć używać nazw takich jak `print_string` lub `print_double`. W czasie kompilacji kompilator wybiera, które przeładowanie do użycia na podstawie typu przekazanych przez obiekt wywołujący argumentów.  Jeśli wywołasz `print(42.0)`, a następnie `void print(double d)` zostanie wywołana funkcja. Jeśli wywołasz `print("hello world")`, a następnie `void print(std::string)` przeciążenia zostaną wywołane.
+Na przykład funkcja `print`, która przyjmuje argument `std::string`, może wykonywać bardzo różne zadania niż jeden, który przyjmuje argument typu **Double**. Przeciążanie powoduje, że nie trzeba używać nazw, takich jak `print_string` lub `print_double`. W czasie kompilacji kompilator wybiera, którego przeciążenia użyć na podstawie typu argumentów przekazaną przez wywołującego.  Jeśli wywołasz `print(42.0)`, funkcja `void print(double d)` zostanie wywołana. Jeśli wywołasz `print("hello world")`, zostanie wywołane Przeciążenie `void print(std::string)`.
 
-Możesz doprowadzić do przeciążenia funkcji elementów członkowskich i funkcje nieczłonkowskie. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.
+Można przeciążać zarówno funkcje członkowskie, jak i funkcje, które nie są elementami członkowskimi. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.
 
 ### <a name="overloading-considerations"></a>Zagadnienia przeciążania
 
 |Element deklaracji funkcji|Używany w przeciążaniu?|
 |----------------------------------|---------------------------|
 |Typ zwracany przez funkcję|Nie|
-|Liczba argumentów|Tak|
-|Typ argumentów|Tak|
-|Obecność lub brak wielokropka|Tak|
-|Korzystanie z **typedef** nazwy|Nie|
+|Liczba argumentów|Yes|
+|Typ argumentów|Yes|
+|Obecność lub brak wielokropka|Yes|
+|Używanie nazw **typedef**|Nie|
 |Nieokreślone granice tablic|Nie|
-|**Const** lub **volatile**|Tak, gdy jest stosowany do całej funkcji|
-|[Kwalifikatory REF](#ref-qualifiers)|Tak|
+|**const** lub **volatile**|Tak, po zastosowaniu do całej funkcji|
+|[Kwalifikatory ref](#ref-qualifiers)|Yes|
 
 ## <a name="example"></a>Przykład
 
@@ -113,31 +113,31 @@ int print(double dvalue, int prec)
 
 Poprzedni kod pokazuje przeciążenie funkcji `print` w zakresie pliku.
 
-Argument domyślny nie jest uważany za część typu funkcji. W związku z tym nieużywanych wyborze przeciążonych funkcji. Dwie funkcje, które różnią się tylko w ich argumenty domyślne są traktowane jako wiele definicji zamiast przeciążone funkcje.
+Domyślny argument nie jest uważany za część typu funkcji. W związku z tym nie jest używany podczas wybierania przeciążonych funkcji. Dwie funkcje, które różnią się tylko argumentami domyślnymi, są traktowane jako wiele definicji, a nie przeciążone funkcje.
 
-Nie można dostarczyć domyślne argumenty dla operatorów przeciążonych.
+Nie można dostarczyć argumentów domyślnych dla przeciążonych operatorów.
 
 ## <a name="argument-matching"></a>Dopasowywanie argumentów
 
-Funkcje przeciążone są zaznaczone dla najlepsze dopasowanie deklaracji funkcji w bieżącym zakresie argumentów w wywołaniu funkcji. Jeśli odpowiednia funkcja zostanie znaleziony, że funkcja jest wywoływana. "Odpowiedni" w tym kontekście oznacza:
+Przeciążone funkcje są wybierane w celu najlepszego dopasowania deklaracji funkcji w bieżącym zakresie do argumentów dostarczonych w wywołaniu funkcji. Jeśli zostanie znaleziona odpowiednia funkcja, ta funkcja jest wywoływana. "Odpowiednie" w tym kontekście oznacza:
 
-- Znaleziono dokładnego dopasowania.
+- Znaleziono dokładne dopasowanie.
 
-- Prosta Konwersja została wykonana.
+- Wykonano uproszczoną konwersję.
 
-- Promocja typu całkowitego została wykonana.
+- Wykonano promocję integralną.
 
-- Istnieje standardowa konwersja na typ żądanego argumentu.
+- Istnieje konwersja standardowa do żądanego typu argumentu.
 
-- Konwersja zdefiniowana przez użytkownika (operator konwersji lub konstruktora) na typ żądanego argumentu istnieje.
+- Istnieje konwersja zdefiniowana przez użytkownika (Operator konwersji lub Konstruktor) na żądany typ argumentu.
 
-- Argumenty reprezentowane przez wielokropek znaleziono.
+- Znaleziono argumenty reprezentowane przez wielokropek.
 
-Kompilator tworzy zestaw Release Candidate funkcji dla każdego argumentu. Funkcje kandydujące są funkcje, w których rzeczywisty argument, w tym miejscu można przekonwertować na typ argumentu formalnego.
+Kompilator tworzy zestaw funkcji kandydujących dla każdego argumentu. Funkcje kandydujące to funkcje, w których rzeczywisty argument w tym miejscu można przekonwertować na typ argumentu formalnego.
 
-Zestaw "najlepiej dopasowaną funkcji" jest przeznaczony dla każdego argumentu i wybranej funkcji jest przecięcia wszystkich zestawów. Jeśli część wspólną zawiera więcej niż jedną funkcję, przeciążenie jest niejednoznaczne i generuje błąd. Funkcja, która jest ostatecznie zaznaczone jest zawsze lepsze dopasowane niż co innych funkcji, w grupie co najmniej jednego argumentu. Jeśli nie ma żadnych wyczyść zwycięzcy, wywołanie funkcji spowoduje wygenerowanie błędu.
+Zestaw "najlepszych dopasowanych funkcji" jest tworzony dla każdego argumentu, a wybrana funkcja to część wspólna wszystkich zestawów. Jeśli część wspólna zawiera więcej niż jedną funkcję, Przeciążenie jest niejednoznaczne i generuje błąd. Funkcja, która jest ostatecznie zaznaczona, zawsze jest lepszym rozwiązaniem niż każda inna funkcja w grupie dla co najmniej jednego argumentu. Jeśli nie ma żadnych wyraźnych zwycięzców, wywołanie funkcji generuje błąd.
 
-Rozważ następujące deklaracje (funkcje są oznaczone `Variant 1`, `Variant 2`, i `Variant 3`, dla identyfikatora w następujących dyskusji):
+Należy wziąć pod uwagę następujące deklaracje (funkcje są oznaczone `Variant 1`, `Variant 2`i `Variant 3`do identyfikacji w poniższej dyskusji):
 
 ```cpp
 Fraction &Add( Fraction &f, long l );       // Variant 1
@@ -147,49 +147,49 @@ Fraction &Add( Fraction &f, Fraction &f );  // Variant 3
 Fraction F1, F2;
 ```
 
-Rozważmy następującą instrukcję:
+Weź pod uwagę następujące instrukcje:
 
 ```cpp
 F1 = Add( F2, 23 );
 ```
 
-Poprzednia instrukcja tworzy dwa zestawy:
+Poprzednia instrukcja kompiluje dwa zestawy:
 
-|Ustaw 1: Funkcje Release Candidate, które mają pierwszy Argument typu ułamka|Ustaw 2: Release Candidate funkcje Whose drugi Argument można przekonwertować na typ **int**|
+|Set 1: funkcje kandydujące, które mają pierwszy argument typu ułamek|Set 2: funkcje kandydujące, których drugi argument można przekonwertować na typ **int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-|Wariantu 1|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|
-|Variant 3||
+|Wariant 1|Wariant 1 (**int** można przekonwertować na wartość **Long** przy użyciu konwersji standardowej)|
+|Wariant 3||
 
-Funkcje w wersji 2 zestawu są funkcje, dla której są niejawną konwersję z typu rzeczywisty parametr formalny parametr typu, a wśród tych funkcji jest funkcją, dla którego jest "cost" konwersji typu rzeczywistego parametru typu formalnego parametru najmniejszy.
+Funkcje w zestawie 2 są funkcjami, dla których istnieją niejawne konwersje z rzeczywistego typu parametru do formalnego typu parametru i między takimi funkcjami istnieje funkcja, dla której wartość "koszt" konwersji rzeczywistego typu parametru na jego typ parametru formalnego to najmniejsza.
 
-Przecięcie tymi dwoma zestawami jest wariantu 1. Przykład wywołania niejednoznacznego funkcji to:
+Przecięcie tych dwóch zestawów jest wariantem 1. Przykładem niejednoznacznego wywołania funkcji jest:
 
 ```cpp
 F1 = Add( 3, 6 );
 ```
 
-Poprzedniego wywołania funkcji kompilacje następujących zestawów:
+Poprzednie wywołanie funkcji kompiluje następujące zestawy:
 
-|Ustaw 1: Release Candidate funkcje, mają pierwszy Argument typu **int**|Ustaw 2: Release Candidate funkcje, mieć drugi Argument typu **int**|
+|Set 1: funkcje kandydujące, które mają pierwszy argument typu **int**|Set 2: funkcje kandydujące, które mają drugi argument typu **int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
-|Variant 2 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|
+|Wariant 2 (**int** można przekonwertować na wartość **Long** przy użyciu konwersji standardowej)|Wariant 1 (**int** można przekonwertować na wartość **Long** przy użyciu konwersji standardowej)|
 
-Ponieważ część wspólną tymi dwoma zestawami jest pusta, kompilator generuje komunikat o błędzie.
+Ponieważ część wspólną tych dwóch zestawów jest pusta, kompilator generuje komunikat o błędzie.
 
-Dla argumentu dopasowania funkcji z *n* argumenty domyślne jest traktowany jako *n*funkcje oddzielne + 1, każda z różną liczbę argumentów.
+W przypadku dopasowywania argumentów funkcja z argumentami domyślnymi *n* jest traktowana jako *n*+ 1 oddzielne funkcje, z których każdy ma inną liczbę argumentów.
 
-Działa wielokropek (...) jako symbolu wieloznacznego; Dopasowuje dowolny z rzeczywistych argumentów. Może to prowadzić do wielu zestawów niejednoznaczny, projektując nie Twoje zestawy przeciążonej funkcji z rozwagą.
+Wielokropek (...) działa jako symbol wieloznaczny; Dopasowuje dowolny rzeczywisty argument. Może to prowadzić do wielu niejednoznacznych zestawów, jeśli nie projektujesz przeciążonych zestawów funkcji z najwyższą starannością.
 
 > [!NOTE]
->  Nie można ustalić niejednoznaczności przeciążonych funkcji, dopóki nie zostanie osiągnięty wywołania funkcji. W tym momencie zestawy są tworzone dla każdego argumentu w wywołaniu funkcji, a następnie można określić, czy istnieje jednoznaczna przeciążenie. Oznacza to, że niejednoznaczności może pozostać w kodzie, dopóki nie są one przywołane przez wywołanie konkretną funkcję.
+>  Nie można określić niejednoznaczności przeciążonych funkcji, dopóki nie zostanie napotkane wywołanie funkcji. W tym momencie zestawy są kompilowane dla każdego argumentu w wywołaniu funkcji i można określić, czy istnieje jednoznaczne Przeciążenie. Oznacza to, że niejasności może pozostawać w kodzie do momentu evoked przez określone wywołanie funkcji.
 
 ## <a name="argument-type-differences"></a>Różnice typu argumentów
 
-Przeciążone funkcje rozróżnienia między typami argumentów, które przyjmują różne inicjatory. W związku z tym argument danego typu i odwołania do tego typu są traktowane jako takie same na potrzeby logowania. Są uważane za takie same ponieważ przyjmują tego samego inicjatory. Na przykład `max( double, double )` uznaje się taka sama jak `max( double &, double & )`. Deklarowanie dwóch takich funkcji spowoduje wystąpienie błędu.
+Przeciążone funkcje odróżniają między typami argumentów, które mają różne inicjatory. W związku z tym argument danego typu i odwołanie do tego typu są uznawane za takie same dla celów przeciążenia. Są one uznawane za takie same, ponieważ przyjmują te same inicjatory. Na przykład `max( double, double )` jest uznawana za taka sama jak `max( double &, double & )`. Deklarowanie dwóch takich funkcji powoduje wystąpienie błędu.
 
-Z tego samego powodu argumenty typu, który został zmodyfikowany przez funkcji **const** lub **volatile** nie są traktowane inaczej niż typu podstawowego na potrzeby logowania.
+Z tego samego powodu argumenty funkcji typu modyfikowane przez **const** lub **volatile** nie są traktowane inaczej niż typ podstawowy do celów przeciążenia.
 
-Jednak funkcja przeciążenie mechanizm może rozróżnić odwołań, które są kwalifikowane przez **const** i **volatile** i odwołania do typu podstawowego. Dzięki niej kod, takie jak następujące możliwości:
+Jednak mechanizm przeciążania funkcji może rozróżnić odwołania, które są kwalifikowane przez **const** i **volatile** , i odwołania do typu podstawowego. Wprowadza kod, taki jak następujące możliwe:
 
 ```cpp
 // argument_type_differences.cpp
@@ -227,80 +227,80 @@ Over default constructor
 volatile Over&
 ```
 
-Wskaźniki do **const** i **volatile** obiektów są także traktowane jako inny niż wskaźniki do typu podstawowego na potrzeby logowania.
+Wskaźniki do obiektów **const** i **volatile** są również uznawane za różne od wskaźników do typu podstawowego w celach przeciążenia.
 
-## <a name="argument-matching-and-conversions"></a>Konwersje i dopasowania argumentów
+## <a name="argument-matching-and-conversions"></a>Dopasowywanie argumentów i konwersje
 
-Gdy kompilator próbuje dopasować rzeczywiste argumenty względem argumentów w deklaracjach funkcji, go podać standardowych lub zdefiniowanych przez użytkownika konwersje do uzyskania dokładnego dopasowania można znaleźć poprawnego typu. Aplikacja konwersje podlega te reguły:
+Gdy kompilator próbuje dopasować rzeczywiste argumenty do argumentów w deklaracjach funkcji, może dostarczyć standardowe lub zdefiniowane przez użytkownika Konwersje w celu uzyskania poprawnego typu, jeśli nie można znaleźć dokładnego dopasowania. Zastosowanie konwersji podlega tym regułom:
 
-- Sekwencje konwersje, które zawierają więcej niż jednej konwersji zdefiniowanej przez użytkownika nie są uwzględniane.
+- Nie są uwzględniane sekwencje konwersji zawierające więcej niż jedną konwersję zdefiniowaną przez użytkownika.
 
-- Sekwencje konwersji, które zostać skrócony, usuwając pośrednich konwersje nie są uwzględniane.
+- Sekwencje konwersji, które mogą być skracane przez usunięcie konwersji pośrednich, nie są brane pod uwagę.
 
-Wynikowe sekwencji konwersji, jeśli istnieje, nosi nazwę najlepiej dopasowaną sekwencji. Istnieje kilka sposobów, aby przekonwertować obiektu typu **int** na typ **unsigned long** przy użyciu standardowych konwersji (opisanych w [konwersje standardowe](../cpp/standard-conversions.md)):
+Wynikowa sekwencja konwersji, jeśli istnieje, jest nazywana najlepszą pasującą sekwencją. Istnieje kilka sposobów konwersji obiektu typu **int** na typ **unsigned long** przy użyciu konwersji standardowych (opisanych w [konwersji standardowe](../cpp/standard-conversions.md)):
 
-- Konwertowanie z **int** do **długie** a następnie z **długie** do **unsigned long**.
+- Konwertuj z **int** na **Long** , a następnie od **Long** do **unsigned long**.
 
-- Konwertowanie z **int** do **unsigned long**.
+- Konwertuj z **int** na **unsigned long**.
 
-Pierwszej sekwencji, mimo że powoduje to osiągnięcie żądanego celu nie jest najlepiej dopasowaną sekwencji — istnieje sekwencja krótszy.
+Pierwsza sekwencja, chociaż osiąga żądany cel, nie jest najlepszą zgodną sekwencją — istnieje krótsza sekwencja.
 
-W poniższej tabeli przedstawiono grupy konwersji, o nazwie trivial konwersji, które mają ograniczony wpływ na temat określania, jaka sekwencja jest najlepsze dopasowanie. Wystąpienia, w których trivial konwersje wpływa na wybór sekwencji zostały omówione w liście pod tabelą.
+W poniższej tabeli przedstawiono grupę konwersji o nazwie uproszczone konwersje, które mają ograniczony wpływ na określanie, która sekwencja jest najlepszym dopasowaniem. Wystąpienia, w których konwersje uproszczone mają wpływ na wybór sekwencji, omówiono na liście poniżej tabeli.
 
-### <a name="trivial-conversions"></a>Konwersje prosta
+### <a name="trivial-conversions"></a>Konwersje uproszczone
 
-|Konwersja z typu|Konwertowanie na typ|
+|Konwertuj z typu|Konwertuj na typ|
 |-----------------------|---------------------|
 |*Nazwa typu*|*Nazwa typu* **&**|
 |*Nazwa typu* **&**|*Nazwa typu*|
-|*Nazwa typu* **]**|*Nazwa typu* __\*__|
-|*Nazwa typu* **(** *listy argumentów* **)**|**(** __\*__ *nazwy typu* **) (** *listy argumentów* **)**|
-|*Nazwa typu*|**Const** *Nazwa typu*|
-|*Nazwa typu*|**volatile** *Nazwa typu*|
-|*Nazwa typu* __\*__|**Const** *Nazwa typu* __\*__|
-|*Nazwa typu* __\*__|**volatile** *Nazwa typu* __\*__|
+|*Nazwa typu* **[]**|*Nazwa typu* __\*__|
+|*type-name* **(** *Lista argumentów* **)**|**(** __\*__ *type-name* **) (** *Lista argumentów* **)**|
+|*Nazwa typu*|**const** *— Nazwa typu*|
+|*Nazwa typu*|**nietrwała** *Nazwa typu*|
+|*Nazwa typu* __\*__|**stała** *Nazwa typu* __\*__|
+|*Nazwa typu* __\*__|**nietrwała** *Nazwa typu* __\*__|
 
-Kolejność, w którym są próby konwersji jest następująca:
+Sekwencja, w której są podejmowane próby konwersji, jest następująca:
 
-1. Dokładne dopasowanie. Dokładne dopasowanie między typami, z którymi funkcja jest wywoływana i typy zadeklarowane w prototyp funkcji jest zawsze najlepsze dopasowanie. Sekwencje trivial konwersje są klasyfikowane jako dokładne dopasowania. Jednak sekwencji, których nie należy do żadnego z tych konwersje są uważane za lepsze niż sekwencji, które konwertują:
+1. Dokładne dopasowanie. Dokładne dopasowanie między typami, z których wywoływana jest funkcja, a typy zadeklarowane w prototypie funkcji są zawsze najlepszym dopasowaniem. Sekwencje uproszczonych konwersji są klasyfikowane jako dokładne dopasowania. Jednak sekwencje, które nie tworzą żadnej z tych konwersji, są uznawane za lepsze niż sekwencje, które konwertują:
 
-   - Ze wskaźnika do wskaźnika do **const** (`type` <strong>\*</strong> do **const** `type` <strong>\*</strong> ).
+   - Ze wskaźnika do wskaźnika do **stałej** (`type` <strong>\*</strong> do **stałej** `type` <strong>\*</strong>).
 
-   - Ze wskaźnika do wskaźnika do **volatile** (`type` <strong>\*</strong> do **volatile** `type` <strong>\*</strong>).
+   - Ze wskaźnika do wskaźnika do **nietrwałego** (`type` <strong>\*</strong> do **nietrwałego** `type` <strong>\*</strong>).
 
-   - Z odwołania do odwołania do **const** (`type` **&** do **const** `type` **&**).
+   - Z odwołania do odwołania do **const** (`type` **&** do **const** `type` **&** ).
 
-   - Z odwołania do odwołania do **volatile** (`type` **&** do **volatile** `type` **&**).
+   - Z odwołania, aby odwołać się do **nietrwałego** (`type` **&** do **nietrwałej** `type` **&** ).
 
-1. Dopasuj je przy użyciu promocji. Dowolnej sekwencji, które nie są klasyfikowane jako dokładne dopasowanie, który zawiera tylko promocje typów całkowitych, konwersje z **float** do **double**, i prosta konwersje są klasyfikowane jako dopasowanie za pomocą promocji. Jednak nie tak dobrze, dopasowanie dowolnej dokładne dopasowanie, dopasowanie za pomocą promocji jest lepsza niż przy użyciu standardowych konwersji dopasowania.
+1. Dopasowuje się do korzystania z promocji. Każda sekwencja nie została sklasyfikowana jako dokładne dopasowanie, która zawiera tylko promocje całkowite, konwersje z **zmiennoprzecinkowe** na **podwójne**, a konwersje uproszczone są klasyfikowane jako dopasowanie przy użyciu promocji. Chociaż nie jest to dobre dopasowanie jako dokładne dopasowanie, dopasowanie przy użyciu promocji jest lepszym rozwiązaniem niż dopasowanie przy użyciu konwersji standardowych.
 
-1. Dopasuj je przy użyciu standardowych konwersji. Dowolnej sekwencji nie sklasyfikowane jako dopasowanie dokładne lub dopasowania przy użyciu w promocjach, zawierający tylko konwersje standardowe i prosta konwersje zostanie sklasyfikowany jako dopasowanie przy użyciu standardowych konwersji. W ramach tej kategorii są stosowane następujące reguły:
+1. Dopasowanie przy użyciu konwersji standardowych. Dowolna sekwencja nie została sklasyfikowana jako dokładne dopasowanie ani dopasowanie przy użyciu promocji, które zawierają tylko Konwersje standardowe i konwersje uproszczone są klasyfikowane jako dopasowanie przy użyciu konwersji standardowych. W tej kategorii są stosowane następujące reguły:
 
-   - Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do bezpośredniej lub pośredniej klasy bazowej jest konwertowanie `void *` lub `const void *`.
+   - Konwersja ze wskaźnika na klasę pochodną do wskaźnika do bezpośredniej lub pośredniej klasy podstawowej jest preferowana do konwersji na `void *` lub `const void *`.
 
-   - Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej daje lepsze dopasowanie bliżej klasa bazowa ma bezpośrednią klasą bazową. Załóżmy, że jest hierarchii klas, jak pokazano na poniższej ilustracji.
+   - Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej daje lepszy dopasowanie do klasy bazowej do bezpośredniej klasy podstawowej. Załóżmy, że hierarchia klas jest pokazana na poniższej ilustracji.
 
-![Wykres preferowanych konwersje](../cpp/media/vc391t1.gif "wykres preferowanych konwersje") <br/>
-Wykres przedstawiający preferowanych konwersje
+![Wykres preferowanych konwersji](../cpp/media/vc391t1.gif "Wykres preferowanych konwersji") <br/>
+Wykres przedstawiający preferowane konwersje
 
-Konwersja z typu `D*` na typ `C*` jest konwersja z typu `D*` na typ `B*`. Podobnie, konwersja z typu `D*` na typ `B*` jest konwersja z typu `D*` na typ `A*`.
+Konwersja z typu `D*` na typ `C*` jest preferowana konwersja z typu `D*` na typ `B*`. Podobnie konwersja z typu `D*` na typ `B*` jest preferowana konwersja z typu `D*` na typ `A*`.
 
-Ta sama zasada dotyczy konwersje odwołań. Konwersja z typu `D&` na typ `C&` jest konwersja z typu `D&` na typ `B&`i tak dalej.
+Ta sama reguła ma zastosowanie do konwersji odwołań. Konwersja z typu `D&` na typ `C&` jest preferowana konwersja z typu `D&` na typ `B&`i tak dalej.
 
-Ta sama zasada dotyczy konwersje wskaźników do elementów członkowskich. Konwersja z typu `T D::*` na typ `T C::*` jest konwersja z typu `T D::*` na typ `T B::*`i tak dalej (gdzie `T` jest typ elementu członkowskiego).
+Ta sama reguła ma zastosowanie do konwersji wskaźnika do elementu członkowskiego. Konwersja z typu `T D::*` na typ `T C::*` jest preferowana konwersja z typu `T D::*` na typ `T B::*`i tak dalej (gdzie `T` jest typem elementu członkowskiego).
 
-Poprzedni reguła ma zastosowanie tylko na ścieżce danego pochodnym. Należy wziąć pod uwagę wykres pokazano na poniższej ilustracji.
+Poprzednia reguła ma zastosowanie tylko do danej ścieżki pochodnej. Rozważmy wykres przedstawiony na poniższej ilustracji.
 
-![Wiele&#45;dziedziczenia, pokazujący preferowanych konwersje](../cpp/media/vc391t2.gif "wielu&#45;dziedziczenia, pokazujący preferowanych konwersje") <br/>
-Wykres dziedziczenia wielokrotnego, który pokazuje preferowaną konwersje
+![Wielokrotne&#45;dziedziczenie, które pokazuje preferowane konwersje](../cpp/media/vc391t2.gif "Wielokrotne&#45;dziedziczenie, które pokazuje preferowane konwersje") <br/>
+Wykres wielokrotnego dziedziczenia, który pokazuje preferowane konwersje
 
-Konwersja z typu `C*` na typ `B*` jest konwersja z typu `C*` na typ `A*`. Przyczyną jest to, że znajdują się w tej samej ścieżce i `B*` zbliżonej. Jednak konwersja z typu `C*` na typ `D*` nie jest preferowane konwersji na typ `A*`; jest Brak preferencji, ponieważ konwersje postępuj zgodnie z różnych ścieżek.
+Konwersja z typu `C*` na typ `B*` jest preferowana konwersja z typu `C*` na typ `A*`. Powodem jest to, że znajdują się one w tej samej ścieżce, a `B*` jest bliższe. Jednak konwersja z typu `C*` na typ `D*` nie jest preferowany do konwersji na typ `A*`; nie ma preferencji, ponieważ konwersje są zgodne z różnymi ścieżkami.
 
-1. Zgodna z konwersje zdefiniowane przez użytkownika. Ta sekwencja nie mogą być klasyfikowane jako dokładne dopasowanie, dopasowanie za pomocą promocji lub przy użyciu standardowych konwersji dopasowania. Sekwencja musi zawierać tylko konwersje zdefiniowane przez użytkownika, konwersje standardowe lub trivial konwersji jest uważany za dopasowania konwersje zdefiniowane przez użytkownika. Dopasowania konwersje zdefiniowane przez użytkownika jest uważany za lepsze dopasowane niż dopasowania z wielokropkiem, ale nie tak dobrze, dopasowanie jako zgodny ze standardowych konwersji.
+1. Dopasowuje się do konwersji zdefiniowanych przez użytkownika. Tej sekwencji nie można zaklasyfikować jako dokładnego dopasowania, dopasowania przy użyciu promocji lub dopasowania przy użyciu konwersji standardowych. Sekwencja musi zawierać tylko konwersje zdefiniowane przez użytkownika, Konwersje standardowe lub konwersje proste, które mają być sklasyfikowane jako zgodne z konwersjemi zdefiniowanymi przez użytkownika. Dopasowanie z konwersjemi zdefiniowanymi przez użytkownika jest uznawane za lepsze niż dopasowanie z wielokropkiem, ale nie jako zgodne ze standardowymi konwersjemi.
 
-1. Zgodne z wielokropkiem. Dowolnej sekwencji, który odpowiada wielokropek w deklaracji jest klasyfikowana jako zgodny z wielokropkiem. Ma on uznawany za najsłabsza dopasowania.
+1. Dopasowuje się do wielokropka. Wszelkie sekwencje pasujące do wielokropka w deklaracji są klasyfikowane jako zgodne z wielokropkiem. Jest on traktowany jak najsłabsze dopasowanie.
 
-Konwersje zdefiniowane przez użytkownika są stosowane, jeśli nie ma wbudowanych podwyższania poziomu ani konwersji. Te konwersje są wybierane na podstawie typu argumentu są dopasowywane. Rozważmy poniższy kod:
+Konwersje zdefiniowane przez użytkownika są stosowane w przypadku braku wbudowanej promocji lub konwersji. Te konwersje są wybierane na podstawie typu pasującego argumentu. Rozważmy następujący kod:
 
 ```cpp
 // argument_matching1.cpp
@@ -326,9 +326,9 @@ int main()
 }
 ```
 
-Dostępne zdefiniowane przez użytkownika konwersje na klasę `UDC` pochodzą z typu **int** i typ **długie**. W związku z tym, kompilator traktuje konwersji na typ obiektu są dopasowywane: `UDC`. Konwersja na **int** istnieje, i jest ono zaznaczone.
+Dostępne konwersje zdefiniowane przez użytkownika dla klas `UDC` są typu **int** i typu **Long**. W związku z tym kompilator rozważa konwersje dla typu pasującego obiektu: `UDC`. Konwersja na **typ int** istnieje i została wybrana.
 
-Podczas dopasowywania argumentów konwersje standardowe można zastosować do tego argumentu i wynik konwersji zdefiniowanej przez użytkownika. W związku z tym działa w następujący kod:
+Podczas procesu dopasowywania argumentów Konwersje standardowe mogą być stosowane do argumentu i wyniku konwersji zdefiniowanej przez użytkownika. W związku z tym Poniższy kod działa:
 
 ```cpp
 void LogToFile( long l );
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-W poprzednim przykładzie, konwersja zdefiniowana przez użytkownika **operator długie**, zostanie wywołana można skonwertować `udc` na typ **długie**. Jeśli nie zdefiniowana przez użytkownika konwersja na typ **długie** była zdefiniowana, konwersja będzie mieć zanalizować w następujący sposób: Typ `UDC` będzie konwertowany na typ **int** za pomocą konwersji zdefiniowanej przez użytkownika. Następnie standardowa konwersja z typu **int** na typ **długie** będzie stosowane do dopasowania argumentów w deklaracji.
+W poprzednim przykładzie zdefiniowana przez użytkownika konwersja, **operator Long**, jest wywoływana w celu przekonwertowania `udc` na typ **Long**. Jeśli nie zdefiniowano żadnej konwersji zdefiniowanej przez użytkownika dla typu **Long** , konwersja zostałaby przebiegać w następujący sposób: typ `UDC` zostałby przekonwertowany na typ **int** przy użyciu konwersji zdefiniowanej przez użytkownika. Następnie konwersja standardowa typu **int** na typ **Long** zostałaby zastosowana w celu dopasowania do argumentu w deklaracji.
 
-Jeśli wszystkie konwersje zdefiniowane przez użytkownika muszą być zgodne z argumentem, konwersje standardowe nie są używane podczas obliczania najlepsze dopasowanie. Nawet wtedy, gdy więcej niż jednej funkcji kandydata wymaga konwersji zdefiniowanej przez użytkownika, funkcje są uznawane za równe. Na przykład:
+Jeśli wszystkie konwersje zdefiniowane przez użytkownika są wymagane do dopasowania argumentu, standardowe konwersje nie są używane podczas oceny najlepszego dopasowania. Nawet jeśli więcej niż jedna funkcja kandydująca wymaga konwersji zdefiniowanej przez użytkownika, funkcje są uważane za równe. Na przykład:
 
 ```cpp
 // argument_matching2.cpp
@@ -365,28 +365,28 @@ int main()
 }
 ```
 
-Obie wersje `Func` wymaga konwersji zdefiniowanej przez użytkownika w celu konwersji typu **int** argumentu typu klasy. Konwersje możliwe są następujące:
+Obie wersje `Func` wymagają konwersji zdefiniowanej przez użytkownika na konwersję typu **int** do argumentu typu klasy. Możliwe konwersje to:
 
-- Konwersja z typu **int** na typ `UDC1` (konwersja zdefiniowana przez użytkownika).
+- Konwertuj z typu **int** na typ `UDC1` (konwersja zdefiniowana przez użytkownika).
 
-- Konwersja z typu **int** na typ **długie**; a następnie przekonwertować na typ `UDC2` (konwersji dwuetapowej).
+- Konwertuj z typu **int** na typ **Long**; następnie przekonwertuj na `UDC2` typu (konwersja dwuetapowa).
 
-Mimo że drugi wymaga konwersji standardowych i konwersji zdefiniowanych przez użytkownika, dwa konwersje są nadal uważane za równe.
+Mimo że druga z nich wymaga konwersji standardowej i konwersji zdefiniowanej przez użytkownika, dwie konwersje są nadal uważane za równe.
 
 > [!NOTE]
->  Konwersje zdefiniowane przez użytkownika są traktowane jako konwersji, konstruowania lub konwersja przez inicjowanie (funkcja konwersji). Obie metody są traktowane jako równe, rozważając najlepsze dopasowanie.
+>  Konwersje zdefiniowane przez użytkownika są uznawane za konwersję lub konwersję przez inicjalizację (funkcję konwersji). Obie metody są uważane za równe przy uwzględnieniu najlepszego dopasowania.
 
-## <a name="argument-matching-and-the-this-pointer"></a>Dopasowanie argumentu i jego wskaźnika
+## <a name="argument-matching-and-the-this-pointer"></a>Dopasowanie argumentów i ten wskaźnik
 
-Funkcje składowych klasy są traktowane inaczej w zależności od tego, czy są deklarowane jako **statyczne**. Ponieważ Niestatyczne funkcje mają niejawnego argumentu, który dostarcza **to** wskaźnik, Niestatyczne funkcje są uznawane za mieć jeden argument więcej niż statycznych funkcji; w przeciwnym razie są deklarowane identycznie.
+Funkcje składowe klasy są traktowane inaczej, w zależności od tego, czy są one zadeklarowane jako **statyczne**. Ponieważ niestatyczne funkcje mają niejawny argument, który dostarcza **ten** wskaźnik, niestatyczne funkcje są uznawane za mające jeden argument niż funkcje statyczne; w przeciwnym razie są one deklarowane identycznie.
 
-Te Niestatyczne funkcje Członkowskie wymagającą dorozumianych **to** wskaźnik odpowiada typowi obiektu, za pomocą którego jest wywoływana funkcja lub dla operatorów przeciążonych wymagają one, czy pierwszy argument odpowiadają obiektu, na którym operator jest stosowany. (Aby uzyskać więcej informacji na temat przeciążonych operatorów, zobacz [przeciążone operatory](../cpp/operator-overloading.md).)
+Te niestatyczne funkcje Członkowskie wymagają, aby implikowany **wskaźnik pasował** do typu obiektu, za pomocą którego wywoływana jest funkcja, lub dla przeciążonych operatorów, wymagają, aby pierwszy argument był zgodny z obiektem, na którym jest stosowany operator. (Aby uzyskać więcej informacji na temat przeciążonych operatorów, zobacz [przeciążone operatory](../cpp/operator-overloading.md)).
 
-W przeciwieństwie do innych argumentów w funkcje przeciążone są wprowadzane nie obiekty tymczasowe i są próby konwersji, podczas próby dopasowania **to** argumentu będącego wskaźnikiem.
+W przeciwieństwie do innych argumentów w przeciążonych funkcjach, nie są wprowadzane żadne obiekty tymczasowe i nie podjęto próby konwersji przy próbie dopasowania **tego** argumentu wskaźnika.
 
-Gdy `->` operator wyboru elementów członkowskich umożliwia dostęp do funkcji składowej klasy `class_name`, **to** argumentu będącego wskaźnikiem ma typ `class_name * const`. Jeśli elementy członkowskie są zadeklarowane jako **const** lub **volatile**, typy są `const class_name * const` i `volatile class_name * const`, odpowiednio.
+Gdy operator wyboru `->` member jest używany w celu uzyskania dostępu do funkcji składowej klasy `class_name`, **ten** argument wskaźnika ma typ `class_name * const`. Jeśli składowe są zadeklarowane jako **const** lub **volatile**, typy są odpowiednio `const class_name * const` i `volatile class_name * const`.
 
-`.` Operator wyboru elementów członkowskich działa dokładnie tak samo, chyba że ukrytego `&` operatora (address-of) jest poprzedzana do nazwy obiektu. Poniższy przykład pokazuje, jak to działa:
+Operator wyboru elementu członkowskiego `.` działa dokładnie tak samo, z tą różnicą, że niejawny operator `&` (Address-of) jest poprzedzony nazwą obiektu. Poniższy przykład pokazuje, jak to działa:
 
 ```cpp
 // Expression encountered in code
@@ -396,11 +396,11 @@ obj.name
 (&obj)->name
 ```
 
-Lewy operand `->*` i `.*` operatorów (wskaźnik do elementu członkowskiego) są traktowane tak samo, jak `.` i `->` operatorów (wyboru elementów członkowskich) w odniesieniu do dopasowania argumentów.
+Lewy argument operacji dla operatorów `->*` i `.*` (wskaźnik do składowej) jest traktowany tak samo jak `.` i `->` (wybór elementu członkowskiego) w odniesieniu do argumentów.
 
-## <a name="ref-qualifiers"></a> Kwalifikatory ref w funkcjach składowych
+## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a>Kwalifikatory ref w funkcjach składowych
 
-Kwalifikatory umożliwiają przeciążyć funkcji składowej na podstawie tego, czy obiekt wskazywany przez **to** to rvalue lub l-wartością.  Ta funkcja może służyć w celu uniknięcia kopiowania niepotrzebne operacje w scenariuszach gdzie nie chcesz zapewnić dostęp wskaźnik do danych. Załóżmy na przykład, klasa `C` inicjuje niektóre dane w jego konstruktorze i zwraca kopię danych w funkcji składowej `get_data()`. Jeśli obiekt typu `C` to rvalue, który ma zostać zniszczone, a następnie wybierze kompilator `get_data() &&` przeciążenia, które przenosi dane, a nie skopiuj go.
+Kwalifikatory ref umożliwiają przeciążanie funkcji składowej w oparciu o to, czy obiekt wskazywany przez **to** jest rvalue, czy lvalue.  Ta funkcja umożliwia uniknięcie niepotrzebnych operacji kopiowania w scenariuszach, w których nie można zapewnić dostępu do danych za pomocą wskaźnika. Załóżmy na przykład, że Klasa `C` inicjuje pewne dane w konstruktorze i zwraca kopię tych danych w funkcji składowej `get_data()`. Jeśli obiekt typu `C` jest rvalue, który ma zostać zniszczony, kompilator wybierze `get_data() &&` Przeciążenie, które przenosi dane zamiast kopiować.
 
 ```cpp
 #include <iostream>
@@ -437,23 +437,23 @@ int main()
 }
 ```
 
-## <a name="restrictions-on-overloading"></a>Ograniczenia przeciążania
+## <a name="restrictions-on-overloading"></a>Ograniczenia dotyczące przeciążania
 
-Kilka ograniczeń określają dopuszczalne zestaw przeciążonych funkcji:
+Niektóre ograniczenia podlegają akceptowalnemu zestawowi przeciążonych funkcji:
 
-- Wszelkie dwie funkcje w zestaw przeciążonych funkcji musi mieć listy różnych argumentów.
+- Wszystkie dwie funkcje w zestawie przeciążonych funkcji muszą mieć różne listy argumentów.
 
-- Przeładowywanie funkcji z listami argumentów tego samego typu, na podstawie zwracanego typu samodzielnie, występuje błąd.
+- Przeciążanie funkcji z listami argumentów tego samego typu, na podstawie samego typu zwracanego, jest błędem.
 
-     **Microsoft Specific**
+     **Specyficzne dla firmy Microsoft**
 
-Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o typ zwracany — w szczególności na podstawie modyfikator model pamięci określona.
+Można przeciążać **operator new** wyłącznie na podstawie typu zwracanego — w odniesieniu do określonego modyfikatora pamięci.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-- Nie można przeciążyć funkcje Członkowskie wyłącznie na podstawie jednej są statyczne i innych nonstatic.
+- Funkcje składowe nie mogą być przeciążone wyłącznie na podstawie jednego statycznego i innego niestatycznego.
 
-- **Element TypeDef** deklaracji nie zdefiniujesz nowe typy; wprowadzają synonimy dla istniejących typów. Nie wpływają one na mechanizm przeciążania operacji. Rozważmy poniższy kod:
+- deklaracje **typedef** nie definiują nowych typów; wprowadzają synonimy dla istniejących typów. Nie wpływają one na mechanizm przeciążania. Rozważmy następujący kod:
 
     ```cpp
     typedef char * PSTR;
@@ -462,18 +462,18 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
     void Print( PSTR szToPrint );
     ```
 
-   Poprzedni dwie funkcje mają listy argumentów identyczne. `PSTR` jest synonimem typu `char *`. W zakresie członka ten kod generuje błąd.
+   Poprzednie dwie funkcje mają identyczne listy argumentów. `PSTR` jest synonimem typu `char *`. W zakresie elementu członkowskiego ten kod generuje błąd.
 
-- Typy wyliczone są różnych typów i może służyć do rozróżnienia przeciążonych funkcji.
+- Typy wyliczeniowe są różnymi typami i mogą być używane do rozróżniania między przeciążonymi funkcjami.
 
-- Typy "tablica" i "wskaźnik" są traktowane jako identyczne do celów rozróżniania między przeciążonych funkcji, ale tylko w przypadku pojedynczo wymiary tablic. Dlatego te przeciążone funkcje konfliktu i generować komunikat o błędzie:
+- Typy "array of" i "wskaźnik do" są uważane za identyczne dla celów rozróżniania między przeciążonymi funkcjami, ale tylko dla tablic wielowymiarowych z wymiarami. Dlatego te przeciążone funkcje powodują konflikt i generują komunikat o błędzie:
 
     ```cpp
     void Print( char *szToPrint );
     void Print( char szToPrint[] );
     ```
 
-   Zwymiarowany mnożenie macierzy drugi i kolejne wszystkie wymiary są traktowane jako część tego typu. W związku z tym są one używane w rozróżniania przeciążonych funkcji:
+   W przypadku mnożonych tablic wymiarowych drugi i wszystkie pomyślne wymiary są uważane za część typu. W związku z tym są używane w odróżnieniu od przeciążonych funkcji:
 
     ```cpp
     void Print( char szToPrint[] );
@@ -481,15 +481,15 @@ Możesz doprowadzić do przeciążenia **nowy operator** wyłącznie w oparciu o
     void Print( char szToPrint[][9][42] );
     ```
 
-## <a name="overloading-overriding-and-hiding"></a>Przeciążenie, zastępowanie i ukrywanie
+## <a name="overloading-overriding-and-hiding"></a>Przeciążanie, zastępowanie i ukrywanie
 
 Wszelkie dwie deklaracje funkcji o tej samej nazwie w tym samym zakresie, mogą odwoływać się do tej samej funkcji lub do dwóch funkcji dyskretnych, które są przeciążone. Jeśli wykazy argumentów deklaracji zawierają równoważne typy argumentów (zgodnie z opisem w poprzedniej sekcji), deklaracje funkcji odnoszą się do tej samej funkcji. W przeciwnym razie, odnoszą się do dwóch różnych funkcji, które są wybrane za pomocą przeciążenia.
 
-Zakres klasy jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w klasie bazowej nie znajduje się w tym samym zakresie, co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja w klasie pochodnej jest zadeklarowana z taką samą nazwę jak funkcję wirtualną w klasie bazowej, funkcja klasy pochodnej *zastępuje* funkcji klasy podstawowej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
+Zakres klasy jest ściśle przestrzegany; w związku z tym, Funkcja zadeklarowana w klasie bazowej nie jest w tym samym zakresie co funkcja zadeklarowana w klasie pochodnej. Jeśli funkcja klasy pochodnej jest zadeklarowana z tą samą nazwą jak funkcja wirtualna w klasie bazowej, funkcja klasy pochodnej *zastępuje* funkcję klasy podstawowej. Aby uzyskać więcej informacji, zobacz [funkcje wirtualne](../cpp/virtual-functions.md).
 
-Jeśli funkcja klasy bazowej nie jest zadeklarowana jako "virtual", a następnie funkcja klasy pochodnej jest nazywany *Ukryj* go. Zastępowanie i ukrywanie różnią się od przeciążenia.
+Jeśli funkcja klasy bazowej nie jest zadeklarowana jako "Virtual", funkcja klasy pochodnej jest określana do *ukrycia* . Zastępowanie i ukrywanie różnią się od przeciążenia.
 
-Zakres bloku jest ściśle przestrzegany; w związku z tym, funkcja zadeklarowana w zakresie pliku nie znajduje się w tym samym zakresie, co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:
+Zakres bloku jest ściśle przestrzegany; w związku z tym, Funkcja zadeklarowana w zakresie pliku nie jest w tym samym zakresie co funkcja zadeklarowana lokalnie. Jeśli funkcja zadeklarowana lokalnie ma taką samą nazwę, co funkcja zadeklarowana w zakresie pliku, funkcja zadeklarowana lokalnie ukrywa funkcje należącą do zakresu pliku, zamiast powodować przeciążenie. Na przykład:
 
 ```cpp
 // declaration_matching1.cpp
@@ -517,13 +517,13 @@ int main()
 }
 ```
 
-Poprzedni kod pokazuje dwie definicje funkcji `func`. Definicja która przyjmuje argument typu `char *` jest lokalną grupą `main` z powodu **extern** instrukcji. W związku z tym, definicja która przyjmuje argument typu **int** jest ukryta, a pierwsze wywołanie `func` wystąpił błąd.
+Poprzedni kod pokazuje dwie definicje funkcji `func`. Definicja, która przyjmuje argument typu `char *`, jest lokalna dla `main` z powodu instrukcji **extern** . W związku z tym definicja, która przyjmuje argument typu **int** , jest ukryta, a pierwsze wywołanie `func` jest błędne.
 
 Dla przeciążonych funkcji członkowskich, różne wersje funkcji mogą mieć różne przywileje dostępu. Ale nadal uważa się, że znajdują się w zakresie otaczającym klasę, a więc są funkcjami przeciążonymi. Rozważmy poniższy kod, w którym funkcja członkowska `Deposit` jest przeciążona; jedna wersja jest publiczna, inne są prywatne.
 
-Zamiarem tego przykładu jest dostarczenie klasy `Account`, w której wymagane jest poprawne hasło, aby wykonać depozyty. Odbywa się za pomocą przeciążenia.
+Zamiarem tego przykładu jest dostarczenie klasy `Account`, w której wymagane jest poprawne hasło, aby wykonać depozyty. Jest to wykonywane przy użyciu przeciążenia.
 
-Wywołanie `Deposit` w `Account::Deposit` wywołuje prywatne funkcje Członkowskie. To wywołanie jest poprawne ponieważ `Account::Deposit` jest funkcją składową, a ma dostęp do prywatnych składowych klasy.
+Wywołanie `Deposit` w `Account::Deposit` wywołuje prywatną funkcję członkowską. To wywołanie jest poprawne, ponieważ `Account::Deposit` jest funkcją członkowską i ma dostęp do prywatnych składowych klasy.
 
 ```cpp
 // declaration_matching2.cpp
@@ -569,6 +569,6 @@ double Account::Deposit( double dAmount, char *szPassword )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje (C++)](../cpp/functions-cpp.md)

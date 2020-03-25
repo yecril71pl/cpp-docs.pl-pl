@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441036"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211110"
 ---
 # <a name="cutlprops-class"></a>CUtlProps — Klasa
 
@@ -56,7 +56,7 @@ Klasa, która zawiera `BEGIN_PROPSET_MAP`.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metody
 
@@ -76,7 +76,7 @@ Większość tej klasy jest szczegółami implementacji.
 
 Aby uzyskać więcej informacji na temat makr używanych na mapie zestawu właściwości, zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) i [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
 Pobiera właściwość z zestawu właściwości.
 
@@ -103,7 +103,7 @@ określoną Wskaźnik do wariantu, który zawiera nową wartość właściwości
 
 `Failure` w przypadku awarii i S_OK, jeśli się to powiedzie.
 
-## <a name="isvalidvalue"></a>CUtlProps:: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
 Służy do sprawdzania poprawności wartości przed ustawieniem właściwości.
 
@@ -130,7 +130,7 @@ Standardowa wartość HRESULT. Domyślną wartością zwracaną jest S_OK.
 
 Jeśli masz jakiekolwiek procedury walidacji, które chcesz uruchomić na wartości, która ma zostać użyta do ustawienia właściwości, należy zastąpić tę funkcję. Na przykład można sprawdzić poprawność DBPROP_AUTH_PASSWORD względem tabeli haseł, aby określić prawidłową wartość.
 
-## <a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
 Obsługuje żądania dla opcjonalnego interfejsu, gdy odbiorca wywołuje metodę na jednym z interfejsów tworzenia obiektów.
 
@@ -165,7 +165,7 @@ Jeśli odbiorca otworzy obiekt i zażąda opcjonalnego interfejsu, dostawca powi
 
 Jeśli chcesz obsłużyć inne interfejsy, Przesłoń tę funkcję w klasie źródła danych, sesji, polecenia lub zestawu wierszy, aby przetwarzać funkcje. Przesłonięcie powinno przekroczyć normalne interfejsy zestawu/pobierania właściwości, aby upewnić się, że właściwości ustawienia również ustawiają wszystkie właściwości łańcucha (zobacz [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
 
 Wywołuje się po ustawieniu właściwości w celu obsługi właściwości łańcucha.
 
@@ -198,7 +198,7 @@ W tej funkcji użytkownik pobiera identyfikator właściwości z parametru `DBPR
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
 Ustawia właściwość w zestawie właściwości.
 

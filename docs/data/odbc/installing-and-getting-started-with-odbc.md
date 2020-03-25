@@ -5,23 +5,23 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e4c9bc1e4ba418ec588e054654e544b6fd3e239
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213186"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalowanie ODBC i wprowadzenie do ODBC
 
-Poniższe tematy pomocy w przypadku zainstalowania składników, które są potrzebne do rozpoczęcia pracy z Open Database Connectivity (ODBC).
+W poniższych tematach znajdują się informacje ułatwiające zainstalowanie składników, które należy wykonać, aby rozpocząć pracę z usługą Open Database Connectivity (ODBC).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Instalowanie sterowników ODBC, które są dostarczane z programem Visual C++](../../data/odbc/odbc-administrator.md)
+- [Zainstaluj sterowniki ODBC dostarczane z wizualizacjąC++](../../data/odbc/odbc-administrator.md)
 
-- [Ponowna dystrybucja składników ODBC wśród klientów](../../data/odbc/odbc-basics.md)
+- [Ponowne dystrybuowanie składników ODBC do klientów](../../data/odbc/odbc-basics.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

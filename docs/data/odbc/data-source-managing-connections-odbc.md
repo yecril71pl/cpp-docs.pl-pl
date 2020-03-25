@@ -1,5 +1,5 @@
 ---
-title: 'Źródło danych: Zarządzanie połączeniami (ODBC)'
+title: 'Źródło danych: zarządzanie połączeniami (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,71 +18,71 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6186199ea51c1fc966783ed3c0a73496c6a307ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213299"
 ---
-# <a name="data-source-managing-connections-odbc"></a>Źródło danych: Zarządzanie połączeniami (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>Źródło danych: zarządzanie połączeniami (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie opisano:
+W tym temacie objaśniono:
 
 - [Jak skonfigurować źródło danych](#_core_configuring_a_data_source).
 
-- [Wpływ środowiska z wieloma użytkownikami na źródło danych i jego zestawy rekordów](#_core_working_in_a_multiuser_environment).
+- [Jak środowisko wieloużytkownikowe ma wpływ na źródło danych i jego zestawy rekordów](#_core_working_in_a_multiuser_environment).
 
-- [Dlaczego uogólniać ciąg połączenia ze źródłem danych](#_core_generalizing_the_connection_string).
+- [Dlaczego można uogólnić parametry połączenia do źródła danych](#_core_generalizing_the_connection_string).
 
-- [Jak połączyć się ze źródłem danych](#_core_connecting_to_a_specific_data_source).
+- [Jak nawiązać połączenie ze źródłem danych](#_core_connecting_to_a_specific_data_source).
 
-- [Jak odłączyć źródło danych](#_core_disconnecting_from_a_data_source).
+- [Jak rozłączyć się ze źródłem danych](#_core_disconnecting_from_a_data_source).
 
 - [Jak ponownie użyć obiektu CDatabase](#_core_reusing_a_cdatabase_object).
 
-Łączenie ze źródłem danych oznacza ustanowienie komunikacji z systemem DBMS dostępu do danych. Po nawiązaniu połączenia ze źródłem danych z aplikacji przez sterownik ODBC, sterownik wykonuje połączenie, lokalnie lub w sieci.
+Połączenie ze źródłem danych oznacza ustanowienie komunikacji z systemem DBMS w celu uzyskania dostępu do danych. Po nawiązaniu połączenia ze źródłem danych z aplikacji za pośrednictwem sterownika ODBC sterownik nawiązuje połączenie przez użytkownika lokalnie lub przez sieć.
 
-Możesz połączyć do żadnego źródła danych, do której masz sterownika ODBC. Użytkownicy twojej aplikacji również musi mieć ten sam sterownik ODBC dla swojego źródła danych. Aby uzyskać więcej informacji dotyczących redystrybucji sterowników ODBC, zobacz [Redystrybucja składników ODBC do klientów](../../data/odbc/redistributing-odbc-components-to-your-customers.md).
+Możesz połączyć się z dowolnym źródłem danych, dla którego masz sterownik ODBC. Użytkownicy aplikacji muszą także mieć ten sam sterownik ODBC dla źródła danych. Aby uzyskać więcej informacji na temat redystrybucji sterowników ODBC, zobacz [Redystrybuowanie składników ODBC do klientów](../../data/odbc/redistributing-odbc-components-to-your-customers.md).
 
-##  <a name="_core_configuring_a_data_source"></a> Konfigurowanie źródła danych
+##  <a name="configuring-a-data-source"></a><a name="_core_configuring_a_data_source"></a>Konfigurowanie źródła danych
 
-ODBC Administrator jest używany do konfigurowania źródeł danych. Umożliwia także Administratora ODBC po instalacji można dodać lub usunąć źródła danych. Podczas tworzenia aplikacji, możesz skierować użytkowników do administratora ODBC i pozwolić im na dodawanie źródeł danych, lub możesz kompilować tę funkcję w aplikacji przez wykonanie bezpośrednich wywołań instalacji ODBC. Aby uzyskać więcej informacji, zobacz [Administratora ODBC](../../data/odbc/odbc-administrator.md).
+Administrator ODBC służy do konfigurowania źródeł danych. Możesz również użyć administratora ODBC po instalacji, aby dodać lub usunąć źródła danych. Podczas tworzenia aplikacji można skierować użytkowników do administratora ODBC, aby zezwolić im na Dodawanie źródeł danych, lub można utworzyć tę funkcję w aplikacji, wykonując bezpośrednie wywołania instalacji ODBC. Aby uzyskać więcej informacji, zobacz [administrator ODBC](../../data/odbc/odbc-administrator.md).
 
-Przy użyciu pliku programu Excel jako źródła danych i należy skonfigurować plik, który jest zarejestrowany i zostanie wyświetlony w **wybierz źródło danych** okno dialogowe.
+Możesz użyć pliku programu Excel jako źródła danych i skonfigurować go tak, aby był zarejestrowany i wyświetlany w oknie dialogowym **Wybierz źródło danych** .
 
-#### <a name="to-use-an-excel-file-as-a-data-source"></a>Aby skorzystać z pliku programu Excel jako źródła danych
+#### <a name="to-use-an-excel-file-as-a-data-source"></a>Aby użyć pliku programu Excel jako źródła danych
 
-1. Skonfiguruj plik z Administratora źródeł danych ODBC.
+1. Skonfiguruj plik za pomocą administratora źródła danych ODBC.
 
-1. Na **plikową nazwę DSN** kliknij pozycję **Dodaj**.
+1. Na karcie Plikowe **DSN** kliknij przycisk **Dodaj**.
 
-1. W **Utwórz nowe źródło danych** okno dialogowe, wybierz sterownik programu Excel, a następnie kliknij przycisk **dalej**.
+1. W oknie dialogowym **Utwórz nowe źródło danych** wybierz sterownik programu Excel, a następnie kliknij przycisk **dalej**.
 
-1. Kliknij przycisk **Przeglądaj**i wybierz nazwę pliku, który ma być używany jako źródło daty.
+1. Kliknij przycisk **Przeglądaj**i wybierz nazwę pliku, który ma być używany jako źródło danych.
 
 > [!NOTE]
->  Może być konieczne wybranie **wszystkie pliki** w menu rozwijanego, aby wyświetlić pliki z rozszerzeniem .xls.
+>  Może być konieczne wybranie **wszystkich plików** z menu rozwijanego, aby wyświetlić pliki. xls.
 
 1. Kliknij przycisk **dalej**, a następnie kliknij przycisk **Zakończ**.
 
-1. W **ODBC — ustawienia dla programu Microsoft Excel** okna dialogowego Wybierz wersję bazy danych i skoroszyt.
+1. W oknie dialogowym **ODBC — Instalator programu Microsoft Excel** wybierz wersję bazy danych i skoroszyt.
 
-##  <a name="_core_working_in_a_multiuser_environment"></a> Praca w środowisku wielu użytkowników
+##  <a name="working-in-a-multiuser-environment"></a><a name="_core_working_in_a_multiuser_environment"></a>Praca w środowisku wielodostępnym
 
-Jeśli wielu użytkowników jest połączonych ze źródłem danych, mogą zmieniać dane, podczas gdy Ty manipulujesz w zestawach rekordów. Podobnie zmiany mogą mieć wpływ na zestawy rekordów innych użytkowników. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).
+Jeśli wielu użytkowników jest podłączonych do źródła danych, można zmienić dane podczas manipulowania nimi w zestawach rekordów. Podobnie zmiany mogą wpływać na zestawy rekordów innych użytkowników. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [transakcję (ODBC)](../../data/odbc/transaction-odbc.md).
 
-##  <a name="_core_generalizing_the_connection_string"></a> Uogólnianie parametrów połączenia
+##  <a name="generalizing-the-connection-string"></a><a name="_core_generalizing_the_connection_string"></a>Uogólnianie parametrów połączenia
 
-Kreatory korzystają z domyślnego ciągu połączeń do ustanowienia połączenia ze źródłem danych. To połączenie umożliwia wyświetlanie tabel i kolumn podczas programowania Twojej aplikacji. Jednak te domyślne parametry połączenia mogą nie być właściwe dla połączeń użytkowników ze źródłem danych w Twojej aplikacji. Na przykład ich źródła danych i ścieżka do lokalizacji może być inny niż ten używany do tworzenia aplikacji. W takim przypadku należy ponownie [CRecordset::GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) element członkowski funkcji w sposób bardziej ogólny i odrzucić implementację kreatora. Na przykład użyj jednej z następujących metod:
+Kreatory używają domyślnych parametrów połączenia w celu nawiązania połączenia ze źródłem danych. To połączenie służy do wyświetlania tabel i kolumn podczas tworzenia aplikacji. Jednak te domyślne parametry połączenia mogą nie być odpowiednie dla połączeń użytkowników ze źródłem danych za pomocą aplikacji. Na przykład ich źródło danych i ścieżka do jej lokalizacji mogą być inne niż używane podczas tworzenia aplikacji. W takim przypadku należy wielokrotnie wdrożyć funkcję członkowską [CRecordset:: GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) w bardziej ogólny sposób i odrzucić implementację kreatora. Można na przykład użyć jednej z następujących metod:
 
-- Zarejestruj i Zarządzaj ciągami połączeń przy użyciu Administratora ODBC.
+- Zarejestruj parametry połączenia i zarządzaj nimi za pomocą administratora ODBC.
 
-- Edytuj parametry połączenia i Usuń nazwę źródła danych. Struktura dostarcza ODBC jako źródła danych; w czasie wykonywania ODBC wyświetla okno dialogowe z pytaniem, czy informacje o nazwie i inne wymagane połączenia w źródle danych.
+- Edytuj parametry połączenia i Usuń nazwę źródła danych. Platforma dostarcza ODBC jako źródło danych; w czasie wykonywania, ODBC wyświetla okno dialogowe z monitem o podanie nazwy źródła danych i innych wymaganych informacji o połączeniu.
 
-- Podaj tylko nazwę źródła danych. ODBC prosi o identyfikator użytkownika i hasło, jeśli jest to wymagane. Na przykład przed uogólnieniem parametry połączenia wyglądają następująco:
+- Podaj tylko nazwę źródła danych. ODBC żąda identyfikatora użytkownika i hasła, jeśli jest to wymagane. Na przykład przed generalizacją parametry połączenia wyglądają następująco:
 
     ```cpp
     CString CApp1Set::GetDefaultConnect()
@@ -91,7 +91,7 @@ Kreatory korzystają z domyślnego ciągu połączeń do ustanowienia połączen
     }
     ```
 
-   Ten ciąg połączeń określa zaufane połączenie, które korzysta z systemu Windows NT zintegrowanych zabezpieczeń. Nie należy kodować hasła lub określania pustego hasła, ponieważ w ten sposób tworzy do osłabienia zabezpieczeń głównych. Zamiast tego możesz nadać `GetDefaultConnect` nowe parametry połączenia, aby wysyła zapytanie o nazwę użytkownika i hasło.
+   Te parametry połączenia określają zaufane połączenie, które używa zintegrowanych zabezpieczeń systemu Windows NT. Należy unikać kodowania hasła lub określania pustego hasła, ponieważ powoduje to utworzenie głównej słabego poziomu zabezpieczeń. Zamiast tego można nadać `GetDefaultConnect` nowe parametry połączenia tak, aby wysyłali zapytanie o identyfikator użytkownika i hasło.
 
     ```cpp
     // User must select data source and supply user ID and password:
@@ -104,39 +104,39 @@ Kreatory korzystają z domyślnego ciągu połączeń do ustanowienia połączen
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";
     ```
 
-##  <a name="_core_connecting_to_a_specific_data_source"></a> Nawiązywanie połączenia z określonym źródłem danych
+##  <a name="connecting-to-a-specific-data-source"></a><a name="_core_connecting_to_a_specific_data_source"></a>Łączenie z określonym źródłem danych
 
-Aby połączyć się z określonym źródłem danych, źródła danych musi być już skonfigurowane za pomocą [Administratora ODBC](../../data/odbc/odbc-administrator.md).
+Aby można było połączyć się z określonym źródłem danych, źródło danych musi już być skonfigurowane za pomocą [administratora ODBC](../../data/odbc/odbc-administrator.md).
 
 #### <a name="to-connect-to-a-specific-data-source"></a>Aby nawiązać połączenie z określonym źródłem danych
 
-1. Konstruowania `CDatabase` obiektu.
+1. Konstruowanie obiektu `CDatabase`.
 
-1. Wywoływanie jej `OpenEx` lub `Open` funkcja elementu członkowskiego.
+1. Wywołaj swoją `OpenEx` lub `Open` funkcję członkowską.
 
-Aby uzyskać więcej informacji na temat sposobu określania źródła danych, jeśli jest coś innego niż ten, który został określony za pomocą kreatora, zobacz [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) lub [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) w *MFC Odwołanie*.
+Aby uzyskać więcej informacji na temat sposobu określania źródła danych, jeśli jest coś innego niż określone za pomocą kreatora, zobacz [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) lub [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) w *odwołaniu MFC*.
 
-##  <a name="_core_disconnecting_from_a_data_source"></a> Odłączanie od źródła danych
+##  <a name="disconnecting-from-a-data-source"></a><a name="_core_disconnecting_from_a_data_source"></a>Odłączanie od źródła danych
 
-Należy zamknąć otwarty zestaw rekordów przed wywołaniem `Close` funkcji składowej typu `CDatabase`. W zestawie rekordów skojarzonych z `CDatabase` obiekt ma zostać zamknięty, wszelkie toczące `AddNew` lub `Edit` instrukcje są anulowane, a wszystkie oczekujące transakcje są wycofywane.
+Przed wywołaniem `Close` funkcji składowej `CDatabase`należy zamknąć wszystkie otwarte zestawy rekordów. W zestawach rekordów skojarzonych z obiektem `CDatabase`, które mają zostać zamknięte, wszystkie oczekujące instrukcje `AddNew` lub `Edit` są anulowane i wszystkie oczekujące transakcje zostaną wycofane.
 
-#### <a name="to-disconnect-from-a-data-source"></a>Aby odłączyć od źródła danych
+#### <a name="to-disconnect-from-a-data-source"></a>Aby rozłączyć się ze źródłem danych
 
-1. Wywołaj `CDatabase` obiektu [Zamknij](../../mfc/reference/cdatabase-class.md#close) funkcja elementu członkowskiego.
+1. Wywołaj funkcję [zamykania](../../mfc/reference/cdatabase-class.md#close) elementu członkowskiego obiektu `CDatabase`.
 
-1. Zniszcz obiekt, chyba że chcesz użyć go ponownie.
+1. Zniszcz obiekt, chyba że chcesz go ponownie użyć.
 
-##  <a name="_core_reusing_a_cdatabase_object"></a> Ponowne używanie obiektu CDatabase
+##  <a name="reusing-a-cdatabase-object"></a><a name="_core_reusing_a_cdatabase_object"></a>Używanie obiektu CDatabase
 
-Można użyć ponownie `CDatabase` obiektu po odłączeniu od niego, czy są używane do ponownego połączenia z tym samym źródłem danych lub połączyć się z innym źródłem danych.
+Można ponownie użyć `CDatabase` obiektu po odłączeniu od niego, niezależnie od tego, czy jest on używany do ponownego połączenia z tym samym źródłem danych, czy do łączenia się z innym źródłem danych.
 
 #### <a name="to-reuse-a-cdatabase-object"></a>Aby ponownie użyć obiektu CDatabase
 
-1. Zamknij połączenie oryginalnego obiektu.
+1. Zamknij oryginalne połączenie obiektu.
 
-1. Zamiast zniszczenia obiektu, wywołaj jej `OpenEx` lub `Open` ponownie funkcja elementu członkowskiego.
+1. Zamiast zniszczyć obiekt, wywołaj ponownie `OpenEx` lub `Open` funkcji członkowskiej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [Źródło danych: określanie schematu źródła danych (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>

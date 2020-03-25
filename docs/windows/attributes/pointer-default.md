@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166539"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -30,7 +30,7 @@ Wartość opisująca typ wskaźnika: **PTR**, **ref**lub **Unique**.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **pointer_default** C++ ma takie same funkcje jak atrybut [pointer_default](/windows/win32/Midl/pointer-default) MIDL.
+Atrybut **pointer_default** C++ ma taką samą funkcjonalność jak atrybut [pointer_default](/windows/win32/Midl/pointer-default) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -44,12 +44,12 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) dla przykładowego
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)

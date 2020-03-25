@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165902"
 ---
 # <a name="compiler-error-c3733"></a>Błąd kompilatora C3733
 
-"event": Niewłaściwa składnia określająca zdarzenie COM; Czy pamiętasz o "__interface"?
+"Event": Niewłaściwa składnia określająca zdarzenie COM; Czy pamiętasz "__interface"?
 
-Zdarzenia COM użyto nieprawidłowej składni. Aby naprawić ten błąd, Zmień typ zdarzenia lub popraw składnię są zgodne z regułami zdarzeń COM.
+Użyto nieprawidłowej składni dla zdarzenia COM. Aby naprawić ten błąd, Zmień typ zdarzenia lub Popraw składnię, aby zachować zgodność z regułami zdarzeń modelu COM.
 
-Poniższy przykład spowoduje wygenerowanie C3733:
+Poniższy przykład generuje C3733:
 
 ```
 #define _ATL_ATTRIBUTES 1

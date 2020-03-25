@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514517"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214815"
 ---
 # <a name="last_is"></a>last_is
 
@@ -25,12 +25,12 @@ Określa indeks ostatniego elementu tablicy, który ma zostać przesłany.
 
 ### <a name="parameters"></a>Parametry
 
-*expression*<br/>
+*wyrażenia*<br/>
 Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **last_is** C++ ma takie same funkcje jak atrybut [last_is](/windows/win32/Midl/last-is) MIDL.
+Atrybut **last_is** C++ ma taką samą funkcjonalność jak atrybut [last_is](/windows/win32/Midl/last-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -44,12 +44,12 @@ Zobacz [first_is](first-is.md) , aby zapoznać się z przykładem, jak określi�
 |-|-|
 |**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Brak|
-|**Nieprawidłowe atrybuty**|Brak|
+|**Wymagane atrybuty**|None|
+|**Nieprawidłowe atrybuty**|None|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177628"
 ---
 # <a name="primary-expressions"></a>Wyrażenia podstawowe
 
-Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń. Są literały, nazwy i nazwy kwalifikowane przez operator rozpoznawania zakresu (`::`).  Wyrażenie podstawowe może mieć jedną z następujących form:
+Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń. Są to literały, nazwy i nazwy kwalifikowane przez operator rozpoznawania zakresu (`::`).  Wyrażenie podstawowe może mieć jedną z następujących form:
 
 ```
 literal
@@ -26,11 +26,11 @@ name
 ::name ( expression )
 ```
 
-A *literału* jest podstawowym wyrażeniem stałym. Jego typ zależy od postaci jego specyfikacji. Zobacz [literały](../cpp/numeric-boolean-and-pointer-literals-cpp.md) Aby uzyskać pełne informacje na temat określania literałów.
+*Literał* jest stałym wyrażeniem podstawowym. Jego typ zależy od postaci jego specyfikacji. Aby uzyskać pełne informacje na temat określania literałów, zobacz [literały](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-**To** — słowo kluczowe jest wskaźnikiem do obiektu klasy. Jest on dostępny w ramach niestatycznych funkcji składowych i wskazuje na wystąpienie klasy, dla której wywołano funkcję. **To** — słowo kluczowe nie można użyć poza ciałem funkcji składowej klasy.
+**To** słowo kluczowe jest wskaźnikiem do obiektu klasy. Jest on dostępny w ramach niestatycznych funkcji składowych i wskazuje na wystąpienie klasy, dla której wywołano funkcję. Nie można użyć słowa kluczowego **this** poza treścią funkcji składowej klasy.
 
-Typ **to** wskaźnik jest `type`  **\*const** (gdzie `type` jest nazwą klasy) w obrębie funkcji, które nie modyfikują szczególnie **to** wskaźnika. W poniższym przykładzie pokazano element członkowski w deklaracji funkcji i typów **to**:
+Typ wskaźnika **to** `type` **\*const** (gdzie `type` jest nazwą klasy) w funkcjach, które nie modyfikują przede wszystkim **tego** wskaźnika. Poniższy przykład przedstawia deklaracje funkcji składowych i **typy:**
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-Zobacz [this, wskaźnik](this-pointer.md) uzyskać więcej informacji o modyfikowaniu typu **to** wskaźnika.
+Zobacz [ten wskaźnik](this-pointer.md) , aby uzyskać więcej **informacji na temat modyfikowania typu wskaźnika.**
 
-Operator rozpoznawania zakresu (`::`) następuje nazwa, stanowi wyrażenie podstawowe.  Nazwy te muszą być nazwami w zakresie globalnym, a nie nazwami elementów członkowskich.  Typ tego wyrażenia zależy od deklaracji nazwy. Jest to wartość l (to znaczy, że może być wyświetlany na lewej stronie wyrażenia operatora przypisania), jeśli nazwa deklarująca to wartość l. Operator rozpoznawania zakresu umożliwia odwoływanie się do globalnej nazwy, nawet jeśli ta nazwa jest ukryta w bieżącym zakresie. Zobacz [zakres](../cpp/scope-visual-cpp.md) przykład sposobu użycia operatora rozpoznawania zakresu.
+Operator rozpoznawania zakresu (`::`), po którym następuje nazwa, stanowi wyrażenie podstawowe.  Nazwy te muszą być nazwami w zakresie globalnym, a nie nazwami elementów członkowskich.  Typ tego wyrażenia zależy od deklaracji nazwy. Jest to wartość l (to znaczy, że może być wyświetlany na lewej stronie wyrażenia operatora przypisania), jeśli nazwa deklarująca to wartość l. Operator rozpoznawania zakresu umożliwia odwoływanie się do globalnej nazwy, nawet jeśli ta nazwa jest ukryta w bieżącym zakresie. Zobacz [zakres](../cpp/scope-visual-cpp.md) , aby zapoznać się z przykładem użycia operatora rozpoznawania zakresu.
 
 Wyrażenie w nawiasach jest wyrażeniem podstawowym, którego typ i wartość są identyczne jak wyrażenia bez nawiasów. Jest to wartość l, jeśli wyrażenie bez nawiasów jest wartością l.
 
@@ -62,7 +62,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-Poniższe przykłady są wszystkie uważane za *nazwy*, a więc wyrażenia podstawowe, w różnych formach:
+Poniższe przykłady są uznawane za *nazwy*, a więc wyrażenia podstawowe w różnych formach:
 
 ```cpp
 MyClass // a identifier
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy wyrażeń](../cpp/types-of-expressions.md)

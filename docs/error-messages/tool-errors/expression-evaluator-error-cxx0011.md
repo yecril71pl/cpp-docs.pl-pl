@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196160"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Błąd CXX0011 programu Expression Evaluator
 
-Brak prawy nawias kwadratowy
+Brak prawego nawiasu klamrowego
 
-Wyrażenie zawiera niezrównoważone nawiasami kwadratowymi. Wpisz ponownie wyrażenia w nawiasy kwadratowe o zrównoważonym obciążeniu.
+Wyrażenie zawiera niezrównoważone nawiasy kwadratowe. Wpisz ponownie wyrażenie z wyrównanymi nawiasami kwadratowymi.
 
-Ten błąd jest taka sama jak CAN0011.
+Ten błąd jest identyczny z CAN0011.
