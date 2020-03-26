@@ -30,43 +30,43 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168802"
 ---
 # <a name="c-assignment-operators"></a>Operatory przypisania w języku C
 
-Operacja przypisania przypisuje wartość operandu po prawej stronie do lokalizacji magazynu o nazwie określonej przez argument po lewej stronie. Dlatego lewostronny operand operatora przypisania musi być modyfikowalną l wartością. Po przypisaniu wyrażenia przypisania ma wartość lewy operand, ale nie jest l wartością.
+Operacja przypisania przypisuje wartość operandu po prawej stronie do lokalizacji magazynu o nazwie przez operand z lewej strony. W związku z tym, operand z lewej strony operacji przypisania musi być modyfikowalną wartością l. Po przypisaniu wyrażenie przypisania ma wartość lewego operandu, ale nie jest l-wartością.
 
 ## <a name="syntax"></a>Składnia
 
 *assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*warunkowe wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie* *wyrażenia jednoargumentowego* - *operator* przypisania
 
-*operator przypisania*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+*przypisanie — operator*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
-Operatory przypisania w języku C może przekształcić i przypisywanie wartości w ramach jednej operacji. C, oferuje następujące operatory przypisania:
+Operatory przypisania w języku C mogą przetwarzać i przypisywać wartości w jednej operacji. C udostępnia następujące operatory przypisania:
 
-|Operator|Operacja wykonywana|
+|Operator|Wykonano operację|
 |--------------|-------------------------|
 |**=**|Przypisanie proste|
 |**&#42;=**|Mnożenie i przypisanie|
 |**/=**|Dzielenie i przypisanie|
-|**%=**|Resztę przypisania|
+|**%=**|Przypisanie reszty|
 |**+=**|Dodawanie i przypisanie|
 |**-=**|Odejmowanie i przypisanie|
 |**<\<=**|Przesunięcie bitowe w lewo i przypisanie|
 |**>>=**|Przesunięcie bitowe w prawo i przypisanie|
-|**&=**|Bitowe OR- i przypisanie|
-|**^=**|Bitowe OR wyłączne przypisania|
-|**&#124;=**|Przypisanie włącznie — Alternatywy bitowej|
+|**&=**|Przypisanie bitowe i|
+|**^=**|Przypisanie bitowe i wyłączne|
+|**&#124;=**|Bitowe lub przydzielenie|
 
-W przypisaniu typ wartości po prawej stronie jest konwertowany na typ wartości po lewej stronie, a wartość jest przechowywana w lewy argument operacji po przeprowadzeniu przypisania. Lewy operand nie może być tablica, funkcji lub stałą. Ścieżki określonej konwersji, która jest zależna od dwóch typów, jest opisane szczegółowo w temacie [konwersje typów](../c-language/type-conversions-c.md).
+W obszarze przypisanie typ wartości po prawej stronie jest konwertowany na typ wartości po lewej stronie, a wartość jest przechowywana w lewym operandzie po przypisaniu. Lewy argument operacji nie może być tablicą, funkcją ani stałą. Określona ścieżka konwersji, która zależy od dwóch typów, została szczegółowo zakreślona w [konwersji typów](../c-language/type-conversions-c.md).
 
 ## <a name="see-also"></a>Zobacz także
 

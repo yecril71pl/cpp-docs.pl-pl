@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416922"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150792"
 ---
 # <a name="basic_istream-class"></a>basic_istream — Klasa
 
@@ -131,7 +131,7 @@ Obiekt klasy `basic_istream<Char_T, Tr>` magazynów:
 
 Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifstream-class.md) , aby dowiedzieć się więcej o strumieniach wejściowych.
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
@@ -151,8 +151,8 @@ Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifs
 |[readsome](#readsome)|Odczytaj tylko z bufora.|
 |[seekg](#seekg)|Przenosi pozycję odczytu w strumieniu.|
 |[WartownikDźwięków](#sentry)|Klasa zagnieżdżona opisuje obiekt, którego struktura deklaracji ma sformatowane funkcje wejściowe i niesformatowane funkcje wejściowe.|
-|[wymiany](#swap)|Wymienia ten obiekt `basic_istream` dla podanego parametru `basic_istream` obiektu.|
-|[synchronizacji](#sync)|Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumienia.|
+|[swap](#swap)|Wymienia ten obiekt `basic_istream` dla podanego parametru `basic_istream` obiektu.|
+|[sync](#sync)|Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumienia.|
 |[tellg](#tellg)|Raportuje bieżącą pozycję odczytu w strumieniu.|
 |[unget](#unget)|Umieszcza ostatnio odczytywany znak z powrotem do strumienia.|
 
@@ -160,8 +160,8 @@ Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifs
 
 |Operator|Opis|
 |-|-|
-|[> operatora >](#op_gt_gt)|Wywołuje funkcję w strumieniu wejściowym lub odczytuje sformatowane dane ze strumienia wejściowego.|
-|[operator =](#op_eq)|Przypisuje `basic_istream` po prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia obejmujące `rvalue` odwołanie, które nie pozostawia kopii w tle.|
+|[operator>>](#op_gt_gt)|Wywołuje funkcję w strumieniu wejściowym lub odczytuje sformatowane dane ze strumienia wejściowego.|
+|[operator=](#op_eq)|Przypisuje `basic_istream` po prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia obejmujące `rvalue` odwołanie, które nie pozostawia kopii w tle.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -169,7 +169,7 @@ Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifs
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_istream"></a>basic_istream:: basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>basic_istream:: basic_istream
 
 Konstruuje obiekt typu `basic_istream`.
 
@@ -202,7 +202,7 @@ Drugi Konstruktor inicjuje klasę bazową, wywołując `move(right)`. Przechowuj
 
 Zapoznaj się z przykładem [basic_ifstream:: basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) , aby dowiedzieć się więcej o strumieniach wejściowych.
 
-## <a name="gcount"></a>basic_istream:: gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>basic_istream:: gcount
 
 Zwraca liczbę znaków odczytywanych podczas ostatniego niesformatowanych danych wejściowych.
 
@@ -210,7 +210,7 @@ Zwraca liczbę znaków odczytywanych podczas ostatniego niesformatowanych danych
 streamsize gcount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba wyodrębniania.
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>basic_istream:: Get
+## <a name="basic_istreamget"></a><a name="get"></a>basic_istream:: Get
 
 Odczytuje jeden lub więcej znaków ze strumienia wejściowego.
 
@@ -281,7 +281,7 @@ Znak do pobrania.
 *strbuf*\
 Bufor, który ma zostać zapisany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Forma get bez parametrów zwraca element odczytaną jako liczbę całkowitą lub koniec pliku. Pozostałe formularze zwracają strumień (* `this`).
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>basic_istream:: getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>basic_istream:: getline
 
 Pobiera wiersz ze strumienia wejściowego.
 
@@ -358,7 +358,7 @@ Znak, który powinien przerwać odczyt, jeśli został napotkany przed *liczbą*
 *str*\
 Ciąg, w którym ma zostać zapisany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>basic_istream:: ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>basic_istream:: ignore
 
 Powoduje pominięcie wielu elementów z bieżącej pozycji odczytu.
 
@@ -415,7 +415,7 @@ Liczba elementów do pominięcia z bieżącej pozycji odczytu.
 \ *ogranicznika*
 Element, który, jeśli napotka przed Count, powoduje, że `ignore` zwracać i dopuszcza wszystkie elementy po odczytaniu *ogranicznika* .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>Basic\_IStream:: operator > >
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>Basic\_IStream:: operator > >
 
 Wywołuje funkcję w strumieniu wejściowym lub odczytuje sformatowane dane ze strumienia wejściowego.
 
@@ -480,7 +480,7 @@ Obiekt typu `stream_buf`.
 *val*\
 Wartość, która ma zostać odczytana ze strumienia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>basic_istream:: operator =
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>basic_istream:: operator =
 
 Przypisuje `basic_istream` po prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia obejmujące `rvalue` odwołanie, które nie pozostawia kopii w tle.
 
@@ -587,7 +587,7 @@ basic_istream& operator=(basic_istream&& right);
 *prawa*\
 Odwołanie `rvalue` do obiektu `basic_ifstream`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca __* this__.
 
@@ -595,7 +595,7 @@ Zwraca __* this__.
 
 Operator elementu członkowskiego wywołuje `swap(right)`.
 
-## <a name="peek"></a>basic_istream::p EEK
+## <a name="basic_istreampeek"></a><a name="peek"></a>basic_istream::p EEK
 
 Zwraca następny znak, który ma zostać odczytany.
 
@@ -603,7 +603,7 @@ Zwraca następny znak, który ma zostać odczytany.
 int_type peek();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Następny znak, który zostanie odczytany.
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>basic_istream::p utback
+## <a name="basic_istreamputback"></a><a name="putback"></a>basic_istream::p utback
 
 Umieszcza określony znak w strumieniu.
 
@@ -654,7 +654,7 @@ basic_istream<Char_T, Tr>& putback(
 *Ch*\
 Znak, który ma zostać przywrócony do strumienia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>basic_istream:: Read
+## <a name="basic_istreamread"></a><a name="read"></a>basic_istream:: Read
 
 Odczytuje określoną liczbę znaków ze strumienia i zapisuje je w tablicy.
 
@@ -706,7 +706,7 @@ Tablica, w której mają zostać odczytane znaki.
 *liczba*\
 Liczba znaków do odczytania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień (`*this`).
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>basic_istream:: readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>basic_istream:: readsome
 
 Odczytuje określoną liczbę wartości znakowych.
 
@@ -767,7 +767,7 @@ Tablica, w której `readsome` są przechowywane znaki odczytywane przez program.
 *liczba*\
 Liczba znaków do odczytania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba znaków faktycznie odczytywanych, [`gcount`](#gcount).
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>basic_istream:: seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>basic_istream:: seekg
 
 Przenosi pozycję odczytu w strumieniu.
 
@@ -827,7 +827,7 @@ Przesunięcie, aby przenieść wskaźnik odczytu względem *metody*.
 *sposób*\
 Jeden z [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerations.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -838,7 +838,7 @@ Pierwsza funkcja członkowska wykonuje jednokrotne wyszukiwanie, druga funkcja c
 > [!NOTE]
 > Nie należy używać drugiej funkcji składowej z plikami tekstowymi, ponieważ C++ Standard nie obsługuje wyszukiwania względnego w plikach tekstowych.
 
-Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość false, Pierwsza funkcja elementu członkowskiego wywołuje `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, dla niektórych `pos_type` tymczasowy obiekt `newpos`. Jeśli `fail` ma wartość false, druga funkcja wywołuje `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. W obu przypadkach, jeśli `(off_type)newpos == (off_type)(-1)` (operacja pozycjonowania zakończy się niepowodzeniem), funkcja wywołuje `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Obie funkcje zwracają __* this__.
+Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość false, Pierwsza funkcja elementu członkowskiego wywołuje `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, dla niektórych `pos_type` tymczasowy obiekt `newpos`. Jeśli `fail` ma wartość false, druga funkcja wywołuje `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. W obu przypadkach, jeśli `(off_type)newpos == (off_type)(-1)` (operacja pozycjonowania zakończy się niepowodzeniem), funkcja wywołuje `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Obie funkcje zwracają __* this__.
 
 Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość true, funkcje składowe nic nie rób.
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>basic_istream:: Sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>basic_istream:: Sentry
 
 Klasa zagnieżdżona opisuje obiekt, którego struktura deklaracji ma sformatowane i niesformatowane funkcje wejściowe.
 
@@ -883,11 +883,11 @@ Jeśli `_Istr.`[`good`](../standard-library/basic-ios-class.md#good) ma wartoś�
 
 - Wywołuje `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) , jeśli `_Istr.tie` nie jest pustym wskaźnikiem.
 
-- Skutecznie wywołuje [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`, jeśli [](../standard-library/ios-base-class.md#flags) `_Istr.``flags`[` & ``skipws`jest różna](../standard-library/ios-functions.md#skipws) od zera.
+- Skutecznie wywołuje [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`, jeśli [`flags`](../standard-library/ios-base-class.md#flags) `_Istr.``flags`[`&``skipws`jest różna](../standard-library/ios-functions.md#skipws) od zera.
 
 Jeśli po każdym takim przygotowaniu `_Istr.good` ma wartość false, Konstruktor wywoła `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. W każdym przypadku Konstruktor przechowuje wartość zwróconą przez `_Istr.good` w `status`. Późniejsze wywołanie `operator bool` dostarcza tę wartość przechowywaną.
 
-## <a name="swap"></a>basic_istream:: swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>basic_istream:: swap
 
 Wymienia zawartość dwóch `basic_istream` obiektów.
 
@@ -904,7 +904,7 @@ Odwołanie lvalue do obiektu `basic_istream`.
 
 Funkcja członkowska wywołuje [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`. Wymienia również liczbę wyodrębniania z liczbą wyodrębniania dla *prawej*.
 
-## <a name="sync"></a>basic_istream:: Sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>basic_istream:: Sync
 
 Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumienia.
 
@@ -912,11 +912,11 @@ Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumie
 int sync();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) jest wskaźnikiem typu null, funkcja zwraca wartość-1. W przeciwnym razie wywołuje `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Jeśli to wywołanie zwróci wartość-1, funkcja wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` i zwraca wartość-1. W przeciwnym razie funkcja zwraca wartość zero.
 
-## <a name="tellg"></a>basic_istream:: tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>basic_istream:: tellg
 
 Raportuje bieżącą pozycję odczytu w strumieniu.
 
@@ -924,7 +924,7 @@ Raportuje bieżącą pozycję odczytu w strumieniu.
 pos_type tellg();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca pozycja w strumieniu.
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>basic_istream:: unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>basic_istream:: unget
 
 Umieszcza ostatnio odczytywany znak z powrotem do strumienia.
 
@@ -966,7 +966,7 @@ Umieszcza ostatnio odczytywany znak z powrotem do strumienia.
 basic_istream<Char_T, Tr>& unget();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Strumień ( __* this__).
 
@@ -1005,7 +1005,7 @@ Type 'abc': abc
 abc
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 \ [programowania iostream](../standard-library/iostream-programming.md)
