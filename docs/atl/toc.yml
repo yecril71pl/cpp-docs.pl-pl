@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Klasy modułów ATL
       href: atl-module-classes.md
-    - name: Usługi ATL
+    - name: usługi ATL
       expanded: false
       items:
         - name: Usługi ATL
