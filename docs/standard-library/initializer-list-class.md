@@ -1,6 +1,6 @@
 ---
 title: initializer_list, klasa
-description: Odwołanie do klasy initializer_list w bibliotece C++ standardowej, zgodnie z implementacją firmy Microsoft w programie Visual Studio.
+description: Odwołanie do klasy initializer_list w bibliotece standardu C++, zaimplementowane przez firmę Microsoft w programie Visual Studio.
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373360"
 ---
 # <a name="initializer_list-class"></a>initializer_list, klasa
 
@@ -33,53 +33,53 @@ class initializer_list
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Typ danych elementu, który ma być przechowywany w `initializer_list`.
+*Typu*\
+Typ danych elementu, który `initializer_list`ma być przechowywany w pliku .
 
 ## <a name="remarks"></a>Uwagi
 
-`initializer_list` można utworzyć za pomocą listy inicjalizatora w nawiasach klamrowych:
+Można `initializer_list` skonstruować przy użyciu listy inicjatora usztywnionego:
 
 ```cpp
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Kompilator przekształca listy inicjalizatora w nawiasy klamrowe z jednorodnymi elementami na `initializer_list` za każdym razem, gdy sygnatura funkcji wymaga `initializer_list`. Aby uzyskać więcej informacji o korzystaniu z `initializer_list`, zobacz [Jednolite inicjowanie i delegowanie konstruktorów](../cpp/uniform-initialization-and-delegating-constructors.md)
+Kompilator przekształca usztywnione listy inicjatorów z `initializer_list` jednorodnymi elementami `initializer_list`w każdym przypadku, gdy podpis funkcji wymaga . Aby uzyskać więcej `initializer_list`informacji na temat używania , zobacz [Jednolite inicjowanie i delegowanie konstruktorów](../cpp/uniform-initialization-and-delegating-constructors.md)
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[initializer_list](#initializer_list)|Konstruuje obiekt typu `initializer_list`.|
+|[Initializer_list](#initializer_list)|Konstruuje obiekt `initializer_list`typu .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|`value_type`|Typ elementów w `initializer_list`.|
-|`reference`|Typ, który zawiera odwołanie do elementu w `initializer_list`.|
-|`const_reference`|Typ, który dostarcza stałe odwołanie do elementu w `initializer_list`.|
-|`size_type`|Typ, który reprezentuje liczbę elementów w `initializer_list`.|
-|`iterator`|Typ, który dostarcza iterator dla `initializer_list`.|
+|`value_type`|Typ elementów w `initializer_list`pliku .|
+|`reference`|Typ, który zawiera odwołanie do `initializer_list`elementu w .|
+|`const_reference`|Typ, który zapewnia stałe odwołanie do `initializer_list`elementu w .|
+|`size_type`|Typ reprezentujący liczbę elementów `initializer_list`w pliku .|
+|`iterator`|Typ, który zapewnia iterator `initializer_list`dla .|
 |`const_iterator`|Typ, który zapewnia stały iterator dla `initializer_list`.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[begin](#begin)|Zwraca wskaźnik do pierwszego elementu w `initializer_list`.|
-|[punktów](#end)|Zwraca wskaźnik do jednego z ostatnich elementów w `initializer_list`.|
-|[zmienia](#size)|Zwraca liczbę elementów w `initializer_list`.|
+|[Rozpocząć](#begin)|Zwraca wskaźnik do pierwszego elementu `initializer_list`w pliku .|
+|[Końcu](#end)|Zwraca wskaźnik do jednego obok ostatniego elementu w pliku `initializer_list`.|
+|[Rozmiar](#size)|Zwraca liczbę elementów `initializer_list`w pliku .|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<initializer_list >
+**Nagłówek:** \<initializer_list>
 
 **Przestrzeń nazw:** std
 
-## <a name="begin"></a>initializer_list:: BEGIN
+## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list::begin
 
-Zwraca wskaźnik do pierwszego elementu w `initializer_list`.
+Zwraca wskaźnik do pierwszego elementu `initializer_list`w pliku .
 
 ```cpp
 constexpr const InputIterator* begin() const noexcept;
@@ -89,9 +89,9 @@ constexpr const InputIterator* begin() const noexcept;
 
 Wskaźnik do pierwszego elementu `initializer_list`. Jeśli lista jest pusta, wskaźnik jest taki sam dla początku i końca listy.
 
-## <a name="end"></a>initializer_list:: end
+## <a name="initializer_listend"></a><a name="end"></a>initializer_list::end
 
-Zwraca wskaźnik do jednego z ostatnich elementów w `initializer list`.
+Zwraca wskaźnik do jednego obok ostatniego elementu w pliku `initializer list`.
 
 ```cpp
 constexpr const InputIterator* end() const noexcept;
@@ -99,11 +99,11 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do jednego ostatniego elementu na liście. Jeśli lista jest pusta, jest taka sama jak wskaźnik do pierwszego elementu na liście.
+Wskaźnik do jednego obok ostatniego elementu na liście. Jeśli lista jest pusta, jest taka sama jak wskaźnik do pierwszego elementu na liście.
 
-## <a name="initializer_list"></a>initializer_list:: initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
 
-Konstruuje obiekt typu `initializer_list`.
+Konstruuje obiekt `initializer_list`typu .
 
 ```cpp
 constexpr initializer_list() noexcept;
@@ -112,15 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*Pierwszy*\
-Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+*Pierwszym*\
+Położenie pierwszego elementu w zakresie elementów do skopiowania.
 
-*Ostatni*\
-Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
+*Ostatnio*\
+Położenie pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-`initializer_list` jest oparta na tablicy obiektów określonego typu. Kopiowanie `initializer_list` tworzy drugie wystąpienie listy wskazujące te same obiekty; obiekty bazowe nie są kopiowane.
+An `initializer_list` jest oparty na tablicy obiektów określonego typu. Kopiowanie `initializer_list` tworzy drugie wystąpienie listy wskazującej te same obiekty; obiekty znajdujące się pod spodem nie są kopiowane.
 
 ### <a name="example"></a>Przykład
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="size"></a>initializer_list:: size
+## <a name="initializer_listsize"></a><a name="size"></a>initializer_list::size
 
 Zwraca liczbę elementów na liście.
 
@@ -195,6 +195,6 @@ constexpr size_t size() const noexcept;
 
 Liczba elementów na liście.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<forward_list>](../standard-library/forward-list.md)
