@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Wdrażanie Twojego programu (C++)'
+title: 'Wskazówki: wdrażanie Twojego programu (C++)'
 ms.date: 05/14/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,111 +9,113 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: eacbcef82f240589e71b59f80d8e19602ceda869
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365006"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Przewodnik: Wdrażanie Twojego programu (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Wskazówki: wdrażanie Twojego programu (C++)
 
-Teraz, gdy utworzono aplikację wykonując wcześniej pokrewne instruktaże, ostatnim krokiem jest utworzenie Instalatora, tak aby inni użytkownicy mogli zainstalować program na swoich komputerach. Dla Instalatora dodasz nowy projekt do istniejącego rozwiązania. Dane wyjściowe tego nowego projektu to plik setup.exe, który zainstaluje twoją aplikację na innym komputerze.
+Teraz, gdy aplikacja została utworzona przez ukończenie wcześniejszych powiązanych instruktajni, ostatnim krokiem jest utworzenie instalatora, aby inni użytkownicy mogli zainstalować program na swoich komputerach. W przypadku instalatora dodasz nowy projekt do istniejącego rozwiązania. Dane wyjściowe tego nowego projektu to plik setup.exe, który zainstaluje aplikację na innym komputerze.
 
-Przewodnik pokazuje, jak wdrożyć aplikację przy użyciu Instalatora Windows. Można również użyć ClickOnce do wdrażania aplikacji. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](../windows/clickonce-deployment-for-visual-cpp-applications.md). Aby uzyskać więcej informacji o wdrażaniu ogólnie rzecz biorąc, zobacz [wdrażania aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components).
+W przewodniku pokazano, jak wdrożyć aplikację za pomocą Instalatora Windows. Można również użyć ClickOnce do wdrożenia aplikacji. Aby uzyskać więcej informacji, zobacz [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Aby uzyskać więcej informacji na temat wdrażania w ogóle, zobacz [Wdrażanie aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Przewodnik zakłada, że rozumiesz podstawy języka C++.
+- W przewodniku przyjęto założenie, że rozumiesz podstawy języka C++.
 
-- Przyjęto również założenie, że zostały wykonane wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Przyjęto również założenie, że zostały ukończone wcześniejsze powiązane wskazówki, które są wymienione w [using visual studio IDE for C++ Desktop Development](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-- Nie można ukończyć instruktażu w wersjach Express programu Visual Studio.
+- Instruktażu nie można ukończyć w wersjach ekspresowych programu Visual Studio.
 
-## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Instalowanie programu Visual Studio szablonu projektu instalacji i wdrożenia
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Instalowanie szablonu projektu konfiguracji i wdrażania programu Visual Studio
 
-Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersji programu Visual Studio. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+Kroki opisane w tej sekcji różnią się w zależności od zainstalowanej wersji programu Visual Studio. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj formantu selektor **wersji.** Znajduje się w górnej części spisu treści na tej stronie.
+
+<!-- markdownlint-disable MD034 -->
 
 ::: moniker range="vs-2019"
 
-### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Aby zainstalować instalacja i wdrożenie szablonu projektu dla Visual Studio 2019 r.
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Aby zainstalować szablon projektu instalacji i wdrażania programu Visual Studio 2019
 
-1. Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie programu Microsoft projektów Instalatora programu Visual Studio. Rozszerzenie jest bezpłatna dla deweloperów programu Visual Studio i dodaje funkcje instalacji i wdrażania szablonów projektu do programu Visual Studio. Po połączeniu się z Internetem, w programie Visual Studio, wybierz **rozszerzenia** > **Zarządzaj rozszerzeniami**. W obszarze **rozszerzenia i aktualizacje** okno dialogowe, wybierz opcję **Online** kartę i typ *projektów Instalatora programu Visual Studio Microsoft* w polu wyszukiwania. Trafienia **Enter**, wybierz opcję **programu Microsoft Visual Studio \<wersji > Projekty Instalatora**i kliknij przycisk **Pobierz**. Możliwość uruchamiania i zainstaluj rozszerzenie, a następnie uruchom ponownie program Visual Studio.
+1. Jeśli jeszcze tego nie zrobiono, pobierz rozszerzenie Microsoft Visual Studio Installer Projects. Rozszerzenie jest bezpłatne dla deweloperów programu Visual Studio i dodaje funkcje szablonów projektu instalacji i wdrażania do programu Visual Studio. Po nawiązaniu połączenia z Internetem w programie Visual Studio wybierz pozycję **Zarządzanie rozszerzeniami rozszerzeń** > **Manage Extensions**. W oknie dialogowym **Rozszerzenia i aktualizacje** wybierz kartę **Online** i wpisz w polu wyszukiwania pozycję *Projekty instalatora programu Microsoft Visual Studio.* Naciśnij **pozycję Enter**, wybierz pozycję Microsoft Visual Studio ** \<version> Installer Projects**i kliknij przycisk **Pobierz**. Wybierz, aby uruchomić i zainstalować rozszerzenie, a następnie uruchom ponownie program Visual Studio.
 
-1. Na pasku menu programu Visual Studio, wybierz **pliku** > **niedawne projekty i rozwiązania**, a następnie wybierz polecenie ponownie otworzyć projekt.
+1. Na pasku menu programu Visual Studio wybierz pozycję **File** > **Recent Projects and Solutions**, a następnie wybierz opcję ponownego otwarcia projektu.
 
-1. Na pasku menu wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okno dialogowe. W polu wyszukiwania wpisz "Setup", a z listy wyników wybierz **projektu Instalatora**.
+1. Na pasku menu wybierz pozycję **Plik** > **nowego** > **projektu,** aby otworzyć okno dialogowe Tworzenie nowego **projektu.** W polu wyszukiwania wpisz "Ustawienia", a z listy wyników wybierz pozycję **Setup Project**.
 
-1. Wprowadź nazwę dla projektu Instalatora w **nazwa** pole. W **rozwiązania** listy rozwijanej wybierz **Dodaj do rozwiązania**. Wybierz **OK** przycisk, aby utworzyć projekt Instalatora. A **Asystenta pliku (nazwa_projektu)** zostanie otwarta karta w oknie edytora.
+1. Wprowadź nazwę projektu instalacji w polu **Nazwa.** Z listy rozwijanej **Rozwiązanie** wybierz pozycję **Dodaj do rozwiązania**. Wybierz przycisk **OK,** aby utworzyć projekt instalacji. W oknie edytora zostanie otwarta karta **Asystent plików (ProjectName).**
 
-1. Kliknij prawym przyciskiem myszy **folderu aplikacji** a następnie wybierz węzeł **Dodaj** > **dane wyjściowe projektu** otworzyć **Dodaj grupę wyjściową projektu**okno dialogowe.
+1. Kliknij prawym przyciskiem myszy węzeł **Folder aplikacji** i wybierz polecenie **Dodaj** > **dane wyjściowe projektu,** aby otworzyć okno dialogowe **Dodawanie grupy wyjściowej projektu.**
 
-1. W oknie dialogowym wybierz **podstawowe wyjście** i kliknij przycisk **OK**. Nowy element o nazwie **podstawowe dane wyjściowe z gry (aktywny)** pojawia się.
+1. W oknie dialogowym wybierz pozycję **Wyjście główne** i kliknij przycisk **OK**. Zostanie wyświetlony nowy element o nazwie **Podstawowe dane wyjściowe z gry (aktywne).**
 
-1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)** , kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)** . Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
+1. Wybierz element **Wyjście podstawowe z gry (aktywny),** kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót do podstawowego wyjścia z gry (Aktywny).** Zostanie wyświetlony nowy element o nazwie **Skrót do podstawowego wyjścia z gry (aktywny).**
 
-1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
+1. Zmień nazwę elementu skrótu na *Gra,* a następnie przeciągnij i upuść element do **węzła Menu programy użytkownika** po lewej stronie okna.
 
-1. W **Eksploratora rozwiązań**, wybierz opcję **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
+1. W **Eksploratorze rozwiązań**wybierz projekt **Instalatora gier** i wybierz polecenie **Wyświetl** > **okno Właściwości** lub naciśnij **klawisz F4,** aby otworzyć okno **Właściwości.**
 
-1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http\://www.contoso.com* dla **SupportUrl**.
+1. Określ dodatkowe szczegóły, tak jak chcesz, aby były wyświetlane w instalatorze.  Na przykład użyj *contoso* dla **producenta,** *Instalatora gier* dla **nazwy produktu**i *https\://www.contoso.com* dla **SupportUrl**.
 
-1. Na pasku menu wybierz **kompilacji** > **programu Configuration Manager**. W **projektu** tabeli, w obszarze **kompilacji** kolumny, zaznacz pole **Instalator gry**. Kliknij przycisk **Zamknij**.
+1. Na pasku menu wybierz pozycję **Build** > **Configuration Manager**. W tabeli **Projekt** w kolumnie **Kompilacja** zaznacz pole wyboru **Instalator gry**. Kliknij przycisk **Zamknij**.
 
-1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie** do tworzenia projektu gier i projektu Instalatora gier.
+1. Na pasku menu wybierz pozycję Build Build Solution to build the Game project and the Game Installer project .On the menu bar, choose **Build** > **Build Solution** to build the Game project and the Game Installer project.
 
-1. W folderze rozwiązania zlokalizuj program setup.exe, który został zbudowany z projektu Instalatora gry, a następnie uruchom go w celu zainstalowania aplikacji gier na komputerze. Możesz skopiować ten plik (i GameInstaller.msi) do zainstalowania aplikacji i jej wymagane pliki biblioteki na innym komputerze.
+1. W folderze rozwiązania znajdź program setup.exe utworzony z projektu Instalatora gier, a następnie uruchom go, aby zainstalować aplikację Gra na komputerze. Możesz skopiować ten plik (i GameInstaller.msi), aby zainstalować aplikację i jej wymagane pliki biblioteki na innym komputerze.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Aby zainstalować instalacja i wdrożenie szablonu projektu programu Visual Studio 2017 i jego starszych wersji
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Aby zainstalować szablon projektu instalacji i wdrażania dla programu Visual Studio 2017 i wcześniejszych
 
-1. Po połączeniu się z Internetem, w programie Visual Studio, wybierz **narzędzia** > **rozszerzenia i aktualizacje**.
+1. Po nawiązaniu połączenia z Internetem w programie Visual Studio wybierz pozycję **Rozszerzenia i aktualizacje** **narzędzi** > .
 
-1. W obszarze **rozszerzenia i aktualizacje**, wybierz opcję **Online** kartę i typ *projektów Instalatora programu Visual Studio Microsoft* w polu wyszukiwania. Trafienia **Enter**, wybierz opcję **programu Microsoft Visual Studio \<wersji > Projekty Instalatora**i kliknij przycisk **Pobierz**.
+1. W obszarze **Rozszerzenia i aktualizacje**wybierz kartę **Online** i wpisz w polu wyszukiwania pozycję *Projekty instalatora programu Microsoft Visual Studio.* Naciśnij **pozycję Enter**, wybierz pozycję Microsoft Visual Studio ** \<version> Installer Projects**i kliknij przycisk **Pobierz**.
 
-1. Wybierz zainstalować rozszerzenie, a następnie uruchom ponownie program Visual Studio.
+1. Wybierz, aby zainstalować rozszerzenie, a następnie uruchom ponownie program Visual Studio.
 
-1. Na pasku menu wybierz **pliku** > **niedawne projekty i rozwiązania**, a następnie wybierz **gry** rozwiązania, aby otworzyć go ponownie.
+1. Na pasku menu wybierz **pozycję File** > **Recent Projects and Solutions**, a następnie wybierz rozwiązanie **Gry,** aby je ponownie otworzyć.
 
-### <a name="to-create-a-setup-project-and-install-your-program"></a>Aby utworzyć projekt instalacyjny i zainstalować Twój program
+### <a name="to-create-a-setup-project-and-install-your-program"></a>Aby utworzyć projekt instalacji i zainstalować program
 
-1. Zmień konfigurację aktywngo rozwiązania do wydania. Na pasku menu wybierz **kompilacji** > **programu Configuration Manager**. W **programu Configuration Manager** dialogowym **Konfiguracja rozwiązania aktywnego** listy rozwijanej wybierz **wersji**. Wybierz **Zamknij** przycisk, aby zapisać konfigurację.
+1. Zmień konfigurację aktywnego rozwiązania na Zwolnij. Na pasku menu wybierz pozycję **Build** > **Configuration Manager**. W oknie **dialogowym Menedżer konfiguracji** na liście rozwijanej **Konfiguracja rozwiązania Active** wybierz pozycję **Zwolnij**. Wybierz przycisk **Zamknij,** aby zapisać konfigurację.
 
-1. Na pasku menu wybierz **pliku** > **New** > **projektu** otworzyć **nowy projekt** okno dialogowe.
+1. Na pasku menu wybierz pozycję **Plik** > **nowego** > **projektu,** aby otworzyć okno dialogowe **Nowy projekt.**
 
-1. W lewym okienku okna dialogowego, rozwiń **zainstalowane** > **inne typy projektów** węzłów, a następnie wybierz **Instalatora programu Visual Studio**. W środkowym okienku wybierz **projektu Instalatora**.
+1. W lewym okienku okna dialogowego rozwiń węzły **Zainstalowane** > **inne typy projektów,** a następnie wybierz pozycję **Instalator programu Visual Studio**. W środkowym okienku wybierz pozycję **Projekt instalacji**.
 
-1. Wprowadź nazwę dla projektu Instalatora w **nazwa** pole. W tym przykładzie wprowadź *Instalator gry*. W **rozwiązania** listy rozwijanej wybierz **Dodaj do rozwiązania**. Wybierz **OK** przycisk, aby utworzyć projekt Instalatora. A **Asystenta pliku (Instalator gry)** zostanie otwarta karta w oknie edytora.
+1. Wprowadź nazwę projektu instalacji w polu **Nazwa.** W tym przykładzie wprowadź *program Game Installer*. Z listy rozwijanej **Rozwiązanie** wybierz pozycję **Dodaj do rozwiązania**. Wybierz przycisk **OK,** aby utworzyć projekt instalacji. W oknie edytora zostanie otwarta karta **Asystent plików (Instalator gier).**
 
-1. Kliknij prawym przyciskiem myszy **folderu aplikacji** a następnie wybierz węzeł **Dodaj** > **dane wyjściowe projektu** otworzyć **Dodaj grupę wyjściową projektu**okno dialogowe.
+1. Kliknij prawym przyciskiem myszy węzeł **Folder aplikacji** i wybierz polecenie **Dodaj** > **dane wyjściowe projektu,** aby otworzyć okno dialogowe **Dodawanie grupy wyjściowej projektu.**
 
-1. W oknie dialogowym wybierz **podstawowe wyjście** i kliknij przycisk **OK**. Nowy element o nazwie **podstawowe dane wyjściowe z gry (aktywny)** pojawia się.
+1. W oknie dialogowym wybierz pozycję **Wyjście główne** i kliknij przycisk **OK**. Zostanie wyświetlony nowy element o nazwie **Podstawowe dane wyjściowe z gry (aktywne).**
 
-1. Wybierz element, który **podstawowe dane wyjściowe z gry (aktywny)** , kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót podstawowe wyjście z gry (aktywny)** . Nowy element o nazwie **skrót do podstawowe wyjście z gry (aktywny)** pojawia się.
+1. Wybierz element **Wyjście podstawowe z gry (aktywny),** kliknij prawym przyciskiem myszy i wybierz polecenie **Utwórz skrót do podstawowego wyjścia z gry (Aktywny).** Zostanie wyświetlony nowy element o nazwie **Skrót do podstawowego wyjścia z gry (aktywny).**
 
-1. Zmień nazwę elementu Skrót do *gry*, a następnie przeciągnij i upuść element do **Menu programy użytkownika** węzła w lewej części okna.
+1. Zmień nazwę elementu skrótu na *Gra,* a następnie przeciągnij i upuść element do **węzła Menu programy użytkownika** po lewej stronie okna.
 
-1. W **Eksploratora rozwiązań**, wybierz opcję **Instalator gry** projektu, a następnie wybierz **widoku** > **okno właściwości** lub kliknij przycisk  **F4** otworzyć **właściwości** okna.
+1. W **Eksploratorze rozwiązań**wybierz projekt **Instalatora gier** i wybierz polecenie **Wyświetl** > **okno Właściwości** lub naciśnij **klawisz F4,** aby otworzyć okno **Właściwości.**
 
-1. Podaj dodatkowe szczegóły, jak mają się pojawiać w Instalatorze.  Na przykład użyć *Contoso* dla **producenta**, *Instalator gry* dla **nazwa produktu**, i *http\://www.contoso.com* dla **SupportUrl**.
+1. Określ dodatkowe szczegóły, tak jak chcesz, aby były wyświetlane w instalatorze.  Na przykład użyj *contoso* dla **producenta,** *Instalatora gier* dla **nazwy produktu**i *https\://www.contoso.com* dla **SupportUrl**.
 
-1. Na pasku menu wybierz **kompilacji** > **programu Configuration Manager**. W **projektu** tabeli, w obszarze **kompilacji** kolumny, zaznacz pole **Instalator gry**. Kliknij przycisk **Zamknij**.
+1. Na pasku menu wybierz pozycję **Build** > **Configuration Manager**. W tabeli **Projekt** w kolumnie **Kompilacja** zaznacz pole wyboru **Instalator gry**. Kliknij przycisk **Zamknij**.
 
-1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie** do tworzenia projektu gier i projektu Instalatora gier.
+1. Na pasku menu wybierz pozycję Build Build Solution to build the Game project and the Game Installer project .On the menu bar, choose **Build** > **Build Solution** to build the Game project and the Game Installer project.
 
-1. W folderze rozwiązania zlokalizuj program setup.exe, który został zbudowany z projektu Instalatora gry, a następnie uruchom go w celu zainstalowania aplikacji gier na komputerze. Możesz skopiować ten plik (i GameInstaller.msi) do zainstalowania aplikacji i jej wymagane pliki biblioteki na innym komputerze.
+1. W folderze rozwiązania znajdź program setup.exe utworzony z projektu Instalatora gier, a następnie uruchom go, aby zainstalować aplikację Gra na komputerze. Możesz skopiować ten plik (i GameInstaller.msi), aby zainstalować aplikację i jej wymagane pliki biblioteki na innym komputerze.
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzednie:** [Przewodnik: Debugowanie projektu (C++)](walkthrough-debugging-a-project-cpp.md)
+**Poprzedni:** [Instruktaż: Debugowanie projektu (C++)](walkthrough-debugging-a-project-cpp.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
+[Odwołanie do języka języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>
-[Wdrażanie aplikacji komputerowych](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Wdrażanie aplikacji klasycznych](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

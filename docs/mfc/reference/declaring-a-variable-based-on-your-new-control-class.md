@@ -8,48 +8,48 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365845"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarowanie zmiennej opartej na nowej klasie formantów
 
-Po utworzeniu klasy formantu MFC można zadeklarować zmienną na jego podstawie. Aby zapewnić kontekst nowej zmiennej, należy otworzyć Edytor okien dialogowych i Edytuj okno dialogowe, w której chcesz użyć kontroli nad wielokrotnego użytku. Ponadto okno dialogowe musi już mieć skojarzone z nią klasy. Aby uzyskać informacje na temat używania edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).
+Po utworzeniu klasy kontroli MFC, można zadeklarować zmienną na jej podstawie. Aby zapewnić kontekst dla nowej zmiennej, należy otworzyć edytor okien dialogowych i edytować okno dialogowe, w którym ma być używane kontrolki wielokrotnego użytku. Ponadto okno dialogowe musi mieć już skojarzoną z nim klasę. Aby uzyskać informacje na temat korzystania z edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).
 
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Aby zadeklarować zmienną, w oparciu o klasy wielokrotnego użytku
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Aby zadeklarować zmienną na podstawie klasy wielokrotnegoużynia
 
-1. Podczas edycji okno dialogowe, przeciągnij formant tego samego typu jako klasa bazowa nowej kontrolki na pasku narzędzi kontrolek na oknie dialogowym.
+1. Podczas edytowania okna dialogowego przeciągnij na okno dialogowe formant tego samego typu co klasa podstawowa nowego formantu z paska narzędzi Formanty.
 
-1. Umieść wskaźnik myszy nad kontrolką porzucone.
+1. Umieść wskaźnik myszy na upuszczonej formancie.
 
-1. Naciskaj klawisz CTRL, kliknij dwukrotnie formant.
+1. Naciskając klawisz CTRL, kliknij dwukrotnie kontrolka.
 
-   [Dodaj zmienną elementu członkowskiego](../../ide/add-member-variable-wizard.md) pojawi się okno dialogowe.
+   Zostanie wyświetlone okno dialogowe [Dodawanie zmiennej elementu](../../ide/add-member-variable-wizard.md) członkowskiego.
 
-1. W **dostępu** wybierz prawidłowy dostęp dla kontrolki.
+1. W polu **Dostęp** wybierz odpowiedni dostęp do formantu.
 
-1. Kliknij przycisk **zmienna sterująca** pole wyboru.
+1. Kliknij pole wyboru **Zmienna sterująca.**
 
-1. W **nazwa zmiennej** wpisz nazwę.
+1. W polu **Nazwa zmiennej** wpisz nazwę.
 
-1. W obszarze **kategorii**, kliknij przycisk **kontroli**.
+1. W **obszarze Kategoria**kliknij pozycję **Sterowanie**.
 
-1. W **identyfikator formantu** listy, wybierz formant, który został dodany. **Typ zmiennej** listy powinien być wyświetlany poprawny typ zmiennej i **kontrolowanie typu** pole powinien być wyświetlany poprawny kontrolek typu.
+1. Na liście **Identyfikator formantu** wybierz formantu, który został dodany. Na liście **Typ zmiennej** powinien być wyświetlany właściwy typ zmiennej, a w polu **Typ formantu** powinien być wyświetlany właściwy typ formantu.
 
-9. W **komentarz** Dodaj dodatkowe uwagi, które mają być wyświetlane w kodzie.
+1. W polu **Komentarz** dodaj dowolny komentarz, który ma być wyświetlany w kodzie.
 
-10. Kliknij przycisk **OK**.
+1. Kliknij przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapowanie komunikatów do funkcji](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
-[Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)<br/>
-[Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Handler komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Nawigacja w strukturze klas](../../ide/navigate-code-cpp.md)
+[Dodawanie funkcji elementu członkowskiego](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej elementu członkowskiego](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnej](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Program obsługi komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Poruszanie się po strukturze klasy](../../ide/navigate-code-cpp.md)

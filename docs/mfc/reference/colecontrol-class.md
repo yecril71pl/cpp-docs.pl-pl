@@ -334,16 +334,16 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366195"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
-Zaawansowana Klasa bazowa służąca do opracowywania formantów OLE.
+Potężna klasa podstawowa do tworzenia formantów OLE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -351,292 +351,292 @@ Zaawansowana Klasa bazowa służąca do opracowywania formantów OLE.
 class COleControl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Tworzy obiekt `COleControl`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Pobiera bieżący wygląd formantu.|
-|[COleControl::AmbientBackColor](#ambientbackcolor)|Zwraca wartość właściwości otaczającego koloru.|
-|[COleControl::AmbientDisplayName](#ambientdisplayname)|Zwraca nazwę kontrolki określoną przez kontener.|
-|[COleControl::AmbientFont](#ambientfont)|Zwraca wartość właściwości otaczającej czcionki.|
-|[COleControl::AmbientForeColor](#ambientforecolor)|Zwraca wartość właściwości ForeColor otaczającej.|
+|[COleControl::AmbientBackColor](#ambientbackcolor)|Zwraca wartość właściwość otaczającego backcolor.|
+|[COleControl::Nazwa funkcji AmbientDisplay](#ambientdisplayname)|Zwraca nazwę formantu określoną przez kontener.|
+|[COleControl::AmbientFont](#ambientfont)|Zwraca wartość właściwość otoczenia Font.|
+|[COleControl::AmbientForeColor](#ambientforecolor)|Zwraca wartość właściwego forecolor otoczenia.|
 |[COleControl::AmbientLocaleID](#ambientlocaleid)|Zwraca identyfikator ustawień regionalnych kontenera.|
 |[COleControl::AmbientScaleUnits](#ambientscaleunits)|Zwraca typ jednostek używanych przez kontener.|
-|[COleControl::AmbientShowGrabHandles](#ambientshowgrabhandles)|Określa, czy mają być wyświetlane uchwyty pobierania.|
-|[COleControl::AmbientShowHatching](#ambientshowhatching)|Określa, czy mają być wyświetlane kreski.|
+|[COleControl::AmbientShowGrabHandles](#ambientshowgrabhandles)|Określa, czy uchwyty chwytania powinny być wyświetlane.|
+|[COleControl::AmbientShowHatching](#ambientshowhatching)|Określa, czy kreskowanie powinno być wyświetlane.|
 |[COleControl::AmbientTextAlign](#ambienttextalign)|Zwraca typ wyrównania tekstu określony przez kontener.|
 |[COleControl::AmbientUIDead](#ambientuidead)|Określa, czy formant powinien odpowiadać na akcje interfejsu użytkownika.|
 |[COleControl::AmbientUserMode](#ambientusermode)|Określa tryb kontenera.|
-|[COleControl::BoundPropertyChanged](#boundpropertychanged)|Powiadamia kontener o zmianie właściwości powiązanej.|
-|[COleControl::BoundPropertyRequestEdit](#boundpropertyrequestedit)|Żąda uprawnień do edytowania wartości właściwości.|
-|[COleControl::ClientToParent](#clienttoparent)|Tłumaczy punkt względem źródła kontrolki na punkt względem jego pochodzenia kontenera.|
-|[COleControl::ClipCaretRect](#clipcaretrect)|Dostosowuje prostokąt karetki, jeśli pokrywa się z kontrolką.|
-|[COleControl::ControlInfoChanged](#controlinfochanged)|Wywołaj tę funkcję po zmianie zestawu symboli obsługiwanych przez formant.|
-|[COleControl::D isplayError](#displayerror)|Wyświetla zdarzenia błędu giełdowego dla użytkownika kontrolki.|
-|[COleControl::D oClick](#doclick)|Implementacja metody `DoClick` podstawowych.|
-|[COleControl::D oPropExchange](#dopropexchange)|Deserializacji właściwości obiektu `COleControl`.|
-|[COleControl::D oSuperclassPaint](#dosuperclasspaint)|Ponownie rysuje kontrolkę OLE, która została poddana klasy z formantu systemu Windows.|
-|[COleControl::EnableSimpleFrame](#enablesimpleframe)|Włącza prostą obsługę ramki dla kontrolki.|
-|[COleControl::ExchangeExtent](#exchangeextent)|Deserializacji szerokość i wysokość kontrolki.|
-|[COleControl::ExchangeStockProps](#exchangestockprops)|Deserializacji właściwości giełdy formantu.|
-|[COleControl::ExchangeVersion](#exchangeversion)|Serializować numer wersji kontrolki.|
-|[COleControl::FireClick](#fireclick)|Wyzwala zdarzenie `Click` giełdowej.|
-|[COleControl::FireDblClick](#firedblclick)|Wyzwala zdarzenie `DblClick` giełdowej.|
-|[COleControl:: FireError —](#fireerror)|Wyzwala zdarzenie `Error` giełdowej.|
-|[COleControl::FireEvent](#fireevent)|Wyzwala zdarzenie niestandardowe.|
-|[COleControl::FireKeyDown](#firekeydown)|Wyzwala zdarzenie `KeyDown` giełdowej.|
-|[COleControl::FireKeyPress](#firekeypress)|Wyzwala zdarzenie `KeyPress` giełdowej.|
-|[COleControl::FireKeyUp](#firekeyup)|Wyzwala zdarzenie `KeyUp` giełdowej.|
-|[COleControl::FireMouseDown](#firemousedown)|Wyzwala zdarzenie `MouseDown` giełdowej.|
-|[COleControl::FireMouseMove](#firemousemove)|Wyzwala zdarzenie `MouseMove` giełdowej.|
-|[COleControl::FireMouseUp](#firemouseup)|Wyzwala zdarzenie `MouseUp` giełdowej.|
-|[COleControl::FireReadyStateChange](#firereadystatechange)|Wyzwala zdarzenie, gdy stan gotowości formantu zostanie zmieniony.|
-|[COleControl::GetActivationPolicy](#getactivationpolicy)|Zmienia domyślne zachowanie aktywacji kontrolki, która obsługuje interfejs `IPointerInactive`.|
+|[COleControl::BoundPropertyZmienił](#boundpropertychanged)|Powiadamia kontener, że właściwość powiązana została zmieniona.|
+|[COleControl::BoundPropertyRequestEdytuj](#boundpropertyrequestedit)|Żąda uprawnień do edytowania wartości właściwości.|
+|[COleControl::ClientToParent](#clienttoparent)|Tłumaczy punkt względem początku układu współrzędnych formantu do punktu względem jego pochodzenia kontenera.|
+|[COleControl::ClipCaretRect](#clipcaretrect)|Dostosowuje prostokąt szycie, jeśli nakłada się na formant.|
+|[COleControl::ControlInfoZwienienie](#controlinfochanged)|Wywołanie tej funkcji po zmianie zestawu mnemonics obsługiwane przez formant.|
+|[COleControl::DisplayError](#displayerror)|Wyświetla zdarzenia błędu zapasów dla użytkownika formantu.|
+|[COleControl::DoClick](#doclick)|Wdrożenie metody `DoClick` magazynowej.|
+|[COleControl::DoPropExchange](#dopropexchange)|Serializuje właściwości `COleControl` obiektu.|
+|[COleControl::DoSuperclassPaint](#dosuperclasspaint)|Ponownie rysuje formant OLE, który został podklasyfikowany z formantu systemu Windows.|
+|[COleControl::EnableSimpleFrame](#enablesimpleframe)|Umożliwia prostą obsługę ramek dla sterowania.|
+|[COleControl::ExchangeExtent](#exchangeextent)|Serializuje szerokość i wysokość formantu.|
+|[COleControl::ExchangeStockProps](#exchangestockprops)|Serializuje właściwości zapasów formantu.|
+|[COleControl::ExchangeVersion](#exchangeversion)|Serializuje numer wersji formantu.|
+|[COleControl::FireClick](#fireclick)|Uruchamia zdarzenie `Click` giełdowe.|
+|[COleControl::FireDblClick](#firedblclick)|Uruchamia zdarzenie `DblClick` giełdowe.|
+|[COleControl::FireError](#fireerror)|Uruchamia zdarzenie `Error` giełdowe.|
+|[COleControl::FireEvent](#fireevent)|Uruchamia zdarzenie niestandardowe.|
+|[COleControl::FireKeyDown](#firekeydown)|Uruchamia zdarzenie `KeyDown` giełdowe.|
+|[COleControl::FireKeyPress](#firekeypress)|Uruchamia zdarzenie `KeyPress` giełdowe.|
+|[COleControl::FireKeyUp](#firekeyup)|Uruchamia zdarzenie `KeyUp` giełdowe.|
+|[COleControl::FireMouseDown](#firemousedown)|Uruchamia zdarzenie `MouseDown` giełdowe.|
+|[COleControl::FireMouseMove](#firemousemove)|Uruchamia zdarzenie `MouseMove` giełdowe.|
+|[COleControl::FireMouseUp](#firemouseup)|Uruchamia zdarzenie `MouseUp` giełdowe.|
+|[COleControl::FireReadyStateChange](#firereadystatechange)|Uruchamia zdarzenie, gdy zmieni się stan gotowości formantu.|
+|[COleControl::GetActivationPolicy](#getactivationpolicy)|Zmienia domyślne zachowanie aktywacji formantu obsługującego `IPointerInactive` interfejs.|
 |[COleControl::GetAmbientProperty](#getambientproperty)|Zwraca wartość określonej właściwości otoczenia.|
-|[COleControl:: getpozornie](#getappearance)|Zwraca wartość właściwości wyglądu akcji.|
-|[COleControl::GetBackColor](#getbackcolor)|Zwraca wartość właściwości Stock Color.|
-|[COleControl:: getborderer](#getborderstyle)|Zwraca wartość właściwości Borderer.|
-|[COleControl:: getcapture](#getcapture)|Określa, czy obiekt kontrolki, który został aktywowany, ma przechwycić myszą.|
-|[COleControl:: GetClassID](#getclassid)|Pobiera identyfikator klasy OLE formantu.|
-|[COleControl::GetClientOffset](#getclientoffset)|Pobiera różnicę między lewym górnym rogu prostokątnego obszaru kontrolki a lewym górnym rogiem obszaru klienckiego.|
-|[COleControl::GetClientRect](#getclientrect)|Pobiera rozmiar obszaru klienckiego kontrolki.|
-|[COleControl::GetClientSite](#getclientsite)|Wysyła zapytanie do obiektu dla wskaźnika do jego bieżącej lokacji klienta w jego kontenerze.|
-|[COleControl::GetControlFlags](#getcontrolflags)|Pobiera ustawienia flagi kontrolki.|
-|[COleControl::GetControlSize](#getcontrolsize)|Zwraca pozycję i rozmiar kontrolki OLE.|
-|[COleControl:: GetDC —](#getdc)|Zapewnia metodę kontroli bezokienkowej w celu uzyskania kontekstu urządzenia z jego kontenera.|
-|[COleControl:: GetEnabled](#getenabled)|Zwraca wartość właściwości z włączonymi zapasami.|
-|[COleControl::GetExtendedControl](#getextendedcontrol)|Pobiera wskaźnik do obiektu rozszerzonej kontroli należącego do kontenera.|
-|[COleControl:: GetFocus](#getfocus)|Określa, czy kontrolka ma fokus.|
-|[COleControl:: GetFont](#getfont)|Zwraca wartość właściwości "giełdowy".|
-|[COleControl::GetFontTextMetrics](#getfonttextmetrics)|Zwraca metryki obiektu `CFontHolder`.|
-|[COleControl:: GetForeColor](#getforecolor)|Zwraca wartość właściwości ForeColor zasobu.|
-|[COleControl:: GetHwnd](#gethwnd)|Zwraca wartość właściwości giełdowy elementu.|
-|[COleControl::GetMessageString](#getmessagestring)|Zawiera tekst paska stanu dla elementu menu.|
-|[COleControl::GetNotSupported](#getnotsupported)|Uniemożliwia dostęp do wartości właściwości kontrolki przez użytkownika.|
+|[COleControl::GetAppearance](#getappearance)|Zwraca wartość właściwości Wygląd magazynu.|
+|[COleControl::GetBackColor](#getbackcolor)|Zwraca wartość właściwości BackColor magazynu.|
+|[COleControl::GetBorderStyle](#getborderstyle)|Zwraca wartość właściwości BorderStyle.|
+|[COleControl::GetCapture](#getcapture)|Określa, czy obiekt sterujący bez okien ma przechwytywanie myszy.|
+|[COleControl::GetClassID](#getclassid)|Pobiera identyfikator klasy OLE formantu.|
+|[COleControl::GetClientOffset](#getclientoffset)|Pobiera różnicę między lewym górnym rogu prostokątnego obszaru formantu a lewym górnym rogu jego obszaru klienta.|
+|[COleControl::GetClientRect](#getclientrect)|Pobiera rozmiar obszaru klienta formantu.|
+|[COleControl::GetClientSite](#getclientsite)|Wysyła zapytania do obiektu dla wskaźnika do bieżącej lokacji klienta w jego kontenerze.|
+|[COleControl::GetControlFlags](#getcontrolflags)|Pobiera ustawienia flagi sterowania.|
+|[COleControl::GetControlSize](#getcontrolsize)|Zwraca położenie i rozmiar formantu OLE.|
+|[COleControl::GetDC](#getdc)|Zapewnia środki dla formantu bez okien, aby uzyskać kontekst urządzenia z jego kontenera.|
+|[COleControl::GetEnabled](#getenabled)|Zwraca wartość właściwości stock Enabled.|
+|[COleControl::GetExtendedControl](#getextendedcontrol)|Pobiera wskaźnik do rozszerzonego obiektu kontrolnego należącego do kontenera.|
+|[COleControl::GetFocus](#getfocus)|Określa, czy formant ma fokus.|
+|[COleControl::GetFont](#getfont)|Zwraca wartość właściwości czcionka magazynowa.|
+|[COleControl::GetFontTextMetrics](#getfonttextmetrics)|Zwraca metryki `CFontHolder` obiektu.|
+|[COleControl::GetForeColor](#getforecolor)|Zwraca wartość właściwości forecolor magazynu.|
+|[COleControl::GetHwnd](#gethwnd)|Zwraca wartość właściwości hWnd.|
+|[COleControl::GetMessageStrowanie](#getmessagestring)|Zawiera tekst paska stanu dla elementu menu.|
+|[COleControl::GetNotSupported](#getnotsupported)|Uniemożliwia dostęp do wartości właściwości formantu przez użytkownika.|
 |[COleControl::GetReadyState](#getreadystate)|Zwraca stan gotowości formantu.|
-|[COleControl::GetRectInContainer](#getrectincontainer)|Zwraca prostokąt kontrolki względem jego kontenera.|
-|[COleControl::GetStockTextMetrics](#getstocktextmetrics)|Zwraca metryki właściwości "giełdowy".|
-|[COleControl:: gettext](#gettext)|Zwraca wartość właściwości "text" lub "Caption".|
-|[COleControl::GetWindowlessDropTarget](#getwindowlessdroptarget)|Przesłoń, aby zezwolić, aby kontrolka bez okien była elementem docelowym operacji przeciągania i upuszczania.|
-|[COleControl::InitializeIIDs](#initializeiids)|Informuje klasę bazową IID, która będzie używana przez formant.|
-|[COleControl::InternalGetFont](#internalgetfont)|Zwraca obiekt `CFontHolder` dla właściwości fontu o stanie.|
-|[COleControl::InternalGetText](#internalgettext)|Pobiera podpis lub właściwość Text.|
-|[COleControl:: InternalSetReadyState](#internalsetreadystate)|Ustawia stan gotowości kontrolki i wyzwala zdarzenie Read-State-Change.|
-|[COleControl::InvalidateControl](#invalidatecontrol)|Unieważnia obszar wyświetlonej kontrolki, powodując jej Odrysowanie.|
-|[COleControl::InvalidateRgn](#invalidatergn)|Unieważnia obszar klienta okna kontenera w danym regionie. Może służyć do ponownego rysowania kontrolek bez okien w regionie.|
-|[COleControl::IsConvertingVBX](#isconvertingvbx)|Umożliwia wyspecjalizowane ładowanie formantu OLE.|
-|[COleControl:: IsModified](#ismodified)|Określa, czy stan formantu został zmieniony.|
+|[COleControl::GetRectInContainer](#getrectincontainer)|Zwraca prostokąt formantu względem jego kontenera.|
+|[COleControl::GetStockTextMetrics](#getstocktextmetrics)|Zwraca metryki właściwości czcionka czas.|
+|[COleControl::GetText](#gettext)|Zwraca wartość właściwości Tekst lub Podpis.|
+|[COleControl::GetWindowlessDropTarget](#getwindowlessdroptarget)|Zastąpuj, aby formant bez okien był celem operacji przeciągania i upuszczania.|
+|[COleControl::InicjalizacjaID](#initializeiids)|Informuje klasę podstawową identyfikatorów IID, których będzie używać formant.|
+|[COleControl::InternalGetFont](#internalgetfont)|Zwraca `CFontHolder` obiekt dla właściwości Font.|
+|[COleControl::InternalGetText](#internalgettext)|Pobiera stock caption lub text właściwości.|
+|[COleControl::InternalSetReadyState](#internalsetreadystate)|Ustawia stan gotowości formantu i uruchamia zdarzenie ready-state-change.|
+|[COleControl::InvalidateControl](#invalidatecontrol)|Unieważnia obszar wyświetlanego formantu, powodując jego ponowne wyrywanie.|
+|[COleControl::InvalidateRgn](#invalidatergn)|Unieważnia obszar klienta okna kontenera w danym regionie. Może służyć do ponownego rysowania formantów bez okien w regionie.|
+|[COleControl::IsConvertingVBX](#isconvertingvbx)|Umożliwia specjalistyczne ładowanie formantu OLE.|
+|[COleControl::JestZmodyfikowany](#ismodified)|Określa, czy stan kontroli uległ zmianie.|
 |[COleControl::IsOptimizedDraw](#isoptimizeddraw)|Wskazuje, czy kontener obsługuje zoptymalizowany rysunek dla bieżącej operacji rysowania.|
-|[COleControl:: IsSubclassedControl](#issubclassedcontrol)|Wywołuje się, by określić czy kontrolka jest podklasą kontrolki systemu Windows.|
-|[COleControl:: Load](#load)|Resetuje wszystkie poprzednie dane asynchroniczne i Inicjuje nowe obciążenie właściwości asynchronicznej kontrolki.|
-|[COleControl::LockInPlaceActive](#lockinplaceactive)|Określa, czy formant może zostać zdezaktywowany przez kontener.|
-|[COleControl::OnAmbientPropertyChange](#onambientpropertychange)|Wywoływana, gdy zostanie zmieniona Właściwość otoczenia.|
-|[COleControl::OnAppearanceChanged](#onappearancechanged)|Wywoływana, gdy zmieni się Właściwość wyglądu giełdowego.|
-|[COleControl::OnBackColorChanged](#onbackcolorchanged)|Wywoływana, gdy zostanie zmieniona wartość właściwości BackColor.|
-|[COleControl::OnBorderStyleChanged](#onborderstylechanged)|Wywoływana, gdy zostanie zmieniona właściwość Borderer.|
-|[COleControl:: onkliknięcia](#onclick)|Wywołuje się, by uruchomić wydarzenie giełdowe.|
-|[COleControl:: OnClose](#onclose)|Powiadamia formant, że `IOleControl::Close` został wywołany.|
-|[COleControl::OnDoVerb](#ondoverb)|Wywołuje się po wykonaniu zlecenia sterującego.|
-|[COleControl:: OnDraw](#ondraw)|Wywołuje się, gdy kontrolka zażądała ponownego narysowania.|
-|[COleControl::OnDrawMetafile](#ondrawmetafile)|Wywoływane przez kontener, gdy kontrolka jest zażądana ponownego narysowania przy użyciu kontekstu urządzenia metapliku.|
-|[COleControl:: onedit](#onedit)|Wywoływane przez kontener do interfejsu użytkownika aktywowanie kontrolki OLE.|
-|[COleControl::OnEnabledChanged](#onenabledchanged)|Wywoływana, gdy zostanie zmieniona właściwość z włączonymi zapasami.|
-|[COleControl::OnEnumVerbs](#onenumverbs)|Wywoływane przez kontener, aby wyliczyć zlecenia kontrolki.|
-|[COleControl::OnEventAdvise](#oneventadvise)|Wywołuje się, gdy programy obsługi zdarzeń są połączone lub odłączane od formantu.|
-|[COleControl::OnFontChanged](#onfontchanged)|Wywoływana, gdy zostanie zmieniona właściwość fontal.|
-|[COleControl::OnForeColorChanged](#onforecolorchanged)|Wywoływana, gdy zostanie zmieniona właściwość ForeColor zasobu.|
-|[COleControl::OnFreezeEvents](#onfreezeevents)|Wywołuje się, gdy zdarzenia kontrolki są zamrożone lub odblokowane.|
-|[COleControl::OnGetColorSet](#ongetcolorset)|Powiadamia formant, że `IOleObject::GetColorSet` został wywołany.|
-|[COleControl::OnGetControlInfo](#ongetcontrolinfo)|Zawiera informacje o tym kontenerze.|
-|[COleControl::OnGetDisplayString](#ongetdisplaystring)|Wywołuje się, by uzyskać ciąg reprezentujący wartość właściwości.|
-|[COleControl::OnGetInPlaceMenu](#ongetinplacemenu)|Żąda uchwytu menu kontrolki, które zostanie scalone z menu kontener.|
-|[COleControl::OnGetNaturalExtent](#ongetnaturalextent)|Przesłoń, aby pobrać rozmiar wyświetlania formantu znajdujący się najbliżej proponowanego trybu rozmiaru i zakresu.|
+|[COleControl::IsSubclassedControl](#issubclassedcontrol)|Wywoływany, aby ustalić, czy podklasy formantu formantu systemu Windows.|
+|[COleControl::Obciążenie](#load)|Resetuje wszystkie poprzednie dane asynchroniczne i inicjuje nowe obciążenie właściwości asynchronii formantu.|
+|[COleControl::LockInPlaceActive](#lockinplaceactive)|Określa, czy formant może być dezaktywowany przez kontener.|
+|[COleControl::OnAmbientPropertyChange](#onambientpropertychange)|Wywoływana po zmianie właściwości otoczenia.|
+|[COleControl::OnAppearanceZmienione](#onappearancechanged)|Wywoływana po zmianie właściwości Wygląd magazynu.|
+|[COleControl::OnBackColorZanged](#onbackcolorchanged)|Wywoływana po zmianie właściwości BackColor.|
+|[COleControl::OnBorderStyleZmienine](#onborderstylechanged)|Wywoływana po zmianie właściwości BorderStyle.|
+|[COleControl::OnClick](#onclick)|Wezwany do ognia akcji Kliknij zdarzenie.|
+|[COleControl::OnClose](#onclose)|Powiadamia formantu, `IOleControl::Close` który został wywołany.|
+|[COleControl::OnDoVerb](#ondoverb)|Wywoływana po wykonaniu zlecenia sterującego.|
+|[COleControl::OnDraw](#ondraw)|Wywoływane, gdy formantu jest wymagane, aby ponownie rysować się.|
+|[COleControl::OnDrawMetafile](#ondrawmetafile)|Wywoływane przez kontener, gdy formant jest wymagany do ponownego rysowania się przy użyciu kontekstu urządzenia metaplik.|
+|[COleControl::OnEdytuj](#onedit)|Wywoływane przez kontener do interfejsu użytkownika Aktywuj formant OLE.|
+|[COleControl::OnEnabledZmienił](#onenabledchanged)|Wywoływana po zmianie właściwości czas Enabled.|
+|[COleControl::OnEnumVerbs](#onenumverbs)|Wywoływane przez kontener do wyliczenia zleceń formantu.|
+|[COleControl::OnEventAdvise](#oneventadvise)|Wywoływane, gdy programy obsługi zdarzeń są połączone lub odłączone od formantu.|
+|[COleControl::OnFontZmienia](#onfontchanged)|Wywoływana po zmianie właściwości Font.|
+|[COleControl::OnForeColorZmienił](#onforecolorchanged)|Wywoływana po zmianie właściwości ForeColor.|
+|[COleControl::OnFreezeEvents](#onfreezeevents)|Wywoływane, gdy zdarzenia formantu są zamrożone lub niezamrożone.|
+|[COleControl::OnGetColorSet](#ongetcolorset)|Powiadamia formantu, `IOleObject::GetColorSet` który został wywołany.|
+|[COleControl::OnGetControlInfo](#ongetcontrolinfo)|Zawiera informacje mnemoniczne do kontenera.|
+|[COleControl::OnGetDisplayString](#ongetdisplaystring)|Wywołano, aby uzyskać ciąg do reprezentowania wartości właściwości.|
+|[COleControl::OnGetInPlaceMenu](#ongetinplacemenu)|Żąda dojścia do menu formantu, który zostanie scalony z menu kontenera.|
+|[COleControl::OnGetNaturalExtent](#ongetnaturalextent)|Zastąpienie, aby pobrać rozmiar wyświetlania formantu najbliżej proponowanego trybu rozmiaru i zasięgu.|
 |[COleControl::OnGetPredefinedStrings](#ongetpredefinedstrings)|Zwraca ciągi reprezentujące możliwe wartości właściwości.|
-|[COleControl::OnGetPredefinedValue](#ongetpredefinedvalue)|Zwraca wartość odpowiadającą wstępnie zdefiniowanym ciągiem.|
-|[COleControl::OnGetViewExtent](#ongetviewextent)|Przesłoń, aby pobrać rozmiar obszarów wyświetlania formantu (można go użyć do włączenia rysowania dwuetapowego).|
-|[COleControl::OnGetViewRect](#ongetviewrect)|Przesłoń, aby przekonwertować rozmiar kontrolki na prostokąt, rozpoczynając od konkretnego położenia.|
-|[COleControl::OnGetViewStatus](#ongetviewstatus)|Zastąpienie w celu pobrania stanu widoku kontrolki.|
-|[COleControl::OnHideToolBars](#onhidetoolbars)|Wywoływane przez kontener, gdy kontrolka jest zdezaktywowana przez interfejs użytkownika.|
-|[COleControl::OnInactiveMouseMove](#oninactivemousemove)|Przesłoń, aby kontener dla nieaktywnej kontrolki pod wskaźnikiem myszy wysyłał WM_MOUSEMOVE komunikatów do kontrolki.|
-|[COleControl::OnInactiveSetCursor](#oninactivesetcursor)|Przesłoń, aby kontener dla nieaktywnej kontrolki pod wskaźnikiem myszy wysyłał WM_SETCURSOR komunikatów do kontrolki.|
-|[COleControl::OnKeyDownEvent](#onkeydownevent)|Wywoływana po rozpoczęciu zdarzenia magazynu akcji.|
-|[COleControl::OnKeyPressEvent](#onkeypressevent)|Wywoływana po wywołaniu zdarzenia KeyPress.|
-|[COleControl::OnKeyUpEvent](#onkeyupevent)|Wywoływana po uruchomieniu zdarzenia KeyUp zasobu.|
-|[COleControl::OnMapPropertyToPage](#onmappropertytopage)|Wskazuje, która strona właściwości ma być używana do edycji właściwości.|
-|[COleControl::](#onmnemonic)|Wywołuje się, gdy naciśnięto klawisz skrótu kontrolki.|
-|[COleControl:: onproperties](#onproperties)|Wywołuje się, gdy wywołano zlecenie "Properties" kontrolki.|
-|[COleControl::OnQueryHitPoint](#onqueryhitpoint)|Przesłoń, aby zbadać, czy ekran kontrolki pokrywa się z danym punktem.|
-|[COleControl::OnQueryHitRect](#onqueryhitrect)|Przesłoń, aby zbadać, czy ekran kontrolki pokrywa się z dowolnym punktem w danym prostokącie.|
-|[COleControl::OnRenderData](#onrenderdata)|Wywoływane przez platformę, by pobrać dane w określonym formacie.|
-|[COleControl::OnRenderFileData](#onrenderfiledata)|Wywoływane przez platformę, by pobrać dane z pliku w określonym formacie.|
-|[COleControl::OnRenderGlobalData](#onrenderglobaldata)|Wywoływane przez platformę, by pobrać dane z pamięci globalnej w określonym formacie.|
-|[COleControl:: OnResetState](#onresetstate)|Resetuje właściwości kontrolki do wartości domyślnych.|
-|[COleControl:: OnSetClientSite](#onsetclientsite)|Powiadamia formant, że `IOleControl::SetClientSite` został wywołany.|
-|[COleControl:: OnSetData](#onsetdata)|Zamienia dane kontrolki na inną wartość.|
-|[COleControl::OnSetExtent](#onsetextent)|Wywołuje się po zmianie zakresu formantu.|
-|[COleControl::OnSetObjectRects](#onsetobjectrects)|Wywoływana po zmianie wymiarów kontrolki.|
-|[COleControl::OnShowToolBars](#onshowtoolbars)|Wywołuje się, gdy aktywowano kontrolkę interfejsu użytkownika.|
-|[COleControl:: OnTextChanged.](#ontextchanged)|Wywoływana, gdy zmieni się właściwość tekst podstawowy lub napis.|
-|[COleControl::OnWindowlessMessage](#onwindowlessmessage)|Przetwarza komunikaty okna (inne niż komunikaty myszy i klawiatury) dla kontrolek bez okien.|
-|[COleControl::P arentToClient](#parenttoclient)|Tłumaczy punkt względem początku kontenera do punktu odnoszącego się do źródła kontrolki.|
-|[COleControl::P ostModalDialog](#postmodaldialog)|Powiadamia kontener o zamknięciu modalnego okna dialogowego.|
-|[COleControl::P reModalDialog](#premodaldialog)|Powiadamia kontener, aby wyświetlić modalne okno dialogowe.|
-|[COleControl::RecreateControlWindow](#recreatecontrolwindow)|Niszczy i odtwarza okno kontrolki.|
-|[COleControl:: Refresh](#refresh)|Wymusza Repaint wyglądu kontrolki.|
+|[COleControl::OnGetPredefinedValue](#ongetpredefinedvalue)|Zwraca wartość odpowiadającą wstępnie zdefiniowanemu ciągowi.|
+|[COleControl::OnGetViewExtent](#ongetviewextent)|Zastąp, aby pobrać rozmiar obszarów wyświetlania formantu (może służyć do włączania rysunku dwuprzebiegowego).|
+|[COleControl::OnGetViewRect](#ongetviewrect)|Zastąd, aby przekonwertować rozmiar formantu na prostokąt rozpoczynający się w określonej pozycji.|
+|[COleControl::OnGetViewStatus](#ongetviewstatus)|Zastąpojedaj, aby pobrać stan widoku formantu.|
+|[COleControl::OnHideToolBars](#onhidetoolbars)|Wywoływane przez kontener, gdy formant jest dezaktywowany interfejsu użytkownika.|
+|[COleControl::OnInactiveMouseMove](#oninactivemousemove)|Zastąp, aby kontener dla nieaktywnej kontroli pod wskaźnikiem myszy wysyłał WM_MOUSEMOVE komunikatów do formantu.|
+|[COleControl::OnInactiveSetCursor](#oninactivesetcursor)|Zastąpołaj, aby kontener dla nieaktywnej kontroli pod wskaźnikiem myszy wysyłał WM_SETCURSOR komunikatów do formantu.|
+|[COleControl::OnKeyDownEvent](#onkeydownevent)|Wywoływane po zdarzenia KeyDown czas został zwolniony.|
+|[COleControl::OnKeyPressEvent](#onkeypressevent)|Wywoływane po zdarzenia KeyPress czas został zwolniony.|
+|[COleControl::OnKeyUpEvent](#onkeyupevent)|Wywoływane po zdarzenia KeyUp czas został zwolniony.|
+|[COleControl::OnMapPropertyToPage](#onmappropertytopage)|Wskazuje, która strona właściwości ma być używana do edytowania właściwości.|
+|[COleControl::OnMnemonic](#onmnemonic)|Wywoływana po naciśnięciu klucza mnemonicznego sterowania.|
+|[COleControl::OnProperties](#onproperties)|Wywoływane, gdy formantu "Właściwości" zlecenie zostało wywołane.|
+|[COleControl::OnQueryHitPoint](#onqueryhitpoint)|Zastąpić, aby zbadać, czy wyświetlanie formantu nakłada się na dany punkt.|
+|[COleControl::OnQueryHitRect](#onqueryhitrect)|Zastąpić, aby zbadać, czy wyświetlanie formantu nakłada się na dowolny punkt w danym prostokącie.|
+|[COleControl::OnRenderData](#onrenderdata)|Wywoływane przez strukturę do pobierania danych w określonym formacie.|
+|[COleControl::OnRenderFileData](#onrenderfiledata)|Wywoływane przez strukturę do pobierania danych z pliku w określonym formacie.|
+|[COleControl::OnRenderGlobalData](#onrenderglobaldata)|Wywoływane przez strukturę do pobierania danych z pamięci globalnej w określonym formacie.|
+|[COleControl::OnResetState](#onresetstate)|Resetuje właściwości formantu do wartości domyślnych.|
+|[COleControl::OnSetClientSite](#onsetclientsite)|Powiadamia formantu, `IOleControl::SetClientSite` który został wywołany.|
+|[COleControl::OnSetData](#onsetdata)|Zastępuje dane formantu inną wartością.|
+|[COleControl::OnSetExtent](#onsetextent)|Wywoływana po zmianie zasięgu formantu.|
+|[COleControl::OnSetObjectRects](#onsetobjectrects)|Wywoływane po zmianie wymiarów formantu.|
+|[COleControl::OnShowToolBars](#onshowtoolbars)|Wywoływane, gdy formant został aktywowany interfejsu użytkownika.|
+|[COleControl::OnTextZanged](#ontextchanged)|Wywoływana po zmianie właściwości Tekst lub Podpis.|
+|[COleControl::OnWindowlessMessage](#onwindowlessmessage)|Przetwarza komunikaty okienne (inne niż komunikaty myszy i klawiatury) dla kontrolek bez okien.|
+|[COleControl::ParentToClient](#parenttoclient)|Tłumaczy punkt względem początku źródła kontenera do punktu względem początku początku formantu.|
+|[COleControl::PostModalDialog](#postmodaldialog)|Powiadamia kontener, że modalne okno dialogowe zostało zamknięte.|
+|[COleControl::PreModalDialog](#premodaldialog)|Powiadamia kontener, że modalne okno dialogowe ma być wyświetlane.|
+|[COleControl::Odtwórz KontrolerWindow](#recreatecontrolwindow)|Niszczy i ponownie tworzy okno formantu.|
+|[COleControl::Odśwież](#refresh)|Wymusza odświeżanie wyglądu formantu.|
 |[COleControl::ReleaseCapture](#releasecapture)|Zwalnia przechwytywanie myszy.|
-|[COleControl:: ReleaseDC](#releasedc)|Zwalnia kontekst urządzenia wyświetlania kontenera kontroli bez okien.|
-|[COleControl::ReparentControlWindow](#reparentcontrolwindow)|Resetuje element nadrzędny okna kontrolki.|
-|[COleControl::ResetStockProps](#resetstockprops)|Inicjuje `COleControl` właściwościami podstawowymi do ich wartości domyślnych.|
-|[COleControl::ResetVersion](#resetversion)|Inicjuje numer wersji w danej wartości.|
-|[COleControl::ScrollWindow](#scrollwindow)|Umożliwia kontrolowanie bezokienkowe przewijania obszaru w obrazie aktywnym na ekranie.|
-|[COleControl::SelectFontObject](#selectfontobject)|Wybiera niestandardową Właściwość czcionki w kontekście urządzenia.|
-|[COleControl::SelectStockFont](#selectstockfont)|Wybiera Właściwość "podstawowe czcionki" w kontekście urządzenia.|
-|[COleControl::SerializeExtent](#serializeextent)|Deserializacji lub inicjuje miejsce wyświetlania dla kontrolki.|
-|[COleControl::SerializeStockProps](#serializestockprops)|Serializować lub inicjuje właściwości `COleControl` podstawowych.|
-|[COleControl::SerializeVersion](#serializeversion)|Serializować lub inicjuje informacje o wersji formantu.|
-|[COleControl:: setpozornie](#setappearance)|Ustawia wartość właściwości wygląd giełdowy.|
-|[COleControl::SetBackColor](#setbackcolor)|Ustawia wartość właściwości Stock Color.|
-|[COleControl:: setborderer](#setborderstyle)|Ustawia wartość właściwości Borderer.|
-|[COleControl:: setcapture](#setcapture)|Powoduje, że okno kontenera kontrolki będzie miało przechwycenie myszy w imieniu formantu.|
-|[COleControl::SetControlSize](#setcontrolsize)|Ustawia położenie i rozmiar kontrolki OLE.|
-|[COleControl:: SetEnabled](#setenabled)|Ustawia wartość właściwości włączony magazyn.|
-|[COleControl:: SetFocus](#setfocus)|Powoduje, że okno kontenera kontrolki będzie miało fokus wejścia w imieniu formantu.|
-|[COleControl:: SetFont](#setfont)|Ustawia wartość właściwości podstawowe czcionki.|
-|[COleControl:: setforecolor](#setforecolor)|Ustawia wartość właściwości ForeColor zasobu.|
-|[COleControl::SetInitialSize](#setinitialsize)|Ustawia rozmiar kontrolki OLE podczas pierwszego wyświetlania w kontenerze.|
-|[COleControl::SetModifiedFlag](#setmodifiedflag)|Zmienia zmodyfikowany stan kontrolki.|
+|[COleControl::ReleaseDC](#releasedc)|Zwalnia kontekst urządzenia wyświetlania kontenera formantu bez okien.|
+|[COleControl::ReparentControlWindow](#reparentcontrolwindow)|Resetuje element nadrzędny okna sterowania.|
+|[COleControl::ResetStockProps](#resetstockprops)|Inicjuje właściwości zapasów `COleControl` do ich wartości domyślnych.|
+|[COleControl::ResetVersion](#resetversion)|Inicjuje numer wersji do danej wartości.|
+|[COleControl::ScrollWindow](#scrollwindow)|Umożliwia formantowi bez okien przewijanie obszaru w jego aktywnym obrazie w miejscu na wyświetlaczu.|
+|[COleControl::SelectFontObject](#selectfontobject)|Wybiera niestandardową font właściwość w kontekście urządzenia.|
+|[COleControl::SelectStockFont](#selectstockfont)|Wybiera właściwość czcionka giełdowa w kontekście urządzenia.|
+|[COleControl::SerializeExtent](#serializeextent)|Serializuje lub inicjuje przestrzeń wyświetlania formantu.|
+|[COleControl::SerializeStockProps](#serializestockprops)|Serializuje lub inicjuje właściwości `COleControl` magazynów.|
+|[COleControl::SerializeVersion](#serializeversion)|Serializuje lub inicjuje informacje o wersji formantu.|
+|[COleControl::SetAppearance](#setappearance)|Ustawia wartość właściwości wygląd akcji.|
+|[COleControl::SetBackColor](#setbackcolor)|Ustawia wartość właściwości backcolor magazynu.|
+|[COleControl::SetBorderStyle](#setborderstyle)|Ustawia wartość właściwości BorderStyle magazynu.|
+|[COleControl::SetCapture](#setcapture)|Powoduje, że okno kontenera formantu przejąć w posiadanie przechwytywania myszy w imieniu formantu.|
+|[COleControl::SetControlSize](#setcontrolsize)|Ustawia położenie i rozmiar formantu OLE.|
+|[COleControl::SetEnabled](#setenabled)|Ustawia wartość właściwości stock Enabled.|
+|[COleControl::SetFocus](#setfocus)|Powoduje, że okno kontenera formantu przejąć w posiadanie fokus wejściowy w imieniu formantu.|
+|[COleControl::SetFont](#setfont)|Ustawia wartość właściwości czcionka magazynie.|
+|[COleControl::SetForeColor](#setforecolor)|Ustawia wartość właściwości forecolor magazynu.|
+|[COleControl::SetInitialSize](#setinitialsize)|Ustawia rozmiar formantu OLE, gdy po raz pierwszy wyświetlany w kontenerze.|
+|[COleControl::SetModifiedFlag](#setmodifiedflag)|Zmienia zmodyfikowany stan formantu.|
 |[COleControl::SetNotPermitted](#setnotpermitted)|Wskazuje, że żądanie edycji nie powiodło się.|
-|[COleControl::SetNotSupported](#setnotsupported)|Zapobiega modyfikacji wartości właściwości kontrolki przez użytkownika.|
-|[COleControl::SetRectInContainer](#setrectincontainer)|Ustawia prostokąt kontrolki względem jego kontenera.|
-|[COleControl::SetText](#settext)|Ustawia wartość właściwości tekst podstawowy lub napis.|
-|[COleControl:: ThrowError](#throwerror)|Sygnalizuje, że wystąpił błąd w kontrolce OLE.|
-|[COleControl::TransformCoords](#transformcoords)|Przekształca wartości współrzędnych między kontenerem i kontrolką.|
+|[COleControl::Zestaw Niewsprzejęty](#setnotsupported)|Zapobiega modyfikacji wartości właściwości formantu przez użytkownika.|
+|[COleControl::SetRectInContainer](#setrectincontainer)|Ustawia prostokąt formantu względem jego kontenera.|
+|[COleControl::SetText](#settext)|Ustawia wartość właściwości Tekst lub Podpis.|
+|[COleControl::ThrowError](#throwerror)|Sygnalizuje, że wystąpił błąd w formancie OLE.|
+|[COleControl::TransformCoords](#transformcoords)|Przekształca wartości współrzędnych między kontenerem a formantem.|
 |[COleControl::TranslateColor](#translatecolor)|Konwertuje wartość OLE_COLOR na wartość COLORREF.|
-|[COleControl::WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Określa, czy właściwości otoczenia będą dostępne podczas następnego ładowania kontrolki.|
-|[COleControl::WindowProc](#windowproc)|Zawiera procedurę systemu Windows dla obiektu `COleControl`.|
+|[COleControl::WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Określa, czy właściwości otoczenia będą dostępne przy następnym załadowaniu formantu.|
+|[COleControl::WindowProc](#windowproc)|Zawiera procedurę systemu `COleControl` Windows dla obiektu.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COleControl::D rawContent](#drawcontent)|Wywoływane przez platformę, gdy konieczna jest aktualizacja wyglądu kontrolki.|
-|[COleControl::D rawMetafile](#drawmetafile)|Wywoływane przez platformę, gdy jest używany kontekst urządzenia metapliku.|
-|[COleControl::IsInvokeAllowed](#isinvokeallowed)|Włącza wywołanie metody automatyzacji.|
-|[COleControl::SetInitialDataFormats](#setinitialdataformats)|Wywoływane przez platformę, aby zainicjować listę formatów danych obsługiwanych przez formant.|
+|[COleControl::DrawContent](#drawcontent)|Wywoływana przez strukturę, gdy wygląd formantu musi zostać zaktualizowany.|
+|[COleControl::DrawMetafile](#drawmetafile)|Wywoływana przez strukturę, gdy używany jest kontekst urządzenia metaplikowego.|
+|[COleControl::IsInvokeAllowed](#isinvokeallowed)|Umożliwia wywołanie metody automatyzacji.|
+|[COleControl::SetInitialDataFormats](#setinitialdataformats)|Wywoływana przez platformę do inicjowania listy formatów danych obsługiwanych przez formant.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pochodny od `CWnd`, Klasa dziedziczy wszystkie funkcje obiektu okna systemu Windows oraz dodatkowe funkcje specyficzne dla OLE, takie jak Wyzwalanie zdarzeń i możliwość obsługi metod i właściwości.
+Pochodzi z `CWnd`, ta klasa dziedziczy wszystkie funkcje obiektu okna systemu Windows oraz dodatkowe funkcje specyficzne dla OLE, takie jak wypalanie zdarzeń i możliwość obsługi metod i właściwości.
 
-Formanty OLE można wstawiać do aplikacji kontenera OLE i komunikować się z kontenerem przy użyciu dwukierunkowego systemu zdarzeń do uruchamiania i ujawniania metod i właściwości do kontenera. Należy zauważyć, że standardowe kontenery OLE obsługują tylko podstawowe funkcje formantu OLE. Nie są w stanie obsługiwać rozszerzonych funkcji formantu OLE. Wyzwalanie zdarzeń odbywa się, gdy zdarzenia są wysyłane do kontenera w wyniku pewnych akcji wykonywanych w formancie. Z kolei kontener komunikuje się z kontrolką przy użyciu uwidocznionego zestawu metod i właściwości analogicznych do funkcji składowych i elementów członkowskich danych C++ klasy. Takie podejście umożliwia deweloperowi kontrolowanie wyglądu kontrolki i powiadamianie kontenera o wystąpieniu pewnych akcji.
+Formanty OLE można wstawiać do aplikacji kontenera OLE i komunikować się z kontenerem przy użyciu dwukierunkowego systemu wypalania zdarzeń i uwidaczniania metod i właściwości kontenera. Należy zauważyć, że standardowe kontenery OLE obsługują tylko podstawowe funkcje formantu OLE. Nie są one w stanie obsługiwać rozszerzone funkcje formantu OLE. Wypalania zdarzeń występuje, gdy zdarzenia są wysyłane do kontenera w wyniku niektórych akcji odbywających się w formancie. Z kolei kontener komunikuje się z formantem przy użyciu narażony zestaw metod i właściwości analogiczne do funkcji elementów członkowskich i elementów członkowskich danych klasy C++. Takie podejście umożliwia deweloperowi kontrolować wygląd formantu i powiadamiać kontener, gdy wystąpią pewne akcje.
 
 ## <a name="windowless-controls"></a>Kontrolki bez okien
 
-Kontrolki OLE mogą być używane w miejscu aktywnym bez okna. Kontrolki bez okien mają znaczące zalety:
+Kontrolki OLE mogą być używane w miejscu aktywnym bez okna. Elementy sterujące bez okien mają istotne zalety:
 
-- Kontrolki bez okien mogą być przezroczyste i nieprostokątne
+- Sterowanie bez okien może być przezroczyste i niekościenny
 
-- Kontrolki bez okna zmniejszają rozmiar wystąpienia i czas utworzenia obiektu
+- Formanty bez okien skracają rozmiar wystąpienia i czas tworzenia obiektu
 
-Kontrolki nie potrzebują okna. Usługi, które oferuje okno można łatwo udostępnić za pośrednictwem jednego udostępnionego okna (zazwyczaj kontenera) i bitu wysyłania kodu. Posiadanie okna jest przede wszystkim niepotrzebnym komplikacją dla obiektu.
+Formanty nie potrzebują okna. Usługi, które oferuje okno mogą być łatwo dostarczane za pośrednictwem jednego okna udostępnionego (zwykle kontenera) i trochę kodu wysyłki. Posiadanie okna jest w większości niepotrzebnym powikłaniem obiektu.
 
-Gdy jest używana Aktywacja bez okien, kontener (który ma okno) jest odpowiedzialny za świadczenie usług, które w przeciwnym razie byłyby udostępniane przez własne okno kontrolki. Na przykład, Jeśli kontrolka musi zbadać fokus klawiatury, wykonać zapytanie dotyczące przechwytywania myszy lub uzyskać kontekst urządzenia, te operacje są zarządzane przez kontener. Funkcje elementu członkowskiego bez okna `COleControl` wywołują te operacje na kontenerze.
+Gdy używana jest aktywacja bez okien, kontener (który ma okno) jest odpowiedzialny za świadczenie usług, które w przeciwnym razie zostałyby dostarczone przez własne okno formantu. Na przykład jeśli formant musi zbadać fokus klawiatury, kwerendy przechwytywania myszy lub uzyskać kontekst urządzenia, operacje te są zarządzane przez kontener. Funkcje członkowskie bez `COleControl` okien operacji wywołać te operacje w kontenerze.
 
-Gdy Aktywacja bez okien jest włączona, kontener deleguje komunikaty wejściowe do interfejsu `IOleInPlaceObjectWindowless` formantu (rozszerzenie [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) dla obsługi bez okien). Implementacja `COleControl`tego interfejsu będzie wysyłać te komunikaty za pomocą mapy komunikatów kontrolki, po odpowiednim dopasowaniu współrzędnych myszy. Możesz przetwarzać te komunikaty, takie jak zwykłe komunikaty okna, dodając odpowiednie wpisy do mapy komunikatów.
+Gdy aktywacja bez okien jest włączona, kontener deleguje komunikaty wejściowe do `IOleInPlaceObjectWindowless` interfejsu formantu (rozszerzenie [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) dla obsługi bez okien). `COleControl`'s implementacja tego interfejsu będzie wysyłać te komunikaty za pośrednictwem mapy wiadomości formantu, po dostosowaniu współrzędnych myszy odpowiednio. Można przetwarzać te wiadomości, takie jak zwykłe wiadomości okna, dodając odpowiednie wpisy do mapy wiadomości.
 
-W kontrolce bez okien należy zawsze używać `COleControl` funkcji Członkowskich zamiast odpowiednich `CWnd` funkcje Członkowskie lub powiązane z nimi funkcje interfejsu API systemu Windows.
+W formancie bez okien należy `COleControl` zawsze używać funkcji `CWnd` członkowskich zamiast odpowiednich funkcji członkowskich lub powiązanych funkcji interfejsu API systemu Windows.
 
-Obiekty kontrolne OLE mogą również utworzyć okno tylko wtedy, gdy stają się aktywne, ale ilość pracy wymaganej do przejścia nieaktywnego jest ustawiana, a szybkość przejścia zostaje wyłączona. Występują sytuacje, w których jest to problem: na przykład rozważmy siatkę pól tekstowych. Po umieszczeniu kursora w górę i w dół w kolumnie, każda kontrolka musi być aktywowana w miejscu, a następnie dezaktywowana. Szybkość nieaktywnego/aktywnego przejścia będzie miała bezpośredni wpływ na szybkość przewijania.
+Obiekty sterujące OLE można również utworzyć okno tylko wtedy, gdy stają się aktywne, ale ilość pracy potrzebnej do przejścia nieaktywne aktywne idzie w górę i szybkość przejścia spada. Z tych przypadków występuje problem: na przykład należy wziąć pod uwagę siatkę pól tekstowych. Podczas kursowania w górę iw dół przez kolumnę, każdy formant musi być aktywowany w miejscu, a następnie dezaktywowany. Szybkość nieaktywnego/aktywnego przejścia będzie miała bezpośredni wpływ na szybkość przewijania.
 
-Aby uzyskać więcej informacji na temat tworzenia struktury formantów OLE, zobacz artykuły [formanty ActiveX MFC](../../mfc/mfc-activex-controls.md) i [przegląd: Tworzenie programu MFC ActiveX Control](../../mfc/reference/mfc-activex-control-wizard.md). Aby uzyskać informacje na temat optymalizowania formantów OLE, w tym bezokienkowe i kontrolki bez migotania, zobacz [kontrolki ActiveX MFC: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Aby uzyskać więcej informacji na temat tworzenia struktury sterowania OLE, zobacz artykuły [MFC ActiveX Formanty](../../mfc/mfc-activex-controls.md) i [omówienie: Tworzenie programu sterowania MFC ActiveX](../../mfc/reference/mfc-activex-control-wizard.md). Aby uzyskać informacje na temat optymalizacji formantów OLE, w tym formantów bez okien i nie migotania, zobacz [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `COleControl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** 'afxctl. h
+**Nagłówek:** afxctl.h
 
-##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor
+## <a name="colecontrolambientbackcolor"></a><a name="ambientbackcolor"></a>COleControl::AmbientBackColor
 
-Zwraca wartość właściwości otaczającego koloru.
+Zwraca wartość właściwość otaczającego backcolor.
 
 ```
 OLE_COLOR AmbientBackColor();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość właściwości otoczenia otaczającego kontenera (jeśli istnieje). Jeśli właściwość nie jest obsługiwana, ta funkcja zwraca kolor tła systemu Windows zdefiniowany przez system.
+Bieżąca wartość otaczającej właściwości BackColor kontenera, jeśli istnieje. Jeśli właściwość nie jest obsługiwana, ta funkcja zwraca zdefiniowany przez system kolor tła systemu Windows.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwość otaczającego koloru jest dostępna dla wszystkich kontrolek i jest definiowana przez kontener. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Właściwość otoczenia BackColor jest dostępna dla wszystkich formantów i jest zdefiniowana przez kontener. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientdisplayname"></a>COleControl::AmbientDisplayName
+## <a name="colecontrolambientdisplayname"></a><a name="ambientdisplayname"></a>COleControl::Nazwa funkcji AmbientDisplay
 
-Nazwę kontenera przypisanego do formantu można użyć w komunikatach o błędach wyświetlanych użytkownikowi.
+Nazwa przypisana przez kontener do formantu może być używana w komunikatach o błędach wyświetlanych użytkownikowi.
 
 ```
 CString AmbientDisplayName();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nazwa kontrolki OLE. Wartość domyślna to ciąg o zerowej długości.
+Nazwa formantu OLE. Wartość domyślna to ciąg o zerowej długości.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientfont"></a>COleControl::AmbientFont
+## <a name="colecontrolambientfont"></a><a name="ambientfont"></a>COleControl::AmbientFont
 
-Zwraca wartość właściwości otaczającej czcionki.
+Zwraca wartość właściwość otoczenia Font.
 
 ```
 LPFONTDISP AmbientFont();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu wysyłania czcionki otaczającej kontenera. Wartość domyślna to NULL. Jeśli zwracana wartość nie jest równa NULL, użytkownik jest odpowiedzialny za zwolnienie czcionki przez wywołanie funkcji elementu członkowskiego [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
+Wskaźnik do otaczającego kontenera interfejsu wysyłania czcionek. Wartością domyślną jest NULL. Jeśli zwracanie nie jest równe null, jesteś odpowiedzialny za zwolnienie czcionki przez wywołanie jego [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) funkcji elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwość Font otoczenia jest definiowana przez kontener i dostępna dla wszystkich kontrolek. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Właściwość otoczenia Font jest definiowana przez kontener i dostępna dla wszystkich formantów. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor
+## <a name="colecontrolambientforecolor"></a><a name="ambientforecolor"></a>COleControl::AmbientForeColor
 
-Zwraca wartość właściwości ForeColor otaczającej.
+Zwraca wartość właściwego forecolor otoczenia.
 
 ```
 OLE_COLOR AmbientForeColor();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość właściwości ForeColor otaczającej kontenera (jeśli istnieje). Jeśli nie jest obsługiwana, ta funkcja zwraca kolor tekstu systemu Windows zdefiniowany przez system.
+Bieżąca wartość otaczającej właściwości ForeColor kontenera, jeśli istnieje. Jeśli ta funkcja nie jest obsługiwana, zwraca zdefiniowany przez system kolor tekstu systemu Windows.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwość ForeColor otaczająca jest dostępna dla wszystkich kontrolek i jest definiowana przez kontener. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Właściwość otoczenia ForeColor jest dostępna dla wszystkich formantów i jest zdefiniowana przez kontener. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientlocaleid"></a>COleControl::AmbientLocaleID
+## <a name="colecontrolambientlocaleid"></a><a name="ambientlocaleid"></a>COleControl::AmbientLocaleID
 
 Zwraca identyfikator ustawień regionalnych kontenera.
 
@@ -644,35 +644,35 @@ Zwraca identyfikator ustawień regionalnych kontenera.
 LCID AmbientLocaleID();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość właściwości LocaleID kontenera (jeśli istnieje). Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwróci wartość 0.
+Wartość właściwości LocaleID kontenera, jeśli istnieje. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka może używać LocaleID do dostosowywania interfejsu użytkownika dla określonych ustawień regionalnych. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Formant można użyć LocaleID dostosować swój interfejs użytkownika dla określonych ustawień regionalnych. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientappearance"></a>COleControl::AmbientAppearance
+## <a name="colecontrolambientappearance"></a><a name="ambientappearance"></a>COleControl::AmbientAppearance
 
-Pobiera bieżące ustawienie wyglądu dla obiektu Control.
+Pobiera bieżące ustawienie wyglądu obiektu sterującego.
 
 ```
 short AmbientAppearance();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wygląd formantu:
 
-- **0** płaski wygląd
+- **0** Płaski wygląd
 
-- **1** wygląd 3W
+- **1** wygląd 3D
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby pobrać bieżącą wartość właściwości DISPID_AMBIENT_APPEARANCE dla kontrolki.
+Wywołanie tej funkcji, aby pobrać bieżącą wartość właściwości DISPID_AMBIENT_APPEARANCE dla formantu.
 
-##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits
+## <a name="colecontrolambientscaleunits"></a><a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits
 
 Zwraca typ jednostek używanych przez kontener.
 
@@ -680,72 +680,72 @@ Zwraca typ jednostek używanych przez kontener.
 CString AmbientScaleUnits();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg zawierający ScaleUnits otoczenia kontenera. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca ciąg o zerowej długości.
+Ciąg zawierający otaczające ScaleUnits kontenera. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca ciąg o zerowej długości.
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwość ScaleUnits otaczająca kontenera może służyć do wyświetlania pozycji lub wymiarów, które są oznaczone wybraną jednostką, taką jak twipach lub centymetry. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Właściwość ScaleUnits w kontenerze może być używana do wyświetlania pozycji lub wymiarów oznaczonych wybraną jednostką, taką jak twips lub centymetry. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles
+## <a name="colecontrolambientshowgrabhandles"></a><a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles
 
-Określa, czy kontener umożliwia kontrolce wyświetlanie uchwytów dla siebie, gdy jest aktywny.
+Określa, czy kontener umożliwia formantowi wyświetlanie uchwytów chwytania dla siebie, gdy jest aktywny.
 
 ```
 BOOL AmbientShowGrabHandles();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera, jeśli powinny zostać wyświetlone uchwyty pobierania; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość różną od zera.
+Nonzero jeśli uchwyty powinny być wyświetlane; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość niezerową.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching
+## <a name="colecontrolambientshowhatching"></a><a name="ambientshowhatching"></a>COleControl::AmbientShowHatching
 
-Określa, czy kontener umożliwia formantowi wyświetlenie siebie przy użyciu wzorca kreskowanego, gdy interfejs użytkownika jest aktywny.
+Określa, czy kontener umożliwia formantowi wyświetlanie się z kreskowanym wzorkiem, gdy interfejs użytkownika jest aktywny.
 
 ```
 BOOL AmbientShowHatching();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli powinien być pokazywany wzór zakreskowany; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość różną od zera.
+Niezerowe, jeśli powinien być pokazany kreskowany wzór; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość niezerową.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign
+## <a name="colecontrolambienttextalign"></a><a name="ambienttextalign"></a>COleControl::AmbientTextAlign
 
-Określa wyrównanie tekstu otoczenia preferowanego przez kontener sterowania.
+Określa wyrównanie tekstu otoczenia preferowane przez kontener formantu.
 
 ```
 short AmbientTextAlign();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Stan właściwości TextAlign kontenera. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwróci wartość 0.
+Stan właściwości textalign otoczenia kontenera. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość 0.
 
 Poniżej znajduje się lista prawidłowych wartości zwracanych:
 
 |Wartość zwracana|Znaczenie|
 |------------------|-------------|
-|0|Ogólne wyrównanie (liczby po prawej stronie, tekst po lewej).|
-|1|Wyrównaj do lewej|
-|2|Center|
-|3|Wyrównaj do prawej|
+|0|Wyrównanie ogólne (liczby po prawej stronie, tekst po lewej).|
+|1|Lewe uzasadnienie|
+|2|Wyśrodkuj|
+|3|Uzasadnienie prawe|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta właściwość jest dostępna dla wszystkich osadzonych formantów i jest definiowana przez kontener. Należy zauważyć, że kontener nie jest wymagany do obsługi tej właściwości.
+Ta właściwość jest dostępna dla wszystkich osadzonych formantów i jest zdefiniowana przez kontener. Należy zauważyć, że kontener nie jest wymagane do obsługi tej właściwości.
 
-##  <a name="ambientuidead"></a>COleControl::AmbientUIDead
+## <a name="colecontrolambientuidead"></a><a name="ambientuidead"></a>COleControl::AmbientUIDead
 
 Określa, czy kontener chce, aby formant odpowiadał na akcje interfejsu użytkownika.
 
@@ -753,31 +753,31 @@ Określa, czy kontener chce, aby formant odpowiadał na akcje interfejsu użytko
 BOOL AmbientUIDead();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, Jeśli kontrolka powinna odpowiedzieć na akcje interfejsu użytkownika; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwróci wartość 0.
+Nonzero, jeśli formant powinien odpowiadać na akcje interfejsu użytkownika; w przeciwnym razie 0. Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład kontener może ustawić na wartość TRUE w trybie projektowania.
+Na przykład kontener może ustawić to na TRUE w trybie projektowania.
 
-##  <a name="ambientusermode"></a>COleControl::AmbientUserMode
+## <a name="colecontrolambientusermode"></a><a name="ambientusermode"></a>COleControl::AmbientUserMode
 
-Określa, czy kontener jest w trybie projektowania czy w trybie użytkownika.
+Określa, czy kontener jest w trybie projektowania lub użytkownika.
 
 ```
 BOOL AmbientUserMode();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli kontener jest w trybie użytkownika; w przeciwnym razie 0 (w trybie projektowania). Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość TRUE.
+Niezerowe, jeśli kontener jest w trybie użytkownika; w przeciwnym razie 0 (w trybie projektowania). Jeśli ta właściwość nie jest obsługiwana, ta funkcja zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład kontener może ustawić na FALSE w trybie projektowania.
+Na przykład kontener może ustawić to na FAŁSZ w trybie projektowania.
 
-##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged
+## <a name="colecontrolboundpropertychanged"></a><a name="boundpropertychanged"></a>COleControl::BoundPropertyZmienił
 
 Sygnalizuje, że wartość właściwości powiązanej została zmieniona.
 
@@ -787,16 +787,16 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania powiązanej właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki powiązanej właściwości formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Musi być wywoływana za każdym razem, gdy wartość właściwości ulega zmianie, nawet w przypadkach, gdy zmiana nie została wprowadzona za pomocą metody set właściwości. Należy szczególnie wiedzieć o właściwościach powiązanych, które są mapowane na zmienne składowe. W dowolnym momencie zmiana zmiennej składowej należy wywołać `BoundPropertyChanged`.
+To musi być wywoływane za każdym razem, gdy zmienia się wartość właściwości, nawet w przypadkach, gdy zmiana nie została wykonywana za pomocą właściwości Set metody. Należy szczególnie pamiętać o powiązanych właściwości, które są mapowane do zmiennych członkowskich. Za każdym razem, gdy `BoundPropertyChanged` taka zmienna elementu członkowskiego zmienia się, musi być wywoływana.
 
-##  <a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit
+## <a name="colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdytuj
 
-Żąda uprawnień z interfejsu `IPropertyNotifySink` do zmiany wartości właściwości powiązanej dostarczonej przez formant.
+Żąda uprawnień `IPropertyNotifySink` z interfejsu, aby zmienić wartość właściwości powiązanej dostarczone przez formant.
 
 ```
 BOOL BoundPropertyRequestEdit(DISPID dispid);
@@ -804,20 +804,20 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania powiązanej właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki powiązanej właściwości formantu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli zmiana jest dozwolona; w przeciwnym razie 0. Wartość domyślna to różna od zera.
+Niezerowe, jeśli zmiana jest dozwolona; w przeciwnym razie 0. Wartość domyślna jest niezerowa.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli uprawnienie jest odrzucane, formant nie może zmienić wartości właściwości. Można to zrobić przez zignorowanie lub niepowodzenie akcji, która podjęła próbę zmiany wartości właściwości.
+Jeśli uprawnienie zostanie odrzucone, formant nie może zezwalać na zmianę wartości właściwości. Można to zrobić, ignorując lub nie akcji, która próbowała zmienić wartość właściwości.
 
-##  <a name="clienttoparent"></a>COleControl::ClientToParent
+## <a name="colecontrolclienttoparent"></a><a name="clienttoparent"></a>COleControl::ClientToParent
 
-Tłumaczy współrzędne *pPoint* na współrzędne nadrzędne.
+Przekłada współrzędne *punktu pPoint* na współrzędne nadrzędne.
 
 ```
 virtual void ClientToParent(
@@ -827,19 +827,19 @@ virtual void ClientToParent(
 
 ### <a name="parameters"></a>Parametry
 
-*lprcBounds*<br/>
-Wskaźnik do granic formantu OLE w kontenerze. Nie jest to obszar klienta, ale obszar całej kontrolki, w tym obramowania i paski przewijania.
+*lprcBounds (Obfity)*<br/>
+Wskaźnik do granic formantu OLE w kontenerze. Nie obszar klienta, ale obszar całego formantu, w tym obramowania i paski przewijania.
 
-*pPoint*<br/>
-Wskaźnik do punktu obszaru klienta OLE, który ma zostać przetłumaczony na współrzędne obiektu nadrzędnego (kontenera).
+*pPunkt*<br/>
+Wskaźnik do punktu klienta OLE do przetłumaczenia na współrzędne nadrzędnego (kontenera).
 
 ### <a name="remarks"></a>Uwagi
 
-Na wejściu *pPoint* jest określana względem początku obszaru klienta kontrolki OLE (górny lewy róg obszaru klienckiego kontrolki). W danych wyjściowych *pPoint* jest względem źródła elementu nadrzędnego (górny lewy róg kontenera).
+Na wejściu *pPoint* jest względem początku obszaru klienta formantu OLE (lewy górny róg obszaru klienta formantu). Na *wyjściu pPoint* jest względem początku macierzystego (lewy górny róg kontenera).
 
-##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect
+## <a name="colecontrolclipcaretrect"></a><a name="clipcaretrect"></a>COleControl::ClipCaretRect
 
-Dostosowuje prostokąt karetki, jeśli jest w całości lub częściowo objęty przez nakładające się obiekty nieprzezroczyste.
+Dostosowuje prostokąt daszka, jeśli jest całkowicie lub częściowo pokryty nakładającymi się, nieprzezroczystymi obiektami.
 
 ```
 BOOL ClipCaretRect(LPRECT lpRect);
@@ -847,24 +847,24 @@ BOOL ClipCaretRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Na wejściu, wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) , która zawiera obszar karetki do dopasowania. W danych wyjściowych, dostosowany obszar karetki lub wartość NULL, jeśli prostokąt karetki jest całkowicie pokryty.
+*Lprect*<br/>
+Na wejściu wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) który zawiera obszar cieczy do dostosowania. Na wyjściu skorygowany obszar daszka lub NULL, jeśli prostokąt daszka jest całkowicie zakryty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Karetka to migająca linia, blok lub mapa bitowa, która zwykle wskazuje, gdzie zostanie wstawiony tekst lub grafika.
+Dasztka to migająca linia, blok lub mapa bitowa, która zazwyczaj wskazuje, gdzie zostanie wstawiony tekst lub grafika.
 
-Obiekt bez okna nie może bezpiecznie pokazać karetki, nie sprawdzając przed sprawdzeniem, czy karetka jest częściowo czy całkowicie ukryta przez nakładające się obiekty. Aby to umożliwić, obiekt może użyć `ClipCaretRect`, aby uzyskać dostosowany karetkę (zredukowany), aby upewnić się, że pasuje do regionu przycinania.
+Obiekt bez okien nie może bezpiecznie wyświetlić cieczy bez uprzedniego sprawdzenia, czy ciesza jest częściowo lub całkowicie ukryta przez nakładające się obiekty. Aby było to możliwe, obiekt `ClipCaretRect` może użyć, aby uzyskać karetki dostosowane (zmniejszona), aby upewnić się, że mieści się w regionie przycinania.
 
-Obiekty tworzące karetkę powinny przesyłać prostokąt karetki do `ClipCaretRect` i używać dopasowanego prostokąta dla karetki. Jeśli karetka jest całkowicie ukryta, ta metoda zwróci wartość FALSE, a karetka nie powinna być wyświetlana w tym przypadku.
+Obiekty tworzące cieszkę powinny przesyłać `ClipCaretRect` prostokąt ydydaszej i używać dostosowanego prostokąta dla cieszy. Jeśli cieszka jest całkowicie ukryta, ta metoda zwróci wartość FAŁSZ, a w tym przypadku nie należy w ogóle wyświetlać cieszy.
 
-##  <a name="colecontrol"></a>COleControl::COleControl
+## <a name="colecontrolcolecontrol"></a><a name="colecontrol"></a>COleControl::COleControl
 
-Konstruuje obiekt `COleControl`.
+Konstruuje `COleControl` obiekt.
 
 ```
 COleControl();
@@ -872,11 +872,11 @@ COleControl();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja zazwyczaj nie jest wywoływana bezpośrednio. Zamiast tego formant OLE jest zwykle tworzony przez fabrykę klas.
+Ta funkcja zwykle nie jest wywoływana bezpośrednio. Zamiast tego formant OLE jest zwykle tworzony przez jego fabryki klasy.
 
-##  <a name="controlinfochanged"></a>COleControl::ControlInfoChanged
+## <a name="colecontrolcontrolinfochanged"></a><a name="controlinfochanged"></a>COleControl::ControlInfoZwienienie
 
-Wywołaj tę funkcję, gdy zestaw symboli obsługiwany przez formant został zmieniony.
+Wywołanie tej funkcji, gdy zestaw mnemonics obsługiwane przez formant uległ zmianie.
 
 ```
 void ControlInfoChanged();
@@ -884,11 +884,11 @@ void ControlInfoChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Po otrzymaniu tego powiadomienia kontener kontrolki uzyskuje nowy zestaw symboli, wykonując wywołanie do [IOleControl:: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Należy zauważyć, że kontener nie jest wymagany do odpowiadania na to powiadomienie.
+Po otrzymaniu tego powiadomienia kontener formantu uzyskuje nowy zestaw mnemonics, wywołując [IOleControl::GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Należy zauważyć, że kontener nie jest wymagany do odpowiadania na to powiadomienie.
 
-##  <a name="displayerror"></a>COleControl::D isplayError
+## <a name="colecontroldisplayerror"></a><a name="displayerror"></a>COleControl::DisplayError
 
-Wywoływane przez platformę po obsłudze zdarzenia błędu giełdowego (chyba że program obsługi zdarzeń pomija wyświetlanie błędu).
+Wywoływane przez platformę po akcji Błąd zdarzenie zostało obsłużone (chyba że program obsługi zdarzeń wygasił wyświetlanie błędu).
 
 ```
 virtual void DisplayError(
@@ -901,30 +901,30 @@ virtual void DisplayError(
 
 ### <a name="parameters"></a>Parametry
 
-*SCODE*<br/>
-Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [formanty ActiveX: Tematy zaawansowane](../../mfc/mfc-activex-controls-advanced-topics.md).
+*Scode*<br/>
+Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [ActiveX Controls: Advanced Topics](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
-Opis raportowanego błędu.
+Opis zgłaszanego błędu.
 
-*lpszSource*<br/>
-Nazwa modułu generującego błąd (zazwyczaj Nazwa modułu kontrolki OLE).
+*lpszSource (źródło)*<br/>
+Nazwa modułu generującego błąd (zazwyczaj nazwa modułu sterującego OLE).
 
 *lpszHelpFile*<br/>
 Nazwa pliku pomocy zawierającego opis błędu.
 
-*nHelpID*<br/>
-Identyfikator kontekstu pomocy dla zgłaszanego błędu.
+*nHelpID (Pomoc eksmisja)*<br/>
+Identyfikator kontekstu Pomocy zgłaszanego błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zachowanie domyślne powoduje wyświetlenie okna komunikatu zawierającego opis błędu, zawarte w *lpszDescription*.
+Domyślne zachowanie wyświetla okno komunikatu zawierające opis błędu, zawarte w *lpszDescription*.
 
-Zastąp tę funkcję, aby dostosować sposób wyświetlania błędów.
+Zastąd w tej funkcji należy dostosować sposób wyświetlania błędów.
 
-##  <a name="doclick"></a>COleControl::D oClick
+## <a name="colecontroldoclick"></a><a name="doclick"></a>COleControl::DoClick
 
-Symuluje akcję kliknięcia myszą na kontrolce.
+Symuluje akcję kliknięcia myszą na formancie.
 
 ```
 void DoClick();
@@ -932,13 +932,13 @@ void DoClick();
 
 ### <a name="remarks"></a>Uwagi
 
-`COleControl::OnClick` funkcja członkowska zostanie wywołana i zostanie wyzwolone zdarzenie kliknięcia akcji, jeśli jest ono obsługiwane przez formant.
+Funkcja nadrzędnego `COleControl::OnClick` elementu członkowskiego zostanie wywołana, a zdarzenie Click zostanie wywołane, jeśli jest obsługiwane przez formant.
 
-Ta funkcja jest obsługiwana przez klasę bazową `COleControl` jako metoda giełdowa o nazwie DoClick. Aby uzyskać więcej informacji, zobacz artykuł [formanty ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Ta funkcja jest obsługiwana przez klasę podstawową `COleControl` jako metodę zapasową o nazwie DoClick. Aby uzyskać więcej informacji, zobacz artykuł [ActiveX Controls: Methods](../../mfc/mfc-activex-controls-methods.md).
 
-##  <a name="dopropexchange"></a>COleControl::D oPropExchange
+## <a name="colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl::DoPropExchange
 
-Wywoływane przez platformę podczas ładowania lub przechowywania formantu z trwałej reprezentacji magazynu, na przykład strumienia lub zestawu właściwości.
+Wywoływana przez platformę podczas ładowania lub przechowywania formantu z reprezentacji magazynu trwałego, takiego jak strumień lub zestaw właściwości.
 
 ```
 virtual void DoPropExchange(CPropExchange* pPX);
@@ -946,18 +946,18 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 ### <a name="parameters"></a>Parametry
 
-*pPX*<br/>
-Wskaźnik do obiektu `CPropExchange`. Platforma dostarcza ten obiekt do ustanowienia kontekstu wymiany właściwości, w tym jego kierunku.
+*Ppx*<br/>
+Wskaźnik do `CPropExchange` obiektu. Ramy dostarcza ten obiekt, aby ustalić kontekst wymiany nieruchomości, w tym jego kierunku.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja zwykle nawiązuje wywołania do **PX_ej** rodziny funkcji w celu załadowania lub zapisania określonych właściwości kontrolki OLE.
+Ta funkcja zwykle wywołuje **PX_** rodziny funkcji, aby załadować lub przechowywać określone właściwości zdefiniowane przez użytkownika formantu OLE.
 
-Jeśli Kreator kontroli został użyty do utworzenia projektu kontrolki OLE, zastąpiona wersja tej funkcji będzie serializować właściwości podstawowe obsługiwane przez `COleControl` z wywołaniem funkcji klasy bazowej, `COleControl::DoPropExchange`. Podczas dodawania właściwości zdefiniowanych przez użytkownika do kontrolki OLE należy zmodyfikować tę funkcję, aby serializować nowe właściwości. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [formanty ActiveX: serializacji](../../mfc/mfc-activex-controls-serializing.md).
+Jeśli Kreator sterowania został użyty do utworzenia projektu sterowania OLE, zastąpiona wersja tej funkcji `COleControl` będzie serializować właściwości `COleControl::DoPropExchange`zapasów obsługiwanych za pomocą wywołania funkcji klasy podstawowej, . Podczas dodawania właściwości zdefiniowanych przez użytkownika do formantu OLE należy zmodyfikować tę funkcję, aby serializować nowe właściwości. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [ActiveX Formanty: Serializacja](../../mfc/mfc-activex-controls-serializing.md).
 
-##  <a name="dosuperclasspaint"></a>COleControl::D oSuperclassPaint
+## <a name="colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint
 
-Ponownie rysuje kontrolkę OLE, która została poddana klasy z formantu systemu Windows.
+Ponownie rysuje formant OLE, który został podklasyfikowany z formantu systemu Windows.
 
 ```
 void DoSuperclassPaint(
@@ -967,21 +967,21 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
+*Pdc*<br/>
 Wskaźnik do kontekstu urządzenia kontenera sterowania.
 
-*rcBounds*<br/>
-Obszar, w którym ma zostać narysowany formant.
+*połączenia z rcBounds*<br/>
+Obszar, w którym ma być narysowany formant.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby prawidłowo obsłużyć malowanie nieaktywnej kontrolki OLE. Ta funkcja powinna być używana tylko wtedy, gdy formant OLE podklasuje kontrolkę Windows i powinien być wywoływany w funkcji `OnDraw` formantu.
+Wywołanie tej funkcji, aby prawidłowo obsługiwać malowanie nieaktywnej kontrolki OLE. Ta funkcja powinna być używana tylko wtedy, gdy podklasy `OnDraw` formantu OLE formantu systemu Windows i powinny być wywoływane w funkcji formantu.
 
-Aby uzyskać więcej informacji na temat tej funkcji i podklasy kontrolki systemu Windows, zobacz artykuł [formanty ActiveX: Tworzenie podklasy kontrolki systemu Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Aby uzyskać więcej informacji na temat tej funkcji i podklasyfikowania formantu systemu Windows, zobacz artykuł [Formanty ActiveX: Podklasy formantu systemu Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-##  <a name="drawcontent"></a>COleControl::D rawContent
+## <a name="colecontroldrawcontent"></a><a name="drawcontent"></a>COleControl::DrawContent
 
-Wywoływane przez platformę, gdy konieczna jest aktualizacja wyglądu kontrolki.
+Wywoływana przez strukturę, gdy wygląd formantu musi zostać zaktualizowany.
 
 ```
 void DrawContent(
@@ -991,19 +991,19 @@ void DrawContent(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
+*Pdc*<br/>
 Wskaźnik do kontekstu urządzenia.
 
-*zwrot*<br/>
-Prostokątny obszar do narysowania.
+*Rc*<br/>
+Prostokątny obszar, który ma zostać wciągnięty.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja bezpośrednio wywołuje za`OnDraw`ą funkcję.
+Ta funkcja wywołuje bezpośrednio funkcję `OnDraw` nadpisywalną.
 
-##  <a name="drawmetafile"></a>COleControl::D rawMetafile
+## <a name="colecontroldrawmetafile"></a><a name="drawmetafile"></a>COleControl::DrawMetafile
 
-Wywoływane przez platformę, gdy jest używany kontekst urządzenia metapliku.
+Wywoływana przez strukturę, gdy używany jest kontekst urządzenia metaplikowego.
 
 ```
 void DrawMetafile(
@@ -1013,15 +1013,15 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-Wskaźnik do kontekstu urządzenia metapliku.
+*Pdc*<br/>
+Wskaźnik do kontekstu urządzenia metaplik.
 
-*zwrot*<br/>
-Prostokątny obszar do narysowania.
+*Rc*<br/>
+Prostokątny obszar, który ma zostać wciągnięty.
 
-##  <a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame
+## <a name="colecontrolenablesimpleframe"></a><a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame
 
-Włącza prostą charakterystykę ramki dla kontrolki OLE.
+Włącza prostą ramkę charakterystyczną dla sterowania OLE.
 
 ```
 void EnableSimpleFrame();
@@ -1029,11 +1029,11 @@ void EnableSimpleFrame();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta cecha pozwala formantowi na obsługę wizualizacji innych kontrolek, ale nie zawiera wartości true OLE. Przykładem może być pole grupy z kilkoma kontrolkami wewnątrz. Formanty te nie są zawarte w elemencie OLE, ale znajdują się w tym samym polu grupy.
+Ta cecha umożliwia formant do obsługi wizualnego zamknięcia innych formantów, ale nie prawdziwe zamknięcia OLE. Przykładem może być pole grupy z kilkoma formantami wewnątrz. Te formanty nie są ole zawarte, ale znajdują się w tym samym polu grupy.
 
-##  <a name="exchangeextent"></a>COleControl::ExchangeExtent
+## <a name="colecontrolexchangeextent"></a><a name="exchangeextent"></a>COleControl::ExchangeExtent
 
-Deserializacji lub inicjuje stan zakresu formantu (jego wymiary w jednostkach HIMETRIC).
+Serializuje lub inicjuje stan zakresu formantu (jego wymiary w jednostkach HIMETRIC).
 
 ```
 BOOL ExchangeExtent(CPropExchange* pPX);
@@ -1041,20 +1041,20 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 ### <a name="parameters"></a>Parametry
 
-*pPX*<br/>
-Wskaźnik do obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Platforma dostarcza ten obiekt do ustanowienia kontekstu wymiany właściwości, w tym jego kierunku.
+*Ppx*<br/>
+Wskaźnik do [obiektu CPropExchange.](../../mfc/reference/cpropexchange-class.md) Ramy dostarcza ten obiekt, aby ustalić kontekst wymiany nieruchomości, w tym jego kierunku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli funkcja się powiedzie; 0 w przeciwnym razie.
+Nonzero, jeśli funkcja powiodła się; 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez domyślną implementację `COleControl::DoPropExchange`.
+Ta funkcja jest zwykle wywoływana `COleControl::DoPropExchange`przez domyślną implementację programu .
 
-##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps
+## <a name="colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl::ExchangeStockProps
 
-Deserializacji lub inicjuje stan właściwości podstawowych formantu.
+Serializuje lub inicjuje stan właściwości zapasów formantu.
 
 ```
 void ExchangeStockProps(CPropExchange* pPX);
@@ -1062,16 +1062,16 @@ void ExchangeStockProps(CPropExchange* pPX);
 
 ### <a name="parameters"></a>Parametry
 
-*pPX*<br/>
-Wskaźnik do obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Platforma dostarcza ten obiekt do ustanowienia kontekstu wymiany właściwości, w tym jego kierunku.
+*Ppx*<br/>
+Wskaźnik do [obiektu CPropExchange.](../../mfc/reference/cpropexchange-class.md) Ramy dostarcza ten obiekt, aby ustalić kontekst wymiany nieruchomości, w tym jego kierunku.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez domyślną implementację `COleControl::DoPropExchange`.
+Ta funkcja jest zwykle wywoływana `COleControl::DoPropExchange`przez domyślną implementację programu .
 
-##  <a name="exchangeversion"></a>COleControl::ExchangeVersion
+## <a name="colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl::ExchangeVersion
 
-Deserializacji lub inicjuje stan informacji o wersji formantu.
+Serializuje lub inicjuje stan informacji o wersji formantu.
 
 ```
 BOOL ExchangeVersion(
@@ -1082,28 +1082,28 @@ BOOL ExchangeVersion(
 
 ### <a name="parameters"></a>Parametry
 
-*pPX*<br/>
-Wskaźnik do obiektu `CPropExchange`. Platforma dostarcza ten obiekt do ustanowienia kontekstu wymiany właściwości, w tym jego kierunku.
+*Ppx*<br/>
+Wskaźnik do `CPropExchange` obiektu. Ramy dostarcza ten obiekt, aby ustalić kontekst wymiany nieruchomości, w tym jego kierunku.
 
-*dwVersionDefault*<br/>
-Numer bieżącej wersji formantu.
+*dwVersionDefault (Niem.*<br/>
+Bieżący numer wersji formantu.
 
-*bConvert*<br/>
-Wskazuje, czy trwałe dane mają być konwertowane do najnowszego formatu po zapisaniu lub obsługiwane w tym samym formacie, który został załadowany.
+*bKonwertowanie*<br/>
+Wskazuje, czy dane trwałe powinny być konwertowane na najnowszy format po zapisaniu lub przechowywane w tym samym formacie, który został załadowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość niezerowa funkcji zakończyła się pomyślnie; 0 w przeciwnym razie.
+Nonzero funkcji powiodło się; 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj jest to pierwsza funkcja wywołana przez przesłonięcie kontrolki `COleControl::DoPropExchange`. Podczas ładowania ta funkcja odczytuje numer wersji trwałych danych i ustawia odpowiednio atrybut Version obiektu [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Podczas zapisywania ta funkcja zapisuje numer wersji danych trwałych.
+Zazwyczaj będzie to pierwsza funkcja wywoływana przez zastąpienie formantu `COleControl::DoPropExchange`. Podczas ładowania ta funkcja odczytuje numer wersji danych trwałych i odpowiednio ustawia atrybut wersji obiektu [CPropExchange.](../../mfc/reference/cpropexchange-class.md) Podczas zapisywania ta funkcja zapisuje numer wersji danych trwałych.
 
-Aby uzyskać więcej informacji na temat trwałości i przechowywania wersji, zobacz artykuł [formanty ActiveX: serializacji](../../mfc/mfc-activex-controls-serializing.md).
+Aby uzyskać więcej informacji na temat trwałości i przechowywania wersji, zobacz artykuł [ActiveX Formanty: Serializacja](../../mfc/mfc-activex-controls-serializing.md).
 
-##  <a name="fireclick"></a>COleControl::FireClick
+## <a name="colecontrolfireclick"></a><a name="fireclick"></a>COleControl::FireClick
 
-Wywoływane przez platformę, gdy mysz jest kliknięta nad aktywną kontrolką.
+Wywoływana przez platformę, gdy mysz jest kliknięta przez aktywną formant.
 
 ```
 void FireClick();
@@ -1111,13 +1111,13 @@ void FireClick();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby wystąpiło automatyczne Wyzwalanie zdarzenia kliknięcia, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie kliknięcia.
+Aby automatyczne wypalanie click zdarzenie występuje, na mapie zdarzenia formantu musi być zdefiniowane zdarzenie Click.
 
-##  <a name="firedblclick"></a>COleControl::FireDblClick
+## <a name="colecontrolfiredblclick"></a><a name="firedblclick"></a>COleControl::FireDblClick
 
-Wywoływane przez platformę po dwukrotnym kliknięciu przycisku myszy nad aktywną kontrolką.
+Wywoływana przez platformę, gdy mysz jest dwukrotnie kliknięty przez aktywny formant.
 
 ```
 void FireDblClick();
@@ -1125,13 +1125,13 @@ void FireDblClick();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby automatyczne Wyzwalanie zdarzenia DblClick miało miejsce, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie zdarzenia DblClick.
+Aby automatyczne wypalanie zdarzenia DblClick występuje, mapa zdarzeń formantu musi mieć zdefiniowane zdarzenie DblClick.
 
-##  <a name="fireerror"></a>COleControl:: FireError —
+## <a name="colecontrolfireerror"></a><a name="fireerror"></a>COleControl::FireError
 
-Wyzwala zdarzenie błędu giełdowego.
+Uruchamia zdarzenie błąd akcji.
 
 ```
 void FireError(
@@ -1142,28 +1142,28 @@ void FireError(
 
 ### <a name="parameters"></a>Parametry
 
-*SCODE*<br/>
-Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [formanty ActiveX: Tematy zaawansowane](../../mfc/mfc-activex-controls-advanced-topics.md).
+*Scode*<br/>
+Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [ActiveX Controls: Advanced Topics](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
-Opis raportowanego błędu.
+Opis zgłaszanego błędu.
 
-*nHelpID*<br/>
+*nHelpID (Pomoc eksmisja)*<br/>
 Identyfikator pomocy zgłaszanego błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-To zdarzenie zapewnia sposób sygnalizowania w odpowiednich miejscach w kodzie, że wystąpił błąd w kontrolce. W przeciwieństwie do innych zdarzeń giełdowych, takich jak kliknięcie lub MouseMove, błąd nigdy nie jest uruchamiany przez platformę.
+To zdarzenie zapewnia sposób sygnalizacji, w odpowiednich miejscach w kodzie, że wystąpił błąd w formancie. W przeciwieństwie do innych zdarzeń akcji, takich jak Click lub MouseMove, Błąd nigdy nie jest uruchamiany przez strukturę.
 
-Aby zgłosić błąd, który występuje podczas funkcji pobierania właściwości, funkcji zestawu właściwości lub metody automatyzacji, wywołaj [COleControl:: ThrowError](#throwerror).
+Aby zgłosić błąd występujący podczas właściwości get function, property set function lub automation method, call [COleControl::ThrowError](#throwerror).
 
-Implementacja zdarzenia błędu giełdowego formantu OLE używa wartości SCODE. Jeśli kontrolka używa tego zdarzenia i jest przeznaczona do użycia w Visual Basic 4,0, zostaną wyświetlone błędy, ponieważ wartość SCODE nie jest obsługiwana w Visual Basic.
+Implementacja zdarzenia błąd giełdowy formantu OLE używa wartości SCODE. Jeśli formant używa tego zdarzenia i jest przeznaczony do użycia w języku Visual Basic 4.0, pojawią się błędy, ponieważ wartość SCODE nie jest obsługiwana w języku Visual Basic.
 
-Aby rozwiązać ten problem, należy ręcznie zmienić parametr SCODE w kontrolce. ODL plik na **Long**. Ponadto wszelkie zdarzenia niestandardowe, metody lub właściwości, które używają parametru SCODE również powodują ten sam problem.
+Aby rozwiązać ten problem, należy ręcznie zmienić parametr SCODE w formancie . ODL do **długiego**pliku . Ponadto wszelkie niestandardowe zdarzenie, metoda lub właściwość, która używa parametru SCODE również powoduje ten sam problem.
 
-##  <a name="fireevent"></a>COleControl::FireEvent
+## <a name="colecontrolfireevent"></a><a name="fireevent"></a>COleControl::FireEvent
 
-Uruchamia zdefiniowane przez użytkownika zdarzenie z formantu z dowolną liczbą argumentów opcjonalnych.
+Uruchamia zdarzenie zdefiniowane przez użytkownika z formantu z dowolną liczbą opcjonalnych argumentów.
 
 ```
 void AFX_CDECL FireEvent(
@@ -1174,17 +1174,17 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania zdarzenia, które ma zostać wyzwolone.
+*Dispid*<br/>
+Identyfikator wysyłki zdarzenia, które ma zostać wystrzelone.
 
-*pbParams*<br/>
-Deskryptor typów parametrów zdarzenia.
+*pbParams ( pbParams )*<br/>
+Deskryptor dla typów parametrów zdarzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle ta funkcja nie powinna być wywoływana bezpośrednio. Zamiast tego w sekcji Mapa zdarzeń deklaracji klasy kontrolki zostanie wywołana funkcja uruchamiania zdarzeń.
+Zazwyczaj ta funkcja nie powinna być wywoływana bezpośrednio. Zamiast tego można wywołać funkcje wywoływania zdarzeń w sekcji mapy zdarzeń deklaracji klasy formantu.
 
-Argument *pbParams* jest rozdzieloną spacjami listą **VTS_** . Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Dopuszczalne są następujące wartości:
+Argument *pbParams* jest oddzieloną przestrzenią listą **VTS_**. Jedna lub więcej z tych wartości, oddzielonych spacjami (nie przecinkami), określa listę parametrów funkcji. Dopuszczalne są następujące wartości:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -1192,7 +1192,7 @@ Argument *pbParams* jest rozdzieloną spacjami listą **VTS_** . Co najmniej jed
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1204,11 +1204,11 @@ Argument *pbParams* jest rozdzieloną spacjami listą **VTS_** . Co najmniej jed
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
->  Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu konwencji`constantname` **VTS_P** . Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
+> Dodatkowe stałe wariantu zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych wariantu. Te stałe są nazwane przy użyciu`constantname` **konwencji VTS_P.** Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
 
-##  <a name="firekeydown"></a>COleControl::FireKeyDown
+## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown
 
-Wywoływane przez platformę po naciśnięciu klawisza, gdy kontrolka jest aktywna przez interfejs użytkownika.
+Wywoływana przez platformę, gdy klawisz jest naciśnięty, gdy formant jest aktywny.
 
 ```
 void FireKeyDown(
@@ -1218,27 +1218,27 @@ void FireKeyDown(
 
 ### <a name="parameters"></a>Parametry
 
-*pnChar*<br/>
-Wskaźnik do wartości kodu wirtualnego klucza naciśniętego klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
+*pnChar ( pnChar )*<br/>
+Wskaźnik do wartości kodu klucza wirtualnego wciśniętego klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby automatyczne Wyzwalanie zdarzenia KeyDown miało miejsce, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie.
+Aby automatyczne wypalanie zdarzenia KeyDown występuje, mapa zdarzenia formantu musi mieć zdefiniowane zdarzenie KeyDown.
 
-##  <a name="firekeypress"></a>COleControl::FireKeyPress
+## <a name="colecontrolfirekeypress"></a><a name="firekeypress"></a>COleControl::FireKeyPress
 
-Wywoływane przez platformę, gdy klawisz zostanie wciśnięty i wydzierżawiony, gdy kontrolka niestandardowa jest aktywnym interfejsem użytkownika w kontenerze.
+Wywoływana przez platformę, gdy klucz jest naciśnięty i zwolniony, gdy formant niestandardowy jest aktywny w kontenerze.
 
 ```
 void FireKeyPress(USHORT* pnChar);
@@ -1246,20 +1246,20 @@ void FireKeyPress(USHORT* pnChar);
 
 ### <a name="parameters"></a>Parametry
 
-*pnChar*<br/>
-Wskaźnik do wartości znaku naciśniętego klawisza.
+*pnChar ( pnChar )*<br/>
+Wskaźnik do wartości znaku naciśnięcia klawisza.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Odbiorca zdarzenia może zmodyfikować *pnChar*, na przykład przekonwertować wszystkie małe litery na wielkie litery. Jeśli chcesz przejrzeć zmodyfikowany znak, Przesłoń `OnKeyPressEvent`.
+Odbiorca zdarzenia może zmodyfikować *pnChar*, na przykład przekonwertować wszystkie małe litery na wielkie litery. Jeśli chcesz zbadać zmodyfikowany znak, należy `OnKeyPressEvent`zastąpić .
 
-Aby automatyczne Wyzwalanie zdarzenia KeyPress miało miejsce, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie KeyPress.
+Aby automatyczne wypalanie keypress zdarzenie występuje, mapa zdarzeń formantu musi mieć czas KeyPress zdarzenie zdefiniowane.
 
-##  <a name="firekeyup"></a>COleControl::FireKeyUp
+## <a name="colecontrolfirekeyup"></a><a name="firekeyup"></a>COleControl::FireKeyUp
 
-Wywoływane przez platformę, gdy klucz jest wydawany, gdy kontrolka niestandardowa jest aktywnym interfejsem użytkownika w kontenerze.
+Wywoływana przez platformę, gdy klucz jest zwalniany, gdy formant niestandardowy jest aktywny w kontenerze.
 
 ```
 void FireKeyUp(
@@ -1269,27 +1269,27 @@ void FireKeyUp(
 
 ### <a name="parameters"></a>Parametry
 
-*pnChar*<br/>
-Wskaźnik do wartości kodu klucza wirtualnego wydanego klucza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
+*pnChar ( pnChar )*<br/>
+Wskaźnik do wartości kodu klucza wirtualnego zwolnionego klucza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby można było automatycznie wyzwalać zdarzenie KeyUp, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie KeyUp.
+Aby automatyczne wypalanie zdarzenia KeyUp występuje, mapa zdarzenia formantu musi mieć zdefiniowane zdarzenie keyup.
 
-##  <a name="firemousedown"></a>COleControl::FireMouseDown
+## <a name="colecontrolfiremousedown"></a><a name="firemousedown"></a>COleControl::FireMouseDown
 
-Wywoływane przez platformę po naciśnięciu przycisku myszy nad aktywną kontrolką niestandardową.
+Wywoływana przez platformę, gdy przycisk myszy jest naciśnięty przez aktywny formant niestandardowy.
 
 ```
 void FireMouseDown(
@@ -1301,39 +1301,39 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
-Wartość liczbowa naciśniętego przycisku myszy. Może zawierać jedną z następujących wartości:
+*nButton (przycisk)*<br/>
+Wartość liczbowa naciśnięcia przycisku myszy. Może zawierać jedną z następujących wartości:
 
-- LEFT_BUTTON lewym przyciskiem myszy naciśnięto.
+- LEFT_BUTTON Lewy przycisk myszy został naciśnięty.
 
-- MIDDLE_BUTTON środkowego przycisku myszy zostało naciśnięte.
+- MIDDLE_BUTTON Środkowy przycisk myszy został naciśnięty.
 
-- RIGHT_BUTTON naciśnięcie prawego przycisku myszy.
+- RIGHT_BUTTON Naciśnięty został prawy przycisk myszy.
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
-*y*<br/>
-Współrzędna x kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*X*<br/>
+Współrzędna x kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
-*t*<br/>
-Współrzędna y kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*Y*<br/>
+Współrzędna y kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby automatyczne Wyzwalanie zdarzenia MouseDown mogło wystąpić, Mapa zdarzeń kontrolki musi mieć zdefiniowane zdarzenie MouseDown elementu.
+Aby automatyczne wypalanie mousedown zdarzenie występuje, mapa zdarzenia formantu musi mieć zdarzenia MouseDown czas zdefiniowane.
 
-##  <a name="firemousemove"></a>COleControl::FireMouseMove
+## <a name="colecontrolfiremousemove"></a><a name="firemousemove"></a>COleControl::FireMouseMove
 
-Wywoływane przez platformę, gdy kursor jest przenoszony przez aktywną kontrolkę niestandardową.
+Wywoływana przez strukturę, gdy kursor jest przenoszony przez aktywną formant niestandardowy.
 
 ```
 void FireMouseMove(
@@ -1345,39 +1345,39 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
-Wartość liczbowa przycisków myszy. Zawiera kombinację następujących wartości:
+*nButton (przycisk)*<br/>
+Wartość liczbowa naciśniętych przycisków myszy. Zawiera kombinację następujących wartości:
 
-- LEFT_BUTTON lewym przyciskiem myszy naciśnięto w trakcie działania.
+- LEFT_BUTTON Lewy przycisk myszy został naciśnięty podczas akcji.
 
-- MIDDLE_BUTTON środkowego przycisku myszy naciśniętego podczas działania.
+- MIDDLE_BUTTON Środkowy przycisk myszy został naciśnięty podczas akcji.
 
-- RIGHT_BUTTON prawy przycisk myszy został nacionięty w trakcie działania.
+- RIGHT_BUTTON Podczas akcji naciśnięty został prawy przycisk myszy.
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
-*y*<br/>
-Współrzędna x kursora. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*X*<br/>
+Współrzędna x kursora. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
-*t*<br/>
-Współrzędna y kursora. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*Y*<br/>
+Współrzędna y kursora. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby można było automatycznie wyzwalać zdarzenie MouseMove, Mapa zdarzeń kontrolki musi mieć zdefiniowane podstawowe Zdarzenie MouseMove.
+Aby automatyczne wypalanie mousemove zdarzenie występuje, mapa zdarzenia formantu musi mieć czas MouseMove zdarzenie zdefiniowane.
 
-##  <a name="firemouseup"></a>COleControl::FireMouseUp
+## <a name="colecontrolfiremouseup"></a><a name="firemouseup"></a>COleControl::FireMouseUp
 
-Wywoływane przez platformę, gdy przycisk myszy zostanie wydzierżawiony przez aktywną kontrolkę niestandardową.
+Wywoływane przez platformę, gdy przycisk myszy jest zwolniony za pomocą aktywnego formantu niestandardowego.
 
 ```
 void FireMouseUp(
@@ -1389,39 +1389,39 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
-Wartość liczbowa przycisku myszy wydano. Może mieć jedną z następujących wartości:
+*nButton (przycisk)*<br/>
+Wartość liczbowa zwolnionego przycisku myszy. Może mieć jedną z następujących wartości:
 
-- LEFT_BUTTON został wystawiony lewy przycisk myszy.
+- LEFT_BUTTON Lewy przycisk myszy został zwolniony.
 
-- MIDDLE_BUTTON wydano środkowego przycisku myszy.
+- MIDDLE_BUTTON Środkowy przycisk myszy został zwolniony.
 
-- RIGHT_BUTTON został opublikowany prawy przycisk myszy.
+- RIGHT_BUTTON Prawy przycisk myszy został zwolniony.
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
-*y*<br/>
-Współrzędna x kursora po wydaniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*X*<br/>
+Współrzędna x kursora po zwolnieniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
-*t*<br/>
-Współrzędna y kursora po wydaniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
+*Y*<br/>
+Współrzędna y kursora po zwolnieniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna kontrolnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest wyzwalane.
+Jeśli to zdarzenie jest zdefiniowane jako zdarzenie niestandardowe, należy określić, kiedy zdarzenie jest uruchamiane.
 
-Aby automatyczne Wyzwalanie zdarzenia MouseUp miało miejsce, Mapa zdarzeń kontrolki musi mieć zdefiniowane wydarzenie giełdowe.
+Aby automatyczne wypalanie mouseup zdarzenie występuje, mapa zdarzenia formantu musi mieć czas MouseUp zdarzenie zdefiniowane.
 
-##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange
+## <a name="colecontrolfirereadystatechange"></a><a name="firereadystatechange"></a>COleControl::FireReadyStateChange
 
-Uruchamia zdarzenie z bieżącą wartością stanu gotowości kontroli.
+Uruchamia zdarzenie o bieżącej wartości gotowego stanu kontroli.
 
 ```
 void FireReadyStateChange();
@@ -1434,58 +1434,58 @@ Stan gotowości może być jedną z następujących wartości:
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Domyślny stan inicjowania|
-|READYSTATE_LOADING|Kontrolka aktualnie ładuje jej właściwości|
-|READYSTATE_LOADED|Kontrolka została zainicjowana|
-|READYSTATE_INTERACTIVE|Formant ma wystarczającą ilość danych, które mają być interaktywne, ale nie wszystkie dane asynchroniczne zostały jeszcze załadowane|
-|READYSTATE_COMPLETE|Kontrolka ma wszystkie dane|
+|READYSTATE_LOADING|Formant aktualnie ładuje swoje właściwości|
+|READYSTATE_LOADED|Formant został zainicjowany|
+|READYSTATE_INTERACTIVE|Control ma wystarczającą ilość danych, aby były interaktywne, ale nie wszystkie dane asynchroniczne są jeszcze załadowane|
+|READYSTATE_COMPLETE|Control ma wszystkie swoje dane|
 
-Użyj [GetReadyState](#getreadystate) , aby określić bieżącą gotowość formantu.
+Użyj [GetReadyState,](#getreadystate) aby określić bieżącą gotowość formantu.
 
-[InternalSetReadyState](#internalsetreadystate) zmienia stan gotowości na podaną wartość, a następnie wywołuje `FireReadyStateChange`.
+[InternalSetReadyState](#internalsetreadystate) zmienia stan gotowości na dostarczoną `FireReadyStateChange`wartość, a następnie wywołuje .
 
-##  <a name="getactivationpolicy"></a>COleControl::GetActivationPolicy
+## <a name="colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl::GetActivationPolicy
 
-Zmienia domyślne zachowanie aktywacji kontrolki, która obsługuje interfejs `IPointerInactive`.
+Zmienia domyślne zachowanie aktywacji formantu obsługującego `IPointerInactive` interfejs.
 
 ```
 virtual DWORD GetActivationPolicy();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Kombinacja flag z wyliczenia POINTERINACTIVE. Możliwe flagi to:
 
 |||
 |-|-|
-|POINTERINACTIVE_ACTIVATEONENTRY|Obiekt powinien być aktywowany w miejscu, gdy wskaźnik myszy zostanie wprowadzony podczas operacji przenoszenia myszy.|
-|POINTERINACTIVE_DEACTIVATEONLEAVE|Obiekt powinien zostać zdezaktywowany, gdy mysz opuszcza obiekt podczas operacji przenoszenia myszy.|
-|POINTERINACTIVE_ACTIVATEONDRAG|Obiekt powinien być aktywowany w miejscu, gdy wskaźnik myszy jest przeciągany w trakcie operacji przeciągania i upuszczania.|
+|POINTERINACTIVE_ACTIVATEONENTRY|Obiekt powinien być aktywowany w miejscu, gdy mysz wejdzie do niego podczas operacji przenoszenia myszy.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|Obiekt powinien zostać dezaktywowany, gdy mysz opuści obiekt podczas operacji przenoszenia myszy.|
+|POINTERINACTIVE_ACTIVATEONDRAG|Obiekt powinien być aktywowany w miejscu, gdy mysz jest przeciągana nad nim podczas operacji przeciągania i upuszczania.|
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy interfejs `IPointerInactive` jest włączony, kontener będzie delegować do niego WM_SETCURSOR i WM_MOUSEMOVE wiadomości. Implementacja `COleControl`tego interfejsu będzie wysyłać te komunikaty za pomocą mapy komunikatów kontrolki, po odpowiednim dopasowaniu współrzędnych myszy.
+Gdy `IPointerInactive` interfejs jest włączony, kontener będzie delegować WM_SETCURSOR i WM_MOUSEMOVE do niego wiadomości. `COleControl`'s implementacja tego interfejsu będzie wysyłać te komunikaty za pośrednictwem mapy wiadomości formantu, po dostosowaniu współrzędnych myszy odpowiednio.
 
-Za każdym razem, gdy kontener otrzymuje WM_SETCURSOR lub WM_MOUSEMOVE komunikat ze wskaźnikiem myszy nad nieaktywnym obiektem obsługującym `IPointerInactive`, powinien wywołać `GetActivationPolicy` na interfejsie i zwracać flagi z wyliczenia POINTERINACTIVE.
+Za każdym razem, gdy kontener odbiera WM_SETCURSOR lub WM_MOUSEMOVE komunikat ze wskaźnikiem `IPointerInactive`myszy na `GetActivationPolicy` nieaktywnym obiekcie obsługującym, należy wywołać na interfejsie i zwracać flagi z wyliczenia POINTERINACTIVE.
 
-Możesz przetwarzać te komunikaty podobnie jak zwykłe komunikaty okna przez dodanie odpowiednich wpisów do mapy komunikatów. W obsłudze, Unikaj używania zmiennej składowej `m_hWnd` (lub jakichkolwiek funkcji Członkowskich, które go używają) bez uprzedniego sprawdzenia, czy jej wartość jest inna niż NULL.
+Można przetwarzać te wiadomości, podobnie jak zwykłe wiadomości okna, dodając odpowiednie wpisy do mapy wiadomości. W programach obsługi należy `m_hWnd` unikać używania zmiennej członkowskiej (lub funkcji członkowskich, która jej używa) bez uprzedniego sprawdzenia, czy jej wartość nie jest null.
 
-Każdy obiekt przeznaczony do wykonywania więcej niż ustawiać wskaźnik myszy i/lub wyzwalać zdarzenie przenoszenia myszy, na przykład dawać specjalne Opinie wizualne, powinien zwrócić flagę POINTERINACTIVE_ACTIVATEONENTRY i narysować opinię tylko wtedy, gdy jest aktywna. Jeśli obiekt zwraca tę flagę, kontener powinien natychmiast aktywować go w miejscu, a następnie przesłać do niego ten sam komunikat, który wyzwolił wywołanie do `GetActivationPolicy`.
+Każdy obiekt przeznaczony do zrobienia więcej niż ustawić kursor myszy i/lub wypalić zdarzenie ruchu myszy, takie jak dać specjalne wizualne sprzężenie zwrotne, należy zwrócić flagę POINTERINACTIVE_ACTIVATEONENTRY i narysować sprzężenie zwrotne tylko wtedy, gdy są aktywne. Jeśli obiekt zwraca tę flagę, kontener powinien natychmiast ją aktywować w miejscu, a `GetActivationPolicy`następnie przesłać dalej ten sam komunikat, który wyzwolił wywołanie .
 
-Jeśli są zwracane flagi POINTERINACTIVE_ACTIVATEONENTRY i POINTERINACTIVE_DEACTIVATEONLEAVE, obiekt zostanie aktywowany tylko wtedy, gdy wskaźnik myszy znajduje się nad obiektem. Jeśli zwracana jest tylko flaga POINTERINACTIVE_ACTIVATEONENTRY, obiekt zostanie aktywowany tylko raz, gdy mysz najpierw przejdzie do obiektu.
+Jeśli zwracane są flagi POINTERINACTIVE_ACTIVATEONENTRY i POINTERINACTIVE_DEACTIVATEONLEAVE, obiekt zostanie aktywowany tylko wtedy, gdy mysz znajdzie się nad obiektem. Jeśli zwracana jest tylko flaga POINTERINACTIVE_ACTIVATEONENTRY, obiekt zostanie aktywowany tylko raz, gdy mysz po raz pierwszy wejdzie do obiektu.
 
-Może być również potrzebna nieaktywna kontrolka, która będzie elementem docelowym operacji przeciągania i upuszczania OLE. Wymaga to aktywowania kontrolki w momencie, gdy użytkownik przeciągnie obiekt nad nim, aby okno kontrolki było rejestrowane jako miejsce docelowe upuszczania. Aby spowodować, że aktywacja wystąpi podczas przeciągania, zwróć POINTERINACTIVE_ACTIVATEONDRAG flagi:
+Możesz również chcieć nieaktywnego formantu być celem operacji przeciągania i upuszczania OLE. Wymaga to aktywowania formantu w momencie, gdy użytkownik przeciąga obiekt nad nim, dzięki czemu okno formantu może być zarejestrowane jako miejsce docelowe upuszczania. Aby spowodować aktywację podczas przeciągania, zwróć flagę POINTERINACTIVE_ACTIVATEONDRAG:
 
 [!code-cpp[NVC_MFCAxCtl#1](../../mfc/reference/codesnippet/cpp/colecontrol-class_1.cpp)]
 
-Informacje przekazywane przez `GetActivationPolicy` nie powinny być buforowane przez kontener. Zamiast tego Metoda ta powinna być wywoływana za każdym razem, gdy mysz przejdzie do nieaktywnego obiektu.
+Informacje przekazywane przez `GetActivationPolicy` nie powinny być buforowane przez kontener. Zamiast tego ta metoda powinna być wywoływana za każdym razem, gdy mysz wchodzi do nieaktywnego obiektu.
 
-Jeśli nieaktywny obiekt nie zażąda, aby znajdował się w miejscu aktywowanym po umieszczeniu wskaźnika myszy, jego kontener powinien wysyłać kolejne WM_SETCURSOR komunikatów do tego obiektu przez wywołanie [OnInactiveSetCursor](#oninactivesetcursor) o ile wskaźnik myszy znajduje się nad obiektem.
+Jeśli obiekt nieaktywny nie żąda aktywowania w miejscu po wprowadzeniu myszy, jego kontener powinien wysyłać kolejne WM_SETCURSOR wiadomości do tego obiektu, wywołując [OnInactiveSetCursor](#oninactivesetcursor) tak długo, jak wskaźnik myszy pozostaje nad obiektem.
 
-Włączenie interfejsu `IPointerInactive` zwykle oznacza, że kontrolka ma mieć możliwość przetwarzania komunikatów myszy przez cały czas. Aby można było uzyskać to zachowanie w kontenerze, który nie obsługuje interfejsu `IPointerInactive`, formant musi być zawsze aktywowany, gdy jest widoczny, co oznacza, że kontrolka powinna mieć flagę OLEMISC_ACTIVATEWHENVISIBLE między jej różnymi flagami. Aby jednak zapobiec wprowadzeniu tej flagi do kontenera, który obsługuje `IPointerInactive`, można także określić flagę OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+Włączenie `IPointerInactive` interfejsu zazwyczaj oznacza, że formant ma być w stanie przetwarzać komunikaty myszy przez cały czas. Aby uzyskać to zachowanie w kontenerze, `IPointerInactive` który nie obsługuje interfejsu, należy mieć formant zawsze aktywowany, gdy jest widoczny, co oznacza, że formant powinien mieć flagę OLEMISC_ACTIVATEWHENVISIBLE wśród jego różnych flag. Jednak aby zapobiec wprowadzaniu tej flagi w `IPointerInactive`kontenerze, który obsługuje, można również określić flagę OLEMISC_IGNOREACTIVATEWHENVISIBLE:
 
 [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]
 
-##  <a name="getambientproperty"></a>COleControl::GetAmbientProperty
+## <a name="colecontrolgetambientproperty"></a><a name="getambientproperty"></a>COleControl::GetAmbientProperty
 
 Pobiera wartość właściwości otoczenia kontenera.
 
@@ -1498,19 +1498,19 @@ BOOL GetAmbientProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispid*<br/>
-Identyfikator wysyłki odpowiedniej właściwości otoczenia.
+*dwDispid (Niedyskład*<br/>
+Identyfikator wysyłki żądanej właściwości otoczenia.
 
-*vtProp*<br/>
-Tag typu variant, który określa typ wartości, która ma zostać zwrócona w *pvProp*.
+*vtProp (vtProp)*<br/>
+Znacznik typu wariantu określający typ wartości, która ma zostać zwrócona w *pvProp*.
 
 *pvProp*<br/>
-Wskaźnik na adres zmiennej, która będzie odbierać wartość właściwości lub wartość zwracaną. Rzeczywisty typ wskaźnika musi być zgodny z typem określonym przez *vtProp*.
+Wskaźnik do adresu zmiennej, która otrzyma wartość właściwości lub wartość zwracaną. Rzeczywisty typ tego wskaźnika musi być zgodny z typem określonym przez *vtProp*.
 
-|vtProp|Typ elementu pvProp|
+|vtProp (vtProp)|Typ pvProp|
 |------------|--------------------|
 |VT_BOOL|`BOOL*`|
-|VT_BSTR|`CString*`|
+|Vt_bstr|`CString*`|
 |VT_I2|`short*`|
 |VT_I4|`long*`|
 |VT_R4|`float*`|
@@ -1520,73 +1520,73 @@ Wskaźnik na adres zmiennej, która będzie odbierać wartość właściwości l
 |VT_DISPATCH|`LPDISPATCH*`|
 |VT_FONT|`LPFONTDISP*`|
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli właściwość otoczenia jest obsługiwana; w przeciwnym razie 0.
+Nonzero, jeśli właściwość otoczenia jest obsługiwana; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli używasz `GetAmbientProperty`, aby pobrać wartość właściwości DisplayName i ScaleUnits otoczenia, ustaw wartość *vtProp* na VT_BSTR i *pvProp* na `CString*`. Jeśli pobierasz Właściwość Font otaczająca, ustaw *vtProp* na VT_FONT i *pvProp* na LPFONTDISP *.
+Jeśli używasz `GetAmbientProperty` do pobierania właściwości otaczającego DisplayName i ScaleUnits, ustaw *vtProp* na `CString*`VT_BSTR i *pvProp* na . Jeśli pobierasz właściwość otoczenia Font, ustaw *vtProp* na VT_FONT i *pvProp* na LPFONTDISP*.
 
-Należy pamiętać, że funkcje zostały już dostarczone dla wspólnych właściwości otoczenia, takich jak [AmbientBackColor](#ambientbackcolor) i [AmbientFont](#ambientfont).
+Należy zauważyć, że funkcje zostały już przewidziane dla wspólnych właściwości otoczenia, takich jak [AmbientBackColor](#ambientbackcolor) i [AmbientFont](#ambientfont).
 
-##  <a name="getappearance"></a>COleControl:: getpozornie
+## <a name="colecontrolgetappearance"></a><a name="getappearance"></a>COleControl::GetAppearance
 
-Implementuje funkcję get właściwości wyglądu akcji formantu.
+Implementuje Get funkcji właściwości wygląd akcji formantu.
 
 ```
 short GetAppearance ();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa bieżące ustawienie wyglądu jako **krótką** (VT_I2) wartość, jeśli powodzenie. Ta wartość jest równa zero, jeśli wygląd kontrolki jest płaski i 1, jeśli wygląd formantu to 3D.
+Zwracana wartość określa bieżące ustawienie wyglądu jako wartość **krótką** (VT_I2), jeśli zakończy się pomyślnie. Ta wartość wynosi zero, jeśli wygląd formantu jest płaski i 1, jeśli wygląd formantu jest 3D.
 
-##  <a name="getbackcolor"></a>COleControl::GetBackColor
+## <a name="colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl::GetBackColor
 
-Implementuje funkcję get właściwości notowań kolorów dla kontrolki.
+Implementuje Pobierz funkcję zapasów formantu BackColor właściwości.
 
 ```
 OLE_COLOR GetBackColor();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa bieżący kolor tła jako wartość OLE_COLOR, jeśli to się powiedzie. Tę wartość można przetłumaczyć na wartość COLORREF z wywołaniem do `TranslateColor`.
+Zwracana wartość określa bieżący kolor tła jako wartość OLE_COLOR, jeśli zakończy się pomyślnie. Tę wartość można przetłumaczyć na wartość COLORREF za pomocą wywołania . `TranslateColor`
 
-##  <a name="getborderstyle"></a>COleControl:: getborderer
+## <a name="colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COleControl::GetBorderStyle
 
-Implementuje funkcję get właściwości Border obramowania kontrolki.
+Implementuje Pobierz funkcję właściwości BorderStyle magazynu formantu.
 
 ```
 short GetBorderStyle();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-1, Jeśli kontrolka ma normalne obramowanie; 0, jeśli formant nie ma obramowania.
+1, jeżeli kontrola ma normalną granicę; 0, jeśli formant nie ma obramowania.
 
-##  <a name="getcapture"></a>COleControl:: getcapture
+## <a name="colecontrolgetcapture"></a><a name="getcapture"></a>COleControl::GetCapture
 
-Określa, czy obiekt `COleControl` ma przechwycić myszą.
+Określa, `COleControl` czy obiekt ma przechwytywanie myszy.
 
 ```
 CWnd* GetCapture();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jeśli kontrolka jest aktywowana i bez okna, zwraca **tę** wartość, Jeśli kontrolka ma obecnie funkcję przechwytywania myszy (określoną przez kontener kontrolki) lub wartość null, jeśli nie ma przechwytywania.
+Jeśli formant jest aktywowany i bez okien, zwraca **to,** jeśli formant ma obecnie przechwytywania myszy (zgodnie z ustaleniami przez kontener formantu) lub NULL, jeśli nie ma przechwytywania.
 
-W przeciwnym razie zwraca obiekt `CWnd`, który ma przechwycenie myszy (takie samo jak `CWnd::GetCapture`).
+W przeciwnym `CWnd` razie zwraca obiekt, który `CWnd::GetCapture`ma przechwytywanie myszy (tak samo jak ).
 
 ### <a name="remarks"></a>Uwagi
 
-Uaktywniona kontrolka bez okien odbiera przechwytywanie myszy po wywołaniu metody [setcapture](#setcapture) .
+Aktywowany formant bez okien odbiera przechwytywanie myszy, gdy wywoływana jest [setcapture.](#setcapture)
 
-##  <a name="getclassid"></a>COleControl:: GetClassID
+## <a name="colecontrolgetclassid"></a><a name="getclassid"></a>COleControl::GetClassID
 
-Wywoływane przez platformę, by pobrać identyfikator klasy OLE formantu.
+Wywoływana przez strukturę, aby pobrać identyfikator klasy OLE formantu.
 
 ```
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
@@ -1594,20 +1594,20 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pclsid*<br/>
+*sztlsid*<br/>
 Wskaźnik do lokalizacji identyfikatora klasy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się niepowodzeniem; w przeciwnym razie 0.
+Nonzero, jeśli wywołanie nie powiodło się; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle zaimplementowane przez [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).
+Zwykle realizowane przez [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).
 
-##  <a name="getclientoffset"></a>COleControl::GetClientOffset
+## <a name="colecontrolgetclientoffset"></a><a name="getclientoffset"></a>COleControl::GetClientOffset
 
-Pobiera różnicę między lewym górnym rogu prostokątnego obszaru kontrolki a lewym górnym rogiem obszaru klienckiego.
+Pobiera różnicę między lewym górnym rogu prostokątnego obszaru formantu a lewym górnym rogu jego obszaru klienta.
 
 ```
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
@@ -1615,19 +1615,19 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pdxOffset*<br/>
-Wskaźnik na przesunięcie w poziomie obszaru klienckiego kontrolki OLE.
+*pdxOffset (Polski)*<br/>
+Wskaźnik do poziomego odsunięcia obszaru klienta formantu OLE.
 
-*pdyOffset*<br/>
-Wskaźnik na przesunięcie w pionie obszaru klienckiego kontrolki OLE.
+*pdyOffset (polski)*<br/>
+Wskaźnik do pionowego odsunięcia obszaru klienta formantu OLE.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka OLE ma prostokątny obszar w obrębie jego kontenera. Obszar klienta kontrolki jest obszarem sterowania z wyjątkiem obramowań i pasków przewijania. Przesunięcie pobierane przez `GetClientOffset` to różnica między lewym górnym rogu prostokątnego obszaru kontrolki a górnym lewym rogu jego obszaru klienckiego. Jeśli kontrolka zawiera elementy nieklienckie inne niż standardowe obramowania i paski przewijania, Przesłoń tę funkcję elementu członkowskiego, aby określić przesunięcie.
+Formant OLE ma prostokątny obszar w jego kontenerze. Obszar klienta formantu jest obszarem kontrolnym z wyłączeniem obramowań i pasków przewijania. Odsunięcie `GetClientOffset` pobrane przez jest różnica między lewym górnym rogu obszaru prostokątnego formantu i lewym górnym rogu jego obszaru klienta. Jeśli formant ma elementy inne niż standardowe obramowania i paski przewijania, należy zastąpić tę funkcję elementu członkowskiego, aby określić przesunięcie.
 
-##  <a name="getclientrect"></a>COleControl::GetClientRect
+## <a name="colecontrolgetclientrect"></a><a name="getclientrect"></a>COleControl::GetClientRect
 
-Pobiera rozmiar obszaru klienckiego kontrolki.
+Pobiera rozmiar obszaru klienta formantu.
 
 ```
 virtual void GetClientRect(LPRECT lpRect) const;
@@ -1635,36 +1635,36 @@ virtual void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskaźnik do struktury `RECT` zawierającej wymiary obszaru klienckiego kontrolki bez okna; oznacza to, że rozmiar kontrolki minus obramowanie okna, ramki, paski przewijania itd. Parametr *lpRect* wskazuje rozmiar prostokąta klienta kontrolki, a nie jego położenia.
+*Lprect*<br/>
+Wskaźnik do `RECT` struktury zawierającej wymiary obszaru klienta formantu bez okien; oznacza to, że rozmiar formantu minus obramowania okien, ramki, paski przewijania i tak dalej. *Parametr lpRect* wskazuje rozmiar prostokąta klienta formantu, a nie jego położenie.
 
-##  <a name="getclientsite"></a>COleControl::GetClientSite
+## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl::GetClientSite
 
-Wysyła zapytanie do obiektu dla wskaźnika do jego bieżącej lokacji klienta w jego kontenerze.
+Wysyła zapytania do obiektu dla wskaźnika do bieżącej lokacji klienta w jego kontenerze.
 
 ```
 LPOLECLIENTSITE GetClientSite();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bieżącej lokacji klienta kontrolki w jej kontenerze.
+Wskaźnik do bieżącej lokacji klienta formantu w kontenerze.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócony wskaźnik wskazuje na wystąpienie `IOleClientSite`. Interfejs `IOleClientSite` zaimplementowany przez kontenery to widok obiektu jego kontekstu: gdzie jest zakotwiczony w dokumencie, gdzie pobiera magazyn, interfejs użytkownika i inne zasoby.
+Zwrócony wskaźnik wskazuje na `IOleClientSite`wystąpienie . Interfejs, `IOleClientSite` zaimplementowane przez kontenery, jest widok obiektu jego kontekstu: gdzie jest zakotwiczony w dokumencie, gdzie pobiera jego magazynu, interfejsu użytkownika i innych zasobów.
 
-##  <a name="getcontrolflags"></a>COleControl::GetControlFlags
+## <a name="colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COleControl::GetControlFlags
 
-Pobiera ustawienia flagi kontrolki.
+Pobiera ustawienia flagi sterowania.
 
 ```
 virtual DWORD GetControlFlags();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Kombinacja logicznie flag w wyliczeniu ControlFlags:
+ORed kombinacja flag w ControlFlags wyliczenia:
 
 ```
 enum ControlFlags {
@@ -1679,20 +1679,20 @@ enum ControlFlags {
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `GetControlFlags` zwraca `fastBeginPaint | clipPaintDC`.
+Domyślnie `GetControlFlags` zwraca `fastBeginPaint | clipPaintDC`program .
 
 |||
 |-|-|
-|`fastBeginPaint`|Jeśli jest ustawiona, używa funkcji BEGIN-Paint dopasowanej do kontrolek OLE zamiast interfejsu API [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) (domyślnie ustawiana).|
-|`clipPaintDC`|Jeśli nie zostanie ustawiona, program wyłączy wywołanie `IntersectClipRect` wykonane przez `COleControl` i uzyska niewielką korzyść. W przypadku korzystania z aktywacji bezokienkowej flaga nie ma żadnego wpływu.|
-|`pointerInactive`|Jeśli ta wartość jest ustawiona, zapewnia interakcję z myszą, gdy kontrolka jest nieaktywna, włączając implementację `COleControl`interfejs `IPointerInactive`, który jest domyślnie wyłączony.|
-|`noFlickerActivate`|Jeśli ta wartość jest ustawiona, eliminuje dodatkowe operacje rysowania i towarzyszące Migotanie wizualne. Użyj, gdy kontrolka rysuje się identycznie w stanie nieaktywnym i aktywnym. W przypadku korzystania z aktywacji bezokienkowej flaga nie ma żadnego wpływu.|
-|`windowlessActivate`|Jeśli ustawiona, oznacza, że kontrolka używa aktywacji bezokienkowej.|
-|`canOptimizeDraw`|Jeśli ta wartość jest ustawiona, oznacza, że kontrolka przeprowadzi zoptymalizowane rysowanie, jeśli kontener ją obsługuje.|
+|`fastBeginPaint`|Jeśli jest ustawiona, używa funkcji początkowej malowania dostosowanej do formantów OLE zamiast [interfejsu API BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) (ustawionej domyślnie).|
+|`clipPaintDC`|Jeśli nie jest ustawiona, `IntersectClipRect` wyłącza wywołanie wykonane przez `COleControl` i zyskuje niewielką przewagę prędkości. Jeśli używasz aktywacji bez okien, flaga nie ma wpływu.|
+|`pointerInactive`|Jeśli jest ustawiona, zapewnia interakcję myszy, gdy `COleControl`formant jest `IPointerInactive` nieaktywny, włączając implementację interfejsu, który jest domyślnie wyłączony.|
+|`noFlickerActivate`|Jeśli jest ustawiona, eliminuje dodatkowe operacje rysowania i towarzyszące mu migotanie wizualne. Użyj, gdy formant rysuje się identycznie w stanach nieaktywnych i aktywnych. Jeśli używasz aktywacji bez okien, flaga nie ma wpływu.|
+|`windowlessActivate`|Jeśli jest ustawiona, wskazuje, że formant używa aktywacji bez okien.|
+|`canOptimizeDraw`|Jeśli jest ustawiona, wskazuje, że formant wykona zoptymalizowany rysunek, jeśli kontener go obsługuje.|
 
-Aby uzyskać więcej informacji na temat `GetControlFlags` i innych optymalizacji formantów OLE, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Aby uzyskać `GetControlFlags` więcej informacji na temat i innych optymalizacji formantów OLE, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="getcontrolsize"></a>COleControl::GetControlSize
+## <a name="colecontrolgetcontrolsize"></a><a name="getcontrolsize"></a>COleControl::GetControlSize
 
 Pobiera rozmiar okna formantu OLE.
 
@@ -1704,19 +1704,19 @@ void GetControlSize(
 
 ### <a name="parameters"></a>Parametry
 
-*PCX*<br/>
+*Pcx*<br/>
 Określa szerokość formantu w pikselach.
 
-*pcy*<br/>
+*szty*<br/>
 Określa wysokość formantu w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że wszystkie współrzędne okna sterowania są względne w lewym górnym rogu kontrolki.
+Należy zauważyć, że wszystkie współrzędne okien kontrolnych są względem lewego górnego rogu formantu.
 
-##  <a name="getdc"></a>COleControl:: GetDC —
+## <a name="colecontrolgetdc"></a><a name="getdc"></a>COleControl::GetDC
 
-Zapewnia, że obiekt bez okien w celu uzyskania kontekstu urządzenia ekranu (lub zgodnego) z jego kontenera.
+Zapewnia obiekt bez okien, aby uzyskać kontekst ekranu (lub zgodne) urządzenia z jego kontenera.
 
 ```
 CDC* GetDC(
@@ -1727,92 +1727,92 @@ CDC* GetDC(
 ### <a name="parameters"></a>Parametry
 
 *lprcRect*<br/>
-Wskaźnik do prostokąta, który ma być ponownie rysowany przez kontrolkę bez okna, we współrzędnych klienta formantu. Wartość zerowa oznacza zakres pełnego obiektu.
+Wskaźnik do prostokąta formant bez okien chce przerysować, we współrzędnych klienta formantu. WARTOŚĆ NULL oznacza pełny zasięg obiektu.
 
-*flagiDW*<br/>
-Rysowanie atrybutów kontekstu urządzenia. Dostępne są następujące opcje:
+*Dwflags*<br/>
+Atrybuty rysowania kontekstu urządzenia. Dostępne są:
 
-- OLEDC_NODRAW wskazuje, że obiekt nie używa kontekstu urządzenia do wykonywania jakiegokolwiek rysowania, ale tylko do uzyskiwania informacji o urządzeniu wyświetlającym. Kontener powinien po prostu przekazać kontroler domeny okna bez dalszej obróbki.
+- OLEDC_NODRAW Wskazuje, że obiekt nie będzie używać kontekstu urządzenia do wykonywania żadnego rysunku, a jedynie w celu uzyskania informacji o urządzeniu wyświetlającym. Kontener powinien po prostu przekazać kontroler domeny okna bez dalszego przetwarzania.
 
-- OLEDC_PAINTBKGND żądania odrysowania tła przez kontener przed zwróceniem kontrolera domeny. Obiekt powinien używać tej flagi, jeśli żąda kontrolera domeny w celu przerysowania obszaru z przezroczystym tłem.
+- OLEDC_PAINTBKGND Żąda, aby kontener malował tło przed zwróceniem kontrolera domeny. Obiekt powinien używać tej flagi, jeśli żąda dc do ponownego rysowania obszaru z przezroczystym tłem.
 
-- OLEDC_OFFSCREEN informuje kontener, który obiekt chce renderować do mapy bitowej poza ekranem, która powinna zostać skopiowana na ekran. Obiekt powinien używać tej flagi, gdy operacja rysowania, która ma zostać wykonana, generuje wiele migotania. Kontener jest bezpłatny do honorowania tego żądania. Jeśli jednak ta flaga nie jest ustawiona, kontener musi odwrócić do kontrolera domeny na ekranie. Pozwala to obiektom na wykonywanie bezpośrednich operacji ekranu, takich jak wyświetlanie zaznaczenia (za pośrednictwem operacji **XOR** ).
+- OLEDC_OFFSCREEN Informuje kontenera, że obiekt chce renderować do mapy bitowej poza ekranem, które następnie powinny być kopiowane na ekran. Obiekt powinien używać tej flagi, gdy operacja rysowania, która ma zostać wykonania, generuje dużo migotania. Kontener może honorować to żądanie, czy nie. Jeśli jednak ta flaga nie jest ustawiona, kontener musi oddać ekranowy kontroler domeny. Dzięki temu obiekty mogą wykonywać bezpośrednie operacje ekranu, takie jak pokazywanie zaznaczenia (za pomocą operacji **XOR).**
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kontekstu wyświetlania urządzenia dla kontenera `CWnd` klienta w przypadku powodzenia; w przeciwnym razie zwracana wartość ma wartość NULL. Kontekstu wyświetlania urządzenia można użyć w kolejnych funkcjach GDI do rysowania w obszarze klienta okna kontenera.
+Wskaźnik do kontekstu urządzenia `CWnd` wyświetlania dla obszaru klienta kontenera, jeśli zakończy się pomyślnie; w przeciwnym razie zwracana wartość to NULL. Kontekst urządzenia wyświetlania może służyć w kolejnych funkcjach GDI do rysowania w obszarze klienta okna kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska [ReleaseDC](#releasedc) musi zostać wywołana w celu zwolnienia kontekstu po narysowaniu. Podczas wywoływania `GetDC`obiekty przekazują prostokąt, w którym chcą się narysować w swoich współrzędnych klientów. `GetDC` tłumaczy je na współrzędne obszaru klienta kontenera. Obiekt nie powinien żądać żądanego prostokąta rysowania większego niż własny prostokąt obszaru klienta, którego rozmiar można pobrać przy użyciu [GetClientRect](#getclientrect). Zapobiega to przypadkowemu rysowaniu obiektów, gdzie nie są one przypuszczalne.
+ReleaseDC funkcji [członkowskiej](#releasedc) musi być wywołana, aby zwolnić kontekst po malowaniu. Podczas `GetDC`wywoływania obiekty przekazują prostokąt, który chcą narysować we własnych współrzędnych klienta. `GetDC`przekłada je na współrzędne obszaru klienta kontenera. Obiekt nie powinien żądać żądanego prostokąta rysunku większego niż jego własny prostokąt obszaru klienta, którego rozmiar można pobrać za pomocą [GetClientRect](#getclientrect). Zapobiega to przypadkowemu rysowaniu obiektów tam, gdzie nie powinny.
 
-##  <a name="getenabled"></a>COleControl:: GetEnabled
+## <a name="colecontrolgetenabled"></a><a name="getenabled"></a>COleControl::GetEnabled
 
-Implementuje funkcję get właściwości z włączonymi zapasami kontrolki.
+Implementuje Funkcję Pobierz właściwości enabled magazynu formantu.
 
 ```
 BOOL GetEnabled();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, Jeśli kontrolka jest włączona; w przeciwnym razie 0.
+Nonzero, jeśli formant jest włączony; w przeciwnym razie 0.
 
-##  <a name="getextendedcontrol"></a>COleControl::GetExtendedControl
+## <a name="colecontrolgetextendedcontrol"></a><a name="getextendedcontrol"></a>COleControl::GetExtendedControl
 
-Uzyskuje wskaźnik do obiektu obsługiwanego przez kontener, który reprezentuje kontrolkę z rozszerzonym zestawem właściwości.
+Uzyskuje wskaźnik do obiektu obsługiwanego przez kontener, który reprezentuje formant z rozszerzonym zestawem właściwości.
 
 ```
 LPDISPATCH GetExtendedControl();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu formantu rozszerzonego kontenera. Jeśli nie ma dostępnego obiektu, wartość jest RÓWNa NULL.
+Wskaźnik do rozszerzonego obiektu sterującego kontenera. Jeśli nie ma dostępnego obiektu, wartość jest NULL.
 
-Ten obiekt może być manipulowany przez interfejs `IDispatch`. Możesz również użyć `QueryInterface`, aby uzyskać inne dostępne interfejsy dostarczone przez obiekt. Jednak obiekt nie jest wymagany do obsługi określonego zestawu interfejsów. Należy pamiętać, że poleganie na konkretnych funkcjach obiektu rozszerzonej kontroli kontenera ogranicza przenośność formantu do innych dowolnych kontenerów.
+Ten obiekt może być `IDispatch` manipulowany za pośrednictwem jego interfejsu. Można również `QueryInterface` użyć do uzyskania innych dostępnych interfejsów dostarczonych przez obiekt. Jednak obiekt nie jest wymagane do obsługi określonego zestawu interfejsów. Należy zauważyć, że poleganie na określonych cech kontenera rozszerzony obiekt kontrolny ogranicza przenośność formantu do innych dowolnych kontenerów.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja, która wywołuje tę funkcję, jest odpowiedzialna za zwolnienie wskaźnika po zakończeniu pracy z obiektem. Należy zauważyć, że kontener nie jest wymagany do obsługi tego obiektu.
+Funkcja, która wywołuje tę funkcję jest odpowiedzialny za zwolnienie wskaźnika po zakończeniu z obiektem. Należy zauważyć, że kontener nie jest wymagany do obsługi tego obiektu.
 
-##  <a name="getfocus"></a>COleControl:: GetFocus
+## <a name="colecontrolgetfocus"></a><a name="getfocus"></a>COleControl::GetFocus
 
-Określa, czy obiekt `COleControl` ma fokus.
+Określa, `COleControl` czy obiekt ma fokus.
 
 ```
 CWnd* GetFocus();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jeśli formant jest aktywowany i bez okna, zwraca **ten** element, Jeśli kontrolka ma aktualnie fokus klawiatury (zgodnie z kontenerem kontrolki) lub wartość null, jeśli nie ma fokusu.
+Jeśli formant jest aktywowany i bez okien, zwraca **to,** jeśli formant ma obecnie fokus klawiatury (zgodnie z ustaleniami kontenera formantu) lub NULL, jeśli nie ma fokusu.
 
-W przeciwnym razie zwraca obiekt `CWnd`, który ma fokus (taki sam jak `CWnd::GetFocus`).
+W przeciwnym `CWnd` razie zwraca obiekt, który `CWnd::GetFocus`ma fokus (taki sam jak ).
 
 ### <a name="remarks"></a>Uwagi
 
-Uaktywniona kontrolka bez okien otrzymuje fokus, gdy jest wywoływana funkcja [SetFocus](#setfocus) .
+Aktywowany formant bez okien odbiera fokus, gdy wywoływany jest [SetFocus.](#setfocus)
 
-##  <a name="getfont"></a>COleControl:: GetFont
+## <a name="colecontrolgetfont"></a><a name="getfont"></a>COleControl::GetFont
 
-Implementuje funkcję get właściwości "giełdowy".
+Implementuje Pobierz funkcję właściwości Font.
 
 ```
 LPFONTDISP GetFont();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu wysyłania czcionki dla właściwości czcionki giełdowej formantu.
+Wskaźnik do interfejsu wysyłania czcionek właściwości Font magazynu formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zwrócić uwagę, że obiekt wywołujący musi zwolnić obiektu po zakończeniu. W ramach implementacji kontrolki Użyj `InternalGetFont`, aby uzyskać dostęp do obiektu czcionki elementu sterującego. Aby uzyskać więcej informacji na temat używania czcionek w kontrolce, zobacz artykuł [formanty ActiveX: Używanie czcionek w kontrolce ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Należy zauważyć, że obiekt wywołujący musi zwolnić obiekt po zakończeniu. W ramach implementacji formantu użyj, `InternalGetFont` aby uzyskać dostęp do obiektu Font magazynu formantu. Aby uzyskać więcej informacji na temat używania czcionek w formancie, zobacz artykuł [Kontrolki ActiveX: Używanie czcionek w formancie ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
-##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics
+## <a name="colecontrolgetfonttextmetrics"></a><a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics
 
-Mierzy metryki tekstu dla każdego obiektu `CFontHolder` należącego do formantu.
+Mierzy metryki tekstu dla `CFontHolder` dowolnego obiektu należącego do formantu.
 
 ```
 void GetFontTextMetrics(
@@ -1823,44 +1823,44 @@ void GetFontTextMetrics(
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Wskaźnik na strukturę [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
+Wskaźnik do struktury [TEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-textmetricw)
 
 *fontHolder*<br/>
-Odwołanie do obiektu [CFontHolder](../../mfc/reference/cfontholder-class.md) .
+Odwołanie do obiektu [CFontHolder.](../../mfc/reference/cfontholder-class.md)
 
 ### <a name="remarks"></a>Uwagi
 
-Taką czcionkę można wybrać za pomocą funkcji [COleControl:: SelectFontObject](#selectfontobject) . `GetFontTextMetrics` będzie inicjować strukturę `TEXTMETRIC` wskazywaną przez *lptm* z prawidłowymi informacjami o metrykach w przypadku pomyślnej czcionki `fontHolder`, lub wypełnić strukturę zerami, jeśli nie powiedzie się. Należy używać tej funkcji zamiast [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) podczas malowania kontrolki, ponieważ kontrolki, takie jak każdy osadzony obiekt OLE, mogą być wymagane do renderowania samego metapliku.
+Taką czcionkę można wybrać za pomocą funkcji [COleControl::SelectFontObject.](#selectfontobject) `GetFontTextMetrics`rozpocznie strukturę `TEXTMETRIC` wskazywania przez *lptm* z `fontHolder`prawidłowymi informacjami o metrykach dotyczących czcionki ,,jeśli się powiedzie, lub wypełni strukturę zerami, jeśli nie powiedzie się. Tej funkcji należy użyć zamiast [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) podczas malowania formantu, ponieważ formanty, podobnie jak każdy osadzony obiekt OLE, mogą być wymagane do renderowania się w metaplik.
 
-Struktura `TEXTMETRIC` dla czcionki domyślnej jest odświeżana, gdy wywoływana jest funkcja [SelectFontObject](#selectfontobject) . Należy wywołać `GetFontTextMetrics` tylko po wybraniu właściwości podstawowe czcionki, aby upewnić się, że informacje są prawidłowe.
+Struktura `TEXTMETRIC` czcionki domyślnej jest odświeżana po wywołaniu funkcji [SelectFontObject.](#selectfontobject) Należy wywołać `GetFontTextMetrics` tylko po wybraniu właściwości font czas, aby upewnić się, że informacje, które dostarcza jest prawidłowa.
 
-##  <a name="getforecolor"></a>COleControl:: GetForeColor
+## <a name="colecontrolgetforecolor"></a><a name="getforecolor"></a>COleControl::GetForeColor
 
-Implementuje funkcję get właściwości ForeColor.
+Implementuje Pobierz funkcję akcji ForeColor właściwości.
 
 ```
 OLE_COLOR GetForeColor();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa bieżący kolor pierwszego planu jako wartość OLE_COLOR, jeśli to się powiedzie. Tę wartość można przetłumaczyć na wartość [COLORREF](/windows/win32/gdi/colorref) z wywołaniem do `TranslateColor`.
+Zwracana wartość określa bieżący kolor pierwszego planu jako wartość OLE_COLOR, jeśli zakończy się pomyślnie. Tę wartość można przetłumaczyć na wartość [COLORREF](/windows/win32/gdi/colorref) za pomocą wywołania . `TranslateColor`
 
-##  <a name="gethwnd"></a>COleControl:: GetHwnd
+## <a name="colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl::GetHwnd
 
-Implementuje funkcję get właściwości hWnd elementu.
+Implementuje Get funkcji hWnd czas właściwości.
 
 ```
 OLE_HANDLE GetHwnd();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt okna kontrolki OLE, jeśli istnieje; w przeciwnym razie wartość NULL.
+Uchwyt okna formantu OLE, jeśli istnieje; w przeciwnym razie NULL.
 
-##  <a name="getmessagestring"></a>COleControl::GetMessageString
+## <a name="colecontrolgetmessagestring"></a><a name="getmessagestring"></a>COleControl::GetMessageStrowanie
 
-Wywoływane przez platformę, aby uzyskać krótki ciąg, który opisuje przeznaczenie elementu menu identyfikowanego przez *NID*.
+Wywoływane przez strukturę, aby uzyskać krótki ciąg, który opisuje cel elementu menu identyfikowanego przez *nID*.
 
 ```
 virtual void GetMessageString(
@@ -1870,19 +1870,19 @@ virtual void GetMessageString(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identyfikator elementu menu.
 
 *rMessage*<br/>
-Odwołanie do obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) , za pomocą którego zostanie zwrócony ciąg.
+Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu, za pośrednictwem którego zostanie zwrócony ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Może służyć do uzyskania komunikatu do wyświetlania na pasku stanu, gdy element menu zostanie wyróżniony. Domyślna implementacja próbuje załadować zasób ciągu identyfikowany przez *NID*.
+Może to służyć do uzyskania wiadomości do wyświetlenia na pasku stanu, gdy element menu jest wyróżniony. Domyślna implementacja próbuje załadować zasób ciągu identyfikowany przez *nID*.
 
-##  <a name="getnotsupported"></a>COleControl::GetNotSupported
+## <a name="colecontrolgetnotsupported"></a><a name="getnotsupported"></a>COleControl::GetNotSupported
 
-Uniemożliwia dostęp do wartości właściwości kontrolki przez użytkownika.
+Uniemożliwia dostęp do wartości właściwości formantu przez użytkownika.
 
 ```
 void GetNotSupported();
@@ -1890,9 +1890,9 @@ void GetNotSupported();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję zamiast funkcji get właściwości, gdzie pobieranie właściwości przez użytkownika kontrolki nie jest obsługiwane. Przykładem może być właściwość, która jest tylko do zapisu.
+Wywołanie tej funkcji zamiast Get funkcji dowolnej właściwości, gdzie pobieranie właściwości przez użytkownika formantu nie jest obsługiwane. Jednym z przykładów może być właściwość, która jest tylko zapis.
 
-##  <a name="getreadystate"></a>COleControl::GetReadyState
+## <a name="colecontrolgetreadystate"></a><a name="getreadystate"></a>COleControl::GetReadyState
 
 Zwraca stan gotowości formantu.
 
@@ -1900,25 +1900,25 @@ Zwraca stan gotowości formantu.
 long GetReadyState();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Stan gotowości formantu, jedną z następujących wartości:
+Stan gotowości formantu, jedna z następujących wartości:
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Domyślny stan inicjowania|
-|READYSTATE_LOADING|Kontrolka aktualnie ładuje jej właściwości|
-|READYSTATE_LOADED|Kontrolka została zainicjowana|
-|READYSTATE_INTERACTIVE|Formant ma wystarczającą ilość danych, które mają być interaktywne, ale nie wszystkie dane asynchroniczne zostały jeszcze załadowane|
-|READYSTATE_COMPLETE|Kontrolka ma wszystkie dane|
+|READYSTATE_LOADING|Formant aktualnie ładuje swoje właściwości|
+|READYSTATE_LOADED|Formant został zainicjowany|
+|READYSTATE_INTERACTIVE|Control ma wystarczającą ilość danych, aby były interaktywne, ale nie wszystkie dane asynchroniczne są jeszcze załadowane|
+|READYSTATE_COMPLETE|Control ma wszystkie swoje dane|
 
 ### <a name="remarks"></a>Uwagi
 
-Najbardziej proste kontrolki nigdy nie muszą odróżnić między załadowane i interaktywne. Jednak kontrolki obsługujące właściwości ścieżki danych mogą nie być gotowe do działania w trybie interaktywnym, dopóki co najmniej część danych nie zostanie odebrana asynchronicznie. Kontrolka powinna podjąć próbę interaktywnego działania tak szybko, jak to możliwe.
+Najprostsze formanty nigdy nie trzeba rozróżniać między LOADED i INTERACTIVE. Jednak formanty, które obsługują właściwości ścieżki danych może nie być gotowy do interaktywnych, dopóki co najmniej niektóre dane są odbierane asynchronicznie. Formant powinien podjąć próbę uzyskania interakcyjnej tak szybko, jak to możliwe.
 
-##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer
+## <a name="colecontrolgetrectincontainer"></a><a name="getrectincontainer"></a>COleControl::GetRectInContainer
 
-Uzyskuje współrzędne prostokąta kontrolki względem kontenera wyrażone w jednostkach urządzeń.
+Uzyskuje współrzędne prostokąta formantu względem kontenera, wyrażone w jednostkach urządzenia.
 
 ```
 BOOL GetRectInContainer(LPRECT lpRect);
@@ -1926,20 +1926,20 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskaźnik do struktury prostokąta, do której zostaną skopiowane współrzędne kontrolki.
+*Lprect*<br/>
+Wskaźnik do struktury prostokąta, do którego współrzędne formantu zostaną skopiowane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli formant jest aktywny w miejscu; w przeciwnym razie 0.
+Nonzero, jeśli formant jest aktywny w miejscu; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Prostokąt jest prawidłowy tylko wtedy, gdy kontrolka jest aktywna.
+Prostokąt jest prawidłowy tylko wtedy, gdy formant jest aktywny w miejscu.
 
-##  <a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics
+## <a name="colecontrolgetstocktextmetrics"></a><a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics
 
-Mierzy tekst metryki dla właściwości czcionki giełdowej, którą można wybrać za pomocą funkcji [SelectStockFont](#selectstockfont) .
+Mierzy metryki tekstowe dla właściwości Font magazynu formantu, którą można wybrać za pomocą funkcji [SelectStockFont.](#selectstockfont)
 
 ```
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
@@ -1948,54 +1948,54 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Wskaźnik do struktury [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
+Wskaźnik do struktury [TEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-textmetricw)
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `GetStockTextMetrics` będzie inicjować strukturę `TEXTMETRIC` wskazywaną przez *lptm* z prawidłowymi informacjami o metrykach, jeśli się powiedzie, lub wypełnić strukturę zerami, jeśli nie powiedzie się. Użyj tej funkcji zamiast [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) podczas malowania kontrolki, ponieważ kontrolki, takie jak każdy osadzony obiekt OLE, mogą być wymagane do renderowania samego metapliku.
+Funkcja `GetStockTextMetrics` zainisalizuje `TEXTMETRIC` strukturę wskazywania przez *lptm* z prawidłowymi informacjami o metrykach, jeśli się powiedzie, lub wypełni strukturę zerami, jeśli nie powiedzie się. Użyj tej funkcji zamiast [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) podczas malowania formantu, ponieważ formanty, podobnie jak każdy osadzony obiekt OLE, mogą być wymagane do renderowania się w metaplik.
 
-Struktura `TEXTMETRIC` dla czcionki domyślnej jest odświeżana, gdy wywoływana jest funkcja `SelectStockFont`. Należy wywołać tę funkcję dopiero po wybraniu czcionki giełdowej, aby upewnić się, że informacje są prawidłowe.
+Struktura `TEXTMETRIC` czcionki domyślnej jest odświeżana, gdy `SelectStockFont` wywoływana jest funkcja. Tę funkcję należy wywołać dopiero po wybraniu czcionki giełdowej, aby upewnić się, że informacje, które dostarcza, są prawidłowe.
 
-##  <a name="gettext"></a>COleControl:: gettext
+## <a name="colecontrolgettext"></a><a name="gettext"></a>COleControl::GetText
 
-Implementuje funkcję get właściwości "text" lub "Caption".
+Implementuje Pobierz funkcję stock Text lub Caption właściwości.
 
 ```
 BSTR GetText();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość ciągu tekstowego kontrolki lub ciągu o zerowej długości, jeśli nie ma żadnego ciągu.
+Bieżąca wartość ciągu tekstowego formantu lub ciągu o zerowej długości, jeśli nie ma ciągu.
 
 > [!NOTE]
->  Aby uzyskać więcej informacji o typie danych BSTR, zobacz [typy danych](../../mfc/reference/data-types-mfc.md) w sekcji makra i Globals.
+> Aby uzyskać więcej informacji na temat typu danych BSTR, zobacz [Typy danych](../../mfc/reference/data-types-mfc.md) w sekcji Makra i Globalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że obiekt wywołujący tej funkcji musi wywoływać `SysFreeString` w ciągu zwracanym w celu zwolnienia zasobu. W ramach implementacji formantu Użyj `InternalGetText`, aby uzyskać dostęp do właściwości tekstu lub napisu kontrolki.
+Należy zauważyć, że obiekt wywołujący tej funkcji musi wywołać `SysFreeString` ciąg zwrócony w celu zwolnienia zasobu. W ramach implementacji formantu użyj, `InternalGetText` aby uzyskać dostęp do właściwości Tekst lub Podpis zapasów formantu.
 
-##  <a name="getwindowlessdroptarget"></a>COleControl::GetWindowlessDropTarget
+## <a name="colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>COleControl::GetWindowlessDropTarget
 
-Przesłoń `GetWindowlessDropTarget`, gdy chcesz, aby kontrolka bez okien była elementem docelowym operacji przeciągania i upuszczania OLE.
+Zastądnij, `GetWindowlessDropTarget` gdy formant bez okien ma być celem operacji przeciągania i upuszczania OLE.
 
 ```
 virtual IDropTarget* GetWindowlessDropTarget();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu `IDropTarget` obiektu. Ponieważ nie ma okna, obiekt bez okna nie może zarejestrować interfejsu `IDropTarget`. Jednak, aby wziąć udział w przeciąganiu i upuszczaniu, obiekt bez okien może nadal zaimplementować interfejs i zwrócić go w `GetWindowlessDropTarget`.
+Wskaźnik do `IDropTarget` interfejsu obiektu. Ponieważ nie ma okna, obiekt bez okien `IDropTarget` nie może zarejestrować interfejsu. Jednak aby wziąć udział w przeciąganiu i upuszczaniu, obiekt `GetWindowlessDropTarget`bez okien może nadal implementować interfejs i zwracać go w programie .
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle jest to wymagane, aby okno kontrolki było rejestrowane jako miejsce docelowe upuszczania. Ale ponieważ kontrolka nie ma własnego okna, Kontener użyje własnego okna jako elementu docelowego upuszczania. Formant po prostu musi dostarczyć implementację interfejsu `IDropTarget`, do którego kontener może delegować wywołania w odpowiednim czasie. Na przykład:
+Normalnie wymagałoby to, aby okno formantu zostało zarejestrowane jako miejsce docelowe upuszczania. Ale ponieważ formant nie ma własnego okna, kontener użyje własnego okna jako celu upuszczania. Formant po prostu musi zapewnić `IDropTarget` implementację interfejsu, do którego kontener może delegować wywołania w odpowiednim czasie. Przykład:
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
-##  <a name="initializeiids"></a>COleControl::InitializeIIDs
+## <a name="colecontrolinitializeiids"></a><a name="initializeiids"></a>COleControl::InicjalizacjaID
 
-Informuje klasę bazową IID, która będzie używana przez formant.
+Informuje klasę podstawową identyfikatorów IID, których będzie używać formant.
 
 ```
 void InitializeIIDs(
@@ -2005,41 +2005,41 @@ void InitializeIIDs(
 
 ### <a name="parameters"></a>Parametry
 
-*piidPrimary*<br/>
-Wskaźnik na identyfikator interfejsu podstawowego interfejsu wysyłania formantu.
+*piidPrimary (Niemka)*<br/>
+Wskaźnik do identyfikatora interfejsu głównego interfejsu wysyłki formantu.
 
 *piidEvents*<br/>
-Wskaźnik na identyfikator interfejsu interfejsu zdarzenia kontrolki.
+Wskaźnik do identyfikatora interfejsu interfejsu zdarzenia formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję w konstruktorze kontrolki, aby poinformować klasę bazową identyfikatorów interfejsów, które będą używane przez formant.
+Wywołanie tej funkcji w konstruktorze formantu, aby poinformować klasę podstawową identyfikatorów interfejsu, które będzie używany przez formant.
 
-##  <a name="internalgetfont"></a>COleControl::InternalGetFont
+## <a name="colecontrolinternalgetfont"></a><a name="internalgetfont"></a>COleControl::InternalGetFont
 
-Uzyskuje dostęp do właściwości czcionki giełdowej formantu
+Dostęp do właściwości czcionki giełdowej formantu
 
 ```
 CFontHolder& InternalGetFont();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu [CFontHolder](../../mfc/reference/cfontholder-class.md) , który zawiera obiekt fontal.
+Odwołanie do [obiektu CFontHolder,](../../mfc/reference/cfontholder-class.md) który zawiera obiekt Font.
 
-##  <a name="internalgettext"></a>COleControl::InternalGetText
+## <a name="colecontrolinternalgettext"></a><a name="internalgettext"></a>COleControl::InternalGetText
 
-Uzyskuje dostęp do właściwości tekstu lub podpisu formantu.
+Uzyskuje dostęp do właściwości Tekst lub Podpis zapasów formantu.
 
 ```
 const CString& InternalGetText();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do ciągu tekstowego formantu.
 
-##  <a name="internalsetreadystate"></a>COleControl:: InternalSetReadyState
+## <a name="colecontrolinternalsetreadystate"></a><a name="internalsetreadystate"></a>COleControl::InternalSetReadyState
 
 Ustawia stan gotowości formantu.
 
@@ -2050,23 +2050,23 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="parameters"></a>Parametry
 
 *lNewReadyState*<br/>
-Stan gotowości do ustawienia dla kontrolki, jedną z następujących wartości:
+Stan gotowości do ustawionego dla formantu, jedną z następujących wartości:
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Domyślny stan inicjowania|
-|READYSTATE_LOADING|Kontrolka aktualnie ładuje jej właściwości|
-|READYSTATE_LOADED|Kontrolka została zainicjowana|
-|READYSTATE_INTERACTIVE|Formant ma wystarczającą ilość danych, które mają być interaktywne, ale nie wszystkie dane asynchroniczne zostały jeszcze załadowane|
-|READYSTATE_COMPLETE|Kontrolka ma wszystkie dane|
+|READYSTATE_LOADING|Formant aktualnie ładuje swoje właściwości|
+|READYSTATE_LOADED|Formant został zainicjowany|
+|READYSTATE_INTERACTIVE|Control ma wystarczającą ilość danych, aby były interaktywne, ale nie wszystkie dane asynchroniczne są jeszcze załadowane|
+|READYSTATE_COMPLETE|Control ma wszystkie swoje dane|
 
 ### <a name="remarks"></a>Uwagi
 
-Najbardziej proste kontrolki nigdy nie muszą odróżnić między załadowane i interaktywne. Jednak kontrolki obsługujące właściwości ścieżki danych mogą nie być gotowe do działania w trybie interaktywnym, dopóki co najmniej część danych nie zostanie odebrana asynchronicznie. Kontrolka powinna podjąć próbę interaktywnego działania tak szybko, jak to możliwe.
+Najprostsze formanty nigdy nie trzeba rozróżniać między LOADED i INTERACTIVE. Jednak formanty, które obsługują właściwości ścieżki danych może nie być gotowy do interaktywnych, dopóki co najmniej niektóre dane są odbierane asynchronicznie. Formant powinien podjąć próbę uzyskania interakcyjnej tak szybko, jak to możliwe.
 
-##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl
+## <a name="colecontrolinvalidatecontrol"></a><a name="invalidatecontrol"></a>COleControl::InvalidateControl
 
-Wymusza, aby formant był ponownie rysowany.
+Wymusza ponowne rysowanie przez formant.
 
 ```
 void InvalidateControl(
@@ -2076,17 +2076,17 @@ void InvalidateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskaźnik do regionu kontrolki, który ma zostać unieważniony.
+*Lprect*<br/>
+Wskaźnik do regionu formantu, który ma zostać unieważniony.
 
-*bErase*<br/>
-Określa, czy tło w regionie aktualizacji ma być wymazywane, gdy region aktualizacji jest przetwarzany.
+*bErase (Niezmy)*<br/>
+Określa, czy tło w regionie aktualizacji ma zostać wymazane podczas przetwarzania regionu aktualizacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *lpRect* ma wartość null, cała kontrolka zostanie narysowana ponownie. Jeśli *lpRect* nie ma wartości null, oznacza to, że część prostokąta kontrolki, która ma zostać unieważniona. W przypadkach, gdy kontrolka nie ma okna lub nie jest aktualnie aktywna, prostokąt jest ignorowany, a wywołanie jest nawiązywane w funkcji składowej [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) lokacji klienta. Użyj tej funkcji zamiast `CWnd::InvalidateRect` lub `InvalidateRect`.
+Jeśli *lpRect* ma wartość NULL, cały formant zostanie ponownie narysowany. Jeśli *lpRect* nie jest null, oznacza to część prostokąta formantu, który ma zostać unieważniony. W przypadkach, gdy formant nie ma okna lub obecnie nie jest aktywny, prostokąt jest ignorowany i wywołanie jest wywoływane do funkcji elementu członkowskiego [IAdviseSink::OnViewChange.](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) Użyj tej funkcji `CWnd::InvalidateRect` zamiast `InvalidateRect`lub .
 
-##  <a name="invalidatergn"></a>COleControl::InvalidateRgn
+## <a name="colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl::InvalidateRgn
 
 Unieważnia obszar klienta okna kontenera w danym regionie.
 
@@ -2097,76 +2097,76 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Wskaźnik do obiektu [CRgn](../../mfc/reference/crgn-class.md) , który identyfikuje region wyświetlania obiektu OLE do unieważnienia, we współrzędnych klienta okna zawierającego. Jeśli ten parametr ma wartość NULL, zakres jest cały obiekt.
+Wskaźnik do obiektu [CRgn,](../../mfc/reference/crgn-class.md) który identyfikuje obszar wyświetlania obiektu OLE do unieważnienia, we współrzędnych klienta okna zawierającego. Jeśli ten parametr ma wartość NULL, zakres jest całym obiektem.
 
-*bErase*<br/>
-Określa, czy tło w niezweryfikowanym regionie ma być wymazane. Jeśli wartość jest równa TRUE, tło zostanie wymazane. W przypadku wartości FALSE tło pozostaje niezmienione.
+*bErase (Niezmy)*<br/>
+Określa, czy tło w unieważnionym regionie ma zostać wymazane. Jeśli true, tło jest usuwane. Jeśli FALSE, tło pozostaje niezmieniona.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do ponownego rysowania kontrolek bez okien w kontenerze. Unieważniony region, wraz ze wszystkimi innymi obszarami w regionie aktualizacji, jest oznaczony do malowania podczas wysyłania następnej wiadomości [WM_PAINT](/windows/win32/gdi/wm-paint) .
+Może to służyć do ponownego rysowania formantów bez okien w kontenerze. Unieważniony region wraz ze wszystkimi innymi obszarami w regionie aktualizacji jest oznaczony do malowania podczas wysyłania następnego [WM_PAINT](/windows/win32/gdi/wm-paint) wiadomości.
 
-Jeśli *bErase* ma wartość true dla dowolnej części regionu aktualizacji, to tło w całym regionie, a nie tylko w danej części, jest wymazywane.
+Jeśli *bErase* ma wartość TRUE dla dowolnej części regionu aktualizacji, tło w całym regionie, a nie tylko w danej części, jest usuwane.
 
-##  <a name="isconvertingvbx"></a>COleControl::IsConvertingVBX
+## <a name="colecontrolisconvertingvbx"></a><a name="isconvertingvbx"></a>COleControl::IsConvertingVBX
 
-Umożliwia wyspecjalizowane ładowanie formantu OLE.
+Umożliwia specjalistyczne ładowanie formantu OLE.
 
 ```
 BOOL IsConvertingVBX();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli formant jest konwertowany; w przeciwnym razie 0.
+Nonzero, jeśli formant jest konwertowany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku konwertowania formularza korzystającego z formantów VBX do jednego, który używa formantów OLE, może być wymagany specjalny kod ładowania dla formantów OLE. Na przykład, Jeśli ładujesz wystąpienie formantu OLE, może wystąpić wywołanie [PX_Font](persistence-of-ole-controls.md#px_font) w `DoPropExchange`:
+Podczas konwertowania formularza, który używa formantów VBX do jednego, który używa formantów OLE, może być wymagany specjalny kod ładowania dla formantów OLE. Na przykład, jeśli ładujesz wystąpienie formantu OLE, możesz mieć wywołanie [PX_Font](persistence-of-ole-controls.md#px_font) w : `DoPropExchange`
 
 [!code-cpp[NVC_MFCAxCtl#3](../../mfc/reference/codesnippet/cpp/colecontrol-class_4.cpp)]
 
-Jednak kontrolki VBX nie miały obiektu Font; Każda właściwość czcionki została zapisana pojedynczo. W takim przypadku należy użyć `IsConvertingVBX` do rozróżnienia między tymi dwoma przypadkami:
+Jednak formanty VBX nie mają Font obiektu; każda właściwość czcionki została zapisana indywidualnie. W takim przypadku należy `IsConvertingVBX` użyć do rozróżnienia między tymi dwoma przypadkami:
 
 [!code-cpp[NVC_MFCAxCtl#4](../../mfc/reference/codesnippet/cpp/colecontrol-class_5.cpp)]
 
-Innym przypadkiem jest to, że formant VBX zapisał dane binarne danych binarnych (w ramach obsługi komunikatów VBM_SAVEPROPERTY), a formant OLE zapisuje dane binarne w innym formacie. Jeśli chcesz, aby kontrolka OLE była zgodna z poprzednimi wersjami z kontrolką VBX, możesz odczytać zarówno stare, jak i nowe formaty, używając funkcji `IsConvertingVBX`, odróżnienia od tego, czy został załadowany formant VBX, czy formant OLE.
+Innym przypadkiem byłoby, jeśli kontrola VBX zapisane zastrzeżone dane binarne (w VBM_SAVEPROPERTY obsługi wiadomości), a kontrola OLE zapisuje swoje dane binarne w innym formacie. Jeśli chcesz, aby formant OLE był wstecznie zgodny z formantem VBX, możesz `IsConvertingVBX` odczytać zarówno stare, jak i nowe formaty przy użyciu tej funkcji, rozróżniając, czy ładowany był kontrola VBX, czy kontrolka OLE.
 
-W funkcji `DoPropExchange` formantu można sprawdzić, czy jest to warunek i w przypadku wartości true wykonać Wczytaj kod specyficzny dla tej konwersji (na przykład poprzednie przykłady). Jeśli formant nie jest konwertowany, można wykonać zwykły kod ładowania. Ta możliwość ma zastosowanie tylko do formantów konwertowanych z odpowiedników VBX.
+W `DoPropExchange` funkcji formantu można sprawdzić, czy ten warunek i jeśli true, wykonać kod obciążenia specyficzne dla tej konwersji (takich jak poprzednie przykłady). Jeśli formant nie jest konwertowany, można wykonać normalny kod obciążenia. Ta możliwość ma zastosowanie tylko do formantów konwertowanych z odpowiedników VBX.
 
-##  <a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed
+## <a name="colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed
 
-Włącza wywołanie metody automatyzacji.
+Umożliwia wywołanie metody automatyzacji.
 
 ```
 BOOL IsInvokeAllowed(DISPID dispid);
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, Jeśli kontrolka została zainicjowana; w przeciwnym razie 0.
+Nonzero, jeśli formant został zainicjowany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja struktury `IDispatch::Invoke` wywołań `IsInvokeAllowed` w celu ustalenia, czy dana funkcja (określona przez `dispid`) może zostać wywołana. Domyślnym zachowaniem formantu OLE jest Zezwalanie na wywoływanie metod automatyzacji tylko wtedy, gdy formant został zainicjowany. jednak `IsInvokeAllowed` jest funkcją wirtualną i można ją przesłonić w razie potrzeby (na przykład gdy kontrolka jest używana jako serwer automatyzacji).
+Implementacja ram `IDispatch::Invoke` wywołania `IsInvokeAllowed` w celu ustalenia, czy `dispid`dana funkcja (identyfikowane przez ) mogą być wywoływane. Domyślnym zachowaniem formantu OLE jest umożliwienie wywoływania metod automatyzacji tylko wtedy, gdy formant został zainicjowany; jednak `IsInvokeAllowed` jest funkcją wirtualną i może zostać zastąpiona w razie potrzeby (na przykład, gdy formant jest używany jako serwer automatyzacji).
 
-##  <a name="ismodified"></a>COleControl:: IsModified
+## <a name="colecontrolismodified"></a><a name="ismodified"></a>COleControl::JestZmodyfikowany
 
-Określa, czy stan kontrolki został zmodyfikowany.
+Określa, czy stan formantu został zmodyfikowany.
 
 ```
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli stan kontrolki został zmodyfikowany od czasu ostatniego zapisania; w przeciwnym razie 0.
+Nonzero, jeśli stan formantu został zmodyfikowany od czasu ostatniego zapisania; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Stan kontrolki jest modyfikowany, gdy właściwość zmienia wartość.
+Stan formantu jest modyfikowany, gdy właściwość zmienia wartość.
 
-##  <a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw
+## <a name="colecontrolisoptimizeddraw"></a><a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw
 
 Określa, czy kontener obsługuje zoptymalizowany rysunek dla bieżącej operacji rysowania.
 
@@ -2174,33 +2174,33 @@ Określa, czy kontener obsługuje zoptymalizowany rysunek dla bieżącej operacj
 BOOL IsOptimizedDraw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli kontener obsługuje zoptymalizowany rysunek dla bieżącej operacji rysowania; w przeciwnym razie FALSE.
+PRAWDA, jeśli kontener obsługuje zoptymalizowany rysunek dla bieżącej operacji rysowania; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli Optymalizacja jest zoptymalizowana, formant nie musi wybierać starych obiektów (pióra, pędzle, czcionki itp.) w kontekście urządzenia po zakończeniu rysowania.
+Jeśli obsługiwany jest zoptymalizowany rysunek, formant nie musi zaznaczać starych obiektów (piór, pędzli, czcionek itp.) w kontekście urządzenia po zakończeniu rysowania.
 
-##  <a name="issubclassedcontrol"></a>COleControl:: IsSubclassedControl
+## <a name="colecontrolissubclassedcontrol"></a><a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl
 
-Wywoływane przez platformę, aby określić, czy kontrolka jest podklasą kontrolki systemu Windows.
+Wywoływane przez strukturę, aby ustalić, czy podklasy formantu formantu systemu Windows.
 
 ```
 virtual BOOL IsSubclassedControl();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, Jeśli kontrolka jest podklasą; w przeciwnym razie 0.
+Niezerowe, jeśli formant jest podklasyfikowany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę funkcję i zwrócić wartość TRUE, jeśli formant OLE podklasuje kontrolkę Windows.
+Należy zastąpić tę funkcję i zwrócić wartość PRAWDA, jeśli formant OLE podklasuje formant systemu Windows.
 
-##  <a name="load"></a>COleControl:: Load
+## <a name="colecontrolload"></a><a name="load"></a>COleControl::Obciążenie
 
-Resetuje wszystkie poprzednie dane załadowane asynchronicznie i Inicjuje nowe ładowanie właściwości asynchronicznej kontrolki.
+Resetuje wszystkie poprzednie dane załadowane asynchronicznie i inicjuje nowe ładowanie właściwości asynchronicznie formantu.
 
 ```
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
@@ -2208,15 +2208,15 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 
 ### <a name="parameters"></a>Parametry
 
-*strNewPath*<br/>
-Wskaźnik do ciągu zawierającego ścieżkę odwołującą się do absolutnej lokalizacji właściwości kontrolki asynchronicznej.
+*strNewPath (Ścieżka nienastępna)*<br/>
+Wskaźnik do ciągu zawierającego ścieżkę, która odwołuje się do bezwzględnej lokalizacji właściwości formantu asynchronii.
 
-*wierszy*<br/>
-Obiekt [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) implementujący właściwość kontrolki asynchronicznej.
+*Wniosku*<br/>
+Obiekt [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) implementująca właściwość formantu asynchroniczne.
 
-##  <a name="lockinplaceactive"></a>COleControl::LockInPlaceActive
+## <a name="colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a>COleControl::LockInPlaceActive
 
-Uniemożliwia kontenerowi dezaktywowanie formantu.
+Zapobiega dezaktywacji formantu przez kontener.
 
 ```
 BOOL LockInPlaceActive(BOOL bLock);
@@ -2224,20 +2224,20 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*odblokowan*<br/>
-PRAWDA, jeśli aktywny stan formantu w miejscu ma być zablokowany; FAŁSZ, jeśli ma być odblokowany.
+*Bloku*<br/>
+PRAWDA, jeśli aktywny stan w miejscu formantu ma być zablokowany; FALSE, jeśli ma być odblokowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli blokada zakończyła się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli blokada powiodła się; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, że każde zablokowanie kontrolki musi być sparowane z odblokowaniem formantu po zakończeniu. Kontrolkę należy blokować tylko przez krótkie okresy, na przykład podczas wyzwalania zdarzenia.
+Należy zauważyć, że każde zablokowanie formantu musi być sparowane z odblokowaniem formantu po zakończeniu. Formant należy blokować tylko na krótkie okresy, na przykład podczas wypalania zdarzenia.
 
-##  <a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange
+## <a name="colecontrolonambientpropertychange"></a><a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange
 
-Wywoływane przez platformę, gdy właściwość otoczenia kontenera zmieniła wartość.
+Wywoływana przez strukturę, gdy właściwość otoczenia kontenera zmieniła wartość.
 
 ```
 virtual void OnAmbientPropertyChange(DISPID dispid);
@@ -2245,12 +2245,12 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*<br/>
-Identyfikator wysyłki właściwości otoczenia, która uległa zmianie lub DISPID_UNKNOWN, Jeśli zmieniono wiele właściwości.
+*Dispid*<br/>
+Identyfikator wysyłki właściwości otoczenia, która uległa zmianie lub DISPID_UNKNOWN, jeśli wiele właściwości uległo zmianie.
 
-##  <a name="onappearancechanged"></a>COleControl::OnAppearanceChanged
+## <a name="colecontrolonappearancechanged"></a><a name="onappearancechanged"></a>COleControl::OnAppearanceZmienione
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości wyglądu akcji.
+Wywoływana przez strukturę, gdy wartość właściwości wygląd akcji uległa zmianie.
 
 ```
 virtual void OnAppearanceChanged ();
@@ -2258,11 +2258,11 @@ virtual void OnAppearanceChanged ();
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości. Domyślne wywołania implementacji `InvalidateControl`.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości. Domyślna implementacja wywołuje `InvalidateControl`.
 
-##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged
+## <a name="colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COleControl::OnBackColorZanged
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości zmiany koloru zapasu.
+Wywoływana przez strukturę, gdy wartość właściwości backcolor magazynu uległa zmianie.
 
 ```
 virtual void OnBackColorChanged();
@@ -2270,11 +2270,11 @@ virtual void OnBackColorChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości. Domyślne wywołania implementacji `InvalidateControl`.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości. Domyślna implementacja wywołuje `InvalidateControl`.
 
-##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged
+## <a name="colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COleControl::OnBorderStyleZmienine
 
-Wywoływane przez platformę, gdy wartość właściwości Borderer została zmieniona.
+Wywoływana przez strukturę, gdy wartość właściwości BorderStyle magazynu uległa zmianie.
 
 ```
 virtual void OnBorderStyleChanged();
@@ -2282,13 +2282,13 @@ virtual void OnBorderStyleChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `InvalidateControl`.
+Domyślna implementacja wywołuje `InvalidateControl`.
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości.
 
-##  <a name="onclick"></a>COleControl:: onkliknięcia
+## <a name="colecontrolonclick"></a><a name="onclick"></a>COleControl::OnClick
 
-Wywoływane przez platformę, gdy kliknięto przycisk myszy lub metoda DoClick Stock została wywołana.
+Wywoływana przez platformę po kliknięciu przycisku myszy lub wywołano metodę doclicka.
 
 ```
 virtual void OnClick(USHORT iButton);
@@ -2296,24 +2296,24 @@ virtual void OnClick(USHORT iButton);
 
 ### <a name="parameters"></a>Parametry
 
-*iButton*<br/>
+*Przycisk iButton*<br/>
 Indeks przycisku myszy. Może mieć jedną z następujących wartości:
 
-- LEFT_BUTTON kliknięciu lewym przyciskiem myszy.
+- LEFT_BUTTON Kliknięcie lewego przycisku myszy.
 
-- MIDDLE_BUTTON kliknięciu środkowego przycisku myszy.
+- MIDDLE_BUTTON Kliknięcie środkowego przycisku myszy.
 
-- RIGHT_BUTTON kliknięciu prawym przyciskiem myszy.
+- RIGHT_BUTTON Kliknięcie prawego przycisku myszy.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `COleControl::FireClick`.
+Domyślna implementacja wywołuje `COleControl::FireClick`.
 
-Przesłoń tę funkcję elementu członkowskiego, aby zmodyfikować lub zwiększyć domyślną obsługę.
+Zastąpojąć tę funkcję elementu członkowskiego, aby zmodyfikować lub rozszerzyć domyślną obsługę.
 
-##  <a name="onclose"></a>COleControl:: OnClose
+## <a name="colecontrolonclose"></a><a name="onclose"></a>COleControl::OnClose
 
-Wywoływane przez platformę, gdy kontener wywołał funkcję `IOleControl::Close` formantu.
+Wywoływana przez strukturę, gdy kontener `IOleControl::Close` wywołał funkcję formantu.
 
 ```
 virtual void OnClose(DWORD dwSaveOption);
@@ -2321,8 +2321,8 @@ virtual void OnClose(DWORD dwSaveOption);
 
 ### <a name="parameters"></a>Parametry
 
-*dwSaveOption*<br/>
-Flaga wskazująca, czy obiekt powinien być zapisany przed załadowaniem. Prawidłowe wartości:
+*dwSaveOption (10: 100 00*<br/>
+Flaga wskazująca, czy obiekt powinien zostać zapisany przed załadowaniem. Prawidłowe wartości:
 
 - OLECLOSE_SAVEIFDIRTY
 
@@ -2332,11 +2332,11 @@ Flaga wskazująca, czy obiekt powinien być zapisany przed załadowaniem. Prawid
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `OnClose` zapisuje obiekt Control, jeśli został zmodyfikowany i *dwSaveOption* jest albo OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE.
+Domyślnie `OnClose` zapisuje obiekt kontrolny, jeśli został zmodyfikowany, a *dwSaveOption* jest OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE.
 
-##  <a name="ondoverb"></a>COleControl::OnDoVerb
+## <a name="colecontrolondoverb"></a><a name="ondoverb"></a>COleControl::OnDoVerb
 
-Wywoływane przez platformę, gdy kontener wywołuje funkcję członkowską `IOleObject::DoVerb`.
+Wywoływane przez strukturę, `IOleObject::DoVerb` gdy kontener wywołuje funkcję elementu członkowskiego.
 
 ```
 virtual BOOL OnDoVerb(
@@ -2349,30 +2349,30 @@ virtual BOOL OnDoVerb(
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Indeks zlecenia kontroli, który ma zostać wywołany.
+Indeks zlecenia kontrolnego, który ma zostać wywołany.
 
 *lpMsg*<br/>
-Wskaźnik do komunikatu systemu Windows, który spowodował wywołanie zlecenia.
+Wskaźnik do komunikatu systemu Windows, który spowodował, że zlecenie do wywołania.
 
-*hWndParent*<br/>
-Uchwyt do okna nadrzędnego formantu. Jeśli wykonanie zlecenia tworzy okno (lub Windows), *hWndParent* powinno być używane jako element nadrzędny.
+*hWndRodziciek*<br/>
+Dojście do okna nadrzędnego formantu. Jeśli wykonanie zlecenia tworzy okno (lub okna), *hWndParent* powinny być używane jako nadrzędny.
 
-*lpRect*<br/>
-Wskaźnik do struktury RECT, do którego zostaną skopiowane współrzędne kontrolki względem kontenera.
+*Lprect*<br/>
+Wskaźnik do struktury RECT, do której zostaną skopiowane współrzędne formantu względem kontenera.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Nonzero jeśli połączenie zakończyło się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna używa wpisów mapy komunikatów ON_OLEVERB i ON_STDOLEVERB, aby określić odpowiednią funkcję do wywołania.
+Domyślna implementacja używa ON_OLEVERB i ON_STDOLEVERB wpisów mapy komunikatów w celu określenia właściwej funkcji do wywołania.
 
-Zastąp tę funkcję, aby zmienić domyślną obsługę zlecenia.
+Zastądź tę funkcję, aby zmienić domyślną obsługę zlecenia.
 
-##  <a name="ondraw"></a>COleControl:: OnDraw
+## <a name="colecontrolondraw"></a><a name="ondraw"></a>COleControl::OnDraw
 
-Wywoływane przez platformę, by narysować kontrolkę OLE w określonym prostokącie ograniczenia przy użyciu określonego kontekstu urządzenia.
+Wywoływane przez strukturę do rysowania formantu OLE w określonym prostokąt granicy przy użyciu kontekstu określonego urządzenia.
 
 ```
 virtual void OnDraw(
@@ -2383,22 +2383,22 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-Kontekst urządzenia, w którym odbywa się rysowanie.
+*Pdc*<br/>
+Kontekst urządzenia, w którym występuje rysunek.
 
-*rcBounds*<br/>
-Prostokątny obszar kontrolki, łącznie z obramowaniem.
+*połączenia z rcBounds*<br/>
+Prostokątny obszar kontroli, w tym granicy.
 
-*rcInvalid*<br/>
+*rcInvalid (Niewąbrązowa*<br/>
 Prostokątny obszar formantu, który jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-`OnDraw` jest zazwyczaj wywoływana w przypadku wyświetlania ekranu, przekazanie kontekstu urządzenia ekranu jako *PDC*. Parametr *rcBounds* identyfikuje prostokąt w kontekście urządzenia docelowego (względem bieżącego trybu mapowania). Parametr *rcInvalid* jest bieżącym prostokątem, który jest nieprawidłowy. W niektórych przypadkach będzie to mniejszy obszar niż *rcBounds*.
+`OnDraw`jest zazwyczaj wywoływana do wyświetlania ekranu, przekazując kontekst urządzenia ekranowego jako *pDC*. Parametr *rcBounds* identyfikuje prostokąt w kontekście urządzenia docelowego (w stosunku do bieżącego trybu mapowania). Parametr *rcInvalid* jest rzeczywistym prostokątem, który jest nieprawidłowy. W niektórych przypadkach będzie to mniejszy obszar niż *rcBounds*.
 
-##  <a name="ondrawmetafile"></a>COleControl::OnDrawMetafile
+## <a name="colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a>COleControl::OnDrawMetafile
 
-Wywoływane przez platformę, by narysować kontrolkę OLE w określonym prostokącie obwiedni przy użyciu określonego kontekstu urządzenia metapliku.
+Wywoływane przez strukturę do rysowania formantu OLE w określonym prostokąt granicy przy użyciu określonego kontekstu urządzenia metapliku.
 
 ```
 virtual void OnDrawMetafile(
@@ -2408,19 +2408,19 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-Kontekst urządzenia, w którym odbywa się rysowanie.
+*Pdc*<br/>
+Kontekst urządzenia, w którym występuje rysunek.
 
-*rcBounds*<br/>
-Prostokątny obszar kontrolki, łącznie z obramowaniem.
+*połączenia z rcBounds*<br/>
+Prostokątny obszar kontroli, w tym granicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wywołuje funkcję [OnDraw](#ondraw) .
+Implementacja domyślna wywołuje [ondraw](#ondraw) funkcji.
 
-##  <a name="onedit"></a>COleControl:: onedit
+## <a name="colecontrolonedit"></a><a name="onedit"></a>COleControl::OnEdytuj
 
-Powoduje, że formant jest aktywowany przez interfejs użytkownika.
+Powoduje, że formant jest aktywowany interfejsu użytkownika.
 
 ```
 virtual BOOL OnEdit(
@@ -2434,27 +2434,27 @@ virtual BOOL OnEdit(
 *lpMsg*<br/>
 Wskaźnik do komunikatu systemu Windows, który wywołał zlecenie.
 
-*hWndParent*<br/>
-Uchwyt do okna nadrzędnego formantu.
+*hWndRodziciek*<br/>
+Dojście do okna nadrzędnego formantu.
 
-*lpRect*<br/>
-Wskaźnik do prostokąta używany przez formant w kontenerze.
+*Lprect*<br/>
+Wskaźnik do prostokąta używanego przez formant w kontenerze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli wywołanie zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ma to taki sam efekt jak wywoływanie czasownika OLEIVERB_UIACTIVATE formantu.
+Ma to taki sam efekt jak wywoływanie OLEIVERB_UIACTIVATE czasownika formantu.
 
-Ta funkcja jest zwykle używana jako funkcja obsługi dla wpisu mapy wiadomości ON_OLEVERB. Powoduje to, że zlecenie "Edit" jest dostępne w menu "Object" kontrolki. Na przykład:
+Ta funkcja jest zwykle używana jako funkcja obsługi dla wpisu mapy ON_OLEVERB komunikatu. Dzięki temu czasownik "Edytuj" jest dostępny w menu "Obiekt" formantu. Przykład:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
-##  <a name="onenabledchanged"></a>COleControl::OnEnabledChanged
+## <a name="colecontrolonenabledchanged"></a><a name="onenabledchanged"></a>COleControl::OnEnabledZmienił
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości z włączonymi zapasami.
+Wywoływana przez platformę, gdy wartość właściwości czas Enabled została zmieniona.
 
 ```
 virtual void OnEnabledChanged();
@@ -2462,11 +2462,11 @@ virtual void OnEnabledChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości. Domyślne wywołania implementacji [InvalidateControl](#invalidatecontrol).
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości. Domyślna implementacja wywołuje [InvalidateControl](#invalidatecontrol).
 
-##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs
+## <a name="colecontrolonenumverbs"></a><a name="onenumverbs"></a>COleControl::OnEnumVerbs
 
-Wywoływane przez platformę, gdy kontener wywołuje funkcję członkowską `IOleObject::EnumVerbs`.
+Wywoływane przez strukturę, `IOleObject::EnumVerbs` gdy kontener wywołuje funkcję elementu członkowskiego.
 
 ```
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
@@ -2475,21 +2475,21 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="parameters"></a>Parametry
 
 *ppenumOleVerb*<br/>
-Wskaźnik do obiektu `IEnumOLEVERB`, który wylicza czasowniki formantu.
+Wskaźnik do `IEnumOLEVERB` obiektu, który wylicza zlecenia formantu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli zlecenia są dostępne; w przeciwnym razie 0.
+Nonzero, jeśli czasowniki są dostępne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna wylicza ON_OLEVERB wpisów w mapie wiadomości.
+Domyślna implementacja wylicza ON_OLEVERB wpisów na mapie wiadomości.
 
-Zastąp tę funkcję, aby zmienić domyślny sposób wyliczania zleceń.
+Zastądź tę funkcję, aby zmienić domyślny sposób wyliczania zleceń.
 
-##  <a name="oneventadvise"></a>COleControl::OnEventAdvise
+## <a name="colecontroloneventadvise"></a><a name="oneventadvise"></a>COleControl::OnEventAdvise
 
-Wywoływane przez platformę, gdy procedura obsługi zdarzeń jest połączona z kontrolką OLE lub z nią odłączona.
+Wywoływana przez platformę, gdy program obsługi zdarzeń jest połączony lub odłączony od formantu OLE.
 
 ```
 virtual void OnEventAdvise(BOOL bAdvise);
@@ -2498,11 +2498,11 @@ virtual void OnEventAdvise(BOOL bAdvise);
 ### <a name="parameters"></a>Parametry
 
 *bAdvise*<br/>
-Wartość TRUE wskazuje, że program obsługi zdarzeń został połączony z kontrolką. Wartość FALSE wskazuje, że program obsługi zdarzeń został odłączony od formantu.
+PRAWDA wskazuje, że program obsługi zdarzeń został połączony z formantem. FALSE wskazuje, że program obsługi zdarzeń został odłączony od formantu.
 
-##  <a name="onfontchanged"></a>COleControl::OnFontChanged
+## <a name="colecontrolonfontchanged"></a><a name="onfontchanged"></a>COleControl::OnFontZmienia
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości czcionki giełdowej.
+Wywoływana przez strukturę, gdy wartość właściwości font magazynu uległa zmianie.
 
 ```
 virtual void OnFontChanged();
@@ -2510,17 +2510,17 @@ virtual void OnFontChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `COleControl::InvalidateControl`. Jeśli kontrolka jest podklasą kontrolki systemu Windows, domyślna implementacja również wysyła komunikat WM_SETFONT do okna kontrolki.
+Domyślna implementacja wywołuje `COleControl::InvalidateControl`. Jeśli formant jest podklasy formantu systemu Windows, domyślna implementacja wysyła również komunikat WM_SETFONT do okna formantu.
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCAxCtl#6](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]
 
-##  <a name="onforecolorchanged"></a>COleControl::OnForeColorChanged
+## <a name="colecontrolonforecolorchanged"></a><a name="onforecolorchanged"></a>COleControl::OnForeColorZmienił
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości ForeColor zasobu.
+Wywoływana przez strukturę, gdy wartość właściwości forecolor magazynu uległa zmianie.
 
 ```
 virtual void OnForeColorChanged();
@@ -2528,13 +2528,13 @@ virtual void OnForeColorChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `InvalidateControl`.
+Domyślna implementacja wywołuje `InvalidateControl`.
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości.
 
-##  <a name="onfreezeevents"></a>COleControl::OnFreezeEvents
+## <a name="colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl::OnFreezeEvents
 
-Wywoływane przez platformę po `IOleControl::FreezeEvents`wywołań kontenera.
+Wywoływana przez strukturę `IOleControl::FreezeEvents`po wywołaniu kontenera .
 
 ```
 virtual void OnFreezeEvents(BOOL bFreeze);
@@ -2542,18 +2542,18 @@ virtual void OnFreezeEvents(BOOL bFreeze);
 
 ### <a name="parameters"></a>Parametry
 
-*bFreeze*<br/>
-PRAWDA, jeśli obsługa zdarzeń kontrolki jest zamrożona; w przeciwnym razie FALSE.
+*bZamk.*<br/>
+PRAWDA, jeśli obsługa zdarzeń formantu jest zablokowana; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja nie robi nic.
+Domyślna implementacja nic nie robi.
 
-Przesłoń tę funkcję, jeśli chcesz mieć dodatkowe zachowanie w przypadku zamrożonej lub niezamrożonej obsługi zdarzeń.
+Zastąp tę funkcję, jeśli chcesz dodatkowe zachowanie, gdy obsługa zdarzeń jest zablokowany lub odblokowany.
 
-##  <a name="ongetcolorset"></a>COleControl::OnGetColorSet
+## <a name="colecontrolongetcolorset"></a><a name="ongetcolorset"></a>COleControl::OnGetColorSet
 
-Wywoływane przez platformę, gdy kontener wywołuje funkcję członkowską `IViewObject::GetColorSet`.
+Wywoływane przez strukturę, `IViewObject::GetColorSet` gdy kontener wywołuje funkcję elementu członkowskiego.
 
 ```
 virtual BOOL OnGetColorSet(
@@ -2564,28 +2564,28 @@ virtual BOOL OnGetColorSet(
 
 ### <a name="parameters"></a>Parametry
 
-*ptd*<br/>
-Wskazuje na urządzenie docelowe, dla którego ma być renderowany obraz. Jeśli ta wartość jest RÓWNa NULL, obraz powinien być renderowany dla domyślnego urządzenia docelowego, zazwyczaj urządzenia wyświetlającego.
+*Ptd*<br/>
+Wskazuje urządzenie docelowe, dla którego obraz powinien być renderowany. Jeśli ta wartość ma wartość NULL, obraz powinien być renderowany dla domyślnego urządzenia docelowego, zwykle urządzenia wyświetlającego.
 
-*hicTargetDev*<br/>
-Określa kontekst informacji na urządzeniu docelowym wskazywanym przez *PTD*. Ten parametr może być kontekstem urządzenia, ale nie jest to konieczne. Jeśli *PTD* ma wartość null, *hicTargetDev* powinien również mieć wartość null.
+*hicTargetDev (hicTargetDev)*<br/>
+Określa kontekst informacji na urządzeniu docelowym wskazanym przez *ptd*. Ten parametr może być kontekstem urządzenia, ale nie jest jednym koniecznie. Jeśli *ptd* ma wartość NULL, *hicTargetDev* również powinien mieć wartość NULL.
 
-*ppColorSet*<br/>
-Wskaźnik do lokalizacji, do której ma zostać skopiowany zestaw kolorów, które mają zostać użyte. Jeśli funkcja nie zwraca zestawu kolorów, zwracana jest wartość NULL.
+*zestaw ppColorSet*<br/>
+Wskaźnik do lokalizacji, do której należy skopiować zestaw kolorów, które będą używane. Jeśli funkcja nie zwraca zestawu kolorów, zwracana jest wartość NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli jest zwracany prawidłowy zestaw kolorów; w przeciwnym razie 0.
+Nonzero, jeśli zwracany jest prawidłowy zestaw kolorów; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontener wywołuje tę funkcję, aby uzyskać wszystkie kolory, które są konieczne do rysowania kontrolki OLE. Kontener może używać zestawów kolorów uzyskanych w połączeniu z kolory potrzebne do ustawienia ogólnej palety kolorów. Domyślna implementacja zwraca wartość FALSE.
+Kontener wywołuje tę funkcję, aby uzyskać wszystkie kolory potrzebne do narysowania formantu OLE. Kontener może używać zestawów kolorów uzyskanych w połączeniu z kolorami, których potrzebuje do skonfigurowania ogólnej palety kolorów. Domyślna implementacja zwraca WARTOŚĆ FAŁSZ.
 
-Przesłoń tę funkcję, aby wykonać wszelkie specjalne przetwarzanie tego żądania.
+Zastąd w tej funkcji należy wykonać specjalne przetwarzanie tego żądania.
 
-##  <a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo
+## <a name="colecontrolongetcontrolinfo"></a><a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo
 
-Wywoływane przez platformę, gdy kontener kontrolki zażądał informacji o kontrolce.
+Wywoływana przez platformę, gdy kontener formantu zażądał informacji o formancie.
 
 ```
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
@@ -2594,17 +2594,17 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ### <a name="parameters"></a>Parametry
 
 *pControlInfo*<br/>
-Wskaźnik do struktury [CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo) , która ma zostać wypełniona.
+Wskaźnik do struktury [CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo) do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Te informacje obejmują głównie opis klawiszy kontrolki. Domyślna implementacja powoduje wypełnienie *pControlInfo* z informacjami domyślnymi.
+Informacje te składają się głównie z opisu kluczy mnemonicznych formantu. Domyślna implementacja wypełnia *pControlInfo* informacjami domyślnymi.
 
-Przesłoń tę funkcję, Jeśli kontrolka wymaga przetworzenia kluczy.
+Zastąpuj tę funkcję, jeśli formant musi przetwarzać klucze mnemoniczne.
 
-##  <a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString
+## <a name="colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString
 
-Wywoływane przez platformę, aby uzyskać ciąg, który reprezentuje bieżącą wartość właściwości identyfikowanej przez *DISPID*.
+Wywoływane przez strukturę, aby uzyskać ciąg, który reprezentuje bieżącą wartość właściwości identyfikowane przez *dispid*.
 
 ```
 virtual BOOL OnGetDisplayString(
@@ -2614,39 +2614,39 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki właściwości formantu.
 
-*strValue*<br/>
-Odwołanie do obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) , za pomocą którego zostanie zwrócony ciąg.
+*strValue (wartość)*<br/>
+Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu, za pośrednictwem którego zostanie zwrócony ciąg.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli ciąg został zwrócony w *strValue;* w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka ma właściwość, której wartość nie może być bezpośrednio konwertowana na ciąg i chcesz, aby wartość właściwości była wyświetlana w przeglądarce właściwości dostarczonej z kontenerem.
+Zastąd w tej funkcji, jeśli formant ma właściwość, której wartość nie może być bezpośrednio konwertowana na ciąg i chcesz, aby wartość właściwości była wyświetlana w przeglądarce właściwości dostarczonych przez kontener.
 
-##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu
+## <a name="colecontrolongetinplacemenu"></a><a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu
 
-Wywoływane przez platformę, gdy kontrolka jest aktywowana przez interfejs użytkownika w celu uzyskania menu, które ma zostać scalone z istniejącym menu kontenera.
+Wywoływane przez platformę, gdy formant jest aktywowany w celu uzyskania menu do scalenia w istniejącym menu kontenera.
 
 ```
 virtual HMENU OnGetInPlaceMenu();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt menu kontrolki lub wartość NULL, jeśli formant nie ma żadnego elementu. Domyślna implementacja zwraca wartość NULL.
+Dojście menu formantu lub NULL, jeśli formant nie ma żadnego. Domyślna implementacja zwraca wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat scalania zasobów OLE, zobacz [menu artykułów i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).
+Aby uzyskać więcej informacji na temat scalania zasobów OLE, zobacz artykuł [Menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).
 
-##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent
+## <a name="colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IViewObjectEx::GetNaturalExtent` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IViewObjectEx::GetNaturalExtent` na żądanie kontenera.
 
 ```
 virtual BOOL OnGetNaturalExtent(
@@ -2661,19 +2661,19 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Określa sposób reprezentowania obiektu. Reprezentacje obejmują zawartość, ikonę, miniaturę lub dokument drukowany. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
+Określa sposób reprezentowania obiektu. Reprezentacje obejmują zawartość, ikonę, miniaturę lub wydrukowany dokument. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
 
-*lindex*<br/>
-Część interesującego obiektu. Obecnie tylko-1 jest prawidłowy.
+*Lindex*<br/>
+Część obiektu, która jest przedmiotem zainteresowania. Obecnie tylko -1 jest ważny.
 
-*ptd*<br/>
-Wskazuje strukturę [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definiującą urządzenie docelowe, dla którego ma zostać zwrócony rozmiar obiektu.
+*Ptd*<br/>
+Wskazuje strukturę [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definiującą urządzenie docelowe, dla którego należy zwrócić rozmiar obiektu.
 
-*hicTargetDev*<br/>
-Określa kontekst informacji dla urządzenia docelowego wskazywanego przez parametr *PTD* , z którego obiekt może wyodrębnić metryki urządzeń i przetestować możliwości urządzenia. Jeśli *PTD* ma wartość null, obiekt powinien ignorować wartość w parametrze *hicTargetDev* .
+*hicTargetDev (hicTargetDev)*<br/>
+Określa kontekst informacji dla urządzenia docelowego wskazanego przez parametr *ptd,* z którego obiekt może wyodrębnić metryki urządzenia i przetestować możliwości urządzenia. Jeśli *ptd* ma wartość NULL, obiekt powinien zignorować wartość w *parametrze hicTargetDev.*
 
 *pExtentInfo*<br/>
-Wskazuje strukturę `DVEXTENTINFO`, która określa dane dotyczące zmiany wielkości. Struktura `DVEXTENTINFO`:
+Wskazuje strukturę, `DVEXTENTINFO` która określa dane rozmiaru. Struktura `DVEXTENTINFO` jest:
 
 ```cpp
 typedef struct tagExtentInfo
@@ -2684,26 +2684,26 @@ typedef struct tagExtentInfo
 }   DVEXTENTINFO;
 ```
 
-Element członkowski struktury `dwExtentMode` może przyjmować jedną z dwóch wartości:
+Element członkowski `dwExtentMode` struktury może przyjąć jedną z dwóch wartości:
 
-- DVEXTENT_CONTENT dowiedzieć się, jak Big formant powinien być dokładnie dopasowany do zawartości (przyciąganie do rozmiaru)
+- DVEXTENT_CONTENT Zapytaj, jak duża powinna być kontrola, aby dokładnie dopasować zawartość (snap-to-size)
 
-- DVEXTENT_INTEGRAL podczas zmiany rozmiaru, Przekaż Proponowany rozmiar do kontrolki
+- DVEXTENT_INTEGRAL Podczas zmiany rozmiaru, przekaż proponowany rozmiar do kontroli
 
-*psizel*<br/>
-Wskazuje rozmiar danych zwracanych przez formant. Zwrócone dane rozmiaru są ustawiane na wartość-1 dla dowolnego wymiaru, który nie został dostosowany.
+*psizel (psizel)*<br/>
+Wskazuje na dane rozmiaru zwracane przez formant. Zwrócone dane rozmiaru jest ustawiona na -1 dla dowolnego wymiaru, który nie został dostosowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera, jeśli pomyślnie zwraca lub dostosowuje rozmiar; w przeciwnym razie 0.
+Nonzero, jeśli pomyślnie zwraca lub dostosowuje rozmiar; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, aby przywrócić rozmiar wyświetlania obiektu znajdujący się najbliżej proponowanego rozmiaru i trybu zakresu w strukturze `DVEXTENTINFO`. Domyślna implementacja zwraca wartość FALSE i nie wprowadza żadnych zmian rozmiaru.
+Zastąd zniszcz tę funkcję, aby przywrócić rozmiar wyświetlania obiektu najbliżej `DVEXTENTINFO` proponowanego trybu rozmiaru i zasięgu w strukturze. Domyślna implementacja zwraca FALSE i nie wprowadza żadnych korekt do rozmiaru.
 
-##  <a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings
+## <a name="colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings
 
-Wywoływane przez platformę w celu uzyskania zestawu wstępnie zdefiniowanych ciągów reprezentujących możliwe wartości właściwości.
+Wywoływane przez strukturę, aby uzyskać zestaw wstępnie zdefiniowanych ciągów reprezentujących możliwe wartości dla właściwości.
 
 ```
 virtual BOOL OnGetPredefinedStrings(
@@ -2714,26 +2714,26 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki właściwości formantu.
 
-*pStringArray*<br/>
-Tablica ciągów, która ma zostać wypełniona wartościami zwracanymi.
+*pStringArray (Właz)*<br/>
+Tablica ciągów, która ma być wypełniona wartościami zwracanym.
 
-*pCookieArray*<br/>
-Tablica DWORD, która ma zostać wypełniona wartościami zwracanymi.
+*pCookieArray (pCookieArray)*<br/>
+Tablica DWORD, która ma być wypełniona wartościami zwracanym.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli dodano elementy do *pStringArray* i *pCookieArray*.
+Nonzero jeśli elementy zostały dodane do *pStringArray* i *pCookieArray*.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka ma właściwość z zestawem możliwych wartości, które mogą być reprezentowane przez ciągi. Dla każdego elementu dodanego do *pStringArray*należy dodać odpowiadający element "cookie" do *pCookieArray.* Te wartości "cookie" mogą być później przesyłane przez platformę do funkcji `COleControl::OnGetPredefinedValue`.
+Zastądnie tej funkcji, jeśli formant ma właściwość z zestawem możliwych wartości, które mogą być reprezentowane przez ciągi. Dla każdego elementu dodanego do *pStringArray*należy dodać odpowiedni element "cookie" do *pCookieArray.* Te wartości "cookie" mogą być później `COleControl::OnGetPredefinedValue` przekazywane przez ramy do funkcji.
 
-##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue
+## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue
 
-Wywoływane przez platformę, aby uzyskać wartość odpowiadającą jednemu ze wstępnie zdefiniowanych ciągów zwracanych wcześniej przez przesłonięcie `COleControl::OnGetPredefinedStrings`.
+Wywoływane przez strukturę, aby uzyskać wartość odpowiadającą jednemu ze wstępnie zdefiniowanych `COleControl::OnGetPredefinedStrings`ciągów wcześniej zwróconych przez zastąpienie .
 
 ```
 virtual BOOL OnGetPredefinedValue(
@@ -2744,22 +2744,22 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki właściwości formantu.
 
-*dwCookie*<br/>
-Wartość cookie poprzednio zwrócona przez przesłonięcie `COleControl::OnGetPredefinedStrings`.
+*dwCookie (właśc.*<br/>
+Wartość pliku cookie zwrócona wcześniej przez `COleControl::OnGetPredefinedStrings`zastąpienie .
 
-*lpvarOut*<br/>
-Wskaźnik do struktury `VARIANT`, za pomocą której zostanie zwrócona wartość właściwości.
+*lpvarOut (lpvarOut)*<br/>
+Wskaźnik do `VARIANT` struktury, za pomocą której zostanie zwrócona wartość właściwości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wartość została zwrócona w *lpvarOut*; w przeciwnym razie 0.
+Nonzero, jeśli wartość została zwrócona w *lpvarOut*; w przeciwnym razie 0.
 
-##  <a name="ongetviewextent"></a>COleControl::OnGetViewExtent
+## <a name="colecontrolongetviewextent"></a><a name="ongetviewextent"></a>COleControl::OnGetViewExtent
 
-Wywoływane przez platformę w odpowiedzi na żądanie [IViewObject2:: getzakres](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) .
+Wywoływane przez platformę w odpowiedzi na żądanie [IViewObject2::GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) kontenera.
 
 ```
 virtual BOOL OnGetViewExtent(
@@ -2772,28 +2772,28 @@ virtual BOOL OnGetViewExtent(
 ### <a name="parameters"></a>Parametry
 
 *dwDrawAspect*<br/>
-Wartość DWORD opisująca, która forma lub aspekt obiektu ma być wyświetlany. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
+DWORD opisujący formę lub aspekt obiektu ma być wyświetlany. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
 
-*lindex*<br/>
-Część interesującego obiektu. Obecnie tylko-1 jest prawidłowy.
+*Lindex*<br/>
+Część obiektu, która jest przedmiotem zainteresowania. Obecnie tylko -1 jest ważny.
 
-*ptd*<br/>
-Wskazuje strukturę [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definiującą urządzenie docelowe, dla którego ma zostać zwrócony rozmiar obiektu.
+*Ptd*<br/>
+Wskazuje strukturę [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definiującą urządzenie docelowe, dla którego należy zwrócić rozmiar obiektu.
 
 *lpsizel*<br/>
-Wskazuje lokalizację, w której jest zwracany rozmiar obiektu.
+Wskazuje lokalizację, w której zwracany jest rozmiar obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli informacje o zakresie zostały pomyślnie zwrócone; w przeciwnym razie 0.
+Nonzero, jeśli informacje o zakresie jest pomyślnie zwracany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, jeśli formant używa rysowania dwuetapowego, a jego części nieprzezroczyste i przezroczyste mają różne wymiary.
+Zastąpokaj tę funkcję, jeśli formant używa rysunku dwuprzebiegowego, a jego części nieprzezroczyste i przezroczyste mają różne wymiary.
 
-##  <a name="ongetviewrect"></a>COleControl::OnGetViewRect
+## <a name="colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl::OnGetViewRect
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IViewObjectEx::GetRect` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IViewObjectEx::GetRect` na żądanie kontenera.
 
 ```
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
@@ -2802,51 +2802,51 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Wartość DWORD opisująca, która forma lub aspekt obiektu ma być wyświetlany. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2:
+DWORD opisujący formę lub aspekt obiektu ma być wyświetlany. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2:
 
-- DVASPECT_CONTENTy prostokąt ograniczający cały obiekt. Lewy górny róg w pochodzeniu obiektu i rozmiarze równy zakresowi zwróconemu przez `GetViewExtent` *.*
+- DVASPECT_CONTENT Prostokąt ograniczający całego obiektu. Lewy górny róg w miejscu pochodzenia i rozmiaru `GetViewExtent`obiektu równy zakresowi zwracany przez *program .*
 
-- DVASPECT_OPAQUE obiektów z prostokątnym regionem nieprzezroczystym zwraca ten prostokąt. Inne nie powiodą się.
+- DVASPECT_OPAQUE obiekty z prostokątnym nieprzezroczystym regionem zwracają ten prostokąt. Inni zawodzą.
 
-- DVASPECT_TRANSPARENT prostokąt obejmujący wszystkie nieprzezroczyste lub nieregularne części.
+- DVASPECT_TRANSPARENT Prostokąt obejmujący wszystkie przezroczyste lub nieregularne części.
 
 *pRect*<br/>
-Wskazuje na strukturę [recta](/previous-versions/dd162907\(v=vs.85\)) określającą prostokąt, w którym obiekt powinien być rysowany. Ten parametr steruje rozmieszczeniem i rozciąganiem obiektu.
+Wskazuje strukturę [RECTL](/previous-versions/dd162907\(v=vs.85\)) określającą prostokąt, w którym obiekt powinien zostać narysowany. Ten parametr steruje pozycjonowaniem i rozciąganiem obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli rozmiar prostokąta do obiektu został pomyślnie zwrócony; w przeciwnym razie 0.
+Niezerowe, jeśli prostokąt o rozmiarze do obiektu jest pomyślnie zwracany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar obiektu jest konwertowany przez `OnGetViewRect` do prostokąta rozpoczynającego się w określonej pozycji (wartość domyślna to górny lewy róg ekranu). Przesłoń tę funkcję, jeśli formant używa rysowania dwuetapowego, a jego części nieprzezroczyste i przezroczyste mają różne wymiary.
+Rozmiar obiektu jest konwertowany przez `OnGetViewRect` prostokąt rozpoczynający się w określonej pozycji (domyślnie jest to lewy górny róg wyświetlacza). Zastąpokaj tę funkcję, jeśli formant używa rysunku dwuprzebiegowego, a jego części nieprzezroczyste i przezroczyste mają różne wymiary.
 
-##  <a name="ongetviewstatus"></a>COleControl::OnGetViewStatus
+## <a name="colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl::OnGetViewStatus
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IViewObjectEx::GetViewStatus` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IViewObjectEx::GetViewStatus` na żądanie kontenera.
 
 ```
 virtual DWORD OnGetViewStatus();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości wyliczenia podwójne, jeśli to się powiedzie; w przeciwnym razie 0. Możliwe wartości to następujące:
+Jedną z wartości wyliczenia VIEWSTATUS, jeśli zakończy się pomyślnie; w przeciwnym razie 0. Możliwe wartości to dowolna kombinacja następujących wartości:
 
 |||
 |-|-|
-|VIEWSTATUS_OPAQUE|Obiekt jest całkowicie nieprzezroczysty. Jeśli ten bit nie jest ustawiony, obiekt zawiera elementy przezroczyste. Ten bit ma zastosowanie tylko do aspektów związanych z treścią, a nie do DVASPECT_ICON lub DVASPECT_DOCPRINT.|
-|VIEWSTATUS_SOLIDBKGND|Obiekt ma pełne tło (składające się z pełnego koloru, a nie wzorca pędzla). Ten bit ma znaczenie tylko wtedy, gdy VIEWSTATUS_OPAQUE jest ustawiony i ma zastosowanie tylko do aspektów związanych z treścią, a nie do DVASPECT_ICON lub DVASPECT_DOCPRINT.|
-|VIEWSTATUS_DVASPECTOPAQUE|Object supports DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx, które pobierają aspekt rysowania jako parametr można wywołać przy użyciu tego aspektu.|
-|VIEWSTATUS_DVASPECTTRANSPARENT|Obiekt obsługuje DVASPECT_TRANSPARENT. Wszystkie metody `IViewObjectEx`, które pobierają aspekt rysowania jako parametr można wywołać przy użyciu tego aspektu.|
+|VIEWSTATUS_OPAQUE|Obiekt jest całkowicie nieprzezroczysty. Jeśli ten bit nie jest ustawiony, obiekt zawiera części przezroczyste. Ten bit dotyczy tylko aspektów związanych z zawartością, a nie DVASPECT_ICON lub DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Obiekt ma stałe tło (składające się z jednolitego koloru, a nie wzoru pędzla). Ten bit ma znaczenie tylko wtedy, gdy jest ustawiona VIEWSTATUS_OPAQUE i ma zastosowanie tylko do aspektów związanych z zawartością, a nie do DVASPECT_ICON lub DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Obiekt obsługuje DVASPECT_OPAQUE. Wszystkie metody IViewObjectEx, które przyjmują aspekt rysunku jako parametr, można wywołać z tym aspektem.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Obiekt obsługuje DVASPECT_TRANSPARENT. Wszystkie `IViewObjectEx` metody, które przyjmują aspekt rysunku jako parametr, można wywołać w tym aspekcie.|
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka używa rysowania dwuetapowego. Domyślna implementacja zwraca VIEWSTATUS_OPAQUE.
+Zastądnie tej funkcji, jeśli formant używa rysunku dwuprzebiegowego. Domyślna implementacja zwraca VIEWSTATUS_OPAQUE.
 
-##  <a name="onhidetoolbars"></a>COleControl::OnHideToolBars
+## <a name="colecontrolonhidetoolbars"></a><a name="onhidetoolbars"></a>COleControl::OnHideToolBars
 
-Wywoływane przez platformę, gdy kontrolka jest zdezaktywowana przez interfejs użytkownika.
+Wywoływane przez platformę, gdy formant jest dezaktywowany interfejsu użytkownika.
 
 ```
 virtual void OnHideToolBars();
@@ -2854,11 +2854,11 @@ virtual void OnHideToolBars();
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja powinna ukrywać wszystkie paski narzędzi wyświetlane przez `OnShowToolbars`.
+Implementacja powinna ukryć wszystkie paski `OnShowToolbars`narzędzi wyświetlane przez program .
 
-##  <a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove
+## <a name="colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove
 
-Wywoływane przez kontener dla nieaktywnego obiektu pod wskaźnikiem myszy po odebraniu komunikatu WM_MOUSEMOVE.
+Wywoływany przez kontener dla nieaktywnego obiektu pod wskaźnikiem myszy po otrzymaniu komunikatu WM_MOUSEMOVE.
 
 ```
 virtual void OnInactiveMouseMove(
@@ -2870,25 +2870,25 @@ virtual void OnInactiveMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*lprcBounds*<br/>
-Prostokąt ograniczający obiekt w współrzędnej klienta okna zawierającego. Informuje obiekt o dokładnej pozycji i rozmiarze na ekranie po odebraniu komunikatu WM_MOUSEMOVE.
+*lprcBounds (Obfity)*<br/>
+Prostokąt ograniczający obiekt we współrzędnych klienta okna zawierającego. Informuje obiekt o jego dokładnej pozycji i rozmiarze na ekranie po odebraniu WM_MOUSEMOVE wiadomości.
 
-*y*<br/>
-Współrzędna x lokalizacji myszy w współrzędnej klienta okna zawierającego.
+*X*<br/>
+Współrzędna x lokalizacji myszy we współrzędnych klienta okna zawierającego.
 
-*t*<br/>
-Współrzędna y lokalizacji myszy w współrzędnej klienta okna zawierającego.
+*Y*<br/>
+Współrzędna y położenia myszy we współrzędnych klienta okna zawierającego.
 
-*dwKeyState*<br/>
-Określa bieżący stan klawiszy modyfikujących klawiaturę na klawiaturze. Prawidłowe wartości mogą być kombinacją dowolnej z flag MK_CONTROL, MK_SHIFT, MK_ALT, MK_BUTTON, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
+*dwKeyState (Stan klucza)*<br/>
+Identyfikuje bieżący stan klawiszy modyfikatora klawiatury na klawiaturze. Prawidłowe wartości mogą być kombinacją dowolnej flagi MK_CONTROL, MK_SHIFT, MK_ALT, MK_BUTTON, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że współrzędne klienta okna są używane do przekazywania położenia kursora myszy. Jest to możliwe przez również przekazanie prostokąta związanego z obiektem w tym samym układzie współrzędnych.
+Należy zauważyć, że współrzędne klienta okna (piksele) są używane do przekazywania pozycji kursora myszy. Jest to możliwe dzięki przekazaniu prostokąta ograniczającego obiektu w tym samym układzie współrzędnych.
 
-##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor
+## <a name="colecontroloninactivesetcursor"></a><a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor
 
-Wywoływane przez kontener dla nieaktywnego obiektu pod wskaźnikiem myszy po odebraniu komunikatu WM_SETCURSOR.
+Wywoływany przez kontener dla nieaktywnego obiektu pod wskaźnikiem myszy po otrzymaniu komunikatu WM_SETCURSOR.
 
 ```
 virtual BOOL OnInactiveSetCursor(
@@ -2901,32 +2901,32 @@ virtual BOOL OnInactiveSetCursor(
 
 ### <a name="parameters"></a>Parametry
 
-*lprcBounds*<br/>
-Prostokąt ograniczający obiekt w współrzędnej klienta okna zawierającego. Informuje obiekt o dokładnej pozycji i rozmiarze na ekranie po odebraniu komunikatu WM_SETCURSOR.
+*lprcBounds (Obfity)*<br/>
+Prostokąt ograniczający obiekt we współrzędnych klienta okna zawierającego. Informuje obiekt o jego dokładnej pozycji i rozmiarze na ekranie po odebraniu WM_SETCURSOR wiadomości.
 
-*y*<br/>
-Współrzędna x lokalizacji myszy w współrzędnej klienta okna zawierającego.
+*X*<br/>
+Współrzędna x lokalizacji myszy we współrzędnych klienta okna zawierającego.
 
-*t*<br/>
-Współrzędna y lokalizacji myszy w współrzędnej klienta okna zawierającego.
+*Y*<br/>
+Współrzędna y położenia myszy we współrzędnych klienta okna zawierającego.
 
 *dwMouseMsg*<br/>
-Identyfikator komunikatu myszy, dla którego wystąpiło WM_SETCURSOR.
+Identyfikator komunikatu myszy, dla którego wystąpił WM_SETCURSOR.
 
-*bSetAlways*<br/>
-Określa, czy obiekt musi ustawić kursor. Jeśli wartość jest równa TRUE, obiekt musi ustawić kursor; w przypadku wartości FALSE kursor nie jest zobowiązany do ustawienia kursora i powinien zwrócić S_FALSE w tym przypadku.
+*bSetPokazywnie*<br/>
+Określa, czy obiekt musi ustawić kursor. Jeśli true, obiekt musi ustawić kursor; jeśli FALSE, kursor nie jest zobowiązany do ustawiania kursora i powinien zwrócić S_FALSE w takim przypadku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że współrzędne klienta okna są używane do przekazywania położenia kursora myszy. Jest to możliwe przez również przekazanie prostokąta związanego z obiektem w tym samym układzie współrzędnych.
+Należy zauważyć, że współrzędne klienta okna (piksele) są używane do przekazywania pozycji kursora myszy. Jest to możliwe dzięki przekazaniu prostokąta ograniczającego obiektu w tym samym układzie współrzędnych.
 
-##  <a name="onkeydownevent"></a>COleControl::OnKeyDownEvent
+## <a name="colecontrolonkeydownevent"></a><a name="onkeydownevent"></a>COleControl::OnKeyDownEvent
 
-Wywoływane przez platformę po przetworzeniu zapasowej zdarzenia KeyDown.
+Wywoływane przez platformę po przetworzyniu zdarzenia KeyDown.
 
 ```
 virtual void OnKeyDownEvent(
@@ -2936,25 +2936,25 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Wartość kodu klucza wirtualnego naciśniętego klucza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
+*Nchar*<br/>
+Wartość kodu klucza wirtualnego wciśniętego klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka potrzebuje dostępu do informacji o kluczu po jego wyzwoleniu.
+Zastąpuj tę funkcję, jeśli formant potrzebuje dostępu do informacji o kluczu po zwolnieniu zdarzenia.
 
-##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent
+## <a name="colecontrolonkeypressevent"></a><a name="onkeypressevent"></a>COleControl::OnKeyPressEvent
 
-Wywoływane przez platformę po uruchomieniu zdarzenia KeyPress.
+Wywoływane przez ramy po zdarzenia KeyPress czas został zwolniony.
 
 ```
 virtual void OnKeyPressEvent(USHORT nChar);
@@ -2962,18 +2962,18 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Zawiera wartość kodu klucza wirtualnego naciśniętego klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
+*Nchar*<br/>
+Zawiera wartość kodu klucza wirtualnego naciśnięcia klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że wartość *nchar* mogła zostać zmodyfikowana przez kontener.
+Należy zauważyć, że wartość *nChar* mogła zostać zmodyfikowana przez kontener.
 
-Przesłoń tę funkcję, jeśli chcesz powiadomienia po wystąpieniu tego zdarzenia.
+Zastądń tej funkcji, jeśli chcesz powiadomić po wystąpieniu tego zdarzenia.
 
-##  <a name="onkeyupevent"></a>COleControl::OnKeyUpEvent
+## <a name="colecontrolonkeyupevent"></a><a name="onkeyupevent"></a>COleControl::OnKeyUpEvent
 
-Wywoływane przez platformę po przetworzeniu zapasowej zdarzenia KeyDown.
+Wywoływane przez platformę po przetworzyniu zdarzenia KeyDown.
 
 ```
 virtual void OnKeyUpEvent(
@@ -2983,25 +2983,25 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Wartość kodu klucza wirtualnego naciśniętego klucza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
+*Nchar*<br/>
+Wartość kodu klucza wirtualnego wciśniętego klawisza. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
 
-*nShiftState*<br/>
+*nShiftState (Stan zmiany biegów)*<br/>
 Zawiera kombinację następujących flag:
 
-- SHIFT_MASK naciśnięcie klawisza SHIFT podczas działania.
+- SHIFT_MASK Klawisz SHIFT został wciśnięty podczas akcji.
 
-- CTRL_MASK naciśnięcie klawisza CTRL podczas akcji.
+- CTRL_MASK Klawisz CTRL został wciśnięty podczas akcji.
 
-- ALT_MASK naciśnięcie klawisza ALT podczas działania.
+- ALT_MASK Klawisz ALT został wciśnięty podczas akcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka potrzebuje dostępu do informacji o kluczu po jego wyzwoleniu.
+Zastąpuj tę funkcję, jeśli formant potrzebuje dostępu do informacji o kluczu po zwolnieniu zdarzenia.
 
-##  <a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage
+## <a name="colecontrolonmappropertytopage"></a><a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage
 
-Wywoływane przez platformę, aby uzyskać identyfikator klasy strony właściwości, która implementuje edytowanie określonej właściwości.
+Wywoływane przez strukturę, aby uzyskać identyfikator klasy strony właściwości, która implementuje edycję określonej właściwości.
 
 ```
 virtual BOOL OnMapPropertyToPage(
@@ -3012,26 +3012,26 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania właściwości formantu.
+*Dispid*<br/>
+Identyfikator wysyłki właściwości formantu.
 
-*lpclsid*<br/>
-Wskaźnik do struktury `CLSID`, za pomocą której zostanie zwrócony identyfikator klasy.
+*lpclsid ( lpclsid )*<br/>
+Wskaźnik do `CLSID` struktury, za pośrednictwem której zostanie zwrócony identyfikator klasy.
 
-*pbPageOptional*<br/>
-Zwraca wskaźnik określający, czy użycie określonej strony właściwości jest opcjonalne.
+*pbPageOprzekładnia*<br/>
+Zwraca wskaźnik, czy użycie strony określonej właściwości jest opcjonalne.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli identyfikator klasy został zwrócony w *lpClsid*; w przeciwnym razie 0.
+Nonzero, jeśli identyfikator klasy został zwrócony w *lpclsid;* w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby umożliwić wywoływanie stron właściwości kontrolki z przeglądarki właściwości kontenera.
+Zastąd w tej funkcji, aby zapewnić sposób wywołania stron właściwości formantu z przeglądarki właściwości kontenera.
 
-##  <a name="onmnemonic"></a>COleControl::
+## <a name="colecontrolonmnemonic"></a><a name="onmnemonic"></a>COleControl::OnMnemonic
 
-Wywoływane przez platformę, gdy kontener wykrył, że klawisz skrótu kontrolki OLE został naciśnięty.
+Wywoływana przez strukturę, gdy kontener wykrył, że klucz mnemonic formantu OLE został naciśnięty.
 
 ```
 virtual void OnMnemonic(LPMSG pMsg);
@@ -3040,11 +3040,11 @@ virtual void OnMnemonic(LPMSG pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Wskaźnik do komunikatu systemu Windows wygenerowanego przez naciśnięcie klawisza skrótu.
+Wskaźnik do komunikatu systemu Windows generowanego przez naciśnięcie klawisza mnemonicznego.
 
-##  <a name="onproperties"></a>COleControl:: onproperties
+## <a name="colecontrolonproperties"></a><a name="onproperties"></a>COleControl::OnProperties
 
-Wywoływane przez platformę, gdy czasownik właściwości kontrolki został wywołany przez kontener.
+Wywoływana przez strukturę, gdy zlecenie właściwości formantu zostało wywołane przez kontener.
 
 ```
 virtual BOOL OnProperties(
@@ -3058,25 +3058,25 @@ virtual BOOL OnProperties(
 *lpMsg*<br/>
 Wskaźnik do komunikatu systemu Windows, który wywołał zlecenie.
 
-*hWndParent*<br/>
-Uchwyt do okna nadrzędnego formantu.
+*hWndRodziciek*<br/>
+Dojście do okna nadrzędnego formantu.
 
-*lpRect*<br/>
-Wskaźnik do prostokąta używany przez formant w kontenerze.
+*Lprect*<br/>
+Wskaźnik do prostokąta używanego przez formant w kontenerze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli wywołanie zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja Wyświetla okno dialogowe właściwości modalnej.
+Domyślna implementacja wyświetla okno dialogowe właściwości modalnej.
 
-Można również użyć tej funkcji, aby spowodować wyświetlenie stron właściwości kontrolki. Wykonaj wywołanie funkcji `OnProperties`, przekazując uchwyt elementu nadrzędnego kontrolki w parametrze *hWndParent* . W takim przypadku wartości parametrów *lpMsg* i *lpRect* są ignorowane.
+Za pomocą tej funkcji można również spowodować wyświetlanie stron właściwości formantu. Nawiązać wywołanie `OnProperties` funkcji, przekazując dojście nadrzędnego formantu w *hWndParent* parametru. W takim przypadku wartości parametrów *lpMsg* i *lpRect* są ignorowane.
 
-##  <a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint
+## <a name="colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IViewObjectEx::QueryHitPoint` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IViewObjectEx::QueryHitPoint` na żądanie kontenera.
 
 ```
 virtual BOOL OnQueryHitPoint(
@@ -3092,37 +3092,37 @@ virtual BOOL OnQueryHitPoint(
 *dwAspect*<br/>
 Określa sposób reprezentowania obiektu. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
 
-*pRectBounds*<br/>
-Wskaźnik do struktury `RECT`, określając prostokąt ograniczający obszar klienta kontrolki OLE.
+*pRectBounds (Połączenia między obejmą pRect*<br/>
+Wskaźnik do `RECT` struktury określającej prostokąt ograniczający obszaru klienta sterowania OLE.
 
-*ptlLoc*<br/>
-Wskaźnik do struktury `POINT`, określający punkt do sprawdzenia dla trafienia. Punkt jest określony we współrzędnych obszaru klienta OLE.
+*ptlLoc (polski)*<br/>
+Wskaźnik do `POINT` struktury określający punkt, który ma być sprawdzany pod kątem trafienia. Punkt jest określony we współrzędnych obszaru klienta OLE.
 
 *lCloseHint*<br/>
-Odległość, która definiuje "Close" do punktu zaznaczonego dla trafienia.
+Odległość definiuj "blisko" do punktu zaznaczona pod kątem trafienia.
 
-*pHitResult*<br/>
-Wskaźnik do wyniku zapytania trafień. Jedna z następujących wartości:
+*pHitResult (Wyniki)*<br/>
+Wskaźnik do wyniku kwerendy trafienia. Jedna z następujących wartości:
 
 - HITRESULT_OUTSIDE *ptlLoc* znajduje się poza obiektem OLE i nie jest zamykany.
 
-- HITRESULT_TRANSPARENT *ptlLoc* znajduje się w granicach obiektu OLE, ale nie blisko obrazu. Na przykład, można HITRESULT_TRANSPARENT punkt w środku przezroczystego okręgu.
+- HITRESULT_TRANSPARENT *ptlLoc* znajduje się w granicach obiektu OLE, ale nie znajduje się blisko obrazu. Na przykład punkt w środku przezroczystego okręgu może zostać HITRESULT_TRANSPARENT.
 
-- HITRESULT_CLOSE *ptlLoc* znajduje się wewnątrz lub na zewnątrz obiektu OLE, ale wystarczająco blisko obiektu, który ma być brany pod uwagę. Małe, cienkie lub szczegółowe obiekty mogą używać tej wartości. Nawet wtedy, gdy punkt znajduje się poza granicami prostokątnymi obiektu, może nadal być zamknięty (jest to potrzebne do naciśnięcia małych obiektów).
+- HITRESULT_CLOSE *ptlLoc* znajduje się wewnątrz lub na zewnątrz obiektu OLE, ale wystarczająco blisko obiektu, który ma być brany pod uwagę wewnątrz. Ta wartość może być używana przez małe, cienkie lub szczegółowe obiekty. Nawet jeśli punkt znajduje się poza prostokątem ograniczającym obiektu, może on nadal znajdować się blisko (jest to potrzebne do trafienia małych obiektów).
 
 - HITRESULT_HIT *ptlLoc* znajduje się w obrazie obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli wynik trafień został pomyślnie zwrócony; w przeciwnym razie 0. Trafienie pokrywa się z obszarem wyświetlania kontrolki OLE.
+Nonzero, jeśli wynik trafienia zostanie pomyślnie zwrócony; w przeciwnym razie 0. Trafienie jest nakładaniem się obszaru wyświetlania sterowania OLE.
 
 ### <a name="remarks"></a>Uwagi
 
-Pyta, czy prostokąt wyświetlania obiektu pokrywa się z danym punktem (trafień punktu). `QueryHitPoint` można przesłonić do trafień testu dla nieprostokątnych obiektów.
+Pyta, czy prostokąt wyświetlania obiektu nakłada się na dany punkt (trafia do punktu). `QueryHitPoint`można zastąpić, aby przetestować trafienia dla obiektów niekościanych.
 
-##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect
+## <a name="colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl::OnQueryHitRect
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IViewObjectEx::QueryHitRect` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IViewObjectEx::QueryHitRect` na żądanie kontenera.
 
 ```
 virtual BOOL OnQueryHitRect(
@@ -3138,33 +3138,33 @@ virtual BOOL OnQueryHitRect(
 *dwAspect*<br/>
 Określa sposób reprezentowania obiektu. Prawidłowe wartości są pobierane z wyliczenia [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) lub DVASPECT2.
 
-*pRectBounds*<br/>
-Wskaźnik do struktury `RECT`, określając prostokąt ograniczający obszar klienta kontrolki OLE.
+*pRectBounds (Połączenia między obejmą pRect*<br/>
+Wskaźnik do `RECT` struktury określającej prostokąt ograniczający obszaru klienta sterowania OLE.
 
-*prcLoc*<br/>
-Wskaźnik do struktury `RECT`, który określa prostokąt do sprawdzenia dla trafienia (pokrywa się z prostokątem obiektu) względem lewego górnego rogu obiektu.
+*chcLoc*<br/>
+Wskaźnik do `RECT` struktury określający prostokąt, który ma być sprawdzany pod kątem trafienia (nakładania się na prostokąt obiektu), względem lewego górnego rogu obiektu.
 
 *lCloseHint*<br/>
-Nie jest używany.
+Nie używany.
 
-*pHitResult*<br/>
-Wskaźnik do wyniku zapytania trafień. Jedna z następujących wartości:
+*pHitResult (Wyniki)*<br/>
+Wskaźnik do wyniku kwerendy trafienia. Jedna z następujących wartości:
 
 - HITRESULT_OUTSIDE żaden punkt w prostokącie nie jest trafiony przez obiekt OLE.
 
-- HITRESULT_HIT co najmniej jeden punkt w prostokącie będzie trafiony na obiekcie.
+- HITRESULT_HIT co najmniej jeden punkt w prostokącie będzie trafieniem na obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli wynik trafień został pomyślnie zwrócony; w przeciwnym razie 0.
+Nonzero, jeśli wynik trafienia zostanie pomyślnie zwrócony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pyta, czy prostokąt wyświetlania obiektu nakłada się na wszystkie punkty w danym prostokącie (trafi prostokąt). `QueryHitRect` można przesłonić do trafień testu dla nieprostokątnych obiektów.
+Kwerenda, czy prostokąt wyświetlania obiektu nakłada się na dowolny punkt w danym prostokącie (uderza w prostokąt). `QueryHitRect`można zastąpić, aby przetestować trafienia dla obiektów niekościanych.
 
-##  <a name="onrenderdata"></a>COleControl::OnRenderData
+## <a name="colecontrolonrenderdata"></a><a name="onrenderdata"></a>COleControl::OnRenderData
 
-Wywoływane przez platformę, by pobrać dane w określonym formacie.
+Wywoływane przez strukturę do pobierania danych w określonym formacie.
 
 ```
 virtual BOOL OnRenderData(
@@ -3175,28 +3175,28 @@ virtual BOOL OnRenderData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) określającą format, w którym wymagane są informacje.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM,](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w której dane mają być zwracane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Określony format jest jednym wcześniej umieszczonym w obiekcie sterowania przy użyciu funkcji Członkowskich [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) lub [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) do opóźnionego renderowania. Domyślna implementacja tej funkcji wywołuje odpowiednio `OnRenderFileData` lub `OnRenderGlobalData`, jeśli dostarczony nośnik magazynu jest plikiem lub pamięcią. Jeśli żądany format jest CF_METAFILEPICT lub format trwałego zestawu właściwości, domyślna implementacja renderuje odpowiednie dane i zwraca wartość różną od zera. W przeciwnym razie zwraca wartość 0 i nic nie robi.
+Określony format to jeden wcześniej umieszczony w obiekcie sterującym przy użyciu funkcji członkowskich [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) lub [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) dla opóźnionego renderowania. Domyślna implementacja tej `OnRenderFileData` `OnRenderGlobalData`funkcji wywołuje lub , odpowiednio, jeśli dostarczonym nośnikiem pamięci jest plik lub pamięć. Jeśli żądany format jest CF_METAFILEPICT lub format zestawu właściwości trwałych, domyślna implementacja renderuje odpowiednie dane i zwraca wartość niezerowa. W przeciwnym razie zwraca 0 i nic nie robi.
 
-W przypadku TYMED_NULL *lpStgMedium-> TYMED* jest przydzielone i wypełniane jako określone przez *lpFormatEtc-> TYMED*. Jeśli nie TYMED_NULL, STGMEDIUM powinny być wypełnione danymi.
+Jeśli TYMED_NULL jest TYMED_NULL *lpStgMedium->,* STGMEDIUM powinno być przydzielane i wypełniane zgodnie z *lpFormatEtc->tymed*. Jeśli nie TYMED_NULL, STGMEDIUM należy wypełnić danymi.
 
-Zastąp tę funkcję, aby zapewnić dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli dane są niewielkie i mają stały rozmiar, Zastąp `OnRenderGlobalData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
+Zastąp tę funkcję, aby podać dane w żądanym formacie i nośniku. W zależności od danych można zastąpić jedną z innych wersji tej funkcji. Jeśli dane są małe i stałe, `OnRenderGlobalData`należy zastąpić . Jeśli dane są w pliku lub mają zmienny `OnRenderFileData`rozmiar, należy zastąpić .
 
-Aby uzyskać więcej informacji, zobacz struktury `FORMATETC` i `STGMEDIUM` w Windows SDK.
+Aby uzyskać więcej `FORMATETC` informacji, zobacz i `STGMEDIUM` struktur w windows SDK.
 
-##  <a name="onrenderfiledata"></a>COleControl::OnRenderFileData
+## <a name="colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COleControl::OnRenderFileData
 
-Wywoływane przez platformę, by pobrać dane w określonym formacie, gdy nośnik magazynu jest plikiem.
+Wywoływane przez strukturę do pobierania danych w określonym formacie, gdy nośnikiem jest plik.
 
 ```
 virtual BOOL OnRenderFileData(
@@ -3207,26 +3207,26 @@ virtual BOOL OnRenderFileData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) określającą format, w którym wymagane są informacje.
 
-*pFile*<br/>
-Wskazuje obiekt [CFile](../../mfc/reference/cfile-class.md) , w którym mają być renderowane dane.
+*p Plik*<br/>
+Wskazuje obiekt [CFile,](../../mfc/reference/cfile-class.md) w którym mają być renderowane dane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Określony format jest jednym wcześniej umieszczonym w obiekcie sterowania przy użyciu funkcji składowej [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca wartość FALSE.
+Określony format to jeden wcześniej umieszczony w obiekcie sterującym przy użyciu funkcji elementu członkowskiego [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca FALSE.
 
-Zastąp tę funkcję, aby zapewnić dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników magazynowania, Zastąp `OnRenderData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
+Zastąp tę funkcję, aby podać dane w żądanym formacie i nośniku. W zależności od danych można zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników pamięci masowej, należy zastąpić `OnRenderData`. Jeśli dane są w pliku lub mają zmienny `OnRenderFileData`rozmiar, należy zastąpić .
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą `FORMATETC` w Windows SDK.
+Aby uzyskać więcej `FORMATETC` informacji, zobacz strukturę w windows SDK.
 
-##  <a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData
+## <a name="colecontrolonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData
 
-Wywoływane przez platformę, aby pobrać dane w określonym formacie, gdy określony nośnik magazynu ma pamięć globalną.
+Wywoływana przez strukturę do pobierania danych w określonym formacie, gdy określonym nośnikiem pamięci jest pamięć globalna.
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -3237,28 +3237,28 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) określającą format, w którym wymagane są informacje.
 
-*phGlobal*<br/>
-Wskazuje dojście do pamięci globalnej, w której mają zostać zwrócone dane. Jeśli żadna pamięć nie została przypisana, ten parametr może mieć wartość NULL.
+*phGlobal (własówce)*<br/>
+Wskazuje dojście do pamięci globalnej, w której mają być zwracane dane. Jeśli nie przydzielono pamięci, ten parametr może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Określony format jest jednym wcześniej umieszczonym w obiekcie sterowania przy użyciu funkcji składowej [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca wartość FALSE.
+Określony format to jeden wcześniej umieszczony w obiekcie sterującym przy użyciu funkcji elementu członkowskiego [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca FALSE.
 
-Jeśli *phGlobal* ma wartość null, należy alokować i zwrócić nową HGLOBAL w *phGlobal*. W przeciwnym razie HGLOBAL określona przez *phGlobal* powinna być wypełniony danymi. Ilość danych umieszczonych w HGLOBAL nie może przekraczać bieżącego rozmiaru bloku pamięci. Ponadto nie można zmienić przydziału bloku na większy rozmiar.
+Jeśli *phGlobal* ma wartość NULL, nowy HGLOBAL powinien zostać przydzielony i zwrócony w *phGlobal*. W przeciwnym razie HGLOBAL określony przez *phGlobal* powinien być wypełniony danymi. Ilość danych umieszczonych w HGLOBAL nie może przekraczać bieżącego rozmiaru bloku pamięci. Ponadto bloku nie można ponownie przydzielić do większego rozmiaru.
 
-Zastąp tę funkcję, aby zapewnić dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników magazynowania, Zastąp `OnRenderData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
+Zastąp tę funkcję, aby podać dane w żądanym formacie i nośniku. W zależności od danych można zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników pamięci masowej, należy zastąpić `OnRenderData`. Jeśli dane są w pliku lub mają zmienny `OnRenderFileData`rozmiar, należy zastąpić .
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą `FORMATETC` w Windows SDK.
+Aby uzyskać więcej `FORMATETC` informacji, zobacz strukturę w windows SDK.
 
-##  <a name="onresetstate"></a>COleControl:: OnResetState
+## <a name="colecontrolonresetstate"></a><a name="onresetstate"></a>COleControl::OnResetState
 
-Wywoływane przez platformę, gdy właściwości kontrolki powinny mieć ustawioną wartość domyślną.
+Wywoływane przez platformę, gdy właściwości formantu powinny być ustawione na ich wartości domyślne.
 
 ```
 virtual void OnResetState();
@@ -3266,13 +3266,13 @@ virtual void OnResetState();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji [DoPropExchange](#dopropexchange), przekazywanie obiektu `CPropExchange`, który powoduje, że właściwości mają ustawioną wartość domyślną.
+Domyślna implementacja wywołuje [DoPropExchange](#dopropexchange), przekazując `CPropExchange` obiekt, który powoduje, że właściwości mają być ustawione na ich wartości domyślne.
 
-Moduł zapisujący kontroli może wstawić kod inicjujący dla kontrolki OLE w tym obiekcie. Ta funkcja jest wywoływana, gdy [IPersistStream:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) lub [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) nie powiodło się lub [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) lub [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) jest wywoływana, bez uprzedniego wywołania `IPersistStream::Load` lub `IPersistStorage::Load`.
+Moduł zapisujący formant można wstawić kod inicjowania dla formantu OLE w tym zastąpić. Ta funkcja jest wywoływana, gdy [wywołano IPersistStream::Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) lub [IPersistStorage::Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) fails, or [IPersistStreamInit::InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) or [IPersistStorage::InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) is called, without first calling either `IPersistStream::Load` or `IPersistStorage::Load`.
 
-##  <a name="onsetclientsite"></a>COleControl:: OnSetClientSite
+## <a name="colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>COleControl::OnSetClientSite
 
-Wywoływane przez platformę, gdy kontener wywołał funkcję `IOleControl::SetClientSite` formantu.
+Wywoływana przez strukturę, gdy kontener `IOleControl::SetClientSite` wywołał funkcję formantu.
 
 ```
 virtual void OnSetClientSite();
@@ -3280,13 +3280,13 @@ virtual void OnSetClientSite();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `OnSetClientSite` sprawdza, czy właściwości ścieżki danych są załadowane i, jeśli są, wywołań `DoDataPathPropExchange`.
+Domyślnie `OnSetClientSite` sprawdza, czy właściwości ścieżki danych są ładowane, a jeśli tak, wywołają `DoDataPathPropExchange`.
 
-Zastąp tę funkcję, aby wykonać wszelkie specjalne przetwarzanie tego powiadomienia. W szczególności zastąpienia tej funkcji powinny wywołać klasę bazową.
+Zastądeń tę funkcję, aby wykonać specjalne przetwarzanie tego powiadomienia. W szczególności overrides tej funkcji należy wywołać klasę podstawową.
 
-##  <a name="onsetdata"></a>COleControl:: OnSetData
+## <a name="colecontrolonsetdata"></a><a name="onsetdata"></a>COleControl::OnSetData
 
-Wywoływane przez platformę, aby zastąpić dane kontrolki określonymi danymi.
+Wywoływana przez strukturę, aby zastąpić dane formantu określonymi danymi.
 
 ```
 virtual BOOL OnSetData(
@@ -3298,29 +3298,29 @@ virtual BOOL OnSetData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , który określa format danych.
+Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) określającej format danych.
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której znajdują się dane.
+Wskaźnik do struktury [STGMEDIUM,](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w której znajdują się dane.
 
-*bRelease*<br/>
-PRAWDA, jeśli formant powinien zwolnić nośnik magazynu; Wartość FALSE, jeśli formant nie powinien zwalniać nośnika magazynu.
+*Brelease*<br/>
+PRAWDA, jeśli urządzenie sterujące powinno zwolnić nośnik pamięci masowej; FALSE, jeśli formant nie powinien zwolnić nośnika.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli dane są w formacie trwałego zestawu właściwości, domyślna implementacja odpowiednio modyfikuje stan formantu. W przeciwnym razie domyślna implementacja nic nie robi. Jeśli *bRelease* ma wartość true, zostanie wykonane wywołanie do `ReleaseStgMedium`; w przeciwnym razie nie.
+Jeśli dane są w formacie zestawu właściwości trwałych, domyślna implementacja modyfikuje stan formantu odpowiednio. W przeciwnym razie domyślna implementacja nic nie robi. Jeśli *bWyzjąć* wartość TRUE, nawiązuje się `ReleaseStgMedium` wywołanie; w przeciwnym razie nie.
 
-Zastąp tę funkcję, aby zastąpić dane kontrolki określonymi danymi.
+Zastąp tę funkcję, aby zastąpić dane formantu określonymi danymi.
 
-Aby uzyskać więcej informacji, zobacz struktury `FORMATETC` i `STGMEDIUM` w Windows SDK.
+Aby uzyskać więcej `FORMATETC` informacji, zobacz i `STGMEDIUM` struktur w windows SDK.
 
-##  <a name="onsetextent"></a>COleControl::OnSetExtent
+## <a name="colecontrolonsetextent"></a><a name="onsetextent"></a>COleControl::OnSetExtent
 
-Wywoływane przez platformę, gdy zakres kontrolki musi zostać zmieniony w wyniku wywołania [IOleObject:: setzakres](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent).
+Wywoływana przez strukturę, gdy zakres formantu musi zostać zmieniony, w wyniku wywołania [IOleObject::SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent).
 
 ```
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
@@ -3328,22 +3328,22 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 
 ### <a name="parameters"></a>Parametry
 
-*lpSizeL*<br/>
-Wskaźnik do struktury `SIZEL`, który używa długich liczb całkowitych, aby reprezentować szerokość i wysokość kontrolki wyrażoną w jednostkach HIMETRIC.
+*lpSizeL ( lpSizeL )*<br/>
+Wskaźnik do `SIZEL` struktury, która używa długich liczby całkowite do reprezentowania szerokości i wysokości formantu, wyrażone w jednostkach HIMETRIC.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli zmiana rozmiaru została zaakceptowana; w przeciwnym razie 0.
+Nonzero, jeśli zmiana rozmiaru została zaakceptowana; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja obsługuje zmianę rozmiaru zakresu formantu. Jeśli kontrolka znajduje się w miejscu aktywnym, zostanie wykonane wywołanie `OnPosRectChanged` kontenera.
+Domyślna implementacja obsługuje zmiany rozmiaru zakresu formantu. Jeśli formant jest aktywny w miejscu, następnie `OnPosRectChanged` następuje wywołanie kontenera.
 
-Zastąp tę funkcję, aby zmienić domyślną zmianę rozmiarów formantu.
+Zastąd w tej funkcji należy zmienić domyślną zmianę rozmiaru formantu.
 
-##  <a name="onsetobjectrects"></a>COleControl::OnSetObjectRects
+## <a name="colecontrolonsetobjectrects"></a><a name="onsetobjectrects"></a>COleControl::OnSetObjectRects
 
-Wywoływane przez platformę, by zaimplementować wywołanie [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
+Wywoływane przez strukturę do zaimplementowania wywołania [IOleInPlaCeObject::SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
 
 ```
 virtual BOOL OnSetObjectRects(
@@ -3354,24 +3354,24 @@ virtual BOOL OnSetObjectRects(
 ### <a name="parameters"></a>Parametry
 
 *lpRectPos*<br/>
-Wskaźnik do struktury `RECT` wskazujący nową pozycję i rozmiar kontrolki względem kontenera.
+Wskaźnik do `RECT` struktury wskazujący nowe położenie i rozmiar formantu względem kontenera.
 
-*lpRectClip*<br/>
-Wskaźnik do struktury `RECT` wskazujący prostokątny obszar, do którego ma zostać przycięty formant.
+*lpRectClip (lpRectClip)*<br/>
+Wskaźnik do `RECT` struktury wskazujący prostokątny obszar, do którego ma być przycięty formant.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli zmiana położenia została zaakceptowana; w przeciwnym razie 0.
+Niezerowe, jeśli zmiana położenia została przyjęta; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja automatycznie obsługuje zmianę położenia i zmianę rozmiarów okna kontroli i zwraca wartość TRUE.
+Domyślna implementacja automatycznie obsługuje zmianę położenia i zmiany rozmiaru okna formantu i zwraca wartość TRUE.
 
-Zastąp tę funkcję, aby zmienić zachowanie domyślne tej funkcji.
+Zastądnie tej funkcji, aby zmienić domyślne zachowanie tej funkcji.
 
-##  <a name="onshowtoolbars"></a>COleControl::OnShowToolBars
+## <a name="colecontrolonshowtoolbars"></a><a name="onshowtoolbars"></a>COleControl::OnShowToolBars
 
-Wywoływane przez platformę, gdy aktywowano kontrolkę interfejsu użytkownika.
+Wywoływane przez platformę, gdy formant został aktywowany interfejsu użytkownika.
 
 ```
 virtual void OnShowToolBars();
@@ -3379,11 +3379,11 @@ virtual void OnShowToolBars();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja nie robi nic.
+Domyślna implementacja nic nie robi.
 
-##  <a name="ontextchanged"></a>COleControl:: OnTextChanged.
+## <a name="colecontrolontextchanged"></a><a name="ontextchanged"></a>COleControl::OnTextZanged
 
-Wywoływane przez platformę, gdy zmieniono wartość właściwości Caption lub text.
+Wywoływana przez strukturę, gdy zmieniła się wartość właściwości podpis lub tekst.
 
 ```
 virtual void OnTextChanged();
@@ -3391,13 +3391,13 @@ virtual void OnTextChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `InvalidateControl`.
+Domyślna implementacja wywołuje `InvalidateControl`.
 
-Zastąp tę funkcję, jeśli chcesz, aby powiadomienie działało po zmianie tej właściwości.
+Zastądeń tę funkcję, jeśli chcesz powiadomić po zmianie tej właściwości.
 
-##  <a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage
+## <a name="colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage
 
-Wywoływane przez platformę w odpowiedzi na żądanie `IOleInPlaceObjectWindowless::OnWindowMessage` kontenera.
+Wywoływane przez strukturę w odpowiedzi `IOleInPlaceObjectWindowless::OnWindowMessage` na żądanie kontenera.
 
 ```
 virtual BOOL OnWindowlessMessage(
@@ -3409,31 +3409,31 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*dostarczone*<br/>
-Identyfikator komunikatu, który został przesłany przez system Windows.
+*Msg*<br/>
+Identyfikator wiadomości przekazany przez system Windows.
 
-*wParam*<br/>
-Zgodnie z oczekiwaniami systemu Windows. Określa dodatkowe informacje dotyczące wiadomości. Zawartość tego parametru zależy od wartości parametru *MSG* .
+*Wparam*<br/>
+Jak przeszedł przez System Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości parametru *msg.*
 
-*lParam*<br/>
-Zgodnie z oczekiwaniami systemu Windows. Określa dodatkowe informacje dotyczące wiadomości. Zawartość tego parametru zależy od wartości parametru *MSG* .
+*Lparam*<br/>
+Jak przeszedł przez System Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości parametru *msg.*
 
-*plResult*<br/>
-Kod wyniku systemu Windows. Określa wynik przetwarzania komunikatów i zależy od wysyłanej wiadomości.
+*plResult (wyniki)*<br/>
+Kod wyniku systemu Windows. Określa wynik przetwarzania wiadomości i zależy od wysłanej wiadomości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przetwarza komunikaty okna dla kontrolek bez okien. `OnWindowlessMessage` `COleControl`powinna być używana dla komunikatów okien, innych niż komunikaty myszy i komunikaty z klawiatury. `COleControl` udostępnia funkcję [setcapture](#setcapture) i [SetFocus](#setfocus) w celu uzyskania funkcji przechwytywania myszy i fokusu klawiatury dla obiektów OLE bez okien.
+Przetwarza komunikaty okien dla formantów bez okien. `COleControl`'s `OnWindowlessMessage` powinny być używane do wiadomości okien innych niż komunikaty myszy i komunikaty klawiaturowe. `COleControl`zapewnia [SetCapture](#setcapture) i [SetFocus](#setfocus) specjalnie, aby uzyskać przechwytywanie myszy i fokus klawiatury dla obiektów OLE bez okien.
 
-Ponieważ obiekty bez okien nie mają okna, muszą one mieć mechanizm zezwalający na wysyłanie komunikatów do kontenera. Obiekt OLE bez okien pobiera komunikaty z jego kontenera za pomocą metody `OnWindowMessage` na interfejsie `IOleInPlaceObjectWindowless` (rozszerzenie [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) do obsługi bez okienek). `OnWindowMessage` nie przyjmuje `HWND` parametru.
+Ponieważ obiekty bez okien nie mają okna, potrzebują mechanizmu, aby umożliwić wysyłanie wiadomości do nich. Obiekt OLE bez okien pobiera komunikaty `OnWindowMessage` z kontenera, za pomocą metody w `IOleInPlaceObjectWindowless` interfejsie (rozszerzenie [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) dla obsługi bez okien). `OnWindowMessage`nie przyjmuje `HWND` parametru.
 
-##  <a name="parenttoclient"></a>COleControl::P arentToClient
+## <a name="colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl::ParentToClient
 
-Tłumaczy współrzędne *pPoint* na współrzędne klienta.
+Tłumaczy współrzędne *punktu pPoint* na współrzędne klienta.
 
 ```
 virtual UINT ParentToClient(
@@ -3444,74 +3444,74 @@ virtual UINT ParentToClient(
 
 ### <a name="parameters"></a>Parametry
 
-*lprcBounds*<br/>
-Wskaźnik do granic formantu OLE w kontenerze. Nie jest to obszar klienta, ale obszar całej kontrolki, w tym obramowania i paski przewijania.
+*lprcBounds (Obfity)*<br/>
+Wskaźnik do granic formantu OLE w kontenerze. Nie obszar klienta, ale obszar całego formantu, w tym obramowania i paski przewijania.
 
-*pPoint*<br/>
-Wskaźnik do punktu nadrzędnego (kontenera) do przetłumaczenia na współrzędne obszaru klienta kontrolki.
+*pPunkt*<br/>
+Wskaźnik do punktu nadrzędnego (kontenera) do przetłumaczenia na współrzędne obszaru klienta formantu.
 
-*bHitTest*<br/>
-Określa, czy testy trafień mają być wykonywane w punkcie.
+*bHitTest (Testhittest)*<br/>
+Określa, czy testowanie trafień ma być wykonywane w punkcie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jeśli *bHitTest* ma wartość false, zwraca HTNOWHERE. Jeśli *bHitTest* ma wartość true, zwraca lokalizację, w której punkt nadrzędny (kontenera) jest wyładowany w obszarze klienta kontrolki OLE i jest jednym z następujących trafień myszy:
+Jeśli *bHitTest* jest FALSE, zwraca HTNOWHERE. Jeśli *bHitTest* ma wartość PRAWDA, zwraca lokalizację, w której punkt nadrzędny (kontener) wylądował w obszarze klienta formantu OLE i jest jedną z następujących wartości testu trafień myszy:
 
-- HTBORDER w obramowaniu okna, które nie ma obramowania zmieniającego rozmiar.
+- HTBORDER W obramowaniu okna, które nie ma obramowania rozmiaru.
 
-- HTBOTTOM w dolnym poziomie obramowania okna.
+- HTBOTTOM W dolnej granicy poziomej okna.
 
-- HTBOTTOMLEFT w lewym dolnym rogu obramowania okna.
+- HTBOTTOMLEFT W lewym dolnym rogu obramowania okna.
 
-- HTBOTTOMRIGHT w prawym dolnym rogu obramowania okna.
+- HTBOTTOMRIGHT W prawym dolnym rogu obramowania okna.
 
-- HTCAPTION w obszarze paska tytułu.
+- HTCAPTION W obszarze paska tytułu.
 
-- HTCLIENT w obszarze klienta.
+- HTCLIENT W obszarze klienta.
 
-- HTERROR na tle ekranu lub w linii podziału między oknami (tak samo jak HTNOWHERE, z tą różnicą, że funkcja systemu Windows `DefWndProc` generuje sygnał dźwiękowy systemu w celu wskazania błędu).
+- HTERROR Na tle ekranu lub na linii podziału między oknami (tak `DefWndProc` samo jak HTNOWHERE z tą różnicą, że funkcja Windows generuje sygnał dźwiękowy systemu wskazujący błąd).
 
-- HTGROWBOX w polu rozmiar.
+- HTGROWBOX W pudełku z rozmiarem.
 
-- HTHSCROLL na poziomym pasku przewijania.
+- HTHSCROLL Na poziomym pasku przewijania.
 
-- HTLEFT w lewej krawędzi okna.
+- HTLEFT W lewej krawędzi okna.
 
-- HTMAXBUTTON na przycisku Maksymalizuj.
+- HTMAXBUTTON W przycisku Maksymalizacji.
 
-- HTMENU w obszarze menu.
+- HTMENU W obszarze menu.
 
-- HTMINBUTTON na przycisk Minimalizuj.
+- HTMINBUTTON W przycisku Minimalizuj.
 
-- HTNOWHERE na tle ekranu lub w linii podziału między oknami.
+- HTNOWHERE Na tle ekranu lub na linii podziału między oknami.
 
-- HTREDUCE na przycisk Minimalizuj.
+- HTREDUCE W przycisku Minimalizuj.
 
-- HTRIGHT w prawej krawędzi okna.
+- HTRIGHT W prawej krawędzi okna.
 
-- HTSIZE w polu rozmiaru (tak samo jak HTGROWBOX).
+- HTSIZE W polu rozmiaru (tak samo jak HTGROWBOX).
 
-- HTSYSMENU w menu sterowania lub przycisk Zamknij w oknie podrzędnym.
+- HTSYSMENU W menu Sterowania lub w przycisku Zamknij w oknie podrzędnym.
 
-- HTTOP w górnym obramowaniu w poziomie okna.
+- HTTOP W górnej granicy poziomej okna.
 
-- HTTOPLEFT w lewym górnym rogu obramowania okna.
+- HTTOPLEFT W lewym górnym rogu obramowania okna.
 
-- HTTOPRIGHT w prawym górnym rogu obramowania okna.
+- HTTOPRIGHT W prawym górnym rogu obramowania okna.
 
-- HTTRANSPARENT w oknie obecnie objętym innym oknem.
+- HTTRANSPARENT W oknie obecnie objętym innym oknem.
 
-- HTVSCROLL na pionowym pasku przewijania.
+- HTVSCROLL Na pionowym pasku przewijania.
 
-- HTZOOM na przycisku Maksymalizuj.
+- HTZOOM W przycisku Maksymalizacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Na wejściu *pPoint* jest określana względem źródła elementu nadrzędnego (górnego lewego rogu kontenera). W danych wyjściowych *pPoint* jest określana względem początku obszaru klienckiego kontrolki OLE (lewy górny róg obszaru klienta kontrolki).
+Na wejściu *pPoint* jest względem początku macierzystego (lewy górny róg kontenera). Na *wyjściu pPoint* jest względem początku obszaru klienta formantu OLE (lewy górny róg obszaru klienta formantu).
 
-##  <a name="postmodaldialog"></a>COleControl::P ostModalDialog
+## <a name="colecontrolpostmodaldialog"></a><a name="postmodaldialog"></a>COleControl::PostModalDialog
 
-Powiadamia kontener o zamknięciu modalnego okna dialogowego.
+Powiadamia kontener, że modalne okno dialogowe zostało zamknięte.
 
 ```
 void PostModalDialog(HWND hWndParent = NULL);
@@ -3519,16 +3519,16 @@ void PostModalDialog(HWND hWndParent = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-Dojście do okna nadrzędnego modalnego okna dialogowego.
+*hWndRodziciek*<br/>
+Uchwyt do okna nadrzędnego modalnego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję po wyświetleniu dowolnych modalnych okien dialogowych. Należy wywołać tę funkcję, aby umożliwić kontenerowi włączenie wszystkich okien najwyższego poziomu, które są wyłączone przez `PreModalDialog`. Ta funkcja powinna być sparowana z wywołaniem do `PreModalDialog`.
+Wywołanie tej funkcji po wyświetleniu dowolnego modalnego okna dialogowego. Należy wywołać tę funkcję, aby kontener mógł włączyć `PreModalDialog`wszystkie okna najwyższego poziomu wyłączone przez program . Tę funkcję należy sparować z `PreModalDialog`wywołaniem .
 
-##  <a name="premodaldialog"></a>COleControl::P reModalDialog
+## <a name="colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl::PreModalDialog
 
-Powiadamia kontener, aby wyświetlić modalne okno dialogowe.
+Powiadamia kontener, że modalne okno dialogowe ma być wyświetlane.
 
 ```
 void PreModalDialog(HWND hWndParent = NULL);
@@ -3536,16 +3536,16 @@ void PreModalDialog(HWND hWndParent = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-Dojście do okna nadrzędnego modalnego okna dialogowego.
+*hWndRodziciek*<br/>
+Uchwyt do okna nadrzędnego modalnego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję przed wyświetleniem dowolnego modalnego okna dialogowego. Należy wywołać tę funkcję, aby kontener mógł wyłączyć wszystkie okna najwyższego poziomu. Po wyświetleniu modalnego okna dialogowego należy wywołać `PostModalDialog`.
+Wywołaj tę funkcję przed wyświetleniem dowolnego modalnego okna dialogowego. Należy wywołać tę funkcję, aby kontener mógł wyłączyć wszystkie jego okna najwyższego poziomu. Po wyświetleniu modalnego okna dialogowego należy `PostModalDialog`wywołać program .
 
-##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow
+## <a name="colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COleControl::Odtwórz KontrolerWindow
 
-Niszczy i odtwarza okno kontrolki.
+Niszczy i ponownie tworzy okno formantu.
 
 ```
 void RecreateControlWindow();
@@ -3555,9 +3555,9 @@ void RecreateControlWindow();
 
 Może to być konieczne, jeśli trzeba zmienić bity stylu okna.
 
-##  <a name="refresh"></a>COleControl:: Refresh
+## <a name="colecontrolrefresh"></a><a name="refresh"></a>COleControl::Odśwież
 
-Wymusza odświeżenie formantu OLE.
+Wymusza odświeżanie formantu OLE.
 
 ```
 void Refresh();
@@ -3565,9 +3565,9 @@ void Refresh();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest obsługiwana przez `COleControl` klasy bazowej jako metoda giełdowa o nazwie Refresh. Umożliwia to użytkownikom formantu OLE odświeżenie kontrolki w określonym czasie. Aby uzyskać więcej informacji na temat tej metody, zobacz artykuł [formanty ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Ta funkcja jest obsługiwana przez klasę podstawową `COleControl` jako metodę zapasową o nazwie Refresh. Dzięki temu użytkownicy formantu OLE do ponownego przemalowania formantu w określonym czasie. Aby uzyskać więcej informacji na temat tej metody, zobacz artykuł [ActiveX Controls: Methods](../../mfc/mfc-activex-controls-methods.md).
 
-##  <a name="releasecapture"></a>COleControl::ReleaseCapture
+## <a name="colecontrolreleasecapture"></a><a name="releasecapture"></a>COleControl::ReleaseCapture
 
 Zwalnia przechwytywanie myszy.
 
@@ -3575,17 +3575,17 @@ Zwalnia przechwytywanie myszy.
 BOOL ReleaseCapture();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kontrolka ma obecnie funkcję przechwytywania myszy, przechwytywanie zostanie wydane. W przeciwnym razie ta funkcja nie ma żadnego wpływu.
+Jeśli formant ma obecnie przechwytywania myszy, przechwytywania jest zwolniony. W przeciwnym razie ta funkcja nie ma wpływu.
 
-##  <a name="releasedc"></a>COleControl:: ReleaseDC
+## <a name="colecontrolreleasedc"></a><a name="releasedc"></a>COleControl::ReleaseDC
 
-Zwalnia kontekst urządzenia wyświetlania kontenera kontroli bez okien, zwalniając kontekst urządzenia do użytku przez inne aplikacje.
+Zwalnia kontekst urządzenia wyświetlania kontenera formantu bez okien, zwalniając kontekst urządzenia do użycia przez inne aplikacje.
 
 ```
 int ReleaseDC(CDC* pDC);
@@ -3593,18 +3593,18 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-Określa kontekst urządzenia kontenera do zwolnienia.
+*Pdc*<br/>
+Identyfikuje kontekst urządzenia kontenera, który ma zostać zwolniony.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aplikacja musi wywoływać `ReleaseDC` dla każdego wywołania do [GetDC —](#getdc).
+Aplikacja musi `ReleaseDC` wywołać dla każdego wywołania [GetDC](#getdc).
 
-##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow
+## <a name="colecontrolreparentcontrolwindow"></a><a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow
 
 Ustawia element nadrzędny formantu.
 
@@ -3616,19 +3616,19 @@ virtual void ReparentControlWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndOuter*<br/>
-Uchwyt okna kontrolki.
+*hWndOuter (właśc.*<br/>
+Uchwyt okna sterującego.
 
-*hWndParent*<br/>
-Uchwyt nowego okna nadrzędnego.
+*hWndRodziciek*<br/>
+Dojście nowego okna nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby zresetować element nadrzędny okna kontroli.
+Wywołanie tej funkcji, aby zresetować element nadrzędny okna sterowania.
 
-##  <a name="resetstockprops"></a>COleControl::ResetStockProps
+## <a name="colecontrolresetstockprops"></a><a name="resetstockprops"></a>COleControl::ResetStockProps
 
-Inicjuje stan właściwości podstawowych `COleControl` do ich wartości domyślnych.
+Inicjuje stan `COleControl` właściwości magazynowych do ich wartości domyślnych.
 
 ```
 void ResetStockProps();
@@ -3636,17 +3636,17 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Uwagi
 
-Właściwości to: wyglądu, BackColor, obramowania, napis, Enabled, Font, ForeColor, hWnd i Text. Aby uzyskać opis właściwości podstawowych, zobacz [kontrolki ActiveX: Dodawanie właściwości podstawowych](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Właściwości to: Wygląd, Kolor wsteczny, BorderStyle, Podpis, Włączone, Czcionka, ForeColor, hWnd i Tekst. Aby uzyskać opis właściwości magazynowych, zobacz [Formanty ActiveX: Dodawanie właściwości zapasów](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Można poprawić wydajność inicjacji binarnej kontrolki przy użyciu `ResetStockProps` i `ResetVersion` do przesłonięcia `COleControl::OnResetState`. Zobacz przykład poniżej. Aby uzyskać więcej informacji na temat optymalizacji inicjalizacji, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Można poprawić wydajność inicjowania binarnego `ResetVersion` formantu `COleControl::OnResetState`za pomocą `ResetStockProps` i zastąpić . Zobacz przykład poniżej. Aby uzyskać więcej informacji na temat optymalizacji inicjowania, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCAxCtl#7](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]
 
-##  <a name="resetversion"></a>COleControl::ResetVersion
+## <a name="colecontrolresetversion"></a><a name="resetversion"></a>COleControl::ResetVersion
 
-Inicjuje numer wersji w określonej wartości.
+Inicjuje numer wersji do określonej wartości.
 
 ```
 void ResetVersion(DWORD dwVersionDefault);
@@ -3654,16 +3654,16 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*dwVersionDefault*<br/>
-Numer wersji, który ma zostać przypisany do kontrolki.
+*dwVersionDefault (Niem.*<br/>
+Numer wersji, który ma zostać przypisany do formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Można poprawić wydajność inicjacji binarnej kontrolki przy użyciu `ResetVersion` i `ResetStockProps` do przesłonięcia `COleControl::OnResetState`. Zobacz przykład pod adresem [ResetStockProps](#resetstockprops). Aby uzyskać więcej informacji na temat optymalizacji inicjalizacji, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Można poprawić wydajność inicjowania binarnego `ResetStockProps` formantu `COleControl::OnResetState`za pomocą `ResetVersion` i zastąpić . Zobacz przykład w [ResetStockProps](#resetstockprops). Aby uzyskać więcej informacji na temat optymalizacji inicjowania, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="scrollwindow"></a>COleControl::ScrollWindow
+## <a name="colecontrolscrollwindow"></a><a name="scrollwindow"></a>COleControl::ScrollWindow
 
-Umożliwia niezależnym obiektom OLE przewinięcie obszaru w obrazie aktywnym na ekranie.
+Umożliwia obiektowi OLE bez okien przewijanie obszaru w jego aktywnym obrazie w miejscu na ekranie.
 
 ```
 void ScrollWindow(
@@ -3675,19 +3675,19 @@ void ScrollWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*xAmount*<br/>
-Określa liczbę w jednostkach urządzeń w poziomie przewijania poziomego. Ten parametr musi być wartością ujemną, aby przewijać w lewo.
+*xMount (montaż)*<br/>
+Określa ilość przewijania w poziomie w jednostkach urządzenia. Ten parametr musi być wartością ujemną, aby przewinąć w lewo.
 
-*yAmount*<br/>
-Określa ilość w jednostkach urządzenia, przewijanie w pionie. Ten parametr musi być wartością ujemną, aby przewijać w górę.
+*yMount (montaż)*<br/>
+Określa ilość przewijania w pionie w jednostkach urządzenia. Ten parametr musi być wartością ujemną, aby przewinąć w górę.
 
-*lpRect*<br/>
-Wskazuje na obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturę Rect, która określa część obszaru klienckiego obiektu OLE do przewinięcia, we współrzędnych klienta okna zawierającego. Jeśli *lpRect* ma wartość null, cały obszar klienta obiektu OLE jest przewijany.
+*Lprect*<br/>
+Wskazuje obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturę RECT, która określa część obszaru klienta obiektu OLE do przewijania we współrzędnych klienta okna zawierającego. Jeśli *lpRect* ma wartość NULL, cały obszar klienta obiektu OLE jest przewijany.
 
 *lpClipRect*<br/>
-Wskazuje na obiekt `CRect` lub strukturę `RECT`, która określa prostokąt do przycinania. Przewijane są tylko piksele wewnątrz prostokąta. Nie ma to żadnego oddziaływania na bity poza prostokątem, nawet jeśli znajdują się w prostokącie *lpRect* . Jeśli *lpClipRect* ma wartość null, żadne przycinanie nie jest wykonywane w prostokącie przewijania.
+Wskazuje obiekt `CRect` lub `RECT` strukturę określającą prostokąt, do który chcesz przyciąć. Przewijane są tylko piksele wewnątrz prostokąta. Bity poza prostokątem nie są zagrożone, nawet jeśli znajdują się w *lpRect* prostokąta. Jeśli *lpClipRect* ma wartość NULL, na prostokącie przewijania nie jest wykonywane żadne przycinanie.
 
-##  <a name="selectfontobject"></a>COleControl::SelectFontObject
+## <a name="colecontrolselectfontobject"></a><a name="selectfontobject"></a>COleControl::SelectFontObject
 
 Wybiera czcionkę w kontekście urządzenia.
 
@@ -3699,19 +3699,19 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
+*Pdc*<br/>
 Wskaźnik do obiektu kontekstu urządzenia.
 
 *fontHolder*<br/>
-Odwołanie do obiektu [CFontHolder](../../mfc/reference/cfontholder-class.md) reprezentującego czcionkę do wybrania.
+Odwołanie do obiektu [CFontHolder](../../mfc/reference/cfontholder-class.md) reprezentującego czcionkę, która ma zostać wybrana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wcześniej zaznaczonej czcionki. Gdy obiekt wywołujący zakończył wszystkie operacje rysowania, które używają *fontHolder,* należy wybrać wcześniej wybraną czcionkę, przekazując ją jako parametr do [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject).
+Wskaźnik do poprzednio wybranej czcionki. Po zakończeniu wszystkich operacji rysowania, które używają *fontHolder,* należy ponownie zaznaczyć poprzednio wybraną czcionkę, przekazując ją jako parametr do [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject).
 
-##  <a name="selectstockfont"></a>COleControl::SelectStockFont
+## <a name="colecontrolselectstockfont"></a><a name="selectstockfont"></a>COleControl::SelectStockFont
 
-Wybiera Właściwość "podstawowe czcionki" w kontekście urządzenia.
+Wybiera właściwość czcionka giełdowa w kontekście urządzenia.
 
 ```
 CFont* SelectStockFont(CDC* pDC);
@@ -3719,16 +3719,16 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
+*Pdc*<br/>
 Kontekst urządzenia, do którego zostanie wybrana czcionka.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do poprzednio wybranego obiektu `CFont`. Należy użyć funkcji [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) , aby wybrać tę czcionkę z powrotem do kontekstu urządzenia po zakończeniu.
+Wskaźnik do poprzednio `CFont` zaznaczonego obiektu. Należy użyć [CDC::SelectObject,](../../mfc/reference/cdc-class.md#selectobject) aby wybrać tę czcionkę z powrotem w kontekście urządzenia po zakończeniu.
 
-##  <a name="serializeextent"></a>COleControl::SerializeExtent
+## <a name="colecontrolserializeextent"></a><a name="serializeextent"></a>COleControl::SerializeExtent
 
-Deserializacji lub inicjuje stan obszaru wyświetlania przypisanego do kontrolki.
+Serializuje lub inicjuje stan przestrzeni wyświetlania przydzielonej formancie.
 
 ```
 void SerializeExtent(CArchive& ar);
@@ -3736,20 +3736,20 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*ty*<br/>
+*Ar*<br/>
 Obiekt `CArchive` do serializacji do lub z.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby przesłonić `COleControl::Serialize`, można poprawić wydajność danych binarnych formantu przy użyciu `SerializeExtent`, `SerializeStockProps`i `SerializeVersion`. Zobacz przykład poniżej. Aby uzyskać więcej informacji na temat optymalizacji inicjalizacji, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Można poprawić wydajność trwałości binarnej `SerializeExtent`formantu `SerializeVersion` za pomocą `COleControl::Serialize`programu , `SerializeStockProps`i zastąpić . Zobacz przykład poniżej. Aby uzyskać więcej informacji na temat optymalizacji inicjowania, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCAxCtl#8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]
 
-##  <a name="serializestockprops"></a>COleControl::SerializeStockProps
+## <a name="colecontrolserializestockprops"></a><a name="serializestockprops"></a>COleControl::SerializeStockProps
 
-Deserializacji lub inicjuje stan `COleControl`ch właściwości podstawowych: wyglądu, BackColor, obramowania, podpisu, włączonego, czcionki, wartości ForeColor i tekstu.
+Serializuje lub inicjuje stan `COleControl` właściwości zapasów: Wygląd, Kolor wsteczny, BorderStyle, Podpis, Włączone, Czcionka, ForeColor i Tekst.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3757,18 +3757,18 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*ty*<br/>
+*Ar*<br/>
 Obiekt `CArchive` do serializacji do lub z.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać opis właściwości podstawowych, zobacz [kontrolki ActiveX: Dodawanie właściwości podstawowych](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Aby uzyskać opis właściwości magazynowych, zobacz [Formanty ActiveX: Dodawanie właściwości zapasów](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Aby przesłonić `COleControl::Serialize`, można poprawić wydajność danych binarnych formantu przy użyciu `SerializeStockProps`, `SerializeExtent`i `SerializeVersion`. Aby zapoznać się z przykładem, zobacz kod w [SerializeExtent](#serializeextent). Aby uzyskać więcej informacji na temat optymalizacji inicjalizacji, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Można poprawić wydajność trwałości binarnej `SerializeStockProps`formantu `SerializeVersion` za pomocą `COleControl::Serialize`programu , `SerializeExtent`i zastąpić . Na przykład zobacz kod w [SerializeExtent](#serializeextent). Aby uzyskać więcej informacji na temat optymalizacji inicjowania, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="serializeversion"></a>COleControl::SerializeVersion
+## <a name="colecontrolserializeversion"></a><a name="serializeversion"></a>COleControl::SerializeVersion
 
-Deserializacji lub inicjuje stan informacji o wersji formantu.
+Serializuje lub inicjuje stan informacji o wersji formantu.
 
 ```
 DWORD SerializeVersion(
@@ -3779,26 +3779,26 @@ DWORD SerializeVersion(
 
 ### <a name="parameters"></a>Parametry
 
-*ty*<br/>
+*Ar*<br/>
 Obiekt `CArchive` do serializacji do lub z.
 
-*dwVersionDefault*<br/>
-Numer bieżącej wersji formantu.
+*dwVersionDefault (Niem.*<br/>
+Bieżący numer wersji formantu.
 
-*bConvert*<br/>
-Wskazuje, czy trwałe dane mają być konwertowane do najnowszego formatu podczas jego zapisywania lub obsługiwane w tym samym formacie, w jakim zostały załadowane.
+*bKonwertowanie*<br/>
+Wskazuje, czy dane trwałe powinny być konwertowane na najnowszy format podczas zapisywania lub utrzymywane w tym samym formacie, który miał podczas ładowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Numer wersji formantu. W przypadku ładowania określonego archiwum `SerializeVersion` zwraca wersję załadowana z tego archiwum. W przeciwnym razie zwraca aktualnie załadowanej wersji.
+Numer wersji formantu. Jeśli określone archiwum `SerializeVersion` jest ładowanie, zwraca wersję załadowaną z tego archiwum. W przeciwnym razie zwraca aktualnie załadowaną wersję.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby przesłonić `COleControl::Serialize`, można poprawić wydajność danych binarnych formantu przy użyciu `SerializeVersion`, `SerializeExtent`i `SerializeStockProps`. Aby zapoznać się z przykładem, zobacz kod w [SerializeExtent](#serializeextent). Aby uzyskać więcej informacji na temat optymalizacji inicjalizacji, zobacz [kontrolki ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
+Można poprawić wydajność trwałości binarnej `SerializeVersion`formantu `SerializeStockProps` za pomocą `COleControl::Serialize`programu , `SerializeExtent`i zastąpić . Na przykład zobacz kod w [SerializeExtent](#serializeextent). Aby uzyskać więcej informacji na temat optymalizacji inicjowania, zobacz [ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="setappearance"></a>COleControl:: setpozornie
+## <a name="colecontrolsetappearance"></a><a name="setappearance"></a>COleControl::SetAppearance
 
-Ustawia wartość właściwości wygląd akcji formantu.
+Ustawia wartość właściwości wygląd czas formantu.
 
 ```
 void SetAppearance (short sAppearance);
@@ -3806,16 +3806,16 @@ void SetAppearance (short sAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*sAppearance*<br/>
-**Krótka** wartość (VT_I2), która będzie używana na potrzeby wyglądu kontrolki. Wartość zerowa ustawia wygląd kontrolki na płaski, a wartość 1 ustawia wygląd kontrolki na 3D.
+*sPojasznik*<br/>
+**Krótka** (VT_I2) wartość używana do wyglądu formantu. Wartość zero ustawia wygląd formantu na płaski, a wartość 1 ustawia wygląd formantu na 3D.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji o właściwościach podstawowych, zobacz [kontrolki ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Aby uzyskać więcej informacji o właściwościach magazynowych, zobacz [Formanty ActiveX: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setbackcolor"></a>COleControl::SetBackColor
+## <a name="colecontrolsetbackcolor"></a><a name="setbackcolor"></a>COleControl::SetBackColor
 
-Ustawia wartość właściwości niekolorowego koloru formantu.
+Ustawia wartość właściwości backcolor zapasów formantu.
 
 ```
 void SetBackColor(OLE_COLOR dwBackColor);
@@ -3823,16 +3823,16 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*dwBackColor*<br/>
-Wartość OLE_COLOR używana do rysowania w tle formantu.
+*dwBackColor (Kolor)*<br/>
+Wartość OLE_COLOR, która ma być używana do rysowania w tle formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat używania tej właściwości i innych powiązanych właściwości, zobacz artykuł [formanty ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Aby uzyskać więcej informacji na temat korzystania z tej właściwości i innych powiązanych właściwości, zobacz artykuł [ActiveX Controls: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setborderstyle"></a>COleControl:: setborderer
+## <a name="colecontrolsetborderstyle"></a><a name="setborderstyle"></a>COleControl::SetBorderStyle
 
-Ustawia wartość właściwości Borderer dla kontrolki.
+Ustawia wartość właściwości BorderStyle zapasów formantu.
 
 ```
 void SetBorderStyle(short sBorderStyle);
@@ -3840,32 +3840,32 @@ void SetBorderStyle(short sBorderStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*sBorderStyle*<br/>
-Nowy styl obramowania kontrolki; wartość 0 oznacza brak obramowania i 1 oznacza normalne obramowanie.
+*sBorderStyle (Styl sBorderStyle)*<br/>
+Nowy styl obramowania dla kontroli; 0 oznacza brak obramowania, a 1 oznacza normalną granicę.
 
 ### <a name="remarks"></a>Uwagi
 
-Okno sterowania zostanie następnie ponownie utworzone i zostanie `OnBorderStyleChanged` wywołana.
+Okno formantu zostanie ponownie `OnBorderStyleChanged` utworzone i wywołane.
 
-##  <a name="setcapture"></a>COleControl:: setcapture
+## <a name="colecontrolsetcapture"></a><a name="setcapture"></a>COleControl::SetCapture
 
-Powoduje, że okno kontenera kontrolki będzie miało przechwycenie myszy w imieniu formantu.
+Powoduje, że okno kontenera formantu przejąć w posiadanie przechwytywania myszy w imieniu formantu.
 
 ```
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu okna `CWnd`, który otrzymał wcześniej dane wejściowe myszy.
+Wskaźnik do `CWnd` obiektu okna, który wcześniej odebrał dane wejściowe myszy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli formant jest aktywowany i bez okna, ta funkcja powoduje, że okno kontenera kontrolki przechwytuje funkcję przechwycenia myszy w imieniu formantu. W przeciwnym razie ta funkcja powoduje, że sama kontrolka będzie posiadała przechwycenie myszy (tak samo jak `CWnd::SetCapture`).
+Jeśli formant jest aktywowany i bez okien, ta funkcja powoduje, że okno kontenera formantu do przejęcia w posiadanie przechwytywania myszy, w imieniu formantu. W przeciwnym razie ta funkcja powoduje, że sam formant przejąć w posiadanie przechwytywania myszy (tak samo jak `CWnd::SetCapture`).
 
-##  <a name="setcontrolsize"></a>COleControl::SetControlSize
+## <a name="colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COleControl::SetControlSize
 
-Ustawia rozmiar okna formantu OLE i powiadamia kontener, który zmienia lokację sterowania.
+Ustawia rozmiar okna formantu OLE i powiadamia kontener, że witryna formantu zmienia.
 
 ```
 BOOL SetControlSize(int cx, int cy);
@@ -3873,25 +3873,25 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*Cx*<br/>
 Określa nową szerokość formantu w pikselach.
 
-*cy*<br/>
+*Cy*<br/>
 Określa nową wysokość formantu w pikselach.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli połączenie zakończyło się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta funkcja nie powinna być używana w konstruktorze formantu.
 
-Należy zauważyć, że wszystkie współrzędne okna sterowania są względne w lewym górnym rogu kontrolki.
+Należy zauważyć, że wszystkie współrzędne okien kontrolnych są względem lewego górnego rogu formantu.
 
-##  <a name="setenabled"></a>COleControl:: SetEnabled
+## <a name="colecontrolsetenabled"></a><a name="setenabled"></a>COleControl::SetEnabled
 
-Ustawia wartość właściwości z włączonymi zapasami dla kontrolki.
+Ustawia wartość właściwości czas Włączone formantu.
 
 ```
 void SetEnabled(BOOL bEnabled);
@@ -3899,32 +3899,32 @@ void SetEnabled(BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnabled*<br/>
-Ma wartość TRUE, Jeśli kontrolka ma być włączona. w przeciwnym razie FALSE.
+*bWłach*<br/>
+PRAWDA, jeśli formant ma być włączony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Po ustawieniu tej właściwości wywoływana jest `OnEnabledChange`.
+Po ustawieniu `OnEnabledChange` tej właściwości, jest wywoływana.
 
-##  <a name="setfocus"></a>COleControl:: SetFocus
+## <a name="colecontrolsetfocus"></a><a name="setfocus"></a>COleControl::SetFocus
 
-Powoduje, że okno kontenera kontrolki będzie miało fokus wejścia w imieniu formantu.
+Powoduje, że okno kontenera formantu przejąć w posiadanie fokus wejściowy w imieniu formantu.
 
 ```
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu okna `CWnd`, który wcześniej miał fokus wprowadzania, lub wartość NULL, jeśli nie ma takiego okna.
+Wskaźnik do `CWnd` obiektu okna, który wcześniej miał fokus wejściowy lub NULL, jeśli nie ma takiego okna.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kontrolka jest aktywowana i bez okna, ta funkcja powoduje, że okno kontenera kontrolki będzie miało fokus wprowadzania danych w imieniu formantu. Fokus wejściowy kieruje dane wejściowe z klawiatury do okna kontenera, a kontener wysyła wszystkie kolejne komunikaty klawiatury do obiektu OLE, który wywołuje `SetFocus`. Każde okno, które wcześniej miało fokus wprowadzania, utraci go.
+Jeśli formant jest aktywowany i bez okien, ta funkcja powoduje, że okno kontenera formantu do przejęcia w posiadanie fokusu wejściowego w imieniu formantu. Fokus wejściowy kieruje dane wejściowe klawiatury do okna kontenera, a kontener `SetFocus`wysyła wszystkie kolejne komunikaty klawiatury do wywoływania obiektu OLE. Każde okno, które wcześniej miało fokus wejściowy, traci je.
 
-Jeśli formant nie jest bez okna, ta funkcja powoduje, że sama kontrolka będzie posiadała fokus wprowadzania (taki sam jak `CWnd::SetFocus`).
+Jeśli formant nie jest bez okien, ta funkcja powoduje, że sam `CWnd::SetFocus`formant przejąć w posiadanie fokus wejściowy (tak samo jak ).
 
-##  <a name="setfont"></a>COleControl:: SetFont
+## <a name="colecontrolsetfont"></a><a name="setfont"></a>COleControl::SetFont
 
 Ustawia właściwość czcionki giełdowej formantu.
 
@@ -3934,12 +3934,12 @@ void SetFont(LPFONTDISP pFontDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pFontDisp*<br/>
+*pFontDisp (PFontDisp)*<br/>
 Wskaźnik do interfejsu wysyłania czcionki.
 
-##  <a name="setforecolor"></a>COleControl:: setforecolor
+## <a name="colecontrolsetforecolor"></a><a name="setforecolor"></a>COleControl::SetForeColor
 
-Ustawia wartość właściwości ForeColor zasobu formantu.
+Ustawia wartość właściwości forecolor zapasów forecolor formantu.
 
 ```
 void SetForeColor(OLE_COLOR dwForeColor);
@@ -3947,16 +3947,16 @@ void SetForeColor(OLE_COLOR dwForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*dwForeColor*<br/>
-Wartość OLE_COLOR, która będzie używana dla rysowania pierwszego planu formantu.
+*dwForeColor (Kolor)*<br/>
+Wartość OLE_COLOR, która ma być używana do rysowania pierwszego planu formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat używania tej właściwości i innych powiązanych właściwości, zobacz artykuł [formanty ActiveX: właściwości](../../mfc/mfc-activex-controls-properties.md).
+Aby uzyskać więcej informacji na temat korzystania z tej właściwości i innych powiązanych właściwości, zobacz artykuł [ActiveX Controls: Właściwości](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats
+## <a name="colecontrolsetinitialdataformats"></a><a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats
 
-Wywoływane przez platformę, aby zainicjować listę formatów danych obsługiwanych przez formant.
+Wywoływana przez platformę do inicjowania listy formatów danych obsługiwanych przez formant.
 
 ```
 virtual void SetInitialDataFormats();
@@ -3964,11 +3964,11 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja określa dwa formaty: CF_METAFILEPICT i trwały zestaw właściwości.
+Domyślna implementacja określa dwa formaty: CF_METAFILEPICT i zestaw właściwości trwałych.
 
-##  <a name="setinitialsize"></a>COleControl::SetInitialSize
+## <a name="colecontrolsetinitialsize"></a><a name="setinitialsize"></a>COleControl::SetInitialSize
 
-Ustawia rozmiar kontrolki OLE podczas pierwszego wyświetlania w kontenerze.
+Ustawia rozmiar formantu OLE, gdy po raz pierwszy wyświetlany w kontenerze.
 
 ```
 void SetInitialSize(
@@ -3978,19 +3978,19 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
-Początkowa szerokość kontrolki OLE w pikselach.
+*Cx*<br/>
+Początkowa szerokość formantu OLE w pikselach.
 
-*cy*<br/>
+*Cy*<br/>
 Początkowa wysokość formantu OLE w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję w konstruktorze, aby ustawić początkowy rozmiar kontrolki. Początkowy rozmiar jest mierzony w jednostkach urządzeń lub w pikselach. Zaleca się, aby to wywołanie zostało wykonane w konstruktorze kontrolki.
+Wywołanie tej funkcji w konstruktorze, aby ustawić początkowy rozmiar formantu. Rozmiar początkowy jest mierzony w jednostkach urządzenia lub pikselach. Zaleca się, aby to wywołanie zostało wykonane w konstruktorze formantu.
 
-##  <a name="setmodifiedflag"></a>COleControl::SetModifiedFlag
+## <a name="colecontrolsetmodifiedflag"></a><a name="setmodifiedflag"></a>COleControl::SetModifiedFlag
 
-Zmienia zmodyfikowany stan kontrolki.
+Zmienia zmodyfikowany stan formantu.
 
 ```
 void SetModifiedFlag(BOOL bModified = TRUE);
@@ -3998,14 +3998,14 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bModified*<br/>
-Nowa wartość flagi zmodyfikowanej kontrolki. Wartość TRUE wskazuje, że stan kontrolki został zmodyfikowany; Wartość FALSE wskazuje, że stan formantu został właśnie zapisany.
+*bZmodyfikowany*<br/>
+Nowa wartość zmodyfikowanej flagi formantu. WARTOŚĆ TRUE oznacza, że stan formantu został zmodyfikowany; FALSE wskazuje, że stan formantu właśnie został zapisany.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, gdy nastąpi zmiana, która wpłynie na trwały stan kontrolki. Na przykład jeśli wartość trwałej zmiany właściwości, Wywołaj tę funkcję z *bModified* **true**.
+Wywołanie tej funkcji za każdym razem, gdy wystąpi zmiana, która wpłynie na stan trwały formantu. Na przykład, jeśli zmieni się wartość właściwości trwałej, należy wywołać tę funkcję za pomocą *bModified* **TRUE**.
 
-##  <a name="setnotpermitted"></a>COleControl::SetNotPermitted
+## <a name="colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a>COleControl::SetNotPermitted
 
 Wskazuje, że żądanie edycji nie powiodło się.
 
@@ -4015,11 +4015,11 @@ void SetNotPermitted();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, gdy `BoundPropertyRequestEdit` nie powiedzie się. Ta funkcja zgłasza wyjątek typu `COleDispScodeException`, aby wskazać, że operacja ustawiania jest niedozwolona.
+Wywołanie tej `BoundPropertyRequestEdit` funkcji, gdy nie powiedzie się. Ta funkcja zgłasza wyjątek `COleDispScodeException` typu, aby wskazać, że operacja zestawu nie była dozwolona.
 
-##  <a name="setnotsupported"></a>COleControl::SetNotSupported
+## <a name="colecontrolsetnotsupported"></a><a name="setnotsupported"></a>COleControl::Zestaw Niewsprzejęty
 
-Zapobiega modyfikacji wartości właściwości kontrolki przez użytkownika.
+Zapobiega modyfikacji wartości właściwości formantu przez użytkownika.
 
 ```
 void SetNotSupported();
@@ -4027,11 +4027,11 @@ void SetNotSupported();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję zamiast funkcji set właściwości, gdzie modyfikacja wartości właściwości przez użytkownika kontrolki nie jest obsługiwana. Przykładem może być właściwość, która jest tylko do odczytu.
+Wywołanie tej funkcji zamiast Set funkcji dowolnej właściwości, gdzie modyfikacja wartości właściwości przez użytkownika formantu nie jest obsługiwana. Jednym z przykładów może być właściwość, która jest tylko do odczytu.
 
-##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer
+## <a name="colecontrolsetrectincontainer"></a><a name="setrectincontainer"></a>COleControl::SetRectInContainer
 
-Ustawia współrzędne prostokąta kontrolki względem kontenera wyrażone w jednostkach urządzeń.
+Ustawia współrzędne prostokąta formantu względem kontenera, wyrażone w jednostkach urządzenia.
 
 ```
 BOOL SetRectInContainer(LPCRECT lpRect);
@@ -4039,20 +4039,20 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskaźnik do prostokąta zawierający nowe współrzędne kontrolki względem kontenera.
+*Lprect*<br/>
+Wskaźnik do prostokąta zawierającego nowe współrzędne formantu względem kontenera.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli połączenie zakończyło się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kontrolka jest otwarta, rozmiar jest zmieniany; w przeciwnym razie wywoływana jest funkcja `OnPosRectChanged` kontenera.
+Jeśli formant jest otwarty, jest zmieniany; w przeciwnym razie `OnPosRectChanged` wywoływana jest funkcja kontenera.
 
-##  <a name="settext"></a>COleControl::SetText
+## <a name="colecontrolsettext"></a><a name="settext"></a>COleControl::SetText
 
-Ustawia wartość napisu lub właściwości text kontrolki.
+Ustawia wartość właściwości Podpis lub Tekst w formancie.
 
 ```
 void SetText(LPCTSTR pszText);
@@ -4060,16 +4060,16 @@ void SetText(LPCTSTR pszText);
 
 ### <a name="parameters"></a>Parametry
 
-*pszText*<br/>
+*pszText (tekst psz)*<br/>
 Wskaźnik do ciągu znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że podpisy giełdowe i właściwości tekstu są zamapowane na tę samą wartość. Oznacza to, że wszelkie zmiany wprowadzone w każdej z tych właściwości będą automatycznie zmieniać obie właściwości. Ogólnie rzecz biorąc formant powinien obsługiwać podpis lub właściwość text, ale nie oba jednocześnie.
+Należy zauważyć, że właściwości podpisu i tekstu są mapowane na tę samą wartość. Oznacza to, że wszelkie zmiany wprowadzone do jednej właściwości automatycznie zmienią obie właściwości. Ogólnie rzecz biorąc formant powinien obsługiwać akcje caption lub text właściwości, ale nie oba.
 
-##  <a name="throwerror"></a>COleControl:: ThrowError
+## <a name="colecontrolthrowerror"></a><a name="throwerror"></a>COleControl::ThrowError
 
-Sygnalizuje wystąpienie błędu w kontrolce.
+Sygnalizuje wystąpienie błędu w formancie.
 
 ```
 void ThrowError(
@@ -4085,25 +4085,25 @@ void ThrowError(
 
 ### <a name="parameters"></a>Parametry
 
-*polecenia*<br/>
-Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [formanty ActiveX: Tematy zaawansowane](../../mfc/mfc-activex-controls-advanced-topics.md).
+*Sc*<br/>
+Wartość kodu stanu do zgłoszenia. Aby uzyskać pełną listę możliwych kodów, zobacz artykuł [ActiveX Controls: Advanced Topics](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
 Identyfikator zasobu ciągu wyjątku, który ma zostać zgłoszony.
 
-*nHelpID*<br/>
-Identyfikator pomocy tematu do zgłoszenia.
+*nHelpID (Pomoc eksmisja)*<br/>
+Identyfikator pomocy tematu, który ma zostać zgłoszony.
 
-*pszDescription*<br/>
+*pszDeskrypt*<br/>
 Ciąg zawierający wyjaśnienie wyjątku, który ma zostać zgłoszony.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna być wywoływana tylko z poziomu funkcji get lub Set dla właściwości OLE albo implementacja metody automatyzacji OLE. Jeśli trzeba będzie sygnalizować błędy występujące w innym czasie, należy uruchomić wydarzenie błędu giełdowego.
+Ta funkcja powinna być wywoływana tylko z wewnątrz Get lub Set funkcji dla właściwości OLE lub implementacji metody automatyzacji OLE. Jeśli chcesz zasygnalizować błędy, które występują w innych godzinach, należy zwolnić zdarzenie błąd akcji.
 
-##  <a name="transformcoords"></a>COleControl::TransformCoords
+## <a name="colecontroltransformcoords"></a><a name="transformcoords"></a>COleControl::TransformCoords
 
-Transformuje wartości współrzędnych między jednostkami HIMETRIC i natywnymi jednostkami kontenera.
+Przekształca wartości współrzędnych między jednostkami HIMETRIC a jednostkami macierzystymi kontenera.
 
 ```
 void TransformCoords(
@@ -4114,30 +4114,30 @@ void TransformCoords(
 
 ### <a name="parameters"></a>Parametry
 
-*lpptlHimetric*<br/>
-Wskaźnik do struktury `POINTL` zawierającej współrzędne w jednostkach HIMETRIC.
+*lpptlHimetric (lpptlHimetric)*<br/>
+Wskaźnik do `POINTL` struktury zawierającej współrzędne w jednostkach HIMETRIC.
 
-*lpptfContainer*<br/>
-Wskaźnik do struktury `POINTF` zawierającej współrzędne w rozmiarze jednostki kontenera.
+*lpptfKontainer*<br/>
+Wskaźnik do `POINTF` struktury zawierającej współrzędne w rozmiarze jednostki kontenera.
 
-*znaczników*<br/>
+*flagi*<br/>
 Kombinacja następujących wartości:
 
-- XFORMCOORDS_POSITION pozycji w kontenerze.
+- XFORMCOORDS_POSITION Pozycja w pojemniku.
 
-- XFORMCOORDS_SIZE rozmiar w kontenerze.
+- XFORMCOORDS_SIZE rozmiar A w pojemniku.
 
-- XFORMCOORDS_HIMETRICTOCONTAINER Przekształć jednostki HIMETRIC na jednostki kontenera.
+- XFORMCOORDS_HIMETRICTOCONTAINER przekształcanie jednostek HIMETRIC w jednostki kontenera.
 
 - XFORMCOORDS_CONTAINERTOHIMETRIC Przekształć jednostki kontenera na jednostki HIMETRIC.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie flagi, XFORMCOORDS_POSITION i XFORMCOORDS_SIZE, wskazują, czy współrzędne powinny być traktowane jako położenie czy rozmiar. Pozostałe dwie flagi wskazują kierunek transformacji.
+Pierwsze dwie flagi, XFORMCOORDS_POSITION i XFORMCOORDS_SIZE, wskazują, czy współrzędne powinny być traktowane jako położenie lub rozmiar. Pozostałe dwie flagi wskazują kierunek transformacji.
 
-##  <a name="translatecolor"></a>COleControl::TranslateColor
+## <a name="colecontroltranslatecolor"></a><a name="translatecolor"></a>COleControl::TranslateColor
 
-Konwertuje wartość koloru z typu danych OLE_COLOR na typ danych [COLORREF](/windows/win32/gdi/colorref) .
+Konwertuje wartość koloru z OLE_COLOR typu danych na typ danych [COLORREF.](/windows/win32/gdi/colorref)
 
 ```
 COLORREF TranslateColor(
@@ -4147,39 +4147,39 @@ COLORREF TranslateColor(
 
 ### <a name="parameters"></a>Parametry
 
-*clrColor*<br/>
-Typ danych OLE_COLOR. Aby uzyskać więcej informacji, zobacz Funkcja [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) systemu Windows.
+*clrColor (wychocie)*<br/>
+Typ danych OLE_COLOR. Aby uzyskać więcej informacji, zobacz funkcję [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) systemu Windows.
 
 *hpal*<br/>
-Dojście do opcjonalnej palety; może mieć wartość NULL.
+Uchwyt do opcjonalnej palety; może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Kolor RGB (czerwony, zielony, niebieski) 32-bitowy, który definiuje pełny kolor zbliżony do wartości *clrColor* , którą urządzenie może reprezentować.
+32-bitowa wartość koloru RGB (czerwona, zielona, niebieska), która definiuje kolor jednolity najbliżej wartości *clrColor,* którą może reprezentować urządzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja przydaje się do tłumaczenia właściwości ForeColor i BackColor magazynu na typy COLORREF używane przez funkcje Członkowskie funkcji [przechwytywania](../../mfc/reference/cdc-class.md) .
+Ta funkcja jest przydatna do tłumaczenia zapasów ForeColor i BackColor właściwości do typów COLORREF używane przez funkcje członkowskie [CDC.](../../mfc/reference/cdc-class.md)
 
-##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad
+## <a name="colecontrolwillambientsbevalidduringload"></a><a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad
 
-Określa, czy kontrolka ma używać wartości właściwości otoczenia jako wartości domyślnych, gdy zostanie następnie załadowana ze stanu trwałego.
+Określa, czy formant powinien używać wartości właściwości otoczenia jako wartości domyślnych, gdy jest następnie ładowany ze stanu trwałego.
 
 ```
 BOOL WillAmbientsBeValidDuringLoad();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera wskazuje, że właściwości otoczenia będą prawidłowe. właściwości otoczenia w przeciwnym razie nie będą prawidłowe.
+Nonzero wskazuje, że właściwości otoczenia będą prawidłowe; w przeciwnym razie właściwości otoczenia nie będą prawidłowe.
 
 ### <a name="remarks"></a>Uwagi
 
-W niektórych kontenerach formant może nie mieć dostępu do właściwości otoczenia podczas początkowego wywołania do przesłonięcia `COleControl::DoPropExchange`. Jest tak w przypadku, gdy kontener wywołuje [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) lub [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) przed wywołaniem [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (to oznacza, że nie będzie on uznawany za bit stanu OLEMISC_SETCLIENTSITEFIRST).
+W niektórych kontenerach formant może nie mieć dostępu do jego właściwości `COleControl::DoPropExchange`otoczenia podczas początkowego wywołania zastąpienia . Dzieje się tak, jeśli kontener wywołuje [IPersistStreamInit::Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) lub [IPersistStorage::Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) przed wywołaniem [IOleObject::SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (oznacza to, że jeśli nie honoruje bitu stanu OLEMISC_SETCLIENTSITEFIRST).
 
-##  <a name="windowproc"></a>COleControl::WindowProc
+## <a name="colecontrolwindowproc"></a><a name="windowproc"></a>COleControl::WindowProc
 
-Zawiera procedurę systemu Windows dla obiektu `COleControl`.
+Zawiera procedurę systemu `COleControl` Windows dla obiektu.
 
 ```
 virtual LRESULT WindowProc(
@@ -4190,27 +4190,27 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*komunikat*<br/>
-Określa komunikat systemu Windows, który ma zostać przetworzony.
+*Komunikat*<br/>
+Określa komunikat systemu Windows do przetworzenia.
 
-*wParam*<br/>
-Zawiera dodatkowe informacje używane podczas przetwarzania komunikatu. Wartość parametru zależy od komunikatu.
+*Wparam*<br/>
+Zawiera dodatkowe informacje używane do przetwarzania wiadomości. Wartość parametru zależy od komunikatu.
 
-*lParam*<br/>
-Zawiera dodatkowe informacje używane podczas przetwarzania komunikatu. Wartość parametru zależy od komunikatu.
+*Lparam*<br/>
+Zawiera dodatkowe informacje używane do przetwarzania wiadomości. Wartość parametru zależy od komunikatu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwrotna wysłanej wiadomości.
+Zwracana wartość wysyłanej wiadomości.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby wysyłać określone wiadomości za pomocą mapy komunikatów kontrolki.
+Wywołanie tej funkcji do wysyłania określonych komunikatów za pośrednictwem mapy komunikatów formantu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład CIRC3 MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład TESTHELP MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy circ3 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbka TESTHELP MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COlePropertyPage](../../mfc/reference/colepropertypage-class.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

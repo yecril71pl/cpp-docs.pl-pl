@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b451f979f2925a31f5baaac52351c5d2c0a76da0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957492"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362020"
 ---
 # <a name="_umask"></a>_umask
 
-Ustawia domyślną maskę dostępu do pliku. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_umask_s](umask-s.md).
+Ustawia domyślną maskę uprawnień do plików. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [_umask_s](umask-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,23 +55,25 @@ Domyślne ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_umask** zwraca poprzednią wartość *PMODE*. Brak powrotu błędu.
+**_umask** zwraca poprzednią wartość *pmode*. Nie ma zwracania błędów.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_umask** Ustawia maskę uprawnień pliku bieżącego procesu do trybu określonego przez *PMODE*. Maska uprawnień plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat**, **_open**lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiadający mu bit w wartości żądanego uprawnienia pliku jest ustawiony na 0 (niedozwolone). Jeśli bit w masce ma wartość 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnienia dla nowego pliku nie jest ustawione do momentu zamknięcia pliku po raz pierwszy.
+Funkcja **_umask** ustawia maskę uprawnień do plików bieżącego procesu na tryb określony przez *pmode*. Maska uprawnień do plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat** **, _open**lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiedni bit w żądanej wartości uprawnień pliku jest ustawiony na 0 (niedozwolone). Jeśli nieco w masce wynosi 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnień dla nowego pliku nie jest ustawiane, dopóki plik nie zostanie zamknięty po raz pierwszy.
 
-Wyrażenie Integer *PMODE* zawiera jedną lub obie następujące stałe manifestu zdefiniowane w SYS\STAT. C
+*Pmode* wyrażenia liczby całkowitej zawiera jedną lub obie z następujących stałych manifestu, zdefiniowane w SYS\STAT. H:
 
 |*pmode*| |
 |-|-|
-| **_S_IWRITE** | Dozwolone jest zapisanie. |
-| **_S_IREAD** | Odczytywanie dozwolone. |
-| **_S_IREAD** &#124; **_S_IWRITE** | Dozwolone odczytywanie i zapisywanie. |
+| **_S_IWRITE** | Pisanie dozwolone. |
+| **_S_IREAD** | Odczyt dozwolony. |
+| **_S_IREAD _S_IWRITE** &#124; **&#124;** | Czytanie i pisanie dozwolone. |
 
-Po otrzymaniu obu stałych są one przyłączone do operatora bitowego lub ( **&#124;** ). Jeśli argument *PMODE* jest **_S_IREAD**, odczytywanie jest niedozwolone (plik jest tylko do zapisu). Jeśli argument *PMODE* jest **_S_IWRITE**, pisanie nie jest dozwolone (plik jest tylko do odczytu). Na przykład jeśli bit zapisu jest ustawiony w masce, wszystkie nowe pliki będą tylko do odczytu. Należy pamiętać, że w systemach operacyjnych MS-DOS i Windows wszystkie pliki są odczytywane; nie można udzielić uprawnienia tylko do zapisu. W związku z tym ustawienie bitu odczytu z **_umask** nie ma wpływu na tryby pliku.
+Gdy obie stałe są podane, są one połączone z operatorem bitowym OR **(&#124;** ). Jeśli argument *pmode* jest **_S_IREAD**, odczyt jest niedozwolony (plik jest tylko do zapisu). Jeśli argument *pmode* jest **_S_IWRITE,** zapisywanie jest niedozwolone (plik jest tylko do odczytu). Na przykład jeśli bit zapisu jest ustawiony w masce, wszystkie nowe pliki będą tylko do odczytu. Należy pamiętać, że w systemach MS-DOS i systemach operacyjnych Windows wszystkie pliki są czytelne; nie można udzielić uprawnień tylko do zapisu. W związku z tym ustawienie bitu odczytu z **_umask** nie ma wpływu na tryby pliku.
 
-Jeśli *PMODE* nie jest kombinacją jednej z stałych manifestu ani nie zawiera alternatywnego zestawu stałych, funkcja zignoruje te elementy.
+Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub zawiera alternatywny zestaw stałych, funkcja po prostu je zignoruje.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -77,11 +81,11 @@ Jeśli *PMODE* nie jest kombinacją jednej z stałych manifestu ani nie zawiera 
 |-------------|---------------------|
 |**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -112,10 +116,10 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
-[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

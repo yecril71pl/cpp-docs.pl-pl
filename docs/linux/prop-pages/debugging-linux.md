@@ -1,15 +1,15 @@
 ---
-title: Właściwości debugera (Linux C++) | Microsoft Docs
+title: Właściwości debugera (Linux C++)| Dokumenty firmy Microsoft
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
 ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446179"
 ---
-# <a name="c-debugging-properties-linux-c"></a>C++Właściwości debugowania (Linux C++)
+# <a name="c-debugging-properties-linux-c"></a>Właściwości debugowania języka C++ (Linux C++)
 
 ::: moniker range="vs-2015"
 
@@ -19,21 +19,21 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker range=">=vs-2017"
 
-| Właściwość | Opis | Decyzji |
+| Właściwość | Opis | Choices |
 |--|--|--|
-| Zdalna maszyna debugowania | **Visual Studio 2019 w wersji 16,1**: określa maszynę, na której ma być debugowany program. Może różnić się od maszyny kompilacji zdalnej określonej na stronie [Ogólne](general-linux.md) . Możesz dodać lub edytować połączenie z maszyną docelową, korzystając z **narzędzi** > **Opcje** > **Międzyplatformowy** > **Menedżer połączeń**. |
-| Polecenie przed uruchomieniem | Polecenie uruchamiane w powłoce przed uruchomieniem debugera, które może być używane w celu wpływania na środowisko debugowania. |
-| Program | Pełna ścieżka do programu, który ma być debugowany w systemie zdalnym. W przypadku pozostawienia pustej lub niezmienionej wartości domyślne bieżące dane wyjściowe projektu. |
-| Argumenty programu | Argumenty wiersza polecenia do przekazania do debugowanego programu. |
-| Katalog roboczy | Katalog roboczy aplikacji zdalnej. Domyślnie katalog macierzysty użytkownika. |
-| Dodatkowe polecenia debugera | Dodatkowe polecenia `gdb` debugera do uruchomienia przed rozpoczęciem debugowania. |
-| Numer portu debugera | Numer portu komunikacji debugera ze zdalnym debugerem. Port nie może być używany lokalnie. Ta wartość musi być dodatnia i należeć do zakresu od 1 do 65535. Jeśli nie zostanie podany, zostanie użyty bezpłatny numer portu. |
-| Numer portu debugera zdalnego | Numer portu, na którym serwer zdalnego debugera `gdbserver` nasłuchuje w systemie zdalnym. Port nie może być używany w systemie zdalnym. Ta wartość musi być dodatnia i należeć do zakresu od 1 do 65535. Jeśli nie zostanie podany, zostanie użyty bezpłatny numer portu zaczynający się od 4444. |
-| Tryb debugowania | Określa, jak interfejs debugera ma `gdb`. W *trybie GDB*dyski debugera `gdb` przez powłokę w systemie zdalnym. W *trybie serwera gdbserver*`gdb` działa lokalnie i łączy się z `gdbserver` z uruchomioną zdalnie. | **serwera gdbserver**<br/>**GDB** |
-| Dodatkowe ścieżki wyszukiwania symboli | Dodatkowa ścieżka wyszukiwania symboli debugowania (solib-search-path). |
-| Debuguj procesy podrzędne | Określa, czy włączyć debugowanie procesów podrzędnych. |
-| Włącz drukowanie strukturalne języka Python | Włącz opcję całkiem drukowanie wartości wyrażeń. Obsługiwane tylko w trybie debugowania GDB. |
-| Plik wizualizacji | Domyślny natywny plik wizualizacji (. Natvis) zawierający dyrektywy wizualizacji dla typów SLT. Inne pliki Natvis należące do bieżącego rozwiązania są ładowane automatycznie. |
-| Mapa ścieżek plików dodatkowych źródeł | Dodatkowe równoważność ścieżki dla debugera, który ma być używany do mapowania nazw plików źródłowych systemu Windows na nazwy plików źródłowych w systemie Linux. Format to "\<ścieżka systemu Windows > =\<Linux-Path >;...". Nazwa pliku źródłowego znaleziona w ścieżce systemu Windows jest przywoływana tak, jakby została znaleziona w tej samej pozycji względnej pod ścieżką Linux. Pliki Znalezione w projekcie lokalnym nie wymagają dodatkowego mapowania. |
+| Zdalne debugowanie komputera | **Visual Studio 2019 w wersji 16.1**: Określa komputer do debugowania programu. Może się różnić od komputera kompilacji zdalnej, który jest określony na stronie [Ogólne.](general-linux.md) Docelowe połączenie z komputerem można dodawać lub edytować za pomocą Menedżera połączeń **Narzędzia** > **Opcje** > **wieloplatformowe** > **Connection Manager**. |
+| Polecenie przed uruchomieniem | Polecenie, które jest uruchamiane w powłoce przed uruchomieniem debugera, które może mieć wpływ na środowisko debugowania. |
+| Program | Pełna ścieżka w systemie zdalnym do programu do debugowania. Jeśli pozostanie puste lub niezmienione, domyślnie jest to bieżące dane wyjściowe projektu. |
+| Argumenty programu | Argumenty wiersza polecenia, aby przekazać do programu jest debugowane. |
+| Katalog roboczy | Katalog roboczy aplikacji zdalnej. Domyślnie katalog domowy użytkownika. |
+| Dodatkowe polecenia debugera | Dodatkowe `gdb` polecenia dla debugera do uruchomienia przed rozpoczęciem debugowania. |
+| Numer portu debugera | Numer portu do komunikacji debugera ze zdalnym debugerem. Port nie może być używany lokalnie. Ta wartość musi być dodatnia i między 1 a 65535. Jeśli nie podano, używany jest numer portu wolnego. |
+| Numer portu zdalnego debugera | Numer portu, na którym serwer `gdbserver` zdalnego debugera nasłuchuje w systemie zdalnym. Port nie może być używany w systemie zdalnym. Ta wartość musi być dodatnia i między 1 a 65535. Jeśli nie podano, używany jest bezpłatny numer portu zaczynając od 4444. |
+| Tryb debugowania | Określa sposób interfejsów debugera z programem `gdb`. W *trybie gdb*debuger przejeżdża `gdb` przez powłokę w systemie zdalnym. W *trybie gdbserver*działa `gdb` lokalnie `gdbserver` i łączy się z uruchomieniem zdalnie. | **gdbserver (serwer gdbserver)**<br/>**Gdb** |
+| Dodatkowe ścieżki wyszukiwania symboli | Dodatkowa ścieżka wyszukiwania symboli debugowania (ścieżka wyszukiwania solib). |
+| Debugowanie procesów podrzędnych | Określa, czy debugowanie procesów podrzędnych ma być włączane. |
+| Włącz drukowanie języka Python | Włącz ładne drukowanie wartości wyrażeń. Obsługiwane tylko w trybie debugowania gdb. |
+| Plik wizualizacji | Domyślny macierzysty plik wizualizacji (.natvis) zawierający dyrektywy wizualizacji dla typów SLT. Inne pliki .natvis, które należą do bieżącego rozwiązania są ładowane automatycznie. |
+| Mapa ścieżki pliku dodatkowych źródeł | Dodatkowe równoważności ścieżki dla debugera do użycia do mapowania nazw plików źródłowych systemu Windows na nazwy plików źródłowych systemu Linux. Format jest\<" windows-path>\<= linux-path>;...". Nazwa pliku źródłowego znaleziona pod ścieżką systemu Windows jest przywoływanie tak, jakby została znaleziona w tej samej pozycji względnej pod ścieżką systemu Linux. Pliki znalezione w projekcie lokalnym nie wymagają dodatkowego mapowania. |
 
 ::: moniker-end

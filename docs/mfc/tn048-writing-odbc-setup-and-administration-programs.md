@@ -1,5 +1,5 @@
 ---
-title: 'TN048: Pisanie programów instalacyjnych i ODBC administracyjnej dla aplikacji baz danych MFC'
+title: 'TN048: pisanie programów instalacyjnych i administracyjnych ODBC dla aplikacji baz danych MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - installing ODBC
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: ec74b75ff34c98a9231582b3db411fda90c5a9ff
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: d25520c4ffc805701dfe6b51192f8078e2fa300f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365484"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Pisanie programów instalacyjnych i ODBC administracyjnej dla aplikacji baz danych MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: pisanie programów instalacyjnych i administracyjnych ODBC dla aplikacji baz danych MFC
 
 > [!NOTE]
->  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca uwaga techniczna nie została zaktualizowana, ponieważ została po raz pierwszy uwzględniona w dokumentacji online. W rezultacie niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zaleca się wyszukicie tematu interesującego w indeksie dokumentacji online.
 
-Używanie klas baz danych MFC aplikacji należy program instalacyjny, który instaluje składniki ODBC. Może być konieczne programu administracji ODBC, który pobiera informacje o dostępnych sterowników, aby określić domyślne sterowniki i skonfigurować źródła danych. Ta uwaga opisuje korzystanie z interfejsu API Instalatora ODBC do zapisania tych programów.
+Aplikacje korzystające z klas bazy danych MFC będą potrzebowały programu instalacyjnego, który instaluje składniki ODBC. Mogą również potrzebować programu administracji ODBC, który będzie pobierał informacje o dostępnych sterownikach, określał sterowniki domyślne i konfigurował źródła danych. W tej notatce opisano użycie interfejsu API instalatora ODBC do pisania tych programów.
 
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Pisanie programu instalacyjnego ODBC
+## <a name="writing-an-odbc-setup-program"></a><a name="_mfcnotes_writing_an_odbc_setup_program"></a>Pisanie programu instalacyjnego ODBC
 
-Aplikacja MFC bazy danych wymaga Menedżera sterowników ODBC (ODBC. Biblioteka DLL) i sterowników ODBC, aby można było uzyskać dostęp do źródeł danych. Wiele sterowników ODBC również wymagać dodatkowych bibliotek DLL sieci i komunikacji. Większość sterowniki ODBC są dostarczane za pomocą programu instalacyjnego, która będzie instalować wymaganych składników ODBC. Deweloperzy aplikacji używanie klas baz danych MFC wykonywać następujące czynności:
+Aplikacja bazy danych MFC wymaga menedżera sterowników ODBC (ODBC. DLL) i sterowniki ODBC, aby móc uzyskać dostęp do źródeł danych. Wiele sterowników ODBC wymaga również dodatkowych bibliotek DLL sieci i komunikacji. Większość sterowników ODBC dostarczanych z programem instalacyjnym, który zainstaluje wymagane komponenty ODBC. Deweloperzy aplikacji przy użyciu klas bazy danych MFC mogą:
 
-- Polegaj na programy ustawienia specyficzne dla sterownika dla instalowanie składników ODBC. Wymaga to żadne dodatkowe prace nad częścią dewelopera — po prostu ponownie dystrybuować program instalacyjny sterownika.
+- Polegaj na programach instalacyjnych specyficznych dla sterownika do instalowania komponentów ODBC. Nie będzie to wymagało dalszych prac ze strony dewelopera — możesz po prostu rozpowszechniać program instalacyjny sterownika.
 
-- Alternatywnie można napisać własny program instalacyjny i zainstaluje Menedżer sterowników i sterownika.
+- Alternatywnie, można napisać własny program instalacyjny, który zainstaluje menedżera sterowników i sterownika.
 
-Instalator interfejsu API ODBC może służyć do pisania programów ustawienia specyficzne dla aplikacji. Funkcje w Instalatorze interfejsu API są implementowane przez Instalatora ODBC biblioteki DLL — ODBCINST. Biblioteki DLL Windows 16-bitowych i ODBCCP32. Biblioteka DLL na Win32. Aplikacja może wywołać `SQLInstallODBC` w Instalatorze biblioteki DLL, co spowoduje zainstalowanie Menedżera sterowników ODBC, sterowniki ODBC i dowolne wymagane tłumaczy. Zainstalowane sterowniki i tłumaczy następnie rejestruje w ODBCINST. Plik INI (lub rejestru w NT). `SQLInstallODBC` wymaga pełnej ścieżki do ODBC. Plik INF, który zawiera listę sterowników i opisano pliki wchodzące w skład każdego sterownika. Zawiera podobne informacje dotyczące Menedżera sterowników i tłumaczy. ODBC. Pliki INF są zazwyczaj dostarczane przez deweloperów sterowników.
+Interfejs API instalatora ODBC może być używany do pisania programów instalacyjnych specyficznych dla aplikacji. Funkcje w interfejsie API instalatora są implementowane przez bibliotekę DLL instalatora ODBC — ODBCINST. DLL w 16-bitowych systemach Windows i ODBCCP32. DLL na Win32. Aplikacja może `SQLInstallODBC` wywołać w biblioteki DLL instalatora, który zainstaluje menedżera sterowników ODBC, sterowniki ODBC i wszelkie wymagane tłumaczy. Następnie rejestruje zainstalowane sterowniki i tłumaczy w ODBCINST. ini (lub rejestru, na NT). `SQLInstallODBC`wymaga pełnej ścieżki do ODBC. PLIK INF, który zawiera listę sterowników do zainstalowania i opisuje pliki, które składają się na każdy sterownik. Zawiera również podobne informacje na temat menedżera sterowników i tłumaczy. Odbc. Pliki INF są zazwyczaj dostarczane przez deweloperów sterowników.
 
-Program można również zainstalować w poszczególnych składników ODBC. Aby zainstalować Menedżera sterowników, najpierw wywołuje program `SQLInstallDriverManager` w Instalatorze biblioteki DLL, aby uzyskać katalog docelowy dla Menedżera sterowników. Zazwyczaj jest to katalog, w którym znajdują się pliki dll Windows. Następnie program używa informacji w sekcji [ODBC Driver Manager] ODBC. Plik INF do skopiowania Menedżera sterowników i powiązane pliki z dysku instalacyjnego do tego katalogu. Aby zainstalować sterownik poszczególnych, najpierw wywołuje program `SQLInstallDriver` w Instalatorze biblioteki DLL do dodania Specyfikacja sterownika do ODBCINST. Plik INI (lub rejestru w NT). `SQLInstallDriver` Zwraca katalog docelowy sterownika — zwykle katalog, w którym znajdują się pliki dll Windows. Następnie program używa informacji w sekcji sterowników ODBC. Plik INF do skopiowania sterownik biblioteki DLL i powiązane pliki z dysku instalacyjnego do tego katalogu.
+Program może również zainstalować poszczególne składniki ODBC. Aby zainstalować Menedżera sterowników, `SQLInstallDriverManager` program najpierw wywołuje w biblioteki DLL instalatora, aby uzyskać katalog docelowy dla Menedżera sterowników. Zazwyczaj jest to katalog, w którym znajdują się biblioteki DLL systemu Windows. Następnie program używa informacji w sekcji [MENEDŻER STEROWNIKÓW ODBC] odBC. PLIK INF do kopiowania Menedżera sterowników i powiązanych plików z dysku instalacyjnego do tego katalogu. Aby zainstalować pojedynczy sterownik, program `SQLInstallDriver` najpierw wywołuje w emIB instalatora, aby dodać specyfikację sterownika do ODBCINST. ini (lub rejestru, na NT). `SQLInstallDriver`zwraca katalog docelowy sterownika — zwykle katalog, w którym znajdują się biblioteki DLL systemu Windows. Następnie program używa informacji w sekcji sterownika ODBC. inf, aby skopiować bibliotekę DLL sterownika i powiązane pliki z dysku instalacyjnego do tego katalogu.
 
-Aby uzyskać więcej informacji na temat ODBC. INF, ODBCINST. INI i za pomocą Instalatora interfejsu API, zobacz ODBC SDK *odwołania programisty* rozdziale 19, instalowanie oprogramowania ODBC.
+Aby uzyskać więcej informacji na temat ODBC. INF, ODBCINST. INI i za pomocą interfejsu API instalatora, patrz OdBC SDK *Programmer's Reference,* Rozdział 19, Instalowanie oprogramowania ODBC.
 
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Zapisywanie ODBC Administrator
+## <a name="writing-an-odbc-administrator"></a><a name="_mfcnotes_writing_an_odbc_administrator"></a>Pisanie administratora ODBC
 
-Aplikację bazy danych MFC można Instalowanie i konfigurowanie źródła danych ODBC w jeden z dwóch sposobów, w następujący sposób:
+Aplikacja bazy danych MFC można skonfigurować i skonfigurować źródła danych ODBC na jeden z dwóch sposobów, w następujący sposób:
 
-- Za pomocą Administratora ODBC (dostępne jako program lub jako element Panelu sterowania).
+- Użyj administratora ODBC (dostępnego jako program lub jako element Panelu sterowania).
 
 - Utwórz własny program do konfigurowania źródeł danych.
 
-Program, który umożliwia skonfigurowanie źródła danych sprawia, że wywołania funkcji do Instalatora biblioteki DLL. Instalator DLL wywołuje ustawienia biblioteki DLL, aby skonfigurować źródło danych. Istnieje jeden Instalator biblioteki DLL dla każdego sterownika; być może sterownik biblioteki DLL, samego lub oddzielnych bibliotek DLL. Biblioteka DLL Instalatora monituje użytkownika o informacje, które sterownik musi połączyć się z źródła danych i translator domyślne, jeśli jest obsługiwany. Następnie wywołuje Instalator biblioteki DLL i interfejsów API Windows, aby zapisać te informacje w ODBC. Plik INI (lub rejestru).
+Program, który konfiguruje źródła danych, wywołuje funkcje do biblioteki DLL instalatora. Biblioteka DLL instalatora wywołuje bibliotekę DLL konfiguracji w celu skonfigurowania źródła danych. Istnieje jedna biblioteka DLL konfiguracji dla każdego sterownika; może to być sam dll sterownika lub oddzielna biblioteka DLL. Biblioteka DLL instalatora monituje użytkownika o informacje, które sterownik musi połączyć się ze źródłem danych i domyślnym tłumaczem, jeśli jest obsługiwany. Następnie wywołuje bibliotekę DLL instalatora i interfejsy API systemu Windows, aby zarejestrować te informacje w odbc. ini (lub rejestru).
 
-Aby wyświetlić okno dialogowe, za pomocą której użytkownik może dodać, modyfikowanie i usuwanie źródeł danych, program wywołuje `SQLManageDataSources` w Instalatorze biblioteki DLL. Ta funkcja jest wywoływana, gdy Instalator Biblioteka DLL jest wywoływana z poziomu Panelu sterowania. Aby dodać, zmodyfikować lub usunąć źródła danych `SQLManageDataSources` wywołania `ConfigDSN` w Instalatorze biblioteki DLL dla sterownika skojarzony z tym źródłem danych. Można bezpośrednio dodawać, modyfikować lub usuwać dane źródeł, program wywołuje `SQLConfigDataSource` w Instalatorze biblioteki DLL. Program przekazuje nazwę źródła danych i opcji, która określa akcję do wykonania. `SQLConfigDataSource` wywołania `ConfigDSN` w Instalatorze biblioteki DLL i przekazuje je argumenty z `SQLConfigDataSource`.
+Aby wyświetlić okno dialogowe, za pomocą którego użytkownik może dodawać, modyfikować i usuwać źródła danych, program wywołuje `SQLManageDataSources` w biblioteki DLL instalatora. Ta funkcja jest wywoływana, gdy biblioteka DLL instalatora jest wywoływana z Panelu sterowania. Aby dodać, zmodyfikować lub usunąć `SQLManageDataSources` `ConfigDSN` źródło danych, wywoła wywołanie biblioteki DLL instalatora dla sterownika skojarzonego z tym źródłem danych. Aby bezpośrednio dodać, zmodyfikować lub usunąć źródła `SQLConfigDataSource` danych, program wywołuje bibliotekę DLL instalatora. Program przekazuje nazwę źródła danych i opcję określającą akcję do podjęcia. `SQLConfigDataSource`wywołuje `ConfigDSN` w dll konfiguracji i przekazuje `SQLConfigDataSource`jej argumenty z .
 
-Aby uzyskać więcej informacji, zobacz ODBC SDK *odwołania programisty* działu 23, odwołanie do funkcji DLL konfiguracji i rozdział 24, odwołanie do funkcji DLL Instalatora.
+Aby uzyskać więcej informacji, zobacz *Odwołanie programisty* SDK ODBC, rozdział 23, Odwołanie do funkcji DLL instalatora i rozdział 24, odwołanie do funkcji biblioteki DLL instalatora.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

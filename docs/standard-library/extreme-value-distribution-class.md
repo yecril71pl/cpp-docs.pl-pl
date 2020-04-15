@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368448"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution — Klasa
 
-Generuje rozkład wartości skrajnej.
+Generuje dystrybucję wartości skrajnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,26 +71,26 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *rzeczywistości*
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+*Typ rzeczywisty*\
+Typ wyniku zmiennoprzecinkowego, domyślnie **podwoić**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
-*URNG* \
-Aparat generatora liczb losowych. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+*Urng*\
+Silnik generatora liczb losowych. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy zawiera opis dystrybucji, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem wartości skrajnej. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje rozkład, który tworzy wartości typu zmiennoprzecinkowego określonego przez użytkownika lub wpisz **dwukrotnie,** jeśli nie jest podany, dystrybuowane zgodnie z dystrybucją wartości skrajnej. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
 
 ||||
 |-|-|-|
 |[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
 |`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
 
-Funkcje właściwości `a()` i `b()` zwracają odpowiednie wartości dla przechowywanych parametrów dystrybucji `a` i `b`.
+Właściwość `a()` działa `b()` i zwraca ich odpowiednie `a` `b`wartości dla przechowywanych parametrów dystrybucji i .
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkładu wartości skrajnej, zobacz [rozkład wartości](https://go.microsoft.com/fwlink/p/?linkid=401110)artykułu Wolfram MathWorld.
+Szczegółowe informacje na temat ekstremalnego rozkładu wartości można znaleźć w artykule Wolfram MathWorld [Extreme Value Distribution.](https://go.microsoft.com/fwlink/p/?linkid=401110)
 
 ## <a name="example"></a>Przykład
 
@@ -177,11 +177,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<random >
+**Nagłówek:** \<losowe>
 
 **Przestrzeń nazw:** std
 
-## <a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
 
 Konstruuje dystrybucję.
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a_value* \
-@No__t_0 parametr dystrybucji.
+*a_value*\
+Parametr `a` rozkładu.
 
-*b_value* \
-@No__t_0 parametr dystrybucji.
+*b_value*\
+Parametr `b` rozkładu.
 
-*parametr* \
-Struktura `param_type` używana do konstruowania rozkładu.
+*Parm*\
+Struktura `param_type` używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < b`
+**Warunek wstępny:**`0.0 < b`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `a` wartość przechowuje wartość *a_value* i której przechowywana `b` wartość przechowuje wartość *b_value*.
+Pierwszy konstruktor konstruuje `a` obiekt, którego przechowywana wartość przechowuje *wartość a_value* i której wartość przechowywana `b` przechowuje wartość *b_value*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
+Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
 
-## <a name="param_type"></a>extreme_value_distribution::p aram_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::param_type
 
 Przechowuje parametry dystrybucji.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a_value* \
-@No__t_0 parametr dystrybucji.
+*a_value*\
+Parametr `a` rozkładu.
 
-*b_value* \
-@No__t_0 parametr dystrybucji.
+*b_value*\
+Parametr `b` rozkładu.
 
-*prawa* \
-Obiekt `param_type`, do którego ma zostać wykonane porównanie.
+*Prawo*\
+Obiekt `param_type` do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < b`
+**Warunek wstępny:**`0.0 < b`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
+Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<random >](../standard-library/random.md)
+[\<losowe>](../standard-library/random.md)

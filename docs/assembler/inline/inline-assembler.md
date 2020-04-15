@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;Wbudowany asembler&lt;1}'
+title: Asembler wbudowany
 ms.date: 08/30/2018
 helpviewer_keywords:
 - assembler [C++]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2050f59601755a93c73b743debacbf52ba9cec05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318074"
 ---
-# <a name="inline-assembler"></a>{1&gt;Wbudowany asembler&lt;1}
+# <a name="inline-assembler"></a>Asembler wbudowany
 
 **Specyficzne dla firmy Microsoft**
 
 Język asembler ma wiele zastosowań, takich jak poprawa szybkości działania programu, zmniejszenie wymagań dotyczących pamięci i kontrola sprzętu. Można użyć wbudowanego asemblera, aby osadzić instrukcje języka asemblera bezpośrednio w programach źródłowych C i C++, bez dodatkowych kroków asemblacji i łączenia. Asembler wbudowany jest wbudowany w kompilator, więc nie ma potrzeby stosowania oddzielnego asemblera, jak Microsoft Macro Assembler (MASM).
 
 > [!NOTE]
->  Programy z kodem wbudowanego asemblera nie są całkowicie przenośne na inne platformy sprzętowe. Jeśli projektujesz do celów przenośności, unikaj stosowania asemblera wbudowanego.
+> Programy z kodem wbudowanego asemblera nie są całkowicie przenośne na inne platformy sprzętowe. Jeśli projektujesz do celów przenośności, unikaj stosowania asemblera wbudowanego.
 
-Wbudowany zestaw nie jest obsługiwany w procesorach ARM i x64.  W następujących tematach opisano, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86:
+Zestaw wbudowany nie jest obsługiwany w procesorach ARM i x64.  W następujących tematach opisano, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86:
 
 - [Omówienie wbudowanego asemblera](../../assembler/inline/inline-assembler-overview.md)
 
@@ -40,7 +40,7 @@ Wbudowany zestaw nie jest obsługiwany w procesorach ARM i x64.  W następujący
 
 - [Przeskakiwanie do etykiet w asemblerze wbudowanym](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)
 
-- [Wywoływanie funkcji C w asemblerze wbudowanym](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
+- [Wywoływanie funkcji C w zestawie wbudowanym](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
 
 - [Wywoływanie funkcji C++ w asemblerze wbudowanym](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)
 
@@ -48,9 +48,9 @@ Wbudowany zestaw nie jest obsługiwany w procesorach ARM i x64.  W następujący
 
 - [Optymalizacja wbudowanego asemblera](../../assembler/inline/optimizing-inline-assembly.md)
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZ Specyficzne dla firmy Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora i język asemblera](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
-[Dokumentacja języka C++](../../cpp/cpp-language-reference.md)<br/>
+[Odwołanie do języka języka C++](../../cpp/cpp-language-reference.md)<br/>

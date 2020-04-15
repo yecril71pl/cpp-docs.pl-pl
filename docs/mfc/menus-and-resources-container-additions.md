@@ -1,5 +1,5 @@
 ---
-title: 'Menu i zasoby: Dodatki do kontenera'
+title: 'Menu i zasoby: dodatki do kontenera'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,74 +16,74 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8da58316f471f7b7d26e142cc1dd1ccaa6ad8b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363469"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364791"
 ---
-# <a name="menus-and-resources-container-additions"></a>Menu i zasoby: Dodatki do kontenera
+# <a name="menus-and-resources-container-additions"></a>Menu i zasoby: dodatki do kontenera
 
-W tym artykule opisano zmiany, które należy podjąć, menu i innych zasobów w visual edycję aplikacji kontenera.
+W tym artykule opisano zmiany, które należy włożyć do menu i innych zasobów w aplikacji kontenera edycji wizualnej.
 
-W aplikacjach kontenera dwa rodzaje zmian, należy wykonać: modyfikacje do istniejących zasobów do obsługi edycja wizualna OLE i dodawania nowych zasobów używany do aktywacji w miejscu. Jeśli tworzenie aplikacji kontenera za pomocą Kreatora aplikacji, zostaną wykonane następujące kroki dla Ciebie, ale mogą one wymagać dostosowania.
+W aplikacjach kontenera należy wprowadzić dwa typy zmian: modyfikacje istniejących zasobów w celu obsługi edycji wizualnej OLE i dodanie nowych zasobów używanych do aktywacji w miejscu. Jeśli używasz kreatora aplikacji do tworzenia aplikacji kontenera, te kroki zostaną wykonane dla Ciebie, ale mogą wymagać pewnego dostosowania.
 
-Jeśli nie używasz Kreatora aplikacji, możesz przyjrzeć się OCLIENT. RC, skrypt zasobu OCLIENT przykładowej aplikacji, aby zobaczyć, jak te zmiany są zaimplementowane. Zobacz przykładową MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
+Jeśli nie używasz kreatora aplikacji, możesz chcieć przyjrzeć się OCLIENT. RC, skrypt zasobów dla przykładowej aplikacji OCLIENT, aby zobaczyć, jak te zmiany są implementowane. Zobacz przykład ole MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 Tematy omówione w tym artykule obejmują:
 
-- [Dodatki do kontenera Menu](#_core_container_menu_additions)
+- [Dodatki do menu kontenera](#_core_container_menu_additions)
 
-- [Dodatki do tabeli akceleratora](#_core_container_application_accelerator_table_additions)
+- [Dodatki tabeli akceleratora](#_core_container_application_accelerator_table_additions)
 
-- [Dodatki tabeli ciągów](#_core_string_table_additions_for_container_applications)
+- [Dodatki do tabel ciągów](#_core_string_table_additions_for_container_applications)
 
-##  <a name="_core_container_menu_additions"></a> Dodatki do kontenera Menu
+## <a name="container-menu-additions"></a><a name="_core_container_menu_additions"></a>Dodatki do menu kontenera
 
-W menu Edycja, należy dodać następujące elementy:
+Do menu Edycja należy dodać następujące elementy:
 
-|Element|Cel|
+|Element|Przeznaczenie|
 |----------|-------------|
-|**Wstaw nowy obiekt**|Powoduje otwarcie okna dialogowego OLE wprowadź obiekt, aby wstawić osadzony lub połączony element do dokumentu.|
-|**Wklej łącze**|Wkleja łącze do elementu ze Schowka do dokumentu.|
-|**Zlecenia OLE**|Wywołuje primary — zlecenie wybranego elementu. Tekst tego zmieniony element menu, aby odzwierciedlić primary — zlecenie wybranego elementu.|
-|**Łącza**|Otwiera okno dialogowe OLE Edytuj łącza, aby zmienić istniejące elementy połączone.|
+|**Wstaw nowy obiekt**|Otwiera okno dialogowe Wstawianie obiektu OLE w celu wstawienia elementu połączonego lub osadzonego do dokumentu.|
+|**Wklej łącze**|Wkleja łącze do elementu w Schowku do dokumentu.|
+|**Czasownik OLE**|Wywołuje zlecenie podstawowe wybranego elementu. Tekst tego elementu menu zmienia się, aby odzwierciedlić zlecenie podstawowe zaznaczonego elementu.|
+|**Linki**|Otwiera okno dialogowe Edycja ole łącza, aby zmienić istniejące połączone elementy.|
 
-Oprócz zmian wymienione w tym artykule pliku źródłowego musi zawierać AFXOLECL. RC, który jest wymagany do wykonania w bibliotece klas Microsoft Foundation. Wstaw nowy obiekt jest tylko wymagane menu. Można dodać inne elementy, ale przedstawionych tutaj są najbardziej rozpowszechnione.
+Oprócz zmian wymienionych w tym artykule, plik źródłowy musi zawierać AFXOLECL. RC, który jest wymagany dla implementacji biblioteki klas programu Microsoft Foundation. Wstaw nowy obiekt jest jedynym wymaganym dodatkiem menu. Inne elementy można dodać, ale te wymienione tutaj są najczęściej.
 
-Jeśli chcesz obsługiwać aktywacji w miejscu zawartych w niej elementów, należy utworzyć nowe menu dla aplikacji kontenera. To menu składa się z tym samym menu Plik i menu podręczne okna używany, gdy pliki są otwarte, ale ma dwa separatory znajdująca się między nimi. Separatory te są używane do wskazać, gdzie element serwera (składnik) (aplikacja) należy umieszczać jego menu, gdy aktywowany w miejscu. Aby uzyskać więcej informacji na temat tej techniki scalania menu, zobacz [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
+Należy utworzyć nowe menu dla aplikacji kontenera, jeśli chcesz obsługiwać aktywację w miejscu zawartych elementów. To menu składa się z tego samego menu Plik i menu podręcznego Okno używane, gdy pliki są otwarte, ale ma dwa separatory umieszczone między nimi. Separatory te służą do wskazania, gdzie element serwera (składnika) (aplikacja) powinien umieszczać swoje menu po uaktywnieniu w miejscu. Aby uzyskać więcej informacji na temat tej techniki scalania menu, zobacz [Menu i Zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md).
 
-##  <a name="_core_container_application_accelerator_table_additions"></a> Dodawanie tabeli akceleratora aplikacji kontenera
+## <a name="container-application-accelerator-table-additions"></a><a name="_core_container_application_accelerator_table_additions"></a>Dodatki tabeli akceleratora aplikacji kontenera
 
-Niewielkie zmiany zasobów Tabela akceleratora aplikacji kontenera są niezbędne, jeśli są obsługiwane aktywacji w miejscu. Pierwsza zmiana umożliwia użytkownikowi naciśnij klawisz ESC (ESC), aby anulować tryb edycji w miejscu. Dodaj następujący wpis do tabeli akceleratora główne:
+Małe zmiany w zasobach tabeli akceleratora aplikacji kontenera są niezbędne, jeśli obsługujesz aktywację w miejscu. Pierwsza zmiana umożliwia użytkownikowi naciśnięcie klawisza ewakuacyjnego (ESC), aby anulować tryb edycji w miejscu. Dodaj następujący wpis do tabeli akceleratora głównego:
 
-|Identyfikator|Key|Typ|
+|ID|Klucz|Typ|
 |--------|---------|----------|
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**Virtkey**|
 
-Zmień drugi polega na utworzeniu nowej tabeli akceleratora, który odnosi się do nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela zawiera wpisy dla menu Plik i okna, oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabela akceleratora utworzone dla aktywacji w miejscu, w przykładzie MFC [kontenera](../overview/visual-cpp-samples.md):
+Drugą zmianą jest utworzenie nowej tabeli akceleratora, która odpowiada nowemu zasobowi menu utworzonemu do aktywacji w miejscu. W tej tabeli oprócz powyższ VK_ESCAPEego znajdują się pozycje menu Plik i Okno. Poniższy przykład przedstawia tabelę akceleratora utworzoną dla aktywacji w miejscu w przykładowym [kontenerze](../overview/visual-cpp-samples.md)MFC:
 
-|Identyfikator|Key|Typ|
+|ID|Klucz|Typ|
 |--------|---------|----------|
-|ID_FILE_NEW —|CTRL+N|**VIRTKEY**|
-|ID_FILE_OPEN —|CTRL+O|**VIRTKEY**|
-|ID_FILE_SAVE|CTRL+S|**VIRTKEY**|
-|ID_FILE_PRINT|CTRL+P|**VIRTKEY**|
-|ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE —|SHIFT+VK_F6|**VIRTKEY**|
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
+|ID_FILE_NEW|CTRL+N|**Virtkey**|
+|ID_FILE_OPEN|CTRL+O|**Virtkey**|
+|Id_file_save|CTRL+S|**Virtkey**|
+|ID_FILE_PRINT|CTRL+P|**Virtkey**|
+|ID_NEXT_PANE|VK_F6|**Virtkey**|
+|ID_PREV_PANE|VK_F6 SHIFT+|**Virtkey**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**Virtkey**|
 
-##  <a name="_core_string_table_additions_for_container_applications"></a> Parametry tabeli dodatki dla aplikacji kontenera
+## <a name="string-table-additions-for-container-applications"></a><a name="_core_string_table_additions_for_container_applications"></a>Dodatki tabeli ciągów dla aplikacji kontenerowych
 
-Większość zmian do tabel ciągów dla aplikacji kontenera odnoszą się do elementów menu dodatkowych wymienione w [dodatki do kontenera Menu](#_core_container_menu_additions). Dostarczają tekstu wyświetlanego na pasku stanu, gdy każdy element menu jest wyświetlany. Na przykład poniżej przedstawiono wpisów tabeli ciągów, które generuje Kreatora aplikacji:
+Większość zmian w tabelach ciągów dla aplikacji kontenerowych odpowiada dodatkowym elementom menu wymienionym w [dodatkach menu kontenerów](#_core_container_menu_additions). Dostarczają one tekst wyświetlany na pasku stanu, gdy każdy element menu jest wyświetlany. Na przykład oto wpisy tabeli ciągów generowane przez kreatora aplikacji:
 
-|Identyfikator|String|
+|ID|Ciąg|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|Zainicjowanie OLE nie powiodło się. Upewnij się, że biblioteki OLE są w poprawnej wersji.|
-|IDP_FAILED_TO_CREATE|Nie można utworzyć obiektu. Upewnij się, że obiekt wprowadzono do rejestru systemu.|
+|IDP_OLE_INIT_FAILED|Inicjowanie OLE nie powiodło się. Upewnij się, że biblioteki OLE są poprawną wersją.|
+|IDP_FAILED_TO_CREATE|Nie można utworzyć obiektu. Upewnij się, że obiekt został wprowadzony do rejestru systemowego.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menu i zasoby: dodatki serwera](../mfc/menus-and-resources-server-additions.md)
+[Menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md)

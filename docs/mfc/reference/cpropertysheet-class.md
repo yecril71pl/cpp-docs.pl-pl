@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363948"
 ---
 # <a name="cpropertysheet-class"></a>Klasa CPropertySheet
 
@@ -69,101 +69,101 @@ Reprezentuje arkusze właściwości, znane również jako okna dialogowe kart.
 class CPropertySheet : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CPropertySheet::CPropertySheet](#cpropertysheet)|Konstruuje obiekt `CPropertySheet`.|
+|[CPropertySheet::CPropertySheet](#cpropertysheet)|Konstruuje `CPropertySheet` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CPropertySheet:: addPage](#addpage)|Dodaje stronę do arkusza właściwości.|
-|[CPropertySheet:: konstrukcja](#construct)|Konstruuje obiekt `CPropertySheet`.|
-|[CPropertySheet:: Create](#create)|Wyświetla niemodalny arkusz właściwości.|
-|[CPropertySheet::D oModal](#domodal)|Wyświetla modalny arkusz właściwości.|
+|[Arkusz CPropertySheet::AddPage](#addpage)|Dodaje stronę do arkusza właściwości.|
+|[Arkusz CPropertySheet::Konstruuj](#construct)|Konstruuje `CPropertySheet` obiekt.|
+|[Arkusz CPropertySheet::Tworzenie](#create)|Wyświetla niemodytowy arkusz właściwości.|
+|[CPropertySheet::DoModal](#domodal)|Wyświetla arkusz właściwości modalnych.|
 |[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Wskazuje, czy arkusz właściwości używa kart skumulowanych czy przewijanych.|
-|[CPropertySheet:: zdarzenie EndDialog](#enddialog)|Kończy arkusz właściwości.|
-|[CPropertySheet::GetActiveIndex](#getactiveindex)|Pobiera indeks aktywnej strony arkusza właściwości.|
-|[CPropertySheet::GetActivePage](#getactivepage)|Zwraca obiekt aktywnej strony.|
-|[CPropertySheet:: GetPage](#getpage)|Pobiera wskaźnik do określonej strony.|
-|[CPropertySheet:: getpagecount](#getpagecount)|Pobiera liczbę stron w arkuszu właściwości.|
-|[CPropertySheet:: GetPageIndex](#getpageindex)|Pobiera indeks określonej strony arkusza właściwości.|
-|[CPropertySheet:: GetTabControl](#gettabcontrol)|Pobiera wskaźnik do kontrolki karta.|
-|[CPropertySheet::MapDialogRect](#mapdialogrect)|Konwertuje jednostki okna dialogowego prostokąta na jednostki ekranu.|
-|[CPropertySheet:: OnInitDialog](#oninitdialog)|Przesłoń, aby rozszerzyć zainicjowanie arkusza właściwości.|
-|[CPropertySheet::P ressButton](#pressbutton)|Symuluje wybór określonego przycisku w arkuszu właściwości.|
-|[CPropertySheet:: Wywołaj RemovePage](#removepage)|Usuwa stronę z arkusza właściwości.|
-|[CPropertySheet::SetActivePage](#setactivepage)|Program programowo ustawia obiekt aktywnej strony.|
-|[CPropertySheet::SetFinishText](#setfinishtext)|Ustawia tekst dla przycisku Zakończ.|
-|[CPropertySheet:: settitle](#settitle)|Ustawia podpis arkusza właściwości.|
+|[Arkusz CPropertySheet::EndDialog](#enddialog)|Kończy arkusz właściwości.|
+|[Arkusz CPropertySheet::GetActiveIndex](#getactiveindex)|Pobiera indeks aktywnej strony arkusza właściwości.|
+|[Arkusz CPropertySheet::GetActivePage](#getactivepage)|Zwraca aktywny obiekt strony.|
+|[Arkusz CPropertySheet::GetPage](#getpage)|Pobiera wskaźnik do określonej strony.|
+|[CPropertySheet::GetPageCount](#getpagecount)|Pobiera liczbę stron w arkuszu właściwości.|
+|[CPropertySheet::GetPageIndex](#getpageindex)|Pobiera indeks określonej strony arkusza właściwości.|
+|[Arkusz CPropertySheet::GetTabControl](#gettabcontrol)|Pobiera wskaźnik do kontrolki karty.|
+|[Arkusz CPropertySheet::MapDialogRect](#mapdialogrect)|Konwertuje jednostki okna dialogowego prostokąta na jednostki ekranu.|
+|[Arkusz CPropertySheet::OnInitDialog](#oninitdialog)|Zastąrpnąć, aby zwiększyć inicjowanie arkusza właściwości.|
+|[CPropertySheet::PressButton](#pressbutton)|Symuluje wybór określonego przycisku w arkuszu właściwości.|
+|[CPropertySheet::RemovePage](#removepage)|Usuwa stronę z arkusza właściwości.|
+|[Arkusz CPropertySheet::SetActivePage](#setactivepage)|Programowo ustawia aktywny obiekt strony.|
+|[Arkusz CPropertySheet::SetFinishText](#setfinishtext)|Ustawia tekst przycisku Zakończ.|
+|[Arkusz CPropertySheet::SetTitle](#settitle)|Ustawia podpis arkusza właściwości.|
 |[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Włącza przyciski kreatora.|
-|[CPropertySheet:: SetWizardMode](#setwizardmode)|Włącza tryb kreatora.|
+|[Arkusz CPropertySheet::SetWizardMode](#setwizardmode)|Włącza tryb kreatora.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CPropertySheet:: m_psh](#m_psh)|Struktura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) systemu Windows. Zapewnia dostęp do podstawowych parametrów arkusza właściwości.|
+|[CPropertySheet::m_psh](#m_psh)|Struktura Windows [PROPSHEETHEADER.](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) Zapewnia dostęp do podstawowych parametrów arkusza właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Arkusz właściwości składa się z obiektu `CPropertySheet` i jednego lub większej liczby obiektów [CPropertyPage](../../mfc/reference/cpropertypage-class.md) . Struktura Wyświetla arkusz właściwości jako okno z zestawem indeksów kart i obszarem zawierającym aktualnie wybraną stronę. Użytkownik przechodzi do określonej strony przy użyciu odpowiedniej karty.
+Arkusz właściwości składa `CPropertySheet` się z obiektu i co najmniej jednego [obiektu CPropertyPage.](../../mfc/reference/cpropertypage-class.md) Struktura wyświetla arkusz właściwości jako okno z zestawem indeksów kart i obszarem zawierającym aktualnie wybraną stronę. Użytkownik przechodzi do określonej strony przy użyciu odpowiedniej karty.
 
-`CPropertySheet` zapewnia obsługę rozwiniętej struktury [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) wprowadzonej w systemach Windows 98 i windows NT 2000. Struktura zawiera dodatkowe flagi i składowe, które obsługują użycie mapy bitowej "znaku wodnego".
+`CPropertySheet`zapewnia obsługę rozszerzonej struktury [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) wprowadzonej w systemach Windows 98 i Windows NT 2000. Struktura zawiera dodatkowe flagi i elementy członkowskie, które obsługują przy użyciu mapy bitowej tła "znak wodny".
 
-Aby automatycznie wyświetlić te nowe obrazy w obiekcie arkusza właściwości, Przekaż prawidłowe wartości obrazów mapy bitowej i palety w wywołaniu [CPropertySheet:: konstrukcja](#construct) lub [CPropertySheet:: CPropertySheet](#cpropertysheet).
+Aby automatycznie wyświetlić te nowe obrazy w obiekcie arkusza właściwości, należy przekazać prawidłowe wartości dla obrazów bitmapowych i palet w wywołaniu [CPropertySheet::Construct](#construct) or [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Mimo że `CPropertySheet` nie pochodzi od [CDialog](../../mfc/reference/cdialog-class.md), Zarządzanie obiektem `CPropertySheet` jest podobne do zarządzania obiektem `CDialog`. Na przykład utworzenie arkusza właściwości wymaga konstrukcji dwuczęściowej: Wywołaj konstruktora, a następnie Wywołaj [DoModal](#domodal) dla modalnego arkusza właściwości lub [Utwórz](#create) dla niemodalnego arkusza właściwości. `CPropertySheet` ma dwa typy konstruktorów: [CPropertySheet:: konstrukcja](#construct) i [CPropertySheet:: CPropertySheet](#cpropertysheet).
+Mimo `CPropertySheet` że nie pochodzi z [CDialog](../../mfc/reference/cdialog-class.md), zarządzanie `CPropertySheet` `CDialog` obiektem jest jak zarządzanie obiektem. Na przykład utworzenie arkusza właściwości wymaga konstrukcji dwuczęściowej: wywołaj konstruktora, a następnie [wywołaj DoModal](#domodal) dla arkusza właściwości modalnych lub [Utwórz](#create) dla arkusza właściwości bez trybu. `CPropertySheet`Posiada dwa typy konstruktorów: [CPropertySheet::Construct](#construct) i [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Podczas konstruowania obiektu `CPropertySheet` niektóre [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) mogą spowodować wystąpienie wyjątku pierwszej szansy. Powoduje to, że system próbuje zmienić styl arkusza właściwości przed utworzeniem arkusza. Aby uniknąć tego wyjątku, upewnij się, że podczas tworzenia `CPropertySheet`ustawisz następujące style:
+Podczas konstruowania `CPropertySheet` obiektu, niektóre style [okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) może spowodować wyjątek pierwszej szansy występuje. Wynika to z systemu próbuje zmienić styl arkusza właściwości przed utworzeniem arkusza. Aby uniknąć tego wyjątku, podczas `CPropertySheet`tworzenia:
 
 - DS_3DLOOK
 
 - DS_CONTROL
 
-- WS_CHILD
+- Ws_child
 
-- WS_TABSTOP
+- Ws_tabstop
 
-Następujące style są opcjonalne i nie spowodują wyjątku pierwszej szansy:
+Następujące style są opcjonalne i nie powodują wyjątku pierwszej szansy:
 
 - DS_SHELLFONT
 
 - DS_LOCALEDIT
 
-- WS_CLIPCHILDREN
+- Ws_clipchildren
 
-Wszystkie inne `Window Styles` są zabronione i nie należy ich włączać.
+Wszelkie `Window Styles` inne są zabronione i nie należy ich włączać.
 
-Wymiana danych między obiektem `CPropertySheet` a obiektem zewnętrznym przypomina wymianę danych z obiektem `CDialog`. Istotną różnicą jest to, że ustawienia arkusza właściwości są zwykle zmiennymi składowymi obiektów `CPropertyPage`, a nie samego obiektu `CPropertySheet`.
+Wymiana danych między `CPropertySheet` obiektem a obiektem zewnętrznym jest `CDialog` podobna do wymiany danych z obiektem. Ważną różnicą jest to, że ustawienia arkusza właściwości `CPropertyPage` są zazwyczaj zmienne członkowskie obiektów, a nie samego `CPropertySheet` obiektu.
 
-Można utworzyć typ okna dialogowego o nazwie Kreator, który składa się z arkusza właściwości z sekwencją stron właściwości, które prowadzą użytkownika przez kroki operacji, takie jak Konfigurowanie urządzenia lub tworzenie biuletynu. W oknie dialogowym karta typ Kreatora strony właściwości nie mają kart i widoczna jest tylko jedna strona właściwości jednocześnie. Ponadto zamiast przyciski **OK** i **Zastosuj teraz** , okno dialogowe karta typu Kreator zawiera przycisk **Wstecz** , przycisk **dalej** lub **Zakończ** , przycisk **Anuluj** i przycisk **Pomoc** .
+Można utworzyć typ okna dialogowego karty o nazwie kreator, który składa się z arkusza właściwości z sekwencją stron właściwości, które prowadzą użytkownika przez kroki operacji, takie jak konfigurowanie urządzenia lub tworzenie biuletynu. W oknie dialogowym karty typu kreatora strony właściwości nie mają kart, a jednocześnie jest widoczna tylko jedna strona właściwości. Ponadto zamiast przycisków **OK** i **Zastosuj teraz,** okno dialogowe typu kreatora zawiera przycisk **Wstecz,** przycisk **Dalej** lub **Zakończ,** przycisk **Anuluj** i przycisk **Pomoc.**
 
-Aby utworzyć okno dialogowe typ kreatora, wykonaj te same czynności, które należy wykonać w celu utworzenia standardowego arkusza właściwości, ale Wywołaj metodę [SetWizardMode](#setwizardmode) przed wywołaniem [DoModal](#domodal). Aby włączyć przyciski kreatora, wywołaj [SetWizardButtons](#setwizardbuttons), używając flag w celu dostosowania ich funkcji i wyglądu. Aby włączyć przycisk **Zakończ** , wywołaj [SetFinishText](#setfinishtext) po wykonaniu czynności przez użytkownika na ostatniej stronie kreatora.
+Aby utworzyć okno dialogowe typu kreatora, wykonaj te same kroki, które należy wykonać, aby utworzyć standardowy arkusz właściwości, ale wywołaj [Polecenie SetWizardMode](#setwizardmode) przed wywołaniem [programu DoModal](#domodal). Aby włączyć przyciski kreatora, wywołaj [Przycisk SetWizardButtons](#setwizardbuttons), używając flag, aby dostosować ich funkcję i wygląd. Aby włączyć przycisk **Zakończ,** po dokonaniu przez użytkownika działania na ostatniej stronie kreatora należy wywołać program [SetFinishText.](#setfinishtext)
 
-Aby uzyskać więcej informacji o sposobach korzystania z obiektów `CPropertySheet`, zobacz [arkusze właściwości artykułów i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Aby uzyskać więcej informacji `CPropertySheet` na temat używania obiektów, zobacz artykuł [Arkusze właściwości i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CPropertySheet`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdlgs. h
+**Nagłówek:** afxdlgs.h
 
-##  <a name="addpage"></a>CPropertySheet:: addPage
+## <a name="cpropertysheetaddpage"></a><a name="addpage"></a>Arkusz CPropertySheet::AddPage
 
-Dodaje podaną stronę ze skrajną prawą kartę w arkuszu właściwości.
+Dodaje dostarczoną stronę z prawą kartę w arkuszu właściwości.
 
 ```
 void AddPage(CPropertyPage* pPage);
@@ -171,18 +171,18 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*pPage*<br/>
-Wskazuje stronę, która ma zostać dodana do arkusza właściwości. Nie może mieć wartości NULL.
+*strona pPage*<br/>
+Wskazuje stronę, która ma zostać dodana do arkusza właściwości. Nie może być null.
 
 ### <a name="remarks"></a>Uwagi
 
 Dodaj strony do arkusza właściwości w kolejności od lewej do prawej, które mają być wyświetlane.
 
-`AddPage` dodaje obiekt [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) do listy stron `CPropertySheet` obiektu, ale nie tworzy w rzeczywistości okna dla strony. Struktura opóźnia tworzenie okna dla strony do momentu, gdy użytkownik wybierze Tę stronę.
+`AddPage`dodaje [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) obiektu `CPropertySheet` do listy stron obiektu, ale faktycznie nie tworzy okno dla strony. Struktura odkłada utworzenie okna dla strony, dopóki użytkownik nie wybierze tej strony.
 
-Po dodaniu strony właściwości przy użyciu `AddPage`, `CPropertySheet` jest elementem nadrzędnym `CPropertyPage`. Aby uzyskać dostęp do arkusza właściwości na stronie właściwości, wywołaj [CWnd:: GetParent](../../mfc/reference/cwnd-class.md#getparent).
+Po dodaniu strony `AddPage`właściwości `CPropertySheet` przy użyciu , `CPropertyPage`jest elementem nadrzędnym . Aby uzyskać dostęp do arkusza właściwości ze strony właściwości, zadzwoń [do CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).
 
-Nie trzeba czekać do momentu utworzenia okna arkusza właściwości w celu wywołania `AddPage`. Zwykle przed wywołaniem [DoModal](#domodal) lub [Create](#create)należy wywołać `AddPage`.
+Nie trzeba czekać, aż powstanie okna arkusza `AddPage`właściwości, aby wywołać . Zazwyczaj dzwonisz `AddPage` przed wywołaniem [DoModal](#domodal) lub [Create](#create).
 
 Jeśli wywołasz `AddPage` po wyświetleniu strony właściwości, wiersz karty będzie odzwierciedlał nowo dodaną stronę.
 
@@ -190,9 +190,9 @@ Jeśli wywołasz `AddPage` po wyświetleniu strony właściwości, wiersz karty 
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>CPropertySheet:: konstrukcja
+## <a name="cpropertysheetconstruct"></a><a name="construct"></a>Arkusz CPropertySheet::Konstruuj
 
-Konstruuje obiekt `CPropertySheet`.
+Konstruuje `CPropertySheet` obiekt.
 
 ```
 void Construct(
@@ -224,44 +224,44 @@ void Construct(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*<br/>
+*nIDCaption (nIDCaption)*<br/>
 Identyfikator podpisu, który ma być używany dla arkusza właściwości.
 
 *pParentWnd*<br/>
-Wskaźnik do okna nadrzędnego arkusza właściwości. Jeśli wartość jest równa NULL, okno nadrzędne będzie głównym oknem aplikacji.
+Wskaźnik do okna nadrzędnego arkusza właściwości. Jeśli null, okno nadrzędne będzie głównym oknem aplikacji.
 
-*iSelectPage*<br/>
-Indeks strony, która początkowo będzie znajdować się na górze. Wartość domyślna to pierwsza strona dodana do arkusza.
+*Strona iSelectPage*<br/>
+Indeks strony, która początkowo będzie na górze. Domyślnie jest to pierwsza strona dodana do arkusza.
 
 *pszCaption*<br/>
-Wskaźnik na ciąg zawierający podpis, który ma być używany dla arkusza właściwości. Nie może mieć wartości NULL.
+Wskaźnik do ciągu zawierającego podpis, który ma być używany dla arkusza właściwości. Nie może być null.
 
-*hbmWatermark*<br/>
+*hbmWodekwodny*<br/>
 Dojście do mapy bitowej znaku wodnego strony właściwości.
 
-*hpalWatermark*<br/>
-Dojście do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.
+*hpalWodek*<br/>
+Uchwyt do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.
 
-*hbmHeader*<br/>
+*hbmHeader (głowica)*<br/>
 Dojście do mapy bitowej nagłówka strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję elementu członkowskiego, jeśli jeden z konstruktorów klas nie został jeszcze wywołany. Na przykład Wywołaj `Construct` przy deklarowaniu lub przydzieleniu tablic obiektów `CPropertySheet`. W przypadku tablic należy wywoływać `Construct` dla każdego elementu członkowskiego tablicy.
+Wywołanie tej funkcji elementu członkowskiego, jeśli jeden z konstruktorów klasy nie został już wywołany. Na przykład `Construct` wywołać podczas deklarowania `CPropertySheet` lub przydzielić tablice obiektów. W przypadku tablic, należy wywołać `Construct` dla każdego elementu członkowskiego w tablicy.
 
-Aby wyświetlić arkusz właściwości, wywołaj [DoModal](#domodal) lub [Utwórz](#create). Ciąg zawarty w pierwszym parametrze zostanie umieszczony na pasku podpisu arkusza właściwości.
+Aby wyświetlić arkusz właściwości, wywołanie [DoModal](#domodal) lub [Utwórz](#create). Ciąg zawarty w pierwszym parametrze zostanie umieszczony na pasku podpisu dla arkusza właściwości.
 
-W przypadku używania trzech lub czwartych prototypów `Construct`i/lub obrazów nagłówka można automatycznie wyświetlać obrazy ze znakami wodnymi i/lub, a także przekazywać prawidłowe wartości parametrów *hbmWatermark*, *hpalWatermark*i/lub *hbmHeader* .
+Obrazy znaku wodnego i/lub nagłówka można wyświetlać automatycznie, `Construct`jeśli używasz trzeciego lub czwartego prototypu , wymienionych powyżej, i przekazujesz prawidłowe wartości dla parametrów *hbmWatermark*, *hpalWatermark*i/lub *hbmHeader.*
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje, jakie okoliczności należy wywołać `Construct`.
+Poniższy przykład pokazuje, w jakich `Construct`okolicznościach można wywołać .
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
-##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet
+## <a name="cpropertysheetcpropertysheet"></a><a name="cpropertysheet"></a>CPropertySheet::CPropertySheet
 
-Konstruuje obiekt `CPropertySheet`.
+Konstruuje `CPropertySheet` obiekt.
 
 ```
 CPropertySheet();
@@ -295,42 +295,42 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*<br/>
+*nIDCaption (nIDCaption)*<br/>
 Identyfikator podpisu, który ma być używany dla arkusza właściwości.
 
 *pParentWnd*<br/>
-Wskazuje okno nadrzędne arkusza właściwości. Jeśli wartość jest równa NULL, okno nadrzędne będzie głównym oknem aplikacji.
+Wskazuje okno nadrzędne arkusza właściwości. Jeśli null, okno nadrzędne będzie głównym oknem aplikacji.
 
-*iSelectPage*<br/>
-Indeks strony, która początkowo będzie znajdować się na górze. Wartość domyślna to pierwsza strona dodana do arkusza.
+*Strona iSelectPage*<br/>
+Indeks strony, która początkowo będzie na górze. Domyślnie jest to pierwsza strona dodana do arkusza.
 
 *pszCaption*<br/>
-Wskazuje ciąg zawierający podpis, który ma być używany dla arkusza właściwości. Nie może mieć wartości NULL.
+Wskazuje ciąg zawierający podpis, który ma być używany dla arkusza właściwości. Nie może być null.
 
-*hbmWatermark*<br/>
-Uchwyt mapy bitowej w tle arkusza właściwości.
+*hbmWodekwodny*<br/>
+Dojście do mapy bitowej tła arkusza właściwości.
 
-*hpalWatermark*<br/>
-Uchwyt do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.
+*hpalWodek*<br/>
+Dojście do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.
 
-*hbmHeader*<br/>
-Uchwyt mapy bitowej nagłówka strony właściwości.
+*hbmHeader (głowica)*<br/>
+Dojście do mapy bitowej nagłówka strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wyświetlić arkusz właściwości, wywołaj [DoModal](#domodal) lub [Utwórz](#create). Ciąg zawarty w pierwszym parametrze zostanie umieszczony na pasku podpisu arkusza właściwości.
+Aby wyświetlić arkusz właściwości, wywołanie [DoModal](#domodal) lub [Utwórz](#create). Ciąg zawarty w pierwszym parametrze zostanie umieszczony na pasku podpisu dla arkusza właściwości.
 
-Jeśli masz wiele parametrów (na przykład jeśli używasz tablicy), użyj [konstrukcji](#construct) zamiast `CPropertySheet`.
+Jeśli masz wiele parametrów (na przykład, jeśli używasz tablicy), użyj [Construct](#construct) zamiast `CPropertySheet`.
 
-W przypadku używania trzech lub czwartych prototypów `CPropertySheet`i/lub obrazów nagłówka można automatycznie wyświetlać *obrazy ze*znakami wodnymi i */lub.*
+Obrazy znaku wodnego i/lub nagłówka można wyświetlać automatycznie, `CPropertySheet`jeśli używasz trzeciego lub czwartego prototypu powyżej, a także przekazujesz prawidłowe wartości dla parametrów *hbmWatermark*, *hpalWatermark*i/lub *hbmHeader.*
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>CPropertySheet:: Create
+## <a name="cpropertysheetcreate"></a><a name="create"></a>Arkusz CPropertySheet::Tworzenie
 
-Wyświetla niemodalny arkusz właściwości.
+Wyświetla niemodytowy arkusz właściwości.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd = NULL,
@@ -341,15 +341,15 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Wskazuje okno nadrzędne. Jeśli wartość jest równa NULL, element nadrzędny jest pulpitem.
+Wskazuje okno nadrzędne. Jeśli null, nadrzędny jest pulpit.
 
-*dwStyle*<br/>
-Style okna dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*Dwstyle*<br/>
+Style okien dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Style okien](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*<br/>
-Rozszerzone style okna dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Rozszerzone style okien](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+*Dwexstyle*<br/>
+Rozszerzone style okien dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Rozszerzone style okien](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli arkusz właściwości został utworzony pomyślnie; w przeciwnym razie 0.
 
@@ -357,13 +357,13 @@ Niezerowe, jeśli arkusz właściwości został utworzony pomyślnie; w przeciwn
 
 Wywołanie `Create` może znajdować się wewnątrz konstruktora lub można wywołać go po wywołaniu konstruktora.
 
-Domyślny styl wyrażony przez przekazywanie-1 jako *dwStyle*jest w rzeczywistości WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. Domyślny styl okna rozszerzonego wyrażony przez przekazanie wartości 0 jako *dwExStyle*, jest w rzeczywistości WS_EX_DLGMODALFRAME.
+Domyślny styl, wyrażony przez przejście -1 jako *dwStyle*, jest w rzeczywistości WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. Domyślny styl rozszerzonego okna, wyrażony przez przekazanie 0 jako *dwExStyle*, jest w rzeczywistości WS_EX_DLGMODALFRAME.
 
-Funkcja członkowska `Create` zwraca natychmiast po utworzeniu arkusza właściwości. Aby zniszczyć arkusz właściwości, wywołaj [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow).
+Funkcja `Create` elementu członkowskiego zwraca natychmiast po utworzeniu arkusza właściwości. Aby zniszczyć arkusz właściwości, zadzwoń [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).
 
-Niemodalne arkusze właściwości wyświetlane z wywołaniem `Create` nie mają przycisków OK, Anuluj, Zastosuj teraz i pomoc jako modalne arkusze właściwości. Żądane przyciski muszą zostać utworzone przez użytkownika.
+Niemodalne arkusze właściwości wyświetlane `Create` z wywołaniem, aby nie mieć przycisków OK, Anuluj, Zastosuj teraz i Pomoc, jak robią to arkusze właściwości modalnych. Żądane przyciski muszą być tworzone przez użytkownika.
 
-Aby wyświetlić modalny arkusz właściwości, wywołaj [DoModal](#domodal) zamiast.
+Aby wyświetlić arkusz właściwości modalnych, wywołanie [DoModal](#domodal) zamiast.
 
 ### <a name="example"></a>Przykład
 
@@ -371,54 +371,54 @@ Aby wyświetlić modalny arkusz właściwości, wywołaj [DoModal](#domodal) zam
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>CPropertySheet::D oModal
+## <a name="cpropertysheetdomodal"></a><a name="domodal"></a>CPropertySheet::DoModal
 
-Wyświetla modalny arkusz właściwości.
+Wyświetla arkusz właściwości modalnych.
 
 ```
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-IDOK lub IDCANCEL, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0 lub-1. Jeśli arkusz właściwości został ustanowiony jako Kreator (zobacz [SetWizardMode](#setwizardmode)), `DoModal` zwraca albo ID_WIZFINISH lub IDCANCEL.
+IDOK lub IDCANCEL, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0 lub -1. Jeśli arkusz właściwości został ustanowiony jako kreator (zobacz [SetWizardMode),](#setwizardmode) `DoModal` zwraca ID_WIZFINISH lub IDCANCEL.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość zwracana odpowiada IDENTYFIKATORowi kontrolki, która zamknęła arkusz właściwości. Po powrocie tej funkcji okna odpowiadające arkuszowi właściwości i wszystkie strony zostaną zniszczone. Obiekty nadal będą istnieć. Zwykle dane z obiektów [CPropertyPage](../../mfc/reference/cpropertypage-class.md) są pobierane po `DoModal` zwraca IDOK.
+Zwracana wartość odpowiada identyfikatorowi formantu, który zamknął arkusz właściwości. Po powrocie tej funkcji okna odpowiadające arkuszowi właściwości i wszystkie strony zostaną zniszczone. Same obiekty nadal będą istnieć. Zazwyczaj będzie pobierać dane z [CPropertyPage](../../mfc/reference/cpropertypage-class.md) obiektów `DoModal` po zwraca IDOK.
 
-Aby wyświetlić niemodalny arkusz właściwości, zamiast tego wywołaj metodę [Create](#create) .
+Aby wyświetlić arkusz właściwości bez trybu, wywołanie [Create](#create) zamiast tego.
 
-Gdy strona właściwości jest tworzona na podstawie odpowiedniego zasobu okna dialogowego, może to spowodować wyjątek pierwszej szansy. Powoduje to zmianę stylu zasobu okna dialogowego do wymaganego stylu przed utworzeniem strony. Ponieważ zasoby są zwykle tylko do odczytu, powoduje to wyjątek. System obsługuje wyjątek i tworzy kopię zmodyfikowanego zasobu. Wyjątek pierwszej szansy może zostać zignorowany.
+Gdy strona właściwości jest tworzona z odpowiedniego zasobu okna dialogowego, może to spowodować wyjątek pierwszej szansy. Wynika to ze strony właściwości, zmieniając styl zasobu okna dialogowego na wymagany styl przed utworzeniem strony. Ponieważ zasoby są zazwyczaj tylko do odczytu, powoduje to wyjątek. System obsługuje wyjątek i tworzy kopię zmodyfikowanego zasobu. W związku z tym można zignorować wyjątek pierwszej szansy.
 
 > [!NOTE]
->  Ten wyjątek musi być obsługiwany przez system operacyjny w przypadku kompilowania z modelem obsługi wyjątków asynchronicznych. Aby uzyskać więcej informacji na temat modeli obsługi wyjątków, zobacz [/EH (model obsługi wyjątków)](../../build/reference/eh-exception-handling-model.md). W tym przypadku nie należy zawijać wywołań do `CPropertySheet::DoModal` przy użyciu C++ bloku try-catch, w którym catch obsługuje wszystkie wyjątki, na przykład `catch (...)`. Ten blok mógłby obsłużyć wyjątek przeznaczony dla systemu operacyjnego i spowodować nieprzewidywalne zachowanie. Można jednak bezpiecznie korzystać C++ z obsługi wyjątków z określonymi typami wyjątków lub z obsługą wyjątków strukturalnych, w przypadku których wyjątek naruszenia dostępu jest przenoszona do systemu operacyjnego.
+> Ten wyjątek musi być obsługiwany przez system operacyjny, jeśli kompilujesz z modelem obsługi wyjątków asynchronicznych. Aby uzyskać więcej informacji na temat modeli obsługi wyjątków, zobacz [/EH (Model obsługi wyjątków)](../../build/reference/eh-exception-handling-model.md). W takim przypadku nie należy `CPropertySheet::DoModal` zawijać wywołań za pomocą bloku try-catch języka C++, w którym catch obsługuje wszystkie wyjątki, `catch (...)`na przykład . Ten blok będzie obsługiwać wyjątek przeznaczony dla systemu operacyjnego i spowodować nieprzewidywalne zachowanie. Można jednak bezpiecznie używać obsługi wyjątków języka C++ z określonymi typami wyjątków lub obsługi wyjątków strukturalnych, w przypadku gdy wyjątek naruszenia zasad dostępu jest przekazywany do systemu operacyjnego.
 
-Aby uniknąć generowania tego wyjątku pierwszej szansy, można ręcznie zagwarantować, że arkusz właściwości ma poprawne [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles). Należy ustawić następujące style dla arkusza właściwości:
+Aby uniknąć generowania tego wyjątku pierwszej szansy, można ręcznie zagwarantować, że arkusz właściwości ma poprawne [style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles). Należy ustawić następujące style dla arkusza właściwości:
 
 - DS_3DLOOK
 
 - DS_CONTROL
 
-- WS_CHILD
+- Ws_child
 
-- WS_TABSTOP
+- Ws_tabstop
 
-Możesz użyć następujących opcjonalnych stylów bez powodowania wyjątku pierwszej szansy:
+Można użyć następujących stylów opcjonalnych bez powodowania wyjątku pierwszej szansy:
 
 - DS_SHELLFONT
 
 - DS_LOCALEDIT
 
-- WS_CLIPCHILDREN
+- Ws_clipchildren
 
-Wyłącz wszystkie inne style systemu Windows, ponieważ nie są one zgodne z arkuszami właściwości. Te porady nie dotyczą stylów rozszerzonych. Odpowiednie ustawienie standardowych stylów zagwarantuje, że arkusz właściwości nie musi być modyfikowany i nie spowoduje generowania wyjątku pierwszej szansy.
+Wyłącz wszystkie inne style systemu Windows, ponieważ nie są one zgodne z arkuszami właściwości. Ta rada nie ma zastosowania do rozszerzonych stylów. Odpowiednie ustawienie tych standardowych stylów zagwarantuje, że arkusz właściwości nie musi być modyfikowany i uniknie generowania wyjątku pierwszej szansy.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertySheet:: AddPage](#addpage).
+Zobacz przykład [CPropertySheet::AddPage](#addpage).
 
-##  <a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs
+## <a name="cpropertysheetenablestackedtabs"></a><a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs
 
 Wskazuje, czy wiersze kart mają być ułożone w arkuszu właściwości.
 
@@ -429,19 +429,19 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="parameters"></a>Parametry
 
 *bStacked*<br/>
-Wskazuje, czy skumulowane karty są włączone w arkuszu właściwości. Wyłącz skumulowane wiersze tagów, ustawiając *bStacked* na false.
+Wskazuje, czy w arkuszu właściwości są włączone zakładki skumulowane. Wyłącz ułożone wiersze znaczników, ustawiając *bStacked* na FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie, jeśli arkusz właściwości zawiera więcej kart, niż mieści się w pojedynczym wierszu szerokości arkusza właściwości, karty stosują się do wielu wierszy. Aby korzystać z kart przewijanych zamiast kart stosów, przed wywołaniem [DoModal](#domodal) lub [Create](#create)należy wywoływać `EnableStackedTabs` *bStacked* z ustawionym na wartość false.
+Domyślnie, jeśli arkusz właściwości ma więcej kart niż zmieści się w jednym wierszu w szerokości arkusza właściwości, karty będą ułożone w wielu wierszach. Aby użyć kart przewijania zamiast kart `EnableStackedTabs` układania, zadzwoń z *bStacked ustawioną* na FALSE przed wywołaniem [DoModal](#domodal) lub [Create](#create).
 
-Należy wywołać `EnableStackedTabs` podczas tworzenia modalnego lub niemodalnego arkusza właściwości. Aby uwzględnić ten styl w klasie pochodnej `CPropertySheet`, napisz procedurę obsługi komunikatów dla WM_CREATE. W zastąpionej wersji elementu [CWnd:: OnCreate](../../mfc/reference/cwnd-class.md#oncreate), wywołaj `EnableStackedTabs( FALSE )` przed wywołaniem implementacji klasy bazowej.
+Należy wywołać `EnableStackedTabs` podczas tworzenia modalnego lub niemodalnego arkusza właściwości. Aby włączyć ten styl `CPropertySheet`do klasy pochodnej, napisz program obsługi wiadomości dla WM_CREATE. W zastąpiona wersja [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), `EnableStackedTabs( FALSE )` wywołać przed wywołaniem implementacji klasy podstawowej.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]
 
-##  <a name="enddialog"></a>CPropertySheet:: zdarzenie EndDialog
+## <a name="cpropertysheetenddialog"></a><a name="enddialog"></a>Arkusz CPropertySheet::EndDialog
 
 Kończy arkusz właściwości.
 
@@ -451,36 +451,36 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parametry
 
-*nEndID*<br/>
+*nEndID (nEndID)*<br/>
 Identyfikator, który ma być używany jako wartość zwracana arkusza właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez platformę po naciśnięciu przycisku OK, Anuluj lub Zamknij. Wywołaj tę funkcję elementu członkowskiego, jeśli wystąpi zdarzenie, które powinno zamknąć arkusz właściwości.
+Ta funkcja elementu członkowskiego jest wywoływana przez platformę po naciśnięciu przycisku OK, Anuluj lub Zamknij. Wywołanie tej funkcji elementu członkowskiego, jeśli wystąpi zdarzenie, które powinno zamknąć arkusz właściwości.
 
-Ta funkcja członkowska jest używana tylko w przypadku modalnego okna dialogowego.
+Ta funkcja elementu członkowskiego jest używana tylko z modalnym oksem.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertySheet::P ressbutton](#pressbutton).
+Zobacz przykład [CPropertySheet::PressButton](#pressbutton).
 
-##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex
+## <a name="cpropertysheetgetactiveindex"></a><a name="getactiveindex"></a>Arkusz CPropertySheet::GetActiveIndex
 
-Pobiera numer indeksu aktywnej strony okna arkusza właściwości, a następnie używa zwróconego numeru indeksu jako parametru `GetPage`.
+Pobiera numer indeksu aktywnej strony okna arkusza właściwości, a następnie używa `GetPage`zwracanego numeru indeksu jako parametru dla .
 
 ```
 int GetActiveIndex() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Numer indeksu aktywnej strony.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertySheet:: GetActivePage](#getactivepage).
+Zobacz przykład [CPropertySheet::GetActivePage](#getactivepage).
 
-##  <a name="getactivepage"></a>CPropertySheet::GetActivePage
+## <a name="cpropertysheetgetactivepage"></a><a name="getactivepage"></a>Arkusz CPropertySheet::GetActivePage
 
 Pobiera aktywną stronę okna arkusza właściwości.
 
@@ -488,19 +488,19 @@ Pobiera aktywną stronę okna arkusza właściwości.
 CPropertyPage* GetActivePage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do aktywnej strony.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji elementu członkowskiego, aby wykonać akcję na aktywnej stronie.
+Ta funkcja elementu członkowskiego służy do wykonywania niektórych akcji na aktywnej stronie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]
 
-##  <a name="getpage"></a>CPropertySheet:: GetPage
+## <a name="cpropertysheetgetpage"></a><a name="getpage"></a>Arkusz CPropertySheet::GetPage
 
 Zwraca wskaźnik do określonej strony w tym arkuszu właściwości.
 
@@ -510,36 +510,36 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*<br/>
-Indeks żądanej strony, zaczynając od 0. Musi zawierać się w przedziale od 0 do mniej niż liczba stron w arkuszu właściwości włącznie.
+*strona nPage*<br/>
+Indeks żądanej strony, zaczynając od 0. Musi być od 0 do jednego mniej niż liczba stron w arkuszu właściwości, włącznie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do strony odpowiadającej parametrowi *nPage* .
+Wskaźnik do strony odpowiadającej parametrowi *nPage.*
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Zobacz przykład [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
-##  <a name="getpagecount"></a>CPropertySheet:: getpagecount
+## <a name="cpropertysheetgetpagecount"></a><a name="getpagecount"></a>CPropertySheet::GetPageCount
 
-Określa liczbę stron znajdujących się obecnie w arkuszu właściwości.
+Określa liczbę stron aktualnie w arkuszu właściwości.
 
 ```
 int GetPageCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba stron w arkuszu właściwości.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Zobacz przykład [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
-##  <a name="getpageindex"></a>CPropertySheet:: GetPageIndex
+## <a name="cpropertysheetgetpageindex"></a><a name="getpageindex"></a>CPropertySheet::GetPageIndex
 
-Pobiera numer indeksu określonej strony z arkusza właściwości.
+Pobiera numer indeksu określonej strony w arkuszu właściwości.
 
 ```
 int GetPageIndex(CPropertyPage* pPage);
@@ -547,56 +547,56 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*pPage*<br/>
-Wskazuje na stronę z indeksem, który ma zostać znaleziony. Nie może mieć wartości NULL.
+*strona pPage*<br/>
+Wskazuje stronę z indeksem, który ma zostać znaleziony. Nie może być null.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Numer indeksu strony.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład można użyć `GetPageIndex`, aby uzyskać indeks strony, aby można było użyć [SetActivePage](#setactivepage) lub [GetPage](#getpage).
+Na przykład można `GetPageIndex` użyć, aby uzyskać indeks strony w celu użycia [SetActivePage](#setactivepage) lub [GetPage](#getpage).
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertySheet:: GetActivePage](#getactivepage).
+Zobacz przykład [CPropertySheet::GetActivePage](#getactivepage).
 
-##  <a name="gettabcontrol"></a>CPropertySheet:: GetTabControl
+## <a name="cpropertysheetgettabcontrol"></a><a name="gettabcontrol"></a>Arkusz CPropertySheet::GetTabControl
 
-Pobiera wskaźnik do kontrolki karta, aby wykonać coś specyficznego dla kontrolki karta (czyli do używania dowolnych z interfejsów API w [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
+Pobiera wskaźnik do kontrolki karty, aby zrobić coś specyficznego dla kontrolki karty (czyli do użycia dowolnego z interfejsów API w [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
 
 ```
 CTabCtrl* GetTabControl() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do kontrolki karta.
+Wskaźnik do kontrolki karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład Wywołaj tę funkcję elementu członkowskiego, jeśli chcesz dodać mapy bitowe do każdej karty podczas inicjowania.
+Na przykład wywołać tę funkcję elementu członkowskiego, jeśli chcesz dodać mapy bitowe do każdej z kart podczas inicjowania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]
 
-##  <a name="m_psh"></a>CPropertySheet:: m_psh
+## <a name="cpropertysheetm_psh"></a><a name="m_psh"></a>CPropertySheet::m_psh
 
 Struktura, której członkowie przechowują cechy [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej struktury, aby zainicjować wygląd arkusza właściwości po jego zbudowaniu, ale przed wyświetleniem go przy użyciu funkcji składowej [DoModal](#domodal) . Na przykład Ustaw element członkowski *dwSize* `m_psh` na rozmiar, który ma mieć arkusz właściwości.
+Ta struktura służy do inicjowania wyglądu arkusza właściwości po jego skonstruowaniu, ale przed wyświetleniem go za pomocą funkcji elementu członkowskiego [DoModal.](#domodal) Na przykład ustaw element członkowski `m_psh` *dwSize* do rozmiaru, który ma mieć arkusz właściwości.
 
-Aby uzyskać więcej informacji na temat tej struktury, łącznie z listą jej elementów członkowskich, zobacz PROPSHEETHEADER w Windows SDK.
+Aby uzyskać więcej informacji na temat tej struktury, w tym listę jej członków, zobacz PROPSHEETHEADER w zestawie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]
 
-##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect
+## <a name="cpropertysheetmapdialogrect"></a><a name="mapdialogrect"></a>Arkusz CPropertySheet::MapDialogRect
 
 Konwertuje jednostki okna dialogowego prostokąta na jednostki ekranu.
 
@@ -606,38 +606,38 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskazuje strukturę [Rect](/previous-versions/dd162897\(v=vs.85\)) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który zawiera współrzędne okna dialogowego do przekonwertowania.
+*Lprect*<br/>
+Wskazuje strukturę [RECT](/previous-versions/dd162897\(v=vs.85\)) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który zawiera współrzędne okna dialogowego do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jednostki okna dialogowego są określane jako bieżąca jednostka bazowa okna dialogowego, która pochodzi od średniej szerokości i wysokości znaków w czcionce używanej dla tekstu okna dialogowego. Jedna jednostka w poziomie jest jedną czwartą jednostkowej szerokości okna dialogowego, a jedna jednostka pionowa to jedna ósma jednostki podstawowej wysokości okna dialogowego.
+Jednostki okna dialogowego są podane w kategoriach bieżącej jednostki bazowej okna dialogowego pochodzącej od średniej szerokości i wysokości znaków w czcionce używanej dla tekstu okna dialogowego. Jedna jednostka pozioma to jedna czwarta jednostki szerokości podstawy okna dialogowego, a jedna jednostka pionowa to jedna ósma jednostki wysokości podstawy okna dialogowego.
 
-Funkcja [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) systemu Windows zwraca informacje o rozmiarze dla czcionki systemowej, ale można określić inną czcionkę dla każdego arkusza właściwości, jeśli używasz stylu DS_SETFONT w pliku definicji zasobu. Funkcja [MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) systemu Windows opisana w Windows SDK używa odpowiedniej czcionki dla tego okna dialogowego.
+Funkcja [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows zwraca informacje o rozmiarze czcionki systemowej, ale można określić inną czcionkę dla każdego arkusza właściwości, jeśli w pliku definicji zasobów jest używany styl DS_SETFONT. [Funkcja MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) Windows, opisana w programie Windows SDK, używa odpowiedniej czcionki dla tego okna dialogowego.
 
-Funkcja członkowska `MapDialogRect` zastępuje jednostki okna dialogowego w *lpRect* za pomocą jednostek ekranu (pikseli), dzięki czemu prostokąt może służyć do tworzenia okna dialogowego lub umieszczania kontrolki w obrębie pola.
+Funkcja `MapDialogRect` elementu członkowskiego zastępuje jednostki okna dialogowego w *lpRect* jednostkami ekranu (pikselami), dzięki czemu prostokąt może być użyty do utworzenia okna dialogowego lub umieszczenia formantu w polu.
 
-##  <a name="oninitdialog"></a>CPropertySheet:: OnInitDialog
+## <a name="cpropertysheetoninitdialog"></a><a name="oninitdialog"></a>Arkusz CPropertySheet::OnInitDialog
 
-Przesłania do inicjowania arkusza właściwości rozszerzonego.
+Zastępuje, aby zwiększyć inicjowanie arkusza właściwości.
 
 ```
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Określa, czy aplikacja ustawi fokus wprowadzania na jeden z kontrolek w arkuszu właściwości. Jeśli `OnInitDialog` zwraca wartość różną od zera, system Windows ustawia fokus wprowadzania na pierwszy formant w arkuszu właściwości. Aplikacja może zwrócić 0 tylko wtedy, gdy jawnie ustawił fokus wprowadzania na jeden z kontrolek w arkuszu właściwości.
+Określa, czy aplikacja ustawiła fokus wejściowy na jeden z formantów w arkuszu właściwości. Jeśli `OnInitDialog` zwraca wartość niezerową, system Windows ustawia fokus wejściowy na pierwszy formant w arkuszu właściwości. Aplikacja może zwrócić 0 tylko wtedy, gdy jawnie ustawić fokus wejściowy do jednego z formantów w arkuszu właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana w odpowiedzi na komunikat WM_INITDIALOG. Ten komunikat jest wysyłany do arkusza właściwości podczas wywołań [Create](#create) lub [DoModal](#domodal) , które występują bezpośrednio przed wyświetleniem arkusza właściwości.
+Ta funkcja elementu członkowskiego jest wywoływana w odpowiedzi na komunikat WM_INITDIALOG. Ten komunikat jest wysyłany do arkusza właściwości podczas [tworzenia](#create) lub [domodalnych](#domodal) wywołań, które występują bezpośrednio przed wyświetleniem arkusza właściwości.
 
-Przesłoń tę funkcję elementu członkowskiego, jeśli trzeba przeprowadzić przetwarzanie specjalne po zainicjowaniu arkusza właściwości. W zastąpionej wersji, najpierw Wywołaj klasę bazową `OnInitDialog` ale zignoruj jej wartość zwracaną. Zwykle zwracasz wartość TRUE ze zastąpionej funkcji członkowskiej.
+Zastąpokaj tę funkcję elementu członkowskiego, jeśli konieczne jest wykonanie specjalnego przetwarzania podczas inicjowania arkusza właściwości. W wersji zastąpione najpierw wywołać `OnInitDialog` klasę podstawową, ale pominąć jego wartość zwracaną. Zwykle zwracasz wartość TRUE z funkcji nadrzędnego elementu członkowskiego.
 
-Nie jest potrzebny wpis mapy komunikatów dla tej funkcji elementu członkowskiego.
+Nie potrzebujesz wpisu mapy wiadomości dla tej funkcji członkowskiej.
 
-##  <a name="pressbutton"></a>CPropertySheet::P ressButton
+## <a name="cpropertysheetpressbutton"></a><a name="pressbutton"></a>CPropertySheet::PressButton
 
 Symuluje wybór określonego przycisku w arkuszu właściwości.
 
@@ -647,34 +647,34 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*<br/>
-Nprzycisk: identyfikuje przycisk, który ma zostać naciśnięty. Ten parametr może mieć jedną z następujących wartości:
+*nButton (przycisk)*<br/>
+nButton : Identyfikuje przycisk do naciśnięcia. Ten parametr może być jedną z następujących wartości:
 
-- PSBTN_BACK wybiera przycisk Wstecz.
+- PSBTN_BACK Wybierz przycisk Wstecz.
 
-- PSBTN_NEXT wybiera przycisk Dalej.
+- PSBTN_NEXT Wybierz przycisk Dalej.
 
-- PSBTN_FINISH wybiera przycisk Zakończ.
+- PSBTN_FINISH Wybierz przycisk Zakończ.
 
-- PSBTN_OK wybiera przycisk OK.
+- PSBTN_OK Wybierz przycisk OK.
 
-- PSBTN_APPLYNOW wybiera przycisk Zastosuj teraz.
+- PSBTN_APPLYNOW wybierz przycisk Zastosuj teraz.
 
-- PSBTN_CANCEL wybiera przycisk Anuluj.
+- PSBTN_CANCEL wybierz przycisk Anuluj.
 
-- PSBTN_HELP wybiera przycisk Pomoc.
+- PSBTN_HELP Wybierz przycisk Pomoc.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat Windows SDK komunikatu PressButton, zobacz [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) .
+Zobacz [PSM_PRESSBUTTON,](/windows/win32/Controls/psm-pressbutton) aby uzyskać więcej informacji na temat komunikatu Windows SDK Pressbutton.
 
-Wywołanie `PressButton` nie wyśle powiadomienia [PSN_APPLY](/windows/win32/Controls/psn-apply) ze strony właściwości do struktury. Aby wysłać to powiadomienie, wywołaj [CPropertyPage:: OnOK —](../../mfc/reference/cpropertypage-class.md#onok).
+Wywołanie `PressButton` nie wyśle [powiadomienia PSN_APPLY](/windows/win32/Controls/psn-apply) ze strony właściwości do struktury. Aby wysłać to powiadomienie, zadzwoń [do CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]
 
-##  <a name="removepage"></a>CPropertySheet:: Wywołaj RemovePage
+## <a name="cpropertysheetremovepage"></a><a name="removepage"></a>CPropertySheet::RemovePage
 
 Usuwa stronę z arkusza właściwości i niszczy skojarzone okno.
 
@@ -685,17 +685,17 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*pPage*<br/>
-Wskazuje stronę, która ma zostać usunięta z arkusza właściwości. Nie może mieć wartości NULL.
+*strona pPage*<br/>
+Wskazuje stronę do usunięcia z arkusza właściwości. Nie może być null.
 
-*nPage*<br/>
-Indeks strony, która ma zostać usunięta. Musi zawierać się w przedziale od 0 do mniej niż liczba stron w arkuszu właściwości włącznie.
+*strona nPage*<br/>
+Indeks strony do usunięcia. Musi być od 0 do jednego mniej niż liczba stron w arkuszu właściwości, włącznie.
 
 ### <a name="remarks"></a>Uwagi
 
-Sam obiekt [CPropertyPage](../../mfc/reference/cpropertypage-class.md) nie jest niszczony, dopóki nie zostanie zamknięty właściciel okna `CPropertySheet`.
+Sam obiekt [CPropertyPage](../../mfc/reference/cpropertypage-class.md) nie jest niszczony, `CPropertySheet` dopóki właściciel okna nie zostanie zamknięty.
 
-##  <a name="setactivepage"></a>CPropertySheet::SetActivePage
+## <a name="cpropertysheetsetactivepage"></a><a name="setactivepage"></a>Arkusz CPropertySheet::SetActivePage
 
 Zmienia aktywną stronę.
 
@@ -706,27 +706,27 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*<br/>
-Indeks strony do ustawienia. Musi zawierać się w przedziale od 0 do mniej niż liczba stron w arkuszu właściwości włącznie.
+*strona nPage*<br/>
+Indeks strony do ustawienia. Musi być od 0 do jednego mniej niż liczba stron w arkuszu właściwości, włącznie.
 
-*pPage*<br/>
-Wskazuje stronę, która ma zostać ustawiona w arkuszu właściwości. Nie może mieć wartości NULL.
+*strona pPage*<br/>
+Wskazuje stronę ustawioną w arkuszu właściwości. Nie może być null.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli arkusz właściwości został aktywowany pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli arkusz właściwości jest pomyślnie aktywowany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład użyj `SetActivePage`, jeśli akcja użytkownika na jednej stronie powinna spowodować, że inna strona stanie się stroną aktywną.
+Na przykład `SetActivePage` użyj, jeśli akcja użytkownika na jednej stronie powinna spowodować, że inna strona stanie się aktywną stroną.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CPropertySheet:: GetActivePage](#getactivepage).
+Zobacz przykład [CPropertySheet::GetActivePage](#getactivepage).
 
-##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText
+## <a name="cpropertysheetsetfinishtext"></a><a name="setfinishtext"></a>Arkusz CPropertySheet::SetFinishText
 
-Ustawia tekst na przycisku polecenia zakończenia.
+Ustawia tekst w przycisku polecenia Zakończ.
 
 ```
 void SetFinishText(LPCTSTR lpszText);
@@ -734,18 +734,18 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*<br/>
-Wskazuje tekst, który będzie wyświetlany na przycisku polecenia Zakończ.
+*lpszText (tekst)*<br/>
+Wskazuje tekst wyświetlany na przycisku polecenia Zakończ.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj `SetFinishText`, aby wyświetlić tekst na przycisku Zakończ polecenie i ukryć przyciski Dalej i wstecz po zakończeniu działania przez użytkownika na ostatniej stronie kreatora.
+Wywołanie, `SetFinishText` aby wyświetlić tekst na przycisku polecenia Zakończ i ukryć przyciski Dalej i Wstecz po zakończeniu akcji przez użytkownika na ostatniej stronie kreatora.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="settitle"></a>CPropertySheet:: settitle
+## <a name="cpropertysheetsettitle"></a><a name="settitle"></a>Arkusz CPropertySheet::SetTitle
 
 Określa podpis arkusza właściwości (tekst wyświetlany na pasku tytułu okna ramki).
 
@@ -757,23 +757,23 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parametry
 
-*nStyle*<br/>
-Określa styl tytułu arkusza właściwości. Styl musi być określony jako 0 lub jako PSH_PROPTITLE. Jeśli styl jest ustawiony jako PSH_PROPTITLE, słowo "właściwości" pojawia się po tekście określonym jako napis. Na przykład wywołanie `SetTitle`("Simple", PSH_PROPTITLE) spowoduje podpis arkusza właściwości "proste właściwości".
+*styl nStyle*<br/>
+Określa styl tytułu arkusza właściwości. Styl musi być określony na 0 lub jako PSH_PROPTITLE. Jeśli styl jest ustawiony jako PSH_PROPTITLE, wyraz "Właściwości" pojawia się po tekście określonym jako podpis. Na przykład `SetTitle`wywołanie ("Proste", PSH_PROPTITLE) spowoduje podpis arkusza właściwości "Właściwości proste".
 
-*lpszText*<br/>
+*lpszText (tekst)*<br/>
 Wskazuje tekst, który ma być używany jako podpis na pasku tytułu arkusza właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie arkusz właściwości używa parametru Caption w konstruktorze arkusza właściwości.
+Domyślnie arkusz właściwości używa parametru caption w konstruktorze arkusza właściwości.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]
 
-##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons
+## <a name="cpropertysheetsetwizardbuttons"></a><a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons
 
-Włącza lub wyłącza przycisk Wstecz, dalej lub Zakończ w arkuszu właściwości kreatora.
+Włącza lub wyłącza przycisk Wstecz, Dalej lub Zakończ w arkuszu właściwości kreatora.
 
 ```
 void SetWizardButtons(DWORD dwFlags);
@@ -781,26 +781,26 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*flagiDW*<br/>
+*Dwflags*<br/>
 Zestaw flag, które dostosowują funkcję i wygląd przycisków kreatora. Ten parametr może być kombinacją następujących wartości:
 
-- Przycisk PSWIZB_BACK wstecz
+- przycisk PSWIZB_BACK Wstecz
 
-- Przycisk PSWIZB_NEXT dalej
+- PSWIZB_NEXT przycisk Dalej
 
-- Przycisk Zakończ PSWIZB_FINISH
+- PSWIZB_FINISH przycisk Zakończ
 
-- PSWIZB_DISABLEDFINISH wyłączony przycisk Zakończ
+- PSWIZB_DISABLEDFINISH przycisk Zakończ wyłączona
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj `SetWizardButtons` tylko po otwarciu okna dialogowego; nie można wywołać `SetWizardButtons` przed wywołaniem [DoModal](#domodal). Zazwyczaj należy wywołać `SetWizardButtons` z [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
+Wywołanie `SetWizardButtons` dopiero po otwarciu okna dialogowego; nie można zadzwonić `SetWizardButtons` przed wywołaniem [DoModal](#domodal). Zazwyczaj należy wywołać `SetWizardButtons` z [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
 
-Jeśli chcesz zmienić tekst na przycisku Zakończ lub ukryć przyciski Dalej i wstecz, gdy użytkownik ukończy pracę kreatora, wywołaj [SetFinishText](#setfinishtext). Należy pamiętać, że ten sam przycisk jest udostępniony do zakończenia i następny. Możesz w jednym momencie wyświetlić przycisk Zakończ lub następny, ale nie oba.
+Jeśli chcesz zmienić tekst na przycisku Zakończ lub ukryć przyciski Dalej i Wstecz po zakończeniu pracy kreatora przez użytkownika, zadzwoń do [setfinishtext](#setfinishtext). Należy zauważyć, że ten sam przycisk jest udostępniony dla Zakończ i Dalej. Przycisk Zakończ lub Następny można wyświetlić jednocześnie, ale nie oba.
 
 ### <a name="example"></a>Przykład
 
-`CPropertySheet` ma trzy strony właściwości kreatora: `CStylePage`, `CColorPage`i `CShapePage`.  Poniższy fragment kodu pokazuje, jak włączyć i wyłączyć przyciski **Wstecz** i **dalej** na stronie właściwości kreatora.
+A `CPropertySheet` ma trzy strony `CStylePage` `CColorPage`właściwości `CShapePage`kreatora: , , i .  Poniższy fragment kodu pokazuje, jak włączyć i wyłączyć przyciski **Wstecz** i **Dalej** na stronie właściwości kreatora.
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -808,7 +808,7 @@ Jeśli chcesz zmienić tekst na przycisku Zakończ lub ukryć przyciski Dalej i 
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>CPropertySheet:: SetWizardMode
+## <a name="cpropertysheetsetwizardmode"></a><a name="setwizardmode"></a>Arkusz CPropertySheet::SetWizardMode
 
 Ustanawia stronę właściwości jako kreatora.
 
@@ -818,11 +818,11 @@ void SetWizardMode();
 
 ### <a name="remarks"></a>Uwagi
 
-Kluczową cechą strony właściwości kreatora jest to, że użytkownik nawiguje przy użyciu przycisków dalej lub Zakończ, wstecz i Anuluj zamiast tabulatorów.
+Kluczową cechą strony właściwości kreatora jest to, że użytkownik nawiguje za pomocą przycisków Dalej lub Zakończ, Wstecz i Anuluj zamiast kart.
 
-Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu `SetWizardMode`, `DoModal` zwróci albo ID_WIZFINISH (Jeśli użytkownik zostanie zamknięty przy użyciu przycisku Zakończ) lub IDCANCEL.
+Zadzwoń `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po `SetWizardMode`wywołaniu `DoModal` , zwróci ID_WIZFINISH (jeśli użytkownik zamknie się za pomocą przycisku Zakończ) lub IDCANCEL.
 
-`SetWizardMode` ustawia flagę PSH_WIZARD.
+`SetWizardMode`ustawia flagę PSH_WIZARD.
 
 ### <a name="example"></a>Przykład
 
@@ -830,9 +830,9 @@ Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu `S
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład PROPDLG MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład SNAPVW MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

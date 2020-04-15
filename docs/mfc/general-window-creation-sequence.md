@@ -7,36 +7,36 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb10ced78e230316a6e2982f24c1fb6e2e52ed8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364269"
 ---
 # <a name="general-window-creation-sequence"></a>Ogólna sekwencja tworzenia okna
 
-Podczas tworzenia okna swoich potrzeb, takich jak elementu podrzędnego okna, środowisko wykorzystuje znacznie ten sam proces, którą opisano w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md).
+Podczas tworzenia własnego okna, takiego jak okno podrzędne, struktura używa tego samego procesu, który opisano w [dokumencie/utworzeniu widoku.](../mfc/document-view-creation.md)
 
-Wszystkich klas okien dostarczonych przez MFC stosują [dwuetapowa konstrukcja](../mfc/one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywoływania C++ **nowe** operatora, Konstruktor przydziela i inicjuje obiektu języka C++, ale nie powoduje utworzenia odpowiedniego okna Windows. Zostanie to zrobione później przez wywołanie metody [Utwórz](../mfc/reference/cwnd-class.md#create) funkcji składowej typu obiekt okna.
+Wszystkie klasy okien dostarczone przez MFC zatrudniają [konstrukcję dwuetapową.](../mfc/one-stage-and-two-stage-construction-of-objects.md) Oznacza to, że podczas wywołania **nowego** operatora języka C++ konstruktor przydziela i inicjuje obiekt C++, ale nie tworzy odpowiedniego okna systemu Windows. Odbywa się to później, wywołując [Funkcję Create](../mfc/reference/cwnd-class.md#create) element członkowski obiektu okna.
 
-`Create` Okna Windows sprawia, że funkcja elementu członkowskiego i przechowuje swoje `HWND` w C++ obiektu publicznego elementu członkowskiego danych [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` zapewnia ukończyć elastyczność za pośrednictwem parametrów do utworzenia. Przed wywołaniem `Create`, możesz chcieć rejestrowanie klasy okna za pomocą funkcji globalnych [afxregisterwndclass —](../mfc/reference/application-information-and-management.md#afxregisterwndclass) aby można było ustawić ikonę i klasa style ramki.
+Funkcja `Create` elementu członkowskiego tworzy okno `HWND` systemu Windows i przechowuje go w publicznej m_hWnd elementu członkowskiego danych obiektu C++ [.](../mfc/reference/cwnd-class.md#m_hwnd) `Create`zapewnia pełną elastyczność w zakresie parametrów tworzenia. Przed `Create`wywołaniem można zarejestrować klasę okna z globalną funkcją [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) w celu ustawienia stylów ikony i klasy dla ramki.
 
-Okna ramowe, można użyć [loadframe —](../mfc/reference/cframewnd-class.md#loadframe) funkcja elementu członkowskiego zamiast `Create`. `LoadFrame` sprawia, że okno Windows przy użyciu mniejszej liczby parametrów. Otrzymuje wiele wartości domyślnych od zasobów, w tym podpis ramki, ikony, tabeli akceleratora i menu.
+W przypadku okien ramek można użyć funkcji `Create`elementu członkowskiego [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) zamiast . `LoadFrame`sprawia, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym podpis ramki, ikona, tabela akceleratora i menu.
 
 > [!NOTE]
->  Twoje ikonę tabeli akceleratora i zasobów menu musi mieć wspólny identyfikator zasobu, takie jak **IDR_MAINFRAME**, musiały być ładowane przez loadframe —.
+> Ikona, tabela akceleratora i zasoby menu muszą mieć wspólny identyfikator zasobu, taki jak **IDR_MAINFRAME**, aby można je było załadować przez loadframe.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
-- [Obiekty okna](../mfc/window-objects.md)
+- [Obiekty okienne](../mfc/window-objects.md)
 
-- [Rejestrowanie klas"okien"](../mfc/registering-window-classes.md)
+- [Rejestrowanie okna "klasy"](../mfc/registering-window-classes.md)
 
-- [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
+- [Niszczenie obiektów okiennych](../mfc/destroying-window-objects.md)
 
-- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+- [Tworzenie okien ramek dokumentu](../mfc/creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie okien](../mfc/creating-windows.md)

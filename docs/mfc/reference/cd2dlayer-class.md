@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6fb313bfcc2983f167936e5ad4f78be1e17a44
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369212"
 ---
 # <a name="cd2dlayer-class"></a>Klasa CD2DLayer
 
-Otoka ID2D1Layer.
+Otoka dla ID2D1Layer.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,28 +47,28 @@ class CD2DLayer : public CD2DResource;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLayer::CD2DLayer](#cd2dlayer)|Tworzy obiekt CD2DLayer.|
-|[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt warstwy D2D.|
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|Konstruuje obiekt CD2DLayer.|
+|[Płyta CD2DLayer::~PŁYTA 2DLayer](#_dtorcd2dlayer)|Destruktor. Wywoływane, gdy obiekt warstwy D2D jest niszczony.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLayer::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
-|[CD2DLayer::Create](#create)|Tworzy CD2DLayer. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DLayer::Destroy](#destroy)|Niszczy obiekt CD2DLayer. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DLayer::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
-|[CD2DLayer::Get](#get)|Zwraca ID2D1Layer interfejsu|
+|[CD2DLayer::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DLayer::Utwórz](#create)|Tworzy warstwę CD2D. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DLayer::Destroy](#destroy)|Niszczy OBIEKT CD2DLayer. (Zastępuje [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DLayer::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
+|[CD2DLayer::Pobierz](#get)|Zwraca interfejs ID2D1Layer|
 |[CD2DLayer::GetSize](#getsize)|Zwraca rozmiar obiektu docelowego renderowania w pikselach niezależnych od urządzenia|
-|[CD2DLayer::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[Cd2DLayer::IsValid](#isvalid)|Sprawdza ważność zasobu (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Zwraca ID2D1Layer interfejsu|
+|[CD2DLayer::operator ID2D1Layer*](#operator_id2d1layer_star)|Zwraca interfejs ID2D1Layer|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -76,9 +76,9 @@ class CD2DLayer : public CD2DResource;
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DLayer`
 
@@ -86,17 +86,17 @@ class CD2DLayer : public CD2DResource;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer
+## <a name="cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>Płyta CD2DLayer::~PŁYTA 2DLayer
 
-Destruktor. Wywołuje się, kiedy niszczony jest obiekt warstwy D2D.
+Destruktor. Wywoływane, gdy obiekt warstwy D2D jest niszczony.
 
 ```
 virtual ~CD2DLayer();
 ```
 
-##  <a name="attach"></a>  CD2DLayer::attach
+## <a name="cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Dołącz
 
-Dołącza istniejących zasobów interfejsu do obiektu
+Dołącza istniejący interfejs zasobu do obiektu
 
 ```
 void Attach(ID2D1Layer* pResource);
@@ -104,12 +104,12 @@ void Attach(ID2D1Layer* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Istniejący interfejs zasobów. Nie może mieć wartości NULL
+*pŹródło*<br/>
+Istniejący interfejs zasobów. Nie może być null
 
-##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer
+## <a name="cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer
 
-Tworzy obiekt CD2DLayer.
+Konstruuje obiekt CD2DLayer.
 
 ```
 CD2DLayer(
@@ -120,14 +120,14 @@ CD2DLayer(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-##  <a name="create"></a>  CD2DLayer::Create
+## <a name="cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Utwórz
 
-Tworzy CD2DLayer.
+Tworzy warstwę CD2D.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -136,23 +136,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DLayer::Destroy
+## <a name="cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy
 
-Niszczy obiekt CD2DLayer.
+Niszczy OBIEKT CD2DLayer.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLayer::detach
+## <a name="cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach
 
-Odłącza interfejsu zasobów z obiektu
+Odłącza interfejs zasobu od obiektu
 
 ```
 ID2D1Layer* Detach();
@@ -160,11 +160,11 @@ ID2D1Layer* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu odłączyć zasobu.
+Wskaźnik do odłączony interfejs zasobu.
 
-##  <a name="get"></a>  CD2DLayer::Get
+## <a name="cd2dlayerget"></a><a name="get"></a>CD2DLayer::Pobierz
 
-Zwraca ID2D1Layer interfejsu
+Zwraca interfejs ID2D1Layer
 
 ```
 ID2D1Layer* Get();
@@ -172,9 +172,9 @@ ID2D1Layer* Get();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1Layer lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1Layer lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="getsize"></a>  CD2DLayer::GetSize
+## <a name="cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize
 
 Zwraca rozmiar obiektu docelowego renderowania w pikselach niezależnych od urządzenia
 
@@ -186,9 +186,9 @@ CD2DSizeF GetSize() const;
 
 Bieżący rozmiar obiektu docelowego renderowania w pikselach niezależnych od urządzenia
 
-##  <a name="isvalid"></a>  CD2DLayer::IsValid
+## <a name="cd2dlayerisvalid"></a><a name="isvalid"></a>Cd2DLayer::IsValid
 
-Sprawdzanie zasobów ważności
+Sprawdza ważność zasobu
 
 ```
 virtual BOOL IsValid() const;
@@ -196,9 +196,9 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli zasób jest prawidłowy; w przeciwnym razie FALSE.
 
-##  <a name="m_player"></a>  CD2DLayer::m_pLayer
+## <a name="cd2dlayerm_player"></a><a name="m_player"></a>CD2DLayer::m_pLayer
 
 Przechowuje wskaźnik do obiektu ID2D1Layer.
 
@@ -206,9 +206,9 @@ Przechowuje wskaźnik do obiektu ID2D1Layer.
 ID2D1Layer* m_pLayer;
 ```
 
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer *
+## <a name="cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer*
 
-Zwraca ID2D1Layer interfejsu
+Zwraca interfejs ID2D1Layer
 
 ```
 operator ID2D1Layer* ();
@@ -216,8 +216,8 @@ operator ID2D1Layer* ();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1Layer lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1Layer lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

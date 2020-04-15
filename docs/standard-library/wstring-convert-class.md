@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f09f12d9100e9faad849de608a9124f457da23df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366365"
 ---
 # <a name="wstring_convert-class"></a>wstring_convert — Klasa
 
-Szablon klasy `wstring_convert` wykonuje konwersje między ciągiem szerokim i ciągiem bajtowym.
+Szablon `wstring_convert` klasy wykonuje konwersje między ciągiem szerokim a ciągiem bajtowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,23 +42,23 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*Codecvt* \
-Zestaw reguł [ustawień regionalnych](../standard-library/locale-class.md) , który reprezentuje obiekt konwersji.
+*Kodekvt*\
+Aspekt [ustawień regionalnych,](../standard-library/locale-class.md) który reprezentuje obiekt konwersji.
 
-*Elem* \
-Typ elementu dwubajtowego.
+*Elem*\
+Typ elementu o szerokim charakterze.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje obiekt, który kontroluje konwersje między obiektami typu Wide String klasy `std::basic_string<Elem>` i ciągi bajtów klasy `std::basic_string<char>` (znany również jako `std::string`). Szablon klasy definiuje typy `wide_string` i `byte_string` jako synonimy dla tych dwóch typów. Konwersja między sekwencją `Elem` wartości (przechowywana w obiekcie `wide_string`) i sekwencje wielobajtowe (przechowywane w obiekcie `byte_string`) jest wykonywana przez obiekt klasy `Codecvt<Elem, char, std::mbstate_t>`, który spełnia wymagania standardowego aspektu konwersji kodu `std::codecvt<Elem, char, std::mbstate_t>`.
+Szablon klasy opisuje obiekt, który steruje konwersjami `std::basic_string<Elem>` między obiektami szerokiego ciągu klasy i obiektów ciągu bajtowego klasy `std::basic_string<char>` (znany również jako `std::string`). Szablon klasy definiuje `wide_string` typy `byte_string` i synonimy dla tych dwóch typów. Konwersja między `Elem` sekwencją wartości `wide_string` (przechowywanych w obiekcie) a `byte_string` sekwencjami wielobajtowymi `Codecvt<Elem, char, std::mbstate_t>`(przechowywanymi w obiekcie) jest wykonywana `std::codecvt<Elem, char, std::mbstate_t>`przez obiekt klasy, który spełnia wymagania standardowego aspektu konwersji kodu.
 
 Obiekt tego szablonu klasy przechowuje:
 
-- Ciąg bajtowy do wyświetlenia w przypadku błędów
+- Ciąg bajtów wyświetlany w błędach
 
-- Szeroki ciąg do wyświetlenia w przypadku błędów
+- Szeroki ciąg do wyświetlania na błędach
 
-- Wskaźnik do przydzielony obiekt konwersji (zwolniony, gdy obiekt wbuffer_convert jest niszczony)
+- Wskaźnik do przydzielonego obiektu konwersji (który jest zwalniany po zniszczeniu wbuffer_convert obiektu)
 
 - Obiekt stanu konwersji typu [state_type](#state_type)
 
@@ -68,35 +68,35 @@ Obiekt tego szablonu klasy przechowuje:
 
 |Konstruktor|Opis|
 |-|-|
-|[wstring_convert](#wstring_convert)|Konstruuje obiekt typu `wstring_convert`.|
+|[wstring_convert](#wstring_convert)|Konstruuje obiekt `wstring_convert`typu .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[byte_string](#byte_string)|Typ, który reprezentuje ciąg bajtowy.|
-|[wide_string](#wide_string)|Typ, który reprezentuje ciąg szeroki.|
-|[state_type](#state_type)|Typ, który reprezentuje stan konwersji.|
-|[int_type](#int_type)|Typ, który reprezentuje liczbę całkowitą.|
+|[byte_string](#byte_string)|Typ reprezentujący ciąg bajtowy.|
+|[wide_string](#wide_string)|Typ, który reprezentuje szeroki ciąg.|
+|[state_type](#state_type)|Typ reprezentujący stan konwersji.|
+|[Int_type](#int_type)|Typ reprezentujący liczbę całkowitą.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[from_bytes](#from_bytes)|Konwertuje ciąg bajtowy na ciąg szeroki.|
-|[to_bytes](#to_bytes)|Konwertuje szeroki ciąg na ciąg bajtowy.|
-|[skonwertowana](#converted)|Zwraca liczbę pomyślnych konwersji.|
-|[Państwu](#state)|Zwraca obiekt reprezentujący stan konwersji.|
+|[from_bytes](#from_bytes)|Konwertuje ciąg bajtów na szeroki ciąg.|
+|[to_bytes](#to_bytes)|Konwertuje szeroki ciąg na ciąg bajtów.|
+|[Przekształcić](#converted)|Zwraca liczbę udanych konwersji.|
+|[Państwa](#state)|Zwraca obiekt reprezentujący stan konwersji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:** \<> ustawień regionalnych
 
 **Przestrzeń nazw:** std
 
-## <a name="byte_string"></a>wstring_convert::byte_string
+## <a name="wstring_convertbyte_string"></a><a name="byte_string"></a>wstring_convert::byte_string
 
-Typ, który reprezentuje ciąg bajtowy.
+Typ reprezentujący ciąg bajtowy.
 
 ```cpp
 typedef std::basic_string<char> byte_string;
@@ -104,11 +104,11 @@ typedef std::basic_string<char> byte_string;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `std::basic_string<char>`.
+Typ jest synonimem `std::basic_string<char>`.
 
-## <a name="converted"></a>wstring_convert:: przekonwertował
+## <a name="wstring_convertconverted"></a><a name="converted"></a>wstring_convert::przekonwertowane
 
-Zwraca liczbę pomyślnych konwersji.
+Zwraca liczbę udanych konwersji.
 
 ```cpp
 size_t converted() const;
@@ -116,15 +116,15 @@ size_t converted() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba pomyślnych konwersji.
+Liczba udanych konwersji.
 
 ### <a name="remarks"></a>Uwagi
 
-Liczba pomyślnych konwersji jest przechowywana w obiekcie liczba konwersji.
+Liczba udanych konwersji jest przechowywana w obiekcie zliczania konwersji.
 
-## <a name="from_bytes"></a>wstring_convert::from_bytes
+## <a name="wstring_convertfrom_bytes"></a><a name="from_bytes"></a>wstring_convert::from_bytes
 
-Konwertuje ciąg bajtowy na ciąg szeroki.
+Konwertuje ciąg bajtów na szeroki ciąg.
 
 ```cpp
 wide_string from_bytes(char Byte);
@@ -137,25 +137,25 @@ wide_string from_bytes(const char* first, const char* last);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Bajc*|Sekwencja bajtów pojedynczego elementu do przekonwertowania.|
-|*ptr*|Styl języka C, sekwencja znaków zakończona znakiem null do przekonwertowania.|
-|*Ani*|[Byte_string](#byte_string) do przekonwertowania.|
-|*pierwszego*|Pierwszy znak w zakresie znaków do przekonwertowania.|
-|*ostatniego*|Ostatni znak w zakresie znaków do przekonwertowania.|
+|*Byte*|Sekwencja bajtów jednoelementowych do konwersji.|
+|*Ptr*|Sekwencja znaków w stylu C z zakończeniem zerowym do konwersji.|
+|*Bstr*|[Byte_string](#byte_string) do konwersji.|
+|*Pierwszym*|Pierwszy znak w zakresie znaków do konwersji.|
+|*Ostatnio*|Ostatni znak w zakresie znaków do konwersji.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt ciągu szerokiego wynikający z konwersji.
+Szeroki obiekt ciągu wynikający z konwersji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt [stanu konwersji](../standard-library/wstring-convert-class.md) *nie* został skonstruowany z wartością jawną, jest ustawiany na jego wartość domyślną (początkowy stan konwersji) przed rozpoczęciem konwersji. W przeciwnym razie pozostaje niezmieniona.
+Jeśli obiekt [stanu konwersji](../standard-library/wstring-convert-class.md) *nie* został skonstruowany z jawną wartością, jest ustawiona na jego wartość domyślną (początkowy stan konwersji) przed rozpoczęciem konwersji. W przeciwnym razie pozostaje bez zmian.
 
-Liczba pomyślnie przekonwertowanych elementów wejściowych jest zapisywana w obiekcie licznika konwersji. Jeśli błąd konwersji nie wystąpi, funkcja członkowska zwraca przekonwertowany ciąg szeroki. W przeciwnym razie, jeśli obiekt został skonstruowany przy użyciu inicjatora komunikatu o błędzie o szerokim ciągu, funkcja członkowska zwraca obiekt komunikatu o błędzie o szerokim ciągu. W przeciwnym razie funkcja członkowska zgłasza obiekt klasy [range_error](../standard-library/range-error-class.md).
+Liczba pomyślnie przekonwertowanych elementów wejściowych jest przechowywana w obiekcie zliczania konwersji. Jeśli nie wystąpi żaden błąd konwersji, funkcja elementu członkowskiego zwraca przekonwertowany ciąg szeroki. W przeciwnym razie jeśli obiekt został skonstruowany za pomocą inicjatora dla komunikatu o błędzie szerokostrunowy, funkcja elementu członkowskiego zwraca obiekt komunikatu o błędzie szerokostrunowy. W przeciwnym razie funkcja elementu członkowskiego zgłasza obiekt klasy [range_error](../standard-library/range-error-class.md).
 
-## <a name="int_type"></a>wstring_convert::int_type
+## <a name="wstring_convertint_type"></a><a name="int_type"></a>wstring_convert::int_type
 
-Typ, który reprezentuje liczbę całkowitą.
+Typ reprezentujący liczbę całkowitą.
 
 ```cpp
 typedef typename wide_string::traits_type::int_type int_type;
@@ -163,9 +163,9 @@ typedef typename wide_string::traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `wide_string::traits_type::int_type`.
+Typ jest synonimem `wide_string::traits_type::int_type`.
 
-## <a name="state"></a>wstring_convert:: State
+## <a name="wstring_convertstate"></a><a name="state"></a>wstring_convert::stan
 
 Zwraca obiekt reprezentujący stan konwersji.
 
@@ -175,13 +175,13 @@ state_type state() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [stanu konwersji](../standard-library/wstring-convert-class.md) , który reprezentuje stan konwersji.
+Obiekt [stanu konwersji,](../standard-library/wstring-convert-class.md) który reprezentuje stan konwersji.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="state_type"></a>wstring_convert::state_type
+## <a name="wstring_convertstate_type"></a><a name="state_type"></a>wstring_convert::state_type
 
-Typ, który reprezentuje stan konwersji.
+Typ reprezentujący stan konwersji.
 
 ```cpp
 typedef typename Codecvt::state_type state_type;
@@ -189,11 +189,11 @@ typedef typename Codecvt::state_type state_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może reprezentować stan konwersji. Typ jest synonimem dla `Codecvt::state_type`.
+Typ opisuje obiekt, który może reprezentować stan konwersji. Typ jest synonimem `Codecvt::state_type`.
 
-## <a name="to_bytes"></a>wstring_convert::to_bytes
+## <a name="wstring_convertto_bytes"></a><a name="to_bytes"></a>wstring_convert::to_bytes
 
-Konwertuje szeroki ciąg na ciąg bajtowy.
+Konwertuje szeroki ciąg na ciąg bajtów.
 
 ```cpp
 byte_string to_bytes(Elem Char);
@@ -206,21 +206,21 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Delikatn*|Znak dwubajtowy do przekonwertowania.|
-|*Wptr*|Styl C, sekwencja zakończona zerem, rozpoczynając od `wptr`, do przekonwertowania.|
-|*Wstr*|[Wide_string](#wide_string) do przekonwertowania.|
-|*pierwszego*|Pierwszy element w zakresie elementów do przekonwertowania.|
-|*ostatniego*|Ostatni element w zakresie elementów do przekonwertowania.|
+|*Char*|Szeroki znak do konwersji.|
+|*Wertry*|Sekwencja w stylu C, zakończona `wptr`z wartością null, zaczynając od , która ma zostać przekonwertowana.|
+|*Wstr (właśc.*|[Wide_string](#wide_string) do konwersji.|
+|*Pierwszym*|Pierwszy element w zakresie elementów do konwersji.|
+|*Ostatnio*|Ostatni element w zakresie elementów do konwersji.|
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt [stanu konwersji](../standard-library/wstring-convert-class.md) *nie* został skonstruowany z wartością jawną, jest ustawiany na jego wartość domyślną (początkowy stan konwersji) przed rozpoczęciem konwersji. W przeciwnym razie pozostaje niezmieniona.
+Jeśli obiekt [stanu konwersji](../standard-library/wstring-convert-class.md) *nie* został skonstruowany z jawną wartością, jest ustawiona na jego wartość domyślną (początkowy stan konwersji) przed rozpoczęciem konwersji. W przeciwnym razie pozostaje bez zmian.
 
-Liczba pomyślnie przekonwertowanych elementów wejściowych jest zapisywana w obiekcie licznika konwersji. Jeśli błąd konwersji nie wystąpi, funkcja członkowska zwraca przekonwertowany ciąg bajtowy. W przeciwnym razie, jeśli obiekt został skonstruowany przy użyciu inicjatora komunikatu o błędzie typu Byte, funkcja członkowska zwraca obiekt komunikatu o błędzie ciągu bajtowego. W przeciwnym razie funkcja członkowska zgłasza obiekt klasy [range_error](../standard-library/range-error-class.md).
+Liczba pomyślnie przekonwertowanych elementów wejściowych jest przechowywana w obiekcie zliczania konwersji. Jeśli nie wystąpi żaden błąd konwersji, funkcja elementu członkowskiego zwraca przekonwertowany ciąg bajtów. W przeciwnym razie jeśli obiekt został skonstruowany za pomocą inicjatora dla komunikatu o błędzie ciągu bajtowego, funkcja elementu członkowskiego zwraca obiekt komunikatu o błędzie ciągu bajtowego. W przeciwnym razie funkcja elementu członkowskiego zgłasza obiekt klasy [range_error](../standard-library/range-error-class.md).
 
-## <a name="wide_string"></a>wstring_convert::wide_string
+## <a name="wstring_convertwide_string"></a><a name="wide_string"></a>wstring_convert::wide_string
 
-Typ, który reprezentuje ciąg szeroki.
+Typ, który reprezentuje szeroki ciąg.
 
 ```cpp
 typedef std::basic_string<Elem> wide_string;
@@ -228,11 +228,11 @@ typedef std::basic_string<Elem> wide_string;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `std::basic_string<Elem>`.
+Typ jest synonimem `std::basic_string<Elem>`.
 
-## <a name="wstring_convert"></a>wstring_convert::wstring_convert
+## <a name="wstring_convertwstring_convert"></a><a name="wstring_convert"></a>wstring_convert::wstring_convert
 
-Konstruuje obiekt typu `wstring_convert`.
+Konstruuje obiekt `wstring_convert`typu .
 
 ```cpp
 wstring_convert(Codecvt *Pcvt = new Codecvt);
@@ -244,11 +244,11 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*\*Pcvt*|Obiekt typu `Codecvt` do przeprowadzenia konwersji.|
-|*_State*|Obiekt typu [state_type](#state_type) reprezentujący stan konwersji.|
-|*_Berr*|[Byte_string](#byte_string) do wyświetlenia w przypadku błędów.|
-|*Werr*|[Wide_string](#wide_string) do wyświetlenia w przypadku błędów.|
+|*\*Sztvt ( pcvt )*|Obiekt typu `Codecvt` do wykonania konwersji.|
+|*_state*|Obiekt typu [state_type](#state_type) reprezentujący stan konwersji.|
+|*_Berr*|[Byte_string](#byte_string) do wyświetlania na błędy.|
+|*Werr ( Werr )*|[Wide_string](#wide_string) do wyświetlania na błędy.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje *Pcvt_arg* w [obiekcie konwersji](../standard-library/wstring-convert-class.md)
+Pierwszy konstruktor przechowuje *Pcvt_arg* w [obiekcie konwersji](../standard-library/wstring-convert-class.md)

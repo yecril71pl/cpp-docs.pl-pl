@@ -1,10 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362615"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
-Oblicza tangens hiperboliczny.
+Oblicza stycznej hiperbolicznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,28 +61,30 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja **tanh** zwraca tangens hiperboliczny *x*. Brak powrotu błędu.
+Funkcje **tanh** zwracają hiperboliczny styczny *x*. Nie ma zwracania błędów.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr** Oprócz|
+|Dane wejściowe|Wyjątek SEH|**Matherr (matherr)** Wyjątek|
 |-----------|-------------------|-------------------------|
-|QNAN, IND|brak|_DOMAIN|
+|± QNAN, IND|brak|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tanh** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C, **tanh** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **tanh,** które przyjmują i zwracają **float** lub **długie** **podwójne** wartości. W programie C, **tanh** zawsze ma i zwraca **dwukrotnie**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf —** , **tanhl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**tanh**, **tanhf**, **tanhl**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -110,9 +114,9 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

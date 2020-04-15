@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365003"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Klasa CAnimationStoryboardEventHandler
 
-Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmieniono stan scenorysu lub zaktualizowano scenorys.
+Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji, gdy stan scenorysu zostanie zmieniony lub scenorysu jest aktualizowana.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,20 +39,20 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Konstruuje `CAnimationStoryboardEventHandler` obiektu.|
+|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Konstruuje `CAnimationStoryboardEventHandler` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationStoryboardEventHandler` wywołania zwrotnego.|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Obsługuje `OnStoryboardStatusChanged` zdarzenia, które występują, gdy zmieni się stan scenorysu (zastępuje `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Obsługuje `OnStoryboardUpdated` zdarzenia, które występują, gdy zaktualizowano scenorys (zastępuje `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.|
+|[CAnimationStoryboardEventHandler::OnStoryboardStatzostałezmieniem](#onstoryboardstatuschanged)|Obsługuje `OnStoryboardStatusChanged` zdarzenia, które występują, gdy zmienia się stan `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`scenorysu (Overrides .)|
+|[CAnimationStoryboardEventHandler::OnStoryboardUpdated CAnimationStoryboardEventHandler::OnStoryboardUpdated CAnimationStoryboardEventHandler::OnStoryboardUpdated CAni](#onstoryboardupdated)|Obsługuje `OnStoryboardUpdated` zdarzenia, które występują, gdy scenorys `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`jest aktualizowany (Overrides .)|
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura obsługi zdarzeń jest tworzony i przekazywany do `IUIAnimationStoryboard::SetStoryboardEventHandler` po wywołaniu metody `CAnimationController::EnableStoryboardEventHandler`.
+Ten program obsługi zdarzeń `IUIAnimationStoryboard::SetStoryboardEventHandler` jest tworzony i `CAnimationController::EnableStoryboardEventHandler`przekazywany do metody, po wywołaniu .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,17 +66,17 @@ Ta procedura obsługi zdarzeń jest tworzony i przekazywany do `IUIAnimationStor
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
 
-Tworzy obiekt CAnimationStoryboardEventHandler.
+Konstruuje CAnimationStoryboardEventHandler obiektu.
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance
 
-Tworzy wystąpienie CAnimationStoryboardEventHandler wywołania zwrotnego.
+Tworzy wystąpienie wywołania zwrotnego CAnimationStoryboardEventHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
-*ppHandler*
+*ps.*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatzostałezmieniem
 
-Obsługuje OnStoryboardStatusChanged zdarzenia, które występują, gdy zmieni się stan scenorysu
+Obsługuje onstoryboardStatusZmienie zdarzenia, które występują, gdy zmienia się stan scenorysu
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*scenorysu*<br/>
-Wskaźnik do scenorysu, którego stan został zmieniony.
+*Serii ujęć*<br/>
+Wskaźnik do scenorysu, którego stan uległ zmianie.
 
-*newStatus*<br/>
+*nowyStatus*<br/>
 Określa nowy stan scenorysu.
 
-*previousStatus*<br/>
+*poprzednistatus*<br/>
 Określa poprzedni stan scenorysu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated CAnimationStoryboardEventHandler::OnStoryboardUpdated CAnimationStoryboardEventHandler::OnStoryboardUpdated CAni
 
-Obsługuje OnStoryboardUpdated zdarzenia, które występują, gdy zaktualizowano scenorys
+Obsługuje onstoryboardUpdated zdarzenia, które występują, gdy scenorys jest aktualizowany
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,16 +131,16 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Parametry
 
-*scenorysu*<br/>
-Wskaźnik do scenorysu, który został zaktualizowany.
+*Serii ujęć*<br/>
+Wskaźnik do ujęć, który został zaktualizowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController
 
-Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.
+Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -148,9 +148,9 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

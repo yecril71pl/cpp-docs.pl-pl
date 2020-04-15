@@ -6,42 +6,42 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8002c16d1cdf5e0683b642001409b6da9c260660
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366474"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Używanie list obrazów z formantami nagłówka
 
-Elementy nagłówka mają możliwość wyświetlania obrazu w elemencie nagłówka. Ten obraz przechowywane na liście powiązanego obrazu jest 16 x 16 pikseli i ma takie same charakterystyki jak obrazy ikon używanych w kontrolka widoku listy. Aby można było pomyślnie zaimplementować to zachowanie, musi najpierw utworzyć i zainicjować listy obrazów, skojarzenia listy z formantem nagłówka i zmodyfikowanie atrybutów elementu nagłówek, który wyświetla obraz.
+Elementy nagłówka mają możliwość wyświetlania obrazu w elemencie nagłówka. Ten obraz, przechowywany na skojarzonej liście obrazów, ma 16 x 16 pikseli i ma takie same właściwości jak obrazy ikon używane w formancie widoku listy. Aby pomyślnie zaimplementować to zachowanie, należy najpierw utworzyć i zainicjować listę obrazów, skojarzyć listę z formantu nagłówka, a następnie zmodyfikować atrybuty elementu nagłówka, który wyświetli obraz.
 
-Poniższa procedura przedstawia szczegółowe informacje, za pomocą wskaźnika do formantu nagłówka (`m_pHdrCtrl`) i wskaźnik do listy obrazów (`m_pHdrImages`).
+Poniższa procedura ilustruje szczegóły za pomocą wskaźnika do formantu nagłówka (`m_pHdrCtrl`) i wskaźnika do listy obrazów (`m_pHdrImages`).
 
-### <a name="to-display-an-image-in-a-header-item"></a>Aby wyświetlić obraz w element nagłówka
+### <a name="to-display-an-image-in-a-header-item"></a>Aby wyświetlić obraz w elemencie nagłówka
 
-1. Utworzenia nowej listy obrazów (lub użyj istniejącego obiektu listy obrazu) przy użyciu [CImageList](../mfc/reference/cimagelist-class.md) konstruktora, przechowywania wynikowego wskaźnika.
+1. Skonstruuj nową listę obrazów (lub użyj istniejącego obiektu listy obrazów) przy użyciu konstruktora [CImageList,](../mfc/reference/cimagelist-class.md) przechowując wynikowy wskaźnik.
 
-1. Inicjowanie nowy obiekt listy obrazów, wywołując [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Poniższy kod jest przykładem tego wywołania.
+1. Inicjowanie nowego obiektu listy obrazów przez [wywołanie CImageList::Create](../mfc/reference/cimagelist-class.md#create). Poniższy kod jest jednym z przykładów tego wywołania.
 
    [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
-1. Dodawanie obrazów dla każdego elementu nagłówka. Poniższy kod dodaje dwa obrazy wstępnie zdefiniowane.
+1. Dodaj obrazy dla każdego elementu nagłówka. Poniższy kod dodaje dwa wstępnie zdefiniowane obrazy.
 
    [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
-1. Skojarz listy obrazów z formantem nagłówka z wywołaniem [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
+1. Skojarz listę obrazów z formantem nagłówka z wywołaniem [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
 
-1. Zmodyfikuj element nagłówka, aby wyświetlić obraz z listy skojarzony obraz. W poniższym przykładzie przypisano pierwszy obraz z `m_phdrImages`, do pierwszego elementu nagłówka `m_pHdrCtrl`.
+1. Zmodyfikuj element nagłówka, aby wyświetlić obraz z listy skojarzonych obrazów. Poniższy przykład przypisuje pierwszy obraz, z `m_phdrImages`, do `m_pHdrCtrl`pierwszego elementu nagłówka, .
 
    [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
-Aby uzyskać szczegółowe informacje na podstawie wartości parametru używany, zapoznaj się z odpowiednich [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
+Szczegółowe informacje na temat zastosowano wartości parametrów, można znaleźć w odpowiednich [cheaderctrl](../mfc/reference/cheaderctrl-class.md).
 
 > [!NOTE]
->  Istnieje możliwość mają wiele formantów przy użyciu tej samej listy obrazów. Na przykład w standardowych kontrolka widoku listy, może istnieć obraz listy (16 x 16 pikseli obrazów) używane przez widoku małych ikon kontrolki widoku listy i elementy nagłówka kontrolki widoku listy.
+> Istnieje możliwość wielu formantów przy użyciu tej samej listy obrazów. Na przykład w formancie widoku listy standardowej może istnieć lista obrazów (obrazów o rozmiarze 16 x 16 pikseli) używana zarówno przez mały widok ikony formantu widoku listy, jak i elementy nagłówka formantu widoku listy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)

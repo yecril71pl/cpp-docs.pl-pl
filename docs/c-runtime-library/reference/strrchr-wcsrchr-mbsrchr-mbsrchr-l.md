@@ -1,11 +1,13 @@
 ---
 title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
+- _o__mbsrchr
+- _o__mbsrchr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0aaa670cb6aa5af9e6f8a28234ba5c442d2f633
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365056"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
-Skanuje ciąg dla ostatniego wystąpienia znaku.
+Skanuje ciąg w poszukiwaniu ostatniego wystąpienia znaku.
 
 > [!IMPORTANT]
-> `_mbsrchr`i `_mbsrchr_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsrchr`i `_mbsrchr_l` nie może być używany w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -117,56 +120,58 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg zakończony znakiem null do wyszukania.
+*Str*<br/>
+Ciąg zakończony wartością null do wyszukiwania.
 
-*c*<br/>
-Znak, który ma zostać zlokalizowany.
+*C*<br/>
+Znak, który ma być zlokalizowany.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do ostatniego wystąpienia *c* w *str*lub wartość null, jeśli nie można odnaleźć języka *c* .
+Zwraca wskaźnik do ostatniego wystąpienia *c* w *str*lub NULL, jeśli *c* nie zostanie znaleziony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja znajduje ostatnie wystąpienie *c* (konwertowane do **char**) w *str.* `strrchr` Wyszukiwanie zawiera kończący znak null.
+Funkcja `strrchr` znajduje ostatnie wystąpienie *c* (przekonwertowane na **char)** w *str*. Wyszukiwanie zawiera kończący się znak null.
 
-`wcsrchr`i `_mbsrchr` są`strrchr`wersjami znaków dwubajtowych i znakami wieloznacznymi. Argumenty i wartość zwracana przez `wcsrchr` są ciągami znaków dwubajtowych; te z `_mbsrchr` są ciągami znaków wieloznacznych.
+`wcsrchr`i `_mbsrchr` są wersjami znaków szerokich i `strrchr`wielobajtowych . Argumenty i zwracana `wcsrchr` wartość są ciągami znaków o szerokich znakach; są `_mbsrchr` ciągami znaków wielobajtowych.
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli jest wymagane zachowanie**niestałe** dla obu C++ przeciążeń, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **wskaźnik const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie biorąc wskaźnik do **const** zwraca wskaźnik **const**; wersja, która ma wskaźnik do**non-const** zwraca wskaźnik do**non-const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowany, jeśli dostępne są zarówno **wersje const,** jak i inne niż**const** tych funkcji. Jeśli wymagane jest zachowanie**non-const** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
-`_mbsrchr`sprawdza poprawność swoich parametrów. Jeśli *str* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `errno` jest ustawione na EINVAL i `_mbsrchr` zwraca 0. `strrchr`i `wcsrchr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`_mbsrchr`sprawdza jego parametry. Jeśli *str* ma wartość NULL, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, `errno` jest ustawiona na `_mbsrchr` Wartość EINVAL i zwraca 0. `strrchr`i `wcsrchr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie inaczej.
 
-Wartość wyjściowa jest zależna od ustawienia LC_CTYPE kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie LC_CTYPE kategorii ustawień regionalnych; aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
-|**nie dotyczy**|**nie dotyczy**|`_mbsrchr_l`|**nie dotyczy**|
+|**N/a**|**N/a**|`_mbsrchr_l`|**N/a**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
-|`wcsrchr`|\<ciąg. h > lub \<WCHAR. h >|
+|`wcsrchr`|\<string.h> lub \<wchar.h>|
 |`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Aby zapoznać się z przykładem użycia `strrchr`, zobacz [strchr](strchr-wcschr-mbschr-mbschr-l.md).
+Na przykład za `strrchr`pomocą , patrz [strchr](strchr-wcschr-mbschr-mbschr-l.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

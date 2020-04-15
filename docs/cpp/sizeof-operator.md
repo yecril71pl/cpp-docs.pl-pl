@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: bc1165cf1df3933575013906d1b24673467f0b36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178720"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365566"
 ---
 # <a name="sizeof-operator"></a>sizeof — operator
 
-Zwraca rozmiar operandu w odniesieniu do rozmiaru typu **char**.
+Daje rozmiar jego operand w odniesieniu do wielkości **typu char**.
 
 > [!NOTE]
->  Aby uzyskać informacje na temat operatora `sizeof ...`, zobacz [wielokropek i szablony wariadyczne](../cpp/ellipses-and-variadic-templates.md).
+> Aby uzyskać `sizeof ...` informacje o operatorze, zobacz [Elipsy i Szablony variadic](../cpp/ellipses-and-variadic-templates.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,15 +29,15 @@ sizeof  ( type-name )
 
 ## <a name="remarks"></a>Uwagi
 
-Wynik operatora **sizeof** jest typu `size_t`, który jest typem całkowitym zdefiniowanym w pliku dołączanym \<STDDEF. h >. Ten operator pozwala uniknąć określania rozmiarów danych zależnych od maszyn w programach.
+Wynik **sizeof** operatora jest typu `size_t`, typu całkowitego zdefiniowanego w pliku \<include stddef.h>. Ten operator pozwala uniknąć określania rozmiarów danych zależnych od komputera w programach.
 
-Argumentem operatora **sizeof** może być jeden z następujących:
+Operand do **sizeof** może być jednym z następujących:
 
-- Nazwa typu. Aby użyć **operatora sizeof** z nazwą typu, nazwa musi być ujęta w nawiasy.
+- Nazwa typu. Aby użyć **sizeof** z nazwą typu, nazwa musi być ujęta w nawiasy.
 
-- Wyrażenie. W przypadku użycia z wyrażeniem **sizeof** może być określony z lub bez nawiasów. Wyrażenie nie jest oceniane.
+- Wyrażenie. W przypadku użycia z **wyrażeniem, sizeof** można określić z lub bez nawiasów. Wyrażenie nie jest oceniane.
 
-Gdy operator **sizeof** jest stosowany do obiektu typu **char**, daje 1. Gdy operator **sizeof** jest stosowany do tablicy, daje całkowitą liczbę bajtów w tej tablicy, a nie rozmiar wskaźnika reprezentowanego przez identyfikator tablicy. Aby uzyskać rozmiar wskaźnika reprezentowanego przez identyfikator tablicy, przekaż go jako parametr do funkcji, która używa **operatora sizeof**. Na przykład:
+Gdy **operator sizeof** jest stosowany do obiektu **typu char**, daje 1. Gdy **operator sizeof** jest stosowany do tablicy, daje całkowitą liczbę bajtów w tej tablicy, a nie rozmiar wskaźnika reprezentowanego przez identyfikator tablicy. Aby uzyskać rozmiar wskaźnika reprezentowanego przez identyfikator tablicy, przekaż go jako parametr do funkcji, która używa **sizeof**. Przykład:
 
 ## <a name="example"></a>Przykład
 
@@ -71,13 +71,13 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-Gdy operator **sizeof** zostanie zastosowany do typu **klasy**, **struktury**lub **Unii** , wynik jest liczbą bajtów w obiekcie tego typu oraz dopełnieniem dodanym do dopasowania elementów członkowskich na granicach wyrazów. Wynik nie musi być zgodny z rozmiarem obliczanym przez dodanie wymagań magazynu poszczególnych członków. Opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md) i dyrektywy pragma [Pack](../preprocessor/pack.md) wpływają na granice wyrównania dla elementów członkowskich.
+Gdy **operator sizeof** jest stosowany do **klasy,** **struktury**lub typu **unii,** wynikiem jest liczba bajtów w obiekcie tego typu, plus wszelkie dopełnienie dodane do wyrównania elementów członkowskich w granicach wyrazu. Wynik nie musi odpowiadać rozmiarowi obliczonemu przez dodanie wymagań dotyczących magazynowania poszczególnych elementów członkowskich. Opcja kompilatora [/Zp](../build/reference/zp-struct-member-alignment.md) i [pragma pakietu](../preprocessor/pack.md) wpływają na granice wyrównania dla elementów członkowskich.
 
-Operator **sizeof** nigdy nie zwraca 0 nawet dla pustej klasy.
+**Sizeof** operator nigdy nie daje 0, nawet dla pustej klasy.
 
-Operatora **sizeof** nie można używać z następującymi argumentami operacji:
+Nie można używać operatora **sizeof** z następującymi operandami:
 
-- Obowiązki. (Jednak **sizeof** można zastosować do wskaźników do funkcji).
+- Funkcje. (Jednak **sizeof** mogą być stosowane do wskaźników do funkcji.)
 
 - Pola bitowe.
 
@@ -85,19 +85,19 @@ Operatora **sizeof** nie można używać z następującymi argumentami operacji:
 
 - Typ **void**.
 
-- Dynamicznie przydzielane tablice.
+- Tablice przydzielane dynamicznie.
 
 - Tablice zewnętrzne.
 
 - Niekompletne typy.
 
-- Nazwy z nawiasami niekompletnymi typów.
+- Nazwy niekompletnych typów w nawiasach.
 
-Gdy operator **sizeof** zostanie zastosowany do odwołania, wynik jest taki sam, jak w przypadku zastosowania operatora **sizeof** do samego obiektu.
+Gdy **operator sizeof** jest stosowany do odwołania, wynik jest taki sam, jak gdyby **sizeof** zostały zastosowane do samego obiektu.
 
-Jeśli tablica niesizeowa jest ostatnim elementem struktury, operator **sizeof** zwraca rozmiar struktury bez tablicy.
+Jeśli tablica niewymiarowa jest ostatnim elementem struktury, **operator sizeof** zwraca rozmiar struktury bez tablicy.
 
-Operator **sizeof** jest często używany do obliczania liczby elementów w tablicy przy użyciu wyrażenia w postaci:
+Operator **sizeof** jest często używany do obliczania liczby elementów w tablicy przy użyciu wyrażenia formularza:
 
 ```cpp
 sizeof array / sizeof array[0]

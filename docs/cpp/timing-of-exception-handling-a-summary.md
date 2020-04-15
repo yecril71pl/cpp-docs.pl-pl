@@ -1,5 +1,5 @@
 ---
-title: 'Chronometraż obsługi wyjątków: Podsumowanie'
+title: 'Czas obsługi wyjątków: Podsumowanie'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316595"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Chronometraż obsługi wyjątków: Podsumowanie
+# <a name="timing-of-exception-handling-a-summary"></a>Czas obsługi wyjątków: Podsumowanie
 
-Procedura obsługi zakończenia jest wykonywana niezależnie od sposobu przerwania bloku instrukcji **__try** . Przyczyny obejmują wyskoczenie z bloku **__try** , instrukcję `longjmp`, która przenosi kontrolę z bloku i odblokowuje stos ze względu na obsługę wyjątków.
+Program obsługi zakończenia jest wykonywany bez względu na to, jak blok instrukcji **__try** zostanie zakończony. Przyczyny obejmują wyskakiwanie z bloku `longjmp` **__try,** instrukcja, która przenosi kontrolę z bloku i odwijanie stosu z powodu obsługi wyjątków.
 
 > [!NOTE]
->  Kompilator firmy C++ Microsoft obsługuje dwie formy `setjmp` i `longjmp` instrukcji. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp. h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<SETJMPEX. h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
+> Kompilator Microsoft C++ obsługuje `setjmp` dwie `longjmp` formy i instrukcji. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, \<dołącz plik setjmp.h>. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, \<dołącz plik setjmpex.h>. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
 
 System operacyjny wykonuje wszystkie programy obsługi przerwania w odpowiedniej kolejności, zanim wykonany będzie jakikolwiek inny kod, włączając w to treść programu obsługi wyjątków.
 
@@ -35,7 +35,7 @@ Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część 
 
 1. Jeśli filtr przekaże sterowanie (zwróci 0), proces jest kontynuowany, dopóki nie zostanie znaleziony filtr, który nie przekaże sterowania.
 
-1. Jeśli ten filtr zwróci wartość-1, wykonywanie jest kontynuowane, gdy wyjątek został zgłoszony i nie ma żadnych przerw.
+1. Jeśli ten filtr zwraca -1, wykonanie jest kontynuowane, gdzie wyjątek został zgłoszony i nie ma miejsca zakończenie.
 
 1. Jeśli filtr zwróci 1, zachodzą następujące zdarzenia:
 
@@ -49,5 +49,5 @@ Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
+[Zapisywanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

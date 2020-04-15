@@ -8,95 +8,95 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-ms.openlocfilehash: 58c3ebe4c2a15aa3f0d59191c37a7f2422a63ab5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a10c5c358901122dda37b395c1f0fa5cdc30ce30
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321698"
 ---
 # <a name="atl-control-wizard"></a>Kreator kontrolki ATL
 
-Operacje wstawiania do projektu ATL (lub projektu MFC z obsługą ATL) kontrolki ATL. Można użyć tego kreatora, aby wstawić jeden z trzech rodzajów formantów:
+Wstawia do projektu ATL (lub projektu MFC z obsługą ATL) kontrolki ATL. Za pomocą tego kreatora można wstawić jeden z trzech rodzajów formantów:
 
-- Formantu standardowego
+- Sterowanie standardowe
 
-- Kontrolek złożonych
+- Sterowanie kompozytowe
 
-- Kontrolki DHTML
+- Kontrolka DHTML
 
-Ponadto można określić minimalnej kontrolki, usuwanie interfejsów z [interfejsów](../../atl/reference/interfaces-atl-control-wizard.md) listy, które są udostępniane jako domyślne dla formantów, które można otworzyć w większości kontenerów. Możesz ustawić interfejsy mają być obsługiwane dla formantu w **interfejsów** strony kreatora.
+Ponadto można określić minimalny formant, usuwając interfejsy z listy [Interfejsy,](../../atl/reference/interfaces-atl-control-wizard.md) które są dostarczane jako domyślne formanty do otwarcia w większości kontenerów. Interfejsy, które mają być obsługiwane dla formantu, można ustawić na stronie **Interfejsy** kreatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Skrypt rejestrowania generowane przez ten kreator zarejestruje jego składników modelu COM w gałęzi HKEY_CURRENT_USER zamiast HKEY_LOCAL_MACHINE. Aby zmienić to zachowanie, ustaw **części rejestru dla wszystkich użytkowników** opcji kreatora ATL.
+Skrypt rejestracji wyprodukowany przez tego kreatora zarejestruje swoje składniki COM w obszarze HKEY_CURRENT_USER zamiast HKEY_LOCAL_MACHINE. Aby zmodyfikować to zachowanie, należy ustawić **opcję Zarejestruj składnik dla wszystkich użytkowników** Kreatora ATL.
 
 ## <a name="names"></a>Nazwy
 
-Określ nazwy dla obiektu, interfejsów i klas, które mają zostać dodane do projektu. Z wyjątkiem **krótką nazwę**, wszystkie inne pola, które mogą być zmieniane niezależnie. Jeśli zmienisz tekst **krótką nazwę**, zmiany są widoczne w nazwach wszystkie inne pola na tej stronie. W przypadku zmiany **Coclass** nazwę w sekcji COM, zmiana jest odzwierciedlana w **typu** pola, ale **interfejsu** nazwy i **ProgID** czy Nie zmieniaj. To zachowanie nazewnictwa zaprojektowaną do podejmowania wszystkich nazw można łatwo zidentyfikować dla Ciebie podczas tworzenia kontrolki.
+Określ nazwy obiektu, interfejsu i klas, które mają zostać dodane do projektu. Z wyjątkiem **krótkiej nazwy,** wszystkie inne pola mogą być zmieniane niezależnie. Jeśli zmienisz tekst **dla krótkiej nazwy,** zmiana zostanie odzwierciedlona w nazwach wszystkich innych pól na tej stronie. Jeśli zmienisz nazwę **Coclass** w sekcji COM, zmiana zostanie odzwierciedlona w polu **Typ,** ale nazwa **interfejsu** i **progid** nie ulegnie zmianie. To zachowanie nazewnictwa jest przeznaczony do wszystkich nazw łatwo rozpoznawalne dla Ciebie podczas rozwijania kontroli.
 
 > [!NOTE]
->  **Klasa coclass** można edytować tylko nonattributed kontrolek. Jeśli projekt jest przypisane, nie można edytować **Coclass**.
+> **Coclass** jest edytowalny tylko na formanty nonattributed. Jeśli projekt jest przypisany, nie można edytować **programu Coclass**.
 
 ### <a name="c"></a>C++
 
-Zawiera informacje dla klasy języka C++ utworzona w celu wdrożenia obiektu.
+Zawiera informacje dla klasy C++ utworzonej w celu zaimplementowania obiektu.
 
 - **Krótka nazwa**
 
-   Ustawia skróconą nazwę dla obiektu. Należy podać nazwę określa klasę i **Coclass** nazywa plik (. CPP i. H) nazw, nazwę interfejsu i **typu** nazwy, chyba że zmienił się tych pól indywidualnie.
+   Ustawia skróconą nazwę obiektu. Podana nazwa określa nazwy klasy i **coclass,** plik (. CPP i . H) nazwy, nazwa interfejsu i **nazwy typu,** chyba że zmienisz te pola indywidualnie.
 
-- **Class**
+- **Klasa**
 
-   Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
+   Ustawia nazwę klasy, która implementuje obiekt. Ta nazwa jest oparta na nazwie podającej w **skróconej nazwie,** poprzedzonej "C", typowym prefiksem nazwy klasy.
 
-- **plik .h**
+- **.h plik**
 
-   Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ**.
+   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podajona w **skróconej nazwie**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz **przycisku Zakończ**.
 
-   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu **przycisku Zakończ**kreator wyświetli monit o wskazanie, czy deklaracja klasy powinna być dołączona do zawartości pliku. Kliknij **przycisk Tak,** aby dołączyć plik; Kliknij przycisk **Nie,** aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Plik CPP**
+- **.cpp**
 
-   Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
+   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podajona w **skróconej nazwie**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie zostanie zapisany w wybranej lokalizacji, dopóki nie klikniesz **przycisku Zakończ** w kreatorze.
 
-   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu **przycisku Zakończ,** kreator wyświetli monit o wskazanie, czy implementacja klasy powinna być dołączona do zawartości pliku. Kliknij **przycisk Tak,** aby dołączyć plik; Kliknij przycisk **Nie,** aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Opartego na atrybutach**
+- **Przypisane**
 
-   Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
+   Wskazuje, czy obiekt używa atrybutów. Jeśli dodajesz obiekt do przypisanego projektu ATL, ta opcja jest zaznaczona i nie jest dostępna do zmiany. Oznacza to, że można dodać tylko przypisane obiekty do projektu utworzonego za pomocą obsługi atrybutów.
 
-   Obiekt opartego na atrybutach można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu pomocy technicznej, w kreatora zostanie wyświetlony monit o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+   Przypisany obiekt można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję dla projektu ATL, który nie obsługuje atrybutów, kreator monituje o określenie, czy chcesz dodać obsługę atrybutów do projektu.
 
-   Domyślnie wszystkie obiekty, które możesz dodać po ustawieniu tej opcji są oznaczone jako opartego na atrybutach (pole wyboru jest zaznaczone). Aby wyczyścić to pole, aby dodać obiekt, który nie korzysta z atrybutów.
+   Domyślnie wszystkie obiekty dodane po ustawieniu tej opcji są oznaczone jako przypisane (zaznaczone jest pole wyboru). To pole można wyczyścić, aby dodać obiekt, który nie używa atrybutów.
 
-   Zobacz [ustawienia aplikacji, Kreator projektów ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
+   Aby uzyskać więcej informacji, zobacz [Ustawienia aplikacji, Kreator projektu ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów.](../../windows/basic-mechanics-of-attributes.md)
 
 ### <a name="com"></a>Model COM
 
-Zawiera informacje dotyczące funkcji COM dla obiektu.
+Zawiera informacje o funkcjach COM dla obiektu.
 
 - **Coclass**
 
-   Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
+   Ustawia nazwę klasy składnika zawierającej listę interfejsów obsługiwanych przez obiekt.
 
    > [!NOTE]
-   > Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że kontrolka używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.
+   > Jeśli projekt zostanie utworzony przy użyciu atrybutów lub jeśli na tej stronie kreatora zostanie wskazane, że formant używa atrybutów, nie można zmienić tej opcji, ponieważ atl nie zawiera atrybutu **coclass.**
 
-- **Interface**
+- **Interfejs**
 
-   Ustawia nazwę interfejsu dla obiektu. Domyślnie nazwa interfejsu jest poprzedzona przedrostkiem "I".
+   Ustawia nazwę interfejsu dla obiektu. Domyślnie nazwa interfejsu jest poprzedzony "I".
 
 - **Typ**
 
-   Określa opis obiektu, który będzie wyświetlany w rejestrze
+   Ustawia opis obiektu, który pojawi się w rejestrze
 
-- **ProgID**
+- **Progid**
 
-   Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu. To pole nie jest automatycznie wypełnione. Jeśli to pole nie ręcznie wypełnić formant nie może być dostępne dla innych narzędzi. Na przykład formanty ActiveX, które są generowane, bez `ProgID` nie są dostępne w **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji na temat okna dialogowego, zobacz [okno dialogowe Wstawianie kontrolki ActiveX](../../windows/insert-activex-control-dialog-box.md).
+   Ustawia nazwę, której kontenery mogą używać zamiast identyfikatora CLSID obiektu. To pole nie jest wypełniane automatycznie. Jeśli to pole nie zostanie wypełnić ręcznie, formant może nie być dostępny dla innych narzędzi. Na przykład formanty ActiveX, `ProgID` które są generowane bez a nie są dostępne w oknie dialogowym **Wstawianie formantów ActiveX.** Aby uzyskać więcej informacji o oknie dialogowym, zobacz [Okno dialogowe Wstawianie formantu ActiveX](../../windows/insert-activex-control-dialog-box.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolka ATL](../../atl/reference/adding-an-atl-control.md)<br/>
-[Dodawanie funkcji do kontrolek złożonych](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)
+[Sterowanie ATL](../../atl/reference/adding-an-atl-control.md)<br/>
+[Dodawanie funkcji do kontrolki złożonej](../../atl/adding-functionality-to-the-composite-control.md)<br/>
+[Podstawy obiektów ATL COM](../../atl/fundamentals-of-atl-com-objects.md)

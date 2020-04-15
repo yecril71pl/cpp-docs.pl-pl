@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 573446256aa89423837ebf73176a73f72054911b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260386"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318764"
 ---
 # <a name="cautovectorptr-class"></a>Klasa CAutoVectorPtr
 
-Ta klasa reprezentuje obiekt inteligentny wskaźnik przy użyciu nowych wektorów i delete — operatory.
+Ta klasa reprezentuje obiekt wskaźnik inteligentny przy użyciu operatorów wektorowych i delete.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,37 +52,37 @@ Typ wskaźnika.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoVectorPtr::Allocate](#allocate)|Wywołanie tej metody można przydzielić pamięci wymaganej przez tablicę obiektów, do których prowadzą `CAutoVectorPtr`.|
-|[CAutoVectorPtr::Attach](#attach)|Wywołaj tę metodę, aby przejąć prawo własności istniejącego wskaźnika.|
-|[CAutoVectorPtr::Detach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
-|[CAutoVectorPtr::Free](#free)|Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CAutoVectorPtr`.|
+|[CAutoVectorPtr::Przydziel](#allocate)|Wywołanie tej metody, aby przydzielić pamięć wymaganą `CAutoVectorPtr`przez tablicę obiektów wskazywania przez .|
+|[CAutoVectorPtr::Dołącz](#attach)|Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.|
+|[CAutoVectorPtr::Detach](#detach)|Wywołanie tej metody, aby zwolnić własność wskaźnika.|
+|[CAutoVectorPtr::Za darmo](#free)|Wywołanie tej metody, aby usunąć `CAutoVectorPtr`obiekt wskazywał przez .|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoVectorPtr::operator T *](#operator_t__star)|Operator rzutowania.|
+|[CAutoVectorPtr::operator T *](#operator_t__star)|Operator odlewu.|
 |[CAutoVectorPtr::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoVectorPtr::m_p](#m_p)|Zmiennej składowej danych wskaźnika.|
+|[CAutoVectorPtr::m_p](#m_p)|Zmienna elementu członkowskiego danych wskaźnika.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza metody do tworzenia i zarządzania inteligentny wskaźnik, co pomoże zapewnić ochronę przed przeciekami pamięci przy zwalnianiu zasobów automatycznie, gdy znajduje się poza zakresem. `CAutoVectorPtr` jest podobny do `CAutoPtr`, jedyną różnicą, że `CAutoVectorPtr` używa [nowy wektor&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) i [usuwanie wektora&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) do przydzielają i zwalniają pamięć zamiast C++ **nowe** i **Usuń** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Jeśli klas kolekcji `CAutoVectorPtr` są wymagane.
+Ta klasa udostępnia metody tworzenia i zarządzania inteligentny wskaźnik, który pomoże chronić przed przeciekami pamięci przez automatyczne zwalnianie zasobów, gdy wypadnie poza zakres. `CAutoVectorPtr`jest podobny `CAutoPtr`do , jedyną różnicą jest to, `CAutoVectorPtr` że używa [wektora nowego&#91;&#93;](../../standard-library/new-operators.md#op_new_arr) i [wektora delete&#91;&#93;](../../standard-library/new-operators.md#op_delete_arr) przydzielić i zwolnić pamięć zamiast C++ **nowe** i **delete** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) jeśli `CAutoVectorPtr` klasy kolekcji są wymagane.
 
-Zobacz [CAutoPtr](../../atl/reference/cautoptr-class.md) na przykład za pomocą klasa inteligentnego wskaźnika.
+Zobacz [CAutoPtr](../../atl/reference/cautoptr-class.md) na przykład przy użyciu klasy inteligentnego wskaźnika.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlbase.h
 
-##  <a name="allocate"></a>  CAutoVectorPtr::Allocate
+## <a name="cautovectorptrallocate"></a><a name="allocate"></a>CAutoVectorPtr::Przydziel
 
-Wywołanie tej metody można przydzielić pamięci wymaganej przez tablicę obiektów, do których prowadzą `CAutoVectorPtr`.
+Wywołanie tej metody, aby przydzielić pamięć wymaganą `CAutoVectorPtr`przez tablicę obiektów wskazywania przez .
 
 ```
 bool Allocate(size_t nElements) throw();
@@ -90,20 +90,20 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*<br/>
+*nElementy*<br/>
 Liczba elementów w tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pamięć jest pomyślnie przydzielone, wartość false w przypadku niepowodzenia.
+Zwraca wartość true, jeśli pamięć została pomyślnie przydzielona, false na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach do debugowania błędu potwierdzenia wystąpi [CAutoVectorPtr::m_p](#m_p) zmiennej składowej pozwala obecnie przejść do istniejącej wartości; oznacza to, że nie jest równa NULL.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli zmienna elementu członkowskiego [CAutoVectorPtr::m_p](#m_p) aktualnie wskazuje na istniejącą wartość; oznacza to, że nie jest równa NULL.
 
-##  <a name="attach"></a>  CAutoVectorPtr::Attach
+## <a name="cautovectorptrattach"></a><a name="attach"></a>CAutoVectorPtr::Dołącz
 
-Wywołaj tę metodę, aby przejąć prawo własności istniejącego wskaźnika.
+Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.
 
 ```
 void Attach(T* p) throw();
@@ -111,16 +111,16 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-`CAutoVectorPtr` Obiekt będzie przejęcie na własność ten wskaźnik.
+*P*<br/>
+Obiekt `CAutoVectorPtr` przejmie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `CAutoVectorPtr` obiektu przejmuje na własność wskaźnika, usługa automatycznie usunie wskaźnika i wszystkie przydzielone dane podczas jego wykracza poza zakres. Jeśli [CAutoVectorPtr::Detach](#detach) jest wywoływana, programisty jest ponownie podany odpowiedzialność za zwalnianie dowolne zasoby przydzielane.
+Gdy `CAutoVectorPtr` obiekt przejmuje na własność wskaźnik, automatycznie usunie wskaźnik i wszystkie przydzielone dane, gdy wyjdzie poza zakres. Jeśli [CAutoVectorPtr::Detach](#detach) jest wywoływana, programista jest ponownie odpowiedzialny za zwalnianie wszelkich przydzielonych zasobów.
 
-W kompilacjach do debugowania błędu potwierdzenia wystąpi [CAutoVectorPtr::m_p](#m_p) zmiennej składowej pozwala obecnie przejść do istniejącej wartości; oznacza to, że nie jest równa NULL.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli zmienna elementu członkowskiego [CAutoVectorPtr::m_p](#m_p) aktualnie wskazuje na istniejącą wartość; oznacza to, że nie jest równa NULL.
 
-##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr
 
 Konstruktor.
 
@@ -132,14 +132,14 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Istniejącego wskaźnika.
+*P*<br/>
+Istniejący wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-`CAutoVectorPtr` Obiekt może być utworzony przy użyciu istniejącego wskaźnika, w którym to przypadku z tym przenosi własność wskaźnika.
+Obiekt `CAutoVectorPtr` można utworzyć za pomocą istniejącego wskaźnika, w którym to przypadku przenosi własność wskaźnika.
 
-##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="dtor"></a>CAutoVectorPtr::~CAutoVectorPtr
 
 Destruktor.
 
@@ -149,11 +149,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie zasoby przydzielone. Wywołania [CAutoVectorPtr::Free](#free).
+Zwalnia wszystkie przydzielone zasoby. Wywołuje [CAutoVectorPtr::Free](#free).
 
-##  <a name="detach"></a>  CAutoVectorPtr::Detach
+## <a name="cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr::Detach
 
-Wywołaj tę metodę, aby zwolnić własność wskaźnika.
+Wywołanie tej metody, aby zwolnić własność wskaźnika.
 
 ```
 T* Detach() throw();
@@ -165,11 +165,11 @@ Zwraca kopię wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Uwalnia własność wskaźnika, ustawia [CAutoVectorPtr::m_p](#m_p) zmienną członkowską na wartość NULL i zwraca kopię wskaźnika. Po wywołaniu `Detach`, do programisty, aby zwolnić dowolne przydzielany zasobów za pośrednictwem którego `CAutoVectorPtr` obiekt może mieć wcześniej zakładaliśmy odpowiedzialności.
+Zwalnia własność [wskaźnika, ustawia zmienną CAutoVectorPtr::m_p](#m_p) zmienną elementu członkowskiego na NULL i zwraca kopię wskaźnika. Po `Detach`wywołaniu program programista musi zwolnić wszystkie przydzielone `CAutoVectorPtr` zasoby, za które obiekt mógł wcześniej przejąć odpowiedzialność.
 
-##  <a name="free"></a>  CAutoVectorPtr::Free
+## <a name="cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr::Za darmo
 
-Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CAutoVectorPtr`.
+Wywołanie tej metody, aby usunąć `CAutoVectorPtr`obiekt wskazywał przez .
 
 ```
 void Free() throw();
@@ -177,11 +177,11 @@ void Free() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wskazywany przez `CAutoVectorPtr` jest zwalniana i [CAutoVectorPtr::m_p](#m_p) zmiennej składowej ma wartość NULL.
+Obiekt wskazany przez `CAutoVectorPtr` jest zwolniona, a zmienna elementu członkowskiego [CAutoVectorPtr::m_p](#m_p) jest ustawiona na wartość NULL.
 
-##  <a name="m_p"></a>  CAutoVectorPtr::m_p
+## <a name="cautovectorptrm_p"></a><a name="m_p"></a>CAutoVectorPtr::m_p
 
-Zmiennej składowej danych wskaźnika.
+Zmienna elementu członkowskiego danych wskaźnika.
 
 ```
 T* m_p;
@@ -189,9 +189,9 @@ T* m_p;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta zmienna członka przechowuje informacje o wskaźnikach.
+Ta zmienna elementu członkowskiego zawiera informacje o wskaźniku.
 
-##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =
+## <a name="cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr::operator =
 
 Operator przypisania.
 
@@ -201,20 +201,20 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
+*P*<br/>
 Wskaźnik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do **CAutoVectorPtr\< T >**.
+Zwraca odwołanie do **>\< CAutoVectorPtr T **.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przypisania odłącza `CAutoVectorPtr` obiekt z dowolny wskaźnik bieżącego i dołącza nowy wskaźnik *p*, w tym miejscu.
+Operator przypisania odłącza obiekt od bieżącego `CAutoVectorPtr` wskaźnika i dołącza nowy wskaźnik , *p*, w jego miejsce.
 
-##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *
+## <a name="cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr::operator T *
 
-Operator rzutowania.
+Operator odlewu.
 
 ```
 operator T*() const throw();
@@ -222,9 +222,9 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wskaźnik do typu danych obiektu zdefiniowane w szablonie klasy.
+Zwraca wskaźnik do typu danych obiektu zdefiniowanego w szablonie klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

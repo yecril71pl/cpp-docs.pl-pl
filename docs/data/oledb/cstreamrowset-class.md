@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 300933fd6d10f5da39d9276db746ab789851a9a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ad4987422fd200faef141150908d4df0722f669a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366272"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset — Klasa
 
-Używane w deklaracji `CCommand` lub `CTable`.
+Używane w `CCommand` `CTable` deklaracji lub.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,25 +46,25 @@ class CStreamRowset
 
 ### <a name="parameters"></a>Parametry
 
-*TAccessor*<br/>
+*TAccessor ( TAccessor )*<br/>
 Klasa akcesora.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atldbcli. h
+**Nagłówek:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Konstruktor. Tworzy wystąpienia i inicjuje obiekt `CStreamRowset`.|
-|[Ściśle](#close)|Zwalnia wskaźnik interfejsu [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) w klasie.|
+|[Cstreamrowset](#cstreamrowset)|Konstruktor. Wystąpienia i inicjuje `CStreamRowset` obiekt.|
+|[Zamknij](#close)|Zwalnia wskaźnik interfejsu [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) w klasie.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `CStreamRowset` w deklaracji `CCommand` lub `CTable`, na przykład:
+Użyj `CStreamRowset` w `CCommand` `CTable` swoim lub deklaracji, na przykład:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
@@ -72,18 +72,18 @@ lub
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` zwraca wskaźnik `ISequentialStream`, który jest przechowywany w `m_spStream`. Następnie użyj metody `Read`, aby pobrać dane (ciąg Unicode) w formacie XML. Na przykład:
+`ICommand::Execute`zwraca `ISequentialStream` wskaźnik, który jest `m_spStream`przechowywany w pliku . Następnie należy `Read` użyć metody do pobrania danych (ciąg Unicode) w formacie XML. Przykład:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 wykonuje formatowanie XML i zwróci wszystkie kolumny i wszystkie wiersze zestawu wierszy jako jeden ciąg XML.
+Program SQL Server 2000 wykonuje formatowanie XML i zwraca wszystkie kolumny i wszystkie wiersze zestawu wierszy jako jeden ciąg XML.
 
 > [!NOTE]
->  Ta funkcja działa tylko z SQL Server 2000.
+> Ta funkcja działa tylko z programem SQL Server 2000.
 
-## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset:: CStreamRowset
+## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset::CStreamRowset
 
-Tworzy wystąpienia i inicjuje obiekt `CStreamRowset`.
+Wystąpienia i inicjuje `CStreamRowset` obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -91,7 +91,7 @@ Tworzy wystąpienia i inicjuje obiekt `CStreamRowset`.
 CStreamRowset();
 ```
 
-## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset:: Close
+## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset::Zamknij
 
 Zwalnia wskaźnik interfejsu [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) w klasie.
 
@@ -103,5 +103,5 @@ void Close();
 
 ## <a name="see-also"></a>Zobacz też
 
-[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Szablony dla konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Dokumentacja szablonów dla konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

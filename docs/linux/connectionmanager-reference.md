@@ -6,45 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionManager program
 ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77258036"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager — dokumentacja
 
 ::: moniker range="<=vs-2017"
 
-ConnectionManager. exe jest dostępny w programie Visual Studio 2019 w wersji 16,5 lub nowszej.
+Program ConnectionManager.exe jest dostępny w programie Visual Studio 2019 w wersji 16.5 i nowszej.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-ConnectionManager. exe to narzędzie wiersza polecenia do zarządzania połączeniami zdalnego tworzenia poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi nowej maszyny deweloperskiej. Można też użyć go do skonfigurowania programu Visual Studio na potrzeby ciągłej integracji. Można go użyć w oknie wiersz polecenia dla deweloperów. Aby uzyskać więcej informacji na temat wiersz polecenia dla deweloperów, zobacz [Korzystanie z C++ zestawu narzędzi firmy Microsoft w wierszu polecenia](../build/building-on-the-command-line.md).
+ConnectionManager.exe to narzędzie wiersza polecenia do zarządzania zdalnymi połączeniami programistycznymi poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi administracyjnej nowego komputera dewelopera. Lub użyj go do skonfigurowania programu Visual Studio do ciągłej integracji.Można go używać w oknie wiersza polecenia dewelopera. Aby uzyskać więcej informacji na temat wiersza polecenia dewelopera, zobacz [Używanie zestawu narzędzi Microsoft C++ z wiersza polecenia](../build/building-on-the-command-line.md).
 
-ConnectionManager. exe jest dostępny w programie Visual Studio 2019 w wersji 16,5 lub nowszej. Jest to część rozwoju systemu **Linux z C++**  obciążeniem w Instalator programu Visual Studio. Jest ona również instalowana automatycznie po wybraniu składnika **Menedżera połączeń** w instalatorze. Jest on instalowany w systemie *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager. exe*.
+Program ConnectionManager.exe jest dostępny w programie Visual Studio 2019 w wersji 16.5 i nowszej. Jest częścią rozwoju **systemu Linux z c++** obciążenia w Instalatorze programu Visual Studio. Jest również instalowany automatycznie po wybraniu **składnika Menedżera połączeń** w instalatorze. Jest zainstalowany w *pliku ConnectionManager.exe\\\\w pliku %VCIDEInstallDir%\\Linux bin ConnectionManagerExe\\ConnectionManager.exe*.
 
-Funkcja programu ConnectionManager. exe jest również dostępna w programie Visual Studio. Aby zarządzać połączeniami zdalnego tworzenia w środowisku IDE, na pasku menu wybierz polecenie **narzędzia** > **Opcje** , aby otworzyć okno dialogowe Opcje. W oknie dialogowym Opcje wybierz pozycję **Międzyplatformowe** > **Menedżer połączeń**.
+Funkcjonalność programu ConnectionManager.exe jest również dostępna w programie Visual Studio. Aby zarządzać zdalnymi połączeniami programistycznymi w ide, na pasku menu wybierz pozycję**Opcje** **narzędzi,** > aby otworzyć okno dialogowe Opcje. W oknie dialogowym Opcje wybierz pozycję Menedżer połączeń **między platformami** > **Connection Manager**.
 
 ## <a name="syntax"></a>Składnia
 
-> **ConnectionManager. exe** *polecenie* \[*argumenty*] \[*Opcje*]
+> **ConnectionManager.exe** *argumenty* \[ *polecenia* \[] *opcje*]
 
 ### <a name="commands-and-arguments"></a>Polecenia i argumenty
 
-- **dodawanie** *\@użytkownika Host* \[ **--** *Port port]* \[ **--** Password *Password*] \[ **--PrivateKey** *privatekey_file*]
+- **dodaj** *\@hosta* \[użytkownika **--port** *portu*] \[ **--hasło** *hasło*] \[ **--privatekey** *privatekey_file*]
 
-  Uwierzytelnia i dodaje nowe połączenie. Domyślnie używa on portu 22 i uwierzytelniania hasła. (Zostanie wyświetlony monit o wprowadzenie hasła). Aby określić hasło dla klucza prywatnego, użyj **hasła--Password** i **--PrivateKey** .
+  Uwierzytelnia i dodaje nowe połączenie. Domyślnie używa uwierzytelniania portów 22 i hasła. (Zostanie wyświetlony monit o wprowadzenie hasła). Użyj hasła do klucza prywatnego za **pomocą funkcji --password** i **--privatekey.**
 
-- **usuń** \[*connection_id* \| *użytkownika\@hosta* \[ **--port** *port*]]
+- **usuń** \[ *connection_id* \| *hosta\@* \[użytkownika **--port** *]]*
 
-  Usuwa połączenie. Jeśli nie określono żadnych argumentów, zostanie wyświetlony monit o określenie, które połączenie ma zostać usunięte.
+  Usuwa połączenie. Jeśli nie określono żadnych argumentów, zostanie wyświetlony monit o określenie, które połączenie należy usunąć.
 
-- **Usuń wszystko**
+- **usuń wszystko**
 
-  Usuwa wszystkie przechowywane połączenia.
+  Usuwa wszystkie zapisane połączenia.
 
 - **list**
 
@@ -52,55 +52,55 @@ Funkcja programu ConnectionManager. exe jest również dostępna w programie Vis
 
 - **Pomoc**
 
-  Wyświetla ekran pomoc.
+  Wyświetla ekran pomocy.
 
-- **version**
+- **Wersja**
 
   Wyświetla informacje o wersji.
 
 ### <a name="options"></a>Opcje
 
-- **-q**, **--quiet**
+- **-q**, **--cichy**
 
-  Uniemożliwia wyjście do `stdout` lub `stderr`.
+  Zapobiega wyjściu `stdout` `stderr`do lub .
 
-- **--No-Prompt**
+- **--no-prompt**
 
-  Niepowodzenie zamiast monitu, w razie potrzeby.
+  Nie powiedzie się zamiast monitu, jeśli jest to konieczne.
 
-- **--No-verify**
+- **--no-verify**
 
-  Dodaj lub zmodyfikuj połączenie bez uwierzytelniania.
+  Dodawanie lub modyfikowanie połączenia bez uwierzytelniania.
 
-- **--** *filename* pliku
+- **--nazwa** *pliku*
 
-  Odczytaj informacje o połączeniu z podanej *nazwy pliku*.
+  Odczytu informacji o połączeniu z podanej *nazwy pliku*.
 
-- **--No-Telemetria**
+- **--no-telemetria**
 
-  Wyłącz wysyłanie danych użycia z powrotem do firmy Microsoft. Dane użycia są zbierane i wysyłane do firmy Microsoft, chyba że została przeniesiona flaga **--no-telemetrion** .  
+  Wyłącz wysyłanie danych użycia z powrotem do firmy Microsoft. Dane użycia są zbierane i wysyłane z powrotem do firmy Microsoft, chyba że flaga **--no-telemetry** jest przekazywana.  
 
-- **-n**, **--osuszyć-Run**
+- **-n**, **--dry-run**
 
-  Wykonuje polecenie w postaci suchego przebiegu.
+  Wykonuje suchy przebieg polecenia.
 
 - **-p**
 
-  Takie samo jak **hasło**.
+  Tak samo jak **--password**.
 
 - **-i**
 
-  Analogicznie jak **--PrivateKey**.
+  Tak samo jak **--privatekey**.
 
 ## <a name="examples"></a>Przykłady
 
-To polecenie dodaje połączenie dla użytkownika o nazwie "User" na hoście lokalnym. Połączenie używa pliku klucza do uwierzytelniania, który znajduje się w *% USERPROFILE%\.SSH \ id_rsa*.
+To polecenie dodaje połączenie dla użytkownika o nazwie "użytkownik" na localhost. Połączenie używa pliku klucza do uwierzytelniania, znajdującego się w *pliku %USERPROFILE%\.ssh\id_rsa*.
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"
 ```
 
-To polecenie usuwa połączenie z IDENTYFIKATORem 1975957870 z listy połączeń.
+To polecenie usuwa połączenie o identyfikatorze 1975957870 z listy połączeń.
 
 ```cmd
 ConnectionManager.exe remove 1975957870
@@ -108,6 +108,6 @@ ConnectionManager.exe remove 1975957870
 
 ## <a name="see-also"></a>Zobacz też
 
-[Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio](connect-to-your-remote-linux-computer.md)
+[Łączenie się z docelowym systemem Linux w programie Visual Studio](connect-to-your-remote-linux-computer.md)
 
 ::: moniker-end

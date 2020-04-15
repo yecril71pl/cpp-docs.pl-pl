@@ -3,12 +3,12 @@ title: Właściwości archiwum zdalnego (C++ Linux)
 ms.date: 06/07/2019
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
 f1_keywords: []
-ms.openlocfilehash: dc20eecef9947581ca87b9489285bc058a249e26
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3b6f71d9cceccf0b0221be46bacb1294d84533cd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364301"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Właściwości archiwum zdalnego (C++ Linux)
 
@@ -22,16 +22,16 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 | Właściwość | Opis |
 |--|--|
-| Utwórz indeks Archiwum | Utwórz indeks archiwum (zgodnie z ranlib). Ta opcja umożliwia przyspieszenie konsolidacji i zmniejszenie zależności w ramach własnej biblioteki. |
-| Utwórz cienkie Archiwum | Utwórz cienkie archiwum.  Cienkie archiwum zawierają ścieżki względne do obiektów zamiast osadzania obiektów.  Przełączenie między cienkim i normalnym wymaga usunięcia istniejącej biblioteki. |
-| Brak ostrzeżenia podczas tworzenia | Nie ostrzega o tym, czy biblioteka została utworzona. |
-| Obetnij sygnaturę czasową | Użyj wartości zero dla sygnatur czasowych i identyfikatorów UID/GIDs. |
-| Pomiń transparent startowy | Nie pokazuj numeru wersji. |
+| Tworzenie indeksu archiwum | Utwórz indeks archiwum (tak jak to robi ranlib). Ta opcja może przyspieszyć łączenie i zmniejszyć zależność w ramach własnej biblioteki. |
+| Tworzenie cienkiego archiwum | Utwórz cienkie archiwum.  Cienkie archiwum zawiera względne ścieżki do obiektów zamiast osadzania obiektów.  Przełączanie między cienkim i normalnym wymaga usunięcia istniejącej biblioteki. |
+| Brak ostrzeżenia podczas tworzenia | Nie ostrzega, czy i kiedy biblioteka jest tworzona. |
+| Obcięcie znacznika czasu | Użyj zera dla znaczników czasu i uids /gids. |
+| Pomijanie banera startowego | Nie pokazuj numeru wersji. |
 | Pełny | Pełny |
-| Opcje dodatkowe | Opcje dodatkowe. |
-| Plik wyjściowy | Opcja/OUT zastępuje domyślną nazwę i lokalizację programu tworzonego przez bibliotekę. |
-| Programu archiwizującego | Określa program do wywołania podczas łączenia obiektów statycznych lub ścieżkę do archiwum w systemie zdalnym. |
-| Limit czasu Archiwum | Limit czasu zdalnego archiwum (w milisekundach). |
-| Kopiuj dane wyjściowe | Określa, czy plik danych wyjściowych kompilacji ma być kopiowany z systemu zdalnego na maszynę lokalną. |
+| Opcje dodatkowe | Dodatkowe opcje. |
+| Plik wyjściowy | Opcja /OUT zastępuje domyślną nazwę i lokalizację programu tworzonego przez lib. |
+| Archiver | Określa program do wywołania podczas łączenia obiektów statycznych lub ścieżkę do archiwizatora w systemie zdalnym. |
+| Limit czasu archiwizatora | Zdalny limit czasu archiwizatora w milisekundach. |
+| Kopiuj dane wyjściowe | Określa, czy plik wyjściowy kompilacji ma być kopiowany z systemu zdalnego na komputer lokalny. |
 
 ::: moniker-end

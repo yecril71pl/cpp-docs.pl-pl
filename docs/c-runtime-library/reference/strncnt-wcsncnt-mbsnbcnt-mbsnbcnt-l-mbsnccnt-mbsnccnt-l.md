@@ -1,6 +1,6 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bfd339a38dd5df30ece72059525860603ee10748
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947296"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364182"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Zwraca liczbę znaków lub bajtów w określonej liczbie.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**i **_mbsnccnt_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**i **_mbsnccnt_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -100,40 +105,42 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg, który ma zostać zbadany.
+*Str*<br/>
+Ciąg do zbadania.
 
-*liczbą*<br/>
-Liczba znaków lub bajtów do zbadania w *str*.
+*Liczba*<br/>
+Liczba znaków lub bajtów do zbadania w *ul*.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcnt** i **_mbsnbcnt_l** zwracają liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwracają liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli znak null zostanie napotkany przed zakończeniem badania *str* , zwraca liczbę bajtów lub znaków znalezionych przed znakiem null. Jeśli *str* zawiera mniej niż *Count* znaków lub bajtów, zwraca liczbę znaków lub bajtów w ciągu. Jeśli *Liczba* jest mniejsza od zera, zwracają 0. W poprzednich wersjach te funkcje miały wartość zwracaną typu **int** , a nie **size_t**.
+**_mbsnbcnt** i **_mbsnbcnt_l** zwracają liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwracają liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli znak null zostanie napotkany przed zakończeniem badania *str,* zwracają one liczbę bajtów lub znaków znalezionych przed znakiem null. Jeśli *str* składa się z mniej niż *liczba* znaków lub bajtów, zwracają liczbę znaków lub bajtów w ciągu. Jeśli *liczba* jest mniejsza niż zero, zwracają 0. W poprzednich wersjach te funkcje miały wartość zwracaną typu **int,** a nie **size_t**.
 
-**_strncnt** zwraca liczbę znaków w pierwszej liczbie bajtów *jednobajtowego* ciągu *str*. **_wcsncnt** zwraca liczbę znaków w pierwszej liczbie znaków dwubajtowych *w ciągu* *znaków szerokich* .
+**_strncnt** zwraca liczbę znaków w pierwszych *bajtach licznika* jednobajtowego ciągu *str*. **_wcsncnt** zwraca liczbę znaków w pierwszej *liczbie* znaków szerokich znaków szerokiego znaku *str*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_mbsnbcnt** i **_mbsnbcnt_l** zlicza liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnbcnt** i **_mbsnbcnt_l** Zastąp **mtob** i powinny być używane zamiast **mtob**.
+**_mbsnbcnt** i **_mbsnbcnt_l** policzyć liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnbcnt** i **_mbsnbcnt_l** zastąpić **mtob** i powinny być stosowane zamiast **mtob**.
 
-**_mbsnccnt** i **_mbsnccnt_l** zlicza liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli **_mbsnccnt** i **_mbsnccnt_l** napotkają znak null w drugim bajcie znaku dwubajtowego, pierwszy bajt jest również uznawany za wartość null i nie jest uwzględniony w zwracanej wartości Count. **_mbsnccnt** i **_mbsnccnt_l** Zastąp **btom** i powinny być używane zamiast **btom**.
+**_mbsnccnt** i **_mbsnccnt_l** policzyć liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli **_mbsnccnt** i **_mbsnccnt_l** napotkania znaku null w drugim bajcie znaku dwu bajtowego, pierwszy bajt jest również uważany za null i nie jest uwzględniony w zwracanej wartości liczby. **_mbsnccnt** i **_mbsnccnt_l** zastąpić **btom** i powinny być stosowane zamiast **btom**.
 
-Jeśli *str* jest wskaźnikiem o **wartości null** lub *licznik* ma wartość 0, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametrów](../../c-runtime-library/parameter-validation.md), **errno** jest ustawiona na **EINVAL**, a funkcja zwraca wartość 0.
+Jeśli *str* jest wskaźnikiem **NULL** lub jest *liczbą* 0, te funkcje wywołują nieprawidłowy program obsługi parametrów zgodnie z opisem w [zatwierdzeniu parametru](../../c-runtime-library/parameter-validation.md), **errno** jest ustawiona na **Wartość EINVAL**, a funkcja zwraca wartość 0.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/d|
-|**_wcsncnt**|n/d|n/d|**_mbsnbcnt**|
-|**_wcsncnt**|n/d|n/d|**_mbsnccnt**|
-|n/d|n/d|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|Nie dotyczy|
+|**_wcsncnt**|Nie dotyczy|Nie dotyczy|**_mbsnbcnt**|
+|**_wcsncnt**|Nie dotyczy|Nie dotyczy|**_mbsnccnt**|
+|Nie dotyczy|Nie dotyczy|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -143,10 +150,10 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 |**_mbsnbcnt_l**|\<mbstring.h>|
 |**_mbsnccnt**|\<mbstring.h>|
 |**_mbsnccnt_l**|\<mbstring.h>|
-|**_strncnt**|\<Używanie TCHAR. h >|
-|**_wcsncnt**|\<Używanie TCHAR. h >|
+|**_strncnt**|\<tchar.h>|
+|**_wcsncnt**|\<tchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -175,9 +182,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

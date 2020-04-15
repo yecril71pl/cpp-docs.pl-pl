@@ -1,5 +1,5 @@
 ---
-title: Makra agregacji i fabryki klas
+title: Makra fabryczne agregacji i klasy
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
@@ -17,39 +17,39 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 38239942b99a29b5777deef8000d9f1ab85b10e6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 33f33043d1a2c824ada26399365541796178d21d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319336"
 ---
-# <a name="aggregation-and-class-factory-macros"></a>Makra agregacji i fabryki klas
+# <a name="aggregation-and-class-factory-macros"></a>Makra fabryczne agregacji i klasy
 
 Te makra zapewniają sposoby kontrolowania agregacji i deklarowania fabryk klas.
 
 |||
 |-|-|
-|[DECLARE_AGGREGATABLE](#declare_aggregatable)|Deklaruje, że obiekt może być zagregowany (wartość domyślna).|
-|[DECLARE_CLASSFACTORY](#declare_classfactory)|Deklaruje fabrykę klas jako [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), domyślną fabrykę klas ATL.|
-|[DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)|Deklaruje obiekt fabryki klas jako fabrykę klas.|
-|[DECLARE_CLASSFACTORY2](#declare_classfactory2)|Deklaruje [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) jako fabrykę klas.|
-|[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)|Deklaruje [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako fabrykę klas.|
-|[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)|Deklaruje [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) jako fabrykę klas.|
-|[DECLARE_GET_CONTROLLING_UNKNOWN](#declare_get_controlling_unknown)|Deklaruje funkcję `GetControllingUnknown` wirtualnej.|
-|[DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable)|Deklaruje, że nie można agregować obiektu.|
-|[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Deklaruje, że obiekt musi być zagregowany.|
-|[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Sprawdza wartość elementu zewnętrznego nieznanego i deklaruje obiekt do agregowania lub nie można wykonać agregowania, zgodnie z potrzebami.|
-|[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Chroni obiekt zewnętrzny przed usunięciem podczas konstruowania obiektu wewnętrznego.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Określa flagi podwójne do kontenera.|
+|[DECLARE_AGGREGATABLE](#declare_aggregatable)|Deklaruje, że obiekt może być agregowany (domyślnie).|
+|[DECLARE_CLASSFACTORY](#declare_classfactory)|Deklaruje fabrykę klas jako [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), fabrykę klas domyślnych ATL.|
+|[DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)|Deklaruje, że obiekt fabryki klasy jest fabryką klas.|
+|[DECLARE_CLASSFACTORY2](#declare_classfactory2)|Deklaruje [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) do fabryki klas.|
+|[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)|Deklaruje [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) do fabryki klas.|
+|[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)|Deklaruje [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) do fabryki klas.|
+|[DECLARE_GET_CONTROLLING_UNKNOWN](#declare_get_controlling_unknown)|Deklaruje funkcję `GetControllingUnknown` wirtualną.|
+|[DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable)|Deklaruje, że obiekt nie może być agregowane.|
+|[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Deklaruje, że obiekt musi być agregowane.|
+|[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Sprawdza wartość zewnętrznego nieznanego i deklaruje, że obiekt można agregować lub nie można go odpowiednio agregować.|
+|[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Chroni obiekt zewnętrzny przed usunięciem podczas budowy obiektu wewnętrznego.|
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Określa flagi VIEWSTATUS do kontenera.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE
+## <a name="declare_aggregatable"></a><a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE
 
-Określa, że obiekt może być zagregowany.
+Określa, że obiekt może być agregowany.
 
 ```
 DECLARE_AGGREGATABLE( x )
@@ -57,20 +57,20 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-podczas Nazwa klasy, która jest definiowana do agregowania.
+*X*<br/>
+[w] Nazwa klasy, którą definiujesz jako agregowalną.
 
 ### <a name="remarks"></a>Uwagi
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera to makro, aby określić domyślny model agregacji. Aby zastąpić to ustawienie domyślne, w definicji klasy należy określić makro [DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable) lub [DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable) .
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera to makro, aby określić domyślny model agregacji. Aby zastąpić tę wartość domyślną, należy określić [makro DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable) lub [DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable) w definicji klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY
+## <a name="declare_classfactory"></a><a name="declare_classfactory"></a>DECLARE_CLASSFACTORY
 
-Deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako fabrykę klas.
+Deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) do fabryki klas.
 
 ```
 DECLARE_CLASSFACTORY()
@@ -78,15 +78,15 @@ DECLARE_CLASSFACTORY()
 
 ### <a name="remarks"></a>Uwagi
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) używa tego makra do deklarowania domyślnej fabryki klas dla obiektu.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) używa tego makra do deklarowania domyślnej fabryki klasy dla obiektu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]
 
-##  <a name="ccomclassfactory_class"></a>Klasa CComClassFactory
+## <a name="ccomclassfactory-class"></a><a name="ccomclassfactory_class"></a>Klasa CComClassFactory
 
-Ta klasa implementuje interfejs [elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) .
+Ta klasa implementuje interfejs [IClassFactory.](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)
 
 ```
 class CComClassFactory : public IClassFactory,
@@ -95,25 +95,25 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 ### <a name="remarks"></a>Uwagi
 
-`CComClassFactory` implementuje interfejs [elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) , który zawiera metody tworzenia obiektu określonego identyfikatora CLSID, a także blokowania fabryki klas w pamięci, aby umożliwić szybsze tworzenie nowych obiektów. należy zaimplementować `IClassFactory` dla każdej klasy, która jest zarejestrowana w rejestrze systemowym i do której przypisano identyfikator CLSID.
+`CComClassFactory`implementuje interfejs [IClassFactory,](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) który zawiera metody tworzenia obiektu określonego identyfikatora CLSID, a także blokowanie fabryki klas w pamięci, aby umożliwić szybkie tworzenie nowych obiektów. `IClassFactory`musi być zaimplementowana dla każdej klasy, która jest rejestrowana w rejestrze systemowym i do której można przypisać CLSID.
 
-Obiekty ATL zwykle uzyskują fabrykę klasy poprzez wyprowadzanie z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [DECLARE_CLASSFACTORY](#declare_classfactory)makro, które deklaruje `CComClassFactory` jako domyślną fabrykę klas. Aby zastąpić to ustawienie domyślne, należy określić jedno z DECLARE_CLASSFACTORY*XXX* makr w definicji klasy. Na przykład makro [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) używa określonej klasy dla fabryki klas:
+Obiekty ATL zwykle nabywają fabrykę klas, wywodząc się z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [makro DECLARE_CLASSFACTORY](#declare_classfactory), `CComClassFactory` który deklaruje jako fabryka klas domyślnych. Aby zastąpić tę wartość domyślną, określ jedno z makr DECLARE_CLASSFACTORY*XXX* w definicji klasy. Na przykład makro [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) używa określonej klasy dla fabryki klas:
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-Powyższa definicja klasy określa, że `CMyClassFactory` będzie używana jako domyślna fabryka klas obiektu. `CMyClassFactory` musi pochodzić od `CComClassFactory` i przesłonić `CreateInstance`.
+Powyższa definicja klasy `CMyClassFactory` określa, że będzie używany jako fabryka klas domyślnych obiektu. `CMyClassFactory`musi pochodzić `CComClassFactory` od i `CreateInstance`zastąpić .
 
-ATL udostępnia trzy inne makra, które deklarują fabrykę klasy:
+ATL udostępnia trzy inne makra, które deklarują fabrykę klas:
 
 - [DECLARE_CLASSFACTORY2](#declare_classfactory2) Używa [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), który kontroluje tworzenie za pośrednictwem licencji.
 
-- [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) Używa [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), który tworzy obiekty w wielu apartamentachach.
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) Używa [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), który tworzy obiekty w wielu mieszkaniach.
 
-- [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) Używa [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), który konstruuje pojedynczy obiekt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) .
+- [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) Używa [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), który konstruuje pojedynczy [obiekt CComObjectGlobal.](../../atl/reference/ccomobjectglobal-class.md)
 
-##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX
+## <a name="declare_classfactory_ex"></a><a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX
 
-Deklaruje, że `cf` być fabryką klas.
+Deklaruje, `cf` że jest fabryką klasy.
 
 ```
 DECLARE_CLASSFACTORY_EX( cf )
@@ -121,22 +121,22 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametry
 
-*Porównaj*<br/>
-podczas Nazwa klasy implementującej obiekt fabryki klas.
+*Por*<br/>
+[w] Nazwa klasy, która implementuje obiekt fabryki klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *CF* musi pochodzić od [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i zastąpić metodę `CreateInstance`.
+Cf *cf* Parametr musi pochodzić z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) `CreateInstance` i zastąpić metodę.
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY](#declare_classfactory) , które określa `CComClassFactory` jako domyślną fabrykę klas. Jednak przez uwzględnienie makra DECLARE_CLASSFACTORY_EX w definicji klasy obiektu, to ustawienie domyślne zostanie zastąpione.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera [makro DECLARE_CLASSFACTORY,](#declare_classfactory) które `CComClassFactory` określa jako domyślną fabrykę klas. Jednak dołączając makro DECLARE_CLASSFACTORY_EX do definicji klasy obiektu, należy zastąpić tę wartość domyślną.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2
+## <a name="declare_classfactory2"></a><a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2
 
-Deklaruje [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) jako fabrykę klas.
+Deklaruje [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) do fabryki klas.
 
 ```
 DECLARE_CLASSFACTORY2( lic )
@@ -144,20 +144,20 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametry
 
-*lic*<br/>
-podczas Klasa, która implementuje `VerifyLicenseKey`, `GetLicenseKey`i `IsLicenseValid`.
+*Lic*<br/>
+[w] Klasa, która `VerifyLicenseKey`implementuje `GetLicenseKey` `IsLicenseValid`, i .
 
 ### <a name="remarks"></a>Uwagi
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY](#declare_classfactory) , które określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak przez uwzględnienie makra DECLARE_CLASSFACTORY2 w definicji klasy obiektu, to ustawienie domyślne zostanie zastąpione.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY,](#declare_classfactory) który określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak dołączając makro DECLARE_CLASSFACTORY2 do definicji klasy obiektu, należy zastąpić tę wartość domyślną.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>Klasa CComClassFactory2
+## <a name="ccomclassfactory2-class"></a><a name="ccomclassfactory2_class"></a>Klasa CComClassFactory2
 
-Ta klasa implementuje interfejs [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) .
+Ta klasa implementuje interfejs [IClassFactory2.](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)
 
 ```
 template <class license>
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametry
 
-*licencjonowan*<br/>
+*Licencji*<br/>
 Klasa, która implementuje następujące funkcje statyczne:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -179,21 +179,21 @@ Klasa, która implementuje następujące funkcje statyczne:
 
 ### <a name="remarks"></a>Uwagi
 
-`CComClassFactory2` implementuje interfejs [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) , który jest rozszerzeniem [elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` kontroluje tworzenie obiektów za pomocą licencji. Fabryka klas wykonywana na licencjonowanym komputerze może zapewnić klucz licencji w czasie wykonywania. Ten klucz licencji pozwala aplikacji na tworzenie wystąpień obiektów w przypadku, gdy nie istnieje pełna licencja komputera.
+`CComClassFactory2`implementuje interfejs [IClassFactory2,](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) który jest rozszerzeniem [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2`steruje tworzeniem obiektów za pośrednictwem licencji. Fabryczna klasa wykonywana na licencjonowanym komputerze może zapewnić klucz licencji w czasie wykonywania. Ten klucz licencyjny umożliwia aplikacji tworzenie wystąpienia obiektów, gdy pełna licencja komputera nie istnieje.
 
-Obiekty ATL zwykle uzyskują fabrykę klasy poprzez wyprowadzanie z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [DECLARE_CLASSFACTORY](#declare_classfactory)makro, które deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Aby użyć `CComClassFactory2`, określ makro [DECLARE_CLASSFACTORY2](#declare_classfactory2) w definicji klasy obiektu. Na przykład:
+Obiekty ATL zwykle nabywają fabrykę klas, wywodząc się z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [makro DECLARE_CLASSFACTORY](#declare_classfactory), który deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako fabryka klasy domyślnej. Aby `CComClassFactory2`użyć , określ [makro DECLARE_CLASSFACTORY2](#declare_classfactory2) w definicji klasy obiektu. Przykład:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-`CMyLicense`, parametr szablonu do `CComClassFactory2`, musi implementować funkcje statyczne `VerifyLicenseKey`, `GetLicenseKey`i `IsLicenseValid`. Oto przykład prostej klasy licencji:
+`CMyLicense`, parametr szablonu `CComClassFactory2`do , musi `VerifyLicenseKey` `GetLicenseKey`implementować `IsLicenseValid`funkcje statyczne , i . Oto przykład prostej klasy licencji:
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]
 
-`CComClassFactory2` pochodzi od `CComClassFactory2Base` i *licencji*. `CComClassFactory2Base`z kolei pochodzi od `IClassFactory2` i **CComObjectRootEx\< CComGlobalsThreadModel >** .
+`CComClassFactory2`pochodzi zarówno `CComClassFactory2Base` z *licencji.* `CComClassFactory2Base`, z kolei, `IClassFactory2` pochodzi z i **\< CComObjectRootEx CComGlobalsThreadModel >**.
 
-##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD
+## <a name="declare_classfactory_auto_thread"></a><a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD
 
-Deklaruje [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako fabrykę klas.
+Deklaruje [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) do fabryki klas.
 
 ```
 DECLARE_CLASSFACTORY_AUTO_THREAD()
@@ -201,20 +201,20 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 
 ### <a name="remarks"></a>Uwagi
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY](#declare_classfactory) , które określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak przez uwzględnienie makra DECLARE_CLASSFACTORY_AUTO_THREAD w definicji klasy obiektu, to ustawienie domyślne zostanie zastąpione.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY,](#declare_classfactory) który określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak dołączając makro DECLARE_CLASSFACTORY_AUTO_THREAD do definicji klasy obiektu, należy zastąpić tę wartość domyślną.
 
-Podczas tworzenia obiektów w wielu apartamentach (na serwerze out-of-proc) Dodaj DECLARE_CLASSFACTORY_AUTO_THREAD do klasy.
+Podczas tworzenia obiektów w wielu mieszkaniach (na serwerze out-of-proc), należy dodać DECLARE_CLASSFACTORY_AUTO_THREAD do klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="ccomclassfactoryautothread_class"></a>Klasa CComClassFactoryAutoThread
+## <a name="ccomclassfactoryautothread-class"></a><a name="ccomclassfactoryautothread_class"></a>Klasa CComClassFactoryAutoThread, klasa
 
-Ta klasa implementuje interfejs [elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) i umożliwia tworzenie obiektów w wielu apartamentachach.
+Ta klasa implementuje interfejs [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) i umożliwia tworzenie obiektów w wielu mieszkaniach.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ```
 class CComClassFactoryAutoThread : public IClassFactory,
@@ -223,15 +223,15 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 ### <a name="remarks"></a>Uwagi
 
-`CComClassFactoryAutoThread` jest podobny do [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale umożliwia tworzenie obiektów w wielu apartamentachach. Aby skorzystać z tej obsługi, należy utworzyć moduł EXE z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+`CComClassFactoryAutoThread`jest podobny do [CComClassFactory,](../../atl/reference/ccomclassfactory-class.md)ale umożliwia tworzenie obiektów w wielu mieszkaniach. Aby skorzystać z tej pomocy technicznej, należy wykorzystać z modułu EXE z [modułu CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
-Obiekty ATL zwykle uzyskują fabrykę klasy poprzez wyprowadzanie z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [DECLARE_CLASSFACTORY](#declare_classfactory)makro, które deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Aby użyć `CComClassFactoryAutoThread`, określ makro [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) w definicji klasy obiektu. Na przykład:
+Obiekty ATL zwykle nabywają fabrykę klas, wywodząc się z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [makro DECLARE_CLASSFACTORY](#declare_classfactory), który deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako fabryka klasy domyślnej. Aby `CComClassFactoryAutoThread`użyć , określ [makro DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) w definicji klasy obiektu. Przykład:
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON
+## <a name="declare_classfactory_singleton"></a><a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON
 
-Deklaruje [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) jako fabrykę klas.
+Deklaruje [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) do fabryki klas.
 
 ```
 DECLARE_CLASSFACTORY_SINGLETON( obj )
@@ -239,23 +239,23 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parametry
 
-*obiektów*<br/>
-podczas Nazwa obiektu klasy.
+*Obj*<br/>
+[w] Nazwa obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY](#declare_classfactory) , które określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak przez uwzględnienie makra DECLARE_CLASSFACTORY_SINGLETON w definicji klasy obiektu, to ustawienie domyślne zostanie zastąpione.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_CLASSFACTORY,](#declare_classfactory) który określa [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślną fabrykę klas. Jednak dołączając makro DECLARE_CLASSFACTORY_SINGLETON do definicji klasy obiektu, należy zastąpić tę wartość domyślną.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="ccomclassfactorysingleton_class"></a>Klasa CComClassFactorySingleton
+## <a name="ccomclassfactorysingleton-class"></a><a name="ccomclassfactorysingleton_class"></a>Klasa CComClassFactorySingleton
 
 Ta klasa pochodzi z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ```
 template<class T>
@@ -264,20 +264,20 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa.
+*T*<br/>
+Twoja klasa.
 
-`CComClassFactorySingleton` pochodzi z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu. Każde wywołanie metody `CreateInstance` po prostu wysyła zapytanie do tego obiektu dla wskaźnika interfejsu.
+`CComClassFactorySingleton`pochodzi z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu. Każde wywołanie `CreateInstance` metody po prostu wysyła zapytanie do tego obiektu dla wskaźnika interfejsu.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty ATL zwykle uzyskują fabrykę klasy poprzez wyprowadzanie z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [DECLARE_CLASSFACTORY](#declare_classfactory)makro, które deklaruje `CComClassFactory` jako domyślną fabrykę klas. Aby użyć `CComClassFactorySingleton`, określ makro [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) w definicji klasy obiektu. Na przykład:
+Obiekty ATL zwykle nabywają fabrykę klas, wywodząc się z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [makro DECLARE_CLASSFACTORY](#declare_classfactory), `CComClassFactory` który deklaruje jako fabryka klas domyślnych. Aby `CComClassFactorySingleton`użyć , określ [makro DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) w definicji klasy obiektu. Przykład:
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN
+## <a name="declare_get_controlling_unknown"></a><a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN
 
-Deklaruje funkcję wirtualną `GetControllingUnknown`.
+Deklaruje funkcję `GetControllingUnknown`wirtualną .
 
 ```
 DECLARE_GET_CONTROLLING_UNKNOWN()
@@ -285,9 +285,9 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 
 ### <a name="remarks"></a>Uwagi
 
-Dodaj to makro do obiektu, jeśli zostanie wyświetlony komunikat o błędzie kompilatora, który `GetControllingUnknown` jest niezdefiniowany (na przykład w `CComAggregateCreator`).
+Dodaj to makro do obiektu, jeśli zostanie `GetControllingUnknown` wyświetlony niezdefiniowany komunikat `CComAggregateCreator`o błędzie kompilatora (na przykład w ).
 
-##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE
+## <a name="declare_not_aggregatable"></a><a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE
 
 Określa, że nie można agregować obiektu.
 
@@ -297,22 +297,22 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-podczas Nazwa obiektu klasy, który jest definiowany jako niepoddający się agregowaniu.
+*X*<br/>
+[w] Nazwa obiektu klasy, który definiujesz jako nie agregowalny.
 
 ### <a name="remarks"></a>Uwagi
 
-DECLARE_NOT_AGGREGATABLE powoduje, że `CreateInstance` zwrócić błąd (CLASS_E_NOAGGREGATION), jeśli podjęta zostanie próba agregowania do obiektu.
+DECLARE_NOT_AGGREGATABLE powoduje `CreateInstance` zwrócenie błędu (CLASS_E_NOAGGREGATION), jeśli zostanie podjęta próba agregacji do obiektu.
 
-Domyślnie [CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_AGGREGATABLE](#declare_aggregatable) , które określa, że obiekt może być zagregowany. Aby zastąpić to zachowanie domyślne, należy uwzględnić DECLARE_NOT_AGGREGATABLE w definicji klasy.
+Domyślnie [CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera [makro DECLARE_AGGREGATABLE,](#declare_aggregatable) który określa, że obiekt może być agregowane. Aby zastąpić to zachowanie domyślne, uwzględnij DECLARE_NOT_AGGREGATABLE w definicji klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE
+## <a name="declare_only_aggregatable"></a><a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE
 
-Określa, że obiekt musi być zagregowany.
+Określa, że obiekt musi być agregowany.
 
 ```
 DECLARE_ONLY_AGGREGATABLE( x )
@@ -320,22 +320,22 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-podczas Nazwa obiektu klasy, który definiujesz jako do agregowania.
+*X*<br/>
+[w] Nazwa obiektu klasy, który definiujesz jako tylko agregowalne.
 
 ### <a name="remarks"></a>Uwagi
 
-DECLARE_ONLY_AGGREGATABLE powoduje błąd (E_FAIL), Jeśli podjęto próbę `CoCreate` obiektu jako obiekt niezagregowany.
+DECLARE_ONLY_AGGREGATABLE powoduje błąd (E_FAIL), jeśli zostanie podjęta próba `CoCreate` obiektu jako obiektu nieagregowanego.
 
-Domyślnie [CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera makro [DECLARE_AGGREGATABLE](#declare_aggregatable) , które określa, że obiekt może być zagregowany. Aby zastąpić to zachowanie domyślne, należy uwzględnić DECLARE_ONLY_AGGREGATABLE w definicji klasy.
+Domyślnie [CComCoClass](../../atl/reference/ccomcoclass-class.md) zawiera [makro DECLARE_AGGREGATABLE,](#declare_aggregatable) który określa, że obiekt może być agregowane. Aby zastąpić to zachowanie domyślne, uwzględnij DECLARE_ONLY_AGGREGATABLE w definicji klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]
 
-##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE
+## <a name="declare_poly_aggregatable"></a><a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE
 
-Określa, że wystąpienie **CComPolyObject \<** *x* **>** jest tworzone podczas tworzenia obiektu.
+Określa, że podczas tworzenia obiektu jest tworzone wystąpienie ** \< CComPolyObject** *x.* **>**
 
 ```
 DECLARE_POLY_AGGREGATABLE( x )
@@ -343,28 +343,28 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-podczas Nazwa obiektu klasy, który jest definiowany jako agregowany lub nieagregowany.
+*X*<br/>
+[w] Nazwa obiektu klasy, który definiujesz jako agregowalne lub nie agregowalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas tworzenia jest sprawdzana wartość nieznanego elementu zewnętrznego. Jeśli ma wartość NULL, `IUnknown` jest zaimplementowana dla niezagregowanego obiektu. Jeśli nieznana zewnętrzna nie ma wartości NULL, `IUnknown` jest zaimplementowana dla obiektu agregowanego.
+Podczas tworzenia sprawdzana jest wartość zewnętrznej nieznanej. Jeśli jest null, `IUnknown` jest zaimplementowana dla obiektu nieagregowanego. Jeśli zewnętrzna niewiadoma nie jest null, `IUnknown` jest implementowana dla zagregowanego obiektu.
 
-Zaletą korzystania z DECLARE_POLY_AGGREGATABLE jest unikanie `CComAggObject` i `CComObject` w module do obsługi zagregowanych i niezagregowanych przypadków. Pojedynczy obiekt `CComPolyObject` obsługuje oba przypadki. Oznacza to, że w module istnieją tylko jedną kopię tabeli metod wirtualnych i jedną kopię funkcji. W przypadku dużej liczby tablic wirtualnych może to znacznie zmniejszyć rozmiar modułu. Jeśli jednak tablica tablicowa jest mała, użycie `CComPolyObject` może spowodować nieco większy rozmiar modułu, ponieważ nie jest zoptymalizowany pod kątem zagregowanych lub niezagregowanych obiektów, ponieważ są one `CComAggObject` i `CComObject`.
+Zaletą korzystania z DECLARE_POLY_AGGREGATABLE jest unikanie `CComAggObject` posiadania `CComObject` zarówno i w module do obsługi zagregowanych i nieagregowanych spraw. Pojedynczy `CComPolyObject` obiekt obsługuje obie sprawy. Oznacza to, że tylko jedna kopia vtable i jedna kopia funkcji istnieje w module. Jeśli twój vtable jest duży, może to znacznie zmniejszyć rozmiar modułu. Jeśli jednak tabela vtable `CComPolyObject` jest mała, użycie może spowodować nieco większy rozmiar modułu, ponieważ nie jest `CComAggObject` zoptymalizowany pod kątem zagregowanego lub nieagregowanego obiektu, tak jak są i `CComObject`.
 
-Makro DECLARE_POLY_AGGREGATABLE jest automatycznie deklarowane w obiekcie, jeśli używasz Kreatora kontrolki ATL do utworzenia pełnej kontroli.
+Makro DECLARE_POLY_AGGREGATABLE jest automatycznie deklarowane w obiekcie, jeśli do utworzenia pełnego formantu jest używany Kreator sterowania ATL.
 
-##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT
+## <a name="declare_protect_final_construct"></a><a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT
 
-Chroni obiekt przed usunięciem, jeśli (w trakcie [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) wewnętrzny zagregowany obiekt zwiększa liczbę odwołań, a następnie zmniejsza liczbę do 0.
+Chroni obiekt przed usunięciem, jeśli (podczas [FinalConstruct)](ccomobjectrootex-class.md#finalconstruct)wewnętrzny obiekt zagregowany zwiększa liczbę odwołań, a następnie zmniejsza liczbę do 0.
 
 ```
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```
 
-##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS
+## <a name="declare_view_status"></a><a name="declare_view_status"></a>DECLARE_VIEW_STATUS
 
-Umieść to makro w klasie Control formantu ActiveX ATL, aby określić flagi podwójne do kontenera.
+Umieść to makro w klasie formantu ACTIVEX ATL, aby określić flagi VIEWSTATUS w kontenerze.
 
 ```
 DECLARE_VIEW_STATUS( statusFlags )
@@ -372,8 +372,8 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parametry
 
-*statusFlags*<br/>
-podczas Flagi podwójne. Zobacz [podwójne](/windows/win32/api/ocidl/ne-ocidl-viewstatus) , aby zapoznać się z listą flag.
+*statusPłagi*<br/>
+[w] Flagi VIEWSTATUS. Zobacz [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) listę flag.
 
 ### <a name="example"></a>Przykład
 
@@ -381,4 +381,4 @@ podczas Flagi podwójne. Zobacz [podwójne](/windows/win32/api/ocidl/ne-ocidl-vi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Utworze](../../atl/reference/atl-macros.md)
+[Makra](../../atl/reference/atl-macros.md)

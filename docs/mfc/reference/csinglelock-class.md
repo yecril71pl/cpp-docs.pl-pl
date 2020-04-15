@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 231397228d94e58665602453b5d377571e24a967
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324106"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318269"
 ---
 # <a name="csinglelock-class"></a>Klasa CSingleLock
 
-Przedstawia mechanizm kontroli dostępu wykorzystywany w kontrolowaniu dostępu do zasobu w programie wielowątkowym.
+Reprezentuje mechanizm kontroli dostępu używany do kontrolowania dostępu do zasobu w programie wielowątkowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,25 +37,25 @@ class CSingleLock
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSingleLock::CSingleLock](#csinglelock)|Konstruuje `CSingleLock` obiektu.|
+|[CSingleLock::CSingleLock](#csinglelock)|Konstruuje `CSingleLock` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSingleLock::IsLocked](#islocked)|Określa, jeśli obiekt jest zablokowany.|
-|[CSingleLock::Lock](#lock)|W tym czasie czeka na obiekt synchronizacji.|
-|[CSingleLock::Unlock](#unlock)|Zwalnia obiektu synchronizacji.|
+|[CSingleLock::Jest zablokowany](#islocked)|Określa, czy obiekt jest zablokowany.|
+|[CSingleLock::Blokada](#lock)|Czeka na obiekt synchronizacji.|
+|[CSingleLock::Odblokuj](#unlock)|Zwalnia obiekt synchronizacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CSingleLock` nie ma klasy bazowej.
+`CSingleLock`nie ma klasy podstawowej.
 
-Aby można było używać klas synchronizacji [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), i [CEvent](../../mfc/reference/cevent-class.md), należy utworzyć `CSingleLock` lub [CMultiLock](../../mfc/reference/cmultilock-class.md) obiekt, aby czekać na i zwolnić obiekt synchronizacji. Użyj `CSingleLock` gdy wystarczy poczekać na jednym obiekcie w danym momencie. Użyj `CMultiLock` w przypadku wielu obiektów, których można używać w danym momencie.
+Aby użyć klas synchronizacji [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)i [CEvent](../../mfc/reference/cevent-class.md) `CSingleLock` , należy utworzyć obiekt lub [CMultiLock,](../../mfc/reference/cmultilock-class.md) aby poczekać i zwolnić obiekt synchronizacji. Używaj, `CSingleLock` gdy trzeba tylko czekać na jeden obiekt naraz. Użyj, `CMultiLock` gdy istnieje wiele obiektów, które można użyć w określonym czasie.
 
-Aby użyć `CSingleLock` obiektu, wywołaj jej konstruktora wewnątrz funkcji składowej klasy zasobów kontrolowany. Następnie wywołaj [IsLocked](#islocked) funkcja elementu członkowskiego, aby ustalić, czy zasób jest dostępny. Jeśli tak jest, przejdź do końca funkcji elementu członkowskiego. Jeśli zasób jest niedostępny, poczekaj, aż określony przedział czasu dla zasobu, które mogą być wprowadzane lub zwraca błąd. Po zakończeniu korzystania z zasobów albo wywołaj [Unlock](#unlock) działać, jeśli `CSingleLock` obiekt ma być ponownie używane lub zezwalać na `CSingleLock` zniszczenia obiektu.
+Aby użyć `CSingleLock` obiektu, wywołać jego konstruktora wewnątrz funkcji elementu członkowskiego w klasie kontrolowanego zasobu. Następnie wywołaj funkcję elementu członkowskiego [IsLocked,](#islocked) aby ustalić, czy zasób jest dostępny. Jeśli tak, kontynuuj z pozostałą częścią funkcji elementu członkowskiego. Jeśli zasób jest niedostępny, poczekaj na określoną ilość czasu dla zasobu do zwolnienia lub zwraca błąd. Po zakończeniu korzystania z zasobu, albo [wywołać Unlock](#unlock) funkcji, jeśli `CSingleLock` obiekt `CSingleLock` ma być używany ponownie lub zezwolić na zniszczenie obiektu.
 
-`CSingleLock` obiekty wymagają obecności obiektu wywodzącego się z [CSyncObject](../../mfc/reference/csyncobject-class.md). Jest to zazwyczaj element członkowski danych klasy zasobów kontrolowany. Aby uzyskać więcej informacji na temat sposobu użycia `CSingleLock` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock`obiekty wymagają obecności obiektu pochodzącego z [CSyncObject](../../mfc/reference/csyncobject-class.md). Zazwyczaj jest to element członkowski danych klasy kontrolowanego zasobu. Aby uzyskać więcej informacji `CSingleLock` na temat używania obiektów, zobacz artykuł [Wielowątkowość: Jak korzystać z klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,9 +65,9 @@ Aby użyć `CSingleLock` obiektu, wywołaj jej konstruktora wewnątrz funkcji sk
 
 **Nagłówek:** afxmt.h
 
-##  <a name="csinglelock"></a>  CSingleLock::CSingleLock
+## <a name="csinglelockcsinglelock"></a><a name="csinglelock"></a>CSingleLock::CSingleLock
 
-Konstruuje `CSingleLock` obiektu.
+Konstruuje `CSingleLock` obiekt.
 
 ```
 explicit CSingleLock(
@@ -77,23 +77,23 @@ explicit CSingleLock(
 
 ### <a name="parameters"></a>Parametry
 
-*pObject*<br/>
-Wskazuje obiekt synchronizacji, można uzyskać dostęp. Nie może mieć wartości NULL.
+*Pobject*<br/>
+Wskazuje obiekt synchronizacji, do który ma zostać dozony. Nie może być null.
 
 *bInitialLock*<br/>
-Określa, czy próby początkowo dostępu do dostarczonego obiektu.
+Określa, czy początkowo ma być podejmowana próba uzyskania dostępu do dostarczonego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest ogólnie jest wywoływana z funkcji elementu członkowskiego dostępu do kontrolowanego zasobu.
+Ta funkcja jest zazwyczaj wywoływana z funkcji elementu członkowskiego dostępu kontrolowanego zasobu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]
 
-##  <a name="islocked"></a>  CSingleLock::IsLocked
+## <a name="csinglelockislocked"></a><a name="islocked"></a>CSingleLock::Jest zablokowany
 
-Określa, jeśli obiekt skojarzony z `CSingleLock` obiekt jest nonsignaled (niedostępna).
+Określa, czy obiekt skojarzony `CSingleLock` z obiektem jest niepodpisany (niedostępny).
 
 ```
 BOOL IsLocked();
@@ -101,15 +101,15 @@ BOOL IsLocked();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli obiekt jest zablokowany; w przeciwnym razie 0.
+Niezerowe, jeśli obiekt jest zablokowany; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]
 
-##  <a name="lock"></a>  CSingleLock::Lock
+## <a name="csinglelocklock"></a><a name="lock"></a>CSingleLock::Blokada
 
-Wywołaj tę funkcję, aby uzyskać dostęp do zasobów, kontrolowane przez obiekt synchronizacji dostarczony do `CSingleLock` konstruktora.
+Wywołanie tej funkcji, aby uzyskać dostęp do zasobu `CSingleLock` kontrolowanego przez obiekt synchronizacji dostarczony do konstruktora.
 
 ```
 BOOL Lock(DWORD dwTimeOut = INFINITE);
@@ -117,24 +117,24 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 
 ### <a name="parameters"></a>Parametry
 
-*dwTimeOut*<br/>
-Określa ilość czasu oczekiwania dla obiektu synchronizacji, które mają być dostępne (sygnalizowane). Jeśli jest to NIESKOŃCZONĄ, `Lock` będzie czekać do momentu zasygnalizowania obiektu przed zwróceniem.
+*dwTimeOut (Np.*<br/>
+Określa czas oczekiwania na udostępnienie obiektu synchronizacji (sygnalizowane). Jeśli INFINITE, `Lock` będzie czekać, aż obiekt jest sygnalizowany przed zwróceniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt synchronizacji jest sygnalizowane, `Lock` zwróci się pomyślnie i Wątek jest właścicielem obiektu. Jeśli obiekt synchronizacji jest nonsignaled (niedostępna), `Lock` będzie czekać na obiekt synchronizacji zostało zasygnalizowane maksymalnie wyrażony w milisekundach czas określony w *dwTimeOut* parametru. Jeśli obiekt synchronizacji nie zasygnalizowane w określonym czasie, `Lock` zwraca błąd.
+Jeśli obiekt synchronizacji jest `Lock` sygnalizowany, zwróci pomyślnie i wątek jest teraz właścicielem obiektu. Jeśli obiekt synchronizacji jest niesygnatowany (niedostępny), `Lock` będzie czekać na obiekt synchronizacji, aby stać się sygnalizowane do liczby milisekund określonych w *dwTimeOut* parametru. Jeśli obiekt synchronizacji nie został zasygnalizowany `Lock` w określonym czasie, zwraca błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-##  <a name="unlock"></a>  CSingleLock::Unlock
+## <a name="csinglelockunlock"></a><a name="unlock"></a>CSingleLock::Odblokuj
 
-Zwalnia obiekt synchronizacji własnością `CSingleLock`.
+Zwalnia obiekt synchronizacji `CSingleLock`należący do obiektu .
 
 ```
 BOOL Unlock();
@@ -146,27 +146,27 @@ BOOL Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*<br/>
-Liczba do wydania. Musi być większa niż 0. Jeśli określona ilość spowodowałoby licznik obiektu przekroczy maksymalną, licznik nie jest zmieniany, a funkcja zwraca wartość FALSE.
+*lLicza*<br/>
+Liczba dostępów do wydania. Musi być większa niż 0. Jeśli określona kwota spowodowałaby, że liczba obiektu przekroczy jego maksimum, liczba nie zostanie zmieniona, a funkcja zwraca wartość FAŁSZ.
 
-*lPrevCount*<br/>
-Wskazuje zmienną do odbierania liczba obiektów synchronizacji w poprzednim. Jeśli ma wartość NULL, liczba w poprzednim nie są zwracane.
+*lPowik ł.*<br/>
+Wskazuje zmienną, aby otrzymać poprzednią liczbę obiektu synchronizacji. Jeśli null, poprzednia liczba nie jest zwracana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana `CSingleLock`przez destruktora.
+Ta funkcja jest `CSingleLock`wywoływana przez 's destruktora.
 
-Jeśli musisz zwolnić więcej niż jeden licznik dostępu semafor, należy użyć drugiej formy `Unlock` i określ liczbę dostępów do wydania.
+Jeśli chcesz zwolnić więcej niż jedną liczbę dostępu semafora, `Unlock` użyj drugiej formy i określ liczbę dostępów do wydania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMultiLock](../../mfc/reference/cmultilock-class.md)

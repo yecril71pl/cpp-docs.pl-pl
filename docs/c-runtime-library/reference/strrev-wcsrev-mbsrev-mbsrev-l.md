@@ -1,11 +1,13 @@
 ---
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
+- _o__mbsrev
+- _o__mbsrev_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -50,19 +53,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 585cdae15572eca565d2779225737a014d5f7837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365040"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
 Odwraca znaki ciągu.
 
 > [!IMPORTANT]
-> **_mbsrev** i **_mbsrev_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsrev** i **_mbsrev_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,43 +87,45 @@ unsigned char *_mbsrev_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg zakończony znakiem null do odwrócenia.
+*Str*<br/>
+Ciąg zakończony wartością null do odwrotu.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do zmienionego ciągu. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+Zwraca wskaźnik do zmienionego ciągu. Żadna wartość zwracana nie jest zarezerwowana, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strrev** odwraca kolejność znaków w *str*. Końcowy znak null pozostaje na miejscu. **_wcsrev** i **_mbsrev** są wersjami znaków dwubajtowych i znakami wieloznacznymi **_strrev**. Argumenty i wartość zwracana przez **_wcsrev** są ciągami znaków dwubajtowych; te z **_mbsrev** są ciągami znaków wielobajtowych. W przypadku **_mbsrev**kolejność bajtów w każdym znaku wielobajtowym w *str* nie jest zmieniana. Te trzy funkcje zachowują się identycznie w inny sposób.
+Funkcja **_strrev** odwraca kolejność znaków w *ul.* Kończący się znak null pozostaje na swoim miejscu. **_wcsrev** i **_mbsrev** są wersjami **_strrev**o szerokich i wielobajtowych znakach. Argumenty i zwracana wartość **_wcsrev** są ciągami znaków o szerokich znakach; **_mbsrev** są ciągami znaków wielobajtowych. W **przypadku _mbsrev**kolejność bajtów w każdym znaku wielobajtowym w *str* nie ulega zmianie. Te trzy funkcje zachowują się identycznie inaczej.
 
-**_mbsrev** sprawdza poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsrev** zwraca **wartość null** i ustawia **errno** na **EINVAL**. **_strrev** i **_wcsrev** nie weryfikują ich parametrów.
+**_mbsrev** sprawdza poprawność jego parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem null, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **_mbsrev** zwraca **wartość NULL** i ustawia **errno** na **EINVAL**. **_strrev** i **_wcsrev** nie sprawdzają poprawności ich parametrów.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych, a te, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **sufiksu _l** używają bieżących ustawień regionalnych, a te, które mają sufiks **_l** zamiast tego używają parametru ustawień regionalnych, który jest przekazywany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przekroczenia buforu może służyć do ataków systemowych, ponieważ mogą one powodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
-|**nie dotyczy**|**nie dotyczy**|**_mbsrev_l**|**nie dotyczy**|
+|**N/a**|**N/a**|**_mbsrev_l**|**N/a**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
-|**_wcsrev**|\<ciąg. h > lub \<WCHAR. h >|
-|**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
+|**_wcsrev**|\<string.h> lub \<wchar.h>|
+|**_mbsrev** **, _mbsrev_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -152,10 +157,10 @@ int main( void )
 The string "Able was I ere I saw Elba" is a palindrome
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

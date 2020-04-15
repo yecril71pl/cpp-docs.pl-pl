@@ -1,5 +1,5 @@
 ---
-title: Cstring — przekazywanie argumentów
+title: CString — przekazywanie argumentów
 ms.date: 11/04/2016
 helpviewer_keywords:
 - strings [C++], as function input/output
@@ -11,37 +11,37 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53977eb47520a20571a2d5ba8aa105c567ff40d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317934"
 ---
-# <a name="cstring-argument-passing"></a>Cstring — przekazywanie argumentów
+# <a name="cstring-argument-passing"></a>CString — przekazywanie argumentów
 
-W tym artykule wyjaśniono, jak przekazać [CString](../atl-mfc-shared/reference/cstringt-class.md) obiektów funkcji oraz sposób zwracania `CString` obiektów z usługi functions.
+W tym artykule wyjaśniono, jak przekazać [CString](../atl-mfc-shared/reference/cstringt-class.md) obiektów do funkcji i jak zwracać `CString` obiekty z funkcji.
 
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> Konwencji przekazywania argumentów CString
+## <a name="cstring-argument-passing-conventions"></a><a name="_core_cstring_argument.2d.passing_conventions"></a>CString Argument-Passing Konwencje
 
-Podczas definiowania interfejsu klasy, należy określić Konwencji przekazywania argumentów dla funkcji elementu członkowskiego. Istnieją pewne standardowe reguły, przekazywanie i zwracanie `CString` obiektów. Jeśli postępuj zgodnie z zasadami opisanymi w [ciągi jako dane wejściowe funkcji](#_core_strings_as_function_inputs) i [ciągi jako dane wyjściowe funkcji](#_core_strings_as_function_outputs), trzeba będzie wydajne, poprawny kod.
+Podczas definiowania interfejsu klasy, należy określić konwencję przekazywania argumentów dla funkcji członkowskich. Istnieją pewne standardowe reguły przekazywania i zwracania `CString` obiektów. Jeśli zastosujesz się do reguł opisanych w [ciągach jako wejścia funkcyjne](#_core_strings_as_function_inputs) i [ciągi jako wyjścia funkcyjne,](#_core_strings_as_function_outputs)będziesz mieć wydajny, poprawny kod.
 
-##  <a name="_core_strings_as_function_inputs"></a> Ciągi jako dane wejściowe — funkcja
+## <a name="strings-as-function-inputs"></a><a name="_core_strings_as_function_inputs"></a>Ciągi jako wejścia funkcyjne
 
-Najbardziej wydajny i bezpieczny sposób używania `CString` jest przekazanie obiektu w funkcji o nazwie `CString` obiektu do funkcji. Niezależnie od nazwy `CString` obiektu nie przechowuje ciąg wewnętrznie jako ciąg stylu C, który ma terminator o wartości null. Zamiast tego `CString` obiektu śledzi dokładnej liczbę znaków, które przedstawiono w nim. Posiadanie `CString` podane LPCTSTR wskaźnik na ciąg zakończony znakiem null niewielką ilość pracy, która może stać się istotne, jeśli kod ma na celu stale. Wynik jest tymczasowy, ponieważ dowolne zmiany `CString` zawartość unieważnia stare kopie LPCTSTR wskaźnika.
+Najbardziej efektywnym i bezpiecznym `CString` sposobem użycia obiektu w `CString` wywoływanych funkcjach jest przekazanie obiektu do funkcji. Pomimo nazwy obiekt `CString` nie przechowuje ciąg wewnętrznie jako ciąg w stylu C, który ma zerowy terminator. Zamiast tego `CString` obiekt uważnie śledzi liczbę znaków, które ma. Po `CString` poindylogu LPCTSTR do ciągu zakończonego wartością null jest niewielka ilość pracy, które mogą stać się znaczące, jeśli kod ma to robić stale. Wynik jest tymczasowy, ponieważ `CString` wszelkie zmiany w zawartości unieważniają stare kopie wskaźnika LPCTSTR.
 
-Sensowne w niektórych przypadkach można podać ciąg stylu C. Na przykład może być sytuacja, w którym wywołana funkcja został napisany w języku C i nie obsługuje obiektów. W tym przypadku wymuszone `CString` parametr LPCTSTR i funkcja otrzyma ciąg stylu C zakończony znakiem null. Można również przejść innym kierunku i tworzyć `CString` obiektu za pomocą `CString` Konstruktor, który przyjmuje parametr ciąg stylu C.
+Ma to sens w niektórych przypadkach, aby zapewnić ciąg w stylu C. Na przykład może istnieć sytuacja, w której wywoływana funkcja jest zapisywana w języku C i nie obsługuje obiektów. W takim przypadku wymuszaj `CString` parametr do LPCTSTR, a funkcja otrzyma ciąg zakończony zerem w stylu C. Można również przejść w innym `CString` kierunku i `CString` utworzyć obiekt przy użyciu konstruktora, który akceptuje parametr ciągu w stylu C.
 
-W przypadku zawartości ciągu ma zostać zmieniony przez funkcję, należy zadeklarować parametru jako nonconstant `CString` odwołania (`CString&`).
+Jeśli zawartość ciągu ma zostać zmieniona przez funkcję, zadeklaruj parametr jako odniesienie niestałe `CString` (`CString&`).
 
-##  <a name="_core_strings_as_function_outputs"></a> Ciągi jako dane wyjściowe — funkcja
+## <a name="strings-as-function-outputs"></a><a name="_core_strings_as_function_outputs"></a>Ciągi jako wyjścia funkcyjne
 
-Zazwyczaj może zwrócić `CString` obiekty z funkcji, ponieważ `CString` obiektów postępuj zgodnie z semantyką wartości, takich jak typy pierwotne. Zwraca ciąg tylko do odczytu, użyj stałej `CString` odwołania (`const CString&`). Poniższy przykład ilustruje użycie `CString` parametry i zwracane typy:
+Zazwyczaj można zwracać `CString` obiekty `CString` z funkcji, ponieważ obiekty podążają za semantyką wartości, taką jak typy pierwotne. Aby zwrócić ciąg tylko do odczytu, należy użyć stałego `CString` odwołania (`const CString&`). Poniższy przykład ilustruje `CString` użycie parametrów i typów zwracanych:
 
 [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]
 
 [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

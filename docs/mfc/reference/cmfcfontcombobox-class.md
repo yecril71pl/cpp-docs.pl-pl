@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 69e8f81e7e01d0610f3cbf88ac1725a21d59838f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 60b4b7cdfdace2332de35dd93c43eacf592e99e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505300"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367492"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
 
-`CMFCFontComboBox` Klasa tworzy formant pola kombi, który zawiera listę czcionek.
+Klasa `CMFCFontComboBox` tworzy formant pola kombi, który zawiera listę czcionek.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,47 +40,47 @@ class CMFCFontComboBox : public CComboBox
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Konstruuje `CMFCFontComboBox` obiekt.|
-|`CMFCFontComboBox::~CMFCFontComboBox`|Destruktor.|
+|`CMFCFontComboBox::~CMFCFontComboBox`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCFontComboBox::CompareItem`|Wywoływane przez platformę, by określić względne położenie nowego elementu w polu listy posortowanej bieżącej kontrolki pola kombi czcionki. (Przesłania [CComboBox:: CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
-|`CMFCFontComboBox::DrawItem`|Wywoływane przez platformę, by narysować określony element w bieżącej kontrolce pola kombi czcionki. (Przesłania [CComboBox::D rawitem](../../mfc/reference/ccombobox-class.md#drawitem).)|
-|[CMFCFontComboBox::GetSelFont](#getselfont)|Pobiera informacje o aktualnie zaznaczonej czcionce.|
-|`CMFCFontComboBox::MeasureItem`|Wywoływane przez platformę, aby informować okna o wymiarach pola listy w bieżącej kontrolce pola kombi czcionki. (Przesłania [CComboBox:: MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|
-|`CMFCFontComboBox::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCFontComboBox::SelectFont](#selectfont)|Wybiera czcionkę zgodną z określonymi kryteriami w polu kombi czcionki.|
-|[CMFCFontComboBox::Setup](#setup)|Inicjuje listę elementów w polu kombi czcionki.|
+|`CMFCFontComboBox::CompareItem`|Wywoływane przez strukturę w celu określenia względnej pozycji nowego elementu w posortowanym polu listy bieżącego formantu pola kombi czcionki. (Zastępuje [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
+|`CMFCFontComboBox::DrawItem`|Wywoływane przez strukturę, aby narysować określony element w bieżącym formancie pola kombi czcionki. (Zastępuje [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
+|[CMFCFontComboBox::GetSelFont](#getselfont)|Pobiera informacje o aktualnie wybranej czcionce.|
+|`CMFCFontComboBox::MeasureItem`|Wywoływane przez strukturę, aby poinformować system Windows o wymiarach pola listy w bieżącym formancie pola kombi czcionki. (Zastępuje [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|
+|`CMFCFontComboBox::PreTranslateMessage`|Tłumaczy komunikaty okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Zastępuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCFontComboBox::WybierzFont](#selectfont)|Wybiera czcionkę, która spełnia określone kryteria z pola kombi czcionki.|
+|[CMFCFontComboBox::Konfiguracja](#setup)|Inicjuje listę elementów w polu kombi czcionki.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Wskazuje platformę, która ma być używana do rysowania etykiet elementów w bieżącej czcionce pola kombi.|
+|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Wskazuje strukturę, której czcionki ma być używana do rysowania etykiet elementów w bieżącym polu kombi czcionki.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć `CMFCFontComboBox` obiektu w oknie dialogowym, `CMFCFontComboBox` Dodaj zmienną do klasy okna dialogowego. Następnie w `OnInitDialog` metodzie klasy okna dialogowego Wywołaj metodę [CMFCFontComboBox:: Setup](#setup) , aby zainicjować listę elementów w kontrolce pole kombi.
+Aby użyć `CMFCFontComboBox` obiektu w oknie dialogowym, dodaj zmienną `CMFCFontComboBox` do klasy okna dialogowego. Następnie w `OnInitDialog` metodzie klasy okna dialogowego wywołaj [metodę CMFCFontComboBox::Setup,](#setup) aby zainicjować listę elementów w formancie pola kombi.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CComboBox](../../mfc/reference/ccombobox-class.md)
+[Ccombobox](../../mfc/reference/ccombobox-class.md)
 
 [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxfontcombobox. h
+**Nagłówek:** afxfontcombobox.h
 
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox
+## <a name="cmfcfontcomboboxcmfcfontcombobox"></a><a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox
 
 Konstruuje `CMFCFontComboBox` obiekt.
 
@@ -92,9 +92,9 @@ CMFCFontComboBox();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont
+## <a name="cmfcfontcomboboxgetselfont"></a><a name="getselfont"></a>CMFCFontComboBox::GetSelFont
 
-Pobiera informacje o aktualnie zaznaczonej czcionce.
+Pobiera informacje o aktualnie wybranej czcionce.
 
 ```
 CMFCFontInfo* GetSelFont() const;
@@ -102,13 +102,13 @@ CMFCFontInfo* GetSelFont() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu [klasy CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md) , który opisuje czcionkę. Może mieć wartość NULL, jeśli nie wybrano żadnej czcionki w polu kombi.
+Wskaźnik do [obiektu klasy CMFCFontInfo,](../../mfc/reference/cmfcfontinfo-class.md) który opisuje czcionkę. Może mieć wartość NULL, jeśli w polu kombi nie wybrano żadnej czcionki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont
+## <a name="cmfcfontcomboboxm_bdrawusingfont"></a><a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont
 
-Wskazuje platformę, która ma być używana do rysowania etykiet elementów w bieżącej czcionce pola kombi.
+Wskazuje strukturę, której czcionki ma być używana do rysowania etykiet elementów w bieżącym polu kombi czcionki.
 
 ```
 static BOOL m_bDrawUsingFont;
@@ -116,11 +116,11 @@ static BOOL m_bDrawUsingFont;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw dla tego elementu członkowskiego wartość TRUE, aby skierować strukturę do użycia tej samej czcionki do rysowania każdej etykiety elementu. Ustaw dla tego elementu członkowskiego wartość "fałsz", aby skierować platformę do rysowania każdej etykiety elementu z czcionką, której nazwa jest taka sama jak etykieta. Wartość domyślna tego elementu członkowskiego to FALSE.
+Ustaw ten element członkowski na TRUE, aby skierować strukturę do używania tej samej czcionki do rysowania etykiety każdego elementu. Ustaw ten element członkowski na FALSE, aby skierować strukturę, aby narysować etykietę każdego elementu czcionką, której nazwa jest taka sama jak etykieta. Domyślną wartością tego elementu członkowskiego jest FAŁSZ.
 
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont
+## <a name="cmfcfontcomboboxselectfont"></a><a name="selectfont"></a>CMFCFontComboBox::WybierzFont
 
-Wybiera czcionkę zgodną z określonymi kryteriami w polu kombi czcionki.
+Wybiera czcionkę, która spełnia określone kryteria z pola kombi czcionki.
 
 ```
 BOOL SelectFont(CMFCFontInfo* pDesc);
@@ -132,31 +132,31 @@ BOOL SelectFont(
 
 ### <a name="parameters"></a>Parametry
 
-*pDesc*<br/>
-podczas Wskazuje obiekt opisu czcionki.
+*pDesc (ps.*<br/>
+[w] Wskazuje obiekt opisu czcionki.
 
-*lpszName*<br/>
-podczas Określa nazwę czcionki.
+*Lpszname*<br/>
+[w] Określa nazwę czcionki.
 
-*nCharSet*<br/>
-podczas Określa zestaw znaków. Wartość domyślna to DEFAULT_CHARSET. Aby uzyskać więcej informacji, zobacz `lfCharSet` element członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
+*nCharSet (Zestaw chybianie)*<br/>
+[w] Określa zestaw znaków. Wartość domyślna jest DEFAULT_CHARSET. Aby uzyskać więcej `lfCharSet` informacji, zobacz element członkowski struktury [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli element w polu kombi czcionki jest zgodny z określonym obiektem opisu czcionki lub nazwą czcionki i zestawem znaków; w przeciwnym razie FALSE.
+PRAWDA, jeśli element w polu kombi czcionki pasuje do określonego obiektu opisu czcionki lub nazwy czcionki i zestawu znaków; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody do zaznaczania i przewijania do elementu w polu kombi czcionki odpowiadającego określonej czcionce.
+Ta metoda służy do wybierania i przewijania do elementu w polu kombi czcionki, który odpowiada określonej czcionce.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `SelectFont` metody `CMFCFontComboBox` w klasie. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `SelectFont` metody w `CMFCFontComboBox` klasie. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
 
-##  <a name="setup"></a>CMFCFontComboBox:: Setup
+## <a name="cmfcfontcomboboxsetup"></a><a name="setup"></a>CMFCFontComboBox::Konfiguracja
 
 Inicjuje listę elementów w polu kombi czcionki.
 
@@ -169,31 +169,31 @@ BOOL Setup(
 
 ### <a name="parameters"></a>Parametry
 
-*nFontType*<br/>
-podczas Określa typ czcionki. Wartość domyślna to kombinacja bitowa (lub) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.
+*nFontType (typ nFontType)*<br/>
+[w] Określa typ czcionki. Wartością domyślną jest kombinacja bitowa (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.
 
-*nCharSet*<br/>
-podczas Określa zestaw znaków czcionki. Wartość domyślna to DEFAULT_CHARSET.
+*nCharSet (Zestaw chybianie)*<br/>
+[w] Określa zestaw znaków czcionki. Wartość domyślna jest DEFAULT_CHARSET.
 
-*nPitchAndFamily*<br/>
-podczas Określa gęstość i rodzinę czcionek. Wartość domyślna to DEFAULT_PITCH.
+*nPitchAndRodzina*<br/>
+[w] Określa wysokość czcionki i rodzinę. Wartość domyślna jest DEFAULT_PITCH.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli pole kombi czcionki zostało pomyślnie zainicjowane; w przeciwnym razie FALSE.
+PRAWDA, jeśli pole kombi czcionki zostało pomyślnie zainicjowane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda inicjuje pole kombi czcionki przez Wyliczenie aktualnie zainstalowanych czcionek, które pasują do określonych parametrów i wstawiają te nazwy czcionek w polu kombi czcionki.
+Ta metoda inicjuje pole kombi czcionki, wyliczając aktualnie zainstalowane czcionki, które pasują do określonych parametrów, i wstawiając te nazwy czcionek w polu kombi czcionki.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `Setup` metody `CMFCFontComboBox` w klasie. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `Setup` metody w `CMFCFontComboBox` klasie. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

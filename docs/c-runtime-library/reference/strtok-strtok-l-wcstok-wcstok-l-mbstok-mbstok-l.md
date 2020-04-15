@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -8,6 +8,10 @@ api_name:
 - _mbstok
 - strtok
 - _wcstok_l
+- _o__mbstok
+- _o__mbstok_l
+- _o_strtok
+- _o_wcstok
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +53,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d228d9824c534a21e4a22797e4b070e6d8d0b179
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365197"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
-Znajduje następny token w ciągu, przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych, które są przesyłane. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
+Znajduje następny token w ciągu, przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych, które są przekazywane w. Dostępne są bezpieczniejsze wersje tych funkcji; [zobacz strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok** i **_mbstok_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok** i **_mbstok_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,51 +101,53 @@ unsigned char *_mbstok_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strToken*<br/>
+*strToken ( strToken )*<br/>
 Ciąg zawierający token lub tokeny.
 
 *strDelimit*<br/>
-Zbiór znaków ogranicznika.
+Zestaw znaków ogranicznika.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego tokenu znalezionego w *strToken*. Funkcje zwracają **wartość null** , jeśli nie znaleziono więcej tokenów. Każde wywołanie modyfikuje *strToken* przez podstawianie znaku null dla pierwszego ogranicznika, który występuje po zwróconym tokenie.
+Zwraca wskaźnik do następnego tokenu znalezionego w *strToken*. Funkcje zwracają **null,** gdy nie znaleziono więcej tokenów. Każde wywołanie modyfikuje *strToken* zastępując znak null dla pierwszego ogranicznika, który występuje po zwrócony token.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strtok** znajduje następny token w *strToken*. Zestaw znaków w *strDelimit* określa możliwe ograniczniki tokenu, który ma być znaleziony w *strToken* dla bieżącego wywołania. **wcstok** i **_mbstok** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strtok**. Argumenty i wartość zwracana przez **wcstok** są ciągami znaków dwubajtowych; te z **_mbstok** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
+Funkcja **strtok** znajduje następny token w *strToken*. Zestaw znaków w *strDelimit* określa możliwe ograniczniki tokenu można znaleźć w *strToken* w bieżącym wywołaniu. **wcstok** i **_mbstok** są szerokoznakowymi i wielobajtowymi znakami **strtok**. Argumenty i zwracana wartość **wcstok** są ciągami znaków o szerokich znakach; **_mbstok** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie inaczej.
 
 > [!IMPORTANT]
-> Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje ponoszą potencjalne zagrożenie spowodowane problemem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Przy pierwszym wywołaniu funkcji **strtok**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *strToken*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *strToken* przez serię wywołań do **strtok**. Każde wywołanie **strtok** modyfikuje *strToken* , wstawiając znak null po **tokenie** zwróconym przez to wywołanie. Aby odczytać następny token z *strToken*, wywołaj **strtok** z wartością **null** dla argumentu *strToken* . Argument **null** *strToken* powoduje, że **strtok** szuka następnego tokenu w zmodyfikowanym *strToken*. Argument *strDelimit* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
+Przy pierwszym wywołaniu **strtok**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *strToken*, kończąc token znakiem zerowym. Więcej tokenów można podzielić z pozostałej części *strToken* przez serię wywołań **strtok**. Każde wywołanie **strtok** modyfikuje *strToken* przez wstawienie znaku null po **token** zwracany przez to wywołanie. Aby odczytać następny token z *strToken*, wywołać **strtok** z wartością **NULL** dla argumentu *strToken.* Argument **NULL** *strToken* powoduje, że **strtok** wyszukuje następny token w zmodyfikowanym *strToken*. *StrDelimit* argument może mieć dowolną wartość z jednego wywołania do następnego, tak aby zestaw ograniczników może się różnić.
 
-Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
+Na wartość danych wyjściowych ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
 
-Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Każda funkcja używa statycznej zmiennej lokalnej do analizowania ciągu w tokenach. W związku z tym wiele wątków może jednocześnie wywoływać te funkcje bez niepożądanych efektów. Jednak w pojedynczym wątku, przechodzące wywołania jednej z tych funkcji bardzo prawdopodobnie spowodują uszkodzenie danych i niedokładne wyniki. Podczas analizowania różnych ciągów Zakończ analizowanie jednego ciągu przed rozpoczęciem analizy następnego. Należy również pamiętać o potencjalnym zagrożeniu podczas wywoływania jednej z tych funkcji z wewnątrz pętli, w której wywoływana jest inna funkcja. Jeśli druga funkcja zostanie zakończona przy użyciu jednej z tych funkcji, zostanie wykryta sekwencja wywołań, która spowoduje wyzwolenie uszkodzenia danych.
+> Każda funkcja używa zmiennej statycznej lokalnego wątku do analizowania ciągu na tokeny. W związku z tym wiele wątków można jednocześnie wywołać te funkcje bez działań niepożądanych. Jednak w ciągu jednego wątku przeplatanie wywołań do jednej z tych funkcji jest wysoce prawdopodobne, aby spowodować uszkodzenie danych i niedokładne wyniki. Podczas analizowania różnych ciągów, należy zakończyć analizowanie jednego ciągu przed rozpoczęciem analizowania następnego. Ponadto należy pamiętać o potencjalnych niebezpieczeństwa podczas wywoływania jednej z tych funkcji z wewnątrz pętli, gdzie inna funkcja jest wywoływana. Jeśli druga funkcja kończy się przy użyciu jednej z tych funkcji, interleaved sekwencji wywołań spowoduje, wyzwalając uszkodzenie danych.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstok**|**strtok**|**_mbstok**|**wcstok**|
+|**_tcstok**|**strtok (strtok)**|**_mbstok**|**wcstok**|
 |**_tcstok**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtok**|\<string.h>|
-|**wcstok**|\<ciąg. h > lub \<WCHAR. h >|
-|**_mbstok**, **_mbstok_l**|\<mbstring.h>|
+|**strtok (strtok)**|\<string.h>|
+|**wcstok**|\<string.h> lub \<wchar.h>|
+|**_mbstok** **, _mbstok_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -188,10 +195,10 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

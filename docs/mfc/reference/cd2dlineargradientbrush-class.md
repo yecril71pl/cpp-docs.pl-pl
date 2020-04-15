@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c488d66962f26b6ca9b8c63cb387fc75191085a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369198"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Klasa CD2DLinearGradientBrush
 
-Otoka ID2D1LinearGradientBrush.
+Otoka dla ID2D1LinearGradientBrush.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,43 +53,43 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Tworzy obiekt CD2DLinearGradientBrush.|
-|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt LinearGradientBrush D2D.|
+|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Konstruuje obiekt CD2DLinearGradientBrush.|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destruktor. Wywoływany, gdy obiekt pędzla gradientu liniowego D2D jest niszczony.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
-|[CD2DLinearGradientBrush::Create](#create)|Tworzy CD2DLinearGradientBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DLinearGradientBrush::Destroy](#destroy)|Niszczy obiekt CD2DLinearGradientBrush. (Przesłania [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DLinearGradientBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
-|[CD2DLinearGradientBrush::Get](#get)|Zwraca ID2D1LinearGradientBrush interfejsu|
-|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Pobiera końcowy współrzędne gradientu liniowego|
-|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Pobiera początkowy współrzędne gradientu liniowego|
-|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|Ustawia współrzędne końcowy gradientu liniowego w przestrzeni współrzędnych pędzla|
-|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Ustawia współrzędne początkowy gradientu liniowego w przestrzeni współrzędnych pędzla|
+|[CD2DLinearGradientBrush::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DLinearGradientBrush::Utwórz](#create)|Tworzy dysk CD2DLinearGradientBrush. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DLinearGradientBrush: :Destroja](#destroy)|Niszczy obiekt CD2DLinearGradientBrush. (Zastępuje [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2DLinearGradientBrush::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
+|[CD2DLinearGradientBrush::Get](#get)|Zwraca interfejs ID2D1LinearGradientBrush|
+|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Pobiera współrzędne końcowe gradientu liniowego|
+|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Pobiera współrzędne początkowe gradientu liniowego|
+|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|Ustawia współrzędne końcowe gradientu liniowego w przestrzeni współrzędnych pędzla|
+|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Ustawia współrzędne początkowe gradientu liniowego w przestrzeni współrzędnych pędzla|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Zwraca ID2D1LinearGradientBrush interfejsu|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|Zwraca interfejs ID2D1LinearGradientBrush|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Punkt początkowy i końcowy gradientu.|
-|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Wskaźnik do ID2D1LinearGradientBrush.|
+|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Punkty początkowe i końcowe gradientu.|
+|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Wskaźnik do pędzla ID2D1LinearGradientBrush.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
+[Cd2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 [CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
 
@@ -99,17 +99,17 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
-Destruktor. Wywołuje się, kiedy niszczony jest obiekt LinearGradientBrush D2D.
+Destruktor. Wywoływany, gdy obiekt pędzla gradientu liniowego D2D jest niszczony.
 
 ```
 virtual ~CD2DLinearGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DLinearGradientBrush::attach
+## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2DLinearGradientBrush::Dołącz
 
-Dołącza istniejących zasobów interfejsu do obiektu
+Dołącza istniejący interfejs zasobu do obiektu
 
 ```
 void Attach(ID2D1LinearGradientBrush* pResource);
@@ -117,12 +117,12 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Istniejący interfejs zasobów. Nie może mieć wartości NULL
+*pŹródło*<br/>
+Istniejący interfejs zasobów. Nie może być null
 
-##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush
 
-Tworzy obiekt CD2DLinearGradientBrush.
+Konstruuje obiekt CD2DLinearGradientBrush.
 
 ```
 CD2DLinearGradientBrush(
@@ -139,32 +139,32 @@ CD2DLinearGradientBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 *gradientStops*<br/>
-Wskaźnik do tablicy D2D1_GRADIENT_STOP struktur.
+Wskaźnik do tablicy struktur D2D1_GRADIENT_STOP.
 
 *gradientStopsCount*<br/>
-Wartość większa niż lub równa 1, która określa liczbę ograniczniki gradientu w tablicy gradientStops.
+Wartość większa lub równa 1, która określa liczbę przystanków gradientu w gradientStops tablicy.
 
-*LinearGradientBrushProperties*<br/>
-Punkt początkowy i końcowy gradientu.
+*Właściwości lineargradientbrushproperties*<br/>
+Punkty początkowe i końcowe gradientu.
 
 *colorInterpolationGamma*<br/>
-Miejsca, które są oznaczone kolorem odbywa się interpolacji między ograniczniki gradientu.
+Miejsce, w którym wykonywana jest interpolacja kolorów między przystankami gradientu.
 
-*extendMode*<br/>
-Zachowanie gradientu poza zakresem [0,1] znormalizowana.
+*extendMode (rozszerzanie trybu)*<br/>
+Zachowanie gradientu poza [0,1] znormalizowany zakres.
 
-*pBrushProperties*<br/>
-Wskaźnik do nieprzezroczystość i przekształcanie pędzla.
+*pBrushWłaściwki*<br/>
+Wskaźnik do krycia i przekształcenia pędzla.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-##  <a name="create"></a>  CD2DLinearGradientBrush::Create
+## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2DLinearGradientBrush::Utwórz
 
-Tworzy CD2DLinearGradientBrush.
+Tworzy dysk CD2DLinearGradientBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -173,13 +173,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy
+## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2DLinearGradientBrush: :Destroja
 
 Niszczy obiekt CD2DLinearGradientBrush.
 
@@ -187,9 +187,9 @@ Niszczy obiekt CD2DLinearGradientBrush.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::detach
+## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2DLinearGradientBrush::Detach
 
-Odłącza interfejsu zasobów z obiektu
+Odłącza interfejs zasobu od obiektu
 
 ```
 ID2D1LinearGradientBrush* Detach();
@@ -197,11 +197,11 @@ ID2D1LinearGradientBrush* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu odłączyć zasobu.
+Wskaźnik do odłączony interfejs zasobu.
 
-##  <a name="get"></a>  CD2DLinearGradientBrush::Get
+## <a name="cd2dlineargradientbrushget"></a><a name="get"></a>CD2DLinearGradientBrush::Get
 
-Zwraca ID2D1LinearGradientBrush interfejsu
+Zwraca interfejs ID2D1LinearGradientBrush
 
 ```
 ID2D1LinearGradientBrush* Get();
@@ -209,11 +209,11 @@ ID2D1LinearGradientBrush* Get();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1LinearGradientBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1LinearGradientBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint
+## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2DLinearGradientBrush::GetEndPoint
 
-Pobiera końcowy współrzędne gradientu liniowego
+Pobiera współrzędne końcowe gradientu liniowego
 
 ```
 CD2DPointF GetEndPoint() const;
@@ -221,11 +221,11 @@ CD2DPointF GetEndPoint() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Końcowy dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla
+Końcowe współrzędne dwuwymiarowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
-##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint
+## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint
 
-Pobiera początkowy współrzędne gradientu liniowego
+Pobiera współrzędne początkowe gradientu liniowego
 
 ```
 CD2DPointF GetStartPoint() const;
@@ -233,27 +233,27 @@ CD2DPointF GetStartPoint() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Począwszy od dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla
+Początkowe współrzędne dwuwymiarowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
-##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 
-Punkt początkowy i końcowy gradientu.
+Punkty początkowe i końcowe gradientu.
 
 ```
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush
+## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush
 
-Wskaźnik do ID2D1LinearGradientBrush.
+Wskaźnik do pędzla ID2D1LinearGradientBrush.
 
 ```
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *
+## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
-Zwraca ID2D1LinearGradientBrush interfejsu
+Zwraca interfejs ID2D1LinearGradientBrush
 
 ```
 operator ID2D1LinearGradientBrush*();
@@ -261,11 +261,11 @@ operator ID2D1LinearGradientBrush*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1LinearGradientBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1LinearGradientBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
+## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2DLinearGradientBrush::SetEndPoint
 
-Ustawia współrzędne końcowy gradientu liniowego w przestrzeni współrzędnych pędzla
+Ustawia współrzędne końcowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
 ```
 void SetEndPoint(CD2DPointF point);
@@ -274,11 +274,11 @@ void SetEndPoint(CD2DPointF point);
 ### <a name="parameters"></a>Parametry
 
 *Punkt*<br/>
-Końcowy dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla
+Końcowe współrzędne dwuwymiarowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
-##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
+## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint
 
-Ustawia współrzędne początkowy gradientu liniowego w przestrzeni współrzędnych pędzla
+Ustawia współrzędne początkowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
 ```
 void SetStartPoint(CD2DPointF point);
@@ -287,8 +287,8 @@ void SetStartPoint(CD2DPointF point);
 ### <a name="parameters"></a>Parametry
 
 *Punkt*<br/>
-Począwszy od dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla
+Początkowe współrzędne dwuwymiarowe gradientu liniowego w przestrzeni współrzędnych pędzla
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

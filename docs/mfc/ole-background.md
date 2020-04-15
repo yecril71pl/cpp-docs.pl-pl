@@ -4,70 +4,70 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7d65f48c1af678f6626ba7d315ceb735d3e960a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364521"
 ---
 # <a name="ole-background"></a>Podstawy OLE
 
-OLE to mechanizm, który umożliwia użytkownikom tworzenie i edytowanie dokumentów zawierających elementy lub "obiekty" utworzony przez wiele aplikacji.
+OLE to mechanizm, który umożliwia użytkownikom tworzenie i edytowanie dokumentów zawierających elementy lub "obiekty" utworzone przez wiele aplikacji.
 
 > [!NOTE]
->  OLE była pierwotnie akronim łączenie i osadzanie obiektów. Jednak go teraz nazywa się OLE. Części nie dotyczą łączenie i osadzanie OLE są teraz częścią technologii Active.
+> OLE był pierwotnie skrótem od łączenia i osadzania obiektów. Jednak teraz jest określany jako OLE. Części OLE niezwiązanych z łączenia i osadzania są teraz częścią technologii Active.
 
-Dokumenty OLE w przeszłości o nazwie dokumentów złożonych, bezproblemowe integrowanie różnych typów danych i składników. Klipów dźwiękowych, arkusze kalkulacyjne i mapy bitowe są typowe przykłady składników w dokumenty OLE. Obsługa OLE w aplikacji umożliwia użytkownikom na używanie dokumentów OLE bez martwienia się o przełączaniu między różnymi aplikacjami; OLE wykonuje przełączenie dla Ciebie.
+Dokumenty OLE, historycznie nazywane dokumentami złożonymi, bezproblemowo integrują różne typy danych lub składniki. Klipy dźwiękowe, arkusze kalkulacyjne i mapy bitowe są typowymi przykładami składników znalezionych w dokumentach OLE. Obsługa ole w aplikacji umożliwia użytkownikom korzystanie z dokumentów OLE bez martwienia się o przełączanie między różnymi aplikacjami; OLE wykonuje przełączanie za Ciebie.
 
-Jest używany do tworzenia dokumentów złożonych aplikacji kontenera i aplikacji serwera lub składnika aplikacji do tworzenia elementów w obrębie dokumentu kontenera. Każda aplikacja, którą piszesz może być kontenera i/lub serwerem.
+Aplikacja kontenera służy do tworzenia dokumentów złożonych i aplikacji serwera lub aplikacji składnika do tworzenia elementów w dokumencie kontenera. Każda aplikacja, którą piszesz, może być kontenerem, serwerem lub obiema.
 
-OLE zawiera wiele różnych pojęć, współpracujących osiąganiu celu bezproblemowe interakcje między aplikacjami. Te obszary są następujące:
+OLE zawiera wiele różnych pojęć, które wszystkie działają w kierunku celu bezproblemowej interakcji między aplikacjami. Obszary te są następujące:
 
-- Łączenie i osadzanie
+- łączenie i osadzanie
 
-   Łączenie i osadzanie są dwie metody do przechowywania elementów tworzony w dokumencie OLE, które zostały utworzone w innej aplikacji. Aby uzyskać ogólne informacje na temat różnic między nimi, zobacz artykuł [OLE tła: Łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md). Aby uzyskać szczegółowe informacje, zobacz artykuły [kontenery](../mfc/containers.md) i [serwerów](../mfc/servers.md).
+   Łączenie i osadzanie to dwie metody przechowywania elementów utworzonych wewnątrz dokumentu OLE, które zostały utworzone w innej aplikacji. Aby uzyskać ogólne informacje na temat różnic między nimi, zobacz artykuł [OLE Tło: Łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md). Aby uzyskać bardziej szczegółowe informacje, zobacz artykuły [Kontenery](../mfc/containers.md) i [Serwery](../mfc/servers.md).
 
 - Aktywacja w miejscu (edycja wizualna)
 
-   Aktywowanie element osadzony w kontekście kontenerem nosi nazwę aktywacji w miejscu lub edycja wizualna. Interfejs aplikacji kontenera zmieni się na włączenie funkcji aplikacji składnika, który utworzył element osadzony. Połączone elementy są nigdy aktywowany w miejscu, ponieważ rzeczywiste dane dla elementu są przechowywane w oddzielnym pliku, poza kontekstem aplikacji zawierającej łącze. Aby uzyskać więcej informacji o aktywacji w miejscu, zobacz artykuł [aktywacji](../mfc/activation-cpp.md).
+   Aktywowanie elementu osadzonego w kontekście dokumentu kontenera jest nazywane aktywacją w miejscu lub edycją wizualną. Interfejs aplikacji kontenera zmienia się, aby uwzględnić funkcje aplikacji składnika, który utworzył element osadzony. Połączone elementy nigdy nie są aktywowane w miejscu, ponieważ rzeczywiste dane dla elementu znajduje się w oddzielnym pliku, z kontekstu aplikacji zawierającej łącze. Aby uzyskać więcej informacji na temat aktywacji w miejscu, zobacz artykuł [Aktywacja](../mfc/activation-cpp.md).
 
    > [!NOTE]
-   > Łączenie i osadzanie i aktywacji w miejscu podaj główne funkcje edycja wizualna OLE.
+   > Łączenie i osadzanie oraz aktywacja w miejscu zapewniają główne cechy edycji wizualnej OLE.
 
-- Automatyzacja usługi Automation umożliwia jedną aplikację do innej aplikacji. Kierowcy aplikacji jest znany jako klient usługi automation i aplikacji są oparte na jest znany jako serwer automatyzacji lub składnik usługi automation. Aby uzyskać więcej informacji na temat automatyzacji, zobacz artykuły [klientów automatyzacji](../mfc/automation-clients.md) i [serwerów automatyzacji](../mfc/automation-servers.md).
+- Automatyzacja automatyzacji umożliwia jednej aplikacji do kierowania inną aplikacją. Aplikacja do prowadzenia pojazdów jest znana jako klient automatyzacji, a kierowana aplikacja jest znana jako serwer automatyzacji lub składnik automatyzacji. Aby uzyskać więcej informacji na temat automatyzacji, zobacz artykuły [Klienci automatyzacji](../mfc/automation-clients.md) i [serwery automatyzacji](../mfc/automation-servers.md).
 
    > [!NOTE]
-   > Usługa Automation współpracuje w kontekstach technologii zarówno OLE, jak i aktywne. Można zautomatyzować dowolny obiekt oparte na modelu COM.
+   > Automatyzacja działa zarówno w kontekście technologii OLE, jak i Active. Można zautomatyzować dowolny obiekt na podstawie com.
 
-- Pliki złożone
+- pliki złożone
 
-   Pliki złożone zawierają standardowe formacie, który upraszcza ze strukturą przechowywania dokumentów złożonych aplikacji OLE. W pliku złożonym miejsc wiele funkcji, katalogów i strumieni ma wiele funkcji plików. Ta technologia jest również nazywany strukturalny magazyn. Aby uzyskać więcej informacji na temat plików złożonych, zobacz artykuł [kontenerów: Pliki złożone](../mfc/containers-compound-files.md).
+   Pliki złożone zapewniają standardowy format pliku, który upraszcza ustrukturyzowane przechowywanie złożonych dokumentów dla aplikacji OLE. W pliku złożonym magazyny mają wiele funkcji katalogów, a strumienie mają wiele funkcji plików. Technologia ta jest również nazywana magazynowaniem strukturalnym. Aby uzyskać więcej informacji na temat plików złożonych, zobacz artykuł [Kontenery: Pliki złożone](../mfc/containers-compound-files.md).
 
-- Transfer danych jednolitego
+- Jednolity transfer danych
 
-   Jednolite transferu danych (UDT) to zbiór interfejsów, które dane wysyłanie i odbieranie w sposób standardowy, niezależnie od rzeczywistego metody wybranej do transferu danych. Formularze UDT, których podstawę danych będzie przesyłana przy przeciąganie i upuszczanie. UDT obecnie służy jako podstawa do istniejących Windows transferu danych, takich jak Schowek i dynamiczna wymiana danych (DDE). Aby uzyskać więcej informacji na temat UDT, zobacz artykuł [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+   Uniform Data Transfer (UDT) to zestaw interfejsów, które umożliwiają przesyłanie i odbieranie danych w standardowy sposób, niezależnie od rzeczywistej metody wybranej do przesyłania danych. UDT stanowi podstawę do przesyłania danych przez przeciąganie i upuszczanie. UDT służy teraz jako podstawa dla istniejącego transferu danych systemu Windows, takiego jak Schowek i dynamiczna wymiana danych (DDE). Aby uzyskać więcej informacji na temat UDT, zobacz artykuł [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md).
 
 - Przeciągnij i opuść
 
-   Przeciąganie i upuszczanie jest łatwe w użyciu, bezpośrednie manipulowanie techniki transferu danych między aplikacjami między oknami w aplikacji lub nawet w ramach jednego okna w aplikacji. Transfer danych jest wybrane i przeciągnięte do docelowej lokalizacji. Przeciąganie i upuszczanie opiera się na przesyłanie danych jednolite. Aby uzyskać więcej informacji na temat przeciągania i upuszczania, zobacz artykuł [przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md).
+   Przeciąganie i upuszczanie jest łatwą w użyciu techniką bezpośredniej manipulacji do przesyłania danych między aplikacjami, między oknami w aplikacji lub nawet w jednym oknie w aplikacji. Dane, które mają zostać przesłane, zostaną wybrane i przeciągnięte do żądanego miejsca docelowego. Przeciąganie i upuszczanie opiera się na jednolitym transferze danych. Aby uzyskać więcej informacji na temat przeciągania i upuszczania, zobacz artykuł [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md).
 
-- Model Component Object Model
+- Model obiektu komponentu
 
-   Component Object Model (COM) zapewnia infrastrukturę używany, gdy obiekty OLE komunikują się ze sobą. Klasy MFC OLE uprościć COM dla programisty. COM jest częścią technologii aktywnego, ponieważ obiekty COM podstawą technologii zarówno OLE, jak i aktywne. Aby uzyskać więcej informacji na temat modelu COM, zobacz [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md) tematów.
+   Model obiektu komponentu (COM) zapewnia infrastrukturę używaną, gdy obiekty OLE komunikują się ze sobą. Klasy OLE MFC upraszczają com dla programisty. COM jest częścią technologii Active, ponieważ obiekty COM są podstawą zarówno technologii OLE, jak i Active. Aby uzyskać więcej informacji na temat usługi COM, zobacz tematy [aktywnej biblioteki szablonów (ATL).](../atl/active-template-library-atl-concepts.md)
 
-Niektóre z bardziej ważnych tematów OLE są omówione w następujących artykułach:
+Niektóre z ważniejszych tematów OLE są omówione w następujących artykułach:
 
-- [Podstawy OLE: Łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md)
+- [Podstawy OLE: łączenie i osadzanie](../mfc/ole-background-linking-and-embedding.md)
 
-- [Podstawy OLE: Kontenery i serwery](../mfc/ole-background-containers-and-servers.md)
+- [Podstawy OLE: kontenery i serwery](../mfc/ole-background-containers-and-servers.md)
 
-- [Podstawy OLE: Strategie implementacji](../mfc/ole-background-implementation-strategies.md)
+- [Podstawy OLE: strategie implementacji](../mfc/ole-background-implementation-strategies.md)
 
-- [Podstawy OLE: Implementacja interfejsu MFC](../mfc/ole-background-mfc-implementation.md)
+- [Podstawy OLE: implementacja MFC](../mfc/ole-background-mfc-implementation.md)
 
-Nie można odnaleźć w powyższych artykułach ogólne informacje OLE Wyszukaj OLE w bibliotece MSDN.
+Aby uzyskać ogólne informacje OLE nie znaleziono w powyższych artykułach, wyszukaj OLE w MSDN.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE](../mfc/ole-in-mfc.md)

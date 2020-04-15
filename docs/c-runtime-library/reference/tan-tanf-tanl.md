@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362630"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
-Oblicza tangens.
+Oblicza stycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,29 +63,31 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*X*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **Tan** zwracają tangens *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub równa-263, występuje utrata znaczenia w wyniku.
+Funkcje **opalenizny** zwracają styczną *x*. Jeśli *x* jest większa lub równa 263 lub mniejsza lub równa -263, występuje utrata istotności w wyniku.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr** Oprócz|
+|Dane wejściowe|Wyjątek SEH|**Matherr (matherr)** Wyjątek|
 |-----------|-------------------|-------------------------|
-|QNAN, IND|brak|_DOMAIN|
+|± QNAN, IND|brak|_DOMAIN|
 |± INF|**Nieprawidłowy**|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia metody **Tan** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C polecenie **Tan** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **tan,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie **C, tan** zawsze ma i zwraca **dwukrotnie**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**Tan**, **TANF —** , **tanl**|\<> Math. h|\<cmath > lub \<Math. h >|
+|**tan**, **tanf**, **tanl**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -111,7 +115,7 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

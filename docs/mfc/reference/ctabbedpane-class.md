@@ -1,5 +1,5 @@
 ---
-title: CTabbedPane Class
+title: Klasa CTabbedPane
 ms.date: 11/04/2016
 f1_keywords:
 - CTabbedPane
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17351eaed585ec34117a2ef825964fd51bd0d86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324288"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365952"
 ---
-# <a name="ctabbedpane-class"></a>CTabbedPane Class
+# <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 
-Implementuje funkcje okienka z odłączanymi zakładkami.
+Implementuje funkcjonalność okienka z odłączanymi kartami.
 
-lub więcej szczegółów, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+lub więcej szczegółów zobacz kod źródłowy znajdujący się w folderze **VC\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,34 +59,34 @@ class CTabbedPane : public CBaseTabbedPane
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
+|[CTabbedPane::DetachPane](#detachpane)|(Zastępuje [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Włącza lub wyłącza automatyczne kolorowanie kart.|
-|[CTabbedPane::FloatTab](#floattab)|Liczby zmiennoprzecinkowe okienko, ale tylko wtedy, jeśli zawartość okienka aktualnie znajduje się na karcie odłączane. (Przesłania [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
-|[CTabbedPane::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie wartości obszar karty w oknie z kartami.|
+|[CTabbedPane::FloatTab](#floattab)|Unosi okienko, ale tylko wtedy, gdy okienko znajduje się obecnie na odłączanej karcie. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
+|[CTabbedPane::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie obszaru karty w oknie z kartami.|
 |[CTabbedPane::GetTabWnd](#gettabwnd)||
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Określa, czy okienka z zakładkami mogą być przełączane do trybu Autoukrywanie. (Przesłania [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
-|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Określa, czy kartach znajdują się w dolnej części okna.|
-|[CTabbedPane::ResetTabs](#resettabs)|Resetuje wszystkie okienka z zakładkami do stanu domyślnego.|
-|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Ustawia listę kolorów niestandardowych, których można użyć, gdy jest włączona funkcja automatycznego kolor.|
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Określa, czy okienko z kartami można przełączyć w tryb autouzusty. (Zastępuje [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
+|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Określa, czy karty znajdują się w dolnej części okna.|
+|[CTabbedPane::ResetTabs](#resettabs)|Resetuje wszystkie okienka z kartami do stanu domyślnego.|
+|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Ustawia listę kolorów niestandardowych, których można używać po włączeniu funkcji automatycznego koloru.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|Domyślna lokalizacja dla kart w aplikacji.|
-|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informacje o klasie czasu wykonywania niestandardowych `CMFCTabCtrl`-pochodnych obiektu.|
+|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|Domyślna lokalizacja kart w aplikacji.|
+|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informacje o klasie środowiska `CMFCTabCtrl`uruchomieniowego dla niestandardowego obiektu pochodnego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura automatycznie tworzy wystąpienie tej klasy, po użytkownik dołącza jedno okienko do innego wskazując podpis okienka drugiego. Wszystkie z kartami okienek, które są tworzone przez platformę mieć identyfikator-1.
+Struktura automatycznie tworzy wystąpienie tej klasy, gdy użytkownik dołącza jedno okienko do innego, wskazując podpis drugiego okienka. Wszystkie okienka z kartami, które są tworzone przez platformę mają identyfikator -1.
 
-Aby określić zwykłe karty zamiast tabulatorów stylu dla programu Outlook, należy przekazać do stylu AFX_CBRS_REGULAR_TABS [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metody.
+Aby określić zwykłe karty zamiast kart w stylu programu Outlook, przekaż styl AFX_CBRS_REGULAR_TABS do metody [CDockablePane::CreateEx.](../../mfc/reference/cdockablepane-class.md#createex)
 
-Jeśli tworzysz kartach okienka z odłączanymi zakładkami okienka może zostać zniszczone automatycznie przez platformę, więc nie należy przechowywać wskaźnika. Aby uzyskać wskaźnik do okienka z zakładkami, należy wywołać `CBasePane::GetParentTabbedPane` metody.
+Jeśli utworzysz okienko z kartami z odłączanymi kartami, okienko może zostać automatycznie zniszczone przez strukturę, więc nie należy przechowywać wskaźnika. Aby uzyskać wskaźnik do okienka z `CBasePane::GetParentTabbedPane` kartami, wywołanie metody.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie tworzymy `CTabbedPane` obiektu. Następnie używamy [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) można dołączyć dodatkowe karty.
+W tym przykładzie `CTabbedPane` tworzymy obiekt. Następnie używamy [CBaseTabbedPane::AddTab,](../../mfc/reference/cbasetabbedpane-class.md#addtab) aby dołączyć dodatkowe karty.
 
 ```cpp
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -119,9 +119,9 @@ DockPane(pTabbededBar);
 
 ## <a name="example"></a>Przykład
 
-Innym sposobem na utworzenie obiektu pasek sterowania z kartami jest użycie [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). `AttachToTabWnd` Metoda dynamicznie tworzy obiekt okienka z zakładkami, przy użyciu informacji o klasie czasu wykonywania ustawiony przez [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
+Innym sposobem utworzenia obiektu paska sterowania z kartami jest użycie [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Metoda `AttachToTabWnd` dynamicznie tworzy obiekt okienka z kartami przy użyciu informacji o klasie środowiska uruchomieniowego ustawionych przez [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
 
-W tym przykładzie tworzymy dynamicznie okienka z zakładkami Dołącz dwie karty i wybierz drugiej karcie niemożliwe do odłączenia.
+W tym przykładzie dynamicznie tworzymy okienko z kartami, dołączamy dwie karty i nie można odłączyć drugiej karty.
 
 ```cpp
 DockPane(&m_wndClassView);
@@ -143,27 +143,27 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CBasePane](../../mfc/reference/cbasepane-class.md)
+[Panel CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[CPane](../../mfc/reference/cpane-class.md)
+[Cpane](../../mfc/reference/cpane-class.md)
 
-[CDockablePane](../../mfc/reference/cdockablepane-class.md)
+[Cdockablepane](../../mfc/reference/cdockablepane-class.md)
 
-[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)
+[Cbasetabbedpane](../../mfc/reference/cbasetabbedpane-class.md)
 
-[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)
+[Ctabbedpane](../../mfc/reference/ctabbedpane-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** afxTabbedPane.h
+**Nagłówek:** afxTabbedPane.h
 
-##  <a name="detachpane"></a>  CTabbedPane::DetachPane
+## <a name="ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane
 
 ```
 virtual BOOL DetachPane(
@@ -173,15 +173,15 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+[w] *pBar*<br/>
 
-[in] *bHide*<br/>
+[w] *bHide (ur.*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor
+## <a name="ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor
 
 Włącza lub wyłącza automatyczne kolorowanie kart.
 
@@ -191,18 +191,18 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE, aby włączyć automatyczne kolorowanie kart; w przeciwnym razie wartość FALSE.
+*bWłaszą*<br/>
+[w] PRAWDA, aby włączyć automatyczne kolorowanie kart; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby włączyć lub wyłączyć automatyczne kolorowanie kart w wszystkich kartach okienka w aplikacji, należy użyć tej metody statycznej. Gdy ta funkcja jest włączona, każda karta jest wypełniane przez swój własny kolorów. Można znaleźć listę kolorów, które są używane do koloru na kartach, wywołując [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metody.
+Ta metoda statyczna służy do włączania lub wyłączania automatycznego kolorowania kart we wszystkich okienkach z kartami w aplikacji. Gdy ta funkcja jest włączona, każda karta jest wypełniona własnym kolorem. Można znaleźć listę kolorów, które są używane do kolorowania kart, wywołując [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metody.
 
-Można określić listę kolorów, które będą używane dla karty, wywołując [CTabbedPane::SetTabAutoColors](#settabautocolors).
+Można określić listę kolorów, które będą używane dla kart, wywołując [CTabbedPane::SetTabAutoColors](#settabautocolors).
 
 Domyślnie ta opcja jest wyłączona.
 
-##  <a name="floattab"></a>  CTabbedPane::FloatTab
+## <a name="ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab
 
 ```
 virtual BOOL FloatTab(
@@ -214,18 +214,18 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
-[in] *nTabID*<br/>
-[in] *dockMethod*<br/>
-[in] *bHide*<br/>
+[w] *pBar*<br/>
+[w] *nTabID (nTabID)*<br/>
+[w] *dokMetoda*<br/>
+[w] *bHide (ur.*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea
+## <a name="ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea
 
-Zwraca rozmiar i położenie wartości obszar karty w oknie z kartami.
+Zwraca rozmiar i położenie obszaru karty w oknie z kartami.
 
 ```
 virtual void GetTabArea(
@@ -235,19 +235,19 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parametry
 
-*rectTabAreaTop*<br/>
-[out] Zawiera rozmiar i położenie we współrzędnych ekranu obszaru górnej karty.
+*reectTabAreaTop*<br/>
+[na zewnątrz] Zawiera rozmiar i położenie we współrzędnych ekranu górnego obszaru karty.
 
-*rectTabAreaBottom*<br/>
-[out] Zawiera rozmiar i położenie we współrzędnych ekranu wartości obszar karty w dolnej.
+*pectTabAreaBottom*<br/>
+[na zewnątrz] Zawiera rozmiar i położenie we współrzędnych ekranu dolnego obszaru karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, aby określić sposób zadokować okienko, w którym użytkownik przeciąga. Gdy użytkownik przeciągnie okienko za pośrednictwem obszaru karty w okienku docelowego, struktura próbuje dodać je jako nową kartę w okienku docelowego. W przeciwnym razie próbuje zadokować okienka boku okienko docelowych, które obejmuje utworzenie nowego kontenera okienko z Dzielnik rozdziela dwa okienka.
+Struktura wywołuje tę metodę, aby określić, jak zadokować okienko, które użytkownik przeciąga. Gdy użytkownik przeciągnie okienko nad obszarem karty okienka docelowego, struktura próbuje dodać go jako nową kartę okienka docelowego. W przeciwnym razie próbuje zadokować okienko z boku okienka docelowego, które polega na utworzeniu nowego kontenera okienka z dzielnikiem okienka, który oddziela dwa okienka.
 
-Należy przesłonić tę metodę w `CTabbedPane`-klasy, aby zmienić to zachowanie.
+Zastąpić tę `CTabbedPane`metodę w klasie pochodnej, aby zmienić to zachowanie.
 
-##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd
+## <a name="ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd
 
 ```
 CMFCTabCtrl* GetTabWnd() const;
@@ -257,7 +257,7 @@ CMFCTabCtrl* GetTabWnd() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode
+## <a name="ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -267,9 +267,9 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom
+## <a name="ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom
 
-Określa, czy kartach znajdują się w dolnej części okna.
+Określa, czy karty znajdują się w dolnej części okna.
 
 ```
 virtual BOOL IsTabLocationBottom() const;
@@ -277,13 +277,13 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli wartości obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop
+## <a name="ctabbedpanem_btabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop
 
-Domyślna lokalizacja dla kart w aplikacji.
+Domyślna lokalizacja kart w aplikacji.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
@@ -291,15 +291,15 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw ten statyczny element członkowski na wartość true, wymuś wszystkie karty w aplikacji, które mają być wyświetlane w górnej części okienka z zakładkami.
+Ustaw ten statyczny element członkowski na TRUE, aby wymusić wszystkie karty w aplikacji, które mają być wyświetlane w górnej części okienka z kartami.
 
-Przed okno zakładki, która została utworzona, należy ustawić tę wartość.
+Należy ustawić tę wartość przed utworzeniem okienka z kartami.
 
-Wartość domyślna to FALSE.
+Wartością domyślną jest FAŁSZ.
 
-##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+## <a name="ctabbedpanem_ptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC
 
-Informacje o klasie czasu wykonywania niestandardowych `CMFCTabCtrl`-pochodnych obiektu.
+Informacje o klasie środowiska `CMFCTabCtrl`uruchomieniowego dla niestandardowego obiektu pochodnego.
 
 ```
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
@@ -307,11 +307,11 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw wartość tej zmiennej statycznej składowej na wskaźnik do informacji o klasie czasu wykonywania o `CMFCTabCtrl`-pochodnych obiektu, jeśli używasz niestandardowego okna z kartami wewnątrz okienka z zakładkami.
+Ustaw tę statyczną zmienną elementów członkowskich na `CMFCTabCtrl`wskaźnik do informacji o klasie środowiska uruchomieniowego obiektu pochodnego, jeśli używasz niestandardowego okna z kartami wewnątrz okienka z kartami.
 
-##  <a name="resettabs"></a>  CTabbedPane::ResetTabs
+## <a name="ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs
 
-Resetuje wszystkie okienka z zakładkami do stanu domyślnego.
+Resetuje wszystkie okienka z kartami do stanu domyślnego.
 
 ```
 static void ResetTabs();
@@ -319,11 +319,11 @@ static void ResetTabs();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby przywrócić wszystkie okienka z zakładkami do stanu domyślnego. Gdy zostanie wywołana, ta metoda powoduje zresetowanie rozmiary obramowania i automatyczne kolor stanu wszystkich okienek z kartami.
+Wywołanie tej metody, aby przywrócić wszystkie okienka z kartami do stanu domyślnego. Po wywołaniu ta metoda resetuje rozmiary obramowania i stan koloru automatycznego wszystkich okienek z kartami.
 
-##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors
+## <a name="ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors
 
-Ustawia listę kolorów niestandardowych, które są używane, gdy jest włączona funkcja automatycznego kolorów.
+Ustawia listę kolorów niestandardowych, które są używane po włączeniu funkcji automatycznego koloru.
 
 ```
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -331,16 +331,16 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parametry
 
-*arColors*<br/>
-[in] Zawiera tablicę kolorów do ustawienia.
+*arKolory*<br/>
+[w] Zawiera tablicę kolorów do skonfigurowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia dostosowywanie listy kolorów, które są używane, gdy jest włączona funkcja automatycznego kolorów. To jest funkcję statyczną i wpływa na wszystkich kartach okienka w aplikacji.
+Ta metoda służy do dostosowywania listy kolorów, które są używane, gdy funkcja automatycznego koloru jest włączona. Jest to funkcja statyczna i wpływa na wszystkie okienka z kartami w aplikacji.
 
-Użyj [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) Aby włączyć lub wyłączyć funkcję automatycznego kolor.
+Użyj [CTabbedPane::EnableTabAutoColor,](#enabletabautocolor) aby włączyć lub wyłączyć funkcję automatycznego koloru.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

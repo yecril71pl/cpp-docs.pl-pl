@@ -2,101 +2,101 @@
 title: Interfejsy (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366040"
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C++/CX)
 
-Chociaż Klasa ref może dziedziczyć z co najwyżej jednej konkretnej klasy podstawowej, może zaimplementować dowolną liczbę klas interfejsu. Klasa interfejsu (lub struktura interfejsu) może dziedziczyć (lub wymagać) wielu klas interfejsów, może przeciążać jej funkcje członkowskie i może mieć parametry typu.
+Chociaż ref klasy można dziedziczyć z co najwyżej jednej konkretnej klasy podstawowej, można zaimplementować dowolną liczbę klas interfejsu. Sama klasa interfejsu (lub struktura interfejsu) może dziedziczyć (lub wymagać) wielu klas interfejsu, może przeciążać jego funkcje członkowskie i może mieć parametry typu.
 
-## <a name="characteristics"></a>Elementy
+## <a name="characteristics"></a>Właściwości
 
 Interfejs ma następujące cechy:
 
-- Klasa interfejsu (lub struktura) musi być zadeklarowana w przestrzeni nazw i może mieć dostępność publiczną lub prywatną. Tylko interfejsy publiczne są emitowane do metadanych.
+- Klasa interfejsu (lub struktura) musi być zadeklarowana w obszarze nazw i może mieć dostępność publiczną lub prywatną. Tylko interfejsy publiczne są emitowane do metadanych.
 
 - Elementy członkowskie interfejsu mogą zawierać właściwości, metody i zdarzenia.
 
-- Wszystkie elementy członkowskie interfejsu są niejawnie publiczne i wirtualne.
+- Wszyscy członkowie interfejsu są niejawnie publiczne i wirtualne.
 
-- Pola i statyczne elementy członkowskie są niedozwolone.
+- Pola i elementy statyczne nie są dozwolone.
 
-- Typy, które są używane jako właściwości, parametry metody lub wartości zwracane mogą być tylko środowisko wykonawcze systemu Windows typów; obejmuje to typy podstawowe i typy klas enum.
+- Typy, które są używane jako właściwości, parametry metody lub zwracane wartości mogą być tylko typami środowiska wykonawczego systemu Windows; obejmuje to podstawowe typy i typy klas wyliczenia.
 
 ## <a name="declaration-and-usage"></a>Deklaracja i użycie
 
-Poniższy przykład pokazuje, jak zadeklarować interfejs. Należy zauważyć, że interfejs może być zadeklarowany jako Klasa lub typ struktury.
+W poniższym przykładzie pokazano, jak zadeklarować interfejs. Należy zauważyć, że interfejs może być zadeklarowany jako typ klasy lub struktury.
 
 [!code-cpp[cx_interfaces#01](../cppcx/codesnippet/CPP/interfacestest/class1.h#01)]
 
-Aby zaimplementować interfejs, Klasa referencyjna lub struktura ref deklaruje i implementuje metody wirtualne i właściwości. Interfejs i Klasa referencyjna implementująca muszą używać tych samych nazw parametrów metody, jak pokazano w tym przykładzie:
+Aby zaimplementować interfejs, ref klasy lub ref struct deklaruje i implementuje metody wirtualne i właściwości. Interfejs i implementująca klasa ref muszą używać tych samych nazw parametrów metody, jak pokazano w tym przykładzie:
 
 [!code-cpp[cx_interfaces#02](../cppcx/codesnippet/CPP/interfacestest/class1.h#02)]
 
 ## <a name="interface-inheritance-hierarchies"></a>Hierarchie dziedziczenia interfejsu
 
-Interfejs może dziedziczyć z jednego lub większej liczby interfejsów. Ale w przeciwieństwie do klasy lub struktury ref, interfejs nie deklaruje dziedziczonych elementów członkowskich interfejsu. Jeśli interfejs B dziedziczy z interfejsu A, i Klasa ref C dziedziczy z B, C musi implementować zarówno a, jak i B. Jest to pokazane w następnym przykładzie.
+Interfejs może dziedziczyć z jednego lub więcej interfejsów. Ale w przeciwieństwie do ref klasy lub struktury, interfejs nie deklaruje członków interfejsu dziedziczonego. Jeśli interfejs B dziedziczy z interfejsu A, a klasa ref C dziedziczy od B, C musi implementować zarówno A, jak i B. Jest to pokazane w następnym przykładzie.
 
 [!code-cpp[cx_interfaces#03](../cppcx/codesnippet/CPP/interfacestest/class1.h#03)]
 
-## <a name="implementing-interface-properties-and-events"></a>Implementowanie właściwości interfejsu i zdarzeń
+## <a name="implementing-interface-properties-and-events"></a>Implementowanie właściwości i zdarzeń interfejsu
 
-Jak pokazano w poprzednim przykładzie, można użyć właściwości uproszczonych, aby zaimplementować właściwości interfejsu. Można również dostarczyć niestandardowe metody pobierające i metody ustawiające w klasie implementującej.  Zarówno metoda pobierająca, jak i setter musi być publiczna we właściwości interfejsu.
+Jak pokazano w poprzednim przykładzie, można użyć właściwości wirtualne trywialne do zaimplementowania właściwości interfejsu. Można również podać niestandardowe getters i ustawiających w klasie implementacji.  Zarówno metody ustawiacza, jak i ustawiacza muszą być publiczne we właściwości interfejsu.
 
 [!code-cpp[cx_interfaces#04](../cppcx/codesnippet/CPP/interfacestest/class1.h#04)]
 
-Jeśli interfejs deklaruje właściwość tylko do get lub Set-Only, Klasa implementująca powinna jawnie dostarczyć metodę pobierającą lub setter.
+Jeśli interfejs deklaruje właściwość tylko do uzyskania lub tylko do zestawu, klasa implementująca powinna jawnie podać metodyą ustawiającą lub ustawiającą.
 
 [!code-cpp[cx_interfaces#05](../cppcx/codesnippet/CPP/interfacestest/class1.h#05)]
 
-Możesz również zaimplementować niestandardowe metody dodawania i usuwania dla zdarzeń w klasie implementującej.
+Można również zaimplementować niestandardowe metody dodawania i usuwania zdarzeń w klasie implementującej.
 
-## <a name="explicit-interface-implementation"></a>Implementacja interfejsu jawnego
+## <a name="explicit-interface-implementation"></a>Jawna implementacja interfejsu
 
-Gdy Klasa referencyjna implementuje wiele interfejsów, a interfejsy te mają metody, których nazwy i podpisy są identyczne z kompilatorem, można użyć następującej składni, aby jawnie wskazać metodę interfejsu, która implementuje metodę klasy.
+Gdy klasa ref implementuje wiele interfejsów, a te interfejsy mają metody, których nazwy i podpisy są identyczne z kompilatorem, można użyć następującej składni, aby jawnie wskazać metodę interfejsu, którą implementuje metoda klasy.
 
 [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]
 
 ## <a name="generic-interfaces"></a>Interfejsy ogólne
 
-W C++/CX, `generic` słowo kluczowe jest używane do reprezentowania środowisko wykonawcze systemu Windows sparametryzowany typ. Typ sparametryzowany jest emitowany w metadanych i może być używany przez kod, który jest pisany w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze systemu Windows definiuje niektóre interfejsy ogólne — na przykład [Windows:: Foundation:: Collections:: IVector\<T >](Windows::Foundation::Collections::IVector), ale nie obsługuje tworzenia publicznych interfejsów zdefiniowanych przez użytkownika w/CX. C++ Można jednak tworzyć prywatne interfejsy ogólne.
+W języku C++/CX `generic` słowo kluczowe jest używane do reprezentowania typu sparametryzowanego środowiska wykonawczego systemu Windows. Typ sparametryzowany jest emitowany w metadanych i może być zużywany przez kod, który jest napisany w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze systemu Windows definiuje niektóre interfejsy ogólne — na przykład [Windows::Foundation::Collections::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)— ale nie obsługuje tworzenia publicznych interfejsów ogólnych zdefiniowanych przez użytkownika w języku C++/CX. Można jednak tworzyć prywatne interfejsy ogólne.
 
-Poniżej przedstawiono sposób, w jaki typy środowisko wykonawcze systemu Windows mogą służyć do tworzenia interfejsu generycznego:
+Oto jak można użyć typów środowiska wykonawczego systemu Windows do tworzenia ogólnego interfejsu:
 
-- Nie można emitować ogólnego użytkownika `interface class` zdefiniowanego w składniku do jego pliku metadanych systemu Windows; w związku z tym nie może on mieć publicznej dostępności, a kod klienta w innych plikach winmd nie może go wdrożyć. Może być implementowana przez niepubliczne klasy referencyjne w tym samym składniku. Publiczna Klasa referencyjna może mieć typ interfejsu generycznego jako prywatny element członkowski.
+- Ogólny zdefiniowany `interface class` przez użytkownika w składniku nie może być emitowany do pliku metadanych systemu Windows; w związku z tym nie może mieć publicznych ułatwień dostępu, a kod klienta w innych plikach .winmd nie można go zaimplementować. Może być zaimplementowana przez niepubliczne klasy ref w tym samym składniku. Klasa public ref może mieć typ interfejsu ogólnego jako element członkowski prywatny.
 
-   Poniższy fragment kodu przedstawia sposób deklarowania ogólnego `interface class` , a następnie implementowania go w prywatnej klasie ref i używania klasy ref jako prywatnego elementu członkowskiego w publicznej klasie referencyjnej.
+   Poniższy fragment kodu pokazuje, jak zadeklarować rodzajowy, `interface class` a następnie zaimplementować go w prywatnej klasie ref i użyć klasy ref jako prywatnego elementu członkowskiego w klasie public ref.
 
    [!code-cpp[cx_interfaces#07](../cppcx/codesnippet/CPP/interfacestest/class1.h#07)]
 
-- Interfejs generyczny musi być zgodny z regułami standardowego interfejsu, które regulują ułatwienia dostępu, członków, *wymaga* relacji, klas bazowych i tak dalej.
+- Interfejs ogólny musi być zgodny ze standardowymi regułami interfejsu, które regulują dostępność, elementy członkowskie, *wymaga* relacji, klas podstawowych i tak dalej.
 
-- Interfejs generyczny może przyjmować jeden lub więcej parametrów typu ogólnego, które są poprzedzone `typename` lub `class`. Parametry bez typu nie są obsługiwane.
+- Interfejs ogólny może przyjmować jeden lub więcej parametrów typu ogólnego, które są poprzedzone `typename` lub `class`. Parametry nienakładowe nie są obsługiwane.
 
-- Parametr typu może być dowolnego typu środowisko wykonawcze systemu Windows. Oznacza to, że parametr typu może być typem referencyjnym, typem wartości, klasą interfejsu, delegatem, typem podstawowym lub publiczną klasą enum.
+- Parametrem typu może być dowolny typ środowiska wykonawczego systemu Windows. Oznacza to, że parametr typu może być typem odwołania, typem wartości, klasą interfejsu, delegatem, typem podstawowym lub publiczną klasą wyliczenia.
 
-- *Zamknięty interfejs generyczny* jest interfejsem, który dziedziczy z interfejsu ogólnego i określa argumenty konkretnych typów dla wszystkich parametrów typu. Można go użyć w dowolnym miejscu, w którym można użyć nieogólnego interfejsu prywatnego.
+- *Zamknięty interfejs ogólny* jest interfejsem, który dziedziczy z interfejsu ogólnego i określa konkretne argumenty typu dla wszystkich parametrów typu. Może być używany wszędzie tam, gdzie można użyć niegenerycznego interfejsu prywatnego.
 
-- *Otwarty interfejs generyczny* jest interfejsem, który ma co najmniej jeden parametr typu, dla którego nie podano żadnego konkretnego typu. Można go użyć w dowolnym miejscu, w którym można użyć typu, w tym jako argument typu innego interfejsu ogólnego.
+- *Otwarty interfejs ogólny* jest interfejsem, który ma jeden lub więcej parametrów typu, dla których nie ma jeszcze typu betonu. Może być używany wszędzie tam, gdzie może być używany typ, w tym jako argument typu innego interfejsu ogólnego.
 
-- Można Sparametryzuj tylko cały interfejs, a nie poszczególne metody.
+- Można sparametryzować tylko cały interfejs, a nie poszczególne metody.
 
-- Parametry typu nie mogą być ograniczone.
+- Nie można ograniczyć parametrów typu.
 
 - Zamknięty interfejs ogólny ma niejawnie wygenerowany identyfikator UUID. Użytkownik nie może określić identyfikatora UUID.
 
-- W interfejsie wszystkie odwołania do bieżącego interfejsu — w parametrze metody, wartości zwracanej lub właściwości — jest założono, że odwołuje się do bieżącego wystąpienia. Na przykład *IMyIntf* oznacza *\<IMyIntf > T*.
+- W interfejsie przyjmuje się, że wszelkie odwołania do bieżącego interfejsu — w parametrze metody, wartości zwracanej lub właściwości — odnoszą się do bieżącego wystąpienia. Na przykład *IMyIntf* oznacza *IMyIntf\<T>*.
 
-- Gdy typ parametru metody jest parametrem typu, deklaracja tego parametru lub zmiennej używa nazwy parametru typu bez żadnego wskaźnika, natywnego odwołania lub uchwytu Deklaratory. Inaczej mówiąc, nigdy nie piszesz "T ^".
+- Gdy typ parametru metody jest parametrem typu, deklaracja tego parametru lub zmiennej używa nazwy parametru typu bez żadnego wskaźnika, odwołania macierzystego lub deklaratorów dojścia. Innymi słowy, nigdy nie piszesz "T^".
 
-- Klasy ref z szablonami muszą być prywatne. Mogą implementować interfejsy generyczne i mogą przekazywać parametry szablonu *t* do argumentu ogólnego *t*. Każde wystąpienie klasy ref z szablonami jest samą klasą ref.
+- Klasy ref szablonu muszą być prywatne. Mogą zaimplementować interfejsy ogólne i mogą przekazać parametr szablonu *T* do ogólnego argumentu *T*. Każde wystąpienie klasy ref z szablonem jest klasą ref.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Odwołanie do języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

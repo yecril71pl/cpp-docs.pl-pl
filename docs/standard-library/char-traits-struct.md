@@ -27,16 +27,16 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3d707ff963170b6b4f14ad1f04e9420b8062b520
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422004"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366703"
 ---
 # <a name="char_traits-struct"></a>char_traits — Struktura
 
-Struktura char_traits zawiera opis atrybutów skojarzonych ze znakiem.
+Struktura char_traits opisuje atrybuty skojarzone ze znakiem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,50 +47,50 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parametry
 
-\ *CharType*
+*Chartype*\
 Typ danych elementu.
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu opisuje różne cechy znaków dla typu `CharType`. Szablon klasy [basic_string](../standard-library/basic-string-class.md) jak również kilka szablonów klas iostream, w tym [basic_ios](../standard-library/basic-ios-class.md), te informacje służą do manipulowania elementami typu `CharType`. Taki typ elementu nie może wymagać jawnej konstrukcji ani zniszczenia. Musi dostarczyć Konstruktor domyślny, Konstruktor kopiujący i operator przypisania z oczekiwaną semantyką. Kopia bitowa musi mieć ten sam skutek jak przypisanie. Żadna z funkcji Członkowskich struktury char_traits nie może generować wyjątków.
+Struktura szablonu opisuje różne cechy znaków `CharType`dla typu . Szablon klasy [basic_string,](../standard-library/basic-string-class.md) a także kilka szablonów klas iostream, w tym [basic_ios,](../standard-library/basic-ios-class.md)używają tych `CharType`informacji do manipulowania elementami typu. Taki typ elementu nie może wymagać wyraźnej konstrukcji lub zniszczenia. Musi dostarczyć domyślny konstruktor, konstruktor kopii i operator przypisania z oczekiwaną semantyką. Kopia bitowa musi mieć taki sam efekt jak przypisanie. Żadna z funkcji członkowskich struct char_traits może zgłaszać wyjątki.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_type](#char_type)|Typ znaku.|
-|[int_type](#int_type)|Typ liczby całkowitej, który może reprezentować znak typu `char_type` lub znak końca pliku (EOF).|
+|[Char_type](#char_type)|Typ znaku.|
+|[Int_type](#int_type)|Typ liczby całkowitej, który może `char_type` reprezentować znak typu lub znak końca pliku (EOF).|
 |[off_type](#off_type)|Typ liczby całkowitej, który może reprezentować przesunięcia między pozycjami w strumieniu.|
 |[pos_type](#pos_type)|Typ liczby całkowitej, który może reprezentować pozycje w strumieniu.|
-|[state_type](#state_type)|Typ, który reprezentuje stan konwersji dla znaków wielobajtowych w strumieniu.|
+|[state_type](#state_type)|Typ reprezentujący stan konwersji w przypadku znaków wielobajtowych w strumieniu.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[ponownie](#assign)|Przypisuje jedną wartość znaku do innej.|
-|[porównaniu](#compare)|Porównuje do określonej liczby znaków w dwóch ciągach.|
-|[kopiowane](#copy)|Kopiuje określoną liczbę znaków z jednego ciągu do drugiego. Przestarzałe. Zamiast tego użyj [char_traits:: _Copy_s](#copy_s) .|
+|[Przypisać](#assign)|Przypisuje jedną wartość znaku do innej.|
+|[Porównać](#compare)|Porównuje do określonej liczby znaków w dwóch ciągach.|
+|[Kopii](#copy)|Kopiuje określoną liczbę znaków z jednego ciągu do drugiego. Przestarzałe. Zamiast [tego użyj char_traits::_Copy_s.](#copy_s)|
 |[_Copy_s](#copy_s)|Kopiuje określoną liczbę znaków z jednego ciągu do drugiego.|
 |[eof](#eof)|Zwraca znak końca pliku (EOF).|
-|[korektor](#eq)|Testuje, czy dwa `char_type` znaki są równe.|
-|[eq_int_type](#eq_int_type)|Testuje, czy dwa znaki reprezentowane jako `int_type`s są równe.|
+|[Eq](#eq)|Sprawdza, `char_type` czy dwa znaki są równe.|
+|[eq_int_type](#eq_int_type)|Sprawdza, czy dwa `int_type`znaki reprezentowane jako s są równe.|
 |[find](#find)|Wyszukuje pierwsze wystąpienie określonego znaku w zakresie znaków.|
 |[Długość](#length)|Zwraca długość ciągu.|
-|[przelew](#lt)|Testuje, czy jeden znak jest mniejszy niż inny.|
-|[Przenieś](#move)|Kopiuje określoną liczbę znaków w sekwencji do innej, możliwego nakładania się sekwencji. Przestarzałe. Zamiast tego użyj [char_traits:: _Move_s](#move_s) .|
-|[_Move_s](#move_s)|Kopiuje określoną liczbę znaków w sekwencji do innej, możliwego nakładania się sekwencji.|
-|[not_eof](#not_eof)|Testuje, czy znak jest znakiem końca pliku (EOF).|
-|[to_char_type](#to_char_type)|Konwertuje znak `int_type` na odpowiedni znak `char_type` i zwraca wynik.|
-|[to_int_type](#to_int_type)|Konwertuje znak `char_type` na odpowiedni znak `int_type` i zwraca wynik.|
+|[Por](#lt)|Sprawdza, czy jeden znak jest mniejszy niż inny.|
+|[Przenieść](#move)|Kopiuje określoną liczbę znaków w sekwencji do innej, możliwe nakładające się sekwencji. Przestarzałe. Zamiast [tego użyj char_traits::_Move_s.](#move_s)|
+|[_Move_s](#move_s)|Kopiuje określoną liczbę znaków w sekwencji do innej, możliwe nakładające się sekwencji.|
+|[not_eof](#not_eof)|Sprawdza, czy znak jest znakiem końca pliku (EOF).|
+|[to_char_type](#to_char_type)|Konwertuje `int_type` znak na `char_type` odpowiedni znak i zwraca wynik.|
+|[to_int_type](#to_int_type)|Konwertuje `char_type` znak na `int_type` odpowiedni znak i zwraca wynik.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ciąg >
+**Nagłówek:** \<> ciągu
 
 **Przestrzeń nazw:** std
 
-## <a name="assign"></a>char_traits:: Assign
+## <a name="char_traitsassign"></a><a name="assign"></a>char_traits::przypisywanie
 
 Przypisuje jedną wartość znaku do innej lub do zakresu elementów w ciągu.
 
@@ -105,20 +105,20 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>Parametry
 
-**_** *CharFrom* znak, którego wartość ma zostać przypisana.
+**_** *CharFrom* Znak, którego wartość ma być przypisana.
 
 *_CharTo*\
-Element, do którego ma zostać przypisana wartość znaku.
+Element, który ma być przypisany wartość znaku.
 
 *strTo*\
-Ciąg lub tablica znaków, której początkowe elementy mają być przypisane do wartości znakowych.
+Tablica znaków lub znaków, których początkowe elementy mają być przypisane wartości znaków.
 
 *_Num*\
-Liczba elementów, które mają być przypisane do wartości.
+Liczba elementów, które mają być przypisane wartości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Druga funkcja członkowska zwraca wskaźnik do ciągu, którego pierwsze *_Num* elementy przypisały wartości *_CharFrom*.
+Funkcja drugiego elementu członkowskiego zwraca wskaźnik do ciągu, którego pierwsze *_Num* elementy zostały przypisane wartości *_CharFrom*.
 
 ### <a name="example"></a>Przykład
 
@@ -161,7 +161,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_type"></a>char_traits:: char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits::char_type
 
 Typ znaku.
 
@@ -171,13 +171,13 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `CharType`.
+Typ jest synonimem parametru `CharType`szablonu .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem [kopiowania](#copy) , aby zapoznać się z przykładem sposobu deklarowania i używania `char_type`.
+Zobacz przykład [kopiowania,](#copy) aby uzyskać przykład `char_type`sposobu deklarowania i używania pliku .
 
-## <a name="compare"></a>char_traits:: Compare
+## <a name="char_traitscompare"></a><a name="compare"></a>char_traits::porównaj
 
 Porównuje do określonej liczby znaków w dwóch ciągach.
 
@@ -190,23 +190,23 @@ static int compare(const char_type* str1,
 ### <a name="parameters"></a>Parametry
 
 *str1*\
-Pierwsze dwa ciągi, które mają być porównywane ze sobą.
+Pierwszy z dwóch ciągów, które mają być porównywane ze sobą.
 
 *str2*\
 Drugi z dwóch ciągów, które mają być porównywane ze sobą.
 
 *_Num*\
-Liczba elementów w ciągach, które mają być porównane.
+Liczba elementów w ciągach do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość ujemna, jeśli pierwszy ciąg jest mniejszy niż drugi ciąg, 0, jeśli dwa ciągi są równe lub wartość dodatnia, jeśli pierwszy ciąg jest większy niż drugi ciąg.
+Wartość ujemna, jeśli pierwszy ciąg jest mniejszy niż drugi ciąg, 0, jeśli dwa ciągi są równe, lub wartość dodatnia, jeśli pierwszy ciąg jest większy niż drugi ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie między ciągami jest elementami elementu przez element, pierwsze testy pod kątem równości, a następnie, jeśli para elementów w testach sekwencji nie jest równa się, są testowane dla mniejszej niż.
+Porównanie ciągów jest element po elemencie, najpierw testowanie równości, a następnie, jeśli para elementów w testach sekwencji nie jest równa, są testowane dla mniej niż.
 
-Jeśli dwa ciągi są porównywane nad zakresem, ale jeden jest dłuższy niż drugi, to krótszy z nich jest mniejszy niż dłuższy.
+Jeśli dwa ciągi porównać równe w zakresie, ale jeden jest dłuższy niż drugi, a następnie krótszy z dwóch jest mniejsza niż dłuższy.
 
 ### <a name="example"></a>Przykład
 
@@ -241,11 +241,11 @@ int main() {
 }
 ```
 
-## <a name="copy"></a>char_traits:: Copy
+## <a name="char_traitscopy"></a><a name="copy"></a>char_traits::copy
 
 Kopiuje określoną liczbę znaków z jednego ciągu do drugiego.
 
-Ta metoda jest potencjalnie niebezpieczna, ponieważ polega na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Zamiast tego Rozważ użycie [char_traits:: _Copy_s](#copy_s) .
+Ta metoda jest potencjalnie niebezpieczne, ponieważ opiera się na wywołującego, aby sprawdzić, czy przekazane wartości są poprawne. Zamiast tego należy rozważyć użycie [char_traits::_Copy_s.](#copy_s)
 
 ```cpp
 static char_type *copy(char_type* _To,
@@ -256,21 +256,21 @@ static char_type *copy(char_type* _To,
 ### <a name="parameters"></a>Parametry
 
 *_To*\
-Element na początku ciągu lub tablicy znaków, do którego odnoszą się skopiowane sekwencje znaków.
+Element na początku ciągu lub tablicy znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 *_From*\
-Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać skopiowany.
+Element na początku ciągu źródłowego lub tablicy znaków do skopiowania.
 
 *_Num*\
-Liczba elementów, które mają zostać skopiowane.
+Liczba elementów do skopiowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy element jest kopiowany do tablicy ciągów lub znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
+Pierwszy element skopiowany do zestawu ciągów lub znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Sekwencje znaków źródłowej i docelowej nie mogą nakładać się na siebie.
+Sekwencje znaków źródłowych i docelowych nie mogą się nakładać.
 
 ### <a name="example"></a>Przykład
 
@@ -303,7 +303,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="copy_s"></a>char_traits:: _Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits::_Copy_s
 
 Kopiuje określoną liczbę znaków z jednego ciągu do drugiego.
 
@@ -317,25 +317,25 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-\ miejsca *docelowego*
-Ciąg lub tablica znaków przeznaczona do odbioru skopiowanej sekwencji znaków.
+*Dest*\
+Zestaw ciągów lub znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 *dest_size*\
-Rozmiar miejsca *docelowego*. Jeśli `char_type` ma wartość **char**, ten rozmiar jest w bajtach. Jeśli `char_type` jest **wchar_t**, ten rozmiar jest w wyrazach.
+Wielkość *dest*. Jeśli `char_type` jest **char**, a następnie ten rozmiar jest w bajtach. Jeśli `char_type` jest **wchar_t**, to ten rozmiar jest w słowach.
 
 *_From*\
 Ciąg źródłowy lub tablica znaków do skopiowania.
 
-*liczba*\
-Liczba elementów, które mają zostać skopiowane.
+*Liczba*\
+Liczba elementów do skopiowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg lub tablica znaków przeznaczona do odbioru skopiowanej sekwencji znaków.
+Zestaw ciągów lub znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Sekwencje znaków źródłowej i docelowej nie mogą nakładać się na siebie.
+Sekwencje znaków źródłowych i docelowych nie mogą się nakładać.
 
 ### <a name="example"></a>Przykład
 
@@ -368,7 +368,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="eof"></a>char_traits:: EOF
+## <a name="char_traitseof"></a><a name="eof"></a>char_traits::eof
 
 Zwraca znak końca pliku (EOF).
 
@@ -376,15 +376,15 @@ Zwraca znak końca pliku (EOF).
 static int_type eof();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Znak EOF.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość, która reprezentuje koniec pliku (na przykład EOF lub WEOF).
+Wartość reprezentująca koniec pliku (na przykład EOF lub WEOF).
 
-C++ Standardowe Stany, których ta wartość nie może odpowiadać prawidłowym `char_type` wartość. Kompilator firmy C++ Microsoft wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Prezentuje to poniższy przykład.
+Standard C++ stwierdza, że ta wartość `char_type` nie może odpowiadać prawidłowej wartości. Kompilator Microsoft C++ wymusza to ograniczenie dla **typu char**, ale nie dla **typu wchar_t**. Prezentuje to poniższy przykład.
 
 ### <a name="example"></a>Przykład
 
@@ -419,9 +419,9 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="eq"></a>char_traits:: EQ
+## <a name="char_traitseq"></a><a name="eq"></a>char_traits::eq
 
-Testuje, czy dwa `char_type` znaki są równe.
+Sprawdza, `char_type` czy dwa znaki są równe.
 
 ```cpp
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
@@ -430,14 +430,14 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ### <a name="parameters"></a>Parametry
 
 *_Ch1*\
-Pierwsze dwa znaki do przetestowania pod kątem równości.
+Pierwszy z dwóch znaków, które mają być testowane pod kątem równości.
 
 *_Ch2*\
-Drugi z dwóch znaków do sprawdzenia pod kątem równości.
+Drugi z dwóch znaków, które mają być testowane pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
+**true,** jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -479,9 +479,9 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="eq_int_type"></a>char_traits:: eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits::eq_int_type
 
-Testuje, czy dwa znaki reprezentowane jako `int_type`s są równe, czy nie.
+Sprawdza, czy dwa `int_type`znaki reprezentowane jako s są równe, czy nie.
 
 ```cpp
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
@@ -490,14 +490,14 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ### <a name="parameters"></a>Parametry
 
 *_Ch1*\
-Pierwszy z dwóch znaków do sprawdzenia pod kątem równości jako `int_type`s.
+Pierwszy z dwóch znaków, które mają `int_type`być testowane pod kątem równości jako s.
 
 *_Ch2*\
-Drugi z dwóch znaków do przetestowania pod kątem równości jako `int_type`s.
+Drugi z dwóch znaków, które mają `int_type`być testowane pod kątem równości jako s.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
+**true,** jeśli pierwszy znak jest równy drugiemu znakowi; w przeciwnym razie **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -564,7 +564,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="find"></a>char_traits:: find
+## <a name="char_traitsfind"></a><a name="find"></a>char_traits::znajdź
 
 Wyszukuje pierwsze wystąpienie określonego znaku w zakresie znaków.
 
@@ -576,18 +576,18 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Pierwszy znak w ciągu, który ma być przeszukiwany.
+*Str*\
+Pierwszy znak w ciągu do przeszukania.
 
 *_Num*\
-Liczba pozycji, licząc od pierwszej, w zakresie, który ma być przeszukiwany.
+Liczba pozycji, licząc od pierwszego, w zakresie, który ma być przeszukiwany.
 
-*_Ch*\
-Znak, który ma być wyszukiwany w zakresie.
+*_ch*\
+Postać, która ma być wyszukiwana w zakresie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego wystąpienia określonego znaku w zakresie, jeśli zostanie znalezione dopasowanie; w przeciwnym razie wskaźnik o wartości null.
+Wskaźnik do pierwszego wystąpienia określonego znaku w zakresie, jeśli zostanie znaleziony dopasowanie; w przeciwnym razie wskaźnik zerowy.
 
 ### <a name="example"></a>Przykład
 
@@ -631,9 +631,9 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="int_type"></a>char_traits:: int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits::int_type
 
-Typ liczby całkowitej, który może reprezentować znak typu `char_type` lub znak końca pliku (EOF).
+Typ liczby całkowitej, który może `char_type` reprezentować znak typu lub znak końca pliku (EOF).
 
 ```cpp
 typedef long int_type;
@@ -641,13 +641,13 @@ typedef long int_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Musi być możliwe wpisanie wartości cast typu `CharType`, aby `int_type` z powrotem do `CharType` bez zmiany pierwotnej wartości.
+Musi istnieć możliwość wpisania rzutowania `int_type` wartości `CharType` typu, `CharType` a następnie z powrotem do bez zmiany oryginalnej wartości.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem [eq_int_type](#eq_int_type) , aby zapoznać się z przykładem sposobu deklarowania i używania `int_type`.
+Zobacz przykład [eq_int_type](#eq_int_type) na przykład jak zadeklarować i `int_type`używać .
 
-## <a name="length"></a>char_traits:: length
+## <a name="char_traitslength"></a><a name="length"></a>char_traits::długość
 
 Zwraca długość ciągu.
 
@@ -657,12 +657,12 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Ciąg języka C, którego długość ma być mierzona.
+*Str*\
+Ciąg C, którego długość ma być mierzona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w sekwencji mierzonych, które nie obejmują terminatora o wartości null.
+Liczba mierzonych elementów w sekwencji, z wyłączeniem zerowego terminatora.
 
 ### <a name="example"></a>Przykład
 
@@ -690,9 +690,9 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="lt"></a>char_traits:: lt
+## <a name="char_traitslt"></a><a name="lt"></a>char_traits::lt
 
-Testuje, czy jeden znak jest mniejszy niż inny.
+Sprawdza, czy jeden znak jest mniejszy niż inny.
 
 ```cpp
 static bool lt(const char_type& _Ch1, const char_type& _Ch2);
@@ -701,14 +701,14 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ### <a name="parameters"></a>Parametry
 
 *_Ch1*\
-Pierwsze dwa znaki do przetestowania mniejsze niż.
+Pierwszy z dwóch znaków, które mają być testowane dla mniej niż.
 
 *_Ch2*\
-Dwa z dwóch znaków do przetestowania mniejsze niż.
+Drugi z dwóch znaków, które mają być testowane dla mniej niż.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli pierwszy znak jest mniejszy od drugiego znaku; w przeciwnym razie **false**.
+**true,** jeśli pierwszy znak jest mniejszy niż drugi znak; w przeciwnym razie **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -749,11 +749,11 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="move"></a>char_traits:: Move
+## <a name="char_traitsmove"></a><a name="move"></a>char_traits::przenieść
 
-Kopiuje określoną liczbę znaków w sekwencji do innej, która może nakładać się na sekwencję.
+Kopiuje określoną liczbę znaków w sekwencji do innej, ewentualnie nakładającej się sekwencji.
 
-Ta metoda jest potencjalnie niebezpieczna, ponieważ polega na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Zamiast tego Rozważ użycie [char_traits:: _Move_s](#move_s) .
+Ta metoda jest potencjalnie niebezpieczne, ponieważ opiera się na wywołującego, aby sprawdzić, czy przekazane wartości są poprawne. Zamiast tego należy rozważyć użycie [char_traits::_Move_s.](#move_s)
 
 ```cpp
 static char_type *move(char_type* _To,
@@ -764,21 +764,21 @@ static char_type *move(char_type* _To,
 ### <a name="parameters"></a>Parametry
 
 *_To*\
-Element na początku ciągu lub tablicy znaków, do którego odnoszą się skopiowane sekwencje znaków.
+Element na początku ciągu lub tablicy znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 *_From*\
-Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać skopiowany.
+Element na początku ciągu źródłowego lub tablicy znaków do skopiowania.
 
 *_Num*\
-Liczba elementów, które mają zostać skopiowane z ciągu źródłowego.
+Liczba elementów do skopiowania z ciągu źródłowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy element *_to* kopiowany do tablicy ciągów lub tablic znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
+Pierwszy element *_To* skopiowany do zestawu ciągów lub znaków przeznaczonych do odbierania skopiowanej sekwencji znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Źródło i miejsce docelowe mogą się nakładać.
+Źródło i miejsce docelowe mogą się pokrywać.
 
 ### <a name="example"></a>Przykład
 
@@ -826,9 +826,9 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="move_s"></a>char_traits:: _Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits::_Move_s
 
-Kopiuje określoną liczbę znaków w sekwencji do innej, która może nakładać się na sekwencję.
+Kopiuje określoną liczbę znaków w sekwencji do innej, ewentualnie nakładającej się sekwencji.
 
 ```cpp
 static char_type *_Move_s(
@@ -840,25 +840,25 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-\ miejsca *docelowego*
-Element na początku ciągu lub tablicy znaków, do którego odnoszą się skopiowane sekwencje znaków.
+*Dest*\
+Element na początku ciągu lub tablicy znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 *dest_size*\
-Rozmiar miejsca *docelowego*. Jeśli `char_type` ma wartość **char**, to w bajtach. Jeśli `char_type` jest **wchar_t**, to jest to słowo.
+Wielkość *dest*. Jeśli `char_type` jest **char**, to jest w bajtach. Jeśli `char_type` jest **wchar_t**, to jest to w słowach.
 
 *_From*\
-Element na początku ciągu źródłowego lub tablicy znaków, który ma zostać skopiowany.
+Element na początku ciągu źródłowego lub tablicy znaków do skopiowania.
 
-*liczba*\
-Liczba elementów, które mają zostać skopiowane z ciągu źródłowego.
+*Liczba*\
+Liczba elementów do skopiowania z ciągu źródłowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy element *docelowy* został skopiowany do tablicy ciągów lub tablic znaków przeznaczonych do odbioru skopiowanej sekwencji znaków.
+Pierwszy element *dest* kopiowane do ciągu lub tablicy znaków przeznaczony do odbierania skopiowanej sekwencji znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Źródło i miejsce docelowe mogą się nakładać.
+Źródło i miejsce docelowe mogą się pokrywać.
 
 ### <a name="example"></a>Przykład
 
@@ -906,9 +906,9 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="not_eof"></a>char_traits:: not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits::not_eof
 
-Testuje, czy znak nie jest znakiem końca pliku (EOF) lub jest EOF.
+Sprawdza, czy znak nie jest znakiem końca pliku (EOF), czy jest znakiem EOF.
 
 ```cpp
 static int_type not_eof(const int_type& _Ch);
@@ -916,14 +916,14 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak reprezentowany jako `int_type` do sprawdzenia, czy jest to znak EOF, czy nie.
+*_ch*\
+Znak reprezentowany jako `int_type` testowany pod kątem tego, czy jest to znak EOF, czy nie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-`int_type` reprezentacja znaku przetestowanego, jeśli `int_type` znaku nie jest równa wartości znaku EOF.
+Reprezentacja `int_type` testowanego znaku, jeśli `int_type` znak nie jest równy postaci znaku EOF.
 
-Jeśli wartość `int_type` znaku jest równa wartości EOF `int_type`, wartość **false**.
+Jeśli wartość `int_type` znaku jest równa `int_type` wartości EOF, wówczas **wartość false**.
 
 ### <a name="example"></a>Przykład
 
@@ -978,7 +978,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="off_type"></a>char_traits:: off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits::off_type
 
 Typ liczby całkowitej, który może reprezentować przesunięcia między pozycjami w strumieniu.
 
@@ -988,9 +988,9 @@ typedef streamoff off_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ to liczba całkowita ze znakiem, która opisuje obiekt, który może przechowywać przesunięcie bajtów związane z różnymi operacjami pozycjonowania strumienia. Jest zazwyczaj synonimem dla [streamoff —](../standard-library/ios-typedefs.md#streamoff), ale ma zasadniczo te same właściwości, co ten typ.
+Typ jest podpisaną całkowitej liczby, która opisuje obiekt, który może przechowywać przesunięcie bajtu zaangażowanych w różnych operacji pozycjonowania strumienia. Zazwyczaj jest synonimem [streamoff](../standard-library/ios-typedefs.md#streamoff), ale ma zasadniczo te same właściwości, jak ten typ.
 
-## <a name="pos_type"></a>char_traits::p os_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits::p_type
 
 Typ liczby całkowitej, który może reprezentować pozycje w strumieniu.
 
@@ -1000,11 +1000,11 @@ typedef streampos pos_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może przechowywać wszystkie informacje, które są konieczne do przywrócenia dowolnego wskaźnika położenia pliku w strumieniu. Jest zazwyczaj synonimem dla [streampos](../standard-library/ios-typedefs.md#streampos), ale w każdym przypadku ma zasadniczo te same właściwości, co ten typ.
+Typ opisuje obiekt, który może przechowywać wszystkie informacje potrzebne do przywrócenia dowolnego wskaźnika położenia pliku w strumieniu. Zazwyczaj jest synonimem [streampos](../standard-library/ios-typedefs.md#streampos), ale w każdym przypadku ma zasadniczo te same właściwości, jak ten typ.
 
-## <a name="state_type"></a>char_traits:: state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits::state_type
 
-Typ, który reprezentuje stan konwersji znaków wielobajtowych w strumieniu.
+Typ reprezentujący stan konwersji dla znaków wielobajtowych w strumieniu.
 
 ```cpp
 typedef implementation-defined state_type;
@@ -1012,11 +1012,11 @@ typedef implementation-defined state_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może reprezentować stan konwersji. Jest to zazwyczaj synonim dla `mbstate_t`, ale w każdym przypadku ma zasadniczo te same właściwości, co ten typ.
+Typ opisuje obiekt, który może reprezentować stan konwersji. Jest to zazwyczaj synonim `mbstate_t`, ale w każdym przypadku ma zasadniczo takie same właściwości jak tego typu.
 
-## <a name="to_char_type"></a>char_traits:: to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits::to_char_type
 
-Konwertuje znak `int_type` na odpowiedni znak `char_type` i zwraca wynik.
+Konwertuje `int_type` znak na `char_type` odpowiedni znak i zwraca wynik.
 
 ```cpp
 static char_type to_char_type(const int_type& _Ch);
@@ -1024,26 +1024,26 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak `int_type`, który ma być reprezentowany jako `char_type`.
+*_ch*\
+Znak, `int_type` który ma być `char_type`reprezentowany jako .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Znak `char_type` odpowiadający znakowi `int_type`.
+Znak `char_type` odpowiadający `int_type` znakowi.
 
-Wartość *_Ch* , która nie może być reprezentowana w taki sposób, że daje nieokreślony wynik.
+Wartość *_Ch,* które nie mogą być reprezentowane jako takie daje nieokreślony wynik.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacje konwersji [to_int_type](#to_int_type) i `to_char_type` są odwrotnie do siebie, dzięki czemu:
+Operacje konwersji [to_int_type](#to_int_type) i `to_char_type` są odwrotne do siebie, tak, że:
 
-`to_int_type` (`to_char_type` ( *x* )) = = *x*
+`to_int_type`( `to_char_type` ( *x* ) ) == *x*
 
-dla dowolnego `int_type` *x* i
+dla `int_type` każdego *x* i
 
-`to_char_type` (`to_int_type` ( *x* )) = = *x*
+`to_char_type`( `to_int_type` ( *x* ) ) == *x*
 
-dla dowolnego `char_type` *x*.
+dla `char_type` każdego *x*.
 
 ### <a name="example"></a>Przykład
 
@@ -1120,9 +1120,9 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="to_int_type"></a>char_traits:: to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits::to_int_type
 
-Konwertuje znak `char_type` na odpowiedni znak `int_type` i zwraca wynik.
+Konwertuje `char_type` znak na `int_type` odpowiedni znak i zwraca wynik.
 
 ```cpp
 static int_type to_int_type(const char_type& _Ch);
@@ -1130,24 +1130,24 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak `char_type`, który ma być reprezentowany jako `int_type`.
+*_ch*\
+Znak, `char_type` który ma być `int_type`reprezentowany jako .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Znak `int_type` odpowiadający znakowi `char_type`.
+Znak `int_type` odpowiadający `char_type` znakowi.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacje konwersji `to_int_type` i [to_char_type](#to_char_type) są odwrotnie do siebie, dzięki czemu:
+Operacje `to_int_type` konwersji i [to_char_type](#to_char_type) są odwrotne do siebie, tak, że:
 
-`to_int_type` (`to_char_type` ( *x* )) = = *x*
+`to_int_type`( `to_char_type` ( *x* ) ) == *x*
 
-dla dowolnego `int_type` *x*i
+dla `int_type` każdego *x*, i
 
-`to_char_type` (`to_int_type` ( *x* )) = = *x*
+`to_char_type`( `to_int_type` ( *x* ) ) == *x*
 
-dla dowolnego `char_type` *x*.
+dla `char_type` każdego *x*.
 
 ### <a name="example"></a>Przykład
 

@@ -2,20 +2,20 @@
 title: Biblioteki
 ms.date: 11/18/2018
 ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80075607"
 ---
 # <a name="libraries"></a>Biblioteki
 
-Program Visual Studio zawiera następujące biblioteki podczas instalowania jednego lub większej liczby C++ obciążeń. Aby uzyskać informacje na temat instalowania bibliotek innych firm, zobacz [vcpkg: C++ A Package Manager for Windows, Linux i MacOS](../build/vcpkg.md).
+Visual Studio zawiera następujące biblioteki podczas instalowania co najmniej jednego z obciążeń języka C++. Aby uzyskać informacje dotyczące instalowania bibliotek innych firm, zobacz [vcpkg: A C++ package manager for Windows, Linux and MacOS](../build/vcpkg.md).
 
 ## <a name="standard-libraries"></a>Biblioteki standardowe
 
 [Biblioteka środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Standardowa biblioteka języka C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Biblioteka SafeInt](../safeint/safeint-library.md)<br/>
 [OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)
 

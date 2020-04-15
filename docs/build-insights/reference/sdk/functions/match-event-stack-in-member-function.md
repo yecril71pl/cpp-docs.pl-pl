@@ -1,6 +1,6 @@
 ---
-title: MatchEventStackInMemberFunction
-description: Odwołanie C++ do funkcji MatchEventStackInMemberFunction zestawu SDK usługi Build Insights.
+title: Funkcja MatchEventStackInMember
+description: Odwołanie do funkcji SDK MatchEventStackInMemberFunction w języku C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323887"
 ---
-# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
+# <a name="matcheventstackinmemberfunction"></a>Funkcja MatchEventStackInMember
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `MatchEventStackInMemberFunction` jest używana do dopasowania stosu zdarzeń do określonej hierarchii zdarzeń, opisanej przez listę parametrów funkcji członkowskiej. Dopasowane hierarchie są przekazywane do funkcji składowej w celu dalszej obróbki. Aby dowiedzieć się więcej o zdarzeniach, stosach zdarzeń i hierarchiach, zobacz [tabela zdarzeń](../event-table.md).
+Funkcja `MatchEventStackInMemberFunction` jest używana do dopasowania stosu zdarzeń do hierarchii określonych zdarzeń, opisanej przez listę parametrów funkcji elementu członkowskiego. Dopasowane hierarchie są przekazywane do funkcji elementu członkowskiego w celu dalszego przetwarzania. Aby dowiedzieć się więcej o zdarzeniach, stosach zdarzeń i hierarchiach, zobacz [tabelę zdarzeń](../event-table.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Parametry
 
-*TInterface*\
-Typ, który zawiera funkcję członkowską.
+*TInterface (Wzlot)*\
+Typ, który zawiera funkcję elementu członkowskiego.
 
-*TReturn*\
-Zwracany typ funkcji składowej.
+*TReturn (Powrót)*\
+Zwracany typ funkcji elementu członkowskiego.
 
-*T1*,..., *T10*\
+*T1*, ..., *T10*\
 Typy opisujące hierarchię zdarzeń do dopasowania.
 
 *TExtraParams*\
-Typy dodatkowych parametrów akceptowane przez funkcję członkowską i typy hierarchii zdarzeń.
+Typy dodatkowych parametrów akceptowanych przez funkcję elementu członkowskiego i typy hierarchii zdarzeń.
 
 *TExtraArgs*\
-Typy dodatkowych argumentów, które zostały przekazane do `MatchEventStackInMemberFunction`.
+Typy dodatkowych argumentów, które `MatchEventStackInMemberFunction`zostały przekazane do .
 
-*eventStack*\
-Stos zdarzeń do dopasowania względem hierarchii typu zdarzenia opisanego przez *T1* za pomocą *T10*.
+*eventStack (własówce wydarzenia)*\
+Stos zdarzeń zgodny z hierarchią typów zdarzeń opisaną przez *T1* do *T10*.
 
-*objectPtr*\
-Wskaźnik do obiektu, na którym wywoływany jest *memberFunc* .
+*objectPtr (polecenie objectPtr)*\
+Wskaźnik do obiektu, na którym wywoływany jest *element członkowskiFunc.*
 
-*memberFunc*\
-Funkcja członkowska opisująca hierarchię typów zdarzeń do dopasowania.
+*element członkowskiFunc*\
+Funkcja elementu członkowskiego, która opisuje hierarchię typów zdarzeń do dopasowania.
 
-*extraArgs*\
-Argumenty, które uzyskują doskonałe utajnienie przekazywania do *memberFunc* wraz z parametrami hierarchii typów zdarzeń.
+*extraArgs (extraArgs)*\
+Argumenty, które są doskonałe przekazywane do *elementu członkowskiegoFunc* wraz z parametrami hierarchii typów zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **logiczna** , która jest **prawdziwa** , jeśli dopasowanie zakończyło się pomyślnie, lub **Fałsz** w przeciwnym razie.
+Wartość **bool,** która jest **true,** jeśli dopasowanie zakończyło się pomyślnie lub **false** w inny sposób.
 
 ## <a name="remarks"></a>Uwagi
 
-Ostatnie zdarzenie w *eventStack* jest zawsze dopasowywane do ostatniego wpisu w hierarchii typów zdarzeń w celu dopasowania. Wszystkie inne typy w hierarchii typów zdarzeń mogą być zgodne z dowolnym pozycją w *eventStack* z wyjątkiem ostatniego, pod warunkiem, że znajdują się one w tej samej kolejności.
+Ostatnie zdarzenie w *eventStack* jest zawsze dopasowywać do ostatniego wpisu w hierarchii typów zdarzeń, aby dopasować. Wszystkie inne typy w hierarchii typów zdarzeń można dopasować dowolną pozycję w *eventStack* z wyjątkiem ostatniego, pod warunkiem, że są one w tej samej kolejności.
 
-Typy zdarzeń, które mają być używane dla parametrów *T1* za pośrednictwem *T10* , są wybierane z listy *klas przechwytywania*. Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
+Typy zdarzeń, które mają być używane dla parametrów *od T1* do *T10,* są wybierane z listy *klas przechwytywania.* Aby uzyskać listę zdarzeń i klasy przechwytywania, których można użyć do ich dopasowania, zobacz [tabelę zdarzeń](../event-table.md).
 
 ## <a name="example"></a>Przykład
 

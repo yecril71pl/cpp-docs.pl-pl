@@ -1,5 +1,5 @@
 ---
-title: Klasa CAutoVectorPtrElementTraits
+title: CAutoVectorPtrElementTraits Klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956fe39c4d3ba89bb9def2f996dca59905753edb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260087"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318754"
 ---
-# <a name="cautovectorptrelementtraits-class"></a>Klasa CAutoVectorPtrElementTraits
+# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits Klasa
 
-Ta klasa dostarcza metody, funkcje statyczne i przydatne podczas tworzenia kolekcji inteligentnych wskaźników przy użyciu nowych wektorów i delete — operatory definicje typów.
+Ta klasa zawiera metody, funkcje statyczne i typedefs przydatne podczas tworzenia kolekcji inteligentnych wskaźników przy użyciu operatorów wektorowych i delete.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,26 +38,26 @@ Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza metody, funkcje statyczne i definicje typów dla łatwiejszemu tworzenia typów obiektów klas kolekcji zawierających inteligentnych wskaźników. W odróżnieniu od [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)ten klasy wykorzystuje nowy wektor i delete — operatory.
+Ta klasa zawiera metody, funkcje statyczne i typedefs do wspomagania tworzenia obiektów klasy kolekcji zawierających inteligentne wskaźniki. W przeciwieństwie do [CAutoPtrElementTraits,](../../atl/reference/cautoptrelementtraits-class.md)ta klasa używa operatorów wektorowych i delete.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits (Niem.](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits (3.](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoVectorPtrElementTraits`
 
@@ -65,24 +65,24 @@ Ta klasa dostarcza metody, funkcje statyczne i definicje typów dla łatwiejszem
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE
 
-Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.
+Typ danych do dodania elementów do obiektu klasy kolekcji.
 
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE
 
-Typ danych używany do pobierania elementów z obiektu klasy kolekcji.
+Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.
 
 ```
 typedef T*& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Klasa CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

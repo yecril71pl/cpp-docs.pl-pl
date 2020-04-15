@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CStringArray [MFC], SetAtGrow
 - CStringArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: f5be5f44e86e3e24bc51dc014ca3c837bf5cf07d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 96a272cbbb76b399ed7a3db6848ab3f74a615a38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445128"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365986"
 ---
 # <a name="cstringarray-class"></a>Klasa CStringArray
 
-Obsługuje tablice obiektów [CString](../../atl-mfc-shared/using-cstring.md) .
+Obsługuje tablice obiektów [CString.](../../atl-mfc-shared/using-cstring.md)
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,11 +61,11 @@ class CStringArray : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CStringArray` są podobne do funkcji składowych klasy [CObArray](../../mfc/reference/cobarray-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CObArray` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz wskaźnik `CObject` jako wartość zwracana, Zastąp obiekt [CString](../../atl-mfc-shared/using-cstring.md) (a nie wskaźnik [CString](../../atl-mfc-shared/using-cstring.md) ). W każdym przypadku, gdy widzisz `CObject` wskaźnik jako parametr funkcji, podstaw `LPCTSTR`.
+Funkcje członkowskie `CStringArray` są podobne do funkcji członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwo `CObArray` można użyć dokumentacji referencyjnej dla specyfiki funkcji elementu członkowskiego. Wszędzie tam, `CObject` gdzie widzisz wskaźnik jako wartość zwracaną, podstawiaj [obiekt CString](../../atl-mfc-shared/using-cstring.md) (nie wskaźnik [CString).](../../atl-mfc-shared/using-cstring.md) Wszędzie tam, `CObject` gdzie wskaźnik jest widoczny `LPCTSTR`jako parametr funkcji, zastąp .
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
-na przykład tłumaczy na
+na przykład przekłada się na
 
 `CString CStringArray::GetAt( int <nIndex> ) const;`
 
@@ -73,66 +73,66 @@ i
 
 `void SetAt( int <nIndex>, CObject* <newElement> )`
 
-tłumaczy na
+przekłada się na
 
 `void SetAt( int <nIndex>, LPCTSTR <newElement> )`
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CStringArray::CStringArray](../../mfc/reference/cobarray-class.md#cobarray)|Konstruuje pustą tablicę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CStringArray:: Add](../../mfc/reference/cobarray-class.md#add)|Dodaje element na końcu tablicy; w razie potrzeby powiększa tablicę.|
-|[CStringArray:: Append](../../mfc/reference/cobarray-class.md#append)|Dołącza kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
-|[CStringArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiuje kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CStringArray::Dodaj](../../mfc/reference/cobarray-class.md#add)|Dodaje element na końcu tablicy; w razie potrzeby zwiększa tablicę.|
+|[CStringArray::Dołącz](../../mfc/reference/cobarray-class.md#append)|Dołącza inną tablicę do tablicy; w razie potrzeby zwiększa tablicę.|
+|[CStringArray::Kopiowanie](../../mfc/reference/cobarray-class.md#copy)|Kopiuje inną tablicę do tablicy; w razie potrzeby zwiększa tablicę.|
 |[CStringArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Zwraca tymczasowe odwołanie do wskaźnika elementu w tablicy.|
-|[CStringArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywane pamięci powyżej bieżącej górnej granicy.|
+|[CStringArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia całą nieużytą pamięć powyżej bieżącej górnej granicy.|
 |[CStringArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość w danym indeksie.|
-|[CStringArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
-|[CStringArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć **wartość null**.|
-|[CStringArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
+|[CStringArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej tablicy.|
+|[CStringArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć **wartość NULL**.|
+|[CStringArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej tablicy.|
 |[CStringArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy prawidłowy indeks.|
-|[CStringArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) o określonym indeksie.|
-|[CStringArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
-|[CStringArray::](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
-|[CStringArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element z określonym indeksem.|
-|[CStringArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla danego indeksu; Tablica nie może być większa.|
-|[CStringArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby powiększa tablicę.|
-|[CStringArray:: setSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
+|[CStringArray::Wstawianie](../../mfc/reference/cobarray-class.md#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) w określonym indeksie.|
+|[CStringArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Określa, czy tablica jest pusta.|
+|[CStringArray::UsuńWszystki](../../mfc/reference/cobarray-class.md#removeall)|Usuwa wszystkie elementy z tej tablicy.|
+|[CStringArray::Usuń](../../mfc/reference/cobarray-class.md#removeat)|Usuwa element w określonym indeksie.|
+|[CStringArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Ustawia wartość dla danego indeksu; tablicy nie może rosnąć.|
+|[CStringArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby zwiększa tablicę.|
+|[CStringArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CStringArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
+|[CStringArray::operator \[\]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element w określonym indeksie.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CStringArray` zawiera IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Jeśli tablica obiektów `CString` jest przechowywana w archiwum, z przeciążonym operatorem wstawiania lub z funkcją składową `Serialize`, każdy element jest serializowany z kolei.
+`CStringArray`zawiera makro IMPLEMENT_SERIAL w celu wspierania serializacji i dumpingu jego elementów. Jeśli tablica `CString` obiektów jest przechowywana w archiwum, za pomocą przeciążonego operatora wstawiania lub funkcji `Serialize` elementu członkowskiego, każdy element jest serializowany po kolei.
 
 > [!NOTE]
->  Przed użyciem tablicy Użyj `SetSize`, aby ustalić jej rozmiar i przydzielić pamięć. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje częste ponowną alokację i kopiowanie. Częste ponowne przydzielanie i kopiowanie są niewydajne i mogą fragmentację pamięci.
+> Przed użyciem tablicy należy użyć `SetSize` do ustalenia jego rozmiaru i przydzielić dla niej pamięć. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje, że często są ponownie przydzielane i kopiowane. Częste ponowne przydzielanie i kopiowanie są nieefektywne i mogą fragmentować pamięć.
 
-Jeśli potrzebujesz zrzutu poszczególnych elementów ciągu w tablicy, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+Jeśli potrzebujesz zrzutu poszczególnych elementów ciągu w tablicy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
-Po usunięciu tablicy `CString` lub po usunięciu jej elementów, pamięć ciąg jest zwalniana odpowiednio do potrzeb.
+Po `CString` usunięciu tablicy lub po usunięciu jej elementów pamięć ciągów jest zwalniana odpowiednio.
 
-Aby uzyskać więcej informacji na temat korzystania z `CStringArray`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
+Aby uzyskać więcej `CStringArray`informacji na temat korzystania z programu , zobacz artykuł [Kolekcje](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CStringArray`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcoll. h
+**Nagłówek:** afxcoll.h
 
 ## <a name="see-also"></a>Zobacz też
 

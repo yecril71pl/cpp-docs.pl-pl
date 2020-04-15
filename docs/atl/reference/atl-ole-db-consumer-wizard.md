@@ -4,191 +4,191 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 16b2863bc3919edadeef29691c4588838010d9dc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319269"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
 ::: moniker range="vs-2019"
 
-Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Ten kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych przy użyciu określonego dostawcy OLE DB.
+Ten kreator konfiguruje klasę konsumenta ole db z powiązaniami danych niezbędnymi do uzyskania dostępu do określonego źródła danych za pośrednictwem określonego dostawcy ole db.
 
 > [!NOTE]
-> Ten kreator, należy kliknąć przycisk **źródła danych** przycisk, aby wybrać źródło danych, przed wpisaniem nazw w `Class` i **plik .h klasy** pola.
+> Ten kreator wymaga kliknięcia przycisku **Źródło danych,** aby wybrać `Class` źródło danych przed wprowadzeniem nazw w polach pliku i **.h.**
 
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Źródło danych**
 
-   **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Po kliknięciu tego przycisku **właściwości Linku danych** pojawi się okno dialogowe. Aby uzyskać więcej informacji na temat tworzenia parametrów połączenia i **właściwości Linku danych** okno dialogowe, zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102(v=vs.85)) w dokumentacji zestawu Windows SDK.
+   Przycisk **Źródło danych** umożliwia skonfigurowanie określonego źródła danych przy użyciu określonego dostawcy ole db. Po kliknięciu tego przycisku zostanie wyświetlone okno dialogowe **Właściwości łącza** danych. Aby uzyskać więcej informacji na temat tworzenia ciągów połączeń i okna dialogowego **Właściwości łącza danych,** zobacz [Omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102(v=vs.85)) w dokumentacji zestawie Windows SDK.
 
-   Następujące dodatkowe informacje w tym artykule opisano ustawienia na kartach **właściwości Linku danych** okno dialogowe.
+   Poniżej znajdują się dodatkowe informacje opisujące karty w oknie dialogowym **Właściwości łącza danych.**
 
-   - **Dostawca** kartę
+  - Karta **Dostawca**
 
-      Wybierz odpowiedniego dostawcę, zarządzać połączeniem ze źródła danych. Typ dostawcy zazwyczaj jest określana przez typ bazy danych, z którym chcesz się połączyć. Kliknij przycisk **dalej** przycisku, lub kliknij przycisk **połączenia** kartę.
+      Wybierz odpowiedniego dostawcę do zarządzania połączeniem ze źródłem danych. Typ dostawcy jest zazwyczaj określany przez typ bazy danych, z którą nawiązujesz połączenie. Kliknij przycisk **Dalej** lub kliknij kartę **Połączenie.**
 
-   - **Połączenie** kartę
+  - **Karta Połączenie**
 
-      Zawartość na tej karcie zależą od wybranego dostawcy. Chociaż istnieje wiele typów dostawców, w tej sekcji omówiono połączenia dwóch typowych: Dane SQL i ODBC. Inne są podobne zmiany w polach opisane w tym miejscu.
+      Zawartość tej karty zależy od wybranego dostawcy. Chociaż istnieje wiele typów dostawców, w tej sekcji opisano połączenia dla dwóch najczęstszych: danych SQL i ODBC. Pozostałe są podobne odmiany na polach opisanych tutaj.
 
-      Dla danych SQL:
+      W przypadku danych SQL:
 
-      1. **Wybierz lub wprowadź nazwę serwera:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkich danych zarejestrowanych serwerów w sieci, a następnie wybierz jedno.
+      1. **Wybierz lub wprowadź nazwę serwera:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane serwery danych w sieci, a następnie wybierz jeden z nich.
 
-      1. **Wprowadź informacje o logowaniu się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje, aby zalogować się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
          > [!NOTE]
-         > Istnieje problem z zabezpieczeniami, za pomocą funkcji "Zezwalaj na zapisywanie hasła" okno dialogowe właściwości połączenia danych. W polu "Wprowadź informacje do logowania się do serwera" istnieją dwa przyciski radiowe:
+         > Wystąpił problem z zabezpieczeniami funkcji "Zezwalaj na zapisywanie hasła" w oknie dialogowym Właściwości łącza danych. W części "Wprowadź informacje, aby zalogować się do serwera", istnieją dwa przyciski radiowe:
          >
-         > - **Użyj zabezpieczeń Windows NT zintegrowane**
-         > - **Użyj określonej nazwy użytkownika i hasła**
+         > - **Korzystanie ze zintegrowanych zabezpieczeń systemu Windows NT**
+         > - **Używanie określonej nazwy użytkownika i hasła**
          >
-         > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu pola wyboru "Zezwalaj na zapisywanie hasła"); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja jest bezpieczna, ponieważ jego szyfruje hasło.
-         > Może to być sytuacje, w których chcesz wybrać "Zezwalaj na zapisywanie hasła." Na przykład jeśli są zwalnianie biblioteki za pomocą rozwiązania prywatnej bazy danych, możesz powinna nie bezpośrednio dostęp do bazy danych, ale zamiast tego użyć aplikacji warstwy środkowej do weryfikacji użytkownika (za pośrednictwem dowolnego schematu uwierzytelniania, możesz wybrać), a następnie ograniczyć sortowanie danych dostępne dla użytkownika.
+         > Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła,** masz możliwość zapisania hasła (używając pola wyboru "Zezwalaj na zapisywanie hasła"); jednak ta opcja nie jest bezpieczna. Zaleca się wybranie opcji **Użyj zintegrowanych zabezpieczeń systemu Windows NT;** ta opcja jest bezpieczna, ponieważ szyfruje hasło.
+         > Mogą wystąpić sytuacje, w których chcesz wybrać opcję "Zezwalaj na zapisywanie hasła". Na przykład jeśli zwalniasz bibliotekę z rozwiązaniem prywatnej bazy danych, nie należy uzyskiwać dostępu do bazy danych bezpośrednio, ale zamiast tego użyć aplikacji warstwy środkowej, aby zweryfikować użytkownika (za pośrednictwem dowolnego schematu uwierzytelniania), a następnie ograniczyć rodzaj danych dostępnych dla użytkownika.
 
-      1. **Wybierz bazę danych na serwerze:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane baz danych na serwerze danych, a następnie wybierz jedno.
+      1. **Wybierz bazę danych na serwerze:** Kliknij menu listy rozwijanej, aby wyświetlić wszystkie zarejestrowane bazy danych na serwerze danych, a następnie wybierz jedną z nich.
 
-         \- lub —
+         \-lub -
 
-         **Dołącz plik bazy danych jako nazwę bazy danych:** Określ plik, który ma być używany jako bazy danych. Wprowadź jawną nazwę ścieżki.
+         **Dołącz plik bazy danych jako nazwę bazy danych:** Określ plik, który ma być używany jako baza danych; wprowadzić jawną nazwa ścieżki.
 
       Dla danych ODBC:
 
-      1. **Określ źródło danych:** Można użyć nazwy źródła danych lub parametrów połączenia.
+      1. **Określ źródło danych:** Można użyć nazwy źródła danych lub ciągu połączenia.
 
-         **Użyj nazwy źródła danych:** Tej listy rozwijanej wyświetla źródła danych zarejestrowane na tym komputerze. Możesz skonfigurować źródła danych, które wcześniej przy użyciu Administratora źródła danych ODBC
+         **Użyj nazwy źródła danych:** Ta lista rozwijana zawiera źródła danych zarejestrowane w komputerze. Źródła danych można skonfigurować z wyprzedzeniem za pomocą administratora źródła danych ODBC
 
-         \- lub —
+         \-lub -
 
-         **Użyj parametrów połączenia:** Wprowadź parametry połączenia, już uzyskali, lub kliknij przycisk **kompilacji** przycisk; **wybierz źródło danych** pojawi się okno dialogowe. Wybierz źródło danych maszyny lub pliku, a następnie kliknij przycisk **OK**.
+         **Użyj ciągu połączenia:** Wprowadź już uzyskany ciąg połączenia lub kliknij przycisk **Buduj;** zostanie wyświetlone okno dialogowe **Wybieranie źródła** danych. Wybierz źródło danych pliku lub komputera i kliknij przycisk **OK**.
 
          > [!NOTE]
-         > Parametry połączenia można uzyskać, wyświetlając właściwości istniejącego połączenia w **Eksploratora serwera**, lub można utworzyć połączenie przez dwukrotne kliknięcie **Dodaj połączenie** w **serwera Eksplorator**.
+         > Parametry połączenia można uzyskać, przeglądając właściwości istniejącego połączenia w **Eksploratorze serwera**lub można utworzyć połączenie, klikając dwukrotnie **pozycję Dodaj połączenie** w **Eksploratorze serwera**.
 
-      1. **Wprowadź informacje o logowaniu się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
+      1. **Wprowadź informacje, aby zalogować się do serwera:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
-      1. Wprowadź początkowy katalog do użycia.
+      1. Wprowadź katalog początkowy do użycia.
 
-      1. Kliknij przycisk **Testuj połączenie**; Jeśli test zakończy się pomyślnie, kliknij przycisk **OK**. W przeciwnym razie sprawdź informacje logowania, spróbuj innej bazy danych lub spróbować innego serwera danych.
+      1. Kliknij **przycisk Test Połączenia**; jeśli test zakończy się pomyślnie, kliknij przycisk **OK**. Jeśli nie, sprawdź informacje logowania, spróbuj innej bazy danych lub spróbuj użyć innego serwera danych.
 
-   - **Zaawansowane** kartę
+  - Karta **Zaawansowane**
 
-      **Ustawienia sieci:** Określ **poziom personifikacji** (poziom personifikacji, serwer może być używany podczas personifikowania klienta; odpowiada bezpośrednio z poziomu personifikacji RPC) i **poziom ochrony** () poziom ochrony danych przesyłanych między klientem i serwerem; odpowiada bezpośrednio poziomów ochrony RPC).
+      **Ustawienia sieciowe:** Określ **poziom personifikacji** (poziom personifikacji, którego serwer może używać podczas personifikacji klienta; odpowiada bezpośrednio poziomom personifikacji RPC) i **poziom ochrony** (poziom ochrony danych wysyłanych między klientem a serwerem; odpowiada bezpośrednio poziomom ochrony RPC).
 
-      **Inne:** W **limit czasu połączenia**, określ czas w sekundach czas bezczynności, zanim zostanie przekroczony limit czasu. W **uprawnień dostępu**, określanie uprawnień dostępu w ramach połączenia danych.
+      **Inne:** W **obszarze Limit czasu połączenia**określ liczbę sekund czasu bezczynności dozwoloną przed wystąpieniem limitu czasu. W **obszarze Uprawnienia programu Access**określ uprawnienia dostępu do połączenia danych.
 
-      Aby uzyskać więcej informacji na temat zaawansowanych właściwości inicjujących zapoznaj się z dokumentacją dostarczoną z każdego dostawcy OLE DB.
+      Aby uzyskać więcej informacji na temat zaawansowanych właściwości inicjowania, zapoznaj się z dokumentacją dostarczoną z każdym konkretnym dostawcą ole db.
 
-   - **Wszystkie** kartę
+  - **Karta Wszystkie**
 
-      Ta karta przedstawia podsumowanie właściwości inicjowania dla źródła danych i połączenia, które zostały określone. Możesz edytować te wartości.
+      Na tej karcie jest wyświetlane podsumowanie właściwości inicjowania określonego źródła danych i połączenia. Wartości te można edytować.
 
-      Kliknij przycisk **OK**, aby zakończyć. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę, widoku lub procedury składowanej, która będzie używana przez konsumenta.
+      Kliknij przycisk **OK**, aby zakończyć. Zostanie wyświetlone okno dialogowe **Wybierz obiekt bazy danych.** W tym oknie dialogowym wybierz tabelę, widok lub procedurę składowaną, której będzie używać konsument.
 
-- **Class**
+- **Klasa**
 
-   Po wybraniu źródła danych, to pole jest wypełniane domyślną nazwę klasy na podstawie tabeli lub procedury składowanej, które wybrano (zobacz **wybierz źródło danych** poniżej). Można edytować nazwę klasy.
+   Po wybraniu źródła danych to pole jest wypełniane domyślną nazwą klasy na podstawie wybranej tabeli lub procedury składowanej (zobacz **Wybieranie źródła danych** poniżej). Można edytować nazwę klasy.
 
-- **plik .h**
+- **.h plik**
 
-   Po wybraniu źródła danych, to pole jest wypełniane domyślną nazwę klasy nagłówek na podstawie tabeli lub procedury składowanej, które wybrano (zobacz **wybierz źródło danych** poniżej). Możesz zmienić nazwę pliku nagłówka, lub wybrać istniejący plik nagłówkowy.
+   Po wybraniu źródła danych to pole jest wypełniane domyślną nazwą klasy nagłówka na podstawie wybranej tabeli lub procedury składowanej (zobacz **Wybieranie źródła danych** poniżej). Można edytować nazwę pliku nagłówka lub wybrać istniejący plik nagłówka.
 
-- **Opartego na atrybutach**
+- **Przypisane**
 
-   Ta opcja określa, czy Kreator utworzy klasy konsumentów przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji, kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna). Jeśli wyłączysz tę opcję, kreator używa deklaracji szablonu zamiast atrybutów.
+   Ta opcja określa, czy kreator utworzy klasy konsumentów przy użyciu atrybutów lub deklaracji szablonów. Po wybraniu tej opcji kreator używa atrybutów zamiast deklaracji szablonów (jest to opcja domyślna). Po usunięciu zaznaczenia tej opcji kreator używa deklaracji szablonów zamiast atrybutów.
 
-   - Po wybraniu odbiorcy **typu** z **tabeli**, kreator używa `db_source` i `db_table` atrybutów, aby utworzyć tabelę i metoda dostępu do tabeli deklaracje klas i używa `db_column` do Tworzenie mapy kolumny. Na przykład tworzy tej mapy:
+  - W przypadku wybrania **opcji Typ** **tabeli** `db_source` dla `db_table` konsumenta kreator używa atrybutów i atrybutów `db_column` do tworzenia deklaracji klas akcesorów tabeli i tabeli oraz używa do utworzenia mapy kolumn. Na przykład tworzy tę mapę:
 
-        ```cpp
-        // Inject table class and table accessor class declarations
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]
-        ...
-        // Column map
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
-        ...
-        ```
+    ```cpp
+    // Inject table class and table accessor class declarations
+    [db_source("<initialization_string>"), db_table("dbo.Orders")]
+    ...
+    // Column map
+    [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+    [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
+    ...
+    ```
 
-      zamiast używania `CTable` klasy szablonu, aby zadeklarować w tabeli i akcesora tabeli i BEGIN_COLUMN_MAP i END_COLUMN_MAP makra do tworzenia mapy kolumny, jak w poniższym przykładzie:
+     zamiast używać klasy `CTable` szablonu do deklarowania klasy akcesora tabeli i tabeli oraz BEGIN_COLUMN_MAP i END_COLUMN_MAP makra do utworzenia mapy kolumn, jak w tym przykładzie:
 
-        ```cpp
-        // Table accessor class
-            class COrdersAccessor; // Table class
-            class COrders : public CTable<CAccessor<COrdersAccessor>>;
-        // ...
-        // Column map
-            BEGIN_COLUMN_MAP(COrderDetailsAccessor)
-                COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
-                COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...
-            END_COLUMN_MAP()
-        ```
+    ```cpp
+    // Table accessor class
+        class COrdersAccessor; // Table class
+        class COrders : public CTable<CAccessor<COrdersAccessor>>;
+    // ...
+    // Column map
+        BEGIN_COLUMN_MAP(COrderDetailsAccessor)
+            COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
+            COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
+            // ...
+        END_COLUMN_MAP()
+    ```
 
-   - Po wybraniu odbiorcy **typu** z **polecenia**, kreator używa `db_source` i `db_command` atrybutów i używa `db_column` do tworzenia mapy kolumny. Na przykład tworzy tej mapy:
+  - Jeśli wybierzesz **typ** **polecenia**konsumenta, `db_source` kreator `db_command` użyje atrybutów i atrybutów oraz użyje `db_column` do utworzenia mapy kolumny. Na przykład tworzy tę mapę:
 
-        ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]
-        ...
-        // Column map using db_column is the same as for consumer type of 'table'
-        ```
+    ```cpp
+    [db_source("<initialization_string>"), db_command("SQL_command")]
+    ...
+    // Column map using db_column is the same as for consumer type of 'table'
+    ```
 
-      Zamiast korzystać z poleceń i polecenia deklaracjach metod dostępu do klasy w pliku .h klasy poleceń, na przykład:
+     zamiast używać deklaracji klasy dostępu do polecenia i polecenia w pliku .h klasy polecenia, na przykład:
 
-        ```cpp
-        // Command accessor class:
-            class CListOrdersAccessor;
-        // Command class:
-            class CListOrders : public CCommand<CAccessor<CListOrdersAccessor>>;
-        // ...
-        // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
-        // for consumer type of 'table'
-        ```
+    ```cpp
+    // Command accessor class:
+        class CListOrdersAccessor;
+    // Command class:
+        class CListOrders : public CCommand<CAccessor<CListOrdersAccessor>>;
+    // ...
+    // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
+    // for consumer type of 'table'
+    ```
 
-      Zobacz [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
+     Aby uzyskać więcej informacji, zobacz [Podstawowa mechanika atrybutów.](../../windows/basic-mechanics-of-attributes.md)
 
 - **Typ**
 
-   Wybierz jedną z tych przycisków radiowych, aby określić, czy klasa odbiorcy będą pochodzić z `CTable` lub `CCommand` (ustawienie domyślne).
+   Wybierz jeden z tych przycisków radiowych, aby `CTable` określić, czy klasa konsumenta będzie pochodną lub `CCommand` (domyślnie).
 
-   - **Tabela**
+  - **Tabeli**
 
-      Wybierz tę opcję, jeśli chcesz używać `CTable` lub `db_table` utworzyć tabelę i metoda dostępu do tabeli deklaracji klasy.
+      Tę opcję należy zaznaczyć, jeśli chcesz użyć `CTable` lub `db_table` utworzyć deklaracje klas akcesorów tabeli i tabeli.
 
-   - **Polecenie**
+  - **Polecenie**
 
-      Wybierz tę opcję, jeśli chcesz używać `CCommand` lub `db_command` do tworzenia poleceń i polecenia akcesor deklaracji klasy. To ustawienie domyślne.
+      Tę opcję należy zaznaczyć, jeśli chcesz użyć `CCommand` lub `db_command` utworzyć deklaracje klasy akcesora poleceń i poleceń. Jest to wybór domyślny.
 
 - **Pomoc techniczna**
 
-   Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) i odpowiednie wpisy [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) we właściwości ustaw mapy.
+   Zaznacz pola wyboru, aby określić rodzaje aktualizacji, które mają być obsługiwane przez konsumenta (wartość domyślna to brak). Każdy z poniższych zestaw [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) i odpowiednie wpisy dla [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) na mapie zestawu właściwości.
 
-   - **Change**
+  - **Zmień**
 
-      Określa, że odbiorcy obsługuje aktualizacje danych wierszy w zestawie wierszy.
+      Określa, że konsument obsługuje aktualizacje danych wiersza w zestawie wierszy.
 
-   - **Wstaw**
+  - **Insert**
 
-      Określa, że użytkownik obsługuje wstawiania wierszy do zestawu wierszy.
+      Określa, że obsługa obsługi klienta wstawiania wierszy do zestawu wierszy.
 
-   - **Delete**
+  - **Usuwanie**
 
-      Określa, że odbiorcy obsługuje usuwania wierszy z zestawu wierszy.
+      Określa, że obsługa klienta usunięcie wierszy z zestawu wierszy.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Konsumenta ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[ATL OLE DB Konsument](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Parametry połączenia i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))
+[Parametry połączenia i łącza danych (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))

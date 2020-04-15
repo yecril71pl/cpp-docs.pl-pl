@@ -1,6 +1,6 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncat
 - _strncat_l
@@ -8,6 +8,8 @@ api_name:
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
+- _o__mbsncat
+- _o__mbsncat_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364210"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
-Dołącza znaki ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne, zobacz [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
+Dołącza znaki ciągu. Dostępne są bezpieczniejsze wersje tych funkcji, zobacz [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
 
 > [!IMPORTANT]
-> **_mbsncat** i **_mbsncat_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** i **_mbsncat_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -128,55 +131,57 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strDest*<br/>
-Ciąg docelowy zakończony wartością null.
+*strDest (strDest)*<br/>
+Ciąg docelowy zakończony z wartością null.
 
-*strSource*<br/>
-Ciąg źródłowy zakończony wartością null.
+*strSource (źródło usług strSource)*<br/>
+Ciąg źródłowy zakończony z wartością null.
 
-*liczbą*<br/>
-Liczba znaków do dołączenia.
+*Liczba*<br/>
+Liczba znaków do doskładniania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do ciągu docelowego. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+Zwraca wskaźnik do ciągu docelowego. Żadna wartość zwracana nie jest zarezerwowana, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strncat** dołącza co najwyżej *liczbę pierwszych znaków* *strSource* do *strDest*. Początkowy znak *strSource* zastępuje kończący znak null z *strDest*. Jeśli znak null zostanie wyświetlony w *strSource* przed dołączeniem znaków *Count* , **strncat** dołącza wszystkie znaki z *strSource*, do znaku null. Jeśli *Liczba* jest większa niż długość *StrSource*, długość *strSource* jest używana zamiast *liczby*. We wszystkich przypadkach otrzymany ciąg jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **strncat** dołącza co najwyżej pierwsze znaki *zliczania* *strSource* do *strDest*. Początkowy znak *strSource* zastępuje kończący się znak zerowy *strDest*. Jeśli znak zerowy pojawia się w *strSource* przed *zliczanie* znaków są dołączane, **strncat** dołącza wszystkie znaki z *strSource*, do znaku null. Jeśli *liczba* jest większa niż długość *strSource*, długość *strSource* jest używany w miejsce *count*. Wszystkie przypadki wynikowy ciąg jest zakończony znakiem zerowym. Jeśli kopiowanie odbywa się między ciągami, które nakładają się na siebie, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> **strncat** nie sprawdza wystarczającej ilości miejsca w *strDest*; w związku z tym jest to potencjalna przyczyna przepełnienia buforu. Należy pamiętać, że *licznik* ogranicza liczbę znaków dołączanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncat** nie sprawdza wystarczającej ilości miejsca w *strDest;* jest zatem potencjalną przyczyną przekroczenia buforu. Należy pamiętać, że *liczba* ogranicza liczbę znaków dołączanych; nie jest to ograniczenie wielkości *strDest*. Zobacz przykład poniżej. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** i **_mbsncat** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strncat**. Argumenty ciągów i wartość zwracana przez **wcsncat** są ciągami znaków dwubajtowych; te z **_mbsncat** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
+**wcsncat** i **_mbsncat** są wersjami **strncat o**szerokich i wielobajtowych znakach. Argumenty ciągu i zwracana wartość **wcsncat** są ciągami znaków szerokich; **_mbsncat** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie inaczej.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W C++programie te funkcje mają przeciążenia szablonów. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncat**|**strncat**|**_mbsnbcat**|**wcsncat**|
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** i **_wcsncat_l** nie są zależne od ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_tcsncat_l**.
+> **_strncat_l** i **_wcsncat_l** nie mają zależności od lokalizacji i nie mają być wywoływane bezpośrednio. Są one przeznaczone do użytku wewnętrznego przez **_tcsncat_l**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
-|**wcsncat**|\<ciąg. h > lub \<WCHAR. h >|
+|**wcsncat**|\<string.h> lub \<wchar.h>|
 |**_mbsncat**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -227,7 +232,7 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 
 Należy zauważyć, że **BadAppend** spowodował przepełnienie buforu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
@@ -240,5 +245,5 @@ Należy zauważyć, że **BadAppend** spowodował przepełnienie buforu.
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

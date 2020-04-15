@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e747eda42e625d0f4cf65859e471933bbb043ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369092"
 ---
 # <a name="cd2dresource-class"></a>Klasa CD2DResource
 
-Abstrakcyjna klasa, która zapewnia interfejs do tworzenia i zarządzania zasobami D2D, takimi jak pędzle, warstwy i teksty.
+Klasa abstrakcyjna, która udostępnia interfejs do tworzenia i zarządzania zasobami D2D, takimi jak pędzle, warstwy i teksty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,34 +45,34 @@ class CD2DResource : public CObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DResource::CD2DResource](#cd2dresource)|Tworzy obiekt CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt zasobów D2D.|
+|[CD2DResource::CD2DResource](#cd2dresource)|Konstruuje obiekt CD2DResource.|
+|[CD2DResource::~CD2DResource](#_dtorcd2dresource)|Destruktor. Wywoływane, gdy obiekt zasobu D2D jest niszczony.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DResource::Create](#create)|Tworzy CD2DResource.|
-|[CD2DResource::Destroy](#destroy)|Niszczy obiekt CD2DResource.|
-|[CD2DResource::IsValid](#isvalid)|Sprawdzanie zasobów ważności|
+|[CD2DResource::Tworzenie](#create)|Tworzy CD2DResource.|
+|[CD2DResource::Destroy](#destroy)|Niszczy CD2DResource obiektu.|
+|[CD2DResource::IsValid](#isvalid)|Sprawdza ważność zasobu|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DResource::IsAutoDestroy](#isautodestroy)|Automatycznego wyboru zniszczyć flagi.|
-|[CD2DResource::ReCreate](#recreate)|Ponownie tworzy CD2DResource.|
+|[CD2DResource::IsAutoDestroy](#isautodestroy)|Sprawdź flagę automatycznego niszczenia.|
+|[CD2DResource::Odtwórz](#recreate)|Ponownie tworzy CD2DResource.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Zasób jest niszczony przez właściciela (CRenderTarget)|
-|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Wskaźnik do elementu nadrzędnego CRenderTarget)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Zasób zostanie zniszczony przez właściciela (CRenderTarget)|
+|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Wskaźnik do nadrzędnego CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CD2DResource`
 
@@ -80,17 +80,17 @@ class CD2DResource : public CObject;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2DResource::~CD2DResource
 
-Destruktor. Wywołuje się, kiedy niszczony jest obiekt zasobów D2D.
+Destruktor. Wywoływane, gdy obiekt zasobu D2D jest niszczony.
 
 ```
 virtual ~CD2DResource();
 ```
 
-##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DResource::CD2DResource
 
-Tworzy obiekt CD2DResource.
+Konstruuje obiekt CD2DResource.
 
 ```
 CD2DResource(
@@ -101,12 +101,12 @@ CD2DResource(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-##  <a name="create"></a>  CD2DResource::Create
+## <a name="cd2dresourcecreate"></a><a name="create"></a>CD2DResource::Tworzenie
 
 Tworzy CD2DResource.
 
@@ -117,23 +117,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DResource::Destroy
+## <a name="cd2dresourcedestroy"></a><a name="destroy"></a>CD2DResource::Destroy
 
-Niszczy obiekt CD2DResource.
+Niszczy CD2DResource obiektu.
 
 ```
 virtual void Destroy() = 0;
 ```
 
-##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy
+## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DResource::IsAutoDestroy
 
-Automatycznego wyboru zniszczyć flagi.
+Sprawdź flagę automatycznego niszczenia.
 
 ```
 BOOL IsAutoDestroy() const;
@@ -141,11 +141,11 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli obiekt jest niszczony udzielonej przez właściciela; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli obiekt zostanie zniszczony przez jego właściciela; w przeciwnym razie FALSE.
 
-##  <a name="isvalid"></a>  CD2DResource::IsValid
+## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DResource::IsValid
 
-Sprawdzanie zasobów ważności
+Sprawdza ważność zasobu
 
 ```
 virtual BOOL IsValid() const = 0;
@@ -153,25 +153,25 @@ virtual BOOL IsValid() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli zasób jest prawidłowy; w przeciwnym razie FALSE.
 
-##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
+## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy
 
-Zasób jest niszczony przez właściciela (CRenderTarget)
+Zasób zostanie zniszczony przez właściciela (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;
 ```
 
-##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget
+## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget
 
-Wskaźnik do elementu nadrzędnego CRenderTarget)
+Wskaźnik do nadrzędnego CRenderTarget)
 
 ```
 CRenderTarget* m_pParentTarget;
 ```
 
-##  <a name="recreate"></a>  CD2DResource::ReCreate
+## <a name="cd2dresourcerecreate"></a><a name="recreate"></a>CD2DResource::Odtwórz
 
 Ponownie tworzy CD2DResource.
 
@@ -182,12 +182,12 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

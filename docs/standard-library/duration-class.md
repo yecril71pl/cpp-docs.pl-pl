@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3669935bf094f476ca24a8170a0388dff29e0a0c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368751"
 ---
 # <a name="duration-class"></a>duration — Klasa
 
-Opisuje typ, który zawiera *przedział czasu*, który jest czas, który upłynął między dwoma punktami czasu.
+Opisuje typ, który przechowuje *przedział czasu*, który jest czas, który upłynął między dwoma punktami czasu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,55 +35,55 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ## <a name="remarks"></a>Uwagi
 
-Argument `Rep` szablonu opisuje typ, który jest używany do przechowywania liczby taktów zegara w interwale. Argument `Period` szablonu jest wystąpieniem [współczynnika](../standard-library/ratio.md) opisującym rozmiar interwału reprezentowanego przez poszczególne znaczniki.
+Argument `Rep` szablonu opisuje typ, który jest używany do przechowywania liczby znaczników zegara w interwale. Argument `Period` szablonu jest wystąpienie [współczynnika,](../standard-library/ratio.md) który opisuje rozmiar interwału, który reprezentuje każdy znacznik.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|czas trwania::p eriod typedef|Reprezentuje synonim dla parametru `Period`szablonu.|
-|Duration:: przedstawiciel typedef|Reprezentuje synonim dla parametru `Rep`szablonu.|
+|czas trwania::period Typedef|Reprezentuje synonim parametru `Period`szablonu .|
+|czas trwania::rep Typedef|Reprezentuje synonim parametru `Rep`szablonu .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Czas trwania](#duration)|Konstruuje `duration` obiekt.|
+|[Długość](#duration)|Konstruuje `duration` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[liczbą](#count)|Zwraca liczbę taktów zegara w przedziale czasu.|
-|[max](#max)|Ruchom. Zwraca maksymalną dozwoloną wartość parametru `Ref`szablonu.|
-|[min](#min)|Ruchom. Zwraca najmniejszą dozwoloną wartość parametru `Ref`szablonu.|
-|[zero](#zero)|Ruchom. W efekcie zwraca `Rep`(0).|
+|[Liczba](#count)|Zwraca liczbę znaczników zegara w przedziale czasu.|
+|[Max](#max)|Statyczny. Zwraca maksymalną dopuszczalną wartość `Ref`parametru szablonu .|
+|[Min](#min)|Statyczny. Zwraca najniższą dopuszczalną wartość `Ref`parametru szablonu .|
+|[Zero](#zero)|Statyczny. W efekcie `Rep`zwraca (0).|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Duration:: operator-](#operator-)|Zwraca kopię `duration` obiektu wraz z negacją liczby taktów.|
-|[Duration:: operator--](#operator--)|Zmniejsza liczbę przechowywanych cykli.|
-|[Duration:: operator =](#op_eq)|Zmniejsza liczbę przechowywanych znaczników modulo określoną wartość.|
-|[duration::operator*=](#op_star_eq)|Mnoży liczbę przechowywanych cykli przez określoną wartość.|
-|[Duration:: operator/=](#op_div_eq)|Dzieli liczbę przechowywanych cykli przez liczbę cykli określonego `duration` obiektu.|
-|[Duration:: operator +](#op_add)|Zwraca `*this`wartość.|
-|[Duration:: operator + +](#op_add_add)|Zwiększa liczbę przechowywanych cykli.|
-|[Duration:: operator + =](#op_add_eq)|Dodaje liczbę cykli określonego `duration` obiektu do liczby przechowywanych cykli.|
-|[Duration:: operator-=](#operator-_eq)|Odejmuje liczbę cykli określonego `duration` obiektu od liczby przechowywanych cykli.|
+|[czas trwania::operator-](#operator-)|Zwraca kopię `duration` obiektu wraz z zanegowanym liczbą znaczników.|
+|[czas trwania::operator--](#operator--)|Zmniejsza liczbę przechowywanych znaczników.|
+|[czas trwania::operator=](#op_eq)|Zmniejsza liczbę przechowywanych znaczników modulo określoną wartość.|
+|[czas trwania::operator*=](#op_star_eq)|Mnoży liczbę przechowywanych znaczników przez określoną wartość.|
+|[czas trwania::operator/=](#op_div_eq)|Dzieli liczbę przechowywanych znaczników przez liczbę `duration` znaczników określonego obiektu.|
+|[czas trwania::operator+](#op_add)|Zwraca wartość `*this`.|
+|[czas trwania::operator++](#op_add_add)|Zwiększa liczbę przechowywanych znaczników.|
+|[czas trwania::operator+=](#op_add_eq)|Dodaje liczbę znaczników `duration` określonego obiektu do przechowywanej liczby znaczników.|
+|[czas trwania::operator-=](#operator-_eq)|Odejmuje liczbę znaczników `duration` określonego obiektu od przechowywanej liczby znaczników.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<Chrono >
+**Nagłówek:** \<chrono>
 
-**Przestrzeń nazw:** std:: Chrono
+**Przestrzeń nazw:** std::chrono
 
-## <a name="count"></a>czas trwania:: Count
+## <a name="durationcount"></a><a name="count"></a>czas trwania::count
 
-Pobiera liczbę taktów zegara w przedziale czasowym.
+Pobiera liczbę znaczników zegara w przedziale czasu.
 
 ```cpp
 constexpr Rep count() const;
@@ -91,9 +91,9 @@ constexpr Rep count() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba taktów zegara w przedziale czasu.
+Liczba znaczników zegara w przedziale czasu.
 
-## <a name="duration"></a>czas trwania::d Konstruktor wersja
+## <a name="durationduration-constructor"></a><a name="duration"></a>czas trwania::duration Constructor
 
 Konstruuje `duration` obiekt.
 
@@ -109,35 +109,35 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Rep2*\
-Typ arytmetyczny reprezentujący liczbę taktów.
+*Rep2 (właspr.*\
+Typ arytmetyczny reprezentujący liczbę znaczników.
 
-*Period2*\
-Specjalizacja `std::ratio` szablonu reprezentująca okres taktu w jednostkach sekund.
+*Okres2*\
+Specjalizacja `std::ratio` szablonu reprezentująca okres znacznika w jednostkach sekund.
 
 *R*\
-Liczba taktów okresu domyślnego.
+Liczba znaczników okresu domyślnego.
 
-*Trwania*\
-Liczba taktów okresu określonego przez *Period2*.
+*Dur (Dur)*\
+Liczba znaczników okresu określonego przez *Okres2*.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor domyślny konstruuje obiekt, który jest niezainicjowany. Inicjowanie wartości za pomocą pustych nawiasów klamrowych inicjuje obiekt, który reprezentuje przedział czasu równy zero Takty zegara.
+Domyślny konstruktor tworzy obiekt, który jest niezainicjowany. Inicjowanie wartości przy użyciu pustych nawiasów klamrowych inicjuje obiekt, który reprezentuje przedział czasu zero znaczników zegara.
 
-Drugi Konstruktor argumentów szablonu konstruuje obiekt, który reprezentuje przedział czasu w Takty *języka R* przy użyciu domyślnego okresu `std::ratio<1>`. Aby uniknąć zaokrąglania liczby taktów, występuje błąd podczas konstruowania obiektu czasu trwania z typu reprezentacji *Rep2* , który może być traktowany jako typ zmiennoprzecinkowy, gdy `duration::rep` nie może być traktowany jako typ zmiennoprzecinkowy.
+Drugi konstruktor argumentów jednego szablonu konstruuje *R* obiekt reprezentujący interwał czasu `std::ratio<1>`znaczników zegara R przy użyciu domyślnego okresu . Aby uniknąć zaokrąglenia liczby znaczników, jest to błąd do konstruowania obiektu czasu trwania z `duration::rep` reprezentacji typu *Rep2,* które mogą być traktowane jako typu zmiennoprzecinkowego, gdy nie mogą być traktowane jako typu zmiennoprzecinkowego.
 
-Trzeci, dwa Konstruktor argumentów szablonu konstruuje obiekt, który reprezentuje przedział czasu, którego długość jest przedział czasu określony przez czas *trwania*. Aby uniknąć obcięcia liczby taktów, występuje błąd podczas konstruowania obiektu czasu trwania z innego obiektu czasu trwania, którego typ jest *niewspółmierny* z typem docelowym.
+Trzeci konstruktor dwóch argumentów szablonu tworzy obiekt reprezentujący przedział czasu, którego długość jest interwałem czasu określonym przez *Dur*. Aby uniknąć obcięcie liczby znaczników, jest to błąd do konstruowania obiektu czasu trwania z innego obiektu czasu trwania, którego typ jest *niewspółmierny* z typem docelowym.
 
-Typ `D1` czasu trwania jest *niewspółmierny* z innym typem `D2` czasu trwania, jeśli `D2` nie może być traktowany jako typ zmiennoprzecinkowy i [ratio_divide\<D1::p eriod, D2::p eriod >:: Type::d pl](../standard-library/ratio.md) nie jest 1.
+Typ `D1` czasu trwania jest *niewspółmierny* z innym `D2` typem czasu trwania, jeśli `D2` nie można traktować jako typu zmiennoprzecinkowego i ratio_divide [\<D1::period, D2::period>::type::den](../standard-library/ratio.md) nie jest 1.
 
-O *ile Rep2* nie jest niejawnie konwertowany `treat_as_floating_point<rep>`do `rep` i ma `treat_as_floating_point<Rep2>` *wartość true lub ma* *wartość false*, drugi Konstruktor nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+O ile *Rep2* jest `rep` niejawnie `treat_as_floating_point<rep>`konwertowane i albo *posiada true* lub `treat_as_floating_point<Rep2>`posiada *false,* drugi konstruktor nie uczestniczy w rozpoznawania przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-Chyba że żadne przepełnienie nie jest wywołane `treat_as_floating_point<rep>`w konwersji i *ma wartość true*, lub `treat_as_floating_point<Rep2>`obie `ratio_divide<Period2, period>::den` są równe 1 i ma *wartość false*, trzeci Konstruktor nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+O ile konwersja nie jest `treat_as_floating_point<rep>`indukowana przepełnienie i `treat_as_floating_point<Rep2>`utrzymuje się na wartości *1*lub oba `ratio_divide<Period2, period>::den` są równe 1 i są *false*, trzeci konstruktor nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="max"></a>czas trwania:: max
+## <a name="durationmax"></a><a name="max"></a>czas trwania::maks.
 
-Metoda statyczna zwracająca górną granicę dla wartości typu `Ref`parametru szablonu.
+Metoda statyczna, która zwraca górną granicę dla wartości typu `Ref`parametru szablonu .
 
 ```cpp
 static constexpr duration max();
@@ -145,11 +145,11 @@ static constexpr duration max();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W efekcie zwraca wartość `duration(duration_values<rep>::max())`.
+W efekcie `duration(duration_values<rep>::max())`zwraca .
 
-## <a name="min"></a>czas trwania:: min
+## <a name="durationmin"></a><a name="min"></a>czas trwania::min
 
-Metoda statyczna zwracająca dolną granicę dla wartości typu `Ref`parametru szablonu.
+Metoda statyczna, która zwraca dolną granicę dla wartości typu `Ref`parametru szablonu .
 
 ```cpp
 static constexpr duration min();
@@ -157,19 +157,19 @@ static constexpr duration min();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W efekcie zwraca wartość `duration(duration_values<rep>::min())`.
+W efekcie `duration(duration_values<rep>::min())`zwraca .
 
-## <a name="operator-"></a>Duration:: operator-
+## <a name="durationoperator-"></a><a name="operator-"></a>czas trwania::operator-
 
-Zwraca kopię `duration` obiektu wraz z negacją liczby taktów.
+Zwraca kopię `duration` obiektu wraz z zanegowanym liczbą znaczników.
 
 ```cpp
 constexpr duration operator-() const;
 ```
 
-## <a name="operator--"></a>Duration:: operator--
+## <a name="durationoperator--"></a><a name="operator--"></a>czas trwania::operator--
 
-Zmniejsza liczbę przechowywanych cykli.
+Zmniejsza liczbę przechowywanych znaczników.
 
 ```cpp
 duration& operator--();
@@ -179,11 +179,11 @@ duration operator--(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza metoda zwraca `*this`.
+Pierwsza metoda `*this`zwraca .
 
-Druga metoda zwraca kopię `*this` , która jest wykonywana przed zmniejszeniem.
+Druga metoda zwraca kopię `*this` tego jest przed dekrementacji.
 
-## <a name="op_eq"></a>Duration:: operator =
+## <a name="durationoperator"></a><a name="op_eq"></a>czas trwania::operator=
 
 Zmniejsza liczbę przechowywanych znaczników modulo określoną wartość.
 
@@ -195,16 +195,16 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Służąc*\
-Dla pierwszej metody *DIV* reprezentuje liczbę cykli. Dla drugiej metody *DIV* jest `duration` obiektem, który zawiera liczbę cykli.
+*Div*\
+Dla pierwszej metody *Div* reprezentuje liczbę znaczników. Dla drugiej metody *Div* `duration` jest obiektem, który zawiera liczbę znaczników.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`duration` Obiekt po wykonaniu operacji modulo.
+Obiekt `duration` po wykonaniu operacji modulo.
 
-## <a name="op_star_eq"></a>Duration:: operator * =
+## <a name="durationoperator"></a><a name="op_star_eq"></a>czas trwania::operator*=
 
-Mnoży liczbę przechowywanych cykli przez określoną wartość.
+Mnoży liczbę przechowywanych znaczników przez określoną wartość.
 
 ```cpp
 duration& operator*=(const rep& Mult);
@@ -212,16 +212,16 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametry
 
-*Iloczyn*\
-Wartość typu, który jest określony przez `duration::rep`.
+*Mult*\
+Wartość typu określonego przez `duration::rep`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`duration` Obiekt po wykonaniu mnożenia.
+Obiekt `duration` po wykonaniu mnożenia.
 
-## <a name="op_div_eq"></a>Duration:: operator/=
+## <a name="durationoperator"></a><a name="op_div_eq"></a>czas trwania::operator/=
 
-Dzieli liczbę przechowywanych cykli przez określoną wartość.
+Dzieli liczbę przechowywanych znaczników przez określoną wartość.
 
 ```cpp
 duration& operator/=(const rep& Div);
@@ -229,24 +229,24 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Służąc*\
-Wartość typu, który jest określony przez `duration::rep`.
+*Div*\
+Wartość typu określonego przez `duration::rep`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`duration` Obiekt po wykonaniu dzielenia.
+Obiekt `duration` po wykonaniu podziału.
 
-## <a name="op_add"></a>Duration:: operator +
+## <a name="durationoperator"></a><a name="op_add"></a>czas trwania::operator+
 
-Zwraca `*this`wartość.
+Zwraca wartość `*this`.
 
 ```cpp
 constexpr duration operator+() const;
 ```
 
-## <a name="op_add_add"></a>Duration:: operator + +
+## <a name="durationoperator"></a><a name="op_add_add"></a>czas trwania::operator++
 
-Zwiększa liczbę przechowywanych cykli.
+Zwiększa liczbę przechowywanych znaczników.
 
 ```cpp
 duration& operator++();
@@ -256,13 +256,13 @@ duration operator++(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza metoda zwraca `*this`.
+Pierwsza metoda `*this`zwraca .
 
-Druga metoda zwraca kopię `*this` , która jest wykonywana przed przyrostem.
+Druga metoda zwraca kopię `*this` tego jest dokonywana przed przyrostem.
 
-## <a name="op_add_eq"></a>Duration:: operator + =
+## <a name="durationoperator"></a><a name="op_add_eq"></a>czas trwania::operator+=
 
-Dodaje liczbę cykli określonego `duration` obiektu do liczby przechowywanych cykli.
+Dodaje liczbę znaczników `duration` określonego obiektu do przechowywanej liczby znaczników.
 
 ```cpp
 duration& operator+=(const duration& Dur);
@@ -270,16 +270,16 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Trwania*\
-Element `duration` obiektu.
+*Dur (Dur)*\
+Obiekt `duration`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`duration` Obiekt po dodaniu jest wykonywany.
+Obiekt `duration` po dodaniu jest wykonywany.
 
-## <a name="operator-_eq"></a>Duration:: operator-=
+## <a name="durationoperator-"></a><a name="operator-_eq"></a>czas trwania::operator-=
 
-Odejmuje liczbę cykli określonego `duration` obiektu od liczby przechowywanych cykli.
+Odejmuje liczbę znaczników `duration` określonego obiektu od przechowywanej liczby znaczników.
 
 ```cpp
 duration& operator-=(const duration& Dur);
@@ -287,24 +287,24 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Trwania*\
-`duration` Obiekt.
+*Dur (Dur)*\
+Obiekt `duration`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`duration` Obiekt po wykonaniu odejmowania.
+Obiekt `duration` po wykonaniu odejmowania.
 
-## <a name="zero"></a>czas trwania:: zero
+## <a name="durationzero"></a><a name="zero"></a>czas trwania::zero
 
-Zwraca `duration(duration_values<rep>::zero())`wartość.
+Zwraca wartość `duration(duration_values<rep>::zero())`.
 
 ```cpp
 static constexpr duration zero();
 ```
 
-## <a name="op_mod_eq"></a>Duration:: operator mod =
+## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a>czas trwania::operator mod=
 
-Zmniejsza liczbę przechowywanych znaczników modulo DIV lub DIV. Count ().
+Zmniejsza liczbę przechowywanych znaczników modulo Div lub Div.count().
 
 ```cpp
 duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
@@ -312,15 +312,15 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*Służąc*\
-Dzielnik, który jest obiektem czasu trwania lub wartość reprezentującą liczbę cykli.
+*Div*\
+Dzielnik, który jest obiektem czasu trwania lub wartością reprezentującą liczbę znaczników.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska zmniejsza liczbę przechowywanych znaczników modulo i zwraca * this. Druga funkcja członkowska zmniejsza liczbę przechowywanych znaczników modulo DIV. Count () i zwraca \*tę wartość.
+Funkcja pierwszego elementu członkowskiego zmniejsza liczbę przechowywanych znaczników modulo Div i zwraca *this. Funkcja drugiego elementu członkowskiego zmniejsza liczbę przechowywanych znaczników modulo div.count() i zwraca \*tę wartość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<chrono>](../standard-library/chrono.md)\
-[duration_values, struktura](../standard-library/duration-values-structure.md)
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<>chrono](../standard-library/chrono.md)\
+[duration_values — Struktura](../standard-library/duration-values-structure.md)

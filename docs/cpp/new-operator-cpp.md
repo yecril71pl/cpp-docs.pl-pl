@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 21e67f8d44673a15e5d3a5994597caae4cc01a2e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ac89bf37b8aaaa9d77393b714a233f8a4c998139
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161129"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367874"
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
 
-Przydziela pamięć dla obiektu lub tablicy obiektów *typu-Name* z wolnego sklepu i zwraca odpowiednio wpisany wskaźnik o wartości niezerowej do obiektu.
+Przydziela pamięć dla obiektu lub tablicy obiektów o *nazwie typu* z magazynu wolnego i zwraca odpowiednio wpisany wskaźnik różny od zera do obiektu.
 
 > [!NOTE]
->  Rozszerzenia C++ składników firmy Microsoft zapewniają obsługę **nowego** słowa kluczowego w celu dodania wpisów w gnieździe tablic wirtualnych. Aby uzyskać więcej informacji, zobacz [Nowość (nowe miejsce w tabeli metod wirtualnych)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
+> Rozszerzenia składników języka Microsoft C++ zapewniają obsługę **nowego** słowa kluczowego, aby dodać wpisy gniazda vtable. Aby uzyskać więcej informacji, zobacz [nowy (nowe gniazdo w vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,52 +27,52 @@ Przydziela pamięć dla obiektu lub tablicy obiektów *typu-Name* z wolnego skle
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku niepowodzenia funkcja **New** zwraca wartość zero lub zgłasza wyjątek. Aby uzyskać więcej informacji [, zobacz Operatory New i DELETE](../cpp/new-and-delete-operators.md) . To zachowanie domyślne można zmienić, pisząc procedurę niestandardowej obsługi wyjątków i wywołując [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) funkcję biblioteki wykonawczej z nazwą funkcji jako argumentem.
+Jeśli nie powiedzie się, **nowy** zwraca zero lub zgłasza wyjątek; Zobacz [Nowe i usuń operatorów, aby](../cpp/new-and-delete-operators.md) uzyskać więcej informacji. To domyślne zachowanie można zmienić, zapisując niestandardową procedurę obsługi wyjątków i wywołując _set_new_handler funkcję biblioteki [wykonywania](../c-runtime-library/reference/set-new-handler.md) z nazwą funkcji jako argumentem.
 
-Aby uzyskać informacje na temat sposobu tworzenia obiektu na zarządzanym stosie, zobacz [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
+Aby uzyskać informacje na temat tworzenia obiektu na zarządzanym stosie, zobacz [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
-Gdy **Nowa** jest używana do przydzielania pamięci dla C++ obiektu klasy, Konstruktor obiektu jest wywoływany po przydzieleniu pamięci.
+Gdy **nowy** jest używany do przydzielenia pamięci dla obiektu klasy C++, konstruktor obiektu jest wywoływana po przydzieleniu pamięci.
 
-Użyj operatora [delete](../cpp/delete-operator-cpp.md) , aby cofnąć alokację pamięci przydzieloną za pomocą operatora **New** .
+Operator [usuwania](../cpp/delete-operator-cpp.md) służy do usuwania alokacji pamięci przydzielonej **nowemu** operatorowi.
 
-Poniższy przykład przydziela, a następnie zwalnia dwuwymiarową tablicę znaków o wielkości `dim` przez 10. Podczas alokowania tablicy wielowymiarowej wszystkie wymiary oprócz pierwszej muszą być wyrażeniami stałymi, które obliczają wartości dodatnie; wymiar tablicy z lewej strony może być dowolnym wyrażeniem, które daje w wyniku wartość dodatnią. Podczas alokowania tablicy przy użyciu operatora **New** pierwszy wymiar może mieć wartość zero — operator **New** zwraca unikatowy wskaźnik.
+Poniższy przykład przydziela, a następnie zwalnia dwuwymiarową `dim` tablicę znaków o rozmiarze przez 10. Podczas przydzielania tablicy wielowymiarowej wszystkie wymiary z wyjątkiem pierwszego muszą być wyrażeniami stałymi, które są obliczane do wartości dodatnich; wymiar tablicy po lewej stronie może być dowolnym wyrażeniem, które ma wartość dodatnią. Podczas przydzielania tablicy przy użyciu **nowego** operatora pierwszy wymiar może być zerowy — **nowy** operator zwraca unikatowy wskaźnik.
 
 ```cpp
 char (*pchar)[10] = new char[dim][10];
 delete [] pchar;
 ```
 
-*Nazwa typu* nie może zawierać deklaracji **const**, **volatile**, Class lub Enumeration. W związku z tym następujące wyrażenie jest niedozwolone:
+*Nazwa typu* nie może zawierać **const,** **volatile,** deklaracji klas ani deklaracji wyliczenia. W związku z tym następujące wyrażenie jest niezgodne z prawem:
 
 ```cpp
 volatile char *vch = new volatile char[20];
 ```
 
-Operator **New** nie przydziela typów referencyjnych, ponieważ nie są obiektami.
+**Nowy** operator nie przydziela typów odwołań, ponieważ nie są one obiektami.
 
-Operatora **New** nie można użyć do przydzielenia funkcji, ale może służyć do przydzielania wskaźników do funkcji. Poniższy przykład przydziela i następnie zwalnia tablicę siedmiu wskaźników do funkcji, które zwracają liczby całkowite.
+**Nowy** operator nie może służyć do przydzielenia funkcji, ale może służyć do przydzielania wskaźników do funkcji. Poniższy przykład przydziela, a następnie zwalnia tablicę siedmiu wskaźników do funkcji, które zwracają liczby całkowite.
 
 ```cpp
 int (**p) () = new (int (*[7]) ());
 delete *p;
 ```
 
-W przypadku użycia operatora **New** bez żadnych dodatkowych argumentów i kompilowania przy użyciu opcji [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md)lub [/EHS](../build/reference/eh-exception-handling-model.md) kompilator generuje kod, aby wywołać operator **delete** , jeśli Konstruktor zgłosi wyjątek.
+Jeśli operator **jest nowy** bez żadnych dodatkowych argumentów i skompilować z [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md), lub [/EHs](../build/reference/eh-exception-handling-model.md) opcji, kompilator wygeneruje kod do wywołania operator **delete,** jeśli konstruktor zgłasza wyjątek.
 
-Na poniższej liście opisano elementy gramatyki **nowych**:
+Na poniższej liście opisano elementy gramatyczne **nowych:**
 
-*jęcia*<br/>
-Zapewnia sposób przekazywania dodatkowych argumentów w przypadku przeciążenia **nowych**.
+*Umieszczenie*<br/>
+Zapewnia sposób przekazywania dodatkowych argumentów w przypadku przeciążenia **nowego**.
 
-*Nazwa typu*<br/>
-Określa typ do przydzielenia; może to być typ wbudowany lub zdefiniowany przez użytkownika. Jeśli specyfikacja typu jest skomplikowana, może być otoczona nawiasami, aby wymusić kolejność powiązań.
+*nazwa typu*<br/>
+Określa typ do przydzielenia; może to być typ wbudowany lub zdefiniowany przez użytkownika. Jeśli specyfikacja typu jest skomplikowana, może być otoczona nawiasami, aby wymusić kolejność wiązania.
 
-*skład*<br/>
-Udostępnia wartość dla zainicjowanego obiektu. Nie można określić inicjatorów dla tablic. Operator **New** utworzy tablice obiektów tylko wtedy, gdy Klasa ma Konstruktor domyślny.
+*Inicjatora*<br/>
+Zapewnia wartość zainicjowanego obiektu. Nie można określić inicjatorów dla tablic. **Nowy** operator utworzy tablice obiektów tylko wtedy, gdy klasa ma domyślny konstruktor.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu przydziela tablicę znaków i obiekt klasy `CName` a następnie zwalnia je.
+Poniższy przykład kodu przydziela tablicę znaków `CName` i obiekt klasy, a następnie zwalnia je.
 
 ```cpp
 // expre_new_Operator.cpp
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Jeśli używasz nowej postaci rozmieszczenia operatora **New** , formularz z argumentami oprócz rozmiaru alokacji, kompilator nie obsługuje formy umieszczania operatora **delete** , jeśli Konstruktor zgłosi wyjątek. Na przykład:
+Jeśli używasz umieszczania nowy formularz **nowego** operatora, formularz z argumentami oprócz rozmiaru alokacji, kompilator nie obsługuje formę umieszczania **delete** operatora, jeśli konstruktor zgłasza wyjątek. Przykład:
 
 ```cpp
 // expre_new_Operator2.cpp
@@ -151,9 +151,9 @@ int main() {
 }
 ```
 
-## <a name="initializing-object-allocated-with-new"></a>Inicjowanie obiektu przydzielono z nowym
+## <a name="initializing-object-allocated-with-new"></a>Inicjowanie obiektu przydzielonego za pomocą nowego
 
-Opcjonalne pole *inicjatora* jest zawarte w gramatyce dla operatora **New** . Dzięki temu nowe obiekty mogą zostać zainicjowane z konstruktorów zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji na temat sposobu inicjowania, zobacz [inicjatory](../cpp/initializers.md). Poniższy przykład ilustruje sposób użycia wyrażenia inicjującego z operatorem **New** :
+Opcjonalne pole *inicjatora* jest zawarte w gramatyki dla **nowego** operatora. Dzięki temu nowe obiekty mogą zostać zainicjowane z konstruktorów zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji na temat sposobu inicjowania, zobacz [Inicjatorzy](../cpp/initializers.md). Poniższy przykład ilustruje sposób używania wyrażenia inicjowania z **nowym** operatorem:
 
 ```cpp
 // expre_Initializing_Objects_Allocated_with_new.cpp
@@ -177,23 +177,23 @@ int main()
 }
 ```
 
-W tym przykładzie obiekt `CheckingAcct` jest przydzielony przy użyciu operatora **New** , ale nie określono domyślnej inicjalizacji. W związku z tym, wywoływany jest domyślny konstruktor dla klasy `Acct()`. Następnie obiekt `SavingsAcct` jest przydzielany ten sam sposób, chyba że wyraźnie jest zainicjowany na 34.98. Ponieważ 34,98 jest typu **Double**, Konstruktor, który przyjmuje argument tego typu, jest wywoływany do obsługi inicjalizacji. Wreszcie, typ nonclass `HowMuch` jest zainicjowany na 43.0.
+W tym przykładzie `CheckingAcct` obiekt jest przydzielany przy użyciu **nowego** operatora, ale nie określono domyślnej inicjalizacji. W związku z tym, wywoływany jest domyślny konstruktor dla klasy `Acct()`. Następnie obiekt `SavingsAcct` jest przydzielany ten sam sposób, chyba że wyraźnie jest zainicjowany na 34.98. Ponieważ 34.98 jest typu **double**, konstruktor, który przyjmuje argument tego typu jest wywoływana do obsługi inicjowania. Wreszcie, typ nonclass `HowMuch` jest zainicjowany na 43.0.
 
-Jeśli obiekt jest typu klasy i Klasa ma konstruktory (jak w poprzednim przykładzie), obiekt może zostać zainicjowany przez operatora **New** tylko w przypadku spełnienia jednego z następujących warunków:
+Jeśli obiekt jest typu klasy i tej klasy ma konstruktorów (jak w poprzednim przykładzie), obiekt może być zainicjowany przez **nowy** operator tylko wtedy, gdy jeden z tych warunków jest spełniony:
 
 - Argumenty dostarczone w inicjatorze zgadzają się z tymi z konstruktora.
 
 - Klasa ma domyślny konstruktor (konstruktor, który można wywołać bez argumentów).
 
-Podczas alokowania tablic przy użyciu operatora **New** nie można przeprowadzić jawnej inicjalizacji dla elementu. tylko Konstruktor domyślny, jeśli jest obecny, jest wywoływany. Aby uzyskać więcej informacji, zobacz [argumenty domyślne](../cpp/default-arguments.md) .
+Nie jawne inicjowanie na element można wykonać podczas przydzielania tablic przy użyciu **nowego** operatora; wywoływany jest tylko domyślny konstruktor, jeśli jest obecny. Aby uzyskać więcej informacji, zobacz [Domyślne argumenty.](../cpp/default-arguments.md)
 
-Jeśli alokacja pamięci nie powiedzie się (**operator new** zwraca wartość 0), inicjowanie nie jest wykonywane. Chroni to przed próbami inicjalizacji danych, które nie istnieją.
+Jeśli alokacja pamięci nie powiedzie się **(operator nowy** zwraca wartość 0), nie jest wykonywana inicjalizacja. Chroni to przed próbami inicjalizacji danych, które nie istnieją.
 
-Podobnie jak w przypadku wywołań funkcji, kolejność oceny inicjowanych wyrażeń nie jest zdefiniowana. Ponadto, nie należy zakładać, że te wyrażenia zostaną całkowicie ocenione przed wykonaniem alokacji pamięci. Jeśli alokacja pamięci nie powiedzie się, a operator **New** zwróci wartość zero, niektóre wyrażenia w inicjatorze mogą nie być całkowicie oceniane.
+Podobnie jak w przypadku wywołań funkcji, kolejność oceny inicjowanych wyrażeń nie jest zdefiniowana. Ponadto, nie należy zakładać, że te wyrażenia zostaną całkowicie ocenione przed wykonaniem alokacji pamięci. Jeśli alokacja pamięci nie powiedzie się, a **nowy** operator zwraca zero, niektóre wyrażenia w inicjatorze mogą nie zostać całkowicie ocenione.
 
-## <a name="lifetime-of-objects-allocated-with-new"></a>Okres istnienia obiektów przyznanych przez nowe
+## <a name="lifetime-of-objects-allocated-with-new"></a>Okres istnienia obiektów przydzielonych z nowymi
 
-Obiekty przyłączone za pomocą operatora **New** nie są niszczone, gdy zakres, w którym są zdefiniowane, zostało zakończone. Ponieważ operator **New** zwraca wskaźnik do obiektów, które są przydzielane, program musi zdefiniować wskaźnik z odpowiednim zakresem, aby uzyskać dostęp do tych obiektów. Na przykład:
+Obiekty przydzielone z **nowym** operatorem nie są niszczone po zamknięciu zakresu, w którym są zdefiniowane. Ponieważ **nowy** operator zwraca wskaźnik do obiektów, które przydziela, program musi zdefiniować wskaźnik z odpowiednim zakresem, aby uzyskać dostęp do tych obiektów. Przykład:
 
 ```cpp
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp
@@ -218,42 +218,42 @@ int main()
 }
 ```
 
-Gdy wskaźnik `AnotherArray` wykracza poza zakres w tym przykładzie, nie można już usunąć obiektu.
+Gdy wskaźnik `AnotherArray` wykracza poza zakres w przykładzie, obiekt nie można już usunąć.
 
-## <a name="how-new-works"></a>Jak działa nowy
+## <a name="how-new-works"></a>Jak działają nowe
 
-*Wyrażenie alokacji* — wyrażenie zawierające operator **New** — ma trzy rzeczy:
+Wyrażenie *alokacji* — wyrażenie zawierające **nowy** operator — wykonuje trzy czynności:
 
 - Lokalizuje i rezerwuje pamięć dla obiektu lub obiektów, które mają zostać przydzielone. Po ukończeniu tego etapu, poprawna ilość pamięci jest przydzielana, ale nie jest jeszcze obiektem.
 
 - Inicjalizuje obiekt(y). Po zakończeniu inicjalizacji, wystarczająca ilość informacji jest obecna dla przydzielenia pamięci, która ma być obiektem.
 
-- Zwraca wskaźnik do obiektów typu wskaźnika pochodzącego od *nowej nazwy typu* lub *nazwy typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.
+- Zwraca wskaźnik do obiektów typu wskaźnika uzyskanego od *nazwy typu lub* nazwy *typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.
 
-Operator **New** wywołuje **operator funkcji New**. W przypadku tablic dowolnego typu, a dla obiektów, które nie są typami **klas**, **struktur**lub **Unii** , funkcja globalna **:: operator new**jest wywoływana w celu przydzielenia magazynu. Obiekty typu klasy mogą definiować własne, **nowe** statyczne funkcje członkowskie dla poszczególnych klas.
+**Nowy** operator wywołuje operator funkcji **nowy**. Dla tablic dowolnego typu i dla obiektów, które nie są **klasy**, **struct**lub **typów unii,** funkcja globalna, **::operator nowy**, jest wywoływana do alokacji magazynu. Obiekty typu klasy można zdefiniować własne **operator nowej** funkcji statycznego elementu członkowskiego na podstawie dla klasy.
 
-Gdy kompilator napotka operator **New** do przydzielenia **obiektu typu typu,** wystawia wywołanie `type` **:: operator new (sizeof (** `type` **))** lub, jeśli nie zdefiniowano żadnego **operatora** zdefiniowanego przez użytkownika, **:: operator new (sizeof (** `type` **))** . W związku z tym operator **New** może przydzielić poprawną ilość pamięci dla obiektu.
-
-> [!NOTE]
->  Argument dla **operatora new** jest typu `size_t`. Ten typ jest zdefiniowany w \<Direct. h >, \<malloc. h >, \<Memory. h >, \<Search. h >, \<STDDEF. h >, \<stdio. h >, \<STDLIB. h >, \<ciąg. h > i \<Time. h >.
-
-Opcja gramatyki umożliwia określenie *położenia* (patrz Gramatyka dla [operatora new](../cpp/new-operator-cpp.md)). Parametru *umieszczania* można używać tylko dla implementacji **operatora new**zdefiniowanego przez użytkownika; umożliwia przekazywanie dodatkowych informacji do **operatora new**. Wyrażenie zawierające pole *umieszczania* , takie jak `T *TObject = new ( 0x0040 ) T;` jest tłumaczone na `T *TObject = T::operator new( sizeof( T ), 0x0040 );`, jeśli Klasa t ma operator członkowski New, w przeciwnym razie `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.
-
-Pierwotny zamiar pola *położenie* polega na przydzieleniu obiektów zależnych od sprzętu w adresach określonych przez użytkownika.
+Gdy kompilator napotka **nowy** operator do **type**przydzielenia obiektu `type`typu , generuje wywołanie **::operator new( sizeof(** `type` **) lub,** jeśli nie zdefiniowano **nowego operatora** zdefiniowanego przez użytkownika, **::operator new( sizeof(** `type` **) .** W związku z tym **nowy** operator może przydzielić odpowiednią ilość pamięci dla obiektu.
 
 > [!NOTE]
->  Mimo że w poprzednim przykładzie pokazano tylko jeden argument w polu *umieszczania* , nie ma żadnych ograniczeń dotyczących liczby dodatkowych argumentów, które można przekazywać do **operatora** w ten sposób.
+> Argument do **operatora nowy** `size_t`jest typu . Ten typ jest \<definiowany w \<direct.h>, malloc.h>, \<memory.h>, \<search.h>, \<stddef.h \<>, stdio.h \<>, stdlib.h \<>, string.h> \<i time.h>.
 
-Nawet jeśli **operator new** został zdefiniowany dla typu klasy, operatora globalnego można używać przy użyciu formy tego przykładu:
+Opcja w gramatyki umożliwia specyfikację *rozmieszczenia* (patrz Gramatyka dla [nowego operatora](../cpp/new-operator-cpp.md)). Parametr *umieszczania* może być używany tylko dla zdefiniowanych przez użytkownika implementacji **operatora new;** pozwala na przekazywanie dodatkowych informacji **operatorowi .** Wyrażenie z polem *umieszczania,* na przykład, `T *TObject = new ( 0x0040 ) T;` jest tłumaczone, `T *TObject = T::operator new( sizeof( T ), 0x0040 );` `T *TObject = ::operator new( sizeof( T ), 0x0040 );`jeśli klasa T ma nowy operator elementu członkowskiego, w przeciwnym razie na .
+
+Pierwotną intencją pola *umieszczania* było zezwolenie na przydzielanie obiektów zależnych od sprzętu pod adresami określonymi przez użytkownika.
+
+> [!NOTE]
+> Chociaż w poprzednim przykładzie pokazano tylko jeden argument w polu *umieszczania,* nie ma żadnych ograniczeń co do liczby dodatkowych argumentów mogą być przekazywane do **operatora nowy** w ten sposób.
+
+Nawet wtedy, gdy **operator nowy** został zdefiniowany dla typu klasy, operator globalny może służyć przy użyciu formularza w tym przykładzie:
 
 ```cpp
 T *TObject =::new TObject;
 ```
 
-Operator rozpoznawania zakresu (`::`) wymusza użycie globalnego operatora **New** .
+Operator rozpoznawania zakresu`::`( ) wymusza użycie **globalnego nowego** operatora.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[New i DELETE — operatory](../cpp/new-and-delete-operators.md)
+[nowe i usuwaj operatory](../cpp/new-and-delete-operators.md)

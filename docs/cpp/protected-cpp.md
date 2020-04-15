@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 29f57eac7201ac0647275c70c539f9b2f28eb81b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79ca081726c1f26a251763e2533ade730f075e2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179253"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317268"
 ---
 # <a name="protected-c"></a>chronione (C++)
 
@@ -26,7 +26,7 @@ protected base-class
 
 ## <a name="remarks"></a>Uwagi
 
-**Chronione** słowo kluczowe Określa dostęp do składowych klasy na *liście składowych* do następnego specyfikatora dostępu (**Public** lub **Private**) lub końca definicji klasy. Składowe klasy zadeklarowane jako **chronione** mogą być używane tylko przez następujące:
+**Chronione** słowo kluczowe określa dostęp do członków klasy na *liście elementów członkowskich* do następnego specyfikatora dostępu **(publicznego** lub **prywatnego)** lub końca definicji klasy. Elementy członkowskie klasy **zadeklarowane** jako chronione mogą być używane tylko przez następujące elementy:
 
 - Funkcje składowe klasy, która pierwotnie zadeklarowała te składowe.
 
@@ -36,20 +36,20 @@ protected base-class
 
 - Bezpośrednie klasy pochodne prywatnie, które także mają prywatny dostęp do chronionych składowych.
 
-Gdy poprzedzająca nazwę klasy bazowej, **chronione** słowo kluczowe Określa, że publiczne i chronione składowe klasy bazowej są chronionymi elementami członkowskimi klas pochodnych.
+Poprzedzając nazwę klasy podstawowej, **chronione** słowo kluczowe określa, że publiczne i chronione elementy członkowskie klasy podstawowej są chronionymi członkami jej klas pochodnych.
 
-Chronione elementy członkowskie nie są **jako prywatne jako prywatne elementy członkowskie** , które są dostępne tylko dla członków klasy, w których są zadeklarowane, ale nie są tak publiczne jak **publiczne** elementy członkowskie, które są dostępne w dowolnej funkcji.
+Chronione elementy członkowskie nie są tak prywatne jak **prywatne** członków, które są dostępne tylko dla członków klasy, w której są zadeklarowane, ale nie są one tak publiczne, jak **członków publicznych,** które są dostępne w dowolnej funkcji.
 
-Chronione elementy członkowskie, które są również zadeklarowane jako **static** , są dostępne dla wszystkich znajomych lub funkcji członkowskich klasy pochodnej. Chronione składowe, które nie są zadeklarowane jako **static** , są dostępne dla znajomych i funkcji Członkowskich w klasie pochodnej tylko za pomocą wskaźnika do, odwołania do lub obiektu klasy pochodnej.
+Chronione elementy członkowskie, które są również zadeklarowane jako **statyczne** są dostępne dla dowolnego znajomego lub elementu członkowskiego funkcji klasy pochodnej. Chronione elementy członkowskie, które nie są zadeklarowane jako **statyczne** są dostępne dla znajomych i funkcji członkowskich w klasie pochodnej tylko za pośrednictwem wskaźnika do, odwołania do lub obiektu klasy pochodnej.
 
-Aby uzyskać powiązane informacje, zobacz [zaprzyjaźniona](../cpp/friend-cpp.md), [publiczna](../cpp/public-cpp.md), [prywatna](../cpp/private-cpp.md)i tabela dostępu do elementów członkowskich [kontrolująca dostęp do elementów członkowskich klasy](member-access-control-cpp.md).
+Aby uzyskać powiązane informacje, zobacz [znajomego,](../cpp/friend-cpp.md) [publicznego,](../cpp/public-cpp.md) [prywatnego](../cpp/private-cpp.md)i tabeli dostępu do członków w [obszarze Kontrolowanie dostępu do członków klasy](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Specyficzne dla /clr
 
-W typach CLR słowa kluczowe C++ specyfikatora dostępu (**Public**, **Private**i **Protected**) mogą wpływać na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [Access Control elementu członkowskiego](member-access-control-cpp.md).
+W typach CLR specyfikator dostępu języka C++**(publiczny,** **prywatny**i **chroniony)** może mieć wpływ na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [Kontrola dostępu do członków](member-access-control-cpp.md).
 
 > [!NOTE]
->  Takie zachowanie nie ma wpływ na pliki skompilowane za pomocą [/LN](../build/reference/ln-create-msil-module.md) . W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).
+> To zachowanie nie ma wpływu na pliki skompilowane za pomocą [/LN.](../build/reference/ln-create-msil-module.md) W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).
 
 ## <a name="end-clr-specific"></a>KONIEC specyficzne dla /clr
 
@@ -89,5 +89,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md)<br/>
+[Kontrolowanie dostępu do członków klasy](member-access-control-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

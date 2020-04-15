@@ -1,5 +1,5 @@
 ---
-title: Operatory&gt; tablicy &lt;
+title: '&lt;operatory macierzy&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::operator!=
@@ -9,25 +9,25 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364911"
 ---
-# <a name="ltarraygt-operators"></a>Operatory&gt; tablicy &lt;
+# <a name="ltarraygt-operators"></a>&lt;operatory macierzy&gt;
 
-Nagłówek **\<array > zawiera te funkcje** szablonu porównania, które nie są elementami członkowskimi.
+Nagłówek \<> tablicy zawiera te funkcje szablonu porównania **tablicy** niebędącej członkiem.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt;operatora =](#op_gt_eq)|
-|[&lt; operatora](#op_lt)|[&lt;operatora =](#op_lt_eq)|[operator = =](#op_eq_eq)|
+|[operator!=](#op_neq)|[Operator&gt;](#op_gt)|[Operator&gt;=](#op_gt_eq)|
+|[Operator&lt;](#op_lt)|[Operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator!=
 
-Porównanie tablicowe nie jest równe.
+Porównanie tablic, nie równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -38,21 +38,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(left == right)`.
+Funkcja szablonu `!(left == right)`zwraca .
 
 ### <a name="example"></a>Przykład
 
@@ -98,9 +98,9 @@ false
 true
 ```
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>Operator&lt;
 
-Porównanie tablicowe, mniejsze niż.
+Porównanie tablic, mniej niż.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciążuje `operator<`, aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciąża, `operator<` aby porównać dwa obiekty klasy [tablicy szablonu Klasy](../standard-library/array-class-stl.md). Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -171,9 +171,9 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operator&lt;=
 
-Porównanie tablicowe, mniejsze niż lub równe.
+Porównanie tablic, mniej niż lub równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -184,21 +184,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(right < left)`.
+Funkcja szablonu `!(right < left)`zwraca .
 
 ### <a name="example"></a>Przykład
 
@@ -244,9 +244,9 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator==
 
-Porównywanie tablicowe, równe.
+Porównanie tablic, równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciążuje `operator==`, aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciąża, `operator==` aby porównać dwa obiekty klasy [tablicy szablonu Klasy](../standard-library/array-class-stl.md). Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -317,9 +317,9 @@ true
 false
 ```
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>Operator&gt;
 
-Porównanie tablicowe, większe niż.
+Porównanie tablic, większe niż.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -330,21 +330,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `(right < left)`.
+Funkcja szablonu `(right < left)`zwraca .
 
 ### <a name="example"></a>Przykład
 
@@ -390,9 +390,9 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operator&gt;=
 
-Porównanie tablicowe, większe niż lub równe.
+Porównanie tablic, większe lub równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -403,21 +403,21 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Lewy kontener do porównania.
+*Lewej*\
+Lewy pojemnik do porównania.
 
-*prawa*\
-Prawy kontener do porównania.
+*Prawo*\
+Odpowiedni pojemnik do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(left < right)`.
+Funkcja szablonu `!(left < right)`zwraca .
 
 ### <a name="example"></a>Przykład
 
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<> tablicy](../standard-library/array.md)
+[\<>tablicowe](../standard-library/array.md)

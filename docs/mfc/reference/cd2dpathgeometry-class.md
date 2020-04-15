@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ef82151983720b654502ccf3ca647e55366268
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396356"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369166"
 ---
 # <a name="cd2dpathgeometry-class"></a>Klasa CD2DPathGeometry
 
-Otoka ID2D1PathGeometry.
+Otoka dla ID2D1PathGeometry.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,22 +49,22 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Tworzy obiekt CD2DPathGeometry.|
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Konstruuje obiekt CD2DPathGeometry.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DPathGeometry::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
-|[CD2DPathGeometry::Create](#create)|Tworzy CD2DPathGeometry. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DPathGeometry::Destroy](#destroy)|Niszczy obiekt CD2DPathGeometry. (Przesłania [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
-|[CD2DPathGeometry::detach](#detach)|Odłącza interfejsu zasobów z obiektu|
+|[CD2DPathGeometry::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DPathGeometry::Tworzenie](#create)|Tworzy CD2DPathGeometry. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPathGeometry::Destroy](#destroy)|Niszczy obiekt CD2DPathGeometry. (Zastępuje [CD2DGeometria::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[CD2DPathGeometry::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
 |[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Pobiera liczbę cyfr w geometrii ścieżki.|
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Pobiera liczbę segmentów geometrii ścieżki.|
-|[CD2DPathGeometry::Open](#open)|Pobiera ujścia geometrii, który jest używany do wypełniania geometrii ścieżki przy użyciu danych i segmentów.|
-|[CD2DPathGeometry::Stream](#stream)|Kopiuje zawartość geometrii ścieżkę do określonego ID2D1GeometrySink.|
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Pobiera liczbę segmentów w geometrii ścieżki.|
+|[CD2DPathGeometry::Otwórz](#open)|Pobiera ujście geometrii, który jest używany do wypełniania geometrii ścieżki figurami i segmentami.|
+|[CD2DPathGeometry::Strumień](#stream)|Kopiuje zawartość geometrii ścieżki do określonego identyfikatora ID2D1GeometrySink.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -72,11 +72,11 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)
+[CD2DGeometria](../../mfc/reference/cd2dgeometry-class.md)
 
 `CD2DPathGeometry`
 
@@ -84,9 +84,9 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="attach"></a>  CD2DPathGeometry::attach
+## <a name="cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Dołącz
 
-Dołącza istniejących zasobów interfejsu do obiektu
+Dołącza istniejący interfejs zasobu do obiektu
 
 ```
 void Attach(ID2D1PathGeometry* pResource);
@@ -94,12 +94,12 @@ void Attach(ID2D1PathGeometry* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Istniejący interfejs zasobów. Nie może mieć wartości NULL
+*pŹródło*<br/>
+Istniejący interfejs zasobów. Nie może być null
 
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry
 
-Tworzy obiekt CD2DPathGeometry.
+Konstruuje obiekt CD2DPathGeometry.
 
 ```
 CD2DPathGeometry(
@@ -110,12 +110,12 @@ CD2DPathGeometry(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-##  <a name="create"></a>  CD2DPathGeometry::Create
+## <a name="cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Tworzenie
 
 Tworzy CD2DPathGeometry.
 
@@ -126,13 +126,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy
+## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy
 
 Niszczy obiekt CD2DPathGeometry.
 
@@ -140,9 +140,9 @@ Niszczy obiekt CD2DPathGeometry.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DPathGeometry::detach
+## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry::Detach
 
-Odłącza interfejsu zasobów z obiektu
+Odłącza interfejs zasobu od obiektu
 
 ```
 ID2D1PathGeometry* Detach();
@@ -150,9 +150,9 @@ ID2D1PathGeometry* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu odłączyć zasobu.
+Wskaźnik do odłączony interfejs zasobu.
 
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount
 
 Pobiera liczbę cyfr w geometrii ścieżki.
 
@@ -164,9 +164,9 @@ int GetFigureCount() const;
 
 Zwraca liczbę cyfr w geometrii ścieżki.
 
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount
 
-Pobiera liczbę segmentów geometrii ścieżki.
+Pobiera liczbę segmentów w geometrii ścieżki.
 
 ```
 int GetSegmentCount() const;
@@ -174,9 +174,9 @@ int GetSegmentCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę segmentów geometrii ścieżki.
+Zwraca liczbę segmentów w geometrii ścieżki.
 
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry
 
 Wskaźnik do ID2D1PathGeometry.
 
@@ -184,9 +184,9 @@ Wskaźnik do ID2D1PathGeometry.
 ID2D1PathGeometry* m_pPathGeometry;
 ```
 
-##  <a name="open"></a>  CD2DPathGeometry::Open
+## <a name="cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Otwórz
 
-Pobiera ujścia geometrii, który jest używany do wypełniania geometrii ścieżki przy użyciu danych i segmentów.
+Pobiera ujście geometrii, który jest używany do wypełniania geometrii ścieżki figurami i segmentami.
 
 ```
 ID2D1GeometrySink* Open();
@@ -194,11 +194,11 @@ ID2D1GeometrySink* Open();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do ID2D1GeometrySink, który jest używany do wypełniania geometrii ścieżki przy użyciu danych i segmentów.
+Wskaźnik do ID2D1GeometrySink, który jest używany do wypełniania geometrii ścieżki z postaciami i segmentami.
 
-##  <a name="stream"></a>  CD2DPathGeometry::Stream
+## <a name="cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Strumień
 
-Kopiuje zawartość geometrii ścieżkę do określonego ID2D1GeometrySink.
+Kopiuje zawartość geometrii ścieżki do określonego identyfikatora ID2D1GeometrySink.
 
 ```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
@@ -206,13 +206,13 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 ### <a name="parameters"></a>Parametry
 
-*geometrySink*<br/>
-Obiekt sink, do której są kopiowane geometrii ścieżki zawartości. Modyfikowanie tego obiektu sink nie zmienia się zawartość geometrii tej ścieżki.
+*geometriaSink*<br/>
+Zlew, do którego kopiowana jest zawartość geometrii ścieżki. Modyfikacja tego ujścia nie powoduje zmiany zawartości tej geometrii ścieżki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+Jeśli metoda powiedzie się, zwraca wartość TRUE. W przeciwnym razie zwraca wartość FAŁSZ.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

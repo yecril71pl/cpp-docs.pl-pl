@@ -1,8 +1,9 @@
 ---
 title: _write
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _write
+- _o__write
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: a616df570d266c335337d897da59a2a0ec69b40e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821795"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367393"
 ---
 # <a name="_write"></a>_write
 
@@ -49,38 +51,40 @@ int _write(
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
-Deskryptor pliku pliku, w którym są zapisywane dane.
+*Fd*<br/>
+Deskryptor pliku, w którym zapisywane są dane.
 
-*buffer*<br/>
+*Buforu*<br/>
 Dane do zapisania.
 
-*liczbą*<br/>
+*Liczba*<br/>
 Liczba bajtów.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, **_write** zwraca liczbę zapisanych bajtów. Jeśli rzeczywiste miejsce pozostało na dysku jest mniejsze niż rozmiar buforu, który funkcja próbuje zapisać na dysku, **_write** kończy się niepowodzeniem i nie opróżnia żadnego z zawartości buforu na dysku. Zwracana wartość-1 wskazuje na błąd. Jeśli przechodzą nieprawidłowe parametry, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na jedną z trzech wartości: **EBADF**, co oznacza, że deskryptor pliku jest nieprawidłowy lub plik nie jest otwierany do zapisu; **ENOSPC**, co oznacza, że na urządzeniu nie ma wystarczającej ilości miejsca na operację; lub **EINVAL**, co oznacza, że *bufor* był wskaźnikiem typu null lub że nieparzysta *Liczba* bajtów została przeniesiona do zapisu w pliku w trybie Unicode.
+Jeśli się powiedzie, **_write** zwraca liczbę zapisanych bajtów. Jeśli rzeczywista ilość miejsca pozostającego na dysku jest mniejsza niż rozmiar buforu, który funkcja próbuje zapisać na dysku, **_write** nie powiedzie się i nie opróżnia żadnej zawartości buforu na dysk. Zwracana wartość -1 oznacza błąd. Jeśli nieprawidłowe parametry są przekazywane, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca -1 i **errno** jest ustawiona na jedną z trzech wartości: **EBADF**, co oznacza, że deskryptor pliku jest nieprawidłowy lub plik nie jest otwarty do zapisu; **ENOSPC**, co oznacza, że na urządzeniu nie ma wystarczającej ilości miejsca na operację; lub **EINVAL**, co oznacza, że *bufor* był wskaźnikiem null lub że nieparzysta *liczba* bajtów została przekazana do zapisania do pliku w trybie Unicode.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Jeśli plik jest otwarty w trybie tekstowym, każdy znak wysuwu wiersza zostanie zastąpiony parą wysuwu wiersza powrotu karetki w danych wyjściowych. Zastąpienie nie ma wpływu na wartość zwracaną.
+Jeśli plik jest otwierany w trybie tekstowym, każdy znak kanału wiersza jest zastępowany parą kanału zwrotnego karetki na wyjściu. Zastąpienie nie wpływa na wartość zwracaną.
 
-Gdy plik zostanie otwarty w trybie translacji Unicode — na przykład jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do Tablica **wchar_t** , która zawiera dane w **formacie UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
+Gdy plik jest otwierany w trybie tłumaczenia Unicode — na przykład, jeśli *fd* jest otwierany przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, lub jeśli jest otwarty za pomocą **fopen** i parametru trybu, który zawiera **ccs =UNICODE**, **ccs=UTF-16LE**lub **ccs=UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do tablicy **wchar_t** zawierającej dane **UTF-16.** Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd sprawdzania poprawności parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_write** zapisuje *liczbę* bajtów z *buforu* do pliku skojarzonego z *FD*. Operacja zapisu rozpoczyna się na bieżącym miejscu wskaźnika pliku (jeśli istnieje) skojarzonego z danym plikiem. Jeśli plik jest otwarty do dołączenia, operacja rozpoczyna się od bieżącego końca pliku. Po operacji zapisu wskaźnik pliku jest zwiększany o liczbę zapisanych bajtów.
+Funkcja **_write** zapisuje bajty *zliczania* z *bufora* do pliku skojarzonego z *fd*. Operacja zapisu rozpoczyna się w bieżącym położeniu wskaźnika pliku (jeśli istnieje) skojarzonego z danym plikiem. Jeśli plik jest otwarty do do załączenia, operacja rozpoczyna się na bieżącym końcu pliku. Po operacji zapisu wskaźnik pliku jest zwiększany o liczbę zapisanych bajtów.
 
-Podczas zapisywania do plików otwartych w trybie tekstowym **_write** traktuje znak Ctrl + z jako logiczny koniec pliku. Podczas zapisywania na urządzeniu **_write** traktuje znak Ctrl + z w buforze jako terminator wyjściowy.
+Podczas zapisywania do plików otwartych w trybie tekstowym **_write** traktuje znak CTRL+Z jako logiczny koniec pliku. Podczas zapisywania na urządzeniu **_write** traktuje znak CTRL+Z w buforze jako terminator wyjściowy.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_write**|\<io.h>|
+|**_write**|\<> io.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -140,9 +144,9 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

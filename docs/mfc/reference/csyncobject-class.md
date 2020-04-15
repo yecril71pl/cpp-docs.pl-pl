@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324873"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365969"
 ---
 # <a name="csyncobject-class"></a>Klasa CSyncObject
 
-Czysty klasa wirtualnego zapewnia funkcje wspólne dla obiektów synchronizacji w systemie Win32.
+Czysta klasa wirtualna, która zapewnia funkcje wspólne dla obiektów synchronizacji w win32.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,36 +37,36 @@ class CSyncObject : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSyncObject::CSyncObject](#csyncobject)|Konstruuje `CSyncObject` obiektu.|
+|[CSyncObject::CSyncObject](#csyncobject)|Konstruuje `CSyncObject` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSyncObject::Lock](#lock)|Uzyskuje dostęp do obiektu synchronizacji.|
-|[CSyncObject::Unlock](#unlock)|Uzyskuje dostęp do obiektu synchronizacji.|
+|[CSyncObject::Zablokuj](#lock)|Uzyskuje dostęp do obiektu synchronizacji.|
+|[CSyncObject::Odblokuj](#unlock)|Uzyskuje dostęp do obiektu synchronizacji.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSyncObject::operator UCHWYTU](#operator_handle)|Zapewnia dostęp do obiektu synchronizacji.|
+|[CSyncObject::operator HANDLE](#operator_handle)|Zapewnia dostęp do obiektu synchronizacji.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSyncObject::m_hObject](#m_hobject)|Dojście do bazowego obiektu synchronizacji.|
+|[CSyncObject::m_hObject](#m_hobject)|Dojście do obiektu synchronizacji podstawowej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Biblioteki klas Microsoft Foundation dostarcza kilka klas pochodnych `CSyncObject`. Są to [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), i [CSemaphore](../../mfc/reference/csemaphore-class.md).
+Biblioteka klas Programu Microsoft Foundation `CSyncObject`zawiera kilka klas pochodzących z programu . Są to [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)i [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Aby uzyskać informacje dotyczące sposobu używania dla obiektów synchronizacji, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać informacje na temat używania obiektów synchronizacji, zobacz artykuł [Wielowątkowość: Jak korzystać z klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CSyncObject`
 
@@ -74,9 +74,9 @@ Aby uzyskać informacje dotyczące sposobu używania dla obiektów synchronizacj
 
 **Nagłówek:** afxmt.h
 
-##  <a name="csyncobject"></a>  CSyncObject::CSyncObject
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject
 
-Tworzy obiekt synchronizacji o podanej nazwie.
+Konstruuje obiekt synchronizacji o podanej nazwie.
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
@@ -85,12 +85,12 @@ virtual ~CSyncObject();
 
 ### <a name="parameters"></a>Parametry
 
-*pstrName*<br/>
-Nazwa obiektu. Jeśli ma wartość NULL, *pstrName* będzie miał wartość null.
+*pstrName (nazwa pstrname)*<br/>
+Nazwa obiektu. Jeśli null, *pstrName* będzie null.
 
-##  <a name="lock"></a>  CSyncObject::Lock
+## <a name="csyncobjectlock"></a><a name="lock"></a>CSyncObject::Zablokuj
 
-Wywołaj tę funkcję, aby uzyskać dostęp do zasobów, kontrolowane przez obiekt synchronizacji.
+Wywołanie tej funkcji, aby uzyskać dostęp do zasobu kontrolowanego przez obiekt synchronizacji.
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -99,27 +99,27 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="parameters"></a>Parametry
 
 *dwTimeout*<br/>
-Określa ilość czasu (w milisekundach) oczekiwania na obiekt synchronizacji mają być dostępne (sygnalizowane). Jeśli jest to NIESKOŃCZONĄ, `Lock` będzie czekać do momentu zasygnalizowania obiektu przed zwróceniem.
+Określa czas oczekiwania na udostępnienie obiektu synchronizacji (sygnalizowany). Jeśli INFINITE, `Lock` będzie czekać, aż obiekt jest sygnalizowany przed zwróceniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
+Nonzero, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt synchronizacji jest sygnalizowane, `Lock` zwróci się pomyślnie i Wątek jest właścicielem obiektu. Jeśli obiekt synchronizacji jest nonsignaled (niedostępna), `Lock` będzie czekać na obiekt synchronizacji zostało zasygnalizowane maksymalnie wyrażony w milisekundach czas określony w *dwTimeOut* parametru. Jeśli obiekt synchronizacji nie zasygnalizowane w określonym czasie, `Lock` zwraca błąd.
+Jeśli obiekt synchronizacji jest `Lock` sygnalizowany, zwróci pomyślnie i wątek jest teraz właścicielem obiektu. Jeśli obiekt synchronizacji jest niesygnatowany (niedostępny), `Lock` będzie czekać na obiekt synchronizacji, aby stać się sygnalizowane do liczby milisekund określonych w *dwTimeOut* parametru. Jeśli obiekt synchronizacji nie został zasygnalizowany `Lock` w określonym czasie, zwraca błąd.
 
-##  <a name="m_hobject"></a>  CSyncObject::m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject
 
-Dojście do bazowego obiektu synchronizacji.
+Dojście do obiektu synchronizacji podstawowej.
 
 ```
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator UCHWYTU
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator HANDLE
 
-Użyj tego operatora, aby uzyskać dojście `CSyncObject` obiektu.
+Ten operator służy do uzyskania `CSyncObject` uchwytu obiektu.
 
 ```
 operator HANDLE() const;
@@ -127,15 +127,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, uchwyt obiektu synchronizacji; w przeciwnym razie wartość NULL.
+Jeśli się powiedzie, dojście obiektu synchronizacji; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście służy do wywoływania interfejsów API Windows bezpośrednio.
+Dojścia można używać do bezpośredniego wywoływania interfejsów API systemu Windows.
 
-##  <a name="unlock"></a>  CSyncObject::Unlock
+## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Odblokuj
 
-Deklaracja `Unlock` bez parametrów jest czysta funkcja wirtualna i musi zostać zastąpiona przez wszystkie klasy wywodzące się z `CSyncObject`.
+Deklaracja `Unlock` bez parametrów jest czystą funkcją wirtualną i musi być `CSyncObject`zastąpiona przez wszystkie klasy wynikające z .
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -145,21 +145,21 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*<br/>
-Nie używany przez domyślną implementację.
+*lLicza*<br/>
+Nie jest używana domyślnie implementacji.
 
 *lpPrevCount*<br/>
-Nie używany przez domyślną implementację.
+Nie jest używana domyślnie implementacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślna implementacja zawsze zwraca wartość PRAWDA.
+Domyślna implementacja zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja deklaracji z dwoma parametrami zawsze zwraca wartość PRAWDA. Ta funkcja jest wywoływana, aby zwolnić dostępu do obiektu synchronizacji własnością wątku wywołującego. Drugi deklaracji jest udostępniana dla synchronizacji obiektów, takich jak semaforów zezwalające na dostęp więcej niż jednego zasobu kontrolowany.
+Domyślna implementacja deklaracji z dwoma parametrami zawsze zwraca wartość TRUE. Ta funkcja jest wywoływana do zwalniania dostępu do obiektu synchronizacji należącego do wątku wywołującego. Druga deklaracja jest dostępna dla obiektów synchronizacji, takich jak semafory, które umożliwiają więcej niż jeden dostęp do kontrolowanego zasobu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366128"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 
-Używany w transferach danych do pobierania danych w różnych formatach ze schowka poprzez przeciąganie i upuszczanie lub z osadzonego elementu OLE.
+Używane w transferach danych do pobierania danych w różnych formatach ze Schowka, przez przeciąganie i upuszczanie lub z osadzonego elementu OLE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,40 +45,40 @@ Używany w transferach danych do pobierania danych w różnych formatach ze scho
 class COleDataObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COleDataObject::COleDataObject](#coledataobject)|Konstruuje obiekt `COleDataObject`.|
+|[COleDataObject::COleDataObject](#coledataobject)|Konstruuje `COleDataObject` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COleDataObject:: Attach](#attach)|Dołącza określony obiekt danych OLE do `COleDataObject`.|
-|[COleDataObject::AttachClipboard](#attachclipboard)|Dołącza obiekt danych znajdujący się w Schowku.|
-|[COleDataObject::BeginEnumFormats](#beginenumformats)|Przygotowuje się do jednego lub kilku kolejnych wywołań `GetNextFormat`.|
-|[COleDataObject::D etach](#detach)|Odłącza skojarzony obiekt `IDataObject`.|
-|[COleDataObject:: GetData](#getdata)|Kopiuje dane z dołączonego obiektu danych OLE w określonym formacie.|
-|[COleDataObject::GetFileData](#getfiledata)|Kopiuje dane z dołączonego obiektu danych OLE do wskaźnika `CFile` w określonym formacie.|
-|[COleDataObject::GetGlobalData](#getglobaldata)|Kopiuje dane z dołączonego obiektu danych OLE do `HGLOBAL` w określonym formacie.|
+|[COleDataObject::Dołącz](#attach)|Dołącza określony obiekt danych OLE `COleDataObject`do pliku .|
+|[COleDataObject::AttachClipboard](#attachclipboard)|Dołącza obiekt danych, który znajduje się w Schowku.|
+|[COleDataObject::BeginEnumFormaty](#beginenumformats)|Przygotowuje się do jednego `GetNextFormat` lub więcej kolejnych połączeń.|
+|[COleDataObject::Detach](#detach)|Odłącza skojarzony `IDataObject` obiekt.|
+|[COleDataObject::GetData](#getdata)|Kopiuje dane z dołączonego obiektu danych OLE w określonym formacie.|
+|[COleDataObject::GetFileData](#getfiledata)|Kopiuje dane z dołączonego obiektu `CFile` danych OLE do wskaźnika w określonym formacie.|
+|[COleDataObject::GetGlobalData](#getglobaldata)|Kopiuje dane z dołączonego obiektu `HGLOBAL` danych OLE do określonego formatu.|
 |[COleDataObject::GetNextFormat](#getnextformat)|Zwraca następny dostępny format danych.|
-|[COleDataObject::IsDataAvailable](#isdataavailable)|Sprawdza, czy dane są dostępne w określonym formacie.|
-|[COleDataObject:: Release](#release)|Odłącza i zwalnia skojarzony obiekt `IDataObject`.|
+|[COleDataObject::IsDataDostępne](#isdataavailable)|Sprawdza, czy dane są dostępne w określonym formacie.|
+|[COleDataObject::Release COleDataObject::Release COleDataObject::Release COle](#release)|Odłącza i zwalnia `IDataObject` skojarzony obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-`COleDataObject` nie ma klasy bazowej.
+`COleDataObject`nie ma klasy podstawowej.
 
-Te rodzaje transferów danych obejmują źródło i miejsce docelowe. Źródło danych jest implementowane jako obiekt klasy [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) . Za każdym razem, gdy w aplikacji docelowej znajdują się dane, lub jest wyświetlany monit o wykonanie operacji wklejenia ze schowka, należy utworzyć obiekt klasy `COleDataObject`.
+Tego rodzaju transfery danych obejmują źródło i miejsce docelowe. Źródło danych jest implementowane jako obiekt [COleDataSource](../../mfc/reference/coledatasource-class.md) klasy. Za każdym razem, gdy aplikacja docelowa ma dane porzucone w nim lub jest `COleDataObject` proszony o wykonanie operacji wklejania ze Schowka, należy utworzyć obiekt klasy.
 
-Ta klasa umożliwia określenie, czy dane istnieją w określonym formacie. Możesz również wyliczyć dostępne formaty danych lub sprawdzić, czy dany format jest dostępny, a następnie pobrać dane w preferowanym formacie. Pobieranie obiektów można wykonać na kilka różnych sposobów, w tym użycie [CFile](../../mfc/reference/cfile-class.md), HGLOBAL lub struktury `STGMEDIUM`.
+Ta klasa umożliwia określenie, czy dane istnieją w określonym formacie. Można również wyliczyć dostępne formaty danych lub sprawdzić, czy dany format jest dostępny, a następnie pobrać dane w preferowanym formacie. Pobieranie obiektów można wykonać na kilka różnych sposobów, w tym przy użyciu [CFile](../../mfc/reference/cfile-class.md), HGLOBAL lub `STGMEDIUM` struktury.
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w sdk systemu Windows.
 
-Aby uzyskać więcej informacji na temat używania obiektów danych w aplikacji, zobacz temat [obiekty danych artykułu i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
+Aby uzyskać więcej informacji na temat używania obiektów danych w aplikacji, zobacz artykuł [Obiekty danych i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -86,11 +86,11 @@ Aby uzyskać więcej informacji na temat używania obiektów danych w aplikacji,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** Afxole. h
+**Nagłówek:** afxole.h
 
-##  <a name="attach"></a>COleDataObject:: Attach
+## <a name="coledataobjectattach"></a><a name="attach"></a>COleDataObject::Dołącz
 
-Wywołaj tę funkcję, aby skojarzyć obiekt `COleDataObject` z obiektem danych OLE.
+Wywołanie tej funkcji, aby skojarzyć `COleDataObject` obiekt z obiektem danych OLE.
 
 ```
 void Attach(
@@ -104,32 +104,32 @@ void Attach(
 Wskazuje obiekt danych OLE.
 
 *bAutoRelease*<br/>
-Ma wartość TRUE, jeśli obiekt danych OLE ma zostać wydzierżawiony po zniszczeniu obiektu `COleDataObject`; w przeciwnym razie FALSE.
+PRAWDA, jeśli obiekt danych OLE `COleDataObject` powinien zostać zwolniony, gdy obiekt zostanie zniszczony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) w windows SDK.
 
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard
+## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject::AttachClipboard
 
-Wywołaj tę funkcję, aby dołączyć obiekt danych znajdujący się obecnie w schowku do obiektu `COleDataObject`.
+Wywołanie tej funkcji, aby dołączyć obiekt danych, który `COleDataObject` znajduje się obecnie w Schowku do obiektu.
 
 ```
 BOOL AttachClipboard();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!NOTE]
->  Wywołanie tej funkcji powoduje zablokowanie schowka do momentu zwolnienia tego obiektu danych. Obiekt danych jest wydawany w destruktorze dla `COleDataObject`. Aby uzyskać więcej informacji, zobacz [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) i [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) w dokumencie Win32.
+> Wywołanie tej funkcji blokuje Schowek, dopóki ten obiekt danych nie zostanie zwolniony. Obiekt danych jest zwalniany w destruktorze `COleDataObject`dla pliku . Aby uzyskać więcej informacji, zobacz [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) i [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) w dokumencie Win32.
 
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats
+## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject::BeginEnumFormaty
 
-Wywołaj tę funkcję, aby przygotować się do kolejnych wywołań `GetNextFormat` w celu pobrania listy formatów danych z elementu.
+Wywołanie tej funkcji, aby `GetNextFormat` przygotować się do kolejnych wywołań do pobierania listy formatów danych z elementu.
 
 ```
 void BeginEnumFormats();
@@ -137,15 +137,15 @@ void BeginEnumFormats();
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu `BeginEnumFormats`jest przechowywany pozycja pierwszego formatu obsługiwanego przez ten obiekt danych. Kolejne wywołania do `GetNextFormat` będą wyliczać listę dostępnych formatów w obiekcie danych.
+Po wywołaniu `BeginEnumFormats`, pozycja pierwszego formatu obsługiwanego przez ten obiekt danych jest przechowywana. Kolejne wywołania `GetNextFormat` wyliczą listę dostępnych formatów w obiekcie danych.
 
-Aby sprawdzić dostępność danych w danym formacie, użyj [COleDataObject:: IsDataAvailable](#isdataavailable).
+Aby sprawdzić dostępność danych w danym formacie, należy użyć [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Aby uzyskać więcej informacji, zobacz [IDataObject:: EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject::EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) w sdk systemu Windows.
 
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject
+## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject::COleDataObject
 
-Konstruuje obiekt `COleDataObject`.
+Konstruuje `COleDataObject` obiekt.
 
 ```
 COleDataObject();
@@ -153,28 +153,28 @@ COleDataObject();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie [COleDataObject:: Attach](#attach) lub [COleDataObject:: AttachClipboard](#attachclipboard) musi zostać wykonane przed wywołaniem innych funkcji `COleDataObject`.
+Wywołanie [COleDataObject::Attach](#attach) lub [COleDataObject::AttachClipboard](#attachclipboard) musi zostać `COleDataObject` wykonane przed wywołaniem innych funkcji.
 
 > [!NOTE]
->  Ponieważ jeden z parametrów obsługi przeciągania i upuszczania jest wskaźnikiem do `COleDataObject`, nie ma potrzeby wywoływania tego konstruktora w celu obsługi przeciągania i upuszczania.
+> Ponieważ jednym z parametrów do obsługi przeciągania i `COleDataObject`upuszczania jest wskaźnik do , nie ma potrzeby wywoływania tego konstruktora do obsługi przeciągania i upuszczania.
 
-##  <a name="detach"></a>COleDataObject::D etach
+## <a name="coledataobjectdetach"></a><a name="detach"></a>COleDataObject::Detach
 
-Wywołaj tę funkcję, aby odłączyć obiekt `COleDataObject` ze skojarzonego obiektu danych OLE bez zwalniania obiektu danych.
+Wywołanie tej funkcji, `COleDataObject` aby odłączyć obiekt od skojarzonego obiektu danych OLE bez zwalniania obiektu danych.
 
 ```
 LPDATAOBJECT Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do obiektu danych OLE, który został odłączony.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getdata"></a>COleDataObject:: GetData
+## <a name="coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject::GetData
 
-Wywołaj tę funkcję, aby pobrać dane z elementu w określonym formacie.
+Wywołanie tej funkcji, aby pobrać dane z elementu w określonym formacie.
 
 ```
 BOOL GetData(
@@ -186,27 +186,27 @@ BOOL GetData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
+Format, w którym mają być zwracane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwróconą przez natywną funkcję Windows [RegisterClipboardFormatat.](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)
 
 *lpStgMedium*<br/>
-Wskazuje na strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać dane.
+Wskazuje na strukturę [STGMEDIUM,](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) która będzie odbierać dane.
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być zwracane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie poza formatem Schowka określonym przez *cfFormat*. Jeśli jest null, wartości domyślne są używane `FORMATETC` dla innych pól w strukturze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w windows SDK.
 
-##  <a name="getfiledata"></a>COleDataObject::GetFileData
+## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject::GetFileData
 
-Wywołaj tę funkcję, aby utworzyć obiekt pochodny `CFile` lub `CFile`i pobrać dane w określonym formacie do wskaźnika `CFile`.
+Wywołanie tej funkcji, aby utworzyć `CFile` lub `CFile`-pochodne obiektu i `CFile` pobrać dane w określonym formacie do wskaźnika.
 
 ```
 CFile* GetFileData(
@@ -217,29 +217,29 @@ CFile* GetFileData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
+Format, w którym mają być zwracane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwróconą przez natywną funkcję Windows [RegisterClipboardFormatat.](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być zwracane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie poza formatem Schowka określonym przez *cfFormat*. Jeśli jest null, wartości domyślne są używane `FORMATETC` dla innych pól w strukturze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowego `CFile` lub obiekt pochodny `CFile`zawierający dane, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
+Wskaźnik do `CFile` nowego `CFile`lub pochodnego obiektu zawierającego dane, jeśli się powiedzie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od średniej dane są przechowywane w, rzeczywisty typ wskazywany przez wartość zwracaną może być `CFile`, `CSharedFile`lub `COleStreamFile`.
+W zależności od nośnika, na jakim są przechowywane dane, `CFile`rzeczywisty typ wskazywał przez zwracaną wartość może być , `CSharedFile`lub `COleStreamFile`.
 
 > [!NOTE]
->  Obiekt `CFile`, do którego uzyskuje dostęp wartość zwracana przez tę funkcję, należy do obiektu wywołującego. Obiekt wywołujący jest odpowiedzialny za **usunięcie** obiektu `CFile`, przez co zamyka ten plik.
+> Obiekt, `CFile` do którego ma dostęp zwracana wartość tej funkcji, jest własnością obiektu wywołującego. Jest odpowiedzialny za obiekt wywołujący, `CFile` aby **usunąć** obiekt, zamykając w ten sposób plik.
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w windows SDK.
 
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData
+## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject::GetGlobalData
 
-Wywołaj tę funkcję, aby przydzielić blok pamięci globalnej i pobrać dane w określonym formacie do HGLOBAL.
+Wywołanie tej funkcji, aby przydzielić globalny blok pamięci i pobrać dane w określonym formacie do HGLOBAL.
 
 ```
 HGLOBAL GetGlobalData(
@@ -250,24 +250,24 @@ HGLOBAL GetGlobalData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format, w którym dane mają zostać zwrócone. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
+Format, w którym mają być zwracane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwróconą przez natywną funkcję Windows [RegisterClipboardFormatat.](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym dane mają być zwracane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być zwracane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie poza formatem Schowka określonym przez *cfFormat*. Jeśli jest null, wartości domyślne są używane `FORMATETC` dla innych pól w strukturze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Dojście bloku pamięci globalnej zawierające dane, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
+Dojście globalnego bloku pamięci zawierającego dane, jeśli zakończy się pomyślnie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w windows SDK.
 
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat
+## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject::GetNextFormat
 
-Wywołaj tę funkcję wielokrotnie, aby uzyskać wszystkie formaty dostępne do pobierania danych z elementu.
+Wywołanie tej funkcji wielokrotnie, aby uzyskać wszystkie formaty dostępne do pobierania danych z elementu.
 
 ```
 BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
@@ -276,23 +276,23 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , która otrzymuje informacje o formacie, gdy wywołanie funkcji zwraca.
+Wskazuje strukturę [FORMATETC,](/windows/win32/api/objidl/ns-objidl-formatetc) która odbiera informacje o formacie, gdy zwraca wywołanie funkcji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli jest dostępny inny format; w przeciwnym razie 0.
+Nonzero, jeśli inny format jest dostępny; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu [COleDataObject:: BeginEnumFormats](#beginenumformats)pozycja pierwszego formatu obsługiwanego przez ten obiekt danych jest przechowywana. Kolejne wywołania do `GetNextFormat` będą wyliczać listę dostępnych formatów w obiekcie danych. Użyj tych funkcji, aby wyświetlić listę dostępnych formatów.
+Po wywołaniu [COleDataObject::BeginEnumFormats](#beginenumformats), pozycja pierwszego formatu obsługiwanego przez ten obiekt danych jest przechowywana. Kolejne wywołania `GetNextFormat` wyliczą listę dostępnych formatów w obiekcie danych. Użyj tych funkcji, aby wyświetlić listę dostępnych formatów.
 
-Aby sprawdzić dostępność danego formatu, wywołaj [COleDataObject:: IsDataAvailable](#isdataavailable).
+Aby sprawdzić dostępność danego formatu, zadzwoń [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Aby uzyskać więcej informacji, zobacz [IEnumXXXX:: Next](/previous-versions//ms695273\(v=vs.85\)) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) w windows SDK.
 
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable
+## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataDostępne
 
-Wywołaj tę funkcję, aby określić, czy konkretny format jest dostępny do pobierania danych z elementu OLE.
+Wywołanie tej funkcji, aby ustalić, czy określony format jest dostępny do pobierania danych z elementu OLE.
 
 ```
 BOOL IsDataAvailable(
@@ -303,30 +303,30 @@ BOOL IsDataAvailable(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format danych schowka, który ma być używany w strukturze wskazywanym przez *lpFormatEtc*. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
+Format danych Schowka do użycia w strukturze wskazywowej przez *lpFormatEtc*. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwróconą przez natywną funkcję Windows [RegisterClipboardFormatat.](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)
 
 *lpFormatEtc*<br/>
-Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą żądany format. Podaj wartość dla tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli wartość jest równa NULL, wartości domyślne są używane dla innych pól w strukturze `FORMATETC`.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą żądany format. Podaj wartość tego parametru tylko wtedy, gdy chcesz określić dodatkowe informacje o formacie poza formatem Schowka określonym przez *cfFormat*. Jeśli jest null, wartości domyślne są używane `FORMATETC` dla innych pól w strukturze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera, jeśli dane są dostępne w określonym formacie; w przeciwnym razie 0.
+Nonzero, jeśli dane są dostępne w określonym formacie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest przydatna przed wywołaniem `GetData`, `GetFileData`lub `GetGlobalData`.
+Ta funkcja jest `GetData`przydatna `GetFileData`przed `GetGlobalData`wywołaniem , lub .
 
-Aby uzyskać więcej informacji, zobacz [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject::QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w usłudze Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w windows SDK.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CRichEditView:: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).
+  Zobacz przykład [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).
 
-##  <a name="release"></a>COleDataObject:: Release
+## <a name="coledataobjectrelease"></a><a name="release"></a>COleDataObject::Release COleDataObject::Release COleDataObject::Release COle
 
-Wywołaj tę funkcję, aby zwolnić własność obiektu [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) , który został wcześniej skojarzony z obiektem `COleDataObject`.
+Wywołanie tej funkcji, aby zwolnić własność [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) obiektu, `COleDataObject` który był wcześniej skojarzony z obiektem.
 
 ```
 void Release();
@@ -334,12 +334,12 @@ void Release();
 
 ### <a name="remarks"></a>Uwagi
 
-`IDataObject` była skojarzona z `COleDataObject` przez wywołanie `Attach` lub `AttachClipboard` jawnie lub przez platformę. Jeśli parametr *bAutoRelease* `Attach` ma wartość false, obiekt `IDataObject` nie zostanie wydaną. W takim przypadku obiekt wywołujący jest odpowiedzialny za zwolnienie `IDataObject` przez wywołanie [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
+Był `IDataObject` skojarzony z `COleDataObject` `Attach` wywołaniem `AttachClipboard` lub jawnie lub przez ramy. Jeśli parametr *bAutoRelease* jest `Attach` FALSE, `IDataObject` obiekt nie zostanie zwolniony. W takim przypadku wywołujący jest odpowiedzialny `IDataObject` za zwolnienie przez wywołanie [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDataSource](../../mfc/reference/coledatasource-class.md)<br/>
 [Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

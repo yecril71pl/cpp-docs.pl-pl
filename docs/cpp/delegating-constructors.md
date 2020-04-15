@@ -1,17 +1,17 @@
 ---
-title: Delegowanie konstruktorówC++()
-description: Używaj konstruktorów delegowania C++ w programie, aby wywoływać inne konstruktory i ograniczyć powtarzanie kodu.
+title: Delegowanie konstruktorów (C++)
+description: Użyj delegujących konstruktorów w języku C++ do wywoływania innych konstruktorów i zmniejszenia powtarzania kodu.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250675"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316671"
 ---
 # <a name="delegating-constructors"></a>Delegowanie konstruktorów
 
-Wiele klas ma wiele konstruktorów, które wykonują podobne czynności — na przykład weryfikują parametry:
+Wiele klas ma wiele konstruktorów, które wykonują podobne czynności — na przykład sprawdzają poprawność parametrów:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-Można zmniejszyć powtarzający się kod, dodając funkcję, która wykonuje wszystkie walidacje, ale kod dla `class_c` byłby łatwiejszy do zrozumienia i utrzymania, jeśli jeden konstruktor może delegować część pracy do innej. Aby dodać konstruktory delegowania, użyj składni `constructor (. . .) : constructor (. . .)`:
+Można zmniejszyć powtarzający się kod, dodając funkcję, która wykonuje wszystkie sprawdzania `class_c` poprawności, ale kod dla byłoby łatwiejsze do zrozumienia i utrzymania, jeśli jeden konstruktor może delegować niektóre z pracy do innego. Aby dodać konstruktory `constructor (. . .) : constructor (. . .)` delegujące, należy użyć składni:
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-Po przekroczeniu poprzedniego przykładu należy zauważyć, że Konstruktor `class_c(int, int, int)` najpierw wywołuje konstruktora `class_c(int, int)`, co z kolei wywołuje `class_c(int)`. Każdy z konstruktorów wykonuje tylko zadania, które nie są wykonywane przez inne konstruktory.
+Podczas przechodzenia przez poprzedni przykład zwróć `class_c(int, int, int)` uwagę, że `class_c(int, int)`konstruktor najpierw `class_c(int)`wywołuje konstruktora, co z kolei wywołuje . Każdy z konstruktorów wykonuje tylko pracę, która nie jest wykonywana przez innych konstruktorów.
 
-Pierwszy Konstruktor, który jest wywoływany inicjuje obiekt w taki sposób, że wszystkie jego elementy członkowskie są inicjowane w tym momencie. Nie można zainicjować składowej w konstruktorze, który delegatuje do innego konstruktora, jak pokazano poniżej:
+Pierwszy konstruktor, który jest nazywany inicjuje obiekt tak, że wszystkie jego elementy członkowskie są inicjowane w tym momencie. Inicjowanie elementu członkowskiego w konstruktorze, który deleguje do innego konstruktora, jak pokazano w tym miejscu:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-W następnym przykładzie pokazano użycie niestatycznych inicjatorów składowych danych. Zwróć uwagę, że jeśli Konstruktor inicjuje również dany element członkowski danych, inicjator składowej jest zastępowany:
+W następnym przykładzie pokazano użycie inicjatorów niestatycznych elementów członkowskich danych. Należy zauważyć, że jeśli konstruktor inicjuje również danego elementu członkowskiego danych, element członkowski inicjatora jest zastępowane:
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-Składnia delegowania konstruktora nie uniemożliwia przypadkowego utworzenia rekursji konstruktorów — wywołania Constructor1 Constructor2, które wywołuje Constructor1 — i żadne błędy nie są zgłaszane do momentu przepełnienia stosu. Jest on odpowiedzialny za uniknięcie cykli.
+Składnia delegowania konstruktora nie zapobiega przypadkowemu utworzeniu rekursji konstruktora — Konstruktor1 wywołuje Constructor2, który wywołuje Constructor1 — i żadne błędy nie są generowane, dopóki nie nastąpi przepełnienie stosu. Twoim obowiązkiem jest unikanie cykli.
 
 ```cpp
 class class_f{

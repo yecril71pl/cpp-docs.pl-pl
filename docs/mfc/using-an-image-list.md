@@ -6,29 +6,29 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: cb95de134939e1b06e2a8b827424c986f8c48ef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d9566739a15e5d216eb052a7265313850515648
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180469"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366574"
 ---
 # <a name="using-an-image-list"></a>Używanie list obrazów
 
-Typowy listy obrazów jest zgodny ze wzorcem poniżej:
+Typowe użycie listy obrazów następuje poniżej wzorze:
 
-- Konstruowania [CImageList](../mfc/reference/cimagelist-class.md) obiektu, a następnie wywołać jedno z przeciążeń z jego [Utwórz](../mfc/reference/cimagelist-class.md#create) funkcję, aby utworzyć listy obrazów i dołączyć go do `CImageList` obiektu.
+- Konstruuj [CImageList](../mfc/reference/cimagelist-class.md) obiektu i wywołać jeden z przeciążeń jego [Tworzenie](../mfc/reference/cimagelist-class.md#create) `CImageList` funkcji, aby utworzyć listę obrazów i dołączyć go do obiektu.
 
-- Jeśli obrazy nie zostały dodane po utworzeniu listy obrazów, dodawanie obrazów do listy obrazów, wywołując [Dodaj](../mfc/reference/cimagelist-class.md#add) lub [odczytu](../mfc/reference/cimagelist-class.md#read) funkcja elementu członkowskiego.
+- Jeśli podczas tworzenia listy obrazów nie dodano obrazów, dodaj obrazy do listy obrazów, wywołując funkcję [Dodaj](../mfc/reference/cimagelist-class.md#add) lub [Odczytuj.](../mfc/reference/cimagelist-class.md#read)
 
-- Skojarz listy obrazów z formantem przez wywołanie funkcji właściwego członka tej kontrolki lub rysowanie obrazów z listy obrazów, samodzielnie za pomocą listy obrazów [Rysowanie](../mfc/reference/cimagelist-class.md#draw) funkcja elementu członkowskiego.
+- Skojarz listę obrazów z formantem, wywołując odpowiednią funkcję elementu członkowskiego tego formantu lub samodzielnie rysuj obrazy z listy obrazów za pomocą funkcji elementu członkowskiego [Rysowanie](../mfc/reference/cimagelist-class.md#draw) listy obrazów.
 
-- Być może umożliwić użytkownikowi przeciągnij obraz, przeciągając go przy użyciu wbudowanej obsługi listy obrazów.
+- Być może zezwolić użytkownikowi na przeciąganie obrazu przy użyciu wbudowanej obsługi listy obrazów do przeciągania.
 
 > [!NOTE]
->  Jeśli na liście obraz został utworzony za pomocą **nowe** operatora, użytkownik musi zniszczyć `CImageList` obiektu, kiedy są z nią zrobić.
+> Jeśli lista obrazów została utworzona z **nowym** operatorem, należy zniszczyć `CImageList` obiekt po zakończeniu z nim.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

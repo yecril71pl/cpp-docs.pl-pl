@@ -1,18 +1,18 @@
 ---
 layout: LandingPage
-title: Programowanie dla systemu C++ Linux za pomocą dokumentacji
-description: Twórz i Debuguj aplikacje działające w systemie Linux.
+title: Rozwój Linuksa z dokumentacją C++
+description: Tworzenie i debugowanie aplikacji działających w systemie Linux.
 ms.topic: landing-page
-ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d7e3622c3c390bdf4a594e36706d937ff7ef3909
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364321"
 ---
-# <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu C++ Linux za pomocą dokumentacji
+# <a name="linux-development-with-c-documentation"></a>Rozwój Linuksa z dokumentacją C++
 
-Za pomocą programu Visual Studio 2017 i nowszych można tworzyć i debugować aplikacje działające na maszynach zdalnych z systemem Linux lub podsystem Windows dla systemu Linux.
+Program Visual Studio 2017 i nowsze używają do tworzenia i debugowania aplikacji działających na komputerach zdalnych systemu Linux lub podsystemie Windows dla systemu Linux.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -28,8 +28,8 @@ Za pomocą programu Visual Studio 2017 i nowszych można tworzyć i debugować a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalowanie i Konfigurowanie obciążenia systemu Linux</h3>
-                        <p>Dowiedz się, jak skonfigurować program Visual Studio 2017 i nowszego do C++tworzenia aplikacji systemu Linux w systemie.</p>
+                        <h3>Instalowanie i konfigurowanie obciążenia systemu Linux</h3>
+                        <p>Dowiedz się, jak skonfigurować program Visual Studio 2017 i nowsze do tworzenia aplikacji systemu Linux w języku C++.</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@ Za pomocą programu Visual Studio 2017 i nowszych można tworzyć i debugować a
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>C++Blog zespołu</h3>
-                        <p>Bądź na bieżąco ze wszystkimi najnowszymi C++ funkcjami programu Visual Studio.</p>
+                        <h3>Blog zespołu języka C++</h3>
+                        <p>Bądź na bieżąco ze wszystkimi najnowszymi funkcjami języka C++ w programie Visual Studio.</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ Za pomocą programu Visual Studio 2017 i nowszych można tworzyć i debugować a
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">Język C++ w programie Visual Studio</a></h3>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">C++ w programie Visual Studio</a></h3>
                     </div>
                 </div>
             </div>

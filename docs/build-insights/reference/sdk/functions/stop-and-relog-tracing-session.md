@@ -1,6 +1,6 @@
 ---
-title: StopAndRelogTracingSession
-description: Odwołanie C++ do funkcji StopAndRelogTracingSession zestawu SDK usługi Build Insights.
+title: StopAndRelogTracingSession (StopAndRelogTracingSession)
+description: Odwołanie do funkcji SDK StopAndRelogTracingSession w programie C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e99568f9b509b89ccd0f0711433dec9d96d904bc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1f6f5af63d25504226707d977791430463374328
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323668"
 ---
-# <a name="stopandrelogtracingsession"></a>StopAndRelogTracingSession
+# <a name="stopandrelogtracingsession"></a>StopAndRelogTracingSession (StopAndRelogTracingSession)
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `StopAndRelogTracingSession` przerywa trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja ponownej rejestracji jest natychmiast uruchamiana przy użyciu pliku tymczasowego jako dane wejściowe. Ostatni zarejestrowany rejestr utworzony przez sesję rejestrowania jest zapisywany w pliku określonym przez obiekt wywołujący. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
+Funkcja `StopAndRelogTracingSession` zatrzymuje trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja ponownego rejestrowania jest natychmiast uruchamiana przy użyciu pliku tymczasowego jako danych wejściowych. Końcowy ślad ponownie zarejestrowany wyprodukowany przez sesję ponownego rejestrowania jest zapisywany w pliku określonym przez wywołującego. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,35 +57,35 @@ RESULT_CODE StopAndRelogTracingSession(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa sesji*\
-Nazwa sesji śledzenia, która ma zostać zatrzymana. Użyj tej samej nazwy sesji, która została przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
+*Nazwa_sesji*\
+Nazwa sesji śledzenia, aby zatrzymać. Użyj tej samej nazwy sesji, co nazwa przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
 
-*outputLogFile*\
-Plik, w którym ma zostać zapisany zarejestrowany ponownie ślad utworzony przez sesję ponownego rejestrowania.
+*plik danych wyjściowych*\
+Plik, w którym można zapisać relogged śledzenia produkowane przez sesji ponownego rejestrowania.
 
-\ *statystyk*
-Wskaźnik do obiektu [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndRelogTracingSession` zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
+*Statystyki*\
+Wskaźnik do [obiektu TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndRelogTracingSession`zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
 
-*numberOfAnalysisPasses*\
-Liczba przebiegów analizy do uruchomienia w śladzie. Śledzenie jest przekazywane przez podaną grupę analizatora raz na przebieg analizy.
+*numerOfAnalysisPasses*\
+Liczba przechodzi analizy do uruchomienia na śledzenia. Śledzenia pobiera przekazywane przez pod warunkiem grupy analizatorraz na przebieg analizy.
 
-*systemEventsRetentionFlags*\
-[RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md) maski bitowej, która określa, które systemowe zdarzenia ETW zachować w rejestrowanym śladzie.
+*systemEventsReentionSlags*\
+Maska bitowa [RELOG_RETENTION_SYSTEM_EVENT_FLAGS,](../other-types/relog-retention-system-event-flags-constants.md) która określa, które zdarzenia ETW systemu należy przechowywać w ponownie zarejestrowanym śladu.
 
-\ka *analizatora*
-Grupa analizatorów używana dla fazy analizy sesji rejestrowania. Wywołaj [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) , aby utworzyć grupę analizatorów. Jeśli chcesz użyć dynamicznej grupy analizatora uzyskanej z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), najpierw Hermetyzuj ją wewnątrz statycznej grupy analizatorów, przekazując jej adres do `MakeStaticAnalyzerGroup`.
+*grupa analizatorów*\
+Grupa analizatorów używana do fazy analizy sesji ponownego rejestrowania. Wywołanie [MakeStaticAnalyzerGroup,](make-static-analyzer-group.md) aby utworzyć grupę analizatora. Jeśli chcesz użyć grupy analizatorów dynamicznych uzyskanej z [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)najpierw hermetyzuj ją `MakeStaticAnalyzerGroup`wewnątrz grupy analizatorów statycznych, przekazując jej adres do .
 
-\ ponownego *rejestrowania*
-Grupa ponownego rejestrowania, która rejestruje zdarzenia do pliku śledzenia określonego w *outputLogFile*. Wywołaj [MakeStaticReloggerGroup](make-static-relogger-group.md) , aby utworzyć grupę modułu rejestrującego. Jeśli chcesz użyć dynamicznej grupy ponownego rejestrowania uzyskanej z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), najpierw Hermetyzuj ją wewnątrz statycznej grupy rejestrowania, przekazując jej adres do `MakeStaticReloggerGroup`.
+*grupa relogger*\
+Grupa reloggera, która ponownie zasłania zdarzenia do pliku śledzenia określonego w *pliku outputLogFile*. Wywołanie [MakeStaticReloggerGroup,](make-static-relogger-group.md) aby utworzyć grupę relogger. Jeśli chcesz użyć dynamicznej grupy reloggera uzyskanej z [MakeDynamicReloggerGroup,](make-dynamic-relogger-group.md)najpierw hermetyzuj ją `MakeStaticReloggerGroup`wewnątrz statycznej grupy reloggerów, przekazując jej adres do .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
+Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Śledzenie danych wejściowych jest przesyłane przez grupę analizatora *numberOfAnalysisPasses* razy. Nie ma podobnej opcji do rejestrowania przebiegów. Śledzenie jest przekazywane trough grupę rejestratorów tylko raz, po ukończeniu wszystkich przebiegów analizy.
+Śledzenia danych wejściowych jest przekazywana przez numer grupy *analizatoraOfAnalysisPasses* razy. Nie ma podobnej opcji ponownego rejestrowania przebiegów. Śledzenie jest przekazywane koryta grupy relogger tylko raz, po zakończeniu wszystkich przebiegów analizy.
 
-Rejestrowanie zdarzeń systemowych, takich jak przykłady procesora CPU z klasy rerejestratora, nie jest obsługiwane. Użyj parametru *systemEventsRetentionFlags* , aby określić, które zdarzenia systemowe mają być przechowywane w wyniku śledzenia danych wyjściowych.
+Ponowne rejestrowanie zdarzeń systemowych, takich jak próbki procesora CPU z klasy reloggera nie jest obsługiwane. Użyj *parametru systemEventsRetentionFlags,* aby zdecydować, które zdarzenia systemowe mają być utrzymywane w śledzenia danych wyjściowych.
 
 ::: moniker-end

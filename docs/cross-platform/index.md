@@ -1,21 +1,21 @@
 ---
 layout: LandingPage
-title: Programowanie aplikacji mobilnych za pomocąC++
-description: Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows za pomocą programu Visual Studio.
+title: Rozwój mobilny z C++
+description: Tworzenie natywnych aplikacji języka C++ dla urządzeń z systemem iOS, Android i Windows za pomocą programu Visual Studio.
 ms.date: 10/31/2018
 author: jasongroce
 ms.author: jasgro
 ms.topic: landing-page
 ms.openlocfilehash: d250a1586b4cf01dfae2a39b7d595b60c53a5123
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "78177442"
 ---
-# <a name="mobile-development-with-c-documentation"></a>Opracowywanie aplikacji C++ mobilnych za pomocą dokumentacji
+# <a name="mobile-development-with-c-documentation"></a>Rozwój urządzeń mobilnych z dokumentacją języka C++
 
-Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows za pomocą programu Visual Studio.
+Tworzenie natywnych aplikacji języka C++ dla urządzeń z systemem iOS, Android i Windows za pomocą programu Visual Studio.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -32,7 +32,7 @@ Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows z
                     </div>
                     <div class="cardText">
                         <h3>Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++</h3>
-                        <p>Skonfiguruj narzędzia wymagane do kompilowania aplikacji mobilnych dla wielu platform.</p>
+                        <p>Skonfiguruj narzędzia wymagane do tworzenia wieloplatformowych aplikacji mobilnych.</p>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@ Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows z
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Poznaj narzędzia Visual Studio Tools dla C++ wieloplatformowego opracowywania aplikacji mobilnych</h3>
-                        <p>Zapoznaj się z omówieniem opracowywania aplikacji mobilnych dla C++wielu platform za pomocą programu.</p>
+                        <h3>Dowiedz się więcej o narzędziach programu Visual Studio do tworzenia urządzeń przenośnych w języku C++</h3>
+                        <p>Uzyskaj przegląd wieloplatformowego rozwoju mobilnego w języku C++.</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows z
                     </div>
                     <div class="cardText">
                         <h3>Przykłady programowania międzyplatformowych aplikacji mobilnych</h3>
-                        <p>Zapoznaj się z przykładami, aby rozpocząć pracę z programowaniem aplikacji mobilnych na wiele platform.</p>
+                        <p>Zobacz przykłady, które pomogą Ci rozpocząć pracę z wieloplatformowym programem mobilnym.</p>
                     </div>
                 </div>
             </div>
@@ -88,8 +88,8 @@ Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows z
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Język C++ w programie Visual Studio</a></h3>
-                        <p><a href="/cpp/ide/read-and-understand-code-cpp">Odczytywanie i pisanie kodu</a><p>
+                        <h3><a href="/cpp/visual-cpp-in-visual-studio">C++ w programie Visual Studio</a></h3>
+                        <p><a href="/cpp/ide/read-and-understand-code-cpp">Czytanie i pisanie kodu</a><p>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ Twórz aplikacje C++ natywne dla urządzeń z systemami iOS, Android i Windows z
                 <div class="card">
                     <div class="cardText">
                         <h3>Platformy</h3>
-                        <p><a href="/cpp/cppcx/universal-windows-apps-cpp">Dokumentacja platforma uniwersalna systemu Windows (platformy UWP)</a></p>
+                        <p><a href="/cpp/cppcx/universal-windows-apps-cpp">Dokumentacja platformy uniwersalnej systemu Windows (PLATFORMY UNIWERSALNEJ SYSTEMU WINDOWS)</a></p>
                         <p><a href="https://developer.apple.com/reference">Dokumentacja interfejsu API systemu iOS</a></p>
                         <p><a href="https://developer.android.com/guide/index.html">Dokumentacja interfejsu API systemu Android</a></p>
                     </div>

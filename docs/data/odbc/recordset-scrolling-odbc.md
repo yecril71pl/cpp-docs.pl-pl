@@ -11,55 +11,55 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: 8a8305d2acacc79f5d7fe395087a0bd13dcbd196
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 931051296dff495939fcbd894102a1b00e48ee90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212774"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366940"
 ---
 # <a name="recordset-scrolling-odbc"></a>Zestaw rekordów: przewijanie (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-Po otwarciu zestawu rekordów należy uzyskać dostęp do rekordów, aby wyświetlić wartości, wykonywać obliczenia, generować raporty itd. Przewijanie umożliwia przejście z rekordu do rekordu w zestawie rekordów.
+Po otwarciu zestawie rekordów należy uzyskać dostęp do rekordów, aby wyświetlić wartości, wykonać obliczenia, wygenerować raporty itd. Przewijanie umożliwia przejście z rekordu do nagrywania w komecie rekordów.
 
-W tym temacie objaśniono:
+W tym temacie wyjaśniono:
 
-- [Sposób przewijania z jednego rekordu do drugiego w zestawie rekordów](#_core_scrolling_from_one_record_to_another).
+- [Jak przewijać z jednego rekordu do drugiego w ach.](#_core_scrolling_from_one_record_to_another)
 
-- [W obszarze Jakie jest przewijanie i nie jest obsługiwane](#_core_when_scrolling_is_supported).
+- [W jakich okolicznościach przewijanie jest i nie jest obsługiwane](#_core_when_scrolling_is_supported).
 
-##  <a name="scrolling-from-one-record-to-another"></a><a name="_core_scrolling_from_one_record_to_another"></a>Przewijanie jednego rekordu do innego
+## <a name="scrolling-from-one-record-to-another"></a><a name="_core_scrolling_from_one_record_to_another"></a>Przewijanie z jednego rekordu do drugiego
 
-Klasy `CRecordset` udostępniają `Move` funkcje członkowskie do przewijania w ramach zestawu rekordów. Te funkcje przenoszą bieżący rekord przez zestawy wierszy. Jeśli zaimplementowano pobieranie wierszy zbiorczych, operacja `Move` zmienia położenie zestawu rekordów według rozmiaru zestawu wierszy. Jeśli nie zaimplementowano pobierania wierszy zbiorczych, wywołanie funkcji `Move` zmienia położenie zestawu rekordów według jednego rekordu za każdym razem. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Klasa `CRecordset` udostępnia `Move` funkcje członkowskie do przewijania w obrębie pliku recordset. Te funkcje przenoszą bieżący rekord według zestawów wierszy. Jeśli zaimplementowano pobieranie wiersza zbiorczego, `Move` operacja zmienia położenie zestawu rekordów o rozmiar zestawu wierszy. Jeśli pobieranie wiersza zbiorczego nie zostało zaimplementowane, wywołanie `Move` funkcji zmienia położenie zestawie rekordów za każdym razem o jeden rekord. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [Rekord rekordów: Pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Podczas przechodzenia przez zestaw rekordów usunięte rekordy mogą nie zostać pominięte. Aby uzyskać więcej informacji, zobacz Funkcja elementu członkowskiego [isdelete](../../mfc/reference/crecordset-class.md#isdeleted) .
+> Podczas przechodzenia przez plan rekordów usunięte rekordy mogą nie zostać pominięte. Aby uzyskać więcej informacji, zobacz [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funkcji elementu członkowskiego.
 
-Oprócz funkcji `Move` `CRecordset` udostępnia funkcje członkowskie, aby sprawdzić, czy przewinie się poza końcem lub przed początkiem zestawu rekordów.
+Oprócz `Move` funkcji udostępnia `CRecordset` funkcje członkowskie do sprawdzania, czy przewijanie poza końcem lub przed rozpoczęciem pliku recordset.
 
-Aby określić, czy w zestawie rekordów jest możliwe przewijanie, wywołaj funkcję elementu członkowskiego `CanScroll`.
+Aby ustalić, czy przewijanie jest `CanScroll` możliwe w pliku recordset, należy wywołać funkcję elementu członkowskiego.
 
-#### <a name="to-scroll"></a>Aby przewijać
+#### <a name="to-scroll"></a>Aby przewinąć
 
-1. Przekazywanie jednego rekordu lub jednego zestawu wierszy: wywoływanie funkcji składowej [MoveNext](../../mfc/reference/crecordset-class.md#movenext) .
+1. Prześlij dalej jeden rekord lub jeden zestaw wierszy: wywołaj funkcję [MoveNext.](../../mfc/reference/crecordset-class.md#movenext)
 
-1. Jeden rekord z poprzednimi wersjami lub jeden zestaw wierszy: wywołaj funkcję członkowską [MovePrev](../../mfc/reference/crecordset-class.md#moveprev) .
+1. Wstecz jeden rekord lub jeden zestaw wierszy: wywołaj funkcję elementu członkowskiego [MovePrev.](../../mfc/reference/crecordset-class.md#moveprev)
 
-1. Do pierwszego rekordu w zestawie rekordów: wywołaj funkcję członkowską [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) .
+1. Do pierwszego rekordu w pliku recordset: wywołaj funkcję [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) member.
 
-1. Do ostatniego rekordu w zestawie rekordów lub do ostatniego zestawu wierszy: wywołaj funkcję członkowską [MoveLast](../../mfc/reference/crecordset-class.md#movelast) .
+1. Do ostatniego rekordu w zestawie rekordów lub do ostatniego zestawu wierszy: wywołaj funkcję [MoveLast](../../mfc/reference/crecordset-class.md#movelast) element członkowski.
 
-1. *N* rekordów względem bieżącego położenia: wywołaj funkcję [przenoszenia](../../mfc/reference/crecordset-class.md#move) elementu członkowskiego.
+1. *Rekordy N* względem bieżącej pozycji: wywołaj funkcję [Przenieś](../../mfc/reference/crecordset-class.md#move) element członkowski.
 
-#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>Aby przetestować pod kątem końca lub początku zestawu rekordów
+#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>Aby przetestować koniec lub początek
 
-1. Czy wystąpiło przewinięcie ostatniego rekordu? Wywołaj funkcję członkowską [IsEOF](../../mfc/reference/crecordset-class.md#iseof) .
+1. Czy przewinąłeś obok ostatniego rekordu? Wywołanie funkcji elementu członkowskiego [IsEOF.](../../mfc/reference/crecordset-class.md#iseof)
 
-1. Czy po wykonaniu tej operacji przewinięcie pierwszego rekordu (przechodzenie do tyłu)? Wywołaj funkcję członkowską [IsBOF](../../mfc/reference/crecordset-class.md#isbof) .
+1. Czy przewinąłeś przed pierwszym rekordem (przesuwając się do tyłu)? Wywołanie funkcji elementu członkowskiego [IsBOF.](../../mfc/reference/crecordset-class.md#isbof)
 
-Poniższy przykład kodu używa `IsBOF` i `IsEOF` do wykrywania limitów zestawu rekordów podczas przewijania w dowolnym kierunku.
+Poniższy przykład kodu `IsBOF` `IsEOF` używa i do wykrywania limitów pliku recordset podczas przewijania w obu kierunkach.
 
 ```
 // Open a recordset; first record is current
@@ -87,23 +87,23 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );
 ```
 
-`IsEOF` zwraca wartość różną od zera, jeśli zestaw rekordów jest umieszczony poza ostatnim rekordem. `IsBOF` zwraca wartość różną od zera, jeśli zestaw rekordów jest umieszczony przed pierwszym rekordem (przed wszystkimi rekordami). W obu przypadkach nie ma bieżącego rekordu do działania. W przypadku wywołania `MovePrev`, gdy `IsBOF` jest już prawdziwy, lub wywoływać `MoveNext` gdy `IsEOF` jest już prawdziwe, platforma zgłasza `CDBException`. Można również użyć `IsBOF` i `IsEOF` do sprawdzenia pustego zestawu rekordów.
+`IsEOF`zwraca wartość niezerową, jeśli grupa rekordów znajduje się poza ostatnim rekordem. `IsBOF`zwraca wartość niezerową, jeśli grupa rekordów znajduje się przed pierwszym rekordem (przed wszystkimi rekordami). W obu przypadkach nie ma bieżącego rekordu do działania. Jeśli `MovePrev` wywołasz, gdy `IsBOF` jest `MoveNext` `IsEOF` już prawda lub wywołać, `CDBException`gdy jest już true, framework rzuca . Można również `IsBOF` użyć `IsEOF` i sprawdzić, czy nie ma pustego pliku recordset.
 
-Aby uzyskać więcej informacji na temat nawigowania po zestawach rekordów, zobacz [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Aby uzyskać więcej informacji na temat nawigacji w forsach [rekordów, zobacz Tablica rekordów: Zakładki i Pozycje bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
-##  <a name="when-scrolling-is-supported"></a><a name="_core_when_scrolling_is_supported"></a>Gdy przewijanie jest obsługiwane
+## <a name="when-scrolling-is-supported"></a><a name="_core_when_scrolling_is_supported"></a>Gdy przewijanie jest obsługiwane
 
-Jak pierwotnie zaprojektowano, funkcja SQL udostępnia tylko przewijanie do przodu, ale funkcja ODBC rozszerza możliwości przewijania. Dostępny poziom obsługi przewijania zależy od sterowników ODBC, z którymi działa aplikacja, poziomu zgodności interfejsu API ODBC sterownika oraz tego, czy biblioteka kursorów ODBC jest ładowana do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Zgodnie z pierwotnym projektem SQL pod warunkiem tylko przewijanie do przodu, ale ODBC rozszerza możliwości przewijania. Dostępny poziom obsługi przewijania zależy od sterowników ODBC, z które działa aplikacja, poziomu zgodności interfejsu API odbc sterownika oraz od tego, czy biblioteka kursora ODBC jest ładowana do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
->  Można kontrolować, czy biblioteka kursorów jest używana. Zobacz parametry *bUseCursorLib* i *dwOptions* do [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).
+> Można kontrolować, czy biblioteka kursorów jest używana. Zobacz parametry *bUseCursorLib* i *dwOptions* do [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open).
 
 > [!NOTE]
->  W przeciwieństwie do klas MFC DAO klasy MFC ODBC nie udostępniają zestawu `Find` funkcji do lokalizowania następnego (lub poprzedniego) rekordu spełniającego określone kryteria.
+> W przeciwieństwie do klas DAO MFC klasy Odbc MFC nie zapewniają zestaw `Find` funkcji do lokalizowania następnego (lub poprzedniego) rekordu, który spełnia określone kryteria.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset:: Scroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
+[CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
 [Zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

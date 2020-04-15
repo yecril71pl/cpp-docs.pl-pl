@@ -1,5 +1,5 @@
 ---
-title: '&lt;przydzielania&gt; makra'
+title: '&lt;&gt; alokatory makr'
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416929"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364970"
 ---
-# <a name="ltallocatorsgt-macros"></a>&lt;przydzielania&gt; makra
+# <a name="ltallocatorsgt-macros"></a>&lt;&gt; alokatory makr
 
 ||||
 |-|-|-|
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
 Daje szablon klasy alokatora.
 
@@ -38,9 +38,9 @@ Daje szablon klasy alokatora.
 
 ### <a name="remarks"></a>Uwagi
 
-Makro daje definicję szablonu `template <class Type> class name {.....}` i specjalizację `template <> class name<void> {.....}`, które razem definiują szablon klasy alokatora, który korzysta z filtru synchronizacji `sync` i pamięci podręcznej typu `cache`.
+Makro `template <class Type> class name {.....}` daje definicję szablonu i `template <> class name<void> {.....}` specjalizację, które razem definiują szablon `sync` klasy alokatora, który używa filtru synchronizacji i pamięci podręcznej typu `cache`.
 
-W przypadku kompilatorów, które mogą skompilować ponownie powiązanie, wynikowa definicja szablonu wygląda następująco:
+Dla kompilatorów, które można skompilować rebind, wynikowa definicja szablonu wygląda następująco:
 
 ```cpp
 struct rebind
@@ -49,7 +49,7 @@ struct rebind
    };
 ```
 
-W przypadku kompilatorów, które nie mogą skompilować ponownie powiązania, wynikowa definicja szablonu wygląda następująco:
+Dla kompilatorów, które nie mogą skompilować ponownie wiązaniem wynikowej definicji szablonu wygląda następująco:
 
 ```cpp
 template <class Type<class name
@@ -68,9 +68,9 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
-Daje `stdext::allocators::cache_chunklist<sizeof(Type)>`.
+Plony `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ```cpp
 #define CACHE_CHUNKLIST <cache_class>
@@ -78,9 +78,9 @@ Daje `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cache_freelist"></a>CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
-Daje `stdext::allocators::cache_freelist<sizeof(Type), max>`.
+Plony `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ```cpp
 #define CACHE_FREELIST(max) <cache_class>
@@ -88,9 +88,9 @@ Daje `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cache_suballoc"></a>CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
-Daje `stdext::allocators::cache_suballoc<sizeof(Type)>`.
+Plony `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ```cpp
 #define CACHE_SUBALLOC <cache_class>
@@ -98,9 +98,9 @@ Daje `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="sync_default"></a>SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
-Zwraca filtr synchronizacji.
+Daje filtr synchronizacji.
 
 ```cpp
 #define SYNC_DEFAULT <sync_template>
@@ -108,8 +108,8 @@ Zwraca filtr synchronizacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kompilator obsługuje Kompilowanie aplikacji wielowątkowych i wielowątkowych, w przypadku aplikacji jednowątkowych makro daje `stdext::allocators::sync_none`; we wszystkich innych przypadkach daje `stdext::allocators::sync_shared`.
+Jeśli kompilator obsługuje kompilowanie zarówno aplikacji jednowątkowych, jak i wielowątkowych, dla aplikacji jednowątkowych daje `stdext::allocators::sync_none`makro; we wszystkich innych przypadkach `stdext::allocators::sync_shared`daje .
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<przydzielania >](../standard-library/allocators-header.md)
+[\<>alokatorów](../standard-library/allocators-header.md)

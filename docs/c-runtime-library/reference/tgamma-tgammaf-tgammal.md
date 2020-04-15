@@ -1,10 +1,13 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d7e27e8b818a16cb0c18f58e2f40c0090dd13ecf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362505"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -70,44 +74,46 @@ long double tgammal(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość, dla której ma zostać znaleziony współczynnik gamma.
+*X*<br/>
+Wartość, aby znaleźć gamma.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli powiedzie się, zwraca wartość gamma dla *x*.
+Jeśli się powiedzie, zwraca gamma *x*.
 
-Może wystąpić błąd zakresu, jeśli wielkość *x* jest za duża lub za mała dla typu danych. Jeśli *x* < = 0, może wystąpić błąd lub zakres domeny.
+Błąd zakresu może wystąpić, jeśli wielkość *x* jest zbyt duża lub zbyt mała dla typu danych. Jeśli *x* <= 0 może wystąpić błąd domeny lub zakres.
 
-|Problem|przesłać|
+|Problem|Zwraca|
 |-----------|------------|
-|x = ±0|± NIESKOŃCZONOŚĆ|
+|x = ±0|±NIESKOŃCZONOŚĆ|
 |x = ujemna liczba całkowita|NaN|
-|x = — NIESKOŃCZONość|NaN|
-|x = + NIESKOŃCZONość|\+ NIESKOŃCZONOŚĆ|
+|x = -NIESKOŃCZONOŚĆ|NaN|
+|x = +NIESKOŃCZONOŚĆ|+NIESKOŃCZONOŚĆ|
 |x = NaN|NaN|
 |błąd domeny|NaN|
-|błąd słupka|HUGE_VAL, HUGE_VALF lub HUGE_VALL|
-|Błąd przepełnienia zakresu|HUGE_VAL, HUGE_VALF lub HUGE_VALL|
-|Błąd zakresu niedopełnienia|poprawna wartość po zaokrągleniu.|
+|błąd bieguna|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|błąd zakresu przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd zakresu niedopełnienia|prawidłową wartość, po zaokrągleniu.|
 
-Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
+Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tgamma —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **tgamma —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **tgamma,** które biorą i zwracają **float** i **długie** **podwójne** typy. W programie **C, tgamma** zawsze ma i zwraca **podwójne**.
 
-Jeśli x jest liczbą naturalną, ta funkcja Zwraca silnię (x-1).
+Jeśli x jest liczbą naturalną, ta funkcja zwraca faktor (x-1).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**tgamma —** , **tgammaf —** , **tgammal**|\<math.h>|\<cmath >|
+|**tgamma**, **tgammaf**, **tgammal**|\<> math.h|\<> cmath|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej'
+title: 'Wyjątki: zmiany w makrach wyjątków w wersji 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82320b0c7ccd6766e016f0437633339f8f8f61d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365494"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
 
-Jest to zaawansowane tematu.
+Jest to zaawansowany temat.
 
-W MFC w wersji 3.0 i nowszych należy używać wyjątków języka C++ zostały zmienione makra obsługi wyjątków. W tym artykule wyjaśniono, jak te zmiany mogą wpływać na zachowania istniejący kod, który używa makra.
+W wersji MFC 3.0 i nowszych makra obsługi wyjątków zostały zmienione na używanie wyjątków języka C++. W tym artykule opisano, jak te zmiany mogą wpływać na zachowanie istniejącego kodu, który używa makr.
 
 W tym artykule omówiono następujące tematy:
 
-- [Typy wyjątków i makra CATCH](#_core_exception_types_and_the_catch_macro)
+- [Typy wyjątków i makro CATCH](#_core_exception_types_and_the_catch_macro)
 
-- [Ponownie zgłaszanie wyjątków](#_core_re.2d.throwing_exceptions)
+- [Ponowne zgłaszanie wyjątków](#_core_re.2d.throwing_exceptions)
 
-##  <a name="_core_exception_types_and_the_catch_macro"></a> Typy wyjątków i makra CATCH
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>Typy wyjątków i makro CATCH
 
-We wcześniejszych wersjach programu MFC **CATCH** — makro używane informacje typu run-time MFC, aby określić typ wyjątku; ustalić typ wyjątku, oznacza to, w obszarze przechwytywania. Poza wyjątkami C++ jednak typ wyjątku jest zawsze określany w lokalizacją throw według typu obiektu wyjątku, który jest generowany. To spowoduje niezgodności w rzadkich przypadkach, gdy typ wskaźnika do obiektu zgłoszony różni się od typu obiektu zgłoszony.
+We wcześniejszych wersjach MFC makr **CATCH** używane informacje o typie wykonywania MFC do określenia typu wyjątku; typ wyjątku jest określany, innymi słowy, w miejscu połowu. Z wyjątkami C++ jednak typ wyjątku jest zawsze określany w witrynie zgłaszania przez typ obiektu wyjątku, który jest zgłaszany. Spowoduje to niezgodności w rzadkich przypadkach, gdy typ wskaźnika do obiektu thrown różni się od typu obiektu generowanego.
 
-Poniższy przykład ilustruje konsekwencją tej różnicy między MFC w wersji 3.0 i wcześniejszych wersji:
+Poniższy przykład ilustruje konsekwencję tej różnicy między MFC w wersji 3.0 i wcześniejszych wersjach:
 
 [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-Ten kod zachowuje się inaczej w wersji 3.0 lub nowszej, ponieważ kontrola zawsze przechodzi do pierwszej **catch** blok z pasujących deklaracji wyjątku. Wynik wyrażenia throw
+Ten kod zachowuje się inaczej w wersji 3.0, ponieważ formant zawsze przechodzi do pierwszego bloku **catch** z pasującą deklaracją wyjątku. Wynik wyrażenia throw
 
 [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-jest zgłaszany jako `CException*`, nawet jeśli jest konstruowany jako `CCustomException`. **CATCH** makra w MFC w wersji 2.5 i wcześniejszych zastosowań `CObject::IsKindOf` do testowania typu w czasie wykonywania. Ponieważ wyrażenie
+jest wyrzucany `CException*`jako , nawet jeśli `CCustomException`jest skonstruowany jako . Makr **CATCH** w wersjach MFC 2.5 i wcześniejszych używa `CObject::IsKindOf` do testowania typu w czasie wykonywania. Ponieważ wyrażenie
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-ma wartość true, pierwszy blok catch przechwytuje wyjątek. Drugi blok catch w wersji 3.0, która używa wyjątków języka C++, aby zaimplementować wiele makra obsługi wyjątków, pasuje do zgłoszenia `CException`.
+true, pierwszy blok catch połowy połowy wyjątek. W wersji 3.0, która używa wyjątków C++ do implementacji wielu makr obsługi `CException`wyjątków, drugi blok catch pasuje do rzuconego .
 
-Kod jest mało prawdopodobna. Jest zwykle wyświetlany, gdy obiekt wyjątku jest przekazywany do innej funkcji, która akceptuje ogólnego `CException*`, wykonuje przetwarzanie "throw przed" i na koniec zgłasza wyjątek.
+Kod taki jak ten jest rzadkością. Zwykle pojawia się, gdy obiekt wyjątku jest przekazywany do innej funkcji, która akceptuje ogólne, `CException*`wykonuje "pre-throw" przetwarzania i na koniec zgłasza wyjątek.
 
-Aby obejść ten problem, Przenieś wyrażenia throw z funkcji do kodu wywołującego i wyjątku rzeczywistego typu, o których wiadomo w czasie, kompilator wyjątek jest generowany.
+Aby obejść ten problem, przenieś wyrażenie throw z funkcji do kodu wywołującego i zgłosić wyjątek rzeczywistego typu znanego kompilatorowi w czasie generowania wyjątku.
 
-##  <a name="_core_re.2d.throwing_exceptions"></a> Ponownie zgłaszanie wyjątków
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>Ponowne zgłaszanie wyjątków
 
-W bloku catch nie można zgłosić tego samego wskaźnika wyjątek, który go przechwycił.
+Blok catch nie może zgłosić tego samego wskaźnika wyjątku, który został przechwycony.
 
-Na przykład, ten kod był prawidłowy w poprzednich wersjach, ale będzie mieć nieoczekiwane wyniki z wersji 3.0 lub nowszej:
+Na przykład ten kod był prawidłowy w poprzednich wersjach, ale będzie miał nieoczekiwane wyniki w wersji 3.0:
 
 [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-Za pomocą **THROW** w catch block powoduje, że wskaźnik `e` do usunięcia, tak aby witryny zewnętrznej catch, zostanie wyświetlony nieprawidłowy wskaźnik. Użyj **THROW_LAST** ponownie zgłosić `e`.
+Za pomocą **THROW** w catch `e` bloku powoduje, że wskaźnik zostanie usunięty, tak, że zewnętrzna witryna catch otrzyma nieprawidłowy wskaźnik. Użyj **THROW_LAST,** aby ponownie `e`rzucić .
 
-Aby uzyskać więcej informacji, zobacz [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Aby uzyskać więcej informacji, zobacz [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
