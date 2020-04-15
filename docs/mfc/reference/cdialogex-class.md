@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b34c441ac63b023ae6272a1646151aad4be1bfbc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375633"
 ---
 # <a name="cdialogex-class"></a>Klasa CDialogEx
 
-`CDialogEx` Klasa określa kolor tła i obraz tła okna dialogowego.
+Klasa `CDialogEx` określa kolor tła i obraz tła okna dialogowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,8 +35,8 @@ class CDialogEx : public CDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDialogEx::CDialogEx](#cdialogex)|Konstruuje `CDialogEx` obiektu.|
-|`CDialogEx::~CDialogEx`|Destruktor.|
+|[CDialogEx::CDialogEx](#cdialogex)|Konstruuje `CDialogEx` obiekt.|
+|`CDialogEx::~CDialogEx`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -47,31 +47,31 @@ class CDialogEx : public CDialog
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć `CDialogEx` klasy, pochodzi z klasy okien dialogowych pole z `CDialogEx` klasy zamiast `CDialog` klasy.
+Aby użyć `CDialogEx` klasy, należy wyprowadzić klasę `CDialogEx` okna dialogowego `CDialog` z klasy zamiast klasy.
 
-Okno dialogowe pola obrazy są przechowywane w pliku zasobów. Struktura automatycznie usuwa dowolny obraz, który jest ładowany z pliku zasobów. Aby programowo usunąć bieżący obraz tła, wywołaj [CDialogEx::SetBackgroundImage](#setbackgroundimage) metody lub zaimplementuj `OnDestroy` programu obsługi zdarzeń. Gdy wywołujesz [CDialogEx::SetBackgroundImage](#setbackgroundimage) metody, Przekaż `HBITMAP` parametru jako uchwyt obrazu. `CDialogEx` Obiekt będzie przejęcie na własność obrazu i usuń go, jeśli `m_bAutoDestroyBmp` flaga jest `TRUE`.
+Obrazy okna dialogowego są przechowywane w pliku zasobów. Struktura automatycznie usuwa dowolny obraz, który jest ładowany z pliku zasobu. Aby programowo usunąć bieżący obraz tła, wywołaj [metodę CDialogEx::SetBackgroundImage](#setbackgroundimage) lub zaimplementuj `OnDestroy` program obsługi zdarzeń. Po wywołaniu [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda, `HBITMAP` przekazać w parametrze jako dojście obrazu. Obiekt `CDialogEx` przejmie na własność obraz i usunie go, jeśli flaga `m_bAutoDestroyBmp` jest `TRUE`.
 
-A `CDialogEx` obiekt może być elementem nadrzędnym [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. [Klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu wywołania `CDialogEx::SetActiveMenu` metody podczas [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu zostanie otwarta. W efekcie `CDialogEx` obiektów obsługuje wszystkie zdarzenia menu, aż do [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt jest zamknięty.
+Obiekt `CDialogEx` może być elementem nadrzędnym obiektu [CMFCPopupMenu Class.](../../mfc/reference/cmfcpopupmenu-class.md) [Obiekt klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) `CDialogEx::SetActiveMenu` wywołuje metodę po otwarciu obiektu [klasy CMFCPopupMenu.](../../mfc/reference/cmfcpopupmenu-class.md) Następnie `CDialogEx` obiekt obsługuje każde zdarzenie menu, dopóki obiekt [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) nie zostanie zamknięty.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CDialogEx](../../mfc/reference/cdialogex-class.md)
+[Cdialogex](../../mfc/reference/cdialogex-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxdialogex.h
 
-##  <a name="cdialogex"></a>  CDialogEx::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx
 
-Konstruuje `CDialogEx` obiektu.
+Konstruuje `CDialogEx` obiekt.
 
 ```
 CDialogEx(
@@ -86,22 +86,22 @@ CDialogEx(
 ### <a name="parameters"></a>Parametry
 
 *nIDTemplate*<br/>
-[in] Identyfikator zasobu szablonu okna dialogowego.
+[w] Identyfikator zasobu szablonu okna dialogowego.
 
 *lpszTemplateName*<br/>
-[in] Nazwa zasobu szablonu okna dialogowego.
+[w] Nazwa zasobu szablonu okna dialogowego.
 
-*pParent*<br/>
-[in] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.
+*pRoczysz*<br/>
+[w] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.
 
 *pParentWnd*<br/>
-[in] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.
+[w] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor
 
 Ustawia kolor tła okna dialogowego.
 
@@ -113,15 +113,15 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
-[in] Wartość koloru RGB.
+*color*<br/>
+[w] Wartość koloru RGB.
 
-*bRepaint*<br/>
-[in] Wartość TRUE, aby natychmiast zaktualizować ekran; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
+*bMalusz*<br/>
+[w] PRAWDA, aby natychmiast zaktualizować ekran; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage
 
 Ustawia obraz tła okna dialogowego.
 
@@ -140,30 +140,30 @@ BOOL SetBackgroundImage(
 
 ### <a name="parameters"></a>Parametry
 
-*hBitmap*<br/>
-[in] Dojście do obrazu tła.
+*hBitmapa*<br/>
+[w] Uchwyt do obrazu tła.
 
-*uiBmpResId*<br/>
-[in] Identyfikator zasobu obrazu tła.
+*interfejs użytkownika uiBmpResId*<br/>
+[w] Identyfikator zasobu obrazu tła.
 
-*location*<br/>
-[in] Jedną z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.
+*Lokalizacji*<br/>
+[w] Jedna z `CDialogEx::BackgroundLocation` wartości określających lokalizację obrazu. Prawidłowe wartości obejmują BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna jest BACKGR_TILE.
 
-*bAutoDestroy*<br/>
-[in] Wartość TRUE, aby automatycznie zniszczyć obrazu tła. w przeciwnym razie wartość FALSE.
+*bAutoDestroj*<br/>
+[w] PRAWDA, aby automatycznie zniszczyć obraz tła; w przeciwnym razie FALSE.
 
-*bRepaint*<br/>
-[in] Wartość TRUE, aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie wartość FALSE.
+*bMalusz*<br/>
+[w] TRUE, aby natychmiast przerysować okno dialogowe; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W drugiej metodzie przeciążenia składni, wartość TRUE jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.
+W składni przeciążenia drugiej metody, PRAWDA, jeśli metoda jest pomyślna; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Obraz, który określisz nie jest rozciągnięty do rozmiaru obszaru klienckiego okna dialogowego pole.
+Określony obraz nie jest rozciągnięty tak, aby pasował do obszaru klienta okna dialogowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

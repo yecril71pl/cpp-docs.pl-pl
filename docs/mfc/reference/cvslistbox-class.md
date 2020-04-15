@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: 6a33f5b64c5094bfe2ca2ff259b5cd8654058ed3
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 4ea48a263a01133419067979ee5fa3e62105c7f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69502232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373193"
 ---
 # <a name="cvslistbox-class"></a>Klasa CVSListBox
 
-`CVSListBox` Klasa obsługuje edytowalną kontrolkę listy.
+Klasa `CVSListBox` obsługuje kontrolę listy edytowalnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,64 +52,64 @@ class CVSListBox : public CVSListBoxBase
 |Nazwa|Opis|
 |----------|-----------------|
 |[CVSListBox::CVSListBox](#cvslistbox)|Konstruuje `CVSListBox` obiekt.|
-|`CVSListBox::~CVSListBox`|Destruktor.|
+|`CVSListBox::~CVSListBox`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CVSListBox:: AddItem](#additem)|Dodaje ciąg do kontrolki listy. (Przesłania `CVSListBoxBase::AddItem`).|
-|[CVSListBox::EditItem](#edititem)|Uruchamia operację edycji dla tekstu elementu kontrolki listy. (Przesłania `CVSListBoxBase::EditItem`).|
-|[CVSListBox:: GetCount](#getcount)|Pobiera liczbę ciągów w kontrolce edytowalnej listy. (Przesłania `CVSListBoxBase::GetCount`).|
-|[CVSListBox::GetItemData](#getitemdata)|Pobiera wartość 32-bitową specyficzną dla aplikacji, która jest skojarzona z edytowalnym elementem kontrolki listy. (Przesłania `CVSListBoxBase::GetItemData`).|
-|[CVSListBox::GetItemText](#getitemtext)|Pobiera tekst edytowalnego elementu kontrolki listy. (Przesłania `CVSListBoxBase::GetItemText`).|
-|[CVSListBox::GetSelItem](#getselitem)|Pobiera indeks (liczony od zera) aktualnie wybranego elementu w kontrolce listy edytowalnej. (Przesłania `CVSListBoxBase::GetSelItem`).|
-|`CVSListBox::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Aby uzyskać więcej informacji i składni metod, zobacz [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CVSListBoxBase::PreTranslateMessage`).|
-|[CVSListBox::RemoveItem](#removeitem)|Usuwa element z kontrolki edytowalnej listy. (Przesłania `CVSListBoxBase::RemoveItem`).|
+|[CVSListBox::AddItem](#additem)|Dodaje ciąg do formantu listy. (Przesłania `CVSListBoxBase::AddItem`).|
+|[CVSListBox::EditItem](#edititem)|Rozpoczyna operację edycji na tekście elementu kontrolnego listy. (Przesłania `CVSListBoxBase::EditItem`).|
+|[CVSListBox::GetCount](#getcount)|Pobiera liczbę ciągów w kontrolce listy edytowalnej. (Przesłania `CVSListBoxBase::GetCount`).|
+|[CVSListBox::GetItemData](#getitemdata)|Pobiera wartość 32-bitową specyficzną dla aplikacji, która jest skojarzona z edytowalnym elementem kontroli listy. (Przesłania `CVSListBoxBase::GetItemData`).|
+|[CVSListBox::GetItemText](#getitemtext)|Pobiera tekst edytowanego elementu kontrolnego listy. (Przesłania `CVSListBoxBase::GetItemText`).|
+|[CVSListBox::GetSelItem](#getselitem)|Pobiera indeks od zera aktualnie wybranego elementu w kontrolce listy edytowalnej. (Przesłania `CVSListBoxBase::GetSelItem`).|
+|`CVSListBox::PreTranslateMessage`|Tłumaczy komunikaty okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. Aby uzyskać więcej informacji i składni metody, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CVSListBoxBase::PreTranslateMessage`).|
+|[CVSListBox::Usuńnik](#removeitem)|Usuwa element z kontrolki listy edytowalnej. (Przesłania `CVSListBoxBase::RemoveItem`).|
 |[CVSListBox::SelectItem](#selectitem)|Wybiera edytowalny ciąg kontrolny listy. (Przesłania `CVSListBoxBase::SelectItem`).|
-|[CVSListBox::SetItemData](#setitemdata)|Kojarzy wartość 32-bitową specyficzną dla aplikacji z edytowalnym elementem kontrolki listy. (Przesłania `CVSListBoxBase::SetItemData`).|
+|[CVSListBox::SetItemData](#setitemdata)|Kojarzy wartość 32-bitową specyficzną dla aplikacji z edytowalnym elementem kontroli listy. (Przesłania `CVSListBoxBase::SetItemData`).|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CVSListBox::GetListHwnd](#getlisthwnd)|Zwraca uchwyt do bieżącej osadzonej kontrolki widoku listy.|
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Zwraca uchwyt do bieżącego widoku osadzonej listy.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CVSListBox` Klasa zawiera zestaw przycisków edycji, które umożliwiają użytkownikowi tworzenie, modyfikowanie, usuwanie lub zmienianie układu elementów w kontrolce listy.
+Klasa `CVSListBox` zawiera zestaw przycisków edycji, które umożliwiają użytkownikowi tworzenie, modyfikowanie, usuwanie lub zmienianie rozmieszczenia elementów w formancie listy.
 
-Poniżej znajduje się obraz kontrolki edytowalnej listy. Drugi wpis listy zatytułowany "Item2 —" jest wybierany do edycji.
+Poniżej znajduje się obraz kontrolki listy edytowalnej. Drugi wpis listy, zatytułowany "Item2", jest wybrany do edycji.
 
-![CVSListBox — formant](../../mfc/reference/media/cvslistbox.png "CVSListBox — formant")
+![Sterowanie CVSListBox](../../mfc/reference/media/cvslistbox.png "Sterowanie CVSListBox")
 
-Jeśli używasz edytora zasobów do dodawania edytowalnej kontrolki listy, Zauważ, że okienko **przybornika** w edytorze nie udostępnia wstępnie zdefiniowanej kontrolki edytowalnej listy. Zamiast tego należy dodać kontrolkę statyczną, taką jak kontrolka **pole grupy** . Struktura używa kontrolki statycznej jako symbolu zastępczego, aby określić rozmiar i położenie kontrolki edytowalnej listy.
+Jeśli edytor zasobów służy do dodawania kontrolki listy edytowalnej, należy zauważyć, że **okienko Przybornik** edytora nie zawiera wstępnie zdefiniowanej kontrolki listy edytowalnej. Zamiast tego należy dodać formant statyczny, taki jak formant **Pole grupy.** Struktura używa formantu statycznego jako symbolu zastępczego, aby określić rozmiar i położenie kontrolki listy edytowalnej.
 
-Aby użyć kontrolki listy edytowalnej w szablonie okna dialogowego, zadeklaruj `CVSListBox` zmienną w klasie okna dialogowego. Aby zapewnić obsługę wymiany danych między zmienną i formantem, zdefiniuj `DDX_Control` wpis makra `DoDataExchange` w metodzie okna dialogowego. Domyślnie kontrolka edytowalnej listy jest tworzona bez przycisków edycji. Użyj dziedziczonej metody CVSListBoxBase:: SetStandardButtons, aby włączyć przyciski edycji.
+Aby użyć kontrolki edytowalnej listy w `CVSListBox` szablonie okna dialogowego, zadeklaruj zmienną w klasie okna dialogowego. Aby wspierać wymianę danych między zmienną `DDX_Control` a formantem, należy zdefiniować wpis makra w `DoDataExchange` metodzie okna dialogowego. Domyślnie kontrolka listy edytowalnej jest tworzona bez przycisków edycji. Użyj odziedziczonej metody CVSListBoxBase::SetStandardButtons, aby włączyć przyciski edycji.
 
-Aby uzyskać więcej informacji, zobacz katalog `New Controls` przykładów, przykład, pliki PAGE3. cpp i PAGE3. h.
+Aby uzyskać więcej informacji, zobacz katalog `New Controls` Przykłady, przykład, pliki Page3.cpp i Page3.h.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CStatic](../../mfc/reference/cstatic-class.md)
+[Cstatic](../../mfc/reference/cstatic-class.md)
 
 `CVSListBoxBase`
 
-[CVSListBox](../../mfc/reference/cvslistbox-class.md)
+[CVSListBox (Polski)](../../mfc/reference/cvslistbox-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxvslistbox. h
+**Nagłówek:** afxvslistbox.h
 
-##  <a name="additem"></a>CVSListBox:: AddItem
+## <a name="cvslistboxadditem"></a><a name="additem"></a>CVSListBox::AddItem
 
-Dodaje ciąg do kontrolki listy.
+Dodaje ciąg do formantu listy.
 
 ```
 virtual int AddItem(
@@ -120,24 +120,24 @@ virtual int AddItem(
 
 ### <a name="parameters"></a>Parametry
 
-*strIext*<br/>
-podczas Odwołanie do ciągu.
+*strIext (striext)*<br/>
+[w] Odwołanie do ciągu.
 
-*dwData*<br/>
-podczas Specyficzna dla aplikacji 32-bitowa wartość, która jest skojarzona z ciągiem. Wartość domyślna to 0.
+*dwData (dane)*<br/>
+[w] Wartość 32-bitowa specyficzne dla aplikacji, która jest skojarzona z ciągiem. Wartość domyślna to 0.
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) pozycji, która będzie zawierać ciąg. Jeśli parametr *IIndex* ma wartość-1, ciąg zostanie dodany na końcu listy. Wartość domyślna to-1.
+*Iindex*<br/>
+[w] Indeks od zera pozycji, która będzie zawierać ciąg. Jeśli parametr *iIndex* wynosi -1, ciąg jest dodawany na końcu listy. Wartość domyślna to -1.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) pozycji ciągu w kontrolce listy.
+Indeks od zera pozycji ciągu w formancie listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CVSListBox:: GetItemData](#getitemdata) , aby pobrać wartość określoną przez parametr *dwData* . Ta wartość może być liczbą całkowitą specyficzną dla aplikacji lub wskaźnikiem do innych danych.
+Użyj [metody CVSListBox::GetItemData,](#getitemdata) aby pobrać wartość określoną przez parametr *dwData.* Ta wartość może być całkowitej specyficznej dla aplikacji lub wskaźnik do innych danych.
 
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox
+## <a name="cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSListBox::CVSListBox
 
 Konstruuje `CVSListBox` obiekt.
 
@@ -149,9 +149,9 @@ CVSListBox();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="edititem"></a>CVSListBox::EditItem
+## <a name="cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::EditItem
 
-Uruchamia operację edycji dla tekstu elementu kontrolki listy.
+Rozpoczyna operację edycji na tekście elementu kontrolnego listy.
 
 ```
 virtual BOOL EditItem(int iIndex);
@@ -159,20 +159,20 @@ virtual BOOL EditItem(int iIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy.
+*Iindex*<br/>
+[w] Indeks od zera elementu kontroli listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli operacja edycji zostanie uruchomiona pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli operacja edycji zostanie pomyślnie rozpocznie się; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użytkownik uruchamia operację edycji przez dwukrotne kliknięcie etykiety elementu lub naciśnięcie klawisza **F2** lub **spacja** , gdy element ma fokus.
+Użytkownik rozpoczyna operację edycji, klikając dwukrotnie etykietę elementu lub naciskając klawisz **F2** lub **klawisz SPACJA,** gdy element ma fokus.
 
-##  <a name="getcount"></a>CVSListBox:: GetCount
+## <a name="cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount
 
-Pobiera liczbę ciągów w kontrolce edytowalnej listy.
+Pobiera liczbę ciągów w kontrolce listy edytowalnej.
 
 ```
 virtual int GetCount() const;
@@ -180,15 +180,15 @@ virtual int GetCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w kontrolce listy.
+Liczba elementów w formancie listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że liczba jest większa niż wartość indeksu ostatniego elementu, ponieważ indeks jest liczony od zera.
+Należy zauważyć, że liczba jest o jeden większa niż wartość indeksu ostatniego elementu, ponieważ indeks jest oparty na wartości zero.
 
-##  <a name="getitemdata"></a>CVSListBox::GetItemData
+## <a name="cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSListBox::GetItemData
 
-Pobiera wartość 32-bitową specyficzną dla aplikacji, która jest skojarzona z edytowalnym elementem kontrolki listy.
+Pobiera wartość 32-bitową specyficzną dla aplikacji, która jest skojarzona z edytowalnym elementem kontroli listy.
 
 ```
 virtual DWORD_PTR GetItemData(int iIndex) const;
@@ -196,20 +196,20 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy edytowalnej.
+*Iindex*<br/>
+[w] Indeks od zera edytowalny element kontrolny listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość 32-bitowa, która jest skojarzona z określonym elementem.
+Wartość 32-bitowa skojarzona z określonym elementem.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CVSListBox:: SetItemData](#setitemdata) lub [CVSListBox:: AddItem](#additem) , aby skojarzyć wartość 32-bitową z elementem kontrolki listy. Ta wartość może być liczbą całkowitą specyficzną dla aplikacji lub wskaźnikiem do innych danych.
+Użyj [metody CVSListBox::SetItemData](#setitemdata) lub [CVSListBox::AddItem,](#additem) aby skojarzyć wartość 32-bitową z elementem kontroli listy. Ta wartość może być całkowitej specyficznej dla aplikacji lub wskaźnik do innych danych.
 
-##  <a name="getitemtext"></a>CVSListBox::GetItemText
+## <a name="cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSListBox::GetItemText
 
-Pobiera tekst edytowalnego elementu kontrolki listy.
+Pobiera tekst edytowanego elementu kontrolnego listy.
 
 ```
 virtual CString GetItemText(int iIndex) const;
@@ -217,18 +217,18 @@ virtual CString GetItemText(int iIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy edytowalnej.
+*Iindex*<br/>
+[w] Indeks od zera edytowalny element kontrolny listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który zawiera tekst określonego elementu.
+Obiekt [CString,](../../atl-mfc-shared/reference/cstringt-class.md) który zawiera tekst określonego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd
+## <a name="cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd
 
-Zwraca uchwyt do bieżącej osadzonej kontrolki widoku listy.
+Zwraca uchwyt do bieżącego widoku osadzonej listy.
 
 ```
 virtual HWND GetListHwnd() const;
@@ -236,15 +236,15 @@ virtual HWND GetListHwnd() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt do kontrolki widoku osadzonej listy.
+Uchwyt do formantu widoku listy osadzonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby pobrać uchwyt do kontrolki widoku osadzonej listy, która `CVSListBox` obsługuje klasę.
+Ta metoda służy do pobierania dojścia do formantu widoku listy osadzonej, który obsługuje `CVSListBox` klasę.
 
-##  <a name="getselitem"></a>CVSListBox::GetSelItem
+## <a name="cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem
 
-Pobiera indeks (liczony od zera) aktualnie wybranego elementu w kontrolce listy edytowalnej.
+Pobiera indeks od zera aktualnie wybranego elementu w kontrolce listy edytowalnej.
 
 ```
 virtual int GetSelItem() const;
@@ -252,13 +252,13 @@ virtual int GetSelItem() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli ta metoda zakończy się pomyślnie, indeks aktualnie wybranego elementu (liczony od zera); w przeciwnym razie-1.
+Jeśli ta metoda zakończy się pomyślnie, indeks od zera aktualnie wybranego elementu; w przeciwnym razie -1.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="removeitem"></a>CVSListBox:: RemoveItem
+## <a name="cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::Usuńnik
 
-Usuwa element z kontrolki edytowalnej listy.
+Usuwa element z kontrolki listy edytowalnej.
 
 ```
 virtual BOOL RemoveItem(int iIndex);
@@ -266,8 +266,8 @@ virtual BOOL RemoveItem(int iIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy edytowalnej.
+*Iindex*<br/>
+[w] Indeks od zera edytowalny element kontrolny listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -275,7 +275,7 @@ PRAWDA, jeśli określony element zostanie usunięty; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="selectitem"></a>CVSListBox::SelectItem
+## <a name="cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::SelectItem
 
 Wybiera edytowalny ciąg kontrolny listy.
 
@@ -285,20 +285,20 @@ virtual BOOL SelectItem(int iItem);
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy edytowalnej.
+*Iitem*<br/>
+[w] Indeks od zera edytowalny element kontrolny listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wybiera określony element, a jeśli jest wymagana, przewija element do widoku.
+Ta metoda wybiera określony element, a jeśli jest to wymagane, przewija element do widoku.
 
-##  <a name="setitemdata"></a>CVSListBox::SetItemData
+## <a name="cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData
 
-Kojarzy wartość 32-bitową specyficzną dla aplikacji z edytowalnym elementem kontrolki listy.
+Kojarzy wartość 32-bitową specyficzną dla aplikacji z edytowalnym elementem kontroli listy.
 
 ```
 virtual void SetItemData(
@@ -308,15 +308,15 @@ virtual void SetItemData(
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-podczas Indeks (liczony od zera) elementu kontrolki listy edytowalnej.
+*Iindex*<br/>
+[w] Indeks od zera edytowalny element kontrolny listy.
 
-*dwData*<br/>
-podczas Wartość 32-bitowa. Ta wartość może być liczbą całkowitą specyficzną dla aplikacji lub wskaźnikiem do innych danych.
+*dwData (dane)*<br/>
+[w] Wartość 32-bitowa. Ta wartość może być całkowitej specyficznej dla aplikacji lub wskaźnik do innych danych.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398098"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374245"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper — Struktura
 
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę biblioteki szablonów środowiska wykonawczego systemu Windows W++ i nie jest przeznaczona do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +33,7 @@ struct VerifyInterfaceHelper<false, I>;
 ### <a name="parameters"></a>Parametry
 
 *I*<br/>
-Interfejs, aby sprawdzić.
+Interfejs do weryfikacji.
 
 *isWinRTInterface*
 
@@ -57,11 +57,11 @@ Nazwa                                            | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="verify"></a>VerifyInterfaceHelper::Verify
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerifyInterfaceHelper::VerifyInterfaceHelper::Verify VerifyInterfaceHelper::Verify VerifyInterface
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 static void Verify();

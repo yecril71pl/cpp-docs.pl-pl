@@ -1,5 +1,5 @@
 ---
-title: Klasa element COleTemplateServer
+title: Klasa COleTemplateServer
 ms.date: 11/04/2016
 f1_keywords:
 - COleTemplateServer
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: 4a1997497f3bddb405b712b5534f76e577dabfa8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374853"
 ---
-# <a name="coletemplateserver-class"></a>Klasa element COleTemplateServer
+# <a name="coletemplateserver-class"></a>Klasa COleTemplateServer
 
-Używane na potrzeby edycji wizualnej OLE, serwerów automatyzacji i kontenerów linków (aplikacje obsługujące linki do osadzania).
+Używane do edycji wizualnej OLE serwerów, serwerów automatyzacji i kontenerów łączy (aplikacje obsługujące łącza do osadzania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,33 +43,33 @@ class COleTemplateServer : public COleObjectFactory
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Element COleTemplateServer:: ConnectTemplate](#connecttemplate)|Łączy szablon dokumentu z obiektem źródłowym `COleObjectFactory` .|
-|[COleTemplateServer::Unregister](#unregister)|Wyrejestrowuje szablon skojarzonego dokumentu.|
-|[Element COleTemplateServer:: operacja UpdateRegistry](#updateregistry)|Rejestruje typ dokumentu w rejestrze systemu OLE.|
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Łączy szablon dokumentu z `COleObjectFactory` obiektem źródłowym.|
+|[COleTemplateServer::Wyrejestrowanie](#unregister)|Wyrejestrowanie skojarzonego szablonu dokumentu.|
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Rejestruje typ dokumentu w rejestrze systemu OLE.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa pochodzi od klasy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); Zazwyczaj można używać `COleTemplateServer` bezpośrednio zamiast wyprowadzania własnej klasy. `COleTemplateServer`używa obiektu [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) do zarządzania dokumentami na serwerze. Używane `COleTemplateServer` podczas implementowania pełnego serwera, czyli serwera, który może być uruchamiany jako aplikacja autonomiczna. Pełne serwery to zazwyczaj aplikacje interfejsu wielu dokumentów (MDI), chociaż obsługiwane są aplikacje interfejsu pojedynczego dokumentu (SDI). Jeden `COleTemplateServer` obiekt jest wymagany dla każdego typu dokumentu serwera obsługiwanego przez aplikację. oznacza to, że jeśli aplikacja serwera obsługuje arkusze i wykresy, muszą istnieć dwa `COleTemplateServer` obiekty.
+Ta klasa jest pochodną klasy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); zwykle można użyć `COleTemplateServer` bezpośrednio, a nie wyprowadzając własną klasę. `COleTemplateServer`używa obiektu [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) do zarządzania dokumentami serwera. Użyj `COleTemplateServer` podczas implementowania pełnego serwera, czyli serwera, który można uruchomić jako aplikacja autonomiczna. Pełne serwery są zazwyczaj aplikacjami interfejsu wielu dokumentów (MDI), chociaż obsługiwane są aplikacje interfejsu pojedynczego dokumentu (SDI). Jeden `COleTemplateServer` obiekt jest potrzebny dla każdego typu dokumentu serwera, który obsługuje aplikacja; oznacza to, że jeśli aplikacja serwera obsługuje zarówno arkusze, `COleTemplateServer` jak i wykresy, musisz mieć dwa obiekty.
 
-`COleTemplateServer`przesłania funkcję `COleObjectFactory`członkowską zdefiniowaną przez. `OnCreateInstance` Ta funkcja członkowska jest wywoływana przez platformę w celu C++ utworzenia obiektu odpowiedniego typu.
+`COleTemplateServer`zastępuje funkcję `OnCreateInstance` elementu członkowskiego `COleObjectFactory`zdefiniowaną przez . Ta funkcja elementu członkowskiego jest wywoływana przez strukturę do tworzenia obiektu C++ odpowiedniego typu.
 
-Aby uzyskać więcej informacji na temat serwerów, zobacz [artykuł serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
+Aby uzyskać więcej informacji o serwerach, zobacz artykuł [Serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)
+[Coleobjectfactory](../../mfc/reference/coleobjectfactory-class.md)
 
 `COleTemplateServer`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** AFXDISP. h
+**Nagłówek:** afxdisp.h
 
-##  <a name="coletemplateserver"></a>Element COleTemplateServer:: element COleTemplateServer
+## <a name="coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer
 
 Konstruuje `COleTemplateServer` obiekt.
 
@@ -79,11 +79,11 @@ COleTemplateServer();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać krótki opis użycia `COleTemplateServer` klasy, zobacz Omówienie klasy [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) .
+Aby uzyskać krótki opis użycia `COleTemplateServer` klasy, zobacz [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) omówienie klasy.
 
-##  <a name="connecttemplate"></a>Element COleTemplateServer:: ConnectTemplate
+## <a name="coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate
 
-Łączy szablon dokumentu wskazywany przez *pDocTemplate* do bazowego obiektu [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) .
+Łączy szablon dokumentu wskazywalny przez *pDocTemplate* z podstawowym [obiektem COleObjectFactory.](../../mfc/reference/coleobjectfactory-class.md)
 
 ```
 void ConnectTemplate(
@@ -94,22 +94,22 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator*<br/>
-Odwołanie do identyfikatora klasy OLE, który żądanie szablonu.
+*Clsid*<br/>
+Odwołanie do identyfikatora klasy OLE, którego żąda szablon.
 
 *pDocTemplate*<br/>
 Wskaźnik do szablonu dokumentu.
 
 *bMultiInstance*<br/>
-Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. W przypadku wartości TRUE dla każdego żądania utworzenia obiektu uruchamiane jest wiele wystąpień aplikacji.
+Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. Jeśli TRUE, wiele wystąpień aplikacji są uruchamiane dla każdego żądania, aby utworzyć obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [klucz CLSID](/windows/win32/com/clsid-key-hklm) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [ClsID klucz](/windows/win32/com/clsid-key-hklm) w windows SDK.
 
-##  <a name="unregister"></a>Element COleTemplateServer:: Unregister
+## <a name="coletemplateserverunregister"></a><a name="unregister"></a>COleTemplateServer::Wyrejestrowanie
 
-Wyrejestrowuje szablon skojarzonego dokumentu.
+Wyrejestrowanie skojarzonego szablonu dokumentu.
 
 ```
 BOOL Unregister();
@@ -117,15 +117,15 @@ BOOL Unregister();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
+PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-EnterRemarks
+EnterRemarks ( EnterRemarks )
 
-##  <a name="updateregistry"></a>Element COleTemplateServer:: operacja UpdateRegistry
+## <a name="coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplateServer::UpdateRegistry
 
-Ładuje informacje o typie pliku z ciągu szablonu dokumentu i umieszcza je w rejestrze systemu OLE.
+Ładuje informacje o typie pliku z ciągu szablonu dokumentu i umieszcza te informacje w rejestrze systemu OLE.
 
 ```
 void UpdateRegistry(
@@ -137,41 +137,41 @@ void UpdateRegistry(
 
 ### <a name="parameters"></a>Parametry
 
-*nAppType*<br/>
-Wartość z wyliczenia OLE_APPTYPE, która jest zdefiniowana w AFXDISP. C. Może mieć jedną z następujących wartości:
+*n Typ aplikacji*<br/>
+Wartość z wyliczenia OLE_APPTYPE, która jest zdefiniowana w AFXDISP. H. Może mieć jedną z następujących wartości:
 
-- Serwer OAT_INPLACE_SERVER ma pełny interfejs użytkownika serwera.
+- OAT_INPLACE_SERVER Server ma pełny interfejs użytkownika serwera.
 
-- Serwer OAT_SERVER obsługuje tylko osadzanie.
+- OAT_SERVER Serwer obsługuje tylko osadzanie.
 
-- Kontener OAT_CONTAINER obsługuje linki do osadzonych obiektów.
+- OAT_CONTAINER Container obsługuje łącza do obiektów osadzonych.
 
-- Obiekt `IDispatch`OAT_DISPATCH_OBJECT.
+- OAT_DISPATCH_OBJECT Object jest `IDispatch`w stanie.
 
-- Serwer OAT_DOC_OBJECT_SERVER obsługuje zarówno osadzanie, jak i model składnika obiektu dokumentu.
+- OAT_DOC_OBJECT_SERVER Serwer obsługuje zarówno osadzanie, jak i model składnika Obiekt dokumentu.
 
 *rglpszRegister*<br/>
-Lista wpisów, które są zapisywane w rejestrze tylko wtedy, gdy nie istnieją żadne wpisy.
+Lista wpisów, która jest zapisywana w rejestrze tylko wtedy, gdy nie istnieją żadne wpisy.
 
 *rglpszOverwrite*<br/>
-Lista wpisów, które są zapisywane w rejestrze bez względu na to, czy istnieją poprzednie wpisy.
+Lista wpisów, które są zapisywane w rejestrze, niezależnie od tego, czy istnieją poprzednie wpisy.
 
-*bRegister*<br/>
-Określa, czy Klasa ma być zarejestrowana. Jeśli *bRegister* ma wartość true, Klasa jest zarejestrowana w rejestrze systemowym. W przeciwnym razie wyrejestruje klasę.
+*Bregister*<br/>
+Określa, czy klasa ma być zarejestrowana. Jeśli *bRegister* jest TRUE, klasa jest zarejestrowana w rejestrze systemowym. W przeciwnym razie wyrejestruje klasę.
 
 ### <a name="remarks"></a>Uwagi
 
-Informacje o rejestracji są ładowane za pomocą wywołania [CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Pobrane podciągi to `regFileTypeId`te identyfikowane przez indeksy, `regFileTypeName`i `fileNewName`, zgodnie z opisem na `GetDocString` stronach referencyjnych.
+Informacje rejestracyjne są ładowane za pomocą wywołania [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Pobrane podciągi to podciągi `regFileTypeId`identyfikowane przez indeksy `regFileTypeName`i `fileNewName`, jak opisano na stronach referencyjnych. `GetDocString`
 
-Jeśli podciąg jest pusty lub jeśli `GetDocString` wywołanie zakończy się niepowodzeniem z innego powodu, ta funkcja zakończy się niepowodzeniem, a informacje o pliku nie zostaną wprowadzone do rejestru. `regFileTypeId`
+Jeśli `regFileTypeId` podciąg jest pusty lub `GetDocString` jeśli wywołanie nie powiedzie się z jakiegokolwiek innego powodu, ta funkcja kończy się niepowodzeniem, a informacje o pliku nie są wprowadzane do rejestru.
 
-Informacje w argumentach *rglpszRegister* i *rglpszOverwrite* są zapisywane w rejestrze przez wywołanie do [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Informacje domyślne, które są rejestrowane, gdy dwa argumenty mają wartość NULL, są odpowiednie dla większości aplikacji. Aby uzyskać informacje na temat struktury informacji w tych argumentach, zobacz `AfxOleRegisterServerClass`.
+Informacje w argumentach *rglpszRegister* i *rglpszOverwrite* jest zapisywany w rejestrze poprzez wywołanie [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Informacje domyślne, które są rejestrowane, gdy dwa argumenty są NULL, jest odpowiedni dla większości aplikacji. Aby uzyskać informacje na temat struktury informacji `AfxOleRegisterServerClass`w tych argumentach, zobacz .
 
-Aby uzyskać więcej informacji, zobacz [implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Aby uzyskać więcej informacji, zobacz [Implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>

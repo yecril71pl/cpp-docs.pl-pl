@@ -56,16 +56,16 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 69365b66b12d5a9284c9b097b225ba041e07b6b0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374016"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 
-`CDrawingManager` Klasa implementuje złożone algorytmy rysowania.
+Klasa `CDrawingManager` implementuje złożone algorytmy rysowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,54 +80,54 @@ class CDrawingManager : public CObject
 |Nazwa|Opis|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Konstruuje `CDrawingManager` obiekt.|
-|`CDrawingManager::~CDrawingManager`|Destruktor.|
+|`CDrawingManager::~CDrawingManager`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Tworzy 32-bitową mapę bitową niezależną od urządzenia (DIB), do której aplikacje mogą bezpośrednio pisać.|
-|[CDrawingManager::D rawAlpha](#drawalpha)|Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczyste piksele.|
-|[CDrawingManager::D rawRotated](#drawrotated)|Obrót źródłowej zawartości kontrolera domeny wewnątrz danego prostokąta przez +/-90 stopni|
+|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Tworzy 32-bitową mapę bitową niezależną od urządzenia (DIB), do którą aplikacje mogą zapisywać bezpośrednio.|
+|[CDrawingManager::DrawAlpha](#drawalpha)|Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczyste piksele.|
+|[CDrawingManager::DrawRotated](#drawrotated)|Obraca źródłową zawartość dc wewnątrz danego prostokąta o +/- 90 stopni|
 |[CDrawingManager::DrawEllipse](#drawellipse)|Rysuje elipsę z podanymi kolorami wypełnienia i obramowania.|
-|[CDrawingManager::D rawGradientRing](#drawgradientring)|Rysuje pierścień i wypełnia go kolorem gradientu.|
-|[CDrawingManager::D rawLine, CDrawingManager::D rawLineA](#drawline_cdrawingmanager__drawlinea)|Rysuje linię.|
-|[CDrawingManager::D rawRect](#drawrect)|Rysuje prostokąt z podanymi kolorami wypełnienia i obramowania.|
-|[CDrawingManager::D rawShadow](#drawshadow)|Rysuje cień prostokątnego obszaru.|
-|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Wypełnia prostokątny obszar dwoma gradientami koloru.|
-|[CDrawingManager::FillGradient](#fillgradient)|Wypełnia prostokątny obszar za pomocą określonego gradientu koloru.|
-|[CDrawingManager::FillGradient2](#fillgradient2)|Wypełnia prostokątny obszar za pomocą określonego gradientu koloru. Określono również kierunek zmiany koloru gradientu.|
-|[CDrawingManager::GrayRect](#grayrect)|Wypełnia prostokąt z określonym szarym kolorem.|
+|[CDrawingManager::DrawGradientRing](#drawgradientring)|Rysuje pierścień i wypełnia go gradientem kolorów.|
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|Rysuje linię.|
+|[CDrawingManager::DrawRect](#drawrect)|Rysuje prostokąt z dołączonymi kolorami wypełnienia i obramowania.|
+|[CDrawingManager::DrawShadow](#drawshadow)|Rysuje cień dla prostokątnego obszaru.|
+|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|Wypełnia prostokątny obszar dwoma gradientami kolorów.|
+|[CDrawingManager::FillGradient](#fillgradient)|Wypełnia prostokątny obszar określonym gradientem kolorów.|
+|[CDrawingManager::FillGradient2](#fillgradient2)|Wypełnia prostokątny obszar określonym gradientem kolorów. Określono również kierunek zmiany koloru gradientu.|
+|[CDrawingManager::GrayRect](#grayrect)|Wypełnia prostokąt określonym szarym kolorem.|
 |[CDrawingManager::HighlightRect](#highlightrect)|Podświetla prostokątny obszar.|
 |[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|Konwertuje kolor z reprezentacji HLS na reprezentację RGB.|
 |[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|Konwertuje kolor z reprezentacji HLS na reprezentację RGB.|
 |[CDrawingManager::HSVtoRGB](#hsvtorgb)|Konwertuje kolor z reprezentacji HSV na reprezentację RGB.|
-|[CDrawingManager::HuetoRGB](#huetorgb)|Metoda pomocnika, która konwertuje wartość odcienia na składnik czerwony, zielony lub niebieski.|
-|[CDrawingManager::MirrorRect](#mirrorrect)|Przerzuca prostokątny obszar.|
-|[CDrawingManager::P ixelAlpha](#pixelalpha)|Metoda pomocnika, która określa kolor końcowy dla półprzezroczystego piksela.|
-|[CDrawingManager::P repareShadowMask](#prepareshadowmask)|Tworzy mapę bitową, która może być używana jako cień.|
+|[CDrawingManager::HuetoRGB](#huetorgb)|Metoda pomocnika konwertuje wartość odcienia na składnik czerwony, zielony lub niebieski.|
+|[CDrawingManager::MirrorRect](#mirrorrect)|Odwraca prostokątny obszar.|
+|[CDrawingManager::PixelAlpha](#pixelalpha)|Metoda pomocnika, która określa końcowy kolor dla piksela półprzezroczystego.|
+|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|Tworzy mapę bitową, która może służyć jako cień.|
 |[CDrawingManager::RGBtoHSL](#rgbtohsl)|Konwertuje kolor z reprezentacji RGB na reprezentację HSL.|
 |[CDrawingManager::RGBtoHSV](#rgbtohsv)|Konwertuje kolor z reprezentacji RGB na reprezentację HSV.|
-|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Metoda pomocnika, która koloruje częściowo przezroczysty piksel w mapie bitowej.|
-|[CDrawingManager:: SetPixel](#setpixel)|Metoda pomocnika, która zmienia pojedynczy piksel w mapie bitowej z określonym kolorem.|
+|[CDrawingManager::SetAlphaPixel](#setalphapixel)|Metoda pomocnika, która koloruje częściowo przezroczysty piksel na mapie bitowej.|
+|[CDrawingManager::SetPixel](#setpixel)|Metoda pomocnika, która zmienia pojedynczy piksel w mapie bitowej na określony kolor.|
 |[CDrawingManager::SmartMixColors](#smartmixcolors)|Łączy dwa kolory na podstawie współczynnika ważonego.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDrawingManager` Klasa zawiera funkcje do rysowania cieni, gradientów kolorów i wyróżnionych prostokątów. Wykonuje także mieszanie alfa. Możesz użyć tej klasy, aby bezpośrednio zmienić interfejs użytkownika aplikacji.
+Klasa `CDrawingManager` udostępnia funkcje rysowania cieni, gradientów kolorów i wyróżnionych prostokątów. Wykonuje również mieszanie alfa. Tej klasy można użyć do bezpośredniej zmiany interfejsu użytkownika aplikacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)<br/>
+[Cobject](../../mfc/reference/cobject-class.md)<br/>
 `CDrawingManager`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdrawmanager. h
+**Nagłówek:** afxdrawmanager.h
 
-##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager
+## <a name="cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager
 
-Konstruuje obiekt [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) .
+Konstruuje [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) obiektu.
 
 ```
 CDrawingManager(CDC& dc);
@@ -135,12 +135,12 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*DC*<br/>
-podczas Odwołanie do kontekstu urządzenia. `CDrawingManager` Używa tego kontekstu do rysowania.
+*Dc*<br/>
+[w] Odwołanie do kontekstu urządzenia. Używa `CDrawingManager` tego kontekstu do rysowania.
 
-##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32
+## <a name="cdrawingmanagercreatebitmap_32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32
 
-Tworzy 32-bitową mapę bitową niezależną od urządzenia (DIB), do której aplikacje mogą bezpośrednio pisać.
+Tworzy 32-bitową mapę bitową niezależną od urządzenia (DIB), do którą aplikacje mogą zapisywać bezpośrednio.
 
 ```
 static HBITMAP __stdcall CreateBitmap_32(
@@ -157,20 +157,20 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Parametr|Opis|
-|*zmienia*|podczas Parametr [CSize](../../atl-mfc-shared/reference/csize-class.md) , który wskazuje rozmiar mapy bitowej.|
-|*pBits*|określoną Wskaźnik do wskaźnika danych, który odbiera lokalizację wartości bitowych DIB.|
-|*mapy*|Uchwyt do oryginalnej mapy bitowej|
-|*clrTransparent*|Wartość RGB określająca przezroczysty kolor oryginalnej mapy bitowej.|
+|*Rozmiar*|[w] Parametr [CSize,](../../atl-mfc-shared/reference/csize-class.md) który wskazuje rozmiar mapy bitowej.|
+|*pBits (pBits)*|[na zewnątrz] Wskaźnik do wskaźnika danych, który odbiera lokalizację wartości bitowych DIB.|
+|*Bitmapy*|Uchwyt do oryginalnej mapy bitowej|
+|*clrPrzezroczysty*|Wartość RGB określająca przezroczysty kolor oryginalnej mapy bitowej.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do nowo utworzonej mapy bitowej DIB, jeśli ta metoda zakończy się pomyślnie. w przeciwnym razie wartość NULL.
+Dojście do nowo utworzonej mapy bitowej DIB, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji na temat tworzenia mapy bitowej DIB, zobacz [CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibitmap).
 
-##  <a name="drawalpha"></a>CDrawingManager::D rawAlpha
+## <a name="cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha
 
 Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczyste piksele.
 
@@ -185,22 +185,22 @@ void DrawAlpha(
 ### <a name="parameters"></a>Parametry
 
 *pDstDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla miejsca docelowego.
+[w] Wskaźnik do kontekstu urządzenia dla miejsca docelowego.
 
-*rectDst*<br/>
-podczas Prostokąt docelowy.
+*reectDst*<br/>
+[w] Prostokąt docelowy.
 
 *pSrcDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla źródła.
+[w] Wskaźnik do kontekstu urządzenia dla źródła.
 
 *rectSrc*<br/>
-podczas Prostokąt źródłowy.
+[w] Prostokąt źródłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wykonuje mieszanie alfa dla dwóch map bitowych. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) w Windows SDK.
+Ta metoda wykonuje alfa-mieszania dla dwóch map bitowych. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) w windows SDK.
 
-##  <a name="drawellipse"></a>CDrawingManager::D rawEllipse
+## <a name="cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse
 
 Rysuje elipsę z podanymi kolorami wypełnienia i obramowania.
 
@@ -213,22 +213,22 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokąt ograniczający dla elipsy.
+*Rect*<br/>
+[w] Prostokąt ograniczający elipsy.
 
-*clrFill*<br/>
-podczas Kolor, którego ta metoda używa do wypełnienia elipsy.
+*clrFill (wysyp*<br/>
+[w] Kolor używany przez tę metodę do wypełnienia elipsy.
 
-*clrLine*<br/>
-podczas Kolor, którego ta metoda używa jako obramowania elipsy.
+*clrLine (linia clrline)*<br/>
+[w] Kolor, którego ta metoda używa jako obramowania elipsy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca bez rysowania elipsy, jeśli jeden z kolorów ma ustawioną wartość-1. Zwraca również bez rysowania elipsy, jeśli każdy wymiar prostokąta granicy ma wartość 0.
+Ta metoda zwraca bez rysowania elipsy, jeśli którykolwiek kolor jest ustawiony na -1. Zwraca również bez rysowania elipsy, jeśli którykolwiek z wymiarów prostokąta ograniczającego wynosi 0.
 
-##  <a name="drawgradientring"></a>CDrawingManager::D rawGradientRing
+## <a name="cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing
 
-Rysuje pierścień i wypełnia go kolorem gradientu.
+Rysuje pierścień i wypełnia go gradientem kolorów.
 
 ```
 BOOL DrawGradientRing(
@@ -243,36 +243,36 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Parametr [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa granicę dla pierścienia gradientu.
+*Rect*<br/>
+[w] A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, który określa granicę dla pierścienia gradientu.
 
 *colorStart*<br/>
-podczas Pierwszy kolor gradientu.
+[w] Pierwszy kolor gradientu.
 
-*colorFinish*<br/>
-podczas Ostatni kolor gradientu.
+*colorFinish (wykańźnik kolorów*<br/>
+[w] Ostatni kolor gradientu.
 
-*colorBorder*<br/>
-podczas Kolor obramowania.
+*colorBorder (nazwa)*<br/>
+[w] Kolor obramowania.
 
-*nAngle*<br/>
-podczas Parametr określający początkowy kąt rysowania gradientu. Ta wartość powinna należeć do zakresu od 0 do 360.
+*nAngle (właśc.*<br/>
+[w] Parametr określający początkowy kąt rysowania gradientu. Ta wartość powinna wynosić od 0 do 360.
 
-*nWidth*<br/>
-podczas Szerokość obramowania dla pierścienia.
+*nWidth (ww.*<br/>
+[w] Szerokość obramowania pierścienia.
 
-*clrFace*<br/>
-podczas Kolor wnętrza pierścienia.
+*clrFace (clrFace)*<br/>
+[w] Kolor wnętrza pierścienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Prostokąt zdefiniowany przez program *Rect* musi mieć co najmniej 5 pikseli szerokości i 5 pikseli.
+Prostokąt zdefiniowany przez *rect* musi mieć co najmniej 5 pikseli szerokości i 5 pikseli wysokości.
 
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::D rawLine, CDrawingManager::D rawLineA
+## <a name="cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
 Rysuje linię.
 
@@ -297,19 +297,19 @@ void DrawLineA(
 |||
 |-|-|
 |Parametr|Opis|
-|*x1*|podczas Współrzędna x, w której uruchamiany jest wiersz.|
-|*y1*|podczas Współrzędna y, w której uruchamiany jest wiersz.|
-|*x2*|podczas Współrzędna x, w której znajduje się linia.|
-|*Y2*|podczas Współrzędna y, w której znajduje się linia.|
-|*clrLine*|podczas Kolor wiersza.|
+|*x1*|[w] Współrzędna x, w której rozpoczyna się linia.|
+|*y1*|[w] Współrzędna y, w której rozpoczyna się linia.|
+|*x2*|[w] Współrzędna x, na której kończy się linia.|
+|*y2*|[w] Współrzędna y, na której kończy się linia.|
+|*clrLine (linia clrline)*|[w] Kolor linii.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się niepowodzeniem, jeśli *clrLine* jest równe-1.
+Ta metoda kończy się niepowodzeniem, jeśli *clrLine* jest równa -1.
 
-##  <a name="drawrect"></a>CDrawingManager::D rawRect
+## <a name="cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect
 
-Rysuje prostokąt z podanymi kolorami wypełnienia i obramowania.
+Rysuje prostokąt z dołączonymi kolorami wypełnienia i obramowania.
 
 ```
 void DrawRect(
@@ -320,22 +320,22 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Granice prostokąta.
+*Rect*<br/>
+[w] Granice prostokąta.
 
-*clrFill*<br/>
-podczas Kolor, którego ta metoda używa do wypełnienia prostokąta.
+*clrFill (wysyp*<br/>
+[w] Kolor używany przez tę metodę do wypełnienia prostokąta.
 
-*clrLine*<br/>
-podczas Kolor, którego używa ta metoda dla obramowania prostokąta.
+*clrLine (linia clrline)*<br/>
+[w] Kolor używany przez tę metodę dla obramowania prostokąta.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca bez rysowania prostokąta, jeśli jeden z kolorów ma ustawioną wartość-1. Zwraca również wtedy, gdy jeden z wymiarów prostokąta ma wartość 0.
+Ta metoda zwraca bez rysowania prostokąta, jeśli którykolwiek kolor jest ustawiony na -1. Zwraca również, jeśli którykolwiek z wymiarów prostokąta jest 0.
 
-##  <a name="drawshadow"></a>CDrawingManager::D rawShadow
+## <a name="cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow
 
-Rysuje cień prostokątnego obszaru.
+Rysuje cień dla prostokątnego obszaru.
 
 ```
 BOOL DrawShadow(
@@ -351,51 +351,51 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokątny obszar w aplikacji. Menedżer rysunku rysuje cień poniżej tego obszaru.
+*Rect*<br/>
+[w] Prostokątny obszar w aplikacji. Menedżer rysunku narysowa cień pod tym obszarem.
 
 *nDepth*<br/>
-podczas Szerokość i wysokość cienia.
+[w] Szerokość i wysokość cienia.
 
-*iMinBrightness*<br/>
-podczas Minimalna jasność cienia.
+*iMinBrightness (prawo) iMinBrightness*<br/>
+[w] Minimalna jasność cienia.
 
-*iMaxBrightness*<br/>
-podczas Maksymalna jasność cienia.
+*iMaxBrightness (prawo)*<br/>
+[w] Maksymalna jasność cienia.
 
 *pBmpSaveBottom*<br/>
-podczas Wskaźnik do mapy bitowej, która zawiera obraz dla dolnej części cienia.
+[w] Wskaźnik do mapy bitowej zawierającej obraz dolnej części cienia.
 
 *pBmpSaveRight*<br/>
-podczas Wskaźnik do mapy bitowej, która zawiera obraz dla cienia, który jest rysowany po prawej stronie prostokąta.
+[w] Wskaźnik do mapy bitowej zawierającej obraz cienia rysowanego po prawej stronie prostokąta.
 
-*clrBase*<br/>
-podczas Kolor cienia.
+*baza clrBase*<br/>
+[w] Kolor cienia.
 
-*bRightShadow*<br/>
-podczas Parametr logiczny, który wskazuje sposób rysowania cienia. Jeśli *bRightShadow* jest `TRUE`, `DrawShadow` rysuje cień po prawej stronie prostokąta.
+*bPrawaszdow*<br/>
+[w] Parametr logiczny wskazujący sposób rysowania cienia. Jeśli *bRightShadow* jest `TRUE`, `DrawShadow` rysuje cień po prawej stronie prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Można podać dwie prawidłowe mapy bitowe dla dolnego i prawego cienia przy użyciu parametrów *pBmpSaveBottom* i *pBmpSaveRight*. Jeśli te obiekty [CBitmap](../../mfc/reference/cbitmap-class.md) mają dołączony obiekt GDI, `DrawShadow` będą używać tych map bitowych jako cieni. Jeśli parametry nie mają dołączonego obiektu GDI, program `DrawShadow` rysuje cień i dołącza mapy bitowe do parametrów. `CBitmap` W przyszłych wywołaniach `DrawShadow`do, możesz podać te mapy bitowe, aby przyspieszyć proces rysowania. Aby uzyskać więcej informacji na `CBitmap` temat klas i obiektów GDI, zobacz [grafika Objects](../../mfc/graphic-objects.md).
+Można podać dwie prawidłowe mapy bitowe dla dolnego i prawego cienia za pomocą parametrów *pBmpSaveBottom* i *pBmpSaveRight*. Jeśli te [CBitmap](../../mfc/reference/cbitmap-class.md) obiekty mają dołączony obiekt `DrawShadow` GDI, użyje tych map bitowych jako cienie. Jeśli `CBitmap` parametry nie mają dołączonego obiektu GDI, `DrawShadow` rysuje cień i dołącza mapy bitowe do parametrów. W przyszłych `DrawShadow`wywołaniach do , można podać te mapy bitowe, aby przyspieszyć proces rysowania. Aby uzyskać więcej `CBitmap` informacji na temat klasy i obiektów GDI, zobacz [Obiekty graficzne](../../mfc/graphic-objects.md).
 
-Jeśli jeden z tych parametrów jest `NULL`, `DrawShadow` program automatycznie narysuje cień.
+Jeśli którykolwiek z `NULL`tych `DrawShadow` parametrów jest , automatycznie narysuje cień.
 
-Jeśli ustawisz *bRightShadow* na false, cień zostanie narysowany poniżej i po lewej stronie prostokątnego obszaru.
+Jeśli ustawisz *wartość bRightShadow* na FAŁSZ, cień zostanie narysowany pod spodem i po lewej stronie prostokątnego obszaru.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `DrawShadow` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego arkusza prop](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `DrawShadow` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [próbki demo arkusza prop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
-##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient
+## <a name="cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient
 
-Wypełnia prostokątny obszar dwoma gradientami koloru.
+Wypełnia prostokątny obszar dwoma gradientami kolorów.
 
 ```
 void Fill4ColorsGradient(
@@ -410,36 +410,36 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokąt do wypełnienia.
+*Rect*<br/>
+[w] Prostokąt do wypełnienia.
 
 *colorStart1*<br/>
-podczas Początkowy kolor pierwszego gradientu koloru.
+[w] Początkowy kolor dla pierwszego gradientu kolorów.
 
 *colorFinish1*<br/>
-podczas Kolor końcowy pierwszego gradientu koloru.
+[w] Końcowy kolor dla pierwszego gradientu kolorów.
 
 *colorStart2*<br/>
-podczas Początkowy kolor drugiego gradientu koloru.
+[w] Początkowy kolor dla drugiego gradientu kolorów.
 
 *colorFinish2*<br/>
-podczas Kolor końcowy drugiego gradientu koloru.
+[w] Końcowy kolor dla drugiego gradientu kolorów.
 
-*bHorz*<br/>
-podczas Parametr logiczny, który wskazuje, `Fill4ColorsGradient` czy kolory gradientu poziomego lub pionowego. Wartość TRUE wskazuje gradient poziomy.
+*Bhorz*<br/>
+[w] Parametr logiczny wskazujący, `Fill4ColorsGradient` czy kolory gradientu poziomego czy pionowego. Wartość TRUE wskazuje gradient poziomy.
 
-*nPercentage*<br/>
-podczas Liczba całkowita z zakresu od 0-100. Ta wartość wskazuje procent prostokąta do wypełnienia z pierwszym gradientem koloru.
+*Npercentage*<br/>
+[w] Całkowitej od 0-100. Ta wartość wskazuje procent prostokąta, który ma wypełnić pierwszym gradientem kolorów.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy prostokąt jest wypełniony dwoma gradientami koloru, znajdują się one powyżej siebie lub obok siebie, w zależności od wartości *bHorz*. Każdy gradient koloru jest obliczany niezależnie przy użyciu metody [CDrawingManager:: FillGradient](#fillgradient).
+Gdy prostokąt jest wypełniony dwoma gradientami kolorów, znajdują się one nad sobą lub obok siebie, w zależności od wartości *bHorz*. Każdy gradient kolorów jest obliczany niezależnie metodą [CDrawingManager::FillGradient](#fillgradient).
 
-Ta metoda generuje błąd potwierdzenia, jeśli wartość *nPercentage* jest mniejsza niż 0 lub większa niż 100.
+Ta metoda generuje błąd potwierdzenia, jeśli *nPercentage* jest mniejsza niż 0 lub więcej niż 100.
 
-##  <a name="fillgradient"></a>CDrawingManager::FillGradient
+## <a name="cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient
 
-Wypełnia prostokątny obszar za pomocą określonego gradientu koloru.
+Wypełnia prostokątny obszar określonym gradientem kolorów.
 
 ```
 void FillGradient(
@@ -453,33 +453,33 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokątny obszar do wypełnienia.
+*Rect*<br/>
+[w] Prostokątny obszar do wypełnienia.
 
 *colorStart*<br/>
-podczas Pierwszy kolor gradientu.
+[w] Pierwszy kolor gradientu.
 
-*colorFinish*<br/>
-podczas Końcowy kolor gradientu.
+*colorFinish (wykańźnik kolorów*<br/>
+[w] Końcowy kolor gradientu.
 
-*bHorz*<br/>
-podczas Parametr logiczny określający, czy `FillGradient` ma być rysowany gradient poziomy, czy pionowy.
+*Bhorz*<br/>
+[w] Parametr logiczny określający, `FillGradient` czy należy narysować gradient poziomy czy pionowy.
 
 *nStartFlatPercentage*<br/>
-podczas Procent prostokąta `FillGradient` wypełniany przy użyciu *colorStart* przed rozpoczęciem gradientu.
+[w] Procent prostokąta wypełniającego `FillGradient` *kolorStart* przed rozpoczęciem gradientu.
 
 *nEndFlatPercentage*<br/>
-podczas Procent prostokąta `FillGradient` wypełniany przy użyciu *colorFinish* po zakończeniu gradientu.
+[w] Procent prostokąta wypełnianego `FillGradient` *koloremKończy* po zakończeniu gradientu.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `FillGradient` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `FillGradient` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [przykładu demo pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
-##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2
+## <a name="cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2
 
-Wypełnia prostokątny obszar za pomocą określonego gradientu koloru.
+Wypełnia prostokątny obszar określonym gradientem kolorów.
 
 ```
 void FillGradient2 (
@@ -491,31 +491,31 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokątny obszar do wypełnienia.
+*Rect*<br/>
+[w] Prostokątny obszar do wypełnienia.
 
 *colorStart*<br/>
-podczas Pierwszy kolor gradientu.
+[w] Pierwszy kolor gradientu.
 
-*colorFinish*<br/>
-podczas Ostatni kolor gradientu.
+*colorFinish (wykańźnik kolorów*<br/>
+[w] Ostatni kolor gradientu.
 
-*nAngle*<br/>
-podczas Liczba całkowita z zakresu od 0 do 360. Ten parametr określa kierunek gradientu koloru.
+*nAngle (właśc.*<br/>
+[w] Liczą całkowitą z 0 do 360. Ten parametr określa kierunek gradientu kolorów.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj *nAngle* , aby określić kierunek gradientu koloru. Po określeniu kierunku gradientu koloru należy również określić miejsce uruchomienia gradientu koloru. Wartość 0 dla *nAngle* wskazuje, że gradient zaczyna się od góry prostokąta. W miarę wzrostu *nAngle* początkowa lokalizacja gradientu przesuwa się w kierunku do prawej w zależności od kąta.
+Użyj *nAngle,* aby określić kierunek gradientu kolorów. Po określeniu kierunku gradientu kolorów należy również określić, gdzie rozpoczyna się gradient kolorów. Wartość 0 dla *nAngle* wskazuje, że gradient zaczyna się od góry prostokąta. Wraz *ze wzrostem nAngle,* położenie początkowe gradientu przesuwa się w kierunku przeciwnym do ruchu wskazówek zegara w zależności od kąta.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `FillGradient2` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [nowych formantów przykładowych](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `FillGradient2` metody `CDrawingManager` klasy. Ten fragment kodu jest częścią [próbki Nowe formanty](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
-##  <a name="grayrect"></a>CDrawingManager::GrayRect
+## <a name="cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect
 
-Wypełnia prostokąt z określonym szarym kolorem.
+Wypełnia prostokąt określonym szarym kolorem.
 
 ```
 BOOL GrayRect(
@@ -527,29 +527,29 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokątny obszar do wypełnienia.
+*Rect*<br/>
+[w] Prostokątny obszar do wypełnienia.
 
-*nPercentage*<br/>
-podczas Procentowa szara w prostokącie.
+*Npercentage*<br/>
+[w] Procent szarości, który ma być szary w prostokącie.
 
-*clrTransparent*<br/>
-podczas Kolor przezroczysty.
+*clrPrzezroczysty*<br/>
+[w] Kolor przezroczysty.
 
-*clrDisabled*<br/>
-podczas Kolor, którego ta metoda używa dla nienasycenia, jeśli *nPercentage* jest ustawiona na wartość-1.
+*clrDisabled ( clrDisabled )*<br/>
+[w] Kolor, który ta metoda używa do usuwania nasycenia if *nPercentage* jest ustawiona na -1.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
+PRAWDA, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla parametru *nPercentage*niższa wartość oznacza ciemniejszy kolor.
+Dla parametru *nPercentage*niższa wartość wskazuje ciemniejszy kolor.
 
-Maksymalna wartość parametru *nPercentage* to 200. Wartość większa niż 200 nie zmienia wyglądu prostokąta. Jeśli wartość to-1, ta metoda używa *clrDisabled* , aby ograniczyć nasycenie prostokąta.
+Maksymalna wartość *nPercentage* wynosi 200. Wartość większa niż 200 nie zmienia wyglądu prostokąta. Jeśli wartość jest -1, ta metoda używa *clrDisabled* ograniczyć nasycenie prostokąta.
 
-##  <a name="highlightrect"></a>CDrawingManager::HighlightRect
+## <a name="cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect
 
 Podświetla prostokątny obszar.
 
@@ -564,32 +564,32 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokątny obszar, który ma zostać wyróżniony.
+*Rect*<br/>
+[w] Prostokątny obszar do podświetlenia.
 
-*nPercentage*<br/>
-podczas Wartość procentowa, która wskazuje, jak przezroczyste powinno być wyróżnienie.
+*Npercentage*<br/>
+[w] Procent wskazujący, jak przezroczyste powinno być podświetlenie.
 
-*clrTransparent*<br/>
-podczas Kolor przezroczysty.
+*clrPrzezroczysty*<br/>
+[w] Kolor przezroczysty.
 
-*nTolerance*<br/>
-podczas Liczba całkowita z zakresu od 0 do 255, która wskazuje tolerancję koloru.
+*nTolerancja*<br/>
+[w] Liczba całkowita z 0 do 255 wskazująca tolerancję kolorów.
 
-*clrBlend*<br/>
-podczas Kolor bazowy dla mieszania.
+*clrBlend ( clrBlend )*<br/>
+[w] Kolor bazowy do mieszania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
+PRAWDA, jeśli metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *nPercentage* jest z zakresu od 0 do `HighlightRect` 99, używa algorytmu mieszania alfa. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [linie mieszania alfa i wypełnienia](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Jeśli *nPercentage* jest-1, ta metoda używa domyślnego poziomu wyróżniania. Jeśli *nPercentage* jest 100, ta metoda nie wykonuje żadnych operacji i zwraca wartość true.
+If *nPercentage* jest między 0 `HighlightRect` i 99, używa algorytmu mieszania alfa. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [Alfa mieszanie linii i wypełnień](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Jeśli *nPercentage* wynosi -1, ta metoda używa domyślnego poziomu podświetlenia. Jeśli *nPercentage* wynosi 100, ta metoda nic nie robi i zwraca wartość TRUE.
 
-Metoda używa parametru *nTolerance* do określenia, czy wyróżnić prostokątny obszar. Aby wyróżnić prostokąt, różnica między kolorem tła aplikacji i *clrTransparent* musi być mniejsza niż *nTolerance* w każdym składniku koloru (czerwony, zielony i niebieski).
+Metoda używa parametru *nTolerancja,* aby ustalić, czy podświetlić prostokątny obszar. Aby wyróżnić prostokąt, różnica między kolorem tła aplikacji a *clrTransparent* musi być mniejsza niż *nTolerancja* w każdym składniku koloru (czerwonym, zielonym i niebieskim).
 
-##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE
+## <a name="cdrawingmanagerhlstorgb_one"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE
 
 Konwertuje kolor z reprezentacji HLS na reprezentację RGB.
 
@@ -603,25 +603,25 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ### <a name="parameters"></a>Parametry
 
 *H*<br/>
-podczas Liczba z zakresu od 0 do 1 reprezentująca odcień koloru.
+[w] Liczba z 0 do 1 reprezentująca barwę koloru.
 
 *L*<br/>
-podczas Liczba z zakresu od 0 do 1, która wskazuje jaskrawość koloru.
+[w] Liczba z 0 do 1, która wskazuje jasność koloru.
 
 *S*<br/>
-podczas Liczba z zakresu od 0 do 1, która wskazuje nasycenie koloru.
+[w] Liczba z 0 do 1, która wskazuje nasycenie koloru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reprezentacja RGB podanego koloru HLS.
+Reprezentacja RGB dostarczonego koloru HLS.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor może być reprezentowany jako HSV (barwa, nasycenie i wartość), HSL (barwa, nasycenie i jasność), lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Color](/windows/win32/uxguide/vis-color).
+Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Kolor](/windows/win32/uxguide/vis-color).
 
-Ta metoda i `CDrawingManager::HLStoRGB_TWO` Metoda wykonują tę samą operację, ale wymagają różnych wartości parametru *H* . W tej metodzie *H* jest wartością procentową okręgu. W metodzie H jest wartością stopnia z zakresu od 0 do 360, co reprezentuje czerwony. `CDrawingManager::HLStoRGB_TWO` Na przykład, w `HLStoRGB_ONE`przypadku, wartość 0,25 dla *H* jest równa wartości 90 z `HLStoRGB_TWO`.
+Ta metoda `CDrawingManager::HLStoRGB_TWO` i metoda wykonać tę samą operację, ale wymagają różnych wartości dla *H* parametru. W tej metodzie *H* jest procentem okręgu. W `CDrawingManager::HLStoRGB_TWO` metodzie *H* jest wartością stopnia między 0 i 360, które reprezentują kolor czerwony. Na przykład `HLStoRGB_ONE`z wartością 0,25 dla *H* jest odpowiednikiem wartości `HLStoRGB_TWO`90 z .
 
-##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO
+## <a name="cdrawingmanagerhlstorgb_two"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO
 
 Konwertuje kolor z reprezentacji HLS na reprezentację RGB.
 
@@ -635,25 +635,25 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ### <a name="parameters"></a>Parametry
 
 *H*<br/>
-podczas Liczba z zakresu od 0 do 360, która reprezentuje odcień koloru.
+[w] Liczba z 0 do 360 reprezentująca odcień koloru.
 
 *L*<br/>
-podczas Liczba z zakresu od 0 do 1, która wskazuje jaskrawość koloru.
+[w] Liczba z 0 do 1, która wskazuje jasność koloru.
 
 *S*<br/>
-podczas Liczba z zakresu od 0 do 1, która wskazuje nasycenie koloru.
+[w] Liczba z 0 do 1, która wskazuje nasycenie koloru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reprezentacja RGB podanego koloru HLS.
+Reprezentacja RGB dostarczonego koloru HLS.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor może być reprezentowany jako HSV (barwa, nasycenie i wartość), HSL (barwa, nasycenie i jasność), lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Color](/windows/win32/uxguide/vis-color).
+Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Kolor](/windows/win32/uxguide/vis-color).
 
-Ta metoda oraz Metoda [CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one) wykonują tę samą operację, ale wymagają różnych wartości parametru *H* . W tej metodzie *H* jest wartością stopnia z zakresu od 0 do 360, co reprezentuje czerwony. W metodzie [CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one) *H* jest wartością procentową okręgu. Na przykład, w `HLStoRGB_ONE`przypadku, wartość 0,25 dla *H* jest równa wartości 90 z `HLStoRGB_TWO`.
+Ta metoda i [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda wykonać tę samą operację, ale wymagają różnych wartości dla *H* parametru. W tej metodzie *H* jest wartością stopnia między 0 i 360, które reprezentują kolor czerwony. W [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda *H* jest procent okręgu. Na przykład `HLStoRGB_ONE`z wartością 0,25 dla *H* jest odpowiednikiem wartości `HLStoRGB_TWO`90 z .
 
-##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB
+## <a name="cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB
 
 Konwertuje kolor z reprezentacji HSV na reprezentację RGB.
 
@@ -669,21 +669,21 @@ static COLORREF __stdcall HSVtoRGB(
 |||
 |-|-|
 |Parametr|Opis|
-|*H*|podczas Liczba z zakresu od 0 do 360, która wskazuje odcień koloru.|
-|*S*|podczas Liczba z zakresu od 0 do 1, która wskazuje nasycenie koloru.|
-|*V*|podczas Liczba z zakresu od 0 do 1, która wskazuje wartość koloru.|
+|*H*|[w] Liczba z 0 do 360, która wskazuje odcień koloru.|
+|*S*|[w] Liczba z 0 do 1, która wskazuje nasycenie koloru.|
+|*V*|[w] Liczba z 0 do 1, która wskazuje wartość koloru.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reprezentacja RGB podanego koloru HSV.
+Reprezentacja RGB dostarczonego koloru HSV.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor może być reprezentowany jako HSV (barwa, nasycenie i wartość), HSL (barwa, nasycenie i jasność), lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Color](/windows/win32/uxguide/vis-color).
+Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Kolor](/windows/win32/uxguide/vis-color).
 
-##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB
+## <a name="cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB
 
-Konwertuje wartość odcienia na składnik czerwony, zielony lub niebieski.
+Konwertuje wartość odcienia na komponent czerwony, zielony lub niebieski.
 
 ```
 static double __stdcall HuetoRGB(
@@ -699,33 +699,33 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parametry
 
-*M1*<br/>
-podczas Zobacz uwagi.
+*m1*<br/>
+[w] Zobacz uwagi.
 
-*m*<br/>
-podczas Zobacz uwagi.
+*m2*<br/>
+[w] Zobacz uwagi.
 
-*h*<br/>
-podczas Zobacz uwagi.
+*H*<br/>
+[w] Zobacz uwagi.
 
 *rm1*<br/>
-podczas Zobacz uwagi.
+[w] Zobacz uwagi.
 
 *rm2*<br/>
-podczas Zobacz uwagi.
+[w] Zobacz uwagi.
 
-*RH*<br/>
-podczas Zobacz uwagi.
+*Rh*<br/>
+[w] Zobacz uwagi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pojedynczy składnik czerwony, zielony lub niebieski dla podanego odcienia.
+Indywidualny czerwony, zielony lub niebieski składnik dla podanego odcienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest metodą pomocniczą używaną `CDrawingManager` przez klasę do obliczania pojedynczych składników czerwony, zielony i niebieski koloru w reprezentacji HSV lub HSL. Ta metoda nie jest przeznaczona do wywoływania bezpośrednio przez programistę. Parametry wejściowe są wartościami, które są zależne od algorytmu konwersji.
+Ta metoda jest metodą `CDrawingManager` pomocniczą, która jest używana przez klasę do obliczania poszczególnych składników czerwony, zielony i niebieski koloru w reprezentacji HSV lub HSL. Ta metoda nie jest przeznaczona do wywoływania bezpośrednio przez programistę. Parametry wejściowe są wartościami zależnymi od algorytmu konwersji.
 
-Aby skonwertować kolor HSV lub HSL na reprezentację RGB, wywołaj jedną z następujących metod:
+Aby przekonwertować kolor HSV lub HSL na reprezentację RGB, należy wywołać jedną z następujących metod:
 
 - [CDrawingManager::HSVtoRGB](#hsvtorgb)
 
@@ -733,9 +733,9 @@ Aby skonwertować kolor HSV lub HSL na reprezentację RGB, wywołaj jedną z nas
 
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)
 
-##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect
+## <a name="cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect
 
-Przerzuca prostokątny obszar.
+Odwraca prostokątny obszar.
 
 ```
 void MirrorRect(
@@ -745,19 +745,19 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-podczas Prostokąt ograniczający obszaru, który ma zostać przerzucony.
+*Rect*<br/>
+[w] Prostokąt ograniczający obszaru do przerzucenia.
 
-*bHorz*<br/>
-podczas Parametr logiczny, który wskazuje, czy prostokąt przerzuca poziomo lub pionowo.
+*Bhorz*<br/>
+[w] Parametr logiczny wskazujący, czy prostokąt przerzuca się w poziomie czy w pionie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia Przerzucanie dowolnego obszaru kontekstu urządzenia należącego do `CDrawingManager` klasy. Jeśli *bHorz* ma wartość true, ta metoda przerzuca obszar w poziomie. W przeciwnym razie przerzuca obszar pionowy.
+Ta metoda można przerzucić dowolny obszar `CDrawingManager` kontekstu urządzenia należącego do klasy. Jeśli *bHorz* jest ustawiona na WARTOŚĆ PRAWDA, ta metoda przerzuca obszar w poziomie. W przeciwnym razie przerzuca obszar w pionie.
 
-##  <a name="pixelalpha"></a>CDrawingManager::P ixelAlpha
+## <a name="cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha
 
-Oblicza kolor końcowy dla półprzezroczystego piksela.
+Oblicza końcowy kolor dla piksela półprzezroczystego.
 
 ```
 static COLORREF __stdcall PixelAlpha(
@@ -778,37 +778,37 @@ static COLORREF __stdcall PixelAlpha(
 
 ### <a name="parameters"></a>Parametry
 
-*srcPixel*<br/>
-podczas Początkowy kolor piksela.
+*srcPixel (srcPixel)*<br/>
+[w] Początkowy kolor piksela.
 
-*wartością*<br/>
-podczas Liczba z zakresu od 0 do 100, która reprezentuje procent przezroczystości. Wartość 100 wskazuje, że początkowy kolor jest całkowicie przezroczysty.
+*Procent*<br/>
+[w] Liczba z przedziału od 0 do 100 reprezentująca procent przezroczystości. Wartość 100 wskazuje, że początkowy kolor jest całkowicie przezroczysty.
 
-*percentR*<br/>
-podczas Liczba z zakresu od 0 do 100, która reprezentuje procent przezroczystości składnika czerwony.
+*percentr (w tym)*<br/>
+[w] Liczba z przedziału od 0 do 100 reprezentująca procent przezroczystości czerwonego składnika.
 
-*percentG*<br/>
-podczas Liczba z zakresu od 0 do 100, która reprezentuje procent przezroczystości dla zielonego składnika.
+*percentg*<br/>
+[w] Liczba z przedziału od 0 do 100 reprezentująca procent przezroczystości dla komponentu zielonego.
 
-*percentB*<br/>
-podczas Liczba z zakresu od 0 do 100, która reprezentuje wartość procentową przezroczystości dla komponentu niebieskiego.
+*percentB (1000*<br/>
+[w] Liczba z przedziału od 0 do 100 reprezentująca procent przezroczystości dla niebieskiego składnika.
 
-*dstPixel*<br/>
-podczas Kolor podstawowy piksela.
+*dstPixel ( dstPixel )*<br/>
+[w] Kolor bazowy piksela.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kolor końcowy dla półprzezroczystego piksela.
+Końcowy kolor dla piksela półprzezroczystego.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to Klasa pomocnika do kolorowania półprzezroczystych map bitowych i nie jest przeznaczona do wywoływania bezpośrednio przez programistę.
+Jest to klasa pomocnika do kolorowania półprzezroczyste mapy bitowe i nie jest przeznaczony do wywoływania bezpośrednio przez programistę.
 
-W przypadku korzystania z wersji metody, która ma *dstPixel*, końcowy kolor jest kombinacją *dstPixel* i *srcPixel*. Kolor *srcPixel* to częściowo przezroczysty kolor koloru bazowego *dstPixel*.
+Podczas korzystania z wersji metody, która ma *dstPixel*, końcowy kolor jest kombinacją *dstPixel* i *srcPixel*. Kolor *srcPixel* jest częściowo przezroczysty kolor na kolor bazowy *dstPixel*.
 
-##  <a name="prepareshadowmask"></a>CDrawingManager::P repareShadowMask
+## <a name="cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask
 
-Tworzy mapę bitową, która może być używana jako cień.
+Tworzy mapę bitową, która może służyć jako cień.
 
 ```
 static HBITMAP __stdcall PrepareShadowMask (
@@ -821,28 +821,28 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="parameters"></a>Parametry
 
 *nDepth*<br/>
-podczas Szerokość i wysokość cienia.
+[w] Szerokość i wysokość cienia.
 
-*clrBase*<br/>
-podczas Kolor cienia.
+*baza clrBase*<br/>
+[w] Kolor cienia.
 
-*iMinBrightness*<br/>
-podczas Minimalna jasność cienia.
+*iMinBrightness (prawo) iMinBrightness*<br/>
+[w] Minimalna jasność cienia.
 
-*iMaxBrightness*<br/>
-podczas Maksymalna jasność cienia.
+*iMaxBrightness (prawo)*<br/>
+[w] Maksymalna jasność cienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do utworzonej mapy bitowej, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość NULL.
+Dojście do utworzonej mapy bitowej, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość *nDepth* jest równa 0, ta metoda kończy działanie i zwraca wartość null. Jeśli wartość *nDepth* jest mniejsza niż 3, Szerokość i wysokość cienia są ustawiane na 3 piksele.
+Jeśli *nDepth* jest ustawiona na 0, ta metoda kończy działanie i zwraca wartość NULL. Jeśli *nDepth* jest mniejsza niż 3, szerokość i wysokość cienia są ustawione na 3 piksele.
 
-##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL
+## <a name="cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL
 
-Konwertuje kolor z reprezentacji czerwoną, zieloną i niebieską (RGB) na reprezentację barwy, nasycenia i jasności (HSL).
+Konwertuje kolor z reprezentacji czerwonej, zielonej i niebieskiej (RGB) na reprezentację odcienia, nasycenia i lekkości (HSL).
 
 ```
 static void __stdcall RGBtoHSL(
@@ -857,18 +857,18 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |Parametr|Opis|
-|*rgb*|podczas Kolor w wartościach RGB.|
-|*H*|określoną Wskaźnik do podwójnej lokalizacji, w której metoda przechowuje odcień koloru.|
-|*S*|określoną Wskaźnik do podwójnej lokalizacji, gdzie metoda przechowuje nasycenie koloru.|
-|*L*|określoną Wskaźnik do podwójnej lokalizacji, gdzie metoda przechowuje jasność dla koloru.|
+|*Rgb*|[w] Kolor w wartościach RGB.|
+|*H*|[na zewnątrz] Wskaźnik do double, gdzie metoda przechowuje odcień dla koloru.|
+|*S*|[na zewnątrz] Wskaźnik do double, gdzie metoda przechowuje nasycenie koloru.|
+|*L*|[na zewnątrz] Wskaźnik do double, gdzie metoda przechowuje lekkość koloru.|
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor może być reprezentowany jako HSV (barwa, nasycenie i wartość), HSL (barwa, nasycenie i jasność), lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Color](/windows/win32/uxguide/vis-color).
+Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Kolor](/windows/win32/uxguide/vis-color).
 
-Zwracana wartość parametru *H* jest reprezentowana jako ułamek między 0 i 1, gdzie oba 0 i 1 reprezentują kolor czerwony. Zwracane wartości *S* i *L* są liczbami z zakresu od 0 do 1.
+Zwrócona wartość dla *H* jest reprezentowana jako ułamek między 0 i 1, gdzie zarówno 0, jak i 1 reprezentują kolor czerwony. Zwracane wartości dla *S* i *L* są liczbami z 0 i 1.
 
-##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV
+## <a name="cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV
 
 Konwertuje kolor z reprezentacji RGB na reprezentację HSV.
 
@@ -882,27 +882,27 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="parameters"></a>Parametry
 
-*rgb*<br/>
-podczas Kolor do przekonwertowania w reprezentacji RGB.
+*Rgb*<br/>
+[w] Kolor do konwersji w reprezentacji RGB.
 
 *H*<br/>
-określoną Wskaźnik do podwójnej lokalizacji, w której ta metoda przechowuje otrzymany odcień koloru.
+[na zewnątrz] Wskaźnik do double, gdzie ta metoda przechowuje wynikowy odcień dla koloru.
 
 *S*<br/>
-określoną Wskaźnik do podwójnej lokalizacji, w której ta metoda przechowuje uzyskane Nasycenie dla koloru.
+[na zewnątrz] Wskaźnik do double, gdzie ta metoda przechowuje wynikowe nasycenie koloru.
 
 *V*<br/>
-określoną Wskaźnik do podwójnej lokalizacji, w której ta metoda przechowuje wartość wyniku dla koloru.
+[na zewnątrz] Wskaźnik do double, gdzie ta metoda przechowuje wynikową wartość dla koloru.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor może być reprezentowany jako HSV (barwa, nasycenie i wartość), HSL (barwa, nasycenie i jasność), lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Color](/windows/win32/uxguide/vis-color).
+Kolor może być reprezentowany jako HSV (odcień, nasycenie i wartość), HSL (odcień, nasycenie i jasność) lub RGB (czerwony, zielony i niebieski). Aby uzyskać więcej informacji na temat różnych reprezentacji kolorów, zobacz [Kolor](/windows/win32/uxguide/vis-color).
 
-Zwracana wartość parametru *H* to liczba z zakresu od 0 do 360, gdzie oba 0 i 360 wskazują kolor czerwony. Wartości zwracane dla *S* i *V* są liczbami z zakresu od 0 do 1.
+Zwrócona wartość dla *H* jest liczbą z 0 a 360, gdzie zarówno 0, jak i 360 wskazują kolor czerwony. Zwracane wartości dla *S* i *V* są liczbami od 0 do 1.
 
-##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel
+## <a name="cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel
 
-Kolor przezroczystego piksela w mapie bitowej.
+Koloryzuje przezroczysty piksel na mapie bitowej.
 
 ```
 static void __stdcall SetAlphaPixel(
@@ -918,39 +918,39 @@ static void __stdcall SetAlphaPixel(
 
 ### <a name="parameters"></a>Parametry
 
-*pBits*<br/>
-podczas Wskaźnik do wartości bitowych dla mapy bitowej.
+*pBits (pBits)*<br/>
+[w] Wskaźnik do wartości bitowych mapy bitowej.
 
-*cinania*<br/>
-podczas Prostokątny obszar w aplikacji. Menedżer rysunku rysuje cień poniżej i po prawej stronie tego obszaru.
+*Rect*<br/>
+[w] Prostokątny obszar w aplikacji. Menedżer rysunku rysuje cień pod spodem i po prawej stronie tego obszaru.
 
-*x*<br/>
-podczas Pozioma Współrzędna pikseli do koloru.
+*X*<br/>
+[w] Pozioma współrzędna piksela do koloru.
 
-*y*<br/>
-podczas Współrzędna pionowa pikseli do koloru.
+*Y*<br/>
+[w] Pionowa współrzędna piksela do koloru.
 
-*wartością*<br/>
-podczas Wartość procentowa przezroczystości.
+*Procent*<br/>
+[w] Procent przezroczystości.
 
-*iShadowSize*<br/>
-podczas Szerokość i wysokość cienia.
+*Rozmiar iShadowSize*<br/>
+[w] Szerokość i wysokość cienia.
 
-*clrBase*<br/>
-podczas Kolor cienia.
+*baza clrBase*<br/>
+[w] Kolor cienia.
 
-*bIsRight*<br/>
-podczas Parametr logiczny, który wskazuje piksel do koloru. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+*bIsRight (Prawo)*<br/>
+[w] Parametr logiczny wskazujący, który piksel ma być kolorowy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest metodą pomocnika, która jest używana przez metodę [CDrawingManager::D rawshadow](#drawshadow) . Zalecamy, aby narysować cień, zamiast tego wywołać `CDrawingManager::DrawShadow` .
+Ta metoda jest metoda pomocnika, który jest używany przez [CDrawingManager::DrawShadow](#drawshadow) metody. Zaleca się, aby jeśli chcesz narysować cień, zamiast tego zadzwoń. `CDrawingManager::DrawShadow`
 
-Jeśli *bIsRight* ma wartość true, piksel do koloru jest mierzony *x* pikseli od prawej krawędzi *prostokąta*. Jeśli wartość jest równa FALSE, piksel do koloru jest mierzony *x* pikseli od lewej krawędzi *prostokąta*.
+Jeśli *wartość bIsRight* jest ustawiona na WARTOŚĆ TRUE, piksel na kolor jest mierzony *x* pikselami od prawej krawędzi *rect*. Jeśli jest false, piksel do koloru jest mierzona *x* pikseli od lewej krawędzi *rect*.
 
-##  <a name="setpixel"></a>CDrawingManager:: SetPixel
+## <a name="cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel
 
-Zmienia pojedynczy piksel w mapie bitowej z określonym kolorem.
+Zmienia pojedynczy piksel w mapie bitowej na określony kolor.
 
 ```
 static void __stdcall SetPixel(
@@ -967,14 +967,14 @@ static void __stdcall SetPixel(
 |||
 |-|-|
 |Parametr|Opis|
-|*pBits*|podczas Wskaźnik do wartości bitowych mapy bitowej.|
-|*cx*|podczas Łączna szerokość mapy bitowej.|
-|*cy*|podczas Łączna wysokość mapy bitowej.|
-|*x*|podczas Współrzędna x pikseli w mapie bitowej, która ma zostać zmieniona.|
-|*y*|podczas Współrzędna y pikseli w mapie bitowej, która ma zostać zmieniona.|
-|*Kolor*|podczas Nowy kolor pikseli identyfikowany przez podane współrzędne.|
+|*pBits (pBits)*|[w] Wskaźnik do wartości bitowych mapy bitowej.|
+|*Cx*|[w] Całkowita szerokość mapy bitowej.|
+|*Cy*|[w] Całkowita wysokość mapy bitowej.|
+|*X*|[w] X-współrzędna piksela w mapie bitowej, aby zmienić.|
+|*Y*|[w] Współrzędna y piksela w mapie bitowej do zmiany.|
+|*color*|[w] Nowy kolor dla piksela identyfikowany przez dostarczone współrzędne.|
 
-##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors
+## <a name="cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors
 
 Łączy dwa kolory na podstawie współczynnika ważonego.
 
@@ -992,25 +992,25 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parametr|Opis|
-|*color1*|podczas Pierwszy kolor, który ma zostać zmieszany.|
-|*color2*|podczas Drugi kolor, który ma zostać zmieszany.|
-|*dblLumRatio*|podczas Współczynnik jaskrawości nowego koloru. `SmartMixColors`Mnoży jaskrawość mieszanego koloru przez ten współczynnik przed określeniem koloru końcowego.|
-|*k1*|podczas Ważony współczynnik dla pierwszego koloru.|
-|*k2*|podczas Ważony współczynnik dla drugiego koloru.|
+|*kolor1*|[w] Pierwszy kolor do mieszania.|
+|*kolor2*|[w] Drugi kolor do mieszania.|
+|*dblLumRatio ( dblLumRatio )*|[w] Stosunek jasności nowego koloru. `SmartMixColors`mnoży jasność mieszanego koloru przez ten stosunek przed określeniem koloru końcowego.|
+|*k1*|[w] Współczynnik ważony dla pierwszego koloru.|
+|*k2*|[w] Współczynnik ważony dla drugiego koloru.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kolor, który reprezentuje ważoną mieszaninę podanych kolorów.
+Kolor reprezentujący ważony mieszaninę dostarczonych kolorów.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się niepowodzeniem z błędem, jeśli wartość *K1* lub *K2* jest mniejsza od zera. Jeśli oba te parametry są ustawione na 0, metoda zwraca `RGB(0, 0, 0)`.
+Ta metoda kończy się niepowodzeniem z błędem, jeśli *k1* lub *k2* jest mniejsza niż zero. Jeśli oba te parametry są ustawione na `RGB(0, 0, 0)`0, metoda zwraca .
 
-Współczynnik ważony jest obliczany przy użyciu następującej formuły: (color1 \* K1 + COLOR2 \* K2)/(K1 + K2). Po ustaleniu współczynnika ważonego Metoda oblicza jaskrawość koloru mieszanego. Następnie mnoży jasność przez *dblLumRatio*. Jeśli wartość jest większa niż 1,0, Metoda ustawia jaskrawość mieszanego koloru dla nowej wartości. W przeciwnym razie jasność jest ustawiona na 1,0.
+Współczynnik ważony oblicza się za pomocą \* następującego wzoru: (kolor 1 k1 + kolor2 \* k2)/(k1 + k2). Po określeniu współczynnika ważonym metoda oblicza jasność dla koloru mieszanego. Następnie mnoży jasność przez *dblLumRatio*. Jeśli wartość jest większa niż 1,0, metoda ustawia jasność dla mieszanego koloru na nową wartość. W przeciwnym razie jasność jest ustawiona na 1,0.
 
-##  <a name="drawrotated"></a>CDrawingManager::D rawRotated
+## <a name="cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated
 
-Obraca zawartość źródłowego kontrolera domeny w danym prostokącie o 90 stopni.
+Obraca źródłową zawartość kontrolera domeny wewnątrz danego prostokąta o 90 stopni.
 
 ```
 void DrawRotated(
@@ -1021,18 +1021,18 @@ void DrawRotated(
 
 ### <a name="parameters"></a>Parametry
 
-*rectDest*<br/>
+*reectDest*<br/>
 Prostokąt docelowy.
 
-*dcSrc*<br/>
+*dcSrc ( dcSrc )*<br/>
 Kontekst urządzenia źródłowego.
 
 *bClockWise*<br/>
-PRAWDA wskazuje obrót + 90 stopni; Wartość FALSE wskazuje obrót-90 stopni.
+WARTOŚĆ TRUE oznacza obrót o +90 stopni; FALSE oznacza obrót o -90 stopni.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398163"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374283"
 ---
 # <a name="synclockt-class"></a>SyncLockT — Klasa
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,14 +37,14 @@ class SyncLockT;
 
 ### <a name="parameters"></a>Parametry
 
-*SyncTraits*<br/>
-Typ, który można przejmować na własność zasobu.
+*SyncTraits (SyncTraits)*<br/>
+Typ, który może przejąć na własność zasób.
 
 ## <a name="remarks"></a>Uwagi
 
-Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.
+Reprezentuje typ, który może przejąć wyłączną lub współwłasność zasobu.
 
-`SyncLockT` Klasa jest używana, na przykład, pomagających w realizacji [SRWLock](srwlock-class.md) klasy.
+Klasa `SyncLockT` jest używana, na przykład, aby pomóc w zaimplementowaniu [klasy SRWLock.](srwlock-class.md)
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,27 +52,27 @@ Reprezentuje typ, który może zająć wyłączne lub współużytkować własno
 
 Nazwa                                      | Opis
 ----------------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt)        | Inicjuje nowe wystąpienie klasy `SyncLockT` klasy.
-[SyncLockT::~SyncLockT](#tilde-synclockt) | Wyłącza wystąpienie `SyncLockT` klasy.
+[SyncLockT::SyncLockT](#synclockt)        | Inicjuje nowe wystąpienie klasy `SyncLockT`.
+[SyncLockT::~SyncLockT](#tilde-synclockt) | Deinitializes wystąpienia `SyncLockT` klasy.
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
 Nazwa                               | Opis
 ---------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt) | Inicjuje nowe wystąpienie klasy `SyncLockT` klasy.
+[SyncLockT::SyncLockT](#synclockt) | Inicjuje nowe wystąpienie klasy `SyncLockT`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                             | Opis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[SyncLockT::IsLocked](#islocked) | Wskazuje, czy bieżący `SyncLockT` obiekt posiada zasób; czyli, `SyncLockT` obiekt jest *zablokowane*.
-[SyncLockT::Unlock](#unlock)     | Zwalnia kontrolę nad zasobów przechowywanych przez bieżącą `SyncLockT` obiektu, jeśli istnieje.
+[SyncLockT::Jest zablokowany](#islocked) | Wskazuje, czy `SyncLockT` bieżący obiekt jest właścicielem zasobu; oznacza to, `SyncLockT` że obiekt jest *zablokowany*.
+[SyncLockT::Odblokuj](#unlock)     | Zwalnia kontrolę nad zasobem `SyncLockT` przechowywanym przez bieżący obiekt, jeśli istnieje.
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 Nazwa                      | Opis
 ------------------------- | -------------------------------------------------------------------
-[SyncLockT::sync_](#sync) | Przechowuje bazowego zasobu reprezentowanego przez `SyncLockT` klasy.
+[SyncLockT::sync_](#sync) | Przechowuje zasób bazowy reprezentowany przez `SyncLockT` klasę.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -82,11 +82,11 @@ Nazwa                      | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Obszar nazw:** Microsoft::WRL::Otoki::Details
 
-## <a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 ~SyncLockT();
@@ -94,13 +94,13 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 
 ### <a name="remarks"></a>Uwagi
 
-Wyłącza wystąpienie `SyncLockT` klasy.
+Deinitializes wystąpienia `SyncLockT` klasy.
 
-Ten destruktor Odblokowano również bieżącą `SyncLockT` wystąpienia.
+Ten destruktor odblokowuje również bieżące `SyncLockT` wystąpienie.
 
-## <a name="islocked"></a>SyncLockT::IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a>SyncLockT::Jest zablokowany
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 bool IsLocked() const;
@@ -108,15 +108,15 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `SyncLockT` obiektu jest zablokowany; w przeciwnym razie **false**.
+**true,** `SyncLockT` jeśli obiekt jest zablokowany; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazuje, czy bieżący `SyncLockT` obiekt posiada zasób; czyli, `SyncLockT` obiekt jest *zablokowane*.
+Wskazuje, czy `SyncLockT` bieżący obiekt jest właścicielem zasobu; oznacza to, `SyncLockT` że obiekt jest *zablokowany*.
 
-## <a name="sync"></a>SyncLockT::sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>SyncLockT::sync_
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 typename SyncTraits::Type sync_;
@@ -124,11 +124,11 @@ typename SyncTraits::Type sync_;
 
 ### <a name="remarks"></a>Uwagi
 
-Przechowuje bazowego zasobu reprezentowanego przez `SyncLockT` klasy.
+Przechowuje zasób bazowy reprezentowany przez `SyncLockT` klasę.
 
-## <a name="synclockt"></a>SyncLockT::SyncLockT
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>SyncLockT::SyncLockT
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 SyncLockT(
@@ -142,21 +142,21 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
-Odwołanie rvalue, do innego `SyncLockT` obiektu.
+*Innych*<br/>
+Odwołanie rvalue do `SyncLockT` innego obiektu.
 
-*sync*<br/>
-Odwołanie do innego `SyncLockWithStatusT` obiektu.
+*synchronizacja*<br/>
+Odwołanie do `SyncLockWithStatusT` innego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje nowe wystąpienie klasy `SyncLockT` klasy.
+Inicjuje nowe wystąpienie klasy `SyncLockT`.
 
-Pierwszy Konstruktor inicjuje bieżące `SyncLockT` obiektu z innego `SyncLockT` obiekt określony przez parametr *innych*, a następnie unieważnia innych `SyncLockT` obiektu. Drugi Konstruktor jest `protected`i inicjuje bieżące `SyncLockT` obiektu nieprawidłowym stanie.
+Pierwszy `SyncLockT` konstruktor inicjuje bieżący obiekt z innego `SyncLockT` obiektu określonego przez parametr *inny*, a następnie unieważnia inny `SyncLockT` obiekt. Drugi konstruktor `protected`jest i inicjuje bieżący `SyncLockT` obiekt do nieprawidłowego stanu.
 
-## <a name="unlock"></a>SyncLockT::Unlock
+## <a name="synclocktunlock"></a><a name="unlock"></a>SyncLockT::Odblokuj
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 void Unlock();
@@ -164,4 +164,4 @@ void Unlock();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia kontrolę nad zasobów przechowywanych przez bieżącą `SyncLockT` obiektu, jeśli istnieje.
+Zwalnia kontrolę nad zasobem `SyncLockT` przechowywanym przez bieżący obiekt, jeśli istnieje.

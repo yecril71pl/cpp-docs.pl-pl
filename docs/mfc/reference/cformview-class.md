@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9b897c661731878f0bf78c9d04ae7c4ba28cd42
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373798"
 ---
 # <a name="cformview-class"></a>Klasa CFormView
 
-Klasa podstawowa używana w widokach formularza.
+Klasa podstawowa używana dla widoków formularzy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,35 +33,35 @@ class CFormView : public CScrollView
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFormView::CFormView](#cformview)|Konstruuje `CFormView` obiektu.|
+|[CFormView::CFormView](#cformview)|Konstruuje `CFormView` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Używane na potrzeby synchronizacji podczas inicjowania.|
+|[CFormView::IsInitDlgKokomatne](#isinitdlgcompleted)|Służy do synchronizacji podczas inicjowania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Widok formularza jest zasadniczo widok, który zawiera formanty. Te kontrolki są ułożone w zależności od zasobów szablonu okna dialogowego. Użyj `CFormView` chcącym formularzy w aplikacji. Widoki te obsługują przewijanie, stosownie do potrzeb, przy użyciu [CScrollView](../../mfc/reference/cscrollview-class.md) funkcji.
+Widok formularza jest zasadniczo widok, który zawiera formanty. Te formanty są określone na podstawie zasobu szablonu okna dialogowego. Użyj, `CFormView` jeśli chcesz formularzy w aplikacji. Te widoki obsługują przewijanie, w razie potrzeby, przy użyciu funkcji [CScrollView.](../../mfc/reference/cscrollview-class.md)
 
-Po osiągnięciu [tworzenia aplikacji opartej na formularzach](../../mfc/reference/creating-a-forms-based-mfc-application.md), swojej klasie widoku można oprzeć na `CFormView`, dzięki czemu aplikacją opartą na formularzach.
+Podczas [tworzenia aplikacji opartej](../../mfc/reference/creating-a-forms-based-mfc-application.md)na formularzach można oprzeć `CFormView`jej klasę widoku na , dzięki czemu jest to aplikacja oparta na formularzach.
 
-Można także wstawić nowy [tematy formularza](../../mfc/form-views-mfc.md) do aplikacji na podstawie widoku dokumentu. Nawet jeśli aplikacja nie obsługuje początkowo formularzy, Visual C++ doda tej obsługi podczas wstawiania nowego formularza.
+Można również wstawić nowe [tematy formularzy](../../mfc/form-views-mfc.md) do aplikacji opartych na widoku dokumentu. Nawet jeśli aplikacja początkowo nie obsługuje formularzy, Visual C++ doda tę obsługę po wstawieniu nowego formularza.
 
-Kreator aplikacji MFC i polecenia Dodaj klasę są preferowanymi metodami do tworzenia aplikacji opartej na formularzach. Jeśli potrzebujesz do tworzenia aplikacji opartej na formularzach bez korzystania z tych metod, zobacz [tworzenia aplikacji opartej na formularzach](../../mfc/reference/creating-a-forms-based-mfc-application.md).
+Kreator aplikacji MFC i polecenie Dodaj klasę są preferowanymi metodami tworzenia aplikacji opartych na formularzach. Jeśli chcesz utworzyć aplikację opartą na formularzach bez użycia tych metod, zobacz [Tworzenie aplikacji opartej na formularzach](../../mfc/reference/creating-a-forms-based-mfc-application.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
-[CScrollView](../../mfc/reference/cscrollview-class.md)
+[Cscrollview](../../mfc/reference/cscrollview-class.md)
 
 `CFormView`
 
@@ -69,9 +69,9 @@ Kreator aplikacji MFC i polecenia Dodaj klasę są preferowanymi metodami do two
 
 **Nagłówek:** afxext.h
 
-##  <a name="cformview"></a>  CFormView::CFormView
+## <a name="cformviewcformview"></a><a name="cformview"></a>CFormView::CFormView
 
-Konstruuje `CFormView` obiektu.
+Konstruuje `CFormView` obiekt.
 
 ```
 CFormView(LPCTSTR lpszTemplateName);
@@ -81,19 +81,19 @@ CFormView(UINT nIDTemplate);
 ### <a name="parameters"></a>Parametry
 
 *lpszTemplateName*<br/>
-Zawiera ciąg zakończony zerem, która jest nazwą zasobu szablonu okna dialogowego.
+Zawiera ciąg zakończony zerem, który jest nazwą zasobu szablonu okna dialogowego.
 
 *nIDTemplate*<br/>
-Zawiera identyfikator zasobu szablonu okna dialogowego.
+Zawiera numer identyfikatora zasobu szablonu okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu typu pochodną `CFormView`, wywołać za pomocą jednego z konstruktorów do utworzenia obiektu widoku i identyfikacji zasobu okna dialogowego, na którym bazuje widoku. Zasób można zidentyfikować przez nazwę (pass ciąg jako argument konstruktora) lub za pomocą jego Identyfikatora (pass liczbą całkowitą bez znaku jako argument).
+Podczas tworzenia obiektu typu pochodnego `CFormView`z , wywołać jeden z konstruktorów, aby utworzyć obiekt widoku i zidentyfikować zasób okna dialogowego, na którym opiera się widok. Zasób można zidentyfikować według nazwy (przekazać ciąg jako argument do konstruktora) lub jego identyfikator (przekazać niepodpisaną kreślęń całkowitych jako argument).
 
-Widok formularza formanty okna i podrzędne nie są tworzone do momentu `CWnd::Create` jest wywoływana. `CWnd::Create` jest wywoływana przez framework jako część procesu tworzenia dokument i widok, który jest wymuszany przez szablon dokumentu.
+Okno widoku formularza i formanty `CWnd::Create` podrzędne nie są tworzone, dopóki nie zostanie wywołane. `CWnd::Create`jest wywoływana przez platformę jako część procesu tworzenia dokumentu i widoku, który jest napędzany przez szablon dokumentu.
 
 > [!NOTE]
->  Klasy pochodne *musi* podać swój własny konstruktora. W konstruktorze, należy wywołać konstruktora, `CFormView::CFormView`, przy użyciu nazwy zasobu lub identyfikator jako argument, jak pokazano na poprzednim klasa — Przegląd.
+> Klasa pochodna *musi* dostarczyć własny konstruktor. W konstruktorze wywołać konstruktora, `CFormView::CFormView`z nazwą zasobu lub identyfikator jako argument, jak pokazano w poprzednim omówieniu klasy.
 
 ### <a name="example"></a>Przykład
 
@@ -101,9 +101,9 @@ Widok formularza formanty okna i podrzędne nie są tworzone do momentu `CWnd::C
 
 [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]
 
-##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted
+## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>CFormView::IsInitDlgKokomatne
 
-Używane przez MFC, aby upewnić się, że Inicjowanie zostało zakończone przed przystąpieniem do wykonywania innych operacji.
+Używane przez MFC, aby upewnić się, że inicjowanie jest zakończone przed wykonaniem innych operacji.
 
 ```
 BOOL IsInitDlgCompleted() const;
@@ -111,12 +111,12 @@ BOOL IsInitDlgCompleted() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość true, jeśli funkcja inicjowania dla tego okna dialogowego zostało ukończone.
+Wartość true, jeśli funkcja inicjowania dla tego okna dialogowego została ukończona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[Próbki MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy viewex MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CScrollView](../../mfc/reference/cscrollview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>

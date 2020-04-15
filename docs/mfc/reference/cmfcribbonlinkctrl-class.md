@@ -32,17 +32,17 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 12a83e45176f7fc6020da1f0d0ee5923ef0f466c
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 5d00c17b2ede654b9bdd214a8649f1237b9d9fdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866171"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375118"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
 
-Implementuje hiperlink, które jest umieszczone na Wstążce. Po kliknięciu hiperłącza zostanie otwarta strona sieci Web.
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Implementuje hiperłącze umieszczone na wstążce. Hiperłącze otwiera stronę sieci Web po jej kliknięciu.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,36 +63,36 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Przesłania `CMFCRibbonButton::CopyFrom`).|
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Przesłania [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonLinkCtrl::GetLink](#getlink)|Zwraca wartość hiperlinku.|
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Przesłania [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Przesłania [CMFCRibbonButton:: GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
+|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Zastępuje [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonLinkCtrl::GetLink](#getlink)|Zwraca wartość hiperłącza.|
+|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Zastępuje [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Zastępuje [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
 |[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`).|
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Przesłania [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Przesłania [CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
+|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Zastępuje [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Zastępuje [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
 |[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Przesłania `CMFCRibbonButton::OnMouseMove`).|
-|[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
+|[CMFCRibbonLinkCtrl::OnSeticon](#onseticon)||
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otwiera stronę sieci Web określoną w hiperłączu.|
-|[CMFCRibbonLinkCtrl::SetLink](#setlink)|Ustawia wartość hiperlinku.|
+|[CMFCRibbonLinkCtrl::SetLink](#setlink)|Ustawia wartość hiperłącza.|
 
 ## <a name="remarks"></a>Uwagi
 
-Po utworzeniu hiperłącza należy dodać je do panelu przez wywołanie [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Po utworzeniu hiperłącza dodaj je do panelu, wywołując [polecenie CMFCRibbonPanel::Dodaj](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)\
+&nbsp;-[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** afxRibbonLinkCtrl.h
+**Nagłówek:** afxRibbonLinkCtrl.h
 
-##  <a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
+## <a name="cmfcribbonlinkctrlcmfcribbonlinkctrl"></a><a name="cmfcribbonlinkctrl"></a>CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
-Tworzy i inicjuje obiekt [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) .
+Konstruuje i inicjuje [obiekt CMFCRibbonLinkCtrl.](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ```
 CMFCRibbonLinkCtrl(
@@ -103,22 +103,22 @@ CMFCRibbonLinkCtrl(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-podczas Określa identyfikator polecenia wykonywanego po kliknięciu kontrolki łącza.
+*Nid*<br/>
+[w] Określa identyfikator polecenia polecenia, które jest wykonywane po kliknięciu formantu łącza.
 
-*lpszText*<br/>
-podczas Określa etykietę, która ma być wyświetlana w formancie łącza.
+*lpszText (tekst)*<br/>
+[w] Określa etykietę wyświetlaną na formancie łącza.
 
-*lpszLink*<br/>
-podczas Określa hiperłącze skojarzone z kontrolką łącza.
+*lpszLink (lpszLink)*<br/>
+[w] Określa hiperłącze skojarzone z formantem łącza.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia konstruktora `CMFCRibbonLinkCtrl` klasy. Ten fragment kodu jest częścią [przykładu gadżetów wstążki](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `CMFCRibbonLinkCtrl` używać konstruktora klasy. Ten fragment kodu jest częścią [przykładu Gadżety wstążki](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
-##  <a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom
+## <a name="cmfcribbonlinkctrlcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonLinkCtrl::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -126,11 +126,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *src*<br/>
+[w] *src ( src )*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize
+## <a name="cmfcribbonlinkctrlgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonLinkCtrl::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -138,15 +138,15 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlink"></a>CMFCRibbonLinkCtrl:: getlink
+## <a name="cmfcribbonlinkctrlgetlink"></a><a name="getlink"></a>CMFCRibbonLinkCtrl::GetLink
 
-Zwraca wartość hiperlinku.
+Zwraca wartość hiperłącza.
 
 ```
 LPCTSTR GetLink() const;
@@ -154,11 +154,11 @@ LPCTSTR GetLink() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość hiperlinku.
+Bieżąca wartość hiperłącza.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize
+## <a name="cmfcribbonlinkctrlgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonLinkCtrl::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -166,13 +166,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText
+## <a name="cmfcribbonlinkctrlgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonLinkCtrl::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -182,7 +182,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage
+## <a name="cmfcribbonlinkctrlondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl::OnDrawMenuImage
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -190,14 +190,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *Przechwytywanie&#42;*  zmian<br/>
-podczas *CRect*<br/>
+[w] *&#42;CDC*<br/>
+[w] *CRect (crect)*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage
+## <a name="cmfcribbonlinkctrlisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -207,7 +207,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondraw"></a>CMFCRibbonLinkCtrl:: OnDraw
+## <a name="cmfcribbonlinkctrlondraw"></a><a name="ondraw"></a>CMFCRibbonLinkCtrl::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -215,11 +215,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl:: OnMouseMove
+## <a name="cmfcribbonlinkctrlonmousemove"></a><a name="onmousemove"></a>CMFCRibbonLinkCtrl::OnMouseMove
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -227,11 +227,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *punkt*<br/>
+[w] *punkt*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSetIcon
+## <a name="cmfcribbonlinkctrlonseticon"></a><a name="onseticon"></a>CMFCRibbonLinkCtrl::OnSeticon
 
 ```
 virtual void OnSetIcon();
@@ -239,7 +239,7 @@ virtual void OnSetIcon();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink
+## <a name="cmfcribbonlinkctrlopenlink"></a><a name="openlink"></a>CMFCRibbonLinkCtrl::OpenLink
 
 Otwiera stronę sieci Web określoną w hiperłączu.
 
@@ -249,15 +249,15 @@ BOOL OpenLink();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli skojarzona Strona sieci Web została pomyślnie otwarta; w przeciwnym razie FALSE.
+PRAWDA, jeśli skojarzona strona sieci Web została pomyślnie otwarta; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Otwiera stronę sieci Web przy użyciu hiperłącza skojarzonego z `CMFCRibbonLinkCtrl` obiektem.
+Otwiera stronę sieci Web przy użyciu `CMFCRibbonLinkCtrl` hiperłącza skojarzonego z obiektem.
 
-##  <a name="setlink"></a>CMFCRibbonLinkCtrl:: SetLink
+## <a name="cmfcribbonlinkctrlsetlink"></a><a name="setlink"></a>CMFCRibbonLinkCtrl::SetLink
 
-Ustawia wartość hiperlinku.
+Ustawia wartość hiperłącza.
 
 ```
 void SetLink(LPCTSTR lpszLink);
@@ -265,10 +265,10 @@ void SetLink(LPCTSTR lpszLink);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszLink*<br/>
-podczas Określa tekst hiperlinku.
+*lpszLink (lpszLink)*<br/>
+[w] Określa tekst hiperłącza.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

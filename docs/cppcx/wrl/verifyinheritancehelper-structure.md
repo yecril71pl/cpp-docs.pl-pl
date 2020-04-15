@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: c37a0eb74fd65b3d349d5b8b7c792fbaf7d1ac9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374231"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,12 +35,12 @@ struct VerifyInheritanceHelper<I, Nil>;
 *I*<br/>
 Typ.
 
-*Base*<br/>
-Innego typu.
+*Podstawowej*<br/>
+Inny typ.
 
 ## <a name="remarks"></a>Uwagi
 
-Sprawdza, czy jeden interfejs jest tworzony na podstawie innego interfejsu.
+Sprawdza, czy jeden interfejs pochodzi z innego interfejsu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,7 +48,7 @@ Sprawdza, czy jeden interfejs jest tworzony na podstawie innego interfejsu.
 
 Nazwa                                       | Opis
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Verify](#verify) | Testuje dwa interfejsy, które są określone przez bieżący parametry szablonu i określa, czy jeden interfejs jest tworzony na podstawie innych.
+[VerifyInheritanceHelper::Verify VerifyInheritanceHelper::Verify VerifyInheritanceHelper::Verify VerifyIn](#verify) | Testuje dwa interfejsy określone przez bieżące parametry szablonu i określa, czy jeden interfejs jest pochodną drugiego.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,11 +58,11 @@ Nazwa                                       | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="verify"></a>VerifyInheritanceHelper::Verify
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>VerifyInheritanceHelper::Verify VerifyInheritanceHelper::Verify VerifyInheritanceHelper::Verify VerifyIn
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 static void Verify();
@@ -70,6 +70,6 @@ static void Verify();
 
 ### <a name="remarks"></a>Uwagi
 
-Testuje dwa interfejsy, które są określone przez bieżący parametry szablonu i określa, czy jeden interfejs jest tworzony na podstawie innych.
+Testuje dwa interfejsy określone przez bieżące parametry szablonu i określa, czy jeden interfejs jest pochodną drugiego.
 
-Błąd jest emitowane, jeśli jeden interfejs nie pochodzi od innych.
+Błąd jest emitowany, jeśli jeden interfejs nie pochodzi od drugiego.

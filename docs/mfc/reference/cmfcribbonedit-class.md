@@ -73,20 +73,20 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 4f973074fbec3d04b1c1a74852b02ff2564217c1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ab621a05f9b658eee9babb14e257680fa95e0f96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375179"
 ---
 # <a name="cmfcribbonedit-class"></a>Klasa CMFCRibbonEdit
 
-Implementuje kontrolkę edycji, która znajduje się na pasku wstążki.
+Implementuje formant edycji, który znajduje się na pasku wstążki.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class CMFCRibbonEdit : public CMFCRibbonButton
 ```
 
@@ -96,77 +96,77 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Konstruuje `CMFCRibbonEdit` obiekt.|
+|[CMFCRibbonEdytuj::CMFCRibbonEdytuj](#cmfcribbonedit)|Konstruuje `CMFCRibbonEdit` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Wskazuje, czy wysokość `CMFCRibbonEdit` kontrolki może wzrosnąć w pionie do wysokości wiersza wstążki.|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Konstruuje `CMFCRibbonEdit` obiekt.|
-|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Kopiuje stan określonego `CMFCRibbonEdit` obiektu do bieżącego `CMFCRibbonEdit` obiektu.|
-|[CMFCRibbonEdit:: SetEdit](#createedit)|Tworzy nowe pole tekstowe dla `CMFCRibbonEdit` obiektu.|
-|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|`CMFCRibbonEdit` Niszczy obiekt.|
-|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Odrzuca pole listy.|
-|[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|Włącza i ustawia zakres przycisku pokrętła dla pola tekstowego.|
-|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Pobiera rozmiar `CFMCRibbonEdit` kompaktowy obiektu.|
-|[CMFCRibbonEdit::GetEditText](#getedittext)|Pobiera tekst w polu tekstowym.|
-|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Pobiera pośredni rozmiar `CMFCRibbonEdit` obiektu.|
-|[CMFCRibbonEdit:: TextAlign](#gettextalign)|Pobiera wyrównanie tekstu w polu tekstowym.|
-|[CMFCRibbonEdit:: getwidth](#getwidth)|Pobiera szerokość `CMFCRibbonEdit` formantu (w pikselach).|
-|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Wskazuje, czy rozmiar `CMFCRibbonEdit` wyświetlanego formantu może być kompaktowy.|
-|[CMFCRibbonEdit::HasFocus](#hasfocus)|Wskazuje, czy `CMFCRIbbonEdit` kontrolka ma fokus.|
-|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Wskazuje, czy rozmiar `CMFCRibbonEdit` wyświetlanego formantu może być duży.|
-|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Wskazuje, czy pole tekstowe ma przycisk pokrętło.|
-|[CMFCRibbonEdit:: ispodświetlacz](#ishighlighted)|Wskazuje, `CMFCRibbonEdit` czy formant jest wyróżniony.|
-|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Wywoływane przez platformę, gdy wymiary prostokąta wyświetlania dla `CMFCRibbonEdit` kontrolki zmienią się.|
-|[CMFCRibbonEdit:: OnDraw](#ondraw)|Wywoływane przez platformę, by narysować `CMFCRibbonEdit` kontrolkę.|
-|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Wywoływane przez platformę, by narysować etykietę i obraz dla `CMFCRibbonEdit` kontrolki.|
-|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Wywoływane przez platformę, by narysować `CMFCRibbonEdit` kontrolkę w polu listy poleceń.|
-|[CMFCRibbonEdit:: onenable](#onenable)|Wywoływane przez platformę, aby włączyć lub wyłączyć `CMFCRibbonEdit` formant.|
-|[CMFCRibbonEdit:: onpodświetl](#onhighlight)|Wywoływane przez platformę, gdy wskaźnik przechodzi lub opuszcza granice `CMFCRibbonEdit` formantu.|
-|[CMFCRibbonEdit::OnKey](#onkey)|Wywoływane przez platformę, gdy użytkownik naciśnie element poradę dotyczącą klawiszy, a `CMFCRibbonEdit` kontrolka ma fokus.|
-|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Wywoływane przez platformę, by zaktualizować `CMFCRibbonEdit` kontrolkę, gdy użytkownik naciśnie lewym przyciskiem myszy na kontrolce.|
-|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|Wywoływane przez platformę, gdy użytkownik zwolni lewy przycisk myszy.|
-|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Wywoływane przez platformę, by zaktualizować `CMFCRibbonEdit` kontrolkę, gdy zmieni się kierunek układu.|
-|[CMFCRibbonEdit:: OnShow](#onshow)|Wywoływane przez platformę, by pokazać lub ukryć `CMFCRibbonEdit` formant.|
-|[CMFCRibbonEdit:: redraw](#redraw)|Aktualizuje wyświetlaną `CMFCRibbonEdit` kontrolkę.|
-|[CMFCRibbonEdit::SetACCData](#setaccdata)|Ustawia dane ułatwień dostępu dla `CMFCRibbonEdit` obiektu.|
-|[CMFCRibbonEdit::SetEditText](#setedittext)|Ustawia tekst w polu tekstowym.|
-|[CMFCRibbonEdit::SetTextAlign](#settextalign)|Ustawia wyrównanie tekstu pola tekstowego.|
-|[CMFCRibbonEdit:: setwidth](#setwidth)|Ustawia szerokość pola tekstowego dla `CMFCRibbonEdit` kontrolki.|
+|[CMFCRibbonEdytuj::CanBeStretched](#canbestretched)|Wskazuje, czy wysokość `CMFCRibbonEdit` formantu może wzrosnąć pionowo do wysokości wiersza wstążki.|
+|[CMFCRibbonEdytuj::CMFCRibbonEdytuj](#cmfcribbonedit)|Konstruuje `CMFCRibbonEdit` obiekt.|
+|[CMFCRibbonEdytuj::CopyFrom](#copyfrom)|Kopiuje stan określonego `CMFCRibbonEdit` obiektu do `CMFCRibbonEdit` bieżącego obiektu.|
+|[CMFCRibbonEdytuj::UtwórzEdytuj](#createedit)|Tworzy nowe pole tekstowe `CMFCRibbonEdit` dla obiektu.|
+|[CMFCRibbonEdytuj::DestroyCtrl](#destroyctrl)|Niszczy `CMFCRibbonEdit` obiekt.|
+|[CMFCRibbonEdytuj::DropDownList](#dropdownlist)|Porzuca pole listy.|
+|[CMFCRibbonEdytuj::EnableSpinButtons](#enablespinbuttons)|Włącza i ustawia zakres przycisku pokrętła dla pola tekstowego.|
+|[CMFCRibbonEdyt::GetCompactSize](#getcompactsize)|Pobiera kompaktowy rozmiar `CFMCRibbonEdit` obiektu.|
+|[CMFCRibbonEdyt::GetEditText](#getedittext)|Pobiera tekst w polu tekstowym.|
+|[CMFCRibbonEdyt::GetIntermediateSize](#getintermediatesize)|Pobiera rozmiar pośredni `CMFCRibbonEdit` obiektu.|
+|[CMFCRibbonEdyt::GetTextAlign](#gettextalign)|Pobiera wyrównanie tekstu w polu tekstowym.|
+|[CMFCRibbonEdytuj::GetWidth](#getwidth)|Pobiera szerokość( w pikselach) `CMFCRibbonEdit` formantu.|
+|[CMFCRibbonEdytuj::HasCompactMode](#hascompactmode)|Wskazuje, czy rozmiar wyświetlania `CMFCRibbonEdit` formantu może być kompaktowy.|
+|[CMFCRibbonEdyt::HasFocus](#hasfocus)|Wskazuje, `CMFCRIbbonEdit` czy formant ma fokus.|
+|[CMFCRibbonEdytuj::HasLargeMode](#haslargemode)|Wskazuje, czy rozmiar wyświetlania `CMFCRibbonEdit` formantu może być duży.|
+|[CMFCRibbonEdytuj::HasSpinButtons](#hasspinbuttons)|Wskazuje, czy pole tekstowe ma przycisk pokrętła.|
+|[CMFCRibbonEdyt::IsHighlighted](#ishighlighted)|Wskazuje, `CMFCRibbonEdit` czy formant jest wyróżniony.|
+|[CMFCRibbonEdytuj::OnAfterChangeRect](#onafterchangerect)|Wywoływane przez strukturę, gdy zmienią się `CMFCRibbonEdit` wymiary prostokąta wyświetlania formantu.|
+|[CMFCRibbonEdytuj::OnDraw](#ondraw)|Wywoływana przez ramy `CMFCRibbonEdit` do rysowania formantu.|
+|[CMFCRibbonEdytuj::OnDrawLabelAndImage](#ondrawlabelandimage)|Wywoływana przez strukturę do rysowania `CMFCRibbonEdit` etykiety i obrazu dla formantu.|
+|[CMFCRibbonEdytuj::OnDrawOnList](#ondrawonlist)|Wywoływane przez strukturę, aby narysować `CMFCRibbonEdit` formant w polu listy poleceń.|
+|[CMFCRibbonEdytuj::OnEnable](#onenable)|Wywoływane przez strukturę, `CMFCRibbonEdit` aby włączyć lub wyłączyć formant.|
+|[CMFCRibbonEdytuj::OnHighlight](#onhighlight)|Wywoływane przez strukturę, gdy wskaźnik wchodzi lub `CMFCRibbonEdit` opuszcza granice formantu.|
+|[CMFCRibbonEdyt::OnKey](#onkey)|Wywoływane przez platformę, gdy użytkownik naciska `CMFCRibbonEdit` etykietkę klucza i formant ma fokus.|
+|[CMFCRibbonEdyt::OnLButtonDown](#onlbuttondown)|Wywoływane przez strukturę, aby zaktualizować `CMFCRibbonEdit` formant, gdy użytkownik naciśnie lewy przycisk myszy na formancie.|
+|[CMFCRibbonEdyt::OnLButtonUp](#onlbuttonup)|Wywoływane przez strukturę, gdy użytkownik zwalnia lewy przycisk myszy.|
+|[CMFCRibbonEdyt::OnRTLZmieniony](#onrtlchanged)|Wywoływane przez strukturę, aby zaktualizować formant, `CMFCRibbonEdit` gdy układ zmienia kierunek.|
+|[CMFCRibbonEdytuj::OnShow](#onshow)|Wywoływana przez strukturę, `CMFCRibbonEdit` aby pokazać lub ukryć formant.|
+|[CMFCRibbonEdytuj::Przerysuj](#redraw)|Aktualizuje wyświetlanie `CMFCRibbonEdit` formantu.|
+|[CMFCRibbonEdytuj::SetACCData](#setaccdata)|Ustawia dane ułatwień `CMFCRibbonEdit` dostępu dla obiektu.|
+|[CMFCRibbonEdytuj::SetEditText](#setedittext)|Ustawia tekst w polu tekstowym.|
+|[CMFCRibbonEdytuj::SetTextAlign](#settextalign)|Ustawia wyrównanie tekstu pola tekstowego.|
+|[CMFCRibbonEdytuj::SetWidth](#setwidth)|Ustawia szerokość pola tekstowego `CMFCRibbonEdit` formantu.|
 
 ## <a name="remarks"></a>Uwagi
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konstruowania `CMFCRibbonEdit` obiektu, wyświetlania przycisków pokrętła obok kontrolki Edycja i ustawiania tekstu kontrolki edycji. Ten fragment kodu jest częścią [przykładu demonstracyjnego pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
+W poniższym `CMFCRibbonEdit` przykładzie pokazano, jak skonstruować obiekt, wyświetlić przyciski pokrętła obok formantu edycji i ustawić tekst formantu edycji. Ten fragment kodu jest częścią [przykładu demo pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonEdit. h
+**Nagłówek:** afxRibbonEdit.h
 
-##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched
+## <a name="cmfcribboneditcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonEdytuj::CanBeStretched
 
-Wskazuje, czy wysokość formantu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) może wzrosnąć w pionie do wysokości wiersza wstążki.
+Wskazuje, czy wysokość [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) formantmoże zwiększyć pionowo do wysokości wiersza wstążki.
 
-```
+```cpp
 virtual BOOL CanBeStretched();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość FALSE.
+Zawsze zwraca wartość FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit
+## <a name="cmfcribboneditcmfcribbonedit"></a><a name="cmfcribbonedit"></a>CMFCRibbonEdytuj::CMFCRibbonEdytuj
 
-Konstruuje obiekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Konstruuje [OBIEKT CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 CMFCRibbonEdit(
     UINT nID,
     int nWidth,
@@ -178,44 +178,44 @@ CMFCRibbonEdit();
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-podczas Identyfikator polecenia dla `CMFCRibbonEdit` kontrolki.
+*Nid*<br/>
+[w] Identyfikator polecenia dla `CMFCRibbonEdit` formantu.
 
-*nWidth*<br/>
-podczas Szerokość pola `CMFCRibbonEdit` tekstowego formantu w pikselach.
+*nWidth (ww.*<br/>
+[w] Szerokość w pikselach pola tekstowego `CMFCRibbonEdit` formantu.
 
-*lpszLabel*<br/>
-podczas Etykieta `CMFCRibbonEdit` kontrolki.
+*lpszLabel (lpszLabel)*<br/>
+[w] Etykieta dla `CMFCRibbonEdit` formantu.
 
-*Nokreślono*<br/>
-podczas Indeks małego obrazu do użycia w `CMFCRibbonEdit` formancie. Kolekcja małych obrazów jest obsługiwana przez nadrzędną kategorię wstążki.
+*nImage (Obraz)*<br/>
+[w] Indeks małego obrazu do użycia `CMFCRibbonEdit` dla formantu. Kolekcja małych obrazów jest obsługiwana przez nadrzędną kategorię wstążki.
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCRibbonEdit` Formant nie używa dużego obrazu.
+Formant `CMFCRibbonEdit` nie używa dużego obrazu.
 
-##  <a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom
+## <a name="cmfcribboneditcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonEdytuj::CopyFrom
 
-Kopiuje stan określonego obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) do bieżącego obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Kopie stan określonego [OBIEKTU CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) do bieżącego [obiektu CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*SRC*<br/>
-podczas Obiekt źródłowy `CMFCRibbonEdit` .
+*src*<br/>
+[w] Obiekt `CMFCRibbonEdit` źródłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *src* musi być typu `CMFCRibbonEdit`.
+Parametr *src* musi być `CMFCRibbonEdit`typu .
 
-##  <a name="createedit"></a>CMFCRibbonEdit:: SetEdit
+## <a name="cmfcribboneditcreateedit"></a><a name="createedit"></a>CMFCRibbonEdytuj::UtwórzEdytuj
 
-Tworzy nowe pole tekstowe dla obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Tworzy nowe pole tekstowe dla [obiektu CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual CMFCRibbonRichEditCtrl* CreateEdit(
     CWnd* pWndParent,
     DWORD dwEditStyle);
@@ -223,59 +223,59 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndParent*<br/>
-podczas Wskaźnik do okna `CMFCRibbonEdit` nadrzędnego obiektu.
+*pWndRodziciela*<br/>
+[w] Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.
 
-*dwEditStyle*<br/>
-podczas Określa styl pola tekstowego. Możesz połączyć style okna wymienione w sekcji uwagi za pomocą [stylów kontrolki edycji](/windows/win32/Controls/edit-control-styles) , które są opisane w Windows SDK.
+*dwEdytStyle*<br/>
+[w] Określa styl pola tekstowego. Style okien wymienione w sekcji Uwagi można połączyć ze [stylami formantu edycji opisanymi](/windows/win32/Controls/edit-control-styles) w panelu Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowego pola tekstowego, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie wartość NULL.
+Wskaźnik do nowego pola tekstowego, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby utworzyć niestandardowe pole tekstowe.
+Zastąpi tę metodę w klasie pochodnej, aby utworzyć niestandardowe pole tekstowe.
 
-Do pola tekstowego można zastosować następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) :
+Do pola tekstowego można zastosować następujące [style okien:](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
-- **WS_CHILD**
+- **Ws_child**
 
-- **WS_VISIBLE**
+- **Ws_visible**
 
 - **WS_DISABLED**
 
 - **WS_GROUP**
 
-- **WS_TABSTOP**
+- **Ws_tabstop**
 
-##  <a name="destroyctrl"></a>CMFCRibbonEdit::D estroyCtrl
+## <a name="cmfcribboneditdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonEdytuj::DestroyCtrl
 
-Niszczy obiekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Niszczy [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) obiektu.
 
-```
+```cpp
 virtual void DestroyCtrl();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="dropdownlist"></a>CMFCRibbonEdit::D ropDownList
+## <a name="cmfcribboneditdropdownlist"></a><a name="dropdownlist"></a>CMFCRibbonEdytuj::DropDownList
 
-Odrzuca pole listy.
+Porzuca pole listy.
 
-```
+```cpp
 virtual void DropDownList();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda nie wykonuje żadnych operacji. Zastąp tę metodę, aby rozwinąć pole listy.
+Domyślnie ta metoda nic nie robi. Zastąpi tę metodę, aby wyświetlić listę rozwijaną.
 
-##  <a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons
+## <a name="cmfcribboneditenablespinbuttons"></a><a name="enablespinbuttons"></a>CMFCRibbonEdytuj::EnableSpinButtons
 
 Włącza i ustawia zakres przycisku pokrętła dla pola tekstowego.
 
-```
+```cpp
 void EnableSpinButtons(
     int nMin,
     int nMax);
@@ -283,40 +283,40 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
-podczas Wartość minimalna przycisku pokrętła.
+*nMin (min.*<br/>
+[w] Minimalna wartość przycisku spin.
 
-*Nmaks.*<br/>
-podczas Wartość maksymalna przycisku pokrętła.
+*Nmax*<br/>
+[w] Maksymalna wartość przycisku spin.
 
 ### <a name="remarks"></a>Uwagi
 
-Przyciski pokrętła wyświetlają strzałkę w górę i w dół oraz umożliwiają użytkownikom przechodzenie przez stały zestaw wartości.
+Przyciski obrotu wyświetlają strzałkę w górę i w dół oraz umożliwiają użytkownikom przechodzenie przez stały zestaw wartości.
 
-##  <a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize
+## <a name="cmfcribboneditgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonEdyt::GetCompactSize
 
-Pobiera rozmiar kompaktowy obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Pobiera kompaktowy rozmiar [obiektu CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` obiektu.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar `CMFCRibbonEdit` kompaktowy obiektu.
+Kompaktowy rozmiar `CMFCRibbonEdit` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getedittext"></a>CMFCRibbonEdit::GetEditText
+## <a name="cmfcribboneditgetedittext"></a><a name="getedittext"></a>CMFCRibbonEdyt::GetEditText
 
 Pobiera tekst w polu tekstowym.
 
-```
+```cpp
 CString GetEditText() const;
 ```
 
@@ -326,119 +326,119 @@ Tekst w polu tekstowym.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize
+## <a name="cmfcribboneditgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonEdyt::GetIntermediateSize
 
-Pobiera pośredni rozmiar obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Pobiera rozmiar pośredni [obiektu CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` obiektu.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar `CMFCRibbonEdit` pośredni obiektu.
+Rozmiar pośredni `CMFCRibbonEdit` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettextalign"></a>CMFCRibbonEdit:: TextAlign
+## <a name="cmfcribboneditgettextalign"></a><a name="gettextalign"></a>CMFCRibbonEdyt::GetTextAlign
 
 Pobiera wyrównanie tekstu w polu tekstowym.
 
-```
+```cpp
 int GetTextAlign() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyliczona wartość tekstowa. Więcej wartości można znaleźć w sekcji uwagi.
+Wyrównanie tekstu wyliczone wartości. Zobacz uwagi sekcji możliwe wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwracana wartość jest jednym z następujących stylów kontrolki edycji:
+Zwracana wartość jest jednym z następujących stylów kontroli edycji:
 
-- **ES_LEFT** dla lewego wyrównania
+- **ES_LEFT** do wyrównania w lewo
 
-- **ES_CENTER** dla wyrównania Center
+- **ES_CENTER** do wyrównania środka
 
-- **ES_RIGHT** na wyrównanie do prawej
+- **ES_RIGHT** do wyrównania prawego
 
-Aby uzyskać więcej informacji o tych stylach, zobacz [Edycja stylów kontrolek](/windows/win32/Controls/edit-control-styles).
+Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytowanie stylów sterowania](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="getwidth"></a>CMFCRibbonEdit:: getwidth
+## <a name="cmfcribboneditgetwidth"></a><a name="getwidth"></a>CMFCRibbonEdytuj::GetWidth
 
-Pobiera szerokość kontrolki [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) w pikselach.
+Pobiera szerokość, w pikselach, [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bInFloatyMode*<br/>
-podczas Ma wartość true `CMFCRibbonEdit` , Jeśli kontrolka jest w trybie swobodnym; w przeciwnym razie, FAŁSZ.
+[w] PRAWDA, `CMFCRibbonEdit` jeśli formant jest w trybie przestawnym; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szerokość `CMFCRibbonEdit` formantu (w pikselach).
+Szerokość `CMFCRibbonEdit` formantu w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode
+## <a name="cmfcribbonedithascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonEdytuj::HasCompactMode
 
-Wskazuje, czy rozmiar wyświetlania formantu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) może być zwarty.
+Wskazuje, czy rozmiar wyświetlania dla [cmfcribbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli może być kompaktowy.
 
-```
+```cpp
 virtual BOOL HasCompactMode() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość TRUE.
+Zawsze zwraca wartość PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda zawsze zwraca wartość TRUE. Zastąp tę metodę, aby określić, czy rozmiar wyświetlania może być kompaktowy.
+Domyślnie ta metoda zawsze zwraca wartość PRAWDA. Zastąd w tej metodzie należy wskazać, czy rozmiar wyświetlania może być kompaktowy.
 
-##  <a name="hasfocus"></a>CMFCRibbonEdit::HasFocus
+## <a name="cmfcribbonedithasfocus"></a><a name="hasfocus"></a>CMFCRibbonEdyt::HasFocus
 
-Wskazuje, czy formant [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) ma fokus.
+Wskazuje, czy [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) formant ma fokus.
 
-```
+```cpp
 virtual BOOL HasFocus() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość true `CMFCRibbonEdit` , Jeśli kontrolka ma fokus; w przeciwnym razie wartość false.
+PRAWDA, `CMFCRibbonEdit` jeśli formant ma fokus; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode
+## <a name="cmfcribbonedithaslargemode"></a><a name="haslargemode"></a>CMFCRibbonEdytuj::HasLargeMode
 
-Wskazuje, czy rozmiar wyświetlania formantu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) może być duży.
+Wskazuje, czy rozmiar wyświetlania dla [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) formant może być duży.
 
-```
+```cpp
 virtual BOOL HasLargeMode() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość FALSE.
+Zawsze zwraca wartość FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda zawsze zwraca wartość FALSE. Zastąp tę metodę, aby określić, czy rozmiar wyświetlania może być duży.
+Domyślnie ta metoda zawsze zwraca wartość FAŁSZ. Zastąd w tej metodzie należy wskazać, czy rozmiar wyświetlania może być duży.
 
-##  <a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons
+## <a name="cmfcribbonedithasspinbuttons"></a><a name="hasspinbuttons"></a>CMFCRibbonEdytuj::HasSpinButtons
 
-Wskazuje, czy pole tekstowe ma przycisk pokrętło.
+Wskazuje, czy pole tekstowe ma przycisk pokrętła.
 
-```
+```cpp
 virtual BOOL HasSpinButtons() const;
 ```
 
@@ -448,70 +448,70 @@ PRAWDA, jeśli pole tekstowe ma przycisk pokrętła; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ishighlighted"></a>CMFCRibbonEdit:: ispodświetlacz
+## <a name="cmfcribboneditishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonEdyt::IsHighlighted
 
-Wskazuje, czy formant [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) jest wyróżniony.
+Wskazuje, czy [cmfcribbonEdit](../../mfc/reference/cmfcribbonedit-class.md) formant jest wyróżniony.
 
-```
+```cpp
 virtual BOOL IsHighlighted() const;
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość true `CMFCRibbonEdit` , Jeśli kontrolka jest wyróżniona; w przeciwnym razie wartość false.
+PRAWDA, `CMFCRibbonEdit` jeśli formant jest wyróżniony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect
+## <a name="cmfcribboneditonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonEdytuj::OnAfterChangeRect
 
-Wywoływane przez platformę, gdy wymiary prostokąta wyświetlania dla kontrolki [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) zmienią się.
+Wywoływane przez strukturę, gdy zmienią się wymiary prostokąta wyświetlania dla formantu [CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` kontrolki.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondraw"></a>CMFCRibbonEdit:: OnDraw
+## <a name="cmfcribboneditondraw"></a><a name="ondraw"></a>CMFCRibbonEdytuj::OnDraw
 
-Wywoływane przez platformę, by narysować kontrolkę [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Wywoływana przez ramy do rysowania [cmfcribbonedit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` kontrolki.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage
+## <a name="cmfcribboneditondrawlabelandimage"></a><a name="ondrawlabelandimage"></a>CMFCRibbonEdytuj::OnDrawLabelAndImage
 
-Wywoływane przez platformę, by narysować etykietę i obraz dla kontrolki [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Wywoływana przez strukturę do rysowania etykiety i obrazu dla [cmfcribbonedit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void OnDrawLabelAndImage(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` kontrolki.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla formantu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList
+## <a name="cmfcribboneditondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonEdytuj::OnDrawOnList
 
-Wywoływane przez platformę, by narysować kontrolkę [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) w polu listy poleceń.
+Wywoływana przez platformę do rysowania [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli w polu listy poleceń.
 
-```
+```cpp
 virtual void OnDrawOnList(
     CDC* pDC,
     CString strText,
@@ -523,154 +523,154 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia dla `CMFCRibbonEdit` kontrolki.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu `CMFCRibbonEdit` urządzenia dla formantu.
 
-*strText*<br/>
-podczas Klasa wyświetlania tekstu [ ] (../../mfc/reference/cmfcribbonedit-class.md "CMFCRibbonEdit").
+*strText (tekst)*<br/>
+[w] Wyświetlany tekst [ ](../../mfc/reference/cmfcribbonedit-class.md "klasa cmfcribbonedit").
 
-*nTextOffset*<br/>
-podczas Odległość w pikselach od lewej strony pola listy do wyświetlanego tekstu.
+*nTextOffset (Zestaw nTextOffset)*<br/>
+[w] Odległość w pikselach od lewej strony pola listy do wyświetlanego tekstu.
 
-*cinania*<br/>
-podczas Prostokąt `CMFCRibbonEdit` wyświetlania formantu.
+*Rect*<br/>
+[w] Prostokąt wyświetlania formantu. `CMFCRibbonEdit`
 
-*bIsSelected*<br/>
-podczas Ten parametr nie jest używany.
+*bWybrany*<br/>
+[w] Ten parametr nie jest używany.
 
-*bHighlighted*<br/>
-podczas Ten parametr nie jest używany.
+*bWyświetlony*<br/>
+[w] Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
 
-Pole listy polecenia wyświetla kontrolki wstążki umożliwiające użytkownikom dostosowywanie paska narzędzi Szybki dostęp.
+W polu listy poleceń są wyświetlane kontrolki wstążki umożliwiające użytkownikom dostosowanie paska narzędzi szybkiego dostępu.
 
-##  <a name="onenable"></a>CMFCRibbonEdit:: onenable
+## <a name="cmfcribboneditonenable"></a><a name="onenable"></a>CMFCRibbonEdytuj::OnEnable
 
-Wywoływane przez platformę, aby włączyć lub wyłączyć formant [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Wywoływane przez platformę, aby włączyć lub wyłączyć [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*<br/>
-podczas Wartość TRUE, aby włączyć kontrolkę; Wartość FALSE, aby wyłączyć formant.
+*bWłaszą*<br/>
+[w] TRUE, aby włączyć formant; FALSE, aby wyłączyć formant.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onhighlight"></a>CMFCRibbonEdit:: onpodświetl
+## <a name="cmfcribboneditonhighlight"></a><a name="onhighlight"></a>CMFCRibbonEdytuj::OnHighlight
 
-Wywoływane przez platformę, gdy wskaźnik przechodzi lub opuszcza granice formantu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Wywoływane przez strukturę, gdy wskaźnik wchodzi lub opuszcza granice [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void OnHighlight(BOOL bHighlight);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bHighlight*<br/>
-podczas Ma wartość true, jeśli wskaźnik znajduje się w granicach `CMFCRibbonEdit` formantu; w przeciwnym razie, FAŁSZ.
+*bWyświetlenie*<br/>
+[w] PRAWDA, jeśli wskaźnik znajduje się `CMFCRibbonEdit` w granicach formantu; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onkey"></a>CMFCRibbonEdit::OnKey
+## <a name="cmfcribboneditonkey"></a><a name="onkey"></a>CMFCRibbonEdyt::OnKey
 
-Wywoływane przez platformę, gdy użytkownik naciśnie element poradę dotyczącą klawiszy, a kontrolka [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) ma fokus.
+Wywoływane przez platformę, gdy użytkownik naciska klawiatury i [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli ma fokus.
 
-```
+```cpp
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bIsMenuKey*<br/>
-podczas Wartość TRUE, jeśli poradę dotyczącą klawiszy wyświetla menu podręczne; w przeciwnym razie FALSE.
+[w] PRAWDA, jeśli w etykietce klawisza jest wyświetlane wyskakujące menu; w przeciwnym razie FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli zdarzenie zostało obsłużone; w przeciwnym razie FALSE.
+PRAWDA, jeśli zdarzenie zostało obsłużony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown
+## <a name="cmfcribboneditonlbuttondown"></a><a name="onlbuttondown"></a>CMFCRibbonEdyt::OnLButtonDown
 
-Wywoływane przez platformę, by zaktualizować kontrolkę [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) , gdy użytkownik naciśnie lewym przyciskiem myszy na kontrolce.
+Wywoływana przez platformę, aby zaktualizować [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli, gdy użytkownik naciska lewy przycisk myszy na formancie.
 
-```
+```cpp
 virtual void OnLButtonDown(CPoint point);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-podczas Ten parametr nie jest używany.
+*Punkt*<br/>
+[w] Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp
+## <a name="cmfcribboneditonlbuttonup"></a><a name="onlbuttonup"></a>CMFCRibbonEdyt::OnLButtonUp
 
-Wywoływane przez platformę, gdy użytkownik zwolni lewy przycisk myszy.
+Wywoływane przez strukturę, gdy użytkownik zwalnia lewy przycisk myszy.
 
-```
+```cpp
 virtual void OnLButtonUp(CPoint point);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-podczas Ten parametr nie jest używany.
+*Punkt*<br/>
+[w] Ten parametr nie jest używany.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged
+## <a name="cmfcribboneditonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonEdyt::OnRTLZmieniony
 
-Wywoływane przez platformę, by zaktualizować kontrolkę [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) , gdy zmieni się kierunek układu.
+Wywoływana przez strukturę, aby zaktualizować [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli, gdy układ zmienia kierunek.
 
-```
+```cpp
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bIsRTL*<br/>
-podczas PRAWDA, jeśli układ jest od prawej do lewej; FAŁSZ, jeśli układ jest od lewej do prawej.
+[w] PRAWDA, jeśli układ jest od prawej do lewej; FAŁSZ, jeśli układ jest od lewej do prawej.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onshow"></a>CMFCRibbonEdit:: OnShow
+## <a name="cmfcribboneditonshow"></a><a name="onshow"></a>CMFCRibbonEdytuj::OnShow
 
-Wywoływane przez platformę, by pokazać lub ukryć formant [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Wywoływana przez platformę, aby pokazać lub ukryć [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void OnShow(BOOL bShow);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*<br/>
-podczas Wartość TRUE, aby pokazać formant; Wartość FALSE, aby ukryć formant.
+*bPokaż*<br/>
+[w] TRUE, aby wyświetlić formant; FALSE, aby ukryć formant.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="redraw"></a>CMFCRibbonEdit:: redraw
+## <a name="cmfcribboneditredraw"></a><a name="redraw"></a>CMFCRibbonEdytuj::Przerysuj
 
-Aktualizuje sposób wyświetlania formantu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Aktualizuje wyświetlanie [cmfcribbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.
 
-```
+```cpp
 virtual void Redraw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda odrysuje prostokąt `CMFCRibbonEdit` wyświetlania obiektu przez pośrednie wywołanie [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) z ustawionymi flagami RDW_INVALIDATE, RDW_ERASE i RDW_UPDATENOW.
+Ta metoda ponownie rysuje prostokąt wyświetlania `CMFCRibbonEdit` obiektu, pośrednio wywołując [CWnd::RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) z ustawioną RDW_INVALIDATE, RDW_ERASE i RDW_UPDATENOW flagami.
 
-##  <a name="setaccdata"></a>CMFCRibbonEdit::SetACCData
+## <a name="cmfcribboneditsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonEdytuj::SetACCData
 
-Ustawia dane ułatwień dostępu dla obiektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Ustawia dane ułatwień dostępu dla [obiektu CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 virtual BOOL SetACCData(
     CWnd* pParent,
     CAccessibilityData& data);
@@ -678,61 +678,61 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*<br/>
-Wskaźnik do okna nadrzędnego dla `CMFCRibbonEdit` obiektu.
+*pRoczysz*<br/>
+Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.
 
-*Data*<br/>
-Dane ułatwień dostępu dla `CMFCRibbonEdit` obiektu.
+*Danych*<br/>
+Dane ułatwień `CMFCRibbonEdit` dostępu dla obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość TRUE.
+Zawsze zwraca wartość PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setedittext"></a>CMFCRibbonEdit::SetEditText
+## <a name="cmfcribboneditsetedittext"></a><a name="setedittext"></a>CMFCRibbonEdytuj::SetEditText
 
 Ustawia tekst w polu tekstowym.
 
-```
+```cpp
 void SetEditText(CString strText);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*strText*<br/>
-podczas Tekst pola tekstowego.
+*strText (tekst)*<br/>
+[w] Tekst pola tekstowego.
 
-##  <a name="settextalign"></a>CMFCRibbonEdit:: TextAlign
+## <a name="cmfcribboneditsettextalign"></a><a name="settextalign"></a>CMFCRibbonEdytuj::SetTextAlign
 
 Ustawia wyrównanie tekstu pola tekstowego.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nAlign*<br/>
-podczas Wyliczona wartość tekstowa. Więcej wartości można znaleźć w sekcji uwagi.
+*nZłańczyć*<br/>
+[w] Wyrównanie tekstu wyliczone wartości. Zobacz uwagi sekcji możliwe wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *nAlign* jest jednym z następujących stylów kontrolki edycji:
+Parametr *nAlign* jest jednym z następujących stylów sterowania edycją:
 
-- ES_LEFT dla lewego wyrównania
+- ES_LEFT do wyrównania w lewo
 
-- ES_CENTER dla wyrównania Center
+- ES_CENTER do wyrównania środka
 
-- ES_RIGHT na wyrównanie do prawej
+- ES_RIGHT do wyrównania prawego
 
-Aby uzyskać więcej informacji o tych stylach, zobacz [Edycja stylów kontrolek](/windows/win32/Controls/edit-control-styles).
+Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytowanie stylów sterowania](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="setwidth"></a>CMFCRibbonEdit:: setwidth
+## <a name="cmfcribboneditsetwidth"></a><a name="setwidth"></a>CMFCRibbonEdytuj::SetWidth
 
-Ustawia szerokość pola tekstowego dla kontrolki [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
+Ustawia szerokość pola tekstowego dla [kontrolki CMFCRibbonEdit.](../../mfc/reference/cmfcribbonedit-class.md)
 
-```
+```cpp
 void SetWidth(
     int nWidth,
     BOOL bInFloatyMode = FALSE);
@@ -740,17 +740,17 @@ void SetWidth(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*<br/>
-podczas Szerokość pola tekstowego w pikselach.
+*nWidth (ww.*<br/>
+[w] Szerokość pola tekstowego w pikselach.
 
 *bInFloatyMode*<br/>
-Wartość TRUE powoduje ustawienie szerokości trybu zmiennoprzecinkowego; Wartość FALSE powoduje ustawienie szerokości trybu regularnego.
+PRAWDA, aby ustawić szerokość dla trybu przestawnego; FALSE, aby ustawić szerokość dla trybu regularnego.
 
 ### <a name="remarks"></a>Uwagi
 
-`CMFCRibbonEdit` Kontrolka ma dwie szerokości w zależności od trybu wyświetlania: tryb zmiennoprzecinkowy i tryb regularny.
+Formant `CMFCRibbonEdit` ma dwie szerokości w zależności od trybu wyświetlania: tryb przestawny i tryb normalny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
