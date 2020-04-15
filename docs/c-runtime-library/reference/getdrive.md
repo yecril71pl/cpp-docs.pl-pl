@@ -1,8 +1,9 @@
 ---
 title: _getdrive
-ms.date: 09/19/2019
+ms.date: 4/2/2020
 api_name:
 - _getdrive
+- _o__getdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158764"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344331"
 ---
 # <a name="_getdrive"></a>_getdrive
 
-Pobiera bieżący dysk.
+Pobiera bieżący dysk twardy.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,7 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżący (domyślny) dysk (1 = A, 2 = B i tak dalej). Wartość zwracana przez zero oznacza, że bieżąca ścieżka nie zaczyna się od nazwy dysku literowego, na przykład ścieżki UNC. Lub oznacza to, że wewnętrzny przydział buforu nie powiódł się. Jeśli wewnętrzna alokacja nie powiedzie się, `errno` jest ustawiona na ENOMEM.
+Zwraca bieżący (domyślny) dysk (1=A, 2=B itd.). Zwracana wartość zero oznacza, że bieżąca ścieżka nie zaczyna się od nazwy dysku literowego, takiej jak ścieżka UNC. Lub oznacza to, że alokacja buforu wewnętrznego nie powiodła się. Jeśli alokacja wewnętrzna nie powiedzie się, `errno` jest ustawiona na ENOMEM.
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -58,7 +64,7 @@ Zwraca bieżący (domyślny) dysk (1 = A, 2 = B i tak dalej). Wartość zwracana
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -110,7 +116,7 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>

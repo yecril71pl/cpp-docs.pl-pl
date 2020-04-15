@@ -1,38 +1,38 @@
 ---
-title: Odwołanie pliku cppproperties. JSON
+title: Odwołanie do pliku CppProperties.json
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328716"
 ---
-# <a name="cpppropertiesjson-reference"></a>Odwołanie pliku cppproperties. JSON
+# <a name="cpppropertiesjson-reference"></a>Odwołanie do pliku CppProperties.json
 
-Otwarte projekty folderów, które nie używają CMake, mogą przechowywać ustawienia konfiguracji projektu dla IntelliSense w pliku *pliku cppproperties. JSON* . (Projekty CMake używają pliku [pliku cmakesettings. JSON](customize-cmake-settings.md) ). Konfiguracja składa się z par nazwa/wartość i definiuje ścieżki #include, przełączniki kompilatora i inne parametry. Aby uzyskać więcej informacji na temat dodawania konfiguracji w projekcie otwartego folderu, zobacz temat [Otwieranie projektów C++ folderu](open-folder-projects-cpp.md) . Poniższe sekcje zawierają podsumowanie różnych ustawień. Aby uzyskać pełny opis schematu, przejdź do pliku *CppProperties_schema. JSON*, którego Pełna ścieżka jest podawana u góry edytora kodu, gdy *pliku cppproperties. JSON* jest otwarty.
+Otwórz projekty folderów, które nie używają CMake można przechowywać ustawienia konfiguracji projektu dla IntelliSense w pliku *CppProperties.json.* (CMake projektów użyć [pliku CMakeSettings.json.)](customize-cmake-settings.md) Konfiguracja składa się z par nazwy/wartości i definiuje #include ścieżki, przełączniki kompilatora i inne parametry. Aby uzyskać więcej informacji na temat dodawania konfiguracji w projekcie Folderu otwartego, zobacz [Otwieranie projektów folderów dla języka C++.](open-folder-projects-cpp.md) W poniższych sekcjach podsumowano różne ustawienia. Aby uzyskać pełny opis schematu, przejdź do *CppProperties_schema.json*, którego pełna ścieżka jest podana w górnej części edytora kodu, gdy *CppProperties.json* jest otwarty.
 
 ## <a name="configuration-properties"></a>Właściwości konfiguracji
 
-Konfiguracja może mieć jedną z następujących właściwości:
+Konfiguracja może mieć dowolną z następujących właściwości:
 
 |||
 |-|-|
 |`inheritEnvironments`| Określa, które środowiska mają zastosowanie do tej konfiguracji.|
-|`name`|Nazwa konfiguracji, która zostanie wyświetlona C++ na liście rozwijanej konfiguracji|
-|`includePath`|Rozdzielana przecinkami lista folderów, które powinny być określone w ścieżce dołączania (Maps do/I dla większości kompilatorów)|
-|`defines`|Lista makr, które powinny być zdefiniowane (mapy do/D dla większości kompilatorów)|
-|`compilerSwitches`|Jeden lub więcej dodatkowych przełączników, które mogą wpływać na zachowanie funkcji IntelliSense|
-|`forcedInclude`|Nagłówek, który ma być automatycznie dołączany do każdej jednostki kompilacji (Maps do/FI dla MSVC lub-include dla Clang)|
-|`undefines`|Lista makr, które mają być niezdefiniowane (mapy do/U dla MSVC)|
-|`intelliSenseMode`|Aparat IntelliSense, który ma być używany. Można określić jedną ze wstępnie zdefiniowanych wariantów specyficznych dla architektury dla MSVC, w zatoce lub Clang.|
-|`environments`|Zdefiniowane przez użytkownika zestawy zmiennych, które zachowują się jak zmienne środowiskowe w wierszu polecenia i są dostępne za pomocą makra $ {ENV.\<VARIABLE >}.|
+|`name`|Nazwa konfiguracji, która pojawi się na menu rozwijanym konfiguracji języka C++|
+|`includePath`|Oddzielona przecinkami lista folderów, które powinny być określone w ścieżce dołączania (mapy do /I dla większości kompilatorów)|
+|`defines`|Lista makr, które powinny być zdefiniowane (mapy do /D dla większości kompilatorów)|
+|`compilerSwitches`|Co najmniej jeden dodatkowy przełącznik, który może wpływać na zachowanie intellisense|
+|`forcedInclude`|Nagłówek, który ma być automatycznie uwzględniany w każdej jednostce kompilacji (mapuje na /FI dla MSVC lub -include for clang)|
+|`undefines`|Lista makr, które mają być niezdefiniowane (mapuje do /U dla MSVC)|
+|`intelliSenseMode`|Silnik IntelliSense do użycia. Można określić jeden ze wstępnie zdefiniowanych wariantów specyficznych dla architektury dla MSVC, gcc lub Clang.|
+|`environments`|Zdefiniowane przez użytkownika zestawy zmiennych, które zachowują się jak zmienne środowiskowe w\< wierszu polecenia i są dostępne za pomocą ${env. ZMIENNE>} makr.|
 
-### <a name="intellisensemode-values"></a>wartości intelliSensemode
+### <a name="intellisensemode-values"></a>intelliSenseMode wartości
 
-W edytorze kodu są wyświetlane dostępne opcje po rozpoczęciu wpisywania:
+Edytor kodu pokazuje dostępne opcje po rozpoczęciu pisania:
 
 ![Otwórz folder IntelliSense](media/open-folder-intellisense-mode.png "Otwórz folder IntelliSense")
 
@@ -40,56 +40,56 @@ Są to obsługiwane wartości:
 
 - windows-msvc-x86
 - windows-msvc-x64
-- windows-msvc-arm
+- windows-msvc-ramię
 - windows-msvc-arm64
 - android-clang-x86
 - android-clang-x64
 - android-clang-arm
 - android-clang-arm64
-- iOS — Clang — x86
+- ios-clang-x86
 - ios-clang-x64
-- iOS — Clang — ARM
-- iOS-Clang-arm64
+- ios-clang-ramię
+- ios-clang-arm64
 - windows-clang-x86
 - windows-clang-x64
 - windows-clang-arm
 - windows-clang-arm64
 - linux-gcc-x86
 - linux-gcc-x64
-- Linux — Zarząd — ARM
+- linux-gcc-ramię
 
-Uwaga: wartości `msvc-x86` i `msvc-x64` są obsługiwane tylko w przypadku starszych przyczyn. Zamiast tego użyj wariantów `windows-msvc-*`.
+Uwaga: Wartości `msvc-x86` `msvc-x64` i są obsługiwane tylko ze względu na starsze wersje. Zamiast `windows-msvc-*` tego użyj wariantów.
 
-## <a name="pre-defined-environments"></a>Środowiska wstępnie zdefiniowane
+## <a name="pre-defined-environments"></a>Wstępnie zdefiniowane środowiska
 
-Program Visual Studio udostępnia następujące wstępnie zdefiniowane środowiska dla C++ firmy Microsoft, które mapują do odpowiednich wiersz polecenia dla deweloperów. W przypadku dziedziczenia jednego z tych środowisk można odwołać się do dowolnych zmiennych środowiskowych, używając właściwości globalnej `env` z następującą składnią makra: $ {ENV.\<VARIABLE >}.
-
-|Nazwa zmiennej|Opis|
-|-----------|-----------------|
-|vsdev|Domyślne środowisko programu Visual Studio|
-|msvc_x86|Kompiluj dla architektury x86 przy użyciu narzędzi x86|
-|msvc_x64|Kompiluj dla AMD64 przy użyciu 64-bitowych narzędzi|
-|msvc_arm|Kompiluj dla ARM przy użyciu narzędzi x86|
-|msvc_arm64|Kompiluj do ARM64 przy użyciu narzędzi x86|
-|msvc_x86_x64|Kompiluj dla AMD64 przy użyciu narzędzi x86|
-|msvc_arm_x64|Kompiluj dla ARM przy użyciu narzędzi 64-bitowych|
-|msvc_arm64_x64|Kompiluj do ARM64 przy użyciu narzędzi 64-bitowych|
-
-Po zainstalowaniu obciążenia systemu Linux następujące środowiska są dostępne dla zdalnego określania systemu Linux i WSL:
+Program Visual Studio udostępnia następujące wstępnie zdefiniowane środowiska dla programu Microsoft C++, które są mapowane do odpowiedniego wiersza polecenia dewelopera. Po odziedziczeniu jednego z tych środowisk można odwołać się do dowolnej `env` zmiennej środowiskowej przy użyciu właściwości\< globalnej z tą składnią makra: ${env. ZMIENNA>}.
 
 |Nazwa zmiennej|Opis|
 |-----------|-----------------|
-|linux_x86|Zdalny system x86 Linux|
-|linux_x64|Element docelowy x64 systemu Linux zdalnie|
-|linux_arm|Zdalne docelowa ARM Linux|
+|vsdev ( vsdev )|Domyślne środowisko programu Visual Studio|
+|msvc_x86|Kompilowanie dla x86 przy użyciu narzędzi x86|
+|msvc_x64|Kompilowanie dla AMD64 przy użyciu narzędzi 64-bitowych|
+|msvc_arm|Kompilowanie dla ARM przy użyciu narzędzi x86|
+|msvc_arm64|Kompilowanie dla ARM64 przy użyciu narzędzi x86|
+|msvc_x86_x64|Kompilowanie dla AMD64 przy użyciu narzędzi x86|
+|msvc_arm_x64|Kompilowanie dla ARM przy użyciu narzędzi 64-bitowych|
+|msvc_arm64_x64|Kompilowanie dla ARM64 przy użyciu narzędzi 64-bitowych|
 
-## <a name="user_defined_environments"></a>Środowiska zdefiniowane przez użytkownika
+Po zainstalowaniu obciążenia systemu Linux dostępne są następujące środowiska do zdalnego kierowania na linki i wsl:
 
-Opcjonalnie można użyć właściwości `environments` do zdefiniowania zestawów zmiennych w *pliku cppproperties. JSON* w trybie globalnym lub na konfigurację. Zmienne te zachowują się jak zmienne środowiskowe w kontekście projektu otwartego folderu i można uzyskać do nich dostęp przy użyciu składni $ {ENV.\<VARIABLE >} z pliku *Tasks. vs. JSON* i *uruchamiania. vs. JSON* po ich zdefiniowaniu. Jednak nie są one niekoniecznie ustawiane jako rzeczywiste zmienne środowiskowe w dowolnym wierszu polecenia, który program Visual Studio używa wewnętrznie.
+|Nazwa zmiennej|Opis|
+|-----------|-----------------|
+|linux_x86|Zdalnie kierować x86 Linux|
+|linux_x64|Zdalnie kierować x64 Linux|
+|linux_arm|Target ARM Linux zdalnie|
 
-**Program Visual Studio 2019 w wersji 16,4 lub nowszej:** Zmienne specyficzne dla konfiguracji zdefiniowane w pliku *pliku cppproperties. JSON* są automatycznie wybierane przez elementy docelowe i zadania debugowania, bez konieczności ustawiania `inheritEnvironments`. Elementy docelowe debugowania są uruchamiane automatycznie przy użyciu środowiska określonego w pliku *pliku cppproperties. JSON*.
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>Środowiska zdefiniowane przez użytkownika
 
-**Program Visual Studio 2019 w wersji 16,3 i starszej:** W przypadku korzystania ze środowiska należy określić go we właściwości `inheritsEnvironments`, nawet jeśli środowisko jest zdefiniowane w ramach tej samej konfiguracji; Właściwość `environment` określa nazwę środowiska. W poniższym przykładzie przedstawiono przykładową konfigurację służącą do włączania funkcji IntelliSense dla programu w ramach instalacji MSYS2. Należy zauważyć, jak konfiguracja definiuje i dziedziczy środowisko `mingw_64` oraz sposób, w jaki Właściwość `includePath` może uzyskać dostęp do zmiennej `INCLUDE`.
+Opcjonalnie można użyć `environments` właściwości do definiowania zestawów zmiennych w *CppProperties.json* globalnie lub na konfigurację. Zmienne te zachowują się jak zmienne środowiskowe w kontekście projektu Otwórz folder\< i są dostępne za pomocą ${env. ZMIENNA>} składni z *pliku tasks.vs.json* i *launch.vs.json* po ich zdefiniowaniu w tym miejscu. Jednak nie są one koniecznie ustawione jako rzeczywiste zmienne środowiskowe w wierszu polecenia, który visual studio używa wewnętrznie.
+
+**Visual Studio 2019 w wersji 16.4 i nowszej:** Zmienne specyficzne dla konfiguracji zdefiniowane w *pliku CppProperties.json* są automatycznie pobierane `inheritEnvironments`przez obiekty docelowe i zadania debugowania bez konieczności ustawiania . Obiekty docelowe debugowania są uruchamiane automatycznie w środowisku określonym w *pliku CppProperties.json*.
+
+**Visual Studio 2019 w wersji 16.3 i wcześniejszych:** Gdy zużywają środowisko, następnie należy określić go we `inheritsEnvironments` właściwości, nawet jeśli środowisko jest zdefiniowane jako część tej samej konfiguracji; `environment` właściwość określa nazwę środowiska. W poniższym przykładzie przedstawiono przykładową konfigurację włączania technologii IntelliSense dla GCC w instalacji msys2. Należy zauważyć, jak konfiguracja definiuje `mingw_64` i dziedziczy `includePath` środowisko i `INCLUDE` jak właściwość może uzyskać dostęp do zmiennej.
 
 ```json
 "configurations": [
@@ -119,21 +119,21 @@ Opcjonalnie można użyć właściwości `environments` do zdefiniowania zestaw�
   ]
 ```
 
-Gdy definiujesz Właściwość Environments wewnątrz konfiguracji, zastępuje ona wszystkie zmienne globalne o tej samej nazwie.
+Podczas definiowania **środowiska** właściwości wewnątrz konfiguracji, zastępuje wszystkie zmienne globalne o tej samej nazwie.
 
-## <a name="built-in-macros"></a>Makra wbudowane
+## <a name="built-in-macros"></a>Wbudowane makra
 
-Masz dostęp do następujących wbudowanych makr wewnątrz pliku *pliku cppproperties. JSON*:
+Masz dostęp do następujących wbudowanych makr wewnątrz *CppProperties.json:*
 
 |||
 |-|-|
 |`${workspaceRoot}`| Pełna ścieżka do folderu obszaru roboczego|
-|`${projectRoot}`| Pełna ścieżka do folderu, w którym znajduje się plik *pliku cppproperties. JSON*|
-|`${env.vsInstallDir}`| Pełna ścieżka do folderu, w którym zainstalowano uruchomione wystąpienie programu Visual Studio|
+|`${projectRoot}`| Pełna ścieżka do folderu, w którym jest umieszczana plik *CppProperties.json*|
+|`${env.vsInstallDir}`| Pełna ścieżka do folderu, w którym jest zainstalowane uruchomione wystąpienie programu Visual Studio|
 
 ### <a name="example"></a>Przykład
 
-Jeśli projekt zawiera folder dołączania, a także zawiera *Windows. h* i inne typowe nagłówki z Windows SDK, warto zaktualizować plik konfiguracyjny *pliku cppproperties. JSON* z uwzględnieniem następujących danych:
+Jeśli projekt ma folder dołączany i zawiera również *plik windows.h* i inne typowe nagłówki z pakietu Windows SDK, można zaktualizować plik konfiguracyjny *CppProperties.json* o następujące elementy:
 
 ```json
 {
@@ -156,14 +156,14 @@ Jeśli projekt zawiera folder dołączania, a także zawiera *Windows. h* i inne
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` i `%VCToolsInstallDir%` nie są ustawione jako globalne zmienne środowiskowe, dlatego należy uruchomić devenv. exe z wiersz polecenia dla deweloperów, który definiuje te zmienne. (Wpisz "Developer" w menu Start systemu Windows).
+> `%WindowsSdkDir%`i `%VCToolsInstallDir%` nie są ustawione jako globalne zmienne środowiskowe, więc upewnij się, że uruchomisz devenv.exe z wiersza polecenia dewelopera, który definiuje te zmienne. (Wpisz "deweloper" w menu Start systemu Windows).
 
-## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów z błędami IntelliSense
+## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów z błędami intellisense
 
-Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia** > **Opcje** > **edytorze tekstów** > **C/C++**  > **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **wartość true**. Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
+Jeśli nie widzisz intellisense, że można rozwiązać problem, przechodząc do **Narzędzia** > **Opcje** > **Edytor** > tekstu**C / C ++** > **Zaawansowane** i ustawienie **Włącz rejestrowanie** do **true**. Na początek spróbuj **zniwelować poziom rejestrowania** na 5, a **filtry rejestrowania** na 8.
 
 ![Rejestrowanie diagnostyczne](media/diagnostic-logging.png)
 
-Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu opcji **Pokaż dane wyjściowe z: C++ dziennik wizualny**. Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych w pliku *pliku cppproperties. JSON*, spróbuj zamknąć folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
+Dane wyjściowe są przesyłane potokiem do **okna wyjściowego** i są widoczne po wybraniu opcji **Pokaż wyjście z: Visual C++ Log**. Dane wyjściowe zawiera między innymi listę rzeczywistych ścieżek dołączanych przez intellisense. Jeśli ścieżki nie są zgodne z ścieżkami w *pliku CppProperties.json,* spróbuj zamknąć folder i usunąć podfolder *.vs* zawierający buforowane dane przeglądania.
 
-Aby rozwiązać problemy z błędami funkcji IntelliSense spowodowanymi brakującymi ścieżkami dołączanych, Otwórz **Lista błędów** i przefiltruj dane wyjściowe do "IntelliSense Only" i kod błędu E1696 "nie można otworzyć pliku źródłowego...".
+Aby rozwiązać problemy z błędami IntelliSense spowodowanymi brakiem ścieżek, otwórz **listę błędów** i przefiltruj jej dane wyjściowe do "IntelliSense only" i kod błędu E1696 "nie może otworzyć pliku źródłowego ...".

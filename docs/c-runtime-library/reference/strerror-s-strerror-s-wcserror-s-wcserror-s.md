@@ -1,11 +1,14 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __wcserror_s
 - _strerror_s
 - _wcserror_s
 - strerror_s
+- _o__strerror_s
+- _o__wcserror_s
+- _o_strerror_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +21,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -42,16 +46,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef712ecb6236513d169b4a8836b1365b0aca0633
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337367"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-Pobierz systemowy komunikat o błędzie (**strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika ( **_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobierz komunikat o błędzie systemu **(strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika (**_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszeniami zabezpieczeń, jak opisano w funkcji zabezpieczeń w [CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -100,32 +104,32 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buforu*<br/>
+*Buforu*<br/>
 Bufor do przechowywania ciągu błędu.
 
-*numberOfElements*<br/>
-Rozmiar buforu.
+*liczbaOfElements*<br/>
+Rozmiar bufora.
 
-*errnum*<br/>
+*errnum ( errnum )*<br/>
 Numer błędu.
 
 *strErrMsg*<br/>
-Wiadomość dostarczona przez użytkownika.
+Komunikat dostarczony przez użytkownika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
+Zero, jeśli się powiedzie, kod błędu w przypadku awarii.
 
-### <a name="error-condtions"></a>Warunki błędów
+### <a name="error-condtions"></a>Kondcje błędów
 
-|*buforu*|*numberOfElements*|*strErrMsg*|Zawartość *buforu*|
+|*Buforu*|*liczbaOfElements*|*strErrMsg*|Zawartość *buforu*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|Ile|Ile|n/d|
-|Ile|0|Ile|nie zmodyfikowano|
+|**Null**|Wszelki|Wszelki|Nie dotyczy|
+|Wszelki|0|Wszelki|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strerror_s** mapuje *errnum* na ciąg komunikatu o błędzie, zwracając ciąg w *buforze*. **_strerror_s** nie przyjmuje numeru błędu; używa ona bieżącej wartości **errno** , aby określić odpowiedni komunikat. Nie **strerror_s** ani **_strerror_s** faktycznie drukuje komunikat: dla tego elementu należy wywołać funkcję wyjściową, taką jak [fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Funkcja **strerror_s** *mapuje errnum* do ciągu komunikatu o błędzie, zwracając ciąg w *buforze*. **_strerror_s** nie przyjmuje numeru błędu; używa bieżącej wartości **errno** do określenia odpowiedniego komunikatu. Ani **strerror_s,** ani **_strerror_s** faktycznie drukuje wiadomość: W tym celu należy wywołać funkcję wyjściową, taką jak [fprintf:](fprintf-fprintf-l-fwprintf-fwprintf-l.md)
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -135,25 +139,27 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Jeśli *strErrMsg* ma **wartość null**, funkcja **_strerror_s** zwraca ciąg w *buforze* zawierającym komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu. Ciąg komunikatu o błędzie jest zakończony znakiem nowego wiersza ("\n"). Jeśli *strErrMsg* nie jest równa **null**, wówczas **_strerror_s** zwraca ciąg w *buforze* zawierającym (w kolejności) komunikat ciągu, dwukropek, spację, komunikat o błędzie systemu dla ostatniego wywołania biblioteki, generując błąd i wiersz polecenia Opis. Ciąg może zawierać maksymalnie 94 znaków.
+Jeśli *strErrMsg* ma **wartość NULL**, **_strerror_s** zwraca ciąg w *buforze* zawierający komunikat o błędzie systemowego dla ostatniego wywołania biblioteki, który spowodował błąd. Ciąg komunikatu o błędzie jest kończony przez znak nowego typu ('\n'). Jeśli *strErrMsg* nie jest równa **NULL**, a następnie **_strerror_s** zwraca ciąg w *buforze* zawierający (w kolejności) komunikat ciąg, dwukropek, spacja, komunikat o błędzie systemu dla ostatniego wywołania biblioteki powodujący błąd i znak nowego. Wiadomość ciągu może mieć co najwyżej 94 znaki.
 
-Te funkcje obcinają komunikat o błędzie, jeśli jego długość przekracza *NumberOfElements* -1. Ciąg otrzymany w *buforze* jest zawsze zakończony wartością null.
+Te funkcje obcinają komunikat o błędzie, jeśli jego długość przekracza *numberOfElements* -1. Wynikowy ciąg w *buforze* jest zawsze zakończony z wartością null.
 
-Rzeczywisty numer błędu dla **_strerror_s** jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Do komunikatów o błędach systemu uzyskuje się dostęp za pomocą zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **_strerror_s** uzyskuje dostęp do odpowiedniego komunikatu o błędzie przy użyciu wartości **errno** jako indeksu do zmiennej **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist** . Aby wygenerować dokładne wyniki, należy wywołać **_strerror_s** natychmiast po powrocie procedury biblioteki z błędem. W przeciwnym razie kolejne wywołania **strerror_s** lub **_strerror_s** mogą zastąpić wartość **errno** .
+Rzeczywisty numer błędu dla **_strerror_s** jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **_strerror_s** uzyskuje dostęp do odpowiedniego komunikatu o błędzie przy użyciu wartości **errno** jako indeksu do zmiennej **_sys_errlist**. Wartość [zmiennej _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist.** Aby uzyskać dokładne wyniki, wywołaj **_strerror_s** natychmiast po powrocie rutynowych biblioteki z błędem. W przeciwnym razie kolejne wywołania **strerror_s** lub **_strerror_s** mogą zastąpić wartość **errno.**
 
-**_wcserror_s** i **__wcserror_s** są odpowiednio wersjami **strerror_s** i **_strerror_s**.
+**_wcserror_s** i **__wcserror_s** są odpowiednio szerokoznakowymi wersjami **strerror_s** i **_strerror_s.**
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli bufor ma **wartość null** lub jeśli parametr size ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
+Te funkcje sprawdzają ich parametry. Jeśli bufor ma **wartość NULL** lub parametr size wynosi 0, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcje zwracają **EINVAL** i ustawić **errno** na **EINVAL**.
 
-**_strerror_s**, **_wcserror_s**i **__wcserror_s** nie są częścią definicji ANSI, ale zamiast niej są rozszerzeniami Microsoft. Nie należy używać ich w przypadku, gdy przenośność jest pożądana; w przypadku zgodności ze standardem ANSI zamiast tego należy użyć **strerror_s** .
+**_strerror_s**, **_wcserror_s**i **__wcserror_s** nie są częścią definicji ANSI, ale zamiast tego są rozszerzeniami firmy Microsoft. Nie używaj ich tam, gdzie wymagana jest przenośność; aby uzyskać zgodność z ANSI, użyj **strerror_s.**
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
@@ -161,16 +167,16 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strerror_s**, **_strerror_s**|\<string. h >|
-|**_wcserror_s**, **__wcserror_s**|\<String. h > lub \<WCHAR. h >|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s** **, __wcserror_s**|\<string.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [pError](perror-wperror.md).
+Zobacz przykład [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>

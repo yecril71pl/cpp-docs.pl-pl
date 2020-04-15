@@ -1,8 +1,9 @@
 ---
 title: _lsearch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lsearch
+- _o__lsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6ef3d86ffe8f03da34d4a374bddda1452815672
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438143"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341635"
 ---
 # <a name="_lsearch"></a>_lsearch
 
-Wykonuje wyszukiwanie liniowe dla wartości; dodaje do końca listy, jeśli nie zostanie znaleziona. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_lsearch_s](lsearch-s.md).
+Wykonuje wyszukiwanie liniowe wartości; dodaje na koniec listy, jeśli nie znaleziono. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [_lsearch_s](lsearch-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,40 +57,42 @@ void *_lsearch(
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*key*<br/>
 Obiekt do wyszukania.
 
 *base*<br/>
-Wskaźnik na podstawę tablicy do przeszukania.
+Wskaźnik do podstawy tablicy do przeszukania.
 
-*Liczba*<br/>
+*numer*<br/>
 Liczba elementów.
 
 *Szerokość*<br/>
 Szerokość każdego elementu tablicy.
 
-*porównaniu*<br/>
-Wskaźnik do procedury porównania. Pierwszy parametr jest wskaźnikiem do klucza do wyszukania. Drugi parametr jest wskaźnikiem do elementu tablicy, który będzie porównywany z kluczem.
+*Porównać*<br/>
+Wskaźnik do procedury porównania. Pierwszy parametr jest wskaźnikiem do klucza wyszukiwania. Drugi parametr jest wskaźnikiem do elementu tablicy, który ma być porównywany z kluczem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli klucz zostanie znaleziony, **_lsearch** zwraca wskaźnik do elementu tablicy w *bazie* , który odpowiada *kluczowi*. Jeśli klucz nie zostanie znaleziony, **_lsearch** zwraca wskaźnik do nowo dodanego elementu na końcu tablicy.
+Jeśli klucz zostanie znaleziony, **_lsearch** zwraca wskaźnik do elementu tablicy u *podstawy,* który pasuje do *klucza*. Jeśli klucz nie zostanie znaleziony, **_lsearch** zwraca wskaźnik do nowo dodanego elementu na końcu tablicy.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_lsearch** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch**, **_lsearch** nie wymaga sortowania tablicy. Jeśli nie odnaleziono *klucza* , **_lsearch** dodaje go na końcu tablicy i zwiększa *liczbę*.
+Funkcja **_lsearch** wykonuje liniowe wyszukiwanie *klucza* wartości w tablicy elementów *liczbowych,* z których każdy bajtów *szerokości.* W przeciwieństwie do **bsearch** **, _lsearch** nie wymaga tablicy do sortowania. Jeśli *klucz* nie zostanie znaleziony, **_lsearch** dodaje go na końcu tablicy i zwiększa *liczbę*.
 
-Argument *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. **_lsearch** wywołuje procedurę *Compare* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania. *porównanie* musi porównać elementy i zwracać wartość różną od zera (oznacza to, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
+Argument *porównania* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. **_lsearch** wywołuje *rutynowe porównywanie* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy w każdym wywołaniu. *compare* musi porównać elementy i zwrócić nonzero (co oznacza, że elementy są różne) lub 0 (co oznacza, że elementy są identyczne).
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *podstawa* ma **wartość null** , a *Liczba* jest różna od zera, lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność jego parametrów. Jeśli *porównaj*, *klucz* lub *liczba* ma **wartość NULL**lub jeśli *podstawa* ma **wartość NULL,** a *liczba* jest niezerowa lub jeśli *szerokość* jest mniejsza niż zero, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w obszarze Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **Wartość EINVAL,** a funkcja zwraca **wartość NULL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lsearch**|\<Search. h >|
+|**_lsearch**|\<> search.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,5 +1,5 @@
 ---
-title: IObjectSafetyImpl Class
+title: Klasa IObjectSafetyImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectSafetyImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6eee7585bc3c5587e106ab6b0cefb4b7129df59f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329660"
 ---
-# <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl Class
+# <a name="iobjectsafetyimpl-class"></a>Klasa IObjectSafetyImpl
 
-Ta klasa udostępnia domyślną implementację elementu `IObjectSafety` interfejsu, aby umożliwić klientowi pobierać i ustawiać poziom bezpieczeństwa obiektu.
+Ta klasa zapewnia domyślną `IObjectSafety` implementację interfejsu, aby umożliwić klientowi pobieranie i ustawianie poziomów bezpieczeństwa obiektu.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,14 +37,14 @@ class IObjectSafetyImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IObjectSafetyImpl`.
+Twoja klasa, pochodząca od `IObjectSafetyImpl`.
 
-*dwSupportedSafety*<br/>
-Określa opcje bezpieczeństwa obsługiwanych dla formantu. Może być jednym z następujących wartości:
+*dwSupportedBezpieczeństwo*<br/>
+Określa obsługiwane opcje bezpieczeństwa dla sterowania. Może być jedną z następujących wartości:
 
-- INTERFACESAFE_FOR_UNTRUSTED_CALLER interfejsie zidentyfikowany przez [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parametru `riid` powinni należeć do obsługi skryptów.
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER Interfejs identyfikowany przez `riid` [parametr SetInterfaceSafetyOptions](#setinterfacesafetyoptions) powinien być bezpieczny dla skryptów.
 
-- INTERFACESAFE_FOR_UNTRUSTED_DATA interfejsie zidentyfikowany przez `SetInterfaceSafetyOptions` parametru `riid` ustanowić bezpieczne dla niezaufanych danych podczas inicjowania.
+- INTERFACESAFE_FOR_UNTRUSTED_DATA Interfejs identyfikowany przez `SetInterfaceSafetyOptions` parametr `riid` powinien być bezpieczny dla niezaufanych danych podczas inicjowania.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,22 +52,22 @@ Określa opcje bezpieczeństwa obsługiwanych dla formantu. Może być jednym z 
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Pobiera opcje bezpieczeństwa, obsługiwane przez obiekt, a także opcje bezpieczeństwa ustawione dla obiektu.|
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Sprawia, że obiekt bezpiecznego inicjowania lub skryptów.|
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Pobiera opcje bezpieczeństwa obsługiwane przez obiekt, a także opcje bezpieczeństwa aktualnie ustawione dla obiektu.|
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Sprawia, że obiekt jest bezpieczny do inicjowania lub skryptów.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Przechowuje obiekt bieżący poziom bezpieczeństwa.|
+|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Przechowuje aktualny poziom bezpieczeństwa obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `IObjectSafetyImpl` udostępnia domyślną implementację elementu `IObjectSafety`. `IObjectSafety` Interfejs umożliwia klientowi pobrać i ustawić poziom bezpieczeństwa obiektu. Na przykład, można wywołać przeglądarki sieci web `IObjectSafety::SetInterfaceSafetyOptions` aby formant bezpiecznych inicjowania lub obsługi skryptów.
+Klasa `IObjectSafetyImpl` zapewnia domyślną `IObjectSafety`implementację . Interfejs `IObjectSafety` umożliwia klientowi pobieranie i ustawianie poziomów bezpieczeństwa obiektu. Na przykład przeglądarka sieci `IObjectSafety::SetInterfaceSafetyOptions` web może wywołać, aby formant bezpieczne do inicjowania lub bezpieczne dla skryptów.
 
-Należy pamiętać, że używanie [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) makro z kategorii składników CATID_SafeForScripting i CATID_SafeForInitializing zapewnia alternatywny sposób określania, czy składnik jest bezpieczne.
+Należy zauważyć, że użycie makra [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) z kategoriami składników CATID_SafeForScripting i CATID_SafeForInitializing zapewnia alternatywny sposób określania, że składnik jest bezpieczny.
 
-**Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Podobne artykuły** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Tworzenie projektu [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -79,9 +79,9 @@ Należy pamiętać, że używanie [IMPLEMENTED_CATEGORY](category-macros.md#impl
 
 **Nagłówek:** atlctl.h
 
-##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions
 
-Pobiera opcje bezpieczeństwa, obsługiwane przez obiekt, a także opcje bezpieczeństwa ustawione dla obiektu.
+Pobiera opcje bezpieczeństwa obsługiwane przez obiekt, a także opcje bezpieczeństwa aktualnie ustawione dla obiektu.
 
 ```
 HRESULT GetInterfaceSafetyOptions(
@@ -92,24 +92,24 @@ HRESULT GetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja zwraca odpowiednie wartości dla dowolnego interfejsu obsługiwana przez implementację obiektu `IUnknown::QueryInterface`.
+Implementacja zwraca odpowiednie wartości dla dowolnego interfejsu obsługiwanego `IUnknown::QueryInterface`przez implementację obiektu .
 
 > [!IMPORTANT]
->  Dowolny obiekt obsługujący `IObjectSafety` jest odpowiedzialny za własne zabezpieczeń i z dowolnego obiektu deleguje ona. Programista musi uwzględniać problemy związane z kontem wynikających z uruchamiania kodu w kontekście użytkownika, skryptów między witrynami i wykonują sprawdzanie odpowiedniej strefy.
+> Każdy obiekt, `IObjectSafety` który obsługuje jest odpowiedzialny za własne zabezpieczenia i każdy obiekt, który deleguje. Programista musi wziąć pod uwagę problemy wynikające z uruchamiania kodu w kontekście użytkownika, skryptów między witrynami i wykonać odpowiednie sprawdzanie strefy.
 
-Zobacz [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) w Windows SDK.
+Zobacz [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) w usłudze Windows SDK.
 
-##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
+## <a name="iobjectsafetyimplm_dwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety
 
-Przechowuje obiekt bieżący poziom bezpieczeństwa.
+Przechowuje aktualny poziom bezpieczeństwa obiektu.
 
 ```
 DWORD m_dwCurrentSafety;
 ```
 
-##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions
 
-Sprawia, że obiekt jest bezpieczny dla inicjowania lub skryptów przez ustawienie [m_dwCurrentSafety](#m_dwcurrentsafety) elementu członkowskiego odpowiednią wartość.
+Sprawia, że obiekt jest bezpieczny do inicjowania lub skryptów, ustawiając [m_dwCurrentSafety](#m_dwcurrentsafety) element członkowski do odpowiedniej wartości.
 
 ```
 HRESULT SetInterfaceSafetyOptions(
@@ -120,14 +120,14 @@ HRESULT SetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja zwraca E_NOINTERFACE dla dowolnego interfejsu nie jest obsługiwane przez implementację obiektu `IUnknown::QueryInterface`.
+Implementacja zwraca E_NOINTERFACE dla dowolnego interfejsu nie obsługiwane przez implementację obiektu `IUnknown::QueryInterface`.
 
 > [!IMPORTANT]
->  Dowolny obiekt obsługujący `IObjectSafety` jest odpowiedzialny za własne zabezpieczeń i z dowolnego obiektu deleguje ona. Programista musi uwzględniać problemy związane z kontem wynikających z uruchamiania kodu w kontekście użytkownika, skryptów między witrynami i wykonują sprawdzanie odpowiedniej strefy.
+> Każdy obiekt, `IObjectSafety` który obsługuje jest odpowiedzialny za własne zabezpieczenia i każdy obiekt, który deleguje. Programista musi wziąć pod uwagę problemy wynikające z uruchamiania kodu w kontekście użytkownika, skryptów między witrynami i wykonać odpowiednie sprawdzanie strefy.
 
-Zobacz [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) w Windows SDK.
+Zobacz [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Interfejs IObjectSafety](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Interfejs bezpieczeństwa IObjectSafety](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

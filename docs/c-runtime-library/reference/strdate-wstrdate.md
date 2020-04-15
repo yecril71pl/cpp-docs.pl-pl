@@ -1,9 +1,11 @@
 ---
 title: _strdate, _wstrdate
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdate
 - _wstrdate
+- _o__strdate
+- _o__wstrdate
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361280"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
-Skopiuj bieżącą datę systemową do buforu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
+Skopiuj bieżącą datę systemową do buforu. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,23 +76,25 @@ Wskaźnik do buforu zawierającego sformatowany ciąg daty.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do wynikowego ciągu znaków *datestr*.
+Każda z tych funkcji zwraca wskaźnik do wynikowego ciągu znaku *datestr*.
 
 ## <a name="remarks"></a>Uwagi
 
-Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Zaleca się, aby bardziej bezpieczne funkcje były używane wszędzie tam, gdzie jest to możliwe.
+Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Zaleca się, aby w miarę możliwości używać bezpieczniejszych funkcji.
 
-Funkcja **_strdate** kopiuje bieżącą datę systemową do buforu wskazywanym przez *datestr*, sformatowaną **mm**/**DD**/**yy**, gdzie **mm** to dwie cyfry reprezentujące miesiąc, **DD** to dwie cyfry reprezentujące dzień, a **yy** to ostatnie dwie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej 9 bajtów.
+Funkcja **_strdate** kopiuje bieżącą datę systemową do buforu wskazytego przez *datestr*, sformatowany **mm**/**dd**/**yy**, gdzie **mm** jest dwiema cyframi reprezentującymi miesiąc, **dd** to dwie cyfry reprezentujące dzień, a **yy** to dwie ostatnie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Bufor musi mieć długość co najmniej 9 bajtów.
 
-Jeśli *datestr* jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
+Jeśli *datestr* jest wskaźnikiem **NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają -1 i ustawić **errno** na **EINVAL**.
 
-**_wstrdate** to dwubajtowa wersja **_strdate**; argument i wartość zwracana przez **_wstrdate** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
+**_wstrdate** jest szerokoznakową wersją **_strdate**; argument i zwraca wartość **_wstrdate** są ciągami znaków o szerokich znakach. Te funkcje zachowują się identycznie w przeciwnym razie.
 
-W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
 
@@ -97,10 +102,10 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strdate**|\<time.h>|
-|**_wstrdate**|\<Time. h > lub \<WCHAR. h >|
+|**_strdate**|\<> time.h|
+|**_wstrdate**|\<time.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -128,7 +133,7 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

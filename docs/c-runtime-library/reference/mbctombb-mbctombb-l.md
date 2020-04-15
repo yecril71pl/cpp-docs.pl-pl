@@ -1,9 +1,11 @@
 ---
 title: _mbctombb, _mbctombb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctombb_l
 - _mbctombb
+- _o__mbctombb
+- _o__mbctombb_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4afd1c92930fe622eb03569913b264d6c285dcda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341011"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
-Konwertuje dwubajtowy znak wieloznaczny do odpowiadającego jednobajtowego znaku w bajtach.
+Konwertuje znak wielobajtowy o podwójnym bajecie na odpowiedni jednobajtowy znak wielobajtowy.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,23 +62,25 @@ unsigned int _mbctombb_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Znak wielobajtowy do przekonwertowania.
+*C*<br/>
+Znak wielobajtowy do konwersji.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, **_mbctombb** i **_mbctombb_l** zwraca znak jednobajtowy, który odpowiada *c*; w przeciwnym razie zwraca *c*.
+Jeśli się powiedzie, **_mbctombb** i **_mbctombb_l** zwraca znak jedno bajtowy odpowiadający *c*; w przeciwnym razie zwraca *c*.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbctombb** i **_mbctombb_l** konwertują dane z danego znaku wielobajtowego na odpowiedni jednobajtowy znak w bajtach. Znaki muszą odpowiadać znaki jednobajtowe w zakresie 0x20-0x7E lub 0xA1-0xDF do przekonwertowania.
+Funkcje **_mbctombb** i **_mbctombb_l** konwertują dany znak wielobajtowy na odpowiedni jednobajtowy znak wielobajtowy. Znaki muszą odpowiadać znakom jedno bajtowym w zakresie 0x20 - 0x7E lub 0xA1 - 0xDF do konwersji.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersja tej funkcji bez sufiksu **_l** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersja z sufiksem **_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersja tej funkcji bez sufiksu **_l** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja z sufiksem **_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W poprzednich wersjach **_mbctombb** został wywołany **zentohan**. Zamiast tego użyj **_mbctombb** .
+W poprzednich wersjach **_mbctombb** nazywano **zentohan**. Zamiast **tego użyj _mbctombb.**
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -84,9 +89,9 @@ W poprzednich wersjach **_mbctombb** został wywołany **zentohan**. Zamiast teg
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

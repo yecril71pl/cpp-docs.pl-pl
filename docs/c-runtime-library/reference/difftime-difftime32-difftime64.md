@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348130"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
-Znajduje różnicę między dwoma razy.
+Znajduje różnicę między dwa razy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,35 +59,37 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>Parametry
 
-*timeEnd*<br/>
-Godzina zakończenia.
+*timeEnd (limit czasu)*<br/>
+Czas zakończenia.
 
 *timeStart*<br/>
-Godzina rozpoczęcia.
+Czas rozpoczęcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**difftime** zwraca czas w sekundach, od *timeStart* do *timeEnd*. Zwracana wartość to liczba zmiennoprzecinkowa o podwójnej precyzji. Zwracana wartość może być równa 0, co wskazuje na błąd.
+**difftime** zwraca czas, jaki upłynął w sekundach, od *timeStart* do *timeEnd*. Zwracana wartość jest podwójną precyzją liczby zmiennoprzecinkowej. Zwracana wartość może wynosić 0, co oznacza błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **difftime** oblicza różnicę między dwoma dostarczonymi wartościami czasu *timeStart* i *timeEnd*.
+Funkcja **difftime** oblicza różnicę między dwiema podanymi wartościami czasu *timeStart* i *timeEnd*.
 
-Podana wartość czasu musi mieścić się w zakresie **time_t**. **time_t** jest wartością 64-bitową. W związku z tym koniec zakresu został rozszerzony z 23:59:59 stycznia 18, 2038, UTC do 23:59:59, 31 grudnia 3000. Dolny zakres **time_t** jest nadal północy, 1 stycznia 1970.
+Podana wartość czasu musi mieścić się w zakresie **time_t**. **time_t** jest wartością 64-bitową. W ten sposób, koniec zakresu został przedłużony z 23:59:59 18 stycznia 2038, UTC do 23:59:59, 31 grudnia 3000. Dolny zakres **time_t** jest jeszcze północ, 1 stycznia 1970.
 
-**difftime** to wbudowana funkcja, która oblicza wartość **_difftime32** lub **_difftime64** w zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowany. _difftime32 i _difftime64 mogą być używane bezpośrednio w celu wymuszenia użycia określonego rozmiaru typu czasu.
+**difftime** jest funkcją wbudowaną, która ocenia **_difftime32** lub **_difftime64** w zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowany. _difftime32 i _difftime64 mogą być używane bezpośrednio do wymuszania użycia określonego rozmiaru typu czasu.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli jeden z parametrów ma wartość zero lub wartość ujemną, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość 0 i ustawimy wartość **errno** na **EINVAL**.
+Te funkcje sprawdzają ich parametry. Jeśli którykolwiek z parametrów jest zerowy lub ujemny, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w obszarze [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają 0 i ustawić **errno** do **EINVAL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**difftime**|\<time.h>|
-|**_difftime32**|\<time.h>|
-|**_difftime64**|\<time.h>|
+|**difftime**|\<> time.h|
+|**_difftime32**|\<> time.h|
+|**_difftime64**|\<> time.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -142,8 +147,8 @@ Multiplying 2 floating point numbers 100 million times...
 Program takes      3 seconds.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

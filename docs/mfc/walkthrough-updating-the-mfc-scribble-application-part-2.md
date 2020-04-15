@@ -1,124 +1,124 @@
 ---
-title: 'Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 2)'
+title: 'Wskazówki: aktualizowanie aplikacji bazgrołów MFC (część 2)'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: d4655c0a4a8847642b75575e324a291e39bbf42a
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: bc204a152168accf3731eede8ca9ef960ab121d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360226"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 2)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Wskazówki: aktualizowanie aplikacji bazgrołów MFC (część 2)
 
-[Część 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) tego instruktażu pokazano, jak dodać wstążki Fluent pakietu Office do klasycznego Bazgroły aplikacji. Tej części przedstawiono sposób dodawania paneli Wstążki i formanty, które użytkownicy mogą używać zamiast menu i poleceń.
+[Część 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) tego przewodnika pokazała, jak dodać Wstążkę Office Fluent do klasycznej aplikacji Bazgroły. W tej części pokazano, jak dodać panele wstążki i formanty, których użytkownicy mogą używać zamiast menu i poleceń.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 [Przykłady Visual C++](../overview/visual-cpp-samples.md)
 
-##  <a name="top"></a> Sekcje
+## <a name="sections"></a><a name="top"></a>Sekcje
 
 Ta część przewodnika zawiera następujące sekcje:
 
-- [Dodawanie nowych paneli do wstążki](#addnewpanel)
+- [Dodawanie nowych paneli do Wstążki](#addnewpanel)
 
-- [Dodawanie pomocy panelu do wstążki](#addhelppanel)
+- [Dodawanie Panelu pomocy do Wstążki](#addhelppanel)
 
-- [Dodawanie panelu piórem do wstążki](#addpenpanel)
+- [Dodawanie panelu pióra do Wstążki](#addpenpanel)
 
-- [Dodawanie przycisku koloru do wstążki](#addcolorbutton)
+- [Dodawanie przycisku koloru do Wstążki](#addcolorbutton)
 
-- [Dodawanie członka kolorów do klasy dokumentów](#addcolormember)
+- [Dodawanie elementu członkowskiego koloru do klasy dokumentu](#addcolormember)
 
-- [Inicjowanie pióra i preferencji zapisywania](#initpensave)
+- [Inicjowanie piór i preferencje zapisywania](#initpensave)
 
-##  <a name="addnewpanel"></a> Dodawanie nowych paneli do wstążki
+## <a name="adding-new-panels-to-the-ribbon"></a><a name="addnewpanel"></a>Dodawanie nowych paneli do Wstążki
 
-Te kroki pokazują, jak dodać **widoku** panel, który zawiera dwa pola wyboru, które kontrolują widoczność paska narzędzi i pasek stanu, a także **okna** panel, który zawiera podział orientacji pionowej przycisk, który steruje tworzeniem i rozmieszczenie interfejsu wielu dokumentów (MDI) systemu Windows.
+W tych krokach pokazano, jak dodać panel **Widok** zawierający dwa pola wyboru, które sterują widocznością paska narzędzi i paska stanu, a także panel **Window** zawierający pionowo zorientowany przycisk podziału, który steruje tworzeniem i rozmieszczeniem okien interfejsu wielu dokumentów (MDI).
 
-### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Aby dodać do paska wstążki — panel widoku i oknie panelu
+### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Aby dodać panel Widok i panel Okno do paska wstążki
 
-1. Utwórz zespół o nazwie `View`, który ma dwa pola wyboru, które Przełącz pasek stanu i narzędzi.
+1. Utwórz panel `View`o nazwie , który ma dwa pola wyboru, które przełączają pasek stanu i pasek narzędzi.
 
-   1. Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Następnie przeciągnij dwa **pola wyboru** do panelu.
+   1. Z **przybornika**przeciągnij **panel** do kategorii **Strona** główna. Następnie przeciągnij dwa **pola wyboru** do panelu.
 
-   1. Kliknij panel, aby zmodyfikować jego właściwości. Zmiana **podpis** do `View`.
+   1. Kliknij panel, aby zmodyfikować jego właściwości. Zmień **Caption** podpis `View`na .
 
-   1. Kliknij pierwsze pole wyboru, aby zmodyfikować jego właściwości. Zmiana **identyfikator** do `ID_VIEW_TOOLBAR` i **podpis** do `Toolbar`.
+   1. Kliknij pierwsze pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** `ID_VIEW_TOOLBAR` i **podpis** na `Toolbar`.
 
-   1. Kliknij przycisk drugie pole wyboru, aby zmodyfikować jego właściwości. Zmiana **identyfikator** do `ID_VIEW_STATUS_BAR` i **podpis** do `Status Bar`.
+   1. Kliknij drugie pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** `ID_VIEW_STATUS_BAR` i **podpis** na `Status Bar`.
 
-1. Utwórz zespół o nazwie `Window` zawierający przycisk podziału. Gdy użytkownik kliknie przycisk podziału, w menu skrótów przedstawia trzy polecenia, które są już zdefiniowane w aplikacji bazgrołów.
+1. Utwórz panel `Window` o nazwie, który ma przycisk podziału. Gdy użytkownik kliknie przycisk podziału, w menu skrótów zostaną wyświetlone trzy polecenia, które są już zdefiniowane w aplikacji Bazgroły.
 
-   1. Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Następnie przeciągnij **przycisk** do panelu.
+   1. Z **przybornika**przeciągnij **panel** do kategorii **Strona** główna. Następnie przeciągnij **przycisk** na panel.
 
-   1. Kliknij panel, aby zmodyfikować jego właściwości. Zmiana **podpis** do `Window`.
+   1. Kliknij panel, aby zmodyfikować jego właściwości. Zmień **Caption** podpis `Window`na .
 
-   1. Kliknij przycisk. Zmiana **podpis** do `Windows`, **klucze** do `w`, **indeksu duży obraz** do `1`, i **Tryb podziału** Aby `False`. Następnie kliknij przycisk wielokropka (**...** ) obok pozycji **elementów Menu** otworzyć **Edytor elementów** okno dialogowe.
+   1. Kliknij przycisk. Zmień **Caption** podpis `Windows`na `w`, **Klawisze** `1`do , Duży **indeks obrazu** do , i **Tryb podziału** do `False`. Następnie kliknij wielokropek (**...**) obok **pozycji Elementy menu,** aby otworzyć okno dialogowe Edytor **elementów.**
 
-   1. Kliknij przycisk **Dodaj** trzy razy, aby dodać trzy przyciski.
+   1. Kliknij **przycisk Dodaj** trzy razy, aby dodać trzy przyciski.
 
-   1. Kliknij pierwszy przycisk, a następnie zmień **podpis** do `New Window`, i **identyfikator** do `ID_WINDOW_NEW`.
+   1. Kliknij pierwszy przycisk, **Caption** a `New Window`następnie zmień caption `ID_WINDOW_NEW`na , i **ID** na .
 
-   1. Drugi przycisk, a następnie zmień **podpis** do `Cascade`, i **identyfikator** do `ID_WINDOW_CASCADE`.
+   1. Kliknij drugi przycisk, **Caption** a `Cascade`następnie zmień caption `ID_WINDOW_CASCADE`na , i **ID** na .
 
-   1. Kliknij trzeci przycisk, a następnie zmień **podpis** do `Tile`, i **identyfikator** do `ID_WINDOW_TILE_HORZ`.
+   1. Kliknij trzeci przycisk, **Caption** a `Tile`następnie zmień caption `ID_WINDOW_TILE_HORZ`na , i **ID** na .
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. **Widoku** i **okna** panele powinny być wyświetlane. Kliknij przyciski, aby upewnić się, że działają poprawnie.
+1. Zapisz zmiany, a następnie skompiluj i uruchom aplikację. Powinny być wyświetlane panele **Widok** i **Okno.** Kliknij przyciski, aby potwierdzić, że działają poprawnie.
 
-##  <a name="addhelppanel"></a> Dodawanie pomocy panelu do wstążki
+## <a name="adding-a-help-panel-to-the-ribbon"></a><a name="addhelppanel"></a>Dodawanie Panelu pomocy do Wstążki
 
-Teraz można przypisać dwa elementy menu, które są zdefiniowane w aplikacji bazgrołów przyciski wstążki, które są nazywane **tematy Pomocy** i **o Bazgroły**. Przyciski są dodawane do nowego panelu o nazwie **pomocy**.
+Teraz można przypisać dwa elementy menu, które są zdefiniowane w aplikacji Bazgroły do przycisków wstążki, które są nazywane **Tematy pomocy** i **O bazgroły**. Przyciski zostaną dodane do nowego panelu o nazwie **Pomoc**.
 
-### <a name="to-add-a-help-panel"></a>Aby dodać panel pomocy
+### <a name="to-add-a-help-panel"></a>Aby dodać panel Pomocy
 
-1. Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Następnie przeciągnij dwa **przyciski** do panelu.
+1. Z **przybornika**przeciągnij **panel** do kategorii **Strona** główna. Następnie przeciągnij dwa **przyciski** na panel.
 
-1. Kliknij panel, aby zmodyfikować jego właściwości. Zmiana **podpis** do `Help`.
+1. Kliknij panel, aby zmodyfikować jego właściwości. Zmień **Caption** podpis `Help`na .
 
-1. Kliknij pierwszy przycisk. Zmiana **podpis** do `Help Topics`, i **identyfikator** do `ID_HELP_FINDER`.
+1. Kliknij pierwszy przycisk. Zmień **Caption** podpis `Help Topics`na **id** na `ID_HELP_FINDER`.
 
-1. Drugi przycisk. Zmiana **podpis** do `About Scribble...`, i **identyfikator** do `ID_APP_ABOUT`.
+1. Kliknij drugi przycisk. Zmień **Caption** podpis `About Scribble...`na **id** na `ID_APP_ABOUT`.
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. A **pomocy** powinien zostać wyświetlony panel, który zawiera dwa przyciski wstążki.
+1. Zapisz zmiany, a następnie skompiluj i uruchom aplikację. Powinien zostać wyświetlony panel **Pomocy** zawierający dwa przyciski wstążki.
 
    > [!IMPORTANT]
-   > Po kliknięciu **tematy Pomocy** przycisku spowoduje otwarcie aplikacji bazgrołów skompresowanego pliku Pomocy HTML (chm) o nazwie *your_project_name*. chm. W związku z tym jeśli projekt nie ma nazwy Bazgroły, należy zmienić plik pomocy do nazwy projektu.
+   > Po kliknięciu przycisku **Tematy pomocy** aplikacja Bazgroły otwiera skompresowany plik pomocy HTML (chm) o nazwie *your_project_name*.chm. W związku z tym jeśli projekt nie ma nazwy Bazgroły, należy zmienić nazwę pliku pomocy do nazwy projektu.
 
-##  <a name="addpenpanel"></a> Dodawanie panelu piórem do wstążki
+## <a name="adding-a-pen-panel-to-the-ribbon"></a><a name="addpenpanel"></a>Dodawanie panelu pióra do Wstążki
 
-Teraz Dodaj panelu w celu wyświetlenia przycisków, które sterują grubość i kolor pióra. Ten panel zawiera pole wyboru, które jest przełączana między pióra grubości i alokowania elastycznego. Jego działanie przypomina z **Gruba linia** element menu w aplikacji bazgrołów.
+Teraz dodaj panel, aby wyświetlić przyciski, które kontrolują grubość i kolor pióra. Ten panel zawiera pole wyboru przełączane między grubymi i cienkimi długopisami. Jego funkcjonalność przypomina funkcję elementu menu **Gruba linia** w aplikacji Bazgroły.
 
-Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybranie szerokości pióra z okna dialogowego wyświetlanego, gdy użytkownik kliknie **szerokości pióra** w menu. Na Wstążce ma wystarczającą ilość miejsca dla nowych formantów, okno dialogowe można zastąpić przy użyciu dwóch pól kombi na Wstążce. Jedno pole kombi dostosowuje grubość pióra alokowania elastycznego, a pole kombi dostosowuje szerokość grubość pióra.
+Oryginalna aplikacja Bazgroły umożliwia użytkownikowi wybranie szerokości pióra z okna dialogowego wyświetlanego po kliknięciu w menu **opcji Szerokość pióra.** Ponieważ pasek wstążki ma dużo miejsca na nowe kontrolki, można zastąpić okno dialogowe za pomocą dwóch pól kombi na wstążce. Jedno pole kombi dostosowuje szerokość cienkiego pióra, a drugie pole kombi dostosowuje szerokość grubego pióra.
 
-#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Aby dodać panel pióra i pole kombi pola do wstążki
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Aby dodać panel Pióro i pola kombi do wstążki
 
-1. Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Następnie przeciągnij **pole wyboru** oraz dwóch **pola kombi** do panelu.
+1. Z **przybornika**przeciągnij **panel** do kategorii **Strona** główna. Następnie przeciągnij **pole wyboru** i dwa **pola kombi** do panelu.
 
-1. Kliknij panel, aby zmodyfikować jego właściwości. Zmiana **podpis** do `Pen`.
+1. Kliknij panel, aby zmodyfikować jego właściwości. Zmień **Caption** podpis `Pen`na .
 
-1. Kliknij pole wyboru. Zmiana **podpis** do `Use Thick`, i **identyfikator** do `ID_PEN_THICK_OR_THIN`.
+1. Kliknij to pole wyboru. Zmień **Caption** podpis `Use Thick`na **id** na `ID_PEN_THICK_OR_THIN`.
 
-1. Kliknij pierwsze pole kombi. Zmiana **podpis** do `Thin Pen`, **identyfikator** do `ID_PEN_THIN_WIDTH`, **typu** do `Drop List`, **danych** do `1;2;3;4;5;6;7;8;9;`, i **tekstu** do `2`.
+1. Kliknij pierwsze pole kombi. Zmień **Caption** podpis `Thin Pen`na , `ID_PEN_THIN_WIDTH` **ID** , `1;2;3;4;5;6;7;8;9;` **Wpisz** na `Drop List` `2`, **Dane** do , i **Tekst** do .
 
-1. Kliknij przycisk drugiego pola kombi. Zmiana **podpis** do `Thick Pen`, **identyfikator** do `ID_PEN_THICK_WIDTH`, **typu** do `Drop List`, **danych** do `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, i **tekstu** do `5`.
+1. Kliknij drugie pole kombi. Zmień **Caption** podpis `Thick Pen`na , `ID_PEN_THICK_WIDTH` **ID** , `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;` **Wpisz** na `Drop List` `5`, **Dane** do , i **Tekst** do .
 
-1. Nowe pola kombi nie odnoszą się do wszystkie istniejące elementy menu, dlatego należy utworzyć element menu dla każdej opcji pióra.
+1. Nowe pola kombi nie odpowiadają żadnym istniejącym elementom menu, dlatego należy utworzyć element menu dla każdej opcji pióra.
 
-   1. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu.
+   1. W oknie **Widok zasobów** otwórz zasób menu **IDR_SCRIBBTYPE.**
 
-   1. Kliknij przycisk **pióra** aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `Thi&n Pen`.
+   1. Kliknij **pozycję Pióro,** aby otworzyć menu pióra. Następnie kliknij przycisk `Thi&n Pen`Wpisz **tutaj** i wpisz .
 
-   1. Kliknij prawym przyciskiem myszy tekst, który został wpisany, aby otworzyć **właściwości** okna, a następnie zmień identyfikator właściwości `ID_PEN_THIN_WIDTH`.
+   1. Kliknij prawym przyciskiem myszy wpisany tekst, aby otworzyć okno **Właściwości,** `ID_PEN_THIN_WIDTH`a następnie zmień właściwość ID na .
 
-   1. Utwórz procedurę obsługi zdarzeń dla każdego elementu menu pióra. Kliknij prawym przyciskiem myszy **gr & n pióra** element menu, który zostanie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
+   1. Utwórz program obsługi zdarzeń dla każdego elementu menu pióra. Kliknij prawym przyciskiem myszy utworzony element menu **Thi&n Pióro,** a następnie kliknij polecenie **Dodaj program obsługi zdarzeń**. Zostanie wyświetlony **Kreator obsługi zdarzeń.**
 
-   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Polecenie tworzy program obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThinWidth`.
+   1. W polu **listy Klasa** w kreatorze wybierz pozycję **CScribbleDoc,** a następnie kliknij pozycję **Dodaj i edytuj**. Polecenie tworzy program obsługi `CScribbleDoc::OnPenThinWidth`zdarzeń o nazwie .
 
-   1. Dodaj następujący kod do `CScribbleDoc::OnPenThinWidth`.
+   1. Dodaj następujący kod `CScribbleDoc::OnPenThinWidth`do pliku .
 
         ```cpp
         // Get a pointer to the ribbon bar
@@ -140,19 +140,19 @@ Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybranie szerokości
         ReplacePen();
         ```
 
-1. Następnie należy utworzyć menu elementu i programów obsługi grubość pióra.
+1. Następnie utwórz element menu i programy obsługi zdarzeń dla grubego pióra.
 
-   1. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu.
+   1. W oknie **Widok zasobów** otwórz zasób menu **IDR_SCRIBBTYPE.**
 
-   1. Kliknij przycisk **pióra** aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `Thic&k Pen`.
+   1. Kliknij **pozycję Pióro,** aby otworzyć menu pióra. Następnie kliknij przycisk `Thic&k Pen`Wpisz **tutaj** i wpisz .
 
-   1. Kliknij prawym przyciskiem myszy tekst wpisany do wyświetlenia **właściwości** okna. Zmień właściwości Identyfikatora `ID_PEN_THICK_WIDTH`.
+   1. Kliknij prawym przyciskiem myszy wpisany tekst, aby wyświetlić okno **Właściwości.** Zmień właściwość ID na `ID_PEN_THICK_WIDTH`.
 
-   1. Kliknij prawym przyciskiem myszy **grubość pióra** element menu, który zostanie utworzony, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlana.
+   1. Kliknij prawym przyciskiem myszy utworzony element menu **Grube pióro,** a następnie kliknij polecenie **Dodaj program obsługi zdarzeń**. Zostanie wyświetlony **Kreator obsługi zdarzeń.**
 
-   1. W **listy klas** pola kreatora wybierz pozycję **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować**. Polecenie tworzy program obsługi zdarzeń o nazwie `CScribbleDoc::OnPenThickWidth`.
+   1. W polu **listy Klasa** kreatora wybierz pozycję **CScribbleDoc,** a następnie kliknij pozycję **Dodaj i edytuj**. Polecenie tworzy program obsługi `CScribbleDoc::OnPenThickWidth`zdarzeń o nazwie .
 
-   1. Dodaj następujący kod do `CScribbleDoc::OnPenThickWidth`.
+   1. Dodaj następujący kod `CScribbleDoc::OnPenThickWidth`do pliku .
 
         ```cpp
         // Get a pointer to the ribbon bar
@@ -172,49 +172,49 @@ Oryginalnej aplikacji bazgrołów umożliwia użytkownikowi wybranie szerokości
         ReplacePen();
         ```
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. Powinny być wyświetlane nowe przyciski i pola kombi. Spróbuj Bazgroły za pomocą pióra szerokości.
+1. Zapisz zmiany, a następnie skompiluj i uruchom aplikację. Powinny być wyświetlane nowe przyciski i pola kombi. Spróbuj użyć różnych szerokości pióra do bazgrołów.
 
-##  <a name="addcolorbutton"></a> Dodawanie przycisku koloru do panelu pióra
+## <a name="adding-a-color-button-to-the-pen-panel"></a><a name="addcolorbutton"></a>Dodawanie przycisku koloru do panelu pióra
 
-Następnie dodaj [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) obiekt, który umożliwia użytkownikowi bazgrołów są oznaczone kolorem.
+Następnie dodaj [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) obiektu, który pozwala użytkownikowi bazgroły w kolorze.
 
-### <a name="to-add-a-color-button-to-the-pen-panel"></a>Aby dodać przycisk koloru do panelu pióra
+### <a name="to-add-a-color-button-to-the-pen-panel"></a>Aby dodać kolorowy przycisk do panelu Pióro
 
-1. Zanim dodasz przycisk koloru, Utwórz element menu dla niego. W **widok zasobów** otwarte okno **IDR_SCRIBBTYPE** zasobu menu. Kliknij przycisk **pióra** element menu, aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ `&Color`. Kliknij prawym przyciskiem myszy tekst wpisany do wyświetlenia **właściwości** okna. Zmień identyfikator, który ma `ID_PEN_COLOR`.
+1. Przed dodaniem przycisku koloru utwórz dla niego element menu. W oknie **Widok zasobów** otwórz zasób menu **IDR_SCRIBBTYPE.** Kliknij pozycję menu **Pióro,** aby otworzyć menu pióra. Następnie kliknij przycisk `&Color`Wpisz **tutaj** i wpisz . Kliknij prawym przyciskiem myszy wpisany tekst, aby wyświetlić okno **Właściwości.** Zmień identyfikator na `ID_PEN_COLOR`.
 
-1. Teraz Dodaj przycisk koloru. Z **przybornika**, przeciągnij **przycisk koloru** do **pióra** panelu.
+1. Teraz dodaj przycisk koloru. W **przyborniku**przeciągnij **przycisk kolor** na panel **Pióro.**
 
-1. Kliknij przycisk koloru. Zmiana **podpis** do `Color`, **identyfikator** do `ID_PEN_COLOR`, **prosty wygląd** do `True`, **indeksu duży obraz** do `1`, i **Tryb podziału** do `False`.
+1. Kliknij przycisk koloru. Zmień **Caption** podpis `Color`na , `ID_PEN_COLOR` **ID** `True`, **Prosty wygląd,** Duży indeks `False` **obrazu** do `1`, i tryb **podziału** na .
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. Nowy przycisk koloru powinien być wyświetlany na **pióra** panelu. Jednak nie można użyć, ponieważ nie ma jeszcze obsługi zdarzeń. Następne kroki pokazują, jak dodać program obsługi zdarzeń dla przycisku koloru.
+1. Zapisz zmiany, a następnie skompiluj i uruchom aplikację. Nowy przycisk koloru powinien być wyświetlany na panelu **Pióro.** Jednak nie można go używać, ponieważ nie ma jeszcze programu obsługi zdarzeń. Następne kroki pokazują, jak dodać program obsługi zdarzeń dla przycisku kolor.
 
-##  <a name="addcolormember"></a> Dodawanie członka kolorów do klasy dokumentów
+## <a name="adding-a-color-member-to-the-document-class"></a><a name="addcolormember"></a>Dodawanie elementu członkowskiego koloru do klasy dokumentu
 
-Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać implementację dla nich. Do przechowywania na kolor pióra dokumentu, Dodaj nowy element członkowski do klasy dokumentu `CscribbleDoc`.
+Ponieważ oryginalna aplikacja Bazgroły nie ma kolorowych piór, należy napisać dla nich implementację. Aby zapisać kolor pióra dokumentu, dodaj nowy element `CscribbleDoc`członkowski do klasy dokumentu, .
 
-### <a name="to-add-a-color-member-to-the-document-class"></a>Aby dodać element członkowski kolorów do klasy dokumentów
+### <a name="to-add-a-color-member-to-the-document-class"></a>Aby dodać element członkowski koloru do klasy dokumentu
 
-1. W scribdoc.h w `CScribbleDoc` klasy, Znajdź `// Attributes` sekcji. Dodaj następujące wiersze kodu po definicji `m_nThickWidth` element członkowski danych.
+1. W scribdoc.h, `CScribbleDoc` w klasie, `// Attributes` znajdź sekcję. Dodaj następujące wiersze kodu po `m_nThickWidth` definicji elementu członkowskiego danych.
 
    ```cpp
    // Current pen color
    COLORREF m_penColor;
    ```
 
-1. Każdy dokument zawiera listę pociągnięć, że użytkownik ma już rysowania. Każdy obrys jest definiowany przez `CStroke` obiektu. `CStroke` Klasy nie zawiera informacji na temat koloru pióra, więc należy zmodyfikować klasy. W scribdoc.h w `CStroke` klasy, Dodaj następujące wiersze kodu po definicji `m_nPenWidth` element członkowski danych.
+1. Każdy dokument zawiera listę stokes, że użytkownik już narysował. Każdy obrys `CStroke` jest definiowany przez obiekt. Klasa `CStroke` nie zawiera informacji o kolorze pióra, więc należy zmodyfikować klasę. W pliku scribdoc.h `CStroke` w klasie dodaj następujące wiersze kodu `m_nPenWidth` po definicji elementu członkowskiego danych.
 
    ```cpp
    // Pen color for the stroke
    COLORREF m_penColor;
    ```
 
-1. W scribdoc.h, Dodaj nowy `CStroke` konstruktora, w której parametry Określ szerokość i kolor. Dodaj następujący wiersz kodu po `CStroke(UINT nPenWidth);` instrukcji.
+1. W pliku scribdoc.h `CStroke` dodaj nowego konstruktora, którego parametry określają szerokość i kolor. Dodaj następujący wiersz kodu `CStroke(UINT nPenWidth);` po instrukcji.
 
    ```cpp
    CStroke(UINT nPenWidth, COLORREF penColor);
    ```
 
-1. W scribdoc.cpp, Dodaj implementację nowej `CStroke` konstruktora. Dodaj następujący kod po wprowadzeniu w życie `CStroke::CStroke(UINT nPenWidth)` konstruktora.
+1. W pliku scribdoc.cpp dodaj implementację nowego `CStroke` konstruktora. Dodaj następujący kod po implementacji konstruktora. `CStroke::CStroke(UINT nPenWidth)`
 
    ```cpp
    // Constructor that uses the document's current width and color
@@ -232,34 +232,34 @@ Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać
    if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))
    ```
 
-1. Ustaw domyślny kolor pióra klasy dokumentu. W scribdoc.cpp, Dodaj następujące wiersze do `CScribbleDoc::InitDocument`po `m_nThickWidth = 5;` instrukcji.
+1. Ustawianie domyślnego koloru pióra dla klasy dokumentu. W pliku scribdoc.cpp dodaj `CScribbleDoc::InitDocument`następujące wiersze do , po `m_nThickWidth = 5;` instrukcji.
 
    ```cpp
    // default pen color is black
    m_penColor = RGB(0, 0, 0);
    ```
 
-1. W scribdoc.cpp, Zmień w pierwszym wierszu `CScribbleDoc::NewStroke` metody do następującego.
+1. W pliku scribdoc.cpp zmień pierwszy `CScribbleDoc::NewStroke` wiersz metody na następujący.
 
    ```cpp
    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
    ```
 
-1. Zmień ostatni wiersz `CScribbleDoc::ReplacePen` metody do następującego.
+1. Zmień ostatni wiersz `CScribbleDoc::ReplacePen` metody na następujący.
 
    ```cpp
    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);
    ```
 
-1. Możesz dodać `m_penColor` elementu członkowskiego w poprzednim kroku. Teraz Utwórz program obsługi zdarzeń dla przycisku koloru, który ustawia element członkowski.
+1. Element członkowski `m_penColor` został dodany w poprzednim kroku. Teraz utwórz program obsługi zdarzeń dla przycisku kolor, który ustawia element członkowski.
 
-   1. W **widok zasobów** okna, otwórz zasób menu IDR_SCRIBBTYPE.
+   1. W oknie **Widok zasobów** otwórz zasób menu IDR_SCRIBBTYPE.
 
-   1. Kliknij prawym przyciskiem myszy **kolor** element menu i kliknij przycisk **dodać program obsługi zdarzeń**. **Kreator obsługi zdarzeń** pojawia się.
+   1. Kliknij prawym przyciskiem myszy element menu **Kolor** i kliknij polecenie **Dodaj program obsługi zdarzeń**. Zostanie **wyświetlony Kreator obsługi zdarzeń.**
 
-   1. W **listy klas** polu w kreatorze Wybierz **CScribbleDoc** a następnie kliknij przycisk **dodawać i edytować** przycisku. Polecenie tworzy `CScribbleDoc::OnPenColor` szkieletu program obsługi zdarzenia.
+   1. W polu **listy Klasa** w kreatorze wybierz pozycję **CScribbleDoc,** a następnie kliknij przycisk **Dodaj i edytuj.** Polecenie tworzy `CScribbleDoc::OnPenColor` skrót programu obsługi zdarzeń.
 
-1. Zastąp klasy zastępczej dla `CScribbleDoc::OnPenColor` programu obsługi zdarzeń z następującym kodem.
+1. Zastąp `CScribbleDoc::OnPenColor` skrót dla programu obsługi zdarzeń następującym kodem.
 
    ```cpp
    void CScribbleDoc::OnPenColor()
@@ -277,17 +277,17 @@ Ponieważ oryginalnej aplikacji bazgrołów nie ma kolor pióra, musisz napisać
    }
    ```
 
-1. Zapisz zmiany, a następnie tworzenie i uruchamianie aplikacji. Teraz możesz nacisnąć przycisk koloru i zmiana koloru pióra.
+1. Zapisz zmiany, a następnie skompiluj i uruchom aplikację. Teraz możesz nacisnąć przycisk koloru i zmienić kolor pióra.
 
-##  <a name="initpensave"></a> Inicjowanie pióra i preferencji zapisywania
+## <a name="initializing-pens-and-saving-preferences"></a><a name="initpensave"></a>Inicjowanie piór i preferencje zapisywania
 
-Następnie można zainicjować, kolor i grubość pióra. Na koniec Zapisz i załadować koloru rysowania z pliku.
+Następnie należy zainicjować kolor i szerokość pisaków. Na koniec zapisz i załaduj rysunek kolorowy z pliku.
 
-### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Aby zainicjować kontrolki na pasku wstążki
+### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Aby zainicjować formanty na pasku wstążki
 
-1. Zainicjuj pióra w pasku wstążki.
+1. Zainicjować pióra na pasku wstążki.
 
-   Dodaj następujący kod do scribdoc.cpp, w `CScribbleDoc::InitDocument` metoda po `m_sizeDoc = CSize(200,200)` instrukcji.
+   Dodaj następujący kod do scribdoc.cpp, w `CScribbleDoc::InitDocument` `m_sizeDoc = CSize(200,200)` metodzie, po instrukcji.
 
    ```cpp
    // Reset the ribbon UI to its initial values
@@ -317,25 +317,25 @@ Następnie można zainicjować, kolor i grubość pióra. Na koniec Zapisz i za�
    pThickComboBox->SelectItem(0);
    ```
 
-1. Zapisz kolor Rysowanie w pliku. Dodaj następującą instrukcję, aby scribdoc.cpp, w `CStroke::Serialize` metoda po `ar << (WORD)m_nPenWidth;` instrukcji.
+1. Zapisywanie rysunku kolorowego w pliku. Dodaj następującą instrukcję do scribdoc.cpp, w metodzie, `CStroke::Serialize` po `ar << (WORD)m_nPenWidth;` instrukcji.
 
    ```cpp
    ar << (COLORREF)m_penColor;
    ```
 
-1. Na koniec Załaduj kolor rysowania z pliku. Dodaj następujący wiersz kodu, w `CStroke::Serialize` metoda po `m_nPenWidth = w;` instrukcji.
+1. Na koniec załaduj rysunek kolorowy z pliku. Dodaj następujący wiersz kodu, `CStroke::Serialize` w metodzie, po `m_nPenWidth = w;` instrukcji.
 
    ```cpp
    ar >> m_penColor;
    ```
 
-1. Teraz Bazgroły w kolorze i zapisać w pliku rysunku.
+1. Teraz bazgroł w kolorze i zapisz rysunek w pliku.
 
-## <a name="conclusion"></a>Wniosek
+## <a name="conclusion"></a>Podsumowanie
 
-Klasa Scribble MFC aplikacji został zaktualizowany. Należy użyć w tym przewodniku jako przewodnika podczas modyfikowania istniejących aplikacji.
+Zaktualizowano aplikację MFC Scribble. Użyj tego przewodnika jako przewodnika podczas modyfikowania istniejących aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przewodniki](../mfc/walkthroughs-mfc.md)<br/>
+[Wskazówki](../mfc/walkthroughs-mfc.md)<br/>
 [Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

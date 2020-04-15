@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Collections:: BackInsertIterator, Klasa'
+title: Platforma::Kolekcje::Klasa BackInsertIterator
 ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fcb680c8f43a50801d081762bb5b546cb110c52d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354769"
 ---
-# <a name="platformcollectionsbackinsertiterator-class"></a>Platform:: Collections:: BackInsertIterator, Klasa
+# <a name="platformcollectionsbackinsertiterator-class"></a>Platforma::Kolekcje::Klasa BackInsertIterator
 
-Reprezentuje iterator, który wstawia zamiast nadpisać elementy do zaplecza kolekcji sekwencyjnej.
+Reprezentuje iteratora, który wstawia, a nie zastępuje, elementy do tylnej części kolekcji sekwencyjnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 #### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ elementu w bieżącej kolekcji.
 
 ### <a name="remarks"></a>Uwagi
@@ -39,17 +39,17 @@ Klasa BackInsertIterator implementuje reguły wymagane przez [klasę back_insert
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[BackInsertIterator::BackInsertIterator](#ctor)|Inicjuje nowe wystąpienie klasy BackInsertIterator.|
+|[BackInsertiterator::BackInsertiterator](#ctor)|Inicjuje nowe wystąpienie klasy BackInsertIterator.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[BackInsertIterator:: operator * — operator](#operator-dereference)|Pobiera odwołanie do bieżącego BackInsertIterator.|
-|[Operator BackInsertIterator:: operator + +](#operator-increment)|Zwraca odwołanie do bieżącego BackInsertIterator. Iterator nie jest modyfikowany.|
-|[BackInsertIterator:: operator = — operator](#operator-assign)|Dołącza określony obiekt do końca bieżącej kolekcji sekwencyjnej.|
+|[BackInsertIterator::operator* Operator](#operator-dereference)|Pobiera odwołanie do bieżącego backInsertIterator.|
+|[BackInsertIterator::operator++ Operator](#operator-increment)|Zwraca odwołanie do bieżącego backInsertIterator. Iterator jest niezmodyfikowany.|
+|[BackInsertIterator::operator= Operator](#operator-assign)|Dołącza określony obiekt na końcu bieżącej kolekcji sekwencyjnej.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,11 +57,11 @@ Klasa BackInsertIterator implementuje reguły wymagane przez [klasę back_insert
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** Collection. h
+**Nagłówek:** collection.h
 
-**Przestrzeń nazw:** Platform:: Collections
+**Obszar nazw:** Platforma::Kolekcje
 
-## <a name="ctor"></a>BackInsertIterator:: BackInsertIterator — Konstruktor
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>BackInsertiterator::Konstruktor zaplecza
 
 Inicjuje nowe wystąpienie klasy `BackInsertIterator`.
 
@@ -75,15 +75,15 @@ explicit BackInsertIterator(
 #### <a name="parameters"></a>Parametry
 
 *v*<br/>
-IVector\<T > obiektu.
+Obiekt> IVector\<T.
 
 ### <a name="remarks"></a>Uwagi
 
-`BackInsertIterator` Wstawia elementy po ostatnim elemencie obiektu określonego przez `v`parametru.
+A `BackInsertIterator` wstawia elementy po ostatnim elemencie obiektu określonego przez parametr `v`.
 
-## <a name="operator-assign"></a>BackInsertIterator:: operator = — operator
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>BackInsertIterator::operator= Operator
 
-Dołącza określony obiekt do końca bieżącej kolekcji sekwencyjnej.
+Dołącza określony obiekt na końcu bieżącej kolekcji sekwencyjnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,16 +93,16 @@ BackInsertIterator& operator=( const T& t);
 
 #### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Obiekt do dołączenia do bieżącej kolekcji.
+*t*<br/>
+Obiekt do dołączona do bieżącej kolekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bieżącego BackInsertIterator.
+Odwołanie do bieżącego backInsertIterator.
 
-## <a name="operator-dereference"></a>BackInsertIterator:: operator * — operator
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>BackInsertIterator::operator* Operator
 
-Pobiera odwołanie do bieżącego BackInsertIterator.
+Pobiera odwołanie do bieżącego backInsertIterator.
 
 ## <a name="syntax"></a>Składnia
 
@@ -112,15 +112,15 @@ BackInsertIterator& operator*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bieżącego BackInsertIterator.
+Odwołanie do bieżącego backInsertIterator.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator zwraca odwołanie do bieżącego BackInsertIterator; nie do żadnego elementu w bieżącej kolekcji.
+Ten operator zwraca odwołanie do bieżącego backInsertIterator; nie do żadnego elementu w bieżącej kolekcji.
 
-## <a name="operator-increment"></a>Operator BackInsertIterator:: operator + +
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>BackInsertIterator::operator++ Operator
 
-Zwraca odwołanie do bieżącego BackInsertIterator. Iterator nie jest modyfikowany.
+Zwraca odwołanie do bieżącego backInsertIterator. Iterator jest niezmodyfikowany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -132,14 +132,14 @@ BackInsertIterator operator++(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bieżącego BackInsertIterator.
+Odwołanie do bieżącego backInsertIterator.
 
 ### <a name="remarks"></a>Uwagi
 
-Zgodnie z projektem pierwsza Przykładowa składnia umożliwia wstępne zwiększenie bieżącej BackInsertIterator, a druga — zwiększa bieżącą BackInsertIterator. Typ `int` w drugiej składni wskazuje operację po przyrostie, a nie rzeczywisty argument operacji całkowitej.
+Zgodnie z projektem pierwszy przykład składni wstępnie zwiększa bieżący program BackInsertIterator, a druga składnia zwiększa bieżący program BackInsertIterator. Typ `int` w drugiej składni wskazuje operację przyrostową, a nie rzeczywisty argument całkowity.
 
-Jednak ten operator nie modyfikuje BackInsertIterator. Zamiast tego, ten operator zwraca odwołanie do niemodyfikowanego, bieżącego iteratora. Jest to takie samo zachowanie jak [operator *](#operator-dereference).
+Jednak ten operator faktycznie nie modyfikuje BackInsertIterator. Zamiast tego operator zwraca odwołanie do niezmodyfikowanego, bieżącego iteratora. Jest to takie samo zachowanie jak [operator*](#operator-dereference).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw platformy](platform-namespace-c-cx.md)
+[Obszar nazw platformy](platform-namespace-c-cx.md)

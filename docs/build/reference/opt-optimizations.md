@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b25db4d6c260c3c6751de293aa2a82df8aa05e7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336224"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optymalizacje)
 
@@ -30,82 +30,82 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ OPT:**{**REF** | **NOREF**}<br/>
-> **/ OPT:**{**ICF**[**=**_iteracji_] | **NOICF**}<br/>
+> **/OPT:**{**REF** | **NOREF**}<br/>
+> **/OPT:**{**ICF**[**=**_iteracje_] | **NOICF**}<br/>
 > **/OPT:**{**LBR** | **NOLBR**}
 
 ## <a name="arguments"></a>Argumenty
 
-**REF** &AMP;#124; **NOREF**
+**REF** &#124; **NOREF**
 
-**/ OPT: REF** eliminuje funkcje i dane, które nigdy nie są wywoływane; **/OPT:NOREF** utrzymuje funkcje i dane, które nigdy nie są wywoływane.
+**/OPT:REF** eliminuje funkcje i dane, które nigdy nie są przywoły, o których mowa; **/OPT:NOREF** przechowuje funkcje i dane, które nigdy nie są przywoływane.
 
-/ OPT: REF jest włączone, LINK Usuwa nieużywane spakowane funkcje i dane, znane jako *Comdat*. Ta optymalizacja jest znana jako eliminacja przechodnia (lub tranzytywna) COMDAT. **/OPT: REF** opcji również wyłącza łączenie przyrostowe.
+Gdy opcja /OPT:REF jest włączona, funkcja LINK usuwa nieodłączone spakowane funkcje i dane, znane jako *COMDATs*. Ta optymalizacja jest znana jako eliminacja przechodnia (lub tranzytywna) COMDAT. Opcja **/OPT:REF** wyłącza również łączenie przyrostowe.
 
-Funkcje śródwierszowe i funkcji składowej zdefiniowanej w obrębie deklaracji klasy są zawsze Comdat. Wszystkie funkcje w pliku obiektu są wykonywane w Comdat, gdy jest kompilowany przy użyciu [/Gy](gy-enable-function-level-linking.md) opcji. Aby umieścić **const** dane w Comdat, należy zadeklarować ją za pomocą `__declspec(selectany)`. Aby uzyskać informacje dotyczące sposobu określania danych do usunięcia lub zwijanie, zobacz [selectany](../../cpp/selectany.md).
+Wbudowane funkcje i funkcje członkowskie zdefiniowane wewnątrz deklaracji klasy są zawsze COMDATs. Wszystkie funkcje w pliku obiektu są wykonane w COMDATs, jeśli jest skompilowany przy użyciu [/Gy](gy-enable-function-level-linking.md) opcji. Aby umieścić **const** danych w COMDATs, `__declspec(selectany)`należy zadeklarować go za pomocą . Aby uzyskać informacje na temat określania danych do usunięcia lub złożenia, zobacz [selectany](../../cpp/selectany.md).
 
-Domyślnie **/OPT: REF** został włączony przez konsolidator, chyba że **/OPT:NOREF** lub [/DEBUG](debug-generate-debug-info.md) jest określony. Aby zastąpić to ustawienie domyślne i zachować COMDATs bez odwołań w programie, określ **/OPT:NOREF**. Możesz użyć [/INCLUDE](include-force-symbol-references.md) opcję, aby zastąpić usunięcie określonego symbolu.
+Domyślnie **/OPT:REF** jest włączona przez konsolidator, chyba że **podano wartość /OPT:NOREF** lub [/DEBUG.](debug-generate-debug-info.md) Aby zastąpić tę wartość domyślną i zachować w programie nieodnosione identyfikatory COMDATs, należy określić **/OPT:NOREF**. Można użyć opcji [/INCLUDE,](include-force-symbol-references.md) aby zastąpić usunięcie określonego symbolu.
 
-Jeśli [/DEBUG](debug-generate-debug-info.md) jest określony, wartość domyślna dla **/OPT** jest **NOREF**, a wszystkie funkcje są zachowywane w obrazie. Aby zastąpić to ustawienie domyślne i zoptymalizować kompilację debugowania, określ **/OPT: REF**. Można zmniejszyć rozmiar plik wykonywalny i mogą być przydatne optymalizacji, nawet w przypadku debugowania kompilacji. Firma Microsoft zaleca również określenie **noicf** zachować identyczne funkcje podczas debugowania kompilacji. Dzięki temu można łatwiej odczytywać ślady stosu i ustawiać punkty przerwania w funkcjach, które w przeciwnym razie byłyby składane razem.
+Jeśli [/DEBUG](debug-generate-debug-info.md) jest określony, domyślnie **dla /OPT** jest **NOREF**, a wszystkie funkcje są zachowywane na obrazie. Aby zastąpić tę wartość domyślną i zoptymalizować kompilację debugowania, określ **/OPT:REF**. Może to zmniejszyć rozmiar pliku wykonywalnego i może być użyteczną optymalizacją nawet w kompilacjach debugowania. Zaleca się również określenie **/OPT:NOICF** zachować identyczne funkcje w kompilacjach debugowania. Dzięki temu można łatwiej odczytywać ślady stosu i ustawiać punkty przerwania w funkcjach, które w przeciwnym razie byłyby składane razem.
 
-**ICF**\[**=**_iterations_] &#124; **NOICF**
+**Iteracje ICF**\[**=**_iterations_] &#124; **NOICF**
 
-Użyj **ICF**\[**=**_iteracji_] Aby wykonać identyczne składanie COMDAT. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Opcjonalny *iteracji* parametr określa, ile razy przenosić symbole dla duplikatów. Domyślna liczba iteracji wynosi 1. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.
+Użyj_iteracji_ **ICF**\[**=**], aby wykonać identyczne składanie COMDAT. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Parametr *opcjonalnych iteracji* określa liczbę razy, kiedy symbole mają być przenoszone przez symbole duplikatów. Domyślna liczba iteracji to 1. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.
 
-Domyślnie **/OPT: ICF** został włączony przez konsolidator, chyba że **noicf** lub [/DEBUG](debug-generate-debug-info.md) jest określony. Aby zastąpić to ustawienie domyślne i uniemożliwić Comdat jest składanych w programie, określ **noicf**.
+Domyślnie **/OPT:ICF** jest włączona przez konsolidator, chyba że **podano wartość /OPT:NOICF** lub [/DEBUG.](debug-generate-debug-info.md) Aby zastąpić tę wartość domyślną i zapobiec składaniu comdatów w programie, określ **/OPT:NOICF**.
 
-Do kompilacji debugowanej, należy jawnie określić **/OPT: ICF** aby umożliwić składanie COMDAT. Jednak ponieważ **/OPT: ICF** może scalić identyczne dane lub funkcje, może zmienić nazwy funkcji, które pojawiają się w śladach stosu. Może także spowodować, że można ustawić punktów przerwania w pewnych funkcjach lub zbadanie niektórych danych w debugerze i przejście do nieoczekiwanych funkcji po użytkownik pojedynczy krok przeglądania kodu. Zachowania kodu są identyczne, ale prezentacji debuger może być bardzo mylące. W związku z tym, nie zaleca się używanie **/OPT: ICF** w przypadku debugowania kompilacji, chyba że korzyści wynikające z mniejszego kodu przewyższają niedogodności.
+W kompilacji debugowania należy jawnie określić **/OPT:ICF,** aby włączyć składanie COMDAT. Jednak ponieważ **/OPT:ICF** można scalić identyczne dane lub funkcje, można zmienić nazwy funkcji, które pojawiają się w ślady stosu. Może również uniemożliwić ustawienie punktów przerwania w niektórych funkcji lub zbadać niektóre dane w debugerze i może zabrać Cię do nieoczekiwanych funkcji, gdy jednoetapowy kod. Zachowanie kodu jest identyczne, ale prezentacja debugera może być bardzo mylące. W związku z tym nie zaleca się używać **/OPT:ICF** w debugowania kompilacji, chyba że korzyści mniejszego kodu przewyższają te wady.
 
 > [!NOTE]
-> Ponieważ **/OPT: ICF** może spowodować, że ten sam adres, który ma być przypisane do różnych funkcji lub elementów członkowskich danych tylko do odczytu (czyli **const** zmiennych, gdy kompilowany przy użyciu **/Gy**), może przerwać program, który zależy od unikatowych adresów dla funkcji lub elementów członkowskich danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [/Gy (Włącz łączenie poziomie funkcji)](gy-enable-function-level-linking.md).
+> Ponieważ **/OPT:ICF** może spowodować, że ten sam adres ma być przypisany do różnych funkcji lub elementów członkowskich danych tylko do odczytu (czyli zmiennych **const** podczas kompilowania przy użyciu **/Gy),** może spowodować przerwanie programu, który zależy od unikatowych adresów dla funkcji lub tylko do odczytu elementów członkowskich danych. Aby uzyskać więcej informacji, zobacz [/Gy (Włącz łączenie na poziomie funkcji)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
-**/OPT:LBR** i **nolbr** opcje dotyczą tylko plików binarnych ARM. Ponieważ pewne instrukcje gałęzi procesora ARM mają ograniczony zasięg, jeśli konsolidator wykryje skok do adresu spoza zakresu, zastępuje adres docelowy instrukcji gałęzi adresem kodu „wyspy”, który zawiera instrukcję gałęzi, która odnosi się do faktycznego adresu docelowego. Możesz użyć **/OPT:LBR** Aby zoptymalizować wykrywanie instrukcji długich gałęzi i położenie pośrednich Wysp kodu do zminimalizowania całkowitego rozmiaru kodu. **Nolbr** powoduje, że konsolidator generuje Wyspy kodu dla instrukcji długich gałęzi po ich napotkaniu, bez optymalizacji.
+Opcje **/OPT:LBR** i **/OPT:NOLBR** mają zastosowanie tylko do plików binarnych ARM. Ponieważ niektóre instrukcje gałęzi procesora ARM mają ograniczony zakres, jeśli konsolidator wykryje skok do adresu poza zakresem, zastępuje adres docelowy instrukcji gałęzi adresem kodem "wyspa", który zawiera instrukcję gałęzi, która jest przeznaczona dla rzeczywistego miejsca docelowego. Można użyć **/OPT:LBR,** aby zoptymalizować wykrywanie długich instrukcji gałęzi i rozmieszczenie wysp kodu pośredniego, aby zminimalizować ogólny rozmiar kodu. **/OPT:NOLBR** instruuje konsolidatora do generowania wysp kodu dla długich instrukcji gałęzi, jak są one napotkane, bez optymalizacji.
 
-Domyślnie **/OPT:LBR** opcja jest ustawiona, gdy łączenie przyrostowe nie jest włączone. Jeśli chcesz nieprzyrostowego łącza, ale nie chcesz długich optymalizacji rozgałęzień, określ **nolbr**. **/OPT:LBR** opcji wyłącza łączenie przyrostowe.
+Domyślnie opcja **/OPT:LBR** jest ustawiana, gdy łączenie przyrostowe nie jest włączone. Jeśli chcesz łącze niewymiotne, ale nie długie optymalizacje gałęzi, określ **/OPT:NOLBR**. Opcja **/OPT:LBR** wyłącza łączenie przyrostowe.
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia, w wierszu polecenia, konsolidator wartość domyślna to **LBR/OPT: REF, ICF,**. Jeśli **/DEBUG** jest określony, wartością domyślną jest **NOLBR /OPT:NOREF, NOICF,**.
+Gdy jest używany w wierszu polecenia, konsolidator domyślnie **ma wartość /OPT:REF,ICF,LBR**. Jeśli **/DEBUG** jest określony, wartość domyślna to **/OPT:NOREF,NOICF,NOLBR**.
 
-**/OPT** optymalizacje ogólnie zmniejszają rozmiar obrazu i zwiększają szybkość programu. Te ulepszenia mogą być istotne w przypadku większych programów, dlatego są one włączone domyślnie dla sprzedaży detalicznej.
+Optymalizacje **/OPT** zazwyczaj zmniejszają rozmiar obrazu i zwiększają szybkość programu. Te ulepszenia mogą być znaczne w większych programach, dlatego są domyślnie włączone dla kompilacji detalicznych.
 
-Optymalizacji konsolidatora zająć dodatkowy czas na początku, ale zoptymalizowanego kodu również pozwala zaoszczędzić czas, kiedy konsolidator relokacje mniej można naprawić i tworzy mniejsze finalnego obrazu i zaoszczędzić jeszcze więcej czas, kiedy ma mniej informacji debugowania, aby przetworzyć i zapisać w pliku PDB. Kiedy Optymalizacja jest włączona, dzięki temu może skrócić czas łącza, zgodnie z niewielkim kosztem dodatkowej analizy mogą być zrównoważone przez czas, który oszczędności w konsolidatorze przesuwa się nad mniejsze pliki binarne.
+Optymalizacja konsolidatora zajmuje dodatkowy czas z góry, ale zoptymalizowany kod oszczędza również czas, gdy konsolidator ma mniej relokacji, aby naprawić i tworzy mniejszy obraz końcowy, i oszczędza jeszcze więcej czasu, gdy ma mniej informacji debugowania do przetwarzania i zapisu w PDB. Gdy optymalizacja jest włączona, może to spowodować krótszy czas łącza ogólnej, jak mały dodatkowy koszt w analizie może być więcej niż kompensowane przez oszczędność czasu w konsolidator przechodzi przez mniejsze pliki binarne.
 
-**/OPT** argumenty można określić razem, oddzielonych przecinkami. Na przykład, zamiast z **/OPT: REF noicf**, można określić **/OPT: REF, NOICF**.
+Argumenty **/OPT** mogą być określone razem, oddzielone przecinkami. Na przykład zamiast **/OPT:REF /OPT:NOICF**można określić **/OPT:REF,NOICF**.
 
-Możesz użyć [/VERBOSE](verbose-print-progress-messages.md) opcję konsolidatora, aby zobaczyć funkcje, które są usuwane przez **/OPT: REF** i funkcje, które są składane przez **/OPT: ICF**.
+Za pomocą konsolidatora [/VERBOSE](verbose-print-progress-messages.md) można wyświetlić funkcje, które są usuwane przez **/OPT:REF,** oraz funkcje, które są składane przez **/OPT:ICF**.
 
-**/OPT** argumentów jest często skonfigurowane dla projektów utworzonych za pomocą **nowy projekt** okna dialogowego w programie Visual Studio IDE i zwykle mają różne wartości do debugowania i zwalniania konfiguracji. Jeśli wartość nie jest ustawiona dla tych opcji konsolidatora w projekcie, możesz uzyskać wartości domyślne projektu, które mogą być inne niż wartości domyślne używane przez konsolidator, w wierszu polecenia.
+Argumenty **/OPT** są często ustawiane dla projektów utworzonych przy użyciu okna dialogowego **Nowy projekt** w programie Visual Studio IDE i zwykle mają różne wartości dla konfiguracji debugowania i wydania. Jeśli nie ustawiono żadnej wartości dla tych opcji konsolidatora w projekcie, można uzyskać domyślne wartości projektu, które mogą różnić się od wartości domyślnych używanych przez konsolidator w wierszu polecenia.
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję OPT:ICF lub OPT:REF konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
+1. Wybierz stronę właściwości > **Optymalizacja**  > **konsolidatora**właściwości właściwości **konfiguracji.**
 
 1. Zmodyfikuj jedną z tych właściwości:
 
    - **Włącz zwijanie COMDAT**
 
-   - **Odwołania**
+   - **Dokumentacja**
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora OPT:LBR w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości**wiersza polecenia wiersza**  > **konsolidatora** >  **właściwości konfiguracji.**
 
-1. Wpisz opcje w **dodatkowe opcje**:
+1. Wprowadź opcję w opcji **Dodatkowe opcje:**
 
    `/opt:lbr` lub `/opt:nolbr`
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> właściwości.
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> i właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
 - [Opcje konsolidatora MSVC](linker-options.md)

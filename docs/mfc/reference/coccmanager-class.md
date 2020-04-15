@@ -30,16 +30,16 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5637a4709e90bb14caff3fe4e396487e62e213e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416761"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360360"
 ---
 # <a name="coccmanager-class"></a>Klasa COccManager
 
-Zarządza różnymi lokacjami kontrolek niestandardowych; zaimplementowane przez `COleControlContainer` i `COleControlSite` obiektów.
+Zarządza różnymi niestandardowymi witrynami kontroli; implementowane `COleControlContainer` przez `COleControlSite` obiekty i obiekty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,28 +47,28 @@ Zarządza różnymi lokacjami kontrolek niestandardowych; zaimplementowane przez
 class COccManager : public CNoTrackObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COccManager:: iscontainerer](#createcontainer)|Tworzy obiekt `COleContainer`.|
-|[COccManager::CreateDlgControls](#createdlgcontrols)|Tworzy kontrolki ActiveX hostowane przez skojarzony obiekt `COleContainer`.|
-|[COccManager:: issite](#createsite)|Tworzy obiekt `COleClientSite`.|
-|[COccManager::GetDefBtnCode](#getdefbtncode)|Pobiera kod przycisku domyślnego.|
-|[COccManager::IsDialogMessage](#isdialogmessage)|Określa docelowy komunikat okna dialogowego.|
-|[COccManager::IsLabelControl](#islabelcontrol)|Określa, czy określony formant jest formantem etykiety.|
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Określa, czy bieżąca wartość jest zgodna z parametrem określonej kontrolki.|
-|[COccManager:: OnEvent](#onevent)|Próbuje obsłużyć określone zdarzenie.|
-|[COccManager::P ostCreateDialog](#postcreatedialog)|Zwalnia zasoby przydzieloną podczas tworzenia okna dialogowego.|
-|[COccManager::P reCreateDialog](#precreatedialog)|Przetwarza szablon okna dialogowego dla formantów ActiveX.|
-|[COccManager::SetDefaultButton](#setdefaultbutton)|Przełącza domyślny stan określonej kontrolki.|
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Oddziela wszystkie istniejące kontrolki ActiveX z formantów wspólnych w określonym szablonie okna dialogowego.|
+|[Menedżer COcc::CreateContainer](#createcontainer)|Tworzy obiekt `COleContainer`.|
+|[Menedżer COcc::CreateDlgControls](#createdlgcontrols)|Tworzy formanty ActiveX, hostowane przez skojarzony `COleContainer` obiekt.|
+|[Menedżer COcc::CreateSite](#createsite)|Tworzy obiekt `COleClientSite`.|
+|[Menedżer COcc::GetDefBtnCode](#getdefbtncode)|Pobiera kod przycisku domyślnego.|
+|[Menedżer COcc::IsDialogMessage](#isdialogmessage)|Określa miejsce docelowe komunikatu okna dialogowego.|
+|[Menedżer COcc::IsLabelControl](#islabelcontrol)|Określa, czy określony formant jest formantem etykiety.|
+|[Menedżer COcc::IsMatchingMnemonic](#ismatchingmnemonic)|Określa, czy bieżąca mnemonic pasuje do mnemonic określonego formantu.|
+|[Menedżer COcc::OnEvent](#onevent)|Próbuje obsłużyć określone zdarzenie.|
+|[Menedżer COcc::PostTworzeniedialog](#postcreatedialog)|Zwalnia zasoby przydzielone podczas tworzenia okna dialogowego.|
+|[COccManager::PreCreateDialog](#precreatedialog)|Przetwarza szablon okna dialogowego dla formantów ActiveX.|
+|[Menedżer COcc::SetDefaultButton](#setdefaultbutton)|Przełącza domyślny stan określonego formantu.|
+|[Menedżer COcc::SplitDialogTemplate](#splitdialogtemplate)|Oddziela wszystkie istniejące formanty ActiveX od typowych formantów w określonym szablonie okna dialogowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa bazowa, `CNoTrackObject`, jest nieudokumentowaną klasą bazową (znajdującą się w AFXTLS. H). Przeznaczone do użycia przez strukturę MFC, klasy pochodne klasy `CNoTrackObject` są wykluczone z wykrywania przecieków pamięci. Nie zaleca się wyprowadzania bezpośrednio z `CNoTrackObject`.
+Klasa podstawowa `CNoTrackObject`, jest nieudokumentowaną klasą podstawową (znajdującą się w AFXTLS. H). Przeznaczone do użytku przez platformę MFC, `CNoTrackObject` klasy pochodzące z klasy są zwolnione z wykrywania przecieków pamięci. Nie zaleca się, aby pochodzić `CNoTrackObject`bezpośrednio z .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -78,11 +78,11 @@ Klasa bazowa, `CNoTrackObject`, jest nieudokumentowaną klasą bazową (znajduj�
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxocc. h
+**Nagłówek:** afxocc.h
 
-##  <a name="createcontainer"></a>COccManager:: iscontainerer
+## <a name="coccmanagercreatecontainer"></a><a name="createcontainer"></a>Menedżer COcc::CreateContainer
 
-Wywoływane przez platformę w celu utworzenia kontenera kontrolek.
+Wywoływana przez strukturę do tworzenia kontenera formantu.
 
 ```
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
@@ -90,20 +90,20 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-Wskaźnik do obiektu okna skojarzonego z kontenerem lokacji niestandardowej.
+*Pwnd*<br/>
+Wskaźnik do obiektu okna skojarzonego z kontenerem witryny niestandardowej.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowo utworzonego kontenera; w przeciwnym razie wartość NULL.
+Wskaźnik do nowo utworzonego kontenera; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat tworzenia niestandardowych witryn, zobacz [COleControlContainer:: AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).
+Aby uzyskać więcej informacji na temat tworzenia witryn niestandardowych, zobacz [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).
 
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls
+## <a name="coccmanagercreatedlgcontrols"></a><a name="createdlgcontrols"></a>Menedżer COcc::CreateDlgControls
 
-Wywołaj tę funkcję, aby utworzyć kontrolki ActiveX określone przez parametr *pOccDialogInfo* .
+Wywołanie tej funkcji, aby utworzyć formanty ActiveX określone przez parametr *pOccDialogInfo.*
 
 ```
 virtual BOOL CreateDlgControls(
@@ -119,25 +119,25 @@ virtual BOOL CreateDlgControls(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndParent*<br/>
-Wskaźnik do elementu nadrzędnego obiektu okna dialogowego.
+*pWndRodziciela*<br/>
+Wskaźnik do obiektu nadrzędnego obiektu okna dialogowego.
 
 *lpszResourceName*<br/>
 Nazwa tworzonego zasobu.
 
 *pOccDialogInfo*<br/>
-Wskaźnik do szablonu okna dialogowego służącego do tworzenia obiektu okna dialogowego.
+Wskaźnik do szablonu okna dialogowego użytego do utworzenia obiektu okna dialogowego.
 
 *lpResource*<br/>
 Wskaźnik do zasobu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli formant został utworzony pomyślnie; w przeciwnym razie zero.
+Nonzero, jeśli formant został utworzony pomyślnie; w przeciwnym razie zero.
 
-##  <a name="createsite"></a>COccManager:: issite
+## <a name="coccmanagercreatesite"></a><a name="createsite"></a>Menedżer COcc::CreateSite
 
-Wywoływane przez platformę, aby utworzyć witrynę kontrolki hostowaną przez kontener wskazywany przez *pCtrlCont*.
+Wywoływana przez strukturę do tworzenia witryny kontrolnej, hostowana przez kontener wskazany przez *pCtrlCont*.
 
 ```
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
@@ -145,22 +145,22 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 
 ### <a name="parameters"></a>Parametry
 
-*pCtrlCont*<br/>
-Wskaźnik do kontenera sterowania hostującym nową lokację sterowania.
+*pCtrlCont (Kont.*<br/>
+Wskaźnik do kontenera formantu obsługującego nową witrynę sterowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowo utworzonej lokacji sterowania.
+Wskaźnik do nowo utworzonej witryny sterowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, aby utworzyć niestandardową lokację kontrolną przy użyciu klasy pochodnej [COleControlSite](../../mfc/reference/colecontrolsite-class.md).
+Zastąpić tę funkcję, aby utworzyć witrynę kontroli niestandardowej, przy użyciu [COleControlSite](../../mfc/reference/colecontrolsite-class.md)klasy pochodnej.
 
-Każdy kontener sterowania może obsługiwać wiele lokacji. Utwórz dodatkowe lokacje z wieloma wywołaniami do `CreateSite`.
+Każdy kontener formantu może obsługiwać wiele lokacji. Tworzenie dodatkowych witryn z `CreateSite`wieloma połączeniami do .
 
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode
+## <a name="coccmanagergetdefbtncode"></a><a name="getdefbtncode"></a>Menedżer COcc::GetDefBtnCode
 
-Wywołaj tę funkcję, aby określić, czy formant jest domyślnym przyciskiem wypchnięcia.
+Wywołanie tej funkcji, aby ustalić, czy formant jest domyślnym przyciskiem.
 
 ```
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
@@ -168,22 +168,22 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-Obiekt window zawierający formant Button.
+*Pwnd*<br/>
+Obiekt okna zawierający kontrolka przycisku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jedna z następujących wartości:
 
-- Formant DLGC_DEFPUSHBUTTON jest domyślnym przyciskiem w oknie dialogowym.
+- DLGC_DEFPUSHBUTTON Control jest przyciskiem domyślnym w oknie dialogowym.
 
-- Formant DLGC_UNDEFPUSHBUTTON nie jest domyślnym przyciskiem w oknie dialogowym.
+- DLGC_UNDEFPUSHBUTTON Control nie jest przyciskiem domyślnym w oknie dialogowym.
 
-- **0** kontrolka nie jest przyciskiem.
+- **0** Sterowanie nie jest przyciskiem.
 
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage
+## <a name="coccmanagerisdialogmessage"></a><a name="isdialogmessage"></a>Menedżer COcc::IsDialogMessage
 
-Wywoływane przez platformę, aby określić, czy komunikat jest przeznaczony dla określonego okna dialogowego i, jeśli jest, przetwarza komunikat.
+Wywoływane przez strukturę, aby ustalić, czy wiadomość jest przeznaczona dla określonego okna dialogowego i, jeśli tak jest, przetwarza komunikat.
 
 ```
 virtual BOOL IsDialogMessage(
@@ -193,25 +193,25 @@ virtual BOOL IsDialogMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndDlg*<br/>
-Wskaźnik do zamierzonego docelowego okna dialogowego komunikatu.
+*pWndDlg (ps.*<br/>
+Wskaźnik do zamierzonego docelowego okna dialogowego wiadomości.
 
 *lpMsg*<br/>
-Wskaźnik do struktury `MSG`, która zawiera komunikat, który ma zostać sprawdzony.
+Wskaźnik do `MSG` struktury, która zawiera wiadomość do sprawdzenia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli komunikat jest przetwarzany; w przeciwnym razie zero.
+Nonzero, jeśli wiadomość jest przetwarzana; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnym zachowaniem `IsDialogMessage` jest wyszukanie komunikatów z klawiatury i przekształcenie ich w wybrane dla odpowiedniego okna dialogowego. Na przykład klawisz TAB, po naciśnięciu, wybiera następną kontrolkę lub grupę kontrolek.
+Domyślnym zachowaniem jest sprawdzenie komunikatów `IsDialogMessage` klawiaturowych i przekonwertowanie ich na wybrane dla odpowiedniego okna dialogowego. Na przykład klawisz TAB po naciśnięciu wybiera następny formant lub grupę formantów.
 
-Zastąp tę funkcję, aby zapewnić niestandardowe zachowanie komunikatów wysyłanych do określonego okna dialogowego.
+Zastąd w tej funkcji należy zastąpić zachowanie niestandardowe dla wiadomości wysyłanych do określonego okna dialogowego.
 
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl
+## <a name="coccmanagerislabelcontrol"></a><a name="islabelcontrol"></a>Menedżer COcc::IsLabelControl
 
-Wywołaj tę funkcję, aby określić, czy określony formant jest formantem etykiety.
+Wywołanie tej funkcji, aby ustalić, czy określony formant jest formantem etykiety.
 
 ```
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
@@ -220,20 +220,20 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-Wskaźnik do okna zawierającego kontrolkę.
+*Pwnd*<br/>
+Wskaźnik do okna zawierającego formant.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli formant jest etykietą; w przeciwnym razie zero
+Nonzero, jeśli formant jest etykietą; w przeciwnym razie zero
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka etykieta jest taka, która działa jak etykieta dla każdej kontrolki w kolejności.
+Formant etykiety jest taki, który działa jak etykieta dla niezależnie od kontroli jest następny w kolejności.
 
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic
+## <a name="coccmanagerismatchingmnemonic"></a><a name="ismatchingmnemonic"></a>Menedżer COcc::IsMatchingMnemonic
 
-Wywołaj tę funkcję, aby określić, czy bieżąca wartość pasuje do reprezentowanej przez formant.
+Wywołanie tej funkcji, aby ustalić, czy bieżące mnemonic pasuje, które są reprezentowane przez formant.
 
 ```
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -247,21 +247,21 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-Wskaźnik do okna zawierającego kontrolkę.
+*Pwnd*<br/>
+Wskaźnik do okna zawierającego formant.
 
 *lpMsg*<br/>
-Wskaźnik do komunikatu zawierającego element, który ma być zgodny.
+Wskaźnik do wiadomości zawierającej mnemonic do dopasowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli parametr jest zgodny z kontrolką; w przeciwnym razie zero
+Nonzero, jeśli mnemonic pasuje do kontroli; w przeciwnym razie zero
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onevent"></a>COccManager:: OnEvent
+## <a name="coccmanageronevent"></a><a name="onevent"></a>Menedżer COcc::OnEvent
 
-Wywoływane przez platformę, aby obsłużyć określone zdarzenie.
+Wywoływana przez strukturę do obsługi określonego zdarzenia.
 
 ```
 virtual BOOL OnEvent(
@@ -273,29 +273,29 @@ virtual BOOL OnEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*pCmdTarget*<br/>
-Wskaźnik do obiektu `CCmdTarget` próbującego obsłużyć zdarzenie
+*pCmdTarget (pCmdTarget)*<br/>
+Wskaźnik do `CCmdTarget` obiektu próbującego obsłużyć zdarzenie
 
-*idCtrl*<br/>
+*idCtrl ( idCtrl )*<br/>
 Identyfikator zasobu formantu.
 
-*pEvent*<br/>
-Obsługiwane zdarzenie.
+*pEvent (właso)*<br/>
+Zdarzenie obsługiwane.
 
 *pHandlerInfo*<br/>
-Jeśli nie ma wartości NULL, `OnEvent` wypełnia `pTarget` i `pmf` elementów członkowskich struktury `AFX_CMDHANDLERINFO` zamiast wysyłania polecenia. Zazwyczaj ten parametr powinien mieć wartość NULL.
+Jeśli nie `OnEvent` null, wypełnia `pTarget` `pmf` i członków `AFX_CMDHANDLERINFO` struktury zamiast wysyłania polecenia. Zazwyczaj ten parametr powinien mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli zdarzenie zostało obsłużone, w przeciwnym razie zero.
+Nonzero, jeśli zdarzenie zostało obsłużonych, w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby dostosować domyślny proces obsługi zdarzeń.
+Zastądnie tej funkcji, aby dostosować domyślny proces obsługi zdarzeń.
 
-##  <a name="precreatedialog"></a>COccManager::P reCreateDialog
+## <a name="coccmanagerprecreatedialog"></a><a name="precreatedialog"></a>COccManager::PreCreateDialog
 
-Wywoływane przez platformę, aby przetworzyć szablon okna dialogowego dla formantów ActiveX przed utworzeniem rzeczywistego okna dialogowego.
+Wywoływane przez strukturę do przetwarzania szablonu okna dialogowego dla formantów ActiveX przed utworzeniem rzeczywistego okna dialogowego.
 
 ```
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -306,24 +306,24 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ### <a name="parameters"></a>Parametry
 
 *pOccDialogInfo*<br/>
-Struktura `_AFX_OCC_DIALOG_INFO` zawierająca informacje o szablonie okna dialogowego i wszystkich kontrolkach ActiveX hostowanych przez okno dialogowe.
+Struktura `_AFX_OCC_DIALOG_INFO` zawierająca informacje o szablonie okna dialogowego i dowolnych formantach ActiveX obsługiwanych przez okno dialogowe.
 
 *pOrigTemplate*<br/>
-Wskaźnik do szablonu okna dialogowego, który ma zostać użyty podczas tworzenia okna dialogowego.
+Wskaźnik do szablonu okna dialogowego, który ma być używany do tworzenia okna dialogowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do struktury szablonu okna dialogowego używany do tworzenia okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne zachowanie wywołuje `SplitDialogTemplate`, określając, czy istnieją jakiekolwiek kontrolki ActiveX, a następnie zwraca wynikowy szablon okna dialogowego.
+Domyślne zachowanie wywołuje `SplitDialogTemplate`, określając, czy istnieją jakieś formanty ActiveX obecne, a następnie zwraca wynikowy szablon okna dialogowego.
 
-Zastąp tę funkcję, aby dostosować proces tworzenia okna dialogowego obsługującego kontrolki ActiveX.
+Zastąd w tej funkcji należy dostosować proces tworzenia okna dialogowego zawierającego formanty ActiveX.
 
-##  <a name="postcreatedialog"></a>COccManager::P ostCreateDialog
+## <a name="coccmanagerpostcreatedialog"></a><a name="postcreatedialog"></a>Menedżer COcc::PostTworzeniedialog
 
-Wywoływane przez platformę, aby zwolnić pamięć przydzieloną dla szablonu okna dialogowego.
+Wywoływane przez strukturę, aby zwolnić pamięć przydzieloną dla szablonu okna dialogowego.
 
 ```
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
@@ -332,17 +332,17 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ### <a name="parameters"></a>Parametry
 
 *pOccDialogInfo*<br/>
-Struktura `_AFX_OCC_DIALOG_INFO` zawierająca informacje o szablonie okna dialogowego i wszystkich kontrolkach ActiveX hostowanych przez okno dialogowe.
+Struktura `_AFX_OCC_DIALOG_INFO` zawierająca informacje o szablonie okna dialogowego i dowolnych formantach ActiveX obsługiwanych przez okno dialogowe.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta pamięć została przypisana przez wywołanie do `SplitDialogTemplate`i została użyta dla wszystkich obsługiwanych formantów ActiveX w oknie dialogowym.
+Ta pamięć została przydzielona `SplitDialogTemplate`przez wywołanie do programu i była używana dla wszystkich hostowanych formantów ActiveX w oknie dialogowym.
 
-Przesłoń tę funkcję, aby dostosować proces czyszczenia wszystkich zasobów używanych przez obiekt okna dialogowego.
+Zastąd w tej funkcji należy dostosować proces czyszczenia zasobów używanych przez obiekt okna dialogowego.
 
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton
+## <a name="coccmanagersetdefaultbutton"></a><a name="setdefaultbutton"></a>Menedżer COcc::SetDefaultButton
 
-Wywołaj tę funkcję, aby ustawić kontrolkę jako przycisk domyślny.
+Wywołanie tej funkcji, aby ustawić formant jako przycisk domyślny.
 
 ```
 static void AFX_CDECL SetDefaultButton(
@@ -352,24 +352,24 @@ static void AFX_CDECL SetDefaultButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*<br/>
-Wskaźnik do okna zawierającego kontrolkę.
+*Pwnd*<br/>
+Wskaźnik do okna zawierającego formant.
 
-*bDefault*<br/>
-Różne od zera, jeśli formant powinien stać się przyciskiem domyślnym; w przeciwnym razie zero.
+*bDefault (Domyślnie)*<br/>
+Nonzero, jeśli formant powinien stać się przyciskiem domyślnym; w przeciwnym razie zero.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!NOTE]
->  Kontrolka musi mieć ustawiony bit stanu OLEMISC_ACTSLIKEBUTTON. Więcej informacji na temat flag OLEMISC można znaleźć w temacie [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) w Windows SDK.
+> Formant musi mieć ustawiony bit stanu OLEMISC_ACTSLIKEBUTTON. Aby uzyskać więcej informacji na temat flag OLEMISC, zobacz temat [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) w windows SDK.
 
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate
+## <a name="coccmanagersplitdialogtemplate"></a><a name="splitdialogtemplate"></a>Menedżer COcc::SplitDialogTemplate
 
-Wywoływane przez platformę, by podzielić kontrolki ActiveX z wspólnych kontrolek dialogowych.
+Wywoływane przez strukturę do dzielenia formantów ActiveX od typowych formantów okna dialogowego.
 
 ```
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -383,22 +383,22 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 Wskaźnik do szablonu okna dialogowego, który ma zostać zbadany.
 
 *ppOleDlgItems*<br/>
-Lista wskaźników do elementów okna dialogowego, które są kontrolkami ActiveX.
+Lista wskaźników do elementów okna dialogowego, które są formantami ActiveX.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do struktury szablonu okna dialogowego zawierającego tylko kontrolki nieactivex. Jeśli kontrolki ActiveX nie są obecne, zwracana jest wartość NULL.
+Wskaźnik do struktury szablonu okna dialogowego zawierający tylko formanty inne niż ActiveX. Jeśli nie ma żadnych formantów ActiveX, zwracana jest wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zostaną znalezione jakiekolwiek kontrolki ActiveX, szablon zostanie przeanalizowany i zostanie utworzony nowy szablon zawierający tylko kontrolki niebędące kontrolkami ActiveX. Wszystkie kontrolki ActiveX Znalezione w trakcie tego procesu są dodawane do *ppOleDlgItems*.
+Jeśli zostaną znalezione jakieś formanty ActiveX, szablon jest analizowany i tworzony jest nowy szablon zawierający tylko formanty inne niż ActiveX. Wszystkie formanty ActiveX znalezione podczas tego procesu są dodawane do *ppOleDlgItems*.
 
-Jeśli w szablonie nie ma żadnych kontrolek ActiveX, zwracana jest wartość NULL *.*
+Jeśli w szablonie nie ma żadnych formantów ActiveX, zwracana jest wartość NULL *.*
 
 > [!NOTE]
->  Pamięć przydzieloną dla nowego szablonu jest zwalniana w funkcji `PostCreateDialog`.
+> Pamięć przydzielona dla nowego szablonu jest zwalniana w `PostCreateDialog` funkcji.
 
-Zastąp tę funkcję, aby dostosować ten proces.
+Zastąd w tej funkcji należy dostosować tę funkcję.
 
 ## <a name="see-also"></a>Zobacz też
 

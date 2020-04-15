@@ -1,5 +1,5 @@
 ---
-title: Klasa CComFakeCriticalSection
+title: CComFakeCriticalKuction Klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327850"
 ---
-# <a name="ccomfakecriticalsection-class"></a>Klasa CComFakeCriticalSection
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalKuction Klasa
 
-Ta klasa udostępnia te same metody jako [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , ale nie zapewnia sekcję krytyczną.
+Ta klasa zawiera te same metody co [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md) ale nie zapewnia sekcji krytycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,24 +34,24 @@ class CComFakeCriticalSection
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.|
-|[CComFakeCriticalSection::Lock](#lock)|Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.|
-|[CComFakeCriticalSection::Term](#term)|Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.|
-|[CComFakeCriticalSection::Unlock](#unlock)|Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.|
+|[CComFakeCriticalSekcja::Init](#init)|Nic nie robi, ponieważ nie ma sekcji krytycznej.|
+|[CComFakeCriticalSekcja::Lock](#lock)|Nic nie robi, ponieważ nie ma sekcji krytycznej.|
+|[CComFakeCriticalSekcja::Termin](#term)|Nic nie robi, ponieważ nie ma sekcji krytycznej.|
+|[CComFakeCriticalSekcja::Odblokuj](#unlock)|Nic nie robi, ponieważ nie ma sekcji krytycznej.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComFakeCriticalSection` odzwierciedla metod w [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Jednak `CComFakeCriticalSection` nie zawiera sekcję krytyczną; w związku z tym, nic nie rób jej metody.
+`CComFakeCriticalSection`odzwierciedla metody znalezione w [CComCriticalSekcja](../../atl/reference/ccomcriticalsection-class.md). Jednak `CComFakeCriticalSection` nie zapewnia sekcji krytycznej; dlatego jego metody nic nie robią.
 
-Zazwyczaj można użyć `CComFakeCriticalSection` za pośrednictwem `typedef` nazwę albo `AutoCriticalSection` lub `CriticalSection`. Korzystając z [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), oba te `typedef` nazwy odwołania `CComFakeCriticalSection`. Korzystając z [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), mogą odwoływać się do [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) i `CComCriticalSection`, odpowiednio.
+`CComFakeCriticalSection` Zazwyczaj używa się za `typedef` pomocą nazwy, albo `AutoCriticalSection` lub `CriticalSection`. W przypadku korzystania [z CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), obie te `typedef` nazwy odwołują się . `CComFakeCriticalSection` Podczas korzystania [z CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), odnoszą [się one CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) i `CComCriticalSection`, odpowiednio.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSekcja::Init
 
-Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.
+Nic nie robi, ponieważ nie ma sekcji krytycznej.
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSekcja::Lock
 
-Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.
+Nic nie robi, ponieważ nie ma sekcji krytycznej.
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSekcja::Termin
 
-Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.
+Nic nie robi, ponieważ nie ma sekcji krytycznej.
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSekcja::Odblokuj
 
-Nie działają, ponieważ nie istnieje żadna sekcja krytycznego.
+Nic nie robi, ponieważ nie ma sekcji krytycznej.
 
 ```
 HRESULT Unlock() throw();
@@ -95,8 +95,8 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

@@ -1,48 +1,49 @@
 ---
-title: / SOURCELINK (Sourcelink obejmują pliki w pliku PDB)
-ms.date: 08/20/2018
+title: /SOURCELINK (Uwzględnij plik Sourcelink w pliku PDB)
+description: Przewodnik po opcji /SOURCELINK w programie Microsoft C++.
+ms.date: 03/31/2020
 f1_keywords:
 - /sourcelink
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde55c401e17f7b3c84ffcdad29dda2badcc260b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317955"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336068"
 ---
-# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (zawierają Link źródłowy plik w pliku PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK (dołącz plik łącza źródłowego w PDB)
 
-Określa Link źródłowy plik konfiguracji do uwzględnienia w pliku PDB wygenerowany przez konsolidator.
+Określa plik konfiguracyjny łącza źródłowego do uwzględnienia w pliku PDB wygenerowanym przez konsolidator.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ SOURCELINK:**_nazwy pliku_
+> **`/SOURCELINK:`**_`filename`_
 
 ## <a name="arguments"></a>Argumenty
 
-*Nazwa pliku*<br/>
-Określa sformatowanego JSON konfiguracji pliku, który zawiera prostego mapowanie ścieżki pliku lokalnego do adresów URL, gdzie można pobrać pliku źródłowego do wyświetlenia przez debuger. Aby uzyskać więcej informacji na temat formatu tego pliku, zobacz [schematu JSON Linku źródłowego](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
+*Pod nazwą*<br/>
+Określa plik konfiguracyjny w formacie JSON, który zawiera proste mapowanie lokalnych ścieżek plików do adresów URL plików źródłowych do wyświetlenia w debugerze. Aby uzyskać więcej informacji na temat formatu tego pliku, zobacz [Schemat JSON łącza źródłowego](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Uwagi
 
-Link źródłowy jest systemem niezależny od języka i kontroli źródła zapewniające debugowanie źródła dla danych binarnych. Link źródłowy jest obsługiwana dla natywnych plików binarnych języka C++, począwszy od programu Visual Studio 2017 w wersji 15.8. Aby uzyskać omówienie Linku źródłowego, zobacz [Linku źródłowego](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informacje na temat sposobu używania Linku źródłowego w projektach i jak można wygenerować pliku SourceLink jako część projektu, zobacz [przy użyciu Linku źródłowego](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
+Source Link to system niezależny od kontroli języka i źródła do dostarczania debugowania źródłowego dla plików binarnych. Źródło Łącze jest obsługiwany dla natywnych plików binarnych języka C++, począwszy od programu Visual Studio 2017 w wersji 15.8. Aby uzyskać omówienie łącza źródłowego, zobacz [Łącze źródłowe](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md). Aby uzyskać informacje na temat używania łącza źródłowego w projektach i sposobu generowania pliku SourceLink w ramach projektu, zobacz [Korzystanie z łącza źródłowego](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
-### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Aby ustawić opcję konsolidatora/sourcelink w programie Visual Studio
+### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Aby ustawić opcję /SOURCELINK w programie Visual Studio
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości**wiersza polecenia wiersza**  > **konsolidatora** >  **właściwości konfiguracji.**
 
-1. W **dodatkowe opcje** Dodaj **/sourcelink:**_filename_ , a następnie wybierz **OK** lub **Zastosuj**Aby zapisać zmiany.
+1. W polu **Dodatkowe** opcje **`/SOURCELINK:`** _`filename`_ dodaj, a następnie wybierz pozycję **OK** lub **Zastosuj,** aby zapisać zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Ta opcja nie ma programowy odpowiednik.
+- Ta opcja nie ma odpowiednika programowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

@@ -1,11 +1,12 @@
 ---
-title: ldexp —, ldexpf —, ldexpl
-ms.date: 04/05/2018
+title: ldexp, ldexpf, ldexpl
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342241"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp —, ldexpf —, ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
-Mnoży liczbę zmiennoprzecinkową przez całkowitą potęgę dwóch.
+Mnoży liczbę zmiennoprzecinkowe przez integralną moc dwóch.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,29 +77,31 @@ long double ldexpl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
-*EXP*<br/>
-Wykładnik wartości całkowitej.
+*Exp*<br/>
+Wykładnik liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W<sup>*przypadku powodzenia*</sup> funkcja **ldexp —** zwraca wartość *x* \* 2. Przy przepełnieniu i w zależności od znaku *x*, **ldexp —** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
+Funkcje **ldexp** zwracają wartość *x* \* 2<sup>*exp,*</sup> jeśli się powiedzie. Przy przepełnienie i w zależności od znaku *x*, **ldexp** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
 
-Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych wartości błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat **errno** i możliwych wartości zwracania błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ldexp —** , które mają typ **float** lub **Long** **Double** . W programie C **ldexp —** zawsze przyjmuje wartość typu **Double** i **int** i zwraca wartość typu **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **ldexp,** które **przyjmują float** lub **długie** **podwójne** typy. W programie **C, ldexp** zawsze ma **podwójne** i **int** i zwraca **podwójne**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**ldexp —** , **ldexpf —** , **ldexpl**|\<math.h>|\<cmath >|
+|**ldexp**, **ldexpf**, **ldexpl**|\<> math.h|\<> cmath|
 
-Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -123,8 +127,8 @@ int main( void )
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

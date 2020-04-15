@@ -1,8 +1,9 @@
 ---
 title: _purecall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _purecall
+- _o__purecall
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f841bc70a4a5365bb9cc6086dd752bd2a1b583ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950158"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338487"
 ---
 # <a name="_purecall"></a>_purecall
 
-Domyślna procedura obsługi błędów wywołania funkcji wirtualnej. Kompilator generuje kod, aby wywołać tę funkcję w przypadku wywołania czystej wirtualnej funkcji członkowskiej.
+Domyślny program obsługi błędów wywołania czystej funkcji wirtualnej. Kompilator generuje kod do wywołania tej funkcji, gdy wywoływana jest funkcja czystego wirtualnego elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,15 +47,17 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_purecall** jest szczegółową implementacją kompilatora firmy Microsoft C++ . Ta funkcja nie jest przeznaczona do wywoływania bezpośrednio przez kod i nie ma deklaracji nagłówka publicznego. Jest on udokumentowany w tym miejscu, ponieważ jest publicznym eksportem biblioteki środowiska uruchomieniowego języka C.
+Funkcja **_purecall** jest szczegóły implementacji specyficzne dla firmy Microsoft kompilatora Microsoft C++. Ta funkcja nie jest przeznaczona do wywoływania przez kod bezpośrednio i nie ma deklaracji nagłówka publicznego. Jest to udokumentowane w tym miejscu, ponieważ jest to eksport publiczny biblioteki wykonawczej C.
 
-Wywołanie czystej funkcji wirtualnej jest błędem, ponieważ nie ma implementacji. Kompilator generuje kod, aby wywołać funkcję procedury obsługi błędów **_purecall** w przypadku wywołania czystej funkcji wirtualnej. Domyślnie **_purecall** kończy program. Przed zakończeniem funkcja **_purecall** wywołuje funkcję **_purecall_handler** , jeśli została ona ustawiona dla procesu. Możesz zainstalować własną funkcję obsługi błędów dla czystych wywołań funkcji wirtualnych, aby przechwycić je do celów debugowania lub raportowania. Aby użyć własnego programu obsługi błędów, należy utworzyć funkcję, która ma sygnaturę **_purecall_handler** , a następnie użyć [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) w celu udostępnienia jej jako bieżącej procedury obsługi.
+Wywołanie czystej funkcji wirtualnej jest błędem, ponieważ nie ma implementacji. Kompilator generuje kod do wywołania funkcji obsługi błędów **_purecall,** gdy wywoływana jest czysta funkcja wirtualna. Domyślnie **_purecall** kończy program. Przed zakończeniem funkcja **_purecall** wywołuje funkcję **_purecall_handler,** jeśli została ustawiona dla procesu. Można zainstalować własną funkcję obsługi błędów dla wywołań funkcji czysto wirtualnych, aby przechwycić je do debugowania lub raportowania. Aby użyć własnego programu obsługi błędów, należy utworzyć funkcję, która ma **podpis _purecall_handler,** a następnie użyj [_set_purecall_handler,](get-purecall-handler-set-purecall-handler.md) aby uczynić ją bieżącym programem obsługi.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-Funkcja **_purecall** nie ma deklaracji nagłówka. **_Purecall_handler** typedef jest zdefiniowany w \<STDLIB. h >.
+Funkcja **_purecall** nie ma deklaracji nagłówka. **_purecall_handler** typedef jest zdefiniowany \<w>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_get_purecall_handler, _set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>

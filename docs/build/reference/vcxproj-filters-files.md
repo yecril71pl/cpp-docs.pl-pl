@@ -1,32 +1,32 @@
 ---
-title: Vcxproj. filters — pliki
+title: Pliki Vcxproj.filters
 ms.date: 09/25/2019
-description: Użyj plików filtrów w projektach programu C++ Visual Studio, aby zdefiniować niestandardowe foldery logiczne dla plików w Eksplorator rozwiązań
+description: Definiowanie niestandardowych folderów logicznych dla plików w Eksploratorze rozwiązań za pomocą plików filtrów w projektach programu Visual Studio C++
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 57735246b543680243994b99b8c05c9ad1211f38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335931"
 ---
-# <a name="vcxprojfilters-files"></a>Vcxproj. filters — pliki
+# <a name="vcxprojfilters-files"></a>pliki vcxproj.filters
 
-Plik *filtrów* (\*. vcxproj. filters) to plik XML w formacie MSBuild, który znajduje się w folderze głównym projektu. Określa, które typy plików przechodzą do folderu logicznego w **Eksplorator rozwiązań**. Na poniższej ilustracji pliki *. cpp* znajdują się pod węzłem **pliki źródłowe** . pliki *. h* znajdują się pod węzłem **plików nagłówkowych** , a pliki *. ico* i *. RC* znajdują się w obszarze **pliki zasobów**. To położenie jest kontrolowane przez plik Filters.
+Plik *filtrów* \*(.vcxproj.filters) jest plikiem XML w formacie MSBuild, który znajduje się w głównym folderze projektu. Określa, które typy plików przechodzą do którego folderu logicznego w **Eksploratorze rozwiązań**. Na poniższej ilustracji pliki *.cpp* znajdują się w węźle **Pliki źródłowe.** pliki *.h* znajdują się w węźle **Pliki nagłówka,** a pliki *.ico* i *.rc* znajdują się w obszarze **Pliki zasobów**. To umieszczenie jest kontrolowane przez plik filtrów.
 
-![Foldery logiczne w Eksplorator rozwiązań](media/solution-explorer-filters.png)
+![Foldery logiczne w Eksploratorze rozwiązań](media/solution-explorer-filters.png)
 
-## <a name="creating-a-custom-filters-file"></a>Tworzenie niestandardowego pliku filtrów
+## <a name="creating-a-custom-filters-file"></a>Tworzenie pliku filtrów niestandardowych
 
-Program Visual Studio automatycznie tworzy ten plik. W przypadku aplikacji klasycznych wstępnie zdefiniowane foldery logiczne (filtry) to: **pliki źródłowe**, **pliki nagłówkowe** i **pliki zasobów**. Inne typy projektów, takie jak platformy UWP, mogą mieć inny zestaw folderów domyślnych. Program Visual Studio automatycznie przypisuje znane typy plików do każdego folderu. Jeśli chcesz utworzyć filtr z niestandardową nazwą lub filtrem, który zawiera niestandardowe typy plików, możesz utworzyć własny plik filtrów w folderze głównym projektu lub w ramach istniejącego filtru. (**Odwołania** i **zależności zewnętrzne** to specjalne foldery, które nie uczestniczą w filtrowaniu).
+Program Visual Studio automatycznie tworzy ten plik. W przypadku aplikacji klasycznych wstępnie zdefiniowane foldery logiczne (filtry) to: **Pliki źródłowe,** **Pliki nagłówkowe** i **Pliki zasobów**. Inne typy projektów, takie jak platformy uniwersalne systemu Windows, mogą mieć inny zestaw folderów domyślnych. Program Visual Studio automatycznie przypisuje znane typy plików do każdego folderu. Aby utworzyć filtr o niestandardowej nazwie lub filtr zawierający niestandardowe typy plików, można utworzyć własny plik filtrów w folderze głównym projektu lub w istniejącym filtrze. (Odwołania i **zależności zewnętrzne** to specjalne foldery, które nie uczestniczą w filtrowaniu).**References**
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje plik filtrów dla przykładu. Ma ona płaską hierarchię; Innymi słowy, nie ma zagnieżdżonych folderów logicznych. Węzeł `UniqueIdentifier` jest opcjonalny. Umożliwia interfejsom automatyzacji programu Visual Studio znalezienie filtru. `Extensions` jest również opcjonalny. Gdy nowy plik zostanie dodany do projektu, jest dodawany do filtru znajdującego się najwyżej przy użyciu pasującego rozszerzenia pliku. Aby dodać plik do określonego filtru, kliknij prawym przyciskiem myszy filtr i wybierz polecenie **Dodaj nowy element**.
+W poniższym przykładzie pokazano plik filtrów dla przykładu pokaż wcześniej. Ma płaską hierarchię; innymi słowy, nie ma zagnieżdżonych folderów logicznych. Węzeł `UniqueIdentifier` jest opcjonalny. Umożliwia interfejsom automatyzacji programu Visual Studio, aby znaleźć filtr. `Extensions`jest również opcjonalna. Po dodaniu nowego pliku do projektu jest on dodawany do filtru najwyższego z pasującym rozszerzeniem pliku. Aby dodać plik do określonego filtru, kliknij prawym przyciskiem myszy filtr i wybierz polecenie **Dodaj nowy element**.
 
-`ItemGroup`, który zawiera węzły `ClInclude` jest tworzony podczas pierwszego uruchomienia projektu. W przypadku generowania własnych plików vcxproj upewnij się, że wszystkie elementy projektu mają również wpis w pliku Filters. Wartości w węźle `ClInclude` zastępują domyślne filtrowanie na podstawie rozszerzeń plików. W przypadku dodania nowego elementu do projektu przy użyciu programu Visual Studio IDE doda do pliku filtrów pojedynczy wpis pliku. Filtr nie jest automatycznie ponownie przypisywany w przypadku zmiany rozszerzenia pliku.
+Zawiera `ItemGroup` węzły `ClInclude` jest tworzony podczas pierwszego uruchomienia projektu. Jeśli generujesz własne pliki vcxproj, upewnij się, że wszystkie elementy projektu mają również wpis w pliku filtrów. Wartości w `ClInclude` węźle zastępują domyślne filtrowanie na podstawie rozszerzeń plików. Podczas korzystania z programu Visual Studio, aby dodać nowy element do projektu, IDE doda pojedynczy wpis pliku w pliku filtrów. Filtr nie zostanie automatycznie przypisany ponownie po zmianie rozszerzenia pliku.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ Poniższy przykład pokazuje plik filtrów dla przykładu. Ma ona płaską hiera
 </Project>
 ```
 
-Aby utworzyć zagnieżdżone foldery logiczne, zadeklaruj wszystkie węzły w filtrach `ItemGroup` jak pokazano poniżej. Każdy węzeł podrzędny musi deklarować pełną ścieżkę logiczną do najwyższego elementu nadrzędnego. W poniższym przykładzie należy zadeklarować pustą `ParentFilter`, ponieważ odwołuje się do niej w późniejszych węzłach.
+Aby utworzyć zagnieżdżone foldery logiczne, należy zadeklarować wszystkie węzły w filtrach, `ItemGroup` jak pokazano poniżej. Każdy węzeł podrzędny musi zadeklarować pełną ścieżkę logiczną do najwyższego nadrzędnego. W poniższym przykładzie `ParentFilter` pusty musi być zadeklarowany, ponieważ odwołuje się do niego w późniejszych węzłach.
 
 ```xml
   <ItemGroup>

@@ -1,45 +1,45 @@
 ---
-title: 'Wyjątki: Zgłaszanie wyjątków z własnych funkcji'
+title: 'Wyjątki: zgłaszanie wyjątków z własnych funkcji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6484594df7636fd52ac46ab1cc212c8e2ec0278e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405862"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359275"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: Zgłaszanie wyjątków z własnych funkcji
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: zgłaszanie wyjątków z własnych funkcji
 
-Jest to możliwe za pomocą modelu obsługi wyjątków MFC wyłącznie przechwytują wyjątki zgłaszane przez funkcje MFC lub inne biblioteki. Oprócz przechwytywanie wyjątków zgłaszanych przez kod biblioteki, może generować wyjątki z własnego kodu podczas pisania funkcji, które mogą występować w wyjątkowych warunkach.
+Istnieje możliwość użycia paradygmatu obsługi wyjątków MFC wyłącznie do połowu wyjątków zgłaszanych przez funkcje w MFC lub innych bibliotek. Oprócz przechwytywania wyjątków zgłaszanych przez kod biblioteki, można zgłaszać wyjątki z własnego kodu, jeśli piszesz funkcje, które mogą wystąpić wyjątkowe warunki.
 
-Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymana, a następnie przechodzi bezpośrednio do **catch** bloku ramki najbardziej wewnętrzny wyjątek. Mechanizm wyjątków pomija ścieżki normalne wyjście z funkcji. W związku z tym należy koniecznie Usuń te bloki pamięci, które zostaną usunięte w normalne wyjście.
+Gdy wyjątek, wykonanie bieżącej funkcji jest zatrzymany i przeskakuje bezpośrednio do **catch** bloku wewnętrznej ramki wyjątku. Mechanizm wyjątku pomija normalną ścieżkę wyjścia z funkcji. W związku z tym należy pamiętać, aby usunąć te bloki pamięci, które zostaną usunięte w normalnym wyjściu.
 
 #### <a name="to-throw-an-exception"></a>Aby zgłosić wyjątek
 
-1. Użyj jednej z funkcji pomocnika MFC, takich jak `AfxThrowMemoryException`. Te funkcje zgłaszać obiekt przydzielony wstępnie wyjątek odpowiedniego typu.
+1. Użyj jednej z funkcji pomocnika MFC, takich jak `AfxThrowMemoryException`. Te funkcje zgłaszają wstępnie przydzielony obiekt wyjątku odpowiedniego typu.
 
-   W poniższym przykładzie funkcja próbuje przydzielić dwóch bloków pamięci i zgłasza wyjątek, jeśli albo alokacja nie powiedzie się:
+   W poniższym przykładzie funkcja próbuje przydzielić dwa bloki pamięci i zgłasza wyjątek, jeśli albo alokacji nie powiedzie się:
 
    [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-   Jeśli pierwsza alokacja nie powiedzie się, można po prostu Zgłoś wyjątek pamięci. Jeśli pierwszy alokacji zakończy się pomyślnie, ale drugi kończy się niepowodzeniem, należy zwolnić pierwszego bloku alokacji przed zostanie zgłoszony wyjątek. Jeśli oba alokacje powiedzie się, możesz przejść normalnie i wolne bloki, podczas zamykania funkcji.
+   Jeśli pierwsza alokacja nie powiedzie się, można po prostu zgłosić wyjątek pamięci. Jeśli pierwsza alokacja zakończy się pomyślnie, ale drugi nie powiedzie się, należy zwolnić pierwszy blok alokacji przed wyzwoleniem wyjątku. Jeśli obie alokacje powiedzie się, można postępować normalnie i zwolnić bloki po zamknięciu funkcji.
 
-     - lub —
+     - lub -
 
-1. Użyj wyjątków zdefiniowanych przez użytkownika, aby wskazać Warunek problem. Element dowolnego typu, a nawet całą klasę, może zgłosić jako wyjątek.
+1. Użyj wyjątku zdefiniowanego przez użytkownika, aby wskazać warunek problemu. Można zgłosić element dowolnego typu, nawet całej klasy, jako wyjątek.
 
-   Poniższy przykład próbuje odtwarzanie dźwięku za pomocą urządzenia wave i zgłasza wyjątek, jeśli wystąpi awaria.
+   Poniższy przykład próbuje odtworzyć dźwięk za pośrednictwem urządzenia wave i zgłasza wyjątek, jeśli występuje błąd.
 
    [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
->  Biblioteki MFC domyślna obsługa wyjątków, który ma zastosowanie tylko do wskaźników do `CException` obiektów (i obiektów `CException`-klas pochodnych). W powyższym przykładzie pomija mechanizm wyjątków MFC.
+> Domyślna obsługa wyjątków MFC dotyczy tylko wskaźników `CException` do obiektów `CException`(i obiektów klas pochodnych). Powyższy przykład pomija mechanizm wyjątków MFC.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)

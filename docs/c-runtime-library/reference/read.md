@@ -1,8 +1,9 @@
 ---
 title: _read
-ms.date: 02/13/2019
+ms.date: 4/2/2020
 api_name:
 - _read
+- _o__read
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db3726b85bb4ba7c8e9a691bef3fb063ec5709c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338133"
 ---
 # <a name="_read"></a>_read
 
@@ -52,42 +54,44 @@ int _read(
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
-Deskryptor pliku odwołujący się do otwartego pliku.
+*Fd*<br/>
+Deskryptora pliku odnoszącego się do otwartego pliku.
 
-*buffer*<br/>
-Lokalizacja magazynu dla danych.
+*Buforu*<br/>
+Lokalizacja przechowywania danych.
 
 *buffer_size*<br/>
 Maksymalna liczba bajtów do odczytania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_read** zwraca liczbę odczytanych bajtów, która może być mniejsza niż *buffer_size* , jeśli w pliku jest mniej niż *buffer_size* bajtów lub plik został otwarty w trybie tekstowym. W trybie tekstowym każda para `\r\n` wysuwu wiersza jest zastępowana pojedynczym znakiem `\n`wysuwu wiersza. W zwracanej wartości jest uwzględniany tylko pojedynczy znak wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku.
+**_read** zwraca liczbę odczytanych bajtów, która może być mniejsza niż *buffer_size* jeśli w pliku pozostało mniej niż *buffer_size* bajtów lub jeśli plik został otwarty w trybie tekstowym. W trybie tekstowym każda para `\r\n` wiersza powrotu karetki `\n`jest zastępowana pojedynczym znakiem wysuwu wiersza . W wartości zwracanej jest liczony jest tylko pojedynczy znak źródła danych. Zastąpienie nie wpływa na wskaźnik pliku.
 
-Jeśli funkcja próbuje odczytać na końcu pliku, zwraca 0. Jeśli *FD* jest nieprawidłowy, plik nie jest otwarty do odczytu lub plik jest zablokowany, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EBADF**.
+Jeśli funkcja próbuje odczytać na końcu pliku, zwraca 0. Jeśli *fd* jest nieprawidłowy, plik nie jest otwarty do odczytu lub plik jest zablokowany, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca wartość -1 i ustawia **errno** na **EBADF**.
 
-Jeśli *bufor* ma **wartość null**lub jeśli *buffer_size* > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EINVAL**.
+Jeśli *bufor* ma **wartość NULL**lub *buffer_size* > **INT_MAX,** wywoływany jest nieprawidłowy program obsługi parametrów. Jeśli wykonanie jest dozwolone, funkcja zwraca -1 i **errno** jest ustawiona na **EINVAL**.
 
-Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodów zwrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_read** odczytuje maksymalnie *buffer_size* bajtów do *buforu* z pliku skojarzonego z *FD*. Operacja odczytu rozpoczyna się na bieżącym miejscu wskaźnika pliku skojarzonego z danym plikiem. Po operacji odczytu wskaźnik pliku wskazuje na Następny nieprzeczytany znak.
+Funkcja **_read** odczytuje maksymalnie *buffer_size* bajtów do *buforu* z pliku skojarzonego z *fd*. Operacja odczytu rozpoczyna się w bieżącym położeniu wskaźnika pliku skojarzonego z danym plikiem. Po operacji odczytu wskaźnik pliku wskazuje następny nieprzeczytany znak.
 
-Jeśli plik został otwarty w trybie tekstowym, odczyt kończy się, gdy **_read** NAPOTKA znak Ctrl + Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek](lseek-lseeki64.md) , aby wyczyścić wskaźnik końca pliku.
+Jeśli plik został otwarty w trybie tekstowym, odczyt kończy się, gdy **_read** napotka znak CTRL+Z, który jest traktowany jako wskaźnik końca pliku. Użyj [_lseek,](lseek-lseeki64.md) aby wyczyścić wskaźnik końca pliku.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_read**|\<io.h>|
+|**_read**|\<> io.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -129,7 +133,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_readtxt"></a>Dane wejściowe: crt_read. txt
+### <a name="input-crt_readtxt"></a>Dane wejściowe: crt_read.txt
 
 ```Input
 Line one.
@@ -142,9 +146,9 @@ Line two.
 Read 19 bytes from file
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fread](fread.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

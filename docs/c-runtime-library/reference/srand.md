@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957994"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355484"
 ---
 # <a name="srand"></a>srand
 
-Ustawia początkową wartość inicjatora dla generatora numerów pseudolosowych używanych przez funkcję **Rand** .
+Ustawia początkową wartość inicjatora dla generatora liczb pseudolosowych używanych przez funkcję **rand.**
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,26 +55,28 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*sadzenia*<br/>
-Inicjator dla generowania numerów pseudolosowych
+*Nasion*<br/>
+Materiał siewny do generowania numerów pseudolosowych
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **srand** ustawia punkt początkowy do generowania serii pseudolosowych liczb całkowitych w bieżącym wątku. Aby ponownie zainicjować generator, aby utworzyć taką samą sekwencję wyników, wywołaj funkcję **srand** i Użyj tego samego argumentu *inicjatora* . Każda inna wartość *inicjatora* ustawia generator do innego punktu początkowego w sekwencji pseudolosowych. **Rand** pobiera wygenerowane numery pseudolosowych. Wywołanie funkcji **Rand** przed wywołaniem funkcji **srand** generuje taką samą sekwencję jak wywołanie **srand** z *inicjatorem* , który przeszedł jako 1.
+Funkcja **srand** ustawia punkt początkowy generowania serii pseudolosowych liczby całkowite w bieżącym wątku. Aby ponownie zainicjować generator, aby utworzyć tę samą sekwencję wyników, wywołaj funkcję **srand** i ponownie użyj tego samego argumentu *źródłowego.* Każda inna wartość dla *materiału siewnego* ustawia generator do innego punktu początkowego w sekwencji pseudorandom. **rand** pobiera numery pseudolosowe, które są generowane. Wywołanie **rand** przed każdym wywołaniem **srand** generuje taką samą sekwencję jak **wywołanie srand** z *seed* przeszedł jako 1.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**srand**|\<stdlib.h>|
+|**srand**|\<>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla funkcji [Rand](rand.md).
+Zobacz przykład [rand](rand.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Rand](rand.md)<br/>

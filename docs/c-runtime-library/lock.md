@@ -23,19 +23,19 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 30cd84f008c7174d767ecf5e2b744a58b21e5000
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351097"
 ---
 # <a name="_lock"></a>_lock
 
-Uzyskuje blokadę wielowątkowości.
+Uzyskuje blokadę wielowątkową.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
+> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,18 +47,18 @@ void __cdecl _lock
 
 #### <a name="parameters"></a>Parametry
 
-*locknum*<br/>
-podczas Identyfikator blokady do pobrania.
+*locknum ( locknum )*<br/>
+[w] Identyfikator blokady do nabycia.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli blokada została już pobrana, ta metoda uzyskuje blokadę i powoduje błąd wewnętrzny środowiska uruchomieniowego C (CRT). Jeśli metoda nie może uzyskać blokady, kończy się z powodu błędu krytycznego, a kod błędu zostanie ustawiony na `_RT_LOCK`.
+Jeśli blokada została już nabyta, ta metoda mimo to uzyskuje blokadę i powoduje wewnętrzny błąd w czasie wykonywania C (CRT). Jeśli metoda nie może uzyskać blokady, kończy pracę z błędem ośowym i ustawia kod błędu na `_RT_LOCK`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Źródło:** MLOCK. c
+**Źródło:** mlock.c
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

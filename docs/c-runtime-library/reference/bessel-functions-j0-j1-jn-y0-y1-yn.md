@@ -1,6 +1,6 @@
 ---
 title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +48,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939457"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348660"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 
-Oblicza funkcję Bessela pierwszego lub drugiego rodzaju zamówień 0, 1 lub n. Funkcje Bessela są często używane w przypadku matematyki teorii fal elektromagnetycznych.
+Oblicza funkcję Bessel pierwszego lub drugiego rodzaju zamówień 0, 1 lub n. Funkcje Bessela są powszechnie stosowane w matematyce teorii fal elektromagnetycznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,39 +86,41 @@ double _yn(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
-*n*<br/>
-Kolejność liczb całkowitych funkcji Bessela.
+*N*<br/>
+Kolejność całkowita funkcji Bessela.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca funkcję Bessela *x*. Jeśli *x* jest ujemna w funkcjach **_y0**, **_y1**lub **_yn** , procedura ustawia **errno** na **Edom**, drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
+Każda z tych procedur zwraca funkcję *Bessela x*. Jeśli *x* jest ujemny w **_y0,** **_y1**lub **_yn** funkcji, procedura ustawia **errno** na **EDOM,** drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedury **_j0**, **_j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: Orders 0, 1 i n, odpowiednio.
+**Procedury _j0** **, _j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: zamówienia odpowiednio 0, 1 i n.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|± **QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
 
-Procedury **_y0**, **_y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: Orders 0, 1 i n, odpowiednio.
+**Procedury _y0** **, _y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: zamówienia odpowiednio 0, 1 i n.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0,0|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|± **QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
+|± 0|**ZERODYDYWAK**|**_SING**|
+|&#124;x&#124; < 0,0|**Nieprawidłowy**|**_DOMAIN**|
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<Math. h > (C, C++)|
+|**_j0** **_j1,** **_jn,** **_y0,** **_y1,** **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -154,7 +163,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

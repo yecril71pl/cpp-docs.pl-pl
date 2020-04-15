@@ -1,10 +1,12 @@
 ---
 title: _futime, _futime32, _futime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _futime64
 - _futime32
 - _futime
+- _o__futime32
+- _o__futime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1f60bb3b366c48e3d53368f81ebc2528694794f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345505"
 ---
 # <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
@@ -65,31 +68,33 @@ int _futime64(
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
-Deskryptor pliku w otwartym pliku.
+*Fd*<br/>
+Deskryptor pliku do otwartego pliku.
 
-*FILETIME*<br/>
+*Filetime*<br/>
 Wskaźnik do struktury zawierającej nową datę modyfikacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwróć wartość 0, jeśli powodzenie. Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EBADF**, wskazującą nieprawidłowy deskryptor pliku lub **EINVAL**wskazujący nieprawidłowy parametr.
+Zwróć 0, jeśli zakończy się pomyślnie. Jeśli wystąpi błąd, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcja zwraca -1 i **errno** jest ustawiona na **EBADF**, wskazując nieprawidłowy deskryptor pliku lub **EINVAL**, wskazując nieprawidłowy parametr.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedura **_futime** ustawia datę modyfikacji i godzinę dostępu w otwartym pliku skojarzonym z *FD*. **_futime** jest taka sama jak [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), z tą różnicą, że jej argument jest deskryptorem pliku otwartego pliku, a nie nazwą pliku lub ścieżką do pliku. Struktura **_utimbuf** zawiera pola dla nowej daty modyfikacji i czasu dostępu. Oba pola muszą zawierać prawidłowe wartości. **_utimbuf32** i **_utimbuf64** są identyczne z **_utimbuf** , z wyjątkiem używania odpowiednio 32-bitowych i 64-bitowych typów czasu. **_futime** i **_utimbuf** używają 64-bitowego typu czasu, a **_futime** jest identyczna z zachowaniem **_futime64**. Jeśli musisz wymusić stare zachowanie, zdefiniuj **_USE_32BIT_TIME_T**. To sprawia, że **_futime** się to tak samo jak zachowanie **_futime32** i powoduje, że struktura **_utimbuf** używa typu czasu 32-bitowego, co jest równoznaczne z **__utimbuf32**.
+Procedura **_futime** określa datę modyfikacji i czas dostępu do otwartego pliku skojarzonego z *fd*. **_futime** jest identyczny [z _utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), z tą różnicą, że jego argumentem jest deskryptor pliku otwartego pliku, a nie nazwa pliku lub ścieżka do pliku. Struktura **_utimbuf** zawiera pola dla nowej daty modyfikacji i godziny dostępu. Oba pola muszą zawierać prawidłowe wartości. **_utimbuf32** i **_utimbuf64** są identyczne **z _utimbuf,** z wyjątkiem użycia typów czasu 32-bitowego i 64-bitowego. **_futime** i **_utimbuf** używać 64-bitowego typu czasu, a **_futime** jest identyczny w zachowaniu **_futime64**. Jeśli chcesz wymusić stare zachowanie, zdefiniuj **_USE_32BIT_TIME_T**. Powoduje **to, że _futime** jest identyczny w zachowaniu **_futime32** i powoduje, że struktura **_utimbuf** używa 32-bitowego typu czasu, co odpowiada **__utimbuf32**.
 
-**_futime64**, który używa struktury **__utimbuf64** , może odczytywać i modyfikować daty plików do 23:59:59 grudnia, 3000, UTC; wywołanie **_futime32** kończy się niepowodzeniem, jeśli data pliku jest późniejsza niż 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, jest dolną granicą zakresu dat dla tych funkcji.
+**_futime64**, który używa struktury **__utimbuf64,** może odczytywać i modyfikować daty plików do 23:59:59, 31 grudnia 3000, UTC; mając na uwadze, że wywołanie **_futime32** nie powiedzie się, jeśli data w pliku jest późniejsza niż 23:59:59 18 stycznia 2038, UTC. Północ, 1 stycznia 1970 r., jest dolną granicą zakresu dat dla tych funkcji.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_futime**|\<sys/utime.h>|\<errno.h>|
-|**_futime32**|\<sys/utime.h>|\<errno.h>|
-|**_futime64**|\<sys/utime.h>|\<errno.h>|
+|**_futime**|\<sys/utime.h>|\<> errno.h|
+|**_futime32**|\<sys/utime.h>|\<> errno.h|
+|**_futime64**|\<sys/utime.h>|\<> errno.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -127,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_futimec_input"></a>Dane wejściowe: crt_futime. c_input
+### <a name="input-crt_futimec_input"></a>Dane wejściowe: crt_futime.c_input
 
 ```Input
 Arbitrary file contents.
@@ -155,6 +160,6 @@ Directory of Z:\crt
 File time modified
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>

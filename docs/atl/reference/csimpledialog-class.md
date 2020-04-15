@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345372d71ad96a74bb0ae6dd7e89bdf0724cd822
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330830"
 ---
 # <a name="csimpledialog-class"></a>Klasa CSimpleDialog
 
@@ -33,10 +33,10 @@ class CSimpleDialog : public CDialogImplBase
 
 *t_wDlgTemplateID*
 
-Identyfikator zasobu zasobu szablonu okna dialogowego.
+Identyfikator zasobu zasób szablonu okna dialogowego.
 
 *t_bCenter*<br/>
-Wartość TRUE, jeśli ma być oparte na okno właściciela; obiektu okna dialogowego w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli obiekt okna dialogowego ma być wyśrodkowany w oknie właściciela; w przeciwnym razie FALSE.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,11 +48,11 @@ Wartość TRUE, jeśli ma być oparte na okno właściciela; obiektu okna dialog
 
 ## <a name="remarks"></a>Uwagi
 
-Implementuje okno modalne okno dialogowe z podstawowymi funkcjami. `CSimpleDialog` zapewnia obsługę Windows tylko formanty standardowe. Aby utworzyć i wyświetlić okno modalne okno dialogowe, należy utworzyć wystąpienie tej klasy, podając nazwę istniejącego szablonu zasobu okna dialogowego. Obiekt okno dialogowe zostanie zamknięte po kliknięciu dowolnego formantu za pomocą wstępnie zdefiniowanych wartości (na przykład IDOK lub IDCANCEL).
+Implementuje modalne okno dialogowe z podstawową funkcjonalnością. `CSimpleDialog`zapewnia obsługę tylko typowych formantów systemu Windows. Aby utworzyć i wyświetlić modalne okno dialogowe, utwórz wystąpienie tej klasy, podając nazwę istniejącego szablonu zasobu dla okna dialogowego. Obiekt okna dialogowego zostanie zamknięty, gdy użytkownik kliknie dowolny formant o wstępnie zdefiniowanej wartości (np.
 
-`CSimpleDialog` Umożliwia tworzenie tylko modalnych okien dialogowych. `CSimpleDialog` zawiera procedury okno dialogowe używa domyślnego mapy komunikatów do przekierowywania komunikatów do odpowiedniej procedury obsługi.
+`CSimpleDialog`umożliwia tworzenie tylko modalnych okien dialogowych. `CSimpleDialog`zawiera procedurę okna dialogowego, która używa domyślnej mapy wiadomości do kierowania wiadomości do odpowiednich programów obsługi.
 
-Zobacz [Implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [Implementowanie okna dialogowego.](../../atl/implementing-a-dialog-box.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -64,9 +64,9 @@ Zobacz [Implementowanie okna dialogowego](../../atl/implementing-a-dialog-box.md
 
 **Nagłówek:** atlwin.h
 
-##  <a name="domodal"></a>  CSimpleDialog::DoModal
+## <a name="csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal
 
-Wywołuje modalne okno dialogowe i zwraca wynik okno dialogowe po zakończeniu.
+Wywołuje modalne okno dialogowe i zwraca wynik okna dialogowego po zakończeniu.
 
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -74,19 +74,19 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-Dojście do nadrzędnego okna dialogowego. Jeśli wartość nie zostanie podany, element nadrzędny jest równa bieżące aktywne okno.
+*hWndRodziciek*<br/>
+Uchwyt do nadrzędnego okna dialogowego. Jeśli nie podano żadnej wartości, element nadrzędny jest ustawiony na bieżące aktywne okno.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, wartość zwracana jest identyfikator zasobu formant, który odrzucić okno dialogowe.
+Jeśli się powiedzie, zwracana wartość jest identyfikatorem zasobu formantu, który odrzucił okno dialogowe.
 
-Jeśli funkcja zawiedzie, wartość zwracana jest wartość -1. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać `GetLastError`.
+Jeśli funkcja nie powiedzie się, zwracana wartość wynosi -1. Aby uzyskać rozszerzone informacje `GetLastError`o błędzie, zadzwoń do pliku .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda obsługuje wszystkich interakcji z użytkownikiem, gdy okno dialogowe jest aktywne. Jest to, co sprawia, że okno dialogowe modalne; oznacza to użytkownik nie może korzystać z innymi oknami, do czasu zamknięcia okna dialogowego.
+Ta metoda obsługuje całą interakcję z użytkownikiem, gdy okno dialogowe jest aktywne. To, co sprawia, że modalne okno dialogowe; oznacza to, że użytkownik nie może wchodzić w interakcje z innymi oknami, dopóki okno dialogowe nie zostanie zamknięte.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - llround
 - llroundf
@@ -8,6 +8,12 @@ api_name:
 - lroundf
 - lround
 - lroundl
+- _o_llround
+- _o_llroundf
+- _o_llroundl
+- _o_lround
+- _o_lroundf
+- _o_lroundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341629"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -87,28 +94,30 @@ long long llroundl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **lround** i **llround** zwracają najbliższą **długą** lub **długą** **liczbę całkowitą** do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Brak powrotu błędu.
+**Lround** i **llround** funkcje zwracają najbliższą **długą** lub **długą** **liczę** całkowitą do *x*. Wartości w połowie drogi są zaokrąglane od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Nie ma zwracania błędów.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|brak|**_DOMAIN**|
+|± **QNAN**, **IND**|brak|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lround** lub **llround** , które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **lround** i **llround** zawsze przyjmują i zwracają wartość **podwójną**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **lround** lub **llround,** które biorą i zwracają **float** i **długie** **podwójne** wartości. W programie C, **lround** i **llround** zawsze wziąć i zwrócić **podwójne**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<> math.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -146,9 +155,9 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

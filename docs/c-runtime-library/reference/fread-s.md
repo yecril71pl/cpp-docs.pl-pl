@@ -1,8 +1,9 @@
 ---
 title: fread_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fread_s
+- _o_fread_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346122"
 ---
 # <a name="fread_s"></a>fread_s
 
-Odczytuje dane ze strumienia. Ta wersja programu [fread](fread.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje dane ze strumienia. Ta wersja [fread](fread.md) ma ulepszenia zabezpieczeń, zgodnie z opisem w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,32 +50,34 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
-Lokalizacja magazynu dla danych.
+*Buforu*<br/>
+Lokalizacja przechowywania danych.
 
-*bufferSize*<br/>
+*Buffersize*<br/>
 Rozmiar buforu docelowego w bajtach.
 
 *elementSize*<br/>
-Rozmiar elementu, który ma zostać odczytany w bajtach.
+Rozmiar elementu do odczytu w bajtach.
 
-*liczbą*<br/>
-Maksymalna liczba elementów, które mają zostać odczytane.
+*Liczba*<br/>
+Maksymalna liczba elementów do odczytania.
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread_s** zwraca liczbę (całość) elementów, które zostały odczytane do buforu, co może być mniejsze niż *licznik* , jeśli wystąpi błąd odczytu lub koniec pliku przed osiągnięciem *liczby* . Użyj funkcji **feof** lub odwołującej, aby odróżnić błąd od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread_s** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread_s** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
+**fread_s** zwraca liczbę (całych) elementów, które zostały odczytane do buforu, które mogą być mniejsze niż *liczba,* jeśli wystąpi błąd odczytu lub koniec pliku przed *osiągnięciem liczby.* Użyj funkcji **feof** lub **ferror,** aby odróżnić błąd od stanu końca pliku. Jeśli *rozmiar* lub *liczba* wynosi 0, **fread_s** zwraca 0, a zawartość buforu pozostaje niezmieniona. Jeśli *strumień* lub *bufor* jest wskaźnikiem zerowym, **fread_s** wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca 0.
 
-Aby uzyskać więcej informacji o kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fread_s** odczytuje do *liczby* elementów *elementSize* bajtów ze *strumienia* wejściowego i zapisuje je w *buforze*.  Wskaźnik pliku skojarzony ze strumieniem ( Jeśli istnieje) jest zwiększany o liczbę bajtów faktycznie odczytywanych. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza są zastępowane znakami wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
+Funkcja **fread_s** odczytuje do *zliczania* elementów *rozmiarów bajtów* z *strumienia* wejściowego i przechowuje je w *buforze*.  Wskaźnik pliku, który jest skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę faktycznie odczytywanych bajtów. Jeśli dany strumień jest otwierany w trybie tekstowym, pary kanałów powrotu karetki są zastępowane pojedynczymi znakami podawania wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości elementu częściowo odczytanego.
 
-Ta funkcja blokuje inne wątki. Jeśli wymagana jest wersja bez blokowania, należy użyć **_fread_nolock**.
+Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji niezablokującej, użyj **_fread_nolock**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -81,7 +85,7 @@ Ta funkcja blokuje inne wątki. Jeśli wymagana jest wersja bez blokowania, nale
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -150,8 +154,8 @@ Contents of buffer after write/read:
         zyxwvutsrqponmlkjihgfe
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

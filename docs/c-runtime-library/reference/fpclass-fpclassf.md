@@ -1,9 +1,10 @@
 ---
 title: _fpclass, _fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346277"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -58,40 +60,42 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*X*<br/>
 Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<float. h >.
+Funkcje **_fpclass** i **_fpclassf** zwracają wartość całkowitą wskazującą zmiennoprzecinkową klasyfikację argumentu *x*. Klasyfikacja może mieć jedną z następujących \<wartości, zdefiniowaną w> float.h.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|**_FPCLASS_SNAN**|Sygnalizowanie NaN|
+|**_FPCLASS_SNAN**|Sygnalizacja NaN|
 |**_FPCLASS_QNAN**|Cichy NaN|
-|**_FPCLASS_NINF**|Nieskończoność ujemna (-INF)|
+|**_FPCLASS_NINF**|Ujemna nieskończoność ( -INF)|
 |**_FPCLASS_NN**|Ujemna znormalizowana wartość niezerowa|
-|**_FPCLASS_ND**|Nieznormalizowana wartość ujemna|
-|**_FPCLASS_NZ**|Ujemna zero (-0)|
-|**_FPCLASS_PZ**|Dodatnia 0 (+ 0)|
-|**_FPCLASS_PD**|Nieznormalizowana wartość dodatnia|
-|**_FPCLASS_PN**|Dodatnia znormalizowana wartość niezerowa|
-|**_FPCLASS_PINF**|Nieskończoność dodatnia (+ INF)|
+|**_FPCLASS_ND**|Ujemna denormalized|
+|**_FPCLASS_NZ**|Ujemne zero ( - 0)|
+|**_FPCLASS_PZ**|Dodatnia 0 (+0)|
+|**_FPCLASS_PD**|Dodatnia denormalized|
+|**_FPCLASS_PN**|Dodatnia znormalizowana niezerowa|
+|**_FPCLASS_PINF**|Dodatnia nieskończoność (+INF)|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fpclass** i **_fpclassf** funkcje są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify —](fpclassify.md), ale zwracają więcej szczegółowych informacji na temat argumentu. Funkcja **_fpclassf** jest dostępna tylko po skompilowaniu dla platformy x64.
+Funkcje **_fpclass** i **_fpclassf** są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify](fpclassify.md), ale zwracają bardziej szczegółowe informacje na temat argumentu. Funkcja **_fpclassf** jest dostępna tylko po skompilowaniu dla platformy x64.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fpclass**, **_fpclassf**|\<float. h >|
+|**_fpclass** **, _fpclassf**|\<> float.h|
 
-Aby uzyskać bardziej zgodność i informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności i zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [fpclassify](fpclassify.md)<br/>

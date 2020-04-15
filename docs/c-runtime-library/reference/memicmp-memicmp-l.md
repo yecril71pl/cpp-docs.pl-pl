@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951841"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333235"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -59,45 +62,47 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer1*<br/>
+*bufor1*<br/>
 Pierwszy bufor.
 
-*buffer2*<br/>
+*bufor2*<br/>
 Drugi bufor.
 
-*liczbą*<br/>
+*Liczba*<br/>
 Liczba znaków.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana wskazuje związek między buforami.
+Zwracana wartość wskazuje relację między buforami.
 
-|Wartość zwracana|Relacja pierwszej liczby bajtów buf1 i buf2|
+|Wartość zwracana|Relacja z bajtów pierwszej liczby buf1 i buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* mniejsze niż *buffer2*.|
-|0|*buffer1* identyczne z *buffer2*.|
-|> 0|*buffer1* większa niż *buffer2*.|
+|< 0|*bufor1* mniej niż *bufor2*.|
+|0|*buffer1* identyczny z *buffer2*.|
+|> 0|*bufor1* większy niż *buffer2*.|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_memicmp** porównuje pierwsze znaki *Count* z dwóch buforów *buffer1* i *buffer2* bajty przez bajt. W porównaniu z rozróżnianiem wielkości liter.
+Funkcja **_memicmp** porównuje pierwsze znaki *zliczania* dwóch buforów *buffer1* i *buffer2* bajt po bajcie. W porównaniu nie jest rozróżniana wielkość liter.
 
-Jeśli *buffer1* lub *buffer2* jest wskaźnikiem null, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
+Jeśli *buffer1* lub *buffer2* jest wskaźnikiem null, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
 
-**_memicmp** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_memicmp_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_memicmp** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; **_memicmp_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_memicmp**|\<> pamięci. h > \<lub String. h|
-|**_memicmp_l**|\<> pamięci. h > \<lub String. h|
+|**_memicmp**|\<memory.h> lub \<string.h>|
+|**_memicmp_l**|\<memory.h> lub \<string.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -134,9 +139,9 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipulacja buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>

@@ -1,49 +1,49 @@
 ---
 title: Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
-description: Ogólne omówienie usługi C++ Build Insights.
+description: Omówienie wysokiego poziomu usługi C++ Build Insights.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a5799fecc885b96f4278e0f5077662ce5fd7c8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325713"
 ---
 # <a name="get-started-with-c-build-insights"></a>Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
 
 ::: moniker range="<=vs-2017"
 
-Narzędzia C++ Build Insights są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2019.
+Narzędzia aplikacji Skompilowanie kompilacji języka C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją dla tej wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++Build Insights to zbiór narzędzi, które zapewniają lepszy wgląd w łańcuch narzędzi Microsoft Visual C++ (MSVC). Narzędzia zbierają dane o C++ kompilacjach i są wyświetlane w formacie, który może pomóc odpowiedzieć na często zadawane pytania, takie jak:
+C++ Build Insights to zbiór narzędzi, które zapewnia lepszy wgląd w łańcuch narzędzi microsoft visual c++(MSVC). Narzędzia zbierają dane o kompilacjach języka C++ i przedstawiają je w formacie, który pomoże Ci odpowiedzieć na typowe pytania, takie jak:
 
 - Czy moje kompilacje są wystarczająco równoległe?
-- Co należy uwzględnić we wstępnie skompilowanym nagłówku (PCH)?
-- Czy istnieje określone wąskie gardło, na które należy się skoncentrować, aby zwiększyć szybkość kompilacji?
+- Co należy uwzględnić w moim wstępnie skompilowanym nagłówku (PCH)?
+- Czy istnieje konkretne wąskie gardło, na które powinienem się skupić, aby zwiększyć szybkość budowy?
 
-Główne składniki tej technologii to:
+Głównymi składnikami tej technologii są:
 
-- *vcperf. exe*, narzędzie wiersza polecenia, które służy do zbierania śladów dla kompilacji,
-- rozszerzenie analizatora wydajności systemu Windows (WPA), które umożliwia wyświetlanie śladów kompilacji w WPA i
-- zestaw C++ SDK usługi Build Insights (Software Development Kit) służący do tworzenia własnych narzędzi, C++ które wykorzystują dane usługi Build Insights.
+- *vcperf.exe*, narzędzie wiersza polecenia, którego można użyć do zbierania śladów dla kompilacji,
+- rozszerzenie analizatora wydajności systemu Windows (WPA), które umożliwia wyświetlanie śladów kompilacji w WPA, oraz
+- Zestaw SDK kompilacji aplikacji C++ do tworzenia oprogramowania do tworzenia własnych narzędzi, które zużywają dane programu C++ Build Insights.
 
-Kliknij poniższe linki, aby szybko rozpocząć pracę z następującymi składnikami:
+Kliknij poniższe linki, aby szybko rozpocząć korzystanie z tych składników:
 
-[Samouczek: vcperf i Analizator wydajności systemu Windows](tutorials/vcperf-and-wpa.md)\
-Dowiedz się, jak zbierać ślady C++ kompilacji dla projektów i jak wyświetlać je w WPA.
+[Samouczek: vcperf i analizator wydajności systemu Windows](tutorials/vcperf-and-wpa.md)\
+Dowiedz się, jak zbierać ślady kompilacji dla projektów języka C++ i jak je wyświetlać w WPA.
 
-[Samouczek: podstawy wydajności systemu Windows](tutorials/wpa-basics.md)\
-Odkryj przydatne porady dotyczące protokołu WPA do analizowania śladów kompilacji.
+[Samouczek: Podstawy wydajności systemu Windows](tutorials/wpa-basics.md)\
+Poznaj przydatne wskazówki WPA dotyczące analizowania śladów kompilacji.
 
-[\ zestawu SDK usługi Build Insights C++ ](reference/sdk/overview.md)
-Omówienie zestawu SDK usługi C++ Build Insights.
+[SDK kompilacji języka C++](reference/sdk/overview.md)\
+Omówienie SDK analizy kompilacji języka C++.
 
 ::: moniker-end

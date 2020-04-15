@@ -7,89 +7,89 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328670"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
-Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie pliki z stabilnymi nagłówkami, na przykład nagłówki biblioteki standardowej, takie jak `<vector>`, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka.
+Podczas tworzenia nowego projektu w programie Visual Studio, *wstępnie skompilowany plik nagłówka* o nazwie *pch.h* jest dodawany do projektu. (W programie Visual Studio 2017 i wcześniejszych plik został nazwany *stdafx.h*.) Celem pliku jest przyspieszenie procesu kompilacji. W tym miejscu powinny znajdować się wszystkie `<vector>`stabilne pliki nagłówkowe, na przykład nagłówki biblioteki standardowej, takie jak , . Wstępnie skompilowany nagłówek jest kompilowany tylko wtedy, gdy lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilacji dla wstępnie skompilowanego nagłówka.
 
-Opcje kompilatora dla prekompilowanych nagłówków to [/y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > prekompilowane nagłówki**. Można zrezygnować z używania prekompilowanych nagłówków i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego.
+Opcje kompilatora wstępnie skompilowanych nagłówków to [/Y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > Wstępnie skompilowane nagłówki**. Można wybrać opcję niekorzysconych nagłówków wstępnie skompilowanych i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego.
 
 ## <a name="custom-precompiled-code"></a>Niestandardowy kod wstępnie skompilowany
 
-W przypadku dużych projektów, które mają znaczny czas na kompilację, warto rozważyć utworzenie niestandardowych wstępnie skompilowanych plików. Język Microsoft C i C++ kompilatory udostępniają opcje wstępnego kompilowania dowolnych języków C lub C++ Code, w tym kodu wbudowanego. Korzystając z tej funkcji wydajności, można skompilować stabilną treść kodu, przechowywać skompilowany stan kodu w pliku i, podczas kolejnych kompilacji, połączyć wstępnie skompilowany kod z kodem, który jest nadal w fazie projektowania. Każda kolejna kompilacja jest szybsza, ponieważ stabilny kod nie musi być ponownie kompilowany.
+W przypadku dużych projektów, które zajmują dużo czasu na tworzenie, warto rozważyć utworzenie niestandardowych wstępnie skompilowanych plików. Kompilatory Microsoft C i C++ udostępniają opcje wstępnego kompilowania dowolnego kodu C lub C++, w tym kodu wbudowanego. Za pomocą tej funkcji wydajności, można skompilować stabilną treść kodu, przechowywać skompilowany stan kodu w pliku i, podczas kolejnych kompilacji, połączyć wstępnie skompilowany kod z kodem, który jest nadal w fazie rozwoju. Każda kolejna kompilacja jest szybsza, ponieważ stabilny kod nie musi być ponownie skompilowany.
 
 ## <a name="when-to-precompile-source-code"></a>Kiedy przeprowadzać prekompilowanie kodu źródłowego
 
-Wstępnie skompilowany kod jest przydatny w cyklu programowania, aby skrócić czas kompilacji, zwłaszcza jeśli:
+Wstępnie skompilowany kod jest przydatny podczas cyklu rozwoju, aby skrócić czas kompilacji, zwłaszcza jeśli:
 
-- Zawsze używasz dużej części kodu, która rzadko zmienia się.
+- Zawsze używasz dużej treści kodu, który zmienia się rzadko.
 
-- Program składa się z wielu modułów, z których wszystkie używają standardowego zestawu plików dołączanych i tych samych opcji kompilacji. W takim przypadku wszystkie pliki dołączane mogą być wstępnie skompilowane w jednym prekompilowanym nagłówku.
+- Program składa się z wielu modułów, z których wszystkie używają standardowego zestawu plików dołączanych i tych samych opcji kompilacji. W takim przypadku wszystkie pliki dołączane można wstępnie skompilować w jednym wstępnie skompilowanym nagłówku.
 
-Pierwsza kompilacja — ta, która tworzy plik prekompilowanego nagłówka (PCH), zajmuje nieco więcej niż kolejne kompilacje. Kolejne kompilacje mogą szybciej przebiegać przez dołączenie wstępnie skompilowanego kodu.
+Pierwsza kompilacja — ta, która tworzy plik wstępnie skompilowanego nagłówka (PCH) — trwa nieco dłużej niż kolejne kompilacje. Kolejne kompilacje można kontynuować szybciej, dołączając wstępnie skompilowany kod.
 
-Można wstępnie skompilować zarówno język C, C++ jak i programy. W C++ programowaniu typowym sposobem jest oddzielenie informacji o interfejsie klasy do plików nagłówkowych. Te pliki nagłówkowe można później dołączać do programów, które używają klasy. Wstępnie kompilując te nagłówki, można skrócić czas, jaki program zajmie kompilacją.
+Można wstępnie skompilować programy C i C++. W programowaniu języka C++ jest powszechną praktyką, aby oddzielić informacje o interfejsie klasy do plików nagłówkowych. Te pliki nagłówkowe mogą być później zawarte w programach, które używają klasy. Wstępnie kompilowanie tych nagłówków można skrócić czas kompilacji programu.
 
 > [!NOTE]
-> Chociaż można używać tylko jednego prekompilowanego pliku nagłówkowego (. pch) na plik źródłowy, można użyć wielu plików. PCH w projekcie.
+> Chociaż można używać tylko jednego wstępnie skompilowanego pliku nagłówka (pch) na plik źródłowy, można użyć wielu plików pch w projekcie.
 
 ## <a name="two-choices-for-precompiling-code"></a>Dwa wybory dla wstępnej kompilacji kodu
 
-Można wstępnie skompilować wszystkie C lub C++ kod; nie można prekompilować tylko plików nagłówkowych.
+Można wstępnie skompilować dowolny kod C lub C++; nie są ograniczone do wstępnego komppilowania tylko plików nagłówkowych.
 
-Prekompilowanie wymaga planowania, ale oferuje znacznie szybsze kompilacje, Jeśli kompilujesz kod źródłowy inny niż proste pliki nagłówkowe.
+Wstępne kompilowanie wymaga planowania, ale oferuje znacznie szybsze kompilacje, jeśli wstępnie skompilowany kod źródłowy inny niż proste pliki nagłówka.
 
-Kompiluj kod wstępnie, gdy wiesz, że pliki źródłowe używają wspólnych zestawów plików nagłówkowych, ale nie dodawaj ich w tej samej kolejności lub jeśli chcesz dołączyć kod źródłowy do wstępnej kompilacji.
+Wstępnie skompilować kod, gdy wiadomo, że pliki źródłowe używają typowych zestawów plików nagłówkowych, ale nie zawierają ich w tej samej kolejności lub gdy chcesz dołączyć kod źródłowy do wstępnej kompilacji.
 
-Opcje prekompilowanego nagłówka to [/YC (Tworzenie prekompilowanego pliku nagłówkowego)](reference/yc-create-precompiled-header-file.md) i [/Yu (Użyj prekompilowanego pliku nagłówkowego)](reference/yu-use-precompiled-header-file.md). Użyj **/YC** , aby utworzyć prekompilowany nagłówek. Gdy jest używany z opcjonalnym pragmą [hdrstop](../preprocessor/hdrstop.md) , **/YC** umożliwia wstępne skompilowanie zarówno plików nagłówkowych, jak i kodu źródłowego. Wybierz pozycję **/Yu** , aby użyć istniejącego prekompilowanego nagłówka w istniejącej kompilacji. Możesz również użyć **/FP** z opcjami **/YC** i **/Yu** , aby podać alternatywną nazwę prekompilowanego nagłówka.
+Wstępnie skompilowane opcje nagłówka to [/Yc (Tworzenie wstępnie skompilowanego pliku nagłówka)](reference/yc-create-precompiled-header-file.md) i [/Yu (Użyj wstępnie skompilowanego pliku nagłówka).](reference/yu-use-precompiled-header-file.md) Użyj **/Yc,** aby utworzyć wstępnie skompilowany nagłówek. W przypadku użycia z opcjonalnym [pragma hdrstop,](../preprocessor/hdrstop.md) **/Yc** umożliwia wstępnie skompilować zarówno pliki nagłówkowe, jak i kod źródłowy. Wybierz **/Yu,** aby użyć istniejącego wstępnie skompilowanego nagłówka w istniejącej kompilacji. Można również użyć **/Fp** z **/Yc** i **/Yu** opcji, aby podać alternatywną nazwę dla wstępnie skompilowany nagłówek.
 
-Tematy dotyczące opcji kompilatora dla **/Yu** i **/YC** omawiają sposób uzyskiwania dostępu do tej funkcji w środowisku programistycznym.
+Tematy referencyjne opcji kompilatora dla **/Yu** i **/Yc** omówienia sposobu dostępu do tej funkcji w środowisku programistycznym.
 
 ## <a name="precompiled-header-consistency-rules"></a>Zasady spójności prekompilowanego nagłówka
 
-Ponieważ pliki PCH zawierają informacje o środowisku komputera, a także informacje o adresie pamięci dotyczące programu, należy użyć pliku PCH na komputerze, na którym został utworzony.
+Ponieważ pliki PCH zawierają informacje o środowisku komputera, a także informacje o adresie pamięci programu, należy używać tylko pliku PCH na komputerze, na którym został utworzony.
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Zasady spójności dla stosowanych dla prekompilowanych plików nagłówka
 
-Opcja kompilatora [/Yu](reference/yu-use-precompiled-header-file.md) umożliwia określenie, który plik PCH ma być używany.
+Opcja kompilatora [/Yu](reference/yu-use-precompiled-header-file.md) pozwala określić, który plik PCH ma być używany.
 
-W przypadku korzystania z pliku PCH kompilator zakłada to samo środowisko kompilacji — jeden, który używa spójnych opcji kompilatora, dyrektywy pragma i tak dalej — który obowiązywał podczas tworzenia pliku PCH, o ile nie określono inaczej. Jeśli kompilator wykryje niespójność, wygeneruje ostrzeżenie i zidentyfikuje niespójność tam, gdzie jest to możliwe. Takie ostrzeżenia nie zawsze wskazują na problem z plikiem PCH; po prostu ostrzega o możliwych konfliktach. Wymagania dotyczące spójności dla plików PCH są opisane w poniższych sekcjach.
+Podczas korzystania z pliku PCH kompilator przyjmuje to samo środowisko kompilacji — takie, które używa spójnych opcji kompilatora, pragmas i tak dalej — który obowiązywał podczas tworzenia pliku PCH, chyba że określono inaczej. Jeśli kompilator wykryje niespójność, generuje ostrzeżenie i identyfikuje niespójność, gdzie to możliwe. Takie ostrzeżenia nie muszą oznaczać problemu z plikiem PCH; po prostu ostrzegają przed możliwymi konfliktami. Wymagania dotyczące spójności plików PCH są opisane w poniższych sekcjach.
 
 ### <a name="compiler-option-consistency"></a>Spójność opcji kompilatora
 
-Następujące opcje kompilatora mogą wyzwalać ostrzeżenie niespójności podczas korzystania z pliku PCH:
+Następujące opcje kompilatora mogą wyzwolić ostrzeżenie o niespójności podczas korzystania z pliku PCH:
 
-- Makra utworzone przy użyciu opcji preprocesora (/D) muszą być takie same między kompilacją, która utworzyła plik PCH i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale w przypadku tych zmian mogą wystąpić nieprzewidywalne wyniki.
+- Makra utworzone przy użyciu opcji Preprocesor (/D) muszą być takie same między kompilacją, która utworzyła plik PCH, a bieżącą kompilacją. Stan zdefiniowanych stałych nie jest sprawdzany, ale mogą wystąpić nieprzewidywalne wyniki, jeśli te zmiany.
 
-- Pliki PCH nie działają z opcjami/E i/EP.
+- Pliki PCH nie działają z opcjami /E i /EP.
 
-- Pliki PCH muszą zostać utworzone przy użyciu opcji Generuj informacje o przeglądaniu (/FR) lub wykluczanie zmiennych lokalnych (/fr) przed kolejnymi kompilacjami korzystającymi z pliku PCH.
+- Pliki PCH muszą być tworzone przy użyciu opcji Generuj informacje o przeglądaniu (/FR) lub Opcji Wyklucz zmienne lokalne (/Fr), zanim kolejne kompilacje korzystające z pliku PCH będą mogły korzystać z tych opcji.
 
-### <a name="c-70-compatible-z7"></a>C 7,0 — zgodny (/Z7)
+### <a name="c-70-compatible-z7"></a>Kompatybilny z C 7.0 (/Z7)
 
-Jeśli ta opcja obowiązuje podczas tworzenia pliku PCH, kolejne kompilacje korzystające z pliku PCH mogą korzystać z informacji o debugowaniu.
+Jeśli ta opcja obowiązuje podczas tworzenia pliku PCH, kolejne kompilacje korzystające z pliku PCH mogą używać informacji debugowania.
 
-Jeśli opcja zgodne z C 7,0 (/Z7) nie obowiązuje po utworzeniu pliku PCH, kolejne kompilacje używające pliku PCH i/Z7 wyzwalają ostrzeżenie. Informacje o debugowaniu są umieszczane w bieżącym pliku. obj, a symbole lokalne zdefiniowane w pliku PCH nie są dostępne dla debugera.
+Jeśli opcja C 7.0-Compatible (/Z7) nie obowiązuje podczas tworzenia pliku PCH, kolejne kompilacje korzystające z pliku PCH i /Z7 wyzwalają ostrzeżenie. Informacje debugowania są umieszczane w bieżącym pliku obj, a symbole lokalne zdefiniowane w pliku PCH nie są dostępne dla debugera.
 
 ### <a name="include-path-consistency"></a>Uwzględnij spójność ścieżki
 
-Plik PCH nie zawiera informacji o ścieżce include, która obowiązywała podczas tworzenia. W przypadku korzystania z pliku PCH kompilator zawsze używa ścieżki dołączania określonej w bieżącej kompilacji.
+Plik PCH nie zawiera informacji o ścieżce dołączania, która obowiązywała podczas jej tworzenia. Podczas korzystania z pliku PCH kompilator zawsze używa ścieżki dołączania określonej w bieżącej kompilacji.
 
 ### <a name="source-file-consistency"></a>Spójność pliku źródłowego
 
-W przypadku określenia opcji Użyj prekompilowanego pliku nagłówkowego (/Yu) kompilator ignoruje wszystkie dyrektywy preprocesora (w tym dyrektywy pragma), które są wyświetlane w kodzie źródłowym, który zostanie wstępnie skompilowany. Kompilacja określona przez takie dyrektywy preprocesora musi być taka sama jak kompilacja użyta dla opcji Utwórz prekompilowany plik nagłówkowy (/Yc).
+Po określeniu opcji Użyj wstępnie skompilowanego pliku nagłówka (/Yu), kompilator ignoruje wszystkie dyrektywy preprocesora (w tym pragmy), które pojawiają się w kodzie źródłowym, który będzie wstępnie skompilowany. Kompilacja określona przez takie dyrektywy preprocesora musi być taka sama jak kompilacja używana dla opcji Utwórz wstępnie skompilowany plik nagłówka (/Yc).
 
-### <a name="pragma-consistency"></a>Spójności dyrektywy pragma
+### <a name="pragma-consistency"></a>Spójność Pragma
 
-Dyrektywy pragma przetwarzane podczas tworzenia pliku PCH zwykle wpływają na plik, z którego następnie jest używany plik PCH. `comment` i `message` pragma nie wpływają na resztę kompilacji.
+Pragmas przetwarzane podczas tworzenia pliku PCH zwykle wpływają na plik, z którym plik PCH jest następnie używany. I `comment` `message` pragmy nie wpływają na pozostałą część kompilacji.
 
-Te dyrektywy pragma wpływają tylko na kod w pliku PCH; nie mają one wpływu na kod, który następnie używa pliku PCH:
+Te pragmy wpływają tylko na kod w pliku PCH; nie mają one wpływu na kod, który następnie używa pliku PCH:
 
 ||||
 |-|-|-|
@@ -97,7 +97,7 @@ Te dyrektywy pragma wpływają tylko na kod w pliku PCH; nie mają one wpływu n
 |`linesize`|`pagesize`|`title`|
 |`message`|`skip`||
 
-Te dyrektywy pragma są zachowywane jako część prekompilowanego nagłówka i wpływają na resztę kompilacji, która używa prekompilowanego nagłówka:
+Te pragmy są zachowywane jako część wstępnie skompilowanego nagłówka i wpływają na pozostałą część kompilacji, która używa wstępnie skompilowanego nagłówka:
 
 ||||
 |-|-|-|
@@ -110,55 +110,55 @@ Te dyrektywy pragma są zachowywane jako część prekompilowanego nagłówka i 
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>Zasady spójności dla /Yc i /Yu
 
-Jeśli używasz prekompilowanego nagłówka utworzonego za pomocą/YC lub/Yu, kompilator porównuje bieżące środowisko kompilacji z tym, który istniał podczas tworzenia pliku PCH. Należy pamiętać o określeniu środowiska spójnego z poprzednim (przy użyciu spójnych opcji kompilatora, pragm i tak dalej) dla bieżącej kompilacji. Jeśli kompilator wykryje niespójność, wygeneruje ostrzeżenie i zidentyfikuje niespójność tam, gdzie jest to możliwe. Takie ostrzeżenia nie zawsze wskazują na problem z plikiem PCH; po prostu ostrzega o możliwych konfliktach. W poniższych sekcjach wyjaśniono wymagania dotyczące spójności dla prekompilowanych nagłówków.
+Korzystając z wstępnie skompilowanego nagłówka utworzonego przy użyciu /Yc lub /Yu, kompilator porównuje bieżące środowisko kompilacji z tym, które istniało podczas tworzenia pliku PCH. Pamiętaj, aby określić środowisko zgodne z poprzednim (przy użyciu spójnych opcji kompilatora, pragmas i tak dalej) dla bieżącej kompilacji. Jeśli kompilator wykryje niespójność, generuje ostrzeżenie i identyfikuje niespójność, gdzie to możliwe. Takie ostrzeżenia nie muszą oznaczać problemu z plikiem PCH; po prostu ostrzegają przed możliwymi konfliktami. W poniższych sekcjach wyjaśniono wymagania dotyczące spójności dla wstępnie skompilowanych nagłówków.
 
 ### <a name="compiler-option-consistency"></a>Spójność opcji kompilatora
 
-Ta tabela zawiera listę opcji kompilatora, które mogą wyzwolić ostrzeżenie niespójności przy użyciu prekompilowanego nagłówka:
+W tej tabeli wymieniono opcje kompilatora, które mogą wyzwolić ostrzeżenie o niespójności podczas korzystania z wstępnie skompilowanego nagłówka:
 
-|Opcja|Name (Nazwa)|Reguła|
+|Opcja|Nazwa|Reguła|
 |------------|----------|----------|
-|/D|Definiowanie stałych i makr|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale mogą wystąpić nieprzewidywalne wyniki, jeśli pliki są zależne od wartości zmienionych stałych.|
-|/E lub/EP|Kopiuj dane wyjściowe preprocesora do wyjścia standardowego|Prekompilowane nagłówki nie działają z opcją/E lub/EP.|
-|/Fr lub/FR|Generuj informacje o przeglądarce Microsoft Source|Aby opcje/fr i/FR były prawidłowe dla opcji/Yu, muszą one być stosowane podczas tworzenia prekompilowanego nagłówka. Kolejne kompilacje, które używają prekompilowanego nagłówka, również generują informacje o przeglądarce źródłowej. Informacje o przeglądarce są umieszczane w jednym pliku. sbr i są odwołujące się do innych plików w taki sam sposób, jak informacje CodeView. Nie można zastąpić umieszczania informacji w przeglądarce źródłowej.|
-|/GA,/GD,/GE,/GW lub/GW|Opcje protokołu systemu Windows|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Jeśli te opcje różnią się, zostanie wyświetlony komunikat ostrzegawczy.|
-|/Zi|Generuj pełne informacje o debugowaniu|Jeśli ta opcja obowiązuje po utworzeniu prekompilowanego nagłówka, kolejne kompilacje używające prekompilowania mogą korzystać z tych informacji debugowania. Jeśli/Zi nie obowiązuje po utworzeniu prekompilowanego nagłówka, kolejne kompilacje używające prekompilacji i opcji/Zi wyzwalają ostrzeżenie. Informacje o debugowaniu są umieszczane w bieżącym pliku obiektu, a symbole lokalne zdefiniowane w prekompilowanym nagłówku nie są dostępne dla debugera.|
+|/D|Definiowanie stałych i makr|Musi być taka sama między kompilacji, która utworzyła wstępnie skompilowany nagłówek i bieżącej kompilacji. Stan zdefiniowanych stałych nie jest sprawdzany, ale nieprzewidywalne wyniki mogą wystąpić, jeśli pliki zależą od wartości zmienionych stałych.|
+|/E lub /EP|Kopiowanie wyjścia preprocesora na wyjście standardowe|Wstępnie skompilowane nagłówki nie działają z opcją /E lub /EP.|
+|/Fr lub /FR|Generowanie informacji o przeglądarce źródłowego firmy Microsoft|Aby opcje /Fr i /FR były prawidłowe z opcją /Yu, muszą one również obowiązywać podczas tworzenia wstępnie skompilowanego nagłówka. Kolejne kompilacje, które używają wstępnie skompilowanego nagłówka, również generują informacje o przeglądarce źródłowej. Informacje o przeglądarce są umieszczane w jednym pliku .sbr i są odwoływane przez inne pliki w taki sam sposób, jak informacje CodeView. Nie można zastąpić umieszczania informacji o przeglądarce źródłowej.|
+|/GA, /GD, /GE, /Gw lub /GW|Opcje protokołu systemu Windows|Musi być taka sama między kompilacji, która utworzyła wstępnie skompilowany nagłówek i bieżącej kompilacji. Jeśli te opcje różnią się, zostanie wyświetlony komunikat ostrzegawczy.|
+|/zi|Generowanie pełnych informacji debugowania|Jeśli ta opcja obowiązuje podczas tworzenia wstępnie skompilowanego nagłówka, kolejne kompilacje korzystające z wstępnej kompilacji mogą używać tych informacji debugowania. Jeśli /Zi nie obowiązuje podczas tworzenia wstępnie skompilowanego nagłówka, kolejne kompilacje, które używają wstępnej kompilacji i opcji /Zi, wyzwalają ostrzeżenie. Informacje debugowania są umieszczane w bieżącym pliku obiektu, a symbole lokalne zdefiniowane w wstępnie skompilowanym nagłówku nie są dostępne dla debugera.|
 
 > [!NOTE]
->  Wstępnie skompilowany obiekt nagłówkowy jest przeznaczony do użytku tylko w języku C C++ i plikach źródłowych.
+> Wstępnie skompilowany przycisk nagłówka jest przeznaczony do użytku tylko w plikach źródłowych języka C i C++.
 
 ## <a name="using-precompiled-headers-in-a-project"></a>Stosowanie w projekcie prekompilowanych nagłówków
 
-Poprzednie sekcje zawierają przegląd prekompilowanych nagłówków:/YC i/Yu, opcję/FP oraz [hdrstop](../preprocessor/hdrstop.md) pragma. W tej sekcji opisano metodę używania ręcznie wstępnie skompilowanych opcji nagłówka w projekcie; jest ona zakończona przykładowym plikem reguł programu make i zarządzanym kodem.
+Poprzednie sekcje przedstawiają przegląd wstępnie skompilowanych nagłówków: /Yc i /Yu, /Fp i [hdrstop](../preprocessor/hdrstop.md) pragma. W tej sekcji opisano metodę korzystania z ręcznych opcji wstępnie skompilowanego nagłówka w projekcie; kończy się przykładem makefile i kodem, który zarządza.
 
-Inne podejście do używania opcji ręcznego prekompilowanego nagłówka w projekcie przeanalizuje jeden z plików reguł programu make znajdujących się w katalogu MFC\SRC, który jest tworzony podczas konfiguracji domyślnej programu Visual Studio. Te pliki reguł programu make są zgodne z podejściem przedstawionym w tej sekcji, ale nie pozwalają na lepsze korzystanie z makr narzędzia do konserwacji programów firmy Microsoft (NMAKE) i oferują większą kontrolę nad procesem kompilacji.
+Aby uzyskać inne podejście do korzystania z ręcznych opcji wstępnie skompilowanego nagłówka w projekcie, przestudiuj jeden z plików makefiles znajdujących się w katalogu MFC\SRC, który jest tworzony podczas domyślnej konfiguracji programu Visual Studio. Te makefiles podjąć podobne podejście do przedstawionego w tej sekcji, ale w większym stopniu korzystać z microsoft program konserwacji narzędzia (NMAKE) makra i oferują większą kontrolę nad procesem kompilacji.
 
 ## <a name="pch-files-in-the-build-process"></a>Pliki PCH w procesie kompilacji
 
-Baza kodu projektu oprogramowania zwykle znajduje się w wielu plikach C lub C++ źródłowych, plikach obiektów, bibliotekach i plikach nagłówkowych. Zwykle plik reguł programu make koordynuje kombinację tych elementów w pliku wykonywalnym. Na poniższej ilustracji przedstawiono strukturę pliku reguł programu make, który używa prekompilowanych plików nagłówkowych. Nazwy makr NMAKE i nazwy plików na tym diagramie są spójne z tymi w przykładowym kodzie znalezionym w [przykładowym pliku reguł programu make dla PCH](#sample-makefile-for-pch) i [przykładowego kodu dla PCH](#example-code-for-pch).
+Baza kodu projektu oprogramowania jest zwykle zawarta w wielu plikach źródłowych języka C lub C++, plikach obiektów, bibliotekach i plikach nagłówkowych. Zazwyczaj plik makefile koordynuje kombinację tych elementów w pliku wykonywalnym. Na poniższej ilustracji przedstawiono strukturę pliku makefile, który używa wstępnie skompilowanego pliku nagłówka. Nazwy makr NMAKE i nazwy plików na tym diagramie są zgodne z nazwami w przykładowym kodzie znalezionym w [przykładowym pliku Makefile dla PCH](#sample-makefile-for-pch) i [przykładowym kodzie dla PCH](#example-code-for-pch).
 
-Rysunek używa trzech urządzeń diagramowy do wyświetlania przepływu procesu kompilacji. Nazwane prostokąty reprezentują każdy plik lub makro; trzy makra reprezentują jeden lub więcej plików. Zacienione obszary reprezentują każdą akcję kompilacji lub łącza. Strzałki pokazują, które pliki i makra są łączone podczas kompilacji lub procesu łączenia.
+Rysunek używa trzech urządzeń diagramowych, aby pokazać przepływ procesu kompilacji. Nazwane prostokąty reprezentują każdy plik lub makro; trzy makra reprezentują jeden lub więcej plików. Cieniowane obszary reprezentują każdą akcję kompilacji lub łącza. Strzałki pokazują, które pliki i makra są łączone podczas procesu kompilacji lub łączenia.
 
-![Struktura pliku reguł programu make korzystającego z prekompilowanych plików nagłówkowych](media/vc30ow1.gif "Struktura pliku reguł programu make korzystającego z prekompilowanych plików nagłówkowych") <br/>
-Struktura pliku reguł programu make korzystającego z prekompilowanych plików nagłówkowych
+![Struktura pliku makefile, który używa wstępnie skompilowanego pliku nagłówka](media/vc30ow1.gif "Struktura pliku makefile, który używa wstępnie skompilowanego pliku nagłówka") <br/>
+Struktura pliku Makefile, który używa wstępnie skompilowanego pliku nagłówka
 
-Począwszy od górnej części diagramu, zarówno STABLEHDRS, jak i powiązane są makrami NMAKE, w których można wyświetlić listę plików, które nie wymagają ponownej kompilacji. Te pliki są kompilowane przez ciąg polecenia
+Począwszy od góry diagramu, zarówno STABLEHDRS i BOUNDRY są NMAKE makr, w których lista plików nie może wymagać ponownej kompilacji. Pliki te są kompilowane przez ciąg poleceń
 
 `CL /c /W3 /Yc$(BOUNDRY) applib.cpp myapp.cpp`
 
-tylko wtedy, gdy prekompilowany plik nagłówkowy (stabilny. pch) nie istnieje lub wprowadzasz zmiany w plikach wymienionych w dwóch makrach. W obu przypadkach prekompilowany plik nagłówkowy będzie zawierał kod tylko z plików wymienionych w makrze STABLEHDRS. Utwórz listę ostatnio zakompilowanego pliku w powiązanym makrze.
+tylko wtedy, gdy wstępnie skompilowany plik nagłówka (STABLE.pch) nie istnieje lub jeśli wprowadzone zostaną zmiany w plikach wymienionych w dwóch makrach. W obu przypadkach wstępnie skompilowany plik nagłówka będzie zawierał kod tylko z plików wymienionych w makrze STABLEHDRS. Wyświetl ostatni plik, który ma być wstępnie skompilowany w makrze BOUNDRY.
 
-Pliki znajdujące się w tych makrach mogą być plikami nagłówkowe lub C lub C++ plikami źródłowymi. (Pojedynczy plik PCH nie może być używany zarówno w języku C C++ , jak i w modułach.) Należy pamiętać, że można użyć makra **hdrstop** , aby zatrzymać prekompilowanie w pewnym momencie w pliku Bound. Aby uzyskać więcej informacji, zobacz [hdrstop](../preprocessor/hdrstop.md) .
+Pliki wywieszane w tych makrach mogą być plikami nagłówkowymi lub plikami źródłowymi języka C lub C++. (Pojedynczego pliku PCH nie można używać zarówno z modułami C, jak i C++). Należy zauważyć, że można użyć makra **hdrstop,** aby zatrzymać wstępną kompilację w pewnym momencie w pliku BOUNDRY. Zobacz [hdrstop aby](../preprocessor/hdrstop.md) uzyskać więcej informacji.
 
-Kontynuowanie diagramu APPLIB. obj reprezentuje kod pomocy technicznej używany w aplikacji końcowej. Jest tworzony z APPLIB. cpp, plików wymienionych w makrze UNSTABLEHDRS i prekompilowanego kodu z prekompilowanego nagłówka.
+Kontynuując w dół diagramu APPLIB.obj reprezentuje kod pomocy technicznej używany w aplikacji końcowej. Jest on tworzony z APPLIB.cpp, pliki wymienione w makra UNSTABLEHDRS i wstępnie skompilowany kod z wstępnie skompilowanego nagłówka.
 
-MOJAAPL. obj reprezentuje ostateczną aplikację. Jest tworzony na podstawie pliku MOJAAPL. cpp, plików wymienionych w makrze UNSTABLEHDRS i prekompilowanego kodu z prekompilowanego nagłówka.
+MYAPP.obj reprezentuje ostateczną aplikację. Jest on tworzony z MYAPP.cpp, pliki wymienione w makra UNSTABLEHDRS i wstępnie skompilowany kod z wstępnie skompilowanego nagłówka.
 
-Na koniec plik wykonywalny (MOJAAPL. EXE) jest tworzony przez połączenie plików wymienionych w makrze przywołujące obj zawierały (APPLIB. obj i MOJAAPL. obj).
+Na koniec plik wykonywalny (MYAPP. EXE) jest tworzony przez połączenie plików wymienionych w makra OBJS (APPLIB.obj i MYAPP.obj).
 
 ## <a name="sample-makefile-for-pch"></a>Przykładowy plik pliku reguł programu Make dla PCH
 
-Poniższy plik reguł programu make używa makr i! IF,! W przeciwnym razie! Struktura poleceń sterujących przepływem (ENDIF) do uproszczenia adaptacji do projektu.
+Następujący plik makefile używa makr i ! Jeśli! Innego! ENDIF flow-of-control struktury poleceń, aby uprościć jego adaptacji do projektu.
 
 ```NMAKE
 # Makefile : Illustrates the effective use of precompiled
@@ -204,26 +204,26 @@ stable.pch : $(STABLEHDRS)
     $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp myapp.cpp
 ```
 
-Poza makrami STABLEHDRS, BOUNDs i UNSTABLEHDRS przedstawionymi w strukturze "Struktura pliku reguł programu make, który używa prekompilowanych plików nagłówkowych" w [plikach PCH w procesie kompilacji](#pch-files-in-the-build-process), ten plik reguł programu make zawiera makro CLFLAGS i makro LINKFLAGS. Należy użyć tych makr, aby wyświetlić listę opcji kompilatora i konsolidatora, które mają zastosowanie do tworzenia debugowania lub końcowej wersji pliku wykonywalnego aplikacji. Istnieje również makro LIBS, w którym można wyświetlić listę bibliotek wymaganych przez ten projekt.
+Oprócz makr STABLEHDRS, BOUNDRY i UNSTABLEHDRS pokazanych na rysunku "Struktura pliku Makefile, który używa wstępnie skompilowanego pliku nagłówka" w [plikach PCH w procesie kompilacji,](#pch-files-in-the-build-process)plik ten zapewnia makro CLFLAGS i makro LINKFLAGS. Te makra należy używać do listy opcji kompilatora i konsolidatora, które mają zastosowanie, niezależnie od tego, czy tworzysz debugowanie, czy ostateczną wersję pliku wykonywalnego aplikacji. Istnieje również makro LIBS, w którym można wyświetlić listę bibliotek, których wymaga projekt.
 
-Plik reguł programu make używa również! IF,! W przeciwnym razie! ENDIF, aby wykryć, czy zdefiniujesz symbol debugowania w wierszu polecenia NMAKE:
+Makefile również używa! Jeśli! Innego! ENDIF do wykrywania, czy symbol DEBUG w wierszu polecenia NMAKE:
 
 ```NMAKE
 NMAKE DEBUG=[1|0]
 ```
 
-Ta funkcja umożliwia korzystanie z tego samego pliku reguł programu make podczas tworzenia i dla końcowych wersji programu — dla końcowych wersji należy używać debugowania = 0. Następujące wiersze polecenia są równoważne:
+Ta funkcja umożliwia używanie tego samego pliku makefile podczas tworzenia i dla ostatecznych wersji programu — użyj DEBUG=0 dla ostatecznych wersji. Następujące wiersze polecenia są równoważne:
 
 ```NMAKE
 NMAKE
 NMAKE DEBUG=0
 ```
 
-Aby uzyskać więcej informacji na temat plików reguł programu make, zobacz [NMAKE Reference](reference/nmake-reference.md). Zobacz również opcje [kompilatora MSVC](reference/compiler-options.md) i [MSVC opcji konsolidatora](reference/linker-options.md).
+Aby uzyskać więcej informacji na temat plików makefiles, zobacz [NMAKE Reference](reference/nmake-reference.md). Zobacz też [Opcje kompilatora MSVC](reference/compiler-options.md) i [Opcje konsolidatora MSVC](reference/linker-options.md).
 
 ## <a name="example-code-for-pch"></a>Przykład kodu dla PCH
 
-Następujące pliki źródłowe są używane w pliku reguł programu make opisanym w [plikach PCH w procesie kompilacji](#pch-files-in-the-build-process) i [przykładowy plik reguł programu make dla PCH](#sample-makefile-for-pch). Zwróć uwagę, że komentarze zawierają ważne informacje.
+Następujące pliki źródłowe są używane w pliku plików plików opisanych w [pliku PCH w procesie kompilacji](#pch-files-in-the-build-process) i [przykładowym pliku makefile dla PCH](#sample-makefile-for-pch). Należy pamiętać, że komentarze zawierają ważne informacje.
 
 ```cpp
 // ANOTHER.H : Contains the interface to code that is not
@@ -308,5 +308,5 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja kompilacji w języku C/C++](reference/c-cpp-building-reference.md)<br/>
+[Odwołanie kompilacji C/C++](reference/c-cpp-building-reference.md)<br/>
 [Opcje kompilatora MSVC](reference/compiler-options.md)

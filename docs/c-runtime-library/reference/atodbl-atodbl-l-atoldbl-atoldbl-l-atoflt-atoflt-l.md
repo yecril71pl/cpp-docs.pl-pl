@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943621"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348963"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Konwertuje ciąg na podwójny ( **_atodbl**), long double ( **_atoldbl**) lub float ( **_atoflt**).
+Konwertuje ciąg na podwójny (**_atodbl**), długi podwójny (**_atoldbl**) lub float (**_atoflt**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,31 +84,33 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość Double, long double lub float, która jest generowana przez konwersję ciągu na wartość zmiennoprzecinkową. Te wartości są opakowane w strukturę.
+Double, long double lub float wartość, która jest wytwarzana przez konwersję ciągu do wartości zmiennoprzecinkowej. Te wartości są zawijane w strukturę.
 
-*str*<br/>
-Ciąg, który ma zostać przeanalizowany do konwersji na wartość zmiennoprzecinkową.
+*Str*<br/>
+Ciąg, który ma być analizowany w celu konwersji na wartość zmiennoprzecinkową.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli powodzenie. Możliwe kody błędów to **_UNDERFLOW** lub **_OVERFLOW**, które są zdefiniowane w pliku \<nagłówkowym Math. h >.
+Zwraca wartość 0, jeśli zakończy się pomyślnie. Możliwe kody błędów są **_UNDERFLOW** lub **_OVERFLOW**, które \<są zdefiniowane w pliku nagłówka math.h>.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg na wartość zmiennoprzecinkową. Różnica między tymi funkcjami i rodziną **atofą** funkcji polega na tym, że funkcje te nie generują kodu zmiennoprzecinkowego i nie powodują wyjątków sprzętowych. Zamiast tego, warunki błędów są raportowane jako kody błędów.
+Te funkcje konwertować ciąg na wartość zmiennoprzecinkową. Różnica między tymi funkcjami a **rodziną** funkcji jest taka, że te funkcje nie generują kodu zmiennoprzecinkowego i nie powodują wyjątków sprzętowych. Zamiast tego warunki błędu są zgłaszane jako kody błędów.
 
-Jeśli ciąg nie ma prawidłowej interpretacji jako wartości zmiennoprzecinkowej, *wartość* jest ustawiona na zero, a wartość zwracana to zero.
+Jeśli ciąg nie ma prawidłowej interpretacji jako wartość zmiennoprzecinkowa, *wartość* jest ustawiona na zero, a zwracana wartość wynosi zero.
 
-Wersje tych funkcji, które mają sufiks **_l** są identyczne z wersjami, które nie mają sufiksu, z tą różnicą, że używają parametru *ustawień regionalnych* , który został przekazaną, zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji, które mają sufiks **_l** są identyczne wersje, które nie mają sufiksu, z tą różnicą, że używają parametru *ustawień regionalnych,* który jest przekazywany w zamiast bieżącego wątku ustawień regionalnych.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedury|Wymagany nagłówek|
+|Procedur|Wymagany nagłówek|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl** **_atoldbl** **_atoflt**<br /><br /> **_atodbl_l** **, _atoldbl_l**, **_atoflt_l**|\<>|
 
 ## <a name="example"></a>Przykład
 
@@ -159,9 +168,9 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

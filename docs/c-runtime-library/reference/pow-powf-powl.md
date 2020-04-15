@@ -1,10 +1,12 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950285"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333118"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Oblicza wartość *x* podniesioną do potęgi *y*.
+Oblicza *x* podniesiony do potęgi *y*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,39 +68,41 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Opiera.
+*X*<br/>
+Podstawowej.
 
-*y*<br/>
-Zapis.
+*Y*<br/>
+Wykładnik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość *x*<sup>*y*</sup>. Żaden komunikat o błędzie nie jest drukowany w przypadku przepełnienia lub niedomiaru.
+Zwraca wartość *x*<sup>*y*</sup>. Po przepełnienie lub niedopełnienie nie jest drukowane żaden komunikat o błędzie.
 
-|Wartości x i y|Wartość zwracana pow|
+|Wartości x i y|Wartość zwrotu pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 i *y* = = 0,0|1|
-|*x* = = 0,0 i *y* = = 0,0|1|
-|*x* = = 0,0 i *y* < 0|INF|
+|*x* != 0,0 i *y* == 0,0|1|
+|*x* == 0,0 i *y* == 0,0|1|
+|*x* == 0,0 i *y* < 0|Inf|
 
 ## <a name="remarks"></a>Uwagi
 
-**pow** nie rozpoznaje całkowitych wartości zmiennoprzecinkowych większych niż 2<sup>64</sup> (na przykład 1,0 E100).
+**pow** nie rozpoznaje całkowitych wartości zmiennoprzecinkowych większych niż 2<sup>64</sup> (na przykład 1.0E100).
 
-**pow** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
+**pow** ma implementację, która używa streamingu rozszerzeń SIMD 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
 
-Ponieważ C++ pozwala na Przeciążenie, można wywołać dowolne z różnych przeciążeń **pow**. W programie C, **pow** zawsze przyjmuje dwie wartości **podwójne** i zwraca wartość **podwójnej precyzji** .
+Ponieważ C++ umożliwia przeciążenie, można wywołać dowolny z różnych przeciążeń **pow**. W programie C **pow** zawsze przyjmuje dwie **podwójne** wartości i zwraca **podwójną** wartość.
 
-`pow(int, int)` Przeciążenie nie jest już dostępne. W przypadku użycia tego przeciążenia kompilator może emitować [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Aby uniknąć tego problemu, należy rzutować pierwszy parametr na **Double**, **float**lub **Long** **Double**.
+Przeciążenie `pow(int, int)` nie jest już dostępne. Jeśli używasz tego przeciążenia, kompilator może emitować [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Aby uniknąć tego problemu, należy odlecieć pierwszy **parametr,** aby podwoić, **float**lub **long** **double**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
-|**pow**, **powf —** , **POWL**|\<math.h>|\<Math. h > lub \<cmath >|
+|**pow**, **powf**, **powl**|\<> math.h|\<>> lub \<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -120,9 +125,9 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md) <br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md) <br/>
 [sqrt, sqrtf, sqrtl](sqrt-sqrtf-sqrtl.md) <br/>

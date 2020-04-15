@@ -1,11 +1,13 @@
 ---
 title: isspace, iswspace, _isspace_l, _iswspace_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
+- _o_isspace
+- _o_iswspace
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 43d66a191427e886941fd3dcac5dc6b71146b68a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342760"
 ---
 # <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -69,39 +72,43 @@ int _iswspace_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Liczba całkowita do przetestowania.
+*C*<br/>
+Całkowita ć do przetestowania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku spacji. **isspace** zwraca wartość różną od zera, jeśli *c* jest znakiem odstępu (0x09-0x0D lub 0x20). Wynik warunku testowego dla funkcji **isspace** zależy od ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że używają zamiast nich ustawień regionalnych, które zostały przesłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Każda z tych procedur zwraca nonzero, jeśli *c* jest określoną reprezentacją znaku spacji. **isspace** zwraca wartość różną od zera, jeśli *c* jest znakiem odstępu (0x09 - 0x0D lub 0x20). Wynik warunku testu dla funkcji **isspace** zależy od **ustawienia kategorii LC_CTYPE** ustawień ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. Wersje tych funkcji, które nie mają sufiksu **_l,** używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiks są identyczne, z tą różnicą, że używają ustawień regionalnych, które są przekazywane zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**iswspace** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do standardowego znaku odstępu.
+**iswspace** zwraca wartość różną od zera, jeśli *c* jest szerokim znakiem odpowiadającym standardowemu znakowi odstępu.
 
-Zachowanie **isspace** i **_isspace_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
+Zachowanie **isspace** i **_isspace_l** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy biblioteka CRT debugowania jest używana i *c* nie jest jedną z tych wartości, funkcje podnieść potwierdzenia.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+|**_** **istspace (istspace)**|**obszar isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace (przestrzeń kosmiczna)**|
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isspace**|\<ctype.h>|
-|**iswspace**|\<CType. h > lub \<WCHAR. h >|
+|**obszar isspace**|\<ctype.h>|
+|**iswspace (przestrzeń kosmiczna)**|\<ctype.h> lub \<wchar.h>|
 |**_isspace_l**|\<ctype.h>|
-|**_iswspace_l**|\<CType. h > lub \<WCHAR. h >|
+|**_iswspace_l**|\<ctype.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

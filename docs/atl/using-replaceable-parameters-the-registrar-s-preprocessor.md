@@ -1,49 +1,49 @@
 ---
-title: Używanie wymiennych parametrów (Rejestrator ALT)
+title: Używanie wymiennych parametrów (rejestrator ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: 1c772c0493b351d8452400a4fb1e3949ab6f28f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2474db2de384baa9113ed39aef4d3d9c9048903d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329228"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Używanie wymiennych parametrów (Rejestrator&#39;preprocesora s)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Korzystanie z parametrów wymiennych (rejestrator&#39;s Preprocessor)
 
-Parametry wymienne pozwalają rejestratora klientów określić dane czasu wykonywania. Aby to zrobić, Rejestrator przechowuje mapy zastąpienia, w którym wchodzi wartości skojarzone z parametry zmienne w skrypcie. Rejestrator sprawia, że te wpisy w czasie wykonywania.
+Wymienne parametry umożliwiają klientowi rejestratora określenie danych w czasie wykonywania. W tym celu rejestrator zachowuje mapę zastępczą, do której wprowadza wartości skojarzone z wymiennymi parametrami w skrypcie. Rejestrator wprowadza te wpisy w czasie wykonywania.
 
-##  <a name="_atl_using_.25.module.25"></a> Przy użyciu modułu %
+## <a name="using-module"></a><a name="_atl_using_.25.module.25"></a>Korzystanie z %MODULE%
 
-[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md) automatycznie generuje skrypt, który używa `%MODULE%`. ATL używa ten parametr do zastąpienia dla rzeczywistej lokalizacji danych na serwerze biblioteki DLL lub EXE.
+[Kreator sterowania ATL](../atl/reference/atl-control-wizard.md) automatycznie generuje skrypt, `%MODULE%`który używa . ATL używa tego wymiennego parametru dla rzeczywistej lokalizacji biblioteki DLL lub EXE serwera.
 
-## <a name="concatenating-run-time-data-with-script-data"></a>Łączenie danych czasu wykonywania przy użyciu danych ze skryptów
+## <a name="concatenating-run-time-data-with-script-data"></a>Łączenie danych w czasie wykonywania z danymi skryptu
 
-Innym zastosowaniem preprocesora jest łączenie danych czasu wykonywania przy użyciu danych skryptu. Załóżmy, że wpis jest potrzebny zawierającą pełną ścieżkę do modułu z ciągiem "`, 1`" dołączany na końcu. Najpierw należy zdefiniować następujące rozszerzenia:
+Innym zastosowaniem preprocesora jest łączenie danych w czasie wykonywania z danymi skryptu. Załóżmy na przykład, że potrzebny jest wpis zawierający`, 1`pełną ścieżkę do modułu z ciągiem " " " dołączonym na końcu. Najpierw zdefiniuj następujące rozszerzenie:
 
 ```
 'MySampleKey' = s '%MODULE%, 1'
 ```
 
-Następnie przed wywołaniem skryptu przetwarzania metody wymienionej w [wywoływanie skryptów](../atl/invoking-scripts.md), dodać zamiennika do mapy:
+Następnie przed wywołaniem jednej z metod przetwarzania skryptów wymienionych w [wywoływaniu skryptów](../atl/invoking-scripts.md)dodaj zamiennik do mapy:
 
 [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]
 
-Podczas analizowania skryptu rejestratora rozwija `'%MODULE%, 1'` do `c:\mycode\mydll.dll, 1`.
+Podczas analizowania skryptu rejestrator rozszerza `'%MODULE%, 1'` się do `c:\mycode\mydll.dll, 1`.
 
 > [!NOTE]
->  W przypadku skryptu rejestratora 4K jest maksymalny rozmiar tokenu. (Token jest dowolny element rozpoznawalną w składni). Dotyczy to również tokenów, które zostały utworzone lub rozszerzać przez preprocesor.
+> W skrypcie rejestratora 4K jest maksymalny rozmiar tokenu. (Token jest dowolnym rozpoznawalnym elementem w składni.) Obejmuje to tokeny, które zostały utworzone lub rozwinięte przez preprocesora.
 
 > [!NOTE]
->  Aby zastąpić wartości zastępcze w czasie wykonywania, Usuń wywołanie funkcji w skrypcie [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) lub [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) makra. Zamiast tego należy zastąpić własnymi `UpdateRegistry` metodę, która wywołuje [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)i przekazać macierz _ATL_REGMAP_ Struktury wpisu. Macierz _ATL_REGMAP_ENTRY musi mieć co najmniej jeden wpis, który jest ustawiony na {wartość NULL, NULL}, a ten wpis powinien zawsze być ostatni wpis. W przeciwnym razie błąd naruszenia zasad dostępu będzie generowany, jeśli `UpdateRegistryFromResource` jest wywoływana.
+> Aby zastąpić wartości zastępcze w czasie wykonywania, usuń wywołanie w skrypcie do [makra DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) lub [DECLARE_REGISTRY_RESOURCEID.](../atl/reference/registry-macros.md#declare_registry_resourceid) Zamiast tego zastąp `UpdateRegistry` go własną metodą, która wywołuje [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)i przekaż tablicę struktur _ATL_REGMAP_ENTRY. Tablica _ATL_REGMAP_ENTRY musi mieć co najmniej jeden wpis ustawiony na {NULL,NULL}, a ten wpis powinien być zawsze ostatnim wpisem. W przeciwnym razie błąd naruszenia `UpdateRegistryFromResource` zasad dostępu zostanie wygenerowany, gdy zostanie wywołany.
 
 > [!NOTE]
->  Podczas kompilowania projektu, który generuje plik wykonywalny, ATL automatycznie dodaje znaki cudzysłowu otaczające tworzony w czasie wykonywania za pomocą nazwy ścieżki **modułu %** parametru skryptu rejestratora. Jeśli chcesz, aby nazwę ścieżki aby używać znaków cudzysłowu, użyj nowego **MODULE_RAW %** parametru zamiast tego.
+> Podczas tworzenia projektu, który wyprowadza plik wykonywalny, ATL automatycznie dodaje znaki cudzysłowu wokół nazwy ścieżki utworzonej w czasie wykonywania z parametrem skryptu **rejestratora %MODULE%.** Jeśli nazwa ścieżki nie ma zawierać cudzysłowu, należy użyć nowego parametru **%MODULE_RAW%.**
 >
->  Podczas kompilowania projektu, który wyprowadza biblioteki DLL, ATL nie doda znaków cudzysłowu do nazwy ścieżki Jeśli **modułu %** lub **MODULE_RAW %** jest używany.
+> Podczas tworzenia projektu, który wyprowadza bibliotekę DLL, ATL nie doda cudzysłowów do nazwy ścieżki, jeśli jest używany **%MODULE%** lub **%MODULE_RAW%.**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)

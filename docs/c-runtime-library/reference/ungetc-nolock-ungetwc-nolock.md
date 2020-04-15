@@ -1,9 +1,11 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
+- _o__ungetc_nolock
+- _o__ungetwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fde5142d4c405fcf2dd61f642abe917d70b59b21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361302"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
-Wypchnięcie znaku z powrotem do strumienia.
+Wypycha znak z powrotem do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,25 +64,27 @@ wint_t _ungetwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Znak do wypchnięcia.
+*C*<br/>
+Postać do pchania.
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, każda z tych funkcji zwraca argument znaku *c*. Jeśli nie można wypchnąć *dysku c* lub nie odczytano żadnego znaku, strumień wejściowy jest niezmieniony i **_ungetc_nolock** zwraca **EOF**; **_ungetwc_nolock** zwraca **WEOF**. Jeśli *strumień* ma **wartość null**, zwracany jest **znacznik EOF** lub **WEOF** , a **errno** jest ustawiony na **EINVAL**.
+Jeśli powiedzie się, każda z tych funkcji zwraca argument znaku *c*. Jeśli *c* nie może zostać odepchnięty lub jeśli nie odczytano żadnego znaku, strumień wejściowy pozostaje niezmieniony i **_ungetc_nolock** zwraca **EOF;** **_ungetwc_nolock** zwraca **WEOF**. Jeśli *strumień* ma **wartość NULL,** zwracany jest **EOF** lub **WEOF,** a **errno** jest ustawione na **wartość EINVAL**.
 
-Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są nieblokującymi wersjami **ungetc —** i **ungetwc**. Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
+Te funkcje są nieblokujące wersje **ungetc** i **ungetwc**. Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Mogą one być szybsze, ponieważ nie ponoszą narzutu blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
 
@@ -88,12 +93,12 @@ Te funkcje są nieblokującymi wersjami **ungetc —** i **ungetwc**. Wersje z s
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_ungetc_nolock**|\<stdio.h>|
-|**_ungetwc_nolock**|\<stdio. h > lub \<WCHAR. h >|
+|**_ungetwc_nolock**|\<stdio.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

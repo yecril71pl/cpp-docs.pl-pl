@@ -1,9 +1,11 @@
 ---
 title: _fputchar, _fputwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fputchar
 - _fputwchar
+- _o__fputchar
+- _o__fputwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346166"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -59,18 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parametry
 
-*s*<br/>
+*C*<br/>
 Znak do zapisania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisany. Dla **_fputchar**wartość zwracana przez **EOF** wskazuje na błąd. Dla **_fputwchar**wartość zwracana **WEOF** wskazuje na błąd. Jeśli c ma **wartość null**, te funkcje generują wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwraca **znacznik EOF** (lub **WEOF**) i ustaw **errno** na **EINVAL**.
+Każda z tych funkcji zwraca zapisany znak. W przypadku **_fputchar**zwracana wartość **EOF** wskazuje błąd. W przypadku **_fputwchar**zwracana wartość **WEOF** wskazuje błąd. Jeśli c ma **wartość NULL**, te funkcje generują nieprawidłowy wyjątek parametru, zgodnie z opisem w [zatwierdzeniu parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, zwracają **EOF** (lub **WEOF)** i **ustawiają errno** na **EINVAL**.
 
-Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Obie te funkcje zapisują pojedynczy znak *c* do **stdout** i przesuwają wskaźnik odpowiednio do potrzeb. **_fputchar** jest równoznaczna z `fputc( stdout )`. Jest to również równoznaczne z **putchar**, ale zaimplementowane tylko jako funkcja, a nie jako funkcja i makro. W przeciwieństwie do **fputc** i **putchar**, te funkcje nie są zgodne ze standardem ANSI.
+Obie te funkcje zapisuje pojedynczy znak *c* do **stdout** i przesuwa wskaźnik odpowiednio. **_fputchar** jest odpowiednikiem `fputc( stdout )`. Jest to również równoważne **putchar**, ale realizowane tylko jako funkcja, a nie jako funkcja i makro. W przeciwieństwie do **fputc** i **putchar**, funkcje te nie są zgodne ze standardem ANSI.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -82,10 +87,10 @@ Obie te funkcje zapisują pojedynczy znak *c* do **stdout** i przesuwają wskaź
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fputchar**|\<stdio. h >|
-|**_fputwchar**|\<stdio. h > lub \<WCHAR. h >|
+|**_fputchar**|\<stdio.h>|
+|**_fputwchar**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą—**stdin,** **stdout**i **stderr**— muszą zostać przekierowane, zanim funkcje c w czasie wykonywania będą mogły z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -114,6 +119,6 @@ This is a test of _fputchar!!
 
 ## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348469"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
-Oblicza cosinus.
+Oblicza cosine.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,37 +62,39 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*X*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub równa-263, występuje utrata znaczenia w wyniku.
+Cosine *x*. Jeśli *x* jest większa lub równa 263 lub mniejsza lub równa -263, występuje utrata istotności w wyniku.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|brak|**_DOMAIN**|
+|± QNAN, IND|brak|**_DOMAIN**|
 |± INF|**Nieprawidłowy**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia funkcji **cos** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C funkcja **cos** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **cos,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie C **cos** zawsze przyjmuje i zwraca **podwójny**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
+|Procedura|Wymagany nagłówek C|Wymagany nagłówek języka C++|
 |-------------|---------------------|-|
-|**cos**, **cosh —** , **cosf —**|\<> Math. h|\<cmath > lub \<Math. h >|
+|**cos**, **cosh**, **cosf**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [Sin, SINF —, sinl](sin-sinf-sinl.md).
+Zobacz przykład w [grzechu, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-ms.openlocfilehash: 207207d26a2c43367a00b382f80761429159a7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a29e8778cf2f3400df25b55574950a005bad995
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327005"
 ---
 # <a name="celementtraitsbase-class"></a>Klasa CElementTraitsBase
 
-Ta klasa zawiera kopię domyślnego i przenoszenie metody do klasy kolekcji.
+Ta klasa zawiera domyślne metody kopiowania i przenoszenia dla klasy kolekcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,33 +36,33 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CElementTraitsBase::CopyElements](#copyelements)|Wywołaj tę metodę można skopiować elementów przechowywanych w obiekcie klasy kolekcji.|
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Wywołaj tę metodę, aby zmienić lokalizację elementów przechowywanych w obiekcie klasy kolekcji.|
+|[CElementTraitsBase::CopyElements](#copyelements)|Wywołanie tej metody, aby skopiować elementy przechowywane w obiekcie klasy kolekcji.|
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Wywołanie tej metody, aby przenieść elementy przechowywane w obiekcie klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa bazowa definiuje metody kopiowanie i przenoszenie elementów w klasie kolekcji. Jest wykorzystywany przez klasy [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), i [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
+Ta klasa podstawowa definiuje metody kopiowania i przenoszenia elementów w klasie kolekcji. Jest on używany przez klasy [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)i [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements
+## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements
 
-Wywołaj tę metodę można skopiować elementów przechowywanych w obiekcie klasy kolekcji.
+Wywołanie tej metody, aby skopiować elementy przechowywane w obiekcie klasy kolekcji.
 
 ```
 static void CopyElements(
@@ -73,38 +73,38 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*<br/>
-Wskaźnik do pierwszego elementu, który będzie otrzymywać dane skopiowane.
+*pDest (właśc.*<br/>
+Wskaźnik do pierwszego elementu, który otrzyma skopiowane dane.
 
-*pSrc*<br/>
-Wskaźnik do pierwszego elementu, aby skopiować.
+*Psrc*<br/>
+Wskaźnik do pierwszego elementu do skopiowania.
 
-*nElements*<br/>
+*nElementy*<br/>
 Liczba elementów do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy źródłowe i docelowe nie powinny nakładać się na.
+Elementy źródłowe i docelowe nie powinny nakładać się na siebie.
 
-##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE
+## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE
 
-Typ danych na potrzeby dodawania elementów do kolekcji.
+Typ danych do użycia do dodawania elementów do kolekcji.
 
 ```
 typedef const T& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE
+## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE
 
-Typ danych używany do pobierania elementów z kolekcji.
+Typ danych do użycia do pobierania elementów z kolekcji.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements
+## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements
 
-Wywołaj tę metodę, aby zmienić lokalizację elementów przechowywanych w obiekcie klasy kolekcji.
+Wywołanie tej metody, aby przenieść elementy przechowywane w obiekcie klasy kolekcji.
 
 ```
 static void RelocateElements(
@@ -115,19 +115,19 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*<br/>
-Wskaźnik do pierwszego elementu, który będzie otrzymywać dane przenoszone.
+*pDest (właśc.*<br/>
+Wskaźnik do pierwszego elementu, który otrzyma przeniesione dane.
 
-*pSrc*<br/>
-Wskaźnik do pierwszego elementu przenosić.
+*Psrc*<br/>
+Wskaźnik do pierwszego elementu do przeniesienia.
 
-*nElements*<br/>
+*nElementy*<br/>
 Liczba elementów do przeniesienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), który jest wystarczające dla większości typów danych. Jeśli obiektów jest przenoszony zawierają wskaźniki do ich własnych elementów członkowskich, ta metoda należy do zastąpienia.
+Ta metoda wywołuje [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), co jest wystarczające dla większości typów danych. Jeśli obiekty są przenoszone zawierają wskaźniki do własnych elementów członkowskich, ta metoda będzie musiała zostać zastąpiona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)
