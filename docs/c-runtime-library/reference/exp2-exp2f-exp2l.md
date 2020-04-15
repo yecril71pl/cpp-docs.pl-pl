@@ -1,10 +1,13 @@
 ---
 title: exp2, exp2f, exp2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - exp2
 - exp2f
 - exp2l
+- _o_exp2
+- _o_exp2f
+- _o_exp2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5df1a216b4565f013a4c42b4ef4369b5b7f9b04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347584"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Oblicza wartość 2 podniesioną do określonej wartości.
+Oblicza 2 podniesione do określonej wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,37 +74,39 @@ long double exp2l(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Wartość wykładnika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wykładnik Base-2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
+Jeśli się powiedzie, zwraca wykładnik base-2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
 
-|Problem|przesłać|
+|Problem|Zwraca|
 |-----------|------------|
-|*x* = ± 0|1|
-|*x* = — nieskończoność|+0|
-|*x* = + nieskończoność|\+ NIESKOŃCZONOŚĆ|
+|*x* = ±0|1|
+|*x* = -NIESKOŃCZONOŚĆ|+0|
+|*x* = +NIESKOŃCZONOŚĆ|+NIESKOŃCZONOŚĆ|
 |*x* = NaN|NaN|
-|Błąd przepełnienia zakresu|\+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
+|Błąd zakresu przepełnienia|+HUGE_VAL, +HUGE_VALF lub +HUGE_VALL|
 |Błąd zakresu niedopełnienia|Prawidłowy wynik po zaokrągleniu|
 
-Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
+Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie podwójne** typy. W programie C **exp2 —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **exp2,** które przyjmują i zwracają **float** i **długie typy podwójne.** W programie C **exp2** zawsze przyjmuje i zwraca **podwójny**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek C|Nagłówek języka C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf —** , **Expl**|\<math.h>|\<cmath >|
+|**exp**, **expf**, **expl**|\<> math.h|\<> cmath|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

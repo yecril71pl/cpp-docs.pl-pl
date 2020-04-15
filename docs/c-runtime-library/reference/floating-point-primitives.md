@@ -1,6 +1,6 @@
 ---
 title: Zmiennoprzecinkowe typy pierwotne
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - _dclass
 - _ldclass
@@ -37,6 +37,37 @@ api_name:
 - _dsin
 - _ldsin
 - _fdsin
+- _o__d_int
+- _o__dclass
+- _o__dlog
+- _o__dnorm
+- _o__dpcomp
+- _o__dpoly
+- _o__dscale
+- _o__dsign
+- _o__dsin
+- _o__dtest
+- _o__dunscale
+- _o__fd_int
+- _o__fdclass
+- _o__fdexp
+- _o__fdlog
+- _o__fdpcomp
+- _o__fdpoly
+- _o__fdscale
+- _o__fdsign
+- _o__fdsin
+- _o__ld_int
+- _o__ldclass
+- _o__ldexp
+- _o__ldlog
+- _o__ldpcomp
+- _o__ldpoly
+- _o__ldscale
+- _o__ldsign
+- _o__ldsin
+- _o__ldtest
+- _o__ldunscale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -49,6 +80,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -125,16 +157,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d861fbf2b71d557354a60f65b8a76dc24ca1dd13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346711"
 ---
 # <a name="floating-point-primitives"></a>Zmiennoprzecinkowe typy pierwotne
 
-Specyficzne dla firmy Microsoft funkcje pierwotne, które są używane do implementowania niektórych funkcji zmiennoprzecinkowych standardowej biblioteki środowiska uruchomieniowego języka C (CRT). Są one udokumentowane w tym miejscu pod kątem kompletności, ale nie są zalecane do użycia. Niektóre z tych funkcji są uważane za nieużywane, ponieważ wiadomo, że występują problemy z dokładnością, obsługą wyjątków i zgodnością z zachowaniem IEEE-754. Istnieją one w bibliotece tylko w celu zapewnienia zgodności z poprzednimi wersjami. Aby poprawić zachowanie, przenośność i zgodność ze standardami, Preferuj standardowe funkcje zmiennoprzecinkowe za pośrednictwem tych funkcji.
+Specyficzne dla firmy Microsoft funkcje pierwotne, które są używane do implementacji niektórych standardowych funkcji zmiennoprzecinkowych biblioteki wykonawczej C (CRT). Są one udokumentowane tutaj dla kompletności, ale nie są zalecane do użycia. Niektóre z tych funkcji są znane jako nieużywane, ponieważ wiadomo, że mają problemy z precyzją, obsługą wyjątków i zgodnością z zachowaniem IEEE-754. Istnieją one w bibliotece tylko dla zgodności z powrotem. W celu prawidłowego zachowania, przenośności i przestrzegania standardów preferuj standardowe funkcje zmiennoprzecinające nad tymi funkcjami.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
@@ -148,22 +182,22 @@ short __cdecl _fdclass(float x);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*X*<br/>
+Argument funkcji zmiennoprzecinowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe implementują wersje języka C [fpclassify —](fpclassify.md) makro CRT dla typów zmiennoprzecinkowych. Klasyfikacja argumentu *x* jest zwracana jako jedna ze stałych, zdefiniowana w Math. h:
+Te prymitywy zmiennoprzecinowe implementują wersje C makra [CRT fpclassify](fpclassify.md) dla typów zmiennoprzecinkowych. Klasyfikacja argumentu *x* jest zwracana jako jedna z tych stałych, zdefiniowana w math.h:
 
 |Wartość|Opis|
 |-----------|-----------------|
 | **FP_NAN** | Cichy, sygnalizujący lub nieokreślony NaN |
 | **FP_INFINITE** | Dodatnia lub ujemna nieskończoność |
-| **FP_NORMAL** | Dodatnia lub negatywna znormalizowana wartość różna od zera |
-| **FP_SUBNORMAL** | Wartość dodatnia lub ujemna (nieznormalizowana) |
+| **FP_NORMAL** | Dodatnia lub ujemna znormalizowana wartość niezerowa |
+| **FP_SUBNORMAL** | Dodatnia lub ujemna wartość subnormal (zdenormalowana) |
 | **FP_ZERO** | Dodatnia lub ujemna wartość zerowa |
 
-Aby uzyskać dodatkowe informacje, możesz użyć funkcji [_fpclass i _fpclassf](fpclass-fpclassf.md) specyficznych dla firmy Microsoft. Użyj makra lub funkcji [fpclassify —](fpclassify.md) do przenoszenia.
+Aby uzyskać dodatkowe informacje, można użyć [funkcji _fpclass, _fpclassf](fpclass-fpclassf.md) specyficznych dla firmy Microsoft. Użyj [makra lub funkcji fpclassify, aby](fpclassify.md) uzyskać przenośność.
 
 ## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
@@ -177,12 +211,12 @@ int __cdecl _fdsign(float x);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*X*<br/>
+Argument funkcji zmiennoprzecinowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe implementują makro [signbit —](signbit.md) lub funkcję w CRT. Zwracają one wartość różną od zera, jeśli bit znaku jest ustawiony w mantysę (mantysy) argumentu *x*, i 0, jeśli bit znaku nie jest ustawiony.
+Te prymitywy zmiennoprzecinowe implementują makro lub funkcję [signbit](signbit.md) w CRT. Zwracają wartość różną od zera, jeśli bit znaku jest ustawiony w significand (mantissa) *argumentu x*i 0, jeśli bit znaku nie jest ustawiony.
 
 ## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
@@ -197,19 +231,19 @@ int __cdecl _fdpcomp(float x, float y);
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Argumenty funkcji zmiennoprzecinkowej.
+Argumenty funkcji zmiennoprzecinowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe przyjmują dwa argumenty, *x* i *y*, i zwracają wartość pokazującą relację kolejności, wyrażoną jako bitowe lub te stałe, zdefiniowane w Math. h:
+Te prymitywy zmiennoprzecinowe przyjmują dwa argumenty, *x* i *y*i zwracają wartość, która pokazuje ich relację porządkowania, wyrażoną jako bitowa lub tych stałych, zdefiniowaną w math.h:
 
 | Wartość | Opis |
 |------------|-----------------|
-| **_FP_LT** | *x* może być traktowany jako mniejszy niż *y* |
-| **_FP_EQ** | wartość *x* może być uważana za równą *y* |
-| **_FP_GT** | *x* może być traktowany jako większy niż *y* |
+| **_FP_LT** | *x* można uznać za mniej niż *y* |
+| **_FP_EQ** | *x* można uznać za równe *y* |
+| **_FP_GT** | *x* można uznać za większe niż *y* |
 
-Te elementy pierwotne implementują makra isisgreaterequal, [islessequal, islessgreater i isunordered](floating-point-ordering.md) oraz funkcje w CRT.
+Te prymitywy implementują [isgreater, isgreaterequal, isless, islessequal, islessgreater i isunordered](floating-point-ordering.md) makr i funkcji w CRT.
 
 ## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
@@ -223,22 +257,22 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>Parametry
 
-*px*<br/>
+*piks.*<br/>
 Wskaźnik do argumentu zmiennoprzecinkowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe implementują C++ wersje funkcji CRT [fpclassify —](fpclassify.md) dla typów zmiennoprzecinkowych. Argument *x* jest obliczany, a klasyfikacja jest zwracana jako jedna ze stałych, zdefiniowana w Math. h:
+Te prymitywy zmiennoprzecinowe implementują wersje C++ funkcji CRT [fpclassify](fpclassify.md) dla typów zmiennoprzecinkowych. Argument *x* jest oceniany, a klasyfikacja jest zwracana jako jedna z tych stałych, zdefiniowana w pliku math.h:
 
 |Wartość|Opis|
 |-----------|-----------------|
 | **FP_NAN** | Cichy, sygnalizujący lub nieokreślony NaN |
 | **FP_INFINITE** | Dodatnia lub ujemna nieskończoność |
-| **FP_NORMAL** | Dodatnia lub negatywna znormalizowana wartość różna od zera |
-| **FP_SUBNORMAL** | Wartość dodatnia lub ujemna (nieznormalizowana) |
+| **FP_NORMAL** | Dodatnia lub ujemna znormalizowana wartość niezerowa |
+| **FP_SUBNORMAL** | Dodatnia lub ujemna wartość subnormal (zdenormalowana) |
 | **FP_ZERO** | Dodatnia lub ujemna wartość zerowa |
 
-Aby uzyskać dodatkowe informacje, możesz użyć funkcji [_fpclass i _fpclassf](fpclass-fpclassf.md) specyficznych dla firmy Microsoft. Użyj funkcji [fpclassify —](fpclassify.md) , aby przenieść.
+Aby uzyskać dodatkowe informacje, można użyć [funkcji _fpclass, _fpclassf](fpclass-fpclassf.md) specyficznych dla firmy Microsoft. Użyj funkcji [fpclassify, aby](fpclassify.md) uzyskać przenośność.
 
 ## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
@@ -252,15 +286,15 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>Parametry
 
-*px*<br/>
+*piks.*<br/>
 Wskaźnik do argumentu zmiennoprzecinkowego.
 
-*EXP*<br/>
-Wykładnik jako typ całkowity.
+*Exp*<br/>
+Wykładnik jako typ integralny.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i wartości wykładnika, a następnie usuwają część ułamkową wartości zmiennoprzecinkowej poniżej danego wykładniku *, jeśli*jest to możliwe. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a wartość wyjściowa (w *pikselach* ) w przeciwnym razie.
+Te prymitywy zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i *exp*wartości wykładniczej i usuwają ułamkową część wartości zmiennoprzecinkowej poniżej podanego wykładnika, jeśli to możliwe. Zwracana wartość jest wynikiem **fpclassify** na wartości wejściowej w *px,* jeśli jest NaN lub nieskończoności i na wartość danych wyjściowych w *px* w przeciwnym razie.
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
@@ -274,15 +308,15 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>Parametry
 
-*px*<br/>
+*piks.*<br/>
 Wskaźnik do argumentu zmiennoprzecinkowego.
 
-*EXP*<br/>
-Wykładnik jako typ całkowity.
+*Exp*<br/>
+Wykładnik jako typ integralny.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i wartości wykładnika, a następnie *skalują wartość w* *px* <sup>*o 2,* </sup>Jeśli to możliwe. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a wartość wyjściowa (w *pikselach* ) w przeciwnym razie. W przypadku przenośności Preferuj funkcje [ldexp —, ldexpf — i ldexpl](ldexp.md) .
+Te prymitywy zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i wartość wykładniczą *exp*i skalują wartość w *px* o 2<sup>*exp,*</sup>jeśli to możliwe. Zwracana wartość jest wynikiem **fpclassify** na wartości wejściowej w *px,* jeśli jest NaN lub nieskończoności i na wartość danych wyjściowych w *px* w przeciwnym razie. Dla przenośności, wolą [ldexp, ldexpf i ldexpl](ldexp.md) funkcji.
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
@@ -296,15 +330,15 @@ short __cdecl _fdunscale(short* pexp, float* px);
 
 ### <a name="parameters"></a>Parametry
 
-*pexp*<br/>
-Wskaźnik do wykładnika jako typ całkowity.
+*pexp (pexp)*<br/>
+Wskaźnik do wykładnika jako typu integralnego.
 
-*px*<br/>
+*piks.*<br/>
 Wskaźnik do argumentu zmiennoprzecinkowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe łamią wartość zmiennoprzecinkową, która została przestawiona *na mantysę* (mantysy) i wykładnik, jeśli jest to możliwe. Mantysę jest skalowany w taki sposób, że wartość bezwzględna jest większa lub równa 0,5 i mniejsza niż 1,0. Wykładnik jest wartością *n*, gdzie oryginalna wartość zmiennoprzecinkowa jest równa skalowanej mantysę razy 2<sup>*n*</sup>. Ten wykładnik liczby całkowitej *n* jest przechowywany w lokalizacji wskazywanej przez *pexp*. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a na wartość wyjściową w przeciwnym razie. W przypadku przenośności Preferuj funkcje [frexp —, frexpf —, frexpl](frexp.md) .
+Te prymitywy zmiennoprzecinkowe rozkładają wartość zmiennoprzecinkową wskazywal przez *px* na significand (mantissa) i wykładnik, jeśli to możliwe. Significand jest skalowany w taki sposób, że wartość bezwzględna jest większa lub równa 0,5 i mniej niż 1,0. Wykładnik jest wartością *n*, gdzie oryginalna wartość zmiennoprzecinkowy jest równa skalowane significand razy 2<sup>*n*</sup>. Ten wykładnik liczby całkowitej *n* jest przechowywany w lokalizacji wskazanej przez *pexp*. Zwracana wartość jest wynikiem **fpclassify** na wartości wejściowej w *px,* jeśli jest NaN lub nieskończoności, a na wartość danych wyjściowych w przeciwnym razie. Dla przenośności, wolą [frexp, frexpf, frexpl](frexp.md) funkcji.
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
@@ -318,18 +352,18 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*Y*<br/>
+Argument funkcji zmiennoprzecinowej.
 
-*px*<br/>
+*piks.*<br/>
 Wskaźnik do argumentu zmiennoprzecinkowego.
 
-*EXP*<br/>
-Wykładnik jako typ całkowity.
+*Exp*<br/>
+Wykładnik jako typ integralny.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe konstruują wartość zmiennoprzecinkową w lokalizacji wskazywanej przez *px pikseli* równej *y* <sup> ** 2.* </sup> Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej ( *y* ), jeśli jest to NaN lub nieskończoność, a wartość wyjściowa (w *pikselach* ) w przeciwnym razie. W przypadku przenośności Preferuj funkcje [ldexp —, ldexpf — i ldexpl](ldexp.md) .
+Te prymitywy zmiennoprzecinające tworzą wartość zmiennoprzecinkową w lokalizacji wskazywowej przez *px* równą *y* * 2<sup>*exp*</sup>. Zwracana wartość jest wynikiem **fpclassify** na wartości wejściowej w *y,* jeśli jest ToNa lub nieskończoności, a na wartość wyjściową w *px* w przeciwnym razie. Dla przenośności, wolą [ldexp, ldexpf i ldexpl](ldexp.md) funkcji.
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
@@ -342,12 +376,12 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>Parametry
 
-*iloczyn*<br/>
-Wskaźnik na bitową reprezentację wartości zmiennoprzecinkowej wyrażonej jako tablica **niepodpisanego znaku** **.**
+*Ps*<br/>
+Wskaźnik do bitowej reprezentacji wartości zmiennoprzecinkowej wyrażonej jako **tablica niepodpisanego** **krótkiego**.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe normalizią część ułamkową bezosiowej wartości zmiennoprzecinkowej i dostosowują *charakterystykę*lub wykładnikę, aby dopasować. Wartość jest przenoszona jako bitowa reprezentacja typu zmiennoprzecinkowego przekonwertowana na tablicę **niepodpisanej** **skróconą** przez `_double_val`, `_ldouble_val`lub `_float_val` typu punning Union zadeklarowaną w Math. h. Wartość zwracana jest wynikiem **fpclassify —** wartości wejściowej zmiennoprzecinkowej, jeśli jest to NaN lub nieskończoność, a wartość wyjściowa w przeciwnym razie.
+Te prymitywy zmiennoprzecinkowe normalizują ułamkową część niedopełnionej wartości zmiennoprzecinkowej i dostosowują *charakterystykę*lub tendencyjny wykładnik, aby dopasować. Wartość jest przekazywana jako bitowa reprezentacja typu zmiennoprzecinkowego konwertowana `_float_val` na tablicę **niepodpisaną** **krótką** przez `_double_val` `_ldouble_val`, lub typ punning union zadeklarowany w math.h. Zwracana wartość jest wynikiem **fpclassify** na wejściowej wartości zmiennoprzecinkowej, jeśli jest Tona lub nieskończoności, a na wartość danych wyjściowych w przeciwnym razie.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -361,18 +395,18 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*X*<br/>
+Argument funkcji zmiennoprzecinowej.
 
-*tabele*<br/>
-Wskaźnik do tabeli stałych współczynników dla wielomianu.
+*table*<br/>
+Wskaźnik do tabeli stałych współczynników wielomianowych.
 
-*n*<br/>
-Kolejność wielomianu do obliczenia.
+*N*<br/>
+Kolejność wielomianu do oceny.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają ocenę *x* w wielomianie kolejności *n* , której współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład jeśli *tabela*\[0] = 3,0, *tabela*\[1] = 4,0, *tabela*\[2] = 5,0 i *n* = 2, reprezentuje wielomian 5.0 x<sup>2</sup> + 4.0 x + 3,0. W przypadku obliczenia tego wielomianu dla *x* z 2,0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
+Te prymitywy zmiennoprzecinkowe zwracają ocenę *x* w wielomianowym rzędu *n,* którego współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład, jeśli *tabela*\[0] = 3,0, *tabela*\[1] = 4,0, *tabela*\[2] = 5,0 i *n* = 2, reprezentuje wielomian 5,0x<sup>2</sup> + 4,0x + 3,0. Jeśli ten wielomian jest oceniany dla *x* 2.0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -386,15 +420,15 @@ float __cdecl _fdlog(float x, int base_flag);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*X*<br/>
+Argument funkcji zmiennoprzecinowej.
 
 *base_flag*<br/>
-Flaga, która kontroluje podstawę do użycia, 0 dla podstawy *e* i zero dla podstawowego 10.
+Flaga, która steruje bazą do użycia, 0 dla bazy *e* i niezerowa dla podstawy 10.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają naturalny dziennik *x*, ln (*x*) lub log<sub>*e*</sub>(*x*), gdy *base_flag* wynosi 0. Zwracają one bazę dzienników 10 z *x*lub log<sub>10</sub>(*x*), gdy *base_flag* jest różna od zera. Te funkcje nie są używane wewnętrznie. W przypadku przenośności wolisz rejestrować usługi Functions [, logf —, logl, log10 —, log10f — i log10l](log-logf-log10-log10f.md).
+Te prymitywy zmiennoprzecinowe zwracają dziennik naturalny *x*, ln(*x*) lub log<sub>*e*</sub>(*x*), gdy *base_flag* wynosi 0. Zwracają podstawę dziennika 10 *x*lub dziennik<sub>10</sub>*(x),* gdy *base_flag* jest niezerowy. Te funkcje nie są używane wewnętrznie. Aby uzyskać przenośność, preferuj [funkcje log, logf, logl, log10, log10f i log10l](log-logf-log10-log10f.md).
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
@@ -408,25 +442,25 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Argument funkcji zmiennoprzecinkowej.
+*X*<br/>
+Argument funkcji zmiennoprzecinowej.
 
-*ćwiartk*<br/>
-Przesunięcie ćwiartki 0, 1, 2 lub 3, które ma być używane `sin`do `cos`tworzenia `-sin`,, `-cos` i wyników.
+*Kwadrant*<br/>
+Przesunięcie kwadrantu 0, 1, 2 lub `sin`3 `-sin`do `-cos` użycia do wytwarzania `cos`, i wyniki.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają sinus przesunięcia *x* do *ćwiartki* modulo 4. Efektywnie zwraca sinus, cosinus,-sinus i-cosinus *x* , gdy *Ćwiartka* modulo 4 jest odpowiednio 0, 1, 2 lub 3. Te funkcje nie są używane wewnętrznie. W przypadku przenośności Preferuj funkcje [Sin, SINF —, sinl](sin-sinf-sinl.md), [cos, cosf — i COSL](cos-cosf-cosl.md) .
+Te prymitywy zmiennoprzecinowe zwracają sinus *x* odsunięty przez *modulo kwadrantu* 4. Skutecznie zwracają sinusoidę, cosine, -sine i -cosine *x,* gdy *modulo kwadrantu* 4 wynosi odpowiednio 0, 1, 2 lub 3. Te funkcje nie są używane wewnętrznie. Dla przenośności, wolą [grzech, sinf, sinl](sin-sinf-sinl.md), [cos, cosf i cosl](cos-cosf-cosl.md) funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: \<Math. h >
+Nagłówek: \<math.h>
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowa](../floating-point-support.md)<br/>
+[Obsługa liczb zmiennoprzecinkowych](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
@@ -434,7 +468,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[frexp —, frexpf —, frexpl](frexp.md)<br/>
-[ldexp —, ldexpf — i ldexpl](ldexp.md)<br/>
-[log, logf —, logl, log10 —, log10f —, log10l](log-logf-log10-log10f.md)<br/>
+[frexp, frexpf, frexpl](frexp.md)<br/>
+[ldexp, ldexpf i ldexpl](ldexp.md)<br/>
+[log, logf, logl, log10, log10f, log10l](log-logf-log10-log10f.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>

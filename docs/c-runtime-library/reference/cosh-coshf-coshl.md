@@ -1,10 +1,11 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - cosh
 - coshf
 - coshl
+- _o_cosh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d7d2050be406e7f2be66ca200d1e3cfd9c2960b0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938994"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348444"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
-Oblicza cosinus hiperboliczny.
+Oblicza cosine hiperboliczne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,39 +59,41 @@ long double cosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus hiperboliczny *x*.
+Cosine hiperboliczny *x*.
 
-Domyślnie, jeśli wynik jest za duży w wywołaniu **cosh —** , **coshf —** lub **coshl** , funkcja zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**.
+Domyślnie, jeśli wynik jest zbyt duży w **wywołaniu cosh**, **coshf**lub **coshl,** funkcja zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|brak|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**NIEDOKŁADNE**+**PRZEPEŁNIENIE**|**PRZEPŁYW**|
+|± **QNAN**, **IND**|brak|**_DOMAIN**|
+|*x* ≥ 7,104760e+002|**NIEDOKŁADNE**+**PRZEPEŁNIENIE**|**Przepełnienie**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cosh —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **cosh —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **cosh,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie C **cosh** zawsze przyjmuje i zwraca **podwójny**plik .
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**coshf**, **cosl**, **coshl**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [SINH, sinhf —, sinh](sinh-sinhf-sinhl.md).
+Zobacz przykład w [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

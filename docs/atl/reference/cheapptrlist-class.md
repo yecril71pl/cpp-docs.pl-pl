@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0500ab8f76049aeaf1c89355ea5450a93243b734
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245650"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326857"
 ---
 # <a name="cheapptrlist-class"></a>Klasa CHeapPtrList
 
-Ta klasa dostarcza metody przydatne podczas tworzenia listy wskaźników sterty.
+Ta klasa zawiera metody przydatne podczas konstruowania listy wskaźników sterty.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,7 @@ class CHeapPtrList
 *E*<br/>
 Typ obiektu, który ma być przechowywany w klasie kolekcji.
 
-*Allocator*<br/>
+*Programu przydzielania*<br/>
 Klasa alokacji pamięci do użycia. Wartość domyślna to [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -45,15 +45,15 @@ Klasa alokacji pamięci do użycia. Wartość domyślna to [CCRTAllocator](../..
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Konstruktor.|
+|[Lista CHeapPtr::CHeapPtrList](#cheapptrlist)|Konstruktor.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlList](../../atl/reference/catllist-class.md) i [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) ułatwiające tworzenie obiektu klasy kolekcji przechowywania wskaźniki stosu.
+Ta klasa udostępnia konstruktora i wyprowadza metody z [CAtlList](../../atl/reference/catllist-class.md) i [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) do tworzenia właściwości klasy kolekcji przechowywania wskaźników sterty.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Lista CAtl](../../atl/reference/catllist-class.md)
 
 `CHeapPtrList`
 
@@ -61,7 +61,7 @@ Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlList](../../atl/referen
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>Lista CHeapPtr::CHeapPtrList
 
 Konstruktor.
 
@@ -71,16 +71,16 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*<br/>
+*nBlockSize (Rozmiar)*<br/>
 Rozmiar bloku.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów.
+Rozmiar bloku jest miarą ilości pamięci przydzielonej, gdy wymagany jest nowy element. Większe rozmiary bloków zmniejszają liczbę wywołań procedur alokacji pamięci, ale zużywają więcej zasobów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlList](../../atl/reference/catllist-class.md)<br/>
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

@@ -1,10 +1,11 @@
 ---
 title: exp, expf, expl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - expf
 - expl
 - exp
+- _o_exp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cbf303b2b92afd83a1c3181dc98a1dbdcd639c1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347598"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
-Oblicza wartość wykładniczą.
+Oblicza wykładnicze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,33 +68,35 @@ long double expl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa do exponentiate logarytmu naturalnego *o podstawie.*
+*X*<br/>
+Wartość zmiennoprzecinkowa do wykładnicy podstawy logarytmu naturalnego *e* przez.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **EXP** zwracają wartość wykładniczą parametru zmiennoprzecinkowego *x*, jeśli to się powiedzie. Oznacza to, że wynik to *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. W przypadku przepełnienia funkcja zwraca plik INF (nieskończoność) i **w przypadku niedomiaru zwraca wartość 0** .
+Funkcje **exp** zwracają wartość wykładniczą parametru zmiennoprzecinkowego, *x*, jeśli zakończy się pomyślnie. Oznacza to, że wynik jest *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. W przypadku przepełnienia funkcja zwraca INF (nieskończoność) i przy niedopełnionym, **exp** zwraca wartość 0.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|\+ Cichy NaN, nieokreślony|Brak|_DOMAIN|
-|± Nieskończoność|NIEPRAWIDŁOWY|_DOMAIN|
-|x ≥ 7.097827e+002|NIEDOKŁADNE + PRZEPEŁNIENIE|PRZEPŁYW|
-|X ≤ -7.083964e+002|NIEDOKŁADNY I NIEDOPEŁNIENIE|MIAR|
+|± Cichy NaN, nieokreślony|Brak|_DOMAIN|
+|± Nieskończoność|Nieprawidłowy|_DOMAIN|
+|x ≥ 7,097827e+002|INEXACT+OVERFLOW|Przepełnienie|
+|X ≤ -7,083964e+002|INEXACT+UNDERFLOW|Niedomiar|
 
-Funkcja **EXP** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
+Funkcja **exp** ma implementację, która używa rozszerzenia SIMD przesyłania strumieniowego 2 (SSE2). Zobacz [_set_SSE2_enable,](set-sse2-enable.md) aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
 ## <a name="remarks"></a>Uwagi
 
-C++zezwala na Przeciążenie, dzięki czemu można wywoływać przeciążenia operacji **EXP** , które przyjmują argument **zmiennoprzecinkowy** lub **długi** . W programie C funkcja **EXP** zawsze przyjmuje i zwraca wartość **Double**.
+C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **exp,** które przyjmują **float** lub **long double** argument. W programie C **exp** zawsze przyjmuje i zwraca **podwójny**plik .
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany C++ nagłówek|
+|Funkcja|Wymagany nagłówek C|Wymagany nagłówek języka C++|
 |--------------|---------------------|---|
-|**EXP**, **expf —** , **Expl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**exp**, **expf**, **expl**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -115,8 +119,8 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [_CIexp](../../c-runtime-library/ciexp.md)<br/>

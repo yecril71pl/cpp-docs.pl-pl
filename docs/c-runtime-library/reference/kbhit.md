@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,19 +34,19 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438089"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342252"
 ---
 # <a name="_kbhit"></a>_kbhit
 
-Sprawdza konsolę dla danych wejściowych z klawiatury.
+Sprawdza konsolę pod kątem wprowadzania danych za pomocą klawiatury.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,23 +57,25 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_kbhit** zwraca wartość różną od zera, jeśli klucz został naciśnięty. W przeciwnym razie zwraca wartość 0.
+**_kbhit** zwraca wartość niezerową, jeśli klawisz został naciśnięty. W przeciwnym razie zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_kbhit** sprawdza konsolę pod kątem ostatniego naciśnięcia klawisza. Jeśli funkcja zwraca wartość różną od zera, naciśnięcie klawisza czeka w buforze. Program może następnie wywołać **_getch** lub **_getche** , aby uzyskać naciśnięcie klawisza.
+Funkcja **_kbhit** sprawdza konsolę pod kątem ostatnich nachyliń klawiszy. Jeśli funkcja zwraca wartość niezerową, naciśnięcie klawisza oczekuje w buforze. Program może następnie wywołać **_getch** lub **_getche,** aby uzyskać naciśnięcie klawisza.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_kbhit**|\<CONIO. h >|
+|**_kbhit**|\<> conio.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -107,4 +111,4 @@ Key struck was 'q'
 
 ## <a name="see-also"></a>Zobacz też
 
-[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>

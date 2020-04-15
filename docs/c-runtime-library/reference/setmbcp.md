@@ -1,8 +1,9 @@
 ---
 title: _setmbcp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmbcp
+- _o__setmbcp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 61086471c6194aaa8434d291647978bf891a8aea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337602"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
-Ustawia nową stronę kodową wielobajtowego.
+Ustawia nową stronę kodową wielobajtową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,48 +50,50 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametry
 
-*CodePage*<br/>
+*Codepage*<br/>
 Nowe ustawienie strony kodowej dla procedur wielobajtowych niezależnych od ustawień regionalnych.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli strona kodowa została ustawiona pomyślnie. Jeśli podano nieprawidłową wartość strony kodowej na stronie *kodowej*, zwraca-1, a ustawienie strony kodowej jest niezmienione. Ustawia **errno** na **EINVAL** , jeśli wystąpi błąd alokacji pamięci.
+Zwraca wartość 0, jeśli strona kodowa została pomyślnie ustawiona. Jeśli dla strony kodowej podano nieprawidłową wartość strony *kodowej,* zwraca wartość -1, a ustawienie strony kodowej pozostaje niezmienione. Ustawia **errno** na **EINVAL,** jeśli wystąpi błąd alokacji pamięci.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_setmbcp** określa nową stronę kodową wielobajtowego. Domyślnie system czasu wykonywania automatycznie ustawia stronę kodową wielobajtową na stronę kodową ANSI systemu. Ustawienie strony kodowej wielobajtowej ma wpływ na wszystkie procedury wielobajtowe, które nie są zależne od ustawień regionalnych. Można jednak wydać **_setmbcp** , aby użyć strony kodowej zdefiniowanej dla bieżących ustawień regionalnych (zobacz poniższą listę stałych manifestu i wyniki związanych z zachowaniem). Aby uzyskać listę wielobajtowych procedur, które są zależne od strony kodowej ustawień regionalnych, a nie strony kodowej wielobajtowej, zobacz [interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+Funkcja **_setmbcp** określa nową stronę kodową wielobajtową. Domyślnie system czasu wykonywania automatycznie ustawia stronę kodową wielobajtową na domyślną dla systemu stronę kodową ANSI. Ustawienie strony kodowej wielobajtowej wpływa na wszystkie procedury wielobajtowe, które nie są zależne od ustawień regionalnych. Można jednak poinstruować **_setmbcp,** aby używała strony kodowej zdefiniowanej dla bieżących ustawień regionalnych (zobacz poniższą listę stałych manifestu i skojarzonych wyników zachowania). Aby uzyskać listę procedur wielobajtowych, które są zależne od strony kodowej ustawień regionalnych, a nie od strony kodowej wielobajtowej, zobacz [Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
-Strona kodowa wielobajtowego ma także wpływ na przetwarzanie znaków wielobajtowych przez następujące procedury biblioteki wykonawczej:
+Strona kodowa wielobajtowa wpływa również na przetwarzanie znaków wielobajtowych przez następujące procedury biblioteki w czasie wykonywania:
 
 ||||
 |-|-|-|
 |[funkcje _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
 |[_fullpath](fullpath-wfullpath.md)|[funkcje _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam ( tmpnam )](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Ponadto wszystkie procedury biblioteki wykonawczej, które odbierają argumenty programu *argv* lub *envp* , jako parametry (takie jak rodziny **_exec** i **_spawn** ) przetwarzają te ciągi zgodnie ze stroną kodową wielobajtowego. W związku z tym te procedury są również objęte wywołaniem **_setmbcp** , które zmienia stronę kodową wielobajtowego.
+Ponadto wszystkie procedury biblioteki w czasie wykonywania, które otrzymują argumenty programu *argv* lub *envp* jako parametry (takie jak **_exec** i **_spawn** rodzin) przetwarzają te ciągi zgodnie ze stroną kodową wielobajtów. W związku z tym te procedury są również na nie dotyczy wywołanie **_setmbcp,** który zmienia stronę kodową wielobajtów.
 
-Argument *CodePage* można ustawić na dowolną z następujących wartości:
+Argument *strony kodowej* można ustawić na dowolną z następujących wartości:
 
 - **_MB_CP_ANSI** Użyj strony kodowej ANSI uzyskanej z systemu operacyjnego podczas uruchamiania programu.
 
-- **_MB_CP_LOCALE** Użyj strony kodowej bieżącej ustawień regionalnych uzyskanych z poprzedniego wywołania metody [setlocale](setlocale-wsetlocale.md).
+- **_MB_CP_LOCALE** Użyj strony kodowej bieżącej ustawień regionalnych uzyskanej z poprzedniego połączenia, aby [ustawićlocale](setlocale-wsetlocale.md).
 
 - **_MB_CP_OEM** Użyj strony kodowej OEM uzyskanej z systemu operacyjnego podczas uruchamiania programu.
 
-- **_MB_CP_SBCS** Użyj jednobajtowej strony kodowej. Gdy strona kodowa jest ustawiona na **_MB_CP_SBCS**, procedura, taka jak [_ismbblead](ismbblead-ismbblead-l.md) , zawsze zwraca wartość false.
+- **_MB_CP_SBCS** Użyj strony kodowej jedno bajtowej. Gdy strona kodowa jest ustawiona na **_MB_CP_SBCS,** procedura, taka jak [_ismbblead](ismbblead-ismbblead-l.md) zawsze zwraca false.
 
-- **_MB_CP_UTF8** Użyj UTF-8.  Gdy strona kodowa jest ustawiona na **_MB_CP_UTF8**, procedura, taka jak [_ismbblead](ismbblead-ismbblead-l.md) , zawsze zwraca wartość false.
+- **_MB_CP_UTF8** Użyj UTF-8.  Gdy strona kodowa jest ustawiona na **_MB_CP_UTF8,** procedura, taka jak [_ismbblead](ismbblead-ismbblead-l.md) zawsze zwraca false.
 
-- Dowolna inna wartość strony kodowej, niezależnie od tego, czy jest to wartość ANSI, OEM czy inna strona kodowa obsługiwana przez system operacyjny (z wyjątkiem UTF-7, co nie jest obsługiwane).
+- Dowolna inna prawidłowa wartość strony kodowej, niezależnie od tego, czy jest to strona kodowa ANSI, OEM, czy inna strona kodowa obsługiwana przez system operacyjny (z wyjątkiem utf-7, która nie jest obsługiwana).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_setmbcp**|\<Mbctype. h >|
+|**_setmbcp**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

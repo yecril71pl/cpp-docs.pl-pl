@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344059"
 ---
 # <a name="_heapchk"></a>_heapchk
 
-Uruchamia sprawdzanie spójności sterty.
+Uruchamia kontrole spójności na stercie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,29 +50,31 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_heapchk** zwraca jedną z następujących stałych literałów liczb całkowitych zdefiniowanych w malloc. h.
+**_heapchk** zwraca jedną z następujących stałych manifestu liczby całkowitej zdefiniowanych w malloc.h.
 
 |Wartość zwracana|Warunek|
 |-|-|
-| **_HEAPBADBEGIN** | Informacje o początkowym nagłówku są nieprawidłowe lub nie można ich znaleźć. |
-| **_HEAPBADNODE** | Znaleziono zły węzeł lub sterta jest uszkodzona. |
+| **_HEAPBADBEGIN** | Początkowe informacje nagłówka są złe lub nie można ich odnaleźć. |
+| **_HEAPBADNODE** | Znaleziono uszkodzony węzeł lub sterty jest uszkodzony. |
 | **_HEAPBADPTR** | Wskaźnik do sterty jest nieprawidłowy. |
 | **_HEAPEMPTY** | Sterta nie została zainicjowana. |
-| **_HEAPOK** | Sterta wydaje się być spójna. |
+| **_HEAPOK** | Heap wydaje się być spójne. |
 
-Ponadto, jeśli wystąpi błąd, **_heapchk** ustawia **errno** na **ENOSYS**.
+Ponadto w przypadku wystąpienia błędu **_heapchk** ustawia **errno** na **ENOSYS**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_heapchk** pomaga debugować problemy związane z stertą, sprawdzając, czy nie ma minimalnej spójności sterty. Jeśli system operacyjny nie obsługuje **_heapchk**(na przykład Windows 98), funkcja zwraca **_HEAPOK** i ustawia **errno** na **ENOSYS**.
+Funkcja **_heapchk** pomaga debugować problemy związane ze stertą, sprawdzając minimalną spójność sterty. Jeśli system operacyjny nie obsługuje **_heapchk**(na przykład Windows 98), funkcja zwraca **_HEAPOK** i ustawia **errno** na **ENOSYS**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_heapchk**|\<malloc.h>|\<errno.h>|
+|**_heapchk**|\<> malloc.h|\<> errno.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -115,7 +119,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>

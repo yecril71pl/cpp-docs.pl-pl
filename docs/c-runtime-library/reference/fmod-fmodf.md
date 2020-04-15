@@ -1,10 +1,11 @@
 ---
-title: FMOD —, fmodf —, fmodl
-ms.date: 04/05/2018
+title: fmod, fmodf, fmodl
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346551"
 ---
-# <a name="fmod-fmodf-fmodl"></a>FMOD —, fmodf —, fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
-Oblicza resztę zmiennoprzecinkową.
+Oblicza pozostałą część zmiennoprzecinową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,21 +77,23 @@ Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**FMOD —** zwraca liczbę zmiennoprzecinkową z przestawu *x* / *y*. Jeśli wartość *y* to 0,0, **FMOD —** zwraca cichy NaN. Aby uzyskać informacje na temat reprezentacji cichego NaN przez rodzinę **printf** , zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** zwraca zmiennoprzecinkową pozostałą część *x* / *y*. Jeśli wartość *y* wynosi 0,0, **fmod** zwraca cichą wartość NaN. Aby uzyskać informacje na temat reprezentacji cichej nan przez rodzinę **printf,** zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **FMOD —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x* / *y* , taką *jak x* = *i* \* *y* + *f*, *gdzie* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
+Funkcja **fmod** oblicza pozostałą część zmiennoprzecinową *f* *x* / *y* tak, że *x* = *i* \* *y* + *f*, gdzie *i* jest liczą całkowitą, *f* ma ten sam znak co *x*, a wartość bezwzględna *f* jest mniejsza niż wartość *bezwzględna y*.
 
-C++umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **FMOD —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **FMOD —** zawsze przyjmuje dwa **podwójne** argumenty i zwraca wartość **podwójną**.
+C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **fmod,** które biorą i zwracają **float** i **długie** **podwójne** wartości. W programie C **fmod** zawsze przyjmuje dwa **podwójne** argumenty i zwraca **podwójny**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**FMOD —** , **fmodf —** , **fmodl**|\<math.h>|
+|**fmod**, **fmodf**, **fmodl**|\<> math.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -113,9 +117,9 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

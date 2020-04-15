@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6013098199e1b69d03dc9cf2780cbf4376abcc0d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949758"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332971"
 ---
 # <a name="qsort_s"></a>qsort_s
 
-Wykonuje szybkie sortowanie. Wersja [qsort](qsort.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wykonuje szybkie sortowanie. Wersja [qsort](qsort.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,62 +58,64 @@ void qsort_s(
 *base*<br/>
 Początek tablicy docelowej.
 
-*Liczba*<br/>
+*numer*<br/>
 Rozmiar tablicy w elementach.
 
-*width*<br/>
+*Szerokość*<br/>
 Rozmiar elementu w bajtach.
 
-*porównaniu*<br/>
-Funkcja porównywania. Pierwszy argument jest wskaźnikiem *kontekstu* . Drugi argument jest wskaźnikiem do *klucza* do wyszukania. Trzeci argument jest wskaźnikiem do elementu tablicy, który będzie porównywany z *kluczem*.
+*Porównać*<br/>
+Funkcja porównania. Pierwszym argumentem jest wskaźnik *kontekstu.* Drugi argument jest wskaźnikiem do *klucza* wyszukiwania. Trzeci argument jest wskaźnikiem do elementu tablicy, który ma być porównywany z *kluczem*.
 
-*Context*<br/>
-Wskaźnik do kontekstu, który może być dowolnym obiektem, do którego ma dostęp procedura *porównania* .
+*Kontekście*<br/>
+Wskaźnik do kontekstu, który może być dowolny obiekt, który *procedury porównania* musi uzyskać dostęp.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **qsort_s** implementuje algorytm szybkiego sortowania, aby posortować tablicę elementów *liczbowych* , a każda z nich ma *Szerokość* . *Podstawa* argumentu jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort_s** zastępuje tę tablicę posortowanymi elementami. *Porównywanie* argumentów jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. **qsort_s** wywołuje procedurę *Compare* jeden lub więcej razy podczas sortowania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania:
+Funkcja **qsort_s** implementuje algorytm szybkiego sortowania do sortowania tablicy elementów *liczbowych,* każdy z bajtów *szerokości.* *Podstawa* argumentu jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort_s** zastępuje tę tablicę posortowanymi elementami. *Porównanie* argumentów jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. **qsort_s** wywołuje procedurę *porównywania* jeden lub więcej razy podczas sortowania, przekazując wskaźniki do dwóch elementów tablicy w każdym wywołaniu:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
 ```
 
-Procedura musi porównać elementy, a następnie zwracać jedną z następujących wartości:
+Procedura musi porównać elementy, a następnie zwrócić jedną z następujących wartości:
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|**elem1** mniejsze niż **elem2**|
-|0|**elem1** równoważne **elem2**|
-|> 0|**elem1** większe niż **elem2**|
+|< 0|**elem1** mniej niż **elem2**|
+|0|**elem1** odpowiednik **elem2**|
+|> 0|**elem1** większy niż **elem2**|
 
-Tablica jest sortowana w kolejności rosnącej, zgodnie z definicją w funkcji porównania. Aby posortować tablicę w kolejności malejącej, Odwróć wartość "większe niż" i "mniejsze niż" w funkcji porównywania.
+Tablica jest sortowana w kolejności zwiększania, zgodnie z definicją funkcji porównania. Aby posortować tablicę w kolejności malejącej, należy odwrócić poczucie "większe niż" i "mniej niż" w funkcji porównania.
 
-Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** jest ustawiona na **EINVAL**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli nieprawidłowe parametry są przekazywane do funkcji, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca i **errno** jest ustawiona na **EINVAL**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Warunki błędów
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
-|klawisz|base|compare|numerowan|szerokość|errno|
+### <a name="error-conditions"></a>Warunki błędu
+
+|key|base|compare|num|szerokość|Errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|Ile|Ile|Ile|Ile|**EINVAL**|
-|Ile|**NULL**|Ile|!= 0|Ile|**EINVAL**|
-|Ile|Ile|Ile|Ile|<= 0|**EINVAL**|
-|Ile|Ile|**NULL**|Ile|Ile|**EINVAL**|
+|**Null**|Wszelki|Wszelki|Wszelki|Wszelki|**Einval**|
+|Wszelki|**Null**|Wszelki|!= 0|Wszelki|**Einval**|
+|Wszelki|Wszelki|Wszelki|Wszelki|<= 0|**Einval**|
+|Wszelki|Wszelki|**Null**|Wszelki|Wszelki|**Einval**|
 
-**qsort_s** ma takie samo zachowanie jak **qsort** , ale ma parametr *Context* i ustawia **errno**. Przekazując parametr *kontekstowy* , funkcje porównania mogą używać wskaźnika obiektu do uzyskiwania dostępu do funkcji obiektów lub innych informacji, które nie są dostępne za pomocą wskaźnika elementu. Dodanie parametru *kontekstowego* sprawia, że **qsort_s** bezpieczniejszy, ponieważ można użyć *kontekstu* , aby uniknąć współużytkowania wątkowości błędów wprowadzonych przy użyciu zmiennych statycznych w celu udostępnienia udostępnionych informacji funkcji *Compare* .
+**qsort_s** ma takie samo zachowanie jak **qsort,** ale ma parametr *kontekstu* i ustawia **errno**. Przekazując parametr *kontekstu,* funkcje porównania można użyć wskaźnika obiektu, aby uzyskać dostęp do funkcji obiektu lub inne informacje niedostępne za pośrednictwem wskaźnika elementu. Dodanie *parametru kontekstu* sprawia, **że qsort_s** bardziej bezpieczne, ponieważ *kontekst* może służyć do uniknięcia błędów reentrancy wprowadzone przy użyciu zmiennych statycznych, aby udostępnić udostępnione informacje do funkcji *porównania.*
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**qsort_s**|\<STDLIB. h > i \<Search. h >|
+|**qsort_s**|\<> i \<search.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-**Bibliotece** Wszystkie wersje [funkcji biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+**Biblioteki:** Wszystkie wersje [funkcji biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia parametru *kontekstowego* w funkcji **qsort_s** . Parametr *kontekstowy* ułatwia wykonywanie sortowania z bezpiecznymi wątkami. Zamiast używać zmiennych statycznych, które muszą być zsynchronizowane w celu zapewnienia bezpieczeństwa wątków, należy przekazać inny parametr *kontekstowy* w każdym sortowaniu. W tym przykładzie obiekt ustawień regionalnych jest używany jako parametr *kontekstowy* .
+W poniższym przykładzie pokazano, jak używać parametru *kontekstu* w **funkcji qsort_s.** Parametr *context* ułatwia wykonywanie sortowania bezpiecznych dla wątków. Zamiast używać zmiennych statycznych, które muszą być zsynchronizowane w celu zapewnienia bezpieczeństwa wątku, należy przekazać inny parametr *kontekstu* w każdym sortowaniu. W tym przykładzie obiekt ustawień regionalnych jest używany jako parametr *kontekstu.*
 
 ```cpp
 // crt_qsort_s.cpp
@@ -263,7 +267,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

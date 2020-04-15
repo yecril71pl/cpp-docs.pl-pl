@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246171"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327411"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Klasa CComQIPtrElementTraits
 
-Ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji wskaźniki interfejsu COM.
+Ta klasa zawiera metody, funkcje statyczne i typedefs przydatne podczas tworzenia kolekcji wskaźników interfejsu COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,34 +30,34 @@ class CComQIPtrElementTraits :
 #### <a name="parameters"></a>Parametry
 
 *I*<br/>
-Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
+Interfejs COM określający typ wskaźnika do przechowywania.
 
 *piid*<br/>
-Wskaźnik do identyfikatora IID z *I*.
+Wskaźnik do identyfikatora *I*.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa pochodzi z metody i zawiera element typedef, które są przydatne podczas tworzenia klasy kolekcji [CComQIPtr](../../atl/reference/ccomqiptr-class.md) obiektów wskaźnika interfejsu COM. Ta klasa jest używana przez obie [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) i [CInterfaceList](../../atl/reference/cinterfacelist-class.md) klasy.
+Ta klasa wyprowadza metody i zapewnia typedef przydatne podczas tworzenia klasy kolekcji [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM obiektów wskaźnika interfejsu. Ta klasa jest wykorzystywana przez [klasy CInterfaceArray](../../atl/reference/cinterfacearray-class.md) i [CInterfaceList.](../../atl/reference/cinterfacelist-class.md)
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits (Niem.](../../atl/reference/cdefaulthashtraits-class.md)
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits (3.](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
@@ -65,15 +65,15 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE
 
-Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.
+Typ danych do dodania elementów do obiektu klasy kolekcji.
 
 ```
 typedef I* INARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

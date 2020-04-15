@@ -1,10 +1,11 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346673"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Oblicza piętro wartości.
+Oblicza podłogę wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,30 +67,32 @@ long double floorl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuje największą liczbę całkowitą, która jest mniejsza lub równa *x*. Brak powrotu błędu.
+Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuje największą liczbę całkowitą, która jest mniejsza lub równa *x*. Nie ma zwracania błędów.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|brak|_DOMAIN|
+|± QNAN, IND|brak|_DOMAIN|
 
-**piętro** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
+**floor** ma implementację, która używa streamingu rozszerzeń SIMD 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Uwagi
 
-C++umożliwia **Przeciążenie, dzięki** czemu można wywoływać przeciążenia, które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **podłoga** zawsze przyjmuje i zwraca wartość **podwójną**.
+C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **podłogi,** które zajmują i zwracają **float** i **długie** **podwójne** wartości. W programie C **podłoga** zawsze przyjmuje i zwraca **podwójną**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**floor**, **floorf**, **floorl**|\<math.h>|
+|**podłoga,** **podłoga,** **podłoga**|\<> math.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,9 +129,9 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _get_heap_handle
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_heap_handle
+- _o__get_heap_handle
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: b5f53569db6cf99eb8f91e9a8668280b135097ce
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345090"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
-Zwraca uchwyt sterty, który jest używany przez system uruchomieniowy języka C.
+Zwraca dojście stosu, który jest używany przez system wykonywania języka C.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,19 +49,21 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do sterty Win32 używanej przez system środowiska uruchomieniowego języka C.
+Zwraca dojście do sterty Win32 używanej przez system czasu wykonywania języka C.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji, jeśli chcesz wywołać [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) i włączyć stertę niskiej fragmentacji na stercie CRT.
+Użyj tej funkcji, jeśli chcesz wywołać [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) i włączyć sterty niskiego fragmentacji na stercie CRT.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_heap_handle**|\<malloc.h>|
+|**_get_heap_handle**|\<> malloc.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Przykład
 
@@ -84,6 +88,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>

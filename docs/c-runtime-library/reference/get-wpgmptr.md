@@ -1,8 +1,9 @@
 ---
 title: _get_wpgmptr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_wpgmptr
+- _o__get_wpgmptr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 0cd2dc9c2f82d3dc49a17dc438157233c50b3261
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1e54d3dbdc837c491f5b39d33a9b8197094ac60b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344864"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
-Pobiera bieżącą wartość zmiennej globalnej **_wpgmptr** .
+Pobiera bieżącą wartość **zmiennej globalnej _wpgmptr.**
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,25 +51,27 @@ errno_t _get_wpgmptr(
 
 ### <a name="parameters"></a>Parametry
 
-*pValue*<br/>
-Wskaźnik do ciągu, który ma zostać wypełniony bieżącą wartością zmiennej **_wpgmptr** .
+*wartość pValue*<br/>
+Wskaźnik do ciągu, który ma być wypełniony bieżącą wartością **zmiennej _wpgmptr.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *pValue* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
+Zwraca zero, jeśli zakończy się pomyślnie; kod błędu w przypadku awarii. Jeśli *wartość pValue* ma **wartość NULL,** nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołaj **_get_wpgmptr** tylko wtedy, gdy program ma szeroki punkt wejścia, taki jak **wmain ()** lub **wWinMain ()** . Zmienna globalna **_wpgmptr** zawiera pełną ścieżkę do pliku wykonywalnego skojarzonego z procesem jako ciąg znaków dwubajtowych. Aby uzyskać więcej informacji, zobacz [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Wywołaj **_get_wpgmptr** tylko wtedy, gdy program ma szeroki punkt wejścia, taki jak **wmain()** lub **wWinMain()**. **_wpgmptr** zmienna globalna zawiera pełną ścieżkę do pliku wykonywalnego skojarzonego z procesem jako ciąg znaków szerokich. Aby uzyskać więcej informacji, zobacz [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_wpgmptr**|\<stdlib.h>|
+|**_get_wpgmptr**|\<>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_get_pgmptr](get-pgmptr.md)<br/>

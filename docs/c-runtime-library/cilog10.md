@@ -1,8 +1,9 @@
 ---
 title: _CIlog10
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog10
+- _o__CIlog10
 api_location:
 - msvcr100.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: c99fdab859acf280afc8a595696a17b2d03a47e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f5212ea575de2756506fef007fa339f8b0cca02b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349482"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
-`log10` Wykonuje operację na najwyższej wartości na stosie.
+Wykonuje `log10` operację na najwyższej wartości w stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,15 +44,17 @@ void __cdecl _CIlog10();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `log10` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
+Ta wersja `log10` funkcji ma wyspecjalizowaną konwencję wywoływania, którą kompilator rozumie. Funkcja przyspiesza wykonanie, ponieważ zapobiega generowaniu kopii i pomaga w alokacji rejestru.
 
-Wartość wyników jest wypychana na górze stosu.
+Wynikowa wartość jest wypychany na górze stosu.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Platforma:** x86
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

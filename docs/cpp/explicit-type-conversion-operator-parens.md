@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: 079a3390df56ba55bd4d71a320faa249266abb54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189016"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354861"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operator jawnej konwersji typu: ()
 
@@ -27,13 +27,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>Uwagi
 
-*Prosta nazwa typu* , po której następuje *Lista wyrażeń* ujęta w nawiasy, konstruuje obiekt określonego typu przy użyciu określonych wyrażeń. W poniższym przykładzie pokazano jawną konwersję typu na typ int.
+Prosta *nazwa typu,* po której następuje *lista wyrażeń* ujęta w nawiasy, tworzy obiekt określonego typu przy użyciu określonych wyrażeń. W poniższym przykładzie pokazano jawną konwersję typu na typ int.
 
 ```cpp
 int i = int( d );
 ```
 
-W poniższym przykładzie pokazano klasę `Point`.
+Poniższy przykład `Point` pokazuje klasę.
 
 ## <a name="example"></a>Przykład
 
@@ -116,16 +116,16 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-Poprzedni przykład, który używa konwersji w stylu funkcji, pokazuje, w jaki sposób konwertować dwie wartości (jeden dla *x* i jeden dla *y*) do typu zdefiniowanego przez użytkownika `Point`.
+W poprzednim przykładzie, który używa konwersji w stylu funkcji, pokazano, jak przekonwertować dwie wartości `Point`(jedną dla *x* i jedną dla *y)* na typ zdefiniowany przez użytkownika.
 
 > [!CAUTION]
->  Użyj jawnej konwersji typu z rozwagą, gdyż zastępuje ona kontrolę typów wbudowaną w kompilator C++.
+> Użyj jawnej konwersji typu z rozwagą, gdyż zastępuje ona kontrolę typów wbudowaną w kompilator C++.
 
-Notacja [rzutowania](../cpp/cast-operator-parens.md) musi być używana w przypadku konwersji na typy, które nie mają *prostej nazwy typu* (na przykład wskaźników lub typów referencyjnych). Konwersja na typy, które mogą być wyrażone przy użyciu *prostej nazwy typu* , może być zapisana w dowolnej postaci.
+Notacja [rzutowania](../cpp/cast-operator-parens.md) musi być używana w przypadku konwersji do typów, które nie mają *prostej nazwy typu* (na przykład typy wskaźników lub odwołań). Konwersja do typów, które mogą być wyrażone za pomocą *nazwy typu prostego* można zapisać w każdej formie.
 
 W ramach rzutowań niedozwolone są definicje typu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
+[Wyrażenia poprawek](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

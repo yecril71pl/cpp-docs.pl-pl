@@ -1,9 +1,11 @@
 ---
 title: _fgetchar, _fgetwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetchar
 - _fgetwchar
+- _o__fgetchar
+- _o__fgetwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b9d805483395d3050a1eb0bc78afef8cd99ca984
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346932"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -55,15 +58,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-fgetchar zwraca znak odczytywany jako **int** lub Return `EOF` , aby wskazać błąd lub koniec pliku.  **\_** fgetwchar zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytywania lub powracania `WEOF` , aby wskazać błąd lub koniec pliku.  **\_** Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku.
+fgetchar zwraca znak odczytany jako `EOF` **int** lub zwraca, aby wskazać błąd lub koniec pliku. ** \_** fgetwchar zwraca, jako [wint_t,](../../c-runtime-library/standard-types.md)szeroki znak, który odpowiada znakowi `WEOF` odczytanego lub zwraca, aby wskazać błąd lub koniec pliku. ** \_** W przypadku obu funkcji należy użyć **feof** lub **ferror,** aby odróżnić błąd od stanu końca pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje odczytują pojedynczy znak z **stdin**. Funkcja następnie zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Jeśli strumień znajduje się na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
+Te funkcje odczytywać pojedynczy znak z **stdin**. Następnie funkcja zwiększa wskaźnik skojarzonego pliku (jeśli jest zdefiniowany), aby wskazywał następny znak. Jeśli strumień znajduje się na końcu pliku, ustawiony jest wskaźnik końca pliku dla strumienia.
 
-**_fgetchar** jest odpowiednikiem `fgetc( stdin )`. Jest ona również równoważna z **GetChar**, ale implementowana tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** to dwubajtowa wersja **_fgetchar**.
+**_fgetchar** jest odpowiednikiem `fgetc( stdin )`. Jest to również równoważne **getchar**, ale realizowane tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** jest szerokoznakową wersją **_fgetchar**.
 
-Te funkcje nie są zgodne ze standardem ANSI.
+Funkcje te nie są zgodne ze standardem ANSI.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -76,9 +81,9 @@ Te funkcje nie są zgodne ze standardem ANSI.
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
-|**_fgetwchar**|\<stdio. h > lub \<WCHAR. h >|
+|**_fgetwchar**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą—**stdin,** **stdout**i **stderr**— muszą zostać przekierowane, zanim funkcje c w czasie wykonywania będą mogły z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -118,8 +123,8 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

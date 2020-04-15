@@ -1,9 +1,11 @@
 ---
 title: _searchenv_s, _wsearchenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsearchenv_s
 - _searchenv_s
+- _o__searchenv_s
+- _o__wsearchenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948799"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332398"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
-Wyszukuje plik przy użyciu ścieżek środowiskowych. Te wersje programu [_searchenv _wsearchenv](searchenv-wsearchenv.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wyszukuje plik przy użyciu ścieżek środowiska. Te wersje [_searchenv, _wsearchenv](searchenv-wsearchenv.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,45 +87,47 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*<br/>
+*Pod nazwą*<br/>
 Nazwa pliku do wyszukania.
 
-*nazwa_zmiennej*<br/>
-Środowisko do wyszukania.
+*Varname*<br/>
+Środowisko do wyszukiwania.
 
-*ścieżki*<br/>
+*Nazwa_ścieżki*<br/>
 Bufor do przechowywania pełnej ścieżki.
 
-*numberOfElements*<br/>
-Rozmiar buforu *nazw* .
+*liczbaOfElements*<br/>
+Rozmiar buforu *nazwy ścieżki.*
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
+Zero, jeśli się powiedzie; kod błędu w przypadku awarii.
 
-Jeśli *Nazwa pliku* jest pustym ciągiem, wartość zwracana to **ENOENT**.
+Jeśli *nazwa pliku* jest pustym ciągiem, zwracaną wartością jest **ENOENT**.
 
-### <a name="error-conditions"></a>Warunki błędów
+### <a name="error-conditions"></a>Warunki błędu
 
-|*Nazwa pliku*|*nazwa_zmiennej*|*ścieżki*|*numberOfElements*|Wartość zwracana|Zawartość *nazwy ścieżki*|
+|*Pod nazwą*|*Varname*|*Nazwa_ścieżki*|*liczbaOfElements*|Wartość zwracana|Zawartość *nazwy ścieżki*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|Ile|Ile|**NULL**|Ile|**EINVAL**|n/d|
-|**NULL**|Ile|Ile|Ile|**EINVAL**|nie zmieniono|
-|Ile|Ile|Ile|<= 0|**EINVAL**|nie zmieniono|
+|Wszelki|Wszelki|**Null**|Wszelki|**Einval**|Nie dotyczy|
+|**Null**|Wszelki|Wszelki|Wszelki|**Einval**|nie zmieniono|
+|Wszelki|Wszelki|Wszelki|<= 0|**Einval**|nie zmieniono|
 
-Jeśli wystąpi którykolwiek z tych warunków błędów, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
+Jeśli wystąpi którykolwiek z tych warunków błędu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje **ustawiają errno** na **EINVAL** i zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedura **_searchenv_s** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, która określa listę ścieżek katalogów, takich jak **Path**, **lib**i **include**. Ponieważ **_searchenv_s** jest uwzględniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej. Jeśli właściwość *nazwa_zmiennej* nie jest zgodna z nazwą zmiennej środowiskowej zdefiniowanej w środowisku procesu, funkcja zwraca zero, a zmienna *PATHNAME* nie jest zmieniana.
+**_searchenv_s** rutynowe wyszukiwanie pliku docelowego w określonej domenie. Zmienną *warname* może być dowolna zmienna środowiska lub zdefiniowana przez użytkownika, która określa listę ścieżek katalogowych, takich jak **PATH,** **LIB**i **INCLUDE**. Ponieważ **_searchenv_s** jest rozróżniana wielkość liter, *varname* powinien odpowiadać wielkości przypadku zmiennej środowiskowej. Jeśli *nazwa warname* nie jest zgodna z nazwą zmiennej środowiskowej zdefiniowanej w środowisku procesu, funkcja zwraca zero, a *zmienna pathname* pozostaje niezmieniona.
 
-Procedura przeszukuje najpierw plik w bieżącym katalogu roboczym. Jeśli plik nie zostanie znaleziony, będzie wyglądał dalej za pomocą katalogów określonych przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *nazwy ścieżki*. Jeśli plik *filename* nie zostanie znaleziony, *Nazwa ścieżki* zawiera pusty ciąg zakończony znakiem null.
+Procedura najpierw wyszukuje plik w bieżącym katalogu roboczym. Jeśli nie znajdzie pliku, szuka dalej za pośrednictwem katalogów określonych przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *nazwy ścieżki*. Jeśli nie znaleziono pliku *nazwy pliku,* *nazwa ścieżki* zawiera pusty ciąg zakończony z wartością null.
 
-Bufor nazw powinien zawierać co najmniej **_MAX_PATH** *znaków, aby* pomieścić pełną długość ścieżki skonstruowanej. W przeciwnym razie **_searchenv_s** może przekroczyć bufor *nazw* , co spowodowało nieoczekiwane zachowanie.
+Bufor *nazwy ścieżki* powinien mieć co najmniej **_MAX_PATH** znaków, aby pomieścić pełną długość nazwy ścieżki skonstruowanej. W przeciwnym razie **_searchenv_s** może przekroczyć *bufornazy,* co spowoduje nieoczekiwane zachowanie.
 
-**_wsearchenv_s** to dwubajtowa wersja **_searchenv_s**; argumenty **_wsearchenv_s** są ciągami znaków dwubajtowych. **_wsearchenv_s** i **_searchenv_s** zachowują się identycznie w inny sposób.
+**_wsearchenv_s** jest szerokoznakową wersją **_searchenv_s**; argumenty, które **mają _wsearchenv_s,** to ciągi znaków o szerokich znakach. **_wsearchenv_s** i **_searchenv_s** zachowują się identycznie w przeciwnym razie.
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -134,10 +139,10 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_searchenv_s**|\<stdlib.h>|
-|**_wsearchenv_s**|\<STDLIB. h > lub \<WCHAR. h >|
+|**_searchenv_s**|\<>|
+|**_wsearchenv_s**|\<> lub \<wchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -175,7 +180,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>

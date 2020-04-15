@@ -1,11 +1,15 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
+- _o__atoi64
+- _o__atoi64_l
+- _o__wtoi64
+- _o__wtoi64_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,16 +54,16 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 103b100b293ff183dd89f3e7c2f291f9d49519e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939485"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348831"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
-Konwertuje ciąg na 64-bitową liczbę całkowitą.
+Konwertuje ciąg na 64-bitową liczę całkowitą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,35 +86,37 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg do przekonwertowania.
+*Str*<br/>
+Ciąg do konwersji.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość **__int64** , która jest generowana przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla elementu **_atoi64** , jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
+Każda funkcja zwraca **wartość __int64** wyprodukowaną przez interpretację znaków wejściowych jako liczby. Zwracana wartość wynosi 0 dla **_atoi64,** jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
 
-W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **_atoi64** zwraca **I64_MAX** i **I64_MIN** w przypadku przepełnienia z dużymi ujemnymi wartościami całkowitymi.
+W przypadku przepełnienia dużymi dodatnimi wartościami całkowitymi **_atoi64** zwraca **I64_MAX** i **I64_MIN** w przypadku przepełnienia dużymi ujemnymi wartościami całkowitymi.
 
-We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli przekazanie parametru ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
+We wszystkich przypadkach poza zasięgiem **errno** jest ustawiony na **ERANGE**. Jeśli parametr przekazywany w ma **wartość NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** **na EINVAL** i zwracać 0.
 
 ## <a name="remarks"></a>Uwagi
 
 Te funkcje konwertują ciąg znaków na 64-bitową wartość całkowitą.
 
-Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, którego nie może rozpoznać jako część liczby. Ten znak może być znakiem null (' \ 0 ' lub L ' \ 0 '), który kończy ciąg.
+Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja zatrzymuje odczytywanie ciągu wejściowego przy pierwszym znaku, który nie może rozpoznać jako część liczby. Ten znak może być znakiem zerowym ('\0' lub L'\0') kończącym ciąg.
 
-Argument *str* **_atoi64** ma następującą postać:
+Argument *str* do **_atoi64** ma następujący formularz:
 
-> [*odstęp*] [*Sign*] [*cyfry*]
+> [*odstępy*] [*znak*] [*cyfry*]
 
-*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* to jedna lub więcej cyfr.
+Odstęp *składa* się ze znaków spacji lub tabulacji, które są ignorowane; *znak* jest plus (+) lub minus (-); i *cyfry* są jedną lub więcej cyfr.
 
-**_wtoi64** jest taka sama jak **_atoi64** , z tą różnicą, że pobiera ciąg znaków dwubajtowych jako parametr.
+**_wtoi64** jest identyczna **z _atoi64** z tą różnicą, że przyjmuje szeroki ciąg znaków jako parametr.
 
-Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -120,14 +127,14 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedury|Wymagany nagłówek|
+|Procedur|Wymagany nagłówek|
 |--------------|---------------------|
-|**_atoi64**, **_atoi64_l**|\<stdlib.h>|
-|**_wtoi64**, **_wtoi64_l**|\<STDLIB. h > lub \<WCHAR. h >|
+|**_atoi64** **, _atoi64_l**|\<>|
+|**_wtoi64** **, _wtoi64_l**|\<> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
-Ten program pokazuje, jak liczby przechowywane jako ciągi mogą być konwertowane na wartości liczbowe przy użyciu funkcji **_atoi64** .
+Ten program pokazuje, jak liczby przechowywane jako ciągi mogą być konwertowane na wartości liczbowe za pomocą **funkcji _atoi64.**
 
 ```C
 // crt_atoi64.c
@@ -174,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

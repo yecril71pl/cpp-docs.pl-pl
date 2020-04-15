@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342113"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Blokuje obiekt **pliku** , aby zapewnić spójność wątków uzyskujących dostęp do obiektu **pliku** współbieżnie.
+Blokuje **FILE obiektu,** aby zapewnić spójność dla wątków dostępu do **FILE** obiektu jednocześnie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*rozszerzeniem*<br/>
-Dojście do pliku.
+*Plik*<br/>
+Uchwyt pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_lock_file** blokuje obiekt **pliku** określony przez *plik*. Plik źródłowy nie jest zablokowany przez **_lock_file**. Użyj [_unlock_file](unlock-file.md) , aby zwolnić blokadę pliku. Wywołania **_lock_file** i **_unlock_file** muszą być dopasowane w wątku.
+Funkcja **_lock_file** blokuje obiekt **FILE** określony przez *plik*. Plik źródłowy nie jest zablokowany przez **_lock_file**. Użyj [_unlock_file,](unlock-file.md) aby zwolnić blokadę pliku. Wywołania **_lock_file** i **_unlock_file** muszą być dopasowane w wątku.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -59,7 +63,7 @@ Funkcja **_lock_file** blokuje obiekt **pliku** określony przez *plik*. Plik ź
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

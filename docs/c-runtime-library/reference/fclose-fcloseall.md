@@ -1,9 +1,11 @@
 ---
 title: fclose, _fcloseall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fclose
 - _fcloseall
+- _o__fcloseall
+- _o_fclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b2ee14c5fc8bb47cc2652443c0263bd14147c90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941501"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347489"
 ---
 # <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
-Zamyka strumień (**fclose**) lub zamyka wszystkie otwarte strumienie ( **_fcloseall**).
+Zamyka strumień (**fclose**) lub zamyka wszystkie otwarte strumienie **(_fcloseall**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,41 +53,43 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fclose** zwraca wartość 0, jeśli strumień został pomyślnie zamknięty. **_fcloseall** zwraca łączną liczbę zamkniętych strumieni. Obie funkcje zwracają **znacznik EOF** , aby wskazać błąd.
+**fclose** zwraca wartość 0, jeśli strumień został pomyślnie zamknięty. **_fcloseall** zwraca całkowitą liczbę zamkniętych strumieni. Obie funkcje zwracają **EOF,** aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fclose** zamknie *strumień*. Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **fclose** ustawia **errno** na **EINVAL** i zwraca **znacznik EOF**. Zaleca się, aby wskaźnik *strumienia* zawsze był sprawdzany przed wywołaniem tej funkcji.
+Funkcja **fclose** zamyka *strumień*. Jeśli *strumień* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **fclose** ustawia **errno** na **EINVAL** i zwraca **EOF**. Zaleca się, aby wskaźnik *strumienia* zawsze sprawdzał przed wywołaniem tej funkcji.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr aby](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji na temat tych i innych kodów błędów.
 
-Funkcja **_fcloseall** zamyka wszystkie otwarte strumienie z wyjątkiem **stdin**, **stdout**, **stderr** (i w systemach MS-DOS, **_stdaux** i **_stdprn**). Powoduje także zamknięcie i usunięcie wszystkich plików tymczasowych utworzonych przez **tmpfile**. W obu funkcjach wszystkie bufory skojarzone ze strumieniem są opróżniane przed zamknięciem. Bufory przydzieloną systemowo są wydawane, gdy strumień jest zamknięty. Bufory przypisane przez użytkownika z **setbuf** i **setvbuf —** nie są automatycznie wydawane.
+Funkcja **_fcloseall** zamyka wszystkie otwarte strumienie z wyjątkiem **stdin**, **stdout**, **stderr** (oraz, w MS-DOS, **_stdaux** i **_stdprn).** Zamyka również i usuwa wszystkie pliki tymczasowe utworzone przez **tmpfile**. W obu funkcjach wszystkie bufory skojarzone ze strumieniem są opróżniane przed zamknięciem. Bufory przydzielone systemowe są zwalniane po zamknięciu strumienia. Bufory przypisane przez użytkownika z **setbuf** i **setvbuf** nie są zwalniane automatycznie.
 
-**Uwaga:** Gdy te funkcje są używane do zamykania strumienia, podstawowy deskryptor pliku i dojście do pliku systemu operacyjnego (lub gniazdo) są zamknięte, a także strumień. W takim przypadku, jeśli plik został pierwotnie otwarty jako dojście do pliku lub deskryptor pliku i jest zamykany przy użyciu **fclose**, nie należy także wywołać **_close** , aby zamknąć deskryptora pliku; Nie wywołuj funkcji **CloseHandle** programu Win32, aby zamknąć dojście do pliku.
+**Uwaga:** Gdy te funkcje są używane do zamykania strumienia, podstawowy deskryptor pliku i dojście do pliku systemu operacyjnego (lub gniazdo) są zamknięte, a także strumień. Tak więc, jeśli plik został pierwotnie otwarty jako uchwyt pliku lub deskryptor pliku i jest zamknięty **z fclose**, nie należy również wywoływać **_close,** aby zamknąć deskryptor pliku; nie należy wywoływać funkcji Win32 **CloseHandle,** aby zamknąć dojście do pliku.
 
-**fclose** i **_fcloseall** obejmują kod chroniący przed zakłóceniami z innych wątków. W przypadku nieblokującej wersji **fclose**należy zapoznać się z tematem **_fclose_nolock**.
+**fclose** i **_fcloseall** zawierają kod w celu ochrony przed zakłóceniami od innych wątków. Aby uzyskać nieblokującą wersję **fclose**, zobacz **_fclose_nolock**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fclose**|\<stdio.h>|
+|**fclose ( fclose )**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [fopen](fopen-wfopen.md).
+Zobacz przykład [fopen](fopen-wfopen.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

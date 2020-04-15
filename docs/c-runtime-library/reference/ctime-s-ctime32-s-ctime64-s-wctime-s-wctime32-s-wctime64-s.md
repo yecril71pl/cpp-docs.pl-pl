@@ -1,6 +1,6 @@
 ---
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64_s
 - _wctime32_s
@@ -8,6 +8,10 @@ api_name:
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
+- _o__ctime32_s
+- _o__ctime64_s
+- _o__wctime32_s
+- _o__wctime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -54,16 +59,16 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348167"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
-Przekonwertuj wartość czasu na ciąg i Dostosuj ustawienia lokalnej strefy czasowej. Są to wersje [CTime, _ctime64, _wctime, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuj wartość czasu na ciąg i dostosuj ustawienia lokalnej strefy czasowej. Są to wersje [ctime, _ctime64, _wctime, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -125,58 +130,60 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buforu*<br/>
-Musi być wystarczająco duży, aby pomieścić 26 znaków. Wskaźnik do wyniku ciągu znaków lub **wartość null** , jeśli:
+*Buforu*<br/>
+Musi być wystarczająco duży, aby pomieścić 26 znaków. Wskaźnik do wyniku ciągu znaku lub **NULL,** jeśli:
 
-- *sourceTime* reprezentuje datę sprzed północy, 1 stycznia 1970, UTC.
+- *sourceTime* reprezentuje datę przed północą, 1 stycznia 1970, UTC.
 
-- Jeśli używasz **_ctime32_s** lub **_wctime32_s** i *SourceTime* reprezentuje datę po 23:59:59 stycznia 18, 2038, UTC.
+- Jeśli używasz **_ctime32_s** lub **_wctime32_s** a *sourceTime* reprezentuje datę po 23:59:59 18 stycznia 2038, UTC.
 
-- Jeśli używasz **_ctime64_s** lub **_wctime64_s** i *sourceTime* reprezentuje datę z PRZE23:59:59 grudnia, 3000, UTC.
+- Jeśli używasz **_ctime64_s** lub **_wctime64_s** a *sourceTime* reprezentuje datę po 23:59:59, 31 grudnia 3000, UTC.
 
-- Jeśli używasz **_ctime_s** lub **_wctime_s**, te funkcje są otokami z poprzednimi funkcjami. Zobacz sekcję Uwagi.
+- W przypadku korzystania z **_ctime_s** lub **_wctime_s**funkcje te są otokami poprzednich funkcji. Zobacz sekcję Uwagi.
 
-*numberOfElements*<br/>
+*liczbaOfElements*<br/>
 Rozmiar buforu.
 
-*sourceTime*<br/>
-Wskaźnik na czas przechowywania.
+*źródłoCzas*<br/>
+Wskaźnik do przechowywanego czasu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli powodzenie. W przypadku niepowodzenia z powodu nieprawidłowego parametru zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracany jest kod błędu. Kody błędów są zdefiniowane w ERRNO. C Aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-constants.md). W poniższej tabeli przedstawiono rzeczywiste kody błędów zgłoszone dla każdego warunku błędu.
+Zero, jeśli się powiedzie. Jeśli wystąpi błąd z powodu nieprawidłowego parametru, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, zwracany jest kod błędu. Kody błędów są zdefiniowane w ERRNO. H; aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-constants.md). Rzeczywiste kody błędów generowane dla każdego warunku błędu są wyświetlane w poniższej tabeli.
 
-## <a name="error-conditions"></a>Warunki błędów
+## <a name="error-conditions"></a>Warunki błędu
 
-|*buforu*|*numberOfElements*|*sourceTime*|przesłać|Wartość w *buforze*|
+|*Buforu*|*liczbaOfElements*|*źródłoCzas*|Zwraca|Wartość w *buforze*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Ile|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null**|0 < rozmiar < 26|Ile|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|> = 26|NULL|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|> = 26|< 0|**EINVAL**|Pusty ciąg|
+|**Null**|Wszelki|Wszelki|**Einval**|Nie zmodyfikowano|
+|Nie **NULL** (punkty do prawidłowej pamięci)|0|Wszelki|**Einval**|Nie zmodyfikowano|
+|Nie **NULL**|0< rozmiar < 26|Wszelki|**Einval**|Pusty ciąg znaków|
+|Nie **NULL**|>= 26|NULL|**Einval**|Pusty ciąg znaków|
+|Nie **NULL**|>= 26|< 0|**Einval**|Pusty ciąg znaków|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **ctime_s** konwertuje wartość czasu przechowywaną jako strukturę [time_t](../../c-runtime-library/standard-types.md) w ciągu znaków. Wartość *sourceTime* jest zazwyczaj uzyskiwana z wywołania [czasu](time-time32-time64.md), która zwraca liczbę sekund, które upłynęły od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC). Ciąg wartości zwracanej zawiera dokładnie 26 znaków i ma postać:
+Funkcja **ctime_s** konwertuje wartość czasu przechowywaną jako struktura [time_t](../../c-runtime-library/standard-types.md) na ciąg znaków. Wartość *sourceTime* jest zwykle otrzymywana z wywołania [czasu,](time-time32-time64.md)która zwraca liczbę sekund, które upłynęło od północy (00:00:00), 1 stycznia 1970 r., skoordynowany czas uniwersalny (UTC). Ciąg wartości zwracanej zawiera dokładnie 26 znaków i ma formularz:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
-Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak nowego wiersza ("\n") i znak null ("\ 0") zajmują ostatnie dwa pozycje ciągu.
+Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Nowy znak wiersza ('\n') i znak null ('\0') zajmują ostatnie dwie pozycje ciągu.
 
-Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zobacz funkcje [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , aby uzyskać informacje o konfigurowaniu czasu lokalnego i funkcji [_tzset](tzset.md) w celu uzyskania informacji na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
+Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zobacz [czas](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) funkcje, aby uzyskać informacje na temat konfigurowania czasu lokalnego i funkcji [_tzset,](tzset.md) aby uzyskać informacje na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-**_wctime32_s** i **_wctime64_s** to dwubajtowa wersja **_ctime32_s** i **_ctime64_s**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie, **_ctime64_s**, **_wctime32_s**i **_wctime64_s** zachowują się identycznie w **_ctime32_s**.
+**_wctime32_s** i **_wctime64_s** są szeroką wersją **_ctime32_s** i **_ctime64_s;** zwracanie wskaźnika do ciągu znaków szerokoznakowych. W przeciwnym razie **_ctime64_s** **, _wctime32_s**i **_wctime64_s** zachowywać się identycznie jak **_ctime32_s**.
 
-**ctime_s** jest funkcją wbudowaną, która jest szacowana do **_ctime64_s** , a **time_t** jest równoznaczna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **ctime_s** do **_ctime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
+**ctime_s** jest funkcją wbudowaną, która ocenia **_ctime64_s** i **time_t** jest odpowiednikiem **__time64_t**. Jeśli konieczne jest wymuszenie, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje **to, że ctime_s** oceni **_ctime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 r. i nie jest dozwolona na platformach 64-bitowych.
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tctime_s**|**ctime_s**|**ctime_s**|**_wctime_s**|
 |**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
@@ -186,14 +193,14 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time. h >|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time. h > lub \<WCHAR. h >|
+|**ctime_s** **_ctime32_s** **_ctime64_s**|\<> time.h|
+|**_wctime_s** **_wctime32_s** **_wctime64_s**|\<time.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -229,7 +236,7 @@ int main( void )
 The time is Fri Apr 25 13:03:39 2003
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

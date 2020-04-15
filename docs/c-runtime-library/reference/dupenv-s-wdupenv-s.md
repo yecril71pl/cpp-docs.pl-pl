@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s, _wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +39,19 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f65f1da3e8cef077df04d0bdb7eb2aaf75afd9fa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942024"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348056"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Pobiera wartość z bieżącego środowiska.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,43 +70,45 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*Buforu*<br/>
 Bufor do przechowywania wartości zmiennej.
 
-*numberOfElements*<br/>
-Rozmiar *buforu*.
+*liczbaOfElements*<br/>
+Rozmiar *bufora*.
 
-*nazwa_zmiennej*<br/>
+*Varname*<br/>
 Nazwa zmiennej środowiskowej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero po powodzeniu, kod błędu w przypadku niepowodzenia.
+Zero na sukces, kod błędu na niepowodzenie.
 
-Te funkcje sprawdzają poprawność swoich parametrów; Jeśli *buffer* lub *Nazwa_zmiennej* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
+Te funkcje sprawdzają ich parametry; jeśli *bufor* lub *nazwa warzna* ma **wartość NULL**, nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [zatwierdzeniu parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcje ustawić **errno** do **EINVAL** i **zwracać EINVAL**.
 
-Jeśli te funkcje nie mogą przydzielić wystarczającej ilości pamięci, ustawia *bufor* na **null** i *NumberOfElements* na 0, a następnie zwraca **ENOMEM**.
+Jeśli te funkcje nie mogą przydzielić wystarczającej ilości pamięci, ustawiają *bufor* na **NULL** i *numberOfElements* na 0 i zwracają **ENOMEM**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_dupenv_s** przeszukuje listę zmiennych środowiskowych dla elementu *nazwa_zmiennej*. Jeśli zmienna zostanie znaleziona, **_dupenv_s** przydziela bufor i kopiuje wartość zmiennej do buforu. Adres i długość buforu są zwracane w *buforze* i *NumberOfElements*. Przydzielając sam bufor, **_dupenv_s** zapewnia bardziej wygodną alternatywę dla [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Funkcja **_dupenv_s** przeszukuje listę zmiennych środowiskowych dla *warname*. Jeśli zmienna zostanie znaleziona, **_dupenv_s** przydziela bufor i kopiuje wartość zmiennej do buforu. Adres i długość buforu są zwracane w *buforze* i *numberOfElements*. Przydzielając sam bufor, **_dupenv_s** stanowi wygodniejszą alternatywę dla [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
-> Program wywołujący jest odpowiedzialny za zwolnienie pamięci przez wywołanie [bezpłatnej](free.md).
+> Jest to odpowiedzialność programu wywołującego, aby zwolnić pamięć, dzwoniąc [za darmo](free.md).
 
-Jeśli zmienna nie zostanie znaleziona, *bufor* ma wartość **null**, *NumberOfElements* jest ustawiona na 0, a wartość zwracana to 0, ponieważ ta sytuacja nie jest uważana za warunek błędu.
+Jeśli zmienna nie zostanie znaleziona, *bufor* jest ustawiony na **NULL**, *numberOfElements* jest ustawiona na 0, a zwracana wartość wynosi 0, ponieważ ta sytuacja nie jest uważana za warunek błędu.
 
-Jeśli nie interesują Cię wielkości bufora, można przekazać **wartość null** dla *NumberOfElements*.
+Jeśli nie jesteś zainteresowany rozmiarem buforu, możesz przekazać **wartość NULL** dla *numberOfElements*.
 
-w systemie operacyjnym Windows w **_dupenv_s** nie jest rozróżniana wielkość liter. **_dupenv_s** używa kopii środowiska wskazanej przez zmienną globalną **_environ** w celu uzyskania dostępu do środowiska. Zobacz uwagi w [getenv_s, _wgetenv_s,](getenv-s-wgetenv-s.md) aby zapoznać się z omówieniem **_environ**.
+**_dupenv_s** nie jest rozróżniana wielkość liter w systemie operacyjnym Windows. **_dupenv_s** używa kopii środowiska wskazanej przez zmienną globalną **_environ** dostępu do środowiska. Zobacz uwagi w [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) do dyskusji na temat **_environ**.
 
-Wartość w *buforze* jest kopią wartości zmiennej środowiskowej; Modyfikowanie go nie ma wpływu na środowisko. Użyj funkcji [_putenv_s, _wputenv_s,](putenv-s-wputenv-s.md) aby zmodyfikować wartość zmiennej środowiskowej.
+Wartość w *buforze* jest kopią wartości zmiennej środowiskowej; jego modyfikacja nie ma wpływu na środowisko. Użyj [funkcji _putenv_s, _wputenv_s,](putenv-s-wputenv-s.md) aby zmodyfikować wartość zmiennej środowiskowej.
 
-**_wdupenv_s** to dwubajtowa wersja **_dupenv_s**; argumenty **_wdupenv_s** są ciągami znaków dwubajtowych. **_Wenviron** Global Variable to dwubajtowa wersja **_environ**. Zobacz uwagi w [getenv_s, _wgetenv_s,](getenv-s-wgetenv-s.md) Aby uzyskać więcej informacji na temat **_wenviron**.
+**_wdupenv_s** jest szerokoznakową wersją **_dupenv_s**; argumenty **_wdupenv_s** są ciągami znaków o szerokich znakach. **Zmienna globalna _wenviron** jest szerokoznakową wersją **_environ**. Więcej informacji na temat **_wenviron**można _wgetenv_s znaleźć w [getenv_s.](getenv-s-wgetenv-s.md)
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
 
@@ -111,10 +116,10 @@ Wartość w *buforze* jest kopią wartości zmiennej środowiskowej; Modyfikowan
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_dupenv_s**|\<stdlib.h>|
-|**_wdupenv_s**|\<STDLIB. h > lub \<WCHAR. h >|
+|**_dupenv_s**|\<>|
+|**_wdupenv_s**|\<> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -142,9 +147,9 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Stałe środowiska](../../c-runtime-library/environmental-constants.md)<br/>
 [_dupenv_s_dbg, _wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>

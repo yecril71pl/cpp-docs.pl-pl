@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
+- _o__mbsnbset_s
+- _o__mbsnbset_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 7addd7e053816c462ae430443506445b878464a0
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81339022"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Ustawia pierwsze **n** bajtów ciągu znaków wielobajtowych do określonego znaku. Te wersje programu [_mbsnbset _mbsnbset_l](mbsnbset-mbsnbset-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ustawia pierwszy **n** bajtów ciągu wielobajtowego znaku na określony znak. Te wersje [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,38 +85,40 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg, który ma zostać zmieniony.
+*Str*<br/>
+Ciąg do zmiany.
 
-*zmienia*<br/>
+*Rozmiar*<br/>
 Rozmiar buforu ciągu.
 
-*s*<br/>
-Ustawienie znaków pojedynczego bajtu lub znaku bajtowego.
+*C*<br/>
+Ustawienie jednobajtowe lub wielobajtowe.
 
-*liczbą*<br/>
-Liczba bajtów, które mają zostać ustawione.
+*Liczba*<br/>
+Liczba bajtów do ustawionego.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; w przeciwnym razie kod błędu.
+Zero, jeśli się powiedzie; w przeciwnym razie kod błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbsnbset_s** i **_mbsnbset_s_l** , co najwyżej, w pierwszej *liczbie* bajtów *str* - *c*. Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*. Jeśli *c* jest znakiem wielobajtowym i nie może zostać ustawiony całkowicie do ostatniego bajtu określonego przez *licznik*, ostatni bajt jest uzupełniony pustym znakiem. **_mbsnbset_s** i **_mbsnbset_s_l** nie umieszczają kończącej wartości null na końcu *str*.
+Funkcje **_mbsnbset_s** i **_mbsnbset_s_l** ustawiają co najwyżej pierwsze bajty *zliczania* *od str* do *c*. Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używany zamiast *liczyć*. Jeśli *c* jest znakiem wielobajtowym i nie można go całkowicie ustawić w ostatnim bajcie określonym przez *liczbę,* ostatni bajt jest wyściełany pustym znakiem. **_mbsnbset_s** i **_mbsnbset_s_l** nie umieszczają kończącej się wartości null na końcu *ul.*
 
-**_mbsnbset_s** i **_mbsnbset_s_l** przypominają **_mbsnset**, z tą różnicą, że ustawiają *liczbę* bajtów zamiast *liczby* znaków *c*.
+**_mbsnbset_s** i **_mbsnbset_s_l** przypominają **_mbsnset**, z tą różnicą, że ustawiają bajty *zliczania,* a nie *zliczają* znaki *c*.
 
-Jeśli *str* ma **wartość null** lub *Liczba* jest równa zero, ta funkcja generuje wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Ponadto, jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **EINVAL** i zamiast niego jest używane miejsce.
+Jeśli *str* ma **wartość NULL** lub *liczba* wynosi zero, ta funkcja generuje nieprawidłowy wyjątek parametru, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **Wartość EINVAL,** a funkcja zwraca **wartość NULL**. Ponadto jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **wartość EINVAL** i zamiast niej jest używana spacja.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja **_mbsnbset_s** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbset_s_l** jest identyczna z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który został przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. **Wersja _mbsnbset_s** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; _mbsnbset_s_l **_mbsnbset_s_l** wersja jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który jest przekazywany w. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie, a tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -126,10 +131,10 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbset_s**|\<mbstring. h >|
-|**_mbsnbset_s_l**|\<mbstring. h >|
+|**_mbsnbset_s**|\<mbstring.h>|
+|**_mbsnbset_s_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -155,7 +160,7 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

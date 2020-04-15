@@ -1,8 +1,9 @@
 ---
 title: _pipe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pipe
+- _o__pipe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: bd0107fac28deef94716ff0ce65dd5423a1ececa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5bac435bed26decee0069f5814d1f3d25a54470a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338498"
 ---
 # <a name="_pipe"></a>_pipe
 
 Tworzy potok do odczytu i zapisu.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,60 +56,62 @@ int _pipe(
 
 ### <a name="parameters"></a>Parametry
 
-*pfds*<br/>
-Wskaźnik do tablicy dwóch liczb **całkowitych** do przechowywania deskryptorów plików odczytu i zapisu.
+*z o.o.*<br/>
+Wskaźnik do tablicy dwóch **int** do przechowywania deskryptorów plików odczytu i zapisu.
 
-*psize*<br/>
+*psize (psize)*<br/>
 Ilość pamięci do zarezerwowania.
 
-*TextMode*<br/>
+*tryb tekstu*<br/>
 Tryb pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli powodzenie. Zwraca wartość-1, aby wskazać błąd. W przypadku błędu **errno** jest ustawiony na jedną z następujących wartości:
+Zwraca wartość 0, jeśli zakończy się pomyślnie. Zwraca wartość -1, aby wskazać błąd. W polu Błędu **errno** jest ustawiona na jedną z następujących wartości:
 
-- **EMFILE**, który wskazuje, że nie ma więcej dostępnych deskryptorów plików.
+- **EMFILE**, co oznacza, że nie są już dostępne deskryptory plików.
 
-- **Enfile**, który wskazuje przepełnienie tabeli plików systemowych.
+- **ENFILE**, który wskazuje przepełnienie tabeli plików systemowych.
 
-- **EINVAL**, która wskazuje, że tablica *pfds* jest wskaźnikiem o wartości null lub że przekazano nieprawidłową wartość typu *TextMode* .
+- **EINVAL**, który wskazuje, że *pfds tablicy* jest wskaźnik null lub że nieprawidłowa wartość dla *textmode* został przekazany w.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_pipe** tworzy *potok*, który jest sztucznym kanałem we/wy używanym przez program do przekazywania informacji do innych programów. Potok przypomina plik, ponieważ ma wskaźnik pliku, deskryptor pliku lub oba te elementy, z których może być odczytywany lub zapisywana przy użyciu standardowych funkcji danych wejściowych i wyjściowych biblioteki standardowej. Jednak potok nie reprezentuje określonego pliku lub urządzenia. Zamiast tego reprezentuje magazyn tymczasowy w pamięci, który jest niezależny od własnej pamięci programu i jest kontrolowany w całości przez system operacyjny.
+Funkcja **_pipe** tworzy *potok*, który jest sztucznym kanałem we/wy używanym przez program do przekazywania informacji do innych programów. Potok przypomina plik, ponieważ ma wskaźnik pliku, deskryptora pliku lub oba i może być odczytywany z lub zapisywany przy użyciu funkcji wprowadzania i danych wyjściowych biblioteki standardowej. Jednak potok nie reprezentuje określonego pliku lub urządzenia. Zamiast tego reprezentuje magazyn tymczasowy w pamięci, który jest niezależny od pamięci własnej programu i jest całkowicie kontrolowany przez system operacyjny.
 
-**_pipe** przypomina **_open** , ale otwiera potok do odczytu i zapisu i zwraca dwa deskryptory plików zamiast jednego. Program może używać obu stron potoku lub zamknąć ten, którego nie potrzebuje. Na przykład procesor poleceń w systemie Windows tworzy potok, gdy wykonuje polecenie, takie jak **PROGRAM1** | **PROGRAM2**.
+**_pipe** przypomina **_open** ale otwiera potok do odczytu i zapisu i zwraca dwa deskryptory pliku zamiast jednego. Program może używać obu stron rury lub zamykać tę, której nie potrzebuje. Na przykład procesor poleceń w systemie Windows tworzy potok podczas wykonywania polecenia, takiego jak **PROGRAM1** | **PROGRAM2**.
 
-Standardowy deskryptor wyjściowy elementu **PROGRAM1** jest dołączony do deskryptora zapisu potoku. Standardowy deskryptor wejścia **PROGRAM2** jest dołączany do deskryptora odczytu potoku. Eliminuje to konieczność tworzenia plików tymczasowych w celu przekazywania informacji do innych programów.
+Standardowy deskryptor wyjściowy **PROGRAMU1** jest dołączony do deskryptora zapisu rury. Standardowy deskryptor wejściowy **PROGRAMU2** jest dołączony do deskryptora odczytu rury. Eliminuje to konieczność tworzenia plików tymczasowych w celu przekazywania informacji do innych programów.
 
-Funkcja **_pipe** zwraca dwa deskryptory plików do potoku w argumencie *pfds* . Element *pfds*[0] zawiera deskryptor odczytu, a element *pfds*[1] zawiera deskryptor zapisu. Deskryptory pliku potoku są używane w taki sam sposób, jak w przypadku innych deskryptorów plików. (Funkcje danych wejściowych i wyjściowych niskiego poziomu **_read** i **_write** mogą odczytywać i zapisywać w potoku). Aby wykryć warunek końca potoku, należy sprawdzić, czy jest to żądanie **_read** zwracające 0 jako liczbę odczytanych bajtów.
+Funkcja **_pipe** zwraca dwa deskryptory plików do potoku w argurze *pfds.* Element *pfds*[0] zawiera deskryptor odczytu, a *element pfds*[1] zawiera deskryptor zapisu. Deskryptory plików potoków są używane w taki sam sposób jak inne deskryptory plików. (Funkcje wejścia i wyjścia niskiego poziomu **_read** i **_write** mogą odczytywać i zapisywać do potoku. Aby wykryć stan końca potoku, sprawdź, czy **_read** żądanie zwraca wartość 0 jako liczbę odczytanych bajtów.
 
-Argument *psize* określa ilość pamięci, w bajtach, do zarezerwowania dla potoku. Argument *TextMode* określa tryb tłumaczenia dla potoku. Stała **_O_TEXT** manifestu określa tłumaczenie tekstu, a stała **_O_BINARY** określa translację binarną. (Zobacz [fopen, _wfopen,](fopen-wfopen.md) Aby uzyskać opis trybów tekstowych i binarnych). Jeśli argument *TextMode* ma wartość 0, **_pipe** używa domyślnego trybu tłumaczenia, który jest określony przez zmienną trybu domyślnego [_fmode](../../c-runtime-library/fmode.md).
+Argument *psize* określa ilość pamięci w bajtach, aby zarezerwować dla potoku. Argument *textmode* określa tryb tłumaczenia potoku. Stała **manifestu _O_TEXT** określa translację tekstu, a stała **_O_BINARY** określa translację binarną. (Opis tekstu i trybów binarnych można [znaleźć na _wfopen).](fopen-wfopen.md) Jeśli argument *textmode* ma wartość 0, **_pipe** używa domyślnego trybu tłumaczenia określonego przez zmienną trybu domyślnego [_fmode](../../c-runtime-library/fmode.md).
 
-W programach wielowątkowych nie jest wykonywane blokowanie. Zwracane deskryptory plików są nowo otwierane i nie powinny być odwołujące się do żadnego wątku, dopóki nie zostanie zakończone wywołanie **_pipe** .
+W programach wielowątkowych nie jest wykonywane blokowanie. Deskryptory plików, które są zwracane są nowo otwarte i nie powinny być odwoływane przez dowolny wątek, dopóki **po zakończeniu wywołania _pipe.**
 
-Aby użyć funkcji **_pipe** do komunikacji między procesem nadrzędnym i procesem podrzędnym, każdy proces musi mieć otwarty tylko jeden deskryptor w potoku. Deskryptory muszą być odwrotne: Jeśli element nadrzędny ma otwarty skrypt odczytu, element podrzędny musi mieć otwarty deskryptor zapisu. Najprostszym sposobem na to jest bitowe lub ( **|** ) flaga **_O_NOINHERIT** z elementem *TextMode*. Następnie użyj **_dup** lub **_dup2** , aby utworzyć dziedziczną kopię deskryptora potoku, który ma zostać przekazany do elementu podrzędnego. Zamknij oryginalny deskryptor, a następnie przeduplikuj proces podrzędny. Po powrocie z wywołania duplikatu Zamknij zduplikowany deskryptor w procesie nadrzędnym. Aby uzyskać więcej informacji, zobacz przykład 2 w dalszej części tego artykułu.
+Aby użyć funkcji **_pipe** do komunikowania się między procesem nadrzędnym a procesem podrzędnym, każdy proces musi mieć tylko jeden deskryptor otwarty na potoku. Deskryptory muszą być przeciwieństwami: jeśli element nadrzędny ma otwarty deskryptor odczytu, element podrzędny musi mieć otwarty deskryptor zapisu. Najprostszym sposobem, aby to zrobić,**|** jest bitowe lub ( ) **flaga _O_NOINHERIT** z *textmode*. Następnie użyj **_dup** lub **_dup2,** aby utworzyć dziedziczną kopię deskryptora potoku, który chcesz przekazać elementowi podrzędnemu. Zamknij oryginalny deskryptor, a następnie zduplikuj proces podrzędny. Po powrocie z wywołania odrodzenia zamknij zduplikowany deskryptor w procesie nadrzędnym. Aby uzyskać więcej informacji, zobacz przykład 2 w dalszej części tego artykułu.
 
-W systemie operacyjnym Windows potok jest niszczony, gdy wszystkie jego deskryptory zostały zamknięte. (Jeśli wszystkie deskryptory odczytu w potoku zostały zamknięte, zapis do potoku powoduje wystąpienie błędu). Wszystkie operacje odczytu i zapisu w potoku czekają na wystarczającą ilość danych lub wystarczającą ilość miejsca w buforze, aby zakończyć żądanie we/wy.
+W systemie operacyjnym Windows potok jest niszczony, gdy wszystkie jego deskryptory zostały zamknięte. (Jeśli wszystkie deskryptory odczytu na potoku zostały zamknięte, zapisanie do potoku powoduje błąd). Wszystkie operacje odczytu i zapisu na potoku czekać, aż będzie wystarczająco dużo danych lub wystarczającej ilości miejsca w buforze, aby zakończyć żądanie we/wy.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
+|**_pipe**|\<> io.h|\<fcntl.h>,1 \<errno.h>2|
 
-1 dla definicji **_O_BINARY** i **_O_TEXT** .
+1 W przypadku **definicji _O_BINARY** i **_O_TEXT.**
 
-2 definicje **errno** .
+2 **definicje errno.**
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example-1"></a>Przykład 1
 
@@ -216,7 +220,7 @@ Dad, the square root of 8000 is 89.44.
 
 ## <a name="example-2"></a>Przykład 2
 
-Jest to podstawowa aplikacja filtrów. Powoduje to zduplikowanie aplikacji crt_pipe_beeper po utworzeniu potoku, który kieruje do filtru filtr strumienia aplikacji. Filtr usuwa znaki ASCII 7 (sygnał dźwiękowy).
+Jest to podstawowa aplikacja filtru. Tworzy aplikację crt_pipe_beeper po tym, jak tworzy potok, który kieruje stdout aplikacji zrodzonej do filtru. Filtr usuwa znaki ASCII 7 (sygnał dźwiękowy).
 
 ```C
 // crt_pipe_beeper.c
@@ -343,7 +347,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

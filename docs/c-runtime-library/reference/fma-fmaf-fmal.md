@@ -1,10 +1,13 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346566"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Mnoży dwie wartości, dodaje trzecią wartość, a następnie zaokrągla wynik, bez utraty dokładności ze względu na zaokrąglenie pośrednie.
+Mnoży dwie wartości razem, dodaje trzecią wartość, a następnie zaokrągla wynik, nie tracąc żadnej precyzji z powodu pośredniego zaokrąglania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,47 +84,49 @@ long double fmal(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Pierwsza wartość do pomnożenia.
 
-*y*<br/>
+*Y*<br/>
 Druga wartość do pomnożenia.
 
-*z*<br/>
+*Z*<br/>
 Wartość do dodania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `(x * y) + z`wartość. Wartość zwracana jest następnie zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
+Zwraca wartość `(x * y) + z`. Zwracana wartość jest następnie zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
 
-W przeciwnym razie może zwracać jedną z następujących wartości:
+W przeciwnym razie może zwrócić jedną z następujących wartości:
 
-|Problem|przesłać|
+|Problem|Zwraca|
 |-----------|------------|
-|*x* = nieskończoność, *y* = 0 lub<br /><br /> *x* = 0, *y* = nieskończoność|NaN|
-|*x* lub *y* = dokładnie ± nieskończoność *z =* nieskończoność ze znakiem odwrotnym|NaN|
+|*x* = NIESKOŃCZONOŚĆ, *y* = 0 lub<br /><br /> *x* = 0, *y* = NIESKOŃCZONOŚĆ|NaN|
+|*x* lub *y* = dokładne ± NIESKOŃCZONOŚĆ, *z* = NIESKOŃCZONOŚĆ z przeciwległym znakiem|NaN|
 |*x* lub *y* = NaN|NaN|
-|nie (*x* = 0, *y*= nieograniczone) i *z* = NaN<br /><br /> nie (*x*= nieokreślony, *y*= 0) i *z* = NaN|NaN|
-|Błąd przepełnienia zakresu|HUGE_VAL, HUGE_VALF lub HUGE_VALL|
-|Błąd zakresu niedopełnienia|poprawna wartość po zaokrągleniu.|
+|nie (*x* = 0, *y*= nieokreślony) i *z* = NaN<br /><br /> nie (*x*=nieokreślony, *y*=0) i *z* = NaN|NaN|
+|Błąd zakresu przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|Błąd zakresu niedopełnienia|prawidłową wartość, po zaokrągleniu.|
 
-Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
+Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **FMA** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **FMA** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **fma,** które biorą i zwracają **float** i **długie** **podwójne** typy. W programie C **fma** zawsze bierze i zwraca **podwójne**.
 
-Ta funkcja oblicza wartość tak, jakby była pobrana z dokładnością do nieskończoności, a następnie zaokrągla wynik końcowy.
+Ta funkcja oblicza wartość tak, jakby została podjęta do nieskończonej precyzji, a następnie zaokrągla wynik końcowy.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf —** , **Fmal**|\<math.h>|\<cmath >|
+|**fma**, **fmaf**, **fmal**|\<> math.h|\<> cmath|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

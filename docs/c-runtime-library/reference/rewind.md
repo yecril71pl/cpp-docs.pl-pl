@@ -1,8 +1,9 @@
 ---
 title: przewijanie
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338089"
 ---
 # <a name="rewind"></a>przewijanie
 
-Zmienia położenie wskaźnika pliku na początku pliku.
+Zmienia położenie wskaźnika pliku na początek pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,22 +50,24 @@ void rewind(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **przewijania do tyłu** zmienia położenie wskaźnika pliku skojarzonego ze *strumieniem* na początku pliku. Wywołanie przewijania do **tyłu** jest podobne do
+Funkcja **przewijania** do tyłu zmienia położenie wskaźnika pliku skojarzonego ze *strumieniem* na początek pliku. Wywołanie **przewijania** do tyłu jest podobne do
 
-**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
+**(void) fseek(** _strumień_**, 0L, SEEK_SET );**
 
-Jednak w przeciwieństwie do [fseek](fseek-fseeki64.md), **przewijanie do tyłu** czyści wskaźniki błędów dla strumienia, a także wskaźnik końca pliku. Ponadto, w przeciwieństwie do [fseek](fseek-fseeki64.md), **przewiń** nie zwraca wartości, aby wskazać, czy wskaźnik został pomyślnie przeniesiony.
+Jednak w przeciwieństwie do [fseek](fseek-fseeki64.md), **przewijanie do tyłu** czyści wskaźniki błędów dla strumienia, a także wskaźnik końca pliku. Ponadto w przeciwieństwie do [fseek](fseek-fseeki64.md), **przewijanie do tyłu** nie zwraca wartości, aby wskazać, czy wskaźnik został pomyślnie przeniesiony.
 
-Aby wyczyścić bufor klawiatury, użyj **przewinięcie do tyłu** ze strumieniem **stdin**, który jest domyślnie skojarzony z klawiaturą.
+Aby wyczyścić bufor klawiatury, należy użyć **przewijania do tyłu** z **stdin**strumienia , który jest domyślnie skojarzony z klawiatury.
 
-Jeśli strumień jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca i **errno** jest ustawiona na **EINVAL**.
+Jeśli strumień jest wskaźnikiem **NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja zwraca i **errno** jest ustawiona na **EINVAL**.
 
-Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,11 +75,11 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -117,6 +121,6 @@ The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>

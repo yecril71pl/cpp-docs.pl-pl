@@ -1,9 +1,11 @@
 ---
 title: freopen_s, _wfreopen_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfreopen_s
 - freopen_s
+- _o__wfreopen_s
+- _o_freopen_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 30cd1612045a9f9a69e6ac856a601bac3101467f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a24e34ead905d2f704bfbf4d829064c656272e97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345918"
 ---
 # <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
-Ponownie przypisuje wskaźnik pliku. Te wersje programu [freopen _wfreopen](freopen-wfreopen.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ponowne przypisywanie wskaźnika pliku. Te wersje [freopen, _wfreopen](freopen-wfreopen.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,17 +65,17 @@ errno_t _wfreopen(
 
 ### <a name="parameters"></a>Parametry
 
-*pFile*<br/>
-Wskaźnik do wskaźnika pliku, który ma zostać dostarczony przez wywołanie.
+*p Plik*<br/>
+Wskaźnik do wskaźnika pliku, który ma być dostarczony przez wywołanie.
 
 *Ścieżka*<br/>
 Ścieżka nowego pliku.
 
-*wyst*<br/>
+*Tryb*<br/>
 Dozwolony typ dostępu.
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -80,54 +83,56 @@ Każda z tych funkcji zwraca kod błędu. Jeśli wystąpi błąd, oryginalny pli
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **freopen_s** zamyka plik aktualnie skojarzony ze *strumieniem* i ponownie przypisuje *strumień* do pliku określonego przez *ścieżkę*. **_wfreopen_s** to dwubajtowa wersja **_freopen_s**; argumenty *Path* i *mode* **_wfreopen_s** są ciągami znaków dwubajtowych. **_wfreopen_s** i **_freopen_s** zachowują się identycznie w inny sposób.
+Funkcja **freopen_s** zamyka plik aktualnie skojarzony ze *strumieniem* i ponownie przywdymuje *strumień* do pliku określonego przez *ścieżkę*. **_wfreopen_s** jest szerokoznakową wersją **_freopen_s**; argumenty *ścieżki* i *trybu* do **_wfreopen_s** są ciągami znaków o szerokich znakach. **_wfreopen_s** i **_freopen_s** zachowują się identycznie w przeciwnym razie.
 
-Jeśli którykolwiek z *pfile*, *Path*, *mode*lub *Stream* ma **wartość null**lub jeśli *ścieżka* jest pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
+Jeśli którykolwiek z *pFile*, *path*, *mode*lub *stream* mają **wartość NULL**lub jeśli *ścieżka* jest pustym ciągiem, te funkcje wywołują nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje **ustawiają errno** na **EINVAL** i zwracają **EINVAL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s** jest zwykle używany do przekierowywania wstępnie otwartych plików **stdin**, **stdout**i **stderr** do plików określonych przez użytkownika. Nowy plik skojarzony ze *strumieniem* jest otwarty z *trybem*, który jest ciągiem znaków określającym typ dostępu żądany dla pliku, w następujący sposób:
+**freopen_s** jest zazwyczaj używany do przekierowania wstępnie otwartych plików **stdin**, **stdout**i **stderr** do plików określonych przez użytkownika. Nowy plik skojarzony ze *strumieniem* jest otwierany w *trybie*, który jest ciągiem znaków określającym typ dostępu żądanego dla pliku, w następujący sposób:
 
-|*wyst*|Access|
+|*Tryb*|Dostęp|
 |-|-|
-| **®** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można go znaleźć, wywołanie **freopen_s** kończy się niepowodzeniem. |
-| **k** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
-| **"a"** | Otwiera do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF) przed zapisaniem nowych danych do pliku. Tworzy plik, jeśli nie istnieje. |
-| **"r +"** | Otwiera zarówno do odczytu, jak i do zapisu. Plik musi istnieć. |
-| **"w +"** | Otwiera pusty plik do odczytu i zapisu. Jeśli plik istnieje, jego zawartość zostaje zniszczona. |
-| **"a +"** | Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF przed zapisaniem nowych danych w pliku. Znacznik EOF nie zostanie przywrócony po zakończeniu zapisywania. Tworzy plik, jeśli nie istnieje. |
+| **"r"** | Otwiera się do czytania. Jeśli plik nie istnieje lub nie można go odnaleźć, **wywołanie freopen_s** nie powiedzie się. |
+| **"w"** | Otwiera pusty plik do zapisania. Jeśli dany plik istnieje, jego zawartość zostanie zniszczona. |
+| **"a"** | Otwiera się do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF) przed zapisaniem nowych danych w pliku. Tworzy plik, jeśli nie istnieje. |
+| **"r+"** | Otwiera się zarówno do czytania, jak i pisania. Plik musi istnieć. |
+| **"w+"** | Otwiera pusty plik do odczytu i zapisu. Jeśli plik istnieje, jego zawartość zostanie zniszczona. |
+| **"a+"** | Otwiera do czytania i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF przed zapisaniem nowych danych w pliku. Znacznik EOF nie zostanie przywrócony po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje. |
 
-Używaj typów **"w"** i **"w +"** z ostrożnością, ponieważ mogą one zniszczyć istniejące pliki.
+Użyj typów **"w"** i **"w+"** ostrożnie, ponieważ mogą one zniszczyć istniejące pliki.
 
-Gdy plik jest otwierany z typem dostępu **"a"** lub **"a +"** , wszystkie operacje zapisu odbywają się na końcu pliku. Mimo że można zmienić położenie wskaźnika pliku przy użyciu [fseek](fseek-fseeki64.md) lub [przewijania do tyłu](rewind.md), wskaźnik pliku jest zawsze przenoszony z powrotem na koniec pliku przed przeprowadzeniem operacji zapisu. W rezultacie istniejące dane nie mogą być zastępowane.
+Po otwarciu pliku z typem dostępu **"a"** lub **"a+",** wszystkie operacje zapisu odbywają się na końcu pliku. Mimo że wskaźnik pliku można zmienić za pomocą [fseek](fseek-fseeki64.md) lub [przewinąć](rewind.md)do tyłu, wskaźnik pliku jest zawsze przenoszony z powrotem na koniec pliku przed przeprowadzeniem jakiejkolwiek operacji zapisu. W związku z tym istniejące dane nie mogą być zastąpione.
 
-Tryb **"a"** nie usuwa znacznika EOF przed dołączeniem do pliku. Po wystąpieniu operacji dołączania polecenie typu MS-DOS wyświetla tylko dane do oryginalnego znacznika EOF, a nie wszelkie dane dołączone do pliku. Tryb **"a +"** powoduje usunięcie znacznika EOF przed dołączeniem do pliku. Po dołączeniu, polecenie MS-DOS TYPE wyświetla wszystkie dane w pliku. Tryb **"a +"** jest wymagany do dołączania do pliku strumienia, który jest zakończony przy użyciu znacznika z oznaczeniem EOF Ctrl + z.
+Tryb **"a"** nie usuwa znacznika EOF przed dołączeniem do pliku. Po dołączeniu polecenie MS-DOS TYPE pokazuje tylko dane do oryginalnego znacznika EOF, a nie wszystkie dane dołączone do pliku. Tryb **"a+"** usuwa znacznik EOF przed dołączeniem do pliku. Po dołączeniu polecenie MS-DOS TYPE pokazuje wszystkie dane w pliku. Tryb **"a+"** jest wymagany do dołączania do pliku strumienia, który jest zakończony znacznikiem CTRL+Z EOF.
 
-W przypadku określenia typu dostępu **"r +"** , **"z +"** lub **"a +** " są dozwolone operacje odczytu i zapisu (plik zostanie otwarty dla "Update"). Jednak podczas przełączania się między operacjami odczytu i zapisu musi istnieć interwencja [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)lub do [tyłu](rewind.md) . W razie potrzeby można określić bieżącą pozycję dla operacji [fsetpos](fsetpos.md) lub [fseek](fseek-fseeki64.md) . Oprócz powyższych wartości jeden z następujących znaków może być uwzględniony w ciągu *trybu* , aby określić tryb tłumaczenia dla nowych wierszy.
+Po określeniu typu dostępu **"r+",** **"w+"** lub **"a+"** dozwolone jest zarówno odczyt, jak i zapis (mówi się, że plik jest otwarty dla "aktualizacji"). Jednak podczas przełączania między odczytem a zapisem musi być interweniująca [operacja fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)lub [do tyłu.](rewind.md) W razie potrzeby można określić bieżącą pozycję dla operacji [fsetpos](fsetpos.md) lub [fseek.](fseek-fseeki64.md) Oprócz powyższych wartości, jeden z następujących znaków może być uwzględniony w ciągu *trybu,* aby określić tryb tłumaczenia dla nowych wierszy.
 
 |modyfikator *trybu*|Tryb tłumaczenia|
 |-|-|
-| **t** | Otwórz w trybie tekst (przetłumaczony). |
-| **b** | Otwórz w trybie binarnym (nieprzetłumaczony); Tłumaczenia obejmujące znaki powrotu karetki i wysuwu wiersza są pomijane. |
+| **t** | Otwórz w trybie tekstowym (przetłumaczonym). |
+| **B** | Otwarte w trybie binarnym (nieprzetłumaczonym); tłumaczenia obejmujące znaki powrotu karetki i wiersza są pomijane. |
 
-W trybie tekstu (tłumaczone) kombinacje wysuwu wiersza (CR-LF) są tłumaczone na znaki wysuwu wiersza (LF) na wejściu; Znaki LF są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W przypadku plików otwartych do odczytu lub zapisu z **"a +"** Biblioteka wykonawcza sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ użycie [fseek](fseek-fseeki64.md) i [ftell](ftell-ftelli64.md) do przenoszenia w pliku może spowodować, że [fseek](fseek-fseeki64.md) zachowywać się niewłaściwie blisko końca pliku. Opcja **t** jest rozszerzeniem firmy Microsoft, które nie powinno być używane w przypadku, gdy wymagana jest przenośność ANSI.
+W trybie tekstowym (przetłumaczonym) kombinacje kanału informacyjnego wiersza powrotu karetki (CR-LF) są tłumaczone na znaki jednowierszowego kanału informacyjnego (LF) na wejściu; Znaki LF są tłumaczone na kombinacje CR-LF na wyjściu. Ponadto CTRL+Z jest interpretowany jako znak końca pliku na danych wejściowych. W plikach otwartych do odczytu lub do zapisu i odczytu za pomocą **"a+"** biblioteka czasu wykonywania sprawdza, czy ctrl+ Z na końcu pliku i usuwa go, jeśli to możliwe. Dzieje się tak, ponieważ za pomocą [fseek](fseek-fseeki64.md) i [ftell](ftell-ftelli64.md) przenieść w pliku może spowodować [fseek](fseek-fseeki64.md) zachowywać się nieprawidłowo pod koniec pliku. T **t** Opcja jest rozszerzeniem firmy Microsoft, które nie powinno być używane tam, gdzie wymagana jest przenośność ANSI.
 
-Jeśli **t** lub **b** nie jest określony w *trybie*, domyślny tryb tłumaczenia jest definiowany przez zmienną globalną [_fmode](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest poprzedzony argumentem, funkcja kończy się niepowodzeniem i zwraca **wartość null**.
+Jeśli **t** lub **b** nie jest podany w *trybie,* domyślny tryb tłumaczenia jest zdefiniowany przez zmienną globalną [_fmode](../../c-runtime-library/fmode.md). Jeśli **argument jest** poprzedzony t lub **b,** funkcja kończy się niepowodzeniem i zwraca **wartość NULL**.
 
-Aby zapoznać się z omówieniem trybów tekstowych i binarnych, zobacz [plik tekstowy i tryb binarny we/wy](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Aby zapoznać się z omówieniami trybów tekstowych i binarnych, zobacz [We/Wy pliku w trybie tekstowym i binarnym](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**freopen_s**|\<stdio.h>|
-|**_wfreopen_s**|\<stdio. h > lub \<WCHAR. h >|
+|**_wfreopen_s**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane, zanim funkcje c w czasie wykonywania mogą z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -164,9 +169,9 @@ successfully reassigned
 This will go to the file 'freopen.out'
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [freopen, _wfreopen](freopen-wfreopen.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>

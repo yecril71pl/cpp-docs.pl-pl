@@ -1,12 +1,17 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - logb
 - _logb
 - _logbl
 - logbf
+- _logbf
 - logbl
+- _o__logb
+- _o_logb
+- _o_logbf
+- _o_logbl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +47,16 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341683"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
-Wyodrębnia wartość wykładnika argumentu zmiennoprzecinkowego.
+Wyodrębnia wykładnik wartości argumentu zmiennoprzecinkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,38 +86,40 @@ float _logbf(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**logb —** zwraca wartość wykładnika nieobciążonego *x* jako liczbę całkowitą ze znakiem reprezentowane jako wartość zmiennoprzecinkową.
+**logb** zwraca bezstronną wykładniką wartość *x* jako podpisaną liczbę całkowitą reprezentowaną jako wartość zmiennoprzecinkową.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **logb —** wyodrębniają wartość wykładniczą argumentu *x*zmiennoprzecinkowego, tak jakby *x* były reprezentowane z nieskończonym zakresem. Jeśli argument *x* jest nieznormalizowany, jest traktowany tak, jakby był znormalizowany.
+Funkcje **logb** wyodrębnić wartość wykładniczą argumentu zmiennoprzecinkowego *x*, tak jakby *x* były reprezentowane z nieskończonym zakresie. Jeśli argument *x* jest zdenormalizowane, jest traktowany tak, jakby zostały znormalizowane.
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **logb —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **logb —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **logb,** które przyjmują i zwracają **float** lub **długie** **podwójne** wartości. W programie C **logb** zawsze przyjmuje i zwraca **podwójny**plik .
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|Brak|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|± QNAN, IND|Brak|_DOMAIN|
+|± 0|ZERODYDYWAK|_SING|
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_logb**|\<float.h>|
-|**logb —** , **logbf —** , **logbl**, **_logbf**|\<math.h>|
+|**_logb**|\<> float.h|
+|**logb**, **logbf**, **logbl**, **_logbf**|\<> math.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

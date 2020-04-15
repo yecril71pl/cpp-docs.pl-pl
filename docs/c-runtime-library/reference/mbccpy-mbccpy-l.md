@@ -1,9 +1,11 @@
 ---
 title: _mbccpy, _mbccpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy
 - _mbccpy_l
+- _o__mbccpy
+- _o__mbccpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 98ae2eb75949077d02b98ba3aec75da534e93884
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 45f93e370e11cf38fc17da3557b21c636fcbc623
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341263"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
-Kopiuje znak wielobajtowy z jednego ciągu do innego ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
+Kopiuje znak wielobajtowy z jednego ciągu do drugiego ciągu. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,31 +70,33 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Kopiuj miejsce docelowe.
+*Dest*<br/>
+Skopiuj miejsce docelowe.
 
-*SRC*<br/>
+*src*<br/>
 Znak wielobajtowy do skopiowania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbccpy** kopiuje jeden znak wielobajtowy z *src* do miejsca *docelowego*.
+Funkcja **_mbccpy** kopiuje jeden znak wielobajtowy z *src* do *dest*.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli **_mbccpy** jest przekazywać wskaźnik o wartości null dla elementu *docelowego* lub *src*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL**.
+Ta funkcja sprawdza poprawność jego parametrów. Jeśli **_mbccpy** jest przekazywana wskaźnik null dla *dest* lub *src*, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL**.
 
-**_mbccpy** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_mbccpy_l** jest taka sama jak **_mbccpy** , z wyjątkiem tego, że **_mbccpy_l** korzysta z ustawień regionalnych przewidzianych dla wszelkich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_mbccpy** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych. **_mbccpy_l** jest identyczna **z _mbccpy** z tą różnicą, że **_mbccpy_l** używa ustawień regionalnych przekazanych dla zachowania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończenia o wartości null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień.
+**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończonego wartością null. Ciąg zakończony z wartością null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy**|Mapuje na makro lub funkcję wbudowaną|**_mbccpy**|Mapuje na makro lub funkcję wbudowaną|
-|**_tccpy_l**|n/d|**_mbccpy_l**|n/d|
+|**_tccpy**|Mapowanie do funkcji makra lub wbudowanej|**_mbccpy**|Mapowanie do funkcji makra lub wbudowanej|
+|**_tccpy_l**|Nie dotyczy|**_mbccpy_l**|Nie dotyczy|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -100,10 +105,10 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli **_mbccpy** jest prz
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

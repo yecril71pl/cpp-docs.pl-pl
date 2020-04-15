@@ -1,9 +1,11 @@
 ---
 title: ftell, _ftelli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ftelli64
 - ftell
+- _o__ftelli64
+- _o_ftell
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bfe79610161a7f4032517d9f7eaa0de50be18e50
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345613"
 ---
 # <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
@@ -54,33 +57,35 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Struktura **pliku** docelowego.
+*Strumienia*<br/>
+Docelowa struktura **PLIKU.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**ftell** i **_ftelli64** zwracają bieżące położenie pliku. Wartość zwrócona przez **ftell** i **_ftelli64** może nie odzwierciedlać fizycznego przesunięcia bajtu dla strumieni otwartych w trybie tekstowym, ponieważ tryb tekstowy powoduje translację kanału powrotu karetki. Użyj **ftell** z [fseek](fseek-fseeki64.md) lub **_ftelli64** z [_fseeki64](fseek-fseeki64.md) , aby powrócić do lokalizacji plików prawidłowo. W przypadku błędu, **ftell** i **_ftelli64** wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1L i ustawiają **errno** na jedną z dwóch stałych, zdefiniowanych w errno. C. Stała **EBADF** oznacza, że argument *strumienia* nie jest prawidłową wartością wskaźnika pliku lub nie odwołuje się do otwartego pliku. **EINVAL** oznacza, że do funkcji przekazano nieprawidłowy argument *strumienia* . Na urządzeniach bez możliwości wyszukiwania (takich jak terminale i drukarki) lub gdy *strumień* nie odwołuje się do otwartego pliku, wartość zwracana jest niezdefiniowana.
+**ftell** i **_ftelli64** zwracają bieżącą pozycję pliku. Wartość zwracana przez **ftell** i **_ftelli64** może nie odzwierciedlać fizycznego przesunięcia bajtów dla strumieni otwieranych w trybie tekstowym, ponieważ tryb tekstowy powoduje translację kanału informacyjnego wiersza powrotu karetki. Użyj **ftell** z [fseek](fseek-fseeki64.md) lub **_ftelli64** z [_fseeki64,](fseek-fseeki64.md) aby poprawnie powrócić do lokalizacji plików. W przypadku błędu **ftell** i **_ftelli64** wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje zwracają -1L i ustawić **errno** do jednej z dwóch stałych, zdefiniowane w ERRNO. H. Stała **EBADF** oznacza, że argument *strumienia* nie jest prawidłową wartością wskaźnika pliku lub nie odwołuje się do otwartego pliku. **EINVAL** oznacza nieprawidłowy argument *strumienia* został przekazany do funkcji. Na urządzeniach, których nie można szukać (takich jak terminale i drukarki) lub gdy *strumień* nie odwołuje się do otwartego pliku, zwracana wartość jest niezdefiniowana.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów powrotu.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **ftell** i **_ftelli64** pobierają bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzoną ze *strumieniem*. Pozycja jest wyrażona jako przesunięcie względem początku strumienia.
+Funkcje **ftell** i **_ftelli64** pobierają bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzonego ze *strumieniem*. Położenie jest wyrażone jako przesunięcie względem początku strumienia.
 
-Należy pamiętać, że gdy plik jest otwierany do dołączania danych, bieżąca pozycja w pliku jest określana przez ostatnią operację we/wy, a nie przez miejsce wystąpienia następnego zapisu. Na przykład, jeśli plik jest otwarty do dołączenia, a Ostatnia operacja była odczytana, pozycja w pliku to punkt, w którym rozpocznie się następna operacja odczytu, a nie w miejscu, w którym rozpocznie się następny zapis. (Po otwarciu pliku do dołączenia, pozycja pliku jest przenoszona na koniec pliku przed jakąkolwiek operacją zapisu). Jeśli nie wykonano jeszcze operacji we/wy na pliku otwartym do dołączenia, pozycja w pliku jest początkiem pliku.
+Należy zauważyć, że po otwarciu pliku do dołączania danych bieżąca pozycja pliku jest określana przez ostatnią operację we/wy, a nie przez to, gdzie nastąpi następny zapis. Na przykład jeśli plik jest otwarty dla dodatku, a ostatnia operacja była odczytywana, pozycja pliku jest punktem, w którym rozpocznie się następna operacja odczytu, a nie miejscem rozpoczęcia następnego zapisu. (Po otwarciu pliku do dołączenia pozycja pliku jest przenoszona na koniec pliku przed jakąkolwiek operacją zapisu). Jeśli w pliku otwartym do dołączenia nie wystąpiła żadna operacja we/wy, pozycja pliku jest początkiem pliku.
 
-W trybie tekstowym klawisze CTRL + Z są interpretowane jako znak końca pliku na wejściu. W plikach otwartych do odczytu/zapisu, **fopen** i wszystkie powiązane procedury sprawdź, czy Ctrl + Z na końcu pliku i usuń go, jeśli to możliwe. Dzieje się tak, ponieważ przy użyciu kombinacji **ftell** i [fseek](fseek-fseeki64.md) lub **_ftelli64** i [_fseeki64](fseek-fseeki64.md)do przenoszenia w pliku, który kończy się na Ctrl + z, może spowodować, że **ftell** lub **_ftelli64** zachowuje się nieprawidłowo blisko końca rozszerzeniem.
+W trybie tekstowym ctrl+Z jest interpretowany jako znak końca pliku na danych wejściowych. W plikach otwartych do odczytu / zapisu, **fopen** i wszystkie powiązane procedury sprawdzić CTRL + Z na końcu pliku i usunąć go, jeśli to możliwe. Odbywa się to, ponieważ za pomocą kombinacji **ftell** i [fseek](fseek-fseeki64.md) lub **_ftelli64** i [_fseeki64](fseek-fseeki64.md), aby przejść w pliku, który kończy się CTRL + Z może spowodować **ftell** lub **_ftelli64** zachowywać się nieprawidłowo pod koniec pliku.
 
-Ta funkcja blokuje wątek wywołujący podczas wykonywania i w związku z tym jest bezpieczny wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_ftell_nolock**.
+Ta funkcja blokuje wątku wywołującego podczas wykonywania i dlatego jest bezpieczne dla wątków. Aby uzyskać wersję niezablokującą, zobacz **_ftell_nolock**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
 |--------------|---------------------|----------------------|
-|**ftell**|\<stdio.h>|\<errno.h>|
-|**_ftelli64**|\<stdio.h>|\<errno.h>|
+|**ftell (ftell)**|\<stdio.h>|\<> errno.h|
+|**_ftelli64**|\<stdio.h>|\<> errno.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -116,9 +121,9 @@ int main( void )
 Position after trying to read 100 bytes: 100
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fgetpos](fgetpos.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
+- _o_isblank
+- _o_iswblank
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +33,16 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 736a0791f1e5ee4b11e61164861cc6dc0c7a9c87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954519"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343891"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
-Określa, czy liczba całkowita reprezentuje znak pusty.
+Określa, czy liczba całkowita reprezentuje pusty znak.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,40 +65,44 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Liczba całkowita do przetestowania.
+*C*<br/>
+Całkowita ć do przetestowania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku spacji lub tabulatora poziomego lub jest jednym z zestawów znaków specyficznych dla ustawień regionalnych, które są używane do oddzielania słów w wierszu tekstu. Funkcja **ISBLANK** zwraca wartość różną od zera, jeśli *c* jest znakiem spacji (0x20) lub tabulatorem poziomym (0x09). Wynik warunku testowego dla funkcji **ISBLANK** zależy od ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że używają zamiast nich ustawień regionalnych, które zostały przesłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Każda z tych procedur zwraca wartość niezerową, jeśli *c* jest określoną reprezentacją spacji lub poziomego znaku karty lub jest jednym z zestawu znaków specyficznych dla ustawień regionalnych, które są używane do oddzielania wyrazów w wierszu tekstu. **isblank** zwraca wartość niezerową, jeśli *c* jest znakiem spacji (0x20) lub znakiem zakładki poziomej (0x09). Wynik stanu badania dla funkcji **isblank** zależy od **LC_CTYPE** ustawienie kategorii ustawień regionalnych; aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l,** używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiks są identyczne, z tą różnicą, że używają ustawień regionalnych, które są przekazywane zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**iswblank** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do obszaru standardowego lub tabulatora poziomego.
+**iswblank** zwraca wartość różną od zera, jeśli *c* jest szerokim znakiem odpowiadającym standardowemu spacji lub poziomemu znakowi karty.
 
-Zachowanie funkcji **ISBLANK** i **_isblank_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
+Zachowanie **isblank** i **_isblank_l** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy biblioteka CRT debugowania jest używana i *c* nie jest jedną z tych wartości, funkcje podnieść potwierdzenia.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank (iswblank)**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**isblank**|\<ctype.h>|
-|**iswblank**|\<CType. h > lub \<WCHAR. h >|
+|**iswblank (iswblank)**|\<ctype.h> lub \<wchar.h>|
 |**_isblank_l**|\<ctype.h>|
-|**_iswblank_l**|\<CType. h > lub \<WCHAR. h >|
+|**_iswblank_l**|\<ctype.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

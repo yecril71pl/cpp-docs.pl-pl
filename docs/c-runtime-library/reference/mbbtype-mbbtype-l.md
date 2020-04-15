@@ -1,9 +1,11 @@
 ---
 title: _mbbtype, _mbbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtype
 - _mbbtype_l
+- _o__mbbtype
+- _o__mbbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: ba4311921a0924d3f447feb1929a81ae1d816604
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e2e818ed70ec393e4f81008f76ca9efe9cfa7e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341408"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
-Zwraca typ Byte na podstawie poprzedniego bajtu.
+Zwraca typ bajtów na podstawie poprzedniego bajtu.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,34 +64,36 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*C*<br/>
 Znak do przetestowania.
 
-*type*<br/>
+*Typu*<br/>
 Typ bajtu do przetestowania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbbtype** zwraca typ Byte w ciągu. Ta decyzja jest zależna od kontekstu, określona przez wartość *typu*, która zapewnia warunek testu sterowania. *Typ* jest typem poprzedniego bajtu w ciągu. Stałe manifestu w poniższej tabeli są zdefiniowane w Mbctype. h.
+**_mbbtype** zwraca typ bajtu w ciągu. Ta decyzja jest kontekstowa, określona przez wartość *typu*, która zapewnia warunek testu kontrolnego. *jest* typem poprzedniego bajtu w ciągu. Stałe manifestu w poniższej tabeli są zdefiniowane w Mbctype.h.
 
-|Wartość *typu*|**_mbbtype** testy dla|Wartość zwracana|*c*|
+|Wartość *typu*|**_mbbtype** testy|Wartość zwracana|*C*|
 |---------------------|--------------------------|------------------|---------|
-|Dowolna wartość z wyjątkiem 1|Prawidłowy pojedynczy bajt lub bajt wiodący|**_MBC_SINGLE** 2,0|Pojedynczy bajt (0x20-0x7E, 0xA1-0xDF)|
-|Dowolna wartość z wyjątkiem 1|Prawidłowy pojedynczy bajt lub bajt wiodący|**_MBC_LEAD** JEDNO|Bajt wiodący znaku wielobajtowego (0x81-0x9F, wartość 0xE0-0xFC)|
-|Dowolna wartość z wyjątkiem 1|Prawidłowy bajt jednobajtowy lub wiodący|**_MBC_ILLEGAL**<br /><br /> ( -1)|Nieprawidłowy znak (dowolna wartość z wyjątkiem 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, wartość 0xE0-0xFC|
-|1|Prawidłowy bajt końcowy|**_MBC_TRAIL** DWÓCH|Bajt końcowy znaku wielobajtowego (0x40-0x7E, 0x80-0xFC)|
-|1|Prawidłowy bajt końcowy|**_MBC_ILLEGAL**<br /><br /> ( -1)|Nieprawidłowy znak (dowolna wartość z wyjątkiem 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, wartość 0xE0-0xFC|
+|Dowolna wartość z wyjątkiem 1|Prawidłowy pojedynczy bajt lub bajt potencjalnego klienta|**_MBC_SINGLE** (0)|Pojedynczy bajt (0x20 - 0x7E, 0xA1 - 0xDF)|
+|Dowolna wartość z wyjątkiem 1|Prawidłowy pojedynczy bajt lub bajt potencjalnego klienta|**_MBC_LEAD** (1)|Bajt wiodący znaku wielobajtowego (0x81 - 0x9F, 0xE0 - 0xFC)|
+|Dowolna wartość z wyjątkiem 1|Prawidłowy bajt jedno bajtowy lub wiodący|**_MBC_ILLEGAL**<br /><br /> ( -1)|Nieprawidłowy znak (dowolna wartość z wyjątkiem 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|1|Prawidłowy bajt szlaku|**_MBC_TRAIL** (2)|Bajt spływowy znaku wielobajtowego (0x40 - 0x7E, 0x80 - 0xFC)|
+|1|Prawidłowy bajt szlaku|**_MBC_ILLEGAL**<br /><br /> ( -1)|Nieprawidłowy znak (dowolna wartość z wyjątkiem 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbbtype** określa typ bajtu w znaku wielobajtowym. Jeśli wartość *typu* jest dowolnej wartości z wyjątkiem 1, **_mbbtype** testów dla prawidłowego bajtu jednobajtowego lub potencjalnego klienta znaku wielobajtowego. Jeśli wartość *typu* to 1, **_mbbtype** testuje prawidłowy bajt końcowy znaku wielobajtowego.
+Funkcja **_mbbtype** określa typ bajtu w znaku wielobajtowym. Jeśli wartość *typu* jest dowolną wartością z wyjątkiem 1, **_mbbtype** testy dla prawidłowego bajtu jednobajtowego lub wiodącego znaku wielobajtowego. Jeśli wartość *typu* wynosi 1, **_mbbtype** testy prawidłowego bajtu szlaku znaku wielobajtowego.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja **_mbbtype** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbbtype_l** jest identyczna z tą różnicą, że używa zamiast tego parametru ustawień regionalnych, który został przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. **Wersja _mbbtype** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; _mbbtype_l **_mbbtype_l** wersja jest identyczna, z tą różnicą, że używa parametru ustawień regionalnych, który jest przekazywany zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-We wcześniejszych wersjach **_mbbtype** miał nazwę **chkctype**. W przypadku nowego kodu zamiast tego należy użyć **_mbbtype** .
+We wcześniejszych wersjach **_mbbtype** został nazwany **chkctype**. W przypadku nowego kodu należy użyć **_mbbtype.**
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -99,8 +104,8 @@ We wcześniejszych wersjach **_mbbtype** miał nazwę **chkctype**. W przypadku 
 
 \*Dla definicji stałych manifestu, które są używane jako wartości zwracane.
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
