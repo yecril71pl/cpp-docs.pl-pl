@@ -4,89 +4,89 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377248"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 
-W większości przeglądarek mają możliwość zbadania źródło HTML strony, które można przeglądać. Podczas wyświetlania źródła, zobaczysz liczbę tagów (Hypertext markup language) HTML są ujęte w nawiasy (<>) oraz z tekstem.
+Większość przeglądarek ma możliwość badania źródła HTML przeglądanych stron. Podczas przeglądania źródła zostanie wyświetlonych kilka znaczników HTML (Język znaczników hipertekstowych), otoczonych nawiasami kątowymi (<>), przeplatanych tekstem.
 
-Poniższe kroki kompilacji prostą stronę sieci Web za pomocą tagów HTML. W tych krokach będzie wpisz zwykłego tekstu do pliku w Notatniku, wprowadzić kilka zmian, Zapisz plik i załadować ponownie stronę w przeglądarce, aby zobaczyć zmiany.
+Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W tych krokach wpiszesz zwykły tekst do pliku w Notatniku, dokonasz kilku zmian, zapisz plik i ponownie załadujesz stronę w przeglądarce, aby zobaczyć zmiany.
 
 #### <a name="to-create-an-html-file"></a>Aby utworzyć plik HTML
 
-1. Otwórz Notatnik lub dowolnym edytorze zwykły tekst.
+1. Otwórz Notatnik lub dowolny edytor zwykłego tekstu.
 
-1. Z **pliku** menu, wybierz **New**.
+1. Z menu **Plik** wybierz polecenie **Nowy**.
 
-1. Wpisz następujące polecenia:
+1. Wpisz następujące wiersze:
 
-```
-<HTML>
-<HEAD>
-<TITLE>Top HTML Tags</TITLE>
-</HEAD>
-</HTML>
-```
+    ```html
+    <HTML>
+    <HEAD>
+    <TITLE>Top HTML Tags</TITLE>
+    </HEAD>
+    </HTML>
+    ```
 
-1. Z **pliku** menu, wybierz **Zapisz**, a następnie zapisz plik jako c:\webpages\First.htm. Zostaw plik otwarty w edytorze.
+1. Z menu **Plik** wybierz polecenie **Zapisz**i zapisz plik jako c:\webpages\First.htm. Pozostaw plik otwarty w edytorze.
 
-1. Przełącznik do przeglądarki i z **pliku** menu, wybierz **Otwórz**, lub typu *file://C:/webpages/first.htm* w polu edycji adresu URL w przeglądarce. Powinien zostać wyświetlony pustą stronę z opisem okna "Najpopularniejsze tagi HTML".
+1. Przełącz się do przeglądarki i z menu **Plik** wybierz polecenie **Otwórz**lub *wpisz file://C:/webpages/first.htm* w polu edycji adresu URL przeglądarki. Powinna zostać wyświetlona pusta strona z podpisem okna "Najlepsze tagi HTML".
 
-   Zwróć uwagę, znaczniki są skojarzone i znajdują się w nawiasy ostre. Tagi nie jest rozróżniana wielkość liter, ale wielkość liter jest często używana, aby wyróżnić tagi.
+   Zwróć uwagę, że znaczniki są sparowane i są zawarte w nawiasach kątowych. W tagach nie rozróżnia się wielkość liter, ale wielkość liter jest często używana do wyróżniania znaczników.
 
-   Tag \<HTML > uruchamia dokument i tagu \<polecenia > kończy go. Kończenie tagi (nie zawsze wymagane) są takie same jak tag początkowy, ale mają ukośnika (/) przed znacznikiem. Powinna istnieć bez spacji między nawiasu ostrego (<) a początkiem tag.
+   Tag \<HTML> uruchamia dokument, a tag \</HTML> go kończy. Znaczniki końcowe (nie zawsze wymagane) są takie same jak znacznik początkowy, ale mają ukośnik do przodu (/) przed tagiem. Między nawiasem kątowym (<) a początkiem znacznika nie powinno być spacji.
 
-1. Przełącz do Notatnika i po  \< /HEAD > wiersz, wpisz:
+1. Przełącz się z powrotem \<do Notatnika i po wierszu /HEAD> wpisz:
 
-```
-<BODY>
-    HTML is swell.
-    Life is good.
-</BODY>
-```
+    ```html
+    <BODY>
+        HTML is swell.
+        Life is good.
+    </BODY>
+    ```
 
-1. Z **pliku** menu, wybierz **Zapisz**.
+1. Z menu **Plik** wybierz polecenie **Zapisz**.
 
-1. Przejdź z powrotem do przeglądarki, a następnie odśwież stronę.
+1. Przełącz się z powrotem do przeglądarki i odśwież stronę.
 
-   Wyrazy pojawi się w klienckim obszarze okna przeglądarki. Należy zauważyć, że powrót karetki jest ignorowana. Jeśli chcesz mieć podział wiersza, należy uwzględnić `<BR>` tagu po pierwszym wierszu.
+   Słowa pojawią się w obszarze klienta okna przeglądarki. Należy zauważyć, że zwrot karetki jest ignorowany. Jeśli chcesz mieć podział wiersza, musisz `<BR>` dołączyć znacznik po pierwszym wierszu.
 
-   Aby uzyskać instrukcje, które należy wykonać, wstawianie tekstu na dowolnym \<treści > i  \< /BODY > do dodania do treści dokumentu.
+   Aby uzyskać wszystkie następujące kroki, wstaw tekst w dowolnym miejscu między \<> i \</BODY>, aby dodać go do treści dokumentu.
 
-9. Dodaj nagłówek:
+1. Dodaj nagłówek:
 
-```
-<H3>Here's the big picture</H3>
-```
+    ```html
+    <H3>Here's the big picture</H3>
+    ```
 
-10. Dodawanie obrazu, przy użyciu pliku GIF, zapisana w tym samym katalogu co strona:
+1. Dodawanie obrazu przy użyciu pliku gif zapisanego w tym samym katalogu co strona:
 
-```
-<IMG src="yourfile.gif">
-```
+    ```html
+    <IMG src="yourfile.gif">
+    ```
 
-11. Dodaj listę:
+1. Dodaj listę:
 
-```
-<UL>Make me an unordered list.
-<LI>One programmer</LI>
-<LI>Ten SDKs</LI>
-<LI>Great Internet Apps</LI>
-</UL>
-```
+    ```html
+    <UL>Make me an unordered list.
+    <LI>One programmer</LI>
+    <LI>Ten SDKs</LI>
+    <LI>Great Internet Apps</LI>
+    </UL>
+    ```
 
-12. Zamiast tego numer listy, należy użyć sparowane \<OL > i \</OL > tagi zamiast \<UL > i \</UL > tagów.
+1. Zamiast znaczników> UL i \< \</UL> \<należy użyć sparowanych znaczników \<OL> i /OL>.
 
-Która powinna rozpocząć pracę. Jeśli wspaniałych funkcji jest wyświetlane na stronie sieci Web, można znaleźć się, jak został on utworzony przez zbadanie źródła HTML. Edytorów HTML, takich jak Microsoft FrontPage może służyć do tworzenia stron zarówno proste, jak i zaawansowanych.
+To powinno zacząć. Jeśli na stronie sieci Web jest widoczna wspaniała funkcja, możesz dowiedzieć się, jak została utworzona, sprawdzając źródło HTML. Edytory HTML, takie jak Microsoft Front Page, mogą być używane do tworzenia zarówno stron prostych, jak i zaawansowanych.
 
-Poniżej przedstawiono całą źródła HTML w przypadku pliku, który został możesz tworzyć:
+Oto całe źródło HTML dla pliku, który zostałeś budulcem:
 
-```
+```html
 <HTML>
 <HEAD>
 <TITLE>Top HTML Tags</TITLE>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Aby uzyskać pełny opis znaczniki, atrybuty i rozszerzenia Zobacz specyfikację znaczników języka HTML (Hypertext):
+Pełny opis znaczników, atrybutów i rozszerzeń można znaleźć w specyfikacji języka HTML (Hypertext Markup Language):
 
-[Najnowszej opublikowanej wersji HTML](https://www.w3.org/TR/html/) na W3C.org.
+[Najnowsza opublikowana wersja HTML](https://www.w3.org/TR/html/) w W3C.org.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)

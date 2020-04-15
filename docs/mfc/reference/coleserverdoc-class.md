@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: eec94a32fa0963d4cf2eccae0fb9e2423e75ffdc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376129"
 ---
 # <a name="coleserverdoc-class"></a>Klasa COleServerDoc
 
@@ -99,96 +99,96 @@ Klasa podstawowa dla dokumentów serwera OLE.
 class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COleServerDoc::COleServerDoc](#coleserverdoc)|Konstruuje obiekt `COleServerDoc`.|
+|[COleServerDoc::COleServerDoc](#coleserverdoc)|Konstruuje `COleServerDoc` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Aktywuje skojarzony dokument DocObject.|
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Aktywuje dokument do edycji w miejscu.|
-|[COleServerDoc::D eactivateAndUndo](#deactivateandundo)|Dezaktywuje interfejs użytkownika serwera.|
-|[COleServerDoc::D iscardUndoState](#discardundostate)|Odrzuca informacje o stanie cofnięcia.|
-|[COleServerDoc::GetClientSite](#getclientsite)|Pobiera wskaźnik do podstawowego interfejsu `IOleClientSite`.|
+|[COleServerDoc::DeaktywowaćAndUndo](#deactivateandundo)|Dezaktywuje interfejs użytkownika serwera.|
+|[COleServerDoc::DiscardUndoState](#discardundostate)|Odrzuca informacje o stanie cofania.|
+|[COleServerDoc::GetClientSite](#getclientsite)|Pobiera wskaźnik do interfejsu `IOleClientSite` źródłowego.|
 |[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|Zwraca wskaźnik do elementu reprezentującego cały dokument.|
-|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Zwraca bieżący prostokąt wycinka do edycji w miejscu.|
-|[COleServerDoc::GetItemPosition](#getitemposition)|Zwraca bieżący prostokąt położenia względem obszaru klienckiego aplikacji kontenera do edycji w miejscu.|
-|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Zwraca współczynnik powiększenia (w pikselach).|
+|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Zwraca bieżący prostokąt przycinania do edycji w miejscu.|
+|[COleServerDoc::GetItemPosition](#getitemposition)|Zwraca bieżący prostokąt położenia, względem obszaru klienta aplikacji kontenera, do edycji w miejscu.|
+|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Zwraca współczynnik powiększenia w pikselach.|
 |[COleServerDoc::IsDocObject](#isdocobject)|Określa, czy dokument jest DocObject.|
-|[COleServerDoc:: isembedded](#isembedded)|Wskazuje, czy dokument jest osadzony w dokumencie kontenera lub jest uruchomiony autonomicznie.|
-|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Zwraca wartość PRAWDA, jeśli element jest aktualnie aktywowany.|
-|[COleServerDoc::NotifyChanged](#notifychanged)|Powiadamia kontenery, że dokument został zmieniony przez użytkownika.|
+|[COleServerDoc::IsEmbedded](#isembedded)|Wskazuje, czy dokument jest osadzony w dokumencie kontenera, czy jest uruchomiony w trybie autonomicznym.|
+|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Zwraca wartość PRAWDA, jeśli element jest aktualnie aktywowany na swoim miejscu.|
+|[COleServerDoc::NotifyZmieniony](#notifychanged)|Powiadamia kontenery, że użytkownik zmienił dokument.|
 |[COleServerDoc::NotifyClosed](#notifyclosed)|Powiadamia kontenery, że użytkownik zamknął dokument.|
 |[COleServerDoc::NotifyRename](#notifyrename)|Powiadamia kontenery, że użytkownik zmienił nazwę dokumentu.|
 |[COleServerDoc::NotifySaved](#notifysaved)|Powiadamia kontenery, że użytkownik zapisał dokument.|
-|[COleServerDoc:: OnDeactivate](#ondeactivate)|Wywoływane przez platformę, gdy użytkownik dezaktywuje element, który został aktywowany.|
-|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Wywoływane przez platformę, aby zniszczyć kontrolki i inne elementy interfejsu użytkownika utworzone w ramach aktywacji w miejscu.|
-|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Wywoływane przez platformę, gdy okno ramki dokumentu kontenera jest aktywowane lub dezaktywowane.|
-|[COleServerDoc::OnResizeBorder](#onresizeborder)|Wywoływane przez platformę, gdy zmieniany jest rozmiar okna ramki aplikacji kontenera lub okna dokumentu.|
-|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Wywoływane przez platformę, by pokazać lub ukryć paski kontroli do edycji w miejscu.|
-|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Wywoływane przez platformę, gdy zostanie zapisany dokument serwera, który jest elementem osadzonym, co umożliwia zaktualizowanie kopii elementu kontenera.|
+|[COleServerDoc::OnDeaktywacji](#ondeactivate)|Wywoływane przez strukturę, gdy użytkownik dezaktywuje element, który został aktywowany w miejscu.|
+|[COleServerDoc::OnDeactivateui](#ondeactivateui)|Wywoływana przez strukturę do niszczenia formantów i innych elementów interfejsu użytkownika utworzonych do aktywacji w miejscu.|
+|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Wywoływana przez strukturę, gdy okno ramki dokumentu kontenera jest aktywowany lub dezaktywowany.|
+|[COleServerDoc::OnResizeBorder](#onresizeborder)|Wywoływana przez strukturę, gdy rozmiar okna ramki lub okna dokumentu aplikacji kontenera jest zmieniany.|
+|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Wywoływana przez strukturę do pokazywania lub ukrywania pasków sterowania do edycji w miejscu.|
+|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Wywoływane przez platformę, gdy dokument serwera, który jest elementem osadzonym jest zapisywany, aktualizowanie kopii kontenera elementu.|
 |[COleServerDoc::RequestPositionChange](#requestpositionchange)|Zmienia położenie ramki edycji w miejscu.|
-|[COleServerDoc::SaveEmbedding](#saveembedding)|Instruuje aplikację kontenera, aby zapisywał dokument.|
+|[COleServerDoc::SaveEmbedding](#saveembedding)|Informuje aplikację kontenera, aby zapisać dokument.|
 |[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|Przewija dokument kontenera.|
-|[COleServerDoc::UpdateAllItems](#updateallitems)|Powiadamia kontenery, że dokument został zmieniony przez użytkownika.|
+|[COleServerDoc::UpdateAllItems](#updateallitems)|Powiadamia kontenery, że użytkownik zmienił dokument.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Wywoływane przez platformę, by utworzyć okno ramowe do edycji w miejscu.|
-|[COleServerDoc::D estroyInPlaceFrame](#destroyinplaceframe)|Wywoływane przez platformę, aby zniszczyć okno ramowe do edycji w miejscu.|
-|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Przesłoń tę funkcję, aby utworzyć nowy obiekt `CDocObjectServer` i wskazać, że ten dokument jest kontenerem DocObject.|
-|[COleServerDoc:: OnClose](#onclose)|Wywoływane przez platformę, gdy kontener jest zażądał zamknięcia dokumentu.|
+|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Wywoływana przez strukturę, aby utworzyć okno ramki do edycji w miejscu.|
+|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Wywoływana przez strukturę, aby zniszczyć okno ramki do edycji w miejscu.|
+|[COleServerDoc::Serwer GetDocObjectServer](#getdocobjectserver)|Zastąpuj tę funkcję, aby utworzyć nowy `CDocObjectServer` obiekt i wskazać, że ten dokument jest kontenerem DocObject.|
+|[COleServerDoc::OnKrówka](#onclose)|Wywoływane przez strukturę, gdy kontener żąda zamknięcia dokumentu.|
 |[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Wykonuje określone polecenie lub wyświetla pomoc dla polecenia.|
-|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Wywoływane przez platformę, gdy okno ramki kontenera jest aktywowane lub dezaktywowane.|
-|[COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem)|Wywołuje się, by uzyskać `COleServerItem`, która reprezentuje cały dokument; służy do pobierania elementu osadzonego. Wymagana implementacja.|
-|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Wywoływane przez platformę, aby cofnąć zmiany wprowadzone podczas edycji w miejscu.|
-|[COleServerDoc::OnSetHostNames](#onsethostnames)|Wywoływane przez platformę, gdy kontener ustawia tytuł okna dla osadzonego obiektu.|
-|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Wywoływane przez platformę w celu umieszczenia okna ramki edycji w miejscu w oknie aplikacji kontenera.|
-|[COleServerDoc::OnShowDocument](#onshowdocument)|Wywoływane przez platformę w celu pokazania lub ukrycia dokumentu.|
+|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Wywoływana przez strukturę, gdy okno ramki kontenera jest aktywowany lub dezaktywowany.|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Wywołany, `COleServerItem` aby uzyskać, który reprezentuje cały dokument; używane do uzyskania elementu osadzonego. Wymagana implementacja.|
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Wywoływana przez strukturę, aby cofnąć zmiany wprowadzone podczas edycji w miejscu.|
+|[COleServerDoc::OnSetHostNames](#onsethostnames)|Wywoływane przez strukturę, gdy kontener ustawia tytuł okna dla obiektu osadzonego.|
+|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Wywoływana przez strukturę do umieszczania okna ramki edycji w miejscu w oknie aplikacji kontenera.|
+|[COleServerDoc::OnShowDocument](#onshowdocument)|Wywoływana przez strukturę, aby pokazać lub ukryć dokument.|
 
 ## <a name="remarks"></a>Uwagi
 
-Dokument serwera może zawierać obiekty [COleServerItem](../../mfc/reference/coleserveritem-class.md) reprezentujące interfejs serwera do elementów osadzonych lub połączonych. Gdy aplikacja serwera jest uruchamiana przez kontener w celu edycji elementu osadzonego, element jest ładowany jako własny dokument serwera; Obiekt `COleServerDoc` zawiera tylko jeden obiekt `COleServerItem`, składający się z całego dokumentu. Gdy aplikacja serwera jest uruchamiana przez kontener w celu edycji elementu połączonego, istniejący dokument jest ładowany z dysku; część zawartości dokumentu zostanie wyróżniona w celu wskazania połączonego elementu.
+Dokument serwera może zawierać obiekty [COleServerItem,](../../mfc/reference/coleserveritem-class.md) które reprezentują interfejs serwera do elementów osadzonych lub połączonych. Gdy aplikacja serwera jest uruchamiana przez kontener do edycji elementu osadzonego, element jest ładowany jako własny dokument serwera; `COleServerDoc` obiekt zawiera tylko `COleServerItem` jeden obiekt, składający się z całego dokumentu. Gdy aplikacja serwera jest uruchamiana przez kontener w celu edycji elementu połączonego, istniejący dokument jest ładowany z dysku; część zawartości dokumentu jest podświetlona, aby wskazać połączony element.
 
-obiekty `COleServerDoc` mogą również zawierać elementy klasy [COleClientItem](../../mfc/reference/coleclientitem-class.md) . Dzięki temu można tworzyć aplikacje kontenerów serwerów. Struktura zawiera funkcje, które umożliwiają poprawne przechowywanie `COleClientItem` elementów podczas obsługi obiektów `COleServerItem`.
+`COleServerDoc`obiekty mogą również zawierać elementy [COleClientItem](../../mfc/reference/coleclientitem-class.md) klasy. Dzięki temu można tworzyć aplikacje serwera kontenera. Struktura zapewnia funkcje, aby `COleClientItem` prawidłowo przechowywać `COleServerItem` elementy podczas obsługi obiektów.
 
-Jeśli aplikacja serwera nie obsługuje linków, dokument serwera zawsze będzie zawierać tylko jeden element serwera, który reprezentuje cały osadzony obiekt jako dokument. Jeśli aplikacja serwera obsługuje linki, należy utworzyć element na serwerze za każdym razem, gdy wybór zostanie skopiowany do Schowka.
+Jeśli aplikacja serwera nie obsługuje łączy, dokument serwera zawsze będzie zawierał tylko jeden element serwera, który reprezentuje cały osadzony obiekt jako dokument. Jeśli aplikacja serwera obsługuje łącza, musi utworzyć element serwera za każdym razem, gdy zaznaczenie jest kopiowane do Schowka.
 
-Aby użyć `COleServerDoc`, należy utworzyć klasy z niej i zaimplementować funkcję członkowską [OnGetEmbeddedItem](#ongetembeddeditem) , która umożliwia serwerowi obsługę elementów osadzonych. Utwórz klasę z `COleServerItem`, aby zaimplementować elementy w dokumentach i zwrócić obiekty tej klasy z `OnGetEmbeddedItem`.
+Aby `COleServerDoc`użyć , wyprowadzić klasę z niego i zaimplementować [OnGetEmbeddedItem funkcji członkowskiej,](#ongetembeddeditem) która umożliwia serwerowi do obsługi elementów osadzonych. Wywodź `COleServerItem` klasę, aby zaimplementować elementy w `OnGetEmbeddedItem`dokumentach i zwróć obiekty tej klasy z .
 
-Aby obsłużyć połączone elementy, `COleServerDoc` udostępnia funkcję elementu członkowskiego [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) . Możesz użyć domyślnej implementacji lub zastąpić ją, jeśli masz własny sposób zarządzania elementami dokumentu.
+Aby obsługiwać `COleServerDoc` połączone elementy, udostępnia [ongetlinkeditem funkcji członkowskiej.](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) Można użyć domyślnej implementacji lub zastąpić go, jeśli masz własny sposób zarządzania elementami dokumentu.
 
-Dla każdego typu dokumentu serwera obsługiwanego przez aplikację wymagana jest jedna klasa pochodna `COleServerDoc`. Na przykład jeśli aplikacja serwera obsługuje arkusze kalkulacyjne i wykresy, potrzebne są dwie klasy pochodne `COleServerDoc`.
+Potrzebujesz jednej `COleServerDoc`klasy pochodnej dla każdego typu dokumentu serwera, który obsługuje aplikacja. Na przykład jeśli aplikacja serwera obsługuje arkusze i wykresy, potrzebne są dwie `COleServerDoc`klasy pochodne.
 
-Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [serwery: implementowanie serwera](../../mfc/servers-implementing-a-server.md).
+Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [Serwery: Implementowanie serwera](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocument](../../mfc/reference/cdocument-class.md)
+[Cdocument](../../mfc/reference/cdocument-class.md)
 
-[COleDocument](../../mfc/reference/coledocument-class.md)
+[Coledocument](../../mfc/reference/coledocument-class.md)
 
-[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)
+[Colelinkingdoc](../../mfc/reference/colelinkingdoc-class.md)
 
 `COleServerDoc`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** Afxole. h
+**Nagłówek:** afxole.h
 
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject
+## <a name="coleserverdocactivatedocobject"></a><a name="activatedocobject"></a>COleServerDoc::ActivateDocObject
 
 Aktywuje skojarzony dokument DocObject.
 
@@ -198,9 +198,9 @@ void ActivateDocObject();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `COleServerDoc` nie obsługuje aktywnych dokumentów (nazywanych również DocObjects). Aby włączyć tę pomoc techniczną, zobacz [GetDocObjectServer](#getdocobjectserver) i Class [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).
+Domyślnie `COleServerDoc` nie obsługuje aktywnych dokumentów (nazywanych również DocObjects). Aby włączyć tę obsługę, zobacz [GetDocObjectServer](#getdocobjectserver) i klasa [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).
 
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace
+## <a name="coleserverdocactivateinplace"></a><a name="activateinplace"></a>COleServerDoc::ActivateInPlace
 
 Aktywuje element do edycji w miejscu.
 
@@ -208,19 +208,19 @@ Aktywuje element do edycji w miejscu.
 BOOL ActivateInPlace();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie wartość 0 oznacza, że element jest w pełni otwarty.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0, co oznacza, że element jest całkowicie otwarty.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja wykonuje wszystkie operacje wymagane do aktywacji w miejscu. Tworzy okno ramki w miejscu, uaktywnia go i zmienia rozmiar dla elementu, konfiguruje menu udostępnione i inne kontrolki, przewija element do widoku i ustawia fokus w oknie ramka w miejscu.
+Ta funkcja wykonuje wszystkie operacje niezbędne do aktywacji w miejscu. Tworzy okno ramki w miejscu, aktywuje go i rozmiary go do elementu, konfiguruje udostępnione menu i inne kontrolki, przewija element do widoku i ustawia fokus do okna ramki w miejscu.
 
-Ta funkcja jest wywoływana przez domyślną implementację [COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Wywołaj tę funkcję, jeśli aplikacja obsługuje kolejną metodę aktywacji w miejscu (na przykład Play).
+Ta funkcja jest wywoływana przez domyślną implementację [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Wywołanie tej funkcji, jeśli aplikacja obsługuje inny zlecenie aktywacji w miejscu (takich jak Play).
 
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc
+## <a name="coleserverdoccoleserverdoc"></a><a name="coleserverdoc"></a>COleServerDoc::COleServerDoc
 
-Konstruuje obiekt `COleServerDoc` bez łączenia się z biblioteką DLL systemu OLE.
+Konstruuje `COleServerDoc` obiekt bez łączenia się z bibliotekami DLL systemu OLE.
 
 ```
 COleServerDoc();
@@ -228,11 +228,11 @@ COleServerDoc();
 
 ### <a name="remarks"></a>Uwagi
 
-Musisz wywołać [COleLinkingDoc:: Register](../../mfc/reference/colelinkingdoc-class.md#register) , aby otworzyć komunikację z OLE. Jeśli używasz [element COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) w aplikacji, `COleLinkingDoc::Register` jest wywoływana przez `COleLinkingDoc`implementacji `OnNewDocument`, `OnOpenDocument`i `OnSaveDocument`.
+Aby otworzyć komunikację z OLE, należy wywołać [COleLinkingDoc::Register.](../../mfc/reference/colelinkingdoc-class.md#register) Jeśli używasz [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) w `COleLinkingDoc::Register` aplikacji, jest `COleLinkingDoc`wywoływana przez `OnNewDocument` `OnOpenDocument`implementacji `OnSaveDocument`, i .
 
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame
+## <a name="coleserverdoccreateinplaceframe"></a><a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame
 
-Struktura wywołuje tę funkcję, aby utworzyć okno ramowe do edycji w miejscu.
+Struktura wywołuje tę funkcję, aby utworzyć okno ramki do edycji w miejscu.
 
 ```
 virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
@@ -243,35 +243,35 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 *pParentWnd*<br/>
 Wskaźnik do okna nadrzędnego aplikacji kontenera.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okna ramki w miejscu lub wartości NULL w przypadku niepowodzenia.
+Wskaźnik do okna ramki w miejscu lub NULL, jeśli nie powiedzie się.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna używa informacji określonych w szablonie dokumentu do utworzenia ramki. Używany widok to pierwszy widok utworzony dla dokumentu. Ten widok jest tymczasowo odłączony od oryginalnej ramki i dołączony do nowo utworzonej ramki.
+Domyślna implementacja używa informacji określonych w szablonie dokumentu do utworzenia ramki. Używany widok jest pierwszym widokiem utworzonym dla dokumentu. Ten widok jest tymczasowo odłączony od oryginalnej ramki i dołączony do nowo utworzonej ramki.
 
-Jest to zaawansowany możliwy do zaawansowania.
+Jest to zaawansowane zastąpienie.
 
-##  <a name="deactivateandundo"></a>COleServerDoc::D eactivateAndUndo
+## <a name="coleserverdocdeactivateandundo"></a><a name="deactivateandundo"></a>COleServerDoc::DeaktywowaćAndUndo
 
-Wywołaj tę funkcję, jeśli aplikacja obsługuje cofanie, a użytkownik wybierze opcję Cofnij po aktywowaniu elementu, ale przed jego edycją.
+Wywołanie tej funkcji, jeśli aplikacja obsługuje Cofnij i użytkownik wybiera Cofnij po aktywowaniu elementu, ale przed edycją.
 
 ```
 BOOL DeactivateAndUndo();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe po powodzeniu; w przeciwnym razie 0.
+Nonzero na sukces; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aplikacja kontenera jest zapisywana przy użyciu biblioteka MFC, wywołanie tej funkcji powoduje wywoływanie [COleClientItem:: OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) , który dezaktywuje interfejs użytkownika serwera.
+Jeśli aplikacja kontenera jest napisana przy użyciu biblioteki klas Programu Microsoft Foundation, wywołanie tej funkcji powoduje [wywołanie COleClientItem::OnDeactivateAndUndo,](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) który dezaktywuje interfejs użytkownika serwera.
 
-##  <a name="destroyinplaceframe"></a>COleServerDoc::D estroyInPlaceFrame
+## <a name="coleserverdocdestroyinplaceframe"></a><a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame
 
-Struktura wywołuje tę funkcję, aby zniszczyć okno ramowe w miejscu i zwrócić okno dokumentu aplikacji serwera do jego stanu przed aktywacją w miejscu.
+Struktura wywołuje tę funkcję, aby zniszczyć okno ramki w miejscu i przywrócić okno dokumentu aplikacji serwera do stanu przed aktywacją w miejscu.
 
 ```
 virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
@@ -279,44 +279,44 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pFrameWnd*<br/>
-Wskaźnik do okna ramki w miejscu do zniszczenia.
+*pFrameWnd (pFrameWnd)*<br/>
+Wskaźnik do okna ramki w miejscu, które ma zostać zniszczone.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to zaawansowany możliwy do zaawansowania.
+Jest to zaawansowane zastąpienie.
 
-##  <a name="discardundostate"></a>COleServerDoc::D iscardUndoState
+## <a name="coleserverdocdiscardundostate"></a><a name="discardundostate"></a>COleServerDoc::DiscardUndoState
 
-Jeśli użytkownik wykonuje operację edycji, która nie może zostać cofnięta, Wywołaj tę funkcję, aby wymusić odrzucanie informacji o stanie cofnięcia przez aplikację kontenera.
+Jeśli użytkownik wykonuje operację edycji, których nie można cofnąć, wywołanie tej funkcji, aby wymusić aplikacji kontenera, aby odrzucić jego informacje o stanie cofania.
 
 ```
 BOOL DiscardUndoState();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe po powodzeniu; w przeciwnym razie 0.
+Nonzero na sukces; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zapewniana w taki sposób, że serwery obsługujące cofanie mogą zwolnić zasoby, które w przeciwnym razie byłyby wykorzystane przez informacje o stanie cofnięcia, których nie można użyć.
+Ta funkcja jest podana, dzięki czemu serwery obsługujące Cofanie mogą zwolnić zasoby, które w przeciwnym razie byłyby używane przez informacje o stanie cofania, które nie mogą być używane.
 
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite
+## <a name="coleserverdocgetclientsite"></a><a name="getclientsite"></a>COleServerDoc::GetClientSite
 
-Pobiera wskaźnik do podstawowego interfejsu `IOleClientSite`.
+Pobiera wskaźnik do interfejsu `IOleClientSite` źródłowego.
 
 ```
 LPOLECLIENTSITE GetClientSite() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pobiera wskaźnik do podstawowego interfejsu [IOleClientSite](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite) .
+Pobiera wskaźnik do podstawowego interfejsu [IOleClientSite.](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite)
 
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer
+## <a name="coleserverdocgetdocobjectserver"></a><a name="getdocobjectserver"></a>COleServerDoc::Serwer GetDocObjectServer
 
-Przesłoń tę funkcję, aby utworzyć nowy element `CDocObjectServer` i zwrócić do niego wskaźnik.
+Zastąd w tej `CDocObjectServer` funkcji należy utworzyć nowy element i zwrócić do niego wskaźnik.
 
 ```
 virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
@@ -325,39 +325,39 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ### <a name="parameters"></a>Parametry
 
 *pDocSite*<br/>
-Wskaźnik do interfejsu `IOleDocumentSite`, który będzie łączyć ten dokument z serwerem.
+Wskaźnik do `IOleDocumentSite` interfejsu, który połączy ten dokument z serwerem.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CDocObjectServer`; Wartość NULL, jeśli operacja nie powiodła się.
+Wskaźnik do `CDocObjectServer`; NULL, jeśli operacja nie powiodła się.
 
 ### <a name="remarks"></a>Uwagi
 
-Po aktywowaniu serwera DocObject zwracający wskaźnik o wartości innej niż NULL pokazuje, że klient może obsługiwać DocObjects. Domyślna implementacja zwraca wartość NULL.
+Po aktywowaniu serwera DocObject zwracany wskaźnik nienakalny pokazuje, że klient może obsługiwać docObjects. Domyślna implementacja zwraca wartość NULL.
 
-Typowa implementacja dokumentu, który obsługuje DocObjects, spowoduje po prostu przydzielenie nowego obiektu `CDocObjectServer` i zwrócenie go do obiektu wywołującego. Na przykład:
+Typowa implementacja dla dokumentu, który obsługuje DocObjects po prostu przydzielić nowy `CDocObjectServer` obiekt i zwrócić go do obiektu wywołującego. Przykład:
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem
+## <a name="coleserverdocgetembeddeditem"></a><a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem
 
-Wywołaj tę funkcję, aby uzyskać wskaźnik do elementu reprezentującego cały dokument.
+Wywołanie tej funkcji, aby uzyskać wskaźnik do elementu reprezentującego cały dokument.
 
 ```
 COleServerItem* GetEmbeddedItem();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu reprezentującego cały dokument; Wartość NULL, jeśli operacja nie powiodła się.
+Wskaźnik do elementu reprezentującego cały dokument; NULL, jeśli operacja nie powiodła się.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje [COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem), funkcję wirtualną bez implementacji domyślnej.
+Wywołuje [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), wirtualną funkcję bez implementacji domyślnej.
 
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect
+## <a name="coleserverdocgetitemcliprect"></a><a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect
 
-Wywołaj funkcję członkowską `GetItemClipRect`, aby uzyskać współrzędne prostokąta wycinka elementu, który jest edytowany w miejscu.
+Wywołanie `GetItemClipRect` funkcji elementu członkowskiego, aby uzyskać współrzędne clipping-prostokąt elementu, który jest edytowany w miejscu.
 
 ```
 void GetItemClipRect(LPRECT lpClipRect) const;
@@ -366,17 +366,17 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpClipRect*<br/>
-Wskaźnik do struktury `RECT` lub obiektu `CRect`, aby uzyskać współrzędne prostokąta wycinka elementu.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu, aby otrzymać współrzędne clipping-prostokąt elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Współrzędne są w pikselach względem obszaru klienckiego okna aplikacji kontenera.
+Współrzędne znajdują się w pikselach względem obszaru klienta okna aplikacji kontenera.
 
-Rysowanie nie powinno następować poza prostokątem przycinania. Zwykle rysowanie jest automatycznie ograniczone. Użyj tej funkcji, aby określić, czy użytkownik przewinie się poza widoczną częścią dokumentu; Jeśli tak, przewiń dokument kontenera w miarę potrzeby za pomocą wywołania [ScrollContainerBy](#scrollcontainerby).
+Rysunek nie powinien odbywać się poza prostokątem przycinającym. Zwykle rysunek jest automatycznie ograniczony. Ta funkcja służy do określania, czy użytkownik przewinął poza widoczną część dokumentu; Jeśli tak, przewiń dokument kontenera w razie potrzeby za pomocą wywołania [ScrollContainerBy](#scrollcontainerby).
 
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition
+## <a name="coleserverdocgetitemposition"></a><a name="getitemposition"></a>COleServerDoc::GetItemPosition
 
-Wywołaj funkcję członkowską `GetItemPosition`, aby uzyskać współrzędne edytowanego elementu.
+Wywołanie `GetItemPosition` funkcji elementu członkowskiego, aby uzyskać współrzędne elementu edytowane w miejscu.
 
 ```
 void GetItemPosition(LPRECT lpPosRect) const;
@@ -385,17 +385,17 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Wskaźnik do struktury `RECT` lub obiektu `CRect`, aby uzyskać współrzędne elementu.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu, aby otrzymać współrzędne elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Współrzędne są w pikselach względem obszaru klienckiego okna aplikacji kontenera.
+Współrzędne znajdują się w pikselach względem obszaru klienta okna aplikacji kontenera.
 
-Położenie elementu można porównać z bieżącym prostokątem przycinania, aby określić zakres, do którego element jest widoczny (lub niewidoczny) na ekranie.
+Położenie elementu można porównać z bieżącym prostokątem przycinającym, aby określić stopień, w jakim element jest widoczny (lub niewidoczny) na ekranie.
 
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor
+## <a name="coleserverdocgetzoomfactor"></a><a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor
 
-Funkcja członkowska `GetZoomFactor` określa "współczynnik powiększenia" elementu, który został aktywowany do edycji w miejscu.
+Funkcja `GetZoomFactor` elementu członkowskiego określa "współczynnik powiększenia" elementu, który został aktywowany do edycji w miejscu.
 
 ```
 BOOL GetZoomFactor(
@@ -407,25 +407,25 @@ BOOL GetZoomFactor(
 ### <a name="parameters"></a>Parametry
 
 *lpSizeNum*<br/>
-Wskaźnik do obiektu klasy `CSize`, w którym będzie przechowywany licznik współczynnika powiększenia. Może mieć wartość NULL.
+Wskaźnik do obiektu `CSize` klasy, który będzie trzymał licznik współczynnika powiększenia. Może mieć wartość NULL.
 
 *lpSizeDenom*<br/>
-Wskaźnik do obiektu klasy `CSize`, w którym będzie przechowywany mianownik współczynnika powiększenia. Może mieć wartość NULL.
+Wskaźnik do obiektu `CSize` klasy, który będzie zawierać mianownik współczynnika powiększenia. Może mieć wartość NULL.
 
 *lpPosRect*<br/>
-Wskaźnik do obiektu klasy `CRect`, który opisuje nowe położenie elementu. Jeśli ten argument ma wartość NULL, funkcja używa bieżącej pozycji elementu.
+Wskaźnik do obiektu `CRect` klasy, który opisuje nową pozycję elementu. Jeśli ten argument ma wartość NULL, funkcja używa bieżącej pozycji elementu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli element jest aktywowany do edycji w miejscu, a jego współczynnik powiększenia jest inny niż 100% (1:1); w przeciwnym razie 0.
+Niezerowe, jeśli element jest aktywowany do edycji w miejscu, a jego współczynnik powiększenia jest inny niż 100% (1:1); w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Współczynnik powiększenia (w pikselach) jest proporcją rozmiaru elementu do jego bieżącego zakresu. Jeśli aplikacja kontenera nie ustawił zakresu elementu, jest używany jego naturalny zakres (określony przez [COleServerItem:: OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)).
+Współczynnik powiększenia w pikselach jest proporcją rozmiaru elementu do jego bieżącego zasięgu. Jeśli aplikacja kontenera nie ustawiła zakresu elementu, używany jest jego naturalny zasięg (określony przez [COleServerItem::OnGetExtent).](../../mfc/reference/coleserveritem-class.md#ongetextent)
 
-Funkcja ustawia swoje pierwsze dwa argumenty do licznika i mianownika "współczynnika powiększenia" elementu. Jeśli element nie jest edytowany w miejscu, funkcja ustawia te argumenty na wartość domyślną 100% (lub 1:1) i zwraca zero. Aby uzyskać więcej informacji, zobacz Uwagi techniczne 40, [MFC/OLE w miejscu zmiany rozmiaru i powiększania](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
+Funkcja ustawia swoje pierwsze dwa argumenty na licznik i mianownik elementu "współczynnik powiększenia". Jeśli element nie jest edytowany w miejscu, funkcja ustawia te argumenty na wartość domyślną 100% (lub 1:1) i zwraca zero. Aby uzyskać więcej informacji, zobacz Uwaga techniczna 40, [MFC/OLE Zmiana rozmiaru i powiększanie](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
 
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject
+## <a name="coleserverdocisdocobject"></a><a name="isdocobject"></a>COleServerDoc::IsDocObject
 
 Określa, czy dokument jest DocObject.
 
@@ -433,41 +433,41 @@ Określa, czy dokument jest DocObject.
 BOOL IsDocObject() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 PRAWDA, jeśli dokument jest DocObject; w przeciwnym razie FALSE.
 
-##  <a name="isembedded"></a>COleServerDoc:: isembedded
+## <a name="coleserverdocisembedded"></a><a name="isembedded"></a>COleServerDoc::IsEmbedded
 
-Wywołaj funkcję członkowską `IsEmbedded`, aby określić, czy dokument reprezentuje obiekt osadzony w kontenerze.
+Wywołanie `IsEmbedded` funkcji elementu członkowskiego, aby ustalić, czy dokument reprezentuje obiekt osadzony w kontenerze.
 
 ```
 BOOL IsEmbedded() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli obiekt `COleServerDoc` jest dokumentem, który reprezentuje obiekt osadzony w kontenerze; w przeciwnym razie 0.
+Niezerowe, `COleServerDoc` jeśli obiekt jest dokumentem reprezentującym obiekt osadzony w kontenerze; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Dokument załadowany z pliku nie jest osadzony, mimo że może być manipulowany przez aplikację kontenera jako link. Dokument osadzony w dokumencie kontenera jest traktowany jako osadzony.
+Dokument załadowany z pliku nie jest osadzony, chociaż może być manipulowany przez aplikację kontenera jako łącze. Dokument osadzony w dokumencie kontenera jest uważany za osadzony.
 
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive
+## <a name="coleserverdocisinplaceactive"></a><a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive
 
-Wywołaj funkcję członkowską `IsInPlaceActive`, aby określić, czy element jest obecnie w stanie aktywnym w miejscu.
+Wywołanie `IsInPlaceActive` funkcji elementu członkowskiego, aby ustalić, czy element jest obecnie w stanie aktywnym w miejscu.
 
 ```
 BOOL IsInPlaceActive() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli obiekt `COleServerDoc` jest aktywny na miejscu; w przeciwnym razie 0.
+Niezerowe, `COleServerDoc` jeśli obiekt jest aktywny na miejscu; w przeciwnym razie 0.
 
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged
+## <a name="coleserverdocnotifychanged"></a><a name="notifychanged"></a>COleServerDoc::NotifyZmieniony
 
-Wywołaj tę funkcję, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
+Wywołanie tej funkcji, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
 
 ```
 void NotifyChanged();
@@ -475,14 +475,14 @@ void NotifyChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj należy wywołać tę funkcję po zmianie przez użytkownika atrybutu globalnego, takiego jak wymiary dokumentu serwera. Jeśli element OLE jest połączony z dokumentem z automatycznym łączem, element zostanie zaktualizowany w celu odzwierciedlenia zmian. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC wywoływana jest funkcja członkowska [Onchanga](../../mfc/reference/coleclientitem-class.md#onchange) `COleClientItem`.
+Zazwyczaj ta funkcja jest wywoływana po zmianie przez użytkownika niektórych atrybutów globalnych, takich jak wymiary dokumentu serwera. Jeśli element OLE jest połączony z dokumentem z automatycznym łączem, element jest aktualizowany w celu odzwierciedlenia zmian. W aplikacjach kontenera napisanych za pomocą biblioteki klas `COleClientItem` Microsoft Foundation wywoływana jest funkcja elementu członkowskiego [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
 > [!NOTE]
->  Ta funkcja jest dołączona do zgodności z mechanizmem OLE 1. Nowe aplikacje powinny używać [UpdateAllItems](#updateallitems).
+> Ta funkcja jest dołączona do zgodności z OLE 1. Nowe aplikacje powinny używać [UpdateAllItems](#updateallitems).
 
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed
+## <a name="coleserverdocnotifyclosed"></a><a name="notifyclosed"></a>COleServerDoc::NotifyClosed
 
-Wywołaj tę funkcję, aby powiadomić kontenery, że dokument został zamknięty.
+Wywołanie tej funkcji, aby powiadomić kontenery, że dokument został zamknięty.
 
 ```
 void NotifyClosed();
@@ -490,11 +490,11 @@ void NotifyClosed();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik wybierze polecenie Zamknij z menu plik, `NotifyClosed` jest wywoływana przez implementację funkcji elementu członkowskiego [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) przez `COleServerDoc`. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC wywoływana jest funkcja członkowska [Onchanga](../../mfc/reference/coleclientitem-class.md#onchange) `COleClientItem`.
+Gdy użytkownik wybierze polecenie Zamknij z `NotifyClosed` menu Plik, jest wywoływana przez `COleServerDoc`implementację [oncloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) funkcji elementu członkowskiego. W aplikacjach kontenera napisanych za pomocą biblioteki klas `COleClientItem` Microsoft Foundation wywoływana jest funkcja elementu członkowskiego [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename
+## <a name="coleserverdocnotifyrename"></a><a name="notifyrename"></a>COleServerDoc::NotifyRename
 
-Wywołaj tę funkcję, gdy użytkownik zmienia nazwę dokumentu na serwerze.
+Wywołanie tej funkcji po zmianie nazwy dokumentu serwera przez użytkownika.
 
 ```
 void NotifyRename(LPCTSTR lpszNewName);
@@ -503,15 +503,15 @@ void NotifyRename(LPCTSTR lpszNewName);
 ### <a name="parameters"></a>Parametry
 
 *lpszNewName*<br/>
-Wskaźnik na ciąg określający nową nazwę dokumentu serwera; zwykle jest to w pełni kwalifikowana ścieżka.
+Wskaźnik do ciągu określającego nową nazwę dokumentu serwera; jest to zazwyczaj w pełni kwalifikowana ścieżka.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik wybierze polecenie Zapisz jako z menu plik, `NotifyRename` jest wywoływana przez implementację funkcji elementu członkowskiego [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) przez `COleServerDoc`. Ta funkcja powiadamia pliki DLL systemu OLE, które z kolei powiadamiają kontenery. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC wywoływana jest funkcja członkowska [Onchanga](../../mfc/reference/coleclientitem-class.md#onchange) `COleClientItem`.
+Gdy użytkownik wybierze polecenie Zapisz jako z `NotifyRename` menu `COleServerDoc`Plik, jest wywoływana przez implementację funkcji elementu członkowskiego [OnSaveDocument.](../../mfc/reference/cdocument-class.md#onsavedocument) Ta funkcja powiadamia biblioteki DLL systemu OLE, które z kolei powiadamiają kontenery. W aplikacjach kontenera napisanych za pomocą biblioteki klas `COleClientItem` Microsoft Foundation wywoływana jest funkcja elementu członkowskiego [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved
+## <a name="coleserverdocnotifysaved"></a><a name="notifysaved"></a>COleServerDoc::NotifySaved
 
-Wywołaj tę funkcję po zapisaniu dokumentu na serwerze przez użytkownika.
+Wywołanie tej funkcji po zapisaniu dokumentu serwera przez użytkownika.
 
 ```
 void NotifySaved();
@@ -519,11 +519,11 @@ void NotifySaved();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik wybierze polecenie Zapisz z menu plik, `NotifySaved` jest wywoływana przez `COleServerDoc`implementacji [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Ta funkcja powiadamia pliki DLL systemu OLE, które z kolei powiadamiają kontenery. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC wywoływana jest funkcja członkowska [Onchanga](../../mfc/reference/coleclientitem-class.md#onchange) `COleClientItem`.
+Gdy użytkownik wybierze polecenie Zapisz z `NotifySaved` menu Plik, `COleServerDoc`jest wywoływana przez implementację [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Ta funkcja powiadamia biblioteki DLL systemu OLE, które z kolei powiadamiają kontenery. W aplikacjach kontenera napisanych za pomocą biblioteki klas `COleClientItem` Microsoft Foundation wywoływana jest funkcja elementu członkowskiego [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-##  <a name="onclose"></a>COleServerDoc:: OnClose
+## <a name="coleserverdoconclose"></a><a name="onclose"></a>COleServerDoc::OnKrówka
 
-Wywoływane przez platformę, gdy kontener żąda zamknięcia dokumentu serwera.
+Wywoływane przez strukturę, gdy kontener żąda zamknięcia dokumentu serwera.
 
 ```
 virtual void OnClose(OLECLOSE dwCloseOption);
@@ -531,24 +531,24 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 
 ### <a name="parameters"></a>Parametry
 
-*dwCloseOption*<br/>
+*dwCloseOption (Kolosaopcja)*<br/>
 Wartość z wyliczenia OLECLOSE. Ten parametr może mieć jedną z następujących wartości:
 
-- OLECLOSE_SAVEIFDIRTY plik zostanie zapisany, jeśli został zmodyfikowany.
+- OLECLOSE_SAVEIFDIRTY Plik jest zapisywany, jeśli został zmodyfikowany.
 
-- OLECLOSE_NOSAVE plik jest zamknięty bez zapisywania.
+- OLECLOSE_NOSAVE Plik jest zamykany bez zapisywania.
 
 - OLECLOSE_PROMPTSAVE Jeśli plik został zmodyfikowany, użytkownik jest monitowany o zapisanie go.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślne wywołania implementacji `CDocument::OnCloseDocument`.
+Domyślna implementacja wywołuje `CDocument::OnCloseDocument`.
 
-Aby uzyskać więcej informacji i dodatkowe wartości, zobacz [OLECLOSE](/windows/win32/api/oleidl/ne-oleidl-oleclose) w Windows SDK.
+Aby uzyskać więcej informacji i dodatkowe wartości, zobacz [OLECLOSE](/windows/win32/api/oleidl/ne-oleidl-oleclose) w windows SDK.
 
-##  <a name="ondeactivate"></a>COleServerDoc:: OnDeactivate
+## <a name="coleserverdocondeactivate"></a><a name="ondeactivate"></a>COleServerDoc::OnDeaktywacji
 
-Wywoływane przez platformę, gdy użytkownik dezaktywuje element osadzony lub połączony, który jest obecnie aktywny.
+Wywoływana przez platformę, gdy użytkownik dezaktywuje osadzony lub połączony element, który jest obecnie aktywny w miejscu.
 
 ```
 virtual void OnDeactivate();
@@ -556,15 +556,15 @@ virtual void OnDeactivate();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja przywraca interfejs użytkownika aplikacji kontenera do jego oryginalnego stanu i niszczy wszystkie menu i inne kontrolki, które zostały utworzone dla aktywacji w miejscu.
+Ta funkcja przywraca interfejs użytkownika aplikacji kontenera do stanu pierwotnego i niszczy wszystkie menu i inne formanty, które zostały utworzone w celu aktywacji w miejscu.
 
-Informacje o stanie cofania powinny być bezwarunkowo wydane w tym momencie.
+Informacje o stanie cofania powinny być bezwarunkowo zwalniane w tym momencie.
 
-Aby uzyskać więcej informacji, zobacz [Aktywacja](../../mfc/activation-cpp.md)artykułu.
+Aby uzyskać więcej informacji, zobacz artykuł [Aktywacja](../../mfc/activation-cpp.md)..
 
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI
+## <a name="coleserverdocondeactivateui"></a><a name="ondeactivateui"></a>COleServerDoc::OnDeactivateui
 
-Wywoływana, gdy użytkownik dezaktywuje element, który został aktywowany w miejscu.
+Wywoływane, gdy użytkownik dezaktywuje element, który został aktywowany w miejscu.
 
 ```
 virtual void OnDeactivateUI(BOOL bUndoable);
@@ -572,16 +572,16 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 
 ### <a name="parameters"></a>Parametry
 
-*bUndoable*<br/>
-Określa, czy zmiany edycyjne mogą być cofnięte.
+*bDagowalsz*<br/>
+Określa, czy zmiany edycji można cofnąć.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja przywraca interfejs użytkownika aplikacji kontenera do jego oryginalnego stanu, ukrywając wszystkie menu i inne kontrolki, które zostały utworzone dla aktywacji w miejscu.
+Ta funkcja przywraca interfejs użytkownika aplikacji kontenera do stanu pierwotnego, ukrywając wszystkie menu i inne formanty, które zostały utworzone w celu aktywacji w miejscu.
 
-Struktura zawsze ustawia *bUndoable* na false. Jeśli serwer obsługuje polecenie Cofnij i istnieje operacja, która może zostać cofnięta, wywołaj implementację klasy podstawowej z *bUndoable* ustawioną na wartość true.
+Struktura zawsze ustawia *bOdowanie* na FAŁSZ. Jeśli serwer obsługuje cofanie i istnieje operacja, którą można cofnąć, należy wywołać implementację klasy podstawowej z *zestawem bUndoable* na TRUE.
 
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate
+## <a name="coleserverdocondocwindowactivate"></a><a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate
 
 Struktura wywołuje tę funkcję, aby aktywować lub dezaktywować okno dokumentu do edycji w miejscu.
 
@@ -591,16 +591,16 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*<br/>
-Określa, czy okno dokumentu ma zostać aktywowane czy dezaktywowane.
+*bAktywowanie*<br/>
+Określa, czy okno dokumentu ma być aktywowane, czy dezaktywowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna usuwa lub dodaje elementy interfejsu użytkownika na poziomie ramki odpowiednio do potrzeb. Przesłoń tę funkcję, jeśli chcesz wykonać dodatkowe akcje, gdy dokument zawierający element zostanie aktywowany lub zdezaktywowany.
+Domyślna implementacja usuwa lub dodaje elementy interfejsu użytkownika na poziomie ramki, zgodnie z potrzebami. Zastąd w tej funkcji należy wykonać dodatkowe czynności, gdy dokument zawierający element jest aktywowany lub dezaktywowany.
 
-Aby uzyskać więcej informacji, zobacz [Aktywacja](../../mfc/activation-cpp.md)artykułu.
+Aby uzyskać więcej informacji, zobacz artykuł [Aktywacja](../../mfc/activation-cpp.md)..
 
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd
+## <a name="coleserverdoconexecolecmd"></a><a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd
 
 Struktura wywołuje tę funkcję, aby wykonać określone polecenie lub wyświetlić pomoc dla polecenia.
 
@@ -615,10 +615,10 @@ virtual HRESULT OnExecOleCmd(
 
 ### <a name="parameters"></a>Parametry
 
-*pguidCmdGroup*<br/>
-Wskaźnik do identyfikatora GUID, który identyfikuje zestaw poleceń. Może mieć wartość NULL, aby wskazać domyślną grupę poleceń.
+*pguidCmdGroup (Grupa pguidCmd)*<br/>
+Wskaźnik do identyfikatora GUID, który identyfikuje zestaw poleceń. Może być null, aby wskazać domyślną grupę poleceń.
 
-*nCmdID*<br/>
+*nCmdID (identyfikator nCmdID)*<br/>
 Polecenie do wykonania. Musi znajdować się w grupie identyfikowanej przez *pguidCmdGroup*.
 
 *nCmdExecOut*<br/>
@@ -632,42 +632,42 @@ OLECMDEXECOPT_DONTPROMPTUSER
 
 OLECMDEXECOPT_SHOWHELP
 
-*pvarargIn*<br/>
-Wskaźnik do elementu VARIANTARG zawierającego argumenty wejściowe dla polecenia. Może mieć wartość NULL.
+*pvarargIn (polski)*<br/>
+Wskaźnik do VARIANTARG zawierający argumenty wejściowe dla polecenia. Może mieć wartość NULL.
 
-*pvarargOut*<br/>
-Wskaźnik do elementu VARIANTARG, aby otrzymać wyjściowe wartości zwracane z polecenia. Może mieć wartość NULL.
+*pvarargOut (polski)*<br/>
+Wskaźnik do VARIANTARG, aby otrzymać wartości zwracane dane wyjściowe z polecenia. Może mieć wartość NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK, jeśli się powiedzie; w przeciwnym razie jeden z następujących kodów błędów:
+Zwraca S_OK, jeśli zakończy się pomyślnie; w przeciwnym razie jeden z następujących kodów błędów:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|E_UNEXPECTED|Wystąpił nieoczekiwany błąd|
-|E_FAIL|błąd instalacji|
-|E_NOTIMPL|Wskazuje, że biblioteka MFC powinna próbować przetłumaczyć i wysłać polecenie|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* ma wartość różną od null, ale nie określa uznanej grupy poleceń|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID* nie jest rozpoznawana jako prawidłowe polecenie w grupie *pguidCmdGroup*|
-|OLECMDERR_DISABLED|Polecenie identyfikowane przez *nCmdID* jest wyłączone i nie można go wykonać|
-|OLECMDERR_NOHELP|Obiekt wywołujący prosi o pomoc dotyczącą polecenia identyfikowanego przez *nCmdID* , ale pomoc nie jest dostępna|
-|OLECMDERR_CANCELED|Użytkownik anulował wykonywanie|
+|E_unexpected|Wystąpił nieoczekiwany błąd|
+|E_fail|błąd instalacji|
+|E_notimpl|Wskazuje, że MFC powinien próbować przetłumaczyć i wysłać polecenie|
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* nie jest NULL, ale nie określa rozpoznanej grupy poleceń|
+|OLECMDERR_E_NOTSUPPORTED|*nCmdID* nie jest rozpoznawany jako prawidłowe polecenie w grupie *pguidCmdGroup*|
+|OLECMDERR_DISABLED|Polecenie zidentyfikowane przez *nCmdID* jest wyłączone i nie można go wykonać|
+|OLECMDERR_NOHELP|Dzwoniący poprosił o pomoc w komendzie zidentyfikowanej przez *nCmdID,* ale nie ma pomocy|
+|OLECMDERR_CANCELED|Użytkownik anulował wykonanie|
 
 ### <a name="remarks"></a>Uwagi
 
-`COleCmdUI` może służyć do włączania, aktualizowania i ustawiania innych właściwości poleceń interfejsu użytkownika DocObject. Po zainicjowaniu poleceń można je wykonać przy użyciu `OnExecOleCmd`.
+`COleCmdUI`może służyć do włączania, aktualizowania i ustawiania innych właściwości poleceń interfejsu użytkownika DocObject. Po zainicjowaniu poleceń można je wykonać `OnExecOleCmd`za pomocą pliku .
 
-Struktura wywołuje funkcję przed podjęciem próby przetłumaczenia i wysłania polecenia dokumentu OLE. Nie musisz przesłonić tej funkcji do obsługi standardowych poleceń dokumentu OLE, ale musisz podać przesłonięcie tej funkcji, jeśli chcesz obsługiwać własne polecenia niestandardowe lub obsłużyć polecenia, które akceptują parametry lub zwracają wyniki.
+Struktura wywołuje funkcję przed próbą przetłumaczenia i wysłania polecenia dokumentu OLE. Nie trzeba zastępować tej funkcji do obsługi standardowych poleceń dokumentu OLE, ale należy podać zastąpienie tej funkcji, jeśli chcesz obsługiwać własne polecenia niestandardowe lub obsługiwać polecenia, które akceptują parametry lub zwracają wyniki.
 
-Większość poleceń nie przyjmuje argumentów ani zwracanych wartości. W przypadku większości poleceń obiekt wywołujący może przekazać wartości NULL dla *pvarargIn* i *pvarargOut*. Dla poleceń, które oczekują wartości wejściowych, obiekt wywołujący może zadeklarować i zainicjować zmienną VARIANTARG i przekazać wskaźnik do zmiennej w *pvarargIn*. Dla poleceń, które wymagają pojedynczej wartości, argument może być przechowywany bezpośrednio w VARIANTARG i przekazywać do funkcji. Wiele argumentów musi być spakowanych w VARIANTARG przy użyciu jednego z obsługiwanych typów (takich jak `IDispatch` i SAFEARRAY).
+Większość poleceń nie przyjmuje argumentów ani wartości zwracanych. Dla większości poleceń wywołujący może przekazać NULLs dla *pvarargIn* i *pvarargOut*. W przypadku poleceń, które oczekują wartości wejściowych, wywołujący może zadeklarować i zainicjować zmienną VARIANTARG i przekazać wskaźnik do zmiennej w *pvarargIn*. Dla poleceń, które wymagają pojedynczej wartości, argument może być przechowywany bezpośrednio w VARIANTARG i przekazywane do funkcji. W variantarg należy zapakować wiele argumentów przy użyciu `IDispatch` jednego z obsługiwanych typów (takich jak SAFEARRAY).
 
-Podobnie, jeśli polecenie zwraca argumenty, obiekt wywołujący powinien zadeklarować element VARIANTARG, zainicjować go w VT_EMPTY i przekazać jego adres w *pvarargOut*. Jeśli polecenie zwraca pojedynczą wartość, obiekt może przechowywać tę wartość bezpośrednio w *pvarargOut*. Wiele wartości wyjściowych musi być spakowana w sposób odpowiedni dla VARIANTARG.
+Podobnie, jeśli polecenie zwraca argumenty wywołującego oczekuje się zadeklarować VARIANTARG, zainicjować go do VT_EMPTY i przekazać jego adres w *pvarargOut*. Jeśli polecenie zwraca pojedynczą wartość, obiekt może przechowywać tę wartość bezpośrednio w *pvarargOut*. Wiele wartości wyjściowych musi być zapakowane w jakiś sposób odpowiedni dla VARIANTARG.
 
-Implementacja klasy podstawowej tej funkcji przeprowadzi OLE_COMMAND_MAP struktur skojarzonych z elementem docelowym polecenia i spróbuje wysłać polecenie do odpowiedniej procedury obsługi. Implementacja klasy bazowej działa tylko z poleceniami, które nie akceptują argumentów ani zwracanych wartości. Jeśli musisz obsługiwać polecenia, które przyjmują argumenty lub wartości zwracane, należy przesłonić tę funkcję i wspólnie z parametrami *pvarargIn* i *pvarargOut* .
+Implementacja klasy podstawowej tej funkcji będzie chodzić OLE_COMMAND_MAP struktur skojarzonych z celem polecenia i spróbuj wysłać polecenie do odpowiedniego programu obsługi. Implementacja klasy podstawowej działa tylko z poleceniami, które nie akceptują argumentów ani nie zwracają wartości. Jeśli trzeba obsługiwać polecenia, które akceptują argumenty lub zwraca wartości, należy zastąpić tę funkcję i pracować z *pvarargIn* i *pvarargOut* parametrów samodzielnie.
 
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate
+## <a name="coleserverdoconframewindowactivate"></a><a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate
 
-Struktura wywołuje tę funkcję, gdy okno ramki aplikacji kontenera jest aktywowane lub dezaktywowane.
+Struktura wywołuje tę funkcję, gdy okno ramki aplikacji kontenera jest aktywowany lub dezaktywowany.
 
 ```
 virtual void OnFrameWindowActivate(BOOL bActivate);
@@ -675,52 +675,52 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*<br/>
-Określa, czy okno ramki ma zostać aktywowane czy dezaktywowane.
+*bAktywowanie*<br/>
+Określa, czy okno ramki ma być aktywowane, czy dezaktywowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja anuluje wszystkie tryby pomocy, w których może znajdować się okno ramek. Zastąp tę funkcję, jeśli chcesz przeprowadzić przetwarzanie specjalne, gdy okno ramki jest aktywowane lub dezaktywowane.
+Domyślna implementacja anuluje wszystkie tryby pomocy, w których może znajdować się okno ramki. Zastąd w tej funkcji należy wykonać specjalne przetwarzanie, gdy okno ramki jest aktywowane lub dezaktywowane.
 
-Aby uzyskać więcej informacji, zobacz [Aktywacja](../../mfc/activation-cpp.md)artykułu.
+Aby uzyskać więcej informacji, zobacz artykuł [Aktywacja](../../mfc/activation-cpp.md)..
 
-##  <a name="ongetembeddeditem"></a>COleServerDoc:: OnGetEmbeddedItem
+## <a name="coleserverdocongetembeddeditem"></a><a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem
 
-Wywoływane przez platformę, gdy aplikacja kontenera wywołuje aplikację serwera, aby utworzyć lub edytować element osadzony.
+Wywoływana przez platformę, gdy aplikacja kontenera wywołuje aplikację serwera w celu utworzenia lub edycji elementu osadzonego.
 
 ```
 virtual COleServerItem* OnGetEmbeddedItem() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu reprezentującego cały dokument; Wartość NULL, jeśli operacja nie powiodła się.
+Wskaźnik do elementu reprezentującego cały dokument; NULL, jeśli operacja nie powiodła się.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie istnieje domyślna implementacja. Należy zastąpić tę funkcję, aby zwrócić element reprezentujący cały dokument. Ta wartość zwracana powinna być obiektem klasy pochodnej `COleServerItem`.
+Nie ma implementacji domyślnej. Należy zastąpić tę funkcję, aby zwrócić element reprezentujący cały dokument. Ta zwracana wartość powinna `COleServerItem`być obiektem klasy pochodnej.
 
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo
+## <a name="coleserverdoconreactivateandundo"></a><a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo
 
-Struktura wywołuje tę funkcję, gdy użytkownik zdecyduje się cofnąć zmiany wprowadzone do elementu, który został aktywowany, zmieniony, a następnie zdezaktywowany.
+Struktura wywołuje tę funkcję, gdy użytkownik zdecyduje się cofnąć zmiany wprowadzone do elementu, który został aktywowany w miejscu, zmienione, a następnie dezaktywowane.
 
 ```
 virtual BOOL OnReactivateAndUndo();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna to Nothing, z wyjątkiem zwraca wartość FALSE, aby wskazać błąd.
+Domyślna implementacja nie robi nic z wyjątkiem zwracanie FALSE, aby wskazać błąd.
 
-Zastąp tę funkcję, jeśli aplikacja obsługuje cofanie. Zazwyczaj można wykonać operację cofania, a następnie aktywować element, wywołując `ActivateInPlace`. Jeśli aplikacja kontenera jest zapisywana przy użyciu biblioteka MFC, wywoływanie `COleClientItem::ReactivateAndUndo` powoduje wywołanie tej funkcji.
+Zastąp tę funkcję, jeśli aplikacja obsługuje cofanie. Zazwyczaj można wykonać operację cofania, a następnie `ActivateInPlace`aktywować element, wywołując . Jeśli aplikacja kontenera jest napisana za pomocą `COleClientItem::ReactivateAndUndo` biblioteki klas Programu Microsoft Foundation, wywołanie powoduje, że ta funkcja ma zostać wywołana.
 
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder
+## <a name="coleserverdoconresizeborder"></a><a name="onresizeborder"></a>COleServerDoc::OnResizeBorder
 
-Struktura wywołuje tę funkcję, gdy zmienia się rozmiar okien ramek aplikacji kontenera.
+Struktura wywołuje tę funkcję, gdy okna ramki aplikacji kontenera zmienić rozmiar.
 
 ```
 virtual void OnResizeBorder(
@@ -732,25 +732,25 @@ virtual void OnResizeBorder(
 ### <a name="parameters"></a>Parametry
 
 *lpRectBorder*<br/>
-Wskaźnik do struktury `RECT` lub obiektu `CRect`, który określa współrzędne obramowania.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu, który określa współrzędne obramowania.
 
 *lpUIWindow*<br/>
-Wskaźnik do obiektu klasy `IOleInPlaceUIWindow`, do którego należy bieżąca sesja edycji w miejscu.
+Wskaźnik do obiektu `IOleInPlaceUIWindow` klasy, która jest właścicielem bieżącej sesji edycji w miejscu.
 
-*bFrame*<br/>
-Ma wartość TRUE, jeśli *lpUIWindow* wskazuje okno ramki najwyższego poziomu aplikacji kontenera lub wartość FAŁSZ, jeśli *lpUIWindow* wskazuje na okno ramki poziomu dokumentu aplikacji kontenera.
+*bFrame (Ramka)*<br/>
+PRAWDA, jeśli *lpUIWindow* wskazuje okno ramki najwyższego poziomu aplikacji kontenera lub FALSE, jeśli *lpUIWindow* wskazuje okno ramki na poziomie dokumentu aplikacji kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja zmienia rozmiar i dostosowuje paski narzędzi oraz inne elementy interfejsu użytkownika zgodnie z nowym rozmiarem okna.
+Ta funkcja umożliwia zmiany rozmiaru i dopasowywanie pasków narzędzi i innych elementów interfejsu użytkownika zgodnie z nowym rozmiarem okna.
 
-Aby uzyskać więcej informacji, zobacz [IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow) w windows SDK.
 
-Jest to zaawansowany możliwy do zaawansowania.
+Jest to zaawansowane zastąpienie.
 
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames
+## <a name="coleserverdoconsethostnames"></a><a name="onsethostnames"></a>COleServerDoc::OnSetHostNames
 
-Wywoływane przez platformę, gdy kontener ustawia lub zmienia nazwy hostów dla tego dokumentu.
+Wywoływane przez strukturę, gdy kontener ustawia lub zmienia nazwy hosta dla tego dokumentu.
 
 ```
 virtual void OnSetHostNames(
@@ -760,21 +760,21 @@ virtual void OnSetHostNames(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszHost*<br/>
-Wskaźnik na ciąg, który określa nazwę aplikacji kontenera.
+*lpszHost (lpszHost)*<br/>
+Wskaźnik do ciągu, który określa nazwę aplikacji kontenera.
 
 *lpszHostObj*<br/>
-Wskaźnik na ciąg, który określa nazwę kontenera dla dokumentu.
+Wskaźnik do ciągu, który określa nazwę kontenera dla dokumentu.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślna implementacja zmienia tytuł dokumentu dla wszystkich widoków odnoszących się do tego dokumentu.
 
-Zastąp tę funkcję, jeśli aplikacja ustawi tytuły przy użyciu innego mechanizmu.
+Zastąd w tej funkcji, jeśli aplikacja ustawia tytuły za pomocą innego mechanizmu.
 
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects
+## <a name="coleserverdoconsetitemrects"></a><a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects
 
-Struktura wywołuje tę funkcję, aby umieścić okno ramki edycji w miejscu w oknie ramka aplikacji kontenera.
+Struktura wywołuje tę funkcję, aby umieścić okno ramki edycji w miejscu w oknie ramki aplikacji kontenera.
 
 ```
 virtual void OnSetItemRects(
@@ -785,20 +785,20 @@ virtual void OnSetItemRects(
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Wskaźnik do struktury `RECT` lub `CRect` obiektu, który określa położenie okna ramki w miejscu względem obszaru klienckiego aplikacji kontenera.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu, który określa położenie okna ramki w miejscu względem obszaru klienta aplikacji kontenera.
 
 *lpClipRect*<br/>
-Wskaźnik do struktury `RECT` lub obiektu `CRect`, który określa prostokąt wycinka okna ramki w miejscu względem obszaru klienckiego aplikacji kontenera.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu, który określa prostokąt przycinania okna ramki w miejscu względem obszaru klienta aplikacji kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby zaktualizować współczynnik powiększenia widoku, w razie potrzeby.
+W razie potrzeby zastąpozuj tę funkcję, aby zaktualizować współczynnik powiększenia widoku.
 
-Ta funkcja jest zazwyczaj wywoływana w odpowiedzi na wywołanie `RequestPositionChange`, chociaż może być wywoływana w dowolnym momencie przez kontener, aby zażądać zmiany położenia dla elementu w miejscu.
+Ta funkcja jest zwykle wywoływana w odpowiedzi na wywołanie, `RequestPositionChange` chociaż może być wywoływana w dowolnym momencie przez kontener, aby zażądać zmiany pozycji dla elementu w miejscu.
 
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars
+## <a name="coleserverdoconshowcontrolbars"></a><a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars
 
-Struktura wywołuje tę funkcję, aby pokazać lub ukryć paski kontroli aplikacji serwera skojarzone z oknem ramki identyfikowanym przez *pFrameWnd*.
+Struktura wywołuje tę funkcję, aby pokazać lub ukryć paski sterowania aplikacji serwera skojarzone z oknem ramki identyfikowanym przez *pFrameWnd*.
 
 ```
 virtual void OnShowControlBars(
@@ -808,19 +808,19 @@ virtual void OnShowControlBars(
 
 ### <a name="parameters"></a>Parametry
 
-*pFrameWnd*<br/>
-Wskaźnik do okna ramki, którego paski kontroli mają być ukryte lub pokazane.
+*pFrameWnd (pFrameWnd)*<br/>
+Wskaźnik do okna ramki, którego paski sterujące powinny być ukryte lub pokazane.
 
-*bShow*<br/>
-Określa, czy paski kontroli są wyświetlane, czy ukryte.
+*bPokaż*<br/>
+Określa, czy paski sterowania są wyświetlane czy ukryte.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wylicza wszystkie paski kontroli należące do tego okna ramki i ukrywa je lub pokazuje.
+Domyślna implementacja wylicza wszystkie paski formantu należące do tego okna ramki i ukrywa je lub pokazuje.
 
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument
+## <a name="coleserverdoconshowdocument"></a><a name="onshowdocument"></a>COleServerDoc::OnShowDocument
 
-Struktura wywołuje funkcję `OnShowDocument`, gdy dokument serwera musi być ukryty lub pokazany.
+Struktura wywołuje `OnShowDocument` funkcję, gdy dokument serwera musi być ukryty lub wyświetlany.
 
 ```
 virtual void OnShowDocument(BOOL bShow);
@@ -828,32 +828,32 @@ virtual void OnShowDocument(BOOL bShow);
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*<br/>
-Określa, czy interfejs użytkownika do dokumentu ma być pokazywany czy ukryty.
+*bPokaż*<br/>
+Określa, czy interfejs użytkownika dokumentu ma być wyświetlany, czy ukryty.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bShow* ma wartość true, domyślna implementacja aktywuje aplikację serwera, jeśli to konieczne, i powoduje, że aplikacja kontenera przewinie swoje okno, aby element był widoczny. Jeśli *bShow* ma wartość false, implementacja domyślna dezaktywuje element za pomocą wywołania do `OnDeactivate`, a następnie niszczy lub ukrywa wszystkie okna ramowe, które zostały utworzone dla dokumentu, z wyjątkiem pierwszego. Jeśli żadne widoczne dokumenty nie zostaną zachowane, domyślna implementacja spowoduje ukrycie aplikacji serwera.
+Jeśli *bShow* jest TRUE, domyślna implementacja aktywuje aplikację serwera, jeśli to konieczne, i powoduje, że aplikacja kontenera przewinąć okno, tak aby element był widoczny. Jeśli *bShow* jest FALSE, domyślna implementacja dezaktywuje element za pośrednictwem wywołania `OnDeactivate`, a następnie niszczy lub ukrywa wszystkie okna ramki, które zostały utworzone dla dokumentu, z wyjątkiem pierwszego. Jeśli nie pozostają widoczne dokumenty, domyślna implementacja ukrywa aplikację serwera.
 
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument
+## <a name="coleserverdoconupdatedocument"></a><a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument
 
-Wywoływane przez platformę podczas zapisywania dokumentu, który jest elementem osadzonym w dokumencie złożonym.
+Wywoływane przez strukturę podczas zapisywania dokumentu, który jest elementem osadzonym w dokumencie złożonym.
 
 ```
 virtual BOOL OnUpdateDocument();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Niezerowe, jeśli dokument został pomyślnie zaktualizowany; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wywołuje funkcje członkowskie [COleServerDoc:: NotifySaved](#notifysaved) i [COleServerDoc:: SaveEmbedding](#saveembedding) , a następnie oznacza dokument jako czysty. Zastąp tę funkcję, jeśli chcesz przeprowadzić przetwarzanie specjalne podczas aktualizowania elementu osadzonego.
+Domyślna implementacja wywołuje funkcje członkowskie [COleServerDoc::NotifySaved](#notifysaved) i [COleServerDoc::SaveEmbedding,](#saveembedding) a następnie oznacza dokument jako czysty. Zastąd w tej funkcji należy wykonać specjalne przetwarzanie podczas aktualizowania elementu osadzonego.
 
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange
+## <a name="coleserverdocrequestpositionchange"></a><a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange
 
-Wywołaj tę funkcję elementu członkowskiego, aby aplikacja kontenera zmieniła położenie elementu.
+Wywołanie tej funkcji elementu członkowskiego, aby aplikacja kontenera zmienić pozycję elementu.
 
 ```
 void RequestPositionChange(LPCRECT lpPosRect);
@@ -862,15 +862,15 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Wskaźnik do struktury `RECT` lub obiektu `CRect` zawierającego nowe położenie elementu.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu zawierającego nową pozycję elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana (w połączeniu z `UpdateAllItems`), gdy zmienią się dane w miejscu aktywnym. Po tym wywołaniu kontener może lub nie może wykonać zmiany przez wywołanie `OnSetItemRects`. Pozycja w wyniku może się różnić od żądanego.
+Ta funkcja jest zwykle wywoływana (w połączeniu z) `UpdateAllItems`po zmianie danych w aktywnym elemencie w miejscu. Po tym wywołaniu kontener może lub nie `OnSetItemRects`może wykonać zmiany, wywołując . Wynikowe położenie może się różnić od żądanej.
 
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding
+## <a name="coleserverdocsaveembedding"></a><a name="saveembedding"></a>COleServerDoc::SaveEmbedding
 
-Wywołaj tę funkcję, aby poinformować aplikację kontenera o zapisaniu osadzonego obiektu.
+Wywołanie tej funkcji, aby poinformować aplikację kontenera, aby zapisać obiekt osadzony.
 
 ```
 void SaveEmbedding();
@@ -878,11 +878,11 @@ void SaveEmbedding();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana automatycznie z `OnUpdateDocument`. Należy zauważyć, że ta funkcja powoduje aktualizację elementu na dysku, więc jest zazwyczaj wywoływana tylko w wyniku określonej akcji użytkownika.
+Ta funkcja jest wywoływana automatycznie z . `OnUpdateDocument` Należy zauważyć, że ta funkcja powoduje, że element ma być aktualizowany na dysku, więc jest zwykle wywoływana tylko w wyniku akcji określonego użytkownika.
 
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy
+## <a name="coleserverdocscrollcontainerby"></a><a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy
 
-Wywołaj funkcję elementu członkowskiego `ScrollContainerBy`, aby przewijać dokument kontenera o ilość w pikselach, wskazanych przez `sizeScroll`.
+Wywołanie `ScrollContainerBy` funkcji elementu członkowskiego, aby przewinąć dokument kontenera `sizeScroll`o kwotę, w pikselach, wskazywanych przez .
 
 ```
 BOOL ScrollContainerBy(CSize sizeScroll);
@@ -890,20 +890,20 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 ### <a name="parameters"></a>Parametry
 
-*sizeScroll*<br/>
-Wskazuje, jak daleko jest dokument kontenera do przewinięcia.
+*rozmiarScroll*<br/>
+Wskazuje, jak daleko dokument kontenera ma być przewijany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości dodatnie oznaczają przewijanie w dół i w prawo; wartości ujemne oznaczają przewijanie w górę i w lewo.
+Wartości dodatnie wskazują przewijanie w dół i w prawo; wartości ujemne wskazują przewijanie w górę i w lewo.
 
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems
+## <a name="coleserverdocupdateallitems"></a><a name="updateallitems"></a>COleServerDoc::UpdateAllItems
 
-Wywołaj tę funkcję, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
+Wywołanie tej funkcji, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
 
 ```
 void UpdateAllItems(
@@ -915,35 +915,35 @@ void UpdateAllItems(
 
 ### <a name="parameters"></a>Parametry
 
-*pSender*<br/>
-Wskaźnik do elementu, który zmodyfikował dokument, lub wartość NULL, jeśli wszystkie elementy mają zostać zaktualizowane.
+*pSender (nadawca)*<br/>
+Wskaźnik do elementu, który zmodyfikował dokument, lub NULL, jeśli wszystkie elementy mają zostać zaktualizowane.
 
-*lHint*<br/>
-Zawiera informacje na temat modyfikacji.
+*Lhint*<br/>
+Zawiera informacje o modyfikacji.
 
-*pHint*<br/>
+*Phint*<br/>
 Wskaźnik do obiektu przechowującego informacje o modyfikacji.
 
 *nDrawAspect*<br/>
 Określa sposób rysowania elementu. Jest to wartość z wyliczenia DVASPECT. Ten parametr może mieć jedną z następujących wartości:
 
-- Element DVASPECT_CONTENT jest reprezentowany w taki sposób, że może być wyświetlany jako osadzony obiekt wewnątrz jego kontenera.
+- DVASPECT_CONTENT Element jest reprezentowany w taki sposób, że może być wyświetlany jako obiekt osadzony wewnątrz jego kontenera.
 
-- Element DVASPECT_THUMBNAIL jest renderowany w reprezentacji "miniatury", dzięki czemu będzie można go wyświetlić w narzędziu do przeglądania.
+- DVASPECT_THUMBNAIL Element jest renderowany w reprezentacji "miniatury", dzięki czemu może być wyświetlany w narzędziu do przeglądania.
 
-- Element DVASPECT_ICON jest reprezentowany przez ikonę.
+- DVASPECT_ICON Element jest reprezentowany przez ikonę.
 
-- Element DVASPECT_DOCPRINT jest reprezentowany tak, jakby był wydrukowany przy użyciu polecenia Drukuj z menu plik.
+- DVASPECT_DOCPRINT Element jest reprezentowany tak, jakby był drukowany za pomocą polecenia Drukuj z menu Plik.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zazwyczaj wywoływana po zmianie dokumentu serwera przez użytkownika. Jeśli element OLE jest połączony z dokumentem z automatycznym łączem, element zostanie zaktualizowany w celu odzwierciedlenia zmian. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC wywoływana jest funkcja członkowska [Onchanga](../../mfc/reference/coleclientitem-class.md#onchange) `COleClientItem`.
+Zazwyczaj wywołanie tej funkcji po zmianie przez użytkownika dokumentu serwera. Jeśli element OLE jest połączony z dokumentem z automatycznym łączem, element jest aktualizowany w celu odzwierciedlenia zmian. W aplikacjach kontenera napisanych za pomocą biblioteki klas `COleClientItem` Microsoft Foundation wywoływana jest funkcja elementu członkowskiego [OnChange.](../../mfc/reference/coleclientitem-class.md#onchange)
 
-Ta funkcja wywołuje `OnUpdate` funkcję członkowską dla każdego z elementów dokumentu z wyjątkiem elementu wysyłającego, przekazując *pHint*, *lHint*i *nDrawAspect*. Te parametry służą do przekazywania informacji o zmianach wprowadzonych do dokumentu. Możesz kodować informacje przy użyciu *lHint* lub zdefiniować klasę pochodną `CObject`, aby przechowywać informacje o zmianach i przekazać obiekt tej klasy przy użyciu *pHint*. Przesłoń `OnUpdate` funkcję członkowską w klasie pochodnej `COleServerItem`, aby zoptymalizować aktualizację poszczególnych elementów w zależności od tego, czy prezentacja została zmieniona.
+Ta funkcja `OnUpdate` wywołuje funkcję elementu członkowskiego dla każdego elementu dokumentu z wyjątkiem elementu wysyłającego, przekazując *pHint*, *lHint*i *nDrawAspect*. Te parametry służą do przekazywania informacji do elementów dotyczących modyfikacji wprowadzonych w dokumencie. Można zakodować informacje za pomocą *lHint* lub można zdefiniować klasę pochodną `CObject`do przechowywania informacji o modyfikacjach i przekazywania obiektu tej klasy za pomocą *pHint*. Zastąpić `OnUpdate` funkcję `COleServerItem`elementu członkowskiego w klasie pochodnej, aby zoptymalizować aktualizację każdego elementu w zależności od tego, czy jego prezentacja została zmieniona.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDocument](../../mfc/reference/coledocument-class.md)<br/>

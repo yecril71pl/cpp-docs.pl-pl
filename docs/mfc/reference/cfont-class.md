@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 36fd469b182d5f3e0d3449112d04c1a8623d7526
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418623"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373844"
 ---
 # <a name="cfont-class"></a>Klasa CFont
 
-Hermetyzuje czcionkę interfejsu urządzenia graficznego (GDI) systemu Windows i udostępnia funkcje elementów członkowskich do manipulowania czcionką.
+Hermetyzuje czcionkę interfejsu urządzenia graficznego systemu Windows (GDI) i udostępnia funkcje członkowskie do manipulowania czcionką.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,54 +37,54 @@ Hermetyzuje czcionkę interfejsu urządzenia graficznego (GDI) systemu Windows i
 class CFont : public CGdiObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CFont:: CFont](#cfont)|Konstruuje obiekt `CFont`.|
+|[CFont::CFont](#cfont)|Konstruuje `CFont` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CFont:: isfont](#createfont)|Inicjuje `CFont` o określonej charakterystyce.|
-|[CFont:: CreateFontIndirect](#createfontindirect)|Inicjuje obiekt `CFont` o cechach podanym w strukturze `LOGFONT`.|
-|[CFont:: CreatePointFont](#createpointfont)|Inicjuje `CFont` o określonej wysokości, mierzoną w dziesiątych punktach i kroju pisma.|
-|[CFont:: CreatePointFontIndirect](#createpointfontindirect)|Analogicznie jak `CreateFontIndirect`, z tą różnicą, że wysokość czcionki jest mierzona w dziesiątych punktach, a nie w jednostkach logicznych.|
-|[CFont:: FromHandle](#fromhandle)|Zwraca wskaźnik do obiektu `CFont`, gdy zostanie nadana HFONT systemu Windows.|
-|[CFont:: GetLogFont](#getlogfont)|Wypełnia `LOGFONT` informacjami o czcionce logicznej dołączonej do obiektu `CFont`.|
+|[CFont::CreateFont](#createfont)|Inicjuje `CFont` a z określonymi cechami.|
+|[CFont::CreateFontIndirect](#createfontindirect)|Inicjuje `CFont` obiekt o właściwościach `LOGFONT` podanych w strukturze.|
+|[CFont::CreatePointFont](#createpointfont)|Inicjuje `CFont` a o określonej wysokości, mierzona w dziesiątych części punktu i kroju pisma.|
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|Tak `CreateFontIndirect` samo, jak z tą różnicą, że wysokość czcionki jest mierzona w dziesiątych częściach punktu, a nie w jednostkach logicznych.|
+|[CFont::OdHandle](#fromhandle)|Zwraca wskaźnik do `CFont` obiektu, gdy podane systemu Windows HFONT.|
+|[CFont::GetLogFont](#getlogfont)|Wypełnia a `LOGFONT` informacjami o czcionce logicznej dołączonej `CFont` do obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CFont:: operator HFONT](#operator_hfont)|Zwraca dojście czcionki interfejsu GDI systemu Windows dołączone do obiektu `CFont`.|
+|[CFont::operator HFONT](#operator_hfont)|Zwraca uchwyt czcionki GDI systemu `CFont` Windows dołączony do obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć obiektu `CFont`, Utwórz obiekt `CFont` i Dołącz do niego czcionkę systemu Windows z CreateFontIndirect [,](#createfont) [CreatePointFont](#createpointfont)lub [](#createfontindirect) [CreatePointFontIndirect](#createpointfontindirect), a następnie użyj funkcji składowych obiektu do manipulowania czcionką.
+Aby użyć `CFont` obiektu, `CFont` należy skonstruować obiekt i dołączyć do niego czcionkę systemu Windows za pomocą [funkcji CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont)lub [CreatePointFontIndirect](#createpointfontindirect), a następnie użyj funkcji elementów członkowskich obiektu do manipulowania czcionką.
 
-Funkcje `CreatePointFont` i `CreatePointFontIndirect` są często łatwiejsze do użycia niż `CreateFont` lub `CreateFontIndirect`, ponieważ wykonują konwersję na wysokość czcionki od rozmiaru punktu do jednostek logicznych automatycznie.
+`CreatePointFont` Funkcje `CreatePointFontIndirect` te są często łatwiejsze `CreateFont` `CreateFontIndirect` w użyciu niż lub od momentu automatycznego konwersji dla wysokości czcionki z rozmiaru punktu na jednostki logiczne.
 
-Aby uzyskać więcej informacji na temat `CFont`, zobacz [grafika Objects](../../mfc/graphic-objects.md).
+Aby uzyskać `CFont`więcej informacji na temat , zobacz [Obiekty graficzne](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CGdiObject](../../mfc/reference/cgdiobject-class.md)
+[Cgdiobject](../../mfc/reference/cgdiobject-class.md)
 
 `CFont`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin. h
+**Nagłówek:** afxwin.h
 
-##  <a name="cfont"></a>CFont:: CFont
+## <a name="cfontcfont"></a><a name="cfont"></a>CFont::CFont
 
-Konstruuje obiekt `CFont`.
+Konstruuje `CFont` obiekt.
 
 ```
 CFont();
@@ -92,15 +92,15 @@ CFont();
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wyników musi być zainicjowany przy użyciu `CreateFont`, `CreateFontIndirect`, `CreatePointFont`lub `CreatePointFontIndirect`, zanim będzie można go użyć.
+Wynikowy obiekt musi zostać `CreateFont`zainicjowany `CreatePointFont`za `CreatePointFontIndirect` pomocą , `CreateFontIndirect`, lub przed jego użyciem.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>CFont:: isfont
+## <a name="cfontcreatefont"></a><a name="createfont"></a>CFont::CreateFont
 
-Inicjuje obiekt `CFont` o określonej charakterystyce.
+Inicjuje `CFont` obiekt o określonych właściwościach.
 
 ```
 BOOL CreateFont(
@@ -122,79 +122,79 @@ BOOL CreateFont(
 
 ### <a name="parameters"></a>Parametry
 
-*nHeight*<br/>
-Określa żądaną wysokość (w jednostkach logicznych) czcionki. Aby uzyskać opis, zobacz `lfHeight` składową struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)w Windows SDK. Wartość bezwzględna *nHeight* nie może przekraczać 16 384 jednostek urządzeń po przeprowadzeniu konwersji. W przypadku wszystkich porównań, Maper czcionek szuka największej czcionki, która nie przekracza żądanego rozmiaru lub najmniejszej czcionki, jeśli wszystkie czcionki przekroczą żądany rozmiar.
+*nFeksja*<br/>
+Określa żądaną wysokość (w jednostkach logicznych) czcionki. Opis `lfHeight` można znaleźć w strukturze [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)w zestaw windows SDK. Wartość bezwzględna *nHeight* nie może przekraczać 16 384 jednostek urządzenia po jego konwersji. Dla wszystkich porównań wysokości mapera czcionek szuka największej czcionki, która nie przekracza żądanego rozmiaru lub najmniejszej czcionki, jeśli wszystkie czcionki przekraczają żądany rozmiar.
 
-*nWidth*<br/>
-Określa średnią szerokość (w jednostkach logicznych) znaków czcionki. Jeśli *nWidth* ma wartość 0, współczynnik proporcji urządzenia zostanie dopasowany do współczynnika proporcji dla dostępnych czcionek, aby znaleźć najbliższy odpowiednik, który jest określany przez wartość bezwzględną różnicy.
+*nWidth (ww.*<br/>
+Określa średnią szerokość (w jednostkach logicznych) znaków czcionki. Jeśli *nWidth* wynosi 0, współczynnik proporcji urządzenia zostanie dopasowany do współczynnika proporcji digitalizacji dostępnych czcionek, aby znaleźć najbliższe dopasowanie, które jest określane przez wartość bezwzględną różnicy.
 
-*nEscapement*<br/>
-Określa kąt (w jednostkach o 0,1 stopni) między wektorem ucieczki i osią x powierzchni wyświetlania. Wektor ucieczki to linia przez początek pierwszego i ostatniego znaku w wierszu. Kąt jest mierzony w lewo od osi x. Aby uzyskać więcej informacji, zobacz `lfEscapement` składową w strukturze `LOGFONT` w Windows SDK.
+*nScapement (pejzaż)*<br/>
+Określa kąt (w jednostkach 0,1 stopnia) między wektorem wychwytu a osią x powierzchni wyświetlacza. Wektor wychwytu jest linią przez początki pierwszego i ostatniego typu w wierszu. Kąt jest mierzony w kierunku przeciwnym do ruchu wskazówek zegara od osi x. Aby `lfEscapement` uzyskać więcej `LOGFONT` informacji, zobacz element członkowski w strukturze w programie Windows SDK.
 
-*nOrientation*<br/>
-Określa kąt (w jednostkach o 0,1 stopni) między linią bazową znaku a osią x. Kąt jest mierzony w lewo od osi x dla systemów współrzędnych, w których kierunek y jest wyłączony i w prawo od osi x dla systemów współrzędnych, w których kierunek y jest ustawiony.
+*nOrientacja*<br/>
+Określa kąt (w jednostkach 0,1 stopnia) między linią bazową znaku a osią x. Kąt jest mierzony w kierunku przeciwnym do ruchu wskazówek zegara od osi x dla układów współrzędnych, w których kierunek y jest w dół i zgodnie z ruchem wskazówek zegara od osi x dla układów współrzędnych, w których kierunek y jest w górę.
 
-*nWeight*<br/>
-Określa grubość czcionki (w Inked pikselach na 1000). Aby uzyskać więcej informacji, zobacz *lfWeight* w strukturze `LOGFONT` w Windows SDK. Podane wartości są przybliżone; rzeczywisty wygląd zależy od kroju pisma. Niektóre czcionki mają tylko FW_NORMAL, FW_REGULAR i FW_BOLD wag. Jeśli FW_DONTCARE jest określony, zostanie użyta domyślna waga.
+*n Waga*<br/>
+Określa wagę czcionki (w pikselach odmówionych na 1000). Aby uzyskać więcej informacji, `LOGFONT` zobacz element członkowski *lfWeight* w strukturze w programie Windows SDK. Opisane wartości są przybliżone; rzeczywisty wygląd zależy od kroju pisma. Niektóre czcionki mają tylko FW_NORMAL, FW_REGULAR i FW_BOLD wagi. Jeśli określono FW_DONTCARE, używana jest waga domyślna.
 
-*bItalic*<br/>
+*bWłaski*<br/>
 Określa, czy czcionka jest kursywą.
 
-*bUnderline*<br/>
+*bPodkreślać*<br/>
 Określa, czy czcionka jest podkreślona.
 
-*cStrikeOut*<br/>
-Określa, czy znaki w czcionce są wykreślone. Określa czcionkę przekreśloną, jeśli jest ustawiona na wartość różną od zera.
+*cStrikeOut (Polski)*<br/>
+Określa, czy znaki czcionki są wykreślane. Określa czcionkę przekreśloną, jeśli jest ustawiona na wartość niezerową.
 
-*nCharSet*<br/>
-Określa znak czcionki setSee element członkowski `lfCharSet` w strukturze `LOGFONT` w Windows SDK dla listy wartości.
+*nCharSet (Zestaw chybianie)*<br/>
+Określa zestaw znaków `lfCharSet` czcionkiZjej element członkowski w `LOGFONT` strukturze zestawu Windows SDK, aby uzyskać listę wartości.
 
 Zestaw znaków OEM jest zależny od systemu.
 
-Czcionki z innymi zestawami znaków mogą istnieć w systemie. Aplikacja, która używa czcionki z nieznanego zestawu znaków, nie może próbować tłumaczyć ani interpretować ciągów, które mają być renderowane z tą czcionką. Zamiast tego ciągi powinny być przekazywane bezpośrednio do sterownika urządzenia wyjściowego.
+Czcionki z innymi zestawami znaków mogą istnieć w systemie. Aplikacja, która używa czcionki z nieznanym zestawem znaków, nie może próbować tłumaczyć ani interpretować ciągów, które mają być renderowane za pomocą tej czcionki. Zamiast tego ciągi powinny być przekazywane bezpośrednio do sterownika urządzenia wyjściowego.
 
-Funkcja mapowania czcionek nie używa wartości DEFAULT_CHARSET. Aplikacja może używać tej wartości, aby zezwalać na pełne opisywanie czcionki logicznej przez nazwę i rozmiar czcionki. Jeśli czcionka o podanej nazwie nie istnieje, czcionka z dowolnego zestawu znaków może zostać zastąpiona dla określonej czcionki. Aby uniknąć nieoczekiwanych wyników, aplikacje powinny używać wartości DEFAULT_CHARSET oszczędnie.
+Maper czcionek nie używa wartości DEFAULT_CHARSET. Aplikacja może użyć tej wartości, aby umożliwić nazwę i rozmiar czcionki, aby w pełni opisać czcionkę logiczną. Jeśli czcionka o określonej nazwie nie istnieje, czcionkę z dowolnego zestawu znaków można zastąpić określoną czcionką. Aby uniknąć nieoczekiwanych wyników, aplikacje powinny używać wartości DEFAULT_CHARSET oszczędnie.
 
-*nOutPrecision*<br/>
-Określa żądaną precyzję wyjściową. Precyzja wyjściowa określa, jak blisko dane wyjściowe muszą być zgodne z wymaganą wysokością czcionki, szerokością, orientacją znaków, ucieczką i szerokością. Aby uzyskać listę wartości i uzyskać więcej informacji, zobacz element członkowski `lfOutPrecision` w strukturze `LOGFONT` w Windows SDK.
+*nOutPrecision (OutPrecision)*<br/>
+Określa żądaną dokładność wyjścia. Dokładność wyjściowa określa, jak ściśle dane wyjściowe muszą odpowiadać żądanej czcionce wysokość, szerokość, orientacja znaku, wychwyt i podział. Zobacz `lfOutPrecision` element członkowski w `LOGFONT` strukturze w zestawie Windows SDK, aby uzyskać listę wartości i więcej informacji.
 
-*nClipPrecision*<br/>
-Określa żądaną precyzję przycinania. Precyzja przycinania definiuje sposób obcinania znaków, które są częściowo poza regionem przycinania. Aby uzyskać listę wartości, zobacz element członkowski `lfClipPrecision` w strukturze `LOGFONT` w Windows SDK.
+*nClipPrecision (NClipPrecision)*<br/>
+Określa żądaną dokładność przycinania. Dokładność przycinania definiuje sposób przycinania znaków, które są częściowo poza obszarem przycinania. Zobacz `lfClipPrecision` element członkowski w `LOGFONT` strukturze w zestawie Windows SDK, aby uzyskać listę wartości.
 
-Aby można było użyć osadzonej czcionki tylko do odczytu, aplikacja musi określić CLIP_ENCAPSULATE.
+Aby użyć osadzonej czcionki tylko do odczytu, aplikacja musi określić CLIP_ENCAPSULATE.
 
-Aby osiągnąć spójną rotację czcionek urządzenia, TrueType i Vector, aplikacja może użyć operatora OR do łączenia wartości CLIP_LH_ANGLES z dowolną inną wartością *nClipPrecision* . Jeśli ustawiono bit CLIP_LH_ANGLES, obroty dla wszystkich czcionek są zależne od tego, czy orientacja układu współrzędnych jest pozostawiona, czy w prawo. (Aby uzyskać więcej informacji na temat orientacji systemów współrzędnych, zobacz opis parametru *nOrientation* ). Jeśli CLIP_LH_ANGLES nie jest ustawiona, czcionki urządzenia zawsze są obracane w lewo, ale obrót innych czcionek zależy od orientacji układu współrzędnych.
+Aby osiągnąć spójny obrót czcionek urządzenia, TrueType i wektorowych, aplikacja może użyć operatora OR do łączenia wartości CLIP_LH_ANGLES z dowolną z innych wartości *nClipPrecision.* Jeśli bit CLIP_LH_ANGLES jest ustawiony, obrót dla wszystkich czcionek zależy od tego, czy orientacja układu współrzędnych jest leworęczna czy praworęczna. (Aby uzyskać więcej informacji na temat orientacji układów współrzędnych, zobacz opis parametru *nOrientation).* Jeśli CLIP_LH_ANGLES nie jest ustawiona, czcionki urządzenia zawsze obracają się w kierunku przeciwnym do ruchu wskazówek zegara, ale obrót innych czcionek zależy od orientacji układu współrzędnych.
 
-*nQuality*<br/>
-Określa jakość wyjściową czcionki, która określa, jak starannie interfejs GDI musi próbować dopasować atrybuty czcionki logicznej do tych z rzeczywistej czcionki fizycznej. Aby uzyskać listę wartości, zobacz element członkowski `lfQuality` w strukturze `LOGFONT` w Windows SDK.
+*nWzamienność*<br/>
+Określa jakość wyjściową czcionki, która określa, jak dokładnie GDI musi próbować dopasować atrybuty czcionki logicznej do atrybutów rzeczywistej czcionki fizycznej. Zobacz `lfQuality` element członkowski w `LOGFONT` strukturze w zestawie Windows SDK, aby uzyskać listę wartości.
 
-*nPitchAndFamily*<br/>
-Określa gęstość i rodzinę czcionki. Aby uzyskać listę wartości i uzyskać więcej informacji, zobacz element członkowski `lfPitchAndFamily` w strukturze `LOGFONT` w Windows SDK.
+*nPitchAndRodzina*<br/>
+Określa wysokość i rodzinę czcionki. Zobacz `lfPitchAndFamily` element członkowski w `LOGFONT` strukturze w zestawie Windows SDK, aby uzyskać listę wartości i więcej informacji.
 
-*lpszFacename*<br/>
-`CString` lub wskaźnik do ciągu zakończonego wartością null, który określa nazwę kroju czcionki. Długość tego ciągu nie może przekraczać 30 znaków. Funkcja [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) systemu Windows może służyć do wyliczania wszystkich aktualnie dostępnych czcionek. Jeśli *lpszFacename* ma wartość null, w interfejsie GDI używany jest krój niezależny od urządzenia.
+*lpszNazeń*<br/>
+A `CString` lub wskaźnik do ciągu zakończonego wartością null, który określa nazwę czcionki kroju pisma. Długość tego ciągu nie może przekraczać 30 znaków. Funkcja [EnumFontFamilies systemu](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) Windows może być używana do wyliczania wszystkich aktualnie dostępnych czcionek. Jeśli *lpszFacename* ma wartość NULL, GDI używa czcionki niezależnej od urządzenia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
 Czcionkę można następnie wybrać jako czcionkę dla dowolnego kontekstu urządzenia.
 
-Funkcja `CreateFont` nie tworzy nowej czcionki interfejsu GDI systemu Windows. Po prostu wybiera najbliższe dopasowanie z czcionek fizycznych dostępnych dla GDI.
+Funkcja `CreateFont` nie tworzy nowej czcionki GDI systemu Windows. Wybiera tylko najbliższe dopasowanie z fizycznych czcionek dostępnych dla GDI.
 
-Aplikacje mogą używać ustawień domyślnych dla większości parametrów podczas tworzenia czcionki logicznej. Parametry, które powinny mieć zawsze określone wartości, to *nHeight* i *lpszFacename*. Jeśli *nHeight* i *lpszFacename* nie są ustawiane przez aplikację, tworzona czcionka logiczna jest zależna od urządzenia.
+Aplikacje mogą używać ustawień domyślnych dla większości parametrów podczas tworzenia czcionki logicznej. Parametry, które powinny być zawsze podane konkretne wartości są *nHeight* i *lpszFacename*. Jeśli *nHeight* i *lpszFacename* nie są ustawiane przez aplikację, czcionka logiczna, która jest tworzona jest zależna od urządzenia.
 
-Po zakończeniu pracy z obiektem `CFont` utworzonym przez funkcję `CreateFont` Użyj `CDC::SelectObject`, aby wybrać inną czcionkę w kontekście urządzenia, a następnie usuń obiekt `CFont`, który nie jest już wymagany.
+Po `CFont` zakończeniu z obiektu utworzonego przez `CreateFont` funkcję, należy użyć, `CDC::SelectObject` aby wybrać `CFont` inną czcionkę w kontekście urządzenia, a następnie usunąć obiekt, który nie jest już potrzebny.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>CFont:: CreateFontIndirect
+## <a name="cfontcreatefontindirect"></a><a name="createfontindirect"></a>CFont::CreateFontIndirect
 
-Inicjuje obiekt `CFont` o cechach podanym w strukturze [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw).
+Inicjuje `CFont` obiekt o właściwościach podanych w strukturze [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 ```
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -203,27 +203,27 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-Wskazuje strukturę `LOGFONT`, która definiuje charakterystykę czcionki logicznej.
+Wskazuje strukturę definiują `LOGFONT` właściwości czcionki logicznej.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Czcionkę można następnie wybrać jako bieżącą czcionkę dla każdego urządzenia.
+Czcionkę można następnie wybrać jako bieżącą czcionkę dla dowolnego urządzenia.
 
-Ta czcionka ma cechy określone w strukturze [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) . W przypadku wybrania czcionki przy użyciu funkcji "elementu członkowskiego" [przechwytywania:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) , funkcja mapowania czcionek GDI próbuje dopasować czcionkę logiczną do istniejącej czcionki fizycznej. Jeśli funkcja mapowania czcionek nie może znaleźć dokładnego dopasowania dla czcionki logicznej, zapewnia alternatywną czcionkę, której cechy są zgodne z wieloma żądanymi właściwościami, jak to możliwe.
+Ta czcionka ma cechy określone w strukturze [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw) Po wybraniu czcionki za pomocą funkcji elementu członkowskiego [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) maper czcionek GDI próbuje dopasować czcionkę logiczną do istniejącej czcionki fizycznej. Jeśli mapera czcionek nie może znaleźć dokładnego dopasowania dla czcionki logicznej, udostępnia alternatywną czcionkę, której cechy odpowiadają jak największej liczby żądanych cech.
 
-Gdy nie potrzebujesz już obiektu `CFont` utworzonego przez funkcję `CreateFontIndirect`, użyj `CDC::SelectObject`, aby wybrać inną czcionkę w kontekście urządzenia, a następnie usuń obiekt `CFont`, który nie jest już potrzebny.
+Jeśli `CFont` nie potrzebujesz już obiektu `CreateFontIndirect` utworzonego `CDC::SelectObject` przez funkcję, użyj, aby wybrać inną `CFont` czcionkę w kontekście urządzenia, a następnie usuń obiekt, który nie jest już potrzebny.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
-##  <a name="createpointfont"></a>CFont:: CreatePointFont
+## <a name="cfontcreatepointfont"></a><a name="createpointfont"></a>CFont::CreatePointFont
 
-Ta funkcja zapewnia prosty sposób tworzenia czcionki o określonym kroju i rozmiarze punktu.
+Ta funkcja umożliwia prosty sposób tworzenia czcionki o określonym kroju pisma i rozmiarze punktu.
 
 ```
 BOOL CreatePointFont(
@@ -234,32 +234,32 @@ BOOL CreatePointFont(
 
 ### <a name="parameters"></a>Parametry
 
-*nPointSize*<br/>
-Żądana wysokość czcionki w dziesiątych punktach. (Na przykład Przekaż 120, aby zażądać czcionki 12-punktowej).
+*nPointSize (rozmiar)*<br/>
+Żądana wysokość czcionki w dziesiątych częściach punktu. (Na przykład przekaż 120, aby zażądać czcionki 12-punktowej).
 
-*lpszFaceName*<br/>
-`CString` lub wskaźnik do ciągu zakończonego wartością null, który określa nazwę kroju czcionki. Długość tego ciągu nie może przekraczać 30 znaków. Funkcja EnumFontFamilies systemu Windows może służyć do wyliczania wszystkich aktualnie dostępnych czcionek. Jeśli *lpszFaceName* ma wartość null, w interfejsie GDI używany jest krój niezależny od urządzenia.
+*lpszFaceName (Nazwa)*<br/>
+A `CString` lub wskaźnik do ciągu zakończonego wartością null, który określa nazwę czcionki kroju pisma. Długość tego ciągu nie może przekraczać 30 znaków. Funkcja Windows 'EnumFontFamilies może być używana do wyliczenia wszystkich aktualnie dostępnych czcionek. Jeśli *lpszFaceName* ma wartość NULL, GDI używa czcionki niezależnej od urządzenia.
 
-*Domeny*<br/>
-Wskaźnik do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , który ma zostać użyty do przekonwertowania wysokości w *nPointSize* na jednostki logiczne. Jeśli wartość jest równa NULL, do konwersji jest używany kontekst urządzenia ekranu.
+*Pdc*<br/>
+Wskaźnik do obiektu [CDC,](../../mfc/reference/cdc-class.md) który ma być używany do konwersji wysokości w *nPointSize* na jednostki logiczne. Jeśli null, kontekst urządzenia ekranu jest używany do konwersji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera, jeśli się powiedzie, w przeciwnym razie 0.
+Nonzero jeśli się powiedzie, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Automatycznie konwertuje wysokość w *nPointSize* na jednostki logiczne przy użyciu obiektu przerzutowania wskazywanego przez *PDC*.
+Automatycznie konwertuje wysokość w *nPointSize* do jednostek logicznych przy użyciu obiektu CDC wskazanego przez *pDC*.
 
-Po zakończeniu pracy z obiektem `CFont` utworzonym przez funkcję `CreatePointFont`, najpierw wybierz czcionkę z kontekstu urządzenia, a następnie usuń obiekt `CFont`.
+Po zakończeniu z `CFont` obiektu utworzonego przez `CreatePointFont` funkcję, najpierw wybierz czcionkę z `CFont` kontekstu urządzenia, a następnie usuń obiekt.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]
 
-##  <a name="createpointfontindirect"></a>CFont:: CreatePointFontIndirect
+## <a name="cfontcreatepointfontindirect"></a><a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect
 
-Ta funkcja jest taka sama jak [CreateFontIndirect](#createfontindirect) , z tą różnicą, że `lfHeight` członek `LOGFONT` jest interpretowany w dziesiątych punktach, a nie w jednostkach urządzeń.
+Ta funkcja jest taka sama jak [CreateFontIndirect,](#createfontindirect) z tą różnicą, `lfHeight` `LOGFONT` że element członkowski jest interpretowany w dziesiątych jednostek punktu, a nie urządzenia.
 
 ```
 BOOL CreatePointFontIndirect(
@@ -270,28 +270,28 @@ BOOL CreatePointFontIndirect(
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-Wskazuje strukturę [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , która definiuje charakterystykę czcionki logicznej. `lfHeight` składową struktury `LOGFONT` jest mierzona w dziesiątych punktach, a nie w jednostkach logicznych. (Na przykład ustaw `lfHeight` na 120, aby zażądać czcionki 12-punktowej).
+Wskazuje strukturę [LOGFONT,](/windows/win32/api/wingdi/ns-wingdi-logfontw) która definiuje cechy czcionki logicznej. Element `lfHeight` członkowski `LOGFONT` struktury jest mierzony w dziesiątych częściach punktu, a nie w jednostkach logicznych. (Na przykład `lfHeight` ustawiona na 120, aby zażądać czcionki 12-punktowej).
 
-*Domeny*<br/>
-Wskaźnik do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , który ma zostać użyty do przekonwertowania wysokości w `lfHeight` na jednostki logiczne. Jeśli wartość jest równa NULL, do konwersji jest używany kontekst urządzenia ekranu.
+*Pdc*<br/>
+Wskaźnik do obiektu [CDC,](../../mfc/reference/cdc-class.md) który ma `lfHeight` być używany do konwersji wysokości na jednostki logiczne. Jeśli null, kontekst urządzenia ekranu jest używany do konwersji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od zera, jeśli się powiedzie, w przeciwnym razie 0.
+Nonzero jeśli się powiedzie, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja automatycznie konwertuje wysokość w `lfHeight` na jednostki logiczne przy użyciu obiektu przerzutowania wskazywanego przez *PDC* przed przekazaniem struktury `LOGFONT` do systemu Windows.
+Ta funkcja automatycznie konwertuje `lfHeight` wysokość na jednostki logiczne przy użyciu obiektu `LOGFONT` CDC wskazywane przez *pDC* przed przekazaniem struktury do systemu Windows.
 
-Po zakończeniu pracy z obiektem `CFont` utworzonym przez funkcję `CreatePointFontIndirect`, najpierw wybierz czcionkę z kontekstu urządzenia, a następnie usuń obiekt `CFont`.
+Po zakończeniu z `CFont` obiektu utworzonego przez `CreatePointFontIndirect` funkcję, najpierw wybierz czcionkę z `CFont` kontekstu urządzenia, a następnie usuń obiekt.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]
 
-##  <a name="fromhandle"></a>CFont:: FromHandle
+## <a name="cfontfromhandle"></a><a name="fromhandle"></a>CFont::OdHandle
 
-Zwraca wskaźnik do obiektu `CFont`, gdy nadaje dojść HFONT do obiektu czcionki GDI systemu Windows.
+Zwraca wskaźnik do `CFont` obiektu po podaniu uchwytu HFONT do obiektu czcionek GDI systemu Windows.
 
 ```
 static CFont* PASCAL FromHandle(HFONT hFont);
@@ -299,24 +299,24 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 
 ### <a name="parameters"></a>Parametry
 
-*hFont*<br/>
-Dojście HFONT do czcionki systemu Windows.
+*hFont ( hFont )*<br/>
+Uchwyt HFONT do czcionki systemu Windows.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu `CFont`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
+Wskaźnik do `CFont` obiektu, jeśli zakończy się pomyślnie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt `CFont` nie jest już dołączony do dojścia, zostanie utworzony i dołączony tymczasowy obiekt `CFont`. Ten tymczasowy `CFont` obiektu jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynności w pętli zdarzeń, podczas gdy wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem wymawiania tego jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
+Jeśli `CFont` obiekt nie jest jeszcze dołączony do `CFont` uchwytu, tworzony i dołączany jest obiekt tymczasowy. Ten `CFont` obiekt tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynny w pętli zdarzeń, w którym to czasie wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem mówienia jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania komunikatu okna.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]
 
-##  <a name="getlogfont"></a>CFont:: GetLogFont
+## <a name="cfontgetlogfont"></a><a name="getlogfont"></a>CFont::GetLogFont
 
-Wywołaj tę funkcję, aby pobrać kopię struktury `LOGFONT` dla `CFont`.
+Wywołanie tej funkcji, aby `LOGFONT` pobrać `CFont`kopię struktury dla .
 
 ```
 int GetLogFont(LOGFONT* pLogFont);
@@ -324,34 +324,34 @@ int GetLogFont(LOGFONT* pLogFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pLogFont*<br/>
-Wskaźnik do struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , aby otrzymać informacje o czcionce.
+*pLogFont (pLogFont)*<br/>
+Wskaźnik do struktury [LOGFONT,](/windows/win32/api/wingdi/ns-wingdi-logfontw) aby otrzymać informacje o czcionce.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli funkcja się powiedzie, w przeciwnym razie 0.
+Nonzero, jeśli funkcja powiedzie się, w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]
 
-##  <a name="operator_hfont"></a>CFont:: operator HFONT
+## <a name="cfontoperator-hfont"></a><a name="operator_hfont"></a>CFont::operator HFONT
 
-Użyj tego operatora, aby uzyskać uchwyt interfejsu GDI systemu Windows dla czcionki dołączonej do obiektu `CFont`.
+Użyj tego operatora, aby uzyskać uchwyt GDI systemu `CFont` Windows czcionki dołączonej do obiektu.
 
 ```
 operator HFONT() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt obiektu czcionki GDI systemu Windows dołączony do `CFont`, jeśli się to powiedzie; w przeciwnym razie wartość NULL.
+Uchwyt obiektu czcionki GDI systemu `CFont` Windows dołączony do jeśli się powiedzie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ ten operator jest automatycznie używany do konwersji z `CFont` na [czcionki i tekst](/windows/win32/gdi/fonts-and-text), można przekazać obiekty `CFont` do funkcji, które oczekują HFONTs.
+Ponieważ ten operator jest automatycznie używany `CFont` do konwersji z [fontów i tekstu,](/windows/win32/gdi/fonts-and-text)można przekazać `CFont` obiekty do funkcji, które oczekują HFONTs.
 
-Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz temat [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
+Aby uzyskać więcej informacji na temat używania obiektów [graficznych,](/windows/win32/gdi/graphic-objects) zobacz Obiekty graficzne w sdk systemu Windows.
 
 ### <a name="example"></a>Przykład
 
@@ -359,6 +359,6 @@ Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

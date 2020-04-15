@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376173"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Klasa CMFCSpinButtonCtrl
 
-`CMFCSpinButtonCtrl` Klasa obsługuje Menedżer wizualnego, który rysuje kontrolkę przycisku pokrętła.
+Klasa `CMFCSpinButtonCtrl` obsługuje menedżera wizualnego, który rysuje formant przycisku pokrętła.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,33 +32,33 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 |Nazwa|Opis|
 |----------|-----------------|
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Domyślny konstruktor.|
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruktor.|
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Odświeża bieżący kontrolka przycisku pokrętła.|
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Odświeża bieżącą kontrolę przycisku pokrętła.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby za pomocą Menedżer wizualnego narysuj kontrolkę przycisku pokrętła w aplikacji, należy zastąpić wszystkie wystąpienia elementu `CSpinButtonCtrl` klasy `CMFCSpinButtonCtrl` klasy.
+Aby użyć menedżera wizualnego, aby narysować formant przycisku `CSpinButtonCtrl` pokrętła `CMFCSpinButtonCtrl` w aplikacji, zastąp wszystkie wystąpienia klasy klasą.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób tworzenia obiektu `CMFCSpinButtonCtrl` klasy i użyć jej `Create` metody.
+W poniższym przykładzie pokazano, jak `CMFCSpinButtonCtrl` utworzyć obiekt `Create` klasy i użyć jej metody.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)
+[CSpinButtonCtrl (Polski)](../../mfc/reference/cspinbuttonctrl-class.md)
 
 [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
@@ -66,9 +66,9 @@ Poniższy przykład przedstawia sposób tworzenia obiektu `CMFCSpinButtonCtrl` k
 
 **Nagłówek:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw
 
-Odświeża bieżący kontrolka przycisku pokrętła.
+Odświeża bieżącą kontrolę przycisku pokrętła.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -76,14 +76,14 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje `CMFCSpinButtonCtrl::OnPaint` metody, aby obsłużyć [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) komunikat i że metoda z kolei wywołuje to `CMFCSpinButtonCtrl::OnDraw` metody. Zastępuje tę metodę, aby dostosować sposób, w ramach rysuje kontrolka przycisku pokrętła.
+Struktura wywołuje `CMFCSpinButtonCtrl::OnPaint` metodę do obsługi [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) wiadomości i tej `CMFCSpinButtonCtrl::OnDraw` metody z kolei wywołuje tę metodę. Zastąp tę metodę, aby dostosować sposób, w jaki struktura rysuje formant przycisku pokrętła.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

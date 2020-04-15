@@ -140,134 +140,135 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376204"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 
-Obrazy na pasku narzędzi. Klasa `CMFCToolBarImages` zarządza obrazami pasków narzędzi załadowanymi z zasobów aplikacji lub z plików.
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** w instalacji programu Visual Studio.
+Obrazy na pasku narzędzi. Klasa `CMFCToolBarImages` zarządza obrazami paska narzędzi załadowanymi z zasobów aplikacji lub z plików.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+
 ## <a name="syntax"></a>Składnia
 
 ```
 class CMFCToolBarImages : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Konstruuje obiekt `CMFCToolBarImages`.|
+|[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Konstruuje `CMFCToolBarImages` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||
-|[CMFCToolBarImages:: addicon](#addicon)|Dodaje ikonę do obrazów pasków narzędzi.|
-|[CMFCToolBarImages:: AddImage](#addimage)|Dodaje mapę bitową do obrazów pasków narzędzi.|
-|[CMFCToolBarImages:: CleanUp](#cleanup)||
-|[CMFCToolBarImages:: Clear](#clear)|Zwalnia zasoby systemowe, które zostały przydzieloną do tego obiektu.|
-|[CMFCToolBarImages::ConvertTo32Bits](#convertto32bits)|Konwertuje podkreślone mapy bitowe na obrazy 32 BPP.|
+|[CMFCToolBarImages::Addicon](#addicon)|Dodaje ikonę do obrazów paska narzędzi.|
+|[CMFCToolBarImages::AddImage](#addimage)|Dodaje bitmapę do obrazów paska narzędzi.|
+|[CMFCToolBarImages::CleanUp](#cleanup)||
+|[CMFCToolBarImages::Wyczyść](#clear)|Zwalnia zasoby systemowe, które zostały przydzielone do tego obiektu.|
+|[CMFCToolBarImages::ConvertTo32Bits](#convertto32bits)|Konwertuje podkreślone mapy bitowe na 32 obrazy bpp.|
 |[CMFCToolBarImages::CopyImageToClipboard](#copyimagetoclipboard)||
-|[CMFCToolBarImages:: CopyTo](#copyto)||
-|[CMFCToolBarImages::CreateFromImageList](#createfromimagelist)|Inicjuje obrazy pasków narzędzi z listy obrazów ( [Klasa korzystanie CImageList](../../mfc/reference/cimagelist-class.md)).|
+|[CMFCToolBarImages::CopyTo](#copyto)||
+|[CMFCToolBarImages::CreateFromImageList](#createfromimagelist)|Inicjuje obrazy paska narzędzi z listy obrazów ( [CImageList Class](../../mfc/reference/cimagelist-class.md)).|
 |[CMFCToolBarImages::CreateRegionFromImage](#createregionfromimage)||
-|[CMFCToolBarImages::D eleteImage](#deleteimage)|Usuwa obraz mający określony indeks z obrazów pasków narzędzi, jeśli ten zestaw obrazów narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
-|[CMFCToolBarImages::D RAW](#draw)|Rysuje pojedynczy obraz paska narzędzi (przycisk).|
-|[CMFCToolBarImages::D rawEx](#drawex)||
+|[CMFCToolBarImages::DeleteImage](#deleteimage)|Usuwa obraz, który ma określony indeks z obrazów paska narzędzi, jeśli ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
+|[CMFCToolBarImages::Draw](#draw)|Rysuje pojedynczy obraz paska narzędzi (przycisk).|
+|[CMFCToolBarImages::DrawEx](#drawex)||
 |[CMFCToolBarImages::EnableRTL](#enablertl)||
 |[CMFCToolBarImages::EndDrawImage](#enddrawimage)|Zwalnia zasoby systemowe po narysowaniu obrazu paska narzędzi.|
-|[CMFCToolBarImages::ExtractIcon](#extracticon)|Zwraca ikonę, która ma określony indeks obrazu z obrazów pasków narzędzi.|
-|[CMFCToolBarImages::FillDitheredRect](#fillditheredrect)|Wypełnia prostokąt przy użyciu pędzla, który ma kolory tła paska narzędzi.|
+|[CMFCToolBarImages:ExtractIcon](#extracticon)|Zwraca ikonę, która ma określony indeks obrazu z obrazów paska narzędzi.|
+|[CMFCToolBarImages::FillDitheredRect](#fillditheredrect)|Wypełnia prostokąt za pomocą pędzla zawierającego kolory tła paska narzędzi.|
 |[CMFCToolBarImages::GetAlwaysLight](#getalwayslight)||
-|[CMFCToolBarImages::GetBitsPerPixel](#getbitsperpixel)|Zwraca bieżącą rozdzielczość obrazów podkreślonych.|
-|[CMFCToolBarImages:: GetCount](#getcount)|Zwraca liczbę obrazów na pasku narzędzi.|
+|[CMFCToolBarImages::GetBitsPerPixel](#getbitsperpixel)|Zwraca bieżącą rozdzielczość podkreślonych obrazów.|
+|[CMFCToolBarImages::GetCount](#getcount)|Zwraca liczbę obrazów na pasku narzędzi.|
 |[CMFCToolBarImages::GetDisabledImageAlpha](#getdisabledimagealpha)|Zwraca wartość kanału alfa, która jest używana dla wyłączonych obrazów.|
 |[CMFCToolBarImages::GetFadedImageAlpha](#getfadedimagealpha)||
-|[CMFCToolBarImages::GetImageSize](#getimagesize)|Pobiera rozmiar obrazów pasków narzędzi, które są przechowywane w pamięci (rozmiar źródła) lub rozmiar obrazów pasków narzędzi, które są rysowane na ekranie (rozmiar docelowy).|
-|[CMFCToolBarImages::GetImageWell](#getimagewell)|Zwraca uchwyt mapy bitowej, która zawiera wszystkie obrazy pasków narzędzi.|
+|[CMFCToolBarImages::GetImageSize](#getimagesize)|Pobiera rozmiar obrazów paska narzędzi, które są przechowywane w pamięci (rozmiar źródła) lub rozmiar obrazów paska narzędzi, które są rysowane na ekranie (rozmiar miejsca docelowego).|
+|[CMFCToolBarImages::GetImageWell](#getimagewell)|Zwraca uchwyt do mapy bitowej zawierającej wszystkie obrazy paska narzędzi.|
 |[CMFCToolBarImages::GetImageWellLight](#getimagewelllight)||
 |[CMFCToolBarImages::GetLastImageRect](#getlastimagerect)||
 |[CMFCToolBarImages::GetLightPercentage](#getlightpercentage)||
-|[CMFCToolBarImages::GetMapTo3DColors](#getmapto3dcolors)||
-|[CMFCToolBarImages:: getmask](#getmask)||
+|[CMFCToolBarImages::GetMapTo3DKolors](#getmapto3dcolors)||
+|[CMFCToolBarImages::GetMask](#getmask)||
 |[CMFCToolBarImages::GetResourceOffset](#getresourceoffset)|Zwraca indeks obrazu dla określonego identyfikatora zasobu.|
-|[CMFCToolBarImages:: getscale](#getscale)|Zwraca bieżący współczynnik skalowania obrazów podkreślonych.|
+|[CMFCToolBarImages::GetScale](#getscale)|Zwraca bieżący współczynnik skali podkreślonych obrazów.|
 |[CMFCToolBarImages::GetTransparentColor](#gettransparentcolor)||
-|[CMFCToolBarImages::GrayImages](#grayimages)|Szare obrazy paska narzędzi, aby wyglądały na wyłączone.|
-|[CMFCToolBarImages::Is32BitTransparencySupported](#is32bittransparencysupported)|Określa, czy system operacyjny obsługuje 32-bitowe mieszanie Alpha.|
+|[CMFCToolBarImages::GrayImages](#grayimages)|Zaszyć obrazy paska narzędzi, aby wyglądały na wyłączone.|
+|[CMFCToolBarImages::Is32BitTransparencySupported](#is32bittransparencysupported)|Określa, czy system operacyjny obsługuje 32-bitowe mieszanie alfa.|
 |[CMFCToolBarImages::IsPreMultiplyAutoCheck](#ispremultiplyautocheck)||
-|[CMFCToolBarImages::IsRTL](#isrtl)|Określa, czy jest włączona obsługa od prawej do lewej (RTL).|
-|[CMFCToolBarImages:: IsReadOnly](#isreadonly)|Określa, czy obrazy paska narzędzi są tylko do odczytu.|
-|[CMFCToolBarImages:: isscaled](#isscaled)|Wskazuje, czy podkreślone obrazy są skalowane czy nie.|
-|[CMFCToolBarImages::IsUserImagesList](#isuserimageslist)|Określa, czy ten zestaw obrazów pasków narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
-|[CMFCToolBarImages:: IsValid](#isvalid)|Określa, czy ten zestaw obrazów pasków narzędzi zawiera prawidłowy obraz paska narzędzi.|
-|[CMFCToolBarImages:: Load](#load)|Ładuje obrazy pasków narzędzi z zasobów systemowych lub z pliku.|
+|[CMFCToolBarImages::IsRTL](#isrtl)|Określa, czy obsługa od prawej do lewej (RTL) jest włączona.|
+|[CMFCToolBarImages::IsReadOnly](#isreadonly)|Określa, czy obrazy paska narzędzi są tylko do odczytu.|
+|[CMFCToolBarImages::IsScaled](#isscaled)|Określa, czy podkreślone obrazy są skalowane, czy nie.|
+|[CMFCToolBarImages::IsUserImagesList](#isuserimageslist)|Określa, czy ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
+|[CMFCToolBarImages::IsValid](#isvalid)|Określa, czy ten zestaw obrazów paska narzędzi zawiera prawidłowy obraz paska narzędzi.|
+|[CMFCToolBarImages::Obciążenie](#load)|Ładuje obrazy paska narzędzi z zasobów systemowych lub z pliku.|
 |[CMFCToolBarImages::LoadStr](#loadstr)||
 |[CMFCToolBarImages::MapFromSysColor](#mapfromsyscolor)||
-|[CMFCToolBarImages::MapTo3dColors](#mapto3dcolors)||
+|[CMFCToolBarImages::MapTo3dKolors](#mapto3dcolors)||
 |[CMFCToolBarImages::MapToSysColor](#maptosyscolor)||
 |[CMFCToolBarImages::MapToSysColorAlpha](#maptosyscoloralpha)||
-|[CMFCToolBarImages:: Mirror](#mirror)|W poziomie odzwierciedla wszystkie obrazy pasków narzędzi.|
-|[CMFCToolBarImages::MirrorBitmap](#mirrorbitmap)|W poziomie odzwierciedla mapę bitową.|
+|[CMFCToolBarImages::Lustro](#mirror)|W poziomie odbije się odbicie lustrzane wszystkich obrazów paska narzędzi.|
+|[CMFCToolBarImages::MirrorBitmap](#mirrorbitmap)|Poziomo odzwierciedla mapę bitową.|
 |[CMFCToolBarImages::MirrorBitmapVert](#mirrorbitmapvert)||
 |[CMFCToolBarImages::MirrorVert](#mirrorvert)||
 |[CMFCToolBarImages::OnSysColorChange](#onsyscolorchange)||
-|[CMFCToolBarImages::P repareDrawImage](#preparedrawimage)|Przydziela zasoby, które są wymagane do rysowania obrazu paska narzędzi o określonym rozmiarze.|
-|[CMFCToolBarImages:: Save](#save)|Zapisuje obrazy pasków narzędzi w pliku, jeśli ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
+|[CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)|Przydziela zasoby, które są wymagane do rysowania obrazu paska narzędzi o określonym rozmiarze.|
+|[CMFCToolBarImages::Zapisz](#save)|Obrazy paska narzędzi są przechowywane w pliku, jeśli ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.|
 |[CMFCToolBarImages::SetAlwaysLight](#setalwayslight)||
-|[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)|Ustawia wartość kanału alfa, która jest używana dla wyłączonych obrazów.|
+|[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)|Ustawia wartość kanału alfa, która jest używana dla obrazów wyłączonych.|
 |[CMFCToolBarImages::SetFadedImageAlpha](#setfadedimagealpha)||
-|[CMFCToolBarImages::SetImageSize](#setimagesize)|Ustawia rozmiar obrazu paska narzędzi (rozmiar źródła).|
+|[CMFCToolBarImages::SetImageSize](#setimagesize)|Ustawia rozmiar obrazu paska narzędzi (rozmiar źródłowy).|
 |[CMFCToolBarImages::SetLightPercentage](#setlightpercentage)||
-|[CMFCToolBarImages::SetMapTo3DColors](#setmapto3dcolors)||
+|[CMFCToolBarImages::SetMapTo3DKolors](#setmapto3dcolors)||
 |[CMFCToolBarImages::SetPreMultiplyAutoCheck](#setpremultiplyautocheck)||
 |[CMFCToolBarImages::SetSingleImage](#setsingleimage)||
-|[CMFCToolBarImages::SetTransparentColor](#settransparentcolor)|Ustawia przezroczysty kolor obrazów pasków narzędzi.|
-|[CMFCToolBarImages::SmoothResize](#smoothresize)|Bezproblemowo zmienia rozmiar obrazów podkreślonych.|
+|[CMFCToolBarImages::SetTransparentColor](#settransparentcolor)|Ustawia przezroczysty kolor obrazów paska narzędzi.|
+|[CMFCToolBarImages::SmoothResize](#smoothresize)|Płynnie zmienić rozmiar podkreślonych obrazów.|
 |[CMFCToolBarImages::UpdateImage](#updateimage)|Aktualizuje obraz paska narzędzi zdefiniowany przez użytkownika z mapy bitowej.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarImages::P reMultiplyAlpha](#premultiplyalpha)||
+|[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarImages:: m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Wartość TRUE, jeśli TrueColor alfa (kolor 32-bitowy) jest wyłączony.|
+|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Prawda, jeśli truecolor alfa mieszania (kolor 32-bitowy) jest wyłączona.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pełna mapa bitowa obrazów pasków narzędzi zarządzanych przez `CMFCToolbarImages` składa się z co najmniej jednego małego obrazu paska narzędzi (przyciski) o stałym rozmiarze.
+Pełna mapa bitowa obrazów pasków narzędzi zarządzanych przez `CMFCToolbarImages` jeden lub więcej małych obrazów (przycisków) paska narzędzi o stałym rozmiarze.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konfigurowania obiektu `CMFCToolBarImages` przy użyciu różnych metod klasy `CMFCToolBarImages`. W przykładzie pokazano, jak ustawić rozmiar obrazu paska narzędzi, załadować obraz i ustawić przezroczysty kolor obrazu. Ten fragment kodu jest częścią [przykładu demonstracyjnego Visual Studio](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, `CMFCToolBarImages` jak skonfigurować obiekt `CMFCToolBarImages` przy użyciu różnych metod w klasie. W przykładzie pokazano, jak ustawić rozmiar obrazu paska narzędzi, załadować obraz i ustawić przezroczysty kolor obrazu. Ten fragment kodu jest częścią [przykładu demo programu Visual Studio.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CMFCToolBarImages`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtoolbarimages. h
+**Nagłówek:** afxtoolbarimages.h
 
-##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors
+## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors
 
 ```
 void AdaptColors(
@@ -277,14 +278,14 @@ void AdaptColors(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *clrBase*<br/>
-podczas *clrTone*<br/>
+[w] *baza clrBase*<br/>
+[w] *clrTone (clrTone)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="addicon"></a>CMFCToolBarImages:: addicon
+## <a name="cmfctoolbarimagesaddicon"></a><a name="addicon"></a>CMFCToolBarImages::Addicon
 
-Dodaje ikonę do listy obrazów pasków narzędzi.
+Dodaje ikonę do listy obrazów paska narzędzi.
 
 ```
 int AddIcon(
@@ -294,19 +295,19 @@ int AddIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*<br/>
-podczas Dojście do ikony, która ma zostać dodana.
+*hIcon (własówce)*<br/>
+[w] Dojście do ikony, która ma zostać dodana.
 
 *bAlphaBlend*<br/>
-podczas PRAWDA, jeśli ta ikona jest używana z mieszaniem alfa; w przeciwnym razie FALSE.
+[w] PRAWDA, jeśli ta ikona jest używana z mieszaniem alfa; w przeciwnym razie FALSE.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) obrazu paska narzędzi, który został dodany w przypadku pomyślnego wykonania metody; w przeciwnym razie-1.
+Indeks od zera obrazu paska narzędzi, który został dodany, jeśli metoda zakończy się pomyślnie; w przeciwnym razie -1.
 
-##  <a name="addimage"></a>CMFCToolBarImages:: AddImage
+## <a name="cmfctoolbarimagesaddimage"></a><a name="addimage"></a>CMFCToolBarImages::AddImage
 
-Dodaje mapę bitową do obrazów pasków narzędzi.
+Dodaje bitmapę do obrazów paska narzędzi.
 
 ```
 int AddImage(
@@ -320,23 +321,23 @@ int AddImage(
 
 ### <a name="parameters"></a>Parametry
 
-*hbmp*<br/>
-podczas Uchwyt do mapy bitowej, która ma zostać dodana.
+*hbmp (hbmp)*<br/>
+[w] Uchwyt do mapy bitowej, aby dodać.
 
 *bSetBitPerPixel*<br/>
-podczas Ma wartość TRUE, jeśli obiekt `CMFCToolBarImages` używa głębi koloru (bity na piksel) nowego obrazu; Wartość FALSE, jeśli obiekt `CMFCToolbarImages` zachowuje aktualną głębokość koloru.
+[w] PRAWDA, `CMFCToolBarImages` jeśli obiekt używa głębi kolorów (bitów na piksel) nowego obrazu; FAŁSZ, `CMFCToolbarImages` jeśli obiekt zachowuje bieżącą głębię kolorów.
 
-*Obrazów*<br/>
-podczas Odwołanie do obiektu `CMFCToolbarImages` zawierającego obraz do dodania.
+*Imagelist*<br/>
+[w] Odwołanie do `CMFCToolbarImages` obiektu, który zawiera obraz do dodania.
 
-*nIndex*<br/>
-podczas Indeks w obiekcie `CMFCToolbarImages` źródłowym obrazu do dodania.
+*Nindex*<br/>
+[w] Indeks w obiekcie źródłowym `CMFCToolbarImages` obrazu do dodania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba obrazów pasków narzędzi, które są obsługiwane przez obiekt `CMFCToolBarImages` po pomyślnym dodaniu nowej mapy bitowej; -1, jeśli operacja nie powiodła się.
+Liczba obrazów paska narzędzi, które `CMFCToolBarImages` obiekt zachowuje po pomyślnym dodaniu nowej mapy bitowej; -1, jeśli operacja nie powiodła się.
 
-##  <a name="cleanup"></a>CMFCToolBarImages:: CleanUp
+## <a name="cmfctoolbarimagescleanup"></a><a name="cleanup"></a>CMFCToolBarImages::CleanUp
 
 ```
 static void __stdcall CleanUp();
@@ -344,17 +345,17 @@ static void __stdcall CleanUp();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="clear"></a>CMFCToolBarImages:: Clear
+## <a name="cmfctoolbarimagesclear"></a><a name="clear"></a>CMFCToolBarImages::Wyczyść
 
-Zwalnia zasoby systemowe, do których przydzielono obiekt [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) .
+Zwalnia zasoby systemowe, które [CMFCToolbarImages obiekt przydzielony.](../../mfc/reference/cmfctoolbarimages-class.md)
 
 ```
 void Clear();
 ```
 
-##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages
+## <a name="cmfctoolbarimagescmfctoolbarimages"></a><a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages
 
-Konstruuje obiekt `CMFCToolBarImages`.
+Konstruuje `CMFCToolBarImages` obiekt.
 
 ```
 CMFCToolBarImages();
@@ -362,9 +363,9 @@ CMFCToolBarImages();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruuje obiekt `CMFCToolBarImages`, inicjuje jego aparat renderowania i ustawia rozmiar obrazu na wartość domyślną 16x15 pikseli. Aby zmienić rozmiar obrazu przed dodaniem obrazów, użyj [CMFCToolBarImages:: SetImageSize](#setimagesize) .
+Konstruuje `CMFCToolBarImages` obiekt, inicjuje jego aparat renderowania i ustawia rozmiar obrazu na wartość domyślną 16x15 pikseli. Użyj [POLECENIA CMFCToolBarImages::SetImageSize,](#setimagesize) aby zmienić rozmiar obrazu przed dodaniem obrazów.
 
-##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard
+## <a name="cmfctoolbarimagescopyimagetoclipboard"></a><a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard
 
 ```
 BOOL CopyImageToClipboard(int iImage);
@@ -372,13 +373,13 @@ BOOL CopyImageToClipboard(int iImage);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *IImage*<br/>
+[w] *iImage ( iImage )*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="copyto"></a>CMFCToolBarImages:: CopyTo
+## <a name="cmfctoolbarimagescopyto"></a><a name="copyto"></a>CMFCToolBarImages::CopyTo
 
 ```
 BOOL CopyTo(CMFCToolBarImages& imageList);
@@ -386,15 +387,15 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *Lista imageList*<br/>
+[w] *lista obrazów*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList
+## <a name="cmfctoolbarimagescreatefromimagelist"></a><a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList
 
-Inicjuje obrazy pasków narzędzi z obiektu [klasy korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
+Inicjuje obrazy paska narzędzi z obiektu [CImageList Class.](../../mfc/reference/cimagelist-class.md)
 
 ```
 BOOL CreateFromImageList(const CImageList& imageList);
@@ -402,18 +403,18 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parametry
 
-*Obrazów*<br/>
-podczas Lista obrazów, która będzie używana jako źródło obrazów pasków narzędzi.
+*Imagelist*<br/>
+[w] Lista obrazów, która ma być używana jako źródło obrazów paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość TRUE.
+Zawsze zwraca wartość PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji, aby szybko zainicjować listę obrazów pasków narzędzi z listy obrazów zewnętrznych.
+Ta funkcja umożliwia szybkie inicjowanie listy obrazów paska narzędzi z zewnętrznej listy obrazów.
 
-##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage
+## <a name="cmfctoolbarimagescreateregionfromimage"></a><a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage
 
 ```
 static HRGN __stdcall CreateRegionFromImage(
@@ -423,16 +424,16 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *BMP*<br/>
-podczas *clrTransparent*<br/>
+[w] *bmp (bmp)*<br/>
+[w] *clrPrzezroczysty*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="deleteimage"></a>CMFCToolBarImages::D eleteImage
+## <a name="cmfctoolbarimagesdeleteimage"></a><a name="deleteimage"></a>CMFCToolBarImages::DeleteImage
 
-Usuwa obraz zdefiniowany przez użytkownika, który ma określony indeks z obrazów pasków narzędzi.
+Usuwa obraz zdefiniowany przez użytkownika, który ma określony indeks z obrazów paska narzędzi.
 
 ```
 BOOL DeleteImage(int iImage);
@@ -440,14 +441,14 @@ BOOL DeleteImage(int iImage);
 
 ### <a name="parameters"></a>Parametry
 
-*iImage*<br/>
-podczas Określa indeks (liczony od zera) obrazu do usunięcia.
+*Iimage*<br/>
+[w] Określa indeks od zera obrazu do usunięcia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obraz został usunięty pomyślnie; FAŁSZ Jeśli indeks obrazu jest nieprawidłowy, obiekt `CMFCToolbarImages` jest tymczasowy, obiekt `CMFCToolbarImages` nie zawiera obrazów zdefiniowanych przez użytkownika lub jeśli wystąpił inny błąd.
+PRAWDA, jeśli obraz został usunięty pomyślnie; FAŁSZ, jeśli indeks `CMFCToolbarImages` obrazu jest nieprawidłowy, obiekt jest tymczasowy, `CMFCToolbarImages` obiekt nie zawiera obrazów zdefiniowanych przez użytkownika lub jeśli wystąpił inny błąd.
 
-##  <a name="draw"></a>CMFCToolBarImages::D RAW
+## <a name="cmfctoolbarimagesdraw"></a><a name="draw"></a>CMFCToolBarImages::Draw
 
 Rysuje pojedynczy obraz paska narzędzi.
 
@@ -467,41 +468,41 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
-*y*<br/>
-podczas Współrzędna X lewej krawędzi prostokąta, w którym ma zostać narysowany obraz.
+*X*<br/>
+[w] Współrzędna X po lewej stronie prostokąta, w którym ma zostać narysowany obraz.
 
-*t*<br/>
-podczas Współrzędna Y górnej krawędzi prostokąta, w którym ma zostać narysowany obraz.
+*Y*<br/>
+[w] Współrzędna Y górnej części prostokąta, w której ma zostać narysowany obraz.
 
 *iImageIndex*<br/>
-podczas Indeks (liczony od zera) obrazu, który ma być wyświetlany.
+[w] Indeks od zera obrazu, który ma być wyświetlany.
 
 *bHilite*<br/>
-podczas Ma wartość TRUE, jeśli obraz ma zostać wyróżniony; w przeciwnym razie FALSE.
+[w] PRAWDA, jeśli obraz ma być podświetlony; w przeciwnym razie FALSE.
 
-*Poddany*<br/>
-podczas Ma wartość TRUE, jeśli obraz ma być rysowany w wyłączonym stylu; w przeciwnym razie FALSE.
+*bWydaj*<br/>
+[w] PRAWDA, jeśli obraz ma być rysowany w stylu wyłączonym; w przeciwnym razie FALSE.
 
-*bIndeterminate*<br/>
-podczas Ma wartość TRUE, jeśli obraz ma być rysowany w nieokreślonym stylu stanu. w przeciwnym razie FALSE.
+*bNieterminat*<br/>
+[w] PRAWDA, jeśli obraz ma być narysowany w nieokreślonym stylu stanu; w przeciwnym razie FALSE.
 
-*bShadow*<br/>
-podczas Ma wartość TRUE, jeśli obraz ma zostać narysowany przy użyciu cienia. w przeciwnym razie FALSE.
+*bShadow (cień)*<br/>
+[w] PRAWDA, jeśli obraz ma być rysowany z cieniem; w przeciwnym razie FALSE.
 
-*bInactive*<br/>
-podczas Ma wartość TRUE, jeśli obraz ma być rysowany w nieaktywnym stylu stanu. w przeciwnym razie FALSE.
+*bNieaktywność*<br/>
+[w] PRAWDA, jeśli obraz ma być rysowany w nieaktywnym stylu stanu; w przeciwnym razie FALSE.
 
-*alphaSrc*<br/>
-podczas Wartość kanału alfa (zmętnienie). Wartość 255 oznacza, że obraz jest rysowany jako nieprzezroczysty. Wartość 0 oznacza, że obraz jest rysowany jako przezroczysty. Ta wartość jest używana tylko w przypadku obrazów kolorowych z 32 i obrazów, które są wyświetlane w stylu systemu Windows Vista.
+*alfaSrc*<br/>
+[w] Wartość kanału alfa (krycie). Wartość 255 oznacza, że obraz jest rysowany nieprzezroczysty. Wartość 0 oznacza, że obraz jest rysowany przezroczysty. Ta wartość jest używana tylko dla obrazów kolorowych 32-bitowych i obrazów, które wyświetlały styl szkła systemu Windows Vista.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli określony obraz został pomyślnie wyświetlony; Wartość FALSE, jeśli indeks obrazu był nieprawidłowy lub Wystąpił inny błąd.
+PRAWDA, jeśli określony obraz został wyświetlony pomyślnie; FAŁSZ, jeśli indeks obrazu był nieprawidłowy lub wystąpił inny błąd.
 
-##  <a name="drawex"></a>CMFCToolBarImages::D rawEx
+## <a name="cmfctoolbarimagesdrawex"></a><a name="drawex"></a>CMFCToolBarImages::DrawEx
 
 ```
 BOOL DrawEx(
@@ -516,19 +517,19 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
-podczas *prostokąt*<br/>
-podczas *iImageIndex*<br/>
-podczas *horzAlign*<br/>
-podczas *vertAlign*<br/>
-podczas *rectSrc*<br/>
-podczas *alphaSrc*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *iImageIndex*<br/>
+[w] *horzAlign (niezrealisza)*<br/>
+[w] *vertAlign (niezrealistyczny)*<br/>
+[w] *rectSrc*<br/>
+[w] *alfaSrc*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL
+## <a name="cmfctoolbarimagesenablertl"></a><a name="enablertl"></a>CMFCToolBarImages::EnableRTL
 
 ```
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
@@ -536,13 +537,13 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bIsRTL*<br/>
+[w] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage
+## <a name="cmfctoolbarimagesenddrawimage"></a><a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage
 
-Zwalnia zasoby systemowe, które [CMFCToolBarImages::P reparedrawimage](#preparedrawimage) przydzielone po narysowaniu obrazu paska narzędzi przez wywołanie [CMFCToolBarImages::D RAW](#draw).
+Zwalnia zasoby systemowe, które [CMFCToolBarImages::PrepareDrawImage przydzielone](#preparedrawimage) po narysowaniu obrazu paska narzędzi przez wywołanie [CMFCToolBarImages::Draw](#draw).
 
 ```
 void EndDrawImage(CAfxDrawState& ds);
@@ -550,12 +551,12 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parametry
 
-*domenowe*<br/>
-podczas Odwołanie do obiektu `CAfxDrawState`, który został przesłany do metody `PrepareDrawImage`.
+*ds*<br/>
+[w] Odwołanie do `CAfxDrawState` obiektu, który został `PrepareDrawImage` przekazany do metody.
 
-##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon
+## <a name="cmfctoolbarimagesextracticon"></a><a name="extracticon"></a>CMFCToolBarImages:ExtractIcon
 
-Zwraca ikonę, która ma określony indeks obrazu z obrazów pasków narzędzi.
+Zwraca ikonę, która ma określony indeks obrazu z obrazów paska narzędzi.
 
 ```
 HICON ExtractIcon(int nIndex);
@@ -563,16 +564,16 @@ HICON ExtractIcon(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
-podczas Indeks (liczony od zera) na liście obrazów, w której znajduje się obraz, który ma zostać wyodrębniony jako ikona.
+*Nindex*<br/>
+[w] Indeks od zera na liście obrazów, na którym znajduje się obraz, który ma zostać wyodrębniony jako ikona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Dojście do wyodrębnionej ikony lub wartość NULL, jeśli *nIndex* jest poza zakresem.
+Dojście do wyodrębnionej ikony lub NULL, jeśli *nIndex* jest poza zakresem.
 
-##  <a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect
+## <a name="cmfctoolbarimagesfillditheredrect"></a><a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect
 
-Wypełnia prostokąt przy użyciu kolorów tła paska narzędzi.
+Wypełnia prostokąt kolorami tła paska narzędzi.
 
 ```
 static void FillDitheredRect(
@@ -582,39 +583,39 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Domeny*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
-*cinania*<br/>
-podczas Współrzędne prostokąta do wypełnienia.
+*Rect*<br/>
+[w] Współrzędne prostokąta do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby wypełnić prostokąt kolorem średnim kolorów systemu COLOR_BTNFACE i COLOR_BTNHIGHLIGHT. Jeśli system korzysta z 256 lub mniej kolorów, prostokąt będzie wypełniony wzorcem tych dwóch kolorów.
+Ta metoda służy do wypełniania prostokąta kolorem, który jest średnią kolorów systemowych COLOR_BTNFACE i COLOR_BTNHIGHLIGHT. Jeśli system używa 256 lub mniej kolorów, prostokąt zostanie wypełniony roztrząsionym wzorem tych dwóch kolorów.
 
-##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight
+## <a name="cmfctoolbarimagesgetalwayslight"></a><a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight
 
 ```
 BOOL GetAlwaysLight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getcount"></a>CMFCToolBarImages:: GetCount
+## <a name="cmfctoolbarimagesgetcount"></a><a name="getcount"></a>CMFCToolBarImages::GetCount
 
-Zwraca liczbę obrazów z listy obrazów pasków narzędzi.
+Zwraca liczbę obrazów na liście obrazów paska narzędzi.
 
 ```
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba obrazów w obiekcie `CMFCToolBarImages`.
+Liczba obrazów w `CMFCToolBarImages` obiekcie.
 
-##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha
+## <a name="cmfctoolbarimagesgetdisabledimagealpha"></a><a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha
 
 Zwraca wartość kanału alfa (krycie), która jest używana dla wyłączonych obrazów.
 
@@ -622,27 +623,27 @@ Zwraca wartość kanału alfa (krycie), która jest używana dla wyłączonych o
 static BYTE GetDisabledImageAlpha();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca wartość kanału alfa.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zmienić wartość kanału alfa, można wywołać metodę [CMFCToolBarImages:: SetDisabledImageAlpha](#setdisabledimagealpha) .
+Można wywołać [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) zmienić wartość kanału alfa.
 
-##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha
+## <a name="cmfctoolbarimagesgetfadedimagealpha"></a><a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha
 
 ```
 static BYTE __stdcall GetFadedImageAlpha();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getimagesize"></a>CMFCToolBarImages::GetImageSize
+## <a name="cmfctoolbarimagesgetimagesize"></a><a name="getimagesize"></a>CMFCToolBarImages::GetImageSize
 
-Pobiera rozmiar obrazów pasków narzędzi, które są przechowywane w pamięci (rozmiar źródła) lub rozmiar obrazów pasków narzędzi, które są rysowane na ekranie (rozmiar docelowy).
+Pobiera rozmiar obrazów paska narzędzi, które są przechowywane w pamięci (rozmiar źródła) lub rozmiar obrazów paska narzędzi, które są rysowane na ekranie (rozmiar miejsca docelowego).
 
 ```
 SIZE GetImageSize(BOOL bDest=FALSE) const;
@@ -650,76 +651,76 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bDest*<br/>
-podczas Wartość TRUE powoduje pobranie rozmiaru miejsca docelowego; Wartość FALSE, aby pobrać rozmiar obrazu źródłowego.
+*bDest (bDest)*<br/>
+[w] TRUE, aby pobrać rozmiar miejsca docelowego; FAŁSZ, aby pobrać rozmiar obrazu źródłowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Struktura `SIZE`, która określa rozmiar obrazu w pikselach.
+Struktura, `SIZE` która określa rozmiar obrazu w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar obrazu źródłowego to rozmiar obrazów przechowywanych w obiekcie [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) . Aby ustawić rozmiar źródła, można wywołać [CMFCToolBarImages:: SetImageSize](#setimagesize) . Wartość domyślna to 16x15 pikseli.
+Rozmiar obrazu źródłowego jest rozmiar obrazów, które są przechowywane w [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiektu. Można wywołać [CMFCToolBarImages::SetImageSize](#setimagesize) ustawić rozmiar źródła. Wartość domyślna to 16x15 pikseli.
 
-Domyślnie rozmiar obrazu docelowego to 0x0. Rozmiar docelowy należy określić podczas wywoływania [CMFCToolBarImages::P reparedrawimage](#preparedrawimage). [CMFCToolBarImages:: EndDrawImage](#enddrawimage) metoda resetuje rozmiar docelowy do wartości domyślnej.
+Domyślnie rozmiar obrazu docelowego wynosi 0x0. Rozmiar miejsca docelowego można określić podczas wywoływania [polecenia CMFCToolBarImages::PrepareDrawImage](#preparedrawimage). [METODA CMFCToolBarImages::EndDrawImage](#enddrawimage) resetuje rozmiar miejsca docelowego do wartości domyślnej.
 
-##  <a name="getimagewell"></a>CMFCToolBarImages::GetImageWell
+## <a name="cmfctoolbarimagesgetimagewell"></a><a name="getimagewell"></a>CMFCToolBarImages::GetImageWell
 
-Zwraca uchwyt mapy bitowej, która zawiera wszystkie obrazy pasków narzędzi.
+Zwraca uchwyt do mapy bitowej zawierającej wszystkie obrazy paska narzędzi.
 
 ```
 HBITMAP GetImageWell() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Dojście do mapy bitowej zawierającej obrazy pasków narzędzi.
+Uchwyt do mapy bitowej zawierającej obrazy paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Obrazy paska narzędzi są przechowywane w wierszu w pojedynczej mapie bitowej, która jest znana jako *Źródło obrazu*. Aby znaleźć obraz paska narzędzi w źródle obrazu, pomnóż indeks obrazu o szerokości obrazów pasków narzędzi (zobacz [CMFCToolBarImages:: GetImageSize](#getimagesize)), aby uzyskać przesunięcie w poziomie obrazu do obszaru obrazu.
+Obrazy paska narzędzi są przechowywane w wierszu w pojedynczej mapie bitowej, która jest dobrze znana jako *obraz*. Aby dobrze znaleźć obraz paska narzędzi na obrazie, należy pomnożyć indeks obrazu przez szerokość obrazów paska narzędzi (zobacz [CMFCToolBarImages::GetImageSize](#getimagesize)), aby uzyskać poziome przesunięcie obrazu wewnątrz obrazu dobrze.
 
-##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight
+## <a name="cmfctoolbarimagesgetimagewelllight"></a><a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight
 
 ```
 HBITMAP GetImageWellLight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect
+## <a name="cmfctoolbarimagesgetlastimagerect"></a><a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect
 
 ```
 CRect GetLastImageRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage
+## <a name="cmfctoolbarimagesgetlightpercentage"></a><a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage
 
 ```
 int GetLightPercentage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors
+## <a name="cmfctoolbarimagesgetmapto3dcolors"></a><a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DKolors
 
 ```
 BOOL GetMapTo3DColors() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getmask"></a>CMFCToolBarImages:: getmask
+## <a name="cmfctoolbarimagesgetmask"></a><a name="getmask"></a>CMFCToolBarImages::GetMask
 
 ```
 HBITMAP GetMask(int iImage);
@@ -727,13 +728,13 @@ HBITMAP GetMask(int iImage);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *IImage*<br/>
+[w] *iImage ( iImage )*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset
+## <a name="cmfctoolbarimagesgetresourceoffset"></a><a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset
 
 Zwraca indeks obrazu dla określonego identyfikatora zasobu.
 
@@ -743,26 +744,26 @@ int GetResourceOffset(UINT uiResId) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uiResId*<br/>
-podczas Identyfikator zasobu obrazu.
+*interfejs użytkownika uiResId*<br/>
+[w] Identyfikator zasobu obrazu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks obrazu, jeśli metoda zakończyła się pomyślnie; -1, jeśli obraz o określonym IDENTYFIKATORze zasobu nie istnieje.
+Indeks obrazu, jeśli metoda zakończyła się pomyślnie; -1, jeśli obraz o określonym identyfikatorze zasobu nie istnieje.
 
-##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor
+## <a name="cmfctoolbarimagesgettransparentcolor"></a><a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor
 
 ```
 COLORREF GetTransparentColor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="grayimages"></a>CMFCToolBarImages::GrayImages
+## <a name="cmfctoolbarimagesgrayimages"></a><a name="grayimages"></a>CMFCToolBarImages::GrayImages
 
-Szare obrazy paska narzędzi, aby wyglądały na wyłączone.
+Zaszyć obrazy paska narzędzi, aby wyglądały na wyłączone.
 
 ```
 BOOL GrayImages(int nGrayImageLuminancePercentage);
@@ -771,46 +772,46 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ### <a name="parameters"></a>Parametry
 
 *nGrayImageLuminancePercentage*<br/>
-podczas Procent luminancji.
+[w] Procent luminancji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obrazy w kolekcji zostały pomyślnie wyszarzone; w przeciwnym razie FALSE.
+PRAWDA, jeśli obrazy w kolekcji zostały pomyślnie wyszarzone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda modyfikuje obrazy pasków narzędzi przez uśrednianie czerwonych, zielonych i niebieskich składników każdego piksela i mnożenie wyniku przez *nGrayImageLuminancePercentage* podzielone przez 100. Jeśli *nGrayImageLuminancePercentage* ma wartość zero lub wartość ujemną, zamiast niej zostanie użyta domyślna wartooć 130.
+Ta metoda modyfikuje obrazy paska narzędzi, uśredniając czerwone, zielone i niebieskie składniki każdego piksela i mnożąc wynik przez *nGrayImageLuminancePercentage* podzielone przez 100. Jeśli *nGrayImageLuminancePercentage* jest zero lub ujemne, zamiast tego jest używana wartość domyślna 130.
 
 > [!NOTE]
->  Jeśli chcesz cofnąć zmianę, należy ponownie załadować obrazy ze źródła. Można to zrobić przez wywołanie [CMFCToolBarImages:: Load](#load) lub [CMFCToolBarImages:: UpdateImage](#updateimage) (tylko dla obrazów zdefiniowanych przez użytkownika) lub przez wywołanie [CMFCToolBarImages:: Clear](#clear) i Dodawanie obrazów ponownie przez wywołanie [CMFCToolBarImages:: addicon](#addicon) lub [CMFCToolBarImages:: AddImage](#addimage).
+> Jeśli chcesz cofnąć zmianę, należy ponownie załadować obrazy ze źródła. Można to zrobić, wywołując [CMFCToolBarImages::Load](#load) lub [CMFCToolBarImages::UpdateImage](#updateimage) (tylko dla obrazów zdefiniowanych przez użytkownika) lub wywołując [CMFCToolBarImages::Wyczyść](#clear) i dodając obrazy ponownie, wywołując [CMFCToolBarImages::AddIcon](#addicon) lub [CMFCToolBarImages::AddImage](#addimage).
 
-##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported
+## <a name="cmfctoolbarimagesis32bittransparencysupported"></a><a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported
 
-Określa, czy system operacyjny obsługuje 32-bitowe mieszanie Alpha.
+Określa, czy system operacyjny obsługuje 32-bitowe mieszanie alfa.
 
 ```
 static BOOL Is32BitTransparencySupported();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli jest obsługiwana 32-bitowe mieszanie alfa; w przeciwnym razie FALSE.
+PRAWDA, jeśli obsługiwane jest 32-bitowe mieszanie alfa; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody statycznej, aby określić w czasie wykonywania, czy system operacyjny obsługuje 32-bitowe mieszanie Alpha. Ta funkcja jest obsługiwana w systemie Windows 2000 i nowszych wersjach.
+Ta metoda statyczna służy do określenia w czasie wykonywania, czy system operacyjny obsługuje 32-bitowe mieszanie alfa. Ta funkcja jest obsługiwana w systemie Windows 2000 i nowszych wersjach.
 
-##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck
+## <a name="cmfctoolbarimagesispremultiplyautocheck"></a><a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck
 
 ```
 BOOL IsPreMultiplyAutoCheck() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isreadonly"></a>CMFCToolBarImages:: IsReadOnly
+## <a name="cmfctoolbarimagesisreadonly"></a><a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly
 
 Określa, czy obrazy paska narzędzi są tylko do odczytu.
 
@@ -818,61 +819,61 @@ Określa, czy obrazy paska narzędzi są tylko do odczytu.
 BOOL IsReadOnly() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 PRAWDA, jeśli obrazy paska narzędzi są tylko do odczytu, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `CMFCToolbarImages` jest tylko do odczytu, gdy mapa bitowa z obrazami paska narzędzi została załadowana z pliku tylko do odczytu lub w przypadku skopiowania mapy bitowej przy użyciu metody `CMFCToolBarImages::CopyTemp`.
+Obiekt `CMFCToolbarImages` jest tylko do odczytu, gdy mapa bitowa z obrazami paska narzędzi została załadowana `CMFCToolBarImages::CopyTemp` z pliku tylko do odczytu lub gdy mapa bitowa została skopiowana przy użyciu metody.
 
-##  <a name="isrtl"></a>CMFCToolBarImages::IsRTL
+## <a name="cmfctoolbarimagesisrtl"></a><a name="isrtl"></a>CMFCToolBarImages::IsRTL
 
-Określa, czy jest włączona obsługa od prawej do lewej (RTL).
+Określa, czy obsługa rtl (od prawej do lewej) jest włączona.
 
 ```
 static BOOL IsRTL();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli włączona jest obsługa RTL; w przeciwnym razie FALSE.
+PRAWDA, jeśli obsługa RTL jest włączona; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Pomoc techniczna RTL jest używana, gdy aplikacja jest zlokalizowana w języku, który jest odczytywany od prawej do lewej, na przykład arabskiej, hebrajski, perski lub urdu.
+Obsługa RTL jest używana, gdy aplikacja jest zlokalizowana w języku odczytanym od prawej do lewej, takim jak arabski, hebrajski, perski lub urdu.
 
-##  <a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList
+## <a name="cmfctoolbarimagesisuserimageslist"></a><a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList
 
-Określa, czy ten zestaw obrazów pasków narzędzi zawiera obrazy zdefiniowane przez użytkownika.
+Określa, czy ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.
 
 ```
 BOOL IsUserImagesList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli obiekt `CMFCToolBarImages` zawiera obrazy paska narzędzi zdefiniowane przez użytkownika; w przeciwnym razie FALSE.
+PRAWDA, `CMFCToolBarImages` jeśli obiekt zawiera obrazy paska narzędzi zdefiniowane przez użytkownika; w przeciwnym razie FALSE.
 
-##  <a name="isvalid"></a>CMFCToolBarImages:: IsValid
+## <a name="cmfctoolbarimagesisvalid"></a><a name="isvalid"></a>CMFCToolBarImages::IsValid
 
-Wskazuje, czy ten zestaw obrazów pasków narzędzi zawiera prawidłowy obraz paska narzędzi.
+Wskazuje, czy ten zestaw obrazów paska narzędzi zawiera prawidłowy obraz paska narzędzi.
 
 ```
 BOOL IsValid() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obiekt `CMFCToolBarImages` jest prawidłowy; w przeciwnym razie FALSE.
+PRAWDA, `CMFCToolBarImages` jeśli obiekt jest prawidłowy; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `CMFCToolBarImages` jest nieprawidłowy, gdy jego uchwyt do mapy bitowej z obrazami paska narzędzi ma wartość NULL.
+Obiekt `CMFCToolBarImages` jest nieprawidłowy, gdy jego dojście do mapy bitowej z obrazami paska narzędzi ma wartość NULL.
 
-##  <a name="load"></a>CMFCToolBarImages:: Load
+## <a name="cmfctoolbarimagesload"></a><a name="load"></a>CMFCToolBarImages::Obciążenie
 
-Ładuje obrazy pasków narzędzi z zasobów systemowych lub z pliku.
+Ładuje obrazy paska narzędzi z zasobów systemowych lub z pliku.
 
 ```
 BOOL Load(
@@ -887,30 +888,30 @@ BOOL Load(
 
 ### <a name="parameters"></a>Parametry
 
-*uiResID*<br/>
-podczas Identyfikator zasobu mapy bitowej.
+*interfejs użytkownika uiResID*<br/>
+[w] Identyfikator zasobu mapy bitowej.
 
 *hinstRes*<br/>
-podczas Wystąpienie biblioteki DLL zasobu.
+[w] Wystąpienie biblioteki DLL zasobu.
 
-*bDodaj*<br/>
-podczas Wartość TRUE powoduje dodanie załadowanej mapy bitowej do istniejącej mapy bitowej lub wartość FALSE, aby zastąpić istniejącą mapę bitową.
+*Bdodaj*<br/>
+[w] PRAWDA, aby dodać załadowaną mapę bitową do istniejącej mapy bitowej, lub FAŁSZ, aby zastąpić istniejącą mapę bitową.
 
 *lpszBmpFileName*<br/>
-podczas Ścieżka do pliku dysku, z którego ma zostać załadowana Mapa bitowa.
+[w] Ścieżka do pliku dysku, z którego ma być załadowana mapa bitowa.
 
-*nMaxFileSize*<br/>
-podczas Maksymalna liczba bajtów w pliku mapy bitowej; lub 0, aby załadować mapę bitową niezależnie od rozmiaru pliku. Jeśli rozmiar pliku przekracza ten maksymalny rozmiar, metoda zwraca wartość FALSE i nie ładuje mapy bitowej.
+*Rozmiar pliku nMaxFileSize*<br/>
+[w] Maksymalna liczba bajtów w pliku mapy bitowej; lub 0, aby załadować bitmapę niezależnie od rozmiaru pliku. Jeśli rozmiar pliku przekracza ten maksymalny rozmiar, metoda zwraca wartość FAŁSZ i nie ładuje mapy bitowej.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli mapa bitowa została pomyślnie załadowana; w przeciwnym razie FALSE.
+PRAWDA, jeśli mapa bitowa została pomyślnie załadowana; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Jeśli plik ma atrybut tylko do odczytu, lista obrazów jest oznaczona jako tylko do odczytu.
 
-##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr
+## <a name="cmfctoolbarimagesloadstr"></a><a name="loadstr"></a>CMFCToolBarImages::LoadStr
 
 ```
 BOOL LoadStr(
@@ -921,15 +922,15 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *lpszResourceName*<br/>
-podczas *hinstRes*<br/>
-podczas *bDodaj*<br/>
+[w] *lpszResourceName*<br/>
+[w] *hinstRes*<br/>
+[w] *bDd*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor
+## <a name="cmfctoolbarimagesmapfromsyscolor"></a><a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor
 
 ```
 static COLORREF __stdcall MapFromSysColor(
@@ -939,14 +940,14 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kolor*<br/>
-podczas *bUseRGBQUAD*<br/>
+[w] *kolor*<br/>
+[w] *bUchigbquad*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors
+## <a name="cmfctoolbarimagesmapto3dcolors"></a><a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dKolors
 
 ```
 BOOL MapTo3dColors(
@@ -957,15 +958,15 @@ BOOL MapTo3dColors(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bUseRGBQUAD*<br/>
-podczas *clrSrc*<br/>
-podczas *clrDest*<br/>
+[w] *bUchigbquad*<br/>
+[w] *clrSrc ( clrSrc )*<br/>
+[w] *clrDest ( clrDest )*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor
+## <a name="cmfctoolbarimagesmaptosyscolor"></a><a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor
 
 ```
 static COLORREF __stdcall MapToSysColor(
@@ -975,14 +976,14 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kolor*<br/>
-podczas *bUseRGBQUAD*<br/>
+[w] *kolor*<br/>
+[w] *bUchigbquad*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha
+## <a name="cmfctoolbarimagesmaptosyscoloralpha"></a><a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha
 
 ```
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
@@ -990,31 +991,31 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kolor*<br/>
+[w] *kolor*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="mirror"></a>CMFCToolBarImages:: Mirror
+## <a name="cmfctoolbarimagesmirror"></a><a name="mirror"></a>CMFCToolBarImages::Lustro
 
-Zamienia obrazy pasków narzędzi na ich poziomy Obraz lustrzany.
+Zastępuje obrazy paska narzędzi poziomym odbiciem lustrzanym.
 
 ```
 BOOL Mirror();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obrazy zostały pomyślnie zdublowane; w przeciwnym razie FALSE.
+PRAWDA, jeśli obrazy zostały pomyślnie odbicie lustrzane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest używana do obsługi systemów pisania od prawej do lewej.
+Ta metoda jest używana do obsługi systemów zapisu od prawej do lewej.
 
-##  <a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap
+## <a name="cmfctoolbarimagesmirrorbitmap"></a><a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap
 
-Zamienia mapę bitową na jej poziomy Obraz lustrzany.
+Zastępuje mapę bitową poziomym odbiciem lustrzanym.
 
 ```
 static BOOL MirrorBitmap(
@@ -1024,21 +1025,21 @@ static BOOL MirrorBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*hbmp*<br/>
-[in. out] Uchwyt bitmapy do skopiowania.
+*hbmp (hbmp)*<br/>
+[w, na zewnątrz] Dojście do mapy bitowej w celu odbicia lustrzanego.
 
-*cxImage*<br/>
-podczas Szerokość obrazu w pikselach.
+*cxImage (równo)*<br/>
+[w] Szerokość obrazu w pikselach.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obraz został pomyślnie zdublowany; w przeciwnym razie FALSE.
+PRAWDA, jeśli obraz został pomyślnie odbicie lustrzane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest używana do obsługi systemów pisania od prawej do lewej.
+Ta funkcja służy do obsługi systemów zapisu od prawej do lewej.
 
-##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert
+## <a name="cmfctoolbarimagesmirrorbitmapvert"></a><a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert
 
 ```
 static BOOL __stdcall MirrorBitmapVert(
@@ -1048,24 +1049,24 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *hBmp*<br/>
-podczas *cyImage*<br/>
+[w] *hbmp (hbmp)*<br/>
+[w] *cyImage (cyImage)*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert
+## <a name="cmfctoolbarimagesmirrorvert"></a><a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert
 
 ```
 BOOL MirrorVert();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange
+## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange
 
 ```
 void OnSysColorChange();
@@ -1073,7 +1074,7 @@ void OnSysColorChange();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="premultiplyalpha"></a>CMFCToolBarImages::P reMultiplyAlpha
+## <a name="cmfctoolbarimagespremultiplyalpha"></a><a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha
 
 ```
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1085,16 +1086,16 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *hBmp*<br/>
-podczas *bAutoCheckPremlt*<br/>
+[w] *hbmp (hbmp)*<br/>
+[w] *bAutoCheckPremlt*<br/>
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages:: m_bDisableTrueColorAlpha
+## <a name="cmfctoolbarimagesm_bdisabletruecoloralpha"></a><a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha
 
-Wartość TRUE, jeśli TrueColor alfa (kolor 32-bitowy) jest wyłączony.
+Prawda, jeśli truecolor alfa mieszania (kolor 32-bitowy) jest wyłączona.
 
 ```
 static BOOL m_bDisableTrueColorAlpha;
@@ -1102,11 +1103,11 @@ static BOOL m_bDisableTrueColorAlpha;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw dla tej zmiennej składowej wartość FALSE, aby włączyć funkcję TrueColor Alpha dla obrazów pasków narzędzi.
+Ustaw tę zmienną elementu członkowskiego na FALSE, aby włączyć truecolor alfa-mieszania dla obrazów paska narzędzi.
 
-Wartość domyślna to TRUE w przypadku zgodności z poprzednimi wersjami.
+Wartością domyślną jest TRUE dla zgodności z przeszywnie.
 
-##  <a name="preparedrawimage"></a>CMFCToolBarImages::P repareDrawImage
+## <a name="cmfctoolbarimagespreparedrawimage"></a><a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage
 
 Przydziela zasoby, które są wymagane do rysowania obrazu paska narzędzi o określonym rozmiarze.
 
@@ -1120,26 +1121,26 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*domenowe*<br/>
-podczas Odwołanie do struktury `CAfxDrawState`, która przechowuje przydzieloną zasoby między etapami renderowania obrazu.
+*ds*<br/>
+[w] Odwołanie do `CAfxDrawState` struktury, która przechowuje przydzielone zasoby między etapami renderowania obrazu.
 
-*sizeImageDest*<br/>
-podczas Określa rozmiar obrazu docelowego.
+*rozmiarImageDest*<br/>
+[w] Określa rozmiar obrazu docelowego.
 
-*bFadeInactive*<br/>
-podczas PRAWDA, jeśli chcesz, aby obrazy nieaktywne były rysowane jako wyblakłe.
+*bFadeNieaktywne*<br/>
+[w] PRAWDA, jeśli chcesz, aby nieaktywne obrazy były rysowane wyblakłe.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli zasoby wymagane do narysowania obrazu paska narzędzi zostały przydzieloną pomyślnie, w przeciwnym razie FALSE.
+PRAWDA, jeśli zasoby wymagane do narysowania obrazu paska narzędzi zostały przydzielone pomyślnie, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu tej metody można wywołać [CMFCToolBarImages::D surowej](#draw) dowolnej liczby razy. Po zakończeniu rysowania należy wywołać [CMFCToolBarImages:: EndDrawImage](#enddrawimage) , aby zwolnić zasoby przydzielone przez `PrepareDrawImage`.
+Po wywołaniu tej metody można wywołać [CMFCToolBarImages::Draw](#draw) dowolną liczbę razy. Po zakończeniu rysowania należy wywołać [CMFCToolBarImages::EndDrawImage,](#enddrawimage) `PrepareDrawImage`aby zwolnić zasoby przydzielone przez program .
 
-##  <a name="save"></a>CMFCToolBarImages:: Save
+## <a name="cmfctoolbarimagessave"></a><a name="save"></a>CMFCToolBarImages::Zapisz
 
-Zapisuje obrazy pasków narzędzi w pliku, jeśli ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.
+Obrazy paska narzędzi są przechowywane w pliku, jeśli ten zestaw obrazów paska narzędzi zawiera obrazy zdefiniowane przez użytkownika.
 
 ```
 BOOL Save(LPCTSTR lpszBmpFileName=NULL);
@@ -1148,17 +1149,17 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszBmpFileName*<br/>
-Ścieżka do pliku na dysku.
+Ścieżka do pliku dysku.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 PRAWDA, jeśli obrazy paska narzędzi zostały pomyślnie zapisane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby przechowywać obrazy zdefiniowane przez użytkownika w pliku na dysku. Jeśli *lpszBmpFileName* ma wartość null, metoda przechowuje mapę bitową do pliku, z którego mapa bitowa została załadowana przez metodę [CMFCToolBarImages:: Load](#load) .
+Wywołanie tej metody do przechowywania obrazów zdefiniowanych przez użytkownika w pliku dysku. Jeśli *lpszBmpFileName* ma wartość NULL, metoda przechowuje mapę bitową w pliku, z którego mapa bitowa została załadowana przez [metodę CMFCToolBarImages::Load.](#load)
 
-##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight
+## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight
 
 ```
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
@@ -1166,11 +1167,11 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bAlwaysLight*<br/>
+[w] *bAlwaysLight (Oświetlenie)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha
+## <a name="cmfctoolbarimagessetdisabledimagealpha"></a><a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha
 
 Ustawia wartość kanału alfa (krycie), która jest używana dla wyłączonych obrazów.
 
@@ -1180,14 +1181,14 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametry
 
-*nWartość*<br/>
-podczas Nowa wartość kanału alfa.
+*wartość nValue*<br/>
+[w] Nowa wartość kanału alfa.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby ustawić niestandardową wartość alfa dla wyłączonych obrazów. Wartość domyślna to 127, co powoduje, że obrazy przycisków wyłączone mają być półprzezroczyste. Jeśli ustawisz wartość 0, wyłączone obrazy będą całkowicie przezroczyste. Jeśli ustawisz wartość 255, wyłączone obrazy będą całkowicie nieprzezroczyste.
+Ta metoda służy do ustawiania niestandardowej wartości alfa dla wyłączonych obrazów. Wartość domyślna to 127, co powoduje, że wyłączone obrazy przycisków są półprzezroczysty. Jeśli ustawisz wartość 0, wyłączone obrazy będą całkowicie przezroczyste. Jeśli ustawisz wartość 255, wyłączone obrazy będą całkowicie nieprzezroczyste.
 
-##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha
+## <a name="cmfctoolbarimagessetfadedimagealpha"></a><a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha
 
 ```
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
@@ -1195,13 +1196,13 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *nWartość*<br/>
+[w] *wartość nValue*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setimagesize"></a>CMFCToolBarImages::SetImageSize
+## <a name="cmfctoolbarimagessetimagesize"></a><a name="setimagesize"></a>CMFCToolBarImages::SetImageSize
 
-Ustawia rozmiar każdego obrazu paska narzędzi (rozmiar źródła).
+Ustawia rozmiar każdego obrazu paska narzędzi (rozmiar źródłowy).
 
 ```
 void SetImageSize(
@@ -1211,14 +1212,14 @@ void SetImageSize(
 
 ### <a name="parameters"></a>Parametry
 
-*sizeImage*<br/>
-podczas Nowy rozmiar obrazów pasków narzędzi.
+*rozmiarImage*<br/>
+[w] Nowy rozmiar obrazów paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie rozmiar obrazu paska narzędzi to 16x15 pikseli. Wywołaj tę metodę, jeśli chcesz używać obrazów pasków narzędzi o innym rozmiarze.
+Domyślnie rozmiar obrazu paska narzędzi wynosi 16x15 pikseli. Wywołanie tej metody, jeśli chcesz użyć obrazów paska narzędzi o innym rozmiarze.
 
-##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage
+## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage
 
 ```
 void SetLightPercentage(int nValue);
@@ -1226,11 +1227,11 @@ void SetLightPercentage(int nValue);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *nWartość*<br/>
+[w] *wartość nValue*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors
+## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DKolors
 
 ```
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1238,11 +1239,11 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bMapTo3DColors*<br/>
+[w] *bMapTo3DKolory*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck
+## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck
 
 ```
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1250,11 +1251,11 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bAuto*<br/>
+[w] *bUto*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage
+## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage
 
 ```
 void SetSingleImage();
@@ -1262,9 +1263,9 @@ void SetSingleImage();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor
+## <a name="cmfctoolbarimagessettransparentcolor"></a><a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor
 
-Ustawia przezroczysty kolor obrazów pasków narzędzi.
+Ustawia przezroczysty kolor obrazów paska narzędzi.
 
 ```
 COLORREF SetTransparentColor(COLORREF clrTransparent);
@@ -1272,18 +1273,18 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 
 ### <a name="parameters"></a>Parametry
 
-*clrTransparent*<br/>
-podczas Wartość RGB.
+*clrPrzezroczysty*<br/>
+[w] Wartość RGB.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Poprzedni kolor przezroczysty.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku wywołania [CMFCToolBarImages::D RAW](#draw), metoda nie rysuje pikseli pasujących do koloru określonego przez *clrTransparent*.
+Gdy ty lub framework wywołać [CMFCToolBarImages::Draw](#draw), metoda nie rysuje żadnego piksela, który pasuje do koloru określonego przez *clrTransparent*.
 
-##  <a name="updateimage"></a>CMFCToolBarImages::UpdateImage
+## <a name="cmfctoolbarimagesupdateimage"></a><a name="updateimage"></a>CMFCToolBarImages::UpdateImage
 
 Aktualizuje obraz paska narzędzi zdefiniowany przez użytkownika z mapy bitowej.
 
@@ -1295,19 +1296,19 @@ BOOL UpdateImage(
 
 ### <a name="parameters"></a>Parametry
 
-*iImage*<br/>
-podczas Indeks (liczony od zera) obrazu do zaktualizowania.
+*Iimage*<br/>
+[w] Indeks od zera obrazu do aktualizacji.
 
-*hbmp*<br/>
-podczas Uchwyt mapy bitowej, z której ma zostać zaktualizowany obraz.
+*hbmp (hbmp)*<br/>
+[w] Dojście do mapy bitowej, z której ma być aktualizowana obraz.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli obraz został pomyślnie zaktualizowany; FAŁSZ, jeśli lista obrazów nie jest zdefiniowana przez użytkownika lub tymczasowa.
+PRAWDA, jeśli obraz został pomyślnie zaktualizowany; FAŁSZ, jeśli lista obrazów nie jest zdefiniowana przez użytkownika lub tymczasowa.
 
-##  <a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits
+## <a name="cmfctoolbarimagesconvertto32bits"></a><a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits
 
-Konwertuje podkreślone mapy bitowe na obrazy 32 BPP.
+Konwertuje podkreślone mapy bitowe na 32 obrazy bpp.
 
 ```
 BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
@@ -1315,56 +1316,56 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 
 ### <a name="parameters"></a>Parametry
 
-*clrTransparent*<br/>
-Określa przezroczysty kolor niepodkreślonych map bitowych.
+*clrPrzezroczysty*<br/>
+Określa kolor przezroczysty podkreślonych map bitowych.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel
+## <a name="cmfctoolbarimagesgetbitsperpixel"></a><a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel
 
-Zwraca bieżącą rozdzielczość obrazów podkreślonych.
+Zwraca bieżącą rozdzielczość podkreślonych obrazów.
 
 ```
 int GetBitsPerPixel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość całkowita reprezentująca bieżącą rozdzielczość obrazów podkreślonych w bitach na piksel (BPP).
+Wartość całkowita reprezentująca bieżącą rozdzielczość podkreślonych obrazów w bitach na piksel (bpp).
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getscale"></a>CMFCToolBarImages:: getscale
+## <a name="cmfctoolbarimagesgetscale"></a><a name="getscale"></a>CMFCToolBarImages::GetScale
 
-Zwraca bieżący współczynnik skalowania obrazów podkreślonych.
+Zwraca bieżący współczynnik skali podkreślonych obrazów.
 
 ```
 double GetScale() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość reprezentująca bieżący stosunek skali.
+Wartość reprezentująca bieżący współczynnik skali.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isscaled"></a>CMFCToolBarImages:: isscaled
+## <a name="cmfctoolbarimagesisscaled"></a><a name="isscaled"></a>CMFCToolBarImages::IsScaled
 
-Wskazuje, czy podkreślone obrazy są skalowane czy nie.
+Określa, czy podkreślone obrazy są skalowane, czy nie.
 
 ```
 BOOL IsScaled () const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 PRAWDA, jeśli podkreślone obrazy są skalowane; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="smoothresize"></a>CMFCToolBarImages::SmoothResize
+## <a name="cmfctoolbarimagessmoothresize"></a><a name="smoothresize"></a>CMFCToolBarImages::SmoothResize
 
-Bezproblemowo zmienia rozmiar obrazów podkreślonych.
+Płynnie zmienić rozmiar podkreślonych obrazów.
 
 ```
 BOOL SmoothResize(double dblImageScale);
@@ -1372,12 +1373,12 @@ BOOL SmoothResize(double dblImageScale);
 
 ### <a name="parameters"></a>Parametry
 
-*dblImageScale*<br/>
-Współczynnik skalowania.
+*dblImageSkas*<br/>
+Współczynnik skali.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli zmiana rozmiaru powiodła się; w przeciwnym razie FALSE.
+PRAWDA, jeśli rozmiar zostanie przesunie się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 

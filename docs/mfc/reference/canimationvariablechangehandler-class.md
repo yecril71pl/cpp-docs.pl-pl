@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377085"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Klasa CAnimationVariableChangeHandler
 
-Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy wartość zmiennej animacji zmienia się.
+Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji, gdy zmienia się wartość zmiennej animacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,19 +33,19 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Konstruuje `CAnimationVariableChangeHandler` obiektu.|
+|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Konstruuje `CAnimationVariableChangeHandler` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CreateInstance`|Tworzy wystąpienie `CAnimationVariableChangeHandler` obiektu.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Wywołuje się, gdy zmieniono wartość zmiennej animacji. (Przesłania `CUIAnimationVariableChangeHandlerBase::OnValueChanged`).|
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.|
+|[CAnimationVariableChangeHandler::OnValueZmienił](#onvaluechanged)|Wywoływana po zmianie wartości zmiennej animacji. (Przesłania `CUIAnimationVariableChangeHandlerBase::OnValueChanged`).|
+|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura obsługi zdarzeń jest tworzony i przekazywany do `IUIAnimationVariable::SetVariableChangeHandler` po wywołaniu metody `CAnimationVariable::EnableValueChangedEvent` lub `CAnimationBaseObject::EnableValueChangedEvent` (co pozwala to zdarzenie wszystkich zmiennych animacji hermetyzowane w obiekcie animacji).
+Ten program obsługi zdarzeń `IUIAnimationVariable::SetVariableChangeHandler` jest tworzony i `CAnimationVariable::EnableValueChangedEvent` `CAnimationBaseObject::EnableValueChangedEvent` przekazywany do metody, podczas wywoływania lub (który włącza to zdarzenie dla wszystkich zmiennych animacji zhermetyzowanych w obiekcie animacji).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -59,9 +59,9 @@ Ta procedura obsługi zdarzeń jest tworzony i przekazywany do `IUIAnimationVari
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueZmienił
 
-Wywołuje się, gdy zmieniono wartość zmiennej animacji.
+Wywoływana po zmianie wartości zmiennej animacji.
 
 ```
 IFACEMETHOD(OnValueChanged) (
@@ -73,25 +73,25 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*scenorysu*<br/>
-Scenorysem, która jest animowanie zmiennej.
+*Serii ujęć*<br/>
+Scenorysu, który jest animowanie zmiennej.
 
-*Zmienna*<br/>
+*Zmiennej*<br/>
 Zmienna animacji, która została zaktualizowana.
 
-*newValue*<br/>
+*Newvalue*<br/>
 Nowa wartość.
 
-*previousValue*<br/>
-Poprzedniej wartości.
+*poprzedniWartość*<br/>
+Poprzednia wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController
 
-Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.
+Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -99,9 +99,9 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

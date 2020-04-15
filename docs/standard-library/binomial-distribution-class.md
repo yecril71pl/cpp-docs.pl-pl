@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376713"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution — Klasa
 
@@ -71,34 +71,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* \
-Typ wyniku liczby całkowitej, wartość domyślna to **int**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+*Typ int*\
+Typ wyniku liczby całkowitej, domyślnie **int**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
-*URNG* \
-Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
+*Urng*\
+Jednolity silnik generatora liczb losowych. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje rozkład, który tworzy wartości typu całkowitego określonego przez użytkownika, lub typ **int** , jeśli nie jest podany, dystrybuowany zgodnie z dyskretną funkcją rozkładu dwumianowego. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje rozkład, który tworzy wartości typu całkowitego określonego przez użytkownika lub wpisz **int,** jeśli nie jest dostarczany, rozłożone zgodnie z funkcją prawdopodobieństwa rozkładu dwumianowego. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Elementy członkowskie właściwości `t()` i `p()` zwracają odpowiednio przechowywane wartości parametrów dystrybucji *t* i *p* .
+Elementy członkowskie `t()` `p()` właściwości i zwraca aktualnie przechowywane wartości parametrów dystrybucji *t* i *p* odpowiednio.
 
-Element członkowski właściwości `param()` ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
+Element członkowski `param()` właściwości `param_type` ustawia lub zwraca pakiet parametrów przechowywanej dystrybucji.
 
-Funkcje członkowskie `min()` i `max()` zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+`min()` Funkcje `max()` i element członkowski zwracają odpowiednio najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
+Funkcja `reset()` elementu członkowskiego odrzuca wszystkie buforowane wartości, dzięki czemu `operator()` wynik następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje `operator()` członkowskie zwracają następną wygenerowaną wartość na podstawie aparatu URNG, z bieżącego pakietu parametrów lub określonego pakietu parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat funkcji dyskretnego prawdopodobieństwa rozkładu dwumianowego, zobacz Wolfram MathWorld [rozkład dwumianowy](https://go.microsoft.com/fwlink/p/?linkid=398469)artykułu.
+Aby uzyskać szczegółowe informacje na temat rozkładu dwumianowego dyskretnej funkcji prawdopodobieństwa, zobacz artykuł Wolfram MathWorld [Rozkład dwumianowy](https://go.microsoft.com/fwlink/p/?linkid=398469).
 
 ## <a name="example"></a>Przykład
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-Pierwsze uruchomienie:
+Pierwszy bieg:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -179,7 +179,7 @@ Histogram for 100 samples:
     12 :
 ```
 
-Drugi przebieg:
+Drugi bieg:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -203,7 +203,7 @@ Histogram for 100 samples:
     16 ::
 ```
 
-Trzeci przebieg:
+Trzeci bieg:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -227,11 +227,11 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<random >
+**Nagłówek:** \<losowe>
 
 **Przestrzeń nazw:** std
 
-## <a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
 
 Konstruuje dystrybucję.
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*t* \
-@No__t_0 parametr dystrybucji.
+*T*\
+Parametr `t` rozkładu.
 
-*p* \
-@No__t_0 parametr dystrybucji.
+*P*\
+Parametr `p` rozkładu.
 
-*parametr* \
-Struktura `param_type` używana do konstruowania rozkładu.
+*Parm*\
+Struktura `param_type` używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0 ≤ t` i `0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:** `0 ≤ t` i`0.0 ≤ p ≤ 1.0`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana wartość *p* utrzymuje wartość *p* i której przechowywana wartość *t* przechowuje wartość *t*.
+Pierwszy konstruktor konstruuje obiekt, którego przechowywana wartość *p* przechowuje wartość *p* i której przechowywana wartość *t* przechowuje wartość *t*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
+Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
 
-## <a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::param_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -277,21 +277,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*t* \
-@No__t_0 parametr dystrybucji.
+*T*\
+Parametr `t` rozkładu.
 
-*p* \
-@No__t_0 parametr dystrybucji.
+*P*\
+Parametr `p` rozkładu.
 
-*prawa* \
-Obiekt `param_type`, do którego ma zostać wykonane porównanie.
+*Prawo*\
+Obiekt `param_type` do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0 ≤ t` i `0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:** `0 ≤ t` i`0.0 ≤ p ≤ 1.0`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
+Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<random >](../standard-library/random.md)
+[\<losowe>](../standard-library/random.md)

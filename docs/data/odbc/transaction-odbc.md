@@ -10,38 +10,38 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 49fc0e244dd4f63bd7a69d963ff2a9fbc00ddb6c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56629f8c5ff74aff4e0df589cda1e7b988fb5fd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376411"
 ---
 # <a name="transaction-odbc"></a>Transakcja (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-Transakcja to metoda grupowania lub wsadowego szeregu aktualizacji [źródła danych](../../data/odbc/data-source-odbc.md) , dzięki czemu wszystkie są zatwierdzane jednocześnie lub nie są one zatwierdzane w przypadku wycofania transakcji. Jeśli transakcja nie zostanie użyta, zmiany w źródle danych są zatwierdzane automatycznie, a nie na żądanie.
+Transakcja jest sposobem na grupowanie lub partii, serii aktualizacji do [źródła danych,](../../data/odbc/data-source-odbc.md) tak aby wszystkie są zatwierdzone na raz lub żadne są zatwierdzone, jeśli wycofasz transakcję. Jeśli transakcja nie jest używana, zmiany w źródle danych są zatwierdzane automatycznie, a nie są zatwierdzane na żądanie.
 
 > [!NOTE]
->  Nie wszystkie sterowniki baz danych ODBC obsługują transakcje. Wywołaj `CanTransact` funkcję członkowską obiektu [CDatabase](../../mfc/reference/cdatabase-class.md) lub [CRecordset](../../mfc/reference/crecordset-class.md) , aby określić, czy sterownik obsługuje transakcje dla danej bazy danych. Należy pamiętać, że `CanTransact` nie informuje o tym, czy źródło danych zapewnia pełną obsługę transakcji. Należy również wywołać `CDatabase::GetCursorCommitBehavior` i `CDatabase::GetCursorRollbackBehavior` po `CommitTrans` i `Rollback`, aby sprawdzić efekt transakcji w otwartym obiekcie `CRecordset`.
+> Nie wszystkie sterowniki bazy danych ODBC obsługują transakcje. Wywołanie `CanTransact` funkcji elementu członkowskiego [CDatabase](../../mfc/reference/cdatabase-class.md) lub [CRecordset](../../mfc/reference/crecordset-class.md) obiektu, aby ustalić, czy sterownik obsługuje transakcje dla danej bazy danych. Należy `CanTransact` zauważyć, że nie informuje, czy źródło danych zapewnia pełną obsługę transakcji. Należy również `CDatabase::GetCursorCommitBehavior` wywołać `CommitTrans` `Rollback` i `CDatabase::GetCursorRollbackBehavior` po i sprawdzić wpływ `CRecordset` transakcji na otwarty obiekt.
 
-Wywołania `AddNew` i `Edit` funkcje członkowskie obiektu `CRecordset` wpływają na źródło danych natychmiast po wywołaniu `Update`. wywołania `Delete` również zaczynają obowiązywać natychmiast. Z kolei można użyć transakcji składającej się z wielu wywołań do `AddNew`, `Edit`, `Update`i `Delete`, które są wykonywane, ale nie są zatwierdzane do momentu jawnego wywołania `CommitTrans`. Ustanawiając transakcję, można wykonać serię takich wywołań, jednocześnie zachowując możliwość wycofania ich z powrotem. Jeśli zasób krytyczny jest niedostępny lub jakiś inny warunek uniemożliwia ukończenie całej transakcji, można wycofać transakcję zamiast jej zatwierdzania. W takim przypadku żadna ze zmian należących do transakcji nie ma wpływu na źródło danych.
-
-> [!NOTE]
->  Obecnie Klasa `CRecordset` nie obsługuje aktualizacji źródła danych, jeśli wdrożono pobieranie wierszy zbiorczych. Oznacza to, że nie można wykonywać wywołań do `AddNew`, `Edit`, `Delete`lub `Update`. Można jednak napisać własne funkcje do wykonywania aktualizacji, a następnie wywoływać te funkcje w ramach danej transakcji. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Wywołania `AddNew` funkcji `Edit` i członków `CRecordset` obiektu wpływają na źródło `Update`danych natychmiast po wywołaniu . `Delete`połączenia również natychmiast zaachują. Natomiast można użyć transakcji składającej się `AddNew`z `Edit` `Update`wielu `Delete`wywołań do , , i `CommitTrans` , które są wykonywane, ale nie są zatwierdzone, dopóki nie zadzwonisz jawnie. Ustanawiając transakcję, można wykonać serię takich wywołań przy zachowaniu możliwości ich wycofania. Jeśli zasób krytyczny jest niedostępny lub inny warunek uniemożliwia ukończenie całej transakcji, można wycofać transakcję zamiast jej zatwierdzania. W takim przypadku żadna ze zmian należących do transakcji nie wpływa na źródło danych.
 
 > [!NOTE]
->  Poza wpływem zestawu rekordów, transakcje wpływają na instrukcje SQL wykonywane bezpośrednio, o ile używasz ODBC **HDBC** skojarzonego z obiektem `CDatabase` lub ODBC **HSTMT** w oparciu o te **HDBC**.
-
-Transakcje są szczególnie przydatne w przypadku, gdy istnieje wiele rekordów, które muszą być aktualizowane jednocześnie. W tym przypadku chcemy uniknąć transakcji o połowie ukończonej, takiej jak może się zdarzyć, jeśli wyjątek został zgłoszony przed ostatnią aktualizacją. Zgrupowanie takich aktualizacji do transakcji umożliwia odzyskiwanie (wycofywanie) ze zmian i zwraca rekordy do stanu sprzed transakcji. Jeśli na przykład Bank transferuje pieniądze z konta A do konta B, zarówno wycofanie od a i kaucji do B muszą pomyślnie przetworzyć odpowiednie środki lub cała transakcja nie powiedzie się.
-
-W klasach baz danych wykonywane są transakcje za pomocą obiektów `CDatabase`. Obiekt `CDatabase` reprezentuje połączenie ze źródłem danych, a co najmniej jeden zestaw rekordów skojarzony z tym obiektem `CDatabase` operować na tabelach bazy danych za pomocą funkcji składowych zestawu rekordów.
+> Obecnie klasa `CRecordset` nie obsługuje aktualizacji źródła danych, jeśli zaimplementowano pobieranie wiersza zbiorczego. Oznacza to, że `AddNew`nie `Edit` `Delete`można `Update`wykonywać połączeń do , , , lub . Można jednak napisać własne funkcje do wykonywania aktualizacji, a następnie wywołać te funkcje w ramach danej transakcji. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [Rekord rekordów: Pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Obsługiwany jest tylko jeden poziom transakcji. Nie można zagnieżdżać transakcji ani nie może obejmować wielu obiektów bazy danych.
+> Oprócz wpływu na zestawie rekordów, transakcje wpływają na instrukcje SQL, które są wykonywane `CDatabase` bezpośrednio, o ile używasz ODBC **HDBC** skojarzonego z obiektem lub ODBC **HSTMT** na podstawie tego **HDBC**.
 
-Poniższe tematy zawierają więcej informacji o sposobie wykonywania transakcji:
+Transakcje są szczególnie przydatne, gdy masz wiele rekordów, które muszą być aktualizowane jednocześnie. W takim przypadku chcesz uniknąć transakcji w połowie zakończone, takie jak może się zdarzyć, jeśli wyjątek został zgłoszony przed ostatnią aktualizacją została wykonana. Grupowanie takich aktualizacji w transakcji umożliwia odzyskiwanie (wycofywanie) ze zmian i zwraca rekordy do stanu pretransakcji. Na przykład, jeśli bank przelewa pieniądze z konta A na konto B, zarówno wypłata z A, jak i depozyt na B muszą zakończyć się pomyślnie, aby prawidłowo przetworzyć środki lub cała transakcja musi zakończyć się niepowodzeniem.
+
+W klasach bazy danych można `CDatabase` wykonywać transakcje za pośrednictwem obiektów. Obiekt `CDatabase` reprezentuje połączenie ze źródłem danych, a co najmniej `CDatabase` jeden zestaw rekordów skojarzony z tym obiektem działa w tabelach bazy danych za pośrednictwem funkcji elementu członkowskiego zestawu rekordów.
+
+> [!NOTE]
+> Obsługiwany jest tylko jeden poziom transakcji. Nie można zagnieżdżać transakcji ani transakcji obejmują wiele obiektów bazy danych.
+
+Następujące tematy zawierają więcej informacji na temat sposobu wykonywania transakcji:
 
 - [Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
@@ -49,4 +49,4 @@ Poniższe tematy zawierają więcej informacji o sposobie wykonywania transakcji
 
 ## <a name="see-also"></a>Zobacz też
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[Łączność z otwartą bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

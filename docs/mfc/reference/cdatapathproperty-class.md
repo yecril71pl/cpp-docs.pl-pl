@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376468"
 ---
 # <a name="cdatapathproperty-class"></a>Klasa CDataPathProperty
 
-Implementuje właściwość kontrolki OLE, która może zostać załadowana asynchronicznie.
+Implementuje właściwość formantu OLE, która może być ładowana asynchronicznie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,58 +37,58 @@ Implementuje właściwość kontrolki OLE, która może zostać załadowana asyn
 class CDataPathProperty : public CAsyncMonikerFile
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Konstruuje obiekt `CDataPathProperty`.|
+|[Właściwości CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Konstruuje `CDataPathProperty` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CDataPathProperty:: GetControl](#getcontrol)|Pobiera asynchroniczną kontrolkę OLE skojarzoną z obiektem `CDataPathProperty`.|
-|[CDataPathProperty:: GetPath](#getpath)|Pobiera nazwę ścieżki właściwości.|
-|[CDataPathProperty:: Open](#open)|Inicjuje ładowanie właściwości asynchronicznej skojarzonej kontrolki ActiveX (OLE).|
-|[CDataPathProperty:: ResetData](#resetdata)|Wywołuje `CAsyncMonikerFile::OnDataAvailable` powiadamiania kontenera o zmianach właściwości kontrolki.|
-|[CDataPathProperty:: SetControl](#setcontrol)|Ustawia asynchroniczną kontrolkę ActiveX (OLE) skojarzoną z właściwością.|
-|[CDataPathProperty:: SetPath](#setpath)|Ustawia nazwę ścieżki właściwości.|
+|[Właściwości CDataPathProperty::GetControl](#getcontrol)|Pobiera asynchroniiowy formant OLE `CDataPathProperty` skojarzony z obiektem.|
+|[Właściwości CDataPathProperty::GetPath](#getpath)|Pobiera nazwa ścieżki właściwości.|
+|[CDataPathProperty::Otwórz](#open)|Inicjuje ładowanie właściwości asynchronii dla skojarzonego formantu ActiveX (OLE).|
+|[Właściwości CDataPathProperty::ResetData](#resetdata)|Wywołania `CAsyncMonikerFile::OnDataAvailable` powiadamiania kontenera, że właściwości formantu zostały zmienione.|
+|[CDataPathProperty::SetControl](#setcontrol)|Ustawia asynchroniiowy ActiveX (OLE) kontroli skojarzonej z właściwością.|
+|[CDataPathProperty::SetPath](#setpath)|Ustawia nazwa ścieżki właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Właściwości asynchroniczne są ładowane po asynchronicznym inicjacji.
+Właściwości asynchroniczne są ładowane po zainicjowaniu synchronicznym.
 
-Klasa `CDataPathProperty` pochodzi od `CAysncMonikerFile`. Aby zaimplementować właściwości asynchroniczne w kontrolkach OLE, należy utworzyć klasę z `CDataPathProperty`i zastąpić [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).
+Klasa `CDataPathProperty` jest pochodną `CAysncMonikerFile`. Aby zaimplementować właściwości asynchroniczne w formantyku OLE, należy wyprowadzić klasę z `CDataPathProperty`, i zastąpić [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).
 
-Aby uzyskać więcej informacji o sposobach korzystania z monikerów asynchronicznych i kontrolek ActiveX w aplikacjach internetowych, zobacz następujące artykuły:
+Aby uzyskać więcej informacji na temat używania monikerów asynchronicznych i formantów ActiveX w aplikacjach internetowych, zobacz następujące artykuły:
 
-- [Internet — pierwsze kroki: kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Pierwsze kroki w Internecie: Formanty ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Pierwsze kroki w Internecie: monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Pierwsze kroki internetowe: Asynchroniczne Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[Cfile](../../mfc/reference/cfile-class.md)
 
-[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
+[Colestreamfile](../../mfc/reference/colestreamfile-class.md)
 
-[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
+[Plik CMoniker](../../mfc/reference/cmonikerfile-class.md)
 
-[CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
+[Casyncmonikerfile](../../mfc/reference/casyncmonikerfile-class.md)
 
 `CDataPathProperty`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** 'afxctl. h
+**Nagłówek:** afxctl.h
 
-##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty
+## <a name="cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>Właściwości CDataPathProperty::CDataPathProperty
 
-Konstruuje obiekt `CDataPathProperty`.
+Konstruuje `CDataPathProperty` obiekt.
 
 ```
 CDataPathProperty(COleControl* pControl = NULL);
@@ -97,43 +97,43 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*<br/>
-Wskaźnik do obiektu formantu OLE, który ma zostać skojarzony z tym obiektem `CDataPathProperty`.
+*pKontroluj*<br/>
+Wskaźnik do obiektu sterującego OLE, który `CDataPathProperty` ma być skojarzony z tym obiektem.
 
-*lpszPath*<br/>
-Ścieżka, która może być bezwzględna lub względna, użyta do utworzenia asynchronicznej monikera, która odwołuje się do rzeczywistej absolutnej lokalizacji właściwości. `CDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli potrzebujesz `CDataPathProperty` obiektu dla pliku, poprzedź `file://` ścieżką.
+*lpszPath (lpszPath)*<br/>
+Ścieżka, która może być bezwzględna lub względna, używana do tworzenia asynchroniiowego monikera, który odwołuje się do rzeczywistej bezwzględnej lokalizacji właściwości. `CDataPathProperty`używa adresów URL, a nie nazwy plików. Jeśli chcesz `CDataPathProperty` obiekt dla pliku, `file://` należy dołączyć do ścieżki.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `COleControl` wskazywany przez *pControl* jest używany przez `Open` i pobierany przez klasy pochodne. Jeśli *pControl* ma wartość null, formant używany z `Open` powinien być ustawiony z `SetControl`. Jeśli *lpszPath* ma wartość null, można przekazać ścieżkę za pomocą `Open` lub ustawić ją z `SetPath`.
+Obiekt `COleControl` wskazany przez *pControl* `Open` jest używany przez i pobierane przez klasy pochodne. Jeśli *pControl* ma wartość NULL, formant używany z `Open` należy ustawić za pomocą `SetControl`. Jeśli *lpszPath* ma wartość NULL, można `Open` przejść ścieżką lub ustawić ją za pomocą `SetPath`.
 
-##  <a name="getcontrol"></a>CDataPathProperty:: GetControl
+## <a name="cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>Właściwości CDataPathProperty::GetControl
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać obiekt `COleControl` skojarzony z obiektem `CDataPathProperty`.
+Wywołanie tej funkcji elementu `COleControl` członkowskiego, aby `CDataPathProperty` pobrać obiekt skojarzony z obiektem.
 
 ```
 COleControl* GetControl();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do kontrolki OLE skojarzonej z obiektem `CDataPathProperty`. Wartość NULL, jeśli nie jest skojarzona żadna kontrola.
+Zwraca wskaźnik do formantu OLE `CDataPathProperty` skojarzonego z obiektem. Null, jeśli nie formant jest skojarzony.
 
-##  <a name="getpath"></a>CDataPathProperty:: GetPath
+## <a name="cdatapathpropertygetpath"></a><a name="getpath"></a>Właściwości CDataPathProperty::GetPath
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać ścieżkę, ustawić podczas konstruowania obiektu `CDataPathProperty` lub określić ją w `Open`lub określić w poprzednim wywołaniu funkcji członkowskiej `SetPath`.
+Wywołanie tej funkcji elementu członkowskiego, aby `CDataPathProperty` pobrać ścieżkę, ustawić, kiedy obiekt został skonstruowany lub określony w `Open`, lub określone w poprzednim wywołaniu funkcji `SetPath` elementu członkowskiego.
 
 ```
 CString GetPath() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca nazwę ścieżki do samej właściwości. Może być puste, jeśli nie określono ścieżki.
+Zwraca nazwę ścieżki do samej właściwości. Może być pusta, jeśli nie określono żadnej ścieżki.
 
-##  <a name="open"></a>CDataPathProperty:: Open
+## <a name="cdatapathpropertyopen"></a><a name="open"></a>CDataPathProperty::Otwórz
 
-Wywołaj tę funkcję elementu członkowskiego, aby zainicjować ładowanie właściwości asynchronicznej skojarzonej kontrolki.
+Wywołanie tej funkcji elementu członkowskiego, aby zainicjować ładowanie właściwości asynchronii dla skojarzonego formantu.
 
 ```
 virtual BOOL Open(
@@ -154,32 +154,32 @@ virtual BOOL Open(CFileException* pError = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*<br/>
-Wskaźnik do obiektu formantu OLE, który ma zostać skojarzony z tym obiektem `CDataPathProperty`.
+*pKontroluj*<br/>
+Wskaźnik do obiektu sterującego OLE, który `CDataPathProperty` ma być skojarzony z tym obiektem.
 
-*pError*<br/>
-Wskaźnik do wyjątku pliku. W przypadku błędu, zostanie ustawiony na przyczynę.
+*Perror*<br/>
+Wskaźnik do wyjątku pliku. W przypadku wystąpienia błędu zostanie ustawiona na przyczynę.
 
-*lpszPath*<br/>
-Ścieżka, która może być bezwzględna lub względna, użyta do utworzenia asynchronicznej monikera, która odwołuje się do rzeczywistej absolutnej lokalizacji właściwości. `CDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli potrzebujesz `CDataPathProperty` obiektu dla pliku, poprzedź `file://` ścieżką.
+*lpszPath (lpszPath)*<br/>
+Ścieżka, która może być bezwzględna lub względna, używana do tworzenia asynchroniiowego monikera, który odwołuje się do rzeczywistej bezwzględnej lokalizacji właściwości. `CDataPathProperty`używa adresów URL, a nie nazwy plików. Jeśli chcesz `CDataPathProperty` obiekt dla pliku, `file://` należy dołączyć do ścieżki.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja próbuje uzyskać interfejs `IBindHost` z formantu.
+Funkcja próbuje uzyskać `IBindHost` interfejs z formantu.
 
-Przed wywołaniem `Open` bez ścieżki należy ustawić wartość ścieżki właściwości. Można to zrobić, gdy obiekt jest konstruowany lub wywołując funkcję elementu członkowskiego `SetPath`.
+Przed `Open` wywołaniem bez ścieżki należy ustawić wartość ścieżki właściwości. Można to zrobić, gdy obiekt jest konstruowany lub wywołując funkcję `SetPath` elementu członkowskiego.
 
-Przed wywołaniem `Open` bez kontrolki formant ActiveX (wcześniej znany jako formant OLE) można skojarzyć z obiektem. Można to zrobić, gdy obiekt jest konstruowany lub wywołując `SetControl`.
+Przed `Open` wywołaniem bez kontroli formant ActiveX (dawniej znany jako formant OLE) może być skojarzony z obiektem. Można to zrobić, gdy obiekt jest konstruowany lub wywołując `SetControl`.
 
-Wszystkie przeciążenia elementu [CAsyncMonikerFile:: Open](../../mfc/reference/casyncmonikerfile-class.md#open) są również dostępne w `CDataPathProperty`.
+Wszystkie przeciążenia [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) są `CDataPathProperty`również dostępne od .
 
-##  <a name="resetdata"></a>CDataPathProperty:: ResetData
+## <a name="cdatapathpropertyresetdata"></a><a name="resetdata"></a>Właściwości CDataPathProperty::ResetData
 
-Wywołaj tę funkcję, aby uzyskać `CAsyncMonikerFile::OnDataAvailable` powiadomienia kontenera o zmianach właściwości kontrolki, a wszystkie informacje ładowane asynchronicznie nie są już użyteczne.
+Wywołanie tej `CAsyncMonikerFile::OnDataAvailable` funkcji, aby powiadomić kontener, że właściwości formantu zostały zmienione, a wszystkie informacje ładowane asynchronicznie nie jest już przydatne.
 
 ```
 virtual void ResetData();
@@ -187,11 +187,11 @@ virtual void ResetData();
 
 ### <a name="remarks"></a>Uwagi
 
-Otwieranie należy uruchomić ponownie. Klasy pochodne mogą przesłaniać tę funkcję dla różnych wartości domyślnych.
+Otwarcie powinno zostać ponownie uruchomione. Klasy pochodne mogą zastąpić tę funkcję dla różnych wartości domyślnych.
 
-##  <a name="setcontrol"></a>CDataPathProperty:: SetControl
+## <a name="cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPathProperty::SetControl
 
-Wywołaj tę funkcję elementu członkowskiego, aby skojarzyć asynchroniczny formant OLE z obiektem `CDataPathProperty`.
+Wywołanie tej funkcji elementu członkowskiego, aby skojarzyć asynchronisty formant OLE z obiektem. `CDataPathProperty`
 
 ```
 void SetControl(COleControl* pControl);
@@ -199,12 +199,12 @@ void SetControl(COleControl* pControl);
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*<br/>
-Wskaźnik do asynchronicznej kontrolki OLE, która ma być skojarzona z właściwością.
+*pKontroluj*<br/>
+Wskaźnik do asynchroniiowego formantu OLE, który ma być skojarzony z właściwością.
 
-##  <a name="setpath"></a>CDataPathProperty:: SetPath
+## <a name="cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPathProperty::SetPath
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić nazwę ścieżki właściwości.
+Wywołanie tej funkcji elementu członkowskiego, aby ustawić nazwa ścieżki właściwości.
 
 ```
 void SetPath(LPCTSTR lpszPath);
@@ -212,12 +212,12 @@ void SetPath(LPCTSTR lpszPath);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPath*<br/>
-Ścieżka, która może być bezwzględna lub względna, do właściwości, która jest ładowana asynchronicznie. `CDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli potrzebujesz `CDataPathProperty` obiektu dla pliku, poprzedź `file://` ścieżką.
+*lpszPath (lpszPath)*<br/>
+Ścieżka, która może być bezwzględna lub względna, do właściwości ładowanej asynchronicznie. `CDataPathProperty`używa adresów URL, a nie nazwy plików. Jeśli chcesz `CDataPathProperty` obiekt dla pliku, `file://` należy dołączyć do ścieżki.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład obrazu MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy obraz MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)

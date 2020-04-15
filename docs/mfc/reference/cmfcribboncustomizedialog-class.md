@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375206"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Klasa CMFCRibbonCustomizeDialog
 
-Wyświetla wstążki **Dostosuj** strony.
+Wyświetla wstążkę **Dostosuj** stronę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,34 +31,34 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Konstruuje `CMFCRibbonCustomizeDialog` obiektu.|
-|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destruktor.|
+|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Konstruuje `CMFCRibbonCustomizeDialog` obiekt.|
+|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
 
 ## <a name="remarks"></a>Uwagi
 
-MFC tworzy wystąpienie tej klasy automatycznie, jeśli nie przetwarzają komunikatów AFX_WM_ON_RIBBON_CUSTOMIZE lub zwracają 0 z obsługi wiadomości.
+MFC automatycznie wystąpienia tej klasy, jeśli nie przetwarzają AFX_WM_ON_RIBBON_CUSTOMIZE wiadomości lub jeśli zwrócisz 0 z obsługi wiadomości.
 
-Jeśli chcesz użyć tej klasy w aplikacji do wyświetlenia na wstążce **Dostosuj** okna dialogowego pole, po prostu tworzenia jego instancji i wywołania `DoModal` metody.
+Jeśli chcesz użyć tej klasy w aplikacji, aby wyświetlić wstążkę Dostosuj okno `DoModal` dialogowe, po prostu utworzyć **wystąpienie** i wywołać metodę.
 
-Ponieważ ta klasa jest pochodną [klasa CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md), można dodać niestandardowe strony za pomocą `CMFCPropertySheet` interfejsu API.
+Ponieważ ta klasa jest pochodną [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md), można `CMFCPropertySheet` dodać strony niestandardowe przy użyciu interfejsu API.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
+[Cpropertysheet](../../mfc/reference/cpropertysheet-class.md)
 
-[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
+[Cmfcpropertysheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
 [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
@@ -66,9 +66,9 @@ Ponieważ ta klasa jest pochodną [klasa CMFCPropertySheet](../../mfc/reference/
 
 **Nagłówek:** afxribboncustomizedialog.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
 
-Konstruuje `CMFCRibbonCustomizeDialog` obiektu.
+Konstruuje `CMFCRibbonCustomizeDialog` obiekt.
 
 ```
 CMFCRibbonCustomizeDialog(
@@ -78,23 +78,23 @@ CMFCRibbonCustomizeDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndParent*<br/>
-[in] Wskaźnik do nadrzędnego okna (zazwyczaj głównej ramki).
+*pWndRodziciela*<br/>
+[w] Wskaźnik do okna nadrzędnego (zwykle ramki głównej).
 
-*pRibbon*<br/>
-[in] Wskaźnik do `CMFCRibbonBar` który ma zostać dostosowana.
+*pRibbon ( pRibbon )*<br/>
+[w] Wskaźnik do `CMFCRibbonBar` tego, który ma być dostosowany.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób tworzenia `CMFCRibbonCustomizeDialog` obiektu.
+W poniższym przykładzie pokazano, jak skonstruować `CMFCRibbonCustomizeDialog` obiekt.
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy konstruktora [klasa CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) obiektu i dodaje go do kolekcji strony arkusza właściwości.
+Konstruktor tworzy [cmfcribbonCustomizePropertyPage Class](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) obiektu i dodaje go do kolekcji stron arkusza właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

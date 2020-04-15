@@ -1,5 +1,5 @@
 ---
-title: CGopherFile Class
+title: Klasa CGopherFile
 ms.date: 11/04/2016
 f1_keywords:
 - CGopherFile
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: 9bb242cb53593862cb51e0c193eb739625127adc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e157a4509fe30b814a1834690a675906ac82afe7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380289"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373692"
 ---
-# <a name="cgopherfile-class"></a>CGopherFile Class
+# <a name="cgopherfile-class"></a>Klasa CGopherFile
 
-Oferuje funkcje w celu odnalezienia i odczytania plików na serwerze gophera.
+Zapewnia funkcje znajdowania i odczytywania plików na serwerze gopher.
 
 > [!NOTE]
->  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementów członkowskich są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działały na starszych platformach.
+> Klasy `CGopherConnection`, `CGopherFile` `CGopherFileFind`, `CGopherLocator` i ich członkowie zostały przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą nadal działać na wcześniejszych platformach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,23 +34,23 @@ class CGopherFile : public CInternetFile
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CGopherFile::CGopherFile](#cgopherfile)|Konstruuje `CGopherFile` obiektu.|
+|[CGopherFile::CGopherFile](#cgopherfile)|Konstruuje `CGopherFile` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-Usługa gopher nie zezwala użytkownikom można zapisać danych do pliku gopher, ponieważ ta usługa działa głównie jako interfejs do znajdowania informacji. `CGopherFile` Elementów członkowskich `Write`, `WriteString`, i `Flush` nie są zaimplementowane dla `CGopherFile`. Wywoływanie tych funkcji na `CGopherFile` obiektu i zwraca [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+Usługa gopher nie pozwala użytkownikom na zapisywanie danych do pliku gopher, ponieważ ta usługa działa głównie jako interfejs oparty na menu do znajdowania informacji. Funkcje `CGopherFile` `Write`członkowskie `WriteString`, `Flush` i nie `CGopherFile`są implementowane dla . Wywołując te funkcje w obiekcie, `CGopherFile` zwraca [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Aby dowiedzieć się więcej o tym, jak `CGopherFile` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Aby dowiedzieć `CGopherFile` się więcej o tym, jak działa z innymi klasami MFC Internet, zobacz artykuł [Programowanie internetowe z WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[Cfile](../../mfc/reference/cfile-class.md)
 
-[CStdioFile](../../mfc/reference/cstdiofile-class.md)
+[Cstdiofile](../../mfc/reference/cstdiofile-class.md)
 
-[CInternetFile](../../mfc/reference/cinternetfile-class.md)
+[Cinternetfile](../../mfc/reference/cinternetfile-class.md)
 
 `CGopherFile`
 
@@ -58,9 +58,9 @@ Aby dowiedzieć się więcej o tym, jak `CGopherFile` współpracuje z innych kl
 
 **Nagłówek:** afxinet.h
 
-##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile
+## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopherFile::CGopherFile
 
-Ta funkcja członkowska jest wywoływana, aby skonstruować `CGopherFile` obiektu.
+Ta funkcja elementu członkowskiego `CGopherFile` jest wywoływana do konstruowania obiektu.
 
 ```
 CGopherFile(
@@ -78,34 +78,34 @@ CGopherFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hFile*<br/>
+*hFile (plik)*<br/>
 Dojście do pliku HINTERNET.
 
-*refLocator*<br/>
-Odwołanie do [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu.
+*reflocator*<br/>
+Odwołanie do [obiektu CGopherLocator.](../../mfc/reference/cgopherlocator-class.md)
 
-*pConnection*<br/>
-Wskaźnik do [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) obiektu.
+*pZkładanie*<br/>
+Wskaźnik do [obiektu CGopherConnection.](../../mfc/reference/cgopherconnection-class.md)
 
-*hSession*<br/>
-Dojście do bieżącej sesji Internet.
+*hSession (wysiew)*<br/>
+Dojście do bieżącej sesji internetowej.
 
-*pstrLocator*<br/>
-Wskaźnik do ciągu, używana do lokalizowania serwera gopher. Zobacz [sesje Gopher](cgopherlocator-class.md) Aby uzyskać więcej informacji na temat lokalizatorów gopher.
+*lokalizator pstrLocator*<br/>
+Wskaźnik do ciągu używanego do lokalizowania serwera gopher. Zobacz [Sesje gopher, aby](cgopherlocator-class.md) uzyskać więcej informacji na temat lokalizatorów gopher.
 
-*dwLocLen*<br/>
-DWORD zawierającą liczbę bajtów w *pstrLocator*.
+*dwLocLen (ł.*<br/>
+A DWORD zawierający liczbę bajtów w *pstrLocator*.
 
-*dwContext*<br/>
-Wskaźnik na identyfikator kontekstu otwierany plik.
+*Dwcontext*<br/>
+Wskaźnik do identyfikatora kontekstu otwieranego pliku.
 
 ### <a name="remarks"></a>Uwagi
 
-Potrzebujesz `CGopherFile` obiektu do odczytu z pliku podczas sesji Internet gopher.
+Do odczytu `CGopherFile` z pliku podczas sesji internetowej gopher potrzebny jest obiekt.
 
-Nigdy nie twórz `CGopherFile` obiektu bezpośrednio. Zamiast tego należy wywołać [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) można otworzyć pliku na serwerze gophera.
+Nigdy nie `CGopherFile` tworzysz obiektu bezpośrednio. Zamiast tego zadzwoń do [CGopherConnection::OpenFile,](../../mfc/reference/cgopherconnection-class.md#openfile) aby otworzyć plik na serwerze typu gopher.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CInternetFile](../../mfc/reference/cinternetfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

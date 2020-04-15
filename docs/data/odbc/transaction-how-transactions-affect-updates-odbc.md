@@ -1,5 +1,5 @@
 ---
-title: 'Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)'
+title: 'Transakcja: jak transakcje wpływają na aktualizacje (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: d03ec3f71c38f7790d66fbf6f800b7647e080147
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 8a87176ecb20beaf46583e1190b0ad458d508b31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376422"
 ---
-# <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: jak transakcje wpływają na aktualizacje (ODBC)
 
-Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) odbywa się podczas transakcji za pomocą edycji buforu (tej samej metody poza transakcji). Elementy członkowskie danych pola zestawu rekordów zbiorczo służyć jako bufor edycji, który zawiera rekord bieżący zestaw rekordów, tworzy kopię zapasową tymczasowego podczas `AddNew` lub `Edit`. Podczas `Delete` operacji, bieżący rekord nie jest obsługiwane w obrębie transakcji. Aby uzyskać więcej informacji na temat buforu edycji i jak aktualizacje przechowywać bieżącego rekordu, zobacz [zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) są zarządzane podczas transakcji za pomocą buforu edycji (ta sama metoda używana poza transakcjami). Elementy członkowskie danych pól zestawu rekordów służą łącznie jako bufor edycji zawierający bieżący rekord, który zestaw rekordów tymczasowo kopii zapasowej podczas `AddNew` lub . `Edit` Podczas `Delete` operacji bieżący rekord nie jest archiwizny w ramach transakcji. Aby uzyskać więcej informacji na temat buforu edycji i sposobu przechowywania bieżącego rekordu przez aktualizacje, zobacz [Tablica rekordów: Jak recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 > [!NOTE]
->  Jeśli zaimplementowano zbiorcze pobieranie z wiersza, nie można wywołać `AddNew`, `Edit`, lub `Delete`. Zamiast tego trzeba napisać własne funkcje do wykonywania aktualizacji do źródła danych. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: Pobieranie rekordów (ODBC) zbiorcze](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Jeśli zaimplementowano pobieranie wiersza `AddNew`zbiorczego, nie można wywołać , `Edit`lub `Delete`. Zamiast tego należy napisać własne funkcje, aby wykonać aktualizacje do źródła danych. Aby uzyskać więcej informacji na temat pobierania wierszy zbiorczych, zobacz [Rekord rekordów: Pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Podczas transakcji `AddNew`, `Edit`, i `Delete` operacji może być przekazana lub wycofana. Efekty `CommitTrans` i `Rollback` może spowodować, że nie można przywrócić do usługi buffer Edytuj bieżący rekord. Aby upewnić się, że bieżący rekord zostaną prawidłowo przywrócone, jest ważne, aby zrozumieć sposób, w jaki `CommitTrans` i `Rollback` funkcje elementów członkowskich `CDatabase` działają z funkcji aktualizacji `CRecordset`.
+Podczas transakcji `AddNew`, `Edit`i `Delete` operacje mogą być zatwierdzone lub wycofane. Skutki `CommitTrans` i `Rollback` może spowodować bieżący rekord nie zostanie przywrócony do buforu edycji. Aby upewnić się, że bieżący rekord jest prawidłowo `CommitTrans` przywrócony, ważne `CDatabase` jest, aby `CRecordset`zrozumieć, jak funkcje i `Rollback` element członkowski pracy z funkcjami aktualizacji programu .
 
-##  <a name="_core_how_committrans_affects_updates"></a> Jak CommitTrans wpływa na aktualizacje
+## <a name="how-committrans-affects-updates"></a><a name="_core_how_committrans_affects_updates"></a>Jak CommitTrans wpływa na aktualizacje
 
-W poniższej tabeli opisano wpływ `CommitTrans` transakcji.
+W poniższej tabeli `CommitTrans` wyjaśniono wpływ transakcji na transakcje.
 
 ### <a name="how-committrans-affects-updates"></a>Jak CommitTrans wpływa na aktualizacje
 
 |Operacja|Stan źródła danych|
 |---------------|---------------------------|
-|`AddNew` i `Update`, a następnie `CommitTrans`|Nowy rekord są dodawane do źródła danych.|
-|`AddNew` (bez `Update`), a następnie `CommitTrans`|Nowy rekord zostaną utracone. Nie dodany rekord do źródła danych.|
-|`Edit` i `Update`, a następnie `CommitTrans`|Edycja zatwierdzane do źródła danych.|
-|`Edit` (bez `Update`), a następnie `CommitTrans`|Edytowanie rekordu zostaną utracone. Rekord pozostaje bez zmian w źródle danych.|
-|`Delete` Następnie `CommitTrans`|Rekordy zostały usunięte ze źródła danych.|
+|`AddNew`i `Update`, a następnie`CommitTrans`|Nowy rekord jest dodawany do źródła danych.|
+|`AddNew`(bez `Update`), a następnie`CommitTrans`|Nowy rekord jest tracony. Rekord nie został dodany do źródła danych.|
+|`Edit`i `Update`, a następnie`CommitTrans`|Zmiany zatwierdzone do źródła danych.|
+|`Edit`(bez `Update`), a następnie`CommitTrans`|Zmiany w rekordzie zostaną utracone. Rekord pozostaje niezmieniony w źródle danych.|
+|`Delete`Następnie`CommitTrans`|Rekordy usunięte ze źródła danych.|
 
-##  <a name="_core_how_rollback_affects_updates"></a> Wpływ wycofywania transakcji
+## <a name="how-rollback-affects-transactions"></a><a name="_core_how_rollback_affects_updates"></a>Jak wycofywanie wpływa na transakcje
 
-W poniższej tabeli opisano wpływ `Rollback` transakcji.
+W poniższej tabeli `Rollback` wyjaśniono wpływ transakcji na transakcje.
 
-### <a name="how-rollback-affects-transactions"></a>Wpływ wycofywania transakcji
+### <a name="how-rollback-affects-transactions"></a>Jak wycofywanie wpływa na transakcje
 
-|Operacja|Stan bieżący rekord|Należy również|Stan źródła danych|
+|Operacja|Stan bieżącego rekordu|Należy również|Stan źródła danych|
 |---------------|------------------------------|-------------------|---------------------------|
-|`AddNew` i `Update`, następnie `Rollback`|Zawartość bieżącego rekordu są tymczasowo przechowywane w celu zwolnienia miejsca dla nowego rekordu. Nowy rekord jest wprowadzany do edycji buforu. Po `Update` jest wywoływana, bieżący rekord zostanie przywrócony do buforu edycji.||Dodawanie źródła danych wprowadzonych przez `Update` została odwrócona.|
-|`AddNew` (bez `Update`), następnie `Rollback`|Zawartość bieżącego rekordu są tymczasowo przechowywane w celu zwolnienia miejsca dla nowego rekordu. Edytuj bufor zawiera nowy rekord.|Wywołaj `AddNew` ponownie, aby przywrócić buforu edycji pusty, nowy rekord. Lub zadzwoń `Move`(0), można przywrócić stare wartości w buforze edycji.|Ponieważ `Update` nie została wywołana nie wprowadzono żadnych zmian wprowadzonych do źródła danych.|
-|`Edit` i `Update`, następnie `Rollback`|Bitu wersję bieżącego rekordu są tymczasowo przechowywane. Zmiany zostały wprowadzone do zawartości buforu edycji. Po `Update` jest wywoływana, bitu wersji rekordu jest nadal tymczasowo przechowywane.|*Dynaset*: Przewiń poza bieżącym rekordzie, a następnie powrót do przywrócenia bitu wersji rekordu w buforze edycji.<br /><br /> *Migawka*: Wywołaj `Requery` odświeżyć zestaw rekordów ze źródła danych.|Zmienia się ze źródłem danych wprowadzonych przez `Update` zostały cofnięte.|
-|`Edit` (bez `Update`), następnie `Rollback`|Bitu wersję bieżącego rekordu są tymczasowo przechowywane. Zmiany zostały wprowadzone do zawartości buforu edycji.|Wywołaj `Edit` ponownie, aby przywrócić bitu wersję rekordu w buforze edycji.|Ponieważ `Update` nie została wywołana nie wprowadzono żadnych zmian wprowadzonych do źródła danych.|
-|`Delete` Następnie `Rollback`|Zawartość bieżącego rekordu zostanie usunięta.|Wywołaj `Requery` Aby przywrócić zawartość bieżący rekord ze źródła danych.|Usunięcie danych ze źródła danych zostanie odwrócony.|
+|`AddNew`i `Update`, a następnie`Rollback`|Zawartość bieżącego rekordu jest tymczasowo przechowywana w celu udostępnienia miejsca na nowy rekord. Nowy rekord jest wprowadzany do buforu edycji. Po `Update` wywołaniu bieżącego rekordu zostanie przywrócony do buforu edycji.||Oprócz źródła danych `Update` wykonane przez jest odwrócony.|
+|`AddNew`(bez `Update`), a następnie`Rollback`|Zawartość bieżącego rekordu jest tymczasowo przechowywana w celu udostępnienia miejsca na nowy rekord. Edytuj bufor zawiera nowy rekord.|Wywołanie `AddNew` ponownie, aby przywrócić bufor edycji do pustego, nowego rekordu. Lub `Move`wywołać (0), aby przywrócić stare wartości do buforu edycji.|Ponieważ `Update` nie został wywołany, nie wprowadzono żadnych zmian w źródle danych.|
+|`Edit`i `Update`, a następnie`Rollback`|Nieedytowana wersja bieżącego rekordu jest tymczasowo przechowywana. Zmiany są dokonywane w zawartości buforu edycji. Po `Update` wywołaniu nieedytowana wersja rekordu jest nadal tymczasowo przechowywana.|*Dynaset*: Przewiń bieżący rekord, a następnie z powrotem, aby przywrócić nieedytowane wersje rekordu do buforu edycji.<br /><br /> *Migawka*: Wywołanie `Requery` odświeżenia zbioru rekordów ze źródła danych.|Zmiany w źródle `Update` danych wprowadzone przez są wycofywane.|
+|`Edit`(bez `Update`), a następnie`Rollback`|Nieedytowana wersja bieżącego rekordu jest tymczasowo przechowywana. Zmiany są dokonywane w zawartości buforu edycji.|Wywołanie `Edit` ponownie, aby przywrócić nieedytowane wersji rekordu do buforu edycji.|Ponieważ `Update` nie został wywołany, nie wprowadzono żadnych zmian w źródle danych.|
+|`Delete`Następnie`Rollback`|Zawartość bieżącego rekordu zostanie usunięta.|Wywołanie, `Requery` aby przywrócić zawartość bieżącego rekordu ze źródła danych.|Usunięcie danych ze źródła danych jest odwrócone.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>

@@ -11,44 +11,44 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: 59e86f4000e2da588749ca48887d34c3effdfc3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c92d60941cd6542bd0d6c27e8a879dc85e3a3d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377204"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Inicjowanie i oczyszczanie dokumentów i widoków
 
-Inicjowanie i oczyszczanie po dokumentów i widoków, skorzystaj z poniższych wskazówek:
+Użyj następujących wskazówek dotyczących inicjowania i czyszczenia dokumentów i widoków:
 
-- Struktura MFC inicjuje dokumentów i widoków; należy zainicjować wszelkimi danymi, które można dodawać do nich.
+- Struktura MFC inicjuje dokumenty i widoki; zainicjować wszystkie dodane do nich dane.
 
-- Struktura czyści jako dokumentów i widoków Zamknij; należy cofnąć przydział wszystkie pamięci, która została przydzielona na stosie z w ramach funkcji elementów członkowskich tych dokumentów i widoków.
+- Struktura czyści się w miarę zamykania dokumentów i widoków; należy zlokalizować dowolną pamięć przydzieloną na stercie z funkcji członkowskich tych dokumentów i widoków.
 
 > [!NOTE]
->  Odwołaj ten inicjowania dla całej aplikacji odbywa się najlepiej w zastąpienie metody [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkcji składowej klasy typu `CWinApp`, i czyszczenia dla całej aplikacji odbywa się najlepiej w zastąpienie metody `CWinApp`funkcja elementu członkowskiego [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).
+> Przypomnijmy, że inicjowanie dla całej aplikacji najlepiej jest wykonać w nadpisywanie funkcji elementu członkowskiego [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) klasy `CWinApp`, `CWinApp` a oczyszczanie dla całej aplikacji najlepiej jest wykonać w nadpisywaniu funkcji elementu członkowskiego [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).
 
-Cykl życia dokumentu (i jego ramki okna i widoku lub widoków) w MDI aplikacji jest następujący:
+Cykl życia dokumentu (i jego okna ramki oraz widoku lub widoków) w aplikacji MDI jest następujący:
 
-1. Podczas tworzenia dynamicznych Konstruktor dokumentu jest wywoływany.
+1. Podczas tworzenia dynamicznego konstruktora dokumentu jest wywoływana.
 
-1. Dla każdego nowego dokumentu, dokument firmy [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) lub [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) jest wywoływana.
+1. Dla każdego nowego dokumentu jest wywoływana nazwa dokumentu [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) lub [OnOpenDocument.](../mfc/reference/cdocument-class.md#onopendocument)
 
-1. Użytkownik wchodzi w interakcję z dokumentu w okresie swojego istnienia. Zwykle dzieje się jako użytkownik pracuje na dane dokumentu za pośrednictwem widoku, wybierając i edytowanie danych. Widok przekazuje zmian do dokumentu, przechowywania i aktualizowania z innymi widokami. W tym czasie dokument i widok może obsługiwać poleceń.
+1. Użytkownik wchodzi w interakcję z dokumentem przez cały okres jego istnienia. Zazwyczaj dzieje się tak, gdy użytkownik pracuje nad danymi dokumentu za pośrednictwem widoku, wybierając i edytując dane. Widok przekazuje zmiany do dokumentu do przechowywania i aktualizowania innych widoków. W tym czasie zarówno dokument, jak i widok mogą obsługiwać polecenia.
 
-1. Struktura wywołuje [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) można usunąć danych specyficznych dla określonego dokumentu.
+1. Struktura wywołuje [DeleteContents,](../mfc/reference/cdocument-class.md#deletecontents) aby usunąć dane specyficzne dla dokumentu.
 
-1. Dokumentu destruktor jest wywoływany.
+1. Wywoływany jest destruktor dokumentu.
 
-W aplikacji interfejsu SDI kroku 1 jest wykonywane raz, po pierwszym utworzeniu dokumentu. Następnie kroki od 2 do 4 są wykonywane wielokrotnie każdorazowo, gdy zostanie otwarty nowy dokument. Nowy dokument ponownie używa istniejący obiekt dokumentu. Na koniec kroku 5 odbywa się podczas kończenia aplikacji.
+W aplikacji SDI krok 1 jest wykonywany raz, gdy dokument jest tworzony po raz pierwszy. Następnie kroki od 2 do 4 są wykonywane wielokrotnie za każdym razem, gdy otwierany jest nowy dokument. Nowy dokument ponownie używa istniejącego obiektu dokumentu. Na koniec krok 5 jest wykonywany po zakończeniu aplikacji.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
 - [Inicjowanie dokumentów i widoków](../mfc/initializing-documents-and-views.md)
 
 - [Oczyszczanie dokumentów i widoków](../mfc/cleaning-up-documents-and-views.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Architektura dokument/widok](../mfc/document-view-architecture.md)
+[Architektura dokumentu/widoku](../mfc/document-view-architecture.md)

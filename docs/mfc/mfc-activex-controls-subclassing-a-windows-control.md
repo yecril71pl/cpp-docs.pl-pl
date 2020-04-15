@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows'
+title: 'Formanty MFC ActiveX: tworzenie podklasy formantu okna'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,85 +16,85 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccebbad22be92b84fa2fd84434f788484d332cce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239511"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376000"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Formanty MFC ActiveX: tworzenie podklasy formantu okna
 
-W tym artykule opisano proces Tworzenie podklasy kontrolki Windows wspólnego, aby utworzyć formant ActiveX. Tworzenie podklasy Windows istniejący formant jest możliwość szybkiego tworzenia formantu ActiveX. Nowy formant mają możliwości formantów będących podklasami Windows, takich jak malowanie i odpowiadanie na kliknięcia myszą. Przykładowe kontrolki MFC ActiveX [przycisk](../overview/visual-cpp-samples.md) jest przykładem Tworzenie podklasy kontrolki Windows.
+W tym artykule opisano proces podklasyfikowania wspólnego formantu systemu Windows w celu utworzenia formantu ActiveX. Podklasyfikowanie istniejącego formantu systemu Windows to szybki sposób na opracowanie formantu ActiveX. Nowy formant będzie miał możliwości podklasyfikowanego formantu systemu Windows, takie jak malowanie i reagowanie na kliknięcia myszą. Przykładowe formanty MFC ActiveX [BUTTON](../overview/visual-cpp-samples.md) jest przykładem podklasy formantu systemu Windows.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX to starsza technologia, która nie powinna być używana do nowego rozwoju. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [ActiveX Controls](activex-controls.md).
 
-Aby podklasy kontrolki Windows wykonaj następujące zadania:
+Aby podklasyfikować formant systemu Windows, wykonaj następujące zadania:
 
-- [Zastąp IsSubclassedControl i precreatewindow — funkcje Członkowskie COleControl](#_core_overriding_issubclassedcontrol_and_precreatewindow)
+- [Zastępowanie funkcji członkowskich IsSubclassedControl i PreCreateWindow cOleControl](#_core_overriding_issubclassedcontrol_and_precreatewindow)
 
-- [Modyfikowanie OnDraw funkcji składowej](#_core_modifying_the_ondraw_member_function)
+- [Modyfikowanie funkcji elementu członkowskiego OnDraw](#_core_modifying_the_ondraw_member_function)
 
-- [Obsługa komunikaty kontrolki ActiveX (OCM) zostaną uwzględnione do kontrolki](#_core_handling_reflected_window_messages)
+- [Obsługa wszelkich komunikatów sterujących ActiveX (OCM) odbitych do](#_core_handling_reflected_window_messages)
 
    > [!NOTE]
-   > Znaczną część tej pracy jest wykonywane przez kreatora kontrolek ActiveX po wybraniu kontrolki do odziedziczenia przy użyciu **wybierz klasę okna nadrzędnego** listy rozwijanej na **ustawienia kontroli** strony.
+   > Wiele z tej pracy jest wykonywane przez Kreatora sterowania ActiveX, jeśli wybierzesz formant do podklasy przy użyciu listy rozwijanej **Wybierz klasę okna nadrzędnego** na stronie **Ustawienia sterowania.**
 
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Zastępowanie IsSubclassedControl i precreatewindow —
+## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Zastępowanie IsSubclassedControl i PreCreateWindow
 
-Aby zastąpić `PreCreateWindow` i `IsSubclassedControl`, Dodaj następujące wiersze kodu w celu **chronione** część deklaracji klasy kontrolki:
+Aby zastąpić `PreCreateWindow` i `IsSubclassedControl`dodać następujące wiersze kodu do **chronionej** sekcji deklaracji klasy kontrolnej:
 
 [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 
-W pliku implementacji (. CPP) dodaj następujące wiersze kodu, aby zaimplementować te dwie funkcje zgodnym z przesłoniętą:
+W pliku implementacji formantu (. CPP), dodaj następujące wiersze kodu, aby zaimplementować dwie zastąpione funkcje:
 
 [!code-cpp[NVC_MFC_AxSub#2](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_2.cpp)]
 
-Zwróć uwagę, że w tym przykładzie Windows kontrolka przycisku jest określona w `PreCreateWindow`. Jednak żadnych standardowych kontrolek Windows można być podklasą klasy. Aby uzyskać więcej informacji na temat standardowych kontrolek Windows, zobacz [formantów](../mfc/controls-mfc.md).
+Należy zauważyć, że w tym przykładzie `PreCreateWindow`kontrolka przycisku Systemu Windows jest określona w programie . Jednak wszystkie standardowe formanty systemu Windows mogą być podklasyfikowane. Aby uzyskać więcej informacji na temat standardowych formantów systemu Windows, zobacz [Formanty](../mfc/controls-mfc.md).
 
-Tworzenie podklasy kontrolki Windows, można określić stylu określonego okna (WS_) lub rozszerzone okno flagi stylu (WS_EX_) do użycia podczas tworzenia okna formantu. Można ustawić wartości tych parametrów w `PreCreateWindow` funkcja elementu członkowskiego, modyfikując `cs.style` i `cs.dwExStyle` struktury pola. Zmiany w tych polach należy wprowadzać za pomocą **lub** operacji, aby zachować domyślne flagi, które są ustawione przez klasę `COleControl`. Na przykład, jeśli kontrolka jest tworzenie podklasy kontrolki przycisku i formant do wyświetlania jako pole wyboru, Wstaw następujący wiersz kodu do wykonania `CSampleCtrl::PreCreateWindow`, przed instrukcją return:
+Podczas podklasy formantu systemu Windows można określić określone flagi stylu okna (WS_) lub rozszerzonego stylu okna (WS_EX_), które mają być używane podczas tworzenia okna formantu. Wartości tych parametrów w `PreCreateWindow` funkcji elementu członkowskiego `cs.style` można `cs.dwExStyle` ustawić, modyfikując pola struktury. Modyfikacje tych pól powinny być dokonywane przy użyciu operacji **OR,** `COleControl`aby zachować domyślne flagi, które są ustawione według klasy . Na przykład jeśli formant jest podklasy button kontroli i chcesz formantu, aby pojawić się `CSampleCtrl::PreCreateWindow`jako pole wyboru, wstawić następujący wiersz kodu do implementacji , przed return instrukcji:
 
 [!code-cpp[NVC_MFC_AxSub#3](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_3.cpp)]
 
-Ta operacja spowoduje dodanie BS_CHECKBOX Flaga style, przy równoczesnym zachowaniu flagi styl domyślny (WS_CHILD) klasy `COleControl` bez zmian.
+Ta operacja dodaje flagę stylu BS_CHECKBOX, pozostawiając domyślną flagę stylu (WS_CHILD) klasy `COleControl` bez zmian.
 
-##  <a name="_core_modifying_the_ondraw_member_function"></a> Modyfikowanie OnDraw składowa
+## <a name="modifying-the-ondraw-member-function"></a><a name="_core_modifying_the_ondraw_member_function"></a>Modyfikowanie funkcji ondraw element członkowski
 
-Jeśli chcesz, aby Twoje formantów będących podklasami, aby zachować wyglądać inaczej, niż odpowiedni formant Windows `OnDraw` funkcja elementu członkowskiego dla kontrolki powinien zawierać jedynie po wywołaniu `DoSuperclassPaint` funkcji członkowskiej, jak w poniższym przykładzie:
+Jeśli chcesz, aby formant podklasyfikowany zachował taki `OnDraw` sam wygląd jak odpowiedni formant `DoSuperclassPaint` systemu Windows, funkcja elementu członkowskiego formantu powinna zawierać tylko wywołanie funkcji elementu członkowskiego, jak w poniższym przykładzie:
 
 [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]
 
-`DoSuperclassPaint` Funkcji członkowskiej, implementowany przez `COleControl`, używa procedurę okna kontrolki Windows narysuj kontrolkę w kontekście określonego urządzenia, w ramach prostokąt otaczający. To sprawia, że kontrolka widoczny nawet wtedy, gdy nie jest aktywny.
+Funkcja `DoSuperclassPaint` elementu członkowskiego, `COleControl`zaimplementowana przez program , używa procedury okna formantu systemu Windows do rysowania formantu w określonym kontekście urządzenia w obrębie prostokąta ograniczającego. Dzięki temu formant jest widoczny nawet wtedy, gdy nie jest aktywny.
 
 > [!NOTE]
->  `DoSuperclassPaint` Funkcja elementu członkowskiego będzie działać tylko w przypadku tych typów kontroli, które umożliwiają kontekstu urządzenia, które zostaną przekazane jako *wParam* z komunikat WM_PAINT. W tym niektóre standardowe kontrolek Windows, takie jak pasek PRZEWIJANIA i przycisk i wspólnych formantów. Dla formantów, które nie obsługują tego zachowania będzie musiał podać kod do prawidłowego wyświetlenia kontrolkę, która jest nieaktywny.
+> Funkcja `DoSuperclassPaint` elementu członkowskiego będzie działać tylko z tymi typami formantów, które umożliwiają przekazywanie kontekstu urządzenia jako *wParam* komunikatu WM_PAINT. Obejmuje to niektóre standardowe formanty systemu Windows, takie jak SCROLLBAR i BUTTON, a także wszystkie typowe formanty. Dla formantów, które nie obsługują tego zachowania, należy podać własny kod, aby poprawnie wyświetlić nieaktywną formant.
 
-##  <a name="_core_handling_reflected_window_messages"></a> Obsługa odbitych komunikatów okien
+## <a name="handling-reflected-window-messages"></a><a name="_core_handling_reflected_window_messages"></a>Obsługa komunikatów okna odbitego
 
-Formanty Windows zazwyczaj wysyłać niektóre okna do ich nadrzędnego okna. Niektóre z tych wiadomości, takich jak WM_COMMAND, oferują powiadomienie o akcji przez użytkownika. Inne, takie jak wm_ctlcolor —, są używane do uzyskania informacji z okna nadrzędnego. Kontrolki ActiveX komunikuje się zazwyczaj z okna nadrzędnego w inny sposób. Powiadomienia są przekazywane przez wyzwalanie zdarzeń (wysyłanie powiadomień o zdarzeniach), a informacje o kontenerze kontrolki są uzyskiwane, uzyskując dostęp do właściwości otaczających kontenera. Ponieważ istnieje tych metod komunikacji, kontenery kontrolek ActiveX nie oczekuje się przetworzyć wszystkie komunikaty okna wysyłany przez kontrolkę.
+Formanty systemu Windows zazwyczaj wysyłają określone komunikaty okna do okna nadrzędnego. Niektóre z tych komunikatów, takich jak WM_COMMAND, zapewniają powiadomienie o akcji przez użytkownika. Inne, takie jak WM_CTLCOLOR, są używane do uzyskiwania informacji z okna nadrzędnego. Formant ActiveX zwykle komunikuje się z oknem nadrzędnym za pomocą innych środków. Powiadomienia są przekazywane przez wypalania zdarzeń (wysyłanie powiadomień o zdarzeniach), a informacje o kontenerze formantu uzyskuje się przez uzyskanie dostępu do właściwości otoczenia kontenera. Ponieważ istnieją te techniki komunikacji, kontenery kontroli ActiveX nie powinny przetwarzać żadnych komunikatów okna wysyłanych przez formant.
 
-Aby uniemożliwić kontenera odbieranie komunikatów okien wysyłany przez kontrolkę Windows będące podklasami `COleControl` tworzy dodatkowe okna, która będzie służyć jako element nadrzędny kontrolki. Ten dodatkowy, o nazwie "odblaskowego", jest tworzone tylko dla formantu ActiveX, że podklasy Windows kontroli i ma ten sam rozmiar i położenie okna kontrolki. W oknie odblaskowego przechwytuje niektórych komunikatów okien i wysyła je do formantu. Kontrolki w jego procedurę okna następnie może przetwarzać te komunikaty odbite poprzez wykonanie czynności odpowiednie dla formantu ActiveX (na przykład wyzwalanie zdarzenia). Zobacz [odzwierciedlone identyfikatory komunikatów okien](../mfc/reflected-window-message-ids.md) listę windows przechwycone komunikaty i odpowiadające im komunikatów odbitych.
+Aby uniemożliwić kontenerowi odbieranie wiadomości okna wysyłanych przez `COleControl` podklasy formantu systemu Windows, tworzy dodatkowe okno, aby służyć jako nadrzędny formantu. To dodatkowe okno, zwane "reflektorem", jest tworzone tylko dla formantu ActiveX, które podklasuje formant systemu Windows i ma taki sam rozmiar i położenie jak okno formantu. Okno reflektora przechwytuje niektóre komunikaty okna i wysyła je z powrotem do formantu. Formant, w swojej procedurze okna, można następnie przetworzyć te komunikaty odzwierciedlenie, podejmując akcje odpowiednie dla activex kontroli (na przykład wypalania zdarzenia). Zobacz [Identyfikatory komunikatów okna odbitego,](../mfc/reflected-window-message-ids.md) aby uzyskać listę przechwyconych wiadomości systemu Windows i odpowiadających im wiadomości odzwierciedlenie.
 
-Kontener formantu ActiveX mogą być przeznaczone do wykonywania odbicie komunikatu, eliminując konieczność łączenia się `COleControl` do tworzenia okna reflektor i skrócenia czasu wykonywania w czasie formantów będących podklasami Windows. `COleControl` wykrywa, czy kontener obsługuje tę możliwość, sprawdzając właściwości otoczenia MessageReflect o wartości **TRUE**.
+Kontener formantu ActiveX może być zaprojektowany do wykonywania `COleControl` odbicia wiadomości, eliminując konieczność tworzenia okna reflektora i zmniejszając obciążenie czasu wykonywania dla podklasy formantu systemu Windows. `COleControl`wykrywa, czy kontener obsługuje tę funkcję, sprawdzając właściwość otoczenia MessageReflect o wartości **TRUE**.
 
-Do obsługi komunikatów odbitych okna, Dodaj wpis do kontrolki mapy wiadomości i wykonywania funkcji obsługi. Ponieważ komunikaty odbite nie są częścią zestawu standardowych komunikatów zdefiniowany przez Windows, w widoku klas nie obsługuje dodawania takie programy obsługi komunikatów. Jednak nie jest trudne ręcznie dodać program obsługi.
+Aby obsłużyć komunikat okna odbite, należy dodać wpis do mapy komunikatów kontrolnych i zaimplementować funkcję obsługi. Ponieważ komunikaty odzwierciedlenie nie są częścią standardowego zestawu komunikatów zdefiniowanych przez system Windows, Widok klasy nie obsługuje dodawania takich programów obsługi wiadomości. Jednak nie jest trudne do dodania obsługi ręcznie.
 
-Aby dodać program obsługi komunikatów dla komunikatów odbitych okna ręcznie wykonaj następujące czynności:
+Aby ręcznie dodać program obsługi wiadomości dla odbitej wiadomości okna, wykonaj następujące czynności:
 
-- W klasie kontrolki. Plik H deklarowanie funkcji obsługi. Funkcja powinna mieć typ zwracany **LRESULT** i dwa parametry, z typami **WPARAM** i **LPARAM**, odpowiednio. Na przykład:
+- W klasie kontrolnej . H, zadeklaruj funkcję obsługi. Funkcja powinna mieć typ zwracany **LRESULT** i dwa parametry, odpowiednio z typami **WPARAM** i **LPARAM.** Przykład:
 
    [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
-- W klasie kontrolki. CPP plików, Dodaj odpowiedni wpis ON_MESSAGE mapie komunikatów. Parametry tego wpisu należy identyfikator wiadomości oraz nazwa funkcji programu obsługi. Na przykład:
+- W klasie kontrolnej . CPP, dodaj ON_MESSAGE wpis do mapy wiadomości. Parametry tego wpisu powinny być identyfikator wiadomości i nazwa funkcji obsługi. Przykład:
 
    [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
-- Również w. Plik CPP zaimplementować `OnOcmCommand` funkcja elementu członkowskiego do przetwarzania komunikatów odbitych. *WParam* i *lParam* parametry są takie same jak oryginalne komunikatów okien.
+- Również w . CPP, zaimplementuj `OnOcmCommand` funkcję elementu członkowskiego, aby przetworzyć odzwierciedloną wiadomość. Parametry *wParam* i *lParam* są takie same jak parametry oryginalnego okna.
 
-Przykładowy sposób uwzględnione, komunikaty są przetwarzane, znaleźć przykładowe kontrolki MFC ActiveX [przycisk](../overview/visual-cpp-samples.md). Pokazuje `OnOcmCommand` program obsługi, który wykrywa BN_CLICKED kod powiadomienia i odpowiada wyzwalania (wysyłającym) `Click` zdarzeń.
+Na przykład sposobu przetwarzania odzwierciedlenie wiadomości, zapoznaj się z przykładowym przykładowym elementem sterującym MFC ActiveX [BUTTON](../overview/visual-cpp-samples.md). Demonstruje `OnOcmCommand` program obsługi, który wykrywa BN_CLICKED kod powiadomienia i odpowiada przez `Click` wypalania (wysyłanie) zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

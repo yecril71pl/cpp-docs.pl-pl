@@ -21,16 +21,16 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: adebaa76f9560cfc5443e2260a42a8c4af0085e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376592"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution — Klasa
 
-Generuje dystrybucję *t*-studenta.
+Generuje rozkład *t*studenta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,23 +64,23 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-\ *rzeczywistości*
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<> losowe](../standard-library/random.md).
+*Typ rzeczywisty*\
+Typ wyniku zmiennoprzecinkowego, domyślnie **podwoić**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem *t*-studenta. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje rozkład, który tworzy wartości typu całkowitego określonego przez użytkownika lub wpisz **dwukrotnie,** jeśli nie jest podany, dystrybuowane zgodnie z t *-Distribution*studenta. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
 
 ||||
 |-|-|-|
 |[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
 |`student_t_distribution::operator()`||[param_type](#param_type)|
 
-Funkcja Property `n()` zwraca wartość dla przechowywanego parametru dystrybucji `n`.
+Funkcja `n()` właściwości zwraca wartość przechowywanego `n`parametru rozkładu .
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<losowo >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat dystrybucji *t*-studenta, zobacz artykuł Wolfram MathWorld [studenta t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html).
+Aby uzyskać szczegółowe informacje *t*na temat studenta t-dystrybucji, zobacz Wolfram MathWorld artykuł [Studenci t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Przykład
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowo >
+**Nagłówek:** \<losowe>
 
 **Przestrzeń nazw:** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution::student_t_distribution
 
 Konstruuje dystrybucję.
 
@@ -174,21 +174,21 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*n*\
-`n` parametr dystrybucji.
+*N*\
+Parametr `n` rozkładu.
 
-*parametr*\
-Pakiet parametrów używany do konstruowania rozkładu.
+*Parm*\
+Pakiet parametrów używany do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < n`
+**Warunek wstępny:**`0.0 < n`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `n` wartość ma wartość *n*.
+Pierwszy konstruktor tworzy obiekt, `n` którego przechowywana wartość zawiera wartość *n*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
+Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::param_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -205,18 +205,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*n*\
-`n` parametr dystrybucji.
+*N*\
+Parametr `n` rozkładu.
 
-*prawa*\
-Obiekt `param_type`, do którego ma zostać wykonane porównanie.
+*Prawo*\
+Obiekt `param_type` do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < n`
+**Warunek wstępny:**`0.0 < n`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
+Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<losowe >](../standard-library/random.md)
+[\<losowe>](../standard-library/random.md)

@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 9d00ba8161e204661077848f213043bf2b275c15
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0aca4e8b8a446eb773f6ba4efaeb4a0a6c9644af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376720"
 ---
 # <a name="basic_string-class"></a>basic_string — Klasa
 
-Sekwencje kontrolowane przez obiekt typu `basic_string` są klasą ciągu standardowego C++ i są zwykle określane jako ciągi, ale nie należy ich mylić z ciągami stylu języka C zakończonymi zerem używanymi w całej bibliotece C++ standardowej. Standardowy C++ ciąg jest kontenerem, który umożliwia korzystanie z ciągów jako zwykłych typów, takich jak operacje porównania i łączenia, Iteratory, C++ algorytmy standardowej biblioteki oraz kopiowanie i przypisywanie pamięci zarządzanej przy użyciu programu przydzielania klas. Jeśli zachodzi potrzeba przekonwertowania standardowego C++ ciągu na ciąg w stylu C zakończony wartością null, użyj elementu członkowskiego [basic_string:: c_str](#c_str) .
+Sekwencje kontrolowane przez obiekt `basic_string` typu są standard C++ string klasy i są zwykle określane jako ciągi, ale nie należy mylić z null-zakończonych ciągów w stylu C używane w całej bibliotece standardowej języka C++. Standardowy ciąg C++ jest kontenerem, który umożliwia używanie ciągów jako normalnych typów, takich jak operacje porównania i łączenia, iteratory, algorytmy biblioteki standardowej języka C++ oraz kopiowanie i przypisywanie za pomocą pamięci zarządzanej przez przydzielacza klas. Jeśli chcesz przekonwertować standardowy ciąg C++ na ciąg w stylu C zakończony zerem, użyj [basic_string::c_str.](#c_str)
 
 ## <a name="syntax"></a>Składnia
 
@@ -136,109 +136,109 @@ class basic_string;
 
 ### <a name="parameters"></a>Parametry
 
-\ *CharType*
-Typ danych pojedynczego znaku, który ma być przechowywany w ciągu. Biblioteka C++ standardowa zawiera specjalizacje tego szablonu klasy, z [ciągiem](../standard-library/string-typedefs.md#string) definicji typów dla elementów typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), dla **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) dla `char16_t`i [u32string](../standard-library/string-typedefs.md#u32string) dla `char32_t`.
+*Chartype*\
+Typ danych pojedynczego znaku, który ma być przechowywany w ciągu. Biblioteka standardowa języka C++ zawiera specjalizacje tego szablonu klasy, z [ciągiem](../standard-library/string-typedefs.md#string) definicji typów dla elementów `char16_t`typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), for **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) for , i [u32string](../standard-library/string-typedefs.md#u32string) for `char32_t`.
 
 *Cechy*\
-Różne ważne właściwości elementów `CharType` w specjalizacji basic_string są opisane przez `Traits`klasy. Wartość domyślna to `char_traits`< `CharType`>.
+Różne ważne właściwości `CharType` elementów w specjalizacji basic_string są opisane `Traits`przez klasę . Wartość domyślna `char_traits` <  `CharType` jest>.
 
-\ *alokatora*
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji ciągu i cofania przydziału pamięci. Wartość domyślna to **alokator**< `CharType`>.
+*Programu przydzielania*\
+Typ, który reprezentuje przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji ciągu i alokacji pamięci. Wartością domyślną jest **> alokator.** <  `CharType`
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[basic_string](#basic_string)|Konstruuje ciąg, który jest pusty lub inicjowany przez określone znaki lub jest kopią całości lub części innego obiektu ciągu lub ciągu C.|
+|[String](#basic_string)|Konstruuje ciąg, który jest pusty lub zainicjowany przez określone znaki lub który jest kopią całości lub części innego obiektu ciągu lub ciągu C.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ, który reprezentuje klasę `allocator` dla obiektu String.|
-|[const_iterator](#const_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może uzyskać dostęp i odczytać element **const** w ciągu.|
-|[const_pointer](#const_pointer)|Typ, który dostarcza wskaźnik do elementu **const** w ciągu.|
-|[const_reference](#const_reference)|Typ, który dostarcza odwołanie do elementu **const** przechowywanego w ciągu do odczytu i wykonywania operacji **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny element **const** w ciągu.|
-|[difference_type](#difference_type)|Typ, który zawiera różnicę między dwoma iteratorami odwołującymi się do elementów w obrębie tego samego ciągu.|
-|[Iterator](#iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w ciągu.|
-|[npos](#npos)|Wartość całkowita bez znaku została zainicjowana do-1, która wskazuje "nie znaleziono" lub "wszystkie pozostałe znaki", gdy funkcja wyszukiwania zakończy się niepowodzeniem.|
-|[przytrzymaj](#pointer)|Typ, który dostarcza wskaźnik do elementu znaku w ciągu lub tablicy znaków.|
-|[odwoła](#reference)|Typ, który zawiera odwołanie do elementu przechowywanego w ciągu.|
-|[reverse_iterator](#reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować element w ciągu odwróconym.|
-|[size_type](#size_type)|Niepodpisany typ całkowity dla liczby elementów w ciągu.|
-|[traits_type](#traits_type)|Typ cech znaków elementów przechowywanych w ciągu.|
-|[value_type](#value_type)|Typ, który reprezentuje typ znaków przechowywanych w ciągu.|
+|[allocator_type](#allocator_type)|Typ, który `allocator` reprezentuje klasę dla obiektu ciągu.|
+|[const_iterator](#const_iterator)|Typ, który zapewnia iteratora dostępu losowego, który może uzyskać dostęp i odczytać **const** element w ciągu.|
+|[const_pointer](#const_pointer)|Typ, który zapewnia wskaźnik do **const** elementu w ciągu.|
+|[const_reference](#const_reference)|Typ, który zapewnia odwołanie do **const** element przechowywane w ciągu do odczytu i wykonywania operacji **const.**|
+|[Const_reverse_iterator](#const_reverse_iterator)|Typ, który zapewnia iteratora dostępu losowego, który może odczytać dowolny element **const** w ciągu.|
+|[difference_type](#difference_type)|Typ, który zapewnia różnicę między dwoma iteratorami, które odwołują się do elementów w tym samym ciągu.|
+|[Sterująca](#iterator)|Typ, który zapewnia iteratora dostępu losowego, który może odczytywać lub modyfikować dowolny element w ciągu.|
+|[npos](#npos)|Niepodpisana wartość całkowita zainicjowana do -1, która wskazuje "nie znaleziono" lub "wszystkie pozostałe znaki", gdy funkcja wyszukiwania nie powiedzie się.|
+|[pointer](#pointer)|Typ, który udostępnia wskaźnik do elementu znaku w tablicy ciąg lub znak.|
+|[Odwołanie](#reference)|Typ, który zapewnia odwołanie do elementu przechowywanego w ciągu.|
+|[Reverse_iterator](#reverse_iterator)|Typ, który zapewnia iteratora dostępu losowego, który może odczytywać lub modyfikować element w odwróconym ciągu.|
+|[size_type](#size_type)|Niepodpisany typ całka dla liczby elementów w ciągu.|
+|[traits_type](#traits_type)|Typ cech charakteru elementów przechowywanych w ciągu.|
+|[value_type](#value_type)|Typ reprezentujący typ znaków przechowywanych w ciągu.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[łączono](#append)|Dodaje znaki na końcu ciągu.|
-|[ponownie](#assign)|Przypisuje nowe wartości znakowe do zawartości ciągu.|
-|[w](#at)|Zwraca odwołanie do elementu w określonej lokalizacji w ciągu.|
+|[Dołączyć](#append)|Dodaje znaki na końcu ciągu.|
+|[Przypisać](#assign)|Przypisuje nowe wartości znaków do zawartości ciągu.|
+|[O](#at)|Zwraca odwołanie do elementu w określonej lokalizacji w ciągu.|
 |[Wstecz](#back)||
-|[zaczną](#begin)|Zwraca iterator odnoszący się do pierwszego elementu w ciągu.|
-|[c_str](#c_str)|Konwertuje zawartość ciągu jako styl C, zakończony zerem, String.|
-|[pojemności](#capacity)|Zwraca największą liczbę elementów, które mogą być przechowywane w ciągu bez zwiększania alokacji pamięci ciągu.|
-|[cbegin](#cbegin)|Zwraca iterator const odnoszący się do pierwszego elementu w ciągu.|
-|[cend](#cend)|Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w ciągu.|
-|[Wyczyść](#clear)|Usuwa wszystkie elementy ciągu.|
-|[porównaniu](#compare)|Porównuje ciąg z określonym ciągiem, aby określić, czy dwa ciągi są równe lub czy jeden z nich jest lexicographically mniejszy od drugiego.|
-|[kopiowane](#copy)|Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanej w ciągu źródłowym do docelowej tablicy znaków. Przestarzałe. Zamiast tego użyj [basic_string:: _Copy_s](#copy_s) .|
-|[crbegin —](#crbegin)|Zwraca iterator const, który odnosi się do pierwszego elementu w ciągu odwróconym.|
-|[crend](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w ciągu odwróconym.|
-|[_Copy_s](#copy_s)|Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanej w ciągu źródłowym do docelowej tablicy znaków.|
-|[Data](#data)|Konwertuje zawartość ciągu na tablicę znaków.|
-|[ciągiem](#empty)|Testuje, czy ciąg zawiera znaki.|
-|[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w ciągu.|
-|[Wyłączanie](#erase)|Usuwa element lub zakres elementów w ciągu z określonego położenia.|
-|[find](#find)|Wyszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
-|[find_first_not_of](#find_first_not_of)|Wyszukuje w ciągu pierwszy znak, który nie jest żadnym elementem określonego ciągu.|
-|[find_first_of](#find_first_of)|Wyszukuje w ciągu pierwszy znak, który pasuje do dowolnego elementu określonego ciągu.|
-|[find_last_not_of](#find_last_not_of)|Wyszukuje w ciągu ostatni znak, który nie jest żadnym elementem określonego ciągu.|
-|[find_last_of](#find_last_of)|Wyszukuje w ciągu ostatni znak, który jest elementem określonego ciągu.|
-|[FSB](#front)|Zwraca odwołanie do pierwszego elementu w ciągu.|
-|[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do skonstruowania ciągu.|
-|[wstawienia](#insert)|Wstawia element lub liczbę elementów lub zakres elementów do ciągu w określonej pozycji.|
+|[Rozpocząć](#begin)|Zwraca iterator adresowania pierwszy element w ciągu.|
+|[c_str](#c_str)|Konwertuje zawartość ciągu jako ciąg w stylu C, zakończony z wartością null.|
+|[capacity](#capacity)|Zwraca największą liczbę elementów, które mogą być przechowywane w ciągu bez zwiększania alokacji pamięci ciągu.|
+|[cbegin ( cbegin )](#cbegin)|Zwraca iterator const adresowania pierwszy element w ciągu.|
+|[cend](#cend)|Zwraca iterator konspiratora, który odnosi się do lokalizacji po pomyślnym ostatniego elementu w ciągu.|
+|[Wyczyść](#clear)|Wymazywanie wszystkich elementów ciągu.|
+|[Porównać](#compare)|Porównuje ciąg z określonym ciągiem, aby ustalić, czy dwa ciągi są równe lub jeśli jeden jest leksykograficznie mniejszy od drugiego.|
+|[Kopii](#copy)|Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanego w ciągu źródłowym do docelowej tablicy znaków. Przestarzałe. Zamiast [tego użyj basic_string::_Copy_s.](#copy_s)|
+|[Crbegin](#crbegin)|Zwraca iterator const, który odnosi się do pierwszego elementu w odwróconym ciągu.|
+|[Crend](#crend)|Zwraca iterator const, który odnosi się do lokalizacji po ostatniej pozycji elementu w odwróconym ciągu.|
+|[_Copy_s](#copy_s)|Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanego w ciągu źródłowym do docelowej tablicy znaków.|
+|[Danych](#data)|Konwertuje zawartość ciągu na tablicę znaków.|
+|[Pusty](#empty)|Sprawdza, czy ciąg zawiera znaki.|
+|[Końcu](#end)|Zwraca iterator, który odnosi się do lokalizacji po pomyślnym ostatniego elementu w ciągu.|
+|[Wymazać](#erase)|Usuwa element lub zakres elementów w ciągu z określonej pozycji.|
+|[find](#find)|Przeszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciąg, który pasuje do określonej sekwencji znaków.|
+|[find_first_not_of](#find_first_not_of)|Przeszukuje ciąg dla pierwszego znaku, który nie jest żadnym elementem określonego ciągu.|
+|[find_first_of](#find_first_of)|Przeszukuje ciąg dla pierwszego znaku, który pasuje do dowolnego elementu określonego ciągu.|
+|[find_last_not_of](#find_last_not_of)|Przeszukuje ciąg dla ostatniego znaku, który nie jest żadnym elementem określonego ciągu.|
+|[find_last_of](#find_last_of)|Przeszukuje ciąg dla ostatniego znaku, który jest elementem określonego ciągu.|
+|[Przednie](#front)|Zwraca odwołanie do pierwszego elementu w ciągu.|
+|[Get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` używanego do konstruowania ciągu.|
+|[Wstawić](#insert)|Wstawia element lub liczbę elementów lub zakres elementów do ciągu w określonym położeniu.|
 |[Długość](#length)|Zwraca bieżącą liczbę elementów w ciągu.|
-|[max_size](#max_size)|Zwraca maksymalną liczbę znaków, jaką może zawierać ciąg.|
-|[pop_back](#pop_back)|Wymazuje ostatni element ciągu.|
+|[Max_size](#max_size)|Zwraca maksymalną liczbę znaków, które może zawierać ciąg.|
+|[pop_back](#pop_back)|Wymazywanie ostatniego elementu ciągu.|
 |[push_back](#push_back)|Dodaje element na końcu ciągu.|
-|[rbegin](#rbegin)|Zwraca iterator do pierwszego elementu w ciągu odwróconym.|
-|[rend](#rend)|Zwraca iterator, który wskazuje tuż poza ostatnim elementem w ciągu odwróconym.|
-|[stępować](#replace)|Zamienia elementy w ciągu w określonej pozycji z określonymi znakami lub znakami skopiowanymi z innych zakresów lub ciągów lub ciągów języka C.|
-|[zarezerwować](#reserve)|Ustawia pojemność ciągu na liczbę, która jest co najmniej równa podanej liczbie.|
-|[Zmień rozmiar](#resize)|Określa nowy rozmiar ciągu, dołączając lub wymazywając elementy zgodnie z wymaganiami.|
-|[rfind](#rfind)|Wyszukuje ciąg w kierunku do tyłu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
-|[shrink_to_fit](#shrink_to_fit)|Odrzuca nadmiarową pojemność ciągu.|
-|[zmienia](#size)|Zwraca bieżącą liczbę elementów w ciągu.|
-|[substr —](#substr)|Kopiuje podciąg z co najwyżej określoną liczbę znaków z ciągu rozpoczynającego się od określonej pozycji.|
-|[wymiany](#swap)|Wymiana zawartości dwóch ciągów.|
+|[rbegin (rbegin)](#rbegin)|Zwraca iterator do pierwszego elementu w odwróconym ciągu.|
+|[Rend](#rend)|Zwraca iterator, który wskazuje tuż poza ostatni element w odwróconym ciągu.|
+|[Zastąpić](#replace)|Zastępuje elementy w ciągu w określonej pozycji określonymi znakami lub znakami skopiowanymi z innych zakresów lub ciągów lub ciągów C.|
+|[Rezerwy](#reserve)|Ustawia pojemność ciągu na liczbę co najmniej tak wielką, jak określona liczba.|
+|[Zmienić rozmiar](#resize)|Określa nowy rozmiar dla ciągów, dołączanie lub wymazywanie elementów zgodnie z wymaganiami.|
+|[rfind (rfind)](#rfind)|Przeszukuje ciąg w kierunku wstecznym dla pierwszego wystąpienia podciąg, który pasuje do określonej sekwencji znaków.|
+|[shrink_to_fit](#shrink_to_fit)|Odrzuca nadmiar pojemności ciągu.|
+|[Rozmiar](#size)|Zwraca bieżącą liczbę elementów w ciągu.|
+|[podstr](#substr)|Kopiuje podciąg co najwyżej pewną liczbę znaków z ciągu rozpoczynającego się od określonej pozycji.|
+|[Wymiany](#swap)|Wymiana zawartości dwóch ciągów.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator + =](#op_add_eq)|Dołącza znaki do ciągu.|
-|[operator =](#op_eq)|Przypisuje nowe wartości znakowe do zawartości ciągu.|
-|[zakład&#91;&#93;](#op_at)|Zawiera odwołanie do znaku o określonym indeksie w ciągu.|
+|[operator+=](#op_add_eq)|Dołącza znaki do ciągu.|
+|[operator=](#op_eq)|Przypisuje nowe wartości znaków do zawartości ciągu.|
+|[&#91;&#93;operatora](#op_at)|Zawiera odwołanie do znaku z określonym indeksem w ciągu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli zostanie wyświetlona prośba o wygenerowanie sekwencji dłuższej niż [max_size](#max_size) elementów, funkcja zgłasza błąd długości przez wygenerowanie obiektu typu [length_error](../standard-library/length-error-class.md).
+Jeśli funkcja jest proszona o wygenerowanie sekwencji dłuższej niż [max_size](#max_size) elementów, funkcja zgłasza błąd długości, rzucając obiekt typu [length_error](../standard-library/length-error-class.md).
 
-Odwołania, wskaźniki i Iteratory, które wyznaczają elementy kontrolowanej sekwencji, mogą stać się nieprawidłowe po dowolnych wywołaniach funkcji, które zmieniają kontrolowane sekwencje lub po pierwszym wywołaniu **niestałej** funkcji składowej.
+Odwołania, wskaźniki i iteratory, które wyznaczają elementy kontrolowanej sekwencji może stać się nieprawidłowe po każdym wywołaniu funkcji, która zmienia kontrolowaną sekwencję lub po pierwszym wywołaniu funkcji elementu członkowskiego **non-const.**
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ciąg >
+**Nagłówek:** \<> ciągu
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string:: allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string::allocator_type
 
-Typ, który reprezentuje klasę alokatora dla obiektu ciągu.
+Typ reprezentujący klasę alokatora dla obiektu ciągu.
 
 ```cpp
 typedef Allocator allocator_type;
@@ -246,7 +246,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Allocator`.
+Typ jest synonimem parametru `Allocator`szablonu .
 
 ### <a name="example"></a>Przykład
 
@@ -267,7 +267,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringappend"></a><a name="append"></a>basic_string:: Append
+## <a name="basic_stringappend"></a><a name="append"></a>basic_string::dołącz
 
 Dodaje znaki na końcu ciągu.
 
@@ -307,34 +307,34 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>Parametry
 
-\ *PTR*
+*Ptr*\
 Ciąg C, który ma zostać dołączony.
 
-*str*\
-Ciąg, którego znaki mają być dołączane.
+*Str*\
+Ciąg, którego znaki mają być dołączone.
 
-\ *przesunięcia*
-Indeks części ciągu źródłowego dostarczającego znaki do dołączenia.
+*Przesunięcie*\
+Indeks części ciągu źródłowego dostarczającej znaki, które mają zostać dołączone.
 
-*liczba*\
-Liczba znaków, które mają być dołączane, w ciągu źródłowym.
+*Liczba*\
+Liczba znaków, które mają być dołączone, co najwyżej z ciągu źródłowego.
 
 *char_value*\
 Wartość znaku, która ma zostać dołączona.
 
-*pierwszy*\
-Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który ma zostać dołączony.
+*Pierwszym*\
+Iterator wejściowy adresowania pierwszy element w zakresie, który ma być dołączona.
 
-*ostatni*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jednego z nich poza ostatnim elementem w zakresie, który ma zostać dołączony.
+*Ostatnio*\
+Iterator wprowadzania, const_pointer lub const_iterator adresowania pozycji jednego poza ostatnim elementem w zakresie, który ma być dołączona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu ciągu, który jest dołączany do znaków przesłanych przez funkcję członkowską.
+Odwołanie do obiektu ciągu, który jest dołączany ze znakami przekazanymi przez funkcję elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Znaki mogą być dołączane do ciągu przy użyciu [operatora + =](#op_add_eq) lub funkcji składowych `append` lub [push_back](#push_back). `operator+=` dołącza wartości jednoargumentowe, podczas gdy wieloargumentowy `append` funkcja członkowska umożliwia określenie określonej części ciągu do dodania.
+Znaki mogą być dołączane do ciągu za pomocą [operatora+=](#op_add_eq) lub funkcji `append` elementów członkowskich lub [push_back](#push_back). `operator+=`dołącza wartości pojedynczego argumentu, podczas `append` gdy funkcja elementu członkowskiego wielu argumentów umożliwia określoną część ciągu do dodania.
 
 ### <a name="example"></a>Przykład
 
@@ -428,9 +428,9 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="basic_stringassign"></a><a name="assign"></a>basic_string:: Assign
+## <a name="basic_stringassign"></a><a name="assign"></a>basic_string::przypisywanie
 
-Przypisuje nowe wartości znakowe do zawartości ciągu.
+Przypisuje nowe wartości znaków do zawartości ciągu.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& assign(
@@ -468,34 +468,34 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>Parametry
 
-\ *PTR*
-Wskaźnik do znaków znaku C, który ma zostać przypisany do ciągu docelowego.
+*Ptr*\
+Wskaźnik do znaków ciągu C, który ma być przypisany do ciągu docelowego.
 
-*liczba*\
+*Liczba*\
 Liczba znaków, które mają być przypisane, z ciągu źródłowego.
 
-*str*\
+*Str*\
 Ciąg źródłowy, którego znaki mają być przypisane do ciągu docelowego.
 
 *char_value*\
 Wartość znaku, która ma zostać przypisana.
 
-*pierwszy*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pierwszego znaku w zakresie ciągu źródłowego, który ma zostać przypisany do zakresu docelowego.
+*Pierwszym*\
+Iterator wprowadzania, const_pointer lub const_iterator adresowania pierwszy znak w zakresie ciągu źródłowego, który ma być przypisany do zakresu docelowego.
 
-*ostatni*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do jednego z nich poza ostatnim znakiem z zakresu ciągu źródłowego, który ma zostać przypisany do zakresu docelowego.
+*Ostatnio*\
+Iterator wprowadzania, const_pointer lub const_iterator adresowanie jeden poza ostatni znak w zakresie ciągu źródłowego, który ma być przypisany do zakresu docelowego.
 
-*wyłączone*\
-Pozycja, w której mają zostać przypisane nowe znaki.
+*wył.*\
+Pozycja, w której nowe znaki zaczną być przypisywane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu String, do którego są przypisywane nowe znaki przez funkcję członkowską.
+Odwołanie do obiektu ciągu, który jest przypisywany nowe znaki przez funkcję elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Do ciągów można przypisać nowe wartości znakowe. Nowa wartość może być ciągiem i ciągiem C lub pojedynczym znakiem. [Operatora =](#op_eq) można użyć, jeśli nowa wartość może być opisana przez pojedynczy parametr; w przeciwnym razie funkcja członkowska `assign`, która ma wiele parametrów, może służyć do określenia, która część ciągu ma zostać przypisana do ciągu docelowego.
+Ciągom można przypisać nowe wartości znaków. Nową wartością może być ciąg i ciąg C lub pojedynczy znak. [Operator =](#op_eq) może być stosowany, jeśli nowa wartość może być opisana przez jeden parametr; w przeciwnym `assign`razie funkcja elementu członkowskiego , która ma wiele parametrów, może służyć do określenia, która część ciągu ma być przypisana do ciągu docelowego.
 
 ### <a name="example"></a>Przykład
 
@@ -589,9 +589,9 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="basic_stringat"></a><a name="at"></a>basic_string:: at
+## <a name="basic_stringat"></a><a name="at"></a>basic_string::w
 
-Zawiera odwołanie do znaku o określonym indeksie w ciągu.
+Zawiera odwołanie do znaku z określonym indeksem w ciągu.
 
 ```cpp
 const_reference at(size_type offset) const;
@@ -601,8 +601,8 @@ reference at(size_type offset);
 
 ### <a name="parameters"></a>Parametry
 
-\ *przesunięcia*
-Indeks pozycji elementu, do którego ma zostać utworzone odwołanie.
+*Przesunięcie*\
+Indeks pozycji elementu, do którego ma się odwoływać.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -610,13 +610,13 @@ Odwołanie do znaku ciągu w pozycji określonej przez indeks parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy element ciągu ma indeks zero, a następujące elementy są indeksowane po kolei przez dodatnie liczby całkowite, tak aby ciąg o długości *n* miał element *n*, który jest indeksowany przez liczbę *n-* 1.
+Pierwszy element ciągu ma indeks zero i następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, tak aby ciąg długości *n* ma *n*th element indeksowany przez liczbę *n -* 1.
 
-[Operator&#91; ](#op_at) elementu członkowskiego jest szybszy niż funkcja członkowska `at` do zapewniania dostępu do odczytu i zapisu do elementów ciągu.
+Operator elementu członkowskiego [&#91;&#93;](#op_at) jest szybszy `at` niż funkcja elementu członkowskiego zapewniając dostęp do odczytu i zapisu do elementów ciągu.
 
-`operator[]` elementu członkowskiego nie sprawdza, czy indeks przeszedł jako parametr jest prawidłowy, ale funkcja członkowska `at` wykonuje i dlatego powinna zostać użyta, jeśli nie określono ważności. Nieprawidłowy indeks, który jest indeksem o wartości równej zero lub większym lub równym rozmiarowi ciągu, został przesłany do funkcji składowej `at` zgłasza wyjątek [klasy out_of_range](../standard-library/out-of-range-class.md) . Nieprawidłowy indeks przeszedł do `operator[]` skutkuje niezdefiniowanym zachowaniem, ale indeks równy długości ciągu jest prawidłowym indeksem dla stałych ciągów, a operator zwraca znak null, gdy przeszedł ten indeks.
+Element `operator[]` członkowski nie sprawdza, czy indeks przekazany jako `at` parametr jest prawidłowy, ale funkcja elementu członkowskiego i dlatego powinien być używany, jeśli ważność nie jest pewna. Nieprawidłowy indeks, który jest indeksem mniej niż zero lub większa lub równa rozmiar `at` ciąg, przekazywane do funkcji elementu członkowskiego zgłasza [wyjątek out_of_range Class.](../standard-library/out-of-range-class.md) Nieprawidłowy indeks przekazany `operator[]` do wyników w niezdefiniowanym zachowaniu, ale indeks równy długości ciągu jest prawidłowym indeksem dla ciągów const i operator zwraca znak null po przekazaniu tego indeksu.
 
-Zwrócone odwołanie może być unieważnione przez ponowne alokacje ciągu lub modyfikacje ciągów **niestałych** .
+Odwołanie zwrócone może zostać unieważnione przez ponowne przydziały ciągów lub modyfikacje dla ciągów **innych niż const.**
 
 ### <a name="example"></a>Przykład
 
@@ -657,7 +657,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringback"></a><a name="back"></a>basic_string:: Back
+## <a name="basic_stringback"></a><a name="back"></a>basic_string::powrót
 
 Zwraca odwołanie do ostatniego elementu w ciągu.
 
@@ -669,13 +669,13 @@ reference back();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do ostatniego elementu ciągu, który nie może być pusty.
+Odwołanie do ostatniego elementu ciągu, który musi być niepuste.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string:: basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string::basic_string
 
-Konstruuje ciąg, który jest pusty, zainicjowany przez określone znaki lub jest kopią całości lub części innego obiektu String lub ciągu C (zakończony zerem).
+Konstruuje ciąg, który jest pusty, zainicjowany przez określone znaki lub jest kopią całości lub części innego obiektu ciągu lub ciągu w stylu C (zakończone zerem).
 
 ```cpp
 basic_string();
@@ -747,39 +747,39 @@ basic_string(
 
 ### <a name="parameters"></a>Parametry
 
-\ *PTR*
-Ciąg języka C, którego znaki mają być używane do inicjowania konstruowanych `string`. Ta wartość nie może być pustym wskaźnikiem.
+*Ptr*\
+Ciąg C, którego znaki mają być używane `string` do inicjowania konstruowany. Ta wartość nie może być wskaźnikiem zerowym.
 
 *alloc_type*\
-Klasa alokatora magazynu dla obiektu ciągu, który jest konstruowany.
+Klasa alokatora magazynu dla budowany obiekt ciąg.
 
-*liczba*\
+*Liczba*\
 Liczba znaków, które mają zostać zainicjowane.
 
-*prawa*\
-Ciąg, w którym ma zostać zainicjowany tworzony ciąg.
+*Prawo*\
+Ciąg do zainicjowania ciągu konstruowane.
 
 *right_offset*\
-Indeks znaku w ciągu, który jest pierwszym używany do inicjowania wartości znakowych dla konstruowanego ciągu.
+Indeks znaku w ciągu, który jest pierwszym, który ma być używany do inicjowania wartości znaków dla tworzonego ciągu.
 
 *char_value*\
-Wartość znaku do skopiowania do ciągu, który jest tworzony.
+Wartość znaku, która ma zostać skopiowana do konstruowanego ciągu.
 
-*pierwszy*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pierwszego elementu w zakresie źródłowym, który ma zostać wstawiony.
+*Pierwszym*\
+Iterator wprowadzania, const_pointer lub const_iterator adresowania pierwszego elementu w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jednego z nich poza ostatnim elementem w zakresie źródłowym, który ma zostać wstawiony.
+*Ostatnio*\
+Iterator wejściowy, const_pointer lub const_iterator adresowanie pozycji jednego poza ostatnim elementem w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu String, który jest konstruowany przez konstruktory.
+Odwołanie do obiektu string, który jest konstruowany przez konstruktorów.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory przechowują [basic_string:: allocator_type](#allocator_type) i inicjują kontrolowaną sekwencję. Obiekt alokatora jest argumentem `al`, jeśli jest obecny. Dla konstruktora kopiującego jest `right.`[basic_string:: get_allocator](#get_allocator)`()`. W przeciwnym razie Alokator jest `Alloc()`.
+Wszystkie konstruktory przechowują [basic_string::allocator_type](#allocator_type) i inicjują kontrolowaną sekwencję. Obiekt alokatora jest `al`argumentem , jeśli jest obecny. W przypadku konstruktora `right.`kopii jest to [basic_string::get_allocator](#get_allocator)`()`. W przeciwnym razie alokator jest `Alloc()`.
 
-Kontrolowana sekwencja jest inicjowana do kopii sekwencji operandu określonej przez pozostałe operandy. Konstruktor bez sekwencji operandu określa pustą sterowaną sekwencję. Jeśli `InputIterator` jest typem liczb całkowitych w konstruktorze szablonów, sekwencja operandu `first,  last` zachowuje się tak samo jak `(size_type) first, (value_type) last`.
+Kontrolowana sekwencja jest inicjowana do kopii sekwencji operandu określonej przez pozostałe argumenty. Konstruktor bez sekwencji operandu określa pustą początkową kontrolowaną sekwencję. Jeśli `InputIterator` jest to typ liczby całkowitej w konstruktorze szablonu, sekwencja `first,  last` operandu zachowuje się tak samo jak `(size_type) first, (value_type) last`.
 
 ### <a name="example"></a>Przykład
 
@@ -830,9 +830,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string:: BEGIN
+## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string::begin
 
-Zwraca iterator odnoszący się do pierwszego elementu w ciągu.
+Zwraca iterator adresowania pierwszy element w ciągu.
 
 ```cpp
 const_iterator begin() const;
@@ -842,7 +842,7 @@ iterator begin();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dostępu swobodnego, który odnosi się do pierwszego elementu sekwencji lub tuż poza końcem pustej sekwencji.
+Iterator dostępu losowego, który rozwiązuje pierwszy element sekwencji lub tuż za końcem pustej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -880,9 +880,9 @@ int main( ) {
 }
 ```
 
-## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string:: c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string::c_str
 
-Konwertuje zawartość ciągu jako styl języka C, ciąg zakończony znakiem null.
+Konwertuje zawartość ciągu jako ciąg zakończony z wartością null w stylu C.
 
 ```cpp
 const value_type *c_str() const;
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wersji stylu języka C wywołującego ciąg.  Wartość wskaźnika jest nieprawidłowa po wywołaniu funkcji innej niż stała, w tym destruktora, w klasie basic_string w obiekcie.
+Wskaźnik do wersji w stylu C ciągu wywołującego.  Wartość wskaźnika nie jest prawidłowa po wywołaniu funkcji non-const, w tym destruktora, w klasie basic_string w obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty typu String należące do szablonu klasy basic_string\<char > nie muszą kończyć się wartością null. Znak null "\ 0" jest używany jako znak specjalny w ciągu C do oznaczania końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu String i może być częścią ciągu tak samo jak każdy inny znak. Istnieje Automatyczna konwersja z **stałej char** <strong>\*</strong> na ciągi, ale Klasa String nie zapewnia automatycznych konwersji z ciągów w stylu C na obiekty typu **basic_string\<char >** .
+Obiekty typu ciąg należący do szablonu\<klasy basic_string char> nie muszą być zakończone z wartościami null. Znak null ' \0 ' jest używany jako znak specjalny w ciągu C, aby oznaczyć koniec ciągu, ale nie ma specjalnego znaczenia w obiekcie ciągu typu i może być częścią ciągu, tak jak każdy inny znak. Istnieje automatyczna konwersja z **const char** <strong>\*</strong> na ciągi, ale klasa ciągu nie zapewnia automatycznych konwersji z ciągów w stylu C do obiektów typu **basic_string\<char>**.
 
-Nie należy modyfikować zwracanego ciągu w stylu C, ponieważ może to spowodować sprawdzenie poprawności wskaźnika do ciągu lub usunięcie, ponieważ ciąg ma ograniczony okres istnienia i jest własnością ciągu klasy.
+Zwrócony ciąg w stylu C nie powinny być modyfikowane, ponieważ może to unieważnić wskaźnik do ciągu lub usunięte, ponieważ ciąg ma ograniczony okres istnienia i jest własnością ciągu klasy.
 
 ### <a name="example"></a>Przykład
 
@@ -944,7 +944,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string:: pojemność
+## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string::pojemność
 
 Zwraca największą liczbę elementów, które mogą być przechowywane w ciągu bez zwiększania alokacji pamięci ciągu.
 
@@ -954,11 +954,11 @@ size_type capacity() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar magazynu aktualnie przydzielony w pamięci w celu przechowania ciągu.
+Rozmiar magazynu aktualnie przydzielonego w pamięci do przechowywania ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca magazyn aktualnie przydzielony do przechowania kontrolowanej sekwencji, co najmniej tak duże jak [rozmiar](#size).
+Funkcja elementu członkowskiego zwraca magazyn aktualnie przydzielony do przechowywania kontrolowanej sekwencji, wartość co najmniej tak duża, jak [rozmiar](#size).
 
 ### <a name="example"></a>Przykład
 
@@ -1014,9 +1014,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string:: cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string::cbegin
 
-Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
+Zwraca **iterator konspiratora,** który odnosi się do pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const;
@@ -1024,13 +1024,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
+Iterator dostępu losowego, który wskazuje pierwszy element zakresu lub lokalizację tuż za końcem pustego zakresu (dla pustego **const** `cbegin() == cend()`zakresu).
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
+Z wartością `cbegin`zwracaną , elementy w zakresie nie mogą być modyfikowane.
 
-Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+Tej funkcji elementu członkowskiego można `begin()` użyć zamiast funkcji elementu członkowskiego, aby zagwarantować, że zwracana jest `const_iterator`wartość . Zazwyczaj jest on używany w połączeniu ze słowem kluczowym [auto](../cpp/auto-cpp.md) odliczanie typu, jak pokazano w poniższym przykładzie. W przykładzie `Container` należy wziąć pod uwagę modyfikowalne (non-const) kontener wszelkiego rodzaju, który obsługuje **const** `begin()` i `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -1040,9 +1040,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="basic_stringcend"></a><a name="cend"></a>basic_string:: cend
+## <a name="basic_stringcend"></a><a name="cend"></a>basic_string::cend
 
-Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
+Zwraca **iterator const,** który odnosi się do lokalizacji tuż poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const;
@@ -1050,13 +1050,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator **stałej** dostępu swobodnego, który wskazuje tuż poza końcem zakresu.
+**Const** iterator dostępu losowego, który wskazuje tuż za końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`cend`służy do testowania, czy iterator przeszedł koniec jego zakresu.
 
-Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `end()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+Tej funkcji elementu członkowskiego można `end()` użyć zamiast funkcji elementu członkowskiego, aby zagwarantować, że zwracana jest `const_iterator`wartość . Zazwyczaj jest on używany w połączeniu ze słowem kluczowym [auto](../cpp/auto-cpp.md) odliczanie typu, jak pokazano w poniższym przykładzie. W przykładzie `Container` należy wziąć pod uwagę modyfikowalne (non-const) kontener wszelkiego rodzaju, który obsługuje **const** `end()` i `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -1066,11 +1066,11 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Nie należy wywoływać wartości zwracanej przez `cend`.
+Wartość zwrócona `cend` przez nie powinny być wyłuskiwane.
 
-## <a name="basic_stringclear"></a><a name="clear"></a>basic_string:: Clear
+## <a name="basic_stringclear"></a><a name="clear"></a>basic_string::wyczyść
 
-Usuwa wszystkie elementy ciągu.
+Wymazywanie wszystkich elementów ciągu.
 
 ```cpp
 void clear();
@@ -1078,7 +1078,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Ciąg, w którym wywoływana jest funkcja członkowska, będzie pusty.
+Ciąg, na którym wywoływana jest funkcja elementu członkowskiego, będzie pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -1119,9 +1119,9 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string:: Compare
+## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string::porównaj
 
-Wykonuje porównanie z uwzględnieniem wielkości liter z określonym ciągiem, aby określić, czy dwa ciągi są równe, czy też jest lexicographically mniejsze niż inne.
+Wykonuje porównanie z uwzględnieniem wielkości liter z określonym ciągiem, aby ustalić, czy dwa ciągi są równe lub jeśli jeden jest leksykograficznie mniej niż inne.
 
 ```cpp
 int compare(
@@ -1156,36 +1156,36 @@ int compare(
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Ciąg, który ma zostać porównany z ciągiem operandu.
+*Str*\
+Ciąg, który ma być porównywany do ciągu operandu.
 
 *position_1*\
-Indeks ciągu operandu, w którym rozpoczyna się porównywanie.
+Indeks ciągu operandu, od którego rozpoczyna się porównanie.
 
 *number_1*\
 Maksymalna liczba znaków z ciągu operandu do porównania.
 
 *number_2*\
-Maksymalna liczba znaków z ciągu parametru do porównania.
+Maksymalna liczba znaków z ciągu parametru, który ma być porównywany.
 
-\ *przesunięcia*
-Indeks ciągu parametru, w którym rozpoczyna się porównywanie.
+*Przesunięcie*\
+Indeks ciągu parametru, od którego rozpoczyna się porównanie.
 
-*liczba*\
-Maksymalna liczba znaków z ciągu parametru do porównania.
+*Liczba*\
+Maksymalna liczba znaków z ciągu parametru, który ma być porównywany.
 
-\ *PTR*
-Ciąg języka C, który będzie porównywany z ciągiem operandu.
+*Ptr*\
+Ciąg C, który ma być porównywany z ciągiem operandu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość ujemna, jeśli ciąg operandu jest krótszy niż ciąg parametru; zero, jeśli dwa ciągi są równe; lub wartość dodatnia, jeśli ciąg operandu jest większy niż ciąg parametru.
+Wartość ujemna, jeśli ciąg operandowy jest mniejszy niż ciąg parametru; zero, jeśli dwa ciągi są równe; lub wartość dodatnią, jeśli ciąg operandu jest większy niż ciąg parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje składowe `compare` porównują wszystkie parametry i argumenty operandu, w zależności od używanej wartości.
+Funkcje `compare` członkowskie porównują wszystkie lub części parametru i ciągi operandu w zależności od tego, które z nich są używane.
 
-W przypadku porównania jest uwzględniana wielkość liter.
+W przeprowadzonym porównaniu rozróżniana jest wielkość liter.
 
 ### <a name="example"></a>Przykład
 
@@ -1380,9 +1380,9 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string:: const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string::const_iterator
 
-Typ, który dostarcza Iterator dostępu swobodnego, który może uzyskać dostęp i odczytać element **const** w ciągu.
+Typ, który zapewnia iteratora dostępu losowego, który może uzyskać dostęp i odczytać **const** element w ciągu.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -1390,15 +1390,15 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typu `const_iterator` nie można użyć do zmodyfikowania wartości znaku i służy do iteracji ciągu w kierunku do przodu.
+Typ `const_iterator` nie może służyć do modyfikowania wartości znaku i jest używany do iteracji za pośrednictwem ciągu w kierunku do przodu.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj [się](#begin) z przykładem dotyczącym sposobu deklarowania i używania `const_iterator`.
+Zobacz [przykład, aby rozpocząć](#begin) przykład jak zadeklarować i używać `const_iterator`.
 
-## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string:: const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string::const_pointer
 
-Typ, który dostarcza wskaźnik do elementu **const** w ciągu.
+Typ, który zapewnia wskaźnik do **const** elementu w ciągu.
 
 ```cpp
 typedef typename allocator_type::const_pointer const_pointer;
@@ -1406,11 +1406,11 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `allocator_type::const_pointer`.
+Typ jest synonimem `allocator_type::const_pointer`.
 
-W przypadku typu `string`jest to równoznaczne z `char*`.
+Dla `string`typu jest to `char*`odpowiednik .
 
-Wskaźniki, które są zadeklarowane jako const, muszą być inicjowane, gdy są zadeklarowane. Wskaźniki stałe zawsze wskazują tę samą lokalizację pamięci i mogą wskazywać na stałe lub niestałe dane.
+Wskaźniki, które są zadeklarowane const musi być zainicjowane, gdy są one zadeklarowane. Wskaźniki const zawsze wskazują tę samą lokalizację pamięci i mogą wskazywać na dane stałe lub niestałe.
 
 ### <a name="example"></a>Przykład
 
@@ -1436,9 +1436,9 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string:: const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string::const_reference
 
-Typ, który dostarcza odwołanie do elementu **const** przechowywanego w ciągu do odczytu i wykonywania operacji **const** .
+Typ, który zapewnia odwołanie do **const** element przechowywane w ciągu do odczytu i wykonywania operacji **const.**
 
 ```cpp
 typedef typename allocator_type::const_reference const_reference;
@@ -1446,17 +1446,17 @@ typedef typename allocator_type::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typu `const_reference` nie można użyć do zmodyfikowania wartości elementu.
+Typ `const_reference` nie może służyć do modyfikowania wartości elementu.
 
-Typ jest synonimem dla `allocator_type::const_reference`. W przypadku ciągów `type`jest równoważne `char&`const.
+Typ jest synonimem `allocator_type::const_reference`. Dla `type`ciągu , jest to `char&`odpowiednik const .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem, [Aby uzyskać przykład](#at) sposobu deklarowania i używania `const_reference`.
+Zobacz przykład [na](#at) przykład jak zadeklarować i `const_reference`używać .
 
-## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string:: const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string::const_reverse_iterator
 
-Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny element **const** w ciągu.
+Typ, który zapewnia iteratora dostępu losowego, który może odczytać dowolny element **const** w ciągu.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -1464,17 +1464,17 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `const_reverse_iterator` nie może zmodyfikować wartości znaku i służy do iteracji ciągu w odwrotnej postaci.
+Typ `const_reverse_iterator` nie może modyfikować wartość znaku i jest używany do iteracji za pośrednictwem ciągu w odwrotnej kolejności.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [rbegin](#rbegin) , aby zapoznać się z przykładem sposobu deklarowania i używania `const_reverse_iterator`.
+Zobacz przykład [dla rbegin](#rbegin) na przykład jak `const_reverse_iterator`zadeklarować i używać .
 
-## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string:: Copy
+## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string::copy
 
-Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanej w ciągu źródłowym do docelowej tablicy znaków.
+Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanego w ciągu źródłowym do docelowej tablicy znaków.
 
-Ta metoda jest potencjalnie niebezpieczna, ponieważ polega na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Zamiast tego Rozważ użycie [basic_string:: _Copy_s](#copy_s) .
+Ta metoda jest potencjalnie niebezpieczne, ponieważ opiera się na wywołującego, aby sprawdzić, czy przekazane wartości są poprawne. Zamiast tego należy rozważyć użycie [basic_string::_Copy_s.](#copy_s)
 
 ```cpp
 size_type copy(
@@ -1485,21 +1485,21 @@ size_type copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *PTR*
-Docelowa tablica znaków, do której mają zostać skopiowane elementy.
+*Ptr*\
+Docelowa tablica znaków, do której elementy mają być kopiowane.
 
-*Liczba* Maksymalna liczba znaków, które mają być skopiowane, z ciągu źródłowego.
+*zliczanie* Liczba znaków do skopiowania, co najwyżej, z ciągu źródłowego.
 
-\ *przesunięcia*
-Pozycja początkowa w ciągu źródłowym, z którego mają zostać wykonane kopie.
+*Przesunięcie*\
+Pozycja początkowa w ciągu źródłowym, z którego mają być wykonane kopie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków rzeczywiście skopiowanych.
+Liczba znaków faktycznie skopiowanych.
 
 ### <a name="remarks"></a>Uwagi
 
-Znak null nie jest dołączany na końcu kopii.
+Znak zerowy nie jest dołączany na końcu kopii.
 
 ### <a name="example"></a>Przykład
 
@@ -1550,9 +1550,9 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string:: crbegin —
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string::crbegin
 
-Zwraca iterator const, który odnosi się do pierwszego elementu w ciągu odwróconym.
+Zwraca iterator const, który odnosi się do pierwszego elementu w odwróconym ciągu.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -1560,11 +1560,11 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator odwrotny, który wskazuje tuż poza końcem ciągu. Pozycja określa początek ciągu odwrotnego.
+Odwrotnej iterator, który wskazuje tuż za końcem ciągu. Pozycja wyznacza początek odwrotnego ciągu.
 
-## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string:: crend
+## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string::crend
 
-Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie w ciągu odwróconym.
+Zwraca iterator const, który odnosi się do lokalizacji po ostatniej pozycji elementu w odwróconym ciągu.
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -1572,13 +1572,13 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator zwrotny const, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym ciągu (lokalizacja, która poprzedza pierwszy element w ciągu nieodwróconym).
+Const reverse iterator, który odnosi się do lokalizacji po ostatniej pozycji elementu w odwróconym ciągu (lokalizacja, która poprzedziła pierwszy element w nieodwrócony ciąg).
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string:: _Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string::_Copy_s
 
-Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanej w ciągu źródłowym do docelowej tablicy znaków.
+Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanego w ciągu źródłowym do docelowej tablicy znaków.
 
 ```cpp
 size_type _Copy_s(
@@ -1590,24 +1590,24 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-\ miejsca *docelowego*
-Docelowa tablica znaków, do której mają zostać skopiowane elementy.
+*Dest*\
+Docelowa tablica znaków, do której elementy mają być kopiowane.
 
 *dest_size*\
-Rozmiar miejsca *docelowego*.
+Wielkość *dest*.
 
-*Liczba* Maksymalna liczba znaków, które mają być skopiowane, z ciągu źródłowego.
+*zliczanie* Liczba znaków do skopiowania, co najwyżej, z ciągu źródłowego.
 
-\ *przesunięcia*
-Pozycja początkowa w ciągu źródłowym, z którego mają zostać wykonane kopie.
+*Przesunięcie*\
+Pozycja początkowa w ciągu źródłowym, z którego mają być wykonane kopie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków rzeczywiście skopiowanych.
+Liczba znaków faktycznie skopiowanych.
 
 ### <a name="remarks"></a>Uwagi
 
-Znak null nie jest dołączany na końcu kopii.
+Znak zerowy nie jest dołączany na końcu kopii.
 
 ### <a name="example"></a>Przykład
 
@@ -1656,9 +1656,9 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringdata"></a><a name="data"></a>basic_string::d ATA
+## <a name="basic_stringdata"></a><a name="data"></a>basic_string::data
 
-Konwertuje zawartość ciągu na tablicę znaków zakończonych znakiem null.
+Konwertuje zawartość ciągu na tablicę znaków zakończonych wartością null.
 
 ```cpp
 const value_type *data() const noexcept;
@@ -1667,17 +1667,17 @@ value_type *data() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego elementu tablicy zakończonych wartością null zawierający zawartość ciągu. W przypadku pustego ciągu wskaźnik wskazuje na pojedynczy znak o wartości null równy `value_type()`.
+Wskaźnik do pierwszego elementu tablicy zakończonej wartością null zawierającej zawartość ciągu. W przypadku pustego ciągu wskaźnik wskazuje pojedynczy `value_type()`znak zerowy równy .
 
 ### <a name="remarks"></a>Uwagi
 
-Wskaźnik zwrócony przez `data` punkty w prawidłowym zakresie `[data(), data() + size()]`. Każdy element w zakresie odpowiada bieżącym danym w ciągu. Oznacza to, dla każdego prawidłowego *przesunięcia w* zakresie, `data() + n == addressof(operator[](n))`.
+Wskaźnik zwrócony `data` przez punkty `[data(), data() + size()]`w prawidłowym zakresie . Każdy element w zakresie odpowiada bieżącym danym w ciągu. Oznacza to, że dla każdego prawidłowego przesunięcia *n* w zakresie , `data() + n == addressof(operator[](n))`.
 
-Jeśli zmodyfikujesz zawartość ciągu zwracanego przez Przeciążenie **const** `data`, zachowanie jest niezdefiniowane. Możesz również uzyskać niezdefiniowane zachowanie, jeśli znak null terminalu zostanie zmieniony na inną wartość. Zwrócony wskaźnik może być unieważniony, jeśli odwołanie niestałe do ciągu zostanie przesłane do standardowej funkcji biblioteki. Może być również unieważniony przez wywołanie funkcji składowej innej niż stała. Wywołania elementów członkowskich `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`i `operator[]` nie weryfikują wskaźnika.
+Jeśli zmodyfikujesz zawartość ciągu zwróconego przez `data`przeciążenie **konsetka** , zachowanie jest niezdefiniowane. Można również uzyskać niezdefiniowane zachowanie, jeśli znak null terminalu zostanie zmieniony na inną wartość. Zwrócony wskaźnik może zostać unieważniony, jeśli odwołanie do ciągu nie jest przekazywane do funkcji biblioteki standardowej. Może również zostać unieważniony przez wywołanie funkcji elementu członkowskiego non-const. Wywołania `at`do `back` `begin`członków `end` `front`, `rbegin` `rend`, `operator[]` , , , i nie unieważniać wskaźnik.
 
-W starszych językach C++ 11 `data` nie zagwarantujeć, że zwrócony ciąg był zakończony wartością null. Od C++ 11 `data` i `c_str` zwracają ciąg zakończony znakiem null i są efektywnie takie same.
+Przed C++ 11, `data` nie gwarantuje zwracany ciąg został zakończony z wartością null. Od C ++ 11 i `data` `c_str` zarówno zwraca ciąg zakończony z wartością null i są skutecznie takie same.
 
-Przeciążenie inne niż const jest nowe w języku C++ 17. Aby go użyć, należy określić **/std: c++ 17** lub **/std: c + + Najnowsza** opcja kompilatora.
+Przeciążenie nieprzeciętne jest nowością w języku C++17. Aby go użyć, określ **/std:c++17** lub **/std:c++.**
 
 ### <a name="example"></a>Przykład
 
@@ -1725,9 +1725,9 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string::d ifference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string::d00_typ
 
-Typ, który zawiera różnicę między dwoma iteratorami odwołującymi się do elementów w obrębie tego samego ciągu.
+Typ, który zapewnia różnicę między dwoma iteratorami, które odwołują się do elementów w tym samym ciągu.
 
 ```cpp
 typedef typename allocator_type::difference_type difference_type;
@@ -1735,9 +1735,9 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ Liczba całkowita ze znakiem opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji.
+Typ liczby całkowitej podpisu opisuje obiekt, który może reprezentować różnicę między adresami dowolnych dwóch elementów w kontrolowanej sekwencji.
 
-W przypadku typu `string`jest to równoznaczne z `ptrdiff_t`.
+Dla `string`typu jest to `ptrdiff_t`odpowiednik .
 
 ### <a name="example"></a>Przykład
 
@@ -1773,9 +1773,9 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="basic_stringempty"></a><a name="empty"></a>basic_string:: Empty
+## <a name="basic_stringempty"></a><a name="empty"></a>basic_string::empty
 
-Testuje, czy ciąg zawiera znaki, czy nie.
+Sprawdza, czy ciąg zawiera znaki, czy nie.
 
 ```cpp
 bool empty() const;
@@ -1783,11 +1783,11 @@ bool empty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli obiekt String nie zawiera żadnych znaków; **wartość false** , jeśli ma co najmniej jeden znak.
+**true,** jeśli obiekt string nie zawiera żadnych znaków; **false,** jeśli ma co najmniej jeden znak.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska jest równoważna z [rozmiarem](#size) = = 0.
+Funkcja elementu członkowskiego jest równoważna [rozmiar](#size) == 0.
 
 ### <a name="example"></a>Przykład
 
@@ -1821,9 +1821,9 @@ int main() {
 }
 ```
 
-## <a name="basic_stringend"></a><a name="end"></a>basic_string:: end
+## <a name="basic_stringend"></a><a name="end"></a>basic_string::end
 
-Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w ciągu.
+Zwraca iterator, który odnosi się do lokalizacji po pomyślnym ostatniego elementu w ciągu.
 
 ```cpp
 const_iterator end() const;
@@ -1833,13 +1833,13 @@ iterator end();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca iterator dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w ciągu.
+Zwraca iterator dostępu losowego, który odnosi się do lokalizacji po ostatniej pozycji elementu w ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-`end` jest często używany do testowania, czy iterator osiągnął koniec ciągu. Nie należy wywoływać wartości zwracanej przez `end`.
+`end`jest często używany do testowania, czy iterator osiągnął koniec jego ciągu. Wartość zwrócona `end` przez nie powinny być wyłuskiwane.
 
-Jeśli wartość zwracana `end` jest przypisana do `const_iterator`, nie można zmodyfikować obiektu ciągu. Jeśli wartość zwracana `end` jest przypisana do `iterator`, można zmodyfikować obiekt ciągu.
+Jeśli zwracana `end` wartość jest przypisana `const_iterator`do obiektu , nie można zmodyfikować obiektu ciągu. Jeśli zwracana `end` wartość jest przypisana `iterator`do obiektu , obiekt ciągu może zostać zmodyfikowany.
 
 ### <a name="example"></a>Przykład
 
@@ -1894,9 +1894,9 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="basic_stringerase"></a><a name="erase"></a>basic_string:: Erase
+## <a name="basic_stringerase"></a><a name="erase"></a>basic_string::wymaż
 
-Usuwa element lub zakres elementów w ciągu z określonego położenia.
+Usuwa element lub zakres elementów w ciągu z określonej pozycji.
 
 ```cpp
 iterator erase(
@@ -1913,28 +1913,28 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Iterator odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać wymazany.
+*Pierwszym*\
+Iterator adresowania pozycji pierwszego elementu w zakresie, który ma zostać wymazany.
 
-*ostatni*\
-Iterator odnoszący się do położenia jednej poza ostatnim elementem w zakresie, który ma zostać wymazany.
+*Ostatnio*\
+Iterator adresowania pozycji jeden przeszłości ostatni element w zakresie do usunięcia.
 
-\ *ITER*
-Iterator odnoszący się do pozycji elementu w ciągu, który ma zostać wymazany.
+*Iter*\
+Iterator adresowania położenie elementu w ciągu do usunięcia.
 
-\ *przesunięcia*
-Indeks pierwszego znaku w ciągu, który ma zostać usunięty.
+*Przesunięcie*\
+Indeks pierwszego znaku w ciągu do usunięcia.
 
-*liczba*\
-Liczba elementów, które zostaną usunięte, jeśli w zakresie ciągu rozpoczyna się od *przesunięcia*.
+*Liczba*\
+Liczba elementów, które zostaną usunięte, jeśli istnieje tyle w zakresie ciągu, począwszy od *przesunięcia*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dla pierwszych dwóch funkcji Członkowskich iterator odnoszący się do pierwszego znaku po ostatnim znaku usunięty przez funkcję członkowską. Dla trzeciej funkcji członkowskiej odwołanie do obiektu String, z którego elementy zostały wymazane.
+Dla pierwszych dwóch funkcji członkowskich iterator adresowania pierwszy znak po ostatnim znaku usunięte przez funkcję elementu członkowskiego. Dla trzeciej funkcji elementu członkowskiego odwołanie do obiektu ciągu, z którego elementy zostały usunięte.
 
 ### <a name="remarks"></a>Uwagi
 
-Trzecia funkcja członkowska zwraca **\*tym**.
+Funkcja trzeciego elementu ** \*** członkowskiego zwraca tę wartość .
 
 ### <a name="example"></a>Przykład
 
@@ -1997,9 +1997,9 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="basic_stringfind"></a><a name="find"></a>basic_string:: find
+## <a name="basic_stringfind"></a><a name="find"></a>basic_string::znajdź
 
-Wyszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.
+Przeszukuje ciąg w kierunku do przodu dla pierwszego wystąpienia podciąg, który pasuje do określonej sekwencji znaków.
 
 ```cpp
 size_type find(
@@ -2023,23 +2023,23 @@ size_type find(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać rozpoczęte wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się rozpocząć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
+Indeks pierwszego znaku podciągów wyszukiwany po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -2172,9 +2172,9 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string:: find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string::find_first_not_of
 
-Wyszukuje w ciągu pierwszy znak, który nie jest elementem określonego ciągu.
+Przeszukuje ciąg dla pierwszego znaku, który nie jest elementem określonego ciągu.
 
 ```cpp
 size_type find_first_not_of(
@@ -2198,23 +2198,23 @@ size_type find_first_not_of(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać rozpoczęte wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się rozpocząć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
+Indeks pierwszego znaku podciągów wyszukiwany po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -2360,9 +2360,9 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string:: find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string::find_first_of
 
-Wyszukuje w ciągu pierwszy znak, który pasuje do dowolnego elementu określonego ciągu.
+Przeszukuje ciąg dla pierwszego znaku, który pasuje do dowolnego elementu określonego ciągu.
 
 ```cpp
 size_type find_first_of(
@@ -2386,23 +2386,23 @@ size_type find_first_of(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać rozpoczęte wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się rozpocząć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
+Indeks pierwszego znaku podciągów wyszukiwany po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -2547,9 +2547,9 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string:: find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string::find_last_not_of
 
-Wyszukuje w ciągu ostatni znak, który nie jest żadnym elementem określonego ciągu.
+Przeszukuje ciąg dla ostatniego znaku, który nie jest żadnym elementem określonego ciągu.
 
 ```cpp
 size_type find_last_not_of(
@@ -2573,23 +2573,23 @@ size_type find_last_not_of(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać zakończone wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się zakończyć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks pierwszego znaku podciągu, który jest przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
+Indeks pierwszego znaku podciągów wyszukiwany po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -2736,9 +2736,9 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string:: find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string::find_last_of
 
-Wyszukuje w ciągu ostatni znak, który pasuje do dowolnego elementu określonego ciągu.
+Przeszukuje ciąg dla ostatniego znaku, który pasuje do dowolnego elementu określonego ciągu.
 
 ```cpp
 size_type find_last_of(
@@ -2762,23 +2762,23 @@ size_type find_last_of(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać zakończone wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się zakończyć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks ostatniego znaku podciągu przeszukiwany po pomyślnym; w przeciwnym razie `npos`.
+Indeks ostatniego znaku podciągów wyszukiwany po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -2910,7 +2910,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="basic_stringfront"></a><a name="front"></a>basic_string:: front
+## <a name="basic_stringfront"></a><a name="front"></a>basic_string::przód
 
 Zwraca odwołanie do pierwszego elementu w ciągu.
 
@@ -2922,11 +2922,11 @@ reference front();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do pierwszego elementu ciągu, który nie może być pusty.
+Odwołanie do pierwszego elementu ciągu, który musi być niepuste.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string:: get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string::get_allocator
 
 Zwraca kopię obiektu alokatora używanego do konstruowania ciągu.
 
@@ -2940,9 +2940,9 @@ Alokator używany przez ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca przechowywany obiekt alokatora.
+Funkcja elementu członkowskiego zwraca przechowywany obiekt alokatora.
 
-Przypisania klasy String określają sposób, w jaki Klasa zarządza magazynem. Domyślne przydzielenie z klasami kontenerów jest wystarczające dla większości potrzeb programistycznych. Pisanie i używanie własnej klasy alokatora jest zaawansowanym C++ tematem.
+Alokatory dla klasy string określić, jak klasa zarządza magazynu. Domyślne alokatory dostarczane z klas kontenerów są wystarczające dla większości potrzeb programowania. Pisanie i używanie własnej klasy alokatora jest zaawansowanym tematem języka C++.
 
 ### <a name="example"></a>Przykład
 
@@ -2969,9 +2969,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string:: INSERT
+## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string::wstawianie
 
-Wstawia element lub liczbę elementów lub zakres elementów do ciągu w określonej pozycji.
+Wstawia element lub liczbę elementów lub zakres elementów do ciągu w określonym położeniu.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
@@ -3028,36 +3028,36 @@ void insert(
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*Pozycji*\
 Indeks pozycji za punktem wstawiania nowych znaków.
 
-\ *PTR*
-Ciąg C, który ma zostać w całości lub częściowo wstawiony do ciągu.
+*Ptr*\
+Ciąg C ma być całkowicie lub częściowo wstawiony do ciągu.
 
-*liczba*\
+*Liczba*\
 Liczba znaków do wstawienia.
 
-*str*\
-Ciąg, który ma zostać całkowicie lub częściowo wstawiony do ciągu docelowego.
+*Str*\
+Ciąg, który ma być całkowicie lub częściowo wstawiony do ciągu docelowego.
 
-\ *przesunięcia*
-Indeks części ciągu źródłowego dostarczającego znaki do dołączenia.
+*Przesunięcie*\
+Indeks części ciągu źródłowego dostarczającej znaki, które mają zostać dołączone.
 
 *char_value*\
-Wartość znaku elementów do wstawienia.
+Wartość znaku elementów, które mają zostać wstawione.
 
-\ *ITER*
-Iterator odnoszący się do pozycji, w której ma zostać wstawiony znak.
+*Iter*\
+Iterator adresowania pozycji, za którym ma być wstawiony znak.
 
-*pierwszy*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pierwszego elementu w zakresie źródłowym, który ma zostać wstawiony.
+*Pierwszym*\
+Iterator wprowadzania, const_pointer lub const_iterator adresowania pierwszego elementu w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni*\
-Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jednego z nich poza ostatnim elementem w zakresie źródłowym, który ma zostać wstawiony.
+*Ostatnio*\
+Iterator wejściowy, const_pointer lub const_iterator adresowanie pozycji jednego poza ostatnim elementem w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu String, do którego są przypisywane nowe znaki przez funkcję członkowską lub, w przypadku poszczególnych wstawień znaków, iterator odnoszący się do pozycji wstawionego znaku lub brak, w zależności od konkretnego elementu członkowskiego funkcyjn.
+Odwołanie do obiektu ciągu, który jest przypisywany nowe znaki przez funkcję elementu członkowskiego lub, w przypadku poszczególnych wstawień znaków, iterator adresowania pozycji wstawionego znaku lub żaden, w zależności od określonej funkcji elementu członkowskiego.
 
 ### <a name="example"></a>Przykład
 
@@ -3148,9 +3148,9 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string:: iterator
+## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string::iterator
 
-Typ, który dostarcza Iterator dostępu swobodnego, który może uzyskać dostęp i odczytać element **const** w ciągu.
+Typ, który zapewnia iteratora dostępu losowego, który może uzyskać dostęp i odczytać **const** element w ciągu.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -3158,13 +3158,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `iterator` może służyć do modyfikacji wartości znaku i służy do iteracji ciągu w kierunku do przodu.
+Typ `iterator` może służyć do modyfikowania wartości znaku i jest używany do iteracji przez ciąg w kierunku do przodu.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj [się](#begin) z przykładem dotyczącym sposobu deklarowania i używania `iterator`.
+Zobacz [przykład, aby rozpocząć](#begin) przykład jak zadeklarować i używać `iterator`.
 
-## <a name="basic_stringlength"></a><a name="length"></a>basic_string:: length
+## <a name="basic_stringlength"></a><a name="length"></a>basic_string::długość
 
 Zwraca bieżącą liczbę elementów w ciągu.
 
@@ -3174,7 +3174,7 @@ size_type length() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska jest taka sama jak [rozmiar](#size).
+Funkcja elementu członkowskiego jest taka sama jak [rozmiar](#size).
 
 ### <a name="example"></a>Przykład
 
@@ -3230,9 +3230,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string:: max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string::max_size
 
-Zwraca maksymalną liczbę znaków, jaką może zawierać ciąg.
+Zwraca maksymalną liczbę znaków, które może zawierać ciąg.
 
 ```cpp
 size_type max_size() const;
@@ -3240,11 +3240,11 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Maksymalna liczba znaków, jaką może zawierać ciąg.
+Maksymalna liczba znaków, które może zawierać ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyjątek typu [klasy length_error](../standard-library/length-error-class.md) jest zgłaszany, gdy operacja generuje ciąg o długości większej niż maksymalny rozmiar.
+Wyjątek typu [length_error Class](../standard-library/length-error-class.md) jest generowany, gdy operacja tworzy ciąg o długości większej niż maksymalny rozmiar.
 
 ### <a name="example"></a>Przykład
 
@@ -3300,9 +3300,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string:: nPos
+## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string::npos
 
-Wartość całkowita bez znaku została zainicjowana do-1, która wskazuje "nie znaleziono" lub "wszystkie pozostałe znaki", gdy funkcja wyszukiwania zakończy się niepowodzeniem.
+Niepodpisana wartość całkowita zainicjowana do -1, która wskazuje "nie znaleziono" lub "wszystkie pozostałe znaki", gdy funkcja wyszukiwania nie powiedzie się.
 
 ```cpp
 static const size_type npos = -1;
@@ -3310,13 +3310,13 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy wartość zwracana ma być sprawdzana dla wartości `npos`, może ona nie działać, chyba że zwracana wartość jest typu [size_type](#size_type) i nie jest równa **int** ani **unsigned**.
+Gdy zwracana wartość ma być `npos` zaznaczona dla wartości, może nie działać, chyba że zwracana wartość jest [typu size_type](#size_type) i nie **jest int** lub **unsigned**.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dotyczącym [wyszukiwania](#find) , aby zapoznać się z przykładem sposobu deklarowania i używania `npos`.
+Zobacz [przykład,](#find) aby znaleźć przykład jak zadeklarować i używać `npos`.
 
-## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string:: operator + =
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string::operator+=
 
 Dołącza znaki do ciągu.
 
@@ -3334,21 +3334,21 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Znak, który ma zostać dołączony.
+Znak, który ma zostać dołączona.
 
-\ *PTR*
-Znaki ciągu C do dołączenia.
+*Ptr*\
+Znaki c-ciąg do dołączenia.
 
-*prawa*\
-Znaki ciągu do dołączenia.
+*Prawo*\
+Znaki ciągu, który ma być dołączony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu ciągu, który jest dołączany do znaków przesłanych przez funkcję członkowską.
+Odwołanie do obiektu ciągu, który jest dołączany ze znakami przekazanymi przez funkcję elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Znaki mogą być dołączane do ciągu przy użyciu `operator+=` lub funkcji składowych [dołączania](#append) lub [push_back](#push_back). `operator+=` dołącza wartości pojedynczego argumentu, podczas gdy funkcja dołączająca wiele argumentów umożliwia określenie określonej części ciągu do dodania.
+Znaki mogą być dołączane do `operator+=` ciągu przy użyciu lub funkcji członkowskich [dołączania](#append) lub [push_back](#push_back). Dołącza `operator+=` wartości pojedynczego argumentu, podczas gdy funkcja elementu członkowskiego dołączania wielu argumentów umożliwia określoną część ciągu do dodania.
 
 ### <a name="example"></a>Przykład
 
@@ -3405,9 +3405,9 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string:: operator =
+## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string::operator=
 
-Przypisuje nowe wartości znakowe do zawartości ciągu.
+Przypisuje nowe wartości znaków do zawartości ciągu.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
@@ -3428,19 +3428,19 @@ basic_string<CharType, Traits, Allocator>& operator=(
 *char_value*\
 Wartość znaku, która ma zostać przypisana.
 
-\ *PTR*
-Wskaźnik do znaków znaku C, który ma zostać przypisany do ciągu docelowego.
+*Ptr*\
+Wskaźnik do znaków ciągu C, który ma być przypisany do ciągu docelowego.
 
-*prawa*\
+*Prawo*\
 Ciąg źródłowy, którego znaki mają być przypisane do ciągu docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu String, do którego są przypisywane nowe znaki przez funkcję członkowską.
+Odwołanie do obiektu ciągu, który jest przypisywany nowe znaki przez funkcję elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ciągi mogą mieć przypisane nowe wartości znakowe. Nowa wartość może być ciągiem i ciągiem C lub pojedynczym znakiem. `operator=` można użyć, jeśli nowa wartość może być opisana przez jeden parametr. w przeciwnym razie funkcja członkowska, która ma wiele parametrów, może być użyta do [określenia, która](#assign)część ciągu ma zostać przypisana do ciągu docelowego.
+Ciągom mogą być przypisywane nowe wartości znaków. Nową wartością może być ciąg i ciąg C lub pojedynczy znak. `operator=` Może być używany, jeśli nowa wartość może być opisana przez pojedynczy parametr, w przeciwnym razie funkcja elementu członkowskiego [przypisać](#assign), który ma wiele parametrów, może służyć do określenia, która część ciągu ma być przypisana do ciągu docelowego.
 
 ### <a name="example"></a>Przykład
 
@@ -3499,9 +3499,9 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string:: operator []
+## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string::operator[]
 
-Zawiera odwołanie do znaku o określonym indeksie w ciągu.
+Zawiera odwołanie do znaku z określonym indeksem w ciągu.
 
 ```cpp
 const_reference operator[](size_type offset) const;
@@ -3510,8 +3510,8 @@ reference operator[](size_type offset);
 
 ### <a name="parameters"></a>Parametry
 
-\ *przesunięcia*
-Indeks pozycji elementu, do którego ma zostać utworzone odwołanie.
+*Przesunięcie*\
+Indeks pozycji elementu, do którego ma się odwoływać.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3519,15 +3519,15 @@ Odwołanie do znaku ciągu w pozycji określonej przez indeks parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy element ciągu ma indeks zero, a następujące elementy są indeksowane po kolei przez dodatnie liczby całkowite, tak aby ciąg o długości *n* miał element *n*, który jest indeksowany przez liczbę *n* -1.
+Pierwszy element ciągu ma indeks zero, a następujące elementy są indeksowane kolejno przez dodatnie liczby całkowite, tak aby ciąg długości *n* miał *n*th element indeksowany przez liczbę *n* - 1.
 
-`operator[]` jest szybsza niż funkcja członkowska [na](#at) potrzeby zapewniania dostępu do odczytu i zapisu do elementów ciągu.
+`operator[]`jest szybszy niż funkcja elementu członkowskiego [w](#at) zapewnianie dostępu do odczytu i zapisu do elementów ciągu.
 
-`operator[]` nie sprawdza, czy indeks przeszedł jako parametr jest prawidłowy, ale funkcja członkowska `at` wykonuje i dlatego powinna być używana w tym okresie ważności nie jest określona. Nieprawidłowy indeks (indeks bez znaku, który jest mniejszy niż lub równy rozmiarowi ciągu) przesłany do funkcji składowej `at` zgłasza wyjątek [klasy out_of_range](../standard-library/out-of-range-class.md) . Nieprawidłowy indeks przeszedł do `operator[]` skutkuje niezdefiniowanym zachowaniem, ale indeks równy długości ciągu jest prawidłowym indeksem dla ciągów stałych, a operator zwraca znak null, gdy przeszedł ten indeks.
+`operator[]`nie sprawdza, czy indeks przekazany jako parametr jest `at` prawidłowy, ale funkcja elementu członkowskiego nie i tak powinny być używane w ważności nie jest pewne. Nieprawidłowy indeks (indeks mniejszy niż zero lub większy lub większy lub równy `at` rozmiar ciągowi) przekazany do funkcji elementu członkowskiego zgłasza wyjątek [out_of_range Class.](../standard-library/out-of-range-class.md) Nieprawidłowy indeks `operator[]` przekazany do powoduje niezdefiniowane zachowanie, ale indeks równy długości ciągu jest prawidłowym indeksem dla ciągów const i operator zwraca znak null po przekazaniu tego indeksu.
 
-Zwrócone odwołanie może być unieważnione przez ponowne alokacje ciągu lub modyfikacje ciągów **niestałych** .
+Odwołanie zwrócone może zostać unieważnione przez ponowne przydziały ciągów lub modyfikacje dla ciągów **innych niż const.**
 
-Podczas kompilowania z użyciem [\_iteratora\_\_debugowania](../standard-library/iterator-debug-level.md) ustawionym na 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu poza granicami ciągu. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
+Podczas kompilowania z [ \_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) ustawiona na 1 lub 2, błąd środowiska uruchomieniowego wystąpi, jeśli spróbujesz uzyskać dostęp do elementu poza granicami ciągu. Aby uzyskać więcej informacji, zobacz [Sprawdzanie iteratorów](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Przykład
 
@@ -3568,9 +3568,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string::p ointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string::pointer
 
-Typ, który dostarcza wskaźnik do elementu znaku w ciągu lub tablicy znaków.
+Typ, który udostępnia wskaźnik do elementu znaku w tablicy ciąg lub znak.
 
 ```cpp
 typedef typename allocator_type::pointer pointer;
@@ -3578,9 +3578,9 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `allocator_type::pointer`.
+Typ jest synonimem `allocator_type::pointer`.
 
-Dla typu `string`jest to odpowiednik<strong>\*</strong> **znaków** .
+Dla `string`typu jest to odpowiednik **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Przykład
 
@@ -3605,9 +3605,9 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string::p op_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string::pop_back
 
-Wymazuje ostatni element ciągu.
+Wymazywanie ostatniego elementu ciągu.
 
 ```cpp
 void pop_back();
@@ -3615,9 +3615,9 @@ void pop_back();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego skutecznie wywołuje `erase(size() - 1)`, aby wymazać ostatni element sekwencji, który nie może być pusty.
+Ta funkcja elementu `erase(size() - 1)` członkowskiego skutecznie wywołuje, aby usunąć ostatni element sekwencji, który musi być niepuste.
 
-## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string::p ush_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string::push_back
 
 Dodaje element na końcu ciągu.
 
@@ -3632,7 +3632,7 @@ Znak, który ma zostać dodany na końcu ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje funkcję [INSERT](#insert)( [End](#end), *char_value* ).
+Funkcja elementu członkowskiego skutecznie wywołuje [insert](#insert) [(end](#end), *char_value* ).
 
 ### <a name="example"></a>Przykład
 
@@ -3672,9 +3672,9 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string:: rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string::rbegin
 
-Zwraca iterator do pierwszego elementu w ciągu odwróconym.
+Zwraca iterator do pierwszego elementu w odwróconym ciągu.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -3684,15 +3684,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca iterator dostępu swobodnego do pierwszego elementu w ciągu odwróconym, na którym znajduje się ostatni element w odpowiadającym mu ciągu nieodwróconym.
+Zwraca iteratora dostępu losowego do pierwszego elementu w odwróconym ciągu, adresując, co byłoby ostatnim elementem w odpowiednim nieodwrócony ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-`rbegin` jest używany z odwróconym ciągiem, tak jak [początek](#begin) jest używany z ciągiem.
+`rbegin`jest używany z odwróconym ciągiem, tak jak [begin](#begin) jest używany z ciągiem.
 
-Jeśli wartość zwracana `rbegin` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu ciągu. Jeśli wartość zwracana `rbegin` jest przypisana do `reverse_iterator`, można zmodyfikować obiekt ciągu.
+Jeśli zwracana `rbegin` wartość jest przypisana `const_reverse_iterator`do obiektu , nie można zmodyfikować obiektu ciągu. Jeśli zwracana `rbegin` wartość jest przypisana `reverse_iterator`do , obiekt ciągu może być modyfikowany.
 
-`rbegin` można użyć do zainicjowania iteracji za pomocą ciągu z poprzednimi wersjami.
+`rbegin`może służyć do inicjowania iteracji za pośrednictwem ciągu do tyłu.
 
 ### <a name="example"></a>Przykład
 
@@ -3748,9 +3748,9 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreference"></a><a name="reference"></a>basic_string:: Reference
+## <a name="basic_stringreference"></a><a name="reference"></a>basic_string::odwołanie
 
-Typ, który zawiera odwołanie do elementu przechowywanego w ciągu.
+Typ, który zapewnia odwołanie do elementu przechowywanego w ciągu.
 
 ```cpp
 typedef typename allocator_type::reference reference;
@@ -3760,17 +3760,17 @@ typedef typename allocator_type::reference reference;
 
 Typ `reference` może służyć do modyfikowania wartości elementu.
 
-Typ jest synonimem dla `allocator_type::reference`.
+Typ jest synonimem `allocator_type::reference`.
 
-W przypadku typu `string`jest to równoznaczne z `chr&`.
+Dla `string`typu jest to `chr&`odpowiednik .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem, [Aby uzyskać przykład](#at) sposobu deklarowania i używania `reference`.
+Zobacz przykład [na](#at) przykład jak zadeklarować i `reference`używać .
 
-## <a name="basic_stringrend"></a><a name="rend"></a>basic_string:: rend
+## <a name="basic_stringrend"></a><a name="rend"></a>basic_string::rend
 
-Zwraca iterator, który odnosi się do lokalizacji następującej po ostatnim elemencie w ciągu odwróconym.
+Zwraca iterator, który odnosi się do lokalizacji po ostatniej pozycji elementu w odwróconym ciągu.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -3780,17 +3780,17 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator odwrotnego dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w ciągu odwróconym.
+Odwrotny dostęp losowy iterator, który adresuje lokalizację po ostatnim elemencie w odwróconym ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-`rend` jest używany z odwróconym ciągiem, tak jak [koniec](#end) jest używany z ciągiem.
+`rend`jest używany z odwróconym ciągiem, tak jak [koniec](#end) jest używany z ciągiem.
 
-Jeśli wartość zwracana `rend` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu ciągu. Jeśli wartość zwracana `rend` jest przypisana do `reverse_iterator`, można zmodyfikować obiekt ciągu.
+Jeśli zwracana `rend` wartość jest przypisana `const_reverse_iterator`do obiektu , nie można zmodyfikować obiektu ciągu. Jeśli zwracana `rend` wartość jest przypisana `reverse_iterator`do , obiekt ciągu może być modyfikowany.
 
-`rend` można użyć do sprawdzenia, czy iterator odwrotny osiągnął koniec ciągu.
+`rend`można użyć do sprawdzenia, czy odwrotnej iterator osiągnął koniec jego ciągu.
 
-Nie należy wywoływać wartości zwracanej przez `rend`.
+Wartość zwrócona `rend` przez nie powinny być wyłuskiwane.
 
 ### <a name="example"></a>Przykład
 
@@ -3846,9 +3846,9 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string:: Replace
+## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string::zastąp
 
-Zamienia elementy w ciągu w określonej pozycji z określonymi znakami lub znakami skopiowanymi z innych zakresów lub ciągów lub ciągów języka C.
+Zastępuje elementy w ciągu w określonej pozycji określonymi znakami lub znakami skopiowanymi z innych zakresów lub ciągów lub ciągów C.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3924,45 +3924,45 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+*Str*\
 Ciąg, który ma być źródłem znaków dla ciągu operandu.
 
 *position_1*\
-Indeks ciągu operandu, w którym rozpoczyna się zamienianie.
+Indeks ciągu operandu, od którego rozpoczyna się zastępowanie.
 
 *number_1*\
-Maksymalna liczba znaków, które mają zostać zastąpione w ciągu operandu.
+Maksymalna liczba znaków do zastąpienia w ciągu operandu.
 
 *position_2*\
-Indeks ciągu parametru, w którym rozpoczyna się kopiowanie.
+Indeks ciągu parametru, od którego rozpoczyna się kopiowanie.
 
 *number_2*\
-Maksymalna liczba znaków do użycia na podstawie parametru C-String.
+Maksymalna liczba znaków, które mają być używane z parametru C-string.
 
-\ *PTR*
+*Ptr*\
 Ciąg C, który ma być źródłem znaków dla ciągu operandu.
 
 *char_value*\
 Znak, który ma zostać skopiowany do ciągu operandu.
 
-*first0*\
-Iterator odnoszący się do pierwszego znaku, który ma zostać usunięty w ciągu operandu.
+*pierwszy0*\
+Iterator adresowania pierwszy znak do usunięcia w ciągu operandu.
 
 *last0*\
-Iterator odnoszący się do ostatniego znaku, który ma zostać usunięty w ciągu operandu.
+Iterator adresowania ostatni znak do usunięcia w ciągu operandu.
 
-*pierwszy*\
-Iterator, const_pointer lub const_iterator odnoszący się do pierwszego znaku, który ma być kopiowany w ciągu parametru.
+*Pierwszym*\
+Iterator, const_pointer lub const_iterator adresowania pierwszego znaku, który ma zostać skopiowany w ciągu parametru.
 
-*ostatni*\
-Iterator, const_pointer lub const_iterator odnoszący się do ostatniego znaku, który ma zostać skopiowany w ciągu parametru.
+*Ostatnio*\
+Iterator, const_pointer lub const_iterator adresowanie ostatni znak do skopiowania w ciągu parametru.
 
-*liczba*\
-Liczba przypadków, gdy *char_value* jest kopiowana do ciągu operandu.
+*Liczba*\
+Liczba *char_value* jest kopiowana do ciągu operandu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg operandu z wykonanym zastąpieniem.
+Ciąg operandu z wykonanym zamiennikiem.
 
 ### <a name="example"></a>Przykład
 
@@ -4143,9 +4143,9 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string:: Reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string::rezerwa
 
-Ustawia pojemność ciągu na liczbę, która jest co najmniej równa podanej liczbie.
+Ustawia pojemność ciągu na liczbę co najmniej tak wielką, jak określona liczba.
 
 ```cpp
 void reserve(size_type count = 0);
@@ -4153,16 +4153,16 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*liczba*\
-Liczba znaków, dla których jest rezerwowana pamięć.
+*Liczba*\
+Liczba znaków, dla których pamięć jest zarezerwowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Posiadanie wystarczającej pojemności jest ważne, ponieważ ponowne alokacje to proces czasochłonny i unieważnia wszystkie odwołania, wskaźniki i Iteratory odwołujące się do znaków w ciągu.
+Posiadanie wystarczającej pojemności jest ważne, ponieważ ponowne przydzielanie jest procesem czasochłonnym i unieważnia wszystkie odwołania, wskaźniki i iteratory, które odwołują się do znaków w ciągu.
 
-Koncepcja pojemności dla obiektów typu String jest taka sama jak w przypadku obiektów typu Vector. W przeciwieństwie do wektora, funkcja członkowska `reserve` może zostać wywołana w celu zmniejszenia pojemności obiektu. Żądanie jest niewiążące i może być niewykonane. Ponieważ wartością domyślną dla parametru jest zero, wywołanie `reserve` jest żądaniem niewiążącym do zmniejszenia pojemności ciągu, aby dopasować liczbę znaków w ciągu. Pojemność nigdy nie zmniejszyła się poniżej bieżącej liczby znaków.
+Pojęcie pojemności dla obiektów ciągów typu jest taka sama jak dla obiektów wektora typu. W przeciwieństwie do wektora funkcja `reserve` elementu członkowskiego może być wywoływana w celu zmniejszenia pojemności obiektu. Żądanie jest niewiążące i może się zdarzyć, ale nie. Jako wartość domyślna dla parametru jest `reserve` zero, wywołanie jest żądaniem niewiążącym, aby zmniejszyć pojemność ciągu, aby dopasować liczbę znaków aktualnie w ciągu. Pojemność nigdy nie jest zmniejszana poniżej bieżącej liczby znaków.
 
-Wywoływanie `reserve` jest jedynym możliwym sposobem zmniejszenia pojemności ciągu. Jednak jak wspomniano powyżej, to żądanie jest niewiążące i może nie wystąpić.
+Wywołanie `reserve` jest jedynym możliwym sposobem zmniejszenia pojemności ciągu. Jednak, jak wspomniano powyżej, to żądanie jest niewiążące i nie może się zdarzyć.
 
 ### <a name="example"></a>Przykład
 
@@ -4233,9 +4233,9 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="basic_stringresize"></a><a name="resize"></a>basic_string:: zmiana rozmiaru
+## <a name="basic_stringresize"></a><a name="resize"></a>basic_string::resize
 
-Określa nowy rozmiar ciągu, dołączając lub wymazywając elementy zgodnie z wymaganiami.
+Określa nowy rozmiar dla ciągów, dołączanie lub wymazywanie elementów zgodnie z wymaganiami.
 
 ```cpp
 void resize(
@@ -4248,15 +4248,15 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*liczba*\
+*Liczba*\
 Nowy rozmiar ciągu.
 
 *char_value*\
-Wartość, która dołącza znaki, jest inicjowana przy użyciu, jeśli wymagane są dodatkowe elementy.
+Wartość, która jest inicjowana, jeśli wymagane są dodatkowe elementy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar uzyskany przekracza maksymalną liczbę znaków, formularz zgłosi `length_error`.
+Jeśli wynikowy rozmiar przekracza maksymalną liczbę znaków, `length_error`formularz zostanie zrzuciny .
 
 ### <a name="example"></a>Przykład
 
@@ -4343,9 +4343,9 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string:: reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string::reverse_iterator
 
-Typ, który zawiera odwołanie do elementu przechowywanego w ciągu.
+Typ, który zapewnia odwołanie do elementu przechowywanego w ciągu.
 
 ```cpp
 typedef std::reverse_iterator<iterator> reverse_iterator;
@@ -4353,15 +4353,15 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `reverse_iterator` może służyć do modyfikacji wartości znaku i służy do iteracji ciągu w odwrotnej postaci.
+Typ `reverse_iterator` może służyć do modyfikowania wartości znaku i jest używany do iteracji za pośrednictwem ciągu w odwrotnej kolejności.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [rbegin](#rbegin) , aby zapoznać się z przykładem sposobu deklarowania i używania `reverse_iterator`.
+Zobacz przykład [dla rbegin](#rbegin) na przykład jak `reverse_iterator`zadeklarować i używać .
 
-## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string:: rfind
+## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string::rfind
 
-Wyszukuje ciąg w kierunku do tyłu dla pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.
+Przeszukuje ciąg w kierunku wstecznym dla pierwszego wystąpienia podciąg, który pasuje do określonej sekwencji znaków.
 
 ```cpp
 size_type rfind(
@@ -4385,23 +4385,23 @@ size_type rfind(
 ### <a name="parameters"></a>Parametry
 
 *char_value*\
-Wartość znaku, dla której funkcja członkowska ma być wyszukiwana.
+Wartość znaku, dla której funkcja elementu członkowskiego ma być wyszukiwana.
 
-\ *przesunięcia*
-Indeks pozycji, w której ma zostać rozpoczęte wyszukiwanie.
+*Przesunięcie*\
+Indeks pozycji, w której ma się rozpocząć wyszukiwanie.
 
-\ *PTR*
-Ciąg języka C, dla którego funkcja członkowska ma być wyszukiwana.
+*Ptr*\
+Ciąg C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*liczba*\
-Liczba znaków, która jest odliczana od pierwszego znaku w ciągu C, dla którego funkcja członkowska ma być wyszukiwana.
+*Liczba*\
+Liczba znaków, licząc do przodu od pierwszego znaku, w ciągu C, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
-*str*\
-Ciąg, dla którego funkcja członkowska ma być wyszukiwana.
+*Str*\
+Ciąg, dla którego funkcja elementu członkowskiego jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks ostatniego wystąpienia podczas przeszukiwania do tyłu pierwszego znaku podciągu w przypadku powodzenia; w przeciwnym razie `npos`.
+Indeks ostatniego wystąpienia, podczas wyszukiwania wstecz, pierwszego znaku podciągów po pomyślnym; w `npos`przeciwnym razie .
 
 ### <a name="example"></a>Przykład
 
@@ -4534,9 +4534,9 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string:: shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string::shrink_to_fit
 
-Odrzuca nadmiarową pojemność ciągu.
+Odrzuca nadmiar pojemności ciągu.
 
 ```cpp
 void shrink_to_fit();
@@ -4544,9 +4544,9 @@ void shrink_to_fit();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska eliminuje niepotrzebne magazyny w kontenerze.
+Ta funkcja elementu członkowskiego eliminuje wszelkie niepotrzebne przechowywanie w kontenerze.
 
-## <a name="basic_stringsize"></a><a name="size"></a>basic_string:: size
+## <a name="basic_stringsize"></a><a name="size"></a>basic_string::size
 
 Zwraca bieżącą liczbę elementów w ciągu.
 
@@ -4612,9 +4612,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string:: size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string::size_type
 
-Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów i indeksów w ciągu.
+Niepodpisany typ liczby całkowitej, który może reprezentować liczbę elementów i indeksów w ciągu.
 
 ```cpp
 typedef typename allocator_type::size_type size_type;
@@ -4622,9 +4622,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-jest to równoważne `allocator_type::size_type`.
+jest to odpowiednik `allocator_type::size_type`.
 
-W przypadku typu `string`jest to równoznaczne z `size_t`.
+Dla `string`typu jest to `size_t`odpowiednik .
 
 ### <a name="example"></a>Przykład
 
@@ -4655,9 +4655,9 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string:: substr
+## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string::podstr
 
-Kopiuje podciąg z co najwyżej określoną liczbę znaków z ciągu rozpoczynającego się od określonej pozycji.
+Kopiuje podciąg co najwyżej pewną liczbę znaków z ciągu rozpoczynającego się od określonej pozycji.
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
@@ -4667,15 +4667,15 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parametry
 
-\ *przesunięcia*
-Indeks lokalizowania elementu na pozycji, z której jest wykonywana kopia ciągu, z wartością domyślną 0.
+*Przesunięcie*\
+Indeks lokalizujący element w miejscu, z którego jest wykonana kopia ciągu, z domyślną wartością 0.
 
-*liczba*\
-Liczba znaków, które mają być skopiowane, jeśli są obecne.
+*Liczba*\
+Liczba znaków, które mają być kopiowane, jeśli są one obecne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt podciągu, który jest kopią elementów argumentu ciągu rozpoczynającego się w pozycji określonej przez pierwszy argument.
+Obiekt podciągowy, który jest kopią elementów ciągu operand począwszy od pozycji określonej przez pierwszy argument.
 
 ### <a name="example"></a>Przykład
 
@@ -4714,7 +4714,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="basic_stringswap"></a><a name="swap"></a>basic_string:: swap
+## <a name="basic_stringswap"></a><a name="swap"></a>basic_string::swap
 
 Wymiana zawartości dwóch ciągów.
 
@@ -4725,20 +4725,20 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+*Str*\
 Ciąg źródłowy, którego elementy mają być wymieniane z tymi w ciągu docelowym.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zamieniane ciągi mają ten sam obiekt alokatora, `swap` funkcja członkowska:
+Jeśli ciągi są zamienione mają ten sam `swap` obiekt alokatora, funkcja elementu członkowskiego:
 
-- Występuje w czasie stałym.
+- Występuje w stałym czasie.
 
-- Nie zgłasza wyjątków.
+- Nie zgłasza żadnych wyjątków.
 
-- Unieważnia odwołania, wskaźniki lub Iteratory, które wyznaczają elementy w dwóch ciągach.
+- Unieważnia żadnych odwołań, wskaźników lub iteratorów, które wyznaczają elementy w dwóch ciągach.
 
-W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
+W przeciwnym razie wykonuje szereg przypisań elementów i wywołania konstruktora proporcjonalne do liczby elementów w dwóch kontrolowanych sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -4775,9 +4775,9 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string:: traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string::traits_type
 
-Typ cech znaków elementów przechowywanych w ciągu.
+Typ cech charakteru elementów przechowywanych w ciągu.
 
 ```cpp
 typedef Traits traits_type;
@@ -4785,17 +4785,17 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla drugiego parametru szablonu `Traits`.
+Typ jest synonimem drugiego parametru `Traits`szablonu .
 
-Dla typu `string`jest to odpowiednik **char_traits\<char >** .
+Dla `string`typu jest to odpowiednik **char_traits\<char>**.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem [kopiowania](../standard-library/char-traits-struct.md#copy) , aby zapoznać się z przykładem sposobu deklarowania i używania `traits_type`.
+Zobacz przykład [kopiowania,](../standard-library/char-traits-struct.md#copy) aby uzyskać przykład `traits_type`sposobu deklarowania i używania pliku .
 
-## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string:: value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string::value_type
 
-Typ, który reprezentuje typ znaków przechowywanych w ciągu.
+Typ reprezentujący typ znaków przechowywanych w ciągu.
 
 ```cpp
 typedef typename allocator_type::value_type value_type;
@@ -4803,7 +4803,7 @@ typedef typename allocator_type::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Jest równoważne `traits_type::char_type` i jest odpowiednikiem **char** dla obiektów typu `string`.
+Jest odpowiednikiem `traits_type::char_type` i jest odpowiednikiem **char** `string`dla obiektów typu .
 
 ### <a name="example"></a>Przykład
 
@@ -4833,5 +4833,5 @@ The character ch2 is: H.
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<ciąg >](../standard-library/string.md)\
+[\<>ciągu](../standard-library/string.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

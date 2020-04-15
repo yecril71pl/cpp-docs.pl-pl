@@ -12,28 +12,28 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: 8518e21a9fa6bcf5ac640cff25b17c5028046b06
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 007a4e53fd9b3eae612947cd76ee352776572d4f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373524"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: klasa aplikacji
 
-Główna Klasa aplikacji w MFC hermetyzuje inicjalizację, uruchomienie i zakończenie działania aplikacji dla systemu operacyjnego Windows. Aplikacja skompilowana na platformie musi mieć jeden i tylko jeden obiekt klasy pochodzącej od [CWinApp](../mfc/reference/cwinapp-class.md). Ten obiekt jest konstruowany przed utworzeniem systemu Windows.
+Główna klasa aplikacji w MFC hermetyzuje inicjowania, uruchamiania i zakończenia aplikacji dla systemu operacyjnego Windows. Aplikacja zbudowana na platformie musi mieć jeden i tylko jeden obiekt klasy pochodzące z [CWinApp](../mfc/reference/cwinapp-class.md). Ten obiekt jest konstruowany przed utworzeniem okien.
 
-`CWinApp` pochodzi od `CWinThread`, który reprezentuje główny wątek wykonywania aplikacji, który może mieć jeden lub więcej wątków. W ostatnich wersjach MFC funkcje elementów członkowskich `InitInstance`, **Run**, `ExitInstance`i `OnIdle` są faktycznie w klasie `CWinThread`. Te funkcje zostały omówione tutaj, tak jakby były `CWinApp` członkami, ponieważ dyskusja dotyczy roli obiektu jako obiektu aplikacji, a nie jako wątku podstawowego.
-
-> [!NOTE]
->  Klasa aplikacji stanowi podstawowy wątek wykonywania aplikacji. Korzystając z funkcji Win32 API, można również utworzyć pomocnicze wątki wykonywania. Te wątki mogą korzystać z biblioteki MFC. Aby uzyskać więcej informacji, zobacz [wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
-
-Podobnie jak w przypadku każdego programu dla systemu operacyjnego Windows, aplikacja platformy ma funkcję `WinMain`. W aplikacji platformy nie można jednak pisać `WinMain`. Jest on dostarczany przez bibliotekę klas i jest wywoływany podczas uruchamiania aplikacji. `WinMain` wykonuje standardowe usługi, takie jak rejestrowanie klas okien. Następnie wywołuje funkcje członkowskie obiektu aplikacji w celu zainicjowania i uruchomienia aplikacji. (Można dostosować `WinMain`, zastępując `CWinApp` funkcje członkowskie, które `WinMain` wywołania.)
-
-Aby zainicjować aplikację, `WinMain` wywołuje `InitApplication` i `InitInstance` funkcji członkowskich obiektu aplikacji. Aby uruchomić pętlę komunikatów aplikacji, `WinMain` wywołuje funkcję **uruchamiania** elementu członkowskiego. Po zakończeniu `WinMain` wywołuje funkcję członkowską `ExitInstance` obiektu aplikacji.
+`CWinApp`pochodzi z `CWinThread`, który reprezentuje główny wątek wykonywania dla aplikacji, który może mieć jeden lub więcej wątków. W ostatnich wersjach MFC `InitInstance`, `ExitInstance` `OnIdle` **Uruchom**, i funkcje członkowskie są rzeczywiście w klasie `CWinThread`. Te funkcje są omawiane `CWinApp` w tym miejscu tak, jakby były członkami zamiast, ponieważ dyskusja dotyczy roli obiektu jako obiektu aplikacji, a nie jako wątek podstawowy.
 
 > [!NOTE]
->  Nazwy wyświetlane **pogrubione** w tej dokumentacji wskazują elementy dostarczone przez Biblioteka MFC i wizualizację C++. Nazwy wyświetlane w typie `monospaced` wskazują elementy, które tworzysz lub przesłonisz.
+> Klasa aplikacji stanowi podstawowy wątek wykonywania aplikacji. Za pomocą funkcji interfejsu API Win32, można również utworzyć pomocnicze wątki wykonywania. Te wątki można użyć biblioteki MFC. Aby uzyskać więcej informacji, zobacz [Wielowątkowe](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+
+Jak każdy program dla systemu operacyjnego Windows, aplikacja ramowa `WinMain` ma funkcję. W aplikacji ramowej nie piszesz `WinMain`jednak . Jest dostarczany przez bibliotekę klas i jest wywoływana podczas uruchamiania aplikacji. `WinMain`wykonuje standardowe usługi, takie jak rejestrowanie klas okien. Następnie wywołuje funkcje członkowskie obiektu aplikacji, aby zainicjować i uruchomić aplikację. (Można dostosować, `WinMain` zastępując funkcje `CWinApp` członkowskie, `WinMain` które wywołuje.)
+
+Aby zainicjować aplikację, `WinMain` wywołuje funkcje `InitApplication` `InitInstance` obiektu aplikacji i elementu członkowskiego. Aby uruchomić pętlę komunikatów `WinMain` aplikacji, wywołuje funkcję **uruchom** element członkowski. Po zakończeniu `WinMain` wywołuje funkcję `ExitInstance` elementu członkowskiego obiektu aplikacji.
+
+> [!NOTE]
+> Nazwy wyświetlane **pogrubioną czcionką** w tej dokumentacji wskazują elementy dostarczone przez bibliotekę klas Microsoft Foundation i visual C++. Nazwy wyświetlane `monospaced` w typie wskazują elementy, które tworzysz lub zastępujesz.
 
 ## <a name="see-also"></a>Zobacz też
 

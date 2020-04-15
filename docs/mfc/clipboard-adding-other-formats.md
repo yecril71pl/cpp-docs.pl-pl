@@ -1,5 +1,5 @@
 ---
-title: 'Schowek: Dodawanie innych formatów'
+title: 'Schowek: dodawanie innych formatów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - formats [MFC], Clipboard
@@ -9,43 +9,43 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4e159cc1b6918843d4a164dcca88500eb7b038
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374604"
 ---
-# <a name="clipboard-adding-other-formats"></a>Schowek: Dodawanie innych formatów
+# <a name="clipboard-adding-other-formats"></a>Schowek: dodawanie innych formatów
 
-W tym temacie wyjaśniono, jak rozwinąć listę obsługiwanych formatów, szczególnie w przypadku obsługi. Temat [Schowka: Kopiowanie i wklejanie danych](../mfc/clipboard-copying-and-pasting-data.md) opisuje minimalne wdrożenie niezbędne do obsługi kopiowanie i wklejanie ze Schowka. Jeśli to wszystko możesz wdrożyć są tylko formaty w Schowku znajduje **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**i ewentualnie **CF_LINKSOURCE**. Większość aplikacji będzie więcej formatów w Schowku niż tych trzech.
+W tym temacie wyjaśniono, jak rozwinąć listę obsługiwanych formatów, szczególnie w przypadku obsługi OLE. Temat [Schowek: Kopiowanie i wklejanie danych](../mfc/clipboard-copying-and-pasting-data.md) opisuje minimalną implementację niezbędną do obsługi kopiowania i wklejania ze Schowka. Jeśli to wszystko zaimplementujesz, jedynymi formatami umieszczonymi w Schowku są **CF_METAFILEPICT,** **CF_EMBEDSOURCE,** **CF_OBJECTDESCRIPTOR**i ewentualnie **CF_LINKSOURCE.** Większość aplikacji będzie potrzebować więcej formatów w Schowku niż te trzy.
 
-##  <a name="_core_registering_custom_formats"></a> Rejestrowanie niestandardowych formatów
+## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>Rejestrowanie formatów niestandardowych
 
-Aby utworzyć własne niestandardowe formaty, postępuj zgodnie z tej samej procedury, należy użyć podczas rejestrowania dowolnego niestandardowego formatu Schowka: Przekaż nazwę formatu w celu **RegisterClipboardFormat** funkcja i używać jej wartość zwracana jako format identyfikatora.
+Aby utworzyć własne formaty niestandardowe, wykonaj tę samą procedurę, która zostałaby użyta podczas rejestrowania dowolnego niestandardowego formatu Schowka: przekaż nazwę formatu funkcji **RegisterClipboardFormat** i użyj jej wartości zwracanej jako identyfikatora formatu.
 
-##  <a name="_core_placing_formats_on_the_clipboard"></a> Wprowadzenie do formatów w Schowku
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Umieszczanie formatów w Schowku
 
-Aby dodać więcej formatów w Schowku znajduje, konieczne jest przesłonięcie `OnGetClipboardData` funkcja w klasie pochodnej z jednego `COleClientItem` lub `COleServerItem` (w zależności od tego, czy dane mają być kopiowane jest natywny). W tej funkcji należy użyć następującej procedury.
+Aby dodać więcej formatów do formatów umieszczonych w `OnGetClipboardData` Schowku, należy zastąpić `COleClientItem` funkcję `COleServerItem` w klasie, z której pochodzisz, czy (w zależności od tego, czy dane do skopiowania są natywne). W tej funkcji należy użyć poniższej procedury.
 
-#### <a name="to-place-formats-on-the-clipboard"></a>Aby umieścić formatów w Schowku
+#### <a name="to-place-formats-on-the-clipboard"></a>Aby umieścić formaty w Schowku
 
-1. Tworzy obiekt `COleDataSource`.
+1. Utwórz `COleDataSource` obiekt.
 
-1. Przekazywanie tego źródła danych do funkcji, która dodaje swoje formatów danych natywnych listą obsługiwanych formatów, wywołując `COleDataSource::CacheGlobalData`.
+1. Przekaż to źródło danych do funkcji, która dodaje natywne formaty `COleDataSource::CacheGlobalData`danych do listy obsługiwanych formatów, wywołując program .
 
-1. Dodawanie standardowych formatów, wywołując `COleDataSource::CacheGlobalData` dla każdego standardowego formatu, które mają być obsługiwane.
+1. Dodaj standardowe formaty, wywołując `COleDataSource::CacheGlobalData` dla każdego standardowego formatu, który chcesz obsługiwać.
 
-Ta technika jest używany w programie MFC OLE próbki [HIERSVR](../overview/visual-cpp-samples.md) (Sprawdź `OnGetClipboardData` funkcji składowej typu **CServerItem** klasy). Jedyną różnicą w tym przykładzie jest ten krok 3 nie jest zaimplementowana, ponieważ HIERSVR obsługuje nie standardowych formatów.
+Ta technika jest używana w przykładowym programie MFC OLE [HIERSVR](../overview/visual-cpp-samples.md) (sprawdź funkcję `OnGetClipboardData` elementu członkowskiego klasy **CServerItem).** Jedyną różnicą w tym przykładzie jest to, że krok trzeci nie jest zaimplementowany, ponieważ HIERSVR nie obsługuje innych standardowych formatów.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
-- [Źródła danych OLE obiekty i dane oraz jednolitego transferów danych](../mfc/data-objects-and-data-sources-ole.md)
+- [Obiekty danych OLE i źródła danych oraz jednolity transfer danych](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Przeciąganie i upuszczanie OLE](../mfc/drag-and-drop-ole.md)
+- [Przeciąganie i upuszczanie elementów OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Schowek: Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

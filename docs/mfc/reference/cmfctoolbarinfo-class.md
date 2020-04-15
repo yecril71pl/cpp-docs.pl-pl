@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarInfo Class
+title: Klasa CMFCToolBarInfo
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarInfo
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
-ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593d1665751f7322fc2a9cee307620df88d46876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217813"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376191"
 ---
-# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo Class
+# <a name="cmfctoolbarinfo-class"></a>Klasa CMFCToolBarInfo
 
-Zawiera identyfikatory paska narzędzi obrazów w różnych stanach. `CMFCToolBarInfo` jest pomocnikiem klasy, która jest używana jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.
+Zawiera identyfikatory zasobów obrazów paska narzędzi w różnych stanach. `CMFCToolBarInfo`jest klasą pomocnika, która jest używana jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,18 +45,18 @@ class CMFCToolBarInfo
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Identyfikator zasobu mapy bitowej paska narzędzi, który zawiera obrazy regularne narzędzi ("zimne").|
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi, zawierającą wyłączonego paska narzędzi obrazów.|
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Identyfikator zasobu mapy bitowej paska narzędzi, który zawiera obrazy wybranych narzędzi (gorąca).|
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Identyfikator zasobu mapy bitowej paska narzędzi, zawierający obrazy dużych, regularne paska narzędzi.|
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi, który zawiera dużą, wyłączone obrazami paska narzędzi.|
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Identyfikator zasobu mapy bitowej paska narzędzi, który zawiera obrazy dużych, wybranych narzędzi.|
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi, zawierającą wyłączonego menu obrazy.|
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Identyfikator zasobu mapy bitowej paska narzędzi, który zawiera obrazy w menu.|
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej regularne (zimne) obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej wyłączone obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej wybrane (gorące) obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej duże, regularne obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej duże, wyłączone obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej duże, zaznaczone obrazy paska narzędzi.|
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej wyłączone obrazy menu.|
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Identyfikator zasobu mapy bitowej paska narzędzi zawierającej obrazy menu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Mapy bitowej narzędzi Pełny składa się z małych paska narzędzi obrazów (przyciski) o stałym rozmiarze. Każdy identyfikator zasobu, która jest przechowywana w `CMFCToolBarInfo` obiekt jest mapy bitowej, który zawiera pełny zestaw narzędzi obrazów w jednym stanie (przykład wybrane wyłączone dużych obrazów lub menu).
+Pełna mapa bitowa paska narzędzi składa się z małych obrazów (przycisków) paska narzędzi o stałym rozmiarze. Każdy identyfikator zasobu przechowywany `CMFCToolBarInfo` w obiekcie jest bitmapą zawierającą pełny zestaw obrazów paska narzędzi w jednym stanie (na przykład wybrane, wyłączone, duże lub obrazy menu).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,71 +66,71 @@ Mapy bitowej narzędzi Pełny składa się z małych paska narzędzi obrazów (p
 
 **Nagłówek:** afxtoolbar.h
 
-##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID
+## <a name="cmfctoolbarinfom_uicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID
 
-Określa identyfikator zasobu dla wszystkich obrazów zwykły przycisk paska narzędzi.
+Określa identyfikator zasobu dla wszystkich zwykłych obrazów przycisków paska narzędzi.
 
 ```
 UINT m_uiColdResID;
 ```
 
-##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID
+## <a name="cmfctoolbarinfom_uidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID
 
-Określa identyfikator zasobu na samych obrazach niedostępny przycisku paska narzędzi.
+Określa identyfikator zasobu dla obrazów paska narzędzi niedostępnych dla przycisków.
 
 ```
 UINT m_uiDisabledResID;
 ```
 
-##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID
+## <a name="cmfctoolbarinfom_uihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID
 
-Określa identyfikator zasobu dla wszystkich obrazów podświetlony przycisk paska narzędzi.
+Określa identyfikator zasobu dla wszystkich wyróżnionych obrazów przycisków paska narzędzi.
 
 ```
 UINT m_uiHotResID
 ```
 
-##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID
+## <a name="cmfctoolbarinfom_uilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID
 
-Określa identyfikator zasobu dla wszystkich obrazów dużych zwykły przycisk paska narzędzi.
+Określa identyfikator zasobu dla wszystkich dużych zwykłych obrazów przycisków paska narzędzi.
 
 ```
 UINT m_uiLargeColdResID
 ```
 
-##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID
+## <a name="cmfctoolbarinfom_uilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID
 
-Określa identyfikator zasobu dla wszystkich obrazów duży wyłączony przycisk paska narzędzi.
+Określa identyfikator zasobu dla wszystkich dużych obrazów przycisków wyłączonych paska narzędzi.
 
 ```
 UINT m_uiLargeDisabledResID;
 ```
 
-##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID
+## <a name="cmfctoolbarinfom_uilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID
 
-Określa identyfikator zasobu do dużych obrazów wyróżnione paska narzędzi.
+Określa identyfikator zasobu dla wszystkich dużych podświetlonych obrazów paska narzędzi.
 
 ```
 UINT m_uiLargeHotResID;
 ```
 
-##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID
+## <a name="cmfctoolbarinfom_uimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID
 
-Określa identyfikator zasobu dla polecenia dostępne obrazy paska narzędzi.
+Określa identyfikator zasobu dla obrazów niedostępnych dla poleceń paska narzędzi.
 
 ```
 UINT m_uiMenuDisabledResID;
 ```
 
-##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID
+## <a name="cmfctoolbarinfom_uimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID
 
-Określa identyfikator zasobu dla wszystkich obrazów elementów menu regularne paska narzędzi.
+Określa identyfikator zasobu dla wszystkich zwykłych obrazów elementów menu paska narzędzi.
 
 ```
 UINT m_uiMenuResID;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

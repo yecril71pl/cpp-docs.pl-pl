@@ -10,16 +10,16 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376150"
 ---
 # <a name="coleresizebar-class"></a>Klasa COleResizeBar
 
-Typ formantu paska, który obsługuje zmiany wielkości elementów OLE w miejscu.
+Typ paska sterowania, który obsługuje zmiany rozmiaru elementów OLE w miejscu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,31 +33,31 @@ class COleResizeBar : public CControlBar
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|Konstruuje `COleResizeBar` obiektu.|
+|[COleResizeBar::COleResizeBar](#coleresizebar)|Konstruuje `COleResizeBar` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|Tworzy i inicjuje okno podrzędne Windows i kojarzy ją do `COleResizeBar` obiektu.|
+|[COleResizeBar::Utwórz](#create)|Tworzy i inicjuje okno podrzędne systemu `COleResizeBar` Windows i kojarzy je z obiektem.|
 
 ## <a name="remarks"></a>Uwagi
 
-`COleResizeBar` obiekty są wyświetlane jako [CRectTracker](../../mfc/reference/crecttracker-class.md) uchwyty zmiany rozmiaru z kreskowanym obramowaniem i zewnętrznych.
+`COleResizeBar`obiekty są wyświetlane jako [CRectTracker](../../mfc/reference/crecttracker-class.md) z kreskowanym obramowaniem i zewnętrznymi uchwytami o rozmiarze.
 
-`COleResizeBar` obiekty są zazwyczaj osadzone elementy członkowskie obiektów okien ramowych pochodzących od [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) klasy.
+`COleResizeBar`obiekty są zwykle osadzone elementy członkowskie obiektów okna ramki pochodzące z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) klasy.
 
-Aby uzyskać więcej informacji, zobacz artykuł [aktywacji](../../mfc/activation-cpp.md).
+Aby uzyskać więcej informacji, zobacz artykuł [Aktywacja](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
@@ -65,9 +65,9 @@ Aby uzyskać więcej informacji, zobacz artykuł [aktywacji](../../mfc/activatio
 
 **Nagłówek:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar
 
-Konstruuje `COleResizeBar` obiektu.
+Konstruuje `COleResizeBar` obiekt.
 
 ```
 COleResizeBar();
@@ -75,11 +75,11 @@ COleResizeBar();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj `Create` można utworzyć obiektu pasek zmiany rozmiaru.
+Wywołanie `Create` utworzenia obiektu paska zmienić rozmiar.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Utwórz
 
-Tworzy okno podrzędne i kojarzy ją z `COleResizeBar` obiektu.
+Tworzy okno podrzędne i kojarzy je z obiektem. `COleResizeBar`
 
 ```
 virtual BOOL Create(
@@ -91,21 +91,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Wskaźnik do okno nadrzędne paska zmiany rozmiaru.
+Wskaźnik do okna nadrzędnego paska rozmiaru.
 
-*dwStyle*<br/>
-Określa [styl okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) atrybutów.
+*Dwstyle*<br/>
+Określa atrybuty [stylu okna.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
-*nID*<br/>
-Pasek zmiany rozmiaru okna podrzędnego identyfikatora.
+*Nid*<br/>
+Identyfikator okna podrzędnego paska zmienić rozmiar.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli utworzono pasek; w przeciwnym razie 0.
+Nonzero, jeśli pasek rozmiaru rozmiaru został utworzony; w przeciwnym razie 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Próbki MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[Próbka MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

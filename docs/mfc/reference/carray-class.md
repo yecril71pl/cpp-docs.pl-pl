@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377023"
 ---
 # <a name="carray-class"></a>Klasa CArray
 
-Obsługuje tablice, które są podobne do tablic języka C, ale mogą dynamicznie zmniejszać i zwiększać się w miarę potrzeb.
+Obsługuje tablice, które są jak tablice C, ale można dynamicznie zmniejszyć i rozwijać w razie potrzeby.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,81 +62,81 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>Parametry
 
-*Wprowadź*<br/>
-Parametr szablonu, który określa typ obiektów przechowywanych w tablicy. *Typ* jest parametrem zwracanym przez `CArray`.
+*TYP*<br/>
+Parametr szablonu określający typ obiektów przechowywanych w tablicy. *TYPE* jest parametrem zwracanym przez `CArray`plik .
 
 *ARG_TYPE*<br/>
-Parametr szablonu, który określa typ argumentu, który jest używany do uzyskiwania dostępu do obiektów przechowywanych w tablicy. Często odwołanie do *typu*. *ARG_TYPE* jest parametrem, który jest przesyłany do `CArray`.
+Parametr Szablon, który określa typ argumentu, który jest używany do uzyskiwania dostępu do obiektów przechowywanych w tablicy. Często odniesienie do *TYPE*. *ARG_TYPE* jest parametrem przekazywanym do `CArray`.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CArray::CArray](#carray)|Konstruuje pustą tablicę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CArray:: Add](#add)|Dodaje element na końcu tablicy; w razie potrzeby powiększa tablicę.|
-|[CArray:: Append](#append)|Dołącza kolejną tablicę do tablicy; powiększa tablicę w razie potrzeby|
-|[CArray:: Copy](#copy)|Kopiuje kolejną tablicę do tablicy; w razie potrzeby powiększa tablicę.|
+|[CArray::Dodaj](#add)|Dodaje element na końcu tablicy; w razie potrzeby zwiększa tablicę.|
+|[CArray::Dołącz](#append)|Dołącza inną tablicę do tablicy; w razie potrzeby zwiększa tablicę|
+|[CArray::Kopiowanie](#copy)|Kopiuje inną tablicę do tablicy; w razie potrzeby zwiększa tablicę.|
 |[CArray::ElementAt](#elementat)|Zwraca tymczasowe odwołanie do wskaźnika elementu w tablicy.|
-|[CArray::FreeExtra](#freeextra)|Zwalnia wszystkie nieużywane pamięci powyżej bieżącej górnej granicy.|
+|[CArray::FreeExtra](#freeextra)|Zwalnia całą nieużytą pamięć powyżej bieżącej górnej granicy.|
 |[CArray::GetAt](#getat)|Zwraca wartość w danym indeksie.|
-|[CArray:: GetCount](#getcount)|Pobiera liczbę elementów w tej tablicy.|
-|[CArray:: GetData](#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartość NULL.|
-|[CArray:: GetSize](#getsize)|Pobiera liczbę elementów w tej tablicy.|
+|[CArray::GetCount](#getcount)|Pobiera liczbę elementów w tej tablicy.|
+|[CArray::GetData](#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartość NULL.|
+|[CArray::GetSize](#getsize)|Pobiera liczbę elementów w tej tablicy.|
 |[CArray::GetUpperBound](#getupperbound)|Zwraca największy prawidłowy indeks.|
-|[CArray::InsertAt](#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) o określonym indeksie.|
-|[CArray:: IsEmpty](#isempty)|Określa, czy tablica jest pusta.|
-|[CArray::](#removeall)|Usuwa wszystkie elementy z tej tablicy.|
-|[CArray::RemoveAt](#removeat)|Usuwa element z określonym indeksem.|
-|[CArray::SetAt](#setat)|Ustawia wartość dla danego indeksu; Tablica nie może być większa.|
-|[CArray::SetAtGrow](#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby powiększa tablicę.|
-|[CArray:: setSize](#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
+|[CArray::Wstawianie](#insertat)|Wstawia element (lub wszystkie elementy w innej tablicy) w określonym indeksie.|
+|[CArray::IsEmpty](#isempty)|Określa, czy tablica jest pusta.|
+|[CArray::Usuńwszywszystko](#removeall)|Usuwa wszystkie elementy z tej tablicy.|
+|[CArray::Usuń](#removeat)|Usuwa element w określonym indeksie.|
+|[CArray::SetAt](#setat)|Ustawia wartość dla danego indeksu; tablicy nie może rosnąć.|
+|[CArray::SetAtGrow](#setatgrow)|Ustawia wartość dla danego indeksu; w razie potrzeby zwiększa tablicę.|
+|[CArray::SetSize](#setsize)|Ustawia liczbę elementów, które mają być zawarte w tej tablicy.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[zakład&#91;&#93;](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
+|[&#91;&#93;operatora](#operator_at)|Ustawia lub pobiera element w określonym indeksie.|
 
 ## <a name="remarks"></a>Uwagi
 
-Indeksy tablicy zawsze zaczynają się na pozycji 0. Można zdecydować, czy naprawić górną granicę, czy włączyć rozszerzanie tablicy po dodaniu elementów poza bieżącą granicą. Pamięć jest przydzielono w sposób ciągły do górnej granicy, nawet jeśli niektóre elementy mają wartość null.
+Indeksy tablicy zawsze zaczynają się od pozycji 0. Można zdecydować, czy naprawić górną granicę lub włączyć tablicy, aby rozwinąć po dodaniu elementów poza bieżącą powiązaną. Pamięć jest przydzielana w sposób ciągły do górnej granicy, nawet jeśli niektóre elementy są null.
 
 > [!NOTE]
->  Większość metod, które umożliwiają zmianę rozmiaru obiektu `CArray` lub dodanie elementów do [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) , aby przenieść elementy. Jest to problem, ponieważ `memcpy_s` nie jest zgodny z żadnym obiektem, który wymaga wywołania konstruktora. Jeśli elementy w `CArray` nie są zgodne z `memcpy_s`, należy utworzyć nowy `CArray` o odpowiednim rozmiarze. Następnie należy użyć [CArray:: Copy](#copy) i [CArray:: SetAt](#setat) , aby wypełnić nową tablicę, ponieważ te metody używają operatora przypisania zamiast `memcpy_s`.
+> Większość metod, które `CArray` zmienić rozmiar obiektu lub dodać elementy do niego używać [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) do przenoszenia elementów. Jest to problem, ponieważ `memcpy_s` nie jest zgodny z żadnych obiektów, które wymagają konstruktora do wywołania. Jeśli elementy w `CArray` nie są `memcpy_s`zgodne z , `CArray` należy utworzyć nowy o odpowiednim rozmiarze. Następnie należy użyć [CArray::Copy](#copy) i [CArray::SetAt,](#setat) aby wypełnić nową tablicę, `memcpy_s`ponieważ metody te używają operatora przypisania zamiast .
 
-Podobnie jak w przypadku tablicy języka C, czas dostępu dla `CArray` indeksowanego elementu jest stały i jest niezależny od rozmiaru tablicy.
+Podobnie jak w przypadku tablicy `CArray` C, czas dostępu dla elementu indeksowanego jest stały i jest niezależny od rozmiaru tablicy.
 
 > [!TIP]
->  Przed użyciem tablicy Użyj polecenia [SetSize](#setsize) , aby określić rozmiar i przydzielić pamięć dla tego obiektu. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje częste ponowną alokację i kopiowanie. Częste ponowne przydzielanie i kopiowanie są niewydajne i mogą fragmentację pamięci.
+> Przed użyciem tablicy należy użyć [SetSize,](#setsize) aby ustalić jego rozmiar i przydzielić dla niego pamięć. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje, że często są ponownie przydzielane i kopiowane. Częste ponowne przydzielanie i kopiowanie są nieefektywne i mogą fragmentować pamięć.
 
-Jeśli potrzebujesz zrzutu poszczególnych elementów w tablicy, musisz ustawić głębokość obiektu [CDumpContext](../../mfc/reference/cdumpcontext-class.md) na 1 lub większą.
+Jeśli potrzebujesz zrzutu poszczególnych elementów w tablicy, należy ustawić głębokość [obiektu CDumpContext](../../mfc/reference/cdumpcontext-class.md) na 1 lub większy.
 
-Niektóre funkcje członkowskie tej klasy wywołują globalne funkcje pomocnika, które muszą być dostosowane do większości celów klasy `CArray`. Zobacz [pomocników klasy kolekcji](../../mfc/reference/collection-class-helpers.md) tematów w makrze MFC i w sekcji Globals.
+Niektóre funkcje członkowskie tej klasy wywołać globalne funkcje pomocnika, `CArray` które muszą być dostosowane do większości zastosowań klasy. Zobacz temat [Pomocników klasy kolekcji](../../mfc/reference/collection-class-helpers.md) w sekcji Makra MFC i Globals.
 
-Klasa pochodna klasy Array jest taka sama jak pochodna listy.
+Wyprowadzanie klasy tablicy jest jak wyprowadzanie listy.
 
-Więcej informacji o sposobach korzystania z `CArray`można znaleźć w artykułach [kolekcje](../../mfc/collections.md).
+Aby uzyskać więcej informacji `CArray`na temat używania , zobacz artykuł [Kolekcje](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CArray`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtempl. h
+**Nagłówek:** afxtempl.h
 
-##  <a name="add"></a>CArray:: Add
+## <a name="carrayadd"></a><a name="add"></a>CArray::Dodaj
 
-Dodaje nowy element na końcu tablicy, zwiększając tablicę o 1.
+Dodaje nowy element na końcu tablicy, powiększając tablicę o 1.
 
 ```
 INT_PTR Add(ARG_TYPE newElement);
@@ -147,24 +147,24 @@ INT_PTR Add(ARG_TYPE newElement);
 *ARG_TYPE*<br/>
 Parametr szablonu określający typ argumentów odwołujących się do elementów w tej tablicy.
 
-*newElement*<br/>
+*nowyElement*<br/>
 Element, który ma zostać dodany do tej tablicy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks dodanego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość [SetSize](#setsize) została użyta z wartością `nGrowBy` większą niż 1, może być przydzielono dodatkową pamięć. Górna granica zostanie jednak zwiększona o 1.
+Jeśli [SetSize](#setsize) został użyty z wartością `nGrowBy` większą niż 1, można przydzielić dodatkową pamięć. Jednak górna granica wzrośnie tylko o 1.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]
 
-##  <a name="append"></a>CArray:: Append
+## <a name="carrayappend"></a><a name="append"></a>CArray::Dołącz
 
-Wywołaj tę funkcję elementu członkowskiego, aby dodać zawartość jednej tablicy do końca innej.
+Wywołanie tej funkcji elementu członkowskiego, aby dodać zawartość jednej tablicy na końcu innej.
 
 ```
 INT_PTR Append(const CArray& src);
@@ -172,10 +172,10 @@ INT_PTR Append(const CArray& src);
 
 ### <a name="parameters"></a>Parametry
 
-*SRC*<br/>
-Źródło elementów do dołączenia do tablicy.
+*src*<br/>
+Źródło elementów, które mają być dołączone do tablicy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks pierwszego dołączonego elementu.
 
@@ -183,13 +183,13 @@ Indeks pierwszego dołączonego elementu.
 
 Tablice muszą być tego samego typu.
 
-W razie potrzeby `Append` może przydzielić dodatkową pamięć, aby pomieścić elementy dołączone do tablicy.
+W razie `Append` potrzeby może przydzielić dodatkową pamięć, aby pomieścić elementy dołączone do tablicy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]
 
-##  <a name="carray"></a>CArray::CArray
+## <a name="carraycarray"></a><a name="carray"></a>CArray::CArray
 
 Konstruuje pustą tablicę.
 
@@ -199,15 +199,15 @@ CArray();
 
 ### <a name="remarks"></a>Uwagi
 
-Tablica powiększa jeden element jednocześnie.
+Tablica rośnie jeden element naraz.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-##  <a name="copy"></a>CArray:: Copy
+## <a name="carraycopy"></a><a name="copy"></a>CArray::Kopiowanie
 
-Użyj tej funkcji elementu członkowskiego, aby skopiować elementy jednej tablicy do innej.
+Ta funkcja elementu członkowskiego służy do kopiowania elementów jednej tablicy do innej.
 
 ```
 void Copy(const CArray& src);
@@ -215,20 +215,20 @@ void Copy(const CArray& src);
 
 ### <a name="parameters"></a>Parametry
 
-*SRC*<br/>
-Źródło elementów, które mają być skopiowane do tablicy.
+*src*<br/>
+Źródło elementów, które mają zostać skopiowane do tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję elementu członkowskiego, aby zastąpić elementy jednej tablicy elementami innej tablicy.
+Wywołanie tej funkcji elementu członkowskiego, aby zastąpić elementy jednej tablicy z elementami innej tablicy.
 
-`Copy` nie zwalnia pamięci; Jednak w razie potrzeby `Copy` może przydzielić dodatkową pamięć, aby pomieścić elementy skopiowane do tablicy.
+`Copy`nie zwalnia pamięci; jednak w razie `Copy` potrzeby może przydzielić dodatkową pamięć, aby pomieścić elementy skopiowane do tablicy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]
 
-##  <a name="elementat"></a>CArray::ElementAt
+## <a name="carrayelementat"></a><a name="elementat"></a>CArray::ElementAt
 
 Zwraca tymczasowe odwołanie do określonego elementu w tablicy.
 
@@ -239,24 +239,24 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
+*Nindex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do elementu tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementacji operatora przypisania lewej strony dla tablic.
+Służy do implementowania operatora przypisania po lewej stronie dla tablic.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla elementu [GetSize](#getsize).
+  Zobacz przykład [getsize](#getsize).
 
-##  <a name="freeextra"></a>CArray::FreeExtra
+## <a name="carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra
 
-Zwalnia wszelkie dodatkowe pamięci, które zostały przydzieloną podczas uprawy tablicy.
+Zwalnia wszelkie dodatkowe pamięci, która została przydzielona, gdy tablica została wyhodowana.
 
 ```
 void FreeExtra();
@@ -264,15 +264,15 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja nie ma wpływu na rozmiar ani górną granicę tablicy.
+Ta funkcja nie ma wpływu na rozmiar lub górną granicę tablicy.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla elementu [GetData](#getdata).
+  Zobacz przykład [getdata](#getdata).
 
-##  <a name="getat"></a>CArray::GetAt
+## <a name="carraygetat"></a><a name="getat"></a>CArray::GetAt
 
-Zwraca element array o określonym indeksie.
+Zwraca element tablicy w określonym indeksie.
 
 ```
 TYPE& GetAt(INT_PTR nIndex);
@@ -281,25 +281,25 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Wprowadź*<br/>
+*TYP*<br/>
 Parametr szablonu określający typ elementów tablicy.
 
-*nIndex*<br/>
+*Nindex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Element tablicy w bieżącym indeksie.
+Element tablicy obecnie w tym indeksie.
 
 ### <a name="remarks"></a>Uwagi
 
-Przekazanie wartości ujemnej lub wartości większej niż wartość zwrócona przez `GetUpperBound` spowoduje niepowodzenie potwierdzenia.
+Przekazywanie wartości ujemnej lub wartości większej `GetUpperBound` niż wartość zwrócona przez spowoduje niepowodzenie potwierdzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
-##  <a name="getcount"></a>CArray:: GetCount
+## <a name="carraygetcount"></a><a name="getcount"></a>CArray::GetCount
 
 Zwraca liczbę elementów tablicy.
 
@@ -307,21 +307,21 @@ Zwraca liczbę elementów tablicy.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba elementów w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pobrać liczbę elementów w tablicy. Ponieważ indeksy są oparte na zero, rozmiar jest większy niż największy indeks. Wywołanie tej metody spowoduje wygenerowanie tego samego wyniku co Metoda [CArray:: GetSize](#getsize) .
+Wywołanie tej metody, aby pobrać liczbę elementów w tablicy. Ponieważ indeksy są oparte na wartościach zerowych, rozmiar jest o 1 większy niż największy indeks. Wywołanie tej metody wygeneruje taki sam wynik jak [CArray::GetSize](#getsize) metody.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]
 
-##  <a name="getdata"></a>CArray:: GetData
+## <a name="carraygetdata"></a><a name="getdata"></a>CArray::GetData
 
-Użyj tej funkcji elementu członkowskiego, aby uzyskać bezpośredni dostęp do elementów w tablicy.
+Ta funkcja elementu członkowskiego służy do uzyskiwania bezpośredniego dostępu do elementów w tablicy.
 
 ```
 const TYPE* GetData() const;
@@ -330,24 +330,24 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>Parametry
 
-*Wprowadź*<br/>
+*TYP*<br/>
 Parametr szablonu określający typ elementów tablicy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do elementu tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli żadne elementy nie są dostępne, `GetData` zwraca wartość null.
+Jeśli żadne elementy `GetData` nie są dostępne, zwraca wartość null.
 
-Mimo że bezpośredni dostęp do elementów tablicy może ułatwić szybkie działanie, należy zachować ostrożność podczas wywoływania `GetData`; wszystkie błędy wprowadzane bezpośrednio mają wpływ na elementy tablicy.
+Podczas gdy bezpośredni dostęp do elementów tablicy może pomóc `GetData`w ciężej pracy, należy zachować ostrożność podczas wywoływania; wszelkie błędy, które można wprowadzić bezpośrednio wpływają na elementy tablicy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
-##  <a name="getsize"></a>CArray:: GetSize
+## <a name="carraygetsize"></a><a name="getsize"></a>CArray::GetSize
 
 Zwraca rozmiar tablicy.
 
@@ -357,13 +357,13 @@ INT_PTR GetSize() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ indeksy są oparte na zero, rozmiar jest większy niż największy indeks. Wywołanie tej metody spowoduje wygenerowanie tego samego wyniku co Metoda [CArray:: GetCount](#getcount) .
+Ponieważ indeksy są oparte na wartościach zerowych, rozmiar jest o 1 większy niż największy indeks. Wywołanie tej metody wygeneruje taki sam wynik jak [CArray::GetCount](#getcount) metody.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]
 
-##  <a name="getupperbound"></a>CArray::GetUpperBound
+## <a name="carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound
 
 Zwraca bieżącą górną granicę tej tablicy.
 
@@ -373,17 +373,17 @@ INT_PTR GetUpperBound() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ indeksy tablicy są oparte na zero, ta funkcja zwraca wartość 1 mniejszą niż `GetSize`.
+Ponieważ indeksy tablicowe są oparte na wartości zero, `GetSize`ta funkcja zwraca wartość o 1 mniejszą niż .
 
-Warunek `GetUpperBound( )` =-1 wskazuje, że tablica nie zawiera żadnych elementów.
+Warunek `GetUpperBound( )` = -1 wskazuje, że tablica nie zawiera żadnych elementów.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CArray:: GetAt](#getat).
+  Zobacz przykład [CArray::GetAt](#getat).
 
-##  <a name="insertat"></a>CArray::InsertAt
+## <a name="carrayinsertat"></a><a name="insertat"></a>CArray::Wstawianie
 
-Pierwsza wersja `InsertAt` Wstawia jeden element (lub wiele kopii elementu) o określonym indeksie w tablicy.
+Pierwsza wersja `InsertAt` wstawia jeden element (lub wiele kopii elementu) w określonym indeksie w tablicy.
 
 ```
 void InsertAt(
@@ -398,37 +398,37 @@ void InsertAt(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
-Indeks liczby całkowitej, który może być większy niż wartość zwrócona przez `GetUpperBound`.
+*Nindex*<br/>
+Indeks liczby całkowitej, który może być `GetUpperBound`większy niż wartość zwracana przez .
 
 *ARG_TYPE*<br/>
 Parametr szablonu określający typ elementów w tej tablicy.
 
-*newElement*<br/>
+*nowyElement*<br/>
 Element, który ma zostać umieszczony w tej tablicy.
 
-*nCount*<br/>
-Liczba przypadków wstawienia tego elementu (wartość domyślna to 1).
+*Ncount*<br/>
+Liczba wstawienia tego elementu (wartość domyślna to 1).
 
 *nStartIndex*<br/>
-Indeks liczby całkowitej, który może być większy niż wartość zwrócona przez [GetUpperBound](#getupperbound).
+Indeks liczby całkowitej, który może być większy niż wartość zwracana przez [GetUpperBound](#getupperbound).
 
-*pNewArray*<br/>
-Inna tablica zawierająca elementy, które mają zostać dodane do tej tablicy.
+*pNewArray (Nienawisłość)*<br/>
+Inna tablica, która zawiera elementy, które mają zostać dodane do tej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-W procesie zostaje on przesunięty w górę (przez zwiększenie indeksu) istniejący element w tym indeksie i przesunie wszystkie elementy znajdujące się powyżej.
+W procesie przesuwa się w górę (przez zwiększanie indeksu) istniejący element w tym indeksie i przesuwa się w górę wszystkie elementy nad nim.
 
-Druga wersja wstawia wszystkie elementy z innej kolekcji `CArray`, zaczynając od pozycji *nStartIndex* .
+Druga wersja wstawia wszystkie `CArray` elementy z innej kolekcji, począwszy od pozycji *nStartIndex.*
 
-Funkcja `SetAt`, w przeciwieństwie, zastępuje jeden określony element tablicy i nie przesuwa żadnych elementów.
+Funkcja `SetAt` natomiast zastępuje jeden określony element tablicy i nie przesuwa żadnych elementów.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]
 
-##  <a name="isempty"></a>CArray:: IsEmpty
+## <a name="carrayisempty"></a><a name="isempty"></a>CArray::IsEmpty
 
 Określa, czy tablica jest pusta.
 
@@ -436,13 +436,13 @@ Określa, czy tablica jest pusta.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli tablica nie zawiera żadnych elementów; w przeciwnym razie 0.
+Niezerowe, jeśli tablica nie zawiera żadnych elementów; w przeciwnym razie 0.
 
-##  <a name="operator_at"></a>CArray:: operator \[\]
+## <a name="carrayoperator-"></a><a name="operator_at"></a>CArray::operator\[\]
 
-Te operatory indeksów dolnych są wygodnym substytutem funkcji [SetAt](#setat) i [GetAt](#getat) .
+Te operatory indeksu dolnego są wygodnym substytutem funkcji [SetAt](#setat) i [GetAt.](#getat)
 
 ```
 TYPE& operator[](int_ptr nindex);
@@ -451,25 +451,25 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Wprowadź*<br/>
+*TYP*<br/>
 Parametr szablonu określający typ elementów w tej tablicy.
 
-*nIndex*<br/>
-Indeks elementu do uzyskania dostępu.
+*Nindex*<br/>
+Indeks elementu, do który ma być dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator wywoływany dla tablic, które nie są **stałe**, może być używany po prawej stronie (r-Value) lub lewej (l-wartości) instrukcji przypisania. Sekunda, wywołana dla tablic **stałych** , może być używana tylko po prawej stronie.
+Pierwszy operator, wywoływany dla tablic, które nie są **const,** mogą być używane po prawej stronie (r-value) lub po lewej stronie (l-value) instrukcji przypisania. Drugi, wywoływany dla **const** tablice, mogą być używane tylko po prawej stronie.
 
-Wersja debugowania biblioteki potwierdza, czy indeks dolny (w lewej lub prawej stronie instrukcji przypisania) znajduje się poza zakresem.
+Wersja debugowania biblioteki potwierdza, jeśli indeks dolny (po lewej lub prawej stronie instrukcji przypisania) jest poza granicami.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]
 
-##  <a name="relocateelements"></a>CArray::RelocateElements
+## <a name="carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements
 
-Lokalizuje dane do nowego buforu, gdy tablica powinna zostać powiększona lub pomniejsza.
+Przenosi dane do nowego buforu, gdy tablica powinna rosnąć lub zmniejszać.
 
 ```
 template<class TYPE, class ARG_TYPE>
@@ -484,21 +484,21 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 *pNewData*<br/>
 Nowy bufor dla tablicy elementów.
 
-*pData*<br/>
-Stara Tablica elementów.
+*Pdata*<br/>
+Stara tablica elementów.
 
-*nCount*<br/>
+*Ncount*<br/>
 Liczba elementów w starej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-*pNewData* jest zawsze wystarczająco duże, aby pomieścić wszystkie elementy *pData* .
+*pNewData* jest zawsze wystarczająco duży, aby pomieścić wszystkie elementy *pData.*
 
-Implementacja [CArray](../../mfc/reference/carray-class.md) używa tej metody do kopiowania starych danych do nowego buforu, gdy tablica powinna zostać powiększana lub zmniejszana (gdy wywoływana jest funkcja [SetSize](#setsize) lub [FreeExtra](#freeextra) ). Domyślna implementacja właśnie kopiuje dane.
+Implementacja [CArray](../../mfc/reference/carray-class.md) używa tej metody do kopiowania starych danych do nowego buforu, gdy tablica powinna rosnąć lub zmniejszać (gdy wywoływane są [SetSize](#setsize) lub [FreeExtra).](#freeextra) Domyślna implementacja po prostu kopiuje dane.
 
-W przypadku tablic, w których element zawiera wskaźnik do jednego z jego elementów członkowskich lub inna struktura zawiera wskaźnik do jednego z elementów tablicy, wskaźniki nie są aktualizowane w postaci zwykłego kopiowania. W takim przypadku można poprawić wskaźniki przez implementację specjalizacji `RelocateElements` z odpowiednimi typami. Użytkownik jest również odpowiedzialny za kopiowanie danych.
+Dla tablic, w których element zawiera wskaźnik do jednego z własnych elementów członkowskich lub innej struktury zawiera wskaźnik do jednego z elementów tablicy, wskaźniki nie są aktualizowane w zwykłej kopii. W takim przypadku można poprawić wskaźniki, implementując `RelocateElements` specjalizację z odpowiednimi typami. Użytkownik jest również odpowiedzialny za kopiowanie danych.
 
-##  <a name="removeall"></a>CArray::
+## <a name="carrayremoveall"></a><a name="removeall"></a>CArray::Usuńwszywszystko
 
 Usuwa wszystkie elementy z tej tablicy.
 
@@ -514,9 +514,9 @@ Jeśli tablica jest już pusta, funkcja nadal działa.
 
 [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]
 
-##  <a name="removeat"></a>CArray::RemoveAt
+## <a name="carrayremoveat"></a><a name="removeat"></a>CArray::Usuń
 
-Usuwa jeden lub więcej elementów, zaczynając od określonego indeksu w tablicy.
+Usuwa jeden lub więcej elementów, począwszy od określonego indeksu w tablicy.
 
 ```
 void RemoveAt(
@@ -526,25 +526,25 @@ void RemoveAt(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
+*Nindex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
-*nCount*<br/>
+*Ncount*<br/>
 Liczba elementów do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-W procesie przesunie wszystkie elementy powyżej usuniętych elementów. Zmniejsza górną granicę tablicy, ale nie zwalnia pamięci.
+W procesie przesuwa się w dół wszystkie elementy powyżej usuniętego elementu(-ów). Zmniejsza górną granicę tablicy, ale nie zwalnia pamięci.
 
-Jeśli spróbujesz usunąć więcej elementów niż znajduje się w tablicy powyżej punktu usuwania, wówczas wersja do debugowania zostanie przeszukana w bibliotece.
+Jeśli spróbujesz usunąć więcej elementów niż są zawarte w tablicy powyżej punktu usuwania, a następnie debugowania wersji biblioteki potwierdza.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]
 
-##  <a name="setat"></a>CArray::SetAt
+## <a name="carraysetat"></a><a name="setat"></a>CArray::SetAt
 
-Ustawia element Array pod określonym indeksem.
+Ustawia element tablicy w określonym indeksie.
 
 ```
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
@@ -552,28 +552,28 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
+*Nindex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0 i mniejszy lub równy wartości zwracanej przez [GetUpperBound](#getupperbound).
 
 *ARG_TYPE*<br/>
 Parametr szablonu określający typ argumentów używanych do odwoływania się do elementów tablicy.
 
-*newElement*<br/>
+*nowyElement*<br/>
 Wartość nowego elementu, która ma być przechowywana w określonym położeniu.
 
 ### <a name="remarks"></a>Uwagi
 
-`SetAt` nie spowoduje wzrostu tablicy. Użyj [SetAtGrow](#setatgrow) , jeśli chcesz, aby tablica była powiększana automatycznie.
+`SetAt`nie spowoduje, że tablica wzrośnie. Użyj [SetAtGrow,](#setatgrow) jeśli chcesz, aby tablica rosła automatycznie.
 
-Musisz się upewnić, że wartość indeksu reprezentuje prawidłową pozycję w tablicy. Jeśli znajduje się poza zakresem, wówczas wersja do debugowania zostanie przeprowadzona.
+Należy upewnić się, że wartość indeksu reprezentuje prawidłową pozycję w tablicy. Jeśli jest poza granicami, a następnie debugowania wersji biblioteki potwierdza.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [GetAt](#getat).
+  Zobacz przykład [getat](#getat).
 
-##  <a name="setatgrow"></a>CArray::SetAtGrow
+## <a name="carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow
 
-Ustawia element Array pod określonym indeksem.
+Ustawia element tablicy w określonym indeksie.
 
 ```
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
@@ -581,26 +581,26 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
+*Nindex*<br/>
 Indeks liczby całkowitej, który jest większy lub równy 0.
 
 *ARG_TYPE*<br/>
 Parametr szablonu określający typ elementów w tablicy.
 
-*newElement*<br/>
-Element, który ma zostać dodany do tej tablicy. Dozwolona jest wartość NULL.
+*nowyElement*<br/>
+Element, który ma zostać dodany do tej tablicy. Wartość NULL jest dozwolona.
 
 ### <a name="remarks"></a>Uwagi
 
-Tablica powiększa się automatycznie w razie potrzeby (to znaczy górną granicę dostosowuje się w celu uwzględnienia nowego elementu).
+Tablica rośnie automatycznie, jeśli to konieczne (oznacza to, że górna granica jest dostosowana do nowego elementu).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-##  <a name="setsize"></a>CArray:: setSize
+## <a name="carraysetsize"></a><a name="setsize"></a>CArray::SetSize
 
-Ustala rozmiar pustej lub istniejącej tablicy; przydziela pamięć w razie potrzeby.
+Ustanawia rozmiar pustej lub istniejącej tablicy; przydziela pamięć, jeśli to konieczne.
 
 ```
 void SetSize(
@@ -610,27 +610,27 @@ void SetSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nNewSize*<br/>
-Nowy rozmiar tablicy (liczba elementów). Musi być większa lub równa 0.
+*nNowy Rozmiar*<br/>
+Nowy rozmiar tablicy (liczba elementów). Musi być równa 0 lub większa.
 
-*nGrowBy*<br/>
-Minimalna liczba gniazd elementów do przydzielenia w przypadku konieczności zwiększenia rozmiaru.
+*nGrowBy ( nGrowBy )*<br/>
+Minimalna liczba slotów elementu do przydzielenia, jeśli konieczne jest zwiększenie rozmiaru.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nowy rozmiar jest mniejszy niż stary rozmiar, tablica zostanie obcięta, a cała niewykorzystana pamięć zostanie wydzielona.
+Jeśli nowy rozmiar jest mniejszy niż stary rozmiar, tablica jest obcinana i zwalniana jest cała nieużywana pamięć.
 
-Użyj tej funkcji, aby ustawić rozmiar tablicy przed rozpoczęciem korzystania z tablicy. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje częste ponowną alokację i kopiowanie. Częste ponowne przydzielanie i kopiowanie są niewydajne i mogą fragmentację pamięci.
+Ta funkcja służy do ustawiania rozmiaru tablicy przed rozpoczęciem korzystania z tablicy. Jeśli nie używasz `SetSize`, dodawanie elementów do tablicy powoduje, że często są ponownie przydzielane i kopiowane. Częste ponowne przydzielanie i kopiowanie są nieefektywne i mogą fragmentować pamięć.
 
-Parametr *nGrowBy* ma wpływ na alokację pamięci wewnętrznej podczas wzrostu tablicy. Jego użycie nigdy nie wpływa na rozmiar tablicy w postaci zgłoszonej przez [GetSize](#getsize) i [GetUpperBound](#getupperbound). Jeśli zostanie użyta wartość domyślna, MFC przydziela pamięć w sposób obliczeniowy, aby uniknąć fragmentacji pamięci i zoptymalizować wydajność w większości przypadków.
+Parametr *nGrowBy* wpływa na alokację pamięci wewnętrznej, gdy tablica rośnie. Jego użycie nigdy nie wpływa na rozmiar tablicy zgłoszony przez [GetSize](#getsize) i [GetUpperBound](#getupperbound). Jeśli używana jest wartość domyślna, MFC przydziela pamięć w sposób obliczony, aby uniknąć fragmentacji pamięci i zoptymalizować wydajność w większości przypadków.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla elementu [GetData](#getdata).
+  Zobacz przykład [getdata](#getdata).
 
 ## <a name="see-also"></a>Zobacz też
 
-[ZBIERANIE próbek MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Próbki COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CObArray](../../mfc/reference/cobarray-class.md)<br/>

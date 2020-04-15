@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376545"
 ---
-# <a name="syncperthread-class"></a>sync_per_thread — Klasa
+# <a name="sync_per_thread-class"></a>sync_per_thread — Klasa
 
-Opisuje [filtr synchronizacji](../standard-library/allocators-header.md) , który zawiera oddzielny obiekt pamięci podręcznej dla każdego wątku.
+W tym artykule opisano [filtr synchronizacji,](../standard-library/allocators-header.md) który zapewnia oddzielny obiekt pamięci podręcznej dla każdego wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,27 +34,27 @@ class sync_per_thread
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Pamięć podręczna*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Pamięć podręczna*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist,](../standard-library/cache-chunklist-class.md) [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Przydziały korzystające `sync_per_thread` z programu mogą porównać wartość równą nawet wtedy, gdy bloki przydzielenia w jednym wątku nie mogą zostać cofnięte z innego wątku. Gdy użycie jednego z tych przydziałów pamięci przydzielanych w jednym wątku nie powinno być widoczne dla innych wątków. W tej rzeczywistości oznacza to, że kontener, który używa jednego z tych przystawek, powinien być dostępny tylko przez jeden wątek.
+Alokatory, które `sync_per_thread` używają można porównać równe, nawet jeśli bloki przydzielone w jednym wątku nie można przydzielić z innego wątku. Podczas korzystania z jednego z tych bloków pamięci alokatorów przydzielonych w jednym wątku nie powinny być widoczne dla innych wątków. W praktyce oznacza to, że kontener, który używa jednego z tych alokatorów powinny być dostępne tylko przez jeden wątek.
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[Deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.|
+|[equals](#equals)|Porównuje dwie pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<alokatory>
 
-**Przestrzeń nazw:** stdext
+**Obszar nazw:** stdext
 
-## <a name="allocate"></a>sync_per_thread:: Allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::przydziel
 
 Przydziela blok pamięci.
 
@@ -66,15 +66,15 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
+|*Liczba*|Liczba elementów w tablicy, które mają zostać przydzielone.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wynik wywołania do `cache::allocate(count)` obiektu pamięci podręcznej należącego do bieżącego wątku. Jeśli żaden obiekt pamięci podręcznej nie został przydzielony do bieżącego wątku, najpierw przydzieli jeden.
+Funkcja elementu członkowskiego zwraca wynik `cache::allocate(count)` wywołania obiektu pamięci podręcznej należącego do bieżącego wątku. Jeśli żaden obiekt pamięci podręcznej nie został przydzielony dla bieżącego wątku, najpierw przydziela jeden.
 
-## <a name="deallocate"></a>sync_per_thread::d eallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::dlokalizuj
 
-Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -84,16 +84,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
-|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
+|*Ptr*|Wskaźnik do pierwszego obiektu, który ma zostać cofnięty z magazynu.|
+|*Liczba*|Liczba obiektów, które mają zostać przydzielone z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska wywołuje `deallocate` Obiekt pamięci podręcznej należący do bieżącego wątku. Jeśli żaden obiekt pamięci podręcznej nie został przydzielony do bieżącego wątku, najpierw przydzieli jeden.
+Funkcja elementu `deallocate` członkowskiego wywołuje obiekt pamięci podręcznej należący do bieżącego wątku. Jeśli żaden obiekt pamięci podręcznej nie został przydzielony dla bieżącego wątku, najpierw przydziela jeden.
 
-## <a name="equals"></a>sync_per_thread:: Equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::równa się
 
-Porównuje dwie pamięci podręczne pod kątem równości.
+Porównuje dwie pamięci podręczne dla równości.
 
 ```cpp
 bool equals(const sync<Cache>& Other) const;
@@ -104,14 +104,14 @@ bool equals(const sync<Cache>& Other) const;
 |Parametr|Opis|
 |---------------|-----------------|
 |*Pamięć podręczna*|Obiekt pamięci podręcznej filtru synchronizacji.|
-|*Inne*|Obiekt pamięci podręcznej, który ma zostać porównany pod kątem równości.|
+|*Inne*|Obiekt pamięci podręcznej do porównania dla równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość false** , jeśli nie przydzielono obiektu pamięci podręcznej dla tego obiektu lub dla *innych* w bieżącym wątku. W przeciwnym razie zwraca wynik zastosowania `operator==` do dwóch obiektów pamięci podręcznej.
+**false,** jeśli nie obiekt pamięci podręcznej został przydzielony dla tego obiektu lub *innych* w bieżącym wątku. W przeciwnym razie zwraca `operator==` wynik zastosowania do dwóch obiektów pamięci podręcznej.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>alokatorów](../standard-library/allocators-header.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450289"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376554"
 ---
-# <a name="syncpercontainer-class"></a>sync_per_container — Klasa
+# <a name="sync_per_container-class"></a>sync_per_container — Klasa
 
-Opisuje [filtr synchronizacji](../standard-library/allocators-header.md) , który zawiera oddzielny obiekt pamięci podręcznej dla każdego obiektu alokatora.
+W tym artykule opisano [filtr synchronizacji,](../standard-library/allocators-header.md) który udostępnia oddzielny obiekt pamięci podręcznej dla każdego obiektu alokatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,23 +30,23 @@ class sync_per_container
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Pamięć podręczna*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Pamięć podręczna*|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist,](../standard-library/cache-chunklist-class.md) [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[equals](#equals)|Porównuje dwie pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<alokatory>
 
-**Przestrzeń nazw:** stdext
+**Obszar nazw:** stdext
 
-## <a name="equals"></a>sync_per_container:: Equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::równa się
 
-Porównuje dwie pamięci podręczne pod kątem równości.
+Porównuje dwie pamięci podręczne dla równości.
 
 ```cpp
 bool equals(const sync_per_container<Cache>& Other) const;
@@ -57,14 +57,14 @@ bool equals(const sync_per_container<Cache>& Other) const;
 |Parametr|Opis|
 |---------------|-----------------|
 |*Pamięć podręczna*|Obiekt pamięci podręcznej filtru synchronizacji.|
-|*Inne*|Obiekt pamięci podręcznej, który ma zostać porównany pod kątem równości.|
+|*Inne*|Obiekt pamięci podręcznej do porównania dla równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zawsze zwraca **wartość false**.
+Funkcja elementu członkowskiego zawsze zwraca **wartość false**.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>alokatorów](../standard-library/allocators-header.md)

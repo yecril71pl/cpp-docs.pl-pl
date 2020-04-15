@@ -12,39 +12,39 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 043ba019c6b5ad79db2cedb6314c9e65f14b14b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376933"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializacja danych do plików i z plików
 
-Podstawowa koncepcja trwałości jest, czy obiekt powinien móc zapisać jego bieżący stan wskazywanym przez wartości swoje zmienne elementu członkowskiego w magazynie trwałym. Później obiekt można ponownie utworzyć poprzez czytanie, lub "podczas deserializacji," stan obiektu z magazynu trwałego. Kluczowym punktem tutaj jest odpowiedzialna za odczytywanie i zapisywanie własną stan samego obiektu. W związku z tym dla klasy były trwałe, musi on implementować operacje podstawowe serializacji.
+Podstawową ideą trwałości jest to, że obiekt powinien być w stanie zapisać swój bieżący stan, wskazany przez wartości jego zmiennych członkowskich, do magazynu trwałego. Później obiekt może być ponownie utworzony przez odczyt lub "deserializing", stan obiektu z magazynu trwałego. Kluczowym punktem jest to, że sam obiekt jest odpowiedzialny za odczyt i zapis własnego stanu. W związku z tym dla klasy, aby być trwałe, należy zaimplementować podstawowe operacje serializacji.
 
-Struktura udostępnia domyślną implementację interfejsu do zapisywania dokumentów do plików dysku w odpowiedzi do zapisywania i Zapisz jako polecenia w menu Plik i ładowanie dokumentów z dysku w odpowiedzi na polecenie Otwórz. Dzięki bardzo małego wysiłku można zaimplementować dokumentu możliwość zapisu i odczytu jego danych do i z pliku. Główne rzeczą, należy wykonać, jest zastąpienie [Serialize](../mfc/reference/cobject-class.md#serialize) funkcja elementu członkowskiego w klasie dokumentów.
+Struktura zapewnia domyślną implementację zapisywania dokumentów do plików dyskowych w odpowiedzi na polecenia Zapisz i Zapisz jako w menu Plik oraz do ładowania dokumentów z plików dyskowych w odpowiedzi na polecenie Otwórz. Przy bardzo małej pracy można zaimplementować zdolność dokumentu do pisania i odczytywania jego danych do i z pliku. Najważniejsze, co należy zrobić, to zastąpić [funkcja element członkowski Serialize](../mfc/reference/cobject-class.md#serialize) w klasie dokumentu.
 
-Kreator aplikacji MFC umieszcza szkieletowych zastępowania metody `CDocument` funkcja elementu członkowskiego `Serialize` w klasie dokumentów, tworzy dla Ciebie. Po udało Ci się wdrożyć zmienne Członkowskie swojej aplikacji, możesz wpisać w swojej `Serialize` zastąpienia z kodem, który wysyła dane do "obiektu archiwum" połączony z plikiem. A [CArchive](../mfc/reference/carchive-class.md) obiektu jest podobny do **cin** i **cout** wejścia/wyjścia obiektów z biblioteką iostream C++. Jednak `CArchive` zapisuje i odczytuje format binarny, nie jest sformatowany tekst.
+Kreator aplikacji MFC umieszcza szkieletowe zastąpienie funkcji `CDocument` `Serialize` elementu członkowskiego w klasie dokumentu, którą tworzy dla Ciebie. Po zaimplementowaniu zmiennych członkowskich aplikacji można wypełnić `Serialize` zastąpienie kodem, który wysyła dane do "obiektu archiwum" połączonego z plikiem. A [CArchive](../mfc/reference/carchive-class.md) obiekt jest podobny do **cin** i **cout** input/output obiektów z biblioteki iostream C++. Jednak `CArchive` pisze i odczytuje format binarny, a nie sformatowany tekst.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
 - [Serializacja](../mfc/serialization-in-mfc.md)
 
 - [Rola dokumentu w serializacji](#_core_the_document.92.s_role_in_serialization)
 
-- [Rola danych serializacji](#_core_the_data.92.s_role_in_serialization)
+- [Rola danych w serializacji](#_core_the_data.92.s_role_in_serialization)
 
 - [Pomijanie mechanizmu serializacji](../mfc/bypassing-the-serialization-mechanism.md)
 
-##  <a name="_core_the_document.92.s_role_in_serialization"></a> Rola dokumentu w serializacji
+## <a name="the-documents-role-in-serialization"></a><a name="_core_the_document.92.s_role_in_serialization"></a>Rola dokumentu w serializacji
 
-Struktura odpowiada automatycznie po otwarciu menu Plik Zapisz, a następnie Zapisz jako polecenia przez wywołanie metody dokumentu `Serialize` funkcja elementu członkowskiego, jeśli jest zaimplementowana. Id_file_open — polecenie, na przykład wywołuje funkcję obsługi w obiekcie aplikacji. W trakcie tego procesu użytkownik widzi i reaguje na okno dialogowe Otwieranie pliku i struktura uzyskuje nazwę pliku, który użytkownik wybierze. Szablon tworzy `CArchive` obiektu skonfigurowane pod kątem ładowania danych do dokumentu i przekazuje warstwy archiwum do `Serialize`. Struktura ma już otwarty plik. Kod w Twoim dokumencie `Serialize` funkcja elementu członkowskiego odczytuje dane w za pomocą archiwum Rekonstruowanie obiektów danych, zgodnie z potrzebami. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [serializacji](../mfc/serialization-in-mfc.md).
+Struktura odpowiada automatycznie do menu Plik Otwórz, Zapisz i Zapisz jako polecenia, wywołując `Serialize` funkcję elementu członkowskiego dokumentu, jeśli jest zaimplementowana. Polecenie ID_FILE_OPEN, na przykład wywołuje funkcję obsługi w obiekcie aplikacji. Podczas tego procesu użytkownik widzi i odpowiada na okno dialogowe Otwieranie plików, a struktura uzyskuje nazwę pliku, który użytkownik wybierze. Struktura tworzy `CArchive` obiekt skonfigurowany do ładowania danych do dokumentu `Serialize`i przekazuje archiwum do programu . Struktura już otworzyła plik. Kod w funkcji `Serialize` członkowskiej dokumentu odczytuje dane za pośrednictwem archiwum, rekonstruując obiekty danych w razie potrzeby. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [Serializacja](../mfc/serialization-in-mfc.md).
 
-##  <a name="_core_the_data.92.s_role_in_serialization"></a> Rola danych serializacji
+## <a name="the-datas-role-in-serialization"></a><a name="_core_the_data.92.s_role_in_serialization"></a>Rola danych w serializacji
 
-Ogólnie rzecz biorąc dane typu klasy, powinno być możliwe do serializacji sam. Oznacza to jeśli obiekt do archiwum, obiekt powinien wiedzieć sposób zapisania się do archiwum i jak odczytać sam z archiwum. MFC obsługuje składania klas do serializacji w ten sposób. Jeśli zamierzasz serializowania danych tego typu zaprojektować klasy, aby zdefiniować typ danych, projektowanie dla serializacji.
+Ogólnie rzecz biorąc dane typu klasy powinny być w stanie serializować się. Oznacza to, że po przedaniu obiektu do archiwum obiekt powinien wiedzieć, jak zapisać się do archiwum i jak czytać się z archiwum. MFC zapewnia obsługę tworzenia klas serializable w ten sposób. Jeśli projektujesz klasę w celu zdefiniowania typu danych i zamierzasz serializować dane tego typu, zaprojektuj serializację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie dokumentów](../mfc/using-documents.md)
