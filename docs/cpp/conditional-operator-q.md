@@ -1,5 +1,5 @@
 ---
-title: 'Operator warunkowy: &quest;:'
+title: 'Operator warunkowy: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4ba4c80d40450fd5975b047a1a4fca63146c5773
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337263"
 ---
-# <a name="conditional-operator-quest-"></a>Operator warunkowy: &quest;:
+# <a name="conditional-operator-quest-"></a>Operator warunkowy: &quest; :
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,36 +25,36 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operator warunkowy ( **?:** ) jest operatorem Trzyelementowy (przyjmuje trzy operandy). Operator warunkowy działa w następujący sposób:
+Operator warunkowy (**? :**) jest operatorem trójskładnikowym (zajmuje trzy operandy). Operator warunkowy działa w następujący sposób:
 
 - Pierwszy operand jest niejawnie konwertowany na **bool**. Zostaje oceniony i przed kontynuowaniem ukończone zostają wszystkie efekty uboczne.
 
-- Jeśli pierwszy operand ma **wartość true** (1), drugi operand jest oceniany.
+- Jeśli pierwszy operand ocenia **true** (1), drugi operand jest oceniany.
 
-- Jeśli pierwszy operand ma **wartość false** (0), trzeci operand jest oceniany.
+- Jeśli pierwszy operand ocenia **false** (0), trzeci operand jest oceniany.
 
 Wynik operatora warunkowego jest wynikiem w zależności od ocenianego operandu — drugiego lub trzeciego. Tylko jeden z ostatnich dwóch operandów jest oceniany w wyrażeniu warunkowym.
 
-Wyrażenia warunkowe mają zespolenie od prawej do lewej. Pierwszy operand musi być typu całkowitego lub typu wskaźnika. Następujące reguły mają zastosowanie do drugiego i trzeciego operandu:
+Wyrażenia warunkowe mają zespolenie od prawej do lewej. Pierwszy operand musi być typu całkowitego lub typu wskaźnika. Do drugiego i trzeciego operandów mają zastosowanie następujące zasady:
 
-- Jeśli oba operandy są tego samego typu, wynik jest tego typu.
+- Jeśli oba argumenty są tego samego typu, wynik jest tego typu.
 
-- Jeśli oba operandy są typu arytmetycznego lub wyliczeniowego, zwykle konwersje arytmetyczne (objęte [konwersjemi standardowymi](standard-conversions.md)) są wykonywane w celu przekonwertowania ich do typu wspólnego.
+- Jeśli oba argumenty są typami arytmetycznymi lub wyliczanymi, zwykłe konwersje arytmetyczne (omówione w [konwersjach standardowych)](standard-conversions.md)są wykonywane w celu przekonwertowania ich na wspólny typ.
 
-- Jeśli oba operandy są typami wskaźników lub jeśli jeden jest typem wskaźnika, a drugi jest wyrażeniem stałym, którego wynikiem jest 0, konwersje wskaźnika są wykonywane w celu przekonwertowania ich do typu wspólnego.
+- Jeśli oba argumenty są typu wskaźnika lub jeśli jeden jest typem wskaźnika, a drugi jest wyrażeniem stałym, które ocenia do 0, konwersje wskaźnika są wykonywane w celu przekonwertowania ich na wspólny typ.
 
-- Jeśli oba operandy są typami odwołań, konwersje odwołań są wykonywane w celu przekonwertowania ich do typu wspólnego.
+- Jeśli oba argumenty mają typy odwołań, konwersje odwołań są wykonywane w celu przekonwertowania ich na typ wspólny.
 
-- Jeśli oba operandy są typu void, typem wspólnym jest typ void.
+- Jeśli oba argumenty są typu void, typowy typ jest void typu.
 
-- Jeśli oba operandy są tego samego typu zdefiniowanego przez użytkownika, typem wspólnym jest ten typ.
+- Jeśli oba argumenty są tego samego typu zdefiniowanego przez użytkownika, typowym typem jest ten typ.
 
-- Jeśli operandy mają różne typy, a co najmniej jeden z operandów ma typ zdefiniowany przez użytkownika, reguły języka są używane do określenia typu wspólnego. (Zobacz ostrzeżenie poniżej).
+- Jeśli argumenty mają różne typy i co najmniej jeden z argumentów ma typ zdefiniowany przez użytkownika, reguły języka są używane do określenia typu wspólnego. (Patrz ostrzeżenie poniżej).
 
 Dowolna kombinacja drugiego i trzeciego operandu nie wymieniona na powyższej liście nie jest dozwolona. Typ wyniku jest popularnym typem i l-wartością, jeśli zarówno drugi jak i trzeci operand są tego samego typu i oba są l-wartościami.
 
 > [!WARNING]
->  Jeśli typy drugiego i trzeciego operandu nie są identyczne, są wywoływane reguły konwersji typu złożonego, jak określono w C++ standardzie. Konwersje te mogą prowadzić do nieoczekiwanego zachowania, w tym konstruowania i niszczenia obiektów tymczasowych. Z tego powodu zdecydowanie radzimy sobie z jedną (1) unikać używania typów zdefiniowanych przez użytkownika jako argumentów operacji operatora warunkowego lub (2), jeśli używasz typów zdefiniowanych przez użytkownika, a następnie jawnie rzutuje każdy operand na wspólny typ.
+> Jeśli typy drugiego i trzeciego argumentów nie są identyczne, wywoływane są reguły konwersji typów złożonych, określone w standardzie C++. Konwersje te mogą prowadzić do nieoczekiwanego zachowania, w tym budowy i niszczenia obiektów tymczasowych. Z tego powodu zdecydowanie zalecamy(1) unikanie używania typów zdefiniowanych przez użytkownika jako argumentów z operatorem warunkowym lub (2) w przypadku używania typów zdefiniowanych przez użytkownika, a następnie jawnie rzutowanie każdego operandu na wspólny typ.
 
 ## <a name="example"></a>Przykład
 

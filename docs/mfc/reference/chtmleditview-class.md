@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352076"
 ---
 # <a name="chtmleditview-class"></a>Klasa CHtmlEditView
 
-Oferuje funkcje platformy edycji WebBrowser w kontekście architektury dokumentu/widoku MFC.
+Zapewnia funkcjonalność platformy edycji WebBrowser w kontekście architektury dokumentu/widoku MFC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,33 +37,33 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Konstruuje `CHtmlEditView` obiektu.|
+|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Konstruuje `CHtmlEditView` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|Tworzy nowy obiekt okna.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Zwraca `IHTMLDocument2` interfejsu do bieżącego dokumentu.|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|Pobiera nazwę dokument domyślny dla tego widoku.|
+|[CHtmlEditView::Tworzenie](#create)|Tworzy nowy obiekt okna.|
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Zwraca `IHTMLDocument2` interfejs w bieżącym dokumencie.|
+|[CHtmlEditView::GetStartDocument](#getstartdocument)|Pobiera nazwę dokumentu domyślnego dla tego widoku.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
-[CScrollView](../../mfc/reference/cscrollview-class.md)
+[Cscrollview](../../mfc/reference/cscrollview-class.md)
 
-[CFormView](../../mfc/reference/cformview-class.md)
+[Cformview](../../mfc/reference/cformview-class.md)
 
-[CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
+[Baza CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[CHtmlView](../../mfc/reference/chtmlview-class.md)
+[Chtmlview](../../mfc/reference/chtmlview-class.md)
 
 `CHtmlEditView`
 
@@ -71,15 +71,15 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **Nagłówek:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView
 
-Konstruuje `CHtmlEditView` obiektu.
+Konstruuje `CHtmlEditView` obiekt.
 
 ```
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Tworzenie
 
 Tworzy nowy obiekt okna.
 
@@ -96,34 +96,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows. Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna lub `RegisterClass` funkcji Windows. Jeśli ma wartość NULL, używa wstępnie zdefiniowanego domyślnego [CFrameWnd](../../mfc/reference/cframewnd-class.md) atrybutów.
+*lpszClassName (nazwa klasy)*<br/>
+Wskazuje ciąg znaków zakończony z wartością null, który nazywa klasę systemu Windows. Nazwa klasy może być dowolną nazwą zarejestrowaną za pomocą funkcji `RegisterClass` globalnej [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) lub funkcji systemu Windows. Jeśli null, używa wstępnie zdefiniowanych domyślnych atrybutów [CFrameWnd.](../../mfc/reference/cframewnd-class.md)
 
 *lpszWindowName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna.
+Wskazuje ciąg znaków zakończony z wartością null, który reprezentuje nazwę okna.
 
-*dwStyle*<br/>
-Określa atrybuty stylu okna. WS_VISIBLE oraz Windows WS_CHILD style są domyślnie.
+*Dwstyle*<br/>
+Określa atrybuty stylu okna. Domyślnie są ustawione style WS_VISIBLE i WS_CHILD Windows.
 
 *Rect*<br/>
-Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury, określając rozmiar i położenie okna. *RectDefault* zezwala na wartość Windows określić rozmiar i położenie w nowym oknie.
+Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określające rozmiar i położenie okna. Wartość *rectDefault* umożliwia systemowi Windows określenie rozmiaru i położenia nowego okna.
 
 *pParentWnd*<br/>
-Wskaźnik do okno nadrzędne kontrolki.
+Wskaźnik do okna nadrzędnego formantu.
 
-*nID*<br/>
-Numer identyfikacyjny widoku. Domyślnie Ustaw AFX_IDW_PANE_FIRST.
+*Nid*<br/>
+Numer identyfikatora widoku. Domyślnie ustawiono AFX_IDW_PANE_FIRST.
 
-*pContext*<br/>
-Wskaźnik do [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Wartość NULL, domyślnie.
+*Pcontext*<br/>
+Wskaźnik do [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL domyślnie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda również wywoła zawartej WebBrowser `Navigate` metodę, aby załadować dokument domyślny (zobacz [CHtmlEditView::GetStartDocument](#getstartdocument)).
+Ta metoda wywoła również zawartą `Navigate` metodę WebBrowser w celu załadowania domyślnego dokumentu (zobacz [CHtmlEditView::GetStartDocument](#getstartdocument)).
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument
 
-Zwraca `IHTMLDocument2` interfejsu do bieżącego dokumentu.
+Zwraca `IHTMLDocument2` interfejs w bieżącym dokumencie.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -131,18 +131,18 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ppDocument*<br/>
-[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejsu.
+*ppDocument (Dokument ppDocument)*<br/>
+Interfejs [IHTMLDocument2.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument
 
-Pobiera nazwę dokument domyślny dla tego widoku.
+Pobiera nazwę dokumentu domyślnego dla tego widoku.
 
 ```
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przykładowe HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Przykład htmledytuj](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

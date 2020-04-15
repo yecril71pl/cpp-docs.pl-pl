@@ -1,8 +1,9 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cabs
+- _o__cabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170344"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333692"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -48,24 +50,26 @@ double _cabs(
 
 ### <a name="parameters"></a>Parametry
 
-*porządku*<br/>
-Liczba złożona.
+*Z*<br/>
+Liczba zespolona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_cabs** zwraca wartość bezwzględną argumentu, jeśli powodzenie. W przypadku przepełnienia **_cabs** zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**. Obsługę błędów można zmienić przy użyciu [_matherr](matherr.md).
+**_cabs** zwraca wartość bezwzględną argumentu, jeśli zakończy się pomyślnie. W przepełnieniu **_cabs** zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**. Można zmienić obsługę błędów za pomocą [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cabs** oblicza wartość bezwzględną liczby zespolonej, która musi być strukturą typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się ze prawdziwego składnika *x* i części urojonej *y*. Wywołanie **_cabs** generuje wartość równoważną wartości tego wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
+Funkcja **_cabs** oblicza wartość bezwzględną liczby zespolonej, która musi być strukturą typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się z prawdziwego składnika *x* i wyimaginowanego komponentu *y*. Wywołanie **_cabs** tworzy wartość równoważną wartości wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cabs**|\<> Math. h|
+|**_cabs**|\<> math.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -94,6 +98,6 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

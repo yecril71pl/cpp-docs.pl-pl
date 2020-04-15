@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337525"
 ---
 # <a name="istrstream-class"></a>istrstream — Klasa
 
-Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [strstreambuf](../standard-library/strstreambuf-class.md).
+W tym artykule opisano obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z buforu strumienia [klasy strstreambuf](../standard-library/strstreambuf-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,33 +26,33 @@ class istrstream : public istream
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt przechowuje obiekt klasy `strstreambuf`.
+Obiekt przechowuje obiekt `strstreambuf`klasy .
 
 > [!NOTE]
-> Ta klasa jest przestarzała. Zamiast tego Rozważ użycie [istringstream —](../standard-library/sstream-typedefs.md#istringstream) lub [wistringstream —](../standard-library/sstream-typedefs.md#wistringstream) .
+> Ta klasa jest przestarzała. Należy rozważyć użycie [istringstream](../standard-library/sstream-typedefs.md#istringstream) lub [wistringstream](../standard-library/sstream-typedefs.md#wistringstream) zamiast.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[istrstream](#istrstream)|Konstruuje obiekt typu `istrstream`.|
+|[strumień istrstream](#istrstream)|Konstruuje obiekt `istrstream`typu .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[rdbuf](#rdbuf)|Zwraca wskaźnik do obiektu skojarzonego `strstreambuf` strumienia.|
-|[str](#str)|Wywołania [zawieszają](../standard-library/strstreambuf-class.md#freeze)się, a następnie zwracają wskaźnik do początku kontrolowanej sekwencji.|
+|[Rdbuf](#rdbuf)|Zwraca wskaźnik do skojarzonego z `strstreambuf` nim obiektu strumienia.|
+|[Str](#str)|Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik na początku kontrolowanej sekwencji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<strstream >
+**Nagłówek:** \<strstream>
 
 **Przestrzeń nazw:** std
 
-## <a name="istrstream"></a>istrstream:: istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream::istrstream
 
-Konstruuje obiekt typu `istrstream`.
+Konstruuje obiekt `istrstream`typu .
 
 ```cpp
 explicit istrstream(
@@ -72,19 +72,19 @@ istrstream(
 
 ### <a name="parameters"></a>Parametry
 
-*liczbą*\
-Długość buforu (*PTR*).
+*Liczba*\
+Długość buforu (*ptr*).
 
-*PTR*\
-Zawartość, z którą został zainicjowany bufor.
+*Ptr*\
+Zawartość, z którą bufor jest inicjowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory inicjują klasę bazową przez wywołanie [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), `sb` gdzie jest przechowywany obiekt klasy [strstreambuf](../standard-library/strstreambuf-class.md). Pierwsze dwa konstruktory są również `sb` inicjowane `strstreambuf`przez wywołanie (( `ptr` **const** `char` \*), 0). Pozostałe dwa konstruktory zamiast wywołania `strstreambuf`(( **const** `char` *) `ptr`, `count` ).
+Wszystkie konstruktory inicjują klasę podstawową, `sb` wywołując [istream](../standard-library/istream-typedefs.md#istream)**(sb),** gdzie jest przechowywanym obiektem klasy [strstreambuf](../standard-library/strstreambuf-class.md). Pierwsze dwa konstruktory `sb` również `strstreambuf`inicjować `ptr`przez wywołanie ( ( **const** `char` \*), 0 ). Pozostałe dwa konstruktory `strstreambuf`zamiast wywołać `ptr`( `count` ( **const** `char` *) , ).
 
-## <a name="rdbuf"></a>istrstream:: rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream::rdbuf
 
-Zwraca wskaźnik do obiektu strstreambuf skojarzonego ze strumieniem.
+Zwraca wskaźnik do skojarzonego strumienia strstreambuf obiektu.
 
 ```cpp
 strstreambuf *rdbuf() const
@@ -92,19 +92,19 @@ strstreambuf *rdbuf() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu strstreambuf skojarzonego ze strumieniem.
+Wskaźnik do obiektu strstreambuf skojarzonego strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca adres przechowywanego bufora strumienia, typu wskaźnika do [strstreambuf](../standard-library/strstreambuf-class.md).
+Funkcja elementu członkowskiego zwraca adres przechowywanego buforu strumienia, wskaźnik typu do [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstreambuf: liczba:p](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który `rdbuf`używa.
+Zobacz [strstreambuf::plice](../standard-library/strstreambuf-class.md#pcount) dla próbki, która `rdbuf`używa .
 
-## <a name="str"></a>istrstream:: str
+## <a name="istrstreamstr"></a><a name="str"></a>istrstream::str
 
-Wywołania [zawieszają](../standard-library/strstreambuf-class.md#freeze)się, a następnie zwracają wskaźnik do początku kontrolowanej sekwencji.
+Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik na początku kontrolowanej sekwencji.
 
 ```cpp
 char *str();
@@ -116,15 +116,15 @@ Wskaźnik do początku kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+Funkcja elementu członkowskiego zwraca [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstream:: str](../standard-library/strstreambuf-class.md#str) , aby uzyskać przykład, `str`który używa.
+Zobacz [strstream::str](../standard-library/strstreambuf-class.md#str) dla próbki, `str`która używa .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[istream](../standard-library/istream-typedefs.md#istream)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Istream](../standard-library/istream-typedefs.md#istream)\
+[Bezpieczeństwo gwintów w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\
 [Konwencje iostream](../standard-library/iostreams-conventions.md)

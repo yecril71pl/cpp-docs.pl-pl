@@ -8,109 +8,109 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36ff3381447b46b28908522d65be9f34fe23addf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223322"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317402"
 ---
 # <a name="atl-control-containment-faq"></a>Zawieranie kontrolek ALT — Często zadawane pytania
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>Które klasy ATL umożliwiają zawieranie kontrolek ActiveX?
 
-Kod hostingu formantu ATL nie wymagają użycia dowolnej klasy ATL; Możesz po prostu utworzyć **"AtlAxWin80"** okno i użyj interfejsu API hostingu kontrolek w razie potrzeby (Aby uzyskać więcej informacji, zobacz **co to jest interfejs API hostingu kontrolek ATL**. Jednak następujące klasy ułatwić funkcjami zawierania do użycia.
+Kod hostingu sterowania ATL nie wymaga używania żadnych klas ATL; możesz po prostu utworzyć okno **"AtlAxWin80"** i w razie potrzeby użyć interfejsu API hostingu kontrolnego (aby uzyskać więcej informacji, zobacz **Co to jest API hostingu ATL Control.** Jednak następujące klasy ułatwiają korzystanie z funkcji hermetyzacji.
 
-|Class|Opis|
+|Klasa|Opis|
 |-----------|-----------------|
-|[CAxWindow](../atl/reference/caxwindow-class.md)|Opakowuje **"AtlAxWin80"** okna, zapewniając metody do tworzenia okna, tworzenie formantu i/lub dołączanie formantu do okna i pobierania wskaźniki interfejsu na obiekt hosta.|
-|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Opakowuje **"AtlAxWinLic80"** okna, zapewniając metody do tworzenia okna, tworzenie formantu i/lub dołączanie licencjonowany formant do okna i pobierania wskaźniki interfejsu na obiekt hosta.|
-|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Działa jako klasę bazową dla klasy kontrolek ActiveX w oparciu o zasobu okna dialogowego. Takie kontrolki mogą zawierać inne kontrolki ActiveX.|
-|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Działa jako klasę bazową dla klasy okien dialogowych, w oparciu o zasobu okna dialogowego. Takie okien dialogowych mogą zawierać formantów ActiveX.|
-|[CWindow](../atl/reference/cwindow-class.md)|Udostępnia metodę, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), które zwróci wskaźnika interfejsu sterowanie podany identyfikator hosta okna. Ponadto otoki interfejsu Windows API udostępnianych przez `CWindow` ogólnie ułatwić zarządzanie oknem.|
+|[CAxWindow ( CAxWindow )](../atl/reference/caxwindow-class.md)|Zawija okno **"AtlAxWin80",** zapewniając metody tworzenia okna, tworzenia formantu i/lub dołączania formantu do okna i pobierania wskaźników interfejsu na obiekcie hosta.|
+|[CAxWindow2T (polski)](../atl/reference/caxwindow2t-class.md)|Zawija okno **"AtlAxWinLic80",** udostępnia metody tworzenia okna, tworzenia formantu i/lub dołączania licencjonowanego formantu do okna i pobierania wskaźników interfejsu na obiekcie hosta.|
+|[Sterowanie CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Działa jako klasa podstawowa dla klas kontroli ActiveX na podstawie zasobu okna dialogowego. Takie formanty mogą zawierać inne formanty ActiveX.|
+|[Caxdialogimpl](../atl/reference/caxdialogimpl-class.md)|Działa jako klasa podstawowa dla klas dialogowych na podstawie zasobu okna dialogowego. Takie okna dialogowe mogą zawierać formanty ActiveX.|
+|[Cwindow](../atl/reference/cwindow-class.md)|Udostępnia metodę [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), która zwróci wskaźnik interfejsu na formancie, biorąc pod uwagę identyfikator okna hosta. Ponadto otoki interfejsu API systemu `CWindow` Windows udostępniane przez ogólnie ułatwić zarządzanie oknami.|
 
-## <a name="what-is-the-atl-control-hosting-api"></a>Co to jest ATL Hosting kontrolki interfejsu API?
+## <a name="what-is-the-atl-control-hosting-api"></a>Co to jest interfejs API hostingu kontrolek ATL?
 
-ATL użytkownika hosting kontrolki interfejsu API to zestaw funkcji, który umożliwia dowolnym oknie jako kontener formantu ActiveX. Te funkcje mogą być statycznie lub dynamicznie połączone do projektu, ponieważ są one dostępne jako kod źródłowy i udostępnianych przez ATL90.dll. Funkcje hostingu kontrolek są wymienione w poniższej tabeli.
+Interfejs API hostingu sterowania ATL to zestaw funkcji, który umożliwia każdemu okno działanie jako kontener formantu ActiveX. Te funkcje mogą być statycznie lub dynamicznie połączone z projektem, ponieważ są one dostępne jako kod źródłowy i udostępniane przez plik ATL90.dll. Funkcje hostingu sterowania są wymienione w poniższej tabeli.
 
 |Funkcja|Opis|
 |--------------|-----------------|
-|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Tworzy obiekt hosta, łączy się ono podane okna, a następnie dołącza istniejącej kontrolki.|
-|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Tworzy obiekt hosta, łączy się ono podane okna, a następnie ładuje formantu.|
-|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie, podobnie jak [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|
-|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Tworzy obiekt hosta, łączy się ono podane okna, a następnie ładuje kontrolki (również pozwala wychwytywanie zdarzeń do skonfigurowania).|
-|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie, podobnie jak [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|
-|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Tworzy niemodalne okno dialogowe z zasobu okna dialogowego i zwraca uchwyt okna.|
-|[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Tworzy modalne okno dialogowe z zasobu okna dialogowego.|
-|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Zwraca **IUnknown** wskaźnika interfejsu tego formantu w oknie.|
-|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Zwraca **IUnknown** wskaźnika interfejsu tego obiektu hosta jest podłączony do okna.|
-|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Inicjuje kod hostingu formantu.|
-|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Deinicjuje kod hostingu formantu.|
+|[AtlAxAttachControl (AtlAxAttachControl)](reference/composite-control-global-functions.md#atlaxattachcontrol)|Tworzy obiekt hosta, łączy go z dostarczonym oknem, a następnie dołącza istniejący formant.|
+|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Tworzy obiekt hosta, łączy go z dostarczonym oknem, a następnie ładuje formant.|
+|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Tworzy licencjonowany formant ActiveX, inicjuje go i obsługuje w określonym oknie, podobnie jak [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|
+|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Tworzy obiekt hosta, łączy go z dostarczonym oknem, a następnie ładuje formant (umożliwia również ustawienie pochłaniaczy zdarzeń).|
+|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Tworzy licencjonowany formant ActiveX, inicjuje go i obsługuje w określonym oknie, podobnie jak [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Tworzy niemodowe okno dialogowe z zasobu okna dialogowego i zwraca uchwyt okna.|
+|[Skrzynka z promieniami 2010](reference/composite-control-global-functions.md#atlaxdialogbox)|Tworzy modalne okno dialogowe z zasobu okna dialogowego.|
+|[Kontrola AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Zwraca wskaźnik interfejsu **IUnknown** formantu hostowanego w oknie.|
+|[AtlAxGetHost (AtlAxGetHost)](reference/composite-control-global-functions.md#atlaxgethost)|Zwraca wskaźnik interfejsu **IUnknown** obiektu hosta połączonego z oknem.|
+|[AtlAxWinInit (AtlAxWinInit)](reference/composite-control-global-functions.md#atlaxwininit)|Inicjuje kod hostingu formantu.|
+|[AtlAxWinTerm (własnoręcznisze)](reference/composite-control-global-functions.md#atlaxwinterm)|Uninitializes kodu hostingu formantu.|
 
-`HWND` Parametrów w pierwszych trzech funkcji musi być istniejącym oknie (prawie) dowolnego typu. Jeśli dowolny z tych trzech funkcji jawnie wywołać (zazwyczaj nie trzeba), nie przekazuj dojścia do okna, która już działa jako host (Jeśli to zrobisz, istniejący obiekt hosta nie można zwolnić).
+Parametry `HWND` w pierwszych trzech funkcji musi być istniejące okno (prawie) dowolnego typu. Jeśli wywołasz dowolną z tych trzech funkcji jawnie (zazwyczaj nie trzeba), nie należy przekazywać dojście do okna, które już działa jako host (jeśli to zrobisz, istniejący obiekt hosta nie zostanie zwolniona).
 
-Wywołaj najpierw siedmiu funkcji [klasy AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) niejawnie.
+Pierwsze siedem funkcji wywołać [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) niejawnie.
 
 > [!NOTE]
->  Interfejs API hostingu kontrolek stanowi podstawę ATL obsługę zawierania kontrolek ActiveX. Istnieje jednak zwykle nieco trzeba bezpośrednio wywoływać tych funkcji, jeśli korzystanie z zalet lub wykorzystać ATL klasy otoki. Aby uzyskać więcej informacji, zobacz [której klasy ułatwienia ActiveX zawieranie kontrolek ATL](which-atl-classes-facilitate-activex-control-containment-q.md).
+> Interfejs API hostingu sterowania stanowi podstawę obsługi ATL dla zamknięcia kontroli ActiveX. Jednak zazwyczaj istnieje niewielka potrzeba wywołania tych funkcji bezpośrednio, jeśli skorzystasz lub w pełni wykorzystasz klasy otoki ATL. Aby uzyskać więcej informacji, zobacz [Które klasy ATL ułatwiają powstrzymywanie kontroli ActiveX](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>Co to jest klasa AtlAxWin100?
 
-`AtlAxWin100` jest nazwą klasy okna, który zapewnia funkcje hostingu kontrolek ATL. Podczas tworzenia wystąpienia tej klasy procedurę okna automatycznie używać interfejsu API hostingu kontrolek do tworzenia obiektu hosta skojarzony z oknem i ją załadować za pomocą kontrolki, które można określić jako tytuł okna.
+`AtlAxWin100`to nazwa klasy okna, która pomaga zapewnić funkcję hostingu sterowania ATL. Podczas tworzenia wystąpienia tej klasy, procedura okna automatycznie użyje interfejsu API hostingu formantu, aby utworzyć obiekt hosta skojarzony z oknem i załadować go z formantem, który określisz jako tytuł okna.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>Kiedy muszę tworzyć wywołanie klasy AtlAxWinInit?
 
-[Klasy AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) rejestruje **"AtlAxWin80"** klasy okna (oraz kilka niestandardowych komunikatów okien), dzięki czemu można wywołać tę funkcję, przed podjęciem próby utworzenia okna hosta. Jednak nie należy zawsze jawnie wywołać tę funkcję, od hostowania interfejsów API (i klas, które z nich korzystają) często wymagają tej funkcji. Nie ma żadnych szkód w wywołaniu tej funkcji w więcej niż jeden raz.
+[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) rejestruje klasę okna **"AtlAxWin80"** (plus kilka niestandardowych komunikatów okien), więc ta funkcja musi zostać wywołana przed próbą utworzenia okna hosta. Jednak nie zawsze trzeba wywołać tę funkcję jawnie, ponieważ interfejsy API hostingu (i klasy, które z nich korzystają) często wywołać tę funkcję dla Ciebie. Wywołanie tej funkcji nie ma nic złego.
 
 ## <a name="what-is-a-host-object"></a>Co to jest obiekt hosta?
 
-Obiekt hosta jest obiekt COM, który reprezentuje kontener formantu ActiveX, które są dostarczane przez ATL dla określonego okna. Hosta obiektu podklasy okno kontenera, aby go może odzwierciedlać wiadomości do formantu, zapewnia interfejsy niezbędne kontenera, który ma być używany przez formant i udostępnia ona [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) i [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) interfejsy umożliwiają skonfigurowanie środowiska formantu.
+Obiekt hosta jest obiektem COM, który reprezentuje kontener formantu ActiveX dostarczony przez ATL dla określonego okna. Obiekt hosta podklasuje okno kontenera, dzięki czemu może odzwierciedlać komunikaty do formantu, zapewnia niezbędne interfejsy kontenera, które mają być używane przez formant i udostępnia [interfejsy IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) i [IAxWinAmbientDispatch,](../atl/reference/iaxwinambientdispatch-interface.md) aby umożliwić skonfigurowanie środowiska formantu.
 
-Obiekt hosta służy do ustawiania właściwości otoczenia kontenera.
+Za pomocą obiektu hosta można ustawić właściwości otoczenia kontenera.
 
-## <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Czy może obsługiwać więcej niż jeden formant w jednym oknie?
+## <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Czy mogę umieścić więcej niż jedną kontrolkę w jednym oknie?
 
-Nie jest możliwe do hostowania więcej niż jeden formant w jednym oknie ATL, hosta. Każde okno hosta powinien zawierać dokładnie jeden formant naraz (umożliwia to prosty mechanizm obsługi odbicia i -control otoczenia właściwości wiadomości). Jednak jeśli potrzebujesz użytkownika, aby wyświetlić wiele kontrolek w jednym oknie, jest polegać, aby utworzyć wiele okien hosta jako elementy podrzędne tego okna.
+Nie jest możliwe hostowanie więcej niż jednego formantu w jednym oknie hosta ATL. Każde okno hosta jest przeznaczone do przechowywania dokładnie jednego formantu naraz (pozwala to na prosty mechanizm obsługi odbicia wiadomości i właściwości otoczenia kontroli). Jednak jeśli potrzebujesz użytkownika, aby wyświetlić wiele formantów w jednym oknie, jest to prosta sprawa, aby utworzyć wiele okien hosta jako elementy podrzędne tego okna.
 
 ## <a name="can-i-reuse-a-host-window"></a>Czy mogę ponownie użyć okna hosta?
 
-Ponowne użycie systemu windows hosta nie jest zalecane. Aby zapewnić niezawodność kodu, należy powiązać okres istnienia okna hosta z okresem istnienia jeden formant.
+Nie zaleca się ponownego użycia okien hosta. Aby zapewnić niezawodność kodu, należy powiązać okres istnienia okna hosta z okresem istnienia pojedynczego formantu.
 
 ## <a name="when-do-i-need-to-call-atlaxwinterm"></a>Kiedy muszę tworzyć wywołanie klasy AtlAxWinTerm?
 
-[Klasy AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) wyrejestrowuje **"AtlAxWin80"** klasy okna. Należy wywołać tę funkcję (Jeśli nie jest już konieczne tworzenie hosta z systemem windows) po zniszczeniu wszystkich istniejących okien hosta. Jeśli nie chcesz wywołać tę funkcję, klasę okna będzie można wyrejestrować automatycznie, gdy proces zakończy się.
+[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) wyrejestrowyje klasę okna **"AtlAxWin80".** Należy wywołać tę funkcję (jeśli nie trzeba już tworzyć okien hosta) po zniszczeniu wszystkich istniejących okien hosta. Jeśli ta funkcja nie zostanie wywołana, klasa okna zostanie automatycznie wyrejestrowana po zakończeniu procesu.
 
 ## <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting kontrolek ActiveX przy użyciu ATL AXHost
 
-Przykład w tej sekcji przedstawiono sposób tworzenia AXHost oraz sposobu hostowania kontrolki ActiveX przy użyciu różnych funkcji biblioteki ATL. Zawiera również instrukcje zdarzenia sink i kontroli dostępu (przy użyciu [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z formantu, który znajduje się. Przykład obsługuje formant kalendarza w głównym oknie lub okna podrzędnego.
+Przykład w tej sekcji pokazuje, jak utworzyć AXHost i jak hostować formant ActiveX przy użyciu różnych funkcji ATL. Pokazuje również, jak uzyskać dostęp do kontroli i ujmuje zdarzenia (przy użyciu [IDispEventImpl)](../atl/reference/idispeventimpl-class.md)z formantu, który jest obsługiwany. Przykład hostuje Calendar kontroli w oknie głównym lub w oknie podrzędnym.
 
-Zwróć uwagę, definicja `USE_METHOD` symboli. Możesz zmienić wartość tego symbolu będzie się różnić od 1 do 8. Wartość symbolu określa sposób tworzenia kontrolki:
+Zwróć uwagę na `USE_METHOD` definicję symbolu. Można zmienić wartość tego symbolu na 1 do 8. Wartość symbolu określa sposób tworzenia formantu:
 
-- Wartości parzystych `USE_METHOD`, wywołanie w celu utworzenia podklasy hosta okna i konwertuje je do hosta kontroli. W przypadku wartości nieparzystą kod tworzy okno podrzędne, który działa jako host.
+- Dla wartości parzyste `USE_METHOD`, wywołanie utworzenia podklas hosta okna i konwertuje go na hosta formantu. Dla wartości nieparzystych kod tworzy okno podrzędne, które działa jako host.
 
-- Wartości typu `USE_METHOD` od 1 do 4, dostęp do formantu i wychwytywania zdarzeń są wykonywane w wywołaniu, który również tworzy hosta. Wartości z zakresu od 5 do 8 zapytania hosta dla interfejsów i podłączyć ujścia.
+- Dla wartości `USE_METHOD` od 1 do 4 dostęp do kontroli i zatopienie zdarzeń są realizowane w wywołaniu, które również tworzy hosta. Wartości między 5 i 8 kwerendy hosta dla interfejsów i podłączyć ujścia.
 
-Poniżej przedstawiono podsumowanie:
+Oto podsumowanie:
 
-|USE_METHOD|Host|Kontrola dostępu i wychwytywania zdarzeń|Pokazano — funkcja|
+|USE_METHOD|Host|Kontroluj dostęp i zatopienie zdarzeń|Zademonstrowana funkcja|
 |-----------------|----------|--------------------------------------|---------------------------|
 |1|Okno podrzędne|Jeden krok|CreateControlLicEx|
 |2|Okno główne|Jeden krok|AtlAxCreateControlLicEx|
-|3|Okno podrzędne|Jeden krok|CreateControlEx|
+|3|Okno podrzędne|Jeden krok|UtwórzControlEx|
 |4|Okno główne|Jeden krok|AtlAxCreateControlEx|
-|5|Okno podrzędne|Wiele kroków|CreateControlLic|
+|5|Okno podrzędne|Wiele kroków|CreateControlLic (Twór niesie ze strony|
 |6|Okno główne|Wiele kroków|AtlAxCreateControlLic|
-|7|Okno podrzędne|Wiele kroków|CreateControl|
+|7|Okno podrzędne|Wiele kroków|CreateControl (Kontrola tworzenia)|
 |8|Okno główne|Wiele kroków|AtlAxCreateControl|
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zawieranie kontrolek — często zadawane pytania](../atl/atl-control-containment-faq.md)<br/>
+[Często zadawane pytania dotyczące hermetyzacji sterowania](../atl/atl-control-containment-faq.md)<br/>
 [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>
 [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
 [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)<br/>
 [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)<br/>
 [Klasa CAxWindow2T](../atl/reference/caxwindow2t-class.md)<br/>
-[Interfejs IAxWinHostWindowLic](../atl/reference/iaxwinhostwindowlic-interface.md)
+[Interfejs IAxWinHostWindowlic](../atl/reference/iaxwinhostwindowlic-interface.md)

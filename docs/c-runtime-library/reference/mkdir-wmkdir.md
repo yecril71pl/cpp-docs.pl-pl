@@ -1,9 +1,11 @@
 ---
 title: _mkdir, _wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951717"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338782"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -61,24 +64,26 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametry
 
-*dirname*<br/>
-Ścieżka do nowego katalogu.
+*dirname (dirname)*<br/>
+Ścieżka dla nowego katalogu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli nowy katalog został utworzony. W przypadku błędu funkcja zwraca wartość-1 i ustawia **errno** w następujący sposób.
+Każda z tych funkcji zwraca wartość 0, jeśli utworzono nowy katalog. W razie błędu funkcja zwraca wartość -1 i ustawia **errno** w następujący sposób.
 
-**EEXIST** Katalog nie został utworzony, ponieważ *dirname* jest nazwą istniejącego pliku, katalogu lub urządzenia.
+**EEXIST (EEXIST)** Katalog nie został utworzony, ponieważ *dirname* jest nazwą istniejącego pliku, katalogu lub urządzenia.
 
-**ENOENT** Nie znaleziono ścieżki.
+**ENOENT ( ENOENT )** Nie znaleziono ścieżki.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** może utworzyć tylko jeden nowy katalog dla każdego wywołania, więc tylko ostatni składnik programu *dirname* może nawiązać nazwę nowego katalogu. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno ukośnik odwrotny ( \\), jak i ukośnik (/) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach w czasie wykonywania.
+Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** można utworzyć tylko jeden nowy katalog na wywołanie, więc tylko ostatni składnik *dirname* może nadać nazwę nowemu katalogowi. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno \\ukośnik odwrotny ( ) i ukośnik do przodu (/ ) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach wykonywania.
 
-**_wmkdir** to dwubajtowa wersja **_mkdir**; argument *dirname* **_wmkdir** jest ciągiem znaków dwubajtowych. **_wmkdir** i **_mkdir** zachowują się identycznie w inny sposób.
+**_wmkdir** jest szerokoznakową wersją **_mkdir**; *argumentem dirname* **do _wmkdir** jest ciągiem znaków o szerokim charakterze. **_wmkdir** i **_mkdir** zachowują się identycznie w przeciwnym razie.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -91,13 +96,13 @@ Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** może
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
-|**_wmkdir**|\<Direct. h > lub \<WCHAR. h >|
+|**_wmkdir**|\<direct.h> lub \<wchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -140,7 +145,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

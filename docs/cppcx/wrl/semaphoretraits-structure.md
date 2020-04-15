@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360740"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits — Struktura
 
-Definiuje typowe cechy `Semaphore` obiektu.
+Definiuje wspólne cechy `Semaphore` obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 Nazwa                               | Opis
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | Kontrola wersji zasobu udostępnionego.
+[SemaphoreTraits::Odblokuj](#unlock) | Zwalnia kontrolę nad zasobem udostępnionym.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -44,11 +44,11 @@ Nazwa                               | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Odblokuj
 
-Kontrola wersji zasobu udostępnionego.
+Zwalnia kontrolę nad zasobem udostępnionym.
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Dojście do `Semaphore` obiektu.
+*H*<br/>
+Dojście `Semaphore` do obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku operacji odblokowania kończy się niepowodzeniem, `Unlock()` emituje komunikat o błędzie wskazujący przyczynę błędu.
+Jeśli operacja odblokowania `Unlock()` nie powiedzie się, emituje błąd, który wskazuje przyczynę błędu.

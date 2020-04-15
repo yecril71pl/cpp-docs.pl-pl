@@ -1,11 +1,13 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
+- _o__mbsspnp
+- _o__mbsspnp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946682"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317022"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
-Zwraca wskaźnik do pierwszego znaku w danym ciągu, który nie znajduje się w innym ciągu.
+Zwraca wskaźnik do pierwszego znaku w danym ciągu, który nie znajduje się w innym danym ciągu.
 
 > [!IMPORTANT]
-> **_mbsspnp** i **_mbsspnp_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** i **_mbsspnp_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,24 +86,26 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg zakończony znakiem null do wyszukania.
+*Str*<br/>
+Ciąg zakończony wartością null do wyszukiwania.
 
-*zestaw*<br/>
-Zestaw znaków zakończony znakiem null.
+*Charset*<br/>
+Zestaw znaków zakończony z wartością null.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_strspnp**, **_wcsspnp**i **_mbsspnp** zwracają wskaźnik do pierwszego znaku w *str* , który nie należy do zestawu znaków w *charset*. Każda z tych funkcji zwraca **wartość null** , jeśli *str* zawiera wyłącznie znaki z zestawu *znaków.* Dla każdej z tych procedur żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+**_strspnp** **, _wcsspnp**i **_mbsspnp** zwraca wskaźnik do pierwszego znaku w *str,* który nie należy do zestawu znaków w *zestawie znaków*. Każda z tych funkcji zwraca **wartość NULL,** jeśli *str* składa się w całości ze znaków z *zestawu znaków*. Dla każdej z tych procedur nie zwracana jest wartość zarezerwowana, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbsspnp** zwraca wskaźnik do znaku wielobajtowego, który jest pierwszym znakiem w *str* , który nie należy do zestawu znaków w elemencie *charset*. **_mbsspnp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową](../../c-runtime-library/code-pages.md) . Wyszukiwanie nie obejmuje kończących się pustych znaków.
+Funkcja **_mbsspnp** zwraca wskaźnik do znaku wielobajtowego, który jest pierwszym znakiem *w str,* który nie należy do zestawu znaków w *zestawie znaków*. **_mbsspnp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową wielobajtową.](../../c-runtime-library/code-pages.md) Wyszukiwanie nie obejmuje zakończenia znaków null.
 
-Jeśli element *str* lub *charset* jest wskaźnikiem o wartości null, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
+Jeśli *str* lub *charset* jest wskaźnikiem null, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca **wartość NULL** i ustawia **errno** na **Wartość EINVAL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -108,19 +113,19 @@ Jeśli element *str* lub *charset* jest wskaźnikiem o wartości null, ta funkcj
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** i **_wcsspnp** są znakami jednobajtowymi i wersjami **_mbsspnp**. **_strspnp** i **_wcsspnp** zachowują się identycznie, aby **_mbsspnp** w przeciwnym razie; są one dostępne tylko dla tego mapowania i nie powinny być używane z innych przyczyn. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** i **_wcsspnp** są jedno bajtowymi znakami i szerokoznakowymi wersjami **_mbsspnp**. **_strspnp** i **_wcsspnp** zachowują się identycznie jak **_mbsspnp** inaczej; są one dostarczane tylko dla tego mapowania i nie powinny być używane z jakiegokolwiek innego powodu. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** jest identyczny, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_mbsspnp_l** jest identyczna, z tą różnicą, że używa parametru ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_mbsspnp**|\<mbstring.h>|
-|**_strspnp**|\<Używanie TCHAR. h >|
-|**_wcsspnp**|\<Używanie TCHAR. h >|
+|**_strspnp**|\<tchar.h>|
+|**_wcsspnp**|\<tchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -144,10 +149,10 @@ int main( void ) {
 abbage
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>

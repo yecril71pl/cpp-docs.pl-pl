@@ -1,5 +1,5 @@
 ---
-title: Operatory wskaźników do składowych:. * i-&gt;*
+title: 'Operatory wskaźnika do elementu członkowskiego: .* i -&gt;*'
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2100933bf525f0717978528301049085eaecd4f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188340"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320341"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operatory wskaźników do składowych:. * i-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operatory wskaźnika do elementu członkowskiego: .* i -&gt;*
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory wskaźnika do składowej,. * i->\*, zwracają wartość określonego elementu członkowskiego klasy dla obiektu określonego po lewej stronie wyrażenia.  Po prawej stronie należy określić składową klasy.  Poniższy przykład ilustruje sposób używania operatorów:
+Operatory typu wskaźnik-element, .* i ->\*, zwracają wartość określonego elementu członkowskiego klasy dla obiektu określonego po lewej stronie wyrażenia.  Po prawej stronie należy określić składową klasy.  Poniższy przykład ilustruje sposób używania operatorów:
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ W poprzednim przykładzie, wskaźnik do elementu członkowskiego, `pmfn`, jest u
 
 Operator binarny .* łączy pierwszy argument operacji, który musi być obiektem typu klasy, z drugim argumentem operacji, który musi być typem wskaźnika do składowej.
 
-Operator binarny-> * łączy swój pierwszy operand, który musi być wskaźnikiem do obiektu typu klasy, z drugim argumentem operacji, który musi być typem wskaźnika do elementu członkowskiego.
+Operator binarny ->* łączy swój pierwszy operand, który musi być wskaźnikiem do obiektu typu klasy, z jego drugim operandem, który musi być typem wskaźnika do elementu członkowskiego.
 
 W wyrażeniu zawierającym operator .* pierwszy argument operacji musi być typem klasy oraz zapewniać dostęp dla wskaźnika do składowej określonej w drugim argumencie operacji lub być typem jednoznacznie pochodnym i dostępnym dla tej klasy.
 
-W wyrażeniu zawierającym operator-> * pierwszy operand musi być typu "wskaźnik do typu klasy" typu określonego w drugim operandzie lub musi być typu jednoznacznie pochodnego od tej klasy.
+W wyrażeniu zawierającym operator ->* pierwszy operand musi być typu "wskaźnik do typu klasy" typu określonego w drugim operandie lub musi być typu jednoznacznie wywodzącego się z tej klasy.
 
 ## <a name="example"></a>Przykład
 
@@ -128,10 +128,10 @@ int main() {
 }
 ```
 
-Wynik\*. * lub-> operatory wskaźnik-do-składowej jest obiektem lub funkcją typu określonego w deklaracji wskaźnika do elementu członkowskiego. Zatem w powyższym przykładzie, wynik wyrażenia `ADerived.*pmfnFunc1()` jest wskaźnikiem do funkcji, która zwraca wartość void. Ten wynik jest wartością l, jeśli drugi argument operacji jest wartością l.
+Wynik .* lub ->\* operatorów wskaźnika do elementu członkowskiego jest obiektem lub funkcją typu określonego w deklaracji wskaźnika do elementu członkowskiego. Zatem w powyższym przykładzie, wynik wyrażenia `ADerived.*pmfnFunc1()` jest wskaźnikiem do funkcji, która zwraca wartość void. Ten wynik jest wartością l, jeśli drugi argument operacji jest wartością l.
 
 > [!NOTE]
->  Jeżeli wynik jednego z operatorów wskaźnika do elementu członkowskiego jest funkcją, wynik może używany tylko jako argument operatora wywołania funkcji.
+> Jeżeli wynik jednego z operatorów wskaźnika do elementu członkowskiego jest funkcją, wynik może używany tylko jako argument operatora wywołania funkcji.
 
 ## <a name="see-also"></a>Zobacz też
 

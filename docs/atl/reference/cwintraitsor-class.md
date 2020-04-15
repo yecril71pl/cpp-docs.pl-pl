@@ -10,19 +10,19 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-ms.openlocfilehash: ec628fcde40d3cc4601d6b6ddf49fa5599ac5a86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 825f79190c6f68cd1372154e4e02f430f545aa48
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330283"
 ---
 # <a name="cwintraitsor-class"></a>Klasa CWinTraitsOR
 
-Ta klasa dostarcza metody do standaryzacji stylów używanych podczas tworzenia obiektu okna.
+Ta klasa zawiera metodę standaryzacji stylów używanych podczas tworzenia obiektu okna.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,10 +36,10 @@ class CWinTraitsOR
 #### <a name="parameters"></a>Parametry
 
 *t_dwStyle*<br/>
-Style okna ramowego domyślne.
+Domyślne style okien.
 
 *t_dwExStyle*<br/>
-Domyślnie rozszerzone Style okna.
+Domyślne style rozszerzonego okna.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,23 +48,23 @@ Domyślnie rozszerzone Style okna.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|Pobiera rozszerzone style `CWinTraitsOR` obiektu.|
-|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Pobiera standardowe style dla `CWinTraitsOR` obiektu.|
+|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Pobiera standardowe style `CWinTraitsOR` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-To [cech okna](../../atl/understanding-window-traits.md) klasa udostępnia prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Użyj specjalizacji tej klasy jako parametr szablonu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej klasy okien ATL, aby określić minimalny zestaw standardowych i rozszerzone style ma być używany dla wystąpień tej klasy okna.
+Ta klasa [cech okna](../../atl/understanding-window-traits.md) zapewnia prostą metodę standaryzacji stylów używanych do tworzenia obiektu okna ATL. Użyj specjalizacji tej klasy jako parametru szablonu [do CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej klasy okna ATL, aby określić minimalny zestaw stylów standardowych i rozszerzonych, które mają być używane dla wystąpień tej klasy okna.
 
-Użyj specjalizacji tego szablonu, jeśli chcesz upewnić się, że określone style są ustawione dla wszystkich wystąpień klasy okna umożliwiając innymi stylami, należy ustawić na podstawie poszczególnych wystąpień w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
+Użyj specjalizacji tego szablonu, jeśli chcesz upewnić się, że niektóre style są ustawione dla wszystkich wystąpień klasy okna, zezwalając na inne style, które mają być ustawione na podstawie wystąpienia w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).
 
-Jeśli chcesz udostępnić domyślne style okna, które będą używane tylko wtedy, gdy nie inne style są określone w wywołaniu `CWindowImpl::Create`, użyj [CWinTraits](../../atl/reference/cwintraits-class.md) zamiast tego.
+Jeśli chcesz podać domyślne style okien, które będą używane tylko wtedy, gdy żadne inne style nie są określone w wywołaniu , `CWindowImpl::Create`użyj [CWinTraits](../../atl/reference/cwintraits-class.md) zamiast.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle
+## <a name="cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle
 
-Wywołaj tę funkcję, aby pobrać kombinacji (przy użyciu operatora logicznego OR) standardowa style `CWinTraits` obiektu i style domyślne określone przez *t_dwStyle*.
+Wywołanie tej funkcji w celu pobrania kombinacji (przy użyciu operatora `CWinTraits` logicznego OR) standardowych stylów obiektu i domyślnych stylów określonych przez *t_dwStyle*.
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -72,16 +72,16 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Style służy do tworzenia okna.
+*Dwstyle*<br/>
+Style używane do tworzenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kombinacja style, które są przekazywane w *dwStyle* i domyślne te określone przez `t_dwStyle`, przy użyciu operatora logicznego OR.
+Kombinacja stylów, które są przekazywane w *dwStyle* i domyślne te określone przez `t_dwStyle`, przy użyciu operatora logicznego OR.
 
-##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle
+## <a name="cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle
 
-Wywołaj tę funkcję, aby pobrać kombinacji (przy użyciu operatora logicznego OR) rozszerzone style `CWinTraits` obiektu i style domyślne określone przez `t_dwStyle`.
+Wywołanie tej funkcji w celu pobrania kombinacji (przy użyciu operatora `CWinTraits` logicznego OR) rozszerzonych stylów obiektu i domyślnych stylów określonych przez `t_dwStyle`program .
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -89,14 +89,14 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Rozszerzone style służy do tworzenia okna.
+*Dwexstyle*<br/>
+Rozszerzone style używane do tworzenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kombinacja rozszerzone style, które są przekazywane w *dwExStyle* i określonych przez domyślne `t_dwExStyle`, przy użyciu operatora logicznego OR
+Kombinacja rozszerzonych stylów przekazywanych w *dwExStyle* i domyślnych określonych przez `t_dwExStyle`operatora OR przy użyciu operatora logicznego OR
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Opis cech okna](../../atl/understanding-window-traits.md)

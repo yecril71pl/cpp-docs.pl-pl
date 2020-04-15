@@ -1,6 +1,6 @@
 ---
 title: Struktura FUNCTION_FORCE_INLINEE_DATA
-description: Zestaw C++ SDK usługi Build insights FUNCTION_FORCE_INLINEE_DATA odwołanie do struktury.
+description: C++ Build Insights SDK FUNCTION_FORCE_INLINEE_DATA odwołania do struktury.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3d6929f2f16e9b1bd79b7fb8b383b40e031268bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325491"
 ---
 # <a name="function_force_inlinee_data-structure"></a>Struktura FUNCTION_FORCE_INLINEE_DATA
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `FUNCTION_FORCE_INLINEE_DATA` opisuje funkcję wymuszoną.
+Struktura `FUNCTION_FORCE_INLINEE_DATA` opisuje funkcję inlined siły.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,7 +42,7 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 
 |  |  |
 |--|--|
-| `Name` | Nazwa funkcji zakodowana w formacie UTF-8. |
-| `Size` | Rozmiar funkcji, jako szereg instrukcji pośrednich. |
+| `Name` | Nazwa funkcji, zakodowana w UTF-8. |
+| `Size` | Rozmiar funkcji, jako liczba instrukcji pośrednich. |
 
 ::: moniker-end

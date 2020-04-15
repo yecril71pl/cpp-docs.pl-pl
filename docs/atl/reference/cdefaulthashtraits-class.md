@@ -1,5 +1,5 @@
 ---
-title: Klasa CDefaultHashTraits
+title: CDefaultHashTraits Klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultHashTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43932092621d44cfc8b07270df92e2765665f23f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327085"
 ---
-# <a name="cdefaulthashtraits-class"></a>Klasa CDefaultHashTraits
+# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits Klasa
 
-Ta klasa udostępnia funkcję statyczną do obliczania wartości skrótu.
+Ta klasa zapewnia funkcję statyczną do obliczania wartości skrótu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,21 +37,21 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDefaultHashTraits::Hash](#hash)|(Statyczny) Wywołaj tę funkcję, aby obliczyć wartość skrótu dla danego elementu.|
+|[CDefaultHashTraits::Hash](#hash)|(Statyczne) Wywołanie tej funkcji, aby obliczyć wartość mieszania dla danego elementu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera pojedynczy funkcję statyczną, która zwraca wartość skrótu dla danego elementu. Ta klasa jest wykorzystywany przez [klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
+Ta klasa zawiera pojedynczą funkcję statyczną, która zwraca wartość mieszania dla danego elementu. Ta klasa jest wykorzystywana przez [CDefaultElementTraits Klasy](../../atl/reference/cdefaultelementtraits-class.md).
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="hash"></a>  CDefaultHashTraits::Hash
+## <a name="cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash
 
-Wywołaj tę funkcję, aby obliczyć wartość skrótu dla danego elementu.
+Wywołanie tej funkcji, aby obliczyć wartość mieszania dla danego elementu.
 
 ```
 static ULONG Hash(const T& element) throw();
@@ -59,17 +59,17 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*element*<br/>
+*Element*<br/>
 Element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość skrótu.
+Zwraca wartość mieszania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość domyślna algorytmem wyznaczania wartości skrótu jest bardzo prosta: wartość zwracana jest liczba elementów. Należy przesłonić tę funkcję, jeśli wymagane jest bardziej skomplikowany algorytmu.
+Domyślny algorytm mieszania jest bardzo prosty: zwracana wartość jest liczbą elementu. Zastąd w tej funkcji, jeśli wymagany jest bardziej skomplikowany algorytm.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

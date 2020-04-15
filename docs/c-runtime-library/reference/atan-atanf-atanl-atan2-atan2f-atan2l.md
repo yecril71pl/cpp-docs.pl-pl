@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atan2f
 - atan2l
@@ -8,6 +8,8 @@ api_name:
 - atanf
 - atan
 - atanl
+- _o_atan
+- _o_atan2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939609"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334115"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Oblicza arcus tangens liczby **x** (**atan**, **atanf —** i **atanl**) lub arcus tangens liczby **y**/**x** (**atan2**, **atan2f —** i **atan2l**).
+Oblicza arctangent **z x** (**atan**, **atanf**, i **atanl**) lub arctangent **z y**/**x** (**atan2**, **atan2f**, i **atan2l**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,31 +78,33 @@ long double atan2( long double y, long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Wszystkie liczby.
+Dowolne liczby.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**atan** zwraca arcus tangens *x* w zakresie od π/2 do π/2 radianów. Funkcja **atan2** zwraca arcus tangens liczby *y*/*x* w zakresie od π do π radianów. Jeśli *x* to 0, **atan** zwraca 0. Jeśli oba parametry **atan2** mają wartość 0, funkcja zwraca wartość 0. Wszystkie wyniki są w radianach.
+**atan** zwraca arctangent *x* w zakresie -π/2 do π/2 radianów. **atan2** zwraca arctangent *y*/*x* w zakresie -π do π radianów. Jeśli *x* wynosi 0, **atan** zwraca wartość 0. Jeśli oba parametry **atan2** są 0, funkcja zwraca 0. Wszystkie wyniki są w radianach.
 
-Funkcja **atan2** używa znaków obu parametrów, aby określić ćwiartkę zwracanej wartości.
+**atan2** używa znaków obu parametrów do określenia kwadrantu wartości zwracanej.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|brak|**_DOMAIN**|
+|± **QNAN**, **IND**|brak|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **atan** Oblicza arcus tangens (funkcja odwrotnej styczności) *x*. **Funkcja atan2** Oblicza arcus tangens *liczby y*/*x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia,-π/2, jeśli *y* jest ujemna, lub 0, jeśli *y* jest równa 0).
+Funkcja **atan** oblicza arctangent (odwrotną funkcję stycznej) *x*. **atan2** oblicza arctangent *y*/*x* (jeśli *x* jest równe 0, **atan2** zwraca π/2, jeśli *y* jest dodatni, -π/2, jeśli y jest *ujemna,* lub 0, jeśli *y* jest 0.)
 
-**atan** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
+**atan** ma implementację, która używa streamingu rozszerzeń SIMD 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
 
-Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia **atan** i **atan2** , które przyjmują **zmiennoprzecinkowe** lub **długie** **podwójne** argumenty. W programie C **atan** i **atan2** zawsze przyjmują **podwójne** argumenty i zwracają **podwójny**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **atan** i **atan2,** które przyjmują **float** lub **długie** **podwójne** argumenty. W programie C, **atan** i **atan2** zawsze wziąć **podwójne** argumenty i zwrócić **podwójne**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath > lub \<Math. h >|
+|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<> math.h|\<cmath> lub \<math.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -132,9 +137,9 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

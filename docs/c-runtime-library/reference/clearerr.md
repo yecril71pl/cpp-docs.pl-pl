@@ -1,8 +1,9 @@
 ---
 title: clearerr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr
+- _o_clearerr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942951"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350028"
 ---
 # <a name="clearerr"></a>clearerr
 
-Resetuje wskaźnik błędu dla strumienia. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [clearerr_s](clearerr-s.md).
+Resetuje wskaźnik błędu dla strumienia. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [clearerr_s](clearerr-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,16 +49,18 @@ void clearerr(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Wskaźnik do struktury **pliku** .
+*Strumienia*<br/>
+Wskaźnik do struktury **PLIK.**
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **clearerr** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; gdy zostanie ustawiony wskaźnik błędu dla określonego strumienia, operacje w tym strumieniu nadal zwracają wartość błędu do momentu wywołania **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) .
+Funkcja **clearerr** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; po ustawieniu wskaźnika błędu dla określonego strumienia operacje na tym strumieniu będą nadal zwracać wartość błędu, dopóki nie zostanie wywołana **wartość clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [rewind.](rewind.md)
 
-Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca. Aby uzyskać więcej informacji o **errno** i kodach błędów, zobacz [errno stałe](../../c-runtime-library/errno-constants.md).
+Jeśli *strumień* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca. Aby uzyskać więcej informacji na temat kodów **błędów** i błędów, zobacz [errno Constants](../../c-runtime-library/errno-constants.md).
 
-Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [clearerr_s](clearerr-s.md).
+Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [clearerr_s](clearerr-s.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +68,7 @@ Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [clearerr_s](clearerr-
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -114,10 +118,10 @@ Will input cause an error? n
 No read error
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

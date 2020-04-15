@@ -1,6 +1,6 @@
 ---
 title: Klasa wywołania
-description: Odwołanie C++ do klasy wywołania zestawu SDK usługi Build Insights.
+description: Odwołanie do klasy wywołania SDK invocation aplikacji C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c4698300a3eeaf77210ad74f84b0c0cd219b457
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: fcb087d46ea445251b0108f811545a44c26f421e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324644"
 ---
 # <a name="invocation-class"></a>Klasa wywołania
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `Invocation` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować do [kompilatora](../event-table.md#compiler) lub [konsolidatora](../event-table.md#linker) zdarzenia.
+Klasa `Invocation` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie kompilatora](../event-table.md#compiler) lub [konsolidatora.](../event-table.md#linker)
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,7 +54,7 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) Klasa `Invocation` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z `Invocation` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -65,10 +65,10 @@ Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania]
 [ToolPath](#tool-path)
 [ToolVersion](#tool-version)
 [ToolVersionString](#tool-version-string)
-[Typ](#type)
-[WorkingDirectory](#working-directory)
+Typ[WorkingDirectory](#working-directory) [Type](#type)
 
-## <a name="invocation"></a>Wywołania
+
+## <a name="invocation"></a><a name="invocation"></a>Wywołania
 
 ```cpp
 Invocation(const RawEvent& event);
@@ -76,10 +76,10 @@ Invocation(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [kompilatora](../event-table.md#compiler) lub [konsolidatora](../event-table.md#linker) .
+*Zdarzenie*\
+Zdarzenie [kompilatora](../event-table.md#compiler) lub [konsolidatora.](../event-table.md#linker)
 
-## <a name="tool-path"></a>ToolPath
+## <a name="toolpath"></a><a name="tool-path"></a>Toolpath
 
 ```cpp
 const wchar_t* ToolPath() const;
@@ -87,9 +87,9 @@ const wchar_t* ToolPath() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ścieżka bezwzględna do wywoływanego narzędzia.
+Bezwzględna ścieżka do narzędzia, które zostało wywołane.
 
-## <a name="tool-version"></a>ToolVersion
+## <a name="toolversion"></a><a name="tool-version"></a>ToolVersion (Wersja narzędzia)
 
 ```cpp
 const INVOCATION_VERSION_DATA& ToolVersion() const;
@@ -97,9 +97,9 @@ const INVOCATION_VERSION_DATA& ToolVersion() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wersja narzędzia, która została wywołana jako odwołanie [INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md) .
+Wersja narzędzia, który został wywołany, jako odwołanie [INVOCATION_VERSION_DATA.](../c-event-data-types/invocation-version-data-struct.md)
 
-## <a name="tool-version-string"></a>ToolVersionString
+## <a name="toolversionstring"></a><a name="tool-version-string"></a>ToolVersionString (NarzędzieSciąg
 
 ```cpp
 const char* ToolVersionString() const;
@@ -107,9 +107,9 @@ const char* ToolVersionString() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wersja narzędzia, która została wywołana jako ciąg ANSI.
+Wersja narzędzia, które zostało wywołane, jako ciąg ANSI.
 
-## <a name="type"></a>Wprowadź
+## <a name="type"></a><a name="type"></a>Typu
 
 ```cpp
 Type Type() const;
@@ -119,7 +119,7 @@ Type Type() const;
 
 Kod wskazujący narzędzie, które zostało wywołane.
 
-## <a name="working-directory"></a>WorkingDirectory
+## <a name="workingdirectory"></a><a name="working-directory"></a>Workingdirectory
 
 ```cpp
 const wchar_t* WorkingDirectory() const;
@@ -127,6 +127,6 @@ const wchar_t* WorkingDirectory() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ścieżka bezwzględna do katalogu, w którym wywołano narzędzie.
+Bezwzględna ścieżka do katalogu, w którym narzędzie zostało wywołane.
 
 ::: moniker-end

@@ -1,10 +1,13 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939595"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350132"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
-Oblicza odwrotny tangens hiperboliczny.
+Oblicza odwrotną styczną hiperboliczną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,29 +60,31 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ATANH —** zwracają arcus tangens hyberbolic (łuk hiperboliczny) *x*. Jeśli wartość *x* jest większa niż 1 lub mniejsza niż-1, **errno** jest ustawiona na **Edom** , a wynikiem jest cichy NaN. Jeśli wartość *x* jest równa 1 lub-1, zwracana jest nieskończona lub ujemna Negacja, odpowiednio i **errno** jest ustawiona na **ERANGE**.
+Funkcje **atanh** zwracają odwrotną styczną hipoberboliczną (łuk hiperboliczny styczny) *x*. Jeśli *x* jest większa niż 1 lub mniejsza niż -1, **errno** jest ustawiona na **EDOM,** a wynik jest cichy NaN. Jeśli *x* jest równa 1 lub -1, zwracana jest dodatnia lub ujemna nieskończoność, a **errno** jest ustawiona na **ERANGE**.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr** Oprócz|
+|Dane wejściowe|Wyjątek SEH|**Matherr (matherr)** Wyjątek|
 |-----------|-------------------|-------------------------|
-|QNAN, IND|brak|brak|
-|*X* ≥ 1; *x* ≤-1|brak|brak|
+|± QNAN, IND|brak|brak|
+|*X* ≥ 1; *x* ≤ -1|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ATANH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ATANH —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **atanh,** które przyjmują i zwracają **float** lub **długie** **podwójne** wartości. W programie **C, atanh** zawsze ma i zwraca **dwukrotnie**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**ATANH —** , **atanhf —** , **atanhl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**atanh**, **atanhf**, **atanhl**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -108,9 +114,9 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

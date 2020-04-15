@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset, _mbsnbset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset
 - _mbsnbset_l
+- _o__mbsnbset
+- _o__mbsnbset_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340545"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
-Ustawia pierwsze **n** bajtów ciągu znaków wielobajtowych do określonego znaku. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Ustawia pierwszy **n** bajtów ciągu wielobajtowego znaku na określony znak. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,16 +70,16 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg, który ma zostać zmieniony.
+*Str*<br/>
+Ciąg do zmiany.
 
-*c*<br/>
-Ustawienie znaków pojedynczego bajtu lub znaku bajtowego.
+*C*<br/>
+Ustawienie jednobajtowe lub wielobajtowe.
 
-*liczbą*<br/>
-Liczba bajtów, które mają zostać ustawione.
+*Liczba*<br/>
+Liczba bajtów do ustawionego.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -85,15 +88,17 @@ Ustawienia regionalne do użycia.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbsnbset** i **_mbsnbset_l** , co najwyżej, w pierwszej *liczbie* bajtów *str* - *c*. Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*. Jeśli *c* jest znakiem wielobajtowym i nie może być ustawiony całkowicie do ostatniego bajtu określonego przez *licznik*, ostatni bajt jest uzupełniony pustym znakiem. **_mbsnbset** i **_mbsnbset_l** nie umieszcza kończącej wartości null na końcu *str*.
+Funkcje **_mbsnbset** i **_mbsnbset_l** ustawiają co najwyżej pierwsze bajty *zliczania* *od str* do *c*. Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używany zamiast *liczyć*. Jeśli *c* jest znakiem wielobajtowym i nie można go całkowicie ustawić w ostatnim bajcie określonym przez *liczbę,* ostatni bajt jest wyściełany pustym znakiem. **_mbsnbset** i **_mbsnbset_l** nie umieszcza kończącej się wartości null na końcu *ul.*
 
-**_mbsnbset** i **_mbsnbset_l** są podobne do **_mbsnset**, z tą różnicą, że ustawia *liczbę* bajtów zamiast *liczby* znaków w *c*.
+**_mbsnbset** i **_mbsnbset_l** jest podobny do **_mbsnset**, z tą różnicą, że ustawia *liczbę* bajtów, a nie *zlicza* znaki *c*.
 
-Jeśli *str* ma **wartość null** lub *Liczba* jest równa zero, ta funkcja generuje wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Ponadto, jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **EINVAL** i zamiast niego jest używane miejsce.
+Jeśli *str* ma **wartość NULL** lub *liczba* wynosi zero, ta funkcja generuje nieprawidłowy wyjątek parametru opisany w [zatwierdzeniu parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **Wartość EINVAL,** a funkcja zwraca **wartość NULL**. Ponadto jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **wartość EINVAL** i zamiast niej jest używana spacja.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersja **_mbsnbset** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbset_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. **Wersja _mbsnbset** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; _mbsnbset_l **_mbsnbset_l** wersja jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** Ten interfejs API wiąże się z potencjalnym zagrożeniem spowodowanym przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Ten interfejs API powoduje potencjalne zagrożenie spowodowane przez problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -109,7 +114,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -137,7 +142,7 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

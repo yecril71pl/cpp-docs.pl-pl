@@ -34,19 +34,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 926e4e0a795982479188d90ed866bf5e2584c187
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496490"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330973"
 ---
 # <a name="csecuritydesc-class"></a>Klasa CSecurityDesc
 
-Ta klasa jest otoką dla `SECURITY_DESCRIPTOR` struktury.
+Ta klasa jest otoką `SECURITY_DESCRIPTOR` dla struktury.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,53 +67,53 @@ class CSecurityDesc
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSecurityDesc::FromString](#fromstring)|Konwertuje deskryptor zabezpieczeń w formacie ciągu na prawidłowy, funkcjonalny deskryptor zabezpieczeń.|
-|[CSecurityDesc::GetControl](#getcontrol)|Pobiera informacje o kontrolkach z deskryptora zabezpieczeń.|
-|[CSecurityDesc::GetDacl](#getdacl)|Pobiera z deskryptora zabezpieczeń informacje o poufnej liście kontroli dostępu (DACL).|
-|[CSecurityDesc::GetGroup](#getgroup)|Pobiera informacje o grupie podstawowej z deskryptora zabezpieczeń.|
-|[CSecurityDesc::GetOwner](#getowner)|Pobiera właściciela informacji z deskryptora zabezpieczeń.|
+|[CSecurityDesc::Odsłanianie](#fromstring)|Konwertuje deskryptator zabezpieczeń w formacie ciągu na prawidłowy, funkcjonalny deskryptor zabezpieczeń.|
+|[CSecurityDesc::Kontrola](#getcontrol)|Pobiera informacje o kontroli z deskryptora zabezpieczeń.|
+|[CSecurityDesc::GetDacl](#getdacl)|Pobiera informacje o uznaniowej liście kontroli dostępu (DACL) z deskryptora zabezpieczeń.|
+|[CSecurityDesc::Grupa Get](#getgroup)|Pobiera podstawowe informacje o grupie z deskryptora zabezpieczeń.|
+|[CSecurityDesc::Właściciel firmy GetOwn](#getowner)|Pobiera informatora właściciela z deskryptora zabezpieczeń.|
 |[CSecurityDesc::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|Zwraca wskaźnik do `SECURITY_DESCRIPTOR` struktury.|
-|[CSecurityDesc::GetSacl](#getsacl)|Pobiera informacje o systemowej liście kontroli dostępu (SACL) z deskryptora zabezpieczeń.|
-|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|Określa, czy lista DACL jest skonfigurowana do obsługi automatycznego propagacji.|
-|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną LISTą DACL.|
-|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|Określa, czy deskryptor zabezpieczeń zawiera listę DACL.|
-|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|Określa, czy lista DACL jest skonfigurowana do zapobiegania modyfikacji.|
-|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|Określa, czy identyfikator zabezpieczeń grupy (SID) deskryptora zabezpieczeń został ustawiony domyślnie.|
+|[CSecurityDesc::GetSacl](#getsacl)|Pobiera informacje o liście kontroli dostępu do systemu (SACL) z deskryptora zabezpieczeń.|
+|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|Określa, czy funkcja DACL jest skonfigurowana do obsługi automatycznej propagacji.|
+|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną listy DACL.|
+|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|Określa, czy deskryptor zabezpieczeń zawiera listy DACL.|
+|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|Określa, czy dacl jest skonfigurowany, aby zapobiec modyfikacjom.|
+|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|Determines if the security descriptor's group security identifier (SID) was set by default.|
 |[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|Określa, czy identyfikator SID właściciela deskryptora zabezpieczeń został ustawiony domyślnie.|
-|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|Określa, czy lista SACL jest skonfigurowana do obsługi automatycznego propagacji.|
-|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną SACL.|
-|[CSecurityDesc::IsSaclPresent](#issaclpresent)|Określa, czy deskryptor zabezpieczeń zawiera listę SACL.|
-|[CSecurityDesc::IsSaclProtected](#issaclprotected)|Określa, czy lista SACL jest skonfigurowana do zapobiegania modyfikacji.|
-|[CSecurityDesc::IsSelfRelative](#isselfrelative)|Określa, czy deskryptor zabezpieczeń jest w formacie autorelacyjnym.|
-|[CSecurityDesc::MakeAbsolute](#makeabsolute)|Wywołaj tę metodę, aby przekonwertować deskryptor zabezpieczeń na format bezwzględny.|
-|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|Wywołaj tę metodę, aby skonwertować deskryptor zabezpieczeń do formatu samoobsługowego.|
+|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|Określa, czy sacl jest skonfigurowany do obsługi automatycznego propagacji.|
+|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślnym kodem SACL.|
+|[CSecurityDesc::IsSaclPresent](#issaclpresent)|Określa, czy deskryptor zabezpieczeń zawiera kod SACL.|
+|[CSecurityDesc::IsSaclProtected](#issaclprotected)|Określa, czy sacl jest skonfigurowany, aby zapobiec modyfikacjom.|
+|[CSecurityDesc::IsSelfRelative](#isselfrelative)|Określa, czy deskryptor zabezpieczeń jest w formacie samowzejszym.|
+|[CSecurityDesc::MakeAbsolute](#makeabsolute)|Wywołanie tej metody, aby przekonwertować deskryptora zabezpieczeń do formatu bezwzględnego.|
+|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|Wywołanie tej metody, aby przekonwertować deskryptora zabezpieczeń do formatu względnego.|
 |[CSecurityDesc::SetControl](#setcontrol)|Ustawia bity kontrolne deskryptora zabezpieczeń.|
-|[CSecurityDesc::SetDacl](#setdacl)|Ustawia informacje w DACL. Jeśli lista DACL jest już obecna w deskryptorze zabezpieczeń, zostanie zastąpiona.|
-|[CSecurityDesc::SetGroup](#setgroup)|Ustawia informacje o grupie podstawowej deskryptora zabezpieczeń w formacie bezwzględnym, zastępując wszystkie już obecne informacje o grupie podstawowej.|
-|[CSecurityDesc::SetOwner](#setowner)|Ustawia informacje o właścicielu bezwzględnego deskryptora zabezpieczeń, zastępując wszystkie informacje o właścicielu, które już istnieją.|
-|[CSecurityDesc::SetSacl](#setsacl)|Ustawia informacje w SACL. Jeśli lista SACL jest już obecna w deskryptorze zabezpieczeń, zostanie zastąpiona.|
-|[CSecurityDesc:: ToString](#tostring)|Konwertuje deskryptor zabezpieczeń na format ciągu.|
+|[CSecurityDesc::SetDacl](#setdacl)|Ustawia informacje w dacl. Jeśli dacl jest już obecny w deskryptorze zabezpieczeń, jest zastępowany.|
+|[CSecurityDesc::SetGroup](#setgroup)|Ustawia podstawowe informacje o grupie deskryptora zabezpieczeń formatu bezwzględnego, zastępując wszystkie informacje o grupie podstawowej już obecne.|
+|[CSecurityDesc::SetOwner](#setowner)|Ustawia informacje o właścicielu deskryptora zabezpieczeń formatu bezwzględnego, zastępując wszystkie informacje o właścicielu już obecne.|
+|[CSecurityDesc::SetSacl](#setsacl)|Ustawia informacje w sacl. Jeśli sacl jest już obecny w deskryptorze zabezpieczeń, jest zastępowany.|
+|[CSecurityDesc::ToString](#tostring)|Konwertuje deskryptora zabezpieczeń na format ciągu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSecurityDesc:: operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Zwraca wskaźnik do `SECURITY_DESCRIPTOR` struktury.|
-|[CSecurityDesc:: operator =](#operator_eq)|Operator przypisania.|
+|[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Zwraca wskaźnik do `SECURITY_DESCRIPTOR` struktury.|
+|[CSecurityDesc::operator =](#operator_eq)|Operator przypisania.|
 
 ## <a name="remarks"></a>Uwagi
 
-`SECURITY_DESCRIPTOR` Struktura zawiera informacje o zabezpieczeniach skojarzone z obiektem. Aplikacje używają tej struktury do ustawiania stanu zabezpieczeń obiektu i wykonywania względem nich zapytań. Zobacz również [AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor).
+Struktura `SECURITY_DESCRIPTOR` zawiera informacje o zabezpieczeniach skojarzone z obiektem. Aplikacje używają tej struktury do ustawiania i wykonywania zapytań o stan zabezpieczeń obiektu. Zobacz też [AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor).
 
-Aplikacje nie powinny bezpośrednio modyfikować `SECURITY_DESCRIPTOR` struktury, a zamiast tego powinny używać dostarczonych metod klasy.
+Aplikacje nie `SECURITY_DESCRIPTOR` należy modyfikować struktury bezpośrednio, a zamiast tego należy użyć dostarczonych metod klasy.
 
-Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Kontrola dostępu](/windows/win32/SecAuthZ/access-control) w zestaw Windows SDK.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity. h
+**Nagłówek:** atlsecurity.h
 
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc
 
 Konstruktor.
 
@@ -125,14 +125,14 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*RHS*<br/>
-Obiekt lub `SECURITY_DESCRIPTOR` struktura, która ma zostać przypisana `CSecurityDesc` do nowego obiektu. `CSecurityDesc`
+*Rhs*<br/>
+Obiekt `CSecurityDesc` lub `SECURITY_DESCRIPTOR` struktura do przypisania do nowego `CSecurityDesc` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt można opcjonalnie utworzyć `SECURITY_DESCRIPTOR` przy użyciu struktury lub wcześniej zdefiniowanego `CSecurityDesc` obiektu. `CSecurityDesc`
+Obiekt `CSecurityDesc` można opcjonalnie utworzyć `SECURITY_DESCRIPTOR` przy użyciu struktury `CSecurityDesc` lub uprzednio zdefiniowanego obiektu.
 
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="dtor"></a>CSecurityDesc::~CSecurityDesc
 
 Destruktor.
 
@@ -142,11 +142,11 @@ virtual ~CSecurityDesc() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor zwalnia wszystkie przydzieloną zasoby.
+Destruktor zwalnia wszystkie przydzielone zasoby.
 
-##  <a name="fromstring"></a>CSecurityDesc:: FromString
+## <a name="csecuritydescfromstring"></a><a name="fromstring"></a>CSecurityDesc::Odsłanianie
 
-Konwertuje deskryptor zabezpieczeń w formacie ciągu na prawidłowy, funkcjonalny deskryptor zabezpieczeń.
+Konwertuje deskryptator zabezpieczeń w formacie ciągu na prawidłowy, funkcjonalny deskryptor zabezpieczeń.
 
 ```
 bool FromString(LPCTSTR pstr) throw(...);
@@ -154,22 +154,22 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który zawiera [deskryptor zabezpieczeń formatu ciągu](/windows/win32/SecAuthZ/security-descriptor-string-format) do przekonwertowania.
+*pstr (włas inie*<br/>
+Wskaźnik do ciągu zakończonego zerem, który zawiera [deskryptator zabezpieczeń w formacie ciągu](/windows/win32/SecAuthZ/security-descriptor-string-format) do konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true w przypadku powodzenia. Zgłasza wyjątek w przypadku niepowodzenia.
+Powraca prawdziwe na sukces. Zgłasza wyjątek na błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Ciąg można utworzyć za pomocą [CSecurityDesc:: ToString](#tostring). Konwertowanie deskryptora zabezpieczeń na ciąg ułatwia ich przechowywanie i przesyłanie.
+Ciąg można utworzyć za pomocą [CSecurityDesc::ToString](#tostring). Konwersja deskryptora zabezpieczeń na ciąg ułatwia przechowywanie i przesyłanie.
 
-Ta metoda wywołuje [podczas operacji convertstringsecuritydescriptortosecuritydescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
+Ta metoda wywołuje [ConvertStringSecurityDescriptorToDescriptor .](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)
 
-##  <a name="getcontrol"></a>CSecurityDesc:: GetControl
+## <a name="csecuritydescgetcontrol"></a><a name="getcontrol"></a>CSecurityDesc::Kontrola
 
-Pobiera informacje o kontrolkach z deskryptora zabezpieczeń.
+Pobiera informacje o kontroli z deskryptora zabezpieczeń.
 
 ```
 bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
@@ -178,19 +178,19 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="parameters"></a>Parametry
 
 *psdc*<br/>
-Wskaźnik na `SECURITY_DESCRIPTOR_CONTROL` strukturę, która otrzymuje informacje sterujące deskryptora zabezpieczeń.
+Wskaźnik do `SECURITY_DESCRIPTOR_CONTROL` struktury, która odbiera informacje sterujące deskryptora zabezpieczeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli metoda zakończy się pomyślnie, FAŁSZ, jeśli to się nie powiedzie.
+Zwraca wartość true, jeśli metoda powiedzie się, false, jeśli nie powiedzie się.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda wywołuje [GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
-##  <a name="getdacl"></a>CSecurityDesc:: GetDacl
+## <a name="csecuritydescgetdacl"></a><a name="getdacl"></a>CSecurityDesc::GetDacl
 
-Pobiera z deskryptora zabezpieczeń informacje o poufnej liście kontroli dostępu (DACL).
+Pobiera informacje o uznaniowej liście kontroli dostępu (DACL) z deskryptora zabezpieczeń.
 
 ```
 bool GetDacl(
@@ -201,22 +201,22 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pDacl*<br/>
-Wskaźnik na `CDacl` strukturę, w której ma być przechowywana kopia listy DACL deskryptora zabezpieczeń. Jeśli istnieje poufna lista kontroli dostępu, Metoda ustawia *pDacl* na adres poufnej listy kontroli dostępu deskryptora zabezpieczeń. Jeśli lista DACL nie istnieje, nie jest przechowywana żadna wartość.
+*pDacl (pDacl)*<br/>
+Wskaźnik do `CDacl` struktury, w której ma być przechowywana kopia listy DACL deskryptora zabezpieczeń. Jeśli istnieje uznaniowa ACL, metoda ustawia *pDacl* na adres uznaniowej listy ACL deskryptora zabezpieczeń. Jeśli uznaniowa acl nie istnieje, żadna wartość nie jest przechowywana.
 
-*pbPresent*<br/>
-Wskaźnik na wartość wskazującą obecność poufnej listy ACL w określonym deskryptorze zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera poufną listę kontroli dostępu, ten parametr ma wartość true. Jeśli deskryptor zabezpieczeń nie zawiera poufnej listy kontroli dostępu, ten parametr jest ustawiany na wartość false.
+*pbPrezentowanie*<br/>
+Wskaźnik do wartości, która wskazuje obecność uznaniowej listy ACL w określonym deskryptorze zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera uznaniowącl ACL, ten parametr jest ustawiony na true. Jeśli deskryptor zabezpieczeń nie zawiera uznaniowej listy ACL, ten parametr jest ustawiony na false.
 
-*pbDefaulted*<br/>
-Wskaźnik do flagi ustawionej na wartość flagi SE_DACL_DEFAULTED w strukturze, `SECURITY_DESCRIPTOR_CONTROL` Jeśli istnieje poufna lista kontroli dostępu dla deskryptora zabezpieczeń. Jeśli ta flaga ma wartość true, poufna lista ACL została pobrana przy użyciu domyślnego mechanizmu; w przypadku wartości "false" poufny list ACL został jawnie określony przez użytkownika.
+*pbDefaulted (Nieobeczone)*<br/>
+Wskaźnik do flagi ustawionej na wartość flagi SE_DACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` w strukturze, jeśli istnieje uznaniowa listy ACL dla deskryptora zabezpieczeń. Jeśli ta flaga jest prawdziwa, uznaniowa listy ACL została pobrana przez domyślny mechanizm; jeśli false, uznaniowe ACL został jawnie określony przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli metoda zakończy się pomyślnie, FAŁSZ, jeśli to się nie powiedzie.
+Zwraca wartość true, jeśli metoda powiedzie się, false, jeśli nie powiedzie się.
 
-##  <a name="getgroup"></a>CSecurityDesc:: getGroup
+## <a name="csecuritydescgetgroup"></a><a name="getgroup"></a>CSecurityDesc::Grupa Get
 
-Pobiera informacje o grupie podstawowej z deskryptora zabezpieczeń.
+Pobiera podstawowe informacje o grupie z deskryptora zabezpieczeń.
 
 ```
 bool GetGroup(
@@ -226,19 +226,19 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*Pusty PSID*<br/>
-Wskaźnik do identyfikatora [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), który otrzymuje kopię grupy przechowywanej w CDacl.
+*pSid*<br/>
+Wskaźnik do [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), który odbiera kopię grupy przechowywane w CDacl.
 
-*pbDefaulted*<br/>
-Wskaźnik do flagi ustawionej na wartość flagi SE_GROUP_DEFAULTED w strukturze, `SECURITY_DESCRIPTOR_CONTROL` gdy metoda zwraca.
+*pbDefaulted (Nieobeczone)*<br/>
+Wskaźnik do flagi ustawionej na wartość flagi SE_GROUP_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` w strukturze, gdy metoda zwraca.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli metoda zakończy się pomyślnie, FAŁSZ, jeśli to się nie powiedzie.
+Zwraca wartość true, jeśli metoda powiedzie się, false, jeśli nie powiedzie się.
 
-##  <a name="getowner"></a>CSecurityDesc:: getOwner
+## <a name="csecuritydescgetowner"></a><a name="getowner"></a>CSecurityDesc::Właściciel firmy GetOwn
 
-Pobiera właściciela informacji z deskryptora zabezpieczeń.
+Pobiera informatora właściciela z deskryptora zabezpieczeń.
 
 ```
 bool GetOwner(
@@ -248,17 +248,17 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Parametry
 
-*Pusty PSID*<br/>
-Wskaźnik do identyfikatora [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), który otrzymuje kopię grupy przechowywanej w CDacl.
+*pSid*<br/>
+Wskaźnik do [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), który odbiera kopię grupy przechowywane w CDacl.
 
-*pbDefaulted*<br/>
-Wskaźnik do flagi ustawionej na wartość flagi SE_OWNER_DEFAULTED w strukturze, `SECURITY_DESCRIPTOR_CONTROL` gdy metoda zwraca.
+*pbDefaulted (Nieobeczone)*<br/>
+Wskaźnik do flagi ustawionej na wartość flagi SE_OWNER_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` w strukturze, gdy metoda zwraca.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli metoda zakończy się pomyślnie, FAŁSZ, jeśli to się nie powiedzie.
+Zwraca wartość true, jeśli metoda powiedzie się, false, jeśli nie powiedzie się.
 
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR
+## <a name="csecuritydescgetpsecurity_descriptor"></a><a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR
 
 Zwraca wskaźnik do `SECURITY_DESCRIPTOR` struktury.
 
@@ -268,11 +268,11 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do struktury [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) .
+Zwraca wskaźnik do struktury [SECURITY_DESCRIPTOR.](/windows/win32/api/winnt/ns-winnt-security_descriptor)
 
-##  <a name="getsacl"></a>CSecurityDesc:: getsacl
+## <a name="csecuritydescgetsacl"></a><a name="getsacl"></a>CSecurityDesc::GetSacl
 
-Pobiera informacje o systemowej liście kontroli dostępu (SACL) z deskryptora zabezpieczeń.
+Pobiera informacje o liście kontroli dostępu do systemu (SACL) z deskryptora zabezpieczeń.
 
 ```
 bool GetSacl(
@@ -283,22 +283,22 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pSacl*<br/>
-Wskaźnik na `CSacl` strukturę, w której ma być przechowywana kopia listy SACL deskryptora zabezpieczeń. Jeśli istnieje systemowa lista kontroli dostępu, Metoda ustawia *pSacl* na adres listy ACL systemu deskryptora zabezpieczeń. Jeśli lista ACL systemu nie istnieje, nie jest przechowywana żadna wartość.
+*pSacl (właswoi)*<br/>
+Wskaźnik do `CSacl` struktury, w której ma być przechowywana kopia deskryptora zabezpieczeń SACL. Jeśli systemowa listy ACL istnieje, metoda ustawia *pSacl* na adres listy ACL systemu deskryptora zabezpieczeń. Jeśli systemowa listy ACL nie istnieje, nie jest przechowywana żadna wartość.
 
-*pbPresent*<br/>
-Wskaźnik do flagi ustawia metodę, aby wskazać obecność listy ACL systemu w określonym deskryptorze zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera systemową listę kontroli dostępu, ten parametr ma wartość true. Jeśli deskryptor zabezpieczeń nie zawiera systemowej listy kontroli dostępu, ten parametr jest ustawiany na wartość false.
+*pbPrezentowanie*<br/>
+Wskaźnik do flagi ustawia metodę, aby wskazać obecność listy ACL systemu w określonym deskryptorze zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera systemowącl, ten parametr jest ustawiony na true. Jeśli deskryptor zabezpieczeń nie zawiera listy ACL systemu, ten parametr jest ustawiony na false.
 
-*pbDefaulted*<br/>
-Wskaźnik do flagi ustawionej na wartość flagi SE_SACL_DEFAULTED w strukturze, `SECURITY_DESCRIPTOR_CONTROL` Jeśli istnieje lista ACL systemu dla deskryptora zabezpieczeń.
+*pbDefaulted (Nieobeczone)*<br/>
+Wskaźnik do flagi ustawionej na wartość flagi SE_SACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` w strukturze, jeśli istnieje systemowa listy ACL dla deskryptora zabezpieczeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli metoda zakończy się pomyślnie, FAŁSZ, jeśli to się nie powiedzie.
+Zwraca wartość true, jeśli metoda powiedzie się, false, jeśli nie powiedzie się.
 
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited
+## <a name="csecuritydescisdaclautoinherited"></a><a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited
 
-Określa, czy lista arbitralnej kontroli dostępu (DACL) jest skonfigurowana do obsługi automatycznego propagacji.
+Określa, czy uznaniowa lista kontroli dostępu (DACL) jest skonfigurowana do obsługi automatycznego propagacji.
 
 ```
 bool IsDaclAutoInherited() const throw();
@@ -306,15 +306,15 @@ bool IsDaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera listę DACL, która jest skonfigurowana do obsługi automatycznej propagacji dziedziczonych wpisów kontroli dostępu (ACE) do istniejących obiektów podrzędnych. W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli deskryptor zabezpieczeń zawiera listy DACL skonfigurowane do obsługi automatycznego propagacji dziedziczonych wpisów kontroli dostępu (ACE) do istniejących obiektów podrzędnych. W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
 System ustawia ten bit, gdy wykonuje algorytm automatycznego dziedziczenia dla obiektu i jego istniejących obiektów podrzędnych.
 
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted
+## <a name="csecuritydescisdacldefaulted"></a><a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted
 
-Określa, czy deskryptor zabezpieczeń jest skonfigurowany przy użyciu domyślnej poufnej listy kontroli dostępu (DACL).
+Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną dyskrecjonalistym listą kontroli dostępu (DACL).
 
 ```
 bool IsDaclDefaulted() const throw();
@@ -322,19 +322,19 @@ bool IsDaclDefaulted() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera domyślną listę DACL, FAŁSZ w przeciwnym razie.
+Wartość true, jeśli deskryptor zabezpieczeń zawiera domyślną liczbę dacl, w przeciwnym razie wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta flaga może mieć wpływ na sposób traktowania listy DACL przez system w odniesieniu do dziedziczenia wpisów kontroli dostępu (ACE). Na przykład jeśli twórca obiektu nie określa listy DACL, obiekt otrzymuje domyślną listę DACL z tokenu dostępu twórcy. System ignoruje tę flagę, jeśli flaga SE_DACL_PRESENT nie została ustawiona.
+Ta flaga może mieć wpływ na sposób, w jaki system traktuje DACL w odniesieniu do dziedziczenia wpisu kontroli dostępu (ACE). Na przykład jeśli twórca obiektu nie określi listy DACL, obiekt otrzyma domyślną listy DACL z tokenu dostępu twórcy. System ignoruje tę flagę, jeśli flaga SE_DACL_PRESENT nie jest ustawiona.
 
-Ta flaga służy do określenia, jak Ostatnia lista DACL na obiekcie ma być obliczana i nie jest fizycznie przechowywana w kontroli deskryptora zabezpieczeń obiektu zabezpieczanego.
+Ta flaga jest używana do określenia sposobu obliczania ostatecznej listy DACL na obiekcie i nie jest przechowywana fizycznie w formancie deskryptora zabezpieczeń zabezpieczanego obiektu.
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetDacl](#setdacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetDacl](#setdacl) metody.
 
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent
+## <a name="csecuritydescisdaclpresent"></a><a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent
 
-Określa, czy deskryptor zabezpieczeń zawiera poufną listę kontroli dostępu (DACL).
+Określa, czy deskryptor zabezpieczeń zawiera uznaniową listę kontroli dostępu (DACL).
 
 ```
 bool IsDaclPresent() const throw();
@@ -342,19 +342,19 @@ bool IsDaclPresent() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli deskryptor zabezpieczeń zawiera listę DACL, w przeciwnym razie false.
+Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera listy DACL, w przeciwnym razie false.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta flaga nie jest ustawiona lub jeśli ta flaga jest ustawiona, a lista DACL ma wartość NULL, deskryptor zabezpieczeń zezwoli na pełny dostęp do wszystkich.
+Jeśli ta flaga nie jest ustawiona lub jeśli ta flaga jest ustawiona, a funkcja DACL ma wartość NULL, deskryptor zabezpieczeń umożliwia pełny dostęp do wszystkich.
 
-Ta flaga służy do przechowywania informacji o zabezpieczeniach określonych przez obiekt wywołujący do momentu skojarzenia deskryptora zabezpieczeń z zabezpieczanym obiektem. Po skojarzeniu deskryptora zabezpieczeń z obiektem zabezpieczonym flaga SE_DACL_PRESENT jest zawsze ustawiana w kontrolce deskryptora zabezpieczeń.
+Ta flaga jest używana do przechowywania informacji o zabezpieczeniach określonych przez obiekt wywołujący, dopóki deskryptor zabezpieczeń nie zostanie skojarzony z zabezpieczalnym obiektem. Po skojarzeniu deskryptora zabezpieczeń z zabezpieczanym obiektem flaga SE_DACL_PRESENT jest zawsze ustawiana w formancie deskryptora zabezpieczeń.
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetDacl](#setdacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetDacl](#setdacl) metody.
 
-##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected
+## <a name="csecuritydescisdaclprotected"></a><a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected
 
-Określa, czy lista arbitralnej kontroli dostępu (DACL) jest skonfigurowana tak, aby zapobiec modyfikowaniu.
+Określa, czy dyskrecjonacyjna lista kontroli dostępu (DACL) jest skonfigurowana tak, aby zapobiegać modyfikacjom.
 
 ```
 bool IsDaclProtected() const throw();
@@ -362,17 +362,17 @@ bool IsDaclProtected() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli lista DACL jest skonfigurowana tak, aby zapobiec modyfikowaniu deskryptora zabezpieczeń przez dziedziczenie wpisów kontroli dostępu (ACE). W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli funkcja DACL jest skonfigurowana tak, aby zapobiec modyfikowaniu deskryptora zabezpieczeń przez dziedziczne wpisy kontroli dostępu (ACE). W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetDacl](#setdacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetDacl](#setdacl) metody.
 
-Ta metoda obsługuje automatyczną propagację dziedziczonych ACE.
+Ta metoda obsługuje automatyczne propagowanie dziedziczonych ACE.
 
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted
+## <a name="csecuritydescisgroupdefaulted"></a><a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted
 
-Określa, czy identyfikator zabezpieczeń grupy (SID) deskryptora zabezpieczeń został ustawiony domyślnie.
+Determines if the security descriptor's group security identifier (SID) was set by default.
 
 ```
 bool IsGroupDefaulted() const throw();
@@ -380,15 +380,15 @@ bool IsGroupDefaulted() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli domyślny mechanizm, a nie oryginalny dostawca deskryptora zabezpieczeń, dostarczył identyfikator SID grupy deskryptora zabezpieczeń. W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli domyślny mechanizm, a nie oryginalny dostawca deskryptora zabezpieczeń, pod warunkiem, że identyfikator SID grupy zabezpieczeń. W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetGroup](#setgroup) .
+Aby ustawić tę flagę, użyj [metody CSecurityDesc::SetGroup.](#setgroup)
 
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted
+## <a name="csecuritydescisownerdefaulted"></a><a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted
 
-Określa, czy identyfikator zabezpieczeń właściciela (SID) deskryptora zabezpieczeń został ustawiony domyślnie.
+Określa, czy identyfikator zabezpieczeń właściciela deskryptora zabezpieczeń zabezpieczeń (SID) został ustawiony domyślnie.
 
 ```
 bool IsOwnerDefaulted() const throw();
@@ -396,15 +396,15 @@ bool IsOwnerDefaulted() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli domyślny mechanizm, a nie oryginalny dostawca deskryptora zabezpieczeń, dostarczył identyfikator SID właściciela deskryptora zabezpieczeń. W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli domyślny mechanizm, a nie oryginalny dostawca deskryptora zabezpieczeń, pod warunkiem, że identyfikator SID właściciela deskryptora zabezpieczeń. W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetOwner](#setowner) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetOwner](#setowner) metody.
 
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited
+## <a name="csecuritydescissaclautoinherited"></a><a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited
 
-Określa, czy systemowa lista kontroli dostępu (SACL) jest skonfigurowana do obsługi automatycznego propagacji.
+Określa, czy lista kontroli dostępu do systemu (SACL) jest skonfigurowana do obsługi automatycznego propagacji.
 
 ```
 bool IsSaclAutoInherited() const throw();
@@ -412,15 +412,15 @@ bool IsSaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera listę SACL, która została skonfigurowana do obsługi automatycznej propagacji dziedziczonych wpisów kontroli dostępu (ACE) do istniejących obiektów podrzędnych. W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli deskryptor zabezpieczeń zawiera kod SACL skonfigurowany do obsługi automatycznego propagacji dziedziczonych wpisów kontroli dostępu (ACE) do istniejących obiektów podrzędnych. W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
 System ustawia ten bit, gdy wykonuje algorytm automatycznego dziedziczenia dla obiektu i jego istniejących obiektów podrzędnych.
 
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted
+## <a name="csecuritydescissacldefaulted"></a><a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted
 
-Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną systemową listą kontroli dostępu (SACL).
+Określa, czy deskryptor zabezpieczeń jest skonfigurowany z domyślną listą kontroli dostępu do systemu (SACL).
 
 ```
 bool IsSaclDefaulted() const throw();
@@ -428,17 +428,17 @@ bool IsSaclDefaulted() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera domyślną listę SACL, w przeciwnym razie false.
+Wartość true, jeśli deskryptor zabezpieczeń zawiera domyślny kod SACL, w przeciwnym razie wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta flaga może mieć wpływ na sposób traktowania listy SACL przez system w odniesieniu do dziedziczenia wpisu kontroli dostępu (ACE). System ignoruje tę flagę, jeśli flaga SE_SACL_PRESENT nie została ustawiona.
+Ta flaga może mieć wpływ na sposób, w jaki system traktuje SACL w odniesieniu do dziedziczenia wpisu kontroli dostępu (ACE). System ignoruje tę flagę, jeśli flaga SE_SACL_PRESENT nie jest ustawiona.
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetSacl](#setsacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetSacl](#setsacl) metody.
 
-##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent
+## <a name="csecuritydescissaclpresent"></a><a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent
 
-Określa, czy deskryptor zabezpieczeń zawiera systemową listę kontroli dostępu (SACL).
+Określa, czy deskryptor zabezpieczeń zawiera listę kontroli dostępu do systemu (SACL).
 
 ```
 bool IsSaclPresent() const throw();
@@ -446,15 +446,15 @@ bool IsSaclPresent() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli deskryptor zabezpieczeń zawiera listę SACL, w przeciwnym razie false.
+Zwraca wartość true, jeśli deskryptor zabezpieczeń zawiera kod SACL, w przeciwnym razie false.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetSacl](#setsacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetSacl](#setsacl) metody.
 
-##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected
+## <a name="csecuritydescissaclprotected"></a><a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected
 
-Określa, czy systemowa lista kontroli dostępu (SACL) jest skonfigurowana tak, aby zapobiec modyfikowaniu.
+Określa, czy lista kontroli dostępu do systemu (SACL) jest skonfigurowana w celu zapobiegania modyfikacjom.
 
 ```
 bool IsSaclProtected() const throw();
@@ -462,17 +462,17 @@ bool IsSaclProtected() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli lista SACL jest skonfigurowana tak, aby zapobiec modyfikowaniu deskryptora zabezpieczeń przez dziedziczenie wpisów kontroli dostępu (ACE). W przeciwnym razie zwraca wartość false.
+Wartość true, jeśli kod SACL jest skonfigurowany tak, aby zapobiec modyfikowaniu deskryptora zabezpieczeń przez dziedziczne wpisy kontroli dostępu (ACE). W przeciwnym razie zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tę flagę, użyj metody [CSecurityDesc:: SetSacl](#setsacl) .
+Aby ustawić tę flagę, należy użyć [CSecurityDesc::SetSacl](#setsacl) metody.
 
-Ta metoda obsługuje automatyczną propagację dziedziczonych ACE.
+Ta metoda obsługuje automatyczne propagowanie dziedziczonych ACE.
 
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative
+## <a name="csecuritydescisselfrelative"></a><a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative
 
-Określa, czy deskryptor zabezpieczeń jest w formacie autorelacyjnym.
+Określa, czy deskryptor zabezpieczeń jest w formacie samowzejszym.
 
 ```
 bool IsSelfRelative() const throw();
@@ -480,11 +480,11 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli deskryptor zabezpieczeń jest w formacie samodzielnym ze wszystkimi informacjami o zabezpieczeniach w ciągłym bloku pamięci. Zwraca wartość false, jeśli deskryptor zabezpieczeń jest w formacie bezwzględnym. Aby uzyskać więcej informacji, zobacz bezwzględne [i samodzielne deskryptory zabezpieczeń](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Wartość true, jeśli deskryptor zabezpieczeń jest w formacie samowzejszym ze wszystkimi informacjami o zabezpieczeniach w ciągłym bloku pamięci. Zwraca wartość false, jeśli deskryptor zabezpieczeń jest w formacie bezwzględnym. Aby uzyskać więcej informacji, zobacz [Deskryptory bezpieczeństwa bezwzględnego i względnego](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute
+## <a name="csecuritydescmakeabsolute"></a><a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute
 
-Wywołaj tę metodę, aby przekonwertować deskryptor zabezpieczeń na format bezwzględny.
+Wywołanie tej metody, aby przekonwertować deskryptora zabezpieczeń do formatu bezwzględnego.
 
 ```
 bool MakeAbsolute() throw(...);
@@ -492,15 +492,15 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli metoda się powiedzie, w przeciwnym razie false.
+Zwraca wartość true, jeśli metoda powiedzie się, false inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Deskryptor zabezpieczeń w formacie bezwzględnym zawiera wskaźniki do informacji, które zawiera, a nie samych informacji. Deskryptor zabezpieczeń w formacie samodzielnym zawiera informacje w ciągłym bloku pamięci. W przypadku samodzielnego deskryptora zabezpieczeń, `SECURITY_DESCRIPTOR` struktura zawsze uruchamia te informacje, ale inne składniki deskryptora zabezpieczeń mogą śledzić strukturę w dowolnej kolejności. Zamiast korzystać z adresów pamięci, składniki deskryptora zabezpieczeń samodzielnego są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest przydatny, gdy deskryptor zabezpieczeń musi być przechowywany na dysku lub przesłany przy użyciu protokołu komunikacyjnego. Aby uzyskać więcej informacji, zobacz bezwzględne [i samodzielne deskryptory zabezpieczeń](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Deskryptor zabezpieczeń w formacie bezwzględnym zawiera wskaźniki do informacji, które zawiera, a nie do samych informacji. Deskryptor zabezpieczeń w formacie samowzejszym zawiera informacje w ciągłym bloku pamięci. W samowymiarowym deskryptorze `SECURITY_DESCRIPTOR` zabezpieczeń struktura zawsze uruchamia informacje, ale inne składniki deskryptora zabezpieczeń mogą śledzić strukturę w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń względnych są identyfikowane przez odsunięcia od początku deskryptora zabezpieczeń. Ten format jest przydatny, gdy deskryptor zabezpieczeń musi być przechowywany na dysku lub przesyłany za pomocą protokołu komunikacyjnego. Aby uzyskać więcej informacji, zobacz [Deskryptory bezpieczeństwa bezwzględnego i względnego](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative
+## <a name="csecuritydescmakeselfrelative"></a><a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative
 
-Wywołaj tę metodę, aby skonwertować deskryptor zabezpieczeń do formatu samoobsługowego.
+Wywołanie tej metody, aby przekonwertować deskryptora zabezpieczeń do formatu względnego.
 
 ```
 bool MakeSelfRelative() throw(...);
@@ -508,13 +508,13 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli metoda się powiedzie, w przeciwnym razie false.
+Zwraca wartość true, jeśli metoda powiedzie się, false inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Deskryptor zabezpieczeń w formacie bezwzględnym zawiera wskaźniki do informacji, które zawiera, a nie zawierające same informacje. Deskryptor zabezpieczeń w formacie samodzielnym zawiera informacje w ciągłym bloku pamięci. W przypadku samodzielnego deskryptora zabezpieczeń, `SECURITY_DESCRIPTOR` struktura zawsze uruchamia te informacje, ale inne składniki deskryptora zabezpieczeń mogą śledzić strukturę w dowolnej kolejności. Zamiast korzystać z adresów pamięci, składniki deskryptora zabezpieczeń są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest przydatny, gdy deskryptor zabezpieczeń musi być przechowywany na dysku lub przesłany przy użyciu protokołu komunikacyjnego. Aby uzyskać więcej informacji, zobacz bezwzględne [i samodzielne deskryptory zabezpieczeń](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Deskryptor zabezpieczeń w formacie bezwzględnym zawiera wskaźniki do informacji, które zawiera, a nie zawierające same informacje. Deskryptor zabezpieczeń w formacie samowzejszym zawiera informacje w ciągłym bloku pamięci. W samowymiarowym deskryptorze `SECURITY_DESCRIPTOR` zabezpieczeń struktura zawsze uruchamia informacje, ale inne składniki deskryptora zabezpieczeń mogą śledzić strukturę w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest przydatny, gdy deskryptor zabezpieczeń musi być przechowywany na dysku lub przesyłany za pomocą protokołu komunikacyjnego. Aby uzyskać więcej informacji, zobacz [Deskryptory bezpieczeństwa bezwzględnego i względnego](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-##  <a name="operator_eq"></a>CSecurityDesc:: operator =
+## <a name="csecuritydescoperator-"></a><a name="operator_eq"></a>CSecurityDesc::operator =
 
 Operator przypisania.
 
@@ -525,22 +525,22 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*RHS*<br/>
-`SECURITY_DESCRIPTOR` Struktura lub `CSecurityDesc` obiekt`CSecurityDesc` , który ma zostać przypisany do obiektu.
+*Rhs*<br/>
+Struktura `SECURITY_DESCRIPTOR` lub `CSecurityDesc` obiekt do `CSecurityDesc` przypisania do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaktualizowany `CSecurityDesc` obiekt.
 
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc:: operator const SECURITY_DESCRIPTOR *
+## <a name="csecuritydescoperator-const-security_descriptor-"></a><a name="operator_const_security_descriptor__star"></a>CSecurityDesc::operator const SECURITY_DESCRIPTOR *
 
-Rzutuje wartość na wskaźnik do `SECURITY_DESCRIPTOR` struktury.
+Rzutuje wartość do wskaźnika `SECURITY_DESCRIPTOR` do struktury.
 
 ```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
-##  <a name="setcontrol"></a>  CSecurityDesc::SetControl
+## <a name="csecuritydescsetcontrol"></a><a name="setcontrol"></a>CSecurityDesc::SetControl
 
 Ustawia bity kontrolne deskryptora zabezpieczeń.
 
@@ -553,10 +553,10 @@ bool SetControl(
 ### <a name="parameters"></a>Parametry
 
 *ControlBitsOfInterest*<br/>
-Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje bity sterujące do ustawienia. Aby uzyskać listę flag, które można ustawiać, zobacz [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje bity formantu do ustawionego. Aby uzyskać listę flag, które można ustawić, zobacz [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
-*ControlBitsToSet*<br/>
-Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje nowe wartości dla bitów kontroli określonych przez maskę *ControlBitsOfInterest* . Ten parametr może być kombinacją flag wymienionych dla parametru *ControlBitsOfInterest* .
+*Zestaw ControlBitsToSet*<br/>
+Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje nowe wartości dla bitów kontrolnych określonych przez *ControlBitsOfInterest* maski. Ten parametr może być kombinacją flag wymienionych dla *parametru ControlBitsOfInterest.*
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -566,9 +566,9 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 Ta metoda wywołuje [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
-##  <a name="setdacl"></a>CSecurityDesc:: SetDacl
+## <a name="csecuritydescsetdacl"></a><a name="setdacl"></a>CSecurityDesc::SetDacl
 
-Ustawia informacje na poufnej liście kontroli dostępu (DACL). Jeśli lista DACL jest już obecna w deskryptorze zabezpieczeń, zostanie zastąpiona.
+Ustawia informacje na uznaniowej liście kontroli dostępu (DACL). Jeśli dacl jest już obecny w deskryptorze zabezpieczeń, jest zastępowany.
 
 ```
 inline void SetDacl(
@@ -582,14 +582,14 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*Lista*<br/>
-Odwołanie do `CDacl` obiektu określającego listę DACL dla deskryptora zabezpieczeń. Ten parametr nie może mieć wartości NULL. Aby ustawić listę DACL o wartości NULL w deskryptorze zabezpieczeń, należy użyć pierwszej formy metody z opcją *bPresent* ustawioną na wartość false.
+*Dacl*<br/>
+Odwołanie do `CDacl` obiektu określającego listy DACL dla deskryptora zabezpieczeń. Ten parametr nie może być null. Aby ustawić null DACL w deskryptorze zabezpieczeń, pierwsza forma metody powinna być używana z *bPresent* ustawiona na false.
 
-*bPresent*<br/>
-Określa flagę wskazującą obecność listy DACL w deskryptorze zabezpieczeń. Jeśli ten parametr ma wartość true, Metoda ustawia flagę SE_DACL_PRESENT w `SECURITY_DESCRIPTOR_CONTROL` strukturze i używa wartości z parametrów *DACL* i *bDefaulted* . Jeśli ma wartość false, Metoda czyści flagę SE_DACL_PRESENT, a *bDefaulted* jest ignorowana.
+*bPrezentowanie*<br/>
+Określa flagę wskazującą obecność listy DACL w deskryptorze zabezpieczeń. Jeśli ten parametr jest true, metoda ustawia flagę SE_DACL_PRESENT w `SECURITY_DESCRIPTOR_CONTROL` strukturze i używa wartości w *Dacl* i *bDefaulted* parametrów. Jeśli jest false, metoda czyści flagę SE_DACL_PRESENT, a *bDefaulted* jest ignorowana.
 
-*bDefaulted*<br/>
-Określa flagę wskazującą źródło listy DACL. Jeśli ta flaga ma wartość true, lista DACL została pobrana przez jakiś domyślny mechanizm. W przypadku wartości false lista DACL została jawnie określona przez użytkownika. Metoda przechowuje tę wartość w flagi `SECURITY_DESCRIPTOR_CONTROL` SE_DACL_DEFAULTED struktury. Jeśli ten parametr nie jest określony, flaga SE_DACL_DEFAULTED jest wyczyszczona.
+*bDefaulted (Niewzłocha)*<br/>
+Określa flagę wskazującą źródło listy DACL. Jeśli ta flaga jest true, DACL został pobrany przez jakiś domyślny mechanizm. Jeśli false, DACL został jawnie określony przez użytkownika. Metoda przechowuje tę wartość w SE_DACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` flagi struktury. Jeśli ten parametr nie jest określony, flaga SE_DACL_DEFAULTED jest wyczyszczona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -597,11 +597,11 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieje ważna różnica między pustą i nieistniejącą LISTą DACL. Gdy lista DACL jest pusta, nie zawiera żadnych wpisów kontroli dostępu, a prawa dostępu nie zostały jawnie przyznane. W efekcie dostęp do obiektu jest niejawnie zabroniony. Jeśli obiekt nie ma listy DACL, z drugiej strony nie jest przypisana żadna ochrona do obiektu i zostanie udzielone wszelkie żądanie dostępu.
+Istnieje istotna różnica między pustym a nieistniejącym DACL. Gdy dacl jest pusty, zawiera żadnych wpisów kontroli dostępu i nie prawa dostępu zostały jawnie przyznane. W rezultacie dostęp do obiektu jest niejawnie odmówiony. Gdy obiekt nie ma listy DACL, z drugiej strony, nie jest przypisana żadna ochrona do obiektu i każde żądanie dostępu jest przyznawane.
 
-##  <a name="setgroup"></a>CSecurityDesc:: SetGroup
+## <a name="csecuritydescsetgroup"></a><a name="setgroup"></a>CSecurityDesc::SetGroup
 
-Ustawia informacje o grupie podstawowej deskryptora zabezpieczeń w formacie bezwzględnym, zastępując wszystkie już obecne informacje o grupie podstawowej.
+Ustawia podstawowe informacje o grupie deskryptora zabezpieczeń formatu bezwzględnego, zastępując wszystkie informacje o grupie podstawowej już obecne.
 
 ```
 bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -609,19 +609,19 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*SID*<br/>
-Odwołanie do obiektu [CSid](../../atl/reference/csid-class.md) dla nowej grupy podstawowej deskryptora zabezpieczeń. Ten parametr nie może mieć wartości NULL. Deskryptor zabezpieczeń można oznaczyć jako niemający listy DACL lub SACL, ale musi mieć grupę i właściciela, nawet jeśli są to identyfikatory SID o wartości NULL (który jest wbudowanym identyfikatorem SID o specjalnym znaczeniu).
+*Sid*<br/>
+Odwołanie do obiektu [CSid](../../atl/reference/csid-class.md) dla nowej grupy podstawowej deskryptora zabezpieczeń. Ten parametr nie może być null. Deskryptor zabezpieczeń może być oznaczony jako nie posiadający DACL lub SACL, ale musi mieć grupę i właściciela, nawet to są to NULL SID (który jest wbudowanym identyfikatorem SID o specjalnym znaczeniu).
 
-*bDefaulted*<br/>
-Wskazuje, czy informacje o grupie podstawowej były uzyskiwane z poziomu domyślnego. Jeśli wartość jest równa true, jest to informacja domyślna, a metoda przechowuje tę wartość jako flagę SE_GROUP_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` strukturze. Jeśli ten parametr ma wartość zero, flaga SE_GROUP_DEFAULTED jest wyczyszczona.
+*bDefaulted (Niewzłocha)*<br/>
+Wskazuje, czy podstawowe informacje o grupie zostały uzyskane z domyślnego mechanizmu. Jeśli ta wartość jest true, jest to informacje domyślne, a metoda przechowuje tę wartość jako flagę SE_GROUP_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` strukturze. Jeśli ten parametr wynosi zero, flaga SE_GROUP_DEFAULTED jest wyczyszczona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.
 
-##  <a name="setowner"></a>  CSecurityDesc::SetOwner
+## <a name="csecuritydescsetowner"></a><a name="setowner"></a>CSecurityDesc::SetOwner
 
-Ustawia informacje o właścicielu deskryptora zabezpieczeń w formacie bezwzględnym. Zastępuje wszystkie informacje o właścicielu już obecne.
+Ustawia informacje o właścicielu deskryptora zabezpieczeń formatu bezwzględnego. Zastępuje wszystkie informacje o właścicielu już obecne.
 
 ```
 bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -629,19 +629,19 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*SID*<br/>
-Obiekt [CSid](../../atl/reference/csid-class.md) dla nowego podstawowego właściciela deskryptora zabezpieczeń. Ten parametr nie może mieć wartości NULL.
+*Sid*<br/>
+[CSid](../../atl/reference/csid-class.md) obiektu dla nowego właściciela głównego deskryptora zabezpieczeń. Ten parametr nie może być null.
 
-*bDefaulted*<br/>
-Wskazuje, czy informacje o właścicielu pochodzą od domyślnego mechanizmu. Jeśli wartość jest równa true, jest to informacja domyślna. Metoda przechowuje tę wartość jako flagę SE_OWNER_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` strukturze. Jeśli ten parametr ma wartość zero, flaga SE_OWNER_DEFAULTED jest wyczyszczona.
+*bDefaulted (Niewzłocha)*<br/>
+Wskazuje, czy informacje o właścicielu pochodzą z mechanizmu domyślnego. Jeśli ta wartość jest true, jest to informacja domyślna. Metoda przechowuje tę wartość jako flagę `SECURITY_DESCRIPTOR_CONTROL` SE_OWNER_DEFAULTED w strukturze. Jeśli ten parametr wynosi zero, flaga SE_OWNER_DEFAULTED jest wyczyszczona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.
 
-##  <a name="setsacl"></a>  CSecurityDesc::SetSacl
+## <a name="csecuritydescsetsacl"></a><a name="setsacl"></a>CSecurityDesc::SetSacl
 
-Ustawia informacje w systemowej liście kontroli dostępu (SACL). Jeśli lista SACL jest już obecna w deskryptorze zabezpieczeń, zostanie zastąpiona.
+Ustawia informacje na liście kontroli dostępu do systemu (SACL). Jeśli sacl jest już obecny w deskryptorze zabezpieczeń, jest zastępowany.
 
 ```
 bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
@@ -649,19 +649,19 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*SACL*<br/>
-Wskaźnik do `CSacl` obiektu określającego listę SACL deskryptora zabezpieczeń. Ten parametr nie może mieć wartości NULL i musi być obiektem CSacl. W przeciwieństwie do listy DACL nie ma różnicy między wartością NULL a pustą listą SACL, ponieważ obiekty SACL nie określają praw dostępu, tylko informacje inspekcji.
+*Sacl*<br/>
+Wskaźnik do `CSacl` obiektu określającego sacl deskryptora zabezpieczeń. Ten parametr nie może być null i musi być CSacl obiektu. W przeciwieństwie do dacl, nie ma różnicy między NULL i pusty SACL, jak obiekty SACL nie określają praw dostępu, tylko informacje inspekcji.
 
-*bDefaulted*<br/>
-Określa flagę wskazującą źródło listy SACL. Jeśli ta flaga ma wartość true, lista SACL została pobrana przez jakiś domyślny mechanizm. W przypadku wartości false, użytkownik jawnie określił listę SACL. Metoda przechowuje tę wartość w flagi `SECURITY_DESCRIPTOR_CONTROL` SE_SACL_DEFAULTED struktury. Jeśli ten parametr nie jest określony, Flaga SE_SACL_DEFAULTED jest wyczyszczona.
+*bDefaulted (Niewzłocha)*<br/>
+Określa flagę wskazującą źródło SACL. Jeśli ta flaga jest true, SACL został pobrany przez jakiś domyślny mechanizm. Jeśli false, SACL został jawnie określony przez użytkownika. Metoda przechowuje tę wartość w SE_SACL_DEFAULTED flagi `SECURITY_DESCRIPTOR_CONTROL` struktury. Jeśli ten parametr nie jest określony, flaga SE_SACL_DEFAULTED jest wyczyszczona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.
 
-##  <a name="tostring"></a>CSecurityDesc:: ToString
+## <a name="csecuritydesctostring"></a><a name="tostring"></a>CSecurityDesc::ToString
 
-Konwertuje deskryptor zabezpieczeń na format ciągu.
+Konwertuje deskryptora zabezpieczeń na format ciągu.
 
 ```
 bool ToString(
@@ -672,11 +672,11 @@ bool ToString(
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który będzie odbierać [deskryptor zabezpieczeń w formacie ciągu](/windows/win32/SecAuthZ/security-descriptor-string-format).
+*pstr (włas inie*<br/>
+Wskaźnik do ciągu zakończonego zerem, który otrzyma [deskryptor zabezpieczeń w formacie ciągu](/windows/win32/SecAuthZ/security-descriptor-string-format).
 
-*si*<br/>
-Określa kombinację SECURITY_INFORMATION bitowych flag, aby wskazać składniki deskryptora zabezpieczeń do uwzględnienia w ciągu danych wyjściowych.
+*Si*<br/>
+Określa kombinację flag bitowych SECURITY_INFORMATION, aby wskazać składniki deskryptora zabezpieczeń, które mają być uwzględnione w ciągu wyjściowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -684,26 +684,26 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy deskryptor zabezpieczeń jest w formacie ciągu, można łatwiej go przechowywać lub przesyłać. Użyj metody `CSecurityDesc::FromString` , aby przekonwertować ciąg z powrotem do deskryptora zabezpieczeń.
+Gdy deskryptor zabezpieczeń jest w formacie ciągu, można go łatwiej przechowywać lub przesyłać. Użyj `CSecurityDesc::FromString` metody, aby przekonwertować ciąg z powrotem na deskryptor zabezpieczeń.
 
 Parametr *si* może zawierać następujące flagi SECURITY_INFORMATION:
 
 |Wartość|Znaczenie|
 |-----------|-------------|
-|OWNER_SECURITY_INFORMATION|Uwzględnij właściciela.|
+|OWNER_SECURITY_INFORMATION|Dołącz właściciela.|
 |GROUP_SECURITY_INFORMATION|Uwzględnij grupę podstawową.|
-|DACL_SECURITY_INFORMATION|Uwzględnij listę DACL.|
-|SACL_SECURITY_INFORMATION|Uwzględnij listę SACL.|
+|DACL_SECURITY_INFORMATION|Dołącz DACL.|
+|SACL_SECURITY_INFORMATION|Dołącz SACL.|
 
-Jeśli lista DACL ma wartość NULL, a bit kontrolki SE_DACL_PRESENT jest ustawiony w deskryptorze zabezpieczeń wejściowych, metoda zakończy się niepowodzeniem.
+Jeśli funkcja DACL ma wartość NULL, a bit formantu SE_DACL_PRESENT jest ustawiony w deskryptorze zabezpieczeń wejściowych, metoda kończy się niepowodzeniem.
 
-Jeśli lista DACL ma wartość NULL, a bit sterujący SE_DACL_PRESENT nie jest ustawiony w deskryptorze zabezpieczeń wejścia, otrzymany ciąg deskryptora zabezpieczeń nie ma składnika D:. Aby uzyskać więcej informacji, zobacz [Format ciągu deskryptora zabezpieczeń](/windows/win32/SecAuthZ/security-descriptor-string-format) .
+Jeśli funkcja DACL ma wartość NULL, a bit formantu SE_DACL_PRESENT nie jest ustawiony w deskryptorze zabezpieczeń wejściowych, wynikowy ciąg deskryptora zabezpieczeń nie ma składnika D:. Aby uzyskać więcej informacji, zobacz [Format ciągu deskryptora zabezpieczeń.](/windows/win32/SecAuthZ/security-descriptor-string-format)
 
-Ta metoda wywołuje [podczas operacji convertstringsecuritydescriptortosecuritydescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
+Ta metoda wywołuje [ConvertStringSecurityDescriptorToDescriptor .](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład zabezpieczeń](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
+[Security_descriptor](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
-[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)
+[Globalne funkcje zabezpieczeń](../../atl/reference/security-global-functions.md)

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
-ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
+ms.openlocfilehash: 0eda9461b3ef730e0e0a832aa94a688e03c7e1bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412241"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336184"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Preferuj mały kod, Preferuj szybki kod)
 
-Minimalizuje lub maksymalizuje rozmiar plików exe i dll.
+Minimalizuje lub maksymalizuje rozmiar EXE i bibliotek DLL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,21 +37,21 @@ Minimalizuje lub maksymalizuje rozmiar plików exe i dll.
 
 ## <a name="remarks"></a>Uwagi
 
-**/OS** (Preferuj mały kod) minimalizuje rozmiar plików exe i dll przez poinstruowanie kompilatora, aby preferował rozmiar nad szybkość. Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. **/Os** i **/Ot** opcje pozwalają na określenie preferencji dla jednego z nich:
+**/Os** (Favor Small Code) minimalizuje rozmiar EXEs i bibliotek DLL, instruując kompilator, aby faworyzował rozmiar ponad szybkość. Kompilator można zmniejszyć wiele konstrukcji C i C++ do funkcjonalnie podobnych sekwencji kodu maszynowego. Czasami różnice te oferują kompromisy wielkości w porównaniu z szybkością. Opcje **/Os** i **/Ot** umożliwiają określenie preferencji dla jednego nad drugim:
 
-**/OT** (Preferuj szybko kod) maksymalizuje szybkość plików exe i dll przez poinstruowanie kompilatora, aby preferował szybkość nad rozmiar. (Jest to wartość domyślna). Kompilator może zmniejszyć liczbę konstrukcji języka C i C++ podobne sekwencji z kodu maszynowego. Czasami te różnice oferują wady rozmiar w zależności od szybkości. **/Ot** opcji jest implikowane, Maksymalizuj szybkość ([/O2](o1-o2-minimize-size-maximize-speed.md)) opcji. **/O2** opcja łączy kilka opcji, aby utworzyć bardzo szybki kod.
+**/Ot** (Favor Fast Code) maksymalizuje szybkość EXEs i DLL, instruując kompilator, aby preferował szybkość nad rozmiarem. (Jest to wartość domyślna). Kompilator można zmniejszyć wiele konstrukcji C i C++ do funkcjonalnie podobnych sekwencji kodu maszynowego. Czasami różnice te oferują kompromisy wielkości w porównaniu z szybkością. Opcja **/Ot** jest implikowana przez opcję Maksymalizuj szybkość ([/O2).](o1-o2-minimize-size-maximize-speed.md) Opcja **/O2** łączy w sobie kilka opcji, aby utworzyć bardzo szybki kod.
 
-Jeśli używasz **/Os** lub **/Ot**, a następnie należy także określić [/Og](og-global-optimizations.md) do optymalizacji kodu.
-
-> [!NOTE]
->  Informacje zebrane w trakcie przebiegów testowych profilowania zastąpią optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji [optymalizacje Profile-Guided](../profile-guided-optimizations.md).
-
-**x86 Specific**
-
-Poniższy przykład kodu ilustruje różnicę między Preferuj mały kod ( **/Os**) opcje i Preferuj szybko kod ( **/Ot**) opcja:
+Jeśli używasz **/Os** lub **/Ot**, należy również określić [/Og,](og-global-optimizations.md) aby zoptymalizować kod.
 
 > [!NOTE]
->  Poniżej opisano oczekiwane zachowanie w przypadku korzystania z **/Os** lub **/Ot**. Jednak zachowanie kompilatora wersji może spowodować różne optymalizacje dla poniższy kod.
+> Informacje zebrane z przebiegów testów profilowania zastąpią optymalizacje, które w przeciwnym razie miałyby obowiązywać, jeśli określisz **/Ob**, **/Os**lub **/Ot**. Aby uzyskać więcej informacji, [optymalizacje z przewodnikiem profilu](../profile-guided-optimizations.md).
+
+**x86 Specyficzne**
+
+Poniższy przykładowy kod pokazuje różnicę między opcjami Favor Small Code ( /Os ) a opcją Favor Fast Code **(/Ot):The**following example code demonstrates the difference between the Favor Small Code (**/Os**) options and the Favor Fast Code ( /Ot ) option:
+
+> [!NOTE]
+> Poniżej opisano oczekiwane zachowanie podczas korzystania **z /Os** lub **/Ot**. Jednak zachowanie kompilatora od wydania do wydania może spowodować różne optymalizacje dla poniższego kodu.
 
 ```
 /* differ.c
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Jak pokazano we fragmencie kodu maszynowego poniżej, gdy DIFFER.c jest kompilowany dla rozmiaru ( **/Os**), implementuje kompilatora mnożenia wyrażenie w instrukcji return jawnie jako wielokrotnie w celu wygenerowania krótką, ale wolniej sekwencji kodu:
+Jak pokazano w fragmencie kodu maszynowego poniżej, gdy DIFFER.c jest kompilowany dla rozmiaru (**/Os**), kompilator implementuje wyrażenie mnożenia w instrukcji return jawnie jako mnożenie do produkcji krótkiej, ale wolniejszej sekwencji kodu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Alternatywnie, gdy DIFFER.c jest kompilowany dla danej szybkości ( **/Ot**), implementuje kompilatora mnożenia wyrażenie w instrukcji return w postaci serii obiektów shift i `LEA` instrukcje dotyczące tworzenia szybkich, ale dłużej sekwencji kodu:
+Alternatywnie, gdy DIFFER.c jest skompilowany dla prędkości (**/Ot**), kompilator implementuje `LEA` wyrażenie mnożenia w instrukcji return jako serię zmian i instrukcje do uzyskania szybkiej, ale dłuższej sekwencji kodu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -82,24 +82,24 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx
 ```
 
-**KONIEC x86 określonych**
+**KONIEC x86 Specyficzny**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++.**
 
-1. Kliknij przycisk **optymalizacji** stronę właściwości.
+1. Kliknij stronę właściwości **Optymalizacja.**
 
-1. Modyfikowanie **preferować rozmiar czy szybkość** właściwości.
+1. Zmodyfikuj **właściwość Rozmiar lub Szybkość.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
+[/O Opcje (optymalizuj kod)](o-options-optimize-code.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

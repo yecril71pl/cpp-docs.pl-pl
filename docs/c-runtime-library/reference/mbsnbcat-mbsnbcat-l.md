@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcat, _mbsnbcat_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcat_l
 - _mbsnbcat
+- _o__mbsnbcat
+- _o__mbsnbcat_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7598b20db4698ff8f95fbcefa00864be1b958447
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952350"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340802"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
-Dołącza co najwyżej pierwsze **n** bajtów jednego ciągu znaków wielobajtowych. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
+Dołącza co najwyżej pierwsze **n** bajtów jednego ciągu znaków wielobajtowych do drugiego. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,33 +83,35 @@ unsigned char *_mbsnbcat_l(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Przerwany ciąg znaków wielobajtowych zakończony wartością null.
+*Dest*<br/>
+Ciąg docelowy znaków z końców zerowych z wielobajtowym znakiem docelowym.
 
-*SRC*<br/>
-Ciąg źródłowy znaku wielobajtowego zakończony wartością null.
+*src*<br/>
+Ciąg źródłowy wielobajtowy znak zakończony z wartością null.
 
-*liczbą*<br/>
-Liczba bajtów z elementu *src* do dołączenia do miejsca *docelowego*.
+*Liczba*<br/>
+Liczba bajtów od *src* do dołączyć do *dest*.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcat** zwraca wskaźnik do ciągu docelowego. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+**_mbsnbcat** zwraca wskaźnik do ciągu docelowego. Żadna wartość zwracana nie jest zarezerwowana, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbsnbcat** dołącza najwyżej pierwszą *liczbę* bajtów *src* do miejsca *docelowego*. Jeśli bajt bezpośrednio poprzedzający znak null w polu *docelowy* jest bajtem wiodącym, początkowy bajt *src* zastępuje ten bajt wiodący. W przeciwnym razie początkowy bajt *src* zastępuje kończący znak null jako *docelowy*. Jeśli bajt o wartości null jest wyświetlany w elemencie *src* przed dołączeniem *liczby* bajtów, **_mbsnbcat** dołącza wszystkie bajty z elementu *src*, do znaku null. Jeśli *Liczba* jest większa niż długość elementu *src*, Długość elementu *src* jest używana zamiast *liczby*. Ciąg otrzymany jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **_mbsnbcat** dołącza co najwyżej pierwsze bajty *zliczania* *src* do *dest*. Jeśli bajt bezpośrednio poprzedzający znak null w *dest* jest bajtem wiodącym, początkowy bajt *src* zastępuje ten bajt ołowiu. W przeciwnym razie początkowy bajt *src* zastępuje kończący się znak zerowy *dest*. Jeśli w *src* pojawi się bajt zerowy przed dołączeniem bajtów *zliczania,* **_mbsnbcat** dołącza wszystkie bajty od *src*, aż do znaku null. Jeśli *liczba* jest większa niż długość *src*, długość *src* jest używana zamiast *liczyć*. Wynikowy ciąg jest zakończony znakiem zerowym. Jeśli kopiowanie odbywa się między ciągami, które nakładają się na siebie, zachowanie jest niezdefiniowane.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersja **_mbsnbcat** funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbcat_l** jest identyczna, z tą różnicą, że w zamian używają parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. **Wersja _mbsnbcat** funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; _mbsnbcat_l **_mbsnbcat_l** wersja jest identyczna, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończenia o wartości null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończonego wartością null. Ciąg zakończony z wartością null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Jeśli obiekt *docelowy* lub *src* ma **wartość null**, funkcja wygeneruje nieprawidłowy błąd parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
+Jeśli *dest* lub *src* ma **wartość NULL**, funkcja wygeneruje nieprawidłowy błąd parametru, zgodnie z opisem w weryfikacji [parametrów](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja zwraca **wartość EINVAL** i ustawia **errno** na **EINVAL**.
 
-W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -122,9 +127,9 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>

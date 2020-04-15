@@ -17,94 +17,94 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38811be765d4427c4083b8f142b54fb67b9076a0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238562"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359320"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC — implementacja paska narzędzi
 
-Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obrazy mapy bitowej kontrolek. Te obrazy mogą zachowywać się jak przyciski, pola wyboru lub przycisków radiowych. MFC udostępnia klasy [CToolbar](../mfc/reference/ctoolbar-class.md) Zarządzanie pasków narzędzi.
+Pasek narzędzi to [pasek sterowania](../mfc/control-bars.md) zawierający obrazy bitmapowe formantów. Te obrazy mogą zachowywać się jak przyciski, pola wyboru lub przyciski radiowe. MFC dostarcza klasy [CToolbar](../mfc/reference/ctoolbar-class.md) do zarządzania paskami narzędzi.
 
-Jeśli zostanie włączone, użytkownicy pasków narzędzi MFC można zadokować je do krawędzi okna lub "zwalniać" dowolne miejsce w oknie aplikacji. MFC nie obsługuje dostosowywalnych pasków narzędzi, takich jak te w środowisku programistycznym.
+Jeśli go włączyć, użytkownicy pasków narzędzi MFC można zadokować je do krawędzi okna lub "float" je w dowolnym miejscu w oknie aplikacji. MFC nie obsługuje konfigurowalnych pasków narzędzi, takich jak te w środowisku programistycznym.
 
-Biblioteka MFC obsługuje etykietek narzędzi: mały wyskakującego okienka, które opisują cel przycisku paska narzędzi, gdy umieść wskaźnik myszy na przycisku. Domyślnie gdy użytkownik naciśnie przycisk paska narzędzi, ciąg stanu pojawia się na pasku stanu (jeśli istnieje). Możesz aktywować paska aktualizowanie wyświetlany ciąg stanu, gdy wskaźnik myszy znajduje się nad przyciskiem bez jego naciśnięcie "bieżąco przez" stanu.
+MFC obsługuje również porady dotyczące narzędzi: małe wyskakujące okna, które opisują cel przycisku paska narzędzi podczas położenia myszy na przycisku. Domyślnie, gdy użytkownik naciśnie przycisk paska narzędzi, na pasku stanu pojawi się ciąg stanu (jeśli istnieje). Możesz aktywować pasek stanu "fly by", aktualizując, aby wyświetlić ciąg stanu, gdy mysz jest mieszczona nad przyciskiem bez naciskania go.
 
 > [!NOTE]
->  Począwszy od wersji 4.0 MFC paski narzędzi i etykietek narzędzi są implementowane przy użyciu Windows 95 i nowsze funkcje zamiast poprzedniej implementacji MFC.
+> W wersji MFC 4.0 paski narzędzi i porady narzędzia są implementowane przy użyciu systemu Windows 95 i nowszych funkcji zamiast poprzedniej implementacji specyficzne dla MFC.
 
-W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska narzędzi w klasie `COldToolBar`. Opisz dokumentacji dla wcześniejszych wersji MFC `COldToolBar` w obszarze `CToolBar`.
+W celu zapewnienia zgodności z powrotem MFC zachowuje `COldToolBar`starszą implementację paska narzędzi w klasie . Dokumentacja dla wcześniejszych wersji `COldToolBar` MFC opisano w obszarze `CToolBar`.
 
-Utwórz pierwszą narzędzi w programach, wybierając opcję narzędzi w Kreatorze aplikacji. Można również utworzyć dodatkowe paski narzędzi.
+Utwórz pierwszy pasek narzędzi w programie, wybierając opcję Pasek narzędzi w Kreatorze aplikacji. Można również utworzyć dodatkowe paski narzędzi.
 
-Poniżej zostały wprowadzone w tym artykule:
+W tym artykule przedstawiono następujące informacje:
 
 - [Przyciski paska narzędzi](#_core_toolbar_buttons)
 
-- [Zadokowane i przestawne paski narzędzi](#_core_docking_and_floating_toolbars)
+- [Dokowanie i pływające paski narzędzi](#_core_docking_and_floating_toolbars)
 
-- [Paski narzędzi i etykietek narzędzi](#_core_toolbars_and_tool_tips)
+- [Paski narzędzi i wskazówki dotyczące narzędzi](#_core_toolbars_and_tool_tips)
 
 - [Klasy CToolBar i CToolBarCtrl](#_core_the_ctoolbar_and_ctoolbarctrl_classes)
 
-- [Mapy bitowej paska narzędzi](#_core_the_toolbar_bitmap)
+- [Mapa bitowa paska narzędzi](#_core_the_toolbar_bitmap)
 
-##  <a name="_core_toolbar_buttons"></a> Przyciski paska narzędzi
+## <a name="toolbar-buttons"></a><a name="_core_toolbar_buttons"></a>Przyciski paska narzędzi
 
-Przyciski na pasku narzędzi są analogiczne do tych elementów w menu. Oba rodzaje obiektów interfejsu użytkownika Generowanie poleceń, które obsługuje program, udostępniając funkcje obsługi. Często przycisków paska narzędzi zduplikowane funkcjonalność polecenia menu, zapewniając interfejsu użytkownika alternatywnych taką samą funkcjonalność. Takie duplikowanie rozmieszczone po prostu dając przycisku i element menu ten sam identyfikator.
+Przyciski na pasku narzędzi są analogiczne do elementów w menu. Oba rodzaje obiektów interfejsu użytkownika generują polecenia, które program obsługuje, udostępniając funkcje obsługi. Często przyciski paska narzędzi powielają funkcjonalność poleceń menu, zapewniając alternatywny interfejs użytkownika do tej samej funkcji. Takie powielanie jest ułożone po prostu przez nadanie przycisku i pozycji menu tego samego identyfikatora.
 
-Można tworzyć przyciski na pasku narzędzi są wyświetlane i zachowują się jak przyciski, pola wyboru lub przycisków radiowych. Aby uzyskać więcej informacji, zobacz klasy [CToolBar](../mfc/reference/ctoolbar-class.md).
+Przyciski na pasku narzędzi mogą być wyświetlane i zachowywać się jak przyciski, pola wyboru lub przyciski radiowe. Aby uzyskać więcej informacji, zobacz klasę [CToolBar](../mfc/reference/ctoolbar-class.md).
 
-##  <a name="_core_docking_and_floating_toolbars"></a> Zadokowane i przestawne paski narzędzi
+## <a name="docking-and-floating-toolbars"></a><a name="_core_docking_and_floating_toolbars"></a>Dokowanie i pływające paski narzędzi
 
-Pasek narzędzi MFC wykonywać następujące czynności:
+Pasek narzędzi MFC może:
 
-- Pozostają stacjonarnych po jednej stronie okna nadrzędnego.
+- Pozostają nieruchome wzdłuż jednej strony okna nadrzędnego.
 
-- Przeciąganie i "zadokowane" lub dołączone przez użytkownika do dowolnej strony lub stron okna nadrzędnego, należy określić.
+- Być przeciągane i "zadokowane" lub dołączone przez użytkownika do dowolnej strony lub boków okna nadrzędnego, które określisz.
 
-- "Przestawione" lub odłączyć od okno ramowe w osobnym oknie mini ramki, więc użytkownik go przenieść w odpowiednim miejscu.
+- Być "floated", lub odłączony od okna ramy, we własnym oknie mini-ramki, dzięki czemu użytkownik może przenieść go do dowolnej wygodnej pozycji.
 
-- Można zmienić rozmiaru podczas liczb zmiennoprzecinkowych.
+- Można zwymiarować podczas pływających.
 
-Aby uzyskać więcej informacji, zobacz artykuł [dokowanie i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md).
+Aby uzyskać więcej informacji, zobacz artykuł [Dokowanie i pływające paski narzędzi](../mfc/docking-and-floating-toolbars.md).
 
-##  <a name="_core_toolbars_and_tool_tips"></a> Paski narzędzi i etykietek narzędzi
+## <a name="toolbars-and-tool-tips"></a><a name="_core_toolbars_and_tool_tips"></a>Paski narzędzi i wskazówki dotyczące narzędzi
 
-Paski narzędzi MFC można również wyświetlić "etykietki narzędzi" — niewielki rozmiar okna podręcznego systemu windows, zawierający krótki opis przeznaczenia przycisku paska narzędzi. Gdy użytkownik przesuwa wskaźnik myszy na przycisku paska narzędzi, okno porad narzędzia pojawia się oferują wskazówką. Aby uzyskać więcej informacji, zobacz artykuł [etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md).
+Paski narzędzi MFC mogą być również wykonane, aby wyświetlić "porady narzędzia" - małe okna podręczne zawierające krótki opis tekstowy celu przycisku paska narzędzi. Gdy użytkownik przesuwa kursor myszy nad przyciskiem paska narzędzi, pojawia się okno etykietki narzędzia, aby zaoferować wskazówkę. Aby uzyskać więcej informacji, zobacz artykuł [Porady dotyczące narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md).
 
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> CToolBar i klasy CToolBarCtrl
+## <a name="the-ctoolbar-and-ctoolbarctrl-classes"></a><a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>Klasy CToolBar i CToolBarCtrl
 
-Zarządzanie pasków narzędzi aplikacji, za pomocą klasy [CToolBar](../mfc/reference/ctoolbar-class.md). Począwszy od wersji 4.0, MFC `CToolBar` ma zostać reimplemented używać formantu typowego paska narzędzi dostępnych w ramach Windows 95 lub nowszym i Windows NT w wersji 3.51 lub nowszej.
+Zarządzasz paskami narzędzi aplikacji za pośrednictwem klasy [CToolBar](../mfc/reference/ctoolbar-class.md). Od wersji MFC 4.0, `CToolBar` został ponownie zaimplementowany do korzystania z wspólnego formantu paska narzędzi dostępnego w systemie Windows 95 lub nowszym i Windows NT w wersji 3.51 lub nowszej.
 
-Ta reimplementation skutkuje mniejszej ilości kodu MFC dla pasków narzędzi, ponieważ MFC sprawia, że korzystanie z pomocy technicznej systemu operacyjnego. Reimplementation zwiększa również możliwości. Możesz użyć `CToolBar` elementów członkowskich do manipulowania paski narzędzi, lub można uzyskać odwołanie do bazowej [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu i wywoływać funkcje członków pasków narzędzi i dodatkowe funkcje.
+To ponowneimplementowanie powoduje mniej kodu MFC dla pasków narzędzi, ponieważ MFC korzysta z obsługi systemu operacyjnego. Ponowneimplementacja zwiększa również możliwości. Za pomocą `CToolBar` funkcji członkowskich można manipulować paskami narzędzi lub można uzyskać odwołanie do podstawowego [obiektu CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) i wywołać jego funkcje członkowskie w celu dostosowania paska narzędzi i dodatkowych funkcji.
 
 > [!TIP]
->  Jeśli użytkownik zainwestowali intensywnie w starszych implementacji MFC `CToolBar`, czy pomoc techniczna jest nadal dostępna. Zapoznaj się z artykułem [przy użyciu usługi starych pasków narzędzi](../mfc/using-your-old-toolbars.md).
+> Jeśli zainwestowałeś dużo w starsze wdrożenie `CToolBar`MFC , to wsparcie jest nadal dostępne. Zobacz artykuł [Korzystanie ze starych pasków narzędzi](../mfc/using-your-old-toolbars.md).
 
-Zobacz też próbki MFC-ogólne [DOCKTOOL](../overview/visual-cpp-samples.md).
+Zobacz także przykładowy [docktool](../overview/visual-cpp-samples.md)MFC General .
 
-##  <a name="_core_the_toolbar_bitmap"></a> Mapy bitowej paska narzędzi
+## <a name="the-toolbar-bitmap"></a><a name="_core_the_toolbar_bitmap"></a>Mapa bitowa paska narzędzi
 
-Raz wykonane, `CToolBar` obiektu tworzy obraz paska narzędzi, ładując bitmapy, który zawiera jeden obraz dla każdego przycisku. Kreator aplikacji tworzy mapę bitową standardowy pasek narzędzi, które można dostosować za pomocą języka Visual C++ [Edytor paska narzędzi](../windows/toolbar-editor.md).
+Po skonstruowaniu `CToolBar` obiekt tworzy obraz paska narzędzi, ładując pojedynczą mapę bitową zawierającą jeden obraz dla każdego przycisku. Kreator aplikacji tworzy standardową mapę bitową paska narzędzi, którą można dostosować za pomocą [edytora paska narzędzi](../windows/toolbar-editor.md)Visual C++ .
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
-- [Podstawowe informacje dotyczące narzędzi](../mfc/toolbar-fundamentals.md)
+- [Podstawy paska narzędzi](../mfc/toolbar-fundamentals.md)
 
-- [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)
+- [Dokowanie i pływające paski narzędzi](../mfc/docking-and-floating-toolbars.md)
 
-- [Etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)
+- [Wskazówki dotyczące narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)
 
 - [Praca z kontrolką paska narzędzi](../mfc/working-with-the-toolbar-control.md)
 
 - [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)
 
-- [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas
+- Klasy [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Paski narzędzi](../mfc/toolbars.md)<br/>
 [Edytor paska narzędzi](../windows/toolbar-editor.md)

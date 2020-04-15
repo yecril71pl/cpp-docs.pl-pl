@@ -7,22 +7,22 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-ms.openlocfilehash: 1eb5e276d8292f67018150427e6c9d8ecf0ccee0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7355f814be1cc34cc067fff648e2a137d35a00a5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334556"
 ---
 # <a name="implementation-defined-behavior"></a>Zachowanie zdefiniowane w implementacji
 
-ANSI X3.159-1989 r. *American National Standard systemów informacyjnych* - *język programowania* - *C*, zawiera sekcję o nazwie "Problemy z przenośnością." W sekcji ANSI przedstawiono obszary języka C, który ANSI pozostawia otwarte dla każdej konkretnej implementacji. W tej sekcji opisano sposób obsługi tych obszarów zdefiniowanych w implementacji języka C w Microsoft C.
+ANSI X3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, zawiera sekcję o nazwie "Problemy z przenośnością". Sekcja ANSI zawiera listę obszarów języka C, które ANSI pozostawia otwarte dla każdej konkretnej implementacji. W tej sekcji opisano, jak microsoft C obsługuje te obszary zdefiniowane w implementacji języka C.
 
-W tej sekcji następuje po takiej samej kolejności jak w sekcji ANSI. Każdy element objęty zawiera odwołania do ANSI, który objaśnia, zachowanie zdefiniowane w implementacji.
+Ta sekcja jest zgodna z tą samą kolejnością co sekcja ANSI. Każdy element obejmuje odwołania do ANSI, który wyjaśnia zachowanie zdefiniowane w implementacji.
 
 > [!NOTE]
->  W tej sekcji opisano Stanów Zjednoczonych Tylko kompilator języka C w wersji na język angielski. Implementacje Microsoft C w przypadku pozostałych języków mogą się nieznacznie różnić.
+> W tej sekcji opisano tylko amerykańską wersję kompilatora języka angielskiego. Implementacje microsoft c dla innych języków mogą się nieznacznie różnić.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka C](../c-language/c-language-reference.md)
+[C Referencje językowe](../c-language/c-language-reference.md)

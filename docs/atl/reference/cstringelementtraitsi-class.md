@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32980e19443cb17a3a688c85ff21195c60ed2124
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330590"
 ---
 # <a name="cstringelementtraitsi-class"></a>Klasa CStringElementTraitsI
 
-Ta klasa dostarcza statyczne funkcje związane z przechowywanych w obiektach klasy kolekcji ciągów. Jest on podobny do [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ale wykonuje porównania bez uwzględniania wielkości liter.
+Ta klasa zawiera funkcje statyczne związane z ciągami przechowywanymi w obiektach klasy kolekcji. Jest podobny do [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ale wykonuje porównania bez uwzględniania wielkości liter.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,30 +37,30 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|
+|[CStringElementTraitsI::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStringElementTraitsI::CompareElements](#compareelements)|Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu dla równości, ignorowanie różnic w przypadku.|
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu, ignorowanie różnic w przypadku.|
-|[CStringElementTraitsI::Hash](#hash)|Wywołaj tę funkcję statycznej, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.|
+|[CStringElementTraitsI::CompareElements](#compareelements)|Wywołanie tej funkcji statycznej, aby porównać dwa elementy ciągu dla równości, ignorując różnice w przypadku.|
+|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Wywołanie tej funkcji statycznej, aby porównać dwa elementy ciągu, ignorując różnice w przypadku.|
+|[CStringElementTraitsI::Hash](#hash)|Wywołanie tej funkcji statycznej, aby obliczyć wartość mieszania dla danego elementu ciągu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza statycznej funkcji porównywania ciągów i tworzenia wartość skrótu. Te funkcje są przydatne w przypadku korzystania z klasy kolekcji do przechowywania danych w ciągu. Użyj [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) kiedy mają przy użyciu traktowany jako odwołania do obiektów w postaci ciągów.
+Ta klasa zawiera funkcje statyczne do porównywania ciągów i tworzenia wartości mieszania. Te funkcje są przydatne podczas korzystania z klasy kolekcji do przechowywania danych opartych na ciągu. Użyj [CStringRefElementTraits,](../../atl/reference/cstringrefelementtraits-class.md) gdy obiekty ciągu mają być traktowane jako odwołania.
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
 `CStringElementTraitsI`
 
@@ -68,9 +68,9 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements
+## <a name="cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements
 
-Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu dla równości, ignorowanie różnic w przypadku.
+Wywołanie tej funkcji statycznej, aby porównać dwa elementy ciągu dla równości, ignorując różnice w przypadku.
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
@@ -79,22 +79,22 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg elementu.
+Pierwszy element ciągu.
 
 *str2*<br/>
-Drugi ciąg elementu.
+Drugi element ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.
+Zwraca wartość true, jeśli elementy są równe, false inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Są to porównania bez uwzględniania wielkości liter.
+Porównania są niewrażliwe na wielkości liter.
 
-##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered
+## <a name="cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered
 
-Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu, ignorowanie różnic w przypadku.
+Wywołanie tej funkcji statycznej, aby porównać dwa elementy ciągu, ignorując różnice w przypadku.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -103,22 +103,22 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-Pierwszy ciąg elementu.
+Pierwszy element ciągu.
 
 *str2*<br/>
-Drugi ciąg elementu.
+Drugi element ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne, < 0 Jeśli *str1* jest mniejsza niż *str2*, lub > 0 Jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda służy do przeprowadzania porównania.
+Zero, jeśli ciągi są identyczne, < 0, jeśli *str1* jest mniejsza niż *str2*lub > 0, jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Metoda jest używana do wykonywania porównań.
 
 ### <a name="remarks"></a>Uwagi
 
-Są to porównania bez uwzględniania wielkości liter.
+Porównania są niewrażliwe na wielkości liter.
 
-##  <a name="hash"></a>  CStringElementTraitsI::Hash
+## <a name="cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash
 
-Wywołaj tę funkcję statycznej, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.
+Wywołanie tej funkcji statycznej, aby obliczyć wartość mieszania dla danego elementu ciągu.
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -126,31 +126,31 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Element ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość skrótu obliczane przy użyciu zawartości ciągu.
+Zwraca wartość mieszania obliczoną przy użyciu zawartości ciągu.
 
-##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE
+## <a name="cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE
 
-Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.
+Typ danych do dodania elementów do obiektu klasy kolekcji.
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE
+## <a name="cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE
 
-Typ danych używany do pobierania elementów z obiektu klasy kolekcji.
+Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.
 
 ```
 typedef T& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasa CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)

@@ -1,11 +1,13 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
+- _o__mbschr
+- _o__mbschr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -44,19 +47,19 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ddfb90efdda4b5eccfcb8d8b4efeea528604fa68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354085"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Znajduje znak w ciągu, przy użyciu bieżących ustawień regionalnych lub określonej kategorii stanu konwersji LC_CTYPE.
 
 > [!IMPORTANT]
-> `_mbschr`i `_mbschr_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr`i `_mbschr_l` nie może być używany w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -116,45 +119,47 @@ const unsigned char *_mbschr_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Ciąg źródłowy zakończony wartością null.
+*Str*<br/>
+Ciąg źródłowy zakończony z wartością null.
 
-*c*<br/>
-Znak, który ma zostać zlokalizowany.
+*C*<br/>
+Znak, który ma być zlokalizowany.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*lub wartość null, jeśli nie odnaleziono języka *c* .
+Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*lub NULL, jeśli *c* nie zostanie znaleziony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja znajduje pierwsze wystąpienie c w *str*lub zwraca wartość null, jeśli nie znaleziono języka *c* . `strchr` Znak końcowy o wartości null jest uwzględniany w wyszukiwaniu.
+Funkcja `strchr` znajduje pierwsze wystąpienie *c* w *str*lub zwraca wartość NULL, jeśli *c* nie zostanie znaleziony. Znak zakończenia wartości null jest uwzględniony w wyszukiwaniu.
 
-`wcschr`i są wersjami znaków dwubajtowych `strchr`. `_mbschr` `_mbschr_l` Argumenty i wartość zwracana przez `wcschr` są ciągami znaków dwubajtowych; te z `_mbschr` są ciągami znaków wieloznacznych. `_mbschr`rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest wskaźnikiem typu null, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość null i `errno` ustawia do EINVAL. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`wcschr`i `_mbschr` `_mbschr_l` są wersjami znaków o szerokich `strchr`i wielobajtowych . Argumenty i zwracana `wcschr` wartość są ciągami znaków o szerokich znakach; są `_mbschr` ciągami znaków wielobajtowych. `_mbschr`rozpoznaje sekwencje znaków wielobajtowych. Ponadto jeśli ciąg jest wskaźnikiem `_mbschr` null, wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, `_mbschr` zwraca wartość `errno` NULL i ustawia wartość EINVAL. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie inaczej.
 
-Wartość wyjściowa jest zależna od ustawienia LC_CTYPE kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie LC_CTYPE kategorii ustawień regionalnych; aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli jest wymagane zachowanie**niestałe** dla obu C++ przeciążeń, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **wskaźnik const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie biorąc wskaźnik do **const** zwraca wskaźnik **const**; wersja, która ma wskaźnik do**non-const** zwraca wskaźnik do**non-const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowany, jeśli dostępne są zarówno **wersje const,** jak i inne niż**const** tych funkcji. Jeśli wymagane jest zachowanie**non-const** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
-|**_N/a**|**nie dotyczy**|`_mbschr_l`|**nie dotyczy**|
+|**_n/a**|**N/a**|`_mbschr_l`|**N/a**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |`strchr`|\<string.h>|
-|`wcschr`|\<ciąg. h > lub \<WCHAR. h >|
+|`wcschr`|\<string.h> lub \<wchar.h>|
 |`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -213,10 +218,10 @@ Result:   first r found at position 12
 Result:   last r found at position 30
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

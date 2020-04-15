@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333387"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -59,26 +62,28 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametry
 
-*dirname*<br/>
+*dirname (dirname)*<br/>
 Ścieżka nowego katalogu roboczego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje zwracają wartość 0 w przypadku powodzenia. Zwracana wartość-1 oznacza niepowodzenie. Jeśli nie można znaleźć określonej ścieżki, **errno** jest ustawiona na **ENOENT**. Jeśli *dirname* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
+Te funkcje zwracają wartość 0, jeśli zakończy się pomyślnie. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** jest ustawiona na **ENOENT**. Jeśli *dirname* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **Wartość EINVAL** i funkcja zwraca -1.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_chdir** zmienia bieżący katalog roboczy do katalogu określonego przez *dirname*. Parametr *dirname* musi odwoływać się do istniejącego katalogu. Ta funkcja może zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli w *dirname*określono nową literę dysku, domyślnie zostanie zmieniona litera dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżącym katalogiem roboczym, następujące wywołanie zmienia bieżący katalog roboczy dla dysku C i ustanawia C jako nowy dysk domyślny:
+Funkcja **_chdir** zmienia bieżący katalog roboczy w katalog określony przez *dirname*. Parametr *dirname* musi odnosić się do istniejącego katalogu. Ta funkcja może zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli w *dirname*zostanie określona nowa litera dysku, zostanie zmieniona również domyślna litera dysku. Jeśli na przykład literą dysku A jest domyślna litera dysku, a \BIN jest bieżącym katalogiem roboczym, następujące wywołanie zmienia bieżący katalog roboczy dysku C i ustanawia C jako nowy dysk domyślny:
 
 ```C
 _chdir("c:\temp");
 ```
 
-W przypadku używania opcjonalnego znaku ukośnika odwrotnego ( **&#92;** ) w ścieżkach należy umieścić dwa ukośniki odwrotne ( **&#92;** ) w literale ciągu C, aby reprezentować pojedynczy ukośnik odwrotny ( **&#92;** ).
+W przypadku używania opcjonalnego znaku ukośnika odwrotnego (**&#92;**) w ścieżkach należy umieścić dwa ukośniki odwrotne** (&#92;&#92;**) w literacie ciągu C, aby reprezentować pojedyncze ukośnik odwrotny (**&#92;**).
 
-**_wchdir** to dwubajtowa wersja **_chdir**; argument *dirname* **_wchdir** jest ciągiem znaków dwubajtowych. **_wchdir** i **_chdir** zachowują się identycznie w inny sposób.
+**_wchdir** jest szerokoznakową wersją **_chdir**; *argumentem dirname* **do _wchdir** jest ciągiem znaków o szerokim charakterze. **_wchdir** i **_chdir** zachowują się identycznie w przeciwnym razie.
 
-### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+
+### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie tekstu ogólnego:
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -88,10 +93,10 @@ W przypadku używania opcjonalnego znaku ukośnika odwrotnego ( **&#92;** ) w ś
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chdir**|\<direct.h>|\<errno.h>|
-|**_wchdir**|\<Direct. h > lub \<WCHAR. h >|\<errno.h>|
+|**_chdir**|\<direct.h>|\<> errno.h|
+|**_wchdir**|\<direct.h> lub \<wchar.h>|\<> errno.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

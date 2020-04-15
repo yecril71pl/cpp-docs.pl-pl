@@ -1,6 +1,6 @@
 ---
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstat64
 - _stati64
@@ -14,6 +14,14 @@ api_name:
 - _stat64
 - _stat64i32
 - _wstat32i64
+- _o__stat32
+- _o__stat32i64
+- _o__stat64
+- _o__stat64i32
+- _o__wstat32
+- _o__wstat32i64
+- _o__wstat64
+- _o__wstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -109,16 +118,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 32a96a93eb8a18e366ac7a075b414dbca732fb61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355418"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
-Pobierz informacje o stanie pliku.
+Uzyskaj informacje o stanie w pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -176,50 +185,52 @@ int _wstat64i32(
 ### <a name="parameters"></a>Parametry
 
 *Ścieżka*<br/>
-Wskaźnik na ciąg zawierający ścieżkę do istniejącego pliku lub katalogu.
+Wskaźnik do ciągu zawierającego ścieżkę istniejącego pliku lub katalogu.
 
-*buffer*<br/>
-Wskaźnik do struktury przechowującej wyniki.
+*Buforu*<br/>
+Wskaźnik do struktury, która przechowuje wyniki.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli zostanie uzyskane informacje o stanie pliku. Zwracana wartość-1 wskazuje na błąd. w takim przypadku **errno** jest ustawiony na **ENOENT**, co oznacza, że nie można odnaleźć nazwy pliku lub ścieżki. Wartość zwracana przez **EINVAL** wskazuje nieprawidłowy parametr; w takim przypadku **errno** jest również ustawiony na **EINVAL** .
+Każda z tych funkcji zwraca wartość 0, jeśli zostaną uzyskane informacje o stanie pliku. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** jest ustawiona na **ENOENT,** wskazując, że nie można odnaleźć nazwy pliku lub ścieżki. Zwracana wartość **EINVAL** wskazuje nieprawidłowy parametr; **errno** jest również ustawiony na **EINVAL** w tym przypadku.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na ten temat, a inne kody powrotne.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby uzyskać więcej informacji na ten temat i inne kody zwrotne.
 
-Sygnatura daty w pliku może być reprezentowana, jeśli jest późniejsza niż północ, 1 stycznia 1970 i przed 23:59:59, 31 grudnia 3000, UTC, chyba że używasz **_stat32** lub **_wstat32**lub zdefiniowano **_USE_32BIT_TIME_T**, w którym to przypadku Data może być reprezentowane tylko do 23:59:59 stycznia 18, 2038, UTC.
+Stempel daty w pliku może być reprezentowany, jeśli jest późniejszy niż północ, 1 stycznia 1970 r. i przed 23:59:59, 31 grudnia 3000, UTC, chyba że używasz **_stat32** lub **_wstat32**lub zdefiniowałeś **_USE_32BIT_TIME_T**, w którym to przypadku data może być reprezentowana tylko do 23:59:59 18 stycznia 2038, UTC.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_stat** uzyskuje informacje o pliku lub katalogu określonym przez *ścieżkę* i zapisuje je w strukturze wskazywanej przez *bufor*. **_stat** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznać sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową.
+Funkcja **_stat** uzyskuje informacje o pliku lub katalogu określonym przez *ścieżkę* i przechowuje je w strukturze wskazywowej przez *bufor*. **_stat** automatycznie obsługuje argumenty ciągów wielobajtowych, rozpoznając sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtową.
 
-**_wstat** to dwubajtowa wersja **_stat**; argument *Path* **_wstat** jest ciągiem znaków dwubajtowych. **_wstat** i **_stat** zachowują się identycznie, z tą różnicą, że **_wstat** nie obsługują ciągów znaków wielobajtowych.
+**_wstat** jest szerokoznakową wersją **_stat**; argument *path* do **_wstat** jest ciągiem znaków o szerokim charakterze. **_wstat** i **_stat** zachowywać się identycznie, z tą różnicą, że **_wstat** nie obsługuje ciągów znaków wielobajtowych.
 
-Różnice tych funkcji obsługują typy czasu 32-lub 64-bitowe oraz 32-lub 64-bitowy długości plików. Pierwszy sufiks numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks jest **I32** lub **I64**, wskazując, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita.
+Odmiany tych funkcji obsługują typy czasu 32- lub 64-bitowego oraz 32- lub 64-bitowe długości plików. Pierwszy przyrostek numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks to **i32** lub **i64**, wskazujący, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita.
 
-**_stat** jest odpowiednikiem **_stat64i32**, a **Struktura** **_stat** zawiera czas 64-bitowy. Jest to prawdziwe, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_stat** używa czasu 32-bitowego, a **Struktura** **_stat** zawiera czas 32-bitowy. Ta sama wartość dotyczy **_stati64**.
+**_stat** jest odpowiednikiem **_stat64i32,** a **struct** **_stat** struktury zawiera czas 64-bitowy. Jest to prawdą, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w którym to przypadku stare zachowanie jest w mocy; **_stat** używa czasu 32-bitowego, a **_stat** **struktury** zawiera czas 32-bitowy. To samo dotyczy **_stati64**.
 
 > [!NOTE]
-> **_wstat** nie działa z linkami symbolicznymi systemu Windows Vista. W takich przypadkach **_wstat** będzie zawsze zgłaszać rozmiar pliku 0. **_stat** działa prawidłowo z linkami symbolicznymi.
+> **_wstat** nie działa z łączami symbolicznymi systemu Windows Vista. W takich przypadkach **_wstat** zawsze zgłasza rozmiar pliku 0. **_stat** działa poprawnie z dowiązań symbolicznych.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* lub *bufor* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
+Ta funkcja sprawdza poprawność jego parametrów. Jeśli *ścieżka* lub *bufor* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md)
 
-### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Typ czasu i typ długości pliku odmiany _stat
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
-|Funkcje|Zdefiniowano _USE_32BIT_TIME_T?|Typ czasu|Typ długości pliku|
+### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Zmiany typu i długości pliku _stat
+
+|Funkcje|_USE_32BIT_TIME_T zdefiniowane?|Typ czasu|Typ długości pliku|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**, **_wstat**|Nie zdefiniowano|64-bitowy|32-bitowa|
-|**_stat**, **_wstat**|Określonych|32-bitowa|32-bitowa|
-|**_stat32**, **_wstat32**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
-|**_stat64**, **_wstat64**|Nie dotyczy definicji makra|64-bitowy|64-bitowy|
-|**_stati64**, **_wstati64**|Nie zdefiniowano|64-bitowy|64-bitowy|
-|**_stati64**, **_wstati64**|Określonych|32-bitowa|64-bitowy|
-|**_stat32i64**, **_wstat32i64**|Nie dotyczy definicji makra|32-bitowa|64-bitowy|
-|**_stat64i32**, **_wstat64i32**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
+|**_stat** **, _wstat**|Nieokreślona|64-bitowy|32-bitowa|
+|**_stat** **, _wstat**|Zdefiniowane|32-bitowa|32-bitowa|
+|**_stat32** **, _wstat32**|Definicja makra nie ma na nie wpływu|32-bitowa|32-bitowa|
+|**_stat64** **, _wstat64**|Definicja makra nie ma na nie wpływu|64-bitowy|64-bitowy|
+|**_stati64**, **_wstati64**|Nieokreślona|64-bitowy|64-bitowy|
+|**_stati64**, **_wstati64**|Zdefiniowane|32-bitowa|64-bitowy|
+|**_stat32i64** **, _wstat32i64**|Definicja makra nie ma na nie wpływu|32-bitowa|64-bitowy|
+|**_stat64i32** **, _wstat64i32**|Definicja makra nie ma na nie wpływu|64-bitowy|32-bitowa|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstat**|**_stat**|**_stat**|**_wstat**|
 |**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
@@ -227,32 +238,32 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* lub *buf
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-Struktura **_stat** zdefiniowana w SYS\STAT. H, zawiera następujące pola.
+Struktura **_stat,** zdefiniowana w pliku SYS\STAT. H, zawiera następujące pola.
 
 |Pole||
 |-|-|
-| **st_gid** | Liczbowy identyfikator grupy, do której należy plik (specyficzne dla systemu UNIX) to pole zawsze będzie zerem w systemach Windows. Przekierowany plik jest sklasyfikowany jako plik systemu Windows. |
-| **st_atime** | Godzina ostatniego dostępu do pliku. Prawidłowy w systemie plików NTFS, ale nie na dyskach twardych w formacie FAT. |
-| **st_ctime** | Czas utworzenia pliku. Prawidłowy w systemie plików NTFS, ale nie na dyskach twardych w formacie FAT. |
+| **st_gid** | Numeryczny identyfikator grupy, która jest właścicielem pliku (specyficzne dla systemu UNIX) To pole będzie zawsze zerowe w systemach Windows. Przekierowany plik jest klasyfikowany jako plik systemu Windows. |
+| **st_atime** | Czas ostatniego dostępu do pliku. Jest prawidłowy w systemie plików NTFS, ale nie na dyskach sformatowanych w formacie FAT. |
+| **st_ctime** | Czas tworzenia pliku. Jest prawidłowy w systemie plików NTFS, ale nie na dyskach sformatowanych w formacie FAT. |
 | **st_dev** | Numer dysku zawierającego plik (taki sam jak **st_rdev**). |
-| **st_ino** | Numer węzła informacji ( **inode**) dla pliku (specyficznego dla systemu UNIX). W systemach plików UNIX **inode** opisuje datę i sygnatury czasowe pliku, uprawnienia i zawartość. Gdy pliki są ze sobą twarde, współużytkują te same **inode**. **Inode**, w związku z czym **st_ino**, nie ma znaczenia w systemach plików FAT, HPFS i NTFS. |
-| **st_mode** | Maska bitów dla informacji w trybie plików. Bit **_S_IFDIR** jest ustawiony, jeśli *Path* określa katalog; bit **_S_IFREG** jest ustawiony, jeśli *Path* określa zwykły plik lub urządzenie. Bity odczytu/zapisu użytkownika są ustawiane zgodnie z trybem uprawnień pliku; bity wykonywania użytkownika są ustawiane zgodnie z rozszerzeniem nazwy pliku. |
-| **st_mtime** | Godzina ostatniej modyfikacji pliku. |
+| **st_ino** | Numer węzła informacyjnego **(i-węzła)** dla pliku (specyficzny dla systemu UNIX). W systemach plików systemu UNIX **i-węzła** opisano datę pliku i sygnatury czasowe, uprawnienia i zawartość. Gdy pliki są ze sobą mocno powiązane, mają ten sam **i-węzł**. **I-węzła**, a zatem **st_ino**, nie ma znaczenia w systemach plików FAT, HPFS lub NTFS. |
+| **st_mode** | Maska bitowa do informacji o trybie pliku. Bit **_S_IFDIR** jest ustawiany, jeśli *ścieżka* określa katalog; **bit _S_IFREG** jest ustawiany, jeśli *ścieżka* określa zwykły plik lub urządzenie. Bity odczytu/zapisu użytkownika są ustawiane zgodnie z trybem uprawnień pliku; bity wykonania użytkownika są ustawiane zgodnie z rozszerzeniem nazwy pliku. |
+| **st_mtime** | Czas ostatniej modyfikacji pliku. |
 | **st_nlink** | Zawsze 1 w systemach plików innych niż NTFS. |
 | **st_rdev** | Numer dysku zawierającego plik (taki sam jak **st_dev**). |
-| **st_size** | Rozmiar pliku w bajtach; 64-bitowa liczba całkowita dla odmian z sufiksem **I64** . |
-| **st_uid** | Liczbowy identyfikator użytkownika, który jest właścicielem pliku (specyficznego dla systemu UNIX). To pole będzie zawsze zerowe w systemach Windows. Przekierowany plik jest sklasyfikowany jako plik systemu Windows. |
+| **st_size** | Rozmiar pliku w bajtach; 64-bitową całkowitej liczby dla odmian z przyrostkiem **i64.** |
+| **st_uid** | Numeryczny identyfikator użytkownika, który jest właścicielem pliku (specyficzny dla systemu UNIX). To pole będzie zawsze zerowe w systemach Windows. Przekierowany plik jest klasyfikowany jako plik systemu Windows. |
 
-Jeśli *ścieżka* odwołuje się do urządzenia, **st_size**, różne pola czasu, **st_dev**i **st_rdev** pola w strukturze **_stat** są bezużyteczne. Ponieważ STAT. H używa typu [_dev_t](../../c-runtime-library/standard-types.md) , który jest zdefiniowany w typach. H, należy uwzględnić typy. H przed STAT. H w kodzie.
+Jeśli *ścieżka* odnosi się do urządzenia, **st_size,** różne pola czasu, **st_dev**i **st_rdev** pola w **strukturze _stat** są bez znaczenia. Ponieważ STAT. H używa [typu _dev_t](../../c-runtime-library/standard-types.md) zdefiniowanego w typach. H, należy dołączyć TYPY. H przed STAT. H w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/typy. h > po którym \<następuje sys/stat. h >|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/typy. h > po którym \<następuje sys/stat. h > \<lub WCHAR. h >|\<errno.h>|
+|**_stat** **, _stat32,** **_stat64,** **_stati64,** **_stat32i64,** **_stat64i32**|\<sys/types.h> następuje \<sys/stat.h>|\<> errno.h|
+|**_wstat** **, _wstat32,** **_wstat64,** **_wstati64,** **_wstat32i64,** **_wstat64i32**|\<sys/types.h> następuje \<sys/stat.h> \<lub wchar.h>|\<> errno.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -317,7 +328,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

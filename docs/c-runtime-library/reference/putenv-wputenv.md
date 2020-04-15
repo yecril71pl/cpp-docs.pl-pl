@@ -1,9 +1,11 @@
 ---
 title: _putenv, _wputenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putenv
 - _wputenv
+- _o__putenv
+- _o__wputenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +40,19 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e74959e6c6cdb2e27ce0d68ba40d02d64949904
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949885"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333039"
 ---
 # <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
-Tworzy, modyfikuje lub usuwa zmienne środowiskowe. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
+Tworzy, modyfikuje lub usuwa zmienne środowiskowe. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,11 +72,13 @@ Definicja ciągu środowiska.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwróć wartość 0, jeśli w przypadku błędu wystąpi sukces lub-1.
+Zwraca 0, jeśli zakończy się pomyślnie lub -1 w przypadku błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_putenv** dodaje nowe zmienne środowiskowe lub modyfikuje wartości istniejących zmiennych środowiskowych. Zmienne środowiskowe definiują środowisko, w którym jest wykonywany proces (na przykład domyślną ścieżkę wyszukiwania dla bibliotek, które mają być połączone z programem). **_wputenv** to dwubajtowa wersja **_putenv**; argument *envstring* **_wputenv** jest ciągiem znaków dwubajtowych.
+Funkcja **_putenv** dodaje nowe zmienne środowiskowe lub modyfikuje wartości istniejących zmiennych środowiskowych. Zmienne środowiskowe definiują środowisko, w którym wykonywany jest proces (na przykład domyślna ścieżka wyszukiwania bibliotek połączonych z programem). **_wputenv** jest szerokoznakową wersją **_putenv**; *envstring* argument do **_wputenv** jest ciągiem znaków o szerokich znakach.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -81,32 +86,32 @@ Funkcja **_putenv** dodaje nowe zmienne środowiskowe lub modyfikuje wartości i
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-Argument *envstring* musi być wskaźnikiem do ciągu w postaci *nazwa_zmiennej*=*value_string*, gdzie *nazwa_zmiennej* to nazwa zmiennej środowiskowej, która ma zostać dodana lub zmodyfikowana, a *value_string* to zmienna wartościami. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie Nowa zmienna *nazwa_zmiennej* i jej wartość *value_string* są dodawane do środowiska. Możesz usunąć zmienną ze środowiska, określając pustą *value_string*lub innymi słowy, określając tylko wartość *nazwa_zmiennej*=.
+*Envstring* argument musi być wskaźnikiem do ciągu *warname*=formularza*value_string*, gdzie *varname* jest nazwą zmiennej środowiskowej, która ma zostać dodana lub zmodyfikowana, a *value_string* jest wartością zmiennej. Jeśli *nazwa warname* jest już częścią środowiska, jego wartość jest zastępowana *przez value_string*; w przeciwnym razie nowa *zmienna warname* i jej *value_string* wartość są dodawane do środowiska. Zmienną ze środowiska można usunąć, określając pustą *value_string*lub innymi słowy, określając tylko *nazwę warname*=.
 
-**_putenv** i **_wputenv** mają wpływ tylko na środowisko, które jest lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska poziomu polecenia. Oznacza to, że funkcje te działają tylko na strukturach danych dostępnych dla biblioteki wykonawczej, a nie w segmencie środowiska utworzonym dla procesu przez system operacyjny. Gdy bieżący proces zakończy działanie, środowisko powraca do poziomu procesu wywołującego (w większości przypadków jest to poziom systemu operacyjnego). Zmodyfikowane środowisko może być jednak przesyłane do każdego nowego procesu utworzonego przez **_spawn**, **_exec**lub **system**, a te nowe procesy uzyskują nowe elementy dodane przez **_putenv** i **_wputenv**.
+**_putenv** i **_wputenv** mieć wpływ tylko na środowisko, które jest lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska na poziomie polecenia. Oznacza to, że te funkcje działają tylko na strukturach danych dostępnych dla biblioteki w czasie wykonywania, a nie w segmencie środowiska utworzonym dla procesu przez system operacyjny. Po zakończeniu bieżącego procesu środowisko powraca do poziomu procesu wywołującego (w większości przypadków na poziomie systemu operacyjnego). Jednak zmodyfikowane środowisko może być przekazywane do wszystkich nowych procesów utworzonych przez **_spawn,** **_exec**lub **system**, a te nowe procesy otrzymują nowe elementy dodane przez **_putenv** i **_wputenv.**
 
-Nie zmieniaj bezpośrednio wpisu środowiska: zamiast tego należy użyć **_putenv** lub **_wputenv** , aby go zmienić. W szczególności bezpośrednie zwalnianie elementów tablicy globalnej **_environ []** może prowadzić do nieprawidłowej ilości pamięci.
+Nie należy zmieniać wpisu środowiska bezpośrednio: zamiast tego użyj **_putenv** lub **_wputenv,** aby go zmienić. W szczególności bezpośrednie zwalnianie elementów **tablicy globalnej _environ[]** może prowadzić do rozwiązania nieprawidłowej pamięci.
 
-**getenv** i **_putenv** używają zmiennej globalnej **_environ** , aby uzyskać dostęp do tabeli środowiskowej. **_wgetenv** i **_wputenv** używają **_wenviron**. **_putenv** i **_wputenv** mogą zmienić wartość **_environ** i **_wenviron**, w ten sposób unieważnienie argumentu **_envp** do **głównego** i argumentu **_wenvp** do **wmain**. W związku z tym można bezpiecznie używać **_environ** lub **_wenviron** do uzyskiwania dostępu do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji **_putenv** i **_wputenv** na zmienne globalne, zobacz [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** i **_putenv** korzystają z **globalnej** zmiennej _environ, aby uzyskać dostęp do tabeli środowiska; **_wgetenv** i **_wputenv** używają **_wenviron**. **_putenv** i **_wputenv** mogą zmienić wartość **_environ** i **_wenviron,** unieważniając w ten sposób argument **_envp** na **główny** i **argument _wenvp** na **wmain**. W związku z tym bezpieczniej jest używać **_environ** lub **_wenviron** dostępu do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji **_putenv** i **_wputenv** ze zmiennymi globalnymi, zobacz [_environ _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Rodziny **_putenv** i **_getenv** funkcji nie są bezpieczne wątkowo. **_getenv** może zwrócić wskaźnik ciągu, podczas gdy **_putenv** modyfikuje ciąg, powodując błędy losowe. Upewnij się, że wywołania tych funkcji są zsynchronizowane.
+> **_putenv** i **_getenv** rodzin funkcji nie są bezpieczne dla wątków. **_getenv** może zwrócić wskaźnik ciągu, podczas gdy **_putenv** modyfikuje ciąg, powodując losowe błędy. Upewnij się, że wywołania tych funkcji są synchronizowane.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putenv**|\<stdlib.h>|
-|**_wputenv**|\<STDLIB. h > lub \<WCHAR. h >|
+|**_putenv**|\<>|
+|**_wputenv**|\<> lub \<wchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Aby zapoznać się z przykładem sposobu korzystania z **_putenv**, zobacz [getenv, _wgetenv](getenv-wgetenv.md).
+Aby uzyskać przykład użycia **_putenv**, zobacz [getenv, _wgetenv](getenv-wgetenv.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>

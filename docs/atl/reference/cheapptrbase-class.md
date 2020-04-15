@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326903"
 ---
 # <a name="cheapptrbase-class"></a>Klasa CHeapPtrBase
 
-Ta klasa stanowi podstawę kilka klas wskaźnika inteligentnego sterty.
+Ta klasa stanowi podstawę dla kilku klas wskaźnika sterty inteligentnej.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,10 +37,10 @@ class CHeapPtrBase
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ obiektu, który ma być przechowywany na stosie.
+Typ obiektu, który ma być przechowywany na stercie.
 
-*Allocator*<br/>
-Klasa alokacji pamięci do użycia. Domyślnie CRT procedury służą do przydzielają i zwalniają pamięć.
+*Programu przydzielania*<br/>
+Klasa alokacji pamięci do użycia. Domyślnie procedury CRT są używane do przydzielania i zwalniania pamięci.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,43 +48,43 @@ Klasa alokacji pamięci do użycia. Domyślnie CRT procedury służą do przydzi
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|Destruktor.|
+|[Baza CHeapPtrBase::~CHeapPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrBase::AllocateBytes](#allocatebytes)|Wywołaj tę metodę można przydzielić pamięci.|
-|[CHeapPtrBase::Attach](#attach)|Wywołaj tę metodę, aby przejąć prawo własności istniejącego wskaźnika.|
-|[CHeapPtrBase::Detach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
-|[CHeapPtrBase::Free](#free)|Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CHeapPtrBase`.|
-|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Wywołaj tę metodę w celu ponownego przydzielenia pamięci.|
+|[Baza CHeapPtrBase::Przydzielanie bajtów](#allocatebytes)|Wywołanie tej metody, aby przydzielić pamięć.|
+|[CHeapPtrBase::Dołącz](#attach)|Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.|
+|[CHeapPtrBase::Detach](#detach)|Wywołanie tej metody, aby zwolnić własność wskaźnika.|
+|[CHeapPtrBase::Wolny](#free)|Wywołanie tej metody, aby usunąć `CHeapPtrBase`obiekt wskazywał przez .|
+|[Baza CHeapPtrBase::Ponowne przydzielanie bajtów](#reallocatebytes)|Wywołanie tej metody, aby ponownie przydzielić pamięć.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrBase::operator T *](#operator_t_star)|Operator rzutowania.|
-|[CHeapPtrBase::operator &](#operator_amp)|& — Operator.|
-|[CHeapPtrBase::operator ->](#operator_ptr)|Operator wskaźnika do elementu członkowskiego.|
+|[CHeapPtrBase::operator T*](#operator_t_star)|Operator odlewu.|
+|[CHeapPtrBase::operator &](#operator_amp)|Operator &.|
+|[CHeapPtrBase::operator ->](#operator_ptr)|Operator wskaźnik-element.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrBase::m_pData](#m_pdata)|Zmiennej składowej danych wskaźnika.|
+|[CHeapPtrBase::m_pData](#m_pdata)|Zmienna elementu członkowskiego danych wskaźnika.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa stanowi podstawę kilka klas wskaźnika inteligentnego sterty. Klasy pochodne, na przykład [CHeapPtr](../../atl/reference/cheapptr-class.md) i [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), dodaj ich własnych operatory i konstruktory. Zobacz te klasy Przykłady implementacji.
+Ta klasa stanowi podstawę dla kilku klas wskaźnika sterty inteligentnej. Klasy pochodne, na przykład [CHeapPtr](../../atl/reference/cheapptr-class.md) i [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), dodaj własne konstruktory i operatory. Zobacz te klasy przykłady implementacji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcore.h
 
-##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes
+## <a name="cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>Baza CHeapPtrBase::Przydzielanie bajtów
 
-Wywołaj tę metodę można przydzielić pamięci.
+Wywołanie tej metody, aby przydzielić pamięć.
 
 ```
 bool AllocateBytes(size_t nBytes) throw();
@@ -92,20 +92,20 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*<br/>
+*n Bajty*<br/>
 Liczba bajtów pamięci do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pamięć jest pomyślnie przydzielone, wartość false w przeciwnym razie.
+Zwraca wartość true, jeśli pamięć została pomyślnie przydzielona, false w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach do debugowania błędu potwierdzenia wystąpi [CHeapPtrBase::m_pData](#m_pdata) zmiennej składowej pozwala obecnie przejść do istniejącej wartości; oznacza to, że nie jest równa NULL.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej obecnie wskazuje na istniejącą wartość; oznacza to, że nie jest równa NULL.
 
-##  <a name="attach"></a>  CHeapPtrBase::Attach
+## <a name="cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase::Dołącz
 
-Wywołaj tę metodę, aby przejąć prawo własności istniejącego wskaźnika.
+Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.
 
 ```
 void Attach(T* pData) throw();
@@ -113,16 +113,16 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*<br/>
-`CHeapPtrBase` Obiekt będzie przejęcie na własność ten wskaźnik.
+*Pdata*<br/>
+Obiekt `CHeapPtrBase` przejmie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `CHeapPtrBase` obiektu przejmuje na własność wskaźnika, usługa automatycznie usunie wskaźnika i wszystkie przydzielone dane podczas jego wykracza poza zakres.
+Gdy `CHeapPtrBase` obiekt przejmuje na własność wskaźnik, automatycznie usunie wskaźnik i wszystkie przydzielone dane, gdy wyjdzie poza zakres.
 
-W kompilacjach do debugowania błędu potwierdzenia wystąpi [CHeapPtrBase::m_pData](#m_pdata) zmiennej składowej pozwala obecnie przejść do istniejącej wartości; oznacza to, że nie jest równa NULL.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli [CHeapPtrBase::m_pData](#m_pdata) zmiennej członkowskiej obecnie wskazuje na istniejącą wartość; oznacza to, że nie jest równa NULL.
 
-##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase
+## <a name="cheapptrbasecheapptrbase"></a><a name="dtor"></a>Baza CHeapPtrBase::~CHeapPtrBase
 
 Destruktor.
 
@@ -134,9 +134,9 @@ Destruktor.
 
 Zwalnia wszystkie przydzielone zasoby.
 
-##  <a name="detach"></a>  CHeapPtrBase::Detach
+## <a name="cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::Detach
 
-Wywołaj tę metodę, aby zwolnić własność wskaźnika.
+Wywołanie tej metody, aby zwolnić własność wskaźnika.
 
 ```
 T* Detach() throw();
@@ -148,11 +148,11 @@ Zwraca kopię wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Uwalnia własność wskaźnika, ustawia [CHeapPtrBase::m_pData](#m_pdata) zmienną członkowską na wartość NULL i zwraca kopię wskaźnika.
+Zwalnia własność wskaźnika, ustawia [zmienną CHeapPtrBase::m_pData](#m_pdata) zmienną elementu członkowskiego na null i zwraca kopię wskaźnika.
 
-##  <a name="free"></a>  CHeapPtrBase::Free
+## <a name="cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase::Wolny
 
-Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CHeapPtrBase`.
+Wywołanie tej metody, aby usunąć `CHeapPtrBase`obiekt wskazywał przez .
 
 ```
 void Free() throw();
@@ -160,11 +160,11 @@ void Free() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wskazywany przez `CHeapPtrBase` jest zwalniana i [CHeapPtrBase::m_pData](#m_pdata) zmiennej składowej ma wartość NULL.
+Obiekt wskazany przez `CHeapPtrBase` jest zwolniona, a zmienna [CHeapPtrBase::m_pData](#m_pdata) jest ustawiona na NULL.
 
-##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData
+## <a name="cheapptrbasem_pdata"></a><a name="m_pdata"></a>CHeapPtrBase::m_pData
 
-Zmiennej składowej danych wskaźnika.
+Zmienna elementu członkowskiego danych wskaźnika.
 
 ```
 T* m_pData;
@@ -172,11 +172,11 @@ T* m_pData;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta zmienna członka przechowuje informacje o wskaźnikach.
+Ta zmienna elementu członkowskiego zawiera informacje o wskaźniku.
 
-##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;
+## <a name="cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::operator&amp;
 
-& — Operator.
+Operator &.
 
 ```
 T** operator&() throw();
@@ -184,11 +184,11 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca adres obiektu wskazywanego przez `CHeapPtrBase` obiektu.
+Zwraca adres obiektu wskazywalnego przez `CHeapPtrBase` obiekt.
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+## <a name="cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase::operator -&gt;
 
-Operator wskaźnika do elementu członkowskiego.
+Operator wskaźnik-element.
 
 ```
 T* operator->() const throw();
@@ -196,15 +196,15 @@ T* operator->() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość [CHeapPtrBase::m_pData](#m_pdata) zmiennej składowej.
+Zwraca wartość zmiennej [CHeapPtrBase::m_pData](#m_pdata) element członkowski.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego operatora do wywołania metody w klasie, do których prowadzą `CHeapPtrBase` obiektu. W kompilacjach do debugowania błędu potwierdzenia wystąpi `CHeapPtrBase` wskazuje na wartość NULL.
+Ten operator służy do wywoływania metody w `CHeapPtrBase` klasie wskazywaluj przez obiekt. W kompilacjach debugowania błąd potwierdzenia `CHeapPtrBase` wystąpi, jeśli wskazuje wartość NULL.
 
-##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *
+## <a name="cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase::operator T*
 
-Operator rzutowania.
+Operator odlewu.
 
 ```
 operator T*() const throw();
@@ -214,9 +214,9 @@ operator T*() const throw();
 
 Zwraca [CHeapPtrBase::m_pData](#m_pdata).
 
-##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes
+## <a name="cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>Baza CHeapPtrBase::Ponowne przydzielanie bajtów
 
-Wywołaj tę metodę w celu ponownego przydzielenia pamięci.
+Wywołanie tej metody, aby ponownie przydzielić pamięć.
 
 ```
 bool ReallocateBytes(size_t nBytes) throw();
@@ -224,15 +224,15 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*<br/>
-Nowe ilość pamięci do przydzielenia, w bajtach.
+*n Bajty*<br/>
+Nowa ilość pamięci do przydzielenia w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pamięć jest pomyślnie przydzielone, wartość false w przeciwnym razie.
+Zwraca wartość true, jeśli pamięć została pomyślnie przydzielona, false w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

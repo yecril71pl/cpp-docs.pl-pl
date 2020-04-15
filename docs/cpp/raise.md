@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317231"
 ---
 # <a name="__raise"></a>__raise
 
-Wyróżnia lokację wywołania zdarzenia.
+Podkreśla miejsce wywołania zdarzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Uwagi
 
-W kodzie zarządzanym zdarzenie może zostać wywołane tylko z klasy, w której jest zdefiniowana. Aby uzyskać więcej informacji, zobacz [zdarzenie](../extensions/event-cpp-component-extensions.md) .
+Z kodu zarządzanego zdarzenia można wywoływać tylko z poziomu klasy, w której jest zdefiniowany. Zobacz [zdarzenie,](../extensions/event-cpp-component-extensions.md) aby uzyskać więcej informacji.
 
-Słowo kluczowe **__raise** powoduje, że błąd jest emitowany w przypadku wywołania niezdarzenia.
+Słowo kluczowe **__raise** powoduje, że błąd jest emitowany, jeśli wywołasz zdarzenie inne.
 
 > [!NOTE]
->  Klasa lub struktura z szablonem nie może zawierać zdarzeń.
+> Klasa szablonu lub struktura nie może zawierać zdarzeń.
 
 ## <a name="example"></a>Przykład
 

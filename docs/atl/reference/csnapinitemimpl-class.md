@@ -27,19 +27,19 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: a9ebcf8827d79a9613ce14251d361dd607aa6af3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330726"
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 
-Ta klasa dostarcza metody do implementowania obiektu węzła przystawki.
+Ta klasa zawiera metody implementacji obiektu węzła przystawki.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,9 +51,9 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `CSnapInItemImpl`.
+Twoja klasa, pochodząca od `CSnapInItemImpl`.
 
-*bIsExtension*<br/>
+*bIsRozcisknięcie*<br/>
 PRAWDA, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie FALSE.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -68,16 +68,16 @@ PRAWDA, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie FALSE.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSnapInItemImpl:: AddMenuItems](#addmenuitems)|Dodaje elementy menu do menu kontekstowego.|
-|[CSnapInItemImpl:: polecenie](#command)|Wywoływane przez konsolę, gdy zostanie wybrany niestandardowy element menu.|
+|[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Dodaje elementy menu do menu kontekstowego.|
+|[CSnapInItemImpl::Polecenie](#command)|Wywoływana przez konsolę po wybraniu niestandardowego elementu menu.|
 |[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Dodaje strony do arkusza właściwości przystawki.|
-|[CSnapInItemImpl::FillData](#filldata)|Kopiuje informacje z obiektu przystawki do określonego strumienia.|
-|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|`RESULTDATAITEM` Pobiera strukturę przystawki.|
+|[CSnapInItemImpl::FillData](#filldata)|Kopiuje informacje o obiekcie przystawek do określonego strumienia.|
+|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Pobiera strukturę `RESULTDATAITEM` przystawki.|
 |[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Określa typ widoku używanego przez okienko wyników.|
-|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|`SCOPEDATAITEM` Pobiera strukturę przystawki.|
-|[CSnapInItemImpl:: informowanie](#notify)|Wywoływane przez konsolę, aby powiadomić przystawkę akcji podjętych przez użytkownika.|
-|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Wywołuje się, by sprawdzić, czy węzeł przystawki obsługuje strony właściwości.|
-|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Modyfikuje flagi wstawiania menu dla obiektu przystawki.|
+|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Pobiera strukturę `SCOPEDATAITEM` przystawki.|
+|[CSnapInItemImpl::Powiadom](#notify)|Wywoływane przez konsolę, aby powiadomić przystawkę o akcjach podjętych przez użytkownika.|
+|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Wywoływany, aby sprawdzić, czy węzeł przystawki obsługuje strony właściwości.|
+|[CSnapInItemImpl::SetMenuInsertionSlags](#setmenuinsertionflags)|Modyfikuje flagi wstawiania menu dla obiektu przystawkowego.|
 |[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Ustawia informacje o określonym przycisku paska narzędzi.|
 |[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Aktualizuje stan elementu menu kontekstowego.|
 |[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Aktualizuje stan określonego przycisku paska narzędzi.|
@@ -87,12 +87,12 @@ PRAWDA, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie FALSE.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Nazwa obiektu przystawki.|
-|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Struktura systemu `RESULTDATAITEM` Windows używana `CSnapInItemImpl` przez obiekt.|
-|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Struktura systemu `SCOPEDATAITEM` Windows używana `CSnapInItemImpl` przez obiekt.|
+|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Struktura `RESULTDATAITEM` systemu Windows `CSnapInItemImpl` używana przez obiekt.|
+|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Struktura `SCOPEDATAITEM` systemu Windows `CSnapInItemImpl` używana przez obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CSnapInItemImpl`udostępnia podstawową implementację obiektu węzła przystawki, takie jak dodawanie elementów menu i pasków narzędzi i przekazywanie poleceń dla węzła przystawki do odpowiedniej funkcji obsługi. Te funkcje są implementowane przy użyciu kilku różnych interfejsów i typów map. Domyślna implementacja obsługuje powiadomienia wysyłane do obiektu węzła przez określenie poprawnego wystąpienia klasy pochodnej, a następnie przesłanie komunikatu do poprawnego wystąpienia.
+`CSnapInItemImpl`zapewnia podstawową implementację obiektu węzła przystawki, takiego jak dodawanie elementów menu i pasków narzędzi oraz przekazywanie poleceń dla węzła przystawki do odpowiedniej funkcji obsługi. Te funkcje są implementowane przy użyciu kilku różnych interfejsów i typów map. Domyślna implementacja obsługuje powiadomienia wysyłane do obiektu węzła, określając poprawne wystąpienie klasy pochodnej, a następnie przesyłając dalej wiadomość do poprawnego wystąpienia.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -102,11 +102,11 @@ PRAWDA, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie FALSE.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsnap. h
+**Nagłówek:** atlsnap.h
 
-##  <a name="addmenuitems"></a>CSnapInItemImpl:: AddMenuItems
+## <a name="csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems
 
-Ta metoda implementuje funkcję Win32 [IExtendContextMenu::](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)AddMenuItems.
+Ta metoda implementuje funkcję Win32 [IExtendContextMenu::AddMenuItems](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -117,34 +117,34 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*piCallback*<br/>
-podczas Wskaźnik na `IContextMenuCallback` element, który może dodawać elementy do menu kontekstowego.
+*piCallback (powrót do systemu)*<br/>
+[w] Wskaźnik do `IContextMenuCallback` tego, który można dodać elementy do menu kontekstowego.
 
-*pInsertionAllowed*<br/>
-[in. out] Identyfikuje program Microsoft Management Console (MMC) — zdefiniowane punkty wstawiania elementów menu, które mogą być używane. Może to być kombinacja następujących flag:
+*PInsertion Dozwolone*<br/>
+[w, na zewnątrz] Identyfikuje zdefiniowane w programie Microsoft Management Console (MMC) punkty wstawiania elementu menu, które mogą być używane. Może to być kombinacja następujących flag:
 
-- Elementy CCM_INSERTIONALLOWED_TOP można wstawiać u góry menu kontekstowego.
+- CCM_INSERTIONALLOWED_TOP Elementy można wstawić u góry menu kontekstowego.
 
-- Elementy CCM_INSERTIONALLOWED_NEW można wstawiać w podmenu Create New.
+- CCM_INSERTIONALLOWED_NEW Elementy można wstawić w podmenu Utwórz nowe.
 
-- Elementy CCM_INSERTIONALLOWED_TASK można wstawiać w podmenu zadania.
+- CCM_INSERTIONALLOWED_TASK Elementy można wstawić w podmenu Zadanie.
 
-- Elementy CCM_INSERTIONALLOWED_VIEW można wstawiać w menu Widok paska narzędzi lub w podmenu Widok w menu kontekstowym okienka wyników.
+- CCM_INSERTIONALLOWED_VIEW Elementy można wstawić w menu widoku paska narzędzi lub w podmenu Widok menu kontekstowego okienka wyników.
 
-*type*<br/>
-podczas Określa typ obiektu. Może mieć jedną z następujących wartości:
+*Typu*<br/>
+[w] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
-- Obiekt danych CCT_SCOPE dla kontekstu okienka zakresu.
+- CCT_SCOPE Data obiektu dla kontekstu okienka zakresu.
 
-- Obiekt danych CCT_RESULT dla kontekstu okienka wyników.
+- CCT_RESULT Data obiektu dla kontekstu okienka wyników.
 
-- Obiekt danych CCT_SNAPIN_MANAGER dla kontekstu Menedżera przystawek.
+- CCT_SNAPIN_MANAGER Data obiektu dla kontekstu menedżera przystawki.
 
-- Obiekt danych CCT_UNINITIALIZED ma nieprawidłowy typ.
+- CCT_UNINITIALIZED Data obiekt ma nieprawidłowy typ.
 
-##  <a name="command"></a>CSnapInItemImpl:: polecenie
+## <a name="csnapinitemimplcommand"></a><a name="command"></a>CSnapInItemImpl::Polecenie
 
-Ta metoda implementuje funkcję Win32 [IExtendContextMenu:: Command](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command).
+Ta metoda implementuje funkcję Win32 [IExtendContextMenu::Command](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -152,23 +152,23 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parametry
 
-*lCommandID*<br/>
-podczas Określa identyfikator polecenia elementu menu.
+*lKommandid*<br/>
+[w] Określa identyfikator polecenia elementu menu.
 
-*type*<br/>
-podczas Określa typ obiektu. Może mieć jedną z następujących wartości:
+*Typu*<br/>
+[w] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
-- Obiekt danych CCT_SCOPE dla kontekstu okienka zakresu.
+- CCT_SCOPE Data obiektu dla kontekstu okienka zakresu.
 
-- Obiekt danych CCT_RESULT dla kontekstu okienka wyników.
+- CCT_RESULT Data obiektu dla kontekstu okienka wyników.
 
-- Obiekt danych CCT_SNAPIN_MANAGER dla kontekstu Menedżera przystawek.
+- CCT_SNAPIN_MANAGER Data obiektu dla kontekstu menedżera przystawki.
 
-- Obiekt danych CCT_UNINITIALIZED ma nieprawidłowy typ.
+- CCT_UNINITIALIZED Data obiekt ma nieprawidłowy typ.
 
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages
+## <a name="csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages
 
-Ta metoda implementuje funkcję Win32 [IExtendPropertySheet:: CreatePropertyPages](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2).
+Ta metoda implementuje funkcję Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -181,26 +181,26 @@ CreatePropertyPages(
 ### <a name="parameters"></a>Parametry
 
 *lpProvider*<br/>
-podczas Wskaźnik do `IPropertySheetCallback` interfejsu.
+[w] Wskaźnik do `IPropertySheetCallback` interfejsu.
 
-*uchwyty*<br/>
-podczas Określa uchwyt używany do kierowania komunikatu powiadomienia MMCN_PROPERTY_CHANGE do odpowiedniej klasy danych.
+*Obsługi*<br/>
+[w] Określa dojście używane do kierowania komunikatu powiadomienia MMCN_PROPERTY_CHANGE do odpowiedniej klasy danych.
 
-*pUnk*<br/>
-podczas Wskaźnik do `IExtendPropertySheet` interfejsu obiektu, który zawiera informacje kontekstowe dotyczące węzła.
+*Punk*<br/>
+[w] Wskaźnik do `IExtendPropertySheet` interfejsu na obiekcie, który zawiera informacje kontekstowe o węźle.
 
-*type*<br/>
-podczas Określa typ obiektu. Może mieć jedną z następujących wartości:
+*Typu*<br/>
+[w] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
-- Obiekt danych CCT_SCOPE dla kontekstu okienka zakresu.
+- CCT_SCOPE Data obiektu dla kontekstu okienka zakresu.
 
-- Obiekt danych CCT_RESULT dla kontekstu okienka wyników.
+- CCT_RESULT Data obiektu dla kontekstu okienka wyników.
 
-- Obiekt danych CCT_SNAPIN_MANAGER dla kontekstu Menedżera przystawek.
+- CCT_SNAPIN_MANAGER Data obiektu dla kontekstu menedżera przystawki.
 
-- Obiekt danych CCT_UNINITIALIZED ma nieprawidłowy typ.
+- CCT_UNINITIALIZED Data obiekt ma nieprawidłowy typ.
 
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl
+## <a name="csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl
 
 Konstruuje `CSnapInItemImpl` obiekt.
 
@@ -208,9 +208,9 @@ Konstruuje `CSnapInItemImpl` obiekt.
 CSnapInItemImpl();
 ```
 
-##  <a name="filldata"></a>CSnapInItemImpl::FillData
+## <a name="csnapinitemimplfilldata"></a><a name="filldata"></a>CSnapInItemImpl::FillData
 
-Ta funkcja jest wywoływana, aby pobrać informacje o elemencie.
+Ta funkcja jest wywoływana w celu pobrania informacji o elemencie.
 
 ```
 FillData(CLIPFORMAT cf, LPSTREAM pStream);
@@ -218,19 +218,19 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*cf*<br/>
-podczas Format (tekst, tekst sformatowany lub tekst sformatowany z elementami OLE) Schowka.
+*Por*<br/>
+[w] Format (tekst, tekst sformatowy lub tekst sformatowy z elementami OLE) Schowka.
 
-*pStream*<br/>
-podczas Wskaźnik do strumienia zawierającego dane obiektu.
+*pStream (Strumień)*<br/>
+[w] Wskaźnik do strumienia zawierający dane obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby poprawnie zaimplementować tę funkcję, skopiuj poprawne informacje do strumienia (*pStream*), w zależności od formatu Schowka wskazanego przez *CF*.
+Aby prawidłowo wdrożyć tę funkcję, należy skopiować poprawne informacje do strumienia (*pStream*), w zależności od formatu Schowka wskazanego przez *cf*.
 
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType
+## <a name="csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType
 
-Wywołaj tę funkcję, aby pobrać typ widoku dla okienka wyników obiektu przystawki.
+Wywołanie tej funkcji, aby pobrać typ widoku dla okienka wyników obiektu przystawki.
 
 ```
 GetResultViewType(
@@ -240,19 +240,19 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parametry
 
-*ppViewType*<br/>
-określoną Wskaźnik na adres zwracanego typu widoku.
+*ppViewType (Typ widoku)*<br/>
+[na zewnątrz] Wskaźnik do adresu powracającego typu widoku.
 
 *pViewOptions*<br/>
-określoną Wskaźnik na Wyliczenie MMC_VIEW_OPTIONS, które udostępnia konsolę z opcjami określonymi przez przystawkę będącą właścicielem. Może to być jedna z następujących wartości:
+[na zewnątrz] Wskaźnik do wyliczenia MMC_VIEW_OPTIONS, który zapewnia konsoli opcje określone przez przystawkę posiadacza. Ta wartość może być jedną z następujących wartości:
 
-- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 instruuje konsolę, aby nie pomógł w menu **Widok** wyświetlić standardowych opcji widoku listy. Umożliwia tej przystawce wyświetlanie własnych widoków niestandardowych tylko w okienku Widok wyników. Jest to jedyna flaga opcji zdefiniowana w tym momencie.
+- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 Informuje konsolę o powstrzymaniu się od przedstawiania standardowych opcji widoku listy w menu **Widok.** Umożliwia przystawce wyświetlanie własnych widoków niestandardowych tylko w okienku widoku wynikowego. Jest to jedyna flaga opcji zdefiniowana w tej chwili.
 
-- MMC_VIEW_OPTIONS_NONE = 0 zezwala na Opcje widoku domyślnego.
+- MMC_VIEW_OPTIONS_NONE = 0 Umożliwia domyślne opcje widoku.
 
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo
+## <a name="csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo
 
-Wywołaj tę funkcję, aby `SCOPEDATAITEM` pobrać strukturę przystawki.
+Wywołanie tej funkcji, `SCOPEDATAITEM` aby pobrać strukturę przystawki.
 
 ```
 GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
@@ -261,11 +261,11 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 ### <a name="parameters"></a>Parametry
 
 *pScopeDataItem*<br/>
-określoną Wskaźnik do `SCOPEDATAITEM` struktury `CSnapInItemImpl` obiektu.
+[na zewnątrz] Wskaźnik do `SCOPEDATAITEM` struktury `CSnapInItemImpl` obiektu.
 
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo
+## <a name="csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo
 
-Wywołaj tę funkcję, aby `RESULTDATAITEM` pobrać strukturę przystawki.
+Wywołanie tej funkcji, `RESULTDATAITEM` aby pobrać strukturę przystawki.
 
 ```
 GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
@@ -274,9 +274,9 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 ### <a name="parameters"></a>Parametry
 
 *pResultDataItem*<br/>
-określoną Wskaźnik do `RESULTDATAITEM` struktury `CSnapInItemImpl` obiektu.
+[na zewnątrz] Wskaźnik do `RESULTDATAITEM` struktury `CSnapInItemImpl` obiektu.
 
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName
+## <a name="csnapinitemimplm_bstrdisplayname"></a><a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName
 
 Zawiera ciąg wyświetlany dla elementu węzła.
 
@@ -284,25 +284,25 @@ Zawiera ciąg wyświetlany dla elementu węzła.
 CComBSTR m_bstrDisplayName;
 ```
 
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem
+## <a name="csnapinitemimplm_scopedataitem"></a><a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem
 
-`SCOPEDATAITEM` Struktura obiektu danych przystawki.
+Struktura `SCOPEDATAITEM` obiektu danych przystawki.
 
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```
 
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem
+## <a name="csnapinitemimplm_resultdataitem"></a><a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem
 
-Struktura [RESULTDATAITEM](/windows/win32/api/mmc/ns-mmc-resultdataitem) obiektu danych przystawek.
+[Struktura RESULTDATAITEM](/windows/win32/api/mmc/ns-mmc-resultdataitem) obiektu danych przystawki.
 
 ```
 RESULTDATAITEM m_resultDataItem;
 ```
 
-##  <a name="notify"></a>CSnapInItemImpl:: informowanie
+## <a name="csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::Powiadom
 
-Wywoływana, gdy użytkownik podejmuje działania dotyczące obiektu przystawki.
+Wywoływane, gdy obiekt przystawki jest działać na przez użytkownika.
 
 ```
 STDMETHOD(Notify)(
@@ -317,70 +317,70 @@ STDMETHOD(Notify)(
 ### <a name="parameters"></a>Parametry
 
 *event*<br/>
-podczas Identyfikuje akcję wykonywaną przez użytkownika. Możliwe są następujące powiadomienia:
+[w] Identyfikuje akcję podjętą przez użytkownika. Możliwe są następujące powiadomienia:
 
-- MMCN_ACTIVATE wysyłany, gdy okno jest uaktywniane i dezaktywowane.
+- MMCN_ACTIVATE wysyłane, gdy okno jest aktywowane i dezaktywowane.
 
-- MMCN_ADD_IMAGES wysyłany w celu dodania obrazów do okienka wyników.
+- MMCN_ADD_IMAGES Wysłane, aby dodać obrazy do okienka wyników.
 
-- MMCN_BTN_CLICK wysyłany, gdy użytkownik kliknie jeden z przycisków paska narzędzi.
+- MMCN_BTN_CLICK wysyłane, gdy użytkownik kliknie jeden z przycisków paska narzędzi.
 
-- MMCN_CLICK wysyłany, gdy użytkownik kliknie przycisk myszy w elemencie widoku listy.
+- MMCN_CLICK wysyłane, gdy użytkownik kliknie przycisk myszy w elemencie widoku listy.
 
-- MMCN_DBLCLICK wysyłany, gdy użytkownik kliknie dwukrotnie przycisk myszy w elemencie widoku listy.
+- MMCN_DBLCLICK Wysyłane, gdy użytkownik dwukrotnie kliknie przycisk myszy w elemencie widoku listy.
 
-- MMCN_DELETE wysyłany w celu informowania o tym, że obiekt powinien zostać usunięty.
+- MMCN_DELETE Wysłane, aby poinformować przystawkę, że obiekt powinien zostać usunięty.
 
-- MMCN_EXPAND wysyłany, gdy folder musi być rozwinięty lub kontraktowy.
+- MMCN_EXPAND Wysyłane, gdy folder musi zostać rozwinięty lub zakontraktowany.
 
-- MMCN_MINIMIZED wysyłany, gdy okno jest zminimalizowane lub zmaksymalizowane.
+- MMCN_MINIMIZED wysyłane, gdy okno jest zminimalizowane lub zmaksymalizowane.
 
-- MMCN_PROPERTY_CHANGE wysyłany w celu powiadomienia obiektu przystawki, który zostanie zmieniony przez widok obiektu przystawki.
+- MMCN_PROPERTY_CHANGE Wysłane, aby powiadomić obiekt przystawki, że widok obiektu przystawki ma się zmienić.
 
-- MMCN_REMOVE_CHILDREN wysyłany, gdy przystawka musi usunąć całe poddrzewo, które zostało dodane poniżej określonego węzła.
+- MMCN_REMOVE_CHILDREN Wysłane, gdy przystawka musi usunąć całe poddrzewo, które dodało poniżej określonego węzła.
 
-- MMCN_RENAME wysyłany po raz pierwszy do zapytania o zmianę nazwy, a druga godzina zmiany nazwy.
+- MMCN_RENAME Wysłane po raz pierwszy do kwerendy o zmianę nazwy i po raz drugi, aby zrobić zmianę nazwy.
 
-- MMCN_SELECT wysyłany, gdy wybrano element z okienka zakres lub widok wyników.
+- MMCN_SELECT Wysłane po zaznaczeniu elementu w okienku widoku zakresu lub wyniku.
 
-- MMCN_SHOW wysyłany, gdy element zakresu jest wybierany po raz pierwszy.
+- MMCN_SHOW Wysyłane, gdy element zakresu jest zaznaczony lub odznaczony po raz pierwszy.
 
-- MMCN_VIEW_CHANGE wysyłany, gdy przystawka może zaktualizować wszystkie widoki w przypadku wystąpienia zmiany.
+- MMCN_VIEW_CHANGE Wysyłane, gdy przystawka może zaktualizować wszystkie widoki po wystąpieniu zmiany.
 
-*ARG*<br/>
-podczas Zależy od typu powiadomienia.
+*Arg*<br/>
+[w] Zależy od typu powiadomienia.
 
-*param*<br/>
-podczas Zależy od typu powiadomienia.
+*Param*<br/>
+[w] Zależy od typu powiadomienia.
 
-*pComponentData*<br/>
-określoną Wskaźnik do zaimplementowania `IComponentData`obiektu. Ten parametr ma wartość NULL, jeśli powiadomienia nie są przekazywane z `IComponentData::Notify`programu.
+*pComponentData (Dane użytkownika)*<br/>
+[na zewnątrz] Wskaźnik do obiektu implementującego `IComponentData`. Ten parametr ma wartość NULL, jeśli `IComponentData::Notify`powiadomienie nie jest przekazywane z pliku .
 
-*pComponent*<br/>
-określoną Wskaźnik do obiektu, który implementuje `IComponent`. Ten parametr ma wartość NULL, jeśli powiadomienia nie są przekazywane z `IComponent::Notify`programu.
+*pSKlient*<br/>
+[na zewnątrz] Wskaźnik do obiektu, który `IComponent`implementuje . Ten parametr ma wartość NULL, jeśli `IComponent::Notify`powiadomienie nie jest przekazywane z pliku .
 
-*type*<br/>
-podczas Określa typ obiektu. Może mieć jedną z następujących wartości:
+*Typu*<br/>
+[w] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
-- Obiekt danych CCT_SCOPE dla kontekstu okienka zakresu.
+- CCT_SCOPE Data obiektu dla kontekstu okienka zakresu.
 
-- Obiekt danych CCT_RESULT dla kontekstu okienka wyników.
+- CCT_RESULT Data obiektu dla kontekstu okienka wyników.
 
-- Obiekt danych CCT_SNAPIN_MANAGER dla kontekstu Menedżera przystawek.
+- CCT_SNAPIN_MANAGER Data obiektu dla kontekstu menedżera przystawki.
 
-- Obiekt danych CCT_UNINITIALIZED ma nieprawidłowy typ.
+- CCT_UNINITIALIZED Data obiekt ma nieprawidłowy typ.
 
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor
+## <a name="csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor
 
-Wywołuje się, by sprawdzić, czy węzeł przystawki obsługuje strony właściwości.
+Wywoływany, aby sprawdzić, czy węzeł przystawki obsługuje strony właściwości.
 
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```
 
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags
+## <a name="csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionSlags
 
-Wywołaj tę funkcję, aby zmodyfikować flagi wstawiania menu określone przez *pInsertionAllowed*dla obiektu przystawki.
+Wywołanie tej funkcji, aby zmodyfikować flagi wstawiania menu, określone przez *pInsertionAllowed*, dla obiektu przystawki.
 
 ```
 void SetMenuInsertionFlags(
@@ -391,28 +391,28 @@ void SetMenuInsertionFlags(
 ### <a name="parameters"></a>Parametry
 
 *bBeforeInsertion*<br/>
-podczas Niezerowe, jeśli funkcja powinna zostać wywołana przed dodaniem elementów do menu kontekstowego; w przeciwnym razie 0.
+[w] Nonzero, jeśli funkcja powinna być wywoływana przed elementy są dodawane do menu kontekstowego; w przeciwnym razie 0.
 
-*pInsertionAllowed*<br/>
-[in. out] Identyfikuje program Microsoft Management Console (MMC) — zdefiniowane punkty wstawiania elementów menu, które mogą być używane. Może to być kombinacja następujących flag:
+*PInsertion Dozwolone*<br/>
+[w, na zewnątrz] Identyfikuje zdefiniowane w programie Microsoft Management Console (MMC) punkty wstawiania elementu menu, które mogą być używane. Może to być kombinacja następujących flag:
 
-- Elementy CCM_INSERTIONALLOWED_TOP można wstawiać u góry menu kontekstowego.
+- CCM_INSERTIONALLOWED_TOP Elementy można wstawić u góry menu kontekstowego.
 
-- Elementy CCM_INSERTIONALLOWED_NEW można wstawiać w podmenu Create New.
+- CCM_INSERTIONALLOWED_NEW Elementy można wstawić w podmenu Utwórz nowe.
 
-- Elementy CCM_INSERTIONALLOWED_TASK można wstawiać w podmenu zadania.
+- CCM_INSERTIONALLOWED_TASK Elementy można wstawić w podmenu Zadanie.
 
-- Elementy CCM_INSERTIONALLOWED_VIEW można wstawiać w menu Widok paska narzędzi lub w podmenu Widok w menu kontekstowym okienka wyników.
+- CCM_INSERTIONALLOWED_VIEW Elementy można wstawić w menu widoku paska narzędzi lub w podmenu Widok menu kontekstowego okienka wyników.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli tworzysz przystawkę podstawową, możesz zresetować dowolną flagę wstawiania jako sposób ograniczenia rodzaju elementów menu, które mogą zostać dodane przez rozszerzenie innej firmy. Na przykład, podstawowa przystawka może wyczyścić flagę CCM_INSERTIONALLOWED_NEW, aby zapobiec dodaniu przez rozszerzenia własnych nowych elementów menu.
+Jeśli tworzysz podstawowe przystawki, można zresetować dowolną z flag wstawiania jako sposób ograniczenia rodzaju elementów menu, które rozszerzenie innych firm można dodać. Na przykład podstawowa przystawka może wyczyścić flagę CCM_INSERTIONALLOWED_NEW, aby uniemożliwić rozszerzenia dodawania własnych elementów menu Utwórz nowe.
 
-Nie należy podejmować próby ustawienia bitów w *pInsertionAllowed* , które zostały pierwotnie wyczyszczone. Przyszłe wersje programu MMC mogą korzystać z usługi BITS, która nie jest obecnie zdefiniowana, więc nie należy zmieniać obecnie niezdefiniowanych bitów.
+Nie należy próbować ustawić bity w *pInsertionAllowed,* które zostały pierwotnie wyczyszczone. Przyszłe wersje programu MMC mogą używać bitów nieokreślonych obecnie, więc nie należy zmieniać bitów, które obecnie nie są zdefiniowane.
 
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo
+## <a name="csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo
 
-Wywołaj tę funkcję, aby zmodyfikować wszystkie style przycisków paska narzędzi dla obiektu przystawki przed utworzeniem paska narzędzi.
+Wywołanie tej funkcji, aby zmodyfikować wszystkie style przycisków paska narzędzi, obiektu przystawki, przed utworzeniem paska narzędzi.
 
 ```
 void SetToolbarButtonInfo(
@@ -423,40 +423,40 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-podczas Identyfikator przycisku paska narzędzi, który ma zostać ustawiony.
+*Identyfikator*<br/>
+[w] Identyfikator przycisku paska narzędzi, który ma zostać ustawiony.
 
-*fsState*<br/>
-podczas Flagi stanu przycisku. Może to być jeden lub więcej z następujących elementów:
+*fsStan*<br/>
+[w] Flagi państwowe przycisku. Może być co najmniej jedna z następujących czynności:
 
-- TBSTATE_CHECKED przycisk ma styl TBSTYLE_CHECKED i jest nacionięty.
+- TBSTATE_CHECKED Przycisk ma styl TBSTYLE_CHECKED i jest wciśnięty.
 
-- TBSTATE_ENABLED przycisk akceptuje dane wejściowe użytkownika. Przycisk, który nie ma tego stanu, nie akceptuje danych wejściowych użytkownika i jest wyszarzony.
+- TBSTATE_ENABLED Przycisk akceptuje dane wejściowe użytkownika. Przycisk, który nie ma tego stanu, nie akceptuje danych wejściowych użytkownika i jest wyszarzony.
 
-- TBSTATE_HIDDEN przycisk nie jest widoczny i nie może odbierać danych wejściowych użytkownika.
+- TBSTATE_HIDDEN Przycisk nie jest widoczny i nie może odbierać danych wejściowych użytkownika.
 
-- TBSTATE_INDETERMINATE przycisk jest szary.
+- TBSTATE_INDETERMINATE Przycisk jest wyszarzony.
 
-- TBSTATE_PRESSED naciśnięcie przycisku.
+- TBSTATE_PRESSED Przycisk jest wciśnięty.
 
-- TBSTATE_WRAP podział wiersza po przycisku. Przycisk musi mieć również TBSTATE_ENABLED.
+- TBSTATE_WRAP Podział wiersza następuje po przycisku. Przycisk musi mieć również TBSTATE_ENABLED.
 
-*fsType*<br/>
-podczas Flagi stanu przycisku. Może to być jeden lub więcej z następujących elementów:
+*fsType (typ)*<br/>
+[w] Flagi państwowe przycisku. Może być co najmniej jedna z następujących czynności:
 
-- TBSTYLE_BUTTON tworzy standardowy przycisk wypychania.
+- TBSTYLE_BUTTON Tworzy standardowy przycisk.
 
-- TBSTYLE_CHECK tworzy przycisk, który przełącza się między naciśniętymi i nienaciśniętymi Stanami przy każdym kliknięciu przez użytkownika. Przycisk ma inny kolor tła, gdy jest w stanie naciśniętym.
+- TBSTYLE_CHECK Tworzy przycisk, który przełącza się między stanami wciśnięty i niewciśnięty za każdym razem, gdy użytkownik kliknie go. Przycisk ma inny kolor tła, gdy jest w stanie naciśnięcia.
 
-- TBSTYLE_CHECKGROUP tworzy przycisk wyboru, który pozostanie wciśnięty do momentu naciśnięcia innego przycisku w grupie.
+- TBSTYLE_CHECKGROUP Tworzy przycisk wyboru, który pozostaje naciśnięty do momentu naciśnięcia innego przycisku w grupie.
 
-- TBSTYLE_GROUP tworzy przycisk, który pozostanie wciśnięty do momentu naciśnięcia innego przycisku w grupie.
+- TBSTYLE_GROUP Tworzy przycisk, który pozostaje naciśnięty do momentu naciśnięcia innego przycisku w grupie.
 
-- TBSTYLE_SEP tworzy separator, dostarczając małą przerwy między grupami przycisków. Przycisk, który ma ten styl nie otrzymuje danych wejściowych użytkownika.
+- TBSTYLE_SEP Tworzy separator, zapewniając niewielką przerwę między grupami przycisków. Przycisk, który ma ten styl nie odbiera danych wejściowych użytkownika.
 
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState
+## <a name="csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState
 
-Wywołaj tę funkcję, aby zmodyfikować element menu przed jego wstawieniem do menu kontekstowego obiektu przystawki.
+Wywołanie tej funkcji, aby zmodyfikować element menu, zanim zostanie wstawiony do menu kontekstowego obiektu przystawki.
 
 ```
 void UpdateMenuState(
@@ -467,34 +467,34 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-podczas Identyfikator elementu menu, który ma zostać ustawiony.
+*Identyfikator*<br/>
+[w] Identyfikator elementu menu, który ma zostać ustawiony.
 
-*pBuf*<br/>
-podczas Wskaźnik do ciągu dla elementu menu, który ma zostać zaktualizowany.
+*pBuf (ps.*<br/>
+[w] Wskaźnik do ciągu dla elementu menu, który ma zostać zaktualizowany.
 
-*znaczników*<br/>
-podczas Określa nowe flagi stanu. Może to być kombinacja następujących flag:
+*flagi*<br/>
+[w] Określa nowe flagi państwowe. Może to być kombinacja następujących flag:
 
-- MF_POPUP określa, że jest podmenu w menu kontekstowym. Elementy menu, punkty wstawiania i dalsze podmenu mogą zostać dodane do tego podmenu przy użyciu `lCommandID` ich `IInsertionPointID`jako.
+- MF_POPUP Określa, że jest to podmenu w menu kontekstowym. Elementy menu, punkty wstawiania i dalsze podmenu mogą `lCommandID` być `IInsertionPointID`dodawane do tego podmenu, używając jego jako swojego .
 
-- MF_BITMAP i MF_OWNERDRAW te flagi są niedozwolone i spowodują zwrócenie wartości E_INVALIDARG.
+- MF_BITMAP i MF_OWNERDRAW Flagi te nie są dozwolone i spowoduje wartość zwracaną E_INVALIDARG.
 
-- MF_SEPARATOR rysuje wiersz podziału w poziomie. Tylko `IContextMenuProvider` elementy menu można dodawać z zestawem MF_SEPARATOR.
+- MF_SEPARATOR Rysuje poziomą linię podziału. Dozwolone `IContextMenuProvider` jest dodawanie tylko elementów menu z MF_SEPARATOR ustawionym.
 
-- MF_CHECKED umieszcza znacznik wyboru obok elementu menu.
+- MF_CHECKED Umieszcza znacznik wyboru obok elementu menu.
 
-- MF_DISABLED wyłącza element menu, dlatego nie można go wybrać, ale flaga nie jest szara.
+- MF_DISABLED Wyłącza element menu, więc nie można go wybrać, ale flaga nie jest szara.
 
-- MF_ENABLED włącza element menu, aby można go było wybrać, przywracając go ze stanu szary.
+- MF_ENABLED Włącza element menu, dzięki czemu można go wybrać, przywracając go ze stanu wyszarzone.
 
-- MF_GRAYED wyłącza element menu, szary go, aby nie można go było wybrać.
+- MF_GRAYED Wyłącza element menu, siwie go, aby nie można było go zaznaczyć.
 
-- MF_MENUBARBREAK funkcje takie same jak flaga MF_MENUBREAK dla paska menu. W przypadku menu rozwijanego, podmenu lub menu skrótów nowa kolumna jest oddzielona od starej kolumny linią pionową.
+- MF_MENUBARBREAK Funkcje takie same jak flaga MF_MENUBREAK dla paska menu. W przypadku menu rozwijanego, podmenu lub menu skrótów nowa kolumna jest oddzielana od starej kolumny linią pionową.
 
-- MF_MENUBREAK umieszcza element w nowym wierszu (dla paska menu) lub w nowej kolumnie (menu rozwijane, podmenu lub menu skrótów) bez rozdzielania kolumn.
+- MF_MENUBREAK Umieszcza element w nowym wierszu (dla paska menu) lub w nowej kolumnie (dla menu rozwijanego, podmenu lub menu skrótów) bez oddzielania kolumn.
 
-- MF_UNCHECKED nie umieszcza znacznika wyboru obok elementu (domyślnie).
+- MF_UNCHECKED Nie umieszcza znacznika wyboru obok elementu (domyślnie).
 
 Następujące grupy flag nie mogą być używane razem:
 
@@ -504,9 +504,9 @@ Następujące grupy flag nie mogą być używane razem:
 
 - MF_CHECKED i MF_UNCHECKED.
 
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton
+## <a name="csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton
 
-Wywołaj tę funkcję, aby zmodyfikować przycisk paska narzędzi w obiekcie przystawki przed wyświetleniem.
+Wywołanie tej funkcji, aby zmodyfikować przycisk paska narzędzi, obiektu przystawki, zanim zostanie wyświetlony.
 
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
@@ -514,22 +514,22 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-Określa identyfikator przycisku paska narzędzi, który ma zostać zaktualizowany.
+*Identyfikator*<br/>
+Określa identyfikator przycisku przycisku paska narzędzi, który ma zostać zaktualizowany.
 
-*fsState*<br/>
-Określa stan przycisku paska narzędzi. Jeśli ten stan ma być ustawiony, zwróć wartość TRUE. Może to być kombinacja następujących flag:
+*fsStan*<br/>
+Określa stan przycisku paska narzędzi. Jeśli ten stan ma być ustawiony, zwraca wartość TRUE. Może to być kombinacja następujących flag:
 
-- Włączenie przycisku akceptuje dane wejściowe użytkownika. Przycisk, który nie ma tego stanu, nie akceptuje danych wejściowych użytkownika i jest wyszarzony.
+- WŁĄCZONE Przycisk akceptuje dane wejściowe użytkownika. Przycisk, który nie ma tego stanu, nie akceptuje danych wejściowych użytkownika i jest wyszarzony.
 
-- SPRAWDZONo, że przycisk ma ZAZNACZONY styl i jest nacionięty.
+- SPRAWDZONE Przycisk ma styl CHECKED i jest wciśnięty.
 
-- UKRYTY przycisk nie jest widoczny i nie może odbierać danych wejściowych użytkownika.
+- UKRYTE Przycisk nie jest widoczny i nie może odbierać danych wejściowych użytkownika.
 
-- Nieokreślony przycisk jest wyszarzony.
+- NIEOKREŚLONY Przycisk jest wyszarzony.
 
-- BUTTONPRESSED naciśnięcie przycisku.
+- PRZYCISK WCIŚNIĘTY Przycisk jest wciśnięty.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

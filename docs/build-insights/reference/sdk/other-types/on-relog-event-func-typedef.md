@@ -1,6 +1,6 @@
 ---
 title: OnRelogEventFunc typedef
-description: Odwołanie C++ do zestawu SDK usługi Build Insights OnRelogEventFunc.
+description: Odwołanie do funkcji SDK onRelogEventFunc typedef w języku C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329069"
 ---
 # <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnRelogEventFunc` typedef jest jednym z podpisów funkcji użytych w strukturze [RELOG_CALLBACKS](relog-callbacks-struct.md) .
+Typedef `OnRelogEventFunc` jest jednym z podpisów funkcji używanych w [strukturze RELOG_CALLBACKS.](relog-callbacks-struct.md)
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>Parametry
 
-*eventStack*\
-Stos zdarzeń dla bieżącego zdarzenia. Aby uzyskać więcej informacji na stosach zdarzeń, zobacz [zdarzenia](../event-table.md).
+*eventStack (własówce wydarzenia)*\
+Stos zdarzeń dla bieżącego zdarzenia. Aby uzyskać więcej informacji na temat stosów zdarzeń, zobacz [Zdarzenia](../event-table.md).
 
-*relogSession*\
-Wskaźnik sesji rejestrowania do użycia podczas wywoływania [InjectEvent](../functions/inject-event.md).
+*relogSesja*\
+Wskaźnik sesji ponownego rejestrowania do użycia podczas wywoływania [injectevent](../functions/inject-event.md).
 
 *callbackContext*\
 Wartość kontekstu ustawiona dla tego wywołania zwrotnego w [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość [CALLBACK_CODE](callback-code-enum.md) , która kontroluje, co powinno się stać dalej.
+Wartość [CALLBACK_CODE,](callback-code-enum.md) która kontroluje, co powinno się wydarzyć dalej.
 
 ::: moniker-end

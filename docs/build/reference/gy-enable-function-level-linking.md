@@ -13,16 +13,16 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8724ae4d018948c0f6aa9456f229db96878d7bf2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328280"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Włączenie łączenia na poziomie funkcji)
 
-Umożliwia kompilatorowi pakowanie indywidualnych funkcji w formę spakowanych funkcji (Comdat).
+Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych funkcji (COMDATs).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,32 +32,32 @@ Umożliwia kompilatorowi pakowanie indywidualnych funkcji w formę spakowanych f
 
 ## <a name="remarks"></a>Uwagi
 
-Konsolidator wymaga, że funkcje można osobno spakowany jako Comdat aby wykluczyło lub kolejność poszczególnych funkcji w pliku DLL lub .exe.
+Konsolidator wymaga, aby funkcje były pakowane oddzielnie jako COMDATs do wykluczania lub zamawiania poszczególnych funkcji w pliku DLL lub exe.
 
-Możesz użyć opcji konsolidatora [od (optymalizacje)](opt-optimizations.md) wykluczyć nieużywane spakowane funkcje z pliku .exe.
+Za pomocą opcji konsolidatora [/OPT (Optymalizacje)](opt-optimizations.md) można wykluczyć z pliku .exe nieodwołane funkcje pakietowe.
 
-Możesz użyć opcji konsolidatora [/order (umieścić funkcje w kolejności)](order-put-functions-in-order.md) obejmujący opakowane funkcje w kolejności określonej w pliku .exe.
+Za pomocą opcji konsolidatora [/ORDER (Umieść funkcje w kolejności)](order-put-functions-in-order.md) można uwzględnić spakowane funkcje w określonej kolejności w pliku exe.
 
-Funkcje śródwierszowe zawsze są pakowane, jeśli są one tworzone jako wywołania (która pojawia się, na przykład, jeśli jest to wbudowanie jest wyłączony lub zapoznasz się z adresu funkcji). Ponadto funkcji składowych języka C++ zdefiniowane w deklaracji klasy, automatycznie są pakowane; inne funkcje nie są, a wybranie tej opcji jest wymagany do kompilowania ich jako spakowane funkcje.
+Wbudowane funkcje są zawsze pakowane, jeśli są tworzone jako wywołania (co występuje, na przykład, jeśli inlining jest wyłączony lub wziąć adres funkcji). Ponadto funkcje elementów członkowskich języka C++ zdefiniowane w deklaracji klasy są automatycznie pakowane; inne funkcje nie są i wybranie tej opcji jest wymagane do skompilowania ich jako spakowane funkcje.
 
 > [!NOTE]
->  [/Zi](z7-zi-zi-debug-information-format.md) , używane do edycji i kontynuowania oraz powoduje **/Gy** opcji.
+> Opcja [/ZI,](z7-zi-zi-debug-information-format.md) używana do edycji i kontynuowania, automatycznie ustawia opcję **/Gy.**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++.**
 
-1. Kliknij przycisk **generowania kodu** stronę właściwości.
+1. Kliknij stronę właściwości **Generowanie kodu.**
 
-1. Modyfikowanie **Włącz łączenie na poziomie dla funkcji** właściwości.
+1. Zmodyfikuj **właściwość Włącz łączenie na poziomie funkcji.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14ef845c3029f1d9a30d257f91c1b33017b6ec8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213450"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336942"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Programy obsługi poleceń do przewijania rekordów (dostęp do danych MFC)
 
-Klasa [formularzy CRecordView](../mfc/reference/crecordview-class.md) udostępnia domyślną obsługę poleceń dla następujących standardowych poleceń:
+[Klasa CRecordView](../mfc/reference/crecordview-class.md) zapewnia domyślną obsługę poleceń dla następujących poleceń standardowych:
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,10 +25,10 @@ Klasa [formularzy CRecordView](../mfc/reference/crecordview-class.md) udostępni
 
 - ID_RECORD_MOVE_PREV
 
-Funkcja członkowska `OnMove` udostępnia domyślną obsługę poleceń dla wszystkich czterech poleceń, które przechodzą z rekordu do rekordu. Po wydaniu tych poleceń RFX (lub DFX) ładuje nowy rekord do pól zestawu rekordów i DDX przenosi wartości do kontrolek formularza rekordu. Aby uzyskać informacje na temat RFX, zobacz temat [Rejestrowanie pól rekordów (RFX)](../data/odbc/record-field-exchange-rfx.md).
+Funkcja `OnMove` elementu członkowskiego zapewnia domyślną obsługę poleceń dla wszystkich czterech poleceń, które są przesuwają się z rekordu do rekordu. W miarę wydawania tych poleceń rfx (lub DFX) ładuje nowy rekord do pól walec rekordów, a DDX przenosi wartości do formantów formularza rekordu. Aby uzyskać informacje o RFX, zobacz [Wymiana pól rekordów (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 > [!NOTE]
->  Należy pamiętać, aby użyć tych standardowych identyfikatorów poleceń dla wszystkich obiektów interfejsu użytkownika skojarzonych z poleceniami nawigacji rekordu standardowego.
+> Pamiętaj, aby używać tych standardowych identyfikatorów poleceń dla wszystkich obiektów interfejsu użytkownika skojarzonych ze standardowymi poleceniami nawigacji rekordów.
 
 ## <a name="see-also"></a>Zobacz też
 

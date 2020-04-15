@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-ms.openlocfilehash: ace8dbb174bd6585e61bd941a60dad28296af72a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78cadfff9a278cf080393ab919f3891b201c91aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246379"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327776"
 ---
 # <a name="ccomheapptr-class"></a>Klasa CComHeapPtr
 
-Klasa inteligentnego wskaźnika do zarządzania wskaźniki stosu.
+Klasa inteligentnego wskaźnika do zarządzania wskaźnikami sterty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ obiektu, który ma być przechowywany na stosie.
+Typ obiektu, który ma być przechowywany na stercie.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -41,13 +41,13 @@ Typ obiektu, który ma być przechowywany na stosie.
 
 ## <a name="remarks"></a>Uwagi
 
-`CComHeapPtr` pochodzi od klasy `CHeapPtr`, ale używa [CComAllocator](../../atl/reference/ccomallocator-class.md) można przydzielić pamięci za pomocą procedury COM. Zobacz [CHeapPtr](../../atl/reference/cheapptr-class.md) i [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) dla metod, które są dostępne.
+`CComHeapPtr`pochodzi od `CHeapPtr`, ale używa [CComAllocator](../../atl/reference/ccomallocator-class.md) do przydzielania pamięci przy użyciu procedur COM. Zobacz [CHeapPtr](../../atl/reference/cheapptr-class.md) i [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) dla dostępnych metod.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
+[Cheapptrbase](../../atl/reference/cheapptrbase-class.md)
 
-[CHeapPtr](../../atl/reference/cheapptr-class.md)
+[Cheapptr](../../atl/reference/cheapptr-class.md)
 
 `CComHeapPtr`
 
@@ -55,7 +55,7 @@ Typ obiektu, który ma być przechowywany na stosie.
 
 **Nagłówek:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptrccomheapptr"></a><a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr
 
 Konstruktor.
 
@@ -66,16 +66,16 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*<br/>
-Istniejące `CComHeapPtr` obiektu.
+*Pdata*<br/>
+Istniejący `CComHeapPtr` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Opcjonalnie można utworzyć wskaźnik stosu przy użyciu istniejącego `CComHeapPtr` obiektu. Jeśli tak, nowe `CComHeapPtr` obiektu przyjmuje odpowiedzialność za zarządzanie nowy wskaźnik i zasobami.
+Wskaźnik sterty można opcjonalnie utworzyć `CComHeapPtr` przy użyciu istniejącego obiektu. Jeśli tak, `CComHeapPtr` nowy obiekt przejmuje odpowiedzialność za zarządzanie nowym wskaźnikiem i zasobami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
 [Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

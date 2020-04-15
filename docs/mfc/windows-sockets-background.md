@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Tło'
+title: 'Windows Sockets: podstawy'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,87 +18,87 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c4a6dc6740660d1097785578cdac355983cad18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217881"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360125"
 ---
-# <a name="windows-sockets-background"></a>Windows Sockets: Tło
+# <a name="windows-sockets-background"></a>Windows Sockets: podstawy
 
-W tym artykule opisano ujawnienia Windows Sockets. Artykuł również:
+W tym artykule wyjaśniono charakter i przeznaczenie gniazd systemu Windows. Artykuł również:
 
-- [Definiuje pojęcie "gniazda"](#_core_definition_of_a_socket).
+- [Definiuje termin "gniazdo"](#_core_definition_of_a_socket).
 
-- [Opisuje typ danych uchwyt GNIAZDA](#_core_the_socket_data_type).
+- [Zawiera opis typu danych uchwytu SOCKET](#_core_the_socket_data_type).
 
-- [W tym artykule opisano zastosowań sockets](#_core_uses_for_sockets).
+- [W tym artykule opisano zastosowania gniazd](#_core_uses_for_sockets).
 
-Specyfikacja Windows Sockets definiuje zgodne dane binarne sieci interfejs programowania dla Microsoft Windows. Windows Sockets opierają się na implementacji gniazd systemu UNIX w Berkeley Software Distribution (BSD, wersji 4.3) z uniwersytet kalifornijski w Berkeley. Specyfikację obejmuje procedury gniazda BSD stylu i rozszerzenia specyficzne dla Windows. Przy użyciu usługi Windows Sockets pozwala aplikacji komunikowanie się przez żadną siecią, który jest zgodny z interfejsu API Windows Sockets. Na Win32 Windows Sockets zapewnienia bezpieczeństwa wątków.
+Specyfikacja windows sockets definiuje interfejs programowania sieciowego zgodny z binarnym dla systemu Microsoft Windows. Gniazda systemu Windows są oparte na implementacji gniazd UNIX w berkeley Software Distribution (BSD, release 4.3) z Uniwersytetu Kalifornijskiego w Berkeley. Specyfikacja obejmuje zarówno procedury gniazd w stylu BSD, jak i rozszerzenia specyficzne dla systemu Windows. Korzystanie z gniazda systemu Windows umożliwia aplikacji komunikowanie się w dowolnej sieci, która jest zgodna z interfejsem API windows sockets. W systemie Win32 gniazda systemu Windows zapewniają bezpieczeństwo wątków.
 
-Wielu dostawców oprogramowania sieci obsługuje Windows Sockets w obszarze protokoły sieciowe, łącznie z TCP/IP Transmission Control Protocol/Internet Protocol (), Xerox sieci systemu (XNS), protokołu sieci DECNet firmy Digital Equipment Corporation, Internet Novell Corporation Pakiet programu Exchange/Sequenced spakowane Exchange (IPX/SPX) i inne. Chociaż istnieje specyfikacji Windows Sockets definiuje abstrakcję gniazda TCP/IP, każdy protokół sieciowy może być zgodne z Windows Sockets podając własną wersję biblioteki dołączanej (dynamicznie DLL), który implementuje Windows Sockets. Przykładami aplikacji komercyjnych napisane na platformie Windows Sockets Windows X serwery terminali emulatorów i systemów poczty elektronicznej.
+Wielu dostawców oprogramowania sieciowego obsługuje gniazda systemu Windows w ramach protokołów sieciowych, w tym protokołu TCP/IP (Transmission Control Protocol/Internet Protocol), Xerox Network System (XNS), protokołu DECNet firmy Digital Equipment Corporation, internetowej wymiany pakietów novell corporation/sekwencjonowej wymiany pakietów (IPX/SPX) i innych. Chociaż obecna specyfikacja sockets systemu Windows definiuje abstrakcję gniazd dla protokołu TCP/IP, każdy protokół sieciowy może być zgodny z gniazdami systemu Windows, dostarczając własną wersję biblioteki dynamicznego łącza (DLL), która implementuje gniazda systemu Windows. Przykłady aplikacji komercyjnych napisanych za pomocą gniazd systemu Windows obejmują serwery X Windows, emulatory terminali i systemy poczty elektronicznej.
 
 > [!NOTE]
->  Windows Sockets ma na celu abstrakcji odnośnej sieci tak, aby nie trzeba mieć odpowiednią wiedzę na temat tej sieci, a zatem aplikację można uruchomić na żadną siecią, która obsługuje gniazda. W związku z tym ta dokumentacja nie omówiono w nim szczegóły protokołów sieciowych.
+> Celem windows sockets jest wyodrębnienie sieci podstawowej, dzięki czemu nie trzeba mieć wiedzę na temat tej sieci i tak aplikacja może działać w dowolnej sieci, która obsługuje gniazda. W związku z tym w tej dokumentacji nie omawia szczegółów protokołów sieciowych.
 
-Biblioteki Microsoft Foundation Class (MFC) obsługuje programowanie z interfejsem API Windows Sockets, podając dwóch klas. Jedną z tych klas `CSocket`, zapewnia wysoki poziom abstrakcji, aby uprościć programowanie komunikacji dla Twojej sieci.
+Biblioteka klas Microsoft Foundation (MFC) obsługuje programowanie za pomocą interfejsu API windows sockets, dostarczając dwie klasy. Jedna z tych `CSocket`klas, zapewnia wysoki poziom abstrakcji, aby uprościć programowanie komunikacji sieciowej.
 
-Specyfikacja Windows Sockets Windows Sockets: Otwórz interfejs dla sieci obliczeniowych w ramach programu Microsoft Windows, teraz w wersji 1.1, został opracowany jako otwarty standard sieci przez dużą grupę użytkowników indywidualnych i firm w społeczności TCP/IP i jest dostępne bezpłatnie do użytku. Gniazda obecnie programowania modelu obsługuje jeden "komunikacji domena", przy użyciu zestawem protokołów internetowych. Specyfikacja jest dostępna w zestawie Windows SDK.
+Specyfikacja Windows Sockets, Windows Sockets: Otwarty interfejs do przetwarzania sieciowego w systemie Microsoft Windows, teraz w wersji 1.1, został opracowany jako otwarty standard sieciowy przez dużą grupę osób i korporacji w społeczności TCP / IP i jest swobodnie dostępny do użytku. Model programowania gniazd obsługuje obecnie jedną "domenę komunikacyjną" przy użyciu pakietu Internet Protocol Suite. Specyfikacja jest dostępna w usłudze Windows SDK.
 
 > [!TIP]
->  Ponieważ gniazda korzystają z zestawem protokołów internetowych, są one trasą preferowaną dla aplikacji, które obsługują komunikację z Internetem na "drogach informacji".
+> Ponieważ gniazda korzystają z pakietu Internet Protocol Suite, są preferowaną trasą dla aplikacji obsługujących komunikację internetową na "autostradzie informacyjnej".
 
-##  <a name="_core_definition_of_a_socket"></a> Definicja gniazda
+## <a name="definition-of-a-socket"></a><a name="_core_definition_of_a_socket"></a>Definicja gniazda
 
-Gniazdo jest punktem końcowym komunikacji — obiekt za pomocą którego aplikacja Windows Sockets wysyła lub odbiera pakiety danych w sieci. Gniazdo ma typ i jest skojarzona z uruchomionego procesu i może mieć nazwę. Obecnie sockets ogólnie wymiany danych z innych sockets, w tym samym "komunikacji domeny," który korzysta z zestawem protokołów internetowych.
+Gniazdo jest punktem końcowym komunikacji — obiektem, za pośrednictwem którego aplikacja Windows Sockets wysyła lub odbiera pakiety danych w sieci. Gniazdo ma typ i jest skojarzone z uruchomionym procesem i może mieć nazwę. Obecnie gniazda zazwyczaj wymieniają dane tylko z innymi gniazdami w tej samej "domenie komunikacyjnej", która korzysta z pakietu Internet Protocol Suite.
 
-Oba rodzaje gniazd jest dwukierunkowe; są one przepływów danych, które mogą być przekazywane w obu kierunkach jednocześnie (pełny dupleks).
+Oba rodzaje gniazd są dwukierunkowe; są to przepływy danych, które mogą być przekazywane w obu kierunkach jednocześnie (pełny dupleks).
 
-Dostępne są dwa typy gniazda:
+Dostępne są dwa typy gniazd:
 
-- Gniazda Stream
+- gniazda strumieni
 
-   Gniazda Stream zapewnienia przepływu danych, bez rekordów granic: strumień bajtów. Strumienie są gwarantowane dostarczanych i poprawnie sekwencjonowania i unduplicated.
+   Gniazda strumienia zapewniają przepływ danych bez granic rekordu: strumień bajtów. Strumienie są gwarantowane do dostarczenia i być poprawnie sekwencjonowane i unduplicated.
 
-- Do przesyłania datagramów
+- gniazda do przesyłania datagramów
 
-   Datagram sockets rekordu zorientowane na obsługę danych przepływ, który nie jest gwarantowane do dostarczenia i nie może być sekwencjonowania jako wysyłane lub unduplicated.
+   Gniazda Datagram obsługują przepływ danych zorientowany na rekord, który nie jest gwarantowany do dostarczenia i nie może być sekwencjonowany jako wysłany lub nienaplikowany.
 
-"Sekwencjonowania" oznacza, że pakiety są dostarczane w kolejności wysyłane. "Unduplicated" oznacza, że pobieranie określonego pakietu tylko raz.
+"Sekwencjonowane" oznacza, że pakiety są dostarczane w wysyłanej kolejności. "Nienaplikowane" oznacza, że otrzymujesz konkretny pakiet tylko raz.
 
 > [!NOTE]
->  W obszarze niektóre protokoły sieciowe, takie jak XNS strumienie mogą być rekord obiektowo strumieni rekordów zamiast strumieni bajtów. W obszarze bardziej powszechne, protokół TCP/IP strumienie są jednak strumienie bajtów. Windows Sockets zapewnia poziom abstrakcji niezależne od podstawowych protokołów.
+> W niektórych protokołach sieciowych, takich jak XNS, strumienie mogą być zorientowane na rekordy, jako strumienie rekordów, a nie strumienie bajtów. Jednak w ramach bardziej powszechnego protokołu TCP/IP strumienie są strumieniami bajtów. Windows Sockets zapewnia poziom abstrakcji niezależnie od protokołu źródłowego.
 
-Aby uzyskać informacje o tych typach i jakiego rodzaju gniazda, aby użyć w sytuacji, w których, zobacz [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md) i [Windows Sockets: Do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md).
+Aby uzyskać informacje na temat tych typów i rodzaju gniazda do użycia w jakich sytuacjach, zobacz [Gniazda systemu Windows: Gniazda strumienia](../mfc/windows-sockets-stream-sockets.md) i [Gniazda systemu Windows: Gniazda Datagram](../mfc/windows-sockets-datagram-sockets.md).
 
-##  <a name="_core_the_socket_data_type"></a> Typ danych GNIAZDA
+## <a name="the-socket-data-type"></a><a name="_core_the_socket_data_type"></a>Typ danych GNIAZDA
 
-Każdy obiekt gniazda MFC hermetyzuje dojścia do obiektu Windows Sockets. Typ danych tego dojścia jest **GNIAZDA**. A **GNIAZDA** uchwyt jest odpowiednikiem `HWND` okna. Klasy gniazd MFC zapewniają operacje w dojściu do zhermetyzowanego.
+Każdy obiekt gniazda MFC hermetyzuje dojście do obiektu Windows Sockets. Typ danych tego uchwytu to **SOCKET**. Uchwyt **socket** jest analogiczna `HWND` do dla okna. Klasy gniazda MFC zapewniają operacje na zhermetyzowany dojście.
 
-**GNIAZDA** — typ danych jest szczegółowo opisane w zestawie Windows SDK. Zobacz "Gniazda typu danych i wartości błędów" w obszarze Windows Sockets.
+Typ danych **SOCKET** jest szczegółowo opisany w zestaw Windows SDK. Zobacz "Typ danych gniazda i wartości błędów" w obszarze Gniazda systemu Windows.
 
-##  <a name="_core_uses_for_sockets"></a> Zastosowań gniazda
+## <a name="uses-for-sockets"></a><a name="_core_uses_for_sockets"></a>Zastosowania do gniazd
 
-Gniazda są bardzo przydatne w kontekstach co najmniej trzech komunikacji:
+Gniazda są bardzo przydatne w co najmniej trzech kontekstach komunikacyjnych:
 
 - Modele klient/serwer.
 
-- Scenariusze peer-to-peer, np. aplikacji do obsługi komunikatów.
+- Scenariusze peer-to-peer, takie jak aplikacje do obsługi wiadomości.
 
-- Przez aplikację odbierającą interpretacji wiadomość jako wywołanie funkcji, dzięki czemu zdalnych wywołań procedur (RPC).
+- Wykonywanie zdalnych wywołań procedury (RPC) przez aplikację odbierającą interpretować komunikat jako wywołanie funkcji.
 
 > [!TIP]
->  W idealnym rozwiązaniem w przypadku używanie gniazd MFC jest pisanego obu końcach komunikacji: używanie MFC na obu końcach. Aby uzyskać więcej informacji na ten temat, jak zarządzać w przypadku, gdy masz podczas komunikowania się z aplikacji innych niż MFC, w tym temacie [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md).
+> Idealnym przypadkiem przy użyciu gniazd MFC jest podczas pisania obu końcach komunikacji: przy użyciu MFC na obu końcach. Aby uzyskać więcej informacji na ten temat, w tym jak zarządzać sprawą podczas komunikowania się z aplikacjami innych niż MFC, zobacz [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).
 
-Aby uzyskać więcej informacji, zobacz Windows Sockets specyfikacji: **ntohs**, **ntohl**, **htons**, **htonl**. Ponadto zobacz następujące tematy:
+Aby uzyskać więcej informacji, zobacz Windows Sockets Specyfikacja: **ntohs**, **ntohl**, **htons**, **htonl**. Zobacz też następujące tematy:
 
-- [Windows Sockets: Używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets: przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)

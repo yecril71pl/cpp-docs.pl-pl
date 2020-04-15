@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-ms.openlocfilehash: 5a3cdaf85fa4dc05ece54fc630cb69fc93650e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c30ac9096094948a83195f5b3990794c421685
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335888"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Wykrywaj problemy związane z przenośnością w programowaniu 64-bitowym)
 
-Ta opcja kompilatora jest przestarzała. W wersjach programu Visual Studio przed Visual Studio 2013 wykrywa to problemów związanych z przenośnością 64-bitowego na typy, które są również oznaczane za pomocą [__w64](../../cpp/w64.md) — słowo kluczowe.
+Ta opcja kompilatora jest przestarzała. W wersjach programu Visual Studio przed programem Visual Studio 2013 wykrywa problemy z przenoszeniem 64-bitowe na typy, które są również oznaczone [__w64](../../cpp/w64.md) słowa kluczowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,12 +30,12 @@ Ta opcja kompilatora jest przestarzała. W wersjach programu Visual Studio przed
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie w wersjach programu Visual Studio przed Visual Studio 2013 **/Wp64** — opcja kompilatora jest wyłączona, tworzący x86 32-bitowego kompilatora MSVC kodu, i na kompilatora MSVC, kompilacje 64-bitowy, x64 kodu.
+Domyślnie w wersjach programu Visual Studio przed programem Visual Studio 2013 opcja kompilatora **/Wp64** jest wyłączona w kompilatorze MSVC, który tworzy 32-bitowy kod x86, a następnie w kompilatorze MSVC, który tworzy 64-bitowy kod x64.
 
 > [!IMPORTANT]
->  [/Wp64](wp64-detect-64-bit-portability-issues.md) — opcja kompilatora i [__w64](../../cpp/w64.md) — słowo kluczowe są przestarzałe w programie Visual Studio 2010 i Visual Studio 2012, a nie obsługiwane, począwszy od programu Visual Studio 2013. Po skonwertowaniu projektu, który używa tego przełącznika. przełącznik nie zostaną zmigrowane podczas konwersji. Aby użyć tej opcji w programie Visual Studio 2010 lub Visual Studio 2012, należy wpisać przełącznika kompilatora, w obszarze **dodatkowe opcje** w **wiersza polecenia** sekcji we właściwościach projektu. Jeśli używasz **/Wp64** — opcja kompilatora w wierszu polecenia, kompilator generuje D9002 ostrzeżenie wiersza polecenia. Zamiast korzystać z tej opcji i słów kluczowych, wykrywać problemy z przenośnością 64-bitowych, użyj kompilatora MSVC, który jest przeznaczony dla platformy 64-bitowej i określ [/W4](compiler-option-warning-level.md) opcji. Aby uzyskać więcej informacji, zobacz [Konfigurowanie projektów w języku C++ dla wersji 64-bitowych, x64 cele](../configuring-programs-for-64-bit-visual-cpp.md).
+> Opcja kompilatora [/Wp64](wp64-detect-64-bit-portability-issues.md) i [__w64](../../cpp/w64.md) słowo kluczowe są przestarzałe w programie Visual Studio 2010 i Visual Studio 2012 i nie są obsługiwane począwszy od programu Visual Studio 2013. Jeśli przekonwertujesz projekt, który używa tego przełącznika, przełącznik nie zostanie zmigrowany podczas konwersji. Aby użyć tej opcji w programie Visual Studio 2010 lub Visual Studio 2012, należy wpisać przełącznik kompilatora w obszarze **Opcje dodatkowe** w sekcji **Wiersz polecenia** właściwości projektu. Jeśli używasz opcji kompilatora **/Wp64** w wierszu polecenia, kompilator wydaje ostrzeżenie wiersza polecenia D9002. Zamiast używać tej opcji i słowa kluczowego do wykrywania problemów z przenośnością 64-bitowych, należy użyć kompilatora MSVC, który jest przeznaczony dla platformy 64-bitowej i określić opcję [/W4.](compiler-option-warning-level.md) Aby uzyskać więcej informacji, zobacz [Konfigurowanie projektów języka C++ dla 64-bitowych obiektów docelowych x64](../configuring-programs-for-64-bit-visual-cpp.md).
 
-Następujących typów zmiennych są przetestowane na 32-bitowym systemie operacyjnym, tak, jakby były używane na 64-bitowym systemie operacyjnym:
+Zmienne następujących typów są testowane w 32-bitowym systemie operacyjnym tak, jakby były używane w 64-bitowym systemie operacyjnym:
 
 - int
 
@@ -43,26 +43,26 @@ Następujących typów zmiennych są przetestowane na 32-bitowym systemie operac
 
 - pointer
 
-Jeśli kompilujesz regularnie aplikacji za pomocą kompilatora, który tworzy 64-bitowy, x64 kodu, można po prostu wyłączyć **/Wp64** w kompilacjach kodu z 32-bitowych ponieważ 64-bitowy kompilator wykryje wszystkie problemy. Aby uzyskać więcej informacji na temat docelowego Windows 64-bitowego systemu operacyjnego, zobacz [Konfigurowanie projektów w języku C++ dla wersji 64-bitowych, x64 cele](../configuring-programs-for-64-bit-visual-cpp.md).
+Jeśli regularnie kompilujesz aplikację przy użyciu kompilatora, który tworzy 64-bitowy kod x64, możesz po prostu wyłączyć **/Wp64** w kompilacjach 32-bitowych, ponieważ kompilator 64-bitowy wykryje wszystkie problemy. Aby uzyskać więcej informacji na temat kierowania na 64-bitowy system operacyjny Windows, zobacz [Konfigurowanie projektów języka C++ dla 64-bitowych obiektów docelowych x64](../configuring-programs-for-64-bit-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe.
+1. Otwórz okno dialogowe **Strony właściwości** projektu.
 
-   Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+   Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++.**
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **Wiersz polecenia.**
 
-1. Modyfikowanie **dodatkowe opcje** pole, aby uwzględnić **/Wp64**.
+1. Zmodyfikuj pole **Opcje dodatkowe,** aby uwzględnić **/Wp64**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
-[Konfigurowanie projektów w języku C++ x64 64-bitowy, obiektów docelowych](../configuring-programs-for-64-bit-visual-cpp.md)
+[Konfigurowanie projektów języka C++ dla 64-bitowych obiektów docelowych x64](../configuring-programs-for-64-bit-visual-cpp.md)

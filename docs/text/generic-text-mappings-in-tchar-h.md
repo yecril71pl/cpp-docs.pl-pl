@@ -1,5 +1,5 @@
 ---
-title: Mapowania typ ogólny tekst w pliku tchar.h
+title: Mapowania tekstu ogólnego w tchar.h
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,86 +10,86 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361340"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny tekst w pliku tchar.h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapowania tekstu ogólnego w tchar.h
 
-Aby uprościć transport kodu do użytku międzynarodowego, biblioteki wykonawczej Microsoft przewiduje mapowania typ ogólny tekst specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Możesz użyć tych mapowań, które są zdefiniowane w pliku tchar.h, aby napisać kod ogólny, który może być kompilowane dla pojedynczych bajtów, wielobajtowego, lub zestawy znaków Unicode, w zależności od stała manifestu, który zdefiniujesz przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
+Aby uprościć transportowanie kodu do użytku międzynarodowego, biblioteka pracy firmy Microsoft udostępnia mapowania tekstu ogólnego specyficzne dla firmy Microsoft dla wielu typów danych, procedur i innych obiektów. Można użyć tych mapowań, które są zdefiniowane w tchar.h, aby napisać ogólny kod, który może być skompilowany dla zestawów znaków `#define` jednobajtowych, wielobajtowych lub Unicode, w zależności od stałej manifestu, którą definiujesz za pomocą instrukcji. Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne z ansi.
 
-Za pomocą tchar.h, można utworzyć zestawu znaków wielobajtowych (MBCS), aplikacji nieobsługujących kodu Unicode z tego samego źródła i jednobajtowych. Tchar.h definiuje makra (które mają prefiks `_tcs`), za pomocą prawidłowe definicje preprocesora, mapowanie na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Aby skompilować aplikację jednobajtowych, zdefiniuj ani (ustawienie domyślne). Domyślnie `_UNICODE` jest zdefiniowana dla aplikacji MFC.
+Za pomocą tchar.h, można tworzyć jednobajtowe, wielobajtowy zestaw znaków (MBCS) i Unicode aplikacji z tych samych źródeł. tchar.h definiuje makra (które mają `_tcs`prefiks), które z poprawnymi definicjami `str`preprocesora, mapują na `_mbs`, lub `wcs` funkcje, w stosownych przypadkach. Aby zbudować MBCS, `_MBCS`zdefiniuj symbol . Aby utworzyć unicode, `_UNICODE`zdefiniuj symbol . Aby utworzyć aplikację jedno bajtową, nie definiuj ani (domyślnie). Domyślnie `_UNICODE` jest zdefiniowany dla aplikacji MFC.
 
-`_TCHAR` Typ danych jest zdefiniowany w pliku tchar.h w warunkowo. Jeśli symbol `_UNICODE` jest zdefiniowany dla kompilacji, `_TCHAR` jest zdefiniowany jako **wchar_t**; w przeciwnym razie jednobajtowe i MBCS kompilacji jest zdefiniowana jako **char**. (**wchar_t**, podstawowy typ danych szerokich znaków Unicode jest odpowiednikiem 16-bitowych do 8-bitowej podpisanej **char**.) Aplikacje międzynarodowe, można użyć `_tcs` rodziny funkcji, które działają w `_TCHAR` jednostek, nie w bajtach. Na przykład `_tcsncpy` kopie `n` `_TCHARs`, a nie `n` bajtów.
+Typ `_TCHAR` danych jest zdefiniowany warunkowo w tchar.h. Jeśli symbol `_UNICODE` jest zdefiniowany `_TCHAR` dla kompilacji, jest zdefiniowany jako **wchar_t**; w przeciwnym razie dla kompilacji jedno bajtowych i MBCS jest on definiowany jako **char**. (**wchar_t**, podstawowy typ danych szerokoznakowych Unicode, jest 16-bitowym odpowiednikiem 8-bitowego **znaku**podpisanego .) W zastosowaniach międzynarodowych należy używać `_tcs` rodziny `_TCHAR` funkcji, które działają w jednostkach, a nie bajtach. Na przykład `_tcsncpy` kopie `n` `_TCHARs`, `n` a nie bajty.
 
-Ponieważ niektóre ciąg jednego bajtu znaków Ustaw (SBCS) — Obsługa funkcji take (z podpisem) `char*` parametrów, typu spowoduje ostrzeżenia kompilatora niezgodność podczas `_MBCS` jest zdefiniowana. Istnieją trzy sposoby, aby uniknąć tego ostrzeżenia:
+Ponieważ niektóre funkcje obsługi ciągów pojedynczego zestawu znaków bajtów (SBCS) przyjmują `char*` `_MBCS` (podpisane) parametry, wyniki ostrzeżenia kompilatora niezgodności typu po zdefiniowaniu. Istnieją trzy sposoby uniknięcia tego ostrzeżenia:
 
-1. W pliku tchar.h, należy użyć sekcje Thunk funkcji bezpiecznego typu wbudowanego. Jest to zachowanie domyślne.
+1. Użyj funkcji inline bezpiecznych dla typu thunks w tchar.h. Jest to zachowanie domyślne.
 
-1. Użyj makra bezpośrednie w pliku tchar.h, definiując `_MB_MAP_DIRECT` w wierszu polecenia. Jeśli to zrobisz, musisz ręcznie dopasować typów. To najszybszy sposób, ale nie jest bezpieczny.
+1. Użyj makr bezpośrednich w tchar.h, definiując `_MB_MAP_DIRECT` w wierszu polecenia. Jeśli to zrobisz, należy ręcznie dopasować typy. Jest to najszybsza metoda, ale nie jest bezpieczna dla typu.
 
-1. Użyj sekcje Thunk funkcji bezpiecznego typu statycznie połączoną bibliotekę, w pliku tchar.h. Aby to zrobić, należy zdefiniować stałą `_NO_INLINING` w wierszu polecenia. Jest to metoda najwolniejsze, ale najbardziej bezpieczny.
+1. Użyj funkcji biblioteki bezpiecznej dla typu statycznie w tchar.h. Aby to zrobić, `_NO_INLINING` należy zdefiniować stałą w wierszu polecenia. Jest to najwolniejsza metoda, ale najbardziej bezpieczna.
 
-### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora do mapowania zwykłego tekstu
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora dla mapowań tekstu ogólnego
 
-|Zdefiniuj #|Skompilowanych wersji|Przykład|
+|# zdefiniuj|Skompilowana wersja|Przykład|
 |---------------|----------------------|-------------|
-|`_UNICODE`|Unicode (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|
-|`_MBCS`|Multibyte-character|`_tcsrev` Mapuje `_mbsrev`|
-|Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS (ASCII)|`_tcsrev` Mapuje `strrev`|
+|`_UNICODE`|Unicode (szeroki znak)|`_tcsrev`mapuje do`_wcsrev`|
+|`_MBCS`|Znak wielobajtowy|`_tcsrev`mapuje do`_mbsrev`|
+|Brak (wartość domyślna `_UNICODE` `_MBCS` nie została zdefiniowana)|SBCS (ASCII)|`_tcsrev`mapuje do`strrev`|
 
-Na przykład funkcja generic tekst `_tcsrev`, która została zdefiniowana w tchar.h, mapy do `_mbsrev` Jeśli zdefiniowano `_MBCS` w programie lub do `_wcsrev` Jeśli zdefiniowano `_UNICODE`. W przeciwnym razie `_tcsrev` mapuje `strrev`. Inne mapowanie typu danych znajdują się w pliku tchar.h w celu ułatwienia programowania, ale `_TCHAR` jest najbardziej użyteczna.
+Na przykład `_tcsrev`funkcja tekstu ogólnego , która jest zdefiniowana w `_mbsrev` tchar.h, mapuje do, jeśli zdefiniowano `_MBCS` w programie, lub do `_wcsrev` jeśli zdefiniowano `_UNICODE`. W `_tcsrev` przeciwnym `strrev`razie mapuje do . Inne mapowania typów danych są dostarczane w tchar.h dla wygody programowania, ale `_TCHAR` jest najbardziej przydatne.
 
-### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych — zwykły tekst
+### <a name="generic-text-data-type-mappings"></a>Mapowania typów danych tekstu ogólnego
 
-|Generic-Text<br /> Nazwa typu danych|_UNICODE &AMP;<br /> _MBCS niezdefiniowane|_MBCS<br /> Definicja|_UNICODE<br /> Definicja|
+|Tekst ogólny<br /> Nazwa typu danych|_UNICODE &<br /> _MBCS nie zdefiniowano|_mbcs<br /> Zdefiniowane|_unicode<br /> Zdefiniowane|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**podpisany char**|**podpisany char**|**wchar_t**|
+|`_TSCHAR`|**podpisany znak**|**podpisany znak**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje następujący znak lub ciąg z jego odpowiednikiem Unicode)|
+|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L`(konwertuje następujący znak lub ciąg na jego odpowiednik Unicode)|
 
-Aby uzyskać listę mapowania typ ogólny tekst procedury, zmienne i innych obiektów, zobacz [mapowania typ ogólny-tekst](../c-runtime-library/generic-text-mappings.md) w odwołaniu biblioteki wykonawczej.
+Aby uzyskać listę mapowań tekstu ogólnego procedur, zmiennych i innych obiektów, zobacz [Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w odwołaniu do biblioteki w czasie wykonywania.
 
 > [!NOTE]
->  Nie używaj `str` rodzinę funkcji z ciągów Unicode, które mogą zawierać osadzonych bajty o wartości null. Podobnie, nie używaj `wcs` rodziny funkcji z ciągami MBCS (lub SBCS).
+> Nie należy `str` używać rodziny funkcji z ciągami Unicode, które mogą zawierać osadzone bajty null. Podobnie nie należy używać `wcs` rodziny funkcji z ciągami MBCS (lub SBCS).
 
-Poniższe fragmenty kodu pokazują korzystanie z `_TCHAR` i `_tcsrev` do mapowania do MBCS, Unicode i SBCS modele.
+Poniższe fragmenty kodu ilustrują użycie `_TCHAR` i `_tcsrev` mapowanie do modeli MBCS, Unicode i SBCS.
 
 ```cpp
 _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-Jeśli `_MBCS` została zdefiniowana, preprocesor mapuje ten fragment ten kod:
+Jeśli `_MBCS` został zdefiniowany, preprocesor mapuje ten fragment do tego kodu:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-Jeśli `_UNICODE` została zdefiniowana, preprocesor mapuje ten fragment ten kod:
+Jeśli `_UNICODE` został zdefiniowany, preprocesor mapuje ten fragment do tego kodu:
 
 ```cpp
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-Jeśli żadna `_MBCS` ani `_UNICODE` zostały zdefiniowane, preprocesor mapuje fragment kodowi ASCII jednobajtowe w następujący sposób:
+Jeśli żaden `_MBCS` `_UNICODE` z nich nie został zdefiniowany, preprocesor mapuje fragment na jedno bajtowy kod ASCII w następujący sposób:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-W związku z tym można napisać, obsługa i skompiluj plik kodu źródłowego dla pojedynczego, do uruchamiania przy użyciu procedur, które są specyficzne dla żadnego z trzech typów zestawów znaków.
+W związku z tym można napisać, zachować i skompilować plik kodu źródłowego do uruchomienia z procedur, które są specyficzne dla dowolnego z trzech rodzajów zestawów znaków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Używanie typów danych TCHAR.H z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

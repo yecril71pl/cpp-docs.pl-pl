@@ -1,10 +1,13 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acoshf
 - acosh
 - acoshl
+- _o_acosh
+- _o_acoshf
+- _o_acoshl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170361"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350846"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
-Oblicza odwrotny cosinus hiperboliczny.
+Oblicza odwrotną cosine hiperboliczne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,29 +63,31 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ACOSH —** zwracają odwrotność hyberbolic cosinus (arcus cosinus hiperboliczny) *x*. Te funkcje są prawidłowe dla domeny *x* ≥ 1. Jeśli wartość *x* jest mniejsza niż 1, `errno` jest ustawiona na `EDOM`, a wynikiem jest cichy NaN. Jeśli *x* to cichy NaN, nieokreślony lub nieskończony, zwracana jest ta sama wartość.
+Funkcje **acosh** zwracają odwrotną cosine hipoberboliczne (łuk hiperboliczny cosine) *x*. Te funkcje są prawidłowe w domenie *x* ≥ 1. Jeśli *x* jest mniejsza `errno` niż 1, jest ustawiona na, `EDOM` a wynikiem jest cichy NaN. Jeśli *x* jest cichym NaN, nieokreślony lub nieskończoności, zwracana jest ta sama wartość.
 
-|Dane wejściowe|Wyjątek SEH|Wyjątek `_matherr`|
+|Dane wejściowe|Wyjątek SEH|`_matherr`Wyjątek|
 |-----------|-------------------|--------------------------|
-|QNAN, IND, INF|brak|brak|
+|± QNAN, IND, INF|brak|brak|
 |*x* < 1|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku korzystania C++z programu można wywoływać przeciążenia **ACOSH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ACOSH —** zawsze przyjmuje i zwraca wartość **Double**.
+Korzystając z języka C++, można wywołać przeciążenia **acosh,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie **C, acosh** zawsze ma i zwraca **dwukrotnie**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek C|Nagłówek języka C++|
 |--------------|--------------|------------------|
-|**ACOSH —** , **acoshf —** , **acoshl**|\<> Math. h|\<cmath >|
+|**acosh**, **acoshf**, **acoshl**|\<> math.h|\<> cmath|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -113,7 +119,7 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
